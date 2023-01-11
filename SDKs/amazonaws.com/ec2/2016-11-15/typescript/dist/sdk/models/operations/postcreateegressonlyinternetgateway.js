@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateEgressOnlyInternetGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateEgressOnlyInternetGatewayResponse = exports.PostCreateEgressOnlyInternetGatewayRequest = exports.PostCreateEgressOnlyInternetGatewayHeaders = exports.PostCreateEgressOnlyInternetGatewayQueryParams = exports.PostCreateEgressOnlyInternetGatewayVersionEnum = exports.PostCreateEgressOnlyInternetGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateEgressOnlyInternetGatewayActionEnum;
 (function (PostCreateEgressOnlyInternetGatewayActionEnum) {
     PostCreateEgressOnlyInternetGatewayActionEnum["CreateEgressOnlyInternetGateway"] = "CreateEgressOnlyInternetGateway";
-})(PostCreateEgressOnlyInternetGatewayActionEnum || (PostCreateEgressOnlyInternetGatewayActionEnum = {}));
-export var PostCreateEgressOnlyInternetGatewayVersionEnum;
+})(PostCreateEgressOnlyInternetGatewayActionEnum = exports.PostCreateEgressOnlyInternetGatewayActionEnum || (exports.PostCreateEgressOnlyInternetGatewayActionEnum = {}));
+var PostCreateEgressOnlyInternetGatewayVersionEnum;
 (function (PostCreateEgressOnlyInternetGatewayVersionEnum) {
     PostCreateEgressOnlyInternetGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCreateEgressOnlyInternetGatewayVersionEnum || (PostCreateEgressOnlyInternetGatewayVersionEnum = {}));
+})(PostCreateEgressOnlyInternetGatewayVersionEnum = exports.PostCreateEgressOnlyInternetGatewayVersionEnum || (exports.PostCreateEgressOnlyInternetGatewayVersionEnum = {}));
 var PostCreateEgressOnlyInternetGatewayQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateEgressOnlyInternetGatewayQueryParams, _super);
     function PostCreateEgressOnlyInternetGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayQueryParams.prototype, "version", void 0);
     return PostCreateEgressOnlyInternetGatewayQueryParams;
-}(SpeakeasyBase));
-export { PostCreateEgressOnlyInternetGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEgressOnlyInternetGatewayQueryParams = PostCreateEgressOnlyInternetGatewayQueryParams;
 var PostCreateEgressOnlyInternetGatewayHeaders = /** @class */ (function (_super) {
     __extends(PostCreateEgressOnlyInternetGatewayHeaders, _super);
     function PostCreateEgressOnlyInternetGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateEgressOnlyInternetGatewayHeaders;
-}(SpeakeasyBase));
-export { PostCreateEgressOnlyInternetGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEgressOnlyInternetGatewayHeaders = PostCreateEgressOnlyInternetGatewayHeaders;
 var PostCreateEgressOnlyInternetGatewayRequest = /** @class */ (function (_super) {
     __extends(PostCreateEgressOnlyInternetGatewayRequest, _super);
     function PostCreateEgressOnlyInternetGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEgressOnlyInternetGatewayQueryParams)
     ], PostCreateEgressOnlyInternetGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEgressOnlyInternetGatewayHeaders)
     ], PostCreateEgressOnlyInternetGatewayRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateEgressOnlyInternetGatewayRequest.prototype, "request", void 0);
     return PostCreateEgressOnlyInternetGatewayRequest;
-}(SpeakeasyBase));
-export { PostCreateEgressOnlyInternetGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEgressOnlyInternetGatewayRequest = PostCreateEgressOnlyInternetGatewayRequest;
 var PostCreateEgressOnlyInternetGatewayResponse = /** @class */ (function (_super) {
     __extends(PostCreateEgressOnlyInternetGatewayResponse, _super);
     function PostCreateEgressOnlyInternetGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateEgressOnlyInternetGatewayResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateEgressOnlyInternetGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateEgressOnlyInternetGatewayResponse.prototype, "statusCode", void 0);
     return PostCreateEgressOnlyInternetGatewayResponse;
-}(SpeakeasyBase));
-export { PostCreateEgressOnlyInternetGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEgressOnlyInternetGatewayResponse = PostCreateEgressOnlyInternetGatewayResponse;

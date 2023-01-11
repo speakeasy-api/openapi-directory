@@ -12,17 +12,6 @@ export declare enum TaskStatusEnum {
     Unchanged = "unchanged",
     Error = "error"
 }
-export declare class TaskInput extends SpeakeasyBase {
-    completedAt?: Date;
-    message?: string;
-    name?: string;
-    output?: Map<string, any>;
-    state?: TaskStateEnum;
-    status?: TaskStatusEnum;
-    targetSourceRef?: string;
-    targetType?: string;
-    type?: string;
-}
 export declare class Task extends SpeakeasyBase {
     archivedAt?: Date;
     childTaskId?: string;
@@ -30,10 +19,10 @@ export declare class Task extends SpeakeasyBase {
     controllerMessageId?: string;
     createdAt?: Date;
     id?: string;
-    input?: Map<string, any>;
+    input?: Record<string, any>;
     message?: string;
     name?: string;
-    output?: Map<string, any>;
+    output?: Record<string, any>;
     owner?: string;
     sourceId?: string;
     state?: TaskStateEnum;
@@ -42,4 +31,15 @@ export declare class Task extends SpeakeasyBase {
     targetType?: string;
     type?: string;
     updatedAt?: Date;
+}
+export declare class TaskInput extends SpeakeasyBase {
+    completedAt?: Date;
+    message?: string;
+    name?: string;
+    output?: Record<string, any>;
+    state?: TaskStateEnum;
+    status?: TaskStatusEnum;
+    targetSourceRef?: string;
+    targetType?: string;
+    type?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CellData } from "./celldata";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepeatCellRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var celldata_1 = require("./celldata");
+var gridrange_1 = require("./gridrange");
 // RepeatCellRequest
 /**
  * Updates all cells in the range to the values in the given Cell object. Only the fields listed in the fields field are updated; others are unchanged. If writing a cell with a formula, the formula's ranges will automatically increment for each field in the range. For example, if writing a cell with formula `=A1` into range B2:C4, B2 would be `=A1`, B3 would be `=A2`, B4 would be `=A3`, C2 would be `=B1`, C3 would be `=B2`, C4 would be `=B3`. To keep the formula's ranges static, use the `$` indicator. For example, use the formula `=$A$1` to prevent both the row and the column from incrementing.
@@ -35,17 +38,17 @@ var RepeatCellRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cell" }),
-        __metadata("design:type", CellData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cell" }),
+        __metadata("design:type", celldata_1.CellData)
     ], RepeatCellRequest.prototype, "cell", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], RepeatCellRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], RepeatCellRequest.prototype, "range", void 0);
     return RepeatCellRequest;
-}(SpeakeasyBase));
-export { RepeatCellRequest };
+}(utils_1.SpeakeasyBase));
+exports.RepeatCellRequest = RepeatCellRequest;

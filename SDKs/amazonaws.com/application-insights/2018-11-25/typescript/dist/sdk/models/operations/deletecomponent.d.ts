@@ -19,7 +19,7 @@ export declare class DeleteComponentRequest extends SpeakeasyBase {
 }
 export declare class DeleteComponentResponse extends SpeakeasyBase {
     contentType: string;
-    deleteComponentResponse?: Map<string, any>;
+    deleteComponentResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

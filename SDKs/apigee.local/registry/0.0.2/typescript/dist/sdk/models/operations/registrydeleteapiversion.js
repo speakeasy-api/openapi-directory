@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryDeleteApiVersionResponse = exports.RegistryDeleteApiVersionRequest = exports.RegistryDeleteApiVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryDeleteApiVersionPathParams = /** @class */ (function (_super) {
     __extends(RegistryDeleteApiVersionPathParams, _super);
     function RegistryDeleteApiVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=api" }),
         __metadata("design:type", String)
     ], RegistryDeleteApiVersionPathParams.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryDeleteApiVersionPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], RegistryDeleteApiVersionPathParams.prototype, "version", void 0);
     return RegistryDeleteApiVersionPathParams;
-}(SpeakeasyBase));
-export { RegistryDeleteApiVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteApiVersionPathParams = RegistryDeleteApiVersionPathParams;
 var RegistryDeleteApiVersionRequest = /** @class */ (function (_super) {
     __extends(RegistryDeleteApiVersionRequest, _super);
     function RegistryDeleteApiVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryDeleteApiVersionPathParams)
     ], RegistryDeleteApiVersionRequest.prototype, "pathParams", void 0);
     return RegistryDeleteApiVersionRequest;
-}(SpeakeasyBase));
-export { RegistryDeleteApiVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteApiVersionRequest = RegistryDeleteApiVersionRequest;
 var RegistryDeleteApiVersionResponse = /** @class */ (function (_super) {
     __extends(RegistryDeleteApiVersionResponse, _super);
     function RegistryDeleteApiVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryDeleteApiVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryDeleteApiVersionResponse.prototype, "statusCode", void 0);
     return RegistryDeleteApiVersionResponse;
-}(SpeakeasyBase));
-export { RegistryDeleteApiVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteApiVersionResponse = RegistryDeleteApiVersionResponse;

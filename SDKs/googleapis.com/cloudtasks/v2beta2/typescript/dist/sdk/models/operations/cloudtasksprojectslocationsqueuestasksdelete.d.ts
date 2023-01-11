@@ -27,6 +27,6 @@ export declare class CloudtasksProjectsLocationsQueuesTasksDeleteRequest extends
 }
 export declare class CloudtasksProjectsLocationsQueuesTasksDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

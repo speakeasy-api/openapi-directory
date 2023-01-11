@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeTypeEnum } from "./attributetypeenum";
-// AttributeDimension
-/**
- * Specifies attribute-based criteria for including or excluding endpoints from a segment.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeDimension = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributetypeenum_1 = require("./attributetypeenum");
 var AttributeDimension = /** @class */ (function (_super) {
     __extends(AttributeDimension, _super);
     function AttributeDimension() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeType" }),
         __metadata("design:type", String)
     ], AttributeDimension.prototype, "attributeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Values" }),
         __metadata("design:type", Array)
     ], AttributeDimension.prototype, "values", void 0);
     return AttributeDimension;
-}(SpeakeasyBase));
-export { AttributeDimension };
+}(utils_1.SpeakeasyBase));
+exports.AttributeDimension = AttributeDimension;

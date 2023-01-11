@@ -188,23 +188,23 @@ export class RelcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  relcs400ApplicationJsonObject?: Relcs400ApplicationJson;
+  relcs400ApplicationJSONObject?: Relcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs401ApplicationJsonObject?: Relcs401ApplicationJson;
+  relcs401ApplicationJSONObject?: Relcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs404ApplicationJsonObject?: Relcs404ApplicationJson;
+  relcs404ApplicationJSONObject?: Relcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs500ApplicationJsonObject?: Relcs500ApplicationJson;
+  relcs500ApplicationJSONObject?: Relcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs502ApplicationJsonObject?: Relcs502ApplicationJson;
+  relcs502ApplicationJSONObject?: Relcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs503ApplicationJsonObject?: Relcs503ApplicationJson;
+  relcs503ApplicationJSONObject?: Relcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  relcs504ApplicationJsonObject?: Relcs504ApplicationJson;
+  relcs504ApplicationJSONObject?: Relcs504ApplicationJson;
 }

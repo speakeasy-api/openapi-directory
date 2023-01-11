@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceSheetDimensionRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
 // DataSourceSheetDimensionRange
 /**
  * A range along a single dimension on a DATA_SOURCE sheet.
@@ -34,13 +37,13 @@ var DataSourceSheetDimensionRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnReferences", elemType: DataSourceColumnReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnReferences", elemType: datasourcecolumnreference_1.DataSourceColumnReference }),
         __metadata("design:type", Array)
     ], DataSourceSheetDimensionRange.prototype, "columnReferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], DataSourceSheetDimensionRange.prototype, "sheetId", void 0);
     return DataSourceSheetDimensionRange;
-}(SpeakeasyBase));
-export { DataSourceSheetDimensionRange };
+}(utils_1.SpeakeasyBase));
+exports.DataSourceSheetDimensionRange = DataSourceSheetDimensionRange;

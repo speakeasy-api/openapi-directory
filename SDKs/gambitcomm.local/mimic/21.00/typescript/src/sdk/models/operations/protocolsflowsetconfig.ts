@@ -28,5 +28,5 @@ export class ProtocolSflowSetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSflowSetConfig200ApplicationJsonString?: string;
+  protocolSflowSetConfig200ApplicationJSONString?: string;
 }

@@ -38,6 +38,6 @@ export declare class UpdateLinkAttributesResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     retryableConflictException?: any;
     statusCode: number;
-    updateLinkAttributesResponse?: Map<string, any>;
+    updateLinkAttributesResponse?: Record<string, any>;
     validationException?: any;
 }

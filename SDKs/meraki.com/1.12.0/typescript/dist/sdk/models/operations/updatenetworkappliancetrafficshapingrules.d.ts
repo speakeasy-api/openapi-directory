@@ -46,5 +46,5 @@ export declare class UpdateNetworkApplianceTrafficShapingRulesRequest extends Sp
 export declare class UpdateNetworkApplianceTrafficShapingRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceTrafficShapingRules200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceTrafficShapingRules200ApplicationJSONObject?: Record<string, any>;
 }

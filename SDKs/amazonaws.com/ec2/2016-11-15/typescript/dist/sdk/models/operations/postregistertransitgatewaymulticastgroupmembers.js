@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRegisterTransitGatewayMulticastGroupMembersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRegisterTransitGatewayMulticastGroupMembersResponse = exports.PostRegisterTransitGatewayMulticastGroupMembersRequest = exports.PostRegisterTransitGatewayMulticastGroupMembersHeaders = exports.PostRegisterTransitGatewayMulticastGroupMembersQueryParams = exports.PostRegisterTransitGatewayMulticastGroupMembersVersionEnum = exports.PostRegisterTransitGatewayMulticastGroupMembersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRegisterTransitGatewayMulticastGroupMembersActionEnum;
 (function (PostRegisterTransitGatewayMulticastGroupMembersActionEnum) {
     PostRegisterTransitGatewayMulticastGroupMembersActionEnum["RegisterTransitGatewayMulticastGroupMembers"] = "RegisterTransitGatewayMulticastGroupMembers";
-})(PostRegisterTransitGatewayMulticastGroupMembersActionEnum || (PostRegisterTransitGatewayMulticastGroupMembersActionEnum = {}));
-export var PostRegisterTransitGatewayMulticastGroupMembersVersionEnum;
+})(PostRegisterTransitGatewayMulticastGroupMembersActionEnum = exports.PostRegisterTransitGatewayMulticastGroupMembersActionEnum || (exports.PostRegisterTransitGatewayMulticastGroupMembersActionEnum = {}));
+var PostRegisterTransitGatewayMulticastGroupMembersVersionEnum;
 (function (PostRegisterTransitGatewayMulticastGroupMembersVersionEnum) {
     PostRegisterTransitGatewayMulticastGroupMembersVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostRegisterTransitGatewayMulticastGroupMembersVersionEnum || (PostRegisterTransitGatewayMulticastGroupMembersVersionEnum = {}));
+})(PostRegisterTransitGatewayMulticastGroupMembersVersionEnum = exports.PostRegisterTransitGatewayMulticastGroupMembersVersionEnum || (exports.PostRegisterTransitGatewayMulticastGroupMembersVersionEnum = {}));
 var PostRegisterTransitGatewayMulticastGroupMembersQueryParams = /** @class */ (function (_super) {
     __extends(PostRegisterTransitGatewayMulticastGroupMembersQueryParams, _super);
     function PostRegisterTransitGatewayMulticastGroupMembersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersQueryParams.prototype, "version", void 0);
     return PostRegisterTransitGatewayMulticastGroupMembersQueryParams;
-}(SpeakeasyBase));
-export { PostRegisterTransitGatewayMulticastGroupMembersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRegisterTransitGatewayMulticastGroupMembersQueryParams = PostRegisterTransitGatewayMulticastGroupMembersQueryParams;
 var PostRegisterTransitGatewayMulticastGroupMembersHeaders = /** @class */ (function (_super) {
     __extends(PostRegisterTransitGatewayMulticastGroupMembersHeaders, _super);
     function PostRegisterTransitGatewayMulticastGroupMembersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRegisterTransitGatewayMulticastGroupMembersHeaders;
-}(SpeakeasyBase));
-export { PostRegisterTransitGatewayMulticastGroupMembersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRegisterTransitGatewayMulticastGroupMembersHeaders = PostRegisterTransitGatewayMulticastGroupMembersHeaders;
 var PostRegisterTransitGatewayMulticastGroupMembersRequest = /** @class */ (function (_super) {
     __extends(PostRegisterTransitGatewayMulticastGroupMembersRequest, _super);
     function PostRegisterTransitGatewayMulticastGroupMembersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRegisterTransitGatewayMulticastGroupMembersQueryParams)
     ], PostRegisterTransitGatewayMulticastGroupMembersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRegisterTransitGatewayMulticastGroupMembersHeaders)
     ], PostRegisterTransitGatewayMulticastGroupMembersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRegisterTransitGatewayMulticastGroupMembersRequest.prototype, "request", void 0);
     return PostRegisterTransitGatewayMulticastGroupMembersRequest;
-}(SpeakeasyBase));
-export { PostRegisterTransitGatewayMulticastGroupMembersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRegisterTransitGatewayMulticastGroupMembersRequest = PostRegisterTransitGatewayMulticastGroupMembersRequest;
 var PostRegisterTransitGatewayMulticastGroupMembersResponse = /** @class */ (function (_super) {
     __extends(PostRegisterTransitGatewayMulticastGroupMembersResponse, _super);
     function PostRegisterTransitGatewayMulticastGroupMembersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRegisterTransitGatewayMulticastGroupMembersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRegisterTransitGatewayMulticastGroupMembersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRegisterTransitGatewayMulticastGroupMembersResponse.prototype, "statusCode", void 0);
     return PostRegisterTransitGatewayMulticastGroupMembersResponse;
-}(SpeakeasyBase));
-export { PostRegisterTransitGatewayMulticastGroupMembersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRegisterTransitGatewayMulticastGroupMembersResponse = PostRegisterTransitGatewayMulticastGroupMembersResponse;

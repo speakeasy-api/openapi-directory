@@ -1,5 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class GetCountriesResponse extends SpeakeasyBase {
-    contentType: string;
-    statusCode: number;
-}

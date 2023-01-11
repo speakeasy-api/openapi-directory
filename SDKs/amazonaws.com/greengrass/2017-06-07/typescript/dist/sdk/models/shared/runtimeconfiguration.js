@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TelemetryConfiguration } from "./telemetryconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuntimeConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var telemetryconfiguration_1 = require("./telemetryconfiguration");
 // RuntimeConfiguration
 /**
  * Runtime configuration for a thing.
@@ -34,9 +37,9 @@ var RuntimeConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TelemetryConfiguration" }),
-        __metadata("design:type", TelemetryConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TelemetryConfiguration" }),
+        __metadata("design:type", telemetryconfiguration_1.TelemetryConfiguration)
     ], RuntimeConfiguration.prototype, "telemetryConfiguration", void 0);
     return RuntimeConfiguration;
-}(SpeakeasyBase));
-export { RuntimeConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.RuntimeConfiguration = RuntimeConfiguration;

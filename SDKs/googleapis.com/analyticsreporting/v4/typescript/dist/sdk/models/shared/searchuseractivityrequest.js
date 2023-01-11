@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRange } from "./daterange";
-import { User } from "./user";
-export var SearchUserActivityRequestActivityTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchUserActivityRequest = exports.SearchUserActivityRequestActivityTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterange_1 = require("./daterange");
+var user_1 = require("./user");
+var SearchUserActivityRequestActivityTypesEnum;
 (function (SearchUserActivityRequestActivityTypesEnum) {
     SearchUserActivityRequestActivityTypesEnum["ActivityTypeUnspecified"] = "ACTIVITY_TYPE_UNSPECIFIED";
     SearchUserActivityRequestActivityTypesEnum["Pageview"] = "PAGEVIEW";
@@ -33,7 +36,7 @@ export var SearchUserActivityRequestActivityTypesEnum;
     SearchUserActivityRequestActivityTypesEnum["Goal"] = "GOAL";
     SearchUserActivityRequestActivityTypesEnum["Ecommerce"] = "ECOMMERCE";
     SearchUserActivityRequestActivityTypesEnum["Event"] = "EVENT";
-})(SearchUserActivityRequestActivityTypesEnum || (SearchUserActivityRequestActivityTypesEnum = {}));
+})(SearchUserActivityRequestActivityTypesEnum = exports.SearchUserActivityRequestActivityTypesEnum || (exports.SearchUserActivityRequestActivityTypesEnum = {}));
 // SearchUserActivityRequest
 /**
  * The request to fetch User Report from Reporting API `userActivity:get` call.
@@ -44,29 +47,29 @@ var SearchUserActivityRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityTypes" }),
         __metadata("design:type", Array)
     ], SearchUserActivityRequest.prototype, "activityTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], SearchUserActivityRequest.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], SearchUserActivityRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], SearchUserActivityRequest.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], SearchUserActivityRequest.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewId" }),
         __metadata("design:type", String)
     ], SearchUserActivityRequest.prototype, "viewId", void 0);
     return SearchUserActivityRequest;
-}(SpeakeasyBase));
-export { SearchUserActivityRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchUserActivityRequest = SearchUserActivityRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GkeNodePoolConfig } from "./gkenodepoolconfig";
-export var GkeNodePoolTargetRolesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GkeNodePoolTarget = exports.GkeNodePoolTargetRolesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gkenodepoolconfig_1 = require("./gkenodepoolconfig");
+var GkeNodePoolTargetRolesEnum;
 (function (GkeNodePoolTargetRolesEnum) {
     GkeNodePoolTargetRolesEnum["RoleUnspecified"] = "ROLE_UNSPECIFIED";
     GkeNodePoolTargetRolesEnum["Default"] = "DEFAULT";
     GkeNodePoolTargetRolesEnum["Controller"] = "CONTROLLER";
     GkeNodePoolTargetRolesEnum["SparkDriver"] = "SPARK_DRIVER";
     GkeNodePoolTargetRolesEnum["SparkExecutor"] = "SPARK_EXECUTOR";
-})(GkeNodePoolTargetRolesEnum || (GkeNodePoolTargetRolesEnum = {}));
+})(GkeNodePoolTargetRolesEnum = exports.GkeNodePoolTargetRolesEnum || (exports.GkeNodePoolTargetRolesEnum = {}));
 // GkeNodePoolTarget
 /**
  * GKE node pools that Dataproc workloads run on.
@@ -42,17 +45,17 @@ var GkeNodePoolTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodePool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodePool" }),
         __metadata("design:type", String)
     ], GkeNodePoolTarget.prototype, "nodePool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodePoolConfig" }),
-        __metadata("design:type", GkeNodePoolConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodePoolConfig" }),
+        __metadata("design:type", gkenodepoolconfig_1.GkeNodePoolConfig)
     ], GkeNodePoolTarget.prototype, "nodePoolConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", Array)
     ], GkeNodePoolTarget.prototype, "roles", void 0);
     return GkeNodePoolTarget;
-}(SpeakeasyBase));
-export { GkeNodePoolTarget };
+}(utils_1.SpeakeasyBase));
+exports.GkeNodePoolTarget = GkeNodePoolTarget;

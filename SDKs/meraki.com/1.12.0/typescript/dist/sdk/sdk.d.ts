@@ -190,11 +190,12 @@ import { Wireless } from "./wireless";
 import { WirelessProfiles } from "./wirelessprofiles";
 import { WlanLists } from "./wlanlists";
 import { Zones } from "./zones";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.meraki.com/api/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: SecurityModel): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: SecurityModel;
+    serverUrl?: string;
+};
 export declare class SDK {
     accessControlLists: AccessControlLists;
     accessPolicies: AccessPolicies;
@@ -359,7 +360,7 @@ export declare class SDK {
     switch: Switch;
     syslogServers: SyslogServers;
     targetGroups: TargetGroups;
-    thirdPartyVpnPeers: ThirdPartyVpnPeers;
+    thirdPartyVPNPeers: ThirdPartyVpnPeers;
     traffic: Traffic;
     trafficAnalysis: TrafficAnalysis;
     trafficHistory: TrafficHistory;
@@ -388,11 +389,9 @@ export declare class SDK {
     zones: Zones;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: SecurityModel;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

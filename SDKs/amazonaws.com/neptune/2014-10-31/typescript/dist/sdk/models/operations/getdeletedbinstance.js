@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteDbInstanceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteDbInstanceResponse = exports.GetDeleteDbInstanceRequest = exports.GetDeleteDbInstanceHeaders = exports.GetDeleteDbInstanceQueryParams = exports.GetDeleteDbInstanceVersionEnum = exports.GetDeleteDbInstanceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteDbInstanceActionEnum;
 (function (GetDeleteDbInstanceActionEnum) {
     GetDeleteDbInstanceActionEnum["DeleteDbInstance"] = "DeleteDBInstance";
-})(GetDeleteDbInstanceActionEnum || (GetDeleteDbInstanceActionEnum = {}));
-export var GetDeleteDbInstanceVersionEnum;
+})(GetDeleteDbInstanceActionEnum = exports.GetDeleteDbInstanceActionEnum || (exports.GetDeleteDbInstanceActionEnum = {}));
+var GetDeleteDbInstanceVersionEnum;
 (function (GetDeleteDbInstanceVersionEnum) {
     GetDeleteDbInstanceVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetDeleteDbInstanceVersionEnum || (GetDeleteDbInstanceVersionEnum = {}));
+})(GetDeleteDbInstanceVersionEnum = exports.GetDeleteDbInstanceVersionEnum || (exports.GetDeleteDbInstanceVersionEnum = {}));
 var GetDeleteDbInstanceQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteDbInstanceQueryParams, _super);
     function GetDeleteDbInstanceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceQueryParams.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FinalDBSnapshotIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FinalDBSnapshotIdentifier" }),
         __metadata("design:type", String)
-    ], GetDeleteDbInstanceQueryParams.prototype, "finalDbSnapshotIdentifier", void 0);
+    ], GetDeleteDbInstanceQueryParams.prototype, "finalDBSnapshotIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SkipFinalSnapshot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SkipFinalSnapshot" }),
         __metadata("design:type", Boolean)
     ], GetDeleteDbInstanceQueryParams.prototype, "skipFinalSnapshot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceQueryParams.prototype, "version", void 0);
     return GetDeleteDbInstanceQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteDbInstanceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbInstanceQueryParams = GetDeleteDbInstanceQueryParams;
 var GetDeleteDbInstanceHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteDbInstanceHeaders, _super);
     function GetDeleteDbInstanceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteDbInstanceHeaders;
-}(SpeakeasyBase));
-export { GetDeleteDbInstanceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbInstanceHeaders = GetDeleteDbInstanceHeaders;
 var GetDeleteDbInstanceRequest = /** @class */ (function (_super) {
     __extends(GetDeleteDbInstanceRequest, _super);
     function GetDeleteDbInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbInstanceQueryParams)
     ], GetDeleteDbInstanceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbInstanceHeaders)
     ], GetDeleteDbInstanceRequest.prototype, "headers", void 0);
     return GetDeleteDbInstanceRequest;
-}(SpeakeasyBase));
-export { GetDeleteDbInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbInstanceRequest = GetDeleteDbInstanceRequest;
 var GetDeleteDbInstanceResponse = /** @class */ (function (_super) {
     __extends(GetDeleteDbInstanceResponse, _super);
     function GetDeleteDbInstanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteDbInstanceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteDbInstanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteDbInstanceResponse.prototype, "statusCode", void 0);
     return GetDeleteDbInstanceResponse;
-}(SpeakeasyBase));
-export { GetDeleteDbInstanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbInstanceResponse = GetDeleteDbInstanceResponse;

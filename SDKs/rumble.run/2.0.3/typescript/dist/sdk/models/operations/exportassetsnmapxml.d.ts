@@ -13,5 +13,5 @@ export declare class ExportAssetsNmapXmlRequest extends SpeakeasyBase {
 export declare class ExportAssetsNmapXmlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    exportAssetsNmapXml200TextXmlBinaryString?: Uint8Array;
+    exportAssetsNmapXML200TextXMLBinaryString?: Uint8Array;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterConfiguration } from "./clusterconfiguration";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { ClusterSetting } from "./clustersetting";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterconfiguration_1 = require("./clusterconfiguration");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var clustersetting_1 = require("./clustersetting");
+var tag_1 = require("./tag");
 var CreateClusterRequest = /** @class */ (function (_super) {
     __extends(CreateClusterRequest, _super);
     function CreateClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviders" }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "capacityProviders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], CreateClusterRequest.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ClusterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", clusterconfiguration_1.ClusterConfiguration)
     ], CreateClusterRequest.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCapacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCapacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "defaultCapacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings", elemType: ClusterSetting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings", elemType: clustersetting_1.ClusterSetting }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "tags", void 0);
     return CreateClusterRequest;
-}(SpeakeasyBase));
-export { CreateClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateClusterRequest = CreateClusterRequest;

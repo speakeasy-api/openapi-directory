@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LearnableResponse = exports.LearnableRequest = exports.LearnablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LearnablePathParams = /** @class */ (function (_super) {
     __extends(LearnablePathParams, _super);
     function LearnablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=learnable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=learnable" }),
         __metadata("design:type", Boolean)
     ], LearnablePathParams.prototype, "learnable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=source" }),
         __metadata("design:type", String)
     ], LearnablePathParams.prototype, "source", void 0);
     return LearnablePathParams;
-}(SpeakeasyBase));
-export { LearnablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.LearnablePathParams = LearnablePathParams;
 var LearnableRequest = /** @class */ (function (_super) {
     __extends(LearnableRequest, _super);
     function LearnableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LearnablePathParams)
     ], LearnableRequest.prototype, "pathParams", void 0);
     return LearnableRequest;
-}(SpeakeasyBase));
-export { LearnableRequest };
+}(utils_1.SpeakeasyBase));
+exports.LearnableRequest = LearnableRequest;
 var LearnableResponse = /** @class */ (function (_super) {
     __extends(LearnableResponse, _super);
     function LearnableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LearnableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LearnableResponse.prototype, "statusCode", void 0);
     return LearnableResponse;
-}(SpeakeasyBase));
-export { LearnableResponse };
+}(utils_1.SpeakeasyBase));
+exports.LearnableResponse = LearnableResponse;

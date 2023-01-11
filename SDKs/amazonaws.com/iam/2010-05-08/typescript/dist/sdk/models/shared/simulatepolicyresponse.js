@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EvaluationResult } from "./evaluationresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimulatePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluationresult_1 = require("./evaluationresult");
 // SimulatePolicyResponse
 /**
  * Contains the response to a successful <a>SimulatePrincipalPolicy</a> or <a>SimulateCustomPolicy</a> request.
@@ -34,17 +37,17 @@ var SimulatePolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: EvaluationResult }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: evaluationresult_1.EvaluationResult }),
         __metadata("design:type", Array)
     ], SimulatePolicyResponse.prototype, "evaluationResults", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], SimulatePolicyResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SimulatePolicyResponse.prototype, "marker", void 0);
     return SimulatePolicyResponse;
-}(SpeakeasyBase));
-export { SimulatePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.SimulatePolicyResponse = SimulatePolicyResponse;

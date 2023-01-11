@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ClaimDevicesByClaimCodeRequest, ClaimDevicesByClaimCodeResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: ClaimDevicesByClaimCodeRequest = {
   pathParams: {
-    claimCode: "est",
+    claimCode: "sit",
   },
   headers: {
-    xAmzAlgorithm: "beatae",
-    xAmzContentSha256: "odio",
-    xAmzCredential: "blanditiis",
-    xAmzDate: "voluptatem",
-    xAmzSecurityToken: "ea",
-    xAmzSignature: "eum",
-    xAmzSignedHeaders: "at",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
 };
 
-sdk.sdk.claimDevicesByClaimCode(req).then((res: ClaimDevicesByClaimCodeResponse | AxiosError) => {
+sdk.claimDevicesByClaimCode(req).then((res: ClaimDevicesByClaimCodeResponse | AxiosError) => {
    // handle response
 });
 ```

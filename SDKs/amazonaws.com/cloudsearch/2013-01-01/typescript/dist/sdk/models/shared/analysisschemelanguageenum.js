@@ -1,4 +1,7 @@
-export var AnalysisSchemeLanguageEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalysisSchemeLanguageEnum = void 0;
+var AnalysisSchemeLanguageEnum;
 (function (AnalysisSchemeLanguageEnum) {
     AnalysisSchemeLanguageEnum["Ar"] = "ar";
     AnalysisSchemeLanguageEnum["Bg"] = "bg";
@@ -35,4 +38,4 @@ export var AnalysisSchemeLanguageEnum;
     AnalysisSchemeLanguageEnum["Tr"] = "tr";
     AnalysisSchemeLanguageEnum["ZhHans"] = "zh-Hans";
     AnalysisSchemeLanguageEnum["ZhHant"] = "zh-Hant";
-})(AnalysisSchemeLanguageEnum || (AnalysisSchemeLanguageEnum = {}));
+})(AnalysisSchemeLanguageEnum = exports.AnalysisSchemeLanguageEnum || (exports.AnalysisSchemeLanguageEnum = {}));

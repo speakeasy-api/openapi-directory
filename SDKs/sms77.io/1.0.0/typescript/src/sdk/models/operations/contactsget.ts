@@ -23,7 +23,7 @@ export class ContactsGetRequest extends SpeakeasyBase {
 
 export class ContactsGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  contactsGet200ApplicationJsonString?: string;
+  contactsGet200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   contactsGet200TextCsvString?: string;

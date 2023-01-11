@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportDestination } from "./exportdestination";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { JobStatusEnum } from "./jobstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationExportJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportdestination_1 = require("./exportdestination");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var jobstatusenum_1 = require("./jobstatusenum");
 // RecommendationExportJob
 /**
  * <p>Describes a recommendation export job.</p> <p>Use the <a>DescribeRecommendationExportJobs</a> action to view your recommendation export jobs.</p> <p>Use the <a>ExportAutoScalingGroupRecommendations</a> or <a>ExportEC2InstanceRecommendations</a> actions to request an export of your recommendations.</p>
@@ -36,33 +39,33 @@ var RecommendationExportJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTimestamp" }),
         __metadata("design:type", Date)
     ], RecommendationExportJob.prototype, "creationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", ExportDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", exportdestination_1.ExportDestination)
     ], RecommendationExportJob.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], RecommendationExportJob.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], RecommendationExportJob.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedTimestamp" }),
         __metadata("design:type", Date)
     ], RecommendationExportJob.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], RecommendationExportJob.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], RecommendationExportJob.prototype, "status", void 0);
     return RecommendationExportJob;
-}(SpeakeasyBase));
-export { RecommendationExportJob };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationExportJob = RecommendationExportJob;

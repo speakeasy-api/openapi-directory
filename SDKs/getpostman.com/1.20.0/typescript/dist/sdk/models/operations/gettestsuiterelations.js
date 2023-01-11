@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTestSuiteRelationsResponse = exports.GetTestSuiteRelationsRequest = exports.GetTestSuiteRelations200ApplicationJson = exports.GetTestSuiteRelations200ApplicationJsonTestsuite = exports.GetTestSuiteRelationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTestSuiteRelationsPathParams = /** @class */ (function (_super) {
     __extends(GetTestSuiteRelationsPathParams, _super);
     function GetTestSuiteRelationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelationsPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelationsPathParams.prototype, "apiVersionId", void 0);
     return GetTestSuiteRelationsPathParams;
-}(SpeakeasyBase));
-export { GetTestSuiteRelationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTestSuiteRelationsPathParams = GetTestSuiteRelationsPathParams;
 var GetTestSuiteRelations200ApplicationJsonTestsuite = /** @class */ (function (_super) {
     __extends(GetTestSuiteRelations200ApplicationJsonTestsuite, _super);
     function GetTestSuiteRelations200ApplicationJsonTestsuite() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectionId" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelations200ApplicationJsonTestsuite.prototype, "collectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelations200ApplicationJsonTestsuite.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelations200ApplicationJsonTestsuite.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetTestSuiteRelations200ApplicationJsonTestsuite.prototype, "updatedAt", void 0);
     return GetTestSuiteRelations200ApplicationJsonTestsuite;
-}(SpeakeasyBase));
-export { GetTestSuiteRelations200ApplicationJsonTestsuite };
+}(utils_1.SpeakeasyBase));
+exports.GetTestSuiteRelations200ApplicationJsonTestsuite = GetTestSuiteRelations200ApplicationJsonTestsuite;
 var GetTestSuiteRelations200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetTestSuiteRelations200ApplicationJson, _super);
     function GetTestSuiteRelations200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testsuite", elemType: GetTestSuiteRelations200ApplicationJsonTestsuite }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testsuite", elemType: GetTestSuiteRelations200ApplicationJsonTestsuite }),
         __metadata("design:type", Array)
     ], GetTestSuiteRelations200ApplicationJson.prototype, "testsuite", void 0);
     return GetTestSuiteRelations200ApplicationJson;
-}(SpeakeasyBase));
-export { GetTestSuiteRelations200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetTestSuiteRelations200ApplicationJson = GetTestSuiteRelations200ApplicationJson;
 var GetTestSuiteRelationsRequest = /** @class */ (function (_super) {
     __extends(GetTestSuiteRelationsRequest, _super);
     function GetTestSuiteRelationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTestSuiteRelationsPathParams)
     ], GetTestSuiteRelationsRequest.prototype, "pathParams", void 0);
     return GetTestSuiteRelationsRequest;
-}(SpeakeasyBase));
-export { GetTestSuiteRelationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTestSuiteRelationsRequest = GetTestSuiteRelationsRequest;
 var GetTestSuiteRelationsResponse = /** @class */ (function (_super) {
     __extends(GetTestSuiteRelationsResponse, _super);
     function GetTestSuiteRelationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTestSuiteRelationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTestSuiteRelationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTestSuiteRelations200ApplicationJson)
-    ], GetTestSuiteRelationsResponse.prototype, "getTestSuiteRelations200ApplicationJsonObject", void 0);
+    ], GetTestSuiteRelationsResponse.prototype, "getTestSuiteRelations200ApplicationJSONObject", void 0);
     return GetTestSuiteRelationsResponse;
-}(SpeakeasyBase));
-export { GetTestSuiteRelationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTestSuiteRelationsResponse = GetTestSuiteRelationsResponse;

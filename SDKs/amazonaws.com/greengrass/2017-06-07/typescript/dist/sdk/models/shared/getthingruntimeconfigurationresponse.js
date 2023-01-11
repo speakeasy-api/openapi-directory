@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuntimeConfiguration } from "./runtimeconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetThingRuntimeConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var runtimeconfiguration_1 = require("./runtimeconfiguration");
 var GetThingRuntimeConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetThingRuntimeConfigurationResponse, _super);
     function GetThingRuntimeConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuntimeConfiguration" }),
-        __metadata("design:type", RuntimeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuntimeConfiguration" }),
+        __metadata("design:type", runtimeconfiguration_1.RuntimeConfiguration)
     ], GetThingRuntimeConfigurationResponse.prototype, "runtimeConfiguration", void 0);
     return GetThingRuntimeConfigurationResponse;
-}(SpeakeasyBase));
-export { GetThingRuntimeConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetThingRuntimeConfigurationResponse = GetThingRuntimeConfigurationResponse;

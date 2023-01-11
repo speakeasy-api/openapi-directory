@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirewallPolicy } from "./firewallpolicy";
-import { FirewallPolicyResponse } from "./firewallpolicyresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeFirewallPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var firewallpolicy_1 = require("./firewallpolicy");
+var firewallpolicyresponse_1 = require("./firewallpolicyresponse");
 var DescribeFirewallPolicyResponse = /** @class */ (function (_super) {
     __extends(DescribeFirewallPolicyResponse, _super);
     function DescribeFirewallPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicy" }),
-        __metadata("design:type", FirewallPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicy" }),
+        __metadata("design:type", firewallpolicy_1.FirewallPolicy)
     ], DescribeFirewallPolicyResponse.prototype, "firewallPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyResponse" }),
-        __metadata("design:type", FirewallPolicyResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyResponse" }),
+        __metadata("design:type", firewallpolicyresponse_1.FirewallPolicyResponse)
     ], DescribeFirewallPolicyResponse.prototype, "firewallPolicyResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateToken" }),
         __metadata("design:type", String)
     ], DescribeFirewallPolicyResponse.prototype, "updateToken", void 0);
     return DescribeFirewallPolicyResponse;
-}(SpeakeasyBase));
-export { DescribeFirewallPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeFirewallPolicyResponse = DescribeFirewallPolicyResponse;

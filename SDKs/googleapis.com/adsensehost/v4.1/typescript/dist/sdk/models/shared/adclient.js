@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdClient = void 0;
+var utils_1 = require("../../../internal/utils");
 var AdClient = /** @class */ (function (_super) {
     __extends(AdClient, _super);
     function AdClient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arcOptIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arcOptIn" }),
         __metadata("design:type", Boolean)
     ], AdClient.prototype, "arcOptIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AdClient.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AdClient.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCode" }),
         __metadata("design:type", String)
     ], AdClient.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportsReporting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportsReporting" }),
         __metadata("design:type", Boolean)
     ], AdClient.prototype, "supportsReporting", void 0);
     return AdClient;
-}(SpeakeasyBase));
-export { AdClient };
+}(utils_1.SpeakeasyBase));
+exports.AdClient = AdClient;

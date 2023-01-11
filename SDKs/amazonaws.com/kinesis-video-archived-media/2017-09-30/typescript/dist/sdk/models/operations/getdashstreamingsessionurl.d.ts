@@ -36,7 +36,7 @@ export declare class GetDashStreamingSessionUrlRequestBody extends SpeakeasyBase
     expires?: number;
     maxManifestFragmentResults?: number;
     playbackMode?: GetDashStreamingSessionUrlRequestBodyPlaybackModeEnum;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetDashStreamingSessionUrlRequest extends SpeakeasyBase {
@@ -46,7 +46,7 @@ export declare class GetDashStreamingSessionUrlRequest extends SpeakeasyBase {
 export declare class GetDashStreamingSessionUrlResponse extends SpeakeasyBase {
     clientLimitExceededException?: any;
     contentType: string;
-    getDashStreamingSessionUrlOutput?: shared.GetDashStreamingSessionUrlOutput;
+    getDASHStreamingSessionURLOutput?: shared.GetDashStreamingSessionUrlOutput;
     invalidArgumentException?: any;
     invalidCodecPrivateDataException?: any;
     missingCodecPrivateDataException?: any;

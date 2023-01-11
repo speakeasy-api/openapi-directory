@@ -11,6 +11,6 @@ export declare class GetReportRequest extends SpeakeasyBase {
 export declare class GetReportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    report?: Map<string, any>;
+    error?: Record<string, any>;
+    report?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AmpInspectionResult } from "./ampinspectionresult";
-import { IndexStatusInspectionResult } from "./indexstatusinspectionresult";
-import { MobileUsabilityInspectionResult } from "./mobileusabilityinspectionresult";
-import { RichResultsInspectionResult } from "./richresultsinspectionresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UrlInspectionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var ampinspectionresult_1 = require("./ampinspectionresult");
+var indexstatusinspectionresult_1 = require("./indexstatusinspectionresult");
+var mobileusabilityinspectionresult_1 = require("./mobileusabilityinspectionresult");
+var richresultsinspectionresult_1 = require("./richresultsinspectionresult");
 // UrlInspectionResult
 /**
  * URL inspection result, including all inspection results.
@@ -37,25 +40,25 @@ var UrlInspectionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ampResult" }),
-        __metadata("design:type", AmpInspectionResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ampResult" }),
+        __metadata("design:type", ampinspectionresult_1.AmpInspectionResult)
     ], UrlInspectionResult.prototype, "ampResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indexStatusResult" }),
-        __metadata("design:type", IndexStatusInspectionResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indexStatusResult" }),
+        __metadata("design:type", indexstatusinspectionresult_1.IndexStatusInspectionResult)
     ], UrlInspectionResult.prototype, "indexStatusResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectionResultLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectionResultLink" }),
         __metadata("design:type", String)
     ], UrlInspectionResult.prototype, "inspectionResultLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileUsabilityResult" }),
-        __metadata("design:type", MobileUsabilityInspectionResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileUsabilityResult" }),
+        __metadata("design:type", mobileusabilityinspectionresult_1.MobileUsabilityInspectionResult)
     ], UrlInspectionResult.prototype, "mobileUsabilityResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=richResultsResult" }),
-        __metadata("design:type", RichResultsInspectionResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=richResultsResult" }),
+        __metadata("design:type", richresultsinspectionresult_1.RichResultsInspectionResult)
     ], UrlInspectionResult.prototype, "richResultsResult", void 0);
     return UrlInspectionResult;
-}(SpeakeasyBase));
-export { UrlInspectionResult };
+}(utils_1.SpeakeasyBase));
+exports.UrlInspectionResult = UrlInspectionResult;

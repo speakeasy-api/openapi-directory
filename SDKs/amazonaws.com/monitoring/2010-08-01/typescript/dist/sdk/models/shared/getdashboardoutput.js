@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDashboardOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDashboardOutput = /** @class */ (function (_super) {
     __extends(GetDashboardOutput, _super);
     function GetDashboardOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDashboardOutput.prototype, "dashboardArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDashboardOutput.prototype, "dashboardBody", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDashboardOutput.prototype, "dashboardName", void 0);
     return GetDashboardOutput;
-}(SpeakeasyBase));
-export { GetDashboardOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetDashboardOutput = GetDashboardOutput;

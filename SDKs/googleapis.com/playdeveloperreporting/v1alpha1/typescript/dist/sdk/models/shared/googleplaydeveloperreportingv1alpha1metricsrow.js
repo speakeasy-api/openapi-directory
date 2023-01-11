@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayDeveloperReportingV1alpha1DimensionValue } from "./googleplaydeveloperreportingv1alpha1dimensionvalue";
-import { GooglePlayDeveloperReportingV1alpha1MetricValue } from "./googleplaydeveloperreportingv1alpha1metricvalue";
-import { GoogleTypeDateTime } from "./googletypedatetime";
-export var GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1MetricsRow = exports.GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplaydeveloperreportingv1alpha1dimensionvalue_1 = require("./googleplaydeveloperreportingv1alpha1dimensionvalue");
+var googleplaydeveloperreportingv1alpha1metricvalue_1 = require("./googleplaydeveloperreportingv1alpha1metricvalue");
+var googletypedatetime_1 = require("./googletypedatetime");
+var GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum;
 (function (GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum) {
     GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum["AggregationPeriodUnspecified"] = "AGGREGATION_PERIOD_UNSPECIFIED";
     GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum["Hourly"] = "HOURLY";
     GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum["Daily"] = "DAILY";
-})(GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum || (GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = {}));
+})(GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = exports.GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum || (exports.GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = {}));
 // GooglePlayDeveloperReportingV1alpha1MetricsRow
 /**
  * Represents a row of dimensions and metrics.
@@ -42,21 +45,21 @@ var GooglePlayDeveloperReportingV1alpha1MetricsRow = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregationPeriod" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1MetricsRow.prototype, "aggregationPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: GooglePlayDeveloperReportingV1alpha1DimensionValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: googleplaydeveloperreportingv1alpha1dimensionvalue_1.GooglePlayDeveloperReportingV1alpha1DimensionValue }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1alpha1MetricsRow.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: GooglePlayDeveloperReportingV1alpha1MetricValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: googleplaydeveloperreportingv1alpha1metricvalue_1.GooglePlayDeveloperReportingV1alpha1MetricValue }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1alpha1MetricsRow.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
-        __metadata("design:type", GoogleTypeDateTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
+        __metadata("design:type", googletypedatetime_1.GoogleTypeDateTime)
     ], GooglePlayDeveloperReportingV1alpha1MetricsRow.prototype, "startTime", void 0);
     return GooglePlayDeveloperReportingV1alpha1MetricsRow;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1MetricsRow };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1MetricsRow = GooglePlayDeveloperReportingV1alpha1MetricsRow;

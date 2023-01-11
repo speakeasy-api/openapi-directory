@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReadingPosition = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReadingPosition = /** @class */ (function (_super) {
     __extends(ReadingPosition, _super);
     function ReadingPosition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=epubCfiPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=epubCfiPosition" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "epubCfiPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gbImagePosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gbImagePosition" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "gbImagePosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gbTextPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gbTextPosition" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "gbTextPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pdfPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pdfPosition" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "pdfPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeId" }),
         __metadata("design:type", String)
     ], ReadingPosition.prototype, "volumeId", void 0);
     return ReadingPosition;
-}(SpeakeasyBase));
-export { ReadingPosition };
+}(utils_1.SpeakeasyBase));
+exports.ReadingPosition = ReadingPosition;

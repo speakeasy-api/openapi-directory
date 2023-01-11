@@ -16,18 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetV05CertsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetV05WellKnownOpenidConfigurationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
 
-sdk.gateway.getV05Certs().then((res: GetV05CertsResponse | AxiosError) => {
+sdk.gateway.getV05WellKnownOpenidConfiguration().then((res: GetV05WellKnownOpenidConfigurationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -38,8 +37,8 @@ sdk.gateway.getV05Certs().then((res: GetV05CertsResponse | AxiosError) => {
 
 ### Gateway
 
-* `getV05Certs` - Get certs for JWT verification
 * `getV05WellKnownOpenidConfiguration` - Get openid configuration
+* `getV05Certs` - Get certs for JWT verification
 * `postV05ConsentRequestsInit` - Create consent request
 * `postV05ConsentRequestsStatus` - Get consent request status
 * `postV05ConsentsFetch` - Get consent artefact

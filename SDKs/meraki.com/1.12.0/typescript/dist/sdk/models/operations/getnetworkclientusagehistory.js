@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkClientUsageHistoryResponse = exports.GetNetworkClientUsageHistoryRequest = exports.GetNetworkClientUsageHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkClientUsageHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientUsageHistoryPathParams, _super);
     function GetNetworkClientUsageHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientId" }),
         __metadata("design:type", String)
     ], GetNetworkClientUsageHistoryPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkClientUsageHistoryPathParams.prototype, "networkId", void 0);
     return GetNetworkClientUsageHistoryPathParams;
-}(SpeakeasyBase));
-export { GetNetworkClientUsageHistoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientUsageHistoryPathParams = GetNetworkClientUsageHistoryPathParams;
 var GetNetworkClientUsageHistoryRequest = /** @class */ (function (_super) {
     __extends(GetNetworkClientUsageHistoryRequest, _super);
     function GetNetworkClientUsageHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientUsageHistoryPathParams)
     ], GetNetworkClientUsageHistoryRequest.prototype, "pathParams", void 0);
     return GetNetworkClientUsageHistoryRequest;
-}(SpeakeasyBase));
-export { GetNetworkClientUsageHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientUsageHistoryRequest = GetNetworkClientUsageHistoryRequest;
 var GetNetworkClientUsageHistoryResponse = /** @class */ (function (_super) {
     __extends(GetNetworkClientUsageHistoryResponse, _super);
     function GetNetworkClientUsageHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkClientUsageHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkClientUsageHistoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkClientUsageHistoryResponse.prototype, "getNetworkClientUsageHistory200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkClientUsageHistoryResponse.prototype, "getNetworkClientUsageHistory200ApplicationJSONObject", void 0);
     return GetNetworkClientUsageHistoryResponse;
-}(SpeakeasyBase));
-export { GetNetworkClientUsageHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientUsageHistoryResponse = GetNetworkClientUsageHistoryResponse;

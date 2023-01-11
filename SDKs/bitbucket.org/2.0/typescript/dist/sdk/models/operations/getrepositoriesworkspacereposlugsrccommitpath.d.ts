@@ -29,6 +29,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest extend
 export declare class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedTreeentries?: shared.PaginatedTreeentries;
 }

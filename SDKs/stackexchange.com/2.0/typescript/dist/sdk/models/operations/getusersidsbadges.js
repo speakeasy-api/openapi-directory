@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdsBadgesResponse = exports.GetUsersIdsBadgesRequest = exports.GetUsersIdsBadgesQueryParams = exports.GetUsersIdsBadgesSortEnum = exports.GetUsersIdsBadgesOrderEnum = exports.GetUsersIdsBadgesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdsBadgesPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsBadgesPathParams, _super);
     function GetUsersIdsBadgesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesPathParams.prototype, "ids", void 0);
     return GetUsersIdsBadgesPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdsBadgesPathParams };
-export var GetUsersIdsBadgesOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsBadgesPathParams = GetUsersIdsBadgesPathParams;
+var GetUsersIdsBadgesOrderEnum;
 (function (GetUsersIdsBadgesOrderEnum) {
     GetUsersIdsBadgesOrderEnum["Desc"] = "desc";
     GetUsersIdsBadgesOrderEnum["Asc"] = "asc";
-})(GetUsersIdsBadgesOrderEnum || (GetUsersIdsBadgesOrderEnum = {}));
-export var GetUsersIdsBadgesSortEnum;
+})(GetUsersIdsBadgesOrderEnum = exports.GetUsersIdsBadgesOrderEnum || (exports.GetUsersIdsBadgesOrderEnum = {}));
+var GetUsersIdsBadgesSortEnum;
 (function (GetUsersIdsBadgesSortEnum) {
     GetUsersIdsBadgesSortEnum["Rank"] = "rank";
     GetUsersIdsBadgesSortEnum["Name"] = "name";
     GetUsersIdsBadgesSortEnum["Type"] = "type";
     GetUsersIdsBadgesSortEnum["Awarded"] = "awarded";
-})(GetUsersIdsBadgesSortEnum || (GetUsersIdsBadgesSortEnum = {}));
+})(GetUsersIdsBadgesSortEnum = exports.GetUsersIdsBadgesSortEnum || (exports.GetUsersIdsBadgesSortEnum = {}));
 var GetUsersIdsBadgesQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsBadgesQueryParams, _super);
     function GetUsersIdsBadgesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsBadgesQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdsBadgesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdsBadgesQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsBadgesQueryParams.prototype, "todate", void 0);
     return GetUsersIdsBadgesQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdsBadgesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsBadgesQueryParams = GetUsersIdsBadgesQueryParams;
 var GetUsersIdsBadgesRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdsBadgesRequest, _super);
     function GetUsersIdsBadgesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsBadgesPathParams)
     ], GetUsersIdsBadgesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsBadgesQueryParams)
     ], GetUsersIdsBadgesRequest.prototype, "queryParams", void 0);
     return GetUsersIdsBadgesRequest;
-}(SpeakeasyBase));
-export { GetUsersIdsBadgesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsBadgesRequest = GetUsersIdsBadgesRequest;
 var GetUsersIdsBadgesResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdsBadgesResponse, _super);
     function GetUsersIdsBadgesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdsBadgesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdsBadgesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdsBadgesResponse.prototype, "statusCode", void 0);
     return GetUsersIdsBadgesResponse;
-}(SpeakeasyBase));
-export { GetUsersIdsBadgesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsBadgesResponse = GetUsersIdsBadgesResponse;

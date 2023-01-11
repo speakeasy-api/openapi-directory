@@ -1,4 +1,7 @@
-export var CloudWatchMetricsStatEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchMetricsStatEnum = void 0;
+var CloudWatchMetricsStatEnum;
 (function (CloudWatchMetricsStatEnum) {
     CloudWatchMetricsStatEnum["Sum"] = "Sum";
     CloudWatchMetricsStatEnum["Average"] = "Average";
@@ -8,4 +11,4 @@ export var CloudWatchMetricsStatEnum;
     CloudWatchMetricsStatEnum["P99"] = "p99";
     CloudWatchMetricsStatEnum["P90"] = "p90";
     CloudWatchMetricsStatEnum["P50"] = "p50";
-})(CloudWatchMetricsStatEnum || (CloudWatchMetricsStatEnum = {}));
+})(CloudWatchMetricsStatEnum = exports.CloudWatchMetricsStatEnum || (exports.CloudWatchMetricsStatEnum = {}));

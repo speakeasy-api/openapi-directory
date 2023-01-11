@@ -42,7 +42,7 @@ export class GetCampagneResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCampagne200ApplicationJsonBinaryString?: Uint8Array;
+  getCampagne200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   getCampagne200FileBinaryString?: Uint8Array;

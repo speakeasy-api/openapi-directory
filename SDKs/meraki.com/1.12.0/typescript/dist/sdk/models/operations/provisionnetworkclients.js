@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisionNetworkClientsResponse = exports.ProvisionNetworkClientsRequest = exports.ProvisionNetworkClientsRequestBody = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid9 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid8 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid7 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid6 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid5 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid4 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid3 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid2 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid14 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid13 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid12 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid11 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid10 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid1 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid0 = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance = exports.ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyDevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyClients = exports.ProvisionNetworkClientsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProvisionNetworkClientsPathParams = /** @class */ (function (_super) {
     __extends(ProvisionNetworkClientsPathParams, _super);
     function ProvisionNetworkClientsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsPathParams.prototype, "networkId", void 0);
     return ProvisionNetworkClientsPathParams;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsPathParams = ProvisionNetworkClientsPathParams;
 var ProvisionNetworkClientsRequestBodyClients = /** @class */ (function (_super) {
     __extends(ProvisionNetworkClientsRequestBodyClients, _super);
     function ProvisionNetworkClientsRequestBodyClients() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyClients.prototype, "mac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyClients.prototype, "name", void 0);
     return ProvisionNetworkClientsRequestBodyClients;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyClients };
-export var ProvisionNetworkClientsRequestBodyDevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyClients = ProvisionNetworkClientsRequestBodyClients;
+var ProvisionNetworkClientsRequestBodyDevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyDevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyDevicePolicyEnum["GroupPolicy"] = "Group policy";
     ProvisionNetworkClientsRequestBodyDevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyDevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyDevicePolicyEnum["PerConnection"] = "Per connection";
     ProvisionNetworkClientsRequestBodyDevicePolicyEnum["Normal"] = "Normal";
-})(ProvisionNetworkClientsRequestBodyDevicePolicyEnum || (ProvisionNetworkClientsRequestBodyDevicePolicyEnum = {}));
-export var ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum;
+})(ProvisionNetworkClientsRequestBodyDevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyDevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyDevicePolicyEnum = {}));
+var ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum["Normal"] = "Normal";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance
 /**
  * An object, describing what the policy-connection association is for the security appliance. (Only relevant if the security appliance is actually within the network)
@@ -75,19 +78,19 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance.prototype, "devicePolicy", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance = ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid0
 /**
  * The number for the SSID
@@ -98,23 +101,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid0 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid0.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid0.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid0;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid0 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid0 = ProvisionNetworkClientsRequestBodyPoliciesBySsid0;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid1
 /**
  * The number for the SSID
@@ -125,23 +128,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid1 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid1.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid1.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid1;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid1 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid1 = ProvisionNetworkClientsRequestBodyPoliciesBySsid1;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid10
 /**
  * The number for the SSID
@@ -152,23 +155,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid10 = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid10.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid10.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid10;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid10 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid10 = ProvisionNetworkClientsRequestBodyPoliciesBySsid10;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid11
 /**
  * The number for the SSID
@@ -179,23 +182,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid11 = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid11.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid11.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid11;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid11 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid11 = ProvisionNetworkClientsRequestBodyPoliciesBySsid11;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid12
 /**
  * The number for the SSID
@@ -206,23 +209,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid12 = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid12.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid12.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid12;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid12 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid12 = ProvisionNetworkClientsRequestBodyPoliciesBySsid12;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid13
 /**
  * The number for the SSID
@@ -233,23 +236,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid13 = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid13.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid13.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid13;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid13 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid13 = ProvisionNetworkClientsRequestBodyPoliciesBySsid13;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid14
 /**
  * The number for the SSID
@@ -260,23 +263,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid14 = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid14.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid14.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid14;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid14 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid14 = ProvisionNetworkClientsRequestBodyPoliciesBySsid14;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid2
 /**
  * The number for the SSID
@@ -287,23 +290,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid2 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid2.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid2.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid2;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid2 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid2 = ProvisionNetworkClientsRequestBodyPoliciesBySsid2;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid3
 /**
  * The number for the SSID
@@ -314,23 +317,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid3 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid3.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid3.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid3;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid3 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid3 = ProvisionNetworkClientsRequestBodyPoliciesBySsid3;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid4
 /**
  * The number for the SSID
@@ -341,23 +344,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid4 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid4.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid4.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid4;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid4 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid4 = ProvisionNetworkClientsRequestBodyPoliciesBySsid4;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid5
 /**
  * The number for the SSID
@@ -368,23 +371,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid5 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid5.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid5.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid5;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid5 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid5 = ProvisionNetworkClientsRequestBodyPoliciesBySsid5;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid6
 /**
  * The number for the SSID
@@ -395,23 +398,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid6 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid6.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid6.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid6;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid6 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid6 = ProvisionNetworkClientsRequestBodyPoliciesBySsid6;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid7
 /**
  * The number for the SSID
@@ -422,23 +425,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid7 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid7.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid7.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid7;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid7 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid7 = ProvisionNetworkClientsRequestBodyPoliciesBySsid7;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid8
 /**
  * The number for the SSID
@@ -449,23 +452,23 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid8 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid8.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid8.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid8;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid8 };
-export var ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid8 = ProvisionNetworkClientsRequestBodyPoliciesBySsid8;
+var ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum;
 (function (ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum) {
     ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum["Allowed"] = "Allowed";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum["Blocked"] = "Blocked";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum["Normal"] = "Normal";
     ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum["GroupPolicy"] = "Group policy";
-})(ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum || (ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum = {}));
+})(ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum = exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum || (exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum = {}));
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid9
 /**
  * The number for the SSID
@@ -476,16 +479,16 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid9 = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid9.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid9.prototype, "groupPolicyId", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid9;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid9 };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid9 = ProvisionNetworkClientsRequestBodyPoliciesBySsid9;
 // ProvisionNetworkClientsRequestBodyPoliciesBySsid
 /**
  * An object, describing the policy-connection associations for each active SSID within the network. Keys should be the number of enabled SSIDs, mapping to an object describing the client's policy
@@ -496,129 +499,129 @@ var ProvisionNetworkClientsRequestBodyPoliciesBySsid = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=0" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid0)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "zero", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=1" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid1)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "one", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=10" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=10" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid10)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "ten", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=11" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=11" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid11)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "eleven", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=12" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=12" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid12)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "twelve", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=13" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=13" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid13)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "thirteen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=14" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=14" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid14)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "fourteen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=2" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid2)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "two", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=3" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid3)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "three", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=4" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid4)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "four", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=5" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid5)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "five", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=6" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid6)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "six", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=7" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=7" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid7)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "seven", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=8" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=8" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid8)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "eight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=9" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=9" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid9)
     ], ProvisionNetworkClientsRequestBodyPoliciesBySsid.prototype, "nine", void 0);
     return ProvisionNetworkClientsRequestBodyPoliciesBySsid;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBodyPoliciesBySsid };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBodyPoliciesBySsid = ProvisionNetworkClientsRequestBodyPoliciesBySsid;
 var ProvisionNetworkClientsRequestBody = /** @class */ (function (_super) {
     __extends(ProvisionNetworkClientsRequestBody, _super);
     function ProvisionNetworkClientsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clients", elemType: ProvisionNetworkClientsRequestBodyClients }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clients", elemType: ProvisionNetworkClientsRequestBodyClients }),
         __metadata("design:type", Array)
     ], ProvisionNetworkClientsRequestBody.prototype, "clients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBody.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPolicyId" }),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsRequestBody.prototype, "groupPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policiesBySecurityAppliance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policiesBySecurityAppliance" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance)
     ], ProvisionNetworkClientsRequestBody.prototype, "policiesBySecurityAppliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policiesBySsid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policiesBySsid" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBodyPoliciesBySsid)
     ], ProvisionNetworkClientsRequestBody.prototype, "policiesBySsid", void 0);
     return ProvisionNetworkClientsRequestBody;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequestBody = ProvisionNetworkClientsRequestBody;
 var ProvisionNetworkClientsRequest = /** @class */ (function (_super) {
     __extends(ProvisionNetworkClientsRequest, _super);
     function ProvisionNetworkClientsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProvisionNetworkClientsPathParams)
     ], ProvisionNetworkClientsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ProvisionNetworkClientsRequestBody)
     ], ProvisionNetworkClientsRequest.prototype, "request", void 0);
     return ProvisionNetworkClientsRequest;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsRequest = ProvisionNetworkClientsRequest;
 var ProvisionNetworkClientsResponse = /** @class */ (function (_super) {
     __extends(ProvisionNetworkClientsResponse, _super);
     function ProvisionNetworkClientsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProvisionNetworkClientsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProvisionNetworkClientsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProvisionNetworkClientsResponse.prototype, "provisionNetworkClients201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProvisionNetworkClientsResponse.prototype, "provisionNetworkClients201ApplicationJSONObject", void 0);
     return ProvisionNetworkClientsResponse;
-}(SpeakeasyBase));
-export { ProvisionNetworkClientsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionNetworkClientsResponse = ProvisionNetworkClientsResponse;

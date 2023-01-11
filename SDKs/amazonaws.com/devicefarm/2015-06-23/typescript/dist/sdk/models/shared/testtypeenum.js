@@ -1,4 +1,7 @@
-export var TestTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestTypeEnum = void 0;
+var TestTypeEnum;
 (function (TestTypeEnum) {
     TestTypeEnum["BuiltinFuzz"] = "BUILTIN_FUZZ";
     TestTypeEnum["BuiltinExplorer"] = "BUILTIN_EXPLORER";
@@ -21,4 +24,4 @@ export var TestTypeEnum;
     TestTypeEnum["XctestUi"] = "XCTEST_UI";
     TestTypeEnum["RemoteAccessRecord"] = "REMOTE_ACCESS_RECORD";
     TestTypeEnum["RemoteAccessReplay"] = "REMOTE_ACCESS_REPLAY";
-})(TestTypeEnum || (TestTypeEnum = {}));
+})(TestTypeEnum = exports.TestTypeEnum || (exports.TestTypeEnum = {}));

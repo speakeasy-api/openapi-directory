@@ -17,5 +17,5 @@ export declare class UpdateDeviceSwitchRoutingStaticRouteRequest extends Speakea
 export declare class UpdateDeviceSwitchRoutingStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceSwitchRoutingStaticRoute200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceSwitchRoutingStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

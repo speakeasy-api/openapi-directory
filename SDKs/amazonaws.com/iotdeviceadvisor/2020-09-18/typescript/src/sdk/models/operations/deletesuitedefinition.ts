@@ -46,7 +46,7 @@ export class DeleteSuiteDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSuiteDefinitionResponse?: Map<string, any>;
+  deleteSuiteDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

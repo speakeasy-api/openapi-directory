@@ -1,4 +1,7 @@
-export var PlayMediaControlSchemeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayMediaControlSchemeEnum = void 0;
+var PlayMediaControlSchemeEnum;
 (function (PlayMediaControlSchemeEnum) {
     PlayMediaControlSchemeEnum["Custom"] = "custom";
     PlayMediaControlSchemeEnum["OnDemand"] = "onDemand";
@@ -7,4 +10,4 @@ export var PlayMediaControlSchemeEnum;
     PlayMediaControlSchemeEnum["AudioBook"] = "audioBook";
     PlayMediaControlSchemeEnum["Podcast"] = "podcast";
     PlayMediaControlSchemeEnum["Advertisement"] = "advertisement";
-})(PlayMediaControlSchemeEnum || (PlayMediaControlSchemeEnum = {}));
+})(PlayMediaControlSchemeEnum = exports.PlayMediaControlSchemeEnum || (exports.PlayMediaControlSchemeEnum = {}));

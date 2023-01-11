@@ -4,5 +4,5 @@ import { RolloutRuleModel } from "./rolloutrulemodel";
 export declare class UpdateSettingValueModel extends SpeakeasyBase {
     rolloutPercentageItems?: RolloutPercentageItemModel[];
     rolloutRules?: RolloutRuleModel[];
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

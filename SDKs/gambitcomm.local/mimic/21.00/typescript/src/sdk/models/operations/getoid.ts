@@ -25,5 +25,5 @@ export class GetOidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOid200ApplicationJsonString?: string;
+  getOid200ApplicationJSONString?: string;
 }

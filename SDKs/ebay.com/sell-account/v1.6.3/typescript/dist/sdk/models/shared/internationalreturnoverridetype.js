@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeDuration } from "./timeduration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InternationalReturnOverrideType = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeduration_1 = require("./timeduration");
 // InternationalReturnOverrideType
 /**
  * This type defines the fields for a seller's international return policy. If a seller does not populate the fields in this complex type, the international return policy defaults to the return policy set for domestic returns.
@@ -34,21 +37,21 @@ var InternationalReturnOverrideType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnMethod" }),
         __metadata("design:type", String)
     ], InternationalReturnOverrideType.prototype, "returnMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPeriod" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPeriod" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], InternationalReturnOverrideType.prototype, "returnPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnShippingCostPayer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnShippingCostPayer" }),
         __metadata("design:type", String)
     ], InternationalReturnOverrideType.prototype, "returnShippingCostPayer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnsAccepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnsAccepted" }),
         __metadata("design:type", Boolean)
     ], InternationalReturnOverrideType.prototype, "returnsAccepted", void 0);
     return InternationalReturnOverrideType;
-}(SpeakeasyBase));
-export { InternationalReturnOverrideType };
+}(utils_1.SpeakeasyBase));
+exports.InternationalReturnOverrideType = InternationalReturnOverrideType;

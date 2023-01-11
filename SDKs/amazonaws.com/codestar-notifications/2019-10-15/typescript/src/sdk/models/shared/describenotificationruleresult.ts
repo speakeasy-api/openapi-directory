@@ -35,7 +35,7 @@ export class DescribeNotificationRuleResult extends SpeakeasyBase {
   status?: NotificationRuleStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Targets", elemType: TargetSummary })
   targets?: TargetSummary[];

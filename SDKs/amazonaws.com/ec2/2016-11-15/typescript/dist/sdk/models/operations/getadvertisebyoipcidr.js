@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAdvertiseByoipCidrActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdvertiseByoipCidrResponse = exports.GetAdvertiseByoipCidrRequest = exports.GetAdvertiseByoipCidrHeaders = exports.GetAdvertiseByoipCidrQueryParams = exports.GetAdvertiseByoipCidrVersionEnum = exports.GetAdvertiseByoipCidrActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAdvertiseByoipCidrActionEnum;
 (function (GetAdvertiseByoipCidrActionEnum) {
     GetAdvertiseByoipCidrActionEnum["AdvertiseByoipCidr"] = "AdvertiseByoipCidr";
-})(GetAdvertiseByoipCidrActionEnum || (GetAdvertiseByoipCidrActionEnum = {}));
-export var GetAdvertiseByoipCidrVersionEnum;
+})(GetAdvertiseByoipCidrActionEnum = exports.GetAdvertiseByoipCidrActionEnum || (exports.GetAdvertiseByoipCidrActionEnum = {}));
+var GetAdvertiseByoipCidrVersionEnum;
 (function (GetAdvertiseByoipCidrVersionEnum) {
     GetAdvertiseByoipCidrVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetAdvertiseByoipCidrVersionEnum || (GetAdvertiseByoipCidrVersionEnum = {}));
+})(GetAdvertiseByoipCidrVersionEnum = exports.GetAdvertiseByoipCidrVersionEnum || (exports.GetAdvertiseByoipCidrVersionEnum = {}));
 var GetAdvertiseByoipCidrQueryParams = /** @class */ (function (_super) {
     __extends(GetAdvertiseByoipCidrQueryParams, _super);
     function GetAdvertiseByoipCidrQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Cidr" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrQueryParams.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetAdvertiseByoipCidrQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrQueryParams.prototype, "version", void 0);
     return GetAdvertiseByoipCidrQueryParams;
-}(SpeakeasyBase));
-export { GetAdvertiseByoipCidrQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAdvertiseByoipCidrQueryParams = GetAdvertiseByoipCidrQueryParams;
 var GetAdvertiseByoipCidrHeaders = /** @class */ (function (_super) {
     __extends(GetAdvertiseByoipCidrHeaders, _super);
     function GetAdvertiseByoipCidrHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAdvertiseByoipCidrHeaders;
-}(SpeakeasyBase));
-export { GetAdvertiseByoipCidrHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAdvertiseByoipCidrHeaders = GetAdvertiseByoipCidrHeaders;
 var GetAdvertiseByoipCidrRequest = /** @class */ (function (_super) {
     __extends(GetAdvertiseByoipCidrRequest, _super);
     function GetAdvertiseByoipCidrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAdvertiseByoipCidrQueryParams)
     ], GetAdvertiseByoipCidrRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAdvertiseByoipCidrHeaders)
     ], GetAdvertiseByoipCidrRequest.prototype, "headers", void 0);
     return GetAdvertiseByoipCidrRequest;
-}(SpeakeasyBase));
-export { GetAdvertiseByoipCidrRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAdvertiseByoipCidrRequest = GetAdvertiseByoipCidrRequest;
 var GetAdvertiseByoipCidrResponse = /** @class */ (function (_super) {
     __extends(GetAdvertiseByoipCidrResponse, _super);
     function GetAdvertiseByoipCidrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAdvertiseByoipCidrResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdvertiseByoipCidrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdvertiseByoipCidrResponse.prototype, "statusCode", void 0);
     return GetAdvertiseByoipCidrResponse;
-}(SpeakeasyBase));
-export { GetAdvertiseByoipCidrResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdvertiseByoipCidrResponse = GetAdvertiseByoipCidrResponse;

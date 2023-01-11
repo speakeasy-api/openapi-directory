@@ -1,6 +1,9 @@
-export var AuthenticateOidcActionConditionalBehaviorEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticateOidcActionConditionalBehaviorEnumEnum = void 0;
+var AuthenticateOidcActionConditionalBehaviorEnumEnum;
 (function (AuthenticateOidcActionConditionalBehaviorEnumEnum) {
     AuthenticateOidcActionConditionalBehaviorEnumEnum["Deny"] = "deny";
     AuthenticateOidcActionConditionalBehaviorEnumEnum["Allow"] = "allow";
     AuthenticateOidcActionConditionalBehaviorEnumEnum["Authenticate"] = "authenticate";
-})(AuthenticateOidcActionConditionalBehaviorEnumEnum || (AuthenticateOidcActionConditionalBehaviorEnumEnum = {}));
+})(AuthenticateOidcActionConditionalBehaviorEnumEnum = exports.AuthenticateOidcActionConditionalBehaviorEnumEnum || (exports.AuthenticateOidcActionConditionalBehaviorEnumEnum = {}));

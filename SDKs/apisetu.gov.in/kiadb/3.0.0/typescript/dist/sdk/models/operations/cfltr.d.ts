@@ -108,11 +108,11 @@ export declare class CfltrRequest extends SpeakeasyBase {
 export declare class CfltrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cfltr400ApplicationJsonObject?: Cfltr400ApplicationJson;
-    cfltr401ApplicationJsonObject?: Cfltr401ApplicationJson;
-    cfltr404ApplicationJsonObject?: Cfltr404ApplicationJson;
-    cfltr500ApplicationJsonObject?: Cfltr500ApplicationJson;
-    cfltr502ApplicationJsonObject?: Cfltr502ApplicationJson;
-    cfltr503ApplicationJsonObject?: Cfltr503ApplicationJson;
-    cfltr504ApplicationJsonObject?: Cfltr504ApplicationJson;
+    cfltr400ApplicationJSONObject?: Cfltr400ApplicationJson;
+    cfltr401ApplicationJSONObject?: Cfltr401ApplicationJson;
+    cfltr404ApplicationJSONObject?: Cfltr404ApplicationJson;
+    cfltr500ApplicationJSONObject?: Cfltr500ApplicationJson;
+    cfltr502ApplicationJSONObject?: Cfltr502ApplicationJson;
+    cfltr503ApplicationJSONObject?: Cfltr503ApplicationJson;
+    cfltr504ApplicationJSONObject?: Cfltr504ApplicationJson;
 }

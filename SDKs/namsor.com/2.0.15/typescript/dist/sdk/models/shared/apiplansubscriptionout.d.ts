@@ -14,8 +14,8 @@ export declare class ApiPlanSubscriptionOut extends SpeakeasyBase {
     planStatus?: string;
     price?: number;
     priceOverage?: number;
-    priceOverageUsd?: number;
-    priceUsd?: number;
+    priceOverageUSD?: number;
+    priceUSD?: number;
     priorPlanStarted?: number;
     stripeCustomerId?: string;
     stripeStatus?: string;

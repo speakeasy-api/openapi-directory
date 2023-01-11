@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentPosInventoryResponse = exports.ContentPosInventoryRequest = exports.ContentPosInventorySecurity = exports.ContentPosInventoryQueryParams = exports.ContentPosInventoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ContentPosInventoryPathParams = /** @class */ (function (_super) {
     __extends(ContentPosInventoryPathParams, _super);
     function ContentPosInventoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=merchantId" }),
         __metadata("design:type", String)
     ], ContentPosInventoryPathParams.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=targetMerchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=targetMerchantId" }),
         __metadata("design:type", String)
     ], ContentPosInventoryPathParams.prototype, "targetMerchantId", void 0);
     return ContentPosInventoryPathParams;
-}(SpeakeasyBase));
-export { ContentPosInventoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ContentPosInventoryPathParams = ContentPosInventoryPathParams;
 var ContentPosInventoryQueryParams = /** @class */ (function (_super) {
     __extends(ContentPosInventoryQueryParams, _super);
     function ContentPosInventoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dryRun" }),
         __metadata("design:type", Boolean)
     ], ContentPosInventoryQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ContentPosInventoryQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ContentPosInventoryQueryParams.prototype, "uploadProtocol", void 0);
     return ContentPosInventoryQueryParams;
-}(SpeakeasyBase));
-export { ContentPosInventoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ContentPosInventoryQueryParams = ContentPosInventoryQueryParams;
 var ContentPosInventorySecurity = /** @class */ (function (_super) {
     __extends(ContentPosInventorySecurity, _super);
     function ContentPosInventorySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ContentPosInventorySecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ContentPosInventorySecurity.prototype, "oauth2c", void 0);
     return ContentPosInventorySecurity;
-}(SpeakeasyBase));
-export { ContentPosInventorySecurity };
+}(utils_1.SpeakeasyBase));
+exports.ContentPosInventorySecurity = ContentPosInventorySecurity;
 var ContentPosInventoryRequest = /** @class */ (function (_super) {
     __extends(ContentPosInventoryRequest, _super);
     function ContentPosInventoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentPosInventoryPathParams)
     ], ContentPosInventoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentPosInventoryQueryParams)
     ], ContentPosInventoryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.PosInventoryRequest)
     ], ContentPosInventoryRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentPosInventorySecurity)
     ], ContentPosInventoryRequest.prototype, "security", void 0);
     return ContentPosInventoryRequest;
-}(SpeakeasyBase));
-export { ContentPosInventoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.ContentPosInventoryRequest = ContentPosInventoryRequest;
 var ContentPosInventoryResponse = /** @class */ (function (_super) {
     __extends(ContentPosInventoryResponse, _super);
     function ContentPosInventoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentPosInventoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PosInventoryResponse)
     ], ContentPosInventoryResponse.prototype, "posInventoryResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ContentPosInventoryResponse.prototype, "statusCode", void 0);
     return ContentPosInventoryResponse;
-}(SpeakeasyBase));
-export { ContentPosInventoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.ContentPosInventoryResponse = ContentPosInventoryResponse;

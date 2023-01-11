@@ -6,7 +6,7 @@ export declare class Provider extends SpeakeasyBase {
     circuitCount?: number;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     id?: number;
     lastUpdated?: Date;
     name: string;
@@ -20,7 +20,7 @@ export declare class ProviderInput extends SpeakeasyBase {
     adminContact?: string;
     asn?: number;
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     name: string;
     nocContact?: string;
     portalUrl?: string;

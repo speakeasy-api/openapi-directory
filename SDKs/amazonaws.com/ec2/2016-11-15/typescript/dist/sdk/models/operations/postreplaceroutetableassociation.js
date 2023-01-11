@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostReplaceRouteTableAssociationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostReplaceRouteTableAssociationResponse = exports.PostReplaceRouteTableAssociationRequest = exports.PostReplaceRouteTableAssociationHeaders = exports.PostReplaceRouteTableAssociationQueryParams = exports.PostReplaceRouteTableAssociationVersionEnum = exports.PostReplaceRouteTableAssociationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostReplaceRouteTableAssociationActionEnum;
 (function (PostReplaceRouteTableAssociationActionEnum) {
     PostReplaceRouteTableAssociationActionEnum["ReplaceRouteTableAssociation"] = "ReplaceRouteTableAssociation";
-})(PostReplaceRouteTableAssociationActionEnum || (PostReplaceRouteTableAssociationActionEnum = {}));
-export var PostReplaceRouteTableAssociationVersionEnum;
+})(PostReplaceRouteTableAssociationActionEnum = exports.PostReplaceRouteTableAssociationActionEnum || (exports.PostReplaceRouteTableAssociationActionEnum = {}));
+var PostReplaceRouteTableAssociationVersionEnum;
 (function (PostReplaceRouteTableAssociationVersionEnum) {
     PostReplaceRouteTableAssociationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostReplaceRouteTableAssociationVersionEnum || (PostReplaceRouteTableAssociationVersionEnum = {}));
+})(PostReplaceRouteTableAssociationVersionEnum = exports.PostReplaceRouteTableAssociationVersionEnum || (exports.PostReplaceRouteTableAssociationVersionEnum = {}));
 var PostReplaceRouteTableAssociationQueryParams = /** @class */ (function (_super) {
     __extends(PostReplaceRouteTableAssociationQueryParams, _super);
     function PostReplaceRouteTableAssociationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationQueryParams.prototype, "version", void 0);
     return PostReplaceRouteTableAssociationQueryParams;
-}(SpeakeasyBase));
-export { PostReplaceRouteTableAssociationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceRouteTableAssociationQueryParams = PostReplaceRouteTableAssociationQueryParams;
 var PostReplaceRouteTableAssociationHeaders = /** @class */ (function (_super) {
     __extends(PostReplaceRouteTableAssociationHeaders, _super);
     function PostReplaceRouteTableAssociationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostReplaceRouteTableAssociationHeaders;
-}(SpeakeasyBase));
-export { PostReplaceRouteTableAssociationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceRouteTableAssociationHeaders = PostReplaceRouteTableAssociationHeaders;
 var PostReplaceRouteTableAssociationRequest = /** @class */ (function (_super) {
     __extends(PostReplaceRouteTableAssociationRequest, _super);
     function PostReplaceRouteTableAssociationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReplaceRouteTableAssociationQueryParams)
     ], PostReplaceRouteTableAssociationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReplaceRouteTableAssociationHeaders)
     ], PostReplaceRouteTableAssociationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostReplaceRouteTableAssociationRequest.prototype, "request", void 0);
     return PostReplaceRouteTableAssociationRequest;
-}(SpeakeasyBase));
-export { PostReplaceRouteTableAssociationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceRouteTableAssociationRequest = PostReplaceRouteTableAssociationRequest;
 var PostReplaceRouteTableAssociationResponse = /** @class */ (function (_super) {
     __extends(PostReplaceRouteTableAssociationResponse, _super);
     function PostReplaceRouteTableAssociationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostReplaceRouteTableAssociationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostReplaceRouteTableAssociationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostReplaceRouteTableAssociationResponse.prototype, "statusCode", void 0);
     return PostReplaceRouteTableAssociationResponse;
-}(SpeakeasyBase));
-export { PostReplaceRouteTableAssociationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceRouteTableAssociationResponse = PostReplaceRouteTableAssociationResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestingLevelValueEnum } from "./nestinglevelvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocDbSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestinglevelvalueenum_1 = require("./nestinglevelvalueenum");
 // DocDbSettings
 /**
  * Provides information that defines a DocumentDB endpoint.
@@ -34,49 +37,49 @@ var DocDbSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DocsToInvestigate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DocsToInvestigate" }),
         __metadata("design:type", Number)
     ], DocDbSettings.prototype, "docsToInvestigate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExtractDocId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExtractDocId" }),
         __metadata("design:type", Boolean)
     ], DocDbSettings.prototype, "extractDocId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NestingLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NestingLevel" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "nestingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], DocDbSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], DocDbSettings.prototype, "username", void 0);
     return DocDbSettings;
-}(SpeakeasyBase));
-export { DocDbSettings };
+}(utils_1.SpeakeasyBase));
+exports.DocDbSettings = DocDbSettings;

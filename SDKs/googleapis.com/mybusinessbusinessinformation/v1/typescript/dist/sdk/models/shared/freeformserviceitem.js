@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Label } from "./label";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FreeFormServiceItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var label_1 = require("./label");
 // FreeFormServiceItem
 /**
  * Represents a free-form service offered by the merchant. These are services that are not exposed as part of our structure service data. The merchant manually enters the names for of such services via a geomerchant surface.
@@ -34,13 +37,13 @@ var FreeFormServiceItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], FreeFormServiceItem.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", Label)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", label_1.Label)
     ], FreeFormServiceItem.prototype, "label", void 0);
     return FreeFormServiceItem;
-}(SpeakeasyBase));
-export { FreeFormServiceItem };
+}(utils_1.SpeakeasyBase));
+exports.FreeFormServiceItem = FreeFormServiceItem;

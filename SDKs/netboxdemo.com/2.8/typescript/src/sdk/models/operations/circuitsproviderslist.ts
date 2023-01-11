@@ -218,5 +218,5 @@ export class CircuitsProvidersListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  circuitsProvidersList200ApplicationJsonObject?: CircuitsProvidersList200ApplicationJson;
+  circuitsProvidersList200ApplicationJSONObject?: CircuitsProvidersList200ApplicationJson;
 }

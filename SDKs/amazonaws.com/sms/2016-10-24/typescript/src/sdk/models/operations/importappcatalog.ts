@@ -48,7 +48,7 @@ export class ImportAppCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  importAppCatalogResponse?: Map<string, any>;
+  importAppCatalogResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalError?: any;

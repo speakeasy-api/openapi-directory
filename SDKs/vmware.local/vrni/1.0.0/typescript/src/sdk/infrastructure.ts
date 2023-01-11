@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,23 +34,25 @@ export class Infrastructure {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/infra/nodes/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/infra/nodes/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetNodeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.node = httpRes?.data;
             }
             break;
@@ -66,7 +68,6 @@ export class Infrastructure {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -86,21 +87,23 @@ export class Infrastructure {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/infra/nodes";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.ListNodesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.nodeListResult = httpRes?.data;
             }
             break;
@@ -114,7 +117,6 @@ export class Infrastructure {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

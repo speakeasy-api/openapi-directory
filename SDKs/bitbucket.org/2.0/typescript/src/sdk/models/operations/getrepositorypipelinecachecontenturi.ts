@@ -29,7 +29,7 @@ export class GetRepositoryPipelineCacheContentUriResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   pipelineCacheContentUri?: shared.PipelineCacheContentUri;

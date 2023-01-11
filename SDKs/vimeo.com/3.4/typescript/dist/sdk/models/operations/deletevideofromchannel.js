@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteVideoFromChannelResponse = exports.DeleteVideoFromChannelRequest = exports.DeleteVideoFromChannelSecurity = exports.DeleteVideoFromChannelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeleteVideoFromChannelPathParams = /** @class */ (function (_super) {
     __extends(DeleteVideoFromChannelPathParams, _super);
     function DeleteVideoFromChannelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
         __metadata("design:type", Number)
     ], DeleteVideoFromChannelPathParams.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=video_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=video_id" }),
         __metadata("design:type", Number)
     ], DeleteVideoFromChannelPathParams.prototype, "videoId", void 0);
     return DeleteVideoFromChannelPathParams;
-}(SpeakeasyBase));
-export { DeleteVideoFromChannelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVideoFromChannelPathParams = DeleteVideoFromChannelPathParams;
 var DeleteVideoFromChannelSecurity = /** @class */ (function (_super) {
     __extends(DeleteVideoFromChannelSecurity, _super);
     function DeleteVideoFromChannelSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeleteVideoFromChannelSecurity.prototype, "oauth2", void 0);
     return DeleteVideoFromChannelSecurity;
-}(SpeakeasyBase));
-export { DeleteVideoFromChannelSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVideoFromChannelSecurity = DeleteVideoFromChannelSecurity;
 var DeleteVideoFromChannelRequest = /** @class */ (function (_super) {
     __extends(DeleteVideoFromChannelRequest, _super);
     function DeleteVideoFromChannelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteVideoFromChannelPathParams)
     ], DeleteVideoFromChannelRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteVideoFromChannelSecurity)
     ], DeleteVideoFromChannelRequest.prototype, "security", void 0);
     return DeleteVideoFromChannelRequest;
-}(SpeakeasyBase));
-export { DeleteVideoFromChannelRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVideoFromChannelRequest = DeleteVideoFromChannelRequest;
 var DeleteVideoFromChannelResponse = /** @class */ (function (_super) {
     __extends(DeleteVideoFromChannelResponse, _super);
     function DeleteVideoFromChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteVideoFromChannelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteVideoFromChannelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], DeleteVideoFromChannelResponse.prototype, "legacyError", void 0);
     return DeleteVideoFromChannelResponse;
-}(SpeakeasyBase));
-export { DeleteVideoFromChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVideoFromChannelResponse = DeleteVideoFromChannelResponse;

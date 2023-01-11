@@ -21,6 +21,6 @@ export declare class PutDataLakeSettingsResponse extends SpeakeasyBase {
     contentType: string;
     internalServiceException?: any;
     invalidInputException?: any;
-    putDataLakeSettingsResponse?: Map<string, any>;
+    putDataLakeSettingsResponse?: Record<string, any>;
     statusCode: number;
 }

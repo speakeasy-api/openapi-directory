@@ -31,7 +31,7 @@ export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersion
 export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreRequest extends SpeakeasyBase {
     pathParams: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestorePathParams;
     queryParams: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreSecurity;
 }
 export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse extends SpeakeasyBase {

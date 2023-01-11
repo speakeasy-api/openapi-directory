@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityZone } from "./availabilityzone";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Subnet = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityzone_1 = require("./availabilityzone");
 // Subnet
 /**
  * In response to a request by the <code>DescribeReplicationSubnetGroups</code> operation, this object identifies a subnet by its given Availability Zone, subnet identifier, and status.
@@ -34,17 +37,17 @@ var Subnet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetAvailabilityZone" }),
-        __metadata("design:type", AvailabilityZone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetAvailabilityZone" }),
+        __metadata("design:type", availabilityzone_1.AvailabilityZone)
     ], Subnet.prototype, "subnetAvailabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIdentifier" }),
         __metadata("design:type", String)
     ], Subnet.prototype, "subnetIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetStatus" }),
         __metadata("design:type", String)
     ], Subnet.prototype, "subnetStatus", void 0);
     return Subnet;
-}(SpeakeasyBase));
-export { Subnet };
+}(utils_1.SpeakeasyBase));
+exports.Subnet = Subnet;

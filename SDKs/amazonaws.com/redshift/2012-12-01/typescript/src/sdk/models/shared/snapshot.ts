@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountWithRestoreAccess } from "./accountwithrestoreaccess";
-import { Tag } from "./tag";
+import { AccountsWithRestoreAccessList } from "./accountswithrestoreaccesslist";
+import { TagList } from "./taglist";
 
 
 
@@ -9,8 +9,8 @@ import { Tag } from "./tag";
  * Describes a snapshot.
 **/
 export class Snapshot extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: AccountWithRestoreAccess })
-  accountsWithRestoreAccess?: AccountWithRestoreAccess[];
+  @SpeakeasyMetadata({ elemType: AccountsWithRestoreAccessList })
+  accountsWithRestoreAccess?: AccountsWithRestoreAccessList[];
 
   @SpeakeasyMetadata()
   actualIncrementalBackupSizeInMegaBytes?: number;
@@ -43,7 +43,7 @@ export class Snapshot extends SpeakeasyBase {
   encrypted?: boolean;
 
   @SpeakeasyMetadata()
-  encryptedWithHsm?: boolean;
+  encryptedWithHSM?: boolean;
 
   @SpeakeasyMetadata()
   engineFullVersion?: string;
@@ -82,7 +82,7 @@ export class Snapshot extends SpeakeasyBase {
   port?: number;
 
   @SpeakeasyMetadata()
-  restorableNodeTypes?: string[];
+  restorableNodeTypes?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   snapshotCreateTime?: Date;
@@ -102,8 +102,8 @@ export class Snapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
   status?: string;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 
   @SpeakeasyMetadata()
   totalBackupSizeInMegaBytes?: number;

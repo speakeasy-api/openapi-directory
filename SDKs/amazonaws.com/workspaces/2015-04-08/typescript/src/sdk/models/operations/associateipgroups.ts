@@ -48,7 +48,7 @@ export class AssociateIpGroupsResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  associateIpGroupsResult?: Map<string, any>;
+  associateIpGroupsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

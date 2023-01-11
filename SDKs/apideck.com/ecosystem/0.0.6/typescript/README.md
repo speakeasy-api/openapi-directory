@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CategoriesAllRequest, CategoriesAllResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: CategoriesAllRequest = {
   pathParams: {
-    ecosystemId: "rerum",
+    ecosystemId: "sit",
   },
   queryParams: {
-    cursor: "nobis",
-    limit: 7495419760578899443,
+    cursor: "voluptas",
+    limit: 6050128673802995827,
   },
 };
 

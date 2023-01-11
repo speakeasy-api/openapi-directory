@@ -1,0 +1,768 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentFlow = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var ConsentFlow = /** @class */ (function () {
+    function ConsentFlow(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * postV05ConsentRequestsInit - Create consent request
+     *
+     * Creates a consent request to get data about a patient by HIU user.
+    **/
+    ConsentFlow.prototype.postV05ConsentRequestsInit = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentRequestsInitRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consent-requests/init";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentRequestsOnInit - Response to consent request
+     *
+     * Result of consent request creation for a patient. **consentRequest.id** represents the consentrequest id created by CM. The result must contain either **consentRequest** or the **error** caused. <br/>
+     *   Reasons for error may be
+     *   * Invalid references (e.g patient id, hiu id), purpose, hiTypes, ranges, persmission
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentRequestsOnInit = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentRequestsOnInitRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consent-requests/on-init";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentRequestsOnStatus - Result of consent request status
+     *
+     * Result of consent request done previously. Status of request can be GRANTED,  DENIED, EXPIRED. If the request was GRANTED, then
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentRequestsOnStatus = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentRequestsOnStatusRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consent-requests/on-status";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentRequestsStatus - Get consent request status
+     *
+     * Get status of consent request done previously
+    **/
+    ConsentFlow.prototype.postV05ConsentRequestsStatus = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentRequestsStatusRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consent-requests/status";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsFetch - Get consent artefact
+    **/
+    ConsentFlow.prototype.postV05ConsentsFetch = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsFetchRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/fetch";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsHipNotify - Consent notification
+     *
+     * Notification of consents to health information providers consent request granted, consent revoked, consent expired. Only the GRANTED, REVOKED and EXPIRED status notifications will be sent to HIP.
+     *   1. If consent is granted, status=GRANTED, then consentDetail contains the consent artefact details and signature is available.
+     *   2. If consent is revoked, then status=REVOKED, and consentId specifes which consent artefact is revoked.
+     *   3. If the consent has expired, then status=EXPIRED, and consentId specifies which consent artefact has expired. Note, this is also responsibility of the HIP to keep track of consent expiry. Any data request on expired consent artefact must not be done.
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentsHipNotify = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsHipNotifyRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/hip/notify";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsHipOnNotify - Consent notification
+     *
+     * This API is called by HIP as acknowledgement to notification of consents, in cases of consent revocation and expiration.
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentsHipOnNotify = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsHipOnNotifyRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/hip/on-notify";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsHiuNotify - Consent notification
+     *
+     * Health information user will get notified about the consent request granted or denied, consent revoked, consent expired.
+     * 1. For consent request grant, status=GRANTED, consentRequestId=<consent-request-id>, and consentArtefacts is an array of generated consent artefact Ids.
+     * 2. For consent request expiry, status=EXPIRED, consentRequestId=<consent-request-id>
+     * 3. For consent request denied, status=DENIED, consentRequestId=<consent-request-id>
+     * 4. For consent revocation, status=REVOKED, consentArtefacts is an array of revoked consent artefact ids
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentsHiuNotify = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsHiuNotifyRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/hiu/notify";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsHiuOnNotify - Consent notification
+     *
+     * This API is called by HIU as acknowledgement to consent notifications, specifically for cases when consent is REVOKED or EXPIRED.
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentsHiuOnNotify = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsHiuOnNotifyRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/hiu/on-notify";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postV05ConsentsOnFetch - Result of fetch request for a consent artefact
+     *
+     * Must contain either consentDetail or error. Possible reason of errors are
+     * 1. consentId passed through /fetch is invalid
+     *
+    **/
+    ConsentFlow.prototype.postV05ConsentsOnFetch = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostV05ConsentsOnFetchRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v0.5/consents/on-fetch";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.errorResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return ConsentFlow;
+}());
+exports.ConsentFlow = ConsentFlow;

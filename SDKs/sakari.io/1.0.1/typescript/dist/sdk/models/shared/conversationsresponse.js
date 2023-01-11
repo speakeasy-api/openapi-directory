@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Conversation } from "./conversation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConversationsResponse = exports.ConversationsResponsePagination = exports.ConversationsResponseError = void 0;
+var utils_1 = require("../../../internal/utils");
+var conversation_1 = require("./conversation");
 var ConversationsResponseError = /** @class */ (function (_super) {
     __extends(ConversationsResponseError, _super);
     function ConversationsResponseError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ConversationsResponseError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ConversationsResponseError.prototype, "message", void 0);
     return ConversationsResponseError;
-}(SpeakeasyBase));
-export { ConversationsResponseError };
+}(utils_1.SpeakeasyBase));
+exports.ConversationsResponseError = ConversationsResponseError;
 var ConversationsResponsePagination = /** @class */ (function (_super) {
     __extends(ConversationsResponsePagination, _super);
     function ConversationsResponsePagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ConversationsResponsePagination.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], ConversationsResponsePagination.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], ConversationsResponsePagination.prototype, "totalCount", void 0);
     return ConversationsResponsePagination;
-}(SpeakeasyBase));
-export { ConversationsResponsePagination };
+}(utils_1.SpeakeasyBase));
+exports.ConversationsResponsePagination = ConversationsResponsePagination;
 var ConversationsResponse = /** @class */ (function (_super) {
     __extends(ConversationsResponse, _super);
     function ConversationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Conversation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: conversation_1.Conversation }),
         __metadata("design:type", Array)
     ], ConversationsResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", ConversationsResponseError)
     ], ConversationsResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", ConversationsResponsePagination)
     ], ConversationsResponse.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], ConversationsResponse.prototype, "success", void 0);
     return ConversationsResponse;
-}(SpeakeasyBase));
-export { ConversationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConversationsResponse = ConversationsResponse;

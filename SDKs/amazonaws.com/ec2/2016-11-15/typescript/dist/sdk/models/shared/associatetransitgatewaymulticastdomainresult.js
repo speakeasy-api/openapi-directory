@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayMulticastDomainAssociations } from "./transitgatewaymulticastdomainassociations";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateTransitGatewayMulticastDomainResult = exports.AssociateTransitGatewayMulticastDomainResultAssociations = void 0;
+var utils_1 = require("../../../internal/utils");
+// AssociateTransitGatewayMulticastDomainResultAssociations
+/**
+ * Information about the transit gateway multicast domain associations.
+**/
+var AssociateTransitGatewayMulticastDomainResultAssociations = /** @class */ (function (_super) {
+    __extends(AssociateTransitGatewayMulticastDomainResultAssociations, _super);
+    function AssociateTransitGatewayMulticastDomainResultAssociations() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "resourceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "resourceOwnerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "resourceType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "subnets", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "transitGatewayAttachmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTransitGatewayMulticastDomainResultAssociations.prototype, "transitGatewayMulticastDomainId", void 0);
+    return AssociateTransitGatewayMulticastDomainResultAssociations;
+}(utils_1.SpeakeasyBase));
+exports.AssociateTransitGatewayMulticastDomainResultAssociations = AssociateTransitGatewayMulticastDomainResultAssociations;
 var AssociateTransitGatewayMulticastDomainResult = /** @class */ (function (_super) {
     __extends(AssociateTransitGatewayMulticastDomainResult, _super);
     function AssociateTransitGatewayMulticastDomainResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayMulticastDomainAssociations)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateTransitGatewayMulticastDomainResultAssociations)
     ], AssociateTransitGatewayMulticastDomainResult.prototype, "associations", void 0);
     return AssociateTransitGatewayMulticastDomainResult;
-}(SpeakeasyBase));
-export { AssociateTransitGatewayMulticastDomainResult };
+}(utils_1.SpeakeasyBase));
+exports.AssociateTransitGatewayMulticastDomainResult = AssociateTransitGatewayMulticastDomainResult;

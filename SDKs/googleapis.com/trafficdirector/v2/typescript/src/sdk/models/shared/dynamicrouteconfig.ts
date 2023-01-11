@@ -7,7 +7,7 @@ export class DynamicRouteConfig extends SpeakeasyBase {
   lastUpdated?: string;
 
   @SpeakeasyMetadata({ data: "json, name=routeConfig" })
-  routeConfig?: Map<string, any>;
+  routeConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=versionInfo" })
   versionInfo?: string;

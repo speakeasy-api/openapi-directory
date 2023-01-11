@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeKey } from "./attributekey";
-import { TypedAttributeValueRange } from "./typedattributevaluerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectAttributeRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributekey_1 = require("./attributekey");
+var typedattributevaluerange_1 = require("./typedattributevaluerange");
 // ObjectAttributeRange
 /**
  * A range of attributes.
@@ -35,13 +38,13 @@ var ObjectAttributeRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeKey" }),
-        __metadata("design:type", AttributeKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeKey" }),
+        __metadata("design:type", attributekey_1.AttributeKey)
     ], ObjectAttributeRange.prototype, "attributeKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Range" }),
-        __metadata("design:type", TypedAttributeValueRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Range" }),
+        __metadata("design:type", typedattributevaluerange_1.TypedAttributeValueRange)
     ], ObjectAttributeRange.prototype, "range", void 0);
     return ObjectAttributeRange;
-}(SpeakeasyBase));
-export { ObjectAttributeRange };
+}(utils_1.SpeakeasyBase));
+exports.ObjectAttributeRange = ObjectAttributeRange;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var StatusCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Status = exports.StatusCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var StatusCodeEnum;
 (function (StatusCodeEnum) {
     StatusCodeEnum["CodeUnspecified"] = "CODE_UNSPECIFIED";
     StatusCodeEnum["Ok"] = "OK";
     StatusCodeEnum["Failed"] = "FAILED";
     StatusCodeEnum["Unknown"] = "UNKNOWN";
-})(StatusCodeEnum || (StatusCodeEnum = {}));
+})(StatusCodeEnum = exports.StatusCodeEnum || (exports.StatusCodeEnum = {}));
 // Status
 /**
  * Status specifies state for the subcomponent.
@@ -40,13 +43,13 @@ var Status = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Status.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Status.prototype, "description", void 0);
     return Status;
-}(SpeakeasyBase));
-export { Status };
+}(utils_1.SpeakeasyBase));
+exports.Status = Status;

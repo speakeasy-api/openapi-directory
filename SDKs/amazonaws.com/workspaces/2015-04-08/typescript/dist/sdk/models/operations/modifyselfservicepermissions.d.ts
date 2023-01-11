@@ -21,7 +21,7 @@ export declare class ModifySelfservicePermissionsResponse extends SpeakeasyBase 
     accessDeniedException?: any;
     contentType: string;
     invalidParameterValuesException?: any;
-    modifySelfservicePermissionsResult?: Map<string, any>;
+    modifySelfservicePermissionsResult?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

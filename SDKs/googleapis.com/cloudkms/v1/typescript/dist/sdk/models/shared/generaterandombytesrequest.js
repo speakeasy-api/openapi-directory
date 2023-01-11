@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GenerateRandomBytesRequestProtectionLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenerateRandomBytesRequest = exports.GenerateRandomBytesRequestProtectionLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GenerateRandomBytesRequestProtectionLevelEnum;
 (function (GenerateRandomBytesRequestProtectionLevelEnum) {
     GenerateRandomBytesRequestProtectionLevelEnum["ProtectionLevelUnspecified"] = "PROTECTION_LEVEL_UNSPECIFIED";
     GenerateRandomBytesRequestProtectionLevelEnum["Software"] = "SOFTWARE";
     GenerateRandomBytesRequestProtectionLevelEnum["Hsm"] = "HSM";
     GenerateRandomBytesRequestProtectionLevelEnum["External"] = "EXTERNAL";
     GenerateRandomBytesRequestProtectionLevelEnum["ExternalVpc"] = "EXTERNAL_VPC";
-})(GenerateRandomBytesRequestProtectionLevelEnum || (GenerateRandomBytesRequestProtectionLevelEnum = {}));
+})(GenerateRandomBytesRequestProtectionLevelEnum = exports.GenerateRandomBytesRequestProtectionLevelEnum || (exports.GenerateRandomBytesRequestProtectionLevelEnum = {}));
 // GenerateRandomBytesRequest
 /**
  * Request message for KeyManagementService.GenerateRandomBytes.
@@ -41,13 +44,13 @@ var GenerateRandomBytesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lengthBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lengthBytes" }),
         __metadata("design:type", Number)
     ], GenerateRandomBytesRequest.prototype, "lengthBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], GenerateRandomBytesRequest.prototype, "protectionLevel", void 0);
     return GenerateRandomBytesRequest;
-}(SpeakeasyBase));
-export { GenerateRandomBytesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GenerateRandomBytesRequest = GenerateRandomBytesRequest;

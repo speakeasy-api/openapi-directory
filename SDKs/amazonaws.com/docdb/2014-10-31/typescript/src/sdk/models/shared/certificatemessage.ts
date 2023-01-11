@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
+import { CertificateList } from "./certificatelist";
 
 
 
 export class CertificateMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Certificate })
-  certificates?: Certificate[];
+  @SpeakeasyMetadata({ elemType: CertificateList })
+  certificates?: CertificateList[];
 
   @SpeakeasyMetadata()
   marker?: string;

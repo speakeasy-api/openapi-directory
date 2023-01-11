@@ -11,7 +11,7 @@ export declare class GetCreateCustomAvailabilityZoneQueryParams extends Speakeas
     existingVpnId?: string;
     newVpnTunnelName?: string;
     version: GetCreateCustomAvailabilityZoneVersionEnum;
-    vpnTunnelOriginatorIp?: string;
+    vpnTunnelOriginatorIP?: string;
 }
 export declare class GetCreateCustomAvailabilityZoneHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;

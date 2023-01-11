@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GamesAchievementIncrement } from "./gamesachievementincrement";
-import { GamesAchievementSetStepsAtLeast } from "./gamesachievementsetstepsatleast";
-export var AchievementUpdateRequestUpdateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AchievementUpdateRequest = exports.AchievementUpdateRequestUpdateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gamesachievementincrement_1 = require("./gamesachievementincrement");
+var gamesachievementsetstepsatleast_1 = require("./gamesachievementsetstepsatleast");
+var AchievementUpdateRequestUpdateTypeEnum;
 (function (AchievementUpdateRequestUpdateTypeEnum) {
     AchievementUpdateRequestUpdateTypeEnum["AchievementUpdateTypeUnspecified"] = "ACHIEVEMENT_UPDATE_TYPE_UNSPECIFIED";
     AchievementUpdateRequestUpdateTypeEnum["Reveal"] = "REVEAL";
     AchievementUpdateRequestUpdateTypeEnum["Unlock"] = "UNLOCK";
     AchievementUpdateRequestUpdateTypeEnum["Increment"] = "INCREMENT";
     AchievementUpdateRequestUpdateTypeEnum["SetStepsAtLeast"] = "SET_STEPS_AT_LEAST";
-})(AchievementUpdateRequestUpdateTypeEnum || (AchievementUpdateRequestUpdateTypeEnum = {}));
+})(AchievementUpdateRequestUpdateTypeEnum = exports.AchievementUpdateRequestUpdateTypeEnum || (exports.AchievementUpdateRequestUpdateTypeEnum = {}));
 // AchievementUpdateRequest
 /**
  * A request to update an achievement.
@@ -43,25 +46,25 @@ var AchievementUpdateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=achievementId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=achievementId" }),
         __metadata("design:type", String)
     ], AchievementUpdateRequest.prototype, "achievementId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=incrementPayload" }),
-        __metadata("design:type", GamesAchievementIncrement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=incrementPayload" }),
+        __metadata("design:type", gamesachievementincrement_1.GamesAchievementIncrement)
     ], AchievementUpdateRequest.prototype, "incrementPayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AchievementUpdateRequest.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setStepsAtLeastPayload" }),
-        __metadata("design:type", GamesAchievementSetStepsAtLeast)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setStepsAtLeastPayload" }),
+        __metadata("design:type", gamesachievementsetstepsatleast_1.GamesAchievementSetStepsAtLeast)
     ], AchievementUpdateRequest.prototype, "setStepsAtLeastPayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateType" }),
         __metadata("design:type", String)
     ], AchievementUpdateRequest.prototype, "updateType", void 0);
     return AchievementUpdateRequest;
-}(SpeakeasyBase));
-export { AchievementUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AchievementUpdateRequest = AchievementUpdateRequest;

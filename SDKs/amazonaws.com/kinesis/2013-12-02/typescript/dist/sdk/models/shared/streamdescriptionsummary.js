@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
-import { EnhancedMetrics } from "./enhancedmetrics";
-import { StreamStatusEnum } from "./streamstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamDescriptionSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
+var enhancedmetrics_1 = require("./enhancedmetrics");
+var streamstatusenum_1 = require("./streamstatusenum");
 // StreamDescriptionSummary
 /**
  * Represents the output for <a>DescribeStreamSummary</a>
@@ -36,45 +39,45 @@ var StreamDescriptionSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerCount" }),
         __metadata("design:type", Number)
     ], StreamDescriptionSummary.prototype, "consumerCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionType" }),
         __metadata("design:type", String)
     ], StreamDescriptionSummary.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnhancedMonitoring", elemType: EnhancedMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnhancedMonitoring", elemType: enhancedmetrics_1.EnhancedMetrics }),
         __metadata("design:type", Array)
     ], StreamDescriptionSummary.prototype, "enhancedMonitoring", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeyId" }),
         __metadata("design:type", String)
     ], StreamDescriptionSummary.prototype, "keyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpenShardCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpenShardCount" }),
         __metadata("design:type", Number)
     ], StreamDescriptionSummary.prototype, "openShardCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetentionPeriodHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetentionPeriodHours" }),
         __metadata("design:type", Number)
     ], StreamDescriptionSummary.prototype, "retentionPeriodHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamARN" }),
         __metadata("design:type", String)
-    ], StreamDescriptionSummary.prototype, "streamArn", void 0);
+    ], StreamDescriptionSummary.prototype, "streamARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamCreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamCreationTimestamp" }),
         __metadata("design:type", Date)
     ], StreamDescriptionSummary.prototype, "streamCreationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], StreamDescriptionSummary.prototype, "streamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamStatus" }),
         __metadata("design:type", String)
     ], StreamDescriptionSummary.prototype, "streamStatus", void 0);
     return StreamDescriptionSummary;
-}(SpeakeasyBase));
-export { StreamDescriptionSummary };
+}(utils_1.SpeakeasyBase));
+exports.StreamDescriptionSummary = StreamDescriptionSummary;

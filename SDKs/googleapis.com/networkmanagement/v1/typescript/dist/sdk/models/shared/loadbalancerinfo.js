@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoadBalancerBackend } from "./loadbalancerbackend";
-export var LoadBalancerInfoBackendTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerInfo = exports.LoadBalancerInfoLoadBalancerTypeEnum = exports.LoadBalancerInfoBackendTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var loadbalancerbackend_1 = require("./loadbalancerbackend");
+var LoadBalancerInfoBackendTypeEnum;
 (function (LoadBalancerInfoBackendTypeEnum) {
     LoadBalancerInfoBackendTypeEnum["BackendTypeUnspecified"] = "BACKEND_TYPE_UNSPECIFIED";
     LoadBalancerInfoBackendTypeEnum["BackendService"] = "BACKEND_SERVICE";
     LoadBalancerInfoBackendTypeEnum["TargetPool"] = "TARGET_POOL";
     LoadBalancerInfoBackendTypeEnum["TargetInstance"] = "TARGET_INSTANCE";
-})(LoadBalancerInfoBackendTypeEnum || (LoadBalancerInfoBackendTypeEnum = {}));
-export var LoadBalancerInfoLoadBalancerTypeEnum;
+})(LoadBalancerInfoBackendTypeEnum = exports.LoadBalancerInfoBackendTypeEnum || (exports.LoadBalancerInfoBackendTypeEnum = {}));
+var LoadBalancerInfoLoadBalancerTypeEnum;
 (function (LoadBalancerInfoLoadBalancerTypeEnum) {
     LoadBalancerInfoLoadBalancerTypeEnum["LoadBalancerTypeUnspecified"] = "LOAD_BALANCER_TYPE_UNSPECIFIED";
     LoadBalancerInfoLoadBalancerTypeEnum["InternalTcpUdp"] = "INTERNAL_TCP_UDP";
@@ -39,7 +42,7 @@ export var LoadBalancerInfoLoadBalancerTypeEnum;
     LoadBalancerInfoLoadBalancerTypeEnum["HttpProxy"] = "HTTP_PROXY";
     LoadBalancerInfoLoadBalancerTypeEnum["TcpProxy"] = "TCP_PROXY";
     LoadBalancerInfoLoadBalancerTypeEnum["SslProxy"] = "SSL_PROXY";
-})(LoadBalancerInfoLoadBalancerTypeEnum || (LoadBalancerInfoLoadBalancerTypeEnum = {}));
+})(LoadBalancerInfoLoadBalancerTypeEnum = exports.LoadBalancerInfoLoadBalancerTypeEnum || (exports.LoadBalancerInfoLoadBalancerTypeEnum = {}));
 // LoadBalancerInfo
 /**
  * For display only. Metadata associated with a load balancer.
@@ -50,25 +53,25 @@ var LoadBalancerInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backendType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backendType" }),
         __metadata("design:type", String)
     ], LoadBalancerInfo.prototype, "backendType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backendUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backendUri" }),
         __metadata("design:type", String)
     ], LoadBalancerInfo.prototype, "backendUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backends", elemType: LoadBalancerBackend }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backends", elemType: loadbalancerbackend_1.LoadBalancerBackend }),
         __metadata("design:type", Array)
     ], LoadBalancerInfo.prototype, "backends", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheckUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheckUri" }),
         __metadata("design:type", String)
     ], LoadBalancerInfo.prototype, "healthCheckUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancerType" }),
         __metadata("design:type", String)
     ], LoadBalancerInfo.prototype, "loadBalancerType", void 0);
     return LoadBalancerInfo;
-}(SpeakeasyBase));
-export { LoadBalancerInfo };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancerInfo = LoadBalancerInfo;

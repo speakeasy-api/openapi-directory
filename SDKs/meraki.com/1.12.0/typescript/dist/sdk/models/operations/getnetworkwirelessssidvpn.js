@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidVpnResponse = exports.GetNetworkWirelessSsidVpnRequest = exports.GetNetworkWirelessSsidVpnPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidVpnPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidVpnPathParams, _super);
     function GetNetworkWirelessSsidVpnPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidVpnPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidVpnPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidVpnPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidVpnPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidVpnPathParams = GetNetworkWirelessSsidVpnPathParams;
 var GetNetworkWirelessSsidVpnRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidVpnRequest, _super);
     function GetNetworkWirelessSsidVpnRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidVpnPathParams)
     ], GetNetworkWirelessSsidVpnRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidVpnRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidVpnRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidVpnRequest = GetNetworkWirelessSsidVpnRequest;
 var GetNetworkWirelessSsidVpnResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidVpnResponse, _super);
     function GetNetworkWirelessSsidVpnResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidVpnResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidVpnResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidVpnResponse.prototype, "getNetworkWirelessSsidVpn200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidVpnResponse.prototype, "getNetworkWirelessSsidVpn200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidVpnResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidVpnResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidVpnResponse = GetNetworkWirelessSsidVpnResponse;

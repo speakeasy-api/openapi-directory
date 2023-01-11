@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRejectVpcPeeringConnectionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRejectVpcPeeringConnectionResponse = exports.PostRejectVpcPeeringConnectionRequest = exports.PostRejectVpcPeeringConnectionHeaders = exports.PostRejectVpcPeeringConnectionQueryParams = exports.PostRejectVpcPeeringConnectionVersionEnum = exports.PostRejectVpcPeeringConnectionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRejectVpcPeeringConnectionActionEnum;
 (function (PostRejectVpcPeeringConnectionActionEnum) {
     PostRejectVpcPeeringConnectionActionEnum["RejectVpcPeeringConnection"] = "RejectVpcPeeringConnection";
-})(PostRejectVpcPeeringConnectionActionEnum || (PostRejectVpcPeeringConnectionActionEnum = {}));
-export var PostRejectVpcPeeringConnectionVersionEnum;
+})(PostRejectVpcPeeringConnectionActionEnum = exports.PostRejectVpcPeeringConnectionActionEnum || (exports.PostRejectVpcPeeringConnectionActionEnum = {}));
+var PostRejectVpcPeeringConnectionVersionEnum;
 (function (PostRejectVpcPeeringConnectionVersionEnum) {
     PostRejectVpcPeeringConnectionVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostRejectVpcPeeringConnectionVersionEnum || (PostRejectVpcPeeringConnectionVersionEnum = {}));
+})(PostRejectVpcPeeringConnectionVersionEnum = exports.PostRejectVpcPeeringConnectionVersionEnum || (exports.PostRejectVpcPeeringConnectionVersionEnum = {}));
 var PostRejectVpcPeeringConnectionQueryParams = /** @class */ (function (_super) {
     __extends(PostRejectVpcPeeringConnectionQueryParams, _super);
     function PostRejectVpcPeeringConnectionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionQueryParams.prototype, "version", void 0);
     return PostRejectVpcPeeringConnectionQueryParams;
-}(SpeakeasyBase));
-export { PostRejectVpcPeeringConnectionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectVpcPeeringConnectionQueryParams = PostRejectVpcPeeringConnectionQueryParams;
 var PostRejectVpcPeeringConnectionHeaders = /** @class */ (function (_super) {
     __extends(PostRejectVpcPeeringConnectionHeaders, _super);
     function PostRejectVpcPeeringConnectionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRejectVpcPeeringConnectionHeaders;
-}(SpeakeasyBase));
-export { PostRejectVpcPeeringConnectionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectVpcPeeringConnectionHeaders = PostRejectVpcPeeringConnectionHeaders;
 var PostRejectVpcPeeringConnectionRequest = /** @class */ (function (_super) {
     __extends(PostRejectVpcPeeringConnectionRequest, _super);
     function PostRejectVpcPeeringConnectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRejectVpcPeeringConnectionQueryParams)
     ], PostRejectVpcPeeringConnectionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRejectVpcPeeringConnectionHeaders)
     ], PostRejectVpcPeeringConnectionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRejectVpcPeeringConnectionRequest.prototype, "request", void 0);
     return PostRejectVpcPeeringConnectionRequest;
-}(SpeakeasyBase));
-export { PostRejectVpcPeeringConnectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectVpcPeeringConnectionRequest = PostRejectVpcPeeringConnectionRequest;
 var PostRejectVpcPeeringConnectionResponse = /** @class */ (function (_super) {
     __extends(PostRejectVpcPeeringConnectionResponse, _super);
     function PostRejectVpcPeeringConnectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRejectVpcPeeringConnectionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRejectVpcPeeringConnectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRejectVpcPeeringConnectionResponse.prototype, "statusCode", void 0);
     return PostRejectVpcPeeringConnectionResponse;
-}(SpeakeasyBase));
-export { PostRejectVpcPeeringConnectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectVpcPeeringConnectionResponse = PostRejectVpcPeeringConnectionResponse;

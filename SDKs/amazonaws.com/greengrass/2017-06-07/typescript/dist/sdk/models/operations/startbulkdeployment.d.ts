@@ -13,7 +13,7 @@ export declare class StartBulkDeploymentHeaders extends SpeakeasyBase {
 export declare class StartBulkDeploymentRequestBody extends SpeakeasyBase {
     executionRoleArn: string;
     inputFileUri: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartBulkDeploymentRequest extends SpeakeasyBase {
     headers: StartBulkDeploymentHeaders;

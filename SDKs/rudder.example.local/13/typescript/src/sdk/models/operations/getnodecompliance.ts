@@ -26,7 +26,7 @@ export class GetNodeCompliance200ApplicationJsonDataNodesComplianceDetails exten
   noReport?: number;
 
   @SpeakeasyMetadata({ data: "json, name=successAlreadyOK" })
-  successAlreadyOk?: number;
+  successAlreadyOK?: number;
 
   @SpeakeasyMetadata({ data: "json, name=successNotApplicable" })
   successNotApplicable?: number;
@@ -103,5 +103,5 @@ export class GetNodeComplianceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNodeCompliance200ApplicationJsonObject?: GetNodeCompliance200ApplicationJson;
+  getNodeCompliance200ApplicationJSONObject?: GetNodeCompliance200ApplicationJson;
 }

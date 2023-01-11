@@ -46,5 +46,5 @@ export class GetNetworkPiiSmDevicesForKeyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkPiiSmDevicesForKey200ApplicationJsonObject?: Map<string, any>;
+  getNetworkPiiSmDevicesForKey200ApplicationJSONObject?: Record<string, any>;
 }

@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EventOpRs extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ccwms" })
-  ccwms?: Map<string, number>;
+  ccwms?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=dprs" })
-  dprs?: Map<string, number>;
+  dprs?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=oprs" })
-  oprs?: Map<string, number>;
+  oprs?: Record<string, number>;
 }

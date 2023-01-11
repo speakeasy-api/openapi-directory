@@ -22,5 +22,5 @@ export class PostPackageServiceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postPackageServiceDefaultTextXmlString?: string;
+  postPackageServiceDefaultTextXMLString?: string;
 }

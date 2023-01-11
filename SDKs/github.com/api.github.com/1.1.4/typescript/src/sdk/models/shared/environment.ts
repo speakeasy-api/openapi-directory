@@ -1,8 +1,8 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentBranchPolicy } from "./deploymentbranchpolicy";
 import { SimpleUser } from "./simpleuser";
 import { TeamSimple } from "./teamsimple";
 import { DeploymentReviewerTypeEnum } from "./deploymentreviewertypeenum";
+import { DeploymentBranchPolicy } from "./deploymentbranchpolicy";
 
 
 

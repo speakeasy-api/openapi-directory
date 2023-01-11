@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionNotificationExportEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // ActionNotificationExportEntity
 /**
  * Show Action Notification Export
@@ -33,57 +36,57 @@ var ActionNotificationExportEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_at" }),
         __metadata("design:type", Date)
     ], ActionNotificationExportEntity.prototype, "endAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_version" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "exportVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ActionNotificationExportEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_folder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_folder" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_message" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_path" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_request_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_request_method" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryRequestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_request_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_request_url" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryRequestUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_status" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "queryStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_success" }),
         __metadata("design:type", Boolean)
     ], ActionNotificationExportEntity.prototype, "querySuccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results_url" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "resultsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_at" }),
         __metadata("design:type", Date)
     ], ActionNotificationExportEntity.prototype, "startAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ActionNotificationExportEntity.prototype, "status", void 0);
     return ActionNotificationExportEntity;
-}(SpeakeasyBase));
-export { ActionNotificationExportEntity };
+}(utils_1.SpeakeasyBase));
+exports.ActionNotificationExportEntity = ActionNotificationExportEntity;

@@ -47,7 +47,7 @@ export class ReposListPullRequestsAssociatedWithCommitResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -56,5 +56,5 @@ export class ReposListPullRequestsAssociatedWithCommitResponse extends Speakeasy
   pullRequestSimples?: shared.PullRequestSimple[];
 
   @SpeakeasyMetadata()
-  reposListPullRequestsAssociatedWithCommit415ApplicationJsonObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
+  reposListPullRequestsAssociatedWithCommit415ApplicationJSONObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
 }

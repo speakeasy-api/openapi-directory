@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSubscribeCardResponse = exports.ProtocolMqttClientSubscribeCardRequest = exports.ProtocolMqttClientSubscribeCardPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSubscribeCardPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeCardPathParams, _super);
     function ProtocolMqttClientSubscribeCardPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSubscribeCardPathParams.prototype, "agentNum", void 0);
     return ProtocolMqttClientSubscribeCardPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeCardPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeCardPathParams = ProtocolMqttClientSubscribeCardPathParams;
 var ProtocolMqttClientSubscribeCardRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeCardRequest, _super);
     function ProtocolMqttClientSubscribeCardRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSubscribeCardPathParams)
     ], ProtocolMqttClientSubscribeCardRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSubscribeCardRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeCardRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeCardRequest = ProtocolMqttClientSubscribeCardRequest;
 var ProtocolMqttClientSubscribeCardResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeCardResponse, _super);
     function ProtocolMqttClientSubscribeCardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSubscribeCardResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSubscribeCardResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSubscribeCardResponse.prototype, "protocolMqttClientSubscribeCard200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientSubscribeCardResponse.prototype, "protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientSubscribeCardResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeCardResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeCardResponse = ProtocolMqttClientSubscribeCardResponse;

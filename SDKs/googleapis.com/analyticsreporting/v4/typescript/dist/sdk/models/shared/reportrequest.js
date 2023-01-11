@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CohortGroup } from "./cohortgroup";
-import { DateRange } from "./daterange";
-import { DimensionFilterClause } from "./dimensionfilterclause";
-import { Dimension } from "./dimension";
-import { MetricFilterClause } from "./metricfilterclause";
-import { Metric } from "./metric";
-import { OrderBy } from "./orderby";
-import { Pivot } from "./pivot";
-import { Segment } from "./segment";
-export var ReportRequestSamplingLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportRequest = exports.ReportRequestSamplingLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var cohortgroup_1 = require("./cohortgroup");
+var daterange_1 = require("./daterange");
+var dimensionfilterclause_1 = require("./dimensionfilterclause");
+var dimension_1 = require("./dimension");
+var metricfilterclause_1 = require("./metricfilterclause");
+var metric_1 = require("./metric");
+var orderby_1 = require("./orderby");
+var pivot_1 = require("./pivot");
+var segment_1 = require("./segment");
+var ReportRequestSamplingLevelEnum;
 (function (ReportRequestSamplingLevelEnum) {
     ReportRequestSamplingLevelEnum["SamplingUnspecified"] = "SAMPLING_UNSPECIFIED";
     ReportRequestSamplingLevelEnum["Default"] = "DEFAULT";
     ReportRequestSamplingLevelEnum["Small"] = "SMALL";
     ReportRequestSamplingLevelEnum["Large"] = "LARGE";
-})(ReportRequestSamplingLevelEnum || (ReportRequestSamplingLevelEnum = {}));
+})(ReportRequestSamplingLevelEnum = exports.ReportRequestSamplingLevelEnum || (exports.ReportRequestSamplingLevelEnum = {}));
 // ReportRequest
 /**
  * The main request class which specifies the Reporting API request.
@@ -49,73 +52,73 @@ var ReportRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cohortGroup" }),
-        __metadata("design:type", CohortGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cohortGroup" }),
+        __metadata("design:type", cohortgroup_1.CohortGroup)
     ], ReportRequest.prototype, "cohortGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRanges", elemType: DateRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRanges", elemType: daterange_1.DateRange }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "dateRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionFilterClauses", elemType: DimensionFilterClause }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionFilterClauses", elemType: dimensionfilterclause_1.DimensionFilterClause }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "dimensionFilterClauses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filtersExpression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filtersExpression" }),
         __metadata("design:type", String)
     ], ReportRequest.prototype, "filtersExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideTotals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideTotals" }),
         __metadata("design:type", Boolean)
     ], ReportRequest.prototype, "hideTotals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideValueRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideValueRanges" }),
         __metadata("design:type", Boolean)
     ], ReportRequest.prototype, "hideValueRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeEmptyRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeEmptyRows" }),
         __metadata("design:type", Boolean)
     ], ReportRequest.prototype, "includeEmptyRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricFilterClauses", elemType: MetricFilterClause }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricFilterClauses", elemType: metricfilterclause_1.MetricFilterClause }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "metricFilterClauses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: metric_1.Metric }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderBys", elemType: OrderBy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderBys", elemType: orderby_1.OrderBy }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "orderBys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], ReportRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], ReportRequest.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pivots", elemType: Pivot }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pivots", elemType: pivot_1.Pivot }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "pivots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samplingLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samplingLevel" }),
         __metadata("design:type", String)
     ], ReportRequest.prototype, "samplingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segments", elemType: Segment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segments", elemType: segment_1.Segment }),
         __metadata("design:type", Array)
     ], ReportRequest.prototype, "segments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewId" }),
         __metadata("design:type", String)
     ], ReportRequest.prototype, "viewId", void 0);
     return ReportRequest;
-}(SpeakeasyBase));
-export { ReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReportRequest = ReportRequest;

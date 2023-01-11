@@ -10,6 +10,9 @@ export declare class PullRequestReviewLinks extends SpeakeasyBase {
     html: PullRequestReviewLinksHtml;
     pullRequest: PullRequestReviewLinksPullRequest;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestReviewSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

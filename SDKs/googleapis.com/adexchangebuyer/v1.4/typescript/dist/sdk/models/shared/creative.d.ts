@@ -65,7 +65,7 @@ export declare class CreativeNativeAd extends SpeakeasyBase {
     logo?: CreativeNativeAdLogo;
     price?: string;
     starRating?: number;
-    videoUrl?: string;
+    videoURL?: string;
 }
 export declare class CreativeServingRestrictionsContexts extends SpeakeasyBase {
     auctionType?: string[];
@@ -114,7 +114,7 @@ export declare class Creative extends SpeakeasyBase {
     servingRestrictions?: CreativeServingRestrictions[];
     vendorType?: number[];
     version?: number;
-    videoUrl?: string;
-    videoVastXml?: string;
+    videoURL?: string;
+    videoVastXML?: string;
     width?: number;
 }

@@ -14,7 +14,7 @@ export class ActionDeclaration extends SpeakeasyBase {
   actionTypeId: ActionTypeId;
 
   @SpeakeasyMetadata({ data: "json, name=configuration" })
-  configuration?: Map<string, string>;
+  configuration?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=inputArtifacts", elemType: InputArtifact })
   inputArtifacts?: InputArtifact[];

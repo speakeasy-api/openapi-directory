@@ -19,7 +19,7 @@ export declare class CreateHitWithHitTypeRequest extends SpeakeasyBase {
 }
 export declare class CreateHitWithHitTypeResponse extends SpeakeasyBase {
     contentType: string;
-    createHitWithHitTypeResponse?: shared.CreateHitWithHitTypeResponse;
+    createHITWithHITTypeResponse?: shared.CreateHitWithHitTypeResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

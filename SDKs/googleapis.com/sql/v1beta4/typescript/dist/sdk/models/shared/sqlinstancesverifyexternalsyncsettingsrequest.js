@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MySqlSyncConfig } from "./mysqlsyncconfig";
-export var SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlInstancesVerifyExternalSyncSettingsRequest = exports.SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var mysqlsyncconfig_1 = require("./mysqlsyncconfig");
+var SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum;
 (function (SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum) {
     SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum["ExternalSyncModeUnspecified"] = "EXTERNAL_SYNC_MODE_UNSPECIFIED";
     SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum["Online"] = "ONLINE";
     SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum["Offline"] = "OFFLINE";
-})(SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum || (SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum = {}));
+})(SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum = exports.SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum || (exports.SqlInstancesVerifyExternalSyncSettingsRequestSyncModeEnum = {}));
 var SqlInstancesVerifyExternalSyncSettingsRequest = /** @class */ (function (_super) {
     __extends(SqlInstancesVerifyExternalSyncSettingsRequest, _super);
     function SqlInstancesVerifyExternalSyncSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mysqlSyncConfig" }),
-        __metadata("design:type", MySqlSyncConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mysqlSyncConfig" }),
+        __metadata("design:type", mysqlsyncconfig_1.MySqlSyncConfig)
     ], SqlInstancesVerifyExternalSyncSettingsRequest.prototype, "mysqlSyncConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncMode" }),
         __metadata("design:type", String)
     ], SqlInstancesVerifyExternalSyncSettingsRequest.prototype, "syncMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyConnectionOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyConnectionOnly" }),
         __metadata("design:type", Boolean)
     ], SqlInstancesVerifyExternalSyncSettingsRequest.prototype, "verifyConnectionOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyReplicationOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyReplicationOnly" }),
         __metadata("design:type", Boolean)
     ], SqlInstancesVerifyExternalSyncSettingsRequest.prototype, "verifyReplicationOnly", void 0);
     return SqlInstancesVerifyExternalSyncSettingsRequest;
-}(SpeakeasyBase));
-export { SqlInstancesVerifyExternalSyncSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesVerifyExternalSyncSettingsRequest = SqlInstancesVerifyExternalSyncSettingsRequest;

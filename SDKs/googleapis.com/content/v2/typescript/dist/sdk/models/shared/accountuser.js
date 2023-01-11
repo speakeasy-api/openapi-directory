@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountUser = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccountUser = /** @class */ (function (_super) {
     __extends(AccountUser, _super);
     function AccountUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin" }),
         __metadata("design:type", Boolean)
     ], AccountUser.prototype, "admin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], AccountUser.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderManager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderManager" }),
         __metadata("design:type", Boolean)
     ], AccountUser.prototype, "orderManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsAnalyst" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsAnalyst" }),
         __metadata("design:type", Boolean)
     ], AccountUser.prototype, "paymentsAnalyst", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsManager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsManager" }),
         __metadata("design:type", Boolean)
     ], AccountUser.prototype, "paymentsManager", void 0);
     return AccountUser;
-}(SpeakeasyBase));
-export { AccountUser };
+}(utils_1.SpeakeasyBase));
+exports.AccountUser = AccountUser;

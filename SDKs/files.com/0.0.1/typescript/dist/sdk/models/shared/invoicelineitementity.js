@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InvoiceLineItemEntityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceLineItemEntity = exports.InvoiceLineItemEntityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InvoiceLineItemEntityTypeEnum;
 (function (InvoiceLineItemEntityTypeEnum) {
     InvoiceLineItemEntityTypeEnum["Invoice"] = "invoice";
     InvoiceLineItemEntityTypeEnum["Adjustment"] = "adjustment";
@@ -31,48 +34,48 @@ export var InvoiceLineItemEntityTypeEnum;
     InvoiceLineItemEntityTypeEnum["UserOverage"] = "user_overage";
     InvoiceLineItemEntityTypeEnum["AddonSubscription"] = "addon_subscription";
     InvoiceLineItemEntityTypeEnum["MiscFee"] = "misc_fee";
-})(InvoiceLineItemEntityTypeEnum || (InvoiceLineItemEntityTypeEnum = {}));
+})(InvoiceLineItemEntityTypeEnum = exports.InvoiceLineItemEntityTypeEnum || (exports.InvoiceLineItemEntityTypeEnum = {}));
 var InvoiceLineItemEntity = /** @class */ (function (_super) {
     __extends(InvoiceLineItemEntity, _super);
     function InvoiceLineItemEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], InvoiceLineItemEntity.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], InvoiceLineItemEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], InvoiceLineItemEntity.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan" }),
         __metadata("design:type", String)
     ], InvoiceLineItemEntity.prototype, "plan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_end_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_end_at" }),
         __metadata("design:type", Date)
     ], InvoiceLineItemEntity.prototype, "serviceEndAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_start_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_start_at" }),
         __metadata("design:type", Date)
     ], InvoiceLineItemEntity.prototype, "serviceStartAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
         __metadata("design:type", String)
     ], InvoiceLineItemEntity.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], InvoiceLineItemEntity.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], InvoiceLineItemEntity.prototype, "updatedAt", void 0);
     return InvoiceLineItemEntity;
-}(SpeakeasyBase));
-export { InvoiceLineItemEntity };
+}(utils_1.SpeakeasyBase));
+exports.InvoiceLineItemEntity = InvoiceLineItemEntity;

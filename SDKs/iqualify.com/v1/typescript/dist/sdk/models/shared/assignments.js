@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Document } from "./document";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Assignments = void 0;
+var utils_1 = require("../../../internal/utils");
+var document_1 = require("./document");
 var Assignments = /** @class */ (function (_super) {
     __extends(Assignments, _super);
     function Assignments() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: Document }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: document_1.Document }),
         __metadata("design:type", Array)
     ], Assignments.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marks" }),
         __metadata("design:type", Array)
     ], Assignments.prototype, "marks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Assignments.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submittedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submittedAt" }),
         __metadata("design:type", Date)
     ], Assignments.prototype, "submittedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Assignments.prototype, "updatedAt", void 0);
     return Assignments;
-}(SpeakeasyBase));
-export { Assignments };
+}(utils_1.SpeakeasyBase));
+exports.Assignments = Assignments;

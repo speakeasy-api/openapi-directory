@@ -24,5 +24,5 @@ export declare class PostRepositoriesWorkspaceRepoSlugSrcRequest extends Speakea
 export declare class PostRepositoriesWorkspaceRepoSlugSrcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

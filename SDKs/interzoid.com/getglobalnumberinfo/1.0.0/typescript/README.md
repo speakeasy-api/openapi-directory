@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetglobalnumberinfoRequest, GetglobalnumberinfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetglobalnumberinfoRequest = {
   queryParams: {
-    intlnumber: "repellendus",
-    license: "eum",
+    intlnumber: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getglobalnumberinfo(req).then((res: GetglobalnumberinfoResponse | AxiosError) => {
+sdk.globalPhoneNumberInformation.getglobalnumberinfo(req).then((res: GetglobalnumberinfoResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getglobalnumberinfo(req).then((res: GetglobalnumberinfoResponse | AxiosE
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Global Phone Number Information
 
 * `getglobalnumberinfo` - Get demographic information for a global telephone number
 

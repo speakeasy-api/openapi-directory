@@ -1,56 +1,57 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum CreateRegistryRequestBodySubscriptionTierSlugEnum {
-    Starter = "starter"
-,    Basic = "basic"
-,    Professional = "professional"
+    Starter = "starter",
+    Basic = "basic",
+    Professional = "professional"
 }
 
 
 export class CreateRegistryRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=subscription_tier_slug" })
+  @SpeakeasyMetadata({ data: "json, name=subscription_tier_slug" })
   subscriptionTierSlug: CreateRegistryRequestBodySubscriptionTierSlugEnum;
 }
 
 
-export class CreateRegistryRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: CreateRegistryRequestBody;
-}
-
-
 export class CreateRegistry401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateRegistryRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: CreateRegistryRequestBody;
+}
+
+
 export class CreateRegistryResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createRegistry201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createRegistry201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createRegistry401ApplicationJsonObject?: CreateRegistry401ApplicationJson;
+  @SpeakeasyMetadata()
+  createRegistry401ApplicationJSONObject?: CreateRegistry401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

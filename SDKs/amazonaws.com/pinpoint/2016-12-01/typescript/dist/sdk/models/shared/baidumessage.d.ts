@@ -6,7 +6,7 @@ import { ActionEnum } from "./actionenum";
 export declare class BaiduMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     iconReference?: string;
     imageIconUrl?: string;
     imageUrl?: string;
@@ -14,7 +14,7 @@ export declare class BaiduMessage extends SpeakeasyBase {
     silentPush?: boolean;
     smallImageIconUrl?: string;
     sound?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     timeToLive?: number;
     title?: string;
     url?: string;

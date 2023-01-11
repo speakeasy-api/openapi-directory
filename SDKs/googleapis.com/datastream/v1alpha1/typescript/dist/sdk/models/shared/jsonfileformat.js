@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var JsonFileFormatCompressionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JsonFileFormat = exports.JsonFileFormatSchemaFileFormatEnum = exports.JsonFileFormatCompressionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var JsonFileFormatCompressionEnum;
 (function (JsonFileFormatCompressionEnum) {
     JsonFileFormatCompressionEnum["JsonCompressionUnspecified"] = "JSON_COMPRESSION_UNSPECIFIED";
     JsonFileFormatCompressionEnum["NoCompression"] = "NO_COMPRESSION";
     JsonFileFormatCompressionEnum["Gzip"] = "GZIP";
-})(JsonFileFormatCompressionEnum || (JsonFileFormatCompressionEnum = {}));
-export var JsonFileFormatSchemaFileFormatEnum;
+})(JsonFileFormatCompressionEnum = exports.JsonFileFormatCompressionEnum || (exports.JsonFileFormatCompressionEnum = {}));
+var JsonFileFormatSchemaFileFormatEnum;
 (function (JsonFileFormatSchemaFileFormatEnum) {
     JsonFileFormatSchemaFileFormatEnum["SchemaFileFormatUnspecified"] = "SCHEMA_FILE_FORMAT_UNSPECIFIED";
     JsonFileFormatSchemaFileFormatEnum["NoSchemaFile"] = "NO_SCHEMA_FILE";
     JsonFileFormatSchemaFileFormatEnum["AvroSchemaFile"] = "AVRO_SCHEMA_FILE";
-})(JsonFileFormatSchemaFileFormatEnum || (JsonFileFormatSchemaFileFormatEnum = {}));
+})(JsonFileFormatSchemaFileFormatEnum = exports.JsonFileFormatSchemaFileFormatEnum || (exports.JsonFileFormatSchemaFileFormatEnum = {}));
 // JsonFileFormat
 /**
  * JSON file format configuration.
@@ -45,13 +48,13 @@ var JsonFileFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compression" }),
         __metadata("design:type", String)
     ], JsonFileFormat.prototype, "compression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaFileFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaFileFormat" }),
         __metadata("design:type", String)
     ], JsonFileFormat.prototype, "schemaFileFormat", void 0);
     return JsonFileFormat;
-}(SpeakeasyBase));
-export { JsonFileFormat };
+}(utils_1.SpeakeasyBase));
+exports.JsonFileFormat = JsonFileFormat;

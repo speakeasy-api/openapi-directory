@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { VpcPeeringConfig } from "./vpcpeeringconfig";
 
 
@@ -25,10 +25,10 @@ export class PrivateConnection extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -53,10 +53,10 @@ export class PrivateConnectionInput extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" })
   vpcPeeringConfig?: VpcPeeringConfig;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CountryCodeEnum } from "./countrycodeenum";
 import { CurrencyCodeEnum } from "./currencycodeenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 export declare enum FeedConnectionStatusEnum {
     Pending = "PENDING",
     Rejected = "REJECTED"
@@ -17,7 +17,7 @@ export declare class FeedConnection extends SpeakeasyBase {
     accountType?: any;
     country?: CountryCodeEnum;
     currency?: CurrencyCodeEnum;
-    error?: Error;
+    error?: ErrorT;
     id?: string;
     status?: FeedConnectionStatusEnum;
 }

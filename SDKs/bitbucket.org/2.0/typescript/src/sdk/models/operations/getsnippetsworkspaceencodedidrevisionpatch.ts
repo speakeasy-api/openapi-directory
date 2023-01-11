@@ -44,5 +44,5 @@ export class GetSnippetsWorkspaceEncodedIdRevisionPatchResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

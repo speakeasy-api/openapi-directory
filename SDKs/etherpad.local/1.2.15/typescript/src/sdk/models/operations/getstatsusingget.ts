@@ -7,7 +7,7 @@ export class GetStatsUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -19,7 +19,7 @@ export class GetStatsUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class GetStatsUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetStatsUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,14 +58,14 @@ export class GetStatsUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getStatsUsingGet200ApplicationJsonObject?: GetStatsUsingGet200ApplicationJson;
+  getStatsUsingGET200ApplicationJSONObject?: GetStatsUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingGet400ApplicationJsonObject?: GetStatsUsingGet400ApplicationJson;
+  getStatsUsingGET400ApplicationJSONObject?: GetStatsUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingGet401ApplicationJsonObject?: GetStatsUsingGet401ApplicationJson;
+  getStatsUsingGET401ApplicationJSONObject?: GetStatsUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingGet500ApplicationJsonObject?: GetStatsUsingGet500ApplicationJson;
+  getStatsUsingGET500ApplicationJSONObject?: GetStatsUsingGet500ApplicationJson;
 }

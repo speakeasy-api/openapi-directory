@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusTypeEnum } from "./statustypeenum";
-import { ResolvedArtifact } from "./resolvedartifact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var statustypeenum_1 = require("./statustypeenum");
+var resolvedartifact_1 = require("./resolvedartifact");
 // BuildSummary
 /**
  * Contains summary information about a batch build group.
@@ -35,25 +38,25 @@ var BuildSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], BuildSummary.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildStatus" }),
         __metadata("design:type", String)
     ], BuildSummary.prototype, "buildStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryArtifact" }),
-        __metadata("design:type", ResolvedArtifact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryArtifact" }),
+        __metadata("design:type", resolvedartifact_1.ResolvedArtifact)
     ], BuildSummary.prototype, "primaryArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedOn" }),
         __metadata("design:type", Date)
     ], BuildSummary.prototype, "requestedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryArtifacts", elemType: ResolvedArtifact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryArtifacts", elemType: resolvedartifact_1.ResolvedArtifact }),
         __metadata("design:type", Array)
     ], BuildSummary.prototype, "secondaryArtifacts", void 0);
     return BuildSummary;
-}(SpeakeasyBase));
-export { BuildSummary };
+}(utils_1.SpeakeasyBase));
+exports.BuildSummary = BuildSummary;

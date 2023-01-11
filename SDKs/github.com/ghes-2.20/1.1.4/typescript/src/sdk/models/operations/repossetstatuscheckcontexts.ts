@@ -41,7 +41,7 @@ export class ReposSetStatusCheckContextsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposSetStatusCheckContexts200ApplicationJsonStrings?: string[];
+  reposSetStatusCheckContexts200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

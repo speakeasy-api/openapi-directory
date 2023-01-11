@@ -48,5 +48,5 @@ export class CreateDataSourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createDataSource200ApplicationJsonObject?: CreateDataSource200ApplicationJson;
+  createDataSource200ApplicationJSONObject?: CreateDataSource200ApplicationJson;
 }

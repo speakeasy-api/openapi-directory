@@ -22,5 +22,5 @@ export class ProtocolSnmptcpGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmptcpGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolSnmptcpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

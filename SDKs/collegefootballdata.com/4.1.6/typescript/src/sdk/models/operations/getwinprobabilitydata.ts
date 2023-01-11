@@ -20,7 +20,7 @@ export class GetWinProbabilityDataResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata({ elemType: shared.PlayWp })
-  playWps?: shared.PlayWp[];
+  playWPS?: shared.PlayWp[];
 
   @SpeakeasyMetadata()
   statusCode: number;

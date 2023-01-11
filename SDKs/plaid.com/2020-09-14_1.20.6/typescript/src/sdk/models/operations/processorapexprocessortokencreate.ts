@@ -14,7 +14,7 @@ export class ProcessorApexProcessorTokenCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  processorTokenCreateResponse?: Map<string, any>;
+  processorTokenCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

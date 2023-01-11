@@ -60,5 +60,5 @@ export class GetNetworkWirelessChannelUtilizationHistoryResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessChannelUtilizationHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessChannelUtilizationHistory200ApplicationJSONObject?: Record<string, any>;
 }

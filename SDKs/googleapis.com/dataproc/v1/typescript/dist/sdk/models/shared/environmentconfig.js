@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutionConfig } from "./executionconfig";
-import { PeripheralsConfig } from "./peripheralsconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var executionconfig_1 = require("./executionconfig");
+var peripheralsconfig_1 = require("./peripheralsconfig");
 // EnvironmentConfig
 /**
  * Environment configuration for a workload.
@@ -35,13 +38,13 @@ var EnvironmentConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionConfig" }),
-        __metadata("design:type", ExecutionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionConfig" }),
+        __metadata("design:type", executionconfig_1.ExecutionConfig)
     ], EnvironmentConfig.prototype, "executionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=peripheralsConfig" }),
-        __metadata("design:type", PeripheralsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=peripheralsConfig" }),
+        __metadata("design:type", peripheralsconfig_1.PeripheralsConfig)
     ], EnvironmentConfig.prototype, "peripheralsConfig", void 0);
     return EnvironmentConfig;
-}(SpeakeasyBase));
-export { EnvironmentConfig };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentConfig = EnvironmentConfig;

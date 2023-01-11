@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifeCycleLastTestFinalized } from "./lifecyclelasttestfinalized";
-import { LifeCycleLastTestInitiated } from "./lifecyclelasttestinitiated";
-import { LifeCycleLastTestReverted } from "./lifecyclelasttestreverted";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifeCycleLastTest = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecyclelasttestfinalized_1 = require("./lifecyclelasttestfinalized");
+var lifecyclelasttestinitiated_1 = require("./lifecyclelasttestinitiated");
+var lifecyclelasttestreverted_1 = require("./lifecyclelasttestreverted");
 // LifeCycleLastTest
 /**
  * Lifecycle last Test.
@@ -36,17 +39,17 @@ var LifeCycleLastTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalized" }),
-        __metadata("design:type", LifeCycleLastTestFinalized)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalized" }),
+        __metadata("design:type", lifecyclelasttestfinalized_1.LifeCycleLastTestFinalized)
     ], LifeCycleLastTest.prototype, "finalized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initiated" }),
-        __metadata("design:type", LifeCycleLastTestInitiated)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initiated" }),
+        __metadata("design:type", lifecyclelasttestinitiated_1.LifeCycleLastTestInitiated)
     ], LifeCycleLastTest.prototype, "initiated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverted" }),
-        __metadata("design:type", LifeCycleLastTestReverted)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverted" }),
+        __metadata("design:type", lifecyclelasttestreverted_1.LifeCycleLastTestReverted)
     ], LifeCycleLastTest.prototype, "reverted", void 0);
     return LifeCycleLastTest;
-}(SpeakeasyBase));
-export { LifeCycleLastTest };
+}(utils_1.SpeakeasyBase));
+exports.LifeCycleLastTest = LifeCycleLastTest;

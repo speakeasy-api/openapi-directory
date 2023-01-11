@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1PurchasableSku } from "./googlecloudchannelv1purchasablesku";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ListPurchasableSkusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1purchasablesku_1 = require("./googlecloudchannelv1purchasablesku");
 // GoogleCloudChannelV1ListPurchasableSkusResponse
 /**
  * Response message for ListPurchasableSkus.
@@ -34,13 +37,13 @@ var GoogleCloudChannelV1ListPurchasableSkusResponse = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ListPurchasableSkusResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchasableSkus", elemType: GoogleCloudChannelV1PurchasableSku }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchasableSkus", elemType: googlecloudchannelv1purchasablesku_1.GoogleCloudChannelV1PurchasableSku }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1ListPurchasableSkusResponse.prototype, "purchasableSkus", void 0);
     return GoogleCloudChannelV1ListPurchasableSkusResponse;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ListPurchasableSkusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ListPurchasableSkusResponse = GoogleCloudChannelV1ListPurchasableSkusResponse;

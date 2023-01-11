@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GoogleApiHttpBody extends SpeakeasyBase {
     contentType?: string;
     data?: string;
-    extensions?: Map<string, any>[];
+    extensions?: Record<string, any>[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllocateConnectionOnInterconnectRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllocateConnectionOnInterconnectRequest = /** @class */ (function (_super) {
     __extends(AllocateConnectionOnInterconnectRequest, _super);
     function AllocateConnectionOnInterconnectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidth" }),
         __metadata("design:type", String)
     ], AllocateConnectionOnInterconnectRequest.prototype, "bandwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionName" }),
         __metadata("design:type", String)
     ], AllocateConnectionOnInterconnectRequest.prototype, "connectionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interconnectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interconnectId" }),
         __metadata("design:type", String)
     ], AllocateConnectionOnInterconnectRequest.prototype, "interconnectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], AllocateConnectionOnInterconnectRequest.prototype, "ownerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], AllocateConnectionOnInterconnectRequest.prototype, "vlan", void 0);
     return AllocateConnectionOnInterconnectRequest;
-}(SpeakeasyBase));
-export { AllocateConnectionOnInterconnectRequest };
+}(utils_1.SpeakeasyBase));
+exports.AllocateConnectionOnInterconnectRequest = AllocateConnectionOnInterconnectRequest;

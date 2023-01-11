@@ -2,16 +2,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+export class MemcacheParametersInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=params" })
+  params?: Record<string, string>;
+}
+
+
 export class MemcacheParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, string>;
-}
-
-
-export class MemcacheParametersInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, string>;
+  params?: Record<string, string>;
 }

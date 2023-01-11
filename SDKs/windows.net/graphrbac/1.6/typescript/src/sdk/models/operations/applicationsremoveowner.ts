@@ -11,7 +11,7 @@ export class ApplicationsRemoveOwnerPathParams extends SpeakeasyBase {
   ownerObjectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

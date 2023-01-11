@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,119 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeVolumeAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeVolumeAttributeResponse = exports.GetDescribeVolumeAttributeRequest = exports.GetDescribeVolumeAttributeHeaders = exports.GetDescribeVolumeAttributeQueryParams = exports.GetDescribeVolumeAttributeVersionEnum = exports.GetDescribeVolumeAttributeAttributeEnum = exports.GetDescribeVolumeAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeVolumeAttributeActionEnum;
 (function (GetDescribeVolumeAttributeActionEnum) {
     GetDescribeVolumeAttributeActionEnum["DescribeVolumeAttribute"] = "DescribeVolumeAttribute";
-})(GetDescribeVolumeAttributeActionEnum || (GetDescribeVolumeAttributeActionEnum = {}));
-export var GetDescribeVolumeAttributeAttributeEnum;
+})(GetDescribeVolumeAttributeActionEnum = exports.GetDescribeVolumeAttributeActionEnum || (exports.GetDescribeVolumeAttributeActionEnum = {}));
+var GetDescribeVolumeAttributeAttributeEnum;
 (function (GetDescribeVolumeAttributeAttributeEnum) {
     GetDescribeVolumeAttributeAttributeEnum["AutoEnableIo"] = "autoEnableIO";
     GetDescribeVolumeAttributeAttributeEnum["ProductCodes"] = "productCodes";
-})(GetDescribeVolumeAttributeAttributeEnum || (GetDescribeVolumeAttributeAttributeEnum = {}));
-export var GetDescribeVolumeAttributeVersionEnum;
+})(GetDescribeVolumeAttributeAttributeEnum = exports.GetDescribeVolumeAttributeAttributeEnum || (exports.GetDescribeVolumeAttributeAttributeEnum = {}));
+var GetDescribeVolumeAttributeVersionEnum;
 (function (GetDescribeVolumeAttributeVersionEnum) {
     GetDescribeVolumeAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDescribeVolumeAttributeVersionEnum || (GetDescribeVolumeAttributeVersionEnum = {}));
+})(GetDescribeVolumeAttributeVersionEnum = exports.GetDescribeVolumeAttributeVersionEnum || (exports.GetDescribeVolumeAttributeVersionEnum = {}));
 var GetDescribeVolumeAttributeQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeVolumeAttributeQueryParams, _super);
     function GetDescribeVolumeAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Attribute" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeQueryParams.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDescribeVolumeAttributeQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VolumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VolumeId" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeQueryParams.prototype, "volumeId", void 0);
     return GetDescribeVolumeAttributeQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeVolumeAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeVolumeAttributeQueryParams = GetDescribeVolumeAttributeQueryParams;
 var GetDescribeVolumeAttributeHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeVolumeAttributeHeaders, _super);
     function GetDescribeVolumeAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeVolumeAttributeHeaders;
-}(SpeakeasyBase));
-export { GetDescribeVolumeAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeVolumeAttributeHeaders = GetDescribeVolumeAttributeHeaders;
 var GetDescribeVolumeAttributeRequest = /** @class */ (function (_super) {
     __extends(GetDescribeVolumeAttributeRequest, _super);
     function GetDescribeVolumeAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeVolumeAttributeQueryParams)
     ], GetDescribeVolumeAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeVolumeAttributeHeaders)
     ], GetDescribeVolumeAttributeRequest.prototype, "headers", void 0);
     return GetDescribeVolumeAttributeRequest;
-}(SpeakeasyBase));
-export { GetDescribeVolumeAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeVolumeAttributeRequest = GetDescribeVolumeAttributeRequest;
 var GetDescribeVolumeAttributeResponse = /** @class */ (function (_super) {
     __extends(GetDescribeVolumeAttributeResponse, _super);
     function GetDescribeVolumeAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeVolumeAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeVolumeAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeVolumeAttributeResponse.prototype, "statusCode", void 0);
     return GetDescribeVolumeAttributeResponse;
-}(SpeakeasyBase));
-export { GetDescribeVolumeAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeVolumeAttributeResponse = GetDescribeVolumeAttributeResponse;

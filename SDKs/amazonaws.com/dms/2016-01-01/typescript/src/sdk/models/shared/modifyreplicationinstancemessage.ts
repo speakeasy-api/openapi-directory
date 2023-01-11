@@ -23,7 +23,7 @@ export class ModifyReplicationInstanceMessage extends SpeakeasyBase {
   engineVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PreferredMaintenanceWindow" })
   preferredMaintenanceWindow?: string;

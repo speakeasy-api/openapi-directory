@@ -8,7 +8,7 @@ export declare class CpuUtilization extends SpeakeasyBase {
     idle?: number;
     nice?: number;
     privileged?: number;
-    softIrq?: number;
+    softIRQ?: number;
     system?: number;
     user?: number;
 }

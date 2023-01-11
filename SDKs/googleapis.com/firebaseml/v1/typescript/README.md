@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FirebasemlOperationsCancelRequest, FirebasemlOperationsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,30 +30,31 @@ const req: FirebasemlOperationsCancelRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "qui",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "minima",
-    alt: "proto",
-    callback: "ducimus",
-    fields: "eveniet",
-    key: "dolores",
-    oauthToken: "non",
-    prettyPrint: false,
-    quotaUser: "autem",
-    uploadType: "distinctio",
-    uploadProtocol: "quia",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "sed": "odit",
-    "magnam": "architecto",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableInterfaceTemplateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableInterfaceTemplateInput = exports.WritableInterfaceTemplateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableInterfaceTemplateTypeEnum;
 (function (WritableInterfaceTemplateTypeEnum) {
     WritableInterfaceTemplateTypeEnum["Virtual"] = "virtual";
     WritableInterfaceTemplateTypeEnum["Lag"] = "lag";
@@ -97,28 +100,28 @@ export var WritableInterfaceTemplateTypeEnum;
     WritableInterfaceTemplateTypeEnum["ExtremeSummitstack256"] = "extreme-summitstack-256";
     WritableInterfaceTemplateTypeEnum["ExtremeSummitstack512"] = "extreme-summitstack-512";
     WritableInterfaceTemplateTypeEnum["Other"] = "other";
-})(WritableInterfaceTemplateTypeEnum || (WritableInterfaceTemplateTypeEnum = {}));
+})(WritableInterfaceTemplateTypeEnum = exports.WritableInterfaceTemplateTypeEnum || (exports.WritableInterfaceTemplateTypeEnum = {}));
 var WritableInterfaceTemplateInput = /** @class */ (function (_super) {
     __extends(WritableInterfaceTemplateInput, _super);
     function WritableInterfaceTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], WritableInterfaceTemplateInput.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], WritableInterfaceTemplateInput.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableInterfaceTemplateInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableInterfaceTemplateInput.prototype, "type", void 0);
     return WritableInterfaceTemplateInput;
-}(SpeakeasyBase));
-export { WritableInterfaceTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableInterfaceTemplateInput = WritableInterfaceTemplateInput;

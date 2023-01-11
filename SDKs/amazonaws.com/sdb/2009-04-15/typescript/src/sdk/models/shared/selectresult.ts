@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
+import { ItemList } from "./itemlist";
 
 
 
 export class SelectResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Item })
-  items?: Item[];
+  @SpeakeasyMetadata({ elemType: ItemList })
+  items?: ItemList[];
 
   @SpeakeasyMetadata()
   nextToken?: string;

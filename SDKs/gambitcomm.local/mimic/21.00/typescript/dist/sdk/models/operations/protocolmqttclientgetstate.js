@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientGetStateResponse = exports.ProtocolMqttClientGetStateRequest = exports.ProtocolMqttClientGetStatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientGetStatePathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientGetStatePathParams, _super);
     function ProtocolMqttClientGetStatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientGetStatePathParams.prototype, "agentNum", void 0);
     return ProtocolMqttClientGetStatePathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientGetStatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientGetStatePathParams = ProtocolMqttClientGetStatePathParams;
 var ProtocolMqttClientGetStateRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientGetStateRequest, _super);
     function ProtocolMqttClientGetStateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientGetStatePathParams)
     ], ProtocolMqttClientGetStateRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientGetStateRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientGetStateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientGetStateRequest = ProtocolMqttClientGetStateRequest;
 var ProtocolMqttClientGetStateResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientGetStateResponse, _super);
     function ProtocolMqttClientGetStateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientGetStateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientGetStateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientGetStateResponse.prototype, "protocolMqttClientGetState200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientGetStateResponse.prototype, "protocolMqttClientGetState200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientGetStateResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientGetStateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientGetStateResponse = ProtocolMqttClientGetStateResponse;

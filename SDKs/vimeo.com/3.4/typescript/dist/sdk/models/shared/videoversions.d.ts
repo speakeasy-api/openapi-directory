@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Picture } from "./picture";
 import { ApiApp } from "./apiapp";
 import { Play } from "./play";
-import { Picture } from "./picture";
 /**
  * Data from video associated with version
 **/

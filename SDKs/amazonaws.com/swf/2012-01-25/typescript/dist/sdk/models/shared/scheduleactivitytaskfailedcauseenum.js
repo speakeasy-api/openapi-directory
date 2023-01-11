@@ -1,4 +1,7 @@
-export var ScheduleActivityTaskFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleActivityTaskFailedCauseEnum = void 0;
+var ScheduleActivityTaskFailedCauseEnum;
 (function (ScheduleActivityTaskFailedCauseEnum) {
     ScheduleActivityTaskFailedCauseEnum["ActivityTypeDeprecated"] = "ACTIVITY_TYPE_DEPRECATED";
     ScheduleActivityTaskFailedCauseEnum["ActivityTypeDoesNotExist"] = "ACTIVITY_TYPE_DOES_NOT_EXIST";
@@ -11,4 +14,4 @@ export var ScheduleActivityTaskFailedCauseEnum;
     ScheduleActivityTaskFailedCauseEnum["DefaultStartToCloseTimeoutUndefined"] = "DEFAULT_START_TO_CLOSE_TIMEOUT_UNDEFINED";
     ScheduleActivityTaskFailedCauseEnum["DefaultHeartbeatTimeoutUndefined"] = "DEFAULT_HEARTBEAT_TIMEOUT_UNDEFINED";
     ScheduleActivityTaskFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(ScheduleActivityTaskFailedCauseEnum || (ScheduleActivityTaskFailedCauseEnum = {}));
+})(ScheduleActivityTaskFailedCauseEnum = exports.ScheduleActivityTaskFailedCauseEnum || (exports.ScheduleActivityTaskFailedCauseEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OverlayPosition } from "./overlayposition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmbeddedObjectPosition = void 0;
+var utils_1 = require("../../../internal/utils");
+var overlayposition_1 = require("./overlayposition");
 // EmbeddedObjectPosition
 /**
  * The position of an embedded object such as a chart.
@@ -34,17 +37,17 @@ var EmbeddedObjectPosition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newSheet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newSheet" }),
         __metadata("design:type", Boolean)
     ], EmbeddedObjectPosition.prototype, "newSheet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overlayPosition" }),
-        __metadata("design:type", OverlayPosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overlayPosition" }),
+        __metadata("design:type", overlayposition_1.OverlayPosition)
     ], EmbeddedObjectPosition.prototype, "overlayPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], EmbeddedObjectPosition.prototype, "sheetId", void 0);
     return EmbeddedObjectPosition;
-}(SpeakeasyBase));
-export { EmbeddedObjectPosition };
+}(utils_1.SpeakeasyBase));
+exports.EmbeddedObjectPosition = EmbeddedObjectPosition;

@@ -26,7 +26,7 @@ export class DeploymentSimple extends SpeakeasyBase {
   originalEnvironment?: string;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=production_environment" })
   productionEnvironment?: boolean;

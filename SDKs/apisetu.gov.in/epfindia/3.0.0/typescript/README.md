@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { EpfscRequest, EpfscResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: EpfscRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "nam",
-      fullName: "a",
-      scno: "sed",
+      dob: "sit",
+      fullName: "voluptas",
+      scno: "culpa",
     },
-    consentArtifact: "sint",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "impedit",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.epfsc(req).then((res: EpfscResponse | AxiosError) => {
+sdk.apIs.epfsc(req).then((res: EpfscResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.epfsc(req).then((res: EpfscResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `epfsc` - Scheme Certificate
 * `pecer` - Pension Certificate

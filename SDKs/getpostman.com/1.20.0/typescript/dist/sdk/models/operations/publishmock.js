@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublishMockResponse = exports.PublishMockRequest = exports.PublishMock200ApplicationJson = exports.PublishMock200ApplicationJsonMock = exports.PublishMockPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PublishMockPathParams = /** @class */ (function (_super) {
     __extends(PublishMockPathParams, _super);
     function PublishMockPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mock_uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mock_uid" }),
         __metadata("design:type", String)
     ], PublishMockPathParams.prototype, "mockUid", void 0);
     return PublishMockPathParams;
-}(SpeakeasyBase));
-export { PublishMockPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PublishMockPathParams = PublishMockPathParams;
 var PublishMock200ApplicationJsonMock = /** @class */ (function (_super) {
     __extends(PublishMock200ApplicationJsonMock, _super);
     function PublishMock200ApplicationJsonMock() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PublishMock200ApplicationJsonMock.prototype, "id", void 0);
     return PublishMock200ApplicationJsonMock;
-}(SpeakeasyBase));
-export { PublishMock200ApplicationJsonMock };
+}(utils_1.SpeakeasyBase));
+exports.PublishMock200ApplicationJsonMock = PublishMock200ApplicationJsonMock;
 var PublishMock200ApplicationJson = /** @class */ (function (_super) {
     __extends(PublishMock200ApplicationJson, _super);
     function PublishMock200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mock" }),
         __metadata("design:type", PublishMock200ApplicationJsonMock)
     ], PublishMock200ApplicationJson.prototype, "mock", void 0);
     return PublishMock200ApplicationJson;
-}(SpeakeasyBase));
-export { PublishMock200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PublishMock200ApplicationJson = PublishMock200ApplicationJson;
 var PublishMockRequest = /** @class */ (function (_super) {
     __extends(PublishMockRequest, _super);
     function PublishMockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PublishMockPathParams)
     ], PublishMockRequest.prototype, "pathParams", void 0);
     return PublishMockRequest;
-}(SpeakeasyBase));
-export { PublishMockRequest };
+}(utils_1.SpeakeasyBase));
+exports.PublishMockRequest = PublishMockRequest;
 var PublishMockResponse = /** @class */ (function (_super) {
     __extends(PublishMockResponse, _super);
     function PublishMockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PublishMockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PublishMockResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PublishMock200ApplicationJson)
-    ], PublishMockResponse.prototype, "publishMock200ApplicationJsonObject", void 0);
+    ], PublishMockResponse.prototype, "publishMock200ApplicationJSONObject", void 0);
     return PublishMockResponse;
-}(SpeakeasyBase));
-export { PublishMockResponse };
+}(utils_1.SpeakeasyBase));
+exports.PublishMockResponse = PublishMockResponse;

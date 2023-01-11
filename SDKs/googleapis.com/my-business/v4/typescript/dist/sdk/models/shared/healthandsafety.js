@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnhancedCleaning } from "./enhancedcleaning";
-import { IncreasedFoodSafety } from "./increasedfoodsafety";
-import { MinimizedContact } from "./minimizedcontact";
-import { PersonalProtection } from "./personalprotection";
-import { PhysicalDistancing } from "./physicaldistancing";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HealthAndSafety = void 0;
+var utils_1 = require("../../../internal/utils");
+var enhancedcleaning_1 = require("./enhancedcleaning");
+var increasedfoodsafety_1 = require("./increasedfoodsafety");
+var minimizedcontact_1 = require("./minimizedcontact");
+var personalprotection_1 = require("./personalprotection");
+var physicaldistancing_1 = require("./physicaldistancing");
 // HealthAndSafety
 /**
  * Health and safety measures implemented by the hotel during COVID-19.
@@ -38,25 +41,25 @@ var HealthAndSafety = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enhancedCleaning" }),
-        __metadata("design:type", EnhancedCleaning)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enhancedCleaning" }),
+        __metadata("design:type", enhancedcleaning_1.EnhancedCleaning)
     ], HealthAndSafety.prototype, "enhancedCleaning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=increasedFoodSafety" }),
-        __metadata("design:type", IncreasedFoodSafety)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=increasedFoodSafety" }),
+        __metadata("design:type", increasedfoodsafety_1.IncreasedFoodSafety)
     ], HealthAndSafety.prototype, "increasedFoodSafety", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimizedContact" }),
-        __metadata("design:type", MinimizedContact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimizedContact" }),
+        __metadata("design:type", minimizedcontact_1.MinimizedContact)
     ], HealthAndSafety.prototype, "minimizedContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personalProtection" }),
-        __metadata("design:type", PersonalProtection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personalProtection" }),
+        __metadata("design:type", personalprotection_1.PersonalProtection)
     ], HealthAndSafety.prototype, "personalProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalDistancing" }),
-        __metadata("design:type", PhysicalDistancing)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalDistancing" }),
+        __metadata("design:type", physicaldistancing_1.PhysicalDistancing)
     ], HealthAndSafety.prototype, "physicalDistancing", void 0);
     return HealthAndSafety;
-}(SpeakeasyBase));
-export { HealthAndSafety };
+}(utils_1.SpeakeasyBase));
+exports.HealthAndSafety = HealthAndSafety;

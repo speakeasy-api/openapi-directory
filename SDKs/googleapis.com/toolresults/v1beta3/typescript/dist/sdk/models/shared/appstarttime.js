@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Duration } from "./duration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppStartTime = void 0;
+var utils_1 = require("../../../internal/utils");
+var duration_1 = require("./duration");
 var AppStartTime = /** @class */ (function (_super) {
     __extends(AppStartTime, _super);
     function AppStartTime() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullyDrawnTime" }),
-        __metadata("design:type", Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullyDrawnTime" }),
+        __metadata("design:type", duration_1.Duration)
     ], AppStartTime.prototype, "fullyDrawnTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialDisplayTime" }),
-        __metadata("design:type", Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialDisplayTime" }),
+        __metadata("design:type", duration_1.Duration)
     ], AppStartTime.prototype, "initialDisplayTime", void 0);
     return AppStartTime;
-}(SpeakeasyBase));
-export { AppStartTime };
+}(utils_1.SpeakeasyBase));
+exports.AppStartTime = AppStartTime;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChartSourceRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
 // ChartSourceRange
 /**
  * Source ranges for a chart.
@@ -34,9 +37,9 @@ var ChartSourceRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: GridRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: gridrange_1.GridRange }),
         __metadata("design:type", Array)
     ], ChartSourceRange.prototype, "sources", void 0);
     return ChartSourceRange;
-}(SpeakeasyBase));
-export { ChartSourceRange };
+}(utils_1.SpeakeasyBase));
+exports.ChartSourceRange = ChartSourceRange;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestedServiceQuotaChange } from "./requestedservicequotachange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestServiceQuotaIncreaseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var requestedservicequotachange_1 = require("./requestedservicequotachange");
 var RequestServiceQuotaIncreaseResponse = /** @class */ (function (_super) {
     __extends(RequestServiceQuotaIncreaseResponse, _super);
     function RequestServiceQuotaIncreaseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestedQuota" }),
-        __metadata("design:type", RequestedServiceQuotaChange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestedQuota" }),
+        __metadata("design:type", requestedservicequotachange_1.RequestedServiceQuotaChange)
     ], RequestServiceQuotaIncreaseResponse.prototype, "requestedQuota", void 0);
     return RequestServiceQuotaIncreaseResponse;
-}(SpeakeasyBase));
-export { RequestServiceQuotaIncreaseResponse };
+}(utils_1.SpeakeasyBase));
+exports.RequestServiceQuotaIncreaseResponse = RequestServiceQuotaIncreaseResponse;

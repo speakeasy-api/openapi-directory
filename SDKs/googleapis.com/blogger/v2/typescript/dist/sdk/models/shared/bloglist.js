@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BlogUserInfo } from "./bloguserinfo";
-import { Blog } from "./blog";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlogList = void 0;
+var utils_1 = require("../../../internal/utils");
+var bloguserinfo_1 = require("./bloguserinfo");
+var blog_1 = require("./blog");
 var BlogList = /** @class */ (function (_super) {
     __extends(BlogList, _super);
     function BlogList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blogUserInfos", elemType: BlogUserInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blogUserInfos", elemType: bloguserinfo_1.BlogUserInfo }),
         __metadata("design:type", Array)
     ], BlogList.prototype, "blogUserInfos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Blog }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: blog_1.Blog }),
         __metadata("design:type", Array)
     ], BlogList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BlogList.prototype, "kind", void 0);
     return BlogList;
-}(SpeakeasyBase));
-export { BlogList };
+}(utils_1.SpeakeasyBase));
+exports.BlogList = BlogList;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CinemaSheduleShowtimeSearchReadResponse = exports.CinemaSheduleShowtimeSearchReadRequest = exports.CinemaSheduleShowtimeSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CinemaSheduleShowtimeSearchReadPathParams = /** @class */ (function (_super) {
     __extends(CinemaSheduleShowtimeSearchReadPathParams, _super);
     function CinemaSheduleShowtimeSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
         __metadata("design:type", String)
     ], CinemaSheduleShowtimeSearchReadPathParams.prototype, "movieTitle", void 0);
     return CinemaSheduleShowtimeSearchReadPathParams;
-}(SpeakeasyBase));
-export { CinemaSheduleShowtimeSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSheduleShowtimeSearchReadPathParams = CinemaSheduleShowtimeSearchReadPathParams;
 var CinemaSheduleShowtimeSearchReadRequest = /** @class */ (function (_super) {
     __extends(CinemaSheduleShowtimeSearchReadRequest, _super);
     function CinemaSheduleShowtimeSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CinemaSheduleShowtimeSearchReadPathParams)
     ], CinemaSheduleShowtimeSearchReadRequest.prototype, "pathParams", void 0);
     return CinemaSheduleShowtimeSearchReadRequest;
-}(SpeakeasyBase));
-export { CinemaSheduleShowtimeSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSheduleShowtimeSearchReadRequest = CinemaSheduleShowtimeSearchReadRequest;
 var CinemaSheduleShowtimeSearchReadResponse = /** @class */ (function (_super) {
     __extends(CinemaSheduleShowtimeSearchReadResponse, _super);
     function CinemaSheduleShowtimeSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CinemaSheduleShowtimeSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CinemaSheduleShowtimeSearchReadResponse.prototype, "statusCode", void 0);
     return CinemaSheduleShowtimeSearchReadResponse;
-}(SpeakeasyBase));
-export { CinemaSheduleShowtimeSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSheduleShowtimeSearchReadResponse = CinemaSheduleShowtimeSearchReadResponse;

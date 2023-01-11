@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventIntegrationAssociation } from "./eventintegrationassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListEventIntegrationAssociationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventintegrationassociation_1 = require("./eventintegrationassociation");
 var ListEventIntegrationAssociationsResponse = /** @class */ (function (_super) {
     __extends(ListEventIntegrationAssociationsResponse, _super);
     function ListEventIntegrationAssociationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventIntegrationAssociations", elemType: EventIntegrationAssociation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventIntegrationAssociations", elemType: eventintegrationassociation_1.EventIntegrationAssociation }),
         __metadata("design:type", Array)
     ], ListEventIntegrationAssociationsResponse.prototype, "eventIntegrationAssociations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListEventIntegrationAssociationsResponse.prototype, "nextToken", void 0);
     return ListEventIntegrationAssociationsResponse;
-}(SpeakeasyBase));
-export { ListEventIntegrationAssociationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListEventIntegrationAssociationsResponse = ListEventIntegrationAssociationsResponse;

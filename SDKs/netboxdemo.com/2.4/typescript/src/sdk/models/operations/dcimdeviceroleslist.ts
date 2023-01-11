@@ -53,5 +53,5 @@ export class DcimDeviceRolesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimDeviceRolesList200ApplicationJsonObject?: DcimDeviceRolesList200ApplicationJson;
+  dcimDeviceRolesList200ApplicationJSONObject?: DcimDeviceRolesList200ApplicationJson;
 }

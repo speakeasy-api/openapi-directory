@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1ChallengeMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecaptchaenterpriseV1ChallengeMetrics
 /**
  * Metrics related to challenges.
@@ -33,21 +36,21 @@ var GoogleCloudRecaptchaenterpriseV1ChallengeMetrics = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedCount" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1ChallengeMetrics.prototype, "failedCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nocaptchaCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nocaptchaCount" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1ChallengeMetrics.prototype, "nocaptchaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageloadCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageloadCount" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1ChallengeMetrics.prototype, "pageloadCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passedCount" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1ChallengeMetrics.prototype, "passedCount", void 0);
     return GoogleCloudRecaptchaenterpriseV1ChallengeMetrics;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1ChallengeMetrics };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1ChallengeMetrics = GoogleCloudRecaptchaenterpriseV1ChallengeMetrics;

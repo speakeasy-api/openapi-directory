@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceQuotaIncreaseRequestInTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
 // ServiceQuotaIncreaseRequestInTemplate
 /**
  * Information about a quota increase request.
@@ -33,37 +36,37 @@ var ServiceQuotaIncreaseRequestInTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DesiredValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DesiredValue" }),
         __metadata("design:type", Number)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "desiredValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlobalQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlobalQuota" }),
         __metadata("design:type", Boolean)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "globalQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuotaCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuotaCode" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "quotaCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuotaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuotaName" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "quotaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceCode" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "serviceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceName" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unit" }),
         __metadata("design:type", String)
     ], ServiceQuotaIncreaseRequestInTemplate.prototype, "unit", void 0);
     return ServiceQuotaIncreaseRequestInTemplate;
-}(SpeakeasyBase));
-export { ServiceQuotaIncreaseRequestInTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ServiceQuotaIncreaseRequestInTemplate = ServiceQuotaIncreaseRequestInTemplate;

@@ -1,0 +1,12 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+
+// SupportedTimezonesList
+/** 
+ * A time zone associated with a <code>DBInstance</code> or a <code>DBSnapshot</code>. This data type is an element in the response to the <code>DescribeDBInstances</code>, the <code>DescribeDBSnapshots</code>, and the <code>DescribeDBEngineVersions</code> actions. 
+**/
+export class SupportedTimezonesList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  timezoneName?: string;
+}

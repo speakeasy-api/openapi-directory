@@ -8,7 +8,7 @@ export class GroupsAddMemberPathParams extends SpeakeasyBase {
   groupObjectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -20,10 +20,10 @@ export class GroupsAddMemberQueryParams extends SpeakeasyBase {
 
 export class GroupsAddMemberRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  groupAddMemberParameters?: Map<string, Map<string, any>>;
+  groupAddMemberParameters?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  groupAddMemberParameters1?: Map<string, Map<string, any>>;
+  groupAddMemberParameters1?: Record<string, Record<string, any>>;
 }
 
 

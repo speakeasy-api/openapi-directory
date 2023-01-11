@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://lambda.{region}.amazonaws.com", "https://lambda.{region}.amazonaws.com", "http://lambda.{region}.amazonaws.com.cn", "https://lambda.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * addEventSource - <p>Identifies a stream as an event source for an AWS Lambda function. It can be either an Amazon Kinesis stream or a Amazon DynamoDB stream. AWS Lambda invokes the specified function when records are posted to the stream.</p> <p>This is the pull model, where AWS Lambda invokes the function. For more information, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the AWS Lambda Developer Guide.</p> <p>This association between an Amazon Kinesis stream and an AWS Lambda function is called the event source mapping. You provide the configuration information (for example, which stream to read from and which AWS Lambda function to invoke) for the event source mapping in the request body.</p> <p> Each event source, such as a Kinesis stream, can only be associated with one AWS Lambda function. If you call <a>AddEventSource</a> for an event source that is already mapped to another AWS Lambda function, the existing mapping is updated to call the new function instead of the old one. </p> <p>This operation requires permission for the <code>iam:PassRole</code> action for the IAM role. It also requires permission for the <code>lambda:AddEventSource</code> action.</p>
     **/
@@ -60,4 +60,3 @@ export declare class SDK {
     **/
     uploadFunction(req: operations.UploadFunctionRequest, config?: AxiosRequestConfig): Promise<operations.UploadFunctionResponse>;
 }
-export {};

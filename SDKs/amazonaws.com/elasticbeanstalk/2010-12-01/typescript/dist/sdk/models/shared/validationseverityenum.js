@@ -1,5 +1,8 @@
-export var ValidationSeverityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationSeverityEnum = void 0;
+var ValidationSeverityEnum;
 (function (ValidationSeverityEnum) {
     ValidationSeverityEnum["Error"] = "error";
     ValidationSeverityEnum["Warning"] = "warning";
-})(ValidationSeverityEnum || (ValidationSeverityEnum = {}));
+})(ValidationSeverityEnum = exports.ValidationSeverityEnum || (exports.ValidationSeverityEnum = {}));

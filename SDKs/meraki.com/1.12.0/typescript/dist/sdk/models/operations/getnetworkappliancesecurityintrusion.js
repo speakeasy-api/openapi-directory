@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceSecurityIntrusionResponse = exports.GetNetworkApplianceSecurityIntrusionRequest = exports.GetNetworkApplianceSecurityIntrusionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceSecurityIntrusionPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceSecurityIntrusionPathParams, _super);
     function GetNetworkApplianceSecurityIntrusionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceSecurityIntrusionPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceSecurityIntrusionPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceSecurityIntrusionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceSecurityIntrusionPathParams = GetNetworkApplianceSecurityIntrusionPathParams;
 var GetNetworkApplianceSecurityIntrusionRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceSecurityIntrusionRequest, _super);
     function GetNetworkApplianceSecurityIntrusionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceSecurityIntrusionPathParams)
     ], GetNetworkApplianceSecurityIntrusionRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceSecurityIntrusionRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceSecurityIntrusionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceSecurityIntrusionRequest = GetNetworkApplianceSecurityIntrusionRequest;
 var GetNetworkApplianceSecurityIntrusionResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceSecurityIntrusionResponse, _super);
     function GetNetworkApplianceSecurityIntrusionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceSecurityIntrusionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceSecurityIntrusionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceSecurityIntrusionResponse.prototype, "getNetworkApplianceSecurityIntrusion200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceSecurityIntrusionResponse.prototype, "getNetworkApplianceSecurityIntrusion200ApplicationJSONObject", void 0);
     return GetNetworkApplianceSecurityIntrusionResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceSecurityIntrusionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceSecurityIntrusionResponse = GetNetworkApplianceSecurityIntrusionResponse;

@@ -20,5 +20,5 @@ export declare class AquifersFilesListRequest extends SpeakeasyBase {
 export declare class AquifersFilesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    aquifersFilesList200ApplicationJsonObject?: AquifersFilesList200ApplicationJson;
+    aquifersFilesList200ApplicationJSONObject?: AquifersFilesList200ApplicationJson;
 }

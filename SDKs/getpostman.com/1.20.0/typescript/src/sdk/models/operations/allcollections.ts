@@ -31,5 +31,5 @@ export class AllCollectionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  allCollections200ApplicationJsonObject?: AllCollections200ApplicationJson;
+  allCollections200ApplicationJSONObject?: AllCollections200ApplicationJson;
 }

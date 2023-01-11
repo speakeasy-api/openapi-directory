@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteV3AssetChangesChangeSetsChangeSetIdResponse = exports.DeleteV3AssetChangesChangeSetsChangeSetIdRequest = exports.DeleteV3AssetChangesChangeSetsChangeSetIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteV3AssetChangesChangeSetsChangeSetIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteV3AssetChangesChangeSetsChangeSetIdPathParams, _super);
     function DeleteV3AssetChangesChangeSetsChangeSetIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=change-set-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=change-set-id" }),
         __metadata("design:type", Number)
     ], DeleteV3AssetChangesChangeSetsChangeSetIdPathParams.prototype, "changeSetId", void 0);
     return DeleteV3AssetChangesChangeSetsChangeSetIdPathParams;
-}(SpeakeasyBase));
-export { DeleteV3AssetChangesChangeSetsChangeSetIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3AssetChangesChangeSetsChangeSetIdPathParams = DeleteV3AssetChangesChangeSetsChangeSetIdPathParams;
 var DeleteV3AssetChangesChangeSetsChangeSetIdRequest = /** @class */ (function (_super) {
     __extends(DeleteV3AssetChangesChangeSetsChangeSetIdRequest, _super);
     function DeleteV3AssetChangesChangeSetsChangeSetIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteV3AssetChangesChangeSetsChangeSetIdPathParams)
     ], DeleteV3AssetChangesChangeSetsChangeSetIdRequest.prototype, "pathParams", void 0);
     return DeleteV3AssetChangesChangeSetsChangeSetIdRequest;
-}(SpeakeasyBase));
-export { DeleteV3AssetChangesChangeSetsChangeSetIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3AssetChangesChangeSetsChangeSetIdRequest = DeleteV3AssetChangesChangeSetsChangeSetIdRequest;
 var DeleteV3AssetChangesChangeSetsChangeSetIdResponse = /** @class */ (function (_super) {
     __extends(DeleteV3AssetChangesChangeSetsChangeSetIdResponse, _super);
     function DeleteV3AssetChangesChangeSetsChangeSetIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteV3AssetChangesChangeSetsChangeSetIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteV3AssetChangesChangeSetsChangeSetIdResponse.prototype, "statusCode", void 0);
     return DeleteV3AssetChangesChangeSetsChangeSetIdResponse;
-}(SpeakeasyBase));
-export { DeleteV3AssetChangesChangeSetsChangeSetIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3AssetChangesChangeSetsChangeSetIdResponse = DeleteV3AssetChangesChangeSetsChangeSetIdResponse;

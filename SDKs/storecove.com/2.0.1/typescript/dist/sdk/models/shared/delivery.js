@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Delivery = exports.DeliveryLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
 var DeliveryLocation = /** @class */ (function (_super) {
     __extends(DeliveryLocation, _super);
     function DeliveryLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", address_1.Address)
     ], DeliveryLocation.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeliveryLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemeAgencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemeAgencyId" }),
         __metadata("design:type", String)
     ], DeliveryLocation.prototype, "schemeAgencyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemeId" }),
         __metadata("design:type", String)
     ], DeliveryLocation.prototype, "schemeId", void 0);
     return DeliveryLocation;
-}(SpeakeasyBase));
-export { DeliveryLocation };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryLocation = DeliveryLocation;
 var Delivery = /** @class */ (function (_super) {
     __extends(Delivery, _super);
     function Delivery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actualDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actualDate" }),
         __metadata("design:type", String)
     ], Delivery.prototype, "actualDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", DeliveryLocation)
     ], Delivery.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], Delivery.prototype, "quantity", void 0);
     return Delivery;
-}(SpeakeasyBase));
-export { Delivery };
+}(utils_1.SpeakeasyBase));
+exports.Delivery = Delivery;

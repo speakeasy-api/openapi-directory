@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionInput = exports.Permission = exports.PermissionTeamDrivePermissionDetails = exports.PermissionPermissionDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var PermissionPermissionDetails = /** @class */ (function (_super) {
     __extends(PermissionPermissionDetails, _super);
     function PermissionPermissionDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoles" }),
         __metadata("design:type", Array)
     ], PermissionPermissionDetails.prototype, "additionalRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inherited" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inherited" }),
         __metadata("design:type", Boolean)
     ], PermissionPermissionDetails.prototype, "inherited", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inheritedFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inheritedFrom" }),
         __metadata("design:type", String)
     ], PermissionPermissionDetails.prototype, "inheritedFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionType" }),
         __metadata("design:type", String)
     ], PermissionPermissionDetails.prototype, "permissionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], PermissionPermissionDetails.prototype, "role", void 0);
     return PermissionPermissionDetails;
-}(SpeakeasyBase));
-export { PermissionPermissionDetails };
+}(utils_1.SpeakeasyBase));
+exports.PermissionPermissionDetails = PermissionPermissionDetails;
 var PermissionTeamDrivePermissionDetails = /** @class */ (function (_super) {
     __extends(PermissionTeamDrivePermissionDetails, _super);
     function PermissionTeamDrivePermissionDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoles" }),
         __metadata("design:type", Array)
     ], PermissionTeamDrivePermissionDetails.prototype, "additionalRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inherited" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inherited" }),
         __metadata("design:type", Boolean)
     ], PermissionTeamDrivePermissionDetails.prototype, "inherited", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inheritedFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inheritedFrom" }),
         __metadata("design:type", String)
     ], PermissionTeamDrivePermissionDetails.prototype, "inheritedFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], PermissionTeamDrivePermissionDetails.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDrivePermissionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDrivePermissionType" }),
         __metadata("design:type", String)
     ], PermissionTeamDrivePermissionDetails.prototype, "teamDrivePermissionType", void 0);
     return PermissionTeamDrivePermissionDetails;
-}(SpeakeasyBase));
-export { PermissionTeamDrivePermissionDetails };
+}(utils_1.SpeakeasyBase));
+exports.PermissionTeamDrivePermissionDetails = PermissionTeamDrivePermissionDetails;
 // Permission
 /**
  * A permission for a file.
@@ -89,88 +92,88 @@ var Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoles" }),
         __metadata("design:type", Array)
     ], Permission.prototype, "additionalRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], Permission.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Permission.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], Permission.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Permission.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", Date)
     ], Permission.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Permission.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Permission.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Permission.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingOwner" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "pendingOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionDetails", elemType: PermissionPermissionDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionDetails", elemType: PermissionPermissionDetails }),
         __metadata("design:type", Array)
     ], Permission.prototype, "permissionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoLink" }),
         __metadata("design:type", String)
     ], Permission.prototype, "photoLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Permission.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Permission.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDrivePermissionDetails", elemType: PermissionTeamDrivePermissionDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDrivePermissionDetails", elemType: PermissionTeamDrivePermissionDetails }),
         __metadata("design:type", Array)
     ], Permission.prototype, "teamDrivePermissionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Permission.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Permission.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], Permission.prototype, "view", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withLink" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "withLink", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;
 // PermissionInput
 /**
  * A permission for a file.
@@ -181,77 +184,77 @@ var PermissionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoles" }),
         __metadata("design:type", Array)
     ], PermissionInput.prototype, "additionalRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], PermissionInput.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", Date)
     ], PermissionInput.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingOwner" }),
         __metadata("design:type", Boolean)
     ], PermissionInput.prototype, "pendingOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoLink" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "photoLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], PermissionInput.prototype, "view", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withLink" }),
         __metadata("design:type", Boolean)
     ], PermissionInput.prototype, "withLink", void 0);
     return PermissionInput;
-}(SpeakeasyBase));
-export { PermissionInput };
+}(utils_1.SpeakeasyBase));
+exports.PermissionInput = PermissionInput;

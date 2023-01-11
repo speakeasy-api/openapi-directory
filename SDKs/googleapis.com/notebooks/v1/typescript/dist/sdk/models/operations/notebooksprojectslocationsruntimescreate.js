@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotebooksProjectsLocationsRuntimesCreateResponse = exports.NotebooksProjectsLocationsRuntimesCreateRequest = exports.NotebooksProjectsLocationsRuntimesCreateSecurity = exports.NotebooksProjectsLocationsRuntimesCreateQueryParams = exports.NotebooksProjectsLocationsRuntimesCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var NotebooksProjectsLocationsRuntimesCreatePathParams = /** @class */ (function (_super) {
     __extends(NotebooksProjectsLocationsRuntimesCreatePathParams, _super);
     function NotebooksProjectsLocationsRuntimesCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreatePathParams.prototype, "parent", void 0);
     return NotebooksProjectsLocationsRuntimesCreatePathParams;
-}(SpeakeasyBase));
-export { NotebooksProjectsLocationsRuntimesCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.NotebooksProjectsLocationsRuntimesCreatePathParams = NotebooksProjectsLocationsRuntimesCreatePathParams;
 var NotebooksProjectsLocationsRuntimesCreateQueryParams = /** @class */ (function (_super) {
     __extends(NotebooksProjectsLocationsRuntimesCreateQueryParams, _super);
     function NotebooksProjectsLocationsRuntimesCreateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=requestId" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=runtimeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=runtimeId" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "runtimeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateQueryParams.prototype, "uploadProtocol", void 0);
     return NotebooksProjectsLocationsRuntimesCreateQueryParams;
-}(SpeakeasyBase));
-export { NotebooksProjectsLocationsRuntimesCreateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.NotebooksProjectsLocationsRuntimesCreateQueryParams = NotebooksProjectsLocationsRuntimesCreateQueryParams;
 var NotebooksProjectsLocationsRuntimesCreateSecurity = /** @class */ (function (_super) {
     __extends(NotebooksProjectsLocationsRuntimesCreateSecurity, _super);
     function NotebooksProjectsLocationsRuntimesCreateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], NotebooksProjectsLocationsRuntimesCreateSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], NotebooksProjectsLocationsRuntimesCreateSecurity.prototype, "oauth2c", void 0);
     return NotebooksProjectsLocationsRuntimesCreateSecurity;
-}(SpeakeasyBase));
-export { NotebooksProjectsLocationsRuntimesCreateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.NotebooksProjectsLocationsRuntimesCreateSecurity = NotebooksProjectsLocationsRuntimesCreateSecurity;
 var NotebooksProjectsLocationsRuntimesCreateRequest = /** @class */ (function (_super) {
     __extends(NotebooksProjectsLocationsRuntimesCreateRequest, _super);
     function NotebooksProjectsLocationsRuntimesCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NotebooksProjectsLocationsRuntimesCreatePathParams)
     ], NotebooksProjectsLocationsRuntimesCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NotebooksProjectsLocationsRuntimesCreateQueryParams)
     ], NotebooksProjectsLocationsRuntimesCreateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.RuntimeInput)
     ], NotebooksProjectsLocationsRuntimesCreateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NotebooksProjectsLocationsRuntimesCreateSecurity)
     ], NotebooksProjectsLocationsRuntimesCreateRequest.prototype, "security", void 0);
     return NotebooksProjectsLocationsRuntimesCreateRequest;
-}(SpeakeasyBase));
-export { NotebooksProjectsLocationsRuntimesCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NotebooksProjectsLocationsRuntimesCreateRequest = NotebooksProjectsLocationsRuntimesCreateRequest;
 var NotebooksProjectsLocationsRuntimesCreateResponse = /** @class */ (function (_super) {
     __extends(NotebooksProjectsLocationsRuntimesCreateResponse, _super);
     function NotebooksProjectsLocationsRuntimesCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NotebooksProjectsLocationsRuntimesCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], NotebooksProjectsLocationsRuntimesCreateResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NotebooksProjectsLocationsRuntimesCreateResponse.prototype, "statusCode", void 0);
     return NotebooksProjectsLocationsRuntimesCreateResponse;
-}(SpeakeasyBase));
-export { NotebooksProjectsLocationsRuntimesCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NotebooksProjectsLocationsRuntimesCreateResponse = NotebooksProjectsLocationsRuntimesCreateResponse;

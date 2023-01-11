@@ -1,6 +1,9 @@
-export var UsageLimitPeriodEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageLimitPeriodEnum = void 0;
+var UsageLimitPeriodEnum;
 (function (UsageLimitPeriodEnum) {
     UsageLimitPeriodEnum["Daily"] = "daily";
     UsageLimitPeriodEnum["Weekly"] = "weekly";
     UsageLimitPeriodEnum["Monthly"] = "monthly";
-})(UsageLimitPeriodEnum || (UsageLimitPeriodEnum = {}));
+})(UsageLimitPeriodEnum = exports.UsageLimitPeriodEnum || (exports.UsageLimitPeriodEnum = {}));

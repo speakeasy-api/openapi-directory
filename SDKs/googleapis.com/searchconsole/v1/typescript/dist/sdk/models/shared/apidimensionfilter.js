@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApiDimensionFilterDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiDimensionFilter = exports.ApiDimensionFilterOperatorEnum = exports.ApiDimensionFilterDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApiDimensionFilterDimensionEnum;
 (function (ApiDimensionFilterDimensionEnum) {
     ApiDimensionFilterDimensionEnum["Query"] = "QUERY";
     ApiDimensionFilterDimensionEnum["Page"] = "PAGE";
     ApiDimensionFilterDimensionEnum["Country"] = "COUNTRY";
     ApiDimensionFilterDimensionEnum["Device"] = "DEVICE";
     ApiDimensionFilterDimensionEnum["SearchAppearance"] = "SEARCH_APPEARANCE";
-})(ApiDimensionFilterDimensionEnum || (ApiDimensionFilterDimensionEnum = {}));
-export var ApiDimensionFilterOperatorEnum;
+})(ApiDimensionFilterDimensionEnum = exports.ApiDimensionFilterDimensionEnum || (exports.ApiDimensionFilterDimensionEnum = {}));
+var ApiDimensionFilterOperatorEnum;
 (function (ApiDimensionFilterOperatorEnum) {
     ApiDimensionFilterOperatorEnum["Equals"] = "EQUALS";
     ApiDimensionFilterOperatorEnum["NotEquals"] = "NOT_EQUALS";
@@ -39,7 +42,7 @@ export var ApiDimensionFilterOperatorEnum;
     ApiDimensionFilterOperatorEnum["NotContains"] = "NOT_CONTAINS";
     ApiDimensionFilterOperatorEnum["IncludingRegex"] = "INCLUDING_REGEX";
     ApiDimensionFilterOperatorEnum["ExcludingRegex"] = "EXCLUDING_REGEX";
-})(ApiDimensionFilterOperatorEnum || (ApiDimensionFilterOperatorEnum = {}));
+})(ApiDimensionFilterOperatorEnum = exports.ApiDimensionFilterOperatorEnum || (exports.ApiDimensionFilterOperatorEnum = {}));
 // ApiDimensionFilter
 /**
  * A filter test to be applied to each row in the data set, where a match can return the row. Filters are string comparisons, and values and dimension names are not case-sensitive. Individual filters are either AND'ed or OR'ed within their parent filter group, according to the group's group type. You do not need to group by a specified dimension to filter against it.
@@ -50,17 +53,17 @@ var ApiDimensionFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "operator", void 0);
     return ApiDimensionFilter;
-}(SpeakeasyBase));
-export { ApiDimensionFilter };
+}(utils_1.SpeakeasyBase));
+exports.ApiDimensionFilter = ApiDimensionFilter;

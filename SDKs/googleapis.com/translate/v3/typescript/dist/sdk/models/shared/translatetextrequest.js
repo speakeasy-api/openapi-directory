@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TranslateTextGlossaryConfig } from "./translatetextglossaryconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TranslateTextRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var translatetextglossaryconfig_1 = require("./translatetextglossaryconfig");
 // TranslateTextRequest
 /**
  * The request message for synchronous translation.
@@ -34,33 +37,33 @@ var TranslateTextRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
         __metadata("design:type", Array)
     ], TranslateTextRequest.prototype, "contents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=glossaryConfig" }),
-        __metadata("design:type", TranslateTextGlossaryConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=glossaryConfig" }),
+        __metadata("design:type", translatetextglossaryconfig_1.TranslateTextGlossaryConfig)
     ], TranslateTextRequest.prototype, "glossaryConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], TranslateTextRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], TranslateTextRequest.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], TranslateTextRequest.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceLanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceLanguageCode" }),
         __metadata("design:type", String)
     ], TranslateTextRequest.prototype, "sourceLanguageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetLanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetLanguageCode" }),
         __metadata("design:type", String)
     ], TranslateTextRequest.prototype, "targetLanguageCode", void 0);
     return TranslateTextRequest;
-}(SpeakeasyBase));
-export { TranslateTextRequest };
+}(utils_1.SpeakeasyBase));
+exports.TranslateTextRequest = TranslateTextRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeVaultOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 // DescribeVaultOutput
 /**
  * Contains the Amazon S3 Glacier response to your request.
@@ -33,29 +36,29 @@ var DescribeVaultOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], DescribeVaultOutput.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastInventoryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastInventoryDate" }),
         __metadata("design:type", String)
     ], DescribeVaultOutput.prototype, "lastInventoryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfArchives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfArchives" }),
         __metadata("design:type", Number)
     ], DescribeVaultOutput.prototype, "numberOfArchives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SizeInBytes" }),
         __metadata("design:type", Number)
     ], DescribeVaultOutput.prototype, "sizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VaultARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VaultARN" }),
         __metadata("design:type", String)
-    ], DescribeVaultOutput.prototype, "vaultArn", void 0);
+    ], DescribeVaultOutput.prototype, "vaultARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VaultName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VaultName" }),
         __metadata("design:type", String)
     ], DescribeVaultOutput.prototype, "vaultName", void 0);
     return DescribeVaultOutput;
-}(SpeakeasyBase));
-export { DescribeVaultOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeVaultOutput = DescribeVaultOutput;

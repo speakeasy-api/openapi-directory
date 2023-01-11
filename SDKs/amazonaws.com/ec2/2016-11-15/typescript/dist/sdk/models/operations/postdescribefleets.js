@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeFleetsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeFleetsResponse = exports.PostDescribeFleetsRequest = exports.PostDescribeFleetsHeaders = exports.PostDescribeFleetsQueryParams = exports.PostDescribeFleetsVersionEnum = exports.PostDescribeFleetsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeFleetsActionEnum;
 (function (PostDescribeFleetsActionEnum) {
     PostDescribeFleetsActionEnum["DescribeFleets"] = "DescribeFleets";
-})(PostDescribeFleetsActionEnum || (PostDescribeFleetsActionEnum = {}));
-export var PostDescribeFleetsVersionEnum;
+})(PostDescribeFleetsActionEnum = exports.PostDescribeFleetsActionEnum || (exports.PostDescribeFleetsActionEnum = {}));
+var PostDescribeFleetsVersionEnum;
 (function (PostDescribeFleetsVersionEnum) {
     PostDescribeFleetsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeFleetsVersionEnum || (PostDescribeFleetsVersionEnum = {}));
+})(PostDescribeFleetsVersionEnum = exports.PostDescribeFleetsVersionEnum || (exports.PostDescribeFleetsVersionEnum = {}));
 var PostDescribeFleetsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeFleetsQueryParams, _super);
     function PostDescribeFleetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsQueryParams.prototype, "version", void 0);
     return PostDescribeFleetsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeFleetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeFleetsQueryParams = PostDescribeFleetsQueryParams;
 var PostDescribeFleetsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeFleetsHeaders, _super);
     function PostDescribeFleetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeFleetsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeFleetsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeFleetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeFleetsHeaders = PostDescribeFleetsHeaders;
 var PostDescribeFleetsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeFleetsRequest, _super);
     function PostDescribeFleetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeFleetsQueryParams)
     ], PostDescribeFleetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeFleetsHeaders)
     ], PostDescribeFleetsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeFleetsRequest.prototype, "request", void 0);
     return PostDescribeFleetsRequest;
-}(SpeakeasyBase));
-export { PostDescribeFleetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeFleetsRequest = PostDescribeFleetsRequest;
 var PostDescribeFleetsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeFleetsResponse, _super);
     function PostDescribeFleetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeFleetsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeFleetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeFleetsResponse.prototype, "statusCode", void 0);
     return PostDescribeFleetsResponse;
-}(SpeakeasyBase));
-export { PostDescribeFleetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeFleetsResponse = PostDescribeFleetsResponse;

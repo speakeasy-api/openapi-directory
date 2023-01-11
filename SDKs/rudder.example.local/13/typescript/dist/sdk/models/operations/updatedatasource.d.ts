@@ -25,5 +25,5 @@ export declare class UpdateDataSourceRequest extends SpeakeasyBase {
 export declare class UpdateDataSourceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDataSource200ApplicationJsonObject?: UpdateDataSource200ApplicationJson;
+    updateDataSource200ApplicationJSONObject?: UpdateDataSource200ApplicationJson;
 }

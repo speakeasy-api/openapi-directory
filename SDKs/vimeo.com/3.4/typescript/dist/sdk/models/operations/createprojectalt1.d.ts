@@ -13,6 +13,6 @@ export declare class CreateProjectAlt1Request extends SpeakeasyBase {
 export declare class CreateProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     project?: shared.Project;
 }

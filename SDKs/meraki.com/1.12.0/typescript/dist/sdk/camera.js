@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Camera = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Camera = /** @class */ (function () {
     function Camera(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -32,10 +57,10 @@ var Camera = /** @class */ (function () {
             req = new operations.CreateNetworkCameraQualityRetentionProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -44,15 +69,10 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -60,14 +80,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.createNetworkCameraQualityRetentionProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.createNetworkCameraQualityRetentionProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * createNetworkCameraWirelessProfile - Creates a new camera wireless profile for this network.
@@ -80,10 +99,10 @@ var Camera = /** @class */ (function () {
             req = new operations.CreateNetworkCameraWirelessProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -92,15 +111,10 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -108,14 +122,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.createNetworkCameraWirelessProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.createNetworkCameraWirelessProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteNetworkCameraQualityRetentionProfile - Delete an existing quality retention profile for this network.
@@ -127,10 +140,10 @@ var Camera = /** @class */ (function () {
             req = new operations.DeleteNetworkCameraQualityRetentionProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -141,8 +154,7 @@ var Camera = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteNetworkCameraWirelessProfile - Delete an existing camera wireless profile for this network.
@@ -154,10 +166,10 @@ var Camera = /** @class */ (function () {
             req = new operations.DeleteNetworkCameraWirelessProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -168,8 +180,7 @@ var Camera = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * generateDeviceCameraSnapshot - Generate a snapshot of what the camera sees at the specified time and return a link to that image.
@@ -182,10 +193,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GenerateDeviceCameraSnapshotRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/generateSnapshot", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/generateSnapshot", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -194,13 +205,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -208,14 +214,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.generateDeviceCameraSnapshot202ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.generateDeviceCameraSnapshot202ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraAnalyticsLive - Returns live state from camera of analytics zones
@@ -227,10 +232,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraAnalyticsLiveRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/analytics/live", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/analytics/live", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -238,14 +243,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraAnalyticsLive200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraAnalyticsLive200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraAnalyticsOverview - Returns an overview of aggregate analytics data for a timespan
@@ -257,12 +261,12 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraAnalyticsOverviewRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/analytics/overview", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/analytics/overview", req.pathParams);
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -270,14 +274,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraAnalyticsOverview200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraAnalyticsOverview200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraAnalyticsRecent - Returns most recent record for analytics zones
@@ -289,12 +292,12 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraAnalyticsRecentRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/analytics/recent", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/analytics/recent", req.pathParams);
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -302,14 +305,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraAnalyticsRecent200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraAnalyticsRecent200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraAnalyticsZoneHistory - Return historical records for analytic zones
@@ -321,12 +323,12 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraAnalyticsZoneHistoryRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", req.pathParams);
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -334,14 +336,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraAnalyticsZoneHistory200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraAnalyticsZoneHistory200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraAnalyticsZones - Returns all configured analytic zones for this camera
@@ -353,10 +354,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraAnalyticsZonesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/analytics/zones", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/analytics/zones", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -364,14 +365,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraAnalyticsZones200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraAnalyticsZones200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraQualityAndRetention - Returns quality and retention settings for the given camera
@@ -383,10 +383,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraQualityAndRetentionRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/qualityAndRetention", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/qualityAndRetention", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -394,14 +394,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraQualityAndRetention200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraQualityAndRetention200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraSense - Returns sense settings for a given camera
@@ -413,10 +412,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraSenseRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/sense", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/sense", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -424,14 +423,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraSense200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraSense200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraSenseObjectDetectionModels - Returns the MV Sense object detection model list for the given camera
@@ -443,10 +441,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraSenseObjectDetectionModelsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -454,14 +452,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraSenseObjectDetectionModels200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraSenseObjectDetectionModels200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraVideoLink - Returns video link to the specified camera
@@ -473,12 +470,12 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraVideoLinkRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/videoLink", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/videoLink", req.pathParams);
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -486,14 +483,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraVideoLink200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraVideoLink200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraVideoSettings - Returns video settings for the given camera
@@ -505,10 +501,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraVideoSettingsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/video/settings", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/video/settings", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -516,14 +512,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraVideoSettings200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraVideoSettings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceCameraWirelessProfiles - Returns wireless profile assigned to the given camera
@@ -535,10 +530,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetDeviceCameraWirelessProfilesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/wirelessProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/wirelessProfiles", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -546,14 +541,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDeviceCameraWirelessProfiles200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDeviceCameraWirelessProfiles200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNetworkCameraQualityRetentionProfile - Retrieve a single quality retention profile
@@ -565,10 +559,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetNetworkCameraQualityRetentionProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -576,14 +570,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getNetworkCameraQualityRetentionProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getNetworkCameraQualityRetentionProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNetworkCameraQualityRetentionProfiles - List the quality retention profiles for this network
@@ -595,10 +588,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetNetworkCameraQualityRetentionProfilesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -606,14 +599,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getNetworkCameraQualityRetentionProfiles200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getNetworkCameraQualityRetentionProfiles200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNetworkCameraSchedules - Returns a list of all camera recording schedules.
@@ -625,10 +617,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetNetworkCameraSchedulesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/schedules", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/schedules", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -636,14 +628,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getNetworkCameraSchedules200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getNetworkCameraSchedules200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNetworkCameraWirelessProfile - Retrieve a single camera wireless profile.
@@ -655,10 +646,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetNetworkCameraWirelessProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -666,14 +657,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getNetworkCameraWirelessProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getNetworkCameraWirelessProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNetworkCameraWirelessProfiles - List the camera wireless profiles for this network.
@@ -685,10 +675,10 @@ var Camera = /** @class */ (function () {
             req = new operations.GetNetworkCameraWirelessProfilesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles", req.pathParams);
         var client = this._securityClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -696,14 +686,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getNetworkCameraWirelessProfiles200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getNetworkCameraWirelessProfiles200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getOrganizationCameraOnboardingStatuses - Fetch onboarding status of cameras
@@ -715,12 +704,12 @@ var Camera = /** @class */ (function () {
             req = new operations.GetOrganizationCameraOnboardingStatusesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", req.pathParams);
+        var url = utils.generateURL(baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", req.pathParams);
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -728,14 +717,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getOrganizationCameraOnboardingStatuses200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getOrganizationCameraOnboardingStatuses200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateDeviceCameraQualityAndRetention - Update quality and retention settings for the given camera
@@ -748,10 +736,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateDeviceCameraQualityAndRetentionRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/qualityAndRetention", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/qualityAndRetention", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -760,13 +748,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -774,14 +757,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateDeviceCameraQualityAndRetention200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateDeviceCameraQualityAndRetention200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateDeviceCameraSense - Update sense settings for the given camera
@@ -794,10 +776,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateDeviceCameraSenseRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/sense", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/sense", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -806,13 +788,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -820,14 +797,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateDeviceCameraSense200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateDeviceCameraSense200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateDeviceCameraVideoSettings - Update video settings for the given camera
@@ -840,10 +816,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateDeviceCameraVideoSettingsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/video/settings", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/video/settings", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -852,13 +828,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -866,14 +837,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateDeviceCameraVideoSettings200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateDeviceCameraVideoSettings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateDeviceCameraWirelessProfiles - Assign wireless profiles to the given camera
@@ -886,10 +856,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateDeviceCameraWirelessProfilesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/devices/{serial}/camera/wirelessProfiles", req.pathParams);
+        var url = utils.generateURL(baseURL, "/devices/{serial}/camera/wirelessProfiles", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -898,15 +868,10 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -914,14 +879,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateDeviceCameraWirelessProfiles200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateDeviceCameraWirelessProfiles200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateNetworkCameraQualityRetentionProfile - Update an existing quality retention profile for this network.
@@ -934,10 +898,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateNetworkCameraQualityRetentionProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -946,13 +910,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -960,14 +919,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateNetworkCameraQualityRetentionProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateNetworkCameraQualityRetentionProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateNetworkCameraWirelessProfile - Update an existing camera wireless profile in this network.
@@ -980,10 +938,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateNetworkCameraWirelessProfileRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -992,13 +950,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1006,14 +959,13 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateNetworkCameraWirelessProfile200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateNetworkCameraWirelessProfile200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateOrganizationCameraOnboardingStatuses - Notify that credential handoff to camera has completed
@@ -1026,10 +978,10 @@ var Camera = /** @class */ (function () {
             req = new operations.UpdateOrganizationCameraOnboardingStatusesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", req.pathParams);
+        var url = utils.generateURL(baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1038,13 +990,8 @@ var Camera = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1052,15 +999,14 @@ var Camera = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateOrganizationCameraOnboardingStatuses200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateOrganizationCameraOnboardingStatuses200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Camera;
 }());
-export { Camera };
+exports.Camera = Camera;

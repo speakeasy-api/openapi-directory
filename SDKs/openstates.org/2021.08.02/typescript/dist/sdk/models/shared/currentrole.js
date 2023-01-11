@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrgClassificationEnum } from "./orgclassificationenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CurrentRole = void 0;
+var utils_1 = require("../../../internal/utils");
+var orgclassificationenum_1 = require("./orgclassificationenum");
 var CurrentRole = /** @class */ (function (_super) {
     __extends(CurrentRole, _super);
     function CurrentRole() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=district" }),
         __metadata("design:type", Object)
     ], CurrentRole.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=division_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=division_id" }),
         __metadata("design:type", String)
     ], CurrentRole.prototype, "divisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org_classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org_classification" }),
         __metadata("design:type", String)
     ], CurrentRole.prototype, "orgClassification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CurrentRole.prototype, "title", void 0);
     return CurrentRole;
-}(SpeakeasyBase));
-export { CurrentRole };
+}(utils_1.SpeakeasyBase));
+exports.CurrentRole = CurrentRole;

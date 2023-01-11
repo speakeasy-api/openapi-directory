@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CompleteAttachmentUploadRequest, CompleteAttachmentUploadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: CompleteAttachmentUploadRequest = {
   headers: {
-    xAmzAlgorithm: "ipsa",
-    xAmzBearer: "nihil",
-    xAmzContentSha256: "sed",
-    xAmzCredential: "autem",
-    xAmzDate: "consequatur",
-    xAmzSecurityToken: "vitae",
-    xAmzSignature: "vel",
-    xAmzSignedHeaders: "assumenda",
+    xAmzAlgorithm: "sit",
+    xAmzBearer: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
     attachmentIds: [
-      "ad",
-      "eum",
-      "voluptatem",
+      "et",
     ],
-    clientToken: "optio",
+    clientToken: "nihil",
   },
 };
 
-sdk.sdk.completeAttachmentUpload(req).then((res: CompleteAttachmentUploadResponse | AxiosError) => {
+sdk.completeAttachmentUpload(req).then((res: CompleteAttachmentUploadResponse | AxiosError) => {
    // handle response
 });
 ```

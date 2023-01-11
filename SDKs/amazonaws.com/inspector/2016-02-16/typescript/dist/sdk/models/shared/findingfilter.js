@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attribute } from "./attribute";
-import { TimestampRange } from "./timestamprange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribute_1 = require("./attribute");
+var timestamprange_1 = require("./timestamprange");
 // FindingFilter
 /**
  * This data type is used as a request parameter in the <a>ListFindings</a> action.
@@ -35,37 +38,37 @@ var FindingFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentIds" }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "agentIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroups" }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "autoScalingGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTimeRange" }),
-        __metadata("design:type", TimestampRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTimeRange" }),
+        __metadata("design:type", timestamprange_1.TimestampRange)
     ], FindingFilter.prototype, "creationTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleNames" }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "ruleNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesPackageArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesPackageArns" }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "rulesPackageArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severities" }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "severities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAttributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAttributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], FindingFilter.prototype, "userAttributes", void 0);
     return FindingFilter;
-}(SpeakeasyBase));
-export { FindingFilter };
+}(utils_1.SpeakeasyBase));
+exports.FindingFilter = FindingFilter;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssessmentRunAgent } from "./assessmentrunagent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAssessmentRunAgentsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assessmentrunagent_1 = require("./assessmentrunagent");
 var ListAssessmentRunAgentsResponse = /** @class */ (function (_super) {
     __extends(ListAssessmentRunAgentsResponse, _super);
     function ListAssessmentRunAgentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunAgents", elemType: AssessmentRunAgent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunAgents", elemType: assessmentrunagent_1.AssessmentRunAgent }),
         __metadata("design:type", Array)
     ], ListAssessmentRunAgentsResponse.prototype, "assessmentRunAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListAssessmentRunAgentsResponse.prototype, "nextToken", void 0);
     return ListAssessmentRunAgentsResponse;
-}(SpeakeasyBase));
-export { ListAssessmentRunAgentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAssessmentRunAgentsResponse = ListAssessmentRunAgentsResponse;

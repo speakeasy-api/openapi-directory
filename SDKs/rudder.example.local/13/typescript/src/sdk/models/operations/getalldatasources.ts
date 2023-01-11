@@ -38,5 +38,5 @@ export class GetAllDataSourcesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllDataSources200ApplicationJsonObject?: GetAllDataSources200ApplicationJson;
+  getAllDataSources200ApplicationJSONObject?: GetAllDataSources200ApplicationJson;
 }

@@ -6,10 +6,10 @@ export declare class PostPortfolioAnalysisSharpeRatio200ApplicationJson extends 
     portfolios: PostPortfolioAnalysisSharpeRatio200ApplicationJsonPortfolios[];
 }
 export declare class PostPortfolioAnalysisSharpeRatioRequest extends SpeakeasyBase {
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class PostPortfolioAnalysisSharpeRatioResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisSharpeRatio200ApplicationJsonObject?: PostPortfolioAnalysisSharpeRatio200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisSharpeRatio200ApplicationJSONObject?: PostPortfolioAnalysisSharpeRatio200ApplicationJson;
 }

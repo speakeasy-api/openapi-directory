@@ -16,29 +16,36 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CountAllProductsRequest, CountAllProductsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { CreateCategoriesRequest, CreateCategoriesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: CountAllProductsRequest = {
+const req: CreateCategoriesRequest = {
   security: {
     zettleApiKey: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   pathParams: {
-    organizationUuid: "distinctio",
+    organizationUuid: "sit",
+  },
+  request: {
+    categories: [
+      {
+        name: "culpa",
+        uuid: "expedita",
+      },
+    ],
   },
 };
 
-sdk.sdk.countAllProducts(req).then((res: CountAllProductsResponse | AxiosError) => {
+sdk.categories.createCategories(req).then((res: CreateCategoriesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,37 +54,58 @@ sdk.sdk.countAllProducts(req).then((res: CountAllProductsResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### categories
+
+* `createCategories` - Creates a new category
+* `getProductTypes` - Retrieves all categories
+
+### discounts
+
+* `createDiscount` - Creates a discount
+* `deleteDiscount` - Deletes a single discount 
+* `getAllDiscounts` - Retrieves all discounts
+* `getDiscount` - Retrieves a single discount
+* `updateDiscount` - Updates a single discount
+
+### images
+
+* `getAllImageUrls` - Retrieves all library item images
+
+### import
+
+* `getLatestImportStatus` - Gets status for latest import
+* `getStatusByUuid` - Gets status for an import
+* `importLibraryV2` - Bulk import library items
+
+### library
+
+* `getLibrary` - Retrieves the entire library
+
+### products
 
 * `countAllProducts` - Retrieves the count of existing products
-* `createCategories` - Creates a new category
-* `createDiscount` - Creates a discount
 * `createProduct` - Creates a new product
-* `createProductSlug` - Creates a product identifier
-* `createTaxRates` - Creates new tax rates
-* `deleteDiscount` - Deletes a single discount 
 * `deleteProduct` - Deletes a single product
 * `deleteProducts` - Deletes a list of products
-* `deleteTaxRate` - Deletes a single tax rate
-* `getAllDiscounts` - Retrieves all discounts
-* `getAllImageUrls` - Retrieves all library item images
 * `getAllOptions` - Retrieves an aggregate of active Options in the library
 * `getAllProductsInPos` - Retrieves all products visible in POS
 * `getAllProductsV2` - Retrieves all products visible in POS – v2
-* `getDiscount` - Retrieves a single discount
-* `getLatestImportStatus` - Gets status for latest import
-* `getLibrary` - Retrieves the entire library
 * `getProduct` - Retrieves a single product
+* `updateProduct` - Updates a single product
+
+### products/online
+
+* `createProductSlug` - Creates a product identifier
+
+### taxes
+
+* `createTaxRates` - Creates new tax rates
+* `deleteTaxRate` - Deletes a single tax rate
 * `getProductCountForAllTaxes` - Gets all tax rates and a count of products associated with each
-* `getProductTypes` - Retrieves all categories
-* `getStatusByUuid` - Gets status for an import
 * `getTaxRate` - Gets a single tax rate
 * `getTaxRates` - Gets all tax rates available
 * `getTaxSettings` - Gets the organization tax settings 
-* `importLibraryV2` - Bulk import library items
 * `setTaxationMode` - Updates the organization tax settings
-* `updateDiscount` - Updates a single discount
-* `updateProduct` - Updates a single product
 * `updateTaxRate` - Updates a single tax rate
 
 <!-- End SDK Available Operations -->

@@ -18,10 +18,10 @@ export class GetPurchaseReservedDbInstancesOfferingQueryParams extends Speakeasy
   dbInstanceCount?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedDBInstanceId" })
-  reservedDbInstanceId?: string;
+  reservedDBInstanceId?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedDBInstancesOfferingId" })
-  reservedDbInstancesOfferingId: string;
+  reservedDBInstancesOfferingId: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetPurchaseReservedDbInstancesOfferingVersionEnum;

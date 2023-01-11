@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MessagesAddRequest, MessagesAddResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -42,20 +41,20 @@ const req: MessagesAddRequest = {
     raw: false,
   },
   headers: {
-    xApideckAppId: "accusantium",
-    xApideckConsumerId: "eaque",
-    xApideckServiceId: "facilis",
+    xApideckAppId: "voluptas",
+    xApideckConsumerId: "culpa",
+    xApideckServiceId: "expedita",
   },
   request: {
-    body: "quidem",
-    from: "tempore",
-    messagingServiceId: "dignissimos",
-    reference: "nihil",
-    scheduledAt: "1982-02-05T18:17:09Z",
-    subject: "excepturi",
-    to: "ut",
+    body: "consequuntur",
+    from: "dolor",
+    messagingServiceId: "expedita",
+    reference: "voluptas",
+    scheduledAt: "2011-08-12T10:11:12Z",
+    subject: "nihil",
+    to: "rerum",
     type: "mms",
-    webhookUrl: "dolorum",
+    webhookUrl: "debitis",
   },
 };
 

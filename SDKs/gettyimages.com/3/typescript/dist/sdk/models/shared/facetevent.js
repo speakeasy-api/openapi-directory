@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FacetEvent = void 0;
+var utils_1 = require("../../../internal/utils");
 var FacetEvent = /** @class */ (function (_super) {
     __extends(FacetEvent, _super);
     function FacetEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], FacetEvent.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], FacetEvent.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FacetEvent.prototype, "name", void 0);
     return FacetEvent;
-}(SpeakeasyBase));
-export { FacetEvent };
+}(utils_1.SpeakeasyBase));
+exports.FacetEvent = FacetEvent;

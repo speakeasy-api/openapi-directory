@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyUsageOptions = void 0;
+var utils_1 = require("../../../internal/utils");
 // KeyUsageOptions
 /**
  * KeyUsage.KeyUsageOptions corresponds to the key usage values described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
@@ -33,41 +36,41 @@ var KeyUsageOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certSign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certSign" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "certSign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentCommitment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentCommitment" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "contentCommitment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crlSign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crlSign" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "crlSign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataEncipherment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataEncipherment" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "dataEncipherment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decipherOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decipherOnly" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "decipherOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=digitalSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=digitalSignature" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "digitalSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encipherOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encipherOnly" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "encipherOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyAgreement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyAgreement" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "keyAgreement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyEncipherment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyEncipherment" }),
         __metadata("design:type", Boolean)
     ], KeyUsageOptions.prototype, "keyEncipherment", void 0);
     return KeyUsageOptions;
-}(SpeakeasyBase));
-export { KeyUsageOptions };
+}(utils_1.SpeakeasyBase));
+exports.KeyUsageOptions = KeyUsageOptions;

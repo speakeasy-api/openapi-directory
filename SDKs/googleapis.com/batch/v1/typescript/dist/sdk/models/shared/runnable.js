@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Barrier } from "./barrier";
-import { Container } from "./container";
-import { Environment } from "./environment";
-import { Script } from "./script";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Runnable = void 0;
+var utils_1 = require("../../../internal/utils");
+var barrier_1 = require("./barrier");
+var container_1 = require("./container");
+var environment_1 = require("./environment");
+var script_1 = require("./script");
 // Runnable
 /**
  * Runnable describes instructions for executing a specific script or container as part of a Task.
@@ -37,37 +40,37 @@ var Runnable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alwaysRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alwaysRun" }),
         __metadata("design:type", Boolean)
     ], Runnable.prototype, "alwaysRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", Boolean)
     ], Runnable.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barrier" }),
-        __metadata("design:type", Barrier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barrier" }),
+        __metadata("design:type", barrier_1.Barrier)
     ], Runnable.prototype, "barrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
-        __metadata("design:type", Container)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
+        __metadata("design:type", container_1.Container)
     ], Runnable.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Environment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environment_1.Environment)
     ], Runnable.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreExitStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreExitStatus" }),
         __metadata("design:type", Boolean)
     ], Runnable.prototype, "ignoreExitStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
-        __metadata("design:type", Script)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
+        __metadata("design:type", script_1.Script)
     ], Runnable.prototype, "script", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", String)
     ], Runnable.prototype, "timeout", void 0);
     return Runnable;
-}(SpeakeasyBase));
-export { Runnable };
+}(utils_1.SpeakeasyBase));
+exports.Runnable = Runnable;

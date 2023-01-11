@@ -1,8 +1,11 @@
-export var ActionTypeEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionTypeEnumEnum = void 0;
+var ActionTypeEnumEnum;
 (function (ActionTypeEnumEnum) {
     ActionTypeEnumEnum["Forward"] = "forward";
     ActionTypeEnumEnum["AuthenticateOidc"] = "authenticate-oidc";
     ActionTypeEnumEnum["AuthenticateCognito"] = "authenticate-cognito";
     ActionTypeEnumEnum["Redirect"] = "redirect";
     ActionTypeEnumEnum["FixedResponse"] = "fixed-response";
-})(ActionTypeEnumEnum || (ActionTypeEnumEnum = {}));
+})(ActionTypeEnumEnum = exports.ActionTypeEnumEnum || (exports.ActionTypeEnumEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualGatewayListenerTlsCertificate } from "./virtualgatewaylistenertlscertificate";
-import { VirtualGatewayListenerTlsModeEnum } from "./virtualgatewaylistenertlsmodeenum";
-import { VirtualGatewayListenerTlsValidationContext } from "./virtualgatewaylistenertlsvalidationcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayListenerTls = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualgatewaylistenertlscertificate_1 = require("./virtualgatewaylistenertlscertificate");
+var virtualgatewaylistenertlsmodeenum_1 = require("./virtualgatewaylistenertlsmodeenum");
+var virtualgatewaylistenertlsvalidationcontext_1 = require("./virtualgatewaylistenertlsvalidationcontext");
 // VirtualGatewayListenerTls
 /**
  * An object that represents the Transport Layer Security (TLS) properties for a listener.
@@ -36,17 +39,17 @@ var VirtualGatewayListenerTls = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
-        __metadata("design:type", VirtualGatewayListenerTlsCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
+        __metadata("design:type", virtualgatewaylistenertlscertificate_1.VirtualGatewayListenerTlsCertificate)
     ], VirtualGatewayListenerTls.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], VirtualGatewayListenerTls.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validation" }),
-        __metadata("design:type", VirtualGatewayListenerTlsValidationContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validation" }),
+        __metadata("design:type", virtualgatewaylistenertlsvalidationcontext_1.VirtualGatewayListenerTlsValidationContext)
     ], VirtualGatewayListenerTls.prototype, "validation", void 0);
     return VirtualGatewayListenerTls;
-}(SpeakeasyBase));
-export { VirtualGatewayListenerTls };
+}(utils_1.SpeakeasyBase));
+exports.VirtualGatewayListenerTls = VirtualGatewayListenerTls;

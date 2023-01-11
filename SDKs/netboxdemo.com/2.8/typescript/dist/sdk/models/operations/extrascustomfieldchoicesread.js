@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtrasCustomFieldChoicesReadResponse = exports.ExtrasCustomFieldChoicesReadRequest = exports.ExtrasCustomFieldChoicesReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ExtrasCustomFieldChoicesReadPathParams = /** @class */ (function (_super) {
     __extends(ExtrasCustomFieldChoicesReadPathParams, _super);
     function ExtrasCustomFieldChoicesReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], ExtrasCustomFieldChoicesReadPathParams.prototype, "id", void 0);
     return ExtrasCustomFieldChoicesReadPathParams;
-}(SpeakeasyBase));
-export { ExtrasCustomFieldChoicesReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasCustomFieldChoicesReadPathParams = ExtrasCustomFieldChoicesReadPathParams;
 var ExtrasCustomFieldChoicesReadRequest = /** @class */ (function (_super) {
     __extends(ExtrasCustomFieldChoicesReadRequest, _super);
     function ExtrasCustomFieldChoicesReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtrasCustomFieldChoicesReadPathParams)
     ], ExtrasCustomFieldChoicesReadRequest.prototype, "pathParams", void 0);
     return ExtrasCustomFieldChoicesReadRequest;
-}(SpeakeasyBase));
-export { ExtrasCustomFieldChoicesReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasCustomFieldChoicesReadRequest = ExtrasCustomFieldChoicesReadRequest;
 var ExtrasCustomFieldChoicesReadResponse = /** @class */ (function (_super) {
     __extends(ExtrasCustomFieldChoicesReadResponse, _super);
     function ExtrasCustomFieldChoicesReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtrasCustomFieldChoicesReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtrasCustomFieldChoicesReadResponse.prototype, "statusCode", void 0);
     return ExtrasCustomFieldChoicesReadResponse;
-}(SpeakeasyBase));
-export { ExtrasCustomFieldChoicesReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasCustomFieldChoicesReadResponse = ExtrasCustomFieldChoicesReadResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Offset } from "./offset";
-export var TitleAssetPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TitleAsset = exports.TitleAssetStyleEnum = exports.TitleAssetSizeEnum = exports.TitleAssetPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var offset_1 = require("./offset");
+var TitleAssetPositionEnum;
 (function (TitleAssetPositionEnum) {
     TitleAssetPositionEnum["Top"] = "top";
     TitleAssetPositionEnum["TopRight"] = "topRight";
@@ -35,8 +38,8 @@ export var TitleAssetPositionEnum;
     TitleAssetPositionEnum["Left"] = "left";
     TitleAssetPositionEnum["TopLeft"] = "topLeft";
     TitleAssetPositionEnum["Center"] = "center";
-})(TitleAssetPositionEnum || (TitleAssetPositionEnum = {}));
-export var TitleAssetSizeEnum;
+})(TitleAssetPositionEnum = exports.TitleAssetPositionEnum || (exports.TitleAssetPositionEnum = {}));
+var TitleAssetSizeEnum;
 (function (TitleAssetSizeEnum) {
     TitleAssetSizeEnum["XxSmall"] = "xx-small";
     TitleAssetSizeEnum["XSmall"] = "x-small";
@@ -45,8 +48,8 @@ export var TitleAssetSizeEnum;
     TitleAssetSizeEnum["Large"] = "large";
     TitleAssetSizeEnum["XLarge"] = "x-large";
     TitleAssetSizeEnum["XxLarge"] = "xx-large";
-})(TitleAssetSizeEnum || (TitleAssetSizeEnum = {}));
-export var TitleAssetStyleEnum;
+})(TitleAssetSizeEnum = exports.TitleAssetSizeEnum || (exports.TitleAssetSizeEnum = {}));
+var TitleAssetStyleEnum;
 (function (TitleAssetStyleEnum) {
     TitleAssetStyleEnum["Minimal"] = "minimal";
     TitleAssetStyleEnum["Blockbuster"] = "blockbuster";
@@ -58,7 +61,7 @@ export var TitleAssetStyleEnum;
     TitleAssetStyleEnum["Marker"] = "marker";
     TitleAssetStyleEnum["Future"] = "future";
     TitleAssetStyleEnum["Subtitle"] = "subtitle";
-})(TitleAssetStyleEnum || (TitleAssetStyleEnum = {}));
+})(TitleAssetStyleEnum = exports.TitleAssetStyleEnum || (exports.TitleAssetStyleEnum = {}));
 // TitleAsset
 /**
  * The TitleAsset clip type lets you create video titles from a text string and apply styling and positioning.
@@ -69,37 +72,37 @@ var TitleAsset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
-        __metadata("design:type", Offset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
+        __metadata("design:type", offset_1.Offset)
     ], TitleAsset.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=style" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "style", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TitleAsset.prototype, "type", void 0);
     return TitleAsset;
-}(SpeakeasyBase));
-export { TitleAsset };
+}(utils_1.SpeakeasyBase));
+exports.TitleAsset = TitleAsset;

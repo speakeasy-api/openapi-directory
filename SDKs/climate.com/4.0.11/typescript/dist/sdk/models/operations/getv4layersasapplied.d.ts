@@ -23,8 +23,8 @@ export declare class GetV4LayersAsAppliedRequest extends SpeakeasyBase {
 export declare class GetV4LayersAsAppliedResponse extends SpeakeasyBase {
     applicationActivities?: any;
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

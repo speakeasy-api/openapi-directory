@@ -1,8 +1,11 @@
-export var MinimumProtocolVersionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MinimumProtocolVersionEnum = void 0;
+var MinimumProtocolVersionEnum;
 (function (MinimumProtocolVersionEnum) {
     MinimumProtocolVersionEnum["SsLv3"] = "SSLv3";
     MinimumProtocolVersionEnum["TlSv1"] = "TLSv1";
     MinimumProtocolVersionEnum["TlSv12016"] = "TLSv1_2016";
     MinimumProtocolVersionEnum["TlSv112016"] = "TLSv1.1_2016";
     MinimumProtocolVersionEnum["TlSv122018"] = "TLSv1.2_2018";
-})(MinimumProtocolVersionEnum || (MinimumProtocolVersionEnum = {}));
+})(MinimumProtocolVersionEnum = exports.MinimumProtocolVersionEnum || (exports.MinimumProtocolVersionEnum = {}));

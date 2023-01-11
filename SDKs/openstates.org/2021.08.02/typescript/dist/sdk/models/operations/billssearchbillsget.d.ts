@@ -12,7 +12,7 @@ export declare class BillsSearchBillsGetQueryParams extends SpeakeasyBase {
     perPage?: number;
     q?: string;
     session?: string;
-    sort?: shared.BillSortOptionEnum;
+    sort?: Record<string, any>;
     sponsor?: string;
     sponsorClassification?: string;
     subject?: string[];

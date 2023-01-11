@@ -1,4 +1,7 @@
-export var MetricUnitEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricUnitEnum = void 0;
+var MetricUnitEnum;
 (function (MetricUnitEnum) {
     MetricUnitEnum["Seconds"] = "Seconds";
     MetricUnitEnum["Microseconds"] = "Microseconds";
@@ -27,4 +30,4 @@ export var MetricUnitEnum;
     MetricUnitEnum["TerabitsSecond"] = "Terabits/Second";
     MetricUnitEnum["CountSecond"] = "Count/Second";
     MetricUnitEnum["None"] = "None";
-})(MetricUnitEnum || (MetricUnitEnum = {}));
+})(MetricUnitEnum = exports.MetricUnitEnum || (exports.MetricUnitEnum = {}));

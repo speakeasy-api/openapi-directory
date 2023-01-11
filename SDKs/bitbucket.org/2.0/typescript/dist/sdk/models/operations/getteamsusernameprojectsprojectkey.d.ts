@@ -16,6 +16,6 @@ export declare class GetTeamsUsernameProjectsProjectKeyRequest extends Speakeasy
 export declare class GetTeamsUsernameProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

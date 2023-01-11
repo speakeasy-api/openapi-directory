@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectsListColumnsResponse = exports.ProjectsListColumnsRequest = exports.ProjectsListColumnsQueryParams = exports.ProjectsListColumnsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ProjectsListColumnsPathParams = /** @class */ (function (_super) {
     __extends(ProjectsListColumnsPathParams, _super);
     function ProjectsListColumnsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_id" }),
         __metadata("design:type", Number)
     ], ProjectsListColumnsPathParams.prototype, "projectId", void 0);
     return ProjectsListColumnsPathParams;
-}(SpeakeasyBase));
-export { ProjectsListColumnsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectsListColumnsPathParams = ProjectsListColumnsPathParams;
 var ProjectsListColumnsQueryParams = /** @class */ (function (_super) {
     __extends(ProjectsListColumnsQueryParams, _super);
     function ProjectsListColumnsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ProjectsListColumnsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], ProjectsListColumnsQueryParams.prototype, "perPage", void 0);
     return ProjectsListColumnsQueryParams;
-}(SpeakeasyBase));
-export { ProjectsListColumnsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectsListColumnsQueryParams = ProjectsListColumnsQueryParams;
 var ProjectsListColumnsRequest = /** @class */ (function (_super) {
     __extends(ProjectsListColumnsRequest, _super);
     function ProjectsListColumnsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectsListColumnsPathParams)
     ], ProjectsListColumnsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectsListColumnsQueryParams)
     ], ProjectsListColumnsRequest.prototype, "queryParams", void 0);
     return ProjectsListColumnsRequest;
-}(SpeakeasyBase));
-export { ProjectsListColumnsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectsListColumnsRequest = ProjectsListColumnsRequest;
 var ProjectsListColumnsResponse = /** @class */ (function (_super) {
     __extends(ProjectsListColumnsResponse, _super);
     function ProjectsListColumnsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectsListColumnsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ProjectsListColumnsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectsListColumnsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ProjectsListColumnsResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.ProjectColumn }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.ProjectColumn }),
         __metadata("design:type", Array)
     ], ProjectsListColumnsResponse.prototype, "projectColumns", void 0);
     return ProjectsListColumnsResponse;
-}(SpeakeasyBase));
-export { ProjectsListColumnsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectsListColumnsResponse = ProjectsListColumnsResponse;

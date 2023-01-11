@@ -60,7 +60,7 @@ export class UpdateComponentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateComponentResponse?: Map<string, any>;
+  updateComponentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

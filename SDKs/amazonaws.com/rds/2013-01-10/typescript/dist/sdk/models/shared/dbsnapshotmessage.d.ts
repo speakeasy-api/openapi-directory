@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSnapshot } from "./dbsnapshot";
+import { DbSnapshotList } from "./dbsnapshotlist";
 export declare class DbSnapshotMessage extends SpeakeasyBase {
-    dbSnapshots?: DbSnapshot[];
+    dbSnapshots?: DbSnapshotList[];
     marker?: string;
 }

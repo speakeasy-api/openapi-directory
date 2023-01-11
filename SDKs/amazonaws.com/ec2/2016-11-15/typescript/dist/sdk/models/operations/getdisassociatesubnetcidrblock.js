@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisassociateSubnetCidrBlockActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisassociateSubnetCidrBlockResponse = exports.GetDisassociateSubnetCidrBlockRequest = exports.GetDisassociateSubnetCidrBlockHeaders = exports.GetDisassociateSubnetCidrBlockQueryParams = exports.GetDisassociateSubnetCidrBlockVersionEnum = exports.GetDisassociateSubnetCidrBlockActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisassociateSubnetCidrBlockActionEnum;
 (function (GetDisassociateSubnetCidrBlockActionEnum) {
     GetDisassociateSubnetCidrBlockActionEnum["DisassociateSubnetCidrBlock"] = "DisassociateSubnetCidrBlock";
-})(GetDisassociateSubnetCidrBlockActionEnum || (GetDisassociateSubnetCidrBlockActionEnum = {}));
-export var GetDisassociateSubnetCidrBlockVersionEnum;
+})(GetDisassociateSubnetCidrBlockActionEnum = exports.GetDisassociateSubnetCidrBlockActionEnum || (exports.GetDisassociateSubnetCidrBlockActionEnum = {}));
+var GetDisassociateSubnetCidrBlockVersionEnum;
 (function (GetDisassociateSubnetCidrBlockVersionEnum) {
     GetDisassociateSubnetCidrBlockVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDisassociateSubnetCidrBlockVersionEnum || (GetDisassociateSubnetCidrBlockVersionEnum = {}));
+})(GetDisassociateSubnetCidrBlockVersionEnum = exports.GetDisassociateSubnetCidrBlockVersionEnum || (exports.GetDisassociateSubnetCidrBlockVersionEnum = {}));
 var GetDisassociateSubnetCidrBlockQueryParams = /** @class */ (function (_super) {
     __extends(GetDisassociateSubnetCidrBlockQueryParams, _super);
     function GetDisassociateSubnetCidrBlockQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockQueryParams.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockQueryParams.prototype, "version", void 0);
     return GetDisassociateSubnetCidrBlockQueryParams;
-}(SpeakeasyBase));
-export { GetDisassociateSubnetCidrBlockQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateSubnetCidrBlockQueryParams = GetDisassociateSubnetCidrBlockQueryParams;
 var GetDisassociateSubnetCidrBlockHeaders = /** @class */ (function (_super) {
     __extends(GetDisassociateSubnetCidrBlockHeaders, _super);
     function GetDisassociateSubnetCidrBlockHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisassociateSubnetCidrBlockHeaders;
-}(SpeakeasyBase));
-export { GetDisassociateSubnetCidrBlockHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateSubnetCidrBlockHeaders = GetDisassociateSubnetCidrBlockHeaders;
 var GetDisassociateSubnetCidrBlockRequest = /** @class */ (function (_super) {
     __extends(GetDisassociateSubnetCidrBlockRequest, _super);
     function GetDisassociateSubnetCidrBlockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateSubnetCidrBlockQueryParams)
     ], GetDisassociateSubnetCidrBlockRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateSubnetCidrBlockHeaders)
     ], GetDisassociateSubnetCidrBlockRequest.prototype, "headers", void 0);
     return GetDisassociateSubnetCidrBlockRequest;
-}(SpeakeasyBase));
-export { GetDisassociateSubnetCidrBlockRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateSubnetCidrBlockRequest = GetDisassociateSubnetCidrBlockRequest;
 var GetDisassociateSubnetCidrBlockResponse = /** @class */ (function (_super) {
     __extends(GetDisassociateSubnetCidrBlockResponse, _super);
     function GetDisassociateSubnetCidrBlockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDisassociateSubnetCidrBlockResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisassociateSubnetCidrBlockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisassociateSubnetCidrBlockResponse.prototype, "statusCode", void 0);
     return GetDisassociateSubnetCidrBlockResponse;
-}(SpeakeasyBase));
-export { GetDisassociateSubnetCidrBlockResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateSubnetCidrBlockResponse = GetDisassociateSubnetCidrBlockResponse;

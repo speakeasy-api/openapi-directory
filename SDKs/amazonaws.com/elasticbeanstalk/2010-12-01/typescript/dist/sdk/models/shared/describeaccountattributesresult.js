@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceQuotas } from "./resourcequotas";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAccountAttributesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcequotas_1 = require("./resourcequotas");
 var DescribeAccountAttributesResult = /** @class */ (function (_super) {
     __extends(DescribeAccountAttributesResult, _super);
     function DescribeAccountAttributesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuotas)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequotas_1.ResourceQuotas)
     ], DescribeAccountAttributesResult.prototype, "resourceQuotas", void 0);
     return DescribeAccountAttributesResult;
-}(SpeakeasyBase));
-export { DescribeAccountAttributesResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAccountAttributesResult = DescribeAccountAttributesResult;

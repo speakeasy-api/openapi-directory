@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-export var SourceAndDestinationDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceAndDestination = exports.SourceAndDestinationDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var SourceAndDestinationDimensionEnum;
 (function (SourceAndDestinationDimensionEnum) {
     SourceAndDestinationDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     SourceAndDestinationDimensionEnum["Rows"] = "ROWS";
     SourceAndDestinationDimensionEnum["Columns"] = "COLUMNS";
-})(SourceAndDestinationDimensionEnum || (SourceAndDestinationDimensionEnum = {}));
+})(SourceAndDestinationDimensionEnum = exports.SourceAndDestinationDimensionEnum || (exports.SourceAndDestinationDimensionEnum = {}));
 // SourceAndDestination
 /**
  * A combination of a source range and how to extend that source.
@@ -40,17 +43,17 @@ var SourceAndDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], SourceAndDestination.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fillLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fillLength" }),
         __metadata("design:type", Number)
     ], SourceAndDestination.prototype, "fillLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], SourceAndDestination.prototype, "source", void 0);
     return SourceAndDestination;
-}(SpeakeasyBase));
-export { SourceAndDestination };
+}(utils_1.SpeakeasyBase));
+exports.SourceAndDestination = SourceAndDestination;

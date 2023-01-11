@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderLineItemReturnInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderLineItemReturnInfo = /** @class */ (function (_super) {
     __extends(OrderLineItemReturnInfo, _super);
     function OrderLineItemReturnInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=daysToReturn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=daysToReturn" }),
         __metadata("design:type", Number)
     ], OrderLineItemReturnInfo.prototype, "daysToReturn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isReturnable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isReturnable" }),
         __metadata("design:type", Boolean)
     ], OrderLineItemReturnInfo.prototype, "isReturnable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyUrl" }),
         __metadata("design:type", String)
     ], OrderLineItemReturnInfo.prototype, "policyUrl", void 0);
     return OrderLineItemReturnInfo;
-}(SpeakeasyBase));
-export { OrderLineItemReturnInfo };
+}(utils_1.SpeakeasyBase));
+exports.OrderLineItemReturnInfo = OrderLineItemReturnInfo;

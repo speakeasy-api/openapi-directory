@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeletePublicKeyResponse = exports.EnterpriseAdminDeletePublicKeyRequest = exports.EnterpriseAdminDeletePublicKeyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeletePublicKeyPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePublicKeyPathParams, _super);
     function EnterpriseAdminDeletePublicKeyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=key_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=key_ids" }),
         __metadata("design:type", String)
     ], EnterpriseAdminDeletePublicKeyPathParams.prototype, "keyIds", void 0);
     return EnterpriseAdminDeletePublicKeyPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePublicKeyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePublicKeyPathParams = EnterpriseAdminDeletePublicKeyPathParams;
 var EnterpriseAdminDeletePublicKeyRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePublicKeyRequest, _super);
     function EnterpriseAdminDeletePublicKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeletePublicKeyPathParams)
     ], EnterpriseAdminDeletePublicKeyRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminDeletePublicKeyRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePublicKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePublicKeyRequest = EnterpriseAdminDeletePublicKeyRequest;
 var EnterpriseAdminDeletePublicKeyResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePublicKeyResponse, _super);
     function EnterpriseAdminDeletePublicKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeletePublicKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeletePublicKeyResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeletePublicKeyResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePublicKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePublicKeyResponse = EnterpriseAdminDeletePublicKeyResponse;

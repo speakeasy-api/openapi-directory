@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Currency = void 0;
+var utils_1 = require("../../../internal/utils");
 // Currency
 /**
  * Currency
@@ -33,33 +36,33 @@ var Currency = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Currency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decimalDigits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decimalDigits" }),
         __metadata("design:type", Number)
     ], Currency.prototype, "decimalDigits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Currency.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namePlural" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namePlural" }),
         __metadata("design:type", String)
     ], Currency.prototype, "namePlural", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rounding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rounding" }),
         __metadata("design:type", Number)
     ], Currency.prototype, "rounding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbol" }),
         __metadata("design:type", String)
     ], Currency.prototype, "symbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbolNative" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbolNative" }),
         __metadata("design:type", String)
     ], Currency.prototype, "symbolNative", void 0);
     return Currency;
-}(SpeakeasyBase));
-export { Currency };
+}(utils_1.SpeakeasyBase));
+exports.Currency = Currency;

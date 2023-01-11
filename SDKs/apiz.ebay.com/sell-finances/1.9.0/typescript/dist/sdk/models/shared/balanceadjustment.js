@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BalanceAdjustment = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // BalanceAdjustment
 /**
  * This type is used by the balanceAdjustment container, which shows the seller payout balance that will be applied toward the charges outlined in the charges array.
@@ -34,13 +37,13 @@ var BalanceAdjustment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adjustmentAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustmentAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], BalanceAdjustment.prototype, "adjustmentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adjustmentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustmentType" }),
         __metadata("design:type", String)
     ], BalanceAdjustment.prototype, "adjustmentType", void 0);
     return BalanceAdjustment;
-}(SpeakeasyBase));
-export { BalanceAdjustment };
+}(utils_1.SpeakeasyBase));
+exports.BalanceAdjustment = BalanceAdjustment;

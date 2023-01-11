@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AclEntry } from "./aclentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var aclentry_1 = require("./aclentry");
 // IpConfiguration
 /**
  * IP Management configuration.
@@ -34,25 +37,29 @@ var IpConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allocatedIpRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allocatedIpRange" }),
         __metadata("design:type", String)
     ], IpConfiguration.prototype, "allocatedIpRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedNetworks", elemType: AclEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedNetworks", elemType: aclentry_1.AclEntry }),
         __metadata("design:type", Array)
     ], IpConfiguration.prototype, "authorizedNetworks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivatePathForGoogleCloudServices" }),
+        __metadata("design:type", Boolean)
+    ], IpConfiguration.prototype, "enablePrivatePathForGoogleCloudServices", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4Enabled" }),
         __metadata("design:type", Boolean)
     ], IpConfiguration.prototype, "ipv4Enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateNetwork" }),
         __metadata("design:type", String)
     ], IpConfiguration.prototype, "privateNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireSsl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireSsl" }),
         __metadata("design:type", Boolean)
     ], IpConfiguration.prototype, "requireSsl", void 0);
     return IpConfiguration;
-}(SpeakeasyBase));
-export { IpConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.IpConfiguration = IpConfiguration;

@@ -51,7 +51,7 @@ export class DeleteTableResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTableResponse?: Map<string, any>;
+  deleteTableResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

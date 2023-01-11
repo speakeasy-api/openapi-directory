@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActivityType } from "./activitytype";
-import { RegistrationStatusEnum } from "./registrationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityTypeInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var activitytype_1 = require("./activitytype");
+var registrationstatusenum_1 = require("./registrationstatusenum");
 // ActivityTypeInfo
 /**
  * Detailed information about an activity type.
@@ -35,25 +38,25 @@ var ActivityTypeInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityType" }),
-        __metadata("design:type", ActivityType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityType" }),
+        __metadata("design:type", activitytype_1.ActivityType)
     ], ActivityTypeInfo.prototype, "activityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", Date)
     ], ActivityTypeInfo.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecationDate" }),
         __metadata("design:type", Date)
     ], ActivityTypeInfo.prototype, "deprecationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ActivityTypeInfo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ActivityTypeInfo.prototype, "status", void 0);
     return ActivityTypeInfo;
-}(SpeakeasyBase));
-export { ActivityTypeInfo };
+}(utils_1.SpeakeasyBase));
+exports.ActivityTypeInfo = ActivityTypeInfo;

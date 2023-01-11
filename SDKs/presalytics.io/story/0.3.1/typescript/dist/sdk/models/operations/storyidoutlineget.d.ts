@@ -10,5 +10,5 @@ export declare class StoryIdOutlineGetResponse extends SpeakeasyBase {
     statusCode: number;
     problemDetail?: any;
     status?: any;
-    storyIdOutlineGet200ApplicationJsonString?: string;
+    storyIdOutlineGet200ApplicationJSONString?: string;
 }

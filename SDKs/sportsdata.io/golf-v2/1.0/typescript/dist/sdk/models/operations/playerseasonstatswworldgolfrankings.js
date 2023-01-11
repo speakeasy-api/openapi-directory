@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonStatsWWorldGolfRankingsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonStatsWWorldGolfRankingsResponse = exports.PlayerSeasonStatsWWorldGolfRankingsRequest = exports.PlayerSeasonStatsWWorldGolfRankingsPathParams = exports.PlayerSeasonStatsWWorldGolfRankingsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonStatsWWorldGolfRankingsFormatEnum;
 (function (PlayerSeasonStatsWWorldGolfRankingsFormatEnum) {
     PlayerSeasonStatsWWorldGolfRankingsFormatEnum["Xml"] = "XML";
     PlayerSeasonStatsWWorldGolfRankingsFormatEnum["Json"] = "JSON";
-})(PlayerSeasonStatsWWorldGolfRankingsFormatEnum || (PlayerSeasonStatsWWorldGolfRankingsFormatEnum = {}));
+})(PlayerSeasonStatsWWorldGolfRankingsFormatEnum = exports.PlayerSeasonStatsWWorldGolfRankingsFormatEnum || (exports.PlayerSeasonStatsWWorldGolfRankingsFormatEnum = {}));
 var PlayerSeasonStatsWWorldGolfRankingsPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsWWorldGolfRankingsPathParams, _super);
     function PlayerSeasonStatsWWorldGolfRankingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonStatsWWorldGolfRankingsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonStatsWWorldGolfRankingsPathParams.prototype, "season", void 0);
     return PlayerSeasonStatsWWorldGolfRankingsPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsWWorldGolfRankingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsWWorldGolfRankingsPathParams = PlayerSeasonStatsWWorldGolfRankingsPathParams;
 var PlayerSeasonStatsWWorldGolfRankingsRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsWWorldGolfRankingsRequest, _super);
     function PlayerSeasonStatsWWorldGolfRankingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonStatsWWorldGolfRankingsPathParams)
     ], PlayerSeasonStatsWWorldGolfRankingsRequest.prototype, "pathParams", void 0);
     return PlayerSeasonStatsWWorldGolfRankingsRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsWWorldGolfRankingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsWWorldGolfRankingsRequest = PlayerSeasonStatsWWorldGolfRankingsRequest;
 var PlayerSeasonStatsWWorldGolfRankingsResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsWWorldGolfRankingsResponse, _super);
     function PlayerSeasonStatsWWorldGolfRankingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonStatsWWorldGolfRankingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonStatsWWorldGolfRankingsResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonStatsWWorldGolfRankingsResponse.prototype, "statusCode", void 0);
     return PlayerSeasonStatsWWorldGolfRankingsResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsWWorldGolfRankingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsWWorldGolfRankingsResponse = PlayerSeasonStatsWWorldGolfRankingsResponse;

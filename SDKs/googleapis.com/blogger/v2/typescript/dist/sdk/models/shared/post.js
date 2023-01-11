@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Comment } from "./comment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Post = exports.PostStatusEnum = exports.PostReplies = exports.PostReaderCommentsEnum = exports.PostLocation = exports.PostImages = exports.PostBlog = exports.PostAuthor = exports.PostAuthorImage = void 0;
+var utils_1 = require("../../../internal/utils");
+var comment_1 = require("./comment");
 // PostAuthorImage
 /**
  * The creator's avatar.
@@ -34,12 +37,12 @@ var PostAuthorImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAuthorImage.prototype, "url", void 0);
     return PostAuthorImage;
-}(SpeakeasyBase));
-export { PostAuthorImage };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorImage = PostAuthorImage;
 // PostAuthor
 /**
  * The author of this Post.
@@ -50,24 +53,24 @@ var PostAuthor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PostAuthor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PostAuthor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", PostAuthorImage)
     ], PostAuthor.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAuthor.prototype, "url", void 0);
     return PostAuthor;
-}(SpeakeasyBase));
-export { PostAuthor };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthor = PostAuthor;
 // PostBlog
 /**
  * Data about the blog containing this Post.
@@ -78,24 +81,24 @@ var PostBlog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PostBlog.prototype, "id", void 0);
     return PostBlog;
-}(SpeakeasyBase));
-export { PostBlog };
+}(utils_1.SpeakeasyBase));
+exports.PostBlog = PostBlog;
 var PostImages = /** @class */ (function (_super) {
     __extends(PostImages, _super);
     function PostImages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostImages.prototype, "url", void 0);
     return PostImages;
-}(SpeakeasyBase));
-export { PostImages };
+}(utils_1.SpeakeasyBase));
+exports.PostImages = PostImages;
 // PostLocation
 /**
  * The location for geotagged posts.
@@ -106,30 +109,30 @@ var PostLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], PostLocation.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], PostLocation.prototype, "lng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=span" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=span" }),
         __metadata("design:type", String)
     ], PostLocation.prototype, "span", void 0);
     return PostLocation;
-}(SpeakeasyBase));
-export { PostLocation };
-export var PostReaderCommentsEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostLocation = PostLocation;
+var PostReaderCommentsEnum;
 (function (PostReaderCommentsEnum) {
     PostReaderCommentsEnum["Allow"] = "ALLOW";
     PostReaderCommentsEnum["DontAllowShowExisting"] = "DONT_ALLOW_SHOW_EXISTING";
     PostReaderCommentsEnum["DontAllowHideExisting"] = "DONT_ALLOW_HIDE_EXISTING";
-})(PostReaderCommentsEnum || (PostReaderCommentsEnum = {}));
+})(PostReaderCommentsEnum = exports.PostReaderCommentsEnum || (exports.PostReaderCommentsEnum = {}));
 // PostReplies
 /**
  * The container of comments on this Post.
@@ -140,112 +143,112 @@ var PostReplies = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Comment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: comment_1.Comment }),
         __metadata("design:type", Array)
     ], PostReplies.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], PostReplies.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalItems" }),
         __metadata("design:type", String)
     ], PostReplies.prototype, "totalItems", void 0);
     return PostReplies;
-}(SpeakeasyBase));
-export { PostReplies };
-export var PostStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostReplies = PostReplies;
+var PostStatusEnum;
 (function (PostStatusEnum) {
     PostStatusEnum["Live"] = "LIVE";
     PostStatusEnum["Draft"] = "DRAFT";
     PostStatusEnum["Scheduled"] = "SCHEDULED";
     PostStatusEnum["SoftTrashed"] = "SOFT_TRASHED";
-})(PostStatusEnum || (PostStatusEnum = {}));
+})(PostStatusEnum = exports.PostStatusEnum || (exports.PostStatusEnum = {}));
 var Post = /** @class */ (function (_super) {
     __extends(Post, _super);
     function Post() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", PostAuthor)
     ], Post.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog" }),
         __metadata("design:type", PostBlog)
     ], Post.prototype, "blog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Post.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customMetaData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customMetaData" }),
         __metadata("design:type", String)
     ], Post.prototype, "customMetaData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Post.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Post.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: PostImages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: PostImages }),
         __metadata("design:type", Array)
     ], Post.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Post.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], Post.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", PostLocation)
     ], Post.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", String)
     ], Post.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readerComments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readerComments" }),
         __metadata("design:type", String)
     ], Post.prototype, "readerComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replies" }),
         __metadata("design:type", PostReplies)
     ], Post.prototype, "replies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Post.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Post.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Post.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=titleLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=titleLink" }),
         __metadata("design:type", String)
     ], Post.prototype, "titleLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trashed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trashed" }),
         __metadata("design:type", String)
     ], Post.prototype, "trashed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], Post.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Post.prototype, "url", void 0);
     return Post;
-}(SpeakeasyBase));
-export { Post };
+}(utils_1.SpeakeasyBase));
+exports.Post = Post;

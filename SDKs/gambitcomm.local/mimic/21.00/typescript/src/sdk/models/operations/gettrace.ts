@@ -22,5 +22,5 @@ export class GetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTrace200ApplicationJsonInt32Integer?: number;
+  getTrace200ApplicationJSONInt32Integer?: number;
 }

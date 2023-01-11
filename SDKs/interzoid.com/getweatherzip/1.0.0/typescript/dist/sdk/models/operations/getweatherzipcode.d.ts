@@ -14,7 +14,7 @@ export declare class Getweatherzipcode200ApplicationJson extends SpeakeasyBase {
     visibilityMiles?: string;
     weather?: string;
     windDir?: string;
-    windMph?: string;
+    windMPH?: string;
 }
 export declare class GetweatherzipcodeRequest extends SpeakeasyBase {
     queryParams: GetweatherzipcodeQueryParams;
@@ -22,5 +22,5 @@ export declare class GetweatherzipcodeRequest extends SpeakeasyBase {
 export declare class GetweatherzipcodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getweatherzipcode200ApplicationJsonObject?: Getweatherzipcode200ApplicationJson;
+    getweatherzipcode200ApplicationJSONObject?: Getweatherzipcode200ApplicationJson;
 }

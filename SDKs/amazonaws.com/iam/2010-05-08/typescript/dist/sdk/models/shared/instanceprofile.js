@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Role } from "./role";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var role_1 = require("./role");
+var tag_1 = require("./tag");
 // InstanceProfile
 /**
  * <p>Contains information about an instance profile.</p> <p>This data type is used as a response element in the following operations:</p> <ul> <li> <p> <a>CreateInstanceProfile</a> </p> </li> <li> <p> <a>GetInstanceProfile</a> </p> </li> <li> <p> <a>ListInstanceProfiles</a> </p> </li> <li> <p> <a>ListInstanceProfilesForRole</a> </p> </li> </ul>
@@ -35,33 +38,33 @@ var InstanceProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceProfile.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], InstanceProfile.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceProfile.prototype, "instanceProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceProfile.prototype, "instanceProfileName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceProfile.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Role }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: role_1.Role }),
         __metadata("design:type", Array)
     ], InstanceProfile.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], InstanceProfile.prototype, "tags", void 0);
     return InstanceProfile;
-}(SpeakeasyBase));
-export { InstanceProfile };
+}(utils_1.SpeakeasyBase));
+exports.InstanceProfile = InstanceProfile;

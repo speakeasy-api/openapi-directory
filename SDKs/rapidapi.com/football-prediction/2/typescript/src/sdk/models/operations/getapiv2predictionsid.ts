@@ -10,13 +10,13 @@ export class GetApiV2PredictionsIdPathParams extends SpeakeasyBase {
 
 export class GetApiV2PredictionsId200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>[];
+  data?: Record<string, any>[];
 }
 
 
 export class GetApiV2PredictionsId404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 }
 
 
@@ -31,11 +31,11 @@ export class GetApiV2PredictionsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiV2PredictionsId200ApplicationJsonObject?: GetApiV2PredictionsId200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getApiV2PredictionsId404ApplicationJsonObject?: GetApiV2PredictionsId404ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiV2PredictionsId200ApplicationJSONObject?: GetApiV2PredictionsId200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getApiV2PredictionsId404ApplicationJSONObject?: GetApiV2PredictionsId404ApplicationJson;
 }

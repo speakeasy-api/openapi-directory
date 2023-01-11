@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsTransactionHashResponse = exports.OptionsTransactionHashRequest = exports.OptionsTransactionHashPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsTransactionHashPathParams = /** @class */ (function (_super) {
     __extends(OptionsTransactionHashPathParams, _super);
     function OptionsTransactionHashPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hash" }),
         __metadata("design:type", String)
     ], OptionsTransactionHashPathParams.prototype, "hash", void 0);
     return OptionsTransactionHashPathParams;
-}(SpeakeasyBase));
-export { OptionsTransactionHashPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsTransactionHashPathParams = OptionsTransactionHashPathParams;
 var OptionsTransactionHashRequest = /** @class */ (function (_super) {
     __extends(OptionsTransactionHashRequest, _super);
     function OptionsTransactionHashRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsTransactionHashPathParams)
     ], OptionsTransactionHashRequest.prototype, "pathParams", void 0);
     return OptionsTransactionHashRequest;
-}(SpeakeasyBase));
-export { OptionsTransactionHashRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsTransactionHashRequest = OptionsTransactionHashRequest;
 var OptionsTransactionHashResponse = /** @class */ (function (_super) {
     __extends(OptionsTransactionHashResponse, _super);
     function OptionsTransactionHashResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsTransactionHashResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsTransactionHashResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsTransactionHashResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsTransactionHashResponse.prototype, "statusCode", void 0);
     return OptionsTransactionHashResponse;
-}(SpeakeasyBase));
-export { OptionsTransactionHashResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsTransactionHashResponse = OptionsTransactionHashResponse;

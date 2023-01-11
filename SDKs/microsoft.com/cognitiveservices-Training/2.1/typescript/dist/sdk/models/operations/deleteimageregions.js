@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteImageRegionsResponse = exports.DeleteImageRegionsRequest = exports.DeleteImageRegionsHeaders = exports.DeleteImageRegionsQueryParams = exports.DeleteImageRegionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteImageRegionsPathParams = /** @class */ (function (_super) {
     __extends(DeleteImageRegionsPathParams, _super);
     function DeleteImageRegionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], DeleteImageRegionsPathParams.prototype, "projectId", void 0);
     return DeleteImageRegionsPathParams;
-}(SpeakeasyBase));
-export { DeleteImageRegionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageRegionsPathParams = DeleteImageRegionsPathParams;
 var DeleteImageRegionsQueryParams = /** @class */ (function (_super) {
     __extends(DeleteImageRegionsQueryParams, _super);
     function DeleteImageRegionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=regionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=regionIds" }),
         __metadata("design:type", Array)
     ], DeleteImageRegionsQueryParams.prototype, "regionIds", void 0);
     return DeleteImageRegionsQueryParams;
-}(SpeakeasyBase));
-export { DeleteImageRegionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageRegionsQueryParams = DeleteImageRegionsQueryParams;
 var DeleteImageRegionsHeaders = /** @class */ (function (_super) {
     __extends(DeleteImageRegionsHeaders, _super);
     function DeleteImageRegionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], DeleteImageRegionsHeaders.prototype, "trainingKey", void 0);
     return DeleteImageRegionsHeaders;
-}(SpeakeasyBase));
-export { DeleteImageRegionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageRegionsHeaders = DeleteImageRegionsHeaders;
 var DeleteImageRegionsRequest = /** @class */ (function (_super) {
     __extends(DeleteImageRegionsRequest, _super);
     function DeleteImageRegionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageRegionsPathParams)
     ], DeleteImageRegionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageRegionsQueryParams)
     ], DeleteImageRegionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageRegionsHeaders)
     ], DeleteImageRegionsRequest.prototype, "headers", void 0);
     return DeleteImageRegionsRequest;
-}(SpeakeasyBase));
-export { DeleteImageRegionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageRegionsRequest = DeleteImageRegionsRequest;
 var DeleteImageRegionsResponse = /** @class */ (function (_super) {
     __extends(DeleteImageRegionsResponse, _super);
     function DeleteImageRegionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteImageRegionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteImageRegionsResponse.prototype, "statusCode", void 0);
     return DeleteImageRegionsResponse;
-}(SpeakeasyBase));
-export { DeleteImageRegionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageRegionsResponse = DeleteImageRegionsResponse;

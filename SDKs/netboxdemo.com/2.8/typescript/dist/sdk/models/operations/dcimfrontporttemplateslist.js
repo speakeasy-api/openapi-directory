@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimFrontPortTemplatesListResponse = exports.DcimFrontPortTemplatesListRequest = exports.DcimFrontPortTemplatesList200ApplicationJson = exports.DcimFrontPortTemplatesListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DcimFrontPortTemplatesListQueryParams = /** @class */ (function (_super) {
     __extends(DcimFrontPortTemplatesListQueryParams, _super);
     function DcimFrontPortTemplatesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=devicetype_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=devicetype_id" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "devicetypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=devicetype_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=devicetype_id__n" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "devicetypeIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gt" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "idGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gte" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "idGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lt" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "idLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lte" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "idLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__n" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "idN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__ic" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__ie" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__iew" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__isw" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__n" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nic" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nie" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__niew" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nisw" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "nameNisw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type__n" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListQueryParams.prototype, "typeN", void 0);
     return DcimFrontPortTemplatesListQueryParams;
-}(SpeakeasyBase));
-export { DcimFrontPortTemplatesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimFrontPortTemplatesListQueryParams = DcimFrontPortTemplatesListQueryParams;
 var DcimFrontPortTemplatesList200ApplicationJson = /** @class */ (function (_super) {
     __extends(DcimFrontPortTemplatesList200ApplicationJson, _super);
     function DcimFrontPortTemplatesList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], DcimFrontPortTemplatesList200ApplicationJson.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesList200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesList200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.FrontPortTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.FrontPortTemplate }),
         __metadata("design:type", Array)
     ], DcimFrontPortTemplatesList200ApplicationJson.prototype, "results", void 0);
     return DcimFrontPortTemplatesList200ApplicationJson;
-}(SpeakeasyBase));
-export { DcimFrontPortTemplatesList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DcimFrontPortTemplatesList200ApplicationJson = DcimFrontPortTemplatesList200ApplicationJson;
 var DcimFrontPortTemplatesListRequest = /** @class */ (function (_super) {
     __extends(DcimFrontPortTemplatesListRequest, _super);
     function DcimFrontPortTemplatesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimFrontPortTemplatesListQueryParams)
     ], DcimFrontPortTemplatesListRequest.prototype, "queryParams", void 0);
     return DcimFrontPortTemplatesListRequest;
-}(SpeakeasyBase));
-export { DcimFrontPortTemplatesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimFrontPortTemplatesListRequest = DcimFrontPortTemplatesListRequest;
 var DcimFrontPortTemplatesListResponse = /** @class */ (function (_super) {
     __extends(DcimFrontPortTemplatesListResponse, _super);
     function DcimFrontPortTemplatesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimFrontPortTemplatesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimFrontPortTemplatesListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimFrontPortTemplatesList200ApplicationJson)
-    ], DcimFrontPortTemplatesListResponse.prototype, "dcimFrontPortTemplatesList200ApplicationJsonObject", void 0);
+    ], DcimFrontPortTemplatesListResponse.prototype, "dcimFrontPortTemplatesList200ApplicationJSONObject", void 0);
     return DcimFrontPortTemplatesListResponse;
-}(SpeakeasyBase));
-export { DcimFrontPortTemplatesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimFrontPortTemplatesListResponse = DcimFrontPortTemplatesListResponse;

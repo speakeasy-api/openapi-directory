@@ -23,7 +23,7 @@ export declare class PutDeliveryChannelResponse extends SpeakeasyBase {
     invalidDeliveryChannelNameException?: any;
     invalidS3KeyPrefixException?: any;
     invalidS3KmsKeyArnException?: any;
-    invalidSnsTopicArnException?: any;
+    invalidSNSTopicARNException?: any;
     maxNumberOfDeliveryChannelsExceededException?: any;
     noAvailableConfigurationRecorderException?: any;
     noSuchBucketException?: any;

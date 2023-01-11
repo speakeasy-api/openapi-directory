@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -35,16 +35,18 @@ export class Webhooks {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/webhooks/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/webhooks/{id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -56,7 +58,6 @@ export class Webhooks {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -82,7 +83,7 @@ export class Webhooks {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -90,19 +91,21 @@ export class Webhooks {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetWebhooksResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.listWebhooksResponse = httpRes?.data;
             }
             break;
@@ -110,7 +113,6 @@ export class Webhooks {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -129,23 +131,25 @@ export class Webhooks {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/webhooks/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/webhooks/{id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetWebhooksIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.getWebhookResponse = httpRes?.data;
             }
             break;
@@ -153,7 +157,6 @@ export class Webhooks {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -177,11 +180,11 @@ export class Webhooks {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/webhooks/{webhookId}/logs", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/webhooks/{webhookId}/logs", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -189,19 +192,21 @@ export class Webhooks {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetWebhooksWebhookIdLogsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.listWebhookDeliveryLogsResponse = httpRes?.data;
             }
             break;
@@ -209,7 +214,82 @@ export class Webhooks {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * postWebhooks - Create webhook
+   *
+   * Create a new webhook with a given URL. The URL will receive webhook
+   * events as JSON-encoded `POST` requests. The URL must respond with a HTTP
+   * `200` status on success.
+   * 
+   * There is currently a limit of 10 webhooks at any given time. Once this
+   * limit is reached, existing webhooks will need to be deleted before new
+   * webhooks can be created.
+   * 
+   * Event delivery is retried with exponential backoff if the URL is
+   * unreachable or it does not respond with a `200` status. The response
+   * includes a `secretKey` attribute, which is used to sign requests sent to
+   * the webhook URL. It will not be returned from any other endpoints within
+   * the Up API. If the `secretKey` is lost, simply create a new webhook with
+   * the same URL, capture its `secretKey` and then delete the original
+   * webhook. See [Handling webhook events](#callback_post_webhookURL) for
+   * details on how to process webhook events.
+   * 
+   * It is probably a good idea to test the webhook by
+   * [sending it a `PING` event](#post_webhooks_webhookId_ping) after creating
+   * it.
+   * 
+  **/
+  postWebhooks(
+    req: operations.PostWebhooksRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.PostWebhooksResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.PostWebhooksRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/webhooks";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.PostWebhooksResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.createWebhookResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
   }
 
   
@@ -230,23 +310,25 @@ export class Webhooks {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/webhooks/{webhookId}/ping", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/webhooks/{webhookId}/ping", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostWebhooksWebhookIdPingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.webhookEventCallback = httpRes?.data;
             }
             break;
@@ -254,7 +336,6 @@ export class Webhooks {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

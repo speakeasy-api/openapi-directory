@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CardObjectTypeBody } from "./cardobjecttypebody";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CardFetchBodyPatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var cardobjecttypebody_1 = require("./cardobjecttypebody");
 // CardFetchBodyPatch
 /**
  * Variant of CardFetchBody with fields as optional for patches
@@ -34,13 +37,13 @@ var CardFetchBodyPatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectTypes", elemType: CardObjectTypeBody }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectTypes", elemType: cardobjecttypebody_1.CardObjectTypeBody }),
         __metadata("design:type", Array)
     ], CardFetchBodyPatch.prototype, "objectTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetUrl" }),
         __metadata("design:type", String)
     ], CardFetchBodyPatch.prototype, "targetUrl", void 0);
     return CardFetchBodyPatch;
-}(SpeakeasyBase));
-export { CardFetchBodyPatch };
+}(utils_1.SpeakeasyBase));
+exports.CardFetchBodyPatch = CardFetchBodyPatch;

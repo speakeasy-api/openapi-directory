@@ -72,5 +72,5 @@ export class UpdateConnectionAliasPermissionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateConnectionAliasPermissionResult?: Map<string, any>;
+  updateConnectionAliasPermissionResult?: Record<string, any>;
 }

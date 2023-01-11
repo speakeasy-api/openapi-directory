@@ -9,19 +9,19 @@ export declare class GetUserContentRecentJson200ApplicationJsonDebug extends Spe
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllProperties extends SpeakeasyBase {
     description?: string;
     name?: string;
-    properties?: Map<string, any>[];
+    properties?: Record<string, any>[];
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOn extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesCommentListSortEditors extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesReachedMaxComOff extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetProperties extends SpeakeasyBase {
     automoderationOn?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOn;
@@ -30,24 +30,24 @@ export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAs
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset extends SpeakeasyBase {
     allProperties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllProperties[];
-    assetId?: number;
+    assetID?: number;
     assetTitle?: string;
-    assetUrl?: string;
+    assetURL?: string;
     createDate?: string;
-    labels?: Map<string, any>[];
+    labels?: Record<string, any>[];
     properties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetProperties;
     source?: string;
     taxonomy?: string;
-    text?: Map<string, any>[];
+    text?: Record<string, any>[];
     updateDate?: string;
-    vendorId?: string;
+    vendorID?: string;
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResultsComments extends SpeakeasyBase {
     approveDate?: string;
     asset?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset;
-    assetId?: number;
+    assetID?: number;
     commentBody?: string;
-    commentId?: number;
+    commentID?: number;
     commentSequence?: number;
     commentTitle?: string;
     commentType?: string;
@@ -55,17 +55,17 @@ export declare class GetUserContentRecentJson200ApplicationJsonResultsComments e
     displayName?: string;
     editorsSelection?: number;
     location?: string;
-    parentId?: any;
+    parentID?: any;
     recommendationCount?: number;
-    replies?: Map<string, any>[];
+    replies?: Record<string, any>[];
     status?: string;
-    statusId?: number;
+    statusID?: number;
     updateDate?: string;
     userDisplayName?: string;
-    userId?: number;
+    userID?: number;
     userLocation?: string;
     userTitle?: string;
-    userUrl?: string;
+    userURL?: string;
 }
 export declare class GetUserContentRecentJson200ApplicationJsonResults extends SpeakeasyBase {
     apiTimestamp?: string;
@@ -83,6 +83,6 @@ export declare class GetUserContentRecentJsonRequest extends SpeakeasyBase {
 }
 export declare class GetUserContentRecentJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentRecentJson200ApplicationJsonObject?: GetUserContentRecentJson200ApplicationJson;
+    getUserContentRecentJSON200ApplicationJSONObject?: GetUserContentRecentJson200ApplicationJson;
     statusCode: number;
 }

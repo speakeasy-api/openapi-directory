@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FreeBetDetail } from "./freebetdetail";
-import { Betslipleg } from "./betslipleg";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Betslipbet = void 0;
+var utils_1 = require("../../../internal/utils");
+var freebetdetail_1 = require("./freebetdetail");
+var betslipleg_1 = require("./betslipleg");
 var Betslipbet = /** @class */ (function (_super) {
     __extends(Betslipbet, _super);
     function Betslipbet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=betMultiplier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=betMultiplier" }),
         __metadata("design:type", Number)
     ], Betslipbet.prototype, "betMultiplier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBets", elemType: FreeBetDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBets", elemType: freebetdetail_1.FreeBetDetail }),
         __metadata("design:type", Array)
     ], Betslipbet.prototype, "freeBets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legs", elemType: Betslipleg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legs", elemType: betslipleg_1.Betslipleg }),
         __metadata("design:type", Array)
     ], Betslipbet.prototype, "legs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxStake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxStake" }),
         __metadata("design:type", Number)
     ], Betslipbet.prototype, "maxStake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minStake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minStake" }),
         __metadata("design:type", Number)
     ], Betslipbet.prototype, "minStake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numLines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numLines" }),
         __metadata("design:type", Number)
     ], Betslipbet.prototype, "numLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], Betslipbet.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeCode" }),
         __metadata("design:type", String)
     ], Betslipbet.prototype, "typeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeName" }),
         __metadata("design:type", String)
     ], Betslipbet.prototype, "typeName", void 0);
     return Betslipbet;
-}(SpeakeasyBase));
-export { Betslipbet };
+}(utils_1.SpeakeasyBase));
+exports.Betslipbet = Betslipbet;

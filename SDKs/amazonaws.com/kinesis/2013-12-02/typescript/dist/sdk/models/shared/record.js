@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
-// Record
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordT = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
+// RecordT
 /**
  * The unit of data of the Kinesis data stream, which is composed of a sequence number, a partition key, and a data blob.
 **/
-var Record = /** @class */ (function (_super) {
-    __extends(Record, _super);
-    function Record() {
+var RecordT = /** @class */ (function (_super) {
+    __extends(RecordT, _super);
+    function RecordT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApproximateArrivalTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApproximateArrivalTimestamp" }),
         __metadata("design:type", Date)
-    ], Record.prototype, "approximateArrivalTimestamp", void 0);
+    ], RecordT.prototype, "approximateArrivalTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
         __metadata("design:type", String)
-    ], Record.prototype, "data", void 0);
+    ], RecordT.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionType" }),
         __metadata("design:type", String)
-    ], Record.prototype, "encryptionType", void 0);
+    ], RecordT.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionKey" }),
         __metadata("design:type", String)
-    ], Record.prototype, "partitionKey", void 0);
+    ], RecordT.prototype, "partitionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SequenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SequenceNumber" }),
         __metadata("design:type", String)
-    ], Record.prototype, "sequenceNumber", void 0);
-    return Record;
-}(SpeakeasyBase));
-export { Record };
+    ], RecordT.prototype, "sequenceNumber", void 0);
+    return RecordT;
+}(utils_1.SpeakeasyBase));
+exports.RecordT = RecordT;

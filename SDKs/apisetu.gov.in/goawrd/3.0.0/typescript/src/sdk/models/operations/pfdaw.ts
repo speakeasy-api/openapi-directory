@@ -188,23 +188,23 @@ export class PfdawResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pfdaw400ApplicationJsonObject?: Pfdaw400ApplicationJson;
+  pfdaw400ApplicationJSONObject?: Pfdaw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw401ApplicationJsonObject?: Pfdaw401ApplicationJson;
+  pfdaw401ApplicationJSONObject?: Pfdaw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw404ApplicationJsonObject?: Pfdaw404ApplicationJson;
+  pfdaw404ApplicationJSONObject?: Pfdaw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw500ApplicationJsonObject?: Pfdaw500ApplicationJson;
+  pfdaw500ApplicationJSONObject?: Pfdaw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw502ApplicationJsonObject?: Pfdaw502ApplicationJson;
+  pfdaw502ApplicationJSONObject?: Pfdaw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw503ApplicationJsonObject?: Pfdaw503ApplicationJson;
+  pfdaw503ApplicationJSONObject?: Pfdaw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pfdaw504ApplicationJsonObject?: Pfdaw504ApplicationJson;
+  pfdaw504ApplicationJSONObject?: Pfdaw504ApplicationJson;
 }

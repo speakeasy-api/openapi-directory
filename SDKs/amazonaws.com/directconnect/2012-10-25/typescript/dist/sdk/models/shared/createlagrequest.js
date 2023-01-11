@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLagRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CreateLagRequest = /** @class */ (function (_super) {
     __extends(CreateLagRequest, _super);
     function CreateLagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childConnectionTags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childConnectionTags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateLagRequest.prototype, "childConnectionTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], CreateLagRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionsBandwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionsBandwidth" }),
         __metadata("design:type", String)
     ], CreateLagRequest.prototype, "connectionsBandwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lagName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lagName" }),
         __metadata("design:type", String)
     ], CreateLagRequest.prototype, "lagName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], CreateLagRequest.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfConnections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfConnections" }),
         __metadata("design:type", Number)
     ], CreateLagRequest.prototype, "numberOfConnections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=providerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=providerName" }),
         __metadata("design:type", String)
     ], CreateLagRequest.prototype, "providerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMACSec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMACSec" }),
         __metadata("design:type", Boolean)
-    ], CreateLagRequest.prototype, "requestMacSec", void 0);
+    ], CreateLagRequest.prototype, "requestMACSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateLagRequest.prototype, "tags", void 0);
     return CreateLagRequest;
-}(SpeakeasyBase));
-export { CreateLagRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateLagRequest = CreateLagRequest;

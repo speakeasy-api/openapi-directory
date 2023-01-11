@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BoxScoresVSimulationFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoxScoresVSimulationResponse = exports.BoxScoresVSimulationRequest = exports.BoxScoresVSimulationPathParams = exports.BoxScoresVSimulationFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BoxScoresVSimulationFormatEnum;
 (function (BoxScoresVSimulationFormatEnum) {
     BoxScoresVSimulationFormatEnum["Xml"] = "XML";
     BoxScoresVSimulationFormatEnum["Json"] = "JSON";
-})(BoxScoresVSimulationFormatEnum || (BoxScoresVSimulationFormatEnum = {}));
+})(BoxScoresVSimulationFormatEnum = exports.BoxScoresVSimulationFormatEnum || (exports.BoxScoresVSimulationFormatEnum = {}));
 var BoxScoresVSimulationPathParams = /** @class */ (function (_super) {
     __extends(BoxScoresVSimulationPathParams, _super);
     function BoxScoresVSimulationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BoxScoresVSimulationPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
         __metadata("design:type", String)
     ], BoxScoresVSimulationPathParams.prototype, "numberofplays", void 0);
     return BoxScoresVSimulationPathParams;
-}(SpeakeasyBase));
-export { BoxScoresVSimulationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresVSimulationPathParams = BoxScoresVSimulationPathParams;
 var BoxScoresVSimulationRequest = /** @class */ (function (_super) {
     __extends(BoxScoresVSimulationRequest, _super);
     function BoxScoresVSimulationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BoxScoresVSimulationPathParams)
     ], BoxScoresVSimulationRequest.prototype, "pathParams", void 0);
     return BoxScoresVSimulationRequest;
-}(SpeakeasyBase));
-export { BoxScoresVSimulationRequest };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresVSimulationRequest = BoxScoresVSimulationRequest;
 var BoxScoresVSimulationResponse = /** @class */ (function (_super) {
     __extends(BoxScoresVSimulationResponse, _super);
     function BoxScoresVSimulationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BoxScoresVSimulationResponse.prototype, "boxScoreV3s", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BoxScoresVSimulationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BoxScoresVSimulationResponse.prototype, "statusCode", void 0);
     return BoxScoresVSimulationResponse;
-}(SpeakeasyBase));
-export { BoxScoresVSimulationResponse };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresVSimulationResponse = BoxScoresVSimulationResponse;

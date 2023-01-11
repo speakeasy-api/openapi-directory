@@ -28,5 +28,5 @@ export declare class UpdateProjectResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateProjectResponse?: Map<string, any>;
+    updateProjectResponse?: Record<string, any>;
 }

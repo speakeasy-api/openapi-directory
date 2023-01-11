@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedInstances } from "./reservedinstances";
 
 
 
@@ -8,6 +7,6 @@ import { ReservedInstances } from "./reservedinstances";
  * Contains the output for DescribeReservedInstances.
 **/
 export class DescribeReservedInstancesResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ReservedInstances })
-  reservedInstances?: ReservedInstances[];
+  @SpeakeasyMetadata()
+  reservedInstances?: Record<string, any>;
 }

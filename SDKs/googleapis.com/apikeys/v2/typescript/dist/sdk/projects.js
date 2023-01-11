@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Projects = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Projects = /** @class */ (function () {
     function Projects(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -30,27 +55,22 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysCreateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{parent}/keys", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v2/{parent}/keys", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -58,14 +78,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.operation = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysDelete - Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will be purged from the project. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -75,12 +94,12 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysDeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{name}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/v2/{name}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "delete" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -88,14 +107,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.operation = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysGet - Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -105,12 +123,12 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysGetRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{name}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/v2/{name}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -118,14 +136,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.v2Key = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysGetKeyString - Get the key string for an API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -135,12 +152,12 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysGetKeyStringRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{name}/keyString", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/v2/{name}/keyString", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -148,14 +165,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.v2GetKeyStringResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysList - Lists the API keys owned by a project. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -165,12 +181,12 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{parent}/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/v2/{parent}/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -178,14 +194,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.v2ListKeysResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysPatch - Patches the modifiable fields of an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -196,27 +211,22 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysPatchRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{name}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v2/{name}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -224,14 +234,13 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.operation = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * apikeysProjectsLocationsKeysUndelete - Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the only supported value for location is `global`.
@@ -242,27 +251,22 @@ var Projects = /** @class */ (function () {
             req = new operations.ApikeysProjectsLocationsKeysUndeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v2/{name}:undelete", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v2/{name}:undelete", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -270,15 +274,14 @@ var Projects = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.operation = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Projects;
 }());
-export { Projects };
+exports.Projects = Projects;

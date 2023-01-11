@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JourneyDateRangeKpiResponse } from "./journeydaterangekpiresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetJourneyDateRangeKpiResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var journeydaterangekpiresponse_1 = require("./journeydaterangekpiresponse");
 var GetJourneyDateRangeKpiResponse = /** @class */ (function (_super) {
     __extends(GetJourneyDateRangeKpiResponse, _super);
     function GetJourneyDateRangeKpiResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JourneyDateRangeKpiResponse" }),
-        __metadata("design:type", JourneyDateRangeKpiResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JourneyDateRangeKpiResponse" }),
+        __metadata("design:type", journeydaterangekpiresponse_1.JourneyDateRangeKpiResponse)
     ], GetJourneyDateRangeKpiResponse.prototype, "journeyDateRangeKpiResponse", void 0);
     return GetJourneyDateRangeKpiResponse;
-}(SpeakeasyBase));
-export { GetJourneyDateRangeKpiResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetJourneyDateRangeKpiResponse = GetJourneyDateRangeKpiResponse;

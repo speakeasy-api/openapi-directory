@@ -22,7 +22,7 @@ export declare class AddRestrictionsV1RequestBody extends SpeakeasyBase {
     userPassword?: string;
 }
 export declare class AddRestrictionsV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -34,5 +34,5 @@ export declare class AddRestrictionsV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     addRestrictionsV1200ApplicationPdfBinaryString?: Uint8Array;
-    addRestrictionsV14XxApplicationProblemPlusJsonObject?: AddRestrictionsV14XxApplicationProblemPlusJson;
+    addRestrictionsV14XXApplicationProblemPlusJsonObject?: AddRestrictionsV14XxApplicationProblemPlusJson;
 }

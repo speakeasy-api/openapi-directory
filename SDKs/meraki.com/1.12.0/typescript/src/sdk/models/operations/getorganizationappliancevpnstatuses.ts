@@ -37,11 +37,11 @@ export class GetOrganizationApplianceVpnStatusesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApplianceVpnStatuses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApplianceVpnStatuses200ApplicationJSONObject?: Record<string, any>;
 }

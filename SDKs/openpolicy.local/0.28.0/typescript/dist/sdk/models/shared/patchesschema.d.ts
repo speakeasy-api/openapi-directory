@@ -13,5 +13,5 @@ export declare enum PatchesSchemaOpEnum {
 export declare class PatchesSchema extends SpeakeasyBase {
     op: PatchesSchemaOpEnum;
     path: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

@@ -4,7 +4,7 @@ export declare class GetCuratedPodcastsQueryParams extends SpeakeasyBase {
     page?: number;
 }
 export declare class GetCuratedPodcastsHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetCuratedPodcastsRequest extends SpeakeasyBase {
     queryParams: GetCuratedPodcastsQueryParams;
@@ -13,6 +13,6 @@ export declare class GetCuratedPodcastsRequest extends SpeakeasyBase {
 export declare class GetCuratedPodcastsResponse extends SpeakeasyBase {
     contentType: string;
     getCuratedPodcastsResponse?: shared.GetCuratedPodcastsResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

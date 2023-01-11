@@ -14,5 +14,5 @@ export declare class DescribeDeviceOutput extends SpeakeasyBase {
     managedDeviceId?: string;
     physicalNetworkInterfaces?: PhysicalNetworkInterface[];
     software?: SoftwareInformation;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

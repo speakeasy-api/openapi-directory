@@ -23,5 +23,5 @@ export declare class IpamAggregatesListRequest extends SpeakeasyBase {
 export declare class IpamAggregatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamAggregatesList200ApplicationJsonObject?: IpamAggregatesList200ApplicationJson;
+    ipamAggregatesList200ApplicationJSONObject?: IpamAggregatesList200ApplicationJson;
 }

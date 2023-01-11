@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IconList } from "./iconlist";
-import { Locale } from "./locale";
-import { Timezone } from "./timezone";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Detail = void 0;
+var utils_1 = require("../../../internal/utils");
+var iconlist_1 = require("./iconlist");
+var locale_1 = require("./locale");
+var timezone_1 = require("./timezone");
 var Detail = /** @class */ (function (_super) {
     __extends(Detail, _super);
     function Detail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon_list", elemType: IconList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon_list", elemType: iconlist_1.IconList }),
         __metadata("design:type", Array)
     ], Detail.prototype, "iconList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
-        __metadata("design:type", Locale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
+        __metadata("design:type", locale_1.Locale)
     ], Detail.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
-        __metadata("design:type", Timezone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
+        __metadata("design:type", timezone_1.Timezone)
     ], Detail.prototype, "timezone", void 0);
     return Detail;
-}(SpeakeasyBase));
-export { Detail };
+}(utils_1.SpeakeasyBase));
+exports.Detail = Detail;

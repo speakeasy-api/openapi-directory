@@ -14,5 +14,5 @@ export declare class CombineOrganizationNetworksRequest extends SpeakeasyBase {
 export declare class CombineOrganizationNetworksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    combineOrganizationNetworks200ApplicationJsonObject?: Map<string, any>;
+    combineOrganizationNetworks200ApplicationJSONObject?: Record<string, any>;
 }

@@ -108,11 +108,11 @@ export declare class CocerRequest extends SpeakeasyBase {
 export declare class CocerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cocer400ApplicationJsonObject?: Cocer400ApplicationJson;
-    cocer401ApplicationJsonObject?: Cocer401ApplicationJson;
-    cocer404ApplicationJsonObject?: Cocer404ApplicationJson;
-    cocer500ApplicationJsonObject?: Cocer500ApplicationJson;
-    cocer502ApplicationJsonObject?: Cocer502ApplicationJson;
-    cocer503ApplicationJsonObject?: Cocer503ApplicationJson;
-    cocer504ApplicationJsonObject?: Cocer504ApplicationJson;
+    cocer400ApplicationJSONObject?: Cocer400ApplicationJson;
+    cocer401ApplicationJSONObject?: Cocer401ApplicationJson;
+    cocer404ApplicationJSONObject?: Cocer404ApplicationJson;
+    cocer500ApplicationJSONObject?: Cocer500ApplicationJson;
+    cocer502ApplicationJSONObject?: Cocer502ApplicationJson;
+    cocer503ApplicationJSONObject?: Cocer503ApplicationJson;
+    cocer504ApplicationJSONObject?: Cocer504ApplicationJson;
 }

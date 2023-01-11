@@ -10,7 +10,7 @@ export declare class DeleteSamplingRuleHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteSamplingRuleRequestBody extends SpeakeasyBase {
-    ruleArn?: string;
+    ruleARN?: string;
     ruleName?: string;
 }
 export declare class DeleteSamplingRuleRequest extends SpeakeasyBase {

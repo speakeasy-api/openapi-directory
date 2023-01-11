@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,176 +23,178 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetrieveABlockResponse = exports.RetrieveABlockRequest = exports.RetrieveABlock200ApplicationJson = exports.RetrieveABlock200ApplicationJsonParagraph = exports.RetrieveABlock200ApplicationJsonParagraphText = exports.RetrieveABlock200ApplicationJsonParagraphTextText = exports.RetrieveABlock200ApplicationJsonParagraphTextAnnotations = exports.RetrieveABlockPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RetrieveABlockPathParams = /** @class */ (function (_super) {
     __extends(RetrieveABlockPathParams, _super);
     function RetrieveABlockPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], RetrieveABlockPathParams.prototype, "id", void 0);
     return RetrieveABlockPathParams;
-}(SpeakeasyBase));
-export { RetrieveABlockPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlockPathParams = RetrieveABlockPathParams;
 var RetrieveABlock200ApplicationJsonParagraphTextAnnotations = /** @class */ (function (_super) {
     __extends(RetrieveABlock200ApplicationJsonParagraphTextAnnotations, _super);
     function RetrieveABlock200ApplicationJsonParagraphTextAnnotations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bold" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "bold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=italic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=italic" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "italic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strikethrough" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strikethrough" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "strikethrough", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=underline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=underline" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJsonParagraphTextAnnotations.prototype, "underline", void 0);
     return RetrieveABlock200ApplicationJsonParagraphTextAnnotations;
-}(SpeakeasyBase));
-export { RetrieveABlock200ApplicationJsonParagraphTextAnnotations };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlock200ApplicationJsonParagraphTextAnnotations = RetrieveABlock200ApplicationJsonParagraphTextAnnotations;
 var RetrieveABlock200ApplicationJsonParagraphTextText = /** @class */ (function (_super) {
     __extends(RetrieveABlock200ApplicationJsonParagraphTextText, _super);
     function RetrieveABlock200ApplicationJsonParagraphTextText() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJsonParagraphTextText.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", Object)
     ], RetrieveABlock200ApplicationJsonParagraphTextText.prototype, "link", void 0);
     return RetrieveABlock200ApplicationJsonParagraphTextText;
-}(SpeakeasyBase));
-export { RetrieveABlock200ApplicationJsonParagraphTextText };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlock200ApplicationJsonParagraphTextText = RetrieveABlock200ApplicationJsonParagraphTextText;
 var RetrieveABlock200ApplicationJsonParagraphText = /** @class */ (function (_super) {
     __extends(RetrieveABlock200ApplicationJsonParagraphText, _super);
     function RetrieveABlock200ApplicationJsonParagraphText() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
         __metadata("design:type", RetrieveABlock200ApplicationJsonParagraphTextAnnotations)
     ], RetrieveABlock200ApplicationJsonParagraphText.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", Object)
     ], RetrieveABlock200ApplicationJsonParagraphText.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plain_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plain_text" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJsonParagraphText.prototype, "plainText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", RetrieveABlock200ApplicationJsonParagraphTextText)
     ], RetrieveABlock200ApplicationJsonParagraphText.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJsonParagraphText.prototype, "type", void 0);
     return RetrieveABlock200ApplicationJsonParagraphText;
-}(SpeakeasyBase));
-export { RetrieveABlock200ApplicationJsonParagraphText };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlock200ApplicationJsonParagraphText = RetrieveABlock200ApplicationJsonParagraphText;
 var RetrieveABlock200ApplicationJsonParagraph = /** @class */ (function (_super) {
     __extends(RetrieveABlock200ApplicationJsonParagraph, _super);
     function RetrieveABlock200ApplicationJsonParagraph() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text", elemType: RetrieveABlock200ApplicationJsonParagraphText }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text", elemType: RetrieveABlock200ApplicationJsonParagraphText }),
         __metadata("design:type", Array)
     ], RetrieveABlock200ApplicationJsonParagraph.prototype, "text", void 0);
     return RetrieveABlock200ApplicationJsonParagraph;
-}(SpeakeasyBase));
-export { RetrieveABlock200ApplicationJsonParagraph };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlock200ApplicationJsonParagraph = RetrieveABlock200ApplicationJsonParagraph;
 var RetrieveABlock200ApplicationJson = /** @class */ (function (_super) {
     __extends(RetrieveABlock200ApplicationJson, _super);
     function RetrieveABlock200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_time" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJson.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_children" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_children" }),
         __metadata("design:type", Boolean)
     ], RetrieveABlock200ApplicationJson.prototype, "hasChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_edited_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_edited_time" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJson.prototype, "lastEditedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJson.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paragraph" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paragraph" }),
         __metadata("design:type", RetrieveABlock200ApplicationJsonParagraph)
     ], RetrieveABlock200ApplicationJson.prototype, "paragraph", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RetrieveABlock200ApplicationJson.prototype, "type", void 0);
     return RetrieveABlock200ApplicationJson;
-}(SpeakeasyBase));
-export { RetrieveABlock200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlock200ApplicationJson = RetrieveABlock200ApplicationJson;
 var RetrieveABlockRequest = /** @class */ (function (_super) {
     __extends(RetrieveABlockRequest, _super);
     function RetrieveABlockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RetrieveABlockPathParams)
     ], RetrieveABlockRequest.prototype, "pathParams", void 0);
     return RetrieveABlockRequest;
-}(SpeakeasyBase));
-export { RetrieveABlockRequest };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlockRequest = RetrieveABlockRequest;
 var RetrieveABlockResponse = /** @class */ (function (_super) {
     __extends(RetrieveABlockResponse, _super);
     function RetrieveABlockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RetrieveABlockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], RetrieveABlockResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RetrieveABlockResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RetrieveABlock200ApplicationJson)
-    ], RetrieveABlockResponse.prototype, "retrieveABlock200ApplicationJsonObject", void 0);
+    ], RetrieveABlockResponse.prototype, "retrieveABlock200ApplicationJSONObject", void 0);
     return RetrieveABlockResponse;
-}(SpeakeasyBase));
-export { RetrieveABlockResponse };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveABlockResponse = RetrieveABlockResponse;

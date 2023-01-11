@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TableRestoreStatus } from "./tablerestorestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableRestoreStatusMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var tablerestorestatuslist_1 = require("./tablerestorestatuslist");
 // TableRestoreStatusMessage
 /**
  * <p/>
@@ -34,13 +37,13 @@ var TableRestoreStatusMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TableRestoreStatusMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TableRestoreStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tablerestorestatuslist_1.TableRestoreStatusList }),
         __metadata("design:type", Array)
     ], TableRestoreStatusMessage.prototype, "tableRestoreStatusDetails", void 0);
     return TableRestoreStatusMessage;
-}(SpeakeasyBase));
-export { TableRestoreStatusMessage };
+}(utils_1.SpeakeasyBase));
+exports.TableRestoreStatusMessage = TableRestoreStatusMessage;

@@ -1,6 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RouteTableAssociationState } from "./routetableassociationstate";
+/**
+ * The state of the association.
+**/
+export declare class AssociateRouteTableResultAssociationState extends SpeakeasyBase {
+    state?: Record<string, any>;
+    statusMessage?: Record<string, any>;
+}
 export declare class AssociateRouteTableResult extends SpeakeasyBase {
-    associationId?: string;
-    associationState?: RouteTableAssociationState;
+    associationId?: Record<string, any>;
+    associationState?: AssociateRouteTableResultAssociationState;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
-import { ChannelTypeEnum } from "./channeltypeenum";
-import { SingleMasterConfiguration } from "./singlemasterconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var statusenum_1 = require("./statusenum");
+var channeltypeenum_1 = require("./channeltypeenum");
+var singlemasterconfiguration_1 = require("./singlemasterconfiguration");
 // ChannelInfo
 /**
  * A structure that encapsulates a signaling channel's metadata and properties.
@@ -36,33 +39,33 @@ var ChannelInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelARN" }),
         __metadata("design:type", String)
-    ], ChannelInfo.prototype, "channelArn", void 0);
+    ], ChannelInfo.prototype, "channelARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelName" }),
         __metadata("design:type", String)
     ], ChannelInfo.prototype, "channelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelStatus" }),
         __metadata("design:type", String)
     ], ChannelInfo.prototype, "channelStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelType" }),
         __metadata("design:type", String)
     ], ChannelInfo.prototype, "channelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], ChannelInfo.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SingleMasterConfiguration" }),
-        __metadata("design:type", SingleMasterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SingleMasterConfiguration" }),
+        __metadata("design:type", singlemasterconfiguration_1.SingleMasterConfiguration)
     ], ChannelInfo.prototype, "singleMasterConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], ChannelInfo.prototype, "version", void 0);
     return ChannelInfo;
-}(SpeakeasyBase));
-export { ChannelInfo };
+}(utils_1.SpeakeasyBase));
+exports.ChannelInfo = ChannelInfo;

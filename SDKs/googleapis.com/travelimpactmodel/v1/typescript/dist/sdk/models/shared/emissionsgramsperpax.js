@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmissionsGramsPerPax = void 0;
+var utils_1 = require("../../../internal/utils");
 // EmissionsGramsPerPax
 /**
  * Grouped emissions per seating class results.
@@ -33,21 +36,21 @@ var EmissionsGramsPerPax = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=business" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=business" }),
         __metadata("design:type", Number)
     ], EmissionsGramsPerPax.prototype, "business", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=economy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=economy" }),
         __metadata("design:type", Number)
     ], EmissionsGramsPerPax.prototype, "economy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first" }),
         __metadata("design:type", Number)
     ], EmissionsGramsPerPax.prototype, "first", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=premiumEconomy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=premiumEconomy" }),
         __metadata("design:type", Number)
     ], EmissionsGramsPerPax.prototype, "premiumEconomy", void 0);
     return EmissionsGramsPerPax;
-}(SpeakeasyBase));
-export { EmissionsGramsPerPax };
+}(utils_1.SpeakeasyBase));
+exports.EmissionsGramsPerPax = EmissionsGramsPerPax;

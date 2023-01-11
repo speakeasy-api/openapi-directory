@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SparkStandaloneAutoscalingConfig } from "./sparkstandaloneautoscalingconfig";
-import { BasicYarnAutoscalingConfig } from "./basicyarnautoscalingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicAutoscalingAlgorithm = void 0;
+var utils_1 = require("../../../internal/utils");
+var sparkstandaloneautoscalingconfig_1 = require("./sparkstandaloneautoscalingconfig");
+var basicyarnautoscalingconfig_1 = require("./basicyarnautoscalingconfig");
 // BasicAutoscalingAlgorithm
 /**
  * Basic algorithm for autoscaling.
@@ -35,17 +38,17 @@ var BasicAutoscalingAlgorithm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cooldownPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cooldownPeriod" }),
         __metadata("design:type", String)
     ], BasicAutoscalingAlgorithm.prototype, "cooldownPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sparkStandaloneConfig" }),
-        __metadata("design:type", SparkStandaloneAutoscalingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sparkStandaloneConfig" }),
+        __metadata("design:type", sparkstandaloneautoscalingconfig_1.SparkStandaloneAutoscalingConfig)
     ], BasicAutoscalingAlgorithm.prototype, "sparkStandaloneConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yarnConfig" }),
-        __metadata("design:type", BasicYarnAutoscalingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yarnConfig" }),
+        __metadata("design:type", basicyarnautoscalingconfig_1.BasicYarnAutoscalingConfig)
     ], BasicAutoscalingAlgorithm.prototype, "yarnConfig", void 0);
     return BasicAutoscalingAlgorithm;
-}(SpeakeasyBase));
-export { BasicAutoscalingAlgorithm };
+}(utils_1.SpeakeasyBase));
+exports.BasicAutoscalingAlgorithm = BasicAutoscalingAlgorithm;

@@ -9,5 +9,5 @@ export declare class GetAemHealthCheckRequest extends SpeakeasyBase {
 export declare class GetAemHealthCheckResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAemHealthCheckDefaultApplicationJsonString?: string;
+    getAemHealthCheckDefaultApplicationJSONString?: string;
 }

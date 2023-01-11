@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleMapsPlayablelocationsV3SamplePlayableLocationList } from "./googlemapsplayablelocationsv3sampleplayablelocationlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlemapsplayablelocationsv3sampleplayablelocationlist_1 = require("./googlemapsplayablelocationsv3sampleplayablelocationlist");
 // GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse
 /**
  *  Response for the SamplePlayableLocations method.
@@ -34,13 +37,13 @@ var GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationsPerGameObjectType", elemType: GoogleMapsPlayablelocationsV3SamplePlayableLocationList }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationsPerGameObjectType", elemType: googlemapsplayablelocationsv3sampleplayablelocationlist_1.GoogleMapsPlayablelocationsV3SamplePlayableLocationList }),
+        __metadata("design:type", Object)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse.prototype, "locationsPerGameObjectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse.prototype, "ttl", void 0);
     return GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse = GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse;

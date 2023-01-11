@@ -6,7 +6,7 @@ import { StorageDescriptor } from "./storagedescriptor";
 export declare class PartitionInput extends SpeakeasyBase {
     lastAccessTime?: Date;
     lastAnalyzedTime?: Date;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     storageDescriptor?: StorageDescriptor;
     values?: string[];
 }

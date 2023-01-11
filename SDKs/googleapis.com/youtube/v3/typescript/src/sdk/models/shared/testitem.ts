@@ -13,5 +13,5 @@ export class TestItem extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=snippet" })
-  snippet?: Map<string, any>;
+  snippet?: Record<string, any>;
 }

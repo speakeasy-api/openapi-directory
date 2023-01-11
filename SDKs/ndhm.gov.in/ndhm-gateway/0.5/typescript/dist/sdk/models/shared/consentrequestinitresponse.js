@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentRequestInitResponse = exports.ConsentRequestInitResponseConsentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 var ConsentRequestInitResponseConsentRequest = /** @class */ (function (_super) {
     __extends(ConsentRequestInitResponseConsentRequest, _super);
     function ConsentRequestInitResponseConsentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ConsentRequestInitResponseConsentRequest.prototype, "id", void 0);
     return ConsentRequestInitResponseConsentRequest;
-}(SpeakeasyBase));
-export { ConsentRequestInitResponseConsentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestInitResponseConsentRequest = ConsentRequestInitResponseConsentRequest;
 var ConsentRequestInitResponse = /** @class */ (function (_super) {
     __extends(ConsentRequestInitResponse, _super);
     function ConsentRequestInitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentRequest" }),
         __metadata("design:type", ConsentRequestInitResponseConsentRequest)
     ], ConsentRequestInitResponse.prototype, "consentRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], ConsentRequestInitResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ConsentRequestInitResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], ConsentRequestInitResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], ConsentRequestInitResponse.prototype, "timestamp", void 0);
     return ConsentRequestInitResponse;
-}(SpeakeasyBase));
-export { ConsentRequestInitResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestInitResponse = ConsentRequestInitResponse;

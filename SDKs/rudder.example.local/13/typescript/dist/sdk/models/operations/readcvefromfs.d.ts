@@ -17,5 +17,5 @@ export declare class ReadCvEfromFs200ApplicationJson extends SpeakeasyBase {
 export declare class ReadCvEfromFsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    readCvEfromFs200ApplicationJsonObject?: ReadCvEfromFs200ApplicationJson;
+    readCVEfromFS200ApplicationJSONObject?: ReadCvEfromFs200ApplicationJson;
 }

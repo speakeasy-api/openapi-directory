@@ -1,5 +1,8 @@
-export var CancelTimerFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelTimerFailedCauseEnum = void 0;
+var CancelTimerFailedCauseEnum;
 (function (CancelTimerFailedCauseEnum) {
     CancelTimerFailedCauseEnum["TimerIdUnknown"] = "TIMER_ID_UNKNOWN";
     CancelTimerFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(CancelTimerFailedCauseEnum || (CancelTimerFailedCauseEnum = {}));
+})(CancelTimerFailedCauseEnum = exports.CancelTimerFailedCauseEnum || (exports.CancelTimerFailedCauseEnum = {}));

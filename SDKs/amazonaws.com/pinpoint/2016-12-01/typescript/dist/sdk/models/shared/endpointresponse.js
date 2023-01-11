@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelTypeEnum } from "./channeltypeenum";
-import { EndpointDemographic } from "./endpointdemographic";
-import { EndpointLocation } from "./endpointlocation";
-import { EndpointUser } from "./endpointuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var channeltypeenum_1 = require("./channeltypeenum");
+var endpointdemographic_1 = require("./endpointdemographic");
+var endpointlocation_1 = require("./endpointlocation");
+var endpointuser_1 = require("./endpointuser");
 // EndpointResponse
 /**
  * Provides information about the channel type and other settings for an endpoint.
@@ -37,65 +40,65 @@ var EndpointResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Address" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
     ], EndpointResponse.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelType" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "channelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CohortId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CohortId" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "cohortId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Demographic" }),
-        __metadata("design:type", EndpointDemographic)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Demographic" }),
+        __metadata("design:type", endpointdemographic_1.EndpointDemographic)
     ], EndpointResponse.prototype, "demographic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EffectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EffectiveDate" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointStatus" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "endpointStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Location" }),
-        __metadata("design:type", EndpointLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Location" }),
+        __metadata("design:type", endpointlocation_1.EndpointLocation)
     ], EndpointResponse.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metrics" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metrics" }),
+        __metadata("design:type", Object)
     ], EndpointResponse.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptOut" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "optOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestId" }),
         __metadata("design:type", String)
     ], EndpointResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=User" }),
-        __metadata("design:type", EndpointUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=User" }),
+        __metadata("design:type", endpointuser_1.EndpointUser)
     ], EndpointResponse.prototype, "user", void 0);
     return EndpointResponse;
-}(SpeakeasyBase));
-export { EndpointResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointResponse = EndpointResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TenancyChoicesReadResponse = exports.TenancyChoicesReadRequest = exports.TenancyChoicesReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TenancyChoicesReadPathParams = /** @class */ (function (_super) {
     __extends(TenancyChoicesReadPathParams, _super);
     function TenancyChoicesReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], TenancyChoicesReadPathParams.prototype, "id", void 0);
     return TenancyChoicesReadPathParams;
-}(SpeakeasyBase));
-export { TenancyChoicesReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TenancyChoicesReadPathParams = TenancyChoicesReadPathParams;
 var TenancyChoicesReadRequest = /** @class */ (function (_super) {
     __extends(TenancyChoicesReadRequest, _super);
     function TenancyChoicesReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TenancyChoicesReadPathParams)
     ], TenancyChoicesReadRequest.prototype, "pathParams", void 0);
     return TenancyChoicesReadRequest;
-}(SpeakeasyBase));
-export { TenancyChoicesReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.TenancyChoicesReadRequest = TenancyChoicesReadRequest;
 var TenancyChoicesReadResponse = /** @class */ (function (_super) {
     __extends(TenancyChoicesReadResponse, _super);
     function TenancyChoicesReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TenancyChoicesReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TenancyChoicesReadResponse.prototype, "statusCode", void 0);
     return TenancyChoicesReadResponse;
-}(SpeakeasyBase));
-export { TenancyChoicesReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.TenancyChoicesReadResponse = TenancyChoicesReadResponse;

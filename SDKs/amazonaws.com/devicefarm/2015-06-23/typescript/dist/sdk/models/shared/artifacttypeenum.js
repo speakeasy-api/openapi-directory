@@ -1,4 +1,7 @@
-export var ArtifactTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactTypeEnum = void 0;
+var ArtifactTypeEnum;
 (function (ArtifactTypeEnum) {
     ArtifactTypeEnum["Unknown"] = "UNKNOWN";
     ArtifactTypeEnum["Screenshot"] = "SCREENSHOT";
@@ -28,4 +31,4 @@ export var ArtifactTypeEnum;
     ArtifactTypeEnum["CustomerArtifact"] = "CUSTOMER_ARTIFACT";
     ArtifactTypeEnum["CustomerArtifactLog"] = "CUSTOMER_ARTIFACT_LOG";
     ArtifactTypeEnum["TestspecOutput"] = "TESTSPEC_OUTPUT";
-})(ArtifactTypeEnum || (ArtifactTypeEnum = {}));
+})(ArtifactTypeEnum = exports.ArtifactTypeEnum || (exports.ArtifactTypeEnum = {}));

@@ -19,7 +19,7 @@ export declare class AddLfTagsToResourceRequest extends SpeakeasyBase {
 }
 export declare class AddLfTagsToResourceResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    addLfTagsToResourceResponse?: shared.AddLfTagsToResourceResponse;
+    addLFTagsToResourceResponse?: shared.AddLfTagsToResourceResponse;
     concurrentModificationException?: any;
     contentType: string;
     entityNotFoundException?: any;

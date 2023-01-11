@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CallDirectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Call = exports.CallTypeEnum = exports.CallStateEnum = exports.CallDirectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CallDirectionEnum;
 (function (CallDirectionEnum) {
     CallDirectionEnum["Inbound"] = "INBOUND";
     CallDirectionEnum["Outbound"] = "OUTBOUND";
-})(CallDirectionEnum || (CallDirectionEnum = {}));
-export var CallStateEnum;
+})(CallDirectionEnum = exports.CallDirectionEnum || (exports.CallDirectionEnum = {}));
+var CallStateEnum;
 (function (CallStateEnum) {
     CallStateEnum["Initializing"] = "INITIALIZING";
     CallStateEnum["Ringing"] = "RINGING";
@@ -40,72 +43,72 @@ export var CallStateEnum;
     CallStateEnum["Cancelled"] = "CANCELLED";
     CallStateEnum["Answered"] = "ANSWERED";
     CallStateEnum["Missed"] = "MISSED";
-})(CallStateEnum || (CallStateEnum = {}));
-export var CallTypeEnum;
+})(CallStateEnum = exports.CallStateEnum || (exports.CallStateEnum = {}));
+var CallTypeEnum;
 (function (CallTypeEnum) {
     CallTypeEnum["Call"] = "CALL";
-})(CallTypeEnum || (CallTypeEnum = {}));
+})(CallTypeEnum = exports.CallTypeEnum || (exports.CallTypeEnum = {}));
 var Call = /** @class */ (function (_super) {
     __extends(Call, _super);
     function Call() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", Number)
     ], Call.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answerTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answerTime" }),
         __metadata("design:type", Date)
     ], Call.prototype, "answerTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callerId" }),
         __metadata("design:type", String)
     ], Call.prototype, "callerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], Call.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], Call.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], Call.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], Call.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Call.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], Call.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], Call.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Call.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Call.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uciId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uciId" }),
         __metadata("design:type", Number)
     ], Call.prototype, "uciId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", Number)
     ], Call.prototype, "userId", void 0);
     return Call;
-}(SpeakeasyBase));
-export { Call };
+}(utils_1.SpeakeasyBase));
+exports.Call = Call;

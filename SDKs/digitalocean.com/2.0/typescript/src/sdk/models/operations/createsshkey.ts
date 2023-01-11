@@ -1,41 +1,42 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export class CreateSshKeyRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: shared.Onev21account1keysGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSshKeysItems;
-}
-
 
 export class CreateSshKey401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateSshKeyRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: shared.Onev21account1keysGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSshKeysItemsInput;
+}
+
+
 export class CreateSshKeyResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createSshKey201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createSshKey201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createSshKey401ApplicationJsonObject?: CreateSshKey401ApplicationJson;
+  @SpeakeasyMetadata()
+  createSshKey401ApplicationJSONObject?: CreateSshKey401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

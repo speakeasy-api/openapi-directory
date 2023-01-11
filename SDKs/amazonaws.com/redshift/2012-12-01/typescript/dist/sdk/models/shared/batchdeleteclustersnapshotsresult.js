@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotErrorMessage } from "./snapshoterrormessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchDeleteClusterSnapshotsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchsnapshotoperationerrorlist_1 = require("./batchsnapshotoperationerrorlist");
 var BatchDeleteClusterSnapshotsResult = /** @class */ (function (_super) {
     __extends(BatchDeleteClusterSnapshotsResult, _super);
     function BatchDeleteClusterSnapshotsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: SnapshotErrorMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: batchsnapshotoperationerrorlist_1.BatchSnapshotOperationErrorList }),
         __metadata("design:type", Array)
     ], BatchDeleteClusterSnapshotsResult.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BatchDeleteClusterSnapshotsResult.prototype, "resources", void 0);
     return BatchDeleteClusterSnapshotsResult;
-}(SpeakeasyBase));
-export { BatchDeleteClusterSnapshotsResult };
+}(utils_1.SpeakeasyBase));
+exports.BatchDeleteClusterSnapshotsResult = BatchDeleteClusterSnapshotsResult;

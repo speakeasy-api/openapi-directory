@@ -13,7 +13,7 @@ export class CollectionsLinkedRegistrationsRelationshipsRequest extends Speakeas
   pathParams: CollectionsLinkedRegistrationsRelationshipsPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

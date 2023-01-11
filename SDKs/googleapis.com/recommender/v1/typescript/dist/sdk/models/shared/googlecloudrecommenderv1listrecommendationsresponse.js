@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommenderV1Recommendation } from "./googlecloudrecommenderv1recommendation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1ListRecommendationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommenderv1recommendation_1 = require("./googlecloudrecommenderv1recommendation");
 // GoogleCloudRecommenderV1ListRecommendationsResponse
 /**
  * Response to the `ListRecommendations` method.
@@ -34,13 +37,13 @@ var GoogleCloudRecommenderV1ListRecommendationsResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1ListRecommendationsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendations", elemType: GoogleCloudRecommenderV1Recommendation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendations", elemType: googlecloudrecommenderv1recommendation_1.GoogleCloudRecommenderV1Recommendation }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommenderV1ListRecommendationsResponse.prototype, "recommendations", void 0);
     return GoogleCloudRecommenderV1ListRecommendationsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1ListRecommendationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1ListRecommendationsResponse = GoogleCloudRecommenderV1ListRecommendationsResponse;

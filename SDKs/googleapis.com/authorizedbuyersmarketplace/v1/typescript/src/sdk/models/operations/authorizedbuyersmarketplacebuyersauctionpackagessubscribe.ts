@@ -62,7 +62,7 @@ export class AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeRequest ex
   queryParams: AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeSecurity;

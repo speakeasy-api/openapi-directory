@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Configuration = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3Configuration
 /**
  * Provides a description of an Amazon S3 data source, including the Amazon Resource Name (ARN) of the S3 bucket, the ARN of the IAM role that is used to access the bucket, and the name of the Amazon S3 object that contains the data.
@@ -33,17 +36,17 @@ var S3Configuration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketARN" }),
         __metadata("design:type", String)
-    ], S3Configuration.prototype, "bucketArn", void 0);
+    ], S3Configuration.prototype, "bucketARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FileKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FileKey" }),
         __metadata("design:type", String)
     ], S3Configuration.prototype, "fileKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], S3Configuration.prototype, "roleArn", void 0);
+    ], S3Configuration.prototype, "roleARN", void 0);
     return S3Configuration;
-}(SpeakeasyBase));
-export { S3Configuration };
+}(utils_1.SpeakeasyBase));
+exports.S3Configuration = S3Configuration;

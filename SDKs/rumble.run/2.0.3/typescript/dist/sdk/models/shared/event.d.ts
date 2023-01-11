@@ -3,7 +3,7 @@ export declare class Event extends SpeakeasyBase {
     action?: string;
     clientId?: string;
     createdAt?: number;
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     id?: string;
     organizationId?: string;
     processedAt?: number;

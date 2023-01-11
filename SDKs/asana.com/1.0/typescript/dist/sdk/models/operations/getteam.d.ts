@@ -20,5 +20,5 @@ export declare class GetTeamResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTeam200ApplicationJsonObject?: GetTeam200ApplicationJson;
+    getTeam200ApplicationJSONObject?: GetTeam200ApplicationJson;
 }

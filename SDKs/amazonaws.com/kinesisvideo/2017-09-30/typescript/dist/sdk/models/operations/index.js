@@ -1,19 +1,35 @@
-export * from "./createsignalingchannel";
-export * from "./createstream";
-export * from "./deletesignalingchannel";
-export * from "./deletestream";
-export * from "./describesignalingchannel";
-export * from "./describestream";
-export * from "./getdataendpoint";
-export * from "./getsignalingchannelendpoint";
-export * from "./listsignalingchannels";
-export * from "./liststreams";
-export * from "./listtagsforresource";
-export * from "./listtagsforstream";
-export * from "./tagresource";
-export * from "./tagstream";
-export * from "./untagresource";
-export * from "./untagstream";
-export * from "./updatedataretention";
-export * from "./updatesignalingchannel";
-export * from "./updatestream";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./createsignalingchannel"), exports);
+__exportStar(require("./createstream"), exports);
+__exportStar(require("./deletesignalingchannel"), exports);
+__exportStar(require("./deletestream"), exports);
+__exportStar(require("./describesignalingchannel"), exports);
+__exportStar(require("./describestream"), exports);
+__exportStar(require("./getdataendpoint"), exports);
+__exportStar(require("./getsignalingchannelendpoint"), exports);
+__exportStar(require("./listsignalingchannels"), exports);
+__exportStar(require("./liststreams"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./listtagsforstream"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./tagstream"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./untagstream"), exports);
+__exportStar(require("./updatedataretention"), exports);
+__exportStar(require("./updatesignalingchannel"), exports);
+__exportStar(require("./updatestream"), exports);

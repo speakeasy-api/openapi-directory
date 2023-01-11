@@ -13,7 +13,7 @@ export class ProductsApiSaveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productsApiSave201ApplicationJsonOneOf?: any;
+  productsApiSave201ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

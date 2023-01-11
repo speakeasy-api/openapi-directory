@@ -109,11 +109,11 @@ export declare class HsmgrRequest extends SpeakeasyBase {
 export declare class HsmgrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    hsmgr400ApplicationJsonObject?: Hsmgr400ApplicationJson;
-    hsmgr401ApplicationJsonObject?: Hsmgr401ApplicationJson;
-    hsmgr404ApplicationJsonObject?: Hsmgr404ApplicationJson;
-    hsmgr500ApplicationJsonObject?: Hsmgr500ApplicationJson;
-    hsmgr502ApplicationJsonObject?: Hsmgr502ApplicationJson;
-    hsmgr503ApplicationJsonObject?: Hsmgr503ApplicationJson;
-    hsmgr504ApplicationJsonObject?: Hsmgr504ApplicationJson;
+    hsmgr400ApplicationJSONObject?: Hsmgr400ApplicationJson;
+    hsmgr401ApplicationJSONObject?: Hsmgr401ApplicationJson;
+    hsmgr404ApplicationJSONObject?: Hsmgr404ApplicationJson;
+    hsmgr500ApplicationJSONObject?: Hsmgr500ApplicationJson;
+    hsmgr502ApplicationJSONObject?: Hsmgr502ApplicationJson;
+    hsmgr503ApplicationJSONObject?: Hsmgr503ApplicationJson;
+    hsmgr504ApplicationJSONObject?: Hsmgr504ApplicationJson;
 }

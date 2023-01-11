@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnprocessableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var UnprocessableResponse = /** @class */ (function (_super) {
     __extends(UnprocessableResponse, _super);
     function UnprocessableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], UnprocessableResponse.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], UnprocessableResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], UnprocessableResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], UnprocessableResponse.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], UnprocessableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type_name" }),
         __metadata("design:type", String)
     ], UnprocessableResponse.prototype, "typeName", void 0);
     return UnprocessableResponse;
-}(SpeakeasyBase));
-export { UnprocessableResponse };
+}(utils_1.SpeakeasyBase));
+exports.UnprocessableResponse = UnprocessableResponse;

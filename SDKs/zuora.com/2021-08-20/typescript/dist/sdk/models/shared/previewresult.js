@@ -1,0 +1,214 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreviewResult = exports.PreviewResultOrderMetrics = exports.PreviewResultOrderMetricsOrderActions = exports.PreviewResultOrderDeltaMetrics = exports.PreviewResultInvoices = exports.PreviewResultCreditMemos = exports.PreviewResultChargeMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var chargepreviewmetrics_1 = require("./chargepreviewmetrics");
+var invoiceitempreviewresult_1 = require("./invoiceitempreviewresult");
+var orderdeltamrr_1 = require("./orderdeltamrr");
+var orderdeltatcb_1 = require("./orderdeltatcb");
+var orderdeltatcv_1 = require("./orderdeltatcv");
+var orderitem_1 = require("./orderitem");
+var ordermetric_1 = require("./ordermetric");
+var orderrampmetrics_1 = require("./orderrampmetrics");
+var PreviewResultChargeMetrics = /** @class */ (function (_super) {
+    __extends(PreviewResultChargeMetrics, _super);
+    function PreviewResultChargeMetrics() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charges", elemType: chargepreviewmetrics_1.ChargePreviewMetrics }),
+        __metadata("design:type", Array)
+    ], PreviewResultChargeMetrics.prototype, "charges", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionNumber" }),
+        __metadata("design:type", String)
+    ], PreviewResultChargeMetrics.prototype, "subscriptionNumber", void 0);
+    return PreviewResultChargeMetrics;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultChargeMetrics = PreviewResultChargeMetrics;
+var PreviewResultCreditMemos = /** @class */ (function (_super) {
+    __extends(PreviewResultCreditMemos, _super);
+    function PreviewResultCreditMemos() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], PreviewResultCreditMemos.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountWithoutTax" }),
+        __metadata("design:type", Number)
+    ], PreviewResultCreditMemos.prototype, "amountWithoutTax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditMemoItems", elemType: invoiceitempreviewresult_1.InvoiceItemPreviewResult }),
+        __metadata("design:type", Array)
+    ], PreviewResultCreditMemos.prototype, "creditMemoItems", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDate" }),
+        __metadata("design:type", Date)
+    ], PreviewResultCreditMemos.prototype, "targetDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
+        __metadata("design:type", Number)
+    ], PreviewResultCreditMemos.prototype, "taxAmount", void 0);
+    return PreviewResultCreditMemos;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultCreditMemos = PreviewResultCreditMemos;
+var PreviewResultInvoices = /** @class */ (function (_super) {
+    __extends(PreviewResultInvoices, _super);
+    function PreviewResultInvoices() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], PreviewResultInvoices.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountWithoutTax" }),
+        __metadata("design:type", Number)
+    ], PreviewResultInvoices.prototype, "amountWithoutTax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceItems", elemType: invoiceitempreviewresult_1.InvoiceItemPreviewResult }),
+        __metadata("design:type", Array)
+    ], PreviewResultInvoices.prototype, "invoiceItems", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDate" }),
+        __metadata("design:type", Date)
+    ], PreviewResultInvoices.prototype, "targetDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
+        __metadata("design:type", Number)
+    ], PreviewResultInvoices.prototype, "taxAmount", void 0);
+    return PreviewResultInvoices;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultInvoices = PreviewResultInvoices;
+// PreviewResultOrderDeltaMetrics
+/**
+ * **Note:** As of Zuora Billing Release 306, Zuora has upgraded the methodologies for calculating metrics in [Orders](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders). The new methodologies are reflected in the following Order Delta Metrics objects.
+ * * [Order Delta Mrr](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Delta_Metrics/Order_Delta_Mrr)
+ * * [Order Delta Tcv](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Delta_Metrics/Order_Delta_Tcv)
+ * * [Order Delta Tcb](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Delta_Metrics/Order_Delta_Tcb)
+ *
+ * It is recommended that all customers use the new [Order Delta Metrics](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Delta_Metrics/AA_Overview_of_Order_Delta_Metrics). If you are an existing [Order Metrics](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/AA_Overview_of_Orders/Key_Metrics_for_Orders) customer and want to migrate to Order Delta Metrics, submit a request at [Zuora Global Support](https://support.zuora.com/).
+ *
+**/
+var PreviewResultOrderDeltaMetrics = /** @class */ (function (_super) {
+    __extends(PreviewResultOrderDeltaMetrics, _super);
+    function PreviewResultOrderDeltaMetrics() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderDeltaMrr", elemType: orderdeltamrr_1.OrderDeltaMrr }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderDeltaMetrics.prototype, "orderDeltaMrr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderDeltaTcb", elemType: orderdeltatcb_1.OrderDeltaTcb }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderDeltaMetrics.prototype, "orderDeltaTcb", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderDeltaTcv", elemType: orderdeltatcv_1.OrderDeltaTcv }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderDeltaMetrics.prototype, "orderDeltaTcv", void 0);
+    return PreviewResultOrderDeltaMetrics;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultOrderDeltaMetrics = PreviewResultOrderDeltaMetrics;
+var PreviewResultOrderMetricsOrderActions = /** @class */ (function (_super) {
+    __extends(PreviewResultOrderMetricsOrderActions, _super);
+    function PreviewResultOrderMetricsOrderActions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderItems", elemType: orderitem_1.OrderItem }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderMetricsOrderActions.prototype, "orderItems", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderMetrics", elemType: ordermetric_1.OrderMetric }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderMetricsOrderActions.prototype, "orderMetrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sequence" }),
+        __metadata("design:type", String)
+    ], PreviewResultOrderMetricsOrderActions.prototype, "sequence", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], PreviewResultOrderMetricsOrderActions.prototype, "type", void 0);
+    return PreviewResultOrderMetricsOrderActions;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultOrderMetricsOrderActions = PreviewResultOrderMetricsOrderActions;
+var PreviewResultOrderMetrics = /** @class */ (function (_super) {
+    __extends(PreviewResultOrderMetrics, _super);
+    function PreviewResultOrderMetrics() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderActions", elemType: PreviewResultOrderMetricsOrderActions }),
+        __metadata("design:type", Array)
+    ], PreviewResultOrderMetrics.prototype, "orderActions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionNumber" }),
+        __metadata("design:type", String)
+    ], PreviewResultOrderMetrics.prototype, "subscriptionNumber", void 0);
+    return PreviewResultOrderMetrics;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResultOrderMetrics = PreviewResultOrderMetrics;
+// PreviewResult
+/**
+ * The result of each type of preview. Returned only when the current request is preview call.
+**/
+var PreviewResult = /** @class */ (function (_super) {
+    __extends(PreviewResult, _super);
+    function PreviewResult() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeMetrics", elemType: PreviewResultChargeMetrics }),
+        __metadata("design:type", Array)
+    ], PreviewResult.prototype, "chargeMetrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditMemos", elemType: PreviewResultCreditMemos }),
+        __metadata("design:type", Array)
+    ], PreviewResult.prototype, "creditMemos", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoices", elemType: PreviewResultInvoices }),
+        __metadata("design:type", Array)
+    ], PreviewResult.prototype, "invoices", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderDeltaMetrics" }),
+        __metadata("design:type", PreviewResultOrderDeltaMetrics)
+    ], PreviewResult.prototype, "orderDeltaMetrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderMetrics", elemType: PreviewResultOrderMetrics }),
+        __metadata("design:type", Array)
+    ], PreviewResult.prototype, "orderMetrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rampMetrics", elemType: orderrampmetrics_1.OrderRampMetrics }),
+        __metadata("design:type", Array)
+    ], PreviewResult.prototype, "rampMetrics", void 0);
+    return PreviewResult;
+}(utils_1.SpeakeasyBase));
+exports.PreviewResult = PreviewResult;

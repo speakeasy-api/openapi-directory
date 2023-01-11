@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -60,7 +59,7 @@ export class RouteOptimizationApi {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -68,36 +67,36 @@ export class RouteOptimizationApi {
     }
     
     const client: AxiosInstance = this._securityClient!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.AsyncVrpResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.AsyncVrpResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.jobId = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.badRequest = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.internalErrorMessage = httpRes?.data;
             }
             break;
@@ -105,7 +104,6 @@ export class RouteOptimizationApi {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -131,34 +129,36 @@ export class RouteOptimizationApi {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/vrp/solution/{jobId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/vrp/solution/{jobId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetSolutionResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetSolutionResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.response = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.badRequest = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getSolution404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getSolution404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -167,7 +167,6 @@ export class RouteOptimizationApi {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -204,7 +203,7 @@ export class RouteOptimizationApi {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -212,36 +211,36 @@ export class RouteOptimizationApi {
     }
     
     const client: AxiosInstance = this._securityClient!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.SolveVrpResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.SolveVrpResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.response = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.badRequest = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.internalErrorMessage = httpRes?.data;
             }
             break;
@@ -249,7 +248,6 @@ export class RouteOptimizationApi {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

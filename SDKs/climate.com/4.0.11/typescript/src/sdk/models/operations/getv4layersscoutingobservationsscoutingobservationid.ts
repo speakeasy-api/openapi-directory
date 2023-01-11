@@ -32,10 +32,10 @@ export class GetV4LayersScoutingObservationsScoutingObservationIdResponse extend
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   scoutingObservation?: shared.ScoutingObservation;

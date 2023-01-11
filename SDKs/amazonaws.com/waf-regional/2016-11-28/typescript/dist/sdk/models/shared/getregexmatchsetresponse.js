@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexMatchSet } from "./regexmatchset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRegexMatchSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexmatchset_1 = require("./regexmatchset");
 var GetRegexMatchSetResponse = /** @class */ (function (_super) {
     __extends(GetRegexMatchSetResponse, _super);
     function GetRegexMatchSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegexMatchSet" }),
-        __metadata("design:type", RegexMatchSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegexMatchSet" }),
+        __metadata("design:type", regexmatchset_1.RegexMatchSet)
     ], GetRegexMatchSetResponse.prototype, "regexMatchSet", void 0);
     return GetRegexMatchSetResponse;
-}(SpeakeasyBase));
-export { GetRegexMatchSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRegexMatchSetResponse = GetRegexMatchSetResponse;

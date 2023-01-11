@@ -9,7 +9,7 @@ import { MemberStateEnum } from "./memberstateenum";
 **/
 export class EventRetrieved extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=body" })
-  body: Map<string, any>;
+  body: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=from" })
   from?: string;

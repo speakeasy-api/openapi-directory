@@ -15,7 +15,7 @@ export class GoogleCloudRecommendationengineV1beta1PredictRequest extends Speake
   filter?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pageSize" })
   pageSize?: number;
@@ -24,7 +24,7 @@ export class GoogleCloudRecommendationengineV1beta1PredictRequest extends Speake
   pageToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, any>;
+  params?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=userEvent" })
   userEvent?: GoogleCloudRecommendationengineV1beta1UserEvent;

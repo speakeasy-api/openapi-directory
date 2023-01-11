@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchReques
 export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

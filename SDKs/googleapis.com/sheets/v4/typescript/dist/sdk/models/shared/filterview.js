@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterCriteria } from "./filtercriteria";
-import { FilterSpec } from "./filterspec";
-import { GridRange } from "./gridrange";
-import { SortSpec } from "./sortspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterView = void 0;
+var utils_1 = require("../../../internal/utils");
+var filtercriteria_1 = require("./filtercriteria");
+var filterspec_1 = require("./filterspec");
+var gridrange_1 = require("./gridrange");
+var sortspec_1 = require("./sortspec");
 // FilterView
 /**
  * A filter view.
@@ -37,33 +40,33 @@ var FilterView = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criteria", elemType: FilterCriteria }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criteria", elemType: filtercriteria_1.FilterCriteria }),
+        __metadata("design:type", Object)
     ], FilterView.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterSpecs", elemType: FilterSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterSpecs", elemType: filterspec_1.FilterSpec }),
         __metadata("design:type", Array)
     ], FilterView.prototype, "filterSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterViewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterViewId" }),
         __metadata("design:type", Number)
     ], FilterView.prototype, "filterViewId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedRangeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedRangeId" }),
         __metadata("design:type", String)
     ], FilterView.prototype, "namedRangeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], FilterView.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortSpecs", elemType: SortSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortSpecs", elemType: sortspec_1.SortSpec }),
         __metadata("design:type", Array)
     ], FilterView.prototype, "sortSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], FilterView.prototype, "title", void 0);
     return FilterView;
-}(SpeakeasyBase));
-export { FilterView };
+}(utils_1.SpeakeasyBase));
+exports.FilterView = FilterView;

@@ -18,7 +18,7 @@ export declare class AddApplicationInputRequest extends SpeakeasyBase {
     request: shared.AddApplicationInputRequest;
 }
 export declare class AddApplicationInputResponse extends SpeakeasyBase {
-    addApplicationInputResponse?: Map<string, any>;
+    addApplicationInputResponse?: Record<string, any>;
     codeValidationException?: any;
     concurrentModificationException?: any;
     contentType: string;

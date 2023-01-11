@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperationTypeEnum } from "./operationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BillingRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var operationtypeenum_1 = require("./operationtypeenum");
 // BillingRecord
 /**
  * Information for one billing record.
@@ -34,25 +37,25 @@ var BillingRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BillDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BillDate" }),
         __metadata("design:type", Date)
     ], BillingRecord.prototype, "billDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
         __metadata("design:type", String)
     ], BillingRecord.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InvoiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InvoiceId" }),
         __metadata("design:type", String)
     ], BillingRecord.prototype, "invoiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Operation" }),
         __metadata("design:type", String)
     ], BillingRecord.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Price" }),
         __metadata("design:type", Number)
     ], BillingRecord.prototype, "price", void 0);
     return BillingRecord;
-}(SpeakeasyBase));
-export { BillingRecord };
+}(utils_1.SpeakeasyBase));
+exports.BillingRecord = BillingRecord;

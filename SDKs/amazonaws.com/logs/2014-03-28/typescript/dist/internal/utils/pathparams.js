@@ -1,5 +1,10 @@
-export var ppMetadataKey = "pathParam";
-export function GetSimplePathParams(paramName, paramValue, explode) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParamDecorator = exports.getSimplePathParams = exports.ppMetadataKey = void 0;
+var utils_1 = require("./utils");
+var utils_2 = require("./utils");
+exports.ppMetadataKey = "pathParam";
+function getSimplePathParams(paramName, paramValue, explode) {
     var pathParams = new Map();
     var ppVals = [];
     if (Array.isArray(paramValue)) {
@@ -8,24 +13,30 @@ export function GetSimplePathParams(paramName, paramValue, explode) {
         });
         pathParams.set(paramName, ppVals.join(","));
     }
-    else if (paramValue instanceof Map) {
-        paramValue.forEach(function (paramVal, paramName) {
+    else if ((0, utils_2.isStringRecord)(paramValue) || (0, utils_2.isNumberRecord)(paramValue) || (0, utils_2.isBooleanRecord)(paramValue)) {
+        Object.getOwnPropertyNames(paramValue).forEach(function (paramKey) {
             if (explode)
-                ppVals.push("".concat(paramName, "=").concat(paramVal));
+                ppVals.push("".concat(paramKey, "=").concat(paramValue[paramKey]));
             else
-                ppVals.push("".concat(paramName, ",").concat(paramVal));
+                ppVals.push("".concat(paramKey, ",").concat(paramValue[paramKey]));
         });
         pathParams.set(paramName, ppVals.join(","));
     }
     else if (paramValue instanceof Object) {
-        Object.getOwnPropertyNames(paramValue).forEach(function (paramName) {
-            var paramFieldValue = paramValue[paramName];
-            if (isEmpty(paramFieldValue))
+        Object.getOwnPropertyNames(paramValue).forEach(function (paramKey) {
+            var ppAnn = Reflect.getMetadata(exports.ppMetadataKey, paramValue, paramKey);
+            if (ppAnn == null)
+                return;
+            var ppDecorator = (0, utils_1.parseParamDecorator)(ppAnn, paramKey, "simple", explode);
+            if (ppDecorator == null)
+                return;
+            var paramFieldValue = paramValue[paramKey];
+            if ((0, utils_2.isEmpty)(paramFieldValue))
                 return;
             else if (explode)
-                ppVals.push("".concat(paramName, "=").concat(paramFieldValue));
+                ppVals.push("".concat(ppDecorator.ParamName, "=").concat(paramFieldValue));
             else
-                ppVals.push("".concat(paramName, ",").concat(paramFieldValue));
+                ppVals.push("".concat(ppDecorator.ParamName, ",").concat(paramFieldValue));
         });
         pathParams.set(paramName, ppVals.join(","));
     }
@@ -34,15 +45,7 @@ export function GetSimplePathParams(paramName, paramValue, explode) {
     }
     return pathParams;
 }
-function isEmpty(value) {
-    // check for undefined, null, and NaN
-    var res = false;
-    if (typeof value === 'number')
-        res = Number.isNaN(value);
-    else if (typeof value === 'string')
-        res = value === "";
-    return res || value == null;
-}
+exports.getSimplePathParams = getSimplePathParams;
 var ParamDecorator = /** @class */ (function () {
     function ParamDecorator(Style, Explode, ParamName, Serialization) {
         this.Style = Style;
@@ -52,4 +55,4 @@ var ParamDecorator = /** @class */ (function () {
     }
     return ParamDecorator;
 }());
-export { ParamDecorator };
+exports.ParamDecorator = ParamDecorator;

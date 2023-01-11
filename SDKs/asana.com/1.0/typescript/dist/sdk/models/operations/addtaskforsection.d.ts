@@ -11,7 +11,7 @@ export declare class AddTaskForSectionRequestBody extends SpeakeasyBase {
     data?: shared.SectionTaskInsertRequest;
 }
 export declare class AddTaskForSection200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddTaskForSectionRequest extends SpeakeasyBase {
     pathParams: AddTaskForSectionPathParams;
@@ -22,5 +22,5 @@ export declare class AddTaskForSectionResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addTaskForSection200ApplicationJsonObject?: AddTaskForSection200ApplicationJson;
+    addTaskForSection200ApplicationJSONObject?: AddTaskForSection200ApplicationJson;
 }

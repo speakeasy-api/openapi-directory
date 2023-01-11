@@ -9,7 +9,7 @@ import { VolumeConfiguration } from "./volumeconfiguration";
 **/
 export declare class Layer extends SpeakeasyBase {
     arn?: string;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     autoAssignElasticIps?: boolean;
     autoAssignPublicIps?: boolean;
     cloudWatchLogsConfiguration?: CloudWatchLogsConfiguration;

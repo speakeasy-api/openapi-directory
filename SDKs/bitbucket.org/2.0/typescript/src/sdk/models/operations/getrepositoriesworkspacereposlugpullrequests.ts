@@ -57,7 +57,7 @@ export class GetRepositoriesWorkspaceRepoSlugPullrequestsResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedPullrequests?: shared.PaginatedPullrequests;

@@ -92,7 +92,7 @@ export declare enum GetCommercialCreditCards200ApplicationPrsOpenbankingOpendata
 **/
 export declare class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail extends SpeakeasyBase {
     benefitDescription?: string;
-    benefitId?: string;
+    benefitID?: string;
     benefitName?: string;
     benefitType?: string;
     benefitValue?: string;
@@ -314,8 +314,8 @@ export declare enum GetCommercialCreditCards200ApplicationPrsOpenbankingOpendata
  * Brand
 **/
 export declare class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand extends SpeakeasyBase {
-    trademarkId: string;
-    trademarkIpoCode: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+    trademarkID: string;
+    trademarkIPOCode: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 }
 /**
  * Organisation Name
@@ -365,7 +365,7 @@ export declare class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendat
     productName: string;
     productSegment?: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[];
     productType: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum;
-    productUrl: string[];
+    productURL: string[];
     tsandCs: string[];
 }
 export declare enum GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum {
@@ -399,7 +399,7 @@ export declare class GetCommercialCreditCardsResponse extends SpeakeasyBase {
     fiveHundredAndThreeErrorObject?: GetCommercialCreditCards503ErrorObject;
     contentType: string;
     errorObject?: GetCommercialCreditCardsErrorObject;
-    getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

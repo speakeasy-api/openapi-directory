@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DgmstRequest, DgmstResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: DgmstRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "odit",
-      rroll: "dolor",
-      sem: "et",
+      fullName: "sit",
+      rroll: "voluptas",
+      sem: "culpa",
     },
-    consentArtifact: "sapiente",
+    consentArtifact: "expedita",
     format: "pdf",
     txnId: "dolor",
   },
 };
 
-sdk.sdk.dgmst(req).then((res: DgmstResponse | AxiosError) => {
+sdk.apIs.dgmst(req).then((res: DgmstResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.dgmst(req).then((res: DgmstResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dgmst` - Degree/ Diploma Marksheet
 

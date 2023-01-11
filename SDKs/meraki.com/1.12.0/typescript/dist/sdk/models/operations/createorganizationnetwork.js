@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrganizationNetworkResponse = exports.CreateOrganizationNetworkRequest = exports.CreateOrganizationNetworkRequestBody = exports.CreateOrganizationNetworkRequestBodyProductTypesEnum = exports.CreateOrganizationNetworkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrganizationNetworkPathParams = /** @class */ (function (_super) {
     __extends(CreateOrganizationNetworkPathParams, _super);
     function CreateOrganizationNetworkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkPathParams.prototype, "organizationId", void 0);
     return CreateOrganizationNetworkPathParams;
-}(SpeakeasyBase));
-export { CreateOrganizationNetworkPathParams };
-export var CreateOrganizationNetworkRequestBodyProductTypesEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationNetworkPathParams = CreateOrganizationNetworkPathParams;
+var CreateOrganizationNetworkRequestBodyProductTypesEnum;
 (function (CreateOrganizationNetworkRequestBodyProductTypesEnum) {
     CreateOrganizationNetworkRequestBodyProductTypesEnum["Wireless"] = "wireless";
     CreateOrganizationNetworkRequestBodyProductTypesEnum["Appliance"] = "appliance";
@@ -45,72 +48,72 @@ export var CreateOrganizationNetworkRequestBodyProductTypesEnum;
     CreateOrganizationNetworkRequestBodyProductTypesEnum["CellularGateway"] = "cellularGateway";
     CreateOrganizationNetworkRequestBodyProductTypesEnum["Sensor"] = "sensor";
     CreateOrganizationNetworkRequestBodyProductTypesEnum["Environmental"] = "environmental";
-})(CreateOrganizationNetworkRequestBodyProductTypesEnum || (CreateOrganizationNetworkRequestBodyProductTypesEnum = {}));
+})(CreateOrganizationNetworkRequestBodyProductTypesEnum = exports.CreateOrganizationNetworkRequestBodyProductTypesEnum || (exports.CreateOrganizationNetworkRequestBodyProductTypesEnum = {}));
 var CreateOrganizationNetworkRequestBody = /** @class */ (function (_super) {
     __extends(CreateOrganizationNetworkRequestBody, _super);
     function CreateOrganizationNetworkRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyFromNetworkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyFromNetworkId" }),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkRequestBody.prototype, "copyFromNetworkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkRequestBody.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productTypes" }),
         __metadata("design:type", Array)
     ], CreateOrganizationNetworkRequestBody.prototype, "productTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], CreateOrganizationNetworkRequestBody.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkRequestBody.prototype, "timeZone", void 0);
     return CreateOrganizationNetworkRequestBody;
-}(SpeakeasyBase));
-export { CreateOrganizationNetworkRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationNetworkRequestBody = CreateOrganizationNetworkRequestBody;
 var CreateOrganizationNetworkRequest = /** @class */ (function (_super) {
     __extends(CreateOrganizationNetworkRequest, _super);
     function CreateOrganizationNetworkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateOrganizationNetworkPathParams)
     ], CreateOrganizationNetworkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateOrganizationNetworkRequestBody)
     ], CreateOrganizationNetworkRequest.prototype, "request", void 0);
     return CreateOrganizationNetworkRequest;
-}(SpeakeasyBase));
-export { CreateOrganizationNetworkRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationNetworkRequest = CreateOrganizationNetworkRequest;
 var CreateOrganizationNetworkResponse = /** @class */ (function (_super) {
     __extends(CreateOrganizationNetworkResponse, _super);
     function CreateOrganizationNetworkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrganizationNetworkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrganizationNetworkResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateOrganizationNetworkResponse.prototype, "createOrganizationNetwork201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateOrganizationNetworkResponse.prototype, "createOrganizationNetwork201ApplicationJSONObject", void 0);
     return CreateOrganizationNetworkResponse;
-}(SpeakeasyBase));
-export { CreateOrganizationNetworkResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationNetworkResponse = CreateOrganizationNetworkResponse;

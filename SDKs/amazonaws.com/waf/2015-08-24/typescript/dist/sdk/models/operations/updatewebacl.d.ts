@@ -20,7 +20,7 @@ export declare class UpdateWebAclRequest extends SpeakeasyBase {
 export declare class UpdateWebAclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateWebAclResponse?: shared.UpdateWebAclResponse;
+    updateWebACLResponse?: shared.UpdateWebAclResponse;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;
     wafInvalidOperationException?: any;

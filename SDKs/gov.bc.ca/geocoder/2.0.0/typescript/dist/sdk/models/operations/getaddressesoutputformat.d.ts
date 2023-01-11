@@ -75,7 +75,7 @@ export declare class GetAddressesOutputFormatQueryParams extends SpeakeasyBase {
     maxResults?: number;
     minScore?: number;
     notLocalities?: string;
-    outputSrs?: number;
+    outputSRS?: number;
     parcelPoint?: string;
     provinceCode?: string;
     setBack?: number;

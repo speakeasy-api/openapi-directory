@@ -22,6 +22,6 @@ export declare class DeleteMonitorRequest extends SpeakeasyBase {
 export declare class DeleteMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteMonitor200ApplicationJsonObject?: DeleteMonitor200ApplicationJson;
-    deleteMonitor404ApplicationJsonObject?: DeleteMonitor404ApplicationJson;
+    deleteMonitor200ApplicationJSONObject?: DeleteMonitor200ApplicationJson;
+    deleteMonitor404ApplicationJSONObject?: DeleteMonitor404ApplicationJson;
 }

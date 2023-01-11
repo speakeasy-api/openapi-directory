@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Bin } from "./bin";
-import { Percentiles } from "./percentiles";
-// Metric
-/**
- * A `metric` is a set of user experience data for a single web performance metric, like "first contentful paint". It contains a summary histogram of real world Chrome usage as a series of `bins`.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metric = void 0;
+var utils_1 = require("../../../internal/utils");
+var bin_1 = require("./bin");
+var percentiles_1 = require("./percentiles");
 var Metric = /** @class */ (function (_super) {
     __extends(Metric, _super);
     function Metric() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=histogram", elemType: Bin }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=histogram", elemType: bin_1.Bin }),
         __metadata("design:type", Array)
     ], Metric.prototype, "histogram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentiles" }),
-        __metadata("design:type", Percentiles)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentiles" }),
+        __metadata("design:type", percentiles_1.Percentiles)
     ], Metric.prototype, "percentiles", void 0);
     return Metric;
-}(SpeakeasyBase));
-export { Metric };
+}(utils_1.SpeakeasyBase));
+exports.Metric = Metric;

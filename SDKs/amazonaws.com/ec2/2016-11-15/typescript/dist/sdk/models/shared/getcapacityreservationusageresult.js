@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceUsage } from "./instanceusage";
-import { CapacityReservationStateEnum } from "./capacityreservationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCapacityReservationUsageResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCapacityReservationUsageResult = /** @class */ (function (_super) {
     __extends(GetCapacityReservationUsageResult, _super);
     function GetCapacityReservationUsageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "availableInstanceCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "capacityReservationId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: InstanceUsage }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "instanceUsages", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCapacityReservationUsageResult.prototype, "totalInstanceCount", void 0);
     return GetCapacityReservationUsageResult;
-}(SpeakeasyBase));
-export { GetCapacityReservationUsageResult };
+}(utils_1.SpeakeasyBase));
+exports.GetCapacityReservationUsageResult = GetCapacityReservationUsageResult;

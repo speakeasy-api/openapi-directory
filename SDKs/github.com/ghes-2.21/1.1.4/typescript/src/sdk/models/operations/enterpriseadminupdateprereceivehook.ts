@@ -17,7 +17,7 @@ export class EnterpriseAdminUpdatePreReceiveHookRequestBody extends SpeakeasyBas
   enforcement?: string;
 
   @SpeakeasyMetadata({ data: "json, name=environment" })
-  environment?: Map<string, any>;
+  environment?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -26,7 +26,7 @@ export class EnterpriseAdminUpdatePreReceiveHookRequestBody extends SpeakeasyBas
   script?: string;
 
   @SpeakeasyMetadata({ data: "json, name=script_repository" })
-  scriptRepository?: Map<string, any>;
+  scriptRepository?: Record<string, any>;
 }
 
 

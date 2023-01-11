@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuietTime = void 0;
+var utils_1 = require("../../../internal/utils");
 // QuietTime
 /**
  * Specifies the start and end times that define a time range when messages aren't sent to endpoints.
@@ -33,13 +36,13 @@ var QuietTime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=End" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=End" }),
         __metadata("design:type", String)
     ], QuietTime.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Start" }),
         __metadata("design:type", String)
     ], QuietTime.prototype, "start", void 0);
     return QuietTime;
-}(SpeakeasyBase));
-export { QuietTime };
+}(utils_1.SpeakeasyBase));
+exports.QuietTime = QuietTime;

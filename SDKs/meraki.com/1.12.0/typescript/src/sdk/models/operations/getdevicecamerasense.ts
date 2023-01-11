@@ -22,5 +22,5 @@ export class GetDeviceCameraSenseResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCameraSense200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCameraSense200ApplicationJSONObject?: Record<string, any>;
 }

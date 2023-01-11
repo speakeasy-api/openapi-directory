@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AwsLambdaRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsLambdaRulePost = exports.AwsLambdaRulePostTarget = exports.AwsLambdaRulePostStatusEnum = exports.AwsLambdaRulePostRuleTypeEnum = exports.AwsLambdaRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AwsLambdaRulePostRequestModeEnum;
 (function (AwsLambdaRulePostRequestModeEnum) {
     AwsLambdaRulePostRequestModeEnum["Single"] = "single";
-})(AwsLambdaRulePostRequestModeEnum || (AwsLambdaRulePostRequestModeEnum = {}));
-export var AwsLambdaRulePostRuleTypeEnum;
+})(AwsLambdaRulePostRequestModeEnum = exports.AwsLambdaRulePostRequestModeEnum || (exports.AwsLambdaRulePostRequestModeEnum = {}));
+var AwsLambdaRulePostRuleTypeEnum;
 (function (AwsLambdaRulePostRuleTypeEnum) {
     AwsLambdaRulePostRuleTypeEnum["AwsLambda"] = "aws/lambda";
-})(AwsLambdaRulePostRuleTypeEnum || (AwsLambdaRulePostRuleTypeEnum = {}));
-export var AwsLambdaRulePostStatusEnum;
+})(AwsLambdaRulePostRuleTypeEnum = exports.AwsLambdaRulePostRuleTypeEnum || (exports.AwsLambdaRulePostRuleTypeEnum = {}));
+var AwsLambdaRulePostStatusEnum;
 (function (AwsLambdaRulePostStatusEnum) {
     AwsLambdaRulePostStatusEnum["Enabled"] = "enabled";
     AwsLambdaRulePostStatusEnum["Disabled"] = "disabled";
-})(AwsLambdaRulePostStatusEnum || (AwsLambdaRulePostStatusEnum = {}));
+})(AwsLambdaRulePostStatusEnum = exports.AwsLambdaRulePostStatusEnum || (exports.AwsLambdaRulePostStatusEnum = {}));
 var AwsLambdaRulePostTarget = /** @class */ (function (_super) {
     __extends(AwsLambdaRulePostTarget, _super);
     function AwsLambdaRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", Object)
     ], AwsLambdaRulePostTarget.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AwsLambdaRulePostTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionName" }),
         __metadata("design:type", String)
     ], AwsLambdaRulePostTarget.prototype, "functionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AwsLambdaRulePostTarget.prototype, "region", void 0);
     return AwsLambdaRulePostTarget;
-}(SpeakeasyBase));
-export { AwsLambdaRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.AwsLambdaRulePostTarget = AwsLambdaRulePostTarget;
 var AwsLambdaRulePost = /** @class */ (function (_super) {
     __extends(AwsLambdaRulePost, _super);
     function AwsLambdaRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AwsLambdaRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AwsLambdaRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AwsLambdaRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AwsLambdaRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AwsLambdaRulePostTarget)
     ], AwsLambdaRulePost.prototype, "target", void 0);
     return AwsLambdaRulePost;
-}(SpeakeasyBase));
-export { AwsLambdaRulePost };
+}(utils_1.SpeakeasyBase));
+exports.AwsLambdaRulePost = AwsLambdaRulePost;

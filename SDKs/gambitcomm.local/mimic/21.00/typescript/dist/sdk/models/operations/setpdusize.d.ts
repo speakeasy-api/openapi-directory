@@ -9,5 +9,5 @@ export declare class SetPdusizeRequest extends SpeakeasyBase {
 export declare class SetPdusizeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setPdusize200ApplicationJsonInt32Integer?: number;
+    setPdusize200ApplicationJSONInt32Integer?: number;
 }

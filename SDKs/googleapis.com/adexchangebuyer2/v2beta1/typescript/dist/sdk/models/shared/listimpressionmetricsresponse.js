@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImpressionMetricsRow } from "./impressionmetricsrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListImpressionMetricsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var impressionmetricsrow_1 = require("./impressionmetricsrow");
 // ListImpressionMetricsResponse
 /**
  * Response message for listing the metrics that are measured in number of impressions.
@@ -34,13 +37,13 @@ var ListImpressionMetricsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionMetricsRows", elemType: ImpressionMetricsRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionMetricsRows", elemType: impressionmetricsrow_1.ImpressionMetricsRow }),
         __metadata("design:type", Array)
     ], ListImpressionMetricsResponse.prototype, "impressionMetricsRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListImpressionMetricsResponse.prototype, "nextPageToken", void 0);
     return ListImpressionMetricsResponse;
-}(SpeakeasyBase));
-export { ListImpressionMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListImpressionMetricsResponse = ListImpressionMetricsResponse;

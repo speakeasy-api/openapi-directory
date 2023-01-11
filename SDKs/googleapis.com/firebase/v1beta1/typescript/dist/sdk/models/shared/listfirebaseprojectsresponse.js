@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirebaseProject } from "./firebaseproject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFirebaseProjectsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var firebaseproject_1 = require("./firebaseproject");
 var ListFirebaseProjectsResponse = /** @class */ (function (_super) {
     __extends(ListFirebaseProjectsResponse, _super);
     function ListFirebaseProjectsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListFirebaseProjectsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: FirebaseProject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: firebaseproject_1.FirebaseProject }),
         __metadata("design:type", Array)
     ], ListFirebaseProjectsResponse.prototype, "results", void 0);
     return ListFirebaseProjectsResponse;
-}(SpeakeasyBase));
-export { ListFirebaseProjectsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListFirebaseProjectsResponse = ListFirebaseProjectsResponse;

@@ -188,23 +188,23 @@ export class AlsblResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  alsbl400ApplicationJsonObject?: Alsbl400ApplicationJson;
+  alsbl400ApplicationJSONObject?: Alsbl400ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl401ApplicationJsonObject?: Alsbl401ApplicationJson;
+  alsbl401ApplicationJSONObject?: Alsbl401ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl404ApplicationJsonObject?: Alsbl404ApplicationJson;
+  alsbl404ApplicationJSONObject?: Alsbl404ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl500ApplicationJsonObject?: Alsbl500ApplicationJson;
+  alsbl500ApplicationJSONObject?: Alsbl500ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl502ApplicationJsonObject?: Alsbl502ApplicationJson;
+  alsbl502ApplicationJSONObject?: Alsbl502ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl503ApplicationJsonObject?: Alsbl503ApplicationJson;
+  alsbl503ApplicationJSONObject?: Alsbl503ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsbl504ApplicationJsonObject?: Alsbl504ApplicationJson;
+  alsbl504ApplicationJSONObject?: Alsbl504ApplicationJson;
 }

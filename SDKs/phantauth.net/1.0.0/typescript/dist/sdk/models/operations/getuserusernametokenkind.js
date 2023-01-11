@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUserUsernameTokenKindKindEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUserUsernameTokenKindResponse = exports.GetUserUsernameTokenKindRequest = exports.GetUserUsernameTokenKindQueryParams = exports.GetUserUsernameTokenKindPathParams = exports.GetUserUsernameTokenKindKindEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUserUsernameTokenKindKindEnum;
 (function (GetUserUsernameTokenKindKindEnum) {
     GetUserUsernameTokenKindKindEnum["Access"] = "'access'";
     GetUserUsernameTokenKindKindEnum["Refresh"] = "'refresh'";
@@ -31,64 +34,64 @@ export var GetUserUsernameTokenKindKindEnum;
     GetUserUsernameTokenKindKindEnum["Id"] = "'id'";
     GetUserUsernameTokenKindKindEnum["Selfie"] = "'selfie'";
     GetUserUsernameTokenKindKindEnum["Plain"] = "'plain'";
-})(GetUserUsernameTokenKindKindEnum || (GetUserUsernameTokenKindKindEnum = {}));
+})(GetUserUsernameTokenKindKindEnum = exports.GetUserUsernameTokenKindKindEnum || (exports.GetUserUsernameTokenKindKindEnum = {}));
 var GetUserUsernameTokenKindPathParams = /** @class */ (function (_super) {
     __extends(GetUserUsernameTokenKindPathParams, _super);
     function GetUserUsernameTokenKindPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=kind" }),
         __metadata("design:type", String)
     ], GetUserUsernameTokenKindPathParams.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], GetUserUsernameTokenKindPathParams.prototype, "username", void 0);
     return GetUserUsernameTokenKindPathParams;
-}(SpeakeasyBase));
-export { GetUserUsernameTokenKindPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameTokenKindPathParams = GetUserUsernameTokenKindPathParams;
 var GetUserUsernameTokenKindQueryParams = /** @class */ (function (_super) {
     __extends(GetUserUsernameTokenKindQueryParams, _super);
     function GetUserUsernameTokenKindQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=scope" }),
         __metadata("design:type", String)
     ], GetUserUsernameTokenKindQueryParams.prototype, "scope", void 0);
     return GetUserUsernameTokenKindQueryParams;
-}(SpeakeasyBase));
-export { GetUserUsernameTokenKindQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameTokenKindQueryParams = GetUserUsernameTokenKindQueryParams;
 var GetUserUsernameTokenKindRequest = /** @class */ (function (_super) {
     __extends(GetUserUsernameTokenKindRequest, _super);
     function GetUserUsernameTokenKindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUserUsernameTokenKindPathParams)
     ], GetUserUsernameTokenKindRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUserUsernameTokenKindQueryParams)
     ], GetUserUsernameTokenKindRequest.prototype, "queryParams", void 0);
     return GetUserUsernameTokenKindRequest;
-}(SpeakeasyBase));
-export { GetUserUsernameTokenKindRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameTokenKindRequest = GetUserUsernameTokenKindRequest;
 var GetUserUsernameTokenKindResponse = /** @class */ (function (_super) {
     __extends(GetUserUsernameTokenKindResponse, _super);
     function GetUserUsernameTokenKindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUserUsernameTokenKindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUserUsernameTokenKindResponse.prototype, "statusCode", void 0);
     return GetUserUsernameTokenKindResponse;
-}(SpeakeasyBase));
-export { GetUserUsernameTokenKindResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameTokenKindResponse = GetUserUsernameTokenKindResponse;

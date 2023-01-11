@@ -13,6 +13,6 @@ export declare class RootV1StatisticsConsolidatedRequest extends SpeakeasyBase {
 }
 export declare class RootV1StatisticsConsolidatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

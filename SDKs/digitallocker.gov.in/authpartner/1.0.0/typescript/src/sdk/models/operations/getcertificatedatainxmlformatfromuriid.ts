@@ -59,19 +59,19 @@ export class GetCertificateDataInXmlFormatFromUriIdResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCertificateDataInXmlFormatFromUriId400ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId400ApplicationJson;
+  getCertificateDataInXMLFormatFromURIId400ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getCertificateDataInXmlFormatFromUriId401ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId401ApplicationJson;
+  getCertificateDataInXMLFormatFromURIId401ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getCertificateDataInXmlFormatFromUriId404ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId404ApplicationJson;
+  getCertificateDataInXMLFormatFromURIId404ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getCertificateDataInXmlFormatFromUriId500ApplicationJsonOneOf?: any;
+  getCertificateDataInXMLFormatFromURIId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  getCertificateDataInXmlFormatFromUriId503ApplicationJsonOneOf?: any;
+  getCertificateDataInXMLFormatFromURIId503ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

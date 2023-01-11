@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageRegionCreateEntry } from "./imageregioncreateentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageRegionCreateBatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var imageregioncreateentry_1 = require("./imageregioncreateentry");
 // ImageRegionCreateBatch
 /**
  * Batch of image region information to create.
@@ -34,9 +37,9 @@ var ImageRegionCreateBatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions", elemType: ImageRegionCreateEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions", elemType: imageregioncreateentry_1.ImageRegionCreateEntry }),
         __metadata("design:type", Array)
     ], ImageRegionCreateBatch.prototype, "regions", void 0);
     return ImageRegionCreateBatch;
-}(SpeakeasyBase));
-export { ImageRegionCreateBatch };
+}(utils_1.SpeakeasyBase));
+exports.ImageRegionCreateBatch = ImageRegionCreateBatch;

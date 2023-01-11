@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentKey } from "./agentkey";
-import { Os } from "./os";
-import { Timezone } from "./timezone";
-export var NodeAddMachineTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeAdd = exports.NodeAddStatusEnum = exports.NodeAddStateEnum = exports.NodeAddProperties = exports.NodeAddPropertiesVars = exports.NodeAddPropertiesTagsEnum = exports.NodeAddPolicyModeEnum = exports.NodeAddMachineTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var agentkey_1 = require("./agentkey");
+var os_1 = require("./os");
+var timezone_1 = require("./timezone");
+var NodeAddMachineTypeEnum;
 (function (NodeAddMachineTypeEnum) {
     NodeAddMachineTypeEnum["Vmware"] = "vmware";
     NodeAddMachineTypeEnum["Physical"] = "physical";
@@ -37,33 +40,33 @@ export var NodeAddMachineTypeEnum;
     NodeAddMachineTypeEnum["Aixlpar"] = "aixlpar";
     NodeAddMachineTypeEnum["Hyperv"] = "hyperv";
     NodeAddMachineTypeEnum["Bsdjail"] = "bsdjail";
-})(NodeAddMachineTypeEnum || (NodeAddMachineTypeEnum = {}));
-export var NodeAddPolicyModeEnum;
+})(NodeAddMachineTypeEnum = exports.NodeAddMachineTypeEnum || (exports.NodeAddMachineTypeEnum = {}));
+var NodeAddPolicyModeEnum;
 (function (NodeAddPolicyModeEnum) {
     NodeAddPolicyModeEnum["Enforce"] = "enforce";
     NodeAddPolicyModeEnum["Audit"] = "audit";
-})(NodeAddPolicyModeEnum || (NodeAddPolicyModeEnum = {}));
-export var NodeAddPropertiesTagsEnum;
+})(NodeAddPolicyModeEnum = exports.NodeAddPolicyModeEnum || (exports.NodeAddPolicyModeEnum = {}));
+var NodeAddPropertiesTagsEnum;
 (function (NodeAddPropertiesTagsEnum) {
     NodeAddPropertiesTagsEnum["Some"] = "some";
     NodeAddPropertiesTagsEnum["Tags"] = "tags";
-})(NodeAddPropertiesTagsEnum || (NodeAddPropertiesTagsEnum = {}));
+})(NodeAddPropertiesTagsEnum = exports.NodeAddPropertiesTagsEnum || (exports.NodeAddPropertiesTagsEnum = {}));
 var NodeAddPropertiesVars = /** @class */ (function (_super) {
     __extends(NodeAddPropertiesVars, _super);
     function NodeAddPropertiesVars() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=var1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=var1" }),
         __metadata("design:type", String)
     ], NodeAddPropertiesVars.prototype, "var1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vars2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vars2" }),
         __metadata("design:type", String)
     ], NodeAddPropertiesVars.prototype, "vars2", void 0);
     return NodeAddPropertiesVars;
-}(SpeakeasyBase));
-export { NodeAddPropertiesVars };
+}(utils_1.SpeakeasyBase));
+exports.NodeAddPropertiesVars = NodeAddPropertiesVars;
 // NodeAddProperties
 /**
  * Node properties in "key":"value" format, where "key" is a string, and "value" is either a string, a json array, or a json object. The following example shows you three example of &#58; &#173; a json array on the example of "tags":[ "some", "tags" ] &#173; a simple string on the example of "env":"prod" &#173; a complex json object on the example of "vars":{ "var1":"value1", "var2":"value2" } They are optional and can be used in any combination as long the keys are unique within the properties object.
@@ -74,86 +77,86 @@ var NodeAddProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=env" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=env" }),
         __metadata("design:type", String)
     ], NodeAddProperties.prototype, "env", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], NodeAddProperties.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vars" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vars" }),
         __metadata("design:type", NodeAddPropertiesVars)
     ], NodeAddProperties.prototype, "vars", void 0);
     return NodeAddProperties;
-}(SpeakeasyBase));
-export { NodeAddProperties };
-export var NodeAddStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.NodeAddProperties = NodeAddProperties;
+var NodeAddStateEnum;
 (function (NodeAddStateEnum) {
     NodeAddStateEnum["Enable"] = "enable";
     NodeAddStateEnum["Ignored"] = "ignored";
     NodeAddStateEnum["EmptyPolicies"] = "empty-policies";
     NodeAddStateEnum["Initializing"] = "initializing";
     NodeAddStateEnum["PreparingEol"] = "preparing-eol";
-})(NodeAddStateEnum || (NodeAddStateEnum = {}));
-export var NodeAddStatusEnum;
+})(NodeAddStateEnum = exports.NodeAddStateEnum || (exports.NodeAddStateEnum = {}));
+var NodeAddStatusEnum;
 (function (NodeAddStatusEnum) {
     NodeAddStatusEnum["Accepted"] = "accepted";
     NodeAddStatusEnum["Pending"] = "pending";
-})(NodeAddStatusEnum || (NodeAddStatusEnum = {}));
+})(NodeAddStatusEnum = exports.NodeAddStatusEnum || (exports.NodeAddStatusEnum = {}));
 var NodeAdd = /** @class */ (function (_super) {
     __extends(NodeAdd, _super);
     function NodeAdd() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentKey" }),
-        __metadata("design:type", AgentKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentKey" }),
+        __metadata("design:type", agentkey_1.AgentKey)
     ], NodeAdd.prototype, "agentKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddresses" }),
         __metadata("design:type", Array)
     ], NodeAdd.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os" }),
-        __metadata("design:type", Os)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os" }),
+        __metadata("design:type", os_1.Os)
     ], NodeAdd.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyMode" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "policyMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyServerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyServerId" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "policyServerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", NodeAddProperties)
     ], NodeAdd.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], NodeAdd.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
-        __metadata("design:type", Timezone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
+        __metadata("design:type", timezone_1.Timezone)
     ], NodeAdd.prototype, "timezone", void 0);
     return NodeAdd;
-}(SpeakeasyBase));
-export { NodeAdd };
+}(utils_1.SpeakeasyBase));
+exports.NodeAdd = NodeAdd;

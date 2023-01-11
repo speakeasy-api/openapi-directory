@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposCreateForAuthenticatedUserResponse = exports.ReposCreateForAuthenticatedUserRequest = exports.ReposCreateForAuthenticatedUserRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposCreateForAuthenticatedUserRequestBody = /** @class */ (function (_super) {
     __extends(ReposCreateForAuthenticatedUserRequestBody, _super);
     function ReposCreateForAuthenticatedUserRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_merge_commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_merge_commit" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "allowMergeCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_rebase_merge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_rebase_merge" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "allowRebaseMerge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_squash_merge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_squash_merge" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "allowSquashMerge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_init" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_init" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "autoInit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete_branch_on_merge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete_branch_on_merge" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "deleteBranchOnMerge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitignore_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitignore_template" }),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "gitignoreTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_downloads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_downloads" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "hasDownloads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_issues" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "hasIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_projects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_projects" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "hasProjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_wiki" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_wiki" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "hasWiki", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homepage" }),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "homepage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_template" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "isTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license_template" }),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "licenseTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private" }),
         __metadata("design:type", Boolean)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "private", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_id" }),
         __metadata("design:type", Number)
     ], ReposCreateForAuthenticatedUserRequestBody.prototype, "teamId", void 0);
     return ReposCreateForAuthenticatedUserRequestBody;
-}(SpeakeasyBase));
-export { ReposCreateForAuthenticatedUserRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateForAuthenticatedUserRequestBody = ReposCreateForAuthenticatedUserRequestBody;
 var ReposCreateForAuthenticatedUserRequest = /** @class */ (function (_super) {
     __extends(ReposCreateForAuthenticatedUserRequest, _super);
     function ReposCreateForAuthenticatedUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposCreateForAuthenticatedUserRequestBody)
     ], ReposCreateForAuthenticatedUserRequest.prototype, "request", void 0);
     return ReposCreateForAuthenticatedUserRequest;
-}(SpeakeasyBase));
-export { ReposCreateForAuthenticatedUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateForAuthenticatedUserRequest = ReposCreateForAuthenticatedUserRequest;
 var ReposCreateForAuthenticatedUserResponse = /** @class */ (function (_super) {
     __extends(ReposCreateForAuthenticatedUserResponse, _super);
     function ReposCreateForAuthenticatedUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Repository)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ScimError)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "scimError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], ReposCreateForAuthenticatedUserResponse.prototype, "validationError", void 0);
     return ReposCreateForAuthenticatedUserResponse;
-}(SpeakeasyBase));
-export { ReposCreateForAuthenticatedUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateForAuthenticatedUserResponse = ReposCreateForAuthenticatedUserResponse;

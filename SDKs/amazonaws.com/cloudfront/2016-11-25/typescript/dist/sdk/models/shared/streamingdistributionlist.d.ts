@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { StreamingDistributionSummary } from "./streamingdistributionsummary";
+import { StreamingDistributionSummaryList } from "./streamingdistributionsummarylist";
 /**
  * A streaming distribution list.
 **/
 export declare class StreamingDistributionList extends SpeakeasyBase {
     isTruncated: boolean;
-    items?: StreamingDistributionSummary[];
+    items?: StreamingDistributionSummaryList[];
     marker: string;
     maxItems: number;
     nextMarker?: string;

@@ -41,5 +41,5 @@ export class TagsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagsList200ApplicationJsonObject?: TagsList200ApplicationJson;
+  tagsList200ApplicationJSONObject?: TagsList200ApplicationJson;
 }

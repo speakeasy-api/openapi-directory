@@ -28,5 +28,5 @@ export class ProtocolSshIpaliasEnableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSshIpaliasEnable200ApplicationJsonString?: string;
+  protocolSshIpaliasEnable200ApplicationJSONString?: string;
 }

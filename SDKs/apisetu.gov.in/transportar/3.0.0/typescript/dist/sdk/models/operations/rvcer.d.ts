@@ -110,11 +110,11 @@ export declare class RvcerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    rvcer400ApplicationJsonObject?: Rvcer400ApplicationJson;
-    rvcer401ApplicationJsonObject?: Rvcer401ApplicationJson;
-    rvcer404ApplicationJsonObject?: Rvcer404ApplicationJson;
-    rvcer500ApplicationJsonObject?: Rvcer500ApplicationJson;
-    rvcer502ApplicationJsonObject?: Rvcer502ApplicationJson;
-    rvcer503ApplicationJsonObject?: Rvcer503ApplicationJson;
-    rvcer504ApplicationJsonObject?: Rvcer504ApplicationJson;
+    rvcer400ApplicationJSONObject?: Rvcer400ApplicationJson;
+    rvcer401ApplicationJSONObject?: Rvcer401ApplicationJson;
+    rvcer404ApplicationJSONObject?: Rvcer404ApplicationJson;
+    rvcer500ApplicationJSONObject?: Rvcer500ApplicationJson;
+    rvcer502ApplicationJSONObject?: Rvcer502ApplicationJson;
+    rvcer503ApplicationJSONObject?: Rvcer503ApplicationJson;
+    rvcer504ApplicationJSONObject?: Rvcer504ApplicationJson;
 }

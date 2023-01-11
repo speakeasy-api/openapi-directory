@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IssuanceModes } from "./issuancemodes";
-import { AllowedKeyType } from "./allowedkeytype";
-import { X509Parameters } from "./x509parameters";
-import { CertificateIdentityConstraints } from "./certificateidentityconstraints";
-import { CertificateExtensionConstraints } from "./certificateextensionconstraints";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssuancePolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var issuancemodes_1 = require("./issuancemodes");
+var allowedkeytype_1 = require("./allowedkeytype");
+var x509parameters_1 = require("./x509parameters");
+var certificateidentityconstraints_1 = require("./certificateidentityconstraints");
+var certificateextensionconstraints_1 = require("./certificateextensionconstraints");
 // IssuancePolicy
 /**
  * Defines controls over all certificate issuance within a CaPool.
@@ -38,29 +41,29 @@ var IssuancePolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedIssuanceModes" }),
-        __metadata("design:type", IssuanceModes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedIssuanceModes" }),
+        __metadata("design:type", issuancemodes_1.IssuanceModes)
     ], IssuancePolicy.prototype, "allowedIssuanceModes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedKeyTypes", elemType: AllowedKeyType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedKeyTypes", elemType: allowedkeytype_1.AllowedKeyType }),
         __metadata("design:type", Array)
     ], IssuancePolicy.prototype, "allowedKeyTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baselineValues" }),
-        __metadata("design:type", X509Parameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baselineValues" }),
+        __metadata("design:type", x509parameters_1.X509Parameters)
     ], IssuancePolicy.prototype, "baselineValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityConstraints" }),
-        __metadata("design:type", CertificateIdentityConstraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityConstraints" }),
+        __metadata("design:type", certificateidentityconstraints_1.CertificateIdentityConstraints)
     ], IssuancePolicy.prototype, "identityConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumLifetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumLifetime" }),
         __metadata("design:type", String)
     ], IssuancePolicy.prototype, "maximumLifetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passthroughExtensions" }),
-        __metadata("design:type", CertificateExtensionConstraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passthroughExtensions" }),
+        __metadata("design:type", certificateextensionconstraints_1.CertificateExtensionConstraints)
     ], IssuancePolicy.prototype, "passthroughExtensions", void 0);
     return IssuancePolicy;
-}(SpeakeasyBase));
-export { IssuancePolicy };
+}(utils_1.SpeakeasyBase));
+exports.IssuancePolicy = IssuancePolicy;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexMatchSetUpdate } from "./regexmatchsetupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRegexMatchSetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexmatchsetupdate_1 = require("./regexmatchsetupdate");
 var UpdateRegexMatchSetRequest = /** @class */ (function (_super) {
     __extends(UpdateRegexMatchSetRequest, _super);
     function UpdateRegexMatchSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], UpdateRegexMatchSetRequest.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegexMatchSetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegexMatchSetId" }),
         __metadata("design:type", String)
     ], UpdateRegexMatchSetRequest.prototype, "regexMatchSetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Updates", elemType: RegexMatchSetUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Updates", elemType: regexmatchsetupdate_1.RegexMatchSetUpdate }),
         __metadata("design:type", Array)
     ], UpdateRegexMatchSetRequest.prototype, "updates", void 0);
     return UpdateRegexMatchSetRequest;
-}(SpeakeasyBase));
-export { UpdateRegexMatchSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRegexMatchSetRequest = UpdateRegexMatchSetRequest;

@@ -44,8 +44,8 @@ export class GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snippetComment?: Map<string, any>;
+  snippetComment?: Record<string, any>;
 }

@@ -23,5 +23,5 @@ export declare class UpdateConnectorDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateConnectorDefinitionResponse?: Map<string, any>;
+    updateConnectorDefinitionResponse?: Record<string, any>;
 }

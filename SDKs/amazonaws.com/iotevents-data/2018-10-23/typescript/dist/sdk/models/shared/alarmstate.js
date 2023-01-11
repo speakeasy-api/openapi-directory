@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerAction } from "./customeraction";
-import { RuleEvaluation } from "./ruleevaluation";
-import { AlarmStateNameEnum } from "./alarmstatenameenum";
-import { SystemEvent } from "./systemevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlarmState = void 0;
+var utils_1 = require("../../../internal/utils");
+var customeraction_1 = require("./customeraction");
+var ruleevaluation_1 = require("./ruleevaluation");
+var alarmstatenameenum_1 = require("./alarmstatenameenum");
+var systemevent_1 = require("./systemevent");
 // AlarmState
 /**
  * Contains information about the current state of the alarm.
@@ -37,21 +40,21 @@ var AlarmState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerAction" }),
-        __metadata("design:type", CustomerAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerAction" }),
+        __metadata("design:type", customeraction_1.CustomerAction)
     ], AlarmState.prototype, "customerAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleEvaluation" }),
-        __metadata("design:type", RuleEvaluation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleEvaluation" }),
+        __metadata("design:type", ruleevaluation_1.RuleEvaluation)
     ], AlarmState.prototype, "ruleEvaluation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateName" }),
         __metadata("design:type", String)
     ], AlarmState.prototype, "stateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=systemEvent" }),
-        __metadata("design:type", SystemEvent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=systemEvent" }),
+        __metadata("design:type", systemevent_1.SystemEvent)
     ], AlarmState.prototype, "systemEvent", void 0);
     return AlarmState;
-}(SpeakeasyBase));
-export { AlarmState };
+}(utils_1.SpeakeasyBase));
+exports.AlarmState = AlarmState;

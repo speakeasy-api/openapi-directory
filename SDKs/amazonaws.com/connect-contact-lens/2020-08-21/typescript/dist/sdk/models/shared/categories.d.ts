@@ -5,5 +5,5 @@ import { CategoryDetails } from "./categorydetails";
 **/
 export declare class Categories extends SpeakeasyBase {
     matchedCategories: string[];
-    matchedDetails: Map<string, CategoryDetails>;
+    matchedDetails: Record<string, CategoryDetails>;
 }

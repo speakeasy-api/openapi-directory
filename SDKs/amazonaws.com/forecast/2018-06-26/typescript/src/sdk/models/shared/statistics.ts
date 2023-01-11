@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// Statistics
-/** 
- * Provides statistics for each data field imported into to an Amazon Forecast dataset with the <a>CreateDatasetImportJob</a> operation.
-**/
 export class Statistics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Avg" })
   avg?: number;

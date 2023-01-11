@@ -1,15 +1,31 @@
-export * from "./createdatabase";
-export * from "./createtable";
-export * from "./deletedatabase";
-export * from "./deletetable";
-export * from "./describedatabase";
-export * from "./describeendpoints";
-export * from "./describetable";
-export * from "./listdatabases";
-export * from "./listtables";
-export * from "./listtagsforresource";
-export * from "./tagresource";
-export * from "./untagresource";
-export * from "./updatedatabase";
-export * from "./updatetable";
-export * from "./writerecords";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./createdatabase"), exports);
+__exportStar(require("./createtable"), exports);
+__exportStar(require("./deletedatabase"), exports);
+__exportStar(require("./deletetable"), exports);
+__exportStar(require("./describedatabase"), exports);
+__exportStar(require("./describeendpoints"), exports);
+__exportStar(require("./describetable"), exports);
+__exportStar(require("./listdatabases"), exports);
+__exportStar(require("./listtables"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./updatedatabase"), exports);
+__exportStar(require("./updatetable"), exports);
+__exportStar(require("./writerecords"), exports);

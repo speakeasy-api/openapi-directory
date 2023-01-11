@@ -8,5 +8,5 @@ export declare class GetDeviceManagementInterfaceRequest extends SpeakeasyBase {
 export declare class GetDeviceManagementInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceManagementInterface200ApplicationJsonObject?: Map<string, any>;
+    getDeviceManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

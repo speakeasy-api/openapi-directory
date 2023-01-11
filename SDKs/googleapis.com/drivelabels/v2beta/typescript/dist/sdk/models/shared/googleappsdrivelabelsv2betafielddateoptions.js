@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
-export var GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput = exports.GoogleAppsDriveLabelsV2betaFieldDateOptions = exports.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
+var GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum;
 (function (GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum) {
     GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum["DateFormatUnspecified"] = "DATE_FORMAT_UNSPECIFIED";
     GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum["LongDate"] = "LONG_DATE";
     GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum["ShortDate"] = "SHORT_DATE";
-})(GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum || (GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum = {}));
+})(GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum = exports.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum || (exports.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum = {}));
 // GoogleAppsDriveLabelsV2betaFieldDateOptions
 /**
  * Options for the date field type.
@@ -40,24 +43,24 @@ var GoogleAppsDriveLabelsV2betaFieldDateOptions = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateFormat" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptions.prototype, "dateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateFormatType" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptions.prototype, "dateFormatType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptions.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptions.prototype, "minValue", void 0);
     return GoogleAppsDriveLabelsV2betaFieldDateOptions;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldDateOptions };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldDateOptions = GoogleAppsDriveLabelsV2betaFieldDateOptions;
 // GoogleAppsDriveLabelsV2betaFieldDateOptionsInput
 /**
  * Options for the date field type.
@@ -68,17 +71,17 @@ var GoogleAppsDriveLabelsV2betaFieldDateOptionsInput = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateFormatType" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptionsInput.prototype, "dateFormatType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptionsInput.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleAppsDriveLabelsV2betaFieldDateOptionsInput.prototype, "minValue", void 0);
     return GoogleAppsDriveLabelsV2betaFieldDateOptionsInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldDateOptionsInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput = GoogleAppsDriveLabelsV2betaFieldDateOptionsInput;

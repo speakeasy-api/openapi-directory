@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DnsSettingsInput } from "./dnssettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigureDnsSettingsRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var dnssettings_1 = require("./dnssettings");
 // ConfigureDnsSettingsRequestInput
 /**
  * Request for the `ConfigureDnsSettings` method.
@@ -34,17 +37,17 @@ var ConfigureDnsSettingsRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsSettings" }),
-        __metadata("design:type", DnsSettingsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsSettings" }),
+        __metadata("design:type", dnssettings_1.DnsSettingsInput)
     ], ConfigureDnsSettingsRequestInput.prototype, "dnsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], ConfigureDnsSettingsRequestInput.prototype, "updateMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], ConfigureDnsSettingsRequestInput.prototype, "validateOnly", void 0);
     return ConfigureDnsSettingsRequestInput;
-}(SpeakeasyBase));
-export { ConfigureDnsSettingsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.ConfigureDnsSettingsRequestInput = ConfigureDnsSettingsRequestInput;

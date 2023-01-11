@@ -12,7 +12,7 @@ export declare class ImportPlaybackKeyPairHeaders extends SpeakeasyBase {
 export declare class ImportPlaybackKeyPairRequestBody extends SpeakeasyBase {
     name?: string;
     publicKeyMaterial: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class ImportPlaybackKeyPairRequest extends SpeakeasyBase {
     headers: ImportPlaybackKeyPairHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Envelope } from "./envelope";
-import { InTotoStatement } from "./intotostatement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DsseAttestationOccurrence = void 0;
+var utils_1 = require("../../../internal/utils");
+var envelope_1 = require("./envelope");
+var intotostatement_1 = require("./intotostatement");
 // DsseAttestationOccurrence
 /**
  * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the Occurrence.
@@ -35,13 +38,13 @@ var DsseAttestationOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=envelope" }),
-        __metadata("design:type", Envelope)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=envelope" }),
+        __metadata("design:type", envelope_1.Envelope)
     ], DsseAttestationOccurrence.prototype, "envelope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statement" }),
-        __metadata("design:type", InTotoStatement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statement" }),
+        __metadata("design:type", intotostatement_1.InTotoStatement)
     ], DsseAttestationOccurrence.prototype, "statement", void 0);
     return DsseAttestationOccurrence;
-}(SpeakeasyBase));
-export { DsseAttestationOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.DsseAttestationOccurrence = DsseAttestationOccurrence;

@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveBroadcasts = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var LiveBroadcasts = /** @class */ (function () {
     function LiveBroadcasts(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -30,11 +55,11 @@ var LiveBroadcasts = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts/bind";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "post" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -42,14 +67,13 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.liveBroadcast = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsDelete - Delete a given broadcast.
@@ -60,11 +84,11 @@ var LiveBroadcasts = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "delete" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -75,8 +99,7 @@ var LiveBroadcasts = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsInsert - Inserts a new stream for the authenticated user.
@@ -90,24 +113,19 @@ var LiveBroadcasts = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -115,14 +133,13 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.liveBroadcast = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsInsertCuepoint - Insert cuepoints in a broadcast
@@ -136,24 +153,19 @@ var LiveBroadcasts = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts/cuepoint";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -161,14 +173,13 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.cuepoint = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsList - Retrieve the list of broadcasts associated with the given channel.
@@ -179,11 +190,11 @@ var LiveBroadcasts = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -191,14 +202,13 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.liveBroadcastListResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsTransition - Transition a broadcast to a given status.
@@ -209,11 +219,11 @@ var LiveBroadcasts = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts/transition";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "post" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -221,14 +231,13 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.liveBroadcast = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * youtubeLiveBroadcastsUpdate - Updates an existing broadcast for the authenticated user.
@@ -242,24 +251,19 @@ var LiveBroadcasts = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/youtube/v3/liveBroadcasts";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -267,15 +271,14 @@ var LiveBroadcasts = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.liveBroadcast = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return LiveBroadcasts;
 }());
-export { LiveBroadcasts };
+exports.LiveBroadcasts = LiveBroadcasts;

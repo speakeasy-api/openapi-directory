@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessTokenInfoResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccessTokenInfoResponse = /** @class */ (function (_super) {
     __extends(AccessTokenInfoResponse, _super);
     function AccessTokenInfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app_id" }),
         __metadata("design:type", Number)
     ], AccessTokenInfoResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_in" }),
         __metadata("design:type", Number)
     ], AccessTokenInfoResponse.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub_domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub_domain" }),
         __metadata("design:type", String)
     ], AccessTokenInfoResponse.prototype, "hubDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub_id" }),
         __metadata("design:type", Number)
     ], AccessTokenInfoResponse.prototype, "hubId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope_to_scope_group_pks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope_to_scope_group_pks" }),
         __metadata("design:type", Array)
     ], AccessTokenInfoResponse.prototype, "scopeToScopeGroupPks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
         __metadata("design:type", Array)
     ], AccessTokenInfoResponse.prototype, "scopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], AccessTokenInfoResponse.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_type" }),
         __metadata("design:type", String)
     ], AccessTokenInfoResponse.prototype, "tokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trial_scope_to_scope_group_pks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trial_scope_to_scope_group_pks" }),
         __metadata("design:type", Array)
     ], AccessTokenInfoResponse.prototype, "trialScopeToScopeGroupPks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trial_scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trial_scopes" }),
         __metadata("design:type", Array)
     ], AccessTokenInfoResponse.prototype, "trialScopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], AccessTokenInfoResponse.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], AccessTokenInfoResponse.prototype, "userId", void 0);
     return AccessTokenInfoResponse;
-}(SpeakeasyBase));
-export { AccessTokenInfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccessTokenInfoResponse = AccessTokenInfoResponse;

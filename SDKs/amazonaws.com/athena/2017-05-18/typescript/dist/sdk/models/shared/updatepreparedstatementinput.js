@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatePreparedStatementInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdatePreparedStatementInput = /** @class */ (function (_super) {
     __extends(UpdatePreparedStatementInput, _super);
     function UpdatePreparedStatementInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdatePreparedStatementInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryStatement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryStatement" }),
         __metadata("design:type", String)
     ], UpdatePreparedStatementInput.prototype, "queryStatement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatementName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatementName" }),
         __metadata("design:type", String)
     ], UpdatePreparedStatementInput.prototype, "statementName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkGroup" }),
         __metadata("design:type", String)
     ], UpdatePreparedStatementInput.prototype, "workGroup", void 0);
     return UpdatePreparedStatementInput;
-}(SpeakeasyBase));
-export { UpdatePreparedStatementInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePreparedStatementInput = UpdatePreparedStatementInput;

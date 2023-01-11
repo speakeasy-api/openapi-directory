@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V1Company = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var V1Company = /** @class */ (function () {
     function V1Company(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -32,25 +57,20 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyAlternativeSearchRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/search/{country}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/search/{country}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -58,19 +78,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyAlternativeSearch200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyAlternativeSearch200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyAlternativeSearchDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyAlternativeSearchDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyAnnouncement - Retrieves announcement data
@@ -82,10 +101,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyAnnouncementRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/announcement/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/announcement/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -93,19 +112,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyAnnouncement200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyAnnouncement200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyAnnouncementDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyAnnouncementDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyDeepsearchIsin - Retrieves a list of stock exchange listings
@@ -121,22 +139,17 @@ var V1Company = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/api/v1/company/deepsearch/isin";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -144,19 +157,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchIsin200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchISIN200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchIsinDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchISINDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyDeepsearchLei - Retrieves a list of companies
@@ -168,12 +180,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyDeepsearchLeiRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/lei/{number}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/deepsearch/lei/{number}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -181,19 +193,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchLei200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchLEI200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchLeiDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchLEIDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyDeepsearchName - Retrieves a list of companies from the official business register
@@ -205,10 +216,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyDeepsearchNameRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -216,19 +227,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchName200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchName200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchNameDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchNameDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyDeepsearchNumber - Retrieves a list of companies from the official business register
@@ -240,10 +250,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyDeepsearchNumberRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -251,19 +261,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchNumber200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchNumber200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyDeepsearchNumberDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyDeepsearchNumberDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyIdAnnouncements - Retrieves company announcements
@@ -275,12 +284,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyIdAnnouncementsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/{id}/announcements", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/{id}/announcements", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -288,19 +297,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyIdAnnouncements200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyIdAnnouncements200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyIdAnnouncementsDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyIdAnnouncementsDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyIdDataset - Retrieves company details
@@ -312,12 +320,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyIdDatasetRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/{id}/{dataset}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/{id}/{dataset}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -325,19 +333,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyIdDatasetDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyIdDatasetDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyIdSuper - Retrieves structured data extracted from a company document
@@ -349,12 +356,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyIdSuperRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/{id}/super/{country}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/{id}/super/{country}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -362,19 +369,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyIdSuper200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyIdSuper200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyIdSuperDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyIdSuperDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyMonitorChangeTypesList - Get available ChangeTypes
@@ -387,9 +393,9 @@ var V1Company = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/api/v1/company/monitoring/changeTypes";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -397,19 +403,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorChangeTypesList200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorChangeTypesList200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorChangeTypesListDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorChangeTypesListDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyMonitorId - Get monitor status for specific company id
@@ -421,10 +426,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyMonitorIdRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/list/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/monitoring/list/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -432,19 +437,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorId200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorId200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorIdDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorIdDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyMonitorList - Retrieves a list of registered monitors
@@ -457,9 +461,9 @@ var V1Company = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/api/v1/company/monitoring/list";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -467,19 +471,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorList200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorList200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorListDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorListDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyMonitorRegister - Register a Company for monitoring
@@ -492,25 +495,20 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyMonitorRegisterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/register/{id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/monitoring/register/{id}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -518,19 +516,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorRegister200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorRegister200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorRegisterDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorRegisterDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyMonitorUnregister - Deactivates an active notification
@@ -542,10 +539,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyMonitorUnregisterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/unregister/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "post" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/monitoring/unregister/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "post" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -555,14 +552,13 @@ var V1Company = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyMonitorUnregisterDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyMonitorUnregisterDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyNotificationId - Retrieves a list of registered notifications
@@ -574,10 +570,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyNotificationIdRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/notification/list/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/notification/list/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -585,19 +581,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationId200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationId200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationIdDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationIdDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyNotificationList - Retrieves a list of registered notifications
@@ -610,9 +605,9 @@ var V1Company = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/api/v1/company/notification/list";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -620,19 +615,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationList200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationList200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationListDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationListDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyNotificationRegister - Creates a new notification
@@ -645,25 +639,20 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyNotificationRegisterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/notification/register/{id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/notification/register/{id}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -671,19 +660,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationRegister200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationRegister200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationRegisterDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationRegisterDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companyNotificationUnregister - Unregister a company from Monitoring
@@ -695,10 +683,10 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanyNotificationUnregisterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/notification/unregister/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "post" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/company/notification/unregister/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "post" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -708,14 +696,13 @@ var V1Company = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companyNotificationUnregisterDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companyNotificationUnregisterDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companySearchName - Retrieves a list of companies from the KYC API company index
@@ -727,12 +714,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanySearchNameRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/search/name/{country}/{name}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/search/name/{country}/{name}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -740,19 +727,18 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companySearchName200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companySearchName200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companySearchNameDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companySearchNameDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * companySearchNumber - Retrieves a list of companies from the KYC API company index
@@ -764,12 +750,12 @@ var V1Company = /** @class */ (function () {
             req = new operations.CompanySearchNumberRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/company/search/number/{country}/{number}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/api/v1/company/search/number/{country}/{number}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -777,20 +763,19 @@ var V1Company = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companySearchNumber200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companySearchNumber200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.companySearchNumberDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.companySearchNumberDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return V1Company;
 }());
-export { V1Company };
+exports.V1Company = V1Company;

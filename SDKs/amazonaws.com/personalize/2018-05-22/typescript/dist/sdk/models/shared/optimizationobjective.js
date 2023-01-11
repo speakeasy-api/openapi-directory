@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectiveSensitivityEnum } from "./objectivesensitivityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptimizationObjective = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectivesensitivityenum_1 = require("./objectivesensitivityenum");
 // OptimizationObjective
 /**
  * Describes the additional objective for the solution, such as maximizing streaming minutes or increasing revenue. For more information see <a href="https://docs.aws.amazon.com/personalize/latest/dg/optimizing-solution-for-objective.html">Optimizing a solution</a>.
@@ -34,13 +37,13 @@ var OptimizationObjective = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemAttribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemAttribute" }),
         __metadata("design:type", String)
     ], OptimizationObjective.prototype, "itemAttribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectiveSensitivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectiveSensitivity" }),
         __metadata("design:type", String)
     ], OptimizationObjective.prototype, "objectiveSensitivity", void 0);
     return OptimizationObjective;
-}(SpeakeasyBase));
-export { OptimizationObjective };
+}(utils_1.SpeakeasyBase));
+exports.OptimizationObjective = OptimizationObjective;

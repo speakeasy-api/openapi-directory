@@ -35,5 +35,5 @@ export class GetQuantumTaskResponse extends SpeakeasyBase {
   status: QuantumTaskStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

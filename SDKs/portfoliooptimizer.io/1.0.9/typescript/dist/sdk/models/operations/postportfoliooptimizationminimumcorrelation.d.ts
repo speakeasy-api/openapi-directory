@@ -12,6 +12,6 @@ export declare class PostPortfolioOptimizationMinimumCorrelationRequest extends 
 }
 export declare class PostPortfolioOptimizationMinimumCorrelationResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMinimumCorrelation200ApplicationJsonObject?: PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject?: PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
 }

@@ -110,46 +110,6 @@ export class FilterUppercaseDetails extends SpeakeasyBase {
 }
 
 
-// FilterInput
-/** 
- * JSON template for an Analytics account filter.
-**/
-export class FilterInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=accountId" })
-  accountId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=advancedDetails" })
-  advancedDetails?: FilterAdvancedDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=excludeDetails" })
-  excludeDetails?: FilterExpression;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=includeDetails" })
-  includeDetails?: FilterExpression;
-
-  @SpeakeasyMetadata({ data: "json, name=lowercaseDetails" })
-  lowercaseDetails?: FilterLowercaseDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=parentLink" })
-  parentLink?: FilterParentLink;
-
-  @SpeakeasyMetadata({ data: "json, name=searchAndReplaceDetails" })
-  searchAndReplaceDetails?: FilterSearchAndReplaceDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=uppercaseDetails" })
-  uppercaseDetails?: FilterUppercaseDetails;
-}
-
-
 // Filter
 /** 
  * JSON template for an Analytics account filter.
@@ -196,6 +156,46 @@ export class Filter extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated" })
   updated?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=uppercaseDetails" })
+  uppercaseDetails?: FilterUppercaseDetails;
+}
+
+
+// FilterInput
+/** 
+ * JSON template for an Analytics account filter.
+**/
+export class FilterInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=accountId" })
+  accountId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=advancedDetails" })
+  advancedDetails?: FilterAdvancedDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=excludeDetails" })
+  excludeDetails?: FilterExpression;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=includeDetails" })
+  includeDetails?: FilterExpression;
+
+  @SpeakeasyMetadata({ data: "json, name=lowercaseDetails" })
+  lowercaseDetails?: FilterLowercaseDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=parentLink" })
+  parentLink?: FilterParentLink;
+
+  @SpeakeasyMetadata({ data: "json, name=searchAndReplaceDetails" })
+  searchAndReplaceDetails?: FilterSearchAndReplaceDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: string;
 
   @SpeakeasyMetadata({ data: "json, name=uppercaseDetails" })
   uppercaseDetails?: FilterUppercaseDetails;

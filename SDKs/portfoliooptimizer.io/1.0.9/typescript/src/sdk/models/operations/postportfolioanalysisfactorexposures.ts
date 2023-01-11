@@ -52,8 +52,8 @@ export class PostPortfolioAnalysisFactorExposuresResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisFactorExposures200ApplicationJsonObject?: PostPortfolioAnalysisFactorExposures200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisFactorExposures200ApplicationJSONObject?: PostPortfolioAnalysisFactorExposures200ApplicationJson;
 }

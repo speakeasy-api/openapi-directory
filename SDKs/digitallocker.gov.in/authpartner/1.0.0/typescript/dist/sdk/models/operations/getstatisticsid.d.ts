@@ -21,9 +21,9 @@ export declare class GetStatisticsIdRequest extends SpeakeasyBase {
 }
 export declare class GetStatisticsIdResponse extends SpeakeasyBase {
     contentType: string;
-    getStatisticsId400ApplicationJsonObject?: GetStatisticsId400ApplicationJson;
-    getStatisticsId401ApplicationJsonObject?: GetStatisticsId401ApplicationJson;
-    getStatisticsId500ApplicationJsonObject?: GetStatisticsId500ApplicationJson;
+    getStatisticsId400ApplicationJSONObject?: GetStatisticsId400ApplicationJson;
+    getStatisticsId401ApplicationJSONObject?: GetStatisticsId401ApplicationJson;
+    getStatisticsId500ApplicationJSONObject?: GetStatisticsId500ApplicationJson;
     getStatisticsResponse?: shared.GetStatisticsResponse;
     statusCode: number;
 }

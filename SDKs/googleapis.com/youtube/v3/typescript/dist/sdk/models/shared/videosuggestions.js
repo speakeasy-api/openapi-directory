@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoSuggestionsTagSuggestion } from "./videosuggestionstagsuggestion";
-export var VideoSuggestionsEditorSuggestionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoSuggestions = exports.VideoSuggestionsProcessingWarningsEnum = exports.VideoSuggestionsProcessingHintsEnum = exports.VideoSuggestionsProcessingErrorsEnum = exports.VideoSuggestionsEditorSuggestionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var videosuggestionstagsuggestion_1 = require("./videosuggestionstagsuggestion");
+var VideoSuggestionsEditorSuggestionsEnum;
 (function (VideoSuggestionsEditorSuggestionsEnum) {
     VideoSuggestionsEditorSuggestionsEnum["VideoAutoLevels"] = "videoAutoLevels";
     VideoSuggestionsEditorSuggestionsEnum["VideoStabilize"] = "videoStabilize";
     VideoSuggestionsEditorSuggestionsEnum["VideoCrop"] = "videoCrop";
     VideoSuggestionsEditorSuggestionsEnum["AudioQuietAudioSwap"] = "audioQuietAudioSwap";
-})(VideoSuggestionsEditorSuggestionsEnum || (VideoSuggestionsEditorSuggestionsEnum = {}));
-export var VideoSuggestionsProcessingErrorsEnum;
+})(VideoSuggestionsEditorSuggestionsEnum = exports.VideoSuggestionsEditorSuggestionsEnum || (exports.VideoSuggestionsEditorSuggestionsEnum = {}));
+var VideoSuggestionsProcessingErrorsEnum;
 (function (VideoSuggestionsProcessingErrorsEnum) {
     VideoSuggestionsProcessingErrorsEnum["AudioFile"] = "audioFile";
     VideoSuggestionsProcessingErrorsEnum["ImageFile"] = "imageFile";
@@ -40,8 +43,8 @@ export var VideoSuggestionsProcessingErrorsEnum;
     VideoSuggestionsProcessingErrorsEnum["DocFile"] = "docFile";
     VideoSuggestionsProcessingErrorsEnum["ArchiveFile"] = "archiveFile";
     VideoSuggestionsProcessingErrorsEnum["UnsupportedSpatialAudioLayout"] = "unsupportedSpatialAudioLayout";
-})(VideoSuggestionsProcessingErrorsEnum || (VideoSuggestionsProcessingErrorsEnum = {}));
-export var VideoSuggestionsProcessingHintsEnum;
+})(VideoSuggestionsProcessingErrorsEnum = exports.VideoSuggestionsProcessingErrorsEnum || (exports.VideoSuggestionsProcessingErrorsEnum = {}));
+var VideoSuggestionsProcessingHintsEnum;
 (function (VideoSuggestionsProcessingHintsEnum) {
     VideoSuggestionsProcessingHintsEnum["NonStreamableMov"] = "nonStreamableMov";
     VideoSuggestionsProcessingHintsEnum["SendBestQualityVideo"] = "sendBestQualityVideo";
@@ -49,8 +52,8 @@ export var VideoSuggestionsProcessingHintsEnum;
     VideoSuggestionsProcessingHintsEnum["SpatialAudio"] = "spatialAudio";
     VideoSuggestionsProcessingHintsEnum["VrVideo"] = "vrVideo";
     VideoSuggestionsProcessingHintsEnum["HdrVideo"] = "hdrVideo";
-})(VideoSuggestionsProcessingHintsEnum || (VideoSuggestionsProcessingHintsEnum = {}));
-export var VideoSuggestionsProcessingWarningsEnum;
+})(VideoSuggestionsProcessingHintsEnum = exports.VideoSuggestionsProcessingHintsEnum || (exports.VideoSuggestionsProcessingHintsEnum = {}));
+var VideoSuggestionsProcessingWarningsEnum;
 (function (VideoSuggestionsProcessingWarningsEnum) {
     VideoSuggestionsProcessingWarningsEnum["UnknownContainer"] = "unknownContainer";
     VideoSuggestionsProcessingWarningsEnum["UnknownVideoCodec"] = "unknownVideoCodec";
@@ -64,7 +67,7 @@ export var VideoSuggestionsProcessingWarningsEnum;
     VideoSuggestionsProcessingWarningsEnum["UnsupportedHdrPixelFormat"] = "unsupportedHdrPixelFormat";
     VideoSuggestionsProcessingWarningsEnum["UnsupportedHdrColorMetadata"] = "unsupportedHdrColorMetadata";
     VideoSuggestionsProcessingWarningsEnum["ProblematicHdrLookupTable"] = "problematicHdrLookupTable";
-})(VideoSuggestionsProcessingWarningsEnum || (VideoSuggestionsProcessingWarningsEnum = {}));
+})(VideoSuggestionsProcessingWarningsEnum = exports.VideoSuggestionsProcessingWarningsEnum || (exports.VideoSuggestionsProcessingWarningsEnum = {}));
 // VideoSuggestions
 /**
  * Specifies suggestions on how to improve video content, including encoding hints, tag suggestions, and editor suggestions.
@@ -75,25 +78,25 @@ var VideoSuggestions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=editorSuggestions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editorSuggestions" }),
         __metadata("design:type", Array)
     ], VideoSuggestions.prototype, "editorSuggestions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingErrors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingErrors" }),
         __metadata("design:type", Array)
     ], VideoSuggestions.prototype, "processingErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingHints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingHints" }),
         __metadata("design:type", Array)
     ], VideoSuggestions.prototype, "processingHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingWarnings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingWarnings" }),
         __metadata("design:type", Array)
     ], VideoSuggestions.prototype, "processingWarnings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagSuggestions", elemType: VideoSuggestionsTagSuggestion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagSuggestions", elemType: videosuggestionstagsuggestion_1.VideoSuggestionsTagSuggestion }),
         __metadata("design:type", Array)
     ], VideoSuggestions.prototype, "tagSuggestions", void 0);
     return VideoSuggestions;
-}(SpeakeasyBase));
-export { VideoSuggestions };
+}(utils_1.SpeakeasyBase));
+exports.VideoSuggestions = VideoSuggestions;

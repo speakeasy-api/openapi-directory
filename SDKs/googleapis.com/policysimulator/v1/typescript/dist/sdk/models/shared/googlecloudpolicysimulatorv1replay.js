@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicysimulatorV1ReplayConfig } from "./googlecloudpolicysimulatorv1replayconfig";
-import { GoogleCloudPolicysimulatorV1ReplayResultsSummary } from "./googlecloudpolicysimulatorv1replayresultssummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1ReplayInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicysimulatorv1replayconfig_1 = require("./googlecloudpolicysimulatorv1replayconfig");
+var googlecloudpolicysimulatorv1replayresultssummary_1 = require("./googlecloudpolicysimulatorv1replayresultssummary");
 // GoogleCloudPolicysimulatorV1ReplayInput
 /**
  * A resource describing a `Replay`, or simulation.
@@ -35,13 +38,13 @@ var GoogleCloudPolicysimulatorV1ReplayInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1ReplayConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1replayconfig_1.GoogleCloudPolicysimulatorV1ReplayConfig)
     ], GoogleCloudPolicysimulatorV1ReplayInput.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resultsSummary" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1ReplayResultsSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resultsSummary" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1replayresultssummary_1.GoogleCloudPolicysimulatorV1ReplayResultsSummary)
     ], GoogleCloudPolicysimulatorV1ReplayInput.prototype, "resultsSummary", void 0);
     return GoogleCloudPolicysimulatorV1ReplayInput;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1ReplayInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1ReplayInput = GoogleCloudPolicysimulatorV1ReplayInput;

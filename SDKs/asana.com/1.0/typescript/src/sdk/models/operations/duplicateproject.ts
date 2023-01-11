@@ -53,5 +53,5 @@ export class DuplicateProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  duplicateProject201ApplicationJsonObject?: DuplicateProject201ApplicationJson;
+  duplicateProject201ApplicationJSONObject?: DuplicateProject201ApplicationJson;
 }

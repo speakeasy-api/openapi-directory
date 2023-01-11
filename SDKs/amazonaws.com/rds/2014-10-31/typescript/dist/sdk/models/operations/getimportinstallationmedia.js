@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetImportInstallationMediaActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImportInstallationMediaResponse = exports.GetImportInstallationMediaRequest = exports.GetImportInstallationMediaHeaders = exports.GetImportInstallationMediaQueryParams = exports.GetImportInstallationMediaVersionEnum = exports.GetImportInstallationMediaActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetImportInstallationMediaActionEnum;
 (function (GetImportInstallationMediaActionEnum) {
     GetImportInstallationMediaActionEnum["ImportInstallationMedia"] = "ImportInstallationMedia";
-})(GetImportInstallationMediaActionEnum || (GetImportInstallationMediaActionEnum = {}));
-export var GetImportInstallationMediaVersionEnum;
+})(GetImportInstallationMediaActionEnum = exports.GetImportInstallationMediaActionEnum || (exports.GetImportInstallationMediaActionEnum = {}));
+var GetImportInstallationMediaVersionEnum;
 (function (GetImportInstallationMediaVersionEnum) {
     GetImportInstallationMediaVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetImportInstallationMediaVersionEnum || (GetImportInstallationMediaVersionEnum = {}));
+})(GetImportInstallationMediaVersionEnum = exports.GetImportInstallationMediaVersionEnum || (exports.GetImportInstallationMediaVersionEnum = {}));
 var GetImportInstallationMediaQueryParams = /** @class */ (function (_super) {
     __extends(GetImportInstallationMediaQueryParams, _super);
     function GetImportInstallationMediaQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneId" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "customAvailabilityZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Engine" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EngineInstallationMediaPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EngineInstallationMediaPath" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "engineInstallationMediaPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OSInstallationMediaPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=OSInstallationMediaPath" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "osInstallationMediaPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaQueryParams.prototype, "version", void 0);
     return GetImportInstallationMediaQueryParams;
-}(SpeakeasyBase));
-export { GetImportInstallationMediaQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImportInstallationMediaQueryParams = GetImportInstallationMediaQueryParams;
 var GetImportInstallationMediaHeaders = /** @class */ (function (_super) {
     __extends(GetImportInstallationMediaHeaders, _super);
     function GetImportInstallationMediaHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetImportInstallationMediaHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetImportInstallationMediaHeaders;
-}(SpeakeasyBase));
-export { GetImportInstallationMediaHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetImportInstallationMediaHeaders = GetImportInstallationMediaHeaders;
 var GetImportInstallationMediaRequest = /** @class */ (function (_super) {
     __extends(GetImportInstallationMediaRequest, _super);
     function GetImportInstallationMediaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImportInstallationMediaQueryParams)
     ], GetImportInstallationMediaRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImportInstallationMediaHeaders)
     ], GetImportInstallationMediaRequest.prototype, "headers", void 0);
     return GetImportInstallationMediaRequest;
-}(SpeakeasyBase));
-export { GetImportInstallationMediaRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImportInstallationMediaRequest = GetImportInstallationMediaRequest;
 var GetImportInstallationMediaResponse = /** @class */ (function (_super) {
     __extends(GetImportInstallationMediaResponse, _super);
     function GetImportInstallationMediaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetImportInstallationMediaResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImportInstallationMediaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImportInstallationMediaResponse.prototype, "statusCode", void 0);
     return GetImportInstallationMediaResponse;
-}(SpeakeasyBase));
-export { GetImportInstallationMediaResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImportInstallationMediaResponse = GetImportInstallationMediaResponse;

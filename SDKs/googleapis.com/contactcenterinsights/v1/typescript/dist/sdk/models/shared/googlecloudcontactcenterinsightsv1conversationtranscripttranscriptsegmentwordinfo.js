@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo
 /**
  * Word-level info for words in a transcript.
@@ -33,21 +36,21 @@ var GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWor
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endOffset" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo.prototype, "endOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startOffset" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo.prototype, "startOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=word" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo.prototype, "word", void 0);
     return GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo = GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo;

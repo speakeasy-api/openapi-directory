@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmationOfFunds = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountreference16ch_1 = require("./accountreference16ch");
+var amount_1 = require("./amount");
 // ConfirmationOfFunds
 /**
  * JSON Request body for the "Confirmation of funds service".
@@ -63,21 +66,21 @@ var ConfirmationOfFunds = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], ConfirmationOfFunds.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardNumber" }),
         __metadata("design:type", String)
     ], ConfirmationOfFunds.prototype, "cardNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instructedAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instructedAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], ConfirmationOfFunds.prototype, "instructedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee" }),
         __metadata("design:type", String)
     ], ConfirmationOfFunds.prototype, "payee", void 0);
     return ConfirmationOfFunds;
-}(SpeakeasyBase));
-export { ConfirmationOfFunds };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmationOfFunds = ConfirmationOfFunds;

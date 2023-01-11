@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectParameterDetails } from "./projectparameterdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectsRow = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectparameterdetails_1 = require("./projectparameterdetails");
 var ProjectsRow = /** @class */ (function (_super) {
     __extends(ProjectsRow, _super);
     function ProjectsRow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bbox" }),
         __metadata("design:type", Array)
     ], ProjectsRow.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries" }),
         __metadata("design:type", Array)
     ], ProjectsRow.prototype, "countries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity" }),
         __metadata("design:type", String)
     ], ProjectsRow.prototype, "entity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstUpdated" }),
         __metadata("design:type", Date)
     ], ProjectsRow.prototype, "firstUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ProjectsRow.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAnalysis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAnalysis" }),
         __metadata("design:type", Boolean)
     ], ProjectsRow.prototype, "isAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isMobile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isMobile" }),
         __metadata("design:type", Boolean)
     ], ProjectsRow.prototype, "isMobile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], ProjectsRow.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationIds" }),
         __metadata("design:type", Array)
     ], ProjectsRow.prototype, "locationIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations" }),
         __metadata("design:type", Number)
     ], ProjectsRow.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=measurements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurements" }),
         __metadata("design:type", Number)
     ], ProjectsRow.prototype, "measurements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProjectsRow.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: ProjectParameterDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: projectparameterdetails_1.ProjectParameterDetails }),
         __metadata("design:type", Array)
     ], ProjectsRow.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sensorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sensorType" }),
         __metadata("design:type", String)
     ], ProjectsRow.prototype, "sensorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources" }),
         __metadata("design:type", Array)
     ], ProjectsRow.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtitle" }),
         __metadata("design:type", String)
     ], ProjectsRow.prototype, "subtitle", void 0);
     return ProjectsRow;
-}(SpeakeasyBase));
-export { ProjectsRow };
+}(utils_1.SpeakeasyBase));
+exports.ProjectsRow = ProjectsRow;

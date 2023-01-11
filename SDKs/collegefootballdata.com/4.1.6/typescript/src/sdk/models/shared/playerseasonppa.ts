@@ -58,7 +58,7 @@ export class PlayerSeasonPpaTotalPpa extends SpeakeasyBase {
 
 export class PlayerSeasonPpa extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=averagePPA" })
-  averagePpa?: PlayerSeasonPpaAveragePpa;
+  averagePPA?: PlayerSeasonPpaAveragePpa;
 
   @SpeakeasyMetadata({ data: "json, name=conference" })
   conference?: string;
@@ -79,5 +79,5 @@ export class PlayerSeasonPpa extends SpeakeasyBase {
   team?: string;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: PlayerSeasonPpaTotalPpa;
+  totalPPA?: PlayerSeasonPpaTotalPpa;
 }

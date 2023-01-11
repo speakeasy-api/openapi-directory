@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainDetails } from "./domaindetails";
-import { IpAddressDetails } from "./ipaddressdetails";
-import { UserIdentity } from "./useridentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingActor = void 0;
+var utils_1 = require("../../../internal/utils");
+var domaindetails_1 = require("./domaindetails");
+var ipaddressdetails_1 = require("./ipaddressdetails");
+var useridentity_1 = require("./useridentity");
 // FindingActor
 /**
  * Provides information about an entity that performed an action that produced a policy finding for a resource.
@@ -36,17 +39,17 @@ var FindingActor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainDetails" }),
-        __metadata("design:type", DomainDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainDetails" }),
+        __metadata("design:type", domaindetails_1.DomainDetails)
     ], FindingActor.prototype, "domainDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressDetails" }),
-        __metadata("design:type", IpAddressDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressDetails" }),
+        __metadata("design:type", ipaddressdetails_1.IpAddressDetails)
     ], FindingActor.prototype, "ipAddressDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userIdentity" }),
-        __metadata("design:type", UserIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userIdentity" }),
+        __metadata("design:type", useridentity_1.UserIdentity)
     ], FindingActor.prototype, "userIdentity", void 0);
     return FindingActor;
-}(SpeakeasyBase));
-export { FindingActor };
+}(utils_1.SpeakeasyBase));
+exports.FindingActor = FindingActor;

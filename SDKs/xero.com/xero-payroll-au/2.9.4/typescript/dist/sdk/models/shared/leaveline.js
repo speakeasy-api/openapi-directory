@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LeaveLineCalculationTypeEnum } from "./leavelinecalculationtypeenum";
-import { EmploymentTerminationPaymentTypeEnum } from "./employmentterminationpaymenttypeenum";
-import { EntitlementFinalPayPayoutTypeEnum } from "./entitlementfinalpaypayouttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaveLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var leavelinecalculationtypeenum_1 = require("./leavelinecalculationtypeenum");
+var employmentterminationpaymenttypeenum_1 = require("./employmentterminationpaymenttypeenum");
+var entitlementfinalpaypayouttypeenum_1 = require("./entitlementfinalpaypayouttypeenum");
 var LeaveLine = /** @class */ (function (_super) {
     __extends(LeaveLine, _super);
     function LeaveLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualNumberOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualNumberOfUnits" }),
         __metadata("design:type", Number)
     ], LeaveLine.prototype, "annualNumberOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CalculationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CalculationType" }),
         __metadata("design:type", String)
     ], LeaveLine.prototype, "calculationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmploymentTerminationPaymentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmploymentTerminationPaymentType" }),
         __metadata("design:type", String)
     ], LeaveLine.prototype, "employmentTerminationPaymentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntitlementFinalPayPayoutType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntitlementFinalPayPayoutType" }),
         __metadata("design:type", String)
     ], LeaveLine.prototype, "entitlementFinalPayPayoutType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullTimeNumberOfUnitsPerPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullTimeNumberOfUnitsPerPeriod" }),
         __metadata("design:type", Number)
     ], LeaveLine.prototype, "fullTimeNumberOfUnitsPerPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeSuperannuationGuaranteeContribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeSuperannuationGuaranteeContribution" }),
         __metadata("design:type", Boolean)
     ], LeaveLine.prototype, "includeSuperannuationGuaranteeContribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
         __metadata("design:type", String)
-    ], LeaveLine.prototype, "leaveTypeId", void 0);
+    ], LeaveLine.prototype, "leaveTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfUnits" }),
         __metadata("design:type", Number)
     ], LeaveLine.prototype, "numberOfUnits", void 0);
     return LeaveLine;
-}(SpeakeasyBase));
-export { LeaveLine };
+}(utils_1.SpeakeasyBase));
+exports.LeaveLine = LeaveLine;

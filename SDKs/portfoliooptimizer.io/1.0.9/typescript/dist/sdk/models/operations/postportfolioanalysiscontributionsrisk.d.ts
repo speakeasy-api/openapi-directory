@@ -20,6 +20,6 @@ export declare class PostPortfolioAnalysisContributionsRiskRequest extends Speak
 }
 export declare class PostPortfolioAnalysisContributionsRiskResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisContributionsRisk200ApplicationJsonObject?: PostPortfolioAnalysisContributionsRisk200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisContributionsRisk200ApplicationJSONObject?: PostPortfolioAnalysisContributionsRisk200ApplicationJson;
 }

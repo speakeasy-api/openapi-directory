@@ -61,7 +61,7 @@ export class CloudSqlSettings extends SpeakeasyBase {
   dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=databaseFlags" })
-  databaseFlags?: Map<string, string>;
+  databaseFlags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=databaseVersion" })
   databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
@@ -88,7 +88,7 @@ export class CloudSqlSettings extends SpeakeasyBase {
   tier?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
+  userLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=zone" })
   zone?: string;
@@ -122,7 +122,7 @@ export class CloudSqlSettingsInput extends SpeakeasyBase {
   dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=databaseFlags" })
-  databaseFlags?: Map<string, string>;
+  databaseFlags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=databaseVersion" })
   databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
@@ -146,7 +146,7 @@ export class CloudSqlSettingsInput extends SpeakeasyBase {
   tier?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
+  userLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=zone" })
   zone?: string;

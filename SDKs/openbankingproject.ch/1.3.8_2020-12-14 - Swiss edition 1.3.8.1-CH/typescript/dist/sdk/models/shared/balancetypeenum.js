@@ -1,4 +1,7 @@
-export var BalanceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BalanceTypeEnum = void 0;
+var BalanceTypeEnum;
 (function (BalanceTypeEnum) {
     BalanceTypeEnum["ClosingBooked"] = "closingBooked";
     BalanceTypeEnum["Expected"] = "expected";
@@ -7,4 +10,4 @@ export var BalanceTypeEnum;
     BalanceTypeEnum["InterimBooked"] = "interimBooked";
     BalanceTypeEnum["ForwardAvailable"] = "forwardAvailable";
     BalanceTypeEnum["NonInvoiced"] = "nonInvoiced";
-})(BalanceTypeEnum || (BalanceTypeEnum = {}));
+})(BalanceTypeEnum = exports.BalanceTypeEnum || (exports.BalanceTypeEnum = {}));

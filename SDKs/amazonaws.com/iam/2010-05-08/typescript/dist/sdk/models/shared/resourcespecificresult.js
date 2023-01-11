@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyEvaluationDecisionTypeEnum } from "./policyevaluationdecisiontypeenum";
-import { Statement } from "./statement";
-import { PermissionsBoundaryDecisionDetail } from "./permissionsboundarydecisiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceSpecificResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var policyevaluationdecisiontypeenum_1 = require("./policyevaluationdecisiontypeenum");
+var statement_1 = require("./statement");
+var permissionsboundarydecisiondetail_1 = require("./permissionsboundarydecisiondetail");
 // ResourceSpecificResult
 /**
  * <p>Contains the result of the simulation of a single API operation call on a single resource.</p> <p>This data type is used by a member of the <a>EvaluationResult</a> data type.</p>
@@ -36,29 +39,29 @@ var ResourceSpecificResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ResourceSpecificResult.prototype, "evalDecisionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResourceSpecificResult.prototype, "evalResourceDecision", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResourceSpecificResult.prototype, "evalResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Statement }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: statement_1.Statement }),
         __metadata("design:type", Array)
     ], ResourceSpecificResult.prototype, "matchedStatements", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ResourceSpecificResult.prototype, "missingContextValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PermissionsBoundaryDecisionDetail)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", permissionsboundarydecisiondetail_1.PermissionsBoundaryDecisionDetail)
     ], ResourceSpecificResult.prototype, "permissionsBoundaryDecisionDetail", void 0);
     return ResourceSpecificResult;
-}(SpeakeasyBase));
-export { ResourceSpecificResult };
+}(utils_1.SpeakeasyBase));
+exports.ResourceSpecificResult = ResourceSpecificResult;

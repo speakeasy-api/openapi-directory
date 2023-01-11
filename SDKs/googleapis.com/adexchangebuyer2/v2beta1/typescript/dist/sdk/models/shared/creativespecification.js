@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdSize } from "./adsize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var adsize_1 = require("./adsize");
 // CreativeSpecification
 /**
  * Represents information for a creative that is associated with a Programmatic Guaranteed/Preferred Deal in Ad Manager.
@@ -34,13 +37,13 @@ var CreativeSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeCompanionSizes", elemType: AdSize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeCompanionSizes", elemType: adsize_1.AdSize }),
         __metadata("design:type", Array)
     ], CreativeSpecification.prototype, "creativeCompanionSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeSize" }),
-        __metadata("design:type", AdSize)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeSize" }),
+        __metadata("design:type", adsize_1.AdSize)
     ], CreativeSpecification.prototype, "creativeSize", void 0);
     return CreativeSpecification;
-}(SpeakeasyBase));
-export { CreativeSpecification };
+}(utils_1.SpeakeasyBase));
+exports.CreativeSpecification = CreativeSpecification;

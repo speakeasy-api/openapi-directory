@@ -17,11 +17,11 @@ export class VpnDetails extends SpeakeasyBase {
   vpnName?: string;
 
   @SpeakeasyMetadata()
-  vpnPsk?: string;
+  vpnPSK?: string;
 
   @SpeakeasyMetadata()
   vpnState?: string;
 
   @SpeakeasyMetadata()
-  vpnTunnelOriginatorIp?: string;
+  vpnTunnelOriginatorIP?: string;
 }

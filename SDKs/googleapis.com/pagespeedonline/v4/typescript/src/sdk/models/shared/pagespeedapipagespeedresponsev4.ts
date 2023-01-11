@@ -56,7 +56,7 @@ export class PagespeedApiPagespeedResponseV4FormattedResults extends SpeakeasyBa
   locale?: string;
 
   @SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResults })
-  ruleResults?: Map<string, PagespeedApiPagespeedResponseV4FormattedResultsRuleResults>;
+  ruleResults?: Record<string, PagespeedApiPagespeedResponseV4FormattedResultsRuleResults>;
 }
 
 
@@ -100,7 +100,7 @@ export class PagespeedApiPagespeedResponseV4LoadingExperience extends SpeakeasyB
   initialUrl?: string;
 
   @SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4LoadingExperienceMetrics })
-  metrics?: Map<string, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics>;
+  metrics?: Record<string, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics>;
 
   @SpeakeasyMetadata()
   overallCategory?: string;
@@ -229,7 +229,7 @@ export class PagespeedApiPagespeedResponseV4 extends SpeakeasyBase {
   responseCode?: number;
 
   @SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4RuleGroups })
-  ruleGroups?: Map<string, PagespeedApiPagespeedResponseV4RuleGroups>;
+  ruleGroups?: Record<string, PagespeedApiPagespeedResponseV4RuleGroups>;
 
   @SpeakeasyMetadata()
   screenshot?: PagespeedApiImageV4;

@@ -56,7 +56,7 @@ export enum FieldDataTypeEnum {
 **/
 export class Field extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalDetails" })
-  additionalDetails?: Map<string, any>;
+  additionalDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=dataType" })
   dataType?: FieldDataTypeEnum;

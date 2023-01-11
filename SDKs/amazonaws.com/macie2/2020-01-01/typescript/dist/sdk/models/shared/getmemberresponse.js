@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationshipStatusEnum } from "./relationshipstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMemberResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationshipstatusenum_1 = require("./relationshipstatusenum");
 var GetMemberResponse = /** @class */ (function (_super) {
     __extends(GetMemberResponse, _super);
     function GetMemberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=administratorAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administratorAccountId" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "administratorAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitedAt" }),
         __metadata("design:type", Date)
     ], GetMemberResponse.prototype, "invitedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterAccountId" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "masterAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipStatus" }),
         __metadata("design:type", String)
     ], GetMemberResponse.prototype, "relationshipStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], GetMemberResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], GetMemberResponse.prototype, "updatedAt", void 0);
     return GetMemberResponse;
-}(SpeakeasyBase));
-export { GetMemberResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMemberResponse = GetMemberResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostProjectUsernameProjectSshKeyResponse = exports.PostProjectUsernameProjectSshKeyRequest = exports.PostProjectUsernameProjectSshKeyDefaultApplicationJson = exports.PostProjectUsernameProjectSshKeyRequestBody = exports.PostProjectUsernameProjectSshKeyHeaders = exports.PostProjectUsernameProjectSshKeyContentTypeEnum = exports.PostProjectUsernameProjectSshKeyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostProjectUsernameProjectSshKeyPathParams = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyPathParams, _super);
     function PostProjectUsernameProjectSshKeyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyPathParams.prototype, "username", void 0);
     return PostProjectUsernameProjectSshKeyPathParams;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyPathParams };
-export var PostProjectUsernameProjectSshKeyContentTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyPathParams = PostProjectUsernameProjectSshKeyPathParams;
+var PostProjectUsernameProjectSshKeyContentTypeEnum;
 (function (PostProjectUsernameProjectSshKeyContentTypeEnum) {
     PostProjectUsernameProjectSshKeyContentTypeEnum["ApplicationJson"] = "application/json";
-})(PostProjectUsernameProjectSshKeyContentTypeEnum || (PostProjectUsernameProjectSshKeyContentTypeEnum = {}));
+})(PostProjectUsernameProjectSshKeyContentTypeEnum = exports.PostProjectUsernameProjectSshKeyContentTypeEnum || (exports.PostProjectUsernameProjectSshKeyContentTypeEnum = {}));
 var PostProjectUsernameProjectSshKeyHeaders = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyHeaders, _super);
     function PostProjectUsernameProjectSshKeyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Content-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Content-Type" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyHeaders.prototype, "contentType", void 0);
     return PostProjectUsernameProjectSshKeyHeaders;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyHeaders = PostProjectUsernameProjectSshKeyHeaders;
 var PostProjectUsernameProjectSshKeyRequestBody = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyRequestBody, _super);
     function PostProjectUsernameProjectSshKeyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyRequestBody.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_key" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyRequestBody.prototype, "privateKey", void 0);
     return PostProjectUsernameProjectSshKeyRequestBody;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyRequestBody = PostProjectUsernameProjectSshKeyRequestBody;
 var PostProjectUsernameProjectSshKeyDefaultApplicationJson = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyDefaultApplicationJson, _super);
     function PostProjectUsernameProjectSshKeyDefaultApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyDefaultApplicationJson.prototype, "message", void 0);
     return PostProjectUsernameProjectSshKeyDefaultApplicationJson;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyDefaultApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyDefaultApplicationJson = PostProjectUsernameProjectSshKeyDefaultApplicationJson;
 var PostProjectUsernameProjectSshKeyRequest = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyRequest, _super);
     function PostProjectUsernameProjectSshKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostProjectUsernameProjectSshKeyPathParams)
     ], PostProjectUsernameProjectSshKeyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostProjectUsernameProjectSshKeyHeaders)
     ], PostProjectUsernameProjectSshKeyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostProjectUsernameProjectSshKeyRequestBody)
     ], PostProjectUsernameProjectSshKeyRequest.prototype, "request", void 0);
     return PostProjectUsernameProjectSshKeyRequest;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyRequest = PostProjectUsernameProjectSshKeyRequest;
 var PostProjectUsernameProjectSshKeyResponse = /** @class */ (function (_super) {
     __extends(PostProjectUsernameProjectSshKeyResponse, _super);
     function PostProjectUsernameProjectSshKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostProjectUsernameProjectSshKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostProjectUsernameProjectSshKeyDefaultApplicationJson)
-    ], PostProjectUsernameProjectSshKeyResponse.prototype, "postProjectUsernameProjectSshKeyDefaultApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostProjectUsernameProjectSshKeyResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostProjectUsernameProjectSshKeyDefaultApplicationJson)
+    ], PostProjectUsernameProjectSshKeyResponse.prototype, "postProjectUsernameProjectSshKeyDefaultApplicationJSONObject", void 0);
     return PostProjectUsernameProjectSshKeyResponse;
-}(SpeakeasyBase));
-export { PostProjectUsernameProjectSshKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostProjectUsernameProjectSshKeyResponse = PostProjectUsernameProjectSshKeyResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictorSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // PredictorSummary
 /**
  * Provides a summary of the predictor properties that are used in the <a>ListPredictors</a> operation. To get the complete set of properties, call the <a>DescribePredictor</a> operation, and provide the listed <code>PredictorArn</code>.
@@ -33,33 +36,33 @@ var PredictorSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], PredictorSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetGroupArn" }),
         __metadata("design:type", String)
     ], PredictorSummary.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], PredictorSummary.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], PredictorSummary.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorArn" }),
         __metadata("design:type", String)
     ], PredictorSummary.prototype, "predictorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorName" }),
         __metadata("design:type", String)
     ], PredictorSummary.prototype, "predictorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], PredictorSummary.prototype, "status", void 0);
     return PredictorSummary;
-}(SpeakeasyBase));
-export { PredictorSummary };
+}(utils_1.SpeakeasyBase));
+exports.PredictorSummary = PredictorSummary;

@@ -32,7 +32,7 @@ export class CreateStatementsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statements?: shared.Statements;

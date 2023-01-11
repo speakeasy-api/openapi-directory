@@ -10,5 +10,5 @@ export declare class ProtocolSyslogSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolSyslogSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSyslogSetConfig200ApplicationJsonString?: string;
+    protocolSyslogSetConfig200ApplicationJSONString?: string;
 }

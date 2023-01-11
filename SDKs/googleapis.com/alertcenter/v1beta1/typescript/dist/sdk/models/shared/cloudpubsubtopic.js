@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CloudPubsubTopicPayloadFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudPubsubTopic = exports.CloudPubsubTopicPayloadFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CloudPubsubTopicPayloadFormatEnum;
 (function (CloudPubsubTopicPayloadFormatEnum) {
     CloudPubsubTopicPayloadFormatEnum["PayloadFormatUnspecified"] = "PAYLOAD_FORMAT_UNSPECIFIED";
     CloudPubsubTopicPayloadFormatEnum["Json"] = "JSON";
-})(CloudPubsubTopicPayloadFormatEnum || (CloudPubsubTopicPayloadFormatEnum = {}));
+})(CloudPubsubTopicPayloadFormatEnum = exports.CloudPubsubTopicPayloadFormatEnum || (exports.CloudPubsubTopicPayloadFormatEnum = {}));
 // CloudPubsubTopic
 /**
  * A reference to a Cloud Pubsub topic. To register for notifications, the owner of the topic must grant `alerts-api-push-notifications@system.gserviceaccount.com` the `projects.topics.publish` permission.
@@ -38,13 +41,13 @@ var CloudPubsubTopic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payloadFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payloadFormat" }),
         __metadata("design:type", String)
     ], CloudPubsubTopic.prototype, "payloadFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicName" }),
         __metadata("design:type", String)
     ], CloudPubsubTopic.prototype, "topicName", void 0);
     return CloudPubsubTopic;
-}(SpeakeasyBase));
-export { CloudPubsubTopic };
+}(utils_1.SpeakeasyBase));
+exports.CloudPubsubTopic = CloudPubsubTopic;

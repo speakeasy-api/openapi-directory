@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MatterPermissionRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatterPermission = exports.MatterPermissionRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MatterPermissionRoleEnum;
 (function (MatterPermissionRoleEnum) {
     MatterPermissionRoleEnum["RoleUnspecified"] = "ROLE_UNSPECIFIED";
     MatterPermissionRoleEnum["Collaborator"] = "COLLABORATOR";
     MatterPermissionRoleEnum["Owner"] = "OWNER";
-})(MatterPermissionRoleEnum || (MatterPermissionRoleEnum = {}));
+})(MatterPermissionRoleEnum = exports.MatterPermissionRoleEnum || (exports.MatterPermissionRoleEnum = {}));
 // MatterPermission
 /**
  * Users can be matter owners or collaborators. Each matter has only one owner. All others users who can access the matter are collaborators. When an account is purged, its corresponding MatterPermission resources cease to exist.
@@ -39,13 +42,13 @@ var MatterPermission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], MatterPermission.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], MatterPermission.prototype, "role", void 0);
     return MatterPermission;
-}(SpeakeasyBase));
-export { MatterPermission };
+}(utils_1.SpeakeasyBase));
+exports.MatterPermission = MatterPermission;

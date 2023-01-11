@@ -14,5 +14,5 @@ export declare class GetOrganizationApiRequestsOverviewRequest extends Speakeasy
 export declare class GetOrganizationApiRequestsOverviewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationApiRequestsOverview200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationApiRequestsOverview200ApplicationJSONObject?: Record<string, any>;
 }

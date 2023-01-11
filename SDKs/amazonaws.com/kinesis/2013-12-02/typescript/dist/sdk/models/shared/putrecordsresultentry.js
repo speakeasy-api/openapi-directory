@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutRecordsResultEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // PutRecordsResultEntry
 /**
  * Represents the result of an individual record from a <code>PutRecords</code> request. A record that is successfully added to a stream includes <code>SequenceNumber</code> and <code>ShardId</code> in the result. A record that fails to be added to the stream includes <code>ErrorCode</code> and <code>ErrorMessage</code> in the result.
@@ -33,21 +36,21 @@ var PutRecordsResultEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], PutRecordsResultEntry.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], PutRecordsResultEntry.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SequenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SequenceNumber" }),
         __metadata("design:type", String)
     ], PutRecordsResultEntry.prototype, "sequenceNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardId" }),
         __metadata("design:type", String)
     ], PutRecordsResultEntry.prototype, "shardId", void 0);
     return PutRecordsResultEntry;
-}(SpeakeasyBase));
-export { PutRecordsResultEntry };
+}(utils_1.SpeakeasyBase));
+exports.PutRecordsResultEntry = PutRecordsResultEntry;

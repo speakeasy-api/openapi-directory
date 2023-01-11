@@ -11,7 +11,7 @@ export declare class TerminateTargetInstancesHeaders extends SpeakeasyBase {
 }
 export declare class TerminateTargetInstancesRequestBody extends SpeakeasyBase {
     sourceServerIDs: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class TerminateTargetInstancesRequest extends SpeakeasyBase {
     headers: TerminateTargetInstancesHeaders;

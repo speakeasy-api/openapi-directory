@@ -41,7 +41,7 @@ export class GetRepositoriesWorkspaceRepoSlugVersionsResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedVersions?: shared.PaginatedVersions;

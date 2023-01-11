@@ -25,5 +25,5 @@ export class GetNameResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getName200ApplicationJsonString?: string;
+  getName200ApplicationJSONString?: string;
 }

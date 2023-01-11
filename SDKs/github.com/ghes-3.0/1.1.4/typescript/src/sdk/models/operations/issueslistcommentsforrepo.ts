@@ -11,15 +11,10 @@ export class IssuesListCommentsForRepoPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum IssuesListCommentsForRepoDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
 
 export class IssuesListCommentsForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: IssuesListCommentsForRepoDirectionEnum;
+  direction?: shared.SortEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -49,7 +44,7 @@ export class IssuesListCommentsForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerScoreTimeSpanEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerScore = exports.PlayerScoreTimeSpanEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerScoreTimeSpanEnum;
 (function (PlayerScoreTimeSpanEnum) {
     PlayerScoreTimeSpanEnum["ScoreTimeSpanUnspecified"] = "SCORE_TIME_SPAN_UNSPECIFIED";
     PlayerScoreTimeSpanEnum["AllTime"] = "ALL_TIME";
     PlayerScoreTimeSpanEnum["Weekly"] = "WEEKLY";
     PlayerScoreTimeSpanEnum["Daily"] = "DAILY";
-})(PlayerScoreTimeSpanEnum || (PlayerScoreTimeSpanEnum = {}));
+})(PlayerScoreTimeSpanEnum = exports.PlayerScoreTimeSpanEnum || (exports.PlayerScoreTimeSpanEnum = {}));
 // PlayerScore
 /**
  * A player score.
@@ -40,25 +43,25 @@ var PlayerScore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedScore" }),
         __metadata("design:type", String)
     ], PlayerScore.prototype, "formattedScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PlayerScore.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", String)
     ], PlayerScore.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreTag" }),
         __metadata("design:type", String)
     ], PlayerScore.prototype, "scoreTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeSpan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeSpan" }),
         __metadata("design:type", String)
     ], PlayerScore.prototype, "timeSpan", void 0);
     return PlayerScore;
-}(SpeakeasyBase));
-export { PlayerScore };
+}(utils_1.SpeakeasyBase));
+exports.PlayerScore = PlayerScore;

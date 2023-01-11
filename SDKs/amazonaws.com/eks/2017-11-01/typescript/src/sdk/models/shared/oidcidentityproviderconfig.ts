@@ -30,13 +30,13 @@ export class OidcIdentityProviderConfig extends SpeakeasyBase {
   issuerUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=requiredClaims" })
-  requiredClaims?: Map<string, string>;
+  requiredClaims?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: ConfigStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=usernameClaim" })
   usernameClaim?: string;

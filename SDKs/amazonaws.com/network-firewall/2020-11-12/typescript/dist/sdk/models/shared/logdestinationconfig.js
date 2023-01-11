@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogDestinationTypeEnum } from "./logdestinationtypeenum";
-import { LogTypeEnum } from "./logtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogDestinationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var logdestinationtypeenum_1 = require("./logdestinationtypeenum");
+var logtypeenum_1 = require("./logtypeenum");
 // LogDestinationConfig
 /**
  * <p>Defines where AWS Network Firewall sends logs for the firewall for one log type. This is used in <a>LoggingConfiguration</a>. You can send each type of log to an Amazon S3 bucket, a CloudWatch log group, or a Kinesis Data Firehose delivery stream.</p> <p>Network Firewall generates logs for stateful rule groups. You can save alert and flow log types. The stateful rules engine records flow logs for all network traffic that it receives. It records alert logs for traffic that matches stateful rules that have the rule action set to <code>DROP</code> or <code>ALERT</code>. </p>
@@ -35,17 +38,17 @@ var LogDestinationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogDestination" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogDestination" }),
+        __metadata("design:type", Object)
     ], LogDestinationConfig.prototype, "logDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogDestinationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogDestinationType" }),
         __metadata("design:type", String)
     ], LogDestinationConfig.prototype, "logDestinationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogType" }),
         __metadata("design:type", String)
     ], LogDestinationConfig.prototype, "logType", void 0);
     return LogDestinationConfig;
-}(SpeakeasyBase));
-export { LogDestinationConfig };
+}(utils_1.SpeakeasyBase));
+exports.LogDestinationConfig = LogDestinationConfig;

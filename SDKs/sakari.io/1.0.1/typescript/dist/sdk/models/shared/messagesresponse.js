@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Message } from "./message";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessagesResponse = exports.MessagesResponsePagination = exports.MessagesResponseError = void 0;
+var utils_1 = require("../../../internal/utils");
+var message_1 = require("./message");
 var MessagesResponseError = /** @class */ (function (_super) {
     __extends(MessagesResponseError, _super);
     function MessagesResponseError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], MessagesResponseError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MessagesResponseError.prototype, "message", void 0);
     return MessagesResponseError;
-}(SpeakeasyBase));
-export { MessagesResponseError };
+}(utils_1.SpeakeasyBase));
+exports.MessagesResponseError = MessagesResponseError;
 var MessagesResponsePagination = /** @class */ (function (_super) {
     __extends(MessagesResponsePagination, _super);
     function MessagesResponsePagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], MessagesResponsePagination.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], MessagesResponsePagination.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], MessagesResponsePagination.prototype, "totalCount", void 0);
     return MessagesResponsePagination;
-}(SpeakeasyBase));
-export { MessagesResponsePagination };
+}(utils_1.SpeakeasyBase));
+exports.MessagesResponsePagination = MessagesResponsePagination;
 var MessagesResponse = /** @class */ (function (_super) {
     __extends(MessagesResponse, _super);
     function MessagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Message }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: message_1.Message }),
         __metadata("design:type", Array)
     ], MessagesResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", MessagesResponseError)
     ], MessagesResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", MessagesResponsePagination)
     ], MessagesResponse.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], MessagesResponse.prototype, "success", void 0);
     return MessagesResponse;
-}(SpeakeasyBase));
-export { MessagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.MessagesResponse = MessagesResponse;

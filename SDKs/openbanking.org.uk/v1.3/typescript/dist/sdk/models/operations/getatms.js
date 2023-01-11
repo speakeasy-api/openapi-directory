@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,204 +23,206 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAtmsResponse = exports.GetAtmsRequest = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum = exports.GetAtmsErrorObject = exports.GetAtms503ErrorObject = exports.GetAtms503ErrorObjectTitleEnum = exports.GetAtms503ErrorObjectStatusEnum = exports.GetAtms503ErrorObjectDescriptionEnum = exports.GetAtms500ErrorObject = exports.GetAtms500ErrorObjectTitleEnum = exports.GetAtms500ErrorObjectStatusEnum = exports.GetAtms500ErrorObjectDescriptionEnum = exports.GetAtms429ErrorObject = exports.GetAtms429ErrorObjectTitleEnum = exports.GetAtms429ErrorObjectStatusEnum = exports.GetAtms429ErrorObjectDescriptionEnum = exports.GetAtms408ErrorObject = exports.GetAtms408ErrorObjectTitleEnum = exports.GetAtms408ErrorObjectStatusEnum = exports.GetAtms408ErrorObjectDescriptionEnum = exports.GetAtms400ErrorObject = exports.GetAtms400ErrorObjectTitleEnum = exports.GetAtms400ErrorObjectStatusEnum = exports.GetAtms400ErrorObjectDescriptionEnum = exports.GetAtmsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAtmsHeaders = /** @class */ (function (_super) {
     __extends(GetAtmsHeaders, _super);
     function GetAtmsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], GetAtmsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], GetAtmsHeaders.prototype, "ifNoneMatch", void 0);
     return GetAtmsHeaders;
-}(SpeakeasyBase));
-export { GetAtmsHeaders };
-export var GetAtms400ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtmsHeaders = GetAtmsHeaders;
+var GetAtms400ErrorObjectDescriptionEnum;
 (function (GetAtms400ErrorObjectDescriptionEnum) {
     GetAtms400ErrorObjectDescriptionEnum["YouHaveSentARequestWhichCouldNotBeUnderstood"] = "You have sent a request which could not be understood.";
-})(GetAtms400ErrorObjectDescriptionEnum || (GetAtms400ErrorObjectDescriptionEnum = {}));
-export var GetAtms400ErrorObjectStatusEnum;
+})(GetAtms400ErrorObjectDescriptionEnum = exports.GetAtms400ErrorObjectDescriptionEnum || (exports.GetAtms400ErrorObjectDescriptionEnum = {}));
+var GetAtms400ErrorObjectStatusEnum;
 (function (GetAtms400ErrorObjectStatusEnum) {
     GetAtms400ErrorObjectStatusEnum["FourHundred"] = "400";
-})(GetAtms400ErrorObjectStatusEnum || (GetAtms400ErrorObjectStatusEnum = {}));
-export var GetAtms400ErrorObjectTitleEnum;
+})(GetAtms400ErrorObjectStatusEnum = exports.GetAtms400ErrorObjectStatusEnum || (exports.GetAtms400ErrorObjectStatusEnum = {}));
+var GetAtms400ErrorObjectTitleEnum;
 (function (GetAtms400ErrorObjectTitleEnum) {
     GetAtms400ErrorObjectTitleEnum["BadRequest"] = "Bad request";
-})(GetAtms400ErrorObjectTitleEnum || (GetAtms400ErrorObjectTitleEnum = {}));
+})(GetAtms400ErrorObjectTitleEnum = exports.GetAtms400ErrorObjectTitleEnum || (exports.GetAtms400ErrorObjectTitleEnum = {}));
 var GetAtms400ErrorObject = /** @class */ (function (_super) {
     __extends(GetAtms400ErrorObject, _super);
     function GetAtms400ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtms400ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtms400ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtms400ErrorObject.prototype, "title", void 0);
     return GetAtms400ErrorObject;
-}(SpeakeasyBase));
-export { GetAtms400ErrorObject };
-export var GetAtms408ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms400ErrorObject = GetAtms400ErrorObject;
+var GetAtms408ErrorObjectDescriptionEnum;
 (function (GetAtms408ErrorObjectDescriptionEnum) {
     GetAtms408ErrorObjectDescriptionEnum["YourClientHasFailedToSubmitARequestAndATimeoutHasOccurred"] = "Your client has failed to submit a request, and a timeout has occurred.";
-})(GetAtms408ErrorObjectDescriptionEnum || (GetAtms408ErrorObjectDescriptionEnum = {}));
-export var GetAtms408ErrorObjectStatusEnum;
+})(GetAtms408ErrorObjectDescriptionEnum = exports.GetAtms408ErrorObjectDescriptionEnum || (exports.GetAtms408ErrorObjectDescriptionEnum = {}));
+var GetAtms408ErrorObjectStatusEnum;
 (function (GetAtms408ErrorObjectStatusEnum) {
     GetAtms408ErrorObjectStatusEnum["FourHundredAndEight"] = "408";
-})(GetAtms408ErrorObjectStatusEnum || (GetAtms408ErrorObjectStatusEnum = {}));
-export var GetAtms408ErrorObjectTitleEnum;
+})(GetAtms408ErrorObjectStatusEnum = exports.GetAtms408ErrorObjectStatusEnum || (exports.GetAtms408ErrorObjectStatusEnum = {}));
+var GetAtms408ErrorObjectTitleEnum;
 (function (GetAtms408ErrorObjectTitleEnum) {
     GetAtms408ErrorObjectTitleEnum["ClientTimeout"] = "Client timeout";
-})(GetAtms408ErrorObjectTitleEnum || (GetAtms408ErrorObjectTitleEnum = {}));
+})(GetAtms408ErrorObjectTitleEnum = exports.GetAtms408ErrorObjectTitleEnum || (exports.GetAtms408ErrorObjectTitleEnum = {}));
 var GetAtms408ErrorObject = /** @class */ (function (_super) {
     __extends(GetAtms408ErrorObject, _super);
     function GetAtms408ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtms408ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtms408ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtms408ErrorObject.prototype, "title", void 0);
     return GetAtms408ErrorObject;
-}(SpeakeasyBase));
-export { GetAtms408ErrorObject };
-export var GetAtms429ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms408ErrorObject = GetAtms408ErrorObject;
+var GetAtms429ErrorObjectDescriptionEnum;
 (function (GetAtms429ErrorObjectDescriptionEnum) {
     GetAtms429ErrorObjectDescriptionEnum["YouHaveRequestedThisResourceTooOftenSlowDown"] = "You have requested this resource too often. Slow down.";
-})(GetAtms429ErrorObjectDescriptionEnum || (GetAtms429ErrorObjectDescriptionEnum = {}));
-export var GetAtms429ErrorObjectStatusEnum;
+})(GetAtms429ErrorObjectDescriptionEnum = exports.GetAtms429ErrorObjectDescriptionEnum || (exports.GetAtms429ErrorObjectDescriptionEnum = {}));
+var GetAtms429ErrorObjectStatusEnum;
 (function (GetAtms429ErrorObjectStatusEnum) {
     GetAtms429ErrorObjectStatusEnum["FourHundredAndTwentyNine"] = "429";
-})(GetAtms429ErrorObjectStatusEnum || (GetAtms429ErrorObjectStatusEnum = {}));
-export var GetAtms429ErrorObjectTitleEnum;
+})(GetAtms429ErrorObjectStatusEnum = exports.GetAtms429ErrorObjectStatusEnum || (exports.GetAtms429ErrorObjectStatusEnum = {}));
+var GetAtms429ErrorObjectTitleEnum;
 (function (GetAtms429ErrorObjectTitleEnum) {
     GetAtms429ErrorObjectTitleEnum["TooManyRequests"] = "Too many requests";
-})(GetAtms429ErrorObjectTitleEnum || (GetAtms429ErrorObjectTitleEnum = {}));
+})(GetAtms429ErrorObjectTitleEnum = exports.GetAtms429ErrorObjectTitleEnum || (exports.GetAtms429ErrorObjectTitleEnum = {}));
 var GetAtms429ErrorObject = /** @class */ (function (_super) {
     __extends(GetAtms429ErrorObject, _super);
     function GetAtms429ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtms429ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtms429ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtms429ErrorObject.prototype, "title", void 0);
     return GetAtms429ErrorObject;
-}(SpeakeasyBase));
-export { GetAtms429ErrorObject };
-export var GetAtms500ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms429ErrorObject = GetAtms429ErrorObject;
+var GetAtms500ErrorObjectDescriptionEnum;
 (function (GetAtms500ErrorObjectDescriptionEnum) {
     GetAtms500ErrorObjectDescriptionEnum["AnErrorOccurredOnTheServerNoFurtherInformationIsAvailable"] = "An error occurred on the server. No further information is available.";
-})(GetAtms500ErrorObjectDescriptionEnum || (GetAtms500ErrorObjectDescriptionEnum = {}));
-export var GetAtms500ErrorObjectStatusEnum;
+})(GetAtms500ErrorObjectDescriptionEnum = exports.GetAtms500ErrorObjectDescriptionEnum || (exports.GetAtms500ErrorObjectDescriptionEnum = {}));
+var GetAtms500ErrorObjectStatusEnum;
 (function (GetAtms500ErrorObjectStatusEnum) {
     GetAtms500ErrorObjectStatusEnum["FiveHundred"] = "500";
-})(GetAtms500ErrorObjectStatusEnum || (GetAtms500ErrorObjectStatusEnum = {}));
-export var GetAtms500ErrorObjectTitleEnum;
+})(GetAtms500ErrorObjectStatusEnum = exports.GetAtms500ErrorObjectStatusEnum || (exports.GetAtms500ErrorObjectStatusEnum = {}));
+var GetAtms500ErrorObjectTitleEnum;
 (function (GetAtms500ErrorObjectTitleEnum) {
     GetAtms500ErrorObjectTitleEnum["InternalServerError"] = "Internal server error";
-})(GetAtms500ErrorObjectTitleEnum || (GetAtms500ErrorObjectTitleEnum = {}));
+})(GetAtms500ErrorObjectTitleEnum = exports.GetAtms500ErrorObjectTitleEnum || (exports.GetAtms500ErrorObjectTitleEnum = {}));
 var GetAtms500ErrorObject = /** @class */ (function (_super) {
     __extends(GetAtms500ErrorObject, _super);
     function GetAtms500ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtms500ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtms500ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtms500ErrorObject.prototype, "title", void 0);
     return GetAtms500ErrorObject;
-}(SpeakeasyBase));
-export { GetAtms500ErrorObject };
-export var GetAtms503ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms500ErrorObject = GetAtms500ErrorObject;
+var GetAtms503ErrorObjectDescriptionEnum;
 (function (GetAtms503ErrorObjectDescriptionEnum) {
     GetAtms503ErrorObjectDescriptionEnum["TheServiceIsTemporarilyUnavailable"] = "The service is temporarily unavailable.";
-})(GetAtms503ErrorObjectDescriptionEnum || (GetAtms503ErrorObjectDescriptionEnum = {}));
-export var GetAtms503ErrorObjectStatusEnum;
+})(GetAtms503ErrorObjectDescriptionEnum = exports.GetAtms503ErrorObjectDescriptionEnum || (exports.GetAtms503ErrorObjectDescriptionEnum = {}));
+var GetAtms503ErrorObjectStatusEnum;
 (function (GetAtms503ErrorObjectStatusEnum) {
     GetAtms503ErrorObjectStatusEnum["FiveHundredAndThree"] = "503";
-})(GetAtms503ErrorObjectStatusEnum || (GetAtms503ErrorObjectStatusEnum = {}));
-export var GetAtms503ErrorObjectTitleEnum;
+})(GetAtms503ErrorObjectStatusEnum = exports.GetAtms503ErrorObjectStatusEnum || (exports.GetAtms503ErrorObjectStatusEnum = {}));
+var GetAtms503ErrorObjectTitleEnum;
 (function (GetAtms503ErrorObjectTitleEnum) {
     GetAtms503ErrorObjectTitleEnum["ServiceTemporarilyUnavailable"] = "Service temporarily unavailable";
-})(GetAtms503ErrorObjectTitleEnum || (GetAtms503ErrorObjectTitleEnum = {}));
+})(GetAtms503ErrorObjectTitleEnum = exports.GetAtms503ErrorObjectTitleEnum || (exports.GetAtms503ErrorObjectTitleEnum = {}));
 var GetAtms503ErrorObject = /** @class */ (function (_super) {
     __extends(GetAtms503ErrorObject, _super);
     function GetAtms503ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtms503ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtms503ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtms503ErrorObject.prototype, "title", void 0);
     return GetAtms503ErrorObject;
-}(SpeakeasyBase));
-export { GetAtms503ErrorObject };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms503ErrorObject = GetAtms503ErrorObject;
 var GetAtmsErrorObject = /** @class */ (function (_super) {
     __extends(GetAtmsErrorObject, _super);
     function GetAtmsErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetAtmsErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAtmsErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetAtmsErrorObject.prototype, "title", void 0);
     return GetAtmsErrorObject;
-}(SpeakeasyBase));
-export { GetAtmsErrorObject };
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtmsErrorObject = GetAtmsErrorObject;
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum["Balance"] = "Balance";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum["BillPayments"] = "BillPayments";
@@ -236,8 +239,8 @@ export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesE
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum["OrderStatement"] = "OrderStatement";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum["PinActivation"] = "PINActivation";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum["PinChange"] = "PINChange";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum = {}));
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum;
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum = {}));
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum["AudioCashMachine"] = "AudioCashMachine";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum["AutomaticDoors"] = "AutomaticDoors";
@@ -249,7 +252,7 @@ export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilit
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum["LevelAccess"] = "LevelAccess";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum["LowerLevelCounter"] = "LowerLevelCounter";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum["WheelchairAccess"] = "WheelchairAccess";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum = {}));
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum = {}));
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress
 /**
  * Postal Address
@@ -260,36 +263,36 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BuildingNumberOrName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BuildingNumberOrName" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "buildingNumberOrName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Country" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountrySubDivision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountrySubDivision" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "countrySubDivision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptionalAddressField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptionalAddressField" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "optionalAddressField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PostCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PostCode" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "postCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreetName" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "streetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TownName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TownName" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress.prototype, "townName", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress;
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation
 /**
  * Geographic Coordinates
@@ -300,17 +303,17 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Latitude" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Longitude" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation.prototype, "longitude", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation };
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation;
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum["Airport"] = "Airport";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum["BankSpecialisedOutlet"] = "BankSpecialisedOutlet";
@@ -345,20 +348,20 @@ export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCate
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum["SupermarketInternal"] = "SupermarketInternal";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum["UndergroundRailwayStation"] = "UndergroundRailwayStation";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum["UniversityOrCollege"] = "UniversityOrCollege";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum = {}));
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum;
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum = {}));
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum["Pound5"] = "\u00A35";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum["Pound10"] = "\u00A310";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum["Pound20"] = "\u00A320";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum["Pound50"] = "\u00A350";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum["Pound100"] = "\u00A3100";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum = {}));
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum = {}));
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum["Uk"] = "UK";
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum["Eu"] = "EU";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum = {}));
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum = {}));
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand
 /**
  * Brand
@@ -369,16 +372,16 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand =
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkID" }),
         __metadata("design:type", String)
-    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand.prototype, "trademarkId", void 0);
+    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand.prototype, "trademarkID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkIPOCode" }),
         __metadata("design:type", String)
-    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand.prototype, "trademarkIpoCode", void 0);
+    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand.prototype, "trademarkIPOCode", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand;
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName
 /**
  * Organisation Name
@@ -389,12 +392,12 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentO
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LegalName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LegalName" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName.prototype, "legalName", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName;
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation
 /**
  * Parent organisation
@@ -405,20 +408,20 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentO
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BIC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BIC" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LEI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LEI" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation.prototype, "lei", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganisationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganisationName" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisationOrganisationName)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation.prototype, "organisationName", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation;
 // GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation
 /**
  * Organisation
@@ -429,193 +432,193 @@ var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Brand" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentOrganisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentOrganisation" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationParentOrganisation)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation.prototype, "parentOrganisation", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation;
 var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm = /** @class */ (function (_super) {
     __extends(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm, _super);
     function GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ATMID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ATMID" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "atmid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ATMServices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ATMServices" }),
         __metadata("design:type", Array)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "atmServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccessibilityTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccessibilityTypes" }),
         __metadata("design:type", Array)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "accessibilityTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalATMServices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalATMServices" }),
         __metadata("design:type", Array)
-    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "additionalAtmServices", void 0);
+    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "additionalATMServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Address" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BranchIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BranchIdentification" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "branchIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Currency" }),
         __metadata("design:type", Array)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GeographicLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GeographicLocation" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmGeographicLocation)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "geographicLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationCategory" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "locationCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumValueDispensed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumValueDispensed" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "minimumValueDispensed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Organisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Organisation" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "organisation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SiteID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SiteID" }),
         __metadata("design:type", String)
-    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "siteId", void 0);
+    ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "siteID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SiteName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SiteName" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "siteName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SupportedLanguages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SupportedLanguages" }),
         __metadata("design:type", Array)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm.prototype, "supportedLanguages", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm };
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm;
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum["UseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions"] = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum["HttpsWwwOpenbankingOrgUkOpenLicence"] = "https://www.openbanking.org.uk/open-licence";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
-export var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
+var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
 (function (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum) {
     GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum["HttpsWwwOpenbankingOrgUkTerms"] = "https://www.openbanking.org.uk/terms";
-})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
+})(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
 var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = /** @class */ (function (_super) {
     __extends(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData, _super);
     function GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Agreement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Agreement" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "agreement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=License" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=License" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TermsOfUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TermsOfUse" }),
         __metadata("design:type", String)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "termsOfUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalResults" }),
         __metadata("design:type", Number)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "totalResults", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
 var GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson = /** @class */ (function (_super) {
     __extends(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson, _super);
     function GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm }),
         __metadata("design:type", Array)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData)
     ], GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "meta", void 0);
     return GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
-}(SpeakeasyBase));
-export { GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
 var GetAtmsRequest = /** @class */ (function (_super) {
     __extends(GetAtmsRequest, _super);
     function GetAtmsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtmsHeaders)
     ], GetAtmsRequest.prototype, "headers", void 0);
     return GetAtmsRequest;
-}(SpeakeasyBase));
-export { GetAtmsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAtmsRequest = GetAtmsRequest;
 var GetAtmsResponse = /** @class */ (function (_super) {
     __extends(GetAtmsResponse, _super);
     function GetAtmsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtms400ErrorObject)
     ], GetAtmsResponse.prototype, "fourHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtms408ErrorObject)
     ], GetAtmsResponse.prototype, "fourHundredAndEightErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtms429ErrorObject)
     ], GetAtmsResponse.prototype, "fourHundredAndTwentyNineErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtms500ErrorObject)
     ], GetAtmsResponse.prototype, "fiveHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtms503ErrorObject)
     ], GetAtmsResponse.prototype, "fiveHundredAndThreeErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAtmsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAtmsErrorObject)
     ], GetAtmsResponse.prototype, "errorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson)
-    ], GetAtmsResponse.prototype, "getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetAtmsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAtmsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson)
+    ], GetAtmsResponse.prototype, "getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
     return GetAtmsResponse;
-}(SpeakeasyBase));
-export { GetAtmsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAtmsResponse = GetAtmsResponse;

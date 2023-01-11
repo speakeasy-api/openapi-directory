@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+var utils_1 = require("../../../internal/utils");
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
     function User() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=administrator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administrator" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "administrator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], User.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinateFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinateFormat" }),
         __metadata("design:type", String)
     ], User.prototype, "coordinateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceLimit" }),
         __metadata("design:type", Number)
     ], User.prototype, "deviceLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceReadonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceReadonly" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "deviceReadonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], User.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTime" }),
         __metadata("design:type", Date)
     ], User.prototype, "expirationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], User.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], User.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitCommands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitCommands" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "limitCommands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], User.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=map" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=map" }),
         __metadata("design:type", String)
     ], User.prototype, "map", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], User.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], User.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], User.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poiLayer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poiLayer" }),
         __metadata("design:type", String)
     ], User.prototype, "poiLayer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonly" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "readonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], User.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twelveHourFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twelveHourFormat" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "twelveHourFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLimit" }),
         __metadata("design:type", Number)
     ], User.prototype, "userLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zoom" }),
         __metadata("design:type", Number)
     ], User.prototype, "zoom", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

@@ -1,4 +1,7 @@
-export var CloudWatchLogsEncodingEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchLogsEncodingEnum = void 0;
+var CloudWatchLogsEncodingEnum;
 (function (CloudWatchLogsEncodingEnum) {
     CloudWatchLogsEncodingEnum["Ascii"] = "ascii";
     CloudWatchLogsEncodingEnum["Big5"] = "big5";
@@ -92,4 +95,4 @@ export var CloudWatchLogsEncodingEnum;
     CloudWatchLogsEncodingEnum["Utf7"] = "utf_7";
     CloudWatchLogsEncodingEnum["Utf8"] = "utf_8";
     CloudWatchLogsEncodingEnum["Utf8Sig"] = "utf_8_sig";
-})(CloudWatchLogsEncodingEnum || (CloudWatchLogsEncodingEnum = {}));
+})(CloudWatchLogsEncodingEnum = exports.CloudWatchLogsEncodingEnum || (exports.CloudWatchLogsEncodingEnum = {}));

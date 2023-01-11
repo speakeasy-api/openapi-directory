@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Upload } from "./upload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstallToRemoteAccessSessionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var upload_1 = require("./upload");
 // InstallToRemoteAccessSessionResult
 /**
  * Represents the response from the server after AWS Device Farm makes a request to install to a remote access session.
@@ -34,9 +37,9 @@ var InstallToRemoteAccessSessionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appUpload" }),
-        __metadata("design:type", Upload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appUpload" }),
+        __metadata("design:type", upload_1.Upload)
     ], InstallToRemoteAccessSessionResult.prototype, "appUpload", void 0);
     return InstallToRemoteAccessSessionResult;
-}(SpeakeasyBase));
-export { InstallToRemoteAccessSessionResult };
+}(utils_1.SpeakeasyBase));
+exports.InstallToRemoteAccessSessionResult = InstallToRemoteAccessSessionResult;

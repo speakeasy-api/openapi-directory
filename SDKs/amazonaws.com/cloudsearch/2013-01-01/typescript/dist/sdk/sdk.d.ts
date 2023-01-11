@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://cloudsearch.{region}.amazonaws.com", "https://cloudsearch.{region}.amazonaws.com", "http://cloudsearch.{region}.amazonaws.com.cn", "https://cloudsearch.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getBuildSuggesters - Indexes the search suggestions. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html#configuring-suggesters">Configuring Suggesters</a> in the <i>Amazon CloudSearch Developer Guide</i>.
     **/
@@ -212,4 +212,3 @@ export declare class SDK {
     **/
     postUpdateServiceAccessPolicies(req: operations.PostUpdateServiceAccessPoliciesRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdateServiceAccessPoliciesResponse>;
 }
-export {};

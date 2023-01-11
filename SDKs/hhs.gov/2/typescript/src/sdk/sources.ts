@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -20,6 +20,60 @@ export class Sources {
   }
   
   /**
+   * getResourcesSourcesJson - Get Sources
+   *
+   * Source Listings
+  **/
+  getResourcesSourcesJson(
+    req: operations.GetResourcesSourcesJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesSourcesJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesSourcesJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/sources.json";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesSourcesJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.sourceWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
    * getResourcesSourcesIdJson - Get Source by ID
    *
    * Information about a specific source.
@@ -33,22 +87,24 @@ export class Sources {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/sources/{id}.json", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/sources/{id}.json", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesSourcesIdJsonResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.sourceWrappeds = httpRes?.data;
             }
             break;
@@ -60,7 +116,6 @@ export class Sources {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -78,10 +133,10 @@ export class Sources {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/sources/{id}/syndicate.{format}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/sources/{id}/syndicate.{format}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -89,19 +144,21 @@ export class Sources {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesSourcesIdSyndicateFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.mediaItemWrappeds = httpRes?.data;
             }
             break;
@@ -113,60 +170,6 @@ export class Sources {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesSourcesJson - Get Sources
-   *
-   * Source Listings
-  **/
-  getResourcesSourcesJson(
-    req: operations.GetResourcesSourcesJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesSourcesJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesSourcesJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/resources/sources.json";
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesSourcesJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.sourceWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

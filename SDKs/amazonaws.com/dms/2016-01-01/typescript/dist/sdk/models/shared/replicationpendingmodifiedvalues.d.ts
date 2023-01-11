@@ -5,6 +5,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ReplicationPendingModifiedValues extends SpeakeasyBase {
     allocatedStorage?: number;
     engineVersion?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     replicationInstanceClass?: string;
 }

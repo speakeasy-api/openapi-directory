@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetForecastRequest, GetForecastResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,18 +28,18 @@ const sdk = new SDK();
     
 const req: GetForecastRequest = {
   queryParams: {
-    alt: 61.099998,
-    dt: "2008-12-18T01:22:04Z",
-    lat: 87.199997,
-    lng: 34.099998,
-    ozone: 12.100000,
+    alt: 74.099998,
+    dt: "1978-05-13T03:50:47Z",
+    lat: 6.200000,
+    lng: 96.199997,
+    ozone: 77.099998,
   },
   headers: {
-    xAccessToken: "maxime",
+    xAccessToken: "et",
   },
 };
 
-sdk.sdk.getForecast(req).then((res: GetForecastResponse | AxiosError) => {
+sdk.getForecast(req).then((res: GetForecastResponse | AxiosError) => {
    // handle response
 });
 ```

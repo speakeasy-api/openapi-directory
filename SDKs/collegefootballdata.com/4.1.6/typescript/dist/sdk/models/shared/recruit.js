@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Recruit = exports.RecruitHometownInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var RecruitHometownInfo = /** @class */ (function (_super) {
     __extends(RecruitHometownInfo, _super);
     function RecruitHometownInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countyFips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countyFips" }),
         __metadata("design:type", String)
     ], RecruitHometownInfo.prototype, "countyFips", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], RecruitHometownInfo.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], RecruitHometownInfo.prototype, "longitude", void 0);
     return RecruitHometownInfo;
-}(SpeakeasyBase));
-export { RecruitHometownInfo };
+}(utils_1.SpeakeasyBase));
+exports.RecruitHometownInfo = RecruitHometownInfo;
 var Recruit = /** @class */ (function (_super) {
     __extends(Recruit, _super);
     function Recruit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=athleteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=athleteId" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "athleteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedTo" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "committedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hometownInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hometownInfo" }),
         __metadata("design:type", RecruitHometownInfo)
     ], Recruit.prototype, "hometownInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranking" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "ranking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recruitType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recruitType" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "recruitType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "school", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stars" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stars" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "stars", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateProvince" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateProvince" }),
         __metadata("design:type", String)
     ], Recruit.prototype, "stateProvince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "weight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], Recruit.prototype, "year", void 0);
     return Recruit;
-}(SpeakeasyBase));
-export { Recruit };
+}(utils_1.SpeakeasyBase));
+exports.Recruit = Recruit;

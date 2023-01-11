@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackfillErrorCodeEnum } from "./backfillerrorcodeenum";
-import { PartitionValueList } from "./partitionvaluelist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackfillError = void 0;
+var utils_1 = require("../../../internal/utils");
+var backfillerrorcodeenum_1 = require("./backfillerrorcodeenum");
+var partitionvaluelist_1 = require("./partitionvaluelist");
 // BackfillError
 /**
  * <p>A list of errors that can occur when registering partition indexes for an existing table.</p> <p>These errors give the details about why an index registration failed and provide a limited number of partitions in the response, so that you can fix the partitions at fault and try registering the index again. The most common set of errors that can occur are categorized as follows:</p> <ul> <li> <p>EncryptedPartitionError: The partitions are encrypted.</p> </li> <li> <p>InvalidPartitionTypeDataError: The partition value doesn't match the data type for that partition column.</p> </li> <li> <p>MissingPartitionValueError: The partitions are encrypted.</p> </li> <li> <p>UnsupportedPartitionCharacterError: Characters inside the partition value are not supported. For example: U+0000 , U+0001, U+0002.</p> </li> <li> <p>InternalError: Any error which does not belong to other error codes.</p> </li> </ul>
@@ -35,13 +38,13 @@ var BackfillError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], BackfillError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Partitions", elemType: PartitionValueList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Partitions", elemType: partitionvaluelist_1.PartitionValueList }),
         __metadata("design:type", Array)
     ], BackfillError.prototype, "partitions", void 0);
     return BackfillError;
-}(SpeakeasyBase));
-export { BackfillError };
+}(utils_1.SpeakeasyBase));
+exports.BackfillError = BackfillError;

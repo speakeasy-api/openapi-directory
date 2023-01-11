@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutionControls } from "./executioncontrols";
-import { RemediationParameterValue } from "./remediationparametervalue";
-import { RemediationTargetTypeEnum } from "./remediationtargettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemediationConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var executioncontrols_1 = require("./executioncontrols");
+var remediationparametervalue_1 = require("./remediationparametervalue");
+var remediationtargettypeenum_1 = require("./remediationtargettypeenum");
 // RemediationConfiguration
 /**
  * An object that represents the details about the remediation configuration that includes the remediation action, parameters, and data to execute the action.
@@ -36,53 +39,53 @@ var RemediationConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Automatic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Automatic" }),
         __metadata("design:type", Boolean)
     ], RemediationConfiguration.prototype, "automatic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedByService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedByService" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "createdByService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecutionControls" }),
-        __metadata("design:type", ExecutionControls)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecutionControls" }),
+        __metadata("design:type", executioncontrols_1.ExecutionControls)
     ], RemediationConfiguration.prototype, "executionControls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumAutomaticAttempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumAutomaticAttempts" }),
         __metadata("design:type", Number)
     ], RemediationConfiguration.prototype, "maximumAutomaticAttempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters", elemType: RemediationParameterValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters", elemType: remediationparametervalue_1.RemediationParameterValue }),
+        __metadata("design:type", Object)
     ], RemediationConfiguration.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetryAttemptSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetryAttemptSeconds" }),
         __metadata("design:type", Number)
     ], RemediationConfiguration.prototype, "retryAttemptSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetId" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetType" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "targetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetVersion" }),
         __metadata("design:type", String)
     ], RemediationConfiguration.prototype, "targetVersion", void 0);
     return RemediationConfiguration;
-}(SpeakeasyBase));
-export { RemediationConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.RemediationConfiguration = RemediationConfiguration;

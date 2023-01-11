@@ -44,5 +44,5 @@ export class UpdateBRandingConfResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateBRandingConf200ApplicationJsonObject?: UpdateBRandingConf200ApplicationJson;
+  updateBRandingConf200ApplicationJSONObject?: UpdateBRandingConf200ApplicationJson;
 }

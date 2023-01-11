@@ -34,7 +34,7 @@ export class ActionDetail extends SpeakeasyBase {
   dlpChange?: DataLeakPreventionChange;
 
   @SpeakeasyMetadata({ data: "json, name=edit" })
-  edit?: Map<string, any>;
+  edit?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=move" })
   move?: Move;

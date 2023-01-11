@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TextFormat } from "./textformat";
-import { TextPosition } from "./textposition";
-import { ChartAxisViewWindowOptions } from "./chartaxisviewwindowoptions";
-export var BasicChartAxisPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicChartAxis = exports.BasicChartAxisPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var textformat_1 = require("./textformat");
+var textposition_1 = require("./textposition");
+var chartaxisviewwindowoptions_1 = require("./chartaxisviewwindowoptions");
+var BasicChartAxisPositionEnum;
 (function (BasicChartAxisPositionEnum) {
     BasicChartAxisPositionEnum["BasicChartAxisPositionUnspecified"] = "BASIC_CHART_AXIS_POSITION_UNSPECIFIED";
     BasicChartAxisPositionEnum["BottomAxis"] = "BOTTOM_AXIS";
     BasicChartAxisPositionEnum["LeftAxis"] = "LEFT_AXIS";
     BasicChartAxisPositionEnum["RightAxis"] = "RIGHT_AXIS";
-})(BasicChartAxisPositionEnum || (BasicChartAxisPositionEnum = {}));
+})(BasicChartAxisPositionEnum = exports.BasicChartAxisPositionEnum || (exports.BasicChartAxisPositionEnum = {}));
 // BasicChartAxis
 /**
  * An axis of the chart. A chart may not have more than one axis per axis position.
@@ -43,25 +46,25 @@ var BasicChartAxis = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], BasicChartAxis.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], BasicChartAxis.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], BasicChartAxis.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=titleTextPosition" }),
-        __metadata("design:type", TextPosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=titleTextPosition" }),
+        __metadata("design:type", textposition_1.TextPosition)
     ], BasicChartAxis.prototype, "titleTextPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewWindowOptions" }),
-        __metadata("design:type", ChartAxisViewWindowOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewWindowOptions" }),
+        __metadata("design:type", chartaxisviewwindowoptions_1.ChartAxisViewWindowOptions)
     ], BasicChartAxis.prototype, "viewWindowOptions", void 0);
     return BasicChartAxis;
-}(SpeakeasyBase));
-export { BasicChartAxis };
+}(utils_1.SpeakeasyBase));
+exports.BasicChartAxis = BasicChartAxis;

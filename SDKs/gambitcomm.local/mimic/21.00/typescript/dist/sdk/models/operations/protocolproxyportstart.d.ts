@@ -9,5 +9,5 @@ export declare class ProtocolProxyPortStartRequest extends SpeakeasyBase {
 export declare class ProtocolProxyPortStartResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolProxyPortStart200ApplicationJsonString?: string;
+    protocolProxyPortStart200ApplicationJSONString?: string;
 }

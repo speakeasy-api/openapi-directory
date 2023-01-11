@@ -38,7 +38,7 @@ export class GetP32SummaryNetReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getP32SummaryNetReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getP32SummaryNetReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

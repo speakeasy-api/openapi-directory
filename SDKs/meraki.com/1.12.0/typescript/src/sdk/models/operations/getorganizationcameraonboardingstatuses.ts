@@ -34,5 +34,5 @@ export class GetOrganizationCameraOnboardingStatusesResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationCameraOnboardingStatuses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationCameraOnboardingStatuses200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,60 +1,41 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { V1Company } from "./v1company";
-import { V1EinVerification } from "./v1einverification";
-import { V1IbanVerification } from "./v1ibanverification";
-import { V1NifVerification } from "./v1nifverification";
-import { V1Pepsanction } from "./v1pepsanction";
-import { V1Product } from "./v1product";
-import { V1System } from "./v1system";
-import { V1TinVerification } from "./v1tinverification";
-import { V1VatVerification } from "./v1vatverification";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var v1company_1 = require("./v1company");
+var v1einverification_1 = require("./v1einverification");
+var v1ibanverification_1 = require("./v1ibanverification");
+var v1nifverification_1 = require("./v1nifverification");
+var v1pepsanction_1 = require("./v1pepsanction");
+var v1product_1 = require("./v1product");
+var v1system_1 = require("./v1system");
+var v1tinverification_1 = require("./v1tinverification");
+var v1vatverification_1 = require("./v1vatverification");
+exports.ServerList = [
     "https://api.kompany.com/",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.v1Company = new V1Company(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1EinVerification = new V1EinVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1IbanVerification = new V1IbanVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1NifVerification = new V1NifVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1Pepsanction = new V1Pepsanction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1Product = new V1Product(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1System = new V1System(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1TinVerification = new V1TinVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.v1VatVerification = new V1VatVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.v1Company = new v1company_1.V1Company(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1EinVerification = new v1einverification_1.V1EinVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1IbanVerification = new v1ibanverification_1.V1IbanVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1NifVerification = new v1nifverification_1.V1NifVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1Pepsanction = new v1pepsanction_1.V1Pepsanction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1Product = new v1product_1.V1Product(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1System = new v1system_1.V1System(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1TinVerification = new v1tinverification_1.V1TinVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.v1VatVerification = new v1vatverification_1.V1VatVerification(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

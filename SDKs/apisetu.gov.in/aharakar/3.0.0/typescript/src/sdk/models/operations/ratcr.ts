@@ -191,23 +191,23 @@ export class RatcrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ratcr400ApplicationJsonObject?: Ratcr400ApplicationJson;
+  ratcr400ApplicationJSONObject?: Ratcr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr401ApplicationJsonObject?: Ratcr401ApplicationJson;
+  ratcr401ApplicationJSONObject?: Ratcr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr404ApplicationJsonObject?: Ratcr404ApplicationJson;
+  ratcr404ApplicationJSONObject?: Ratcr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr500ApplicationJsonObject?: Ratcr500ApplicationJson;
+  ratcr500ApplicationJSONObject?: Ratcr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr502ApplicationJsonObject?: Ratcr502ApplicationJson;
+  ratcr502ApplicationJSONObject?: Ratcr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr503ApplicationJsonObject?: Ratcr503ApplicationJson;
+  ratcr503ApplicationJSONObject?: Ratcr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ratcr504ApplicationJsonObject?: Ratcr504ApplicationJson;
+  ratcr504ApplicationJSONObject?: Ratcr504ApplicationJson;
 }

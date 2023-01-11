@@ -128,7 +128,7 @@ export class DeviceSummary extends SpeakeasyBase {
   collectTime?: string;
 
   @SpeakeasyMetadata()
-  deviceTsmoKey?: string;
+  deviceTSMOKey?: string;
 
   @SpeakeasyMetadata()
   deviceUrl?: string;

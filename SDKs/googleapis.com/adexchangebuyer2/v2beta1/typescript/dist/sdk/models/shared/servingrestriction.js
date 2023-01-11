@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServingContext } from "./servingcontext";
-import { Disapproval } from "./disapproval";
-export var ServingRestrictionStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServingRestriction = exports.ServingRestrictionStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var servingcontext_1 = require("./servingcontext");
+var disapproval_1 = require("./disapproval");
+var ServingRestrictionStatusEnum;
 (function (ServingRestrictionStatusEnum) {
     ServingRestrictionStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     ServingRestrictionStatusEnum["Disapproval"] = "DISAPPROVAL";
     ServingRestrictionStatusEnum["PendingReview"] = "PENDING_REVIEW";
-})(ServingRestrictionStatusEnum || (ServingRestrictionStatusEnum = {}));
+})(ServingRestrictionStatusEnum = exports.ServingRestrictionStatusEnum || (exports.ServingRestrictionStatusEnum = {}));
 // ServingRestriction
 /**
  * Output only. A representation of the status of an ad in a specific context. A context here relates to where something ultimately serves (for example, a user or publisher geo, a platform, an HTTPS versus HTTP request, or the type of auction).
@@ -41,21 +44,21 @@ var ServingRestriction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts", elemType: ServingContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts", elemType: servingcontext_1.ServingContext }),
         __metadata("design:type", Array)
     ], ServingRestriction.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disapproval" }),
-        __metadata("design:type", Disapproval)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disapproval" }),
+        __metadata("design:type", disapproval_1.Disapproval)
     ], ServingRestriction.prototype, "disapproval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disapprovalReasons", elemType: Disapproval }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disapprovalReasons", elemType: disapproval_1.Disapproval }),
         __metadata("design:type", Array)
     ], ServingRestriction.prototype, "disapprovalReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ServingRestriction.prototype, "status", void 0);
     return ServingRestriction;
-}(SpeakeasyBase));
-export { ServingRestriction };
+}(utils_1.SpeakeasyBase));
+exports.ServingRestriction = ServingRestriction;

@@ -73,8 +73,8 @@ export class RetrievePricingCountryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrievePricingCountry400ApplicationJsonObject?: RetrievePricingCountry400ApplicationJson;
+  retrievePricingCountry400ApplicationJSONObject?: RetrievePricingCountry400ApplicationJson;
 
   @SpeakeasyMetadata()
-  retrievePricingCountry401ApplicationJsonObject?: RetrievePricingCountry401ApplicationJson;
+  retrievePricingCountry401ApplicationJSONObject?: RetrievePricingCountry401ApplicationJson;
 }

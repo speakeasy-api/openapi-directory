@@ -12,5 +12,5 @@ export declare class CloneOrganizationRequest extends SpeakeasyBase {
 export declare class CloneOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cloneOrganization201ApplicationJsonObject?: Map<string, any>;
+    cloneOrganization201ApplicationJSONObject?: Record<string, any>;
 }

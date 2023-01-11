@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnapshotIdObject = void 0;
+var utils_1 = require("../../../internal/utils");
 var SnapshotIdObject = /** @class */ (function (_super) {
     __extends(SnapshotIdObject, _super);
     function SnapshotIdObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapshot_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapshot_id" }),
         __metadata("design:type", String)
     ], SnapshotIdObject.prototype, "snapshotId", void 0);
     return SnapshotIdObject;
-}(SpeakeasyBase));
-export { SnapshotIdObject };
+}(utils_1.SpeakeasyBase));
+exports.SnapshotIdObject = SnapshotIdObject;

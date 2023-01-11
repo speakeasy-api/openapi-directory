@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class BalanceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  balance200TextPlainFloatNumber?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

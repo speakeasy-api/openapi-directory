@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-import { NestedPowerOutlet } from "./nestedpoweroutlet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PowerPort = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedpoweroutlet_1 = require("./nestedpoweroutlet");
 var PowerPort = /** @class */ (function (_super) {
     __extends(PowerPort, _super);
     function PowerPort() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", Boolean)
     ], PowerPort.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], PowerPort.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PowerPort.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PowerPort.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power_outlet" }),
-        __metadata("design:type", NestedPowerOutlet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power_outlet" }),
+        __metadata("design:type", nestedpoweroutlet_1.NestedPowerOutlet)
     ], PowerPort.prototype, "powerOutlet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], PowerPort.prototype, "tags", void 0);
     return PowerPort;
-}(SpeakeasyBase));
-export { PowerPort };
+}(utils_1.SpeakeasyBase));
+exports.PowerPort = PowerPort;

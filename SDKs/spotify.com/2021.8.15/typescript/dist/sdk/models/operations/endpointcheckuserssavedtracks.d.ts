@@ -18,5 +18,5 @@ export declare class EndpointCheckUsersSavedTracksResponse extends SpeakeasyBase
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointCheckUsersSavedTracks200ApplicationJsonBooleans?: boolean[];
+    endpointCheckUsersSavedTracks200ApplicationJSONBooleans?: boolean[];
 }

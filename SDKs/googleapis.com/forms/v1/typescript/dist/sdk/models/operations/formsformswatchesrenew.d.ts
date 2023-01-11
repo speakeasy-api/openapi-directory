@@ -52,7 +52,7 @@ export declare class FormsFormsWatchesRenewSecurity extends SpeakeasyBase {
 export declare class FormsFormsWatchesRenewRequest extends SpeakeasyBase {
     pathParams: FormsFormsWatchesRenewPathParams;
     queryParams: FormsFormsWatchesRenewQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FormsFormsWatchesRenewSecurity;
 }
 export declare class FormsFormsWatchesRenewResponse extends SpeakeasyBase {

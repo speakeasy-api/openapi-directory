@@ -8,7 +8,7 @@ import { WebserverAccessModeEnum } from "./webserveraccessmodeenum";
  * The Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 **/
 export declare class Environment extends SpeakeasyBase {
-    airflowConfigurationOptions?: Map<string, string>;
+    airflowConfigurationOptions?: Record<string, string>;
     airflowVersion?: string;
     arn?: string;
     createdAt?: Date;
@@ -30,7 +30,7 @@ export declare class Environment extends SpeakeasyBase {
     serviceRoleArn?: string;
     sourceBucketArn?: string;
     status?: EnvironmentStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     webserverAccessMode?: WebserverAccessModeEnum;
     webserverUrl?: string;
     weeklyMaintenanceWindowStart?: string;

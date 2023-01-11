@@ -30,6 +30,6 @@ export declare class GetTenantTenantnameRequest extends SpeakeasyBase {
 }
 export declare class GetTenantTenantnameResponse extends SpeakeasyBase {
     contentType: string;
-    getTenantTenantname200ApplicationJsonObject?: GetTenantTenantname200ApplicationJson;
     statusCode: number;
+    getTenantTenantname200ApplicationJSONObject?: GetTenantTenantname200ApplicationJson;
 }

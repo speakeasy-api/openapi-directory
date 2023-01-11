@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainEndpointOptions } from "./domainendpointoptions";
-import { OptionStatus } from "./optionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainEndpointOptionsStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainendpointoptions_1 = require("./domainendpointoptions");
+var optionstatus_1 = require("./optionstatus");
 // DomainEndpointOptionsStatus
 /**
  * The configuration and status of the domain's endpoint options.
@@ -35,13 +38,13 @@ var DomainEndpointOptionsStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DomainEndpointOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", domainendpointoptions_1.DomainEndpointOptions)
     ], DomainEndpointOptionsStatus.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OptionStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", optionstatus_1.OptionStatus)
     ], DomainEndpointOptionsStatus.prototype, "status", void 0);
     return DomainEndpointOptionsStatus;
-}(SpeakeasyBase));
-export { DomainEndpointOptionsStatus };
+}(utils_1.SpeakeasyBase));
+exports.DomainEndpointOptionsStatus = DomainEndpointOptionsStatus;

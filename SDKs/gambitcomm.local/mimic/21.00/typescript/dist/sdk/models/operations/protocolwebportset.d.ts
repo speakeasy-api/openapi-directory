@@ -11,5 +11,5 @@ export declare class ProtocolWebPortSetRequest extends SpeakeasyBase {
 export declare class ProtocolWebPortSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolWebPortSet200ApplicationJsonString?: string;
+    protocolWebPortSet200ApplicationJSONString?: string;
 }

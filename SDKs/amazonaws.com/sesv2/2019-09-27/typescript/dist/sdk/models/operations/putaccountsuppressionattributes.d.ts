@@ -19,7 +19,7 @@ export declare class PutAccountSuppressionAttributesRequest extends SpeakeasyBas
 export declare class PutAccountSuppressionAttributesResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    putAccountSuppressionAttributesResponse?: Map<string, any>;
+    putAccountSuppressionAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

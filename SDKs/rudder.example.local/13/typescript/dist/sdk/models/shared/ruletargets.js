@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleTargets = exports.RuleTargetsInclude = exports.RuleTargetsExclude = void 0;
+var utils_1 = require("../../../internal/utils");
 // RuleTargetsExclude
 /**
  * list of groups to exclude from rule application
@@ -33,12 +36,12 @@ var RuleTargetsExclude = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=or" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=or" }),
         __metadata("design:type", Array)
     ], RuleTargetsExclude.prototype, "or", void 0);
     return RuleTargetsExclude;
-}(SpeakeasyBase));
-export { RuleTargetsExclude };
+}(utils_1.SpeakeasyBase));
+exports.RuleTargetsExclude = RuleTargetsExclude;
 // RuleTargetsInclude
 /**
  * list of groups to include in rule application
@@ -49,25 +52,25 @@ var RuleTargetsInclude = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=or" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=or" }),
         __metadata("design:type", Array)
     ], RuleTargetsInclude.prototype, "or", void 0);
     return RuleTargetsInclude;
-}(SpeakeasyBase));
-export { RuleTargetsInclude };
+}(utils_1.SpeakeasyBase));
+exports.RuleTargetsInclude = RuleTargetsInclude;
 var RuleTargets = /** @class */ (function (_super) {
     __extends(RuleTargets, _super);
     function RuleTargets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclude" }),
         __metadata("design:type", RuleTargetsExclude)
     ], RuleTargets.prototype, "exclude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=include" }),
         __metadata("design:type", RuleTargetsInclude)
     ], RuleTargets.prototype, "include", void 0);
     return RuleTargets;
-}(SpeakeasyBase));
-export { RuleTargets };
+}(utils_1.SpeakeasyBase));
+exports.RuleTargets = RuleTargets;

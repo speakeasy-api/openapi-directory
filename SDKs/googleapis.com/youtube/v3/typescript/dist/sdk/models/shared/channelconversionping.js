@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChannelConversionPingContextEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelConversionPing = exports.ChannelConversionPingContextEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChannelConversionPingContextEnum;
 (function (ChannelConversionPingContextEnum) {
     ChannelConversionPingContextEnum["Subscribe"] = "subscribe";
     ChannelConversionPingContextEnum["Unsubscribe"] = "unsubscribe";
     ChannelConversionPingContextEnum["Cview"] = "cview";
-})(ChannelConversionPingContextEnum || (ChannelConversionPingContextEnum = {}));
+})(ChannelConversionPingContextEnum = exports.ChannelConversionPingContextEnum || (exports.ChannelConversionPingContextEnum = {}));
 // ChannelConversionPing
 /**
  * Pings that the app shall fire (authenticated by biscotti cookie). Each ping has a context, in which the app must fire the ping, and a url identifying the ping.
@@ -39,13 +42,13 @@ var ChannelConversionPing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
         __metadata("design:type", String)
     ], ChannelConversionPing.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversionUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversionUrl" }),
         __metadata("design:type", String)
     ], ChannelConversionPing.prototype, "conversionUrl", void 0);
     return ChannelConversionPing;
-}(SpeakeasyBase));
-export { ChannelConversionPing };
+}(utils_1.SpeakeasyBase));
+exports.ChannelConversionPing = ChannelConversionPing;

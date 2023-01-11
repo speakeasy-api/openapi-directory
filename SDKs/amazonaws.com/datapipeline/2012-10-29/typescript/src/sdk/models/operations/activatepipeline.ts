@@ -45,7 +45,7 @@ export class ActivatePipelineRequest extends SpeakeasyBase {
 
 export class ActivatePipelineResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  activatePipelineOutput?: Map<string, any>;
+  activatePipelineOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -28,7 +28,7 @@ export class Campaign extends SpeakeasyBase {
   latestCampaignUpdate?: CampaignUpdateSummary;
 
   @SpeakeasyMetadata({ data: "json, name=minProvisionedTPS" })
-  minProvisionedTps?: number;
+  minProvisionedTPS?: number;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

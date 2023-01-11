@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerServiceMetricsFilterCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomerServiceMetricsFilterCriteria
 /**
  * A complex data type that filters data for report creation. See CustomerServiceMetricsFilterCriteria for fields and descriptions.
@@ -33,21 +36,21 @@ var CustomerServiceMetricsFilterCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerServiceMetricType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerServiceMetricType" }),
         __metadata("design:type", String)
     ], CustomerServiceMetricsFilterCriteria.prototype, "customerServiceMetricType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationMarketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationMarketplaceId" }),
         __metadata("design:type", String)
     ], CustomerServiceMetricsFilterCriteria.prototype, "evaluationMarketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingCategories" }),
         __metadata("design:type", Array)
     ], CustomerServiceMetricsFilterCriteria.prototype, "listingCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingRegions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingRegions" }),
         __metadata("design:type", Array)
     ], CustomerServiceMetricsFilterCriteria.prototype, "shippingRegions", void 0);
     return CustomerServiceMetricsFilterCriteria;
-}(SpeakeasyBase));
-export { CustomerServiceMetricsFilterCriteria };
+}(utils_1.SpeakeasyBase));
+exports.CustomerServiceMetricsFilterCriteria = CustomerServiceMetricsFilterCriteria;

@@ -15,9 +15,9 @@ export declare class AlbumApiGetNamesRequest extends SpeakeasyBase {
     queryParams: AlbumApiGetNamesQueryParams;
 }
 export declare class AlbumApiGetNamesResponse extends SpeakeasyBase {
-    albumApiGetNames200ApplicationJsonStrings?: string[];
+    albumApiGetNames200ApplicationJSONStrings?: string[];
     albumApiGetNames200ApplicationJsonpStrings?: string[];
-    albumApiGetNames200TextJsonStrings?: string[];
+    albumApiGetNames200TextJSONStrings?: string[];
     body?: Uint8Array;
     contentType: string;
     statusCode: number;

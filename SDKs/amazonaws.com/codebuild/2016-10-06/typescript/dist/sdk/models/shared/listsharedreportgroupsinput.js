@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SharedResourceSortByTypeEnum } from "./sharedresourcesortbytypeenum";
-import { SortOrderTypeEnum } from "./sortordertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSharedReportGroupsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var sharedresourcesortbytypeenum_1 = require("./sharedresourcesortbytypeenum");
+var sortordertypeenum_1 = require("./sortordertypeenum");
 var ListSharedReportGroupsInput = /** @class */ (function (_super) {
     __extends(ListSharedReportGroupsInput, _super);
     function ListSharedReportGroupsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListSharedReportGroupsInput.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListSharedReportGroupsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortBy" }),
         __metadata("design:type", String)
     ], ListSharedReportGroupsInput.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], ListSharedReportGroupsInput.prototype, "sortOrder", void 0);
     return ListSharedReportGroupsInput;
-}(SpeakeasyBase));
-export { ListSharedReportGroupsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListSharedReportGroupsInput = ListSharedReportGroupsInput;

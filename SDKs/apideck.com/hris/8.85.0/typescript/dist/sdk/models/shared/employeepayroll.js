@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Employee } from "./employee";
-import { Payroll } from "./payroll";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeePayroll = void 0;
+var utils_1 = require("../../../internal/utils");
+var employee_1 = require("./employee");
+var payroll_1 = require("./payroll");
 var EmployeePayroll = /** @class */ (function (_super) {
     __extends(EmployeePayroll, _super);
     function EmployeePayroll() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
-        __metadata("design:type", Employee)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
+        __metadata("design:type", employee_1.Employee)
     ], EmployeePayroll.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payroll" }),
-        __metadata("design:type", Payroll)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payroll" }),
+        __metadata("design:type", payroll_1.Payroll)
     ], EmployeePayroll.prototype, "payroll", void 0);
     return EmployeePayroll;
-}(SpeakeasyBase));
-export { EmployeePayroll };
+}(utils_1.SpeakeasyBase));
+exports.EmployeePayroll = EmployeePayroll;

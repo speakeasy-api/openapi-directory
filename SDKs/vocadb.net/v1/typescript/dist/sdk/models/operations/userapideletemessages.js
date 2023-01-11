@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserApiDeleteMessagesResponse = exports.UserApiDeleteMessagesRequest = exports.UserApiDeleteMessagesQueryParams = exports.UserApiDeleteMessagesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserApiDeleteMessagesPathParams = /** @class */ (function (_super) {
     __extends(UserApiDeleteMessagesPathParams, _super);
     function UserApiDeleteMessagesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], UserApiDeleteMessagesPathParams.prototype, "id", void 0);
     return UserApiDeleteMessagesPathParams;
-}(SpeakeasyBase));
-export { UserApiDeleteMessagesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteMessagesPathParams = UserApiDeleteMessagesPathParams;
 var UserApiDeleteMessagesQueryParams = /** @class */ (function (_super) {
     __extends(UserApiDeleteMessagesQueryParams, _super);
     function UserApiDeleteMessagesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=messageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=messageId" }),
         __metadata("design:type", Array)
     ], UserApiDeleteMessagesQueryParams.prototype, "messageId", void 0);
     return UserApiDeleteMessagesQueryParams;
-}(SpeakeasyBase));
-export { UserApiDeleteMessagesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteMessagesQueryParams = UserApiDeleteMessagesQueryParams;
 var UserApiDeleteMessagesRequest = /** @class */ (function (_super) {
     __extends(UserApiDeleteMessagesRequest, _super);
     function UserApiDeleteMessagesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiDeleteMessagesPathParams)
     ], UserApiDeleteMessagesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiDeleteMessagesQueryParams)
     ], UserApiDeleteMessagesRequest.prototype, "queryParams", void 0);
     return UserApiDeleteMessagesRequest;
-}(SpeakeasyBase));
-export { UserApiDeleteMessagesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteMessagesRequest = UserApiDeleteMessagesRequest;
 var UserApiDeleteMessagesResponse = /** @class */ (function (_super) {
     __extends(UserApiDeleteMessagesResponse, _super);
     function UserApiDeleteMessagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiDeleteMessagesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserApiDeleteMessagesResponse.prototype, "statusCode", void 0);
     return UserApiDeleteMessagesResponse;
-}(SpeakeasyBase));
-export { UserApiDeleteMessagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteMessagesResponse = UserApiDeleteMessagesResponse;

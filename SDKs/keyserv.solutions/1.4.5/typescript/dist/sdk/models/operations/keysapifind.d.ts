@@ -7,6 +7,6 @@ export declare class KeysApiFindRequest extends SpeakeasyBase {
 }
 export declare class KeysApiFindResponse extends SpeakeasyBase {
     contentType: string;
-    keysApiFind200ApplicationJsonOneOf?: any;
+    keysApiFind200ApplicationJSONOneOf?: any;
     statusCode: number;
 }

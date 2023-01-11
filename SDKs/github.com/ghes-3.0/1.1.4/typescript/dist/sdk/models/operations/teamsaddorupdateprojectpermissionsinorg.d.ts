@@ -23,5 +23,5 @@ export declare class TeamsAddOrUpdateProjectPermissionsInOrgRequest extends Spea
 export declare class TeamsAddOrUpdateProjectPermissionsInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
+    teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
 }

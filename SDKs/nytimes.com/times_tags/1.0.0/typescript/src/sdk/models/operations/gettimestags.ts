@@ -32,8 +32,8 @@ export class GetTimestagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getTimestags200ApplicationJsonArrays?: string[][];
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getTimestags200ApplicationJSONArrays?: string[][];
 }

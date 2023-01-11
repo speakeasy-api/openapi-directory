@@ -37,6 +37,6 @@ export declare class CreateMonitorRequest extends SpeakeasyBase {
 export declare class CreateMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createMonitor200ApplicationJsonObject?: CreateMonitor200ApplicationJson;
-    createMonitor400ApplicationJsonObject?: CreateMonitor400ApplicationJson;
+    createMonitor200ApplicationJSONObject?: CreateMonitor200ApplicationJson;
+    createMonitor400ApplicationJSONObject?: CreateMonitor400ApplicationJson;
 }

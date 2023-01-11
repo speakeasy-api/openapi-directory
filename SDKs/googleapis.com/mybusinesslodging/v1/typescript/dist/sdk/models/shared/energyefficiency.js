@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnergyEfficiencyInput = exports.EnergyEfficiency = exports.EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum = exports.EnergyEfficiencyGreenBuildingDesignExceptionEnum = exports.EnergyEfficiencyEnergySavingThermostatsExceptionEnum = exports.EnergyEfficiencyEnergyEfficientLightingExceptionEnum = exports.EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum = exports.EnergyEfficiencyEnergyConservationProgramExceptionEnum = exports.EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum;
 (function (EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum) {
     EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum || (EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum = {}));
-export var EnergyEfficiencyEnergyConservationProgramExceptionEnum;
+})(EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum = exports.EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum || (exports.EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum = {}));
+var EnergyEfficiencyEnergyConservationProgramExceptionEnum;
 (function (EnergyEfficiencyEnergyConservationProgramExceptionEnum) {
     EnergyEfficiencyEnergyConservationProgramExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyEnergyConservationProgramExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyEnergyConservationProgramExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyEnergyConservationProgramExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyEnergyConservationProgramExceptionEnum || (EnergyEfficiencyEnergyConservationProgramExceptionEnum = {}));
-export var EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum;
+})(EnergyEfficiencyEnergyConservationProgramExceptionEnum = exports.EnergyEfficiencyEnergyConservationProgramExceptionEnum || (exports.EnergyEfficiencyEnergyConservationProgramExceptionEnum = {}));
+var EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum;
 (function (EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum) {
     EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum || (EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum = {}));
-export var EnergyEfficiencyEnergyEfficientLightingExceptionEnum;
+})(EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum = exports.EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum || (exports.EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum = {}));
+var EnergyEfficiencyEnergyEfficientLightingExceptionEnum;
 (function (EnergyEfficiencyEnergyEfficientLightingExceptionEnum) {
     EnergyEfficiencyEnergyEfficientLightingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyEnergyEfficientLightingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyEnergyEfficientLightingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyEnergyEfficientLightingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyEnergyEfficientLightingExceptionEnum || (EnergyEfficiencyEnergyEfficientLightingExceptionEnum = {}));
-export var EnergyEfficiencyEnergySavingThermostatsExceptionEnum;
+})(EnergyEfficiencyEnergyEfficientLightingExceptionEnum = exports.EnergyEfficiencyEnergyEfficientLightingExceptionEnum || (exports.EnergyEfficiencyEnergyEfficientLightingExceptionEnum = {}));
+var EnergyEfficiencyEnergySavingThermostatsExceptionEnum;
 (function (EnergyEfficiencyEnergySavingThermostatsExceptionEnum) {
     EnergyEfficiencyEnergySavingThermostatsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyEnergySavingThermostatsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyEnergySavingThermostatsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyEnergySavingThermostatsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyEnergySavingThermostatsExceptionEnum || (EnergyEfficiencyEnergySavingThermostatsExceptionEnum = {}));
-export var EnergyEfficiencyGreenBuildingDesignExceptionEnum;
+})(EnergyEfficiencyEnergySavingThermostatsExceptionEnum = exports.EnergyEfficiencyEnergySavingThermostatsExceptionEnum || (exports.EnergyEfficiencyEnergySavingThermostatsExceptionEnum = {}));
+var EnergyEfficiencyGreenBuildingDesignExceptionEnum;
 (function (EnergyEfficiencyGreenBuildingDesignExceptionEnum) {
     EnergyEfficiencyGreenBuildingDesignExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyGreenBuildingDesignExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyGreenBuildingDesignExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyGreenBuildingDesignExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyGreenBuildingDesignExceptionEnum || (EnergyEfficiencyGreenBuildingDesignExceptionEnum = {}));
-export var EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum;
+})(EnergyEfficiencyGreenBuildingDesignExceptionEnum = exports.EnergyEfficiencyGreenBuildingDesignExceptionEnum || (exports.EnergyEfficiencyGreenBuildingDesignExceptionEnum = {}));
+var EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum;
 (function (EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum) {
     EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum || (EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum = {}));
-// EnergyEfficiencyInput
-/**
- * Energy efficiency practices implemented at the hotel.
-**/
-var EnergyEfficiencyInput = /** @class */ (function (_super) {
-    __extends(EnergyEfficiencyInput, _super);
-    function EnergyEfficiencyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=carbonFreeEnergySources" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "carbonFreeEnergySources", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=carbonFreeEnergySourcesException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "carbonFreeEnergySourcesException", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyConservationProgram" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "energyConservationProgram", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyConservationProgramException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "energyConservationProgramException", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientHeatingAndCoolingSystems" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "energyEfficientHeatingAndCoolingSystems", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientHeatingAndCoolingSystemsException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "energyEfficientHeatingAndCoolingSystemsException", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientLighting" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "energyEfficientLighting", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientLightingException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "energyEfficientLightingException", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energySavingThermostats" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "energySavingThermostats", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=energySavingThermostatsException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "energySavingThermostatsException", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsEnergyUse" }),
-        __metadata("design:type", Boolean)
-    ], EnergyEfficiencyInput.prototype, "independentOrganizationAuditsEnergyUse", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsEnergyUseException" }),
-        __metadata("design:type", String)
-    ], EnergyEfficiencyInput.prototype, "independentOrganizationAuditsEnergyUseException", void 0);
-    return EnergyEfficiencyInput;
-}(SpeakeasyBase));
-export { EnergyEfficiencyInput };
+})(EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum = exports.EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum || (exports.EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum = {}));
 // EnergyEfficiency
 /**
  * Energy efficiency practices implemented at the hotel.
@@ -142,61 +85,121 @@ var EnergyEfficiency = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carbonFreeEnergySources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carbonFreeEnergySources" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "carbonFreeEnergySources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carbonFreeEnergySourcesException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carbonFreeEnergySourcesException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "carbonFreeEnergySourcesException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyConservationProgram" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyConservationProgram" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "energyConservationProgram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyConservationProgramException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyConservationProgramException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "energyConservationProgramException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientHeatingAndCoolingSystems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientHeatingAndCoolingSystems" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "energyEfficientHeatingAndCoolingSystems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientHeatingAndCoolingSystemsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientHeatingAndCoolingSystemsException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "energyEfficientHeatingAndCoolingSystemsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientLighting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientLighting" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "energyEfficientLighting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficientLightingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientLightingException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "energyEfficientLightingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energySavingThermostats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energySavingThermostats" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "energySavingThermostats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energySavingThermostatsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energySavingThermostatsException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "energySavingThermostatsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=greenBuildingDesign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=greenBuildingDesign" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "greenBuildingDesign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=greenBuildingDesignException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=greenBuildingDesignException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "greenBuildingDesignException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsEnergyUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsEnergyUse" }),
         __metadata("design:type", Boolean)
     ], EnergyEfficiency.prototype, "independentOrganizationAuditsEnergyUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsEnergyUseException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsEnergyUseException" }),
         __metadata("design:type", String)
     ], EnergyEfficiency.prototype, "independentOrganizationAuditsEnergyUseException", void 0);
     return EnergyEfficiency;
-}(SpeakeasyBase));
-export { EnergyEfficiency };
+}(utils_1.SpeakeasyBase));
+exports.EnergyEfficiency = EnergyEfficiency;
+// EnergyEfficiencyInput
+/**
+ * Energy efficiency practices implemented at the hotel.
+**/
+var EnergyEfficiencyInput = /** @class */ (function (_super) {
+    __extends(EnergyEfficiencyInput, _super);
+    function EnergyEfficiencyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carbonFreeEnergySources" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "carbonFreeEnergySources", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carbonFreeEnergySourcesException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "carbonFreeEnergySourcesException", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyConservationProgram" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "energyConservationProgram", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyConservationProgramException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "energyConservationProgramException", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientHeatingAndCoolingSystems" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "energyEfficientHeatingAndCoolingSystems", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientHeatingAndCoolingSystemsException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "energyEfficientHeatingAndCoolingSystemsException", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientLighting" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "energyEfficientLighting", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficientLightingException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "energyEfficientLightingException", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energySavingThermostats" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "energySavingThermostats", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energySavingThermostatsException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "energySavingThermostatsException", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsEnergyUse" }),
+        __metadata("design:type", Boolean)
+    ], EnergyEfficiencyInput.prototype, "independentOrganizationAuditsEnergyUse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsEnergyUseException" }),
+        __metadata("design:type", String)
+    ], EnergyEfficiencyInput.prototype, "independentOrganizationAuditsEnergyUseException", void 0);
+    return EnergyEfficiencyInput;
+}(utils_1.SpeakeasyBase));
+exports.EnergyEfficiencyInput = EnergyEfficiencyInput;

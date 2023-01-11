@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VatComprehensiveResponse = exports.VatComprehensiveRequest = exports.VatComprehensiveSecurity = exports.VatComprehensiveRequestBody = exports.VatComprehensivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var VatComprehensivePathParams = /** @class */ (function (_super) {
     __extends(VatComprehensivePathParams, _super);
     function VatComprehensivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=country" }),
         __metadata("design:type", String)
     ], VatComprehensivePathParams.prototype, "country", void 0);
     return VatComprehensivePathParams;
-}(SpeakeasyBase));
-export { VatComprehensivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.VatComprehensivePathParams = VatComprehensivePathParams;
 var VatComprehensiveRequestBody = /** @class */ (function (_super) {
     __extends(VatComprehensiveRequestBody, _super);
     function VatComprehensiveRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=companyAddress;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=companyAddress;" }),
         __metadata("design:type", String)
     ], VatComprehensiveRequestBody.prototype, "companyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=companyName;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=companyName;" }),
         __metadata("design:type", String)
     ], VatComprehensiveRequestBody.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=companyNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=companyNumber;" }),
         __metadata("design:type", String)
     ], VatComprehensiveRequestBody.prototype, "companyNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=vatNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=vatNumber;" }),
         __metadata("design:type", String)
     ], VatComprehensiveRequestBody.prototype, "vatNumber", void 0);
     return VatComprehensiveRequestBody;
-}(SpeakeasyBase));
-export { VatComprehensiveRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.VatComprehensiveRequestBody = VatComprehensiveRequestBody;
 var VatComprehensiveSecurity = /** @class */ (function (_super) {
     __extends(VatComprehensiveSecurity, _super);
     function VatComprehensiveSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeUserKey)
     ], VatComprehensiveSecurity.prototype, "userKey", void 0);
     return VatComprehensiveSecurity;
-}(SpeakeasyBase));
-export { VatComprehensiveSecurity };
+}(utils_1.SpeakeasyBase));
+exports.VatComprehensiveSecurity = VatComprehensiveSecurity;
 var VatComprehensiveRequest = /** @class */ (function (_super) {
     __extends(VatComprehensiveRequest, _super);
     function VatComprehensiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VatComprehensivePathParams)
     ], VatComprehensiveRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", VatComprehensiveRequestBody)
     ], VatComprehensiveRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VatComprehensiveSecurity)
     ], VatComprehensiveRequest.prototype, "security", void 0);
     return VatComprehensiveRequest;
-}(SpeakeasyBase));
-export { VatComprehensiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.VatComprehensiveRequest = VatComprehensiveRequest;
 var VatComprehensiveResponse = /** @class */ (function (_super) {
     __extends(VatComprehensiveResponse, _super);
     function VatComprehensiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VatComprehensiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VatComprehensiveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], VatComprehensiveResponse.prototype, "vatComprehensive200ApplicationJsonAny", void 0);
+    ], VatComprehensiveResponse.prototype, "vatComprehensive200ApplicationJSONAny", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], VatComprehensiveResponse.prototype, "vatComprehensiveDefaultApplicationJsonAny", void 0);
+    ], VatComprehensiveResponse.prototype, "vatComprehensiveDefaultApplicationJSONAny", void 0);
     return VatComprehensiveResponse;
-}(SpeakeasyBase));
-export { VatComprehensiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.VatComprehensiveResponse = VatComprehensiveResponse;

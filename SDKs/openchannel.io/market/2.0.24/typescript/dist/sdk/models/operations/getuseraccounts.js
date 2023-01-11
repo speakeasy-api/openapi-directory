@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUserAccountsResponse = exports.GetUserAccountsRequest = exports.GetUserAccountsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUserAccountsQueryParams = /** @class */ (function (_super) {
     __extends(GetUserAccountsQueryParams, _super);
     function GetUserAccountsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetUserAccountsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
         __metadata("design:type", Number)
     ], GetUserAccountsQueryParams.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetUserAccountsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetUserAccountsQueryParams.prototype, "sort", void 0);
     return GetUserAccountsQueryParams;
-}(SpeakeasyBase));
-export { GetUserAccountsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUserAccountsQueryParams = GetUserAccountsQueryParams;
 var GetUserAccountsRequest = /** @class */ (function (_super) {
     __extends(GetUserAccountsRequest, _super);
     function GetUserAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUserAccountsQueryParams)
     ], GetUserAccountsRequest.prototype, "queryParams", void 0);
     return GetUserAccountsRequest;
-}(SpeakeasyBase));
-export { GetUserAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUserAccountsRequest = GetUserAccountsRequest;
 var GetUserAccountsResponse = /** @class */ (function (_super) {
     __extends(GetUserAccountsResponse, _super);
     function GetUserAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUserAccountsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUserAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUserAccountsResponse.prototype, "statusCode", void 0);
     return GetUserAccountsResponse;
-}(SpeakeasyBase));
-export { GetUserAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUserAccountsResponse = GetUserAccountsResponse;

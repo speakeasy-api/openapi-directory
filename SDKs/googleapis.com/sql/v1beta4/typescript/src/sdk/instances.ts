@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,11 +31,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/addServerCa", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/addServerCa", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,19 +43,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesAddServerCaResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -64,7 +65,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -80,21 +80,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/clone", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/clone", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -102,24 +103,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesCloneResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -127,7 +127,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -143,11 +142,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -155,19 +154,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -175,7 +176,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -191,21 +191,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -213,24 +214,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesDemoteMasterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -238,7 +238,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -254,21 +253,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/export", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/export", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -276,24 +276,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesExportResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -301,7 +300,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -317,21 +315,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/failover", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/failover", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -339,24 +338,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesFailoverResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -364,7 +362,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -380,11 +377,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -392,19 +389,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.databaseInstance = httpRes?.data;
             }
             break;
@@ -412,7 +411,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -428,21 +426,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/import", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/import", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -450,24 +449,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesImportResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -475,7 +473,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -491,21 +488,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -513,24 +511,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesInsertResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -538,7 +535,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -554,11 +550,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -566,19 +562,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.instancesListResponse = httpRes?.data;
             }
             break;
@@ -586,7 +584,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -602,11 +599,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/listServerCas", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/listServerCas", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -614,19 +611,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesListServerCasResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.instancesListServerCasResponse = httpRes?.data;
             }
             break;
@@ -634,7 +633,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -650,21 +648,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -672,24 +671,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -697,7 +695,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -713,11 +710,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -725,19 +722,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesPromoteReplicaResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -745,7 +744,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -761,11 +759,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -773,19 +771,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesResetSslConfigResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -793,7 +793,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -809,11 +808,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restart", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restart", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -821,19 +820,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesRestartResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -841,7 +842,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -857,21 +857,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -879,24 +880,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesRestoreBackupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -904,7 +904,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -920,21 +919,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rotateServerCa", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rotateServerCa", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -942,24 +942,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesRotateServerCaResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -967,7 +966,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -983,11 +981,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startReplica", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startReplica", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -995,19 +993,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesStartReplicaResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -1015,7 +1015,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1031,11 +1030,11 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/stopReplica", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/stopReplica", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1043,19 +1042,21 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesStopReplicaResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -1063,7 +1064,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1079,21 +1079,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/truncateLog", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/truncateLog", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1101,24 +1102,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesTruncateLogResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -1126,7 +1126,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1142,21 +1141,22 @@ export class Instances {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1164,24 +1164,23 @@ export class Instances {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SqlInstancesUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.operation = httpRes?.data;
             }
             break;
@@ -1189,7 +1188,6 @@ export class Instances {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

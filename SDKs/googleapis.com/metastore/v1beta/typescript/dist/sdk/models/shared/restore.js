@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RestoreStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Restore = exports.RestoreTypeEnum = exports.RestoreStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RestoreStateEnum;
 (function (RestoreStateEnum) {
     RestoreStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     RestoreStateEnum["Running"] = "RUNNING";
     RestoreStateEnum["Succeeded"] = "SUCCEEDED";
     RestoreStateEnum["Failed"] = "FAILED";
     RestoreStateEnum["Cancelled"] = "CANCELLED";
-})(RestoreStateEnum || (RestoreStateEnum = {}));
-export var RestoreTypeEnum;
+})(RestoreStateEnum = exports.RestoreStateEnum || (exports.RestoreStateEnum = {}));
+var RestoreTypeEnum;
 (function (RestoreTypeEnum) {
     RestoreTypeEnum["RestoreTypeUnspecified"] = "RESTORE_TYPE_UNSPECIFIED";
     RestoreTypeEnum["Full"] = "FULL";
     RestoreTypeEnum["MetadataOnly"] = "METADATA_ONLY";
-})(RestoreTypeEnum || (RestoreTypeEnum = {}));
+})(RestoreTypeEnum = exports.RestoreTypeEnum || (exports.RestoreTypeEnum = {}));
 // Restore
 /**
  * The details of a metadata restore operation.
@@ -47,29 +50,29 @@ var Restore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backup" }),
         __metadata("design:type", String)
     ], Restore.prototype, "backup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], Restore.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Restore.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], Restore.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Restore.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Restore.prototype, "type", void 0);
     return Restore;
-}(SpeakeasyBase));
-export { Restore };
+}(utils_1.SpeakeasyBase));
+exports.Restore = Restore;

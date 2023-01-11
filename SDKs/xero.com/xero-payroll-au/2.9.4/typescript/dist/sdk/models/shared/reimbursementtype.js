@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReimbursementTypeInput = exports.ReimbursementType = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReimbursementType = /** @class */ (function (_super) {
     __extends(ReimbursementType, _super);
     function ReimbursementType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
         __metadata("design:type", String)
     ], ReimbursementType.prototype, "accountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
         __metadata("design:type", Boolean)
     ], ReimbursementType.prototype, "currentRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ReimbursementType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementTypeID" }),
         __metadata("design:type", String)
-    ], ReimbursementType.prototype, "reimbursementTypeId", void 0);
+    ], ReimbursementType.prototype, "reimbursementTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], ReimbursementType.prototype, "updatedDateUtc", void 0);
+    ], ReimbursementType.prototype, "updatedDateUTC", void 0);
     return ReimbursementType;
-}(SpeakeasyBase));
-export { ReimbursementType };
+}(utils_1.SpeakeasyBase));
+exports.ReimbursementType = ReimbursementType;
 var ReimbursementTypeInput = /** @class */ (function (_super) {
     __extends(ReimbursementTypeInput, _super);
     function ReimbursementTypeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
         __metadata("design:type", String)
     ], ReimbursementTypeInput.prototype, "accountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
         __metadata("design:type", Boolean)
     ], ReimbursementTypeInput.prototype, "currentRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ReimbursementTypeInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementTypeID" }),
         __metadata("design:type", String)
-    ], ReimbursementTypeInput.prototype, "reimbursementTypeId", void 0);
+    ], ReimbursementTypeInput.prototype, "reimbursementTypeID", void 0);
     return ReimbursementTypeInput;
-}(SpeakeasyBase));
-export { ReimbursementTypeInput };
+}(utils_1.SpeakeasyBase));
+exports.ReimbursementTypeInput = ReimbursementTypeInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisionedThroughputDescription = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProvisionedThroughputDescription = /** @class */ (function (_super) {
     __extends(ProvisionedThroughputDescription, _super);
     function ProvisionedThroughputDescription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastDecreaseDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastDecreaseDateTime" }),
         __metadata("design:type", Date)
     ], ProvisionedThroughputDescription.prototype, "lastDecreaseDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastIncreaseDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastIncreaseDateTime" }),
         __metadata("design:type", Date)
     ], ProvisionedThroughputDescription.prototype, "lastIncreaseDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfDecreasesToday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfDecreasesToday" }),
         __metadata("design:type", Number)
     ], ProvisionedThroughputDescription.prototype, "numberOfDecreasesToday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadCapacityUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadCapacityUnits" }),
         __metadata("design:type", Number)
     ], ProvisionedThroughputDescription.prototype, "readCapacityUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WriteCapacityUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WriteCapacityUnits" }),
         __metadata("design:type", Number)
     ], ProvisionedThroughputDescription.prototype, "writeCapacityUnits", void 0);
     return ProvisionedThroughputDescription;
-}(SpeakeasyBase));
-export { ProvisionedThroughputDescription };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionedThroughputDescription = ProvisionedThroughputDescription;

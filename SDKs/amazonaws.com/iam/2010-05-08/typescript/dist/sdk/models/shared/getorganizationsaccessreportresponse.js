@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessDetail } from "./accessdetail";
-import { ErrorDetails } from "./errordetails";
-import { JobStatusTypeEnum } from "./jobstatustypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationsAccessReportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessdetail_1 = require("./accessdetail");
+var errordetails_1 = require("./errordetails");
+var jobstatustypeenum_1 = require("./jobstatustypeenum");
 var GetOrganizationsAccessReportResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationsAccessReportResponse, _super);
     function GetOrganizationsAccessReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AccessDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: accessdetail_1.AccessDetail }),
         __metadata("design:type", Array)
     ], GetOrganizationsAccessReportResponse.prototype, "accessDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ErrorDetails)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", errordetails_1.ErrorDetails)
     ], GetOrganizationsAccessReportResponse.prototype, "errorDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GetOrganizationsAccessReportResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetOrganizationsAccessReportResponse.prototype, "jobCompletionDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetOrganizationsAccessReportResponse.prototype, "jobCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationsAccessReportResponse.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationsAccessReportResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationsAccessReportResponse.prototype, "numberOfServicesAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationsAccessReportResponse.prototype, "numberOfServicesNotAccessed", void 0);
     return GetOrganizationsAccessReportResponse;
-}(SpeakeasyBase));
-export { GetOrganizationsAccessReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationsAccessReportResponse = GetOrganizationsAccessReportResponse;

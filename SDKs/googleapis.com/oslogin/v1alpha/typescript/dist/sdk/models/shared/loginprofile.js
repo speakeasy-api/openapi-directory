@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PosixAccount } from "./posixaccount";
-import { SecurityKey } from "./securitykey";
-import { SshPublicKey } from "./sshpublickey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoginProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var posixaccount_1 = require("./posixaccount");
+var securitykey_1 = require("./securitykey");
+var sshpublickey_1 = require("./sshpublickey");
 // LoginProfile
 /**
  * The user profile information used for logging in to a virtual machine on Google Compute Engine.
@@ -36,21 +39,21 @@ var LoginProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LoginProfile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posixAccounts", elemType: PosixAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posixAccounts", elemType: posixaccount_1.PosixAccount }),
         __metadata("design:type", Array)
     ], LoginProfile.prototype, "posixAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityKeys", elemType: SecurityKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityKeys", elemType: securitykey_1.SecurityKey }),
         __metadata("design:type", Array)
     ], LoginProfile.prototype, "securityKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sshPublicKeys", elemType: SshPublicKey }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshPublicKeys", elemType: sshpublickey_1.SshPublicKey }),
+        __metadata("design:type", Object)
     ], LoginProfile.prototype, "sshPublicKeys", void 0);
     return LoginProfile;
-}(SpeakeasyBase));
-export { LoginProfile };
+}(utils_1.SpeakeasyBase));
+exports.LoginProfile = LoginProfile;

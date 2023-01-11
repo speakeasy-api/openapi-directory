@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ImporterExporterCodeVerificationApiRequest, ImporterExporterCodeVerificationApiResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,11 +33,11 @@ const req: ImporterExporterCodeVerificationApiRequest = {
     },
   },
   pathParams: {
-    iec: "et",
+    iec: "sit",
   },
 };
 
-sdk.sdk.importerExporterCodeVerificationApi(req).then((res: ImporterExporterCodeVerificationApiResponse | AxiosError) => {
+sdk.apIs.importerExporterCodeVerificationApi(req).then((res: ImporterExporterCodeVerificationApiResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.importerExporterCodeVerificationApi(req).then((res: ImporterExporterCode
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `importerExporterCodeVerificationApi` - Importer-Exporter Code (IEC) Verification API.
 

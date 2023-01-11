@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordControllerGetTenancyAgreementReportResponse = exports.LandlordControllerGetTenancyAgreementReportRequest = exports.LandlordControllerGetTenancyAgreementReportQueryParams = exports.LandlordControllerGetTenancyAgreementReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LandlordControllerGetTenancyAgreementReportPathParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetTenancyAgreementReportPathParams, _super);
     function LandlordControllerGetTenancyAgreementReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], LandlordControllerGetTenancyAgreementReportPathParams.prototype, "shortName", void 0);
     return LandlordControllerGetTenancyAgreementReportPathParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetTenancyAgreementReportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetTenancyAgreementReportPathParams = LandlordControllerGetTenancyAgreementReportPathParams;
 var LandlordControllerGetTenancyAgreementReportQueryParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetTenancyAgreementReportQueryParams, _super);
     function LandlordControllerGetTenancyAgreementReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenancyID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenancyID" }),
         __metadata("design:type", String)
-    ], LandlordControllerGetTenancyAgreementReportQueryParams.prototype, "tenancyId", void 0);
+    ], LandlordControllerGetTenancyAgreementReportQueryParams.prototype, "tenancyID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], LandlordControllerGetTenancyAgreementReportQueryParams.prototype, "token", void 0);
     return LandlordControllerGetTenancyAgreementReportQueryParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetTenancyAgreementReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetTenancyAgreementReportQueryParams = LandlordControllerGetTenancyAgreementReportQueryParams;
 var LandlordControllerGetTenancyAgreementReportRequest = /** @class */ (function (_super) {
     __extends(LandlordControllerGetTenancyAgreementReportRequest, _super);
     function LandlordControllerGetTenancyAgreementReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetTenancyAgreementReportPathParams)
     ], LandlordControllerGetTenancyAgreementReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetTenancyAgreementReportQueryParams)
     ], LandlordControllerGetTenancyAgreementReportRequest.prototype, "queryParams", void 0);
     return LandlordControllerGetTenancyAgreementReportRequest;
-}(SpeakeasyBase));
-export { LandlordControllerGetTenancyAgreementReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetTenancyAgreementReportRequest = LandlordControllerGetTenancyAgreementReportRequest;
 var LandlordControllerGetTenancyAgreementReportResponse = /** @class */ (function (_super) {
     __extends(LandlordControllerGetTenancyAgreementReportResponse, _super);
     function LandlordControllerGetTenancyAgreementReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LandlordControllerGetTenancyAgreementReportResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LandlordControllerGetTenancyAgreementReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], LandlordControllerGetTenancyAgreementReportResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LandlordControllerGetTenancyAgreementReportResponse.prototype, "statusCode", void 0);
     return LandlordControllerGetTenancyAgreementReportResponse;
-}(SpeakeasyBase));
-export { LandlordControllerGetTenancyAgreementReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetTenancyAgreementReportResponse = LandlordControllerGetTenancyAgreementReportResponse;

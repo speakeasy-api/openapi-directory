@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,95 +23,97 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeductionLine } from "./deductionline";
-import { EarningsLine } from "./earningsline";
-import { LeaveAccrualLine } from "./leaveaccrualline";
-import { LeaveEarningsLine } from "./leaveearningsline";
-import { ReimbursementLine } from "./reimbursementline";
-import { SuperannuationLine } from "./superannuationline";
-import { TaxLine } from "./taxline";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Payslip = void 0;
+var utils_1 = require("../../../internal/utils");
+var deductionline_1 = require("./deductionline");
+var earningsline_1 = require("./earningsline");
+var leaveaccrualline_1 = require("./leaveaccrualline");
+var leaveearningsline_1 = require("./leaveearningsline");
+var reimbursementline_1 = require("./reimbursementline");
+var superannuationline_1 = require("./superannuationline");
+var taxline_1 = require("./taxline");
 var Payslip = /** @class */ (function (_super) {
     __extends(Payslip, _super);
     function Payslip() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionLines", elemType: DeductionLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionLines", elemType: deductionline_1.DeductionLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "deductionLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Deductions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Deductions" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "deductions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsLines", elemType: EarningsLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsLines", elemType: earningsline_1.EarningsLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "earningsLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], Payslip.prototype, "employeeId", void 0);
+    ], Payslip.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstName" }),
         __metadata("design:type", String)
     ], Payslip.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastName" }),
         __metadata("design:type", String)
     ], Payslip.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveAccrualLines", elemType: LeaveAccrualLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveAccrualLines", elemType: leaveaccrualline_1.LeaveAccrualLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "leaveAccrualLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveEarningsLines", elemType: LeaveEarningsLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveEarningsLines", elemType: leaveearningsline_1.LeaveEarningsLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "leaveEarningsLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NetPay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NetPay" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "netPay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayslipID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayslipID" }),
         __metadata("design:type", String)
-    ], Payslip.prototype, "payslipId", void 0);
+    ], Payslip.prototype, "payslipID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementLines", elemType: ReimbursementLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementLines", elemType: reimbursementline_1.ReimbursementLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "reimbursementLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reimbursements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reimbursements" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "reimbursements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Super" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Super" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "super", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperannuationLines", elemType: SuperannuationLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperannuationLines", elemType: superannuationline_1.SuperannuationLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "superannuationLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tax" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "tax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxLines", elemType: TaxLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxLines", elemType: taxline_1.TaxLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "taxLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetEarningsLines", elemType: EarningsLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetEarningsLines", elemType: earningsline_1.EarningsLine }),
         __metadata("design:type", Array)
     ], Payslip.prototype, "timesheetEarningsLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], Payslip.prototype, "updatedDateUtc", void 0);
+    ], Payslip.prototype, "updatedDateUTC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Wages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Wages" }),
         __metadata("design:type", Number)
     ], Payslip.prototype, "wages", void 0);
     return Payslip;
-}(SpeakeasyBase));
-export { Payslip };
+}(utils_1.SpeakeasyBase));
+exports.Payslip = Payslip;

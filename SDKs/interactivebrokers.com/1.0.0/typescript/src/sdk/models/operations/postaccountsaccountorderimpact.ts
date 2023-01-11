@@ -94,8 +94,8 @@ export class PostAccountsAccountOrderImpactResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAccountsAccountOrderImpact200ApplicationJsonObject?: PostAccountsAccountOrderImpact200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAccountsAccountOrderImpact200ApplicationJSONObject?: PostAccountsAccountOrderImpact200ApplicationJson;
 }

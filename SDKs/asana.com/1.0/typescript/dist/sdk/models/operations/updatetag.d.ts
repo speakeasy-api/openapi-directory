@@ -20,5 +20,5 @@ export declare class UpdateTagResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateTag200ApplicationJsonObject?: UpdateTag200ApplicationJson;
+    updateTag200ApplicationJSONObject?: UpdateTag200ApplicationJson;
 }

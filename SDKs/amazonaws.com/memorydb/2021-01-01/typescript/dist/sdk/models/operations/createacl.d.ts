@@ -21,7 +21,7 @@ export declare class CreateAclResponse extends SpeakeasyBase {
     aclAlreadyExistsFault?: any;
     aclQuotaExceededFault?: any;
     contentType: string;
-    createAclResponse?: shared.CreateAclResponse;
+    createACLResponse?: shared.CreateAclResponse;
     defaultUserRequired?: any;
     duplicateUserNameFault?: any;
     invalidParameterValueException?: any;

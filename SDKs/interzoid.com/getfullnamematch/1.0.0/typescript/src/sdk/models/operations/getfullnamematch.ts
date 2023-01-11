@@ -37,5 +37,5 @@ export class GetfullnamematchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getfullnamematch200ApplicationJsonObject?: Getfullnamematch200ApplicationJson;
+  getfullnamematch200ApplicationJSONObject?: Getfullnamematch200ApplicationJson;
 }

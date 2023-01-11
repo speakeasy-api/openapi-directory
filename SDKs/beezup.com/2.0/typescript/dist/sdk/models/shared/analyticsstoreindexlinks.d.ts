@@ -1,0 +1,35 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { LinksOptimiseLink } from "./linksoptimiselink";
+import { LinksOptimiseAllLink } from "./linksoptimisealllink";
+import { LinksOptimiseByCategoryLink } from "./linksoptimisebycategorylink";
+import { LinksOptimiseByChannelLink } from "./linksoptimisebychannellink";
+import { LinksOptimiseByProductLink } from "./linksoptimisebyproductlink";
+import { LinksGetStoreReportByCategoryLink } from "./linksgetstorereportbycategorylink";
+import { LinksGetStoreReportByChannelLink } from "./linksgetstorereportbychannellink";
+import { LinksGetStoreReportByDayLink } from "./linksgetstorereportbydaylink";
+import { LinksGetStoreReportByProductLink } from "./linksgetstorereportbyproductlink";
+import { LinksGetReportFiltersLink } from "./linksgetreportfilterslink";
+import { LinksGetRulesLink } from "./linksgetruleslink";
+import { LinksAnalyticsIndexLink } from "./linksanalyticsindexlink";
+import { LinksGetStoreTrackedClicksLink } from "./linksgetstoretrackedclickslink";
+import { LinksGetStoreTrackedExternalOrdersLink } from "./linksgetstoretrackedexternalorderslink";
+import { LinksGetStoreTrackedOrdersLink } from "./linksgetstoretrackedorderslink";
+import { LinksGetStoreTrackingStatusLink } from "./linksgetstoretrackingstatuslink";
+export declare class AnalyticsStoreIndexLinks extends SpeakeasyBase {
+    optimise?: LinksOptimiseLink;
+    optimiseAll?: LinksOptimiseAllLink;
+    optimiseByCategory?: LinksOptimiseByCategoryLink;
+    optimiseByChannel?: LinksOptimiseByChannelLink;
+    optimiseByProduct?: LinksOptimiseByProductLink;
+    reportByCategory?: LinksGetStoreReportByCategoryLink;
+    reportByChannel?: LinksGetStoreReportByChannelLink;
+    reportByDay?: LinksGetStoreReportByDayLink;
+    reportByProduct?: LinksGetStoreReportByProductLink;
+    reportFilters: LinksGetReportFiltersLink;
+    rules?: LinksGetRulesLink;
+    self: LinksAnalyticsIndexLink;
+    trackedClicks: LinksGetStoreTrackedClicksLink;
+    trackedExternalOrders?: LinksGetStoreTrackedExternalOrdersLink;
+    trackedOrders: LinksGetStoreTrackedOrdersLink;
+    trackingStatus: LinksGetStoreTrackingStatusLink;
+}

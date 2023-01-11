@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ObjectTokenDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectToken = exports.ObjectTokenDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ObjectTokenDataTypeEnum;
 (function (ObjectTokenDataTypeEnum) {
     ObjectTokenDataTypeEnum["Boolean"] = "BOOLEAN";
     ObjectTokenDataTypeEnum["Currency"] = "CURRENCY";
@@ -34,28 +37,28 @@ export var ObjectTokenDataTypeEnum;
     ObjectTokenDataTypeEnum["Numeric"] = "NUMERIC";
     ObjectTokenDataTypeEnum["String"] = "STRING";
     ObjectTokenDataTypeEnum["Status"] = "STATUS";
-})(ObjectTokenDataTypeEnum || (ObjectTokenDataTypeEnum = {}));
+})(ObjectTokenDataTypeEnum = exports.ObjectTokenDataTypeEnum || (exports.ObjectTokenDataTypeEnum = {}));
 var ObjectToken = /** @class */ (function (_super) {
     __extends(ObjectToken, _super);
     function ObjectToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], ObjectToken.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ObjectToken.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ObjectToken.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ObjectToken.prototype, "value", void 0);
     return ObjectToken;
-}(SpeakeasyBase));
-export { ObjectToken };
+}(utils_1.SpeakeasyBase));
+exports.ObjectToken = ObjectToken;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams };
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams = UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams;
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum["Wan1"] = "wan1";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum["Wan2"] = "wan2";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum = {}));
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum;
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum = {}));
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum["PoorPerformance"] = "poorPerformance";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum["UplinkDown"] = "uplinkDown";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum = {}));
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum;
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum = {}));
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum["VoIp"] = "VoIP";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum = {}));
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum;
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum = {}));
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum["Builtin"] = "builtin";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum["Custom"] = "custom";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = {}));
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass
 /**
  * Performance class setting for this uplink preference rule
@@ -64,34 +67,34 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtinPerformanceClassName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtinPerformanceClassName" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass.prototype, "builtinPerformanceClassName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customPerformanceClassId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customPerformanceClassId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass.prototype, "customPerformanceClassId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass.prototype, "type", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass };
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass;
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum["Wan1"] = "wan1";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum["Wan2"] = "wan2";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum["BestForVoIp"] = "bestForVoIP";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum["LoadBalancing"] = "loadBalancing";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum["DefaultUplink"] = "defaultUplink";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = {}));
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum;
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = {}));
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum["ApplicationCategory"] = "applicationCategory";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum["Application"] = "application";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum["Custom"] = "custom";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = {}));
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination
 /**
  * Destination of this custom type traffic filter
@@ -102,39 +105,39 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fqdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fqdn" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "fqdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "vlan", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination };
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination;
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Tcp"] = "tcp";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Udp"] = "udp";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Icmp"] = "icmp";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Any"] = "any";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = {}));
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource
 /**
  * Source of this custom type traffic filter
@@ -145,28 +148,28 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "vlan", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource;
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue
 /**
  * Value object of this traffic filter
@@ -177,73 +180,73 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue.prototype, "source", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters.prototype, "value", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failOverCriterion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failOverCriterion" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences.prototype, "failOverCriterion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performanceClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performanceClass" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences.prototype, "performanceClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredUplink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredUplink" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences.prototype, "preferredUplink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficFilters", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficFilters", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences.prototype, "trafficFilters", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences };
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences;
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum["Wan1"] = "wan1";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum["Wan2"] = "wan2";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = {}));
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum;
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = {}));
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum["Custom"] = "custom";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = {}));
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination
 /**
  * Destination of this custom type traffic filter
@@ -254,22 +257,22 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination.prototype, "port", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination };
-export var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination;
+var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum;
 (function (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum) {
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Tcp"] = "tcp";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Udp"] = "udp";
     UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum["Any"] = "any";
-})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum || (UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum || (exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum = {}));
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource
 /**
  * Source of this custom type traffic filter
@@ -280,24 +283,24 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource.prototype, "vlan", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource;
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue
 /**
  * Value object of this traffic filter
@@ -308,113 +311,113 @@ var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUpli
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue.prototype, "source", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters.prototype, "value", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredUplink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredUplink" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences.prototype, "preferredUplink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficFilters", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficFilters", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences.prototype, "trafficFilters", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeActiveAutoVpnEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeActiveAutoVpnEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody.prototype, "activeActiveAutoVpnEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultUplink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultUplink" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody.prototype, "defaultUplink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody.prototype, "loadBalancingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpnTrafficUplinkPreferences", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpnTrafficUplinkPreferences", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody.prototype, "vpnTrafficUplinkPreferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wanTrafficUplinkPreferences", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wanTrafficUplinkPreferences", elemType: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody.prototype, "wanTrafficUplinkPreferences", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest = UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest;
 var UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse, _super);
     function UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse.prototype, "updateNetworkApplianceTrafficShapingUplinkSelection200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse.prototype, "updateNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse = UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse;

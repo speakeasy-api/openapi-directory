@@ -9,63 +9,43 @@ import { DigiLockerSignUpApIs } from "./digilockersignupapis";
 import { FileApIs } from "./fileapis";
 import { TokenRevocationApi } from "./tokenrevocationapi";
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"https://betaapi.digitallocker.gov.in/public",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
+
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  serverUrl?: string;
 }
 
 
 export class SDK {
-  public accountDetailApi: AccountDetailApi;
+  public accountDetailAPI: AccountDetailApi;
   public authorization: Authorization;
-  public authorizationApi: AuthorizationApi;
-  public digiLockerMetaApIs: DigiLockerMetaApIs;
-  public digiLockerSignUpApIs: DigiLockerSignUpApIs;
-  public fileApIs: FileApIs;
-  public tokenRevocationApi: TokenRevocationApi;
+  public authorizationAPI: AuthorizationApi;
+  public digiLockerMetaAPIs: DigiLockerMetaApIs;
+  public digiLockerSignUpAPIs: DigiLockerSignUpApIs;
+  public fileAPIs: FileApIs;
+  public tokenRevocationAPI: TokenRevocationApi;
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      this._securityClient = this._defaultClient;
-    }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    this._securityClient = this._defaultClient;
     
-    this.accountDetailApi = new AccountDetailApi(
+    this.accountDetailAPI = new AccountDetailApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -83,7 +63,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.authorizationApi = new AuthorizationApi(
+    this.authorizationAPI = new AuthorizationApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -92,7 +72,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.digiLockerMetaApIs = new DigiLockerMetaApIs(
+    this.digiLockerMetaAPIs = new DigiLockerMetaApIs(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -101,7 +81,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.digiLockerSignUpApIs = new DigiLockerSignUpApIs(
+    this.digiLockerSignUpAPIs = new DigiLockerSignUpApIs(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -110,7 +90,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.fileApIs = new FileApIs(
+    this.fileAPIs = new FileApIs(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -119,7 +99,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.tokenRevocationApi = new TokenRevocationApi(
+    this.tokenRevocationAPI = new TokenRevocationApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,

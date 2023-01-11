@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppEngineHttpTarget } from "./appenginehttptarget";
-import { HttpTarget } from "./httptarget";
-import { RateLimits } from "./ratelimits";
-import { RetryConfig } from "./retryconfig";
-import { QueueStateEnum } from "./queue";
-import { QueueStats } from "./queuestats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Queue1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var appenginehttptarget_1 = require("./appenginehttptarget");
+var httptarget_1 = require("./httptarget");
+var ratelimits_1 = require("./ratelimits");
+var retryconfig_1 = require("./retryconfig");
+var queue_1 = require("./queue");
+var queuestats_1 = require("./queuestats");
 // Queue1
 /**
  * A queue is a container of related tasks. Queues are configured to manage how those tasks are dispatched. Configurable properties include rate limits, retry options, target types, and others.
@@ -39,49 +42,49 @@ var Queue1 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appEngineHttpTarget" }),
-        __metadata("design:type", AppEngineHttpTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineHttpTarget" }),
+        __metadata("design:type", appenginehttptarget_1.AppEngineHttpTarget)
     ], Queue1.prototype, "appEngineHttpTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpTarget" }),
-        __metadata("design:type", HttpTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpTarget" }),
+        __metadata("design:type", httptarget_1.HttpTarget)
     ], Queue1.prototype, "httpTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Queue1.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullTarget" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullTarget" }),
+        __metadata("design:type", Object)
     ], Queue1.prototype, "pullTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purgeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purgeTime" }),
         __metadata("design:type", String)
     ], Queue1.prototype, "purgeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateLimits" }),
-        __metadata("design:type", RateLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateLimits" }),
+        __metadata("design:type", ratelimits_1.RateLimits)
     ], Queue1.prototype, "rateLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryConfig" }),
-        __metadata("design:type", RetryConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryConfig" }),
+        __metadata("design:type", retryconfig_1.RetryConfig)
     ], Queue1.prototype, "retryConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Queue1.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", QueueStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", queuestats_1.QueueStats)
     ], Queue1.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskTtl" }),
         __metadata("design:type", String)
     ], Queue1.prototype, "taskTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tombstoneTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tombstoneTtl" }),
         __metadata("design:type", String)
     ], Queue1.prototype, "tombstoneTtl", void 0);
     return Queue1;
-}(SpeakeasyBase));
-export { Queue1 };
+}(utils_1.SpeakeasyBase));
+exports.Queue1 = Queue1;

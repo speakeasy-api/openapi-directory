@@ -3,6 +3,10 @@ import { ReactionRollup } from "./reactionrollup";
 
 
 
+// TeamDiscussionSimpleUser
+/** 
+ * Simple User
+**/
 export class TeamDiscussionSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

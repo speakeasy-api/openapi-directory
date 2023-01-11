@@ -108,11 +108,11 @@ export declare class LcsagRequest extends SpeakeasyBase {
 export declare class LcsagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lcsag400ApplicationJsonObject?: Lcsag400ApplicationJson;
-    lcsag401ApplicationJsonObject?: Lcsag401ApplicationJson;
-    lcsag404ApplicationJsonObject?: Lcsag404ApplicationJson;
-    lcsag500ApplicationJsonObject?: Lcsag500ApplicationJson;
-    lcsag502ApplicationJsonObject?: Lcsag502ApplicationJson;
-    lcsag503ApplicationJsonObject?: Lcsag503ApplicationJson;
-    lcsag504ApplicationJsonObject?: Lcsag504ApplicationJson;
+    lcsag400ApplicationJSONObject?: Lcsag400ApplicationJson;
+    lcsag401ApplicationJSONObject?: Lcsag401ApplicationJson;
+    lcsag404ApplicationJSONObject?: Lcsag404ApplicationJson;
+    lcsag500ApplicationJSONObject?: Lcsag500ApplicationJson;
+    lcsag502ApplicationJSONObject?: Lcsag502ApplicationJson;
+    lcsag503ApplicationJSONObject?: Lcsag503ApplicationJson;
+    lcsag504ApplicationJSONObject?: Lcsag504ApplicationJson;
 }

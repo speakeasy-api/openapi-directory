@@ -37,7 +37,7 @@ export declare class DistributionsResponseResultElementsSurveyLink extends Speak
 }
 export declare class DistributionsResponseResultElements extends SpeakeasyBase {
     createdDate: string;
-    customHeaders: Map<string, any>;
+    customHeaders: Record<string, any>;
     embeddedData: any;
     headers: DistributionsResponseResultElementsHeaders;
     id: string;

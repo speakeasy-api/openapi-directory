@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiVersion } from "./apiversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListApiVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var apiversion_1 = require("./apiversion");
 // ListApiVersionsResponse
 /**
  * Response message for ListApiVersions.
@@ -34,13 +37,13 @@ var ListApiVersionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiVersions", elemType: ApiVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiVersions", elemType: apiversion_1.ApiVersion }),
         __metadata("design:type", Array)
     ], ListApiVersionsResponse.prototype, "apiVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListApiVersionsResponse.prototype, "nextPageToken", void 0);
     return ListApiVersionsResponse;
-}(SpeakeasyBase));
-export { ListApiVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListApiVersionsResponse = ListApiVersionsResponse;

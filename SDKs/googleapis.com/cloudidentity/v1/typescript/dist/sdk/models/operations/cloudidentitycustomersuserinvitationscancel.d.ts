@@ -19,7 +19,7 @@ export declare class CloudidentityCustomersUserinvitationsCancelQueryParams exte
 export declare class CloudidentityCustomersUserinvitationsCancelRequest extends SpeakeasyBase {
     pathParams: CloudidentityCustomersUserinvitationsCancelPathParams;
     queryParams: CloudidentityCustomersUserinvitationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class CloudidentityCustomersUserinvitationsCancelResponse extends SpeakeasyBase {
     contentType: string;

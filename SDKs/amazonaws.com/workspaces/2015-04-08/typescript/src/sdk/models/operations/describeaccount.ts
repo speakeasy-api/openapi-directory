@@ -39,7 +39,7 @@ export class DescribeAccountRequest extends SpeakeasyBase {
   headers: DescribeAccountHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

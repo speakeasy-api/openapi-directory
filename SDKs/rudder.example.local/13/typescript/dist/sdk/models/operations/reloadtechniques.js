@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReloadTechniques200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReloadTechniquesResponse = exports.ReloadTechniques200ApplicationJson = exports.ReloadTechniques200ApplicationJsonResultEnum = exports.ReloadTechniques200ApplicationJsonData = exports.ReloadTechniques200ApplicationJsonDataTechniquesEnum = exports.ReloadTechniques200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReloadTechniques200ApplicationJsonActionEnum;
 (function (ReloadTechniques200ApplicationJsonActionEnum) {
     ReloadTechniques200ApplicationJsonActionEnum["ReloadTechniques"] = "reloadTechniques";
-})(ReloadTechniques200ApplicationJsonActionEnum || (ReloadTechniques200ApplicationJsonActionEnum = {}));
-export var ReloadTechniques200ApplicationJsonDataTechniquesEnum;
+})(ReloadTechniques200ApplicationJsonActionEnum = exports.ReloadTechniques200ApplicationJsonActionEnum || (exports.ReloadTechniques200ApplicationJsonActionEnum = {}));
+var ReloadTechniques200ApplicationJsonDataTechniquesEnum;
 (function (ReloadTechniques200ApplicationJsonDataTechniquesEnum) {
     ReloadTechniques200ApplicationJsonDataTechniquesEnum["Started"] = "Started";
-})(ReloadTechniques200ApplicationJsonDataTechniquesEnum || (ReloadTechniques200ApplicationJsonDataTechniquesEnum = {}));
+})(ReloadTechniques200ApplicationJsonDataTechniquesEnum = exports.ReloadTechniques200ApplicationJsonDataTechniquesEnum || (exports.ReloadTechniques200ApplicationJsonDataTechniquesEnum = {}));
 var ReloadTechniques200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ReloadTechniques200ApplicationJsonData, _super);
     function ReloadTechniques200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=techniques" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=techniques" }),
         __metadata("design:type", String)
     ], ReloadTechniques200ApplicationJsonData.prototype, "techniques", void 0);
     return ReloadTechniques200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ReloadTechniques200ApplicationJsonData };
-export var ReloadTechniques200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReloadTechniques200ApplicationJsonData = ReloadTechniques200ApplicationJsonData;
+var ReloadTechniques200ApplicationJsonResultEnum;
 (function (ReloadTechniques200ApplicationJsonResultEnum) {
     ReloadTechniques200ApplicationJsonResultEnum["Success"] = "success";
     ReloadTechniques200ApplicationJsonResultEnum["Error"] = "error";
-})(ReloadTechniques200ApplicationJsonResultEnum || (ReloadTechniques200ApplicationJsonResultEnum = {}));
+})(ReloadTechniques200ApplicationJsonResultEnum = exports.ReloadTechniques200ApplicationJsonResultEnum || (exports.ReloadTechniques200ApplicationJsonResultEnum = {}));
 var ReloadTechniques200ApplicationJson = /** @class */ (function (_super) {
     __extends(ReloadTechniques200ApplicationJson, _super);
     function ReloadTechniques200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ReloadTechniques200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ReloadTechniques200ApplicationJsonData)
     ], ReloadTechniques200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ReloadTechniques200ApplicationJson.prototype, "result", void 0);
     return ReloadTechniques200ApplicationJson;
-}(SpeakeasyBase));
-export { ReloadTechniques200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ReloadTechniques200ApplicationJson = ReloadTechniques200ApplicationJson;
 var ReloadTechniquesResponse = /** @class */ (function (_super) {
     __extends(ReloadTechniquesResponse, _super);
     function ReloadTechniquesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReloadTechniquesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReloadTechniquesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReloadTechniques200ApplicationJson)
-    ], ReloadTechniquesResponse.prototype, "reloadTechniques200ApplicationJsonObject", void 0);
+    ], ReloadTechniquesResponse.prototype, "reloadTechniques200ApplicationJSONObject", void 0);
     return ReloadTechniquesResponse;
-}(SpeakeasyBase));
-export { ReloadTechniquesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReloadTechniquesResponse = ReloadTechniquesResponse;

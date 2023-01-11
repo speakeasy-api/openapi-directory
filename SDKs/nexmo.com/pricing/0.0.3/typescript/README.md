@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RetrievePrefixPricingRequest, RetrievePrefixPricingResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,16 +28,16 @@ const sdk = new SDK();
     
 const req: RetrievePrefixPricingRequest = {
   pathParams: {
-    type: "pariatur",
+    type: "sit",
   },
   queryParams: {
-    apiKey: "asperiores",
-    apiSecret: "dolorem",
-    prefix: "quae",
+    apiKey: "voluptas",
+    apiSecret: "culpa",
+    prefix: "expedita",
   },
 };
 
-sdk.sdk.retrievePrefixPricing(req).then((res: RetrievePrefixPricingResponse | AxiosError) => {
+sdk.pricing.retrievePrefixPricing(req).then((res: RetrievePrefixPricingResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.retrievePrefixPricing(req).then((res: RetrievePrefixPricingResponse | Ax
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pricing
 
 * `retrievePrefixPricing` - Retrieve outbound pricing for a specific dialing prefix.
 * `retrievePricingAllCountries` - Retrieve outbound pricing for all countries.

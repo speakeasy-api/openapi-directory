@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OfferingProgressRow } from "./offeringprogressrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LearnerResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var offeringprogressrow_1 = require("./offeringprogressrow");
 var LearnerResponse = /** @class */ (function (_super) {
     __extends(LearnerResponse, _super);
     function LearnerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], LearnerResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], LearnerResponse.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], LearnerResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], LearnerResponse.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerings", elemType: OfferingProgressRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerings", elemType: offeringprogressrow_1.OfferingProgressRow }),
         __metadata("design:type", Array)
     ], LearnerResponse.prototype, "offerings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personId" }),
         __metadata("design:type", String)
     ], LearnerResponse.prototype, "personId", void 0);
     return LearnerResponse;
-}(SpeakeasyBase));
-export { LearnerResponse };
+}(utils_1.SpeakeasyBase));
+exports.LearnerResponse = LearnerResponse;

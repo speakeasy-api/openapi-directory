@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2LargeCustomDictionaryStats } from "./googleprivacydlpv2largecustomdictionarystats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2StoredInfoTypeStats = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2largecustomdictionarystats_1 = require("./googleprivacydlpv2largecustomdictionarystats");
 // GooglePrivacyDlpV2StoredInfoTypeStats
 /**
  * Statistics for a StoredInfoType.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2StoredInfoTypeStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largeCustomDictionary" }),
-        __metadata("design:type", GooglePrivacyDlpV2LargeCustomDictionaryStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largeCustomDictionary" }),
+        __metadata("design:type", googleprivacydlpv2largecustomdictionarystats_1.GooglePrivacyDlpV2LargeCustomDictionaryStats)
     ], GooglePrivacyDlpV2StoredInfoTypeStats.prototype, "largeCustomDictionary", void 0);
     return GooglePrivacyDlpV2StoredInfoTypeStats;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2StoredInfoTypeStats };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2StoredInfoTypeStats = GooglePrivacyDlpV2StoredInfoTypeStats;

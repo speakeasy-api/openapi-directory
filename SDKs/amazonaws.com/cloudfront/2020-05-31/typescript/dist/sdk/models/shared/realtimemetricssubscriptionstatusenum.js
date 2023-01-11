@@ -1,5 +1,8 @@
-export var RealtimeMetricsSubscriptionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeMetricsSubscriptionStatusEnum = void 0;
+var RealtimeMetricsSubscriptionStatusEnum;
 (function (RealtimeMetricsSubscriptionStatusEnum) {
     RealtimeMetricsSubscriptionStatusEnum["Enabled"] = "Enabled";
     RealtimeMetricsSubscriptionStatusEnum["Disabled"] = "Disabled";
-})(RealtimeMetricsSubscriptionStatusEnum || (RealtimeMetricsSubscriptionStatusEnum = {}));
+})(RealtimeMetricsSubscriptionStatusEnum = exports.RealtimeMetricsSubscriptionStatusEnum || (exports.RealtimeMetricsSubscriptionStatusEnum = {}));

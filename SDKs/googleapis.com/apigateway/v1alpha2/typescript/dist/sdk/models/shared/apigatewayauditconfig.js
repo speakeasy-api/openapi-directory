@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApigatewayAuditLogConfig } from "./apigatewayauditlogconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApigatewayAuditConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var apigatewayauditlogconfig_1 = require("./apigatewayauditlogconfig");
 // ApigatewayAuditConfig
 /**
  * Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs. If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each AuditLogConfig are exempted. Example Policy with multiple AuditConfigs: { "audit_configs": [ { "service": "allServices", "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" }, { "log_type": "ADMIN_READ" } ] }, { "service": "sampleservice.googleapis.com", "audit_log_configs": [ { "log_type": "DATA_READ" }, { "log_type": "DATA_WRITE", "exempted_members": [ "user:aliya@example.com" ] } ] } ] } For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts jose@example.com from DATA_READ logging, and aliya@example.com from DATA_WRITE logging.
@@ -34,13 +37,13 @@ var ApigatewayAuditConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditLogConfigs", elemType: ApigatewayAuditLogConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditLogConfigs", elemType: apigatewayauditlogconfig_1.ApigatewayAuditLogConfig }),
         __metadata("design:type", Array)
     ], ApigatewayAuditConfig.prototype, "auditLogConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], ApigatewayAuditConfig.prototype, "service", void 0);
     return ApigatewayAuditConfig;
-}(SpeakeasyBase));
-export { ApigatewayAuditConfig };
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayAuditConfig = ApigatewayAuditConfig;

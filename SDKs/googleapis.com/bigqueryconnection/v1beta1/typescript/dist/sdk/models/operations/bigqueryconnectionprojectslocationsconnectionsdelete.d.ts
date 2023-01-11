@@ -35,6 +35,6 @@ export declare class BigqueryconnectionProjectsLocationsConnectionsDeleteRequest
 }
 export declare class BigqueryconnectionProjectsLocationsConnectionsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

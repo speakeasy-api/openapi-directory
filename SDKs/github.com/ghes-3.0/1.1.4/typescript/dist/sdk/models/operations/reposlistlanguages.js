@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposListLanguagesResponse = exports.ReposListLanguagesRequest = exports.ReposListLanguagesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposListLanguagesPathParams = /** @class */ (function (_super) {
     __extends(ReposListLanguagesPathParams, _super);
     function ReposListLanguagesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposListLanguagesPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposListLanguagesPathParams.prototype, "repo", void 0);
     return ReposListLanguagesPathParams;
-}(SpeakeasyBase));
-export { ReposListLanguagesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposListLanguagesPathParams = ReposListLanguagesPathParams;
 var ReposListLanguagesRequest = /** @class */ (function (_super) {
     __extends(ReposListLanguagesRequest, _super);
     function ReposListLanguagesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposListLanguagesPathParams)
     ], ReposListLanguagesRequest.prototype, "pathParams", void 0);
     return ReposListLanguagesRequest;
-}(SpeakeasyBase));
-export { ReposListLanguagesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposListLanguagesRequest = ReposListLanguagesRequest;
 var ReposListLanguagesResponse = /** @class */ (function (_super) {
     __extends(ReposListLanguagesResponse, _super);
     function ReposListLanguagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposListLanguagesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposListLanguagesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposListLanguagesResponse.prototype, "language", void 0);
     return ReposListLanguagesResponse;
-}(SpeakeasyBase));
-export { ReposListLanguagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposListLanguagesResponse = ReposListLanguagesResponse;

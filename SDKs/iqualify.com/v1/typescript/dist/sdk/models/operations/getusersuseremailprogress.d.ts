@@ -8,7 +8,7 @@ export declare class GetUsersUserEmailProgressRequest extends SpeakeasyBase {
 }
 export declare class GetUsersUserEmailProgressResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     learnerResponse?: shared.LearnerResponse;
     statusCode: number;
 }

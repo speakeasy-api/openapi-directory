@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpCity } from "./ipcity";
-import { IpCountry } from "./ipcountry";
-import { IpGeoLocation } from "./ipgeolocation";
-import { IpOwner } from "./ipowner";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpAddressDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipcity_1 = require("./ipcity");
+var ipcountry_1 = require("./ipcountry");
+var ipgeolocation_1 = require("./ipgeolocation");
+var ipowner_1 = require("./ipowner");
 // IpAddressDetails
 /**
  * Provides information about the IP address of the device that an entity used to perform an action on an affected resource.
@@ -37,25 +40,25 @@ var IpAddressDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressV4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressV4" }),
         __metadata("design:type", String)
     ], IpAddressDetails.prototype, "ipAddressV4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipCity" }),
-        __metadata("design:type", IpCity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipCity" }),
+        __metadata("design:type", ipcity_1.IpCity)
     ], IpAddressDetails.prototype, "ipCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipCountry" }),
-        __metadata("design:type", IpCountry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipCountry" }),
+        __metadata("design:type", ipcountry_1.IpCountry)
     ], IpAddressDetails.prototype, "ipCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipGeoLocation" }),
-        __metadata("design:type", IpGeoLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipGeoLocation" }),
+        __metadata("design:type", ipgeolocation_1.IpGeoLocation)
     ], IpAddressDetails.prototype, "ipGeoLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipOwner" }),
-        __metadata("design:type", IpOwner)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipOwner" }),
+        __metadata("design:type", ipowner_1.IpOwner)
     ], IpAddressDetails.prototype, "ipOwner", void 0);
     return IpAddressDetails;
-}(SpeakeasyBase));
-export { IpAddressDetails };
+}(utils_1.SpeakeasyBase));
+exports.IpAddressDetails = IpAddressDetails;

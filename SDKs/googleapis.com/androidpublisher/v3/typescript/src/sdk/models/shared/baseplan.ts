@@ -14,31 +14,6 @@ export enum BasePlanStateEnum {
 }
 
 
-// BasePlanInput
-/** 
- * A single base plan for a subscription.
-**/
-export class BasePlanInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=autoRenewingBasePlanType" })
-  autoRenewingBasePlanType?: AutoRenewingBasePlanType;
-
-  @SpeakeasyMetadata({ data: "json, name=basePlanId" })
-  basePlanId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag })
-  offerTags?: OfferTag[];
-
-  @SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" })
-  otherRegionsConfig?: OtherRegionsBasePlanConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=prepaidBasePlanType" })
-  prepaidBasePlanType?: PrepaidBasePlanType;
-
-  @SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalBasePlanConfig })
-  regionalConfigs?: RegionalBasePlanConfig[];
-}
-
-
 // BasePlan
 /** 
  * A single base plan for a subscription.
@@ -64,4 +39,29 @@ export class BasePlan extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: BasePlanStateEnum;
+}
+
+
+// BasePlanInput
+/** 
+ * A single base plan for a subscription.
+**/
+export class BasePlanInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=autoRenewingBasePlanType" })
+  autoRenewingBasePlanType?: AutoRenewingBasePlanType;
+
+  @SpeakeasyMetadata({ data: "json, name=basePlanId" })
+  basePlanId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag })
+  offerTags?: OfferTag[];
+
+  @SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" })
+  otherRegionsConfig?: OtherRegionsBasePlanConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=prepaidBasePlanType" })
+  prepaidBasePlanType?: PrepaidBasePlanType;
+
+  @SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalBasePlanConfig })
+  regionalConfigs?: RegionalBasePlanConfig[];
 }

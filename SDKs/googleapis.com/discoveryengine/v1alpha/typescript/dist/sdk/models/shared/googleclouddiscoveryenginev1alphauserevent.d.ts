@@ -12,7 +12,7 @@ import { GoogleCloudDiscoveryengineV1alphaUserInfo } from "./googleclouddiscover
  * UserEvent captures all metadata information Discovery Engine API needs to know about how end users interact with customers' website.
 **/
 export declare class GoogleCloudDiscoveryengineV1alphaUserEvent extends SpeakeasyBase {
-    attributes?: Map<string, GoogleCloudDiscoveryengineV1alphaCustomAttribute>;
+    attributes?: Record<string, GoogleCloudDiscoveryengineV1alphaCustomAttribute>;
     attributionToken?: string;
     completionInfo?: GoogleCloudDiscoveryengineV1alphaCompletionInfo;
     directUserRequest?: boolean;

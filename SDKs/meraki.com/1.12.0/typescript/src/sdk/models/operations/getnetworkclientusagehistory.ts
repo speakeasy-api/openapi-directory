@@ -25,5 +25,5 @@ export class GetNetworkClientUsageHistoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClientUsageHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClientUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

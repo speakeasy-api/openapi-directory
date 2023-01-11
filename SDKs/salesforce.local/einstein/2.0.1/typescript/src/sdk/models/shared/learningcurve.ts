@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class LearningCurve extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=epoch" })
-  epoch?: Map<string, any>;
+  epoch?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=epochResults" })
-  epochResults?: Map<string, any>;
+  epochResults?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=metricsData" })
-  metricsData?: Map<string, any>;
+  metricsData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=object" })
   object?: string;

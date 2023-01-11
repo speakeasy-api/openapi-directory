@@ -19,8 +19,8 @@ export declare class GetMappingValuesKeyRequest extends SpeakeasyBase {
 }
 export declare class GetMappingValuesKeyResponse extends SpeakeasyBase {
     contentType: string;
-    getMappingValuesKey200ApplicationJsonObject?: GetMappingValuesKey200ApplicationJson;
+    statusCode: number;
+    getMappingValuesKey200ApplicationJSONObject?: GetMappingValuesKey200ApplicationJson;
     getMappingValuesKey400WildcardString?: string;
     getMappingValuesKey500WildcardString?: string;
-    statusCode: number;
 }

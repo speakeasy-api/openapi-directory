@@ -1,67 +1,48 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Authorization } from "./authorization";
-import { CheckApiUsage } from "./checkapiusage";
-import { LanguageDatasets } from "./languagedatasets";
-import { LanguageExamples } from "./languageexamples";
-import { LanguageModels } from "./languagemodels";
-import { LanguagePrediction } from "./languageprediction";
-import { LanguageTraining } from "./languagetraining";
-import { VisionDatasets } from "./visiondatasets";
-import { VisionExamples } from "./visionexamples";
-import { VisionModels } from "./visionmodels";
-import { VisionPrediction } from "./visionprediction";
-import { VisionTraining } from "./visiontraining";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var authorization_1 = require("./authorization");
+var checkapiusage_1 = require("./checkapiusage");
+var languagedatasets_1 = require("./languagedatasets");
+var languageexamples_1 = require("./languageexamples");
+var languagemodels_1 = require("./languagemodels");
+var languageprediction_1 = require("./languageprediction");
+var languagetraining_1 = require("./languagetraining");
+var visiondatasets_1 = require("./visiondatasets");
+var visionexamples_1 = require("./visionexamples");
+var visionmodels_1 = require("./visionmodels");
+var visionprediction_1 = require("./visionprediction");
+var visiontraining_1 = require("./visiontraining");
+exports.ServerList = [
     "http://salesforce.local",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://metamind.readme.io - For more information, see the Einstein Platform Services Developer Guide*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.authorization = new Authorization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.checkApiUsage = new CheckApiUsage(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.languageDatasets = new LanguageDatasets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.languageExamples = new LanguageExamples(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.languageModels = new LanguageModels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.languagePrediction = new LanguagePrediction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.languageTraining = new LanguageTraining(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.visionDatasets = new VisionDatasets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.visionExamples = new VisionExamples(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.visionModels = new VisionModels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.visionPrediction = new VisionPrediction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.visionTraining = new VisionTraining(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.authorization = new authorization_1.Authorization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.checkAPIUsage = new checkapiusage_1.CheckApiUsage(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.languageDatasets = new languagedatasets_1.LanguageDatasets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.languageExamples = new languageexamples_1.LanguageExamples(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.languageModels = new languagemodels_1.LanguageModels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.languagePrediction = new languageprediction_1.LanguagePrediction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.languageTraining = new languagetraining_1.LanguageTraining(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.visionDatasets = new visiondatasets_1.VisionDatasets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.visionExamples = new visionexamples_1.VisionExamples(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.visionModels = new visionmodels_1.VisionModels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.visionPrediction = new visionprediction_1.VisionPrediction(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.visionTraining = new visiontraining_1.VisionTraining(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

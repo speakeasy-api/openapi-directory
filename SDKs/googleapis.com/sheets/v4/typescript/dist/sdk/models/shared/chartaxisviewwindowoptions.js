@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChartAxisViewWindowOptionsViewWindowModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChartAxisViewWindowOptions = exports.ChartAxisViewWindowOptionsViewWindowModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChartAxisViewWindowOptionsViewWindowModeEnum;
 (function (ChartAxisViewWindowOptionsViewWindowModeEnum) {
     ChartAxisViewWindowOptionsViewWindowModeEnum["DefaultViewWindowMode"] = "DEFAULT_VIEW_WINDOW_MODE";
     ChartAxisViewWindowOptionsViewWindowModeEnum["ViewWindowModeUnsupported"] = "VIEW_WINDOW_MODE_UNSUPPORTED";
     ChartAxisViewWindowOptionsViewWindowModeEnum["Explicit"] = "EXPLICIT";
     ChartAxisViewWindowOptionsViewWindowModeEnum["Pretty"] = "PRETTY";
-})(ChartAxisViewWindowOptionsViewWindowModeEnum || (ChartAxisViewWindowOptionsViewWindowModeEnum = {}));
+})(ChartAxisViewWindowOptionsViewWindowModeEnum = exports.ChartAxisViewWindowOptionsViewWindowModeEnum || (exports.ChartAxisViewWindowOptionsViewWindowModeEnum = {}));
 // ChartAxisViewWindowOptions
 /**
  * The options that define a "view window" for a chart (such as the visible values in an axis).
@@ -40,17 +43,17 @@ var ChartAxisViewWindowOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewWindowMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewWindowMax" }),
         __metadata("design:type", Number)
     ], ChartAxisViewWindowOptions.prototype, "viewWindowMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewWindowMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewWindowMin" }),
         __metadata("design:type", Number)
     ], ChartAxisViewWindowOptions.prototype, "viewWindowMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewWindowMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewWindowMode" }),
         __metadata("design:type", String)
     ], ChartAxisViewWindowOptions.prototype, "viewWindowMode", void 0);
     return ChartAxisViewWindowOptions;
-}(SpeakeasyBase));
-export { ChartAxisViewWindowOptions };
+}(utils_1.SpeakeasyBase));
+exports.ChartAxisViewWindowOptions = ChartAxisViewWindowOptions;

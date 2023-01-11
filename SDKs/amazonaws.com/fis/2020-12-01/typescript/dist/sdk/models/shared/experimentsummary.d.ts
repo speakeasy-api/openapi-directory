@@ -8,5 +8,5 @@ export declare class ExperimentSummary extends SpeakeasyBase {
     experimentTemplateId?: string;
     id?: string;
     state?: ExperimentState;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetIdentityNotificationAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetIdentityNotificationAttributesResponse = exports.GetGetIdentityNotificationAttributesRequest = exports.GetGetIdentityNotificationAttributesHeaders = exports.GetGetIdentityNotificationAttributesQueryParams = exports.GetGetIdentityNotificationAttributesVersionEnum = exports.GetGetIdentityNotificationAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetIdentityNotificationAttributesActionEnum;
 (function (GetGetIdentityNotificationAttributesActionEnum) {
     GetGetIdentityNotificationAttributesActionEnum["GetIdentityNotificationAttributes"] = "GetIdentityNotificationAttributes";
-})(GetGetIdentityNotificationAttributesActionEnum || (GetGetIdentityNotificationAttributesActionEnum = {}));
-export var GetGetIdentityNotificationAttributesVersionEnum;
+})(GetGetIdentityNotificationAttributesActionEnum = exports.GetGetIdentityNotificationAttributesActionEnum || (exports.GetGetIdentityNotificationAttributesActionEnum = {}));
+var GetGetIdentityNotificationAttributesVersionEnum;
 (function (GetGetIdentityNotificationAttributesVersionEnum) {
     GetGetIdentityNotificationAttributesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetGetIdentityNotificationAttributesVersionEnum || (GetGetIdentityNotificationAttributesVersionEnum = {}));
+})(GetGetIdentityNotificationAttributesVersionEnum = exports.GetGetIdentityNotificationAttributesVersionEnum || (exports.GetGetIdentityNotificationAttributesVersionEnum = {}));
 var GetGetIdentityNotificationAttributesQueryParams = /** @class */ (function (_super) {
     __extends(GetGetIdentityNotificationAttributesQueryParams, _super);
     function GetGetIdentityNotificationAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Identities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Identities" }),
         __metadata("design:type", Array)
     ], GetGetIdentityNotificationAttributesQueryParams.prototype, "identities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesQueryParams.prototype, "version", void 0);
     return GetGetIdentityNotificationAttributesQueryParams;
-}(SpeakeasyBase));
-export { GetGetIdentityNotificationAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityNotificationAttributesQueryParams = GetGetIdentityNotificationAttributesQueryParams;
 var GetGetIdentityNotificationAttributesHeaders = /** @class */ (function (_super) {
     __extends(GetGetIdentityNotificationAttributesHeaders, _super);
     function GetGetIdentityNotificationAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetIdentityNotificationAttributesHeaders;
-}(SpeakeasyBase));
-export { GetGetIdentityNotificationAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityNotificationAttributesHeaders = GetGetIdentityNotificationAttributesHeaders;
 var GetGetIdentityNotificationAttributesRequest = /** @class */ (function (_super) {
     __extends(GetGetIdentityNotificationAttributesRequest, _super);
     function GetGetIdentityNotificationAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetIdentityNotificationAttributesQueryParams)
     ], GetGetIdentityNotificationAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetIdentityNotificationAttributesHeaders)
     ], GetGetIdentityNotificationAttributesRequest.prototype, "headers", void 0);
     return GetGetIdentityNotificationAttributesRequest;
-}(SpeakeasyBase));
-export { GetGetIdentityNotificationAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityNotificationAttributesRequest = GetGetIdentityNotificationAttributesRequest;
 var GetGetIdentityNotificationAttributesResponse = /** @class */ (function (_super) {
     __extends(GetGetIdentityNotificationAttributesResponse, _super);
     function GetGetIdentityNotificationAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetIdentityNotificationAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetIdentityNotificationAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetIdentityNotificationAttributesResponse.prototype, "statusCode", void 0);
     return GetGetIdentityNotificationAttributesResponse;
-}(SpeakeasyBase));
-export { GetGetIdentityNotificationAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityNotificationAttributesResponse = GetGetIdentityNotificationAttributesResponse;

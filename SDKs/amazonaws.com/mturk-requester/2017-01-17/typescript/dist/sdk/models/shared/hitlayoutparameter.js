@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HitLayoutParameter = void 0;
+var utils_1 = require("../../../internal/utils");
 // HitLayoutParameter
 /**
  *  The HITLayoutParameter data structure defines parameter values used with a HITLayout. A HITLayout is a reusable Amazon Mechanical Turk project template used to provide Human Intelligence Task (HIT) question data for CreateHIT.
@@ -33,13 +36,13 @@ var HitLayoutParameter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], HitLayoutParameter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], HitLayoutParameter.prototype, "value", void 0);
     return HitLayoutParameter;
-}(SpeakeasyBase));
-export { HitLayoutParameter };
+}(utils_1.SpeakeasyBase));
+exports.HitLayoutParameter = HitLayoutParameter;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ServicebrokerGetIamPolicyRequest, ServicebrokerGetIamPolicyResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: ServicebrokerGetIamPolicyRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    resource: "esse",
+    resource: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "perferendis",
-    alt: "proto",
-    callback: "perferendis",
-    fields: "assumenda",
-    key: "sit",
-    oauthToken: "voluptatibus",
-    optionsRequestedPolicyVersion: 5389235344050263785,
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    optionsRequestedPolicyVersion: 8274930044578894929,
     prettyPrint: false,
-    quotaUser: "velit",
-    uploadType: "accusamus",
-    uploadProtocol: "assumenda",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

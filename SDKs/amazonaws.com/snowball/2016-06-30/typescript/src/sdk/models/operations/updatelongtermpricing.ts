@@ -54,5 +54,5 @@ export class UpdateLongTermPricingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLongTermPricingResult?: Map<string, any>;
+  updateLongTermPricingResult?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentDescription } from "./environmentdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentDescriptionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentdescription_1 = require("./environmentdescription");
 // EnvironmentDescriptionsMessage
 /**
  * Result message containing a list of environment descriptions.
@@ -34,13 +37,13 @@ var EnvironmentDescriptionsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: EnvironmentDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: environmentdescription_1.EnvironmentDescription }),
         __metadata("design:type", Array)
     ], EnvironmentDescriptionsMessage.prototype, "environments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescriptionsMessage.prototype, "nextToken", void 0);
     return EnvironmentDescriptionsMessage;
-}(SpeakeasyBase));
-export { EnvironmentDescriptionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentDescriptionsMessage = EnvironmentDescriptionsMessage;

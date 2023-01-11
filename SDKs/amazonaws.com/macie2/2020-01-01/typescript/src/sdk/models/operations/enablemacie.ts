@@ -69,7 +69,7 @@ export class EnableMacieResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  enableMacieResponse?: Map<string, any>;
+  enableMacieResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

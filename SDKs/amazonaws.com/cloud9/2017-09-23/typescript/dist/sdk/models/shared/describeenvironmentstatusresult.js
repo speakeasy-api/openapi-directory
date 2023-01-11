@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentStatusEnum } from "./environmentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeEnvironmentStatusResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentstatusenum_1 = require("./environmentstatusenum");
 var DescribeEnvironmentStatusResult = /** @class */ (function (_super) {
     __extends(DescribeEnvironmentStatusResult, _super);
     function DescribeEnvironmentStatusResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DescribeEnvironmentStatusResult.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DescribeEnvironmentStatusResult.prototype, "status", void 0);
     return DescribeEnvironmentStatusResult;
-}(SpeakeasyBase));
-export { DescribeEnvironmentStatusResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeEnvironmentStatusResult = DescribeEnvironmentStatusResult;

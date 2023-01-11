@@ -19,7 +19,7 @@ export declare class CreateCoreDefinitionRequestBodyInitialVersion extends Speak
 export declare class CreateCoreDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateCoreDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateCoreDefinitionRequest extends SpeakeasyBase {
     headers: CreateCoreDefinitionHeaders;

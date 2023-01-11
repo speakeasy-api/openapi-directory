@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CarrierRate } from "./carrierrate";
-import { Table } from "./table";
-import { Value } from "./value";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var carrierrate_1 = require("./carrierrate");
+var table_1 = require("./table");
+var value_1 = require("./value");
 var RateGroup = /** @class */ (function (_super) {
     __extends(RateGroup, _super);
     function RateGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicableShippingLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicableShippingLabels" }),
         __metadata("design:type", Array)
     ], RateGroup.prototype, "applicableShippingLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrierRates", elemType: CarrierRate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrierRates", elemType: carrierrate_1.CarrierRate }),
         __metadata("design:type", Array)
     ], RateGroup.prototype, "carrierRates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainTable" }),
-        __metadata("design:type", Table)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainTable" }),
+        __metadata("design:type", table_1.Table)
     ], RateGroup.prototype, "mainTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RateGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleValue" }),
-        __metadata("design:type", Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleValue" }),
+        __metadata("design:type", value_1.Value)
     ], RateGroup.prototype, "singleValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtables", elemType: Table }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtables", elemType: table_1.Table }),
         __metadata("design:type", Array)
     ], RateGroup.prototype, "subtables", void 0);
     return RateGroup;
-}(SpeakeasyBase));
-export { RateGroup };
+}(utils_1.SpeakeasyBase));
+exports.RateGroup = RateGroup;

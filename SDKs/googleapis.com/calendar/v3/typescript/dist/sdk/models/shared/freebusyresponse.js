@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FreeBusyCalendar } from "./freebusycalendar";
-import { FreeBusyGroup } from "./freebusygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FreeBusyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var freebusycalendar_1 = require("./freebusycalendar");
+var freebusygroup_1 = require("./freebusygroup");
 var FreeBusyResponse = /** @class */ (function (_super) {
     __extends(FreeBusyResponse, _super);
     function FreeBusyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendars", elemType: FreeBusyCalendar }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendars", elemType: freebusycalendar_1.FreeBusyCalendar }),
+        __metadata("design:type", Object)
     ], FreeBusyResponse.prototype, "calendars", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups", elemType: FreeBusyGroup }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups", elemType: freebusygroup_1.FreeBusyGroup }),
+        __metadata("design:type", Object)
     ], FreeBusyResponse.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], FreeBusyResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeMax" }),
         __metadata("design:type", Date)
     ], FreeBusyResponse.prototype, "timeMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeMin" }),
         __metadata("design:type", Date)
     ], FreeBusyResponse.prototype, "timeMin", void 0);
     return FreeBusyResponse;
-}(SpeakeasyBase));
-export { FreeBusyResponse };
+}(utils_1.SpeakeasyBase));
+exports.FreeBusyResponse = FreeBusyResponse;

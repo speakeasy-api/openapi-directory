@@ -158,7 +158,7 @@ export class GetListsBestSellersHistoryJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListsBestSellersHistoryJson200ApplicationJsonObject?: GetListsBestSellersHistoryJson200ApplicationJson;
+  getListsBestSellersHistoryJSON200ApplicationJSONObject?: GetListsBestSellersHistoryJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

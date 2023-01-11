@@ -191,23 +191,23 @@ export class ImcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  imcer400ApplicationJsonObject?: Imcer400ApplicationJson;
+  imcer400ApplicationJSONObject?: Imcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer401ApplicationJsonObject?: Imcer401ApplicationJson;
+  imcer401ApplicationJSONObject?: Imcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer404ApplicationJsonObject?: Imcer404ApplicationJson;
+  imcer404ApplicationJSONObject?: Imcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer500ApplicationJsonObject?: Imcer500ApplicationJson;
+  imcer500ApplicationJSONObject?: Imcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer502ApplicationJsonObject?: Imcer502ApplicationJson;
+  imcer502ApplicationJSONObject?: Imcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer503ApplicationJsonObject?: Imcer503ApplicationJson;
+  imcer503ApplicationJSONObject?: Imcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  imcer504ApplicationJsonObject?: Imcer504ApplicationJson;
+  imcer504ApplicationJSONObject?: Imcer504ApplicationJson;
 }

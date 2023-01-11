@@ -31,5 +31,5 @@ export class SoftwareConfig extends SpeakeasyBase {
   optionalComponents?: SoftwareConfigOptionalComponentsEnum[];
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 }

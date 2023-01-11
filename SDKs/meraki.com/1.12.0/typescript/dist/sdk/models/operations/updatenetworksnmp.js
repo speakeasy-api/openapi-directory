@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSnmpResponse = exports.UpdateNetworkSnmpRequest = exports.UpdateNetworkSnmpRequestBody = exports.UpdateNetworkSnmpRequestBodyUsers = exports.UpdateNetworkSnmpRequestBodyAccessEnum = exports.UpdateNetworkSnmpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSnmpPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSnmpPathParams, _super);
     function UpdateNetworkSnmpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSnmpPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSnmpPathParams };
-export var UpdateNetworkSnmpRequestBodyAccessEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSnmpPathParams = UpdateNetworkSnmpPathParams;
+var UpdateNetworkSnmpRequestBodyAccessEnum;
 (function (UpdateNetworkSnmpRequestBodyAccessEnum) {
     UpdateNetworkSnmpRequestBodyAccessEnum["None"] = "none";
     UpdateNetworkSnmpRequestBodyAccessEnum["Community"] = "community";
     UpdateNetworkSnmpRequestBodyAccessEnum["Users"] = "users";
-})(UpdateNetworkSnmpRequestBodyAccessEnum || (UpdateNetworkSnmpRequestBodyAccessEnum = {}));
+})(UpdateNetworkSnmpRequestBodyAccessEnum = exports.UpdateNetworkSnmpRequestBodyAccessEnum || (exports.UpdateNetworkSnmpRequestBodyAccessEnum = {}));
 var UpdateNetworkSnmpRequestBodyUsers = /** @class */ (function (_super) {
     __extends(UpdateNetworkSnmpRequestBodyUsers, _super);
     function UpdateNetworkSnmpRequestBodyUsers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passphrase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passphrase" }),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpRequestBodyUsers.prototype, "passphrase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpRequestBodyUsers.prototype, "username", void 0);
     return UpdateNetworkSnmpRequestBodyUsers;
-}(SpeakeasyBase));
-export { UpdateNetworkSnmpRequestBodyUsers };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSnmpRequestBodyUsers = UpdateNetworkSnmpRequestBodyUsers;
 var UpdateNetworkSnmpRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSnmpRequestBody, _super);
     function UpdateNetworkSnmpRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpRequestBody.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communityString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communityString" }),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpRequestBody.prototype, "communityString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users", elemType: UpdateNetworkSnmpRequestBodyUsers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users", elemType: UpdateNetworkSnmpRequestBodyUsers }),
         __metadata("design:type", Array)
     ], UpdateNetworkSnmpRequestBody.prototype, "users", void 0);
     return UpdateNetworkSnmpRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSnmpRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSnmpRequestBody = UpdateNetworkSnmpRequestBody;
 var UpdateNetworkSnmpRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSnmpRequest, _super);
     function UpdateNetworkSnmpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSnmpPathParams)
     ], UpdateNetworkSnmpRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSnmpRequestBody)
     ], UpdateNetworkSnmpRequest.prototype, "request", void 0);
     return UpdateNetworkSnmpRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSnmpRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSnmpRequest = UpdateNetworkSnmpRequest;
 var UpdateNetworkSnmpResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSnmpResponse, _super);
     function UpdateNetworkSnmpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSnmpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSnmpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSnmpResponse.prototype, "updateNetworkSnmp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSnmpResponse.prototype, "updateNetworkSnmp200ApplicationJSONObject", void 0);
     return UpdateNetworkSnmpResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSnmpResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSnmpResponse = UpdateNetworkSnmpResponse;

@@ -12,5 +12,5 @@ export declare class DescribeApplicationResponse extends SpeakeasyBase {
     errorMessage?: string;
     roleArn: string;
     ssoClientId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

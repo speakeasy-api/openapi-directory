@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DirectivePolicyModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Directive = exports.DirectiveTags = exports.DirectivePolicyModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DirectivePolicyModeEnum;
 (function (DirectivePolicyModeEnum) {
     DirectivePolicyModeEnum["Enforce"] = "enforce";
     DirectivePolicyModeEnum["Audit"] = "audit";
-})(DirectivePolicyModeEnum || (DirectivePolicyModeEnum = {}));
+})(DirectivePolicyModeEnum = exports.DirectivePolicyModeEnum || (exports.DirectivePolicyModeEnum = {}));
 var DirectiveTags = /** @class */ (function (_super) {
     __extends(DirectiveTags, _super);
     function DirectiveTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DirectiveTags.prototype, "name", void 0);
     return DirectiveTags;
-}(SpeakeasyBase));
-export { DirectiveTags };
+}(utils_1.SpeakeasyBase));
+exports.DirectiveTags = DirectiveTags;
 var Directive = /** @class */ (function (_super) {
     __extends(Directive, _super);
     function Directive() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Directive.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Directive.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Directive.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longDescription" }),
         __metadata("design:type", String)
     ], Directive.prototype, "longDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], Directive.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyMode" }),
         __metadata("design:type", String)
     ], Directive.prototype, "policyMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], Directive.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortDescription" }),
         __metadata("design:type", String)
     ], Directive.prototype, "shortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system" }),
         __metadata("design:type", Boolean)
     ], Directive.prototype, "system", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: DirectiveTags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: DirectiveTags }),
         __metadata("design:type", Array)
     ], Directive.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=techniqueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=techniqueName" }),
         __metadata("design:type", String)
     ], Directive.prototype, "techniqueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=techniqueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=techniqueVersion" }),
         __metadata("design:type", String)
     ], Directive.prototype, "techniqueVersion", void 0);
     return Directive;
-}(SpeakeasyBase));
-export { Directive };
+}(utils_1.SpeakeasyBase));
+exports.Directive = Directive;

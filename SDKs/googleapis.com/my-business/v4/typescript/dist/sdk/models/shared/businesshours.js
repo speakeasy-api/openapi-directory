@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimePeriod } from "./timeperiod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessHours = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeperiod_1 = require("./timeperiod");
 // BusinessHours
 /**
  * Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.
@@ -34,9 +37,9 @@ var BusinessHours = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periods", elemType: TimePeriod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periods", elemType: timeperiod_1.TimePeriod }),
         __metadata("design:type", Array)
     ], BusinessHours.prototype, "periods", void 0);
     return BusinessHours;
-}(SpeakeasyBase));
-export { BusinessHours };
+}(utils_1.SpeakeasyBase));
+exports.BusinessHours = BusinessHours;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchResponse } from "./batchresponse";
-import { KeysAndAttributes } from "./keysandattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetItemOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchresponse_1 = require("./batchresponse");
+var keysandattributes_1 = require("./keysandattributes");
 var BatchGetItemOutput = /** @class */ (function (_super) {
     __extends(BatchGetItemOutput, _super);
     function BatchGetItemOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Responses", elemType: BatchResponse }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Responses", elemType: batchresponse_1.BatchResponse }),
+        __metadata("design:type", Object)
     ], BatchGetItemOutput.prototype, "responses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedKeys", elemType: KeysAndAttributes }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedKeys", elemType: keysandattributes_1.KeysAndAttributes }),
+        __metadata("design:type", Object)
     ], BatchGetItemOutput.prototype, "unprocessedKeys", void 0);
     return BatchGetItemOutput;
-}(SpeakeasyBase));
-export { BatchGetItemOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetItemOutput = BatchGetItemOutput;

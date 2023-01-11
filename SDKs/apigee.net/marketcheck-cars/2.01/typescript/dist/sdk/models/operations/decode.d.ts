@@ -13,6 +13,6 @@ export declare class DecodeRequest extends SpeakeasyBase {
 export declare class DecodeResponse extends SpeakeasyBase {
     build?: shared.Build;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -51,7 +51,7 @@ export declare class CreateSimulationJobRequestBody extends SpeakeasyBase {
     outputLocation?: CreateSimulationJobRequestBodyOutputLocation;
     robotApplications?: shared.RobotApplicationConfig[];
     simulationApplications?: shared.SimulationApplicationConfig[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     vpcConfig?: CreateSimulationJobRequestBodyVpcConfig;
 }
 export declare class CreateSimulationJobRequest extends SpeakeasyBase {

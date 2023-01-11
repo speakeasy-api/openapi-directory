@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Event } from "./event";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Activity = void 0;
+var utils_1 = require("../../../internal/utils");
+var event_1 = require("./event");
 // Activity
 /**
  * An Activity resource is a combined view of multiple events. An activity has a list of individual events and a combined view of the common fields among all events.
@@ -34,13 +37,13 @@ var Activity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=combinedEvent" }),
-        __metadata("design:type", Event)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=combinedEvent" }),
+        __metadata("design:type", event_1.Event)
     ], Activity.prototype, "combinedEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleEvents", elemType: Event }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleEvents", elemType: event_1.Event }),
         __metadata("design:type", Array)
     ], Activity.prototype, "singleEvents", void 0);
     return Activity;
-}(SpeakeasyBase));
-export { Activity };
+}(utils_1.SpeakeasyBase));
+exports.Activity = Activity;

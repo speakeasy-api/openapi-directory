@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssignPublicIpEnum } from "./assignpublicipenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsVpcConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var assignpublicipenum_1 = require("./assignpublicipenum");
 // AwsVpcConfiguration
 /**
  * An object representing the networking details for a task or service.
@@ -34,17 +37,17 @@ var AwsVpcConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assignPublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assignPublicIp" }),
         __metadata("design:type", String)
     ], AwsVpcConfiguration.prototype, "assignPublicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityGroups" }),
         __metadata("design:type", Array)
     ], AwsVpcConfiguration.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnets" }),
         __metadata("design:type", Array)
     ], AwsVpcConfiguration.prototype, "subnets", void 0);
     return AwsVpcConfiguration;
-}(SpeakeasyBase));
-export { AwsVpcConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AwsVpcConfiguration = AwsVpcConfiguration;

@@ -16,7 +16,7 @@ export class GetSessionResponse extends SpeakeasyBase {
   recentIntentSummaryView?: IntentSummary[];
 
   @SpeakeasyMetadata({ data: "json, name=sessionAttributes" })
-  sessionAttributes?: Map<string, string>;
+  sessionAttributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sessionId" })
   sessionId?: string;

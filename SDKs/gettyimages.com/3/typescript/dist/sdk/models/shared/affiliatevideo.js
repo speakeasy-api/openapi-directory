@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AffiliateVideoUrls } from "./affiliatevideourls";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AffiliateVideo = void 0;
+var utils_1 = require("../../../internal/utils");
+var affiliatevideourls_1 = require("./affiliatevideourls");
 var AffiliateVideo = /** @class */ (function (_super) {
     __extends(AffiliateVideo, _super);
     function AffiliateVideo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], AffiliateVideo.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clip_length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clip_length" }),
         __metadata("design:type", String)
     ], AffiliateVideo.prototype, "clipLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_url" }),
         __metadata("design:type", String)
     ], AffiliateVideo.prototype, "destinationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AffiliateVideo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_urls" }),
-        __metadata("design:type", AffiliateVideoUrls)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_urls" }),
+        __metadata("design:type", affiliatevideourls_1.AffiliateVideoUrls)
     ], AffiliateVideo.prototype, "previewUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], AffiliateVideo.prototype, "title", void 0);
     return AffiliateVideo;
-}(SpeakeasyBase));
-export { AffiliateVideo };
+}(utils_1.SpeakeasyBase));
+exports.AffiliateVideo = AffiliateVideo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateForecastRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CreateForecastRequest = /** @class */ (function (_super) {
     __extends(CreateForecastRequest, _super);
     function CreateForecastRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastName" }),
         __metadata("design:type", String)
     ], CreateForecastRequest.prototype, "forecastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastTypes" }),
         __metadata("design:type", Array)
     ], CreateForecastRequest.prototype, "forecastTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorArn" }),
         __metadata("design:type", String)
     ], CreateForecastRequest.prototype, "predictorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateForecastRequest.prototype, "tags", void 0);
     return CreateForecastRequest;
-}(SpeakeasyBase));
-export { CreateForecastRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateForecastRequest = CreateForecastRequest;

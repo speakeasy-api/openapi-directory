@@ -1,4 +1,7 @@
-export var DataReplicationStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataReplicationStateEnum = void 0;
+var DataReplicationStateEnum;
 (function (DataReplicationStateEnum) {
     DataReplicationStateEnum["Stopped"] = "STOPPED";
     DataReplicationStateEnum["Initiating"] = "INITIATING";
@@ -10,4 +13,4 @@ export var DataReplicationStateEnum;
     DataReplicationStateEnum["Rescan"] = "RESCAN";
     DataReplicationStateEnum["Stalled"] = "STALLED";
     DataReplicationStateEnum["Disconnected"] = "DISCONNECTED";
-})(DataReplicationStateEnum || (DataReplicationStateEnum = {}));
+})(DataReplicationStateEnum = exports.DataReplicationStateEnum || (exports.DataReplicationStateEnum = {}));

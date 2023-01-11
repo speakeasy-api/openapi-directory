@@ -19,8 +19,8 @@ export declare class DisableDomainAutoRenewRequest extends SpeakeasyBase {
 }
 export declare class DisableDomainAutoRenewResponse extends SpeakeasyBase {
     contentType: string;
-    disableDomainAutoRenewResponse?: Map<string, any>;
+    disableDomainAutoRenewResponse?: Record<string, any>;
     invalidInput?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

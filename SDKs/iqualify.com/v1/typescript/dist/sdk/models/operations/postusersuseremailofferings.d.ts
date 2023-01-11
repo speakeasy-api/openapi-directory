@@ -9,7 +9,7 @@ export declare class PostUsersUserEmailOfferingsRequest extends SpeakeasyBase {
 }
 export declare class PostUsersUserEmailOfferingsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringMetadataResponses?: shared.OfferingMetadataResponse[];
     statusCode: number;
 }

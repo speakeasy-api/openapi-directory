@@ -1,0 +1,31 @@
+
+
+
+export enum PaymentMethodEnum {
+    Aruhitel = "aruhitel",
+    Bankcard = "bankcard",
+    Barion = "barion",
+    Barter = "barter",
+    Cash = "cash",
+    CashOnDelivery = "cash_on_delivery",
+    Coupon = "coupon",
+    EloreUtalas = "elore_utalas",
+    EpKartya = "ep_kartya",
+    Kompenzacio = "kompenzacio",
+    Levonas = "levonas",
+    OnlineBankcard = "online_bankcard",
+    Payoneer = "payoneer",
+    Paypal = "paypal",
+    PaypalUtolag = "paypal_utolag",
+    Payu = "payu",
+    PickPackPont = "pick_pack_pont",
+    PostaiCsekk = "postai_csekk",
+    Postautalvany = "postautalvany",
+    Skrill = "skrill",
+    SzepCard = "szep_card",
+    Transferwise = "transferwise",
+    Upwork = "upwork",
+    Utalvany = "utalvany",
+    Valto = "valto",
+    WireTransfer = "wire_transfer"
+}

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateGatewayRouteRequest, CreateGatewayRouteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateGatewayRouteRequest = {
   pathParams: {
-    meshName: "esse",
-    virtualGatewayName: "veritatis",
+    meshName: "sit",
+    virtualGatewayName: "voluptas",
   },
   queryParams: {
-    meshOwner: "voluptas",
+    meshOwner: "culpa",
   },
   headers: {
-    xAmzAlgorithm: "incidunt",
-    xAmzContentSha256: "sit",
-    xAmzCredential: "saepe",
-    xAmzDate: "est",
-    xAmzSecurityToken: "odio",
-    xAmzSignature: "delectus",
-    xAmzSignedHeaders: "delectus",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
   request: {
-    clientToken: "voluptatem",
-    gatewayRouteName: "et",
+    clientToken: "nihil",
+    gatewayRouteName: "rerum",
     spec: {
       grpcRoute: {
         action: {
@@ -62,32 +61,60 @@ const req: CreateGatewayRouteRequest = {
           },
           target: {
             virtualService: {
-              virtualServiceName: "in",
+              virtualServiceName: "debitis",
             },
           },
         },
         match: {
           hostname: {
-            exact: "ipsa",
-            suffix: "repellat",
+            exact: "voluptatum",
+            suffix: "et",
           },
           metadata: [
             {
               invert: true,
               match: {
-                exact: "voluptatem",
-                prefix: "hic",
+                exact: "et",
+                prefix: "voluptate",
                 range: {
-                  end: 6559059606815254458,
-                  start: 2858433378704809922,
+                  end: 3287288577352441706,
+                  start: 3930927879439176946,
                 },
-                regex: "nemo",
-                suffix: "architecto",
+                regex: "totam",
+                suffix: "dolores",
               },
-              name: "neque",
+              name: "illum",
+            },
+            {
+              invert: true,
+              match: {
+                exact: "vel",
+                prefix: "odio",
+                range: {
+                  end: 6303220950515014660,
+                  start: 4035568504096476779,
+                },
+                regex: "aspernatur",
+                suffix: "accusantium",
+              },
+              name: "totam",
+            },
+            {
+              invert: false,
+              match: {
+                exact: "quis",
+                prefix: "est",
+                range: {
+                  end: 5974317550424871033,
+                  start: 3317123977833389635,
+                },
+                regex: "non",
+                suffix: "voluptas",
+              },
+              name: "omnis",
             },
           ],
-          serviceName: "autem",
+          serviceName: "aut",
         },
       },
       http2Route: {
@@ -97,72 +124,52 @@ const req: CreateGatewayRouteRequest = {
               defaultTargetHostname: "ENABLED",
             },
             path: {
-              exact: "voluptatem",
+              exact: "sed",
             },
             prefix: {
-              defaultPrefix: "ENABLED",
-              value: "consequuntur",
+              defaultPrefix: "DISABLED",
+              value: "autem",
             },
           },
           target: {
             virtualService: {
-              virtualServiceName: "in",
+              virtualServiceName: "consectetur",
             },
           },
         },
         match: {
           headers: [
             {
-              invert: true,
+              invert: false,
               match: {
-                exact: "distinctio",
-                prefix: "consequuntur",
+                exact: "qui",
+                prefix: "recusandae",
                 range: {
-                  end: 571382451650181810,
-                  start: 4900844526495911920,
+                  end: 7561811714888168464,
+                  start: 3959279844101328186,
                 },
-                regex: "fugit",
-                suffix: "non",
+                regex: "eveniet",
+                suffix: "modi",
               },
-              name: "aut",
-            },
-            {
-              invert: true,
-              match: {
-                exact: "dolores",
-                prefix: "aperiam",
-                range: {
-                  end: 5577086904450487800,
-                  start: 7546125481208690348,
-                },
-                regex: "quaerat",
-                suffix: "possimus",
-              },
-              name: "harum",
+              name: "sint",
             },
           ],
           hostname: {
-            exact: "laudantium",
-            suffix: "odio",
+            exact: "inventore",
+            suffix: "ut",
           },
-          method: "PUT",
+          method: "CONNECT",
           path: {
-            exact: "qui",
-            regex: "inventore",
+            exact: "aut",
+            regex: "reprehenderit",
           },
-          prefix: "omnis",
+          prefix: "tempore",
           queryParameters: [
             {
               match: {
-                exact: "minus",
+                exact: "incidunt",
               },
-              name: "quia",
-            },
-            {
-              match: {
-                exact: "expedita",
-              },
-              name: "vitae",
+              name: "dolor",
             },
           ],
         },
@@ -174,16 +181,16 @@ const req: CreateGatewayRouteRequest = {
               defaultTargetHostname: "DISABLED",
             },
             path: {
-              exact: "doloribus",
+              exact: "veritatis",
             },
             prefix: {
-              defaultPrefix: "DISABLED",
-              value: "cupiditate",
+              defaultPrefix: "ENABLED",
+              value: "et",
             },
           },
           target: {
             virtualService: {
-              virtualServiceName: "similique",
+              virtualServiceName: "omnis",
             },
           },
         },
@@ -192,70 +199,50 @@ const req: CreateGatewayRouteRequest = {
             {
               invert: true,
               match: {
-                exact: "et",
-                prefix: "maiores",
+                exact: "dolores",
+                prefix: "placeat",
                 range: {
-                  end: 2517846983044291286,
-                  start: 7744082604563041062,
+                  end: 2118716725206170867,
+                  start: 2587000937929698613,
                 },
-                regex: "qui",
-                suffix: "ex",
+                regex: "mollitia",
+                suffix: "voluptas",
               },
-              name: "quo",
-            },
-            {
-              invert: true,
-              match: {
-                exact: "quam",
-                prefix: "et",
-                range: {
-                  end: 4110956043422946029,
-                  start: 6279036500422337798,
-                },
-                regex: "provident",
-                suffix: "voluptatem",
-              },
-              name: "qui",
+              name: "quam",
             },
           ],
           hostname: {
-            exact: "modi",
-            suffix: "omnis",
+            exact: "reprehenderit",
+            suffix: "qui",
           },
-          method: "GET",
+          method: "OPTIONS",
           path: {
-            exact: "quasi",
-            regex: "necessitatibus",
+            exact: "unde",
+            regex: "in",
           },
-          prefix: "sit",
+          prefix: "autem",
           queryParameters: [
             {
               match: {
-                exact: "sequi",
+                exact: "ut",
               },
-              name: "qui",
-            },
-            {
-              match: {
-                exact: "quidem",
-              },
-              name: "iure",
+              name: "itaque",
             },
           ],
         },
       },
-      priority: 5434837994712789813,
+      priority: 2006924026344156168,
     },
     tags: [
       {
-        key: "aut",
-        value: "repudiandae",
+        key: "ullam",
+        value: "et",
       },
     ],
   },
 };
 
-sdk.sdk.createGatewayRoute(req).then((res: CreateGatewayRouteResponse | AxiosError) => {
+sdk.createGatewayRoute(req).then((res: CreateGatewayRouteResponse | AxiosError) => {
    // handle response
 });
 ```

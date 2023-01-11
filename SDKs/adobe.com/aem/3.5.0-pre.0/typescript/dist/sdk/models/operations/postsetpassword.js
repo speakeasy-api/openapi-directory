@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSetPasswordResponse = exports.PostSetPasswordRequest = exports.PostSetPasswordQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostSetPasswordQueryParams = /** @class */ (function (_super) {
     __extends(PostSetPasswordQueryParams, _super);
     function PostSetPasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=old" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=old" }),
         __metadata("design:type", String)
     ], PostSetPasswordQueryParams.prototype, "old", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=plain" }),
         __metadata("design:type", String)
     ], PostSetPasswordQueryParams.prototype, "plain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=verify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=verify" }),
         __metadata("design:type", String)
     ], PostSetPasswordQueryParams.prototype, "verify", void 0);
     return PostSetPasswordQueryParams;
-}(SpeakeasyBase));
-export { PostSetPasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSetPasswordQueryParams = PostSetPasswordQueryParams;
 var PostSetPasswordRequest = /** @class */ (function (_super) {
     __extends(PostSetPasswordRequest, _super);
     function PostSetPasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetPasswordQueryParams)
     ], PostSetPasswordRequest.prototype, "queryParams", void 0);
     return PostSetPasswordRequest;
-}(SpeakeasyBase));
-export { PostSetPasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSetPasswordRequest = PostSetPasswordRequest;
 var PostSetPasswordResponse = /** @class */ (function (_super) {
     __extends(PostSetPasswordResponse, _super);
     function PostSetPasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetPasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSetPasswordResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetPasswordResponse.prototype, "postSetPasswordDefaultTextPlainString", void 0);
     return PostSetPasswordResponse;
-}(SpeakeasyBase));
-export { PostSetPasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSetPasswordResponse = PostSetPasswordResponse;

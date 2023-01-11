@@ -12,13 +12,13 @@ export class CachePolicyConfig extends SpeakeasyBase {
   comment?: string;
 
   @SpeakeasyMetadata()
-  defaultTtl?: number;
+  defaultTTL?: number;
 
   @SpeakeasyMetadata()
-  maxTtl?: number;
+  maxTTL?: number;
 
   @SpeakeasyMetadata()
-  minTtl: number;
+  minTTL: number;
 
   @SpeakeasyMetadata()
   name: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MarkdownRenderRequestBodyModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarkdownRenderResponse = exports.MarkdownRenderRequest = exports.MarkdownRenderRequestBody = exports.MarkdownRenderRequestBodyModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MarkdownRenderRequestBodyModeEnum;
 (function (MarkdownRenderRequestBodyModeEnum) {
     MarkdownRenderRequestBodyModeEnum["Markdown"] = "markdown";
     MarkdownRenderRequestBodyModeEnum["Gfm"] = "gfm";
-})(MarkdownRenderRequestBodyModeEnum || (MarkdownRenderRequestBodyModeEnum = {}));
+})(MarkdownRenderRequestBodyModeEnum = exports.MarkdownRenderRequestBodyModeEnum || (exports.MarkdownRenderRequestBodyModeEnum = {}));
 var MarkdownRenderRequestBody = /** @class */ (function (_super) {
     __extends(MarkdownRenderRequestBody, _super);
     function MarkdownRenderRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
         __metadata("design:type", String)
     ], MarkdownRenderRequestBody.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], MarkdownRenderRequestBody.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], MarkdownRenderRequestBody.prototype, "text", void 0);
     return MarkdownRenderRequestBody;
-}(SpeakeasyBase));
-export { MarkdownRenderRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.MarkdownRenderRequestBody = MarkdownRenderRequestBody;
 var MarkdownRenderRequest = /** @class */ (function (_super) {
     __extends(MarkdownRenderRequest, _super);
     function MarkdownRenderRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", MarkdownRenderRequestBody)
     ], MarkdownRenderRequest.prototype, "request", void 0);
     return MarkdownRenderRequest;
-}(SpeakeasyBase));
-export { MarkdownRenderRequest };
+}(utils_1.SpeakeasyBase));
+exports.MarkdownRenderRequest = MarkdownRenderRequest;
 var MarkdownRenderResponse = /** @class */ (function (_super) {
     __extends(MarkdownRenderResponse, _super);
     function MarkdownRenderResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MarkdownRenderResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], MarkdownRenderResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MarkdownRenderResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], MarkdownRenderResponse.prototype, "markdownRender200TextHtmlString", void 0);
+    ], MarkdownRenderResponse.prototype, "markdownRender200TextHTMLString", void 0);
     return MarkdownRenderResponse;
-}(SpeakeasyBase));
-export { MarkdownRenderResponse };
+}(utils_1.SpeakeasyBase));
+exports.MarkdownRenderResponse = MarkdownRenderResponse;

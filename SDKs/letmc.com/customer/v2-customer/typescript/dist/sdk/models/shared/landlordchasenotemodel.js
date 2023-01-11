@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordChaseNoteModel = void 0;
+var utils_1 = require("../../../internal/utils");
 // LandlordChaseNoteModel
 /**
  * Landlord Arrears Chase Note.
@@ -33,21 +36,21 @@ var LandlordChaseNoteModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Date" }),
         __metadata("design:type", Date)
     ], LandlordChaseNoteModel.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Note" }),
         __metadata("design:type", String)
     ], LandlordChaseNoteModel.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoteType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoteType" }),
         __metadata("design:type", String)
     ], LandlordChaseNoteModel.prototype, "noteType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenantID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenantID" }),
         __metadata("design:type", String)
-    ], LandlordChaseNoteModel.prototype, "tenantId", void 0);
+    ], LandlordChaseNoteModel.prototype, "tenantID", void 0);
     return LandlordChaseNoteModel;
-}(SpeakeasyBase));
-export { LandlordChaseNoteModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordChaseNoteModel = LandlordChaseNoteModel;

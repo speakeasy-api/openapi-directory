@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SetPublicStatusUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=publicStatus" })
   publicStatus?: string;
@@ -16,7 +16,7 @@ export class SetPublicStatusUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SetPublicStatusUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SetPublicStatusUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SetPublicStatusUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SetPublicStatusUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingPost200ApplicationJsonObject?: SetPublicStatusUsingPost200ApplicationJson;
+  setPublicStatusUsingPOST200ApplicationJSONObject?: SetPublicStatusUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingPost400ApplicationJsonObject?: SetPublicStatusUsingPost400ApplicationJson;
+  setPublicStatusUsingPOST400ApplicationJSONObject?: SetPublicStatusUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingPost401ApplicationJsonObject?: SetPublicStatusUsingPost401ApplicationJson;
+  setPublicStatusUsingPOST401ApplicationJSONObject?: SetPublicStatusUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingPost500ApplicationJsonObject?: SetPublicStatusUsingPost500ApplicationJson;
+  setPublicStatusUsingPOST500ApplicationJSONObject?: SetPublicStatusUsingPost500ApplicationJson;
 }

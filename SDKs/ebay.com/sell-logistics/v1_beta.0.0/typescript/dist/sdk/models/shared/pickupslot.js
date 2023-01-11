@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PickupSlot = void 0;
+var utils_1 = require("../../../internal/utils");
 // PickupSlot
 /**
  * This complex type defines a time window for the pickup of a package.
@@ -33,21 +36,21 @@ var PickupSlot = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlotEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlotEndTime" }),
         __metadata("design:type", String)
     ], PickupSlot.prototype, "pickupSlotEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlotId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlotId" }),
         __metadata("design:type", String)
     ], PickupSlot.prototype, "pickupSlotId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlotStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlotStartTime" }),
         __metadata("design:type", String)
     ], PickupSlot.prototype, "pickupSlotStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlotTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlotTimeZone" }),
         __metadata("design:type", String)
     ], PickupSlot.prototype, "pickupSlotTimeZone", void 0);
     return PickupSlot;
-}(SpeakeasyBase));
-export { PickupSlot };
+}(utils_1.SpeakeasyBase));
+exports.PickupSlot = PickupSlot;

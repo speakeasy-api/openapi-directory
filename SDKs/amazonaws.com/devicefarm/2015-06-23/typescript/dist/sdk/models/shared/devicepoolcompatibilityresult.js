@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Device } from "./device";
-import { IncompatibilityMessage } from "./incompatibilitymessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DevicePoolCompatibilityResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var device_1 = require("./device");
+var incompatibilitymessage_1 = require("./incompatibilitymessage");
 // DevicePoolCompatibilityResult
 /**
  * Represents a device pool compatibility result.
@@ -35,17 +38,17 @@ var DevicePoolCompatibilityResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatible" }),
         __metadata("design:type", Boolean)
     ], DevicePoolCompatibilityResult.prototype, "compatible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", Device)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", device_1.Device)
     ], DevicePoolCompatibilityResult.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=incompatibilityMessages", elemType: IncompatibilityMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=incompatibilityMessages", elemType: incompatibilitymessage_1.IncompatibilityMessage }),
         __metadata("design:type", Array)
     ], DevicePoolCompatibilityResult.prototype, "incompatibilityMessages", void 0);
     return DevicePoolCompatibilityResult;
-}(SpeakeasyBase));
-export { DevicePoolCompatibilityResult };
+}(utils_1.SpeakeasyBase));
+exports.DevicePoolCompatibilityResult = DevicePoolCompatibilityResult;

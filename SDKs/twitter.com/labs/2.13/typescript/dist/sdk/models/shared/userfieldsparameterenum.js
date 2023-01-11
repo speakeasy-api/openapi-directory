@@ -1,4 +1,7 @@
-export var UserFieldsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserFieldsParameterEnum = void 0;
+var UserFieldsParameterEnum;
 (function (UserFieldsParameterEnum) {
     UserFieldsParameterEnum["Id"] = "id";
     UserFieldsParameterEnum["CreatedAt"] = "created_at";
@@ -14,4 +17,4 @@ export var UserFieldsParameterEnum;
     UserFieldsParameterEnum["Entities"] = "entities";
     UserFieldsParameterEnum["PinnedTweetId"] = "pinned_tweet_id";
     UserFieldsParameterEnum["PublicMetrics"] = "public_metrics";
-})(UserFieldsParameterEnum || (UserFieldsParameterEnum = {}));
+})(UserFieldsParameterEnum = exports.UserFieldsParameterEnum || (exports.UserFieldsParameterEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AccessibilityMobilityAccessibleElevatorExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Accessibility = exports.AccessibilityMobilityAccessiblePoolExceptionEnum = exports.AccessibilityMobilityAccessibleParkingExceptionEnum = exports.AccessibilityMobilityAccessibleExceptionEnum = exports.AccessibilityMobilityAccessibleElevatorExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AccessibilityMobilityAccessibleElevatorExceptionEnum;
 (function (AccessibilityMobilityAccessibleElevatorExceptionEnum) {
     AccessibilityMobilityAccessibleElevatorExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     AccessibilityMobilityAccessibleElevatorExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     AccessibilityMobilityAccessibleElevatorExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     AccessibilityMobilityAccessibleElevatorExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(AccessibilityMobilityAccessibleElevatorExceptionEnum || (AccessibilityMobilityAccessibleElevatorExceptionEnum = {}));
-export var AccessibilityMobilityAccessibleExceptionEnum;
+})(AccessibilityMobilityAccessibleElevatorExceptionEnum = exports.AccessibilityMobilityAccessibleElevatorExceptionEnum || (exports.AccessibilityMobilityAccessibleElevatorExceptionEnum = {}));
+var AccessibilityMobilityAccessibleExceptionEnum;
 (function (AccessibilityMobilityAccessibleExceptionEnum) {
     AccessibilityMobilityAccessibleExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     AccessibilityMobilityAccessibleExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     AccessibilityMobilityAccessibleExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     AccessibilityMobilityAccessibleExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(AccessibilityMobilityAccessibleExceptionEnum || (AccessibilityMobilityAccessibleExceptionEnum = {}));
-export var AccessibilityMobilityAccessibleParkingExceptionEnum;
+})(AccessibilityMobilityAccessibleExceptionEnum = exports.AccessibilityMobilityAccessibleExceptionEnum || (exports.AccessibilityMobilityAccessibleExceptionEnum = {}));
+var AccessibilityMobilityAccessibleParkingExceptionEnum;
 (function (AccessibilityMobilityAccessibleParkingExceptionEnum) {
     AccessibilityMobilityAccessibleParkingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     AccessibilityMobilityAccessibleParkingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     AccessibilityMobilityAccessibleParkingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     AccessibilityMobilityAccessibleParkingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(AccessibilityMobilityAccessibleParkingExceptionEnum || (AccessibilityMobilityAccessibleParkingExceptionEnum = {}));
-export var AccessibilityMobilityAccessiblePoolExceptionEnum;
+})(AccessibilityMobilityAccessibleParkingExceptionEnum = exports.AccessibilityMobilityAccessibleParkingExceptionEnum || (exports.AccessibilityMobilityAccessibleParkingExceptionEnum = {}));
+var AccessibilityMobilityAccessiblePoolExceptionEnum;
 (function (AccessibilityMobilityAccessiblePoolExceptionEnum) {
     AccessibilityMobilityAccessiblePoolExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     AccessibilityMobilityAccessiblePoolExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     AccessibilityMobilityAccessiblePoolExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     AccessibilityMobilityAccessiblePoolExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(AccessibilityMobilityAccessiblePoolExceptionEnum || (AccessibilityMobilityAccessiblePoolExceptionEnum = {}));
+})(AccessibilityMobilityAccessiblePoolExceptionEnum = exports.AccessibilityMobilityAccessiblePoolExceptionEnum || (exports.AccessibilityMobilityAccessiblePoolExceptionEnum = {}));
 // Accessibility
 /**
  * Physical adaptations made to the property in consideration of varying levels of human physical ability.
@@ -61,37 +64,37 @@ var Accessibility = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessible" }),
         __metadata("design:type", Boolean)
     ], Accessibility.prototype, "mobilityAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessibleElevator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessibleElevator" }),
         __metadata("design:type", Boolean)
     ], Accessibility.prototype, "mobilityAccessibleElevator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessibleElevatorException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessibleElevatorException" }),
         __metadata("design:type", String)
     ], Accessibility.prototype, "mobilityAccessibleElevatorException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessibleException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessibleException" }),
         __metadata("design:type", String)
     ], Accessibility.prototype, "mobilityAccessibleException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessibleParking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessibleParking" }),
         __metadata("design:type", Boolean)
     ], Accessibility.prototype, "mobilityAccessibleParking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessibleParkingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessibleParkingException" }),
         __metadata("design:type", String)
     ], Accessibility.prototype, "mobilityAccessibleParkingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessiblePool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessiblePool" }),
         __metadata("design:type", Boolean)
     ], Accessibility.prototype, "mobilityAccessiblePool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilityAccessiblePoolException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilityAccessiblePoolException" }),
         __metadata("design:type", String)
     ], Accessibility.prototype, "mobilityAccessiblePoolException", void 0);
     return Accessibility;
-}(SpeakeasyBase));
-export { Accessibility };
+}(utils_1.SpeakeasyBase));
+exports.Accessibility = Accessibility;

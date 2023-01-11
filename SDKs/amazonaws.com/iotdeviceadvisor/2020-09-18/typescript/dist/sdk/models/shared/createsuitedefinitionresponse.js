@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSuiteDefinitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateSuiteDefinitionResponse = /** @class */ (function (_super) {
     __extends(CreateSuiteDefinitionResponse, _super);
     function CreateSuiteDefinitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], CreateSuiteDefinitionResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionArn" }),
         __metadata("design:type", String)
     ], CreateSuiteDefinitionResponse.prototype, "suiteDefinitionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionId" }),
         __metadata("design:type", String)
     ], CreateSuiteDefinitionResponse.prototype, "suiteDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionName" }),
         __metadata("design:type", String)
     ], CreateSuiteDefinitionResponse.prototype, "suiteDefinitionName", void 0);
     return CreateSuiteDefinitionResponse;
-}(SpeakeasyBase));
-export { CreateSuiteDefinitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateSuiteDefinitionResponse = CreateSuiteDefinitionResponse;

@@ -20,6 +20,6 @@ export declare class GetTeamsUsernamePermissionsRequest extends SpeakeasyBase {
 export declare class GetTeamsUsernamePermissionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedTeamPermissions?: shared.PaginatedTeamPermissions;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAssociateEnvironmentOperationsRoleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssociateEnvironmentOperationsRoleResponse = exports.PostAssociateEnvironmentOperationsRoleRequest = exports.PostAssociateEnvironmentOperationsRoleHeaders = exports.PostAssociateEnvironmentOperationsRoleQueryParams = exports.PostAssociateEnvironmentOperationsRoleVersionEnum = exports.PostAssociateEnvironmentOperationsRoleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAssociateEnvironmentOperationsRoleActionEnum;
 (function (PostAssociateEnvironmentOperationsRoleActionEnum) {
     PostAssociateEnvironmentOperationsRoleActionEnum["AssociateEnvironmentOperationsRole"] = "AssociateEnvironmentOperationsRole";
-})(PostAssociateEnvironmentOperationsRoleActionEnum || (PostAssociateEnvironmentOperationsRoleActionEnum = {}));
-export var PostAssociateEnvironmentOperationsRoleVersionEnum;
+})(PostAssociateEnvironmentOperationsRoleActionEnum = exports.PostAssociateEnvironmentOperationsRoleActionEnum || (exports.PostAssociateEnvironmentOperationsRoleActionEnum = {}));
+var PostAssociateEnvironmentOperationsRoleVersionEnum;
 (function (PostAssociateEnvironmentOperationsRoleVersionEnum) {
     PostAssociateEnvironmentOperationsRoleVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostAssociateEnvironmentOperationsRoleVersionEnum || (PostAssociateEnvironmentOperationsRoleVersionEnum = {}));
+})(PostAssociateEnvironmentOperationsRoleVersionEnum = exports.PostAssociateEnvironmentOperationsRoleVersionEnum || (exports.PostAssociateEnvironmentOperationsRoleVersionEnum = {}));
 var PostAssociateEnvironmentOperationsRoleQueryParams = /** @class */ (function (_super) {
     __extends(PostAssociateEnvironmentOperationsRoleQueryParams, _super);
     function PostAssociateEnvironmentOperationsRoleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleQueryParams.prototype, "version", void 0);
     return PostAssociateEnvironmentOperationsRoleQueryParams;
-}(SpeakeasyBase));
-export { PostAssociateEnvironmentOperationsRoleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateEnvironmentOperationsRoleQueryParams = PostAssociateEnvironmentOperationsRoleQueryParams;
 var PostAssociateEnvironmentOperationsRoleHeaders = /** @class */ (function (_super) {
     __extends(PostAssociateEnvironmentOperationsRoleHeaders, _super);
     function PostAssociateEnvironmentOperationsRoleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAssociateEnvironmentOperationsRoleHeaders;
-}(SpeakeasyBase));
-export { PostAssociateEnvironmentOperationsRoleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateEnvironmentOperationsRoleHeaders = PostAssociateEnvironmentOperationsRoleHeaders;
 var PostAssociateEnvironmentOperationsRoleRequest = /** @class */ (function (_super) {
     __extends(PostAssociateEnvironmentOperationsRoleRequest, _super);
     function PostAssociateEnvironmentOperationsRoleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateEnvironmentOperationsRoleQueryParams)
     ], PostAssociateEnvironmentOperationsRoleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateEnvironmentOperationsRoleHeaders)
     ], PostAssociateEnvironmentOperationsRoleRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAssociateEnvironmentOperationsRoleRequest.prototype, "request", void 0);
     return PostAssociateEnvironmentOperationsRoleRequest;
-}(SpeakeasyBase));
-export { PostAssociateEnvironmentOperationsRoleRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateEnvironmentOperationsRoleRequest = PostAssociateEnvironmentOperationsRoleRequest;
 var PostAssociateEnvironmentOperationsRoleResponse = /** @class */ (function (_super) {
     __extends(PostAssociateEnvironmentOperationsRoleResponse, _super);
     function PostAssociateEnvironmentOperationsRoleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAssociateEnvironmentOperationsRoleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssociateEnvironmentOperationsRoleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssociateEnvironmentOperationsRoleResponse.prototype, "statusCode", void 0);
     return PostAssociateEnvironmentOperationsRoleResponse;
-}(SpeakeasyBase));
-export { PostAssociateEnvironmentOperationsRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateEnvironmentOperationsRoleResponse = PostAssociateEnvironmentOperationsRoleResponse;

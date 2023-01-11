@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheCluster } from "./cachecluster";
+import { CacheClusterList } from "./cacheclusterlist";
 /**
  * Represents the output of a <code>DescribeCacheClusters</code> operation.
 **/
 export declare class CacheClusterMessage extends SpeakeasyBase {
-    cacheClusters?: CacheCluster[];
+    cacheClusters?: CacheClusterList[];
     marker?: string;
 }

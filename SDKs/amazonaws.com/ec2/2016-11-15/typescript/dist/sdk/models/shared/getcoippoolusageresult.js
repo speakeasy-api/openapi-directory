@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CoipAddressUsage } from "./coipaddressusage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCoipPoolUsageResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCoipPoolUsageResult = /** @class */ (function (_super) {
     __extends(GetCoipPoolUsageResult, _super);
     function GetCoipPoolUsageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: CoipAddressUsage }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCoipPoolUsageResult.prototype, "coipAddressUsages", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCoipPoolUsageResult.prototype, "coipPoolId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCoipPoolUsageResult.prototype, "localGatewayRouteTableId", void 0);
     return GetCoipPoolUsageResult;
-}(SpeakeasyBase));
-export { GetCoipPoolUsageResult };
+}(utils_1.SpeakeasyBase));
+exports.GetCoipPoolUsageResult = GetCoipPoolUsageResult;

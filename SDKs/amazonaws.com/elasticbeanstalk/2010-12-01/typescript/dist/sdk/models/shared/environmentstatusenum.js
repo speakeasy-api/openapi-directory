@@ -1,4 +1,7 @@
-export var EnvironmentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentStatusEnum = void 0;
+var EnvironmentStatusEnum;
 (function (EnvironmentStatusEnum) {
     EnvironmentStatusEnum["Aborting"] = "Aborting";
     EnvironmentStatusEnum["Launching"] = "Launching";
@@ -8,4 +11,4 @@ export var EnvironmentStatusEnum;
     EnvironmentStatusEnum["Ready"] = "Ready";
     EnvironmentStatusEnum["Terminating"] = "Terminating";
     EnvironmentStatusEnum["Terminated"] = "Terminated";
-})(EnvironmentStatusEnum || (EnvironmentStatusEnum = {}));
+})(EnvironmentStatusEnum = exports.EnvironmentStatusEnum || (exports.EnvironmentStatusEnum = {}));

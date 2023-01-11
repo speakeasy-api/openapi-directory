@@ -12,17 +12,17 @@ export class BotImportSpecification extends SpeakeasyBase {
   botName: string;
 
   @SpeakeasyMetadata({ data: "json, name=botTags" })
-  botTags?: Map<string, string>;
+  botTags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=dataPrivacy" })
   dataPrivacy: DataPrivacy;
 
   @SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" })
-  idleSessionTtlInSeconds?: number;
+  idleSessionTTLInSeconds?: number;
 
   @SpeakeasyMetadata({ data: "json, name=roleArn" })
   roleArn: string;
 
   @SpeakeasyMetadata({ data: "json, name=testBotAliasTags" })
-  testBotAliasTags?: Map<string, string>;
+  testBotAliasTags?: Record<string, string>;
 }

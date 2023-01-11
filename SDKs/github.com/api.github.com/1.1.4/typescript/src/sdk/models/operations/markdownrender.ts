@@ -30,11 +30,11 @@ export class MarkdownRenderResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  markdownRender200TextHtmlString?: string;
+  markdownRender200TextHTMLString?: string;
 }

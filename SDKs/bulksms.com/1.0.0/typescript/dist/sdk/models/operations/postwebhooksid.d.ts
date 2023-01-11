@@ -9,7 +9,7 @@ export declare class PostWebhooksIdRequest extends SpeakeasyBase {
 }
 export declare class PostWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     webhook?: shared.Webhook;
 }

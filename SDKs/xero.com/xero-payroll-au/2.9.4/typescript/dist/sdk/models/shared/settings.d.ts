@@ -4,14 +4,14 @@ import { Account } from "./account";
  * The tracking category used for employees
 **/
 export declare class SettingsTrackingCategoriesEmployeeGroups extends SpeakeasyBase {
-    trackingCategoryId?: string;
+    trackingCategoryID?: string;
     trackingCategoryName?: string;
 }
 /**
  * The tracking category used for timesheets
 **/
 export declare class SettingsTrackingCategoriesTimesheetCategories extends SpeakeasyBase {
-    trackingCategoryId?: string;
+    trackingCategoryID?: string;
     trackingCategoryName?: string;
 }
 /**

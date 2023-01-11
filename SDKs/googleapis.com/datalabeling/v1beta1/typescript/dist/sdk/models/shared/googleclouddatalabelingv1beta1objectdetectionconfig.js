@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ObjectDetectionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1ObjectDetectionConfig
 /**
  * Config for video object detection human labeling task. Object detection will be conducted on the images extracted from the video, and those objects will be labeled with bounding boxes. User need to specify the number of images to be extracted per second as the extraction frame rate.
@@ -33,13 +36,13 @@ var GoogleCloudDatalabelingV1beta1ObjectDetectionConfig = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpecSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpecSet" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ObjectDetectionConfig.prototype, "annotationSpecSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractionFrameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractionFrameRate" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1ObjectDetectionConfig.prototype, "extractionFrameRate", void 0);
     return GoogleCloudDatalabelingV1beta1ObjectDetectionConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ObjectDetectionConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ObjectDetectionConfig = GoogleCloudDatalabelingV1beta1ObjectDetectionConfig;

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SummaryEnumCallTypeEnum = void 0;
+var SummaryEnumCallTypeEnum;
+(function (SummaryEnumCallTypeEnum) {
+    SummaryEnumCallTypeEnum["Carrier"] = "carrier";
+    SummaryEnumCallTypeEnum["Sip"] = "sip";
+    SummaryEnumCallTypeEnum["Trunking"] = "trunking";
+    SummaryEnumCallTypeEnum["Client"] = "client";
+})(SummaryEnumCallTypeEnum = exports.SummaryEnumCallTypeEnum || (exports.SummaryEnumCallTypeEnum = {}));

@@ -3,17 +3,6 @@ import * as shared from "../shared";
 export declare class SearchTasksForWorkspacePathParams extends SpeakeasyBase {
     workspaceGid: string;
 }
-export declare enum SearchTasksForWorkspaceResourceSubtypeEnum {
-    DefaultTask = "default_task",
-    Milestone = "milestone"
-}
-export declare enum SearchTasksForWorkspaceSortByEnum {
-    DueDate = "due_date",
-    CreatedAt = "created_at",
-    CompletedAt = "completed_at",
-    Likes = "likes",
-    ModifiedAt = "modified_at"
-}
 export declare class SearchTasksForWorkspaceQueryParams extends SpeakeasyBase {
     assignedByAny?: string;
     assignedByNot?: string;
@@ -58,12 +47,12 @@ export declare class SearchTasksForWorkspaceQueryParams extends SpeakeasyBase {
     projectsAll?: string;
     projectsAny?: string;
     projectsNot?: string;
-    resourceSubtype?: SearchTasksForWorkspaceResourceSubtypeEnum;
+    resourceSubtype?: shared.FieldsEnum1;
     sectionsAll?: string;
     sectionsAny?: string;
     sectionsNot?: string;
     sortAscending?: boolean;
-    sortBy?: SearchTasksForWorkspaceSortByEnum;
+    sortBy?: shared.FieldsEnum2;
     startOn?: Date;
     startOnAfter?: Date;
     startOnBefore?: Date;
@@ -84,5 +73,5 @@ export declare class SearchTasksForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    searchTasksForWorkspace200ApplicationJsonObject?: SearchTasksForWorkspace200ApplicationJson;
+    searchTasksForWorkspace200ApplicationJSONObject?: SearchTasksForWorkspace200ApplicationJson;
 }

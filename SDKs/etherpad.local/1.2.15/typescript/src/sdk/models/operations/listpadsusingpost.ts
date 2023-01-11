@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListPadsUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class ListPadsUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class ListPadsUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class ListPadsUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class ListPadsUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listPadsUsingPost200ApplicationJsonObject?: ListPadsUsingPost200ApplicationJson;
+  listPadsUsingPOST200ApplicationJSONObject?: ListPadsUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingPost400ApplicationJsonObject?: ListPadsUsingPost400ApplicationJson;
+  listPadsUsingPOST400ApplicationJSONObject?: ListPadsUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingPost401ApplicationJsonObject?: ListPadsUsingPost401ApplicationJson;
+  listPadsUsingPOST401ApplicationJSONObject?: ListPadsUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingPost500ApplicationJsonObject?: ListPadsUsingPost500ApplicationJson;
+  listPadsUsingPOST500ApplicationJSONObject?: ListPadsUsingPost500ApplicationJson;
 }

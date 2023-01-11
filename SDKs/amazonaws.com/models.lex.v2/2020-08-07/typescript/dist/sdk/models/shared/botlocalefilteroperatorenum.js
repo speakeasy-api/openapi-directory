@@ -1,5 +1,8 @@
-export var BotLocaleFilterOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotLocaleFilterOperatorEnum = void 0;
+var BotLocaleFilterOperatorEnum;
 (function (BotLocaleFilterOperatorEnum) {
     BotLocaleFilterOperatorEnum["Co"] = "CO";
     BotLocaleFilterOperatorEnum["Eq"] = "EQ";
-})(BotLocaleFilterOperatorEnum || (BotLocaleFilterOperatorEnum = {}));
+})(BotLocaleFilterOperatorEnum = exports.BotLocaleFilterOperatorEnum || (exports.BotLocaleFilterOperatorEnum = {}));

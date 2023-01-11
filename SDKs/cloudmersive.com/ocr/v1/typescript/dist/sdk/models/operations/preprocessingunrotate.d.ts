@@ -16,9 +16,9 @@ export declare class PreprocessingUnrotateRequest extends SpeakeasyBase {
 }
 export declare class PreprocessingUnrotateResponse extends SpeakeasyBase {
     contentType: string;
-    preprocessingUnrotate200ApplicationJsonByteString?: string;
-    preprocessingUnrotate200ApplicationXmlByteString?: string;
-    preprocessingUnrotate200TextJsonByteString?: string;
-    preprocessingUnrotate200TextXmlByteString?: string;
+    preprocessingUnrotate200ApplicationJSONByteString?: string;
+    preprocessingUnrotate200ApplicationXMLByteString?: string;
+    preprocessingUnrotate200TextJSONByteString?: string;
+    preprocessingUnrotate200TextXMLByteString?: string;
     statusCode: number;
 }

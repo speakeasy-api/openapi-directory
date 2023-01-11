@@ -16,8 +16,8 @@ export class GetNumbersAreacodesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getNumbersAreacodes200ApplicationJsonObject?: GetNumbersAreacodes200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getNumbersAreacodes200ApplicationJSONObject?: GetNumbersAreacodes200ApplicationJson;
 }

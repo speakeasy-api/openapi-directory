@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,9 +33,9 @@ export class Domains {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/v1beta1/domains";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -43,19 +43,21 @@ export class Domains {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GmailpostmastertoolsDomainsListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.listDomainsResponse = httpRes?.data;
             }
             break;
@@ -63,7 +65,6 @@ export class Domains {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -79,11 +80,11 @@ export class Domains {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1beta1/{name}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1beta1/{name}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -91,19 +92,21 @@ export class Domains {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.trafficStats = httpRes?.data;
             }
             break;
@@ -111,7 +114,6 @@ export class Domains {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -127,11 +129,11 @@ export class Domains {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1beta1/{parent}/trafficStats", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1beta1/{parent}/trafficStats", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -139,19 +141,21 @@ export class Domains {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GmailpostmastertoolsDomainsTrafficStatsListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.listTrafficStatsResponse = httpRes?.data;
             }
             break;
@@ -159,7 +163,6 @@ export class Domains {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

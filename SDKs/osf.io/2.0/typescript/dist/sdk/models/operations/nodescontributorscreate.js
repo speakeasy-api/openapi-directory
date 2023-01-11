@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesContributorsCreateResponse = exports.NodesContributorsCreateRequest = exports.NodesContributorsCreateContributorInput = exports.NodesContributorsCreateContributorRelationshipsInput = exports.NodesContributorsCreateContributorAttributesInput = exports.NodesContributorsCreateContributorAttributesPermissionEnum = exports.NodesContributorsCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesContributorsCreatePathParams = /** @class */ (function (_super) {
     __extends(NodesContributorsCreatePathParams, _super);
     function NodesContributorsCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesContributorsCreatePathParams.prototype, "nodeId", void 0);
     return NodesContributorsCreatePathParams;
-}(SpeakeasyBase));
-export { NodesContributorsCreatePathParams };
-export var NodesContributorsCreateContributorAttributesPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreatePathParams = NodesContributorsCreatePathParams;
+var NodesContributorsCreateContributorAttributesPermissionEnum;
 (function (NodesContributorsCreateContributorAttributesPermissionEnum) {
     NodesContributorsCreateContributorAttributesPermissionEnum["Read"] = "read";
     NodesContributorsCreateContributorAttributesPermissionEnum["Write"] = "write";
     NodesContributorsCreateContributorAttributesPermissionEnum["Admin"] = "admin";
-})(NodesContributorsCreateContributorAttributesPermissionEnum || (NodesContributorsCreateContributorAttributesPermissionEnum = {}));
+})(NodesContributorsCreateContributorAttributesPermissionEnum = exports.NodesContributorsCreateContributorAttributesPermissionEnum || (exports.NodesContributorsCreateContributorAttributesPermissionEnum = {}));
 // NodesContributorsCreateContributorAttributesInput
 /**
  * The properties of the contributor entity.
@@ -51,20 +54,20 @@ var NodesContributorsCreateContributorAttributesInput = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bibliographic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bibliographic" }),
         __metadata("design:type", Boolean)
     ], NodesContributorsCreateContributorAttributesInput.prototype, "bibliographic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], NodesContributorsCreateContributorAttributesInput.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], NodesContributorsCreateContributorAttributesInput.prototype, "permission", void 0);
     return NodesContributorsCreateContributorAttributesInput;
-}(SpeakeasyBase));
-export { NodesContributorsCreateContributorAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreateContributorAttributesInput = NodesContributorsCreateContributorAttributesInput;
 // NodesContributorsCreateContributorRelationshipsInput
 /**
  * URLs to other entities or entity collections that have a relationship to the contributor entity.
@@ -75,57 +78,57 @@ var NodesContributorsCreateContributorRelationshipsInput = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], NodesContributorsCreateContributorRelationshipsInput.prototype, "user", void 0);
     return NodesContributorsCreateContributorRelationshipsInput;
-}(SpeakeasyBase));
-export { NodesContributorsCreateContributorRelationshipsInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreateContributorRelationshipsInput = NodesContributorsCreateContributorRelationshipsInput;
 var NodesContributorsCreateContributorInput = /** @class */ (function (_super) {
     __extends(NodesContributorsCreateContributorInput, _super);
     function NodesContributorsCreateContributorInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesContributorsCreateContributorAttributesInput)
     ], NodesContributorsCreateContributorInput.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", NodesContributorsCreateContributorRelationshipsInput)
     ], NodesContributorsCreateContributorInput.prototype, "relationships", void 0);
     return NodesContributorsCreateContributorInput;
-}(SpeakeasyBase));
-export { NodesContributorsCreateContributorInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreateContributorInput = NodesContributorsCreateContributorInput;
 var NodesContributorsCreateRequest = /** @class */ (function (_super) {
     __extends(NodesContributorsCreateRequest, _super);
     function NodesContributorsCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesContributorsCreatePathParams)
     ], NodesContributorsCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesContributorsCreateContributorInput)
     ], NodesContributorsCreateRequest.prototype, "request", void 0);
     return NodesContributorsCreateRequest;
-}(SpeakeasyBase));
-export { NodesContributorsCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreateRequest = NodesContributorsCreateRequest;
 var NodesContributorsCreateResponse = /** @class */ (function (_super) {
     __extends(NodesContributorsCreateResponse, _super);
     function NodesContributorsCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesContributorsCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesContributorsCreateResponse.prototype, "statusCode", void 0);
     return NodesContributorsCreateResponse;
-}(SpeakeasyBase));
-export { NodesContributorsCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesContributorsCreateResponse = NodesContributorsCreateResponse;

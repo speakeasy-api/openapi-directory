@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ActivityStreamModeEnum } from "./activitystreammodeenum";
 import { ActivityStreamStatusEnum } from "./activitystreamstatusenum";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { DbClusterOptionGroupStatus } from "./dbclusteroptiongroupstatus";
-import { DomainMembership } from "./domainmembership";
+import { DbClusterRoles } from "./dbclusterroles";
+import { DbClusterMemberList } from "./dbclustermemberlist";
+import { DbClusterOptionGroupMemberships } from "./dbclusteroptiongroupmemberships";
+import { DomainMembershipList } from "./domainmembershiplist";
 import { WriteForwardingStatusEnum } from "./writeforwardingstatusenum";
 import { ClusterPendingModifiedValues } from "./clusterpendingmodifiedvalues";
 import { ScalingConfigurationInfo } from "./scalingconfigurationinfo";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { TagList } from "./taglist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * <p>Contains the details of an Amazon Aurora DB cluster. </p> <p>This data type is used as a response element in the <code>DescribeDBClusters</code>, <code>StopDBCluster</code>, and <code>StartDBCluster</code> actions. </p>
 **/
@@ -19,9 +19,9 @@ export declare class DbCluster extends SpeakeasyBase {
     activityStreamMode?: ActivityStreamModeEnum;
     activityStreamStatus?: ActivityStreamStatusEnum;
     allocatedStorage?: number;
-    associatedRoles?: DbClusterRole[];
+    associatedRoles?: DbClusterRoles[];
     automaticRestartTime?: Date;
-    availabilityZones?: string[];
+    availabilityZones?: Record<string, any>[];
     backtrackConsumedChangeRecords?: number;
     backtrackWindow?: number;
     backupRetentionPeriod?: number;
@@ -34,14 +34,14 @@ export declare class DbCluster extends SpeakeasyBase {
     customEndpoints?: string[];
     dbClusterArn?: string;
     dbClusterIdentifier?: string;
-    dbClusterMembers?: DbClusterMember[];
-    dbClusterOptionGroupMemberships?: DbClusterOptionGroupStatus[];
+    dbClusterMembers?: DbClusterMemberList[];
+    dbClusterOptionGroupMemberships?: DbClusterOptionGroupMemberships[];
     dbClusterParameterGroup?: string;
     dbSubnetGroup?: string;
     databaseName?: string;
     dbClusterResourceId?: string;
     deletionProtection?: boolean;
-    domainMemberships?: DomainMembership[];
+    domainMemberships?: DomainMembershipList[];
     earliestBacktrackTime?: Date;
     earliestRestorableTime?: Date;
     enabledCloudwatchLogsExports?: string[];
@@ -57,18 +57,18 @@ export declare class DbCluster extends SpeakeasyBase {
     kmsKeyId?: string;
     latestRestorableTime?: Date;
     masterUsername?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     pendingModifiedValues?: ClusterPendingModifiedValues;
     percentProgress?: string;
     port?: number;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
-    readReplicaIdentifiers?: string[];
+    readReplicaIdentifiers?: Record<string, any>[];
     readerEndpoint?: string;
     replicationSourceIdentifier?: string;
     scalingConfigurationInfo?: ScalingConfigurationInfo;
     status?: string;
     storageEncrypted?: boolean;
-    tagList?: Tag[];
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    tagList?: TagList[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

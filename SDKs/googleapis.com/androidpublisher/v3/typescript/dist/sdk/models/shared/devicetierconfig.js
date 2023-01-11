@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceGroup } from "./devicegroup";
-import { DeviceTierSet } from "./devicetierset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceTierConfigInput = exports.DeviceTierConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicegroup_1 = require("./devicegroup");
+var devicetierset_1 = require("./devicetierset");
 // DeviceTierConfig
 /**
  * LINT.IfChange Configuration describing device targeting criteria for the content of an app.
@@ -35,20 +38,20 @@ var DeviceTierConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceGroups", elemType: DeviceGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceGroups", elemType: devicegroup_1.DeviceGroup }),
         __metadata("design:type", Array)
     ], DeviceTierConfig.prototype, "deviceGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceTierConfigId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceTierConfigId" }),
         __metadata("design:type", String)
     ], DeviceTierConfig.prototype, "deviceTierConfigId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceTierSet" }),
-        __metadata("design:type", DeviceTierSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceTierSet" }),
+        __metadata("design:type", devicetierset_1.DeviceTierSet)
     ], DeviceTierConfig.prototype, "deviceTierSet", void 0);
     return DeviceTierConfig;
-}(SpeakeasyBase));
-export { DeviceTierConfig };
+}(utils_1.SpeakeasyBase));
+exports.DeviceTierConfig = DeviceTierConfig;
 // DeviceTierConfigInput
 /**
  * LINT.IfChange Configuration describing device targeting criteria for the content of an app.
@@ -59,13 +62,13 @@ var DeviceTierConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceGroups", elemType: DeviceGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceGroups", elemType: devicegroup_1.DeviceGroup }),
         __metadata("design:type", Array)
     ], DeviceTierConfigInput.prototype, "deviceGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceTierSet" }),
-        __metadata("design:type", DeviceTierSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceTierSet" }),
+        __metadata("design:type", devicetierset_1.DeviceTierSet)
     ], DeviceTierConfigInput.prototype, "deviceTierSet", void 0);
     return DeviceTierConfigInput;
-}(SpeakeasyBase));
-export { DeviceTierConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.DeviceTierConfigInput = DeviceTierConfigInput;

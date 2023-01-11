@@ -3,15 +3,15 @@ import * as shared from "../shared";
 export declare const PostV05UsersAuthOnInitServerList: readonly ["https://your-hrp-server.com"];
 export declare class PostV05UsersAuthOnInitHeaders extends SpeakeasyBase {
     authorization: string;
-    xHipId: string;
-    xHiuId: string;
+    xHIPID: string;
+    xHIUID: string;
 }
 export declare class PostV05UsersAuthOnInitRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthInitResponse?: shared.PatientAuthInitResponse;
 }
 export declare class PostV05UsersAuthOnInitRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: PostV05UsersAuthOnInitHeaders;
     request: PostV05UsersAuthOnInitRequests;
 }

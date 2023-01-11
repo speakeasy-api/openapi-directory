@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1Workload } from "./googlecloudassuredworkloadsv1workload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1workload_1 = require("./googlecloudassuredworkloadsv1workload");
 // GoogleCloudAssuredworkloadsV1ListWorkloadsResponse
 /**
  * Response of ListWorkloads endpoint.
@@ -34,13 +37,13 @@ var GoogleCloudAssuredworkloadsV1ListWorkloadsResponse = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1ListWorkloadsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workloads", elemType: GoogleCloudAssuredworkloadsV1Workload }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workloads", elemType: googlecloudassuredworkloadsv1workload_1.GoogleCloudAssuredworkloadsV1Workload }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ListWorkloadsResponse.prototype, "workloads", void 0);
     return GoogleCloudAssuredworkloadsV1ListWorkloadsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1ListWorkloadsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse = GoogleCloudAssuredworkloadsV1ListWorkloadsResponse;

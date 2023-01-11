@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubTransaction } from "./subtransaction";
-export var TransactionDetailClearedEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionDetail = exports.TransactionDetailFlagColorEnum = exports.TransactionDetailClearedEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var subtransaction_1 = require("./subtransaction");
+var TransactionDetailClearedEnum;
 (function (TransactionDetailClearedEnum) {
     TransactionDetailClearedEnum["Cleared"] = "cleared";
     TransactionDetailClearedEnum["Uncleared"] = "uncleared";
     TransactionDetailClearedEnum["Reconciled"] = "reconciled";
-})(TransactionDetailClearedEnum || (TransactionDetailClearedEnum = {}));
-export var TransactionDetailFlagColorEnum;
+})(TransactionDetailClearedEnum = exports.TransactionDetailClearedEnum || (exports.TransactionDetailClearedEnum = {}));
+var TransactionDetailFlagColorEnum;
 (function (TransactionDetailFlagColorEnum) {
     TransactionDetailFlagColorEnum["Red"] = "red";
     TransactionDetailFlagColorEnum["Orange"] = "orange";
@@ -38,88 +41,89 @@ export var TransactionDetailFlagColorEnum;
     TransactionDetailFlagColorEnum["Green"] = "green";
     TransactionDetailFlagColorEnum["Blue"] = "blue";
     TransactionDetailFlagColorEnum["Purple"] = "purple";
-})(TransactionDetailFlagColorEnum || (TransactionDetailFlagColorEnum = {}));
+    TransactionDetailFlagColorEnum["Null"] = "null";
+})(TransactionDetailFlagColorEnum = exports.TransactionDetailFlagColorEnum || (exports.TransactionDetailFlagColorEnum = {}));
 var TransactionDetail = /** @class */ (function (_super) {
     __extends(TransactionDetail, _super);
     function TransactionDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_name" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], TransactionDetail.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approved" }),
         __metadata("design:type", Boolean)
     ], TransactionDetail.prototype, "approved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_name" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "categoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cleared" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cleared" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "cleared", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], TransactionDetail.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], TransactionDetail.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag_color" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "flagColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=import_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=import_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matched_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matched_transaction_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "matchedTransactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_name" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "payeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtransactions", elemType: SubTransaction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtransactions", elemType: subtransaction_1.SubTransaction }),
         __metadata("design:type", Array)
     ], TransactionDetail.prototype, "subtransactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_account_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "transferAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_transaction_id" }),
         __metadata("design:type", String)
     ], TransactionDetail.prototype, "transferTransactionId", void 0);
     return TransactionDetail;
-}(SpeakeasyBase));
-export { TransactionDetail };
+}(utils_1.SpeakeasyBase));
+exports.TransactionDetail = TransactionDetail;

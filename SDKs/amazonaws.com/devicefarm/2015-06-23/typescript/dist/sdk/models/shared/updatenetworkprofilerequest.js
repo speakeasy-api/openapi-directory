@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkProfileTypeEnum } from "./networkprofiletypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkProfileRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkprofiletypeenum_1 = require("./networkprofiletypeenum");
 var UpdateNetworkProfileRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkProfileRequest, _super);
     function UpdateNetworkProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], UpdateNetworkProfileRequest.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateNetworkProfileRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downlinkBandwidthBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downlinkBandwidthBits" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "downlinkBandwidthBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downlinkDelayMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downlinkDelayMs" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "downlinkDelayMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downlinkJitterMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downlinkJitterMs" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "downlinkJitterMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downlinkLossPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downlinkLossPercent" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "downlinkLossPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkProfileRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkProfileRequest.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uplinkBandwidthBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uplinkBandwidthBits" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "uplinkBandwidthBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uplinkDelayMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uplinkDelayMs" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "uplinkDelayMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uplinkJitterMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uplinkJitterMs" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "uplinkJitterMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uplinkLossPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uplinkLossPercent" }),
         __metadata("design:type", Number)
     ], UpdateNetworkProfileRequest.prototype, "uplinkLossPercent", void 0);
     return UpdateNetworkProfileRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkProfileRequest = UpdateNetworkProfileRequest;

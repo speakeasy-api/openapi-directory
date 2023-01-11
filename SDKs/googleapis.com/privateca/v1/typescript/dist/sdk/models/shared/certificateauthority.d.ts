@@ -34,7 +34,7 @@ export declare class CertificateAuthority extends SpeakeasyBase {
     expireTime?: string;
     gcsBucket?: string;
     keySpec?: KeyVersionSpec;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lifetime?: string;
     name?: string;
     pemCaCertificates?: string[];
@@ -52,7 +52,7 @@ export declare class CertificateAuthorityInput extends SpeakeasyBase {
     config?: CertificateConfig;
     gcsBucket?: string;
     keySpec?: KeyVersionSpec;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lifetime?: string;
     subordinateConfig?: SubordinateConfig;
     type?: CertificateAuthorityTypeEnum;

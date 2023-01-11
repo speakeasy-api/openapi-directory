@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Predicate } from "./predicate";
-import { RateKeyEnum } from "./ratekeyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateBasedRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var predicate_1 = require("./predicate");
+var ratekeyenum_1 = require("./ratekeyenum");
 // RateBasedRule
 /**
  * <note> <p>This is <b>AWS WAF Classic</b> documentation. For more information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the developer guide.</p> <p> <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the latest version, AWS WAF has a single set of endpoints for regional and global use. </p> </note> <p>A <code>RateBasedRule</code> is identical to a regular <a>Rule</a>, with one addition: a <code>RateBasedRule</code> counts the number of requests that arrive from a specified IP address every five minutes. For example, based on recent requests that you've seen from an attacker, you might create a <code>RateBasedRule</code> that includes the following conditions: </p> <ul> <li> <p>The requests come from 192.0.2.44.</p> </li> <li> <p>They contain the value <code>BadBot</code> in the <code>User-Agent</code> header.</p> </li> </ul> <p>In the rule, you also define the rate limit as 1,000.</p> <p>Requests that meet both of these conditions and exceed 1,000 requests every five minutes trigger the rule's action (block or count), which is defined in the web ACL.</p>
@@ -35,29 +38,29 @@ var RateBasedRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MatchPredicates", elemType: Predicate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MatchPredicates", elemType: predicate_1.Predicate }),
         __metadata("design:type", Array)
     ], RateBasedRule.prototype, "matchPredicates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricName" }),
         __metadata("design:type", String)
     ], RateBasedRule.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], RateBasedRule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateKey" }),
         __metadata("design:type", String)
     ], RateBasedRule.prototype, "rateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateLimit" }),
         __metadata("design:type", Number)
     ], RateBasedRule.prototype, "rateLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleId" }),
         __metadata("design:type", String)
     ], RateBasedRule.prototype, "ruleId", void 0);
     return RateBasedRule;
-}(SpeakeasyBase));
-export { RateBasedRule };
+}(utils_1.SpeakeasyBase));
+exports.RateBasedRule = RateBasedRule;

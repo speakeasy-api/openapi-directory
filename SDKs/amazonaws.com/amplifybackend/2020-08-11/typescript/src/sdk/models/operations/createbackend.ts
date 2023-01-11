@@ -38,7 +38,7 @@ export class CreateBackendRequestBody extends SpeakeasyBase {
   backendEnvironmentName: string;
 
   @SpeakeasyMetadata({ data: "json, name=resourceConfig" })
-  resourceConfig?: Map<string, any>;
+  resourceConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceName" })
   resourceName?: string;

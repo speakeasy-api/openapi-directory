@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://cloudfront.amazonaws.com", "http://cloudfront.{region}.amazonaws.com.cn", "https://cloudfront.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * associateAlias20200531 - <p>Associates an alias (also known as a CNAME or an alternate domain name) with a CloudFront distribution.</p> <p>With this operation you can move an alias that’s already in use on a CloudFront distribution to a different distribution in one step. This prevents the downtime that could occur if you first remove the alias from one distribution and then separately add the alias to another distribution.</p> <p>To use this operation to associate an alias with a distribution, you provide the alias and the ID of the target distribution for the alias. For more information, including how to set up the target distribution, prerequisites that you must complete, and other restrictions, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html#alternate-domain-names-move">Moving an alternate domain name to a different distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
     **/
@@ -356,4 +356,3 @@ export declare class SDK {
     **/
     updateStreamingDistribution20200531(req: operations.UpdateStreamingDistribution20200531Request, config?: AxiosRequestConfig): Promise<operations.UpdateStreamingDistribution20200531Response>;
 }
-export {};

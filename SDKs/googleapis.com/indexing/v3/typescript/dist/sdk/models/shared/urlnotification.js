@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UrlNotificationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UrlNotification = exports.UrlNotificationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UrlNotificationTypeEnum;
 (function (UrlNotificationTypeEnum) {
     UrlNotificationTypeEnum["UrlNotificationTypeUnspecified"] = "URL_NOTIFICATION_TYPE_UNSPECIFIED";
     UrlNotificationTypeEnum["UrlUpdated"] = "URL_UPDATED";
     UrlNotificationTypeEnum["UrlDeleted"] = "URL_DELETED";
-})(UrlNotificationTypeEnum || (UrlNotificationTypeEnum = {}));
+})(UrlNotificationTypeEnum = exports.UrlNotificationTypeEnum || (exports.UrlNotificationTypeEnum = {}));
 // UrlNotification
 /**
  * `UrlNotification` is the resource used in all Indexing API calls. It describes one event in the life cycle of a Web Document.
@@ -39,17 +42,17 @@ var UrlNotification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notifyTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notifyTime" }),
         __metadata("design:type", String)
     ], UrlNotification.prototype, "notifyTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UrlNotification.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UrlNotification.prototype, "url", void 0);
     return UrlNotification;
-}(SpeakeasyBase));
-export { UrlNotification };
+}(utils_1.SpeakeasyBase));
+exports.UrlNotification = UrlNotification;

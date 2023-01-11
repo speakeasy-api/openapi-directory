@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateBatchPredictionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 // CreateBatchPredictionOutput
 /**
  * <p> Represents the output of a <code>CreateBatchPrediction</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateBatchPrediction</code> operation is asynchronous. You can poll for status updates by using the <code>&gt;GetBatchPrediction</code> operation and checking the <code>Status</code> parameter of the result. </p>
@@ -33,9 +36,9 @@ var CreateBatchPredictionOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchPredictionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchPredictionId" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionOutput.prototype, "batchPredictionId", void 0);
     return CreateBatchPredictionOutput;
-}(SpeakeasyBase));
-export { CreateBatchPredictionOutput };
+}(utils_1.SpeakeasyBase));
+exports.CreateBatchPredictionOutput = CreateBatchPredictionOutput;

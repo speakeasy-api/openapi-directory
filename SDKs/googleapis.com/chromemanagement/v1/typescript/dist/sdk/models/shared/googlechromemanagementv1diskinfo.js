@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1DiskInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1DiskInfo
 /**
  * Status of the single storage device.
@@ -33,57 +36,57 @@ var GoogleChromeManagementV1DiskInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesReadThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesReadThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "bytesReadThisSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesWrittenThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesWrittenThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "bytesWrittenThisSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discardTimeThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discardTimeThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "discardTimeThisSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ioTimeThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ioTimeThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "ioTimeThisSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readTimeThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readTimeThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "readTimeThisSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeBytes" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "sizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeIds" }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1DiskInfo.prototype, "volumeIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeTimeThisSession" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeTimeThisSession" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DiskInfo.prototype, "writeTimeThisSession", void 0);
     return GoogleChromeManagementV1DiskInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1DiskInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1DiskInfo = GoogleChromeManagementV1DiskInfo;

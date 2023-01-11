@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutFeedbackResponse = exports.PutFeedbackRequest = exports.PutFeedbackRequestBody = exports.PutFeedbackRequestBodyInsightFeedback = exports.PutFeedbackHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PutFeedbackHeaders = /** @class */ (function (_super) {
     __extends(PutFeedbackHeaders, _super);
     function PutFeedbackHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PutFeedbackHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PutFeedbackHeaders;
-}(SpeakeasyBase));
-export { PutFeedbackHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PutFeedbackHeaders = PutFeedbackHeaders;
 // PutFeedbackRequestBodyInsightFeedback
 /**
  *  Information about insight feedback received from a customer.
@@ -70,85 +96,85 @@ var PutFeedbackRequestBodyInsightFeedback = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Feedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Feedback" }),
         __metadata("design:type", String)
     ], PutFeedbackRequestBodyInsightFeedback.prototype, "feedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], PutFeedbackRequestBodyInsightFeedback.prototype, "id", void 0);
     return PutFeedbackRequestBodyInsightFeedback;
-}(SpeakeasyBase));
-export { PutFeedbackRequestBodyInsightFeedback };
+}(utils_1.SpeakeasyBase));
+exports.PutFeedbackRequestBodyInsightFeedback = PutFeedbackRequestBodyInsightFeedback;
 var PutFeedbackRequestBody = /** @class */ (function (_super) {
     __extends(PutFeedbackRequestBody, _super);
     function PutFeedbackRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightFeedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightFeedback" }),
         __metadata("design:type", PutFeedbackRequestBodyInsightFeedback)
     ], PutFeedbackRequestBody.prototype, "insightFeedback", void 0);
     return PutFeedbackRequestBody;
-}(SpeakeasyBase));
-export { PutFeedbackRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutFeedbackRequestBody = PutFeedbackRequestBody;
 var PutFeedbackRequest = /** @class */ (function (_super) {
     __extends(PutFeedbackRequest, _super);
     function PutFeedbackRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutFeedbackHeaders)
     ], PutFeedbackRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutFeedbackRequestBody)
     ], PutFeedbackRequest.prototype, "request", void 0);
     return PutFeedbackRequest;
-}(SpeakeasyBase));
-export { PutFeedbackRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutFeedbackRequest = PutFeedbackRequest;
 var PutFeedbackResponse = /** @class */ (function (_super) {
     __extends(PutFeedbackResponse, _super);
     function PutFeedbackResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutFeedbackResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "putFeedbackResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutFeedbackResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutFeedbackResponse.prototype, "validationException", void 0);
     return PutFeedbackResponse;
-}(SpeakeasyBase));
-export { PutFeedbackResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutFeedbackResponse = PutFeedbackResponse;

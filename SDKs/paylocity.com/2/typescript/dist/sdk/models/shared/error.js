@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorT = exports.ErrorOptions = void 0;
+var utils_1 = require("../../../internal/utils");
 // ErrorOptions
 /**
  * The error option model
@@ -33,41 +36,41 @@ var ErrorOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ErrorOptions.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ErrorOptions.prototype, "description", void 0);
     return ErrorOptions;
-}(SpeakeasyBase));
-export { ErrorOptions };
-// Error
+}(utils_1.SpeakeasyBase));
+exports.ErrorOptions = ErrorOptions;
+// ErrorT
 /**
  * The error model
 **/
-var Error = /** @class */ (function (_super) {
-    __extends(Error, _super);
-    function Error() {
+var ErrorT = /** @class */ (function (_super) {
+    __extends(ErrorT, _super);
+    function ErrorT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
-    ], Error.prototype, "field", void 0);
+    ], ErrorT.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
-    ], Error.prototype, "message", void 0);
+    ], ErrorT.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options", elemType: ErrorOptions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options", elemType: ErrorOptions }),
         __metadata("design:type", Array)
-    ], Error.prototype, "options", void 0);
+    ], ErrorT.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
-    ], Error.prototype, "path", void 0);
-    return Error;
-}(SpeakeasyBase));
-export { Error };
+    ], ErrorT.prototype, "path", void 0);
+    return ErrorT;
+}(utils_1.SpeakeasyBase));
+exports.ErrorT = ErrorT;

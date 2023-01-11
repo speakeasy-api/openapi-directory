@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataParty2 } from "./obreaddataparty2";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadParty2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddataparty2_1 = require("./obreaddataparty2");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadParty2 = /** @class */ (function (_super) {
     __extends(ObReadParty2, _super);
     function ObReadParty2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataParty2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddataparty2_1.ObReadDataParty2)
     ], ObReadParty2.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadParty2.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadParty2.prototype, "meta", void 0);
     return ObReadParty2;
-}(SpeakeasyBase));
-export { ObReadParty2 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadParty2 = ObReadParty2;

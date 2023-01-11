@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { HscerRequest, HscerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: HscerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      cname: "et",
-      roll: "delectus",
-      year: "soluta",
+      cname: "sit",
+      roll: "voluptas",
+      year: "culpa",
     },
-    consentArtifact: "eveniet",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "sit",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.hscer(req).then((res: HscerResponse | AxiosError) => {
+sdk.apIs.hscer(req).then((res: HscerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.hscer(req).then((res: HscerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hscer` - Class XII Marksheet
 * `sscer` - Class X Marksheet

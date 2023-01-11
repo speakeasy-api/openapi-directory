@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SpellsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpellsResponse = exports.SpellsRequest = exports.SpellsPathParams = exports.SpellsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SpellsFormatEnum;
 (function (SpellsFormatEnum) {
     SpellsFormatEnum["Xml"] = "xml";
     SpellsFormatEnum["Json"] = "json";
-})(SpellsFormatEnum || (SpellsFormatEnum = {}));
+})(SpellsFormatEnum = exports.SpellsFormatEnum || (exports.SpellsFormatEnum = {}));
 var SpellsPathParams = /** @class */ (function (_super) {
     __extends(SpellsPathParams, _super);
     function SpellsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], SpellsPathParams.prototype, "format", void 0);
     return SpellsPathParams;
-}(SpeakeasyBase));
-export { SpellsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SpellsPathParams = SpellsPathParams;
 var SpellsRequest = /** @class */ (function (_super) {
     __extends(SpellsRequest, _super);
     function SpellsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SpellsPathParams)
     ], SpellsRequest.prototype, "pathParams", void 0);
     return SpellsRequest;
-}(SpeakeasyBase));
-export { SpellsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SpellsRequest = SpellsRequest;
 var SpellsResponse = /** @class */ (function (_super) {
     __extends(SpellsResponse, _super);
     function SpellsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SpellsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], SpellsResponse.prototype, "spells", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SpellsResponse.prototype, "statusCode", void 0);
     return SpellsResponse;
-}(SpeakeasyBase));
-export { SpellsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SpellsResponse = SpellsResponse;

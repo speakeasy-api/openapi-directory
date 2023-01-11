@@ -10,13 +10,13 @@ export declare class PostTeamsUsernameProjectsSecurity extends SpeakeasyBase {
 }
 export declare class PostTeamsUsernameProjectsRequest extends SpeakeasyBase {
     pathParams: PostTeamsUsernameProjectsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostTeamsUsernameProjectsSecurity;
 }
 export declare class PostTeamsUsernameProjectsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

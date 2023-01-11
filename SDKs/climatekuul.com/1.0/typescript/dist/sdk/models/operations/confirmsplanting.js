@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfirmsPlantingServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmsPlantingResponse = exports.ConfirmsPlantingRequest = exports.ConfirmsPlantingRequestBody = exports.ConfirmsPlantingServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.ConfirmsPlantingServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var ConfirmsPlantingRequestBody = /** @class */ (function (_super) {
@@ -32,53 +35,53 @@ var ConfirmsPlantingRequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], ConfirmsPlantingRequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], ConfirmsPlantingRequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=confirmPlanting;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=confirmPlanting;" }),
         __metadata("design:type", String)
     ], ConfirmsPlantingRequestBody.prototype, "confirmPlanting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=transaction_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=transaction_id;" }),
         __metadata("design:type", String)
     ], ConfirmsPlantingRequestBody.prototype, "transactionId", void 0);
     return ConfirmsPlantingRequestBody;
-}(SpeakeasyBase));
-export { ConfirmsPlantingRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlantingRequestBody = ConfirmsPlantingRequestBody;
 var ConfirmsPlantingRequest = /** @class */ (function (_super) {
     __extends(ConfirmsPlantingRequest, _super);
     function ConfirmsPlantingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConfirmsPlantingRequest.prototype, "serverUrl", void 0);
+    ], ConfirmsPlantingRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", ConfirmsPlantingRequestBody)
     ], ConfirmsPlantingRequest.prototype, "request", void 0);
     return ConfirmsPlantingRequest;
-}(SpeakeasyBase));
-export { ConfirmsPlantingRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlantingRequest = ConfirmsPlantingRequest;
 var ConfirmsPlantingResponse = /** @class */ (function (_super) {
     __extends(ConfirmsPlantingResponse, _super);
     function ConfirmsPlantingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfirmsPlantingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfirmsPlantingResponse.prototype, "statusCode", void 0);
     return ConfirmsPlantingResponse;
-}(SpeakeasyBase));
-export { ConfirmsPlantingResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlantingResponse = ConfirmsPlantingResponse;

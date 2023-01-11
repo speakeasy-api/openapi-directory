@@ -1,6 +1,9 @@
-export var ArtifactStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactStatusEnum = void 0;
+var ArtifactStatusEnum;
 (function (ArtifactStatusEnum) {
     ArtifactStatusEnum["Approved"] = "APPROVED";
     ArtifactStatusEnum["Rejected"] = "REJECTED";
     ArtifactStatusEnum["InProgress"] = "IN_PROGRESS";
-})(ArtifactStatusEnum || (ArtifactStatusEnum = {}));
+})(ArtifactStatusEnum = exports.ArtifactStatusEnum || (exports.ArtifactStatusEnum = {}));

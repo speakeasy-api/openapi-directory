@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerResetPasswordResponse = exports.SessionControllerResetPasswordRequest = exports.SessionControllerResetPasswordQueryParams = exports.SessionControllerResetPasswordPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerResetPasswordPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerResetPasswordPathParams, _super);
     function SessionControllerResetPasswordPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerResetPasswordPathParams.prototype, "shortName", void 0);
     return SessionControllerResetPasswordPathParams;
-}(SpeakeasyBase));
-export { SessionControllerResetPasswordPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerResetPasswordPathParams = SessionControllerResetPasswordPathParams;
 var SessionControllerResetPasswordQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerResetPasswordQueryParams, _super);
     function SessionControllerResetPasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], SessionControllerResetPasswordQueryParams.prototype, "email", void 0);
     return SessionControllerResetPasswordQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerResetPasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerResetPasswordQueryParams = SessionControllerResetPasswordQueryParams;
 var SessionControllerResetPasswordRequest = /** @class */ (function (_super) {
     __extends(SessionControllerResetPasswordRequest, _super);
     function SessionControllerResetPasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerResetPasswordPathParams)
     ], SessionControllerResetPasswordRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerResetPasswordQueryParams)
     ], SessionControllerResetPasswordRequest.prototype, "queryParams", void 0);
     return SessionControllerResetPasswordRequest;
-}(SpeakeasyBase));
-export { SessionControllerResetPasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerResetPasswordRequest = SessionControllerResetPasswordRequest;
 var SessionControllerResetPasswordResponse = /** @class */ (function (_super) {
     __extends(SessionControllerResetPasswordResponse, _super);
     function SessionControllerResetPasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerResetPasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerResetPasswordResponse.prototype, "statusCode", void 0);
     return SessionControllerResetPasswordResponse;
-}(SpeakeasyBase));
-export { SessionControllerResetPasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerResetPasswordResponse = SessionControllerResetPasswordResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { XssMatchSetUpdate } from "./xssmatchsetupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateXssMatchSetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var xssmatchsetupdate_1 = require("./xssmatchsetupdate");
 // UpdateXssMatchSetRequest
 /**
  * A request to update an <a>XssMatchSet</a>.
@@ -34,17 +37,17 @@ var UpdateXssMatchSetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], UpdateXssMatchSetRequest.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Updates", elemType: XssMatchSetUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Updates", elemType: xssmatchsetupdate_1.XssMatchSetUpdate }),
         __metadata("design:type", Array)
     ], UpdateXssMatchSetRequest.prototype, "updates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XssMatchSetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XssMatchSetId" }),
         __metadata("design:type", String)
     ], UpdateXssMatchSetRequest.prototype, "xssMatchSetId", void 0);
     return UpdateXssMatchSetRequest;
-}(SpeakeasyBase));
-export { UpdateXssMatchSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateXssMatchSetRequest = UpdateXssMatchSetRequest;

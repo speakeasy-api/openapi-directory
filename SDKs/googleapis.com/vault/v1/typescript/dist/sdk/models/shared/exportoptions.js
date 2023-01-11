@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveExportOptions } from "./driveexportoptions";
-import { GroupsExportOptions } from "./groupsexportoptions";
-import { HangoutsChatExportOptions } from "./hangoutschatexportoptions";
-import { MailExportOptions } from "./mailexportoptions";
-import { VoiceExportOptions } from "./voiceexportoptions";
-export var ExportOptionsRegionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportOptions = exports.ExportOptionsRegionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var driveexportoptions_1 = require("./driveexportoptions");
+var groupsexportoptions_1 = require("./groupsexportoptions");
+var hangoutschatexportoptions_1 = require("./hangoutschatexportoptions");
+var mailexportoptions_1 = require("./mailexportoptions");
+var voiceexportoptions_1 = require("./voiceexportoptions");
+var ExportOptionsRegionEnum;
 (function (ExportOptionsRegionEnum) {
     ExportOptionsRegionEnum["ExportRegionUnspecified"] = "EXPORT_REGION_UNSPECIFIED";
     ExportOptionsRegionEnum["Any"] = "ANY";
     ExportOptionsRegionEnum["Us"] = "US";
     ExportOptionsRegionEnum["Europe"] = "EUROPE";
-})(ExportOptionsRegionEnum || (ExportOptionsRegionEnum = {}));
+})(ExportOptionsRegionEnum = exports.ExportOptionsRegionEnum || (exports.ExportOptionsRegionEnum = {}));
 // ExportOptions
 /**
  * Additional options for exports
@@ -45,29 +48,29 @@ var ExportOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveOptions" }),
-        __metadata("design:type", DriveExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveOptions" }),
+        __metadata("design:type", driveexportoptions_1.DriveExportOptions)
     ], ExportOptions.prototype, "driveOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsOptions" }),
-        __metadata("design:type", GroupsExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsOptions" }),
+        __metadata("design:type", groupsexportoptions_1.GroupsExportOptions)
     ], ExportOptions.prototype, "groupsOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hangoutsChatOptions" }),
-        __metadata("design:type", HangoutsChatExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hangoutsChatOptions" }),
+        __metadata("design:type", hangoutschatexportoptions_1.HangoutsChatExportOptions)
     ], ExportOptions.prototype, "hangoutsChatOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailOptions" }),
-        __metadata("design:type", MailExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailOptions" }),
+        __metadata("design:type", mailexportoptions_1.MailExportOptions)
     ], ExportOptions.prototype, "mailOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], ExportOptions.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceOptions" }),
-        __metadata("design:type", VoiceExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceOptions" }),
+        __metadata("design:type", voiceexportoptions_1.VoiceExportOptions)
     ], ExportOptions.prototype, "voiceOptions", void 0);
     return ExportOptions;
-}(SpeakeasyBase));
-export { ExportOptions };
+}(utils_1.SpeakeasyBase));
+exports.ExportOptions = ExportOptions;

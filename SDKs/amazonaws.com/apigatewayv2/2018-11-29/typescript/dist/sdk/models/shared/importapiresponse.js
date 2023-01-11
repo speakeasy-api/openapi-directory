@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cors } from "./cors";
-import { ProtocolTypeEnum } from "./protocoltypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportApiResponse = exports.ImportApiResponseCorsConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+// ImportApiResponseCorsConfiguration
+/**
+ * A CORS configuration. Supported only for HTTP APIs.
+**/
+var ImportApiResponseCorsConfiguration = /** @class */ (function (_super) {
+    __extends(ImportApiResponseCorsConfiguration, _super);
+    function ImportApiResponseCorsConfiguration() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowCredentials" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "allowCredentials", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowHeaders" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "allowHeaders", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowMethods" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "allowMethods", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowOrigins" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "allowOrigins", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExposeHeaders" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "exposeHeaders", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxAge" }),
+        __metadata("design:type", Object)
+    ], ImportApiResponseCorsConfiguration.prototype, "maxAge", void 0);
+    return ImportApiResponseCorsConfiguration;
+}(utils_1.SpeakeasyBase));
+exports.ImportApiResponseCorsConfiguration = ImportApiResponseCorsConfiguration;
 var ImportApiResponse = /** @class */ (function (_super) {
     __extends(ImportApiResponse, _super);
     function ImportApiResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiEndpoint" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiEndpoint" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "apiEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiGatewayManaged" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiGatewayManaged" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "apiGatewayManaged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiId" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiKeySelectionExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiKeySelectionExpression" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "apiKeySelectionExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CorsConfiguration" }),
-        __metadata("design:type", Cors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CorsConfiguration" }),
+        __metadata("design:type", ImportApiResponseCorsConfiguration)
     ], ImportApiResponse.prototype, "corsConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedDate" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisableExecuteApiEndpoint" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisableExecuteApiEndpoint" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "disableExecuteApiEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisableSchemaValidation" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisableSchemaValidation" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "disableSchemaValidation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportInfo" }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportInfo" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "importInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProtocolType" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProtocolType" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "protocolType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteSelectionExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteSelectionExpression" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "routeSelectionExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Warnings" }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Warnings" }),
+        __metadata("design:type", Object)
     ], ImportApiResponse.prototype, "warnings", void 0);
     return ImportApiResponse;
-}(SpeakeasyBase));
-export { ImportApiResponse };
+}(utils_1.SpeakeasyBase));
+exports.ImportApiResponse = ImportApiResponse;

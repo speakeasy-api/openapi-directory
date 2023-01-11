@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,11 +31,11 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,12 +43,14 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -61,7 +62,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -77,11 +77,11 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -89,19 +89,21 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.bucket = httpRes?.data;
             }
             break;
@@ -109,7 +111,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -125,11 +126,11 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}/iam", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}/iam", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -137,19 +138,21 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsGetIamPolicyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.policy = httpRes?.data;
             }
             break;
@@ -157,7 +160,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -178,16 +180,17 @@ export class Buckets {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -195,24 +198,23 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsInsertResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.bucket = httpRes?.data;
             }
             break;
@@ -220,7 +222,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -238,9 +239,9 @@ export class Buckets {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/b";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -248,19 +249,21 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.buckets = httpRes?.data;
             }
             break;
@@ -268,7 +271,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -284,11 +286,11 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}/lockRetentionPolicy", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}/lockRetentionPolicy", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -296,19 +298,21 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsLockRetentionPolicyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.bucket = httpRes?.data;
             }
             break;
@@ -316,7 +320,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -332,21 +335,22 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -354,24 +358,23 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.bucket = httpRes?.data;
             }
             break;
@@ -379,7 +382,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -395,21 +397,22 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}/iam", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}/iam", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -417,24 +420,23 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsSetIamPolicyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.policy = httpRes?.data;
             }
             break;
@@ -442,7 +444,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -458,11 +459,11 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}/iam/testPermissions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}/iam/testPermissions", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -470,19 +471,21 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsTestIamPermissionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.testIamPermissionsResponse = httpRes?.data;
             }
             break;
@@ -490,7 +493,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -506,21 +508,22 @@ export class Buckets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/b/{bucket}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/b/{bucket}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -528,24 +531,23 @@ export class Buckets {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.StorageBucketsUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.bucket = httpRes?.data;
             }
             break;
@@ -553,7 +555,6 @@ export class Buckets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

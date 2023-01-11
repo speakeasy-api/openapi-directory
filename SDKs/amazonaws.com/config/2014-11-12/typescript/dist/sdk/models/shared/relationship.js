@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Relationship = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // Relationship
 /**
  * The relationship of the related resource to the main resource.
@@ -34,21 +37,21 @@ var Relationship = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipName" }),
         __metadata("design:type", String)
     ], Relationship.prototype, "relationshipName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], Relationship.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], Relationship.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Relationship.prototype, "resourceType", void 0);
     return Relationship;
-}(SpeakeasyBase));
-export { Relationship };
+}(utils_1.SpeakeasyBase));
+exports.Relationship = Relationship;

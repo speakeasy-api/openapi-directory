@@ -47,8 +47,8 @@ export class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
   statusCode: number;
 
   @SpeakeasyMetadata()
-  commitstatus?: Map<string, any>;
+  commitstatus?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

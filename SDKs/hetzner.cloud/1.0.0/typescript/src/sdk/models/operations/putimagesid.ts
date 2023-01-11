@@ -17,7 +17,7 @@ export class PutImagesIdUpdateImageRequest extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: PutImagesIdUpdateImageRequestTypeEnum;
@@ -101,7 +101,7 @@ export class PutImagesId200ApplicationJsonImage extends SpeakeasyBase {
   imageSize: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -146,8 +146,8 @@ export class PutImagesIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putImagesId200ApplicationJsonObject?: PutImagesId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putImagesId200ApplicationJSONObject?: PutImagesId200ApplicationJson;
 }

@@ -41,5 +41,5 @@ export class WellsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  wellsList200ApplicationJsonObject?: WellsList200ApplicationJson;
+  wellsList200ApplicationJSONObject?: WellsList200ApplicationJson;
 }

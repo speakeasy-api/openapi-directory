@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailureDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 // FailureDetail
 /**
  * Details for an outcome with a FAILURE outcome summary.
@@ -33,33 +36,33 @@ var FailureDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crashed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crashed" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "crashed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceOutOfMemory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceOutOfMemory" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "deviceOutOfMemory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedRoboscript" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedRoboscript" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "failedRoboscript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notInstalled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notInstalled" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "notInstalled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=otherNativeCrash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otherNativeCrash" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "otherNativeCrash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timedOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timedOut" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "timedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unableToCrawl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unableToCrawl" }),
         __metadata("design:type", Boolean)
     ], FailureDetail.prototype, "unableToCrawl", void 0);
     return FailureDetail;
-}(SpeakeasyBase));
-export { FailureDetail };
+}(utils_1.SpeakeasyBase));
+exports.FailureDetail = FailureDetail;

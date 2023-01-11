@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
+import { SubnetList } from "./subnetlist";
 
 
 
@@ -13,8 +13,8 @@ export class DbSubnetGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   subnetGroupStatus?: string;
 
-  @SpeakeasyMetadata({ elemType: Subnet })
-  subnets?: Subnet[];
+  @SpeakeasyMetadata({ elemType: SubnetList })
+  subnets?: SubnetList[];
 
   @SpeakeasyMetadata()
   vpcId?: string;

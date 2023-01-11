@@ -33,7 +33,7 @@ export class Project extends SpeakeasyBase {
   aws?: Aws;
 
   @SpeakeasyMetadata({ data: "json, name=branches" })
-  branches?: Map<string, any>;
+  branches?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=campfire_notify_prefs" })
   campfireNotifyPrefs?: string;

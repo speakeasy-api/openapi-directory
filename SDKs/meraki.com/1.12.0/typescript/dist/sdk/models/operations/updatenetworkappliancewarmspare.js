@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceWarmSpareResponse = exports.UpdateNetworkApplianceWarmSpareRequest = exports.UpdateNetworkApplianceWarmSpareRequestBody = exports.UpdateNetworkApplianceWarmSparePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceWarmSparePathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceWarmSparePathParams, _super);
     function UpdateNetworkApplianceWarmSparePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSparePathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceWarmSparePathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceWarmSparePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceWarmSparePathParams = UpdateNetworkApplianceWarmSparePathParams;
 var UpdateNetworkApplianceWarmSpareRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceWarmSpareRequestBody, _super);
     function UpdateNetworkApplianceWarmSpareRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceWarmSpareRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spareSerial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spareSerial" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSpareRequestBody.prototype, "spareSerial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uplinkMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uplinkMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSpareRequestBody.prototype, "uplinkMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualIp1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualIp1" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSpareRequestBody.prototype, "virtualIp1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualIp2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualIp2" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSpareRequestBody.prototype, "virtualIp2", void 0);
     return UpdateNetworkApplianceWarmSpareRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceWarmSpareRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceWarmSpareRequestBody = UpdateNetworkApplianceWarmSpareRequestBody;
 var UpdateNetworkApplianceWarmSpareRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceWarmSpareRequest, _super);
     function UpdateNetworkApplianceWarmSpareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceWarmSparePathParams)
     ], UpdateNetworkApplianceWarmSpareRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceWarmSpareRequestBody)
     ], UpdateNetworkApplianceWarmSpareRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceWarmSpareRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceWarmSpareRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceWarmSpareRequest = UpdateNetworkApplianceWarmSpareRequest;
 var UpdateNetworkApplianceWarmSpareResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceWarmSpareResponse, _super);
     function UpdateNetworkApplianceWarmSpareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceWarmSpareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceWarmSpareResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceWarmSpareResponse.prototype, "updateNetworkApplianceWarmSpare200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceWarmSpareResponse.prototype, "updateNetworkApplianceWarmSpare200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceWarmSpareResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceWarmSpareResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceWarmSpareResponse = UpdateNetworkApplianceWarmSpareResponse;

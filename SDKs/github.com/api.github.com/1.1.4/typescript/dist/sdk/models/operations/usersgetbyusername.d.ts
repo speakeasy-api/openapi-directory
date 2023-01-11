@@ -10,5 +10,5 @@ export declare class UsersGetByUsernameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    usersGetByUsername200ApplicationJsonOneOf?: any;
+    usersGetByUsername200ApplicationJSONOneOf?: any;
 }

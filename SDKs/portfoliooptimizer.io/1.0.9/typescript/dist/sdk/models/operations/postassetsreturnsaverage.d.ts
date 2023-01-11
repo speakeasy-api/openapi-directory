@@ -16,6 +16,6 @@ export declare class PostAssetsReturnsAverageRequest extends SpeakeasyBase {
 }
 export declare class PostAssetsReturnsAverageResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsReturnsAverage200ApplicationJsonObject?: PostAssetsReturnsAverage200ApplicationJson;
     statusCode: number;
+    postAssetsReturnsAverage200ApplicationJSONObject?: PostAssetsReturnsAverage200ApplicationJson;
 }

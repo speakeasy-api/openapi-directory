@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomDeliveryConfiguration } from "./customdeliveryconfiguration";
-import { MessageConfiguration } from "./messageconfiguration";
-import { Schedule } from "./schedule";
-import { TemplateConfiguration } from "./templateconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WriteTreatmentResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var customdeliveryconfiguration_1 = require("./customdeliveryconfiguration");
+var messageconfiguration_1 = require("./messageconfiguration");
+var schedule_1 = require("./schedule");
+var templateconfiguration_1 = require("./templateconfiguration");
 // WriteTreatmentResource
 /**
  * Specifies the settings for a campaign treatment. A <i>treatment</i> is a variation of a campaign that's used for A/B testing of a campaign.
@@ -37,33 +40,33 @@ var WriteTreatmentResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomDeliveryConfiguration" }),
-        __metadata("design:type", CustomDeliveryConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomDeliveryConfiguration" }),
+        __metadata("design:type", customdeliveryconfiguration_1.CustomDeliveryConfiguration)
     ], WriteTreatmentResource.prototype, "customDeliveryConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageConfiguration" }),
-        __metadata("design:type", MessageConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageConfiguration" }),
+        __metadata("design:type", messageconfiguration_1.MessageConfiguration)
     ], WriteTreatmentResource.prototype, "messageConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
-        __metadata("design:type", Schedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
+        __metadata("design:type", schedule_1.Schedule)
     ], WriteTreatmentResource.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SizePercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SizePercent" }),
         __metadata("design:type", Number)
     ], WriteTreatmentResource.prototype, "sizePercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateConfiguration" }),
-        __metadata("design:type", TemplateConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateConfiguration" }),
+        __metadata("design:type", templateconfiguration_1.TemplateConfiguration)
     ], WriteTreatmentResource.prototype, "templateConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TreatmentDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TreatmentDescription" }),
         __metadata("design:type", String)
     ], WriteTreatmentResource.prototype, "treatmentDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TreatmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TreatmentName" }),
         __metadata("design:type", String)
     ], WriteTreatmentResource.prototype, "treatmentName", void 0);
     return WriteTreatmentResource;
-}(SpeakeasyBase));
-export { WriteTreatmentResource };
+}(utils_1.SpeakeasyBase));
+exports.WriteTreatmentResource = WriteTreatmentResource;

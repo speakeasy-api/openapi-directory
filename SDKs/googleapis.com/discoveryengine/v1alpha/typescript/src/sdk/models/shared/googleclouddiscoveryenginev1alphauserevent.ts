@@ -17,7 +17,7 @@ import { GoogleCloudDiscoveryengineV1alphaUserInfo } from "./googleclouddiscover
 **/
 export class GoogleCloudDiscoveryengineV1alphaUserEvent extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes", elemType: GoogleCloudDiscoveryengineV1alphaCustomAttribute })
-  attributes?: Map<string, GoogleCloudDiscoveryengineV1alphaCustomAttribute>;
+  attributes?: Record<string, GoogleCloudDiscoveryengineV1alphaCustomAttribute>;
 
   @SpeakeasyMetadata({ data: "json, name=attributionToken" })
   attributionToken?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Move } from "./move";
-import { PermissionChange } from "./permissionchange";
-import { Rename } from "./rename";
-import { Target } from "./target";
-import { User } from "./user";
-export var EventAdditionalEventTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = exports.EventPrimaryEventTypeEnum = exports.EventAdditionalEventTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var move_1 = require("./move");
+var permissionchange_1 = require("./permissionchange");
+var rename_1 = require("./rename");
+var target_1 = require("./target");
+var user_1 = require("./user");
+var EventAdditionalEventTypesEnum;
 (function (EventAdditionalEventTypesEnum) {
     EventAdditionalEventTypesEnum["Comment"] = "comment";
     EventAdditionalEventTypesEnum["Create"] = "create";
@@ -41,8 +44,8 @@ export var EventAdditionalEventTypesEnum;
     EventAdditionalEventTypesEnum["Unknown"] = "unknown";
     EventAdditionalEventTypesEnum["Untrash"] = "untrash";
     EventAdditionalEventTypesEnum["Upload"] = "upload";
-})(EventAdditionalEventTypesEnum || (EventAdditionalEventTypesEnum = {}));
-export var EventPrimaryEventTypeEnum;
+})(EventAdditionalEventTypesEnum = exports.EventAdditionalEventTypesEnum || (exports.EventAdditionalEventTypesEnum = {}));
+var EventPrimaryEventTypeEnum;
 (function (EventPrimaryEventTypeEnum) {
     EventPrimaryEventTypeEnum["Comment"] = "comment";
     EventPrimaryEventTypeEnum["Create"] = "create";
@@ -55,7 +58,7 @@ export var EventPrimaryEventTypeEnum;
     EventPrimaryEventTypeEnum["Unknown"] = "unknown";
     EventPrimaryEventTypeEnum["Untrash"] = "untrash";
     EventPrimaryEventTypeEnum["Upload"] = "upload";
-})(EventPrimaryEventTypeEnum || (EventPrimaryEventTypeEnum = {}));
+})(EventPrimaryEventTypeEnum = exports.EventPrimaryEventTypeEnum || (exports.EventPrimaryEventTypeEnum = {}));
 // Event
 /**
  * Represents the changes associated with an action taken by a user.
@@ -66,41 +69,41 @@ var Event = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalEventTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalEventTypes" }),
         __metadata("design:type", Array)
     ], Event.prototype, "additionalEventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventTimeMillis" }),
         __metadata("design:type", String)
     ], Event.prototype, "eventTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromUserDeletion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromUserDeletion" }),
         __metadata("design:type", Boolean)
     ], Event.prototype, "fromUserDeletion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=move" }),
-        __metadata("design:type", Move)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=move" }),
+        __metadata("design:type", move_1.Move)
     ], Event.prototype, "move", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionChanges", elemType: PermissionChange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionChanges", elemType: permissionchange_1.PermissionChange }),
         __metadata("design:type", Array)
     ], Event.prototype, "permissionChanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryEventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryEventType" }),
         __metadata("design:type", String)
     ], Event.prototype, "primaryEventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rename" }),
-        __metadata("design:type", Rename)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rename" }),
+        __metadata("design:type", rename_1.Rename)
     ], Event.prototype, "rename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
-        __metadata("design:type", Target)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
+        __metadata("design:type", target_1.Target)
     ], Event.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], Event.prototype, "user", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

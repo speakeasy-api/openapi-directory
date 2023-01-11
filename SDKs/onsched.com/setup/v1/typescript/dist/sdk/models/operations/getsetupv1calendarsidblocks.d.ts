@@ -11,7 +11,7 @@ export declare class GetSetupV1CalendarsIdBlocksRequest extends SpeakeasyBase {
     queryParams: GetSetupV1CalendarsIdBlocksQueryParams;
 }
 export declare class GetSetupV1CalendarsIdBlocksResponse extends SpeakeasyBase {
-    calendarBlockListViewModel?: Map<string, any>;
+    calendarBlockListViewModel?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

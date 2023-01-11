@@ -19,7 +19,7 @@ export declare class DeleteWorkGroupRequest extends SpeakeasyBase {
 }
 export declare class DeleteWorkGroupResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWorkGroupOutput?: Map<string, any>;
+    deleteWorkGroupOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

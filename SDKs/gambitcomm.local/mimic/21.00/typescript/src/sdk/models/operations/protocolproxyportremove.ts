@@ -25,5 +25,5 @@ export class ProtocolProxyPortRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolProxyPortRemove200ApplicationJsonString?: string;
+  protocolProxyPortRemove200ApplicationJSONString?: string;
 }

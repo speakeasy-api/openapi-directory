@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactMethod } from "./contactmethod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContactMethodsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactmethod_1 = require("./contactmethod");
 var GetContactMethodsResult = /** @class */ (function (_super) {
     __extends(GetContactMethodsResult, _super);
     function GetContactMethodsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactMethods", elemType: ContactMethod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactMethods", elemType: contactmethod_1.ContactMethod }),
         __metadata("design:type", Array)
     ], GetContactMethodsResult.prototype, "contactMethods", void 0);
     return GetContactMethodsResult;
-}(SpeakeasyBase));
-export { GetContactMethodsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetContactMethodsResult = GetContactMethodsResult;

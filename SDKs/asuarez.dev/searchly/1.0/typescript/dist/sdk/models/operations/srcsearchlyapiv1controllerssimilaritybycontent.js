@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,62 +14,87 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SrcSearchlyApiV1ControllersSimilarityByContentResponse = exports.SrcSearchlyApiV1ControllersSimilarityByContentRequest = exports.SrcSearchlyApiV1ControllersSimilarityByContentRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SrcSearchlyApiV1ControllersSimilarityByContentRequestBody = /** @class */ (function (_super) {
     __extends(SrcSearchlyApiV1ControllersSimilarityByContentRequestBody, _super);
     function SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], SrcSearchlyApiV1ControllersSimilarityByContentRequestBody.prototype, "content", void 0);
     return SrcSearchlyApiV1ControllersSimilarityByContentRequestBody;
-}(SpeakeasyBase));
-export { SrcSearchlyApiV1ControllersSimilarityByContentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SrcSearchlyApiV1ControllersSimilarityByContentRequestBody = SrcSearchlyApiV1ControllersSimilarityByContentRequestBody;
 var SrcSearchlyApiV1ControllersSimilarityByContentRequest = /** @class */ (function (_super) {
     __extends(SrcSearchlyApiV1ControllersSimilarityByContentRequest, _super);
     function SrcSearchlyApiV1ControllersSimilarityByContentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SrcSearchlyApiV1ControllersSimilarityByContentRequestBody)
     ], SrcSearchlyApiV1ControllersSimilarityByContentRequest.prototype, "request", void 0);
     return SrcSearchlyApiV1ControllersSimilarityByContentRequest;
-}(SpeakeasyBase));
-export { SrcSearchlyApiV1ControllersSimilarityByContentRequest };
+}(utils_1.SpeakeasyBase));
+exports.SrcSearchlyApiV1ControllersSimilarityByContentRequest = SrcSearchlyApiV1ControllersSimilarityByContentRequest;
 var SrcSearchlyApiV1ControllersSimilarityByContentResponse = /** @class */ (function (_super) {
     __extends(SrcSearchlyApiV1ControllersSimilarityByContentResponse, _super);
     function SrcSearchlyApiV1ControllersSimilarityByContentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ApiResponseSimilarity)
     ], SrcSearchlyApiV1ControllersSimilarityByContentResponse.prototype, "apiResponseSimilarity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SrcSearchlyApiV1ControllersSimilarityByContentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SrcSearchlyApiV1ControllersSimilarityByContentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SrcSearchlyApiV1ControllersSimilarityByContentResponse.prototype, "srcSearchlyApiV1ControllersSimilarityByContentDefaultApplicationTextString", void 0);
     return SrcSearchlyApiV1ControllersSimilarityByContentResponse;
-}(SpeakeasyBase));
-export { SrcSearchlyApiV1ControllersSimilarityByContentResponse };
+}(utils_1.SpeakeasyBase));
+exports.SrcSearchlyApiV1ControllersSimilarityByContentResponse = SrcSearchlyApiV1ControllersSimilarityByContentResponse;

@@ -9,7 +9,7 @@ import { PortForwardingConfig } from "./portforwardingconfig";
 **/
 export class LaunchConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=environmentVariables" })
-  environmentVariables?: Map<string, string>;
+  environmentVariables?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=launchFile" })
   launchFile: string;
@@ -21,5 +21,5 @@ export class LaunchConfig extends SpeakeasyBase {
   portForwardingConfig?: PortForwardingConfig;
 
   @SpeakeasyMetadata({ data: "json, name=streamUI" })
-  streamUi?: boolean;
+  streamUI?: boolean;
 }

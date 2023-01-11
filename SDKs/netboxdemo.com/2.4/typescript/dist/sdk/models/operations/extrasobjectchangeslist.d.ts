@@ -24,5 +24,5 @@ export declare class ExtrasObjectChangesListRequest extends SpeakeasyBase {
 export declare class ExtrasObjectChangesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasObjectChangesList200ApplicationJsonObject?: ExtrasObjectChangesList200ApplicationJson;
+    extrasObjectChangesList200ApplicationJSONObject?: ExtrasObjectChangesList200ApplicationJson;
 }

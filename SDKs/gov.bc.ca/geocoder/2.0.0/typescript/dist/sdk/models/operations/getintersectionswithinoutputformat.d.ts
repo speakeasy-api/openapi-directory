@@ -16,7 +16,7 @@ export declare class GetIntersectionsWithinOutputFormatQueryParams extends Speak
     maxDegree?: number;
     maxResults?: number;
     minDegree?: number;
-    outputSrs?: number;
+    outputSRS?: number;
 }
 export declare class GetIntersectionsWithinOutputFormatRequest extends SpeakeasyBase {
     pathParams: GetIntersectionsWithinOutputFormatPathParams;

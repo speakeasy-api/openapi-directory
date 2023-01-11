@@ -37,5 +37,5 @@ export declare class GamesListRequest extends SpeakeasyBase {
 export declare class GamesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gamesList200ApplicationJsonObject?: GamesList200ApplicationJson;
+    gamesList200ApplicationJSONObject?: GamesList200ApplicationJson;
 }

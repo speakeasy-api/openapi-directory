@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.As2KeyEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // As2KeyEntity
 /**
  * List As2 Keys
@@ -33,21 +36,21 @@ var As2KeyEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=as2_partnership_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=as2_partnership_name" }),
         __metadata("design:type", String)
     ], As2KeyEntity.prototype, "as2PartnershipName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], As2KeyEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], As2KeyEntity.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], As2KeyEntity.prototype, "id", void 0);
     return As2KeyEntity;
-}(SpeakeasyBase));
-export { As2KeyEntity };
+}(utils_1.SpeakeasyBase));
+exports.As2KeyEntity = As2KeyEntity;

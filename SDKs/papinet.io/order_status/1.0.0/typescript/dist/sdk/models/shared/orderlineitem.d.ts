@@ -61,7 +61,7 @@ export declare enum OrderLineItemQuantitiesQuantityUomEnum {
 export declare class OrderLineItemQuantities extends SpeakeasyBase {
     quantityContext?: OrderLineItemQuantitiesQuantityContextEnum;
     quantityType?: OrderLineItemQuantitiesQuantityTypeEnum;
-    quantityUom?: OrderLineItemQuantitiesQuantityUomEnum;
+    quantityUOM?: OrderLineItemQuantitiesQuantityUomEnum;
     quantityValue?: number;
 }
 export declare class OrderLineItem extends SpeakeasyBase {

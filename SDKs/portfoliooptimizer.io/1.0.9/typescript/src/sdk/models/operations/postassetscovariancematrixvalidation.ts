@@ -35,8 +35,8 @@ export class PostAssetsCovarianceMatrixValidationResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCovarianceMatrixValidation200ApplicationJsonObject?: PostAssetsCovarianceMatrixValidation200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCovarianceMatrixValidation200ApplicationJSONObject?: PostAssetsCovarianceMatrixValidation200ApplicationJson;
 }

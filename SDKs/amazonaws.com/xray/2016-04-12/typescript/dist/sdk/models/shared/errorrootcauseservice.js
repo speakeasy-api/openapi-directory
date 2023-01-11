@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorRootCauseEntity } from "./errorrootcauseentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorRootCauseService = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorrootcauseentity_1 = require("./errorrootcauseentity");
 // ErrorRootCauseService
 /**
  * A collection of fields identifying the services in a trace summary error.
@@ -34,29 +37,29 @@ var ErrorRootCauseService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], ErrorRootCauseService.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityPath", elemType: ErrorRootCauseEntity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityPath", elemType: errorrootcauseentity_1.ErrorRootCauseEntity }),
         __metadata("design:type", Array)
     ], ErrorRootCauseService.prototype, "entityPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inferred" }),
         __metadata("design:type", Boolean)
     ], ErrorRootCauseService.prototype, "inferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ErrorRootCauseService.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Names" }),
         __metadata("design:type", Array)
     ], ErrorRootCauseService.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ErrorRootCauseService.prototype, "type", void 0);
     return ErrorRootCauseService;
-}(SpeakeasyBase));
-export { ErrorRootCauseService };
+}(utils_1.SpeakeasyBase));
+exports.ErrorRootCauseService = ErrorRootCauseService;

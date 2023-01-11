@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PhaseContext } from "./phasecontext";
-import { StatusTypeEnum } from "./statustypeenum";
-import { BuildPhaseTypeEnum } from "./buildphasetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildPhase = void 0;
+var utils_1 = require("../../../internal/utils");
+var phasecontext_1 = require("./phasecontext");
+var statustypeenum_1 = require("./statustypeenum");
+var buildphasetypeenum_1 = require("./buildphasetypeenum");
 // BuildPhase
 /**
  * Information about a stage for a build.
@@ -36,29 +39,29 @@ var BuildPhase = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts", elemType: PhaseContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts", elemType: phasecontext_1.PhaseContext }),
         __metadata("design:type", Array)
     ], BuildPhase.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInSeconds" }),
         __metadata("design:type", Number)
     ], BuildPhase.prototype, "durationInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], BuildPhase.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phaseStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phaseStatus" }),
         __metadata("design:type", String)
     ], BuildPhase.prototype, "phaseStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phaseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phaseType" }),
         __metadata("design:type", String)
     ], BuildPhase.prototype, "phaseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], BuildPhase.prototype, "startTime", void 0);
     return BuildPhase;
-}(SpeakeasyBase));
-export { BuildPhase };
+}(utils_1.SpeakeasyBase));
+exports.BuildPhase = BuildPhase;

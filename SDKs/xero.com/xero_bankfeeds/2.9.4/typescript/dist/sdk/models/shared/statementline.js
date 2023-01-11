@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreditDebitIndicatorEnum } from "./creditdebitindicatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatementLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var creditdebitindicatorenum_1 = require("./creditdebitindicatorenum");
 // StatementLine
 /**
  * the lines details for a statement
@@ -34,37 +37,37 @@ var StatementLine = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], StatementLine.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chequeNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chequeNumber" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "chequeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditDebitIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditDebitIndicator" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "creditDebitIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeName" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "payeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postedDate" }),
         __metadata("design:type", Date)
     ], StatementLine.prototype, "postedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reference" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "reference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], StatementLine.prototype, "transactionId", void 0);
     return StatementLine;
-}(SpeakeasyBase));
-export { StatementLine };
+}(utils_1.SpeakeasyBase));
+exports.StatementLine = StatementLine;

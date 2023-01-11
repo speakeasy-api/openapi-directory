@@ -9,15 +9,15 @@ export declare class GetConsentAuthorisationHeaders extends SpeakeasyBase {
     psuAcceptCharset?: string;
     psuAcceptEncoding?: string;
     psuAcceptLanguage?: string;
-    psuDeviceId?: string;
+    psuDeviceID?: string;
     psuGeoLocation?: string;
     psuHttpMethod?: shared.PsuHttpMethodEnum;
-    psuIpAddress?: string;
-    psuIpPort?: string;
+    psuIPAddress?: string;
+    psuIPPort?: string;
     psuUserAgent?: string;
     signature?: string;
     tppSignatureCertificate?: string;
-    xRequestId: string;
+    xRequestID: string;
 }
 export declare class GetConsentAuthorisationSecurity extends SpeakeasyBase {
     bearerAuthOAuth?: shared.SchemeBearerAuthOAuth;
@@ -29,23 +29,23 @@ export declare class GetConsentAuthorisationRequest extends SpeakeasyBase {
 }
 export declare class GetConsentAuthorisationResponse extends SpeakeasyBase {
     contentType: string;
-    error400Ais?: shared.Error400Ais;
-    error400NgAis?: shared.Error400NgAis;
-    error401Ais?: shared.Error401Ais;
-    error401NgAis?: shared.Error401NgAis;
-    error403Ais?: shared.Error403Ais;
-    error403NgAis?: shared.Error403NgAis;
-    error404Ais?: shared.Error404Ais;
-    error404NgAis?: shared.Error404NgAis;
-    error405Ais?: shared.Error405Ais;
-    error405NgAis?: shared.Error405NgAis;
-    error406Ais?: shared.Error406Ais;
-    error406NgAis?: shared.Error406NgAis;
-    error409Ais?: shared.Error409Ais;
-    error409NgAis?: shared.Error409NgAis;
-    error429Ais?: shared.Error429Ais;
-    error429NgAis?: shared.Error429NgAis;
-    headers: Map<string, string[]>;
+    error400AIS?: shared.Error400Ais;
+    error400NGAIS?: shared.Error400NgAis;
+    error401AIS?: shared.Error401Ais;
+    error401NGAIS?: shared.Error401NgAis;
+    error403AIS?: shared.Error403Ais;
+    error403NGAIS?: shared.Error403NgAis;
+    error404AIS?: shared.Error404Ais;
+    error404NGAIS?: shared.Error404NgAis;
+    error405AIS?: shared.Error405Ais;
+    error405NGAIS?: shared.Error405NgAis;
+    error406AIS?: shared.Error406Ais;
+    error406NGAIS?: shared.Error406NgAis;
+    error409AIS?: shared.Error409Ais;
+    error409NGAIS?: shared.Error409NgAis;
+    error429AIS?: shared.Error429Ais;
+    error429NGAIS?: shared.Error429NgAis;
+    headers: Record<string, string[]>;
     statusCode: number;
     authorisations?: shared.Authorisations;
 }

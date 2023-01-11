@@ -9,5 +9,5 @@ export declare class GetNetworkApplianceTrafficShapingCustomPerformanceClassRequ
 export declare class GetNetworkApplianceTrafficShapingCustomPerformanceClassResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceTrafficShapingCustomPerformanceClass200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceTrafficShapingCustomPerformanceClass200ApplicationJSONObject?: Record<string, any>;
 }

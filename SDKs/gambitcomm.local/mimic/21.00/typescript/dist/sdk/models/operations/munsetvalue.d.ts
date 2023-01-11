@@ -9,5 +9,5 @@ export declare class MunsetValueRequest extends SpeakeasyBase {
 export declare class MunsetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    munsetValue200ApplicationJsonString?: string;
+    munsetValue200ApplicationJSONString?: string;
 }

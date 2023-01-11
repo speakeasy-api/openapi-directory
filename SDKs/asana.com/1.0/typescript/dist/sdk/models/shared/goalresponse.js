@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,90 +23,100 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompact } from "./usercompact";
-import { Like } from "./like";
-export var GoalResponseMetricResourceSubtypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalResponse = exports.GoalResponseWorkspace = exports.GoalResponseTimePeriod = exports.GoalResponseTimePeriodPeriodEnum = exports.GoalResponseTeam = exports.GoalResponseOwner = exports.GoalResponseMetric = exports.GoalResponseMetricUnitEnum = exports.GoalResponseMetricResourceSubtypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+var like_1 = require("./like");
+var GoalResponseMetricResourceSubtypeEnum;
 (function (GoalResponseMetricResourceSubtypeEnum) {
     GoalResponseMetricResourceSubtypeEnum["Number"] = "number";
-})(GoalResponseMetricResourceSubtypeEnum || (GoalResponseMetricResourceSubtypeEnum = {}));
-export var GoalResponseMetricUnitEnum;
+})(GoalResponseMetricResourceSubtypeEnum = exports.GoalResponseMetricResourceSubtypeEnum || (exports.GoalResponseMetricResourceSubtypeEnum = {}));
+var GoalResponseMetricUnitEnum;
 (function (GoalResponseMetricUnitEnum) {
     GoalResponseMetricUnitEnum["None"] = "none";
     GoalResponseMetricUnitEnum["Currency"] = "currency";
     GoalResponseMetricUnitEnum["Percentage"] = "percentage";
-})(GoalResponseMetricUnitEnum || (GoalResponseMetricUnitEnum = {}));
+})(GoalResponseMetricUnitEnum = exports.GoalResponseMetricUnitEnum || (exports.GoalResponseMetricUnitEnum = {}));
+// GoalResponseMetric
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var GoalResponseMetric = /** @class */ (function (_super) {
     __extends(GoalResponseMetric, _super);
     function GoalResponseMetric() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_code" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_display_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_display_value" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "currentDisplayValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_number_value" }),
         __metadata("design:type", Number)
     ], GoalResponseMetric.prototype, "currentNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initial_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initial_number_value" }),
         __metadata("design:type", Number)
     ], GoalResponseMetric.prototype, "initialNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precision" }),
         __metadata("design:type", Number)
     ], GoalResponseMetric.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_number_value" }),
         __metadata("design:type", Number)
     ], GoalResponseMetric.prototype, "targetNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], GoalResponseMetric.prototype, "unit", void 0);
     return GoalResponseMetric;
-}(SpeakeasyBase));
-export { GoalResponseMetric };
+}(utils_1.SpeakeasyBase));
+exports.GoalResponseMetric = GoalResponseMetric;
+// GoalResponseOwner
+/**
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 var GoalResponseOwner = /** @class */ (function (_super) {
     __extends(GoalResponseOwner, _super);
     function GoalResponseOwner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponseOwner.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalResponseOwner.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponseOwner.prototype, "resourceType", void 0);
     return GoalResponseOwner;
-}(SpeakeasyBase));
-export { GoalResponseOwner };
+}(utils_1.SpeakeasyBase));
+exports.GoalResponseOwner = GoalResponseOwner;
 // GoalResponseTeam
 /**
- * *Conditional*. This property is only present when the `workspace` provided is an organization.
+ * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 **/
 var GoalResponseTeam = /** @class */ (function (_super) {
     __extends(GoalResponseTeam, _super);
@@ -113,21 +124,21 @@ var GoalResponseTeam = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponseTeam.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalResponseTeam.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponseTeam.prototype, "resourceType", void 0);
     return GoalResponseTeam;
-}(SpeakeasyBase));
-export { GoalResponseTeam };
-export var GoalResponseTimePeriodPeriodEnum;
+}(utils_1.SpeakeasyBase));
+exports.GoalResponseTeam = GoalResponseTeam;
+var GoalResponseTimePeriodPeriodEnum;
 (function (GoalResponseTimePeriodPeriodEnum) {
     GoalResponseTimePeriodPeriodEnum["Fy"] = "FY";
     GoalResponseTimePeriodPeriodEnum["H1"] = "H1";
@@ -136,132 +147,144 @@ export var GoalResponseTimePeriodPeriodEnum;
     GoalResponseTimePeriodPeriodEnum["Q2"] = "Q2";
     GoalResponseTimePeriodPeriodEnum["Q3"] = "Q3";
     GoalResponseTimePeriodPeriodEnum["Q4"] = "Q4";
-})(GoalResponseTimePeriodPeriodEnum || (GoalResponseTimePeriodPeriodEnum = {}));
+})(GoalResponseTimePeriodPeriodEnum = exports.GoalResponseTimePeriodPeriodEnum || (exports.GoalResponseTimePeriodPeriodEnum = {}));
+// GoalResponseTimePeriod
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var GoalResponseTimePeriod = /** @class */ (function (_super) {
     __extends(GoalResponseTimePeriod, _super);
     function GoalResponseTimePeriod() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_on" }),
         __metadata("design:type", String)
     ], GoalResponseTimePeriod.prototype, "endOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponseTimePeriod.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], GoalResponseTimePeriod.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponseTimePeriod.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_on" }),
         __metadata("design:type", String)
     ], GoalResponseTimePeriod.prototype, "startOn", void 0);
     return GoalResponseTimePeriod;
-}(SpeakeasyBase));
-export { GoalResponseTimePeriod };
+}(utils_1.SpeakeasyBase));
+exports.GoalResponseTimePeriod = GoalResponseTimePeriod;
+// GoalResponseWorkspace
+/**
+ * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
+**/
 var GoalResponseWorkspace = /** @class */ (function (_super) {
     __extends(GoalResponseWorkspace, _super);
     function GoalResponseWorkspace() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponseWorkspace.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalResponseWorkspace.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponseWorkspace.prototype, "resourceType", void 0);
     return GoalResponseWorkspace;
-}(SpeakeasyBase));
-export { GoalResponseWorkspace };
+}(utils_1.SpeakeasyBase));
+exports.GoalResponseWorkspace = GoalResponseWorkspace;
+// GoalResponse
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var GoalResponse = /** @class */ (function (_super) {
     __extends(GoalResponse, _super);
     function GoalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=due_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=due_on" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "dueOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers", elemType: UserCompact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers", elemType: usercompact_1.UserCompact }),
         __metadata("design:type", Array)
     ], GoalResponse.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_notes" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "htmlNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_workspace_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_workspace_level" }),
         __metadata("design:type", Boolean)
     ], GoalResponse.prototype, "isWorkspaceLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liked" }),
         __metadata("design:type", Boolean)
     ], GoalResponse.prototype, "liked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likes", elemType: Like }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likes", elemType: like_1.Like }),
         __metadata("design:type", Array)
     ], GoalResponse.prototype, "likes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", GoalResponseMetric)
     ], GoalResponse.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_likes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_likes" }),
         __metadata("design:type", Number)
     ], GoalResponse.prototype, "numLikes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", GoalResponseOwner)
     ], GoalResponse.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_on" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "startOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GoalResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", GoalResponseTeam)
     ], GoalResponse.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_period" }),
         __metadata("design:type", GoalResponseTimePeriod)
     ], GoalResponse.prototype, "timePeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", GoalResponseWorkspace)
     ], GoalResponse.prototype, "workspace", void 0);
     return GoalResponse;
-}(SpeakeasyBase));
-export { GoalResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoalResponse = GoalResponse;

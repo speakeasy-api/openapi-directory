@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddGoogleAnalyticsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var AddGoogleAnalyticsRequest = /** @class */ (function (_super) {
     __extends(AddGoogleAnalyticsRequest, _super);
     function AddGoogleAnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyticsAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyticsAccountId" }),
         __metadata("design:type", String)
     ], AddGoogleAnalyticsRequest.prototype, "analyticsAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyticsPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyticsPropertyId" }),
         __metadata("design:type", String)
     ], AddGoogleAnalyticsRequest.prototype, "analyticsPropertyId", void 0);
     return AddGoogleAnalyticsRequest;
-}(SpeakeasyBase));
-export { AddGoogleAnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddGoogleAnalyticsRequest = AddGoogleAnalyticsRequest;

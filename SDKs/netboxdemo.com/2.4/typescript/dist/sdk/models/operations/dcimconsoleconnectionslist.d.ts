@@ -20,5 +20,5 @@ export declare class DcimConsoleConnectionsListRequest extends SpeakeasyBase {
 export declare class DcimConsoleConnectionsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimConsoleConnectionsList200ApplicationJsonObject?: DcimConsoleConnectionsList200ApplicationJson;
+    dcimConsoleConnectionsList200ApplicationJSONObject?: DcimConsoleConnectionsList200ApplicationJson;
 }

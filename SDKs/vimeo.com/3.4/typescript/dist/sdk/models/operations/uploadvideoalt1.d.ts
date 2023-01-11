@@ -165,6 +165,6 @@ export declare class UploadVideoAlt1Request extends SpeakeasyBase {
 export declare class UploadVideoAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     video?: shared.Video;
 }

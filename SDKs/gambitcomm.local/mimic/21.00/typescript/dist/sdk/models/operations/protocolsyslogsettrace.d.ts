@@ -9,5 +9,5 @@ export declare class ProtocolSyslogSetTraceRequest extends SpeakeasyBase {
 export declare class ProtocolSyslogSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSyslogSetTrace200ApplicationJsonString?: string;
+    protocolSyslogSetTrace200ApplicationJSONString?: string;
 }

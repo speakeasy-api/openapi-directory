@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceTagNotificationAttribute } from "./instancetagnotificationattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterInstanceEventNotificationAttributesResult = exports.RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute = void 0;
+var utils_1 = require("../../../internal/utils");
+// RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute
+/**
+ * The resulting set of tag keys.
+**/
+var RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute = /** @class */ (function (_super) {
+    __extends(RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute, _super);
+    function RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute.prototype, "includeAllTagsOfInstance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute.prototype, "instanceTagKeys", void 0);
+    return RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute;
+}(utils_1.SpeakeasyBase));
+exports.RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute = RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute;
 var RegisterInstanceEventNotificationAttributesResult = /** @class */ (function (_super) {
     __extends(RegisterInstanceEventNotificationAttributesResult, _super);
     function RegisterInstanceEventNotificationAttributesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceTagNotificationAttribute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RegisterInstanceEventNotificationAttributesResultInstanceTagAttribute)
     ], RegisterInstanceEventNotificationAttributesResult.prototype, "instanceTagAttribute", void 0);
     return RegisterInstanceEventNotificationAttributesResult;
-}(SpeakeasyBase));
-export { RegisterInstanceEventNotificationAttributesResult };
+}(utils_1.SpeakeasyBase));
+exports.RegisterInstanceEventNotificationAttributesResult = RegisterInstanceEventNotificationAttributesResult;

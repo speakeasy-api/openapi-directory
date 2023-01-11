@@ -10,5 +10,5 @@ export class StopAllAgentsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopAllAgents200ApplicationJsonObject?: Map<string, number>;
+  stopAllAgents200ApplicationJSONObject?: Record<string, number>;
 }

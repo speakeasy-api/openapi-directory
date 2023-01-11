@@ -9,5 +9,5 @@ export class DescribeAssessmentTemplatesResponse extends SpeakeasyBase {
   assessmentTemplates: AssessmentTemplate[];
 
   @SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails })
-  failedItems: Map<string, FailedItemDetails>;
+  failedItems: Record<string, FailedItemDetails>;
 }

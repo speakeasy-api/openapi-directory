@@ -7,7 +7,7 @@ export declare class AdmMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;
     consolidationKey?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     expiresAfter?: string;
     iconReference?: string;
     imageIconUrl?: string;
@@ -17,7 +17,7 @@ export declare class AdmMessage extends SpeakeasyBase {
     silentPush?: boolean;
     smallImageIconUrl?: string;
     sound?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     title?: string;
     url?: string;
 }

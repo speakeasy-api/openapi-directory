@@ -12,7 +12,7 @@ export declare class IbanBasicRequest extends SpeakeasyBase {
 }
 export declare class IbanBasicResponse extends SpeakeasyBase {
     contentType: string;
-    ibanBasic200ApplicationJsonAny?: any;
-    ibanBasicDefaultApplicationJsonAny?: any;
+    ibanBasic200ApplicationJSONAny?: any;
+    ibanBasicDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

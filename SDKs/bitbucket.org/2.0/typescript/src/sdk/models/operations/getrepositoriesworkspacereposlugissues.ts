@@ -41,7 +41,7 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedIssues?: shared.PaginatedIssues;

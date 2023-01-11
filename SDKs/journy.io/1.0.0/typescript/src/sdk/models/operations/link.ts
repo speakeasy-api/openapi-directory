@@ -37,6 +37,10 @@ export class Link201ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link201ApplicationJson
+/** 
+ * The object was created
+**/
 export class Link201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -52,13 +56,13 @@ export class Link201ApplicationJson extends SpeakeasyBase {
 **/
 export class Link400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -68,7 +72,7 @@ export class Link400ApplicationJsonErrorsParameters extends SpeakeasyBase {
 **/
 export class Link400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: Link400ApplicationJsonErrorsParameters;
@@ -84,6 +88,10 @@ export class Link400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class Link400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: Link400ApplicationJsonErrors;
@@ -105,6 +113,10 @@ export class Link401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class Link401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -123,6 +135,10 @@ export class Link403ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link403ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class Link403ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -141,6 +157,10 @@ export class Link429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class Link429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -159,6 +179,10 @@ export class Link500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// Link500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class Link500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -179,26 +203,26 @@ export class LinkResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  link201ApplicationJsonObject?: Link201ApplicationJson;
+  link201ApplicationJSONObject?: Link201ApplicationJson;
 
   @SpeakeasyMetadata()
-  link400ApplicationJsonObject?: Link400ApplicationJson;
+  link400ApplicationJSONObject?: Link400ApplicationJson;
 
   @SpeakeasyMetadata()
-  link401ApplicationJsonObject?: Link401ApplicationJson;
+  link401ApplicationJSONObject?: Link401ApplicationJson;
 
   @SpeakeasyMetadata()
-  link403ApplicationJsonObject?: Link403ApplicationJson;
+  link403ApplicationJSONObject?: Link403ApplicationJson;
 
   @SpeakeasyMetadata()
-  link429ApplicationJsonObject?: Link429ApplicationJson;
+  link429ApplicationJSONObject?: Link429ApplicationJson;
 
   @SpeakeasyMetadata()
-  link500ApplicationJsonObject?: Link500ApplicationJson;
+  link500ApplicationJSONObject?: Link500ApplicationJson;
 }

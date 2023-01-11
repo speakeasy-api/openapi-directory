@@ -74,7 +74,7 @@ export class DlpProjectsLocationsJobTriggersHybridInspectResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  googlePrivacyDlpV2HybridInspectResponse?: Map<string, any>;
+  googlePrivacyDlpV2HybridInspectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthTokenUpdateStatusEnum } from "./authtokenupdatestatusenum";
-import { PendingAutomaticFailoverStatusEnum } from "./pendingautomaticfailoverstatusenum";
-import { PendingLogDeliveryConfiguration } from "./pendinglogdeliveryconfiguration";
-import { ReshardingStatus } from "./reshardingstatus";
-import { UserGroupsUpdateStatus } from "./usergroupsupdatestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationGroupPendingModifiedValues = void 0;
+var utils_1 = require("../../../internal/utils");
+var authtokenupdatestatusenum_1 = require("./authtokenupdatestatusenum");
+var pendingautomaticfailoverstatusenum_1 = require("./pendingautomaticfailoverstatusenum");
+var pendinglogdeliveryconfiguration_1 = require("./pendinglogdeliveryconfiguration");
+var reshardingstatus_1 = require("./reshardingstatus");
+var usergroupsupdatestatus_1 = require("./usergroupsupdatestatus");
 // ReplicationGroupPendingModifiedValues
 /**
  * The settings to be applied to the Redis replication group, either immediately or during the next maintenance window.
@@ -38,29 +41,29 @@ var ReplicationGroupPendingModifiedValues = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroupPendingModifiedValues.prototype, "authTokenStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroupPendingModifiedValues.prototype, "automaticFailoverStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PendingLogDeliveryConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pendinglogdeliveryconfiguration_1.PendingLogDeliveryConfiguration }),
         __metadata("design:type", Array)
     ], ReplicationGroupPendingModifiedValues.prototype, "logDeliveryConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroupPendingModifiedValues.prototype, "primaryClusterId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReshardingStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", reshardingstatus_1.ReshardingStatus)
     ], ReplicationGroupPendingModifiedValues.prototype, "resharding", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", UserGroupsUpdateStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", usergroupsupdatestatus_1.UserGroupsUpdateStatus)
     ], ReplicationGroupPendingModifiedValues.prototype, "userGroups", void 0);
     return ReplicationGroupPendingModifiedValues;
-}(SpeakeasyBase));
-export { ReplicationGroupPendingModifiedValues };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationGroupPendingModifiedValues = ReplicationGroupPendingModifiedValues;

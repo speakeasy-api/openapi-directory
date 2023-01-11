@@ -11,6 +11,6 @@ export declare class DeleteProjectUsernameProjectBuildCacheRequest extends Speak
 }
 export declare class DeleteProjectUsernameProjectBuildCacheResponse extends SpeakeasyBase {
     contentType: string;
-    deleteProjectUsernameProjectBuildCache200ApplicationJsonObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJson;
     statusCode: number;
+    deleteProjectUsernameProjectBuildCache200ApplicationJSONObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJson;
 }

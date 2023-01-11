@@ -101,8 +101,8 @@ export class PostServersIdActionsEnableRescueResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postServersIdActionsEnableRescue201ApplicationJsonObject?: PostServersIdActionsEnableRescue201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postServersIdActionsEnableRescue201ApplicationJSONObject?: PostServersIdActionsEnableRescue201ApplicationJson;
 }

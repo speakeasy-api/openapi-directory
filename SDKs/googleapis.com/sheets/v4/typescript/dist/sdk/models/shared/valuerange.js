@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ValueRangeMajorDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValueRange = exports.ValueRangeMajorDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ValueRangeMajorDimensionEnum;
 (function (ValueRangeMajorDimensionEnum) {
     ValueRangeMajorDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     ValueRangeMajorDimensionEnum["Rows"] = "ROWS";
     ValueRangeMajorDimensionEnum["Columns"] = "COLUMNS";
-})(ValueRangeMajorDimensionEnum || (ValueRangeMajorDimensionEnum = {}));
+})(ValueRangeMajorDimensionEnum = exports.ValueRangeMajorDimensionEnum || (exports.ValueRangeMajorDimensionEnum = {}));
 // ValueRange
 /**
  * Data within a range of the spreadsheet.
@@ -39,17 +42,17 @@ var ValueRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=majorDimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=majorDimension" }),
         __metadata("design:type", String)
     ], ValueRange.prototype, "majorDimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
         __metadata("design:type", String)
     ], ValueRange.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], ValueRange.prototype, "values", void 0);
     return ValueRange;
-}(SpeakeasyBase));
-export { ValueRange };
+}(utils_1.SpeakeasyBase));
+exports.ValueRange = ValueRange;

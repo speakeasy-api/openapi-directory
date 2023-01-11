@@ -1,62 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class CreateCustomImageRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=description" })
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=distribution" })
+  @SpeakeasyMetadata({ data: "json, name=distribution" })
   distribution?: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesDistributionEnum;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
 
-  @Metadata({ data: "json, name=url" })
+  @SpeakeasyMetadata({ data: "json, name=url" })
   url: string;
 }
 
 
-export class CreateCustomImageRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: CreateCustomImageRequestBody;
-}
-
-
 export class CreateCustomImage401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateCustomImageRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: CreateCustomImageRequestBody;
+}
+
+
 export class CreateCustomImageResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createCustomImage202ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createCustomImage202ApplicationJSONAny?: any;
 
-  @Metadata()
-  createCustomImage401ApplicationJsonObject?: CreateCustomImage401ApplicationJson;
+  @SpeakeasyMetadata()
+  createCustomImage401ApplicationJSONObject?: CreateCustomImage401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -9,6 +9,6 @@ export declare class SystemCountriesRequest extends SpeakeasyBase {
 export declare class SystemCountriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    systemCountries200ApplicationJsonAnies?: any[];
-    systemCountriesDefaultApplicationJsonAny?: any;
+    systemCountries200ApplicationJSONAnies?: any[];
+    systemCountriesDefaultApplicationJSONAny?: any;
 }

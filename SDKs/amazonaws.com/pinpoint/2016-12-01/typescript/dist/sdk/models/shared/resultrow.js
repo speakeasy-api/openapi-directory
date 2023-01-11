@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResultRowValue } from "./resultrowvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResultRow = void 0;
+var utils_1 = require("../../../internal/utils");
+var resultrowvalue_1 = require("./resultrowvalue");
 // ResultRow
 /**
  * Provides the results of a query that retrieved the data for a standard metric that applies to an application, campaign, or journey.
@@ -34,13 +37,13 @@ var ResultRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupedBys", elemType: ResultRowValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupedBys", elemType: resultrowvalue_1.ResultRowValue }),
         __metadata("design:type", Array)
     ], ResultRow.prototype, "groupedBys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Values", elemType: ResultRowValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Values", elemType: resultrowvalue_1.ResultRowValue }),
         __metadata("design:type", Array)
     ], ResultRow.prototype, "values", void 0);
     return ResultRow;
-}(SpeakeasyBase));
-export { ResultRow };
+}(utils_1.SpeakeasyBase));
+exports.ResultRow = ResultRow;

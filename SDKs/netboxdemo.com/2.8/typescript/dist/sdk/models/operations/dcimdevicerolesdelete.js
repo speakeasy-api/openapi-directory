@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimDeviceRolesDeleteResponse = exports.DcimDeviceRolesDeleteRequest = exports.DcimDeviceRolesDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DcimDeviceRolesDeletePathParams = /** @class */ (function (_super) {
     __extends(DcimDeviceRolesDeletePathParams, _super);
     function DcimDeviceRolesDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DcimDeviceRolesDeletePathParams.prototype, "id", void 0);
     return DcimDeviceRolesDeletePathParams;
-}(SpeakeasyBase));
-export { DcimDeviceRolesDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceRolesDeletePathParams = DcimDeviceRolesDeletePathParams;
 var DcimDeviceRolesDeleteRequest = /** @class */ (function (_super) {
     __extends(DcimDeviceRolesDeleteRequest, _super);
     function DcimDeviceRolesDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimDeviceRolesDeletePathParams)
     ], DcimDeviceRolesDeleteRequest.prototype, "pathParams", void 0);
     return DcimDeviceRolesDeleteRequest;
-}(SpeakeasyBase));
-export { DcimDeviceRolesDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceRolesDeleteRequest = DcimDeviceRolesDeleteRequest;
 var DcimDeviceRolesDeleteResponse = /** @class */ (function (_super) {
     __extends(DcimDeviceRolesDeleteResponse, _super);
     function DcimDeviceRolesDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimDeviceRolesDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimDeviceRolesDeleteResponse.prototype, "statusCode", void 0);
     return DcimDeviceRolesDeleteResponse;
-}(SpeakeasyBase));
-export { DcimDeviceRolesDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceRolesDeleteResponse = DcimDeviceRolesDeleteResponse;

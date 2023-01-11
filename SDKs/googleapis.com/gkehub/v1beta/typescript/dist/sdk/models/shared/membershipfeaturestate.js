@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppDevExperienceFeatureState } from "./appdevexperiencefeaturestate";
-import { ConfigManagementMembershipState } from "./configmanagementmembershipstate";
-import { IdentityServiceMembershipState } from "./identityservicemembershipstate";
-import { MeteringMembershipState } from "./meteringmembershipstate";
-import { PolicyControllerMembershipState } from "./policycontrollermembershipstate";
-import { ServiceMeshMembershipState } from "./servicemeshmembershipstate";
-import { FeatureState } from "./featurestate";
-// MembershipFeatureState
-/**
- * MembershipFeatureState contains Feature status information for a single Membership.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipFeatureState = void 0;
+var utils_1 = require("../../../internal/utils");
+var appdevexperiencefeaturestate_1 = require("./appdevexperiencefeaturestate");
+var configmanagementmembershipstate_1 = require("./configmanagementmembershipstate");
+var identityservicemembershipstate_1 = require("./identityservicemembershipstate");
+var meteringmembershipstate_1 = require("./meteringmembershipstate");
+var policycontrollermembershipstate_1 = require("./policycontrollermembershipstate");
+var servicemeshmembershipstate_1 = require("./servicemeshmembershipstate");
+var featurestate_1 = require("./featurestate");
 var MembershipFeatureState = /** @class */ (function (_super) {
     __extends(MembershipFeatureState, _super);
     function MembershipFeatureState() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appdevexperience" }),
-        __metadata("design:type", AppDevExperienceFeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appdevexperience" }),
+        __metadata("design:type", appdevexperiencefeaturestate_1.AppDevExperienceFeatureState)
     ], MembershipFeatureState.prototype, "appdevexperience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configmanagement" }),
-        __metadata("design:type", ConfigManagementMembershipState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configmanagement" }),
+        __metadata("design:type", configmanagementmembershipstate_1.ConfigManagementMembershipState)
     ], MembershipFeatureState.prototype, "configmanagement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fleetobservability" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fleetobservability" }),
+        __metadata("design:type", Object)
     ], MembershipFeatureState.prototype, "fleetobservability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityservice" }),
-        __metadata("design:type", IdentityServiceMembershipState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityservice" }),
+        __metadata("design:type", identityservicemembershipstate_1.IdentityServiceMembershipState)
     ], MembershipFeatureState.prototype, "identityservice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metering" }),
-        __metadata("design:type", MeteringMembershipState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metering" }),
+        __metadata("design:type", meteringmembershipstate_1.MeteringMembershipState)
     ], MembershipFeatureState.prototype, "metering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policycontroller" }),
-        __metadata("design:type", PolicyControllerMembershipState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policycontroller" }),
+        __metadata("design:type", policycontrollermembershipstate_1.PolicyControllerMembershipState)
     ], MembershipFeatureState.prototype, "policycontroller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicemesh" }),
-        __metadata("design:type", ServiceMeshMembershipState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicemesh" }),
+        __metadata("design:type", servicemeshmembershipstate_1.ServiceMeshMembershipState)
     ], MembershipFeatureState.prototype, "servicemesh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", FeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", featurestate_1.FeatureState)
     ], MembershipFeatureState.prototype, "state", void 0);
     return MembershipFeatureState;
-}(SpeakeasyBase));
-export { MembershipFeatureState };
+}(utils_1.SpeakeasyBase));
+exports.MembershipFeatureState = MembershipFeatureState;

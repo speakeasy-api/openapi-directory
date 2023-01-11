@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleHomeEnterpriseSdmV1Structure } from "./googlehomeenterprisesdmv1structure";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleHomeEnterpriseSdmV1ListStructuresResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlehomeenterprisesdmv1structure_1 = require("./googlehomeenterprisesdmv1structure");
 // GoogleHomeEnterpriseSdmV1ListStructuresResponse
 /**
  * Response message for SmartDeviceManagementService.ListStructures
@@ -34,13 +37,13 @@ var GoogleHomeEnterpriseSdmV1ListStructuresResponse = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleHomeEnterpriseSdmV1ListStructuresResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=structures", elemType: GoogleHomeEnterpriseSdmV1Structure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=structures", elemType: googlehomeenterprisesdmv1structure_1.GoogleHomeEnterpriseSdmV1Structure }),
         __metadata("design:type", Array)
     ], GoogleHomeEnterpriseSdmV1ListStructuresResponse.prototype, "structures", void 0);
     return GoogleHomeEnterpriseSdmV1ListStructuresResponse;
-}(SpeakeasyBase));
-export { GoogleHomeEnterpriseSdmV1ListStructuresResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleHomeEnterpriseSdmV1ListStructuresResponse = GoogleHomeEnterpriseSdmV1ListStructuresResponse;

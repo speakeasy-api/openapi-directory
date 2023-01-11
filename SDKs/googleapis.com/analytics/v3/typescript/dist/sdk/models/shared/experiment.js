@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Experiment = exports.ExperimentVariations = exports.ExperimentParentLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // ExperimentParentLink
 /**
  * Parent link for an experiment. Points to the view (profile) to which this experiment belongs.
@@ -33,44 +36,44 @@ var ExperimentParentLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ExperimentParentLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ExperimentParentLink.prototype, "type", void 0);
     return ExperimentParentLink;
-}(SpeakeasyBase));
-export { ExperimentParentLink };
+}(utils_1.SpeakeasyBase));
+exports.ExperimentParentLink = ExperimentParentLink;
 var ExperimentVariations = /** @class */ (function (_super) {
     __extends(ExperimentVariations, _super);
     function ExperimentVariations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ExperimentVariations.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ExperimentVariations.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ExperimentVariations.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], ExperimentVariations.prototype, "weight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=won" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=won" }),
         __metadata("design:type", Boolean)
     ], ExperimentVariations.prototype, "won", void 0);
     return ExperimentVariations;
-}(SpeakeasyBase));
-export { ExperimentVariations };
+}(utils_1.SpeakeasyBase));
+exports.ExperimentVariations = ExperimentVariations;
 // Experiment
 /**
  * JSON template for Analytics experiment resource.
@@ -81,117 +84,117 @@ var Experiment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Experiment.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=editableInGaUi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editableInGaUi" }),
         __metadata("design:type", Boolean)
     ], Experiment.prototype, "editableInGaUi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], Experiment.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=equalWeighting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=equalWeighting" }),
         __metadata("design:type", Boolean)
     ], Experiment.prototype, "equalWeighting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumExperimentLengthInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumExperimentLengthInDays" }),
         __metadata("design:type", Number)
     ], Experiment.prototype, "minimumExperimentLengthInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectiveMetric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectiveMetric" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "objectiveMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optimizationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optimizationType" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "optimizationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", ExperimentParentLink)
     ], Experiment.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileId" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "profileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonExperimentEnded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonExperimentEnded" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "reasonExperimentEnded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rewriteVariationUrlsAsOriginal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rewriteVariationUrlsAsOriginal" }),
         __metadata("design:type", Boolean)
     ], Experiment.prototype, "rewriteVariationUrlsAsOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servingFramework" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servingFramework" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "servingFramework", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], Experiment.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficCoverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficCoverage" }),
         __metadata("design:type", Number)
     ], Experiment.prototype, "trafficCoverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Experiment.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variations", elemType: ExperimentVariations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variations", elemType: ExperimentVariations }),
         __metadata("design:type", Array)
     ], Experiment.prototype, "variations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], Experiment.prototype, "webPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=winnerConfidenceLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=winnerConfidenceLevel" }),
         __metadata("design:type", Number)
     ], Experiment.prototype, "winnerConfidenceLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=winnerFound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=winnerFound" }),
         __metadata("design:type", Boolean)
     ], Experiment.prototype, "winnerFound", void 0);
     return Experiment;
-}(SpeakeasyBase));
-export { Experiment };
+}(utils_1.SpeakeasyBase));
+exports.Experiment = Experiment;

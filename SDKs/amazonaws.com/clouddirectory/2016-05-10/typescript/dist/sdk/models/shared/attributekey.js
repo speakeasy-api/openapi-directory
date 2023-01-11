@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // AttributeKey
 /**
  * A unique identifier for an attribute.
@@ -33,17 +36,17 @@ var AttributeKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FacetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FacetName" }),
         __metadata("design:type", String)
     ], AttributeKey.prototype, "facetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], AttributeKey.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaArn" }),
         __metadata("design:type", String)
     ], AttributeKey.prototype, "schemaArn", void 0);
     return AttributeKey;
-}(SpeakeasyBase));
-export { AttributeKey };
+}(utils_1.SpeakeasyBase));
+exports.AttributeKey = AttributeKey;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CombinedBillingUsage = void 0;
+var utils_1 = require("../../../internal/utils");
 var CombinedBillingUsage = /** @class */ (function (_super) {
     __extends(CombinedBillingUsage, _super);
     function CombinedBillingUsage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=days_left_in_billing_cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=days_left_in_billing_cycle" }),
         __metadata("design:type", Number)
     ], CombinedBillingUsage.prototype, "daysLeftInBillingCycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_paid_storage_for_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_paid_storage_for_month" }),
         __metadata("design:type", Number)
     ], CombinedBillingUsage.prototype, "estimatedPaidStorageForMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_storage_for_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_storage_for_month" }),
         __metadata("design:type", Number)
     ], CombinedBillingUsage.prototype, "estimatedStorageForMonth", void 0);
     return CombinedBillingUsage;
-}(SpeakeasyBase));
-export { CombinedBillingUsage };
+}(utils_1.SpeakeasyBase));
+exports.CombinedBillingUsage = CombinedBillingUsage;

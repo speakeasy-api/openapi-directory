@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CidrAuthorizationContext } from "./cidrauthorizationcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisionByoipCidrRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var cidrauthorizationcontext_1 = require("./cidrauthorizationcontext");
 var ProvisionByoipCidrRequest = /** @class */ (function (_super) {
     __extends(ProvisionByoipCidrRequest, _super);
     function ProvisionByoipCidrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Cidr" }),
         __metadata("design:type", String)
     ], ProvisionByoipCidrRequest.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CidrAuthorizationContext" }),
-        __metadata("design:type", CidrAuthorizationContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CidrAuthorizationContext" }),
+        __metadata("design:type", cidrauthorizationcontext_1.CidrAuthorizationContext)
     ], ProvisionByoipCidrRequest.prototype, "cidrAuthorizationContext", void 0);
     return ProvisionByoipCidrRequest;
-}(SpeakeasyBase));
-export { ProvisionByoipCidrRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionByoipCidrRequest = ProvisionByoipCidrRequest;

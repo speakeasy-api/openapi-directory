@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CareContextRepresentation } from "./carecontextrepresentation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientCareContextLink = exports.PatientCareContextLinkPatient = void 0;
+var utils_1 = require("../../../internal/utils");
+var carecontextrepresentation_1 = require("./carecontextrepresentation");
 var PatientCareContextLinkPatient = /** @class */ (function (_super) {
     __extends(PatientCareContextLinkPatient, _super);
     function PatientCareContextLinkPatient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContexts", elemType: CareContextRepresentation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContexts", elemType: carecontextrepresentation_1.CareContextRepresentation }),
         __metadata("design:type", Array)
     ], PatientCareContextLinkPatient.prototype, "careContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], PatientCareContextLinkPatient.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceNumber" }),
         __metadata("design:type", String)
     ], PatientCareContextLinkPatient.prototype, "referenceNumber", void 0);
     return PatientCareContextLinkPatient;
-}(SpeakeasyBase));
-export { PatientCareContextLinkPatient };
+}(utils_1.SpeakeasyBase));
+exports.PatientCareContextLinkPatient = PatientCareContextLinkPatient;
 var PatientCareContextLink = /** @class */ (function (_super) {
     __extends(PatientCareContextLink, _super);
     function PatientCareContextLink() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessToken" }),
         __metadata("design:type", String)
     ], PatientCareContextLink.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
         __metadata("design:type", PatientCareContextLinkPatient)
     ], PatientCareContextLink.prototype, "patient", void 0);
     return PatientCareContextLink;
-}(SpeakeasyBase));
-export { PatientCareContextLink };
+}(utils_1.SpeakeasyBase));
+exports.PatientCareContextLink = PatientCareContextLink;

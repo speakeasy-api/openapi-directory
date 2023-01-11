@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse = exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest = exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams = exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum;
 (function (ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum) {
     ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum["Xml"] = "XML";
     ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum["Json"] = "JSON";
-})(ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum || (ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum = {}));
+})(ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum = exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum || (exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum = {}));
 var ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams, _super);
     function ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams.prototype, "playerid", void 0);
     return ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams = ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams;
 var ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest, _super);
     function ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest.prototype, "pathParams", void 0);
     return ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest = ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest;
 var ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse, _super);
     function ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse.prototype, "playerGameProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse.prototype, "statusCode", void 0);
     return ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse = ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse;

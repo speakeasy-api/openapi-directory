@@ -8,10 +8,10 @@ export declare class GetWfsInventoryQueryParams extends SpeakeasyBase {
 }
 export declare class GetWfsInventoryHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare class GetWfsInventory200ApplicationJsonHeaders extends SpeakeasyBase {
     limit?: number;
@@ -42,5 +42,5 @@ export declare class GetWfsInventoryRequest extends SpeakeasyBase {
 export declare class GetWfsInventoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getWfsInventory200ApplicationJsonObject?: GetWfsInventory200ApplicationJson;
+    getWFSInventory200ApplicationJSONObject?: GetWfsInventory200ApplicationJson;
 }

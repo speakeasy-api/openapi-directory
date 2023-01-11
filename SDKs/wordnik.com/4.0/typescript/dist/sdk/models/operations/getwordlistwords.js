@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,97 +23,99 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWordListWordsResponse = exports.GetWordListWordsRequest = exports.GetWordListWordsHeaders = exports.GetWordListWordsQueryParams = exports.GetWordListWordsSortByEnum = exports.GetWordListWordsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWordListWordsPathParams = /** @class */ (function (_super) {
     __extends(GetWordListWordsPathParams, _super);
     function GetWordListWordsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=permalink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=permalink" }),
         __metadata("design:type", String)
     ], GetWordListWordsPathParams.prototype, "permalink", void 0);
     return GetWordListWordsPathParams;
-}(SpeakeasyBase));
-export { GetWordListWordsPathParams };
-export var GetWordListWordsSortByEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetWordListWordsPathParams = GetWordListWordsPathParams;
+var GetWordListWordsSortByEnum;
 (function (GetWordListWordsSortByEnum) {
     GetWordListWordsSortByEnum["CreateDate"] = "createDate";
     GetWordListWordsSortByEnum["Alpha"] = "alpha";
-})(GetWordListWordsSortByEnum || (GetWordListWordsSortByEnum = {}));
+})(GetWordListWordsSortByEnum = exports.GetWordListWordsSortByEnum || (exports.GetWordListWordsSortByEnum = {}));
 var GetWordListWordsQueryParams = /** @class */ (function (_super) {
     __extends(GetWordListWordsQueryParams, _super);
     function GetWordListWordsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetWordListWordsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], GetWordListWordsQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetWordListWordsQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", String)
     ], GetWordListWordsQueryParams.prototype, "sortOrder", void 0);
     return GetWordListWordsQueryParams;
-}(SpeakeasyBase));
-export { GetWordListWordsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListWordsQueryParams = GetWordListWordsQueryParams;
 var GetWordListWordsHeaders = /** @class */ (function (_super) {
     __extends(GetWordListWordsHeaders, _super);
     function GetWordListWordsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], GetWordListWordsHeaders.prototype, "authToken", void 0);
     return GetWordListWordsHeaders;
-}(SpeakeasyBase));
-export { GetWordListWordsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListWordsHeaders = GetWordListWordsHeaders;
 var GetWordListWordsRequest = /** @class */ (function (_super) {
     __extends(GetWordListWordsRequest, _super);
     function GetWordListWordsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListWordsPathParams)
     ], GetWordListWordsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListWordsQueryParams)
     ], GetWordListWordsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListWordsHeaders)
     ], GetWordListWordsRequest.prototype, "headers", void 0);
     return GetWordListWordsRequest;
-}(SpeakeasyBase));
-export { GetWordListWordsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListWordsRequest = GetWordListWordsRequest;
 var GetWordListWordsResponse = /** @class */ (function (_super) {
     __extends(GetWordListWordsResponse, _super);
     function GetWordListWordsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetWordListWordsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWordListWordsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWordListWordsResponse.prototype, "statusCode", void 0);
     return GetWordListWordsResponse;
-}(SpeakeasyBase));
-export { GetWordListWordsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListWordsResponse = GetWordListWordsResponse;

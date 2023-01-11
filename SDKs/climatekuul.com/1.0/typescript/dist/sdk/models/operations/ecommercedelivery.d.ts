@@ -16,7 +16,7 @@ export declare class EcommerceDeliveryRequestBody extends SpeakeasyBase {
     waybillType: string;
 }
 export declare class EcommerceDeliveryRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: EcommerceDeliveryHeaders;
     request?: EcommerceDeliveryRequestBody;
 }

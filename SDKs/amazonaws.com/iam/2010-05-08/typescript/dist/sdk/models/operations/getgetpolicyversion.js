@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetPolicyVersionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetPolicyVersionResponse = exports.GetGetPolicyVersionRequest = exports.GetGetPolicyVersionHeaders = exports.GetGetPolicyVersionQueryParams = exports.GetGetPolicyVersionVersionEnum = exports.GetGetPolicyVersionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetPolicyVersionActionEnum;
 (function (GetGetPolicyVersionActionEnum) {
     GetGetPolicyVersionActionEnum["GetPolicyVersion"] = "GetPolicyVersion";
-})(GetGetPolicyVersionActionEnum || (GetGetPolicyVersionActionEnum = {}));
-export var GetGetPolicyVersionVersionEnum;
+})(GetGetPolicyVersionActionEnum = exports.GetGetPolicyVersionActionEnum || (exports.GetGetPolicyVersionActionEnum = {}));
+var GetGetPolicyVersionVersionEnum;
 (function (GetGetPolicyVersionVersionEnum) {
     GetGetPolicyVersionVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetPolicyVersionVersionEnum || (GetGetPolicyVersionVersionEnum = {}));
+})(GetGetPolicyVersionVersionEnum = exports.GetGetPolicyVersionVersionEnum || (exports.GetGetPolicyVersionVersionEnum = {}));
 var GetGetPolicyVersionQueryParams = /** @class */ (function (_super) {
     __extends(GetGetPolicyVersionQueryParams, _super);
     function GetGetPolicyVersionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyArn" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionQueryParams.prototype, "policyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VersionId" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionQueryParams.prototype, "versionId", void 0);
     return GetGetPolicyVersionQueryParams;
-}(SpeakeasyBase));
-export { GetGetPolicyVersionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPolicyVersionQueryParams = GetGetPolicyVersionQueryParams;
 var GetGetPolicyVersionHeaders = /** @class */ (function (_super) {
     __extends(GetGetPolicyVersionHeaders, _super);
     function GetGetPolicyVersionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetPolicyVersionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetPolicyVersionHeaders;
-}(SpeakeasyBase));
-export { GetGetPolicyVersionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPolicyVersionHeaders = GetGetPolicyVersionHeaders;
 var GetGetPolicyVersionRequest = /** @class */ (function (_super) {
     __extends(GetGetPolicyVersionRequest, _super);
     function GetGetPolicyVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetPolicyVersionQueryParams)
     ], GetGetPolicyVersionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetPolicyVersionHeaders)
     ], GetGetPolicyVersionRequest.prototype, "headers", void 0);
     return GetGetPolicyVersionRequest;
-}(SpeakeasyBase));
-export { GetGetPolicyVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPolicyVersionRequest = GetGetPolicyVersionRequest;
 var GetGetPolicyVersionResponse = /** @class */ (function (_super) {
     __extends(GetGetPolicyVersionResponse, _super);
     function GetGetPolicyVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetPolicyVersionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetPolicyVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetPolicyVersionResponse.prototype, "statusCode", void 0);
     return GetGetPolicyVersionResponse;
-}(SpeakeasyBase));
-export { GetGetPolicyVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPolicyVersionResponse = GetGetPolicyVersionResponse;

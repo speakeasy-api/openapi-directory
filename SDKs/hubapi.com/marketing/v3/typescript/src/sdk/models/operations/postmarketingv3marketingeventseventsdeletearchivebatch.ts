@@ -4,9 +4,6 @@ import * as shared from "../shared";
 
 
 export class PostMarketingV3MarketingEventsEventsDeleteArchiveBatchSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
   privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 

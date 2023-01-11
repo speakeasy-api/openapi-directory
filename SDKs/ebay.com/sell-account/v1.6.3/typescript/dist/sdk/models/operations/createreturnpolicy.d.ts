@@ -9,7 +9,7 @@ export declare class CreateReturnPolicyRequest extends SpeakeasyBase {
 }
 export declare class CreateReturnPolicyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     setReturnPolicyResponse?: shared.SetReturnPolicyResponse;
     statusCode: number;
 }

@@ -11,37 +11,6 @@ export enum CertificateSubjectModeEnum {
 }
 
 
-// CertificateInput
-/** 
- * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
-**/
-export class CertificateInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=certificateDescription" })
-  certificateDescription?: CertificateDescription;
-
-  @SpeakeasyMetadata({ data: "json, name=certificateTemplate" })
-  certificateTemplate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=config" })
-  config?: CertificateConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=lifetime" })
-  lifetime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=pemCsr" })
-  pemCsr?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=revocationDetails" })
-  revocationDetails?: RevocationDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=subjectMode" })
-  subjectMode?: CertificateSubjectModeEnum;
-}
-
-
 // Certificate
 /** 
  * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
@@ -63,7 +32,7 @@ export class Certificate extends SpeakeasyBase {
   issuerCertificateAuthority?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lifetime" })
   lifetime?: string;
@@ -88,4 +57,35 @@ export class Certificate extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// CertificateInput
+/** 
+ * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
+**/
+export class CertificateInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=certificateDescription" })
+  certificateDescription?: CertificateDescription;
+
+  @SpeakeasyMetadata({ data: "json, name=certificateTemplate" })
+  certificateTemplate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=config" })
+  config?: CertificateConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=lifetime" })
+  lifetime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=pemCsr" })
+  pemCsr?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=revocationDetails" })
+  revocationDetails?: RevocationDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=subjectMode" })
+  subjectMode?: CertificateSubjectModeEnum;
 }

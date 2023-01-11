@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateTransitGatewayRouteActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateTransitGatewayRouteResponse = exports.GetCreateTransitGatewayRouteRequest = exports.GetCreateTransitGatewayRouteHeaders = exports.GetCreateTransitGatewayRouteQueryParams = exports.GetCreateTransitGatewayRouteVersionEnum = exports.GetCreateTransitGatewayRouteActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateTransitGatewayRouteActionEnum;
 (function (GetCreateTransitGatewayRouteActionEnum) {
     GetCreateTransitGatewayRouteActionEnum["CreateTransitGatewayRoute"] = "CreateTransitGatewayRoute";
-})(GetCreateTransitGatewayRouteActionEnum || (GetCreateTransitGatewayRouteActionEnum = {}));
-export var GetCreateTransitGatewayRouteVersionEnum;
+})(GetCreateTransitGatewayRouteActionEnum = exports.GetCreateTransitGatewayRouteActionEnum || (exports.GetCreateTransitGatewayRouteActionEnum = {}));
+var GetCreateTransitGatewayRouteVersionEnum;
 (function (GetCreateTransitGatewayRouteVersionEnum) {
     GetCreateTransitGatewayRouteVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCreateTransitGatewayRouteVersionEnum || (GetCreateTransitGatewayRouteVersionEnum = {}));
+})(GetCreateTransitGatewayRouteVersionEnum = exports.GetCreateTransitGatewayRouteVersionEnum || (exports.GetCreateTransitGatewayRouteVersionEnum = {}));
 var GetCreateTransitGatewayRouteQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateTransitGatewayRouteQueryParams, _super);
     function GetCreateTransitGatewayRouteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Blackhole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Blackhole" }),
         __metadata("design:type", Boolean)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "blackhole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "destinationCidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TransitGatewayAttachmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TransitGatewayAttachmentId" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "transitGatewayAttachmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TransitGatewayRouteTableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TransitGatewayRouteTableId" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "transitGatewayRouteTableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteQueryParams.prototype, "version", void 0);
     return GetCreateTransitGatewayRouteQueryParams;
-}(SpeakeasyBase));
-export { GetCreateTransitGatewayRouteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTransitGatewayRouteQueryParams = GetCreateTransitGatewayRouteQueryParams;
 var GetCreateTransitGatewayRouteHeaders = /** @class */ (function (_super) {
     __extends(GetCreateTransitGatewayRouteHeaders, _super);
     function GetCreateTransitGatewayRouteHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateTransitGatewayRouteHeaders;
-}(SpeakeasyBase));
-export { GetCreateTransitGatewayRouteHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTransitGatewayRouteHeaders = GetCreateTransitGatewayRouteHeaders;
 var GetCreateTransitGatewayRouteRequest = /** @class */ (function (_super) {
     __extends(GetCreateTransitGatewayRouteRequest, _super);
     function GetCreateTransitGatewayRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateTransitGatewayRouteQueryParams)
     ], GetCreateTransitGatewayRouteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateTransitGatewayRouteHeaders)
     ], GetCreateTransitGatewayRouteRequest.prototype, "headers", void 0);
     return GetCreateTransitGatewayRouteRequest;
-}(SpeakeasyBase));
-export { GetCreateTransitGatewayRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTransitGatewayRouteRequest = GetCreateTransitGatewayRouteRequest;
 var GetCreateTransitGatewayRouteResponse = /** @class */ (function (_super) {
     __extends(GetCreateTransitGatewayRouteResponse, _super);
     function GetCreateTransitGatewayRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateTransitGatewayRouteResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateTransitGatewayRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateTransitGatewayRouteResponse.prototype, "statusCode", void 0);
     return GetCreateTransitGatewayRouteResponse;
-}(SpeakeasyBase));
-export { GetCreateTransitGatewayRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTransitGatewayRouteResponse = GetCreateTransitGatewayRouteResponse;

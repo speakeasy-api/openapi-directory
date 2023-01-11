@@ -10,6 +10,6 @@ export declare class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponse
 export declare class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse extends SpeakeasyBase {
     assignments?: shared.Assignments[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { App } from "./app";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppsListData = void 0;
+var utils_1 = require("../../../internal/utils");
+var app_1 = require("./app");
 // AppsListData
 /**
  * An Firewall Manager applications list.
@@ -34,33 +37,33 @@ var AppsListData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppsList", elemType: App }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppsList", elemType: app_1.App }),
         __metadata("design:type", Array)
     ], AppsListData.prototype, "appsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTime" }),
         __metadata("design:type", Date)
     ], AppsListData.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], AppsListData.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListId" }),
         __metadata("design:type", String)
     ], AppsListData.prototype, "listId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListName" }),
         __metadata("design:type", String)
     ], AppsListData.prototype, "listName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListUpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListUpdateToken" }),
         __metadata("design:type", String)
     ], AppsListData.prototype, "listUpdateToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousAppsList", elemType: App, elemDepth: 2 }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousAppsList", elemType: app_1.App, elemDepth: 2 }),
+        __metadata("design:type", Object)
     ], AppsListData.prototype, "previousAppsList", void 0);
     return AppsListData;
-}(SpeakeasyBase));
-export { AppsListData };
+}(utils_1.SpeakeasyBase));
+exports.AppsListData = AppsListData;

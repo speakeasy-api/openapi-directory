@@ -10,7 +10,7 @@ export class UpdateADatabasePathParams extends SpeakeasyBase {
 
 export class UpdateADatabaseRequestBodyPropertiesWinePairing extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=rich_text" })
-  richText?: Map<string, any>;
+  richText?: Record<string, any>;
 }
 
 
@@ -94,7 +94,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesLink extends SpeakeasyBa
   type?: string;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
-  url?: Map<string, any>;
+  url?: Record<string, any>;
 }
 
 
@@ -106,7 +106,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesName extends SpeakeasyBa
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
-  title?: Map<string, any>;
+  title?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
@@ -148,7 +148,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesPublisher extends Speake
 
 export class UpdateADatabase200ApplicationJsonPropertiesPublishingReleaseDate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
-  date?: Map<string, any>;
+  date?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -163,7 +163,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesPublishingReleaseDate ex
 
 export class UpdateADatabase200ApplicationJsonPropertiesRead extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=checkbox" })
-  checkbox?: Map<string, any>;
+  checkbox?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -250,7 +250,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesSummary extends Speakeas
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rich_text" })
-  richText?: Map<string, any>;
+  richText?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
@@ -298,7 +298,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesWinePairing extends Spea
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rich_text" })
-  richText?: Map<string, any>;
+  richText?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
@@ -307,7 +307,7 @@ export class UpdateADatabase200ApplicationJsonPropertiesWinePairing extends Spea
 
 export class UpdateADatabase200ApplicationJsonPropertiesDate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
-  date?: Map<string, any>;
+  date?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -445,11 +445,11 @@ export class UpdateADatabaseResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateADatabase200ApplicationJsonObject?: UpdateADatabase200ApplicationJson;
+  updateADatabase200ApplicationJSONObject?: UpdateADatabase200ApplicationJson;
 }

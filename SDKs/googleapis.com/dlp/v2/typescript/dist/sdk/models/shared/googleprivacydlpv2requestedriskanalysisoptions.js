@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2RiskAnalysisJobConfig } from "./googleprivacydlpv2riskanalysisjobconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RequestedRiskAnalysisOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2riskanalysisjobconfig_1 = require("./googleprivacydlpv2riskanalysisjobconfig");
 // GooglePrivacyDlpV2RequestedRiskAnalysisOptions
 /**
  * Risk analysis options.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2RequestedRiskAnalysisOptions = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2RiskAnalysisJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobConfig" }),
+        __metadata("design:type", googleprivacydlpv2riskanalysisjobconfig_1.GooglePrivacyDlpV2RiskAnalysisJobConfig)
     ], GooglePrivacyDlpV2RequestedRiskAnalysisOptions.prototype, "jobConfig", void 0);
     return GooglePrivacyDlpV2RequestedRiskAnalysisOptions;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RequestedRiskAnalysisOptions };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RequestedRiskAnalysisOptions = GooglePrivacyDlpV2RequestedRiskAnalysisOptions;

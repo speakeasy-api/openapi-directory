@@ -12,5 +12,5 @@ export class Categories extends SpeakeasyBase {
   matchedCategories: string[];
 
   @SpeakeasyMetadata({ data: "json, name=MatchedDetails", elemType: CategoryDetails })
-  matchedDetails: Map<string, CategoryDetails>;
+  matchedDetails: Record<string, CategoryDetails>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableVirtualMachineWithConfigContextStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableVirtualMachineWithConfigContextInput = exports.WritableVirtualMachineWithConfigContextStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableVirtualMachineWithConfigContextStatusEnum;
 (function (WritableVirtualMachineWithConfigContextStatusEnum) {
     WritableVirtualMachineWithConfigContextStatusEnum["Offline"] = "offline";
     WritableVirtualMachineWithConfigContextStatusEnum["Active"] = "active";
@@ -31,72 +34,72 @@ export var WritableVirtualMachineWithConfigContextStatusEnum;
     WritableVirtualMachineWithConfigContextStatusEnum["Staged"] = "staged";
     WritableVirtualMachineWithConfigContextStatusEnum["Failed"] = "failed";
     WritableVirtualMachineWithConfigContextStatusEnum["Decommissioning"] = "decommissioning";
-})(WritableVirtualMachineWithConfigContextStatusEnum || (WritableVirtualMachineWithConfigContextStatusEnum = {}));
+})(WritableVirtualMachineWithConfigContextStatusEnum = exports.WritableVirtualMachineWithConfigContextStatusEnum || (exports.WritableVirtualMachineWithConfigContextStatusEnum = {}));
 var WritableVirtualMachineWithConfigContextInput = /** @class */ (function (_super) {
     __extends(WritableVirtualMachineWithConfigContextInput, _super);
     function WritableVirtualMachineWithConfigContextInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "disk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=local_context_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local_context_data" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "localContextData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip4" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "primaryIp4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip6" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "primaryIp6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcpus" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineWithConfigContextInput.prototype, "vcpus", void 0);
     return WritableVirtualMachineWithConfigContextInput;
-}(SpeakeasyBase));
-export { WritableVirtualMachineWithConfigContextInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableVirtualMachineWithConfigContextInput = WritableVirtualMachineWithConfigContextInput;

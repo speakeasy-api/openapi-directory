@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableRackInput extends SpeakeasyBase {
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     descUnits?: boolean;
     facilityId?: string;
     group?: number;

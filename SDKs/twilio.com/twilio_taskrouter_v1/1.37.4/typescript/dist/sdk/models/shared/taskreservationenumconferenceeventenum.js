@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskReservationEnumConferenceEventEnum = void 0;
+var TaskReservationEnumConferenceEventEnum;
+(function (TaskReservationEnumConferenceEventEnum) {
+    TaskReservationEnumConferenceEventEnum["Start"] = "start";
+    TaskReservationEnumConferenceEventEnum["End"] = "end";
+    TaskReservationEnumConferenceEventEnum["Join"] = "join";
+    TaskReservationEnumConferenceEventEnum["Leave"] = "leave";
+    TaskReservationEnumConferenceEventEnum["Mute"] = "mute";
+    TaskReservationEnumConferenceEventEnum["Hold"] = "hold";
+    TaskReservationEnumConferenceEventEnum["Speaker"] = "speaker";
+})(TaskReservationEnumConferenceEventEnum = exports.TaskReservationEnumConferenceEventEnum || (exports.TaskReservationEnumConferenceEventEnum = {}));

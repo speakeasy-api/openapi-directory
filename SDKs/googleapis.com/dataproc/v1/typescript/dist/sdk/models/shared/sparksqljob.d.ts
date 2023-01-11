@@ -7,8 +7,8 @@ import { QueryList } from "./querylist";
 export declare class SparkSqlJob extends SpeakeasyBase {
     jarFileUris?: string[];
     loggingConfig?: LoggingConfig;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     queryFileUri?: string;
     queryList?: QueryList;
-    scriptVariables?: Map<string, string>;
+    scriptVariables?: Record<string, string>;
 }

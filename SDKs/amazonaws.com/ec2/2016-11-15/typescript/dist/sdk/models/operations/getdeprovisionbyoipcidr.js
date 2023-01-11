@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeprovisionByoipCidrActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeprovisionByoipCidrResponse = exports.GetDeprovisionByoipCidrRequest = exports.GetDeprovisionByoipCidrHeaders = exports.GetDeprovisionByoipCidrQueryParams = exports.GetDeprovisionByoipCidrVersionEnum = exports.GetDeprovisionByoipCidrActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeprovisionByoipCidrActionEnum;
 (function (GetDeprovisionByoipCidrActionEnum) {
     GetDeprovisionByoipCidrActionEnum["DeprovisionByoipCidr"] = "DeprovisionByoipCidr";
-})(GetDeprovisionByoipCidrActionEnum || (GetDeprovisionByoipCidrActionEnum = {}));
-export var GetDeprovisionByoipCidrVersionEnum;
+})(GetDeprovisionByoipCidrActionEnum = exports.GetDeprovisionByoipCidrActionEnum || (exports.GetDeprovisionByoipCidrActionEnum = {}));
+var GetDeprovisionByoipCidrVersionEnum;
 (function (GetDeprovisionByoipCidrVersionEnum) {
     GetDeprovisionByoipCidrVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeprovisionByoipCidrVersionEnum || (GetDeprovisionByoipCidrVersionEnum = {}));
+})(GetDeprovisionByoipCidrVersionEnum = exports.GetDeprovisionByoipCidrVersionEnum || (exports.GetDeprovisionByoipCidrVersionEnum = {}));
 var GetDeprovisionByoipCidrQueryParams = /** @class */ (function (_super) {
     __extends(GetDeprovisionByoipCidrQueryParams, _super);
     function GetDeprovisionByoipCidrQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Cidr" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrQueryParams.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeprovisionByoipCidrQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrQueryParams.prototype, "version", void 0);
     return GetDeprovisionByoipCidrQueryParams;
-}(SpeakeasyBase));
-export { GetDeprovisionByoipCidrQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeprovisionByoipCidrQueryParams = GetDeprovisionByoipCidrQueryParams;
 var GetDeprovisionByoipCidrHeaders = /** @class */ (function (_super) {
     __extends(GetDeprovisionByoipCidrHeaders, _super);
     function GetDeprovisionByoipCidrHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeprovisionByoipCidrHeaders;
-}(SpeakeasyBase));
-export { GetDeprovisionByoipCidrHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeprovisionByoipCidrHeaders = GetDeprovisionByoipCidrHeaders;
 var GetDeprovisionByoipCidrRequest = /** @class */ (function (_super) {
     __extends(GetDeprovisionByoipCidrRequest, _super);
     function GetDeprovisionByoipCidrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeprovisionByoipCidrQueryParams)
     ], GetDeprovisionByoipCidrRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeprovisionByoipCidrHeaders)
     ], GetDeprovisionByoipCidrRequest.prototype, "headers", void 0);
     return GetDeprovisionByoipCidrRequest;
-}(SpeakeasyBase));
-export { GetDeprovisionByoipCidrRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeprovisionByoipCidrRequest = GetDeprovisionByoipCidrRequest;
 var GetDeprovisionByoipCidrResponse = /** @class */ (function (_super) {
     __extends(GetDeprovisionByoipCidrResponse, _super);
     function GetDeprovisionByoipCidrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeprovisionByoipCidrResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeprovisionByoipCidrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeprovisionByoipCidrResponse.prototype, "statusCode", void 0);
     return GetDeprovisionByoipCidrResponse;
-}(SpeakeasyBase));
-export { GetDeprovisionByoipCidrResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeprovisionByoipCidrResponse = GetDeprovisionByoipCidrResponse;

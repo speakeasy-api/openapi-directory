@@ -33,6 +33,6 @@ export declare class UpdateNotificationRuleResponse extends SpeakeasyBase {
     contentType: string;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateNotificationRuleResult?: Map<string, any>;
+    updateNotificationRuleResult?: Record<string, any>;
     validationException?: any;
 }

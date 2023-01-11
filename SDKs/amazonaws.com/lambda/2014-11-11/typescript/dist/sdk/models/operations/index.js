@@ -1,11 +1,27 @@
-export * from "./addeventsource";
-export * from "./deletefunction";
-export * from "./geteventsource";
-export * from "./getfunction";
-export * from "./getfunctionconfiguration";
-export * from "./invokeasync";
-export * from "./listeventsources";
-export * from "./listfunctions";
-export * from "./removeeventsource";
-export * from "./updatefunctionconfiguration";
-export * from "./uploadfunction";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./addeventsource"), exports);
+__exportStar(require("./deletefunction"), exports);
+__exportStar(require("./geteventsource"), exports);
+__exportStar(require("./getfunction"), exports);
+__exportStar(require("./getfunctionconfiguration"), exports);
+__exportStar(require("./invokeasync"), exports);
+__exportStar(require("./listeventsources"), exports);
+__exportStar(require("./listfunctions"), exports);
+__exportStar(require("./removeeventsource"), exports);
+__exportStar(require("./updatefunctionconfiguration"), exports);
+__exportStar(require("./uploadfunction"), exports);

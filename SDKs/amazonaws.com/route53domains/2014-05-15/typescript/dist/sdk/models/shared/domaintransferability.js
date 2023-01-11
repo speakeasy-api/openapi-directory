@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransferableEnum } from "./transferableenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainTransferability = void 0;
+var utils_1 = require("../../../internal/utils");
+var transferableenum_1 = require("./transferableenum");
 // DomainTransferability
 /**
  * A complex type that contains information about whether the specified domain can be transferred to Route 53.
@@ -34,9 +37,9 @@ var DomainTransferability = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Transferable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Transferable" }),
         __metadata("design:type", String)
     ], DomainTransferability.prototype, "transferable", void 0);
     return DomainTransferability;
-}(SpeakeasyBase));
-export { DomainTransferability };
+}(utils_1.SpeakeasyBase));
+exports.DomainTransferability = DomainTransferability;

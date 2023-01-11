@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Task } from "./task";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaseTasksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var task_1 = require("./task");
 // LeaseTasksResponse
 /**
  * Response message for leasing tasks using LeaseTasks.
@@ -34,9 +37,9 @@ var LeaseTasksResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tasks", elemType: Task }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tasks", elemType: task_1.Task }),
         __metadata("design:type", Array)
     ], LeaseTasksResponse.prototype, "tasks", void 0);
     return LeaseTasksResponse;
-}(SpeakeasyBase));
-export { LeaseTasksResponse };
+}(utils_1.SpeakeasyBase));
+exports.LeaseTasksResponse = LeaseTasksResponse;

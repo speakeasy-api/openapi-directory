@@ -11,7 +11,7 @@ export declare enum KeyResponseCapabilityEnum {
 }
 export declare class KeyResponse extends SpeakeasyBase {
     appId?: string;
-    capability?: Map<string, KeyResponseCapabilityEnum[]>;
+    capability?: Record<string, KeyResponseCapabilityEnum[]>;
     created?: number;
     id?: string;
     key?: string;

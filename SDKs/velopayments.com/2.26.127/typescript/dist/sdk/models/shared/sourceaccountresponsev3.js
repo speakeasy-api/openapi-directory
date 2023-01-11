@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoTopUpConfig2 } from "./autotopupconfig2";
-import { Notifications2 } from "./notifications2";
-export var SourceAccountResponseV3CurrencyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceAccountResponseV3 = exports.SourceAccountResponseV3CurrencyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var autotopupconfig2_1 = require("./autotopupconfig2");
+var notifications2_1 = require("./notifications2");
+var SourceAccountResponseV3CurrencyEnum;
 (function (SourceAccountResponseV3CurrencyEnum) {
     SourceAccountResponseV3CurrencyEnum["Usd"] = "USD";
     SourceAccountResponseV3CurrencyEnum["Eur"] = "EUR";
     SourceAccountResponseV3CurrencyEnum["Gbp"] = "GBP";
     SourceAccountResponseV3CurrencyEnum["Cad"] = "CAD";
     SourceAccountResponseV3CurrencyEnum["Hkd"] = "HKD";
-})(SourceAccountResponseV3CurrencyEnum || (SourceAccountResponseV3CurrencyEnum = {}));
+})(SourceAccountResponseV3CurrencyEnum = exports.SourceAccountResponseV3CurrencyEnum || (exports.SourceAccountResponseV3CurrencyEnum = {}));
 var SourceAccountResponseV3 = /** @class */ (function (_super) {
     __extends(SourceAccountResponseV3, _super);
     function SourceAccountResponseV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoTopUpConfig" }),
-        __metadata("design:type", AutoTopUpConfig2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoTopUpConfig" }),
+        __metadata("design:type", autotopupconfig2_1.AutoTopUpConfig2)
     ], SourceAccountResponseV3.prototype, "autoTopUpConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], SourceAccountResponseV3.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], SourceAccountResponseV3.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedAt" }),
         __metadata("design:type", Date)
     ], SourceAccountResponseV3.prototype, "deletedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingRef" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "fundingRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notifications" }),
-        __metadata("design:type", Notifications2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notifications" }),
+        __metadata("design:type", notifications2_1.Notifications2)
     ], SourceAccountResponseV3.prototype, "notifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalAccountId" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "physicalAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalAccountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalAccountName" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "physicalAccountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pooled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pooled" }),
         __metadata("design:type", Boolean)
     ], SourceAccountResponseV3.prototype, "pooled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=railsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=railsId" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "railsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SourceAccountResponseV3.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userDeleted" }),
         __metadata("design:type", Boolean)
     ], SourceAccountResponseV3.prototype, "userDeleted", void 0);
     return SourceAccountResponseV3;
-}(SpeakeasyBase));
-export { SourceAccountResponseV3 };
+}(utils_1.SpeakeasyBase));
+exports.SourceAccountResponseV3 = SourceAccountResponseV3;

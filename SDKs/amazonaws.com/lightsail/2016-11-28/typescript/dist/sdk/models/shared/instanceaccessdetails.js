@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HostKeyAttributes } from "./hostkeyattributes";
-import { PasswordData } from "./passworddata";
-import { InstanceAccessProtocolEnum } from "./instanceaccessprotocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceAccessDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var hostkeyattributes_1 = require("./hostkeyattributes");
+var passworddata_1 = require("./passworddata");
+var instanceaccessprotocolenum_1 = require("./instanceaccessprotocolenum");
 // InstanceAccessDetails
 /**
  * The parameters for gaining temporary access to one of your Amazon Lightsail instances.
@@ -36,45 +39,45 @@ var InstanceAccessDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certKey" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "certKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresAt" }),
         __metadata("design:type", Date)
     ], InstanceAccessDetails.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostKeys", elemType: HostKeyAttributes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostKeys", elemType: hostkeyattributes_1.HostKeyAttributes }),
         __metadata("design:type", Array)
     ], InstanceAccessDetails.prototype, "hostKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceName" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "instanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordData" }),
-        __metadata("design:type", PasswordData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordData" }),
+        __metadata("design:type", passworddata_1.PasswordData)
     ], InstanceAccessDetails.prototype, "passwordData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateKey" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "privateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], InstanceAccessDetails.prototype, "username", void 0);
     return InstanceAccessDetails;
-}(SpeakeasyBase));
-export { InstanceAccessDetails };
+}(utils_1.SpeakeasyBase));
+exports.InstanceAccessDetails = InstanceAccessDetails;

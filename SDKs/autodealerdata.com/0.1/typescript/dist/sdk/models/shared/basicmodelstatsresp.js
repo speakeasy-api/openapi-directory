@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasicModelStats } from "./basicmodelstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicModelStatsResp = void 0;
+var utils_1 = require("../../../internal/utils");
+var basicmodelstats_1 = require("./basicmodelstats");
 var BasicModelStatsResp = /** @class */ (function (_super) {
     __extends(BasicModelStatsResp, _super);
     function BasicModelStatsResp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], BasicModelStatsResp.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheTimeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheTimeLimit" }),
         __metadata("design:type", Number)
     ], BasicModelStatsResp.prototype, "cacheTimeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], BasicModelStatsResp.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: BasicModelStats }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: basicmodelstats_1.BasicModelStats }),
         __metadata("design:type", Array)
     ], BasicModelStatsResp.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], BasicModelStatsResp.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msg" }),
         __metadata("design:type", String)
     ], BasicModelStatsResp.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionName" }),
         __metadata("design:type", String)
     ], BasicModelStatsResp.prototype, "regionName", void 0);
     return BasicModelStatsResp;
-}(SpeakeasyBase));
-export { BasicModelStatsResp };
+}(utils_1.SpeakeasyBase));
+exports.BasicModelStatsResp = BasicModelStatsResp;

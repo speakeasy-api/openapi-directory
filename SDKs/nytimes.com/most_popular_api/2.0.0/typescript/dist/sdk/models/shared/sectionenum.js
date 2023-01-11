@@ -1,4 +1,7 @@
-export var SectionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SectionEnum = void 0;
+var SectionEnum;
 (function (SectionEnum) {
     SectionEnum["Arts"] = "Arts";
     SectionEnum["Automobiles"] = "Automobiles";
@@ -36,4 +39,4 @@ export var SectionEnum;
     SectionEnum["World"] = "World";
     SectionEnum["YourMoney"] = "Your Money";
     SectionEnum["AllSections"] = "all-sections";
-})(SectionEnum || (SectionEnum = {}));
+})(SectionEnum = exports.SectionEnum || (exports.SectionEnum = {}));

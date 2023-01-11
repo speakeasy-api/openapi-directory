@@ -29,7 +29,7 @@ export class DcimDevicesNapalmResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deviceNapalm?: shared.DeviceNapalm;
+  deviceNAPALM?: shared.DeviceNapalm;
 
   @SpeakeasyMetadata()
   statusCode: number;

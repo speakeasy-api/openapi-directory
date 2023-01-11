@@ -14,5 +14,5 @@ export declare class GetGifsByIdRequest extends SpeakeasyBase {
 export declare class GetGifsByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getGifsById200ApplicationJsonObject?: GetGifsById200ApplicationJson;
+    getGifsById200ApplicationJSONObject?: GetGifsById200ApplicationJson;
 }

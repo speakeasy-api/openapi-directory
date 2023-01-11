@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FreeBusyRequestItem } from "./freebusyrequestitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FreeBusyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var freebusyrequestitem_1 = require("./freebusyrequestitem");
 var FreeBusyRequest = /** @class */ (function (_super) {
     __extends(FreeBusyRequest, _super);
     function FreeBusyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarExpansionMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarExpansionMax" }),
         __metadata("design:type", Number)
     ], FreeBusyRequest.prototype, "calendarExpansionMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupExpansionMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupExpansionMax" }),
         __metadata("design:type", Number)
     ], FreeBusyRequest.prototype, "groupExpansionMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: FreeBusyRequestItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: freebusyrequestitem_1.FreeBusyRequestItem }),
         __metadata("design:type", Array)
     ], FreeBusyRequest.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeMax" }),
         __metadata("design:type", Date)
     ], FreeBusyRequest.prototype, "timeMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeMin" }),
         __metadata("design:type", Date)
     ], FreeBusyRequest.prototype, "timeMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], FreeBusyRequest.prototype, "timeZone", void 0);
     return FreeBusyRequest;
-}(SpeakeasyBase));
-export { FreeBusyRequest };
+}(utils_1.SpeakeasyBase));
+exports.FreeBusyRequest = FreeBusyRequest;

@@ -2,6 +2,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Session } from "./session";
 export declare class PlayMediaIntentHandlingInvocation extends SpeakeasyBase {
     method: string;
-    params: Map<string, any>;
+    params: Record<string, any>;
     session?: Session;
 }

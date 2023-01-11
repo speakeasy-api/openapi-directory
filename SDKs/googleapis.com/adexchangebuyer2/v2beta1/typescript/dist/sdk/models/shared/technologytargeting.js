@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CriteriaTargeting } from "./criteriatargeting";
-import { OperatingSystemTargeting } from "./operatingsystemtargeting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TechnologyTargeting = void 0;
+var utils_1 = require("../../../internal/utils");
+var criteriatargeting_1 = require("./criteriatargeting");
+var operatingsystemtargeting_1 = require("./operatingsystemtargeting");
 // TechnologyTargeting
 /**
  * Represents targeting about various types of technology.
@@ -35,17 +38,17 @@ var TechnologyTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceCapabilityTargeting" }),
-        __metadata("design:type", CriteriaTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceCapabilityTargeting" }),
+        __metadata("design:type", criteriatargeting_1.CriteriaTargeting)
     ], TechnologyTargeting.prototype, "deviceCapabilityTargeting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceCategoryTargeting" }),
-        __metadata("design:type", CriteriaTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceCategoryTargeting" }),
+        __metadata("design:type", criteriatargeting_1.CriteriaTargeting)
     ], TechnologyTargeting.prototype, "deviceCategoryTargeting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingSystemTargeting" }),
-        __metadata("design:type", OperatingSystemTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingSystemTargeting" }),
+        __metadata("design:type", operatingsystemtargeting_1.OperatingSystemTargeting)
     ], TechnologyTargeting.prototype, "operatingSystemTargeting", void 0);
     return TechnologyTargeting;
-}(SpeakeasyBase));
-export { TechnologyTargeting };
+}(utils_1.SpeakeasyBase));
+exports.TechnologyTargeting = TechnologyTargeting;

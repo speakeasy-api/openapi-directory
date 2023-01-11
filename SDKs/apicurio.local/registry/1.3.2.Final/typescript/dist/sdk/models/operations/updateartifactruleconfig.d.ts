@@ -14,7 +14,7 @@ export declare class UpdateArtifactRuleConfigRequest extends SpeakeasyBase {
 }
 export declare class UpdateArtifactRuleConfigResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     rule?: shared.Rule;
     statusCode: number;
 }

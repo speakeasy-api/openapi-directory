@@ -23,7 +23,7 @@ export declare class AllFaresRequest extends SpeakeasyBase {
     security: AllFaresSecurity;
 }
 export declare class AllFaresResponse extends SpeakeasyBase {
-    allFares200ApplicationJsonString?: string;
+    allFares200ApplicationJSONString?: string;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectSortByTypeEnum } from "./projectsortbytypeenum";
-import { SortOrderTypeEnum } from "./sortordertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListProjectsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectsortbytypeenum_1 = require("./projectsortbytypeenum");
+var sortordertypeenum_1 = require("./sortordertypeenum");
 var ListProjectsInput = /** @class */ (function (_super) {
     __extends(ListProjectsInput, _super);
     function ListProjectsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListProjectsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortBy" }),
         __metadata("design:type", String)
     ], ListProjectsInput.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], ListProjectsInput.prototype, "sortOrder", void 0);
     return ListProjectsInput;
-}(SpeakeasyBase));
-export { ListProjectsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListProjectsInput = ListProjectsInput;

@@ -35,11 +35,11 @@ export class RevokeApiSecretResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  revokeApiSecret401ApplicationJsonAny?: any;
+  revokeAPISecret401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  revokeApiSecret403ApplicationJsonAny?: any;
+  revokeAPISecret403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  revokeApiSecret404ApplicationJsonOneOf?: any;
+  revokeAPISecret404ApplicationJSONOneOf?: any;
 }

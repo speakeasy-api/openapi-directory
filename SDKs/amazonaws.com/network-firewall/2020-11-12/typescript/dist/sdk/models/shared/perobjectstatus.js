@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PerObjectSyncStatusEnum } from "./perobjectsyncstatusenum";
-// PerObjectStatus
-/**
- * Provides configuration status for a single policy or rule group that is used for a firewall endpoint. Network Firewall provides each endpoint with the rules that are configured in the firewall policy. Each time you add a subnet or modify the associated firewall policy, Network Firewall synchronizes the rules in the endpoint, so it can properly filter network traffic. This is part of a <a>SyncState</a> for a firewall.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerObjectStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var perobjectsyncstatusenum_1 = require("./perobjectsyncstatusenum");
 var PerObjectStatus = /** @class */ (function (_super) {
     __extends(PerObjectStatus, _super);
     function PerObjectStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SyncStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SyncStatus" }),
         __metadata("design:type", String)
     ], PerObjectStatus.prototype, "syncStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateToken" }),
         __metadata("design:type", String)
     ], PerObjectStatus.prototype, "updateToken", void 0);
     return PerObjectStatus;
-}(SpeakeasyBase));
-export { PerObjectStatus };
+}(utils_1.SpeakeasyBase));
+exports.PerObjectStatus = PerObjectStatus;

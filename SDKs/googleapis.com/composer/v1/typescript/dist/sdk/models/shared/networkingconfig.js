@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NetworkingConfigConnectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkingConfig = exports.NetworkingConfigConnectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NetworkingConfigConnectionTypeEnum;
 (function (NetworkingConfigConnectionTypeEnum) {
     NetworkingConfigConnectionTypeEnum["ConnectionTypeUnspecified"] = "CONNECTION_TYPE_UNSPECIFIED";
     NetworkingConfigConnectionTypeEnum["VpcPeering"] = "VPC_PEERING";
     NetworkingConfigConnectionTypeEnum["PrivateServiceConnect"] = "PRIVATE_SERVICE_CONNECT";
-})(NetworkingConfigConnectionTypeEnum || (NetworkingConfigConnectionTypeEnum = {}));
+})(NetworkingConfigConnectionTypeEnum = exports.NetworkingConfigConnectionTypeEnum || (exports.NetworkingConfigConnectionTypeEnum = {}));
 // NetworkingConfig
 /**
  * Configuration options for networking connections in the Composer 2 environment.
@@ -39,9 +42,9 @@ var NetworkingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionType" }),
         __metadata("design:type", String)
     ], NetworkingConfig.prototype, "connectionType", void 0);
     return NetworkingConfig;
-}(SpeakeasyBase));
-export { NetworkingConfig };
+}(utils_1.SpeakeasyBase));
+exports.NetworkingConfig = NetworkingConfig;

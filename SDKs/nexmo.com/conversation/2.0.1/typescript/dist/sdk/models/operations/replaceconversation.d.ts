@@ -20,5 +20,5 @@ export declare class ReplaceConversationRequest extends SpeakeasyBase {
 export declare class ReplaceConversationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    replaceConversation200ApplicationJsonObject?: ReplaceConversation200ApplicationJson;
+    replaceConversation200ApplicationJSONObject?: ReplaceConversation200ApplicationJson;
 }

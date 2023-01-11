@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricHeader } from "./metricheader";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnHeader = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricheader_1 = require("./metricheader");
 // ColumnHeader
 /**
  * Column headers.
@@ -34,13 +37,13 @@ var ColumnHeader = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", Array)
     ], ColumnHeader.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricHeader" }),
-        __metadata("design:type", MetricHeader)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricHeader" }),
+        __metadata("design:type", metricheader_1.MetricHeader)
     ], ColumnHeader.prototype, "metricHeader", void 0);
     return ColumnHeader;
-}(SpeakeasyBase));
-export { ColumnHeader };
+}(utils_1.SpeakeasyBase));
+exports.ColumnHeader = ColumnHeader;

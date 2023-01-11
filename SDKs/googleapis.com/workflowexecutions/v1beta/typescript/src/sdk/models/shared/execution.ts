@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { Status } from "./status";
 
 
@@ -33,7 +33,7 @@ export class Execution extends SpeakeasyBase {
   endTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -67,7 +67,7 @@ export class ExecutionInput extends SpeakeasyBase {
   callLogLevel?: ExecutionCallLogLevelEnum;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: Status;

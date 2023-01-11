@@ -42,7 +42,7 @@ export class ContainerDefinition extends SpeakeasyBase {
   dnsServers?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=dockerLabels" })
-  dockerLabels?: Map<string, string>;
+  dockerLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=dockerSecurityOptions" })
   dockerSecurityOptions?: string[];

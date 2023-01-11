@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogGroupField } from "./loggroupfield";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLogGroupFieldsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var loggroupfield_1 = require("./loggroupfield");
 var GetLogGroupFieldsResponse = /** @class */ (function (_super) {
     __extends(GetLogGroupFieldsResponse, _super);
     function GetLogGroupFieldsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logGroupFields", elemType: LogGroupField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logGroupFields", elemType: loggroupfield_1.LogGroupField }),
         __metadata("design:type", Array)
     ], GetLogGroupFieldsResponse.prototype, "logGroupFields", void 0);
     return GetLogGroupFieldsResponse;
-}(SpeakeasyBase));
-export { GetLogGroupFieldsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLogGroupFieldsResponse = GetLogGroupFieldsResponse;

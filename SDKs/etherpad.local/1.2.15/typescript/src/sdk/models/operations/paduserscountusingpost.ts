@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class PadUsersCountUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class PadUsersCountUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class PadUsersCountUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class PadUsersCountUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class PadUsersCountUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingPost200ApplicationJsonObject?: PadUsersCountUsingPost200ApplicationJson;
+  padUsersCountUsingPOST200ApplicationJSONObject?: PadUsersCountUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingPost400ApplicationJsonObject?: PadUsersCountUsingPost400ApplicationJson;
+  padUsersCountUsingPOST400ApplicationJSONObject?: PadUsersCountUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingPost401ApplicationJsonObject?: PadUsersCountUsingPost401ApplicationJson;
+  padUsersCountUsingPOST401ApplicationJSONObject?: PadUsersCountUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingPost500ApplicationJsonObject?: PadUsersCountUsingPost500ApplicationJson;
+  padUsersCountUsingPOST500ApplicationJSONObject?: PadUsersCountUsingPost500ApplicationJson;
 }

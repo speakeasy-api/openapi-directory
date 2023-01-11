@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetConfigureHealthCheckActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConfigureHealthCheckResponse = exports.GetConfigureHealthCheckRequest = exports.GetConfigureHealthCheckHeaders = exports.GetConfigureHealthCheckQueryParams = exports.GetConfigureHealthCheckVersionEnum = exports.GetConfigureHealthCheckHealthCheck = exports.GetConfigureHealthCheckActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetConfigureHealthCheckActionEnum;
 (function (GetConfigureHealthCheckActionEnum) {
     GetConfigureHealthCheckActionEnum["ConfigureHealthCheck"] = "ConfigureHealthCheck";
-})(GetConfigureHealthCheckActionEnum || (GetConfigureHealthCheckActionEnum = {}));
+})(GetConfigureHealthCheckActionEnum = exports.GetConfigureHealthCheckActionEnum || (exports.GetConfigureHealthCheckActionEnum = {}));
 // GetConfigureHealthCheckHealthCheck
 /**
  * Information about a health check.
@@ -37,125 +40,125 @@ var GetConfigureHealthCheckHealthCheck = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=HealthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=HealthyThreshold" }),
         __metadata("design:type", Number)
     ], GetConfigureHealthCheckHealthCheck.prototype, "healthyThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=Interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=Interval" }),
         __metadata("design:type", Number)
     ], GetConfigureHealthCheckHealthCheck.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=Target" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHealthCheck.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=Timeout" }),
         __metadata("design:type", Number)
     ], GetConfigureHealthCheckHealthCheck.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=UnhealthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=UnhealthyThreshold" }),
         __metadata("design:type", Number)
     ], GetConfigureHealthCheckHealthCheck.prototype, "unhealthyThreshold", void 0);
     return GetConfigureHealthCheckHealthCheck;
-}(SpeakeasyBase));
-export { GetConfigureHealthCheckHealthCheck };
-export var GetConfigureHealthCheckVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetConfigureHealthCheckHealthCheck = GetConfigureHealthCheckHealthCheck;
+var GetConfigureHealthCheckVersionEnum;
 (function (GetConfigureHealthCheckVersionEnum) {
     GetConfigureHealthCheckVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(GetConfigureHealthCheckVersionEnum || (GetConfigureHealthCheckVersionEnum = {}));
+})(GetConfigureHealthCheckVersionEnum = exports.GetConfigureHealthCheckVersionEnum || (exports.GetConfigureHealthCheckVersionEnum = {}));
 var GetConfigureHealthCheckQueryParams = /** @class */ (function (_super) {
     __extends(GetConfigureHealthCheckQueryParams, _super);
     function GetConfigureHealthCheckQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HealthCheck" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HealthCheck" }),
         __metadata("design:type", GetConfigureHealthCheckHealthCheck)
     ], GetConfigureHealthCheckQueryParams.prototype, "healthCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckQueryParams.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckQueryParams.prototype, "version", void 0);
     return GetConfigureHealthCheckQueryParams;
-}(SpeakeasyBase));
-export { GetConfigureHealthCheckQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigureHealthCheckQueryParams = GetConfigureHealthCheckQueryParams;
 var GetConfigureHealthCheckHeaders = /** @class */ (function (_super) {
     __extends(GetConfigureHealthCheckHeaders, _super);
     function GetConfigureHealthCheckHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetConfigureHealthCheckHeaders;
-}(SpeakeasyBase));
-export { GetConfigureHealthCheckHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigureHealthCheckHeaders = GetConfigureHealthCheckHeaders;
 var GetConfigureHealthCheckRequest = /** @class */ (function (_super) {
     __extends(GetConfigureHealthCheckRequest, _super);
     function GetConfigureHealthCheckRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConfigureHealthCheckQueryParams)
     ], GetConfigureHealthCheckRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConfigureHealthCheckHeaders)
     ], GetConfigureHealthCheckRequest.prototype, "headers", void 0);
     return GetConfigureHealthCheckRequest;
-}(SpeakeasyBase));
-export { GetConfigureHealthCheckRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigureHealthCheckRequest = GetConfigureHealthCheckRequest;
 var GetConfigureHealthCheckResponse = /** @class */ (function (_super) {
     __extends(GetConfigureHealthCheckResponse, _super);
     function GetConfigureHealthCheckResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetConfigureHealthCheckResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConfigureHealthCheckResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConfigureHealthCheckResponse.prototype, "statusCode", void 0);
     return GetConfigureHealthCheckResponse;
-}(SpeakeasyBase));
-export { GetConfigureHealthCheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigureHealthCheckResponse = GetConfigureHealthCheckResponse;

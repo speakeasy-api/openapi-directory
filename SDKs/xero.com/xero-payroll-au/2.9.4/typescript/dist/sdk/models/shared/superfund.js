@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,122 +23,124 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuperFundTypeEnum } from "./superfundtypeenum";
-import { ValidationError } from "./validationerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuperFundInput = exports.SuperFund = void 0;
+var utils_1 = require("../../../internal/utils");
+var superfundtypeenum_1 = require("./superfundtypeenum");
+var validationerror_1 = require("./validationerror");
 var SuperFund = /** @class */ (function (_super) {
     __extends(SuperFund, _super);
     function SuperFund() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ABN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ABN" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "abn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountName" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountNumber" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BSB" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BSB" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "bsb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ElectronicServiceAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElectronicServiceAddress" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "electronicServiceAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployerNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployerNumber" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "employerNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SPIN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SPIN" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "spin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperFundID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperFundID" }),
         __metadata("design:type", String)
-    ], SuperFund.prototype, "superFundId", void 0);
+    ], SuperFund.prototype, "superFundID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USI" }),
         __metadata("design:type", String)
     ], SuperFund.prototype, "usi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], SuperFund.prototype, "updatedDateUtc", void 0);
+    ], SuperFund.prototype, "updatedDateUTC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], SuperFund.prototype, "validationErrors", void 0);
     return SuperFund;
-}(SpeakeasyBase));
-export { SuperFund };
+}(utils_1.SpeakeasyBase));
+exports.SuperFund = SuperFund;
 var SuperFundInput = /** @class */ (function (_super) {
     __extends(SuperFundInput, _super);
     function SuperFundInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ABN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ABN" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "abn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountName" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountNumber" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BSB" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BSB" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "bsb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ElectronicServiceAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElectronicServiceAddress" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "electronicServiceAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployerNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployerNumber" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "employerNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SPIN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SPIN" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "spin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperFundID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperFundID" }),
         __metadata("design:type", String)
-    ], SuperFundInput.prototype, "superFundId", void 0);
+    ], SuperFundInput.prototype, "superFundID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USI" }),
         __metadata("design:type", String)
     ], SuperFundInput.prototype, "usi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], SuperFundInput.prototype, "validationErrors", void 0);
     return SuperFundInput;
-}(SpeakeasyBase));
-export { SuperFundInput };
+}(utils_1.SpeakeasyBase));
+exports.SuperFundInput = SuperFundInput;

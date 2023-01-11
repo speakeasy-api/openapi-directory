@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StopwordOptionsStatus } from "./stopwordoptionsstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeStopwordOptionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var stopwordoptionsstatus_1 = require("./stopwordoptionsstatus");
 // DescribeStopwordOptionsResponse
 /**
  * A response message that contains the stopword options for a search domain.
@@ -34,9 +37,9 @@ var DescribeStopwordOptionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StopwordOptionsStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", stopwordoptionsstatus_1.StopwordOptionsStatus)
     ], DescribeStopwordOptionsResponse.prototype, "stopwords", void 0);
     return DescribeStopwordOptionsResponse;
-}(SpeakeasyBase));
-export { DescribeStopwordOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeStopwordOptionsResponse = DescribeStopwordOptionsResponse;

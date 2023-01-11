@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserMessageContract } from "./usermessagecontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartialFindResultUserMessageContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var usermessagecontract_1 = require("./usermessagecontract");
 var PartialFindResultUserMessageContract = /** @class */ (function (_super) {
     __extends(PartialFindResultUserMessageContract, _super);
     function PartialFindResultUserMessageContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: UserMessageContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: usermessagecontract_1.UserMessageContract }),
         __metadata("design:type", Array)
     ], PartialFindResultUserMessageContract.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term" }),
         __metadata("design:type", String)
     ], PartialFindResultUserMessageContract.prototype, "term", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], PartialFindResultUserMessageContract.prototype, "totalCount", void 0);
     return PartialFindResultUserMessageContract;
-}(SpeakeasyBase));
-export { PartialFindResultUserMessageContract };
+}(utils_1.SpeakeasyBase));
+exports.PartialFindResultUserMessageContract = PartialFindResultUserMessageContract;

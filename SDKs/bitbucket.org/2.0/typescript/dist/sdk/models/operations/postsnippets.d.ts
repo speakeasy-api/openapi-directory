@@ -6,13 +6,13 @@ export declare class PostSnippetsSecurity extends SpeakeasyBase {
     apiKey?: shared.SchemeApiKey;
 }
 export declare class PostSnippetsRequest extends SpeakeasyBase {
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostSnippetsSecurity;
 }
 export declare class PostSnippetsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    snippet?: Map<string, any>;
+    error?: Record<string, any>;
+    snippet?: Record<string, any>;
 }

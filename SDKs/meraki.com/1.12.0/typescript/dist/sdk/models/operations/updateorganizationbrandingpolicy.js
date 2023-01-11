@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationBrandingPolicyResponse = exports.UpdateOrganizationBrandingPolicyRequest = exports.UpdateOrganizationBrandingPolicyRequestBody = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettings = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyAdminSettings = exports.UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum = exports.UpdateOrganizationBrandingPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationBrandingPolicyPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPolicyPathParams, _super);
     function UpdateOrganizationBrandingPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=brandingPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=brandingPolicyId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyPathParams.prototype, "brandingPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationBrandingPolicyPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyPathParams };
-export var UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyPathParams = UpdateOrganizationBrandingPolicyPathParams;
+var UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum["AllOrganizationAdmins"] = "All organization admins";
     UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum["AllEnterpriseAdmins"] = "All enterprise admins";
@@ -49,7 +52,7 @@ export var UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum
     UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum["SpecificAdmins"] = "Specific admins...";
     UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum["AllAdmins"] = "All admins";
     UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum["AllSamlAdmins"] = "All SAML admins";
-})(UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum || (UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum = {}));
+})(UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum = {}));
 // UpdateOrganizationBrandingPolicyRequestBodyAdminSettings
 /**
  * Settings for describing which kinds of admins this policy applies to.
@@ -60,82 +63,82 @@ var UpdateOrganizationBrandingPolicyRequestBodyAdminSettings = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliesTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliesTo" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyAdminSettings.prototype, "appliesTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], UpdateOrganizationBrandingPolicyRequestBodyAdminSettings.prototype, "values", void 0);
     return UpdateOrganizationBrandingPolicyRequestBodyAdminSettings;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyRequestBodyAdminSettings };
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyRequestBodyAdminSettings = UpdateOrganizationBrandingPolicyRequestBodyAdminSettings;
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsApiDocsSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum = {}));
-export var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum;
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum = {}));
+var UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum;
 (function (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum) {
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum["DefaultOrInherit"] = "default or inherit";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum["Hide"] = "hide";
     UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum["Show"] = "show";
-})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum || (UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum = {}));
+})(UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum = exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum || (exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum = {}));
 // UpdateOrganizationBrandingPolicyRequestBodyHelpSettings
 /**
  *     Settings for describing the modifications to various Help page features. Each property in this object accepts one of
@@ -150,121 +153,121 @@ var UpdateOrganizationBrandingPolicyRequestBodyHelpSettings = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiDocsSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiDocsSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "apiDocsSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=casesSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=casesSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "casesSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ciscoMerakiProductDocumentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ciscoMerakiProductDocumentation" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "ciscoMerakiProductDocumentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communitySubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communitySubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "communitySubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataProtectionRequestsSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataProtectionRequestsSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "dataProtectionRequestsSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewallInfoSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewallInfoSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "firewallInfoSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=getHelpSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=getHelpSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "getHelpSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=getHelpSubtabKnowledgeBaseSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=getHelpSubtabKnowledgeBaseSearch" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "getHelpSubtabKnowledgeBaseSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hardwareReplacementsSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hardwareReplacementsSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "hardwareReplacementsSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=helpTab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=helpTab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "helpTab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newFeaturesSubtab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newFeaturesSubtab" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "newFeaturesSubtab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smForums" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smForums" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "smForums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportContactInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportContactInfo" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "supportContactInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=universalSearchKnowledgeBaseSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=universalSearchKnowledgeBaseSearch" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBodyHelpSettings.prototype, "universalSearchKnowledgeBaseSearch", void 0);
     return UpdateOrganizationBrandingPolicyRequestBodyHelpSettings;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyRequestBodyHelpSettings };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyRequestBodyHelpSettings = UpdateOrganizationBrandingPolicyRequestBodyHelpSettings;
 var UpdateOrganizationBrandingPolicyRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPolicyRequestBody, _super);
     function UpdateOrganizationBrandingPolicyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminSettings" }),
         __metadata("design:type", UpdateOrganizationBrandingPolicyRequestBodyAdminSettings)
     ], UpdateOrganizationBrandingPolicyRequestBody.prototype, "adminSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationBrandingPolicyRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=helpSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=helpSettings" }),
         __metadata("design:type", UpdateOrganizationBrandingPolicyRequestBodyHelpSettings)
     ], UpdateOrganizationBrandingPolicyRequestBody.prototype, "helpSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyRequestBody.prototype, "name", void 0);
     return UpdateOrganizationBrandingPolicyRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyRequestBody = UpdateOrganizationBrandingPolicyRequestBody;
 var UpdateOrganizationBrandingPolicyRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPolicyRequest, _super);
     function UpdateOrganizationBrandingPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationBrandingPolicyPathParams)
     ], UpdateOrganizationBrandingPolicyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationBrandingPolicyRequestBody)
     ], UpdateOrganizationBrandingPolicyRequest.prototype, "request", void 0);
     return UpdateOrganizationBrandingPolicyRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyRequest = UpdateOrganizationBrandingPolicyRequest;
 var UpdateOrganizationBrandingPolicyResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPolicyResponse, _super);
     function UpdateOrganizationBrandingPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationBrandingPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationBrandingPolicyResponse.prototype, "updateOrganizationBrandingPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationBrandingPolicyResponse.prototype, "updateOrganizationBrandingPolicy200ApplicationJSONObject", void 0);
     return UpdateOrganizationBrandingPolicyResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPolicyResponse = UpdateOrganizationBrandingPolicyResponse;

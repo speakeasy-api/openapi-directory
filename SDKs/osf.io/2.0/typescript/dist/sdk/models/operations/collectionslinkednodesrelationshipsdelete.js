@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsLinkedNodesRelationshipsDeleteResponse = exports.CollectionsLinkedNodesRelationshipsDeleteRequest = exports.CollectionsLinkedNodesRelationshipsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsLinkedNodesRelationshipsDeletePathParams = /** @class */ (function (_super) {
     __extends(CollectionsLinkedNodesRelationshipsDeletePathParams, _super);
     function CollectionsLinkedNodesRelationshipsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsLinkedNodesRelationshipsDeletePathParams.prototype, "collectionId", void 0);
     return CollectionsLinkedNodesRelationshipsDeletePathParams;
-}(SpeakeasyBase));
-export { CollectionsLinkedNodesRelationshipsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedNodesRelationshipsDeletePathParams = CollectionsLinkedNodesRelationshipsDeletePathParams;
 var CollectionsLinkedNodesRelationshipsDeleteRequest = /** @class */ (function (_super) {
     __extends(CollectionsLinkedNodesRelationshipsDeleteRequest, _super);
     function CollectionsLinkedNodesRelationshipsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsLinkedNodesRelationshipsDeletePathParams)
     ], CollectionsLinkedNodesRelationshipsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CollectionsLinkedNodesRelationshipsDeleteRequest.prototype, "request", void 0);
     return CollectionsLinkedNodesRelationshipsDeleteRequest;
-}(SpeakeasyBase));
-export { CollectionsLinkedNodesRelationshipsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedNodesRelationshipsDeleteRequest = CollectionsLinkedNodesRelationshipsDeleteRequest;
 var CollectionsLinkedNodesRelationshipsDeleteResponse = /** @class */ (function (_super) {
     __extends(CollectionsLinkedNodesRelationshipsDeleteResponse, _super);
     function CollectionsLinkedNodesRelationshipsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsLinkedNodesRelationshipsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsLinkedNodesRelationshipsDeleteResponse.prototype, "statusCode", void 0);
     return CollectionsLinkedNodesRelationshipsDeleteResponse;
-}(SpeakeasyBase));
-export { CollectionsLinkedNodesRelationshipsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedNodesRelationshipsDeleteResponse = CollectionsLinkedNodesRelationshipsDeleteResponse;

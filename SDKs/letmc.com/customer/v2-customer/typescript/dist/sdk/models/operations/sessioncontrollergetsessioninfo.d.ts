@@ -11,9 +11,9 @@ export declare class SessionControllerGetSessionInfoRequest extends SpeakeasyBas
 }
 export declare class SessionControllerGetSessionInfoResponse extends SpeakeasyBase {
     contentType: string;
-    sessionControllerGetSessionInfo200ApplicationJsonString?: string;
-    sessionControllerGetSessionInfo200ApplicationXmlString?: string;
-    sessionControllerGetSessionInfo200TextJsonString?: string;
-    sessionControllerGetSessionInfo200TextXmlString?: string;
+    sessionControllerGetSessionInfo200ApplicationJSONString?: string;
+    sessionControllerGetSessionInfo200ApplicationXMLString?: string;
+    sessionControllerGetSessionInfo200TextJSONString?: string;
+    sessionControllerGetSessionInfo200TextXMLString?: string;
     statusCode: number;
 }

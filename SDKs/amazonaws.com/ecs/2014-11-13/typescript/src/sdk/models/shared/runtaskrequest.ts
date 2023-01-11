@@ -21,7 +21,7 @@ export class RunTaskRequest extends SpeakeasyBase {
   count?: number;
 
   @SpeakeasyMetadata({ data: "json, name=enableECSManagedTags" })
-  enableEcsManagedTags?: boolean;
+  enableECSManagedTags?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" })
   enableExecuteCommand?: boolean;

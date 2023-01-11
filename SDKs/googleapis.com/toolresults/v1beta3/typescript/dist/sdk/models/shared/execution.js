@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Timestamp } from "./timestamp";
-import { Outcome } from "./outcome";
-import { Specification } from "./specification";
-export var ExecutionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Execution = exports.ExecutionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var timestamp_1 = require("./timestamp");
+var outcome_1 = require("./outcome");
+var specification_1 = require("./specification");
+var ExecutionStateEnum;
 (function (ExecutionStateEnum) {
     ExecutionStateEnum["UnknownState"] = "unknownState";
     ExecutionStateEnum["Pending"] = "pending";
     ExecutionStateEnum["InProgress"] = "inProgress";
     ExecutionStateEnum["Complete"] = "complete";
-})(ExecutionStateEnum || (ExecutionStateEnum = {}));
+})(ExecutionStateEnum = exports.ExecutionStateEnum || (exports.ExecutionStateEnum = {}));
 // Execution
 /**
  * An Execution represents a collection of Steps. For instance, it could represent: - a mobile test executed across a range of device configurations - a jenkins job with a build step followed by a test step The maximum size of an execution message is 1 MiB. An Execution can be updated until its state is set to COMPLETE at which point it becomes immutable.
@@ -43,37 +46,37 @@ var Execution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completionTime" }),
-        __metadata("design:type", Timestamp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completionTime" }),
+        __metadata("design:type", timestamp_1.Timestamp)
     ], Execution.prototype, "completionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
-        __metadata("design:type", Timestamp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
+        __metadata("design:type", timestamp_1.Timestamp)
     ], Execution.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionDefinitions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionDefinitions" }),
         __metadata("design:type", Array)
     ], Execution.prototype, "dimensionDefinitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionId" }),
         __metadata("design:type", String)
     ], Execution.prototype, "executionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outcome" }),
-        __metadata("design:type", Outcome)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outcome" }),
+        __metadata("design:type", outcome_1.Outcome)
     ], Execution.prototype, "outcome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specification" }),
-        __metadata("design:type", Specification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specification" }),
+        __metadata("design:type", specification_1.Specification)
     ], Execution.prototype, "specification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Execution.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testExecutionMatrixId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testExecutionMatrixId" }),
         __metadata("design:type", String)
     ], Execution.prototype, "testExecutionMatrixId", void 0);
     return Execution;
-}(SpeakeasyBase));
-export { Execution };
+}(utils_1.SpeakeasyBase));
+exports.Execution = Execution;

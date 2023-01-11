@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FeatureState } from "./featurestate";
-// ScopeFeatureState
-/**
- * ScopeFeatureState contains Scope-wide Feature status information.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScopeFeatureState = void 0;
+var utils_1 = require("../../../internal/utils");
+var featurestate_1 = require("./featurestate");
 var ScopeFeatureState = /** @class */ (function (_super) {
     __extends(ScopeFeatureState, _super);
     function ScopeFeatureState() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", FeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", featurestate_1.FeatureState)
     ], ScopeFeatureState.prototype, "state", void 0);
     return ScopeFeatureState;
-}(SpeakeasyBase));
-export { ScopeFeatureState };
+}(utils_1.SpeakeasyBase));
+exports.ScopeFeatureState = ScopeFeatureState;

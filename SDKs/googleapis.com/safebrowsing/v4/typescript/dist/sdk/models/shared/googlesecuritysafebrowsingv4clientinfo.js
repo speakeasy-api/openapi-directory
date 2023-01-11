@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ClientInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleSecuritySafebrowsingV4ClientInfo
 /**
  * The client metadata associated with Safe Browsing API requests.
@@ -33,13 +36,13 @@ var GoogleSecuritySafebrowsingV4ClientInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ClientInfo.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientVersion" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ClientInfo.prototype, "clientVersion", void 0);
     return GoogleSecuritySafebrowsingV4ClientInfo;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ClientInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ClientInfo = GoogleSecuritySafebrowsingV4ClientInfo;

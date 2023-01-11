@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloneOrganizationResponse = exports.CloneOrganizationRequest = exports.CloneOrganizationRequestBody = exports.CloneOrganizationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CloneOrganizationPathParams = /** @class */ (function (_super) {
     __extends(CloneOrganizationPathParams, _super);
     function CloneOrganizationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], CloneOrganizationPathParams.prototype, "organizationId", void 0);
     return CloneOrganizationPathParams;
-}(SpeakeasyBase));
-export { CloneOrganizationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloneOrganizationPathParams = CloneOrganizationPathParams;
 var CloneOrganizationRequestBody = /** @class */ (function (_super) {
     __extends(CloneOrganizationRequestBody, _super);
     function CloneOrganizationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CloneOrganizationRequestBody.prototype, "name", void 0);
     return CloneOrganizationRequestBody;
-}(SpeakeasyBase));
-export { CloneOrganizationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CloneOrganizationRequestBody = CloneOrganizationRequestBody;
 var CloneOrganizationRequest = /** @class */ (function (_super) {
     __extends(CloneOrganizationRequest, _super);
     function CloneOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloneOrganizationPathParams)
     ], CloneOrganizationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CloneOrganizationRequestBody)
     ], CloneOrganizationRequest.prototype, "request", void 0);
     return CloneOrganizationRequest;
-}(SpeakeasyBase));
-export { CloneOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloneOrganizationRequest = CloneOrganizationRequest;
 var CloneOrganizationResponse = /** @class */ (function (_super) {
     __extends(CloneOrganizationResponse, _super);
     function CloneOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloneOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloneOrganizationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CloneOrganizationResponse.prototype, "cloneOrganization201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CloneOrganizationResponse.prototype, "cloneOrganization201ApplicationJSONObject", void 0);
     return CloneOrganizationResponse;
-}(SpeakeasyBase));
-export { CloneOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloneOrganizationResponse = CloneOrganizationResponse;

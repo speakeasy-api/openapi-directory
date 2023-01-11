@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,63 +10,61 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import axios from "axios";
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
-import { Security } from "./models/shared";
-export var ServerList = [
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var shared_1 = require("./models/shared");
+exports.ServerList = [
     "http://appmesh.{region}.amazonaws.com",
     "https://appmesh.{region}.amazonaws.com",
     "http://appmesh.{region}.amazonaws.com.cn",
     "https://appmesh.{region}.amazonaws.com.cn",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
-export function WithSecurity(security) {
-    if (!(security instanceof utils.SpeakeasyBase)) {
-        security = new Security(security);
-    }
-    return function (sdk) {
-        sdk._security = security;
-    };
-}
 /* SDK Documentation: https://docs.aws.amazon.com/appmesh/ - Amazon Web Services documentation*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        if (props.security) {
+            var security = props.security;
+            if (!(props.security instanceof utils.SpeakeasyBase))
+                security = new shared_1.Security(props.security);
+            this._securityClient = utils.createSecurityClient(this._defaultClient, security);
         }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            if (this._security) {
-                this._securityClient = utils.CreateSecurityClient(this._defaultClient, this._security);
-            }
-            else {
-                this._securityClient = this._defaultClient;
-            }
+        else {
+            this._securityClient = this._defaultClient;
         }
     }
     /**
@@ -83,7 +82,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/meshes";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -91,16 +90,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -108,54 +102,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.createMeshOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * createRoute - <p>Creates a new route that is associated with a virtual router.</p>
@@ -173,10 +166,10 @@ var SDK = /** @class */ (function () {
             req = new operations.CreateRouteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -184,16 +177,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -201,54 +189,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.createRouteOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * createVirtualNode - <p>Creates a new virtual node within a service mesh.</p>
@@ -277,10 +264,10 @@ var SDK = /** @class */ (function () {
             req = new operations.CreateVirtualNodeRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualNodes", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualNodes", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -288,16 +275,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -305,54 +287,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.createVirtualNodeOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * createVirtualRouter - <p>Creates a new virtual router within a service mesh.</p>
@@ -366,10 +347,10 @@ var SDK = /** @class */ (function () {
             req = new operations.CreateVirtualRouterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouters", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouters", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -377,16 +358,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -394,54 +370,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.createVirtualRouterOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteMesh - <p>Deletes an existing service mesh.</p>
@@ -453,11 +428,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DeleteMeshRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "delete", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -465,49 +440,48 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.deleteMeshOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.resourceInUseException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteRoute - Deletes an existing route.
@@ -517,11 +491,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DeleteRouteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "delete", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -529,49 +503,48 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.deleteRouteOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.resourceInUseException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteVirtualNode - Deletes an existing virtual node.
@@ -581,11 +554,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DeleteVirtualNodeRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "delete", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -593,49 +566,48 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.deleteVirtualNodeOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.resourceInUseException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteVirtualRouter - <p>Deletes an existing virtual router.</p>
@@ -647,11 +619,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DeleteVirtualRouterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "delete", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -659,49 +631,48 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.deleteVirtualRouterOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.resourceInUseException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * describeMesh - Describes an existing service mesh.
@@ -711,11 +682,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DescribeMeshRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -723,44 +694,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.describeMeshOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * describeRoute - Describes an existing route.
@@ -770,11 +740,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DescribeRouteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -782,44 +752,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.describeRouteOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * describeVirtualNode - Describes an existing virtual node.
@@ -829,11 +798,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DescribeVirtualNodeRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -841,44 +810,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.describeVirtualNodeOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * describeVirtualRouter - Describes an existing virtual router.
@@ -888,11 +856,11 @@ var SDK = /** @class */ (function () {
             req = new operations.DescribeVirtualRouterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -900,44 +868,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.describeVirtualRouterOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listMeshes - Returns a list of existing service meshes.
@@ -949,11 +916,11 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/meshes";
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -961,44 +928,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listMeshesOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listRoutes - Returns a list of existing routes in a service mesh.
@@ -1008,13 +974,13 @@ var SDK = /** @class */ (function () {
             req = new operations.ListRoutesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1022,44 +988,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listRoutesOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVirtualNodes - Returns a list of existing virtual nodes.
@@ -1069,13 +1034,13 @@ var SDK = /** @class */ (function () {
             req = new operations.ListVirtualNodesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualNodes", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualNodes", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1083,44 +1048,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listVirtualNodesOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVirtualRouters - Returns a list of existing virtual routers in a service mesh.
@@ -1130,13 +1094,13 @@ var SDK = /** @class */ (function () {
             req = new operations.ListVirtualRoutersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouters", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouters", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1144,44 +1108,43 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listVirtualRoutersOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateRoute - Updates an existing route for a specified service mesh and virtual router.
@@ -1192,10 +1155,10 @@ var SDK = /** @class */ (function () {
             req = new operations.UpdateRouteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1203,16 +1166,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1220,54 +1178,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.updateRouteOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateVirtualNode - Updates an existing virtual node in a specified service mesh.
@@ -1278,10 +1235,10 @@ var SDK = /** @class */ (function () {
             req = new operations.UpdateVirtualNodeRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualNodes/{virtualNodeName}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1289,16 +1246,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1306,54 +1258,53 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.updateVirtualNodeOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateVirtualRouter - Updates an existing virtual router in a specified service mesh.
@@ -1364,10 +1315,10 @@ var SDK = /** @class */ (function () {
             req = new operations.UpdateVirtualRouterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/meshes/{meshName}/virtualRouters/{virtualRouterName}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1375,16 +1326,11 @@ var SDK = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1392,55 +1338,54 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.updateVirtualRouterOutput = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.badRequestException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.conflictException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.forbiddenException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.internalServerErrorException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.limitExceededException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.notFoundException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.serviceUnavailableException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.tooManyRequestsException = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

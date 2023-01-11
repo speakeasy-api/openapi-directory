@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarrierRate = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var CarrierRate = /** @class */ (function (_super) {
     __extends(CarrierRate, _super);
     function CarrierRate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrierName" }),
         __metadata("design:type", String)
     ], CarrierRate.prototype, "carrierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrierService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrierService" }),
         __metadata("design:type", String)
     ], CarrierRate.prototype, "carrierService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flatAdjustment" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flatAdjustment" }),
+        __metadata("design:type", price_1.Price)
     ], CarrierRate.prototype, "flatAdjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CarrierRate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originPostalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originPostalCode" }),
         __metadata("design:type", String)
     ], CarrierRate.prototype, "originPostalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageAdjustment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageAdjustment" }),
         __metadata("design:type", String)
     ], CarrierRate.prototype, "percentageAdjustment", void 0);
     return CarrierRate;
-}(SpeakeasyBase));
-export { CarrierRate };
+}(utils_1.SpeakeasyBase));
+exports.CarrierRate = CarrierRate;

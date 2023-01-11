@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EvaluationTypeEnum } from "./evaluationtypeenum";
-import { Metrics } from "./metrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WindowSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluationtypeenum_1 = require("./evaluationtypeenum");
+var metrics_1 = require("./metrics");
 // WindowSummary
 /**
  * <p>The metrics for a time range within the evaluation portion of a dataset. This object is part of the <a>EvaluationResult</a> object.</p> <p>The <code>TestWindowStart</code> and <code>TestWindowEnd</code> parameters are determined by the <code>BackTestWindowOffset</code> parameter of the <a>EvaluationParameters</a> object.</p>
@@ -35,25 +38,25 @@ var WindowSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationType" }),
         __metadata("design:type", String)
     ], WindowSummary.prototype, "evaluationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ItemCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ItemCount" }),
         __metadata("design:type", Number)
     ], WindowSummary.prototype, "itemCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metrics" }),
-        __metadata("design:type", Metrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metrics" }),
+        __metadata("design:type", metrics_1.Metrics)
     ], WindowSummary.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestWindowEnd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestWindowEnd" }),
         __metadata("design:type", Date)
     ], WindowSummary.prototype, "testWindowEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestWindowStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestWindowStart" }),
         __metadata("design:type", Date)
     ], WindowSummary.prototype, "testWindowStart", void 0);
     return WindowSummary;
-}(SpeakeasyBase));
-export { WindowSummary };
+}(utils_1.SpeakeasyBase));
+exports.WindowSummary = WindowSummary;

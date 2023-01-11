@@ -43,5 +43,5 @@ export class UpdateNetworkSyslogServersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSyslogServers200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSyslogServers200ApplicationJSONObject?: Record<string, any>;
 }

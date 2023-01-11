@@ -15,6 +15,6 @@ export declare class GetPlayerGamePpaRequest extends SpeakeasyBase {
 }
 export declare class GetPlayerGamePpaResponse extends SpeakeasyBase {
     contentType: string;
-    playerGamePpas?: shared.PlayerGamePpa[];
+    playerGamePPAS?: shared.PlayerGamePpa[];
     statusCode: number;
 }

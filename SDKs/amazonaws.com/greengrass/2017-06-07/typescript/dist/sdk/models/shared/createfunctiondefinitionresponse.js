@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateFunctionDefinitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateFunctionDefinitionResponse = /** @class */ (function (_super) {
     __extends(CreateFunctionDefinitionResponse, _super);
     function CreateFunctionDefinitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTimestamp" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "creationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTimestamp" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestVersion" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "latestVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestVersionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestVersionArn" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "latestVersionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateFunctionDefinitionResponse.prototype, "name", void 0);
     return CreateFunctionDefinitionResponse;
-}(SpeakeasyBase));
-export { CreateFunctionDefinitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateFunctionDefinitionResponse = CreateFunctionDefinitionResponse;

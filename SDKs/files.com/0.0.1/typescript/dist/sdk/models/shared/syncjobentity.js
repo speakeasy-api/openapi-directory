@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncJobEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // SyncJobEntity
 /**
  * List Sync Jobs
@@ -33,29 +36,29 @@ var SyncJobEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folder_behavior_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folder_behavior_id" }),
         __metadata("design:type", Number)
     ], SyncJobEntity.prototype, "folderBehaviorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queued_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queued_at" }),
         __metadata("design:type", Date)
     ], SyncJobEntity.prototype, "queuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regional_worker_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regional_worker_status" }),
         __metadata("design:type", String)
     ], SyncJobEntity.prototype, "regionalWorkerStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SyncJobEntity.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], SyncJobEntity.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], SyncJobEntity.prototype, "uuid", void 0);
     return SyncJobEntity;
-}(SpeakeasyBase));
-export { SyncJobEntity };
+}(utils_1.SpeakeasyBase));
+exports.SyncJobEntity = SyncJobEntity;

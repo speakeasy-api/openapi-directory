@@ -150,7 +150,7 @@ export class GetServersId200ApplicationJsonServerImage extends SpeakeasyBase {
   imageSize: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -214,7 +214,7 @@ export class GetServersId200ApplicationJsonServerPlacementGroupNullable extends 
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -452,7 +452,7 @@ export class GetServersId200ApplicationJsonServer extends SpeakeasyBase {
   iso: GetServersId200ApplicationJsonServerIso;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=load_balancers" })
   loadBalancers?: number[];
@@ -512,8 +512,8 @@ export class GetServersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getServersId200ApplicationJsonObject?: GetServersId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getServersId200ApplicationJSONObject?: GetServersId200ApplicationJson;
 }

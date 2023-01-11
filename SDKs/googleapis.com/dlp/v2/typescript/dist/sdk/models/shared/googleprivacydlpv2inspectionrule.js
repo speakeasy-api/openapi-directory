@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2ExclusionRule } from "./googleprivacydlpv2exclusionrule";
-import { GooglePrivacyDlpV2HotwordRule } from "./googleprivacydlpv2hotwordrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectionRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2exclusionrule_1 = require("./googleprivacydlpv2exclusionrule");
+var googleprivacydlpv2hotwordrule_1 = require("./googleprivacydlpv2hotwordrule");
 // GooglePrivacyDlpV2InspectionRule
 /**
  * A single inspection rule to be applied to infoTypes, specified in `InspectionRuleSet`.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2InspectionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusionRule" }),
-        __metadata("design:type", GooglePrivacyDlpV2ExclusionRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusionRule" }),
+        __metadata("design:type", googleprivacydlpv2exclusionrule_1.GooglePrivacyDlpV2ExclusionRule)
     ], GooglePrivacyDlpV2InspectionRule.prototype, "exclusionRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hotwordRule" }),
-        __metadata("design:type", GooglePrivacyDlpV2HotwordRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hotwordRule" }),
+        __metadata("design:type", googleprivacydlpv2hotwordrule_1.GooglePrivacyDlpV2HotwordRule)
     ], GooglePrivacyDlpV2InspectionRule.prototype, "hotwordRule", void 0);
     return GooglePrivacyDlpV2InspectionRule;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectionRule };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectionRule = GooglePrivacyDlpV2InspectionRule;

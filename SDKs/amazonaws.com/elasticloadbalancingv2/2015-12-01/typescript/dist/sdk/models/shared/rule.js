@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
-import { RuleCondition } from "./rulecondition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rule = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
+var rulecondition_1 = require("./rulecondition");
 // Rule
 /**
  * Information about a rule.
@@ -35,25 +38,25 @@ var Rule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], Rule.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: RuleCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: rulecondition_1.RuleCondition }),
         __metadata("design:type", Array)
     ], Rule.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Rule.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Rule.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Rule.prototype, "ruleArn", void 0);
     return Rule;
-}(SpeakeasyBase));
-export { Rule };
+}(utils_1.SpeakeasyBase));
+exports.Rule = Rule;

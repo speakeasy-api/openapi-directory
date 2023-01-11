@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CreateSessionUsingGetQueryParams extends SpeakeasyBase {
-    authorId?: string;
-    groupId?: string;
+    authorID?: string;
+    groupID?: string;
     validUntil?: string;
 }
 export declare class CreateSessionUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    sessionId?: string;
+    sessionID?: string;
 }
 export declare class CreateSessionUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -14,17 +14,17 @@ export declare class CreateSessionUsingGet200ApplicationJson extends SpeakeasyBa
 }
 export declare class CreateSessionUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateSessionUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateSessionUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateSessionUsingGetRequest extends SpeakeasyBase {
@@ -33,8 +33,8 @@ export declare class CreateSessionUsingGetRequest extends SpeakeasyBase {
 export declare class CreateSessionUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createSessionUsingGet200ApplicationJsonObject?: CreateSessionUsingGet200ApplicationJson;
-    createSessionUsingGet400ApplicationJsonObject?: CreateSessionUsingGet400ApplicationJson;
-    createSessionUsingGet401ApplicationJsonObject?: CreateSessionUsingGet401ApplicationJson;
-    createSessionUsingGet500ApplicationJsonObject?: CreateSessionUsingGet500ApplicationJson;
+    createSessionUsingGET200ApplicationJSONObject?: CreateSessionUsingGet200ApplicationJson;
+    createSessionUsingGET400ApplicationJSONObject?: CreateSessionUsingGet400ApplicationJson;
+    createSessionUsingGET401ApplicationJSONObject?: CreateSessionUsingGet401ApplicationJson;
+    createSessionUsingGET500ApplicationJSONObject?: CreateSessionUsingGet500ApplicationJson;
 }

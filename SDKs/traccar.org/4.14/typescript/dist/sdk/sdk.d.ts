@@ -17,11 +17,12 @@ import { Server } from "./server";
 import { Session } from "./session";
 import { Statistics } from "./statistics";
 import { Users } from "./users";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://demo.traccar.org/api", "https://demo2.traccar.org/api", "https://demo3.traccar.org/api", "https://server.traccar.org/api", "http://{host}:{port}/api"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     attributes: Attributes;
     calendars: Calendars;
@@ -42,11 +43,9 @@ export declare class SDK {
     users: Users;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

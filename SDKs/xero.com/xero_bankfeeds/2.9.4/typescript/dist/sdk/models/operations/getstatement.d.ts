@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetStatementPathParams extends SpeakeasyBase {
-    statementId: string;
+    statementID: string;
 }
 export declare class GetStatementQueryParams extends SpeakeasyBase {
     statementId: string;

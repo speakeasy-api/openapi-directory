@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdAnalyticsPulsesRequest extends Speake
 }
 export declare class GetOfferingsOfferingIdAnalyticsPulsesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    getOfferingsOfferingIdAnalyticsPulses200ApplicationJsonStrings?: string[];
+    error?: shared.ErrorT;
     statusCode: number;
+    getOfferingsOfferingIdAnalyticsPulses200ApplicationJSONStrings?: string[];
 }

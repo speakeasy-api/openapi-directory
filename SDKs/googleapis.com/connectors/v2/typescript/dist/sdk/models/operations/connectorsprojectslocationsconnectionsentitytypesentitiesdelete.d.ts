@@ -27,6 +27,6 @@ export declare class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDe
 }
 export declare class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

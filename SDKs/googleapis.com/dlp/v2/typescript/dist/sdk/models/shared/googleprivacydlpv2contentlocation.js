@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2DocumentLocation } from "./googleprivacydlpv2documentlocation";
-import { GooglePrivacyDlpV2ImageLocation } from "./googleprivacydlpv2imagelocation";
-import { GooglePrivacyDlpV2MetadataLocation } from "./googleprivacydlpv2metadatalocation";
-import { GooglePrivacyDlpV2RecordLocation } from "./googleprivacydlpv2recordlocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ContentLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2documentlocation_1 = require("./googleprivacydlpv2documentlocation");
+var googleprivacydlpv2imagelocation_1 = require("./googleprivacydlpv2imagelocation");
+var googleprivacydlpv2metadatalocation_1 = require("./googleprivacydlpv2metadatalocation");
+var googleprivacydlpv2recordlocation_1 = require("./googleprivacydlpv2recordlocation");
 // GooglePrivacyDlpV2ContentLocation
 /**
  * Precise location of the finding within a document, record, image, or metadata container.
@@ -37,33 +40,33 @@ var GooglePrivacyDlpV2ContentLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "containerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerTimestamp" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "containerTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerVersion" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "containerVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentLocation" }),
-        __metadata("design:type", GooglePrivacyDlpV2DocumentLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentLocation" }),
+        __metadata("design:type", googleprivacydlpv2documentlocation_1.GooglePrivacyDlpV2DocumentLocation)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "documentLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageLocation" }),
-        __metadata("design:type", GooglePrivacyDlpV2ImageLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageLocation" }),
+        __metadata("design:type", googleprivacydlpv2imagelocation_1.GooglePrivacyDlpV2ImageLocation)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "imageLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataLocation" }),
-        __metadata("design:type", GooglePrivacyDlpV2MetadataLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataLocation" }),
+        __metadata("design:type", googleprivacydlpv2metadatalocation_1.GooglePrivacyDlpV2MetadataLocation)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "metadataLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordLocation" }),
-        __metadata("design:type", GooglePrivacyDlpV2RecordLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordLocation" }),
+        __metadata("design:type", googleprivacydlpv2recordlocation_1.GooglePrivacyDlpV2RecordLocation)
     ], GooglePrivacyDlpV2ContentLocation.prototype, "recordLocation", void 0);
     return GooglePrivacyDlpV2ContentLocation;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ContentLocation };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ContentLocation = GooglePrivacyDlpV2ContentLocation;

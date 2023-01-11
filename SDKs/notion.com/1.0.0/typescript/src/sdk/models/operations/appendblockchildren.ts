@@ -91,11 +91,11 @@ export class AppendBlockChildrenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appendBlockChildren200ApplicationJsonObject?: AppendBlockChildren200ApplicationJson;
+  appendBlockChildren200ApplicationJSONObject?: AppendBlockChildren200ApplicationJson;
 }

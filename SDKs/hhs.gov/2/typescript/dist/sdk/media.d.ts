@@ -9,11 +9,35 @@ export declare class Media {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
+     * getResourcesMediaJson - Get MediaItems
+     *
+     * Media Items Listings
+    **/
+    getResourcesMediaJson(req: operations.GetResourcesMediaJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaJsonResponse>;
+    /**
      * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
      *
      * Get the list of featured content in the syndication system
     **/
     getResourcesMediaFeaturedJson(req: operations.GetResourcesMediaFeaturedJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaFeaturedJsonResponse>;
+    /**
+     * getResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
+     *
+     * Get the media with the highest ratings.
+    **/
+    getResourcesMediaMostPopularMediaFormat(req: operations.GetResourcesMediaMostPopularMediaFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaMostPopularMediaFormatResponse>;
+    /**
+     * getResourcesMediaSearchResultsJson - Get MediaItems by search query
+     *
+     * Full search
+    **/
+    getResourcesMediaSearchResultsJson(req: operations.GetResourcesMediaSearchResultsJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaSearchResultsJsonResponse>;
+    /**
+     * getResourcesMediaIdJson - Get MediaItem by ID
+     *
+     * Information about a specific media item
+    **/
+    getResourcesMediaIdJson(req: operations.GetResourcesMediaIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdJsonResponse>;
     /**
      * getResourcesMediaIdContent - Get content for MediaItem
      *
@@ -26,12 +50,6 @@ export declare class Media {
      * Get the javascript or iframe embed code for this item (to embed it on a web page).
     **/
     getResourcesMediaIdEmbedJson(req: operations.GetResourcesMediaIdEmbedJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdEmbedJsonResponse>;
-    /**
-     * getResourcesMediaIdJson - Get MediaItem by ID
-     *
-     * Information about a specific media item
-    **/
-    getResourcesMediaIdJson(req: operations.GetResourcesMediaIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdJsonResponse>;
     /**
      * getResourcesMediaIdPreviewJpg - Get Tag by ID
      *
@@ -62,22 +80,4 @@ export declare class Media {
      * Youtube meta-data for a video item.
     **/
     getResourcesMediaIdYoutubeMetaDataJson(req: operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse>;
-    /**
-     * getResourcesMediaJson - Get MediaItems
-     *
-     * Media Items Listings
-    **/
-    getResourcesMediaJson(req: operations.GetResourcesMediaJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaJsonResponse>;
-    /**
-     * getResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
-     *
-     * Get the media with the highest ratings.
-    **/
-    getResourcesMediaMostPopularMediaFormat(req: operations.GetResourcesMediaMostPopularMediaFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaMostPopularMediaFormatResponse>;
-    /**
-     * getResourcesMediaSearchResultsJson - Get MediaItems by search query
-     *
-     * Full search
-    **/
-    getResourcesMediaSearchResultsJson(req: operations.GetResourcesMediaSearchResultsJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesMediaSearchResultsJsonResponse>;
 }

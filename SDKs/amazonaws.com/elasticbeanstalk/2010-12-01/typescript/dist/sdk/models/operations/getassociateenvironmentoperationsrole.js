@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAssociateEnvironmentOperationsRoleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociateEnvironmentOperationsRoleResponse = exports.GetAssociateEnvironmentOperationsRoleRequest = exports.GetAssociateEnvironmentOperationsRoleHeaders = exports.GetAssociateEnvironmentOperationsRoleQueryParams = exports.GetAssociateEnvironmentOperationsRoleVersionEnum = exports.GetAssociateEnvironmentOperationsRoleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAssociateEnvironmentOperationsRoleActionEnum;
 (function (GetAssociateEnvironmentOperationsRoleActionEnum) {
     GetAssociateEnvironmentOperationsRoleActionEnum["AssociateEnvironmentOperationsRole"] = "AssociateEnvironmentOperationsRole";
-})(GetAssociateEnvironmentOperationsRoleActionEnum || (GetAssociateEnvironmentOperationsRoleActionEnum = {}));
-export var GetAssociateEnvironmentOperationsRoleVersionEnum;
+})(GetAssociateEnvironmentOperationsRoleActionEnum = exports.GetAssociateEnvironmentOperationsRoleActionEnum || (exports.GetAssociateEnvironmentOperationsRoleActionEnum = {}));
+var GetAssociateEnvironmentOperationsRoleVersionEnum;
 (function (GetAssociateEnvironmentOperationsRoleVersionEnum) {
     GetAssociateEnvironmentOperationsRoleVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetAssociateEnvironmentOperationsRoleVersionEnum || (GetAssociateEnvironmentOperationsRoleVersionEnum = {}));
+})(GetAssociateEnvironmentOperationsRoleVersionEnum = exports.GetAssociateEnvironmentOperationsRoleVersionEnum || (exports.GetAssociateEnvironmentOperationsRoleVersionEnum = {}));
 var GetAssociateEnvironmentOperationsRoleQueryParams = /** @class */ (function (_super) {
     __extends(GetAssociateEnvironmentOperationsRoleQueryParams, _super);
     function GetAssociateEnvironmentOperationsRoleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleQueryParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OperationsRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=OperationsRole" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleQueryParams.prototype, "operationsRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleQueryParams.prototype, "version", void 0);
     return GetAssociateEnvironmentOperationsRoleQueryParams;
-}(SpeakeasyBase));
-export { GetAssociateEnvironmentOperationsRoleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateEnvironmentOperationsRoleQueryParams = GetAssociateEnvironmentOperationsRoleQueryParams;
 var GetAssociateEnvironmentOperationsRoleHeaders = /** @class */ (function (_super) {
     __extends(GetAssociateEnvironmentOperationsRoleHeaders, _super);
     function GetAssociateEnvironmentOperationsRoleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAssociateEnvironmentOperationsRoleHeaders;
-}(SpeakeasyBase));
-export { GetAssociateEnvironmentOperationsRoleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateEnvironmentOperationsRoleHeaders = GetAssociateEnvironmentOperationsRoleHeaders;
 var GetAssociateEnvironmentOperationsRoleRequest = /** @class */ (function (_super) {
     __extends(GetAssociateEnvironmentOperationsRoleRequest, _super);
     function GetAssociateEnvironmentOperationsRoleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociateEnvironmentOperationsRoleQueryParams)
     ], GetAssociateEnvironmentOperationsRoleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociateEnvironmentOperationsRoleHeaders)
     ], GetAssociateEnvironmentOperationsRoleRequest.prototype, "headers", void 0);
     return GetAssociateEnvironmentOperationsRoleRequest;
-}(SpeakeasyBase));
-export { GetAssociateEnvironmentOperationsRoleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateEnvironmentOperationsRoleRequest = GetAssociateEnvironmentOperationsRoleRequest;
 var GetAssociateEnvironmentOperationsRoleResponse = /** @class */ (function (_super) {
     __extends(GetAssociateEnvironmentOperationsRoleResponse, _super);
     function GetAssociateEnvironmentOperationsRoleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAssociateEnvironmentOperationsRoleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAssociateEnvironmentOperationsRoleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAssociateEnvironmentOperationsRoleResponse.prototype, "statusCode", void 0);
     return GetAssociateEnvironmentOperationsRoleResponse;
-}(SpeakeasyBase));
-export { GetAssociateEnvironmentOperationsRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateEnvironmentOperationsRoleResponse = GetAssociateEnvironmentOperationsRoleResponse;

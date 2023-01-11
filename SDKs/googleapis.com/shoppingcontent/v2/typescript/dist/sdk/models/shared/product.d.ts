@@ -12,7 +12,7 @@ import { ProductShippingWeight } from "./productshippingweight";
 import { ProductTax } from "./producttax";
 import { ProductUnitPricingBaseMeasure } from "./productunitpricingbasemeasure";
 import { ProductUnitPricingMeasure } from "./productunitpricingmeasure";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 /**
  *  Required product attributes are primarily defined by the products data specification. See the Products Data Specification Help Center article for information. Product data. After inserting, updating, or deleting a product, it may take several minutes before changes take effect.
 **/
@@ -95,5 +95,5 @@ export declare class Product extends SpeakeasyBase {
     unitPricingBaseMeasure?: ProductUnitPricingBaseMeasure;
     unitPricingMeasure?: ProductUnitPricingMeasure;
     validatedDestinations?: string[];
-    warnings?: Error[];
+    warnings?: ErrorT[];
 }

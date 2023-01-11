@@ -191,23 +191,23 @@ export class IncerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  incer400ApplicationJsonObject?: Incer400ApplicationJson;
+  incer400ApplicationJSONObject?: Incer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer401ApplicationJsonObject?: Incer401ApplicationJson;
+  incer401ApplicationJSONObject?: Incer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer404ApplicationJsonObject?: Incer404ApplicationJson;
+  incer404ApplicationJSONObject?: Incer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer500ApplicationJsonObject?: Incer500ApplicationJson;
+  incer500ApplicationJSONObject?: Incer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer502ApplicationJsonObject?: Incer502ApplicationJson;
+  incer502ApplicationJSONObject?: Incer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer503ApplicationJsonObject?: Incer503ApplicationJson;
+  incer503ApplicationJSONObject?: Incer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  incer504ApplicationJsonObject?: Incer504ApplicationJson;
+  incer504ApplicationJSONObject?: Incer504ApplicationJson;
 }

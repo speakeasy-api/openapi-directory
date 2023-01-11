@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DailyActiveUsersByDateResponse = exports.DailyActiveUsersByDateRequest = exports.DailyActiveUsersByDateQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DailyActiveUsersByDateQueryParams = /** @class */ (function (_super) {
     __extends(DailyActiveUsersByDateQueryParams, _super);
     function DailyActiveUsersByDateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_id" }),
         __metadata("design:type", String)
     ], DailyActiveUsersByDateQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], DailyActiveUsersByDateQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], DailyActiveUsersByDateQueryParams.prototype, "length", void 0);
     return DailyActiveUsersByDateQueryParams;
-}(SpeakeasyBase));
-export { DailyActiveUsersByDateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DailyActiveUsersByDateQueryParams = DailyActiveUsersByDateQueryParams;
 var DailyActiveUsersByDateRequest = /** @class */ (function (_super) {
     __extends(DailyActiveUsersByDateRequest, _super);
     function DailyActiveUsersByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DailyActiveUsersByDateQueryParams)
     ], DailyActiveUsersByDateRequest.prototype, "queryParams", void 0);
     return DailyActiveUsersByDateRequest;
-}(SpeakeasyBase));
-export { DailyActiveUsersByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.DailyActiveUsersByDateRequest = DailyActiveUsersByDateRequest;
 var DailyActiveUsersByDateResponse = /** @class */ (function (_super) {
     __extends(DailyActiveUsersByDateResponse, _super);
     function DailyActiveUsersByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DailyActiveUsersByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DailyActiveUsersByDateResponse.prototype, "statusCode", void 0);
     return DailyActiveUsersByDateResponse;
-}(SpeakeasyBase));
-export { DailyActiveUsersByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.DailyActiveUsersByDateResponse = DailyActiveUsersByDateResponse;

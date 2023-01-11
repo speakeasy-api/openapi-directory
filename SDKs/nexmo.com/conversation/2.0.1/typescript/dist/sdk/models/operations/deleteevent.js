@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteEventResponse = exports.DeleteEventRequest = exports.DeleteEventPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteEventPathParams = /** @class */ (function (_super) {
     __extends(DeleteEventPathParams, _super);
     function DeleteEventPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=conversation_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=conversation_id" }),
         __metadata("design:type", String)
     ], DeleteEventPathParams.prototype, "conversationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=event_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=event_id" }),
         __metadata("design:type", String)
     ], DeleteEventPathParams.prototype, "eventId", void 0);
     return DeleteEventPathParams;
-}(SpeakeasyBase));
-export { DeleteEventPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEventPathParams = DeleteEventPathParams;
 var DeleteEventRequest = /** @class */ (function (_super) {
     __extends(DeleteEventRequest, _super);
     function DeleteEventRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteEventPathParams)
     ], DeleteEventRequest.prototype, "pathParams", void 0);
     return DeleteEventRequest;
-}(SpeakeasyBase));
-export { DeleteEventRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEventRequest = DeleteEventRequest;
 var DeleteEventResponse = /** @class */ (function (_super) {
     __extends(DeleteEventResponse, _super);
     function DeleteEventResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteEventResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteEventResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], DeleteEventResponse.prototype, "deleteEvent200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteEventResponse.prototype, "deleteEvent200ApplicationJSONObject", void 0);
     return DeleteEventResponse;
-}(SpeakeasyBase));
-export { DeleteEventResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEventResponse = DeleteEventResponse;

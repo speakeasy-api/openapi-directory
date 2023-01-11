@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1NetworkDevice } from "./googlechromemanagementv1networkdevice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1NetworkInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1networkdevice_1 = require("./googlechromemanagementv1networkdevice");
 // GoogleChromeManagementV1NetworkInfo
 /**
  * Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
@@ -34,9 +37,9 @@ var GoogleChromeManagementV1NetworkInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkDevices", elemType: GoogleChromeManagementV1NetworkDevice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkDevices", elemType: googlechromemanagementv1networkdevice_1.GoogleChromeManagementV1NetworkDevice }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1NetworkInfo.prototype, "networkDevices", void 0);
     return GoogleChromeManagementV1NetworkInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1NetworkInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1NetworkInfo = GoogleChromeManagementV1NetworkInfo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnapshotImage = void 0;
+var utils_1 = require("../../../internal/utils");
 // SnapshotImage
 /**
  * An image of a snapshot.
@@ -33,25 +36,25 @@ var SnapshotImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], SnapshotImage.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], SnapshotImage.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mime_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mime_type" }),
         __metadata("design:type", String)
     ], SnapshotImage.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], SnapshotImage.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], SnapshotImage.prototype, "width", void 0);
     return SnapshotImage;
-}(SpeakeasyBase));
-export { SnapshotImage };
+}(utils_1.SpeakeasyBase));
+exports.SnapshotImage = SnapshotImage;

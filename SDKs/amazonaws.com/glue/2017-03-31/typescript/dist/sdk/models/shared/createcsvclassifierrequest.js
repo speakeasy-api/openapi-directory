@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CsvHeaderOptionEnum } from "./csvheaderoptionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCsvClassifierRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var csvheaderoptionenum_1 = require("./csvheaderoptionenum");
 // CreateCsvClassifierRequest
 /**
  * Specifies a custom CSV classifier for <code>CreateClassifier</code> to create.
@@ -34,33 +37,33 @@ var CreateCsvClassifierRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowSingleColumn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowSingleColumn" }),
         __metadata("design:type", Boolean)
     ], CreateCsvClassifierRequest.prototype, "allowSingleColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContainsHeader" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContainsHeader" }),
         __metadata("design:type", String)
     ], CreateCsvClassifierRequest.prototype, "containsHeader", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Delimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Delimiter" }),
         __metadata("design:type", String)
     ], CreateCsvClassifierRequest.prototype, "delimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisableValueTrimming" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisableValueTrimming" }),
         __metadata("design:type", Boolean)
     ], CreateCsvClassifierRequest.prototype, "disableValueTrimming", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Header" }),
         __metadata("design:type", Array)
     ], CreateCsvClassifierRequest.prototype, "header", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateCsvClassifierRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuoteSymbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuoteSymbol" }),
         __metadata("design:type", String)
     ], CreateCsvClassifierRequest.prototype, "quoteSymbol", void 0);
     return CreateCsvClassifierRequest;
-}(SpeakeasyBase));
-export { CreateCsvClassifierRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCsvClassifierRequest = CreateCsvClassifierRequest;

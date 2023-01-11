@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SslConfigInput } from "./sslconfig";
-import { SslConfig } from "./sslconfig";
-// MySqlConnectionProfileInput
-/**
- * Specifies connection parameters required specifically for MySQL databases.
-**/
-var MySqlConnectionProfileInput = /** @class */ (function (_super) {
-    __extends(MySqlConnectionProfileInput, _super);
-    function MySqlConnectionProfileInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlId" }),
-        __metadata("design:type", String)
-    ], MySqlConnectionProfileInput.prototype, "cloudSqlId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
-        __metadata("design:type", String)
-    ], MySqlConnectionProfileInput.prototype, "host", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
-        __metadata("design:type", String)
-    ], MySqlConnectionProfileInput.prototype, "password", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
-        __metadata("design:type", Number)
-    ], MySqlConnectionProfileInput.prototype, "port", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl" }),
-        __metadata("design:type", SslConfigInput)
-    ], MySqlConnectionProfileInput.prototype, "ssl", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
-        __metadata("design:type", String)
-    ], MySqlConnectionProfileInput.prototype, "username", void 0);
-    return MySqlConnectionProfileInput;
-}(SpeakeasyBase));
-export { MySqlConnectionProfileInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MySqlConnectionProfileInput = exports.MySqlConnectionProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var sslconfig_1 = require("./sslconfig");
+var sslconfig_2 = require("./sslconfig");
 // MySqlConnectionProfile
 /**
  * Specifies connection parameters required specifically for MySQL databases.
@@ -71,33 +38,69 @@ var MySqlConnectionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlId" }),
         __metadata("design:type", String)
     ], MySqlConnectionProfile.prototype, "cloudSqlId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], MySqlConnectionProfile.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], MySqlConnectionProfile.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordSet" }),
         __metadata("design:type", Boolean)
     ], MySqlConnectionProfile.prototype, "passwordSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], MySqlConnectionProfile.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl" }),
-        __metadata("design:type", SslConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl" }),
+        __metadata("design:type", sslconfig_1.SslConfig)
     ], MySqlConnectionProfile.prototype, "ssl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], MySqlConnectionProfile.prototype, "username", void 0);
     return MySqlConnectionProfile;
-}(SpeakeasyBase));
-export { MySqlConnectionProfile };
+}(utils_1.SpeakeasyBase));
+exports.MySqlConnectionProfile = MySqlConnectionProfile;
+// MySqlConnectionProfileInput
+/**
+ * Specifies connection parameters required specifically for MySQL databases.
+**/
+var MySqlConnectionProfileInput = /** @class */ (function (_super) {
+    __extends(MySqlConnectionProfileInput, _super);
+    function MySqlConnectionProfileInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlId" }),
+        __metadata("design:type", String)
+    ], MySqlConnectionProfileInput.prototype, "cloudSqlId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
+        __metadata("design:type", String)
+    ], MySqlConnectionProfileInput.prototype, "host", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
+        __metadata("design:type", String)
+    ], MySqlConnectionProfileInput.prototype, "password", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
+        __metadata("design:type", Number)
+    ], MySqlConnectionProfileInput.prototype, "port", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl" }),
+        __metadata("design:type", sslconfig_2.SslConfigInput)
+    ], MySqlConnectionProfileInput.prototype, "ssl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
+        __metadata("design:type", String)
+    ], MySqlConnectionProfileInput.prototype, "username", void 0);
+    return MySqlConnectionProfileInput;
+}(utils_1.SpeakeasyBase));
+exports.MySqlConnectionProfileInput = MySqlConnectionProfileInput;

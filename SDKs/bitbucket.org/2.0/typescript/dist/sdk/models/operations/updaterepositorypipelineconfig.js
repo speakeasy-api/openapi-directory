@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryPipelineConfigResponse = exports.UpdateRepositoryPipelineConfigRequest = exports.UpdateRepositoryPipelineConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryPipelineConfigPathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineConfigPathParams, _super);
     function UpdateRepositoryPipelineConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineConfigPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineConfigPathParams.prototype, "workspace", void 0);
     return UpdateRepositoryPipelineConfigPathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineConfigPathParams = UpdateRepositoryPipelineConfigPathParams;
 var UpdateRepositoryPipelineConfigRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineConfigRequest, _super);
     function UpdateRepositoryPipelineConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryPipelineConfigPathParams)
     ], UpdateRepositoryPipelineConfigRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineConfigRequest.prototype, "request", void 0);
     return UpdateRepositoryPipelineConfigRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineConfigRequest = UpdateRepositoryPipelineConfigRequest;
 var UpdateRepositoryPipelineConfigResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineConfigResponse, _super);
     function UpdateRepositoryPipelineConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryPipelineConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineConfigResponse.prototype, "pipelinesConfig", void 0);
     return UpdateRepositoryPipelineConfigResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineConfigResponse = UpdateRepositoryPipelineConfigResponse;

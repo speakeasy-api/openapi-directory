@@ -23,7 +23,7 @@ export declare class PutAppLaunchConfigurationResponse extends SpeakeasyBase {
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
-    putAppLaunchConfigurationResponse?: Map<string, any>;
+    putAppLaunchConfigurationResponse?: Record<string, any>;
     statusCode: number;
     unauthorizedOperationException?: any;
 }

@@ -14,5 +14,5 @@ export declare class ReactionsDeleteLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reactionsDeleteLegacy415ApplicationJsonObject?: ReactionsDeleteLegacy415ApplicationJson;
+    reactionsDeleteLegacy415ApplicationJSONObject?: ReactionsDeleteLegacy415ApplicationJson;
 }

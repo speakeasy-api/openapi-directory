@@ -3,7 +3,7 @@ export declare class CreateOrganizationActionBatchPathParams extends SpeakeasyBa
     organizationId: string;
 }
 export declare class CreateOrganizationActionBatchRequestBodyActions extends SpeakeasyBase {
-    body?: Map<string, any>;
+    body?: Record<string, any>;
     operation: string;
     resource: string;
 }
@@ -19,5 +19,5 @@ export declare class CreateOrganizationActionBatchRequest extends SpeakeasyBase 
 export declare class CreateOrganizationActionBatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganizationActionBatch201ApplicationJsonObject?: Map<string, any>;
+    createOrganizationActionBatch201ApplicationJSONObject?: Record<string, any>;
 }

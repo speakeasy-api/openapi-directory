@@ -18,7 +18,7 @@ export declare class NifComprehensiveRequest extends SpeakeasyBase {
 }
 export declare class NifComprehensiveResponse extends SpeakeasyBase {
     contentType: string;
-    nifComprehensive200ApplicationJsonAny?: any;
-    nifComprehensiveDefaultApplicationJsonAny?: any;
+    nifComprehensive200ApplicationJSONAny?: any;
+    nifComprehensiveDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

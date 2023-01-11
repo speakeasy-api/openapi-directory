@@ -7,7 +7,7 @@ export declare class GcmMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;
     collapseKey?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     iconReference?: string;
     imageIconUrl?: string;
     imageUrl?: string;
@@ -17,7 +17,7 @@ export declare class GcmMessage extends SpeakeasyBase {
     silentPush?: boolean;
     smallImageIconUrl?: string;
     sound?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     timeToLive?: number;
     title?: string;
     url?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdditionalOption } from "./additionaloption";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PurchasedRate = void 0;
+var utils_1 = require("../../../internal/utils");
+var additionaloption_1 = require("./additionaloption");
+var amount_1 = require("./amount");
 // PurchasedRate
 /**
  * The &quot;rate&quot; that has been selected and purchased for the shipment, as referenced by the rateId value.
@@ -35,65 +38,65 @@ var PurchasedRate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalOptions", elemType: AdditionalOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalOptions", elemType: additionaloption_1.AdditionalOption }),
         __metadata("design:type", Array)
     ], PurchasedRate.prototype, "additionalOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseShippingCost" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseShippingCost" }),
+        __metadata("design:type", amount_1.Amount)
     ], PurchasedRate.prototype, "baseShippingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationTimeZone" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "destinationTimeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "maxEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "minEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupNetworks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupNetworks" }),
         __metadata("design:type", Array)
     ], PurchasedRate.prototype, "pickupNetworks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlotId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlotId" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "pickupSlotId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupType" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "pickupType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateId" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "rateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierCode" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "shippingCarrierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierName" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "shippingCarrierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingQuoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingQuoteId" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "shippingQuoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServiceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServiceCode" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "shippingServiceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServiceName" }),
         __metadata("design:type", String)
     ], PurchasedRate.prototype, "shippingServiceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalShippingCost" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalShippingCost" }),
+        __metadata("design:type", amount_1.Amount)
     ], PurchasedRate.prototype, "totalShippingCost", void 0);
     return PurchasedRate;
-}(SpeakeasyBase));
-export { PurchasedRate };
+}(utils_1.SpeakeasyBase));
+exports.PurchasedRate = PurchasedRate;

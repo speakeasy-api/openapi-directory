@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProBowlersFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProBowlersResponse = exports.ProBowlersRequest = exports.ProBowlersPathParams = exports.ProBowlersFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProBowlersFormatEnum;
 (function (ProBowlersFormatEnum) {
     ProBowlersFormatEnum["Xml"] = "XML";
     ProBowlersFormatEnum["Json"] = "JSON";
-})(ProBowlersFormatEnum || (ProBowlersFormatEnum = {}));
+})(ProBowlersFormatEnum = exports.ProBowlersFormatEnum || (exports.ProBowlersFormatEnum = {}));
 var ProBowlersPathParams = /** @class */ (function (_super) {
     __extends(ProBowlersPathParams, _super);
     function ProBowlersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProBowlersPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProBowlersPathParams.prototype, "season", void 0);
     return ProBowlersPathParams;
-}(SpeakeasyBase));
-export { ProBowlersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProBowlersPathParams = ProBowlersPathParams;
 var ProBowlersRequest = /** @class */ (function (_super) {
     __extends(ProBowlersRequest, _super);
     function ProBowlersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProBowlersPathParams)
     ], ProBowlersRequest.prototype, "pathParams", void 0);
     return ProBowlersRequest;
-}(SpeakeasyBase));
-export { ProBowlersRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProBowlersRequest = ProBowlersRequest;
 var ProBowlersResponse = /** @class */ (function (_super) {
     __extends(ProBowlersResponse, _super);
     function ProBowlersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProBowlersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProBowlersResponse.prototype, "playerInfos", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProBowlersResponse.prototype, "statusCode", void 0);
     return ProBowlersResponse;
-}(SpeakeasyBase));
-export { ProBowlersResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProBowlersResponse = ProBowlersResponse;

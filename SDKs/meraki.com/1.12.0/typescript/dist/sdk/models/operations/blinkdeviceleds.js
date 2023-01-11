@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlinkDeviceLedsResponse = exports.BlinkDeviceLedsRequest = exports.BlinkDeviceLedsRequestBody = exports.BlinkDeviceLedsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BlinkDeviceLedsPathParams = /** @class */ (function (_super) {
     __extends(BlinkDeviceLedsPathParams, _super);
     function BlinkDeviceLedsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], BlinkDeviceLedsPathParams.prototype, "serial", void 0);
     return BlinkDeviceLedsPathParams;
-}(SpeakeasyBase));
-export { BlinkDeviceLedsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BlinkDeviceLedsPathParams = BlinkDeviceLedsPathParams;
 var BlinkDeviceLedsRequestBody = /** @class */ (function (_super) {
     __extends(BlinkDeviceLedsRequestBody, _super);
     function BlinkDeviceLedsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], BlinkDeviceLedsRequestBody.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duty" }),
         __metadata("design:type", Number)
     ], BlinkDeviceLedsRequestBody.prototype, "duty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", Number)
     ], BlinkDeviceLedsRequestBody.prototype, "period", void 0);
     return BlinkDeviceLedsRequestBody;
-}(SpeakeasyBase));
-export { BlinkDeviceLedsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.BlinkDeviceLedsRequestBody = BlinkDeviceLedsRequestBody;
 var BlinkDeviceLedsRequest = /** @class */ (function (_super) {
     __extends(BlinkDeviceLedsRequest, _super);
     function BlinkDeviceLedsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BlinkDeviceLedsPathParams)
     ], BlinkDeviceLedsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", BlinkDeviceLedsRequestBody)
     ], BlinkDeviceLedsRequest.prototype, "request", void 0);
     return BlinkDeviceLedsRequest;
-}(SpeakeasyBase));
-export { BlinkDeviceLedsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BlinkDeviceLedsRequest = BlinkDeviceLedsRequest;
 var BlinkDeviceLedsResponse = /** @class */ (function (_super) {
     __extends(BlinkDeviceLedsResponse, _super);
     function BlinkDeviceLedsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BlinkDeviceLedsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BlinkDeviceLedsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], BlinkDeviceLedsResponse.prototype, "blinkDeviceLeds202ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BlinkDeviceLedsResponse.prototype, "blinkDeviceLeds202ApplicationJSONObject", void 0);
     return BlinkDeviceLedsResponse;
-}(SpeakeasyBase));
-export { BlinkDeviceLedsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BlinkDeviceLedsResponse = BlinkDeviceLedsResponse;

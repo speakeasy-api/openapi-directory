@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportExportConfig } from "./reportexportconfig";
-import { Tag } from "./tag";
-import { ReportTypeEnum } from "./reporttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateReportGroupInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportexportconfig_1 = require("./reportexportconfig");
+var tag_1 = require("./tag");
+var reporttypeenum_1 = require("./reporttypeenum");
 var CreateReportGroupInput = /** @class */ (function (_super) {
     __extends(CreateReportGroupInput, _super);
     function CreateReportGroupInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportConfig" }),
-        __metadata("design:type", ReportExportConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportConfig" }),
+        __metadata("design:type", reportexportconfig_1.ReportExportConfig)
     ], CreateReportGroupInput.prototype, "exportConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateReportGroupInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateReportGroupInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreateReportGroupInput.prototype, "type", void 0);
     return CreateReportGroupInput;
-}(SpeakeasyBase));
-export { CreateReportGroupInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateReportGroupInput = CreateReportGroupInput;

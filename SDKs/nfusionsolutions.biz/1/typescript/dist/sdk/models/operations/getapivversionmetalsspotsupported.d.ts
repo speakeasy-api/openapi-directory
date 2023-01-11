@@ -14,7 +14,7 @@ export declare class GetApiVVersionMetalsSpotSupportedRequest extends SpeakeasyB
 export declare class GetApiVVersionMetalsSpotSupportedResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getApiVVersionMetalsSpotSupported200ApplicationJsonStrings?: string[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
+    getApiVVersionMetalsSpotSupported200ApplicationJSONStrings?: string[];
 }

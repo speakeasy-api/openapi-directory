@@ -28,8 +28,8 @@ export class PostPortfolioOptimizationInverseVolatilityWeightedResponse extends 
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJsonObject?: PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject?: PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJson;
 }

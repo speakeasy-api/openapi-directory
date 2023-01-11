@@ -9,13 +9,13 @@ export declare class Gateway {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getV05Certs - Get certs for JWT verification
-    **/
-    getV05Certs(config?: AxiosRequestConfig): Promise<operations.GetV05CertsResponse>;
-    /**
      * getV05WellKnownOpenidConfiguration - Get openid configuration
     **/
     getV05WellKnownOpenidConfiguration(config?: AxiosRequestConfig): Promise<operations.GetV05WellKnownOpenidConfigurationResponse>;
+    /**
+     * getV05Certs - Get certs for JWT verification
+    **/
+    getV05Certs(config?: AxiosRequestConfig): Promise<operations.GetV05CertsResponse>;
     /**
      * postV05ConsentRequestsInit - Create consent request
      *

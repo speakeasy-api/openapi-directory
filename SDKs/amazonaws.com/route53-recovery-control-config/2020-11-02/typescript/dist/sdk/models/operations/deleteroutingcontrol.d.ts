@@ -19,7 +19,7 @@ export declare class DeleteRoutingControlResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteRoutingControlResponse?: Map<string, any>;
+    deleteRoutingControlResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

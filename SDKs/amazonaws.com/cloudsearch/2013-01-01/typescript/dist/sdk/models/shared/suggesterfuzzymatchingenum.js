@@ -1,6 +1,9 @@
-export var SuggesterFuzzyMatchingEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuggesterFuzzyMatchingEnum = void 0;
+var SuggesterFuzzyMatchingEnum;
 (function (SuggesterFuzzyMatchingEnum) {
     SuggesterFuzzyMatchingEnum["None"] = "none";
     SuggesterFuzzyMatchingEnum["Low"] = "low";
     SuggesterFuzzyMatchingEnum["High"] = "high";
-})(SuggesterFuzzyMatchingEnum || (SuggesterFuzzyMatchingEnum = {}));
+})(SuggesterFuzzyMatchingEnum = exports.SuggesterFuzzyMatchingEnum || (exports.SuggesterFuzzyMatchingEnum = {}));

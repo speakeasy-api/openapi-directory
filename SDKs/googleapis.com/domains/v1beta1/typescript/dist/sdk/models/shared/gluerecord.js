@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlueRecord = void 0;
+var utils_1 = require("../../../internal/utils");
 // GlueRecord
 /**
  * Defines a host on your domain that is a DNS name server for your domain and/or other domains. Glue records are a way of making the IP address of a name server known, even when it serves DNS queries for its parent domain. For example, when `ns.example.com` is a name server for `example.com`, the host `ns.example.com` must have a glue record to break the circular DNS reference.
@@ -33,17 +36,17 @@ var GlueRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostName" }),
         __metadata("design:type", String)
     ], GlueRecord.prototype, "hostName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4Addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4Addresses" }),
         __metadata("design:type", Array)
     ], GlueRecord.prototype, "ipv4Addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Addresses" }),
         __metadata("design:type", Array)
     ], GlueRecord.prototype, "ipv6Addresses", void 0);
     return GlueRecord;
-}(SpeakeasyBase));
-export { GlueRecord };
+}(utils_1.SpeakeasyBase));
+exports.GlueRecord = GlueRecord;

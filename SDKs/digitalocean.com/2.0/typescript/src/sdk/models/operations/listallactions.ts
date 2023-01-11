@@ -1,96 +1,91 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListAllActionsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 }
 
 
-export class ListAllActionsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListAllActionsQueryParams;
-}
-
-
 export class ListAllActions200ApplicationJsonActionsRegion extends SpeakeasyBase {
-  @Metadata({ data: "json, name=available" })
+  @SpeakeasyMetadata({ data: "json, name=available" })
   available: boolean;
 
-  @Metadata({ data: "json, name=features" })
+  @SpeakeasyMetadata({ data: "json, name=features" })
   features: any;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=sizes" })
+  @SpeakeasyMetadata({ data: "json, name=sizes" })
   sizes: any;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug: string;
 }
 
 export enum ListAllActions200ApplicationJsonActionsStatusEnum {
-    InProgress = "in-progress"
-,    Completed = "completed"
-,    Errored = "errored"
+    InProgress = "in-progress",
+    Completed = "completed",
+    Errored = "errored"
 }
 
 
 export class ListAllActions200ApplicationJsonActions extends SpeakeasyBase {
-  @Metadata({ data: "json, name=completed_at" })
+  @SpeakeasyMetadata({ data: "json, name=completed_at" })
   completedAt?: Date;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: number;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region?: ListAllActions200ApplicationJsonActionsRegion;
 
-  @Metadata({ data: "json, name=region_slug" })
-  regionSlug?: Map<string, any>;
+  @SpeakeasyMetadata({ data: "json, name=region_slug" })
+  regionSlug?: Record<string, any>;
 
-  @Metadata({ data: "json, name=resource_id" })
+  @SpeakeasyMetadata({ data: "json, name=resource_id" })
   resourceId?: number;
 
-  @Metadata({ data: "json, name=resource_type" })
+  @SpeakeasyMetadata({ data: "json, name=resource_type" })
   resourceType?: string;
 
-  @Metadata({ data: "json, name=started_at" })
+  @SpeakeasyMetadata({ data: "json, name=started_at" })
   startedAt?: Date;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status?: ListAllActions200ApplicationJsonActionsStatusEnum;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
 }
 
 
 export class ListAllActions200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllActions200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllActions200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -100,51 +95,57 @@ export class ListAllActions200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllActions200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListAllActions200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=actions", elemType: operations.ListAllActions200ApplicationJsonActions })
+  @SpeakeasyMetadata({ data: "json, name=actions", elemType: ListAllActions200ApplicationJsonActions })
   actions?: ListAllActions200ApplicationJsonActions[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllActions200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllActions200ApplicationJsonMeta;
 }
 
 
 export class ListAllActions401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListAllActionsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListAllActionsQueryParams;
+}
+
+
 export class ListAllActionsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllActions200ApplicationJsonObject?: ListAllActions200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllActions200ApplicationJSONObject?: ListAllActions200ApplicationJson;
 
-  @Metadata()
-  listAllActions401ApplicationJsonObject?: ListAllActions401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllActions401ApplicationJSONObject?: ListAllActions401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -45,7 +45,7 @@ export declare class SearchVideosRequest extends SpeakeasyBase {
 export declare class SearchVideosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
     videos?: shared.Video[];
 }

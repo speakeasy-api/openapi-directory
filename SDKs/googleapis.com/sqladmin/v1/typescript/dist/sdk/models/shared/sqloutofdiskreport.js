@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SqlOutOfDiskReportSqlOutOfDiskStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlOutOfDiskReport = exports.SqlOutOfDiskReportSqlOutOfDiskStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SqlOutOfDiskReportSqlOutOfDiskStateEnum;
 (function (SqlOutOfDiskReportSqlOutOfDiskStateEnum) {
     SqlOutOfDiskReportSqlOutOfDiskStateEnum["SqlOutOfDiskStateUnspecified"] = "SQL_OUT_OF_DISK_STATE_UNSPECIFIED";
     SqlOutOfDiskReportSqlOutOfDiskStateEnum["Normal"] = "NORMAL";
     SqlOutOfDiskReportSqlOutOfDiskStateEnum["SoftShutdown"] = "SOFT_SHUTDOWN";
-})(SqlOutOfDiskReportSqlOutOfDiskStateEnum || (SqlOutOfDiskReportSqlOutOfDiskStateEnum = {}));
+})(SqlOutOfDiskReportSqlOutOfDiskStateEnum = exports.SqlOutOfDiskReportSqlOutOfDiskStateEnum || (exports.SqlOutOfDiskReportSqlOutOfDiskStateEnum = {}));
 // SqlOutOfDiskReport
 /**
  * This message wraps up the information written by out-of-disk detection job.
@@ -39,13 +42,13 @@ var SqlOutOfDiskReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sqlMinRecommendedIncreaseSizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sqlMinRecommendedIncreaseSizeGb" }),
         __metadata("design:type", Number)
     ], SqlOutOfDiskReport.prototype, "sqlMinRecommendedIncreaseSizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sqlOutOfDiskState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sqlOutOfDiskState" }),
         __metadata("design:type", String)
     ], SqlOutOfDiskReport.prototype, "sqlOutOfDiskState", void 0);
     return SqlOutOfDiskReport;
-}(SpeakeasyBase));
-export { SqlOutOfDiskReport };
+}(utils_1.SpeakeasyBase));
+exports.SqlOutOfDiskReport = SqlOutOfDiskReport;

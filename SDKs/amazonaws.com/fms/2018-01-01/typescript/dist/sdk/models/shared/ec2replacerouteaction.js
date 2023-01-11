@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionTarget } from "./actiontarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ec2ReplaceRouteAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var actiontarget_1 = require("./actiontarget");
 // Ec2ReplaceRouteAction
 /**
  * Information about the ReplaceRoute action in Amazon EC2.
@@ -34,29 +37,29 @@ var Ec2ReplaceRouteAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Ec2ReplaceRouteAction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationCidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationCidrBlock" }),
         __metadata("design:type", String)
     ], Ec2ReplaceRouteAction.prototype, "destinationCidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationIpv6CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationIpv6CidrBlock" }),
         __metadata("design:type", String)
     ], Ec2ReplaceRouteAction.prototype, "destinationIpv6CidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationPrefixListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationPrefixListId" }),
         __metadata("design:type", String)
     ], Ec2ReplaceRouteAction.prototype, "destinationPrefixListId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GatewayId" }),
-        __metadata("design:type", ActionTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatewayId" }),
+        __metadata("design:type", actiontarget_1.ActionTarget)
     ], Ec2ReplaceRouteAction.prototype, "gatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteTableId" }),
-        __metadata("design:type", ActionTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteTableId" }),
+        __metadata("design:type", actiontarget_1.ActionTarget)
     ], Ec2ReplaceRouteAction.prototype, "routeTableId", void 0);
     return Ec2ReplaceRouteAction;
-}(SpeakeasyBase));
-export { Ec2ReplaceRouteAction };
+}(utils_1.SpeakeasyBase));
+exports.Ec2ReplaceRouteAction = Ec2ReplaceRouteAction;

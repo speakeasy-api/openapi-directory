@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonRedZoneStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonRedZoneStatsResponse = exports.PlayerSeasonRedZoneStatsRequest = exports.PlayerSeasonRedZoneStatsPathParams = exports.PlayerSeasonRedZoneStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonRedZoneStatsFormatEnum;
 (function (PlayerSeasonRedZoneStatsFormatEnum) {
     PlayerSeasonRedZoneStatsFormatEnum["Xml"] = "XML";
     PlayerSeasonRedZoneStatsFormatEnum["Json"] = "JSON";
-})(PlayerSeasonRedZoneStatsFormatEnum || (PlayerSeasonRedZoneStatsFormatEnum = {}));
+})(PlayerSeasonRedZoneStatsFormatEnum = exports.PlayerSeasonRedZoneStatsFormatEnum || (exports.PlayerSeasonRedZoneStatsFormatEnum = {}));
 var PlayerSeasonRedZoneStatsPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsPathParams, _super);
     function PlayerSeasonRedZoneStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsPathParams.prototype, "season", void 0);
     return PlayerSeasonRedZoneStatsPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsPathParams = PlayerSeasonRedZoneStatsPathParams;
 var PlayerSeasonRedZoneStatsRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsRequest, _super);
     function PlayerSeasonRedZoneStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonRedZoneStatsPathParams)
     ], PlayerSeasonRedZoneStatsRequest.prototype, "pathParams", void 0);
     return PlayerSeasonRedZoneStatsRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsRequest = PlayerSeasonRedZoneStatsRequest;
 var PlayerSeasonRedZoneStatsResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsResponse, _super);
     function PlayerSeasonRedZoneStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonRedZoneStatsResponse.prototype, "playerSeasonRedZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonRedZoneStatsResponse.prototype, "statusCode", void 0);
     return PlayerSeasonRedZoneStatsResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsResponse = PlayerSeasonRedZoneStatsResponse;

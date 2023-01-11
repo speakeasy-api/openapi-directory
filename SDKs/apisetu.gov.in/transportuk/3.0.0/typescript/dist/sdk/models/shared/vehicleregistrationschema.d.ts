@@ -6,21 +6,21 @@ export declare class VehicleRegistrationSchemaCertificateDataVehicleRegistration
 }
 export declare class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle extends SpeakeasyBase {
     chasisNo?: string;
-    class?: Map<string, any>;
+    class?: Record<string, any>;
     color?: string;
-    cubicCapacity?: Map<string, any>;
-    cylinder?: Map<string, any>;
+    cubicCapacity?: Record<string, any>;
+    cylinder?: Record<string, any>;
     engineNo?: string;
-    fitTill?: Map<string, any>;
-    fuelDesc?: Map<string, any>;
-    make?: Map<string, any>;
-    mfgDate?: Map<string, any>;
+    fitTill?: Record<string, any>;
+    fuelDesc?: Record<string, any>;
+    make?: Record<string, any>;
+    mfgDate?: Record<string, any>;
     model?: string;
     seatCapacity?: string;
     sleeperCapacity?: string;
-    standingCapacity?: Map<string, any>;
+    standingCapacity?: Record<string, any>;
     unladenWeight?: string;
-    wheelbase?: Map<string, any>;
+    wheelbase?: Record<string, any>;
 }
 export declare class VehicleRegistrationSchemaCertificateDataVehicleRegistration extends SpeakeasyBase {
     insurance?: VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance;

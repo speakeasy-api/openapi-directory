@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AppExternalCpd extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  inheritedAttributes: Map<string, any>;
+  inheritedAttributes: Record<string, any>;
 
   @SpeakeasyMetadata()
   virtualNetworkInterfaceRequirements?: string[];

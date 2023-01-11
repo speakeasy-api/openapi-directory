@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseMetricNameEnum } from "./relationaldatabasemetricnameenum";
-import { MetricUnitEnum } from "./metricunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseMetricDataRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabasemetricnameenum_1 = require("./relationaldatabasemetricnameenum");
+var metricunitenum_1 = require("./metricunitenum");
 var GetRelationalDatabaseMetricDataRequest = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseMetricDataRequest, _super);
     function GetRelationalDatabaseMetricDataRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", Number)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseName" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "relationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics" }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseMetricDataRequest.prototype, "unit", void 0);
     return GetRelationalDatabaseMetricDataRequest;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseMetricDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseMetricDataRequest = GetRelationalDatabaseMetricDataRequest;

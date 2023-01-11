@@ -9,19 +9,19 @@ export class LeaveApplication extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EmployeeID" })
-  employeeId?: string;
+  employeeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EndDate" })
   endDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LeaveApplicationID" })
-  leaveApplicationId?: string;
+  leaveApplicationID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LeavePeriods", elemType: LeavePeriod })
   leavePeriods?: LeavePeriod[];
 
   @SpeakeasyMetadata({ data: "json, name=LeaveTypeID" })
-  leaveTypeId?: string;
+  leaveTypeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StartDate" })
   startDate?: string;
@@ -30,7 +30,7 @@ export class LeaveApplication extends SpeakeasyBase {
   title?: string;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError })
   validationErrors?: ValidationError[];
@@ -42,19 +42,19 @@ export class LeaveApplicationInput extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EmployeeID" })
-  employeeId?: string;
+  employeeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EndDate" })
   endDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LeaveApplicationID" })
-  leaveApplicationId?: string;
+  leaveApplicationID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LeavePeriods", elemType: LeavePeriod })
   leavePeriods?: LeavePeriod[];
 
   @SpeakeasyMetadata({ data: "json, name=LeaveTypeID" })
-  leaveTypeId?: string;
+  leaveTypeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StartDate" })
   startDate?: string;

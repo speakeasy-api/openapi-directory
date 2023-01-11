@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimulationApplicationSummary } from "./simulationapplicationsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSimulationApplicationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var simulationapplicationsummary_1 = require("./simulationapplicationsummary");
 var ListSimulationApplicationsResponse = /** @class */ (function (_super) {
     __extends(ListSimulationApplicationsResponse, _super);
     function ListSimulationApplicationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListSimulationApplicationsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simulationApplicationSummaries", elemType: SimulationApplicationSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simulationApplicationSummaries", elemType: simulationapplicationsummary_1.SimulationApplicationSummary }),
         __metadata("design:type", Array)
     ], ListSimulationApplicationsResponse.prototype, "simulationApplicationSummaries", void 0);
     return ListSimulationApplicationsResponse;
-}(SpeakeasyBase));
-export { ListSimulationApplicationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSimulationApplicationsResponse = ListSimulationApplicationsResponse;

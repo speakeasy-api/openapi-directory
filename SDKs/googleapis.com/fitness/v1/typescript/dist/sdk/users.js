@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Users = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Users = /** @class */ (function () {
     function Users(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -30,27 +55,22 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesCreateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources", req.pathParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -58,14 +78,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataSource = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesDataPointChangesList - Queries for user's data point changes for a particular data source.
@@ -75,12 +94,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesDataPointChangesListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/dataPointChanges", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/dataPointChanges", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -88,14 +107,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listDataPointChangesResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesDatasetsDelete - Performs an inclusive delete of all data points whose start and end times have any overlap with the time range specified by the dataset ID. For most data types, the entire data point will be deleted. For data types where the time span represents a consistent value (such as com.google.activity.segment), and a data point straddles either end point of the dataset, only the overlapping portion of the data point will be deleted.
@@ -105,12 +123,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesDatasetsDeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "delete" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -121,8 +139,7 @@ var Users = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesDatasetsGet - Returns a dataset containing all data points whose start and end times overlap with the specified range of the dataset minimum start time and maximum end time. Specifically, any data point whose start time is less than or equal to the dataset end time and whose end time is greater than or equal to the dataset start time.
@@ -132,12 +149,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesDatasetsGetRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -145,14 +162,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataset = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesDatasetsPatch - Adds data points to a dataset. The dataset need not be previously created. All points within the given dataset will be returned with subsquent calls to retrieve this dataset. Data points can belong to more than one dataset. This method does not use patch semantics: the data points provided are merely inserted, with no existing data replaced.
@@ -163,27 +179,22 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesDatasetsPatchRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -191,14 +202,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataset = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesDelete - Deletes the specified data source. The request will fail if the data source contains any data points.
@@ -208,12 +218,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesDeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "delete" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -221,14 +231,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataSource = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesGet - Returns the specified data source.
@@ -238,12 +247,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesGetRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -251,14 +260,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataSource = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesList - Lists all data sources that are visible to the developer, using the OAuth scopes provided. The list is not exhaustive; the user may have private data sources that are only visible to other developers, or calls using other scopes.
@@ -268,12 +276,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -281,14 +289,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listDataSourcesResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDataSourcesUpdate - Updates the specified data source. The dataStreamId, dataType, type, dataStreamName, and device properties with the exception of version, cannot be modified. Data sources are identified by their dataStreamId.
@@ -299,27 +306,22 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDataSourcesUpdateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataSources/{dataSourceId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -327,14 +329,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.dataSource = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersDatasetAggregate - Aggregates data of a certain type or stream into buckets divided by a given type of boundary. Multiple data sets of multiple types and from multiple sources can be aggregated into exactly one bucket type per request.
@@ -345,27 +346,22 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersDatasetAggregateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/dataset:aggregate", req.pathParams);
+        var url = utils.generateURL(baseURL, "/{userId}/dataset:aggregate", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -373,14 +369,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.aggregateResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersSessionsDelete - Deletes a session specified by the given session ID.
@@ -390,12 +385,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersSessionsDeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/sessions/{sessionId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/sessions/{sessionId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "delete" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -406,8 +401,7 @@ var Users = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersSessionsList - Lists sessions previously created.
@@ -417,12 +411,12 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersSessionsListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/sessions", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/{userId}/sessions", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -430,14 +424,13 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.listSessionsResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * fitnessUsersSessionsUpdate - Updates or insert a given session.
@@ -448,27 +441,22 @@ var Users = /** @class */ (function () {
             req = new operations.FitnessUsersSessionsUpdateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/{userId}/sessions/{sessionId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/{userId}/sessions/{sessionId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -476,15 +464,14 @@ var Users = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.session = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Users;
 }());
-export { Users };
+exports.Users = Users;

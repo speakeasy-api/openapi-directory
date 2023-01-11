@@ -19,6 +19,6 @@ export declare class GetMostviewedSectionTimePeriodJsonRequest extends Speakeasy
 }
 export declare class GetMostviewedSectionTimePeriodJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getMostviewedSectionTimePeriodJson200ApplicationJsonObject?: GetMostviewedSectionTimePeriodJson200ApplicationJson;
+    getMostviewedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostviewedSectionTimePeriodJson200ApplicationJson;
     statusCode: number;
 }

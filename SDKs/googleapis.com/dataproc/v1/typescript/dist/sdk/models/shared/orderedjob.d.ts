@@ -15,7 +15,7 @@ import { TrinoJob } from "./trinojob";
 export declare class OrderedJob extends SpeakeasyBase {
     hadoopJob?: HadoopJob;
     hiveJob?: HiveJob;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     pigJob?: PigJob;
     prerequisiteStepIds?: string[];
     prestoJob?: PrestoJob;

@@ -13,7 +13,7 @@ export declare class User extends SpeakeasyBase {
     lastName?: string;
     loginFailures?: number;
     orgDefaultRole?: string;
-    orgRoles?: Map<string, any>;
+    orgRoles?: Record<string, any>;
     resetTokenExpiration?: number;
     ssoOnly?: boolean;
     updatedAt?: number;

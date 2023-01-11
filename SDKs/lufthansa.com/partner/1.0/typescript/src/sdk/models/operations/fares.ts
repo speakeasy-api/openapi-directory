@@ -50,7 +50,7 @@ export class FaresResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  fares200ApplicationJsonString?: string;
+  fares200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

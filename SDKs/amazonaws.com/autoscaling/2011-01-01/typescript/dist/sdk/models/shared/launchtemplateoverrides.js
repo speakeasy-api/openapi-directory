@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplateSpecification } from "./launchtemplatespecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchTemplateOverrides = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchtemplatespecification_1 = require("./launchtemplatespecification");
 // LaunchTemplateOverrides
 /**
  * Describes an override for a launch template. The maximum number of instance types that can be associated with an Auto Scaling group is 40. The maximum number of distinct launch templates you can define for an Auto Scaling group is 20. For more information about configuring overrides, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-override-options.html">Configuring overrides</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
@@ -34,17 +37,17 @@ var LaunchTemplateOverrides = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchTemplateOverrides.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplateSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", launchtemplatespecification_1.LaunchTemplateSpecification)
     ], LaunchTemplateOverrides.prototype, "launchTemplateSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchTemplateOverrides.prototype, "weightedCapacity", void 0);
     return LaunchTemplateOverrides;
-}(SpeakeasyBase));
-export { LaunchTemplateOverrides };
+}(utils_1.SpeakeasyBase));
+exports.LaunchTemplateOverrides = LaunchTemplateOverrides;

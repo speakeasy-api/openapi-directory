@@ -21,7 +21,6 @@ export declare class GetAccountsAccountIdBeneficiariesRequest extends SpeakeasyB
 }
 export declare class GetAccountsAccountIdBeneficiariesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadBeneficiary5?: shared.ObReadBeneficiary5;
     statusCode: number;

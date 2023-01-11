@@ -17,8 +17,8 @@ export declare class CompanyIdAnnouncementsRequest extends SpeakeasyBase {
     security: CompanyIdAnnouncementsSecurity;
 }
 export declare class CompanyIdAnnouncementsResponse extends SpeakeasyBase {
-    companyIdAnnouncements200ApplicationJsonAnies?: any[];
-    companyIdAnnouncementsDefaultApplicationJsonAny?: any;
+    companyIdAnnouncements200ApplicationJSONAnies?: any[];
+    companyIdAnnouncementsDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

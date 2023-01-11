@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListIdentityPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListIdentityPoliciesResponse = exports.GetListIdentityPoliciesRequest = exports.GetListIdentityPoliciesHeaders = exports.GetListIdentityPoliciesQueryParams = exports.GetListIdentityPoliciesVersionEnum = exports.GetListIdentityPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListIdentityPoliciesActionEnum;
 (function (GetListIdentityPoliciesActionEnum) {
     GetListIdentityPoliciesActionEnum["ListIdentityPolicies"] = "ListIdentityPolicies";
-})(GetListIdentityPoliciesActionEnum || (GetListIdentityPoliciesActionEnum = {}));
-export var GetListIdentityPoliciesVersionEnum;
+})(GetListIdentityPoliciesActionEnum = exports.GetListIdentityPoliciesActionEnum || (exports.GetListIdentityPoliciesActionEnum = {}));
+var GetListIdentityPoliciesVersionEnum;
 (function (GetListIdentityPoliciesVersionEnum) {
     GetListIdentityPoliciesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetListIdentityPoliciesVersionEnum || (GetListIdentityPoliciesVersionEnum = {}));
+})(GetListIdentityPoliciesVersionEnum = exports.GetListIdentityPoliciesVersionEnum || (exports.GetListIdentityPoliciesVersionEnum = {}));
 var GetListIdentityPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(GetListIdentityPoliciesQueryParams, _super);
     function GetListIdentityPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Identity" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesQueryParams.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesQueryParams.prototype, "version", void 0);
     return GetListIdentityPoliciesQueryParams;
-}(SpeakeasyBase));
-export { GetListIdentityPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListIdentityPoliciesQueryParams = GetListIdentityPoliciesQueryParams;
 var GetListIdentityPoliciesHeaders = /** @class */ (function (_super) {
     __extends(GetListIdentityPoliciesHeaders, _super);
     function GetListIdentityPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListIdentityPoliciesHeaders;
-}(SpeakeasyBase));
-export { GetListIdentityPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListIdentityPoliciesHeaders = GetListIdentityPoliciesHeaders;
 var GetListIdentityPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetListIdentityPoliciesRequest, _super);
     function GetListIdentityPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListIdentityPoliciesQueryParams)
     ], GetListIdentityPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListIdentityPoliciesHeaders)
     ], GetListIdentityPoliciesRequest.prototype, "headers", void 0);
     return GetListIdentityPoliciesRequest;
-}(SpeakeasyBase));
-export { GetListIdentityPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListIdentityPoliciesRequest = GetListIdentityPoliciesRequest;
 var GetListIdentityPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetListIdentityPoliciesResponse, _super);
     function GetListIdentityPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListIdentityPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListIdentityPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListIdentityPoliciesResponse.prototype, "statusCode", void 0);
     return GetListIdentityPoliciesResponse;
-}(SpeakeasyBase));
-export { GetListIdentityPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListIdentityPoliciesResponse = GetListIdentityPoliciesResponse;

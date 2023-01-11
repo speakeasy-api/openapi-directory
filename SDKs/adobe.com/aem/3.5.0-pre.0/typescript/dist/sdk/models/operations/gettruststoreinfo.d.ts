@@ -4,5 +4,5 @@ export declare class GetTruststoreInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     truststoreInfo?: shared.TruststoreInfo;
-    getTruststoreInfoDefaultApplicationJsonString?: string;
+    getTruststoreInfoDefaultApplicationJSONString?: string;
 }

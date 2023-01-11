@@ -5,11 +5,11 @@ export declare class UpdateRepositoryPipelineKeyPairPathParams extends Speakeasy
 }
 export declare class UpdateRepositoryPipelineKeyPairRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryPipelineKeyPairPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryPipelineKeyPairResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineSshKeyPair?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineSshKeyPair?: Record<string, any>;
 }

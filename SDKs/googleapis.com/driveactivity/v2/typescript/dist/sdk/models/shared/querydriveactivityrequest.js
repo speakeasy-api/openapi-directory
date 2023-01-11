@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsolidationStrategy } from "./consolidationstrategy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryDriveActivityRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var consolidationstrategy_1 = require("./consolidationstrategy");
 // QueryDriveActivityRequest
 /**
  * The request message for querying Drive activity.
@@ -34,29 +37,29 @@ var QueryDriveActivityRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ancestorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ancestorName" }),
         __metadata("design:type", String)
     ], QueryDriveActivityRequest.prototype, "ancestorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consolidationStrategy" }),
-        __metadata("design:type", ConsolidationStrategy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consolidationStrategy" }),
+        __metadata("design:type", consolidationstrategy_1.ConsolidationStrategy)
     ], QueryDriveActivityRequest.prototype, "consolidationStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], QueryDriveActivityRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemName" }),
         __metadata("design:type", String)
     ], QueryDriveActivityRequest.prototype, "itemName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], QueryDriveActivityRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], QueryDriveActivityRequest.prototype, "pageToken", void 0);
     return QueryDriveActivityRequest;
-}(SpeakeasyBase));
-export { QueryDriveActivityRequest };
+}(utils_1.SpeakeasyBase));
+exports.QueryDriveActivityRequest = QueryDriveActivityRequest;

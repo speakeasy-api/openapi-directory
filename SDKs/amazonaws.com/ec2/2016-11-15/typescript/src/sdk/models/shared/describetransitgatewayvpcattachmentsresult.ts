@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayVpcAttachment } from "./transitgatewayvpcattachment";
 
 
 
 export class DescribeTransitGatewayVpcAttachmentsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TransitGatewayVpcAttachment })
-  transitGatewayVpcAttachments?: TransitGatewayVpcAttachment[];
+  @SpeakeasyMetadata()
+  transitGatewayVpcAttachments?: Record<string, any>;
 }

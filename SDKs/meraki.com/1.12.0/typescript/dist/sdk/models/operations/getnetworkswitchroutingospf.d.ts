@@ -8,5 +8,5 @@ export declare class GetNetworkSwitchRoutingOspfRequest extends SpeakeasyBase {
 export declare class GetNetworkSwitchRoutingOspfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchRoutingOspf200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchRoutingOspf200ApplicationJSONObject?: Record<string, any>;
 }

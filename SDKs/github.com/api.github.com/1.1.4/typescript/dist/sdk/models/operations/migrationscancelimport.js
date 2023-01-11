@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MigrationsCancelImportResponse = exports.MigrationsCancelImportRequest = exports.MigrationsCancelImportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MigrationsCancelImportPathParams = /** @class */ (function (_super) {
     __extends(MigrationsCancelImportPathParams, _super);
     function MigrationsCancelImportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], MigrationsCancelImportPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], MigrationsCancelImportPathParams.prototype, "repo", void 0);
     return MigrationsCancelImportPathParams;
-}(SpeakeasyBase));
-export { MigrationsCancelImportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MigrationsCancelImportPathParams = MigrationsCancelImportPathParams;
 var MigrationsCancelImportRequest = /** @class */ (function (_super) {
     __extends(MigrationsCancelImportRequest, _super);
     function MigrationsCancelImportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MigrationsCancelImportPathParams)
     ], MigrationsCancelImportRequest.prototype, "pathParams", void 0);
     return MigrationsCancelImportRequest;
-}(SpeakeasyBase));
-export { MigrationsCancelImportRequest };
+}(utils_1.SpeakeasyBase));
+exports.MigrationsCancelImportRequest = MigrationsCancelImportRequest;
 var MigrationsCancelImportResponse = /** @class */ (function (_super) {
     __extends(MigrationsCancelImportResponse, _super);
     function MigrationsCancelImportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MigrationsCancelImportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MigrationsCancelImportResponse.prototype, "statusCode", void 0);
     return MigrationsCancelImportResponse;
-}(SpeakeasyBase));
-export { MigrationsCancelImportResponse };
+}(utils_1.SpeakeasyBase));
+exports.MigrationsCancelImportResponse = MigrationsCancelImportResponse;

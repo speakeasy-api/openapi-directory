@@ -57,7 +57,7 @@ export class PutResourcePolicyResponse extends SpeakeasyBase {
   invalidResourcePolicyException?: any;
 
   @SpeakeasyMetadata()
-  putResourcePolicyResponse?: Map<string, any>;
+  putResourcePolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

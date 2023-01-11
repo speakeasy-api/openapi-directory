@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=digest" })
-  digest?: Map<string, string>;
+  digest?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=entryPoint" })
   entryPoint?: string;

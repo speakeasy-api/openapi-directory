@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest = exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum;
 (function (GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum) {
     GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum["CancellationReasonUnspecified"] = "CANCELLATION_REASON_UNSPECIFIED";
     GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum["CancellationReasonFraud"] = "CANCELLATION_REASON_FRAUD";
@@ -34,20 +37,20 @@ export var GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCan
     GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum["CancellationReasonUpgradeDowngrade"] = "CANCELLATION_REASON_UPGRADE_DOWNGRADE";
     GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum["CancellationReasonUserDelinquency"] = "CANCELLATION_REASON_USER_DELINQUENCY";
     GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum["CancellationReasonOther"] = "CANCELLATION_REASON_OTHER";
-})(GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum || (GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = {}));
+})(GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum || (exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = {}));
 var GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest = /** @class */ (function (_super) {
     __extends(GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest, _super);
     function GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelImmediately" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelImmediately" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest.prototype, "cancelImmediately", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellationReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellationReason" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest.prototype, "cancellationReason", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest = GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest;

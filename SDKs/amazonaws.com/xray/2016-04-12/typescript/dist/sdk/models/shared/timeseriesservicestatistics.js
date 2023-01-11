@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EdgeStatistics } from "./edgestatistics";
-import { HistogramEntry } from "./histogramentry";
-import { ForecastStatistics } from "./forecaststatistics";
-import { ServiceStatistics } from "./servicestatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeSeriesServiceStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
+var edgestatistics_1 = require("./edgestatistics");
+var histogramentry_1 = require("./histogramentry");
+var forecaststatistics_1 = require("./forecaststatistics");
+var servicestatistics_1 = require("./servicestatistics");
 // TimeSeriesServiceStatistics
 /**
  * A list of TimeSeriesStatistic structures.
@@ -37,25 +40,25 @@ var TimeSeriesServiceStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EdgeSummaryStatistics" }),
-        __metadata("design:type", EdgeStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EdgeSummaryStatistics" }),
+        __metadata("design:type", edgestatistics_1.EdgeStatistics)
     ], TimeSeriesServiceStatistics.prototype, "edgeSummaryStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseTimeHistogram", elemType: HistogramEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseTimeHistogram", elemType: histogramentry_1.HistogramEntry }),
         __metadata("design:type", Array)
     ], TimeSeriesServiceStatistics.prototype, "responseTimeHistogram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceForecastStatistics" }),
-        __metadata("design:type", ForecastStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceForecastStatistics" }),
+        __metadata("design:type", forecaststatistics_1.ForecastStatistics)
     ], TimeSeriesServiceStatistics.prototype, "serviceForecastStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceSummaryStatistics" }),
-        __metadata("design:type", ServiceStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceSummaryStatistics" }),
+        __metadata("design:type", servicestatistics_1.ServiceStatistics)
     ], TimeSeriesServiceStatistics.prototype, "serviceSummaryStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], TimeSeriesServiceStatistics.prototype, "timestamp", void 0);
     return TimeSeriesServiceStatistics;
-}(SpeakeasyBase));
-export { TimeSeriesServiceStatistics };
+}(utils_1.SpeakeasyBase));
+exports.TimeSeriesServiceStatistics = TimeSeriesServiceStatistics;

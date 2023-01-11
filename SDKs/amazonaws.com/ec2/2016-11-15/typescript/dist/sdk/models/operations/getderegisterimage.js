@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeregisterImageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeregisterImageResponse = exports.GetDeregisterImageRequest = exports.GetDeregisterImageHeaders = exports.GetDeregisterImageQueryParams = exports.GetDeregisterImageVersionEnum = exports.GetDeregisterImageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeregisterImageActionEnum;
 (function (GetDeregisterImageActionEnum) {
     GetDeregisterImageActionEnum["DeregisterImage"] = "DeregisterImage";
-})(GetDeregisterImageActionEnum || (GetDeregisterImageActionEnum = {}));
-export var GetDeregisterImageVersionEnum;
+})(GetDeregisterImageActionEnum = exports.GetDeregisterImageActionEnum || (exports.GetDeregisterImageActionEnum = {}));
+var GetDeregisterImageVersionEnum;
 (function (GetDeregisterImageVersionEnum) {
     GetDeregisterImageVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeregisterImageVersionEnum || (GetDeregisterImageVersionEnum = {}));
+})(GetDeregisterImageVersionEnum = exports.GetDeregisterImageVersionEnum || (exports.GetDeregisterImageVersionEnum = {}));
 var GetDeregisterImageQueryParams = /** @class */ (function (_super) {
     __extends(GetDeregisterImageQueryParams, _super);
     function GetDeregisterImageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeregisterImageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeregisterImageQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ImageId" }),
         __metadata("design:type", String)
     ], GetDeregisterImageQueryParams.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeregisterImageQueryParams.prototype, "version", void 0);
     return GetDeregisterImageQueryParams;
-}(SpeakeasyBase));
-export { GetDeregisterImageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeregisterImageQueryParams = GetDeregisterImageQueryParams;
 var GetDeregisterImageHeaders = /** @class */ (function (_super) {
     __extends(GetDeregisterImageHeaders, _super);
     function GetDeregisterImageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeregisterImageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeregisterImageHeaders;
-}(SpeakeasyBase));
-export { GetDeregisterImageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeregisterImageHeaders = GetDeregisterImageHeaders;
 var GetDeregisterImageRequest = /** @class */ (function (_super) {
     __extends(GetDeregisterImageRequest, _super);
     function GetDeregisterImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeregisterImageQueryParams)
     ], GetDeregisterImageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeregisterImageHeaders)
     ], GetDeregisterImageRequest.prototype, "headers", void 0);
     return GetDeregisterImageRequest;
-}(SpeakeasyBase));
-export { GetDeregisterImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeregisterImageRequest = GetDeregisterImageRequest;
 var GetDeregisterImageResponse = /** @class */ (function (_super) {
     __extends(GetDeregisterImageResponse, _super);
     function GetDeregisterImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeregisterImageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeregisterImageResponse.prototype, "statusCode", void 0);
     return GetDeregisterImageResponse;
-}(SpeakeasyBase));
-export { GetDeregisterImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeregisterImageResponse = GetDeregisterImageResponse;

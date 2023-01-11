@@ -8,5 +8,5 @@ export declare class ProtocolNetflowListRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowList200ApplicationJsonObjects?: Map<string, any>[];
+    protocolNetflowList200ApplicationJSONObjects?: Record<string, any>[];
 }

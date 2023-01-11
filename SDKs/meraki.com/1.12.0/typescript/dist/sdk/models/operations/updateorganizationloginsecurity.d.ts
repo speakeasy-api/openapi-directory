@@ -23,5 +23,5 @@ export declare class UpdateOrganizationLoginSecurityRequest extends SpeakeasyBas
 export declare class UpdateOrganizationLoginSecurityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationLoginSecurity200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationLoginSecurity200ApplicationJSONObject?: Record<string, any>;
 }

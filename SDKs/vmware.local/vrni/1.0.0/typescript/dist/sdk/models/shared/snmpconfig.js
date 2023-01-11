@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Snmp2cConfig } from "./snmp2cconfig";
-import { Snmp3Config } from "./snmp3config";
-export var SnmpConfigSnmpVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnmpConfig = exports.SnmpConfigSnmpVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var snmp2cconfig_1 = require("./snmp2cconfig");
+var snmp3config_1 = require("./snmp3config");
+var SnmpConfigSnmpVersionEnum;
 (function (SnmpConfigSnmpVersionEnum) {
     SnmpConfigSnmpVersionEnum["V2c"] = "v2c";
     SnmpConfigSnmpVersionEnum["V3"] = "v3";
-})(SnmpConfigSnmpVersionEnum || (SnmpConfigSnmpVersionEnum = {}));
+})(SnmpConfigSnmpVersionEnum = exports.SnmpConfigSnmpVersionEnum || (exports.SnmpConfigSnmpVersionEnum = {}));
 var SnmpConfig = /** @class */ (function (_super) {
     __extends(SnmpConfig, _super);
     function SnmpConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_snmp_2c" }),
-        __metadata("design:type", Snmp2cConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_snmp_2c" }),
+        __metadata("design:type", snmp2cconfig_1.Snmp2cConfig)
     ], SnmpConfig.prototype, "configSnmp2c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_snmp_3" }),
-        __metadata("design:type", Snmp3Config)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_snmp_3" }),
+        __metadata("design:type", snmp3config_1.Snmp3Config)
     ], SnmpConfig.prototype, "configSnmp3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snmp_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snmp_enabled" }),
         __metadata("design:type", Boolean)
     ], SnmpConfig.prototype, "snmpEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snmp_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snmp_version" }),
         __metadata("design:type", String)
     ], SnmpConfig.prototype, "snmpVersion", void 0);
     return SnmpConfig;
-}(SpeakeasyBase));
-export { SnmpConfig };
+}(utils_1.SpeakeasyBase));
+exports.SnmpConfig = SnmpConfig;

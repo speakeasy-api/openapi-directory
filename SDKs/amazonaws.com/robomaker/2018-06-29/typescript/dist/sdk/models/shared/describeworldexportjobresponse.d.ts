@@ -11,6 +11,6 @@ export declare class DescribeWorldExportJobResponse extends SpeakeasyBase {
     iamRole?: string;
     outputLocation?: OutputLocation;
     status?: WorldExportJobStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     worlds?: string[];
 }

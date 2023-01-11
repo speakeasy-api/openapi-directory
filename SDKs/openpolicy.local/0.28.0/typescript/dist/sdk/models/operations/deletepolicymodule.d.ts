@@ -77,7 +77,7 @@ export declare class DeletePolicyModule200ApplicationJsonProvenance extends Spea
     buildCommit?: string;
     buildHostname?: string;
     buildTimestamp?: string;
-    bundles?: Map<string, any>;
+    bundles?: Record<string, any>;
     version?: string;
 }
 export declare class DeletePolicyModule200ApplicationJson extends SpeakeasyBase {
@@ -95,5 +95,5 @@ export declare class DeletePolicyModuleResponse extends SpeakeasyBase {
     fourHundredAndFour?: shared.FourHundredAndFour;
     contentType: string;
     statusCode: number;
-    deletePolicyModule200ApplicationJsonObject?: DeletePolicyModule200ApplicationJson;
+    deletePolicyModule200ApplicationJSONObject?: DeletePolicyModule200ApplicationJson;
 }

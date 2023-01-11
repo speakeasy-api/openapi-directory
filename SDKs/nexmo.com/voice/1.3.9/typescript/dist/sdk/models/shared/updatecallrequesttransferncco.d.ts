@@ -1,0 +1,10 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { RequestTransferActionParamEnum } from "./requesttransferactionparamenum";
+export declare class UpdateCallRequestTransferNccoDestination extends SpeakeasyBase {
+    ncco: Record<string, any>[];
+    type: string;
+}
+export declare class UpdateCallRequestTransferNcco extends SpeakeasyBase {
+    action: RequestTransferActionParamEnum;
+    destination: UpdateCallRequestTransferNccoDestination;
+}

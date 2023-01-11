@@ -19,7 +19,7 @@ export class RemotestartRequestBody extends SpeakeasyBase {
 
 export class Remotestart201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=command" })
-  command?: Map<string, any>;
+  command?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,5 +43,5 @@ export class RemotestartResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  remotestart201ApplicationJsonObject?: Remotestart201ApplicationJson;
+  remotestart201ApplicationJSONObject?: Remotestart201ApplicationJson;
 }

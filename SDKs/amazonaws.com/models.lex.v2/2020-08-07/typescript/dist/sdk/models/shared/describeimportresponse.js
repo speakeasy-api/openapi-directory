@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportStatusEnum } from "./importstatusenum";
-import { MergeStrategyEnum } from "./mergestrategyenum";
-import { ImportResourceSpecification } from "./importresourcespecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeImportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var importstatusenum_1 = require("./importstatusenum");
+var mergestrategyenum_1 = require("./mergestrategyenum");
+var importresourcespecification_1 = require("./importresourcespecification");
 var DescribeImportResponse = /** @class */ (function (_super) {
     __extends(DescribeImportResponse, _super);
     function DescribeImportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DescribeImportResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReasons" }),
         __metadata("design:type", Array)
     ], DescribeImportResponse.prototype, "failureReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importId" }),
         __metadata("design:type", String)
     ], DescribeImportResponse.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importStatus" }),
         __metadata("design:type", String)
     ], DescribeImportResponse.prototype, "importStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importedResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importedResourceId" }),
         __metadata("design:type", String)
     ], DescribeImportResponse.prototype, "importedResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importedResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importedResourceName" }),
         __metadata("design:type", String)
     ], DescribeImportResponse.prototype, "importedResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], DescribeImportResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeStrategy" }),
         __metadata("design:type", String)
     ], DescribeImportResponse.prototype, "mergeStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceSpecification" }),
-        __metadata("design:type", ImportResourceSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceSpecification" }),
+        __metadata("design:type", importresourcespecification_1.ImportResourceSpecification)
     ], DescribeImportResponse.prototype, "resourceSpecification", void 0);
     return DescribeImportResponse;
-}(SpeakeasyBase));
-export { DescribeImportResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeImportResponse = DescribeImportResponse;

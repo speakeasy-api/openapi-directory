@@ -21,5 +21,5 @@ export declare class UpdateDeviceCameraSenseRequest extends SpeakeasyBase {
 export declare class UpdateDeviceCameraSenseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceCameraSense200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceCameraSense200ApplicationJSONObject?: Record<string, any>;
 }

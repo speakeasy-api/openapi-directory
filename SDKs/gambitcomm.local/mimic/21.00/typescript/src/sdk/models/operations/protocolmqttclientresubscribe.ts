@@ -25,5 +25,5 @@ export class ProtocolMqttClientResubscribeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientResubscribe200ApplicationJsonString?: string;
+  protocolMqttClientResubscribe200ApplicationJSONString?: string;
 }

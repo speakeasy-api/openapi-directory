@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionsListTagsResponse = exports.FunctionsListTagsRequest = exports.FunctionsListTagsSecurity = exports.FunctionsListTagsQueryParams = exports.FunctionsListTagsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FunctionsListTagsPathParams = /** @class */ (function (_super) {
     __extends(FunctionsListTagsPathParams, _super);
     function FunctionsListTagsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=functionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=functionId" }),
         __metadata("design:type", String)
     ], FunctionsListTagsPathParams.prototype, "functionId", void 0);
     return FunctionsListTagsPathParams;
-}(SpeakeasyBase));
-export { FunctionsListTagsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsListTagsPathParams = FunctionsListTagsPathParams;
 var FunctionsListTagsQueryParams = /** @class */ (function (_super) {
     __extends(FunctionsListTagsQueryParams, _super);
     function FunctionsListTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], FunctionsListTagsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], FunctionsListTagsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orderType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orderType" }),
         __metadata("design:type", String)
     ], FunctionsListTagsQueryParams.prototype, "orderType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search" }),
         __metadata("design:type", String)
     ], FunctionsListTagsQueryParams.prototype, "search", void 0);
     return FunctionsListTagsQueryParams;
-}(SpeakeasyBase));
-export { FunctionsListTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsListTagsQueryParams = FunctionsListTagsQueryParams;
 var FunctionsListTagsSecurity = /** @class */ (function (_super) {
     __extends(FunctionsListTagsSecurity, _super);
     function FunctionsListTagsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeKey)
     ], FunctionsListTagsSecurity.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeProject)
     ], FunctionsListTagsSecurity.prototype, "project", void 0);
     return FunctionsListTagsSecurity;
-}(SpeakeasyBase));
-export { FunctionsListTagsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsListTagsSecurity = FunctionsListTagsSecurity;
 var FunctionsListTagsRequest = /** @class */ (function (_super) {
     __extends(FunctionsListTagsRequest, _super);
     function FunctionsListTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsListTagsPathParams)
     ], FunctionsListTagsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsListTagsQueryParams)
     ], FunctionsListTagsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsListTagsSecurity)
     ], FunctionsListTagsRequest.prototype, "security", void 0);
     return FunctionsListTagsRequest;
-}(SpeakeasyBase));
-export { FunctionsListTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsListTagsRequest = FunctionsListTagsRequest;
 var FunctionsListTagsResponse = /** @class */ (function (_super) {
     __extends(FunctionsListTagsResponse, _super);
     function FunctionsListTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FunctionsListTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FunctionsListTagsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.TagList)
     ], FunctionsListTagsResponse.prototype, "tagList", void 0);
     return FunctionsListTagsResponse;
-}(SpeakeasyBase));
-export { FunctionsListTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsListTagsResponse = FunctionsListTagsResponse;

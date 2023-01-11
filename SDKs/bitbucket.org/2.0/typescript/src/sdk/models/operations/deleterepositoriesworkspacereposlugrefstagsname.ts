@@ -44,5 +44,5 @@ export class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

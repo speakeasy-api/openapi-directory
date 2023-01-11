@@ -44,5 +44,5 @@ export class CreateTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createTask201ApplicationJsonObject?: CreateTask201ApplicationJson;
+  createTask201ApplicationJSONObject?: CreateTask201ApplicationJson;
 }

@@ -8,5 +8,5 @@ export declare class GetDeviceCameraSenseObjectDetectionModelsRequest extends Sp
 export declare class GetDeviceCameraSenseObjectDetectionModelsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraSenseObjectDetectionModels200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraSenseObjectDetectionModels200ApplicationJSONObject?: Record<string, any>;
 }

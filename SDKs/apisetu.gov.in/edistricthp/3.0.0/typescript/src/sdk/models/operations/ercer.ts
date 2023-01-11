@@ -185,23 +185,23 @@ export class ErcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ercer400ApplicationJsonObject?: Ercer400ApplicationJson;
+  ercer400ApplicationJSONObject?: Ercer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer401ApplicationJsonObject?: Ercer401ApplicationJson;
+  ercer401ApplicationJSONObject?: Ercer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer404ApplicationJsonObject?: Ercer404ApplicationJson;
+  ercer404ApplicationJSONObject?: Ercer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer500ApplicationJsonObject?: Ercer500ApplicationJson;
+  ercer500ApplicationJSONObject?: Ercer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer502ApplicationJsonObject?: Ercer502ApplicationJson;
+  ercer502ApplicationJSONObject?: Ercer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer503ApplicationJsonObject?: Ercer503ApplicationJson;
+  ercer503ApplicationJSONObject?: Ercer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ercer504ApplicationJsonObject?: Ercer504ApplicationJson;
+  ercer504ApplicationJSONObject?: Ercer504ApplicationJson;
 }

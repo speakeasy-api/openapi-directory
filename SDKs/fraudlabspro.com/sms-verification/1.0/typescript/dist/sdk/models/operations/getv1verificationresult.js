@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetV1VerificationResultFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV1VerificationResultResponse = exports.GetV1VerificationResultRequest = exports.GetV1VerificationResultQueryParams = exports.GetV1VerificationResultFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetV1VerificationResultFormatEnum;
 (function (GetV1VerificationResultFormatEnum) {
     GetV1VerificationResultFormatEnum["Json"] = "json";
     GetV1VerificationResultFormatEnum["Xml"] = "xml";
-})(GetV1VerificationResultFormatEnum || (GetV1VerificationResultFormatEnum = {}));
+})(GetV1VerificationResultFormatEnum = exports.GetV1VerificationResultFormatEnum || (exports.GetV1VerificationResultFormatEnum = {}));
 var GetV1VerificationResultQueryParams = /** @class */ (function (_super) {
     __extends(GetV1VerificationResultQueryParams, _super);
     function GetV1VerificationResultQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetV1VerificationResultQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GetV1VerificationResultQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=otp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=otp" }),
         __metadata("design:type", String)
     ], GetV1VerificationResultQueryParams.prototype, "otp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tran_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tran_id" }),
         __metadata("design:type", String)
     ], GetV1VerificationResultQueryParams.prototype, "tranId", void 0);
     return GetV1VerificationResultQueryParams;
-}(SpeakeasyBase));
-export { GetV1VerificationResultQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV1VerificationResultQueryParams = GetV1VerificationResultQueryParams;
 var GetV1VerificationResultRequest = /** @class */ (function (_super) {
     __extends(GetV1VerificationResultRequest, _super);
     function GetV1VerificationResultRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV1VerificationResultQueryParams)
     ], GetV1VerificationResultRequest.prototype, "queryParams", void 0);
     return GetV1VerificationResultRequest;
-}(SpeakeasyBase));
-export { GetV1VerificationResultRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV1VerificationResultRequest = GetV1VerificationResultRequest;
 var GetV1VerificationResultResponse = /** @class */ (function (_super) {
     __extends(GetV1VerificationResultResponse, _super);
     function GetV1VerificationResultResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV1VerificationResultResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetV1VerificationResultResponse.prototype, "getV1VerificationResult200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV1VerificationResultResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetV1VerificationResultResponse.prototype, "getV1VerificationResult200ApplicationJSONString", void 0);
     return GetV1VerificationResultResponse;
-}(SpeakeasyBase));
-export { GetV1VerificationResultResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV1VerificationResultResponse = GetV1VerificationResultResponse;

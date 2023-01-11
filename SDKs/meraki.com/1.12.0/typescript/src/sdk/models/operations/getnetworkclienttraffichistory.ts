@@ -37,11 +37,11 @@ export class GetNetworkClientTrafficHistoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClientTrafficHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClientTrafficHistory200ApplicationJSONObject?: Record<string, any>;
 }

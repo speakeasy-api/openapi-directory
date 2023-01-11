@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,37 +14,62 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposCreateOrUpdateFileContentsResponse = exports.ReposCreateOrUpdateFileContentsRequest = exports.ReposCreateOrUpdateFileContentsRequestBody = exports.ReposCreateOrUpdateFileContentsRequestBodyCommitter = exports.ReposCreateOrUpdateFileContentsRequestBodyAuthor = exports.ReposCreateOrUpdateFileContentsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposCreateOrUpdateFileContentsPathParams = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateFileContentsPathParams, _super);
     function ReposCreateOrUpdateFileContentsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsPathParams.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsPathParams.prototype, "repo", void 0);
     return ReposCreateOrUpdateFileContentsPathParams;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsPathParams = ReposCreateOrUpdateFileContentsPathParams;
 // ReposCreateOrUpdateFileContentsRequestBodyAuthor
 /**
  * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
@@ -54,20 +80,20 @@ var ReposCreateOrUpdateFileContentsRequestBodyAuthor = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyAuthor.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyAuthor.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyAuthor.prototype, "name", void 0);
     return ReposCreateOrUpdateFileContentsRequestBodyAuthor;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsRequestBodyAuthor };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsRequestBodyAuthor = ReposCreateOrUpdateFileContentsRequestBodyAuthor;
 // ReposCreateOrUpdateFileContentsRequestBodyCommitter
 /**
  * The person that committed the file. Default: the authenticated user.
@@ -78,93 +104,93 @@ var ReposCreateOrUpdateFileContentsRequestBodyCommitter = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyCommitter.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyCommitter.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBodyCommitter.prototype, "name", void 0);
     return ReposCreateOrUpdateFileContentsRequestBodyCommitter;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsRequestBodyCommitter };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsRequestBodyCommitter = ReposCreateOrUpdateFileContentsRequestBodyCommitter;
 var ReposCreateOrUpdateFileContentsRequestBody = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateFileContentsRequestBody, _super);
     function ReposCreateOrUpdateFileContentsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", ReposCreateOrUpdateFileContentsRequestBodyAuthor)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branch" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "branch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer" }),
         __metadata("design:type", ReposCreateOrUpdateFileContentsRequestBodyCommitter)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "committer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsRequestBody.prototype, "sha", void 0);
     return ReposCreateOrUpdateFileContentsRequestBody;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsRequestBody = ReposCreateOrUpdateFileContentsRequestBody;
 var ReposCreateOrUpdateFileContentsRequest = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateFileContentsRequest, _super);
     function ReposCreateOrUpdateFileContentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposCreateOrUpdateFileContentsPathParams)
     ], ReposCreateOrUpdateFileContentsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposCreateOrUpdateFileContentsRequestBody)
     ], ReposCreateOrUpdateFileContentsRequest.prototype, "request", void 0);
     return ReposCreateOrUpdateFileContentsRequest;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsRequest = ReposCreateOrUpdateFileContentsRequest;
 var ReposCreateOrUpdateFileContentsResponse = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateFileContentsResponse, _super);
     function ReposCreateOrUpdateFileContentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateFileContentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposCreateOrUpdateFileContentsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ReposCreateOrUpdateFileContentsResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.FileCommit)
     ], ReposCreateOrUpdateFileContentsResponse.prototype, "fileCommit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], ReposCreateOrUpdateFileContentsResponse.prototype, "validationError", void 0);
     return ReposCreateOrUpdateFileContentsResponse;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateFileContentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateFileContentsResponse = ReposCreateOrUpdateFileContentsResponse;

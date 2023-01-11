@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetChromosomesByAssemblyUsingGetResponse = exports.GetChromosomesByAssemblyUsingGetRequest = exports.GetChromosomesByAssemblyUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetChromosomesByAssemblyUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetChromosomesByAssemblyUsingGetPathParams, _super);
     function GetChromosomesByAssemblyUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
         __metadata("design:type", Number)
     ], GetChromosomesByAssemblyUsingGetPathParams.prototype, "mapKey", void 0);
     return GetChromosomesByAssemblyUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetChromosomesByAssemblyUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChromosomesByAssemblyUsingGetPathParams = GetChromosomesByAssemblyUsingGetPathParams;
 var GetChromosomesByAssemblyUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetChromosomesByAssemblyUsingGetRequest, _super);
     function GetChromosomesByAssemblyUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChromosomesByAssemblyUsingGetPathParams)
     ], GetChromosomesByAssemblyUsingGetRequest.prototype, "pathParams", void 0);
     return GetChromosomesByAssemblyUsingGetRequest;
-}(SpeakeasyBase));
-export { GetChromosomesByAssemblyUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetChromosomesByAssemblyUsingGetRequest = GetChromosomesByAssemblyUsingGetRequest;
 var GetChromosomesByAssemblyUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetChromosomesByAssemblyUsingGetResponse, _super);
     function GetChromosomesByAssemblyUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetChromosomesByAssemblyUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetChromosomesByAssemblyUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetChromosomesByAssemblyUsingGetResponse.prototype, "statusCode", void 0);
     return GetChromosomesByAssemblyUsingGetResponse;
-}(SpeakeasyBase));
-export { GetChromosomesByAssemblyUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetChromosomesByAssemblyUsingGetResponse = GetChromosomesByAssemblyUsingGetResponse;

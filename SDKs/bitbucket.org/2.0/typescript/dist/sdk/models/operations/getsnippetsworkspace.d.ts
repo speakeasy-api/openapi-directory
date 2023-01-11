@@ -24,6 +24,6 @@ export declare class GetSnippetsWorkspaceRequest extends SpeakeasyBase {
 export declare class GetSnippetsWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedSnippets?: shared.PaginatedSnippets;
 }

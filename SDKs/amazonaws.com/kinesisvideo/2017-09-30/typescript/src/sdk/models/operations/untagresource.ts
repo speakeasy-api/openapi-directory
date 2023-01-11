@@ -28,7 +28,7 @@ export class UntagResourceHeaders extends SpeakeasyBase {
 
 export class UntagResourceRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=TagKeyList" })
   tagKeyList: string[];
@@ -64,5 +64,5 @@ export class UntagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  untagResourceOutput?: Map<string, any>;
+  untagResourceOutput?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReconnectEnumEnum } from "./reconnectenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfservicePermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var reconnectenumenum_1 = require("./reconnectenumenum");
 // SelfservicePermissions
 /**
  * Describes the self-service permissions for a directory. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/enable-user-self-service-workspace-management.html">Enable Self-Service WorkSpace Management Capabilities for Your Users</a>.
@@ -34,25 +37,25 @@ var SelfservicePermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeComputeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeComputeType" }),
         __metadata("design:type", String)
     ], SelfservicePermissions.prototype, "changeComputeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncreaseVolumeSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncreaseVolumeSize" }),
         __metadata("design:type", String)
     ], SelfservicePermissions.prototype, "increaseVolumeSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RebuildWorkspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RebuildWorkspace" }),
         __metadata("design:type", String)
     ], SelfservicePermissions.prototype, "rebuildWorkspace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RestartWorkspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RestartWorkspace" }),
         __metadata("design:type", String)
     ], SelfservicePermissions.prototype, "restartWorkspace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SwitchRunningMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SwitchRunningMode" }),
         __metadata("design:type", String)
     ], SelfservicePermissions.prototype, "switchRunningMode", void 0);
     return SelfservicePermissions;
-}(SpeakeasyBase));
-export { SelfservicePermissions };
+}(utils_1.SpeakeasyBase));
+exports.SelfservicePermissions = SelfservicePermissions;

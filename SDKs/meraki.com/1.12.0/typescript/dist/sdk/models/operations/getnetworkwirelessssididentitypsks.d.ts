@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidIdentityPsksRequest extends Speakeasy
 export declare class GetNetworkWirelessSsidIdentityPsksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidIdentityPsks200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidIdentityPsks200ApplicationJSONObject?: Record<string, any>;
 }

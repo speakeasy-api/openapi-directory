@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PriceCurrencyIdEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Price = exports.PriceCurrencyIdEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PriceCurrencyIdEnum;
 (function (PriceCurrencyIdEnum) {
     PriceCurrencyIdEnum["Aed"] = "AED";
     PriceCurrencyIdEnum["Afa"] = "AFA";
@@ -210,20 +213,20 @@ export var PriceCurrencyIdEnum;
     PriceCurrencyIdEnum["Zmw"] = "ZMW";
     PriceCurrencyIdEnum["Zwd"] = "ZWD";
     PriceCurrencyIdEnum["Zwl"] = "ZWL";
-})(PriceCurrencyIdEnum || (PriceCurrencyIdEnum = {}));
+})(PriceCurrencyIdEnum = exports.PriceCurrencyIdEnum || (exports.PriceCurrencyIdEnum = {}));
 var Price = /** @class */ (function (_super) {
     __extends(Price, _super);
     function Price() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], Price.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyId" }),
         __metadata("design:type", String)
     ], Price.prototype, "currencyId", void 0);
     return Price;
-}(SpeakeasyBase));
-export { Price };
+}(utils_1.SpeakeasyBase));
+exports.Price = Price;

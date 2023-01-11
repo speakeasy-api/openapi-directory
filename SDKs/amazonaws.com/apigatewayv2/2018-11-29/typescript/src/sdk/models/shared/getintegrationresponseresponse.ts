@@ -1,24 +1,23 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentHandlingStrategyEnum } from "./contenthandlingstrategyenum";
 
 
 
 export class GetIntegrationResponseResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ContentHandlingStrategy" })
-  contentHandlingStrategy?: ContentHandlingStrategyEnum;
+  contentHandlingStrategy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationResponseId" })
-  integrationResponseId?: string;
+  integrationResponseId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationResponseKey" })
-  integrationResponseKey?: string;
+  integrationResponseKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ResponseParameters" })
-  responseParameters?: Map<string, string>;
+  responseParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ResponseTemplates" })
-  responseTemplates?: Map<string, string>;
+  responseTemplates?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=TemplateSelectionExpression" })
-  templateSelectionExpression?: string;
+  templateSelectionExpression?: Record<string, any>;
 }

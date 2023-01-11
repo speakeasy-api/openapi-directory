@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TotalByOffice = void 0;
+var utils_1 = require("../../../internal/utils");
 var TotalByOffice = /** @class */ (function (_super) {
     __extends(TotalByOffice, _super);
     function TotalByOffice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_year" }),
         __metadata("design:type", Number)
     ], TotalByOffice.prototype, "electionYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=office" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office" }),
         __metadata("design:type", String)
     ], TotalByOffice.prototype, "office", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_disbursements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_disbursements" }),
         __metadata("design:type", Number)
     ], TotalByOffice.prototype, "totalDisbursements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_receipts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_receipts" }),
         __metadata("design:type", Number)
     ], TotalByOffice.prototype, "totalReceipts", void 0);
     return TotalByOffice;
-}(SpeakeasyBase));
-export { TotalByOffice };
+}(utils_1.SpeakeasyBase));
+exports.TotalByOffice = TotalByOffice;

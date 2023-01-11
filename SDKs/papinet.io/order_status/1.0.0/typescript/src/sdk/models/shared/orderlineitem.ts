@@ -73,7 +73,7 @@ export class OrderLineItemQuantities extends SpeakeasyBase {
   quantityType?: OrderLineItemQuantitiesQuantityTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=quantityUOM" })
-  quantityUom?: OrderLineItemQuantitiesQuantityUomEnum;
+  quantityUOM?: OrderLineItemQuantitiesQuantityUomEnum;
 
   @SpeakeasyMetadata({ data: "json, name=quantityValue" })
   quantityValue?: number;

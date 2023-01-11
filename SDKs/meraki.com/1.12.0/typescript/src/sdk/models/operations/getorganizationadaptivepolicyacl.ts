@@ -25,5 +25,5 @@ export class GetOrganizationAdaptivePolicyAclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationAdaptivePolicyAcl200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationAdaptivePolicyAcl200ApplicationJSONObject?: Record<string, any>;
 }

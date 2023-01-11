@@ -10,10 +10,10 @@ export declare class SuperFund extends SpeakeasyBase {
     employerNumber?: string;
     name?: string;
     spin?: string;
-    superFundId?: string;
+    superFundID?: string;
     type: SuperFundTypeEnum;
     usi?: string;
-    updatedDateUtc?: string;
+    updatedDateUTC?: string;
     validationErrors?: ValidationError[];
 }
 export declare class SuperFundInput extends SpeakeasyBase {
@@ -25,7 +25,7 @@ export declare class SuperFundInput extends SpeakeasyBase {
     employerNumber?: string;
     name?: string;
     spin?: string;
-    superFundId?: string;
+    superFundID?: string;
     type: SuperFundTypeEnum;
     usi?: string;
     validationErrors?: ValidationError[];

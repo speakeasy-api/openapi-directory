@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkMountPoint } from "./networkmountpoint";
-import { NetworkAddressReservation } from "./networkaddressreservation";
-import { Vrf } from "./vrf";
-export var NetworkStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Network = exports.NetworkTypeEnum = exports.NetworkStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkmountpoint_1 = require("./networkmountpoint");
+var networkaddressreservation_1 = require("./networkaddressreservation");
+var vrf_1 = require("./vrf");
+var NetworkStateEnum;
 (function (NetworkStateEnum) {
     NetworkStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     NetworkStateEnum["Provisioning"] = "PROVISIONING";
     NetworkStateEnum["Provisioned"] = "PROVISIONED";
     NetworkStateEnum["Deprovisioning"] = "DEPROVISIONING";
     NetworkStateEnum["Updating"] = "UPDATING";
-})(NetworkStateEnum || (NetworkStateEnum = {}));
-export var NetworkTypeEnum;
+})(NetworkStateEnum = exports.NetworkStateEnum || (exports.NetworkStateEnum = {}));
+var NetworkTypeEnum;
 (function (NetworkTypeEnum) {
     NetworkTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     NetworkTypeEnum["Client"] = "CLIENT";
     NetworkTypeEnum["Private"] = "PRIVATE";
-})(NetworkTypeEnum || (NetworkTypeEnum = {}));
+})(NetworkTypeEnum = exports.NetworkTypeEnum || (exports.NetworkTypeEnum = {}));
 // Network
 /**
  * A Network.
@@ -50,69 +53,69 @@ var Network = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], Network.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayIp" }),
         __metadata("design:type", String)
     ], Network.prototype, "gatewayIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Network.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], Network.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jumboFramesEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jumboFramesEnabled" }),
         __metadata("design:type", Boolean)
     ], Network.prototype, "jumboFramesEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Network.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=macAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=macAddress" }),
         __metadata("design:type", Array)
     ], Network.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPoints", elemType: NetworkMountPoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPoints", elemType: networkmountpoint_1.NetworkMountPoint }),
         __metadata("design:type", Array)
     ], Network.prototype, "mountPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Network.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pod" }),
         __metadata("design:type", String)
     ], Network.prototype, "pod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservations", elemType: NetworkAddressReservation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservations", elemType: networkaddressreservation_1.NetworkAddressReservation }),
         __metadata("design:type", Array)
     ], Network.prototype, "reservations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicesCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicesCidr" }),
         __metadata("design:type", String)
     ], Network.prototype, "servicesCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Network.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Network.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", String)
     ], Network.prototype, "vlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vrf" }),
-        __metadata("design:type", Vrf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vrf" }),
+        __metadata("design:type", vrf_1.Vrf)
     ], Network.prototype, "vrf", void 0);
     return Network;
-}(SpeakeasyBase));
-export { Network };
+}(utils_1.SpeakeasyBase));
+exports.Network = Network;

@@ -1,5 +1,8 @@
-export var EnableHybridValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnableHybridValuesEnum = void 0;
+var EnableHybridValuesEnum;
 (function (EnableHybridValuesEnum) {
     EnableHybridValuesEnum["True"] = "TRUE";
     EnableHybridValuesEnum["False"] = "FALSE";
-})(EnableHybridValuesEnum || (EnableHybridValuesEnum = {}));
+})(EnableHybridValuesEnum = exports.EnableHybridValuesEnum || (exports.EnableHybridValuesEnum = {}));

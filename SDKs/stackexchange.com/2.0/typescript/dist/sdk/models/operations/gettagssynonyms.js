@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTagsSynonymsOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsSynonymsResponse = exports.GetTagsSynonymsRequest = exports.GetTagsSynonymsQueryParams = exports.GetTagsSynonymsSortEnum = exports.GetTagsSynonymsOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTagsSynonymsOrderEnum;
 (function (GetTagsSynonymsOrderEnum) {
     GetTagsSynonymsOrderEnum["Desc"] = "desc";
     GetTagsSynonymsOrderEnum["Asc"] = "asc";
-})(GetTagsSynonymsOrderEnum || (GetTagsSynonymsOrderEnum = {}));
-export var GetTagsSynonymsSortEnum;
+})(GetTagsSynonymsOrderEnum = exports.GetTagsSynonymsOrderEnum || (exports.GetTagsSynonymsOrderEnum = {}));
+var GetTagsSynonymsSortEnum;
 (function (GetTagsSynonymsSortEnum) {
     GetTagsSynonymsSortEnum["Creation"] = "creation";
     GetTagsSynonymsSortEnum["Applied"] = "applied";
     GetTagsSynonymsSortEnum["Activity"] = "activity";
-})(GetTagsSynonymsSortEnum || (GetTagsSynonymsSortEnum = {}));
+})(GetTagsSynonymsSortEnum = exports.GetTagsSynonymsSortEnum || (exports.GetTagsSynonymsSortEnum = {}));
 var GetTagsSynonymsQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsSynonymsQueryParams, _super);
     function GetTagsSynonymsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetTagsSynonymsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsSynonymsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsSynonymsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetTagsSynonymsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetTagsSynonymsQueryParams.prototype, "todate", void 0);
     return GetTagsSynonymsQueryParams;
-}(SpeakeasyBase));
-export { GetTagsSynonymsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsSynonymsQueryParams = GetTagsSynonymsQueryParams;
 var GetTagsSynonymsRequest = /** @class */ (function (_super) {
     __extends(GetTagsSynonymsRequest, _super);
     function GetTagsSynonymsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsSynonymsQueryParams)
     ], GetTagsSynonymsRequest.prototype, "queryParams", void 0);
     return GetTagsSynonymsRequest;
-}(SpeakeasyBase));
-export { GetTagsSynonymsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsSynonymsRequest = GetTagsSynonymsRequest;
 var GetTagsSynonymsResponse = /** @class */ (function (_super) {
     __extends(GetTagsSynonymsResponse, _super);
     function GetTagsSynonymsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsSynonymsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsSynonymsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsSynonymsResponse.prototype, "statusCode", void 0);
     return GetTagsSynonymsResponse;
-}(SpeakeasyBase));
-export { GetTagsSynonymsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsSynonymsResponse = GetTagsSynonymsResponse;

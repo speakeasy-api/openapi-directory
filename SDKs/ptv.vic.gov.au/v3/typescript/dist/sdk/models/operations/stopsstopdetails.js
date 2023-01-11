@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopsStopDetailsResponse = exports.StopsStopDetailsRequest = exports.StopsStopDetailsQueryParams = exports.StopsStopDetailsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StopsStopDetailsPathParams = /** @class */ (function (_super) {
     __extends(StopsStopDetailsPathParams, _super);
     function StopsStopDetailsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=route_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=route_type" }),
         __metadata("design:type", Number)
     ], StopsStopDetailsPathParams.prototype, "routeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stop_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stop_id" }),
         __metadata("design:type", Number)
     ], StopsStopDetailsPathParams.prototype, "stopId", void 0);
     return StopsStopDetailsPathParams;
-}(SpeakeasyBase));
-export { StopsStopDetailsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StopsStopDetailsPathParams = StopsStopDetailsPathParams;
 var StopsStopDetailsQueryParams = /** @class */ (function (_super) {
     __extends(StopsStopDetailsQueryParams, _super);
     function StopsStopDetailsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=devid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=devid" }),
         __metadata("design:type", String)
     ], StopsStopDetailsQueryParams.prototype, "devid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gtfs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gtfs" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "gtfs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=signature" }),
         __metadata("design:type", String)
     ], StopsStopDetailsQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_accessibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_accessibility" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopAccessibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_amenities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_amenities" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopAmenities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_contact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_contact" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_disruptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_disruptions" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopDisruptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_location" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_staffing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_staffing" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopStaffing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stop_ticket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stop_ticket" }),
         __metadata("design:type", Boolean)
     ], StopsStopDetailsQueryParams.prototype, "stopTicket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], StopsStopDetailsQueryParams.prototype, "token", void 0);
     return StopsStopDetailsQueryParams;
-}(SpeakeasyBase));
-export { StopsStopDetailsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StopsStopDetailsQueryParams = StopsStopDetailsQueryParams;
 var StopsStopDetailsRequest = /** @class */ (function (_super) {
     __extends(StopsStopDetailsRequest, _super);
     function StopsStopDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StopsStopDetailsPathParams)
     ], StopsStopDetailsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StopsStopDetailsQueryParams)
     ], StopsStopDetailsRequest.prototype, "queryParams", void 0);
     return StopsStopDetailsRequest;
-}(SpeakeasyBase));
-export { StopsStopDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.StopsStopDetailsRequest = StopsStopDetailsRequest;
 var StopsStopDetailsResponse = /** @class */ (function (_super) {
     __extends(StopsStopDetailsResponse, _super);
     function StopsStopDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], StopsStopDetailsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StopsStopDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StopsStopDetailsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.V3ErrorResponse)
     ], StopsStopDetailsResponse.prototype, "v3ErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.V3StopResponse)
     ], StopsStopDetailsResponse.prototype, "v3StopResponse", void 0);
     return StopsStopDetailsResponse;
-}(SpeakeasyBase));
-export { StopsStopDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.StopsStopDetailsResponse = StopsStopDetailsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRebuildEnvironmentActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRebuildEnvironmentResponse = exports.PostRebuildEnvironmentRequest = exports.PostRebuildEnvironmentHeaders = exports.PostRebuildEnvironmentQueryParams = exports.PostRebuildEnvironmentVersionEnum = exports.PostRebuildEnvironmentActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRebuildEnvironmentActionEnum;
 (function (PostRebuildEnvironmentActionEnum) {
     PostRebuildEnvironmentActionEnum["RebuildEnvironment"] = "RebuildEnvironment";
-})(PostRebuildEnvironmentActionEnum || (PostRebuildEnvironmentActionEnum = {}));
-export var PostRebuildEnvironmentVersionEnum;
+})(PostRebuildEnvironmentActionEnum = exports.PostRebuildEnvironmentActionEnum || (exports.PostRebuildEnvironmentActionEnum = {}));
+var PostRebuildEnvironmentVersionEnum;
 (function (PostRebuildEnvironmentVersionEnum) {
     PostRebuildEnvironmentVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostRebuildEnvironmentVersionEnum || (PostRebuildEnvironmentVersionEnum = {}));
+})(PostRebuildEnvironmentVersionEnum = exports.PostRebuildEnvironmentVersionEnum || (exports.PostRebuildEnvironmentVersionEnum = {}));
 var PostRebuildEnvironmentQueryParams = /** @class */ (function (_super) {
     __extends(PostRebuildEnvironmentQueryParams, _super);
     function PostRebuildEnvironmentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentQueryParams.prototype, "version", void 0);
     return PostRebuildEnvironmentQueryParams;
-}(SpeakeasyBase));
-export { PostRebuildEnvironmentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRebuildEnvironmentQueryParams = PostRebuildEnvironmentQueryParams;
 var PostRebuildEnvironmentHeaders = /** @class */ (function (_super) {
     __extends(PostRebuildEnvironmentHeaders, _super);
     function PostRebuildEnvironmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRebuildEnvironmentHeaders;
-}(SpeakeasyBase));
-export { PostRebuildEnvironmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRebuildEnvironmentHeaders = PostRebuildEnvironmentHeaders;
 var PostRebuildEnvironmentRequest = /** @class */ (function (_super) {
     __extends(PostRebuildEnvironmentRequest, _super);
     function PostRebuildEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRebuildEnvironmentQueryParams)
     ], PostRebuildEnvironmentRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRebuildEnvironmentHeaders)
     ], PostRebuildEnvironmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRebuildEnvironmentRequest.prototype, "request", void 0);
     return PostRebuildEnvironmentRequest;
-}(SpeakeasyBase));
-export { PostRebuildEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRebuildEnvironmentRequest = PostRebuildEnvironmentRequest;
 var PostRebuildEnvironmentResponse = /** @class */ (function (_super) {
     __extends(PostRebuildEnvironmentResponse, _super);
     function PostRebuildEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRebuildEnvironmentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRebuildEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRebuildEnvironmentResponse.prototype, "statusCode", void 0);
     return PostRebuildEnvironmentResponse;
-}(SpeakeasyBase));
-export { PostRebuildEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRebuildEnvironmentResponse = PostRebuildEnvironmentResponse;

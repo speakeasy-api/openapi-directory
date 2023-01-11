@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination } from "./googlecloudcontactcenterinsightsv1exportinsightsdatarequestbigquerydestination";
-export var GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest = exports.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1exportinsightsdatarequestbigquerydestination_1 = require("./googlecloudcontactcenterinsightsv1exportinsightsdatarequestbigquerydestination");
+var GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum;
 (function (GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum) {
     GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum["WriteDispositionUnspecified"] = "WRITE_DISPOSITION_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum["WriteTruncate"] = "WRITE_TRUNCATE";
     GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum["WriteAppend"] = "WRITE_APPEND";
-})(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum || (GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum = {}));
+})(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum = exports.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum || (exports.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum = {}));
 // GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest
 /**
  * The request to export insights.
@@ -40,25 +43,25 @@ var GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigQueryDestination" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigQueryDestination" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1exportinsightsdatarequestbigquerydestination_1.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination)
     ], GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.prototype, "bigQueryDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKey" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.prototype, "kmsKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeDisposition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeDisposition" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.prototype, "writeDisposition", void 0);
     return GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest = GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest;

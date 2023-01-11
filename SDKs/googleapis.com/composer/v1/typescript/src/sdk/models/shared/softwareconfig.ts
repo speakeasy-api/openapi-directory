@@ -8,16 +8,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class SoftwareConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=airflowConfigOverrides" })
-  airflowConfigOverrides?: Map<string, string>;
+  airflowConfigOverrides?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=envVariables" })
-  envVariables?: Map<string, string>;
+  envVariables?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=imageVersion" })
   imageVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=pypiPackages" })
-  pypiPackages?: Map<string, string>;
+  pypiPackages?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pythonVersion" })
   pythonVersion?: string;

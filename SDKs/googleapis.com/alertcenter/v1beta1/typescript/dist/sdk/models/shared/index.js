@@ -1,17 +1,33 @@
-export * from "./alert";
-export * from "./alertfeedback";
-export * from "./alertmetadata";
-export * from "./altenum";
-export * from "./batchdeletealertsrequest";
-export * from "./batchdeletealertsresponse";
-export * from "./batchundeletealertsrequest";
-export * from "./batchundeletealertsresponse";
-export * from "./cloudpubsubtopic";
-export * from "./listalertfeedbackresponse";
-export * from "./listalertsresponse";
-export * from "./notification";
-export * from "./security";
-export * from "./settings";
-export * from "./status";
-export * from "./undeletealertrequest";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./alert"), exports);
+__exportStar(require("./alertfeedback"), exports);
+__exportStar(require("./alertmetadata"), exports);
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./batchdeletealertsrequest"), exports);
+__exportStar(require("./batchdeletealertsresponse"), exports);
+__exportStar(require("./batchundeletealertsrequest"), exports);
+__exportStar(require("./batchundeletealertsresponse"), exports);
+__exportStar(require("./cloudpubsubtopic"), exports);
+__exportStar(require("./listalertfeedbackresponse"), exports);
+__exportStar(require("./listalertsresponse"), exports);
+__exportStar(require("./notification"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./settings"), exports);
+__exportStar(require("./status"), exports);
+__exportStar(require("./undeletealertrequest"), exports);
+__exportStar(require("./xgafvenum"), exports);

@@ -2,12 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum EnterpriseAdminListPreReceiveEnvironmentsSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Name = "name"
-}
-
 
 export class EnterpriseAdminListPreReceiveEnvironmentsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
@@ -20,7 +14,7 @@ export class EnterpriseAdminListPreReceiveEnvironmentsQueryParams extends Speake
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: EnterpriseAdminListPreReceiveEnvironmentsSortEnum;
+  sort?: shared.DirectionEnum2;
 }
 
 

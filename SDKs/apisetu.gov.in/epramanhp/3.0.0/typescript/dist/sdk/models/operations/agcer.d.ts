@@ -106,11 +106,11 @@ export declare class AgcerRequest extends SpeakeasyBase {
 export declare class AgcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    agcer400ApplicationJsonObject?: Agcer400ApplicationJson;
-    agcer401ApplicationJsonObject?: Agcer401ApplicationJson;
-    agcer404ApplicationJsonObject?: Agcer404ApplicationJson;
-    agcer500ApplicationJsonObject?: Agcer500ApplicationJson;
-    agcer502ApplicationJsonObject?: Agcer502ApplicationJson;
-    agcer503ApplicationJsonObject?: Agcer503ApplicationJson;
-    agcer504ApplicationJsonObject?: Agcer504ApplicationJson;
+    agcer400ApplicationJSONObject?: Agcer400ApplicationJson;
+    agcer401ApplicationJSONObject?: Agcer401ApplicationJson;
+    agcer404ApplicationJSONObject?: Agcer404ApplicationJson;
+    agcer500ApplicationJSONObject?: Agcer500ApplicationJson;
+    agcer502ApplicationJSONObject?: Agcer502ApplicationJson;
+    agcer503ApplicationJSONObject?: Agcer503ApplicationJson;
+    agcer504ApplicationJSONObject?: Agcer504ApplicationJson;
 }

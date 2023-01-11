@@ -74,8 +74,8 @@ export class UnliWithoutApplicationnkApplicationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unliWithoutApplicationnkApplication403ApplicationJsonObject?: UnliWithoutApplicationnkApplication403ApplicationJson;
+  unliWithoutApplicationnkApplication403ApplicationJSONObject?: UnliWithoutApplicationnkApplication403ApplicationJson;
 
   @SpeakeasyMetadata()
-  unliWithoutApplicationnkApplication409ApplicationJsonObject?: UnliWithoutApplicationnkApplication409ApplicationJson;
+  unliWithoutApplicationnkApplication409ApplicationJSONObject?: UnliWithoutApplicationnkApplication409ApplicationJson;
 }

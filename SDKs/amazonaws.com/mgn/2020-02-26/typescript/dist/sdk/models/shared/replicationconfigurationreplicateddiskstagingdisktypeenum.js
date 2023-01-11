@@ -1,4 +1,7 @@
-export var ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum = void 0;
+var ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum;
 (function (ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum) {
     ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum["Auto"] = "AUTO";
     ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum["Gp2"] = "GP2";
@@ -6,4 +9,4 @@ export var ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum;
     ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum["Sc1"] = "SC1";
     ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum["St1"] = "ST1";
     ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum["Standard"] = "STANDARD";
-})(ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum || (ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum = {}));
+})(ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum = exports.ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum || (exports.ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum = {}));

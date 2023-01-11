@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChartData } from "./chartdata";
-import { BaselineValueFormat } from "./baselinevalueformat";
-import { ChartCustomNumberFormatOptions } from "./chartcustomnumberformatoptions";
-import { KeyValueFormat } from "./keyvalueformat";
-export var ScorecardChartSpecAggregateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScorecardChartSpec = exports.ScorecardChartSpecNumberFormatSourceEnum = exports.ScorecardChartSpecAggregateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var chartdata_1 = require("./chartdata");
+var baselinevalueformat_1 = require("./baselinevalueformat");
+var chartcustomnumberformatoptions_1 = require("./chartcustomnumberformatoptions");
+var keyvalueformat_1 = require("./keyvalueformat");
+var ScorecardChartSpecAggregateTypeEnum;
 (function (ScorecardChartSpecAggregateTypeEnum) {
     ScorecardChartSpecAggregateTypeEnum["ChartAggregateTypeUnspecified"] = "CHART_AGGREGATE_TYPE_UNSPECIFIED";
     ScorecardChartSpecAggregateTypeEnum["Average"] = "AVERAGE";
@@ -36,13 +39,13 @@ export var ScorecardChartSpecAggregateTypeEnum;
     ScorecardChartSpecAggregateTypeEnum["Median"] = "MEDIAN";
     ScorecardChartSpecAggregateTypeEnum["Min"] = "MIN";
     ScorecardChartSpecAggregateTypeEnum["Sum"] = "SUM";
-})(ScorecardChartSpecAggregateTypeEnum || (ScorecardChartSpecAggregateTypeEnum = {}));
-export var ScorecardChartSpecNumberFormatSourceEnum;
+})(ScorecardChartSpecAggregateTypeEnum = exports.ScorecardChartSpecAggregateTypeEnum || (exports.ScorecardChartSpecAggregateTypeEnum = {}));
+var ScorecardChartSpecNumberFormatSourceEnum;
 (function (ScorecardChartSpecNumberFormatSourceEnum) {
     ScorecardChartSpecNumberFormatSourceEnum["ChartNumberFormatSourceUndefined"] = "CHART_NUMBER_FORMAT_SOURCE_UNDEFINED";
     ScorecardChartSpecNumberFormatSourceEnum["FromData"] = "FROM_DATA";
     ScorecardChartSpecNumberFormatSourceEnum["Custom"] = "CUSTOM";
-})(ScorecardChartSpecNumberFormatSourceEnum || (ScorecardChartSpecNumberFormatSourceEnum = {}));
+})(ScorecardChartSpecNumberFormatSourceEnum = exports.ScorecardChartSpecNumberFormatSourceEnum || (exports.ScorecardChartSpecNumberFormatSourceEnum = {}));
 // ScorecardChartSpec
 /**
  * A scorecard chart. Scorecard charts are used to highlight key performance indicators, known as KPIs, on the spreadsheet. A scorecard chart can represent things like total sales, average cost, or a top selling item. You can specify a single data value, or aggregate over a range of data. Percentage or absolute difference from a baseline value can be highlighted, like changes over time.
@@ -53,37 +56,37 @@ var ScorecardChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregateType" }),
         __metadata("design:type", String)
     ], ScorecardChartSpec.prototype, "aggregateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baselineValueData" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baselineValueData" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], ScorecardChartSpec.prototype, "baselineValueData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baselineValueFormat" }),
-        __metadata("design:type", BaselineValueFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baselineValueFormat" }),
+        __metadata("design:type", baselinevalueformat_1.BaselineValueFormat)
     ], ScorecardChartSpec.prototype, "baselineValueFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customFormatOptions" }),
-        __metadata("design:type", ChartCustomNumberFormatOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customFormatOptions" }),
+        __metadata("design:type", chartcustomnumberformatoptions_1.ChartCustomNumberFormatOptions)
     ], ScorecardChartSpec.prototype, "customFormatOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValueData" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValueData" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], ScorecardChartSpec.prototype, "keyValueData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValueFormat" }),
-        __metadata("design:type", KeyValueFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValueFormat" }),
+        __metadata("design:type", keyvalueformat_1.KeyValueFormat)
     ], ScorecardChartSpec.prototype, "keyValueFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberFormatSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberFormatSource" }),
         __metadata("design:type", String)
     ], ScorecardChartSpec.prototype, "numberFormatSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleFactor" }),
         __metadata("design:type", Number)
     ], ScorecardChartSpec.prototype, "scaleFactor", void 0);
     return ScorecardChartSpec;
-}(SpeakeasyBase));
-export { ScorecardChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.ScorecardChartSpec = ScorecardChartSpec;

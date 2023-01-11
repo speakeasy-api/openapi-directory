@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Entities = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Entities = /** @class */ (function () {
     function Entities(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -31,12 +56,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetClusterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/clusters/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/clusters/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -44,12 +69,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.cluster = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -61,8 +86,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDatacenter - Show vCenter datacenter details
@@ -74,12 +98,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetDatacenterRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/vc-datacenters/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/vc-datacenters/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -87,12 +111,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.vcDatacenter = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -104,8 +128,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDatastore - Show datastore details
@@ -117,12 +140,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetDatastoreRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/datastores/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/datastores/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -130,12 +153,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.datastore = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -147,8 +170,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDistributedVirtualPortgroup - Show distributed virtual portgroup details
@@ -160,12 +182,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetDistributedVirtualPortgroupRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/distributed-virtual-portgroups/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/distributed-virtual-portgroups/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -173,12 +195,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.distributedVirtualPortgroup = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -190,8 +212,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDistributedVirtualSwitch - Show distributed virtual switch details
@@ -203,12 +224,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetDistributedVirtualSwitchRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/distributed-virtual-switches/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/distributed-virtual-switches/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -216,12 +237,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.distributedVirtualSwitch = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -233,8 +254,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFirewall - Show firewall details
@@ -246,12 +266,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetFirewallRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/firewalls/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/firewalls/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -259,12 +279,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseFirewallRule = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -276,8 +296,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFirewallRule - Show firewall rule details
@@ -289,12 +308,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetFirewallRuleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/firewall-rules/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/firewall-rules/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -302,12 +321,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseFirewallRule = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -319,8 +338,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFlow - Show flow details
@@ -332,12 +350,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetFlowRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/flows/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/flows/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -345,12 +363,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.flow = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -362,8 +380,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFlows - List flows
@@ -376,11 +393,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/flows";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -388,12 +405,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -403,8 +420,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFolder - Show folder details
@@ -416,12 +432,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetFolderRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/folders/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/folders/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -429,12 +445,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.folder = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -446,8 +462,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getHost - Show host details
@@ -459,12 +474,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetHostRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/hosts/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/hosts/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -472,12 +487,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.host = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -489,8 +504,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getIpSet - Show ip set details
@@ -502,12 +516,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetIpSetRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/ip-sets/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/ip-sets/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -515,12 +529,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.baseIpSet = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.baseIPSet = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -532,8 +546,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getLayer2Network - Show layer2 network details
@@ -545,12 +558,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetLayer2NetworkRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/layer2-networks/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/layer2-networks/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -558,12 +571,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseL2Network = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -575,8 +588,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNsxManager - Show nsx manager details
@@ -588,12 +600,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetNsxManagerRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/nsx-managers/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/nsx-managers/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -601,12 +613,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseEntity = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -618,8 +630,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getName - Get name of an entity
@@ -631,12 +642,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetNameRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/names/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/names/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -644,7 +655,7 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.entityName = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -654,8 +665,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNames - Get names for entities
@@ -671,24 +681,19 @@ var Entities = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/entities/names";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        if (body == null || Object.keys(body).length === 0)
+        if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -696,7 +701,7 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.namesResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -706,8 +711,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getProblemEvent - Show problem details
@@ -719,12 +723,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetProblemEventRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/problems/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/problems/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -732,12 +736,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.problemEvent = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -749,8 +753,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSecurityGroup - Show security group details
@@ -762,12 +765,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetSecurityGroupRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/security-groups/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/security-groups/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -775,12 +778,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseSecurityGroup = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -792,8 +795,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSecurityTag - Show security tag details
@@ -805,12 +807,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetSecurityTagRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/security-tags/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/security-tags/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -818,12 +820,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.securityTag = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -835,8 +837,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getService - Show service details
@@ -848,12 +849,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetServiceRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/services/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/services/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -861,12 +862,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseService = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -878,8 +879,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getServiceGroup - Show service group details
@@ -891,12 +891,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetServiceGroupRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/service-groups/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/service-groups/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -904,12 +904,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.group = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -921,8 +921,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getVcenterManager - Show vCenter manager details
@@ -934,12 +933,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetVcenterManagerRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/vcenter-managers/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/vcenter-managers/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -947,12 +946,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.vCenterManager = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -964,8 +963,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getVm - Show vm details
@@ -977,12 +975,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetVmRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/vms/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/vms/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -990,12 +988,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseVirtualMachine = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1007,8 +1005,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getVmknic - Show vmknic details
@@ -1020,12 +1017,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetVmknicRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/vmknics/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/vmknics/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1033,12 +1030,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.vmknic = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1050,8 +1047,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getVnic - Show vnic details
@@ -1063,12 +1059,12 @@ var Entities = /** @class */ (function () {
             req = new operations.GetVnicRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/entities/vnics/{id}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var url = utils.generateURL(baseURL, "/entities/vnics/{id}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1076,12 +1072,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.baseVnic = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1093,8 +1089,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listClusters - List clusters
@@ -1107,11 +1102,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/clusters";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1119,12 +1114,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1134,8 +1129,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listDatacenters - List vCenter datacenters
@@ -1148,11 +1142,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/vc-datacenters";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1160,12 +1154,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1175,8 +1169,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listDatastores - List datastores
@@ -1189,11 +1182,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/datastores";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1201,12 +1194,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1216,8 +1209,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listDistributedVirtualPortgroups - List distributed virtual portgroups
@@ -1230,11 +1222,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/distributed-virtual-portgroups";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1242,12 +1234,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1257,8 +1249,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listDistributedVirtualSwitches - List distributed virtual switches
@@ -1271,11 +1262,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/distributed-virtual-switches";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1283,12 +1274,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1298,8 +1289,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listFirewallRules - List firewall rules
@@ -1312,11 +1302,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/firewall-rules";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1324,12 +1314,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1339,8 +1329,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listFirewalls - List firewalls
@@ -1353,11 +1342,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/firewalls";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1365,12 +1354,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1380,8 +1369,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listFolders - List folders
@@ -1394,11 +1382,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/folders";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1406,12 +1394,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1421,8 +1409,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listHosts - List hosts
@@ -1435,11 +1422,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/hosts";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1447,12 +1434,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1462,8 +1449,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listIpSets - List ip sets
@@ -1476,11 +1462,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/ip-sets";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1488,12 +1474,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1503,8 +1489,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listLayer2Networks - List layer2 networks
@@ -1517,11 +1502,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/layer2-networks";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1529,12 +1514,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1544,8 +1529,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listNsxManagers - List nsx managers
@@ -1558,11 +1542,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/nsx-managers";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1570,12 +1554,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1585,8 +1569,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listProblemEvents - List problems
@@ -1599,11 +1582,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/problems";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1611,12 +1594,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1626,8 +1609,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listSecurityGroups - List security groups
@@ -1640,11 +1622,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/security-groups";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1652,12 +1634,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1667,8 +1649,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listSecurityTags - List security tags
@@ -1681,11 +1662,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/security-tags";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1693,12 +1674,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1708,8 +1689,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listServiceGroups - List service groups
@@ -1722,11 +1702,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/service-groups";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1734,12 +1714,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1749,8 +1729,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listServices - List services
@@ -1763,11 +1742,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/services";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1775,12 +1754,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1790,8 +1769,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVcenterManagers - List vCenter managers
@@ -1804,11 +1782,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/vcenter-managers";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1816,12 +1794,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1831,8 +1809,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVmknics - List vmknics
@@ -1845,11 +1822,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/vmknics";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1857,12 +1834,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1872,8 +1849,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVms - List vms
@@ -1886,11 +1862,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/vms";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1898,12 +1874,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1913,8 +1889,7 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * listVnics - List vnics
@@ -1927,11 +1902,11 @@ var Entities = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/entities/vnics";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1939,12 +1914,12 @@ var Entities = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.pagedListResponseWithTime = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.apiError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1954,9 +1929,8 @@ var Entities = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Entities;
 }());
-export { Entities };
+exports.Entities = Entities;

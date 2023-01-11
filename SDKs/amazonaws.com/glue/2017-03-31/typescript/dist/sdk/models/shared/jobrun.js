@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobRunStateEnum } from "./jobrunstateenum";
-import { NotificationProperty } from "./notificationproperty";
-import { Predecessor } from "./predecessor";
-import { WorkerTypeEnum } from "./workertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobRun = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobrunstateenum_1 = require("./jobrunstateenum");
+var notificationproperty_1 = require("./notificationproperty");
+var predecessor_1 = require("./predecessor");
+var workertypeenum_1 = require("./workertypeenum");
 // JobRun
 /**
  * Contains information about a job run.
@@ -37,93 +40,93 @@ var JobRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllocatedCapacity" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllocatedCapacity" }),
+        __metadata("design:type", Object)
     ], JobRun.prototype, "allocatedCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arguments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arguments" }),
+        __metadata("design:type", Object)
     ], JobRun.prototype, "arguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attempt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attempt" }),
         __metadata("design:type", Number)
     ], JobRun.prototype, "attempt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedOn" }),
         __metadata("design:type", Date)
     ], JobRun.prototype, "completedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecutionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecutionTime" }),
         __metadata("design:type", Number)
     ], JobRun.prototype, "executionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlueVersion" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "glueVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobName" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobRunState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobRunState" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "jobRunState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedOn" }),
         __metadata("design:type", Date)
     ], JobRun.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogGroupName" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCapacity" }),
         __metadata("design:type", Number)
     ], JobRun.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationProperty" }),
-        __metadata("design:type", NotificationProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationProperty" }),
+        __metadata("design:type", notificationproperty_1.NotificationProperty)
     ], JobRun.prototype, "notificationProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfWorkers" }),
         __metadata("design:type", Number)
     ], JobRun.prototype, "numberOfWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredecessorRuns", elemType: Predecessor }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredecessorRuns", elemType: predecessor_1.Predecessor }),
         __metadata("design:type", Array)
     ], JobRun.prototype, "predecessorRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousRunId" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "previousRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityConfiguration" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "securityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartedOn" }),
         __metadata("design:type", Date)
     ], JobRun.prototype, "startedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timeout" }),
         __metadata("design:type", Number)
     ], JobRun.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TriggerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TriggerName" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "triggerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerType" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "workerType", void 0);
     return JobRun;
-}(SpeakeasyBase));
-export { JobRun };
+}(utils_1.SpeakeasyBase));
+exports.JobRun = JobRun;

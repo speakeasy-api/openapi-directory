@@ -1,0 +1,145 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientLabResultSet = exports.PatientLabResultSetStatusEnum = exports.PatientLabResultSetAbnormalFlagEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PatientLabResultSetAbnormalFlagEnum;
+(function (PatientLabResultSetAbnormalFlagEnum) {
+    PatientLabResultSetAbnormalFlagEnum["Unknown"] = "";
+    PatientLabResultSetAbnormalFlagEnum["L"] = "L";
+    PatientLabResultSetAbnormalFlagEnum["H"] = "H";
+    PatientLabResultSetAbnormalFlagEnum["Ll"] = "LL";
+    PatientLabResultSetAbnormalFlagEnum["Hh"] = "HH";
+    PatientLabResultSetAbnormalFlagEnum["LessThan"] = "<";
+    PatientLabResultSetAbnormalFlagEnum["GreaterThan"] = ">";
+    PatientLabResultSetAbnormalFlagEnum["N"] = "N";
+    PatientLabResultSetAbnormalFlagEnum["A"] = "A";
+    PatientLabResultSetAbnormalFlagEnum["Aa"] = "AA";
+    PatientLabResultSetAbnormalFlagEnum["Null"] = "null";
+    PatientLabResultSetAbnormalFlagEnum["U"] = "U";
+    PatientLabResultSetAbnormalFlagEnum["D"] = "D";
+    PatientLabResultSetAbnormalFlagEnum["B"] = "B";
+    PatientLabResultSetAbnormalFlagEnum["W"] = "W";
+    PatientLabResultSetAbnormalFlagEnum["S"] = "S";
+    PatientLabResultSetAbnormalFlagEnum["R"] = "R";
+    PatientLabResultSetAbnormalFlagEnum["I"] = "I";
+    PatientLabResultSetAbnormalFlagEnum["Ms"] = "MS";
+    PatientLabResultSetAbnormalFlagEnum["Vs"] = "VS";
+})(PatientLabResultSetAbnormalFlagEnum = exports.PatientLabResultSetAbnormalFlagEnum || (exports.PatientLabResultSetAbnormalFlagEnum = {}));
+var PatientLabResultSetStatusEnum;
+(function (PatientLabResultSetStatusEnum) {
+    PatientLabResultSetStatusEnum["Unknown"] = "";
+    PatientLabResultSetStatusEnum["OrderEntered"] = "Order Entered";
+    PatientLabResultSetStatusEnum["Discontinued"] = "Discontinued";
+    PatientLabResultSetStatusEnum["InProgress"] = "In Progress";
+    PatientLabResultSetStatusEnum["ResultsReceived"] = "Results Received";
+    PatientLabResultSetStatusEnum["ResultsReviewedWithPatient"] = "Results Reviewed with Patient";
+    PatientLabResultSetStatusEnum["PaperOrder"] = "Paper Order";
+})(PatientLabResultSetStatusEnum = exports.PatientLabResultSetStatusEnum || (exports.PatientLabResultSetStatusEnum = {}));
+var PatientLabResultSet = /** @class */ (function (_super) {
+    __extends(PatientLabResultSet, _super);
+    function PatientLabResultSet() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_test_performed" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "dateTestPerformed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctor_comments" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "doctorComments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctor_signoff" }),
+        __metadata("design:type", Boolean)
+    ], PatientLabResultSet.prototype, "doctorSignoff", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], PatientLabResultSet.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_abnormal_flag" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labAbnormalFlag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_imported_from_ccr" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labImportedFromCcr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_normal_range" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labNormalRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_normal_range_units" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labNormalRangeUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_order_status" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labOrderStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_result_value" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labResultValue", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_result_value_as_float" }),
+        __metadata("design:type", Number)
+    ], PatientLabResultSet.prototype, "labResultValueAsFloat", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lab_result_value_units" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "labResultValueUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loinc_code" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "loincCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ordering_doctor" }),
+        __metadata("design:type", Number)
+    ], PatientLabResultSet.prototype, "orderingDoctor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", Number)
+    ], PatientLabResultSet.prototype, "patient", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scanned_in_result" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "scannedInResult", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], PatientLabResultSet.prototype, "updatedAt", void 0);
+    return PatientLabResultSet;
+}(utils_1.SpeakeasyBase));
+exports.PatientLabResultSet = PatientLabResultSet;

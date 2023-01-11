@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NotebooksProjectsLocationsEnvironmentsCreateRequest, NotebooksProjectsLocationsEnvironmentsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,40 +30,40 @@ const req: NotebooksProjectsLocationsEnvironmentsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "tempora",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "ipsum",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "fugiat",
-    environmentId: "magnam",
-    fields: "porro",
-    key: "eos",
-    oauthToken: "consequatur",
+    callback: "consequuntur",
+    environmentId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "laudantium",
-    uploadType: "officia",
-    uploadProtocol: "quidem",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     containerImage: {
-      repository: "voluptatem",
-      tag: "nesciunt",
+      repository: "debitis",
+      tag: "voluptatum",
     },
-    description: "provident",
-    displayName: "perferendis",
-    postStartupScript: "suscipit",
+    description: "et",
+    displayName: "ut",
+    postStartupScript: "dolorem",
     vmImage: {
-      imageFamily: "sunt",
-      imageName: "aut",
-      project: "non",
+      imageFamily: "et",
+      imageName: "voluptate",
+      project: "iste",
     },
   },
 };

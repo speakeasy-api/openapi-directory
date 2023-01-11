@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryDto } from "./categorydto";
-import { MetadataDto } from "./metadatadto";
-import { PresentationDto } from "./presentationdto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductUpdateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorydto_1 = require("./categorydto");
+var metadatadto_1 = require("./metadatadto");
+var presentationdto_1 = require("./presentationdto");
 var ProductUpdateRequest = /** @class */ (function (_super) {
     __extends(ProductUpdateRequest, _super);
     function ProductUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", Array)
     ], ProductUpdateRequest.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
-        __metadata("design:type", CategoryDto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
+        __metadata("design:type", categorydto_1.CategoryDto)
     ], ProductUpdateRequest.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalReference" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "externalReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageLookupKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageLookupKeys" }),
         __metadata("design:type", Array)
     ], ProductUpdateRequest.prototype, "imageLookupKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", MetadataDto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadatadto_1.MetadataDto)
     ], ProductUpdateRequest.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=presentation" }),
-        __metadata("design:type", PresentationDto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=presentation" }),
+        __metadata("design:type", presentationdto_1.PresentationDto)
     ], ProductUpdateRequest.prototype, "presentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxCode" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "taxCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxExempt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxExempt" }),
         __metadata("design:type", Boolean)
     ], ProductUpdateRequest.prototype, "taxExempt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxRates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxRates" }),
         __metadata("design:type", Array)
     ], ProductUpdateRequest.prototype, "taxRates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unitName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unitName" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "unitName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], ProductUpdateRequest.prototype, "uuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variantUuids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variantUuids" }),
         __metadata("design:type", Array)
     ], ProductUpdateRequest.prototype, "variantUuids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vatPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vatPercentage" }),
         __metadata("design:type", Number)
     ], ProductUpdateRequest.prototype, "vatPercentage", void 0);
     return ProductUpdateRequest;
-}(SpeakeasyBase));
-export { ProductUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProductUpdateRequest = ProductUpdateRequest;

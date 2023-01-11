@@ -37,5 +37,5 @@ export class GetaddressmatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getaddressmatch200ApplicationJsonObject?: Getaddressmatch200ApplicationJson;
+  getaddressmatch200ApplicationJSONObject?: Getaddressmatch200ApplicationJson;
 }

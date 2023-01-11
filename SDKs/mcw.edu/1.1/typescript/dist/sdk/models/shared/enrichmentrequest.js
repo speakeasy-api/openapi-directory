@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnrichmentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnrichmentRequest = /** @class */ (function (_super) {
     __extends(EnrichmentRequest, _super);
     function EnrichmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspect" }),
         __metadata("design:type", String)
     ], EnrichmentRequest.prototype, "aspect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genes" }),
         __metadata("design:type", Array)
     ], EnrichmentRequest.prototype, "genes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=species" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=species" }),
         __metadata("design:type", String)
     ], EnrichmentRequest.prototype, "species", void 0);
     return EnrichmentRequest;
-}(SpeakeasyBase));
-export { EnrichmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnrichmentRequest = EnrichmentRequest;

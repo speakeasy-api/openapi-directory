@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { CurrencyFormat } from "./currencyformat";
-import { DateFormat } from "./dateformat";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BudgetSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var currencyformat_1 = require("./currencyformat");
+var dateformat_1 = require("./dateformat");
 var BudgetSummary = /** @class */ (function (_super) {
     __extends(BudgetSummary, _super);
     function BudgetSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: Account }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: account_1.Account }),
         __metadata("design:type", Array)
     ], BudgetSummary.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_format" }),
-        __metadata("design:type", CurrencyFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_format" }),
+        __metadata("design:type", currencyformat_1.CurrencyFormat)
     ], BudgetSummary.prototype, "currencyFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_format" }),
-        __metadata("design:type", DateFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_format" }),
+        __metadata("design:type", dateformat_1.DateFormat)
     ], BudgetSummary.prototype, "dateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_month" }),
         __metadata("design:type", Date)
     ], BudgetSummary.prototype, "firstMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BudgetSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_modified_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_modified_on" }),
         __metadata("design:type", Date)
     ], BudgetSummary.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_month" }),
         __metadata("design:type", Date)
     ], BudgetSummary.prototype, "lastMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BudgetSummary.prototype, "name", void 0);
     return BudgetSummary;
-}(SpeakeasyBase));
-export { BudgetSummary };
+}(utils_1.SpeakeasyBase));
+exports.BudgetSummary = BudgetSummary;

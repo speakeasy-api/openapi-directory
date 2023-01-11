@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceDescription } from "./devicedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDeviceResponse = exports.DescribeDeviceResponseDeviceDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+// DescribeDeviceResponseDeviceDescription
+/**
+ * Device details.
+**/
+var DescribeDeviceResponseDeviceDescription = /** @class */ (function (_super) {
+    __extends(DescribeDeviceResponseDeviceDescription, _super);
+    function DescribeDeviceResponseDeviceDescription() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "arn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceId" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "deviceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "enabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemainingLife" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "remainingLife", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
+        __metadata("design:type", Object)
+    ], DescribeDeviceResponseDeviceDescription.prototype, "type", void 0);
+    return DescribeDeviceResponseDeviceDescription;
+}(utils_1.SpeakeasyBase));
+exports.DescribeDeviceResponseDeviceDescription = DescribeDeviceResponseDeviceDescription;
 var DescribeDeviceResponse = /** @class */ (function (_super) {
     __extends(DescribeDeviceResponse, _super);
     function DescribeDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceDescription" }),
-        __metadata("design:type", DeviceDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceDescription" }),
+        __metadata("design:type", DescribeDeviceResponseDeviceDescription)
     ], DescribeDeviceResponse.prototype, "deviceDescription", void 0);
     return DescribeDeviceResponse;
-}(SpeakeasyBase));
-export { DescribeDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDeviceResponse = DescribeDeviceResponse;

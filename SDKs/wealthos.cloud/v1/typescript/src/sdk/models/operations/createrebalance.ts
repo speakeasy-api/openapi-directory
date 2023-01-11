@@ -54,28 +54,28 @@ export class CreateRebalanceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createRebalance201ApplicationJsonAny?: any;
+  createRebalance201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance400ApplicationJsonAny?: any;
+  createRebalance400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance401ApplicationJsonAny?: any;
+  createRebalance401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance403ApplicationJsonAny?: any;
+  createRebalance403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance404ApplicationJsonAny?: any;
+  createRebalance404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance409ApplicationJsonAny?: any;
+  createRebalance409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance429ApplicationJsonAny?: any;
+  createRebalance429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createRebalance500ApplicationJsonAny?: any;
+  createRebalance500ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

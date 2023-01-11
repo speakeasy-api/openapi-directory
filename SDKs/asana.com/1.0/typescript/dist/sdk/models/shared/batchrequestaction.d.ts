@@ -19,7 +19,7 @@ export declare class BatchRequestActionOptions extends SpeakeasyBase {
  * An action object for use in a batch request.
 **/
 export declare class BatchRequestAction extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     method: BatchRequestActionMethodEnum;
     options?: BatchRequestActionOptions;
     relativePath: string;

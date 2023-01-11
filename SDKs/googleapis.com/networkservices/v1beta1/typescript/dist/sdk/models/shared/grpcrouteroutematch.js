@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcRouteHeaderMatch } from "./grpcrouteheadermatch";
-import { GrpcRouteMethodMatch } from "./grpcroutemethodmatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrpcRouteRouteMatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcrouteheadermatch_1 = require("./grpcrouteheadermatch");
+var grpcroutemethodmatch_1 = require("./grpcroutemethodmatch");
 // GrpcRouteRouteMatch
 /**
  * Criteria for matching traffic. A RouteMatch will be considered to match when all supplied fields match.
@@ -35,13 +38,13 @@ var GrpcRouteRouteMatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: GrpcRouteHeaderMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: grpcrouteheadermatch_1.GrpcRouteHeaderMatch }),
         __metadata("design:type", Array)
     ], GrpcRouteRouteMatch.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
-        __metadata("design:type", GrpcRouteMethodMatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
+        __metadata("design:type", grpcroutemethodmatch_1.GrpcRouteMethodMatch)
     ], GrpcRouteRouteMatch.prototype, "method", void 0);
     return GrpcRouteRouteMatch;
-}(SpeakeasyBase));
-export { GrpcRouteRouteMatch };
+}(utils_1.SpeakeasyBase));
+exports.GrpcRouteRouteMatch = GrpcRouteRouteMatch;

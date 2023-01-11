@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MergeMetadata } from "./mergemetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestMergedStateChangedEventMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var mergemetadata_1 = require("./mergemetadata");
 // PullRequestMergedStateChangedEventMetadata
 /**
  * Returns information about the change in the merge state for a pull request event.
@@ -34,17 +37,17 @@ var PullRequestMergedStateChangedEventMetadata = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationReference" }),
         __metadata("design:type", String)
     ], PullRequestMergedStateChangedEventMetadata.prototype, "destinationReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeMetadata" }),
-        __metadata("design:type", MergeMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeMetadata" }),
+        __metadata("design:type", mergemetadata_1.MergeMetadata)
     ], PullRequestMergedStateChangedEventMetadata.prototype, "mergeMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], PullRequestMergedStateChangedEventMetadata.prototype, "repositoryName", void 0);
     return PullRequestMergedStateChangedEventMetadata;
-}(SpeakeasyBase));
-export { PullRequestMergedStateChangedEventMetadata };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMergedStateChangedEventMetadata = PullRequestMergedStateChangedEventMetadata;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposAddCollaboratorResponse = exports.ReposAddCollaboratorRequest = exports.ReposAddCollaboratorRequestBody = exports.ReposAddCollaboratorRequestBodyPermissionEnum = exports.ReposAddCollaboratorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposAddCollaboratorPathParams = /** @class */ (function (_super) {
     __extends(ReposAddCollaboratorPathParams, _super);
     function ReposAddCollaboratorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposAddCollaboratorPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposAddCollaboratorPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], ReposAddCollaboratorPathParams.prototype, "username", void 0);
     return ReposAddCollaboratorPathParams;
-}(SpeakeasyBase));
-export { ReposAddCollaboratorPathParams };
-export var ReposAddCollaboratorRequestBodyPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReposAddCollaboratorPathParams = ReposAddCollaboratorPathParams;
+var ReposAddCollaboratorRequestBodyPermissionEnum;
 (function (ReposAddCollaboratorRequestBodyPermissionEnum) {
     ReposAddCollaboratorRequestBodyPermissionEnum["Pull"] = "pull";
     ReposAddCollaboratorRequestBodyPermissionEnum["Push"] = "push";
     ReposAddCollaboratorRequestBodyPermissionEnum["Admin"] = "admin";
     ReposAddCollaboratorRequestBodyPermissionEnum["Maintain"] = "maintain";
     ReposAddCollaboratorRequestBodyPermissionEnum["Triage"] = "triage";
-})(ReposAddCollaboratorRequestBodyPermissionEnum || (ReposAddCollaboratorRequestBodyPermissionEnum = {}));
+})(ReposAddCollaboratorRequestBodyPermissionEnum = exports.ReposAddCollaboratorRequestBodyPermissionEnum || (exports.ReposAddCollaboratorRequestBodyPermissionEnum = {}));
 var ReposAddCollaboratorRequestBody = /** @class */ (function (_super) {
     __extends(ReposAddCollaboratorRequestBody, _super);
     function ReposAddCollaboratorRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], ReposAddCollaboratorRequestBody.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", String)
     ], ReposAddCollaboratorRequestBody.prototype, "permissions", void 0);
     return ReposAddCollaboratorRequestBody;
-}(SpeakeasyBase));
-export { ReposAddCollaboratorRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposAddCollaboratorRequestBody = ReposAddCollaboratorRequestBody;
 var ReposAddCollaboratorRequest = /** @class */ (function (_super) {
     __extends(ReposAddCollaboratorRequest, _super);
     function ReposAddCollaboratorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposAddCollaboratorPathParams)
     ], ReposAddCollaboratorRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposAddCollaboratorRequestBody)
     ], ReposAddCollaboratorRequest.prototype, "request", void 0);
     return ReposAddCollaboratorRequest;
-}(SpeakeasyBase));
-export { ReposAddCollaboratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposAddCollaboratorRequest = ReposAddCollaboratorRequest;
 var ReposAddCollaboratorResponse = /** @class */ (function (_super) {
     __extends(ReposAddCollaboratorResponse, _super);
     function ReposAddCollaboratorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposAddCollaboratorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposAddCollaboratorResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ReposAddCollaboratorResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RepositoryInvitation)
     ], ReposAddCollaboratorResponse.prototype, "repositoryInvitation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], ReposAddCollaboratorResponse.prototype, "validationError", void 0);
     return ReposAddCollaboratorResponse;
-}(SpeakeasyBase));
-export { ReposAddCollaboratorResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposAddCollaboratorResponse = ReposAddCollaboratorResponse;

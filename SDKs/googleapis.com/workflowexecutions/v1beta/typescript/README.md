@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest, WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,31 @@ const req: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest =
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "veritatis",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "temporibus",
-    alt: "json",
-    callback: "explicabo",
-    fields: "voluptatem",
-    key: "dolor",
-    oauthToken: "qui",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "at",
-    uploadType: "laboriosam",
-    uploadProtocol: "aut",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "soluta": "temporibus",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

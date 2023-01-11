@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CredentialTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Credential = exports.CredentialTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CredentialTypeEnum;
 (function (CredentialTypeEnum) {
     CredentialTypeEnum["MiradoreApiKeyV1"] = "miradore_api_key_v1";
     CredentialTypeEnum["AwsAccessSecret"] = "aws_access_secret";
-})(CredentialTypeEnum || (CredentialTypeEnum = {}));
+})(CredentialTypeEnum = exports.CredentialTypeEnum || (exports.CredentialTypeEnum = {}));
 var Credential = /** @class */ (function (_super) {
     __extends(Credential, _super);
     function Credential() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acl" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acl" }),
+        __metadata("design:type", Object)
     ], Credential.prototype, "acl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrs" }),
         __metadata("design:type", Array)
     ], Credential.prototype, "cidrs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], Credential.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Number)
     ], Credential.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by_email" }),
         __metadata("design:type", String)
     ], Credential.prototype, "createdByEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by_id" }),
         __metadata("design:type", String)
     ], Credential.prototype, "createdById", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=global" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=global" }),
         __metadata("design:type", Boolean)
     ], Credential.prototype, "global", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Credential.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_used_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_used_at" }),
         __metadata("design:type", Number)
     ], Credential.prototype, "lastUsedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_used_by_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_used_by_id" }),
         __metadata("design:type", String)
     ], Credential.prototype, "lastUsedById", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Credential.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Credential.prototype, "type", void 0);
     return Credential;
-}(SpeakeasyBase));
-export { Credential };
+}(utils_1.SpeakeasyBase));
+exports.Credential = Credential;

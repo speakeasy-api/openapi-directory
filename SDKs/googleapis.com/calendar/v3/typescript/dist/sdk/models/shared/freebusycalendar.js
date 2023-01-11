@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimePeriod } from "./timeperiod";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FreeBusyCalendar = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeperiod_1 = require("./timeperiod");
+var error_1 = require("./error");
+// FreeBusyCalendar
+/**
+ * Free/busy expansions for a single calendar.
+**/
 var FreeBusyCalendar = /** @class */ (function (_super) {
     __extends(FreeBusyCalendar, _super);
     function FreeBusyCalendar() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=busy", elemType: TimePeriod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=busy", elemType: timeperiod_1.TimePeriod }),
         __metadata("design:type", Array)
     ], FreeBusyCalendar.prototype, "busy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], FreeBusyCalendar.prototype, "errors", void 0);
     return FreeBusyCalendar;
-}(SpeakeasyBase));
-export { FreeBusyCalendar };
+}(utils_1.SpeakeasyBase));
+exports.FreeBusyCalendar = FreeBusyCalendar;

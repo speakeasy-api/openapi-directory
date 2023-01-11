@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationState = exports.LocationStateInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // LocationStateInput
 /**
  * Contains a set of booleans that reflect the [state of a Location.](https://support.google.com/business/answer/3480862)
@@ -33,64 +36,64 @@ var LocationStateInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDelete" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "canDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canUpdate" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "canUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPendingEdits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPendingEdits" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "hasPendingEdits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPendingVerification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPendingVerification" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "hasPendingVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisabled" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisconnected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisconnected" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isDisconnected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDuplicate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDuplicate" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isDuplicate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isGoogleUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isGoogleUpdated" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isGoogleUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isLocalPostApiDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isLocalPostApiDisabled" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isLocalPostApiDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPendingReview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPendingReview" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isPendingReview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublished" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isPublished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSuspended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSuspended" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isSuspended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isVerified" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "isVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=needsReverification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=needsReverification" }),
         __metadata("design:type", Boolean)
     ], LocationStateInput.prototype, "needsReverification", void 0);
     return LocationStateInput;
-}(SpeakeasyBase));
-export { LocationStateInput };
+}(utils_1.SpeakeasyBase));
+exports.LocationStateInput = LocationStateInput;
 // LocationState
 /**
  * Contains a set of booleans that reflect the [state of a Location.](https://support.google.com/business/answer/3480862)
@@ -101,77 +104,77 @@ var LocationState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDelete" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canHaveFoodMenus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canHaveFoodMenus" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canHaveFoodMenus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canModifyServiceList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canModifyServiceList" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canModifyServiceList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canOperateHealthData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canOperateHealthData" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canOperateHealthData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canOperateLodgingData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canOperateLodgingData" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canOperateLodgingData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canUpdate" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "canUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPendingEdits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPendingEdits" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "hasPendingEdits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPendingVerification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPendingVerification" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "hasPendingVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisabled" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisconnected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisconnected" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isDisconnected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDuplicate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDuplicate" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isDuplicate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isGoogleUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isGoogleUpdated" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isGoogleUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isLocalPostApiDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isLocalPostApiDisabled" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isLocalPostApiDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPendingReview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPendingReview" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isPendingReview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublished" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isPublished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSuspended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSuspended" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isSuspended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isVerified" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "isVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=needsReverification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=needsReverification" }),
         __metadata("design:type", Boolean)
     ], LocationState.prototype, "needsReverification", void 0);
     return LocationState;
-}(SpeakeasyBase));
-export { LocationState };
+}(utils_1.SpeakeasyBase));
+exports.LocationState = LocationState;

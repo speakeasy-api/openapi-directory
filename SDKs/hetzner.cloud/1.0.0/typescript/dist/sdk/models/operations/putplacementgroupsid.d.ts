@@ -3,7 +3,7 @@ export declare class PutPlacementGroupsIdPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class PutPlacementGroupsIdUpdatePlacementGroupRequest extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 export declare enum PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum {
@@ -12,7 +12,7 @@ export declare enum PutPlacementGroupsIdPlacementGroupResponsePlacementGroupType
 export declare class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum;

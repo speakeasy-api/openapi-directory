@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPublicStatusUsingPostResponse = exports.GetPublicStatusUsingPostRequest = exports.GetPublicStatusUsingPost500ApplicationJson = exports.GetPublicStatusUsingPost401ApplicationJson = exports.GetPublicStatusUsingPost400ApplicationJson = exports.GetPublicStatusUsingPost200ApplicationJson = exports.GetPublicStatusUsingPost200ApplicationJsonData = exports.GetPublicStatusUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPublicStatusUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPostQueryParams, _super);
     function GetPublicStatusUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], GetPublicStatusUsingPostQueryParams.prototype, "padId", void 0);
+    ], GetPublicStatusUsingPostQueryParams.prototype, "padID", void 0);
     return GetPublicStatusUsingPostQueryParams;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPostQueryParams = GetPublicStatusUsingPostQueryParams;
 var GetPublicStatusUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPost200ApplicationJsonData, _super);
     function GetPublicStatusUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicStatus" }),
         __metadata("design:type", Boolean)
     ], GetPublicStatusUsingPost200ApplicationJsonData.prototype, "publicStatus", void 0);
     return GetPublicStatusUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPost200ApplicationJsonData = GetPublicStatusUsingPost200ApplicationJsonData;
 var GetPublicStatusUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPost200ApplicationJson, _super);
     function GetPublicStatusUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPublicStatusUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetPublicStatusUsingPost200ApplicationJsonData)
     ], GetPublicStatusUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPublicStatusUsingPost200ApplicationJson.prototype, "message", void 0);
     return GetPublicStatusUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPost200ApplicationJson = GetPublicStatusUsingPost200ApplicationJson;
 var GetPublicStatusUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPost400ApplicationJson, _super);
     function GetPublicStatusUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPublicStatusUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPublicStatusUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPublicStatusUsingPost400ApplicationJson.prototype, "message", void 0);
     return GetPublicStatusUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPost400ApplicationJson = GetPublicStatusUsingPost400ApplicationJson;
 var GetPublicStatusUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPost401ApplicationJson, _super);
     function GetPublicStatusUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPublicStatusUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPublicStatusUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPublicStatusUsingPost401ApplicationJson.prototype, "message", void 0);
     return GetPublicStatusUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPost401ApplicationJson = GetPublicStatusUsingPost401ApplicationJson;
 var GetPublicStatusUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPost500ApplicationJson, _super);
     function GetPublicStatusUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPublicStatusUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPublicStatusUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPublicStatusUsingPost500ApplicationJson.prototype, "message", void 0);
     return GetPublicStatusUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPost500ApplicationJson = GetPublicStatusUsingPost500ApplicationJson;
 var GetPublicStatusUsingPostRequest = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPostRequest, _super);
     function GetPublicStatusUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPublicStatusUsingPostQueryParams)
     ], GetPublicStatusUsingPostRequest.prototype, "queryParams", void 0);
     return GetPublicStatusUsingPostRequest;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPostRequest = GetPublicStatusUsingPostRequest;
 var GetPublicStatusUsingPostResponse = /** @class */ (function (_super) {
     __extends(GetPublicStatusUsingPostResponse, _super);
     function GetPublicStatusUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPublicStatusUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPublicStatusUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPublicStatusUsingPost200ApplicationJson)
-    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPost200ApplicationJsonObject", void 0);
+    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPublicStatusUsingPost400ApplicationJson)
-    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPost400ApplicationJsonObject", void 0);
+    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPublicStatusUsingPost401ApplicationJson)
-    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPost401ApplicationJsonObject", void 0);
+    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPublicStatusUsingPost500ApplicationJson)
-    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPost500ApplicationJsonObject", void 0);
+    ], GetPublicStatusUsingPostResponse.prototype, "getPublicStatusUsingPOST500ApplicationJSONObject", void 0);
     return GetPublicStatusUsingPostResponse;
-}(SpeakeasyBase));
-export { GetPublicStatusUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPublicStatusUsingPostResponse = GetPublicStatusUsingPostResponse;

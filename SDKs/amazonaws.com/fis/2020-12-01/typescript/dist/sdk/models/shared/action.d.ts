@@ -7,7 +7,7 @@ import { ActionTarget } from "./actiontarget";
 export declare class Action extends SpeakeasyBase {
     description?: string;
     id?: string;
-    parameters?: Map<string, ActionParameter>;
-    tags?: Map<string, string>;
-    targets?: Map<string, ActionTarget>;
+    parameters?: Record<string, ActionParameter>;
+    tags?: Record<string, string>;
+    targets?: Record<string, ActionTarget>;
 }

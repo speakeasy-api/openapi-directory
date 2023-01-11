@@ -7,7 +7,6 @@ export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQu
     externalAccountId: string;
 }
 export declare class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 }

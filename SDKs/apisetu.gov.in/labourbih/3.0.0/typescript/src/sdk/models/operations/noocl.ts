@@ -188,23 +188,23 @@ export class NooclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  noocl400ApplicationJsonObject?: Noocl400ApplicationJson;
+  noocl400ApplicationJSONObject?: Noocl400ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl401ApplicationJsonObject?: Noocl401ApplicationJson;
+  noocl401ApplicationJSONObject?: Noocl401ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl404ApplicationJsonObject?: Noocl404ApplicationJson;
+  noocl404ApplicationJSONObject?: Noocl404ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl500ApplicationJsonObject?: Noocl500ApplicationJson;
+  noocl500ApplicationJSONObject?: Noocl500ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl502ApplicationJsonObject?: Noocl502ApplicationJson;
+  noocl502ApplicationJSONObject?: Noocl502ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl503ApplicationJsonObject?: Noocl503ApplicationJson;
+  noocl503ApplicationJSONObject?: Noocl503ApplicationJson;
 
   @SpeakeasyMetadata()
-  noocl504ApplicationJsonObject?: Noocl504ApplicationJson;
+  noocl504ApplicationJSONObject?: Noocl504ApplicationJson;
 }

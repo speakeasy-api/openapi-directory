@@ -19,6 +19,6 @@ export declare class GetNetPayReportOutputRequest extends SpeakeasyBase {
 export declare class GetNetPayReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getNetPayReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getNetPayReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

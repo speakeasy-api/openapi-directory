@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotSchedule } from "./snapshotschedule";
+import { SnapshotScheduleList } from "./snapshotschedulelist";
 
 
 
@@ -7,6 +7,6 @@ export class DescribeSnapshotSchedulesOutputMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: SnapshotSchedule })
-  snapshotSchedules?: SnapshotSchedule[];
+  @SpeakeasyMetadata({ elemType: SnapshotScheduleList })
+  snapshotSchedules?: SnapshotScheduleList[];
 }

@@ -14,7 +14,7 @@ export declare class GetNetworkClientTrafficHistoryRequest extends SpeakeasyBase
 }
 export declare class GetNetworkClientTrafficHistoryResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkClientTrafficHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkClientTrafficHistory200ApplicationJSONObject?: Record<string, any>;
 }

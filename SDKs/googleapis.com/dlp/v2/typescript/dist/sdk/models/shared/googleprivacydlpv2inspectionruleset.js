@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
-import { GooglePrivacyDlpV2InspectionRule } from "./googleprivacydlpv2inspectionrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectionRuleSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
+var googleprivacydlpv2inspectionrule_1 = require("./googleprivacydlpv2inspectionrule");
 // GooglePrivacyDlpV2InspectionRuleSet
 /**
  * Rule set for modifying a set of infoTypes to alter behavior under certain circumstances, depending on the specific details of the rules within the set.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2InspectionRuleSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypes", elemType: GooglePrivacyDlpV2InfoType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypes", elemType: googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectionRuleSet.prototype, "infoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: GooglePrivacyDlpV2InspectionRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: googleprivacydlpv2inspectionrule_1.GooglePrivacyDlpV2InspectionRule }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectionRuleSet.prototype, "rules", void 0);
     return GooglePrivacyDlpV2InspectionRuleSet;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectionRuleSet };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectionRuleSet = GooglePrivacyDlpV2InspectionRuleSet;

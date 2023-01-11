@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,80 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AwsSqsRulePatchRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsSqsRulePatch = exports.AwsSqsRulePatchTarget = exports.AwsSqsRulePatchStatusEnum = exports.AwsSqsRulePatchRuleTypeEnum = exports.AwsSqsRulePatchRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AwsSqsRulePatchRequestModeEnum;
 (function (AwsSqsRulePatchRequestModeEnum) {
     AwsSqsRulePatchRequestModeEnum["Single"] = "single";
-})(AwsSqsRulePatchRequestModeEnum || (AwsSqsRulePatchRequestModeEnum = {}));
-export var AwsSqsRulePatchRuleTypeEnum;
+})(AwsSqsRulePatchRequestModeEnum = exports.AwsSqsRulePatchRequestModeEnum || (exports.AwsSqsRulePatchRequestModeEnum = {}));
+var AwsSqsRulePatchRuleTypeEnum;
 (function (AwsSqsRulePatchRuleTypeEnum) {
     AwsSqsRulePatchRuleTypeEnum["AwsSqs"] = "aws/sqs";
-})(AwsSqsRulePatchRuleTypeEnum || (AwsSqsRulePatchRuleTypeEnum = {}));
-export var AwsSqsRulePatchStatusEnum;
+})(AwsSqsRulePatchRuleTypeEnum = exports.AwsSqsRulePatchRuleTypeEnum || (exports.AwsSqsRulePatchRuleTypeEnum = {}));
+var AwsSqsRulePatchStatusEnum;
 (function (AwsSqsRulePatchStatusEnum) {
     AwsSqsRulePatchStatusEnum["Enabled"] = "enabled";
     AwsSqsRulePatchStatusEnum["Disabled"] = "disabled";
-})(AwsSqsRulePatchStatusEnum || (AwsSqsRulePatchStatusEnum = {}));
+})(AwsSqsRulePatchStatusEnum = exports.AwsSqsRulePatchStatusEnum || (exports.AwsSqsRulePatchStatusEnum = {}));
 var AwsSqsRulePatchTarget = /** @class */ (function (_super) {
     __extends(AwsSqsRulePatchTarget, _super);
     function AwsSqsRulePatchTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", Object)
     ], AwsSqsRulePatchTarget.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsAccountId" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatchTarget.prototype, "awsAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AwsSqsRulePatchTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatchTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueName" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatchTarget.prototype, "queueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatchTarget.prototype, "region", void 0);
     return AwsSqsRulePatchTarget;
-}(SpeakeasyBase));
-export { AwsSqsRulePatchTarget };
+}(utils_1.SpeakeasyBase));
+exports.AwsSqsRulePatchTarget = AwsSqsRulePatchTarget;
 var AwsSqsRulePatch = /** @class */ (function (_super) {
     __extends(AwsSqsRulePatch, _super);
     function AwsSqsRulePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatch.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatch.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AwsSqsRulePatch.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AwsSqsRulePatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AwsSqsRulePatchTarget)
     ], AwsSqsRulePatch.prototype, "target", void 0);
     return AwsSqsRulePatch;
-}(SpeakeasyBase));
-export { AwsSqsRulePatch };
+}(utils_1.SpeakeasyBase));
+exports.AwsSqsRulePatch = AwsSqsRulePatch;

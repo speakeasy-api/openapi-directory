@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NoteInput = exports.Note = void 0;
+var utils_1 = require("../../../internal/utils");
 var Note = /** @class */ (function (_super) {
     __extends(Note, _super);
     function Note() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], Note.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_id" }),
         __metadata("design:type", String)
     ], Note.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_id" }),
         __metadata("design:type", String)
     ], Note.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Note.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], Note.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], Note.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Note.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_id" }),
         __metadata("design:type", String)
     ], Note.prototype, "leadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opportunity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opportunity_id" }),
         __metadata("design:type", String)
     ], Note.prototype, "opportunityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
         __metadata("design:type", String)
     ], Note.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Note.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], Note.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], Note.prototype, "updatedBy", void 0);
     return Note;
-}(SpeakeasyBase));
-export { Note };
+}(utils_1.SpeakeasyBase));
+exports.Note = Note;
 var NoteInput = /** @class */ (function (_super) {
     __extends(NoteInput, _super);
     function NoteInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], NoteInput.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_id" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_id" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_id" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "leadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opportunity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opportunity_id" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "opportunityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "title", void 0);
     return NoteInput;
-}(SpeakeasyBase));
-export { NoteInput };
+}(utils_1.SpeakeasyBase));
+exports.NoteInput = NoteInput;

@@ -41,6 +41,6 @@ export declare class UpdateMessengerAccountResponse extends SpeakeasyBase {
     fourHundredAndThreeResponse?: shared.FourHundredAndThreeResponse;
     contentType: string;
     statusCode: number;
-    updateMessengerAccount200ApplicationJsonObject?: UpdateMessengerAccount200ApplicationJson;
-    updateMessengerAccount400ApplicationJsonObject?: UpdateMessengerAccount400ApplicationJson;
+    updateMessengerAccount200ApplicationJSONObject?: UpdateMessengerAccount200ApplicationJson;
+    updateMessengerAccount400ApplicationJSONObject?: UpdateMessengerAccount400ApplicationJson;
 }

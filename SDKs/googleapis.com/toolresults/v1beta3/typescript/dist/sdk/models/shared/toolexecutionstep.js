@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ToolExecution } from "./toolexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ToolExecutionStep = void 0;
+var utils_1 = require("../../../internal/utils");
+var toolexecution_1 = require("./toolexecution");
 // ToolExecutionStep
 /**
  * Generic tool step to be used for binaries we do not explicitly support. For example: running cp to copy artifacts from one location to another.
@@ -34,9 +37,9 @@ var ToolExecutionStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolExecution" }),
-        __metadata("design:type", ToolExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolExecution" }),
+        __metadata("design:type", toolexecution_1.ToolExecution)
     ], ToolExecutionStep.prototype, "toolExecution", void 0);
     return ToolExecutionStep;
-}(SpeakeasyBase));
-export { ToolExecutionStep };
+}(utils_1.SpeakeasyBase));
+exports.ToolExecutionStep = ToolExecutionStep;

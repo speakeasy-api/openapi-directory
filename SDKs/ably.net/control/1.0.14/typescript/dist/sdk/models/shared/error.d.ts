@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     code: number;
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     href: string;
     message: string;
     statusCode: number;

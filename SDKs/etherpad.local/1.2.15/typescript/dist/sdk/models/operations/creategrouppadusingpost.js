@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,148 +23,150 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateGroupPadUsingPostResponse = exports.CreateGroupPadUsingPostRequest = exports.CreateGroupPadUsingPost500ApplicationJson = exports.CreateGroupPadUsingPost401ApplicationJson = exports.CreateGroupPadUsingPost400ApplicationJson = exports.CreateGroupPadUsingPost200ApplicationJson = exports.CreateGroupPadUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateGroupPadUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPostQueryParams, _super);
     function CreateGroupPadUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupID" }),
         __metadata("design:type", String)
-    ], CreateGroupPadUsingPostQueryParams.prototype, "groupId", void 0);
+    ], CreateGroupPadUsingPostQueryParams.prototype, "groupID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padName" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPostQueryParams.prototype, "padName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPostQueryParams.prototype, "text", void 0);
     return CreateGroupPadUsingPostQueryParams;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPostQueryParams = CreateGroupPadUsingPostQueryParams;
 var CreateGroupPadUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPost200ApplicationJson, _super);
     function CreateGroupPadUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupPadUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupPadUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPost200ApplicationJson.prototype, "message", void 0);
     return CreateGroupPadUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPost200ApplicationJson = CreateGroupPadUsingPost200ApplicationJson;
 var CreateGroupPadUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPost400ApplicationJson, _super);
     function CreateGroupPadUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupPadUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupPadUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPost400ApplicationJson.prototype, "message", void 0);
     return CreateGroupPadUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPost400ApplicationJson = CreateGroupPadUsingPost400ApplicationJson;
 var CreateGroupPadUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPost401ApplicationJson, _super);
     function CreateGroupPadUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupPadUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupPadUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPost401ApplicationJson.prototype, "message", void 0);
     return CreateGroupPadUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPost401ApplicationJson = CreateGroupPadUsingPost401ApplicationJson;
 var CreateGroupPadUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPost500ApplicationJson, _super);
     function CreateGroupPadUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupPadUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupPadUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPost500ApplicationJson.prototype, "message", void 0);
     return CreateGroupPadUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPost500ApplicationJson = CreateGroupPadUsingPost500ApplicationJson;
 var CreateGroupPadUsingPostRequest = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPostRequest, _super);
     function CreateGroupPadUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupPadUsingPostQueryParams)
     ], CreateGroupPadUsingPostRequest.prototype, "queryParams", void 0);
     return CreateGroupPadUsingPostRequest;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPostRequest = CreateGroupPadUsingPostRequest;
 var CreateGroupPadUsingPostResponse = /** @class */ (function (_super) {
     __extends(CreateGroupPadUsingPostResponse, _super);
     function CreateGroupPadUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateGroupPadUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateGroupPadUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupPadUsingPost200ApplicationJson)
-    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPost200ApplicationJsonObject", void 0);
+    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupPadUsingPost400ApplicationJson)
-    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPost400ApplicationJsonObject", void 0);
+    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupPadUsingPost401ApplicationJson)
-    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPost401ApplicationJsonObject", void 0);
+    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupPadUsingPost500ApplicationJson)
-    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPost500ApplicationJsonObject", void 0);
+    ], CreateGroupPadUsingPostResponse.prototype, "createGroupPadUsingPOST500ApplicationJSONObject", void 0);
     return CreateGroupPadUsingPostResponse;
-}(SpeakeasyBase));
-export { CreateGroupPadUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupPadUsingPostResponse = CreateGroupPadUsingPostResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LastCrawlInfo } from "./lastcrawlinfo";
-import { LineageConfiguration } from "./lineageconfiguration";
-import { RecrawlPolicy } from "./recrawlpolicy";
-import { Schedule } from "./schedule";
-import { SchemaChangePolicy } from "./schemachangepolicy";
-import { CrawlerStateEnum } from "./crawlerstateenum";
-import { CrawlerTargets } from "./crawlertargets";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Crawler = void 0;
+var utils_1 = require("../../../internal/utils");
+var lastcrawlinfo_1 = require("./lastcrawlinfo");
+var lineageconfiguration_1 = require("./lineageconfiguration");
+var recrawlpolicy_1 = require("./recrawlpolicy");
+var schedule_1 = require("./schedule");
+var schemachangepolicy_1 = require("./schemachangepolicy");
+var crawlerstateenum_1 = require("./crawlerstateenum");
+var crawlertargets_1 = require("./crawlertargets");
 // Crawler
 /**
  * Specifies a crawler program that examines a data source and uses classifiers to try to determine its schema. If successful, the crawler records metadata concerning the data source in the Glue Data Catalog.
@@ -40,81 +43,81 @@ var Crawler = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Classifiers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Classifiers" }),
         __metadata("design:type", Array)
     ], Crawler.prototype, "classifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configuration" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlElapsedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlElapsedTime" }),
         __metadata("design:type", Number)
     ], Crawler.prototype, "crawlElapsedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlerSecurityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlerSecurityConfiguration" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "crawlerSecurityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], Crawler.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastCrawl" }),
-        __metadata("design:type", LastCrawlInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastCrawl" }),
+        __metadata("design:type", lastcrawlinfo_1.LastCrawlInfo)
     ], Crawler.prototype, "lastCrawl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], Crawler.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LineageConfiguration" }),
-        __metadata("design:type", LineageConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LineageConfiguration" }),
+        __metadata("design:type", lineageconfiguration_1.LineageConfiguration)
     ], Crawler.prototype, "lineageConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecrawlPolicy" }),
-        __metadata("design:type", RecrawlPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecrawlPolicy" }),
+        __metadata("design:type", recrawlpolicy_1.RecrawlPolicy)
     ], Crawler.prototype, "recrawlPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Role" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
-        __metadata("design:type", Schedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
+        __metadata("design:type", schedule_1.Schedule)
     ], Crawler.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaChangePolicy" }),
-        __metadata("design:type", SchemaChangePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaChangePolicy" }),
+        __metadata("design:type", schemachangepolicy_1.SchemaChangePolicy)
     ], Crawler.prototype, "schemaChangePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablePrefix" }),
         __metadata("design:type", String)
     ], Crawler.prototype, "tablePrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Targets" }),
-        __metadata("design:type", CrawlerTargets)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Targets" }),
+        __metadata("design:type", crawlertargets_1.CrawlerTargets)
     ], Crawler.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], Crawler.prototype, "version", void 0);
     return Crawler;
-}(SpeakeasyBase));
-export { Crawler };
+}(utils_1.SpeakeasyBase));
+exports.Crawler = Crawler;

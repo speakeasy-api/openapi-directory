@@ -34,7 +34,7 @@ export class TagResourceHeaders extends SpeakeasyBase {
 
 export class TagResourceRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }
 
 
@@ -64,7 +64,7 @@ export class TagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagResourceOutput?: Map<string, any>;
+  tagResourceOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

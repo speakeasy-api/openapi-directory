@@ -25,5 +25,5 @@ export class SetProtocolsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setProtocols200ApplicationJsonStringIntegers?: number[];
+  setProtocols200ApplicationJSONStringIntegers?: number[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Template = void 0;
+var utils_1 = require("../../../internal/utils");
 // Template
 /**
  * An object that defines the email template to use for an email message, and the values to use for any message variables in that template. An <i>email template</i> is a type of message template that contains content that you want to define, save, and reuse in email messages that you send.
@@ -33,17 +36,17 @@ var Template = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateArn" }),
         __metadata("design:type", String)
     ], Template.prototype, "templateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateData" }),
         __metadata("design:type", String)
     ], Template.prototype, "templateData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], Template.prototype, "templateName", void 0);
     return Template;
-}(SpeakeasyBase));
-export { Template };
+}(utils_1.SpeakeasyBase));
+exports.Template = Template;

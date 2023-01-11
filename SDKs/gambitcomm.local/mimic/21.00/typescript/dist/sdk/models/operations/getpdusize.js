@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPdusizeResponse = exports.GetPdusizeRequest = exports.GetPdusizePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPdusizePathParams = /** @class */ (function (_super) {
     __extends(GetPdusizePathParams, _super);
     function GetPdusizePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetPdusizePathParams.prototype, "agentNum", void 0);
     return GetPdusizePathParams;
-}(SpeakeasyBase));
-export { GetPdusizePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPdusizePathParams = GetPdusizePathParams;
 var GetPdusizeRequest = /** @class */ (function (_super) {
     __extends(GetPdusizeRequest, _super);
     function GetPdusizeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPdusizePathParams)
     ], GetPdusizeRequest.prototype, "pathParams", void 0);
     return GetPdusizeRequest;
-}(SpeakeasyBase));
-export { GetPdusizeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPdusizeRequest = GetPdusizeRequest;
 var GetPdusizeResponse = /** @class */ (function (_super) {
     __extends(GetPdusizeResponse, _super);
     function GetPdusizeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPdusizeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPdusizeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetPdusizeResponse.prototype, "getPdusize200ApplicationJsonInt32Integer", void 0);
+    ], GetPdusizeResponse.prototype, "getPdusize200ApplicationJSONInt32Integer", void 0);
     return GetPdusizeResponse;
-}(SpeakeasyBase));
-export { GetPdusizeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPdusizeResponse = GetPdusizeResponse;

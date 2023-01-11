@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FactorEnumFactorStatusesEnum = void 0;
+var FactorEnumFactorStatusesEnum;
+(function (FactorEnumFactorStatusesEnum) {
+    FactorEnumFactorStatusesEnum["Unverified"] = "unverified";
+    FactorEnumFactorStatusesEnum["Verified"] = "verified";
+})(FactorEnumFactorStatusesEnum = exports.FactorEnumFactorStatusesEnum || (exports.FactorEnumFactorStatusesEnum = {}));

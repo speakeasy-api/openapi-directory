@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiKeyInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApiKeyInfo = /** @class */ (function (_super) {
     __extends(ApiKeyInfo, _super);
     function ApiKeyInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_email" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "customerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_name" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "customerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "expires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item_id" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item_name" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "itemName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license_limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license_limit" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "licenseLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_id" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "priceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", String)
     ], ApiKeyInfo.prototype, "success", void 0);
     return ApiKeyInfo;
-}(SpeakeasyBase));
-export { ApiKeyInfo };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyInfo = ApiKeyInfo;

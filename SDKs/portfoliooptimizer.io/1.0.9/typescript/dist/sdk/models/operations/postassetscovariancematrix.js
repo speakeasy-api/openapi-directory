@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsCovarianceMatrixResponse = exports.PostAssetsCovarianceMatrixRequest = exports.PostAssetsCovarianceMatrix200ApplicationJson = exports.PostAssetsCovarianceMatrixRequestBody3 = exports.PostAssetsCovarianceMatrixRequestBody2 = exports.PostAssetsCovarianceMatrixRequestBody1 = exports.PostAssetsCovarianceMatrixRequestBody1Assets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsCovarianceMatrixRequestBody1Assets = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixRequestBody1Assets, _super);
     function PostAssetsCovarianceMatrixRequestBody1Assets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetReturns" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody1Assets.prototype, "assetReturns", void 0);
     return PostAssetsCovarianceMatrixRequestBody1Assets;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixRequestBody1Assets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixRequestBody1Assets = PostAssetsCovarianceMatrixRequestBody1Assets;
 var PostAssetsCovarianceMatrixRequestBody1 = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixRequestBody1, _super);
     function PostAssetsCovarianceMatrixRequestBody1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsCovarianceMatrixRequestBody1Assets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsCovarianceMatrixRequestBody1Assets }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody1.prototype, "assets", void 0);
     return PostAssetsCovarianceMatrixRequestBody1;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixRequestBody1 };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixRequestBody1 = PostAssetsCovarianceMatrixRequestBody1;
 var PostAssetsCovarianceMatrixRequestBody2 = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixRequestBody2, _super);
     function PostAssetsCovarianceMatrixRequestBody2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostAssetsCovarianceMatrixRequestBody2.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody2.prototype, "assetsCorrelationMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsVariances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsVariances" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody2.prototype, "assetsVariances", void 0);
     return PostAssetsCovarianceMatrixRequestBody2;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixRequestBody2 };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixRequestBody2 = PostAssetsCovarianceMatrixRequestBody2;
 var PostAssetsCovarianceMatrixRequestBody3 = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixRequestBody3, _super);
     function PostAssetsCovarianceMatrixRequestBody3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostAssetsCovarianceMatrixRequestBody3.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody3.prototype, "assetsCorrelationMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsVolatilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsVolatilities" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixRequestBody3.prototype, "assetsVolatilities", void 0);
     return PostAssetsCovarianceMatrixRequestBody3;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixRequestBody3 };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixRequestBody3 = PostAssetsCovarianceMatrixRequestBody3;
 var PostAssetsCovarianceMatrix200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrix200ApplicationJson, _super);
     function PostAssetsCovarianceMatrix200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCovarianceMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCovarianceMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrix200ApplicationJson.prototype, "assetsCovarianceMatrix", void 0);
     return PostAssetsCovarianceMatrix200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrix200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrix200ApplicationJson = PostAssetsCovarianceMatrix200ApplicationJson;
 var PostAssetsCovarianceMatrixRequest = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixRequest, _super);
     function PostAssetsCovarianceMatrixRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PostAssetsCovarianceMatrixRequest.prototype, "request", void 0);
     return PostAssetsCovarianceMatrixRequest;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixRequest = PostAssetsCovarianceMatrixRequest;
 var PostAssetsCovarianceMatrixResponse = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixResponse, _super);
     function PostAssetsCovarianceMatrixResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsCovarianceMatrixResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsCovarianceMatrix200ApplicationJson)
-    ], PostAssetsCovarianceMatrixResponse.prototype, "postAssetsCovarianceMatrix200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsCovarianceMatrixResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsCovarianceMatrix200ApplicationJson)
+    ], PostAssetsCovarianceMatrixResponse.prototype, "postAssetsCovarianceMatrix200ApplicationJSONObject", void 0);
     return PostAssetsCovarianceMatrixResponse;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixResponse = PostAssetsCovarianceMatrixResponse;

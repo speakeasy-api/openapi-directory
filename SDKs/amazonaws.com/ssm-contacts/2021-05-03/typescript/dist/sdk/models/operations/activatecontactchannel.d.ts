@@ -19,7 +19,7 @@ export declare class ActivateContactChannelRequest extends SpeakeasyBase {
 }
 export declare class ActivateContactChannelResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    activateContactChannelResult?: Map<string, any>;
+    activateContactChannelResult?: Record<string, any>;
     contentType: string;
     internalServerException?: any;
     resourceNotFoundException?: any;

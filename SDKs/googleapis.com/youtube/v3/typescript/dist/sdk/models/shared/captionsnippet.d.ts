@@ -27,7 +27,7 @@ export declare class CaptionSnippet extends SpeakeasyBase {
     audioTrackType?: CaptionSnippetAudioTrackTypeEnum;
     failureReason?: CaptionSnippetFailureReasonEnum;
     isAutoSynced?: boolean;
-    isCc?: boolean;
+    isCC?: boolean;
     isDraft?: boolean;
     isEasyReader?: boolean;
     isLarge?: boolean;

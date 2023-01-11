@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpceConfiguration } from "./vpceconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVpceConfigurationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var vpceconfiguration_1 = require("./vpceconfiguration");
 var CreateVpceConfigurationResult = /** @class */ (function (_super) {
     __extends(CreateVpceConfigurationResult, _super);
     function CreateVpceConfigurationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfiguration" }),
-        __metadata("design:type", VpceConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfiguration" }),
+        __metadata("design:type", vpceconfiguration_1.VpceConfiguration)
     ], CreateVpceConfigurationResult.prototype, "vpceConfiguration", void 0);
     return CreateVpceConfigurationResult;
-}(SpeakeasyBase));
-export { CreateVpceConfigurationResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateVpceConfigurationResult = CreateVpceConfigurationResult;

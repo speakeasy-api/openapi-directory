@@ -7,6 +7,6 @@ export declare class GetSetupV1LocationsIdEmailTemplatesRequest extends Speakeas
 }
 export declare class GetSetupV1LocationsIdEmailTemplatesResponse extends SpeakeasyBase {
     contentType: string;
-    emailTemplateListViewModel?: Map<string, any>;
+    emailTemplateListViewModel?: Record<string, any>;
     statusCode: number;
 }

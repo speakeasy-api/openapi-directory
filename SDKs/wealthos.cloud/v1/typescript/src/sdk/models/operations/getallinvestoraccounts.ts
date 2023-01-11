@@ -69,26 +69,26 @@ export class GetAllinvestorAccountsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts200ApplicationJsonObject?: GetAllinvestorAccounts200ApplicationJson;
+  getAllinvestorAccounts200ApplicationJSONObject?: GetAllinvestorAccounts200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts400ApplicationJsonAny?: any;
+  getAllinvestorAccounts400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts401ApplicationJsonAny?: any;
+  getAllinvestorAccounts401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts403ApplicationJsonAny?: any;
+  getAllinvestorAccounts403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts404ApplicationJsonAny?: any;
+  getAllinvestorAccounts404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts409ApplicationJsonAny?: any;
+  getAllinvestorAccounts409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts429ApplicationJsonAny?: any;
+  getAllinvestorAccounts429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllinvestorAccounts500ApplicationJsonAny?: any;
+  getAllinvestorAccounts500ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-export var PaymentCardCardBrandEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentCardInput = exports.PaymentCard = exports.PaymentCardPrepaidTypeEnum = exports.PaymentCardCardTypeEnum = exports.PaymentCardCardBrandEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var PaymentCardCardBrandEnum;
 (function (PaymentCardCardBrandEnum) {
     PaymentCardCardBrandEnum["Visa"] = "visa";
     PaymentCardCardBrandEnum["Mastercard"] = "mastercard";
@@ -40,20 +43,20 @@ export var PaymentCardCardBrandEnum;
     PaymentCardCardBrandEnum["Felica"] = "felica";
     PaymentCardCardBrandEnum["Ebt"] = "ebt";
     PaymentCardCardBrandEnum["Other"] = "other";
-})(PaymentCardCardBrandEnum || (PaymentCardCardBrandEnum = {}));
-export var PaymentCardCardTypeEnum;
+})(PaymentCardCardBrandEnum = exports.PaymentCardCardBrandEnum || (exports.PaymentCardCardBrandEnum = {}));
+var PaymentCardCardTypeEnum;
 (function (PaymentCardCardTypeEnum) {
     PaymentCardCardTypeEnum["Credit"] = "credit";
     PaymentCardCardTypeEnum["Debit"] = "debit";
     PaymentCardCardTypeEnum["Prepaid"] = "prepaid";
     PaymentCardCardTypeEnum["Other"] = "other";
-})(PaymentCardCardTypeEnum || (PaymentCardCardTypeEnum = {}));
-export var PaymentCardPrepaidTypeEnum;
+})(PaymentCardCardTypeEnum = exports.PaymentCardCardTypeEnum || (exports.PaymentCardCardTypeEnum = {}));
+var PaymentCardPrepaidTypeEnum;
 (function (PaymentCardPrepaidTypeEnum) {
     PaymentCardPrepaidTypeEnum["NonPrepaid"] = "non-prepaid";
     PaymentCardPrepaidTypeEnum["Prepaid"] = "prepaid";
     PaymentCardPrepaidTypeEnum["Unknown"] = "unknown";
-})(PaymentCardPrepaidTypeEnum || (PaymentCardPrepaidTypeEnum = {}));
+})(PaymentCardPrepaidTypeEnum = exports.PaymentCardPrepaidTypeEnum || (exports.PaymentCardPrepaidTypeEnum = {}));
 // PaymentCard
 /**
  * A card's non-confidential details.
@@ -64,72 +67,72 @@ var PaymentCard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billing_address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_address" }),
+        __metadata("design:type", address_1.Address)
     ], PaymentCard.prototype, "billingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bin" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "bin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_brand" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "cardBrand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_type" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "cardType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardholder_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardholder_name" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "cardholderName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_id" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], PaymentCard.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exp_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exp_month" }),
         __metadata("design:type", Number)
     ], PaymentCard.prototype, "expMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exp_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exp_year" }),
         __metadata("design:type", Number)
     ], PaymentCard.prototype, "expYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_4" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "last4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchant_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchant_id" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prepaid_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prepaid_type" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "prepaidType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reference_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reference_id" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], PaymentCard.prototype, "version", void 0);
     return PaymentCard;
-}(SpeakeasyBase));
-export { PaymentCard };
+}(utils_1.SpeakeasyBase));
+exports.PaymentCard = PaymentCard;
 // PaymentCardInput
 /**
  * A card's non-confidential details.
@@ -140,65 +143,65 @@ var PaymentCardInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billing_address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_address" }),
+        __metadata("design:type", address_1.Address)
     ], PaymentCardInput.prototype, "billingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bin" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "bin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_brand" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "cardBrand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_type" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "cardType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardholder_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardholder_name" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "cardholderName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_id" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], PaymentCardInput.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exp_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exp_month" }),
         __metadata("design:type", Number)
     ], PaymentCardInput.prototype, "expMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exp_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exp_year" }),
         __metadata("design:type", Number)
     ], PaymentCardInput.prototype, "expYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_4" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "last4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchant_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchant_id" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prepaid_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prepaid_type" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "prepaidType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reference_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reference_id" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], PaymentCardInput.prototype, "version", void 0);
     return PaymentCardInput;
-}(SpeakeasyBase));
-export { PaymentCardInput };
+}(utils_1.SpeakeasyBase));
+exports.PaymentCardInput = PaymentCardInput;

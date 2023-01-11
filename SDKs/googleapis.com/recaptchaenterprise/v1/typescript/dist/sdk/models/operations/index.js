@@ -1,12 +1,28 @@
-export * from "./recaptchaenterpriseprojectsassessmentsannotate";
-export * from "./recaptchaenterpriseprojectsassessmentscreate";
-export * from "./recaptchaenterpriseprojectskeyscreate";
-export * from "./recaptchaenterpriseprojectskeysdelete";
-export * from "./recaptchaenterpriseprojectskeysgetmetrics";
-export * from "./recaptchaenterpriseprojectskeyslist";
-export * from "./recaptchaenterpriseprojectskeysmigrate";
-export * from "./recaptchaenterpriseprojectskeyspatch";
-export * from "./recaptchaenterpriseprojectskeysretrievelegacysecretkey";
-export * from "./recaptchaenterpriseprojectsrelatedaccountgroupmembershipssearch";
-export * from "./recaptchaenterpriseprojectsrelatedaccountgroupslist";
-export * from "./recaptchaenterpriseprojectsrelatedaccountgroupsmembershipslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./recaptchaenterpriseprojectsassessmentsannotate"), exports);
+__exportStar(require("./recaptchaenterpriseprojectsassessmentscreate"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeyscreate"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeysdelete"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeysgetmetrics"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeyslist"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeysmigrate"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeyspatch"), exports);
+__exportStar(require("./recaptchaenterpriseprojectskeysretrievelegacysecretkey"), exports);
+__exportStar(require("./recaptchaenterpriseprojectsrelatedaccountgroupmembershipssearch"), exports);
+__exportStar(require("./recaptchaenterpriseprojectsrelatedaccountgroupslist"), exports);
+__exportStar(require("./recaptchaenterpriseprojectsrelatedaccountgroupsmembershipslist"), exports);

@@ -28,7 +28,7 @@ export class DeleteSourceServerHeaders extends SpeakeasyBase {
 
 export class DeleteSourceServerRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 
@@ -49,7 +49,7 @@ export class DeleteSourceServerResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSourceServerResponse?: Map<string, any>;
+  deleteSourceServerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

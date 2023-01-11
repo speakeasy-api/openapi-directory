@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,8 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Event = /** @class */ (function () {
     function Event(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -28,19 +54,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetDistrictEventsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/district/{district_key}/events", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/district/{district_key}/events", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.events = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -50,8 +76,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDistrictEventsKeys - Gets a list of event keys for events in the given district.
@@ -61,20 +86,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetDistrictEventsKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/district/{district_key}/events/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/district/{district_key}/events/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getDistrictEventsKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getDistrictEventsKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -83,8 +108,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDistrictEventsSimple - Gets a short-form list of events in the given district.
@@ -94,19 +118,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetDistrictEventsSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/district/{district_key}/events/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/district/{district_key}/events/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -116,8 +140,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEvent - Gets an Event.
@@ -127,19 +150,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.event = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -149,8 +172,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventAlliances - Gets a list of Elimination Alliances for the given Event.
@@ -160,19 +182,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventAlliancesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/alliances", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/alliances", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eliminationAlliances = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -182,8 +204,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventAwards - Gets a list of awards from the given event.
@@ -193,19 +214,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventAwardsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/awards", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/awards", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.awards = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -215,8 +236,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventDistrictPoints - Gets a list of team rankings for the Event.
@@ -226,19 +246,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventDistrictPointsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/district_points", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/district_points", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventDistrictPoints = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -248,8 +268,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventInsights - Gets a set of Event-specific insights for the given Event.
@@ -259,19 +278,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventInsightsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/insights", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/insights", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventInsights = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -281,8 +300,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventMatchTimeseries - Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data.
@@ -294,20 +312,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventMatchTimeseriesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/matches/timeseries", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/matches/timeseries", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getEventMatchTimeseries200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getEventMatchTimeseries200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -316,8 +334,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventMatches - Gets a list of matches for the given event.
@@ -327,19 +344,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventMatchesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/matches", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/matches", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.matches = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -349,8 +366,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventMatchesKeys - Gets a list of match keys for the given event.
@@ -360,20 +376,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventMatchesKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/matches/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/matches/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getEventMatchesKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getEventMatchesKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -382,8 +398,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventMatchesSimple - Gets a short-form list of matches for the given event.
@@ -393,19 +408,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventMatchesSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/matches/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/matches/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.matchSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -415,8 +430,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventOpRs - Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
@@ -426,20 +440,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventOpRsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/oprs", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/oprs", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.eventOpRs = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.eventOPRs = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -448,8 +462,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventPredictions - Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
@@ -459,19 +472,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventPredictionsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/predictions", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/predictions", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventPredictions = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -481,8 +494,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventRankings - Gets a list of team rankings for the Event.
@@ -492,19 +504,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventRankingsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/rankings", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/rankings", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventRanking = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -514,8 +526,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventSimple - Gets a short-form Event.
@@ -525,19 +536,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventSimple = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -547,8 +558,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventTeams - Gets a list of `Team` objects that competed in the given event.
@@ -558,19 +568,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventTeamsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/teams", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/teams", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teams = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -580,8 +590,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventTeamsKeys - Gets a list of `Team` keys that competed in the given event.
@@ -591,20 +600,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventTeamsKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/teams/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/teams/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getEventTeamsKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getEventTeamsKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -613,8 +622,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventTeamsSimple - Gets a short-form list of `Team` objects that competed in the given event.
@@ -624,19 +632,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventTeamsSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/teams/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/teams/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -646,8 +654,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventTeamsStatuses - Gets a key-value list of the event statuses for teams competing at the given event.
@@ -657,20 +664,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventTeamsStatusesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/event/{event_key}/teams/statuses", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/event/{event_key}/teams/statuses", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getEventTeamsStatuses200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getEventTeamsStatuses200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -679,8 +686,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventsByYear - Gets a list of events in the given year.
@@ -690,19 +696,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventsByYearRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/events/{year}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/events/{year}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.events = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -712,8 +718,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventsByYearKeys - Gets a list of event keys in the given year.
@@ -723,20 +728,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventsByYearKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/events/{year}/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/events/{year}/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getEventsByYearKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getEventsByYearKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -745,8 +750,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEventsByYearSimple - Gets a short-form list of events in the given year.
@@ -756,19 +760,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetEventsByYearSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/events/{year}/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/events/{year}/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -778,8 +782,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventAwards - Gets a list of awards the given team won at the given event.
@@ -789,19 +792,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventAwardsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/awards", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/awards", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.awards = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -811,8 +814,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventMatches - Gets a list of matches for the given team and event.
@@ -822,19 +824,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventMatchesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.matches = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -844,8 +846,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventMatchesKeys - Gets a list of match keys for matches for the given team and event.
@@ -855,20 +856,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventMatchesKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getTeamEventMatchesKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getTeamEventMatchesKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -877,8 +878,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventMatchesSimple - Gets a short-form list of matches for the given team and event.
@@ -888,19 +888,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventMatchesSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.matches = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -910,8 +910,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventStatus - Gets the competition rank and status of the team at the given event.
@@ -921,19 +920,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventStatusRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/status", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/status", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamEventStatus = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -943,8 +942,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEvents - Gets a list of all events this team has competed at.
@@ -954,19 +952,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.events = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -976,8 +974,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsByYear - Gets a list of events this team has competed at in the given year.
@@ -987,19 +984,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsByYearRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/{year}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.events = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1009,8 +1006,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsByYearKeys - Gets a list of the event keys for events this team has competed at in the given year.
@@ -1020,20 +1016,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsByYearKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getTeamEventsByYearKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getTeamEventsByYearKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -1042,8 +1038,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsByYearSimple - Gets a short-form list of events this team has competed at in the given year.
@@ -1053,19 +1048,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsByYearSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1075,8 +1070,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsKeys - Gets a list of the event keys for all events this team has competed at.
@@ -1086,20 +1080,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsKeysRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/keys", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/keys", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getTeamEventsKeys200ApplicationJsonStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getTeamEventsKeys200ApplicationJSONStrings = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -1108,8 +1102,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsSimple - Gets a short-form list of all events this team has competed at.
@@ -1119,19 +1112,19 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsSimpleRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/simple", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/simple", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.eventSimples = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1141,8 +1134,7 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTeamEventsStatusesByYear - Gets a key-value list of the event statuses for events this team has competed at in the given year.
@@ -1152,20 +1144,20 @@ var Event = /** @class */ (function () {
             req = new operations.GetTeamEventsStatusesByYearRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/statuses", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/statuses", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getTeamEventsStatusesByYear200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getTeamEventsStatusesByYear200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
@@ -1174,9 +1166,8 @@ var Event = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Event;
 }());
-export { Event };
+exports.Event = Event;

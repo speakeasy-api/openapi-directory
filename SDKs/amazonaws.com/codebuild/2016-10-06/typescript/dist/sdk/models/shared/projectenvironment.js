@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeTypeEnum } from "./computetypeenum";
-import { EnvironmentVariable } from "./environmentvariable";
-import { ImagePullCredentialsTypeEnum } from "./imagepullcredentialstypeenum";
-import { RegistryCredential } from "./registrycredential";
-import { EnvironmentTypeEnum } from "./environmenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectEnvironment = void 0;
+var utils_1 = require("../../../internal/utils");
+var computetypeenum_1 = require("./computetypeenum");
+var environmentvariable_1 = require("./environmentvariable");
+var imagepullcredentialstypeenum_1 = require("./imagepullcredentialstypeenum");
+var registrycredential_1 = require("./registrycredential");
+var environmenttypeenum_1 = require("./environmenttypeenum");
 // ProjectEnvironment
 /**
  * Information about the build environment of the build project.
@@ -38,37 +41,37 @@ var ProjectEnvironment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], ProjectEnvironment.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeType" }),
         __metadata("design:type", String)
     ], ProjectEnvironment.prototype, "computeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentVariables", elemType: EnvironmentVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentVariables", elemType: environmentvariable_1.EnvironmentVariable }),
         __metadata("design:type", Array)
     ], ProjectEnvironment.prototype, "environmentVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], ProjectEnvironment.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imagePullCredentialsType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imagePullCredentialsType" }),
         __metadata("design:type", String)
     ], ProjectEnvironment.prototype, "imagePullCredentialsType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privilegedMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privilegedMode" }),
         __metadata("design:type", Boolean)
     ], ProjectEnvironment.prototype, "privilegedMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryCredential" }),
-        __metadata("design:type", RegistryCredential)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryCredential" }),
+        __metadata("design:type", registrycredential_1.RegistryCredential)
     ], ProjectEnvironment.prototype, "registryCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProjectEnvironment.prototype, "type", void 0);
     return ProjectEnvironment;
-}(SpeakeasyBase));
-export { ProjectEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.ProjectEnvironment = ProjectEnvironment;

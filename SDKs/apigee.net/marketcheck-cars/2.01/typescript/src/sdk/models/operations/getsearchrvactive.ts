@@ -137,7 +137,7 @@ export class GetSearchRvActiveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   rvSearchResponse?: shared.RvSearchResponse;

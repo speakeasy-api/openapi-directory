@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
 import { Detail } from "./detail";
+import { Route } from "./route";
 
 
 

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class DpicrRequestBodyCertificateParameters extends SpeakeasyBase {
-    certNo: string;
+    certNO: string;
     fullName: string;
 }
 export declare enum DpicrRequestBodyFormatEnum {
@@ -106,11 +106,11 @@ export declare class DpicrRequest extends SpeakeasyBase {
 export declare class DpicrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dpicr400ApplicationJsonObject?: Dpicr400ApplicationJson;
-    dpicr401ApplicationJsonObject?: Dpicr401ApplicationJson;
-    dpicr404ApplicationJsonObject?: Dpicr404ApplicationJson;
-    dpicr500ApplicationJsonObject?: Dpicr500ApplicationJson;
-    dpicr502ApplicationJsonObject?: Dpicr502ApplicationJson;
-    dpicr503ApplicationJsonObject?: Dpicr503ApplicationJson;
-    dpicr504ApplicationJsonObject?: Dpicr504ApplicationJson;
+    dpicr400ApplicationJSONObject?: Dpicr400ApplicationJson;
+    dpicr401ApplicationJSONObject?: Dpicr401ApplicationJson;
+    dpicr404ApplicationJSONObject?: Dpicr404ApplicationJson;
+    dpicr500ApplicationJSONObject?: Dpicr500ApplicationJson;
+    dpicr502ApplicationJSONObject?: Dpicr502ApplicationJson;
+    dpicr503ApplicationJSONObject?: Dpicr503ApplicationJson;
+    dpicr504ApplicationJSONObject?: Dpicr504ApplicationJson;
 }

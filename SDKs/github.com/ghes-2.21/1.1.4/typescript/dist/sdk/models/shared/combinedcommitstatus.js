@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MinimalRepository } from "./minimalrepository";
-import { SimpleCommitStatus } from "./simplecommitstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CombinedCommitStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var minimalrepository_1 = require("./minimalrepository");
+var simplecommitstatus_1 = require("./simplecommitstatus");
 // CombinedCommitStatus
 /**
  * Combined Commit Status
@@ -35,33 +38,33 @@ var CombinedCommitStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_url" }),
         __metadata("design:type", String)
     ], CombinedCommitStatus.prototype, "commitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository" }),
-        __metadata("design:type", MinimalRepository)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository" }),
+        __metadata("design:type", minimalrepository_1.MinimalRepository)
     ], CombinedCommitStatus.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], CombinedCommitStatus.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CombinedCommitStatus.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statuses", elemType: SimpleCommitStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statuses", elemType: simplecommitstatus_1.SimpleCommitStatus }),
         __metadata("design:type", Array)
     ], CombinedCommitStatus.prototype, "statuses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_count" }),
         __metadata("design:type", Number)
     ], CombinedCommitStatus.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CombinedCommitStatus.prototype, "url", void 0);
     return CombinedCommitStatus;
-}(SpeakeasyBase));
-export { CombinedCommitStatus };
+}(utils_1.SpeakeasyBase));
+exports.CombinedCommitStatus = CombinedCommitStatus;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EntryPointParameterTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryPointParameter = exports.EntryPointParameterTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EntryPointParameterTypeEnum;
 (function (EntryPointParameterTypeEnum) {
     EntryPointParameterTypeEnum["Query"] = "query";
     EntryPointParameterTypeEnum["Header"] = "header";
     EntryPointParameterTypeEnum["Uri"] = "uri";
     EntryPointParameterTypeEnum["Path"] = "path";
     EntryPointParameterTypeEnum["Body"] = "body";
-})(EntryPointParameterTypeEnum || (EntryPointParameterTypeEnum = {}));
+})(EntryPointParameterTypeEnum = exports.EntryPointParameterTypeEnum || (exports.EntryPointParameterTypeEnum = {}));
 var EntryPointParameter = /** @class */ (function (_super) {
     __extends(EntryPointParameter, _super);
     function EntryPointParameter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EntryPointParameter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], EntryPointParameter.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameter_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameter_name" }),
         __metadata("design:type", String)
     ], EntryPointParameter.prototype, "parameterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permitted_values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permitted_values" }),
         __metadata("design:type", Array)
     ], EntryPointParameter.prototype, "permittedValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Number)
     ], EntryPointParameter.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], EntryPointParameter.prototype, "type", void 0);
     return EntryPointParameter;
-}(SpeakeasyBase));
-export { EntryPointParameter };
+}(utils_1.SpeakeasyBase));
+exports.EntryPointParameter = EntryPointParameter;

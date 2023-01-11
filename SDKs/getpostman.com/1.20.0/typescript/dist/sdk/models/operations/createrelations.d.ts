@@ -21,5 +21,5 @@ export declare class CreateRelationsRequest extends SpeakeasyBase {
 export declare class CreateRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createRelations200ApplicationJsonObject?: CreateRelations200ApplicationJson;
+    createRelations200ApplicationJSONObject?: CreateRelations200ApplicationJson;
 }

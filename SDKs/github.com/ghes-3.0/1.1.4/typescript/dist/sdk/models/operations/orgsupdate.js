@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,179 +14,204 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgsUpdateResponse = exports.OrgsUpdateRequest = exports.OrgsUpdate415ApplicationJson = exports.OrgsUpdateRequestBody = exports.OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum = exports.OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum = exports.OrgsUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var OrgsUpdatePathParams = /** @class */ (function (_super) {
     __extends(OrgsUpdatePathParams, _super);
     function OrgsUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], OrgsUpdatePathParams.prototype, "org", void 0);
     return OrgsUpdatePathParams;
-}(SpeakeasyBase));
-export { OrgsUpdatePathParams };
-export var OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.OrgsUpdatePathParams = OrgsUpdatePathParams;
+var OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum;
 (function (OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum) {
     OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum["Read"] = "read";
     OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum["Write"] = "write";
     OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum["Admin"] = "admin";
     OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum["None"] = "none";
-})(OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum || (OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum = {}));
-export var OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum;
+})(OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum = exports.OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum || (exports.OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum = {}));
+var OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum;
 (function (OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum) {
     OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum["All"] = "all";
     OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum["Private"] = "private";
     OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum["None"] = "none";
-})(OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum || (OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum = {}));
+})(OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum = exports.OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum || (exports.OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum = {}));
 var OrgsUpdateRequestBody = /** @class */ (function (_super) {
     __extends(OrgsUpdateRequestBody, _super);
     function OrgsUpdateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billing_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_email" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "billingEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "blog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default_repository_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default_repository_permission" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "defaultRepositoryPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_organization_projects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_organization_projects" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "hasOrganizationProjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_repository_projects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_repository_projects" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "hasRepositoryProjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_allowed_repository_creation_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_allowed_repository_creation_type" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "membersAllowedRepositoryCreationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_can_create_internal_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_can_create_internal_repositories" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "membersCanCreateInternalRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_can_create_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_can_create_pages" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "membersCanCreatePages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_can_create_private_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_can_create_private_repositories" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "membersCanCreatePrivateRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_can_create_public_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_can_create_public_repositories" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "membersCanCreatePublicRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_can_create_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_can_create_repositories" }),
         __metadata("design:type", Boolean)
     ], OrgsUpdateRequestBody.prototype, "membersCanCreateRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitter_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitter_username" }),
         __metadata("design:type", String)
     ], OrgsUpdateRequestBody.prototype, "twitterUsername", void 0);
     return OrgsUpdateRequestBody;
-}(SpeakeasyBase));
-export { OrgsUpdateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUpdateRequestBody = OrgsUpdateRequestBody;
 var OrgsUpdate415ApplicationJson = /** @class */ (function (_super) {
     __extends(OrgsUpdate415ApplicationJson, _super);
     function OrgsUpdate415ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], OrgsUpdate415ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], OrgsUpdate415ApplicationJson.prototype, "message", void 0);
     return OrgsUpdate415ApplicationJson;
-}(SpeakeasyBase));
-export { OrgsUpdate415ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUpdate415ApplicationJson = OrgsUpdate415ApplicationJson;
 var OrgsUpdateRequest = /** @class */ (function (_super) {
     __extends(OrgsUpdateRequest, _super);
     function OrgsUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsUpdatePathParams)
     ], OrgsUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", OrgsUpdateRequestBody)
     ], OrgsUpdateRequest.prototype, "request", void 0);
     return OrgsUpdateRequest;
-}(SpeakeasyBase));
-export { OrgsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUpdateRequest = OrgsUpdateRequest;
 var OrgsUpdateResponse = /** @class */ (function (_super) {
     __extends(OrgsUpdateResponse, _super);
     function OrgsUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrgsUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OrgsUpdateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], OrgsUpdateResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OrganizationFull)
     ], OrgsUpdateResponse.prototype, "organizationFull", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsUpdate415ApplicationJson)
-    ], OrgsUpdateResponse.prototype, "orgsUpdate415ApplicationJsonObject", void 0);
+    ], OrgsUpdateResponse.prototype, "orgsUpdate415ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], OrgsUpdateResponse.prototype, "orgsUpdate422ApplicationJsonOneOf", void 0);
+    ], OrgsUpdateResponse.prototype, "orgsUpdate422ApplicationJSONOneOf", void 0);
     return OrgsUpdateResponse;
-}(SpeakeasyBase));
-export { OrgsUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUpdateResponse = OrgsUpdateResponse;

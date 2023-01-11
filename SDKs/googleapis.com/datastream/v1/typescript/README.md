@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DatastreamProjectsLocationsConnectionProfilesCreateRequest, DatastreamProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,87 +30,90 @@ const req: DatastreamProjectsLocationsConnectionProfilesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dignissimos",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "quis",
-    alt: "proto",
-    callback: "dolores",
-    connectionProfileId: "voluptatem",
-    fields: "sed",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    connectionProfileId: "dolor",
+    fields: "expedita",
     force: true,
-    key: "et",
-    oauthToken: "enim",
-    prettyPrint: false,
-    quotaUser: "vero",
-    requestId: "nisi",
-    uploadType: "occaecati",
-    uploadProtocol: "qui",
-    validateOnly: true,
+    key: "fugit",
+    oauthToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    requestId: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
+    validateOnly: false,
   },
   request: {
     bigqueryProfile: {
-      "veritatis": "corporis",
+      "dolorem": "et",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
-    displayName: "fugiat",
+    displayName: "dolores",
     forwardSshConnectivity: {
-      hostname: "dolor",
-      password: "voluptatem",
-      port: 88593726215372726,
-      privateKey: "quo",
-      username: "aliquid",
+      hostname: "illum",
+      password: "debitis",
+      port: 3706853784096366226,
+      privateKey: "odio",
+      username: "dolore",
     },
     gcsProfile: {
-      bucket: "eum",
-      rootPath: "veniam",
+      bucket: "id",
+      rootPath: "aspernatur",
     },
     labels: {
-      "id": "neque",
-      "exercitationem": "architecto",
-      "suscipit": "dolores",
+      "totam": "commodi",
+      "quis": "est",
+      "aut": "odit",
     },
     mysqlProfile: {
-      hostname: "dolores",
-      password: "maiores",
-      port: 8619365412726495595,
+      hostname: "non",
+      password: "voluptas",
+      port: 4778690082005258714,
       sslConfig: {
-        caCertificate: "facilis",
-        clientCertificate: "enim",
-        clientKey: "accusantium",
+        caCertificate: "aut",
+        clientCertificate: "illo",
+        clientKey: "sed",
       },
-      username: "nihil",
+      username: "officiis",
     },
     oracleProfile: {
       connectionAttributes: {
-        "velit": "libero",
+        "consectetur": "nobis",
+        "odio": "qui",
       },
-      databaseService: "est",
-      hostname: "tempora",
-      password: "eius",
-      port: 6426046401014374835,
-      username: "non",
+      databaseService: "recusandae",
+      hostname: "at",
+      password: "ipsum",
+      port: 8902041070398994519,
+      username: "modi",
     },
     postgresqlProfile: {
-      database: "et",
-      hostname: "sit",
-      password: "qui",
-      port: 5409926317833318634,
-      username: "soluta",
+      database: "sint",
+      hostname: "inventore",
+      password: "ut",
+      port: 406703151708498928,
+      username: "aut",
     },
     privateConnectivity: {
-      privateConnection: "voluptatum",
+      privateConnection: "reprehenderit",
     },
     staticServiceIpConnectivity: {
-      "delectus": "accusamus",
-      "suscipit": "doloremque",
-      "dolores": "quis",
+      "maiores": "incidunt",
+      "dolor": "beatae",
+      "veritatis": "in",
     },
   },
 };

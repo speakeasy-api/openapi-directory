@@ -1,4 +1,7 @@
-export var RegionNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegionNameEnum = void 0;
+var RegionNameEnum;
 (function (RegionNameEnum) {
     RegionNameEnum["UsEast1"] = "us-east-1";
     RegionNameEnum["UsEast2"] = "us-east-2";
@@ -15,4 +18,4 @@ export var RegionNameEnum;
     RegionNameEnum["ApNortheast1"] = "ap-northeast-1";
     RegionNameEnum["ApNortheast2"] = "ap-northeast-2";
     RegionNameEnum["EuNorth1"] = "eu-north-1";
-})(RegionNameEnum || (RegionNameEnum = {}));
+})(RegionNameEnum = exports.RegionNameEnum || (exports.RegionNameEnum = {}));

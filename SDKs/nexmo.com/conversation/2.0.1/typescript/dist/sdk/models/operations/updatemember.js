@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMemberResponse = exports.UpdateMemberRequest = exports.UpdateMemberPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateMemberPathParams = /** @class */ (function (_super) {
     __extends(UpdateMemberPathParams, _super);
     function UpdateMemberPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=conversation_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=conversation_id" }),
         __metadata("design:type", String)
     ], UpdateMemberPathParams.prototype, "conversationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=member_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=member_id" }),
         __metadata("design:type", String)
     ], UpdateMemberPathParams.prototype, "memberId", void 0);
     return UpdateMemberPathParams;
-}(SpeakeasyBase));
-export { UpdateMemberPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMemberPathParams = UpdateMemberPathParams;
 var UpdateMemberRequest = /** @class */ (function (_super) {
     __extends(UpdateMemberRequest, _super);
     function UpdateMemberRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMemberPathParams)
     ], UpdateMemberRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], UpdateMemberRequest.prototype, "request", void 0);
     return UpdateMemberRequest;
-}(SpeakeasyBase));
-export { UpdateMemberRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMemberRequest = UpdateMemberRequest;
 var UpdateMemberResponse = /** @class */ (function (_super) {
     __extends(UpdateMemberResponse, _super);
     function UpdateMemberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateMemberResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateMemberResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], UpdateMemberResponse.prototype, "updateMember200ApplicationJsonAny", void 0);
+    ], UpdateMemberResponse.prototype, "updateMember200ApplicationJSONAny", void 0);
     return UpdateMemberResponse;
-}(SpeakeasyBase));
-export { UpdateMemberResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMemberResponse = UpdateMemberResponse;

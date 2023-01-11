@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbProxy } from "./dbproxy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDbProxyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbproxy_1 = require("./dbproxy");
 var DeleteDbProxyResponse = /** @class */ (function (_super) {
     __extends(DeleteDbProxyResponse, _super);
     function DeleteDbProxyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DbProxy)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", dbproxy_1.DbProxy)
     ], DeleteDbProxyResponse.prototype, "dbProxy", void 0);
     return DeleteDbProxyResponse;
-}(SpeakeasyBase));
-export { DeleteDbProxyResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDbProxyResponse = DeleteDbProxyResponse;

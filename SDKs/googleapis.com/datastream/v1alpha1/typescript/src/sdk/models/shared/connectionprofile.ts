@@ -1,41 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ForwardSshTunnelConnectivity } from "./forwardsshtunnelconnectivity";
 import { GcsProfile } from "./gcsprofile";
-import { MysqlProfileInput } from "./mysqlprofile";
+import { MysqlProfile } from "./mysqlprofile";
 import { OracleProfile } from "./oracleprofile";
 import { PrivateConnectivity } from "./privateconnectivity";
-import { MysqlProfile } from "./mysqlprofile";
+import { MysqlProfileInput } from "./mysqlprofile";
 
-
-
-export class ConnectionProfileInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=forwardSshConnectivity" })
-  forwardSshConnectivity?: ForwardSshTunnelConnectivity;
-
-  @SpeakeasyMetadata({ data: "json, name=gcsProfile" })
-  gcsProfile?: GcsProfile;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=mysqlProfile" })
-  mysqlProfile?: MysqlProfileInput;
-
-  @SpeakeasyMetadata({ data: "json, name=noConnectivity" })
-  noConnectivity?: Map<string, any>;
-
-  @SpeakeasyMetadata({ data: "json, name=oracleProfile" })
-  oracleProfile?: OracleProfile;
-
-  @SpeakeasyMetadata({ data: "json, name=privateConnectivity" })
-  privateConnectivity?: PrivateConnectivity;
-
-  @SpeakeasyMetadata({ data: "json, name=staticServiceIpConnectivity" })
-  staticServiceIpConnectivity?: Map<string, any>;
-}
 
 
 export class ConnectionProfile extends SpeakeasyBase {
@@ -52,7 +22,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   gcsProfile?: GcsProfile;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysqlProfile" })
   mysqlProfile?: MysqlProfile;
@@ -61,7 +31,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=noConnectivity" })
-  noConnectivity?: Map<string, any>;
+  noConnectivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=oracleProfile" })
   oracleProfile?: OracleProfile;
@@ -70,8 +40,38 @@ export class ConnectionProfile extends SpeakeasyBase {
   privateConnectivity?: PrivateConnectivity;
 
   @SpeakeasyMetadata({ data: "json, name=staticServiceIpConnectivity" })
-  staticServiceIpConnectivity?: Map<string, any>;
+  staticServiceIpConnectivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+export class ConnectionProfileInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=forwardSshConnectivity" })
+  forwardSshConnectivity?: ForwardSshTunnelConnectivity;
+
+  @SpeakeasyMetadata({ data: "json, name=gcsProfile" })
+  gcsProfile?: GcsProfile;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=mysqlProfile" })
+  mysqlProfile?: MysqlProfileInput;
+
+  @SpeakeasyMetadata({ data: "json, name=noConnectivity" })
+  noConnectivity?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=oracleProfile" })
+  oracleProfile?: OracleProfile;
+
+  @SpeakeasyMetadata({ data: "json, name=privateConnectivity" })
+  privateConnectivity?: PrivateConnectivity;
+
+  @SpeakeasyMetadata({ data: "json, name=staticServiceIpConnectivity" })
+  staticServiceIpConnectivity?: Record<string, any>;
 }

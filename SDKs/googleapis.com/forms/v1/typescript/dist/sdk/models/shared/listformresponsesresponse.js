@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormResponse } from "./formresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFormResponsesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var formresponse_1 = require("./formresponse");
 // ListFormResponsesResponse
 /**
  * Response to a ListFormResponsesRequest.
@@ -34,13 +37,13 @@ var ListFormResponsesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListFormResponsesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responses", elemType: FormResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responses", elemType: formresponse_1.FormResponse }),
         __metadata("design:type", Array)
     ], ListFormResponsesResponse.prototype, "responses", void 0);
     return ListFormResponsesResponse;
-}(SpeakeasyBase));
-export { ListFormResponsesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListFormResponsesResponse = ListFormResponsesResponse;

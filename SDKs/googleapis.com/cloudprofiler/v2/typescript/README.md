@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudprofilerProjectsProfilesCreateRequest, CloudprofilerProjectsProfilesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,39 +31,39 @@ const req: CloudprofilerProjectsProfilesCreateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    parent: "perferendis",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "praesentium",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "omnis",
-    fields: "et",
-    key: "magni",
-    oauthToken: "ratione",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "maiores",
-    uploadType: "quisquam",
-    uploadProtocol: "mollitia",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     deployment: {
       labels: {
-        "nemo": "perferendis",
-        "corporis": "assumenda",
+        "debitis": "voluptatum",
+        "et": "ut",
+        "dolorem": "et",
       },
-      projectId: "inventore",
-      target: "voluptatem",
+      projectId: "voluptate",
+      target: "iste",
     },
     profileType: [
-      "THREADS",
       "WALL",
     ],
   },

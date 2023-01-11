@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4RiceDeltaEncoding = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleSecuritySafebrowsingV4RiceDeltaEncoding
 /**
  * The Rice-Golomb encoded data. Used for sending compressed 4-byte hashes or compressed removal indices.
@@ -33,21 +36,21 @@ var GoogleSecuritySafebrowsingV4RiceDeltaEncoding = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodedData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodedData" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4RiceDeltaEncoding.prototype, "encodedData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstValue" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4RiceDeltaEncoding.prototype, "firstValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numEntries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numEntries" }),
         __metadata("design:type", Number)
     ], GoogleSecuritySafebrowsingV4RiceDeltaEncoding.prototype, "numEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riceParameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riceParameter" }),
         __metadata("design:type", Number)
     ], GoogleSecuritySafebrowsingV4RiceDeltaEncoding.prototype, "riceParameter", void 0);
     return GoogleSecuritySafebrowsingV4RiceDeltaEncoding;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4RiceDeltaEncoding };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4RiceDeltaEncoding = GoogleSecuritySafebrowsingV4RiceDeltaEncoding;

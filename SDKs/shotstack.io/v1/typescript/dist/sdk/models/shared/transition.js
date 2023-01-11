@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TransitionInEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transition = exports.TransitionOutEnum = exports.TransitionInEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TransitionInEnum;
 (function (TransitionInEnum) {
     TransitionInEnum["Fade"] = "fade";
     TransitionInEnum["FadeSlow"] = "fadeSlow";
@@ -86,8 +89,8 @@ export var TransitionInEnum;
     TransitionInEnum["ShuffleTopLeftSlow"] = "shuffleTopLeftSlow";
     TransitionInEnum["ShuffleTopLeftFast"] = "shuffleTopLeftFast";
     TransitionInEnum["Zoom"] = "zoom";
-})(TransitionInEnum || (TransitionInEnum = {}));
-export var TransitionOutEnum;
+})(TransitionInEnum = exports.TransitionInEnum || (exports.TransitionInEnum = {}));
+var TransitionOutEnum;
 (function (TransitionOutEnum) {
     TransitionOutEnum["Fade"] = "fade";
     TransitionOutEnum["FadeSlow"] = "fadeSlow";
@@ -150,7 +153,7 @@ export var TransitionOutEnum;
     TransitionOutEnum["ShuffleTopLeftSlow"] = "shuffleTopLeftSlow";
     TransitionOutEnum["ShuffleTopLeftFast"] = "shuffleTopLeftFast";
     TransitionOutEnum["Zoom"] = "zoom";
-})(TransitionOutEnum || (TransitionOutEnum = {}));
+})(TransitionOutEnum = exports.TransitionOutEnum || (exports.TransitionOutEnum = {}));
 // Transition
 /**
  * In and out transitions for a clip - i.e. fade in and fade out
@@ -161,13 +164,13 @@ var Transition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=in" }),
         __metadata("design:type", String)
     ], Transition.prototype, "in", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=out" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=out" }),
         __metadata("design:type", String)
     ], Transition.prototype, "out", void 0);
     return Transition;
-}(SpeakeasyBase));
-export { Transition };
+}(utils_1.SpeakeasyBase));
+exports.Transition = Transition;

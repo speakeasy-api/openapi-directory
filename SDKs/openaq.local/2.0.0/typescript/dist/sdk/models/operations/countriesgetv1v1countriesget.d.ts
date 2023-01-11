@@ -5,9 +5,9 @@ export declare class CountriesGetv1V1CountriesGetQueryParams extends SpeakeasyBa
     countryId?: string;
     limit?: number;
     offset?: number;
-    orderBy?: shared.CountriesOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
 }
 export declare class CountriesGetv1V1CountriesGetRequest extends SpeakeasyBase {
     queryParams: CountriesGetv1V1CountriesGetQueryParams;
@@ -15,6 +15,6 @@ export declare class CountriesGetv1V1CountriesGetRequest extends SpeakeasyBase {
 export declare class CountriesGetv1V1CountriesGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqCountriesResult?: shared.OpenAqCountriesResult;
+    openAQCountriesResult?: shared.OpenAqCountriesResult;
     statusCode: number;
 }

@@ -5,16 +5,6 @@ import { LanguageCodePair } from "./languagecodepair";
 /**
  * Represents a glossary built from user provided data.
 **/
-export declare class GlossaryInput extends SpeakeasyBase {
-    displayName?: string;
-    inputConfig?: GlossaryInputConfig;
-    languageCodesSet?: LanguageCodesSet;
-    languagePair?: LanguageCodePair;
-    name?: string;
-}
-/**
- * Represents a glossary built from user provided data.
-**/
 export declare class Glossary extends SpeakeasyBase {
     displayName?: string;
     endTime?: string;
@@ -24,4 +14,14 @@ export declare class Glossary extends SpeakeasyBase {
     languagePair?: LanguageCodePair;
     name?: string;
     submitTime?: string;
+}
+/**
+ * Represents a glossary built from user provided data.
+**/
+export declare class GlossaryInput extends SpeakeasyBase {
+    displayName?: string;
+    inputConfig?: GlossaryInputConfig;
+    languageCodesSet?: LanguageCodesSet;
+    languagePair?: LanguageCodePair;
+    name?: string;
 }

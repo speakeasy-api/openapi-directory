@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetReadOnlyIdUsingPostQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class GetReadOnlyIdUsingPost200ApplicationJsonData extends SpeakeasyBase {
-    readOnlyId?: string;
+    readOnlyID?: string;
 }
 export declare class GetReadOnlyIdUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -12,17 +12,17 @@ export declare class GetReadOnlyIdUsingPost200ApplicationJson extends SpeakeasyB
 }
 export declare class GetReadOnlyIdUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetReadOnlyIdUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetReadOnlyIdUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetReadOnlyIdUsingPostRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class GetReadOnlyIdUsingPostRequest extends SpeakeasyBase {
 export declare class GetReadOnlyIdUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getReadOnlyIdUsingPost200ApplicationJsonObject?: GetReadOnlyIdUsingPost200ApplicationJson;
-    getReadOnlyIdUsingPost400ApplicationJsonObject?: GetReadOnlyIdUsingPost400ApplicationJson;
-    getReadOnlyIdUsingPost401ApplicationJsonObject?: GetReadOnlyIdUsingPost401ApplicationJson;
-    getReadOnlyIdUsingPost500ApplicationJsonObject?: GetReadOnlyIdUsingPost500ApplicationJson;
+    getReadOnlyIDUsingPOST200ApplicationJSONObject?: GetReadOnlyIdUsingPost200ApplicationJson;
+    getReadOnlyIDUsingPOST400ApplicationJSONObject?: GetReadOnlyIdUsingPost400ApplicationJson;
+    getReadOnlyIDUsingPOST401ApplicationJSONObject?: GetReadOnlyIdUsingPost401ApplicationJson;
+    getReadOnlyIDUsingPOST500ApplicationJSONObject?: GetReadOnlyIdUsingPost500ApplicationJson;
 }

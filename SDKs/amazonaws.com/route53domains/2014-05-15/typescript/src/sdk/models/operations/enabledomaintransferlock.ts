@@ -66,5 +66,5 @@ export class EnableDomainTransferLockResponse extends SpeakeasyBase {
   tldRulesViolation?: any;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

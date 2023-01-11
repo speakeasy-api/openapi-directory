@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Post } from "./post";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostList = void 0;
+var utils_1 = require("../../../internal/utils");
+var post_1 = require("./post");
 var PostList = /** @class */ (function (_super) {
     __extends(PostList, _super);
     function PostList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], PostList.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Post }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: post_1.Post }),
         __metadata("design:type", Array)
     ], PostList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PostList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], PostList.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prevPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prevPageToken" }),
         __metadata("design:type", String)
     ], PostList.prototype, "prevPageToken", void 0);
     return PostList;
-}(SpeakeasyBase));
-export { PostList };
+}(utils_1.SpeakeasyBase));
+exports.PostList = PostList;

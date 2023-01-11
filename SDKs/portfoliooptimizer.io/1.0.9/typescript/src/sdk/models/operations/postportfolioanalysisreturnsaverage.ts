@@ -37,8 +37,8 @@ export class PostPortfolioAnalysisReturnsAverageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisReturnsAverage200ApplicationJsonObject?: PostPortfolioAnalysisReturnsAverage200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisReturnsAverage200ApplicationJSONObject?: PostPortfolioAnalysisReturnsAverage200ApplicationJson;
 }

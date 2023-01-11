@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Summary } from "./summary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var summary_1 = require("./summary");
 var SummaryResponse = /** @class */ (function (_super) {
     __extends(SummaryResponse, _super);
     function SummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Summary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", summary_1.Summary)
     ], SummaryResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], SummaryResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedCurrency" }),
         __metadata("design:type", String)
     ], SummaryResponse.prototype, "requestedCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedSymbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedSymbol" }),
         __metadata("design:type", String)
     ], SummaryResponse.prototype, "requestedSymbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedUnitOfMeasure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedUnitOfMeasure" }),
         __metadata("design:type", String)
     ], SummaryResponse.prototype, "requestedUnitOfMeasure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], SummaryResponse.prototype, "success", void 0);
     return SummaryResponse;
-}(SpeakeasyBase));
-export { SummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.SummaryResponse = SummaryResponse;

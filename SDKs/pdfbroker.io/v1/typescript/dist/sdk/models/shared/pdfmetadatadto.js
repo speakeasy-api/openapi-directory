@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PdfMetadataDto = void 0;
+var utils_1 = require("../../../internal/utils");
 // PdfMetadataDto
 /**
  * Enter meta data for pdf document
@@ -33,45 +36,45 @@ var PdfMetadataDto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Author" }),
         __metadata("design:type", String)
     ], PdfMetadataDto.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableAdd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableAdd" }),
         __metadata("design:type", Boolean)
     ], PdfMetadataDto.prototype, "enableAdd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableCopy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableCopy" }),
         __metadata("design:type", Boolean)
     ], PdfMetadataDto.prototype, "enableCopy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableModify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableModify" }),
         __metadata("design:type", Boolean)
     ], PdfMetadataDto.prototype, "enableModify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnablePrinting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnablePrinting" }),
         __metadata("design:type", Boolean)
     ], PdfMetadataDto.prototype, "enablePrinting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keywords" }),
         __metadata("design:type", Array)
     ], PdfMetadataDto.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnerPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnerPassword" }),
         __metadata("design:type", String)
     ], PdfMetadataDto.prototype, "ownerPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], PdfMetadataDto.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], PdfMetadataDto.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserPassword" }),
         __metadata("design:type", String)
     ], PdfMetadataDto.prototype, "userPassword", void 0);
     return PdfMetadataDto;
-}(SpeakeasyBase));
-export { PdfMetadataDto };
+}(utils_1.SpeakeasyBase));
+exports.PdfMetadataDto = PdfMetadataDto;

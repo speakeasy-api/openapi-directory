@@ -29,7 +29,7 @@ export class GetListingRvIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   rvListing?: shared.RvListing;

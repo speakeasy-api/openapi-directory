@@ -11,10 +11,10 @@ export declare class GetDescribeReservedDbInstancesOfferingsQueryParams extends 
     duration?: string;
     marker?: string;
     maxRecords?: number;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     offeringType?: string;
     productDescription?: string;
-    reservedDbInstancesOfferingId?: string;
+    reservedDBInstancesOfferingId?: string;
     version: GetDescribeReservedDbInstancesOfferingsVersionEnum;
 }
 export declare class GetDescribeReservedDbInstancesOfferingsHeaders extends SpeakeasyBase {

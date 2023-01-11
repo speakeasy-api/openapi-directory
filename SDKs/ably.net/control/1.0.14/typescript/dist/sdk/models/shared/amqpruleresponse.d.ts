@@ -21,7 +21,7 @@ export declare class AmqpRuleResponseTarget extends SpeakeasyBase {
     queueId: string;
 }
 export declare class AmqpRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

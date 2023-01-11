@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CognitoStreams } from "./cognitostreams";
-import { PushSync } from "./pushsync";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIdentityPoolConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cognitostreams_1 = require("./cognitostreams");
+var pushsync_1 = require("./pushsync");
 // GetIdentityPoolConfigurationResponse
 /**
  * The output for the GetIdentityPoolConfiguration operation.
@@ -35,17 +38,17 @@ var GetIdentityPoolConfigurationResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CognitoStreams" }),
-        __metadata("design:type", CognitoStreams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CognitoStreams" }),
+        __metadata("design:type", cognitostreams_1.CognitoStreams)
     ], GetIdentityPoolConfigurationResponse.prototype, "cognitoStreams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityPoolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityPoolId" }),
         __metadata("design:type", String)
     ], GetIdentityPoolConfigurationResponse.prototype, "identityPoolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PushSync" }),
-        __metadata("design:type", PushSync)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PushSync" }),
+        __metadata("design:type", pushsync_1.PushSync)
     ], GetIdentityPoolConfigurationResponse.prototype, "pushSync", void 0);
     return GetIdentityPoolConfigurationResponse;
-}(SpeakeasyBase));
-export { GetIdentityPoolConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIdentityPoolConfigurationResponse = GetIdentityPoolConfigurationResponse;

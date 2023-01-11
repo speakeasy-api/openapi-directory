@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,124 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteArchiveRuleResponse = exports.DeleteArchiveRuleRequest = exports.DeleteArchiveRuleHeaders = exports.DeleteArchiveRuleQueryParams = exports.DeleteArchiveRulePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteArchiveRulePathParams = /** @class */ (function (_super) {
     __extends(DeleteArchiveRulePathParams, _super);
     function DeleteArchiveRulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=analyzerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=analyzerName" }),
         __metadata("design:type", String)
     ], DeleteArchiveRulePathParams.prototype, "analyzerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ruleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ruleName" }),
         __metadata("design:type", String)
     ], DeleteArchiveRulePathParams.prototype, "ruleName", void 0);
     return DeleteArchiveRulePathParams;
-}(SpeakeasyBase));
-export { DeleteArchiveRulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteArchiveRulePathParams = DeleteArchiveRulePathParams;
 var DeleteArchiveRuleQueryParams = /** @class */ (function (_super) {
     __extends(DeleteArchiveRuleQueryParams, _super);
     function DeleteArchiveRuleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientToken" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleQueryParams.prototype, "clientToken", void 0);
     return DeleteArchiveRuleQueryParams;
-}(SpeakeasyBase));
-export { DeleteArchiveRuleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteArchiveRuleQueryParams = DeleteArchiveRuleQueryParams;
 var DeleteArchiveRuleHeaders = /** @class */ (function (_super) {
     __extends(DeleteArchiveRuleHeaders, _super);
     function DeleteArchiveRuleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteArchiveRuleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteArchiveRuleHeaders;
-}(SpeakeasyBase));
-export { DeleteArchiveRuleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteArchiveRuleHeaders = DeleteArchiveRuleHeaders;
 var DeleteArchiveRuleRequest = /** @class */ (function (_super) {
     __extends(DeleteArchiveRuleRequest, _super);
     function DeleteArchiveRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteArchiveRulePathParams)
     ], DeleteArchiveRuleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteArchiveRuleQueryParams)
     ], DeleteArchiveRuleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteArchiveRuleHeaders)
     ], DeleteArchiveRuleRequest.prototype, "headers", void 0);
     return DeleteArchiveRuleRequest;
-}(SpeakeasyBase));
-export { DeleteArchiveRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteArchiveRuleRequest = DeleteArchiveRuleRequest;
 var DeleteArchiveRuleResponse = /** @class */ (function (_super) {
     __extends(DeleteArchiveRuleResponse, _super);
     function DeleteArchiveRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteArchiveRuleResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteArchiveRuleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteArchiveRuleResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteArchiveRuleResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteArchiveRuleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteArchiveRuleResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteArchiveRuleResponse.prototype, "validationException", void 0);
     return DeleteArchiveRuleResponse;
-}(SpeakeasyBase));
-export { DeleteArchiveRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteArchiveRuleResponse = DeleteArchiveRuleResponse;

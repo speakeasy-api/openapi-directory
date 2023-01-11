@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceAccessProperties } from "./workspaceaccessproperties";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyWorkspaceAccessPropertiesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspaceaccessproperties_1 = require("./workspaceaccessproperties");
 var ModifyWorkspaceAccessPropertiesRequest = /** @class */ (function (_super) {
     __extends(ModifyWorkspaceAccessPropertiesRequest, _super);
     function ModifyWorkspaceAccessPropertiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], ModifyWorkspaceAccessPropertiesRequest.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceAccessProperties" }),
-        __metadata("design:type", WorkspaceAccessProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceAccessProperties" }),
+        __metadata("design:type", workspaceaccessproperties_1.WorkspaceAccessProperties)
     ], ModifyWorkspaceAccessPropertiesRequest.prototype, "workspaceAccessProperties", void 0);
     return ModifyWorkspaceAccessPropertiesRequest;
-}(SpeakeasyBase));
-export { ModifyWorkspaceAccessPropertiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyWorkspaceAccessPropertiesRequest = ModifyWorkspaceAccessPropertiesRequest;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetTimesheetPathParams extends SpeakeasyBase {
-    timesheetId: string;
+    timesheetID: string;
 }
 export declare class GetTimesheetHeaders extends SpeakeasyBase {
     xeroTenantId: string;

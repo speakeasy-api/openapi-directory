@@ -62,7 +62,7 @@ export class DatafusionProjectsLocationsOperationsCancelRequest extends Speakeas
   queryParams: DatafusionProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DatafusionProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class DatafusionProjectsLocationsOperationsCancelResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -48,7 +48,7 @@ export class ContainerService extends SpeakeasyBase {
   privateDomainName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=publicDomainNames" })
-  publicDomainNames?: Map<string, string[]>;
+  publicDomainNames?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceType" })
   resourceType?: ResourceTypeEnum;

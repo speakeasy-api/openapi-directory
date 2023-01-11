@@ -428,5 +428,5 @@ export class ProvisionNetworkClientsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  provisionNetworkClients201ApplicationJsonObject?: Map<string, any>;
+  provisionNetworkClients201ApplicationJSONObject?: Record<string, any>;
 }

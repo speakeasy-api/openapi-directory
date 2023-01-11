@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRebuildEnvironmentActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRebuildEnvironmentResponse = exports.GetRebuildEnvironmentRequest = exports.GetRebuildEnvironmentHeaders = exports.GetRebuildEnvironmentQueryParams = exports.GetRebuildEnvironmentVersionEnum = exports.GetRebuildEnvironmentActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRebuildEnvironmentActionEnum;
 (function (GetRebuildEnvironmentActionEnum) {
     GetRebuildEnvironmentActionEnum["RebuildEnvironment"] = "RebuildEnvironment";
-})(GetRebuildEnvironmentActionEnum || (GetRebuildEnvironmentActionEnum = {}));
-export var GetRebuildEnvironmentVersionEnum;
+})(GetRebuildEnvironmentActionEnum = exports.GetRebuildEnvironmentActionEnum || (exports.GetRebuildEnvironmentActionEnum = {}));
+var GetRebuildEnvironmentVersionEnum;
 (function (GetRebuildEnvironmentVersionEnum) {
     GetRebuildEnvironmentVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetRebuildEnvironmentVersionEnum || (GetRebuildEnvironmentVersionEnum = {}));
+})(GetRebuildEnvironmentVersionEnum = exports.GetRebuildEnvironmentVersionEnum || (exports.GetRebuildEnvironmentVersionEnum = {}));
 var GetRebuildEnvironmentQueryParams = /** @class */ (function (_super) {
     __extends(GetRebuildEnvironmentQueryParams, _super);
     function GetRebuildEnvironmentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentQueryParams.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentQueryParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentQueryParams.prototype, "version", void 0);
     return GetRebuildEnvironmentQueryParams;
-}(SpeakeasyBase));
-export { GetRebuildEnvironmentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRebuildEnvironmentQueryParams = GetRebuildEnvironmentQueryParams;
 var GetRebuildEnvironmentHeaders = /** @class */ (function (_super) {
     __extends(GetRebuildEnvironmentHeaders, _super);
     function GetRebuildEnvironmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRebuildEnvironmentHeaders;
-}(SpeakeasyBase));
-export { GetRebuildEnvironmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRebuildEnvironmentHeaders = GetRebuildEnvironmentHeaders;
 var GetRebuildEnvironmentRequest = /** @class */ (function (_super) {
     __extends(GetRebuildEnvironmentRequest, _super);
     function GetRebuildEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRebuildEnvironmentQueryParams)
     ], GetRebuildEnvironmentRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRebuildEnvironmentHeaders)
     ], GetRebuildEnvironmentRequest.prototype, "headers", void 0);
     return GetRebuildEnvironmentRequest;
-}(SpeakeasyBase));
-export { GetRebuildEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRebuildEnvironmentRequest = GetRebuildEnvironmentRequest;
 var GetRebuildEnvironmentResponse = /** @class */ (function (_super) {
     __extends(GetRebuildEnvironmentResponse, _super);
     function GetRebuildEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRebuildEnvironmentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRebuildEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRebuildEnvironmentResponse.prototype, "statusCode", void 0);
     return GetRebuildEnvironmentResponse;
-}(SpeakeasyBase));
-export { GetRebuildEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRebuildEnvironmentResponse = GetRebuildEnvironmentResponse;

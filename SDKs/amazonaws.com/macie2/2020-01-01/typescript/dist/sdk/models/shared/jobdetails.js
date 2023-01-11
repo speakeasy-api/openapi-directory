@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IsDefinedInJobEnum } from "./isdefinedinjobenum";
-import { IsMonitoredByJobEnum } from "./ismonitoredbyjobenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var isdefinedinjobenum_1 = require("./isdefinedinjobenum");
+var ismonitoredbyjobenum_1 = require("./ismonitoredbyjobenum");
 // JobDetails
 /**
  * Specifies whether any one-time or recurring classification jobs are configured to analyze data in an S3 bucket, and, if so, the details of the job that ran most recently.
@@ -35,21 +38,21 @@ var JobDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefinedInJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefinedInJob" }),
         __metadata("design:type", String)
     ], JobDetails.prototype, "isDefinedInJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isMonitoredByJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isMonitoredByJob" }),
         __metadata("design:type", String)
     ], JobDetails.prototype, "isMonitoredByJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastJobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastJobId" }),
         __metadata("design:type", String)
     ], JobDetails.prototype, "lastJobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastJobRunTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastJobRunTime" }),
         __metadata("design:type", Date)
     ], JobDetails.prototype, "lastJobRunTime", void 0);
     return JobDetails;
-}(SpeakeasyBase));
-export { JobDetails };
+}(utils_1.SpeakeasyBase));
+exports.JobDetails = JobDetails;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Datafeed } from "./datafeed";
-import { Errors } from "./errors";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedsCustomBatchResponseEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafeed_1 = require("./datafeed");
+var errors_1 = require("./errors");
 // DatafeedsCustomBatchResponseEntry
 /**
  * A batch entry encoding a single non-batch datafeeds response.
@@ -35,17 +38,17 @@ var DatafeedsCustomBatchResponseEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], DatafeedsCustomBatchResponseEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datafeed" }),
-        __metadata("design:type", Datafeed)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datafeed" }),
+        __metadata("design:type", datafeed_1.Datafeed)
     ], DatafeedsCustomBatchResponseEntry.prototype, "datafeed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Errors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errors_1.Errors)
     ], DatafeedsCustomBatchResponseEntry.prototype, "errors", void 0);
     return DatafeedsCustomBatchResponseEntry;
-}(SpeakeasyBase));
-export { DatafeedsCustomBatchResponseEntry };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedsCustomBatchResponseEntry = DatafeedsCustomBatchResponseEntry;

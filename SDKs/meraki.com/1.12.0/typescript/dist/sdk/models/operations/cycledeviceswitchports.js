@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CycleDeviceSwitchPortsResponse = exports.CycleDeviceSwitchPortsRequest = exports.CycleDeviceSwitchPortsRequestBody = exports.CycleDeviceSwitchPortsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CycleDeviceSwitchPortsPathParams = /** @class */ (function (_super) {
     __extends(CycleDeviceSwitchPortsPathParams, _super);
     function CycleDeviceSwitchPortsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], CycleDeviceSwitchPortsPathParams.prototype, "serial", void 0);
     return CycleDeviceSwitchPortsPathParams;
-}(SpeakeasyBase));
-export { CycleDeviceSwitchPortsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CycleDeviceSwitchPortsPathParams = CycleDeviceSwitchPortsPathParams;
 var CycleDeviceSwitchPortsRequestBody = /** @class */ (function (_super) {
     __extends(CycleDeviceSwitchPortsRequestBody, _super);
     function CycleDeviceSwitchPortsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports" }),
         __metadata("design:type", Array)
     ], CycleDeviceSwitchPortsRequestBody.prototype, "ports", void 0);
     return CycleDeviceSwitchPortsRequestBody;
-}(SpeakeasyBase));
-export { CycleDeviceSwitchPortsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CycleDeviceSwitchPortsRequestBody = CycleDeviceSwitchPortsRequestBody;
 var CycleDeviceSwitchPortsRequest = /** @class */ (function (_super) {
     __extends(CycleDeviceSwitchPortsRequest, _super);
     function CycleDeviceSwitchPortsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CycleDeviceSwitchPortsPathParams)
     ], CycleDeviceSwitchPortsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CycleDeviceSwitchPortsRequestBody)
     ], CycleDeviceSwitchPortsRequest.prototype, "request", void 0);
     return CycleDeviceSwitchPortsRequest;
-}(SpeakeasyBase));
-export { CycleDeviceSwitchPortsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CycleDeviceSwitchPortsRequest = CycleDeviceSwitchPortsRequest;
 var CycleDeviceSwitchPortsResponse = /** @class */ (function (_super) {
     __extends(CycleDeviceSwitchPortsResponse, _super);
     function CycleDeviceSwitchPortsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CycleDeviceSwitchPortsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CycleDeviceSwitchPortsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CycleDeviceSwitchPortsResponse.prototype, "cycleDeviceSwitchPorts200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CycleDeviceSwitchPortsResponse.prototype, "cycleDeviceSwitchPorts200ApplicationJSONObject", void 0);
     return CycleDeviceSwitchPortsResponse;
-}(SpeakeasyBase));
-export { CycleDeviceSwitchPortsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CycleDeviceSwitchPortsResponse = CycleDeviceSwitchPortsResponse;

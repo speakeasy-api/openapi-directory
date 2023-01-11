@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VmUtilizationMetrics } from "./vmutilizationmetrics";
-import { VmwareVmDetails } from "./vmwarevmdetails";
-import { VmwareVmDetailsInput } from "./vmwarevmdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VmUtilizationInfoInput = exports.VmUtilizationInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var vmutilizationmetrics_1 = require("./vmutilizationmetrics");
+var vmwarevmdetails_1 = require("./vmwarevmdetails");
+var vmwarevmdetails_2 = require("./vmwarevmdetails");
 // VmUtilizationInfo
 /**
  * Utilization information of a single VM.
@@ -36,20 +39,20 @@ var VmUtilizationInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utilization" }),
-        __metadata("design:type", VmUtilizationMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utilization" }),
+        __metadata("design:type", vmutilizationmetrics_1.VmUtilizationMetrics)
     ], VmUtilizationInfo.prototype, "utilization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmId" }),
         __metadata("design:type", String)
     ], VmUtilizationInfo.prototype, "vmId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmwareVmDetails" }),
-        __metadata("design:type", VmwareVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmwareVmDetails" }),
+        __metadata("design:type", vmwarevmdetails_1.VmwareVmDetails)
     ], VmUtilizationInfo.prototype, "vmwareVmDetails", void 0);
     return VmUtilizationInfo;
-}(SpeakeasyBase));
-export { VmUtilizationInfo };
+}(utils_1.SpeakeasyBase));
+exports.VmUtilizationInfo = VmUtilizationInfo;
 // VmUtilizationInfoInput
 /**
  * Utilization information of a single VM.
@@ -60,17 +63,17 @@ var VmUtilizationInfoInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utilization" }),
-        __metadata("design:type", VmUtilizationMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utilization" }),
+        __metadata("design:type", vmutilizationmetrics_1.VmUtilizationMetrics)
     ], VmUtilizationInfoInput.prototype, "utilization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmId" }),
         __metadata("design:type", String)
     ], VmUtilizationInfoInput.prototype, "vmId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmwareVmDetails" }),
-        __metadata("design:type", VmwareVmDetailsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmwareVmDetails" }),
+        __metadata("design:type", vmwarevmdetails_2.VmwareVmDetailsInput)
     ], VmUtilizationInfoInput.prototype, "vmwareVmDetails", void 0);
     return VmUtilizationInfoInput;
-}(SpeakeasyBase));
-export { VmUtilizationInfoInput };
+}(utils_1.SpeakeasyBase));
+exports.VmUtilizationInfoInput = VmUtilizationInfoInput;

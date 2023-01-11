@@ -11,5 +11,5 @@ export declare class TwilioMessagePostTwilioPostResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    twilioMessagePostTwilioPost200ApplicationJsonAny?: any;
+    twilioMessagePostTwilioPost200ApplicationJSONAny?: any;
 }

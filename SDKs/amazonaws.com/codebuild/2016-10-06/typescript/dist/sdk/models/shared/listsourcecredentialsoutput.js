@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceCredentialsInfo } from "./sourcecredentialsinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSourceCredentialsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourcecredentialsinfo_1 = require("./sourcecredentialsinfo");
 var ListSourceCredentialsOutput = /** @class */ (function (_super) {
     __extends(ListSourceCredentialsOutput, _super);
     function ListSourceCredentialsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCredentialsInfos", elemType: SourceCredentialsInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCredentialsInfos", elemType: sourcecredentialsinfo_1.SourceCredentialsInfo }),
         __metadata("design:type", Array)
     ], ListSourceCredentialsOutput.prototype, "sourceCredentialsInfos", void 0);
     return ListSourceCredentialsOutput;
-}(SpeakeasyBase));
-export { ListSourceCredentialsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListSourceCredentialsOutput = ListSourceCredentialsOutput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTaxRateResponse = exports.GetTaxRateRequest = exports.GetTaxRateSecurity = exports.GetTaxRatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTaxRatePathParams = /** @class */ (function (_super) {
     __extends(GetTaxRatePathParams, _super);
     function GetTaxRatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taxRateUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taxRateUuid" }),
         __metadata("design:type", String)
     ], GetTaxRatePathParams.prototype, "taxRateUuid", void 0);
     return GetTaxRatePathParams;
-}(SpeakeasyBase));
-export { GetTaxRatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTaxRatePathParams = GetTaxRatePathParams;
 var GetTaxRateSecurity = /** @class */ (function (_super) {
     __extends(GetTaxRateSecurity, _super);
     function GetTaxRateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeZettleApiKey)
     ], GetTaxRateSecurity.prototype, "zettleApiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeZettleOauth)
     ], GetTaxRateSecurity.prototype, "zettleOauth", void 0);
     return GetTaxRateSecurity;
-}(SpeakeasyBase));
-export { GetTaxRateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetTaxRateSecurity = GetTaxRateSecurity;
 var GetTaxRateRequest = /** @class */ (function (_super) {
     __extends(GetTaxRateRequest, _super);
     function GetTaxRateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTaxRatePathParams)
     ], GetTaxRateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTaxRateSecurity)
     ], GetTaxRateRequest.prototype, "security", void 0);
     return GetTaxRateRequest;
-}(SpeakeasyBase));
-export { GetTaxRateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTaxRateRequest = GetTaxRateRequest;
 var GetTaxRateResponse = /** @class */ (function (_super) {
     __extends(GetTaxRateResponse, _super);
     function GetTaxRateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTaxRateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTaxRateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.TaxRate)
     ], GetTaxRateResponse.prototype, "taxRate", void 0);
     return GetTaxRateResponse;
-}(SpeakeasyBase));
-export { GetTaxRateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTaxRateResponse = GetTaxRateResponse;

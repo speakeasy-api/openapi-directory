@@ -37,5 +37,5 @@ export declare class VirtualizationVirtualMachinesListRequest extends SpeakeasyB
 export declare class VirtualizationVirtualMachinesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationVirtualMachinesList200ApplicationJsonObject?: VirtualizationVirtualMachinesList200ApplicationJson;
+    virtualizationVirtualMachinesList200ApplicationJSONObject?: VirtualizationVirtualMachinesList200ApplicationJson;
 }

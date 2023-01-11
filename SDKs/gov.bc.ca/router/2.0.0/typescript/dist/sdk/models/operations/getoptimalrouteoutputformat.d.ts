@@ -21,7 +21,7 @@ export declare class GetOptimalRouteOutputFormatQueryParams extends SpeakeasyBas
     departure?: Date;
     disable?: string;
     distanceUnit?: GetOptimalRouteOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkGroupConfiguration } from "./workgroupconfiguration";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWorkGroupInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var workgroupconfiguration_1 = require("./workgroupconfiguration");
+var tag_1 = require("./tag");
 var CreateWorkGroupInput = /** @class */ (function (_super) {
     __extends(CreateWorkGroupInput, _super);
     function CreateWorkGroupInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configuration" }),
-        __metadata("design:type", WorkGroupConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configuration" }),
+        __metadata("design:type", workgroupconfiguration_1.WorkGroupConfiguration)
     ], CreateWorkGroupInput.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateWorkGroupInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateWorkGroupInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateWorkGroupInput.prototype, "tags", void 0);
     return CreateWorkGroupInput;
-}(SpeakeasyBase));
-export { CreateWorkGroupInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkGroupInput = CreateWorkGroupInput;

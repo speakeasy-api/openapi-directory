@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,125 +23,127 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutConfigurationSetDeliveryOptionsResponse = exports.PutConfigurationSetDeliveryOptionsRequest = exports.PutConfigurationSetDeliveryOptionsRequestBody = exports.PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum = exports.PutConfigurationSetDeliveryOptionsHeaders = exports.PutConfigurationSetDeliveryOptionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutConfigurationSetDeliveryOptionsPathParams = /** @class */ (function (_super) {
     __extends(PutConfigurationSetDeliveryOptionsPathParams, _super);
     function PutConfigurationSetDeliveryOptionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ConfigurationSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ConfigurationSetName" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsPathParams.prototype, "configurationSetName", void 0);
     return PutConfigurationSetDeliveryOptionsPathParams;
-}(SpeakeasyBase));
-export { PutConfigurationSetDeliveryOptionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationSetDeliveryOptionsPathParams = PutConfigurationSetDeliveryOptionsPathParams;
 var PutConfigurationSetDeliveryOptionsHeaders = /** @class */ (function (_super) {
     __extends(PutConfigurationSetDeliveryOptionsHeaders, _super);
     function PutConfigurationSetDeliveryOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PutConfigurationSetDeliveryOptionsHeaders;
-}(SpeakeasyBase));
-export { PutConfigurationSetDeliveryOptionsHeaders };
-export var PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationSetDeliveryOptionsHeaders = PutConfigurationSetDeliveryOptionsHeaders;
+var PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum;
 (function (PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum) {
     PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum["Require"] = "REQUIRE";
     PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum["Optional"] = "OPTIONAL";
-})(PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum || (PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum = {}));
+})(PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum = exports.PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum || (exports.PutConfigurationSetDeliveryOptionsRequestBodyTlsPolicyEnum = {}));
 var PutConfigurationSetDeliveryOptionsRequestBody = /** @class */ (function (_super) {
     __extends(PutConfigurationSetDeliveryOptionsRequestBody, _super);
     function PutConfigurationSetDeliveryOptionsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingPoolName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingPoolName" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsRequestBody.prototype, "sendingPoolName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TlsPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TlsPolicy" }),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsRequestBody.prototype, "tlsPolicy", void 0);
     return PutConfigurationSetDeliveryOptionsRequestBody;
-}(SpeakeasyBase));
-export { PutConfigurationSetDeliveryOptionsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationSetDeliveryOptionsRequestBody = PutConfigurationSetDeliveryOptionsRequestBody;
 var PutConfigurationSetDeliveryOptionsRequest = /** @class */ (function (_super) {
     __extends(PutConfigurationSetDeliveryOptionsRequest, _super);
     function PutConfigurationSetDeliveryOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutConfigurationSetDeliveryOptionsPathParams)
     ], PutConfigurationSetDeliveryOptionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutConfigurationSetDeliveryOptionsHeaders)
     ], PutConfigurationSetDeliveryOptionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutConfigurationSetDeliveryOptionsRequestBody)
     ], PutConfigurationSetDeliveryOptionsRequest.prototype, "request", void 0);
     return PutConfigurationSetDeliveryOptionsRequest;
-}(SpeakeasyBase));
-export { PutConfigurationSetDeliveryOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationSetDeliveryOptionsRequest = PutConfigurationSetDeliveryOptionsRequest;
 var PutConfigurationSetDeliveryOptionsResponse = /** @class */ (function (_super) {
     __extends(PutConfigurationSetDeliveryOptionsResponse, _super);
     function PutConfigurationSetDeliveryOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "putConfigurationSetDeliveryOptionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutConfigurationSetDeliveryOptionsResponse.prototype, "tooManyRequestsException", void 0);
     return PutConfigurationSetDeliveryOptionsResponse;
-}(SpeakeasyBase));
-export { PutConfigurationSetDeliveryOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationSetDeliveryOptionsResponse = PutConfigurationSetDeliveryOptionsResponse;

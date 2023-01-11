@@ -29,10 +29,10 @@ export class ProductSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productSearch200ApplicationJsonAnies?: any[];
+  productSearch200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  productSearchDefaultApplicationJsonAny?: any;
+  productSearchDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

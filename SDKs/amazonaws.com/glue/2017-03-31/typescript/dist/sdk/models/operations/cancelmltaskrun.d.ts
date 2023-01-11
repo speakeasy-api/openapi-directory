@@ -18,7 +18,7 @@ export declare class CancelMlTaskRunRequest extends SpeakeasyBase {
     request: shared.CancelMlTaskRunRequest;
 }
 export declare class CancelMlTaskRunResponse extends SpeakeasyBase {
-    cancelMlTaskRunResponse?: shared.CancelMlTaskRunResponse;
+    cancelMLTaskRunResponse?: shared.CancelMlTaskRunResponse;
     contentType: string;
     entityNotFoundException?: any;
     internalServiceException?: any;

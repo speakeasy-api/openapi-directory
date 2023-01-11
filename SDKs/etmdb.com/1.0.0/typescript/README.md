@@ -16,24 +16,23 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CinemaDetailSearchReadRequest, CinemaDetailSearchReadResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { CinemaSearchReadRequest, CinemaSearchReadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: CinemaDetailSearchReadRequest = {
+const req: CinemaSearchReadRequest = {
   pathParams: {
-    cinemaName: "ut",
+    id: "sit",
   },
 };
 
-sdk.sdk.cinemaDetailSearchRead(req).then((res: CinemaDetailSearchReadResponse | AxiosError) => {
+sdk.cinema.cinemaSearchRead(req).then((res: CinemaSearchReadResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -42,33 +41,84 @@ sdk.sdk.cinemaDetailSearchRead(req).then((res: CinemaDetailSearchReadResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cinema
+
+* `cinemaSearchRead` - Return cinema search result
+
+### cinema-detail
 
 * `cinemaDetailSearchRead` - Return cinema details search result
+
+### cinema-schedule
+
 * `cinemaScheduleSearchRead` - Return cinema schedule search result
 * `cinemaScheduleSearchallRead` - Return cinema schedule search result
+
+### cinema-shedule-showtime
+
 * `cinemaSheduleShowtimeSearchRead` - Return cinema schedule and showtime search result
 * `cinemaSheduleShowtimeSearchallRead` - Return cinema schedule and showtime search result
-* `cinemaSearchRead` - Return cinema search result
+
+### company
+
+* `companySearchRead` - Return company search result
+
+### company-credits
+
 * `companyCreditsSearchRead` - Return company credits search result
 * `companyCreditsSearchallRead` - Return company credits search result
-* `companySearchRead` - Return company search result
-* `filmographyTypeSearchRead` - Return filmography type search result
+
+### filmography
+
 * `filmographySearchRead` - Return filmography search result
 * `filmographySearchallRead` - Return filmography search result
-* `genreTypeSearchRead` - Return genre type search result
+
+### filmography-type
+
+* `filmographyTypeSearchRead` - Return filmography type search result
+
+### genre
+
 * `genreSearchRead` - Return movie genre search result
 * `genreSearchallRead` - Return movie genre search result
+
+### genre-type
+
+* `genreTypeSearchRead` - Return genre type search result
+
+### job
+
 * `jobSearchRead` - Return job details search result
 * `jobSearchallRead` - Return job details search result
+
+### media
+
 * `mediaSearchRead` - Return movie media search result
 * `mediaSearchallRead` - Return cast media search result
+
+### movie
+
+* `movieSearchRead` - Return movie search result
+
+### movie-cast
+
 * `movieCastSearchRead` - Return movie cast search result
 * `movieCastSearchallRead` - Return movie cast search result
-* `movieSearchRead` - Return movie search result
+
+### news
+
 * `newsSearchRead` - Return news or article search result
+
+### people
+
 * `peopleSearchRead` - Return cast search result
+
+### showtime
+
 * `showtimeSearchallRead` - Return showtime search result
+
+### watchlist
+
 * `watchlistSearchRead` - Return watchlist search result
 * `watchlistSearchallRead` - Return watchlist search result
 

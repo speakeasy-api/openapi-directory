@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TextEntry } from "./textentry";
-import { Context } from "./context";
-import { AttributeParameters } from "./attributeparameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzeCommentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var textentry_1 = require("./textentry");
+var context_1 = require("./context");
+var attributeparameters_1 = require("./attributeparameters");
 // AnalyzeCommentRequest
 /**
  * The comment analysis request message.
@@ -36,41 +39,41 @@ var AnalyzeCommentRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], AnalyzeCommentRequest.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
-        __metadata("design:type", TextEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
+        __metadata("design:type", textentry_1.TextEntry)
     ], AnalyzeCommentRequest.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communityId" }),
         __metadata("design:type", String)
     ], AnalyzeCommentRequest.prototype, "communityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", Context)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", context_1.Context)
     ], AnalyzeCommentRequest.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doNotStore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doNotStore" }),
         __metadata("design:type", Boolean)
     ], AnalyzeCommentRequest.prototype, "doNotStore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], AnalyzeCommentRequest.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedAttributes", elemType: AttributeParameters }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedAttributes", elemType: attributeparameters_1.AttributeParameters }),
+        __metadata("design:type", Object)
     ], AnalyzeCommentRequest.prototype, "requestedAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], AnalyzeCommentRequest.prototype, "sessionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spanAnnotations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spanAnnotations" }),
         __metadata("design:type", Boolean)
     ], AnalyzeCommentRequest.prototype, "spanAnnotations", void 0);
     return AnalyzeCommentRequest;
-}(SpeakeasyBase));
-export { AnalyzeCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzeCommentRequest = AnalyzeCommentRequest;

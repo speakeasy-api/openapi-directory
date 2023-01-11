@@ -35,13 +35,13 @@ export class ActivityListStargazersForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  activityListStargazersForRepo200ApplicationJsonAnyOf?: any;
+  activityListStargazersForRepo200ApplicationJSONAnyOf?: any;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

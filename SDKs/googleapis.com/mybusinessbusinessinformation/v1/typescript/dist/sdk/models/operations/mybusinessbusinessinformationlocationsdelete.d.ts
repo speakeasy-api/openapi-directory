@@ -22,6 +22,6 @@ export declare class MybusinessbusinessinformationLocationsDeleteRequest extends
 }
 export declare class MybusinessbusinessinformationLocationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

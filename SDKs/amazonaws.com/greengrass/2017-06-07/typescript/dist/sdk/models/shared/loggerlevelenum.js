@@ -1,8 +1,11 @@
-export var LoggerLevelEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoggerLevelEnum = void 0;
+var LoggerLevelEnum;
 (function (LoggerLevelEnum) {
     LoggerLevelEnum["Debug"] = "DEBUG";
     LoggerLevelEnum["Info"] = "INFO";
     LoggerLevelEnum["Warn"] = "WARN";
     LoggerLevelEnum["Error"] = "ERROR";
     LoggerLevelEnum["Fatal"] = "FATAL";
-})(LoggerLevelEnum || (LoggerLevelEnum = {}));
+})(LoggerLevelEnum = exports.LoggerLevelEnum || (exports.LoggerLevelEnum = {}));

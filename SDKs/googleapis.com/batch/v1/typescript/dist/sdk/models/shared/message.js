@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MessageNewJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Message = exports.MessageTypeEnum = exports.MessageNewTaskStateEnum = exports.MessageNewJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MessageNewJobStateEnum;
 (function (MessageNewJobStateEnum) {
     MessageNewJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MessageNewJobStateEnum["Queued"] = "QUEUED";
@@ -32,8 +35,8 @@ export var MessageNewJobStateEnum;
     MessageNewJobStateEnum["Succeeded"] = "SUCCEEDED";
     MessageNewJobStateEnum["Failed"] = "FAILED";
     MessageNewJobStateEnum["DeletionInProgress"] = "DELETION_IN_PROGRESS";
-})(MessageNewJobStateEnum || (MessageNewJobStateEnum = {}));
-export var MessageNewTaskStateEnum;
+})(MessageNewJobStateEnum = exports.MessageNewJobStateEnum || (exports.MessageNewJobStateEnum = {}));
+var MessageNewTaskStateEnum;
 (function (MessageNewTaskStateEnum) {
     MessageNewTaskStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MessageNewTaskStateEnum["Pending"] = "PENDING";
@@ -41,13 +44,13 @@ export var MessageNewTaskStateEnum;
     MessageNewTaskStateEnum["Running"] = "RUNNING";
     MessageNewTaskStateEnum["Failed"] = "FAILED";
     MessageNewTaskStateEnum["Succeeded"] = "SUCCEEDED";
-})(MessageNewTaskStateEnum || (MessageNewTaskStateEnum = {}));
-export var MessageTypeEnum;
+})(MessageNewTaskStateEnum = exports.MessageNewTaskStateEnum || (exports.MessageNewTaskStateEnum = {}));
+var MessageTypeEnum;
 (function (MessageTypeEnum) {
     MessageTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     MessageTypeEnum["JobStateChanged"] = "JOB_STATE_CHANGED";
     MessageTypeEnum["TaskStateChanged"] = "TASK_STATE_CHANGED";
-})(MessageTypeEnum || (MessageTypeEnum = {}));
+})(MessageTypeEnum = exports.MessageTypeEnum || (exports.MessageTypeEnum = {}));
 // Message
 /**
  * Message details. Describe the attribute that a message should have. Without specified message attributes, no message will be sent by default.
@@ -58,17 +61,17 @@ var Message = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newJobState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newJobState" }),
         __metadata("design:type", String)
     ], Message.prototype, "newJobState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newTaskState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newTaskState" }),
         __metadata("design:type", String)
     ], Message.prototype, "newTaskState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Message.prototype, "type", void 0);
     return Message;
-}(SpeakeasyBase));
-export { Message };
+}(utils_1.SpeakeasyBase));
+exports.Message = Message;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { TimeDuration } from "./timeduration";
-import { RegionSet } from "./regionset";
-import { ShippingOption } from "./shippingoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FulfillmentPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var timeduration_1 = require("./timeduration");
+var regionset_1 = require("./regionset");
+var shippingoption_1 = require("./shippingoption");
 // FulfillmentPolicyRequest
 /**
  * This root container defines a seller's fulfillment policy for a specific marketplace and category type. Used when creating or updating a fulfillment policy, fulfillmentPolicyRequest encapsulates a seller's terms for fulfilling an order and includes the shipping carriers and services used for shipment and time the seller takes to ship an order. While each seller must define at least one fulfillment policy for every marketplace into which they sell, sellers can define multiple fulfillment policies for a single marketplace by specifying different configurations for the unique policies. A successful call returns a fulfillmentPolicyId, plus the Location response header contains the URI to the resource. Policy instructions can be localized by providing a locale in the Content-Language HTTP request header. For example: Content-Language: de-DE. Tip: For more on using business policies, see eBay business policies.
@@ -37,49 +40,49 @@ var FulfillmentPolicyRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], FulfillmentPolicyRequest.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], FulfillmentPolicyRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freightShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freightShipping" }),
         __metadata("design:type", Boolean)
     ], FulfillmentPolicyRequest.prototype, "freightShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalShipping" }),
         __metadata("design:type", Boolean)
     ], FulfillmentPolicyRequest.prototype, "globalShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=handlingTime" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=handlingTime" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], FulfillmentPolicyRequest.prototype, "handlingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localPickup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localPickup" }),
         __metadata("design:type", Boolean)
     ], FulfillmentPolicyRequest.prototype, "localPickup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], FulfillmentPolicyRequest.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FulfillmentPolicyRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupDropOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupDropOff" }),
         __metadata("design:type", Boolean)
     ], FulfillmentPolicyRequest.prototype, "pickupDropOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipToLocations" }),
-        __metadata("design:type", RegionSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipToLocations" }),
+        __metadata("design:type", regionset_1.RegionSet)
     ], FulfillmentPolicyRequest.prototype, "shipToLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingOptions", elemType: ShippingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingOptions", elemType: shippingoption_1.ShippingOption }),
         __metadata("design:type", Array)
     ], FulfillmentPolicyRequest.prototype, "shippingOptions", void 0);
     return FulfillmentPolicyRequest;
-}(SpeakeasyBase));
-export { FulfillmentPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.FulfillmentPolicyRequest = FulfillmentPolicyRequest;

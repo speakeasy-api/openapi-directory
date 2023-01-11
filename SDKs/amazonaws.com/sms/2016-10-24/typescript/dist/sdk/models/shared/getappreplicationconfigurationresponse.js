@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServerGroupReplicationConfiguration } from "./servergroupreplicationconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppReplicationConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var servergroupreplicationconfiguration_1 = require("./servergroupreplicationconfiguration");
 var GetAppReplicationConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetAppReplicationConfigurationResponse, _super);
     function GetAppReplicationConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverGroupReplicationConfigurations", elemType: ServerGroupReplicationConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverGroupReplicationConfigurations", elemType: servergroupreplicationconfiguration_1.ServerGroupReplicationConfiguration }),
         __metadata("design:type", Array)
     ], GetAppReplicationConfigurationResponse.prototype, "serverGroupReplicationConfigurations", void 0);
     return GetAppReplicationConfigurationResponse;
-}(SpeakeasyBase));
-export { GetAppReplicationConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppReplicationConfigurationResponse = GetAppReplicationConfigurationResponse;

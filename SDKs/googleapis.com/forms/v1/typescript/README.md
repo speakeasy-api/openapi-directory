@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FormsFormsBatchUpdateRequest, FormsFormsBatchUpdateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,169 +31,144 @@ const req: FormsFormsBatchUpdateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    formId: "blanditiis",
+    formId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "doloremque",
-    alt: "proto",
-    callback: "nulla",
-    fields: "est",
-    key: "fuga",
-    oauthToken: "inventore",
-    prettyPrint: false,
-    quotaUser: "dolorem",
-    uploadType: "quos",
-    uploadProtocol: "similique",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    includeFormInResponse: true,
+    includeFormInResponse: false,
     requests: [
       {
         createItem: {
           item: {
-            description: "accusantium",
+            description: "voluptatum",
             imageItem: {
               image: {
-                altText: "blanditiis",
+                altText: "et",
                 properties: {
-                  alignment: "LEFT",
-                  width: 6367668452330419632,
+                  alignment: "CENTER",
+                  width: 161231572858529631,
                 },
-                sourceUri: "harum",
+                sourceUri: "et",
               },
             },
-            itemId: "id",
+            itemId: "voluptate",
             pageBreakItem: {
-              "commodi": "voluptas",
+              "vitae": "totam",
+              "dolores": "illum",
+              "debitis": "vel",
             },
             questionGroupItem: {
               grid: {
                 columns: {
                   options: [
                     {
-                      goToAction: "RESTART_FORM",
-                      goToSectionId: "doloribus",
-                      image: {
-                        altText: "nulla",
-                        properties: {
-                          alignment: "CENTER",
-                          width: 3887418951089824439,
-                        },
-                        sourceUri: "alias",
-                      },
-                      isOther: true,
-                      value: "voluptatem",
-                    },
-                    {
                       goToAction: "SUBMIT_FORM",
-                      goToSectionId: "dolores",
+                      goToSectionId: "id",
                       image: {
-                        altText: "dicta",
-                        properties: {
-                          alignment: "CENTER",
-                          width: 2571576639404732481,
-                        },
-                        sourceUri: "ut",
-                      },
-                      isOther: false,
-                      value: "vel",
-                    },
-                    {
-                      goToAction: "NEXT_SECTION",
-                      goToSectionId: "ut",
-                      image: {
-                        altText: "provident",
+                        altText: "aspernatur",
                         properties: {
                           alignment: "ALIGNMENT_UNSPECIFIED",
-                          width: 3210642949273039304,
+                          width: 1395437218309923052,
                         },
-                        sourceUri: "sit",
+                        sourceUri: "commodi",
                       },
-                      isOther: false,
-                      value: "delectus",
+                      isOther: true,
+                      value: "est",
                     },
                   ],
-                  shuffle: false,
-                  type: "DROP_DOWN",
+                  shuffle: true,
+                  type: "CHECKBOX",
                 },
-                shuffleQuestions: false,
+                shuffleQuestions: true,
               },
               image: {
-                altText: "quo",
+                altText: "voluptas",
                 properties: {
-                  alignment: "RIGHT",
-                  width: 1612920053756266126,
+                  alignment: "CENTER",
+                  width: 1059542851699319360,
                 },
-                sourceUri: "vitae",
+                sourceUri: "illo",
               },
               questions: [
                 {
                   choiceQuestion: {
                     options: [
                       {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "reiciendis",
+                        goToAction: "SUBMIT_FORM",
+                        goToSectionId: "consectetur",
                         image: {
-                          altText: "velit",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 2152318449603758279,
-                          },
-                          sourceUri: "enim",
-                        },
-                        isOther: false,
-                        value: "et",
-                      },
-                      {
-                        goToAction: "RESTART_FORM",
-                        goToSectionId: "vitae",
-                        image: {
-                          altText: "asperiores",
+                          altText: "nobis",
                           properties: {
                             alignment: "RIGHT",
-                            width: 2887366195971768826,
+                            width: 7699391924090763411,
                           },
-                          sourceUri: "quibusdam",
+                          sourceUri: "recusandae",
                         },
                         isOther: true,
-                        value: "totam",
+                        value: "ipsum",
+                      },
+                      {
+                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
+                        goToSectionId: "modi",
+                        image: {
+                          altText: "sint",
+                          properties: {
+                            alignment: "LEFT",
+                            width: 7847956203786849690,
+                          },
+                          sourceUri: "exercitationem",
+                        },
+                        isOther: true,
+                        value: "reprehenderit",
                       },
                     ],
                     shuffle: false,
-                    type: "CHECKBOX",
+                    type: "RADIO",
                   },
                   dateQuestion: {
                     includeTime: false,
-                    includeYear: true,
+                    includeYear: false,
                   },
                   fileUploadQuestion: {
-                    folderId: "unde",
-                    maxFileSize: "facilis",
-                    maxFiles: 5917731321530822737,
+                    folderId: "beatae",
+                    maxFileSize: "veritatis",
+                    maxFiles: 2671030200101705776,
                     types: [
-                      "VIDEO",
-                      "SPREADSHEET",
+                      "ANY",
+                      "PRESENTATION",
+                      "PDF",
                     ],
                   },
                   grading: {
                     correctAnswers: {
                       answers: [
                         {
-                          value: "qui",
+                          value: "placeat",
                         },
                         {
-                          value: "voluptas",
+                          value: "vel",
                         },
                         {
-                          value: "quo",
+                          value: "rerum",
                         },
                       ],
                     },
@@ -202,72 +176,243 @@ const req: FormsFormsBatchUpdateRequest = {
                       material: [
                         {
                           link: {
-                            displayText: "sit",
-                            uri: "doloribus",
+                            displayText: "voluptas",
+                            uri: "quam",
                           },
                           video: {
-                            displayText: "et",
-                            youtubeUri: "eveniet",
+                            displayText: "reprehenderit",
+                            youtubeUri: "qui",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "qui",
+                            uri: "unde",
+                          },
+                          video: {
+                            displayText: "in",
+                            youtubeUri: "autem",
                           },
                         },
                       ],
-                      text: "assumenda",
+                      text: "qui",
                     },
-                    pointValue: 5793950756465005265,
+                    pointValue: 35604086129376003,
                     whenRight: {
                       material: [
                         {
                           link: {
-                            displayText: "illum",
-                            uri: "rem",
+                            displayText: "ab",
+                            uri: "neque",
                           },
                           video: {
-                            displayText: "voluptatem",
-                            youtubeUri: "est",
+                            displayText: "ullam",
+                            youtubeUri: "et",
                           },
                         },
                         {
                           link: {
-                            displayText: "sunt",
-                            uri: "quo",
+                            displayText: "accusantium",
+                            uri: "esse",
                           },
                           video: {
-                            displayText: "voluptatum",
-                            youtubeUri: "doloremque",
+                            displayText: "architecto",
+                            youtubeUri: "quam",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "velit",
+                            uri: "cumque",
+                          },
+                          video: {
+                            displayText: "soluta",
+                            youtubeUri: "sunt",
                           },
                         },
                       ],
-                      text: "ut",
+                      text: "voluptates",
                     },
                     whenWrong: {
                       material: [
                         {
                           link: {
                             displayText: "et",
-                            uri: "reiciendis",
+                            uri: "optio",
                           },
                           video: {
-                            displayText: "eveniet",
-                            youtubeUri: "et",
+                            displayText: "qui",
+                            youtubeUri: "earum",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "illo",
+                            uri: "omnis",
+                          },
+                          video: {
+                            displayText: "ut",
+                            youtubeUri: "consequatur",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "dolor",
+                            uri: "commodi",
+                          },
+                          video: {
+                            displayText: "error",
+                            youtubeUri: "reprehenderit",
                           },
                         },
                       ],
-                      text: "quia",
+                      text: "consectetur",
                     },
                   },
-                  questionId: "dicta",
+                  questionId: "nostrum",
                   required: false,
                   rowQuestion: {
-                    title: "voluptas",
+                    title: "laboriosam",
                   },
                   scaleQuestion: {
-                    high: 8588093541192860205,
-                    highLabel: "accusantium",
-                    low: 2750849625064778423,
-                    lowLabel: "sapiente",
+                    high: 1937101031588528881,
+                    highLabel: "a",
+                    low: 1836598054518427835,
+                    lowLabel: "aut",
                   },
                   textQuestion: {
                     paragraph: true,
+                  },
+                  timeQuestion: {
+                    duration: true,
+                  },
+                },
+                {
+                  choiceQuestion: {
+                    options: [
+                      {
+                        goToAction: "NEXT_SECTION",
+                        goToSectionId: "ipsa",
+                        image: {
+                          altText: "expedita",
+                          properties: {
+                            alignment: "ALIGNMENT_UNSPECIFIED",
+                            width: 4234137922270959652,
+                          },
+                          sourceUri: "atque",
+                        },
+                        isOther: true,
+                        value: "quisquam",
+                      },
+                    ],
+                    shuffle: false,
+                    type: "CHECKBOX",
+                  },
+                  dateQuestion: {
+                    includeTime: true,
+                    includeYear: false,
+                  },
+                  fileUploadQuestion: {
+                    folderId: "perferendis",
+                    maxFileSize: "et",
+                    maxFiles: 2037591971392316788,
+                    types: [
+                      "AUDIO",
+                      "IMAGE",
+                      "AUDIO",
+                    ],
+                  },
+                  grading: {
+                    correctAnswers: {
+                      answers: [
+                        {
+                          value: "est",
+                        },
+                        {
+                          value: "quis",
+                        },
+                      ],
+                    },
+                    generalFeedback: {
+                      material: [
+                        {
+                          link: {
+                            displayText: "labore",
+                            uri: "et",
+                          },
+                          video: {
+                            displayText: "impedit",
+                            youtubeUri: "ad",
+                          },
+                        },
+                      ],
+                      text: "expedita",
+                    },
+                    pointValue: 4540487686588600123,
+                    whenRight: {
+                      material: [
+                        {
+                          link: {
+                            displayText: "modi",
+                            uri: "nihil",
+                          },
+                          video: {
+                            displayText: "tempora",
+                            youtubeUri: "deserunt",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "eaque",
+                            uri: "sunt",
+                          },
+                          video: {
+                            displayText: "sit",
+                            youtubeUri: "autem",
+                          },
+                        },
+                      ],
+                      text: "quis",
+                    },
+                    whenWrong: {
+                      material: [
+                        {
+                          link: {
+                            displayText: "vel",
+                            uri: "placeat",
+                          },
+                          video: {
+                            displayText: "qui",
+                            youtubeUri: "nisi",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "quis",
+                            uri: "adipisci",
+                          },
+                          video: {
+                            displayText: "porro",
+                            youtubeUri: "rerum",
+                          },
+                        },
+                      ],
+                      text: "et",
+                    },
+                  },
+                  questionId: "accusamus",
+                  required: true,
+                  rowQuestion: {
+                    title: "laborum",
+                  },
+                  scaleQuestion: {
+                    high: 8958290475970215309,
+                    highLabel: "ut",
+                    low: 4400124260933614083,
+                    lowLabel: "fugit",
+                  },
+                  textQuestion: {
+                    paragraph: false,
                   },
                   timeQuestion: {
                     duration: false,
@@ -278,45 +423,17 @@ const req: FormsFormsBatchUpdateRequest = {
                     options: [
                       {
                         goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "autem",
+                        goToSectionId: "consequuntur",
                         image: {
-                          altText: "ad",
+                          altText: "excepturi",
                           properties: {
-                            alignment: "RIGHT",
-                            width: 1530206793438036833,
+                            alignment: "ALIGNMENT_UNSPECIFIED",
+                            width: 1377327594979300801,
                           },
-                          sourceUri: "esse",
+                          sourceUri: "delectus",
                         },
-                        isOther: true,
-                        value: "quia",
-                      },
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "cupiditate",
-                        image: {
-                          altText: "qui",
-                          properties: {
-                            alignment: "LEFT",
-                            width: 4166502192664085675,
-                          },
-                          sourceUri: "dolorum",
-                        },
-                        isOther: true,
-                        value: "doloribus",
-                      },
-                      {
-                        goToAction: "NEXT_SECTION",
-                        goToSectionId: "eum",
-                        image: {
-                          altText: "fuga",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 3699705278671025332,
-                          },
-                          sourceUri: "assumenda",
-                        },
-                        isOther: true,
-                        value: "magni",
+                        isOther: false,
+                        value: "animi",
                       },
                     ],
                     shuffle: false,
@@ -327,11 +444,12 @@ const req: FormsFormsBatchUpdateRequest = {
                     includeYear: false,
                   },
                   fileUploadQuestion: {
-                    folderId: "voluptas",
-                    maxFileSize: "et",
-                    maxFiles: 5065495399618875749,
+                    folderId: "sed",
+                    maxFileSize: "sed",
+                    maxFiles: 6464511094049078446,
                     types: [
-                      "IMAGE",
+                      "DOCUMENT",
+                      "DOCUMENT",
                       "FILE_TYPE_UNSPECIFIED",
                     ],
                   },
@@ -339,13 +457,10 @@ const req: FormsFormsBatchUpdateRequest = {
                     correctAnswers: {
                       answers: [
                         {
-                          value: "ullam",
+                          value: "pariatur",
                         },
                         {
-                          value: "rerum",
-                        },
-                        {
-                          value: "animi",
+                          value: "quasi",
                         },
                       ],
                     },
@@ -353,1049 +468,169 @@ const req: FormsFormsBatchUpdateRequest = {
                       material: [
                         {
                           link: {
-                            displayText: "ea",
-                            uri: "nihil",
-                          },
-                          video: {
-                            displayText: "suscipit",
-                            youtubeUri: "vel",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "commodi",
-                            uri: "sint",
-                          },
-                          video: {
-                            displayText: "nobis",
-                            youtubeUri: "voluptatem",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "eligendi",
-                            uri: "ratione",
-                          },
-                          video: {
-                            displayText: "exercitationem",
-                            youtubeUri: "rerum",
-                          },
-                        },
-                      ],
-                      text: "voluptatem",
-                    },
-                    pointValue: 6630029552617051383,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "sunt",
-                            uri: "ullam",
-                          },
-                          video: {
-                            displayText: "similique",
-                            youtubeUri: "nam",
-                          },
-                        },
-                        {
-                          link: {
                             displayText: "enim",
-                            uri: "est",
-                          },
-                          video: {
-                            displayText: "voluptas",
-                            youtubeUri: "et",
-                          },
-                        },
-                      ],
-                      text: "et",
-                    },
-                    whenWrong: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "dolorem",
-                            uri: "sit",
-                          },
-                          video: {
-                            displayText: "id",
-                            youtubeUri: "a",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "nulla",
-                            uri: "blanditiis",
+                            uri: "qui",
                           },
                           video: {
                             displayText: "sit",
-                            youtubeUri: "perspiciatis",
+                            youtubeUri: "possimus",
                           },
                         },
                         {
                           link: {
-                            displayText: "corporis",
-                            uri: "recusandae",
+                            displayText: "modi",
+                            uri: "neque",
                           },
                           video: {
-                            displayText: "delectus",
-                            youtubeUri: "eos",
-                          },
-                        },
-                      ],
-                      text: "iure",
-                    },
-                  },
-                  questionId: "culpa",
-                  required: false,
-                  rowQuestion: {
-                    title: "aut",
-                  },
-                  scaleQuestion: {
-                    high: 8883499301485783187,
-                    highLabel: "nesciunt",
-                    low: 8592792957227080212,
-                    lowLabel: "ut",
-                  },
-                  textQuestion: {
-                    paragraph: true,
-                  },
-                  timeQuestion: {
-                    duration: true,
-                  },
-                },
-                {
-                  choiceQuestion: {
-                    options: [
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "iste",
-                        image: {
-                          altText: "et",
-                          properties: {
-                            alignment: "ALIGNMENT_UNSPECIFIED",
-                            width: 3385703925298031216,
-                          },
-                          sourceUri: "quam",
-                        },
-                        isOther: true,
-                        value: "eos",
-                      },
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "incidunt",
-                        image: {
-                          altText: "odio",
-                          properties: {
-                            alignment: "LEFT",
-                            width: 4538443254300990071,
-                          },
-                          sourceUri: "error",
-                        },
-                        isOther: false,
-                        value: "beatae",
-                      },
-                    ],
-                    shuffle: true,
-                    type: "RADIO",
-                  },
-                  dateQuestion: {
-                    includeTime: true,
-                    includeYear: false,
-                  },
-                  fileUploadQuestion: {
-                    folderId: "quia",
-                    maxFileSize: "facilis",
-                    maxFiles: 7651563257997919332,
-                    types: [
-                      "DRAWING",
-                      "PRESENTATION",
-                    ],
-                  },
-                  grading: {
-                    correctAnswers: {
-                      answers: [
-                        {
-                          value: "autem",
-                        },
-                        {
-                          value: "at",
-                        },
-                        {
-                          value: "sed",
-                        },
-                      ],
-                    },
-                    generalFeedback: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "reprehenderit",
-                            uri: "ea",
-                          },
-                          video: {
-                            displayText: "dolorem",
-                            youtubeUri: "autem",
-                          },
-                        },
-                      ],
-                      text: "nisi",
-                    },
-                    pointValue: 1293501408407461825,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "repudiandae",
-                            uri: "non",
-                          },
-                          video: {
-                            displayText: "aut",
-                            youtubeUri: "ut",
-                          },
-                        },
-                      ],
-                      text: "ea",
-                    },
-                    whenWrong: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "necessitatibus",
-                            uri: "est",
-                          },
-                          video: {
-                            displayText: "ut",
-                            youtubeUri: "voluptas",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "voluptatem",
-                            uri: "et",
-                          },
-                          video: {
-                            displayText: "consequatur",
-                            youtubeUri: "odit",
-                          },
-                        },
-                      ],
-                      text: "unde",
-                    },
-                  },
-                  questionId: "omnis",
-                  required: false,
-                  rowQuestion: {
-                    title: "iusto",
-                  },
-                  scaleQuestion: {
-                    high: 178528086225314371,
-                    highLabel: "autem",
-                    low: 5523822080997069527,
-                    lowLabel: "similique",
-                  },
-                  textQuestion: {
-                    paragraph: false,
-                  },
-                  timeQuestion: {
-                    duration: true,
-                  },
-                },
-              ],
-            },
-            questionItem: {
-              image: {
-                altText: "libero",
-                properties: {
-                  alignment: "ALIGNMENT_UNSPECIFIED",
-                  width: 4671827097790621909,
-                },
-                sourceUri: "voluptatum",
-              },
-              question: {
-                choiceQuestion: {
-                  options: [
-                    {
-                      goToAction: "RESTART_FORM",
-                      goToSectionId: "officia",
-                      image: {
-                        altText: "architecto",
-                        properties: {
-                          alignment: "LEFT",
-                          width: 2100143270353897595,
-                        },
-                        sourceUri: "in",
-                      },
-                      isOther: false,
-                      value: "beatae",
-                    },
-                    {
-                      goToAction: "RESTART_FORM",
-                      goToSectionId: "beatae",
-                      image: {
-                        altText: "voluptate",
-                        properties: {
-                          alignment: "CENTER",
-                          width: 6160806195183941617,
-                        },
-                        sourceUri: "sequi",
-                      },
-                      isOther: true,
-                      value: "ipsam",
-                    },
-                  ],
-                  shuffle: true,
-                  type: "DROP_DOWN",
-                },
-                dateQuestion: {
-                  includeTime: false,
-                  includeYear: true,
-                },
-                fileUploadQuestion: {
-                  folderId: "dolores",
-                  maxFileSize: "voluptas",
-                  maxFiles: 3821450622976919731,
-                  types: [
-                    "ANY",
-                    "DRAWING",
-                  ],
-                },
-                grading: {
-                  correctAnswers: {
-                    answers: [
-                      {
-                        value: "eum",
-                      },
-                    ],
-                  },
-                  generalFeedback: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "suscipit",
-                          uri: "excepturi",
-                        },
-                        video: {
-                          displayText: "laborum",
-                          youtubeUri: "iure",
-                        },
-                      },
-                    ],
-                    text: "reprehenderit",
-                  },
-                  pointValue: 4401454000593110478,
-                  whenRight: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "et",
-                          uri: "quo",
-                        },
-                        video: {
-                          displayText: "reprehenderit",
-                          youtubeUri: "repellendus",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "vero",
-                          uri: "eveniet",
-                        },
-                        video: {
-                          displayText: "omnis",
-                          youtubeUri: "delectus",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "quasi",
-                          uri: "voluptates",
-                        },
-                        video: {
-                          displayText: "eligendi",
-                          youtubeUri: "sint",
-                        },
-                      },
-                    ],
-                    text: "deserunt",
-                  },
-                  whenWrong: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "ut",
-                          uri: "omnis",
-                        },
-                        video: {
-                          displayText: "assumenda",
-                          youtubeUri: "earum",
-                        },
-                      },
-                    ],
-                    text: "eum",
-                  },
-                },
-                questionId: "ut",
-                required: true,
-                rowQuestion: {
-                  title: "sit",
-                },
-                scaleQuestion: {
-                  high: 3773208962586552143,
-                  highLabel: "architecto",
-                  low: 5512792728107327134,
-                  lowLabel: "et",
-                },
-                textQuestion: {
-                  paragraph: false,
-                },
-                timeQuestion: {
-                  duration: true,
-                },
-              },
-            },
-            textItem: {
-              "et": "consequatur",
-              "molestiae": "corrupti",
-              "veniam": "dolorem",
-            },
-            title: "magnam",
-            videoItem: {
-              caption: "est",
-              video: {
-                properties: {
-                  alignment: "CENTER",
-                  width: 6220347428525113494,
-                },
-                youtubeUri: "sunt",
-              },
-            },
-          },
-          location: {
-            index: 6539930946701384664,
-          },
-        },
-        deleteItem: {
-          location: {
-            index: 1979148960994744380,
-          },
-        },
-        moveItem: {
-          newLocation: {
-            index: 5006807331309778843,
-          },
-          originalLocation: {
-            index: 7842360832936955031,
-          },
-        },
-        updateFormInfo: {
-          info: {
-            description: "quam",
-            title: "quas",
-          },
-          updateMask: "id",
-        },
-        updateItem: {
-          item: {
-            description: "consectetur",
-            imageItem: {
-              image: {
-                altText: "in",
-                properties: {
-                  alignment: "LEFT",
-                  width: 1189604837382641522,
-                },
-                sourceUri: "sed",
-              },
-            },
-            itemId: "velit",
-            pageBreakItem: {
-              "recusandae": "commodi",
-              "eius": "dolore",
-              "a": "et",
-            },
-            questionGroupItem: {
-              grid: {
-                columns: {
-                  options: [
-                    {
-                      goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                      goToSectionId: "excepturi",
-                      image: {
-                        altText: "est",
-                        properties: {
-                          alignment: "ALIGNMENT_UNSPECIFIED",
-                          width: 6462757265347799921,
-                        },
-                        sourceUri: "nam",
-                      },
-                      isOther: true,
-                      value: "aut",
-                    },
-                  ],
-                  shuffle: false,
-                  type: "CHOICE_TYPE_UNSPECIFIED",
-                },
-                shuffleQuestions: true,
-              },
-              image: {
-                altText: "sed",
-                properties: {
-                  alignment: "RIGHT",
-                  width: 6847449149842679249,
-                },
-                sourceUri: "ut",
-              },
-              questions: [
-                {
-                  choiceQuestion: {
-                    options: [
-                      {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "animi",
-                        image: {
-                          altText: "nam",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 1656220335320334169,
-                          },
-                          sourceUri: "ipsa",
-                        },
-                        isOther: false,
-                        value: "consequatur",
-                      },
-                      {
-                        goToAction: "NEXT_SECTION",
-                        goToSectionId: "hic",
-                        image: {
-                          altText: "veritatis",
-                          properties: {
-                            alignment: "RIGHT",
-                            width: 4692652398842461517,
-                          },
-                          sourceUri: "vel",
-                        },
-                        isOther: false,
-                        value: "odit",
-                      },
-                    ],
-                    shuffle: false,
-                    type: "CHECKBOX",
-                  },
-                  dateQuestion: {
-                    includeTime: true,
-                    includeYear: true,
-                  },
-                  fileUploadQuestion: {
-                    folderId: "nisi",
-                    maxFileSize: "nulla",
-                    maxFiles: 5203196856441168768,
-                    types: [
-                      "DRAWING",
-                      "ANY",
-                    ],
-                  },
-                  grading: {
-                    correctAnswers: {
-                      answers: [
-                        {
-                          value: "et",
-                        },
-                        {
-                          value: "dignissimos",
-                        },
-                        {
-                          value: "deleniti",
-                        },
-                      ],
-                    },
-                    generalFeedback: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "id",
-                            uri: "sunt",
-                          },
-                          video: {
-                            displayText: "cum",
-                            youtubeUri: "totam",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "magni",
-                            uri: "nihil",
-                          },
-                          video: {
-                            displayText: "et",
-                            youtubeUri: "omnis",
-                          },
-                        },
-                      ],
-                      text: "quidem",
-                    },
-                    pointValue: 6248192047454816017,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "natus",
-                            uri: "eos",
-                          },
-                          video: {
-                            displayText: "fugiat",
-                            youtubeUri: "numquam",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "aut",
-                            uri: "vitae",
-                          },
-                          video: {
-                            displayText: "est",
-                            youtubeUri: "exercitationem",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "vel",
-                            uri: "facere",
-                          },
-                          video: {
-                            displayText: "quidem",
-                            youtubeUri: "quibusdam",
-                          },
-                        },
-                      ],
-                      text: "atque",
-                    },
-                    whenWrong: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "blanditiis",
-                            uri: "voluptatem",
-                          },
-                          video: {
-                            displayText: "porro",
-                            youtubeUri: "facilis",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "sed",
-                            uri: "velit",
-                          },
-                          video: {
-                            displayText: "alias",
-                            youtubeUri: "aut",
-                          },
-                        },
-                      ],
-                      text: "ut",
-                    },
-                  },
-                  questionId: "quos",
-                  required: false,
-                  rowQuestion: {
-                    title: "sint",
-                  },
-                  scaleQuestion: {
-                    high: 801817451213174076,
-                    highLabel: "dignissimos",
-                    low: 275454291619330931,
-                    lowLabel: "veniam",
-                  },
-                  textQuestion: {
-                    paragraph: false,
-                  },
-                  timeQuestion: {
-                    duration: true,
-                  },
-                },
-                {
-                  choiceQuestion: {
-                    options: [
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "inventore",
-                        image: {
-                          altText: "qui",
-                          properties: {
-                            alignment: "RIGHT",
-                            width: 6107520683097591435,
-                          },
-                          sourceUri: "deleniti",
-                        },
-                        isOther: false,
-                        value: "enim",
-                      },
-                      {
-                        goToAction: "NEXT_SECTION",
-                        goToSectionId: "corporis",
-                        image: {
-                          altText: "consequuntur",
-                          properties: {
-                            alignment: "LEFT",
-                            width: 8651789405403534555,
-                          },
-                          sourceUri: "reprehenderit",
-                        },
-                        isOther: true,
-                        value: "recusandae",
-                      },
-                      {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "excepturi",
-                        image: {
-                          altText: "dicta",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 8057753338657320320,
-                          },
-                          sourceUri: "doloremque",
-                        },
-                        isOther: true,
-                        value: "sint",
-                      },
-                    ],
-                    shuffle: false,
-                    type: "DROP_DOWN",
-                  },
-                  dateQuestion: {
-                    includeTime: false,
-                    includeYear: true,
-                  },
-                  fileUploadQuestion: {
-                    folderId: "iusto",
-                    maxFileSize: "ad",
-                    maxFiles: 7642023032564939253,
-                    types: [
-                      "PDF",
-                      "PDF",
-                    ],
-                  },
-                  grading: {
-                    correctAnswers: {
-                      answers: [
-                        {
-                          value: "corporis",
-                        },
-                        {
-                          value: "sit",
-                        },
-                      ],
-                    },
-                    generalFeedback: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "quod",
-                            uri: "in",
-                          },
-                          video: {
-                            displayText: "dolorum",
-                            youtubeUri: "maiores",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "enim",
-                            uri: "a",
-                          },
-                          video: {
-                            displayText: "laborum",
-                            youtubeUri: "rem",
-                          },
-                        },
-                      ],
-                      text: "quod",
-                    },
-                    pointValue: 6042383883184959595,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "aperiam",
-                            uri: "quia",
-                          },
-                          video: {
-                            displayText: "inventore",
-                            youtubeUri: "et",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "eaque",
-                            uri: "ipsam",
-                          },
-                          video: {
-                            displayText: "harum",
-                            youtubeUri: "officiis",
-                          },
-                        },
-                      ],
-                      text: "nihil",
-                    },
-                    whenWrong: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "voluptas",
-                            uri: "quisquam",
-                          },
-                          video: {
-                            displayText: "commodi",
-                            youtubeUri: "nemo",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "qui",
-                            uri: "fugiat",
-                          },
-                          video: {
-                            displayText: "libero",
-                            youtubeUri: "temporibus",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "quia",
-                            uri: "quia",
-                          },
-                          video: {
-                            displayText: "atque",
-                            youtubeUri: "numquam",
-                          },
-                        },
-                      ],
-                      text: "optio",
-                    },
-                  },
-                  questionId: "facilis",
-                  required: true,
-                  rowQuestion: {
-                    title: "praesentium",
-                  },
-                  scaleQuestion: {
-                    high: 6763466000682211643,
-                    highLabel: "aut",
-                    low: 7272010138611573249,
-                    lowLabel: "ex",
-                  },
-                  textQuestion: {
-                    paragraph: false,
-                  },
-                  timeQuestion: {
-                    duration: true,
-                  },
-                },
-                {
-                  choiceQuestion: {
-                    options: [
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "saepe",
-                        image: {
-                          altText: "quia",
-                          properties: {
-                            alignment: "RIGHT",
-                            width: 4414318418295938773,
-                          },
-                          sourceUri: "occaecati",
-                        },
-                        isOther: true,
-                        value: "rerum",
-                      },
-                      {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "sed",
-                        image: {
-                          altText: "quae",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 758257384443612395,
-                          },
-                          sourceUri: "qui",
-                        },
-                        isOther: false,
-                        value: "enim",
-                      },
-                    ],
-                    shuffle: true,
-                    type: "DROP_DOWN",
-                  },
-                  dateQuestion: {
-                    includeTime: true,
-                    includeYear: false,
-                  },
-                  fileUploadQuestion: {
-                    folderId: "pariatur",
-                    maxFileSize: "est",
-                    maxFiles: 9208331929374984741,
-                    types: [
-                      "DOCUMENT",
-                      "DOCUMENT",
-                    ],
-                  },
-                  grading: {
-                    correctAnswers: {
-                      answers: [
-                        {
-                          value: "numquam",
-                        },
-                      ],
-                    },
-                    generalFeedback: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "voluptatum",
-                            uri: "eius",
-                          },
-                          video: {
-                            displayText: "non",
-                            youtubeUri: "eius",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "enim",
-                            uri: "vero",
-                          },
-                          video: {
-                            displayText: "tempora",
-                            youtubeUri: "ut",
-                          },
-                        },
-                      ],
-                      text: "quis",
-                    },
-                    pointValue: 6062147289734863254,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "porro",
-                            uri: "quia",
-                          },
-                          video: {
-                            displayText: "ea",
+                            displayText: "consequuntur",
                             youtubeUri: "quia",
                           },
                         },
                         {
                           link: {
-                            displayText: "consectetur",
-                            uri: "laborum",
+                            displayText: "et",
+                            uri: "est",
                           },
                           video: {
-                            displayText: "eius",
-                            youtubeUri: "laborum",
+                            displayText: "occaecati",
+                            youtubeUri: "ex",
                           },
                         },
                       ],
-                      text: "est",
+                      text: "voluptatem",
+                    },
+                    pointValue: 7646345395863209143,
+                    whenRight: {
+                      material: [
+                        {
+                          link: {
+                            displayText: "velit",
+                            uri: "quae",
+                          },
+                          video: {
+                            displayText: "est",
+                            youtubeUri: "ut",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "necessitatibus",
+                            uri: "in",
+                          },
+                          video: {
+                            displayText: "possimus",
+                            youtubeUri: "voluptatem",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "dolorum",
+                            uri: "doloribus",
+                          },
+                          video: {
+                            displayText: "saepe",
+                            youtubeUri: "sunt",
+                          },
+                        },
+                      ],
+                      text: "earum",
                     },
                     whenWrong: {
                       material: [
                         {
                           link: {
-                            displayText: "fuga",
-                            uri: "mollitia",
+                            displayText: "ut",
+                            uri: "asperiores",
                           },
                           video: {
-                            displayText: "dolorem",
-                            youtubeUri: "aut",
+                            displayText: "et",
+                            youtubeUri: "est",
+                          },
+                        },
+                        {
+                          link: {
+                            displayText: "ipsum",
+                            uri: "quam",
+                          },
+                          video: {
+                            displayText: "voluptas",
+                            youtubeUri: "nihil",
                           },
                         },
                       ],
-                      text: "quis",
+                      text: "dolores",
                     },
                   },
-                  questionId: "consequatur",
-                  required: false,
+                  questionId: "suscipit",
+                  required: true,
                   rowQuestion: {
-                    title: "consequatur",
+                    title: "non",
                   },
                   scaleQuestion: {
-                    high: 8210529933496229801,
-                    highLabel: "autem",
-                    low: 7828292705907165979,
-                    lowLabel: "quae",
+                    high: 2991421044203248760,
+                    highLabel: "ut",
+                    low: 3357930257403748968,
+                    lowLabel: "illo",
                   },
                   textQuestion: {
                     paragraph: true,
                   },
                   timeQuestion: {
-                    duration: true,
+                    duration: false,
                   },
                 },
               ],
             },
             questionItem: {
               image: {
-                altText: "dolore",
+                altText: "ipsam",
                 properties: {
                   alignment: "RIGHT",
-                  width: 850750828655117372,
+                  width: 9105358522635467874,
                 },
-                sourceUri: "voluptatem",
+                sourceUri: "blanditiis",
               },
               question: {
                 choiceQuestion: {
                   options: [
                     {
-                      goToAction: "RESTART_FORM",
+                      goToAction: "GO_TO_ACTION_UNSPECIFIED",
                       goToSectionId: "rerum",
                       image: {
-                        altText: "cupiditate",
+                        altText: "dolore",
                         properties: {
-                          alignment: "LEFT",
-                          width: 5756585499102476017,
+                          alignment: "ALIGNMENT_UNSPECIFIED",
+                          width: 7796777083842162182,
                         },
-                        sourceUri: "nesciunt",
+                        sourceUri: "officia",
                       },
                       isOther: true,
-                      value: "enim",
-                    },
-                    {
-                      goToAction: "NEXT_SECTION",
-                      goToSectionId: "illum",
-                      image: {
-                        altText: "dolores",
-                        properties: {
-                          alignment: "CENTER",
-                          width: 2379224937811426956,
-                        },
-                        sourceUri: "voluptas",
-                      },
-                      isOther: true,
-                      value: "nobis",
+                      value: "sunt",
                     },
                   ],
                   shuffle: false,
-                  type: "DROP_DOWN",
+                  type: "CHOICE_TYPE_UNSPECIFIED",
                 },
                 dateQuestion: {
                   includeTime: true,
                   includeYear: true,
                 },
                 fileUploadQuestion: {
-                  folderId: "reiciendis",
-                  maxFileSize: "et",
-                  maxFiles: 5845488839485666092,
+                  folderId: "qui",
+                  maxFileSize: "excepturi",
+                  maxFiles: 6315628527077982941,
                   types: [
-                    "DOCUMENT",
+                    "PDF",
                   ],
                 },
                 grading: {
                   correctAnswers: {
                     answers: [
                       {
-                        value: "unde",
+                        value: "doloremque",
+                      },
+                      {
+                        value: "quae",
                       },
                     ],
                   },
@@ -1403,99 +638,89 @@ const req: FormsFormsBatchUpdateRequest = {
                     material: [
                       {
                         link: {
-                          displayText: "commodi",
-                          uri: "nihil",
+                          displayText: "recusandae",
+                          uri: "qui",
                         },
                         video: {
-                          displayText: "sapiente",
-                          youtubeUri: "aut",
-                        },
-                      },
-                    ],
-                    text: "ut",
-                  },
-                  pointValue: 651842762692709901,
-                  whenRight: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "facilis",
-                          uri: "vel",
-                        },
-                        video: {
-                          displayText: "qui",
-                          youtubeUri: "aliquid",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "rem",
-                          uri: "totam",
-                        },
-                        video: {
-                          displayText: "nisi",
-                          youtubeUri: "voluptatem",
+                          displayText: "minus",
+                          youtubeUri: "et",
                         },
                       },
                       {
                         link: {
                           displayText: "rerum",
-                          uri: "praesentium",
+                          uri: "ut",
                         },
                         video: {
-                          displayText: "id",
-                          youtubeUri: "unde",
+                          displayText: "rem",
+                          youtubeUri: "eos",
                         },
                       },
                     ],
-                    text: "nihil",
+                    text: "et",
+                  },
+                  pointValue: 1176850203168067696,
+                  whenRight: {
+                    material: [
+                      {
+                        link: {
+                          displayText: "praesentium",
+                          uri: "porro",
+                        },
+                        video: {
+                          displayText: "nihil",
+                          youtubeUri: "adipisci",
+                        },
+                      },
+                    ],
+                    text: "consequatur",
                   },
                   whenWrong: {
                     material: [
                       {
                         link: {
+                          displayText: "accusantium",
+                          uri: "atque",
+                        },
+                        video: {
+                          displayText: "amet",
+                          youtubeUri: "nisi",
+                        },
+                      },
+                      {
+                        link: {
+                          displayText: "quidem",
+                          uri: "est",
+                        },
+                        video: {
+                          displayText: "quo",
+                          youtubeUri: "vero",
+                        },
+                      },
+                      {
+                        link: {
                           displayText: "alias",
-                          uri: "vel",
+                          uri: "totam",
                         },
                         video: {
-                          displayText: "repellendus",
-                          youtubeUri: "accusamus",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "recusandae",
-                          uri: "laborum",
-                        },
-                        video: {
-                          displayText: "error",
-                          youtubeUri: "est",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "voluptatem",
-                          uri: "quos",
-                        },
-                        video: {
-                          displayText: "ad",
-                          youtubeUri: "nesciunt",
+                          displayText: "deserunt",
+                          youtubeUri: "eius",
                         },
                       },
                     ],
-                    text: "rerum",
+                    text: "repellat",
                   },
                 },
-                questionId: "ex",
+                questionId: "beatae",
                 required: false,
                 rowQuestion: {
-                  title: "repellat",
+                  title: "totam",
                 },
                 scaleQuestion: {
-                  high: 4438357356669671294,
-                  highLabel: "dolores",
-                  low: 2534242627986890109,
-                  lowLabel: "pariatur",
+                  high: 6110482739283003758,
+                  highLabel: "et",
+                  low: 7167106058699817943,
+                  lowLabel: "necessitatibus",
                 },
                 textQuestion: {
                   paragraph: false,
@@ -1506,55 +731,62 @@ const req: FormsFormsBatchUpdateRequest = {
               },
             },
             textItem: {
-              "odit": "in",
-              "distinctio": "dicta",
-              "quibusdam": "soluta",
+              "voluptas": "ut",
             },
-            title: "nobis",
+            title: "veniam",
             videoItem: {
-              caption: "aut",
+              caption: "architecto",
               video: {
                 properties: {
-                  alignment: "ALIGNMENT_UNSPECIFIED",
-                  width: 8665362823887570236,
+                  alignment: "CENTER",
+                  width: 4841391702283203193,
                 },
-                youtubeUri: "dignissimos",
+                youtubeUri: "quo",
               },
             },
           },
           location: {
-            index: 2036648715124287558,
+            index: 7465719782626729327,
           },
-          updateMask: "nihil",
         },
-        updateSettings: {
-          settings: {
-            quizSettings: {
-              isQuiz: false,
-            },
+        deleteItem: {
+          location: {
+            index: 5065591635656109736,
           },
-          updateMask: "omnis",
         },
-      },
-      {
-        createItem: {
+        moveItem: {
+          newLocation: {
+            index: 1215184329252422444,
+          },
+          originalLocation: {
+            index: 4178331056796501958,
+          },
+        },
+        updateFormInfo: {
+          info: {
+            description: "quibusdam",
+            title: "asperiores",
+          },
+          updateMask: "quo",
+        },
+        updateItem: {
           item: {
-            description: "quam",
+            description: "ea",
             imageItem: {
               image: {
-                altText: "neque",
+                altText: "soluta",
                 properties: {
-                  alignment: "CENTER",
-                  width: 1399167766426409286,
+                  alignment: "ALIGNMENT_UNSPECIFIED",
+                  width: 5850174490929081658,
                 },
-                sourceUri: "occaecati",
+                sourceUri: "blanditiis",
               },
             },
-            itemId: "dolorum",
+            itemId: "facere",
             pageBreakItem: {
-              "ut": "provident",
-              "ut": "ab",
-              "dolores": "qui",
+              "et": "odit",
+              "est": "id",
+              "ipsum": "aut",
             },
             questionGroupItem: {
               grid: {
@@ -1562,113 +794,89 @@ const req: FormsFormsBatchUpdateRequest = {
                   options: [
                     {
                       goToAction: "NEXT_SECTION",
-                      goToSectionId: "et",
+                      goToSectionId: "vero",
                       image: {
-                        altText: "autem",
+                        altText: "voluptatem",
                         properties: {
-                          alignment: "RIGHT",
-                          width: 268300614933297997,
+                          alignment: "ALIGNMENT_UNSPECIFIED",
+                          width: 1253678802066634880,
                         },
-                        sourceUri: "quia",
+                        sourceUri: "vero",
                       },
-                      isOther: false,
-                      value: "quaerat",
+                      isOther: true,
+                      value: "cumque",
                     },
                     {
                       goToAction: "SUBMIT_FORM",
-                      goToSectionId: "nihil",
+                      goToSectionId: "non",
                       image: {
-                        altText: "nesciunt",
+                        altText: "non",
                         properties: {
-                          alignment: "ALIGNMENT_UNSPECIFIED",
-                          width: 3835150745734257540,
+                          alignment: "CENTER",
+                          width: 8411630060280462350,
                         },
-                        sourceUri: "voluptas",
+                        sourceUri: "quae",
                       },
-                      isOther: true,
-                      value: "aliquid",
+                      isOther: false,
+                      value: "magni",
                     },
                   ],
-                  shuffle: false,
-                  type: "RADIO",
+                  shuffle: true,
+                  type: "CHOICE_TYPE_UNSPECIFIED",
                 },
                 shuffleQuestions: false,
               },
               image: {
-                altText: "sunt",
+                altText: "neque",
                 properties: {
-                  alignment: "ALIGNMENT_UNSPECIFIED",
-                  width: 2254311656624673200,
+                  alignment: "RIGHT",
+                  width: 5401654515258649126,
                 },
-                sourceUri: "dolores",
+                sourceUri: "repudiandae",
               },
               questions: [
                 {
                   choiceQuestion: {
                     options: [
                       {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "officiis",
+                        goToAction: "SUBMIT_FORM",
+                        goToSectionId: "enim",
                         image: {
                           altText: "ut",
                           properties: {
-                            alignment: "LEFT",
-                            width: 439427798654126173,
-                          },
-                          sourceUri: "et",
-                        },
-                        isOther: true,
-                        value: "possimus",
-                      },
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "omnis",
-                        image: {
-                          altText: "ipsum",
-                          properties: {
-                            alignment: "LEFT",
-                            width: 516302766014943732,
-                          },
-                          sourceUri: "quia",
-                        },
-                        isOther: false,
-                        value: "hic",
-                      },
-                      {
-                        goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                        goToSectionId: "quis",
-                        image: {
-                          altText: "commodi",
-                          properties: {
                             alignment: "RIGHT",
-                            width: 5509880878158274266,
+                            width: 4671696214766305422,
                           },
-                          sourceUri: "qui",
+                          sourceUri: "laborum",
                         },
                         isOther: true,
-                        value: "labore",
+                        value: "nihil",
                       },
                     ],
                     shuffle: false,
-                    type: "RADIO",
+                    type: "DROP_DOWN",
                   },
                   dateQuestion: {
                     includeTime: false,
                     includeYear: false,
                   },
                   fileUploadQuestion: {
-                    folderId: "quae",
-                    maxFileSize: "quisquam",
-                    maxFiles: 8456188321711004307,
+                    folderId: "autem",
+                    maxFileSize: "hic",
+                    maxFiles: 262877386996496551,
                     types: [
                       "AUDIO",
+                      "DRAWING",
                     ],
                   },
                   grading: {
                     correctAnswers: {
                       answers: [
                         {
-                          value: "qui",
+                          value: "minus",
+                        },
+                        {
+                          value: "nostrum",
                         },
                       ],
                     },
@@ -1676,102 +884,92 @@ const req: FormsFormsBatchUpdateRequest = {
                       material: [
                         {
                           link: {
-                            displayText: "nisi",
-                            uri: "nesciunt",
+                            displayText: "sit",
+                            uri: "repellat",
                           },
                           video: {
-                            displayText: "hic",
-                            youtubeUri: "molestiae",
+                            displayText: "quo",
+                            youtubeUri: "dolorum",
                           },
                         },
                         {
                           link: {
-                            displayText: "qui",
-                            uri: "qui",
+                            displayText: "laboriosam",
+                            uri: "velit",
                           },
                           video: {
-                            displayText: "voluptatum",
-                            youtubeUri: "et",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "quia",
-                            uri: "numquam",
-                          },
-                          video: {
-                            displayText: "est",
-                            youtubeUri: "itaque",
+                            displayText: "ea",
+                            youtubeUri: "tempore",
                           },
                         },
                       ],
-                      text: "corrupti",
+                      text: "fugit",
                     },
-                    pointValue: 3000746524723787116,
+                    pointValue: 2128339608861509852,
                     whenRight: {
                       material: [
                         {
                           link: {
-                            displayText: "qui",
-                            uri: "consequuntur",
+                            displayText: "aliquid",
+                            uri: "mollitia",
                           },
                           video: {
                             displayText: "non",
-                            youtubeUri: "ipsum",
+                            youtubeUri: "magni",
                           },
                         },
                         {
                           link: {
-                            displayText: "illo",
-                            uri: "eius",
+                            displayText: "recusandae",
+                            uri: "illum",
                           },
                           video: {
-                            displayText: "voluptates",
-                            youtubeUri: "ipsa",
+                            displayText: "consequatur",
+                            youtubeUri: "dolores",
                           },
                         },
                         {
                           link: {
-                            displayText: "maxime",
-                            uri: "dolor",
+                            displayText: "hic",
+                            uri: "nihil",
                           },
                           video: {
-                            displayText: "ut",
-                            youtubeUri: "corporis",
+                            displayText: "explicabo",
+                            youtubeUri: "ex",
                           },
                         },
                       ],
-                      text: "adipisci",
+                      text: "iure",
                     },
                     whenWrong: {
                       material: [
                         {
                           link: {
-                            displayText: "et",
-                            uri: "laboriosam",
+                            displayText: "quos",
+                            uri: "et",
                           },
                           video: {
-                            displayText: "sed",
-                            youtubeUri: "esse",
+                            displayText: "explicabo",
+                            youtubeUri: "necessitatibus",
                           },
                         },
                       ],
-                      text: "est",
+                      text: "veniam",
                     },
                   },
-                  questionId: "in",
+                  questionId: "qui",
                   required: true,
                   rowQuestion: {
-                    title: "itaque",
+                    title: "odit",
                   },
                   scaleQuestion: {
-                    high: 3952804402930949344,
-                    highLabel: "iste",
-                    low: 537559002373622411,
-                    lowLabel: "aspernatur",
+                    high: 2552826169751964368,
+                    highLabel: "corporis",
+                    low: 6502696439032783967,
+                    lowLabel: "esse",
                   },
                   textQuestion: {
-                    paragraph: false,
+                    paragraph: true,
                   },
                   timeQuestion: {
                     duration: false,
@@ -1781,598 +979,208 @@ const req: FormsFormsBatchUpdateRequest = {
             },
             questionItem: {
               image: {
-                altText: "voluptas",
+                altText: "id",
                 properties: {
-                  alignment: "LEFT",
-                  width: 5500847719944379584,
+                  alignment: "ALIGNMENT_UNSPECIFIED",
+                  width: 153570803637391025,
                 },
-                sourceUri: "enim",
+                sourceUri: "maiores",
               },
               question: {
                 choiceQuestion: {
                   options: [
                     {
                       goToAction: "RESTART_FORM",
-                      goToSectionId: "velit",
+                      goToSectionId: "aperiam",
                       image: {
-                        altText: "eveniet",
+                        altText: "repellendus",
                         properties: {
-                          alignment: "LEFT",
-                          width: 4868780682979768935,
+                          alignment: "CENTER",
+                          width: 6179772165467236447,
+                        },
+                        sourceUri: "earum",
+                      },
+                      isOther: false,
+                      value: "officia",
+                    },
+                    {
+                      goToAction: "GO_TO_ACTION_UNSPECIFIED",
+                      goToSectionId: "dolor",
+                      image: {
+                        altText: "quia",
+                        properties: {
+                          alignment: "RIGHT",
+                          width: 8724673710750471494,
                         },
                         sourceUri: "et",
                       },
                       isOther: false,
-                      value: "laudantium",
+                      value: "recusandae",
                     },
                     {
-                      goToAction: "GO_TO_ACTION_UNSPECIFIED",
-                      goToSectionId: "facere",
+                      goToAction: "SUBMIT_FORM",
+                      goToSectionId: "qui",
                       image: {
-                        altText: "quis",
+                        altText: "aut",
                         properties: {
-                          alignment: "LEFT",
-                          width: 3267167517764434498,
+                          alignment: "ALIGNMENT_UNSPECIFIED",
+                          width: 3417054809625618671,
                         },
-                        sourceUri: "perferendis",
+                        sourceUri: "temporibus",
                       },
-                      isOther: true,
-                      value: "perferendis",
+                      isOther: false,
+                      value: "sed",
                     },
                   ],
                   shuffle: false,
                   type: "CHECKBOX",
                 },
                 dateQuestion: {
-                  includeTime: true,
+                  includeTime: false,
                   includeYear: false,
                 },
                 fileUploadQuestion: {
-                  folderId: "consequatur",
-                  maxFileSize: "quia",
-                  maxFiles: 5367116013832584196,
+                  folderId: "et",
+                  maxFileSize: "qui",
+                  maxFiles: 5749655769367477879,
                   types: [
+                    "DOCUMENT",
                     "SPREADSHEET",
-                    "IMAGE",
-                    "PDF",
                   ],
                 },
                 grading: {
                   correctAnswers: {
                     answers: [
                       {
-                        value: "enim",
+                        value: "vero",
                       },
                       {
-                        value: "aspernatur",
-                      },
-                    ],
-                  },
-                  generalFeedback: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "et",
-                          uri: "aliquid",
-                        },
-                        video: {
-                          displayText: "totam",
-                          youtubeUri: "alias",
-                        },
+                        value: "aut",
                       },
                       {
-                        link: {
-                          displayText: "omnis",
-                          uri: "veritatis",
-                        },
-                        video: {
-                          displayText: "qui",
-                          youtubeUri: "explicabo",
-                        },
-                      },
-                    ],
-                    text: "nemo",
-                  },
-                  pointValue: 2779401446688930153,
-                  whenRight: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "qui",
-                          uri: "incidunt",
-                        },
-                        video: {
-                          displayText: "qui",
-                          youtubeUri: "hic",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "dolore",
-                          uri: "impedit",
-                        },
-                        video: {
-                          displayText: "pariatur",
-                          youtubeUri: "sapiente",
-                        },
-                      },
-                      {
-                        link: {
-                          displayText: "aperiam",
-                          uri: "maiores",
-                        },
-                        video: {
-                          displayText: "libero",
-                          youtubeUri: "dolores",
-                        },
-                      },
-                    ],
-                    text: "et",
-                  },
-                  whenWrong: {
-                    material: [
-                      {
-                        link: {
-                          displayText: "ut",
-                          uri: "quo",
-                        },
-                        video: {
-                          displayText: "voluptatem",
-                          youtubeUri: "saepe",
-                        },
-                      },
-                    ],
-                    text: "et",
-                  },
-                },
-                questionId: "doloribus",
-                required: false,
-                rowQuestion: {
-                  title: "nisi",
-                },
-                scaleQuestion: {
-                  high: 6735860509974746170,
-                  highLabel: "molestiae",
-                  low: 8966535707411915449,
-                  lowLabel: "nostrum",
-                },
-                textQuestion: {
-                  paragraph: true,
-                },
-                timeQuestion: {
-                  duration: true,
-                },
-              },
-            },
-            textItem: {
-              "consectetur": "temporibus",
-            },
-            title: "doloribus",
-            videoItem: {
-              caption: "id",
-              video: {
-                properties: {
-                  alignment: "ALIGNMENT_UNSPECIFIED",
-                  width: 4574488806323159478,
-                },
-                youtubeUri: "quam",
-              },
-            },
-          },
-          location: {
-            index: 968779009543895434,
-          },
-        },
-        deleteItem: {
-          location: {
-            index: 4344127675164179706,
-          },
-        },
-        moveItem: {
-          newLocation: {
-            index: 1360592974098936303,
-          },
-          originalLocation: {
-            index: 2049647356036480613,
-          },
-        },
-        updateFormInfo: {
-          info: {
-            description: "omnis",
-            title: "et",
-          },
-          updateMask: "a",
-        },
-        updateItem: {
-          item: {
-            description: "voluptatem",
-            imageItem: {
-              image: {
-                altText: "voluptas",
-                properties: {
-                  alignment: "CENTER",
-                  width: 6033405793850872069,
-                },
-                sourceUri: "dolorum",
-              },
-            },
-            itemId: "qui",
-            pageBreakItem: {
-              "sunt": "natus",
-            },
-            questionGroupItem: {
-              grid: {
-                columns: {
-                  options: [
-                    {
-                      goToAction: "RESTART_FORM",
-                      goToSectionId: "reiciendis",
-                      image: {
-                        altText: "temporibus",
-                        properties: {
-                          alignment: "RIGHT",
-                          width: 4343310699711623317,
-                        },
-                        sourceUri: "voluptatum",
-                      },
-                      isOther: true,
-                      value: "et",
-                    },
-                  ],
-                  shuffle: true,
-                  type: "RADIO",
-                },
-                shuffleQuestions: true,
-              },
-              image: {
-                altText: "labore",
-                properties: {
-                  alignment: "CENTER",
-                  width: 7314412807888287943,
-                },
-                sourceUri: "deserunt",
-              },
-              questions: [
-                {
-                  choiceQuestion: {
-                    options: [
-                      {
-                        goToAction: "SUBMIT_FORM",
-                        goToSectionId: "omnis",
-                        image: {
-                          altText: "explicabo",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 3902172864118496445,
-                          },
-                          sourceUri: "qui",
-                        },
-                        isOther: false,
-                        value: "ut",
-                      },
-                      {
-                        goToAction: "NEXT_SECTION",
-                        goToSectionId: "quis",
-                        image: {
-                          altText: "adipisci",
-                          properties: {
-                            alignment: "CENTER",
-                            width: 5725741911587581094,
-                          },
-                          sourceUri: "facere",
-                        },
-                        isOther: false,
                         value: "et",
                       },
-                      {
-                        goToAction: "RESTART_FORM",
-                        goToSectionId: "temporibus",
-                        image: {
-                          altText: "cum",
-                          properties: {
-                            alignment: "ALIGNMENT_UNSPECIFIED",
-                            width: 7429771695958355309,
-                          },
-                          sourceUri: "non",
-                        },
-                        isOther: true,
-                        value: "adipisci",
-                      },
-                    ],
-                    shuffle: false,
-                    type: "RADIO",
-                  },
-                  dateQuestion: {
-                    includeTime: true,
-                    includeYear: false,
-                  },
-                  fileUploadQuestion: {
-                    folderId: "error",
-                    maxFileSize: "eum",
-                    maxFiles: 1721042829193643249,
-                    types: [
-                      "PDF",
-                    ],
-                  },
-                  grading: {
-                    correctAnswers: {
-                      answers: [
-                        {
-                          value: "esse",
-                        },
-                        {
-                          value: "sint",
-                        },
-                      ],
-                    },
-                    generalFeedback: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "libero",
-                            uri: "nostrum",
-                          },
-                          video: {
-                            displayText: "sit",
-                            youtubeUri: "autem",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "totam",
-                            uri: "cumque",
-                          },
-                          video: {
-                            displayText: "error",
-                            youtubeUri: "enim",
-                          },
-                        },
-                      ],
-                      text: "recusandae",
-                    },
-                    pointValue: 6516567359299810617,
-                    whenRight: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "ab",
-                            uri: "fugiat",
-                          },
-                          video: {
-                            displayText: "cumque",
-                            youtubeUri: "nesciunt",
-                          },
-                        },
-                        {
-                          link: {
-                            displayText: "voluptatem",
-                            uri: "consequatur",
-                          },
-                          video: {
-                            displayText: "nemo",
-                            youtubeUri: "dolor",
-                          },
-                        },
-                      ],
-                      text: "reprehenderit",
-                    },
-                    whenWrong: {
-                      material: [
-                        {
-                          link: {
-                            displayText: "velit",
-                            uri: "libero",
-                          },
-                          video: {
-                            displayText: "omnis",
-                            youtubeUri: "sint",
-                          },
-                        },
-                      ],
-                      text: "enim",
-                    },
-                  },
-                  questionId: "magnam",
-                  required: true,
-                  rowQuestion: {
-                    title: "quibusdam",
-                  },
-                  scaleQuestion: {
-                    high: 3728600122260743258,
-                    highLabel: "rerum",
-                    low: 462211148961836771,
-                    lowLabel: "atque",
-                  },
-                  textQuestion: {
-                    paragraph: false,
-                  },
-                  timeQuestion: {
-                    duration: true,
-                  },
-                },
-              ],
-            },
-            questionItem: {
-              image: {
-                altText: "officiis",
-                properties: {
-                  alignment: "ALIGNMENT_UNSPECIFIED",
-                  width: 3290097293778856843,
-                },
-                sourceUri: "animi",
-              },
-              question: {
-                choiceQuestion: {
-                  options: [
-                    {
-                      goToAction: "SUBMIT_FORM",
-                      goToSectionId: "similique",
-                      image: {
-                        altText: "est",
-                        properties: {
-                          alignment: "CENTER",
-                          width: 5642624655095294941,
-                        },
-                        sourceUri: "repudiandae",
-                      },
-                      isOther: true,
-                      value: "occaecati",
-                    },
-                    {
-                      goToAction: "SUBMIT_FORM",
-                      goToSectionId: "magni",
-                      image: {
-                        altText: "quia",
-                        properties: {
-                          alignment: "ALIGNMENT_UNSPECIFIED",
-                          width: 5480166450521866676,
-                        },
-                        sourceUri: "ea",
-                      },
-                      isOther: true,
-                      value: "ab",
-                    },
-                  ],
-                  shuffle: true,
-                  type: "CHOICE_TYPE_UNSPECIFIED",
-                },
-                dateQuestion: {
-                  includeTime: false,
-                  includeYear: true,
-                },
-                fileUploadQuestion: {
-                  folderId: "laudantium",
-                  maxFileSize: "repellat",
-                  maxFiles: 1606274492688274719,
-                  types: [
-                    "SPREADSHEET",
-                  ],
-                },
-                grading: {
-                  correctAnswers: {
-                    answers: [
-                      {
-                        value: "necessitatibus",
-                      },
-                      {
-                        value: "repellat",
-                      },
-                      {
-                        value: "sint",
-                      },
                     ],
                   },
                   generalFeedback: {
                     material: [
                       {
                         link: {
-                          displayText: "sit",
-                          uri: "deleniti",
+                          displayText: "sunt",
+                          uri: "quae",
                         },
                         video: {
-                          displayText: "quidem",
-                          youtubeUri: "porro",
+                          displayText: "placeat",
+                          youtubeUri: "vitae",
                         },
                       },
                       {
                         link: {
                           displayText: "rerum",
-                          uri: "aut",
+                          uri: "officiis",
                         },
                         video: {
-                          displayText: "quibusdam",
-                          youtubeUri: "adipisci",
+                          displayText: "commodi",
+                          youtubeUri: "sed",
                         },
                       },
                     ],
-                    text: "aut",
+                    text: "voluptates",
                   },
-                  pointValue: 4922008057303996057,
+                  pointValue: 1987095690814515857,
                   whenRight: {
                     material: [
                       {
                         link: {
-                          displayText: "error",
-                          uri: "debitis",
+                          displayText: "ipsa",
+                          uri: "cum",
                         },
                         video: {
-                          displayText: "alias",
-                          youtubeUri: "totam",
+                          displayText: "sint",
+                          youtubeUri: "aut",
+                        },
+                      },
+                      {
+                        link: {
+                          displayText: "eaque",
+                          uri: "facilis",
+                        },
+                        video: {
+                          displayText: "et",
+                          youtubeUri: "ut",
                         },
                       },
                     ],
-                    text: "fugit",
+                    text: "et",
                   },
                   whenWrong: {
                     material: [
                       {
                         link: {
-                          displayText: "fugiat",
-                          uri: "necessitatibus",
+                          displayText: "sit",
+                          uri: "voluptate",
                         },
                         video: {
-                          displayText: "provident",
-                          youtubeUri: "voluptatem",
+                          displayText: "eaque",
+                          youtubeUri: "consequuntur",
                         },
                       },
                     ],
-                    text: "voluptas",
+                    text: "et",
                   },
                 },
-                questionId: "pariatur",
+                questionId: "amet",
                 required: false,
                 rowQuestion: {
-                  title: "et",
+                  title: "in",
                 },
                 scaleQuestion: {
-                  high: 8817418480462070721,
-                  highLabel: "quasi",
-                  low: 7515202337069457673,
-                  lowLabel: "reiciendis",
+                  high: 6612358853391904586,
+                  highLabel: "minima",
+                  low: 8742852710189167914,
+                  lowLabel: "et",
                 },
                 textQuestion: {
-                  paragraph: false,
+                  paragraph: true,
                 },
                 timeQuestion: {
-                  duration: true,
+                  duration: false,
                 },
               },
             },
             textItem: {
-              "nobis": "ad",
-              "ducimus": "deleniti",
-              "nisi": "ut",
+              "cupiditate": "quam",
             },
-            title: "aut",
+            title: "repellendus",
             videoItem: {
-              caption: "porro",
+              caption: "dolores",
               video: {
                 properties: {
-                  alignment: "RIGHT",
-                  width: 7655475005574756872,
+                  alignment: "ALIGNMENT_UNSPECIFIED",
+                  width: 703460223791086499,
                 },
-                youtubeUri: "aut",
+                youtubeUri: "architecto",
               },
             },
           },
           location: {
-            index: 8723596352842335158,
+            index: 3689647184521680189,
           },
-          updateMask: "laudantium",
+          updateMask: "beatae",
         },
         updateSettings: {
           settings: {
             quizSettings: {
-              isQuiz: false,
+              isQuiz: true,
             },
           },
-          updateMask: "et",
+          updateMask: "veniam",
         },
       },
     ],
     writeControl: {
-      requiredRevisionId: "eius",
-      targetRevisionId: "qui",
+      requiredRevisionId: "hic",
+      targetRevisionId: "beatae",
     },
   },
 };

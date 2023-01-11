@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginGroup } from "./origingroup";
+import { OriginGroupList } from "./origingrouplist";
 
 
 
@@ -8,8 +8,8 @@ import { OriginGroup } from "./origingroup";
  * A complex data type for the origin groups specified for a distribution.
 **/
 export class OriginGroups extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: OriginGroup })
-  items?: OriginGroup[];
+  @SpeakeasyMetadata({ elemType: OriginGroupList })
+  items?: OriginGroupList[];
 
   @SpeakeasyMetadata()
   quantity: number;

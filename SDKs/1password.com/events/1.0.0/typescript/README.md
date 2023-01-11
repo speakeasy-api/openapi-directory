@@ -16,26 +16,26 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetAuthIntrospectRequest, GetAuthIntrospectResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetItemUsagesRequest, GetItemUsagesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: GetAuthIntrospectRequest = {
+const req: GetItemUsagesRequest = {
   security: {
     jwtsa: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
     },
   },
+  request: "sit",
 };
 
-sdk.sdk.getAuthIntrospect(req).then((res: GetAuthIntrospectResponse | AxiosError) => {
+sdk.apiV1.getItemUsages(req).then((res: GetItemUsagesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,11 +44,14 @@ sdk.sdk.getAuthIntrospect(req).then((res: GetAuthIntrospectResponse | AxiosError
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### api-v1
 
-* `getAuthIntrospect` - Performs introspection of the provided Bearer JWT token
 * `getItemUsages` - Retrieves item usages
 * `getSignInAttempts` - Retrieves sign-in attempts
+
+### auth
+
+* `getAuthIntrospect` - Performs introspection of the provided Bearer JWT token
 
 <!-- End SDK Available Operations -->
 

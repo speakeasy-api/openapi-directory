@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Engagement = void 0;
+var utils_1 = require("../../../internal/utils");
 // Engagement
 /**
  * Incident Manager reaching out to a contact or escalation plan to engage contact during an incident.
@@ -33,29 +36,29 @@ var Engagement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactArn" }),
         __metadata("design:type", String)
     ], Engagement.prototype, "contactArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngagementArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngagementArn" }),
         __metadata("design:type", String)
     ], Engagement.prototype, "engagementArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncidentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncidentId" }),
         __metadata("design:type", String)
     ], Engagement.prototype, "incidentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sender" }),
         __metadata("design:type", String)
     ], Engagement.prototype, "sender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], Engagement.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopTime" }),
         __metadata("design:type", Date)
     ], Engagement.prototype, "stopTime", void 0);
     return Engagement;
-}(SpeakeasyBase));
-export { Engagement };
+}(utils_1.SpeakeasyBase));
+exports.Engagement = Engagement;

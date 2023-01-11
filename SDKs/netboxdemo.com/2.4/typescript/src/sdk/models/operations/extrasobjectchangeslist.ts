@@ -65,5 +65,5 @@ export class ExtrasObjectChangesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasObjectChangesList200ApplicationJsonObject?: ExtrasObjectChangesList200ApplicationJson;
+  extrasObjectChangesList200ApplicationJSONObject?: ExtrasObjectChangesList200ApplicationJson;
 }

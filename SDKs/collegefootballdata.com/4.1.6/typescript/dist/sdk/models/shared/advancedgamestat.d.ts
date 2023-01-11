@@ -8,13 +8,13 @@ export declare class AdvancedGameStatDefensePassingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStatDefenseRushingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStatDefenseStandardDowns extends SpeakeasyBase {
     explosiveness?: number;
@@ -39,7 +39,7 @@ export declare class AdvancedGameStatDefense extends SpeakeasyBase {
     standardDowns?: AdvancedGameStatDefenseStandardDowns;
     stuffRate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStatOffensePassingDowns extends SpeakeasyBase {
     explosiveness?: number;
@@ -50,13 +50,13 @@ export declare class AdvancedGameStatOffensePassingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStatOffenseRushingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStatOffenseStandardDowns extends SpeakeasyBase {
     explosiveness?: number;
@@ -81,7 +81,7 @@ export declare class AdvancedGameStatOffense extends SpeakeasyBase {
     standardDowns?: AdvancedGameStatOffenseStandardDowns;
     stuffRate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedGameStat extends SpeakeasyBase {
     defense?: AdvancedGameStatDefense;

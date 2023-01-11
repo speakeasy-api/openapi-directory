@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetDealersGetDealersByIdGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dealerID" })
-  dealerId: number;
+  dealerID: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jwt" })
   jwt: string;

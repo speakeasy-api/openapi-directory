@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IngestionInfo } from "./ingestioninfo";
-export var CdnSettingsFrameRateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CdnSettings = exports.CdnSettingsResolutionEnum = exports.CdnSettingsIngestionTypeEnum = exports.CdnSettingsFrameRateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ingestioninfo_1 = require("./ingestioninfo");
+var CdnSettingsFrameRateEnum;
 (function (CdnSettingsFrameRateEnum) {
     CdnSettingsFrameRateEnum["Thirtyfps"] = "30fps";
     CdnSettingsFrameRateEnum["Sixtyfps"] = "60fps";
     CdnSettingsFrameRateEnum["Variable"] = "variable";
-})(CdnSettingsFrameRateEnum || (CdnSettingsFrameRateEnum = {}));
-export var CdnSettingsIngestionTypeEnum;
+})(CdnSettingsFrameRateEnum = exports.CdnSettingsFrameRateEnum || (exports.CdnSettingsFrameRateEnum = {}));
+var CdnSettingsIngestionTypeEnum;
 (function (CdnSettingsIngestionTypeEnum) {
     CdnSettingsIngestionTypeEnum["Rtmp"] = "rtmp";
     CdnSettingsIngestionTypeEnum["Dash"] = "dash";
     CdnSettingsIngestionTypeEnum["Webrtc"] = "webrtc";
     CdnSettingsIngestionTypeEnum["Hls"] = "hls";
-})(CdnSettingsIngestionTypeEnum || (CdnSettingsIngestionTypeEnum = {}));
-export var CdnSettingsResolutionEnum;
+})(CdnSettingsIngestionTypeEnum = exports.CdnSettingsIngestionTypeEnum || (exports.CdnSettingsIngestionTypeEnum = {}));
+var CdnSettingsResolutionEnum;
 (function (CdnSettingsResolutionEnum) {
     CdnSettingsResolutionEnum["TwoHundredAndFortyp"] = "240p";
     CdnSettingsResolutionEnum["ThreeHundredAndSixtyp"] = "360p";
@@ -47,7 +50,7 @@ export var CdnSettingsResolutionEnum;
     CdnSettingsResolutionEnum["OneThousandFourHundredAndFortyp"] = "1440p";
     CdnSettingsResolutionEnum["TwoThousandOneHundredAndSixtyp"] = "2160p";
     CdnSettingsResolutionEnum["Variable"] = "variable";
-})(CdnSettingsResolutionEnum || (CdnSettingsResolutionEnum = {}));
+})(CdnSettingsResolutionEnum = exports.CdnSettingsResolutionEnum || (exports.CdnSettingsResolutionEnum = {}));
 // CdnSettings
 /**
  * Brief description of the live stream cdn settings.
@@ -58,25 +61,25 @@ var CdnSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], CdnSettings.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRate" }),
         __metadata("design:type", String)
     ], CdnSettings.prototype, "frameRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingestionInfo" }),
-        __metadata("design:type", IngestionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingestionInfo" }),
+        __metadata("design:type", ingestioninfo_1.IngestionInfo)
     ], CdnSettings.prototype, "ingestionInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingestionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingestionType" }),
         __metadata("design:type", String)
     ], CdnSettings.prototype, "ingestionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CdnSettings.prototype, "resolution", void 0);
     return CdnSettings;
-}(SpeakeasyBase));
-export { CdnSettings };
+}(utils_1.SpeakeasyBase));
+exports.CdnSettings = CdnSettings;

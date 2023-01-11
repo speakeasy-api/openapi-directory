@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosTestLoop = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
 // IosTestLoop
 /**
  * A test of an iOS application that implements one or more game loop scenarios. This test type accepts an archived application (.ipa file) and a list of integer scenarios that will be executed on the app sequentially.
@@ -34,17 +37,17 @@ var IosTestLoop = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appBundleId" }),
         __metadata("design:type", String)
     ], IosTestLoop.prototype, "appBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appIpa" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appIpa" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], IosTestLoop.prototype, "appIpa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scenarios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scenarios" }),
         __metadata("design:type", Array)
     ], IosTestLoop.prototype, "scenarios", void 0);
     return IosTestLoop;
-}(SpeakeasyBase));
-export { IosTestLoop };
+}(utils_1.SpeakeasyBase));
+exports.IosTestLoop = IosTestLoop;

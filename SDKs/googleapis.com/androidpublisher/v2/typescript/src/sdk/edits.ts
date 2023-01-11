@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,11 +31,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,12 +43,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -61,7 +62,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -77,11 +77,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -89,12 +89,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -106,7 +108,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -122,11 +123,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -134,19 +135,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApklistingsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -157,7 +160,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -173,11 +175,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -185,19 +187,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApklistingsListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -208,7 +212,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -224,21 +227,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -246,24 +250,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApklistingsPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -274,7 +277,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -290,21 +292,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -312,24 +315,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApklistingsUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -340,7 +342,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -356,21 +357,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/externallyHosted", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/externallyHosted", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -378,24 +380,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApksAddexternallyhostedResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -406,7 +407,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -419,11 +419,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -431,19 +431,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApksListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -454,7 +456,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -467,11 +468,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -479,19 +480,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsApksUploadResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -502,7 +505,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -515,11 +517,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/bundles", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/bundles", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -527,19 +529,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsBundlesListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -550,7 +554,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -566,11 +569,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/bundles", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/bundles", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -578,19 +581,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsBundlesUploadResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -601,7 +606,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -617,11 +621,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}:commit", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}:commit", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -629,19 +633,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsCommitResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -652,7 +658,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -668,11 +673,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -680,12 +685,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -697,7 +704,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -713,11 +719,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -725,19 +731,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -748,7 +756,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -764,11 +771,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -776,19 +783,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsDetailsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -799,7 +808,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -815,21 +823,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -837,24 +846,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsDetailsPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -865,7 +873,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -881,21 +888,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/details", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -903,24 +911,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsDetailsUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -931,7 +938,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -947,11 +953,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -959,19 +965,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsExpansionfilesGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -982,7 +990,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -998,21 +1005,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1020,24 +1028,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsExpansionfilesPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1048,7 +1055,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1064,21 +1070,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1086,24 +1093,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsExpansionfilesUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1114,7 +1120,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1130,11 +1135,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1142,19 +1147,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsExpansionfilesUploadResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1165,7 +1172,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1181,11 +1187,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1193,19 +1199,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1216,7 +1224,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1232,11 +1239,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1244,12 +1251,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1261,7 +1270,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1277,11 +1285,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1289,19 +1297,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsImagesDeleteallResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1312,7 +1322,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1328,11 +1337,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1340,19 +1349,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsImagesListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1363,7 +1374,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1379,11 +1389,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1391,19 +1401,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsImagesUploadResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1414,7 +1426,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1430,21 +1441,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1452,24 +1464,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsInsertResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1480,7 +1491,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1496,11 +1506,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1508,12 +1518,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1525,7 +1537,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1541,11 +1552,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1553,12 +1564,14 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1570,7 +1583,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1586,11 +1598,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1598,19 +1610,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsListingsGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1621,7 +1635,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1637,11 +1650,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1649,19 +1662,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsListingsListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1672,7 +1687,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1688,21 +1702,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1710,24 +1725,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsListingsPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1738,7 +1752,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1754,21 +1767,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/listings/{language}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1776,24 +1790,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsListingsUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1804,7 +1817,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1817,11 +1829,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1829,19 +1841,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTestersGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1852,7 +1866,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1865,21 +1878,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1887,24 +1901,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTestersPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1915,7 +1928,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1928,21 +1940,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/testers/{track}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1950,24 +1963,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTestersUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1978,7 +1990,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1994,11 +2005,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2006,19 +2017,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTracksGetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2029,7 +2042,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2045,11 +2057,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/tracks", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/tracks", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2057,19 +2069,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTracksListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2080,7 +2094,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2096,21 +2109,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2118,24 +2132,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTracksPatchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2146,7 +2159,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2162,21 +2174,22 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}/tracks/{track}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2184,24 +2197,23 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsTracksUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2212,7 +2224,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2228,11 +2239,11 @@ export class Edits {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/{packageName}/edits/{editId}:validate", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/{packageName}/edits/{editId}:validate", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2240,19 +2251,21 @@ export class Edits {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AndroidpublisherEditsValidateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2263,7 +2276,6 @@ export class Edits {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BundleRegistrationEntity } from "./bundleregistrationentity";
-export var BundleDownloadEntityDownloadMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleDownloadEntity = exports.BundleDownloadEntityDownloadMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var bundleregistrationentity_1 = require("./bundleregistrationentity");
+var BundleDownloadEntityDownloadMethodEnum;
 (function (BundleDownloadEntityDownloadMethodEnum) {
     BundleDownloadEntityDownloadMethodEnum["File"] = "file";
     BundleDownloadEntityDownloadMethodEnum["FullZip"] = "full_zip";
-})(BundleDownloadEntityDownloadMethodEnum || (BundleDownloadEntityDownloadMethodEnum = {}));
+})(BundleDownloadEntityDownloadMethodEnum = exports.BundleDownloadEntityDownloadMethodEnum || (exports.BundleDownloadEntityDownloadMethodEnum = {}));
 // BundleDownloadEntity
 /**
  * List Bundle Downloads
@@ -39,21 +42,21 @@ var BundleDownloadEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundle_registration" }),
-        __metadata("design:type", BundleRegistrationEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundle_registration" }),
+        __metadata("design:type", bundleregistrationentity_1.BundleRegistrationEntity)
     ], BundleDownloadEntity.prototype, "bundleRegistration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], BundleDownloadEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_method" }),
         __metadata("design:type", String)
     ], BundleDownloadEntity.prototype, "downloadMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], BundleDownloadEntity.prototype, "path", void 0);
     return BundleDownloadEntity;
-}(SpeakeasyBase));
-export { BundleDownloadEntity };
+}(utils_1.SpeakeasyBase));
+exports.BundleDownloadEntity = BundleDownloadEntity;

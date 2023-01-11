@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hovercard = exports.HovercardContexts = void 0;
+var utils_1 = require("../../../internal/utils");
 var HovercardContexts = /** @class */ (function (_super) {
     __extends(HovercardContexts, _super);
     function HovercardContexts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], HovercardContexts.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=octicon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=octicon" }),
         __metadata("design:type", String)
     ], HovercardContexts.prototype, "octicon", void 0);
     return HovercardContexts;
-}(SpeakeasyBase));
-export { HovercardContexts };
+}(utils_1.SpeakeasyBase));
+exports.HovercardContexts = HovercardContexts;
 // Hovercard
 /**
  * Hovercard
@@ -49,9 +52,9 @@ var Hovercard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts", elemType: HovercardContexts }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts", elemType: HovercardContexts }),
         __metadata("design:type", Array)
     ], Hovercard.prototype, "contexts", void 0);
     return Hovercard;
-}(SpeakeasyBase));
-export { Hovercard };
+}(utils_1.SpeakeasyBase));
+exports.Hovercard = Hovercard;

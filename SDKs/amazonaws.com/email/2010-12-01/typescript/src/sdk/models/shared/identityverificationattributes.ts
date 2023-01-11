@@ -3,13 +3,9 @@ import { VerificationStatusEnum } from "./verificationstatusenum";
 
 
 
-// IdentityVerificationAttributes
-/** 
- * Represents the verification attributes of a single identity.
-**/
 export class IdentityVerificationAttributes extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  verificationStatus: VerificationStatusEnum;
+  verificationStatus?: VerificationStatusEnum;
 
   @SpeakeasyMetadata()
   verificationToken?: string;

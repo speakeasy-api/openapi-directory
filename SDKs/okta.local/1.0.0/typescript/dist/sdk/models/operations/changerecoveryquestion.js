@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeRecoveryQuestionResponse = exports.ChangeRecoveryQuestionRequest = exports.ChangeRecoveryQuestionRequestBody = exports.ChangeRecoveryQuestionRequestBodyRecoveryQuestion = exports.ChangeRecoveryQuestionRequestBodyPassword = exports.ChangeRecoveryQuestionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChangeRecoveryQuestionPathParams = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionPathParams, _super);
     function ChangeRecoveryQuestionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], ChangeRecoveryQuestionPathParams.prototype, "userId", void 0);
     return ChangeRecoveryQuestionPathParams;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionPathParams = ChangeRecoveryQuestionPathParams;
 var ChangeRecoveryQuestionRequestBodyPassword = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionRequestBodyPassword, _super);
     function ChangeRecoveryQuestionRequestBodyPassword() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ChangeRecoveryQuestionRequestBodyPassword.prototype, "value", void 0);
     return ChangeRecoveryQuestionRequestBodyPassword;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionRequestBodyPassword };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionRequestBodyPassword = ChangeRecoveryQuestionRequestBodyPassword;
 var ChangeRecoveryQuestionRequestBodyRecoveryQuestion = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionRequestBodyRecoveryQuestion, _super);
     function ChangeRecoveryQuestionRequestBodyRecoveryQuestion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answer" }),
         __metadata("design:type", String)
     ], ChangeRecoveryQuestionRequestBodyRecoveryQuestion.prototype, "answer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
         __metadata("design:type", String)
     ], ChangeRecoveryQuestionRequestBodyRecoveryQuestion.prototype, "question", void 0);
     return ChangeRecoveryQuestionRequestBodyRecoveryQuestion;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionRequestBodyRecoveryQuestion };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionRequestBodyRecoveryQuestion = ChangeRecoveryQuestionRequestBodyRecoveryQuestion;
 var ChangeRecoveryQuestionRequestBody = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionRequestBody, _super);
     function ChangeRecoveryQuestionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", ChangeRecoveryQuestionRequestBodyPassword)
     ], ChangeRecoveryQuestionRequestBody.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovery_question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovery_question" }),
         __metadata("design:type", ChangeRecoveryQuestionRequestBodyRecoveryQuestion)
     ], ChangeRecoveryQuestionRequestBody.prototype, "recoveryQuestion", void 0);
     return ChangeRecoveryQuestionRequestBody;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionRequestBody = ChangeRecoveryQuestionRequestBody;
 var ChangeRecoveryQuestionRequest = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionRequest, _super);
     function ChangeRecoveryQuestionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ChangeRecoveryQuestionPathParams)
     ], ChangeRecoveryQuestionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ChangeRecoveryQuestionRequestBody)
     ], ChangeRecoveryQuestionRequest.prototype, "request", void 0);
     return ChangeRecoveryQuestionRequest;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionRequest };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionRequest = ChangeRecoveryQuestionRequest;
 var ChangeRecoveryQuestionResponse = /** @class */ (function (_super) {
     __extends(ChangeRecoveryQuestionResponse, _super);
     function ChangeRecoveryQuestionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ChangeRecoveryQuestionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ChangeRecoveryQuestionResponse.prototype, "statusCode", void 0);
     return ChangeRecoveryQuestionResponse;
-}(SpeakeasyBase));
-export { ChangeRecoveryQuestionResponse };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRecoveryQuestionResponse = ChangeRecoveryQuestionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse = exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest = exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams = /** @class */ (function (_super) {
     __extends(ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams, _super);
     function ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
         __metadata("design:type", Number)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams.prototype, "repositoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams.prototype, "runnerGroupId", void 0);
     return ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams;
-}(SpeakeasyBase));
-export { ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams = ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams;
 var ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest = /** @class */ (function (_super) {
     __extends(ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest, _super);
     function ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest.prototype, "pathParams", void 0);
     return ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest;
-}(SpeakeasyBase));
-export { ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest = ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest;
 var ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse = /** @class */ (function (_super) {
     __extends(ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse, _super);
     function ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse.prototype, "statusCode", void 0);
     return ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse;
-}(SpeakeasyBase));
-export { ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse = ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse;

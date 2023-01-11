@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,85 +23,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PriceFormatted } from "./priceformatted";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlacedBetPart = void 0;
+var utils_1 = require("../../../internal/utils");
+var priceformatted_1 = require("./priceformatted");
 var PlacedBetPart = /** @class */ (function (_super) {
     __extends(PlacedBetPart, _super);
     function PlacedBetPart() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eachWayDen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eachWayDen" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "eachWayDen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eachWayNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eachWayNum" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "eachWayNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eachWayPlaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eachWayPlaces" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "eachWayPlaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDescription" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "eventDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventMarketDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventMarketDescription" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "eventMarketDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventTypeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventTypeDescription" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "eventTypeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=handicap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=handicap" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "handicap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceDen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceDen" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "priceDen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceFormatted" }),
-        __metadata("design:type", PriceFormatted)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceFormatted" }),
+        __metadata("design:type", priceformatted_1.PriceFormatted)
     ], PlacedBetPart.prototype, "priceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceNum" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "priceNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceType" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "priceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule4Deductions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule4Deductions" }),
         __metadata("design:type", Number)
     ], PlacedBetPart.prototype, "rule4Deductions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionId" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "selectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDateTime" }),
         __metadata("design:type", String)
     ], PlacedBetPart.prototype, "startDateTime", void 0);
     return PlacedBetPart;
-}(SpeakeasyBase));
-export { PlacedBetPart };
+}(utils_1.SpeakeasyBase));
+exports.PlacedBetPart = PlacedBetPart;

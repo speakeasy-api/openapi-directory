@@ -68,7 +68,7 @@ export class PostDrivers200ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -86,5 +86,5 @@ export class PostDriversResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postDrivers200ApplicationJsonObject?: PostDrivers200ApplicationJson;
+  postDrivers200ApplicationJSONObject?: PostDrivers200ApplicationJson;
 }

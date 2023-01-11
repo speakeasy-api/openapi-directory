@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestnetGetAddressBalanceResponse = exports.TestnetGetAddressBalanceRequest = exports.TestnetGetAddressBalancePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TestnetGetAddressBalancePathParams = /** @class */ (function (_super) {
     __extends(TestnetGetAddressBalancePathParams, _super);
     function TestnetGetAddressBalancePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=address" }),
         __metadata("design:type", String)
     ], TestnetGetAddressBalancePathParams.prototype, "address", void 0);
     return TestnetGetAddressBalancePathParams;
-}(SpeakeasyBase));
-export { TestnetGetAddressBalancePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressBalancePathParams = TestnetGetAddressBalancePathParams;
 var TestnetGetAddressBalanceRequest = /** @class */ (function (_super) {
     __extends(TestnetGetAddressBalanceRequest, _super);
     function TestnetGetAddressBalanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TestnetGetAddressBalancePathParams)
     ], TestnetGetAddressBalanceRequest.prototype, "pathParams", void 0);
     return TestnetGetAddressBalanceRequest;
-}(SpeakeasyBase));
-export { TestnetGetAddressBalanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressBalanceRequest = TestnetGetAddressBalanceRequest;
 var TestnetGetAddressBalanceResponse = /** @class */ (function (_super) {
     __extends(TestnetGetAddressBalanceResponse, _super);
     function TestnetGetAddressBalanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TestnetGetAddressBalanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TestnetGetAddressBalanceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TestnetGetAddressBalanceResponse.prototype, "getAddressBalanceResponse", void 0);
     return TestnetGetAddressBalanceResponse;
-}(SpeakeasyBase));
-export { TestnetGetAddressBalanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressBalanceResponse = TestnetGetAddressBalanceResponse;

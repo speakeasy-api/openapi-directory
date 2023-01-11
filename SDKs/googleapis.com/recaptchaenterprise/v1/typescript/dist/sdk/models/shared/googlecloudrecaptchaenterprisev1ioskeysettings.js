@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1IosKeySettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecaptchaenterpriseV1IosKeySettings
 /**
  * Settings specific to keys that can be used by iOS apps.
@@ -33,13 +36,13 @@ var GoogleCloudRecaptchaenterpriseV1IosKeySettings = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowAllBundleIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowAllBundleIds" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecaptchaenterpriseV1IosKeySettings.prototype, "allowAllBundleIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedBundleIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedBundleIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1IosKeySettings.prototype, "allowedBundleIds", void 0);
     return GoogleCloudRecaptchaenterpriseV1IosKeySettings;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1IosKeySettings };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1IosKeySettings = GoogleCloudRecaptchaenterpriseV1IosKeySettings;

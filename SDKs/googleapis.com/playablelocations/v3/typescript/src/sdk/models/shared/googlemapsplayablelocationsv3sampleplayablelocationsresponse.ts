@@ -9,7 +9,7 @@ import { GoogleMapsPlayablelocationsV3SamplePlayableLocationList } from "./googl
 **/
 export class GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=locationsPerGameObjectType", elemType: GoogleMapsPlayablelocationsV3SamplePlayableLocationList })
-  locationsPerGameObjectType?: Map<string, GoogleMapsPlayablelocationsV3SamplePlayableLocationList>;
+  locationsPerGameObjectType?: Record<string, GoogleMapsPlayablelocationsV3SamplePlayableLocationList>;
 
   @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: string;

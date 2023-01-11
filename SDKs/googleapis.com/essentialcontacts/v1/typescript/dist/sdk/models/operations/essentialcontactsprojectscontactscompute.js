@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EssentialcontactsProjectsContactsComputeResponse = exports.EssentialcontactsProjectsContactsComputeRequest = exports.EssentialcontactsProjectsContactsComputeSecurity = exports.EssentialcontactsProjectsContactsComputeQueryParams = exports.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum = exports.EssentialcontactsProjectsContactsComputePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EssentialcontactsProjectsContactsComputePathParams = /** @class */ (function (_super) {
     __extends(EssentialcontactsProjectsContactsComputePathParams, _super);
     function EssentialcontactsProjectsContactsComputePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputePathParams.prototype, "parent", void 0);
     return EssentialcontactsProjectsContactsComputePathParams;
-}(SpeakeasyBase));
-export { EssentialcontactsProjectsContactsComputePathParams };
-export var EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
+}(utils_1.SpeakeasyBase));
+exports.EssentialcontactsProjectsContactsComputePathParams = EssentialcontactsProjectsContactsComputePathParams;
+var EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
 (function (EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum) {
     EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum["NotificationCategoryUnspecified"] = "NOTIFICATION_CATEGORY_UNSPECIFIED";
     EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum["All"] = "ALL";
@@ -47,124 +73,124 @@ export var EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
     EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum["Legal"] = "LEGAL";
     EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum["ProductUpdates"] = "PRODUCT_UPDATES";
     EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum["TechnicalIncidents"] = "TECHNICAL_INCIDENTS";
-})(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum || (EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum = {}));
+})(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum = exports.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum || (exports.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum = {}));
 var EssentialcontactsProjectsContactsComputeQueryParams = /** @class */ (function (_super) {
     __extends(EssentialcontactsProjectsContactsComputeQueryParams, _super);
     function EssentialcontactsProjectsContactsComputeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notificationCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notificationCategories" }),
         __metadata("design:type", Array)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "notificationCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeQueryParams.prototype, "uploadProtocol", void 0);
     return EssentialcontactsProjectsContactsComputeQueryParams;
-}(SpeakeasyBase));
-export { EssentialcontactsProjectsContactsComputeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EssentialcontactsProjectsContactsComputeQueryParams = EssentialcontactsProjectsContactsComputeQueryParams;
 var EssentialcontactsProjectsContactsComputeSecurity = /** @class */ (function (_super) {
     __extends(EssentialcontactsProjectsContactsComputeSecurity, _super);
     function EssentialcontactsProjectsContactsComputeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], EssentialcontactsProjectsContactsComputeSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], EssentialcontactsProjectsContactsComputeSecurity.prototype, "oauth2c", void 0);
     return EssentialcontactsProjectsContactsComputeSecurity;
-}(SpeakeasyBase));
-export { EssentialcontactsProjectsContactsComputeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EssentialcontactsProjectsContactsComputeSecurity = EssentialcontactsProjectsContactsComputeSecurity;
 var EssentialcontactsProjectsContactsComputeRequest = /** @class */ (function (_super) {
     __extends(EssentialcontactsProjectsContactsComputeRequest, _super);
     function EssentialcontactsProjectsContactsComputeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EssentialcontactsProjectsContactsComputePathParams)
     ], EssentialcontactsProjectsContactsComputeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EssentialcontactsProjectsContactsComputeQueryParams)
     ], EssentialcontactsProjectsContactsComputeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EssentialcontactsProjectsContactsComputeSecurity)
     ], EssentialcontactsProjectsContactsComputeRequest.prototype, "security", void 0);
     return EssentialcontactsProjectsContactsComputeRequest;
-}(SpeakeasyBase));
-export { EssentialcontactsProjectsContactsComputeRequest };
+}(utils_1.SpeakeasyBase));
+exports.EssentialcontactsProjectsContactsComputeRequest = EssentialcontactsProjectsContactsComputeRequest;
 var EssentialcontactsProjectsContactsComputeResponse = /** @class */ (function (_super) {
     __extends(EssentialcontactsProjectsContactsComputeResponse, _super);
     function EssentialcontactsProjectsContactsComputeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EssentialcontactsProjectsContactsComputeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GoogleCloudEssentialcontactsV1ComputeContactsResponse)
     ], EssentialcontactsProjectsContactsComputeResponse.prototype, "googleCloudEssentialcontactsV1ComputeContactsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EssentialcontactsProjectsContactsComputeResponse.prototype, "statusCode", void 0);
     return EssentialcontactsProjectsContactsComputeResponse;
-}(SpeakeasyBase));
-export { EssentialcontactsProjectsContactsComputeResponse };
+}(utils_1.SpeakeasyBase));
+exports.EssentialcontactsProjectsContactsComputeResponse = EssentialcontactsProjectsContactsComputeResponse;

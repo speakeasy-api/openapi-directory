@@ -57,5 +57,5 @@ export class UpdateAgentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateAgentResponse?: Map<string, any>;
+  updateAgentResponse?: Record<string, any>;
 }

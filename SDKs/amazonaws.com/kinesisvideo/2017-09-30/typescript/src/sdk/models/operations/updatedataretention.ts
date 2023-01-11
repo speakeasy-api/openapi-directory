@@ -42,7 +42,7 @@ export class UpdateDataRetentionRequestBody extends SpeakeasyBase {
   operation: UpdateDataRetentionRequestBodyOperationEnum;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
@@ -81,7 +81,7 @@ export class UpdateDataRetentionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDataRetentionOutput?: Map<string, any>;
+  updateDataRetentionOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

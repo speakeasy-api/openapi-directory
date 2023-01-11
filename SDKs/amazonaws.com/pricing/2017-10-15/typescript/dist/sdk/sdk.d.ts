@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://api.pricing.{region}.amazonaws.com", "https://api.pricing.{region}.amazonaws.com", "http://api.pricing.{region}.amazonaws.com.cn", "https://api.pricing.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * describeServices - Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information specific to that service, such as the attribute names available for that service. For example, some of the attribute names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>, <code>locationType</code>, and <code>instanceCapacity10xlarge</code>.
     **/
@@ -28,4 +28,3 @@ export declare class SDK {
     **/
     getProducts(req: operations.GetProductsRequest, config?: AxiosRequestConfig): Promise<operations.GetProductsResponse>;
 }
-export {};

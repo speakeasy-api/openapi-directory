@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1FeatureMapStringList } from "./googlecloudrecommendationenginev1beta1featuremapstringlist";
-import { GoogleCloudRecommendationengineV1beta1FeatureMapFloatList } from "./googlecloudrecommendationenginev1beta1featuremapfloatlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1FeatureMap = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1featuremapstringlist_1 = require("./googlecloudrecommendationenginev1beta1featuremapstringlist");
+var googlecloudrecommendationenginev1beta1featuremapfloatlist_1 = require("./googlecloudrecommendationenginev1beta1featuremapfloatlist");
 // GoogleCloudRecommendationengineV1beta1FeatureMap
 /**
  * FeatureMap represents extra features that customers want to include in the recommendation model for catalogs/user events as categorical/numerical features.
@@ -35,13 +38,13 @@ var GoogleCloudRecommendationengineV1beta1FeatureMap = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoricalFeatures", elemType: GoogleCloudRecommendationengineV1beta1FeatureMapStringList }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoricalFeatures", elemType: googlecloudrecommendationenginev1beta1featuremapstringlist_1.GoogleCloudRecommendationengineV1beta1FeatureMapStringList }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommendationengineV1beta1FeatureMap.prototype, "categoricalFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numericalFeatures", elemType: GoogleCloudRecommendationengineV1beta1FeatureMapFloatList }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numericalFeatures", elemType: googlecloudrecommendationenginev1beta1featuremapfloatlist_1.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommendationengineV1beta1FeatureMap.prototype, "numericalFeatures", void 0);
     return GoogleCloudRecommendationengineV1beta1FeatureMap;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1FeatureMap };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1FeatureMap = GoogleCloudRecommendationengineV1beta1FeatureMap;

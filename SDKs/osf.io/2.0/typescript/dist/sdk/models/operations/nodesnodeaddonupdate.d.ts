@@ -5,7 +5,7 @@ export declare class NodesNodeAddonUpdatePathParams extends SpeakeasyBase {
 }
 export declare class NodesNodeAddonUpdateRequest extends SpeakeasyBase {
     pathParams: NodesNodeAddonUpdatePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class NodesNodeAddonUpdateResponse extends SpeakeasyBase {
     contentType: string;

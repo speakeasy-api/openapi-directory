@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlanIdResponse = exports.GetPlanIdRequest = exports.GetPlanIdQueryParams = exports.GetPlanIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPlanIdPathParams = /** @class */ (function (_super) {
     __extends(GetPlanIdPathParams, _super);
     function GetPlanIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=planId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=planId" }),
         __metadata("design:type", String)
     ], GetPlanIdPathParams.prototype, "planId", void 0);
     return GetPlanIdPathParams;
-}(SpeakeasyBase));
-export { GetPlanIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlanIdPathParams = GetPlanIdPathParams;
 var GetPlanIdQueryParams = /** @class */ (function (_super) {
     __extends(GetPlanIdQueryParams, _super);
     function GetPlanIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetPlanIdQueryParams.prototype, "locationId", void 0);
     return GetPlanIdQueryParams;
-}(SpeakeasyBase));
-export { GetPlanIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlanIdQueryParams = GetPlanIdQueryParams;
 var GetPlanIdRequest = /** @class */ (function (_super) {
     __extends(GetPlanIdRequest, _super);
     function GetPlanIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlanIdPathParams)
     ], GetPlanIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlanIdQueryParams)
     ], GetPlanIdRequest.prototype, "queryParams", void 0);
     return GetPlanIdRequest;
-}(SpeakeasyBase));
-export { GetPlanIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlanIdRequest = GetPlanIdRequest;
 var GetPlanIdResponse = /** @class */ (function (_super) {
     __extends(GetPlanIdResponse, _super);
     function GetPlanIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPlanIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPlanIdResponse.prototype, "statusCode", void 0);
     return GetPlanIdResponse;
-}(SpeakeasyBase));
-export { GetPlanIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlanIdResponse = GetPlanIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateMetrics } from "./aggregatemetrics";
-export var BusinessCallsInsightsMetricTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessCallsInsights = exports.BusinessCallsInsightsMetricTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatemetrics_1 = require("./aggregatemetrics");
+var BusinessCallsInsightsMetricTypeEnum;
 (function (BusinessCallsInsightsMetricTypeEnum) {
     BusinessCallsInsightsMetricTypeEnum["MetricTypeUnspecified"] = "METRIC_TYPE_UNSPECIFIED";
     BusinessCallsInsightsMetricTypeEnum["AggregateCount"] = "AGGREGATE_COUNT";
-})(BusinessCallsInsightsMetricTypeEnum || (BusinessCallsInsightsMetricTypeEnum = {}));
+})(BusinessCallsInsightsMetricTypeEnum = exports.BusinessCallsInsightsMetricTypeEnum || (exports.BusinessCallsInsightsMetricTypeEnum = {}));
 // BusinessCallsInsights
 /**
  * Insights for calls made to a location.
@@ -39,17 +42,17 @@ var BusinessCallsInsights = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregateMetrics" }),
-        __metadata("design:type", AggregateMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregateMetrics" }),
+        __metadata("design:type", aggregatemetrics_1.AggregateMetrics)
     ], BusinessCallsInsights.prototype, "aggregateMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricType" }),
         __metadata("design:type", String)
     ], BusinessCallsInsights.prototype, "metricType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BusinessCallsInsights.prototype, "name", void 0);
     return BusinessCallsInsights;
-}(SpeakeasyBase));
-export { BusinessCallsInsights };
+}(utils_1.SpeakeasyBase));
+exports.BusinessCallsInsights = BusinessCallsInsights;

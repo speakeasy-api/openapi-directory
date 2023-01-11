@@ -53,7 +53,7 @@ export class PutAccountDetailsRequestBody extends SpeakeasyBase {
   useCaseDescription: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebsiteURL" })
-  websiteUrl: string;
+  websiteURL: string;
 }
 
 
@@ -77,7 +77,7 @@ export class PutAccountDetailsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putAccountDetailsResponse?: Map<string, any>;
+  putAccountDetailsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CampaignCriterion } from "./campaigncriterion";
-import { FundingStrategy } from "./fundingstrategy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCampaignRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var campaigncriterion_1 = require("./campaigncriterion");
+var fundingstrategy_1 = require("./fundingstrategy");
 // CreateCampaignRequest
 /**
  * This type defines the fields needed to create a campaign. To create a campaign, you need to specify a name, start and end dates, funding, marketplace, and optionally the criterion (selection rules).
@@ -35,29 +38,29 @@ var CreateCampaignRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignCriterion" }),
-        __metadata("design:type", CampaignCriterion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignCriterion" }),
+        __metadata("design:type", campaigncriterion_1.CampaignCriterion)
     ], CreateCampaignRequest.prototype, "campaignCriterion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignName" }),
         __metadata("design:type", String)
     ], CreateCampaignRequest.prototype, "campaignName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], CreateCampaignRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingStrategy" }),
-        __metadata("design:type", FundingStrategy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingStrategy" }),
+        __metadata("design:type", fundingstrategy_1.FundingStrategy)
     ], CreateCampaignRequest.prototype, "fundingStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], CreateCampaignRequest.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], CreateCampaignRequest.prototype, "startDate", void 0);
     return CreateCampaignRequest;
-}(SpeakeasyBase));
-export { CreateCampaignRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCampaignRequest = CreateCampaignRequest;

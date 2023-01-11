@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataReplicationError } from "./datareplicationerror";
-import { DataReplicationInitiation } from "./datareplicationinitiation";
-import { DataReplicationStateEnum } from "./datareplicationstateenum";
-import { DataReplicationInfoReplicatedDisk } from "./datareplicationinforeplicateddisk";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataReplicationInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var datareplicationerror_1 = require("./datareplicationerror");
+var datareplicationinitiation_1 = require("./datareplicationinitiation");
+var datareplicationstateenum_1 = require("./datareplicationstateenum");
+var datareplicationinforeplicateddisk_1 = require("./datareplicationinforeplicateddisk");
 // DataReplicationInfo
 /**
  * Request data replication info.
@@ -37,29 +40,29 @@ var DataReplicationInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataReplicationError" }),
-        __metadata("design:type", DataReplicationError)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataReplicationError" }),
+        __metadata("design:type", datareplicationerror_1.DataReplicationError)
     ], DataReplicationInfo.prototype, "dataReplicationError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataReplicationInitiation" }),
-        __metadata("design:type", DataReplicationInitiation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataReplicationInitiation" }),
+        __metadata("design:type", datareplicationinitiation_1.DataReplicationInitiation)
     ], DataReplicationInfo.prototype, "dataReplicationInitiation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataReplicationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataReplicationState" }),
         __metadata("design:type", String)
     ], DataReplicationInfo.prototype, "dataReplicationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etaDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etaDateTime" }),
         __metadata("design:type", String)
     ], DataReplicationInfo.prototype, "etaDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lagDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lagDuration" }),
         __metadata("design:type", String)
     ], DataReplicationInfo.prototype, "lagDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicatedDisks", elemType: DataReplicationInfoReplicatedDisk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicatedDisks", elemType: datareplicationinforeplicateddisk_1.DataReplicationInfoReplicatedDisk }),
         __metadata("design:type", Array)
     ], DataReplicationInfo.prototype, "replicatedDisks", void 0);
     return DataReplicationInfo;
-}(SpeakeasyBase));
-export { DataReplicationInfo };
+}(utils_1.SpeakeasyBase));
+exports.DataReplicationInfo = DataReplicationInfo;

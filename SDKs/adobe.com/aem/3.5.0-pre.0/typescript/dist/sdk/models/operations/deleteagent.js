@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAgentResponse = exports.DeleteAgentRequest = exports.DeleteAgentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAgentPathParams = /** @class */ (function (_super) {
     __extends(DeleteAgentPathParams, _super);
     function DeleteAgentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], DeleteAgentPathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runmode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runmode" }),
         __metadata("design:type", String)
     ], DeleteAgentPathParams.prototype, "runmode", void 0);
     return DeleteAgentPathParams;
-}(SpeakeasyBase));
-export { DeleteAgentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAgentPathParams = DeleteAgentPathParams;
 var DeleteAgentRequest = /** @class */ (function (_super) {
     __extends(DeleteAgentRequest, _super);
     function DeleteAgentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAgentPathParams)
     ], DeleteAgentRequest.prototype, "pathParams", void 0);
     return DeleteAgentRequest;
-}(SpeakeasyBase));
-export { DeleteAgentRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAgentRequest = DeleteAgentRequest;
 var DeleteAgentResponse = /** @class */ (function (_super) {
     __extends(DeleteAgentResponse, _super);
     function DeleteAgentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAgentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAgentResponse.prototype, "statusCode", void 0);
     return DeleteAgentResponse;
-}(SpeakeasyBase));
-export { DeleteAgentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAgentResponse = DeleteAgentResponse;

@@ -17,38 +17,10 @@ import { Policies } from "./policies";
 import { Pools } from "./pools";
 import { Property } from "./property";
 import { Services } from "./services";
-import { SustainabilityInput } from "./sustainability";
+import { Sustainability } from "./sustainability";
 import { Transportation } from "./transportation";
 import { Wellness } from "./wellness";
-import { Sustainability } from "./sustainability";
-/**
- * Lodging of a location that provides accomodations.
-**/
-export declare class LodgingInput extends SpeakeasyBase {
-    accessibility?: Accessibility;
-    activities?: Activities;
-    allUnits?: GuestUnitFeatures;
-    business?: Business;
-    commonLivingArea?: LivingArea;
-    connectivity?: Connectivity;
-    families?: Families;
-    foodAndDrink?: FoodAndDrink;
-    guestUnits?: GuestUnitType[];
-    healthAndSafety?: HealthAndSafety;
-    housekeeping?: Housekeeping;
-    metadata?: LodgingMetadata;
-    name?: string;
-    parking?: Parking;
-    pets?: Pets;
-    policies?: Policies;
-    pools?: Pools;
-    property?: Property;
-    services?: Services;
-    someUnits?: GuestUnitFeatures;
-    sustainability?: SustainabilityInput;
-    transportation?: Transportation;
-    wellness?: Wellness;
-}
+import { SustainabilityInput } from "./sustainability";
 /**
  * Lodging of a location that provides accomodations.
 **/
@@ -74,6 +46,34 @@ export declare class Lodging extends SpeakeasyBase {
     services?: Services;
     someUnits?: GuestUnitFeatures;
     sustainability?: Sustainability;
+    transportation?: Transportation;
+    wellness?: Wellness;
+}
+/**
+ * Lodging of a location that provides accomodations.
+**/
+export declare class LodgingInput extends SpeakeasyBase {
+    accessibility?: Accessibility;
+    activities?: Activities;
+    allUnits?: GuestUnitFeatures;
+    business?: Business;
+    commonLivingArea?: LivingArea;
+    connectivity?: Connectivity;
+    families?: Families;
+    foodAndDrink?: FoodAndDrink;
+    guestUnits?: GuestUnitType[];
+    healthAndSafety?: HealthAndSafety;
+    housekeeping?: Housekeeping;
+    metadata?: LodgingMetadata;
+    name?: string;
+    parking?: Parking;
+    pets?: Pets;
+    policies?: Policies;
+    pools?: Pools;
+    property?: Property;
+    services?: Services;
+    someUnits?: GuestUnitFeatures;
+    sustainability?: SustainabilityInput;
     transportation?: Transportation;
     wellness?: Wellness;
 }

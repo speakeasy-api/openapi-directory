@@ -3,11 +3,11 @@ import { ErrorCategory } from "./errorcategory";
 import { ErrorDetail } from "./errordetail";
 export declare class StandardError extends SpeakeasyBase {
     category: ErrorCategory;
-    context: Map<string, string[]>;
+    context: Record<string, string[]>;
     errors: ErrorDetail[];
     id?: string;
-    links: Map<string, string>;
+    links: Record<string, string>;
     message: string;
     status: string;
-    subCategory?: Map<string, any>;
+    subCategory?: Record<string, any>;
 }

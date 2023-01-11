@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HooksGetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HooksGetResponse = exports.HooksGetRequest = exports.HooksGet200ApplicationJson = exports.HooksGet200ApplicationJsonHooks = exports.HooksGetQueryParams = exports.HooksGetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HooksGetActionEnum;
 (function (HooksGetActionEnum) {
     HooksGetActionEnum["Read"] = "read";
-})(HooksGetActionEnum || (HooksGetActionEnum = {}));
+})(HooksGetActionEnum = exports.HooksGetActionEnum || (exports.HooksGetActionEnum = {}));
 var HooksGetQueryParams = /** @class */ (function (_super) {
     __extends(HooksGetQueryParams, _super);
     function HooksGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], HooksGetQueryParams.prototype, "action", void 0);
     return HooksGetQueryParams;
-}(SpeakeasyBase));
-export { HooksGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.HooksGetQueryParams = HooksGetQueryParams;
 var HooksGet200ApplicationJsonHooks = /** @class */ (function (_super) {
     __extends(HooksGet200ApplicationJsonHooks, _super);
     function HooksGet200ApplicationJsonHooks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], HooksGet200ApplicationJsonHooks.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_type" }),
         __metadata("design:type", String)
     ], HooksGet200ApplicationJsonHooks.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HooksGet200ApplicationJsonHooks.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_method" }),
         __metadata("design:type", String)
     ], HooksGet200ApplicationJsonHooks.prototype, "requestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_url" }),
         __metadata("design:type", String)
     ], HooksGet200ApplicationJsonHooks.prototype, "targetUrl", void 0);
     return HooksGet200ApplicationJsonHooks;
-}(SpeakeasyBase));
-export { HooksGet200ApplicationJsonHooks };
+}(utils_1.SpeakeasyBase));
+exports.HooksGet200ApplicationJsonHooks = HooksGet200ApplicationJsonHooks;
 var HooksGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(HooksGet200ApplicationJson, _super);
     function HooksGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooks", elemType: HooksGet200ApplicationJsonHooks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooks", elemType: HooksGet200ApplicationJsonHooks }),
         __metadata("design:type", Array)
     ], HooksGet200ApplicationJson.prototype, "hooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], HooksGet200ApplicationJson.prototype, "success", void 0);
     return HooksGet200ApplicationJson;
-}(SpeakeasyBase));
-export { HooksGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.HooksGet200ApplicationJson = HooksGet200ApplicationJson;
 var HooksGetRequest = /** @class */ (function (_super) {
     __extends(HooksGetRequest, _super);
     function HooksGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HooksGetQueryParams)
     ], HooksGetRequest.prototype, "queryParams", void 0);
     return HooksGetRequest;
-}(SpeakeasyBase));
-export { HooksGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.HooksGetRequest = HooksGetRequest;
 var HooksGetResponse = /** @class */ (function (_super) {
     __extends(HooksGetResponse, _super);
     function HooksGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HooksGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HooksGet200ApplicationJson)
-    ], HooksGetResponse.prototype, "hooksGet200ApplicationJsonObject", void 0);
+    ], HooksGetResponse.prototype, "hooksGet200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HooksGetResponse.prototype, "statusCode", void 0);
     return HooksGetResponse;
-}(SpeakeasyBase));
-export { HooksGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.HooksGetResponse = HooksGetResponse;

@@ -50,5 +50,5 @@ export class ChangeRequestDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  changeRequestDetails200ApplicationJsonObject?: ChangeRequestDetails200ApplicationJson;
+  changeRequestDetails200ApplicationJSONObject?: ChangeRequestDetails200ApplicationJson;
 }

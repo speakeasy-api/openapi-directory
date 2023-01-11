@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoteSink = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoteSink = /** @class */ (function (_super) {
     __extends(RemoteSink, _super);
     function RemoteSink() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bond_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bond_date" }),
         __metadata("design:type", Number)
     ], RemoteSink.prototype, "bondDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_class" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_class" }),
         __metadata("design:type", Number)
     ], RemoteSink.prototype, "deviceClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], RemoteSink.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_connect_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_connect_date" }),
         __metadata("design:type", Number)
     ], RemoteSink.prototype, "lastConnectDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_address" }),
         __metadata("design:type", String)
     ], RemoteSink.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RemoteSink.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rssi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rssi" }),
         __metadata("design:type", Number)
     ], RemoteSink.prototype, "rssi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_uuids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_uuids" }),
         __metadata("design:type", Array)
     ], RemoteSink.prototype, "serviceUuids", void 0);
     return RemoteSink;
-}(SpeakeasyBase));
-export { RemoteSink };
+}(utils_1.SpeakeasyBase));
+exports.RemoteSink = RemoteSink;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,73 +14,98 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateIntentResponse = exports.CreateIntentRequest = exports.CreateIntentRequestBody = exports.CreateIntentRequestBodyKendraConfiguration = exports.CreateIntentRequestBodyIntentConfirmationSetting = exports.CreateIntentRequestBodyIntentClosingSetting = exports.CreateIntentRequestBodyFulfillmentCodeHook = exports.CreateIntentRequestBodyDialogCodeHook = exports.CreateIntentHeaders = exports.CreateIntentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateIntentPathParams = /** @class */ (function (_super) {
     __extends(CreateIntentPathParams, _super);
     function CreateIntentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=botId" }),
         __metadata("design:type", String)
     ], CreateIntentPathParams.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=botVersion" }),
         __metadata("design:type", String)
     ], CreateIntentPathParams.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=localeId" }),
         __metadata("design:type", String)
     ], CreateIntentPathParams.prototype, "localeId", void 0);
     return CreateIntentPathParams;
-}(SpeakeasyBase));
-export { CreateIntentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentPathParams = CreateIntentPathParams;
 var CreateIntentHeaders = /** @class */ (function (_super) {
     __extends(CreateIntentHeaders, _super);
     function CreateIntentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateIntentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CreateIntentHeaders;
-}(SpeakeasyBase));
-export { CreateIntentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentHeaders = CreateIntentHeaders;
 // CreateIntentRequestBodyDialogCodeHook
 /**
  * Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
@@ -90,12 +116,12 @@ var CreateIntentRequestBodyDialogCodeHook = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], CreateIntentRequestBodyDialogCodeHook.prototype, "enabled", void 0);
     return CreateIntentRequestBodyDialogCodeHook;
-}(SpeakeasyBase));
-export { CreateIntentRequestBodyDialogCodeHook };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBodyDialogCodeHook = CreateIntentRequestBodyDialogCodeHook;
 // CreateIntentRequestBodyFulfillmentCodeHook
 /**
  * Determines if a Lambda function should be invoked for a specific intent.
@@ -106,12 +132,12 @@ var CreateIntentRequestBodyFulfillmentCodeHook = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], CreateIntentRequestBodyFulfillmentCodeHook.prototype, "enabled", void 0);
     return CreateIntentRequestBodyFulfillmentCodeHook;
-}(SpeakeasyBase));
-export { CreateIntentRequestBodyFulfillmentCodeHook };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBodyFulfillmentCodeHook = CreateIntentRequestBodyFulfillmentCodeHook;
 // CreateIntentRequestBodyIntentClosingSetting
 /**
  * Provides a statement the Amazon Lex conveys to the user when the intent is successfully fulfilled.
@@ -122,16 +148,16 @@ var CreateIntentRequestBodyIntentClosingSetting = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateIntentRequestBodyIntentClosingSetting.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closingResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closingResponse" }),
         __metadata("design:type", shared.ResponseSpecification)
     ], CreateIntentRequestBodyIntentClosingSetting.prototype, "closingResponse", void 0);
     return CreateIntentRequestBodyIntentClosingSetting;
-}(SpeakeasyBase));
-export { CreateIntentRequestBodyIntentClosingSetting };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBodyIntentClosingSetting = CreateIntentRequestBodyIntentClosingSetting;
 // CreateIntentRequestBodyIntentConfirmationSetting
 /**
  * Provides a prompt for making sure that the user is ready for the intent to be fulfilled.
@@ -142,20 +168,20 @@ var CreateIntentRequestBodyIntentConfirmationSetting = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateIntentRequestBodyIntentConfirmationSetting.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declinationResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declinationResponse" }),
         __metadata("design:type", shared.ResponseSpecification)
     ], CreateIntentRequestBodyIntentConfirmationSetting.prototype, "declinationResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promptSpecification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promptSpecification" }),
         __metadata("design:type", shared.PromptSpecification)
     ], CreateIntentRequestBodyIntentConfirmationSetting.prototype, "promptSpecification", void 0);
     return CreateIntentRequestBodyIntentConfirmationSetting;
-}(SpeakeasyBase));
-export { CreateIntentRequestBodyIntentConfirmationSetting };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBodyIntentConfirmationSetting = CreateIntentRequestBodyIntentConfirmationSetting;
 // CreateIntentRequestBodyKendraConfiguration
 /**
  * Provides configuration information for the AMAZON.KendraSearchIntent intent. When you use this intent, Amazon Lex searches the specified Amazon Kendra index and returns documents from the index that match the user's utterance.
@@ -166,133 +192,133 @@ var CreateIntentRequestBodyKendraConfiguration = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kendraIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kendraIndex" }),
         __metadata("design:type", String)
     ], CreateIntentRequestBodyKendraConfiguration.prototype, "kendraIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryFilterString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryFilterString" }),
         __metadata("design:type", String)
     ], CreateIntentRequestBodyKendraConfiguration.prototype, "queryFilterString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryFilterStringEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryFilterStringEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateIntentRequestBodyKendraConfiguration.prototype, "queryFilterStringEnabled", void 0);
     return CreateIntentRequestBodyKendraConfiguration;
-}(SpeakeasyBase));
-export { CreateIntentRequestBodyKendraConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBodyKendraConfiguration = CreateIntentRequestBodyKendraConfiguration;
 var CreateIntentRequestBody = /** @class */ (function (_super) {
     __extends(CreateIntentRequestBody, _super);
     function CreateIntentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateIntentRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogCodeHook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogCodeHook" }),
         __metadata("design:type", CreateIntentRequestBodyDialogCodeHook)
     ], CreateIntentRequestBody.prototype, "dialogCodeHook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentCodeHook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentCodeHook" }),
         __metadata("design:type", CreateIntentRequestBodyFulfillmentCodeHook)
     ], CreateIntentRequestBody.prototype, "fulfillmentCodeHook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputContexts", elemType: shared.InputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputContexts", elemType: shared.InputContext }),
         __metadata("design:type", Array)
     ], CreateIntentRequestBody.prototype, "inputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentClosingSetting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentClosingSetting" }),
         __metadata("design:type", CreateIntentRequestBodyIntentClosingSetting)
     ], CreateIntentRequestBody.prototype, "intentClosingSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentConfirmationSetting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentConfirmationSetting" }),
         __metadata("design:type", CreateIntentRequestBodyIntentConfirmationSetting)
     ], CreateIntentRequestBody.prototype, "intentConfirmationSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], CreateIntentRequestBody.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kendraConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kendraConfiguration" }),
         __metadata("design:type", CreateIntentRequestBodyKendraConfiguration)
     ], CreateIntentRequestBody.prototype, "kendraConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputContexts", elemType: shared.OutputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputContexts", elemType: shared.OutputContext }),
         __metadata("design:type", Array)
     ], CreateIntentRequestBody.prototype, "outputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentIntentSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentIntentSignature" }),
         __metadata("design:type", String)
     ], CreateIntentRequestBody.prototype, "parentIntentSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleUtterances", elemType: shared.SampleUtterance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleUtterances", elemType: shared.SampleUtterance }),
         __metadata("design:type", Array)
     ], CreateIntentRequestBody.prototype, "sampleUtterances", void 0);
     return CreateIntentRequestBody;
-}(SpeakeasyBase));
-export { CreateIntentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequestBody = CreateIntentRequestBody;
 var CreateIntentRequest = /** @class */ (function (_super) {
     __extends(CreateIntentRequest, _super);
     function CreateIntentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateIntentPathParams)
     ], CreateIntentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateIntentHeaders)
     ], CreateIntentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateIntentRequestBody)
     ], CreateIntentRequest.prototype, "request", void 0);
     return CreateIntentRequest;
-}(SpeakeasyBase));
-export { CreateIntentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentRequest = CreateIntentRequest;
 var CreateIntentResponse = /** @class */ (function (_super) {
     __extends(CreateIntentResponse, _super);
     function CreateIntentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateIntentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CreateIntentResponse)
     ], CreateIntentResponse.prototype, "createIntentResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "preconditionFailedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateIntentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateIntentResponse.prototype, "validationException", void 0);
     return CreateIntentResponse;
-}(SpeakeasyBase));
-export { CreateIntentResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateIntentResponse = CreateIntentResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MemcacheParameters } from "./memcacheparameters";
-export var NodeStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Node = exports.NodeStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var memcacheparameters_1 = require("./memcacheparameters");
+var NodeStateEnum;
 (function (NodeStateEnum) {
     NodeStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     NodeStateEnum["Creating"] = "CREATING";
     NodeStateEnum["Ready"] = "READY";
     NodeStateEnum["Deleting"] = "DELETING";
     NodeStateEnum["Updating"] = "UPDATING";
-})(NodeStateEnum || (NodeStateEnum = {}));
+})(NodeStateEnum = exports.NodeStateEnum || (exports.NodeStateEnum = {}));
 var Node = /** @class */ (function (_super) {
     __extends(Node, _super);
     function Node() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], Node.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeId" }),
         __metadata("design:type", String)
     ], Node.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", MemcacheParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", memcacheparameters_1.MemcacheParameters)
     ], Node.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], Node.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Node.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], Node.prototype, "zone", void 0);
     return Node;
-}(SpeakeasyBase));
-export { Node };
+}(utils_1.SpeakeasyBase));
+exports.Node = Node;

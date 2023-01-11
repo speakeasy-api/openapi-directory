@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig } from "./googlecloudpaymentsresellersubscriptionv1productpriceconfig";
-import { GoogleCloudPaymentsResellerSubscriptionV1Duration } from "./googlecloudpaymentsresellersubscriptionv1duration";
-import { GoogleTypeLocalizedText } from "./googletypelocalizedtext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1Product = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpaymentsresellersubscriptionv1productpriceconfig_1 = require("./googlecloudpaymentsresellersubscriptionv1productpriceconfig");
+var googlecloudpaymentsresellersubscriptionv1duration_1 = require("./googlecloudpaymentsresellersubscriptionv1duration");
+var googletypelocalizedtext_1 = require("./googletypelocalizedtext");
 // GoogleCloudPaymentsResellerSubscriptionV1Product
 /**
  * A Product resource that defines a subscription service that can be resold.
@@ -36,25 +39,25 @@ var GoogleCloudPaymentsResellerSubscriptionV1Product = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1Product.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceConfigs", elemType: GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceConfigs", elemType: googlecloudpaymentsresellersubscriptionv1productpriceconfig_1.GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig }),
         __metadata("design:type", Array)
     ], GoogleCloudPaymentsResellerSubscriptionV1Product.prototype, "priceConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionCodes" }),
         __metadata("design:type", Array)
     ], GoogleCloudPaymentsResellerSubscriptionV1Product.prototype, "regionCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionBillingCycleDuration" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionBillingCycleDuration" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1duration_1.GoogleCloudPaymentsResellerSubscriptionV1Duration)
     ], GoogleCloudPaymentsResellerSubscriptionV1Product.prototype, "subscriptionBillingCycleDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=titles", elemType: GoogleTypeLocalizedText }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=titles", elemType: googletypelocalizedtext_1.GoogleTypeLocalizedText }),
         __metadata("design:type", Array)
     ], GoogleCloudPaymentsResellerSubscriptionV1Product.prototype, "titles", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1Product;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1Product };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1Product = GoogleCloudPaymentsResellerSubscriptionV1Product;

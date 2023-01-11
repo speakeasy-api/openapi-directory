@@ -16,7 +16,7 @@ export class GetApiV2ListFederations200ApplicationJson extends SpeakeasyBase {
 
 export class GetApiV2ListFederations404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 }
 
 
@@ -31,11 +31,11 @@ export class GetApiV2ListFederationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiV2ListFederations200ApplicationJsonObject?: GetApiV2ListFederations200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getApiV2ListFederations404ApplicationJsonObject?: GetApiV2ListFederations404ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiV2ListFederations200ApplicationJSONObject?: GetApiV2ListFederations200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getApiV2ListFederations404ApplicationJSONObject?: GetApiV2ListFederations404ApplicationJson;
 }

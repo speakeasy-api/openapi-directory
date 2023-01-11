@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptEulasRequest, AcceptEulasResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptEulasRequest = {
   pathParams: {
-    studioId: "animi",
+    studioId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "rerum",
-    xAmzClientToken: "sit",
-    xAmzContentSha256: "et",
-    xAmzCredential: "minima",
-    xAmzDate: "eos",
-    xAmzSecurityToken: "accusantium",
-    xAmzSignature: "minima",
-    xAmzSignedHeaders: "qui",
+    xAmzAlgorithm: "voluptas",
+    xAmzClientToken: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
   request: {
     eulaIds: [
-      "est",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.acceptEulas(req).then((res: AcceptEulasResponse | AxiosError) => {
+sdk.acceptEulas(req).then((res: AcceptEulasResponse | AxiosError) => {
    // handle response
 });
 ```

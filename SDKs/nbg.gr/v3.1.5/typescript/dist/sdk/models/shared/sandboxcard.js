@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SandboxCardInfo } from "./sandboxcardinfo";
-import { SandboxParty } from "./sandboxparty";
-import { SandboxStatement } from "./sandboxstatement";
-import { SandboxTransaction } from "./sandboxtransaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxCard = void 0;
+var utils_1 = require("../../../internal/utils");
+var sandboxcardinfo_1 = require("./sandboxcardinfo");
+var sandboxparty_1 = require("./sandboxparty");
+var sandboxstatement_1 = require("./sandboxstatement");
+var sandboxtransaction_1 = require("./sandboxtransaction");
 // SandboxCard
 /**
  * Sandbox card
@@ -37,21 +40,21 @@ var SandboxCard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", SandboxCardInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", sandboxcardinfo_1.SandboxCardInfo)
     ], SandboxCard.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party" }),
-        __metadata("design:type", SandboxParty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party" }),
+        __metadata("design:type", sandboxparty_1.SandboxParty)
     ], SandboxCard.prototype, "party", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statements", elemType: SandboxStatement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statements", elemType: sandboxstatement_1.SandboxStatement }),
         __metadata("design:type", Array)
     ], SandboxCard.prototype, "statements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions", elemType: SandboxTransaction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions", elemType: sandboxtransaction_1.SandboxTransaction }),
         __metadata("design:type", Array)
     ], SandboxCard.prototype, "transactions", void 0);
     return SandboxCard;
-}(SpeakeasyBase));
-export { SandboxCard };
+}(utils_1.SpeakeasyBase));
+exports.SandboxCard = SandboxCard;

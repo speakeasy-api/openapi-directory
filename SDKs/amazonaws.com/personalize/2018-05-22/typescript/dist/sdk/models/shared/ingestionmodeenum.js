@@ -1,6 +1,9 @@
-export var IngestionModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IngestionModeEnum = void 0;
+var IngestionModeEnum;
 (function (IngestionModeEnum) {
     IngestionModeEnum["Bulk"] = "BULK";
     IngestionModeEnum["Put"] = "PUT";
     IngestionModeEnum["All"] = "ALL";
-})(IngestionModeEnum || (IngestionModeEnum = {}));
+})(IngestionModeEnum = exports.IngestionModeEnum || (exports.IngestionModeEnum = {}));

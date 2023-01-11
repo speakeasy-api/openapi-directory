@@ -130,7 +130,7 @@ export class CreateConfigurationSetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createConfigurationSetResponse?: Map<string, any>;
+  createConfigurationSetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

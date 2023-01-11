@@ -7,7 +7,7 @@ export declare enum GetListTagsForResourceVersionEnum {
 }
 export declare class GetListTagsForResourceQueryParams extends SpeakeasyBase {
     action: GetListTagsForResourceActionEnum;
-    resourceArn: string;
+    resourceARN: string;
     version: GetListTagsForResourceVersionEnum;
 }
 export declare class GetListTagsForResourceHeaders extends SpeakeasyBase {

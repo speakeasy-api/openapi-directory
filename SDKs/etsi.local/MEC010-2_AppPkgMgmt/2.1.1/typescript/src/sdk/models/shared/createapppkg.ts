@@ -20,5 +20,5 @@ export class CreateAppPkg extends SpeakeasyBase {
   checksum: Checksum;
 
   @SpeakeasyMetadata({ data: "json, name=userDefinedData" })
-  userDefinedData?: Map<string, any>;
+  userDefinedData?: Record<string, any>;
 }

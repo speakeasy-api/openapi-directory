@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PersonResponse } from "./personresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPeopleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var personresponse_1 = require("./personresponse");
 // GetPeopleResponse
 /**
  * The response to a get request for a list of people by resource name.
@@ -34,9 +37,9 @@ var GetPeopleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responses", elemType: PersonResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responses", elemType: personresponse_1.PersonResponse }),
         __metadata("design:type", Array)
     ], GetPeopleResponse.prototype, "responses", void 0);
     return GetPeopleResponse;
-}(SpeakeasyBase));
-export { GetPeopleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPeopleResponse = GetPeopleResponse;

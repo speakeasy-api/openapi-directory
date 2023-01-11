@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Matter } from "./matter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReopenMatterResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var matter_1 = require("./matter");
 // ReopenMatterResponse
 /**
  * Response to a ReopenMatterRequest.
@@ -34,9 +37,9 @@ var ReopenMatterResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matter" }),
-        __metadata("design:type", Matter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matter" }),
+        __metadata("design:type", matter_1.Matter)
     ], ReopenMatterResponse.prototype, "matter", void 0);
     return ReopenMatterResponse;
-}(SpeakeasyBase));
-export { ReopenMatterResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReopenMatterResponse = ReopenMatterResponse;

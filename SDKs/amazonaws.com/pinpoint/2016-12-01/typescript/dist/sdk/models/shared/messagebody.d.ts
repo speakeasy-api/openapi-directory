@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class MessageBody extends SpeakeasyBase {
     message?: string;
-    requestId?: string;
+    requestID?: string;
 }

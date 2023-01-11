@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsymmetricDecryptRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // AsymmetricDecryptRequest
 /**
  * Request message for KeyManagementService.AsymmetricDecrypt.
@@ -33,13 +36,13 @@ var AsymmetricDecryptRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ciphertext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ciphertext" }),
         __metadata("design:type", String)
     ], AsymmetricDecryptRequest.prototype, "ciphertext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ciphertextCrc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ciphertextCrc32c" }),
         __metadata("design:type", String)
     ], AsymmetricDecryptRequest.prototype, "ciphertextCrc32c", void 0);
     return AsymmetricDecryptRequest;
-}(SpeakeasyBase));
-export { AsymmetricDecryptRequest };
+}(utils_1.SpeakeasyBase));
+exports.AsymmetricDecryptRequest = AsymmetricDecryptRequest;

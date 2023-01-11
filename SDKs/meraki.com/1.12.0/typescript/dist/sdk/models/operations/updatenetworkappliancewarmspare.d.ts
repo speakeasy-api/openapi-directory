@@ -16,5 +16,5 @@ export declare class UpdateNetworkApplianceWarmSpareRequest extends SpeakeasyBas
 export declare class UpdateNetworkApplianceWarmSpareResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceWarmSpare200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

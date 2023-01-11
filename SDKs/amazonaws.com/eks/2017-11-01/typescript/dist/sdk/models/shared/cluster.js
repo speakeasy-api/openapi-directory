@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
-import { ConnectorConfigResponse } from "./connectorconfigresponse";
-import { EncryptionConfig } from "./encryptionconfig";
-import { Identity } from "./identity";
-import { KubernetesNetworkConfigResponse } from "./kubernetesnetworkconfigresponse";
-import { Logging } from "./logging";
-import { VpcConfigResponse } from "./vpcconfigresponse";
-import { ClusterStatusEnum } from "./clusterstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificate_1 = require("./certificate");
+var connectorconfigresponse_1 = require("./connectorconfigresponse");
+var encryptionconfig_1 = require("./encryptionconfig");
+var identity_1 = require("./identity");
+var kubernetesnetworkconfigresponse_1 = require("./kubernetesnetworkconfigresponse");
+var logging_1 = require("./logging");
+var vpcconfigresponse_1 = require("./vpcconfigresponse");
+var clusterstatusenum_1 = require("./clusterstatusenum");
 // Cluster
 /**
  * An object representing an Amazon EKS cluster.
@@ -41,73 +44,73 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthority" }),
-        __metadata("design:type", Certificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthority" }),
+        __metadata("design:type", certificate_1.Certificate)
     ], Cluster.prototype, "certificateAuthority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRequestToken" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorConfig" }),
-        __metadata("design:type", ConnectorConfigResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorConfig" }),
+        __metadata("design:type", connectorconfigresponse_1.ConnectorConfigResponse)
     ], Cluster.prototype, "connectorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Cluster.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfig", elemType: EncryptionConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfig", elemType: encryptionconfig_1.EncryptionConfig }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
-        __metadata("design:type", Identity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
+        __metadata("design:type", identity_1.Identity)
     ], Cluster.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesNetworkConfig" }),
-        __metadata("design:type", KubernetesNetworkConfigResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesNetworkConfig" }),
+        __metadata("design:type", kubernetesnetworkconfigresponse_1.KubernetesNetworkConfigResponse)
     ], Cluster.prototype, "kubernetesNetworkConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logging" }),
-        __metadata("design:type", Logging)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logging" }),
+        __metadata("design:type", logging_1.Logging)
     ], Cluster.prototype, "logging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesVpcConfig" }),
-        __metadata("design:type", VpcConfigResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesVpcConfig" }),
+        __metadata("design:type", vpcconfigresponse_1.VpcConfigResponse)
     ], Cluster.prototype, "resourcesVpcConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Cluster.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "version", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

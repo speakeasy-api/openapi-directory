@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,204 +23,207 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = exports.GetUnsecuredSmeLoansErrorObject = exports.GetUnsecuredSmeLoans503ErrorObject = exports.GetUnsecuredSmeLoans503ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans503ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans500ErrorObject = exports.GetUnsecuredSmeLoans500ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans500ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans429ErrorObject = exports.GetUnsecuredSmeLoans429ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans429ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans408ErrorObject = exports.GetUnsecuredSmeLoans408ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans408ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans400ErrorObject = exports.GetUnsecuredSmeLoans400ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans400ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoansHeaders = void 0;
+exports.GetUnsecuredSmeLoansResponse = exports.GetUnsecuredSmeLoansRequest = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUnsecuredSmeLoansHeaders = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoansHeaders, _super);
     function GetUnsecuredSmeLoansHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansHeaders.prototype, "ifNoneMatch", void 0);
     return GetUnsecuredSmeLoansHeaders;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoansHeaders };
-export var GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoansHeaders = GetUnsecuredSmeLoansHeaders;
+var GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum;
 (function (GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum) {
     GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum["YouHaveSentARequestWhichCouldNotBeUnderstood"] = "You have sent a request which could not be understood.";
-})(GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum || (GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum = {}));
-export var GetUnsecuredSmeLoans400ErrorObjectStatusEnum;
+})(GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum || (exports.GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum = {}));
+var GetUnsecuredSmeLoans400ErrorObjectStatusEnum;
 (function (GetUnsecuredSmeLoans400ErrorObjectStatusEnum) {
     GetUnsecuredSmeLoans400ErrorObjectStatusEnum["FourHundred"] = "400";
-})(GetUnsecuredSmeLoans400ErrorObjectStatusEnum || (GetUnsecuredSmeLoans400ErrorObjectStatusEnum = {}));
-export var GetUnsecuredSmeLoans400ErrorObjectTitleEnum;
+})(GetUnsecuredSmeLoans400ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans400ErrorObjectStatusEnum || (exports.GetUnsecuredSmeLoans400ErrorObjectStatusEnum = {}));
+var GetUnsecuredSmeLoans400ErrorObjectTitleEnum;
 (function (GetUnsecuredSmeLoans400ErrorObjectTitleEnum) {
     GetUnsecuredSmeLoans400ErrorObjectTitleEnum["BadRequest"] = "Bad request";
-})(GetUnsecuredSmeLoans400ErrorObjectTitleEnum || (GetUnsecuredSmeLoans400ErrorObjectTitleEnum = {}));
+})(GetUnsecuredSmeLoans400ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans400ErrorObjectTitleEnum || (exports.GetUnsecuredSmeLoans400ErrorObjectTitleEnum = {}));
 var GetUnsecuredSmeLoans400ErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans400ErrorObject, _super);
     function GetUnsecuredSmeLoans400ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans400ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans400ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans400ErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoans400ErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans400ErrorObject };
-export var GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans400ErrorObject = GetUnsecuredSmeLoans400ErrorObject;
+var GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum;
 (function (GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum) {
     GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum["YourClientHasFailedToSubmitARequestAndATimeoutHasOccurred"] = "Your client has failed to submit a request, and a timeout has occurred.";
-})(GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum || (GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum = {}));
-export var GetUnsecuredSmeLoans408ErrorObjectStatusEnum;
+})(GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum || (exports.GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum = {}));
+var GetUnsecuredSmeLoans408ErrorObjectStatusEnum;
 (function (GetUnsecuredSmeLoans408ErrorObjectStatusEnum) {
     GetUnsecuredSmeLoans408ErrorObjectStatusEnum["FourHundredAndEight"] = "408";
-})(GetUnsecuredSmeLoans408ErrorObjectStatusEnum || (GetUnsecuredSmeLoans408ErrorObjectStatusEnum = {}));
-export var GetUnsecuredSmeLoans408ErrorObjectTitleEnum;
+})(GetUnsecuredSmeLoans408ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans408ErrorObjectStatusEnum || (exports.GetUnsecuredSmeLoans408ErrorObjectStatusEnum = {}));
+var GetUnsecuredSmeLoans408ErrorObjectTitleEnum;
 (function (GetUnsecuredSmeLoans408ErrorObjectTitleEnum) {
     GetUnsecuredSmeLoans408ErrorObjectTitleEnum["ClientTimeout"] = "Client timeout";
-})(GetUnsecuredSmeLoans408ErrorObjectTitleEnum || (GetUnsecuredSmeLoans408ErrorObjectTitleEnum = {}));
+})(GetUnsecuredSmeLoans408ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans408ErrorObjectTitleEnum || (exports.GetUnsecuredSmeLoans408ErrorObjectTitleEnum = {}));
 var GetUnsecuredSmeLoans408ErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans408ErrorObject, _super);
     function GetUnsecuredSmeLoans408ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans408ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans408ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans408ErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoans408ErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans408ErrorObject };
-export var GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans408ErrorObject = GetUnsecuredSmeLoans408ErrorObject;
+var GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum;
 (function (GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum) {
     GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum["YouHaveRequestedThisResourceTooOftenSlowDown"] = "You have requested this resource too often. Slow down.";
-})(GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum || (GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum = {}));
-export var GetUnsecuredSmeLoans429ErrorObjectStatusEnum;
+})(GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum || (exports.GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum = {}));
+var GetUnsecuredSmeLoans429ErrorObjectStatusEnum;
 (function (GetUnsecuredSmeLoans429ErrorObjectStatusEnum) {
     GetUnsecuredSmeLoans429ErrorObjectStatusEnum["FourHundredAndTwentyNine"] = "429";
-})(GetUnsecuredSmeLoans429ErrorObjectStatusEnum || (GetUnsecuredSmeLoans429ErrorObjectStatusEnum = {}));
-export var GetUnsecuredSmeLoans429ErrorObjectTitleEnum;
+})(GetUnsecuredSmeLoans429ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans429ErrorObjectStatusEnum || (exports.GetUnsecuredSmeLoans429ErrorObjectStatusEnum = {}));
+var GetUnsecuredSmeLoans429ErrorObjectTitleEnum;
 (function (GetUnsecuredSmeLoans429ErrorObjectTitleEnum) {
     GetUnsecuredSmeLoans429ErrorObjectTitleEnum["TooManyRequests"] = "Too many requests";
-})(GetUnsecuredSmeLoans429ErrorObjectTitleEnum || (GetUnsecuredSmeLoans429ErrorObjectTitleEnum = {}));
+})(GetUnsecuredSmeLoans429ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans429ErrorObjectTitleEnum || (exports.GetUnsecuredSmeLoans429ErrorObjectTitleEnum = {}));
 var GetUnsecuredSmeLoans429ErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans429ErrorObject, _super);
     function GetUnsecuredSmeLoans429ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans429ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans429ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans429ErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoans429ErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans429ErrorObject };
-export var GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans429ErrorObject = GetUnsecuredSmeLoans429ErrorObject;
+var GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum;
 (function (GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum) {
     GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum["AnErrorOccurredOnTheServerNoFurtherInformationIsAvailable"] = "An error occurred on the server. No further information is available.";
-})(GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum || (GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum = {}));
-export var GetUnsecuredSmeLoans500ErrorObjectStatusEnum;
+})(GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum || (exports.GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum = {}));
+var GetUnsecuredSmeLoans500ErrorObjectStatusEnum;
 (function (GetUnsecuredSmeLoans500ErrorObjectStatusEnum) {
     GetUnsecuredSmeLoans500ErrorObjectStatusEnum["FiveHundred"] = "500";
-})(GetUnsecuredSmeLoans500ErrorObjectStatusEnum || (GetUnsecuredSmeLoans500ErrorObjectStatusEnum = {}));
-export var GetUnsecuredSmeLoans500ErrorObjectTitleEnum;
+})(GetUnsecuredSmeLoans500ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans500ErrorObjectStatusEnum || (exports.GetUnsecuredSmeLoans500ErrorObjectStatusEnum = {}));
+var GetUnsecuredSmeLoans500ErrorObjectTitleEnum;
 (function (GetUnsecuredSmeLoans500ErrorObjectTitleEnum) {
     GetUnsecuredSmeLoans500ErrorObjectTitleEnum["InternalServerError"] = "Internal server error";
-})(GetUnsecuredSmeLoans500ErrorObjectTitleEnum || (GetUnsecuredSmeLoans500ErrorObjectTitleEnum = {}));
+})(GetUnsecuredSmeLoans500ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans500ErrorObjectTitleEnum || (exports.GetUnsecuredSmeLoans500ErrorObjectTitleEnum = {}));
 var GetUnsecuredSmeLoans500ErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans500ErrorObject, _super);
     function GetUnsecuredSmeLoans500ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans500ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans500ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans500ErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoans500ErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans500ErrorObject };
-export var GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans500ErrorObject = GetUnsecuredSmeLoans500ErrorObject;
+var GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum;
 (function (GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum) {
     GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum["TheServiceIsTemporarilyUnavailable"] = "The service is temporarily unavailable.";
-})(GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum || (GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum = {}));
-export var GetUnsecuredSmeLoans503ErrorObjectStatusEnum;
+})(GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum = exports.GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum || (exports.GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum = {}));
+var GetUnsecuredSmeLoans503ErrorObjectStatusEnum;
 (function (GetUnsecuredSmeLoans503ErrorObjectStatusEnum) {
     GetUnsecuredSmeLoans503ErrorObjectStatusEnum["FiveHundredAndThree"] = "503";
-})(GetUnsecuredSmeLoans503ErrorObjectStatusEnum || (GetUnsecuredSmeLoans503ErrorObjectStatusEnum = {}));
-export var GetUnsecuredSmeLoans503ErrorObjectTitleEnum;
+})(GetUnsecuredSmeLoans503ErrorObjectStatusEnum = exports.GetUnsecuredSmeLoans503ErrorObjectStatusEnum || (exports.GetUnsecuredSmeLoans503ErrorObjectStatusEnum = {}));
+var GetUnsecuredSmeLoans503ErrorObjectTitleEnum;
 (function (GetUnsecuredSmeLoans503ErrorObjectTitleEnum) {
     GetUnsecuredSmeLoans503ErrorObjectTitleEnum["ServiceTemporarilyUnavailable"] = "Service temporarily unavailable";
-})(GetUnsecuredSmeLoans503ErrorObjectTitleEnum || (GetUnsecuredSmeLoans503ErrorObjectTitleEnum = {}));
+})(GetUnsecuredSmeLoans503ErrorObjectTitleEnum = exports.GetUnsecuredSmeLoans503ErrorObjectTitleEnum || (exports.GetUnsecuredSmeLoans503ErrorObjectTitleEnum = {}));
 var GetUnsecuredSmeLoans503ErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans503ErrorObject, _super);
     function GetUnsecuredSmeLoans503ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans503ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans503ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans503ErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoans503ErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans503ErrorObject };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans503ErrorObject = GetUnsecuredSmeLoans503ErrorObject;
 var GetUnsecuredSmeLoansErrorObject = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoansErrorObject, _super);
     function GetUnsecuredSmeLoansErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansErrorObject.prototype, "title", void 0);
     return GetUnsecuredSmeLoansErrorObject;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoansErrorObject };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoansErrorObject = GetUnsecuredSmeLoansErrorObject;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["CashDeposit"] = "CashDeposit";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["Deposit"] = "Deposit";
@@ -228,7 +232,7 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["InternetLogon"] = "InternetLogon";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["MobileLogon"] = "MobileLogon";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["RegularDeposit"] = "RegularDeposit";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail
 /**
  * Benefit detail
@@ -239,56 +243,56 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenef
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitDescription" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitID" }),
         __metadata("design:type", String)
-    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitId", void 0);
+    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitName" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitValue" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Counter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Counter" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "counter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CriteriaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CriteriaType" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "criteriaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultToAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultToAccounts" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "defaultToAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumCriteria" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "maximumCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumCriteria" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "minimumCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PromotionEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PromotionEndDate" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "promotionEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PromotionStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PromotionStartDate" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "promotionStartDate", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem
 /**
  * Benefit Item
@@ -299,34 +303,34 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenef
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitDetail", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitDetail", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "benefitDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["Promotional"] = "Promotional";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["Regular"] = "Regular";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup
 /**
  * Benefit Interest Group
@@ -337,16 +341,16 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenef
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitItem" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup.prototype, "benefitItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitSubType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup.prototype, "benefitSubType", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits
 /**
  * Benefit
@@ -357,17 +361,17 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenef
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Benefit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Benefit" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits.prototype, "benefit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitGroup", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitGroup", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits.prototype, "benefitGroup", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum["Branch"] = "Branch";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum["MobileBankingApp"] = "MobileBankingApp";
@@ -376,8 +380,8 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum["Post"] = "Post";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum["PostOffice"] = "PostOffice";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum["Text"] = "Text";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["AnyBusinessCustomer"] = "AnyBusinessCustomer";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["BusinessOnly"] = "BusinessOnly";
@@ -398,15 +402,15 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["StudentsOnly"] = "StudentsOnly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["TwoMonthsOfCourseStart"] = "TwoMonthsOfCourseStart";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["UcasFulltimeTwoYears"] = "UCASFulltimeTwoYears";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["ExistingCustomers"] = "ExistingCustomers";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["NewCustomersOnly"] = "NewCustomersOnly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["SwitchersOnly"] = "SwitchersOnly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["StartUp"] = "StartUp";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["HalfYearly"] = "HalfYearly";
@@ -414,8 +418,8 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Quarterly"] = "Quarterly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Weekly"] = "Weekly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Yearly"] = "Yearly";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Uk"] = "UK";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Eea"] = "EEA";
@@ -426,14 +430,14 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["GbSct"] = "GB - SCT";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["GbWls"] = "GB - WLS";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Irl"] = "IRL";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["Joint"] = "Joint";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["SoleIncome"] = "SoleIncome";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["SoleOrJoint"] = "SoleOrJoint";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["Turnover"] = "Turnover";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility
 /**
  * Eligibility
@@ -444,141 +448,141 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgeRestricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgeRestricted" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "ageRestricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualBusinessTurnover" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualBusinessTurnover" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "annualBusinessTurnover", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualBusinessTurnoverCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualBusinessTurnoverCurrency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "annualBusinessTurnoverCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityName" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityNotes" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncomeCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncomeCondition" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "incomeCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncomeTurnoverRelated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncomeTurnoverRelated" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "incomeTurnoverRelated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MarketingEligibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MarketingEligibility" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "marketingEligibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxNumberOfAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxNumberOfAccounts" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maxNumberOfAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumAge" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumAgeToOpen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumAgeToOpen" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumAgeToOpen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumOpeningAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumOpeningAmount" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumOpeningAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinIncomeTurnoverPaidIntoAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinIncomeTurnoverPaidIntoAccount" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minIncomeTurnoverPaidIntoAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumAge" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumDeposit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumDeposit" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumDeposit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeFrequency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeTurnoverAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeTurnoverAmount" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeTurnoverAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeTurnoverCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeTurnoverCurrency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeTurnoverCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalance" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalanceCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalanceCurrency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalanceCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalanceExists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalanceExists" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalanceExists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMaximumAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMaximumAmount" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMaximumAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMaximumCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMaximumCurrency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMaximumCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMinimum" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMinimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMinimumCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMinimumCurrency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMinimumCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OtherFinancialHoldingRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OtherFinancialHoldingRequired" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "otherFinancialHoldingRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousBankruptcy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousBankruptcy" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "previousBankruptcy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyRestricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyRestricted" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "residencyRestricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyRestrictedRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyRestrictedRegion" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "residencyRestrictedRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SingleJointIncome" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SingleJointIncome" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "singleJointIncome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThirdSectorOrganisations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThirdSectorOrganisations" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "thirdSectorOrganisations", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["AccountClosing"] = "AccountClosing";
@@ -601,7 +605,7 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["StatementMonthly"] = "StatementMonthly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["Weekly"] = "Weekly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["Yearly"] = "Yearly";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails
 /**
  * Fee Sub Details
@@ -612,49 +616,49 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesA
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeAmount" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeFrequency" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeHigherTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeHigherTier" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeHigherTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeLowerTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeLowerTier" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeLowerTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeMax" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeMin" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeRate" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndChargesNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndChargesNotes" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feesAndChargesNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Negotiable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Negotiable" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "negotiable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RepresentativeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RepresentativeRate" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "representativeRate", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["Other"] = "Other";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["AtmDonation"] = "ATMDonation";
@@ -1026,7 +1030,7 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterCashInOwn"] = "CounterCashInOwn";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterPaidTrans"] = "CounterPaidTrans";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterCashFeePercent"] = "CounterCashFeePercent";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail
 /**
  * Fee Detail
@@ -1037,42 +1041,42 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesA
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeSubDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeSubDetails" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "feeSubDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "feeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Other" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Other" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "other", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["Promotional"] = "Promotional";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["Regular"] = "Regular";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails
 /**
  * Fee Details
@@ -1083,16 +1087,16 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesA
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeDetail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeDetail" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails.prototype, "feeDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeSubType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails.prototype, "feeSubType", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees
 /**
  * Fees
@@ -1103,42 +1107,42 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesA
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeDetails", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeDetails", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeHigherTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeHigherTier" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeHigherTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeLowerTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeLowerTier" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeLowerTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["Promotional"] = "Promotional";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["Regular"] = "Regular";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges
 /**
  * Fees And Charges
@@ -1149,33 +1153,33 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesA
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Fees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Fees" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductState" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges.prototype, "productState", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum["OneYear"] = "1 year";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum["TwoYears"] = "2 years";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum["ThreeYears"] = "3 years";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum["FourYears"] = "4 years";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum["FiveYears"] = "5 years";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingLoanLengthIncrementEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum["Apr"] = "APR";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum["Aer"] = "AER";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum["Gross"] = "Gross";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum["Net"] = "Net";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum["RepApr"] = "RepApr";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRateComparisonTypeEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum["Daily"] = "Daily";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum["Flexible"] = "Flexible";
@@ -1185,8 +1189,8 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum["Quarterly"] = "Quarterly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum["Weekly"] = "Weekly";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum["Yearly"] = "Yearly";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingRepaymentFrequencyEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum["Pound5000"] = "\u00A35000";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum["Pound10000"] = "\u00A310000";
@@ -1196,7 +1200,7 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum["Other"] = "Other";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum["TierMaximum"] = "TierMaximum";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum["TierMinimum"] = "TierMinimum";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricingSizeIncrementEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing
 /**
  * Loan Pricing
@@ -1207,54 +1211,54 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanI
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndicativeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndicativeRate" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "indicativeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanLengthIncrement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanLengthIncrement" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "loanLengthIncrement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanLengthIncrementLower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanLengthIncrementLower" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "loanLengthIncrementLower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanLengthIncrementUpper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanLengthIncrementUpper" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "loanLengthIncrementUpper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanSizeBandLower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanSizeBandLower" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "loanSizeBandLower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanSizeBandUpper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanSizeBandUpper" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "loanSizeBandUpper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Negotiable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Negotiable" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "negotiable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateComparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateComparisonType" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "rateComparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RepaymentFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RepaymentFrequency" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "repaymentFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SizeIncrement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SizeIncrement" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing.prototype, "sizeIncrement", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum["Promotional"] = "Promotional";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum["Regular"] = "Regular";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem
 /**
  * Loan Item
@@ -1265,53 +1269,53 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanI
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CCARegulatedEntity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CCARegulatedEntity" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "ccaRegulatedEntity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsALowInterestRepaymentStartPossible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsALowInterestRepaymentStartPossible" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "isALowInterestRepaymentStartPossible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsThisAnInterestOnlyLoan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsThisAnInterestOnlyLoan" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "isThisAnInterestOnlyLoan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanPricing", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanPricing", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "loanPricing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductState" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "productState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "stopPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WillTheLoanBePaidInTrancheDrawdowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WillTheLoanBePaidInTrancheDrawdowns" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem.prototype, "willTheLoanBePaidInTrancheDrawdowns", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum["Uk"] = "UK";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum["Eu"] = "EU";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand
 /**
  * Brand
@@ -1322,16 +1326,16 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrgan
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkID" }),
         __metadata("design:type", String)
-    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkId", void 0);
+    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkIPOCode" }),
         __metadata("design:type", String)
-    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkIpoCode", void 0);
+    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkIPOCode", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName
 /**
  * Organisation Name
@@ -1342,12 +1346,12 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrgan
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LegalName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LegalName" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName.prototype, "legalName", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation
 /**
  * Parent organisation
@@ -1358,20 +1362,20 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrgan
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BIC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BIC" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LEI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LEI" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "lei", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganisationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganisationName" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "organisationName", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation;
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation
 /**
  * Organisation
@@ -1382,17 +1386,17 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrgan
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Brand" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentOrganisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentOrganisation" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation.prototype, "parentOrganisation", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["AgricultureSector"] = "AgricultureSector";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["AllSegmentsCorporate"] = "AllSegmentsCorporate";
@@ -1404,13 +1408,13 @@ export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDa
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["SmallLoan"] = "SmallLoan";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["SpecialisedSector"] = "SpecialisedSector";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["SwitchersOnly"] = "SwitchersOnly";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum["FlexibleBusinessLoan"] = "FlexibleBusinessLoan";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum["SmallBusinessLoan"] = "SmallBusinessLoan";
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum["SmeUnsecuredLoan"] = "SmeUnsecuredLoan";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum = {}));
 // GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData
 /**
  * SME Loan
@@ -1421,201 +1425,201 @@ var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData = /*
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArrearsTreatment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArrearsTreatment" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "arrearsTreatment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Benefits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Benefits" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Currency" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerAccessChannels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerAccessChannels" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "customerAccessChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Eligibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Eligibility" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "eligibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndCharges", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndCharges", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "feesAndCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoanItem", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoanItem", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "loanItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumLoanAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumLoanAmount" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "maximumLoanAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumLoanTerm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumLoanTerm" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "maximumLoanTerm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumLoanAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumLoanAmount" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "minimumLoanAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumLoanTerm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumLoanTerm" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "minimumLoanTerm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Organisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Organisation" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "organisation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentHoliday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentHoliday" }),
         __metadata("design:type", Boolean)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "paymentHoliday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductDescription" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductIdentifier" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductName" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductSegment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductSegment" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductTypeName" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productTypeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductURL" }),
         __metadata("design:type", Array)
-    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productUrl", void 0);
+    ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TsandCs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TsandCs" }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "tsandCs", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData };
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData;
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum["UseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions"] = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum["HttpsWwwOpenbankingOrgUkOpenLicence"] = "https://www.openbanking.org.uk/open-licence";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
-export var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
+var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
 (function (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum) {
     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum["HttpsWwwOpenbankingOrgUkTerms"] = "https://www.openbanking.org.uk/terms";
-})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
+})(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
 var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData, _super);
     function GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Agreement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Agreement" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "agreement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=License" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=License" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TermsOfUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TermsOfUse" }),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "termsOfUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalResults" }),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "totalResults", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
 var GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson, _super);
     function GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData }),
         __metadata("design:type", Array)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData)
     ], GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "meta", void 0);
     return GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
 var GetUnsecuredSmeLoansRequest = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoansRequest, _super);
     function GetUnsecuredSmeLoansRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoansHeaders)
     ], GetUnsecuredSmeLoansRequest.prototype, "headers", void 0);
     return GetUnsecuredSmeLoansRequest;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoansRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoansRequest = GetUnsecuredSmeLoansRequest;
 var GetUnsecuredSmeLoansResponse = /** @class */ (function (_super) {
     __extends(GetUnsecuredSmeLoansResponse, _super);
     function GetUnsecuredSmeLoansResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoans400ErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "fourHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoans408ErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "fourHundredAndEightErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoans429ErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "fourHundredAndTwentyNineErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoans500ErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "fiveHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoans503ErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "fiveHundredAndThreeErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUnsecuredSmeLoansResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUnsecuredSmeLoansErrorObject)
     ], GetUnsecuredSmeLoansResponse.prototype, "errorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson)
-    ], GetUnsecuredSmeLoansResponse.prototype, "getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetUnsecuredSmeLoansResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUnsecuredSmeLoansResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson)
+    ], GetUnsecuredSmeLoansResponse.prototype, "getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
     return GetUnsecuredSmeLoansResponse;
-}(SpeakeasyBase));
-export { GetUnsecuredSmeLoansResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUnsecuredSmeLoansResponse = GetUnsecuredSmeLoansResponse;

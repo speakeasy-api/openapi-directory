@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentRating } from "./contentrating";
-import { AccessPolicy } from "./accesspolicy";
-import { VideoContentDetailsRegionRestriction } from "./videocontentdetailsregionrestriction";
-export var VideoContentDetailsCaptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoContentDetails = exports.VideoContentDetailsProjectionEnum = exports.VideoContentDetailsDefinitionEnum = exports.VideoContentDetailsCaptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contentrating_1 = require("./contentrating");
+var accesspolicy_1 = require("./accesspolicy");
+var videocontentdetailsregionrestriction_1 = require("./videocontentdetailsregionrestriction");
+var VideoContentDetailsCaptionEnum;
 (function (VideoContentDetailsCaptionEnum) {
     VideoContentDetailsCaptionEnum["True"] = "true";
     VideoContentDetailsCaptionEnum["False"] = "false";
-})(VideoContentDetailsCaptionEnum || (VideoContentDetailsCaptionEnum = {}));
-export var VideoContentDetailsDefinitionEnum;
+})(VideoContentDetailsCaptionEnum = exports.VideoContentDetailsCaptionEnum || (exports.VideoContentDetailsCaptionEnum = {}));
+var VideoContentDetailsDefinitionEnum;
 (function (VideoContentDetailsDefinitionEnum) {
     VideoContentDetailsDefinitionEnum["Sd"] = "sd";
     VideoContentDetailsDefinitionEnum["Hd"] = "hd";
-})(VideoContentDetailsDefinitionEnum || (VideoContentDetailsDefinitionEnum = {}));
-export var VideoContentDetailsProjectionEnum;
+})(VideoContentDetailsDefinitionEnum = exports.VideoContentDetailsDefinitionEnum || (exports.VideoContentDetailsDefinitionEnum = {}));
+var VideoContentDetailsProjectionEnum;
 (function (VideoContentDetailsProjectionEnum) {
     VideoContentDetailsProjectionEnum["Rectangular"] = "rectangular";
     VideoContentDetailsProjectionEnum["ThreeHundredAndSixty"] = "360";
-})(VideoContentDetailsProjectionEnum || (VideoContentDetailsProjectionEnum = {}));
+})(VideoContentDetailsProjectionEnum = exports.VideoContentDetailsProjectionEnum || (exports.VideoContentDetailsProjectionEnum = {}));
 // VideoContentDetails
 /**
  * Details about the content of a YouTube Video.
@@ -51,45 +54,45 @@ var VideoContentDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], VideoContentDetails.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentRating" }),
-        __metadata("design:type", ContentRating)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentRating" }),
+        __metadata("design:type", contentrating_1.ContentRating)
     ], VideoContentDetails.prototype, "contentRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryRestriction" }),
-        __metadata("design:type", AccessPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryRestriction" }),
+        __metadata("design:type", accesspolicy_1.AccessPolicy)
     ], VideoContentDetails.prototype, "countryRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definition" }),
         __metadata("design:type", String)
     ], VideoContentDetails.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], VideoContentDetails.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], VideoContentDetails.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasCustomThumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasCustomThumbnail" }),
         __metadata("design:type", Boolean)
     ], VideoContentDetails.prototype, "hasCustomThumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licensedContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licensedContent" }),
         __metadata("design:type", Boolean)
     ], VideoContentDetails.prototype, "licensedContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projection" }),
         __metadata("design:type", String)
     ], VideoContentDetails.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionRestriction" }),
-        __metadata("design:type", VideoContentDetailsRegionRestriction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionRestriction" }),
+        __metadata("design:type", videocontentdetailsregionrestriction_1.VideoContentDetailsRegionRestriction)
     ], VideoContentDetails.prototype, "regionRestriction", void 0);
     return VideoContentDetails;
-}(SpeakeasyBase));
-export { VideoContentDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoContentDetails = VideoContentDetails;

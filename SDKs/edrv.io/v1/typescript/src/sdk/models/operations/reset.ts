@@ -19,7 +19,7 @@ export class Reset201ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -37,5 +37,5 @@ export class ResetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reset201ApplicationJsonObject?: Reset201ApplicationJson;
+  reset201ApplicationJSONObject?: Reset201ApplicationJson;
 }

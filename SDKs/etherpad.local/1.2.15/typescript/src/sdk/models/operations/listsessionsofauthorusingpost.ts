@@ -4,16 +4,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListSessionsOfAuthorUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
 export class ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -46,7 +46,7 @@ export class ListSessionsOfAuthorUsingPost400ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class ListSessionsOfAuthorUsingPost401ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class ListSessionsOfAuthorUsingPost500ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class ListSessionsOfAuthorUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listSessionsOfAuthorUsingPost200ApplicationJsonObject?: ListSessionsOfAuthorUsingPost200ApplicationJson;
+  listSessionsOfAuthorUsingPOST200ApplicationJSONObject?: ListSessionsOfAuthorUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfAuthorUsingPost400ApplicationJsonObject?: ListSessionsOfAuthorUsingPost400ApplicationJson;
+  listSessionsOfAuthorUsingPOST400ApplicationJSONObject?: ListSessionsOfAuthorUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfAuthorUsingPost401ApplicationJsonObject?: ListSessionsOfAuthorUsingPost401ApplicationJson;
+  listSessionsOfAuthorUsingPOST401ApplicationJSONObject?: ListSessionsOfAuthorUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfAuthorUsingPost500ApplicationJsonObject?: ListSessionsOfAuthorUsingPost500ApplicationJson;
+  listSessionsOfAuthorUsingPOST500ApplicationJSONObject?: ListSessionsOfAuthorUsingPost500ApplicationJson;
 }

@@ -70,5 +70,5 @@ export class UpdateAnApiVersionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateAnApiVersion200ApplicationJsonObject?: UpdateAnApiVersion200ApplicationJson;
+  updateAnApiVersion200ApplicationJSONObject?: UpdateAnApiVersion200ApplicationJson;
 }

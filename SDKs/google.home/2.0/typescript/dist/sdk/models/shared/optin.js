@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptIn = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptIn = /** @class */ (function (_super) {
     __extends(OptIn, _super);
     function OptIn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_hdr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_hdr" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "audioHdr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_surround_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_surround_mode" }),
         __metadata("design:type", Number)
     ], OptIn.prototype, "audioSurroundMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoplay_on_signal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoplay_on_signal" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "autoplayOnSignal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloud_ipc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloud_ipc" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "cloudIpc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hdmi_prefer_50hz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hdmi_prefer_50hz" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "hdmiPrefer50hz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hdmi_prefer_high_fps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hdmi_prefer_high_fps" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "hdmiPreferHighFps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managed_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managed_mode" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "managedMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opencast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opencast" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "opencast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_channel" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "previewChannel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remote_ducking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remote_ducking" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "remoteDucking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ui_flipped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ui_flipped" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "uiFlipped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wpa3_support_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wpa3_support_enabled" }),
         __metadata("design:type", Boolean)
     ], OptIn.prototype, "wpa3SupportEnabled", void 0);
     return OptIn;
-}(SpeakeasyBase));
-export { OptIn };
+}(utils_1.SpeakeasyBase));
+exports.OptIn = OptIn;

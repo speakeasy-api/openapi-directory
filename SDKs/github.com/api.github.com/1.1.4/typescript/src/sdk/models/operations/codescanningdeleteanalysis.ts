@@ -56,7 +56,7 @@ export class CodeScanningDeleteAnalysisResponse extends SpeakeasyBase {
   codeScanningAnalysisDeletion?: shared.CodeScanningAnalysisDeletion;
 
   @SpeakeasyMetadata()
-  codeScanningDeleteAnalysis503ApplicationJsonObject?: CodeScanningDeleteAnalysis503ApplicationJson;
+  codeScanningDeleteAnalysis503ApplicationJSONObject?: CodeScanningDeleteAnalysis503ApplicationJson;
 
   @SpeakeasyMetadata()
   scimError?: shared.ScimError;

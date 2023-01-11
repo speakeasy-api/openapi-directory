@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchContentMatch } from "./searchcontentmatch";
-import { SearchSegment } from "./searchsegment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchCodeSearchResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchcontentmatch_1 = require("./searchcontentmatch");
+var searchsegment_1 = require("./searchsegment");
 var SearchCodeSearchResult = /** @class */ (function (_super) {
     __extends(SearchCodeSearchResult, _super);
     function SearchCodeSearchResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_match_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_match_count" }),
         __metadata("design:type", Number)
     ], SearchCodeSearchResult.prototype, "contentMatchCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_matches", elemType: SearchContentMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_matches", elemType: searchcontentmatch_1.SearchContentMatch }),
         __metadata("design:type", Array)
     ], SearchCodeSearchResult.prototype, "contentMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", Object)
     ], SearchCodeSearchResult.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path_matches", elemType: SearchSegment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path_matches", elemType: searchsegment_1.SearchSegment }),
         __metadata("design:type", Array)
     ], SearchCodeSearchResult.prototype, "pathMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SearchCodeSearchResult.prototype, "type", void 0);
     return SearchCodeSearchResult;
-}(SpeakeasyBase));
-export { SearchCodeSearchResult };
+}(utils_1.SpeakeasyBase));
+exports.SearchCodeSearchResult = SearchCodeSearchResult;

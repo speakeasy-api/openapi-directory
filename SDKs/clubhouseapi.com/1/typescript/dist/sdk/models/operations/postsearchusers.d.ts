@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PostSearchUsersRequest extends SpeakeasyBase {
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class PostSearchUsersResponse extends SpeakeasyBase {
     contentType: string;

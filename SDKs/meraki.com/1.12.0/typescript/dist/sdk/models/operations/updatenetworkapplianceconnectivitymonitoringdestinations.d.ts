@@ -17,5 +17,5 @@ export declare class UpdateNetworkApplianceConnectivityMonitoringDestinationsReq
 export declare class UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

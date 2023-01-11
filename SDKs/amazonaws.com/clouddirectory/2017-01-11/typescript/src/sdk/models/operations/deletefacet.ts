@@ -52,7 +52,7 @@ export class DeleteFacetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteFacetResponse?: Map<string, any>;
+  deleteFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   facetInUseException?: any;

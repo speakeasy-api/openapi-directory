@@ -20,11 +20,11 @@ export class GetOfferingsOfferingIdAnalyticsPulsesResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  getOfferingsOfferingIdAnalyticsPulses200ApplicationJsonStrings?: string[];
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getOfferingsOfferingIdAnalyticsPulses200ApplicationJSONStrings?: string[];
 }

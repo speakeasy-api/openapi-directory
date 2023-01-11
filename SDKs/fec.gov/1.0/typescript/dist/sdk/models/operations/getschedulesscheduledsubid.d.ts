@@ -76,6 +76,6 @@ export declare class GetSchedulesScheduleDSubIdRequest extends SpeakeasyBase {
 }
 export declare class GetSchedulesScheduleDSubIdResponse extends SpeakeasyBase {
     contentType: string;
-    getSchedulesScheduleDSubIdDefaultApplicationJsonObject?: GetSchedulesScheduleDSubIdDefaultApplicationJson;
     statusCode: number;
+    getSchedulesScheduleDSubIdDefaultApplicationJSONObject?: GetSchedulesScheduleDSubIdDefaultApplicationJson;
 }

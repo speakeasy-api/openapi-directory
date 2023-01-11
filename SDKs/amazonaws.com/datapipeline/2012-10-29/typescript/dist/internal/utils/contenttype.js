@@ -1,4 +1,7 @@
-export function MatchContentType(contentType, pattern) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.matchContentType = void 0;
+function matchContentType(contentType, pattern) {
     var res = false;
     contentType
         .split(";")
@@ -24,3 +27,4 @@ export function MatchContentType(contentType, pattern) {
     });
     return res;
 }
+exports.matchContentType = matchContentType;

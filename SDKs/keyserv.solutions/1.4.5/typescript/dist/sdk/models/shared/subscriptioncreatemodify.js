@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionCreateModify = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubscriptionCreateModify = /** @class */ (function (_super) {
     __extends(SubscriptionCreateModify, _super);
     function SubscriptionCreateModify() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackOnModify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackOnModify" }),
         __metadata("design:type", Boolean)
     ], SubscriptionCreateModify.prototype, "callbackOnModify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackUrl" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "callbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], SubscriptionCreateModify.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startFrom" }),
         __metadata("design:type", String)
     ], SubscriptionCreateModify.prototype, "startFrom", void 0);
     return SubscriptionCreateModify;
-}(SpeakeasyBase));
-export { SubscriptionCreateModify };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionCreateModify = SubscriptionCreateModify;

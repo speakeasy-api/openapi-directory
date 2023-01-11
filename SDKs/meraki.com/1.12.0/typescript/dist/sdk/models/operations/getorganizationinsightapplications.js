@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationInsightApplicationsResponse = exports.GetOrganizationInsightApplicationsRequest = exports.GetOrganizationInsightApplicationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationInsightApplicationsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationInsightApplicationsPathParams, _super);
     function GetOrganizationInsightApplicationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationInsightApplicationsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationInsightApplicationsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationInsightApplicationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInsightApplicationsPathParams = GetOrganizationInsightApplicationsPathParams;
 var GetOrganizationInsightApplicationsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationInsightApplicationsRequest, _super);
     function GetOrganizationInsightApplicationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationInsightApplicationsPathParams)
     ], GetOrganizationInsightApplicationsRequest.prototype, "pathParams", void 0);
     return GetOrganizationInsightApplicationsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationInsightApplicationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInsightApplicationsRequest = GetOrganizationInsightApplicationsRequest;
 var GetOrganizationInsightApplicationsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationInsightApplicationsResponse, _super);
     function GetOrganizationInsightApplicationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationInsightApplicationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationInsightApplicationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationInsightApplicationsResponse.prototype, "getOrganizationInsightApplications200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationInsightApplicationsResponse.prototype, "getOrganizationInsightApplications200ApplicationJSONObject", void 0);
     return GetOrganizationInsightApplicationsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationInsightApplicationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInsightApplicationsResponse = GetOrganizationInsightApplicationsResponse;

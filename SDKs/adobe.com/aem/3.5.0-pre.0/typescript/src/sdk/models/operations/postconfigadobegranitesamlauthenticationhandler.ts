@@ -10,10 +10,10 @@ export class PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams extends 
   addGroupMembershipsAtTypeHint?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assertionConsumerServiceURL" })
-  assertionConsumerServiceUrl?: string;
+  assertionConsumerServiceURL?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assertionConsumerServiceURL@TypeHint" })
-  assertionConsumerServiceUrlAtTypeHint?: string;
+  assertionConsumerServiceURLAtTypeHint?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clockTolerance" })
   clockTolerance?: number;
@@ -136,10 +136,10 @@ export class PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams extends 
   useEncryptionAtTypeHint?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIDAttribute" })
-  userIdAttribute?: string;
+  userIDAttribute?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIDAttribute@TypeHint" })
-  userIdAttributeAtTypeHint?: string;
+  userIDAttributeAtTypeHint?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIntermediatePath" })
   userIntermediatePath?: string;

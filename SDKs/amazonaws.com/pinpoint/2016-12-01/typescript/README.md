@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAppRequest, CreateAppResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,25 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateAppRequest = {
   headers: {
-    xAmzAlgorithm: "dolor",
-    xAmzContentSha256: "quidem",
-    xAmzCredential: "nulla",
-    xAmzDate: "dolores",
-    xAmzSecurityToken: "fuga",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "qui",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     createApplicationRequest: {
-      name: "voluptatum",
+      name: "voluptas",
       tags: {
-        "distinctio": "dicta",
-        "tenetur": "suscipit",
+        "et": "nihil",
       },
     },
   },
 };
 
-sdk.sdk.createApp(req).then((res: CreateAppResponse | AxiosError) => {
+sdk.createApp(req).then((res: CreateAppResponse | AxiosError) => {
    // handle response
 });
 ```

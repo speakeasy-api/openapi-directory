@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateConfigurationSetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateConfigurationSetResponse = exports.GetCreateConfigurationSetRequest = exports.GetCreateConfigurationSetHeaders = exports.GetCreateConfigurationSetQueryParams = exports.GetCreateConfigurationSetVersionEnum = exports.GetCreateConfigurationSetConfigurationSet = exports.GetCreateConfigurationSetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateConfigurationSetActionEnum;
 (function (GetCreateConfigurationSetActionEnum) {
     GetCreateConfigurationSetActionEnum["CreateConfigurationSet"] = "CreateConfigurationSet";
-})(GetCreateConfigurationSetActionEnum || (GetCreateConfigurationSetActionEnum = {}));
+})(GetCreateConfigurationSetActionEnum = exports.GetCreateConfigurationSetActionEnum || (exports.GetCreateConfigurationSetActionEnum = {}));
 // GetCreateConfigurationSetConfigurationSet
 /**
  * <p>The name of the configuration set.</p> <p>Configuration sets let you create groups of rules that you can apply to the emails you send using Amazon SES. For more information about using configuration sets, see <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html">Using Amazon SES Configuration Sets</a> in the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/">Amazon SES Developer Guide</a>.</p>
@@ -37,105 +40,105 @@ var GetCreateConfigurationSetConfigurationSet = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=Name" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetConfigurationSet.prototype, "name", void 0);
     return GetCreateConfigurationSetConfigurationSet;
-}(SpeakeasyBase));
-export { GetCreateConfigurationSetConfigurationSet };
-export var GetCreateConfigurationSetVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCreateConfigurationSetConfigurationSet = GetCreateConfigurationSetConfigurationSet;
+var GetCreateConfigurationSetVersionEnum;
 (function (GetCreateConfigurationSetVersionEnum) {
     GetCreateConfigurationSetVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetCreateConfigurationSetVersionEnum || (GetCreateConfigurationSetVersionEnum = {}));
+})(GetCreateConfigurationSetVersionEnum = exports.GetCreateConfigurationSetVersionEnum || (exports.GetCreateConfigurationSetVersionEnum = {}));
 var GetCreateConfigurationSetQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateConfigurationSetQueryParams, _super);
     function GetCreateConfigurationSetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConfigurationSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConfigurationSet" }),
         __metadata("design:type", GetCreateConfigurationSetConfigurationSet)
     ], GetCreateConfigurationSetQueryParams.prototype, "configurationSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetQueryParams.prototype, "version", void 0);
     return GetCreateConfigurationSetQueryParams;
-}(SpeakeasyBase));
-export { GetCreateConfigurationSetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateConfigurationSetQueryParams = GetCreateConfigurationSetQueryParams;
 var GetCreateConfigurationSetHeaders = /** @class */ (function (_super) {
     __extends(GetCreateConfigurationSetHeaders, _super);
     function GetCreateConfigurationSetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateConfigurationSetHeaders;
-}(SpeakeasyBase));
-export { GetCreateConfigurationSetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateConfigurationSetHeaders = GetCreateConfigurationSetHeaders;
 var GetCreateConfigurationSetRequest = /** @class */ (function (_super) {
     __extends(GetCreateConfigurationSetRequest, _super);
     function GetCreateConfigurationSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateConfigurationSetQueryParams)
     ], GetCreateConfigurationSetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateConfigurationSetHeaders)
     ], GetCreateConfigurationSetRequest.prototype, "headers", void 0);
     return GetCreateConfigurationSetRequest;
-}(SpeakeasyBase));
-export { GetCreateConfigurationSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateConfigurationSetRequest = GetCreateConfigurationSetRequest;
 var GetCreateConfigurationSetResponse = /** @class */ (function (_super) {
     __extends(GetCreateConfigurationSetResponse, _super);
     function GetCreateConfigurationSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateConfigurationSetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateConfigurationSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateConfigurationSetResponse.prototype, "statusCode", void 0);
     return GetCreateConfigurationSetResponse;
-}(SpeakeasyBase));
-export { GetCreateConfigurationSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateConfigurationSetResponse = GetCreateConfigurationSetResponse;

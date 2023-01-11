@@ -55,10 +55,10 @@ export declare class CreateTemplateRequest extends SpeakeasyBase {
 export declare class CreateTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createTemplate200ApplicationJsonObject?: CreateTemplate200ApplicationJson;
-    createTemplate401ApplicationJsonObject?: CreateTemplate401ApplicationJson;
-    createTemplate403ApplicationJsonObject?: CreateTemplate403ApplicationJson;
-    createTemplate404ApplicationJsonObject?: CreateTemplate404ApplicationJson;
-    createTemplate422ApplicationJsonObject?: CreateTemplate422ApplicationJson;
-    createTemplate500ApplicationJsonObject?: CreateTemplate500ApplicationJson;
+    createTemplate200ApplicationJSONObject?: CreateTemplate200ApplicationJson;
+    createTemplate401ApplicationJSONObject?: CreateTemplate401ApplicationJson;
+    createTemplate403ApplicationJSONObject?: CreateTemplate403ApplicationJson;
+    createTemplate404ApplicationJSONObject?: CreateTemplate404ApplicationJson;
+    createTemplate422ApplicationJSONObject?: CreateTemplate422ApplicationJson;
+    createTemplate500ApplicationJSONObject?: CreateTemplate500ApplicationJson;
 }

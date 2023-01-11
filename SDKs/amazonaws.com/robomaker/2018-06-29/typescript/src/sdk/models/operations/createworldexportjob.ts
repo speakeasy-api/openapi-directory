@@ -51,7 +51,7 @@ export class CreateWorldExportJobRequestBody extends SpeakeasyBase {
   outputLocation: CreateWorldExportJobRequestBodyOutputLocation;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=worlds" })
   worlds: string[];

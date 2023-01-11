@@ -4,7 +4,7 @@ export declare class PostV05SubscriptionRequestsCmInitHeaders extends SpeakeasyB
     authorization: string;
 }
 export declare class PostV05SubscriptionRequestsCmInitRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     subscriptionRequest?: shared.SubscriptionRequest;
 }
 export declare class PostV05SubscriptionRequestsCmInitRequest extends SpeakeasyBase {

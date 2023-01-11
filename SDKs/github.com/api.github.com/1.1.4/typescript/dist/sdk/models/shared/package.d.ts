@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Simple User
+**/
 export declare class PackageSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -35,6 +38,9 @@ export declare class PackageMinimalRepositoryLicense extends SpeakeasyBase {
     spdxId?: string;
     url?: string;
 }
+/**
+ * Simple User
+**/
 export declare class PackageMinimalRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -61,6 +67,9 @@ export declare class PackageMinimalRepositoryPermissions extends SpeakeasyBase {
     pull?: boolean;
     push?: boolean;
 }
+/**
+ * License Simple
+**/
 export declare class PackageMinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -69,6 +78,9 @@ export declare class PackageMinimalRepositoryRepositoryLicenseSimple extends Spe
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class PackageMinimalRepositoryRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -204,6 +216,9 @@ export declare class PackageMinimalRepositoryRepositoryTemplateRepository extend
     visibility?: string;
     watchersCount?: number;
 }
+/**
+ * A git repository
+**/
 export declare class PackageMinimalRepositoryRepository extends SpeakeasyBase {
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;
@@ -293,6 +308,9 @@ export declare class PackageMinimalRepositoryRepository extends SpeakeasyBase {
     watchers: number;
     watchersCount: number;
 }
+/**
+ * Minimal Repository
+**/
 export declare class PackageMinimalRepository extends SpeakeasyBase {
     archiveUrl: string;
     archived?: boolean;

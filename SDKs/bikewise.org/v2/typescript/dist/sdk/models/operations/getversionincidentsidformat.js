@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVersionIncidentsIdFormatResponse = exports.GetVersionIncidentsIdFormatRequest = exports.GetVersionIncidentsIdFormatPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVersionIncidentsIdFormatPathParams = /** @class */ (function (_super) {
     __extends(GetVersionIncidentsIdFormatPathParams, _super);
     function GetVersionIncidentsIdFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetVersionIncidentsIdFormatPathParams.prototype, "id", void 0);
     return GetVersionIncidentsIdFormatPathParams;
-}(SpeakeasyBase));
-export { GetVersionIncidentsIdFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionIncidentsIdFormatPathParams = GetVersionIncidentsIdFormatPathParams;
 var GetVersionIncidentsIdFormatRequest = /** @class */ (function (_super) {
     __extends(GetVersionIncidentsIdFormatRequest, _super);
     function GetVersionIncidentsIdFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVersionIncidentsIdFormatPathParams)
     ], GetVersionIncidentsIdFormatRequest.prototype, "pathParams", void 0);
     return GetVersionIncidentsIdFormatRequest;
-}(SpeakeasyBase));
-export { GetVersionIncidentsIdFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionIncidentsIdFormatRequest = GetVersionIncidentsIdFormatRequest;
 var GetVersionIncidentsIdFormatResponse = /** @class */ (function (_super) {
     __extends(GetVersionIncidentsIdFormatResponse, _super);
     function GetVersionIncidentsIdFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVersionIncidentsIdFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVersionIncidentsIdFormatResponse.prototype, "statusCode", void 0);
     return GetVersionIncidentsIdFormatResponse;
-}(SpeakeasyBase));
-export { GetVersionIncidentsIdFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionIncidentsIdFormatResponse = GetVersionIncidentsIdFormatResponse;

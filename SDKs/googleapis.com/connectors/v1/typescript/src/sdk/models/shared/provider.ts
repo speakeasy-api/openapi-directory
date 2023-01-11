@@ -30,7 +30,7 @@ export class Provider extends SpeakeasyBase {
   externalUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=launchStage" })
   launchStage?: ProviderLaunchStageEnum;

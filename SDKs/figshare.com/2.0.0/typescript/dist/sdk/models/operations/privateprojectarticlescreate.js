@@ -1,0 +1,152 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateProjectArticlesCreateResponse = exports.PrivateProjectArticlesCreateRequest = exports.PrivateProjectArticlesCreateSecurity = exports.PrivateProjectArticlesCreateQueryParams = exports.PrivateProjectArticlesCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var PrivateProjectArticlesCreatePathParams = /** @class */ (function (_super) {
+    __extends(PrivateProjectArticlesCreatePathParams, _super);
+    function PrivateProjectArticlesCreatePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_id" }),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreatePathParams.prototype, "projectId", void 0);
+    return PrivateProjectArticlesCreatePathParams;
+}(utils_1.SpeakeasyBase));
+exports.PrivateProjectArticlesCreatePathParams = PrivateProjectArticlesCreatePathParams;
+var PrivateProjectArticlesCreateQueryParams = /** @class */ (function (_super) {
+    __extends(PrivateProjectArticlesCreateQueryParams, _super);
+    function PrivateProjectArticlesCreateQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreateQueryParams.prototype, "limit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreateQueryParams.prototype, "offset", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreateQueryParams.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreateQueryParams.prototype, "pageSize", void 0);
+    return PrivateProjectArticlesCreateQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.PrivateProjectArticlesCreateQueryParams = PrivateProjectArticlesCreateQueryParams;
+var PrivateProjectArticlesCreateSecurity = /** @class */ (function (_super) {
+    __extends(PrivateProjectArticlesCreateSecurity, _super);
+    function PrivateProjectArticlesCreateSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
+        __metadata("design:type", shared.SchemeOAuth2)
+    ], PrivateProjectArticlesCreateSecurity.prototype, "oAuth2", void 0);
+    return PrivateProjectArticlesCreateSecurity;
+}(utils_1.SpeakeasyBase));
+exports.PrivateProjectArticlesCreateSecurity = PrivateProjectArticlesCreateSecurity;
+var PrivateProjectArticlesCreateRequest = /** @class */ (function (_super) {
+    __extends(PrivateProjectArticlesCreateRequest, _super);
+    function PrivateProjectArticlesCreateRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PrivateProjectArticlesCreatePathParams)
+    ], PrivateProjectArticlesCreateRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PrivateProjectArticlesCreateQueryParams)
+    ], PrivateProjectArticlesCreateRequest.prototype, "queryParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", shared.ArticleProjectCreate)
+    ], PrivateProjectArticlesCreateRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PrivateProjectArticlesCreateSecurity)
+    ], PrivateProjectArticlesCreateRequest.prototype, "security", void 0);
+    return PrivateProjectArticlesCreateRequest;
+}(utils_1.SpeakeasyBase));
+exports.PrivateProjectArticlesCreateRequest = PrivateProjectArticlesCreateRequest;
+var PrivateProjectArticlesCreateResponse = /** @class */ (function (_super) {
+    __extends(PrivateProjectArticlesCreateResponse, _super);
+    function PrivateProjectArticlesCreateResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], PrivateProjectArticlesCreateResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ErrorMessage)
+    ], PrivateProjectArticlesCreateResponse.prototype, "errorMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], PrivateProjectArticlesCreateResponse.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.Location)
+    ], PrivateProjectArticlesCreateResponse.prototype, "location", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], PrivateProjectArticlesCreateResponse.prototype, "statusCode", void 0);
+    return PrivateProjectArticlesCreateResponse;
+}(utils_1.SpeakeasyBase));
+exports.PrivateProjectArticlesCreateResponse = PrivateProjectArticlesCreateResponse;

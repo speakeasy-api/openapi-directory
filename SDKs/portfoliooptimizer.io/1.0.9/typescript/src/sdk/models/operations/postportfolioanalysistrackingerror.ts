@@ -40,8 +40,8 @@ export class PostPortfolioAnalysisTrackingErrorResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisTrackingError200ApplicationJsonObject?: PostPortfolioAnalysisTrackingError200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisTrackingError200ApplicationJSONObject?: PostPortfolioAnalysisTrackingError200ApplicationJson;
 }

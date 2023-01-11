@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagCompact = void 0;
+var utils_1 = require("../../../internal/utils");
+// TagCompact
+/**
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 var TagCompact = /** @class */ (function (_super) {
     __extends(TagCompact, _super);
     function TagCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], TagCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagCompact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], TagCompact.prototype, "resourceType", void 0);
     return TagCompact;
-}(SpeakeasyBase));
-export { TagCompact };
+}(utils_1.SpeakeasyBase));
+exports.TagCompact = TagCompact;

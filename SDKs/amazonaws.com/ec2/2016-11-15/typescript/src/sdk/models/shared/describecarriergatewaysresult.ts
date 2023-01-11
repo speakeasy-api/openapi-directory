@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CarrierGateway } from "./carriergateway";
 
 
 
 export class DescribeCarrierGatewaysResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CarrierGateway })
-  carrierGateways?: CarrierGateway[];
+  @SpeakeasyMetadata()
+  carrierGateways?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

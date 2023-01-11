@@ -24,7 +24,7 @@ export declare class ProductOrderConciergeRequest extends SpeakeasyBase {
 }
 export declare class ProductOrderConciergeResponse extends SpeakeasyBase {
     contentType: string;
-    productOrderConcierge200ApplicationJsonAny?: any;
-    productOrderConciergeDefaultApplicationJsonAny?: any;
+    productOrderConcierge200ApplicationJSONAny?: any;
+    productOrderConciergeDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

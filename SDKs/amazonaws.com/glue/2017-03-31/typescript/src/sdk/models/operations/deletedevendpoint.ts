@@ -48,7 +48,7 @@ export class DeleteDevEndpointResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDevEndpointResponse?: Map<string, any>;
+  deleteDevEndpointResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

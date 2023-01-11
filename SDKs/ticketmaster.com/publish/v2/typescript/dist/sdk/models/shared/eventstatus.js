@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EventStatusCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventStatus = exports.EventStatusCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EventStatusCodeEnum;
 (function (EventStatusCodeEnum) {
     EventStatusCodeEnum["Onsale"] = "onsale";
     EventStatusCodeEnum["Offsale"] = "offsale";
     EventStatusCodeEnum["Canceled"] = "canceled";
     EventStatusCodeEnum["Postponed"] = "postponed";
     EventStatusCodeEnum["Rescheduled"] = "rescheduled";
-})(EventStatusCodeEnum || (EventStatusCodeEnum = {}));
+})(EventStatusCodeEnum = exports.EventStatusCodeEnum || (exports.EventStatusCodeEnum = {}));
 // EventStatus
 /**
  * Event's Status
@@ -41,9 +44,9 @@ var EventStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], EventStatus.prototype, "code", void 0);
     return EventStatus;
-}(SpeakeasyBase));
-export { EventStatus };
+}(utils_1.SpeakeasyBase));
+exports.EventStatus = EventStatus;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RgdidListRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var RgdidListRequest = /** @class */ (function (_super) {
     __extends(RgdidListRequest, _super);
     function RgdidListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rgdIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rgdIds" }),
         __metadata("design:type", Array)
     ], RgdidListRequest.prototype, "rgdIds", void 0);
     return RgdidListRequest;
-}(SpeakeasyBase));
-export { RgdidListRequest };
+}(utils_1.SpeakeasyBase));
+exports.RgdidListRequest = RgdidListRequest;

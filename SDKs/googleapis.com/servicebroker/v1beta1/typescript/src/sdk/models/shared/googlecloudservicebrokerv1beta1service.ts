@@ -34,7 +34,7 @@ export class GoogleCloudServicebrokerV1beta1Service extends SpeakeasyBase {
   instancesRetrievable?: boolean;
 
   @SpeakeasyMetadata()
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata()
   name?: string;

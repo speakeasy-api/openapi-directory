@@ -79,5 +79,5 @@ export declare class DcimPowerFeedsListRequest extends SpeakeasyBase {
 export declare class DcimPowerFeedsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerFeedsList200ApplicationJsonObject?: DcimPowerFeedsList200ApplicationJson;
+    dcimPowerFeedsList200ApplicationJSONObject?: DcimPowerFeedsList200ApplicationJson;
 }

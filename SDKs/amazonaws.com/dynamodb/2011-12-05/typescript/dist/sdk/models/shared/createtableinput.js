@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeySchema } from "./keyschema";
-import { ProvisionedThroughput } from "./provisionedthroughput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTableInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyschema_1 = require("./keyschema");
+var provisionedthroughput_1 = require("./provisionedthroughput");
 var CreateTableInput = /** @class */ (function (_super) {
     __extends(CreateTableInput, _super);
     function CreateTableInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeySchema" }),
-        __metadata("design:type", KeySchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeySchema" }),
+        __metadata("design:type", keyschema_1.KeySchema)
     ], CreateTableInput.prototype, "keySchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProvisionedThroughput" }),
-        __metadata("design:type", ProvisionedThroughput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProvisionedThroughput" }),
+        __metadata("design:type", provisionedthroughput_1.ProvisionedThroughput)
     ], CreateTableInput.prototype, "provisionedThroughput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], CreateTableInput.prototype, "tableName", void 0);
     return CreateTableInput;
-}(SpeakeasyBase));
-export { CreateTableInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateTableInput = CreateTableInput;

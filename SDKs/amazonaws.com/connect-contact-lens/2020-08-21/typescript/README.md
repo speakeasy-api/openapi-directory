@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ListRealtimeContactAnalysisSegmentsRequest, ListRealtimeContactAnalysisSegmentsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,27 @@ const sdk = new SDK(WithSecurity(
     
 const req: ListRealtimeContactAnalysisSegmentsRequest = {
   queryParams: {
-    maxResults: "veniam",
-    nextToken: "impedit",
+    maxResults: "sit",
+    nextToken: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "ex",
-    xAmzContentSha256: "ipsum",
-    xAmzCredential: "cupiditate",
-    xAmzDate: "sunt",
-    xAmzSecurityToken: "incidunt",
-    xAmzSignature: "sed",
-    xAmzSignedHeaders: "repellendus",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
   request: {
-    contactId: "error",
-    instanceId: "nostrum",
-    maxResults: 3238009331685119075,
-    nextToken: "nihil",
+    contactId: "et",
+    instanceId: "nihil",
+    maxResults: 8325060299420976708,
+    nextToken: "dicta",
   },
 };
 
-sdk.sdk.listRealtimeContactAnalysisSegments(req).then((res: ListRealtimeContactAnalysisSegmentsResponse | AxiosError) => {
+sdk.listRealtimeContactAnalysisSegments(req).then((res: ListRealtimeContactAnalysisSegmentsResponse | AxiosError) => {
    // handle response
 });
 ```

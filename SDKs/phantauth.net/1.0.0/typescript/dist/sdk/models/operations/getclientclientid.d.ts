@@ -28,6 +28,6 @@ export declare class GetClientClientIdRequest extends SpeakeasyBase {
 }
 export declare class GetClientClientIdResponse extends SpeakeasyBase {
     contentType: string;
-    getClientClientId200ApplicationJsonObject?: GetClientClientId200ApplicationJson;
     statusCode: number;
+    getClientClientId200ApplicationJSONObject?: GetClientClientId200ApplicationJson;
 }

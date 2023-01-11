@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayrollCalendar } from "./payrollcalendar";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayrollCalendars = void 0;
+var utils_1 = require("../../../internal/utils");
+var payrollcalendar_1 = require("./payrollcalendar");
 var PayrollCalendars = /** @class */ (function (_super) {
     __extends(PayrollCalendars, _super);
     function PayrollCalendars() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayrollCalendars", elemType: PayrollCalendar }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayrollCalendars", elemType: payrollcalendar_1.PayrollCalendar }),
         __metadata("design:type", Array)
     ], PayrollCalendars.prototype, "payrollCalendars", void 0);
     return PayrollCalendars;
-}(SpeakeasyBase));
-export { PayrollCalendars };
+}(utils_1.SpeakeasyBase));
+exports.PayrollCalendars = PayrollCalendars;

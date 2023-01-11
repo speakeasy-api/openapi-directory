@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WltRecord } from "./wltrecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamEventStatusRank = exports.TeamEventStatusRankSortOrderInfo = exports.TeamEventStatusRankRanking = void 0;
+var utils_1 = require("../../../internal/utils");
+var wltrecord_1 = require("./wltrecord");
 var TeamEventStatusRankRanking = /** @class */ (function (_super) {
     __extends(TeamEventStatusRankRanking, _super);
     function TeamEventStatusRankRanking() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dq" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dq" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRankRanking.prototype, "dq", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matches_played" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matches_played" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRankRanking.prototype, "matchesPlayed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qual_average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qual_average" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRankRanking.prototype, "qualAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRankRanking.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=record" }),
-        __metadata("design:type", WltRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=record" }),
+        __metadata("design:type", wltrecord_1.WltRecord)
     ], TeamEventStatusRankRanking.prototype, "record", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort_orders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort_orders" }),
         __metadata("design:type", Array)
     ], TeamEventStatusRankRanking.prototype, "sortOrders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_key" }),
         __metadata("design:type", String)
     ], TeamEventStatusRankRanking.prototype, "teamKey", void 0);
     return TeamEventStatusRankRanking;
-}(SpeakeasyBase));
-export { TeamEventStatusRankRanking };
+}(utils_1.SpeakeasyBase));
+exports.TeamEventStatusRankRanking = TeamEventStatusRankRanking;
 var TeamEventStatusRankSortOrderInfo = /** @class */ (function (_super) {
     __extends(TeamEventStatusRankSortOrderInfo, _super);
     function TeamEventStatusRankSortOrderInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamEventStatusRankSortOrderInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precision" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRankSortOrderInfo.prototype, "precision", void 0);
     return TeamEventStatusRankSortOrderInfo;
-}(SpeakeasyBase));
-export { TeamEventStatusRankSortOrderInfo };
+}(utils_1.SpeakeasyBase));
+exports.TeamEventStatusRankSortOrderInfo = TeamEventStatusRankSortOrderInfo;
 var TeamEventStatusRank = /** @class */ (function (_super) {
     __extends(TeamEventStatusRank, _super);
     function TeamEventStatusRank() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_teams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_teams" }),
         __metadata("design:type", Number)
     ], TeamEventStatusRank.prototype, "numTeams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranking" }),
         __metadata("design:type", TeamEventStatusRankRanking)
     ], TeamEventStatusRank.prototype, "ranking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort_order_info", elemType: TeamEventStatusRankSortOrderInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort_order_info", elemType: TeamEventStatusRankSortOrderInfo }),
         __metadata("design:type", Array)
     ], TeamEventStatusRank.prototype, "sortOrderInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TeamEventStatusRank.prototype, "status", void 0);
     return TeamEventStatusRank;
-}(SpeakeasyBase));
-export { TeamEventStatusRank };
+}(utils_1.SpeakeasyBase));
+exports.TeamEventStatusRank = TeamEventStatusRank;

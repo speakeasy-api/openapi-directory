@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateUserScheduleRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateUserScheduleRequest
 /**
  * The type that defines the fields for a schedule update to a schedule generated with the Feed API.
@@ -33,33 +36,33 @@ var UpdateUserScheduleRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerDayOfMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerDayOfMonth" }),
         __metadata("design:type", Number)
     ], UpdateUserScheduleRequest.prototype, "preferredTriggerDayOfMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerDayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerDayOfWeek" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "preferredTriggerDayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerHour" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "preferredTriggerHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleEndDate" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "scheduleEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleName" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "scheduleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleStartDate" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "scheduleStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", String)
     ], UpdateUserScheduleRequest.prototype, "schemaVersion", void 0);
     return UpdateUserScheduleRequest;
-}(SpeakeasyBase));
-export { UpdateUserScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserScheduleRequest = UpdateUserScheduleRequest;

@@ -1,28 +1,26 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceUsage } from "./instanceusage";
-import { CapacityReservationStateEnum } from "./capacityreservationstateenum";
 
 
 
 export class GetCapacityReservationUsageResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  availableInstanceCount?: number;
+  availableInstanceCount?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  capacityReservationId?: string;
+  capacityReservationId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  instanceType?: string;
-
-  @SpeakeasyMetadata({ elemType: InstanceUsage })
-  instanceUsages?: InstanceUsage[];
+  instanceType?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  instanceUsages?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  state?: CapacityReservationStateEnum;
+  nextToken?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  totalInstanceCount?: number;
+  state?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  totalInstanceCount?: Record<string, any>;
 }

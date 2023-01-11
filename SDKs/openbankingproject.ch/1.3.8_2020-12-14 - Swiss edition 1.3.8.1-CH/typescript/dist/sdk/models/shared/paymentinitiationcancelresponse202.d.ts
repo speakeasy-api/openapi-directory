@@ -8,7 +8,7 @@ import { TransactionStatusEnum } from "./transactionstatusenum";
  * Body of the response for a successful cancel payment request.
 **/
 export declare class PaymentInitiationCancelResponse202 extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     challengeData?: ChallengeData;
     chosenScaMethod?: ChosenScaMethod;
     scaMethods?: AuthenticationObject[];

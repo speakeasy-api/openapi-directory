@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstancesCount } from "./instancescount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancescount_1 = require("./instancescount");
 // StackSummary
 /**
  * Summarizes the number of layers, instances, and apps in a stack.
@@ -34,29 +37,29 @@ var StackSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppsCount" }),
         __metadata("design:type", Number)
     ], StackSummary.prototype, "appsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], StackSummary.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstancesCount" }),
-        __metadata("design:type", InstancesCount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstancesCount" }),
+        __metadata("design:type", instancescount_1.InstancesCount)
     ], StackSummary.prototype, "instancesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayersCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayersCount" }),
         __metadata("design:type", Number)
     ], StackSummary.prototype, "layersCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], StackSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], StackSummary.prototype, "stackId", void 0);
     return StackSummary;
-}(SpeakeasyBase));
-export { StackSummary };
+}(utils_1.SpeakeasyBase));
+exports.StackSummary = StackSummary;

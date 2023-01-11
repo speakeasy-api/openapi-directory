@@ -42,7 +42,7 @@ export declare class GetHlsStreamingSessionUrlRequestBody extends SpeakeasyBase 
     hlsFragmentSelector?: GetHlsStreamingSessionUrlRequestBodyHlsFragmentSelector;
     maxMediaPlaylistFragmentResults?: number;
     playbackMode?: GetHlsStreamingSessionUrlRequestBodyPlaybackModeEnum;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetHlsStreamingSessionUrlRequest extends SpeakeasyBase {
@@ -52,7 +52,7 @@ export declare class GetHlsStreamingSessionUrlRequest extends SpeakeasyBase {
 export declare class GetHlsStreamingSessionUrlResponse extends SpeakeasyBase {
     clientLimitExceededException?: any;
     contentType: string;
-    getHlsStreamingSessionUrlOutput?: shared.GetHlsStreamingSessionUrlOutput;
+    getHLSStreamingSessionURLOutput?: shared.GetHlsStreamingSessionUrlOutput;
     invalidArgumentException?: any;
     invalidCodecPrivateDataException?: any;
     missingCodecPrivateDataException?: any;

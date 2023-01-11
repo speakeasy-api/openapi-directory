@@ -33,8 +33,8 @@ export class GetCityResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCity200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCity200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,290 +14,315 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimPlatformsListResponse = exports.DcimPlatformsListRequest = exports.DcimPlatformsList200ApplicationJson = exports.DcimPlatformsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DcimPlatformsListQueryParams = /** @class */ (function (_super) {
     __extends(DcimPlatformsListQueryParams, _super);
     function DcimPlatformsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__ic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__ie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__iew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__isw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__nic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__nie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__niew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description__nisw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "descriptionNisw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gt" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "idGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gte" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "idGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lt" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "idLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lte" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "idLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "idN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], DcimPlatformsListQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=manufacturer" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=manufacturer__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=manufacturer__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "manufacturerN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=manufacturer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=manufacturer_id" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "manufacturerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=manufacturer_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=manufacturer_id__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "manufacturerIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__ic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__ie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__iew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__isw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__niew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name__nisw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "nameNisw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__ic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__ie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__iew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__isw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__nic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__nie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__niew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=napalm_driver__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=napalm_driver__nisw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "napalmDriverNisw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], DcimPlatformsListQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__ic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__ie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__iew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__isw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__n" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__nic" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__nie" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__niew" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug__nisw" }),
         __metadata("design:type", String)
     ], DcimPlatformsListQueryParams.prototype, "slugNisw", void 0);
     return DcimPlatformsListQueryParams;
-}(SpeakeasyBase));
-export { DcimPlatformsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimPlatformsListQueryParams = DcimPlatformsListQueryParams;
 var DcimPlatformsList200ApplicationJson = /** @class */ (function (_super) {
     __extends(DcimPlatformsList200ApplicationJson, _super);
     function DcimPlatformsList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], DcimPlatformsList200ApplicationJson.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], DcimPlatformsList200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], DcimPlatformsList200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.Platform }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.Platform }),
         __metadata("design:type", Array)
     ], DcimPlatformsList200ApplicationJson.prototype, "results", void 0);
     return DcimPlatformsList200ApplicationJson;
-}(SpeakeasyBase));
-export { DcimPlatformsList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DcimPlatformsList200ApplicationJson = DcimPlatformsList200ApplicationJson;
 var DcimPlatformsListRequest = /** @class */ (function (_super) {
     __extends(DcimPlatformsListRequest, _super);
     function DcimPlatformsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimPlatformsListQueryParams)
     ], DcimPlatformsListRequest.prototype, "queryParams", void 0);
     return DcimPlatformsListRequest;
-}(SpeakeasyBase));
-export { DcimPlatformsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimPlatformsListRequest = DcimPlatformsListRequest;
 var DcimPlatformsListResponse = /** @class */ (function (_super) {
     __extends(DcimPlatformsListResponse, _super);
     function DcimPlatformsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimPlatformsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimPlatformsListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimPlatformsList200ApplicationJson)
-    ], DcimPlatformsListResponse.prototype, "dcimPlatformsList200ApplicationJsonObject", void 0);
+    ], DcimPlatformsListResponse.prototype, "dcimPlatformsList200ApplicationJSONObject", void 0);
     return DcimPlatformsListResponse;
-}(SpeakeasyBase));
-export { DcimPlatformsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimPlatformsListResponse = DcimPlatformsListResponse;

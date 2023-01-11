@@ -6,7 +6,7 @@ import { ApigatewayStatus } from "./apigatewaystatus";
 export declare class ApigatewayOperation extends SpeakeasyBase {
     done?: boolean;
     error?: ApigatewayStatus;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
-    response?: Map<string, any>;
+    response?: Record<string, any>;
 }

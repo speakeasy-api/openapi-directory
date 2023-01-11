@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AclGrantee } from "./aclgrantee";
-import { AclPermissionEnum } from "./aclpermissionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3BucketAclGrantConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var aclgrantee_1 = require("./aclgrantee");
+var aclpermissionenum_1 = require("./aclpermissionenum");
 // S3BucketAclGrantConfiguration
 /**
  * A proposed access control list grant configuration for an Amazon S3 bucket. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#setting-acls">How to Specify an ACL</a>.
@@ -35,13 +38,13 @@ var S3BucketAclGrantConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grantee" }),
-        __metadata("design:type", AclGrantee)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grantee" }),
+        __metadata("design:type", aclgrantee_1.AclGrantee)
     ], S3BucketAclGrantConfiguration.prototype, "grantee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], S3BucketAclGrantConfiguration.prototype, "permission", void 0);
     return S3BucketAclGrantConfiguration;
-}(SpeakeasyBase));
-export { S3BucketAclGrantConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.S3BucketAclGrantConfiguration = S3BucketAclGrantConfiguration;

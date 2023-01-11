@@ -28,5 +28,5 @@ export class EnterpriseAdminSyncLdapMappingForTeamResponse extends SpeakeasyBase
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminSyncLdapMappingForTeam201ApplicationJsonObject?: EnterpriseAdminSyncLdapMappingForTeam201ApplicationJson;
+  enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject?: EnterpriseAdminSyncLdapMappingForTeam201ApplicationJson;
 }

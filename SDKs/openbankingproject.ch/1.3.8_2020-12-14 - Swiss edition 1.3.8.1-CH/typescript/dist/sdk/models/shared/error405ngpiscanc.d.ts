@@ -6,6 +6,6 @@ import { TppMessage405PisCanc } from "./tppmessage405piscanc";
  *
 **/
 export declare class Error405NgPisCanc extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     tppMessages?: TppMessage405PisCanc[];
 }

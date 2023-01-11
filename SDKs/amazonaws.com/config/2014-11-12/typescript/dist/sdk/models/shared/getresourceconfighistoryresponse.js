@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationItem } from "./configurationitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourceConfigHistoryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationitem_1 = require("./configurationitem");
 // GetResourceConfigHistoryResponse
 /**
  * The output for the <a>GetResourceConfigHistory</a> action.
@@ -34,13 +37,13 @@ var GetResourceConfigHistoryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationItems", elemType: ConfigurationItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationItems", elemType: configurationitem_1.ConfigurationItem }),
         __metadata("design:type", Array)
     ], GetResourceConfigHistoryResponse.prototype, "configurationItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetResourceConfigHistoryResponse.prototype, "nextToken", void 0);
     return GetResourceConfigHistoryResponse;
-}(SpeakeasyBase));
-export { GetResourceConfigHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourceConfigHistoryResponse = GetResourceConfigHistoryResponse;

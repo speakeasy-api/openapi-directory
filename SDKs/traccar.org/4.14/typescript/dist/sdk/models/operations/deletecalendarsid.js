@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteCalendarsIdResponse = exports.DeleteCalendarsIdRequest = exports.DeleteCalendarsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteCalendarsIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteCalendarsIdPathParams, _super);
     function DeleteCalendarsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteCalendarsIdPathParams.prototype, "id", void 0);
     return DeleteCalendarsIdPathParams;
-}(SpeakeasyBase));
-export { DeleteCalendarsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCalendarsIdPathParams = DeleteCalendarsIdPathParams;
 var DeleteCalendarsIdRequest = /** @class */ (function (_super) {
     __extends(DeleteCalendarsIdRequest, _super);
     function DeleteCalendarsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteCalendarsIdPathParams)
     ], DeleteCalendarsIdRequest.prototype, "pathParams", void 0);
     return DeleteCalendarsIdRequest;
-}(SpeakeasyBase));
-export { DeleteCalendarsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCalendarsIdRequest = DeleteCalendarsIdRequest;
 var DeleteCalendarsIdResponse = /** @class */ (function (_super) {
     __extends(DeleteCalendarsIdResponse, _super);
     function DeleteCalendarsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteCalendarsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteCalendarsIdResponse.prototype, "statusCode", void 0);
     return DeleteCalendarsIdResponse;
-}(SpeakeasyBase));
-export { DeleteCalendarsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCalendarsIdResponse = DeleteCalendarsIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordControllerGetInvoiceResponse = exports.LandlordControllerGetInvoiceRequest = exports.LandlordControllerGetInvoiceQueryParams = exports.LandlordControllerGetInvoicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LandlordControllerGetInvoicePathParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvoicePathParams, _super);
     function LandlordControllerGetInvoicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], LandlordControllerGetInvoicePathParams.prototype, "shortName", void 0);
     return LandlordControllerGetInvoicePathParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvoicePathParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvoicePathParams = LandlordControllerGetInvoicePathParams;
 var LandlordControllerGetInvoiceQueryParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvoiceQueryParams, _super);
     function LandlordControllerGetInvoiceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=invoiceID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=invoiceID" }),
         __metadata("design:type", String)
-    ], LandlordControllerGetInvoiceQueryParams.prototype, "invoiceId", void 0);
+    ], LandlordControllerGetInvoiceQueryParams.prototype, "invoiceID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], LandlordControllerGetInvoiceQueryParams.prototype, "token", void 0);
     return LandlordControllerGetInvoiceQueryParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvoiceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvoiceQueryParams = LandlordControllerGetInvoiceQueryParams;
 var LandlordControllerGetInvoiceRequest = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvoiceRequest, _super);
     function LandlordControllerGetInvoiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetInvoicePathParams)
     ], LandlordControllerGetInvoiceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetInvoiceQueryParams)
     ], LandlordControllerGetInvoiceRequest.prototype, "queryParams", void 0);
     return LandlordControllerGetInvoiceRequest;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvoiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvoiceRequest = LandlordControllerGetInvoiceRequest;
 var LandlordControllerGetInvoiceResponse = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvoiceResponse, _super);
     function LandlordControllerGetInvoiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LandlordControllerGetInvoiceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LandlordControllerGetInvoiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], LandlordControllerGetInvoiceResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LandlordControllerGetInvoiceResponse.prototype, "statusCode", void 0);
     return LandlordControllerGetInvoiceResponse;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvoiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvoiceResponse = LandlordControllerGetInvoiceResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DistributionBundle } from "./distributionbundle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDistributionBundlesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var distributionbundle_1 = require("./distributionbundle");
 var GetDistributionBundlesResult = /** @class */ (function (_super) {
     __extends(GetDistributionBundlesResult, _super);
     function GetDistributionBundlesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundles", elemType: DistributionBundle }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundles", elemType: distributionbundle_1.DistributionBundle }),
         __metadata("design:type", Array)
     ], GetDistributionBundlesResult.prototype, "bundles", void 0);
     return GetDistributionBundlesResult;
-}(SpeakeasyBase));
-export { GetDistributionBundlesResult };
+}(utils_1.SpeakeasyBase));
+exports.GetDistributionBundlesResult = GetDistributionBundlesResult;

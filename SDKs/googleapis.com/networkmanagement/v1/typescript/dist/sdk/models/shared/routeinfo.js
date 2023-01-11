@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RouteInfoNextHopTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteInfo = exports.RouteInfoRouteTypeEnum = exports.RouteInfoNextHopTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RouteInfoNextHopTypeEnum;
 (function (RouteInfoNextHopTypeEnum) {
     RouteInfoNextHopTypeEnum["NextHopTypeUnspecified"] = "NEXT_HOP_TYPE_UNSPECIFIED";
     RouteInfoNextHopTypeEnum["NextHopIp"] = "NEXT_HOP_IP";
@@ -37,8 +40,8 @@ export var RouteInfoNextHopTypeEnum;
     RouteInfoNextHopTypeEnum["NextHopBlackhole"] = "NEXT_HOP_BLACKHOLE";
     RouteInfoNextHopTypeEnum["NextHopIlb"] = "NEXT_HOP_ILB";
     RouteInfoNextHopTypeEnum["NextHopRouterAppliance"] = "NEXT_HOP_ROUTER_APPLIANCE";
-})(RouteInfoNextHopTypeEnum || (RouteInfoNextHopTypeEnum = {}));
-export var RouteInfoRouteTypeEnum;
+})(RouteInfoNextHopTypeEnum = exports.RouteInfoNextHopTypeEnum || (exports.RouteInfoNextHopTypeEnum = {}));
+var RouteInfoRouteTypeEnum;
 (function (RouteInfoRouteTypeEnum) {
     RouteInfoRouteTypeEnum["RouteTypeUnspecified"] = "ROUTE_TYPE_UNSPECIFIED";
     RouteInfoRouteTypeEnum["Subnet"] = "SUBNET";
@@ -48,7 +51,7 @@ export var RouteInfoRouteTypeEnum;
     RouteInfoRouteTypeEnum["PeeringStatic"] = "PEERING_STATIC";
     RouteInfoRouteTypeEnum["PeeringDynamic"] = "PEERING_DYNAMIC";
     RouteInfoRouteTypeEnum["PolicyBased"] = "POLICY_BASED";
-})(RouteInfoRouteTypeEnum || (RouteInfoRouteTypeEnum = {}));
+})(RouteInfoRouteTypeEnum = exports.RouteInfoRouteTypeEnum || (exports.RouteInfoRouteTypeEnum = {}));
 // RouteInfo
 /**
  * For display only. Metadata associated with a Compute Engine route.
@@ -59,57 +62,57 @@ var RouteInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destIpRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destIpRange" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "destIpRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destPortRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destPortRanges" }),
         __metadata("design:type", Array)
     ], RouteInfo.prototype, "destPortRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceTags" }),
         __metadata("design:type", Array)
     ], RouteInfo.prototype, "instanceTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkUri" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "networkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextHop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextHop" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "nextHop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextHopType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextHopType" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "nextHopType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], RouteInfo.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocols" }),
         __metadata("design:type", Array)
     ], RouteInfo.prototype, "protocols", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routeType" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "routeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcIpRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcIpRange" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "srcIpRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcPortRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcPortRanges" }),
         __metadata("design:type", Array)
     ], RouteInfo.prototype, "srcPortRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], RouteInfo.prototype, "uri", void 0);
     return RouteInfo;
-}(SpeakeasyBase));
-export { RouteInfo };
+}(utils_1.SpeakeasyBase));
+exports.RouteInfo = RouteInfo;

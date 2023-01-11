@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ImagePayload = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1ImagePayload
 /**
  * Container of information about an image.
@@ -33,21 +36,21 @@ var GoogleCloudDatalabelingV1beta1ImagePayload = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageThumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageThumbnail" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ImagePayload.prototype, "imageThumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUri" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ImagePayload.prototype, "imageUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ImagePayload.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signedUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signedUri" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ImagePayload.prototype, "signedUri", void 0);
     return GoogleCloudDatalabelingV1beta1ImagePayload;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ImagePayload };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ImagePayload = GoogleCloudDatalabelingV1beta1ImagePayload;

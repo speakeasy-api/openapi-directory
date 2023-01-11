@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MessageEncodingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Message = exports.MessageTypeEnum = exports.MessageSubmission = exports.MessageStatus = exports.MessageStatusTypeEnum = exports.MessageStatusSubtypeEnum = exports.MessageEncodingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MessageEncodingEnum;
 (function (MessageEncodingEnum) {
     MessageEncodingEnum["Text"] = "TEXT";
     MessageEncodingEnum["Unicode"] = "UNICODE";
     MessageEncodingEnum["Binary"] = "BINARY";
-})(MessageEncodingEnum || (MessageEncodingEnum = {}));
-export var MessageStatusSubtypeEnum;
+})(MessageEncodingEnum = exports.MessageEncodingEnum || (exports.MessageEncodingEnum = {}));
+var MessageStatusSubtypeEnum;
 (function (MessageStatusSubtypeEnum) {
     MessageStatusSubtypeEnum["Expired"] = "EXPIRED";
     MessageStatusSubtypeEnum["HandsetError"] = "HANDSET_ERROR";
     MessageStatusSubtypeEnum["Blocked"] = "BLOCKED";
     MessageStatusSubtypeEnum["NotSent"] = "NOT_SENT";
-})(MessageStatusSubtypeEnum || (MessageStatusSubtypeEnum = {}));
-export var MessageStatusTypeEnum;
+})(MessageStatusSubtypeEnum = exports.MessageStatusSubtypeEnum || (exports.MessageStatusSubtypeEnum = {}));
+var MessageStatusTypeEnum;
 (function (MessageStatusTypeEnum) {
     MessageStatusTypeEnum["Accepted"] = "ACCEPTED";
     MessageStatusTypeEnum["Scheduled"] = "SCHEDULED";
@@ -44,7 +47,7 @@ export var MessageStatusTypeEnum;
     MessageStatusTypeEnum["Delivered"] = "DELIVERED";
     MessageStatusTypeEnum["Unknown"] = "UNKNOWN";
     MessageStatusTypeEnum["Failed"] = "FAILED";
-})(MessageStatusTypeEnum || (MessageStatusTypeEnum = {}));
+})(MessageStatusTypeEnum = exports.MessageStatusTypeEnum || (exports.MessageStatusTypeEnum = {}));
 // MessageStatus
 /**
  * The status of the message
@@ -55,20 +58,20 @@ var MessageStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], MessageStatus.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtype" }),
         __metadata("design:type", String)
     ], MessageStatus.prototype, "subtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MessageStatus.prototype, "type", void 0);
     return MessageStatus;
-}(SpeakeasyBase));
-export { MessageStatus };
+}(utils_1.SpeakeasyBase));
+exports.MessageStatus = MessageStatus;
 // MessageSubmission
 /**
  * Identifies the submission.
@@ -80,82 +83,82 @@ var MessageSubmission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], MessageSubmission.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], MessageSubmission.prototype, "id", void 0);
     return MessageSubmission;
-}(SpeakeasyBase));
-export { MessageSubmission };
-export var MessageTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.MessageSubmission = MessageSubmission;
+var MessageTypeEnum;
 (function (MessageTypeEnum) {
     MessageTypeEnum["Sent"] = "SENT";
     MessageTypeEnum["Received"] = "RECEIVED";
-})(MessageTypeEnum || (MessageTypeEnum = {}));
+})(MessageTypeEnum = exports.MessageTypeEnum || (exports.MessageTypeEnum = {}));
 var Message = /** @class */ (function (_super) {
     __extends(Message, _super);
     function Message() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", Object)
     ], Message.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditCost" }),
         __metadata("design:type", Number)
     ], Message.prototype, "creditCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], Message.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], Message.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Message.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageClass" }),
         __metadata("design:type", Number)
     ], Message.prototype, "messageClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfParts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfParts" }),
         __metadata("design:type", Number)
     ], Message.prototype, "numberOfParts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocolId" }),
         __metadata("design:type", Number)
     ], Message.prototype, "protocolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedSentMessageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedSentMessageId" }),
         __metadata("design:type", String)
     ], Message.prototype, "relatedSentMessageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", MessageStatus)
     ], Message.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submission" }),
         __metadata("design:type", MessageSubmission)
     ], Message.prototype, "submission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], Message.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Message.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userSuppliedId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userSuppliedId" }),
         __metadata("design:type", String)
     ], Message.prototype, "userSuppliedId", void 0);
     return Message;
-}(SpeakeasyBase));
-export { Message };
+}(utils_1.SpeakeasyBase));
+exports.Message = Message;

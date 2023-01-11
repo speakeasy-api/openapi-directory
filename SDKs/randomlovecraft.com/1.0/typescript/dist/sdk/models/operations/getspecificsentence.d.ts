@@ -12,5 +12,5 @@ export declare class GetSpecificSentenceRequest extends SpeakeasyBase {
 export declare class GetSpecificSentenceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSpecificSentence200ApplicationJsonObject?: GetSpecificSentence200ApplicationJson;
+    getSpecificSentence200ApplicationJSONObject?: GetSpecificSentence200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelGrouping } from "./channelgrouping";
-import { PathFilter } from "./pathfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PathQueryOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var channelgrouping_1 = require("./channelgrouping");
+var pathfilter_1 = require("./pathfilter");
 // PathQueryOptions
 /**
  * Path Query Options for Report Options.
@@ -35,13 +38,13 @@ var PathQueryOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelGrouping" }),
-        __metadata("design:type", ChannelGrouping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelGrouping" }),
+        __metadata("design:type", channelgrouping_1.ChannelGrouping)
     ], PathQueryOptions.prototype, "channelGrouping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pathFilters", elemType: PathFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pathFilters", elemType: pathfilter_1.PathFilter }),
         __metadata("design:type", Array)
     ], PathQueryOptions.prototype, "pathFilters", void 0);
     return PathQueryOptions;
-}(SpeakeasyBase));
-export { PathQueryOptions };
+}(utils_1.SpeakeasyBase));
+exports.PathQueryOptions = PathQueryOptions;

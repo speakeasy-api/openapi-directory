@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetResponse = exports.ResetRequest = exports.ResetQueryParams = exports.ResetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResetPathParams = /** @class */ (function (_super) {
     __extends(ResetPathParams, _super);
     function ResetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], ResetPathParams.prototype, "deviceId", void 0);
     return ResetPathParams;
-}(SpeakeasyBase));
-export { ResetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ResetPathParams = ResetPathParams;
 var ResetQueryParams = /** @class */ (function (_super) {
     __extends(ResetQueryParams, _super);
     function ResetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=monitorClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=monitorClass" }),
         __metadata("design:type", String)
     ], ResetQueryParams.prototype, "monitorClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=monitorSid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=monitorSid" }),
         __metadata("design:type", String)
     ], ResetQueryParams.prototype, "monitorSid", void 0);
     return ResetQueryParams;
-}(SpeakeasyBase));
-export { ResetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ResetQueryParams = ResetQueryParams;
 var ResetRequest = /** @class */ (function (_super) {
     __extends(ResetRequest, _super);
     function ResetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResetPathParams)
     ], ResetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResetQueryParams)
     ], ResetRequest.prototype, "queryParams", void 0);
     return ResetRequest;
-}(SpeakeasyBase));
-export { ResetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResetRequest = ResetRequest;
 var ResetResponse = /** @class */ (function (_super) {
     __extends(ResetResponse, _super);
     function ResetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ResetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResetResponse.prototype, "statusCode", void 0);
     return ResetResponse;
-}(SpeakeasyBase));
-export { ResetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResetResponse = ResetResponse;

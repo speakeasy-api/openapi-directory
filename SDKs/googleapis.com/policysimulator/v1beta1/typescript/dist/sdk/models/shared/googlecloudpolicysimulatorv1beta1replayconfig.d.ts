@@ -9,5 +9,5 @@ export declare enum GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSourceEnum {
 **/
 export declare class GoogleCloudPolicysimulatorV1beta1ReplayConfig extends SpeakeasyBase {
     logSource?: GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSourceEnum;
-    policyOverlay?: Map<string, GoogleIamV1Policy>;
+    policyOverlay?: Record<string, GoogleIamV1Policy>;
 }

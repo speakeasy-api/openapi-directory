@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdStatusGetResponse = exports.StoryIdStatusGetRequest = exports.StoryIdStatusGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdStatusGetPathParams = /** @class */ (function (_super) {
     __extends(StoryIdStatusGetPathParams, _super);
     function StoryIdStatusGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdStatusGetPathParams.prototype, "id", void 0);
     return StoryIdStatusGetPathParams;
-}(SpeakeasyBase));
-export { StoryIdStatusGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdStatusGetPathParams = StoryIdStatusGetPathParams;
 var StoryIdStatusGetRequest = /** @class */ (function (_super) {
     __extends(StoryIdStatusGetRequest, _super);
     function StoryIdStatusGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdStatusGetPathParams)
     ], StoryIdStatusGetRequest.prototype, "pathParams", void 0);
     return StoryIdStatusGetRequest;
-}(SpeakeasyBase));
-export { StoryIdStatusGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdStatusGetRequest = StoryIdStatusGetRequest;
 var StoryIdStatusGetResponse = /** @class */ (function (_super) {
     __extends(StoryIdStatusGetResponse, _super);
     function StoryIdStatusGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdStatusGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdStatusGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdStatusGetResponse.prototype, "problemDetail", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdStatusGetResponse.prototype, "status", void 0);
     return StoryIdStatusGetResponse;
-}(SpeakeasyBase));
-export { StoryIdStatusGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdStatusGetResponse = StoryIdStatusGetResponse;

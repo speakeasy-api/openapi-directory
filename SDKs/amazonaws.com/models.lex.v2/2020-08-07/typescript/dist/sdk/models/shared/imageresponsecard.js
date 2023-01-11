@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Button } from "./button";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageResponseCard = void 0;
+var utils_1 = require("../../../internal/utils");
+var button_1 = require("./button");
 // ImageResponseCard
 /**
  * <p>A card that is shown to the user by a messaging platform. You define the contents of the card, the card is displayed by the platform. </p> <p>When you use a response card, the response from the user is constrained to the text associated with a button on the card.</p>
@@ -34,21 +37,21 @@ var ImageResponseCard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buttons", elemType: Button }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buttons", elemType: button_1.Button }),
         __metadata("design:type", Array)
     ], ImageResponseCard.prototype, "buttons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], ImageResponseCard.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtitle" }),
         __metadata("design:type", String)
     ], ImageResponseCard.prototype, "subtitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ImageResponseCard.prototype, "title", void 0);
     return ImageResponseCard;
-}(SpeakeasyBase));
-export { ImageResponseCard };
+}(utils_1.SpeakeasyBase));
+exports.ImageResponseCard = ImageResponseCard;

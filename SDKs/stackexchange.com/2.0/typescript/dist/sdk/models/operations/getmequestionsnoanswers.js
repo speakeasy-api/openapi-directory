@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMeQuestionsNoAnswersOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeQuestionsNoAnswersResponse = exports.GetMeQuestionsNoAnswersRequest = exports.GetMeQuestionsNoAnswersQueryParams = exports.GetMeQuestionsNoAnswersSortEnum = exports.GetMeQuestionsNoAnswersOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMeQuestionsNoAnswersOrderEnum;
 (function (GetMeQuestionsNoAnswersOrderEnum) {
     GetMeQuestionsNoAnswersOrderEnum["Desc"] = "desc";
     GetMeQuestionsNoAnswersOrderEnum["Asc"] = "asc";
-})(GetMeQuestionsNoAnswersOrderEnum || (GetMeQuestionsNoAnswersOrderEnum = {}));
-export var GetMeQuestionsNoAnswersSortEnum;
+})(GetMeQuestionsNoAnswersOrderEnum = exports.GetMeQuestionsNoAnswersOrderEnum || (exports.GetMeQuestionsNoAnswersOrderEnum = {}));
+var GetMeQuestionsNoAnswersSortEnum;
 (function (GetMeQuestionsNoAnswersSortEnum) {
     GetMeQuestionsNoAnswersSortEnum["Activity"] = "activity";
     GetMeQuestionsNoAnswersSortEnum["Creation"] = "creation";
     GetMeQuestionsNoAnswersSortEnum["Votes"] = "votes";
-})(GetMeQuestionsNoAnswersSortEnum || (GetMeQuestionsNoAnswersSortEnum = {}));
+})(GetMeQuestionsNoAnswersSortEnum = exports.GetMeQuestionsNoAnswersSortEnum || (exports.GetMeQuestionsNoAnswersSortEnum = {}));
 var GetMeQuestionsNoAnswersQueryParams = /** @class */ (function (_super) {
     __extends(GetMeQuestionsNoAnswersQueryParams, _super);
     function GetMeQuestionsNoAnswersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetMeQuestionsNoAnswersQueryParams.prototype, "todate", void 0);
     return GetMeQuestionsNoAnswersQueryParams;
-}(SpeakeasyBase));
-export { GetMeQuestionsNoAnswersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeQuestionsNoAnswersQueryParams = GetMeQuestionsNoAnswersQueryParams;
 var GetMeQuestionsNoAnswersRequest = /** @class */ (function (_super) {
     __extends(GetMeQuestionsNoAnswersRequest, _super);
     function GetMeQuestionsNoAnswersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeQuestionsNoAnswersQueryParams)
     ], GetMeQuestionsNoAnswersRequest.prototype, "queryParams", void 0);
     return GetMeQuestionsNoAnswersRequest;
-}(SpeakeasyBase));
-export { GetMeQuestionsNoAnswersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeQuestionsNoAnswersRequest = GetMeQuestionsNoAnswersRequest;
 var GetMeQuestionsNoAnswersResponse = /** @class */ (function (_super) {
     __extends(GetMeQuestionsNoAnswersResponse, _super);
     function GetMeQuestionsNoAnswersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeQuestionsNoAnswersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeQuestionsNoAnswersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeQuestionsNoAnswersResponse.prototype, "statusCode", void 0);
     return GetMeQuestionsNoAnswersResponse;
-}(SpeakeasyBase));
-export { GetMeQuestionsNoAnswersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeQuestionsNoAnswersResponse = GetMeQuestionsNoAnswersResponse;

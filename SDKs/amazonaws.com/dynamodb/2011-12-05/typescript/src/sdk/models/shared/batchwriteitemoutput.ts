@@ -10,8 +10,8 @@ import { WriteRequest } from "./writerequest";
 **/
 export class BatchWriteItemOutput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Responses", elemType: BatchWriteResponse })
-  responses?: Map<string, BatchWriteResponse>;
+  responses?: Record<string, BatchWriteResponse>;
 
   @SpeakeasyMetadata({ data: "json, name=UnprocessedItems", elemType: WriteRequest, elemDepth: 2 })
-  unprocessedItems?: Map<string, WriteRequest[]>;
+  unprocessedItems?: Record<string, WriteRequest[]>;
 }

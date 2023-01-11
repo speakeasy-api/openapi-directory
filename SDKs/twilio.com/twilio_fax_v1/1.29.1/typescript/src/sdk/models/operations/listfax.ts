@@ -65,7 +65,7 @@ export class ListFaxListFaxResponse extends SpeakeasyBase {
 
 export class ListFaxRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: ListFaxQueryParams;

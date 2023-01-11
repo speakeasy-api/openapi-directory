@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IndexingUrlNotificationsGetMetadataRequest, IndexingUrlNotificationsGetMetadataResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: IndexingUrlNotificationsGetMetadataRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "illum",
-    alt: "json",
-    callback: "et",
-    fields: "et",
-    key: "suscipit",
-    oauthToken: "aut",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "qui",
-    uploadType: "laboriosam",
-    uploadProtocol: "veniam",
-    url: "est",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
+    url: "rerum",
   },
 };
 

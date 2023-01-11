@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceTrafficShapingRulesResponse = exports.UpdateNetworkApplianceTrafficShapingRulesRequest = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBody = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum = exports.UpdateNetworkApplianceTrafficShapingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceTrafficShapingRulesPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesPathParams, _super);
     function UpdateNetworkApplianceTrafficShapingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesPathParams };
-export var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesPathParams = UpdateNetworkApplianceTrafficShapingRulesPathParams;
+var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum;
 (function (UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum) {
     UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum["Application"] = "application";
     UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum["ApplicationCategory"] = "applicationCategory";
@@ -43,23 +46,23 @@ export var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsT
     UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum["Port"] = "port";
     UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum["IpRange"] = "ipRange";
     UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum["LocalNet"] = "localNet";
-})(UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum || (UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum = {}));
+})(UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum = exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum || (exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum = {}));
 var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions, _super);
     function UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions.prototype, "value", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions = UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions;
 // UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits
 /**
  * The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
@@ -70,16 +73,16 @@ var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthL
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitDown" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits.prototype, "limitDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitUp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits.prototype, "limitUp", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits = UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits;
 // UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits
 /**
  *     An object describing the bandwidth settings for your rule.
@@ -91,89 +94,89 @@ var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthL
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidthLimits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidthLimits" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimitsBandwidthLimits)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits.prototype, "bandwidthLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits.prototype, "settings", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits = UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits;
 var UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules, _super);
     function UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definitions", elemType: UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definitions", elemType: UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitions }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules.prototype, "definitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dscpTagValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dscpTagValue" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules.prototype, "dscpTagValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perClientBandwidthLimits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perClientBandwidthLimits" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesPerClientBandwidthLimits)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules.prototype, "perClientBandwidthLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules.prototype, "priority", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules = UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules;
 var UpdateNetworkApplianceTrafficShapingRulesRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesRequestBody, _super);
     function UpdateNetworkApplianceTrafficShapingRulesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultRulesEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultRulesEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBody.prototype, "defaultRulesEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateNetworkApplianceTrafficShapingRulesRequestBodyRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceTrafficShapingRulesRequestBody.prototype, "rules", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequestBody = UpdateNetworkApplianceTrafficShapingRulesRequestBody;
 var UpdateNetworkApplianceTrafficShapingRulesRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesRequest, _super);
     function UpdateNetworkApplianceTrafficShapingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingRulesPathParams)
     ], UpdateNetworkApplianceTrafficShapingRulesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingRulesRequestBody)
     ], UpdateNetworkApplianceTrafficShapingRulesRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesRequest = UpdateNetworkApplianceTrafficShapingRulesRequest;
 var UpdateNetworkApplianceTrafficShapingRulesResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingRulesResponse, _super);
     function UpdateNetworkApplianceTrafficShapingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceTrafficShapingRulesResponse.prototype, "updateNetworkApplianceTrafficShapingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceTrafficShapingRulesResponse.prototype, "updateNetworkApplianceTrafficShapingRules200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceTrafficShapingRulesResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingRulesResponse = UpdateNetworkApplianceTrafficShapingRulesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountAddress } from "./accountaddress";
-import { AccountCustomerService } from "./accountcustomerservice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountBusinessInformation = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountaddress_1 = require("./accountaddress");
+var accountcustomerservice_1 = require("./accountcustomerservice");
 var AccountBusinessInformation = /** @class */ (function (_super) {
     __extends(AccountBusinessInformation, _super);
     function AccountBusinessInformation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", AccountAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", accountaddress_1.AccountAddress)
     ], AccountBusinessInformation.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerService" }),
-        __metadata("design:type", AccountCustomerService)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerService" }),
+        __metadata("design:type", accountcustomerservice_1.AccountCustomerService)
     ], AccountBusinessInformation.prototype, "customerService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=koreanBusinessRegistrationNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=koreanBusinessRegistrationNumber" }),
         __metadata("design:type", String)
     ], AccountBusinessInformation.prototype, "koreanBusinessRegistrationNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], AccountBusinessInformation.prototype, "phoneNumber", void 0);
     return AccountBusinessInformation;
-}(SpeakeasyBase));
-export { AccountBusinessInformation };
+}(utils_1.SpeakeasyBase));
+exports.AccountBusinessInformation = AccountBusinessInformation;

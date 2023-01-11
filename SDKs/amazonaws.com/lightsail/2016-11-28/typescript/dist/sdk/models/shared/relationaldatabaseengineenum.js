@@ -1,4 +1,7 @@
-export var RelationalDatabaseEngineEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseEngineEnum = void 0;
+var RelationalDatabaseEngineEnum;
 (function (RelationalDatabaseEngineEnum) {
     RelationalDatabaseEngineEnum["Mysql"] = "mysql";
-})(RelationalDatabaseEngineEnum || (RelationalDatabaseEngineEnum = {}));
+})(RelationalDatabaseEngineEnum = exports.RelationalDatabaseEngineEnum || (exports.RelationalDatabaseEngineEnum = {}));

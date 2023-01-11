@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteBinIdRequest, DeleteBinIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: DeleteBinIdRequest = {
   pathParams: {
-    id: "temporibus",
+    id: "sit",
   },
 };
 
-sdk.sdk.deleteBinId(req).then((res: DeleteBinIdResponse | AxiosError) => {
+sdk.deleteBinId(req).then((res: DeleteBinIdResponse | AxiosError) => {
    // handle response
 });
 ```

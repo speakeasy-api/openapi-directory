@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JurisdictionClassificationEnum } from "./jurisdictionclassificationenum";
-import { RunPlan } from "./runplan";
-import { LegislativeSession } from "./legislativesession";
-import { Chamber } from "./chamber";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Jurisdiction = void 0;
+var utils_1 = require("../../../internal/utils");
+var jurisdictionclassificationenum_1 = require("./jurisdictionclassificationenum");
+var runplan_1 = require("./runplan");
+var legislativesession_1 = require("./legislativesession");
+var chamber_1 = require("./chamber");
 var Jurisdiction = /** @class */ (function (_super) {
     __extends(Jurisdiction, _super);
     function Jurisdiction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification" }),
         __metadata("design:type", String)
     ], Jurisdiction.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=division_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=division_id" }),
         __metadata("design:type", String)
     ], Jurisdiction.prototype, "divisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Jurisdiction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_runs", elemType: RunPlan }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_runs", elemType: runplan_1.RunPlan }),
         __metadata("design:type", Array)
     ], Jurisdiction.prototype, "latestRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legislative_sessions", elemType: LegislativeSession }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legislative_sessions", elemType: legislativesession_1.LegislativeSession }),
         __metadata("design:type", Array)
     ], Jurisdiction.prototype, "legislativeSessions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Jurisdiction.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations", elemType: Chamber }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations", elemType: chamber_1.Chamber }),
         __metadata("design:type", Array)
     ], Jurisdiction.prototype, "organizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Jurisdiction.prototype, "url", void 0);
     return Jurisdiction;
-}(SpeakeasyBase));
-export { Jurisdiction };
+}(utils_1.SpeakeasyBase));
+exports.Jurisdiction = Jurisdiction;

@@ -62,7 +62,7 @@ export class DatalabelingProjectsEvaluationJobsResumeRequest extends SpeakeasyBa
   queryParams: DatalabelingProjectsEvaluationJobsResumeQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DatalabelingProjectsEvaluationJobsResumeSecurity;
@@ -74,7 +74,7 @@ export class DatalabelingProjectsEvaluationJobsResumeResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

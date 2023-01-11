@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransactionsGetRequestOptions } from "./transactionsgetrequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionsGetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var transactionsgetrequestoptions_1 = require("./transactionsgetrequestoptions");
 // TransactionsGetRequest
 /**
  * TransactionsGetRequest defines the request schema for `/transactions/get`
@@ -34,29 +37,29 @@ var TransactionsGetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], TransactionsGetRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], TransactionsGetRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", Date)
     ], TransactionsGetRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", TransactionsGetRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", transactionsgetrequestoptions_1.TransactionsGetRequestOptions)
     ], TransactionsGetRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], TransactionsGetRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", Date)
     ], TransactionsGetRequest.prototype, "startDate", void 0);
     return TransactionsGetRequest;
-}(SpeakeasyBase));
-export { TransactionsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.TransactionsGetRequest = TransactionsGetRequest;

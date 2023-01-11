@@ -40,7 +40,7 @@ export class Action extends SpeakeasyBase {
   entrypoint?: string;
 
   @SpeakeasyMetadata({ data: "json, name=environment" })
-  environment?: Map<string, string>;
+  environment?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ignoreExitStatus" })
   ignoreExitStatus?: boolean;
@@ -49,7 +49,7 @@ export class Action extends SpeakeasyBase {
   imageUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mounts", elemType: Mount })
   mounts?: Mount[];
@@ -58,7 +58,7 @@ export class Action extends SpeakeasyBase {
   pidNamespace?: string;
 
   @SpeakeasyMetadata({ data: "json, name=portMappings" })
-  portMappings?: Map<string, number>;
+  portMappings?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=publishExposedPorts" })
   publishExposedPorts?: boolean;

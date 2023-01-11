@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3RepositoryDetails } from "./s3repositorydetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3BucketRepository = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3repositorydetails_1 = require("./s3repositorydetails");
 // S3BucketRepository
 /**
  *  Information about an associated repository in an S3 bucket. The associated repository contains a source code .zip file and a build artifacts .zip file that contains .jar or .class files.
@@ -34,13 +37,13 @@ var S3BucketRepository = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Details" }),
-        __metadata("design:type", S3RepositoryDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Details" }),
+        __metadata("design:type", s3repositorydetails_1.S3RepositoryDetails)
     ], S3BucketRepository.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], S3BucketRepository.prototype, "name", void 0);
     return S3BucketRepository;
-}(SpeakeasyBase));
-export { S3BucketRepository };
+}(utils_1.SpeakeasyBase));
+exports.S3BucketRepository = S3BucketRepository;

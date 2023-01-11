@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,192 +23,194 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingHotelsResponse = exports.BookingHotelsRequest = exports.BookingHotels200ApplicationJson = exports.BookingHotels200ApplicationJsonData = exports.BookingHotelsHeaders = exports.BookingHotelsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BookingHotelsQueryParams = /** @class */ (function (_super) {
     __extends(BookingHotelsQueryParams, _super);
     function BookingHotelsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=destId" }),
         __metadata("design:type", Number)
     ], BookingHotelsQueryParams.prototype, "destId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=productCode" }),
         __metadata("design:type", String)
     ], BookingHotelsQueryParams.prototype, "productCode", void 0);
     return BookingHotelsQueryParams;
-}(SpeakeasyBase));
-export { BookingHotelsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotelsQueryParams = BookingHotelsQueryParams;
 var BookingHotelsHeaders = /** @class */ (function (_super) {
     __extends(BookingHotelsHeaders, _super);
     function BookingHotelsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], BookingHotelsHeaders.prototype, "acceptLanguage", void 0);
     return BookingHotelsHeaders;
-}(SpeakeasyBase));
-export { BookingHotelsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotelsHeaders = BookingHotelsHeaders;
 var BookingHotels200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(BookingHotels200ApplicationJsonData, _super);
     function BookingHotels200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brand" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationId" }),
         __metadata("design:type", Number)
     ], BookingHotels200ApplicationJsonData.prototype, "destinationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hotelString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hotelString" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "hotelString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], BookingHotels200ApplicationJsonData.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], BookingHotels200ApplicationJsonData.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postcode" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJsonData.prototype, "postcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCodes" }),
         __metadata("design:type", Array)
     ], BookingHotels200ApplicationJsonData.prototype, "productCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingHotels200ApplicationJsonData.prototype, "sortOrder", void 0);
     return BookingHotels200ApplicationJsonData;
-}(SpeakeasyBase));
-export { BookingHotels200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotels200ApplicationJsonData = BookingHotels200ApplicationJsonData;
 var BookingHotels200ApplicationJson = /** @class */ (function (_super) {
     __extends(BookingHotels200ApplicationJson, _super);
     function BookingHotels200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: BookingHotels200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: BookingHotels200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], BookingHotels200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], BookingHotels200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], BookingHotels200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], BookingHotels200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], BookingHotels200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], BookingHotels200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], BookingHotels200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], BookingHotels200ApplicationJson.prototype, "vmid", void 0);
     return BookingHotels200ApplicationJson;
-}(SpeakeasyBase));
-export { BookingHotels200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotels200ApplicationJson = BookingHotels200ApplicationJson;
 var BookingHotelsRequest = /** @class */ (function (_super) {
     __extends(BookingHotelsRequest, _super);
     function BookingHotelsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingHotelsQueryParams)
     ], BookingHotelsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingHotelsHeaders)
     ], BookingHotelsRequest.prototype, "headers", void 0);
     return BookingHotelsRequest;
-}(SpeakeasyBase));
-export { BookingHotelsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotelsRequest = BookingHotelsRequest;
 var BookingHotelsResponse = /** @class */ (function (_super) {
     __extends(BookingHotelsResponse, _super);
     function BookingHotelsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BookingHotelsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BookingHotelsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingHotels200ApplicationJson)
-    ], BookingHotelsResponse.prototype, "bookingHotels200ApplicationJsonObject", void 0);
+    ], BookingHotelsResponse.prototype, "bookingHotels200ApplicationJSONObject", void 0);
     return BookingHotelsResponse;
-}(SpeakeasyBase));
-export { BookingHotelsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BookingHotelsResponse = BookingHotelsResponse;

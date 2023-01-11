@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,83 +14,108 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var ApiGeneralInformations200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiGeneralInformationsResponse = exports.ApiGeneralInformations200ApplicationJson = exports.ApiGeneralInformations200ApplicationJsonResultEnum = exports.ApiGeneralInformations200ApplicationJsonData = exports.ApiGeneralInformations200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var ApiGeneralInformations200ApplicationJsonActionEnum;
 (function (ApiGeneralInformations200ApplicationJsonActionEnum) {
     ApiGeneralInformations200ApplicationJsonActionEnum["ApiGeneralInformations"] = "apiGeneralInformations";
-})(ApiGeneralInformations200ApplicationJsonActionEnum || (ApiGeneralInformations200ApplicationJsonActionEnum = {}));
+})(ApiGeneralInformations200ApplicationJsonActionEnum = exports.ApiGeneralInformations200ApplicationJsonActionEnum || (exports.ApiGeneralInformations200ApplicationJsonActionEnum = {}));
 var ApiGeneralInformations200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ApiGeneralInformations200ApplicationJsonData, _super);
     function ApiGeneralInformations200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableVersions", elemType: shared.ApiVersions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableVersions", elemType: shared.ApiVersions }),
         __metadata("design:type", Array)
     ], ApiGeneralInformations200ApplicationJsonData.prototype, "availableVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation" }),
         __metadata("design:type", String)
     ], ApiGeneralInformations200ApplicationJsonData.prototype, "documentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoints", elemType: shared.ApiEndpoints, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoints", elemType: shared.ApiEndpoints, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], ApiGeneralInformations200ApplicationJsonData.prototype, "endpoints", void 0);
     return ApiGeneralInformations200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ApiGeneralInformations200ApplicationJsonData };
-export var ApiGeneralInformations200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ApiGeneralInformations200ApplicationJsonData = ApiGeneralInformations200ApplicationJsonData;
+var ApiGeneralInformations200ApplicationJsonResultEnum;
 (function (ApiGeneralInformations200ApplicationJsonResultEnum) {
     ApiGeneralInformations200ApplicationJsonResultEnum["Success"] = "success";
     ApiGeneralInformations200ApplicationJsonResultEnum["Error"] = "error";
-})(ApiGeneralInformations200ApplicationJsonResultEnum || (ApiGeneralInformations200ApplicationJsonResultEnum = {}));
+})(ApiGeneralInformations200ApplicationJsonResultEnum = exports.ApiGeneralInformations200ApplicationJsonResultEnum || (exports.ApiGeneralInformations200ApplicationJsonResultEnum = {}));
 var ApiGeneralInformations200ApplicationJson = /** @class */ (function (_super) {
     __extends(ApiGeneralInformations200ApplicationJson, _super);
     function ApiGeneralInformations200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ApiGeneralInformations200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ApiGeneralInformations200ApplicationJsonData)
     ], ApiGeneralInformations200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ApiGeneralInformations200ApplicationJson.prototype, "result", void 0);
     return ApiGeneralInformations200ApplicationJson;
-}(SpeakeasyBase));
-export { ApiGeneralInformations200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ApiGeneralInformations200ApplicationJson = ApiGeneralInformations200ApplicationJson;
 var ApiGeneralInformationsResponse = /** @class */ (function (_super) {
     __extends(ApiGeneralInformationsResponse, _super);
     function ApiGeneralInformationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApiGeneralInformationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApiGeneralInformationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApiGeneralInformations200ApplicationJson)
-    ], ApiGeneralInformationsResponse.prototype, "apiGeneralInformations200ApplicationJsonObject", void 0);
+    ], ApiGeneralInformationsResponse.prototype, "apiGeneralInformations200ApplicationJSONObject", void 0);
     return ApiGeneralInformationsResponse;
-}(SpeakeasyBase));
-export { ApiGeneralInformationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApiGeneralInformationsResponse = ApiGeneralInformationsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShardFilter } from "./shardfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListShardsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var shardfilter_1 = require("./shardfilter");
 var ListShardsInput = /** @class */ (function (_super) {
     __extends(ListShardsInput, _super);
     function ListShardsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExclusiveStartShardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExclusiveStartShardId" }),
         __metadata("design:type", String)
     ], ListShardsInput.prototype, "exclusiveStartShardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListShardsInput.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListShardsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardFilter" }),
-        __metadata("design:type", ShardFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardFilter" }),
+        __metadata("design:type", shardfilter_1.ShardFilter)
     ], ListShardsInput.prototype, "shardFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamCreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamCreationTimestamp" }),
         __metadata("design:type", Date)
     ], ListShardsInput.prototype, "streamCreationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], ListShardsInput.prototype, "streamName", void 0);
     return ListShardsInput;
-}(SpeakeasyBase));
-export { ListShardsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListShardsInput = ListShardsInput;

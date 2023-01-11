@@ -19,5 +19,5 @@ export class Security extends SpeakeasyBase {
   advSecurityToken?: SchemeAdvSecurityToken;
 
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
-  xRapidApiKey?: SchemeXRapidApiKey;
+  xRapidAPIKey?: SchemeXRapidApiKey;
 }

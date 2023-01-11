@@ -48,7 +48,7 @@ export class DeleteColumnStatisticsForTableResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteColumnStatisticsForTableResponse?: Map<string, any>;
+  deleteColumnStatisticsForTableResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

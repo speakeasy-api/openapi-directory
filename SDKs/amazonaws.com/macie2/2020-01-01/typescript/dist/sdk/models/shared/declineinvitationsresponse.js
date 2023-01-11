@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnprocessedAccount } from "./unprocessedaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeclineInvitationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var unprocessedaccount_1 = require("./unprocessedaccount");
 var DeclineInvitationsResponse = /** @class */ (function (_super) {
     __extends(DeclineInvitationsResponse, _super);
     function DeclineInvitationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unprocessedAccounts", elemType: UnprocessedAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unprocessedAccounts", elemType: unprocessedaccount_1.UnprocessedAccount }),
         __metadata("design:type", Array)
     ], DeclineInvitationsResponse.prototype, "unprocessedAccounts", void 0);
     return DeclineInvitationsResponse;
-}(SpeakeasyBase));
-export { DeclineInvitationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeclineInvitationsResponse = DeclineInvitationsResponse;

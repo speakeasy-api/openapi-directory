@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LiveBroadcastStatusLifeCycleStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveBroadcastStatus = exports.LiveBroadcastStatusRecordingStatusEnum = exports.LiveBroadcastStatusPrivacyStatusEnum = exports.LiveBroadcastStatusLiveBroadcastPriorityEnum = exports.LiveBroadcastStatusLifeCycleStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LiveBroadcastStatusLifeCycleStatusEnum;
 (function (LiveBroadcastStatusLifeCycleStatusEnum) {
     LiveBroadcastStatusLifeCycleStatusEnum["LifeCycleStatusUnspecified"] = "lifeCycleStatusUnspecified";
     LiveBroadcastStatusLifeCycleStatusEnum["Created"] = "created";
@@ -34,27 +37,27 @@ export var LiveBroadcastStatusLifeCycleStatusEnum;
     LiveBroadcastStatusLifeCycleStatusEnum["Revoked"] = "revoked";
     LiveBroadcastStatusLifeCycleStatusEnum["TestStarting"] = "testStarting";
     LiveBroadcastStatusLifeCycleStatusEnum["LiveStarting"] = "liveStarting";
-})(LiveBroadcastStatusLifeCycleStatusEnum || (LiveBroadcastStatusLifeCycleStatusEnum = {}));
-export var LiveBroadcastStatusLiveBroadcastPriorityEnum;
+})(LiveBroadcastStatusLifeCycleStatusEnum = exports.LiveBroadcastStatusLifeCycleStatusEnum || (exports.LiveBroadcastStatusLifeCycleStatusEnum = {}));
+var LiveBroadcastStatusLiveBroadcastPriorityEnum;
 (function (LiveBroadcastStatusLiveBroadcastPriorityEnum) {
     LiveBroadcastStatusLiveBroadcastPriorityEnum["LiveBroadcastPriorityUnspecified"] = "liveBroadcastPriorityUnspecified";
     LiveBroadcastStatusLiveBroadcastPriorityEnum["Low"] = "low";
     LiveBroadcastStatusLiveBroadcastPriorityEnum["Normal"] = "normal";
     LiveBroadcastStatusLiveBroadcastPriorityEnum["High"] = "high";
-})(LiveBroadcastStatusLiveBroadcastPriorityEnum || (LiveBroadcastStatusLiveBroadcastPriorityEnum = {}));
-export var LiveBroadcastStatusPrivacyStatusEnum;
+})(LiveBroadcastStatusLiveBroadcastPriorityEnum = exports.LiveBroadcastStatusLiveBroadcastPriorityEnum || (exports.LiveBroadcastStatusLiveBroadcastPriorityEnum = {}));
+var LiveBroadcastStatusPrivacyStatusEnum;
 (function (LiveBroadcastStatusPrivacyStatusEnum) {
     LiveBroadcastStatusPrivacyStatusEnum["Public"] = "public";
     LiveBroadcastStatusPrivacyStatusEnum["Unlisted"] = "unlisted";
     LiveBroadcastStatusPrivacyStatusEnum["Private"] = "private";
-})(LiveBroadcastStatusPrivacyStatusEnum || (LiveBroadcastStatusPrivacyStatusEnum = {}));
-export var LiveBroadcastStatusRecordingStatusEnum;
+})(LiveBroadcastStatusPrivacyStatusEnum = exports.LiveBroadcastStatusPrivacyStatusEnum || (exports.LiveBroadcastStatusPrivacyStatusEnum = {}));
+var LiveBroadcastStatusRecordingStatusEnum;
 (function (LiveBroadcastStatusRecordingStatusEnum) {
     LiveBroadcastStatusRecordingStatusEnum["LiveBroadcastRecordingStatusUnspecified"] = "liveBroadcastRecordingStatusUnspecified";
     LiveBroadcastStatusRecordingStatusEnum["NotRecording"] = "notRecording";
     LiveBroadcastStatusRecordingStatusEnum["Recording"] = "recording";
     LiveBroadcastStatusRecordingStatusEnum["Recorded"] = "recorded";
-})(LiveBroadcastStatusRecordingStatusEnum || (LiveBroadcastStatusRecordingStatusEnum = {}));
+})(LiveBroadcastStatusRecordingStatusEnum = exports.LiveBroadcastStatusRecordingStatusEnum || (exports.LiveBroadcastStatusRecordingStatusEnum = {}));
 // LiveBroadcastStatus
 /**
  * Live broadcast state.
@@ -65,29 +68,29 @@ var LiveBroadcastStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifeCycleStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifeCycleStatus" }),
         __metadata("design:type", String)
     ], LiveBroadcastStatus.prototype, "lifeCycleStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveBroadcastPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveBroadcastPriority" }),
         __metadata("design:type", String)
     ], LiveBroadcastStatus.prototype, "liveBroadcastPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=madeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=madeForKids" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastStatus.prototype, "madeForKids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacyStatus" }),
         __metadata("design:type", String)
     ], LiveBroadcastStatus.prototype, "privacyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordingStatus" }),
         __metadata("design:type", String)
     ], LiveBroadcastStatus.prototype, "recordingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfDeclaredMadeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfDeclaredMadeForKids" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastStatus.prototype, "selfDeclaredMadeForKids", void 0);
     return LiveBroadcastStatus;
-}(SpeakeasyBase));
-export { LiveBroadcastStatus };
+}(utils_1.SpeakeasyBase));
+exports.LiveBroadcastStatus = LiveBroadcastStatus;

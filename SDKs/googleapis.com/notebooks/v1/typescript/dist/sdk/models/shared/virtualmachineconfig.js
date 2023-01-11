@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuntimeAcceleratorConfig } from "./runtimeacceleratorconfig";
-import { ContainerImage } from "./containerimage";
-import { LocalDisk } from "./localdisk";
-import { EncryptionConfig } from "./encryptionconfig";
-import { RuntimeShieldedInstanceConfig } from "./runtimeshieldedinstanceconfig";
-import { LocalDiskInput } from "./localdisk";
-export var VirtualMachineConfigNicTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualMachineConfig = exports.VirtualMachineConfigInput = exports.VirtualMachineConfigNicTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var runtimeacceleratorconfig_1 = require("./runtimeacceleratorconfig");
+var containerimage_1 = require("./containerimage");
+var localdisk_1 = require("./localdisk");
+var encryptionconfig_1 = require("./encryptionconfig");
+var runtimeshieldedinstanceconfig_1 = require("./runtimeshieldedinstanceconfig");
+var localdisk_2 = require("./localdisk");
+var VirtualMachineConfigNicTypeEnum;
 (function (VirtualMachineConfigNicTypeEnum) {
     VirtualMachineConfigNicTypeEnum["UnspecifiedNicType"] = "UNSPECIFIED_NIC_TYPE";
     VirtualMachineConfigNicTypeEnum["VirtioNet"] = "VIRTIO_NET";
     VirtualMachineConfigNicTypeEnum["Gvnic"] = "GVNIC";
-})(VirtualMachineConfigNicTypeEnum || (VirtualMachineConfigNicTypeEnum = {}));
-// VirtualMachineConfig
-/**
- * The config settings for virtual machine.
-**/
-var VirtualMachineConfig = /** @class */ (function (_super) {
-    __extends(VirtualMachineConfig, _super);
-    function VirtualMachineConfig() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorConfig" }),
-        __metadata("design:type", RuntimeAcceleratorConfig)
-    ], VirtualMachineConfig.prototype, "acceleratorConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootImage" }),
-        __metadata("design:type", Map)
-    ], VirtualMachineConfig.prototype, "bootImage", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImages", elemType: ContainerImage }),
-        __metadata("design:type", Array)
-    ], VirtualMachineConfig.prototype, "containerImages", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDisk" }),
-        __metadata("design:type", LocalDisk)
-    ], VirtualMachineConfig.prototype, "dataDisk", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
-    ], VirtualMachineConfig.prototype, "encryptionConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestAttributes" }),
-        __metadata("design:type", Map)
-    ], VirtualMachineConfig.prototype, "guestAttributes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalIpOnly" }),
-        __metadata("design:type", Boolean)
-    ], VirtualMachineConfig.prototype, "internalIpOnly", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], VirtualMachineConfig.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "machineType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
-    ], VirtualMachineConfig.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "network", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=nicType" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "nicType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedIpRange" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "reservedIpRange", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=shieldedInstanceConfig" }),
-        __metadata("design:type", RuntimeShieldedInstanceConfig)
-    ], VirtualMachineConfig.prototype, "shieldedInstanceConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnet" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "subnet", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Array)
-    ], VirtualMachineConfig.prototype, "tags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
-        __metadata("design:type", String)
-    ], VirtualMachineConfig.prototype, "zone", void 0);
-    return VirtualMachineConfig;
-}(SpeakeasyBase));
-export { VirtualMachineConfig };
+})(VirtualMachineConfigNicTypeEnum = exports.VirtualMachineConfigNicTypeEnum || (exports.VirtualMachineConfigNicTypeEnum = {}));
 // VirtualMachineConfigInput
 /**
  * The config settings for virtual machine.
@@ -125,65 +48,145 @@ var VirtualMachineConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorConfig" }),
-        __metadata("design:type", RuntimeAcceleratorConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorConfig" }),
+        __metadata("design:type", runtimeacceleratorconfig_1.RuntimeAcceleratorConfig)
     ], VirtualMachineConfigInput.prototype, "acceleratorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootImage" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootImage" }),
+        __metadata("design:type", Object)
     ], VirtualMachineConfigInput.prototype, "bootImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImages", elemType: ContainerImage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImages", elemType: containerimage_1.ContainerImage }),
         __metadata("design:type", Array)
     ], VirtualMachineConfigInput.prototype, "containerImages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDisk" }),
-        __metadata("design:type", LocalDiskInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDisk" }),
+        __metadata("design:type", localdisk_1.LocalDiskInput)
     ], VirtualMachineConfigInput.prototype, "dataDisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], VirtualMachineConfigInput.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalIpOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalIpOnly" }),
         __metadata("design:type", Boolean)
     ], VirtualMachineConfigInput.prototype, "internalIpOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], VirtualMachineConfigInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], VirtualMachineConfigInput.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], VirtualMachineConfigInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], VirtualMachineConfigInput.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nicType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nicType" }),
         __metadata("design:type", String)
     ], VirtualMachineConfigInput.prototype, "nicType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedIpRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedIpRange" }),
         __metadata("design:type", String)
     ], VirtualMachineConfigInput.prototype, "reservedIpRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shieldedInstanceConfig" }),
-        __metadata("design:type", RuntimeShieldedInstanceConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shieldedInstanceConfig" }),
+        __metadata("design:type", runtimeshieldedinstanceconfig_1.RuntimeShieldedInstanceConfig)
     ], VirtualMachineConfigInput.prototype, "shieldedInstanceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnet" }),
         __metadata("design:type", String)
     ], VirtualMachineConfigInput.prototype, "subnet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], VirtualMachineConfigInput.prototype, "tags", void 0);
     return VirtualMachineConfigInput;
-}(SpeakeasyBase));
-export { VirtualMachineConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachineConfigInput = VirtualMachineConfigInput;
+// VirtualMachineConfig
+/**
+ * The config settings for virtual machine.
+**/
+var VirtualMachineConfig = /** @class */ (function (_super) {
+    __extends(VirtualMachineConfig, _super);
+    function VirtualMachineConfig() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorConfig" }),
+        __metadata("design:type", runtimeacceleratorconfig_1.RuntimeAcceleratorConfig)
+    ], VirtualMachineConfig.prototype, "acceleratorConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootImage" }),
+        __metadata("design:type", Object)
+    ], VirtualMachineConfig.prototype, "bootImage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImages", elemType: containerimage_1.ContainerImage }),
+        __metadata("design:type", Array)
+    ], VirtualMachineConfig.prototype, "containerImages", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDisk" }),
+        __metadata("design:type", localdisk_2.LocalDisk)
+    ], VirtualMachineConfig.prototype, "dataDisk", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
+    ], VirtualMachineConfig.prototype, "encryptionConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestAttributes" }),
+        __metadata("design:type", Object)
+    ], VirtualMachineConfig.prototype, "guestAttributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalIpOnly" }),
+        __metadata("design:type", Boolean)
+    ], VirtualMachineConfig.prototype, "internalIpOnly", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], VirtualMachineConfig.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "machineType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], VirtualMachineConfig.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "network", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nicType" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "nicType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedIpRange" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "reservedIpRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shieldedInstanceConfig" }),
+        __metadata("design:type", runtimeshieldedinstanceconfig_1.RuntimeShieldedInstanceConfig)
+    ], VirtualMachineConfig.prototype, "shieldedInstanceConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnet" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "subnet", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Array)
+    ], VirtualMachineConfig.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
+        __metadata("design:type", String)
+    ], VirtualMachineConfig.prototype, "zone", void 0);
+    return VirtualMachineConfig;
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachineConfig = VirtualMachineConfig;

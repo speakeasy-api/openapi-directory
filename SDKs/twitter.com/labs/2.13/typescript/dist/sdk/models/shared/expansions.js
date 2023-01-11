@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Poll } from "./poll";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Expansions = void 0;
+var utils_1 = require("../../../internal/utils");
+var poll_1 = require("./poll");
 var Expansions = /** @class */ (function (_super) {
     __extends(Expansions, _super);
     function Expansions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media" }),
         __metadata("design:type", Array)
     ], Expansions.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=places" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=places" }),
         __metadata("design:type", Array)
     ], Expansions.prototype, "places", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=polls", elemType: Poll }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=polls", elemType: poll_1.Poll }),
         __metadata("design:type", Array)
     ], Expansions.prototype, "polls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tweets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tweets" }),
         __metadata("design:type", Array)
     ], Expansions.prototype, "tweets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users" }),
         __metadata("design:type", Array)
     ], Expansions.prototype, "users", void 0);
     return Expansions;
-}(SpeakeasyBase));
-export { Expansions };
+}(utils_1.SpeakeasyBase));
+exports.Expansions = Expansions;

@@ -22,5 +22,5 @@ export class GetNetworkEventsEventTypesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkEventsEventTypes200ApplicationJsonObject?: Map<string, any>;
+  getNetworkEventsEventTypes200ApplicationJSONObject?: Record<string, any>;
 }

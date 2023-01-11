@@ -24,7 +24,7 @@ export declare class Job extends SpeakeasyBase {
     hadoopJob?: HadoopJob;
     hiveJob?: HiveJob;
     jobUuid?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     pigJob?: PigJob;
     placement?: JobPlacement;
     prestoJob?: PrestoJob;
@@ -45,7 +45,7 @@ export declare class Job extends SpeakeasyBase {
 export declare class JobInput extends SpeakeasyBase {
     hadoopJob?: HadoopJob;
     hiveJob?: HiveJob;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     pigJob?: PigJob;
     placement?: JobPlacementInput;
     prestoJob?: PrestoJob;

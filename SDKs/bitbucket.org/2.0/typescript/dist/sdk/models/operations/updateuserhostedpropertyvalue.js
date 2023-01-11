@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateUserHostedPropertyValueResponse = exports.UpdateUserHostedPropertyValueRequest = exports.UpdateUserHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateUserHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(UpdateUserHostedPropertyValuePathParams, _super);
     function UpdateUserHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], UpdateUserHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], UpdateUserHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
         __metadata("design:type", String)
     ], UpdateUserHostedPropertyValuePathParams.prototype, "selectedUser", void 0);
     return UpdateUserHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { UpdateUserHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserHostedPropertyValuePathParams = UpdateUserHostedPropertyValuePathParams;
 var UpdateUserHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(UpdateUserHostedPropertyValueRequest, _super);
     function UpdateUserHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateUserHostedPropertyValuePathParams)
     ], UpdateUserHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return UpdateUserHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { UpdateUserHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserHostedPropertyValueRequest = UpdateUserHostedPropertyValueRequest;
 var UpdateUserHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(UpdateUserHostedPropertyValueResponse, _super);
     function UpdateUserHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateUserHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateUserHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return UpdateUserHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { UpdateUserHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserHostedPropertyValueResponse = UpdateUserHostedPropertyValueResponse;

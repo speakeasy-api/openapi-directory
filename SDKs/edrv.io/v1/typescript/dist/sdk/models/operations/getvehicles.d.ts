@@ -26,5 +26,5 @@ export declare class GetVehiclesRequest extends SpeakeasyBase {
 export declare class GetVehiclesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getVehicles200ApplicationJsonObject?: GetVehicles200ApplicationJson;
+    getVehicles200ApplicationJSONObject?: GetVehicles200ApplicationJson;
 }

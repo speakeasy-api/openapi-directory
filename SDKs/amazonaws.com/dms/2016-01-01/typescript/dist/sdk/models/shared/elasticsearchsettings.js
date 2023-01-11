@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ElasticsearchSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // ElasticsearchSettings
 /**
  * Provides information that defines an Elasticsearch endpoint.
@@ -33,21 +36,21 @@ var ElasticsearchSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointUri" }),
         __metadata("design:type", String)
     ], ElasticsearchSettings.prototype, "endpointUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorRetryDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorRetryDuration" }),
         __metadata("design:type", Number)
     ], ElasticsearchSettings.prototype, "errorRetryDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadErrorPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadErrorPercentage" }),
         __metadata("design:type", Number)
     ], ElasticsearchSettings.prototype, "fullLoadErrorPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceAccessRoleArn" }),
         __metadata("design:type", String)
     ], ElasticsearchSettings.prototype, "serviceAccessRoleArn", void 0);
     return ElasticsearchSettings;
-}(SpeakeasyBase));
-export { ElasticsearchSettings };
+}(utils_1.SpeakeasyBase));
+exports.ElasticsearchSettings = ElasticsearchSettings;

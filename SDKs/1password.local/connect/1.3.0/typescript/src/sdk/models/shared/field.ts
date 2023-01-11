@@ -27,10 +27,7 @@ export enum FieldTypeEnum {
 }
 
 
-export class Field extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=entropy" })
-  entropy?: number;
-
+export class FieldInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=generate" })
   generate?: boolean;
 
@@ -57,7 +54,10 @@ export class Field extends SpeakeasyBase {
 }
 
 
-export class FieldInput extends SpeakeasyBase {
+export class Field extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=entropy" })
+  entropy?: number;
+
   @SpeakeasyMetadata({ data: "json, name=generate" })
   generate?: boolean;
 

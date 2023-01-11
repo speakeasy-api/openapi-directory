@@ -1,31 +1,20 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
 
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"https://api.getthedata.com",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
+
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  serverUrl?: string;
 }
 
 /* SDK Documentation: https://www.getthedata.com/bng2latlong - Full documentation*/
@@ -33,25 +22,16 @@ export class SDK {
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      this._securityClient = this._defaultClient;
-    }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    this._securityClient = this._defaultClient;
     
   }
   
@@ -79,30 +59,31 @@ export class SDK {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/bng2latlong/{easting}/{northing}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/bng2latlong/{easting}/{northing}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetBng2latlongEastingNorthingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getBng2latlongEastingNorthing200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getBng2latlongEastingNorthing200ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

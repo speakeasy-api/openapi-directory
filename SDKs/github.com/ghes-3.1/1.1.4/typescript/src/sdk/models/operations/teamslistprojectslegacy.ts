@@ -41,7 +41,7 @@ export class TeamsListProjectsLegacyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -53,5 +53,5 @@ export class TeamsListProjectsLegacyResponse extends SpeakeasyBase {
   teamProjects?: shared.TeamProject[];
 
   @SpeakeasyMetadata()
-  teamsListProjectsLegacy415ApplicationJsonObject?: TeamsListProjectsLegacy415ApplicationJson;
+  teamsListProjectsLegacy415ApplicationJSONObject?: TeamsListProjectsLegacy415ApplicationJson;
 }

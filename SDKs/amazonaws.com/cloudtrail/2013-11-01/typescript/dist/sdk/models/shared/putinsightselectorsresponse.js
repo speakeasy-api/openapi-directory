@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightSelector } from "./insightselector";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutInsightSelectorsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightselector_1 = require("./insightselector");
 var PutInsightSelectorsResponse = /** @class */ (function (_super) {
     __extends(PutInsightSelectorsResponse, _super);
     function PutInsightSelectorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightSelectors", elemType: InsightSelector }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightSelectors", elemType: insightselector_1.InsightSelector }),
         __metadata("design:type", Array)
     ], PutInsightSelectorsResponse.prototype, "insightSelectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrailARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrailARN" }),
         __metadata("design:type", String)
-    ], PutInsightSelectorsResponse.prototype, "trailArn", void 0);
+    ], PutInsightSelectorsResponse.prototype, "trailARN", void 0);
     return PutInsightSelectorsResponse;
-}(SpeakeasyBase));
-export { PutInsightSelectorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutInsightSelectorsResponse = PutInsightSelectorsResponse;

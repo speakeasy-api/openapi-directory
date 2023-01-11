@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserAuthConfigInfo } from "./userauthconfiginfo";
-import { DbProxyStatusEnum } from "./dbproxystatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbProxy = void 0;
+var utils_1 = require("../../../internal/utils");
+var userauthconfiginfo_1 = require("./userauthconfiginfo");
+var dbproxystatusenum_1 = require("./dbproxystatusenum");
 // DbProxy
 /**
  * <p>The data structure representing a proxy managed by the RDS Proxy.</p> <p>This data type is used as a response element in the <code>DescribeDBProxies</code> action.</p>
@@ -35,65 +38,65 @@ var DbProxy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: UserAuthConfigInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: userauthconfiginfo_1.UserAuthConfigInfo }),
         __metadata("design:type", Array)
     ], DbProxy.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbProxy.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "dbProxyArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "dbProxyName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbProxy.prototype, "debugLogging", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "engineFamily", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbProxy.prototype, "idleClientTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], DbProxy.prototype, "requireTls", void 0);
+    ], DbProxy.prototype, "requireTLS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbProxy.prototype, "updatedDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxy.prototype, "vpcId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbProxy.prototype, "vpcSecurityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbProxy.prototype, "vpcSubnetIds", void 0);
     return DbProxy;
-}(SpeakeasyBase));
-export { DbProxy };
+}(utils_1.SpeakeasyBase));
+exports.DbProxy = DbProxy;

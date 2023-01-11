@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizedConnectAppEnumPermissionEnum = void 0;
+var AuthorizedConnectAppEnumPermissionEnum;
+(function (AuthorizedConnectAppEnumPermissionEnum) {
+    AuthorizedConnectAppEnumPermissionEnum["GetAll"] = "get-all";
+    AuthorizedConnectAppEnumPermissionEnum["PostAll"] = "post-all";
+})(AuthorizedConnectAppEnumPermissionEnum = exports.AuthorizedConnectAppEnumPermissionEnum || (exports.AuthorizedConnectAppEnumPermissionEnum = {}));

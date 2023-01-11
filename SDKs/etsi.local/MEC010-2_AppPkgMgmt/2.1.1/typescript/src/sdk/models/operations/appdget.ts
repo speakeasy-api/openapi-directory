@@ -38,6 +38,9 @@ export class AppDgetRequest extends SpeakeasyBase {
 
 export class AppDgetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
+  appD?: string;
+
+  @SpeakeasyMetadata()
   body?: Uint8Array;
 
   @SpeakeasyMetadata()

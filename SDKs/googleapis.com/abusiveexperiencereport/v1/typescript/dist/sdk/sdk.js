@@ -1,47 +1,28 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Sites } from "./sites";
-import { ViolatingSites } from "./violatingsites";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var sites_1 = require("./sites");
+var violatingsites_1 = require("./violatingsites");
+exports.ServerList = [
     "https://abusiveexperiencereport.googleapis.com/",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://developers.google.com/abusive-experience-report/*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.sites = new Sites(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.violatingSites = new ViolatingSites(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.sites = new sites_1.Sites(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.violatingSites = new violatingsites_1.ViolatingSites(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

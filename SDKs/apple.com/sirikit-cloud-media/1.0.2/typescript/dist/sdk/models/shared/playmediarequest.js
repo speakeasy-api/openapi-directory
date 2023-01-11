@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Constraints } from "./constraints";
-import { UserActivity } from "./useractivity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayMediaRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var constraints_1 = require("./constraints");
+var useractivity_1 = require("./useractivity");
 var PlayMediaRequest = /** @class */ (function (_super) {
     __extends(PlayMediaRequest, _super);
     function PlayMediaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints" }),
-        __metadata("design:type", Constraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints" }),
+        __metadata("design:type", constraints_1.Constraints)
     ], PlayMediaRequest.prototype, "constraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userActivity" }),
-        __metadata("design:type", UserActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userActivity" }),
+        __metadata("design:type", useractivity_1.UserActivity)
     ], PlayMediaRequest.prototype, "userActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], PlayMediaRequest.prototype, "version", void 0);
     return PlayMediaRequest;
-}(SpeakeasyBase));
-export { PlayMediaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayMediaRequest = PlayMediaRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionOrganizationFollowerCountResponse = exports.GetActionOrganizationFollowerCountRequest = exports.GetActionOrganizationFollowerCountQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionOrganizationFollowerCountQueryParams = /** @class */ (function (_super) {
     __extends(GetActionOrganizationFollowerCountQueryParams, _super);
     function GetActionOrganizationFollowerCountQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetActionOrganizationFollowerCountQueryParams.prototype, "id", void 0);
     return GetActionOrganizationFollowerCountQueryParams;
-}(SpeakeasyBase));
-export { GetActionOrganizationFollowerCountQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationFollowerCountQueryParams = GetActionOrganizationFollowerCountQueryParams;
 var GetActionOrganizationFollowerCountRequest = /** @class */ (function (_super) {
     __extends(GetActionOrganizationFollowerCountRequest, _super);
     function GetActionOrganizationFollowerCountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionOrganizationFollowerCountQueryParams)
     ], GetActionOrganizationFollowerCountRequest.prototype, "queryParams", void 0);
     return GetActionOrganizationFollowerCountRequest;
-}(SpeakeasyBase));
-export { GetActionOrganizationFollowerCountRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationFollowerCountRequest = GetActionOrganizationFollowerCountRequest;
 var GetActionOrganizationFollowerCountResponse = /** @class */ (function (_super) {
     __extends(GetActionOrganizationFollowerCountResponse, _super);
     function GetActionOrganizationFollowerCountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionOrganizationFollowerCountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionOrganizationFollowerCountResponse.prototype, "statusCode", void 0);
     return GetActionOrganizationFollowerCountResponse;
-}(SpeakeasyBase));
-export { GetActionOrganizationFollowerCountResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationFollowerCountResponse = GetActionOrganizationFollowerCountResponse;

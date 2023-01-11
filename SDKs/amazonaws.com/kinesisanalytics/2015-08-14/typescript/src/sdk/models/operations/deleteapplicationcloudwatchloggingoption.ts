@@ -51,7 +51,7 @@ export class DeleteApplicationCloudWatchLoggingOptionResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationCloudWatchLoggingOptionResponse?: Map<string, any>;
+  deleteApplicationCloudWatchLoggingOptionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

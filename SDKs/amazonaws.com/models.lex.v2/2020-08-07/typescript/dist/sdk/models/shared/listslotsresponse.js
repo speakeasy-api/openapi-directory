@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlotSummary } from "./slotsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSlotsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var slotsummary_1 = require("./slotsummary");
 var ListSlotsResponse = /** @class */ (function (_super) {
     __extends(ListSlotsResponse, _super);
     function ListSlotsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], ListSlotsResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], ListSlotsResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentId" }),
         __metadata("design:type", String)
     ], ListSlotsResponse.prototype, "intentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], ListSlotsResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListSlotsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotSummaries", elemType: SlotSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotSummaries", elemType: slotsummary_1.SlotSummary }),
         __metadata("design:type", Array)
     ], ListSlotsResponse.prototype, "slotSummaries", void 0);
     return ListSlotsResponse;
-}(SpeakeasyBase));
-export { ListSlotsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSlotsResponse = ListSlotsResponse;

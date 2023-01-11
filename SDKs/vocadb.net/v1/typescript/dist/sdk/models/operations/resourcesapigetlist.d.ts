@@ -11,7 +11,7 @@ export declare class ResourcesApiGetListRequest extends SpeakeasyBase {
 }
 export declare class ResourcesApiGetListResponse extends SpeakeasyBase {
     contentType: string;
-    resourcesApiGetList200ApplicationJsonObject?: Map<string, Map<string, string>>;
-    resourcesApiGetList200TextJsonObject?: Map<string, Map<string, string>>;
+    resourcesApiGetList200ApplicationJSONObject?: Record<string, Record<string, string>>;
+    resourcesApiGetList200TextJSONObject?: Record<string, Record<string, string>>;
     statusCode: number;
 }

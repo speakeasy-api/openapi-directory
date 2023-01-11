@@ -6,7 +6,7 @@ export declare class DomainEntry extends SpeakeasyBase {
     id?: string;
     isAlias?: boolean;
     name?: string;
-    options?: Map<string, string>;
+    options?: Record<string, string>;
     target?: string;
     type?: string;
 }

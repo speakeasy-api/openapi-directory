@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFilesDownloadResponse = exports.GetFilesDownloadRequest = exports.GetFilesDownloadQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetFilesDownloadQueryParams = /** @class */ (function (_super) {
     __extends(GetFilesDownloadQueryParams, _super);
     function GetFilesDownloadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fileId" }),
         __metadata("design:type", String)
     ], GetFilesDownloadQueryParams.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=validSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=validSeconds" }),
         __metadata("design:type", Number)
     ], GetFilesDownloadQueryParams.prototype, "validSeconds", void 0);
     return GetFilesDownloadQueryParams;
-}(SpeakeasyBase));
-export { GetFilesDownloadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesDownloadQueryParams = GetFilesDownloadQueryParams;
 var GetFilesDownloadRequest = /** @class */ (function (_super) {
     __extends(GetFilesDownloadRequest, _super);
     function GetFilesDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFilesDownloadQueryParams)
     ], GetFilesDownloadRequest.prototype, "queryParams", void 0);
     return GetFilesDownloadRequest;
-}(SpeakeasyBase));
-export { GetFilesDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesDownloadRequest = GetFilesDownloadRequest;
 var GetFilesDownloadResponse = /** @class */ (function (_super) {
     __extends(GetFilesDownloadResponse, _super);
     function GetFilesDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetFilesDownloadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFilesDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFilesDownloadResponse.prototype, "statusCode", void 0);
     return GetFilesDownloadResponse;
-}(SpeakeasyBase));
-export { GetFilesDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesDownloadResponse = GetFilesDownloadResponse;

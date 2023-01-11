@@ -41,23 +41,23 @@ export class GetTotalPotValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTotalPotValue200ApplicationJsonAny?: any;
+  getTotalPotValue200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue400ApplicationJsonAny?: any;
+  getTotalPotValue400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue401ApplicationJsonAny?: any;
+  getTotalPotValue401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue403ApplicationJsonAny?: any;
+  getTotalPotValue403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue404ApplicationJsonAny?: any;
+  getTotalPotValue404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue429ApplicationJsonAny?: any;
+  getTotalPotValue429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotValue500ApplicationJsonAny?: any;
+  getTotalPotValue500ApplicationJSONAny?: any;
 }

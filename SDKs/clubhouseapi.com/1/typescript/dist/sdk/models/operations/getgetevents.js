@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetEventsResponse = exports.GetGetEventsRequest = exports.GetGetEventsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGetEventsQueryParams = /** @class */ (function (_super) {
     __extends(GetGetEventsQueryParams, _super);
     function GetGetEventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=is_filtered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=is_filtered" }),
         __metadata("design:type", Boolean)
     ], GetGetEventsQueryParams.prototype, "isFiltered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetGetEventsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetGetEventsQueryParams.prototype, "pageSize", void 0);
     return GetGetEventsQueryParams;
-}(SpeakeasyBase));
-export { GetGetEventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetEventsQueryParams = GetGetEventsQueryParams;
 var GetGetEventsRequest = /** @class */ (function (_super) {
     __extends(GetGetEventsRequest, _super);
     function GetGetEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetEventsQueryParams)
     ], GetGetEventsRequest.prototype, "queryParams", void 0);
     return GetGetEventsRequest;
-}(SpeakeasyBase));
-export { GetGetEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetEventsRequest = GetGetEventsRequest;
 var GetGetEventsResponse = /** @class */ (function (_super) {
     __extends(GetGetEventsResponse, _super);
     function GetGetEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetEventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetEventsResponse.prototype, "statusCode", void 0);
     return GetGetEventsResponse;
-}(SpeakeasyBase));
-export { GetGetEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetEventsResponse = GetGetEventsResponse;

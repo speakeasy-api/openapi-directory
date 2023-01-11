@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSetupV1LocationsIdGoogleServiceAccountResponse = exports.DeleteSetupV1LocationsIdGoogleServiceAccountRequest = exports.DeleteSetupV1LocationsIdGoogleServiceAccountPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSetupV1LocationsIdGoogleServiceAccountPathParams = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdGoogleServiceAccountPathParams, _super);
     function DeleteSetupV1LocationsIdGoogleServiceAccountPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdGoogleServiceAccountPathParams.prototype, "id", void 0);
     return DeleteSetupV1LocationsIdGoogleServiceAccountPathParams;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdGoogleServiceAccountPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdGoogleServiceAccountPathParams = DeleteSetupV1LocationsIdGoogleServiceAccountPathParams;
 var DeleteSetupV1LocationsIdGoogleServiceAccountRequest = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdGoogleServiceAccountRequest, _super);
     function DeleteSetupV1LocationsIdGoogleServiceAccountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSetupV1LocationsIdGoogleServiceAccountPathParams)
     ], DeleteSetupV1LocationsIdGoogleServiceAccountRequest.prototype, "pathParams", void 0);
     return DeleteSetupV1LocationsIdGoogleServiceAccountRequest;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdGoogleServiceAccountRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdGoogleServiceAccountRequest = DeleteSetupV1LocationsIdGoogleServiceAccountRequest;
 var DeleteSetupV1LocationsIdGoogleServiceAccountResponse = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdGoogleServiceAccountResponse, _super);
     function DeleteSetupV1LocationsIdGoogleServiceAccountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdGoogleServiceAccountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSetupV1LocationsIdGoogleServiceAccountResponse.prototype, "statusCode", void 0);
     return DeleteSetupV1LocationsIdGoogleServiceAccountResponse;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdGoogleServiceAccountResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdGoogleServiceAccountResponse = DeleteSetupV1LocationsIdGoogleServiceAccountResponse;

@@ -22,6 +22,6 @@ export declare class UpdateComponentConfigurationResponse extends SpeakeasyBase 
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateComponentConfigurationResponse?: Map<string, any>;
+    updateComponentConfigurationResponse?: Record<string, any>;
     validationException?: any;
 }

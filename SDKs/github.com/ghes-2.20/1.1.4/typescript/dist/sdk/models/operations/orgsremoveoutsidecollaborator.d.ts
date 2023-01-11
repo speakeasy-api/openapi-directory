@@ -13,5 +13,5 @@ export declare class OrgsRemoveOutsideCollaboratorRequest extends SpeakeasyBase 
 export declare class OrgsRemoveOutsideCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    orgsRemoveOutsideCollaborator422ApplicationJsonObject?: OrgsRemoveOutsideCollaborator422ApplicationJson;
+    orgsRemoveOutsideCollaborator422ApplicationJSONObject?: OrgsRemoveOutsideCollaborator422ApplicationJson;
 }

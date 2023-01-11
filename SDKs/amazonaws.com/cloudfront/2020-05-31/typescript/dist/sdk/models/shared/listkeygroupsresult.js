@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyGroupList } from "./keygrouplist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListKeyGroupsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var keygrouplist_1 = require("./keygrouplist");
 var ListKeyGroupsResult = /** @class */ (function (_super) {
     __extends(ListKeyGroupsResult, _super);
     function ListKeyGroupsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", KeyGroupList)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", keygrouplist_1.KeyGroupList)
     ], ListKeyGroupsResult.prototype, "keyGroupList", void 0);
     return ListKeyGroupsResult;
-}(SpeakeasyBase));
-export { ListKeyGroupsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListKeyGroupsResult = ListKeyGroupsResult;

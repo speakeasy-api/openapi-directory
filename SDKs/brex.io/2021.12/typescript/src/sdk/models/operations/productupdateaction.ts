@@ -41,10 +41,10 @@ export class ProductUpdateActionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productUpdateAction200ApplicationJsonAny?: any;
+  productUpdateAction200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productUpdateActionDefaultApplicationJsonAny?: any;
+  productUpdateActionDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -19,7 +19,7 @@ export declare class DeleteBgpPeerRequest extends SpeakeasyBase {
 }
 export declare class DeleteBgpPeerResponse extends SpeakeasyBase {
     contentType: string;
-    deleteBgpPeerResponse?: shared.DeleteBgpPeerResponse;
+    deleteBGPPeerResponse?: shared.DeleteBgpPeerResponse;
     directConnectClientException?: any;
     directConnectServerException?: any;
     statusCode: number;

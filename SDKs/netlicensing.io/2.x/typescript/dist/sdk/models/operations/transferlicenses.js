@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferLicensesResponse = exports.TransferLicensesRequest = exports.TransferLicensesSecurity = exports.TransferLicensesRequestBody = exports.TransferLicensesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TransferLicensesPathParams = /** @class */ (function (_super) {
     __extends(TransferLicensesPathParams, _super);
     function TransferLicensesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=licenseeNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=licenseeNumber" }),
         __metadata("design:type", String)
     ], TransferLicensesPathParams.prototype, "licenseeNumber", void 0);
     return TransferLicensesPathParams;
-}(SpeakeasyBase));
-export { TransferLicensesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TransferLicensesPathParams = TransferLicensesPathParams;
 var TransferLicensesRequestBody = /** @class */ (function (_super) {
     __extends(TransferLicensesRequestBody, _super);
     function TransferLicensesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=sourceLicenseeNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=sourceLicenseeNumber;" }),
         __metadata("design:type", String)
     ], TransferLicensesRequestBody.prototype, "sourceLicenseeNumber", void 0);
     return TransferLicensesRequestBody;
-}(SpeakeasyBase));
-export { TransferLicensesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TransferLicensesRequestBody = TransferLicensesRequestBody;
 var TransferLicensesSecurity = /** @class */ (function (_super) {
     __extends(TransferLicensesSecurity, _super);
     function TransferLicensesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasicAuth)
     ], TransferLicensesSecurity.prototype, "basicAuth", void 0);
     return TransferLicensesSecurity;
-}(SpeakeasyBase));
-export { TransferLicensesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.TransferLicensesSecurity = TransferLicensesSecurity;
 var TransferLicensesRequest = /** @class */ (function (_super) {
     __extends(TransferLicensesRequest, _super);
     function TransferLicensesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TransferLicensesPathParams)
     ], TransferLicensesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", TransferLicensesRequestBody)
     ], TransferLicensesRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TransferLicensesSecurity)
     ], TransferLicensesRequest.prototype, "security", void 0);
     return TransferLicensesRequest;
-}(SpeakeasyBase));
-export { TransferLicensesRequest };
+}(utils_1.SpeakeasyBase));
+exports.TransferLicensesRequest = TransferLicensesRequest;
 var TransferLicensesResponse = /** @class */ (function (_super) {
     __extends(TransferLicensesResponse, _super);
     function TransferLicensesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], TransferLicensesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TransferLicensesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TransferLicensesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TransferLicensesResponse.prototype, "netlicensing", void 0);
     return TransferLicensesResponse;
-}(SpeakeasyBase));
-export { TransferLicensesResponse };
+}(utils_1.SpeakeasyBase));
+exports.TransferLicensesResponse = TransferLicensesResponse;

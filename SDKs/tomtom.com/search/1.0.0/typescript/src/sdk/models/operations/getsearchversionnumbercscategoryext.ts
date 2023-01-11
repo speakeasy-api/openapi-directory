@@ -3,7 +3,7 @@ import * as shared from "../shared";
 
 
 
-export class GetSearchVersionNumberCSCategoryExtPathParams extends SpeakeasyBase {
+export class GetSearchVersionNumberCsCategoryExtPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=category" })
   category: string;
 
@@ -15,7 +15,7 @@ export class GetSearchVersionNumberCSCategoryExtPathParams extends SpeakeasyBase
 }
 
 
-export class GetSearchVersionNumberCSCategoryExtQueryParams extends SpeakeasyBase {
+export class GetSearchVersionNumberCsCategoryExtQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=btmRight" })
   btmRight?: string;
 
@@ -54,16 +54,16 @@ export class GetSearchVersionNumberCSCategoryExtQueryParams extends SpeakeasyBas
 }
 
 
-export class GetSearchVersionNumberCSCategoryExtRequest extends SpeakeasyBase {
+export class GetSearchVersionNumberCsCategoryExtRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetSearchVersionNumberCSCategoryExtPathParams;
+  pathParams: GetSearchVersionNumberCsCategoryExtPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetSearchVersionNumberCSCategoryExtQueryParams;
+  queryParams: GetSearchVersionNumberCsCategoryExtQueryParams;
 }
 
 
-export class GetSearchVersionNumberCSCategoryExtResponse extends SpeakeasyBase {
+export class GetSearchVersionNumberCsCategoryExtResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

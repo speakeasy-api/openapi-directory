@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AppDgetRequest, AppDgetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,14 +28,14 @@ const sdk = new SDK();
     
 const req: AppDgetRequest = {
   pathParams: {
-    appDId: "qui",
+    appDId: "sit",
   },
   queryParams: {
-    allFields: "rerum",
-    excludeDefault: "in",
-    excludeFields: "pariatur",
-    fields: "illum",
-    filter: "fugiat",
+    allFields: "voluptas",
+    excludeDefault: "culpa",
+    excludeFields: "expedita",
+    fields: "consequuntur",
+    filter: "dolor",
   },
 };
 
@@ -65,6 +64,7 @@ sdk.appPkgm.appDget(req).then((res: AppDgetResponse | AxiosError) => {
 * `individualSubscriptionDelete` - Deletes the individual subscription to notifications about application package changes in MEO.
 * `individualSubscriptionGet` - Used to represent an individual subscription to notifications about application package changes.
 * `subscriptionsGet` - used to retrieve the information of subscriptions to individual application package resource in MEO
+* `subscriptionsPost` - Subscribe to notifications about on-boarding an application package
 
 ### app-pkgm-notifications
 

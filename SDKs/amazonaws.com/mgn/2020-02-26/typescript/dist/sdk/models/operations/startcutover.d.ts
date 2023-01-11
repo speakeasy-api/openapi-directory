@@ -11,7 +11,7 @@ export declare class StartCutoverHeaders extends SpeakeasyBase {
 }
 export declare class StartCutoverRequestBody extends SpeakeasyBase {
     sourceServerIDs: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartCutoverRequest extends SpeakeasyBase {
     headers: StartCutoverHeaders;

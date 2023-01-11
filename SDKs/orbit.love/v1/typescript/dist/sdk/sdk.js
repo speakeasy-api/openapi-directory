@@ -1,56 +1,37 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Activities } from "./activities";
-import { ActivityTypes } from "./activitytypes";
-import { Members } from "./members";
-import { Notes } from "./notes";
-import { Reports } from "./reports";
-import { Users } from "./users";
-import { Workspaces } from "./workspaces";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var activities_1 = require("./activities");
+var activitytypes_1 = require("./activitytypes");
+var members_1 = require("./members");
+var notes_1 = require("./notes");
+var reports_1 = require("./reports");
+var users_1 = require("./users");
+var workspaces_1 = require("./workspaces");
+exports.ServerList = [
     "https://app.orbit.love/api/v1",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.activities = new Activities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.activityTypes = new ActivityTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.members = new Members(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.notes = new Notes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.reports = new Reports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.users = new Users(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.workspaces = new Workspaces(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.activities = new activities_1.Activities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.activityTypes = new activitytypes_1.ActivityTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.members = new members_1.Members(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.notes = new notes_1.Notes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.reports = new reports_1.Reports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.users = new users_1.Users(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.workspaces = new workspaces_1.Workspaces(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AreasGetRequest, AreasGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: AreasGetRequest = {
   pathParams: {
-    version: "quo",
+    version: "sit",
   },
 };
 
-sdk.sdk.areasGet(req).then((res: AreasGetResponse | AxiosError) => {
+sdk.areas.areasGet(req).then((res: AreasGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -42,18 +41,30 @@ sdk.sdk.areasGet(req).then((res: AreasGetResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Areas
 
 * `areasGet` - Returns list of areas
 * `getVVersionAreasAreaIds` - Returns details of selected area
-* `getVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
-* `getVVersionSitesSiteIds` - Get selected sites
+
+### Quality
+
 * `qualityGetDailyDataQualityForSite` - Get Site DailyQuality
 * `qualityGetOverallDataQualityForSites` - Get Site OverallQuality
+
+### Reports
+
 * `reportsIndex` - Gets the daily report.
+* `getVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
+
+### SiteTypes
+
 * `siteTypesGetSitesForPublicFacingApi` - Returns the layer metadata for the LayerId specified.
 * `siteTypesIndex` - Return list of site types
+
+### Sites
+
 * `sitesIndex` - Get a list of sites
+* `getVVersionSitesSiteIds` - Get selected sites
 
 <!-- End SDK Available Operations -->
 

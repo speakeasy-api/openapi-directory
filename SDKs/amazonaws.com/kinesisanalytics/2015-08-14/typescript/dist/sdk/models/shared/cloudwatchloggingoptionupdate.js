@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchLoggingOptionUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
 // CloudWatchLoggingOptionUpdate
 /**
  * Describes CloudWatch logging option updates.
@@ -33,17 +36,17 @@ var CloudWatchLoggingOptionUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLoggingOptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLoggingOptionId" }),
         __metadata("design:type", String)
     ], CloudWatchLoggingOptionUpdate.prototype, "cloudWatchLoggingOptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogStreamARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogStreamARNUpdate" }),
         __metadata("design:type", String)
-    ], CloudWatchLoggingOptionUpdate.prototype, "logStreamArnUpdate", void 0);
+    ], CloudWatchLoggingOptionUpdate.prototype, "logStreamARNUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARNUpdate" }),
         __metadata("design:type", String)
-    ], CloudWatchLoggingOptionUpdate.prototype, "roleArnUpdate", void 0);
+    ], CloudWatchLoggingOptionUpdate.prototype, "roleARNUpdate", void 0);
     return CloudWatchLoggingOptionUpdate;
-}(SpeakeasyBase));
-export { CloudWatchLoggingOptionUpdate };
+}(utils_1.SpeakeasyBase));
+exports.CloudWatchLoggingOptionUpdate = CloudWatchLoggingOptionUpdate;

@@ -24,7 +24,7 @@ export declare class StartStudioSsoConfigurationRepairResponse extends Speakeasy
     internalServerErrorException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;
-    startStudioSsoConfigurationRepairResponse?: shared.StartStudioSsoConfigurationRepairResponse;
+    startStudioSSOConfigurationRepairResponse?: shared.StartStudioSsoConfigurationRepairResponse;
     statusCode: number;
     throttlingException?: any;
     validationException?: any;

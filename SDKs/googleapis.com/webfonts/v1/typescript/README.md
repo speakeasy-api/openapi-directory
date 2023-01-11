@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WebfontsWebfontsListRequest, WebfontsWebfontsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,18 +28,18 @@ const sdk = new SDK();
     
 const req: WebfontsWebfontsListRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "harum",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "adipisci",
-    fields: "non",
-    key: "voluptatem",
-    oauthToken: "quia",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "similique",
-    sort: "ALPHA",
-    uploadType: "id",
-    uploadProtocol: "cupiditate",
+    quotaUser: "fugit",
+    sort: "SORT_UNDEFINED",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

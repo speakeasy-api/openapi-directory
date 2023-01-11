@@ -94,6 +94,6 @@ export declare class SearchAndRankCarRequest extends SpeakeasyBase {
 export declare class SearchAndRankCarResponse extends SpeakeasyBase {
     carRankResponse?: shared.CarRankResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

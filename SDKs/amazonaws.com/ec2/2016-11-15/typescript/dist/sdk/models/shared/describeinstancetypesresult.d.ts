@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstanceTypeInfo } from "./instancetypeinfo";
 export declare class DescribeInstanceTypesResult extends SpeakeasyBase {
-    instanceTypes?: InstanceTypeInfo[];
-    nextToken?: string;
+    instanceTypes?: Record<string, any>;
+    nextToken?: Record<string, any>;
 }

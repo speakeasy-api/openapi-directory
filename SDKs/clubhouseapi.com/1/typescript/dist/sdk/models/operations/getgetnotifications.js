@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetNotificationsResponse = exports.GetGetNotificationsRequest = exports.GetGetNotificationsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGetNotificationsQueryParams = /** @class */ (function (_super) {
     __extends(GetGetNotificationsQueryParams, _super);
     function GetGetNotificationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetGetNotificationsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetGetNotificationsQueryParams.prototype, "pageSize", void 0);
     return GetGetNotificationsQueryParams;
-}(SpeakeasyBase));
-export { GetGetNotificationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetNotificationsQueryParams = GetGetNotificationsQueryParams;
 var GetGetNotificationsRequest = /** @class */ (function (_super) {
     __extends(GetGetNotificationsRequest, _super);
     function GetGetNotificationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetNotificationsQueryParams)
     ], GetGetNotificationsRequest.prototype, "queryParams", void 0);
     return GetGetNotificationsRequest;
-}(SpeakeasyBase));
-export { GetGetNotificationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetNotificationsRequest = GetGetNotificationsRequest;
 var GetGetNotificationsResponse = /** @class */ (function (_super) {
     __extends(GetGetNotificationsResponse, _super);
     function GetGetNotificationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetNotificationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetNotificationsResponse.prototype, "statusCode", void 0);
     return GetGetNotificationsResponse;
-}(SpeakeasyBase));
-export { GetGetNotificationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetNotificationsResponse = GetGetNotificationsResponse;

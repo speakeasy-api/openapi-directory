@@ -25,5 +25,5 @@ export declare class UpdatePartitionResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updatePartitionResponse?: Map<string, any>;
+    updatePartitionResponse?: Record<string, any>;
 }

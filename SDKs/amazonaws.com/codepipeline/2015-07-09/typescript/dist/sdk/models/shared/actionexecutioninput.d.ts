@@ -6,10 +6,10 @@ import { ArtifactDetail } from "./artifactdetail";
 **/
 export declare class ActionExecutionInput extends SpeakeasyBase {
     actionTypeId?: ActionTypeId;
-    configuration?: Map<string, string>;
+    configuration?: Record<string, string>;
     inputArtifacts?: ArtifactDetail[];
     namespace?: string;
     region?: string;
-    resolvedConfiguration?: Map<string, string>;
+    resolvedConfiguration?: Record<string, string>;
     roleArn?: string;
 }

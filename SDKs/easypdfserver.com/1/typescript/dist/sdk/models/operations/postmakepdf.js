@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostMakePdfResponse = exports.PostMakePdfRequest = exports.PostMakePdfRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostMakePdfRequestBody = /** @class */ (function (_super) {
     __extends(PostMakePdfRequestBody, _super);
     function PostMakePdfRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], PostMakePdfRequestBody.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], PostMakePdfRequestBody.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostMakePdfRequestBody.prototype, "url", void 0);
     return PostMakePdfRequestBody;
-}(SpeakeasyBase));
-export { PostMakePdfRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostMakePdfRequestBody = PostMakePdfRequestBody;
 var PostMakePdfRequest = /** @class */ (function (_super) {
     __extends(PostMakePdfRequest, _super);
     function PostMakePdfRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostMakePdfRequestBody)
     ], PostMakePdfRequest.prototype, "request", void 0);
     return PostMakePdfRequest;
-}(SpeakeasyBase));
-export { PostMakePdfRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostMakePdfRequest = PostMakePdfRequest;
 var PostMakePdfResponse = /** @class */ (function (_super) {
     __extends(PostMakePdfResponse, _super);
     function PostMakePdfResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostMakePdfResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Uint8Array)
-    ], PostMakePdfResponse.prototype, "postMakePdf200ApplicationPdfBinaryString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostMakePdfResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Uint8Array)
+    ], PostMakePdfResponse.prototype, "postMakePdf200ApplicationPdfBinaryString", void 0);
     return PostMakePdfResponse;
-}(SpeakeasyBase));
-export { PostMakePdfResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostMakePdfResponse = PostMakePdfResponse;

@@ -1,4 +1,7 @@
-export var ContainerServicePowerNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServicePowerNameEnum = void 0;
+var ContainerServicePowerNameEnum;
 (function (ContainerServicePowerNameEnum) {
     ContainerServicePowerNameEnum["Nano"] = "nano";
     ContainerServicePowerNameEnum["Micro"] = "micro";
@@ -6,4 +9,4 @@ export var ContainerServicePowerNameEnum;
     ContainerServicePowerNameEnum["Medium"] = "medium";
     ContainerServicePowerNameEnum["Large"] = "large";
     ContainerServicePowerNameEnum["Xlarge"] = "xlarge";
-})(ContainerServicePowerNameEnum || (ContainerServicePowerNameEnum = {}));
+})(ContainerServicePowerNameEnum = exports.ContainerServicePowerNameEnum || (exports.ContainerServicePowerNameEnum = {}));

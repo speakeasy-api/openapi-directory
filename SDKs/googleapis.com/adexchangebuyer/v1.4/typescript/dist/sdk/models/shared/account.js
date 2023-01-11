@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = exports.AccountBidderLocation = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccountBidderLocation = /** @class */ (function (_super) {
     __extends(AccountBidderLocation, _super);
     function AccountBidderLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidProtocol" }),
         __metadata("design:type", String)
     ], AccountBidderLocation.prototype, "bidProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumQps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumQps" }),
         __metadata("design:type", Number)
     ], AccountBidderLocation.prototype, "maximumQps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AccountBidderLocation.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AccountBidderLocation.prototype, "url", void 0);
     return AccountBidderLocation;
-}(SpeakeasyBase));
-export { AccountBidderLocation };
+}(utils_1.SpeakeasyBase));
+exports.AccountBidderLocation = AccountBidderLocation;
 // Account
 /**
  * Configuration data for an Ad Exchange buyer account.
@@ -57,41 +60,41 @@ var Account = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyPretargetingToNonGuaranteedDeals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyPretargetingToNonGuaranteedDeals" }),
         __metadata("design:type", Boolean)
     ], Account.prototype, "applyPretargetingToNonGuaranteedDeals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidderLocation", elemType: AccountBidderLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidderLocation", elemType: AccountBidderLocation }),
         __metadata("design:type", Array)
     ], Account.prototype, "bidderLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieMatchingNid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieMatchingNid" }),
         __metadata("design:type", String)
     ], Account.prototype, "cookieMatchingNid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieMatchingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieMatchingUrl" }),
         __metadata("design:type", String)
     ], Account.prototype, "cookieMatchingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Account.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Account.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumActiveCreatives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumActiveCreatives" }),
         __metadata("design:type", Number)
     ], Account.prototype, "maximumActiveCreatives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumTotalQps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumTotalQps" }),
         __metadata("design:type", Number)
     ], Account.prototype, "maximumTotalQps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberActiveCreatives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberActiveCreatives" }),
         __metadata("design:type", Number)
     ], Account.prototype, "numberActiveCreatives", void 0);
     return Account;
-}(SpeakeasyBase));
-export { Account };
+}(utils_1.SpeakeasyBase));
+exports.Account = Account;

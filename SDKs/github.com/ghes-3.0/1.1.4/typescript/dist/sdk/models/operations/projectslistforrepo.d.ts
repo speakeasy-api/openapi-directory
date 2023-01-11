@@ -4,15 +4,10 @@ export declare class ProjectsListForRepoPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum ProjectsListForRepoStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
 export declare class ProjectsListForRepoQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-    state?: ProjectsListForRepoStateEnum;
+    state?: shared.RepoEnum2;
 }
 export declare class ProjectsListForRepoRequest extends SpeakeasyBase {
     pathParams: ProjectsListForRepoPathParams;
@@ -20,7 +15,7 @@ export declare class ProjectsListForRepoRequest extends SpeakeasyBase {
 }
 export declare class ProjectsListForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     projects?: shared.Project[];

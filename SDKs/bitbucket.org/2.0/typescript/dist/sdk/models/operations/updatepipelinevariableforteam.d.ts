@@ -5,11 +5,11 @@ export declare class UpdatePipelineVariableForTeamPathParams extends SpeakeasyBa
 }
 export declare class UpdatePipelineVariableForTeamRequest extends SpeakeasyBase {
     pathParams: UpdatePipelineVariableForTeamPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdatePipelineVariableForTeamResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

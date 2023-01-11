@@ -6,5 +6,5 @@ import { ConvertedRegionPrice } from "./convertedregionprice";
 **/
 export declare class ConvertRegionPricesResponse extends SpeakeasyBase {
     convertedOtherRegionsPrice?: ConvertedOtherRegionsPrice;
-    convertedRegionPrices?: Map<string, ConvertedRegionPrice>;
+    convertedRegionPrices?: Record<string, ConvertedRegionPrice>;
 }

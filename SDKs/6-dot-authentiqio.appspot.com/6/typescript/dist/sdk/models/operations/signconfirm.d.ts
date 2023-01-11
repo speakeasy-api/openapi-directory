@@ -13,5 +13,5 @@ export declare class SignConfirmResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    signConfirm202ApplicationJsonObject?: SignConfirm202ApplicationJson;
+    signConfirm202ApplicationJSONObject?: SignConfirm202ApplicationJson;
 }

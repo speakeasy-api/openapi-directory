@@ -12,7 +12,7 @@ export declare class ProjectFeatureFlags extends SpeakeasyBase {
 }
 export declare class Project extends SpeakeasyBase {
     aws?: Aws;
-    branches?: Map<string, any>;
+    branches?: Record<string, any>;
     campfireNotifyPrefs?: string;
     campfireRoom?: string;
     campfireSubdomain?: string;

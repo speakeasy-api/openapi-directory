@@ -14,7 +14,7 @@ export declare class GetApiVVersionMetalsSupportedCurrencyRequest extends Speake
 export declare class GetApiVVersionMetalsSupportedCurrencyResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getApiVVersionMetalsSupportedCurrency200ApplicationJsonStrings?: string[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
+    getApiVVersionMetalsSupportedCurrency200ApplicationJSONStrings?: string[];
 }

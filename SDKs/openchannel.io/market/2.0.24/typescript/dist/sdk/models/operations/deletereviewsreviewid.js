@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteReviewsReviewIdResponse = exports.DeleteReviewsReviewIdRequest = exports.DeleteReviewsReviewIdQueryParams = exports.DeleteReviewsReviewIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteReviewsReviewIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteReviewsReviewIdPathParams, _super);
     function DeleteReviewsReviewIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reviewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reviewId" }),
         __metadata("design:type", String)
     ], DeleteReviewsReviewIdPathParams.prototype, "reviewId", void 0);
     return DeleteReviewsReviewIdPathParams;
-}(SpeakeasyBase));
-export { DeleteReviewsReviewIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReviewsReviewIdPathParams = DeleteReviewsReviewIdPathParams;
 var DeleteReviewsReviewIdQueryParams = /** @class */ (function (_super) {
     __extends(DeleteReviewsReviewIdQueryParams, _super);
     function DeleteReviewsReviewIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userAccountId" }),
         __metadata("design:type", String)
     ], DeleteReviewsReviewIdQueryParams.prototype, "userAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], DeleteReviewsReviewIdQueryParams.prototype, "userId", void 0);
     return DeleteReviewsReviewIdQueryParams;
-}(SpeakeasyBase));
-export { DeleteReviewsReviewIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReviewsReviewIdQueryParams = DeleteReviewsReviewIdQueryParams;
 var DeleteReviewsReviewIdRequest = /** @class */ (function (_super) {
     __extends(DeleteReviewsReviewIdRequest, _super);
     function DeleteReviewsReviewIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteReviewsReviewIdPathParams)
     ], DeleteReviewsReviewIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteReviewsReviewIdQueryParams)
     ], DeleteReviewsReviewIdRequest.prototype, "queryParams", void 0);
     return DeleteReviewsReviewIdRequest;
-}(SpeakeasyBase));
-export { DeleteReviewsReviewIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReviewsReviewIdRequest = DeleteReviewsReviewIdRequest;
 var DeleteReviewsReviewIdResponse = /** @class */ (function (_super) {
     __extends(DeleteReviewsReviewIdResponse, _super);
     function DeleteReviewsReviewIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteReviewsReviewIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteReviewsReviewIdResponse.prototype, "statusCode", void 0);
     return DeleteReviewsReviewIdResponse;
-}(SpeakeasyBase));
-export { DeleteReviewsReviewIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReviewsReviewIdResponse = DeleteReviewsReviewIdResponse;

@@ -41,8 +41,8 @@ export class GetRepositoriesWorkspaceRepoSlugBranchingModelResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branchingModel?: Map<string, any>;
+  branchingModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

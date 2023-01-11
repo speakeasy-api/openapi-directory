@@ -11,7 +11,7 @@ export declare class Message extends SpeakeasyBase {
     android?: AndroidConfig;
     apns?: ApnsConfig;
     condition?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     fcmOptions?: FcmOptions;
     name?: string;
     notification?: Notification;

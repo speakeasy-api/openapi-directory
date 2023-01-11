@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CitiesRow = void 0;
+var utils_1 = require("../../../internal/utils");
 var CitiesRow = /** @class */ (function (_super) {
     __extends(CitiesRow, _super);
     function CitiesRow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], CitiesRow.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], CitiesRow.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], CitiesRow.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstUpdated" }),
         __metadata("design:type", Date)
     ], CitiesRow.prototype, "firstUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], CitiesRow.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations" }),
         __metadata("design:type", Number)
     ], CitiesRow.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
         __metadata("design:type", Array)
     ], CitiesRow.prototype, "parameters", void 0);
     return CitiesRow;
-}(SpeakeasyBase));
-export { CitiesRow };
+}(utils_1.SpeakeasyBase));
+exports.CitiesRow = CitiesRow;

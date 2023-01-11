@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DhcpOptions } from "./dhcpoptions";
 
 
 
 export class DescribeDhcpOptionsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DhcpOptions })
-  dhcpOptions?: DhcpOptions[];
+  @SpeakeasyMetadata()
+  dhcpOptions?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

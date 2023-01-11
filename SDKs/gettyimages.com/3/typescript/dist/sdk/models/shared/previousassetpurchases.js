@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PreviousAssetPurchase } from "./previousassetpurchase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreviousAssetPurchases = void 0;
+var utils_1 = require("../../../internal/utils");
+var previousassetpurchase_1 = require("./previousassetpurchase");
 var PreviousAssetPurchases = /** @class */ (function (_super) {
     __extends(PreviousAssetPurchases, _super);
     function PreviousAssetPurchases() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_purchases", elemType: PreviousAssetPurchase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_purchases", elemType: previousassetpurchase_1.PreviousAssetPurchase }),
         __metadata("design:type", Array)
     ], PreviousAssetPurchases.prototype, "previousPurchases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], PreviousAssetPurchases.prototype, "resultCount", void 0);
     return PreviousAssetPurchases;
-}(SpeakeasyBase));
-export { PreviousAssetPurchases };
+}(utils_1.SpeakeasyBase));
+exports.PreviousAssetPurchases = PreviousAssetPurchases;

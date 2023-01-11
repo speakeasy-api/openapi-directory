@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReauthSettingsMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReauthSettings = exports.ReauthSettingsPolicyTypeEnum = exports.ReauthSettingsMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReauthSettingsMethodEnum;
 (function (ReauthSettingsMethodEnum) {
     ReauthSettingsMethodEnum["MethodUnspecified"] = "METHOD_UNSPECIFIED";
     ReauthSettingsMethodEnum["Login"] = "LOGIN";
     ReauthSettingsMethodEnum["SecureKey"] = "SECURE_KEY";
     ReauthSettingsMethodEnum["EnrolledSecondFactors"] = "ENROLLED_SECOND_FACTORS";
-})(ReauthSettingsMethodEnum || (ReauthSettingsMethodEnum = {}));
-export var ReauthSettingsPolicyTypeEnum;
+})(ReauthSettingsMethodEnum = exports.ReauthSettingsMethodEnum || (exports.ReauthSettingsMethodEnum = {}));
+var ReauthSettingsPolicyTypeEnum;
 (function (ReauthSettingsPolicyTypeEnum) {
     ReauthSettingsPolicyTypeEnum["PolicyTypeUnspecified"] = "POLICY_TYPE_UNSPECIFIED";
     ReauthSettingsPolicyTypeEnum["Minimum"] = "MINIMUM";
     ReauthSettingsPolicyTypeEnum["Default"] = "DEFAULT";
-})(ReauthSettingsPolicyTypeEnum || (ReauthSettingsPolicyTypeEnum = {}));
+})(ReauthSettingsPolicyTypeEnum = exports.ReauthSettingsPolicyTypeEnum || (exports.ReauthSettingsPolicyTypeEnum = {}));
 // ReauthSettings
 /**
  * Configuration for IAP reauthentication policies.
@@ -46,17 +49,17 @@ var ReauthSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAge" }),
         __metadata("design:type", String)
     ], ReauthSettings.prototype, "maxAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ReauthSettings.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyType" }),
         __metadata("design:type", String)
     ], ReauthSettings.prototype, "policyType", void 0);
     return ReauthSettings;
-}(SpeakeasyBase));
-export { ReauthSettings };
+}(utils_1.SpeakeasyBase));
+exports.ReauthSettings = ReauthSettings;

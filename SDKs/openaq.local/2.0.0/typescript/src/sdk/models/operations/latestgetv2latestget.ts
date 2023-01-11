@@ -50,7 +50,7 @@ export class LatestGetV2LatestGetQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.LocationsOrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -68,7 +68,7 @@ export class LatestGetV2LatestGetQueryParams extends SpeakeasyBase {
   sensorType?: shared.SensorTypesEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceName" })
   sourceName?: string[];
@@ -92,7 +92,7 @@ export class LatestGetV2LatestGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqResult?: shared.OpenAqResult;
+  openAQResult?: shared.OpenAqResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

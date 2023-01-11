@@ -86,7 +86,7 @@ export class LhDeepLinksItcoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  lhDeepLinksItco200ApplicationJsonString?: string;
+  lhDeepLinksITCO200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

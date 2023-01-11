@@ -14,6 +14,6 @@ export declare class GetDealerMotorcycleIdRequest extends SpeakeasyBase {
 export declare class GetDealerMotorcycleIdResponse extends SpeakeasyBase {
     contentType: string;
     dealer?: shared.Dealer;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

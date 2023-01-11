@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceClientsResponse = exports.GetDeviceClientsRequest = exports.GetDeviceClientsQueryParams = exports.GetDeviceClientsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceClientsPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceClientsPathParams, _super);
     function GetDeviceClientsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceClientsPathParams.prototype, "serial", void 0);
     return GetDeviceClientsPathParams;
-}(SpeakeasyBase));
-export { GetDeviceClientsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceClientsPathParams = GetDeviceClientsPathParams;
 var GetDeviceClientsQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceClientsQueryParams, _super);
     function GetDeviceClientsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetDeviceClientsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetDeviceClientsQueryParams.prototype, "timespan", void 0);
     return GetDeviceClientsQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceClientsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceClientsQueryParams = GetDeviceClientsQueryParams;
 var GetDeviceClientsRequest = /** @class */ (function (_super) {
     __extends(GetDeviceClientsRequest, _super);
     function GetDeviceClientsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceClientsPathParams)
     ], GetDeviceClientsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceClientsQueryParams)
     ], GetDeviceClientsRequest.prototype, "queryParams", void 0);
     return GetDeviceClientsRequest;
-}(SpeakeasyBase));
-export { GetDeviceClientsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceClientsRequest = GetDeviceClientsRequest;
 var GetDeviceClientsResponse = /** @class */ (function (_super) {
     __extends(GetDeviceClientsResponse, _super);
     function GetDeviceClientsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceClientsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceClientsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceClientsResponse.prototype, "getDeviceClients200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceClientsResponse.prototype, "getDeviceClients200ApplicationJSONObject", void 0);
     return GetDeviceClientsResponse;
-}(SpeakeasyBase));
-export { GetDeviceClientsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceClientsResponse = GetDeviceClientsResponse;

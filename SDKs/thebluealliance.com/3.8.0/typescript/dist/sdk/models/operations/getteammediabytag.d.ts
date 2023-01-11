@@ -17,7 +17,7 @@ export declare class GetTeamMediaByTagRequest extends SpeakeasyBase {
 }
 export declare class GetTeamMediaByTagResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     media?: shared.Media[];
     statusCode: number;
 }

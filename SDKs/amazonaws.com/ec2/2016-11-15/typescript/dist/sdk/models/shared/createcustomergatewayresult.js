@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerGateway } from "./customergateway";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomerGatewayResult = exports.CreateCustomerGatewayResultCustomerGateway = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateCustomerGatewayResultCustomerGateway
+/**
+ * Information about the customer gateway.
+**/
+var CreateCustomerGatewayResultCustomerGateway = /** @class */ (function (_super) {
+    __extends(CreateCustomerGatewayResultCustomerGateway, _super);
+    function CreateCustomerGatewayResultCustomerGateway() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "bgpAsn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "certificateArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "customerGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "deviceName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "ipAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateCustomerGatewayResultCustomerGateway.prototype, "type", void 0);
+    return CreateCustomerGatewayResultCustomerGateway;
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomerGatewayResultCustomerGateway = CreateCustomerGatewayResultCustomerGateway;
 // CreateCustomerGatewayResult
 /**
  * Contains the output of CreateCustomerGateway.
@@ -34,9 +80,9 @@ var CreateCustomerGatewayResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CustomerGateway)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateCustomerGatewayResultCustomerGateway)
     ], CreateCustomerGatewayResult.prototype, "customerGateway", void 0);
     return CreateCustomerGatewayResult;
-}(SpeakeasyBase));
-export { CreateCustomerGatewayResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomerGatewayResult = CreateCustomerGatewayResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterMetadata } from "./clustermetadata";
-import { EncryptionKey } from "./encryptionkey";
-import { NamespacedNames } from "./namespacednames";
-import { Namespaces } from "./namespaces";
-export var BackupStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupInput = exports.Backup = exports.BackupStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var clustermetadata_1 = require("./clustermetadata");
+var encryptionkey_1 = require("./encryptionkey");
+var namespacednames_1 = require("./namespacednames");
+var namespaces_1 = require("./namespaces");
+var BackupStateEnum;
 (function (BackupStateEnum) {
     BackupStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     BackupStateEnum["Creating"] = "CREATING";
@@ -35,51 +38,7 @@ export var BackupStateEnum;
     BackupStateEnum["Succeeded"] = "SUCCEEDED";
     BackupStateEnum["Failed"] = "FAILED";
     BackupStateEnum["Deleting"] = "DELETING";
-})(BackupStateEnum || (BackupStateEnum = {}));
-// BackupInput
-/**
- * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
-**/
-var BackupInput = /** @class */ (function (_super) {
-    __extends(BackupInput, _super);
-    function BackupInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterMetadata" }),
-        __metadata("design:type", ClusterMetadata)
-    ], BackupInput.prototype, "clusterMetadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteLockDays" }),
-        __metadata("design:type", Number)
-    ], BackupInput.prototype, "deleteLockDays", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], BackupInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKey" }),
-        __metadata("design:type", EncryptionKey)
-    ], BackupInput.prototype, "encryptionKey", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], BackupInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=retainDays" }),
-        __metadata("design:type", Number)
-    ], BackupInput.prototype, "retainDays", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedApplications" }),
-        __metadata("design:type", NamespacedNames)
-    ], BackupInput.prototype, "selectedApplications", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedNamespaces" }),
-        __metadata("design:type", Namespaces)
-    ], BackupInput.prototype, "selectedNamespaces", void 0);
-    return BackupInput;
-}(SpeakeasyBase));
-export { BackupInput };
+})(BackupStateEnum = exports.BackupStateEnum || (exports.BackupStateEnum = {}));
 // Backup
 /**
  * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
@@ -90,113 +49,157 @@ var Backup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allNamespaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allNamespaces" }),
         __metadata("design:type", Boolean)
     ], Backup.prototype, "allNamespaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterMetadata" }),
-        __metadata("design:type", ClusterMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterMetadata" }),
+        __metadata("design:type", clustermetadata_1.ClusterMetadata)
     ], Backup.prototype, "clusterMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completeTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "completeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configBackupSizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configBackupSizeBytes" }),
         __metadata("design:type", String)
     ], Backup.prototype, "configBackupSizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containsSecrets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containsSecrets" }),
         __metadata("design:type", Boolean)
     ], Backup.prototype, "containsSecrets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containsVolumeData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containsVolumeData" }),
         __metadata("design:type", Boolean)
     ], Backup.prototype, "containsVolumeData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteLockDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteLockDays" }),
         __metadata("design:type", Number)
     ], Backup.prototype, "deleteLockDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteLockExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteLockExpireTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "deleteLockExpireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Backup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKey" }),
-        __metadata("design:type", EncryptionKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKey" }),
+        __metadata("design:type", encryptionkey_1.EncryptionKey)
     ], Backup.prototype, "encryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Backup.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Backup.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manual" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manual" }),
         __metadata("design:type", Boolean)
     ], Backup.prototype, "manual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Backup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podCount" }),
         __metadata("design:type", Number)
     ], Backup.prototype, "podCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceCount" }),
         __metadata("design:type", Number)
     ], Backup.prototype, "resourceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retainDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retainDays" }),
         __metadata("design:type", Number)
     ], Backup.prototype, "retainDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retainExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retainExpireTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "retainExpireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedApplications" }),
-        __metadata("design:type", NamespacedNames)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedApplications" }),
+        __metadata("design:type", namespacednames_1.NamespacedNames)
     ], Backup.prototype, "selectedApplications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedNamespaces" }),
-        __metadata("design:type", Namespaces)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedNamespaces" }),
+        __metadata("design:type", namespaces_1.Namespaces)
     ], Backup.prototype, "selectedNamespaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeBytes" }),
         __metadata("design:type", String)
     ], Backup.prototype, "sizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Backup.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateReason" }),
         __metadata("design:type", String)
     ], Backup.prototype, "stateReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Backup.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeCount" }),
         __metadata("design:type", Number)
     ], Backup.prototype, "volumeCount", void 0);
     return Backup;
-}(SpeakeasyBase));
-export { Backup };
+}(utils_1.SpeakeasyBase));
+exports.Backup = Backup;
+// BackupInput
+/**
+ * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
+**/
+var BackupInput = /** @class */ (function (_super) {
+    __extends(BackupInput, _super);
+    function BackupInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterMetadata" }),
+        __metadata("design:type", clustermetadata_1.ClusterMetadata)
+    ], BackupInput.prototype, "clusterMetadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteLockDays" }),
+        __metadata("design:type", Number)
+    ], BackupInput.prototype, "deleteLockDays", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], BackupInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKey" }),
+        __metadata("design:type", encryptionkey_1.EncryptionKey)
+    ], BackupInput.prototype, "encryptionKey", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], BackupInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retainDays" }),
+        __metadata("design:type", Number)
+    ], BackupInput.prototype, "retainDays", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedApplications" }),
+        __metadata("design:type", namespacednames_1.NamespacedNames)
+    ], BackupInput.prototype, "selectedApplications", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedNamespaces" }),
+        __metadata("design:type", namespaces_1.Namespaces)
+    ], BackupInput.prototype, "selectedNamespaces", void 0);
+    return BackupInput;
+}(utils_1.SpeakeasyBase));
+exports.BackupInput = BackupInput;

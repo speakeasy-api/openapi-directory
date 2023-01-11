@@ -10,7 +10,7 @@ export declare class GetReplicationConfigurationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class GetReplicationConfigurationRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class GetReplicationConfigurationRequest extends SpeakeasyBase {
     headers: GetReplicationConfigurationHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnlineSettingsInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var OnlineSettingsInputModel = /** @class */ (function (_super) {
     __extends(OnlineSettingsInputModel, _super);
     function OnlineSettingsInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadUnit" }),
         __metadata("design:type", Number)
     ], OnlineSettingsInputModel.prototype, "bookAheadUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadValue" }),
         __metadata("design:type", Number)
     ], OnlineSettingsInputModel.prototype, "bookAheadValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookInAdvance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookInAdvance" }),
         __metadata("design:type", Number)
     ], OnlineSettingsInputModel.prototype, "bookInAdvance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingTimerMins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingTimerMins" }),
         __metadata("design:type", Number)
     ], OnlineSettingsInputModel.prototype, "bookingTimerMins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerBookingsPerDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerBookingsPerDay" }),
         __metadata("design:type", Number)
     ], OnlineSettingsInputModel.prototype, "customerBookingsPerDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableWorldTimezones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableWorldTimezones" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsInputModel.prototype, "enableWorldTimezones", void 0);
     return OnlineSettingsInputModel;
-}(SpeakeasyBase));
-export { OnlineSettingsInputModel };
+}(utils_1.SpeakeasyBase));
+exports.OnlineSettingsInputModel = OnlineSettingsInputModel;

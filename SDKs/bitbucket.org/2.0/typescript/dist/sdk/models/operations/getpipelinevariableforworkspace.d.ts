@@ -9,6 +9,6 @@ export declare class GetPipelineVariableForWorkspaceRequest extends SpeakeasyBas
 export declare class GetPipelineVariableForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

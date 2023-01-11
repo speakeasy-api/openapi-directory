@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SegmentDimensions } from "./segmentdimensions";
-import { SegmentReference } from "./segmentreference";
-import { SourceTypeEnum } from "./sourcetypeenum";
-import { TypeEnum } from "./typeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var segmentdimensions_1 = require("./segmentdimensions");
+var segmentreference_1 = require("./segmentreference");
+var sourcetypeenum_1 = require("./sourcetypeenum");
+var typeenum_1 = require("./typeenum");
 // SegmentGroup
 /**
  * Specifies the base segments and dimensions for a segment, and the relationships between these base segments and dimensions.
@@ -37,21 +40,21 @@ var SegmentGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: SegmentDimensions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: segmentdimensions_1.SegmentDimensions }),
         __metadata("design:type", Array)
     ], SegmentGroup.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceSegments", elemType: SegmentReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceSegments", elemType: segmentreference_1.SegmentReference }),
         __metadata("design:type", Array)
     ], SegmentGroup.prototype, "sourceSegments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceType" }),
         __metadata("design:type", String)
     ], SegmentGroup.prototype, "sourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], SegmentGroup.prototype, "type", void 0);
     return SegmentGroup;
-}(SpeakeasyBase));
-export { SegmentGroup };
+}(utils_1.SpeakeasyBase));
+exports.SegmentGroup = SegmentGroup;

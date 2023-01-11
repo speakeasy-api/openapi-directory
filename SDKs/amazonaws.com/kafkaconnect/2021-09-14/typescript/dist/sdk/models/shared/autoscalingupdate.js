@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScaleInPolicyUpdate } from "./scaleinpolicyupdate";
-import { ScaleOutPolicyUpdate } from "./scaleoutpolicyupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoScalingUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var scaleinpolicyupdate_1 = require("./scaleinpolicyupdate");
+var scaleoutpolicyupdate_1 = require("./scaleoutpolicyupdate");
 // AutoScalingUpdate
 /**
  * The updates to the auto scaling parameters for the connector.
@@ -35,25 +38,25 @@ var AutoScalingUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxWorkerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxWorkerCount" }),
         __metadata("design:type", Number)
     ], AutoScalingUpdate.prototype, "maxWorkerCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mcuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mcuCount" }),
         __metadata("design:type", Number)
     ], AutoScalingUpdate.prototype, "mcuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minWorkerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minWorkerCount" }),
         __metadata("design:type", Number)
     ], AutoScalingUpdate.prototype, "minWorkerCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleInPolicy" }),
-        __metadata("design:type", ScaleInPolicyUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleInPolicy" }),
+        __metadata("design:type", scaleinpolicyupdate_1.ScaleInPolicyUpdate)
     ], AutoScalingUpdate.prototype, "scaleInPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleOutPolicy" }),
-        __metadata("design:type", ScaleOutPolicyUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleOutPolicy" }),
+        __metadata("design:type", scaleoutpolicyupdate_1.ScaleOutPolicyUpdate)
     ], AutoScalingUpdate.prototype, "scaleOutPolicy", void 0);
     return AutoScalingUpdate;
-}(SpeakeasyBase));
-export { AutoScalingUpdate };
+}(utils_1.SpeakeasyBase));
+exports.AutoScalingUpdate = AutoScalingUpdate;

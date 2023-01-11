@@ -1,0 +1,132 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstitutionHrfeedUploadResponse = exports.InstitutionHrfeedUploadRequest = exports.InstitutionHrfeedUploadSecurity = exports.InstitutionHrfeedUploadRequestBody = exports.InstitutionHrfeedUploadRequestBodyHrfeed = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var InstitutionHrfeedUploadRequestBodyHrfeed = /** @class */ (function (_super) {
+    __extends(InstitutionHrfeedUploadRequestBodyHrfeed, _super);
+    function InstitutionHrfeedUploadRequestBodyHrfeed() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
+        __metadata("design:type", Uint8Array)
+    ], InstitutionHrfeedUploadRequestBodyHrfeed.prototype, "content", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=hrfeed" }),
+        __metadata("design:type", String)
+    ], InstitutionHrfeedUploadRequestBodyHrfeed.prototype, "hrfeed", void 0);
+    return InstitutionHrfeedUploadRequestBodyHrfeed;
+}(utils_1.SpeakeasyBase));
+exports.InstitutionHrfeedUploadRequestBodyHrfeed = InstitutionHrfeedUploadRequestBodyHrfeed;
+var InstitutionHrfeedUploadRequestBody = /** @class */ (function (_super) {
+    __extends(InstitutionHrfeedUploadRequestBody, _super);
+    function InstitutionHrfeedUploadRequestBody() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
+        __metadata("design:type", InstitutionHrfeedUploadRequestBodyHrfeed)
+    ], InstitutionHrfeedUploadRequestBody.prototype, "hrfeed", void 0);
+    return InstitutionHrfeedUploadRequestBody;
+}(utils_1.SpeakeasyBase));
+exports.InstitutionHrfeedUploadRequestBody = InstitutionHrfeedUploadRequestBody;
+var InstitutionHrfeedUploadSecurity = /** @class */ (function (_super) {
+    __extends(InstitutionHrfeedUploadSecurity, _super);
+    function InstitutionHrfeedUploadSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
+        __metadata("design:type", shared.SchemeOAuth2)
+    ], InstitutionHrfeedUploadSecurity.prototype, "oAuth2", void 0);
+    return InstitutionHrfeedUploadSecurity;
+}(utils_1.SpeakeasyBase));
+exports.InstitutionHrfeedUploadSecurity = InstitutionHrfeedUploadSecurity;
+var InstitutionHrfeedUploadRequest = /** @class */ (function (_super) {
+    __extends(InstitutionHrfeedUploadRequest, _super);
+    function InstitutionHrfeedUploadRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
+        __metadata("design:type", InstitutionHrfeedUploadRequestBody)
+    ], InstitutionHrfeedUploadRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", InstitutionHrfeedUploadSecurity)
+    ], InstitutionHrfeedUploadRequest.prototype, "security", void 0);
+    return InstitutionHrfeedUploadRequest;
+}(utils_1.SpeakeasyBase));
+exports.InstitutionHrfeedUploadRequest = InstitutionHrfeedUploadRequest;
+var InstitutionHrfeedUploadResponse = /** @class */ (function (_super) {
+    __extends(InstitutionHrfeedUploadResponse, _super);
+    function InstitutionHrfeedUploadResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], InstitutionHrfeedUploadResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ErrorMessage)
+    ], InstitutionHrfeedUploadResponse.prototype, "errorMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ResponseMessage)
+    ], InstitutionHrfeedUploadResponse.prototype, "responseMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], InstitutionHrfeedUploadResponse.prototype, "statusCode", void 0);
+    return InstitutionHrfeedUploadResponse;
+}(utils_1.SpeakeasyBase));
+exports.InstitutionHrfeedUploadResponse = InstitutionHrfeedUploadResponse;

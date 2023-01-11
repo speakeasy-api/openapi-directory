@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdTechnologyProviders } from "./adtechnologyproviders";
-import { Correction } from "./correction";
-import { HtmlContent } from "./htmlcontent";
-import { NativeContent } from "./nativecontent";
-import { ServingRestriction } from "./servingrestriction";
-import { VideoContent } from "./videocontent";
-export var CreativeAttributesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Creative = exports.CreativeRestrictedCategoriesEnum = exports.CreativeOpenAuctionStatusEnum = exports.CreativeDealsStatusEnum = exports.CreativeAttributesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var adtechnologyproviders_1 = require("./adtechnologyproviders");
+var correction_1 = require("./correction");
+var htmlcontent_1 = require("./htmlcontent");
+var nativecontent_1 = require("./nativecontent");
+var servingrestriction_1 = require("./servingrestriction");
+var videocontent_1 = require("./videocontent");
+var CreativeAttributesEnum;
 (function (CreativeAttributesEnum) {
     CreativeAttributesEnum["AttributeUnspecified"] = "ATTRIBUTE_UNSPECIFIED";
     CreativeAttributesEnum["ImageRichMedia"] = "IMAGE_RICH_MEDIA";
@@ -69,8 +72,8 @@ export var CreativeAttributesEnum;
     CreativeAttributesEnum["InBannerVideo"] = "IN_BANNER_VIDEO";
     CreativeAttributesEnum["RenderingSizelessAdx"] = "RENDERING_SIZELESS_ADX";
     CreativeAttributesEnum["Omsdk10"] = "OMSDK_1_0";
-})(CreativeAttributesEnum || (CreativeAttributesEnum = {}));
-export var CreativeDealsStatusEnum;
+})(CreativeAttributesEnum = exports.CreativeAttributesEnum || (exports.CreativeAttributesEnum = {}));
+var CreativeDealsStatusEnum;
 (function (CreativeDealsStatusEnum) {
     CreativeDealsStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     CreativeDealsStatusEnum["NotChecked"] = "NOT_CHECKED";
@@ -79,8 +82,8 @@ export var CreativeDealsStatusEnum;
     CreativeDealsStatusEnum["Disapproved"] = "DISAPPROVED";
     CreativeDealsStatusEnum["PendingReview"] = "PENDING_REVIEW";
     CreativeDealsStatusEnum["StatusTypeUnspecified"] = "STATUS_TYPE_UNSPECIFIED";
-})(CreativeDealsStatusEnum || (CreativeDealsStatusEnum = {}));
-export var CreativeOpenAuctionStatusEnum;
+})(CreativeDealsStatusEnum = exports.CreativeDealsStatusEnum || (exports.CreativeDealsStatusEnum = {}));
+var CreativeOpenAuctionStatusEnum;
 (function (CreativeOpenAuctionStatusEnum) {
     CreativeOpenAuctionStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     CreativeOpenAuctionStatusEnum["NotChecked"] = "NOT_CHECKED";
@@ -89,12 +92,12 @@ export var CreativeOpenAuctionStatusEnum;
     CreativeOpenAuctionStatusEnum["Disapproved"] = "DISAPPROVED";
     CreativeOpenAuctionStatusEnum["PendingReview"] = "PENDING_REVIEW";
     CreativeOpenAuctionStatusEnum["StatusTypeUnspecified"] = "STATUS_TYPE_UNSPECIFIED";
-})(CreativeOpenAuctionStatusEnum || (CreativeOpenAuctionStatusEnum = {}));
-export var CreativeRestrictedCategoriesEnum;
+})(CreativeOpenAuctionStatusEnum = exports.CreativeOpenAuctionStatusEnum || (exports.CreativeOpenAuctionStatusEnum = {}));
+var CreativeRestrictedCategoriesEnum;
 (function (CreativeRestrictedCategoriesEnum) {
     CreativeRestrictedCategoriesEnum["NoRestrictedCategories"] = "NO_RESTRICTED_CATEGORIES";
     CreativeRestrictedCategoriesEnum["Alcohol"] = "ALCOHOL";
-})(CreativeRestrictedCategoriesEnum || (CreativeRestrictedCategoriesEnum = {}));
+})(CreativeRestrictedCategoriesEnum = exports.CreativeRestrictedCategoriesEnum || (exports.CreativeRestrictedCategoriesEnum = {}));
 // Creative
 /**
  * A creative and its classification data.
@@ -105,109 +108,109 @@ var Creative = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Creative.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adChoicesDestinationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adChoicesDestinationUrl" }),
         __metadata("design:type", String)
     ], Creative.prototype, "adChoicesDestinationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adTechnologyProviders" }),
-        __metadata("design:type", AdTechnologyProviders)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adTechnologyProviders" }),
+        __metadata("design:type", adtechnologyproviders_1.AdTechnologyProviders)
     ], Creative.prototype, "adTechnologyProviders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiserName" }),
         __metadata("design:type", String)
     ], Creative.prototype, "advertiserName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agencyId" }),
         __metadata("design:type", String)
     ], Creative.prototype, "agencyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiUpdateTime" }),
         __metadata("design:type", String)
     ], Creative.prototype, "apiUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickThroughUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickThroughUrls" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "clickThroughUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corrections", elemType: Correction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corrections", elemType: correction_1.Correction }),
         __metadata("design:type", Array)
     ], Creative.prototype, "corrections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeId" }),
         __metadata("design:type", String)
     ], Creative.prototype, "creativeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealsStatus" }),
         __metadata("design:type", String)
     ], Creative.prototype, "dealsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declaredClickThroughUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declaredClickThroughUrls" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "declaredClickThroughUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedAdvertiserIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedAdvertiserIds" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "detectedAdvertiserIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedDomains" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "detectedDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedLanguages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedLanguages" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "detectedLanguages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedProductCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedProductCategories" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "detectedProductCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedSensitiveCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedSensitiveCategories" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "detectedSensitiveCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
-        __metadata("design:type", HtmlContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
+        __metadata("design:type", htmlcontent_1.HtmlContent)
     ], Creative.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionTrackingUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionTrackingUrls" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "impressionTrackingUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=native" }),
-        __metadata("design:type", NativeContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=native" }),
+        __metadata("design:type", nativecontent_1.NativeContent)
     ], Creative.prototype, "native", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openAuctionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openAuctionStatus" }),
         __metadata("design:type", String)
     ], Creative.prototype, "openAuctionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedCategories" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "restrictedCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servingRestrictions", elemType: ServingRestriction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servingRestrictions", elemType: servingrestriction_1.ServingRestriction }),
         __metadata("design:type", Array)
     ], Creative.prototype, "servingRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendorIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendorIds" }),
         __metadata("design:type", Array)
     ], Creative.prototype, "vendorIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], Creative.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=video" }),
-        __metadata("design:type", VideoContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=video" }),
+        __metadata("design:type", videocontent_1.VideoContent)
     ], Creative.prototype, "video", void 0);
     return Creative;
-}(SpeakeasyBase));
-export { Creative };
+}(utils_1.SpeakeasyBase));
+exports.Creative = Creative;

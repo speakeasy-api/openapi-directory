@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedUser } from "./nesteduser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserAction = exports.UserActionAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteduser_1 = require("./nesteduser");
 var UserActionAction = /** @class */ (function (_super) {
     __extends(UserActionAction, _super);
     function UserActionAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], UserActionAction.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], UserActionAction.prototype, "value", void 0);
     return UserActionAction;
-}(SpeakeasyBase));
-export { UserActionAction };
+}(utils_1.SpeakeasyBase));
+exports.UserActionAction = UserActionAction;
 var UserAction = /** @class */ (function (_super) {
     __extends(UserAction, _super);
     function UserAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", UserActionAction)
     ], UserAction.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], UserAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], UserAction.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Date)
     ], UserAction.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", NestedUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", nesteduser_1.NestedUser)
     ], UserAction.prototype, "user", void 0);
     return UserAction;
-}(SpeakeasyBase));
-export { UserAction };
+}(utils_1.SpeakeasyBase));
+exports.UserAction = UserAction;

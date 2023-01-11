@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarDate = void 0;
+var utils_1 = require("../../../internal/utils");
 var CalendarDate = /** @class */ (function (_super) {
     __extends(CalendarDate, _super);
     function CalendarDate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all_day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all_day" }),
         __metadata("design:type", Boolean)
     ], CalendarDate.prototype, "allDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendar_category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendar_category_id" }),
         __metadata("design:type", Number)
     ], CalendarDate.prototype, "calendarCategoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_id" }),
         __metadata("design:type", Number)
     ], CalendarDate.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", Array)
     ], CalendarDate.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CalendarDate.prototype, "url", void 0);
     return CalendarDate;
-}(SpeakeasyBase));
-export { CalendarDate };
+}(utils_1.SpeakeasyBase));
+exports.CalendarDate = CalendarDate;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,110 +14,135 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SeatDetailsResponse = exports.SeatDetailsRequest = exports.SeatDetailsSecurity = exports.SeatDetailsHeaders = exports.SeatDetailsQueryParams = exports.SeatDetailsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SeatDetailsPathParams = /** @class */ (function (_super) {
     __extends(SeatDetailsPathParams, _super);
     function SeatDetailsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=aircraftCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=aircraftCode" }),
         __metadata("design:type", String)
     ], SeatDetailsPathParams.prototype, "aircraftCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cabinCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cabinCode" }),
         __metadata("design:type", String)
     ], SeatDetailsPathParams.prototype, "cabinCode", void 0);
     return SeatDetailsPathParams;
-}(SpeakeasyBase));
-export { SeatDetailsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsPathParams = SeatDetailsPathParams;
 var SeatDetailsQueryParams = /** @class */ (function (_super) {
     __extends(SeatDetailsQueryParams, _super);
     function SeatDetailsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lang" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lang" }),
         __metadata("design:type", String)
     ], SeatDetailsQueryParams.prototype, "lang", void 0);
     return SeatDetailsQueryParams;
-}(SpeakeasyBase));
-export { SeatDetailsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsQueryParams = SeatDetailsQueryParams;
 var SeatDetailsHeaders = /** @class */ (function (_super) {
     __extends(SeatDetailsHeaders, _super);
     function SeatDetailsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept" }),
         __metadata("design:type", String)
     ], SeatDetailsHeaders.prototype, "accept", void 0);
     return SeatDetailsHeaders;
-}(SpeakeasyBase));
-export { SeatDetailsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsHeaders = SeatDetailsHeaders;
 var SeatDetailsSecurity = /** @class */ (function (_super) {
     __extends(SeatDetailsSecurity, _super);
     function SeatDetailsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeAuth)
     ], SeatDetailsSecurity.prototype, "auth", void 0);
     return SeatDetailsSecurity;
-}(SpeakeasyBase));
-export { SeatDetailsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsSecurity = SeatDetailsSecurity;
 var SeatDetailsRequest = /** @class */ (function (_super) {
     __extends(SeatDetailsRequest, _super);
     function SeatDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeatDetailsPathParams)
     ], SeatDetailsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeatDetailsQueryParams)
     ], SeatDetailsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeatDetailsHeaders)
     ], SeatDetailsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeatDetailsSecurity)
     ], SeatDetailsRequest.prototype, "security", void 0);
     return SeatDetailsRequest;
-}(SpeakeasyBase));
-export { SeatDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsRequest = SeatDetailsRequest;
 var SeatDetailsResponse = /** @class */ (function (_super) {
     __extends(SeatDetailsResponse, _super);
     function SeatDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SeatDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SeatDetailsResponse.prototype, "seatDetails200ApplicationJsonString", void 0);
+    ], SeatDetailsResponse.prototype, "seatDetails200ApplicationJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SeatDetailsResponse.prototype, "statusCode", void 0);
     return SeatDetailsResponse;
-}(SpeakeasyBase));
-export { SeatDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SeatDetailsResponse = SeatDetailsResponse;

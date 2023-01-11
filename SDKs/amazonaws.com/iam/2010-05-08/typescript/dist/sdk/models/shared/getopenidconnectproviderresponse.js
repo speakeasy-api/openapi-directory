@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOpenIdConnectProviderResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 // GetOpenIdConnectProviderResponse
 /**
  * Contains the response to a successful <a>GetOpenIDConnectProvider</a> request.
@@ -34,25 +37,25 @@ var GetOpenIdConnectProviderResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], GetOpenIdConnectProviderResponse.prototype, "clientIdList", void 0);
+    ], GetOpenIdConnectProviderResponse.prototype, "clientIDList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetOpenIdConnectProviderResponse.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], GetOpenIdConnectProviderResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetOpenIdConnectProviderResponse.prototype, "thumbprintList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOpenIdConnectProviderResponse.prototype, "url", void 0);
     return GetOpenIdConnectProviderResponse;
-}(SpeakeasyBase));
-export { GetOpenIdConnectProviderResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOpenIdConnectProviderResponse = GetOpenIdConnectProviderResponse;

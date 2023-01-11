@@ -13,7 +13,7 @@ export enum GetUpdateDomainEndpointOptionsActionEnum {
 **/
 export class GetUpdateDomainEndpointOptionsDomainEndpointOptions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, name=EnforceHTTPS" })
-  enforceHttps?: boolean;
+  enforceHTTPS?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, name=TLSSecurityPolicy" })
   tlsSecurityPolicy?: shared.TlsSecurityPolicyEnum;

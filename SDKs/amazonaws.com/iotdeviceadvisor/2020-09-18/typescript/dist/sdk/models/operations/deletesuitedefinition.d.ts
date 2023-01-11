@@ -17,7 +17,7 @@ export declare class DeleteSuiteDefinitionRequest extends SpeakeasyBase {
 }
 export declare class DeleteSuiteDefinitionResponse extends SpeakeasyBase {
     contentType: string;
-    deleteSuiteDefinitionResponse?: Map<string, any>;
+    deleteSuiteDefinitionResponse?: Record<string, any>;
     internalServerException?: any;
     statusCode: number;
     validationException?: any;

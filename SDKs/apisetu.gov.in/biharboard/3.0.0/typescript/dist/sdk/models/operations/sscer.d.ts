@@ -4,7 +4,7 @@ export declare class SscerRequestBodyCertificateParameters extends SpeakeasyBase
     dob: string;
     fullName: string;
     rroll: string;
-    rrollCode: string;
+    rrollCODE: string;
     year: string;
 }
 export declare enum SscerRequestBodyFormatEnum {
@@ -109,11 +109,11 @@ export declare class SscerRequest extends SpeakeasyBase {
 export declare class SscerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sscer400ApplicationJsonObject?: Sscer400ApplicationJson;
-    sscer401ApplicationJsonObject?: Sscer401ApplicationJson;
-    sscer404ApplicationJsonObject?: Sscer404ApplicationJson;
-    sscer500ApplicationJsonObject?: Sscer500ApplicationJson;
-    sscer502ApplicationJsonObject?: Sscer502ApplicationJson;
-    sscer503ApplicationJsonObject?: Sscer503ApplicationJson;
-    sscer504ApplicationJsonObject?: Sscer504ApplicationJson;
+    sscer400ApplicationJSONObject?: Sscer400ApplicationJson;
+    sscer401ApplicationJSONObject?: Sscer401ApplicationJson;
+    sscer404ApplicationJSONObject?: Sscer404ApplicationJson;
+    sscer500ApplicationJSONObject?: Sscer500ApplicationJson;
+    sscer502ApplicationJSONObject?: Sscer502ApplicationJson;
+    sscer503ApplicationJSONObject?: Sscer503ApplicationJson;
+    sscer504ApplicationJSONObject?: Sscer504ApplicationJson;
 }

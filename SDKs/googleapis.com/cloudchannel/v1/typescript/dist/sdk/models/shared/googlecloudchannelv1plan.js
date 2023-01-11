@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Period } from "./googlecloudchannelv1period";
-export var GoogleCloudChannelV1PlanPaymentPlanEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Plan = exports.GoogleCloudChannelV1PlanPaymentTypeEnum = exports.GoogleCloudChannelV1PlanPaymentPlanEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1period_1 = require("./googlecloudchannelv1period");
+var GoogleCloudChannelV1PlanPaymentPlanEnum;
 (function (GoogleCloudChannelV1PlanPaymentPlanEnum) {
     GoogleCloudChannelV1PlanPaymentPlanEnum["PaymentPlanUnspecified"] = "PAYMENT_PLAN_UNSPECIFIED";
     GoogleCloudChannelV1PlanPaymentPlanEnum["Commitment"] = "COMMITMENT";
@@ -32,13 +35,13 @@ export var GoogleCloudChannelV1PlanPaymentPlanEnum;
     GoogleCloudChannelV1PlanPaymentPlanEnum["Free"] = "FREE";
     GoogleCloudChannelV1PlanPaymentPlanEnum["Trial"] = "TRIAL";
     GoogleCloudChannelV1PlanPaymentPlanEnum["Offline"] = "OFFLINE";
-})(GoogleCloudChannelV1PlanPaymentPlanEnum || (GoogleCloudChannelV1PlanPaymentPlanEnum = {}));
-export var GoogleCloudChannelV1PlanPaymentTypeEnum;
+})(GoogleCloudChannelV1PlanPaymentPlanEnum = exports.GoogleCloudChannelV1PlanPaymentPlanEnum || (exports.GoogleCloudChannelV1PlanPaymentPlanEnum = {}));
+var GoogleCloudChannelV1PlanPaymentTypeEnum;
 (function (GoogleCloudChannelV1PlanPaymentTypeEnum) {
     GoogleCloudChannelV1PlanPaymentTypeEnum["PaymentTypeUnspecified"] = "PAYMENT_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1PlanPaymentTypeEnum["Prepay"] = "PREPAY";
     GoogleCloudChannelV1PlanPaymentTypeEnum["Postpay"] = "POSTPAY";
-})(GoogleCloudChannelV1PlanPaymentTypeEnum || (GoogleCloudChannelV1PlanPaymentTypeEnum = {}));
+})(GoogleCloudChannelV1PlanPaymentTypeEnum = exports.GoogleCloudChannelV1PlanPaymentTypeEnum || (exports.GoogleCloudChannelV1PlanPaymentTypeEnum = {}));
 // GoogleCloudChannelV1Plan
 /**
  * The payment plan for the Offer. Describes how to make a payment.
@@ -49,25 +52,25 @@ var GoogleCloudChannelV1Plan = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingAccount" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Plan.prototype, "billingAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentCycle" }),
-        __metadata("design:type", GoogleCloudChannelV1Period)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentCycle" }),
+        __metadata("design:type", googlecloudchannelv1period_1.GoogleCloudChannelV1Period)
     ], GoogleCloudChannelV1Plan.prototype, "paymentCycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentPlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentPlan" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Plan.prototype, "paymentPlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Plan.prototype, "paymentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialPeriod" }),
-        __metadata("design:type", GoogleCloudChannelV1Period)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialPeriod" }),
+        __metadata("design:type", googlecloudchannelv1period_1.GoogleCloudChannelV1Period)
     ], GoogleCloudChannelV1Plan.prototype, "trialPeriod", void 0);
     return GoogleCloudChannelV1Plan;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Plan };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Plan = GoogleCloudChannelV1Plan;

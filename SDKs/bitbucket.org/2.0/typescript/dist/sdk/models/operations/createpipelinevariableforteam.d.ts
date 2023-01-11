@@ -8,12 +8,12 @@ export declare class CreatePipelineVariableForTeamQueryParams extends SpeakeasyB
 export declare class CreatePipelineVariableForTeamRequest extends SpeakeasyBase {
     pathParams: CreatePipelineVariableForTeamPathParams;
     queryParams: CreatePipelineVariableForTeamQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class CreatePipelineVariableForTeamResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

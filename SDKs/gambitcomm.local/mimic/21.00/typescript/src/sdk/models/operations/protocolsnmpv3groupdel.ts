@@ -25,5 +25,5 @@ export class ProtocolSnmpv3GroupDelResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmpv3GroupDel200ApplicationJsonString?: string;
+  protocolSnmpv3GroupDel200ApplicationJSONString?: string;
 }

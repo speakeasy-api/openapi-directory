@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryGroupWithCategories } from "./categorygroupwithcategories";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoriesResponse = exports.CategoriesResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorygroupwithcategories_1 = require("./categorygroupwithcategories");
 var CategoriesResponseData = /** @class */ (function (_super) {
     __extends(CategoriesResponseData, _super);
     function CategoriesResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_groups", elemType: CategoryGroupWithCategories }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_groups", elemType: categorygroupwithcategories_1.CategoryGroupWithCategories }),
         __metadata("design:type", Array)
     ], CategoriesResponseData.prototype, "categoryGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], CategoriesResponseData.prototype, "serverKnowledge", void 0);
     return CategoriesResponseData;
-}(SpeakeasyBase));
-export { CategoriesResponseData };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesResponseData = CategoriesResponseData;
 var CategoriesResponse = /** @class */ (function (_super) {
     __extends(CategoriesResponse, _super);
     function CategoriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CategoriesResponseData)
     ], CategoriesResponse.prototype, "data", void 0);
     return CategoriesResponse;
-}(SpeakeasyBase));
-export { CategoriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesResponse = CategoriesResponse;

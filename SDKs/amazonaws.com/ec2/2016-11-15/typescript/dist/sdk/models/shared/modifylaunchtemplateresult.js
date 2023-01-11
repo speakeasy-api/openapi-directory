@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplate } from "./launchtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyLaunchTemplateResult = exports.ModifyLaunchTemplateResultLaunchTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyLaunchTemplateResultLaunchTemplate
+/**
+ * Information about the launch template.
+**/
+var ModifyLaunchTemplateResultLaunchTemplate = /** @class */ (function (_super) {
+    __extends(ModifyLaunchTemplateResultLaunchTemplate, _super);
+    function ModifyLaunchTemplateResultLaunchTemplate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "createdBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "defaultVersionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "latestVersionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "launchTemplateId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "launchTemplateName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyLaunchTemplateResultLaunchTemplate.prototype, "tags", void 0);
+    return ModifyLaunchTemplateResultLaunchTemplate;
+}(utils_1.SpeakeasyBase));
+exports.ModifyLaunchTemplateResultLaunchTemplate = ModifyLaunchTemplateResultLaunchTemplate;
 var ModifyLaunchTemplateResult = /** @class */ (function (_super) {
     __extends(ModifyLaunchTemplateResult, _super);
     function ModifyLaunchTemplateResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplate)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyLaunchTemplateResultLaunchTemplate)
     ], ModifyLaunchTemplateResult.prototype, "launchTemplate", void 0);
     return ModifyLaunchTemplateResult;
-}(SpeakeasyBase));
-export { ModifyLaunchTemplateResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyLaunchTemplateResult = ModifyLaunchTemplateResult;

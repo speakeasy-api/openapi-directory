@@ -1,4 +1,7 @@
-export var FrequencyCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FrequencyCodeEnum = void 0;
+var FrequencyCodeEnum;
 (function (FrequencyCodeEnum) {
     FrequencyCodeEnum["Daily"] = "Daily";
     FrequencyCodeEnum["Weekly"] = "Weekly";
@@ -9,4 +12,4 @@ export var FrequencyCodeEnum;
     FrequencyCodeEnum["SemiAnnual"] = "SemiAnnual";
     FrequencyCodeEnum["Annual"] = "Annual";
     FrequencyCodeEnum["MonthlyVariable"] = "MonthlyVariable";
-})(FrequencyCodeEnum || (FrequencyCodeEnum = {}));
+})(FrequencyCodeEnum = exports.FrequencyCodeEnum || (exports.FrequencyCodeEnum = {}));

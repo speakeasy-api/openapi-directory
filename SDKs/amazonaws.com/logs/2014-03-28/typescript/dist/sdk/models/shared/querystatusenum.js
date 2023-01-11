@@ -1,4 +1,7 @@
-export var QueryStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryStatusEnum = void 0;
+var QueryStatusEnum;
 (function (QueryStatusEnum) {
     QueryStatusEnum["Scheduled"] = "Scheduled";
     QueryStatusEnum["Running"] = "Running";
@@ -7,4 +10,4 @@ export var QueryStatusEnum;
     QueryStatusEnum["Cancelled"] = "Cancelled";
     QueryStatusEnum["Timeout"] = "Timeout";
     QueryStatusEnum["Unknown"] = "Unknown";
-})(QueryStatusEnum || (QueryStatusEnum = {}));
+})(QueryStatusEnum = exports.QueryStatusEnum || (exports.QueryStatusEnum = {}));

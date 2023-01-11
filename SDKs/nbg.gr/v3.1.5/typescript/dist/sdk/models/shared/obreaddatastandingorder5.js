@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObStandingOrder5 } from "./obstandingorder5";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadDataStandingOrder5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obstandingorder5_1 = require("./obstandingorder5");
 var ObReadDataStandingOrder5 = /** @class */ (function (_super) {
     __extends(ObReadDataStandingOrder5, _super);
     function ObReadDataStandingOrder5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StandingOrder", elemType: ObStandingOrder5 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StandingOrder", elemType: obstandingorder5_1.ObStandingOrder5 }),
         __metadata("design:type", Array)
     ], ObReadDataStandingOrder5.prototype, "standingOrder", void 0);
     return ObReadDataStandingOrder5;
-}(SpeakeasyBase));
-export { ObReadDataStandingOrder5 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadDataStandingOrder5 = ObReadDataStandingOrder5;

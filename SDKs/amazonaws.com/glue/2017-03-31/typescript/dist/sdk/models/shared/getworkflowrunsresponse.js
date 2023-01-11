@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowRun } from "./workflowrun";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWorkflowRunsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowrun_1 = require("./workflowrun");
 var GetWorkflowRunsResponse = /** @class */ (function (_super) {
     __extends(GetWorkflowRunsResponse, _super);
     function GetWorkflowRunsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetWorkflowRunsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Runs", elemType: WorkflowRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Runs", elemType: workflowrun_1.WorkflowRun }),
         __metadata("design:type", Array)
     ], GetWorkflowRunsResponse.prototype, "runs", void 0);
     return GetWorkflowRunsResponse;
-}(SpeakeasyBase));
-export { GetWorkflowRunsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWorkflowRunsResponse = GetWorkflowRunsResponse;

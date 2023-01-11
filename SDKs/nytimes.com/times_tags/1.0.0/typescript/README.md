@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetTimestagsRequest, GetTimestagsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,13 +33,13 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetTimestagsRequest = {
   queryParams: {
-    filter: "Per",
-    max: 4978267807534720283,
-    query: "excepturi",
+    filter: "Org",
+    max: 2259404117704393152,
+    query: "culpa",
   },
 };
 
-sdk.sdk.getTimestags(req).then((res: GetTimestagsResponse | AxiosError) => {
+sdk.getTimestags(req).then((res: GetTimestagsResponse | AxiosError) => {
    // handle response
 });
 ```

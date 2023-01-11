@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateListResponse = exports.CertificateListRequest = exports.CertificateListHeaders = exports.CertificateListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CertificateListQueryParams = /** @class */ (function (_super) {
     __extends(CertificateListQueryParams, _super);
     function CertificateListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$filter" }),
         __metadata("design:type", String)
     ], CertificateListQueryParams.prototype, "dollarFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$select" }),
         __metadata("design:type", String)
     ], CertificateListQueryParams.prototype, "dollarSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], CertificateListQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxresults" }),
         __metadata("design:type", Number)
     ], CertificateListQueryParams.prototype, "maxresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], CertificateListQueryParams.prototype, "timeout", void 0);
     return CertificateListQueryParams;
-}(SpeakeasyBase));
-export { CertificateListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CertificateListQueryParams = CertificateListQueryParams;
 var CertificateListHeaders = /** @class */ (function (_super) {
     __extends(CertificateListHeaders, _super);
     function CertificateListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], CertificateListHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], CertificateListHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], CertificateListHeaders.prototype, "returnClientRequestId", void 0);
     return CertificateListHeaders;
-}(SpeakeasyBase));
-export { CertificateListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CertificateListHeaders = CertificateListHeaders;
 var CertificateListRequest = /** @class */ (function (_super) {
     __extends(CertificateListRequest, _super);
     function CertificateListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CertificateListQueryParams)
     ], CertificateListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CertificateListHeaders)
     ], CertificateListRequest.prototype, "headers", void 0);
     return CertificateListRequest;
-}(SpeakeasyBase));
-export { CertificateListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CertificateListRequest = CertificateListRequest;
 var CertificateListResponse = /** @class */ (function (_super) {
     __extends(CertificateListResponse, _super);
     function CertificateListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CertificateListResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CertificateListResponse.prototype, "certificateListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CertificateListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CertificateListResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CertificateListResponse.prototype, "statusCode", void 0);
     return CertificateListResponse;
-}(SpeakeasyBase));
-export { CertificateListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CertificateListResponse = CertificateListResponse;

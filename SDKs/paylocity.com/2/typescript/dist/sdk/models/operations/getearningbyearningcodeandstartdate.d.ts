@@ -17,5 +17,5 @@ export declare class GetEarningByEarningCodeAndStartDateResponse extends Speakea
     contentType: string;
     statusCode: number;
     earning?: shared.Earning;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

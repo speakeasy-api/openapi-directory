@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceSecurityIntrusionResponse = exports.UpdateNetworkApplianceSecurityIntrusionRequest = exports.UpdateNetworkApplianceSecurityIntrusionRequestBody = exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks = exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum = exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum = exports.UpdateNetworkApplianceSecurityIntrusionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceSecurityIntrusionPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSecurityIntrusionPathParams, _super);
     function UpdateNetworkApplianceSecurityIntrusionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSecurityIntrusionPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceSecurityIntrusionPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSecurityIntrusionPathParams };
-export var UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSecurityIntrusionPathParams = UpdateNetworkApplianceSecurityIntrusionPathParams;
+var UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum;
 (function (UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum) {
     UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum["Connectivity"] = "connectivity";
     UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum["Balanced"] = "balanced";
     UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum["Security"] = "security";
-})(UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum || (UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum = {}));
-export var UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum;
+})(UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum = exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum || (exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyIdsRulesetsEnum = {}));
+var UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum;
 (function (UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum) {
     UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum["Prevention"] = "prevention";
     UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum["Detection"] = "detection";
     UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum["Disabled"] = "disabled";
-})(UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum || (UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum = {}));
+})(UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum = exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum || (exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyModeEnum = {}));
 // UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks
 /**
  * Set the included/excluded networks from the intrusion engine (optional - omitting will leave current config unchanged). This is available only in 'passthrough' mode
@@ -57,73 +60,73 @@ var UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedCidr" }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks.prototype, "excludedCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includedCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includedCidr" }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks.prototype, "includedCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useDefault" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks.prototype, "useDefault", void 0);
     return UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks = UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks;
 var UpdateNetworkApplianceSecurityIntrusionRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSecurityIntrusionRequestBody, _super);
     function UpdateNetworkApplianceSecurityIntrusionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idsRulesets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idsRulesets" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBody.prototype, "idsRulesets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBody.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectedNetworks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectedNetworks" }),
         __metadata("design:type", UpdateNetworkApplianceSecurityIntrusionRequestBodyProtectedNetworks)
     ], UpdateNetworkApplianceSecurityIntrusionRequestBody.prototype, "protectedNetworks", void 0);
     return UpdateNetworkApplianceSecurityIntrusionRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSecurityIntrusionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSecurityIntrusionRequestBody = UpdateNetworkApplianceSecurityIntrusionRequestBody;
 var UpdateNetworkApplianceSecurityIntrusionRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSecurityIntrusionRequest, _super);
     function UpdateNetworkApplianceSecurityIntrusionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceSecurityIntrusionPathParams)
     ], UpdateNetworkApplianceSecurityIntrusionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceSecurityIntrusionRequestBody)
     ], UpdateNetworkApplianceSecurityIntrusionRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceSecurityIntrusionRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSecurityIntrusionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSecurityIntrusionRequest = UpdateNetworkApplianceSecurityIntrusionRequest;
 var UpdateNetworkApplianceSecurityIntrusionResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSecurityIntrusionResponse, _super);
     function UpdateNetworkApplianceSecurityIntrusionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSecurityIntrusionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceSecurityIntrusionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceSecurityIntrusionResponse.prototype, "updateNetworkApplianceSecurityIntrusion200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceSecurityIntrusionResponse.prototype, "updateNetworkApplianceSecurityIntrusion200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceSecurityIntrusionResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSecurityIntrusionResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSecurityIntrusionResponse = UpdateNetworkApplianceSecurityIntrusionResponse;

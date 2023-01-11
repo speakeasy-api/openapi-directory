@@ -38,5 +38,5 @@ export class SnsGetSnsGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  snsGetSnsGet200ApplicationJsonAny?: any;
+  snsGetSnsGet200ApplicationJSONAny?: any;
 }

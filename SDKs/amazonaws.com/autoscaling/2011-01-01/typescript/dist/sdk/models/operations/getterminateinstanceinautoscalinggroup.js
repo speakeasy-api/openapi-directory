@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTerminateInstanceInAutoScalingGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTerminateInstanceInAutoScalingGroupResponse = exports.GetTerminateInstanceInAutoScalingGroupRequest = exports.GetTerminateInstanceInAutoScalingGroupHeaders = exports.GetTerminateInstanceInAutoScalingGroupQueryParams = exports.GetTerminateInstanceInAutoScalingGroupVersionEnum = exports.GetTerminateInstanceInAutoScalingGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTerminateInstanceInAutoScalingGroupActionEnum;
 (function (GetTerminateInstanceInAutoScalingGroupActionEnum) {
     GetTerminateInstanceInAutoScalingGroupActionEnum["TerminateInstanceInAutoScalingGroup"] = "TerminateInstanceInAutoScalingGroup";
-})(GetTerminateInstanceInAutoScalingGroupActionEnum || (GetTerminateInstanceInAutoScalingGroupActionEnum = {}));
-export var GetTerminateInstanceInAutoScalingGroupVersionEnum;
+})(GetTerminateInstanceInAutoScalingGroupActionEnum = exports.GetTerminateInstanceInAutoScalingGroupActionEnum || (exports.GetTerminateInstanceInAutoScalingGroupActionEnum = {}));
+var GetTerminateInstanceInAutoScalingGroupVersionEnum;
 (function (GetTerminateInstanceInAutoScalingGroupVersionEnum) {
     GetTerminateInstanceInAutoScalingGroupVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetTerminateInstanceInAutoScalingGroupVersionEnum || (GetTerminateInstanceInAutoScalingGroupVersionEnum = {}));
+})(GetTerminateInstanceInAutoScalingGroupVersionEnum = exports.GetTerminateInstanceInAutoScalingGroupVersionEnum || (exports.GetTerminateInstanceInAutoScalingGroupVersionEnum = {}));
 var GetTerminateInstanceInAutoScalingGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetTerminateInstanceInAutoScalingGroupQueryParams, _super);
     function GetTerminateInstanceInAutoScalingGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ShouldDecrementDesiredCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ShouldDecrementDesiredCapacity" }),
         __metadata("design:type", Boolean)
     ], GetTerminateInstanceInAutoScalingGroupQueryParams.prototype, "shouldDecrementDesiredCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupQueryParams.prototype, "version", void 0);
     return GetTerminateInstanceInAutoScalingGroupQueryParams;
-}(SpeakeasyBase));
-export { GetTerminateInstanceInAutoScalingGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTerminateInstanceInAutoScalingGroupQueryParams = GetTerminateInstanceInAutoScalingGroupQueryParams;
 var GetTerminateInstanceInAutoScalingGroupHeaders = /** @class */ (function (_super) {
     __extends(GetTerminateInstanceInAutoScalingGroupHeaders, _super);
     function GetTerminateInstanceInAutoScalingGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetTerminateInstanceInAutoScalingGroupHeaders;
-}(SpeakeasyBase));
-export { GetTerminateInstanceInAutoScalingGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetTerminateInstanceInAutoScalingGroupHeaders = GetTerminateInstanceInAutoScalingGroupHeaders;
 var GetTerminateInstanceInAutoScalingGroupRequest = /** @class */ (function (_super) {
     __extends(GetTerminateInstanceInAutoScalingGroupRequest, _super);
     function GetTerminateInstanceInAutoScalingGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTerminateInstanceInAutoScalingGroupQueryParams)
     ], GetTerminateInstanceInAutoScalingGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTerminateInstanceInAutoScalingGroupHeaders)
     ], GetTerminateInstanceInAutoScalingGroupRequest.prototype, "headers", void 0);
     return GetTerminateInstanceInAutoScalingGroupRequest;
-}(SpeakeasyBase));
-export { GetTerminateInstanceInAutoScalingGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTerminateInstanceInAutoScalingGroupRequest = GetTerminateInstanceInAutoScalingGroupRequest;
 var GetTerminateInstanceInAutoScalingGroupResponse = /** @class */ (function (_super) {
     __extends(GetTerminateInstanceInAutoScalingGroupResponse, _super);
     function GetTerminateInstanceInAutoScalingGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTerminateInstanceInAutoScalingGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTerminateInstanceInAutoScalingGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTerminateInstanceInAutoScalingGroupResponse.prototype, "statusCode", void 0);
     return GetTerminateInstanceInAutoScalingGroupResponse;
-}(SpeakeasyBase));
-export { GetTerminateInstanceInAutoScalingGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTerminateInstanceInAutoScalingGroupResponse = GetTerminateInstanceInAutoScalingGroupResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetSerialConsoleAccessStatusActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetSerialConsoleAccessStatusResponse = exports.GetGetSerialConsoleAccessStatusRequest = exports.GetGetSerialConsoleAccessStatusHeaders = exports.GetGetSerialConsoleAccessStatusQueryParams = exports.GetGetSerialConsoleAccessStatusVersionEnum = exports.GetGetSerialConsoleAccessStatusActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetSerialConsoleAccessStatusActionEnum;
 (function (GetGetSerialConsoleAccessStatusActionEnum) {
     GetGetSerialConsoleAccessStatusActionEnum["GetSerialConsoleAccessStatus"] = "GetSerialConsoleAccessStatus";
-})(GetGetSerialConsoleAccessStatusActionEnum || (GetGetSerialConsoleAccessStatusActionEnum = {}));
-export var GetGetSerialConsoleAccessStatusVersionEnum;
+})(GetGetSerialConsoleAccessStatusActionEnum = exports.GetGetSerialConsoleAccessStatusActionEnum || (exports.GetGetSerialConsoleAccessStatusActionEnum = {}));
+var GetGetSerialConsoleAccessStatusVersionEnum;
 (function (GetGetSerialConsoleAccessStatusVersionEnum) {
     GetGetSerialConsoleAccessStatusVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetGetSerialConsoleAccessStatusVersionEnum || (GetGetSerialConsoleAccessStatusVersionEnum = {}));
+})(GetGetSerialConsoleAccessStatusVersionEnum = exports.GetGetSerialConsoleAccessStatusVersionEnum || (exports.GetGetSerialConsoleAccessStatusVersionEnum = {}));
 var GetGetSerialConsoleAccessStatusQueryParams = /** @class */ (function (_super) {
     __extends(GetGetSerialConsoleAccessStatusQueryParams, _super);
     function GetGetSerialConsoleAccessStatusQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetGetSerialConsoleAccessStatusQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusQueryParams.prototype, "version", void 0);
     return GetGetSerialConsoleAccessStatusQueryParams;
-}(SpeakeasyBase));
-export { GetGetSerialConsoleAccessStatusQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSerialConsoleAccessStatusQueryParams = GetGetSerialConsoleAccessStatusQueryParams;
 var GetGetSerialConsoleAccessStatusHeaders = /** @class */ (function (_super) {
     __extends(GetGetSerialConsoleAccessStatusHeaders, _super);
     function GetGetSerialConsoleAccessStatusHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetSerialConsoleAccessStatusHeaders;
-}(SpeakeasyBase));
-export { GetGetSerialConsoleAccessStatusHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSerialConsoleAccessStatusHeaders = GetGetSerialConsoleAccessStatusHeaders;
 var GetGetSerialConsoleAccessStatusRequest = /** @class */ (function (_super) {
     __extends(GetGetSerialConsoleAccessStatusRequest, _super);
     function GetGetSerialConsoleAccessStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetSerialConsoleAccessStatusQueryParams)
     ], GetGetSerialConsoleAccessStatusRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetSerialConsoleAccessStatusHeaders)
     ], GetGetSerialConsoleAccessStatusRequest.prototype, "headers", void 0);
     return GetGetSerialConsoleAccessStatusRequest;
-}(SpeakeasyBase));
-export { GetGetSerialConsoleAccessStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSerialConsoleAccessStatusRequest = GetGetSerialConsoleAccessStatusRequest;
 var GetGetSerialConsoleAccessStatusResponse = /** @class */ (function (_super) {
     __extends(GetGetSerialConsoleAccessStatusResponse, _super);
     function GetGetSerialConsoleAccessStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetSerialConsoleAccessStatusResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetSerialConsoleAccessStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetSerialConsoleAccessStatusResponse.prototype, "statusCode", void 0);
     return GetGetSerialConsoleAccessStatusResponse;
-}(SpeakeasyBase));
-export { GetGetSerialConsoleAccessStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSerialConsoleAccessStatusResponse = GetGetSerialConsoleAccessStatusResponse;

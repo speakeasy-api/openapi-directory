@@ -1,12 +1,10 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 import { Security } from "./models/shared";
 
 
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"http://redshift.{region}.amazonaws.com",
@@ -15,31 +13,14 @@ export const ServerList = [
 	"https://redshift.{region}.amazonaws.com.cn",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
-}
 
-export function WithSecurity(security: Security): OptsFunc {
-  if (!(security instanceof utils.SpeakeasyBase)) {
-    security = new Security(security);
-  }
-  return (sdk: SDK) => {
-    sdk._security = security;
-  };
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  security?: Security;
+
+  serverUrl?: string;
 }
 
 /* SDK Documentation: https://docs.aws.amazon.com/redshift/ - Amazon Web Services documentation*/
@@ -47,31 +28,25 @@ export class SDK {
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  public _security?: Security;
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      if (this._security) {
-        this._securityClient = utils.CreateSecurityClient(
-          this._defaultClient,
-          this._security
-        );
-      } else {
-        this._securityClient = this._defaultClient;
-      }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    if (props.security) {
+      let security: Security = props.security;
+      if (!(props.security instanceof utils.SpeakeasyBase))
+        security = new Security(props.security);
+      this._securityClient = utils.createSecurityClient(
+        this._defaultClient,
+        security
+      );
+    } else {
+      this._securityClient = this._defaultClient;
     }
     
   }
@@ -91,8 +66,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AcceptReservedNodeExchange";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -100,20 +76,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAcceptReservedNodeExchangeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -121,7 +99,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -129,7 +107,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -137,7 +115,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -145,7 +123,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -153,7 +131,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -161,7 +139,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -169,7 +147,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -180,7 +158,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -199,8 +176,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AddPartner";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -208,20 +186,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAddPartnerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -229,7 +209,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -237,7 +217,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -245,7 +225,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -256,7 +236,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -275,8 +254,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AssociateDataShareConsumer";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -284,20 +264,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAssociateDataShareConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -305,7 +287,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -313,7 +295,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -324,7 +306,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -343,8 +324,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AuthorizeClusterSecurityGroupIngress";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -352,20 +334,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAuthorizeClusterSecurityGroupIngressResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -373,7 +357,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -381,7 +365,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -389,7 +373,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -397,7 +381,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -408,7 +392,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -427,8 +410,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AuthorizeDataShare";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -436,20 +420,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAuthorizeDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -457,7 +443,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -468,107 +454,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getAuthorizeEndpointAccess - Grants access to a cluster.
-  **/
-  getAuthorizeEndpointAccess(
-    req: operations.GetAuthorizeEndpointAccessRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetAuthorizeEndpointAccessResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetAuthorizeEndpointAccessRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=AuthorizeEndpointAccess";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetAuthorizeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -587,8 +472,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=AuthorizeSnapshotAccess";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -596,20 +482,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAuthorizeSnapshotAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -617,7 +505,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -625,7 +513,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -633,7 +521,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -641,7 +529,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -649,7 +537,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -657,7 +545,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -668,75 +556,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getBatchModifyClusterSnapshots - Modifies the settings for a set of cluster snapshots.
-  **/
-  getBatchModifyClusterSnapshots(
-    req: operations.GetBatchModifyClusterSnapshotsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetBatchModifyClusterSnapshotsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetBatchModifyClusterSnapshotsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=BatchModifyClusterSnapshots";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetBatchModifyClusterSnapshotsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -755,8 +574,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=CancelResize";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -764,20 +584,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCancelResizeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -785,7 +607,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -793,7 +615,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -801,7 +623,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -809,7 +631,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -820,7 +642,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -839,8 +660,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=CopyClusterSnapshot";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -848,20 +670,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCopyClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -869,7 +693,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -877,7 +701,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -885,7 +709,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -893,7 +717,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -901,7 +725,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -912,7 +736,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -931,8 +754,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=CreateAuthenticationProfile";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -940,20 +764,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCreateAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -961,7 +787,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -969,7 +795,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -977,7 +803,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -988,139 +814,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getCreateEndpointAccess - Creates a Redshift-managed VPC endpoint.
-  **/
-  getCreateEndpointAccess(
-    req: operations.GetCreateEndpointAccessRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetCreateEndpointAccessResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetCreateEndpointAccessRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=CreateEndpointAccess";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetCreateEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1139,8 +832,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeauthorizeDataShare";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1148,20 +842,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeauthorizeDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1169,7 +865,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1180,7 +876,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1199,8 +894,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteAuthenticationProfile";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1208,20 +904,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeleteAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1229,7 +927,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1237,7 +935,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1248,7 +946,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1267,8 +964,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteCluster";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1276,20 +974,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeleteClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1297,7 +997,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1305,7 +1005,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1313,7 +1013,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1321,7 +1021,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1329,7 +1029,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1340,7 +1040,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1359,8 +1058,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteClusterParameterGroup";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1368,13 +1068,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1383,7 +1085,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1391,7 +1093,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1402,7 +1104,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1421,8 +1122,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteClusterSecurityGroup";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1430,13 +1132,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1445,7 +1149,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1453,7 +1157,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1464,7 +1168,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1483,8 +1186,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteClusterSnapshot";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1492,20 +1196,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeleteClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1513,7 +1219,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1521,7 +1227,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1532,7 +1238,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1551,8 +1256,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteClusterSubnetGroup";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1560,13 +1266,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1575,7 +1283,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1583,7 +1291,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1591,7 +1299,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1602,7 +1310,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1621,8 +1328,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteEndpointAccess";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1630,20 +1338,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeleteEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1651,7 +1361,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1659,7 +1369,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1667,7 +1377,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1675,7 +1385,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1683,7 +1393,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1694,7 +1404,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1713,8 +1422,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteEventSubscription";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1722,13 +1432,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1737,7 +1449,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1745,7 +1457,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1756,7 +1468,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1775,8 +1486,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteHsmClientCertificate";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1784,13 +1496,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1799,7 +1513,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1807,7 +1521,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1818,7 +1532,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1837,8 +1550,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteHsmConfiguration";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1846,13 +1560,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1861,7 +1577,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1869,7 +1585,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1880,7 +1596,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1899,8 +1614,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeletePartner";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1908,20 +1624,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeletePartnerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1929,7 +1647,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1937,7 +1655,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1945,7 +1663,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -1956,7 +1674,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1975,8 +1692,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteScheduledAction";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1984,13 +1702,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1999,7 +1719,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2007,7 +1727,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2018,7 +1738,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2037,8 +1756,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteSnapshotCopyGrant";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2046,13 +1766,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2061,7 +1783,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2069,7 +1791,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2080,7 +1802,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2099,8 +1820,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteSnapshotSchedule";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2108,13 +1830,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2123,7 +1847,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2131,7 +1855,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2142,69 +1866,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDeleteTags - Deletes tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or tags.
-  **/
-  getDeleteTags(
-    req: operations.GetDeleteTagsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDeleteTagsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDeleteTagsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteTags";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDeleteTagsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2223,8 +1884,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DeleteUsageLimit";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2232,13 +1894,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2247,7 +1911,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2255,7 +1919,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2266,59 +1930,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeAccountAttributes - Returns a list of attributes attached to an account
-  **/
-  getDescribeAccountAttributes(
-    req: operations.GetDescribeAccountAttributesRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeAccountAttributesResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeAccountAttributesRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeAccountAttributes";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeAccountAttributesResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2337,8 +1948,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeAuthenticationProfiles";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2346,20 +1958,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeAuthenticationProfilesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2367,7 +1981,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2375,7 +1989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2386,7 +2000,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2405,8 +2018,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterDbRevisions";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2414,20 +2028,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeClusterDbRevisionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2435,7 +2051,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2443,7 +2059,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2454,75 +2070,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeClusterParameterGroups - <p>Returns a list of Amazon Redshift parameter groups, including parameter groups you created and the default parameter group. For each parameter group, the response includes the parameter group name, description, and parameter group family name. You can optionally specify a name to retrieve the description of a specific parameter group.</p> <p> For more information about parameters and parameter groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all parameter groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all parameter groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, parameter groups are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeClusterParameterGroups(
-    req: operations.GetDescribeClusterParameterGroupsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeClusterParameterGroupsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeClusterParameterGroupsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterParameterGroups";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeClusterParameterGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2541,8 +2088,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterParameters";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2550,20 +2098,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeClusterParametersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2571,7 +2121,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2582,143 +2132,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeClusterSecurityGroups - <p>Returns information about Amazon Redshift security groups. If the name of a security group is specified, the response will contain only information about only that security group.</p> <p> For information about managing security groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all security groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all security groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, security groups are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeClusterSecurityGroups(
-    req: operations.GetDescribeClusterSecurityGroupsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeClusterSecurityGroupsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeClusterSecurityGroupsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterSecurityGroups";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeClusterSecurityGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeClusterSubnetGroups - <p>Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups. By default, this operation returns information about all cluster subnet groups that are defined in your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all subnet groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subnet groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subnet groups are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeClusterSubnetGroups(
-    req: operations.GetDescribeClusterSubnetGroupsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeClusterSubnetGroupsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeClusterSubnetGroupsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterSubnetGroups";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeClusterSubnetGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2737,8 +2150,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterTracks";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2746,20 +2160,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeClusterTracksResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2767,7 +2183,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2775,7 +2191,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2786,7 +2202,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2805,8 +2220,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusterVersions";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2814,20 +2230,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeClusterVersionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2838,75 +2256,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeClusters - <p>Returns properties of provisioned clusters including general cluster properties, cluster database properties, maintenance and backup properties, and security and access properties. This operation supports pagination. For more information about managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all clusters that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all clusters that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, clusters are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeClusters(
-    req: operations.GetDescribeClustersRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeClustersResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeClustersRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeClusters";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeClustersResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2925,8 +2274,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeDataShares";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2934,20 +2284,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeDataSharesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2955,7 +2307,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -2966,7 +2318,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2985,8 +2336,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeDataSharesForConsumer";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2994,20 +2346,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeDataSharesForConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3015,7 +2369,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3026,7 +2380,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3045,8 +2398,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeDataSharesForProducer";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3054,20 +2408,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeDataSharesForProducerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3075,7 +2431,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3086,7 +2442,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3105,8 +2460,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeDefaultClusterParameters";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3114,20 +2470,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeDefaultClusterParametersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3138,7 +2496,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3157,8 +2514,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeEndpointAccess";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3166,20 +2524,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3187,7 +2547,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3195,7 +2555,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3203,7 +2563,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3214,7 +2574,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3233,8 +2592,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeEndpointAuthorization";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3242,20 +2602,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeEndpointAuthorizationResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3263,7 +2625,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3271,7 +2633,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3282,7 +2644,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3301,8 +2662,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeEventCategories";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3310,20 +2672,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeEventCategoriesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3334,75 +2698,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeEventSubscriptions - <p>Lists descriptions of all the Amazon Redshift event notification subscriptions for a customer account. If you specify a subscription name, lists the description for that subscription.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all event notification subscriptions that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subscriptions that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subscriptions are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeEventSubscriptions(
-    req: operations.GetDescribeEventSubscriptionsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeEventSubscriptionsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeEventSubscriptionsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeEventSubscriptions";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeEventSubscriptionsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3421,8 +2716,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeEvents";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3430,20 +2726,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeEventsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3454,143 +2752,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeHsmClientCertificates - <p>Returns information about the specified HSM client certificate. If no certificate ID is specified, returns information about all the HSM certificates owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM client certificates that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM client certificates that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM client certificates are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeHsmClientCertificates(
-    req: operations.GetDescribeHsmClientCertificatesRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeHsmClientCertificatesResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeHsmClientCertificatesRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeHsmClientCertificates";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeHsmClientCertificatesResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeHsmConfigurations - <p>Returns information about the specified Amazon Redshift HSM configuration. If no configuration ID is specified, returns information about all the HSM configurations owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM connections that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM connections that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM connections are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeHsmConfigurations(
-    req: operations.GetDescribeHsmConfigurationsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeHsmConfigurationsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeHsmConfigurationsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeHsmConfigurations";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeHsmConfigurationsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3609,8 +2770,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeLoggingStatus";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3618,20 +2780,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeLoggingStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3639,7 +2803,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3650,7 +2814,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3669,8 +2832,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeOrderableClusterOptions";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3678,20 +2842,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeOrderableClusterOptionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3702,7 +2868,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3721,8 +2886,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribePartners";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3730,20 +2896,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribePartnersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3751,7 +2919,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3759,7 +2927,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3770,7 +2938,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3789,8 +2956,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeReservedNodeOfferings";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3798,20 +2966,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeReservedNodeOfferingsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3819,7 +2989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3827,7 +2997,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3835,7 +3005,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3846,7 +3016,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3865,8 +3034,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeReservedNodes";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3874,20 +3044,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeReservedNodesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3895,7 +3067,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3903,7 +3075,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3914,7 +3086,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3933,8 +3104,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeResize";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -3942,20 +3114,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeResizeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3963,7 +3137,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3971,7 +3145,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -3982,127 +3156,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeSnapshotCopyGrants - <p>Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region.</p> <p> For more information about managing snapshot copy grants, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
-  **/
-  getDescribeSnapshotCopyGrants(
-    req: operations.GetDescribeSnapshotCopyGrantsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeSnapshotCopyGrantsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeSnapshotCopyGrantsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeSnapshotCopyGrants";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeSnapshotCopyGrantsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeSnapshotSchedules - Returns a list of snapshot schedules. 
-  **/
-  getDescribeSnapshotSchedules(
-    req: operations.GetDescribeSnapshotSchedulesRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeSnapshotSchedulesResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeSnapshotSchedulesRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeSnapshotSchedules";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeSnapshotSchedulesResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4121,8 +3174,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeStorage";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4130,20 +3184,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeStorageResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4154,7 +3210,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4173,8 +3228,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeTableRestoreStatus";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4182,20 +3238,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDescribeTableRestoreStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4203,7 +3261,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4211,7 +3269,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4222,143 +3280,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeTags - <p>Returns a list of tags. You can return tags from a specific resource by specifying an ARN, or you can return all tags for a given type of resource, such as clusters, snapshots, and so on.</p> <p>The following are limitations for <code>DescribeTags</code>: </p> <ul> <li> <p>You cannot specify an ARN and a resource-type value together in the same request.</p> </li> <li> <p>You cannot use the <code>MaxRecords</code> and <code>Marker</code> parameters together with the ARN parameter.</p> </li> <li> <p>The <code>MaxRecords</code> parameter can be a range from 10 to 50 results to return in a request.</p> </li> </ul> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all resources that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all resources that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, resources are returned regardless of whether they have tag keys or values associated with them.</p>
-  **/
-  getDescribeTags(
-    req: operations.GetDescribeTagsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeTagsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeTagsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeTags";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeTagsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getDescribeUsageLimits - <p>Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster identifier, and feature type parameters:</p> <ul> <li> <p>If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the current account in the current region are returned.</p> </li> <li> <p>If usage limit identifier is provided, then the corresponding usage limit object is returned.</p> </li> <li> <p>If cluster identifier is provided, then all usage limit objects for the specified cluster are returned.</p> </li> <li> <p>If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and feature are returned.</p> </li> </ul>
-  **/
-  getDescribeUsageLimits(
-    req: operations.GetDescribeUsageLimitsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDescribeUsageLimitsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDescribeUsageLimitsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeUsageLimits";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDescribeUsageLimitsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4377,8 +3298,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DisableLogging";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4386,20 +3308,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDisableLoggingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4407,7 +3331,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4415,7 +3339,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4426,7 +3350,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4445,8 +3368,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DisableSnapshotCopy";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4454,20 +3378,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDisableSnapshotCopyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4475,7 +3401,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4483,7 +3409,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4491,7 +3417,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4499,7 +3425,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4510,7 +3436,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4529,8 +3454,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DisassociateDataShareConsumer";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4538,20 +3464,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDisassociateDataShareConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4559,7 +3487,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4567,7 +3495,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4578,7 +3506,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4597,8 +3524,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=EnableLogging";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4606,20 +3534,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetEnableLoggingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4627,7 +3557,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4635,7 +3565,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4643,7 +3573,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4651,7 +3581,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4659,7 +3589,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4667,7 +3597,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4678,7 +3608,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4697,8 +3626,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=EnableSnapshotCopy";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4706,20 +3636,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetEnableSnapshotCopyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4727,7 +3659,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4735,7 +3667,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4743,7 +3675,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4751,7 +3683,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4759,7 +3691,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4767,7 +3699,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4775,7 +3707,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4783,7 +3715,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4791,7 +3723,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4799,7 +3731,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4807,7 +3739,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4818,75 +3750,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getGetClusterCredentials - <p>Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database. The action returns the database user name prefixed with <code>IAM:</code> if <code>AutoCreate</code> is <code>False</code> or <code>IAMA:</code> if <code>AutoCreate</code> is <code>True</code>. You can optionally specify one or more database user groups that the user will join at log on. By default, the temporary credentials expire in 900 seconds. You can optionally specify a duration between 900 seconds (15 minutes) and 3600 seconds (60 minutes). For more information, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/generating-user-credentials.html">Using IAM Authentication to Generate Database User Credentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>The Identity and Access Management (IAM) user or role that runs GetClusterCredentials must have an IAM policy attached that allows access to all necessary actions and resources. For more information about permissions, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources">Resource Policies for GetClusterCredentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>If the <code>DbGroups</code> parameter is specified, the IAM policy must allow the <code>redshift:JoinGroup</code> action with access to the listed <code>dbgroups</code>. </p> <p>In addition, if the <code>AutoCreate</code> parameter is set to <code>True</code>, then the policy must include the <code>redshift:CreateClusterUser</code> privilege.</p> <p>If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource <code>dbname</code> for the specified database name. </p>
-  **/
-  getGetClusterCredentials(
-    req: operations.GetGetClusterCredentialsRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetGetClusterCredentialsResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetGetClusterCredentialsRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=GetClusterCredentials";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetGetClusterCredentialsResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -4905,8 +3768,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=GetReservedNodeExchangeOfferings";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -4914,20 +3778,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetGetReservedNodeExchangeOfferingsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4935,7 +3801,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4943,7 +3809,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4951,7 +3817,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4959,7 +3825,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4967,7 +3833,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4975,7 +3841,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -4986,7 +3852,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5005,8 +3870,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyAquaConfiguration";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5014,20 +3880,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyAquaConfigurationResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5035,7 +3903,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5043,7 +3911,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5051,7 +3919,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5062,7 +3930,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5081,8 +3948,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyAuthenticationProfile";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5090,20 +3958,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5111,7 +3981,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5119,7 +3989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5127,7 +3997,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5138,211 +4008,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifyCluster - <p>Modifies the settings for a cluster.</p> <p>You can also change node type and the number of nodes to scale up or down the cluster. When resizing a cluster, you must specify both the number of nodes and the node type even if one of the parameters does not change.</p> <p>You can add another security or parameter group, or change the admin user password. Resetting a cluster password or modifying the security groups associated with a cluster do not need a reboot. However, modifying a parameter group requires a reboot for parameters to take effect. For more information about managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-  **/
-  getModifyCluster(
-    req: operations.GetModifyClusterRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifyClusterResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifyClusterRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyCluster";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifyClusterResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 491:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 492:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 493:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 494:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 495:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 496:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 497:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 498:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5361,8 +4026,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterDbRevision";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5370,20 +4036,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyClusterDbRevisionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5391,7 +4059,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5399,7 +4067,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5407,7 +4075,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5418,75 +4086,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifyClusterIamRoles - <p>Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services.</p> <p>A cluster can have up to 10 IAM roles associated at any time.</p>
-  **/
-  getModifyClusterIamRoles(
-    req: operations.GetModifyClusterIamRolesRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifyClusterIamRolesResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifyClusterIamRolesRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterIamRoles";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifyClusterIamRolesResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5505,8 +4104,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterMaintenance";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5514,20 +4114,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyClusterMaintenanceResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5535,7 +4137,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5543,7 +4145,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5554,7 +4156,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5573,8 +4174,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterSnapshot";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5582,20 +4184,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5603,7 +4207,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5611,7 +4215,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5619,7 +4223,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5630,7 +4234,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -5649,8 +4252,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterSnapshotSchedule";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -5658,13 +4262,15 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -5673,7 +4279,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5681,7 +4287,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5689,7 +4295,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -5700,331 +4306,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifyClusterSubnetGroup - Modifies a cluster subnet group to include the specified list of VPC subnets. The operation replaces the existing list of subnets with the new list of subnets.
-  **/
-  getModifyClusterSubnetGroup(
-    req: operations.GetModifyClusterSubnetGroupRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifyClusterSubnetGroupResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifyClusterSubnetGroupRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyClusterSubnetGroup";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifyClusterSubnetGroupResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifyEndpointAccess - Modifies a Redshift-managed VPC endpoint.
-  **/
-  getModifyEndpointAccess(
-    req: operations.GetModifyEndpointAccessRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifyEndpointAccessResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifyEndpointAccessRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyEndpointAccess";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifyEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifyEventSubscription - Modifies an existing Amazon Redshift event notification subscription.
-  **/
-  getModifyEventSubscription(
-    req: operations.GetModifyEventSubscriptionRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifyEventSubscriptionResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifyEventSubscriptionRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyEventSubscription";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifyEventSubscriptionResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6043,8 +4324,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifySnapshotCopyRetentionPeriod";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6052,20 +4334,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifySnapshotCopyRetentionPeriodResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6073,7 +4357,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6081,7 +4365,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6089,7 +4373,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6097,7 +4381,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6105,7 +4389,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6116,83 +4400,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getModifySnapshotSchedule - Modifies a snapshot schedule. Any schedule associated with a cluster is modified asynchronously.
-  **/
-  getModifySnapshotSchedule(
-    req: operations.GetModifySnapshotScheduleRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetModifySnapshotScheduleResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetModifySnapshotScheduleRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifySnapshotSchedule";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetModifySnapshotScheduleResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6211,8 +4418,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ModifyUsageLimit";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6220,20 +4428,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetModifyUsageLimitResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6241,7 +4451,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6249,7 +4459,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6257,7 +4467,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6268,7 +4478,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6287,8 +4496,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=PauseCluster";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6296,20 +4506,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPauseClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6317,7 +4529,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6325,7 +4537,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6336,7 +4548,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6355,8 +4566,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=PurchaseReservedNodeOffering";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6364,20 +4576,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPurchaseReservedNodeOfferingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6385,7 +4599,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6393,7 +4607,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6401,7 +4615,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6409,7 +4623,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6420,7 +4634,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6439,8 +4652,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RebootCluster";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6448,20 +4662,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRebootClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6469,7 +4685,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6477,7 +4693,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6488,7 +4704,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6507,8 +4722,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RejectDataShare";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6516,20 +4732,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRejectDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6537,7 +4755,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6548,7 +4766,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6567,8 +4784,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ResizeCluster";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6576,20 +4794,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResizeClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6597,7 +4817,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6605,7 +4825,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6613,7 +4833,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6621,7 +4841,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6629,7 +4849,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6637,7 +4857,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6645,7 +4865,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6653,7 +4873,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6661,7 +4881,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6672,259 +4892,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getRestoreFromClusterSnapshot - <p>Creates a new cluster from a snapshot. By default, Amazon Redshift creates the resulting cluster with the same configuration as the original cluster from which the snapshot was created, except that the new cluster is created with the default cluster security and parameter groups. After Amazon Redshift creates the cluster, you can use the <a>ModifyCluster</a> API to associate a different security group and different parameter group with the restored cluster. If you are using a DS node type, you can also choose to change to another DS node type of the same size during restore.</p> <p>If you restore a cluster into a VPC, you must provide a cluster subnet group where you want the cluster restored.</p> <p> For more information about working with snapshots, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-  **/
-  getRestoreFromClusterSnapshot(
-    req: operations.GetRestoreFromClusterSnapshotRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetRestoreFromClusterSnapshotResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetRestoreFromClusterSnapshotRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=RestoreFromClusterSnapshot";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetRestoreFromClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 491:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 492:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 493:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 494:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 495:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 496:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 497:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 498:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 499:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 501:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 502:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 504:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -6943,8 +4910,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RestoreTableFromClusterSnapshot";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -6952,20 +4920,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRestoreTableFromClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6973,7 +4943,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6981,7 +4951,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6989,7 +4959,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -6997,7 +4967,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7005,7 +4975,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7013,7 +4983,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7021,7 +4991,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7032,7 +5002,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7051,8 +5020,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=ResumeCluster";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7060,20 +5030,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResumeClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7081,7 +5053,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7089,7 +5061,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7097,7 +5069,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7108,7 +5080,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7127,8 +5098,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RevokeClusterSecurityGroupIngress";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7136,20 +5108,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRevokeClusterSecurityGroupIngressResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7157,7 +5131,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7165,7 +5139,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7173,7 +5147,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7184,115 +5158,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getRevokeEndpointAccess - Revokes access to a cluster.
-  **/
-  getRevokeEndpointAccess(
-    req: operations.GetRevokeEndpointAccessRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetRevokeEndpointAccessResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetRevokeEndpointAccessRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/#Action=RevokeEndpointAccess";
-    
-    const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetRevokeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-          case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
-            }
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7311,8 +5176,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RevokeSnapshotAccess";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7320,20 +5186,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRevokeSnapshotAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7341,7 +5209,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7349,7 +5217,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7357,7 +5225,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7368,7 +5236,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7387,8 +5254,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=RotateEncryptionKey";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7396,20 +5264,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetRotateEncryptionKeyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7417,7 +5287,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7425,7 +5295,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7433,7 +5303,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7444,7 +5314,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7463,8 +5332,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=UpdatePartnerStatus";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7472,20 +5342,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetUpdatePartnerStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7493,7 +5365,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7501,7 +5373,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7509,7 +5381,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7520,7 +5392,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7541,7 +5412,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -7549,8 +5420,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7558,24 +5430,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAcceptReservedNodeExchangeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7583,7 +5454,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7591,7 +5462,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7599,7 +5470,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7607,7 +5478,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7615,7 +5486,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7623,7 +5494,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7631,7 +5502,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7642,7 +5513,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7663,7 +5533,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -7671,8 +5541,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7680,24 +5551,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAddPartnerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7705,7 +5575,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7713,7 +5583,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7721,7 +5591,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7732,7 +5602,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7753,7 +5622,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -7761,8 +5630,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7770,24 +5640,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAssociateDataShareConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7795,7 +5664,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7803,7 +5672,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7814,7 +5683,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7835,7 +5703,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -7843,8 +5711,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7852,24 +5721,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAuthorizeClusterSecurityGroupIngressResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7877,7 +5745,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7885,7 +5753,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7893,7 +5761,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7901,7 +5769,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7912,7 +5780,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -7933,7 +5800,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -7941,8 +5808,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -7950,24 +5818,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAuthorizeDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7975,7 +5842,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -7986,7 +5853,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8007,7 +5873,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8015,8 +5881,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8024,24 +5891,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAuthorizeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8049,7 +5915,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8057,7 +5923,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8065,7 +5931,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8073,7 +5939,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8081,7 +5947,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8089,7 +5955,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8100,7 +5966,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8121,7 +5986,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8129,8 +5994,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8138,24 +6004,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAuthorizeSnapshotAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8163,7 +6028,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8171,7 +6036,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8179,7 +6044,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8187,7 +6052,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8195,7 +6060,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8203,7 +6068,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8214,7 +6079,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8235,7 +6099,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8243,8 +6107,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8252,24 +6117,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostBatchDeleteClusterSnapshotsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8277,7 +6141,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8288,7 +6152,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8309,7 +6172,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8317,8 +6180,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8326,24 +6190,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostBatchModifyClusterSnapshotsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8351,7 +6214,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8359,7 +6222,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8370,7 +6233,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8391,7 +6253,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8399,8 +6261,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8408,24 +6271,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCancelResizeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8433,7 +6295,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8441,7 +6303,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8449,7 +6311,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8457,7 +6319,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8468,7 +6330,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8489,7 +6350,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8497,8 +6358,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8506,24 +6368,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCopyClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8531,7 +6392,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8539,7 +6400,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8547,7 +6408,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8555,7 +6416,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8563,7 +6424,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8574,7 +6435,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8595,7 +6455,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8603,8 +6463,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8612,24 +6473,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8637,7 +6497,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8645,7 +6505,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8653,7 +6513,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8664,7 +6524,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8685,7 +6544,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8693,8 +6552,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8702,24 +6562,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8727,7 +6586,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8735,7 +6594,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8743,7 +6602,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8751,7 +6610,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8759,7 +6618,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8767,7 +6626,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8775,7 +6634,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8783,7 +6642,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8791,7 +6650,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8799,7 +6658,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8807,7 +6666,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8815,7 +6674,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 491:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8823,7 +6682,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 492:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8831,7 +6690,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 493:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8839,7 +6698,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 494:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8847,7 +6706,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 495:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8855,7 +6714,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 496:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8863,7 +6722,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 497:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8871,7 +6730,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 498:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8879,7 +6738,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 499:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8887,7 +6746,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8895,7 +6754,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 501:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8906,7 +6765,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -8927,7 +6785,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -8935,8 +6793,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -8944,24 +6803,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateClusterParameterGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8969,7 +6827,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8977,7 +6835,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8985,7 +6843,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -8993,7 +6851,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9004,7 +6862,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9025,7 +6882,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9033,8 +6890,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9042,24 +6900,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateClusterSecurityGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9067,7 +6924,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9075,7 +6932,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9083,7 +6940,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9091,7 +6948,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9102,7 +6959,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9123,7 +6979,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9131,8 +6987,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9140,24 +6997,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9165,7 +7021,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9173,7 +7029,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9181,7 +7037,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9189,7 +7045,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9197,7 +7053,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9205,7 +7061,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9213,7 +7069,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9224,7 +7080,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9245,7 +7100,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9253,8 +7108,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9262,24 +7118,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateClusterSubnetGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9287,7 +7142,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9295,7 +7150,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9303,7 +7158,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9311,7 +7166,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9319,7 +7174,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9327,7 +7182,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9335,7 +7190,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9343,7 +7198,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9354,7 +7209,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9375,7 +7229,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9383,8 +7237,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9392,24 +7247,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9417,7 +7271,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9425,7 +7279,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9433,7 +7287,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9441,7 +7295,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9449,7 +7303,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9457,7 +7311,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9465,7 +7319,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9473,7 +7327,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9481,7 +7335,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9489,7 +7343,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9500,7 +7354,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9521,7 +7374,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9529,8 +7382,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9538,24 +7392,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateEventSubscriptionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9563,7 +7416,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9571,7 +7424,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9579,7 +7432,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9587,7 +7440,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9595,7 +7448,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9603,7 +7456,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9611,7 +7464,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9619,7 +7472,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9627,7 +7480,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9635,7 +7488,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9643,7 +7496,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9654,7 +7507,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9675,7 +7527,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9683,8 +7535,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9692,24 +7545,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateHsmClientCertificateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9717,7 +7569,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9725,7 +7577,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9733,7 +7585,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9741,7 +7593,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9752,7 +7604,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9773,7 +7624,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9781,8 +7632,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9790,24 +7642,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateHsmConfigurationResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9815,7 +7666,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9823,7 +7674,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9831,7 +7682,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9839,7 +7690,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9850,7 +7701,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9871,7 +7721,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9879,8 +7729,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -9888,24 +7739,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateScheduledActionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9913,7 +7763,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9921,7 +7771,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9929,7 +7779,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9937,7 +7787,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9945,7 +7795,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9953,7 +7803,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -9964,7 +7814,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -9985,7 +7834,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -9993,8 +7842,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10002,24 +7852,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateSnapshotCopyGrantResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10027,7 +7876,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10035,7 +7884,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10043,7 +7892,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10051,7 +7900,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10059,7 +7908,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10067,7 +7916,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10078,7 +7927,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10099,7 +7947,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10107,8 +7955,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10116,24 +7965,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateSnapshotScheduleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10141,7 +7989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10149,7 +7997,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10157,7 +8005,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10165,7 +8013,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10173,7 +8021,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10181,7 +8029,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10192,7 +8040,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10213,7 +8060,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10221,8 +8068,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10230,17 +8078,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -10249,7 +8096,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10257,7 +8104,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10265,7 +8112,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10273,7 +8120,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10284,7 +8131,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10305,7 +8151,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10313,8 +8159,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10322,24 +8169,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostCreateUsageLimitResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10347,7 +8193,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10355,7 +8201,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10363,7 +8209,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10371,7 +8217,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10379,7 +8225,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10387,7 +8233,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10395,7 +8241,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10406,7 +8252,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10427,7 +8272,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10435,8 +8280,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10444,24 +8290,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeauthorizeDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10469,7 +8314,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10480,7 +8325,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10501,7 +8345,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10509,8 +8353,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10518,24 +8363,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeleteAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10543,7 +8387,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10551,7 +8395,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10562,7 +8406,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10583,7 +8426,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10591,8 +8434,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10600,24 +8444,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeleteClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10625,7 +8468,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10633,7 +8476,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10641,7 +8484,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10649,7 +8492,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10657,7 +8500,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10668,7 +8511,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10689,7 +8531,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10697,8 +8539,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10706,17 +8549,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -10725,7 +8567,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10733,7 +8575,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10744,7 +8586,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10765,7 +8606,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10773,8 +8614,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10782,17 +8624,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -10801,7 +8642,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10809,7 +8650,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10820,7 +8661,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10841,7 +8681,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10849,8 +8689,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10858,24 +8699,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeleteClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10883,7 +8723,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10891,7 +8731,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10902,7 +8742,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -10923,7 +8762,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -10931,8 +8770,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -10940,17 +8780,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -10959,7 +8798,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10967,7 +8806,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10975,7 +8814,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -10986,7 +8825,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11007,7 +8845,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11015,8 +8853,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11024,24 +8863,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeleteEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11049,7 +8887,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11057,7 +8895,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11065,7 +8903,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11073,7 +8911,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11081,7 +8919,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11092,7 +8930,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11113,7 +8950,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11121,8 +8958,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11130,17 +8968,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11149,7 +8986,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11157,7 +8994,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11168,7 +9005,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11189,7 +9025,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11197,8 +9033,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11206,17 +9043,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11225,7 +9061,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11233,7 +9069,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11244,7 +9080,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11265,7 +9100,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11273,8 +9108,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11282,17 +9118,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11301,7 +9136,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11309,7 +9144,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11320,7 +9155,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11341,7 +9175,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11349,8 +9183,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11358,24 +9193,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDeletePartnerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11383,7 +9217,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11391,7 +9225,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11399,7 +9233,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11410,7 +9244,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11431,7 +9264,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11439,8 +9272,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11448,17 +9282,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11467,7 +9300,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11475,7 +9308,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11486,7 +9319,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11507,7 +9339,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11515,8 +9347,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11524,17 +9357,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11543,7 +9375,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11551,7 +9383,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11562,7 +9394,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11583,7 +9414,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11591,8 +9422,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11600,17 +9432,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11619,7 +9450,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11627,7 +9458,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11638,7 +9469,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11659,7 +9489,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11667,8 +9497,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11676,17 +9507,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11695,7 +9525,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11703,7 +9533,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11714,7 +9544,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11735,7 +9564,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11743,8 +9572,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11752,17 +9582,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -11771,7 +9600,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11779,7 +9608,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11790,7 +9619,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11811,7 +9639,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11819,8 +9647,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11828,24 +9657,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeAccountAttributesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11856,7 +9684,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11877,7 +9704,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11885,8 +9712,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11894,24 +9722,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeAuthenticationProfilesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11919,7 +9746,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11927,7 +9754,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -11938,7 +9765,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -11959,7 +9785,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -11967,8 +9793,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -11976,24 +9803,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterDbRevisionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12001,7 +9827,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12009,7 +9835,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12020,7 +9846,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12041,7 +9866,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12049,8 +9874,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12058,24 +9884,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterParameterGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12083,7 +9908,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12091,7 +9916,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12102,7 +9927,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12123,7 +9947,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12131,8 +9955,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12140,24 +9965,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterParametersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12165,7 +9989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12176,7 +10000,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12197,7 +10020,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12205,8 +10028,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12214,24 +10038,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterSecurityGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12239,7 +10062,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12247,7 +10070,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12258,7 +10081,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12279,7 +10101,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12287,8 +10109,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12296,24 +10119,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterSnapshotsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12321,7 +10143,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12329,7 +10151,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12337,7 +10159,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12348,7 +10170,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12369,7 +10190,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12377,8 +10198,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12386,24 +10208,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterSubnetGroupsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12411,7 +10232,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12419,7 +10240,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12430,7 +10251,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12451,7 +10271,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12459,8 +10279,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12468,24 +10289,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterTracksResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12493,7 +10313,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12501,7 +10321,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12512,7 +10332,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12533,7 +10352,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12541,8 +10360,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12550,24 +10370,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClusterVersionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12578,7 +10397,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12599,7 +10417,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12607,8 +10425,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12616,24 +10435,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeClustersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12641,7 +10459,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12649,7 +10467,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12660,7 +10478,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12681,7 +10498,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12689,8 +10506,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12698,24 +10516,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeDataSharesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12723,7 +10540,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12734,7 +10551,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12755,7 +10571,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12763,8 +10579,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12772,24 +10589,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeDataSharesForConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12797,7 +10613,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12808,7 +10624,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12829,7 +10644,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12837,8 +10652,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12846,24 +10662,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeDataSharesForProducerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12871,7 +10686,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12882,7 +10697,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12903,7 +10717,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12911,8 +10725,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12920,24 +10735,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeDefaultClusterParametersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -12948,7 +10762,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -12969,7 +10782,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -12977,8 +10790,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -12986,24 +10800,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13011,7 +10824,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13019,7 +10832,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13027,7 +10840,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13038,7 +10851,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13059,7 +10871,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13067,8 +10879,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13076,24 +10889,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeEndpointAuthorizationResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13101,7 +10913,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13109,7 +10921,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13120,7 +10932,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13141,7 +10952,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13149,8 +10960,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13158,24 +10970,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeEventCategoriesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13186,7 +10997,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13207,7 +11017,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13215,8 +11025,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13224,24 +11035,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeEventSubscriptionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13249,7 +11059,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13257,7 +11067,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13268,7 +11078,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13289,7 +11098,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13297,8 +11106,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13306,24 +11116,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeEventsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13334,7 +11143,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13355,7 +11163,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13363,8 +11171,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13372,24 +11181,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeHsmClientCertificatesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13397,7 +11205,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13405,7 +11213,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13416,7 +11224,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13437,7 +11244,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13445,8 +11252,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13454,24 +11262,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeHsmConfigurationsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13479,7 +11286,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13487,7 +11294,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13498,7 +11305,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13519,7 +11325,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13527,8 +11333,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13536,24 +11343,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeLoggingStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13561,7 +11367,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13572,7 +11378,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13593,7 +11398,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13601,8 +11406,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13610,24 +11416,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeNodeConfigurationOptionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13635,7 +11440,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13643,7 +11448,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13651,7 +11456,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13659,7 +11464,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13670,7 +11475,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13691,7 +11495,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13699,8 +11503,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13708,24 +11513,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeOrderableClusterOptionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13736,7 +11540,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13757,7 +11560,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13765,8 +11568,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13774,24 +11578,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribePartnersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13799,7 +11602,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13807,7 +11610,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13818,7 +11621,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13839,7 +11641,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13847,8 +11649,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13856,24 +11659,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeReservedNodeOfferingsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13881,7 +11683,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13889,7 +11691,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13897,7 +11699,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13908,7 +11710,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -13929,7 +11730,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -13937,8 +11738,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -13946,24 +11748,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeReservedNodesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13971,7 +11772,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13979,7 +11780,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -13990,7 +11791,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14011,7 +11811,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14019,8 +11819,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14028,24 +11829,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeResizeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14053,7 +11853,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14061,7 +11861,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14072,7 +11872,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14093,7 +11892,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14101,8 +11900,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14110,24 +11910,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeScheduledActionsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14135,7 +11934,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14143,7 +11942,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14154,7 +11953,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14175,7 +11973,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14183,8 +11981,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14192,24 +11991,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeSnapshotCopyGrantsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14217,7 +12015,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14225,7 +12023,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14236,7 +12034,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14257,7 +12054,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14265,8 +12062,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14274,24 +12072,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeSnapshotSchedulesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14302,7 +12099,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14321,8 +12117,9 @@ export class SDK {
     const url: string = baseURL.replace(/\/$/, "") + "/#Action=DescribeStorage";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14330,20 +12127,22 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeStorageResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14354,7 +12153,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14375,7 +12173,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14383,8 +12181,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14392,24 +12191,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeTableRestoreStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14417,7 +12215,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14425,7 +12223,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14436,7 +12234,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14457,7 +12254,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14465,8 +12262,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14474,24 +12272,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeTagsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14499,7 +12296,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14507,7 +12304,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14518,7 +12315,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14539,7 +12335,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14547,8 +12343,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14556,24 +12353,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDescribeUsageLimitsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14581,7 +12377,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14589,7 +12385,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14600,7 +12396,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14621,7 +12416,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14629,8 +12424,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14638,24 +12434,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDisableLoggingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14663,7 +12458,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14671,7 +12466,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14682,7 +12477,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14703,7 +12497,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14711,8 +12505,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14720,24 +12515,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDisableSnapshotCopyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14745,7 +12539,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14753,7 +12547,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14761,7 +12555,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14769,7 +12563,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14780,7 +12574,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14801,7 +12594,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14809,8 +12602,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14818,24 +12612,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostDisassociateDataShareConsumerResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14843,7 +12636,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14851,7 +12644,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14862,7 +12655,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14883,7 +12675,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -14891,8 +12683,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -14900,24 +12693,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostEnableLoggingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14925,7 +12717,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14933,7 +12725,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14941,7 +12733,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14949,7 +12741,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14957,7 +12749,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14965,7 +12757,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -14976,7 +12768,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -14997,7 +12788,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15005,8 +12796,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15014,24 +12806,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostEnableSnapshotCopyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15039,7 +12830,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15047,7 +12838,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15055,7 +12846,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15063,7 +12854,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15071,7 +12862,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15079,7 +12870,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15087,7 +12878,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15095,7 +12886,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15103,7 +12894,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15111,7 +12902,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15119,7 +12910,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15130,7 +12921,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15151,7 +12941,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15159,8 +12949,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15168,24 +12959,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostGetClusterCredentialsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15193,7 +12983,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15201,7 +12991,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15212,7 +13002,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15233,7 +13022,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15241,8 +13030,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15250,24 +13040,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostGetReservedNodeExchangeOfferingsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15275,7 +13064,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15283,7 +13072,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15291,7 +13080,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15299,7 +13088,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15307,7 +13096,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15315,7 +13104,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15326,7 +13115,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15347,7 +13135,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15355,8 +13143,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15364,24 +13153,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyAquaConfigurationResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15389,7 +13177,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15397,7 +13185,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15405,7 +13193,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15416,7 +13204,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15437,7 +13224,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15445,8 +13232,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15454,24 +13242,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyAuthenticationProfileResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15479,7 +13266,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15487,7 +13274,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15495,7 +13282,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15506,7 +13293,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15527,7 +13313,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15535,8 +13321,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15544,24 +13331,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15569,7 +13355,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15577,7 +13363,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15585,7 +13371,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15593,7 +13379,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15601,7 +13387,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15609,7 +13395,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15617,7 +13403,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15625,7 +13411,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15633,7 +13419,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15641,7 +13427,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15649,7 +13435,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15657,7 +13443,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 491:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15665,7 +13451,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 492:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15673,7 +13459,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 493:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15681,7 +13467,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 494:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15689,7 +13475,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 495:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15697,7 +13483,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 496:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15705,7 +13491,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 497:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15713,7 +13499,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 498:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15724,7 +13510,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15745,7 +13530,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15753,8 +13538,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15762,24 +13548,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterDbRevisionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15787,7 +13572,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15795,7 +13580,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15803,7 +13588,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15814,7 +13599,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15835,7 +13619,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15843,8 +13627,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15852,24 +13637,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterIamRolesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15877,7 +13661,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15885,7 +13669,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15896,7 +13680,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15917,7 +13700,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -15925,8 +13708,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -15934,24 +13718,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterMaintenanceResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15959,7 +13742,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15967,7 +13750,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -15978,7 +13761,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -15999,7 +13781,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16007,8 +13789,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16016,24 +13799,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterParameterGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16041,7 +13823,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16049,7 +13831,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16060,7 +13842,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16081,7 +13862,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16089,8 +13870,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16098,24 +13880,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16123,7 +13904,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16131,7 +13912,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16139,7 +13920,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16150,7 +13931,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16171,7 +13951,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16179,8 +13959,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16188,17 +13969,16 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -16207,7 +13987,7 @@ export class SDK {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16215,7 +13995,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16223,7 +14003,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16234,7 +14014,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16255,7 +14034,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16263,8 +14042,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16272,24 +14052,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyClusterSubnetGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16297,7 +14076,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16305,7 +14084,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16313,7 +14092,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16321,7 +14100,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16329,7 +14108,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16337,7 +14116,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16348,7 +14127,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16369,7 +14147,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16377,8 +14155,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16386,24 +14165,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16411,7 +14189,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16419,7 +14197,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16427,7 +14205,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16435,7 +14213,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16443,7 +14221,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16451,7 +14229,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16462,7 +14240,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16483,7 +14260,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16491,8 +14268,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16500,24 +14278,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyEventSubscriptionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16525,7 +14302,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16533,7 +14310,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16541,7 +14318,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16549,7 +14326,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16557,7 +14334,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16565,7 +14342,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16573,7 +14350,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16581,7 +14358,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16589,7 +14366,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16600,7 +14377,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16621,7 +14397,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16629,8 +14405,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16638,24 +14415,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyScheduledActionResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16663,7 +14439,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16671,7 +14447,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16679,7 +14455,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16687,7 +14463,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16695,7 +14471,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16706,7 +14482,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16727,7 +14502,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16735,8 +14510,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16744,24 +14520,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifySnapshotCopyRetentionPeriodResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16769,7 +14544,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16777,7 +14552,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16785,7 +14560,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16793,7 +14568,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16801,7 +14576,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16812,7 +14587,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16833,7 +14607,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16841,8 +14615,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16850,24 +14625,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifySnapshotScheduleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16875,7 +14649,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16883,7 +14657,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16891,7 +14665,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16902,7 +14676,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -16923,7 +14696,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -16931,8 +14704,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -16940,24 +14714,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostModifyUsageLimitResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16965,7 +14738,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16973,7 +14746,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16981,7 +14754,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -16992,7 +14765,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17013,7 +14785,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17021,8 +14793,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17030,24 +14803,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostPauseClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17055,7 +14827,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17063,7 +14835,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17074,7 +14846,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17095,7 +14866,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17103,8 +14874,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17112,24 +14884,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostPurchaseReservedNodeOfferingResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17137,7 +14908,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17145,7 +14916,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17153,7 +14924,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17161,7 +14932,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17172,7 +14943,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17193,7 +14963,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17201,8 +14971,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17210,24 +14981,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRebootClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17235,7 +15005,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17243,7 +15013,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17254,7 +15024,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17275,7 +15044,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17283,8 +15052,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17292,24 +15062,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRejectDataShareResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17317,7 +15086,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17328,7 +15097,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17349,7 +15117,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17357,8 +15125,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17366,24 +15135,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostResetClusterParameterGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17391,7 +15159,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17399,7 +15167,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17410,7 +15178,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17431,7 +15198,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17439,8 +15206,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17448,24 +15216,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostResizeClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17473,7 +15240,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17481,7 +15248,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17489,7 +15256,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17497,7 +15264,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17505,7 +15272,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17513,7 +15280,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17521,7 +15288,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17529,7 +15296,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17537,7 +15304,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17548,7 +15315,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17569,7 +15335,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17577,8 +15343,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17586,24 +15353,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRestoreFromClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17611,7 +15377,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17619,7 +15385,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17627,7 +15393,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17635,7 +15401,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17643,7 +15409,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17651,7 +15417,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17659,7 +15425,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17667,7 +15433,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 487:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17675,7 +15441,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 488:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17683,7 +15449,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 489:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17691,7 +15457,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 490:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17699,7 +15465,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 491:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17707,7 +15473,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 492:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17715,7 +15481,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 493:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17723,7 +15489,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 494:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17731,7 +15497,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 495:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17739,7 +15505,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 496:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17747,7 +15513,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 497:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17755,7 +15521,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 498:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17763,7 +15529,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 499:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17771,7 +15537,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17779,7 +15545,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 501:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17787,7 +15553,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 502:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17795,7 +15561,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17803,7 +15569,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 504:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17814,7 +15580,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17835,7 +15600,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17843,8 +15608,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17852,24 +15618,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRestoreTableFromClusterSnapshotResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17877,7 +15642,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17885,7 +15650,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17893,7 +15658,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17901,7 +15666,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17909,7 +15674,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17917,7 +15682,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17925,7 +15690,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17936,7 +15701,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -17957,7 +15721,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -17965,8 +15729,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -17974,24 +15739,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostResumeClusterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -17999,7 +15763,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18007,7 +15771,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18015,7 +15779,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18026,7 +15790,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -18047,7 +15810,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -18055,8 +15818,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -18064,24 +15828,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRevokeClusterSecurityGroupIngressResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18089,7 +15852,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18097,7 +15860,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18105,7 +15868,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18116,7 +15879,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -18137,7 +15899,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -18145,8 +15907,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -18154,24 +15917,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRevokeEndpointAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18179,7 +15941,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18187,7 +15949,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18195,7 +15957,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18203,7 +15965,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 483:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18211,7 +15973,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 484:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18219,7 +15981,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 485:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18227,7 +15989,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 486:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18238,7 +16000,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -18259,7 +16020,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -18267,8 +16028,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -18276,24 +16038,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRevokeSnapshotAccessResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18301,7 +16062,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18309,7 +16070,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18317,7 +16078,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18328,7 +16089,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -18349,7 +16109,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -18357,8 +16117,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -18366,24 +16127,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostRotateEncryptionKeyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18391,7 +16151,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18399,7 +16159,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18407,7 +16167,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18418,7 +16178,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -18439,7 +16198,7 @@ export class SDK {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -18447,8 +16206,9 @@ export class SDK {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -18456,24 +16216,23 @@ export class SDK {
       paramsSerializer: qpSerializer,
     };
     
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostUpdatePartnerStatusResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18481,7 +16240,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 480:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18489,7 +16248,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 481:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18497,7 +16256,7 @@ export class SDK {
             }
             break;
           case httpRes?.status == 482:
-            if (utils.MatchContentType(contentType, `text/xml`)) {
+            if (utils.matchContentType(contentType, `text/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -18508,7 +16267,6 @@ export class SDK {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

@@ -46,8 +46,8 @@ export class PostOauthLiveSessionTokenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postOauthLiveSessionToken200ApplicationJsonObject?: PostOauthLiveSessionToken200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postOauthLiveSessionToken200ApplicationJSONObject?: PostOauthLiveSessionToken200ApplicationJson;
 }

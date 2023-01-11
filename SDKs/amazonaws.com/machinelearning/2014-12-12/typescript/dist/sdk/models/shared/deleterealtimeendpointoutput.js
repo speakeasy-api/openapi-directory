@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RealtimeEndpointInfo } from "./realtimeendpointinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteRealtimeEndpointOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var realtimeendpointinfo_1 = require("./realtimeendpointinfo");
 // DeleteRealtimeEndpointOutput
 /**
  * <p>Represents the output of an <code>DeleteRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>. </p>
@@ -34,13 +37,13 @@ var DeleteRealtimeEndpointOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], DeleteRealtimeEndpointOutput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RealtimeEndpointInfo" }),
-        __metadata("design:type", RealtimeEndpointInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RealtimeEndpointInfo" }),
+        __metadata("design:type", realtimeendpointinfo_1.RealtimeEndpointInfo)
     ], DeleteRealtimeEndpointOutput.prototype, "realtimeEndpointInfo", void 0);
     return DeleteRealtimeEndpointOutput;
-}(SpeakeasyBase));
-export { DeleteRealtimeEndpointOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRealtimeEndpointOutput = DeleteRealtimeEndpointOutput;

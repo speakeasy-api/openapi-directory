@@ -17,7 +17,7 @@ export declare class ReplaceChannelModeratorsRequest extends SpeakeasyBase {
 export declare class ReplaceChannelModeratorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
     users?: shared.User[];
 }

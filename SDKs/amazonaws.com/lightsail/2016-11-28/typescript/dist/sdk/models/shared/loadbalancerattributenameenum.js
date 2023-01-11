@@ -1,6 +1,9 @@
-export var LoadBalancerAttributeNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerAttributeNameEnum = void 0;
+var LoadBalancerAttributeNameEnum;
 (function (LoadBalancerAttributeNameEnum) {
     LoadBalancerAttributeNameEnum["HealthCheckPath"] = "HealthCheckPath";
     LoadBalancerAttributeNameEnum["SessionStickinessEnabled"] = "SessionStickinessEnabled";
     LoadBalancerAttributeNameEnum["SessionStickinessLbCookieDurationSeconds"] = "SessionStickiness_LB_CookieDurationSeconds";
-})(LoadBalancerAttributeNameEnum || (LoadBalancerAttributeNameEnum = {}));
+})(LoadBalancerAttributeNameEnum = exports.LoadBalancerAttributeNameEnum || (exports.LoadBalancerAttributeNameEnum = {}));

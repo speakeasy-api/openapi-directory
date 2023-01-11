@@ -24,6 +24,6 @@ export declare class BooksCloudloadingDeleteBookRequest extends SpeakeasyBase {
 }
 export declare class BooksCloudloadingDeleteBookResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

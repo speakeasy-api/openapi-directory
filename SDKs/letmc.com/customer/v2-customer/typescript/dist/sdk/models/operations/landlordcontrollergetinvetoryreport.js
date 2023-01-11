@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordControllerGetInvetoryReportResponse = exports.LandlordControllerGetInvetoryReportRequest = exports.LandlordControllerGetInvetoryReportQueryParams = exports.LandlordControllerGetInvetoryReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LandlordControllerGetInvetoryReportPathParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvetoryReportPathParams, _super);
     function LandlordControllerGetInvetoryReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], LandlordControllerGetInvetoryReportPathParams.prototype, "shortName", void 0);
     return LandlordControllerGetInvetoryReportPathParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvetoryReportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvetoryReportPathParams = LandlordControllerGetInvetoryReportPathParams;
 var LandlordControllerGetInvetoryReportQueryParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvetoryReportQueryParams, _super);
     function LandlordControllerGetInvetoryReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenancyID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenancyID" }),
         __metadata("design:type", String)
-    ], LandlordControllerGetInvetoryReportQueryParams.prototype, "tenancyId", void 0);
+    ], LandlordControllerGetInvetoryReportQueryParams.prototype, "tenancyID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], LandlordControllerGetInvetoryReportQueryParams.prototype, "token", void 0);
     return LandlordControllerGetInvetoryReportQueryParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvetoryReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvetoryReportQueryParams = LandlordControllerGetInvetoryReportQueryParams;
 var LandlordControllerGetInvetoryReportRequest = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvetoryReportRequest, _super);
     function LandlordControllerGetInvetoryReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetInvetoryReportPathParams)
     ], LandlordControllerGetInvetoryReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetInvetoryReportQueryParams)
     ], LandlordControllerGetInvetoryReportRequest.prototype, "queryParams", void 0);
     return LandlordControllerGetInvetoryReportRequest;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvetoryReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvetoryReportRequest = LandlordControllerGetInvetoryReportRequest;
 var LandlordControllerGetInvetoryReportResponse = /** @class */ (function (_super) {
     __extends(LandlordControllerGetInvetoryReportResponse, _super);
     function LandlordControllerGetInvetoryReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LandlordControllerGetInvetoryReportResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LandlordControllerGetInvetoryReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], LandlordControllerGetInvetoryReportResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LandlordControllerGetInvetoryReportResponse.prototype, "statusCode", void 0);
     return LandlordControllerGetInvetoryReportResponse;
-}(SpeakeasyBase));
-export { LandlordControllerGetInvetoryReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetInvetoryReportResponse = LandlordControllerGetInvetoryReportResponse;

@@ -24,5 +24,5 @@ export declare class CodeScanningListAlertsInstancesResponse extends SpeakeasyBa
     statusCode: number;
     basicError?: shared.BasicError;
     codeScanningAlertInstances?: shared.CodeScanningAlertInstance[];
-    codeScanningListAlertsInstances503ApplicationJsonObject?: CodeScanningListAlertsInstances503ApplicationJson;
+    codeScanningListAlertsInstances503ApplicationJSONObject?: CodeScanningListAlertsInstances503ApplicationJson;
 }

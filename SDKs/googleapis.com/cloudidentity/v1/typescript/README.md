@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudidentityCustomersUserinvitationsCancelRequest, CloudidentityCustomersUserinvitationsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,24 +28,25 @@ const sdk = new SDK();
     
 const req: CloudidentityCustomersUserinvitationsCancelRequest = {
   pathParams: {
-    name: "qui",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "voluptas",
-    alt: "json",
-    callback: "alias",
-    fields: "beatae",
-    key: "eveniet",
-    oauthToken: "ab",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "deleniti",
-    uploadType: "adipisci",
-    uploadProtocol: "nam",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "aut": "esse",
-    "animi": "hic",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

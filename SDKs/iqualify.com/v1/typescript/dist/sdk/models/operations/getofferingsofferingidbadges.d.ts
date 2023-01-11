@@ -9,6 +9,6 @@ export declare class GetOfferingsOfferingIdBadgesRequest extends SpeakeasyBase {
 export declare class GetOfferingsOfferingIdBadgesResponse extends SpeakeasyBase {
     badge?: shared.Badge;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

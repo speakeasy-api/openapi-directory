@@ -25,5 +25,5 @@ export class GetNetworkSwitchAccessPolicyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchAccessPolicy200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchAccessPolicy200ApplicationJSONObject?: Record<string, any>;
 }

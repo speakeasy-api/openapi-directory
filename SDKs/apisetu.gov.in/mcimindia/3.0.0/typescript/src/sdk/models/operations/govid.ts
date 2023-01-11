@@ -11,7 +11,7 @@ export class GovidRequestBodyCertificateParameters extends SpeakeasyBase {
   fullName: string;
 
   @SpeakeasyMetadata({ data: "json, name=REGN_NO" })
-  regnNo: string;
+  regnNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=UID" })
   uid: string;
@@ -194,23 +194,23 @@ export class GovidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  govid400ApplicationJsonObject?: Govid400ApplicationJson;
+  govid400ApplicationJSONObject?: Govid400ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid401ApplicationJsonObject?: Govid401ApplicationJson;
+  govid401ApplicationJSONObject?: Govid401ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid404ApplicationJsonObject?: Govid404ApplicationJson;
+  govid404ApplicationJSONObject?: Govid404ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid500ApplicationJsonObject?: Govid500ApplicationJson;
+  govid500ApplicationJSONObject?: Govid500ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid502ApplicationJsonObject?: Govid502ApplicationJson;
+  govid502ApplicationJSONObject?: Govid502ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid503ApplicationJsonObject?: Govid503ApplicationJson;
+  govid503ApplicationJSONObject?: Govid503ApplicationJson;
 
   @SpeakeasyMetadata()
-  govid504ApplicationJsonObject?: Govid504ApplicationJson;
+  govid504ApplicationJSONObject?: Govid504ApplicationJson;
 }

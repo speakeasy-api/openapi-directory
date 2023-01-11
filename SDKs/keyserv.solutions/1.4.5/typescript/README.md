@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { KeysApiCurrentRequest, KeysApiCurrentResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: KeysApiCurrentRequest = {
   pathParams: {
-    serial: "reiciendis",
+    serial: "sit",
   },
 };
 
-sdk.sdk.keysApiCurrent(req).then((res: KeysApiCurrentResponse | AxiosError) => {
+sdk.keysApi.keysApiCurrent(req).then((res: KeysApiCurrentResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -42,12 +41,15 @@ sdk.sdk.keysApiCurrent(req).then((res: KeysApiCurrentResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### KeysApi
 
 * `keysApiCurrent`
 * `keysApiCustom`
 * `keysApiExpiry`
 * `keysApiFind`
+
+### ProductsApi
+
 * `productsApiCount`
 * `productsApiDeleteProduct`
 * `productsApiDeleteProduct2`
@@ -56,6 +58,9 @@ sdk.sdk.keysApiCurrent(req).then((res: KeysApiCurrentResponse | AxiosError) => {
 * `productsApiPatchProduct`
 * `productsApiPatchProduct2`
 * `productsApiSave`
+
+### SubscriptionsApi
+
 * `subscriptionsApiCount`
 * `subscriptionsApiDeleteSubscription`
 * `subscriptionsApiDeleteSubscription2`

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectSummary } from "./projectsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListProjectsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectsummary_1 = require("./projectsummary");
 // ListProjectsResult
 /**
  *  Result structure used for requests to list projects in AWS Mobile Hub.
@@ -34,13 +37,13 @@ var ListProjectsResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListProjectsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projects", elemType: ProjectSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projects", elemType: projectsummary_1.ProjectSummary }),
         __metadata("design:type", Array)
     ], ListProjectsResult.prototype, "projects", void 0);
     return ListProjectsResult;
-}(SpeakeasyBase));
-export { ListProjectsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListProjectsResult = ListProjectsResult;

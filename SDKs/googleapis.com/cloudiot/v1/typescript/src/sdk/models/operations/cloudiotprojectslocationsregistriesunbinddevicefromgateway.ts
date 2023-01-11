@@ -95,5 +95,5 @@ export class CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unbindDeviceFromGatewayResponse?: Map<string, any>;
+  unbindDeviceFromGatewayResponse?: Record<string, any>;
 }

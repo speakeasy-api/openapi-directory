@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LookupAttributeKeyEnum } from "./lookupattributekeyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LookupAttribute = void 0;
+var utils_1 = require("../../../internal/utils");
+var lookupattributekeyenum_1 = require("./lookupattributekeyenum");
 // LookupAttribute
 /**
  * Specifies an attribute and value that filter the events returned.
@@ -34,13 +37,13 @@ var LookupAttribute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeKey" }),
         __metadata("design:type", String)
     ], LookupAttribute.prototype, "attributeKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeValue" }),
         __metadata("design:type", String)
     ], LookupAttribute.prototype, "attributeValue", void 0);
     return LookupAttribute;
-}(SpeakeasyBase));
-export { LookupAttribute };
+}(utils_1.SpeakeasyBase));
+exports.LookupAttribute = LookupAttribute;

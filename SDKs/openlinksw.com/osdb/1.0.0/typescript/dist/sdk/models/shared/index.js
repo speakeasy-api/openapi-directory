@@ -1,14 +1,30 @@
-export * from "./actiondescription";
-export * from "./actionhelp";
-export * from "./actionhelpresponse";
-export * from "./describeactionresponse";
-export * from "./describeserviceresponse";
-export * from "./entrypoint";
-export * from "./entrypointparameter";
-export * from "./errormodel";
-export * from "./execbody";
-export * from "./listactionsresponse";
-export * from "./listservicesresponse";
-export * from "./loginresponse";
-export * from "./logoutresponse";
-export * from "./servicedescription";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./actiondescription"), exports);
+__exportStar(require("./actionhelp"), exports);
+__exportStar(require("./actionhelpresponse"), exports);
+__exportStar(require("./describeactionresponse"), exports);
+__exportStar(require("./describeserviceresponse"), exports);
+__exportStar(require("./entrypoint"), exports);
+__exportStar(require("./entrypointparameter"), exports);
+__exportStar(require("./errormodel"), exports);
+__exportStar(require("./execbody"), exports);
+__exportStar(require("./listactionsresponse"), exports);
+__exportStar(require("./listservicesresponse"), exports);
+__exportStar(require("./loginresponse"), exports);
+__exportStar(require("./logoutresponse"), exports);
+__exportStar(require("./servicedescription"), exports);

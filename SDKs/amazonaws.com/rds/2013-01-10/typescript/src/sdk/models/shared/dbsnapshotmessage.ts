@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbSnapshot } from "./dbsnapshot";
+import { DbSnapshotList } from "./dbsnapshotlist";
 
 
 
 export class DbSnapshotMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbSnapshot })
-  dbSnapshots?: DbSnapshot[];
+  @SpeakeasyMetadata({ elemType: DbSnapshotList })
+  dbSnapshots?: DbSnapshotList[];
 
   @SpeakeasyMetadata()
   marker?: string;

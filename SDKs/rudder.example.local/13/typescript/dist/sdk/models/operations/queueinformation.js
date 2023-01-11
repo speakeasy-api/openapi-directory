@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var QueueInformation200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueInformationResponse = exports.QueueInformation200ApplicationJson = exports.QueueInformation200ApplicationJsonResultEnum = exports.QueueInformation200ApplicationJsonData = exports.QueueInformation200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var QueueInformation200ApplicationJsonActionEnum;
 (function (QueueInformation200ApplicationJsonActionEnum) {
     QueueInformation200ApplicationJsonActionEnum["QueueInformation"] = "queueInformation";
-})(QueueInformation200ApplicationJsonActionEnum || (QueueInformation200ApplicationJsonActionEnum = {}));
+})(QueueInformation200ApplicationJsonActionEnum = exports.QueueInformation200ApplicationJsonActionEnum || (exports.QueueInformation200ApplicationJsonActionEnum = {}));
 // QueueInformation200ApplicationJsonData
 /**
  * Information about the service
@@ -37,58 +40,58 @@ var QueueInformation200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueMaxSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueMaxSize" }),
         __metadata("design:type", Number)
     ], QueueInformation200ApplicationJsonData.prototype, "queueMaxSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueSaturated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueSaturated" }),
         __metadata("design:type", Boolean)
     ], QueueInformation200ApplicationJsonData.prototype, "queueSaturated", void 0);
     return QueueInformation200ApplicationJsonData;
-}(SpeakeasyBase));
-export { QueueInformation200ApplicationJsonData };
-export var QueueInformation200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.QueueInformation200ApplicationJsonData = QueueInformation200ApplicationJsonData;
+var QueueInformation200ApplicationJsonResultEnum;
 (function (QueueInformation200ApplicationJsonResultEnum) {
     QueueInformation200ApplicationJsonResultEnum["Success"] = "success";
     QueueInformation200ApplicationJsonResultEnum["Error"] = "error";
-})(QueueInformation200ApplicationJsonResultEnum || (QueueInformation200ApplicationJsonResultEnum = {}));
+})(QueueInformation200ApplicationJsonResultEnum = exports.QueueInformation200ApplicationJsonResultEnum || (exports.QueueInformation200ApplicationJsonResultEnum = {}));
 var QueueInformation200ApplicationJson = /** @class */ (function (_super) {
     __extends(QueueInformation200ApplicationJson, _super);
     function QueueInformation200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], QueueInformation200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", QueueInformation200ApplicationJsonData)
     ], QueueInformation200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], QueueInformation200ApplicationJson.prototype, "result", void 0);
     return QueueInformation200ApplicationJson;
-}(SpeakeasyBase));
-export { QueueInformation200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.QueueInformation200ApplicationJson = QueueInformation200ApplicationJson;
 var QueueInformationResponse = /** @class */ (function (_super) {
     __extends(QueueInformationResponse, _super);
     function QueueInformationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QueueInformationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QueueInformationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QueueInformation200ApplicationJson)
-    ], QueueInformationResponse.prototype, "queueInformation200ApplicationJsonObject", void 0);
+    ], QueueInformationResponse.prototype, "queueInformation200ApplicationJSONObject", void 0);
     return QueueInformationResponse;
-}(SpeakeasyBase));
-export { QueueInformationResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueueInformationResponse = QueueInformationResponse;

@@ -14,7 +14,7 @@ export class CreateEventPathParams extends SpeakeasyBase {
 **/
 export class CreateEventRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=body" })
-  body?: Map<string, any>;
+  body?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=from" })
   from: string;
@@ -60,5 +60,5 @@ export class CreateEventResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createEvent201ApplicationJsonObject?: CreateEvent201ApplicationJson;
+  createEvent201ApplicationJSONObject?: CreateEvent201ApplicationJson;
 }

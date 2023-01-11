@@ -1,7 +1,10 @@
-export var ServiceUpdateSeverityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceUpdateSeverityEnum = void 0;
+var ServiceUpdateSeverityEnum;
 (function (ServiceUpdateSeverityEnum) {
     ServiceUpdateSeverityEnum["Critical"] = "critical";
     ServiceUpdateSeverityEnum["Important"] = "important";
     ServiceUpdateSeverityEnum["Medium"] = "medium";
     ServiceUpdateSeverityEnum["Low"] = "low";
-})(ServiceUpdateSeverityEnum || (ServiceUpdateSeverityEnum = {}));
+})(ServiceUpdateSeverityEnum = exports.ServiceUpdateSeverityEnum || (exports.ServiceUpdateSeverityEnum = {}));

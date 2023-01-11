@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkloadEnvironmentEnum } from "./workloadenvironmentenum";
-import { WorkloadImprovementStatusEnum } from "./workloadimprovementstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Workload = void 0;
+var utils_1 = require("../../../internal/utils");
+var workloadenvironmentenum_1 = require("./workloadenvironmentenum");
+var workloadimprovementstatusenum_1 = require("./workloadimprovementstatusenum");
 // Workload
 /**
  * A workload return object.
@@ -35,97 +38,97 @@ var Workload = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountIds" }),
         __metadata("design:type", Array)
     ], Workload.prototype, "accountIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArchitecturalDesign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArchitecturalDesign" }),
         __metadata("design:type", String)
     ], Workload.prototype, "architecturalDesign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegions" }),
         __metadata("design:type", Array)
     ], Workload.prototype, "awsRegions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Workload.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Environment" }),
         __metadata("design:type", String)
     ], Workload.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImprovementStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImprovementStatus" }),
         __metadata("design:type", String)
     ], Workload.prototype, "improvementStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Industry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Industry" }),
         __metadata("design:type", String)
     ], Workload.prototype, "industry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndustryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndustryType" }),
         __metadata("design:type", String)
     ], Workload.prototype, "industryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsReviewOwnerUpdateAcknowledged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsReviewOwnerUpdateAcknowledged" }),
         __metadata("design:type", Boolean)
     ], Workload.prototype, "isReviewOwnerUpdateAcknowledged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Lenses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Lenses" }),
         __metadata("design:type", Array)
     ], Workload.prototype, "lenses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NonAwsRegions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NonAwsRegions" }),
         __metadata("design:type", Array)
     ], Workload.prototype, "nonAwsRegions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notes" }),
         __metadata("design:type", String)
     ], Workload.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], Workload.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PillarPriorities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PillarPriorities" }),
         __metadata("design:type", Array)
     ], Workload.prototype, "pillarPriorities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReviewOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReviewOwner" }),
         __metadata("design:type", String)
     ], Workload.prototype, "reviewOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReviewRestrictionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReviewRestrictionDate" }),
         __metadata("design:type", Date)
     ], Workload.prototype, "reviewRestrictionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RiskCounts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RiskCounts" }),
+        __metadata("design:type", Object)
     ], Workload.prototype, "riskCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShareInvitationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShareInvitationId" }),
         __metadata("design:type", String)
     ], Workload.prototype, "shareInvitationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], Workload.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedAt" }),
         __metadata("design:type", Date)
     ], Workload.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadArn" }),
         __metadata("design:type", String)
     ], Workload.prototype, "workloadArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadId" }),
         __metadata("design:type", String)
     ], Workload.prototype, "workloadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadName" }),
         __metadata("design:type", String)
     ], Workload.prototype, "workloadName", void 0);
     return Workload;
-}(SpeakeasyBase));
-export { Workload };
+}(utils_1.SpeakeasyBase));
+exports.Workload = Workload;

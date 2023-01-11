@@ -20,7 +20,7 @@ export declare enum GetDataEndpointRequestBodyApiNameEnum {
 }
 export declare class GetDataEndpointRequestBody extends SpeakeasyBase {
     apiName: GetDataEndpointRequestBodyApiNameEnum;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetDataEndpointRequest extends SpeakeasyBase {

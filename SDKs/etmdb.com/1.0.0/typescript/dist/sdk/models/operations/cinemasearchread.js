@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CinemaSearchReadResponse = exports.CinemaSearchReadRequest = exports.CinemaSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CinemaSearchReadPathParams = /** @class */ (function (_super) {
     __extends(CinemaSearchReadPathParams, _super);
     function CinemaSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], CinemaSearchReadPathParams.prototype, "id", void 0);
     return CinemaSearchReadPathParams;
-}(SpeakeasyBase));
-export { CinemaSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSearchReadPathParams = CinemaSearchReadPathParams;
 var CinemaSearchReadRequest = /** @class */ (function (_super) {
     __extends(CinemaSearchReadRequest, _super);
     function CinemaSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CinemaSearchReadPathParams)
     ], CinemaSearchReadRequest.prototype, "pathParams", void 0);
     return CinemaSearchReadRequest;
-}(SpeakeasyBase));
-export { CinemaSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSearchReadRequest = CinemaSearchReadRequest;
 var CinemaSearchReadResponse = /** @class */ (function (_super) {
     __extends(CinemaSearchReadResponse, _super);
     function CinemaSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CinemaSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CinemaSearchReadResponse.prototype, "statusCode", void 0);
     return CinemaSearchReadResponse;
-}(SpeakeasyBase));
-export { CinemaSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CinemaSearchReadResponse = CinemaSearchReadResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImagePerformanceCountResponse = exports.GetImagePerformanceCountRequest = exports.GetImagePerformanceCountHeaders = exports.GetImagePerformanceCountQueryParams = exports.GetImagePerformanceCountPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetImagePerformanceCountPathParams = /** @class */ (function (_super) {
     __extends(GetImagePerformanceCountPathParams, _super);
     function GetImagePerformanceCountPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=iterationId" }),
         __metadata("design:type", String)
     ], GetImagePerformanceCountPathParams.prototype, "iterationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], GetImagePerformanceCountPathParams.prototype, "projectId", void 0);
     return GetImagePerformanceCountPathParams;
-}(SpeakeasyBase));
-export { GetImagePerformanceCountPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformanceCountPathParams = GetImagePerformanceCountPathParams;
 var GetImagePerformanceCountQueryParams = /** @class */ (function (_super) {
     __extends(GetImagePerformanceCountQueryParams, _super);
     function GetImagePerformanceCountQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tagIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=tagIds" }),
         __metadata("design:type", Array)
     ], GetImagePerformanceCountQueryParams.prototype, "tagIds", void 0);
     return GetImagePerformanceCountQueryParams;
-}(SpeakeasyBase));
-export { GetImagePerformanceCountQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformanceCountQueryParams = GetImagePerformanceCountQueryParams;
 var GetImagePerformanceCountHeaders = /** @class */ (function (_super) {
     __extends(GetImagePerformanceCountHeaders, _super);
     function GetImagePerformanceCountHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], GetImagePerformanceCountHeaders.prototype, "trainingKey", void 0);
     return GetImagePerformanceCountHeaders;
-}(SpeakeasyBase));
-export { GetImagePerformanceCountHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformanceCountHeaders = GetImagePerformanceCountHeaders;
 var GetImagePerformanceCountRequest = /** @class */ (function (_super) {
     __extends(GetImagePerformanceCountRequest, _super);
     function GetImagePerformanceCountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformanceCountPathParams)
     ], GetImagePerformanceCountRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformanceCountQueryParams)
     ], GetImagePerformanceCountRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformanceCountHeaders)
     ], GetImagePerformanceCountRequest.prototype, "headers", void 0);
     return GetImagePerformanceCountRequest;
-}(SpeakeasyBase));
-export { GetImagePerformanceCountRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformanceCountRequest = GetImagePerformanceCountRequest;
 var GetImagePerformanceCountResponse = /** @class */ (function (_super) {
     __extends(GetImagePerformanceCountResponse, _super);
     function GetImagePerformanceCountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetImagePerformanceCountResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImagePerformanceCountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetImagePerformanceCountResponse.prototype, "getImagePerformanceCount200ApplicationJsonInt32Integer", void 0);
+    ], GetImagePerformanceCountResponse.prototype, "getImagePerformanceCount200ApplicationJSONInt32Integer", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetImagePerformanceCountResponse.prototype, "getImagePerformanceCount200TextJsonInt32Integer", void 0);
+    ], GetImagePerformanceCountResponse.prototype, "getImagePerformanceCount200TextJSONInt32Integer", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImagePerformanceCountResponse.prototype, "statusCode", void 0);
     return GetImagePerformanceCountResponse;
-}(SpeakeasyBase));
-export { GetImagePerformanceCountResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformanceCountResponse = GetImagePerformanceCountResponse;

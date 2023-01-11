@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioAnalysisReturnsAverageResponse = exports.PostPortfolioAnalysisReturnsAverageRequest = exports.PostPortfolioAnalysisReturnsAverage200ApplicationJson = exports.PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios = exports.PostPortfolioAnalysisReturnsAverageRequestBody = exports.PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios, _super);
     function PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioValues" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios.prototype, "portfolioValues", void 0);
     return PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios = PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios;
 var PostPortfolioAnalysisReturnsAverageRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverageRequestBody, _super);
     function PostPortfolioAnalysisReturnsAverageRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisReturnsAverageRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisReturnsAverageRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverageRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverageRequestBody = PostPortfolioAnalysisReturnsAverageRequestBody;
 var PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios, _super);
     function PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioAverageReturn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioAverageReturn" }),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios.prototype, "portfolioAverageReturn", void 0);
     return PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios = PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios;
 var PostPortfolioAnalysisReturnsAverage200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverage200ApplicationJson, _super);
     function PostPortfolioAnalysisReturnsAverage200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisReturnsAverage200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisReturnsAverage200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisReturnsAverage200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverage200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverage200ApplicationJson = PostPortfolioAnalysisReturnsAverage200ApplicationJson;
 var PostPortfolioAnalysisReturnsAverageRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverageRequest, _super);
     function PostPortfolioAnalysisReturnsAverageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioAnalysisReturnsAverageRequestBody)
     ], PostPortfolioAnalysisReturnsAverageRequest.prototype, "request", void 0);
     return PostPortfolioAnalysisReturnsAverageRequest;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverageRequest = PostPortfolioAnalysisReturnsAverageRequest;
 var PostPortfolioAnalysisReturnsAverageResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisReturnsAverageResponse, _super);
     function PostPortfolioAnalysisReturnsAverageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioAnalysisReturnsAverageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioAnalysisReturnsAverage200ApplicationJson)
-    ], PostPortfolioAnalysisReturnsAverageResponse.prototype, "postPortfolioAnalysisReturnsAverage200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisReturnsAverageResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioAnalysisReturnsAverage200ApplicationJson)
+    ], PostPortfolioAnalysisReturnsAverageResponse.prototype, "postPortfolioAnalysisReturnsAverage200ApplicationJSONObject", void 0);
     return PostPortfolioAnalysisReturnsAverageResponse;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisReturnsAverageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisReturnsAverageResponse = PostPortfolioAnalysisReturnsAverageResponse;

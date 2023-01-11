@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ServiceConfiguration } from "./serviceconfiguration";
 export declare class DescribeVpcEndpointServiceConfigurationsResult extends SpeakeasyBase {
-    nextToken?: string;
-    serviceConfigurations?: ServiceConfiguration[];
+    nextToken?: Record<string, any>;
+    serviceConfigurations?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetUserByOrcidFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetUserByOrcidResponse = exports.GetGetUserByOrcidRequest = exports.GetGetUserByOrcidQueryParams = exports.GetGetUserByOrcidFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetUserByOrcidFormatEnum;
 (function (GetGetUserByOrcidFormatEnum) {
     GetGetUserByOrcidFormatEnum["Json"] = "json";
     GetGetUserByOrcidFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetGetUserByOrcidFormatEnum;
     GetGetUserByOrcidFormatEnum["Dump"] = "dump";
     GetGetUserByOrcidFormatEnum["Jpg"] = "jpg";
     GetGetUserByOrcidFormatEnum["Pdf"] = "pdf";
-})(GetGetUserByOrcidFormatEnum || (GetGetUserByOrcidFormatEnum = {}));
+})(GetGetUserByOrcidFormatEnum = exports.GetGetUserByOrcidFormatEnum || (exports.GetGetUserByOrcidFormatEnum = {}));
 var GetGetUserByOrcidQueryParams = /** @class */ (function (_super) {
     __extends(GetGetUserByOrcidQueryParams, _super);
     function GetGetUserByOrcidQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetGetUserByOrcidQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orcid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orcid" }),
         __metadata("design:type", String)
     ], GetGetUserByOrcidQueryParams.prototype, "orcid", void 0);
     return GetGetUserByOrcidQueryParams;
-}(SpeakeasyBase));
-export { GetGetUserByOrcidQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUserByOrcidQueryParams = GetGetUserByOrcidQueryParams;
 var GetGetUserByOrcidRequest = /** @class */ (function (_super) {
     __extends(GetGetUserByOrcidRequest, _super);
     function GetGetUserByOrcidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetUserByOrcidQueryParams)
     ], GetGetUserByOrcidRequest.prototype, "queryParams", void 0);
     return GetGetUserByOrcidRequest;
-}(SpeakeasyBase));
-export { GetGetUserByOrcidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUserByOrcidRequest = GetGetUserByOrcidRequest;
 var GetGetUserByOrcidResponse = /** @class */ (function (_super) {
     __extends(GetGetUserByOrcidResponse, _super);
     function GetGetUserByOrcidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetUserByOrcidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetUserByOrcidResponse.prototype, "statusCode", void 0);
     return GetGetUserByOrcidResponse;
-}(SpeakeasyBase));
-export { GetGetUserByOrcidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUserByOrcidResponse = GetGetUserByOrcidResponse;

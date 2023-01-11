@@ -194,23 +194,23 @@ export class CfmstResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cfmst400ApplicationJsonObject?: Cfmst400ApplicationJson;
+  cfmst400ApplicationJSONObject?: Cfmst400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst401ApplicationJsonObject?: Cfmst401ApplicationJson;
+  cfmst401ApplicationJSONObject?: Cfmst401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst404ApplicationJsonObject?: Cfmst404ApplicationJson;
+  cfmst404ApplicationJSONObject?: Cfmst404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst500ApplicationJsonObject?: Cfmst500ApplicationJson;
+  cfmst500ApplicationJSONObject?: Cfmst500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst502ApplicationJsonObject?: Cfmst502ApplicationJson;
+  cfmst502ApplicationJSONObject?: Cfmst502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst503ApplicationJsonObject?: Cfmst503ApplicationJson;
+  cfmst503ApplicationJSONObject?: Cfmst503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfmst504ApplicationJsonObject?: Cfmst504ApplicationJson;
+  cfmst504ApplicationJSONObject?: Cfmst504ApplicationJson;
 }

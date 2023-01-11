@@ -38,11 +38,11 @@ export class GetEventTeamsStatusesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: shared.TeamEventStatus })
-  getEventTeamsStatuses200ApplicationJsonObject?: Map<string, shared.TeamEventStatus>;
+  getEventTeamsStatuses200ApplicationJSONObject?: Record<string, shared.TeamEventStatus>;
 }

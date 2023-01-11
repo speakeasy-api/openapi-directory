@@ -16,7 +16,7 @@ export class Layer extends SpeakeasyBase {
   arn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=AutoAssignElasticIps" })
   autoAssignElasticIps?: boolean;

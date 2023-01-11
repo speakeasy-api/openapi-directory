@@ -29,7 +29,7 @@ export class PatchOfferingsOfferingIdChannelsChannelIdResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

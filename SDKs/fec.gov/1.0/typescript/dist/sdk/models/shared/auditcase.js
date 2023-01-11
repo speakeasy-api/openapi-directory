@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuditCaseCategoryRelation } from "./auditcasecategoryrelation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditCase = void 0;
+var utils_1 = require("../../../internal/utils");
+var auditcasecategoryrelation_1 = require("./auditcasecategoryrelation");
 var AuditCase = /** @class */ (function (_super) {
     __extends(AuditCase, _super);
     function AuditCase() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audit_case_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audit_case_id" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "auditCaseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audit_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audit_id" }),
         __metadata("design:type", Number)
     ], AuditCase.prototype, "auditId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_name" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "candidateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_description" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "committeeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_designation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_designation" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "committeeDesignation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_id" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_name" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "committeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_type" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "committeeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycle" }),
         __metadata("design:type", Number)
     ], AuditCase.prototype, "cycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=far_release_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=far_release_date" }),
         __metadata("design:type", Date)
     ], AuditCase.prototype, "farReleaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_to_report" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_to_report" }),
         __metadata("design:type", String)
     ], AuditCase.prototype, "linkToReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_category_list", elemType: AuditCaseCategoryRelation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_category_list", elemType: auditcasecategoryrelation_1.AuditCaseCategoryRelation }),
         __metadata("design:type", Array)
     ], AuditCase.prototype, "primaryCategoryList", void 0);
     return AuditCase;
-}(SpeakeasyBase));
-export { AuditCase };
+}(utils_1.SpeakeasyBase));
+exports.AuditCase = AuditCase;

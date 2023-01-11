@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RealtimeLogConfig } from "./realtimelogconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeLogConfigs = void 0;
+var utils_1 = require("../../../internal/utils");
+var realtimelogconfig_1 = require("./realtimelogconfig");
 // RealtimeLogConfigs
 /**
  * A list of real-time log configurations.
@@ -34,25 +37,25 @@ var RealtimeLogConfigs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], RealtimeLogConfigs.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: RealtimeLogConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: realtimelogconfig_1.RealtimeLogConfig }),
         __metadata("design:type", Array)
     ], RealtimeLogConfigs.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RealtimeLogConfigs.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RealtimeLogConfigs.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RealtimeLogConfigs.prototype, "nextMarker", void 0);
     return RealtimeLogConfigs;
-}(SpeakeasyBase));
-export { RealtimeLogConfigs };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeLogConfigs = RealtimeLogConfigs;

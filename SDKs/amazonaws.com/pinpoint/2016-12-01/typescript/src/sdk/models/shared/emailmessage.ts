@@ -28,5 +28,5 @@ export class EmailMessage extends SpeakeasyBase {
   simpleEmail?: SimpleEmail;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 }

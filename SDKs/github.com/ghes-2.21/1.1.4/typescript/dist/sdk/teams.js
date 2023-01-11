@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Teams = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Teams = /** @class */ (function () {
     function Teams(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -43,10 +68,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddMemberLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "put" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -56,7 +81,7 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -66,8 +91,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateMembershipForUserInOrg - Add or update team membership for a user
@@ -92,10 +116,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateMembershipForUserInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -104,13 +128,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -118,7 +137,7 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamMembership = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -128,8 +147,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateMembershipForUserLegacy - Add or update team membership for a user (Legacy)
@@ -154,10 +172,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateMembershipForUserLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -166,13 +184,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -180,14 +193,14 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamMembership = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -195,8 +208,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateProjectPermissionsInOrg - Add or update team project permissions
@@ -213,10 +225,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateProjectPermissionsInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -225,13 +237,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -241,14 +248,13 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateProjectPermissionsLegacy - Add or update team project permissions (Legacy)
@@ -265,10 +271,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -277,13 +283,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -293,29 +294,28 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateRepoPermissionsInOrg - Add or update team repository permissions
@@ -334,10 +334,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateRepoPermissionsInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -346,13 +346,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -363,8 +358,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsAddOrUpdateRepoPermissionsLegacy - Add or update team repository permissions (Legacy)
@@ -383,10 +377,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -395,13 +389,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -411,19 +400,18 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCheckPermissionsForProjectInOrg - Check team permissions for a project
@@ -439,10 +427,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCheckPermissionsForProjectInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -450,7 +438,7 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamProject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -458,8 +446,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCheckPermissionsForProjectLegacy - Check team permissions for a project (Legacy)
@@ -475,10 +462,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCheckPermissionsForProjectLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -486,21 +473,20 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamProject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsCheckPermissionsForProjectLegacy415ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCheckPermissionsForRepoInOrg - Check team permissions for a repository
@@ -520,10 +506,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCheckPermissionsForRepoInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -531,7 +517,7 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamRepository = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -541,8 +527,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCheckPermissionsForRepoLegacy - Check team permissions for a repository (Legacy)
@@ -560,10 +545,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCheckPermissionsForRepoLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -571,7 +556,7 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamRepository = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -581,8 +566,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCreate - Create a team
@@ -599,10 +583,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCreateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -611,13 +595,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -625,24 +604,23 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCreateDiscussionCommentInOrg - Create a discussion comment
@@ -661,10 +639,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCreateDiscussionCommentInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -673,13 +651,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -687,14 +660,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCreateDiscussionCommentLegacy - Create a discussion comment (Legacy)
@@ -713,10 +685,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCreateDiscussionCommentLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -725,13 +697,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -739,14 +706,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCreateDiscussionInOrg - Create a discussion
@@ -765,10 +731,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCreateDiscussionInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -777,13 +743,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -791,14 +752,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsCreateDiscussionLegacy - Create a discussion (Legacy)
@@ -817,10 +777,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsCreateDiscussionLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -829,13 +789,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -843,14 +798,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteDiscussionCommentInOrg - Delete a discussion comment
@@ -866,10 +820,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteDiscussionCommentInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -880,8 +834,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteDiscussionCommentLegacy - Delete a discussion comment (Legacy)
@@ -897,10 +850,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteDiscussionCommentLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -911,8 +864,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteDiscussionInOrg - Delete a discussion
@@ -928,10 +880,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteDiscussionInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -942,8 +894,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteDiscussionLegacy - Delete a discussion (Legacy)
@@ -959,10 +910,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteDiscussionLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -973,8 +924,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteInOrg - Delete a team
@@ -992,10 +942,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1006,8 +956,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsDeleteLegacy - Delete a team (Legacy)
@@ -1025,10 +974,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsDeleteLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1038,19 +987,18 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetByName - Get a team by name
@@ -1066,10 +1014,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetByNameRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1077,19 +1025,18 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetDiscussionCommentInOrg - Get a discussion comment
@@ -1105,10 +1052,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetDiscussionCommentInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1116,14 +1063,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetDiscussionCommentLegacy - Get a discussion comment (Legacy)
@@ -1139,10 +1085,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetDiscussionCommentLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1150,14 +1096,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetDiscussionInOrg - Get a discussion
@@ -1173,10 +1118,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetDiscussionInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1184,14 +1129,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetDiscussionLegacy - Get a discussion (Legacy)
@@ -1207,10 +1151,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetDiscussionLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1218,14 +1162,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetLegacy - Get a team (Legacy)
@@ -1239,10 +1182,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1250,19 +1193,18 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetMemberLegacy - Get team member (Legacy)
@@ -1280,10 +1222,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetMemberLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1296,8 +1238,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetMembershipForUserInOrg - Get team membership for a user
@@ -1320,10 +1261,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetMembershipForUserInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1331,7 +1272,7 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamMembership = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -1339,8 +1280,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsGetMembershipForUserLegacy - Get team membership for a user (Legacy)
@@ -1363,10 +1303,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsGetMembershipForUserLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1374,19 +1314,18 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamMembership = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsList - List teams
@@ -1400,32 +1339,31 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teams = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListChildInOrg - List child teams
@@ -1441,27 +1379,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListChildInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/teams", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/teams", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teams = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListChildLegacy - List child teams (Legacy)
@@ -1475,42 +1412,41 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListChildLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/teams", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/teams", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teams = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListDiscussionCommentsInOrg - List discussion comments
@@ -1526,27 +1462,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListDiscussionCommentsInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComments = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListDiscussionCommentsLegacy - List discussion comments (Legacy)
@@ -1562,27 +1497,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListDiscussionCommentsLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComments = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListDiscussionsInOrg - List discussions
@@ -1598,27 +1532,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListDiscussionsInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussions = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListDiscussionsLegacy - List discussions (Legacy)
@@ -1634,27 +1567,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListDiscussionsLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussions = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListForAuthenticatedUser - List teams for the authenticated user
@@ -1670,37 +1602,36 @@ var Teams = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/user/teams";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFulls = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 304:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListMembersInOrg - List team members
@@ -1716,27 +1647,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListMembersInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/members", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/members", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.simpleUsers = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListMembersLegacy - List team members (Legacy)
@@ -1752,32 +1682,31 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListMembersLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/members", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/members", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.simpleUsers = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListProjectsInOrg - List team projects
@@ -1793,27 +1722,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListProjectsInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamProjects = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListProjectsLegacy - List team projects (Legacy)
@@ -1829,37 +1757,36 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListProjectsLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/projects", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/projects", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamProjects = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsListProjectsLegacy415ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsListProjectsLegacy415ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListReposInOrg - List team repositories
@@ -1875,27 +1802,26 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListReposInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.minimalRepositories = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsListReposLegacy - List team repositories (Legacy)
@@ -1909,32 +1835,31 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsListReposLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/repos", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/repos", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.minimalRepositories = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveMemberLegacy - Remove team member (Legacy)
@@ -1956,10 +1881,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveMemberLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1972,8 +1897,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveMembershipForUserInOrg - Remove team membership for a user
@@ -1993,10 +1917,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveMembershipForUserInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2009,8 +1933,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveMembershipForUserLegacy - Remove team membership for a user (Legacy)
@@ -2030,10 +1953,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveMembershipForUserLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2046,8 +1969,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveProjectInOrg - Remove a project from a team
@@ -2063,10 +1985,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveProjectInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2077,8 +1999,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveProjectLegacy - Remove a project from a team (Legacy)
@@ -2094,10 +2015,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveProjectLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2107,24 +2028,23 @@ var Teams = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.teamsRemoveProjectLegacy415ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.teamsRemoveProjectLegacy415ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveRepoInOrg - Remove a repository from a team
@@ -2140,10 +2060,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveRepoInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2154,8 +2074,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsRemoveRepoLegacy - Remove a repository from a team (Legacy)
@@ -2171,10 +2090,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsRemoveRepoLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "delete" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2185,8 +2104,7 @@ var Teams = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateDiscussionCommentInOrg - Update a discussion comment
@@ -2203,10 +2121,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateDiscussionCommentInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2215,13 +2133,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2229,14 +2142,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateDiscussionCommentLegacy - Update a discussion comment (Legacy)
@@ -2253,10 +2165,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateDiscussionCommentLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2265,13 +2177,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2279,14 +2186,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussionComment = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateDiscussionInOrg - Update a discussion
@@ -2303,10 +2209,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateDiscussionInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2315,13 +2221,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2329,14 +2230,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateDiscussionLegacy - Update a discussion (Legacy)
@@ -2353,10 +2253,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateDiscussionLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2365,13 +2265,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2379,14 +2274,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamDiscussion = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateInOrg - Update a team
@@ -2403,10 +2297,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateInOrgRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2415,13 +2309,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2429,14 +2318,13 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * teamsUpdateLegacy - Update a team (Legacy)
@@ -2455,10 +2343,10 @@ var Teams = /** @class */ (function () {
             req = new operations.TeamsUpdateLegacyRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -2467,13 +2355,8 @@ var Teams = /** @class */ (function () {
         }
         var client = this._defaultClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "patch", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2481,35 +2364,34 @@ var Teams = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.teamFull = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.basicError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 422:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.validationError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Teams;
 }());
-export { Teams };
+exports.Teams = Teams;

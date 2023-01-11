@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateTrafficMirrorFilterRuleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateTrafficMirrorFilterRuleResponse = exports.GetCreateTrafficMirrorFilterRuleRequest = exports.GetCreateTrafficMirrorFilterRuleHeaders = exports.GetCreateTrafficMirrorFilterRuleQueryParams = exports.GetCreateTrafficMirrorFilterRuleVersionEnum = exports.GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum = exports.GetCreateTrafficMirrorFilterRuleSourcePortRange = exports.GetCreateTrafficMirrorFilterRuleRuleActionEnum = exports.GetCreateTrafficMirrorFilterRuleDestinationPortRange = exports.GetCreateTrafficMirrorFilterRuleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateTrafficMirrorFilterRuleActionEnum;
 (function (GetCreateTrafficMirrorFilterRuleActionEnum) {
     GetCreateTrafficMirrorFilterRuleActionEnum["CreateTrafficMirrorFilterRule"] = "CreateTrafficMirrorFilterRule";
-})(GetCreateTrafficMirrorFilterRuleActionEnum || (GetCreateTrafficMirrorFilterRuleActionEnum = {}));
+})(GetCreateTrafficMirrorFilterRuleActionEnum = exports.GetCreateTrafficMirrorFilterRuleActionEnum || (exports.GetCreateTrafficMirrorFilterRuleActionEnum = {}));
 // GetCreateTrafficMirrorFilterRuleDestinationPortRange
 /**
  * Information about the Traffic Mirror filter rule port range.
@@ -37,21 +40,21 @@ var GetCreateTrafficMirrorFilterRuleDestinationPortRange = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=FromPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=FromPort" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleDestinationPortRange.prototype, "fromPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=ToPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=ToPort" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleDestinationPortRange.prototype, "toPort", void 0);
     return GetCreateTrafficMirrorFilterRuleDestinationPortRange;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleDestinationPortRange };
-export var GetCreateTrafficMirrorFilterRuleRuleActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleDestinationPortRange = GetCreateTrafficMirrorFilterRuleDestinationPortRange;
+var GetCreateTrafficMirrorFilterRuleRuleActionEnum;
 (function (GetCreateTrafficMirrorFilterRuleRuleActionEnum) {
     GetCreateTrafficMirrorFilterRuleRuleActionEnum["Accept"] = "accept";
     GetCreateTrafficMirrorFilterRuleRuleActionEnum["Reject"] = "reject";
-})(GetCreateTrafficMirrorFilterRuleRuleActionEnum || (GetCreateTrafficMirrorFilterRuleRuleActionEnum = {}));
+})(GetCreateTrafficMirrorFilterRuleRuleActionEnum = exports.GetCreateTrafficMirrorFilterRuleRuleActionEnum || (exports.GetCreateTrafficMirrorFilterRuleRuleActionEnum = {}));
 // GetCreateTrafficMirrorFilterRuleSourcePortRange
 /**
  * Information about the Traffic Mirror filter rule port range.
@@ -62,158 +65,158 @@ var GetCreateTrafficMirrorFilterRuleSourcePortRange = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=FromPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=FromPort" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleSourcePortRange.prototype, "fromPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=ToPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=ToPort" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleSourcePortRange.prototype, "toPort", void 0);
     return GetCreateTrafficMirrorFilterRuleSourcePortRange;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleSourcePortRange };
-export var GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleSourcePortRange = GetCreateTrafficMirrorFilterRuleSourcePortRange;
+var GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum;
 (function (GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum) {
     GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum["Ingress"] = "ingress";
     GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum["Egress"] = "egress";
-})(GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum || (GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum = {}));
-export var GetCreateTrafficMirrorFilterRuleVersionEnum;
+})(GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum = exports.GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum || (exports.GetCreateTrafficMirrorFilterRuleTrafficDirectionEnum = {}));
+var GetCreateTrafficMirrorFilterRuleVersionEnum;
 (function (GetCreateTrafficMirrorFilterRuleVersionEnum) {
     GetCreateTrafficMirrorFilterRuleVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCreateTrafficMirrorFilterRuleVersionEnum || (GetCreateTrafficMirrorFilterRuleVersionEnum = {}));
+})(GetCreateTrafficMirrorFilterRuleVersionEnum = exports.GetCreateTrafficMirrorFilterRuleVersionEnum || (exports.GetCreateTrafficMirrorFilterRuleVersionEnum = {}));
 var GetCreateTrafficMirrorFilterRuleQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateTrafficMirrorFilterRuleQueryParams, _super);
     function GetCreateTrafficMirrorFilterRuleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Description" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "destinationCidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DestinationPortRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DestinationPortRange" }),
         __metadata("design:type", GetCreateTrafficMirrorFilterRuleDestinationPortRange)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "destinationPortRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Protocol" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RuleAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RuleAction" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "ruleAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RuleNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RuleNumber" }),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "ruleNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceCidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SourceCidrBlock" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "sourceCidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourcePortRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SourcePortRange" }),
         __metadata("design:type", GetCreateTrafficMirrorFilterRuleSourcePortRange)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "sourcePortRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TrafficDirection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TrafficDirection" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "trafficDirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TrafficMirrorFilterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TrafficMirrorFilterId" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "trafficMirrorFilterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleQueryParams.prototype, "version", void 0);
     return GetCreateTrafficMirrorFilterRuleQueryParams;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleQueryParams = GetCreateTrafficMirrorFilterRuleQueryParams;
 var GetCreateTrafficMirrorFilterRuleHeaders = /** @class */ (function (_super) {
     __extends(GetCreateTrafficMirrorFilterRuleHeaders, _super);
     function GetCreateTrafficMirrorFilterRuleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateTrafficMirrorFilterRuleHeaders;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleHeaders = GetCreateTrafficMirrorFilterRuleHeaders;
 var GetCreateTrafficMirrorFilterRuleRequest = /** @class */ (function (_super) {
     __extends(GetCreateTrafficMirrorFilterRuleRequest, _super);
     function GetCreateTrafficMirrorFilterRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateTrafficMirrorFilterRuleQueryParams)
     ], GetCreateTrafficMirrorFilterRuleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateTrafficMirrorFilterRuleHeaders)
     ], GetCreateTrafficMirrorFilterRuleRequest.prototype, "headers", void 0);
     return GetCreateTrafficMirrorFilterRuleRequest;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleRequest = GetCreateTrafficMirrorFilterRuleRequest;
 var GetCreateTrafficMirrorFilterRuleResponse = /** @class */ (function (_super) {
     __extends(GetCreateTrafficMirrorFilterRuleResponse, _super);
     function GetCreateTrafficMirrorFilterRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateTrafficMirrorFilterRuleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateTrafficMirrorFilterRuleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateTrafficMirrorFilterRuleResponse.prototype, "statusCode", void 0);
     return GetCreateTrafficMirrorFilterRuleResponse;
-}(SpeakeasyBase));
-export { GetCreateTrafficMirrorFilterRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateTrafficMirrorFilterRuleResponse = GetCreateTrafficMirrorFilterRuleResponse;

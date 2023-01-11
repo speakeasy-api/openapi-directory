@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ServicePrincipalsListPathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ServicePrincipalsListQueryParams extends SpeakeasyBase {
     dollarFilter?: string;

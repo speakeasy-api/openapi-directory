@@ -194,23 +194,23 @@ export class SpcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  spcer400ApplicationJsonObject?: Spcer400ApplicationJson;
+  spcer400ApplicationJSONObject?: Spcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer401ApplicationJsonObject?: Spcer401ApplicationJson;
+  spcer401ApplicationJSONObject?: Spcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer404ApplicationJsonObject?: Spcer404ApplicationJson;
+  spcer404ApplicationJSONObject?: Spcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer500ApplicationJsonObject?: Spcer500ApplicationJson;
+  spcer500ApplicationJSONObject?: Spcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer502ApplicationJsonObject?: Spcer502ApplicationJson;
+  spcer502ApplicationJSONObject?: Spcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer503ApplicationJsonObject?: Spcer503ApplicationJson;
+  spcer503ApplicationJSONObject?: Spcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  spcer504ApplicationJsonObject?: Spcer504ApplicationJson;
+  spcer504ApplicationJSONObject?: Spcer504ApplicationJson;
 }

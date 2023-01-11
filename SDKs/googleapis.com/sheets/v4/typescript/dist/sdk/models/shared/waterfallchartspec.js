@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LineStyle } from "./linestyle";
-import { WaterfallChartDomain } from "./waterfallchartdomain";
-import { WaterfallChartSeries } from "./waterfallchartseries";
-import { DataLabel } from "./datalabel";
-export var WaterfallChartSpecStackedTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaterfallChartSpec = exports.WaterfallChartSpecStackedTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var linestyle_1 = require("./linestyle");
+var waterfallchartdomain_1 = require("./waterfallchartdomain");
+var waterfallchartseries_1 = require("./waterfallchartseries");
+var datalabel_1 = require("./datalabel");
+var WaterfallChartSpecStackedTypeEnum;
 (function (WaterfallChartSpecStackedTypeEnum) {
     WaterfallChartSpecStackedTypeEnum["WaterfallStackedTypeUnspecified"] = "WATERFALL_STACKED_TYPE_UNSPECIFIED";
     WaterfallChartSpecStackedTypeEnum["Stacked"] = "STACKED";
     WaterfallChartSpecStackedTypeEnum["Sequential"] = "SEQUENTIAL";
-})(WaterfallChartSpecStackedTypeEnum || (WaterfallChartSpecStackedTypeEnum = {}));
+})(WaterfallChartSpecStackedTypeEnum = exports.WaterfallChartSpecStackedTypeEnum || (exports.WaterfallChartSpecStackedTypeEnum = {}));
 // WaterfallChartSpec
 /**
  * A waterfall chart.
@@ -43,33 +46,33 @@ var WaterfallChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorLineStyle" }),
-        __metadata("design:type", LineStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorLineStyle" }),
+        __metadata("design:type", linestyle_1.LineStyle)
     ], WaterfallChartSpec.prototype, "connectorLineStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", WaterfallChartDomain)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", waterfallchartdomain_1.WaterfallChartDomain)
     ], WaterfallChartSpec.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstValueIsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstValueIsTotal" }),
         __metadata("design:type", Boolean)
     ], WaterfallChartSpec.prototype, "firstValueIsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideConnectorLines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideConnectorLines" }),
         __metadata("design:type", Boolean)
     ], WaterfallChartSpec.prototype, "hideConnectorLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series", elemType: WaterfallChartSeries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series", elemType: waterfallchartseries_1.WaterfallChartSeries }),
         __metadata("design:type", Array)
     ], WaterfallChartSpec.prototype, "series", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stackedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stackedType" }),
         __metadata("design:type", String)
     ], WaterfallChartSpec.prototype, "stackedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalDataLabel" }),
-        __metadata("design:type", DataLabel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalDataLabel" }),
+        __metadata("design:type", datalabel_1.DataLabel)
     ], WaterfallChartSpec.prototype, "totalDataLabel", void 0);
     return WaterfallChartSpec;
-}(SpeakeasyBase));
-export { WaterfallChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.WaterfallChartSpec = WaterfallChartSpec;

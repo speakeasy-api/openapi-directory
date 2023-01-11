@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class LambdaOutputUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARNUpdate" })
-  resourceArnUpdate?: string;
+  resourceARNUpdate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARNUpdate" })
-  roleArnUpdate?: string;
+  roleARNUpdate?: string;
 }

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AccountWithRestoreAccess } from "./accountwithrestoreaccess";
-import { Tag } from "./tag";
+import { AccountsWithRestoreAccessList } from "./accountswithrestoreaccesslist";
+import { TagList } from "./taglist";
 /**
  * Describes a snapshot.
 **/
 export declare class Snapshot extends SpeakeasyBase {
-    accountsWithRestoreAccess?: AccountWithRestoreAccess[];
+    accountsWithRestoreAccess?: AccountsWithRestoreAccessList[];
     actualIncrementalBackupSizeInMegaBytes?: number;
     availabilityZone?: string;
     backupProgressInMegaBytes?: number;
@@ -16,7 +16,7 @@ export declare class Snapshot extends SpeakeasyBase {
     dbName?: string;
     elapsedTimeInSeconds?: number;
     encrypted?: boolean;
-    encryptedWithHsm?: boolean;
+    encryptedWithHSM?: boolean;
     engineFullVersion?: string;
     enhancedVpcRouting?: boolean;
     estimatedSecondsToCompletion?: number;
@@ -29,14 +29,14 @@ export declare class Snapshot extends SpeakeasyBase {
     numberOfNodes?: number;
     ownerAccount?: string;
     port?: number;
-    restorableNodeTypes?: string[];
+    restorableNodeTypes?: Record<string, any>[];
     snapshotCreateTime?: Date;
     snapshotIdentifier?: string;
     snapshotRetentionStartTime?: Date;
     snapshotType?: string;
     sourceRegion?: string;
     status?: string;
-    tags?: Tag[];
+    tags?: TagList[];
     totalBackupSizeInMegaBytes?: number;
     vpcId?: string;
 }

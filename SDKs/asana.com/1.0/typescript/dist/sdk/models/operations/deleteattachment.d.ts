@@ -8,7 +8,7 @@ export declare class DeleteAttachmentQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeleteAttachment200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeleteAttachmentRequest extends SpeakeasyBase {
     pathParams: DeleteAttachmentPathParams;
@@ -18,5 +18,5 @@ export declare class DeleteAttachmentResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deleteAttachment200ApplicationJsonObject?: DeleteAttachment200ApplicationJson;
+    deleteAttachment200ApplicationJSONObject?: DeleteAttachment200ApplicationJson;
 }

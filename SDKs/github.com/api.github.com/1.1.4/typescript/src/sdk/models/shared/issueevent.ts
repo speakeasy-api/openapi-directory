@@ -10,6 +10,10 @@ import { Team } from "./team";
 
 
 
+// IssueEventSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueEventSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

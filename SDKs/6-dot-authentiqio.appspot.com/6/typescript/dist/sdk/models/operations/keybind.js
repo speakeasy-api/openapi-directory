@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyBindResponse = exports.KeyBindRequest = exports.KeyBind200ApplicationJson = exports.KeyBindPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KeyBindPathParams = /** @class */ (function (_super) {
     __extends(KeyBindPathParams, _super);
     function KeyBindPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=PK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=PK" }),
         __metadata("design:type", String)
     ], KeyBindPathParams.prototype, "pk", void 0);
     return KeyBindPathParams;
-}(SpeakeasyBase));
-export { KeyBindPathParams };
+}(utils_1.SpeakeasyBase));
+exports.KeyBindPathParams = KeyBindPathParams;
 var KeyBind200ApplicationJson = /** @class */ (function (_super) {
     __extends(KeyBind200ApplicationJson, _super);
     function KeyBind200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], KeyBind200ApplicationJson.prototype, "status", void 0);
     return KeyBind200ApplicationJson;
-}(SpeakeasyBase));
-export { KeyBind200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.KeyBind200ApplicationJson = KeyBind200ApplicationJson;
 var KeyBindRequest = /** @class */ (function (_super) {
     __extends(KeyBindRequest, _super);
     function KeyBindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeyBindPathParams)
     ], KeyBindRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/jwt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/jwt" }),
         __metadata("design:type", Uint8Array)
     ], KeyBindRequest.prototype, "request", void 0);
     return KeyBindRequest;
-}(SpeakeasyBase));
-export { KeyBindRequest };
+}(utils_1.SpeakeasyBase));
+exports.KeyBindRequest = KeyBindRequest;
 var KeyBindResponse = /** @class */ (function (_super) {
     __extends(KeyBindResponse, _super);
     function KeyBindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], KeyBindResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KeyBindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], KeyBindResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KeyBindResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeyBind200ApplicationJson)
-    ], KeyBindResponse.prototype, "keyBind200ApplicationJsonObject", void 0);
+    ], KeyBindResponse.prototype, "keyBind200ApplicationJSONObject", void 0);
     return KeyBindResponse;
-}(SpeakeasyBase));
-export { KeyBindResponse };
+}(utils_1.SpeakeasyBase));
+exports.KeyBindResponse = KeyBindResponse;

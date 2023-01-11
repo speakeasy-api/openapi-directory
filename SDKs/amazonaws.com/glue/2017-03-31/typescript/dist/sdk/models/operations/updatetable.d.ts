@@ -27,5 +27,5 @@ export declare class UpdateTableResponse extends SpeakeasyBase {
     operationTimeoutException?: any;
     resourceNumberLimitExceededException?: any;
     statusCode: number;
-    updateTableResponse?: Map<string, any>;
+    updateTableResponse?: Record<string, any>;
 }

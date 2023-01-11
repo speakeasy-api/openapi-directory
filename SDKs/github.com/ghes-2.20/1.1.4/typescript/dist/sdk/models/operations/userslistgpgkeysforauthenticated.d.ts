@@ -9,7 +9,7 @@ export declare class UsersListGpgKeysForAuthenticatedRequest extends SpeakeasyBa
 }
 export declare class UsersListGpgKeysForAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gpgKeys?: shared.GpgKey[];

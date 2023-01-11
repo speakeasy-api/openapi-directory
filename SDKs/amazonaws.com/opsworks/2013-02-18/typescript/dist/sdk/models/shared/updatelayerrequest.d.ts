@@ -4,7 +4,7 @@ import { Recipes } from "./recipes";
 import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
 import { VolumeConfiguration } from "./volumeconfiguration";
 export declare class UpdateLayerRequest extends SpeakeasyBase {
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     autoAssignElasticIps?: boolean;
     autoAssignPublicIps?: boolean;
     cloudWatchLogsConfiguration?: CloudWatchLogsConfiguration;

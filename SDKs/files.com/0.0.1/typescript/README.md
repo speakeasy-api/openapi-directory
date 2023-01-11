@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetActionNotificationExportResultsRequest, GetActionNotificationExportResultsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,10 +28,10 @@ const sdk = new SDK();
     
 const req: GetActionNotificationExportResultsRequest = {
   queryParams: {
-    actionNotificationExportId: 763388924383789986,
-    cursor: "molestiae",
-    perPage: 8246720065789982806,
-    userId: 252123505414078850,
+    actionNotificationExportId: 8717895732742165505,
+    cursor: "voluptas",
+    perPage: 6050128673802995827,
+    userId: 501233450539197794,
   },
 };
 

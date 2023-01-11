@@ -29,7 +29,7 @@ export class FetchEvidenceContentSecurity extends SpeakeasyBase {
 
 export class FetchEvidenceContentRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: FetchEvidenceContentPathParams;

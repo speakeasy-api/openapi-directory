@@ -8,5 +8,5 @@ export class ListResourcesForWebAclRequest extends SpeakeasyBase {
   resourceType?: ResourceTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

@@ -27,6 +27,6 @@ export declare class CloudchannelOperationsDeleteRequest extends SpeakeasyBase {
 }
 export declare class CloudchannelOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

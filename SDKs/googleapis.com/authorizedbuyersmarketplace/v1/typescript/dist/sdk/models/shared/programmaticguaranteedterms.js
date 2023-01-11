@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
-export var ProgrammaticGuaranteedTermsReservationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProgrammaticGuaranteedTerms = exports.ProgrammaticGuaranteedTermsReservationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
+var ProgrammaticGuaranteedTermsReservationTypeEnum;
 (function (ProgrammaticGuaranteedTermsReservationTypeEnum) {
     ProgrammaticGuaranteedTermsReservationTypeEnum["ReservationTypeUnspecified"] = "RESERVATION_TYPE_UNSPECIFIED";
     ProgrammaticGuaranteedTermsReservationTypeEnum["Standard"] = "STANDARD";
     ProgrammaticGuaranteedTermsReservationTypeEnum["Sponsorship"] = "SPONSORSHIP";
-})(ProgrammaticGuaranteedTermsReservationTypeEnum || (ProgrammaticGuaranteedTermsReservationTypeEnum = {}));
+})(ProgrammaticGuaranteedTermsReservationTypeEnum = exports.ProgrammaticGuaranteedTermsReservationTypeEnum || (exports.ProgrammaticGuaranteedTermsReservationTypeEnum = {}));
 // ProgrammaticGuaranteedTerms
 /**
  * Pricing terms for Programmatic Guaranteed Deals.
@@ -40,29 +43,29 @@ var ProgrammaticGuaranteedTerms = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedPrice" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedPrice" }),
+        __metadata("design:type", price_1.Price)
     ], ProgrammaticGuaranteedTerms.prototype, "fixedPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guaranteedLooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guaranteedLooks" }),
         __metadata("design:type", String)
     ], ProgrammaticGuaranteedTerms.prototype, "guaranteedLooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionCap" }),
         __metadata("design:type", String)
     ], ProgrammaticGuaranteedTerms.prototype, "impressionCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumDailyLooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumDailyLooks" }),
         __metadata("design:type", String)
     ], ProgrammaticGuaranteedTerms.prototype, "minimumDailyLooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentShareOfVoice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentShareOfVoice" }),
         __metadata("design:type", String)
     ], ProgrammaticGuaranteedTerms.prototype, "percentShareOfVoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservationType" }),
         __metadata("design:type", String)
     ], ProgrammaticGuaranteedTerms.prototype, "reservationType", void 0);
     return ProgrammaticGuaranteedTerms;
-}(SpeakeasyBase));
-export { ProgrammaticGuaranteedTerms };
+}(utils_1.SpeakeasyBase));
+exports.ProgrammaticGuaranteedTerms = ProgrammaticGuaranteedTerms;

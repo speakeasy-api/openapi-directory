@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndTimeRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // EndTimeRange
 /**
  *  A range of time that specifies when anomalous behavior in an anomaly or insight ended.
@@ -33,13 +36,13 @@ var EndTimeRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromTime" }),
         __metadata("design:type", Date)
     ], EndTimeRange.prototype, "fromTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ToTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ToTime" }),
         __metadata("design:type", Date)
     ], EndTimeRange.prototype, "toTime", void 0);
     return EndTimeRange;
-}(SpeakeasyBase));
-export { EndTimeRange };
+}(utils_1.SpeakeasyBase));
+exports.EndTimeRange = EndTimeRange;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnsampledReportInput = exports.UnsampledReport = exports.UnsampledReportDriveDownloadDetails = exports.UnsampledReportCloudStorageDownloadDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // UnsampledReportCloudStorageDownloadDetails
 /**
  * Download details for a file stored in Google Cloud Storage.
@@ -33,16 +36,16 @@ var UnsampledReportCloudStorageDownloadDetails = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketId" }),
         __metadata("design:type", String)
     ], UnsampledReportCloudStorageDownloadDetails.prototype, "bucketId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectId" }),
         __metadata("design:type", String)
     ], UnsampledReportCloudStorageDownloadDetails.prototype, "objectId", void 0);
     return UnsampledReportCloudStorageDownloadDetails;
-}(SpeakeasyBase));
-export { UnsampledReportCloudStorageDownloadDetails };
+}(utils_1.SpeakeasyBase));
+exports.UnsampledReportCloudStorageDownloadDetails = UnsampledReportCloudStorageDownloadDetails;
 // UnsampledReportDriveDownloadDetails
 /**
  * Download details for a file stored in Google Drive.
@@ -53,68 +56,12 @@ var UnsampledReportDriveDownloadDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentId" }),
         __metadata("design:type", String)
     ], UnsampledReportDriveDownloadDetails.prototype, "documentId", void 0);
     return UnsampledReportDriveDownloadDetails;
-}(SpeakeasyBase));
-export { UnsampledReportDriveDownloadDetails };
-// UnsampledReportInput
-/**
- * JSON template for Analytics unsampled report resource.
-**/
-var UnsampledReportInput = /** @class */ (function (_super) {
-    __extends(UnsampledReportInput, _super);
-    function UnsampledReportInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "accountId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "dimensions", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=end-date" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "endDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "filters", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "metrics", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileId" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "profileId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=segment" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "segment", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=start-date" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "startDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "title", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
-        __metadata("design:type", String)
-    ], UnsampledReportInput.prototype, "webPropertyId", void 0);
-    return UnsampledReportInput;
-}(SpeakeasyBase));
-export { UnsampledReportInput };
+}(utils_1.SpeakeasyBase));
+exports.UnsampledReportDriveDownloadDetails = UnsampledReportDriveDownloadDetails;
 // UnsampledReport
 /**
  * JSON template for Analytics unsampled report resource.
@@ -125,81 +72,137 @@ var UnsampledReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStorageDownloadDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStorageDownloadDetails" }),
         __metadata("design:type", UnsampledReportCloudStorageDownloadDetails)
     ], UnsampledReport.prototype, "cloudStorageDownloadDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], UnsampledReport.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadType" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "downloadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveDownloadDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveDownloadDetails" }),
         __metadata("design:type", UnsampledReportDriveDownloadDetails)
     ], UnsampledReport.prototype, "driveDownloadDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end-date" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileId" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "profileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segment" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "segment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start-date" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], UnsampledReport.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], UnsampledReport.prototype, "webPropertyId", void 0);
     return UnsampledReport;
-}(SpeakeasyBase));
-export { UnsampledReport };
+}(utils_1.SpeakeasyBase));
+exports.UnsampledReport = UnsampledReport;
+// UnsampledReportInput
+/**
+ * JSON template for Analytics unsampled report resource.
+**/
+var UnsampledReportInput = /** @class */ (function (_super) {
+    __extends(UnsampledReportInput, _super);
+    function UnsampledReportInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "accountId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "dimensions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end-date" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "filters", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "metrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileId" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "profileId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segment" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "segment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start-date" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
+        __metadata("design:type", String)
+    ], UnsampledReportInput.prototype, "webPropertyId", void 0);
+    return UnsampledReportInput;
+}(utils_1.SpeakeasyBase));
+exports.UnsampledReportInput = UnsampledReportInput;

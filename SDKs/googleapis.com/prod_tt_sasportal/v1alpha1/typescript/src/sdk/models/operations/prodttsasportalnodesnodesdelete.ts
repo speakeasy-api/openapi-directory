@@ -71,7 +71,7 @@ export class ProdTtSasportalNodesNodesDeleteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sasPortalEmpty?: Map<string, any>;
+  sasPortalEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

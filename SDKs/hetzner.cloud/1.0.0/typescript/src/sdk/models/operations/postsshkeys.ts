@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class PostSshKeysRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -25,7 +25,7 @@ export class PostSshKeys201ApplicationJsonSshKey extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -52,8 +52,8 @@ export class PostSshKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postSshKeys201ApplicationJsonObject?: PostSshKeys201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postSshKeys201ApplicationJSONObject?: PostSshKeys201ApplicationJson;
 }

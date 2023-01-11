@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSshKeysIdResponse = exports.DeleteSshKeysIdRequest = exports.DeleteSshKeysIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSshKeysIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteSshKeysIdPathParams, _super);
     function DeleteSshKeysIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteSshKeysIdPathParams.prototype, "id", void 0);
     return DeleteSshKeysIdPathParams;
-}(SpeakeasyBase));
-export { DeleteSshKeysIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSshKeysIdPathParams = DeleteSshKeysIdPathParams;
 var DeleteSshKeysIdRequest = /** @class */ (function (_super) {
     __extends(DeleteSshKeysIdRequest, _super);
     function DeleteSshKeysIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSshKeysIdPathParams)
     ], DeleteSshKeysIdRequest.prototype, "pathParams", void 0);
     return DeleteSshKeysIdRequest;
-}(SpeakeasyBase));
-export { DeleteSshKeysIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSshKeysIdRequest = DeleteSshKeysIdRequest;
 var DeleteSshKeysIdResponse = /** @class */ (function (_super) {
     __extends(DeleteSshKeysIdResponse, _super);
     function DeleteSshKeysIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSshKeysIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSshKeysIdResponse.prototype, "statusCode", void 0);
     return DeleteSshKeysIdResponse;
-}(SpeakeasyBase));
-export { DeleteSshKeysIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSshKeysIdResponse = DeleteSshKeysIdResponse;

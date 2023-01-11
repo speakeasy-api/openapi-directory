@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var BuildInfo = /** @class */ (function (_super) {
     __extends(BuildInfo, _super);
     function BuildInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_type" }),
         __metadata("design:type", Number)
     ], BuildInfo.prototype, "buildType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cast_build_revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cast_build_revision" }),
         __metadata("design:type", String)
     ], BuildInfo.prototype, "castBuildRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cast_control_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cast_control_version" }),
         __metadata("design:type", Number)
     ], BuildInfo.prototype, "castControlVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_channel_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_channel_state" }),
         __metadata("design:type", Number)
     ], BuildInfo.prototype, "previewChannelState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_track" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_track" }),
         __metadata("design:type", String)
     ], BuildInfo.prototype, "releaseTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system_build_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system_build_number" }),
         __metadata("design:type", String)
     ], BuildInfo.prototype, "systemBuildNumber", void 0);
     return BuildInfo;
-}(SpeakeasyBase));
-export { BuildInfo };
+}(utils_1.SpeakeasyBase));
+exports.BuildInfo = BuildInfo;

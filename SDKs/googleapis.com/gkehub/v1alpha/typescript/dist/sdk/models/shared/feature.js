@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MembershipFeatureSpec } from "./membershipfeaturespec";
-import { MembershipFeatureState } from "./membershipfeaturestate";
-import { FeatureResourceState } from "./featureresourcestate";
-import { ScopeFeatureState } from "./scopefeaturestate";
-import { CommonFeatureSpec } from "./commonfeaturespec";
-import { CommonFeatureState } from "./commonfeaturestate";
-import { MembershipFeatureSpecInput } from "./membershipfeaturespec";
-import { CommonFeatureState1 } from "./commonfeaturestate1";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeatureInput = exports.Feature = void 0;
+var utils_1 = require("../../../internal/utils");
+var membershipfeaturespec_1 = require("./membershipfeaturespec");
+var membershipfeaturestate_1 = require("./membershipfeaturestate");
+var featureresourcestate_1 = require("./featureresourcestate");
+var scopefeaturestate_1 = require("./scopefeaturestate");
+var commonfeaturespec_1 = require("./commonfeaturespec");
+var commonfeaturestate_1 = require("./commonfeaturestate");
+var membershipfeaturespec_2 = require("./membershipfeaturespec");
+var commonfeaturestate1_1 = require("./commonfeaturestate1");
 // Feature
 /**
  * Feature represents the settings and status of any Hub Feature.
@@ -41,56 +44,56 @@ var Feature = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Feature.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteTime" }),
         __metadata("design:type", String)
     ], Feature.prototype, "deleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Feature.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipSpecs", elemType: MembershipFeatureSpec }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipSpecs", elemType: membershipfeaturespec_1.MembershipFeatureSpec }),
+        __metadata("design:type", Object)
     ], Feature.prototype, "membershipSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipStates", elemType: MembershipFeatureState }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipStates", elemType: membershipfeaturestate_1.MembershipFeatureState }),
+        __metadata("design:type", Object)
     ], Feature.prototype, "membershipStates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Feature.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceState" }),
-        __metadata("design:type", FeatureResourceState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceState" }),
+        __metadata("design:type", featureresourcestate_1.FeatureResourceState)
     ], Feature.prototype, "resourceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopeSpecs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopeSpecs" }),
+        __metadata("design:type", Object)
     ], Feature.prototype, "scopeSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopeStates", elemType: ScopeFeatureState }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopeStates", elemType: scopefeaturestate_1.ScopeFeatureState }),
+        __metadata("design:type", Object)
     ], Feature.prototype, "scopeStates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", CommonFeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", commonfeaturespec_1.CommonFeatureSpec)
     ], Feature.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", CommonFeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", commonfeaturestate_1.CommonFeatureState)
     ], Feature.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Feature.prototype, "updateTime", void 0);
     return Feature;
-}(SpeakeasyBase));
-export { Feature };
+}(utils_1.SpeakeasyBase));
+exports.Feature = Feature;
 // FeatureInput
 /**
  * Feature represents the settings and status of any Hub Feature.
@@ -101,29 +104,29 @@ var FeatureInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], FeatureInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipSpecs", elemType: MembershipFeatureSpecInput }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipSpecs", elemType: membershipfeaturespec_2.MembershipFeatureSpecInput }),
+        __metadata("design:type", Object)
     ], FeatureInput.prototype, "membershipSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceState" }),
-        __metadata("design:type", FeatureResourceState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceState" }),
+        __metadata("design:type", featureresourcestate_1.FeatureResourceState)
     ], FeatureInput.prototype, "resourceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopeSpecs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopeSpecs" }),
+        __metadata("design:type", Object)
     ], FeatureInput.prototype, "scopeSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", CommonFeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", commonfeaturespec_1.CommonFeatureSpec)
     ], FeatureInput.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", CommonFeatureState1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", commonfeaturestate1_1.CommonFeatureState1)
     ], FeatureInput.prototype, "state", void 0);
     return FeatureInput;
-}(SpeakeasyBase));
-export { FeatureInput };
+}(utils_1.SpeakeasyBase));
+exports.FeatureInput = FeatureInput;

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedNode } from "./reservednode";
+import { ReservedNodeList } from "./reservednodelist";
 
 
 
@@ -11,6 +11,6 @@ export class ReservedNodesMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ReservedNode })
-  reservedNodes?: ReservedNode[];
+  @SpeakeasyMetadata({ elemType: ReservedNodeList })
+  reservedNodes?: ReservedNodeList[];
 }

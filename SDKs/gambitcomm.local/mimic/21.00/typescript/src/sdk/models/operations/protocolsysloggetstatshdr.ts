@@ -10,5 +10,5 @@ export class ProtocolSyslogGetStatsHdrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSyslogGetStatsHdr200ApplicationJsonStrings?: string[];
+  protocolSyslogGetStatsHdr200ApplicationJSONStrings?: string[];
 }

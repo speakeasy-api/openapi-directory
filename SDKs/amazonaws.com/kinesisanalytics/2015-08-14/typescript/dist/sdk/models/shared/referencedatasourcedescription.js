@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceSchema } from "./sourceschema";
-import { S3ReferenceDataSourceDescription } from "./s3referencedatasourcedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferenceDataSourceDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceschema_1 = require("./sourceschema");
+var s3referencedatasourcedescription_1 = require("./s3referencedatasourcedescription");
 // ReferenceDataSourceDescription
 /**
  * Describes the reference data source configured for an application.
@@ -35,21 +38,21 @@ var ReferenceDataSourceDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", String)
     ], ReferenceDataSourceDescription.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceSchema" }),
-        __metadata("design:type", SourceSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceSchema" }),
+        __metadata("design:type", sourceschema_1.SourceSchema)
     ], ReferenceDataSourceDescription.prototype, "referenceSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3ReferenceDataSourceDescription" }),
-        __metadata("design:type", S3ReferenceDataSourceDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3ReferenceDataSourceDescription" }),
+        __metadata("design:type", s3referencedatasourcedescription_1.S3ReferenceDataSourceDescription)
     ], ReferenceDataSourceDescription.prototype, "s3ReferenceDataSourceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], ReferenceDataSourceDescription.prototype, "tableName", void 0);
     return ReferenceDataSourceDescription;
-}(SpeakeasyBase));
-export { ReferenceDataSourceDescription };
+}(utils_1.SpeakeasyBase));
+exports.ReferenceDataSourceDescription = ReferenceDataSourceDescription;

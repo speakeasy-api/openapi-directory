@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DemoteMasterConfiguration } from "./demotemasterconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DemoteMasterContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var demotemasterconfiguration_1 = require("./demotemasterconfiguration");
 // DemoteMasterContext
 /**
  * Database instance demote primary instance context.
@@ -34,25 +37,25 @@ var DemoteMasterContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DemoteMasterContext.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterInstanceName" }),
         __metadata("design:type", String)
     ], DemoteMasterContext.prototype, "masterInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaConfiguration" }),
-        __metadata("design:type", DemoteMasterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaConfiguration" }),
+        __metadata("design:type", demotemasterconfiguration_1.DemoteMasterConfiguration)
     ], DemoteMasterContext.prototype, "replicaConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipReplicationSetup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipReplicationSetup" }),
         __metadata("design:type", Boolean)
     ], DemoteMasterContext.prototype, "skipReplicationSetup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyGtidConsistency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyGtidConsistency" }),
         __metadata("design:type", Boolean)
     ], DemoteMasterContext.prototype, "verifyGtidConsistency", void 0);
     return DemoteMasterContext;
-}(SpeakeasyBase));
-export { DemoteMasterContext };
+}(utils_1.SpeakeasyBase));
+exports.DemoteMasterContext = DemoteMasterContext;

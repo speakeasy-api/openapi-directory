@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApiVVersionCurrenciesHistoryRequest, GetApiVVersionCurrenciesHistoryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,19 +28,19 @@ const sdk = new SDK();
     
 const req: GetApiVVersionCurrenciesHistoryRequest = {
   pathParams: {
-    version: "nemo",
+    version: "sit",
   },
   queryParams: {
-    end: "2007-07-15T00:47:32Z",
-    format: "json",
-    interval: "rerum",
-    pairs: "aut",
-    start: "2009-02-03T06:59:27Z",
-    token: "deserunt",
+    end: "2006-05-01T09:38:06Z",
+    format: "xml",
+    interval: "expedita",
+    pairs: "consequuntur",
+    start: "2003-04-20T23:11:44Z",
+    token: "expedita",
   },
 };
 
-sdk.sdk.getApiVVersionCurrenciesHistory(req).then((res: GetApiVVersionCurrenciesHistoryResponse | AxiosError) => {
+sdk.currencies.getApiVVersionCurrenciesHistory(req).then((res: GetApiVVersionCurrenciesHistoryResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,7 +49,7 @@ sdk.sdk.getApiVVersionCurrenciesHistory(req).then((res: GetApiVVersionCurrencies
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currencies
 
 * `getApiVVersionCurrenciesHistory` - Get historical prices for requested currency pairs
 * `getApiVVersionCurrenciesHistorySupported` - Get list of currency pairs supported by the history endpoint
@@ -58,6 +57,9 @@ sdk.sdk.getApiVVersionCurrenciesHistory(req).then((res: GetApiVVersionCurrencies
 * `getApiVVersionCurrenciesRateSupported` - Get list of currencies supported by the rate endpoint
 * `getApiVVersionCurrenciesSummary` - Get latest Summary for requested currency pairs
 * `getApiVVersionCurrenciesSummarySupported` - Get list of currency pairs supported by the Summary endpoint
+
+### Metals
+
 * `getApiVVersionMetalsBenchmarkHistory` - Get historical benchmark prices for requested metals
 * `getApiVVersionMetalsBenchmarkSummary` - Get latest Benchmark prices for requested metals
 * `getApiVVersionMetalsBenchmarkSupported` - Get list of symbols supported by the benchmark endpoints

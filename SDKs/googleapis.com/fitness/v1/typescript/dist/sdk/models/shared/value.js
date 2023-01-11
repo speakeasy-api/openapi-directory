@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValueMapValEntry } from "./valuemapvalentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Value = void 0;
+var utils_1 = require("../../../internal/utils");
+var valuemapvalentry_1 = require("./valuemapvalentry");
 // Value
 /**
  * Holder object for the value of a single field in a data point. A field value has a particular format and is only ever set to one of an integer or a floating point value.
@@ -34,21 +37,21 @@ var Value = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fpVal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fpVal" }),
         __metadata("design:type", Number)
     ], Value.prototype, "fpVal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intVal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intVal" }),
         __metadata("design:type", Number)
     ], Value.prototype, "intVal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapVal", elemType: ValueMapValEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapVal", elemType: valuemapvalentry_1.ValueMapValEntry }),
         __metadata("design:type", Array)
     ], Value.prototype, "mapVal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringVal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringVal" }),
         __metadata("design:type", String)
     ], Value.prototype, "stringVal", void 0);
     return Value;
-}(SpeakeasyBase));
-export { Value };
+}(utils_1.SpeakeasyBase));
+exports.Value = Value;

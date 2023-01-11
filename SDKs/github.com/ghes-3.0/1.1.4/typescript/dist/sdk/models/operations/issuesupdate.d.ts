@@ -38,6 +38,6 @@ export declare class IssuesUpdateResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     issue?: shared.Issue;
-    issuesUpdate503ApplicationJsonObject?: IssuesUpdate503ApplicationJson;
+    issuesUpdate503ApplicationJSONObject?: IssuesUpdate503ApplicationJson;
     validationError?: shared.ValidationError;
 }

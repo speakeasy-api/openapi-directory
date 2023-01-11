@@ -1,4 +1,7 @@
-export var ClusterStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterStateEnum = void 0;
+var ClusterStateEnum;
 (function (ClusterStateEnum) {
     ClusterStateEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
     ClusterStateEnum["Uninitialized"] = "UNINITIALIZED";
@@ -9,4 +12,4 @@ export var ClusterStateEnum;
     ClusterStateEnum["DeleteInProgress"] = "DELETE_IN_PROGRESS";
     ClusterStateEnum["Deleted"] = "DELETED";
     ClusterStateEnum["Degraded"] = "DEGRADED";
-})(ClusterStateEnum || (ClusterStateEnum = {}));
+})(ClusterStateEnum = exports.ClusterStateEnum || (exports.ClusterStateEnum = {}));

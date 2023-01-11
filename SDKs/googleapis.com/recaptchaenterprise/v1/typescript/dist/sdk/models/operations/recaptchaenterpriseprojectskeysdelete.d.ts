@@ -27,6 +27,6 @@ export declare class RecaptchaenterpriseProjectsKeysDeleteRequest extends Speake
 }
 export declare class RecaptchaenterpriseProjectsKeysDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

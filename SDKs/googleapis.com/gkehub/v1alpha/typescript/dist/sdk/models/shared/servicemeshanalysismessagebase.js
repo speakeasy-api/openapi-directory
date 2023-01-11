@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceMeshType } from "./servicemeshtype";
-export var ServiceMeshAnalysisMessageBaseLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceMeshAnalysisMessageBase = exports.ServiceMeshAnalysisMessageBaseLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicemeshtype_1 = require("./servicemeshtype");
+var ServiceMeshAnalysisMessageBaseLevelEnum;
 (function (ServiceMeshAnalysisMessageBaseLevelEnum) {
     ServiceMeshAnalysisMessageBaseLevelEnum["LevelUnspecified"] = "LEVEL_UNSPECIFIED";
     ServiceMeshAnalysisMessageBaseLevelEnum["Error"] = "ERROR";
     ServiceMeshAnalysisMessageBaseLevelEnum["Warning"] = "WARNING";
     ServiceMeshAnalysisMessageBaseLevelEnum["Info"] = "INFO";
-})(ServiceMeshAnalysisMessageBaseLevelEnum || (ServiceMeshAnalysisMessageBaseLevelEnum = {}));
+})(ServiceMeshAnalysisMessageBaseLevelEnum = exports.ServiceMeshAnalysisMessageBaseLevelEnum || (exports.ServiceMeshAnalysisMessageBaseLevelEnum = {}));
 // ServiceMeshAnalysisMessageBase
 /**
  * AnalysisMessageBase describes some common information that is needed for all messages.
@@ -41,17 +44,17 @@ var ServiceMeshAnalysisMessageBase = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUrl" }),
         __metadata("design:type", String)
     ], ServiceMeshAnalysisMessageBase.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], ServiceMeshAnalysisMessageBase.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", ServiceMeshType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", servicemeshtype_1.ServiceMeshType)
     ], ServiceMeshAnalysisMessageBase.prototype, "type", void 0);
     return ServiceMeshAnalysisMessageBase;
-}(SpeakeasyBase));
-export { ServiceMeshAnalysisMessageBase };
+}(utils_1.SpeakeasyBase));
+exports.ServiceMeshAnalysisMessageBase = ServiceMeshAnalysisMessageBase;

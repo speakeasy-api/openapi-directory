@@ -28,5 +28,5 @@ export class RemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  remove200ApplicationJsonString?: string;
+  remove200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListUserSSubscriptionGroupStatusSmsResponse = exports.ListUserSSubscriptionGroupStatusSmsRequest = exports.ListUserSSubscriptionGroupStatusSmsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListUserSSubscriptionGroupStatusSmsQueryParams = /** @class */ (function (_super) {
     __extends(ListUserSSubscriptionGroupStatusSmsQueryParams, _super);
     function ListUserSSubscriptionGroupStatusSmsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=external_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=external_id" }),
         __metadata("design:type", String)
     ], ListUserSSubscriptionGroupStatusSmsQueryParams.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=phone" }),
         __metadata("design:type", String)
     ], ListUserSSubscriptionGroupStatusSmsQueryParams.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subscription_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=subscription_group_id" }),
         __metadata("design:type", String)
     ], ListUserSSubscriptionGroupStatusSmsQueryParams.prototype, "subscriptionGroupId", void 0);
     return ListUserSSubscriptionGroupStatusSmsQueryParams;
-}(SpeakeasyBase));
-export { ListUserSSubscriptionGroupStatusSmsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListUserSSubscriptionGroupStatusSmsQueryParams = ListUserSSubscriptionGroupStatusSmsQueryParams;
 var ListUserSSubscriptionGroupStatusSmsRequest = /** @class */ (function (_super) {
     __extends(ListUserSSubscriptionGroupStatusSmsRequest, _super);
     function ListUserSSubscriptionGroupStatusSmsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListUserSSubscriptionGroupStatusSmsQueryParams)
     ], ListUserSSubscriptionGroupStatusSmsRequest.prototype, "queryParams", void 0);
     return ListUserSSubscriptionGroupStatusSmsRequest;
-}(SpeakeasyBase));
-export { ListUserSSubscriptionGroupStatusSmsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListUserSSubscriptionGroupStatusSmsRequest = ListUserSSubscriptionGroupStatusSmsRequest;
 var ListUserSSubscriptionGroupStatusSmsResponse = /** @class */ (function (_super) {
     __extends(ListUserSSubscriptionGroupStatusSmsResponse, _super);
     function ListUserSSubscriptionGroupStatusSmsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListUserSSubscriptionGroupStatusSmsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListUserSSubscriptionGroupStatusSmsResponse.prototype, "statusCode", void 0);
     return ListUserSSubscriptionGroupStatusSmsResponse;
-}(SpeakeasyBase));
-export { ListUserSSubscriptionGroupStatusSmsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListUserSSubscriptionGroupStatusSmsResponse = ListUserSSubscriptionGroupStatusSmsResponse;

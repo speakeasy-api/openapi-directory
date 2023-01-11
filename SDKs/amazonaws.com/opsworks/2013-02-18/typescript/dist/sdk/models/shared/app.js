@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Source } from "./source";
-import { DataSource } from "./datasource";
-import { EnvironmentVariable } from "./environmentvariable";
-import { SslConfiguration } from "./sslconfiguration";
-import { AppTypeEnum } from "./apptypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.App = void 0;
+var utils_1 = require("../../../internal/utils");
+var source_1 = require("./source");
+var datasource_1 = require("./datasource");
+var environmentvariable_1 = require("./environmentvariable");
+var sslconfiguration_1 = require("./sslconfiguration");
+var apptypeenum_1 = require("./apptypeenum");
 // App
 /**
  * A description of the app.
@@ -38,61 +41,61 @@ var App = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
         __metadata("design:type", String)
     ], App.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppSource" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppSource" }),
+        __metadata("design:type", source_1.Source)
     ], App.prototype, "appSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
     ], App.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], App.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSources", elemType: DataSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSources", elemType: datasource_1.DataSource }),
         __metadata("design:type", Array)
     ], App.prototype, "dataSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], App.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domains" }),
         __metadata("design:type", Array)
     ], App.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableSsl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableSsl" }),
         __metadata("design:type", Boolean)
     ], App.prototype, "enableSsl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Environment", elemType: EnvironmentVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Environment", elemType: environmentvariable_1.EnvironmentVariable }),
         __metadata("design:type", Array)
     ], App.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], App.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Shortname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Shortname" }),
         __metadata("design:type", String)
     ], App.prototype, "shortname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslConfiguration" }),
-        __metadata("design:type", SslConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslConfiguration" }),
+        __metadata("design:type", sslconfiguration_1.SslConfiguration)
     ], App.prototype, "sslConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], App.prototype, "stackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], App.prototype, "type", void 0);
     return App;
-}(SpeakeasyBase));
-export { App };
+}(utils_1.SpeakeasyBase));
+exports.App = App;

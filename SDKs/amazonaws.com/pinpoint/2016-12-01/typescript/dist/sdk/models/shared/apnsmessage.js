@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionEnum } from "./actionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApnsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionenum_1 = require("./actionenum");
 // ApnsMessage
 /**
  * Specifies the settings for a one-time message that's sent directly to an endpoint through the APNs (Apple Push Notification service) channel.
@@ -34,77 +37,77 @@ var ApnsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=APNSPushType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=APNSPushType" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "apnsPushType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Badge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Badge" }),
         __metadata("design:type", Number)
     ], ApnsMessage.prototype, "badge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Body" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Category" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CollapseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CollapseId" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "collapseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", Object)
     ], ApnsMessage.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MediaUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MediaUrl" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "mediaUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreferredAuthenticationMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreferredAuthenticationMethod" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "preferredAuthenticationMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Priority" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RawContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RawContent" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "rawContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SilentPush" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SilentPush" }),
         __metadata("design:type", Boolean)
     ], ApnsMessage.prototype, "silentPush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sound" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "sound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Substitutions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Substitutions" }),
+        __metadata("design:type", Object)
     ], ApnsMessage.prototype, "substitutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThreadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThreadId" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "threadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeToLive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeToLive" }),
         __metadata("design:type", Number)
     ], ApnsMessage.prototype, "timeToLive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Url" }),
         __metadata("design:type", String)
     ], ApnsMessage.prototype, "url", void 0);
     return ApnsMessage;
-}(SpeakeasyBase));
-export { ApnsMessage };
+}(utils_1.SpeakeasyBase));
+exports.ApnsMessage = ApnsMessage;

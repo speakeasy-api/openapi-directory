@@ -1,11 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ImageAttachmentInput extends SpeakeasyBase {
-    contentType: string;
-    imageHeight: number;
-    imageWidth: number;
-    name?: string;
-    objectId: number;
-}
 export declare class ImageAttachment extends SpeakeasyBase {
     contentType: string;
     created?: Date;
@@ -16,4 +9,11 @@ export declare class ImageAttachment extends SpeakeasyBase {
     name?: string;
     objectId: number;
     parent?: string;
+}
+export declare class ImageAttachmentInput extends SpeakeasyBase {
+    contentType: string;
+    imageHeight: number;
+    imageWidth: number;
+    name?: string;
+    objectId: number;
 }

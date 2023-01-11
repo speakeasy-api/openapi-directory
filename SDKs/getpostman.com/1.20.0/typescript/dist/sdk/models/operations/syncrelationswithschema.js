@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncRelationsWithSchemaResponse = exports.SyncRelationsWithSchemaRequest = exports.SyncRelationsWithSchema400ApplicationJson = exports.SyncRelationsWithSchema400ApplicationJsonError = exports.SyncRelationsWithSchema200ApplicationJson = exports.SyncRelationsWithSchemaPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SyncRelationsWithSchemaPathParams = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchemaPathParams, _super);
     function SyncRelationsWithSchemaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchemaPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchemaPathParams.prototype, "apiVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=entityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=entityId" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchemaPathParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=entityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=entityType" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchemaPathParams.prototype, "entityType", void 0);
     return SyncRelationsWithSchemaPathParams;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchemaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchemaPathParams = SyncRelationsWithSchemaPathParams;
 var SyncRelationsWithSchema200ApplicationJson = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchema200ApplicationJson, _super);
     function SyncRelationsWithSchema200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], SyncRelationsWithSchema200ApplicationJson.prototype, "success", void 0);
     return SyncRelationsWithSchema200ApplicationJson;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchema200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchema200ApplicationJson = SyncRelationsWithSchema200ApplicationJson;
 var SyncRelationsWithSchema400ApplicationJsonError = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchema400ApplicationJsonError, _super);
     function SyncRelationsWithSchema400ApplicationJsonError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchema400ApplicationJsonError.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SyncRelationsWithSchema400ApplicationJsonError.prototype, "name", void 0);
     return SyncRelationsWithSchema400ApplicationJsonError;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchema400ApplicationJsonError };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchema400ApplicationJsonError = SyncRelationsWithSchema400ApplicationJsonError;
 var SyncRelationsWithSchema400ApplicationJson = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchema400ApplicationJson, _super);
     function SyncRelationsWithSchema400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", SyncRelationsWithSchema400ApplicationJsonError)
     ], SyncRelationsWithSchema400ApplicationJson.prototype, "error", void 0);
     return SyncRelationsWithSchema400ApplicationJson;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchema400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchema400ApplicationJson = SyncRelationsWithSchema400ApplicationJson;
 var SyncRelationsWithSchemaRequest = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchemaRequest, _super);
     function SyncRelationsWithSchemaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SyncRelationsWithSchemaPathParams)
     ], SyncRelationsWithSchemaRequest.prototype, "pathParams", void 0);
     return SyncRelationsWithSchemaRequest;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchemaRequest };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchemaRequest = SyncRelationsWithSchemaRequest;
 var SyncRelationsWithSchemaResponse = /** @class */ (function (_super) {
     __extends(SyncRelationsWithSchemaResponse, _super);
     function SyncRelationsWithSchemaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SyncRelationsWithSchemaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SyncRelationsWithSchemaResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SyncRelationsWithSchema200ApplicationJson)
-    ], SyncRelationsWithSchemaResponse.prototype, "syncRelationsWithSchema200ApplicationJsonObject", void 0);
+    ], SyncRelationsWithSchemaResponse.prototype, "syncRelationsWithSchema200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SyncRelationsWithSchema400ApplicationJson)
-    ], SyncRelationsWithSchemaResponse.prototype, "syncRelationsWithSchema400ApplicationJsonObject", void 0);
+    ], SyncRelationsWithSchemaResponse.prototype, "syncRelationsWithSchema400ApplicationJSONObject", void 0);
     return SyncRelationsWithSchemaResponse;
-}(SpeakeasyBase));
-export { SyncRelationsWithSchemaResponse };
+}(utils_1.SpeakeasyBase));
+exports.SyncRelationsWithSchemaResponse = SyncRelationsWithSchemaResponse;

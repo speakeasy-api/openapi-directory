@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Region } from "./region";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegionSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var region_1 = require("./region");
 // RegionSet
 /**
  * This complex type contains the regionIncluded and regionExcluded fields, which indicate the areas to where the seller does and doesn't ship. Normally a seller ships to as many areas as possible using both DOMESTIC and INTERNATIONAL shipping options, and they don't have a need to exclude any regions from their ship-to locations. Here, there's no reason to set regionExcluded fields. However, it makes sense to set the regionExcluded field when a seller wants to exclude a small area that's within a larger area they service. For example, suppose a seller indicates they ship 'Worldwide', but for some reason must exclude a specific country, or world region. Note: Configuring the shipToLocations is tricky because the regionIncluded and regionExcluded fields are valid in different parts of the schema and their allowable settings vary upon the context. For details on setting these fields, see .
@@ -34,13 +37,13 @@ var RegionSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionExcluded", elemType: Region }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionExcluded", elemType: region_1.Region }),
         __metadata("design:type", Array)
     ], RegionSet.prototype, "regionExcluded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionIncluded", elemType: Region }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionIncluded", elemType: region_1.Region }),
         __metadata("design:type", Array)
     ], RegionSet.prototype, "regionIncluded", void 0);
     return RegionSet;
-}(SpeakeasyBase));
-export { RegionSet };
+}(utils_1.SpeakeasyBase));
+exports.RegionSet = RegionSet;

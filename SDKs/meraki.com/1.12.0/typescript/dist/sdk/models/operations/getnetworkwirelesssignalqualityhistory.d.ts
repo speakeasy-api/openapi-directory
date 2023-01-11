@@ -25,5 +25,5 @@ export declare class GetNetworkWirelessSignalQualityHistoryRequest extends Speak
 export declare class GetNetworkWirelessSignalQualityHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSignalQualityHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSignalQualityHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -5,7 +5,7 @@ export declare class SignalDecisionReportRequest extends SpeakeasyBase {
 }
 export declare class SignalDecisionReportResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     signalDecisionReportResponse?: shared.SignalDecisionReportResponse;
     statusCode: number;
 }

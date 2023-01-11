@@ -5,5 +5,5 @@ export declare class CreateDataSourceFromRedshiftInput extends SpeakeasyBase {
     dataSourceId: string;
     dataSourceName?: string;
     dataSpec: RedshiftDataSpec;
-    roleArn: string;
+    roleARN: string;
 }

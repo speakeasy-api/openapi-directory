@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsLinkedRegistrationsRelationshipsDeleteResponse = exports.CollectionsLinkedRegistrationsRelationshipsDeleteRequest = exports.CollectionsLinkedRegistrationsRelationshipsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsLinkedRegistrationsRelationshipsDeletePathParams = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsDeletePathParams, _super);
     function CollectionsLinkedRegistrationsRelationshipsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsLinkedRegistrationsRelationshipsDeletePathParams.prototype, "collectionId", void 0);
     return CollectionsLinkedRegistrationsRelationshipsDeletePathParams;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsDeletePathParams = CollectionsLinkedRegistrationsRelationshipsDeletePathParams;
 var CollectionsLinkedRegistrationsRelationshipsDeleteRequest = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsDeleteRequest, _super);
     function CollectionsLinkedRegistrationsRelationshipsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsLinkedRegistrationsRelationshipsDeletePathParams)
     ], CollectionsLinkedRegistrationsRelationshipsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CollectionsLinkedRegistrationsRelationshipsDeleteRequest.prototype, "request", void 0);
     return CollectionsLinkedRegistrationsRelationshipsDeleteRequest;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsDeleteRequest = CollectionsLinkedRegistrationsRelationshipsDeleteRequest;
 var CollectionsLinkedRegistrationsRelationshipsDeleteResponse = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsDeleteResponse, _super);
     function CollectionsLinkedRegistrationsRelationshipsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsLinkedRegistrationsRelationshipsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsLinkedRegistrationsRelationshipsDeleteResponse.prototype, "statusCode", void 0);
     return CollectionsLinkedRegistrationsRelationshipsDeleteResponse;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsDeleteResponse = CollectionsLinkedRegistrationsRelationshipsDeleteResponse;

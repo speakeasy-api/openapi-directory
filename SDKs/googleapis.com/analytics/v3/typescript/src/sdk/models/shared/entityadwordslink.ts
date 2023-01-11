@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdWordsAccount } from "./adwordsaccount";
 import { WebPropertyRef } from "./webpropertyref";
+import { AdWordsAccount } from "./adwordsaccount";
 
 
 

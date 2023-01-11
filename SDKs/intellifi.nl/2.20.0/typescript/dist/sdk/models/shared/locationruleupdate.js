@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocationRuleTypeEnum } from "./locationruletypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationRuleUpdate = exports.LocationRuleUpdateConditions = void 0;
+var utils_1 = require("../../../internal/utils");
+var locationruletypeenum_1 = require("./locationruletypeenum");
 // LocationRuleUpdateConditions
 /**
  * Scope of this rule, e.g. moves at or away from a specific location or towards a specific location. The `from_location` is mandatory. The `to_location` is either mandatory, optional or not allowed depending on rule type.
@@ -34,41 +37,41 @@ var LocationRuleUpdateConditions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_location" }),
         __metadata("design:type", String)
     ], LocationRuleUpdateConditions.prototype, "fromLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_location" }),
         __metadata("design:type", String)
     ], LocationRuleUpdateConditions.prototype, "toLocation", void 0);
     return LocationRuleUpdateConditions;
-}(SpeakeasyBase));
-export { LocationRuleUpdateConditions };
+}(utils_1.SpeakeasyBase));
+exports.LocationRuleUpdateConditions = LocationRuleUpdateConditions;
 var LocationRuleUpdate = /** @class */ (function (_super) {
     __extends(LocationRuleUpdate, _super);
     function LocationRuleUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions" }),
         __metadata("design:type", LocationRuleUpdateConditions)
     ], LocationRuleUpdate.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], LocationRuleUpdate.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], LocationRuleUpdate.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], LocationRuleUpdate.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LocationRuleUpdate.prototype, "type", void 0);
     return LocationRuleUpdate;
-}(SpeakeasyBase));
-export { LocationRuleUpdate };
+}(utils_1.SpeakeasyBase));
+exports.LocationRuleUpdate = LocationRuleUpdate;

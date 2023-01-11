@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SplitShardInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // SplitShardInput
 /**
  * Represents the input for <code>SplitShard</code>.
@@ -33,17 +36,17 @@ var SplitShardInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NewStartingHashKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NewStartingHashKey" }),
         __metadata("design:type", String)
     ], SplitShardInput.prototype, "newStartingHashKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardToSplit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardToSplit" }),
         __metadata("design:type", String)
     ], SplitShardInput.prototype, "shardToSplit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], SplitShardInput.prototype, "streamName", void 0);
     return SplitShardInput;
-}(SpeakeasyBase));
-export { SplitShardInput };
+}(utils_1.SpeakeasyBase));
+exports.SplitShardInput = SplitShardInput;

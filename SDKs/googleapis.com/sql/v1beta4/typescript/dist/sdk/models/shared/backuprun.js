@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiskEncryptionConfiguration } from "./diskencryptionconfiguration";
-import { DiskEncryptionStatus } from "./diskencryptionstatus";
-import { OperationError } from "./operationerror";
-export var BackupRunBackupKindEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupRun = exports.BackupRunTypeEnum = exports.BackupRunStatusEnum = exports.BackupRunBackupKindEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var diskencryptionconfiguration_1 = require("./diskencryptionconfiguration");
+var diskencryptionstatus_1 = require("./diskencryptionstatus");
+var operationerror_1 = require("./operationerror");
+var BackupRunBackupKindEnum;
 (function (BackupRunBackupKindEnum) {
     BackupRunBackupKindEnum["SqlBackupKindUnspecified"] = "SQL_BACKUP_KIND_UNSPECIFIED";
     BackupRunBackupKindEnum["Snapshot"] = "SNAPSHOT";
     BackupRunBackupKindEnum["Physical"] = "PHYSICAL";
-})(BackupRunBackupKindEnum || (BackupRunBackupKindEnum = {}));
-export var BackupRunStatusEnum;
+})(BackupRunBackupKindEnum = exports.BackupRunBackupKindEnum || (exports.BackupRunBackupKindEnum = {}));
+var BackupRunStatusEnum;
 (function (BackupRunStatusEnum) {
     BackupRunStatusEnum["SqlBackupRunStatusUnspecified"] = "SQL_BACKUP_RUN_STATUS_UNSPECIFIED";
     BackupRunStatusEnum["Enqueued"] = "ENQUEUED";
@@ -44,13 +47,13 @@ export var BackupRunStatusEnum;
     BackupRunStatusEnum["DeletionPending"] = "DELETION_PENDING";
     BackupRunStatusEnum["DeletionFailed"] = "DELETION_FAILED";
     BackupRunStatusEnum["Deleted"] = "DELETED";
-})(BackupRunStatusEnum || (BackupRunStatusEnum = {}));
-export var BackupRunTypeEnum;
+})(BackupRunStatusEnum = exports.BackupRunStatusEnum || (exports.BackupRunStatusEnum = {}));
+var BackupRunTypeEnum;
 (function (BackupRunTypeEnum) {
     BackupRunTypeEnum["SqlBackupRunTypeUnspecified"] = "SQL_BACKUP_RUN_TYPE_UNSPECIFIED";
     BackupRunTypeEnum["Automated"] = "AUTOMATED";
     BackupRunTypeEnum["OnDemand"] = "ON_DEMAND";
-})(BackupRunTypeEnum || (BackupRunTypeEnum = {}));
+})(BackupRunTypeEnum = exports.BackupRunTypeEnum || (exports.BackupRunTypeEnum = {}));
 // BackupRun
 /**
  * A BackupRun resource.
@@ -61,73 +64,73 @@ var BackupRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupKind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupKind" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "backupKind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionConfiguration" }),
-        __metadata("design:type", DiskEncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionConfiguration" }),
+        __metadata("design:type", diskencryptionconfiguration_1.DiskEncryptionConfiguration)
     ], BackupRun.prototype, "diskEncryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionStatus" }),
-        __metadata("design:type", DiskEncryptionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionStatus" }),
+        __metadata("design:type", diskencryptionstatus_1.DiskEncryptionStatus)
     ], BackupRun.prototype, "diskEncryptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enqueuedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enqueuedTime" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "enqueuedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", OperationError)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", operationerror_1.OperationError)
     ], BackupRun.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instance" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windowStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windowStartTime" }),
         __metadata("design:type", String)
     ], BackupRun.prototype, "windowStartTime", void 0);
     return BackupRun;
-}(SpeakeasyBase));
-export { BackupRun };
+}(utils_1.SpeakeasyBase));
+exports.BackupRun = BackupRun;

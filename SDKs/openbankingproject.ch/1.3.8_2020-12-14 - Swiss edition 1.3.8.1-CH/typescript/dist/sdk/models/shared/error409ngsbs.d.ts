@@ -6,6 +6,6 @@ import { TppMessage409Sbs } from "./tppmessage409sbs";
  *
 **/
 export declare class Error409NgSbs extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     tppMessages?: TppMessage409Sbs[];
 }

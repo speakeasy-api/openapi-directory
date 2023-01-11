@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionStateEnum } from "./optionstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionstateenum_1 = require("./optionstateenum");
 // OptionStatus
 /**
  * The status of domain configuration option.
@@ -34,25 +37,25 @@ var OptionStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], OptionStatus.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], OptionStatus.prototype, "pendingDeletion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionStatus.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], OptionStatus.prototype, "updateDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionStatus.prototype, "updateVersion", void 0);
     return OptionStatus;
-}(SpeakeasyBase));
-export { OptionStatus };
+}(utils_1.SpeakeasyBase));
+exports.OptionStatus = OptionStatus;

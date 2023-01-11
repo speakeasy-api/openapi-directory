@@ -1,4 +1,7 @@
-export var CompositionsFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositionsFilterTypeEnum = void 0;
+var CompositionsFilterTypeEnum;
 (function (CompositionsFilterTypeEnum) {
     CompositionsFilterTypeEnum["Abstract"] = "abstract";
     CompositionsFilterTypeEnum["Candid"] = "candid";
@@ -15,4 +18,4 @@ export var CompositionsFilterTypeEnum;
     CompositionsFilterTypeEnum["StillLife"] = "still_life";
     CompositionsFilterTypeEnum["ThreeQuarterLength"] = "three_quarter_length";
     CompositionsFilterTypeEnum["WaistUp"] = "waist_up";
-})(CompositionsFilterTypeEnum || (CompositionsFilterTypeEnum = {}));
+})(CompositionsFilterTypeEnum = exports.CompositionsFilterTypeEnum || (exports.CompositionsFilterTypeEnum = {}));

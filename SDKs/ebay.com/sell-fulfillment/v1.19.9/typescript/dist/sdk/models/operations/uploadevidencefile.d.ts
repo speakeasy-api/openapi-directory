@@ -8,7 +8,7 @@ export declare class UploadEvidenceFileSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class UploadEvidenceFileRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: UploadEvidenceFilePathParams;
     security: UploadEvidenceFileSecurity;
 }

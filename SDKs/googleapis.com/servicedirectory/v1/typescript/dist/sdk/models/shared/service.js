@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Endpoint } from "./endpoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceInput = exports.Service = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpoint_1 = require("./endpoint");
 // Service
 /**
  * An individual service. A service contains a name and optional metadata. A service must exist before endpoints can be added to it.
@@ -34,24 +37,24 @@ var Service = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoints", elemType: Endpoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoints", elemType: endpoint_1.Endpoint }),
         __metadata("design:type", Array)
     ], Service.prototype, "endpoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Service.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Service.prototype, "uid", void 0);
     return Service;
-}(SpeakeasyBase));
-export { Service };
+}(utils_1.SpeakeasyBase));
+exports.Service = Service;
 // ServiceInput
 /**
  * An individual service. A service contains a name and optional metadata. A service must exist before endpoints can be added to it.
@@ -62,13 +65,13 @@ var ServiceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], ServiceInput.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceInput.prototype, "name", void 0);
     return ServiceInput;
-}(SpeakeasyBase));
-export { ServiceInput };
+}(utils_1.SpeakeasyBase));
+exports.ServiceInput = ServiceInput;

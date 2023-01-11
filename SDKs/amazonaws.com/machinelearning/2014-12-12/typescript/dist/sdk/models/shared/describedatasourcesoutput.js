@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDataSourcesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
 // DescribeDataSourcesOutput
 /**
  * Represents the query results from a <a>DescribeDataSources</a> operation. The content is essentially a list of <code>DataSource</code>.
@@ -34,13 +37,13 @@ var DescribeDataSourcesOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Results", elemType: DataSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Results", elemType: datasource_1.DataSource }),
         __metadata("design:type", Array)
     ], DescribeDataSourcesOutput.prototype, "results", void 0);
     return DescribeDataSourcesOutput;
-}(SpeakeasyBase));
-export { DescribeDataSourcesOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDataSourcesOutput = DescribeDataSourcesOutput;

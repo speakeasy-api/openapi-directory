@@ -94,7 +94,7 @@ export class IssuesUpdateResponse extends SpeakeasyBase {
   issue?: shared.Issue;
 
   @SpeakeasyMetadata()
-  issuesUpdate503ApplicationJsonObject?: IssuesUpdate503ApplicationJson;
+  issuesUpdate503ApplicationJSONObject?: IssuesUpdate503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

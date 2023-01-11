@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
 // Volume
 /**
  * Describes an instance's Amazon EBS volume.
@@ -33,61 +36,61 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], Volume.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Device" }),
         __metadata("design:type", String)
     ], Volume.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ec2VolumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ec2VolumeId" }),
         __metadata("design:type", String)
     ], Volume.prototype, "ec2VolumeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Encrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Encrypted" }),
         __metadata("design:type", Boolean)
     ], Volume.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], Volume.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Iops" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Iops" }),
         __metadata("design:type", Number)
     ], Volume.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MountPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MountPoint" }),
         __metadata("design:type", String)
     ], Volume.prototype, "mountPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Volume.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RaidArrayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RaidArrayId" }),
         __metadata("design:type", String)
     ], Volume.prototype, "raidArrayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Region" }),
         __metadata("design:type", String)
     ], Volume.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Size" }),
         __metadata("design:type", Number)
     ], Volume.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Volume.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VolumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VolumeId" }),
         __metadata("design:type", String)
     ], Volume.prototype, "volumeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VolumeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VolumeType" }),
         __metadata("design:type", String)
     ], Volume.prototype, "volumeType", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

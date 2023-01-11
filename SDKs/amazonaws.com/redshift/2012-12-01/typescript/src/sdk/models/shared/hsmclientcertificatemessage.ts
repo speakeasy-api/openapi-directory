@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HsmClientCertificate } from "./hsmclientcertificate";
+import { HsmClientCertificateList } from "./hsmclientcertificatelist";
 
 
 
@@ -8,8 +8,8 @@ import { HsmClientCertificate } from "./hsmclientcertificate";
  * <p/>
 **/
 export class HsmClientCertificateMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: HsmClientCertificate })
-  hsmClientCertificates?: HsmClientCertificate[];
+  @SpeakeasyMetadata({ elemType: HsmClientCertificateList })
+  hsmClientCertificates?: HsmClientCertificateList[];
 
   @SpeakeasyMetadata()
   marker?: string;

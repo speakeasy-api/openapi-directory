@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentTemplateSummary } from "./experimenttemplatesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListExperimentTemplatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimenttemplatesummary_1 = require("./experimenttemplatesummary");
 var ListExperimentTemplatesResponse = /** @class */ (function (_super) {
     __extends(ListExperimentTemplatesResponse, _super);
     function ListExperimentTemplatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=experimentTemplates", elemType: ExperimentTemplateSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=experimentTemplates", elemType: experimenttemplatesummary_1.ExperimentTemplateSummary }),
         __metadata("design:type", Array)
     ], ListExperimentTemplatesResponse.prototype, "experimentTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListExperimentTemplatesResponse.prototype, "nextToken", void 0);
     return ListExperimentTemplatesResponse;
-}(SpeakeasyBase));
-export { ListExperimentTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListExperimentTemplatesResponse = ListExperimentTemplatesResponse;

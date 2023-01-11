@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentCircuitBreaker } from "./deploymentcircuitbreaker";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentcircuitbreaker_1 = require("./deploymentcircuitbreaker");
 // DeploymentConfiguration
 /**
  * Optional deployment parameters that control how many tasks run during a deployment and the ordering of stopping and starting tasks.
@@ -34,17 +37,17 @@ var DeploymentConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentCircuitBreaker" }),
-        __metadata("design:type", DeploymentCircuitBreaker)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentCircuitBreaker" }),
+        __metadata("design:type", deploymentcircuitbreaker_1.DeploymentCircuitBreaker)
     ], DeploymentConfiguration.prototype, "deploymentCircuitBreaker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPercent" }),
         __metadata("design:type", Number)
     ], DeploymentConfiguration.prototype, "maximumPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumHealthyPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumHealthyPercent" }),
         __metadata("design:type", Number)
     ], DeploymentConfiguration.prototype, "minimumHealthyPercent", void 0);
     return DeploymentConfiguration;
-}(SpeakeasyBase));
-export { DeploymentConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentConfiguration = DeploymentConfiguration;

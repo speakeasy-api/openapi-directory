@@ -1,0 +1,1452 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class V1 {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * certificateActionRetrieve - Retrieve all certificate actions
+   *
+   * This method is used to retrieve all stateful actions relating to a certificate lifecycle.
+  **/
+  certificateActionRetrieve(
+    req: operations.CertificateActionRetrieveRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateActionRetrieveResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateActionRetrieveRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/actions", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateActionRetrieveResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.arrayOfCertificateAction = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateAlternateEmailAddress - Add alternate email address
+   *
+   * This method adds an alternate email address to a certificate order and re-sends all existing request emails to that address.
+  **/
+  certificateAlternateEmailAddress(
+    req: operations.CertificateAlternateEmailAddressRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateAlternateEmailAddressResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateAlternateEmailAddressRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/email/resend/{emailAddress}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateAlternateEmailAddressResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateEmailHistory = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateCallbackDelete - Unregister system callback
+   *
+   * Unregister the callback for a particular certificate.
+  **/
+  certificateCallbackDelete(
+    req: operations.CertificateCallbackDeleteRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateCallbackDeleteResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateCallbackDeleteRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/callback", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateCallbackDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateCallbackGet - Retrieve system stateful action callback url
+   *
+   * This method is used to retrieve the registered callback url for a certificate.
+  **/
+  certificateCallbackGet(
+    req: operations.CertificateCallbackGetRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateCallbackGetResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateCallbackGetRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/callback", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateCallbackGetResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateCallback = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateCallbackReplace - Register of certificate action callback
+   *
+   * This method is used to register/replace url for callbacks for stateful actions relating to a certificate lifecycle. The callback url is a Webhook style pattern and will receive POST http requests with json body defined in the CertificateAction model definition for each certificate action.  Only one callback URL is allowed to be registered for each certificateId, so it will replace a previous registration.
+  **/
+  certificateCallbackReplace(
+    req: operations.CertificateCallbackReplaceRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateCallbackReplaceResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateCallbackReplaceRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/callback", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateCallbackReplaceResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateCancel - Cancel a pending certificate
+   *
+   * Use the cancel call to cancel a pending certificate order.
+  **/
+  certificateCancel(
+    req: operations.CertificateCancelRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateCancelResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateCancelRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/cancel", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateCancelResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateCreate - Create a pending order for certificate
+   *
+   * <p>Creating a certificate order can be a long running asynchronous operation in the PKI workflow. The PKI API supports 2 options for getting the completion stateful actions for this asynchronous operations: 1) by polling operations -- see /v1/certificates/{certificateId}/actions 2) via WebHook style callback -- see '/v1/certificates/{certificateId}/callback'.</p>
+  **/
+  certificateCreate(
+    req: operations.CertificateCreateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateCreateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateCreateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v1/certificates";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateCreateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 202:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateIdentifier = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateDownload - Download certificate
+  **/
+  certificateDownload(
+    req: operations.CertificateDownloadRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateDownloadResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateDownloadRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/download", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateDownloadResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateBundle = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateDownloadEntitlement - Download certificate by entitlement
+  **/
+  certificateDownloadEntitlement(
+    req: operations.CertificateDownloadEntitlementRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateDownloadEntitlementResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateDownloadEntitlementRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/certificates/download";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateDownloadEntitlementResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateBundle = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateEmailHistory - Retrieve email history
+   *
+   * This method can be used to retrieve all emails sent for a certificate.
+  **/
+  certificateEmailHistory(
+    req: operations.CertificateEmailHistoryRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateEmailHistoryResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateEmailHistoryRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/email/history", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateEmailHistoryResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateEmailHistory = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateGet - Retrieve certificate details
+   *
+   * Once the certificate order has been created, this method can be used to check the status of the certificate. This method can also be used to retrieve details of the certificate.
+  **/
+  certificateGet(
+    req: operations.CertificateGetRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateGetResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateGetRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateGetResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificate = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateGetEntitlement - Search for certificate details by entitlement
+   *
+   * Once the certificate order has been created, this method can be used to check the status of the certificate. This method can also be used to retrieve details of the certificates associated to an entitlement.
+  **/
+  certificateGetEntitlement(
+    req: operations.CertificateGetEntitlementRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateGetEntitlementResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateGetEntitlementRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/certificates";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateGetEntitlementResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificates = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateReissue - Reissue active certificate
+   *
+   * <p>Rekeying is the process by which the private and public key is changed for a certificate. It is a simplified reissue,where only the CSR is changed. Reissuing is the process by which domain names are added or removed from a certificate.Once a request is validated and approved, the certificate will be reissued with the new common name and sans specified. Unlimited reissues are available during the lifetime of the certificate.New names added to a certificate that do not share the base domain of the common name may take additional time to validate. If this API call is made before a previous pending reissue has been validated and issued, the previous reissue request is automatically rejected and replaced with the current request.</p>
+  **/
+  certificateReissue(
+    req: operations.CertificateReissueRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateReissueResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateReissueRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/reissue", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateReissueResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 202:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateRenew - Renew active certificate
+   *
+   * Renewal is the process by which the validity of a certificate is extended. Renewal is only available 60 days prior to expiration of the previous certificate and 30 days after the expiration of the previous certificate. The renewal supports modifying a set of the original certificate order information. Once a request is validated and approved, the certificate will be issued with extended validity. Since subject alternative names can be removed during a renewal, we require that you provide the subject alternative names you expect in the renewed certificate. New names added to a certificate that do not share the base domain of the common name may take additional time to validate. </p>
+  **/
+  certificateRenew(
+    req: operations.CertificateRenewRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateRenewResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateRenewRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/renew", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateRenewResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 202:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateResendEmail - Resend an email
+   *
+   * This method can be used to resend emails by providing the certificate id and the email id
+  **/
+  certificateResendEmail(
+    req: operations.CertificateResendEmailRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateResendEmailResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateResendEmailRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/email/{emailId}/resend", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateResendEmailResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateResendEmailAddress - Resend email to email address
+   *
+   * This method can be used to resend emails by providing the certificate id, the email id, and the recipient email address
+  **/
+  certificateResendEmailAddress(
+    req: operations.CertificateResendEmailAddressRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateResendEmailAddressResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateResendEmailAddressRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/email/{emailId}/resend/{emailAddress}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateResendEmailAddressResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateRevoke - Revoke active certificate
+   *
+   * Use revoke call to revoke an active certificate, if the certificate has not been issued a 404 response will be returned.
+  **/
+  certificateRevoke(
+    req: operations.CertificateRevokeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateRevokeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateRevokeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/revoke", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateRevokeResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateSitesealGet - Get Site seal
+   *
+   * <p>This method is used to obtain the site seal information for an issued certificate. A site seal is a graphic that the certificate purchaser can embed on their web site to show their visitors information about their SSL certificate. If a web site visitor clicks on the site seal image, a pop-up page is displayed that contains detailed information about the SSL certificate. The site seal token is used to link the site seal graphic image to the appropriate certificate details pop-up page display when a user clicks on the site seal. The site seal images are expected to be static images and hosted on the reseller's website, to minimize delays for customer page load times.</p>
+  **/
+  certificateSitesealGet(
+    req: operations.CertificateSitesealGetRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateSitesealGetResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateSitesealGetRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/siteSeal", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateSitesealGetResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.certificateSiteSeal = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateValidate - Validate a pending order for certificate
+  **/
+  certificateValidate(
+    req: operations.CertificateValidateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateValidateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateValidateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v1/certificates/validate";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateValidateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 422:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * certificateVerifydomaincontrol - Check Domain Control
+   *
+   * Domain control is a means for verifying the domain included in the certificate order. This resource is useful for resellers that control the domains for their customers, and can expedite the verification process. See https://www.godaddy.com/help/verifying-your-domain-ownership-for-ssl-certificate-requests-html-or-dns-7452
+  **/
+  certificateVerifydomaincontrol(
+    req: operations.CertificateVerifydomaincontrolRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CertificateVerifydomaincontrolResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CertificateVerifydomaincontrolRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/certificates/{certificateId}/verifyDomainControl", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CertificateVerifydomaincontrolResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 401:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 500:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

@@ -1,4 +1,7 @@
-export var MediaFieldsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaFieldsParameterEnum = void 0;
+var MediaFieldsParameterEnum;
 (function (MediaFieldsParameterEnum) {
     MediaFieldsParameterEnum["MediaKey"] = "media_key";
     MediaFieldsParameterEnum["DurationMs"] = "duration_ms";
@@ -11,4 +14,4 @@ export var MediaFieldsParameterEnum;
     MediaFieldsParameterEnum["NonPublicMetrics"] = "non_public_metrics";
     MediaFieldsParameterEnum["OrganicMetrics"] = "organic_metrics";
     MediaFieldsParameterEnum["PromotedMetrics"] = "promoted_metrics";
-})(MediaFieldsParameterEnum || (MediaFieldsParameterEnum = {}));
+})(MediaFieldsParameterEnum = exports.MediaFieldsParameterEnum || (exports.MediaFieldsParameterEnum = {}));

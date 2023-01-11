@@ -6,7 +6,7 @@ export declare class ApplicationInfo extends SpeakeasyBase {
     cweMonitorEnabled?: boolean;
     lifeCycle?: string;
     opsCenterEnabled?: boolean;
-    opsItemSnsTopicArn?: string;
+    opsItemSNSTopicArn?: string;
     remarks?: string;
     resourceGroupName?: string;
 }

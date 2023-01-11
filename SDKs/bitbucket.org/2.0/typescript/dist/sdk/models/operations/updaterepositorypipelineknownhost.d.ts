@@ -6,11 +6,11 @@ export declare class UpdateRepositoryPipelineKnownHostPathParams extends Speakea
 }
 export declare class UpdateRepositoryPipelineKnownHostRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryPipelineKnownHostPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryPipelineKnownHostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineKnownHost?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineKnownHost?: Record<string, any>;
 }

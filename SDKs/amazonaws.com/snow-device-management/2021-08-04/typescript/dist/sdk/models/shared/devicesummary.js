@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeviceSummary
 /**
  * Identifying information about the device.
@@ -33,21 +36,21 @@ var DeviceSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedWithJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedWithJob" }),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "associatedWithJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedDeviceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedDeviceArn" }),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "managedDeviceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedDeviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedDeviceId" }),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "managedDeviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], DeviceSummary.prototype, "tags", void 0);
     return DeviceSummary;
-}(SpeakeasyBase));
-export { DeviceSummary };
+}(utils_1.SpeakeasyBase));
+exports.DeviceSummary = DeviceSummary;

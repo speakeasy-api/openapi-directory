@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CarListingRank extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ranked_listing" })
-  rankedListing?: Map<string, any>;
+  rankedListing?: Record<string, any>;
 }

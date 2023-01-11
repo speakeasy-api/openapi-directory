@@ -8,5 +8,5 @@ export class GetConnectivityInfoResponse extends SpeakeasyBase {
   connectivityInfo?: ConnectivityInfo[];
 
   @SpeakeasyMetadata({ data: "json, name=Message" })
-  message?: string;
+  message?: Record<string, any>;
 }

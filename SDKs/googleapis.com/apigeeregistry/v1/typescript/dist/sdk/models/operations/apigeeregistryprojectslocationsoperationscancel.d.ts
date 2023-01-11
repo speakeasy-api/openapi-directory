@@ -23,11 +23,11 @@ export declare class ApigeeregistryProjectsLocationsOperationsCancelSecurity ext
 export declare class ApigeeregistryProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: ApigeeregistryProjectsLocationsOperationsCancelPathParams;
     queryParams: ApigeeregistryProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ApigeeregistryProjectsLocationsOperationsCancelSecurity;
 }
 export declare class ApigeeregistryProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

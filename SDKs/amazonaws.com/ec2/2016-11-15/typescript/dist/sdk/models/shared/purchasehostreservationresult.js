@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyCodeValuesEnum } from "./currencycodevaluesenum";
-import { Purchase } from "./purchase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PurchaseHostReservationResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var PurchaseHostReservationResult = /** @class */ (function (_super) {
     __extends(PurchaseHostReservationResult, _super);
     function PurchaseHostReservationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseHostReservationResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseHostReservationResult.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Purchase }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseHostReservationResult.prototype, "purchase", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseHostReservationResult.prototype, "totalHourlyPrice", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseHostReservationResult.prototype, "totalUpfrontPrice", void 0);
     return PurchaseHostReservationResult;
-}(SpeakeasyBase));
-export { PurchaseHostReservationResult };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseHostReservationResult = PurchaseHostReservationResult;

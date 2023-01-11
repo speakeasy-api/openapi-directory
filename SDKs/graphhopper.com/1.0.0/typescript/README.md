@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AsyncClusteringProblemRequest, AsyncClusteringProblemResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -36,50 +35,50 @@ const req: AsyncClusteringProblemRequest = {
   request: {
     configuration: {
       clustering: {
-        maxQuantity: 17.200001,
-        minQuantity: 37.200001,
-        numClusters: 98.199997,
+        maxQuantity: 74.099998,
+        minQuantity: 53.099998,
+        numClusters: 15.100000,
       },
-      responseType: "hic",
+      responseType: "expedita",
       routing: {
-        costPerMeter: 62.099998,
-        costPerSecond: 98.199997,
-        profile: "et",
+        costPerMeter: 77.099998,
+        costPerSecond: 28.100000,
+        profile: "rerum",
       },
     },
     customers: [
       {
         address: {
-          lat: 44.099998,
-          lon: 79.199997,
-          streetHint: "nam",
+          lat: 48.099998,
+          lon: 26.200001,
+          streetHint: "dolorem",
+        },
+        id: "et",
+        quantity: 94.199997,
+      },
+      {
+        address: {
+          lat: 68.099998,
+          lon: 80.199997,
+          streetHint: "debitis",
         },
         id: "vel",
-        quantity: 12.100000,
+        quantity: 20.200001,
       },
       {
         address: {
-          lat: 74.099998,
-          lon: 96.199997,
-          streetHint: "quod",
+          lat: 12.200000,
+          lon: 88.199997,
+          streetHint: "commodi",
         },
-        id: "consequatur",
-        quantity: 80.099998,
-      },
-      {
-        address: {
-          lat: 63.200001,
-          lon: 47.200001,
-          streetHint: "sed",
-        },
-        id: "dolores",
-        quantity: 32.200001,
+        id: "quis",
+        quantity: 93.099998,
       },
     ],
   },
 };
 
-sdk.clusterApi.asyncClusteringProblem(req).then((res: AsyncClusteringProblemResponse | AxiosError) => {
+sdk.clusterAPI.asyncClusteringProblem(req).then((res: AsyncClusteringProblemResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -121,8 +120,8 @@ sdk.clusterApi.asyncClusteringProblem(req).then((res: AsyncClusteringProblemResp
 
 ### Routing API
 
-* `getRouteInfo` - Coverage information
 * `getRoute` - GET Route Endpoint
+* `getRouteInfo` - Coverage information
 * `postRoute` - POST Route Endpoint
 
 <!-- End SDK Available Operations -->

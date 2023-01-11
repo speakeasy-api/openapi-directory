@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcLinkStatusEnum } from "./vpclinkstatusenum";
-import { VpcLinkVersionEnum } from "./vpclinkversionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVpcLinkResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVpcLinkResponse = /** @class */ (function (_super) {
     __extends(GetVpcLinkResponse, _super);
     function GetVpcLinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedDate" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcLinkId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcLinkId" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "vpcLinkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcLinkStatus" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcLinkStatus" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "vpcLinkStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcLinkStatusMessage" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcLinkStatusMessage" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "vpcLinkStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcLinkVersion" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcLinkVersion" }),
+        __metadata("design:type", Object)
     ], GetVpcLinkResponse.prototype, "vpcLinkVersion", void 0);
     return GetVpcLinkResponse;
-}(SpeakeasyBase));
-export { GetVpcLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVpcLinkResponse = GetVpcLinkResponse;

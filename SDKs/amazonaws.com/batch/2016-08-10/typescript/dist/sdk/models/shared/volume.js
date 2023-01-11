@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EfsVolumeConfiguration } from "./efsvolumeconfiguration";
-import { Host } from "./host";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
+var efsvolumeconfiguration_1 = require("./efsvolumeconfiguration");
+var host_1 = require("./host");
 // Volume
 /**
  * A data volume used in a job's container properties.
@@ -35,17 +38,17 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=efsVolumeConfiguration" }),
-        __metadata("design:type", EfsVolumeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=efsVolumeConfiguration" }),
+        __metadata("design:type", efsvolumeconfiguration_1.EfsVolumeConfiguration)
     ], Volume.prototype, "efsVolumeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
-        __metadata("design:type", Host)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
+        __metadata("design:type", host_1.Host)
     ], Volume.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Volume.prototype, "name", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

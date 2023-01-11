@@ -29,6 +29,6 @@ export declare class ProjectsCreateCardResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     projectCard?: shared.ProjectCard;
-    projectsCreateCard422ApplicationJsonOneOf?: any;
-    projectsCreateCard503ApplicationJsonObject?: ProjectsCreateCard503ApplicationJson;
+    projectsCreateCard422ApplicationJSONOneOf?: any;
+    projectsCreateCard503ApplicationJSONObject?: ProjectsCreateCard503ApplicationJson;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest, PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -36,10 +35,10 @@ const req: PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest = {
   request: {
     inputs: [
       {
-        callbackId: "nam",
+        callbackId: "voluptas",
         outputFields: {
-          "blanditiis": "temporibus",
-          "laborum": "quia",
+          "expedita": "consequuntur",
+          "dolor": "expedita",
         },
       },
     ],

@@ -41,7 +41,7 @@ export class GetRepositoriesWorkspaceRepoSlugDeployKeysResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedDeployKeys?: shared.PaginatedDeployKeys;

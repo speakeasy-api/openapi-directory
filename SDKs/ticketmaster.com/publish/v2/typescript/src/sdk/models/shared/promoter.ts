@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Promoter extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=descriptions" })
-  descriptions?: Map<string, string>;
+  descriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 }

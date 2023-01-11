@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPipelineVariableForUserResponse = exports.GetPipelineVariableForUserRequest = exports.GetPipelineVariableForUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPipelineVariableForUserPathParams = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForUserPathParams, _super);
     function GetPipelineVariableForUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
         __metadata("design:type", String)
     ], GetPipelineVariableForUserPathParams.prototype, "selectedUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], GetPipelineVariableForUserPathParams.prototype, "variableUuid", void 0);
     return GetPipelineVariableForUserPathParams;
-}(SpeakeasyBase));
-export { GetPipelineVariableForUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForUserPathParams = GetPipelineVariableForUserPathParams;
 var GetPipelineVariableForUserRequest = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForUserRequest, _super);
     function GetPipelineVariableForUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPipelineVariableForUserPathParams)
     ], GetPipelineVariableForUserRequest.prototype, "pathParams", void 0);
     return GetPipelineVariableForUserRequest;
-}(SpeakeasyBase));
-export { GetPipelineVariableForUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForUserRequest = GetPipelineVariableForUserRequest;
 var GetPipelineVariableForUserResponse = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForUserResponse, _super);
     function GetPipelineVariableForUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPipelineVariableForUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPipelineVariableForUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPipelineVariableForUserResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPipelineVariableForUserResponse.prototype, "pipelineVariable", void 0);
     return GetPipelineVariableForUserResponse;
-}(SpeakeasyBase));
-export { GetPipelineVariableForUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForUserResponse = GetPipelineVariableForUserResponse;

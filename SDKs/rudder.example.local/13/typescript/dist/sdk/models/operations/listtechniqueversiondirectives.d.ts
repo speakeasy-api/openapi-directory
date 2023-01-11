@@ -25,5 +25,5 @@ export declare class ListTechniqueVersionDirectivesRequest extends SpeakeasyBase
 export declare class ListTechniqueVersionDirectivesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listTechniqueVersionDirectives200ApplicationJsonObject?: ListTechniqueVersionDirectives200ApplicationJson;
+    listTechniqueVersionDirectives200ApplicationJSONObject?: ListTechniqueVersionDirectives200ApplicationJson;
 }

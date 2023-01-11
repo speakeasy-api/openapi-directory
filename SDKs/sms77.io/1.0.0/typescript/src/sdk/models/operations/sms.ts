@@ -123,13 +123,13 @@ export class SmsRequest extends SpeakeasyBase {
 
 export class SmsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
-
-  @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  sms200ApplicationJsonObject?: Sms200ApplicationJson;
+  sms200ApplicationJSONObject?: Sms200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  sms200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

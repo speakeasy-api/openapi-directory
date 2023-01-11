@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class SubmitPodcastHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class SubmitPodcastRequest extends SpeakeasyBase {
     headers: SubmitPodcastHeaders;
@@ -9,7 +9,7 @@ export declare class SubmitPodcastRequest extends SpeakeasyBase {
 }
 export declare class SubmitPodcastResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     submitPodcastResponse?: shared.SubmitPodcastResponse;
 }

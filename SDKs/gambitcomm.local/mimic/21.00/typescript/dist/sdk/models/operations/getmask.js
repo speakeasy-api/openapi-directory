@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMaskResponse = exports.GetMaskRequest = exports.GetMaskPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMaskPathParams = /** @class */ (function (_super) {
     __extends(GetMaskPathParams, _super);
     function GetMaskPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetMaskPathParams.prototype, "agentNum", void 0);
     return GetMaskPathParams;
-}(SpeakeasyBase));
-export { GetMaskPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMaskPathParams = GetMaskPathParams;
 var GetMaskRequest = /** @class */ (function (_super) {
     __extends(GetMaskRequest, _super);
     function GetMaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMaskPathParams)
     ], GetMaskRequest.prototype, "pathParams", void 0);
     return GetMaskRequest;
-}(SpeakeasyBase));
-export { GetMaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMaskRequest = GetMaskRequest;
 var GetMaskResponse = /** @class */ (function (_super) {
     __extends(GetMaskResponse, _super);
     function GetMaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMaskResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetMaskResponse.prototype, "getMask200ApplicationJsonString", void 0);
+    ], GetMaskResponse.prototype, "getMask200ApplicationJSONString", void 0);
     return GetMaskResponse;
-}(SpeakeasyBase));
-export { GetMaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMaskResponse = GetMaskResponse;

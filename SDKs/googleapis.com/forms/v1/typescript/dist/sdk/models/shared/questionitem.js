@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageInput } from "./image";
-import { QuestionInput } from "./question";
-import { Image } from "./image";
-import { Question } from "./question";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionItem = exports.QuestionItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
+var question_1 = require("./question");
+var image_2 = require("./image");
+var question_2 = require("./question");
 // QuestionItemInput
 /**
  * A form item containing a single question.
@@ -37,16 +40,16 @@ var QuestionItemInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", ImageInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.ImageInput)
     ], QuestionItemInput.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
-        __metadata("design:type", QuestionInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
+        __metadata("design:type", question_1.QuestionInput)
     ], QuestionItemInput.prototype, "question", void 0);
     return QuestionItemInput;
-}(SpeakeasyBase));
-export { QuestionItemInput };
+}(utils_1.SpeakeasyBase));
+exports.QuestionItemInput = QuestionItemInput;
 // QuestionItem
 /**
  * A form item containing a single question.
@@ -57,13 +60,13 @@ var QuestionItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_2.Image)
     ], QuestionItem.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
-        __metadata("design:type", Question)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
+        __metadata("design:type", question_2.Question)
     ], QuestionItem.prototype, "question", void 0);
     return QuestionItem;
-}(SpeakeasyBase));
-export { QuestionItem };
+}(utils_1.SpeakeasyBase));
+exports.QuestionItem = QuestionItem;

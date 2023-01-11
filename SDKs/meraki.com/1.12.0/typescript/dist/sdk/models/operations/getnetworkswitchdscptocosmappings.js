@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSwitchDscpToCosMappingsResponse = exports.GetNetworkSwitchDscpToCosMappingsRequest = exports.GetNetworkSwitchDscpToCosMappingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSwitchDscpToCosMappingsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDscpToCosMappingsPathParams, _super);
     function GetNetworkSwitchDscpToCosMappingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchDscpToCosMappingsPathParams.prototype, "networkId", void 0);
     return GetNetworkSwitchDscpToCosMappingsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDscpToCosMappingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDscpToCosMappingsPathParams = GetNetworkSwitchDscpToCosMappingsPathParams;
 var GetNetworkSwitchDscpToCosMappingsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDscpToCosMappingsRequest, _super);
     function GetNetworkSwitchDscpToCosMappingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSwitchDscpToCosMappingsPathParams)
     ], GetNetworkSwitchDscpToCosMappingsRequest.prototype, "pathParams", void 0);
     return GetNetworkSwitchDscpToCosMappingsRequest;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDscpToCosMappingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDscpToCosMappingsRequest = GetNetworkSwitchDscpToCosMappingsRequest;
 var GetNetworkSwitchDscpToCosMappingsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDscpToCosMappingsResponse, _super);
     function GetNetworkSwitchDscpToCosMappingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSwitchDscpToCosMappingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSwitchDscpToCosMappingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSwitchDscpToCosMappingsResponse.prototype, "getNetworkSwitchDscpToCosMappings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSwitchDscpToCosMappingsResponse.prototype, "getNetworkSwitchDscpToCosMappings200ApplicationJSONObject", void 0);
     return GetNetworkSwitchDscpToCosMappingsResponse;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDscpToCosMappingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDscpToCosMappingsResponse = GetNetworkSwitchDscpToCosMappingsResponse;

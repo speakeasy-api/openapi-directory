@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcitystandardRequest, GetcitystandardResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcitystandardRequest = {
   queryParams: {
-    city: "molestiae",
-    license: "quia",
+    city: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getcitystandard(req).then((res: GetcitystandardResponse | AxiosError) => {
+sdk.cityDataStandardization.getcitystandard(req).then((res: GetcitystandardResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcitystandard(req).then((res: GetcitystandardResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### City Data Standardization
 
 * `getcitystandard` - Gets a city name standard for US and international cities
 

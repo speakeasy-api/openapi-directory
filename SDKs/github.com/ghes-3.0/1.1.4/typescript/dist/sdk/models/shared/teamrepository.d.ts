@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * License Simple
+**/
 export declare class TeamRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -7,6 +10,9 @@ export declare class TeamRepositoryLicenseSimple extends SpeakeasyBase {
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class TeamRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -35,6 +41,9 @@ export declare class TeamRepositoryPermissions extends SpeakeasyBase {
     push: boolean;
     triage?: boolean;
 }
+/**
+ * License Simple
+**/
 export declare class TeamRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -43,6 +52,9 @@ export declare class TeamRepositoryRepositoryLicenseSimple extends SpeakeasyBase
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class TeamRepositoryRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -178,6 +190,9 @@ export declare class TeamRepositoryRepositoryTemplateRepository extends Speakeas
     visibility?: string;
     watchersCount?: number;
 }
+/**
+ * A git repository
+**/
 export declare class TeamRepositoryRepository extends SpeakeasyBase {
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;

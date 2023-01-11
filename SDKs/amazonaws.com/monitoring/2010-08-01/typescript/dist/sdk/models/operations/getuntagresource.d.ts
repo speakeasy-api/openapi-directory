@@ -7,7 +7,7 @@ export declare enum GetUntagResourceVersionEnum {
 }
 export declare class GetUntagResourceQueryParams extends SpeakeasyBase {
     action: GetUntagResourceActionEnum;
-    resourceArn: string;
+    resourceARN: string;
     tagKeys: string[];
     version: GetUntagResourceVersionEnum;
 }

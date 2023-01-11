@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourcesApiGetListResponse = exports.ResourcesApiGetListRequest = exports.ResourcesApiGetListQueryParams = exports.ResourcesApiGetListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResourcesApiGetListPathParams = /** @class */ (function (_super) {
     __extends(ResourcesApiGetListPathParams, _super);
     function ResourcesApiGetListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cultureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cultureCode" }),
         __metadata("design:type", String)
     ], ResourcesApiGetListPathParams.prototype, "cultureCode", void 0);
     return ResourcesApiGetListPathParams;
-}(SpeakeasyBase));
-export { ResourcesApiGetListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ResourcesApiGetListPathParams = ResourcesApiGetListPathParams;
 var ResourcesApiGetListQueryParams = /** @class */ (function (_super) {
     __extends(ResourcesApiGetListQueryParams, _super);
     function ResourcesApiGetListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setNames" }),
         __metadata("design:type", Array)
     ], ResourcesApiGetListQueryParams.prototype, "setNames", void 0);
     return ResourcesApiGetListQueryParams;
-}(SpeakeasyBase));
-export { ResourcesApiGetListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ResourcesApiGetListQueryParams = ResourcesApiGetListQueryParams;
 var ResourcesApiGetListRequest = /** @class */ (function (_super) {
     __extends(ResourcesApiGetListRequest, _super);
     function ResourcesApiGetListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResourcesApiGetListPathParams)
     ], ResourcesApiGetListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResourcesApiGetListQueryParams)
     ], ResourcesApiGetListRequest.prototype, "queryParams", void 0);
     return ResourcesApiGetListRequest;
-}(SpeakeasyBase));
-export { ResourcesApiGetListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResourcesApiGetListRequest = ResourcesApiGetListRequest;
 var ResourcesApiGetListResponse = /** @class */ (function (_super) {
     __extends(ResourcesApiGetListResponse, _super);
     function ResourcesApiGetListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResourcesApiGetListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ResourcesApiGetListResponse.prototype, "resourcesApiGetList200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResourcesApiGetListResponse.prototype, "resourcesApiGetList200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ResourcesApiGetListResponse.prototype, "resourcesApiGetList200TextJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResourcesApiGetListResponse.prototype, "resourcesApiGetList200TextJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResourcesApiGetListResponse.prototype, "statusCode", void 0);
     return ResourcesApiGetListResponse;
-}(SpeakeasyBase));
-export { ResourcesApiGetListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResourcesApiGetListResponse = ResourcesApiGetListResponse;

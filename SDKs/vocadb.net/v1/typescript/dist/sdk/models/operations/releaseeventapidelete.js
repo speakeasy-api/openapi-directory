@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReleaseEventApiDeleteResponse = exports.ReleaseEventApiDeleteRequest = exports.ReleaseEventApiDeleteQueryParams = exports.ReleaseEventApiDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReleaseEventApiDeletePathParams = /** @class */ (function (_super) {
     __extends(ReleaseEventApiDeletePathParams, _super);
     function ReleaseEventApiDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], ReleaseEventApiDeletePathParams.prototype, "id", void 0);
     return ReleaseEventApiDeletePathParams;
-}(SpeakeasyBase));
-export { ReleaseEventApiDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiDeletePathParams = ReleaseEventApiDeletePathParams;
 var ReleaseEventApiDeleteQueryParams = /** @class */ (function (_super) {
     __extends(ReleaseEventApiDeleteQueryParams, _super);
     function ReleaseEventApiDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
         __metadata("design:type", Boolean)
     ], ReleaseEventApiDeleteQueryParams.prototype, "hardDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], ReleaseEventApiDeleteQueryParams.prototype, "notes", void 0);
     return ReleaseEventApiDeleteQueryParams;
-}(SpeakeasyBase));
-export { ReleaseEventApiDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiDeleteQueryParams = ReleaseEventApiDeleteQueryParams;
 var ReleaseEventApiDeleteRequest = /** @class */ (function (_super) {
     __extends(ReleaseEventApiDeleteRequest, _super);
     function ReleaseEventApiDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventApiDeletePathParams)
     ], ReleaseEventApiDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventApiDeleteQueryParams)
     ], ReleaseEventApiDeleteRequest.prototype, "queryParams", void 0);
     return ReleaseEventApiDeleteRequest;
-}(SpeakeasyBase));
-export { ReleaseEventApiDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiDeleteRequest = ReleaseEventApiDeleteRequest;
 var ReleaseEventApiDeleteResponse = /** @class */ (function (_super) {
     __extends(ReleaseEventApiDeleteResponse, _super);
     function ReleaseEventApiDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReleaseEventApiDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReleaseEventApiDeleteResponse.prototype, "statusCode", void 0);
     return ReleaseEventApiDeleteResponse;
-}(SpeakeasyBase));
-export { ReleaseEventApiDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiDeleteResponse = ReleaseEventApiDeleteResponse;

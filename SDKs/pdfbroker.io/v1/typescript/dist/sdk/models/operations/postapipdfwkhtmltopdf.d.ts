@@ -6,7 +6,7 @@ export declare class PostApiPdfWkhtmltopdfRequest extends SpeakeasyBase {
 export declare class PostApiPdfWkhtmltopdfResponse extends SpeakeasyBase {
     contentType: string;
     errorResponseDto?: shared.ErrorResponseDto;
-    postApiPdfWkhtmltopdf200ApplicationPdfBinaryString?: Uint8Array;
     pdfResponseDto?: shared.PdfResponseDto;
     statusCode: number;
+    postApiPdfWkhtmltopdf200ApplicationPdfBinaryString?: Uint8Array;
 }

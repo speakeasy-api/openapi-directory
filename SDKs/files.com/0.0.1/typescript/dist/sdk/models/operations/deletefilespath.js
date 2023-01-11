@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteFilesPathResponse = exports.DeleteFilesPathRequest = exports.DeleteFilesPathQueryParams = exports.DeleteFilesPathPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteFilesPathPathParams = /** @class */ (function (_super) {
     __extends(DeleteFilesPathPathParams, _super);
     function DeleteFilesPathPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], DeleteFilesPathPathParams.prototype, "path", void 0);
     return DeleteFilesPathPathParams;
-}(SpeakeasyBase));
-export { DeleteFilesPathPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFilesPathPathParams = DeleteFilesPathPathParams;
 var DeleteFilesPathQueryParams = /** @class */ (function (_super) {
     __extends(DeleteFilesPathQueryParams, _super);
     function DeleteFilesPathQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recursive" }),
         __metadata("design:type", Boolean)
     ], DeleteFilesPathQueryParams.prototype, "recursive", void 0);
     return DeleteFilesPathQueryParams;
-}(SpeakeasyBase));
-export { DeleteFilesPathQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFilesPathQueryParams = DeleteFilesPathQueryParams;
 var DeleteFilesPathRequest = /** @class */ (function (_super) {
     __extends(DeleteFilesPathRequest, _super);
     function DeleteFilesPathRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteFilesPathPathParams)
     ], DeleteFilesPathRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteFilesPathQueryParams)
     ], DeleteFilesPathRequest.prototype, "queryParams", void 0);
     return DeleteFilesPathRequest;
-}(SpeakeasyBase));
-export { DeleteFilesPathRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFilesPathRequest = DeleteFilesPathRequest;
 var DeleteFilesPathResponse = /** @class */ (function (_super) {
     __extends(DeleteFilesPathResponse, _super);
     function DeleteFilesPathResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteFilesPathResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteFilesPathResponse.prototype, "statusCode", void 0);
     return DeleteFilesPathResponse;
-}(SpeakeasyBase));
-export { DeleteFilesPathResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFilesPathResponse = DeleteFilesPathResponse;

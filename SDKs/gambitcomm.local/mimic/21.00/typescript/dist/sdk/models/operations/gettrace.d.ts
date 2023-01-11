@@ -8,5 +8,5 @@ export declare class GetTraceRequest extends SpeakeasyBase {
 export declare class GetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTrace200ApplicationJsonInt32Integer?: number;
+    getTrace200ApplicationJSONInt32Integer?: number;
 }

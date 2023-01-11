@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
-export var PermissionRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = exports.PermissionTypeEnum = exports.PermissionRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
+var PermissionRoleEnum;
 (function (PermissionRoleEnum) {
     PermissionRoleEnum["Commenter"] = "commenter";
     PermissionRoleEnum["FileOrganizer"] = "fileOrganizer";
@@ -32,14 +35,14 @@ export var PermissionRoleEnum;
     PermissionRoleEnum["PublishedReader"] = "publishedReader";
     PermissionRoleEnum["Reader"] = "reader";
     PermissionRoleEnum["Writer"] = "writer";
-})(PermissionRoleEnum || (PermissionRoleEnum = {}));
-export var PermissionTypeEnum;
+})(PermissionRoleEnum = exports.PermissionRoleEnum || (exports.PermissionRoleEnum = {}));
+var PermissionTypeEnum;
 (function (PermissionTypeEnum) {
     PermissionTypeEnum["Anyone"] = "anyone";
     PermissionTypeEnum["Domain"] = "domain";
     PermissionTypeEnum["Group"] = "group";
     PermissionTypeEnum["User"] = "user";
-})(PermissionTypeEnum || (PermissionTypeEnum = {}));
+})(PermissionTypeEnum = exports.PermissionTypeEnum || (exports.PermissionTypeEnum = {}));
 // Permission
 /**
  * Contains information about the permissions and type of access allowed with regards to a Google Drive object. This is a subset of the fields contained in a corresponding Drive Permissions object.
@@ -50,29 +53,29 @@ var Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Permission.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionId" }),
         __metadata("design:type", String)
     ], Permission.prototype, "permissionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Permission.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Permission.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], Permission.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withLink" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "withLink", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

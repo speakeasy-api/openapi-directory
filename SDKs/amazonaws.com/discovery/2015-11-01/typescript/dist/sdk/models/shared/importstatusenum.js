@@ -1,4 +1,7 @@
-export var ImportStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportStatusEnum = void 0;
+var ImportStatusEnum;
 (function (ImportStatusEnum) {
     ImportStatusEnum["ImportInProgress"] = "IMPORT_IN_PROGRESS";
     ImportStatusEnum["ImportComplete"] = "IMPORT_COMPLETE";
@@ -11,4 +14,4 @@ export var ImportStatusEnum;
     ImportStatusEnum["DeleteFailed"] = "DELETE_FAILED";
     ImportStatusEnum["DeleteFailedLimitExceeded"] = "DELETE_FAILED_LIMIT_EXCEEDED";
     ImportStatusEnum["InternalError"] = "INTERNAL_ERROR";
-})(ImportStatusEnum || (ImportStatusEnum = {}));
+})(ImportStatusEnum = exports.ImportStatusEnum || (exports.ImportStatusEnum = {}));

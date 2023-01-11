@@ -53,5 +53,5 @@ export class DcimPlatformsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimPlatformsList200ApplicationJsonObject?: DcimPlatformsList200ApplicationJson;
+  dcimPlatformsList200ApplicationJSONObject?: DcimPlatformsList200ApplicationJson;
 }

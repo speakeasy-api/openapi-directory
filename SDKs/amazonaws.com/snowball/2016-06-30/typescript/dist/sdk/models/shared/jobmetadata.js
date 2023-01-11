@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataTransfer } from "./datatransfer";
-import { DeviceConfiguration } from "./deviceconfiguration";
-import { JobLogs } from "./joblogs";
-import { JobStateEnum } from "./jobstateenum";
-import { JobTypeEnum } from "./jobtypeenum";
-import { Notification } from "./notification";
-import { OnDeviceServiceConfiguration } from "./ondeviceserviceconfiguration";
-import { RemoteManagementEnum } from "./remotemanagementenum";
-import { JobResource } from "./jobresource";
-import { ShippingDetails } from "./shippingdetails";
-import { SnowballCapacityEnum } from "./snowballcapacityenum";
-import { SnowballTypeEnum } from "./snowballtypeenum";
-import { TaxDocuments } from "./taxdocuments";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var datatransfer_1 = require("./datatransfer");
+var deviceconfiguration_1 = require("./deviceconfiguration");
+var joblogs_1 = require("./joblogs");
+var jobstateenum_1 = require("./jobstateenum");
+var jobtypeenum_1 = require("./jobtypeenum");
+var notification_1 = require("./notification");
+var ondeviceserviceconfiguration_1 = require("./ondeviceserviceconfiguration");
+var remotemanagementenum_1 = require("./remotemanagementenum");
+var jobresource_1 = require("./jobresource");
+var shippingdetails_1 = require("./shippingdetails");
+var snowballcapacityenum_1 = require("./snowballcapacityenum");
+var snowballtypeenum_1 = require("./snowballtypeenum");
+var taxdocuments_1 = require("./taxdocuments");
 // JobMetadata
 /**
  * Contains information about a specific job including shipping information, job status, and other important metadata. This information is returned as a part of the response syntax of the <code>DescribeJob</code> action.
@@ -46,93 +49,93 @@ var JobMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressId" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "addressId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", Date)
     ], JobMetadata.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataTransferProgress" }),
-        __metadata("design:type", DataTransfer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataTransferProgress" }),
+        __metadata("design:type", datatransfer_1.DataTransfer)
     ], JobMetadata.prototype, "dataTransferProgress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceConfiguration" }),
-        __metadata("design:type", DeviceConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceConfiguration" }),
+        __metadata("design:type", deviceconfiguration_1.DeviceConfiguration)
     ], JobMetadata.prototype, "deviceConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForwardingAddressId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForwardingAddressId" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "forwardingAddressId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobId" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobLogInfo" }),
-        __metadata("design:type", JobLogs)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobLogInfo" }),
+        __metadata("design:type", joblogs_1.JobLogs)
     ], JobMetadata.prototype, "jobLogInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobState" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "jobState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobType" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyARN" }),
         __metadata("design:type", String)
-    ], JobMetadata.prototype, "kmsKeyArn", void 0);
+    ], JobMetadata.prototype, "kmsKeyARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingId" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "longTermPricingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notification" }),
-        __metadata("design:type", Notification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notification" }),
+        __metadata("design:type", notification_1.Notification)
     ], JobMetadata.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OnDeviceServiceConfiguration" }),
-        __metadata("design:type", OnDeviceServiceConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OnDeviceServiceConfiguration" }),
+        __metadata("design:type", ondeviceserviceconfiguration_1.OnDeviceServiceConfiguration)
     ], JobMetadata.prototype, "onDeviceServiceConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoteManagement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoteManagement" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "remoteManagement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources" }),
-        __metadata("design:type", JobResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources" }),
+        __metadata("design:type", jobresource_1.JobResource)
     ], JobMetadata.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], JobMetadata.prototype, "roleArn", void 0);
+    ], JobMetadata.prototype, "roleARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShippingDetails" }),
-        __metadata("design:type", ShippingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShippingDetails" }),
+        __metadata("design:type", shippingdetails_1.ShippingDetails)
     ], JobMetadata.prototype, "shippingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballCapacityPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballCapacityPreference" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "snowballCapacityPreference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballType" }),
         __metadata("design:type", String)
     ], JobMetadata.prototype, "snowballType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxDocuments" }),
-        __metadata("design:type", TaxDocuments)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxDocuments" }),
+        __metadata("design:type", taxdocuments_1.TaxDocuments)
     ], JobMetadata.prototype, "taxDocuments", void 0);
     return JobMetadata;
-}(SpeakeasyBase));
-export { JobMetadata };
+}(utils_1.SpeakeasyBase));
+exports.JobMetadata = JobMetadata;

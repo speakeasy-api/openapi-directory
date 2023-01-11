@@ -16,7 +16,7 @@ export class UpdatePipelineVariableForTeamRequest extends SpeakeasyBase {
   pathParams: UpdatePipelineVariableForTeamPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,8 +28,8 @@ export class UpdatePipelineVariableForTeamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineVariable?: Map<string, any>;
+  pipelineVariable?: Record<string, any>;
 }

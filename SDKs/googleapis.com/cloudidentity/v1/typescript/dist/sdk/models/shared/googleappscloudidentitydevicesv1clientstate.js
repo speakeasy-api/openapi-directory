@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsCloudidentityDevicesV1CustomAttributeValue } from "./googleappscloudidentitydevicesv1customattributevalue";
-export var GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsCloudidentityDevicesV1ClientState = exports.GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappscloudidentitydevicesv1customattributevalue_1 = require("./googleappscloudidentitydevicesv1customattributevalue");
+var GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum;
 (function (GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum) {
     GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum["ComplianceStateUnspecified"] = "COMPLIANCE_STATE_UNSPECIFIED";
     GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum["Compliant"] = "COMPLIANT";
     GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum["NonCompliant"] = "NON_COMPLIANT";
-})(GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum || (GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum = {}));
-export var GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
+})(GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum || (exports.GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum = {}));
+var GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
 (function (GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum) {
     GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum["HealthScoreUnspecified"] = "HEALTH_SCORE_UNSPECIFIED";
     GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum["VeryPoor"] = "VERY_POOR";
@@ -38,19 +41,19 @@ export var GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
     GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum["Neutral"] = "NEUTRAL";
     GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum["Good"] = "GOOD";
     GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum["VeryGood"] = "VERY_GOOD";
-})(GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum || (GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum = {}));
-export var GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum;
+})(GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum || (exports.GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum = {}));
+var GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum;
 (function (GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum) {
     GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum["ManagedStateUnspecified"] = "MANAGED_STATE_UNSPECIFIED";
     GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum["Managed"] = "MANAGED";
     GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum["Unmanaged"] = "UNMANAGED";
-})(GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum || (GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum = {}));
-export var GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum;
+})(GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum || (exports.GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum = {}));
+var GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum;
 (function (GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum) {
     GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum["OwnerTypeUnspecified"] = "OWNER_TYPE_UNSPECIFIED";
     GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum["OwnerTypeCustomer"] = "OWNER_TYPE_CUSTOMER";
     GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum["OwnerTypePartner"] = "OWNER_TYPE_PARTNER";
-})(GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum || (GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum = {}));
+})(GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum = exports.GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum || (exports.GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum = {}));
 // GoogleAppsCloudidentityDevicesV1ClientState
 /**
  * Represents the state associated with an API client calling the Devices API. Resource representing ClientState and supports updates from API users
@@ -61,53 +64,53 @@ var GoogleAppsCloudidentityDevicesV1ClientState = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetTags" }),
         __metadata("design:type", Array)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "assetTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceState" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "complianceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customId" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "customId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthScore" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "healthScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValuePairs", elemType: GoogleAppsCloudidentityDevicesV1CustomAttributeValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValuePairs", elemType: googleappscloudidentitydevicesv1customattributevalue_1.GoogleAppsCloudidentityDevicesV1CustomAttributeValue }),
+        __metadata("design:type", Object)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "keyValuePairs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managed" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "managed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerType" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "ownerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreReason" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1ClientState.prototype, "scoreReason", void 0);
     return GoogleAppsCloudidentityDevicesV1ClientState;
-}(SpeakeasyBase));
-export { GoogleAppsCloudidentityDevicesV1ClientState };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsCloudidentityDevicesV1ClientState = GoogleAppsCloudidentityDevicesV1ClientState;

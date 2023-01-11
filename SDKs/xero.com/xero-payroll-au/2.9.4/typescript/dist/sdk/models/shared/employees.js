@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Employee } from "./employee";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Employees = void 0;
+var utils_1 = require("../../../internal/utils");
+var employee_1 = require("./employee");
 var Employees = /** @class */ (function (_super) {
     __extends(Employees, _super);
     function Employees() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employees", elemType: Employee }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employees", elemType: employee_1.Employee }),
         __metadata("design:type", Array)
     ], Employees.prototype, "employees", void 0);
     return Employees;
-}(SpeakeasyBase));
-export { Employees };
+}(utils_1.SpeakeasyBase));
+exports.Employees = Employees;

@@ -8,7 +8,7 @@ import { CatalogEntry } from "./catalogentry";
 
 export class GetPlanRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AdditionalPlanOptionsMap" })
-  additionalPlanOptionsMap?: Map<string, string>;
+  additionalPlanOptionsMap?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Language" })
   language?: LanguageEnum;

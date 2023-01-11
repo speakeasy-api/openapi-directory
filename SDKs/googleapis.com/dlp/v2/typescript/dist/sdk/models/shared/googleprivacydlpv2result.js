@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2HybridInspectStatistics } from "./googleprivacydlpv2hybridinspectstatistics";
-import { GooglePrivacyDlpV2InfoTypeStats } from "./googleprivacydlpv2infotypestats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Result = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2hybridinspectstatistics_1 = require("./googleprivacydlpv2hybridinspectstatistics");
+var googleprivacydlpv2infotypestats_1 = require("./googleprivacydlpv2infotypestats");
 // GooglePrivacyDlpV2Result
 /**
  * All result fields mentioned below are updated while the job is processing.
@@ -35,21 +38,21 @@ var GooglePrivacyDlpV2Result = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hybridStats" }),
-        __metadata("design:type", GooglePrivacyDlpV2HybridInspectStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hybridStats" }),
+        __metadata("design:type", googleprivacydlpv2hybridinspectstatistics_1.GooglePrivacyDlpV2HybridInspectStatistics)
     ], GooglePrivacyDlpV2Result.prototype, "hybridStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypeStats", elemType: GooglePrivacyDlpV2InfoTypeStats }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypeStats", elemType: googleprivacydlpv2infotypestats_1.GooglePrivacyDlpV2InfoTypeStats }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Result.prototype, "infoTypeStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processedBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processedBytes" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Result.prototype, "processedBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalEstimatedBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalEstimatedBytes" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Result.prototype, "totalEstimatedBytes", void 0);
     return GooglePrivacyDlpV2Result;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Result };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Result = GooglePrivacyDlpV2Result;

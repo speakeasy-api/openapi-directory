@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeIntervalObject } from "./timeintervalobject";
-import { SectionObject } from "./sectionobject";
-import { SegmentObject } from "./segmentobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioAnalysisObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeintervalobject_1 = require("./timeintervalobject");
+var sectionobject_1 = require("./sectionobject");
+var segmentobject_1 = require("./segmentobject");
 // AudioAnalysisObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/#audio-analysis-object - Find more info on the official Spotify Web API Reference
@@ -36,25 +39,25 @@ var AudioAnalysisObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bars", elemType: TimeIntervalObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bars", elemType: timeintervalobject_1.TimeIntervalObject }),
         __metadata("design:type", Array)
     ], AudioAnalysisObject.prototype, "bars", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beats", elemType: TimeIntervalObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beats", elemType: timeintervalobject_1.TimeIntervalObject }),
         __metadata("design:type", Array)
     ], AudioAnalysisObject.prototype, "beats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sections", elemType: SectionObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sections", elemType: sectionobject_1.SectionObject }),
         __metadata("design:type", Array)
     ], AudioAnalysisObject.prototype, "sections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segments", elemType: SegmentObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segments", elemType: segmentobject_1.SegmentObject }),
         __metadata("design:type", Array)
     ], AudioAnalysisObject.prototype, "segments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tatums", elemType: TimeIntervalObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tatums", elemType: timeintervalobject_1.TimeIntervalObject }),
         __metadata("design:type", Array)
     ], AudioAnalysisObject.prototype, "tatums", void 0);
     return AudioAnalysisObject;
-}(SpeakeasyBase));
-export { AudioAnalysisObject };
+}(utils_1.SpeakeasyBase));
+exports.AudioAnalysisObject = AudioAnalysisObject;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreativeSpecification } from "./creativespecification";
-export var CreativeRestrictionsCreativeFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeRestrictions = exports.CreativeRestrictionsSkippableAdTypeEnum = exports.CreativeRestrictionsCreativeFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var creativespecification_1 = require("./creativespecification");
+var CreativeRestrictionsCreativeFormatEnum;
 (function (CreativeRestrictionsCreativeFormatEnum) {
     CreativeRestrictionsCreativeFormatEnum["CreativeFormatUnspecified"] = "CREATIVE_FORMAT_UNSPECIFIED";
     CreativeRestrictionsCreativeFormatEnum["Display"] = "DISPLAY";
     CreativeRestrictionsCreativeFormatEnum["Video"] = "VIDEO";
-})(CreativeRestrictionsCreativeFormatEnum || (CreativeRestrictionsCreativeFormatEnum = {}));
-export var CreativeRestrictionsSkippableAdTypeEnum;
+})(CreativeRestrictionsCreativeFormatEnum = exports.CreativeRestrictionsCreativeFormatEnum || (exports.CreativeRestrictionsCreativeFormatEnum = {}));
+var CreativeRestrictionsSkippableAdTypeEnum;
 (function (CreativeRestrictionsSkippableAdTypeEnum) {
     CreativeRestrictionsSkippableAdTypeEnum["SkippableAdTypeUnspecified"] = "SKIPPABLE_AD_TYPE_UNSPECIFIED";
     CreativeRestrictionsSkippableAdTypeEnum["Skippable"] = "SKIPPABLE";
     CreativeRestrictionsSkippableAdTypeEnum["InstreamSelect"] = "INSTREAM_SELECT";
     CreativeRestrictionsSkippableAdTypeEnum["NotSkippable"] = "NOT_SKIPPABLE";
-})(CreativeRestrictionsSkippableAdTypeEnum || (CreativeRestrictionsSkippableAdTypeEnum = {}));
+})(CreativeRestrictionsSkippableAdTypeEnum = exports.CreativeRestrictionsSkippableAdTypeEnum || (exports.CreativeRestrictionsSkippableAdTypeEnum = {}));
 // CreativeRestrictions
 /**
  * Represents creative restrictions associated to Programmatic Guaranteed/ Preferred Deal in Ad Manager. This doesn't apply to Private Auction and AdX Preferred Deals.
@@ -47,17 +50,17 @@ var CreativeRestrictions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeFormat" }),
         __metadata("design:type", String)
     ], CreativeRestrictions.prototype, "creativeFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeSpecifications", elemType: CreativeSpecification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeSpecifications", elemType: creativespecification_1.CreativeSpecification }),
         __metadata("design:type", Array)
     ], CreativeRestrictions.prototype, "creativeSpecifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skippableAdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skippableAdType" }),
         __metadata("design:type", String)
     ], CreativeRestrictions.prototype, "skippableAdType", void 0);
     return CreativeRestrictions;
-}(SpeakeasyBase));
-export { CreativeRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.CreativeRestrictions = CreativeRestrictions;

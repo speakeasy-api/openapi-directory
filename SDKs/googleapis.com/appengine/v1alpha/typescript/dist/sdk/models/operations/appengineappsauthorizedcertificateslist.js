@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,203 +14,228 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppengineAppsAuthorizedCertificatesListResponse = exports.AppengineAppsAuthorizedCertificatesListRequest = exports.AppengineAppsAuthorizedCertificatesListSecurity = exports.AppengineAppsAuthorizedCertificatesListSecurityOption3 = exports.AppengineAppsAuthorizedCertificatesListSecurityOption2 = exports.AppengineAppsAuthorizedCertificatesListSecurityOption1 = exports.AppengineAppsAuthorizedCertificatesListQueryParams = exports.AppengineAppsAuthorizedCertificatesListViewEnum = exports.AppengineAppsAuthorizedCertificatesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AppengineAppsAuthorizedCertificatesListPathParams = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListPathParams, _super);
     function AppengineAppsAuthorizedCertificatesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appsId" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListPathParams.prototype, "appsId", void 0);
     return AppengineAppsAuthorizedCertificatesListPathParams;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListPathParams };
-export var AppengineAppsAuthorizedCertificatesListViewEnum;
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListPathParams = AppengineAppsAuthorizedCertificatesListPathParams;
+var AppengineAppsAuthorizedCertificatesListViewEnum;
 (function (AppengineAppsAuthorizedCertificatesListViewEnum) {
     AppengineAppsAuthorizedCertificatesListViewEnum["BasicCertificate"] = "BASIC_CERTIFICATE";
     AppengineAppsAuthorizedCertificatesListViewEnum["FullCertificate"] = "FULL_CERTIFICATE";
-})(AppengineAppsAuthorizedCertificatesListViewEnum || (AppengineAppsAuthorizedCertificatesListViewEnum = {}));
+})(AppengineAppsAuthorizedCertificatesListViewEnum = exports.AppengineAppsAuthorizedCertificatesListViewEnum || (exports.AppengineAppsAuthorizedCertificatesListViewEnum = {}));
 var AppengineAppsAuthorizedCertificatesListQueryParams = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListQueryParams, _super);
     function AppengineAppsAuthorizedCertificatesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "uploadProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=view" }),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListQueryParams.prototype, "view", void 0);
     return AppengineAppsAuthorizedCertificatesListQueryParams;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListQueryParams = AppengineAppsAuthorizedCertificatesListQueryParams;
 var AppengineAppsAuthorizedCertificatesListSecurityOption1 = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListSecurityOption1, _super);
     function AppengineAppsAuthorizedCertificatesListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption1.prototype, "oauth2c", void 0);
     return AppengineAppsAuthorizedCertificatesListSecurityOption1;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListSecurityOption1 = AppengineAppsAuthorizedCertificatesListSecurityOption1;
 var AppengineAppsAuthorizedCertificatesListSecurityOption2 = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListSecurityOption2, _super);
     function AppengineAppsAuthorizedCertificatesListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption2.prototype, "oauth2c", void 0);
     return AppengineAppsAuthorizedCertificatesListSecurityOption2;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListSecurityOption2 = AppengineAppsAuthorizedCertificatesListSecurityOption2;
 var AppengineAppsAuthorizedCertificatesListSecurityOption3 = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListSecurityOption3, _super);
     function AppengineAppsAuthorizedCertificatesListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineAppsAuthorizedCertificatesListSecurityOption3.prototype, "oauth2c", void 0);
     return AppengineAppsAuthorizedCertificatesListSecurityOption3;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListSecurityOption3 = AppengineAppsAuthorizedCertificatesListSecurityOption3;
 var AppengineAppsAuthorizedCertificatesListSecurity = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListSecurity, _super);
     function AppengineAppsAuthorizedCertificatesListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListSecurityOption1)
     ], AppengineAppsAuthorizedCertificatesListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListSecurityOption2)
     ], AppengineAppsAuthorizedCertificatesListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListSecurityOption3)
     ], AppengineAppsAuthorizedCertificatesListSecurity.prototype, "option3", void 0);
     return AppengineAppsAuthorizedCertificatesListSecurity;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListSecurity = AppengineAppsAuthorizedCertificatesListSecurity;
 var AppengineAppsAuthorizedCertificatesListRequest = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListRequest, _super);
     function AppengineAppsAuthorizedCertificatesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListPathParams)
     ], AppengineAppsAuthorizedCertificatesListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListQueryParams)
     ], AppengineAppsAuthorizedCertificatesListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineAppsAuthorizedCertificatesListSecurity)
     ], AppengineAppsAuthorizedCertificatesListRequest.prototype, "security", void 0);
     return AppengineAppsAuthorizedCertificatesListRequest;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListRequest = AppengineAppsAuthorizedCertificatesListRequest;
 var AppengineAppsAuthorizedCertificatesListResponse = /** @class */ (function (_super) {
     __extends(AppengineAppsAuthorizedCertificatesListResponse, _super);
     function AppengineAppsAuthorizedCertificatesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppengineAppsAuthorizedCertificatesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListAuthorizedCertificatesResponse)
     ], AppengineAppsAuthorizedCertificatesListResponse.prototype, "listAuthorizedCertificatesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppengineAppsAuthorizedCertificatesListResponse.prototype, "statusCode", void 0);
     return AppengineAppsAuthorizedCertificatesListResponse;
-}(SpeakeasyBase));
-export { AppengineAppsAuthorizedCertificatesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppengineAppsAuthorizedCertificatesListResponse = AppengineAppsAuthorizedCertificatesListResponse;

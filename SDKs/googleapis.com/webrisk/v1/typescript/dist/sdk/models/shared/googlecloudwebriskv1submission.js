@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudWebriskV1SubmissionThreatTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1Submission = exports.GoogleCloudWebriskV1SubmissionThreatTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudWebriskV1SubmissionThreatTypesEnum;
 (function (GoogleCloudWebriskV1SubmissionThreatTypesEnum) {
     GoogleCloudWebriskV1SubmissionThreatTypesEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleCloudWebriskV1SubmissionThreatTypesEnum["Malware"] = "MALWARE";
     GoogleCloudWebriskV1SubmissionThreatTypesEnum["SocialEngineering"] = "SOCIAL_ENGINEERING";
     GoogleCloudWebriskV1SubmissionThreatTypesEnum["UnwantedSoftware"] = "UNWANTED_SOFTWARE";
     GoogleCloudWebriskV1SubmissionThreatTypesEnum["SocialEngineeringExtendedCoverage"] = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE";
-})(GoogleCloudWebriskV1SubmissionThreatTypesEnum || (GoogleCloudWebriskV1SubmissionThreatTypesEnum = {}));
+})(GoogleCloudWebriskV1SubmissionThreatTypesEnum = exports.GoogleCloudWebriskV1SubmissionThreatTypesEnum || (exports.GoogleCloudWebriskV1SubmissionThreatTypesEnum = {}));
 // GoogleCloudWebriskV1Submission
 /**
  * Wraps a URI that might be displaying malicious content.
@@ -41,13 +44,13 @@ var GoogleCloudWebriskV1Submission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatTypes" }),
         __metadata("design:type", Array)
     ], GoogleCloudWebriskV1Submission.prototype, "threatTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], GoogleCloudWebriskV1Submission.prototype, "uri", void 0);
     return GoogleCloudWebriskV1Submission;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1Submission };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1Submission = GoogleCloudWebriskV1Submission;

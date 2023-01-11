@@ -5,6 +5,6 @@ import { GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats } from
 **/
 export declare class GoogleCloudContactcenterinsightsV1IssueModelLabelStats extends SpeakeasyBase {
     analyzedConversationsCount?: string;
-    issueStats?: Map<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
+    issueStats?: Record<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
     unclassifiedConversationsCount?: string;
 }

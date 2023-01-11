@@ -36,6 +36,6 @@ export declare class UpdateClassificationJobResponse extends SpeakeasyBase {
     serviceQuotaExceededException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateClassificationJobResponse?: Map<string, any>;
+    updateClassificationJobResponse?: Record<string, any>;
     validationException?: any;
 }

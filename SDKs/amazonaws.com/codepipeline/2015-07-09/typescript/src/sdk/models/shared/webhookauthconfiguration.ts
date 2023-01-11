@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class WebhookAuthConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AllowedIPRange" })
-  allowedIpRange?: string;
+  allowedIPRange?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SecretToken" })
   secretToken?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogsFilter = void 0;
+var utils_1 = require("../../../internal/utils");
 var LogsFilter = /** @class */ (function (_super) {
     __extends(LogsFilter, _super);
     function LogsFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=connector_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=connector_id" }),
         __metadata("design:type", String)
     ], LogsFilter.prototype, "connectorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=exclude_unified_apis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=exclude_unified_apis" }),
         __metadata("design:type", String)
     ], LogsFilter.prototype, "excludeUnifiedApis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=status_code" }),
         __metadata("design:type", Number)
     ], LogsFilter.prototype, "statusCode", void 0);
     return LogsFilter;
-}(SpeakeasyBase));
-export { LogsFilter };
+}(utils_1.SpeakeasyBase));
+exports.LogsFilter = LogsFilter;

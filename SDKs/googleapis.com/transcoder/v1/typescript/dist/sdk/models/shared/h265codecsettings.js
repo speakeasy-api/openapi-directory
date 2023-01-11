@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.H265CodecSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // H265CodecSettings
 /**
  * H265 codec settings.
@@ -33,81 +36,81 @@ var H265CodecSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowOpenGop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowOpenGop" }),
         __metadata("design:type", Boolean)
     ], H265CodecSettings.prototype, "allowOpenGop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aqStrength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aqStrength" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "aqStrength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bFrameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bFrameCount" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "bFrameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bPyramid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bPyramid" }),
         __metadata("design:type", Boolean)
     ], H265CodecSettings.prototype, "bPyramid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crfLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crfLevel" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "crfLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableTwoPass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableTwoPass" }),
         __metadata("design:type", Boolean)
     ], H265CodecSettings.prototype, "enableTwoPass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRate" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "frameRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopDuration" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "gopDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopFrameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopFrameCount" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "gopFrameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heightPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heightPixels" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "heightPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelFormat" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "pixelFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preset" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "preset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateControlMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateControlMode" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "rateControlMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tune" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tune" }),
         __metadata("design:type", String)
     ], H265CodecSettings.prototype, "tune", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vbvFullnessBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vbvFullnessBits" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "vbvFullnessBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vbvSizeBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vbvSizeBits" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "vbvSizeBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=widthPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=widthPixels" }),
         __metadata("design:type", Number)
     ], H265CodecSettings.prototype, "widthPixels", void 0);
     return H265CodecSettings;
-}(SpeakeasyBase));
-export { H265CodecSettings };
+}(utils_1.SpeakeasyBase));
+exports.H265CodecSettings = H265CodecSettings;

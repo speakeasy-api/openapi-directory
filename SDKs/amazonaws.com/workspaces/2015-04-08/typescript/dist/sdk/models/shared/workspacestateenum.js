@@ -1,4 +1,7 @@
-export var WorkspaceStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceStateEnum = void 0;
+var WorkspaceStateEnum;
 (function (WorkspaceStateEnum) {
     WorkspaceStateEnum["Pending"] = "PENDING";
     WorkspaceStateEnum["Available"] = "AVAILABLE";
@@ -17,4 +20,4 @@ export var WorkspaceStateEnum;
     WorkspaceStateEnum["Stopping"] = "STOPPING";
     WorkspaceStateEnum["Stopped"] = "STOPPED";
     WorkspaceStateEnum["Error"] = "ERROR";
-})(WorkspaceStateEnum || (WorkspaceStateEnum = {}));
+})(WorkspaceStateEnum = exports.WorkspaceStateEnum || (exports.WorkspaceStateEnum = {}));

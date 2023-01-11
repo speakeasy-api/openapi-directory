@@ -51,7 +51,7 @@ export class DeactivateContactChannelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deactivateContactChannelResult?: Map<string, any>;
+  deactivateContactChannelResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

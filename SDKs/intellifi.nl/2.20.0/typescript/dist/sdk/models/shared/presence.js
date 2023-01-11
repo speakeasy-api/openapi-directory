@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
-import { Location } from "./location";
-import { ProximityEnum } from "./proximityenum";
-import { TechnologyEnum } from "./technologyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Presence = void 0;
+var utils_1 = require("../../../internal/utils");
+var item_1 = require("./item");
+var location_1 = require("./location");
+var proximityenum_1 = require("./proximityenum");
+var technologyenum_1 = require("./technologyenum");
 var Presence = /** @class */ (function (_super) {
     __extends(Presence, _super);
     function Presence() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Presence.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item" }),
-        __metadata("design:type", Item)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item" }),
+        __metadata("design:type", item_1.Item)
     ], Presence.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item_id" }),
         __metadata("design:type", String)
     ], Presence.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item_url" }),
         __metadata("design:type", String)
     ], Presence.prototype, "itemUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], Presence.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_id" }),
         __metadata("design:type", String)
     ], Presence.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_url" }),
         __metadata("design:type", String)
     ], Presence.prototype, "locationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proximity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proximity" }),
         __metadata("design:type", String)
     ], Presence.prototype, "proximity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=technology" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technology" }),
         __metadata("design:type", String)
     ], Presence.prototype, "technology", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], Presence.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], Presence.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Presence.prototype, "url", void 0);
     return Presence;
-}(SpeakeasyBase));
-export { Presence };
+}(utils_1.SpeakeasyBase));
+exports.Presence = Presence;

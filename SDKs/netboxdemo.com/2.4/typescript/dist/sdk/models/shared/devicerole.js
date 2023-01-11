@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var DeviceRoleInput = /** @class */ (function (_super) {
-    __extends(DeviceRoleInput, _super);
-    function DeviceRoleInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
-        __metadata("design:type", String)
-    ], DeviceRoleInput.prototype, "color", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], DeviceRoleInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
-        __metadata("design:type", String)
-    ], DeviceRoleInput.prototype, "slug", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=vm_role" }),
-        __metadata("design:type", Boolean)
-    ], DeviceRoleInput.prototype, "vmRole", void 0);
-    return DeviceRoleInput;
-}(SpeakeasyBase));
-export { DeviceRoleInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceRoleInput = exports.DeviceRole = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeviceRole = /** @class */ (function (_super) {
     __extends(DeviceRole, _super);
     function DeviceRole() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], DeviceRole.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DeviceRole.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeviceRole.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], DeviceRole.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vm_role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vm_role" }),
         __metadata("design:type", Boolean)
     ], DeviceRole.prototype, "vmRole", void 0);
     return DeviceRole;
-}(SpeakeasyBase));
-export { DeviceRole };
+}(utils_1.SpeakeasyBase));
+exports.DeviceRole = DeviceRole;
+var DeviceRoleInput = /** @class */ (function (_super) {
+    __extends(DeviceRoleInput, _super);
+    function DeviceRoleInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", String)
+    ], DeviceRoleInput.prototype, "color", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], DeviceRoleInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
+        __metadata("design:type", String)
+    ], DeviceRoleInput.prototype, "slug", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vm_role" }),
+        __metadata("design:type", Boolean)
+    ], DeviceRoleInput.prototype, "vmRole", void 0);
+    return DeviceRoleInput;
+}(utils_1.SpeakeasyBase));
+exports.DeviceRoleInput = DeviceRoleInput;

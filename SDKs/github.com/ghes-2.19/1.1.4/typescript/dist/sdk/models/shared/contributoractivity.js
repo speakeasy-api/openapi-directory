@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,115 +23,121 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContributorActivity = exports.ContributorActivityWeeks = exports.ContributorActivitySimpleUser = void 0;
+var utils_1 = require("../../../internal/utils");
+// ContributorActivitySimpleUser
+/**
+ * Simple User
+**/
 var ContributorActivitySimpleUser = /** @class */ (function (_super) {
     __extends(ContributorActivitySimpleUser, _super);
     function ContributorActivitySimpleUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ContributorActivitySimpleUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "organizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=received_events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_events_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "receivedEventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], ContributorActivitySimpleUser.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_at" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "starredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions_url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "subscriptionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ContributorActivitySimpleUser.prototype, "url", void 0);
     return ContributorActivitySimpleUser;
-}(SpeakeasyBase));
-export { ContributorActivitySimpleUser };
+}(utils_1.SpeakeasyBase));
+exports.ContributorActivitySimpleUser = ContributorActivitySimpleUser;
 var ContributorActivityWeeks = /** @class */ (function (_super) {
     __extends(ContributorActivityWeeks, _super);
     function ContributorActivityWeeks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=a" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=a" }),
         __metadata("design:type", Number)
     ], ContributorActivityWeeks.prototype, "a", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=c" }),
         __metadata("design:type", Number)
     ], ContributorActivityWeeks.prototype, "c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=d" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=d" }),
         __metadata("design:type", Number)
     ], ContributorActivityWeeks.prototype, "d", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=w" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=w" }),
         __metadata("design:type", Number)
     ], ContributorActivityWeeks.prototype, "w", void 0);
     return ContributorActivityWeeks;
-}(SpeakeasyBase));
-export { ContributorActivityWeeks };
+}(utils_1.SpeakeasyBase));
+exports.ContributorActivityWeeks = ContributorActivityWeeks;
 // ContributorActivity
 /**
  * Contributor Activity
@@ -141,17 +148,17 @@ var ContributorActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", ContributorActivitySimpleUser)
     ], ContributorActivity.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ContributorActivity.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weeks", elemType: ContributorActivityWeeks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weeks", elemType: ContributorActivityWeeks }),
         __metadata("design:type", Array)
     ], ContributorActivity.prototype, "weeks", void 0);
     return ContributorActivity;
-}(SpeakeasyBase));
-export { ContributorActivity };
+}(utils_1.SpeakeasyBase));
+exports.ContributorActivity = ContributorActivity;

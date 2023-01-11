@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,118 +23,120 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TransportationIncentivesLawsOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransportationIncentivesLawsResponse = exports.TransportationIncentivesLawsRequest = exports.TransportationIncentivesLawsQueryParams = exports.TransportationIncentivesLawsPathParams = exports.TransportationIncentivesLawsOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TransportationIncentivesLawsOutputFormatEnum;
 (function (TransportationIncentivesLawsOutputFormatEnum) {
     TransportationIncentivesLawsOutputFormatEnum["Json"] = "json";
     TransportationIncentivesLawsOutputFormatEnum["Xml"] = "xml";
     TransportationIncentivesLawsOutputFormatEnum["Csv"] = "csv";
-})(TransportationIncentivesLawsOutputFormatEnum || (TransportationIncentivesLawsOutputFormatEnum = {}));
+})(TransportationIncentivesLawsOutputFormatEnum = exports.TransportationIncentivesLawsOutputFormatEnum || (exports.TransportationIncentivesLawsOutputFormatEnum = {}));
 var TransportationIncentivesLawsPathParams = /** @class */ (function (_super) {
     __extends(TransportationIncentivesLawsPathParams, _super);
     function TransportationIncentivesLawsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=output_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=output_format" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsPathParams.prototype, "outputFormat", void 0);
     return TransportationIncentivesLawsPathParams;
-}(SpeakeasyBase));
-export { TransportationIncentivesLawsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TransportationIncentivesLawsPathParams = TransportationIncentivesLawsPathParams;
 var TransportationIncentivesLawsQueryParams = /** @class */ (function (_super) {
     __extends(TransportationIncentivesLawsQueryParams, _super);
     function TransportationIncentivesLawsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=expired" }),
         __metadata("design:type", Boolean)
     ], TransportationIncentivesLawsQueryParams.prototype, "expired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=incentive_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=incentive_type" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "incentiveType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jurisdiction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=jurisdiction" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "jurisdiction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keyword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keyword" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "keyword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=law_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=law_type" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "lawType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], TransportationIncentivesLawsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=local" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=local" }),
         __metadata("design:type", Boolean)
     ], TransportationIncentivesLawsQueryParams.prototype, "local", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=poc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=poc" }),
         __metadata("design:type", Boolean)
     ], TransportationIncentivesLawsQueryParams.prototype, "poc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recent" }),
         __metadata("design:type", Boolean)
     ], TransportationIncentivesLawsQueryParams.prototype, "recent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=regulation_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=regulation_type" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "regulationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=technology" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=technology" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "technology", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=user_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=user_type" }),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsQueryParams.prototype, "userType", void 0);
     return TransportationIncentivesLawsQueryParams;
-}(SpeakeasyBase));
-export { TransportationIncentivesLawsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TransportationIncentivesLawsQueryParams = TransportationIncentivesLawsQueryParams;
 var TransportationIncentivesLawsRequest = /** @class */ (function (_super) {
     __extends(TransportationIncentivesLawsRequest, _super);
     function TransportationIncentivesLawsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TransportationIncentivesLawsPathParams)
     ], TransportationIncentivesLawsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TransportationIncentivesLawsQueryParams)
     ], TransportationIncentivesLawsRequest.prototype, "queryParams", void 0);
     return TransportationIncentivesLawsRequest;
-}(SpeakeasyBase));
-export { TransportationIncentivesLawsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TransportationIncentivesLawsRequest = TransportationIncentivesLawsRequest;
 var TransportationIncentivesLawsResponse = /** @class */ (function (_super) {
     __extends(TransportationIncentivesLawsResponse, _super);
     function TransportationIncentivesLawsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], TransportationIncentivesLawsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TransportationIncentivesLawsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TransportationIncentivesLawsResponse.prototype, "statusCode", void 0);
     return TransportationIncentivesLawsResponse;
-}(SpeakeasyBase));
-export { TransportationIncentivesLawsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TransportationIncentivesLawsResponse = TransportationIncentivesLawsResponse;

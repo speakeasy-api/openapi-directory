@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlayablelocationsLogImpressionsRequest, PlayablelocationsLogImpressionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,46 +29,36 @@ const sdk = new SDK();
 const req: PlayablelocationsLogImpressionsRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "similique",
-    alt: "proto",
-    callback: "quos",
-    fields: "modi",
-    key: "qui",
-    oauthToken: "et",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "beatae",
-    uploadType: "magnam",
-    uploadProtocol: "corrupti",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     clientInfo: {
-      apiClient: "deleniti",
-      applicationId: "aliquam",
-      applicationVersion: "sapiente",
-      deviceModel: "vel",
-      languageCode: "voluptatibus",
-      operatingSystem: "ea",
-      operatingSystemBuild: "pariatur",
-      platform: "LINUX",
+      apiClient: "rerum",
+      applicationId: "dicta",
+      applicationVersion: "debitis",
+      deviceModel: "voluptatum",
+      languageCode: "et",
+      operatingSystem: "ut",
+      operatingSystemBuild: "dolorem",
+      platform: "MAC_OS",
     },
     impressions: [
       {
-        gameObjectType: 6459860170856422486,
-        impressionType: "INTERACTED",
-        locationName: "sequi",
-      },
-      {
-        gameObjectType: 952114635225685287,
-        impressionType: "PRESENTED",
-        locationName: "et",
-      },
-      {
-        gameObjectType: 3381277656453164920,
-        impressionType: "INTERACTED",
-        locationName: "et",
+        gameObjectType: 3287288577352441706,
+        impressionType: "IMPRESSION_TYPE_UNSPECIFIED",
+        locationName: "totam",
       },
     ],
-    requestId: "fugiat",
+    requestId: "dolores",
   },
 };
 

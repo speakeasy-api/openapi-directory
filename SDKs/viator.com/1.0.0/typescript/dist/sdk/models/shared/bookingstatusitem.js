@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BookingStatusItemLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingStatusItem = exports.BookingStatusItemTypeEnum = exports.BookingStatusItemLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BookingStatusItemLevelEnum;
 (function (BookingStatusItemLevelEnum) {
     BookingStatusItemLevelEnum["Item"] = "ITEM";
     BookingStatusItemLevelEnum["Itinerary"] = "ITINERARY";
-})(BookingStatusItemLevelEnum || (BookingStatusItemLevelEnum = {}));
-export var BookingStatusItemTypeEnum;
+})(BookingStatusItemLevelEnum = exports.BookingStatusItemLevelEnum || (exports.BookingStatusItemLevelEnum = {}));
+var BookingStatusItemTypeEnum;
 (function (BookingStatusItemTypeEnum) {
     BookingStatusItemTypeEnum["Waiting"] = "WAITING";
     BookingStatusItemTypeEnum["Confirmed"] = "CONFIRMED";
@@ -41,7 +44,7 @@ export var BookingStatusItemTypeEnum;
     BookingStatusItemTypeEnum["PendingAmend"] = "PENDING_AMEND";
     BookingStatusItemTypeEnum["Rejected"] = "REJECTED";
     BookingStatusItemTypeEnum["OnHold"] = "ON_HOLD";
-})(BookingStatusItemTypeEnum || (BookingStatusItemTypeEnum = {}));
+})(BookingStatusItemTypeEnum = exports.BookingStatusItemTypeEnum || (exports.BookingStatusItemTypeEnum = {}));
 // BookingStatusItem
 /**
  * **object** containing item booking status information
@@ -52,41 +55,41 @@ var BookingStatusItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amended" }),
         __metadata("design:type", Boolean)
     ], BookingStatusItem.prototype, "amended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelled" }),
         __metadata("design:type", Boolean)
     ], BookingStatusItem.prototype, "cancelled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Boolean)
     ], BookingStatusItem.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed" }),
         __metadata("design:type", Boolean)
     ], BookingStatusItem.prototype, "failed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], BookingStatusItem.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pending" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pending" }),
         __metadata("design:type", Boolean)
     ], BookingStatusItem.prototype, "pending", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], BookingStatusItem.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], BookingStatusItem.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BookingStatusItem.prototype, "type", void 0);
     return BookingStatusItem;
-}(SpeakeasyBase));
-export { BookingStatusItem };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatusItem = BookingStatusItem;

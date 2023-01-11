@@ -47,5 +47,5 @@ export class CodeScanningGetSarifResponse extends SpeakeasyBase {
   codeScanningSarifsStatus?: shared.CodeScanningSarifsStatus;
 
   @SpeakeasyMetadata()
-  codeScanningGetSarif503ApplicationJsonObject?: CodeScanningGetSarif503ApplicationJson;
+  codeScanningGetSarif503ApplicationJSONObject?: CodeScanningGetSarif503ApplicationJson;
 }

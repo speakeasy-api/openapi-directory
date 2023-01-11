@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobConfigTypeEnum } from "./jobconfigtypeenum";
-import { JobStatusEnum } from "./jobstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobconfigtypeenum_1 = require("./jobconfigtypeenum");
+var jobstatusenum_1 = require("./jobstatusenum");
 var JobRead = /** @class */ (function (_super) {
     __extends(JobRead, _super);
     function JobRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configId" }),
         __metadata("design:type", String)
     ], JobRead.prototype, "configId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configType" }),
         __metadata("design:type", String)
     ], JobRead.prototype, "configType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], JobRead.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], JobRead.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], JobRead.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Number)
     ], JobRead.prototype, "updatedAt", void 0);
     return JobRead;
-}(SpeakeasyBase));
-export { JobRead };
+}(utils_1.SpeakeasyBase));
+exports.JobRead = JobRead;

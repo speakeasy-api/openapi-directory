@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsSetSelectedReposForOrgSecretResponse = exports.ActionsSetSelectedReposForOrgSecretRequest = exports.ActionsSetSelectedReposForOrgSecretRequestBody = exports.ActionsSetSelectedReposForOrgSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsSetSelectedReposForOrgSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedReposForOrgSecretPathParams, _super);
     function ActionsSetSelectedReposForOrgSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsSetSelectedReposForOrgSecretPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsSetSelectedReposForOrgSecretPathParams.prototype, "secretName", void 0);
     return ActionsSetSelectedReposForOrgSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsSetSelectedReposForOrgSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedReposForOrgSecretPathParams = ActionsSetSelectedReposForOrgSecretPathParams;
 var ActionsSetSelectedReposForOrgSecretRequestBody = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedReposForOrgSecretRequestBody, _super);
     function ActionsSetSelectedReposForOrgSecretRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_repository_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_repository_ids" }),
         __metadata("design:type", Array)
     ], ActionsSetSelectedReposForOrgSecretRequestBody.prototype, "selectedRepositoryIds", void 0);
     return ActionsSetSelectedReposForOrgSecretRequestBody;
-}(SpeakeasyBase));
-export { ActionsSetSelectedReposForOrgSecretRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedReposForOrgSecretRequestBody = ActionsSetSelectedReposForOrgSecretRequestBody;
 var ActionsSetSelectedReposForOrgSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedReposForOrgSecretRequest, _super);
     function ActionsSetSelectedReposForOrgSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsSetSelectedReposForOrgSecretPathParams)
     ], ActionsSetSelectedReposForOrgSecretRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ActionsSetSelectedReposForOrgSecretRequestBody)
     ], ActionsSetSelectedReposForOrgSecretRequest.prototype, "request", void 0);
     return ActionsSetSelectedReposForOrgSecretRequest;
-}(SpeakeasyBase));
-export { ActionsSetSelectedReposForOrgSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedReposForOrgSecretRequest = ActionsSetSelectedReposForOrgSecretRequest;
 var ActionsSetSelectedReposForOrgSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedReposForOrgSecretResponse, _super);
     function ActionsSetSelectedReposForOrgSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsSetSelectedReposForOrgSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsSetSelectedReposForOrgSecretResponse.prototype, "statusCode", void 0);
     return ActionsSetSelectedReposForOrgSecretResponse;
-}(SpeakeasyBase));
-export { ActionsSetSelectedReposForOrgSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedReposForOrgSecretResponse = ActionsSetSelectedReposForOrgSecretResponse;

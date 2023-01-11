@@ -4,10 +4,10 @@ export declare class ListSourceServiceInventoriesPathParams extends SpeakeasyBas
     id: string;
 }
 export declare class ListSourceServiceInventoriesQueryParams extends SpeakeasyBase {
-    filter?: Map<string, any>;
+    filter?: Record<string, any>;
     limit?: number;
     offset?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class ListSourceServiceInventoriesRequest extends SpeakeasyBase {
     pathParams: ListSourceServiceInventoriesPathParams;

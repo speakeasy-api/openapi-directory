@@ -1,50 +1,51 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class PostCancelDeploymentPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=app_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_id" })
   appId: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=deployment_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deployment_id" })
   deploymentId: string;
 }
 
 
-export class PostCancelDeploymentRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: PostCancelDeploymentPathParams;
-}
-
-
 export class PostCancelDeployment401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class PostCancelDeploymentRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PostCancelDeploymentPathParams;
+}
+
+
 export class PostCancelDeploymentResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  postCancelDeployment401ApplicationJsonObject?: PostCancelDeployment401ApplicationJson;
+  @SpeakeasyMetadata()
+  postCancelDeployment401ApplicationJSONObject?: PostCancelDeployment401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev21apps1Percent7BappIdPercent7D1deploymentsPostResponses200ContentApplication1jsonSchema?: shared.Onev21apps1Percent7BappIdPercent7D1deploymentsPostResponses200ContentApplication1jsonSchema;
 }

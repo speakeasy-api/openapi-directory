@@ -11,7 +11,7 @@ export class PostV05LinksLinkOnConfirmHeaders extends SpeakeasyBase {
 
 export class PostV05LinksLinkOnConfirmRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   patientLinkResult?: shared.PatientLinkResult;

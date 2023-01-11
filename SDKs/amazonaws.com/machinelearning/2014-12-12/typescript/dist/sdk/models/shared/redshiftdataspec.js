@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RedshiftDatabaseCredentials } from "./redshiftdatabasecredentials";
-import { RedshiftDatabase } from "./redshiftdatabase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RedshiftDataSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var redshiftdatabasecredentials_1 = require("./redshiftdatabasecredentials");
+var redshiftdatabase_1 = require("./redshiftdatabase");
 // RedshiftDataSpec
 /**
  * Describes the data specification of an Amazon Redshift <code>DataSource</code>.
@@ -35,33 +38,33 @@ var RedshiftDataSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataRearrangement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataRearrangement" }),
         __metadata("design:type", String)
     ], RedshiftDataSpec.prototype, "dataRearrangement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSchema" }),
         __metadata("design:type", String)
     ], RedshiftDataSpec.prototype, "dataSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSchemaUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSchemaUri" }),
         __metadata("design:type", String)
     ], RedshiftDataSpec.prototype, "dataSchemaUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseCredentials" }),
-        __metadata("design:type", RedshiftDatabaseCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseCredentials" }),
+        __metadata("design:type", redshiftdatabasecredentials_1.RedshiftDatabaseCredentials)
     ], RedshiftDataSpec.prototype, "databaseCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseInformation" }),
-        __metadata("design:type", RedshiftDatabase)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseInformation" }),
+        __metadata("design:type", redshiftdatabase_1.RedshiftDatabase)
     ], RedshiftDataSpec.prototype, "databaseInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3StagingLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3StagingLocation" }),
         __metadata("design:type", String)
     ], RedshiftDataSpec.prototype, "s3StagingLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SelectSqlQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SelectSqlQuery" }),
         __metadata("design:type", String)
     ], RedshiftDataSpec.prototype, "selectSqlQuery", void 0);
     return RedshiftDataSpec;
-}(SpeakeasyBase));
-export { RedshiftDataSpec };
+}(utils_1.SpeakeasyBase));
+exports.RedshiftDataSpec = RedshiftDataSpec;

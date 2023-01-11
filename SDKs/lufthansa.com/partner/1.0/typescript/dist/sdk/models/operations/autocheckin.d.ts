@@ -19,7 +19,7 @@ export declare class AutoCheckInRequest extends SpeakeasyBase {
     security: AutoCheckInSecurity;
 }
 export declare class AutoCheckInResponse extends SpeakeasyBase {
-    autoCheckIn200ApplicationJsonString?: string;
+    autoCheckIn200ApplicationJSONString?: string;
     contentType: string;
     statusCode: number;
 }

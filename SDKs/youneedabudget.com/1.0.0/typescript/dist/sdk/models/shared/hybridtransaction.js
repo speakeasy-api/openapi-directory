@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HybridTransactionClearedEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HybridTransaction = exports.HybridTransactionTypeEnum = exports.HybridTransactionFlagColorEnum = exports.HybridTransactionClearedEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HybridTransactionClearedEnum;
 (function (HybridTransactionClearedEnum) {
     HybridTransactionClearedEnum["Cleared"] = "cleared";
     HybridTransactionClearedEnum["Uncleared"] = "uncleared";
     HybridTransactionClearedEnum["Reconciled"] = "reconciled";
-})(HybridTransactionClearedEnum || (HybridTransactionClearedEnum = {}));
-export var HybridTransactionFlagColorEnum;
+})(HybridTransactionClearedEnum = exports.HybridTransactionClearedEnum || (exports.HybridTransactionClearedEnum = {}));
+var HybridTransactionFlagColorEnum;
 (function (HybridTransactionFlagColorEnum) {
     HybridTransactionFlagColorEnum["Red"] = "red";
     HybridTransactionFlagColorEnum["Orange"] = "orange";
@@ -37,97 +40,98 @@ export var HybridTransactionFlagColorEnum;
     HybridTransactionFlagColorEnum["Green"] = "green";
     HybridTransactionFlagColorEnum["Blue"] = "blue";
     HybridTransactionFlagColorEnum["Purple"] = "purple";
-})(HybridTransactionFlagColorEnum || (HybridTransactionFlagColorEnum = {}));
-export var HybridTransactionTypeEnum;
+    HybridTransactionFlagColorEnum["Null"] = "null";
+})(HybridTransactionFlagColorEnum = exports.HybridTransactionFlagColorEnum || (exports.HybridTransactionFlagColorEnum = {}));
+var HybridTransactionTypeEnum;
 (function (HybridTransactionTypeEnum) {
     HybridTransactionTypeEnum["Transaction"] = "transaction";
     HybridTransactionTypeEnum["Subtransaction"] = "subtransaction";
-})(HybridTransactionTypeEnum || (HybridTransactionTypeEnum = {}));
+})(HybridTransactionTypeEnum = exports.HybridTransactionTypeEnum || (exports.HybridTransactionTypeEnum = {}));
 var HybridTransaction = /** @class */ (function (_super) {
     __extends(HybridTransaction, _super);
     function HybridTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_name" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], HybridTransaction.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approved" }),
         __metadata("design:type", Boolean)
     ], HybridTransaction.prototype, "approved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_name" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "categoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cleared" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cleared" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "cleared", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], HybridTransaction.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], HybridTransaction.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag_color" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "flagColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=import_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=import_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matched_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matched_transaction_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "matchedTransactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_transaction_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "parentTransactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_name" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "payeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_account_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "transferAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_transaction_id" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "transferTransactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], HybridTransaction.prototype, "type", void 0);
     return HybridTransaction;
-}(SpeakeasyBase));
-export { HybridTransaction };
+}(utils_1.SpeakeasyBase));
+exports.HybridTransaction = HybridTransaction;

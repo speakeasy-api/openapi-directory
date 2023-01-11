@@ -51,7 +51,7 @@ export class DeletePartitionIndexResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deletePartitionIndexResponse?: Map<string, any>;
+  deletePartitionIndexResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

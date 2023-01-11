@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetRolePolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetRolePolicyResponse = exports.GetGetRolePolicyRequest = exports.GetGetRolePolicyHeaders = exports.GetGetRolePolicyQueryParams = exports.GetGetRolePolicyVersionEnum = exports.GetGetRolePolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetRolePolicyActionEnum;
 (function (GetGetRolePolicyActionEnum) {
     GetGetRolePolicyActionEnum["GetRolePolicy"] = "GetRolePolicy";
-})(GetGetRolePolicyActionEnum || (GetGetRolePolicyActionEnum = {}));
-export var GetGetRolePolicyVersionEnum;
+})(GetGetRolePolicyActionEnum = exports.GetGetRolePolicyActionEnum || (exports.GetGetRolePolicyActionEnum = {}));
+var GetGetRolePolicyVersionEnum;
 (function (GetGetRolePolicyVersionEnum) {
     GetGetRolePolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetRolePolicyVersionEnum || (GetGetRolePolicyVersionEnum = {}));
+})(GetGetRolePolicyVersionEnum = exports.GetGetRolePolicyVersionEnum || (exports.GetGetRolePolicyVersionEnum = {}));
 var GetGetRolePolicyQueryParams = /** @class */ (function (_super) {
     __extends(GetGetRolePolicyQueryParams, _super);
     function GetGetRolePolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyQueryParams.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleName" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyQueryParams.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyQueryParams.prototype, "version", void 0);
     return GetGetRolePolicyQueryParams;
-}(SpeakeasyBase));
-export { GetGetRolePolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRolePolicyQueryParams = GetGetRolePolicyQueryParams;
 var GetGetRolePolicyHeaders = /** @class */ (function (_super) {
     __extends(GetGetRolePolicyHeaders, _super);
     function GetGetRolePolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetRolePolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetRolePolicyHeaders;
-}(SpeakeasyBase));
-export { GetGetRolePolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRolePolicyHeaders = GetGetRolePolicyHeaders;
 var GetGetRolePolicyRequest = /** @class */ (function (_super) {
     __extends(GetGetRolePolicyRequest, _super);
     function GetGetRolePolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetRolePolicyQueryParams)
     ], GetGetRolePolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetRolePolicyHeaders)
     ], GetGetRolePolicyRequest.prototype, "headers", void 0);
     return GetGetRolePolicyRequest;
-}(SpeakeasyBase));
-export { GetGetRolePolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRolePolicyRequest = GetGetRolePolicyRequest;
 var GetGetRolePolicyResponse = /** @class */ (function (_super) {
     __extends(GetGetRolePolicyResponse, _super);
     function GetGetRolePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetRolePolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetRolePolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetRolePolicyResponse.prototype, "statusCode", void 0);
     return GetGetRolePolicyResponse;
-}(SpeakeasyBase));
-export { GetGetRolePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRolePolicyResponse = GetGetRolePolicyResponse;

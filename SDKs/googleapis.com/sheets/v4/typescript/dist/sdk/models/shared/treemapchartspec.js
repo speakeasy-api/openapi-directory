@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChartData } from "./chartdata";
-import { TreemapChartColorScale } from "./treemapchartcolorscale";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-import { TextFormat } from "./textformat";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TreemapChartSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var chartdata_1 = require("./chartdata");
+var treemapchartcolorscale_1 = require("./treemapchartcolorscale");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var textformat_1 = require("./textformat");
 // TreemapChartSpec
 /**
  * A Treemap chart.
@@ -38,57 +41,57 @@ var TreemapChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorData" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorData" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], TreemapChartSpec.prototype, "colorData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorScale" }),
-        __metadata("design:type", TreemapChartColorScale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorScale" }),
+        __metadata("design:type", treemapchartcolorscale_1.TreemapChartColorScale)
     ], TreemapChartSpec.prototype, "colorScale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headerColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headerColor" }),
+        __metadata("design:type", color_1.Color)
     ], TreemapChartSpec.prototype, "headerColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headerColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headerColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TreemapChartSpec.prototype, "headerColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideTooltips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideTooltips" }),
         __metadata("design:type", Boolean)
     ], TreemapChartSpec.prototype, "hideTooltips", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hintedLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hintedLevels" }),
         __metadata("design:type", Number)
     ], TreemapChartSpec.prototype, "hintedLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], TreemapChartSpec.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=levels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=levels" }),
         __metadata("design:type", Number)
     ], TreemapChartSpec.prototype, "levels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
         __metadata("design:type", Number)
     ], TreemapChartSpec.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
         __metadata("design:type", Number)
     ], TreemapChartSpec.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLabels" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLabels" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], TreemapChartSpec.prototype, "parentLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeData" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeData" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], TreemapChartSpec.prototype, "sizeData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textFormat" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textFormat" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], TreemapChartSpec.prototype, "textFormat", void 0);
     return TreemapChartSpec;
-}(SpeakeasyBase));
-export { TreemapChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.TreemapChartSpec = TreemapChartSpec;

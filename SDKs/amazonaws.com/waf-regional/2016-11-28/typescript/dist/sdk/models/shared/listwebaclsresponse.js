@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebAclSummary } from "./webaclsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWebAcLsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var webaclsummary_1 = require("./webaclsummary");
 var ListWebAcLsResponse = /** @class */ (function (_super) {
     __extends(ListWebAcLsResponse, _super);
     function ListWebAcLsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextMarker" }),
         __metadata("design:type", String)
     ], ListWebAcLsResponse.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebACLs", elemType: WebAclSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebACLs", elemType: webaclsummary_1.WebAclSummary }),
         __metadata("design:type", Array)
-    ], ListWebAcLsResponse.prototype, "webAcLs", void 0);
+    ], ListWebAcLsResponse.prototype, "webACLs", void 0);
     return ListWebAcLsResponse;
-}(SpeakeasyBase));
-export { ListWebAcLsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListWebAcLsResponse = ListWebAcLsResponse;

@@ -3,7 +3,7 @@ export declare class Listing extends SpeakeasyBase {
     askPrice: number;
     brandName: string;
     color?: string;
-    dealerId: number;
+    dealerID: number;
     firstSeen: Date;
     interiorColor?: string;
     isNew: boolean;
@@ -12,6 +12,6 @@ export declare class Listing extends SpeakeasyBase {
     modelName: string;
     msrp: number;
     vin: string;
-    vinDecode?: Map<string, any>;
+    vinDecode?: Record<string, any>;
     year: number;
 }

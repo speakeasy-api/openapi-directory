@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocationFilter } from "./locationfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListLocationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var locationfilter_1 = require("./locationfilter");
 // ListLocationsRequest
 /**
  * ListLocationsRequest
@@ -34,17 +37,17 @@ var ListLocationsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filters", elemType: LocationFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filters", elemType: locationfilter_1.LocationFilter }),
         __metadata("design:type", Array)
     ], ListLocationsRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListLocationsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListLocationsRequest.prototype, "nextToken", void 0);
     return ListLocationsRequest;
-}(SpeakeasyBase));
-export { ListLocationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListLocationsRequest = ListLocationsRequest;

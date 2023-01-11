@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamSampleResponse = exports.StreamSampleRequest = exports.StreamSampleQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StreamSampleQueryParams = /** @class */ (function (_super) {
     __extends(StreamSampleQueryParams, _super);
     function StreamSampleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expansions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=expansions" }),
         __metadata("design:type", Array)
     ], StreamSampleQueryParams.prototype, "expansions", void 0);
     return StreamSampleQueryParams;
-}(SpeakeasyBase));
-export { StreamSampleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StreamSampleQueryParams = StreamSampleQueryParams;
 var StreamSampleRequest = /** @class */ (function (_super) {
     __extends(StreamSampleRequest, _super);
     function StreamSampleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StreamSampleQueryParams)
     ], StreamSampleRequest.prototype, "queryParams", void 0);
     return StreamSampleRequest;
-}(SpeakeasyBase));
-export { StreamSampleRequest };
+}(utils_1.SpeakeasyBase));
+exports.StreamSampleRequest = StreamSampleRequest;
 var StreamSampleResponse = /** @class */ (function (_super) {
     __extends(StreamSampleResponse, _super);
     function StreamSampleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamSampleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StreamSampleResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StreamSampleResponse.prototype, "problem", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StreamSampleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], StreamSampleResponse.prototype, "streamSample200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], StreamSampleResponse.prototype, "streamSample200ApplicationJSONObject", void 0);
     return StreamSampleResponse;
-}(SpeakeasyBase));
-export { StreamSampleResponse };
+}(utils_1.SpeakeasyBase));
+exports.StreamSampleResponse = StreamSampleResponse;

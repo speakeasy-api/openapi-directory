@@ -23,6 +23,6 @@ export declare class RemoveTagsResponse extends SpeakeasyBase {
     invalidRequestException?: any;
     pipelineDeletedException?: any;
     pipelineNotFoundException?: any;
-    removeTagsOutput?: Map<string, any>;
+    removeTagsOutput?: Record<string, any>;
     statusCode: number;
 }

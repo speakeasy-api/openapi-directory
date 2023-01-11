@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingLevelEnum } from "./logginglevelenum";
-// RouteSettings
-/**
- * Represents a collection of route settings.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var RouteSettings = /** @class */ (function (_super) {
     __extends(RouteSettings, _super);
     function RouteSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataTraceEnabled" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataTraceEnabled" }),
+        __metadata("design:type", Object)
     ], RouteSettings.prototype, "dataTraceEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DetailedMetricsEnabled" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DetailedMetricsEnabled" }),
+        __metadata("design:type", Object)
     ], RouteSettings.prototype, "detailedMetricsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoggingLevel" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoggingLevel" }),
+        __metadata("design:type", Object)
     ], RouteSettings.prototype, "loggingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThrottlingBurstLimit" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThrottlingBurstLimit" }),
+        __metadata("design:type", Object)
     ], RouteSettings.prototype, "throttlingBurstLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThrottlingRateLimit" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThrottlingRateLimit" }),
+        __metadata("design:type", Object)
     ], RouteSettings.prototype, "throttlingRateLimit", void 0);
     return RouteSettings;
-}(SpeakeasyBase));
-export { RouteSettings };
+}(utils_1.SpeakeasyBase));
+exports.RouteSettings = RouteSettings;

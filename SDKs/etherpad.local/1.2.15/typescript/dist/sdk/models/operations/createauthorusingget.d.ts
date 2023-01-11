@@ -3,7 +3,7 @@ export declare class CreateAuthorUsingGetQueryParams extends SpeakeasyBase {
     name?: string;
 }
 export declare class CreateAuthorUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class CreateAuthorUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -12,17 +12,17 @@ export declare class CreateAuthorUsingGet200ApplicationJson extends SpeakeasyBas
 }
 export declare class CreateAuthorUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorUsingGetRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class CreateAuthorUsingGetRequest extends SpeakeasyBase {
 export declare class CreateAuthorUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createAuthorUsingGet200ApplicationJsonObject?: CreateAuthorUsingGet200ApplicationJson;
-    createAuthorUsingGet400ApplicationJsonObject?: CreateAuthorUsingGet400ApplicationJson;
-    createAuthorUsingGet401ApplicationJsonObject?: CreateAuthorUsingGet401ApplicationJson;
-    createAuthorUsingGet500ApplicationJsonObject?: CreateAuthorUsingGet500ApplicationJson;
+    createAuthorUsingGET200ApplicationJSONObject?: CreateAuthorUsingGet200ApplicationJson;
+    createAuthorUsingGET400ApplicationJSONObject?: CreateAuthorUsingGet400ApplicationJson;
+    createAuthorUsingGET401ApplicationJSONObject?: CreateAuthorUsingGet401ApplicationJson;
+    createAuthorUsingGET500ApplicationJSONObject?: CreateAuthorUsingGet500ApplicationJson;
 }

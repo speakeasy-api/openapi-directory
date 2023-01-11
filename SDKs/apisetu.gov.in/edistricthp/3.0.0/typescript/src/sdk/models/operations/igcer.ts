@@ -185,23 +185,23 @@ export class IgcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  igcer400ApplicationJsonObject?: Igcer400ApplicationJson;
+  igcer400ApplicationJSONObject?: Igcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer401ApplicationJsonObject?: Igcer401ApplicationJson;
+  igcer401ApplicationJSONObject?: Igcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer404ApplicationJsonObject?: Igcer404ApplicationJson;
+  igcer404ApplicationJSONObject?: Igcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer500ApplicationJsonObject?: Igcer500ApplicationJson;
+  igcer500ApplicationJSONObject?: Igcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer502ApplicationJsonObject?: Igcer502ApplicationJson;
+  igcer502ApplicationJSONObject?: Igcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer503ApplicationJsonObject?: Igcer503ApplicationJson;
+  igcer503ApplicationJSONObject?: Igcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  igcer504ApplicationJsonObject?: Igcer504ApplicationJson;
+  igcer504ApplicationJSONObject?: Igcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PubsubMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // PubsubMessage
 /**
  * A message that is published by publishers and consumed by subscribers. The message must contain either a non-empty data field or at least one attribute. Note that client libraries represent this object differently depending on the language. See the corresponding [client library documentation](https://cloud.google.com/pubsub/docs/reference/libraries) for more information. See [quotas and limits] (https://cloud.google.com/pubsub/quotas) for more information about message limits.
@@ -33,25 +36,25 @@ var PubsubMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], PubsubMessage.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], PubsubMessage.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageId" }),
         __metadata("design:type", String)
     ], PubsubMessage.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderingKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderingKey" }),
         __metadata("design:type", String)
     ], PubsubMessage.prototype, "orderingKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishTime" }),
         __metadata("design:type", String)
     ], PubsubMessage.prototype, "publishTime", void 0);
     return PubsubMessage;
-}(SpeakeasyBase));
-export { PubsubMessage };
+}(utils_1.SpeakeasyBase));
+exports.PubsubMessage = PubsubMessage;

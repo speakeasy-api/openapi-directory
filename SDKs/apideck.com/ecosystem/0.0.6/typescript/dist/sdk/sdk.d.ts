@@ -4,10 +4,11 @@ import { Collection } from "./collection";
 import { Ecosystem } from "./ecosystem";
 import { Listing } from "./listing";
 import { Product } from "./product";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.apideck.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     category: Category;
     collection: Collection;
@@ -20,6 +21,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

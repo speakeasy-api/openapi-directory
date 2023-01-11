@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStopDbClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStopDbClusterResponse = exports.GetStopDbClusterRequest = exports.GetStopDbClusterHeaders = exports.GetStopDbClusterQueryParams = exports.GetStopDbClusterVersionEnum = exports.GetStopDbClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStopDbClusterActionEnum;
 (function (GetStopDbClusterActionEnum) {
     GetStopDbClusterActionEnum["StopDbCluster"] = "StopDBCluster";
-})(GetStopDbClusterActionEnum || (GetStopDbClusterActionEnum = {}));
-export var GetStopDbClusterVersionEnum;
+})(GetStopDbClusterActionEnum = exports.GetStopDbClusterActionEnum || (exports.GetStopDbClusterActionEnum = {}));
+var GetStopDbClusterVersionEnum;
 (function (GetStopDbClusterVersionEnum) {
     GetStopDbClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetStopDbClusterVersionEnum || (GetStopDbClusterVersionEnum = {}));
+})(GetStopDbClusterVersionEnum = exports.GetStopDbClusterVersionEnum || (exports.GetStopDbClusterVersionEnum = {}));
 var GetStopDbClusterQueryParams = /** @class */ (function (_super) {
     __extends(GetStopDbClusterQueryParams, _super);
     function GetStopDbClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetStopDbClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetStopDbClusterQueryParams.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetStopDbClusterQueryParams.prototype, "version", void 0);
     return GetStopDbClusterQueryParams;
-}(SpeakeasyBase));
-export { GetStopDbClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStopDbClusterQueryParams = GetStopDbClusterQueryParams;
 var GetStopDbClusterHeaders = /** @class */ (function (_super) {
     __extends(GetStopDbClusterHeaders, _super);
     function GetStopDbClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetStopDbClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetStopDbClusterHeaders;
-}(SpeakeasyBase));
-export { GetStopDbClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetStopDbClusterHeaders = GetStopDbClusterHeaders;
 var GetStopDbClusterRequest = /** @class */ (function (_super) {
     __extends(GetStopDbClusterRequest, _super);
     function GetStopDbClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStopDbClusterQueryParams)
     ], GetStopDbClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStopDbClusterHeaders)
     ], GetStopDbClusterRequest.prototype, "headers", void 0);
     return GetStopDbClusterRequest;
-}(SpeakeasyBase));
-export { GetStopDbClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStopDbClusterRequest = GetStopDbClusterRequest;
 var GetStopDbClusterResponse = /** @class */ (function (_super) {
     __extends(GetStopDbClusterResponse, _super);
     function GetStopDbClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStopDbClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStopDbClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStopDbClusterResponse.prototype, "statusCode", void 0);
     return GetStopDbClusterResponse;
-}(SpeakeasyBase));
-export { GetStopDbClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStopDbClusterResponse = GetStopDbClusterResponse;

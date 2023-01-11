@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelectResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var itemlist_1 = require("./itemlist");
 var SelectResult = /** @class */ (function (_super) {
     __extends(SelectResult, _super);
     function SelectResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Item }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: itemlist_1.ItemList }),
         __metadata("design:type", Array)
     ], SelectResult.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SelectResult.prototype, "nextToken", void 0);
     return SelectResult;
-}(SpeakeasyBase));
-export { SelectResult };
+}(utils_1.SpeakeasyBase));
+exports.SelectResult = SelectResult;

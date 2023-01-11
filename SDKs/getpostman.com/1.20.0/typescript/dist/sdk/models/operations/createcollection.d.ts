@@ -55,6 +55,6 @@ export declare class CreateCollectionRequest extends SpeakeasyBase {
 export declare class CreateCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createCollection200ApplicationJsonObject?: CreateCollection200ApplicationJson;
-    createCollection400ApplicationJsonObject?: CreateCollection400ApplicationJson;
+    createCollection200ApplicationJSONObject?: CreateCollection200ApplicationJson;
+    createCollection400ApplicationJSONObject?: CreateCollection400ApplicationJson;
 }

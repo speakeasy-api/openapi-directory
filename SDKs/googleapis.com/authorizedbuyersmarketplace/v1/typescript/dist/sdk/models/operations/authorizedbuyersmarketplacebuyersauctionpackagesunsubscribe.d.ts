@@ -23,7 +23,7 @@ export declare class AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribe
 export declare class AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeRequest extends SpeakeasyBase {
     pathParams: AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribePathParams;
     queryParams: AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeSecurity;
 }
 export declare class AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse extends SpeakeasyBase {

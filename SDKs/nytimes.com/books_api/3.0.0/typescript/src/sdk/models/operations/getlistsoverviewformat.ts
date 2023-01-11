@@ -136,7 +136,7 @@ export class GetListsOverviewFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListsOverviewFormat200ApplicationJsonObject?: GetListsOverviewFormat200ApplicationJson;
+  getListsOverviewFormat200ApplicationJSONObject?: GetListsOverviewFormat200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BindingEnumBindingTypeEnum = void 0;
+var BindingEnumBindingTypeEnum;
+(function (BindingEnumBindingTypeEnum) {
+    BindingEnumBindingTypeEnum["Apn"] = "apn";
+    BindingEnumBindingTypeEnum["Gcm"] = "gcm";
+    BindingEnumBindingTypeEnum["Sms"] = "sms";
+    BindingEnumBindingTypeEnum["Fcm"] = "fcm";
+    BindingEnumBindingTypeEnum["FacebookMessenger"] = "facebook-messenger";
+    BindingEnumBindingTypeEnum["Alexa"] = "alexa";
+})(BindingEnumBindingTypeEnum = exports.BindingEnumBindingTypeEnum || (exports.BindingEnumBindingTypeEnum = {}));

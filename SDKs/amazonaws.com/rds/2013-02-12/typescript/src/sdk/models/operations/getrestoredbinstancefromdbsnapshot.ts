@@ -45,7 +45,7 @@ export class GetRestoreDbInstanceFromDbSnapshotQueryParams extends SpeakeasyBase
   licenseModel?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OptionGroupName" })
   optionGroupName?: string;

@@ -29,6 +29,6 @@ export declare class PrivatecaProjectsLocationsOperationsDeleteRequest extends S
 }
 export declare class PrivatecaProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

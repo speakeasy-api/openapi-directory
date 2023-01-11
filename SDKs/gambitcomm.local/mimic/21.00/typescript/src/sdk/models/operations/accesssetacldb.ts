@@ -22,5 +22,5 @@ export class AccessSetAcldbResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  accessSetAcldb200ApplicationJsonString?: string;
+  accessSetAcldb200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataPoint } from "./datapoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDataPointChangesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var datapoint_1 = require("./datapoint");
 var ListDataPointChangesResponse = /** @class */ (function (_super) {
     __extends(ListDataPointChangesResponse, _super);
     function ListDataPointChangesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], ListDataPointChangesResponse.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedDataPoint", elemType: DataPoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedDataPoint", elemType: datapoint_1.DataPoint }),
         __metadata("design:type", Array)
     ], ListDataPointChangesResponse.prototype, "deletedDataPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertedDataPoint", elemType: DataPoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertedDataPoint", elemType: datapoint_1.DataPoint }),
         __metadata("design:type", Array)
     ], ListDataPointChangesResponse.prototype, "insertedDataPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListDataPointChangesResponse.prototype, "nextPageToken", void 0);
     return ListDataPointChangesResponse;
-}(SpeakeasyBase));
-export { ListDataPointChangesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListDataPointChangesResponse = ListDataPointChangesResponse;

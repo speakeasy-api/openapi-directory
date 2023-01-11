@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhysicalDistancing = exports.PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum = exports.PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum = exports.PhysicalDistancingSafetyDividersExceptionEnum = exports.PhysicalDistancingPhysicalDistancingRequiredExceptionEnum = exports.PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum;
 (function (PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum) {
     PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum || (PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum = {}));
-export var PhysicalDistancingPhysicalDistancingRequiredExceptionEnum;
+})(PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum = exports.PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum || (exports.PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum = {}));
+var PhysicalDistancingPhysicalDistancingRequiredExceptionEnum;
 (function (PhysicalDistancingPhysicalDistancingRequiredExceptionEnum) {
     PhysicalDistancingPhysicalDistancingRequiredExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PhysicalDistancingPhysicalDistancingRequiredExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PhysicalDistancingPhysicalDistancingRequiredExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PhysicalDistancingPhysicalDistancingRequiredExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PhysicalDistancingPhysicalDistancingRequiredExceptionEnum || (PhysicalDistancingPhysicalDistancingRequiredExceptionEnum = {}));
-export var PhysicalDistancingSafetyDividersExceptionEnum;
+})(PhysicalDistancingPhysicalDistancingRequiredExceptionEnum = exports.PhysicalDistancingPhysicalDistancingRequiredExceptionEnum || (exports.PhysicalDistancingPhysicalDistancingRequiredExceptionEnum = {}));
+var PhysicalDistancingSafetyDividersExceptionEnum;
 (function (PhysicalDistancingSafetyDividersExceptionEnum) {
     PhysicalDistancingSafetyDividersExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PhysicalDistancingSafetyDividersExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PhysicalDistancingSafetyDividersExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PhysicalDistancingSafetyDividersExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PhysicalDistancingSafetyDividersExceptionEnum || (PhysicalDistancingSafetyDividersExceptionEnum = {}));
-export var PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum;
+})(PhysicalDistancingSafetyDividersExceptionEnum = exports.PhysicalDistancingSafetyDividersExceptionEnum || (exports.PhysicalDistancingSafetyDividersExceptionEnum = {}));
+var PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum;
 (function (PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum) {
     PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum || (PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum = {}));
-export var PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum;
+})(PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum = exports.PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum || (exports.PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum = {}));
+var PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum;
 (function (PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum) {
     PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum || (PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum = {}));
+})(PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum = exports.PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum || (exports.PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum = {}));
 // PhysicalDistancing
 /**
  * Physical distancing measures implemented by the hotel during COVID-19.
@@ -68,45 +71,45 @@ var PhysicalDistancing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasPhysicalDistancingArranged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasPhysicalDistancingArranged" }),
         __metadata("design:type", Boolean)
     ], PhysicalDistancing.prototype, "commonAreasPhysicalDistancingArranged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasPhysicalDistancingArrangedException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasPhysicalDistancingArrangedException" }),
         __metadata("design:type", String)
     ], PhysicalDistancing.prototype, "commonAreasPhysicalDistancingArrangedException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalDistancingRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalDistancingRequired" }),
         __metadata("design:type", Boolean)
     ], PhysicalDistancing.prototype, "physicalDistancingRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalDistancingRequiredException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalDistancingRequiredException" }),
         __metadata("design:type", String)
     ], PhysicalDistancing.prototype, "physicalDistancingRequiredException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=safetyDividers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=safetyDividers" }),
         __metadata("design:type", Boolean)
     ], PhysicalDistancing.prototype, "safetyDividers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=safetyDividersException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=safetyDividersException" }),
         __metadata("design:type", String)
     ], PhysicalDistancing.prototype, "safetyDividersException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedAreasLimitedOccupancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedAreasLimitedOccupancy" }),
         __metadata("design:type", Boolean)
     ], PhysicalDistancing.prototype, "sharedAreasLimitedOccupancy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedAreasLimitedOccupancyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedAreasLimitedOccupancyException" }),
         __metadata("design:type", String)
     ], PhysicalDistancing.prototype, "sharedAreasLimitedOccupancyException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wellnessAreasHavePrivateSpaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wellnessAreasHavePrivateSpaces" }),
         __metadata("design:type", Boolean)
     ], PhysicalDistancing.prototype, "wellnessAreasHavePrivateSpaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wellnessAreasHavePrivateSpacesException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wellnessAreasHavePrivateSpacesException" }),
         __metadata("design:type", String)
     ], PhysicalDistancing.prototype, "wellnessAreasHavePrivateSpacesException", void 0);
     return PhysicalDistancing;
-}(SpeakeasyBase));
-export { PhysicalDistancing };
+}(utils_1.SpeakeasyBase));
+exports.PhysicalDistancing = PhysicalDistancing;

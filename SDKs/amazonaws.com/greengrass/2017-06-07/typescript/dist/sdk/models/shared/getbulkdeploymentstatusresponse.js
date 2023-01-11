@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BulkDeploymentMetrics } from "./bulkdeploymentmetrics";
-import { BulkDeploymentStatusEnum } from "./bulkdeploymentstatusenum";
-import { ErrorDetail } from "./errordetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBulkDeploymentStatusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var bulkdeploymentmetrics_1 = require("./bulkdeploymentmetrics");
+var bulkdeploymentstatusenum_1 = require("./bulkdeploymentstatusenum");
+var errordetail_1 = require("./errordetail");
 var GetBulkDeploymentStatusResponse = /** @class */ (function (_super) {
     __extends(GetBulkDeploymentStatusResponse, _super);
     function GetBulkDeploymentStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkDeploymentMetrics" }),
-        __metadata("design:type", BulkDeploymentMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkDeploymentMetrics" }),
+        __metadata("design:type", bulkdeploymentmetrics_1.BulkDeploymentMetrics)
     ], GetBulkDeploymentStatusResponse.prototype, "bulkDeploymentMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkDeploymentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkDeploymentStatus" }),
         __metadata("design:type", String)
     ], GetBulkDeploymentStatusResponse.prototype, "bulkDeploymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], GetBulkDeploymentStatusResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorDetails", elemType: ErrorDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorDetails", elemType: errordetail_1.ErrorDetail }),
         __metadata("design:type", Array)
     ], GetBulkDeploymentStatusResponse.prototype, "errorDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], GetBulkDeploymentStatusResponse.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], GetBulkDeploymentStatusResponse.prototype, "tags", void 0);
     return GetBulkDeploymentStatusResponse;
-}(SpeakeasyBase));
-export { GetBulkDeploymentStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBulkDeploymentStatusResponse = GetBulkDeploymentStatusResponse;

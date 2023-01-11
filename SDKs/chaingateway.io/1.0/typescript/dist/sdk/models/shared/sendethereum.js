@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendEthereum = void 0;
+var utils_1 = require("../../../internal/utils");
 var SendEthereum = /** @class */ (function (_super) {
     __extends(SendEthereum, _super);
     function SendEthereum() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", String)
     ], SendEthereum.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], SendEthereum.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], SendEthereum.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], SendEthereum.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txid" }),
         __metadata("design:type", String)
     ], SendEthereum.prototype, "txid", void 0);
     return SendEthereum;
-}(SpeakeasyBase));
-export { SendEthereum };
+}(utils_1.SpeakeasyBase));
+exports.SendEthereum = SendEthereum;

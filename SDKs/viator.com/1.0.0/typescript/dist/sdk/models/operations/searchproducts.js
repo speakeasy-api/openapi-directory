@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,366 +14,391 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchProductsResponse = exports.SearchProductsRequest = exports.SearchProducts200ApplicationJson = exports.SearchProducts200ApplicationJsonData = exports.SearchProductsRequestBody = exports.SearchProductsRequestBodySortOrderEnum = exports.SearchProductsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SearchProductsHeaders = /** @class */ (function (_super) {
     __extends(SearchProductsHeaders, _super);
     function SearchProductsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], SearchProductsHeaders.prototype, "acceptLanguage", void 0);
     return SearchProductsHeaders;
-}(SpeakeasyBase));
-export { SearchProductsHeaders };
-export var SearchProductsRequestBodySortOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.SearchProductsHeaders = SearchProductsHeaders;
+var SearchProductsRequestBodySortOrderEnum;
 (function (SearchProductsRequestBodySortOrderEnum) {
     SearchProductsRequestBodySortOrderEnum["TopSellers"] = "TOP_SELLERS";
     SearchProductsRequestBodySortOrderEnum["ReviewAvgRatingA"] = "REVIEW_AVG_RATING_A";
     SearchProductsRequestBodySortOrderEnum["ReviewAvgRatingD"] = "REVIEW_AVG_RATING_D";
     SearchProductsRequestBodySortOrderEnum["PriceFromA"] = "PRICE_FROM_A";
     SearchProductsRequestBodySortOrderEnum["PriceFromD"] = "PRICE_FROM_D";
-})(SearchProductsRequestBodySortOrderEnum || (SearchProductsRequestBodySortOrderEnum = {}));
+})(SearchProductsRequestBodySortOrderEnum = exports.SearchProductsRequestBodySortOrderEnum || (exports.SearchProductsRequestBodySortOrderEnum = {}));
 var SearchProductsRequestBody = /** @class */ (function (_super) {
     __extends(SearchProductsRequestBody, _super);
     function SearchProductsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catId" }),
         __metadata("design:type", Number)
     ], SearchProductsRequestBody.prototype, "catId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destId" }),
         __metadata("design:type", Number)
     ], SearchProductsRequestBody.prototype, "destId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seoId" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "seoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subCatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subCatId" }),
         __metadata("design:type", Number)
     ], SearchProductsRequestBody.prototype, "subCatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topX" }),
         __metadata("design:type", String)
     ], SearchProductsRequestBody.prototype, "topX", void 0);
     return SearchProductsRequestBody;
-}(SpeakeasyBase));
-export { SearchProductsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SearchProductsRequestBody = SearchProductsRequestBody;
 var SearchProducts200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(SearchProducts200ApplicationJsonData, _super);
     function SearchProducts200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admission" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "admission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJsonData.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingEngineId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingEngineId" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "bookingEngineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catIds" }),
         __metadata("design:type", Array)
     ], SearchProducts200ApplicationJsonData.prototype, "catIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=essential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=essential" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "essential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantCancellable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantCancellable" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJsonData.prototype, "merchantCancellable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPriceFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPriceFrom" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "merchantNetPriceFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPriceFromFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPriceFromFormatted" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "merchantNetPriceFromFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onRequestPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onRequestPeriod" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "onRequestPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onSale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onSale" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJsonData.prototype, "onSale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=panoramaCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=panoramaCount" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "panoramaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pas" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pas" }),
+        __metadata("design:type", Object)
     ], SearchProducts200ApplicationJsonData.prototype, "pas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoCount" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "photoCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceFormatted" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "priceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationId" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "primaryDestinationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationName" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "primaryDestinationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationUrlName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationUrlName" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "primaryDestinationUrlName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryGroupId" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "primaryGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productUrlName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productUrlName" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "productUrlName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewCount" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "reviewCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rrp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rrp" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "rrp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rrpformatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rrpformatted" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "rrpformatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingAmount" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "savingAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingAmountFormated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingAmountFormated" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "savingAmountFormated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortDescription" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "shortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortTitle" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "shortTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialOfferAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialOfferAvailable" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJsonData.prototype, "specialOfferAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialReservation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialReservation" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJsonData.prototype, "specialReservation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialReservationDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialReservationDetails" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "specialReservationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sslSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sslSupported" }),
         __metadata("design:type", Object)
     ], SearchProducts200ApplicationJsonData.prototype, "sslSupported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subCatIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subCatIds" }),
         __metadata("design:type", Array)
     ], SearchProducts200ApplicationJsonData.prototype, "subCatIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplierCode" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "supplierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplierName" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "supplierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailHiResURL" }),
         __metadata("design:type", String)
-    ], SearchProducts200ApplicationJsonData.prototype, "thumbnailHiResUrl", void 0);
+    ], SearchProducts200ApplicationJsonData.prototype, "thumbnailHiResURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailURL" }),
         __metadata("design:type", String)
-    ], SearchProducts200ApplicationJsonData.prototype, "thumbnailUrl", void 0);
+    ], SearchProducts200ApplicationJsonData.prototype, "thumbnailURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translationLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translationLevel" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "translationLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniqueShortDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniqueShortDescription" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJsonData.prototype, "uniqueShortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoCount" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJsonData.prototype, "videoCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webURL" }),
         __metadata("design:type", String)
-    ], SearchProducts200ApplicationJsonData.prototype, "webUrl", void 0);
+    ], SearchProducts200ApplicationJsonData.prototype, "webURL", void 0);
     return SearchProducts200ApplicationJsonData;
-}(SpeakeasyBase));
-export { SearchProducts200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.SearchProducts200ApplicationJsonData = SearchProducts200ApplicationJsonData;
 var SearchProducts200ApplicationJson = /** @class */ (function (_super) {
     __extends(SearchProducts200ApplicationJson, _super);
     function SearchProducts200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: SearchProducts200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: SearchProducts200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], SearchProducts200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], SearchProducts200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], SearchProducts200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], SearchProducts200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], SearchProducts200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], SearchProducts200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], SearchProducts200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], SearchProducts200ApplicationJson.prototype, "vmid", void 0);
     return SearchProducts200ApplicationJson;
-}(SpeakeasyBase));
-export { SearchProducts200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SearchProducts200ApplicationJson = SearchProducts200ApplicationJson;
 var SearchProductsRequest = /** @class */ (function (_super) {
     __extends(SearchProductsRequest, _super);
     function SearchProductsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchProductsHeaders)
     ], SearchProductsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SearchProductsRequestBody)
     ], SearchProductsRequest.prototype, "request", void 0);
     return SearchProductsRequest;
-}(SpeakeasyBase));
-export { SearchProductsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchProductsRequest = SearchProductsRequest;
 var SearchProductsResponse = /** @class */ (function (_super) {
     __extends(SearchProductsResponse, _super);
     function SearchProductsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchProductsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchProductsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchProducts200ApplicationJson)
-    ], SearchProductsResponse.prototype, "searchProducts200ApplicationJsonObject", void 0);
+    ], SearchProductsResponse.prototype, "searchProducts200ApplicationJSONObject", void 0);
     return SearchProductsResponse;
-}(SpeakeasyBase));
-export { SearchProductsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchProductsResponse = SearchProductsResponse;

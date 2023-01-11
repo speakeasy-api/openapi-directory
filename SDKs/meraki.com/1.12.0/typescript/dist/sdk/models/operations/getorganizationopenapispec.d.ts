@@ -8,5 +8,5 @@ export declare class GetOrganizationOpenapiSpecRequest extends SpeakeasyBase {
 export declare class GetOrganizationOpenapiSpecResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationOpenapiSpec200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationOpenapiSpec200ApplicationJSONObject?: Record<string, any>;
 }

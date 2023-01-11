@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteThingShadowRequest, DeleteThingShadowResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteThingShadowRequest = {
   pathParams: {
-    thingName: "modi",
+    thingName: "sit",
   },
   queryParams: {
-    name: "quia",
+    name: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "pariatur",
-    xAmzContentSha256: "velit",
-    xAmzCredential: "possimus",
-    xAmzDate: "cumque",
-    xAmzSecurityToken: "ut",
-    xAmzSignature: "corrupti",
-    xAmzSignedHeaders: "officia",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
 };
 
-sdk.sdk.deleteThingShadow(req).then((res: DeleteThingShadowResponse | AxiosError) => {
+sdk.deleteThingShadow(req).then((res: DeleteThingShadowResponse | AxiosError) => {
    // handle response
 });
 ```

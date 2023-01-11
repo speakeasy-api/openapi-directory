@@ -23,7 +23,7 @@ export declare class DomainsProjectsLocationsRegistrationsExportSecurity extends
 export declare class DomainsProjectsLocationsRegistrationsExportRequest extends SpeakeasyBase {
     pathParams: DomainsProjectsLocationsRegistrationsExportPathParams;
     queryParams: DomainsProjectsLocationsRegistrationsExportQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DomainsProjectsLocationsRegistrationsExportSecurity;
 }
 export declare class DomainsProjectsLocationsRegistrationsExportResponse extends SpeakeasyBase {

@@ -31,5 +31,5 @@ export declare class UploadMultipartPartResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     serviceUnavailableException?: any;
     statusCode: number;
-    uploadMultipartPartOutput?: Map<string, any>;
+    uploadMultipartPartOutput?: Record<string, any>;
 }

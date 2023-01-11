@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatNewSponsorDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var LiveChatNewSponsorDetails = /** @class */ (function (_super) {
     __extends(LiveChatNewSponsorDetails, _super);
     function LiveChatNewSponsorDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUpgrade" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUpgrade" }),
         __metadata("design:type", Boolean)
     ], LiveChatNewSponsorDetails.prototype, "isUpgrade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberLevelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberLevelName" }),
         __metadata("design:type", String)
     ], LiveChatNewSponsorDetails.prototype, "memberLevelName", void 0);
     return LiveChatNewSponsorDetails;
-}(SpeakeasyBase));
-export { LiveChatNewSponsorDetails };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatNewSponsorDetails = LiveChatNewSponsorDetails;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Permission } from "./permission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionChange = void 0;
+var utils_1 = require("../../../internal/utils");
+var permission_1 = require("./permission");
 // PermissionChange
 /**
  * Contains information about a Drive object's permissions that changed as a result of a permissionChange type event.
@@ -34,13 +37,13 @@ var PermissionChange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addedPermissions", elemType: Permission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addedPermissions", elemType: permission_1.Permission }),
         __metadata("design:type", Array)
     ], PermissionChange.prototype, "addedPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removedPermissions", elemType: Permission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removedPermissions", elemType: permission_1.Permission }),
         __metadata("design:type", Array)
     ], PermissionChange.prototype, "removedPermissions", void 0);
     return PermissionChange;
-}(SpeakeasyBase));
-export { PermissionChange };
+}(utils_1.SpeakeasyBase));
+exports.PermissionChange = PermissionChange;

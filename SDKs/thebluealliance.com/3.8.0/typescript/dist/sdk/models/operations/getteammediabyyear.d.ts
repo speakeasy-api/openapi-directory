@@ -17,7 +17,7 @@ export declare class GetTeamMediaByYearRequest extends SpeakeasyBase {
 }
 export declare class GetTeamMediaByYearResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     media?: shared.Media[];
     statusCode: number;
 }

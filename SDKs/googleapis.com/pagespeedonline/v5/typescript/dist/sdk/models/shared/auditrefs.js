@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditRefs = void 0;
+var utils_1 = require("../../../internal/utils");
 // AuditRefs
 /**
  * A light reference to an audit by id, used to group and weight audits in a given category.
@@ -33,25 +36,25 @@ var AuditRefs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acronym" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acronym" }),
         __metadata("design:type", String)
     ], AuditRefs.prototype, "acronym", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", String)
     ], AuditRefs.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AuditRefs.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relevantAudits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relevantAudits" }),
         __metadata("design:type", Array)
     ], AuditRefs.prototype, "relevantAudits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], AuditRefs.prototype, "weight", void 0);
     return AuditRefs;
-}(SpeakeasyBase));
-export { AuditRefs };
+}(utils_1.SpeakeasyBase));
+exports.AuditRefs = AuditRefs;

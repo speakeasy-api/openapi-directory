@@ -1,8 +1,11 @@
-export var LoadBalancerTlsCertificateFailureReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerTlsCertificateFailureReasonEnum = void 0;
+var LoadBalancerTlsCertificateFailureReasonEnum;
 (function (LoadBalancerTlsCertificateFailureReasonEnum) {
     LoadBalancerTlsCertificateFailureReasonEnum["NoAvailableContacts"] = "NO_AVAILABLE_CONTACTS";
     LoadBalancerTlsCertificateFailureReasonEnum["AdditionalVerificationRequired"] = "ADDITIONAL_VERIFICATION_REQUIRED";
     LoadBalancerTlsCertificateFailureReasonEnum["DomainNotAllowed"] = "DOMAIN_NOT_ALLOWED";
     LoadBalancerTlsCertificateFailureReasonEnum["InvalidPublicDomain"] = "INVALID_PUBLIC_DOMAIN";
     LoadBalancerTlsCertificateFailureReasonEnum["Other"] = "OTHER";
-})(LoadBalancerTlsCertificateFailureReasonEnum || (LoadBalancerTlsCertificateFailureReasonEnum = {}));
+})(LoadBalancerTlsCertificateFailureReasonEnum = exports.LoadBalancerTlsCertificateFailureReasonEnum || (exports.LoadBalancerTlsCertificateFailureReasonEnum = {}));

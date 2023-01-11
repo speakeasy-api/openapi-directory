@@ -12,7 +12,7 @@ export declare class StartExperimentHeaders extends SpeakeasyBase {
 export declare class StartExperimentRequestBody extends SpeakeasyBase {
     clientToken: string;
     experimentTemplateId: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartExperimentRequest extends SpeakeasyBase {
     headers: StartExperimentHeaders;

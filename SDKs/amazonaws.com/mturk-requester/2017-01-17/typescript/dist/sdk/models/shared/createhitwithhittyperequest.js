@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReviewPolicy } from "./reviewpolicy";
-import { HitLayoutParameter } from "./hitlayoutparameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHitWithHitTypeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var reviewpolicy_1 = require("./reviewpolicy");
+var hitlayoutparameter_1 = require("./hitlayoutparameter");
 var CreateHitWithHitTypeRequest = /** @class */ (function (_super) {
     __extends(CreateHitWithHitTypeRequest, _super);
     function CreateHitWithHitTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentReviewPolicy" }),
-        __metadata("design:type", ReviewPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentReviewPolicy" }),
+        __metadata("design:type", reviewpolicy_1.ReviewPolicy)
     ], CreateHitWithHitTypeRequest.prototype, "assignmentReviewPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITLayoutId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITLayoutId" }),
         __metadata("design:type", String)
     ], CreateHitWithHitTypeRequest.prototype, "hitLayoutId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITLayoutParameters", elemType: HitLayoutParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITLayoutParameters", elemType: hitlayoutparameter_1.HitLayoutParameter }),
         __metadata("design:type", Array)
     ], CreateHitWithHitTypeRequest.prototype, "hitLayoutParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITReviewPolicy" }),
-        __metadata("design:type", ReviewPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITReviewPolicy" }),
+        __metadata("design:type", reviewpolicy_1.ReviewPolicy)
     ], CreateHitWithHitTypeRequest.prototype, "hitReviewPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITTypeId" }),
         __metadata("design:type", String)
     ], CreateHitWithHitTypeRequest.prototype, "hitTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LifetimeInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LifetimeInSeconds" }),
         __metadata("design:type", Number)
     ], CreateHitWithHitTypeRequest.prototype, "lifetimeInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxAssignments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxAssignments" }),
         __metadata("design:type", Number)
     ], CreateHitWithHitTypeRequest.prototype, "maxAssignments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Question" }),
         __metadata("design:type", String)
     ], CreateHitWithHitTypeRequest.prototype, "question", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterAnnotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterAnnotation" }),
         __metadata("design:type", String)
     ], CreateHitWithHitTypeRequest.prototype, "requesterAnnotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UniqueRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UniqueRequestToken" }),
         __metadata("design:type", String)
     ], CreateHitWithHitTypeRequest.prototype, "uniqueRequestToken", void 0);
     return CreateHitWithHitTypeRequest;
-}(SpeakeasyBase));
-export { CreateHitWithHitTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateHitWithHitTypeRequest = CreateHitWithHitTypeRequest;

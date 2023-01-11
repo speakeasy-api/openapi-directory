@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Response extends SpeakeasyBase {
-    data: Map<string, any>;
+    data: Record<string, any>;
     success: boolean;
 }

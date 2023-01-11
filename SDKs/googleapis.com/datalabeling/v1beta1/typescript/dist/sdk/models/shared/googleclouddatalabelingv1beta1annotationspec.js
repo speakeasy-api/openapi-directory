@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1AnnotationSpec = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1AnnotationSpec
 /**
  * Container of information related to one possible annotation that can be used in a labeling task. For example, an image classification task where images are labeled as `dog` or `cat` must reference an AnnotationSpec for `dog` and an AnnotationSpec for `cat`.
@@ -33,17 +36,17 @@ var GoogleCloudDatalabelingV1beta1AnnotationSpec = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpec.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpec.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpec.prototype, "index", void 0);
     return GoogleCloudDatalabelingV1beta1AnnotationSpec;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1AnnotationSpec };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1AnnotationSpec = GoogleCloudDatalabelingV1beta1AnnotationSpec;

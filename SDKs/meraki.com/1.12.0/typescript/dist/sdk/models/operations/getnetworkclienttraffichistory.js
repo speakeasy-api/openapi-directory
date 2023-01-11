@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkClientTrafficHistoryResponse = exports.GetNetworkClientTrafficHistoryRequest = exports.GetNetworkClientTrafficHistoryQueryParams = exports.GetNetworkClientTrafficHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkClientTrafficHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientTrafficHistoryPathParams, _super);
     function GetNetworkClientTrafficHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientId" }),
         __metadata("design:type", String)
     ], GetNetworkClientTrafficHistoryPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkClientTrafficHistoryPathParams.prototype, "networkId", void 0);
     return GetNetworkClientTrafficHistoryPathParams;
-}(SpeakeasyBase));
-export { GetNetworkClientTrafficHistoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientTrafficHistoryPathParams = GetNetworkClientTrafficHistoryPathParams;
 var GetNetworkClientTrafficHistoryQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientTrafficHistoryQueryParams, _super);
     function GetNetworkClientTrafficHistoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkClientTrafficHistoryQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkClientTrafficHistoryQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkClientTrafficHistoryQueryParams.prototype, "startingAfter", void 0);
     return GetNetworkClientTrafficHistoryQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkClientTrafficHistoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientTrafficHistoryQueryParams = GetNetworkClientTrafficHistoryQueryParams;
 var GetNetworkClientTrafficHistoryRequest = /** @class */ (function (_super) {
     __extends(GetNetworkClientTrafficHistoryRequest, _super);
     function GetNetworkClientTrafficHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientTrafficHistoryPathParams)
     ], GetNetworkClientTrafficHistoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientTrafficHistoryQueryParams)
     ], GetNetworkClientTrafficHistoryRequest.prototype, "queryParams", void 0);
     return GetNetworkClientTrafficHistoryRequest;
-}(SpeakeasyBase));
-export { GetNetworkClientTrafficHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientTrafficHistoryRequest = GetNetworkClientTrafficHistoryRequest;
 var GetNetworkClientTrafficHistoryResponse = /** @class */ (function (_super) {
     __extends(GetNetworkClientTrafficHistoryResponse, _super);
     function GetNetworkClientTrafficHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkClientTrafficHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkClientTrafficHistoryResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkClientTrafficHistoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkClientTrafficHistoryResponse.prototype, "getNetworkClientTrafficHistory200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkClientTrafficHistoryResponse.prototype, "getNetworkClientTrafficHistory200ApplicationJSONObject", void 0);
     return GetNetworkClientTrafficHistoryResponse;
-}(SpeakeasyBase));
-export { GetNetworkClientTrafficHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientTrafficHistoryResponse = GetNetworkClientTrafficHistoryResponse;

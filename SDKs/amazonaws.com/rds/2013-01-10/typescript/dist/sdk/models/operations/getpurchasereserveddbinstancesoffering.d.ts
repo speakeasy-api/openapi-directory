@@ -8,8 +8,8 @@ export declare enum GetPurchaseReservedDbInstancesOfferingVersionEnum {
 export declare class GetPurchaseReservedDbInstancesOfferingQueryParams extends SpeakeasyBase {
     action: GetPurchaseReservedDbInstancesOfferingActionEnum;
     dbInstanceCount?: number;
-    reservedDbInstanceId?: string;
-    reservedDbInstancesOfferingId: string;
+    reservedDBInstanceId?: string;
+    reservedDBInstancesOfferingId: string;
     version: GetPurchaseReservedDbInstancesOfferingVersionEnum;
 }
 export declare class GetPurchaseReservedDbInstancesOfferingHeaders extends SpeakeasyBase {

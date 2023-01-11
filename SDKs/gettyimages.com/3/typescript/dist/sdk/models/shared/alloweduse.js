@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllowedUse = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllowedUse = /** @class */ (function (_super) {
     __extends(AllowedUse, _super);
     function AllowedUse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=how_can_i_use_it" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=how_can_i_use_it" }),
         __metadata("design:type", String)
     ], AllowedUse.prototype, "howCanIUseIt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_info" }),
         __metadata("design:type", String)
     ], AllowedUse.prototype, "releaseInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_restrictions" }),
         __metadata("design:type", Array)
     ], AllowedUse.prototype, "usageRestrictions", void 0);
     return AllowedUse;
-}(SpeakeasyBase));
-export { AllowedUse };
+}(utils_1.SpeakeasyBase));
+exports.AllowedUse = AllowedUse;

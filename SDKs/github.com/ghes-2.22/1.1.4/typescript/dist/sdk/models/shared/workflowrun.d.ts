@@ -9,6 +9,9 @@ export declare class WorkflowRunSimpleCommitCommitter extends SpeakeasyBase {
     email: string;
     name: string;
 }
+/**
+ * Simple Commit
+**/
 export declare class WorkflowRunSimpleCommit extends SpeakeasyBase {
     author: WorkflowRunSimpleCommitAuthor;
     committer: WorkflowRunSimpleCommitCommitter;

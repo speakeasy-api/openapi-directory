@@ -47,7 +47,7 @@ export class DeleteGroupCategoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteGroupCategory200ApplicationJsonObject?: DeleteGroupCategory200ApplicationJson;
+  deleteGroupCategory200ApplicationJSONObject?: DeleteGroupCategory200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

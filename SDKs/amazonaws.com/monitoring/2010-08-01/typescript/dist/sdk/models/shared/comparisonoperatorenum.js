@@ -1,4 +1,7 @@
-export var ComparisonOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComparisonOperatorEnum = void 0;
+var ComparisonOperatorEnum;
 (function (ComparisonOperatorEnum) {
     ComparisonOperatorEnum["GreaterThanOrEqualToThreshold"] = "GreaterThanOrEqualToThreshold";
     ComparisonOperatorEnum["GreaterThanThreshold"] = "GreaterThanThreshold";
@@ -7,4 +10,4 @@ export var ComparisonOperatorEnum;
     ComparisonOperatorEnum["LessThanLowerOrGreaterThanUpperThreshold"] = "LessThanLowerOrGreaterThanUpperThreshold";
     ComparisonOperatorEnum["LessThanLowerThreshold"] = "LessThanLowerThreshold";
     ComparisonOperatorEnum["GreaterThanUpperThreshold"] = "GreaterThanUpperThreshold";
-})(ComparisonOperatorEnum || (ComparisonOperatorEnum = {}));
+})(ComparisonOperatorEnum = exports.ComparisonOperatorEnum || (exports.ComparisonOperatorEnum = {}));

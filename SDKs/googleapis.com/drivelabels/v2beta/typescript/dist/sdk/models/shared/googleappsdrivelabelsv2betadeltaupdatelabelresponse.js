@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse } from "./googleappsdrivelabelsv2betadeltaupdatelabelresponseresponse";
-import { GoogleAppsDriveLabelsV2betaLabel } from "./googleappsdrivelabelsv2betalabel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betadeltaupdatelabelresponseresponse_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelresponseresponse");
+var googleappsdrivelabelsv2betalabel_1 = require("./googleappsdrivelabelsv2betalabel");
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse
 /**
  * Response for Label update.
@@ -35,13 +38,13 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responses", elemType: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responses", elemType: googleappsdrivelabelsv2betadeltaupdatelabelresponseresponse_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse.prototype, "responses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedLabel" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedLabel" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabel_1.GoogleAppsDriveLabelsV2betaLabel)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse.prototype, "updatedLabel", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse;

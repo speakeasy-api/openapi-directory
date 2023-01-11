@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// TranslateTextGlossaryConfig
-/**
- * Configures which glossary should be used for a specific target language, and defines options for applying that glossary.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TranslateTextGlossaryConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 var TranslateTextGlossaryConfig = /** @class */ (function (_super) {
     __extends(TranslateTextGlossaryConfig, _super);
     function TranslateTextGlossaryConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=glossary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=glossary" }),
         __metadata("design:type", String)
     ], TranslateTextGlossaryConfig.prototype, "glossary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreCase" }),
         __metadata("design:type", Boolean)
     ], TranslateTextGlossaryConfig.prototype, "ignoreCase", void 0);
     return TranslateTextGlossaryConfig;
-}(SpeakeasyBase));
-export { TranslateTextGlossaryConfig };
+}(utils_1.SpeakeasyBase));
+exports.TranslateTextGlossaryConfig = TranslateTextGlossaryConfig;

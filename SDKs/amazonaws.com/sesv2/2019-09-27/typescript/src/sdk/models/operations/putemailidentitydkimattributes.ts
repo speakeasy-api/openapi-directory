@@ -61,7 +61,7 @@ export class PutEmailIdentityDkimAttributesResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putEmailIdentityDkimAttributesResponse?: Map<string, any>;
+  putEmailIdentityDkimAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

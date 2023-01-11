@@ -34,8 +34,8 @@ export class GetAnnotationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  reportAnnotation?: Map<string, any>;
+  reportAnnotation?: Record<string, any>;
 }

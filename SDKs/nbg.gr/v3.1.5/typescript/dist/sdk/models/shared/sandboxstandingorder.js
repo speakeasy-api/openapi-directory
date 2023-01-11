@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxStandingOrder = void 0;
+var utils_1 = require("../../../internal/utils");
 // SandboxStandingOrder
 /**
  * Standing order information
@@ -33,37 +36,37 @@ var SandboxStandingOrder = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], SandboxStandingOrder.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SandboxStandingOrder.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalPaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalPaymentDate" }),
         __metadata("design:type", Date)
     ], SandboxStandingOrder.prototype, "finalPaymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstPaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstPaymentDate" }),
         __metadata("design:type", Date)
     ], SandboxStandingOrder.prototype, "firstPaymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], SandboxStandingOrder.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastPaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastPaymentDate" }),
         __metadata("design:type", Date)
     ], SandboxStandingOrder.prototype, "lastPaymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPaymentDate" }),
         __metadata("design:type", Date)
     ], SandboxStandingOrder.prototype, "nextPaymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SandboxStandingOrder.prototype, "status", void 0);
     return SandboxStandingOrder;
-}(SpeakeasyBase));
-export { SandboxStandingOrder };
+}(utils_1.SpeakeasyBase));
+exports.SandboxStandingOrder = SandboxStandingOrder;

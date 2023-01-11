@@ -31,7 +31,7 @@ export class UpdateArtifactRuleConfigResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   rule?: shared.Rule;

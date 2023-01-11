@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpdateContactPhotoRequestSourcesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateContactPhotoRequest = exports.UpdateContactPhotoRequestSourcesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpdateContactPhotoRequestSourcesEnum;
 (function (UpdateContactPhotoRequestSourcesEnum) {
     UpdateContactPhotoRequestSourcesEnum["ReadSourceTypeUnspecified"] = "READ_SOURCE_TYPE_UNSPECIFIED";
     UpdateContactPhotoRequestSourcesEnum["ReadSourceTypeProfile"] = "READ_SOURCE_TYPE_PROFILE";
     UpdateContactPhotoRequestSourcesEnum["ReadSourceTypeContact"] = "READ_SOURCE_TYPE_CONTACT";
     UpdateContactPhotoRequestSourcesEnum["ReadSourceTypeDomainContact"] = "READ_SOURCE_TYPE_DOMAIN_CONTACT";
-})(UpdateContactPhotoRequestSourcesEnum || (UpdateContactPhotoRequestSourcesEnum = {}));
+})(UpdateContactPhotoRequestSourcesEnum = exports.UpdateContactPhotoRequestSourcesEnum || (exports.UpdateContactPhotoRequestSourcesEnum = {}));
 // UpdateContactPhotoRequest
 /**
  * A request to update an existing contact's photo. All requests must have a valid photo format: JPEG or PNG.
@@ -40,17 +43,17 @@ var UpdateContactPhotoRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personFields" }),
         __metadata("design:type", String)
     ], UpdateContactPhotoRequest.prototype, "personFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoBytes" }),
         __metadata("design:type", String)
     ], UpdateContactPhotoRequest.prototype, "photoBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources" }),
         __metadata("design:type", Array)
     ], UpdateContactPhotoRequest.prototype, "sources", void 0);
     return UpdateContactPhotoRequest;
-}(SpeakeasyBase));
-export { UpdateContactPhotoRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateContactPhotoRequest = UpdateContactPhotoRequest;

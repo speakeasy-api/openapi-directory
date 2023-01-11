@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // ClusterMetadata
 /**
  * Information about the GKE cluster from which this Backup was created.
@@ -33,25 +36,25 @@ var ClusterMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anthosVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anthosVersion" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "anthosVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupCrdVersions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupCrdVersions" }),
+        __metadata("design:type", Object)
     ], ClusterMetadata.prototype, "backupCrdVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeVersion" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "gkeVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=k8sVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=k8sVersion" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "k8sVersion", void 0);
     return ClusterMetadata;
-}(SpeakeasyBase));
-export { ClusterMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ClusterMetadata = ClusterMetadata;

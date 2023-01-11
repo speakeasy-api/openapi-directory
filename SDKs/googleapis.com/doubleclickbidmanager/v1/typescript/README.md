@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DoubleclickbidmanagerQueriesCreatequeryRequest, DoubleclickbidmanagerQueriesCreatequeryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,66 +30,65 @@ const req: DoubleclickbidmanagerQueriesCreatequeryRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "omnis",
-    alt: "json",
-    asynchronous: true,
-    callback: "est",
-    fields: "impedit",
-    key: "ut",
-    oauthToken: "ad",
-    prettyPrint: false,
+    accessToken: "voluptas",
+    alt: "media",
+    asynchronous: false,
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
     quotaUser: "et",
-    uploadType: "tempore",
-    uploadProtocol: "molestiae",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    kind: "similique",
+    kind: "dicta",
     metadata: {
-      dataRange: "LAST_7_DAYS",
-      format: "XLSX",
-      googleCloudStoragePathForLatestReport: "voluptatem",
-      googleDrivePathForLatestReport: "illum",
-      latestReportRunTimeMs: "soluta",
-      locale: "ut",
-      reportCount: 2930063880160599793,
-      running: false,
-      sendNotification: false,
+      dataRange: "PREVIOUS_HALF_MONTH",
+      format: "CSV",
+      googleCloudStoragePathForLatestReport: "et",
+      googleDrivePathForLatestReport: "ut",
+      latestReportRunTimeMs: "dolorem",
+      locale: "et",
+      reportCount: 7373105480197164748,
+      running: true,
+      sendNotification: true,
       shareEmailAddress: [
-        "totam",
-        "repellat",
+        "dolores",
+        "illum",
+        "debitis",
       ],
-      title: "molestiae",
+      title: "vel",
     },
     params: {
       filters: [
         {
-          type: "FILTER_OS",
-          value: "ad",
+          type: "FILTER_DATE",
+          value: "id",
         },
       ],
       groupBys: [
-        "FILTER_DATA_SOURCE",
-        "FILTER_INSERTION_ORDER_GOAL_VALUE",
+        "FILTER_PARTNER_STATUS",
       ],
-      includeInviteData: true,
+      includeInviteData: false,
       metrics: [
-        "METRIC_ACTIVE_VIEW_DISTRIBUTION_VIEWABLE",
-        "METRIC_CLICKS",
-        "METRIC_WIN_LOSS_DEAL_TARGETED_IMPRESSIONS",
+        "METRIC_NIELSEN_POPULATION_REACH",
+        "METRIC_RICH_MEDIA_ENGAGEMENTS",
       ],
       options: {
         includeOnlyTargetedUserLists: true,
         pathQueryOptions: {
           channelGrouping: {
-            fallbackName: "itaque",
-            name: "eligendi",
+            fallbackName: "odit",
+            name: "non",
             rules: [
               {
                 disjunctiveMatchStatements: [
@@ -98,31 +96,11 @@ const req: DoubleclickbidmanagerQueriesCreatequeryRequest = {
                     eventFilters: [
                       {
                         dimensionFilter: {
-                          filter: "FILTER_CITY_NAME",
-                          match: "EXACT",
+                          filter: "FILTER_QUARTER",
+                          match: "BEGINS_WITH",
                           values: [
-                            "alias",
-                            "a",
-                          ],
-                        },
-                      },
-                      {
-                        dimensionFilter: {
-                          filter: "FILTER_REMARKETING_LIST",
-                          match: "UNKNOWN",
-                          values: [
-                            "ut",
                             "autem",
-                          ],
-                        },
-                      },
-                      {
-                        dimensionFilter: {
-                          filter: "FILTER_VIDEO_DURATION_SECONDS",
-                          match: "PARTIAL",
-                          values: [
-                            "sunt",
-                            "autem",
+                            "consectetur",
                           ],
                         },
                       },
@@ -132,53 +110,19 @@ const req: DoubleclickbidmanagerQueriesCreatequeryRequest = {
                     eventFilters: [
                       {
                         dimensionFilter: {
-                          filter: "FILTER_TRUEVIEW_IAR_REMARKETING_LIST",
+                          filter: "FILTER_AD_POSITION",
                           match: "PARTIAL",
                           values: [
-                            "sunt",
-                          ],
-                        },
-                      },
-                      {
-                        dimensionFilter: {
-                          filter: "FILTER_TRUEVIEW_KEYWORD",
-                          match: "WILDCARD_EXPRESSION",
-                          values: [
-                            "eligendi",
-                            "magni",
-                          ],
-                        },
-                      },
-                      {
-                        dimensionFilter: {
-                          filter: "FILTER_AGE",
-                          match: "EXACT",
-                          values: [
-                            "rerum",
-                            "perferendis",
-                            "aspernatur",
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                  {
-                    eventFilters: [
-                      {
-                        dimensionFilter: {
-                          filter: "FILTER_PLACEMENT_ALL_YOUTUBE_CHANNELS",
-                          match: "EXACT",
-                          values: [
-                            "aperiam",
-                            "minima",
-                            "illo",
+                            "at",
+                            "ipsum",
+                            "eveniet",
                           ],
                         },
                       },
                     ],
                   },
                 ],
-                name: "quam",
+                name: "modi",
               },
             ],
           },
@@ -187,110 +131,34 @@ const req: DoubleclickbidmanagerQueriesCreatequeryRequest = {
               eventFilters: [
                 {
                   dimensionFilter: {
-                    filter: "FILTER_MOBILE_GEO",
-                    match: "WILDCARD_EXPRESSION",
-                    values: [
-                      "sunt",
-                      "sed",
-                    ],
-                  },
-                },
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_YOUTUBE_AD_VIDEO_ID",
+                    filter: "FILTER_REMARKETING_LIST",
                     match: "EXACT",
                     values: [
-                      "impedit",
-                      "provident",
-                    ],
-                  },
-                },
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_DEVICE_MODEL",
-                    match: "PARTIAL",
-                    values: [
-                      "nihil",
+                      "reprehenderit",
+                      "tempore",
+                      "maiores",
                     ],
                   },
                 },
               ],
               pathMatchPosition: "LAST",
-            },
-            {
-              eventFilters: [
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_CM360_PLACEMENT_ID",
-                    match: "EXACT",
-                    values: [
-                      "distinctio",
-                      "velit",
-                    ],
-                  },
-                },
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_TRUEVIEW_CONVERSION_TYPE",
-                    match: "EXACT",
-                    values: [
-                      "vel",
-                    ],
-                  },
-                },
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_BUDGET_SEGMENT_END_DATE",
-                    match: "PARTIAL",
-                    values: [
-                      "dolor",
-                      "iure",
-                    ],
-                  },
-                },
-              ],
-              pathMatchPosition: "LAST",
-            },
-            {
-              eventFilters: [
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_ZIP_CODE",
-                    match: "WILDCARD_EXPRESSION",
-                    values: [
-                      "qui",
-                      "libero",
-                    ],
-                  },
-                },
-                {
-                  dimensionFilter: {
-                    filter: "FILTER_CREATIVE_WIDTH",
-                    match: "WILDCARD_EXPRESSION",
-                    values: [
-                      "totam",
-                    ],
-                  },
-                },
-              ],
-              pathMatchPosition: "FIRST",
             },
           ],
         },
       },
-      type: "TYPE_INVENTORY_AVAILABILITY",
+      type: "TYPE_PETRA_NIELSEN_ONLINE_GLOBAL_MARKET",
     },
-    queryId: "ullam",
-    reportDataEndTimeMs: "rem",
-    reportDataStartTimeMs: "at",
+    queryId: "beatae",
+    reportDataEndTimeMs: "veritatis",
+    reportDataStartTimeMs: "in",
     schedule: {
-      endTimeMs: "aut",
+      endTimeMs: "et",
       frequency: "WEEKLY",
-      nextRunMinuteOfDay: 8789873767134667831,
-      nextRunTimezoneCode: "eveniet",
-      startTimeMs: "est",
+      nextRunMinuteOfDay: 4564823113789767141,
+      nextRunTimezoneCode: "ex",
+      startTimeMs: "dolores",
     },
-    timezoneCode: "ut",
+    timezoneCode: "placeat",
   },
 };
 

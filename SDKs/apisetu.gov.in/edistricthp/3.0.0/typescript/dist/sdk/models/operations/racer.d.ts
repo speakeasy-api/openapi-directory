@@ -105,11 +105,11 @@ export declare class RacerRequest extends SpeakeasyBase {
 export declare class RacerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    racer400ApplicationJsonObject?: Racer400ApplicationJson;
-    racer401ApplicationJsonObject?: Racer401ApplicationJson;
-    racer404ApplicationJsonObject?: Racer404ApplicationJson;
-    racer500ApplicationJsonObject?: Racer500ApplicationJson;
-    racer502ApplicationJsonObject?: Racer502ApplicationJson;
-    racer503ApplicationJsonObject?: Racer503ApplicationJson;
-    racer504ApplicationJsonObject?: Racer504ApplicationJson;
+    racer400ApplicationJSONObject?: Racer400ApplicationJson;
+    racer401ApplicationJSONObject?: Racer401ApplicationJson;
+    racer404ApplicationJSONObject?: Racer404ApplicationJson;
+    racer500ApplicationJSONObject?: Racer500ApplicationJson;
+    racer502ApplicationJSONObject?: Racer502ApplicationJson;
+    racer503ApplicationJSONObject?: Racer503ApplicationJson;
+    racer504ApplicationJSONObject?: Racer504ApplicationJson;
 }

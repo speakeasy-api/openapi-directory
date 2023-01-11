@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ClearUserSessionsRequest, ClearUserSessionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: ClearUserSessionsRequest = {
   pathParams: {
-    userId: "illo",
+    userId: "sit",
   },
-  request: "aperiam".encode(),
+  request: "voluptas".encode(),
 };
 
-sdk.sdk.clearUserSessions(req).then((res: ClearUserSessionsResponse | AxiosError) => {
+sdk.clearUserSessions(req).then((res: ClearUserSessionsResponse | AxiosError) => {
    // handle response
 });
 ```

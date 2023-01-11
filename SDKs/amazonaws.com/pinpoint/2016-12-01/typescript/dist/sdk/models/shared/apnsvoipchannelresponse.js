@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApnsVoipChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApnsVoipChannelResponse
 /**
  * Provides information about the status and settings of the APNs (Apple Push Notification service) VoIP channel for an application.
@@ -33,53 +36,53 @@ var ApnsVoipChannelResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultAuthenticationMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultAuthenticationMethod" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "defaultAuthenticationMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], ApnsVoipChannelResponse.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasCredential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasCredential" }),
         __metadata("design:type", Boolean)
     ], ApnsVoipChannelResponse.prototype, "hasCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasTokenKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasTokenKey" }),
         __metadata("design:type", Boolean)
     ], ApnsVoipChannelResponse.prototype, "hasTokenKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsArchived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsArchived" }),
         __metadata("design:type", Boolean)
     ], ApnsVoipChannelResponse.prototype, "isArchived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedBy" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "lastModifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Platform" }),
         __metadata("design:type", String)
     ], ApnsVoipChannelResponse.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], ApnsVoipChannelResponse.prototype, "version", void 0);
     return ApnsVoipChannelResponse;
-}(SpeakeasyBase));
-export { ApnsVoipChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApnsVoipChannelResponse = ApnsVoipChannelResponse;

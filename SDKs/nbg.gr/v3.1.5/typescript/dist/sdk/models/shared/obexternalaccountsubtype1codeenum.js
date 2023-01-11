@@ -1,4 +1,7 @@
-export var ObExternalAccountSubType1CodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObExternalAccountSubType1CodeEnum = void 0;
+var ObExternalAccountSubType1CodeEnum;
 (function (ObExternalAccountSubType1CodeEnum) {
     ObExternalAccountSubType1CodeEnum["ChargeCard"] = "ChargeCard";
     ObExternalAccountSubType1CodeEnum["CreditCard"] = "CreditCard";
@@ -8,4 +11,4 @@ export var ObExternalAccountSubType1CodeEnum;
     ObExternalAccountSubType1CodeEnum["Mortgage"] = "Mortgage";
     ObExternalAccountSubType1CodeEnum["PrePaidCard"] = "PrePaidCard";
     ObExternalAccountSubType1CodeEnum["Savings"] = "Savings";
-})(ObExternalAccountSubType1CodeEnum || (ObExternalAccountSubType1CodeEnum = {}));
+})(ObExternalAccountSubType1CodeEnum = exports.ObExternalAccountSubType1CodeEnum || (exports.ObExternalAccountSubType1CodeEnum = {}));

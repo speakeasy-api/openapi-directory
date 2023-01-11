@@ -60,7 +60,7 @@ export class StartReportCreationResponse extends SpeakeasyBase {
   invalidParameterException?: any;
 
   @SpeakeasyMetadata()
-  startReportCreationOutput?: Map<string, any>;
+  startReportCreationOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

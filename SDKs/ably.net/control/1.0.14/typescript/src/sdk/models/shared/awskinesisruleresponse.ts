@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
 import { AwsAccessKeysResponse } from "./awsaccesskeysresponse";
 import { AwsAssumeRole } from "./awsassumerole";
+import { RuleSource } from "./rulesource";
 
 
 export enum AwsKinesisRuleResponseRequestModeEnum {
@@ -45,7 +45,7 @@ export class AwsKinesisRuleResponseTarget extends SpeakeasyBase {
 
 export class AwsKinesisRuleResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=appId" })
   appId?: string;

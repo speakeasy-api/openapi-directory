@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05SessionsRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     sessionRequest?: shared.SessionRequest;
 }
 export declare class PostV05SessionsRequest extends SpeakeasyBase {

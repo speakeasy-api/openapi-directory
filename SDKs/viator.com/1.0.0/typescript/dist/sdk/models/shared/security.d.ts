@@ -7,5 +7,5 @@ export declare class SchemeLegacyApiKey extends SpeakeasyBase {
 }
 export declare class Security extends SpeakeasyBase {
     apiKey?: SchemeApiKey;
-    legacyApiKey?: SchemeLegacyApiKey;
+    legacyAPIKey?: SchemeLegacyApiKey;
 }

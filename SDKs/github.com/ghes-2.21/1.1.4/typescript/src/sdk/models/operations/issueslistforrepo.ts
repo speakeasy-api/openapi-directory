@@ -11,18 +11,6 @@ export class IssuesListForRepoPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum IssuesListForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
-
-export enum IssuesListForRepoStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class IssuesListForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assignee" })
@@ -53,10 +41,10 @@ export class IssuesListForRepoQueryParams extends SpeakeasyBase {
   since?: Date;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: IssuesListForRepoSortEnum;
+  sort?: shared.LabelsEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: IssuesListForRepoStateEnum;
+  state?: shared.RepoEnum2;
 }
 
 
@@ -74,7 +62,7 @@ export class IssuesListForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

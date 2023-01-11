@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationCodeLink } from "./authorizationcodelink";
-import { EnumOption } from "./enumoption";
-import { RoleGrant } from "./rolegrant";
-export var ConfigVariableTemplateStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigVariableTemplate = exports.ConfigVariableTemplateValueTypeEnum = exports.ConfigVariableTemplateStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var authorizationcodelink_1 = require("./authorizationcodelink");
+var enumoption_1 = require("./enumoption");
+var rolegrant_1 = require("./rolegrant");
+var ConfigVariableTemplateStateEnum;
 (function (ConfigVariableTemplateStateEnum) {
     ConfigVariableTemplateStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ConfigVariableTemplateStateEnum["Active"] = "ACTIVE";
     ConfigVariableTemplateStateEnum["Deprecated"] = "DEPRECATED";
-})(ConfigVariableTemplateStateEnum || (ConfigVariableTemplateStateEnum = {}));
-export var ConfigVariableTemplateValueTypeEnum;
+})(ConfigVariableTemplateStateEnum = exports.ConfigVariableTemplateStateEnum || (exports.ConfigVariableTemplateStateEnum = {}));
+var ConfigVariableTemplateValueTypeEnum;
 (function (ConfigVariableTemplateValueTypeEnum) {
     ConfigVariableTemplateValueTypeEnum["ValueTypeUnspecified"] = "VALUE_TYPE_UNSPECIFIED";
     ConfigVariableTemplateValueTypeEnum["String"] = "STRING";
@@ -41,7 +44,7 @@ export var ConfigVariableTemplateValueTypeEnum;
     ConfigVariableTemplateValueTypeEnum["Secret"] = "SECRET";
     ConfigVariableTemplateValueTypeEnum["Enum"] = "ENUM";
     ConfigVariableTemplateValueTypeEnum["AuthorizationCode"] = "AUTHORIZATION_CODE";
-})(ConfigVariableTemplateValueTypeEnum || (ConfigVariableTemplateValueTypeEnum = {}));
+})(ConfigVariableTemplateValueTypeEnum = exports.ConfigVariableTemplateValueTypeEnum || (exports.ConfigVariableTemplateValueTypeEnum = {}));
 // ConfigVariableTemplate
 /**
  * ConfigVariableTemplate provides metadata about a `ConfigVariable` that is used in a Connection.
@@ -52,45 +55,45 @@ var ConfigVariableTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationCodeLink" }),
-        __metadata("design:type", AuthorizationCodeLink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationCodeLink" }),
+        __metadata("design:type", authorizationcodelink_1.AuthorizationCodeLink)
     ], ConfigVariableTemplate.prototype, "authorizationCodeLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enumOptions", elemType: EnumOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enumOptions", elemType: enumoption_1.EnumOption }),
         __metadata("design:type", Array)
     ], ConfigVariableTemplate.prototype, "enumOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], ConfigVariableTemplate.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleGrant" }),
-        __metadata("design:type", RoleGrant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleGrant" }),
+        __metadata("design:type", rolegrant_1.RoleGrant)
     ], ConfigVariableTemplate.prototype, "roleGrant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationRegex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationRegex" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "validationRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueType" }),
         __metadata("design:type", String)
     ], ConfigVariableTemplate.prototype, "valueType", void 0);
     return ConfigVariableTemplate;
-}(SpeakeasyBase));
-export { ConfigVariableTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ConfigVariableTemplate = ConfigVariableTemplate;

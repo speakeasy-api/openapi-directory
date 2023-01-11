@@ -3,7 +3,7 @@ import { Tag } from "./tag";
 export declare class CreateApplicationRequest extends SpeakeasyBase {
     cweMonitorEnabled?: boolean;
     opsCenterEnabled?: boolean;
-    opsItemSnsTopicArn?: string;
+    opsItemSNSTopicArn?: string;
     resourceGroupName: string;
     tags?: Tag[];
 }

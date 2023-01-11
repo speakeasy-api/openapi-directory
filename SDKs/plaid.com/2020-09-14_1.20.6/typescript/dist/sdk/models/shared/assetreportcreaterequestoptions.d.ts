@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class AssetReportCreateRequestOptions extends SpeakeasyBase {
     clientReportId?: string;
-    user?: Map<string, any>;
+    user?: Record<string, any>;
     webhook?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ClickwrapEntityUseWithBundlesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClickwrapEntity = exports.ClickwrapEntityUseWithUsersEnum = exports.ClickwrapEntityUseWithInboxesEnum = exports.ClickwrapEntityUseWithBundlesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClickwrapEntityUseWithBundlesEnum;
 (function (ClickwrapEntityUseWithBundlesEnum) {
     ClickwrapEntityUseWithBundlesEnum["None"] = "none";
     ClickwrapEntityUseWithBundlesEnum["Available"] = "available";
     ClickwrapEntityUseWithBundlesEnum["Require"] = "require";
-})(ClickwrapEntityUseWithBundlesEnum || (ClickwrapEntityUseWithBundlesEnum = {}));
-export var ClickwrapEntityUseWithInboxesEnum;
+})(ClickwrapEntityUseWithBundlesEnum = exports.ClickwrapEntityUseWithBundlesEnum || (exports.ClickwrapEntityUseWithBundlesEnum = {}));
+var ClickwrapEntityUseWithInboxesEnum;
 (function (ClickwrapEntityUseWithInboxesEnum) {
     ClickwrapEntityUseWithInboxesEnum["None"] = "none";
     ClickwrapEntityUseWithInboxesEnum["Available"] = "available";
     ClickwrapEntityUseWithInboxesEnum["Require"] = "require";
-})(ClickwrapEntityUseWithInboxesEnum || (ClickwrapEntityUseWithInboxesEnum = {}));
-export var ClickwrapEntityUseWithUsersEnum;
+})(ClickwrapEntityUseWithInboxesEnum = exports.ClickwrapEntityUseWithInboxesEnum || (exports.ClickwrapEntityUseWithInboxesEnum = {}));
+var ClickwrapEntityUseWithUsersEnum;
 (function (ClickwrapEntityUseWithUsersEnum) {
     ClickwrapEntityUseWithUsersEnum["None"] = "none";
     ClickwrapEntityUseWithUsersEnum["Require"] = "require";
-})(ClickwrapEntityUseWithUsersEnum || (ClickwrapEntityUseWithUsersEnum = {}));
+})(ClickwrapEntityUseWithUsersEnum = exports.ClickwrapEntityUseWithUsersEnum || (exports.ClickwrapEntityUseWithUsersEnum = {}));
 // ClickwrapEntity
 /**
  * Create Clickwrap
@@ -50,29 +53,29 @@ var ClickwrapEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], ClickwrapEntity.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ClickwrapEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ClickwrapEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_with_bundles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_with_bundles" }),
         __metadata("design:type", String)
     ], ClickwrapEntity.prototype, "useWithBundles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_with_inboxes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_with_inboxes" }),
         __metadata("design:type", String)
     ], ClickwrapEntity.prototype, "useWithInboxes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_with_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_with_users" }),
         __metadata("design:type", String)
     ], ClickwrapEntity.prototype, "useWithUsers", void 0);
     return ClickwrapEntity;
-}(SpeakeasyBase));
-export { ClickwrapEntity };
+}(utils_1.SpeakeasyBase));
+exports.ClickwrapEntity = ClickwrapEntity;

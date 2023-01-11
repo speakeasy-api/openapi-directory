@@ -28,5 +28,5 @@ export class StoreLreplaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  storeLreplace200ApplicationJsonString?: string;
+  storeLreplace200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckDomainResponse = exports.CheckDomainRequest = exports.CheckDomain200ApplicationJson = exports.CheckDomainPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CheckDomainPathParams = /** @class */ (function (_super) {
     __extends(CheckDomainPathParams, _super);
     function CheckDomainPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=domain" }),
         __metadata("design:type", String)
     ], CheckDomainPathParams.prototype, "domain", void 0);
     return CheckDomainPathParams;
-}(SpeakeasyBase));
-export { CheckDomainPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CheckDomainPathParams = CheckDomainPathParams;
 var CheckDomain200ApplicationJson = /** @class */ (function (_super) {
     __extends(CheckDomain200ApplicationJson, _super);
     function CheckDomain200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAvailable" }),
         __metadata("design:type", Boolean)
     ], CheckDomain200ApplicationJson.prototype, "isAvailable", void 0);
     return CheckDomain200ApplicationJson;
-}(SpeakeasyBase));
-export { CheckDomain200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CheckDomain200ApplicationJson = CheckDomain200ApplicationJson;
 var CheckDomainRequest = /** @class */ (function (_super) {
     __extends(CheckDomainRequest, _super);
     function CheckDomainRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckDomainPathParams)
     ], CheckDomainRequest.prototype, "pathParams", void 0);
     return CheckDomainRequest;
-}(SpeakeasyBase));
-export { CheckDomainRequest };
+}(utils_1.SpeakeasyBase));
+exports.CheckDomainRequest = CheckDomainRequest;
 var CheckDomainResponse = /** @class */ (function (_super) {
     __extends(CheckDomainResponse, _super);
     function CheckDomainResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CheckDomainResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CheckDomainResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckDomain200ApplicationJson)
-    ], CheckDomainResponse.prototype, "checkDomain200ApplicationJsonObject", void 0);
+    ], CheckDomainResponse.prototype, "checkDomain200ApplicationJSONObject", void 0);
     return CheckDomainResponse;
-}(SpeakeasyBase));
-export { CheckDomainResponse };
+}(utils_1.SpeakeasyBase));
+exports.CheckDomainResponse = CheckDomainResponse;

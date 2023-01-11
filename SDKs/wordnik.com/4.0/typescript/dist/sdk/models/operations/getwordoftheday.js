@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWordOfTheDayResponse = exports.GetWordOfTheDayRequest = exports.GetWordOfTheDayQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWordOfTheDayQueryParams = /** @class */ (function (_super) {
     __extends(GetWordOfTheDayQueryParams, _super);
     function GetWordOfTheDayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetWordOfTheDayQueryParams.prototype, "date", void 0);
     return GetWordOfTheDayQueryParams;
-}(SpeakeasyBase));
-export { GetWordOfTheDayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWordOfTheDayQueryParams = GetWordOfTheDayQueryParams;
 var GetWordOfTheDayRequest = /** @class */ (function (_super) {
     __extends(GetWordOfTheDayRequest, _super);
     function GetWordOfTheDayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordOfTheDayQueryParams)
     ], GetWordOfTheDayRequest.prototype, "queryParams", void 0);
     return GetWordOfTheDayRequest;
-}(SpeakeasyBase));
-export { GetWordOfTheDayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWordOfTheDayRequest = GetWordOfTheDayRequest;
 var GetWordOfTheDayResponse = /** @class */ (function (_super) {
     __extends(GetWordOfTheDayResponse, _super);
     function GetWordOfTheDayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetWordOfTheDayResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWordOfTheDayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWordOfTheDayResponse.prototype, "statusCode", void 0);
     return GetWordOfTheDayResponse;
-}(SpeakeasyBase));
-export { GetWordOfTheDayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWordOfTheDayResponse = GetWordOfTheDayResponse;

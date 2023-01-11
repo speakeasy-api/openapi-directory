@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Proposal } from "./proposal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrdersRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var proposal_1 = require("./proposal");
 var CreateOrdersRequest = /** @class */ (function (_super) {
     __extends(CreateOrdersRequest, _super);
     function CreateOrdersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposals", elemType: Proposal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposals", elemType: proposal_1.Proposal }),
         __metadata("design:type", Array)
     ], CreateOrdersRequest.prototype, "proposals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyCode" }),
         __metadata("design:type", String)
     ], CreateOrdersRequest.prototype, "webPropertyCode", void 0);
     return CreateOrdersRequest;
-}(SpeakeasyBase));
-export { CreateOrdersRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrdersRequest = CreateOrdersRequest;

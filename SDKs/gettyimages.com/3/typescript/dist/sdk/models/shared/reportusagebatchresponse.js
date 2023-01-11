@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportUsageBatchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReportUsageBatchResponse
 /**
  * Specifies the response from the Batch Usages endpoint.
@@ -33,13 +36,13 @@ var ReportUsageBatchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalid_assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalid_assets" }),
         __metadata("design:type", Array)
     ], ReportUsageBatchResponse.prototype, "invalidAssets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_asset_usages_processed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_asset_usages_processed" }),
         __metadata("design:type", Number)
     ], ReportUsageBatchResponse.prototype, "totalAssetUsagesProcessed", void 0);
     return ReportUsageBatchResponse;
-}(SpeakeasyBase));
-export { ReportUsageBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReportUsageBatchResponse = ReportUsageBatchResponse;

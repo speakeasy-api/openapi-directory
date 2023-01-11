@@ -11,7 +11,7 @@ export class SkewedInfo extends SpeakeasyBase {
   skewedColumnNames?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=SkewedColumnValueLocationMaps" })
-  skewedColumnValueLocationMaps?: Map<string, string>;
+  skewedColumnValueLocationMaps?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=SkewedColumnValues" })
   skewedColumnValues?: string[];

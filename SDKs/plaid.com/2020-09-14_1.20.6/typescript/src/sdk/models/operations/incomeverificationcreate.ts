@@ -14,7 +14,7 @@ export class IncomeVerificationCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  incomeVerificationCreateResponse?: Map<string, any>;
+  incomeVerificationCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

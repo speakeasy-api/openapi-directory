@@ -22,6 +22,6 @@ export declare class TaskListSubtasksResponse extends SpeakeasyBase {
     batchError?: any;
     cloudTaskListSubtasksResult?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

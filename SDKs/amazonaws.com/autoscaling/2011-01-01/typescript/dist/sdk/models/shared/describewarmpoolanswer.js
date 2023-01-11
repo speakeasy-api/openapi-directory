@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Instance } from "./instance";
-import { WarmPoolConfiguration } from "./warmpoolconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeWarmPoolAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var instance_1 = require("./instance");
+var warmpoolconfiguration_1 = require("./warmpoolconfiguration");
 var DescribeWarmPoolAnswer = /** @class */ (function (_super) {
     __extends(DescribeWarmPoolAnswer, _super);
     function DescribeWarmPoolAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], DescribeWarmPoolAnswer.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeWarmPoolAnswer.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", WarmPoolConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", warmpoolconfiguration_1.WarmPoolConfiguration)
     ], DescribeWarmPoolAnswer.prototype, "warmPoolConfiguration", void 0);
     return DescribeWarmPoolAnswer;
-}(SpeakeasyBase));
-export { DescribeWarmPoolAnswer };
+}(utils_1.SpeakeasyBase));
+exports.DescribeWarmPoolAnswer = DescribeWarmPoolAnswer;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchUpdateClusterRequest, BatchUpdateClusterResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchUpdateClusterRequest = {
   headers: {
-    xAmzAlgorithm: "ad",
-    xAmzContentSha256: "incidunt",
-    xAmzCredential: "dolor",
-    xAmzDate: "suscipit",
-    xAmzSecurityToken: "officiis",
-    xAmzSignature: "cum",
-    xAmzSignedHeaders: "totam",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonMemoryDB.BatchUpdateCluster",
   },
   request: {
     clusterNames: [
-      "quos",
+      "et",
     ],
     serviceUpdate: {
-      serviceUpdateNameToApply: "beatae",
+      serviceUpdateNameToApply: "nihil",
     },
   },
 };
 
-sdk.sdk.batchUpdateCluster(req).then((res: BatchUpdateClusterResponse | AxiosError) => {
+sdk.batchUpdateCluster(req).then((res: BatchUpdateClusterResponse | AxiosError) => {
    // handle response
 });
 ```

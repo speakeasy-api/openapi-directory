@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RefundDetails } from "./refunddetails";
-export var CancelBookingQuoteResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelBookingQuoteResponse = exports.CancelBookingQuoteResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var refunddetails_1 = require("./refunddetails");
+var CancelBookingQuoteResponseStatusEnum;
 (function (CancelBookingQuoteResponseStatusEnum) {
     CancelBookingQuoteResponseStatusEnum["Cancellable"] = "CANCELLABLE";
     CancelBookingQuoteResponseStatusEnum["Cancelled"] = "CANCELLED";
     CancelBookingQuoteResponseStatusEnum["NotCancellable"] = "NOT_CANCELLABLE";
-})(CancelBookingQuoteResponseStatusEnum || (CancelBookingQuoteResponseStatusEnum = {}));
+})(CancelBookingQuoteResponseStatusEnum = exports.CancelBookingQuoteResponseStatusEnum || (exports.CancelBookingQuoteResponseStatusEnum = {}));
 var CancelBookingQuoteResponse = /** @class */ (function (_super) {
     __extends(CancelBookingQuoteResponse, _super);
     function CancelBookingQuoteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingId" }),
         __metadata("design:type", String)
     ], CancelBookingQuoteResponse.prototype, "bookingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundDetails" }),
-        __metadata("design:type", RefundDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundDetails" }),
+        __metadata("design:type", refunddetails_1.RefundDetails)
     ], CancelBookingQuoteResponse.prototype, "refundDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CancelBookingQuoteResponse.prototype, "status", void 0);
     return CancelBookingQuoteResponse;
-}(SpeakeasyBase));
-export { CancelBookingQuoteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelBookingQuoteResponse = CancelBookingQuoteResponse;

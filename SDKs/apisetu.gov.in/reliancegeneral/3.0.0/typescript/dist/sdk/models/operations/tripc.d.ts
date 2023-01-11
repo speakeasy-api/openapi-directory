@@ -109,11 +109,11 @@ export declare class TripcRequest extends SpeakeasyBase {
 export declare class TripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tripc400ApplicationJsonObject?: Tripc400ApplicationJson;
-    tripc401ApplicationJsonObject?: Tripc401ApplicationJson;
-    tripc404ApplicationJsonObject?: Tripc404ApplicationJson;
-    tripc500ApplicationJsonObject?: Tripc500ApplicationJson;
-    tripc502ApplicationJsonObject?: Tripc502ApplicationJson;
-    tripc503ApplicationJsonObject?: Tripc503ApplicationJson;
-    tripc504ApplicationJsonObject?: Tripc504ApplicationJson;
+    tripc400ApplicationJSONObject?: Tripc400ApplicationJson;
+    tripc401ApplicationJSONObject?: Tripc401ApplicationJson;
+    tripc404ApplicationJSONObject?: Tripc404ApplicationJson;
+    tripc500ApplicationJSONObject?: Tripc500ApplicationJson;
+    tripc502ApplicationJSONObject?: Tripc502ApplicationJson;
+    tripc503ApplicationJSONObject?: Tripc503ApplicationJson;
+    tripc504ApplicationJSONObject?: Tripc504ApplicationJson;
 }

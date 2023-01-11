@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTagMapping } from "./resourcetagmapping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetagmapping_1 = require("./resourcetagmapping");
 var GetResourcesOutput = /** @class */ (function (_super) {
     __extends(GetResourcesOutput, _super);
     function GetResourcesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaginationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaginationToken" }),
         __metadata("design:type", String)
     ], GetResourcesOutput.prototype, "paginationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceTagMappingList", elemType: ResourceTagMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceTagMappingList", elemType: resourcetagmapping_1.ResourceTagMapping }),
         __metadata("design:type", Array)
     ], GetResourcesOutput.prototype, "resourceTagMappingList", void 0);
     return GetResourcesOutput;
-}(SpeakeasyBase));
-export { GetResourcesOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesOutput = GetResourcesOutput;

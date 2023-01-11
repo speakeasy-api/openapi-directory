@@ -1,7 +1,10 @@
-export var FindingEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingEnum = void 0;
+var FindingEnum;
 (function (FindingEnum) {
     FindingEnum["Underprovisioned"] = "Underprovisioned";
     FindingEnum["Overprovisioned"] = "Overprovisioned";
     FindingEnum["Optimized"] = "Optimized";
     FindingEnum["NotOptimized"] = "NotOptimized";
-})(FindingEnum || (FindingEnum = {}));
+})(FindingEnum = exports.FindingEnum || (exports.FindingEnum = {}));

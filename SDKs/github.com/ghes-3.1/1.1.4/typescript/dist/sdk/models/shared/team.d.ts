@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Groups of organization members that gives permissions on specified repositories.
+**/
 export declare class TeamTeamSimple extends SpeakeasyBase {
     description: string;
     htmlUrl: string;

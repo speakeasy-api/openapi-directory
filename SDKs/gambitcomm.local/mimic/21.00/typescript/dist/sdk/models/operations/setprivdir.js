@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetPrivdirResponse = exports.SetPrivdirRequest = exports.SetPrivdirPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetPrivdirPathParams = /** @class */ (function (_super) {
     __extends(SetPrivdirPathParams, _super);
     function SetPrivdirPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetPrivdirPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=privdir" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=privdir" }),
         __metadata("design:type", String)
     ], SetPrivdirPathParams.prototype, "privdir", void 0);
     return SetPrivdirPathParams;
-}(SpeakeasyBase));
-export { SetPrivdirPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetPrivdirPathParams = SetPrivdirPathParams;
 var SetPrivdirRequest = /** @class */ (function (_super) {
     __extends(SetPrivdirRequest, _super);
     function SetPrivdirRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetPrivdirPathParams)
     ], SetPrivdirRequest.prototype, "pathParams", void 0);
     return SetPrivdirRequest;
-}(SpeakeasyBase));
-export { SetPrivdirRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetPrivdirRequest = SetPrivdirRequest;
 var SetPrivdirResponse = /** @class */ (function (_super) {
     __extends(SetPrivdirResponse, _super);
     function SetPrivdirResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetPrivdirResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetPrivdirResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetPrivdirResponse.prototype, "setPrivdir200ApplicationJsonString", void 0);
+    ], SetPrivdirResponse.prototype, "setPrivdir200ApplicationJSONString", void 0);
     return SetPrivdirResponse;
-}(SpeakeasyBase));
-export { SetPrivdirResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetPrivdirResponse = SetPrivdirResponse;

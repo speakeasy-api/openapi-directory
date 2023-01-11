@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // UploadMetadata
 /**
  * Fields to be used while uploading the attachment.
@@ -33,17 +36,17 @@ var UploadMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HeadersToInclude" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HeadersToInclude" }),
+        __metadata("design:type", Object)
     ], UploadMetadata.prototype, "headersToInclude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Url" }),
         __metadata("design:type", String)
     ], UploadMetadata.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UrlExpiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UrlExpiry" }),
         __metadata("design:type", String)
     ], UploadMetadata.prototype, "urlExpiry", void 0);
     return UploadMetadata;
-}(SpeakeasyBase));
-export { UploadMetadata };
+}(utils_1.SpeakeasyBase));
+exports.UploadMetadata = UploadMetadata;

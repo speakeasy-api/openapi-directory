@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolsListDataSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProtocolsListDataSummary
 /**
  * Details of the Firewall Manager protocols list.
@@ -33,21 +36,21 @@ var ProtocolsListDataSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListArn" }),
         __metadata("design:type", String)
     ], ProtocolsListDataSummary.prototype, "listArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListId" }),
         __metadata("design:type", String)
     ], ProtocolsListDataSummary.prototype, "listId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListName" }),
         __metadata("design:type", String)
     ], ProtocolsListDataSummary.prototype, "listName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProtocolsList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProtocolsList" }),
         __metadata("design:type", Array)
     ], ProtocolsListDataSummary.prototype, "protocolsList", void 0);
     return ProtocolsListDataSummary;
-}(SpeakeasyBase));
-export { ProtocolsListDataSummary };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolsListDataSummary = ProtocolsListDataSummary;

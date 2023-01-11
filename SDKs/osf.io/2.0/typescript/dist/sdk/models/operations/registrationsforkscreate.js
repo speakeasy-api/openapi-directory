@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationsForksCreateResponse = exports.RegistrationsForksCreateRequest = exports.RegistrationsForksCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistrationsForksCreatePathParams = /** @class */ (function (_super) {
     __extends(RegistrationsForksCreatePathParams, _super);
     function RegistrationsForksCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
         __metadata("design:type", String)
     ], RegistrationsForksCreatePathParams.prototype, "registrationId", void 0);
     return RegistrationsForksCreatePathParams;
-}(SpeakeasyBase));
-export { RegistrationsForksCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsForksCreatePathParams = RegistrationsForksCreatePathParams;
 var RegistrationsForksCreateRequest = /** @class */ (function (_super) {
     __extends(RegistrationsForksCreateRequest, _super);
     function RegistrationsForksCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistrationsForksCreatePathParams)
     ], RegistrationsForksCreateRequest.prototype, "pathParams", void 0);
     return RegistrationsForksCreateRequest;
-}(SpeakeasyBase));
-export { RegistrationsForksCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsForksCreateRequest = RegistrationsForksCreateRequest;
 var RegistrationsForksCreateResponse = /** @class */ (function (_super) {
     __extends(RegistrationsForksCreateResponse, _super);
     function RegistrationsForksCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistrationsForksCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistrationsForksCreateResponse.prototype, "statusCode", void 0);
     return RegistrationsForksCreateResponse;
-}(SpeakeasyBase));
-export { RegistrationsForksCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsForksCreateResponse = RegistrationsForksCreateResponse;

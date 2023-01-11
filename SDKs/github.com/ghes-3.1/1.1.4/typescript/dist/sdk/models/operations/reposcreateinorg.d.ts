@@ -34,7 +34,7 @@ export declare class ReposCreateInOrgRequest extends SpeakeasyBase {
 }
 export declare class ReposCreateInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     repository?: shared.Repository;

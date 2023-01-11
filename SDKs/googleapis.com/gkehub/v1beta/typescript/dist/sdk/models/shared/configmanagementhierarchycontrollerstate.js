@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementHierarchyControllerDeploymentState } from "./configmanagementhierarchycontrollerdeploymentstate";
-import { ConfigManagementHierarchyControllerVersion } from "./configmanagementhierarchycontrollerversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementHierarchyControllerState = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementhierarchycontrollerdeploymentstate_1 = require("./configmanagementhierarchycontrollerdeploymentstate");
+var configmanagementhierarchycontrollerversion_1 = require("./configmanagementhierarchycontrollerversion");
 // ConfigManagementHierarchyControllerState
 /**
  * State for Hierarchy Controller
@@ -35,13 +38,13 @@ var ConfigManagementHierarchyControllerState = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", ConfigManagementHierarchyControllerDeploymentState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", configmanagementhierarchycontrollerdeploymentstate_1.ConfigManagementHierarchyControllerDeploymentState)
     ], ConfigManagementHierarchyControllerState.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", ConfigManagementHierarchyControllerVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", configmanagementhierarchycontrollerversion_1.ConfigManagementHierarchyControllerVersion)
     ], ConfigManagementHierarchyControllerState.prototype, "version", void 0);
     return ConfigManagementHierarchyControllerState;
-}(SpeakeasyBase));
-export { ConfigManagementHierarchyControllerState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementHierarchyControllerState = ConfigManagementHierarchyControllerState;

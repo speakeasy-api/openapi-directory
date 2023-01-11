@@ -8,5 +8,5 @@ export declare class DeleteLegRequest extends SpeakeasyBase {
 export declare class DeleteLegResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteLeg200ApplicationJsonObject?: Map<string, any>;
+    deleteLeg200ApplicationJSONObject?: Record<string, any>;
 }

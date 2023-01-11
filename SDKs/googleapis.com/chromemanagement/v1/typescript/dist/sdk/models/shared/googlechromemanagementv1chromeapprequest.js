@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1ChromeAppRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1ChromeAppRequest
 /**
  * Details of an app installation request.
@@ -33,33 +36,33 @@ var GoogleChromeManagementV1ChromeAppRequest = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appDetails" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "appDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailUri" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "detailUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconUri" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "iconUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestRequestTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestRequestTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "latestRequestTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestCount" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ChromeAppRequest.prototype, "requestCount", void 0);
     return GoogleChromeManagementV1ChromeAppRequest;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1ChromeAppRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1ChromeAppRequest = GoogleChromeManagementV1ChromeAppRequest;

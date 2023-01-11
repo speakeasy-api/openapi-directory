@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // TableStatistics
 /**
  * Provides a collection of table statistics in response to a request by the <code>DescribeTableStatistics</code> operation.
@@ -33,81 +36,81 @@ var TableStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ddls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ddls" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "ddls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Deletes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Deletes" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "deletes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadCondtnlChkFailedRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadCondtnlChkFailedRows" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "fullLoadCondtnlChkFailedRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadEndTime" }),
         __metadata("design:type", Date)
     ], TableStatistics.prototype, "fullLoadEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadErrorRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadErrorRows" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "fullLoadErrorRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadReloaded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadReloaded" }),
         __metadata("design:type", Boolean)
     ], TableStatistics.prototype, "fullLoadReloaded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadRows" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "fullLoadRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadStartTime" }),
         __metadata("design:type", Date)
     ], TableStatistics.prototype, "fullLoadStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inserts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inserts" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "inserts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], TableStatistics.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaName" }),
         __metadata("design:type", String)
     ], TableStatistics.prototype, "schemaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], TableStatistics.prototype, "tableName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableState" }),
         __metadata("design:type", String)
     ], TableStatistics.prototype, "tableState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Updates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Updates" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "updates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationFailedRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationFailedRecords" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "validationFailedRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationPendingRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationPendingRecords" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "validationPendingRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationState" }),
         __metadata("design:type", String)
     ], TableStatistics.prototype, "validationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationStateDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationStateDetails" }),
         __metadata("design:type", String)
     ], TableStatistics.prototype, "validationStateDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationSuspendedRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationSuspendedRecords" }),
         __metadata("design:type", Number)
     ], TableStatistics.prototype, "validationSuspendedRecords", void 0);
     return TableStatistics;
-}(SpeakeasyBase));
-export { TableStatistics };
+}(utils_1.SpeakeasyBase));
+exports.TableStatistics = TableStatistics;

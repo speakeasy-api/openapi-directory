@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StateCondition } from "./statecondition";
-import { Destination } from "./destination";
-import { EventFilter } from "./eventfilter";
-import { Transport } from "./transport";
-import { TransportInput } from "./transport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerInput = exports.Trigger = void 0;
+var utils_1 = require("../../../internal/utils");
+var statecondition_1 = require("./statecondition");
+var destination_1 = require("./destination");
+var eventfilter_1 = require("./eventfilter");
+var transport_1 = require("./transport");
+var transport_2 = require("./transport");
 // Trigger
 /**
  * A representation of the trigger resource.
@@ -38,56 +41,56 @@ var Trigger = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions", elemType: StateCondition }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions", elemType: statecondition_1.StateCondition }),
+        __metadata("design:type", Object)
     ], Trigger.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", Destination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", destination_1.Destination)
     ], Trigger.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventFilters", elemType: EventFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventFilters", elemType: eventfilter_1.EventFilter }),
         __metadata("design:type", Array)
     ], Trigger.prototype, "eventFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Trigger.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transport" }),
-        __metadata("design:type", Transport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transport" }),
+        __metadata("design:type", transport_1.Transport)
     ], Trigger.prototype, "transport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "updateTime", void 0);
     return Trigger;
-}(SpeakeasyBase));
-export { Trigger };
+}(utils_1.SpeakeasyBase));
+exports.Trigger = Trigger;
 // TriggerInput
 /**
  * A representation of the trigger resource.
@@ -98,33 +101,33 @@ var TriggerInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], TriggerInput.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", Destination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", destination_1.Destination)
     ], TriggerInput.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventFilters", elemType: EventFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventFilters", elemType: eventfilter_1.EventFilter }),
         __metadata("design:type", Array)
     ], TriggerInput.prototype, "eventFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], TriggerInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TriggerInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], TriggerInput.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transport" }),
-        __metadata("design:type", TransportInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transport" }),
+        __metadata("design:type", transport_2.TransportInput)
     ], TriggerInput.prototype, "transport", void 0);
     return TriggerInput;
-}(SpeakeasyBase));
-export { TriggerInput };
+}(utils_1.SpeakeasyBase));
+exports.TriggerInput = TriggerInput;

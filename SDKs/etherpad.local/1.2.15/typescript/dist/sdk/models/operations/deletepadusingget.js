@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePadUsingGetResponse = exports.DeletePadUsingGetRequest = exports.DeletePadUsingGet500ApplicationJson = exports.DeletePadUsingGet401ApplicationJson = exports.DeletePadUsingGet400ApplicationJson = exports.DeletePadUsingGet200ApplicationJson = exports.DeletePadUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePadUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(DeletePadUsingGetQueryParams, _super);
     function DeletePadUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], DeletePadUsingGetQueryParams.prototype, "padId", void 0);
+    ], DeletePadUsingGetQueryParams.prototype, "padID", void 0);
     return DeletePadUsingGetQueryParams;
-}(SpeakeasyBase));
-export { DeletePadUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGetQueryParams = DeletePadUsingGetQueryParams;
 var DeletePadUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeletePadUsingGet200ApplicationJson, _super);
     function DeletePadUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeletePadUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeletePadUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeletePadUsingGet200ApplicationJson.prototype, "message", void 0);
     return DeletePadUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { DeletePadUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGet200ApplicationJson = DeletePadUsingGet200ApplicationJson;
 var DeletePadUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(DeletePadUsingGet400ApplicationJson, _super);
     function DeletePadUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeletePadUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeletePadUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeletePadUsingGet400ApplicationJson.prototype, "message", void 0);
     return DeletePadUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { DeletePadUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGet400ApplicationJson = DeletePadUsingGet400ApplicationJson;
 var DeletePadUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(DeletePadUsingGet401ApplicationJson, _super);
     function DeletePadUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeletePadUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeletePadUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeletePadUsingGet401ApplicationJson.prototype, "message", void 0);
     return DeletePadUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { DeletePadUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGet401ApplicationJson = DeletePadUsingGet401ApplicationJson;
 var DeletePadUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(DeletePadUsingGet500ApplicationJson, _super);
     function DeletePadUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeletePadUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeletePadUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeletePadUsingGet500ApplicationJson.prototype, "message", void 0);
     return DeletePadUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { DeletePadUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGet500ApplicationJson = DeletePadUsingGet500ApplicationJson;
 var DeletePadUsingGetRequest = /** @class */ (function (_super) {
     __extends(DeletePadUsingGetRequest, _super);
     function DeletePadUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePadUsingGetQueryParams)
     ], DeletePadUsingGetRequest.prototype, "queryParams", void 0);
     return DeletePadUsingGetRequest;
-}(SpeakeasyBase));
-export { DeletePadUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGetRequest = DeletePadUsingGetRequest;
 var DeletePadUsingGetResponse = /** @class */ (function (_super) {
     __extends(DeletePadUsingGetResponse, _super);
     function DeletePadUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePadUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePadUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePadUsingGet200ApplicationJson)
-    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGet200ApplicationJsonObject", void 0);
+    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePadUsingGet400ApplicationJson)
-    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGet400ApplicationJsonObject", void 0);
+    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePadUsingGet401ApplicationJson)
-    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGet401ApplicationJsonObject", void 0);
+    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePadUsingGet500ApplicationJson)
-    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGet500ApplicationJsonObject", void 0);
+    ], DeletePadUsingGetResponse.prototype, "deletePadUsingGET500ApplicationJSONObject", void 0);
     return DeletePadUsingGetResponse;
-}(SpeakeasyBase));
-export { DeletePadUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePadUsingGetResponse = DeletePadUsingGetResponse;

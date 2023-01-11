@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPutDashboardActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPutDashboardResponse = exports.GetPutDashboardRequest = exports.GetPutDashboardHeaders = exports.GetPutDashboardQueryParams = exports.GetPutDashboardVersionEnum = exports.GetPutDashboardActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPutDashboardActionEnum;
 (function (GetPutDashboardActionEnum) {
     GetPutDashboardActionEnum["PutDashboard"] = "PutDashboard";
-})(GetPutDashboardActionEnum || (GetPutDashboardActionEnum = {}));
-export var GetPutDashboardVersionEnum;
+})(GetPutDashboardActionEnum = exports.GetPutDashboardActionEnum || (exports.GetPutDashboardActionEnum = {}));
+var GetPutDashboardVersionEnum;
 (function (GetPutDashboardVersionEnum) {
     GetPutDashboardVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(GetPutDashboardVersionEnum || (GetPutDashboardVersionEnum = {}));
+})(GetPutDashboardVersionEnum = exports.GetPutDashboardVersionEnum || (exports.GetPutDashboardVersionEnum = {}));
 var GetPutDashboardQueryParams = /** @class */ (function (_super) {
     __extends(GetPutDashboardQueryParams, _super);
     function GetPutDashboardQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetPutDashboardQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DashboardBody" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DashboardBody" }),
         __metadata("design:type", String)
     ], GetPutDashboardQueryParams.prototype, "dashboardBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DashboardName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DashboardName" }),
         __metadata("design:type", String)
     ], GetPutDashboardQueryParams.prototype, "dashboardName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetPutDashboardQueryParams.prototype, "version", void 0);
     return GetPutDashboardQueryParams;
-}(SpeakeasyBase));
-export { GetPutDashboardQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPutDashboardQueryParams = GetPutDashboardQueryParams;
 var GetPutDashboardHeaders = /** @class */ (function (_super) {
     __extends(GetPutDashboardHeaders, _super);
     function GetPutDashboardHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetPutDashboardHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetPutDashboardHeaders;
-}(SpeakeasyBase));
-export { GetPutDashboardHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPutDashboardHeaders = GetPutDashboardHeaders;
 var GetPutDashboardRequest = /** @class */ (function (_super) {
     __extends(GetPutDashboardRequest, _super);
     function GetPutDashboardRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutDashboardQueryParams)
     ], GetPutDashboardRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutDashboardHeaders)
     ], GetPutDashboardRequest.prototype, "headers", void 0);
     return GetPutDashboardRequest;
-}(SpeakeasyBase));
-export { GetPutDashboardRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPutDashboardRequest = GetPutDashboardRequest;
 var GetPutDashboardResponse = /** @class */ (function (_super) {
     __extends(GetPutDashboardResponse, _super);
     function GetPutDashboardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPutDashboardResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPutDashboardResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPutDashboardResponse.prototype, "statusCode", void 0);
     return GetPutDashboardResponse;
-}(SpeakeasyBase));
-export { GetPutDashboardResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPutDashboardResponse = GetPutDashboardResponse;

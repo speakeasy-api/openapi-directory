@@ -14,7 +14,7 @@ export declare class GetApiVVersionCurrenciesSummarySupportedRequest extends Spe
 export declare class GetApiVVersionCurrenciesSummarySupportedResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getApiVVersionCurrenciesSummarySupported200ApplicationJsonStrings?: string[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
+    getApiVVersionCurrenciesSummarySupported200ApplicationJSONStrings?: string[];
 }

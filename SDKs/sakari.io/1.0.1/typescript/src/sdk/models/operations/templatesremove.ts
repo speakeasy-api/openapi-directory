@@ -41,5 +41,5 @@ export class TemplatesRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  templatesRemove200ApplicationJsonObject?: TemplatesRemove200ApplicationJson;
+  templatesRemove200ApplicationJSONObject?: TemplatesRemove200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse = exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest = exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams = exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams, _super);
     function GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ext" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.prototype, "ext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=heading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=heading" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.prototype, "heading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=position" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.prototype, "versionNumber", void 0);
     return GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams = GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams;
 var GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams, _super);
     function GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=poiList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=poiList" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams.prototype, "poiList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routingTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routingTimeout" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams.prototype, "routingTimeout", void 0);
     return GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams = GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams;
 var GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest, _super);
     function GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest.prototype, "queryParams", void 0);
     return GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest = GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest;
 var GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse, _super);
     function GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse.prototype, "statusCode", void 0);
     return GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse = GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse;

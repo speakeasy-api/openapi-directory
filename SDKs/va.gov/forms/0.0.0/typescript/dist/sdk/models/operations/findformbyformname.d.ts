@@ -19,8 +19,8 @@ export declare class FindFormByFormNameRequest extends SpeakeasyBase {
 export declare class FindFormByFormNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    findFormByFormName200ApplicationJsonObject?: FindFormByFormName200ApplicationJson;
-    findFormByFormName401ApplicationJsonAny?: any;
-    findFormByFormName404ApplicationJsonObject?: FindFormByFormName404ApplicationJson;
-    findFormByFormName429ApplicationJsonAny?: any;
+    findFormByFormName200ApplicationJSONObject?: FindFormByFormName200ApplicationJson;
+    findFormByFormName401ApplicationJSONAny?: any;
+    findFormByFormName404ApplicationJSONObject?: FindFormByFormName404ApplicationJson;
+    findFormByFormName429ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Vpc } from "./vpc";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVpcResult = exports.CreateVpcResultVpc = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateVpcResultVpc
+/**
+ * Information about the VPC.
+**/
+var CreateVpcResultVpc = /** @class */ (function (_super) {
+    __extends(CreateVpcResultVpc, _super);
+    function CreateVpcResultVpc() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "cidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "cidrBlockAssociationSet", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "dhcpOptionsId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "instanceTenancy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "ipv6CidrBlockAssociationSet", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "isDefault", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcResultVpc.prototype, "vpcId", void 0);
+    return CreateVpcResultVpc;
+}(utils_1.SpeakeasyBase));
+exports.CreateVpcResultVpc = CreateVpcResultVpc;
 var CreateVpcResult = /** @class */ (function (_super) {
     __extends(CreateVpcResult, _super);
     function CreateVpcResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Vpc)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateVpcResultVpc)
     ], CreateVpcResult.prototype, "vpc", void 0);
     return CreateVpcResult;
-}(SpeakeasyBase));
-export { CreateVpcResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateVpcResult = CreateVpcResult;

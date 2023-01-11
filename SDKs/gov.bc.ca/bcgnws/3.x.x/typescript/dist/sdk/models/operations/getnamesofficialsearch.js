@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,107 +23,109 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetNamesOfficialSearchOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNamesOfficialSearchResponse = exports.GetNamesOfficialSearchRequest = exports.GetNamesOfficialSearchQueryParams = exports.GetNamesOfficialSearchSortByEnum = exports.GetNamesOfficialSearchOutputStyleEnum = exports.GetNamesOfficialSearchOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetNamesOfficialSearchOutputFormatEnum;
 (function (GetNamesOfficialSearchOutputFormatEnum) {
     GetNamesOfficialSearchOutputFormatEnum["Json"] = "json";
     GetNamesOfficialSearchOutputFormatEnum["Xml"] = "xml";
     GetNamesOfficialSearchOutputFormatEnum["Kml"] = "kml";
     GetNamesOfficialSearchOutputFormatEnum["Csv"] = "csv";
-})(GetNamesOfficialSearchOutputFormatEnum || (GetNamesOfficialSearchOutputFormatEnum = {}));
-export var GetNamesOfficialSearchOutputStyleEnum;
+})(GetNamesOfficialSearchOutputFormatEnum = exports.GetNamesOfficialSearchOutputFormatEnum || (exports.GetNamesOfficialSearchOutputFormatEnum = {}));
+var GetNamesOfficialSearchOutputStyleEnum;
 (function (GetNamesOfficialSearchOutputStyleEnum) {
     GetNamesOfficialSearchOutputStyleEnum["Summary"] = "summary";
     GetNamesOfficialSearchOutputStyleEnum["Detail"] = "detail";
-})(GetNamesOfficialSearchOutputStyleEnum || (GetNamesOfficialSearchOutputStyleEnum = {}));
-export var GetNamesOfficialSearchSortByEnum;
+})(GetNamesOfficialSearchOutputStyleEnum = exports.GetNamesOfficialSearchOutputStyleEnum || (exports.GetNamesOfficialSearchOutputStyleEnum = {}));
+var GetNamesOfficialSearchSortByEnum;
 (function (GetNamesOfficialSearchSortByEnum) {
     GetNamesOfficialSearchSortByEnum["Relevance"] = "relevance";
     GetNamesOfficialSearchSortByEnum["Name"] = "name";
     GetNamesOfficialSearchSortByEnum["FeatureType"] = "featureType";
     GetNamesOfficialSearchSortByEnum["DecisionDate"] = "decisionDate";
-})(GetNamesOfficialSearchSortByEnum || (GetNamesOfficialSearchSortByEnum = {}));
+})(GetNamesOfficialSearchSortByEnum = exports.GetNamesOfficialSearchSortByEnum || (exports.GetNamesOfficialSearchSortByEnum = {}));
 var GetNamesOfficialSearchQueryParams = /** @class */ (function (_super) {
     __extends(GetNamesOfficialSearchQueryParams, _super);
     function GetNamesOfficialSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=embed" }),
         __metadata("design:type", Number)
     ], GetNamesOfficialSearchQueryParams.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=exactSpelling" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=exactSpelling" }),
         __metadata("design:type", Number)
     ], GetNamesOfficialSearchQueryParams.prototype, "exactSpelling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "featureCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureClass" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "featureClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureType" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], GetNamesOfficialSearchQueryParams.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetNamesOfficialSearchQueryParams.prototype, "outputSrs", void 0);
+    ], GetNamesOfficialSearchQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "outputStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], GetNamesOfficialSearchQueryParams.prototype, "startIndex", void 0);
     return GetNamesOfficialSearchQueryParams;
-}(SpeakeasyBase));
-export { GetNamesOfficialSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesOfficialSearchQueryParams = GetNamesOfficialSearchQueryParams;
 var GetNamesOfficialSearchRequest = /** @class */ (function (_super) {
     __extends(GetNamesOfficialSearchRequest, _super);
     function GetNamesOfficialSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNamesOfficialSearchQueryParams)
     ], GetNamesOfficialSearchRequest.prototype, "queryParams", void 0);
     return GetNamesOfficialSearchRequest;
-}(SpeakeasyBase));
-export { GetNamesOfficialSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesOfficialSearchRequest = GetNamesOfficialSearchRequest;
 var GetNamesOfficialSearchResponse = /** @class */ (function (_super) {
     __extends(GetNamesOfficialSearchResponse, _super);
     function GetNamesOfficialSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNamesOfficialSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNamesOfficialSearchResponse.prototype, "statusCode", void 0);
     return GetNamesOfficialSearchResponse;
-}(SpeakeasyBase));
-export { GetNamesOfficialSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesOfficialSearchResponse = GetNamesOfficialSearchResponse;

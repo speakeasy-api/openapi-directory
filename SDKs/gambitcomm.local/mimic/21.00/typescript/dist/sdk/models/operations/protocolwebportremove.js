@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolWebPortRemoveResponse = exports.ProtocolWebPortRemoveRequest = exports.ProtocolWebPortRemovePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolWebPortRemovePathParams = /** @class */ (function (_super) {
     __extends(ProtocolWebPortRemovePathParams, _super);
     function ProtocolWebPortRemovePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolWebPortRemovePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], ProtocolWebPortRemovePathParams.prototype, "port", void 0);
     return ProtocolWebPortRemovePathParams;
-}(SpeakeasyBase));
-export { ProtocolWebPortRemovePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortRemovePathParams = ProtocolWebPortRemovePathParams;
 var ProtocolWebPortRemoveRequest = /** @class */ (function (_super) {
     __extends(ProtocolWebPortRemoveRequest, _super);
     function ProtocolWebPortRemoveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolWebPortRemovePathParams)
     ], ProtocolWebPortRemoveRequest.prototype, "pathParams", void 0);
     return ProtocolWebPortRemoveRequest;
-}(SpeakeasyBase));
-export { ProtocolWebPortRemoveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortRemoveRequest = ProtocolWebPortRemoveRequest;
 var ProtocolWebPortRemoveResponse = /** @class */ (function (_super) {
     __extends(ProtocolWebPortRemoveResponse, _super);
     function ProtocolWebPortRemoveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolWebPortRemoveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolWebPortRemoveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolWebPortRemoveResponse.prototype, "protocolWebPortRemove200ApplicationJsonString", void 0);
+    ], ProtocolWebPortRemoveResponse.prototype, "protocolWebPortRemove200ApplicationJSONString", void 0);
     return ProtocolWebPortRemoveResponse;
-}(SpeakeasyBase));
-export { ProtocolWebPortRemoveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortRemoveResponse = ProtocolWebPortRemoveResponse;

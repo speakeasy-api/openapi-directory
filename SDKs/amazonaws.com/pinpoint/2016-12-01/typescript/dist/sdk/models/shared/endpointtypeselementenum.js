@@ -1,4 +1,7 @@
-export var EndpointTypesElementEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointTypesElementEnum = void 0;
+var EndpointTypesElementEnum;
 (function (EndpointTypesElementEnum) {
     EndpointTypesElementEnum["Push"] = "PUSH";
     EndpointTypesElementEnum["Gcm"] = "GCM";
@@ -13,4 +16,4 @@ export var EndpointTypesElementEnum;
     EndpointTypesElementEnum["Baidu"] = "BAIDU";
     EndpointTypesElementEnum["Custom"] = "CUSTOM";
     EndpointTypesElementEnum["InApp"] = "IN_APP";
-})(EndpointTypesElementEnum || (EndpointTypesElementEnum = {}));
+})(EndpointTypesElementEnum = exports.EndpointTypesElementEnum || (exports.EndpointTypesElementEnum = {}));

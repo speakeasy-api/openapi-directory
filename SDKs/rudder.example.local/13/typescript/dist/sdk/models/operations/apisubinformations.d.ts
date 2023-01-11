@@ -26,5 +26,5 @@ export declare class ApiSubInformationsRequest extends SpeakeasyBase {
 export declare class ApiSubInformationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apiSubInformations200ApplicationJsonObject?: ApiSubInformations200ApplicationJson;
+    apiSubInformations200ApplicationJSONObject?: ApiSubInformations200ApplicationJson;
 }

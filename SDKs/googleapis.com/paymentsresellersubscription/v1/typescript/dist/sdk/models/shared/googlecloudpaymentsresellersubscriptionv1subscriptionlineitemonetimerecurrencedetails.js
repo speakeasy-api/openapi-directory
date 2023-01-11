@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod } from "./googlecloudpaymentsresellersubscriptionv1serviceperiod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpaymentsresellersubscriptionv1serviceperiod_1 = require("./googlecloudpaymentsresellersubscriptionv1serviceperiod");
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails
 /**
  * Details for a ONE_TIME recurrence line item.
@@ -34,9 +37,9 @@ var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurren
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicePeriod" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicePeriod" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1serviceperiod_1.GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails.prototype, "servicePeriod", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails;

@@ -6,8 +6,8 @@ export declare class Subscription extends SpeakeasyBase {
     eventsUrl?: string;
     id?: string;
     populateEvents?: boolean;
-    targetDeliveryLastFailure?: Map<string, any>;
-    targetDeliveryStatus?: Map<string, any>;
+    targetDeliveryLastFailure?: Record<string, any>;
+    targetDeliveryStatus?: Record<string, any>;
     targetRetry?: boolean;
     targetUrl?: string;
     timeCreated?: string;

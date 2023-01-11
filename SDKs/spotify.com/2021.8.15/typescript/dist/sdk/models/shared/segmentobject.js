@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // SegmentObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/#segment-object - Find more info on the official Spotify Web API Reference
@@ -33,41 +36,41 @@ var SegmentObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loudness_end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loudness_end" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "loudnessEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loudness_max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loudness_max" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "loudnessMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loudness_max_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loudness_max_time" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "loudnessMaxTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loudness_start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loudness_start" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "loudnessStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pitches" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pitches" }),
         __metadata("design:type", Array)
     ], SegmentObject.prototype, "pitches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Number)
     ], SegmentObject.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timbre" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timbre" }),
         __metadata("design:type", Array)
     ], SegmentObject.prototype, "timbre", void 0);
     return SegmentObject;
-}(SpeakeasyBase));
-export { SegmentObject };
+}(utils_1.SpeakeasyBase));
+exports.SegmentObject = SegmentObject;

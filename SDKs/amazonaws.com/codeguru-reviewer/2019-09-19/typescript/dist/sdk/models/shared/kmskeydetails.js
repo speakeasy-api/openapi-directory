@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionOptionEnum } from "./encryptionoptionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KmsKeyDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionoptionenum_1 = require("./encryptionoptionenum");
 // KmsKeyDetails
 /**
  * <p>An object that contains:</p> <ul> <li> <p>The encryption option for a repository association. It is either owned by Amazon Web Services Key Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).</p> </li> <li> <p>The ID of the Amazon Web Services KMS key that is associated with a respository association.</p> </li> </ul>
@@ -34,13 +37,13 @@ var KmsKeyDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionOption" }),
         __metadata("design:type", String)
     ], KmsKeyDetails.prototype, "encryptionOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KMSKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KMSKeyId" }),
         __metadata("design:type", String)
     ], KmsKeyDetails.prototype, "kmsKeyId", void 0);
     return KmsKeyDetails;
-}(SpeakeasyBase));
-export { KmsKeyDetails };
+}(utils_1.SpeakeasyBase));
+exports.KmsKeyDetails = KmsKeyDetails;

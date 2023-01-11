@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetReference } from "./targetreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Move = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetreference_1 = require("./targetreference");
 // Move
 /**
  * An object was moved.
@@ -34,13 +37,13 @@ var Move = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addedParents", elemType: TargetReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addedParents", elemType: targetreference_1.TargetReference }),
         __metadata("design:type", Array)
     ], Move.prototype, "addedParents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removedParents", elemType: TargetReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removedParents", elemType: targetreference_1.TargetReference }),
         __metadata("design:type", Array)
     ], Move.prototype, "removedParents", void 0);
     return Move;
-}(SpeakeasyBase));
-export { Move };
+}(utils_1.SpeakeasyBase));
+exports.Move = Move;

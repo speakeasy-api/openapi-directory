@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Font = void 0;
+var utils_1 = require("../../../internal/utils");
 // Font
 /**
  * Download a custom font to use with the HTML asset type, using the font name in the CSS or font tag. See our [custom fonts](https://shotstack.io/learn/html-custom-fonts/) getting started guide for more details.
@@ -33,9 +36,9 @@ var Font = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], Font.prototype, "src", void 0);
     return Font;
-}(SpeakeasyBase));
-export { Font };
+}(utils_1.SpeakeasyBase));
+exports.Font = Font;

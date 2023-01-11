@@ -11,6 +11,6 @@ export declare class LocationRuleUpdate extends SpeakeasyBase {
     conditions?: LocationRuleUpdateConditions;
     enabled?: boolean;
     label?: string;
-    parameters?: Map<string, any>;
+    parameters?: Record<string, any>;
     type?: LocationRuleTypeEnum;
 }

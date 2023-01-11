@@ -2,19 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// IterationInput
-/** 
- * Iteration model to be sent over JSON
-**/
-export class IterationInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=IsDefault, form, name=IsDefault;" })
-  isDefault?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=Name, form, name=Name;" })
-  name?: string;
-}
-
-
 // Iteration
 /** 
  * Iteration model to be sent over JSON
@@ -49,4 +36,17 @@ export class Iteration extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=TrainedAt" })
   trainedAt?: Date;
+}
+
+
+// IterationInput
+/** 
+ * Iteration model to be sent over JSON
+**/
+export class IterationInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=IsDefault, form, name=IsDefault;" })
+  isDefault?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=Name, form, name=Name;" })
+  name?: string;
 }

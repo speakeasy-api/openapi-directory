@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplyPendingMaintenanceActionMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApplyPendingMaintenanceActionMessage
 /**
  * <p/>
@@ -33,17 +36,17 @@ var ApplyPendingMaintenanceActionMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplyAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplyAction" }),
         __metadata("design:type", String)
     ], ApplyPendingMaintenanceActionMessage.prototype, "applyAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptInType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptInType" }),
         __metadata("design:type", String)
     ], ApplyPendingMaintenanceActionMessage.prototype, "optInType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceArn" }),
         __metadata("design:type", String)
     ], ApplyPendingMaintenanceActionMessage.prototype, "replicationInstanceArn", void 0);
     return ApplyPendingMaintenanceActionMessage;
-}(SpeakeasyBase));
-export { ApplyPendingMaintenanceActionMessage };
+}(utils_1.SpeakeasyBase));
+exports.ApplyPendingMaintenanceActionMessage = ApplyPendingMaintenanceActionMessage;

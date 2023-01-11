@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PageBuildError extends SpeakeasyBase {
     message: string;
 }
+/**
+ * Simple User
+**/
 export declare class PageBuildSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

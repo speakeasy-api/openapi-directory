@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasicPerfSampleSeries } from "./basicperfsampleseries";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerfSampleSeries = void 0;
+var utils_1 = require("../../../internal/utils");
+var basicperfsampleseries_1 = require("./basicperfsampleseries");
 // PerfSampleSeries
 /**
  * Resource representing a collection of performance samples (or data points)
@@ -34,29 +37,29 @@ var PerfSampleSeries = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicPerfSampleSeries" }),
-        __metadata("design:type", BasicPerfSampleSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicPerfSampleSeries" }),
+        __metadata("design:type", basicperfsampleseries_1.BasicPerfSampleSeries)
     ], PerfSampleSeries.prototype, "basicPerfSampleSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionId" }),
         __metadata("design:type", String)
     ], PerfSampleSeries.prototype, "executionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=historyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=historyId" }),
         __metadata("design:type", String)
     ], PerfSampleSeries.prototype, "historyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], PerfSampleSeries.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleSeriesId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleSeriesId" }),
         __metadata("design:type", String)
     ], PerfSampleSeries.prototype, "sampleSeriesId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stepId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stepId" }),
         __metadata("design:type", String)
     ], PerfSampleSeries.prototype, "stepId", void 0);
     return PerfSampleSeries;
-}(SpeakeasyBase));
-export { PerfSampleSeries };
+}(utils_1.SpeakeasyBase));
+exports.PerfSampleSeries = PerfSampleSeries;

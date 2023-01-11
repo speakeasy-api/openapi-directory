@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginProtocolPolicyEnum } from "./originprotocolpolicyenum";
-import { OriginSslProtocols } from "./originsslprotocols";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomOriginConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var originprotocolpolicyenum_1 = require("./originprotocolpolicyenum");
+var originsslprotocols_1 = require("./originsslprotocols");
 // CustomOriginConfig
 /**
  * A customer origin.
@@ -35,21 +38,21 @@ var CustomOriginConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CustomOriginConfig.prototype, "httpPort", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CustomOriginConfig.prototype, "httpsPort", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomOriginConfig.prototype, "originProtocolPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OriginSslProtocols)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", originsslprotocols_1.OriginSslProtocols)
     ], CustomOriginConfig.prototype, "originSslProtocols", void 0);
     return CustomOriginConfig;
-}(SpeakeasyBase));
-export { CustomOriginConfig };
+}(utils_1.SpeakeasyBase));
+exports.CustomOriginConfig = CustomOriginConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HookEventEventEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HookEvent = exports.HookEventEventEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HookEventEventEnum;
 (function (HookEventEventEnum) {
     HookEventEventEnum["PullrequestUnapproved"] = "pullrequest:unapproved";
     HookEventEventEnum["IssueCommentCreated"] = "issue:comment_created";
@@ -50,7 +53,7 @@ export var HookEventEventEnum;
     HookEventEventEnum["PullrequestChangesRequestRemoved"] = "pullrequest:changes_request_removed";
     HookEventEventEnum["RepoTransfer"] = "repo:transfer";
     HookEventEventEnum["RepoPush"] = "repo:push";
-})(HookEventEventEnum || (HookEventEventEnum = {}));
+})(HookEventEventEnum = exports.HookEventEventEnum || (exports.HookEventEventEnum = {}));
 // HookEvent
 /**
  * An event, associated with a resource or subject type.
@@ -61,21 +64,21 @@ var HookEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], HookEvent.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], HookEvent.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", String)
     ], HookEvent.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], HookEvent.prototype, "label", void 0);
     return HookEvent;
-}(SpeakeasyBase));
-export { HookEvent };
+}(utils_1.SpeakeasyBase));
+exports.HookEvent = HookEvent;

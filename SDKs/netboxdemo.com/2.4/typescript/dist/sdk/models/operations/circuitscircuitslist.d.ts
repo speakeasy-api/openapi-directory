@@ -31,5 +31,5 @@ export declare class CircuitsCircuitsListRequest extends SpeakeasyBase {
 export declare class CircuitsCircuitsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsCircuitsList200ApplicationJsonObject?: CircuitsCircuitsList200ApplicationJson;
+    circuitsCircuitsList200ApplicationJSONObject?: CircuitsCircuitsList200ApplicationJson;
 }

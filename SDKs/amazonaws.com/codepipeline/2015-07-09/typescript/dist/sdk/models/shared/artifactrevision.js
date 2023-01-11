@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactRevision = void 0;
+var utils_1 = require("../../../internal/utils");
 // ArtifactRevision
 /**
  * Represents revision details of an artifact.
@@ -33,29 +36,29 @@ var ArtifactRevision = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], ArtifactRevision.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtifactRevision.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionChangeIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionChangeIdentifier" }),
         __metadata("design:type", String)
     ], ArtifactRevision.prototype, "revisionChangeIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], ArtifactRevision.prototype, "revisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionSummary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionSummary" }),
         __metadata("design:type", String)
     ], ArtifactRevision.prototype, "revisionSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionUrl" }),
         __metadata("design:type", String)
     ], ArtifactRevision.prototype, "revisionUrl", void 0);
     return ArtifactRevision;
-}(SpeakeasyBase));
-export { ArtifactRevision };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactRevision = ArtifactRevision;

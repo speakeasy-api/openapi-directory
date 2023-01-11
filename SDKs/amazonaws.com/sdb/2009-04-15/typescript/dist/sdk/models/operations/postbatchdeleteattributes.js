@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostBatchDeleteAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBatchDeleteAttributesResponse = exports.PostBatchDeleteAttributesRequest = exports.PostBatchDeleteAttributesQueryParams = exports.PostBatchDeleteAttributesVersionEnum = exports.PostBatchDeleteAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostBatchDeleteAttributesActionEnum;
 (function (PostBatchDeleteAttributesActionEnum) {
     PostBatchDeleteAttributesActionEnum["BatchDeleteAttributes"] = "BatchDeleteAttributes";
-})(PostBatchDeleteAttributesActionEnum || (PostBatchDeleteAttributesActionEnum = {}));
-export var PostBatchDeleteAttributesVersionEnum;
+})(PostBatchDeleteAttributesActionEnum = exports.PostBatchDeleteAttributesActionEnum || (exports.PostBatchDeleteAttributesActionEnum = {}));
+var PostBatchDeleteAttributesVersionEnum;
 (function (PostBatchDeleteAttributesVersionEnum) {
     PostBatchDeleteAttributesVersionEnum["TwoThousandAndNine0415"] = "2009-04-15";
-})(PostBatchDeleteAttributesVersionEnum || (PostBatchDeleteAttributesVersionEnum = {}));
+})(PostBatchDeleteAttributesVersionEnum = exports.PostBatchDeleteAttributesVersionEnum || (exports.PostBatchDeleteAttributesVersionEnum = {}));
 var PostBatchDeleteAttributesQueryParams = /** @class */ (function (_super) {
     __extends(PostBatchDeleteAttributesQueryParams, _super);
     function PostBatchDeleteAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesQueryParams.prototype, "version", void 0);
     return PostBatchDeleteAttributesQueryParams;
-}(SpeakeasyBase));
-export { PostBatchDeleteAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchDeleteAttributesQueryParams = PostBatchDeleteAttributesQueryParams;
 var PostBatchDeleteAttributesRequest = /** @class */ (function (_super) {
     __extends(PostBatchDeleteAttributesRequest, _super);
     function PostBatchDeleteAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchDeleteAttributesQueryParams)
     ], PostBatchDeleteAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostBatchDeleteAttributesRequest.prototype, "request", void 0);
     return PostBatchDeleteAttributesRequest;
-}(SpeakeasyBase));
-export { PostBatchDeleteAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchDeleteAttributesRequest = PostBatchDeleteAttributesRequest;
 var PostBatchDeleteAttributesResponse = /** @class */ (function (_super) {
     __extends(PostBatchDeleteAttributesResponse, _super);
     function PostBatchDeleteAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBatchDeleteAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBatchDeleteAttributesResponse.prototype, "statusCode", void 0);
     return PostBatchDeleteAttributesResponse;
-}(SpeakeasyBase));
-export { PostBatchDeleteAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchDeleteAttributesResponse = PostBatchDeleteAttributesResponse;

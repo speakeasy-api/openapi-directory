@@ -109,5 +109,5 @@ export class GetABatchOfConsumerTransactionClassificationResultsResponse extends
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getABatchOfConsumerTransactionClassificationResults200ApplicationJsonObject?: GetABatchOfConsumerTransactionClassificationResults200ApplicationJson;
+  getABatchOfConsumerTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfConsumerTransactionClassificationResults200ApplicationJson;
 }

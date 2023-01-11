@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IceServer = void 0;
+var utils_1 = require("../../../internal/utils");
 // IceServer
 /**
  * A structure for the ICE server connection data.
@@ -33,21 +36,21 @@ var IceServer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], IceServer.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ttl" }),
         __metadata("design:type", Number)
     ], IceServer.prototype, "ttl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Uris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Uris" }),
         __metadata("design:type", Array)
     ], IceServer.prototype, "uris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], IceServer.prototype, "username", void 0);
     return IceServer;
-}(SpeakeasyBase));
-export { IceServer };
+}(utils_1.SpeakeasyBase));
+exports.IceServer = IceServer;

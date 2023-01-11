@@ -12,19 +12,19 @@ export declare class UpdatePaymentCancellationPsuDataHeaders extends SpeakeasyBa
     psuAcceptCharset?: string;
     psuAcceptEncoding?: string;
     psuAcceptLanguage?: string;
-    psuCorporateId?: string;
-    psuCorporateIdType?: string;
-    psuDeviceId?: string;
+    psuCorporateID?: string;
+    psuCorporateIDType?: string;
+    psuDeviceID?: string;
     psuGeoLocation?: string;
     psuHttpMethod?: shared.PsuHttpMethodEnum;
-    psuId?: string;
-    psuIdType?: string;
-    psuIpAddress?: string;
-    psuIpPort?: string;
+    psuID?: string;
+    psuIDType?: string;
+    psuIPAddress?: string;
+    psuIPPort?: string;
     psuUserAgent?: string;
     signature?: string;
     tppSignatureCertificate?: string;
-    xRequestId: string;
+    xRequestID: string;
 }
 export declare class UpdatePaymentCancellationPsuDataSecurity extends SpeakeasyBase {
     bearerAuthOAuth?: shared.SchemeBearerAuthOAuth;
@@ -37,19 +37,19 @@ export declare class UpdatePaymentCancellationPsuDataRequest extends SpeakeasyBa
 }
 export declare class UpdatePaymentCancellationPsuDataResponse extends SpeakeasyBase {
     contentType: string;
-    error400NgPis?: shared.Error400NgPis;
-    error400Pis?: shared.Error400Pis;
-    error401NgPis?: shared.Error401NgPis;
-    error401Pis?: shared.Error401Pis;
-    error403NgPis?: shared.Error403NgPis;
-    error403Pis?: shared.Error403Pis;
-    error404NgPis?: shared.Error404NgPis;
-    error404Pis?: shared.Error404Pis;
-    error405NgPis?: shared.Error405NgPis;
-    error405Pis?: shared.Error405Pis;
-    error409NgPis?: shared.Error409NgPis;
-    error409Pis?: shared.Error409Pis;
-    headers: Map<string, string[]>;
+    error400NGPIS?: shared.Error400NgPis;
+    error400PIS?: shared.Error400Pis;
+    error401NGPIS?: shared.Error401NgPis;
+    error401PIS?: shared.Error401Pis;
+    error403NGPIS?: shared.Error403NgPis;
+    error403PIS?: shared.Error403Pis;
+    error404NGPIS?: shared.Error404NgPis;
+    error404PIS?: shared.Error404Pis;
+    error405NGPIS?: shared.Error405NgPis;
+    error405PIS?: shared.Error405Pis;
+    error409NGPIS?: shared.Error409NgPis;
+    error409PIS?: shared.Error409Pis;
+    headers: Record<string, string[]>;
     statusCode: number;
-    updatePaymentCancellationPsuData200ApplicationJsonOneOf?: any;
+    updatePaymentCancellationPsuData200ApplicationJSONOneOf?: any;
 }

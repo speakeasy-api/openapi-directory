@@ -123,5 +123,5 @@ export declare class UpdateNetworkClientSplashAuthorizationStatusRequest extends
 export declare class UpdateNetworkClientSplashAuthorizationStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkClientSplashAuthorizationStatus200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkClientSplashAuthorizationStatus200ApplicationJSONObject?: Record<string, any>;
 }

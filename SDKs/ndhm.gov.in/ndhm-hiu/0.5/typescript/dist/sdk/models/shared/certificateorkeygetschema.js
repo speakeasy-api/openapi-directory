@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateOrKeyGetSchema = void 0;
+var utils_1 = require("../../../internal/utils");
 var CertificateOrKeyGetSchema = /** @class */ (function (_super) {
     __extends(CertificateOrKeyGetSchema, _super);
     function CertificateOrKeyGetSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alg" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "alg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=e" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=e" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "e", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kid" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "kid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kty" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "kty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=n" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "n", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "use", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x5c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x5c" }),
         __metadata("design:type", Array)
     ], CertificateOrKeyGetSchema.prototype, "x5c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x5t" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x5t" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "x5t", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x5t#S256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x5t#S256" }),
         __metadata("design:type", String)
     ], CertificateOrKeyGetSchema.prototype, "x5tNumberS256", void 0);
     return CertificateOrKeyGetSchema;
-}(SpeakeasyBase));
-export { CertificateOrKeyGetSchema };
+}(utils_1.SpeakeasyBase));
+exports.CertificateOrKeyGetSchema = CertificateOrKeyGetSchema;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1TotalMemoryEncryptionInfo } from "./googlechromemanagementv1totalmemoryencryptioninfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1MemoryInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1totalmemoryencryptioninfo_1 = require("./googlechromemanagementv1totalmemoryencryptioninfo");
 // GoogleChromeManagementV1MemoryInfo
 /**
  * Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A
@@ -34,17 +37,17 @@ var GoogleChromeManagementV1MemoryInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableRamBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableRamBytes" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1MemoryInfo.prototype, "availableRamBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalMemoryEncryption" }),
-        __metadata("design:type", GoogleChromeManagementV1TotalMemoryEncryptionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalMemoryEncryption" }),
+        __metadata("design:type", googlechromemanagementv1totalmemoryencryptioninfo_1.GoogleChromeManagementV1TotalMemoryEncryptionInfo)
     ], GoogleChromeManagementV1MemoryInfo.prototype, "totalMemoryEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalRamBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalRamBytes" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1MemoryInfo.prototype, "totalRamBytes", void 0);
     return GoogleChromeManagementV1MemoryInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1MemoryInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1MemoryInfo = GoogleChromeManagementV1MemoryInfo;

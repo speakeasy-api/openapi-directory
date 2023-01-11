@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimplifiedPlaylistObject } from "./simplifiedplaylistobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeaturedPlaylistObject = exports.FeaturedPlaylistObjectPlaylists = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplifiedplaylistobject_1 = require("./simplifiedplaylistobject");
 // FeaturedPlaylistObjectPlaylists
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -34,49 +37,49 @@ var FeaturedPlaylistObjectPlaylists = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], FeaturedPlaylistObjectPlaylists.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedPlaylistObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedplaylistobject_1.SimplifiedPlaylistObject }),
         __metadata("design:type", Array)
     ], FeaturedPlaylistObjectPlaylists.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], FeaturedPlaylistObjectPlaylists.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], FeaturedPlaylistObjectPlaylists.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], FeaturedPlaylistObjectPlaylists.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], FeaturedPlaylistObjectPlaylists.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], FeaturedPlaylistObjectPlaylists.prototype, "total", void 0);
     return FeaturedPlaylistObjectPlaylists;
-}(SpeakeasyBase));
-export { FeaturedPlaylistObjectPlaylists };
+}(utils_1.SpeakeasyBase));
+exports.FeaturedPlaylistObjectPlaylists = FeaturedPlaylistObjectPlaylists;
 var FeaturedPlaylistObject = /** @class */ (function (_super) {
     __extends(FeaturedPlaylistObject, _super);
     function FeaturedPlaylistObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], FeaturedPlaylistObject.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playlists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playlists" }),
         __metadata("design:type", FeaturedPlaylistObjectPlaylists)
     ], FeaturedPlaylistObject.prototype, "playlists", void 0);
     return FeaturedPlaylistObject;
-}(SpeakeasyBase));
-export { FeaturedPlaylistObject };
+}(utils_1.SpeakeasyBase));
+exports.FeaturedPlaylistObject = FeaturedPlaylistObject;

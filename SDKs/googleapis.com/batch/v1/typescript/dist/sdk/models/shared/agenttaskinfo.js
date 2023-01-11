@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskStatus } from "./taskstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentTaskInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskstatus_1 = require("./taskstatus");
 // AgentTaskInfo
 /**
  * Task Info
@@ -34,17 +37,17 @@ var AgentTaskInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runnable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runnable" }),
         __metadata("design:type", String)
     ], AgentTaskInfo.prototype, "runnable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskId" }),
         __metadata("design:type", String)
     ], AgentTaskInfo.prototype, "taskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskStatus" }),
-        __metadata("design:type", TaskStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskStatus" }),
+        __metadata("design:type", taskstatus_1.TaskStatus)
     ], AgentTaskInfo.prototype, "taskStatus", void 0);
     return AgentTaskInfo;
-}(SpeakeasyBase));
-export { AgentTaskInfo };
+}(utils_1.SpeakeasyBase));
+exports.AgentTaskInfo = AgentTaskInfo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCopyImageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCopyImageResponse = exports.PostCopyImageRequest = exports.PostCopyImageHeaders = exports.PostCopyImageQueryParams = exports.PostCopyImageVersionEnum = exports.PostCopyImageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCopyImageActionEnum;
 (function (PostCopyImageActionEnum) {
     PostCopyImageActionEnum["CopyImage"] = "CopyImage";
-})(PostCopyImageActionEnum || (PostCopyImageActionEnum = {}));
-export var PostCopyImageVersionEnum;
+})(PostCopyImageActionEnum = exports.PostCopyImageActionEnum || (exports.PostCopyImageActionEnum = {}));
+var PostCopyImageVersionEnum;
 (function (PostCopyImageVersionEnum) {
     PostCopyImageVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCopyImageVersionEnum || (PostCopyImageVersionEnum = {}));
+})(PostCopyImageVersionEnum = exports.PostCopyImageVersionEnum || (exports.PostCopyImageVersionEnum = {}));
 var PostCopyImageQueryParams = /** @class */ (function (_super) {
     __extends(PostCopyImageQueryParams, _super);
     function PostCopyImageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCopyImageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCopyImageQueryParams.prototype, "version", void 0);
     return PostCopyImageQueryParams;
-}(SpeakeasyBase));
-export { PostCopyImageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyImageQueryParams = PostCopyImageQueryParams;
 var PostCopyImageHeaders = /** @class */ (function (_super) {
     __extends(PostCopyImageHeaders, _super);
     function PostCopyImageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCopyImageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCopyImageHeaders;
-}(SpeakeasyBase));
-export { PostCopyImageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyImageHeaders = PostCopyImageHeaders;
 var PostCopyImageRequest = /** @class */ (function (_super) {
     __extends(PostCopyImageRequest, _super);
     function PostCopyImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyImageQueryParams)
     ], PostCopyImageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyImageHeaders)
     ], PostCopyImageRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCopyImageRequest.prototype, "request", void 0);
     return PostCopyImageRequest;
-}(SpeakeasyBase));
-export { PostCopyImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyImageRequest = PostCopyImageRequest;
 var PostCopyImageResponse = /** @class */ (function (_super) {
     __extends(PostCopyImageResponse, _super);
     function PostCopyImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCopyImageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCopyImageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCopyImageResponse.prototype, "statusCode", void 0);
     return PostCopyImageResponse;
-}(SpeakeasyBase));
-export { PostCopyImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyImageResponse = PostCopyImageResponse;

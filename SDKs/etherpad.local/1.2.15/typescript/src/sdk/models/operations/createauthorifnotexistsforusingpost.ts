@@ -13,7 +13,7 @@ export class CreateAuthorIfNotExistsForUsingPostQueryParams extends SpeakeasyBas
 
 export class CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -34,7 +34,7 @@ export class CreateAuthorIfNotExistsForUsingPost400ApplicationJson extends Speak
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,7 +46,7 @@ export class CreateAuthorIfNotExistsForUsingPost401ApplicationJson extends Speak
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class CreateAuthorIfNotExistsForUsingPost500ApplicationJson extends Speak
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -79,14 +79,14 @@ export class CreateAuthorIfNotExistsForUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createAuthorIfNotExistsForUsingPost200ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
+  createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorIfNotExistsForUsingPost400ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
+  createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorIfNotExistsForUsingPost401ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
+  createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorIfNotExistsForUsingPost500ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
+  createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
 }

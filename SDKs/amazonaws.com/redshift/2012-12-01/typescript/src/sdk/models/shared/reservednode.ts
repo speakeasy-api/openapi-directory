@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecurringCharge } from "./recurringcharge";
+import { RecurringChargeList } from "./recurringchargelist";
 import { ReservedNodeOfferingTypeEnum } from "./reservednodeofferingtypeenum";
 
 
@@ -27,8 +27,8 @@ export class ReservedNode extends SpeakeasyBase {
   @SpeakeasyMetadata()
   offeringType?: string;
 
-  @SpeakeasyMetadata({ elemType: RecurringCharge })
-  recurringCharges?: RecurringCharge[];
+  @SpeakeasyMetadata({ elemType: RecurringChargeList })
+  recurringCharges?: RecurringChargeList[];
 
   @SpeakeasyMetadata()
   reservedNodeId?: string;

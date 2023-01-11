@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStatus200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStatusResponse = exports.GetStatus200ApplicationJson = exports.GetStatus200ApplicationJsonResultEnum = exports.GetStatus200ApplicationJsonData = exports.GetStatus200ApplicationJsonDataGlobalEnum = exports.GetStatus200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStatus200ApplicationJsonActionEnum;
 (function (GetStatus200ApplicationJsonActionEnum) {
     GetStatus200ApplicationJsonActionEnum["GetStatus"] = "getStatus";
-})(GetStatus200ApplicationJsonActionEnum || (GetStatus200ApplicationJsonActionEnum = {}));
-export var GetStatus200ApplicationJsonDataGlobalEnum;
+})(GetStatus200ApplicationJsonActionEnum = exports.GetStatus200ApplicationJsonActionEnum || (exports.GetStatus200ApplicationJsonActionEnum = {}));
+var GetStatus200ApplicationJsonDataGlobalEnum;
 (function (GetStatus200ApplicationJsonDataGlobalEnum) {
     GetStatus200ApplicationJsonDataGlobalEnum["Ok"] = "OK";
-})(GetStatus200ApplicationJsonDataGlobalEnum || (GetStatus200ApplicationJsonDataGlobalEnum = {}));
+})(GetStatus200ApplicationJsonDataGlobalEnum = exports.GetStatus200ApplicationJsonDataGlobalEnum || (exports.GetStatus200ApplicationJsonDataGlobalEnum = {}));
 // GetStatus200ApplicationJsonData
 /**
  * Status of the service
@@ -41,54 +44,54 @@ var GetStatus200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=global" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=global" }),
         __metadata("design:type", String)
     ], GetStatus200ApplicationJsonData.prototype, "global", void 0);
     return GetStatus200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetStatus200ApplicationJsonData };
-export var GetStatus200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetStatus200ApplicationJsonData = GetStatus200ApplicationJsonData;
+var GetStatus200ApplicationJsonResultEnum;
 (function (GetStatus200ApplicationJsonResultEnum) {
     GetStatus200ApplicationJsonResultEnum["Success"] = "success";
     GetStatus200ApplicationJsonResultEnum["Error"] = "error";
-})(GetStatus200ApplicationJsonResultEnum || (GetStatus200ApplicationJsonResultEnum = {}));
+})(GetStatus200ApplicationJsonResultEnum = exports.GetStatus200ApplicationJsonResultEnum || (exports.GetStatus200ApplicationJsonResultEnum = {}));
 var GetStatus200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetStatus200ApplicationJson, _super);
     function GetStatus200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetStatus200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetStatus200ApplicationJsonData)
     ], GetStatus200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetStatus200ApplicationJson.prototype, "result", void 0);
     return GetStatus200ApplicationJson;
-}(SpeakeasyBase));
-export { GetStatus200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetStatus200ApplicationJson = GetStatus200ApplicationJson;
 var GetStatusResponse = /** @class */ (function (_super) {
     __extends(GetStatusResponse, _super);
     function GetStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStatus200ApplicationJson)
-    ], GetStatusResponse.prototype, "getStatus200ApplicationJsonObject", void 0);
+    ], GetStatusResponse.prototype, "getStatus200ApplicationJSONObject", void 0);
     return GetStatusResponse;
-}(SpeakeasyBase));
-export { GetStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStatusResponse = GetStatusResponse;

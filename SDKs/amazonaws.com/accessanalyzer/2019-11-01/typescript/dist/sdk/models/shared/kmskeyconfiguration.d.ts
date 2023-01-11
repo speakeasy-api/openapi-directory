@@ -5,5 +5,5 @@ import { KmsGrantConfiguration } from "./kmsgrantconfiguration";
 **/
 export declare class KmsKeyConfiguration extends SpeakeasyBase {
     grants?: KmsGrantConfiguration[];
-    keyPolicies?: Map<string, string>;
+    keyPolicies?: Record<string, string>;
 }

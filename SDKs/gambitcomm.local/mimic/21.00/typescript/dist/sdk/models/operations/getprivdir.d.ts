@@ -8,5 +8,5 @@ export declare class GetPrivdirRequest extends SpeakeasyBase {
 export declare class GetPrivdirResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPrivdir200ApplicationJsonString?: string;
+    getPrivdir200ApplicationJSONString?: string;
 }

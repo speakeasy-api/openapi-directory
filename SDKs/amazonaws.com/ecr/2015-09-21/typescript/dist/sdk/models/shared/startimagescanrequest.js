@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageIdentifier } from "./imageidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartImageScanRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var imageidentifier_1 = require("./imageidentifier");
 var StartImageScanRequest = /** @class */ (function (_super) {
     __extends(StartImageScanRequest, _super);
     function StartImageScanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
-        __metadata("design:type", ImageIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
+        __metadata("design:type", imageidentifier_1.ImageIdentifier)
     ], StartImageScanRequest.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], StartImageScanRequest.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], StartImageScanRequest.prototype, "repositoryName", void 0);
     return StartImageScanRequest;
-}(SpeakeasyBase));
-export { StartImageScanRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartImageScanRequest = StartImageScanRequest;

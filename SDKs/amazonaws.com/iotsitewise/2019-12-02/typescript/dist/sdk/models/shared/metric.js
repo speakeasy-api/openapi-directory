@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricProcessingConfig } from "./metricprocessingconfig";
-import { ExpressionVariable } from "./expressionvariable";
-import { MetricWindow } from "./metricwindow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metric = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricprocessingconfig_1 = require("./metricprocessingconfig");
+var expressionvariable_1 = require("./expressionvariable");
+var metricwindow_1 = require("./metricwindow");
 // Metric
 /**
  * <p>Contains an asset metric property. With metrics, you can calculate aggregate functions, such as an average, maximum, or minimum, as specified through an expression. A metric maps several values to a single value (such as a sum).</p> <p>The maximum number of dependent/cascading variables used in any one metric calculation is 10. Therefore, a <i>root</i> metric can have up to 10 cascading metrics in its computational dependency tree. Additionally, a metric can only have a data type of <code>DOUBLE</code> and consume properties with data types of <code>INTEGER</code> or <code>DOUBLE</code>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#metrics">Metrics</a> in the <i>IoT SiteWise User Guide</i>.</p>
@@ -36,21 +39,21 @@ var Metric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], Metric.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingConfig" }),
-        __metadata("design:type", MetricProcessingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingConfig" }),
+        __metadata("design:type", metricprocessingconfig_1.MetricProcessingConfig)
     ], Metric.prototype, "processingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variables", elemType: ExpressionVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variables", elemType: expressionvariable_1.ExpressionVariable }),
         __metadata("design:type", Array)
     ], Metric.prototype, "variables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=window" }),
-        __metadata("design:type", MetricWindow)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=window" }),
+        __metadata("design:type", metricwindow_1.MetricWindow)
     ], Metric.prototype, "window", void 0);
     return Metric;
-}(SpeakeasyBase));
-export { Metric };
+}(utils_1.SpeakeasyBase));
+exports.Metric = Metric;

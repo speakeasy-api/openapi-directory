@@ -379,11 +379,11 @@ export class QueryADatabaseResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  queryADatabase200ApplicationJsonObject?: QueryADatabase200ApplicationJson;
+  queryADatabase200ApplicationJSONObject?: QueryADatabase200ApplicationJson;
 }

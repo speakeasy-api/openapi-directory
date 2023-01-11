@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CurrentSeasonRequest, CurrentSeasonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: CurrentSeasonRequest = {
   pathParams: {
-    format: "JSON",
+    format: "XML",
   },
 };
 
-sdk.sdk.currentSeason(req).then((res: CurrentSeasonResponse | AxiosError) => {
+sdk.currentSeason(req).then((res: CurrentSeasonResponse | AxiosError) => {
    // handle response
 });
 ```

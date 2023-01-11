@@ -15,7 +15,7 @@ export declare class GetDiscoverySummaryHeaders extends SpeakeasyBase {
 }
 export declare class GetDiscoverySummaryRequest extends SpeakeasyBase {
     headers: GetDiscoverySummaryHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetDiscoverySummaryResponse extends SpeakeasyBase {
     authorizationErrorException?: any;

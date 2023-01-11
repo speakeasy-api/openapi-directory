@@ -20,6 +20,6 @@ export declare class PostV1OrderFeedbackRequest extends SpeakeasyBase {
 }
 export declare class PostV1OrderFeedbackResponse extends SpeakeasyBase {
     contentType: string;
-    postV1OrderFeedback200ApplicationJsonString?: string;
     statusCode: number;
+    postV1OrderFeedback200ApplicationJSONString?: string;
 }

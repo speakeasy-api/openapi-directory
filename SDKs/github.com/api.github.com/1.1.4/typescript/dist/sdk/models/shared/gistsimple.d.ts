@@ -18,7 +18,7 @@ export declare class GistSimple extends SpeakeasyBase {
     commitsUrl?: string;
     createdAt?: string;
     description?: string;
-    files?: Map<string, GistSimpleFiles>;
+    files?: Record<string, GistSimpleFiles>;
     forksUrl?: string;
     gitPullUrl?: string;
     gitPushUrl?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyVpcAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyVpcAttributeResponse = exports.PostModifyVpcAttributeRequest = exports.PostModifyVpcAttributeHeaders = exports.PostModifyVpcAttributeQueryParams = exports.PostModifyVpcAttributeVersionEnum = exports.PostModifyVpcAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyVpcAttributeActionEnum;
 (function (PostModifyVpcAttributeActionEnum) {
     PostModifyVpcAttributeActionEnum["ModifyVpcAttribute"] = "ModifyVpcAttribute";
-})(PostModifyVpcAttributeActionEnum || (PostModifyVpcAttributeActionEnum = {}));
-export var PostModifyVpcAttributeVersionEnum;
+})(PostModifyVpcAttributeActionEnum = exports.PostModifyVpcAttributeActionEnum || (exports.PostModifyVpcAttributeActionEnum = {}));
+var PostModifyVpcAttributeVersionEnum;
 (function (PostModifyVpcAttributeVersionEnum) {
     PostModifyVpcAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyVpcAttributeVersionEnum || (PostModifyVpcAttributeVersionEnum = {}));
+})(PostModifyVpcAttributeVersionEnum = exports.PostModifyVpcAttributeVersionEnum || (exports.PostModifyVpcAttributeVersionEnum = {}));
 var PostModifyVpcAttributeQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyVpcAttributeQueryParams, _super);
     function PostModifyVpcAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeQueryParams.prototype, "version", void 0);
     return PostModifyVpcAttributeQueryParams;
-}(SpeakeasyBase));
-export { PostModifyVpcAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpcAttributeQueryParams = PostModifyVpcAttributeQueryParams;
 var PostModifyVpcAttributeHeaders = /** @class */ (function (_super) {
     __extends(PostModifyVpcAttributeHeaders, _super);
     function PostModifyVpcAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyVpcAttributeHeaders;
-}(SpeakeasyBase));
-export { PostModifyVpcAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpcAttributeHeaders = PostModifyVpcAttributeHeaders;
 var PostModifyVpcAttributeRequest = /** @class */ (function (_super) {
     __extends(PostModifyVpcAttributeRequest, _super);
     function PostModifyVpcAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVpcAttributeQueryParams)
     ], PostModifyVpcAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVpcAttributeHeaders)
     ], PostModifyVpcAttributeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyVpcAttributeRequest.prototype, "request", void 0);
     return PostModifyVpcAttributeRequest;
-}(SpeakeasyBase));
-export { PostModifyVpcAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpcAttributeRequest = PostModifyVpcAttributeRequest;
 var PostModifyVpcAttributeResponse = /** @class */ (function (_super) {
     __extends(PostModifyVpcAttributeResponse, _super);
     function PostModifyVpcAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyVpcAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyVpcAttributeResponse.prototype, "statusCode", void 0);
     return PostModifyVpcAttributeResponse;
-}(SpeakeasyBase));
-export { PostModifyVpcAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpcAttributeResponse = PostModifyVpcAttributeResponse;

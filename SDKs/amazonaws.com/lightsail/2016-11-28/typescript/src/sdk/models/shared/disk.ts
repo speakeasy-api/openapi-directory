@@ -22,13 +22,13 @@ export class Disk extends SpeakeasyBase {
   attachedTo?: string;
 
   @SpeakeasyMetadata({ data: "json, name=attachmentState" })
-  attachmentState?: string;
+  attachmentState?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=gbInUse" })
-  gbInUse?: number;
+  gbInUse?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=iops" })
   iops?: number;

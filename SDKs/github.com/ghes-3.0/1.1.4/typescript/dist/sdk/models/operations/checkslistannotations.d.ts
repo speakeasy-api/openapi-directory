@@ -15,7 +15,7 @@ export declare class ChecksListAnnotationsRequest extends SpeakeasyBase {
 }
 export declare class ChecksListAnnotationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     checkAnnotations?: shared.CheckAnnotation[];
 }

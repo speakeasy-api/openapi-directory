@@ -7,7 +7,7 @@ export declare class ProtocolTftpGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolTftpGetTracePathParams;
 }
 export declare class ProtocolTftpGetTraceResponse extends SpeakeasyBase {
-    configTftp?: shared.ConfigTftp;
+    configTFTP?: shared.ConfigTftp;
     contentType: string;
     statusCode: number;
 }

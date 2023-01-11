@@ -76,11 +76,11 @@ export class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse extends 
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJsonObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson;
+  userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson;
 }

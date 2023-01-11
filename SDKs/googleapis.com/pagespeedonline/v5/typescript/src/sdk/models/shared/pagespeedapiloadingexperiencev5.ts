@@ -15,7 +15,7 @@ export class PagespeedApiLoadingExperienceV5 extends SpeakeasyBase {
   initialUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metrics", elemType: UserPageLoadMetricV5 })
-  metrics?: Map<string, UserPageLoadMetricV5>;
+  metrics?: Record<string, UserPageLoadMetricV5>;
 
   @SpeakeasyMetadata({ data: "json, name=origin_fallback" })
   originFallback?: boolean;

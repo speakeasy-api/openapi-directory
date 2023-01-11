@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { Logo } from "./logo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BrandingConf = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var logo_1 = require("./logo");
 var BrandingConf = /** @class */ (function (_super) {
     __extends(BrandingConf, _super);
     function BrandingConf() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barColor" }),
+        __metadata("design:type", color_1.Color)
     ], BrandingConf.prototype, "barColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayBar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayBar" }),
         __metadata("design:type", Boolean)
     ], BrandingConf.prototype, "displayBar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayBarLogin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayBarLogin" }),
         __metadata("design:type", Boolean)
     ], BrandingConf.prototype, "displayBarLogin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayLabel" }),
         __metadata("design:type", Boolean)
     ], BrandingConf.prototype, "displayLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayMotd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayMotd" }),
         __metadata("design:type", Boolean)
     ], BrandingConf.prototype, "displayMotd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelColor" }),
+        __metadata("design:type", color_1.Color)
     ], BrandingConf.prototype, "labelColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelText" }),
         __metadata("design:type", String)
     ], BrandingConf.prototype, "labelText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motd" }),
         __metadata("design:type", String)
     ], BrandingConf.prototype, "motd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smallLogo" }),
-        __metadata("design:type", Logo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smallLogo" }),
+        __metadata("design:type", logo_1.Logo)
     ], BrandingConf.prototype, "smallLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wideLogo" }),
-        __metadata("design:type", Logo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wideLogo" }),
+        __metadata("design:type", logo_1.Logo)
     ], BrandingConf.prototype, "wideLogo", void 0);
     return BrandingConf;
-}(SpeakeasyBase));
-export { BrandingConf };
+}(utils_1.SpeakeasyBase));
+exports.BrandingConf = BrandingConf;

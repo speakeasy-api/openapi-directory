@@ -9,7 +9,7 @@ import { BaseListing } from "./baselisting";
 **/
 export class SearchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=facets" })
-  facets?: Map<string, any>;
+  facets?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=listings", elemType: BaseListing })
   listings?: BaseListing[];
@@ -18,8 +18,8 @@ export class SearchResponse extends SpeakeasyBase {
   numFound?: number;
 
   @SpeakeasyMetadata({ data: "json, name=range_facets" })
-  rangeFacets?: Map<string, any>;
+  rangeFacets?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=stats" })
-  stats?: Map<string, any>;
+  stats?: Record<string, any>;
 }

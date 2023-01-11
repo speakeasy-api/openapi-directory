@@ -60,5 +60,5 @@ export class UpdateDatasetGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDatasetGroupResponse?: Map<string, any>;
+  updateDatasetGroupResponse?: Record<string, any>;
 }

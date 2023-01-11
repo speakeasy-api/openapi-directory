@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkWirelessRfProfileResponse = exports.DeleteNetworkWirelessRfProfileRequest = exports.DeleteNetworkWirelessRfProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkWirelessRfProfilePathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessRfProfilePathParams, _super);
     function DeleteNetworkWirelessRfProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessRfProfilePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessRfProfilePathParams.prototype, "rfProfileId", void 0);
     return DeleteNetworkWirelessRfProfilePathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessRfProfilePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessRfProfilePathParams = DeleteNetworkWirelessRfProfilePathParams;
 var DeleteNetworkWirelessRfProfileRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessRfProfileRequest, _super);
     function DeleteNetworkWirelessRfProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkWirelessRfProfilePathParams)
     ], DeleteNetworkWirelessRfProfileRequest.prototype, "pathParams", void 0);
     return DeleteNetworkWirelessRfProfileRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessRfProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessRfProfileRequest = DeleteNetworkWirelessRfProfileRequest;
 var DeleteNetworkWirelessRfProfileResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessRfProfileResponse, _super);
     function DeleteNetworkWirelessRfProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessRfProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkWirelessRfProfileResponse.prototype, "statusCode", void 0);
     return DeleteNetworkWirelessRfProfileResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessRfProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessRfProfileResponse = DeleteNetworkWirelessRfProfileResponse;

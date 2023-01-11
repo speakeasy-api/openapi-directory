@@ -1,4 +1,7 @@
-export var DayOfExecutionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DayOfExecutionEnum = void 0;
+var DayOfExecutionEnum;
 (function (DayOfExecutionEnum) {
     DayOfExecutionEnum["One"] = "1";
     DayOfExecutionEnum["Two"] = "2";
@@ -31,4 +34,4 @@ export var DayOfExecutionEnum;
     DayOfExecutionEnum["TwentyNine"] = "29";
     DayOfExecutionEnum["Thirty"] = "30";
     DayOfExecutionEnum["ThirtyOne"] = "31";
-})(DayOfExecutionEnum || (DayOfExecutionEnum = {}));
+})(DayOfExecutionEnum = exports.DayOfExecutionEnum || (exports.DayOfExecutionEnum = {}));

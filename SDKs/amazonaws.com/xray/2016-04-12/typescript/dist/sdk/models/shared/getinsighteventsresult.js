@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightEvent } from "./insightevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInsightEventsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightevent_1 = require("./insightevent");
 var GetInsightEventsResult = /** @class */ (function (_super) {
     __extends(GetInsightEventsResult, _super);
     function GetInsightEventsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightEvents", elemType: InsightEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightEvents", elemType: insightevent_1.InsightEvent }),
         __metadata("design:type", Array)
     ], GetInsightEventsResult.prototype, "insightEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetInsightEventsResult.prototype, "nextToken", void 0);
     return GetInsightEventsResult;
-}(SpeakeasyBase));
-export { GetInsightEventsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetInsightEventsResult = GetInsightEventsResult;

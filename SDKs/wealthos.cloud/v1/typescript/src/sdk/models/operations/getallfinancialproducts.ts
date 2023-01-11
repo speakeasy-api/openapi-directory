@@ -133,23 +133,23 @@ export class GetAllFinancialProductsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts200ApplicationJsonObject?: GetAllFinancialProducts200ApplicationJson;
+  getAllFinancialProducts200ApplicationJSONObject?: GetAllFinancialProducts200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts400ApplicationJsonAny?: any;
+  getAllFinancialProducts400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts401ApplicationJsonAny?: any;
+  getAllFinancialProducts401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts403ApplicationJsonAny?: any;
+  getAllFinancialProducts403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts404ApplicationJsonAny?: any;
+  getAllFinancialProducts404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts429ApplicationJsonAny?: any;
+  getAllFinancialProducts429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllFinancialProducts500ApplicationJsonAny?: any;
+  getAllFinancialProducts500ApplicationJSONAny?: any;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedDbInstance } from "./reserveddbinstance";
+import { ReservedDbInstanceList } from "./reserveddbinstancelist";
 
 
 
@@ -11,6 +11,6 @@ export class ReservedDbInstanceMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ReservedDbInstance })
-  reservedDbInstances?: ReservedDbInstance[];
+  @SpeakeasyMetadata({ elemType: ReservedDbInstanceList })
+  reservedDBInstances?: ReservedDbInstanceList[];
 }

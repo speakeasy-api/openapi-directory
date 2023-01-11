@@ -1,6 +1,8 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AbortInfo } from "./abortinfo";
+import { AppEngineVersionInfo } from "./appengineversioninfo";
 import { CloudFunctionInfo } from "./cloudfunctioninfo";
+import { CloudRunRevisionInfo } from "./cloudrunrevisioninfo";
 import { CloudSqlInstanceInfo } from "./cloudsqlinstanceinfo";
 import { DeliverInfo } from "./deliverinfo";
 import { DropInfo } from "./dropinfo";
@@ -26,6 +28,8 @@ export enum StepStateEnum {
     StartFromGkeMaster = "START_FROM_GKE_MASTER",
     StartFromCloudSqlInstance = "START_FROM_CLOUD_SQL_INSTANCE",
     StartFromCloudFunction = "START_FROM_CLOUD_FUNCTION",
+    StartFromAppEngineVersion = "START_FROM_APP_ENGINE_VERSION",
+    StartFromCloudRunRevision = "START_FROM_CLOUD_RUN_REVISION",
     ApplyIngressFirewallRule = "APPLY_INGRESS_FIREWALL_RULE",
     ApplyEgressFirewallRule = "APPLY_EGRESS_FIREWALL_RULE",
     ApplyRoute = "APPLY_ROUTE",
@@ -55,11 +59,17 @@ export class Step extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=abort" })
   abort?: AbortInfo;
 
+  @SpeakeasyMetadata({ data: "json, name=appEngineVersion" })
+  appEngineVersion?: AppEngineVersionInfo;
+
   @SpeakeasyMetadata({ data: "json, name=causesDrop" })
   causesDrop?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=cloudFunction" })
   cloudFunction?: CloudFunctionInfo;
+
+  @SpeakeasyMetadata({ data: "json, name=cloudRunRevision" })
+  cloudRunRevision?: CloudRunRevisionInfo;
 
   @SpeakeasyMetadata({ data: "json, name=cloudSqlInstance" })
   cloudSqlInstance?: CloudSqlInstanceInfo;

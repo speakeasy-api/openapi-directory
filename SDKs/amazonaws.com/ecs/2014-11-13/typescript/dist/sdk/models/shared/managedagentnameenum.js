@@ -1,4 +1,7 @@
-export var ManagedAgentNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedAgentNameEnum = void 0;
+var ManagedAgentNameEnum;
 (function (ManagedAgentNameEnum) {
     ManagedAgentNameEnum["ExecuteCommandAgent"] = "ExecuteCommandAgent";
-})(ManagedAgentNameEnum || (ManagedAgentNameEnum = {}));
+})(ManagedAgentNameEnum = exports.ManagedAgentNameEnum || (exports.ManagedAgentNameEnum = {}));

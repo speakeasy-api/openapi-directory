@@ -60,7 +60,7 @@ export class RevokeIpRulesResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  revokeIpRulesResult?: Map<string, any>;
+  revokeIpRulesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

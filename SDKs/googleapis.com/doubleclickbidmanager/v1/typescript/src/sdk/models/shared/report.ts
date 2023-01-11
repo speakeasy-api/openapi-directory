@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ReportKey } from "./reportkey";
 import { ReportMetadata } from "./reportmetadata";
-import { Parameters } from "./parameters";
+import { ParametersT } from "./parameters";
 
 
 
@@ -17,5 +17,5 @@ export class Report extends SpeakeasyBase {
   metadata?: ReportMetadata;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Parameters;
+  params?: ParametersT;
 }

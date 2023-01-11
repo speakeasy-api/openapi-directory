@@ -38,8 +38,8 @@ export class GetTeamsUsernameMembersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  user?: Map<string, any>;
+  user?: Record<string, any>;
 }

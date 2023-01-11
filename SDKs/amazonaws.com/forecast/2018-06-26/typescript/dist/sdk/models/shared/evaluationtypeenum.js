@@ -1,5 +1,8 @@
-export var EvaluationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluationTypeEnum = void 0;
+var EvaluationTypeEnum;
 (function (EvaluationTypeEnum) {
     EvaluationTypeEnum["Summary"] = "SUMMARY";
     EvaluationTypeEnum["Computed"] = "COMPUTED";
-})(EvaluationTypeEnum || (EvaluationTypeEnum = {}));
+})(EvaluationTypeEnum = exports.EvaluationTypeEnum || (exports.EvaluationTypeEnum = {}));

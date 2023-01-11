@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterface } from "./networkinterface";
+import { NetworkInterfaceList } from "./networkinterfacelist";
 
 
 
@@ -8,8 +8,8 @@ import { NetworkInterface } from "./networkinterface";
  * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
 **/
 export class VpcEndpoint extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: NetworkInterface })
-  networkInterfaces?: NetworkInterface[];
+  @SpeakeasyMetadata({ elemType: NetworkInterfaceList })
+  networkInterfaces?: NetworkInterfaceList[];
 
   @SpeakeasyMetadata()
   vpcEndpointId?: string;

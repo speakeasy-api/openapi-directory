@@ -16,7 +16,7 @@ export class UpdateRepositoryBuildNumberRequest extends SpeakeasyBase {
   pathParams: UpdateRepositoryBuildNumberPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,8 +28,8 @@ export class UpdateRepositoryBuildNumberResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineBuildNumber?: Map<string, any>;
+  pipelineBuildNumber?: Record<string, any>;
 }

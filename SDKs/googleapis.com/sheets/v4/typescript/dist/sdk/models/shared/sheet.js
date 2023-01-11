@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BandedRange } from "./bandedrange";
-import { BasicFilter } from "./basicfilter";
-import { EmbeddedChart } from "./embeddedchart";
-import { DimensionGroup } from "./dimensiongroup";
-import { ConditionalFormatRule } from "./conditionalformatrule";
-import { GridData } from "./griddata";
-import { DeveloperMetadata } from "./developermetadata";
-import { FilterView } from "./filterview";
-import { GridRange } from "./gridrange";
-import { SheetProperties } from "./sheetproperties";
-import { ProtectedRange } from "./protectedrange";
-import { Slicer } from "./slicer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sheet = void 0;
+var utils_1 = require("../../../internal/utils");
+var bandedrange_1 = require("./bandedrange");
+var basicfilter_1 = require("./basicfilter");
+var embeddedchart_1 = require("./embeddedchart");
+var dimensiongroup_1 = require("./dimensiongroup");
+var conditionalformatrule_1 = require("./conditionalformatrule");
+var griddata_1 = require("./griddata");
+var developermetadata_1 = require("./developermetadata");
+var filterview_1 = require("./filterview");
+var gridrange_1 = require("./gridrange");
+var sheetproperties_1 = require("./sheetproperties");
+var protectedrange_1 = require("./protectedrange");
+var slicer_1 = require("./slicer");
 // Sheet
 /**
  * A sheet in a spreadsheet.
@@ -45,57 +48,57 @@ var Sheet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandedRanges", elemType: BandedRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandedRanges", elemType: bandedrange_1.BandedRange }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "bandedRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicFilter" }),
-        __metadata("design:type", BasicFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicFilter" }),
+        __metadata("design:type", basicfilter_1.BasicFilter)
     ], Sheet.prototype, "basicFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charts", elemType: EmbeddedChart }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charts", elemType: embeddedchart_1.EmbeddedChart }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "charts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnGroups", elemType: DimensionGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnGroups", elemType: dimensiongroup_1.DimensionGroup }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "columnGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditionalFormats", elemType: ConditionalFormatRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditionalFormats", elemType: conditionalformatrule_1.ConditionalFormatRule }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "conditionalFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GridData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: griddata_1.GridData }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadata", elemType: DeveloperMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadata", elemType: developermetadata_1.DeveloperMetadata }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "developerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterViews", elemType: FilterView }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterViews", elemType: filterview_1.FilterView }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "filterViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merges", elemType: GridRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merges", elemType: gridrange_1.GridRange }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "merges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", SheetProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", sheetproperties_1.SheetProperties)
     ], Sheet.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectedRanges", elemType: ProtectedRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectedRanges", elemType: protectedrange_1.ProtectedRange }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "protectedRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowGroups", elemType: DimensionGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowGroups", elemType: dimensiongroup_1.DimensionGroup }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "rowGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slicers", elemType: Slicer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slicers", elemType: slicer_1.Slicer }),
         __metadata("design:type", Array)
     ], Sheet.prototype, "slicers", void 0);
     return Sheet;
-}(SpeakeasyBase));
-export { Sheet };
+}(utils_1.SpeakeasyBase));
+exports.Sheet = Sheet;

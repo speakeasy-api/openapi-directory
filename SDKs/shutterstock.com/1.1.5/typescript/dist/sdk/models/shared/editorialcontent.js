@@ -1,0 +1,86 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorialContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var editorialassets_1 = require("./editorialassets");
+var editorialcategory_1 = require("./editorialcategory");
+// EditorialContent
+/**
+ * Metadata about editorial content
+**/
+var EditorialContent = /** @class */ (function (_super) {
+    __extends(EditorialContent, _super);
+    function EditorialContent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspect" }),
+        __metadata("design:type", Number)
+    ], EditorialContent.prototype, "aspect", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
+        __metadata("design:type", editorialassets_1.EditorialAssets)
+    ], EditorialContent.prototype, "assets", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byline" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "byline", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "caption", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: editorialcategory_1.EditorialCategory }),
+        __metadata("design:type", Array)
+    ], EditorialContent.prototype, "categories", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_taken" }),
+        __metadata("design:type", Date)
+    ], EditorialContent.prototype, "dateTaken", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keywords" }),
+        __metadata("design:type", Array)
+    ], EditorialContent.prototype, "keywords", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=special_instructions" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "specialInstructions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], EditorialContent.prototype, "title", void 0);
+    return EditorialContent;
+}(utils_1.SpeakeasyBase));
+exports.EditorialContent = EditorialContent;

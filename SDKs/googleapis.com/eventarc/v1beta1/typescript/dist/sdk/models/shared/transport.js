@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PubsubInput } from "./pubsub";
-import { Pubsub } from "./pubsub";
-// TransportInput
-/**
- * Represents the transport intermediaries created for the trigger in order to deliver events.
-**/
-var TransportInput = /** @class */ (function (_super) {
-    __extends(TransportInput, _super);
-    function TransportInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubsub" }),
-        __metadata("design:type", PubsubInput)
-    ], TransportInput.prototype, "pubsub", void 0);
-    return TransportInput;
-}(SpeakeasyBase));
-export { TransportInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransportInput = exports.Transport = void 0;
+var utils_1 = require("../../../internal/utils");
+var pubsub_1 = require("./pubsub");
+var pubsub_2 = require("./pubsub");
 // Transport
 /**
  * Represents the transport intermediaries created for the trigger in order to deliver events.
@@ -51,9 +38,25 @@ var Transport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubsub" }),
-        __metadata("design:type", Pubsub)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubsub" }),
+        __metadata("design:type", pubsub_1.Pubsub)
     ], Transport.prototype, "pubsub", void 0);
     return Transport;
-}(SpeakeasyBase));
-export { Transport };
+}(utils_1.SpeakeasyBase));
+exports.Transport = Transport;
+// TransportInput
+/**
+ * Represents the transport intermediaries created for the trigger in order to deliver events.
+**/
+var TransportInput = /** @class */ (function (_super) {
+    __extends(TransportInput, _super);
+    function TransportInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubsub" }),
+        __metadata("design:type", pubsub_2.PubsubInput)
+    ], TransportInput.prototype, "pubsub", void 0);
+    return TransportInput;
+}(utils_1.SpeakeasyBase));
+exports.TransportInput = TransportInput;

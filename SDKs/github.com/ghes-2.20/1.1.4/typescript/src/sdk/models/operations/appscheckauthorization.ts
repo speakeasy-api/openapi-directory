@@ -53,6 +53,10 @@ export class AppsCheckAuthorizationAuthorizationScopedInstallation extends Speak
 }
 
 
+// AppsCheckAuthorizationAuthorizationSimpleUser
+/** 
+ * Simple User
+**/
 export class AppsCheckAuthorizationAuthorizationSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -113,6 +117,10 @@ export class AppsCheckAuthorizationAuthorizationSimpleUser extends SpeakeasyBase
 }
 
 
+// AppsCheckAuthorizationAuthorization
+/** 
+ * The authorization for an OAuth app, GitHub App, or a Personal Access Token.
+**/
 export class AppsCheckAuthorizationAuthorization extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=app" })
   app: AppsCheckAuthorizationAuthorizationApp;

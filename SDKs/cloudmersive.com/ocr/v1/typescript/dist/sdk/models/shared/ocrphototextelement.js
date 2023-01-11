@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Point } from "./point";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OcrPhotoTextElement = void 0;
+var utils_1 = require("../../../internal/utils");
+var point_1 = require("./point");
 // OcrPhotoTextElement
 /**
  * A single text in an OCR document
@@ -34,33 +37,33 @@ var OcrPhotoTextElement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BoundingPoints", elemType: Point }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BoundingPoints", elemType: point_1.Point }),
         __metadata("design:type", Array)
     ], OcrPhotoTextElement.prototype, "boundingPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfidenceLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfidenceLevel" }),
         __metadata("design:type", Number)
     ], OcrPhotoTextElement.prototype, "confidenceLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Height" }),
         __metadata("design:type", Number)
     ], OcrPhotoTextElement.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Text" }),
         __metadata("design:type", String)
     ], OcrPhotoTextElement.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Width" }),
         __metadata("design:type", Number)
     ], OcrPhotoTextElement.prototype, "width", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XLeft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XLeft" }),
         __metadata("design:type", Number)
     ], OcrPhotoTextElement.prototype, "xLeft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YTop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YTop" }),
         __metadata("design:type", Number)
     ], OcrPhotoTextElement.prototype, "yTop", void 0);
     return OcrPhotoTextElement;
-}(SpeakeasyBase));
-export { OcrPhotoTextElement };
+}(utils_1.SpeakeasyBase));
+exports.OcrPhotoTextElement = OcrPhotoTextElement;

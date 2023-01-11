@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class RuntimeMetrics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=systemMetrics" })
-  systemMetrics?: Map<string, string>;
+  systemMetrics?: Record<string, string>;
 }

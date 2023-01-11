@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Charity } from "./charity";
-import { PricingSummary } from "./pricingsummary";
-import { Product } from "./product";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemDraft = void 0;
+var utils_1 = require("../../../internal/utils");
+var charity_1 = require("./charity");
+var pricingsummary_1 = require("./pricingsummary");
+var product_1 = require("./product");
 // ItemDraft
 /**
  * The type that defines the fields for the listing details.
@@ -36,29 +39,29 @@ var ItemDraft = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], ItemDraft.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charity" }),
-        __metadata("design:type", Charity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charity" }),
+        __metadata("design:type", charity_1.Charity)
     ], ItemDraft.prototype, "charity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], ItemDraft.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], ItemDraft.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricingSummary" }),
-        __metadata("design:type", PricingSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricingSummary" }),
+        __metadata("design:type", pricingsummary_1.PricingSummary)
     ], ItemDraft.prototype, "pricingSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product" }),
-        __metadata("design:type", Product)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product" }),
+        __metadata("design:type", product_1.Product)
     ], ItemDraft.prototype, "product", void 0);
     return ItemDraft;
-}(SpeakeasyBase));
-export { ItemDraft };
+}(utils_1.SpeakeasyBase));
+exports.ItemDraft = ItemDraft;

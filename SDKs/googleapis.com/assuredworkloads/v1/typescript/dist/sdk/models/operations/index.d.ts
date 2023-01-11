@@ -2,6 +2,7 @@ export * from "./assuredworkloadsorganizationslocationsoperationslist";
 export * from "./assuredworkloadsorganizationslocationsworkloadscreate";
 export * from "./assuredworkloadsorganizationslocationsworkloadsdelete";
 export * from "./assuredworkloadsorganizationslocationsworkloadslist";
+export * from "./assuredworkloadsorganizationslocationsworkloadsmutatepartnerpermissions";
 export * from "./assuredworkloadsorganizationslocationsworkloadspatch";
 export * from "./assuredworkloadsorganizationslocationsworkloadsrestrictallowedresources";
 export * from "./assuredworkloadsorganizationslocationsworkloadsviolationsacknowledge";

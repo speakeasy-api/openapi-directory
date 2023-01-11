@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ModifyFleetResult extends SpeakeasyBase {
-    return?: boolean;
+    return?: Record<string, any>;
 }

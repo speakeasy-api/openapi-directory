@@ -32,8 +32,8 @@ export class GetApodResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApod200ApplicationJsonAnies?: any[];
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getApod200ApplicationJSONAnies?: any[];
 }

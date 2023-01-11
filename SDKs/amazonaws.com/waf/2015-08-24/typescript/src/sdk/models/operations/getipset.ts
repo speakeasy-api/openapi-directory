@@ -48,7 +48,7 @@ export class GetIpSetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getIpSetResponse?: shared.GetIpSetResponse;
+  getIPSetResponse?: shared.GetIpSetResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

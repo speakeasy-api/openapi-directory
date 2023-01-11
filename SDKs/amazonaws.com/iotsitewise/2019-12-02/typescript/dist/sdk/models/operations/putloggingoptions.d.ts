@@ -27,7 +27,7 @@ export declare class PutLoggingOptionsResponse extends SpeakeasyBase {
     contentType: string;
     internalFailureException?: any;
     invalidRequestException?: any;
-    putLoggingOptionsResponse?: Map<string, any>;
+    putLoggingOptionsResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

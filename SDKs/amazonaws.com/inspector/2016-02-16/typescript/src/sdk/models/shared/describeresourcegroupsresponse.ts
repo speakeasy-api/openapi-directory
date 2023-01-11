@@ -6,7 +6,7 @@ import { ResourceGroup } from "./resourcegroup";
 
 export class DescribeResourceGroupsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails })
-  failedItems: Map<string, FailedItemDetails>;
+  failedItems: Record<string, FailedItemDetails>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceGroups", elemType: ResourceGroup })
   resourceGroups: ResourceGroup[];

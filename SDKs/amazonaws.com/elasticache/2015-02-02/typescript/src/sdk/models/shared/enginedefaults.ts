@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheNodeTypeSpecificParameter } from "./cachenodetypespecificparameter";
-import { Parameter } from "./parameter";
+import { CacheNodeTypeSpecificParametersList } from "./cachenodetypespecificparameterslist";
+import { ParametersList } from "./parameterslist";
 
 
 
@@ -9,8 +9,8 @@ import { Parameter } from "./parameter";
  * Represents the output of a <code>DescribeEngineDefaultParameters</code> operation.
 **/
 export class EngineDefaults extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CacheNodeTypeSpecificParameter })
-  cacheNodeTypeSpecificParameters?: CacheNodeTypeSpecificParameter[];
+  @SpeakeasyMetadata({ elemType: CacheNodeTypeSpecificParametersList })
+  cacheNodeTypeSpecificParameters?: CacheNodeTypeSpecificParametersList[];
 
   @SpeakeasyMetadata()
   cacheParameterGroupFamily?: string;
@@ -18,6 +18,6 @@ export class EngineDefaults extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: Parameter })
-  parameters?: Parameter[];
+  @SpeakeasyMetadata({ elemType: ParametersList })
+  parameters?: ParametersList[];
 }

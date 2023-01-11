@@ -87,8 +87,8 @@ export class RetrieveCreditTransfersResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  retrieveCreditTransfers401ApplicationJsonObject?: RetrieveCreditTransfers401ApplicationJson;
+  retrieveCreditTransfers401ApplicationJSONObject?: RetrieveCreditTransfers401ApplicationJson;
 
   @SpeakeasyMetadata()
-  retrieveCreditTransfers404ApplicationJsonObject?: RetrieveCreditTransfers404ApplicationJson;
+  retrieveCreditTransfers404ApplicationJSONObject?: RetrieveCreditTransfers404ApplicationJson;
 }

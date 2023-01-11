@@ -131,5 +131,5 @@ export class UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

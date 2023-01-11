@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalyzerStatusEnum } from "./analyzerstatusenum";
-import { StatusReason } from "./statusreason";
-import { TypeEnum } from "./typeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzerSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var analyzerstatusenum_1 = require("./analyzerstatusenum");
+var statusreason_1 = require("./statusreason");
+var typeenum_1 = require("./typeenum");
 // AnalyzerSummary
 /**
  * Contains information about the analyzer.
@@ -36,41 +39,41 @@ var AnalyzerSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], AnalyzerSummary.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], AnalyzerSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastResourceAnalyzed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastResourceAnalyzed" }),
         __metadata("design:type", String)
     ], AnalyzerSummary.prototype, "lastResourceAnalyzed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastResourceAnalyzedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastResourceAnalyzedAt" }),
         __metadata("design:type", Date)
     ], AnalyzerSummary.prototype, "lastResourceAnalyzedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AnalyzerSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AnalyzerSummary.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
-        __metadata("design:type", StatusReason)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
+        __metadata("design:type", statusreason_1.StatusReason)
     ], AnalyzerSummary.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], AnalyzerSummary.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AnalyzerSummary.prototype, "type", void 0);
     return AnalyzerSummary;
-}(SpeakeasyBase));
-export { AnalyzerSummary };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzerSummary = AnalyzerSummary;

@@ -1,6 +1,24 @@
-export * from "./altenum";
-export * from "./googleidentitystsv1exchangetokenrequest";
-export * from "./googleidentitystsv1exchangetokenresponse";
-export * from "./googleidentitystsv1introspecttokenrequest";
-export * from "./googleidentitystsv1introspecttokenresponse";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googleidentitystsv1exchangeoauthtokenrequest"), exports);
+__exportStar(require("./googleidentitystsv1exchangeoauthtokenresponse"), exports);
+__exportStar(require("./googleidentitystsv1exchangetokenrequest"), exports);
+__exportStar(require("./googleidentitystsv1exchangetokenresponse"), exports);
+__exportStar(require("./googleidentitystsv1introspecttokenrequest"), exports);
+__exportStar(require("./googleidentitystsv1introspecttokenresponse"), exports);
+__exportStar(require("./xgafvenum"), exports);

@@ -1,4 +1,7 @@
-export var ViolationReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViolationReasonEnum = void 0;
+var ViolationReasonEnum;
 (function (ViolationReasonEnum) {
     ViolationReasonEnum["WebAclMissingRuleGroup"] = "WEB_ACL_MISSING_RULE_GROUP";
     ViolationReasonEnum["ResourceMissingWebAcl"] = "RESOURCE_MISSING_WEB_ACL";
@@ -25,4 +28,4 @@ export var ViolationReasonEnum;
     ViolationReasonEnum["BlackHoleRouteDetected"] = "BLACK_HOLE_ROUTE_DETECTED";
     ViolationReasonEnum["BlackHoleRouteDetectedInFirewallSubnet"] = "BLACK_HOLE_ROUTE_DETECTED_IN_FIREWALL_SUBNET";
     ViolationReasonEnum["ResourceMissingDnsFirewall"] = "RESOURCE_MISSING_DNS_FIREWALL";
-})(ViolationReasonEnum || (ViolationReasonEnum = {}));
+})(ViolationReasonEnum = exports.ViolationReasonEnum || (exports.ViolationReasonEnum = {}));

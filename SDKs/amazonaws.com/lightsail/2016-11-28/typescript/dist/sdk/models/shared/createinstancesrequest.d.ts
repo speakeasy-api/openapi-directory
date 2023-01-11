@@ -7,7 +7,7 @@ export declare class CreateInstancesRequest extends SpeakeasyBase {
     availabilityZone: string;
     blueprintId: string;
     bundleId: string;
-    customImageName?: string;
+    customImageName?: Record<string, any>;
     instanceNames: string[];
     ipAddressType?: IpAddressTypeEnum;
     keyPairName?: string;

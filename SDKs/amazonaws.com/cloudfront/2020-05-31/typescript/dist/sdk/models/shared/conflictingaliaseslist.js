@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConflictingAlias } from "./conflictingalias";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConflictingAliasesList = void 0;
+var utils_1 = require("../../../internal/utils");
+var conflictingaliases_1 = require("./conflictingaliases");
 // ConflictingAliasesList
 /**
  * A list of aliases (also called CNAMEs) and the CloudFront distributions and Amazon Web Services accounts that they are associated with. In the list, the distribution and account IDs are partially hidden, which allows you to identify the distributions and accounts that you own, but helps to protect the information of ones that you don’t own.
@@ -34,21 +37,21 @@ var ConflictingAliasesList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ConflictingAlias }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: conflictingaliases_1.ConflictingAliases }),
         __metadata("design:type", Array)
     ], ConflictingAliasesList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConflictingAliasesList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConflictingAliasesList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConflictingAliasesList.prototype, "quantity", void 0);
     return ConflictingAliasesList;
-}(SpeakeasyBase));
-export { ConflictingAliasesList };
+}(utils_1.SpeakeasyBase));
+exports.ConflictingAliasesList = ConflictingAliasesList;

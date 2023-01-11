@@ -29,7 +29,7 @@ export class GetListingRvIdMediaResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   listingMedia?: shared.ListingMedia;

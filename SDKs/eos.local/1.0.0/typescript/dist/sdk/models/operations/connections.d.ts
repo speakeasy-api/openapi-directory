@@ -26,10 +26,10 @@ export declare class Connections200ApplicationJson extends SpeakeasyBase {
     syncing?: boolean;
 }
 export declare class ConnectionsRequest extends SpeakeasyBase {
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class ConnectionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    connections200ApplicationJsonObjects?: Connections200ApplicationJson[];
+    connections200ApplicationJSONObjects?: Connections200ApplicationJson[];
 }

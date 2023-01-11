@@ -48,7 +48,7 @@ export class CreateGatewayRequestBody extends SpeakeasyBase {
   gatewayPlatform: CreateGatewayRequestBodyGatewayPlatform;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

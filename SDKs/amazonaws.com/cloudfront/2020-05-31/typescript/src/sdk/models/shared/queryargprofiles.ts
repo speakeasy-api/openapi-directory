@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryArgProfile } from "./queryargprofile";
+import { QueryArgProfileList } from "./queryargprofilelist";
 
 
 
@@ -8,8 +8,8 @@ import { QueryArgProfile } from "./queryargprofile";
  * Query argument-profile mapping for field-level encryption.
 **/
 export class QueryArgProfiles extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: QueryArgProfile })
-  items?: QueryArgProfile[];
+  @SpeakeasyMetadata({ elemType: QueryArgProfileList })
+  items?: QueryArgProfileList[];
 
   @SpeakeasyMetadata()
   quantity: number;

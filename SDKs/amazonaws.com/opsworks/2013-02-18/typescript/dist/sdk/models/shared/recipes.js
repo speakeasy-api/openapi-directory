@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Recipes = void 0;
+var utils_1 = require("../../../internal/utils");
 // Recipes
 /**
  * <p>AWS OpsWorks Stacks supports five lifecycle events: <b>setup</b>, <b>configuration</b>, <b>deploy</b>, <b>undeploy</b>, and <b>shutdown</b>. For each layer, AWS OpsWorks Stacks runs a set of standard recipes for each event. In addition, you can provide custom recipes for any or all layers and events. AWS OpsWorks Stacks runs custom event recipes after the standard recipes. <code>LayerCustomRecipes</code> specifies the custom recipes for a particular layer to be run in response to each of the five events. </p> <p>To specify a recipe, use the cookbook's directory name in the repository followed by two colons and the recipe name, which is the recipe's file name without the .rb extension. For example: phpapp2::dbsetup specifies the dbsetup.rb recipe in the repository's phpapp2 folder.</p>
@@ -33,25 +36,25 @@ var Recipes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configure" }),
         __metadata("design:type", Array)
     ], Recipes.prototype, "configure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Deploy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Deploy" }),
         __metadata("design:type", Array)
     ], Recipes.prototype, "deploy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Setup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Setup" }),
         __metadata("design:type", Array)
     ], Recipes.prototype, "setup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Shutdown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Shutdown" }),
         __metadata("design:type", Array)
     ], Recipes.prototype, "shutdown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Undeploy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Undeploy" }),
         __metadata("design:type", Array)
     ], Recipes.prototype, "undeploy", void 0);
     return Recipes;
-}(SpeakeasyBase));
-export { Recipes };
+}(utils_1.SpeakeasyBase));
+exports.Recipes = Recipes;

@@ -15,7 +15,7 @@ export declare class GetAccountBalanceHeaders extends SpeakeasyBase {
 }
 export declare class GetAccountBalanceRequest extends SpeakeasyBase {
     headers: GetAccountBalanceHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetAccountBalanceResponse extends SpeakeasyBase {
     contentType: string;

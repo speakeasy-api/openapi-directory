@@ -3,6 +3,9 @@ import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { Label } from "./label";
 import { Repository } from "./repository";
+/**
+ * Simple User
+**/
 export declare class IssueSimpleSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -24,6 +27,9 @@ export declare class IssueSimpleSimpleUser extends SpeakeasyBase {
     type: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class IssueSimpleMilestoneSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -49,6 +55,9 @@ export declare enum IssueSimpleMilestoneStateEnum {
     Open = "open",
     Closed = "closed"
 }
+/**
+ * A collection of related issues and pull requests.
+**/
 export declare class IssueSimpleMilestone extends SpeakeasyBase {
     closedAt: Date;
     closedIssues: number;
@@ -98,7 +107,7 @@ export declare class IssueSimple extends SpeakeasyBase {
     milestone: IssueSimpleMilestone;
     nodeId: string;
     number: number;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     pullRequest?: IssueSimplePullRequest;
     repository?: Repository;
     repositoryUrl: string;

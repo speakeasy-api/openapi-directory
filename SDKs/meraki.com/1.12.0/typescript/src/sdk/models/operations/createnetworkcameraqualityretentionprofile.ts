@@ -137,7 +137,7 @@ export class CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings 
   mv12Mv22Mv72?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72;
 
   @SpeakeasyMetadata({ data: "json, name=MV12WE" })
-  mv12We?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
+  mv12WE?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
 
   @SpeakeasyMetadata({ data: "json, name=MV21/MV71" })
   mv21Mv71?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71;
@@ -197,5 +197,5 @@ export class CreateNetworkCameraQualityRetentionProfileResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkCameraQualityRetentionProfile200ApplicationJsonObject?: Map<string, any>;
+  createNetworkCameraQualityRetentionProfile200ApplicationJSONObject?: Record<string, any>;
 }

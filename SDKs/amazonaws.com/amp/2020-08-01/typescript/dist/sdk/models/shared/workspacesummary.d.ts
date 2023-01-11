@@ -8,6 +8,6 @@ export declare class WorkspaceSummary extends SpeakeasyBase {
     arn: string;
     createdAt: Date;
     status: WorkspaceStatus;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     workspaceId: string;
 }

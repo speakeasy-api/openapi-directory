@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { TimeDuration } from "./timeduration";
-import { RegionSet } from "./regionset";
-import { ShippingOption } from "./shippingoption";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetFulfillmentPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var timeduration_1 = require("./timeduration");
+var regionset_1 = require("./regionset");
+var shippingoption_1 = require("./shippingoption");
+var error_1 = require("./error");
 // SetFulfillmentPolicyResponse
 /**
  * Complex type that that gets populated with a response containing a fulfillment policy.
@@ -38,57 +41,57 @@ var SetFulfillmentPolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], SetFulfillmentPolicyResponse.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SetFulfillmentPolicyResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freightShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freightShipping" }),
         __metadata("design:type", Boolean)
     ], SetFulfillmentPolicyResponse.prototype, "freightShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentPolicyId" }),
         __metadata("design:type", String)
     ], SetFulfillmentPolicyResponse.prototype, "fulfillmentPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalShipping" }),
         __metadata("design:type", Boolean)
     ], SetFulfillmentPolicyResponse.prototype, "globalShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=handlingTime" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=handlingTime" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], SetFulfillmentPolicyResponse.prototype, "handlingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localPickup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localPickup" }),
         __metadata("design:type", Boolean)
     ], SetFulfillmentPolicyResponse.prototype, "localPickup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], SetFulfillmentPolicyResponse.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SetFulfillmentPolicyResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupDropOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupDropOff" }),
         __metadata("design:type", Boolean)
     ], SetFulfillmentPolicyResponse.prototype, "pickupDropOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipToLocations" }),
-        __metadata("design:type", RegionSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipToLocations" }),
+        __metadata("design:type", regionset_1.RegionSet)
     ], SetFulfillmentPolicyResponse.prototype, "shipToLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingOptions", elemType: ShippingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingOptions", elemType: shippingoption_1.ShippingOption }),
         __metadata("design:type", Array)
     ], SetFulfillmentPolicyResponse.prototype, "shippingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], SetFulfillmentPolicyResponse.prototype, "warnings", void 0);
     return SetFulfillmentPolicyResponse;
-}(SpeakeasyBase));
-export { SetFulfillmentPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetFulfillmentPolicyResponse = SetFulfillmentPolicyResponse;

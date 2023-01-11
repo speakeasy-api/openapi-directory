@@ -16,6 +16,6 @@ export declare class GetSnippetsWorkspaceEncodedIdWatchRequest extends Speakeasy
 export declare class GetSnippetsWorkspaceEncodedIdWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedUsers?: shared.PaginatedUsers;
 }

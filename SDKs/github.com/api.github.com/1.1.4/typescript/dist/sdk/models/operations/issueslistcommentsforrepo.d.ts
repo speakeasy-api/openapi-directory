@@ -4,12 +4,8 @@ export declare class IssuesListCommentsForRepoPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum IssuesListCommentsForRepoDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
 export declare class IssuesListCommentsForRepoQueryParams extends SpeakeasyBase {
-    direction?: IssuesListCommentsForRepoDirectionEnum;
+    direction?: shared.SortEnum1;
     page?: number;
     perPage?: number;
     since?: string;
@@ -21,7 +17,7 @@ export declare class IssuesListCommentsForRepoRequest extends SpeakeasyBase {
 }
 export declare class IssuesListCommentsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issueComments?: shared.IssueComment[];

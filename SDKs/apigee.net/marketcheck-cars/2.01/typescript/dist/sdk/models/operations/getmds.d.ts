@@ -64,7 +64,7 @@ export declare class GetMdsRequest extends SpeakeasyBase {
 }
 export declare class GetMdsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     mds?: shared.Mds;
     statusCode: number;
 }

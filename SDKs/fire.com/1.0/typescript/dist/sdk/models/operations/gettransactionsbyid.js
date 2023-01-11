@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,503 +14,528 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionsByIdResponse = exports.GetTransactionsByIdRequest = exports.GetTransactionsByIdTransaction = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount = exports.GetTransactionsByIdTransactionFxTrade = exports.GetTransactionsByIdTransactionRelatedCard = exports.GetTransactionsByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTransactionsByIdPathParams = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdPathParams, _super);
     function GetTransactionsByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ican" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ican" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdPathParams.prototype, "ican", void 0);
     return GetTransactionsByIdPathParams;
-}(SpeakeasyBase));
-export { GetTransactionsByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdPathParams = GetTransactionsByIdPathParams;
 var GetTransactionsByIdTransactionRelatedCard = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedCard, _super);
     function GetTransactionsByIdTransactionRelatedCard() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardId" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "cardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embossBusinessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embossBusinessName" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "embossBusinessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embossCardName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embossCardName" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "embossCardName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryDate" }),
         __metadata("design:type", Date)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "expiryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maskedPan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maskedPan" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "maskedPan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedCard.prototype, "provider", void 0);
     return GetTransactionsByIdTransactionRelatedCard;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedCard };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedCard = GetTransactionsByIdTransactionRelatedCard;
 var GetTransactionsByIdTransactionFxTrade = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionFxTrade, _super);
     function GetTransactionsByIdTransactionFxTrade() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyAmount" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "buyAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyCurrency" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "buyCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedSide" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "fixedSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate4d" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate4d" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "rate4d", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellAmount" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "sellAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellCurrency" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionFxTrade.prototype, "sellCurrency", void 0);
     return GetTransactionsByIdTransactionFxTrade;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionFxTrade };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionFxTrade = GetTransactionsByIdTransactionFxTrade;
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bic" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsc" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount.prototype, "nsc", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount };
-export var GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount = GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount;
+var GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum;
 (function (GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum) {
     GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum["FireAccount"] = "FIRE_ACCOUNT";
-})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum || (GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum = {}));
+})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum || (exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountTypeEnum = {}));
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccountAccount)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount.prototype, "type", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount = GetTransactionsByIdTransactionRelatedPartyRelatedPartyFireAccount;
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bic" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsc" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount.prototype, "nsc", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount };
-export var GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount = GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount;
+var GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum;
 (function (GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum) {
     GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum["ExternalAccount"] = "EXTERNAL_ACCOUNT";
-})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum || (GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = {}));
+})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum || (exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountTypeEnum = {}));
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccountAccount)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount.prototype, "type", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount = GetTransactionsByIdTransactionRelatedPartyRelatedPartyExternalAccount;
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bic" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsc" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount.prototype, "nsc", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount };
-export var GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount = GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount;
+var GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum;
 (function (GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum) {
     GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum["WithdrawalAccount"] = "WITHDRAWAL_ACCOUNT";
-})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum || (GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum = {}));
+})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum || (exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeTypeEnum = {}));
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayeeAccount)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee.prototype, "type", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee = GetTransactionsByIdTransactionRelatedPartyRelatedPartyPayee;
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acquirerIdDe32" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acquirerIdDe32" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "acquirerIdDe32", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalAmtDe54" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalAmtDe54" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "additionalAmtDe54", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalDataDe124" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalDataDe124" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "additionalDataDe124", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalDataDe48" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalDataDe48" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "additionalDataDe48", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authCodeDe38" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authCodeDe38" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "authCodeDe38", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorisedByGps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorisedByGps" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "authorisedByGps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avsResult" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avsResult" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "avsResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billAmt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billAmt" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "billAmt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billCcy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billCcy" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "billCcy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryDate" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "expiryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mccCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mccCode" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "mccCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchIdDe42" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchIdDe42" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "merchIdDe42", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchNameDe43" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchNameDe43" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "merchNameDe43", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtId" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "mtId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posDataDe22" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posDataDe22" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "posDataDe22", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posDataDe61" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posDataDe61" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "posDataDe61", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posTermnlDe41" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posTermnlDe41" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "posTermnlDe41", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=procCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=procCode" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "procCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordDataDe120" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordDataDe120" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "recordDataDe120", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=respCodeDe39" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=respCodeDe39" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "respCodeDe39", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retRefNoDe37" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retRefNoDe37" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "retRefNoDe37", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnAmt4d" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnAmt4d" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnAmt4d", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnCcy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnCcy" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnCcy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnCtry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnCtry" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnCtry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnDesc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnDesc" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnDesc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnStatCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnStatCode" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnStatCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnType" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant.prototype, "txnType", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant };
-export var GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant = GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant;
+var GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum;
 (function (GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum) {
     GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum["CardMerchant"] = "CARD_MERCHANT";
     GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum["CardAtm"] = "CARD_ATM";
-})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum || (GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum = {}));
+})(GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum = exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum || (exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentTypeEnum = {}));
 var GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment, _super);
     function GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardMerchant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardMerchant" }),
         __metadata("design:type", GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPaymentCardMerchant)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment.prototype, "cardMerchant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment.prototype, "type", void 0);
     return GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment = GetTransactionsByIdTransactionRelatedPartyRelatedPartyCardPayment;
 var GetTransactionsByIdTransaction = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdTransaction, _super);
     function GetTransactionsByIdTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountAfterCharges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountAfterCharges" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "amountAfterCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountBeforeCharges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountBeforeCharges" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "amountBeforeCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card" }),
         __metadata("design:type", GetTransactionsByIdTransactionRelatedCard)
     ], GetTransactionsByIdTransaction.prototype, "card", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", shared.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency)
     ], GetTransactionsByIdTransaction.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], GetTransactionsByIdTransaction.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateAcknowledged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateAcknowledged" }),
         __metadata("design:type", Date)
     ], GetTransactionsByIdTransaction.prototype, "dateAcknowledged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeAmount" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fxTradeDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fxTradeDetails" }),
         __metadata("design:type", GetTransactionsByIdTransactionFxTrade)
     ], GetTransactionsByIdTransaction.prototype, "fxTradeDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ican" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ican" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "ican", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=myRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=myRef" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransaction.prototype, "myRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentRequestPublicCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentRequestPublicCode" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransaction.prototype, "paymentRequestPublicCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refId" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "refId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedParty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedParty" }),
         __metadata("design:type", Object)
     ], GetTransactionsByIdTransaction.prototype, "relatedParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "taxAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", Number)
     ], GetTransactionsByIdTransaction.prototype, "txnId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTransactionsByIdTransaction.prototype, "type", void 0);
     return GetTransactionsByIdTransaction;
-}(SpeakeasyBase));
-export { GetTransactionsByIdTransaction };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdTransaction = GetTransactionsByIdTransaction;
 var GetTransactionsByIdRequest = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdRequest, _super);
     function GetTransactionsByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionsByIdPathParams)
     ], GetTransactionsByIdRequest.prototype, "pathParams", void 0);
     return GetTransactionsByIdRequest;
-}(SpeakeasyBase));
-export { GetTransactionsByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdRequest = GetTransactionsByIdRequest;
 var GetTransactionsByIdResponse = /** @class */ (function (_super) {
     __extends(GetTransactionsByIdResponse, _super);
     function GetTransactionsByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTransactionsByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTransactionsByIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionsByIdTransaction)
     ], GetTransactionsByIdResponse.prototype, "transaction", void 0);
     return GetTransactionsByIdResponse;
-}(SpeakeasyBase));
-export { GetTransactionsByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsByIdResponse = GetTransactionsByIdResponse;

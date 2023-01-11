@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutBinIdResponse = exports.PutBinIdRequest = exports.PutBinIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutBinIdPathParams = /** @class */ (function (_super) {
     __extends(PutBinIdPathParams, _super);
     function PutBinIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PutBinIdPathParams.prototype, "id", void 0);
     return PutBinIdPathParams;
-}(SpeakeasyBase));
-export { PutBinIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutBinIdPathParams = PutBinIdPathParams;
 var PutBinIdRequest = /** @class */ (function (_super) {
     __extends(PutBinIdRequest, _super);
     function PutBinIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutBinIdPathParams)
     ], PutBinIdRequest.prototype, "pathParams", void 0);
     return PutBinIdRequest;
-}(SpeakeasyBase));
-export { PutBinIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutBinIdRequest = PutBinIdRequest;
 var PutBinIdResponse = /** @class */ (function (_super) {
     __extends(PutBinIdResponse, _super);
     function PutBinIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutBinIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutBinIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutBinIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutBinIdResponse.prototype, "updateStatus", void 0);
     return PutBinIdResponse;
-}(SpeakeasyBase));
-export { PutBinIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutBinIdResponse = PutBinIdResponse;

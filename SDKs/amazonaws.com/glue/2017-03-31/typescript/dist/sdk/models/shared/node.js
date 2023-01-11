@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CrawlerNodeDetails } from "./crawlernodedetails";
-import { JobNodeDetails } from "./jobnodedetails";
-import { TriggerNodeDetails } from "./triggernodedetails";
-import { NodeTypeEnum } from "./nodetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Node = void 0;
+var utils_1 = require("../../../internal/utils");
+var crawlernodedetails_1 = require("./crawlernodedetails");
+var jobnodedetails_1 = require("./jobnodedetails");
+var triggernodedetails_1 = require("./triggernodedetails");
+var nodetypeenum_1 = require("./nodetypeenum");
 // Node
 /**
  * A node represents an Glue component (trigger, crawler, or job) on a workflow graph.
@@ -37,29 +40,29 @@ var Node = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlerDetails" }),
-        __metadata("design:type", CrawlerNodeDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlerDetails" }),
+        __metadata("design:type", crawlernodedetails_1.CrawlerNodeDetails)
     ], Node.prototype, "crawlerDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobDetails" }),
-        __metadata("design:type", JobNodeDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobDetails" }),
+        __metadata("design:type", jobnodedetails_1.JobNodeDetails)
     ], Node.prototype, "jobDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Node.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TriggerDetails" }),
-        __metadata("design:type", TriggerNodeDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TriggerDetails" }),
+        __metadata("design:type", triggernodedetails_1.TriggerNodeDetails)
     ], Node.prototype, "triggerDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Node.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UniqueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UniqueId" }),
         __metadata("design:type", String)
     ], Node.prototype, "uniqueId", void 0);
     return Node;
-}(SpeakeasyBase));
-export { Node };
+}(utils_1.SpeakeasyBase));
+exports.Node = Node;

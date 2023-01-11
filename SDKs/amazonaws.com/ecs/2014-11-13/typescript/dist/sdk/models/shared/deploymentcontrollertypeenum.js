@@ -1,6 +1,9 @@
-export var DeploymentControllerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentControllerTypeEnum = void 0;
+var DeploymentControllerTypeEnum;
 (function (DeploymentControllerTypeEnum) {
     DeploymentControllerTypeEnum["Ecs"] = "ECS";
     DeploymentControllerTypeEnum["CodeDeploy"] = "CODE_DEPLOY";
     DeploymentControllerTypeEnum["External"] = "EXTERNAL";
-})(DeploymentControllerTypeEnum || (DeploymentControllerTypeEnum = {}));
+})(DeploymentControllerTypeEnum = exports.DeploymentControllerTypeEnum || (exports.DeploymentControllerTypeEnum = {}));

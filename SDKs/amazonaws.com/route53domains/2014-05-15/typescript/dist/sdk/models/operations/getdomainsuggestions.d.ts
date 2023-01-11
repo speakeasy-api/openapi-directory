@@ -22,5 +22,5 @@ export declare class GetDomainSuggestionsResponse extends SpeakeasyBase {
     getDomainSuggestionsResponse?: shared.GetDomainSuggestionsResponse;
     invalidInput?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

@@ -20,7 +20,7 @@ export class FormDataContentDisposition extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=parameters;json=true" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=readDate" })
   readDate?: string;

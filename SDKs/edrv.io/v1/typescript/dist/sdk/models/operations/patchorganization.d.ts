@@ -9,8 +9,8 @@ export declare class PatchOrganizationRequestBodyAddress extends SpeakeasyBase {
     streetAndNumber?: string;
 }
 export declare class PatchOrganizationRequestBodyChannels extends SpeakeasyBase {
-    slack?: Map<string, any>;
-    telegram?: Map<string, any>;
+    slack?: Record<string, any>;
+    telegram?: Record<string, any>;
 }
 export declare class PatchOrganizationRequestBodyConfigurations extends SpeakeasyBase {
     basicAuthEnabled?: boolean;

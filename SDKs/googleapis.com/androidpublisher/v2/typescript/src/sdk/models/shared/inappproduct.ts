@@ -15,13 +15,13 @@ export class InAppProduct extends SpeakeasyBase {
   gracePeriod?: string;
 
   @SpeakeasyMetadata({ data: "json, name=listings", elemType: InAppProductListing })
-  listings?: Map<string, InAppProductListing>;
+  listings?: Record<string, InAppProductListing>;
 
   @SpeakeasyMetadata({ data: "json, name=packageName" })
   packageName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=prices", elemType: Price })
-  prices?: Map<string, Price>;
+  prices?: Record<string, Price>;
 
   @SpeakeasyMetadata({ data: "json, name=purchaseType" })
   purchaseType?: string;

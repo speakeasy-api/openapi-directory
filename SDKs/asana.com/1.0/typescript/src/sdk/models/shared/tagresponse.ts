@@ -26,6 +26,10 @@ export enum TagResponseColorEnum {
 }
 
 
+// TagResponse
+/** 
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 export class TagResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color?: TagResponseColorEnum;
@@ -50,6 +54,10 @@ export class TagResponse extends SpeakeasyBase {
 }
 
 
+// TagResponseInput
+/** 
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 export class TagResponseInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color?: TagResponseColorEnum;

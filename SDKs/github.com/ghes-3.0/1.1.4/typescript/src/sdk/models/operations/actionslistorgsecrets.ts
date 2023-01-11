@@ -41,11 +41,11 @@ export class ActionsListOrgSecretsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListOrgSecrets200ApplicationJsonObject?: ActionsListOrgSecrets200ApplicationJson;
+  actionsListOrgSecrets200ApplicationJSONObject?: ActionsListOrgSecrets200ApplicationJson;
 }

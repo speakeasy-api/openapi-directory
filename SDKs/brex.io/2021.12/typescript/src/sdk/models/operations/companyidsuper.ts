@@ -44,10 +44,10 @@ export class CompanyIdSuperRequest extends SpeakeasyBase {
 
 export class CompanyIdSuperResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyIdSuper200ApplicationJsonAnies?: any[];
+  companyIdSuper200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companyIdSuperDefaultApplicationJsonAny?: any;
+  companyIdSuperDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

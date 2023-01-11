@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleRpcStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleRpcStatus
 /**
  * The `Status` type defines a logical error model that is suitable for
@@ -39,17 +42,17 @@ var GoogleRpcStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GoogleRpcStatus.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GoogleRpcStatus.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleRpcStatus.prototype, "message", void 0);
     return GoogleRpcStatus;
-}(SpeakeasyBase));
-export { GoogleRpcStatus };
+}(utils_1.SpeakeasyBase));
+exports.GoogleRpcStatus = GoogleRpcStatus;

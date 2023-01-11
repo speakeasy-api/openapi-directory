@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MoneyObject } from "./moneyobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionResource = exports.TransactionResourceRelationships = exports.TransactionResourceRelationshipsTags = exports.TransactionResourceRelationshipsTagsLinks = exports.TransactionResourceRelationshipsTagsData = exports.TransactionResourceRelationshipsParentCategory = exports.TransactionResourceRelationshipsParentCategoryLinks = exports.TransactionResourceRelationshipsParentCategoryData = exports.TransactionResourceRelationshipsCategory = exports.TransactionResourceRelationshipsCategoryLinks = exports.TransactionResourceRelationshipsCategoryData = exports.TransactionResourceRelationshipsAccount = exports.TransactionResourceRelationshipsAccountLinks = exports.TransactionResourceRelationshipsAccountData = exports.TransactionResourceLinks = exports.TransactionResourceAttributes = exports.TransactionResourceAttributesRoundUp = exports.TransactionResourceAttributesRoundUpBoostPortion = exports.TransactionResourceAttributesHoldInfo = exports.TransactionResourceAttributesHoldInfoForeignAmount = exports.TransactionResourceAttributesForeignAmount = exports.TransactionResourceAttributesCashback = void 0;
+var utils_1 = require("../../../internal/utils");
+var moneyobject_1 = require("./moneyobject");
 // TransactionResourceAttributesCashback
 /**
- * If all or part of this transaction was instantly reimbursed in the
- * form of cashback, details of the reimbursement.
+ * Provides information about an instant reimbursement in the form of
+ * cashback.
  *
 **/
 var TransactionResourceAttributesCashback = /** @class */ (function (_super) {
@@ -36,23 +39,19 @@ var TransactionResourceAttributesCashback = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", MoneyObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", moneyobject_1.MoneyObject)
     ], TransactionResourceAttributesCashback.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesCashback.prototype, "description", void 0);
     return TransactionResourceAttributesCashback;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesCashback };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesCashback = TransactionResourceAttributesCashback;
 // TransactionResourceAttributesForeignAmount
 /**
- * The foreign currency amount of this transaction. This field will be
- * `null` for domestic transactions. The amount was converted to the AUD
- * amount reflected in the `amount` of this transaction. Refer to the
- * `holdInfo` field for the original `foreignAmount` the transaction was
- * `HELD` at.
+ * Provides information about a value of money.
  *
 **/
 var TransactionResourceAttributesForeignAmount = /** @class */ (function (_super) {
@@ -61,25 +60,23 @@ var TransactionResourceAttributesForeignAmount = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesForeignAmount.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesForeignAmount.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueInBaseUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueInBaseUnits" }),
         __metadata("design:type", Number)
     ], TransactionResourceAttributesForeignAmount.prototype, "valueInBaseUnits", void 0);
     return TransactionResourceAttributesForeignAmount;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesForeignAmount };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesForeignAmount = TransactionResourceAttributesForeignAmount;
 // TransactionResourceAttributesHoldInfoForeignAmount
 /**
- * The foreign currency amount of this transaction while in the `HELD`
- * status. This field will be `null` for domestic transactions. The amount
- * was converted to the AUD amount reflected in the `amount` field.
+ * Provides information about a value of money.
  *
 **/
 var TransactionResourceAttributesHoldInfoForeignAmount = /** @class */ (function (_super) {
@@ -88,25 +85,24 @@ var TransactionResourceAttributesHoldInfoForeignAmount = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesHoldInfoForeignAmount.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesHoldInfoForeignAmount.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueInBaseUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueInBaseUnits" }),
         __metadata("design:type", Number)
     ], TransactionResourceAttributesHoldInfoForeignAmount.prototype, "valueInBaseUnits", void 0);
     return TransactionResourceAttributesHoldInfoForeignAmount;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesHoldInfoForeignAmount };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesHoldInfoForeignAmount = TransactionResourceAttributesHoldInfoForeignAmount;
 // TransactionResourceAttributesHoldInfo
 /**
- * If this transaction is currently in the `HELD` status, or was ever in
- * the `HELD` status, the `amount` and `foreignAmount` of the
- * transaction while `HELD`.
+ * Provides information about the amount at which a transaction was in the
+ * `HELD` status.
  *
 **/
 var TransactionResourceAttributesHoldInfo = /** @class */ (function (_super) {
@@ -115,21 +111,19 @@ var TransactionResourceAttributesHoldInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", MoneyObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", moneyobject_1.MoneyObject)
     ], TransactionResourceAttributesHoldInfo.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foreignAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foreignAmount" }),
         __metadata("design:type", TransactionResourceAttributesHoldInfoForeignAmount)
     ], TransactionResourceAttributesHoldInfo.prototype, "foreignAmount", void 0);
     return TransactionResourceAttributesHoldInfo;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesHoldInfo };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesHoldInfo = TransactionResourceAttributesHoldInfo;
 // TransactionResourceAttributesRoundUpBoostPortion
 /**
- * The portion of the Round Up `amount` owing to boosted Round Ups,
- * represented as a negative value. If no boost was added to the Round Up
- * this field will be `null`.
+ * Provides information about a value of money.
  *
 **/
 var TransactionResourceAttributesRoundUpBoostPortion = /** @class */ (function (_super) {
@@ -138,24 +132,24 @@ var TransactionResourceAttributesRoundUpBoostPortion = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesRoundUpBoostPortion.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributesRoundUpBoostPortion.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueInBaseUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueInBaseUnits" }),
         __metadata("design:type", Number)
     ], TransactionResourceAttributesRoundUpBoostPortion.prototype, "valueInBaseUnits", void 0);
     return TransactionResourceAttributesRoundUpBoostPortion;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesRoundUpBoostPortion };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesRoundUpBoostPortion = TransactionResourceAttributesRoundUpBoostPortion;
 // TransactionResourceAttributesRoundUp
 /**
- * Details of how this transaction was rounded-up. If no Round Up was
- * applied this field will be `null`.
+ * Provides information about how a Round Up was applied, such as whether or
+ * not a boost was included in the Round Up.
  *
 **/
 var TransactionResourceAttributesRoundUp = /** @class */ (function (_super) {
@@ -164,305 +158,305 @@ var TransactionResourceAttributesRoundUp = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", MoneyObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", moneyobject_1.MoneyObject)
     ], TransactionResourceAttributesRoundUp.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boostPortion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boostPortion" }),
         __metadata("design:type", TransactionResourceAttributesRoundUpBoostPortion)
     ], TransactionResourceAttributesRoundUp.prototype, "boostPortion", void 0);
     return TransactionResourceAttributesRoundUp;
-}(SpeakeasyBase));
-export { TransactionResourceAttributesRoundUp };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributesRoundUp = TransactionResourceAttributesRoundUp;
 var TransactionResourceAttributes = /** @class */ (function (_super) {
     __extends(TransactionResourceAttributes, _super);
     function TransactionResourceAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", MoneyObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", moneyobject_1.MoneyObject)
     ], TransactionResourceAttributes.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cashback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cashback" }),
         __metadata("design:type", TransactionResourceAttributesCashback)
     ], TransactionResourceAttributes.prototype, "cashback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], TransactionResourceAttributes.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributes.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foreignAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foreignAmount" }),
         __metadata("design:type", TransactionResourceAttributesForeignAmount)
     ], TransactionResourceAttributes.prototype, "foreignAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holdInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holdInfo" }),
         __metadata("design:type", TransactionResourceAttributesHoldInfo)
     ], TransactionResourceAttributes.prototype, "holdInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributes.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawText" }),
         __metadata("design:type", String)
     ], TransactionResourceAttributes.prototype, "rawText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roundUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roundUp" }),
         __metadata("design:type", TransactionResourceAttributesRoundUp)
     ], TransactionResourceAttributes.prototype, "roundUp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settledAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settledAt" }),
         __metadata("design:type", Date)
     ], TransactionResourceAttributes.prototype, "settledAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Object)
     ], TransactionResourceAttributes.prototype, "status", void 0);
     return TransactionResourceAttributes;
-}(SpeakeasyBase));
-export { TransactionResourceAttributes };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceAttributes = TransactionResourceAttributes;
 var TransactionResourceLinks = /** @class */ (function (_super) {
     __extends(TransactionResourceLinks, _super);
     function TransactionResourceLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], TransactionResourceLinks.prototype, "self", void 0);
     return TransactionResourceLinks;
-}(SpeakeasyBase));
-export { TransactionResourceLinks };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceLinks = TransactionResourceLinks;
 var TransactionResourceRelationshipsAccountData = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsAccountData, _super);
     function TransactionResourceRelationshipsAccountData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsAccountData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsAccountData.prototype, "type", void 0);
     return TransactionResourceRelationshipsAccountData;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsAccountData };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsAccountData = TransactionResourceRelationshipsAccountData;
 var TransactionResourceRelationshipsAccountLinks = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsAccountLinks, _super);
     function TransactionResourceRelationshipsAccountLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsAccountLinks.prototype, "related", void 0);
     return TransactionResourceRelationshipsAccountLinks;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsAccountLinks };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsAccountLinks = TransactionResourceRelationshipsAccountLinks;
 var TransactionResourceRelationshipsAccount = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsAccount, _super);
     function TransactionResourceRelationshipsAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", TransactionResourceRelationshipsAccountData)
     ], TransactionResourceRelationshipsAccount.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TransactionResourceRelationshipsAccountLinks)
     ], TransactionResourceRelationshipsAccount.prototype, "links", void 0);
     return TransactionResourceRelationshipsAccount;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsAccount };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsAccount = TransactionResourceRelationshipsAccount;
 var TransactionResourceRelationshipsCategoryData = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsCategoryData, _super);
     function TransactionResourceRelationshipsCategoryData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsCategoryData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsCategoryData.prototype, "type", void 0);
     return TransactionResourceRelationshipsCategoryData;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsCategoryData };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsCategoryData = TransactionResourceRelationshipsCategoryData;
 var TransactionResourceRelationshipsCategoryLinks = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsCategoryLinks, _super);
     function TransactionResourceRelationshipsCategoryLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsCategoryLinks.prototype, "related", void 0);
     return TransactionResourceRelationshipsCategoryLinks;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsCategoryLinks };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsCategoryLinks = TransactionResourceRelationshipsCategoryLinks;
 var TransactionResourceRelationshipsCategory = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsCategory, _super);
     function TransactionResourceRelationshipsCategory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", TransactionResourceRelationshipsCategoryData)
     ], TransactionResourceRelationshipsCategory.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TransactionResourceRelationshipsCategoryLinks)
     ], TransactionResourceRelationshipsCategory.prototype, "links", void 0);
     return TransactionResourceRelationshipsCategory;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsCategory };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsCategory = TransactionResourceRelationshipsCategory;
 var TransactionResourceRelationshipsParentCategoryData = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsParentCategoryData, _super);
     function TransactionResourceRelationshipsParentCategoryData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsParentCategoryData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsParentCategoryData.prototype, "type", void 0);
     return TransactionResourceRelationshipsParentCategoryData;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsParentCategoryData };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsParentCategoryData = TransactionResourceRelationshipsParentCategoryData;
 var TransactionResourceRelationshipsParentCategoryLinks = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsParentCategoryLinks, _super);
     function TransactionResourceRelationshipsParentCategoryLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsParentCategoryLinks.prototype, "related", void 0);
     return TransactionResourceRelationshipsParentCategoryLinks;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsParentCategoryLinks };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsParentCategoryLinks = TransactionResourceRelationshipsParentCategoryLinks;
 var TransactionResourceRelationshipsParentCategory = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsParentCategory, _super);
     function TransactionResourceRelationshipsParentCategory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", TransactionResourceRelationshipsParentCategoryData)
     ], TransactionResourceRelationshipsParentCategory.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TransactionResourceRelationshipsParentCategoryLinks)
     ], TransactionResourceRelationshipsParentCategory.prototype, "links", void 0);
     return TransactionResourceRelationshipsParentCategory;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsParentCategory };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsParentCategory = TransactionResourceRelationshipsParentCategory;
 var TransactionResourceRelationshipsTagsData = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsTagsData, _super);
     function TransactionResourceRelationshipsTagsData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsTagsData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsTagsData.prototype, "type", void 0);
     return TransactionResourceRelationshipsTagsData;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsTagsData };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsTagsData = TransactionResourceRelationshipsTagsData;
 var TransactionResourceRelationshipsTagsLinks = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsTagsLinks, _super);
     function TransactionResourceRelationshipsTagsLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], TransactionResourceRelationshipsTagsLinks.prototype, "self", void 0);
     return TransactionResourceRelationshipsTagsLinks;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsTagsLinks };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsTagsLinks = TransactionResourceRelationshipsTagsLinks;
 var TransactionResourceRelationshipsTags = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationshipsTags, _super);
     function TransactionResourceRelationshipsTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: TransactionResourceRelationshipsTagsData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: TransactionResourceRelationshipsTagsData }),
         __metadata("design:type", Array)
     ], TransactionResourceRelationshipsTags.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TransactionResourceRelationshipsTagsLinks)
     ], TransactionResourceRelationshipsTags.prototype, "links", void 0);
     return TransactionResourceRelationshipsTags;
-}(SpeakeasyBase));
-export { TransactionResourceRelationshipsTags };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationshipsTags = TransactionResourceRelationshipsTags;
 var TransactionResourceRelationships = /** @class */ (function (_super) {
     __extends(TransactionResourceRelationships, _super);
     function TransactionResourceRelationships() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", TransactionResourceRelationshipsAccount)
     ], TransactionResourceRelationships.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", TransactionResourceRelationshipsCategory)
     ], TransactionResourceRelationships.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentCategory" }),
         __metadata("design:type", TransactionResourceRelationshipsParentCategory)
     ], TransactionResourceRelationships.prototype, "parentCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", TransactionResourceRelationshipsTags)
     ], TransactionResourceRelationships.prototype, "tags", void 0);
     return TransactionResourceRelationships;
-}(SpeakeasyBase));
-export { TransactionResourceRelationships };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResourceRelationships = TransactionResourceRelationships;
 var TransactionResource = /** @class */ (function (_super) {
     __extends(TransactionResource, _super);
     function TransactionResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", TransactionResourceAttributes)
     ], TransactionResource.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TransactionResourceLinks)
     ], TransactionResource.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", TransactionResourceRelationships)
     ], TransactionResource.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TransactionResource.prototype, "type", void 0);
     return TransactionResource;
-}(SpeakeasyBase));
-export { TransactionResource };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResource = TransactionResource;

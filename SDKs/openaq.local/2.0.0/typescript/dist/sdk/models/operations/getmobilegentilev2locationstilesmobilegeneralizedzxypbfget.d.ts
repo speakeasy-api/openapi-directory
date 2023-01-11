@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams extends SpeakeasyBase {
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams extends SpeakeasyBase {
     x: number;
     y: number;
     z: number;
 }
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams extends SpeakeasyBase {
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams extends SpeakeasyBase {
     isAnalysis?: boolean;
     isMobile?: boolean;
     lastUpdatedFrom?: any;
@@ -14,11 +14,11 @@ export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQ
     parameter?: any;
     project?: number;
 }
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest extends SpeakeasyBase {
-    pathParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams;
-    queryParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams;
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetRequest extends SpeakeasyBase {
+    pathParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams;
+    queryParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams;
 }
-export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse extends SpeakeasyBase {
+export declare class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;

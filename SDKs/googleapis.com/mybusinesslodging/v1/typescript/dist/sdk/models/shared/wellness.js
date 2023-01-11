@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WellnessDoctorOnCallExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Wellness = exports.WellnessWeightMachineExceptionEnum = exports.WellnessTreadmillExceptionEnum = exports.WellnessSpaExceptionEnum = exports.WellnessSaunaExceptionEnum = exports.WellnessSalonExceptionEnum = exports.WellnessMassageExceptionEnum = exports.WellnessFreeWeightsExceptionEnum = exports.WellnessFreeFitnessCenterExceptionEnum = exports.WellnessFitnessCenterExceptionEnum = exports.WellnessEllipticalMachineExceptionEnum = exports.WellnessDoctorOnCallExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WellnessDoctorOnCallExceptionEnum;
 (function (WellnessDoctorOnCallExceptionEnum) {
     WellnessDoctorOnCallExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessDoctorOnCallExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessDoctorOnCallExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessDoctorOnCallExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessDoctorOnCallExceptionEnum || (WellnessDoctorOnCallExceptionEnum = {}));
-export var WellnessEllipticalMachineExceptionEnum;
+})(WellnessDoctorOnCallExceptionEnum = exports.WellnessDoctorOnCallExceptionEnum || (exports.WellnessDoctorOnCallExceptionEnum = {}));
+var WellnessEllipticalMachineExceptionEnum;
 (function (WellnessEllipticalMachineExceptionEnum) {
     WellnessEllipticalMachineExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessEllipticalMachineExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessEllipticalMachineExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessEllipticalMachineExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessEllipticalMachineExceptionEnum || (WellnessEllipticalMachineExceptionEnum = {}));
-export var WellnessFitnessCenterExceptionEnum;
+})(WellnessEllipticalMachineExceptionEnum = exports.WellnessEllipticalMachineExceptionEnum || (exports.WellnessEllipticalMachineExceptionEnum = {}));
+var WellnessFitnessCenterExceptionEnum;
 (function (WellnessFitnessCenterExceptionEnum) {
     WellnessFitnessCenterExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessFitnessCenterExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessFitnessCenterExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessFitnessCenterExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessFitnessCenterExceptionEnum || (WellnessFitnessCenterExceptionEnum = {}));
-export var WellnessFreeFitnessCenterExceptionEnum;
+})(WellnessFitnessCenterExceptionEnum = exports.WellnessFitnessCenterExceptionEnum || (exports.WellnessFitnessCenterExceptionEnum = {}));
+var WellnessFreeFitnessCenterExceptionEnum;
 (function (WellnessFreeFitnessCenterExceptionEnum) {
     WellnessFreeFitnessCenterExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessFreeFitnessCenterExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessFreeFitnessCenterExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessFreeFitnessCenterExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessFreeFitnessCenterExceptionEnum || (WellnessFreeFitnessCenterExceptionEnum = {}));
-export var WellnessFreeWeightsExceptionEnum;
+})(WellnessFreeFitnessCenterExceptionEnum = exports.WellnessFreeFitnessCenterExceptionEnum || (exports.WellnessFreeFitnessCenterExceptionEnum = {}));
+var WellnessFreeWeightsExceptionEnum;
 (function (WellnessFreeWeightsExceptionEnum) {
     WellnessFreeWeightsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessFreeWeightsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessFreeWeightsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessFreeWeightsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessFreeWeightsExceptionEnum || (WellnessFreeWeightsExceptionEnum = {}));
-export var WellnessMassageExceptionEnum;
+})(WellnessFreeWeightsExceptionEnum = exports.WellnessFreeWeightsExceptionEnum || (exports.WellnessFreeWeightsExceptionEnum = {}));
+var WellnessMassageExceptionEnum;
 (function (WellnessMassageExceptionEnum) {
     WellnessMassageExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessMassageExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessMassageExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessMassageExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessMassageExceptionEnum || (WellnessMassageExceptionEnum = {}));
-export var WellnessSalonExceptionEnum;
+})(WellnessMassageExceptionEnum = exports.WellnessMassageExceptionEnum || (exports.WellnessMassageExceptionEnum = {}));
+var WellnessSalonExceptionEnum;
 (function (WellnessSalonExceptionEnum) {
     WellnessSalonExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessSalonExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessSalonExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessSalonExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessSalonExceptionEnum || (WellnessSalonExceptionEnum = {}));
-export var WellnessSaunaExceptionEnum;
+})(WellnessSalonExceptionEnum = exports.WellnessSalonExceptionEnum || (exports.WellnessSalonExceptionEnum = {}));
+var WellnessSaunaExceptionEnum;
 (function (WellnessSaunaExceptionEnum) {
     WellnessSaunaExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessSaunaExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessSaunaExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessSaunaExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessSaunaExceptionEnum || (WellnessSaunaExceptionEnum = {}));
-export var WellnessSpaExceptionEnum;
+})(WellnessSaunaExceptionEnum = exports.WellnessSaunaExceptionEnum || (exports.WellnessSaunaExceptionEnum = {}));
+var WellnessSpaExceptionEnum;
 (function (WellnessSpaExceptionEnum) {
     WellnessSpaExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessSpaExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessSpaExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessSpaExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessSpaExceptionEnum || (WellnessSpaExceptionEnum = {}));
-export var WellnessTreadmillExceptionEnum;
+})(WellnessSpaExceptionEnum = exports.WellnessSpaExceptionEnum || (exports.WellnessSpaExceptionEnum = {}));
+var WellnessTreadmillExceptionEnum;
 (function (WellnessTreadmillExceptionEnum) {
     WellnessTreadmillExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessTreadmillExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessTreadmillExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessTreadmillExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessTreadmillExceptionEnum || (WellnessTreadmillExceptionEnum = {}));
-export var WellnessWeightMachineExceptionEnum;
+})(WellnessTreadmillExceptionEnum = exports.WellnessTreadmillExceptionEnum || (exports.WellnessTreadmillExceptionEnum = {}));
+var WellnessWeightMachineExceptionEnum;
 (function (WellnessWeightMachineExceptionEnum) {
     WellnessWeightMachineExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WellnessWeightMachineExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WellnessWeightMachineExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WellnessWeightMachineExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WellnessWeightMachineExceptionEnum || (WellnessWeightMachineExceptionEnum = {}));
+})(WellnessWeightMachineExceptionEnum = exports.WellnessWeightMachineExceptionEnum || (exports.WellnessWeightMachineExceptionEnum = {}));
 // Wellness
 /**
  * Guest facilities at the property to promote or maintain health, beauty, and fitness.
@@ -110,93 +113,93 @@ var Wellness = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doctorOnCall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctorOnCall" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "doctorOnCall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doctorOnCallException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctorOnCallException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "doctorOnCallException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ellipticalMachine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ellipticalMachine" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "ellipticalMachine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ellipticalMachineException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ellipticalMachineException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "ellipticalMachineException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fitnessCenter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fitnessCenter" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "fitnessCenter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fitnessCenterException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fitnessCenterException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "fitnessCenterException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeFitnessCenter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeFitnessCenter" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "freeFitnessCenter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeFitnessCenterException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeFitnessCenterException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "freeFitnessCenterException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWeights" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "freeWeights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWeightsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWeightsException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "freeWeightsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=massage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=massage" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "massage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=massageException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=massageException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "massageException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salon" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "salon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salonException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salonException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "salonException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sauna" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sauna" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "sauna", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saunaException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saunaException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "saunaException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spa" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "spa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spaException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spaException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "spaException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treadmill" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treadmill" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "treadmill", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treadmillException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treadmillException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "treadmillException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weightMachine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weightMachine" }),
         __metadata("design:type", Boolean)
     ], Wellness.prototype, "weightMachine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weightMachineException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weightMachineException" }),
         __metadata("design:type", String)
     ], Wellness.prototype, "weightMachineException", void 0);
     return Wellness;
-}(SpeakeasyBase));
-export { Wellness };
+}(utils_1.SpeakeasyBase));
+exports.Wellness = Wellness;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse = exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest = exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody = exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams, _super);
     function EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams.prototype, "enterprise", void 0);
     return EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams = EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams;
 var EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody, _super);
     function EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_organization_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_organization_ids" }),
         __metadata("design:type", Array)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody.prototype, "selectedOrganizationIds", void 0);
     return EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody = EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody;
 var EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest, _super);
     function EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest.prototype, "request", void 0);
     return EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest = EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest;
 var EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse, _super);
     function EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse = EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse;

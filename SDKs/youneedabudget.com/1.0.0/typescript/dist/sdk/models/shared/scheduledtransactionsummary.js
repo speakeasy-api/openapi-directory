@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScheduledTransactionSummaryFlagColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledTransactionSummary = exports.ScheduledTransactionSummaryFrequencyEnum = exports.ScheduledTransactionSummaryFlagColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScheduledTransactionSummaryFlagColorEnum;
 (function (ScheduledTransactionSummaryFlagColorEnum) {
     ScheduledTransactionSummaryFlagColorEnum["Red"] = "red";
     ScheduledTransactionSummaryFlagColorEnum["Orange"] = "orange";
@@ -31,8 +34,9 @@ export var ScheduledTransactionSummaryFlagColorEnum;
     ScheduledTransactionSummaryFlagColorEnum["Green"] = "green";
     ScheduledTransactionSummaryFlagColorEnum["Blue"] = "blue";
     ScheduledTransactionSummaryFlagColorEnum["Purple"] = "purple";
-})(ScheduledTransactionSummaryFlagColorEnum || (ScheduledTransactionSummaryFlagColorEnum = {}));
-export var ScheduledTransactionSummaryFrequencyEnum;
+    ScheduledTransactionSummaryFlagColorEnum["Null"] = "null";
+})(ScheduledTransactionSummaryFlagColorEnum = exports.ScheduledTransactionSummaryFlagColorEnum || (exports.ScheduledTransactionSummaryFlagColorEnum = {}));
+var ScheduledTransactionSummaryFrequencyEnum;
 (function (ScheduledTransactionSummaryFrequencyEnum) {
     ScheduledTransactionSummaryFrequencyEnum["Never"] = "never";
     ScheduledTransactionSummaryFrequencyEnum["Daily"] = "daily";
@@ -47,60 +51,60 @@ export var ScheduledTransactionSummaryFrequencyEnum;
     ScheduledTransactionSummaryFrequencyEnum["TwiceAYear"] = "twiceAYear";
     ScheduledTransactionSummaryFrequencyEnum["Yearly"] = "yearly";
     ScheduledTransactionSummaryFrequencyEnum["EveryOtherYear"] = "everyOtherYear";
-})(ScheduledTransactionSummaryFrequencyEnum || (ScheduledTransactionSummaryFrequencyEnum = {}));
+})(ScheduledTransactionSummaryFrequencyEnum = exports.ScheduledTransactionSummaryFrequencyEnum || (exports.ScheduledTransactionSummaryFrequencyEnum = {}));
 var ScheduledTransactionSummary = /** @class */ (function (_super) {
     __extends(ScheduledTransactionSummary, _super);
     function ScheduledTransactionSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], ScheduledTransactionSummary.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_first" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_first" }),
         __metadata("design:type", Date)
     ], ScheduledTransactionSummary.prototype, "dateFirst", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_next" }),
         __metadata("design:type", Date)
     ], ScheduledTransactionSummary.prototype, "dateNext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], ScheduledTransactionSummary.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag_color" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "flagColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_account_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionSummary.prototype, "transferAccountId", void 0);
     return ScheduledTransactionSummary;
-}(SpeakeasyBase));
-export { ScheduledTransactionSummary };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledTransactionSummary = ScheduledTransactionSummary;

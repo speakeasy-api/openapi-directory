@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PeopleContactGroupsBatchGetRequest, PeopleContactGroupsBatchGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,30 +31,31 @@ const req: PeopleContactGroupsBatchGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "quia",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "nihil",
-    fields: "et",
+    callback: "expedita",
+    fields: "consequuntur",
     groupFields: "dolor",
-    key: "et",
-    maxMembers: 9176577634530861449,
-    oauthToken: "blanditiis",
-    prettyPrint: true,
-    quotaUser: "atque",
+    key: "expedita",
+    maxMembers: 6044372234677422456,
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
     resourceNames: [
-      "hic",
-      "eum",
+      "dicta",
+      "debitis",
+      "voluptatum",
     ],
-    uploadType: "sint",
-    uploadProtocol: "sint",
+    uploadType: "et",
+    uploadProtocol: "ut",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var DeleteReplicationTaskXAmzTargetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteReplicationTaskResponse = exports.DeleteReplicationTaskRequest = exports.DeleteReplicationTaskHeaders = exports.DeleteReplicationTaskXAmzTargetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var DeleteReplicationTaskXAmzTargetEnum;
 (function (DeleteReplicationTaskXAmzTargetEnum) {
     DeleteReplicationTaskXAmzTargetEnum["AmazonDmSv20160101DeleteReplicationTask"] = "AmazonDMSv20160101.DeleteReplicationTask";
-})(DeleteReplicationTaskXAmzTargetEnum || (DeleteReplicationTaskXAmzTargetEnum = {}));
+})(DeleteReplicationTaskXAmzTargetEnum = exports.DeleteReplicationTaskXAmzTargetEnum || (exports.DeleteReplicationTaskXAmzTargetEnum = {}));
 var DeleteReplicationTaskHeaders = /** @class */ (function (_super) {
     __extends(DeleteReplicationTaskHeaders, _super);
     function DeleteReplicationTaskHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
         __metadata("design:type", String)
     ], DeleteReplicationTaskHeaders.prototype, "xAmzTarget", void 0);
     return DeleteReplicationTaskHeaders;
-}(SpeakeasyBase));
-export { DeleteReplicationTaskHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationTaskHeaders = DeleteReplicationTaskHeaders;
 var DeleteReplicationTaskRequest = /** @class */ (function (_super) {
     __extends(DeleteReplicationTaskRequest, _super);
     function DeleteReplicationTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteReplicationTaskHeaders)
     ], DeleteReplicationTaskRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.DeleteReplicationTaskMessage)
     ], DeleteReplicationTaskRequest.prototype, "request", void 0);
     return DeleteReplicationTaskRequest;
-}(SpeakeasyBase));
-export { DeleteReplicationTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationTaskRequest = DeleteReplicationTaskRequest;
 var DeleteReplicationTaskResponse = /** @class */ (function (_super) {
     __extends(DeleteReplicationTaskResponse, _super);
     function DeleteReplicationTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteReplicationTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.DeleteReplicationTaskResponse)
     ], DeleteReplicationTaskResponse.prototype, "deleteReplicationTaskResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteReplicationTaskResponse.prototype, "invalidResourceStateFault", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteReplicationTaskResponse.prototype, "resourceNotFoundFault", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteReplicationTaskResponse.prototype, "statusCode", void 0);
     return DeleteReplicationTaskResponse;
-}(SpeakeasyBase));
-export { DeleteReplicationTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationTaskResponse = DeleteReplicationTaskResponse;

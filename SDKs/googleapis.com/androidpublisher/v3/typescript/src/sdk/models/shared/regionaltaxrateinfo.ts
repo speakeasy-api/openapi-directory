@@ -21,10 +21,6 @@ export enum RegionalTaxRateInfoTaxTierEnum {
 }
 
 
-// RegionalTaxRateInfo
-/** 
- * Specified details about taxation in a given geographical region.
-**/
 export class RegionalTaxRateInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=eligibleForStreamingServiceTaxRate" })
   eligibleForStreamingServiceTaxRate?: boolean;

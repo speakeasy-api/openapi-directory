@@ -1,86 +1,86 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Security } from "./models/shared";
-import { Betting } from "./betting";
-import { Coaches } from "./coaches";
-import { Conferences } from "./conferences";
-import { Draft } from "./draft";
-import { Drives } from "./drives";
-import { Games } from "./games";
-import { Metrics } from "./metrics";
-import { Players } from "./players";
-import { Plays } from "./plays";
-import { Rankings } from "./rankings";
-import { Ratings } from "./ratings";
-import { Recruiting } from "./recruiting";
-import { Stats } from "./stats";
-import { Teams } from "./teams";
-import { Venues } from "./venues";
-export var ServerList = [
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var utils = __importStar(require("../internal/utils"));
+var shared_1 = require("./models/shared");
+var betting_1 = require("./betting");
+var coaches_1 = require("./coaches");
+var conferences_1 = require("./conferences");
+var draft_1 = require("./draft");
+var drives_1 = require("./drives");
+var games_1 = require("./games");
+var metrics_1 = require("./metrics");
+var players_1 = require("./players");
+var plays_1 = require("./plays");
+var rankings_1 = require("./rankings");
+var ratings_1 = require("./ratings");
+var recruiting_1 = require("./recruiting");
+var stats_1 = require("./stats");
+var teams_1 = require("./teams");
+var venues_1 = require("./venues");
+exports.ServerList = [
     "https://api.collegefootballdata.com",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
-export function WithSecurity(security) {
-    if (!(security instanceof utils.SpeakeasyBase)) {
-        security = new Security(security);
-    }
-    return function (sdk) {
-        sdk._security = security;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        if (props.security) {
+            var security = props.security;
+            if (!(props.security instanceof utils.SpeakeasyBase))
+                security = new shared_1.Security(props.security);
+            this._securityClient = utils.createSecurityClient(this._defaultClient, security);
         }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
+        else {
+            this._securityClient = this._defaultClient;
         }
-        if (!this._securityClient) {
-            if (this._security) {
-                this._securityClient = utils.CreateSecurityClient(this._defaultClient, this._security);
-            }
-            else {
-                this._securityClient = this._defaultClient;
-            }
-        }
-        this.betting = new Betting(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.coaches = new Coaches(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.conferences = new Conferences(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.draft = new Draft(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.drives = new Drives(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.games = new Games(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.metrics = new Metrics(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.players = new Players(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.plays = new Plays(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.rankings = new Rankings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.ratings = new Ratings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.recruiting = new Recruiting(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.stats = new Stats(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.teams = new Teams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.venues = new Venues(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.betting = new betting_1.Betting(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.coaches = new coaches_1.Coaches(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.conferences = new conferences_1.Conferences(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.draft = new draft_1.Draft(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.drives = new drives_1.Drives(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.games = new games_1.Games(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.metrics = new metrics_1.Metrics(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.players = new players_1.Players(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.plays = new plays_1.Plays(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.rankings = new rankings_1.Rankings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.ratings = new ratings_1.Ratings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.recruiting = new recruiting_1.Recruiting(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.stats = new stats_1.Stats(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.teams = new teams_1.Teams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.venues = new venues_1.Venues(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

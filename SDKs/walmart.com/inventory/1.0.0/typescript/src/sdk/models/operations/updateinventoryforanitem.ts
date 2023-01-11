@@ -16,16 +16,16 @@ export class UpdateInventoryForAnItemHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 export enum UpdateInventoryForAnItemApplicationJsonQuantityUnitEnum {
@@ -53,7 +53,7 @@ export class UpdateInventoryForAnItemApplicationJson extends SpeakeasyBase {
 
 export class UpdateInventoryForAnItemRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   object?: UpdateInventoryForAnItemApplicationJson;
@@ -105,5 +105,5 @@ export class UpdateInventoryForAnItemResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateInventoryForAnItem200ApplicationJsonObject?: UpdateInventoryForAnItem200ApplicationJson;
+  updateInventoryForAnItem200ApplicationJSONObject?: UpdateInventoryForAnItem200ApplicationJson;
 }

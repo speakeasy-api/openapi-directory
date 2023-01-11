@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProxyConfigurationTypeEnum } from "./proxyconfigurationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProxyConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var proxyconfigurationtypeenum_1 = require("./proxyconfigurationtypeenum");
 // ProxyConfiguration
 /**
  * <p>The configuration details for the App Mesh proxy.</p> <p>For tasks using the EC2 launch type, the container instances require at least version 1.26.0 of the container agent and at least version 1.26.0-1 of the <code>ecs-init</code> package to enable a proxy configuration. If your container instances are launched from the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required versions of the container agent and <code>ecs-init</code>. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon ECS-optimized Linux AMI</a> </p>
@@ -34,17 +37,17 @@ var ProxyConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerName" }),
         __metadata("design:type", String)
     ], ProxyConfiguration.prototype, "containerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", Object)
     ], ProxyConfiguration.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProxyConfiguration.prototype, "type", void 0);
     return ProxyConfiguration;
-}(SpeakeasyBase));
-export { ProxyConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ProxyConfiguration = ProxyConfiguration;

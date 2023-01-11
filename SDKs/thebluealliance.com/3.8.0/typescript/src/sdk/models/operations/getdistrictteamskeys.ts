@@ -38,11 +38,11 @@ export class GetDistrictTeamsKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDistrictTeamsKeys200ApplicationJsonStrings?: string[];
+  getDistrictTeamsKeys200ApplicationJSONStrings?: string[];
 }

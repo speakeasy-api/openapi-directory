@@ -57,7 +57,7 @@ export declare class PowerFeed extends SpeakeasyBase {
     amperage?: number;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     id?: number;
     lastUpdated?: Date;
     maxUtilization?: number;

@@ -15,6 +15,6 @@ export declare class PatchAppsAppIdRulesRuleIdRequest extends SpeakeasyBase {
 export declare class PatchAppsAppIdRulesRuleIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     ruleResponse?: any;
 }

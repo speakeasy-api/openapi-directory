@@ -10,10 +10,10 @@ import { GooglePrivacyDlpV2SelectedInfoTypes } from "./googleprivacydlpv2selecte
 **/
 export class GooglePrivacyDlpV2ImageTransformation extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allInfoTypes" })
-  allInfoTypes?: Map<string, any>;
+  allInfoTypes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=allText" })
-  allText?: Map<string, any>;
+  allText?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=redactionColor" })
   redactionColor?: GooglePrivacyDlpV2Color;

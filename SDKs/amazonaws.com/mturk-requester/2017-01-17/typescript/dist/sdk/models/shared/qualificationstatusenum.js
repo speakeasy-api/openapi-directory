@@ -1,5 +1,8 @@
-export var QualificationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QualificationStatusEnum = void 0;
+var QualificationStatusEnum;
 (function (QualificationStatusEnum) {
     QualificationStatusEnum["Granted"] = "Granted";
     QualificationStatusEnum["Revoked"] = "Revoked";
-})(QualificationStatusEnum || (QualificationStatusEnum = {}));
+})(QualificationStatusEnum = exports.QualificationStatusEnum || (exports.QualificationStatusEnum = {}));

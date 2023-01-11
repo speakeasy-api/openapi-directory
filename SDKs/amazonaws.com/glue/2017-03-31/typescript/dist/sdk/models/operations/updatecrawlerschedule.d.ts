@@ -24,6 +24,6 @@ export declare class UpdateCrawlerScheduleResponse extends SpeakeasyBase {
     operationTimeoutException?: any;
     schedulerTransitioningException?: any;
     statusCode: number;
-    updateCrawlerScheduleResponse?: Map<string, any>;
+    updateCrawlerScheduleResponse?: Record<string, any>;
     versionMismatchException?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleRecipientEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // BundleRecipientEntity
 /**
  * List Bundle Recipients
@@ -33,25 +36,25 @@ var BundleRecipientEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], BundleRecipientEntity.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BundleRecipientEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], BundleRecipientEntity.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipient" }),
         __metadata("design:type", String)
     ], BundleRecipientEntity.prototype, "recipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sent_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sent_at" }),
         __metadata("design:type", Date)
     ], BundleRecipientEntity.prototype, "sentAt", void 0);
     return BundleRecipientEntity;
-}(SpeakeasyBase));
-export { BundleRecipientEntity };
+}(utils_1.SpeakeasyBase));
+exports.BundleRecipientEntity = BundleRecipientEntity;

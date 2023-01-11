@@ -2,13 +2,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Iteration model to be sent over JSON
 **/
-export declare class IterationInput extends SpeakeasyBase {
-    isDefault?: boolean;
-    name?: string;
-}
-/**
- * Iteration model to be sent over JSON
-**/
 export declare class Iteration extends SpeakeasyBase {
     created?: Date;
     domainId?: string;
@@ -20,4 +13,11 @@ export declare class Iteration extends SpeakeasyBase {
     projectId?: string;
     status?: string;
     trainedAt?: Date;
+}
+/**
+ * Iteration model to be sent over JSON
+**/
+export declare class IterationInput extends SpeakeasyBase {
+    isDefault?: boolean;
+    name?: string;
 }

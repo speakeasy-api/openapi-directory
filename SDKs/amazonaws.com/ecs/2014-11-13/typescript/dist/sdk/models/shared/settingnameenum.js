@@ -1,8 +1,11 @@
-export var SettingNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SettingNameEnum = void 0;
+var SettingNameEnum;
 (function (SettingNameEnum) {
     SettingNameEnum["ServiceLongArnFormat"] = "serviceLongArnFormat";
     SettingNameEnum["TaskLongArnFormat"] = "taskLongArnFormat";
     SettingNameEnum["ContainerInstanceLongArnFormat"] = "containerInstanceLongArnFormat";
     SettingNameEnum["AwsvpcTrunking"] = "awsvpcTrunking";
     SettingNameEnum["ContainerInsights"] = "containerInsights";
-})(SettingNameEnum || (SettingNameEnum = {}));
+})(SettingNameEnum = exports.SettingNameEnum || (exports.SettingNameEnum = {}));

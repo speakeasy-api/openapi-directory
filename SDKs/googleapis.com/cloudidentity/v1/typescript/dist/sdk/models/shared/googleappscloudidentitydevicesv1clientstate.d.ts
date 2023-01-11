@@ -33,7 +33,7 @@ export declare class GoogleAppsCloudidentityDevicesV1ClientState extends Speakea
     customId?: string;
     etag?: string;
     healthScore?: GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
-    keyValuePairs?: Map<string, GoogleAppsCloudidentityDevicesV1CustomAttributeValue>;
+    keyValuePairs?: Record<string, GoogleAppsCloudidentityDevicesV1CustomAttributeValue>;
     lastUpdateTime?: string;
     managed?: GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum;
     name?: string;

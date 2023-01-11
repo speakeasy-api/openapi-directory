@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeDbProxyTargetGroupsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeDbProxyTargetGroupsResponse = exports.PostDescribeDbProxyTargetGroupsRequest = exports.PostDescribeDbProxyTargetGroupsHeaders = exports.PostDescribeDbProxyTargetGroupsQueryParams = exports.PostDescribeDbProxyTargetGroupsVersionEnum = exports.PostDescribeDbProxyTargetGroupsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeDbProxyTargetGroupsActionEnum;
 (function (PostDescribeDbProxyTargetGroupsActionEnum) {
     PostDescribeDbProxyTargetGroupsActionEnum["DescribeDbProxyTargetGroups"] = "DescribeDBProxyTargetGroups";
-})(PostDescribeDbProxyTargetGroupsActionEnum || (PostDescribeDbProxyTargetGroupsActionEnum = {}));
-export var PostDescribeDbProxyTargetGroupsVersionEnum;
+})(PostDescribeDbProxyTargetGroupsActionEnum = exports.PostDescribeDbProxyTargetGroupsActionEnum || (exports.PostDescribeDbProxyTargetGroupsActionEnum = {}));
+var PostDescribeDbProxyTargetGroupsVersionEnum;
 (function (PostDescribeDbProxyTargetGroupsVersionEnum) {
     PostDescribeDbProxyTargetGroupsVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDescribeDbProxyTargetGroupsVersionEnum || (PostDescribeDbProxyTargetGroupsVersionEnum = {}));
+})(PostDescribeDbProxyTargetGroupsVersionEnum = exports.PostDescribeDbProxyTargetGroupsVersionEnum || (exports.PostDescribeDbProxyTargetGroupsVersionEnum = {}));
 var PostDescribeDbProxyTargetGroupsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeDbProxyTargetGroupsQueryParams, _super);
     function PostDescribeDbProxyTargetGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsQueryParams.prototype, "version", void 0);
     return PostDescribeDbProxyTargetGroupsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeDbProxyTargetGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbProxyTargetGroupsQueryParams = PostDescribeDbProxyTargetGroupsQueryParams;
 var PostDescribeDbProxyTargetGroupsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeDbProxyTargetGroupsHeaders, _super);
     function PostDescribeDbProxyTargetGroupsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeDbProxyTargetGroupsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeDbProxyTargetGroupsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbProxyTargetGroupsHeaders = PostDescribeDbProxyTargetGroupsHeaders;
 var PostDescribeDbProxyTargetGroupsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeDbProxyTargetGroupsRequest, _super);
     function PostDescribeDbProxyTargetGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDbProxyTargetGroupsQueryParams)
     ], PostDescribeDbProxyTargetGroupsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDbProxyTargetGroupsHeaders)
     ], PostDescribeDbProxyTargetGroupsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDbProxyTargetGroupsRequest.prototype, "request", void 0);
     return PostDescribeDbProxyTargetGroupsRequest;
-}(SpeakeasyBase));
-export { PostDescribeDbProxyTargetGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbProxyTargetGroupsRequest = PostDescribeDbProxyTargetGroupsRequest;
 var PostDescribeDbProxyTargetGroupsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeDbProxyTargetGroupsResponse, _super);
     function PostDescribeDbProxyTargetGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDbProxyTargetGroupsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeDbProxyTargetGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeDbProxyTargetGroupsResponse.prototype, "statusCode", void 0);
     return PostDescribeDbProxyTargetGroupsResponse;
-}(SpeakeasyBase));
-export { PostDescribeDbProxyTargetGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbProxyTargetGroupsResponse = PostDescribeDbProxyTargetGroupsResponse;

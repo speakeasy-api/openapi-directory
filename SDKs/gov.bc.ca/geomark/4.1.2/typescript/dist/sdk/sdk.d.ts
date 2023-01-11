@@ -5,10 +5,11 @@ import { Feature } from "./feature";
 import { Info } from "./info";
 import { Parts } from "./parts";
 import { Point } from "./point";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://apps.gov.bc.ca/pub/geomark", "https://test.apps.gov.bc.ca/pub/geomark", "https://delivery.apps.gov.bc.ca/pub/geomark"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     boundingBox: BoundingBox;
     create: Create;
@@ -22,6 +23,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

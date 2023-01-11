@@ -44,5 +44,5 @@ export class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse exte
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJsonObject?: EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJson;
+  enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJson;
 }

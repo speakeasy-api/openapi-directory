@@ -111,11 +111,11 @@ export declare class FitcerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    fitcer400ApplicationJsonObject?: Fitcer400ApplicationJson;
-    fitcer401ApplicationJsonObject?: Fitcer401ApplicationJson;
-    fitcer404ApplicationJsonObject?: Fitcer404ApplicationJson;
-    fitcer500ApplicationJsonObject?: Fitcer500ApplicationJson;
-    fitcer502ApplicationJsonObject?: Fitcer502ApplicationJson;
-    fitcer503ApplicationJsonObject?: Fitcer503ApplicationJson;
-    fitcer504ApplicationJsonObject?: Fitcer504ApplicationJson;
+    fitcer400ApplicationJSONObject?: Fitcer400ApplicationJson;
+    fitcer401ApplicationJSONObject?: Fitcer401ApplicationJson;
+    fitcer404ApplicationJSONObject?: Fitcer404ApplicationJson;
+    fitcer500ApplicationJSONObject?: Fitcer500ApplicationJson;
+    fitcer502ApplicationJSONObject?: Fitcer502ApplicationJson;
+    fitcer503ApplicationJSONObject?: Fitcer503ApplicationJson;
+    fitcer504ApplicationJSONObject?: Fitcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RawEmail } from "./rawemail";
-import { SimpleEmail } from "./simpleemail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var rawemail_1 = require("./rawemail");
+var simpleemail_1 = require("./simpleemail");
 // EmailMessage
 /**
  * Specifies the default settings and content for a one-time email message that's sent directly to an endpoint.
@@ -35,33 +38,33 @@ var EmailMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Body" }),
         __metadata("design:type", String)
     ], EmailMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeedbackForwardingAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeedbackForwardingAddress" }),
         __metadata("design:type", String)
     ], EmailMessage.prototype, "feedbackForwardingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromAddress" }),
         __metadata("design:type", String)
     ], EmailMessage.prototype, "fromAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RawEmail" }),
-        __metadata("design:type", RawEmail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RawEmail" }),
+        __metadata("design:type", rawemail_1.RawEmail)
     ], EmailMessage.prototype, "rawEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplyToAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplyToAddresses" }),
         __metadata("design:type", Array)
     ], EmailMessage.prototype, "replyToAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SimpleEmail" }),
-        __metadata("design:type", SimpleEmail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SimpleEmail" }),
+        __metadata("design:type", simpleemail_1.SimpleEmail)
     ], EmailMessage.prototype, "simpleEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Substitutions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Substitutions" }),
+        __metadata("design:type", Object)
     ], EmailMessage.prototype, "substitutions", void 0);
     return EmailMessage;
-}(SpeakeasyBase));
-export { EmailMessage };
+}(utils_1.SpeakeasyBase));
+exports.EmailMessage = EmailMessage;

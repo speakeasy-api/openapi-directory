@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Settings = exports.SettingsTrackingCategories = exports.SettingsTrackingCategoriesTimesheetCategories = exports.SettingsTrackingCategoriesEmployeeGroups = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
 // SettingsTrackingCategoriesEmployeeGroups
 /**
  * The tracking category used for employees
@@ -34,16 +37,16 @@ var SettingsTrackingCategoriesEmployeeGroups = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingCategoryID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingCategoryID" }),
         __metadata("design:type", String)
-    ], SettingsTrackingCategoriesEmployeeGroups.prototype, "trackingCategoryId", void 0);
+    ], SettingsTrackingCategoriesEmployeeGroups.prototype, "trackingCategoryID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingCategoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingCategoryName" }),
         __metadata("design:type", String)
     ], SettingsTrackingCategoriesEmployeeGroups.prototype, "trackingCategoryName", void 0);
     return SettingsTrackingCategoriesEmployeeGroups;
-}(SpeakeasyBase));
-export { SettingsTrackingCategoriesEmployeeGroups };
+}(utils_1.SpeakeasyBase));
+exports.SettingsTrackingCategoriesEmployeeGroups = SettingsTrackingCategoriesEmployeeGroups;
 // SettingsTrackingCategoriesTimesheetCategories
 /**
  * The tracking category used for timesheets
@@ -54,16 +57,16 @@ var SettingsTrackingCategoriesTimesheetCategories = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingCategoryID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingCategoryID" }),
         __metadata("design:type", String)
-    ], SettingsTrackingCategoriesTimesheetCategories.prototype, "trackingCategoryId", void 0);
+    ], SettingsTrackingCategoriesTimesheetCategories.prototype, "trackingCategoryID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingCategoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingCategoryName" }),
         __metadata("design:type", String)
     ], SettingsTrackingCategoriesTimesheetCategories.prototype, "trackingCategoryName", void 0);
     return SettingsTrackingCategoriesTimesheetCategories;
-}(SpeakeasyBase));
-export { SettingsTrackingCategoriesTimesheetCategories };
+}(utils_1.SpeakeasyBase));
+exports.SettingsTrackingCategoriesTimesheetCategories = SettingsTrackingCategoriesTimesheetCategories;
 // SettingsTrackingCategories
 /**
  * Tracking categories for Employees and Timesheets
@@ -74,33 +77,33 @@ var SettingsTrackingCategories = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeGroups" }),
         __metadata("design:type", SettingsTrackingCategoriesEmployeeGroups)
     ], SettingsTrackingCategories.prototype, "employeeGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetCategories" }),
         __metadata("design:type", SettingsTrackingCategoriesTimesheetCategories)
     ], SettingsTrackingCategories.prototype, "timesheetCategories", void 0);
     return SettingsTrackingCategories;
-}(SpeakeasyBase));
-export { SettingsTrackingCategories };
+}(utils_1.SpeakeasyBase));
+exports.SettingsTrackingCategories = SettingsTrackingCategories;
 var Settings = /** @class */ (function (_super) {
     __extends(Settings, _super);
     function Settings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Accounts", elemType: Account }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Accounts", elemType: account_1.Account }),
         __metadata("design:type", Array)
     ], Settings.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DaysInPayrollYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DaysInPayrollYear" }),
         __metadata("design:type", Number)
     ], Settings.prototype, "daysInPayrollYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingCategories" }),
         __metadata("design:type", SettingsTrackingCategories)
     ], Settings.prototype, "trackingCategories", void 0);
     return Settings;
-}(SpeakeasyBase));
-export { Settings };
+}(utils_1.SpeakeasyBase));
+exports.Settings = Settings;

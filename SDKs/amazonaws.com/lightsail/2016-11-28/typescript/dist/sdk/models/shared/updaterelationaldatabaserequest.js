@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRelationalDatabaseRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRelationalDatabaseRequest = /** @class */ (function (_super) {
     __extends(UpdateRelationalDatabaseRequest, _super);
     function UpdateRelationalDatabaseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyImmediately" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyImmediately" }),
         __metadata("design:type", Boolean)
     ], UpdateRelationalDatabaseRequest.prototype, "applyImmediately", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificateIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificateIdentifier" }),
         __metadata("design:type", String)
     ], UpdateRelationalDatabaseRequest.prototype, "caCertificateIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableBackupRetention" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableBackupRetention" }),
         __metadata("design:type", Boolean)
     ], UpdateRelationalDatabaseRequest.prototype, "disableBackupRetention", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableBackupRetention" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableBackupRetention" }),
         __metadata("design:type", Boolean)
     ], UpdateRelationalDatabaseRequest.prototype, "enableBackupRetention", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterUserPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterUserPassword" }),
         __metadata("design:type", String)
     ], UpdateRelationalDatabaseRequest.prototype, "masterUserPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredBackupWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredBackupWindow" }),
         __metadata("design:type", String)
     ], UpdateRelationalDatabaseRequest.prototype, "preferredBackupWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredMaintenanceWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredMaintenanceWindow" }),
         __metadata("design:type", String)
     ], UpdateRelationalDatabaseRequest.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publiclyAccessible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publiclyAccessible" }),
         __metadata("design:type", Boolean)
     ], UpdateRelationalDatabaseRequest.prototype, "publiclyAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseName" }),
         __metadata("design:type", String)
     ], UpdateRelationalDatabaseRequest.prototype, "relationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotateMasterUserPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotateMasterUserPassword" }),
         __metadata("design:type", Boolean)
     ], UpdateRelationalDatabaseRequest.prototype, "rotateMasterUserPassword", void 0);
     return UpdateRelationalDatabaseRequest;
-}(SpeakeasyBase));
-export { UpdateRelationalDatabaseRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRelationalDatabaseRequest = UpdateRelationalDatabaseRequest;

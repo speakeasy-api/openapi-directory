@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LineItemFulfillmentInstructions = void 0;
+var utils_1 = require("../../../internal/utils");
 // LineItemFulfillmentInstructions
 /**
  * This type contains the specifications for processing the fulfillment of a line item, including the handling window and the delivery window. These fields provide guidance for eBay Guaranteed Delivery as well as for non-guaranteed delivery.
@@ -33,21 +36,21 @@ var LineItemFulfillmentInstructions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guaranteedDelivery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guaranteedDelivery" }),
         __metadata("design:type", Boolean)
     ], LineItemFulfillmentInstructions.prototype, "guaranteedDelivery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], LineItemFulfillmentInstructions.prototype, "maxEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], LineItemFulfillmentInstructions.prototype, "minEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipByDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipByDate" }),
         __metadata("design:type", String)
     ], LineItemFulfillmentInstructions.prototype, "shipByDate", void 0);
     return LineItemFulfillmentInstructions;
-}(SpeakeasyBase));
-export { LineItemFulfillmentInstructions };
+}(utils_1.SpeakeasyBase));
+exports.LineItemFulfillmentInstructions = LineItemFulfillmentInstructions;

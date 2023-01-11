@@ -42,7 +42,7 @@ export class ListFindingsHeaders extends SpeakeasyBase {
 **/
 export class ListFindingsRequestBodyFindingCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criterion", elemType: shared.CriterionAdditionalProperties })
-  criterion?: Map<string, shared.CriterionAdditionalProperties>;
+  criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 
 

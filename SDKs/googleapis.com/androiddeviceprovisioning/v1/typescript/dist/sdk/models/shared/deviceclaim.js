@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeviceClaimAdditionalServiceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceClaim = exports.DeviceClaimSectionTypeEnum = exports.DeviceClaimAdditionalServiceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeviceClaimAdditionalServiceEnum;
 (function (DeviceClaimAdditionalServiceEnum) {
     DeviceClaimAdditionalServiceEnum["AdditionalServiceUnspecified"] = "ADDITIONAL_SERVICE_UNSPECIFIED";
     DeviceClaimAdditionalServiceEnum["DeviceProtection"] = "DEVICE_PROTECTION";
-})(DeviceClaimAdditionalServiceEnum || (DeviceClaimAdditionalServiceEnum = {}));
-export var DeviceClaimSectionTypeEnum;
+})(DeviceClaimAdditionalServiceEnum = exports.DeviceClaimAdditionalServiceEnum || (exports.DeviceClaimAdditionalServiceEnum = {}));
+var DeviceClaimSectionTypeEnum;
 (function (DeviceClaimSectionTypeEnum) {
     DeviceClaimSectionTypeEnum["SectionTypeUnspecified"] = "SECTION_TYPE_UNSPECIFIED";
     DeviceClaimSectionTypeEnum["SectionTypeSimLock"] = "SECTION_TYPE_SIM_LOCK";
     DeviceClaimSectionTypeEnum["SectionTypeZeroTouch"] = "SECTION_TYPE_ZERO_TOUCH";
-})(DeviceClaimSectionTypeEnum || (DeviceClaimSectionTypeEnum = {}));
+})(DeviceClaimSectionTypeEnum = exports.DeviceClaimSectionTypeEnum || (exports.DeviceClaimSectionTypeEnum = {}));
 // DeviceClaim
 /**
  * A record of a device claimed by a reseller for a customer. Devices claimed for zero-touch enrollment have a claim with the type `SECTION_TYPE_ZERO_TOUCH`. To learn more, read [Claim devices for customers](/zero-touch/guides/how-it-works#claim).
@@ -44,33 +47,33 @@ var DeviceClaim = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalService" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "additionalService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleWorkspaceCustomerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleWorkspaceCustomerId" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "googleWorkspaceCustomerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerCompanyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerCompanyId" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "ownerCompanyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resellerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resellerId" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "resellerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectionType" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "sectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeExpireTime" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "vacationModeExpireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeStartTime" }),
         __metadata("design:type", String)
     ], DeviceClaim.prototype, "vacationModeStartTime", void 0);
     return DeviceClaim;
-}(SpeakeasyBase));
-export { DeviceClaim };
+}(utils_1.SpeakeasyBase));
+exports.DeviceClaim = DeviceClaim;

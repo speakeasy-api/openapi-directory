@@ -20,7 +20,7 @@ export declare enum WritablePowerFeedTypeEnum {
 export declare class WritablePowerFeedInput extends SpeakeasyBase {
     amperage?: number;
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     maxUtilization?: number;
     name: string;
     phase?: WritablePowerFeedPhaseEnum;

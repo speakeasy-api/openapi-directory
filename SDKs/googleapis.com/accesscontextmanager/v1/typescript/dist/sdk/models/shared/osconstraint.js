@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OsConstraintOsTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OsConstraint = exports.OsConstraintOsTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OsConstraintOsTypeEnum;
 (function (OsConstraintOsTypeEnum) {
     OsConstraintOsTypeEnum["OsUnspecified"] = "OS_UNSPECIFIED";
     OsConstraintOsTypeEnum["DesktopMac"] = "DESKTOP_MAC";
@@ -32,7 +35,7 @@ export var OsConstraintOsTypeEnum;
     OsConstraintOsTypeEnum["DesktopChromeOs"] = "DESKTOP_CHROME_OS";
     OsConstraintOsTypeEnum["Android"] = "ANDROID";
     OsConstraintOsTypeEnum["Ios"] = "IOS";
-})(OsConstraintOsTypeEnum || (OsConstraintOsTypeEnum = {}));
+})(OsConstraintOsTypeEnum = exports.OsConstraintOsTypeEnum || (exports.OsConstraintOsTypeEnum = {}));
 // OsConstraint
 /**
  * A restriction on the OS type and version of devices making requests.
@@ -43,17 +46,17 @@ var OsConstraint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumVersion" }),
         __metadata("design:type", String)
     ], OsConstraint.prototype, "minimumVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osType" }),
         __metadata("design:type", String)
     ], OsConstraint.prototype, "osType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireVerifiedChromeOs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireVerifiedChromeOs" }),
         __metadata("design:type", Boolean)
     ], OsConstraint.prototype, "requireVerifiedChromeOs", void 0);
     return OsConstraint;
-}(SpeakeasyBase));
-export { OsConstraint };
+}(utils_1.SpeakeasyBase));
+exports.OsConstraint = OsConstraint;

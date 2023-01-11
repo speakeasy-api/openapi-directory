@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationSchema } from "./destinationschema";
-import { KinesisFirehoseOutputUpdate } from "./kinesisfirehoseoutputupdate";
-import { KinesisStreamsOutputUpdate } from "./kinesisstreamsoutputupdate";
-import { LambdaOutputUpdate } from "./lambdaoutputupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OutputUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationschema_1 = require("./destinationschema");
+var kinesisfirehoseoutputupdate_1 = require("./kinesisfirehoseoutputupdate");
+var kinesisstreamsoutputupdate_1 = require("./kinesisstreamsoutputupdate");
+var lambdaoutputupdate_1 = require("./lambdaoutputupdate");
 // OutputUpdate
 /**
  *  Describes updates to the output configuration identified by the <code>OutputId</code>.
@@ -37,29 +40,29 @@ var OutputUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationSchemaUpdate" }),
-        __metadata("design:type", DestinationSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationSchemaUpdate" }),
+        __metadata("design:type", destinationschema_1.DestinationSchema)
     ], OutputUpdate.prototype, "destinationSchemaUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisFirehoseOutputUpdate" }),
-        __metadata("design:type", KinesisFirehoseOutputUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisFirehoseOutputUpdate" }),
+        __metadata("design:type", kinesisfirehoseoutputupdate_1.KinesisFirehoseOutputUpdate)
     ], OutputUpdate.prototype, "kinesisFirehoseOutputUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisStreamsOutputUpdate" }),
-        __metadata("design:type", KinesisStreamsOutputUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisStreamsOutputUpdate" }),
+        __metadata("design:type", kinesisstreamsoutputupdate_1.KinesisStreamsOutputUpdate)
     ], OutputUpdate.prototype, "kinesisStreamsOutputUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LambdaOutputUpdate" }),
-        __metadata("design:type", LambdaOutputUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LambdaOutputUpdate" }),
+        __metadata("design:type", lambdaoutputupdate_1.LambdaOutputUpdate)
     ], OutputUpdate.prototype, "lambdaOutputUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NameUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NameUpdate" }),
         __metadata("design:type", String)
     ], OutputUpdate.prototype, "nameUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputId" }),
         __metadata("design:type", String)
     ], OutputUpdate.prototype, "outputId", void 0);
     return OutputUpdate;
-}(SpeakeasyBase));
-export { OutputUpdate };
+}(utils_1.SpeakeasyBase));
+exports.OutputUpdate = OutputUpdate;

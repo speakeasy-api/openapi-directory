@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuspendUserResponse = exports.SuspendUserRequest = exports.SuspendUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SuspendUserPathParams = /** @class */ (function (_super) {
     __extends(SuspendUserPathParams, _super);
     function SuspendUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], SuspendUserPathParams.prototype, "userId", void 0);
     return SuspendUserPathParams;
-}(SpeakeasyBase));
-export { SuspendUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SuspendUserPathParams = SuspendUserPathParams;
 var SuspendUserRequest = /** @class */ (function (_super) {
     __extends(SuspendUserRequest, _super);
     function SuspendUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SuspendUserPathParams)
     ], SuspendUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/plain" }),
         __metadata("design:type", Uint8Array)
     ], SuspendUserRequest.prototype, "request", void 0);
     return SuspendUserRequest;
-}(SpeakeasyBase));
-export { SuspendUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.SuspendUserRequest = SuspendUserRequest;
 var SuspendUserResponse = /** @class */ (function (_super) {
     __extends(SuspendUserResponse, _super);
     function SuspendUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SuspendUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SuspendUserResponse.prototype, "statusCode", void 0);
     return SuspendUserResponse;
-}(SpeakeasyBase));
-export { SuspendUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.SuspendUserResponse = SuspendUserResponse;

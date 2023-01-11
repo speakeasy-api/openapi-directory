@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { HscerRequest, HscerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: HscerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "voluptas",
-      fullName: "repellendus",
-      rroll: "eos",
-      uid: "quasi",
-      year: "ut",
+      dob: "sit",
+      fullName: "voluptas",
+      rroll: "culpa",
+      uid: "expedita",
+      year: "consequuntur",
     },
-    consentArtifact: "suscipit",
+    consentArtifact: "dolor",
     format: "pdf",
-    txnId: "ab",
+    txnId: "voluptas",
   },
 };
 
-sdk.sdk.hscer(req).then((res: HscerResponse | AxiosError) => {
+sdk.apIs.hscer(req).then((res: HscerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -59,7 +58,7 @@ sdk.sdk.hscer(req).then((res: HscerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hscer` - Class XII Marksheet
 * `hsmgr` - Class XII Migration Certificate

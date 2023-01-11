@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstLastNameGeoIn = void 0;
+var utils_1 = require("../../../internal/utils");
 var FirstLastNameGeoIn = /** @class */ (function (_super) {
     __extends(FirstLastNameGeoIn, _super);
     function FirstLastNameGeoIn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryIso2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryIso2" }),
         __metadata("design:type", String)
     ], FirstLastNameGeoIn.prototype, "countryIso2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], FirstLastNameGeoIn.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FirstLastNameGeoIn.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], FirstLastNameGeoIn.prototype, "lastName", void 0);
     return FirstLastNameGeoIn;
-}(SpeakeasyBase));
-export { FirstLastNameGeoIn };
+}(utils_1.SpeakeasyBase));
+exports.FirstLastNameGeoIn = FirstLastNameGeoIn;

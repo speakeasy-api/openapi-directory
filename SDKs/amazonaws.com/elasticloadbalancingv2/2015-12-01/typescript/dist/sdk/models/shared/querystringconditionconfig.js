@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryStringKeyValuePair } from "./querystringkeyvaluepair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryStringConditionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var querystringkeyvaluepair_1 = require("./querystringkeyvaluepair");
 // QueryStringConditionConfig
 /**
  * <p>Information about a query string condition.</p> <p>The query string component of a URI starts after the first '?' character and is terminated by either a '#' character or the end of the URI. A typical query string contains key/value pairs separated by '&amp;' characters. The allowed characters are specified by RFC 3986. Any character can be percentage encoded.</p>
@@ -34,9 +37,9 @@ var QueryStringConditionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: QueryStringKeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: querystringkeyvaluepair_1.QueryStringKeyValuePair }),
         __metadata("design:type", Array)
     ], QueryStringConditionConfig.prototype, "values", void 0);
     return QueryStringConditionConfig;
-}(SpeakeasyBase));
-export { QueryStringConditionConfig };
+}(utils_1.SpeakeasyBase));
+exports.QueryStringConditionConfig = QueryStringConditionConfig;

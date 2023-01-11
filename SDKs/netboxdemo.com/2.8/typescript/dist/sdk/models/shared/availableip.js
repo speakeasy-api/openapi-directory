@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedVrf } from "./nestedvrf";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AvailableIp = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedvrf_1 = require("./nestedvrf");
 var AvailableIp = /** @class */ (function (_super) {
     __extends(AvailableIp, _super);
     function AvailableIp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], AvailableIp.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", Number)
     ], AvailableIp.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vrf" }),
-        __metadata("design:type", NestedVrf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vrf" }),
+        __metadata("design:type", nestedvrf_1.NestedVrf)
     ], AvailableIp.prototype, "vrf", void 0);
     return AvailableIp;
-}(SpeakeasyBase));
-export { AvailableIp };
+}(utils_1.SpeakeasyBase));
+exports.AvailableIp = AvailableIp;

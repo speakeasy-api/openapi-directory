@@ -37,5 +37,5 @@ export class UpdateNetworkClientPolicyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkClientPolicy200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkClientPolicy200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountsGetRequestOptions } from "./accountsgetrequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountsGetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountsgetrequestoptions_1 = require("./accountsgetrequestoptions");
 // AccountsGetRequest
 /**
  * AccountsGetRequest defines the request schema for `/accounts/get`
@@ -34,21 +37,21 @@ var AccountsGetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], AccountsGetRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], AccountsGetRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", AccountsGetRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", accountsgetrequestoptions_1.AccountsGetRequestOptions)
     ], AccountsGetRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], AccountsGetRequest.prototype, "secret", void 0);
     return AccountsGetRequest;
-}(SpeakeasyBase));
-export { AccountsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.AccountsGetRequest = AccountsGetRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Compatibility } from "./compatibility";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddonVersionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var compatibility_1 = require("./compatibility");
 // AddonVersionInfo
 /**
  * Information about an add-on version.
@@ -34,17 +37,17 @@ var AddonVersionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addonVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addonVersion" }),
         __metadata("design:type", String)
     ], AddonVersionInfo.prototype, "addonVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=architecture" }),
         __metadata("design:type", Array)
     ], AddonVersionInfo.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibilities", elemType: Compatibility }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibilities", elemType: compatibility_1.Compatibility }),
         __metadata("design:type", Array)
     ], AddonVersionInfo.prototype, "compatibilities", void 0);
     return AddonVersionInfo;
-}(SpeakeasyBase));
-export { AddonVersionInfo };
+}(utils_1.SpeakeasyBase));
+exports.AddonVersionInfo = AddonVersionInfo;

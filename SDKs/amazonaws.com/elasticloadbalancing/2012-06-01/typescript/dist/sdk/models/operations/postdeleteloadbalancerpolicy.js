@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteLoadBalancerPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteLoadBalancerPolicyResponse = exports.PostDeleteLoadBalancerPolicyRequest = exports.PostDeleteLoadBalancerPolicyHeaders = exports.PostDeleteLoadBalancerPolicyQueryParams = exports.PostDeleteLoadBalancerPolicyVersionEnum = exports.PostDeleteLoadBalancerPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteLoadBalancerPolicyActionEnum;
 (function (PostDeleteLoadBalancerPolicyActionEnum) {
     PostDeleteLoadBalancerPolicyActionEnum["DeleteLoadBalancerPolicy"] = "DeleteLoadBalancerPolicy";
-})(PostDeleteLoadBalancerPolicyActionEnum || (PostDeleteLoadBalancerPolicyActionEnum = {}));
-export var PostDeleteLoadBalancerPolicyVersionEnum;
+})(PostDeleteLoadBalancerPolicyActionEnum = exports.PostDeleteLoadBalancerPolicyActionEnum || (exports.PostDeleteLoadBalancerPolicyActionEnum = {}));
+var PostDeleteLoadBalancerPolicyVersionEnum;
 (function (PostDeleteLoadBalancerPolicyVersionEnum) {
     PostDeleteLoadBalancerPolicyVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(PostDeleteLoadBalancerPolicyVersionEnum || (PostDeleteLoadBalancerPolicyVersionEnum = {}));
+})(PostDeleteLoadBalancerPolicyVersionEnum = exports.PostDeleteLoadBalancerPolicyVersionEnum || (exports.PostDeleteLoadBalancerPolicyVersionEnum = {}));
 var PostDeleteLoadBalancerPolicyQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteLoadBalancerPolicyQueryParams, _super);
     function PostDeleteLoadBalancerPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyQueryParams.prototype, "version", void 0);
     return PostDeleteLoadBalancerPolicyQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteLoadBalancerPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLoadBalancerPolicyQueryParams = PostDeleteLoadBalancerPolicyQueryParams;
 var PostDeleteLoadBalancerPolicyHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteLoadBalancerPolicyHeaders, _super);
     function PostDeleteLoadBalancerPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteLoadBalancerPolicyHeaders;
-}(SpeakeasyBase));
-export { PostDeleteLoadBalancerPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLoadBalancerPolicyHeaders = PostDeleteLoadBalancerPolicyHeaders;
 var PostDeleteLoadBalancerPolicyRequest = /** @class */ (function (_super) {
     __extends(PostDeleteLoadBalancerPolicyRequest, _super);
     function PostDeleteLoadBalancerPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteLoadBalancerPolicyQueryParams)
     ], PostDeleteLoadBalancerPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteLoadBalancerPolicyHeaders)
     ], PostDeleteLoadBalancerPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteLoadBalancerPolicyRequest.prototype, "request", void 0);
     return PostDeleteLoadBalancerPolicyRequest;
-}(SpeakeasyBase));
-export { PostDeleteLoadBalancerPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLoadBalancerPolicyRequest = PostDeleteLoadBalancerPolicyRequest;
 var PostDeleteLoadBalancerPolicyResponse = /** @class */ (function (_super) {
     __extends(PostDeleteLoadBalancerPolicyResponse, _super);
     function PostDeleteLoadBalancerPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteLoadBalancerPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteLoadBalancerPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteLoadBalancerPolicyResponse.prototype, "statusCode", void 0);
     return PostDeleteLoadBalancerPolicyResponse;
-}(SpeakeasyBase));
-export { PostDeleteLoadBalancerPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLoadBalancerPolicyResponse = PostDeleteLoadBalancerPolicyResponse;

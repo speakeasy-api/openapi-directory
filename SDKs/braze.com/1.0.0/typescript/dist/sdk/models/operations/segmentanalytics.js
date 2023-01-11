@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentAnalyticsResponse = exports.SegmentAnalyticsRequest = exports.SegmentAnalyticsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SegmentAnalyticsQueryParams = /** @class */ (function (_super) {
     __extends(SegmentAnalyticsQueryParams, _super);
     function SegmentAnalyticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], SegmentAnalyticsQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], SegmentAnalyticsQueryParams.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=segment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=segment_id" }),
         __metadata("design:type", String)
     ], SegmentAnalyticsQueryParams.prototype, "segmentId", void 0);
     return SegmentAnalyticsQueryParams;
-}(SpeakeasyBase));
-export { SegmentAnalyticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SegmentAnalyticsQueryParams = SegmentAnalyticsQueryParams;
 var SegmentAnalyticsRequest = /** @class */ (function (_super) {
     __extends(SegmentAnalyticsRequest, _super);
     function SegmentAnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SegmentAnalyticsQueryParams)
     ], SegmentAnalyticsRequest.prototype, "queryParams", void 0);
     return SegmentAnalyticsRequest;
-}(SpeakeasyBase));
-export { SegmentAnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SegmentAnalyticsRequest = SegmentAnalyticsRequest;
 var SegmentAnalyticsResponse = /** @class */ (function (_super) {
     __extends(SegmentAnalyticsResponse, _super);
     function SegmentAnalyticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SegmentAnalyticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SegmentAnalyticsResponse.prototype, "statusCode", void 0);
     return SegmentAnalyticsResponse;
-}(SpeakeasyBase));
-export { SegmentAnalyticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SegmentAnalyticsResponse = SegmentAnalyticsResponse;

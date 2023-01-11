@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoundingBox = void 0;
+var utils_1 = require("../../../internal/utils");
 var BoundingBox = /** @class */ (function (_super) {
     __extends(BoundingBox, _super);
     function BoundingBox() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxX" }),
         __metadata("design:type", Number)
     ], BoundingBox.prototype, "maxX", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxY" }),
         __metadata("design:type", Number)
     ], BoundingBox.prototype, "maxY", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minX" }),
         __metadata("design:type", Number)
     ], BoundingBox.prototype, "minX", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minY" }),
         __metadata("design:type", Number)
     ], BoundingBox.prototype, "minY", void 0);
     return BoundingBox;
-}(SpeakeasyBase));
-export { BoundingBox };
+}(utils_1.SpeakeasyBase));
+exports.BoundingBox = BoundingBox;

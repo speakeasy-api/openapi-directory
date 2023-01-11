@@ -1,6 +1,9 @@
-export var AutoRollbackEventEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoRollbackEventEnum = void 0;
+var AutoRollbackEventEnum;
 (function (AutoRollbackEventEnum) {
     AutoRollbackEventEnum["DeploymentFailure"] = "DEPLOYMENT_FAILURE";
     AutoRollbackEventEnum["DeploymentStopOnAlarm"] = "DEPLOYMENT_STOP_ON_ALARM";
     AutoRollbackEventEnum["DeploymentStopOnRequest"] = "DEPLOYMENT_STOP_ON_REQUEST";
-})(AutoRollbackEventEnum || (AutoRollbackEventEnum = {}));
+})(AutoRollbackEventEnum = exports.AutoRollbackEventEnum || (exports.AutoRollbackEventEnum = {}));

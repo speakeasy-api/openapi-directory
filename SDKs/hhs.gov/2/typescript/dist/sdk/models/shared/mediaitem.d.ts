@@ -19,7 +19,7 @@ export declare class MediaItem extends SpeakeasyBase {
     description?: string;
     extendedAttributes?: ExtendedAttribute[];
     externalGuid?: string;
-    foreignSyndicationApiUrl?: string;
+    foreignSyndicationAPIUrl?: string;
     hash?: string;
     id?: number;
     language?: Language;

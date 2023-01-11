@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetTimesheetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=TimesheetID" })
-  timesheetId: string;
+  timesheetID: string;
 }
 
 

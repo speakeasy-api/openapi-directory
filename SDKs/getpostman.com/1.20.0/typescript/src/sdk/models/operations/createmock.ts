@@ -58,5 +58,5 @@ export class CreateMockResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createMock200ApplicationJsonObject?: CreateMock200ApplicationJson;
+  createMock200ApplicationJSONObject?: CreateMock200ApplicationJson;
 }

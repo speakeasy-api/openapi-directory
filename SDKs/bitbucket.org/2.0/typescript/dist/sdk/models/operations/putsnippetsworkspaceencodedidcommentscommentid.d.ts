@@ -17,5 +17,5 @@ export declare class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest exten
 export declare class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

@@ -1,8 +1,37 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservationValue } from "./reservationvalue";
-import { ReservedInstanceReservationValue } from "./reservedinstancereservationvalue";
-import { TargetReservationValue } from "./targetreservationvalue";
 
+
+
+// GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup
+/** 
+ * The cost associated with the Reserved Instance.
+**/
+export class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  hourlyPrice?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  remainingTotalValue?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  remainingUpfrontValue?: Record<string, any>;
+}
+
+
+// GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup
+/** 
+ * The cost associated with the Reserved Instance.
+**/
+export class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  hourlyPrice?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  remainingTotalValue?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  remainingUpfrontValue?: Record<string, any>;
+}
 
 
 // GetReservedInstancesExchangeQuoteResult
@@ -11,29 +40,29 @@ import { TargetReservationValue } from "./targetreservationvalue";
 **/
 export class GetReservedInstancesExchangeQuoteResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  currencyCode?: string;
+  currencyCode?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  isValidExchange?: boolean;
+  isValidExchange?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  outputReservedInstancesWillExpireAt?: Date;
+  outputReservedInstancesWillExpireAt?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  paymentDue?: string;
+  paymentDue?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  reservedInstanceValueRollup?: ReservationValue;
-
-  @SpeakeasyMetadata({ elemType: ReservedInstanceReservationValue })
-  reservedInstanceValueSet?: ReservedInstanceReservationValue[];
+  reservedInstanceValueRollup?: GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup;
 
   @SpeakeasyMetadata()
-  targetConfigurationValueRollup?: ReservationValue;
-
-  @SpeakeasyMetadata({ elemType: TargetReservationValue })
-  targetConfigurationValueSet?: TargetReservationValue[];
+  reservedInstanceValueSet?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  validationFailureReason?: string;
+  targetConfigurationValueRollup?: GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup;
+
+  @SpeakeasyMetadata()
+  targetConfigurationValueSet?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  validationFailureReason?: Record<string, any>;
 }

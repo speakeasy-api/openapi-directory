@@ -15,7 +15,7 @@ export class RealtimeLogConfig extends SpeakeasyBase {
   endPoints: EndPoint[];
 
   @SpeakeasyMetadata()
-  fields: string[];
+  fields: Record<string, any>[];
 
   @SpeakeasyMetadata()
   name: string;

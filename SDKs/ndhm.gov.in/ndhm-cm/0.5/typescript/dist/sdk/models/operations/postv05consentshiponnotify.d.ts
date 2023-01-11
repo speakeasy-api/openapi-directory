@@ -4,7 +4,7 @@ export declare class PostV05ConsentsHipOnNotifyHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05ConsentsHipOnNotifyRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     hipConsentNotificationResponse?: shared.HipConsentNotificationResponse;
 }
 export declare class PostV05ConsentsHipOnNotifyRequest extends SpeakeasyBase {

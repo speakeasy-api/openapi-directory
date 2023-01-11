@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DescribeGroupRequest, DescribeGroupResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: DescribeGroupRequest = {
   headers: {
-    xAmzAlgorithm: "saepe",
-    xAmzContentSha256: "ut",
-    xAmzCredential: "praesentium",
-    xAmzDate: "minus",
-    xAmzSecurityToken: "accusantium",
-    xAmzSignature: "reiciendis",
-    xAmzSignedHeaders: "consectetur",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSIdentityStore.DescribeGroup",
   },
   request: {
-    groupId: "non",
-    identityStoreId: "temporibus",
+    groupId: "fugit",
+    identityStoreId: "et",
   },
 };
 
-sdk.sdk.describeGroup(req).then((res: DescribeGroupResponse | AxiosError) => {
+sdk.describeGroup(req).then((res: DescribeGroupResponse | AxiosError) => {
    // handle response
 });
 ```

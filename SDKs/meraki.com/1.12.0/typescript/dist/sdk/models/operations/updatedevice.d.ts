@@ -20,5 +20,5 @@ export declare class UpdateDeviceRequest extends SpeakeasyBase {
 export declare class UpdateDeviceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDevice200ApplicationJsonObject?: Map<string, any>;
+    updateDevice200ApplicationJSONObject?: Record<string, any>;
 }

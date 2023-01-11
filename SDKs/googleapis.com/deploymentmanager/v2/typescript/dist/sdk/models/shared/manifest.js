@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigFile } from "./configfile";
-import { ImportFile } from "./importfile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Manifest = void 0;
+var utils_1 = require("../../../internal/utils");
+var configfile_1 = require("./configfile");
+var importfile_1 = require("./importfile");
 var Manifest = /** @class */ (function (_super) {
     __extends(Manifest, _super);
     function Manifest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ConfigFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", configfile_1.ConfigFile)
     ], Manifest.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expandedConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expandedConfig" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "expandedConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imports", elemType: ImportFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imports", elemType: importfile_1.ImportFile }),
         __metadata("design:type", Array)
     ], Manifest.prototype, "imports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertTime" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "insertTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layout" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "layout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manifestSizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manifestSizeBytes" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "manifestSizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manifestSizeLimitBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manifestSizeLimitBytes" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "manifestSizeLimitBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Manifest.prototype, "selfLink", void 0);
     return Manifest;
-}(SpeakeasyBase));
-export { Manifest };
+}(utils_1.SpeakeasyBase));
+exports.Manifest = Manifest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdsReputationHistoryResponse = exports.GetUsersIdsReputationHistoryRequest = exports.GetUsersIdsReputationHistoryQueryParams = exports.GetUsersIdsReputationHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdsReputationHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationHistoryPathParams, _super);
     function GetUsersIdsReputationHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationHistoryPathParams.prototype, "ids", void 0);
     return GetUsersIdsReputationHistoryPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationHistoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationHistoryPathParams = GetUsersIdsReputationHistoryPathParams;
 var GetUsersIdsReputationHistoryQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationHistoryQueryParams, _super);
     function GetUsersIdsReputationHistoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationHistoryQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationHistoryQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationHistoryQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationHistoryQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationHistoryQueryParams.prototype, "site", void 0);
     return GetUsersIdsReputationHistoryQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationHistoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationHistoryQueryParams = GetUsersIdsReputationHistoryQueryParams;
 var GetUsersIdsReputationHistoryRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationHistoryRequest, _super);
     function GetUsersIdsReputationHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsReputationHistoryPathParams)
     ], GetUsersIdsReputationHistoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsReputationHistoryQueryParams)
     ], GetUsersIdsReputationHistoryRequest.prototype, "queryParams", void 0);
     return GetUsersIdsReputationHistoryRequest;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationHistoryRequest = GetUsersIdsReputationHistoryRequest;
 var GetUsersIdsReputationHistoryResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationHistoryResponse, _super);
     function GetUsersIdsReputationHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdsReputationHistoryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdsReputationHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationHistoryResponse.prototype, "statusCode", void 0);
     return GetUsersIdsReputationHistoryResponse;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationHistoryResponse = GetUsersIdsReputationHistoryResponse;

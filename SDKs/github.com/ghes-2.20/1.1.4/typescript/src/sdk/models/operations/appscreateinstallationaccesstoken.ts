@@ -56,7 +56,7 @@ export class AppsCreateInstallationAccessTokenResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsCreateInstallationAccessToken415ApplicationJsonObject?: AppsCreateInstallationAccessToken415ApplicationJson;
+  appsCreateInstallationAccessToken415ApplicationJSONObject?: AppsCreateInstallationAccessToken415ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

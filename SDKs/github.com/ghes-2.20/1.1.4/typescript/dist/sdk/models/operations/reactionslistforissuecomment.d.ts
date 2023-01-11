@@ -5,18 +5,8 @@ export declare class ReactionsListForIssueCommentPathParams extends SpeakeasyBas
     owner: string;
     repo: string;
 }
-export declare enum ReactionsListForIssueCommentContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
 export declare class ReactionsListForIssueCommentQueryParams extends SpeakeasyBase {
-    content?: ReactionsListForIssueCommentContentEnum;
+    content?: shared.CommentIdEnum;
     page?: number;
     perPage?: number;
 }
@@ -30,9 +20,9 @@ export declare class ReactionsListForIssueCommentRequest extends SpeakeasyBase {
 }
 export declare class ReactionsListForIssueCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     reactions?: shared.Reaction[];
-    reactionsListForIssueComment415ApplicationJsonObject?: ReactionsListForIssueComment415ApplicationJson;
+    reactionsListForIssueComment415ApplicationJSONObject?: ReactionsListForIssueComment415ApplicationJson;
 }

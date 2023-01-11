@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailureDetail } from "./failuredetail";
-import { InconclusiveDetail } from "./inconclusivedetail";
-import { SkippedDetail } from "./skippeddetail";
-import { SuccessDetail } from "./successdetail";
-export var OutcomeSummaryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Outcome = exports.OutcomeSummaryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var failuredetail_1 = require("./failuredetail");
+var inconclusivedetail_1 = require("./inconclusivedetail");
+var skippeddetail_1 = require("./skippeddetail");
+var successdetail_1 = require("./successdetail");
+var OutcomeSummaryEnum;
 (function (OutcomeSummaryEnum) {
     OutcomeSummaryEnum["Unset"] = "unset";
     OutcomeSummaryEnum["Success"] = "success";
@@ -35,7 +38,7 @@ export var OutcomeSummaryEnum;
     OutcomeSummaryEnum["Inconclusive"] = "inconclusive";
     OutcomeSummaryEnum["Skipped"] = "skipped";
     OutcomeSummaryEnum["Flaky"] = "flaky";
-})(OutcomeSummaryEnum || (OutcomeSummaryEnum = {}));
+})(OutcomeSummaryEnum = exports.OutcomeSummaryEnum || (exports.OutcomeSummaryEnum = {}));
 // Outcome
 /**
  * Interprets a result so that humans and machines can act on it.
@@ -46,25 +49,25 @@ var Outcome = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureDetail" }),
-        __metadata("design:type", FailureDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureDetail" }),
+        __metadata("design:type", failuredetail_1.FailureDetail)
     ], Outcome.prototype, "failureDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inconclusiveDetail" }),
-        __metadata("design:type", InconclusiveDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inconclusiveDetail" }),
+        __metadata("design:type", inconclusivedetail_1.InconclusiveDetail)
     ], Outcome.prototype, "inconclusiveDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skippedDetail" }),
-        __metadata("design:type", SkippedDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skippedDetail" }),
+        __metadata("design:type", skippeddetail_1.SkippedDetail)
     ], Outcome.prototype, "skippedDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successDetail" }),
-        __metadata("design:type", SuccessDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successDetail" }),
+        __metadata("design:type", successdetail_1.SuccessDetail)
     ], Outcome.prototype, "successDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], Outcome.prototype, "summary", void 0);
     return Outcome;
-}(SpeakeasyBase));
-export { Outcome };
+}(utils_1.SpeakeasyBase));
+exports.Outcome = Outcome;

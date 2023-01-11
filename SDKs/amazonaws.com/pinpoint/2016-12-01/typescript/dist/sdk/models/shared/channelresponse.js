@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ChannelResponse
-/**
- * Provides information about the general settings and status of a channel for an application.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChannelResponse = /** @class */ (function (_super) {
     __extends(ChannelResponse, _super);
     function ChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], ChannelResponse.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasCredential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasCredential" }),
         __metadata("design:type", Boolean)
     ], ChannelResponse.prototype, "hasCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsArchived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsArchived" }),
         __metadata("design:type", Boolean)
     ], ChannelResponse.prototype, "isArchived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedBy" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "lastModifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], ChannelResponse.prototype, "version", void 0);
     return ChannelResponse;
-}(SpeakeasyBase));
-export { ChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.ChannelResponse = ChannelResponse;

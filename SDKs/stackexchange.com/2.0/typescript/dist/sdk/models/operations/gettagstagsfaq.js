@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsTagsFaqResponse = exports.GetTagsTagsFaqRequest = exports.GetTagsTagsFaqQueryParams = exports.GetTagsTagsFaqPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTagsTagsFaqPathParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsFaqPathParams, _super);
     function GetTagsTagsFaqPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tags" }),
         __metadata("design:type", String)
     ], GetTagsTagsFaqPathParams.prototype, "tags", void 0);
     return GetTagsTagsFaqPathParams;
-}(SpeakeasyBase));
-export { GetTagsTagsFaqPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsFaqPathParams = GetTagsTagsFaqPathParams;
 var GetTagsTagsFaqQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsFaqQueryParams, _super);
     function GetTagsTagsFaqQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsTagsFaqQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsTagsFaqQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsTagsFaqQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsTagsFaqQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsTagsFaqQueryParams.prototype, "site", void 0);
     return GetTagsTagsFaqQueryParams;
-}(SpeakeasyBase));
-export { GetTagsTagsFaqQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsFaqQueryParams = GetTagsTagsFaqQueryParams;
 var GetTagsTagsFaqRequest = /** @class */ (function (_super) {
     __extends(GetTagsTagsFaqRequest, _super);
     function GetTagsTagsFaqRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsFaqPathParams)
     ], GetTagsTagsFaqRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsFaqQueryParams)
     ], GetTagsTagsFaqRequest.prototype, "queryParams", void 0);
     return GetTagsTagsFaqRequest;
-}(SpeakeasyBase));
-export { GetTagsTagsFaqRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsFaqRequest = GetTagsTagsFaqRequest;
 var GetTagsTagsFaqResponse = /** @class */ (function (_super) {
     __extends(GetTagsTagsFaqResponse, _super);
     function GetTagsTagsFaqResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsTagsFaqResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsTagsFaqResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsTagsFaqResponse.prototype, "statusCode", void 0);
     return GetTagsTagsFaqResponse;
-}(SpeakeasyBase));
-export { GetTagsTagsFaqResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsFaqResponse = GetTagsTagsFaqResponse;

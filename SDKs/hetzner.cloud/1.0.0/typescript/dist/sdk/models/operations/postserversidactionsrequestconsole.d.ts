@@ -38,6 +38,6 @@ export declare class PostServersIdActionsRequestConsoleRequest extends Speakeasy
 }
 export declare class PostServersIdActionsRequestConsoleResponse extends SpeakeasyBase {
     contentType: string;
-    postServersIdActionsRequestConsole201ApplicationJsonObject?: PostServersIdActionsRequestConsole201ApplicationJson;
     statusCode: number;
+    postServersIdActionsRequestConsole201ApplicationJSONObject?: PostServersIdActionsRequestConsole201ApplicationJson;
 }

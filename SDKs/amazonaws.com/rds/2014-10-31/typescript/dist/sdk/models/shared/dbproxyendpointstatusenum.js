@@ -1,4 +1,7 @@
-export var DbProxyEndpointStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbProxyEndpointStatusEnum = void 0;
+var DbProxyEndpointStatusEnum;
 (function (DbProxyEndpointStatusEnum) {
     DbProxyEndpointStatusEnum["Available"] = "available";
     DbProxyEndpointStatusEnum["Modifying"] = "modifying";
@@ -6,4 +9,4 @@ export var DbProxyEndpointStatusEnum;
     DbProxyEndpointStatusEnum["InsufficientResourceLimits"] = "insufficient-resource-limits";
     DbProxyEndpointStatusEnum["Creating"] = "creating";
     DbProxyEndpointStatusEnum["Deleting"] = "deleting";
-})(DbProxyEndpointStatusEnum || (DbProxyEndpointStatusEnum = {}));
+})(DbProxyEndpointStatusEnum = exports.DbProxyEndpointStatusEnum || (exports.DbProxyEndpointStatusEnum = {}));

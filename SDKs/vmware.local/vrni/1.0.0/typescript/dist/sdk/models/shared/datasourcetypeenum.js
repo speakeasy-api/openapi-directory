@@ -1,4 +1,7 @@
-export var DataSourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceTypeEnum = void 0;
+var DataSourceTypeEnum;
 (function (DataSourceTypeEnum) {
     DataSourceTypeEnum["CiscoSwitchDataSource"] = "CiscoSwitchDataSource";
     DataSourceTypeEnum["DellSwitchDataSource"] = "DellSwitchDataSource";
@@ -12,4 +15,4 @@ export var DataSourceTypeEnum;
     DataSourceTypeEnum["HpOneViewDataSource"] = "HPOneViewDataSource";
     DataSourceTypeEnum["PanFirewallDataSource"] = "PanFirewallDataSource";
     DataSourceTypeEnum["CheckpointFirewallDataSource"] = "CheckpointFirewallDataSource";
-})(DataSourceTypeEnum || (DataSourceTypeEnum = {}));
+})(DataSourceTypeEnum = exports.DataSourceTypeEnum || (exports.DataSourceTypeEnum = {}));

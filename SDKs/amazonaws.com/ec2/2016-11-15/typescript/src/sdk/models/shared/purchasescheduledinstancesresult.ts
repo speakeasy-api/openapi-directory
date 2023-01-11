@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledInstance } from "./scheduledinstance";
 
 
 
@@ -8,6 +7,6 @@ import { ScheduledInstance } from "./scheduledinstance";
  * Contains the output of PurchaseScheduledInstances.
 **/
 export class PurchaseScheduledInstancesResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ScheduledInstance })
-  scheduledInstanceSet?: ScheduledInstance[];
+  @SpeakeasyMetadata()
+  scheduledInstanceSet?: Record<string, any>;
 }

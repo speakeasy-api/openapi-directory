@@ -29,7 +29,7 @@ export class GetListingCarAuctionIdExtraResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   listingExtraAttributes?: shared.ListingExtraAttributes;

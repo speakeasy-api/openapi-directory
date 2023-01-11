@@ -1,5 +1,8 @@
-export var ForwardingConfigStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForwardingConfigStateEnum = void 0;
+var ForwardingConfigStateEnum;
 (function (ForwardingConfigStateEnum) {
     ForwardingConfigStateEnum["Disabled"] = "DISABLED";
     ForwardingConfigStateEnum["Enabled"] = "ENABLED";
-})(ForwardingConfigStateEnum || (ForwardingConfigStateEnum = {}));
+})(ForwardingConfigStateEnum = exports.ForwardingConfigStateEnum || (exports.ForwardingConfigStateEnum = {}));

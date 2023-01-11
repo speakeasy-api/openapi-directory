@@ -24,7 +24,7 @@ export declare class PutConfigurationSetSuppressionOptionsResponse extends Speak
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putConfigurationSetSuppressionOptionsResponse?: Map<string, any>;
+    putConfigurationSetSuppressionOptionsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

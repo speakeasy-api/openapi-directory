@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobUpdateResponse = exports.JobUpdateRequest = exports.JobUpdateHeaders = exports.JobUpdateQueryParams = exports.JobUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobUpdatePathParams = /** @class */ (function (_super) {
     __extends(JobUpdatePathParams, _super);
     function JobUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], JobUpdatePathParams.prototype, "jobId", void 0);
     return JobUpdatePathParams;
-}(SpeakeasyBase));
-export { JobUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobUpdatePathParams = JobUpdatePathParams;
 var JobUpdateQueryParams = /** @class */ (function (_super) {
     __extends(JobUpdateQueryParams, _super);
     function JobUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], JobUpdateQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], JobUpdateQueryParams.prototype, "timeout", void 0);
     return JobUpdateQueryParams;
-}(SpeakeasyBase));
-export { JobUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JobUpdateQueryParams = JobUpdateQueryParams;
 var JobUpdateHeaders = /** @class */ (function (_super) {
     __extends(JobUpdateHeaders, _super);
     function JobUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], JobUpdateHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], JobUpdateHeaders.prototype, "returnClientRequestId", void 0);
     return JobUpdateHeaders;
-}(SpeakeasyBase));
-export { JobUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JobUpdateHeaders = JobUpdateHeaders;
 var JobUpdateRequest = /** @class */ (function (_super) {
     __extends(JobUpdateRequest, _super);
     function JobUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobUpdatePathParams)
     ], JobUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobUpdateQueryParams)
     ], JobUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobUpdateHeaders)
     ], JobUpdateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], JobUpdateRequest.prototype, "request", void 0);
     return JobUpdateRequest;
-}(SpeakeasyBase));
-export { JobUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobUpdateRequest = JobUpdateRequest;
 var JobUpdateResponse = /** @class */ (function (_super) {
     __extends(JobUpdateResponse, _super);
     function JobUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobUpdateResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], JobUpdateResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobUpdateResponse.prototype, "statusCode", void 0);
     return JobUpdateResponse;
-}(SpeakeasyBase));
-export { JobUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobUpdateResponse = JobUpdateResponse;

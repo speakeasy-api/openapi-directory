@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAttachNetworkInterfaceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAttachNetworkInterfaceResponse = exports.PostAttachNetworkInterfaceRequest = exports.PostAttachNetworkInterfaceHeaders = exports.PostAttachNetworkInterfaceQueryParams = exports.PostAttachNetworkInterfaceVersionEnum = exports.PostAttachNetworkInterfaceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAttachNetworkInterfaceActionEnum;
 (function (PostAttachNetworkInterfaceActionEnum) {
     PostAttachNetworkInterfaceActionEnum["AttachNetworkInterface"] = "AttachNetworkInterface";
-})(PostAttachNetworkInterfaceActionEnum || (PostAttachNetworkInterfaceActionEnum = {}));
-export var PostAttachNetworkInterfaceVersionEnum;
+})(PostAttachNetworkInterfaceActionEnum = exports.PostAttachNetworkInterfaceActionEnum || (exports.PostAttachNetworkInterfaceActionEnum = {}));
+var PostAttachNetworkInterfaceVersionEnum;
 (function (PostAttachNetworkInterfaceVersionEnum) {
     PostAttachNetworkInterfaceVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostAttachNetworkInterfaceVersionEnum || (PostAttachNetworkInterfaceVersionEnum = {}));
+})(PostAttachNetworkInterfaceVersionEnum = exports.PostAttachNetworkInterfaceVersionEnum || (exports.PostAttachNetworkInterfaceVersionEnum = {}));
 var PostAttachNetworkInterfaceQueryParams = /** @class */ (function (_super) {
     __extends(PostAttachNetworkInterfaceQueryParams, _super);
     function PostAttachNetworkInterfaceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceQueryParams.prototype, "version", void 0);
     return PostAttachNetworkInterfaceQueryParams;
-}(SpeakeasyBase));
-export { PostAttachNetworkInterfaceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAttachNetworkInterfaceQueryParams = PostAttachNetworkInterfaceQueryParams;
 var PostAttachNetworkInterfaceHeaders = /** @class */ (function (_super) {
     __extends(PostAttachNetworkInterfaceHeaders, _super);
     function PostAttachNetworkInterfaceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAttachNetworkInterfaceHeaders;
-}(SpeakeasyBase));
-export { PostAttachNetworkInterfaceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAttachNetworkInterfaceHeaders = PostAttachNetworkInterfaceHeaders;
 var PostAttachNetworkInterfaceRequest = /** @class */ (function (_super) {
     __extends(PostAttachNetworkInterfaceRequest, _super);
     function PostAttachNetworkInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAttachNetworkInterfaceQueryParams)
     ], PostAttachNetworkInterfaceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAttachNetworkInterfaceHeaders)
     ], PostAttachNetworkInterfaceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAttachNetworkInterfaceRequest.prototype, "request", void 0);
     return PostAttachNetworkInterfaceRequest;
-}(SpeakeasyBase));
-export { PostAttachNetworkInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAttachNetworkInterfaceRequest = PostAttachNetworkInterfaceRequest;
 var PostAttachNetworkInterfaceResponse = /** @class */ (function (_super) {
     __extends(PostAttachNetworkInterfaceResponse, _super);
     function PostAttachNetworkInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAttachNetworkInterfaceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAttachNetworkInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAttachNetworkInterfaceResponse.prototype, "statusCode", void 0);
     return PostAttachNetworkInterfaceResponse;
-}(SpeakeasyBase));
-export { PostAttachNetworkInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAttachNetworkInterfaceResponse = PostAttachNetworkInterfaceResponse;

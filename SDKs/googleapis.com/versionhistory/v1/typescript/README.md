@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { VersionhistoryPlatformsChannelsListRequest, VersionhistoryPlatformsChannelsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,22 @@ const sdk = new SDK();
     
 const req: VersionhistoryPlatformsChannelsListRequest = {
   pathParams: {
-    parent: "delectus",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "qui",
-    alt: "proto",
-    callback: "quos",
-    fields: "ut",
-    key: "saepe",
-    oauthToken: "placeat",
-    pageSize: 4388447172180171454,
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    pageSize: 8274930044578894929,
     pageToken: "et",
     prettyPrint: true,
-    quotaUser: "aut",
-    uploadType: "in",
-    uploadProtocol: "eum",
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

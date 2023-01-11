@@ -47,5 +47,5 @@ export class CodeScanningGetAnalysisResponse extends SpeakeasyBase {
   codeScanningAnalysis?: shared.CodeScanningAnalysis;
 
   @SpeakeasyMetadata()
-  codeScanningGetAnalysis503ApplicationJsonObject?: CodeScanningGetAnalysis503ApplicationJson;
+  codeScanningGetAnalysis503ApplicationJSONObject?: CodeScanningGetAnalysis503ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValidatePolicyFinding } from "./validatepolicyfinding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidatePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var validatepolicyfinding_1 = require("./validatepolicyfinding");
 var ValidatePolicyResponse = /** @class */ (function (_super) {
     __extends(ValidatePolicyResponse, _super);
     function ValidatePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findings", elemType: ValidatePolicyFinding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findings", elemType: validatepolicyfinding_1.ValidatePolicyFinding }),
         __metadata("design:type", Array)
     ], ValidatePolicyResponse.prototype, "findings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ValidatePolicyResponse.prototype, "nextToken", void 0);
     return ValidatePolicyResponse;
-}(SpeakeasyBase));
-export { ValidatePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ValidatePolicyResponse = ValidatePolicyResponse;

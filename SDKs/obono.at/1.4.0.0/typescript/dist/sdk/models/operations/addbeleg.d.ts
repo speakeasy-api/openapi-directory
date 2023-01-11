@@ -10,6 +10,6 @@ export declare class AddBelegRequest extends SpeakeasyBase {
 }
 export declare class AddBelegResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

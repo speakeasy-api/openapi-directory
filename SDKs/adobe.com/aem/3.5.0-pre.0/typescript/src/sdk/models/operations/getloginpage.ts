@@ -10,5 +10,5 @@ export class GetLoginPageResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLoginPageDefaultTextHtmlString?: string;
+  getLoginPageDefaultTextHTMLString?: string;
 }

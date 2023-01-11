@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse = exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest = exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity = exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams = exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams = /** @class */ (function (_super) {
     __extends(PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams, _super);
     function PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams.prototype, "name", void 0);
     return PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams;
-}(SpeakeasyBase));
-export { PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams = PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams;
 var PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams = /** @class */ (function (_super) {
     __extends(PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams, _super);
     function PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams.prototype, "uploadProtocol", void 0);
     return PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams;
-}(SpeakeasyBase));
-export { PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams = PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams;
 var PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity = /** @class */ (function (_super) {
     __extends(PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity, _super);
     function PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity.prototype, "oauth2c", void 0);
     return PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity;
-}(SpeakeasyBase));
-export { PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity = PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity;
 var PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest = /** @class */ (function (_super) {
     __extends(PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest, _super);
     function PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PrivatecaProjectsLocationsCaPoolsCertificatesRevokePathParams)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PrivatecaProjectsLocationsCaPoolsCertificatesRevokeQueryParams)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.RevokeCertificateRequest)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest.prototype, "security", void 0);
     return PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest;
-}(SpeakeasyBase));
-export { PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest = PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest;
 var PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse = /** @class */ (function (_super) {
     __extends(PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse, _super);
     function PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Certificate)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse.prototype, "statusCode", void 0);
     return PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse;
-}(SpeakeasyBase));
-export { PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse = PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse;

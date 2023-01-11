@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ForwardPaging } from "./forwardpaging";
-import { Domain } from "./domain";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionResponseWithTotalDomainForwardPaging = void 0;
+var utils_1 = require("../../../internal/utils");
+var forwardpaging_1 = require("./forwardpaging");
+var domain_1 = require("./domain");
 var CollectionResponseWithTotalDomainForwardPaging = /** @class */ (function (_super) {
     __extends(CollectionResponseWithTotalDomainForwardPaging, _super);
     function CollectionResponseWithTotalDomainForwardPaging() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paging" }),
-        __metadata("design:type", ForwardPaging)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paging" }),
+        __metadata("design:type", forwardpaging_1.ForwardPaging)
     ], CollectionResponseWithTotalDomainForwardPaging.prototype, "paging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: Domain }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: domain_1.Domain }),
         __metadata("design:type", Array)
     ], CollectionResponseWithTotalDomainForwardPaging.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], CollectionResponseWithTotalDomainForwardPaging.prototype, "total", void 0);
     return CollectionResponseWithTotalDomainForwardPaging;
-}(SpeakeasyBase));
-export { CollectionResponseWithTotalDomainForwardPaging };
+}(utils_1.SpeakeasyBase));
+exports.CollectionResponseWithTotalDomainForwardPaging = CollectionResponseWithTotalDomainForwardPaging;

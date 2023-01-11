@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstanceEventWindowStateChange } from "./instanceeventwindowstatechange";
+/**
+ * The state of the event window.
+**/
+export declare class DeleteInstanceEventWindowResultInstanceEventWindowState extends SpeakeasyBase {
+    instanceEventWindowId?: Record<string, any>;
+    state?: Record<string, any>;
+}
 export declare class DeleteInstanceEventWindowResult extends SpeakeasyBase {
-    instanceEventWindowState?: InstanceEventWindowStateChange;
+    instanceEventWindowState?: DeleteInstanceEventWindowResultInstanceEventWindowState;
 }

@@ -8,7 +8,7 @@ export declare class ConfirmCarbonOffset4RequestBody extends SpeakeasyBase {
     transactionId: string;
 }
 export declare class ConfirmCarbonOffset4Request extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: ConfirmCarbonOffset4RequestBody;
 }
 export declare class ConfirmCarbonOffset4Response extends SpeakeasyBase {

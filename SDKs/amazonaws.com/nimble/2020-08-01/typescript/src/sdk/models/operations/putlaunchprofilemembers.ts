@@ -74,7 +74,7 @@ export class PutLaunchProfileMembersResponse extends SpeakeasyBase {
   internalServerErrorException?: any;
 
   @SpeakeasyMetadata()
-  putLaunchProfileMembersResponse?: Map<string, any>;
+  putLaunchProfileMembersResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

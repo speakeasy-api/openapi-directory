@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublisherAccount = void 0;
+var utils_1 = require("../../../internal/utils");
 // PublisherAccount
 /**
  * A publisher account contains information relevant to the use of this API, such as the time zone used for the reports.
@@ -33,21 +36,21 @@ var PublisherAccount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], PublisherAccount.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PublisherAccount.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherId" }),
         __metadata("design:type", String)
     ], PublisherAccount.prototype, "publisherId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingTimeZone" }),
         __metadata("design:type", String)
     ], PublisherAccount.prototype, "reportingTimeZone", void 0);
     return PublisherAccount;
-}(SpeakeasyBase));
-export { PublisherAccount };
+}(utils_1.SpeakeasyBase));
+exports.PublisherAccount = PublisherAccount;

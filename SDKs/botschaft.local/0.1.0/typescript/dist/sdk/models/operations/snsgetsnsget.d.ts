@@ -15,5 +15,5 @@ export declare class SnsGetSnsGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    snsGetSnsGet200ApplicationJsonAny?: any;
+    snsGetSnsGet200ApplicationJSONAny?: any;
 }

@@ -1,6 +1,9 @@
-export var VirtualRouterStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualRouterStatusCodeEnum = void 0;
+var VirtualRouterStatusCodeEnum;
 (function (VirtualRouterStatusCodeEnum) {
     VirtualRouterStatusCodeEnum["Active"] = "ACTIVE";
     VirtualRouterStatusCodeEnum["Deleted"] = "DELETED";
     VirtualRouterStatusCodeEnum["Inactive"] = "INACTIVE";
-})(VirtualRouterStatusCodeEnum || (VirtualRouterStatusCodeEnum = {}));
+})(VirtualRouterStatusCodeEnum = exports.VirtualRouterStatusCodeEnum || (exports.VirtualRouterStatusCodeEnum = {}));

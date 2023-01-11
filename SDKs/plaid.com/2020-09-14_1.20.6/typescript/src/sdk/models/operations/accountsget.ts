@@ -11,13 +11,13 @@ export class AccountsGetRequest extends SpeakeasyBase {
 
 export class AccountsGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  accountsGetResponse?: Map<string, any>;
+  accountsGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

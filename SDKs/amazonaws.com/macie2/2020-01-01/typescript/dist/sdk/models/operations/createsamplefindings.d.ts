@@ -20,7 +20,7 @@ export declare class CreateSampleFindingsResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    createSampleFindingsResponse?: Map<string, any>;
+    createSampleFindingsResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

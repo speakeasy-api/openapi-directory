@@ -86,7 +86,7 @@ export declare class PostServersIdActionsCreateImage201ApplicationJsonImage exte
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum;
     osVersion: string;
@@ -105,6 +105,6 @@ export declare class PostServersIdActionsCreateImageRequest extends SpeakeasyBas
 }
 export declare class PostServersIdActionsCreateImageResponse extends SpeakeasyBase {
     contentType: string;
-    postServersIdActionsCreateImage201ApplicationJsonObject?: PostServersIdActionsCreateImage201ApplicationJson;
     statusCode: number;
+    postServersIdActionsCreateImage201ApplicationJSONObject?: PostServersIdActionsCreateImage201ApplicationJson;
 }

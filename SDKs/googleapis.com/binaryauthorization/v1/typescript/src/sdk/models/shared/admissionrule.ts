@@ -15,10 +15,6 @@ export enum AdmissionRuleEvaluationModeEnum {
 }
 
 
-// AdmissionRule
-/** 
- * An admission rule specifies either that all container images used in a pod creation request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be denied. Images matching an admission allowlist pattern are exempted from admission rules and will never block a pod creation.
-**/
 export class AdmissionRule extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=enforcementMode" })
   enforcementMode?: AdmissionRuleEnforcementModeEnum;

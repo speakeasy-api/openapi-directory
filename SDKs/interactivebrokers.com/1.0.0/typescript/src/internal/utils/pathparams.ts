@@ -1,9 +1,12 @@
+import { parseParamDecorator } from "./utils";
+import { isStringRecord, isNumberRecord, isBooleanRecord, isEmpty } from "./utils";
+
 export const ppMetadataKey = "pathParam";
 
-export function GetSimplePathParams(
-    paramName: string,
-    paramValue: any,
-    explode: boolean
+export function getSimplePathParams(
+  paramName: string,
+  paramValue: any,
+  explode: boolean
 ): Map<string, string> {
   const pathParams: Map<string, string> = new Map<string, string>();
   const ppVals: string[] = [];
@@ -12,18 +15,34 @@ export function GetSimplePathParams(
       ppVals.push(String(param));
     });
     pathParams.set(paramName, ppVals.join(","));
-  } else if (paramValue instanceof Map) {
-    paramValue.forEach((paramVal, paramName) => {
-      if (explode) ppVals.push(`${paramName}=${paramVal}`);
-      else ppVals.push(`${paramName},${paramVal}`);
+  } else if (isStringRecord(paramValue) || isNumberRecord(paramValue) || isBooleanRecord(paramValue)) {
+    Object.getOwnPropertyNames(paramValue).forEach((paramKey: string) => {
+      if (explode) ppVals.push(`${paramKey}=${paramValue[paramKey]}`);
+      else ppVals.push(`${paramKey},${paramValue[paramKey]}`);
     });
     pathParams.set(paramName, ppVals.join(","));
   } else if (paramValue instanceof Object) {
-    Object.getOwnPropertyNames(paramValue).forEach((paramName: string) => {
-      const paramFieldValue = paramValue[paramName];
+    Object.getOwnPropertyNames(paramValue).forEach((paramKey: string) => {
+      const ppAnn: string = Reflect.getMetadata(
+        ppMetadataKey,
+        paramValue,
+        paramKey
+      );
+      if (ppAnn == null) return;
+      const ppDecorator: ParamDecorator = parseParamDecorator(
+        ppAnn,
+        paramKey,
+        "simple",
+        explode
+      );
+      if (ppDecorator == null) return;
+
+      const paramFieldValue = paramValue[paramKey];
+
       if (isEmpty(paramFieldValue)) return;
-      else if (explode) ppVals.push(`${paramName}=${paramFieldValue}`);
-      else ppVals.push(`${paramName},${paramFieldValue}`);
+      else if (explode)
+        ppVals.push(`${ppDecorator.ParamName}=${paramFieldValue}`);
+      else ppVals.push(`${ppDecorator.ParamName},${paramFieldValue}`);
     });
     pathParams.set(paramName, ppVals.join(","));
   } else {
@@ -32,24 +51,16 @@ export function GetSimplePathParams(
   return pathParams;
 }
 
-function isEmpty(value: any): boolean {
-  // check for undefined, null, and NaN
-  let res: boolean = false;
-  if (typeof value === 'number') res = Number.isNaN(value);
-  else if (typeof value === 'string') res = value === "";
-  return res || value == null;
-}
-
 export class ParamDecorator {
   Style: string;
   Explode: boolean;
   ParamName: string;
   Serialization?: string;
   constructor(
-      Style: string,
-      Explode: boolean,
-      ParamName: string,
-      Serialization?: string
+    Style: string,
+    Explode: boolean,
+    ParamName: string,
+    Serialization?: string
   ) {
     this.Style = Style;
     this.Explode = Explode;

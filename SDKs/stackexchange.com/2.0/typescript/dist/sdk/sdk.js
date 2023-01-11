@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,46 +10,50 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import axios from "axios";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
-export var ServerList = [
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+exports.ServerList = [
     "https://api.stackexchange.com/2.0",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://api.stackexchange.com/*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
     }
     /**
      * getAccessTokensAccessTokens - Reads the properties for a set of access tokens.
@@ -63,12 +68,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetAccessTokensAccessTokensRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/access-tokens/{accessTokens}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/access-tokens/{accessTokens}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -76,7 +81,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -106,8 +111,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAccessTokensAccessTokensInvalidate - Immediately expires the access tokens passed. This method is meant to allow an application to discard any active access tokens it no longer needs.
@@ -122,12 +126,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetAccessTokensAccessTokensInvalidateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/access-tokens/{accessTokens}/invalidate", req.pathParams);
+        var url = utils.generateURL(baseURL, "/access-tokens/{accessTokens}/invalidate", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -135,7 +139,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -165,8 +169,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAnswers - Returns all the undeleted answers in the system.
@@ -190,10 +193,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/answers";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -201,7 +204,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -231,8 +234,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAnswersIds - Gets the set of answers identified by ids.
@@ -258,12 +260,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetAnswersIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/answers/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/answers/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -271,7 +273,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -301,8 +303,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAnswersIdsComments - Gets the comments on a set of answers.
@@ -327,12 +328,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetAnswersIdsCommentsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/answers/{ids}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/answers/{ids}/comments", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -340,7 +341,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -370,8 +371,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAppsAccessTokensDeAuthenticate - Passing valid access_tokens to this method causes the application that created them to be de-authorized by the user associated with each access_token. This will remove the application from their apps tab, and cause all other existing access_tokens to be destroyed.
@@ -390,12 +390,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetAppsAccessTokensDeAuthenticateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/apps/{accessTokens}/de-authenticate", req.pathParams);
+        var url = utils.generateURL(baseURL, "/apps/{accessTokens}/de-authenticate", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -403,7 +403,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -433,8 +433,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getBadges - Returns all the badges in the system.
@@ -457,10 +456,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/badges";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -468,7 +467,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -498,8 +497,187 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getBadgesName - Gets all explicitly named badges in the system.
+     *
+     * A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
+     *
+     * For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+     *
+     * rank is the default sort.
+     *
+     * This method returns a list of badges.
+     *
+    **/
+    SDK.prototype.getBadgesName = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetBadgesNameRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/badges/name";
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getBadgesRecipients - Returns recently awarded badges in the system.
+     *
+     * As these badges have been awarded, they will have the badge.user property set.
+     *
+     * This method returns a list of badges.
+     *
+    **/
+    SDK.prototype.getBadgesRecipients = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetBadgesRecipientsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/badges/recipients";
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getBadgesTags - Returns the badges that are awarded for participation in specific tags.
+     *
+     * For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+     *
+     * rank is the default sort.
+     *
+     * This method returns a list of badges.
+     *
+    **/
+    SDK.prototype.getBadgesTags = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetBadgesTagsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/badges/tags";
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
     };
     /**
      * getBadgesIds - Gets the badges identified in id.
@@ -524,12 +702,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetBadgesIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/badges/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/badges/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -537,7 +715,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -567,8 +745,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getBadgesIdsRecipients - Returns recently awarded badges in the system, constrained to a certain set of badges.
@@ -585,12 +762,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetBadgesIdsRecipientsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/badges/{ids}/recipients", req.pathParams);
+        var url = utils.generateURL(baseURL, "/badges/{ids}/recipients", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -598,7 +775,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -628,191 +805,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getBadgesName - Gets all explicitly named badges in the system.
-     *
-     * A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
-     *
-     * For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
-     *
-     * rank is the default sort.
-     *
-     * This method returns a list of badges.
-     *
-    **/
-    SDK.prototype.getBadgesName = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetBadgesNameRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/badges/name";
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getBadgesRecipients - Returns recently awarded badges in the system.
-     *
-     * As these badges have been awarded, they will have the badge.user property set.
-     *
-     * This method returns a list of badges.
-     *
-    **/
-    SDK.prototype.getBadgesRecipients = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetBadgesRecipientsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/badges/recipients";
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getBadgesTags - Returns the badges that are awarded for participation in specific tags.
-     *
-     * For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
-     *
-     * rank is the default sort.
-     *
-     * This method returns a list of badges.
-     *
-    **/
-    SDK.prototype.getBadgesTags = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetBadgesTagsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/badges/tags";
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getComments - Gets all the comments on the site.
@@ -839,10 +832,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/comments";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -850,7 +843,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -880,8 +873,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getCommentsIds - Gets the comments identified in id.
@@ -906,12 +898,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetCommentsIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/comments/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/comments/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -919,7 +911,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -949,8 +941,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getErrors - Returns the various error codes that can be produced by the API.
@@ -969,10 +960,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/errors";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -980,7 +971,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1010,8 +1001,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getErrorsId - This method allows you to generate an error.
@@ -1026,10 +1016,10 @@ var SDK = /** @class */ (function () {
             req = new operations.GetErrorsIdRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/errors/{id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/errors/{id}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1037,7 +1027,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1067,8 +1057,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getEvents - Returns a stream of events that have occurred on the site.
@@ -1097,10 +1086,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/events";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1108,7 +1097,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1138,8 +1127,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFiltersCreate - Creates a new filter given a list of includes, excludes, a base filter, and whether or not this filter should be "unsafe".
@@ -1162,10 +1150,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/filters/create";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1173,7 +1161,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1203,8 +1191,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getFiltersFilters - Returns the fields included by the given filters, and the "safeness" of those filters.
@@ -1221,10 +1208,10 @@ var SDK = /** @class */ (function () {
             req = new operations.GetFiltersFiltersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/filters/{filters}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/filters/{filters}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1232,7 +1219,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1262,8 +1249,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getInbox - Returns a user's inbox.
@@ -1280,10 +1266,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/inbox";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1291,7 +1277,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1321,8 +1307,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getInboxUnread - Returns the unread items in a user's inbox.
@@ -1339,10 +1324,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/inbox/unread";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1350,7 +1335,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1380,8 +1365,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getInfo - Returns a collection of statistics about the site.
@@ -1400,10 +1384,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/info";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1411,7 +1395,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1441,8 +1425,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMe - Returns the user associated with the passed access_token.
@@ -1457,10 +1440,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1468,7 +1451,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1498,8 +1481,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeAnswers - Returns the answers owned by the user associated with the given access_token.
@@ -1514,10 +1496,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/answers";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1525,7 +1507,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1555,8 +1537,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeAssociated - Returns all of a user's associated accounts, given an access_token for them.
@@ -1571,10 +1552,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/associated";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1582,7 +1563,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1612,8 +1593,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeBadges - Returns the badges earned by the user associated with the given access_token.
@@ -1628,10 +1608,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/badges";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1639,7 +1619,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1669,8 +1649,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeComments - Returns the comments owned by the user associated with the given access_token.
@@ -1685,10 +1664,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/comments";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1696,7 +1675,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1726,8 +1705,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeCommentsToId - Returns the comments owned by the user associated with the given access_token that are in reply to the user identified by {toId}.
@@ -1740,12 +1718,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetMeCommentsToIdRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/me/comments/{toId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/me/comments/{toId}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1753,7 +1731,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1783,8 +1761,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeFavorites - Returns the questions favorites by the user associated with the given access_token.
@@ -1799,10 +1776,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/favorites";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1810,7 +1787,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1840,8 +1817,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeInbox - Returns the user identified by access_token's inbox.
@@ -1858,10 +1834,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/inbox";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1869,7 +1845,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1899,8 +1875,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeInboxUnread - Returns the unread items in the user identified by access_token's inbox.
@@ -1917,10 +1892,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/inbox/unread";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1928,7 +1903,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1958,8 +1933,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeMentioned - Returns the comments mentioning the user associated with the given access_token.
@@ -1974,10 +1948,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/mentioned";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1985,7 +1959,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2015,8 +1989,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeMerges - Returns a record of merges that have occurred involving a user identified by an access_token.
@@ -2039,10 +2012,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/merges";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2050,7 +2023,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2080,8 +2053,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeNotifications - Returns a user's notifications, given an access_token.
@@ -2098,10 +2070,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/notifications";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2109,7 +2081,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2139,8 +2111,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeNotificationsUnread - Returns a user's unread notifications, given an access_token.
@@ -2157,10 +2128,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/notifications/unread";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2168,7 +2139,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2198,8 +2169,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMePrivileges - Returns the privileges the user identified by access_token has.
@@ -2214,10 +2184,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/privileges";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2225,7 +2195,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2255,8 +2225,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeQuestions - Returns the questions owned by the user associated with the given access_token.
@@ -2271,10 +2240,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/questions";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2282,7 +2251,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2312,8 +2281,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeQuestionsFeatured - Returns the questions that have active bounties offered by the user associated with the given access_token.
@@ -2328,10 +2296,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/questions/featured";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2339,7 +2307,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2369,8 +2337,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeQuestionsNoAnswers - Returns the questions owned by the user associated with the given access_token that have no answers.
@@ -2385,10 +2352,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/questions/no-answers";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2396,7 +2363,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2426,8 +2393,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeQuestionsUnaccepted - Returns the questions owned by the user associated with the given access_token that have no accepted answer.
@@ -2442,10 +2408,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/questions/unaccepted";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2453,7 +2419,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2483,8 +2449,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeQuestionsUnanswered - Returns the questions owned by the user associated with the given access_token that are not considered answered.
@@ -2499,10 +2464,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/questions/unanswered";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2510,7 +2475,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2540,8 +2505,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeReputation - Returns the reputation changed for the user associated with the given access_token.
@@ -2556,10 +2520,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/reputation";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2567,7 +2531,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2597,8 +2561,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeReputationHistory - Returns user's public reputation history.
@@ -2613,10 +2576,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/reputation-history";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2624,7 +2587,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2654,8 +2617,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeReputationHistoryFull - Returns user's full reputation history, including private events.
@@ -2673,10 +2635,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/reputation-history/full";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2684,7 +2646,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2714,8 +2676,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeSuggestedEdits - Returns the suggested edits the user identified by access_token has submitted.
@@ -2730,10 +2691,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/suggested-edits";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2741,7 +2702,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2771,8 +2732,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTags - Returns the tags the user identified by the access_token passed is active in.
@@ -2787,10 +2747,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/tags";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2798,7 +2758,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2828,8 +2788,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTagsTagsTopAnswers - Returns the top 30 answers the user associated with the given access_token has posted in response to questions with the given tags.
@@ -2842,12 +2801,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetMeTagsTagsTopAnswersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/me/tags/{tags}/top-answers", req.pathParams);
+        var url = utils.generateURL(baseURL, "/me/tags/{tags}/top-answers", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2855,7 +2814,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2885,8 +2844,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTagsTagsTopQuestions - Returns the top 30 questions the user associated with the given access_token has posted in response to questions with the given tags.
@@ -2899,12 +2857,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetMeTagsTagsTopQuestionsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/me/tags/{tags}/top-questions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/me/tags/{tags}/top-questions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2912,7 +2870,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2942,8 +2900,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTimeline - Returns a subset of the actions the user identified by the passed access_token has taken on the site.
@@ -2958,10 +2915,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/timeline";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -2969,7 +2926,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -2999,8 +2956,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTopAnswerTags - Returns the user identified by access_token's top 30 tags by answer score.
@@ -3015,10 +2971,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/top-answer-tags";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3026,7 +2982,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3056,8 +3012,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeTopQuestionTags - Returns the user identified by access_token's top 30 tags by question score.
@@ -3072,10 +3027,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/top-question-tags";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3083,7 +3038,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3113,8 +3068,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getMeWritePermissions - Returns the write permissions a user has via the api, given an access token.
@@ -3133,10 +3087,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/me/write-permissions";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3144,7 +3098,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3174,8 +3128,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNotifications - Returns a user's notifications.
@@ -3192,10 +3145,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/notifications";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3203,7 +3156,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3233,8 +3186,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getNotificationsUnread - Returns a user's unread notifications.
@@ -3251,10 +3203,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/notifications/unread";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3262,7 +3214,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3292,8 +3244,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPosts - Fetches all posts (questions and answers) on the site.
@@ -3321,10 +3272,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/posts";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3332,7 +3283,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3362,8 +3313,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPostsIds - Fetches a set of posts by ids.
@@ -3389,12 +3339,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetPostsIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/posts/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/posts/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3402,7 +3352,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3432,8 +3382,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPostsIdsComments - Gets the comments on the posts identified in ids, regardless of the type of the posts.
@@ -3458,12 +3407,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetPostsIdsCommentsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/posts/{ids}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/posts/{ids}/comments", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3471,7 +3420,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3501,8 +3450,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPostsIdsRevisions - Returns edit revisions for the posts identified in ids.
@@ -3517,12 +3465,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetPostsIdsRevisionsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/posts/{ids}/revisions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/posts/{ids}/revisions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3530,7 +3478,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3560,8 +3508,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPostsIdsSuggestedEdits - Returns suggsted edits on the posts identified in ids.
@@ -3582,12 +3529,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetPostsIdsSuggestedEditsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/posts/{ids}/suggested-edits", req.pathParams);
+        var url = utils.generateURL(baseURL, "/posts/{ids}/suggested-edits", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3595,7 +3542,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3625,8 +3572,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getPrivileges - Returns the earnable privileges on a site.
@@ -3645,10 +3591,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/privileges";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3656,7 +3602,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3686,8 +3632,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getQuestions - Gets all the questions on the site.
@@ -3718,10 +3663,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/questions";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3729,7 +3674,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3759,8 +3704,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getQuestionsFeatured - Returns all the questions with active bounties in the system.
@@ -3784,10 +3728,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/questions/featured";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -3795,7 +3739,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -3825,424 +3769,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIds - Returns the questions identified in {ids}.
-     *
-     * This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of questions.
-     *
-    **/
-    SDK.prototype.getQuestionsIds = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIdsAnswers - Gets the answers to a set of questions identified in id.
-     *
-     * This method is most useful if you have a set of interesting questions, and you wish to obtain all of their answers at once or if you are polling for new or updates answers (in conjunction with sort=activity).
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * The sorts accepted by this method operate on the follow fields of the answer object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of answers.
-     *
-    **/
-    SDK.prototype.getQuestionsIdsAnswers = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsAnswersRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}/answers", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIdsComments - Gets the comments on a question.
-     *
-     * If you know that you have an question id and need the comments, use this method. If you know you have a answer id, use /answers/{ids}/comments. If you are unsure, use /posts/{ids}/comments.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * The sorts accepted by this method operate on the follow fields of the comment object:
-     *  - creation - creation_date
-     *  - votes - score
-     *   creation is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of comments.
-     *
-    **/
-    SDK.prototype.getQuestionsIdsComments = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsCommentsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}/comments", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIdsLinked - Gets questions which link to those questions identified in {ids}.
-     *
-     * This method only considers questions that are linked within a site, and will never return questions from another Stack Exchange site.
-     *
-     * A question is considered "linked" when it explicitly includes a hyperlink to another question, there are no other heuristics.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *  - rank - a priority sort by site applies, subject to change at any time Does not accept min or max
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of questions.
-     *
-    **/
-    SDK.prototype.getQuestionsIdsLinked = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsLinkedRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}/linked", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIdsRelated - Returns questions that the site considers related to those identified in {ids}.
-     *
-     * The algorithm for determining if questions are related is not documented, and subject to change at any time. Futhermore, these values are very heavily cached, and may not update immediately after a question has been editted. It is also not guaranteed that a question will be considered related to any number (even non-zero) of questions, and a consumer should be able to handle a variable number of returned questions.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *  - rank - a priority sort by site applies, subject to change at any time Does not accept min or max
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of questions.
-     *
-    **/
-    SDK.prototype.getQuestionsIdsRelated = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsRelatedRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}/related", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getQuestionsIdsTimeline - Returns a subset of the events that have happened to the questions identified in id.
-     *
-     * This provides data similar to that found on a question's timeline page.
-     *
-     * Voting data is scrubbed to deter inferencing of voter identity.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
-     *
-     * This method returns a list of question timeline events.
-     *
-    **/
-    SDK.prototype.getQuestionsIdsTimeline = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetQuestionsIdsTimelineRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/questions/{ids}/timeline", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getQuestionsNoAnswers - Returns questions which have received no answers.
@@ -4272,10 +3799,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/questions/no-answers";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4283,7 +3810,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4313,8 +3840,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getQuestionsUnanswered - Returns questions the site considers to be unanswered.
@@ -4346,10 +3872,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/questions/unanswered";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4357,7 +3883,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4387,8 +3913,417 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getQuestionsIds - Returns the questions identified in {ids}.
+     *
+     * This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    SDK.prototype.getQuestionsIds = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getQuestionsIdsAnswers - Gets the answers to a set of questions identified in id.
+     *
+     * This method is most useful if you have a set of interesting questions, and you wish to obtain all of their answers at once or if you are polling for new or updates answers (in conjunction with sort=activity).
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * The sorts accepted by this method operate on the follow fields of the answer object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of answers.
+     *
+    **/
+    SDK.prototype.getQuestionsIdsAnswers = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsAnswersRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}/answers", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getQuestionsIdsComments - Gets the comments on a question.
+     *
+     * If you know that you have an question id and need the comments, use this method. If you know you have a answer id, use /answers/{ids}/comments. If you are unsure, use /posts/{ids}/comments.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * The sorts accepted by this method operate on the follow fields of the comment object:
+     *  - creation - creation_date
+     *  - votes - score
+     *   creation is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of comments.
+     *
+    **/
+    SDK.prototype.getQuestionsIdsComments = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsCommentsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}/comments", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getQuestionsIdsLinked - Gets questions which link to those questions identified in {ids}.
+     *
+     * This method only considers questions that are linked within a site, and will never return questions from another Stack Exchange site.
+     *
+     * A question is considered "linked" when it explicitly includes a hyperlink to another question, there are no other heuristics.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *  - rank - a priority sort by site applies, subject to change at any time Does not accept min or max
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    SDK.prototype.getQuestionsIdsLinked = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsLinkedRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}/linked", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getQuestionsIdsRelated - Returns questions that the site considers related to those identified in {ids}.
+     *
+     * The algorithm for determining if questions are related is not documented, and subject to change at any time. Futhermore, these values are very heavily cached, and may not update immediately after a question has been editted. It is also not guaranteed that a question will be considered related to any number (even non-zero) of questions, and a consumer should be able to handle a variable number of returned questions.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *  - rank - a priority sort by site applies, subject to change at any time Does not accept min or max
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    SDK.prototype.getQuestionsIdsRelated = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsRelatedRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}/related", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getQuestionsIdsTimeline - Returns a subset of the events that have happened to the questions identified in id.
+     *
+     * This provides data similar to that found on a question's timeline page.
+     *
+     * Voting data is scrubbed to deter inferencing of voter identity.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
+     *
+     * This method returns a list of question timeline events.
+     *
+    **/
+    SDK.prototype.getQuestionsIdsTimeline = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetQuestionsIdsTimelineRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/questions/{ids}/timeline", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
     };
     /**
      * getRevisionsIds - Returns edit revisions identified by ids in {ids}.
@@ -4403,12 +4338,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetRevisionsIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/revisions/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/revisions/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4416,7 +4351,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4446,8 +4381,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSearch - Searches a site for any questions which fit the given criteria.
@@ -4478,10 +4412,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/search";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4489,7 +4423,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4519,8 +4453,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSearchAdvanced - Searches a site for any questions which fit the given criteria.
@@ -4564,10 +4497,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/search/advanced";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4575,7 +4508,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4605,8 +4538,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSimilar - Returns questions which are similar to a hypothetical one based on a title and tag combination.
@@ -4639,10 +4571,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/similar";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4650,7 +4582,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4680,8 +4612,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSites - Returns all sites in the network.
@@ -4700,10 +4631,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/sites";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4711,7 +4642,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4741,8 +4672,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSuggestedEdits - Returns all the suggested edits in the systems.
@@ -4765,10 +4695,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/suggested-edits";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4776,7 +4706,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4806,8 +4736,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getSuggestedEditsIds - Returns suggested edits identified in ids.
@@ -4831,12 +4760,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetSuggestedEditsIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/suggested-edits/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/suggested-edits/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4844,7 +4773,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4874,8 +4803,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTags - Returns the tags found on a site.
@@ -4900,10 +4828,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/tags";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4911,7 +4839,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -4941,8 +4869,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsModeratorOnly - Returns the tags found on a site that only moderators can use.
@@ -4967,10 +4894,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/tags/moderator-only";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -4978,7 +4905,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5008,8 +4935,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsRequired - Returns the tags found on a site that fulfill required tag constraints on questions.
@@ -5034,10 +4960,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/tags/required";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5045,7 +4971,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5075,8 +5001,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsSynonyms - Returns all tag synonyms found a site.
@@ -5102,10 +5027,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/tags/synonyms";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5113,7 +5038,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5143,126 +5068,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
-     *
-     * This is a view onto the data presented on the tag info page on the sites.
-     *
-     * This method returns a list of tag score objects.
-     *
-    **/
-    SDK.prototype.getTagsTagTopAnswerersPeriod = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTagsTagTopAnswerersPeriodRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tag}/top-answerers/{period}", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
-     *
-     * This is a view onto the data presented on the tag info page on the sites.
-     *
-     * This method returns a list of tag score objects.
-     *
-    **/
-    SDK.prototype.getTagsTagTopAskersPeriod = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetTagsTagTopAskersPeriodRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tag}/top-askers/{period}", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsTagsFaq - Returns the frequently asked questions for the given set of tags in {tags}.
@@ -5279,12 +5085,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetTagsTagsFaqRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tags}/faq", req.pathParams);
+        var url = utils.generateURL(baseURL, "/tags/{tags}/faq", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5292,7 +5098,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5322,8 +5128,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsTagsInfo - Returns tag objects representing the tags in {tags} found on the site.
@@ -5346,12 +5151,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetTagsTagsInfoRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tags}/info", req.pathParams);
+        var url = utils.generateURL(baseURL, "/tags/{tags}/info", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5359,7 +5164,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5389,8 +5194,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsTagsRelated - Returns the tags that are most related to those in {tags}.
@@ -5409,12 +5213,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetTagsTagsRelatedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tags}/related", req.pathParams);
+        var url = utils.generateURL(baseURL, "/tags/{tags}/related", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5422,7 +5226,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5452,8 +5256,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsTagsSynonyms - Gets all the synonyms that point to the tags identified in {tags}. If you're looking to discover all the tag synonyms on a site, use the /tags/synonyms methods instead of call this method on all tags.
@@ -5477,12 +5280,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetTagsTagsSynonymsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tags}/synonyms", req.pathParams);
+        var url = utils.generateURL(baseURL, "/tags/{tags}/synonyms", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5490,7 +5293,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5520,8 +5323,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTagsTagsWikis - Returns the wikis that go with the given set of tags in {tags}.
@@ -5538,12 +5340,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetTagsTagsWikisRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/tags/{tags}/wikis", req.pathParams);
+        var url = utils.generateURL(baseURL, "/tags/{tags}/wikis", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5551,7 +5353,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5581,8 +5383,123 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+     *
+     * This is a view onto the data presented on the tag info page on the sites.
+     *
+     * This method returns a list of tag score objects.
+     *
+    **/
+    SDK.prototype.getTagsTagTopAnswerersPeriod = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetTagsTagTopAnswerersPeriodRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/tags/{tag}/top-answerers/{period}", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+     *
+     * This is a view onto the data presented on the tag info page on the sites.
+     *
+     * This method returns a list of tag score objects.
+     *
+    **/
+    SDK.prototype.getTagsTagTopAskersPeriod = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetTagsTagTopAskersPeriodRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/tags/{tag}/top-askers/{period}", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
     };
     /**
      * getUsers - Returns all users on a site.
@@ -5609,10 +5526,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/users";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -5620,7 +5537,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -5650,401 +5567,37 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
-     * getUsersIdInbox - Returns a user's inbox.
+     * getUsersModerators - Gets those users on a site who can exercise moderation powers.
      *
-     * This method requires an access_token, with a scope containing "read_inbox".
+     * Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
      *
-     * This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of inbox items.
-     *
-    **/
-    SDK.prototype.getUsersIdInbox = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdInboxRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/inbox", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdInboxUnread - Returns the unread items in a user's inbox.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of inbox items.
-     *
-    **/
-    SDK.prototype.getUsersIdInboxUnread = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdInboxUnreadRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/inbox/unread", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdNotifications - Returns a user's notifications.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method returns a list of notifications.
-     *
-    **/
-    SDK.prototype.getUsersIdNotifications = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdNotificationsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/notifications", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdNotificationsUnread - Returns a user's unread notifications.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method returns a list of notifications.
-     *
-    **/
-    SDK.prototype.getUsersIdNotificationsUnread = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdNotificationsUnreadRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/notifications/unread", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdPrivileges - Returns the privileges a user has.
-     *
-     * Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
-     *
-     * {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of privileges.
-     *
-    **/
-    SDK.prototype.getUsersIdPrivileges = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdPrivilegesRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/privileges", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdReputationHistoryFull - Returns a user's full reputation history, including private events.
-     *
-     * This method requires an access_token, with a scope containing "private_info".
-     *
-     * This method returns a list of reputation_history.
-     *
-    **/
-    SDK.prototype.getUsersIdReputationHistoryFull = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdReputationHistoryFullRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/reputation-history/full", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
-     *
-     * The sorts accepted by this method operate on the follow fields of the answer object:
-     *  - activity - last_activity_date
+     * The sorts accepted by this method operate on the follow fields of the user object:
+     *  - reputation - reputation
      *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
+     *  - name - display_name
+     *  - modified - last_modified_date
+     *   reputation is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of answers.
+     * This method returns a list of users.
      *
     **/
-    SDK.prototype.getUsersIdTagsTagsTopAnswers = function (req, config) {
+    SDK.prototype.getUsersModerators = function (req, config) {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdTagsTagsTopAnswersRequest(req);
+            req = new operations.GetUsersModeratorsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/tags/{tags}/top-answers", req.pathParams);
+        var url = baseURL.replace(/\/$/, "") + "/users/moderators";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6052,7 +5605,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6082,37 +5635,37 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
-     * getUsersIdTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
+     * getUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
      *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+     * This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
      *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
+     * The sorts accepted by this method operate on the follow fields of the user object:
+     *  - reputation - reputation
      *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
+     *  - name - display_name
+     *  - modified - last_modified_date
+     *   reputation is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of questions.
+     * This method returns a list of users.
      *
     **/
-    SDK.prototype.getUsersIdTagsTagsTopQuestions = function (req, config) {
+    SDK.prototype.getUsersModeratorsElected = function (req, config) {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdTagsTagsTopQuestionsRequest(req);
+            req = new operations.GetUsersModeratorsElectedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/tags/{tags}/top-questions", req.pathParams);
+        var url = baseURL.replace(/\/$/, "") + "/users/moderators/elected";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6120,7 +5673,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6150,191 +5703,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdTopAnswerTags - Returns a single user's top tags by answer score.
-     *
-     * This a subset of the data returned on a user's tags tab.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of top_tag objects.
-     *
-    **/
-    SDK.prototype.getUsersIdTopAnswerTags = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdTopAnswerTagsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/top-answer-tags", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdTopQuestionTags - Returns a single user's top tags by question score.
-     *
-     * This a subset of the data returned on a user's tags tab.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of top_tag objects.
-     *
-    **/
-    SDK.prototype.getUsersIdTopQuestionTags = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdTopQuestionTagsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/top-question-tags", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getUsersIdWritePermissions - Returns the write permissions a user has via the api.
-     *
-     * The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
-     *
-     * This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
-     *
-     * This method returns a list of write_permissions.
-     *
-    **/
-    SDK.prototype.getUsersIdWritePermissions = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersIdWritePermissionsRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{id}/write-permissions", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIds - Gets the users identified in ids in {ids}.
@@ -6361,12 +5730,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6374,7 +5743,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6404,8 +5773,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsAnswers - Returns the answers the users in {ids} have posted.
@@ -6429,12 +5797,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsAnswersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/answers", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/answers", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6442,7 +5810,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6472,8 +5840,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsAssociated - Returns all of a user's associated accounts, given their account_ids in {ids}.
@@ -6488,12 +5855,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsAssociatedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/associated", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/associated", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6501,7 +5868,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6531,8 +5898,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsBadges - Get the badges the users in {ids} have earned.
@@ -6555,12 +5921,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsBadgesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/badges", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/badges", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6568,7 +5934,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6598,8 +5964,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsComments - Get the comments posted by users in {ids}.
@@ -6622,12 +5987,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsCommentsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/comments", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/comments", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6635,7 +6000,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6665,8 +6030,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsCommentsToid - Get the comments that the users in {ids} have posted in reply to the single user identified in {toid}.
@@ -6691,12 +6055,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsCommentsToidRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/comments/{toid}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/comments/{toid}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6704,7 +6068,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6734,8 +6098,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsFavorites - Get the questions that users in {ids} have favorited.
@@ -6762,12 +6125,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsFavoritesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/favorites", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/favorites", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6775,7 +6138,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6805,8 +6168,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsMentioned - Gets all the comments that the users in {ids} were mentioned in.
@@ -6829,12 +6191,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsMentionedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/mentioned", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/mentioned", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6842,7 +6204,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6872,8 +6234,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsMerges - Returns a record of merges that have occurred involving the passed account ids.
@@ -6894,12 +6255,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsMergesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/merges", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/merges", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6907,7 +6268,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -6937,8 +6298,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsQuestions - Gets the questions asked by the users in {ids}.
@@ -6962,12 +6322,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsQuestionsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/questions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/questions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -6975,7 +6335,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7005,8 +6365,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsQuestionsFeatured - Gets the questions on which the users in {ids} have active bounties.
@@ -7030,12 +6389,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsQuestionsFeaturedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/questions/featured", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/questions/featured", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7043,7 +6402,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7073,8 +6432,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsQuestionsNoAnswers - Gets the questions asked by the users in {ids} which have no answers.
@@ -7100,12 +6458,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsQuestionsNoAnswersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/questions/no-answers", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/questions/no-answers", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7113,7 +6471,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7143,8 +6501,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsQuestionsUnaccepted - Gets the questions asked by the users in {ids} which have at least one answer, but no accepted answer.
@@ -7170,12 +6527,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsQuestionsUnacceptedRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/questions/unaccepted", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/questions/unaccepted", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7183,7 +6540,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7213,8 +6570,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsQuestionsUnanswered - Gets the questions asked by the users in {ids} which the site consideres unanswered, while still having at least one answer posted.
@@ -7242,12 +6598,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsQuestionsUnansweredRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/questions/unanswered", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/questions/unanswered", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7255,7 +6611,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7285,8 +6641,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsReputation - Gets a subset of the reputation changes for users in {ids}.
@@ -7303,12 +6658,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsReputationRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/reputation", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/reputation", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7316,7 +6671,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7346,8 +6701,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsReputationHistory - Returns users' public reputation history.
@@ -7360,12 +6714,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsReputationHistoryRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/reputation-history", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/reputation-history", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7373,7 +6727,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7403,8 +6757,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsSuggestedEdits - Returns the suggested edits a users in {ids} have submitted.
@@ -7428,12 +6781,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsSuggestedEditsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/suggested-edits", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/suggested-edits", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7441,7 +6794,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7471,8 +6824,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsTags - Returns the tags the users identified in {ids} have been active in.
@@ -7498,12 +6850,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsTagsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/tags", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/tags", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7511,7 +6863,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7541,8 +6893,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUsersIdsTimeline - Returns a subset of the actions the users in {ids} have taken on the site.
@@ -7559,12 +6910,12 @@ var SDK = /** @class */ (function () {
             req = new operations.GetUsersIdsTimelineRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/users/{ids}/timeline", req.pathParams);
+        var url = utils.generateURL(baseURL, "/users/{ids}/timeline", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7572,7 +6923,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7602,38 +6953,394 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
-     * getUsersModerators - Gets those users on a site who can exercise moderation powers.
+     * getUsersIdInbox - Returns a user's inbox.
      *
-     * Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
+     * This method requires an access_token, with a scope containing "read_inbox".
      *
-     * The sorts accepted by this method operate on the follow fields of the user object:
-     *  - reputation - reputation
+     * This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of inbox items.
+     *
+    **/
+    SDK.prototype.getUsersIdInbox = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdInboxRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/inbox", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdInboxUnread - Returns the unread items in a user's inbox.
+     *
+     * This method requires an access_token, with a scope containing "read_inbox".
+     *
+     * This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of inbox items.
+     *
+    **/
+    SDK.prototype.getUsersIdInboxUnread = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdInboxUnreadRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/inbox/unread", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdNotifications - Returns a user's notifications.
+     *
+     * This method requires an access_token, with a scope containing "read_inbox".
+     *
+     * This method returns a list of notifications.
+     *
+    **/
+    SDK.prototype.getUsersIdNotifications = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdNotificationsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/notifications", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdNotificationsUnread - Returns a user's unread notifications.
+     *
+     * This method requires an access_token, with a scope containing "read_inbox".
+     *
+     * This method returns a list of notifications.
+     *
+    **/
+    SDK.prototype.getUsersIdNotificationsUnread = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdNotificationsUnreadRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/notifications/unread", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdPrivileges - Returns the privileges a user has.
+     *
+     * Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
+     *
+     * {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of privileges.
+     *
+    **/
+    SDK.prototype.getUsersIdPrivileges = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdPrivilegesRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/privileges", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdReputationHistoryFull - Returns a user's full reputation history, including private events.
+     *
+     * This method requires an access_token, with a scope containing "private_info".
+     *
+     * This method returns a list of reputation_history.
+     *
+    **/
+    SDK.prototype.getUsersIdReputationHistoryFull = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdReputationHistoryFullRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/reputation-history/full", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+     *
+     * The sorts accepted by this method operate on the follow fields of the answer object:
+     *  - activity - last_activity_date
      *  - creation - creation_date
-     *  - name - display_name
-     *  - modified - last_modified_date
-     *   reputation is the default sort.
+     *  - votes - score
+     *   activity is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of users.
+     * This method returns a list of answers.
      *
     **/
-    SDK.prototype.getUsersModerators = function (req, config) {
+    SDK.prototype.getUsersIdTagsTagsTopAnswers = function (req, config) {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersModeratorsRequest(req);
+            req = new operations.GetUsersIdTagsTagsTopAnswersRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/users/moderators";
+        var url = utils.generateURL(baseURL, "/users/{id}/tags/{tags}/top-answers", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7641,7 +7348,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7671,38 +7378,36 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
-     * getUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
+     * getUsersIdTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
      *
-     * This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
      *
-     * The sorts accepted by this method operate on the follow fields of the user object:
-     *  - reputation - reputation
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
      *  - creation - creation_date
-     *  - name - display_name
-     *  - modified - last_modified_date
-     *   reputation is the default sort.
+     *  - votes - score
+     *   activity is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of users.
+     * This method returns a list of questions.
      *
     **/
-    SDK.prototype.getUsersModeratorsElected = function (req, config) {
+    SDK.prototype.getUsersIdTagsTagsTopQuestions = function (req, config) {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetUsersModeratorsElectedRequest(req);
+            req = new operations.GetUsersIdTagsTagsTopQuestionsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/users/moderators/elected";
+        var url = utils.generateURL(baseURL, "/users/{id}/tags/{tags}/top-questions", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7710,7 +7415,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7740,8 +7445,187 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getUsersIdTopAnswerTags - Returns a single user's top tags by answer score.
+     *
+     * This a subset of the data returned on a user's tags tab.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of top_tag objects.
+     *
+    **/
+    SDK.prototype.getUsersIdTopAnswerTags = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdTopAnswerTagsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/top-answer-tags", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdTopQuestionTags - Returns a single user's top tags by question score.
+     *
+     * This a subset of the data returned on a user's tags tab.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of top_tag objects.
+     *
+    **/
+    SDK.prototype.getUsersIdTopQuestionTags = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdTopQuestionTagsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/top-question-tags", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getUsersIdWritePermissions - Returns the write permissions a user has via the api.
+     *
+     * The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
+     *
+     * This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
+     *
+     * This method returns a list of write_permissions.
+     *
+    **/
+    SDK.prototype.getUsersIdWritePermissions = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetUsersIdWritePermissionsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/users/{id}/write-permissions", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 402:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 502:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 503:
+                    break;
+            }
+            return res;
+        });
     };
     /**
      * postCommentsIdDelete - Deletes a comment.
@@ -7756,12 +7640,12 @@ var SDK = /** @class */ (function () {
             req = new operations.PostCommentsIdDeleteRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/comments/{id}/delete", req.pathParams);
+        var url = utils.generateURL(baseURL, "/comments/{id}/delete", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "post" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7792,8 +7676,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postCommentsIdEdit - Edit an existing comment.
@@ -7808,12 +7691,12 @@ var SDK = /** @class */ (function () {
             req = new operations.PostCommentsIdEditRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/comments/{id}/edit", req.pathParams);
+        var url = utils.generateURL(baseURL, "/comments/{id}/edit", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "post" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7821,7 +7704,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7851,8 +7734,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postPostsIdCommentsAdd - Create a new comment.
@@ -7867,12 +7749,12 @@ var SDK = /** @class */ (function () {
             req = new operations.PostPostsIdCommentsAddRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/posts/{id}/comments/add", req.pathParams);
+        var url = utils.generateURL(baseURL, "/posts/{id}/comments/add", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "post" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -7880,7 +7762,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -7910,9 +7792,8 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

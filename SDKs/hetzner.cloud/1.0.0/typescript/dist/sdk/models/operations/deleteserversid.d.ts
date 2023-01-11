@@ -36,6 +36,6 @@ export declare class DeleteServersIdRequest extends SpeakeasyBase {
 }
 export declare class DeleteServersIdResponse extends SpeakeasyBase {
     contentType: string;
-    deleteServersId200ApplicationJsonObject?: DeleteServersId200ApplicationJson;
     statusCode: number;
+    deleteServersId200ApplicationJSONObject?: DeleteServersId200ApplicationJson;
 }

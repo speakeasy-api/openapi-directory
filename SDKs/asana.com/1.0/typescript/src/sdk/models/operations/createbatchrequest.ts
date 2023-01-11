@@ -44,5 +44,5 @@ export class CreateBatchRequestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createBatchRequest200ApplicationJsonObject?: CreateBatchRequest200ApplicationJson;
+  createBatchRequest200ApplicationJSONObject?: CreateBatchRequest200ApplicationJson;
 }

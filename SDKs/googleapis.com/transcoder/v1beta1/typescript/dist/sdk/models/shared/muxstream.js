@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Encryption } from "./encryption";
-import { SegmentSettings } from "./segmentsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MuxStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryption_1 = require("./encryption");
+var segmentsettings_1 = require("./segmentsettings");
 // MuxStream
 /**
  * Multiplexing settings for output stream.
@@ -35,29 +38,29 @@ var MuxStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
         __metadata("design:type", String)
     ], MuxStream.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elementaryStreams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elementaryStreams" }),
         __metadata("design:type", Array)
     ], MuxStream.prototype, "elementaryStreams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryption" }),
-        __metadata("design:type", Encryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryption" }),
+        __metadata("design:type", encryption_1.Encryption)
     ], MuxStream.prototype, "encryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
         __metadata("design:type", String)
     ], MuxStream.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], MuxStream.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentSettings" }),
-        __metadata("design:type", SegmentSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentSettings" }),
+        __metadata("design:type", segmentsettings_1.SegmentSettings)
     ], MuxStream.prototype, "segmentSettings", void 0);
     return MuxStream;
-}(SpeakeasyBase));
-export { MuxStream };
+}(utils_1.SpeakeasyBase));
+exports.MuxStream = MuxStream;

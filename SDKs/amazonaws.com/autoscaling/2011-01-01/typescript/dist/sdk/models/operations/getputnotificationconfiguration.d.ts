@@ -9,7 +9,7 @@ export declare class GetPutNotificationConfigurationQueryParams extends Speakeas
     action: GetPutNotificationConfigurationActionEnum;
     autoScalingGroupName: string;
     notificationTypes: string[];
-    topicArn: string;
+    topicARN: string;
     version: GetPutNotificationConfigurationVersionEnum;
 }
 export declare class GetPutNotificationConfigurationHeaders extends SpeakeasyBase {

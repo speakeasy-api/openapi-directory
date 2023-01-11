@@ -57,7 +57,7 @@ export class UpdateAclResponse extends SpeakeasyBase {
   duplicateUserNameFault?: any;
 
   @SpeakeasyMetadata()
-  invalidAclStateFault?: any;
+  invalidACLStateFault?: any;
 
   @SpeakeasyMetadata()
   invalidParameterCombinationException?: any;
@@ -69,7 +69,7 @@ export class UpdateAclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateAclResponse?: shared.UpdateAclResponse;
+  updateACLResponse?: shared.UpdateAclResponse;
 
   @SpeakeasyMetadata()
   userNotFoundFault?: any;

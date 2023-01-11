@@ -4,10 +4,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AppendChatMessageUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" })
   text?: string;
@@ -22,7 +22,7 @@ export class AppendChatMessageUsingPost200ApplicationJson extends SpeakeasyBase 
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -34,7 +34,7 @@ export class AppendChatMessageUsingPost400ApplicationJson extends SpeakeasyBase 
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,7 +46,7 @@ export class AppendChatMessageUsingPost401ApplicationJson extends SpeakeasyBase 
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class AppendChatMessageUsingPost500ApplicationJson extends SpeakeasyBase 
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -79,14 +79,14 @@ export class AppendChatMessageUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appendChatMessageUsingPost200ApplicationJsonObject?: AppendChatMessageUsingPost200ApplicationJson;
+  appendChatMessageUsingPOST200ApplicationJSONObject?: AppendChatMessageUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendChatMessageUsingPost400ApplicationJsonObject?: AppendChatMessageUsingPost400ApplicationJson;
+  appendChatMessageUsingPOST400ApplicationJSONObject?: AppendChatMessageUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendChatMessageUsingPost401ApplicationJsonObject?: AppendChatMessageUsingPost401ApplicationJson;
+  appendChatMessageUsingPOST401ApplicationJSONObject?: AppendChatMessageUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendChatMessageUsingPost500ApplicationJsonObject?: AppendChatMessageUsingPost500ApplicationJson;
+  appendChatMessageUsingPOST500ApplicationJSONObject?: AppendChatMessageUsingPost500ApplicationJson;
 }

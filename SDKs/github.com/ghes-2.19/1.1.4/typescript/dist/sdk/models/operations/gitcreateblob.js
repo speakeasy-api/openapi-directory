@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GitCreateBlobResponse = exports.GitCreateBlobRequest = exports.GitCreateBlobRequestBody = exports.GitCreateBlobPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GitCreateBlobPathParams = /** @class */ (function (_super) {
     __extends(GitCreateBlobPathParams, _super);
     function GitCreateBlobPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], GitCreateBlobPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], GitCreateBlobPathParams.prototype, "repo", void 0);
     return GitCreateBlobPathParams;
-}(SpeakeasyBase));
-export { GitCreateBlobPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GitCreateBlobPathParams = GitCreateBlobPathParams;
 var GitCreateBlobRequestBody = /** @class */ (function (_super) {
     __extends(GitCreateBlobRequestBody, _super);
     function GitCreateBlobRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], GitCreateBlobRequestBody.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], GitCreateBlobRequestBody.prototype, "encoding", void 0);
     return GitCreateBlobRequestBody;
-}(SpeakeasyBase));
-export { GitCreateBlobRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.GitCreateBlobRequestBody = GitCreateBlobRequestBody;
 var GitCreateBlobRequest = /** @class */ (function (_super) {
     __extends(GitCreateBlobRequest, _super);
     function GitCreateBlobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GitCreateBlobPathParams)
     ], GitCreateBlobRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", GitCreateBlobRequestBody)
     ], GitCreateBlobRequest.prototype, "request", void 0);
     return GitCreateBlobRequest;
-}(SpeakeasyBase));
-export { GitCreateBlobRequest };
+}(utils_1.SpeakeasyBase));
+exports.GitCreateBlobRequest = GitCreateBlobRequest;
 var GitCreateBlobResponse = /** @class */ (function (_super) {
     __extends(GitCreateBlobResponse, _super);
     function GitCreateBlobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GitCreateBlobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GitCreateBlobResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GitCreateBlobResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], GitCreateBlobResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ShortBlob)
     ], GitCreateBlobResponse.prototype, "shortBlob", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], GitCreateBlobResponse.prototype, "validationError", void 0);
     return GitCreateBlobResponse;
-}(SpeakeasyBase));
-export { GitCreateBlobResponse };
+}(utils_1.SpeakeasyBase));
+exports.GitCreateBlobResponse = GitCreateBlobResponse;

@@ -45,7 +45,7 @@ export class ApproveAssignmentRequest extends SpeakeasyBase {
 
 export class ApproveAssignmentResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  approveAssignmentResponse?: Map<string, any>;
+  approveAssignmentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataTransferProgress = void 0;
+var utils_1 = require("../../../internal/utils");
 // DataTransferProgress
 /**
  * Describes the status of a cluster while it is in the process of resizing with an incremental resize.
@@ -33,29 +36,29 @@ var DataTransferProgress = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataTransferProgress.prototype, "currentRateInMegaBytesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataTransferProgress.prototype, "dataTransferredInMegaBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataTransferProgress.prototype, "elapsedTimeInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataTransferProgress.prototype, "estimatedTimeToCompletionInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DataTransferProgress.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataTransferProgress.prototype, "totalDataInMegaBytes", void 0);
     return DataTransferProgress;
-}(SpeakeasyBase));
-export { DataTransferProgress };
+}(utils_1.SpeakeasyBase));
+exports.DataTransferProgress = DataTransferProgress;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompleteAttachmentUploadResponse = exports.CompleteAttachmentUploadRequest = exports.CompleteAttachmentUploadRequestBody = exports.CompleteAttachmentUploadHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var CompleteAttachmentUploadHeaders = /** @class */ (function (_super) {
     __extends(CompleteAttachmentUploadHeaders, _super);
     function CompleteAttachmentUploadHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Bearer" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzBearer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CompleteAttachmentUploadHeaders;
-}(SpeakeasyBase));
-export { CompleteAttachmentUploadHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CompleteAttachmentUploadHeaders = CompleteAttachmentUploadHeaders;
 var CompleteAttachmentUploadRequestBody = /** @class */ (function (_super) {
     __extends(CompleteAttachmentUploadRequestBody, _super);
     function CompleteAttachmentUploadRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttachmentIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttachmentIds" }),
         __metadata("design:type", Array)
     ], CompleteAttachmentUploadRequestBody.prototype, "attachmentIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientToken" }),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadRequestBody.prototype, "clientToken", void 0);
     return CompleteAttachmentUploadRequestBody;
-}(SpeakeasyBase));
-export { CompleteAttachmentUploadRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CompleteAttachmentUploadRequestBody = CompleteAttachmentUploadRequestBody;
 var CompleteAttachmentUploadRequest = /** @class */ (function (_super) {
     __extends(CompleteAttachmentUploadRequest, _super);
     function CompleteAttachmentUploadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompleteAttachmentUploadHeaders)
     ], CompleteAttachmentUploadRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CompleteAttachmentUploadRequestBody)
     ], CompleteAttachmentUploadRequest.prototype, "request", void 0);
     return CompleteAttachmentUploadRequest;
-}(SpeakeasyBase));
-export { CompleteAttachmentUploadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CompleteAttachmentUploadRequest = CompleteAttachmentUploadRequest;
 var CompleteAttachmentUploadResponse = /** @class */ (function (_super) {
     __extends(CompleteAttachmentUploadResponse, _super);
     function CompleteAttachmentUploadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "completeAttachmentUploadResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CompleteAttachmentUploadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CompleteAttachmentUploadResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompleteAttachmentUploadResponse.prototype, "validationException", void 0);
     return CompleteAttachmentUploadResponse;
-}(SpeakeasyBase));
-export { CompleteAttachmentUploadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CompleteAttachmentUploadResponse = CompleteAttachmentUploadResponse;

@@ -1,12 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstanceUsage } from "./instanceusage";
-import { CapacityReservationStateEnum } from "./capacityreservationstateenum";
 export declare class GetCapacityReservationUsageResult extends SpeakeasyBase {
-    availableInstanceCount?: number;
-    capacityReservationId?: string;
-    instanceType?: string;
-    instanceUsages?: InstanceUsage[];
-    nextToken?: string;
-    state?: CapacityReservationStateEnum;
-    totalInstanceCount?: number;
+    availableInstanceCount?: Record<string, any>;
+    capacityReservationId?: Record<string, any>;
+    instanceType?: Record<string, any>;
+    instanceUsages?: Record<string, any>;
+    nextToken?: Record<string, any>;
+    state?: Record<string, any>;
+    totalInstanceCount?: Record<string, any>;
 }

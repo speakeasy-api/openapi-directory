@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSflowSetConfigResponse = exports.ProtocolSflowSetConfigRequest = exports.ProtocolSflowSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSflowSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSflowSetConfigPathParams, _super);
     function ProtocolSflowSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSflowSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolSflowSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolSflowSetConfigPathParams.prototype, "value", void 0);
     return ProtocolSflowSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolSflowSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowSetConfigPathParams = ProtocolSflowSetConfigPathParams;
 var ProtocolSflowSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolSflowSetConfigRequest, _super);
     function ProtocolSflowSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSflowSetConfigPathParams)
     ], ProtocolSflowSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolSflowSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolSflowSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowSetConfigRequest = ProtocolSflowSetConfigRequest;
 var ProtocolSflowSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolSflowSetConfigResponse, _super);
     function ProtocolSflowSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSflowSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSflowSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSflowSetConfigResponse.prototype, "protocolSflowSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolSflowSetConfigResponse.prototype, "protocolSflowSetConfig200ApplicationJSONString", void 0);
     return ProtocolSflowSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolSflowSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowSetConfigResponse = ProtocolSflowSetConfigResponse;

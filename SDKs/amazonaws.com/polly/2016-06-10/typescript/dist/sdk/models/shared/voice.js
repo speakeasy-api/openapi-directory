@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LanguageCodeEnum } from "./languagecodeenum";
-import { GenderEnum } from "./genderenum";
-import { VoiceIdEnum } from "./voiceidenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Voice = void 0;
+var utils_1 = require("../../../internal/utils");
+var languagecodeenum_1 = require("./languagecodeenum");
+var genderenum_1 = require("./genderenum");
+var voiceidenum_1 = require("./voiceidenum");
 // Voice
 /**
  * Description of the voice.
@@ -36,33 +39,33 @@ var Voice = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalLanguageCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalLanguageCodes" }),
         __metadata("design:type", Array)
     ], Voice.prototype, "additionalLanguageCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Gender" }),
         __metadata("design:type", String)
     ], Voice.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Voice.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LanguageCode" }),
         __metadata("design:type", String)
     ], Voice.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LanguageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LanguageName" }),
         __metadata("design:type", String)
     ], Voice.prototype, "languageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Voice.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SupportedEngines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SupportedEngines" }),
         __metadata("design:type", Array)
     ], Voice.prototype, "supportedEngines", void 0);
     return Voice;
-}(SpeakeasyBase));
-export { Voice };
+}(utils_1.SpeakeasyBase));
+exports.Voice = Voice;

@@ -18,7 +18,7 @@ export declare class DeleteCustomVerificationEmailTemplateRequest extends Speake
 export declare class DeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteCustomVerificationEmailTemplateResponse?: Map<string, any>;
+    deleteCustomVerificationEmailTemplateResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

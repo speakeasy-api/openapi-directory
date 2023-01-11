@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcknowledgeActionConfiguration } from "./acknowledgeactionconfiguration";
-import { CustomerActionNameEnum } from "./customeractionnameenum";
-import { DisableActionConfiguration } from "./disableactionconfiguration";
-import { EnableActionConfiguration } from "./enableactionconfiguration";
-import { ResetActionConfiguration } from "./resetactionconfiguration";
-import { SnoozeActionConfiguration } from "./snoozeactionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var acknowledgeactionconfiguration_1 = require("./acknowledgeactionconfiguration");
+var customeractionnameenum_1 = require("./customeractionnameenum");
+var disableactionconfiguration_1 = require("./disableactionconfiguration");
+var enableactionconfiguration_1 = require("./enableactionconfiguration");
+var resetactionconfiguration_1 = require("./resetactionconfiguration");
+var snoozeactionconfiguration_1 = require("./snoozeactionconfiguration");
 // CustomerAction
 /**
  * Contains information about the action that you can take to respond to the alarm.
@@ -39,29 +42,29 @@ var CustomerAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgeActionConfiguration" }),
-        __metadata("design:type", AcknowledgeActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgeActionConfiguration" }),
+        __metadata("design:type", acknowledgeactionconfiguration_1.AcknowledgeActionConfiguration)
     ], CustomerAction.prototype, "acknowledgeActionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionName" }),
         __metadata("design:type", String)
     ], CustomerAction.prototype, "actionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableActionConfiguration" }),
-        __metadata("design:type", DisableActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableActionConfiguration" }),
+        __metadata("design:type", disableactionconfiguration_1.DisableActionConfiguration)
     ], CustomerAction.prototype, "disableActionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableActionConfiguration" }),
-        __metadata("design:type", EnableActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableActionConfiguration" }),
+        __metadata("design:type", enableactionconfiguration_1.EnableActionConfiguration)
     ], CustomerAction.prototype, "enableActionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resetActionConfiguration" }),
-        __metadata("design:type", ResetActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resetActionConfiguration" }),
+        __metadata("design:type", resetactionconfiguration_1.ResetActionConfiguration)
     ], CustomerAction.prototype, "resetActionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snoozeActionConfiguration" }),
-        __metadata("design:type", SnoozeActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snoozeActionConfiguration" }),
+        __metadata("design:type", snoozeactionconfiguration_1.SnoozeActionConfiguration)
     ], CustomerAction.prototype, "snoozeActionConfiguration", void 0);
     return CustomerAction;
-}(SpeakeasyBase));
-export { CustomerAction };
+}(utils_1.SpeakeasyBase));
+exports.CustomerAction = CustomerAction;

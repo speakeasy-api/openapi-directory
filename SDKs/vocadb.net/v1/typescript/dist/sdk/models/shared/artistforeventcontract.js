@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtistContract } from "./artistcontract";
-export var ArtistForEventContractEffectiveRolesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistForEventContract = exports.ArtistForEventContractRolesEnum = exports.ArtistForEventContractEffectiveRolesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var artistcontract_1 = require("./artistcontract");
+var ArtistForEventContractEffectiveRolesEnum;
 (function (ArtistForEventContractEffectiveRolesEnum) {
     ArtistForEventContractEffectiveRolesEnum["Default"] = "Default";
     ArtistForEventContractEffectiveRolesEnum["Dancer"] = "Dancer";
@@ -37,8 +40,8 @@ export var ArtistForEventContractEffectiveRolesEnum;
     ArtistForEventContractEffectiveRolesEnum["VoiceManipulator"] = "VoiceManipulator";
     ArtistForEventContractEffectiveRolesEnum["OtherPerformer"] = "OtherPerformer";
     ArtistForEventContractEffectiveRolesEnum["Other"] = "Other";
-})(ArtistForEventContractEffectiveRolesEnum || (ArtistForEventContractEffectiveRolesEnum = {}));
-export var ArtistForEventContractRolesEnum;
+})(ArtistForEventContractEffectiveRolesEnum = exports.ArtistForEventContractEffectiveRolesEnum || (exports.ArtistForEventContractEffectiveRolesEnum = {}));
+var ArtistForEventContractRolesEnum;
 (function (ArtistForEventContractRolesEnum) {
     ArtistForEventContractRolesEnum["Default"] = "Default";
     ArtistForEventContractRolesEnum["Dancer"] = "Dancer";
@@ -51,32 +54,32 @@ export var ArtistForEventContractRolesEnum;
     ArtistForEventContractRolesEnum["VoiceManipulator"] = "VoiceManipulator";
     ArtistForEventContractRolesEnum["OtherPerformer"] = "OtherPerformer";
     ArtistForEventContractRolesEnum["Other"] = "Other";
-})(ArtistForEventContractRolesEnum || (ArtistForEventContractRolesEnum = {}));
+})(ArtistForEventContractRolesEnum = exports.ArtistForEventContractRolesEnum || (exports.ArtistForEventContractRolesEnum = {}));
 var ArtistForEventContract = /** @class */ (function (_super) {
     __extends(ArtistForEventContract, _super);
     function ArtistForEventContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
-        __metadata("design:type", ArtistContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
+        __metadata("design:type", artistcontract_1.ArtistContract)
     ], ArtistForEventContract.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveRoles" }),
         __metadata("design:type", String)
     ], ArtistForEventContract.prototype, "effectiveRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ArtistForEventContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtistForEventContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", String)
     ], ArtistForEventContract.prototype, "roles", void 0);
     return ArtistForEventContract;
-}(SpeakeasyBase));
-export { ArtistForEventContract };
+}(utils_1.SpeakeasyBase));
+exports.ArtistForEventContract = ArtistForEventContract;

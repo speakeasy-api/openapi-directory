@@ -8,7 +8,7 @@ export declare class DescribeBotResponse extends SpeakeasyBase {
     creationDateTime?: Date;
     dataPrivacy?: DataPrivacy;
     description?: string;
-    idleSessionTtlInSeconds?: number;
+    idleSessionTTLInSeconds?: number;
     lastUpdatedDateTime?: Date;
     roleArn?: string;
 }

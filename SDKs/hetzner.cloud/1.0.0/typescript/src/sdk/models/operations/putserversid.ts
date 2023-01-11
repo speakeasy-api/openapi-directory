@@ -10,7 +10,7 @@ export class PutServersIdPathParams extends SpeakeasyBase {
 
 export class PutServersIdUpdateServerRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -159,7 +159,7 @@ export class PutServersId200ApplicationJsonServerImage extends SpeakeasyBase {
   imageSize: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -223,7 +223,7 @@ export class PutServersId200ApplicationJsonServerPlacementGroupNullable extends 
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -461,7 +461,7 @@ export class PutServersId200ApplicationJsonServer extends SpeakeasyBase {
   iso: PutServersId200ApplicationJsonServerIso;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=load_balancers" })
   loadBalancers?: number[];
@@ -524,8 +524,8 @@ export class PutServersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putServersId200ApplicationJsonObject?: PutServersId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putServersId200ApplicationJSONObject?: PutServersId200ApplicationJson;
 }

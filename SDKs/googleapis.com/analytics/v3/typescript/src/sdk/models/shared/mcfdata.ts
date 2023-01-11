@@ -149,5 +149,5 @@ export class McfData extends SpeakeasyBase {
   totalResults?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalsForAllResults" })
-  totalsForAllResults?: Map<string, string>;
+  totalsForAllResults?: Record<string, string>;
 }

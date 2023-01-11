@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UserEntityAuthenticationMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserEntity = exports.UserEntitySslRequiredEnum = exports.UserEntityRequire2faEnum = exports.UserEntityAuthenticationMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UserEntityAuthenticationMethodEnum;
 (function (UserEntityAuthenticationMethodEnum) {
     UserEntityAuthenticationMethodEnum["Password"] = "password";
     UserEntityAuthenticationMethodEnum["UnusedFormerLdap"] = "unused_former_ldap";
     UserEntityAuthenticationMethodEnum["Sso"] = "sso";
     UserEntityAuthenticationMethodEnum["None"] = "none";
     UserEntityAuthenticationMethodEnum["EmailSignup"] = "email_signup";
-})(UserEntityAuthenticationMethodEnum || (UserEntityAuthenticationMethodEnum = {}));
-export var UserEntityRequire2faEnum;
+})(UserEntityAuthenticationMethodEnum = exports.UserEntityAuthenticationMethodEnum || (exports.UserEntityAuthenticationMethodEnum = {}));
+var UserEntityRequire2faEnum;
 (function (UserEntityRequire2faEnum) {
     UserEntityRequire2faEnum["UseSystemSetting"] = "use_system_setting";
     UserEntityRequire2faEnum["AlwaysRequire"] = "always_require";
     UserEntityRequire2faEnum["NeverRequire"] = "never_require";
-})(UserEntityRequire2faEnum || (UserEntityRequire2faEnum = {}));
-export var UserEntitySslRequiredEnum;
+})(UserEntityRequire2faEnum = exports.UserEntityRequire2faEnum || (exports.UserEntityRequire2faEnum = {}));
+var UserEntitySslRequiredEnum;
 (function (UserEntitySslRequiredEnum) {
     UserEntitySslRequiredEnum["UseSystemSetting"] = "use_system_setting";
     UserEntitySslRequiredEnum["AlwaysRequire"] = "always_require";
     UserEntitySslRequiredEnum["NeverRequire"] = "never_require";
-})(UserEntitySslRequiredEnum || (UserEntitySslRequiredEnum = {}));
+})(UserEntitySslRequiredEnum = exports.UserEntitySslRequiredEnum || (exports.UserEntitySslRequiredEnum = {}));
 // UserEntity
 /**
  * Create User
@@ -53,193 +56,193 @@ var UserEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active_2fa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active_2fa" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "active2fa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_group_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_group_ids" }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "adminGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_ips" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "allowedIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api_keys_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api_keys_count" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "apiKeysCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "attachmentsPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticate_until" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticate_until" }),
         __metadata("design:type", Date)
     ], UserEntity.prototype, "authenticateUntil", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication_method" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "authenticationMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billing_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "billingPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bypass_inactive_disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bypass_inactive_disable" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "bypassInactiveDisable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bypass_site_allowed_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bypass_site_allowed_ips" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "bypassSiteAllowedIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], UserEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dav_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dav_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "davPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externally_managed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externally_managed" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "externallyManaged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ftp_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ftp_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "ftpPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_ids" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "groupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=header_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=header_text" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "headerText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_login_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_login_at" }),
         __metadata("design:type", Date)
     ], UserEntity.prototype, "lastLoginAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_protocol_cipher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_protocol_cipher" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "lastProtocolCipher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockout_expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockout_expires" }),
         __metadata("design:type", Date)
     ], UserEntity.prototype, "lockoutExpires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification_daily_send_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification_daily_send_time" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "notificationDailySendTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=office_integration_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office_integration_enabled" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "officeIntegrationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password_set_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password_set_at" }),
         __metadata("design:type", Date)
     ], UserEntity.prototype, "passwordSetAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password_validity_days" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password_validity_days" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "passwordValidityDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_keys_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_keys_count" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "publicKeysCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receive_admin_alerts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receive_admin_alerts" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "receiveAdminAlerts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_2fa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_2fa" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "require2fa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_password_change" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_password_change" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "requirePasswordChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restapi_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restapi_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "restapiPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self_managed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self_managed" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "selfManaged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sftp_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sftp_permission" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "sftpPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skip_welcome_screen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_welcome_screen" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "skipWelcomeScreen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl_required" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "sslRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sso_strategy_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sso_strategy_id" }),
         __metadata("design:type", Number)
     ], UserEntity.prototype, "ssoStrategyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscribe_to_newsletter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscribe_to_newsletter" }),
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "subscribeToNewsletter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_zone" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type_of_2fa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type_of_2fa" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "typeOf2fa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_root" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "userRoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "username", void 0);
     return UserEntity;
-}(SpeakeasyBase));
-export { UserEntity };
+}(utils_1.SpeakeasyBase));
+exports.UserEntity = UserEntity;

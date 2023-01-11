@@ -7,7 +7,7 @@ export class GetChatHistoryUsingGetQueryParams extends SpeakeasyBase {
   end?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" })
   start?: string;
@@ -52,7 +52,7 @@ export class GetChatHistoryUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -64,7 +64,7 @@ export class GetChatHistoryUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,7 +76,7 @@ export class GetChatHistoryUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -97,14 +97,14 @@ export class GetChatHistoryUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingGet200ApplicationJsonObject?: GetChatHistoryUsingGet200ApplicationJson;
+  getChatHistoryUsingGET200ApplicationJSONObject?: GetChatHistoryUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingGet400ApplicationJsonObject?: GetChatHistoryUsingGet400ApplicationJson;
+  getChatHistoryUsingGET400ApplicationJSONObject?: GetChatHistoryUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingGet401ApplicationJsonObject?: GetChatHistoryUsingGet401ApplicationJson;
+  getChatHistoryUsingGET401ApplicationJSONObject?: GetChatHistoryUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingGet500ApplicationJsonObject?: GetChatHistoryUsingGet500ApplicationJson;
+  getChatHistoryUsingGET500ApplicationJSONObject?: GetChatHistoryUsingGet500ApplicationJson;
 }

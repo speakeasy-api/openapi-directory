@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Employee } from "./employee";
-import { Schedule } from "./schedule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeeSchedules = void 0;
+var utils_1 = require("../../../internal/utils");
+var employee_1 = require("./employee");
+var schedule_1 = require("./schedule");
 var EmployeeSchedules = /** @class */ (function (_super) {
     __extends(EmployeeSchedules, _super);
     function EmployeeSchedules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
-        __metadata("design:type", Employee)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
+        __metadata("design:type", employee_1.Employee)
     ], EmployeeSchedules.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedules", elemType: Schedule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedules", elemType: schedule_1.Schedule }),
         __metadata("design:type", Array)
     ], EmployeeSchedules.prototype, "schedules", void 0);
     return EmployeeSchedules;
-}(SpeakeasyBase));
-export { EmployeeSchedules };
+}(utils_1.SpeakeasyBase));
+exports.EmployeeSchedules = EmployeeSchedules;

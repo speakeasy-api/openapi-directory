@@ -17,13 +17,13 @@ export class CountriesGetv1V1CountriesGetQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.CountriesOrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 }
 
 
@@ -41,7 +41,7 @@ export class CountriesGetv1V1CountriesGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqCountriesResult?: shared.OpenAqCountriesResult;
+  openAQCountriesResult?: shared.OpenAqCountriesResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

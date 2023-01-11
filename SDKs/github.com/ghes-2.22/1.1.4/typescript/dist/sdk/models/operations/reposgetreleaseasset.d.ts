@@ -17,5 +17,5 @@ export declare class ReposGetReleaseAssetResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     releaseAsset?: shared.ReleaseAsset;
-    reposGetReleaseAsset415ApplicationJsonObject?: ReposGetReleaseAsset415ApplicationJson;
+    reposGetReleaseAsset415ApplicationJSONObject?: ReposGetReleaseAsset415ApplicationJson;
 }

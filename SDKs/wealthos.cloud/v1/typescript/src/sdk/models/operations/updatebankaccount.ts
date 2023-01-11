@@ -44,26 +44,26 @@ export class UpdateBankAccountResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateBankAccount201ApplicationJsonAny?: any;
+  updateBankAccount201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount400ApplicationJsonAny?: any;
+  updateBankAccount400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount401ApplicationJsonAny?: any;
+  updateBankAccount401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount403ApplicationJsonAny?: any;
+  updateBankAccount403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount404ApplicationJsonAny?: any;
+  updateBankAccount404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount409ApplicationJsonAny?: any;
+  updateBankAccount409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount429ApplicationJsonAny?: any;
+  updateBankAccount429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateBankAccount500ApplicationJsonAny?: any;
+  updateBankAccount500ApplicationJSONAny?: any;
 }

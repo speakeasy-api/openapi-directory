@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationModelHaljson = exports.OrganizationModelHaljsonLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrganizationModelHaljsonLinks = /** @class */ (function (_super) {
     __extends(OrganizationModelHaljsonLinks, _super);
     function OrganizationModelHaljsonLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", String)
     ], OrganizationModelHaljsonLinks.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products" }),
         __metadata("design:type", String)
     ], OrganizationModelHaljsonLinks.prototype, "products", void 0);
     return OrganizationModelHaljsonLinks;
-}(SpeakeasyBase));
-export { OrganizationModelHaljsonLinks };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationModelHaljsonLinks = OrganizationModelHaljsonLinks;
 var OrganizationModelHaljson = /** @class */ (function (_super) {
     __extends(OrganizationModelHaljson, _super);
     function OrganizationModelHaljson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", OrganizationModelHaljsonLinks)
     ], OrganizationModelHaljson.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OrganizationModelHaljson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationId" }),
         __metadata("design:type", String)
     ], OrganizationModelHaljson.prototype, "organizationId", void 0);
     return OrganizationModelHaljson;
-}(SpeakeasyBase));
-export { OrganizationModelHaljson };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationModelHaljson = OrganizationModelHaljson;

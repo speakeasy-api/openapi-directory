@@ -10,6 +10,6 @@ export declare class LifecycleHook extends SpeakeasyBase {
     lifecycleHookName?: string;
     lifecycleTransition?: string;
     notificationMetadata?: string;
-    notificationTargetArn?: string;
-    roleArn?: string;
+    notificationTargetARN?: string;
+    roleARN?: string;
 }

@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class IdentityConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=userServiceAccountMapping" })
-  userServiceAccountMapping?: Map<string, string>;
+  userServiceAccountMapping?: Record<string, string>;
 }

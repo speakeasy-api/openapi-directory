@@ -14,7 +14,7 @@ export declare class CreateAppHeaders extends SpeakeasyBase {
 **/
 export declare class CreateAppRequestBodyCreateApplicationRequest extends SpeakeasyBase {
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateAppRequestBody extends SpeakeasyBase {
     createApplicationRequest: CreateAppRequestBodyCreateApplicationRequest;

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { DbSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
-import { OptionGroupMembership } from "./optiongroupmembership";
+import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 export declare class DbInstance extends SpeakeasyBase {
     allocatedStorage?: number;
     autoMinorVersionUpgrade?: boolean;
@@ -16,8 +16,8 @@ export declare class DbInstance extends SpeakeasyBase {
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
     dbName?: string;
-    dbParameterGroups?: DbParameterGroupStatus[];
-    dbSecurityGroups?: DbSecurityGroupMembership[];
+    dbParameterGroups?: DbParameterGroupStatusList[];
+    dbSecurityGroups?: DbSecurityGroupMembershipList[];
     dbSubnetGroup?: DbSubnetGroup;
     endpoint?: Endpoint;
     engine?: string;
@@ -27,14 +27,14 @@ export declare class DbInstance extends SpeakeasyBase {
     latestRestorableTime?: Date;
     licenseModel?: string;
     masterUsername?: string;
-    multiAz?: boolean;
-    optionGroupMemberships?: OptionGroupMembership[];
+    multiAZ?: boolean;
+    optionGroupMemberships?: OptionGroupMembershipList[];
     pendingModifiedValues?: PendingModifiedValues;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
     publiclyAccessible?: boolean;
-    readReplicaDbInstanceIdentifiers?: string[];
-    readReplicaSourceDbInstanceIdentifier?: string;
+    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    readReplicaSourceDBInstanceIdentifier?: string;
     secondaryAvailabilityZone?: string;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

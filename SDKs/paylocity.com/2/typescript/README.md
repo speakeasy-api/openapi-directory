@@ -16,29 +16,43 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { AddClientSecretRequest, AddClientSecretResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { AddOrUpdateAdditionalRatesRequest, AddOrUpdateAdditionalRatesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: AddClientSecretRequest = {
+const req: AddOrUpdateAdditionalRatesRequest = {
   security: {
     paylocityAuth: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
+  pathParams: {
+    companyId: "sit",
+    employeeId: "voluptas",
+  },
   request: {
-    code: "voluptatem",
+    changeReason: "culpa",
+    costCenter1: "expedita",
+    costCenter2: "consequuntur",
+    costCenter3: "dolor",
+    effectiveDate: "expedita",
+    endCheckDate: "voluptas",
+    job: "fugit",
+    rate: 28.100000,
+    rateCode: "rerum",
+    rateNotes: "dicta",
+    ratePer: "debitis",
+    shift: "voluptatum",
   },
 };
 
-sdk.sdk.addClientSecret(req).then((res: AddClientSecretResponse | AxiosError) => {
+sdk.additionalRates.addOrUpdateAdditionalRates(req).then((res: AddOrUpdateAdditionalRatesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,36 +61,78 @@ sdk.sdk.addClientSecret(req).then((res: AddClientSecretResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Additional Rates
+
+* `addOrUpdateAdditionalRates` - Add/update additional rates
+
+### Client Credentials
 
 * `addClientSecret` - Obtain new client secret.
-* `addEmployee` - Add new employee
-* `addLocalTax` - Add new local tax
-* `addNewEmployeeToWebLink` - Add new employee to Web Link
-* `addOrUpdateAdditionalRates` - Add/update additional rates
-* `addOrUpdateAnEmployeeEarning` - Add/Update Earning
-* `addOrUpdateEmergencyContacts` - Add/update emergency contacts
-* `addOrUpdateNonPrimaryStateTax` - Add/update non-primary state tax
-* `addOrUpdatePrimaryStateTax` - Add/update primary state tax
-* `deleteEarningByEarningCodeAndStartDate` - Delete Earning by Earning Code and Start Date
-* `deleteLocalTaxByTaxCode` - Delete local tax by tax code
+
+### Company Codes
+
 * `getAllCompanyCodesAndDescriptionsByResource` - Get All Company Codes
+
+### Company-Specific Schema
+
+* `getCompanySpecificOpenApiDocumentation` - Get Company-Specific Open API Documentation
+
+### Custom Fields
+
 * `getAllCustomFieldsByCategory` - Get All Custom Fields
+
+### Direct Deposit
+
 * `getAllDirectDeposit` - Get All Direct Deposit
+
+### Earnings
+
+* `addOrUpdateAnEmployeeEarning` - Add/Update Earning
+* `deleteEarningByEarningCodeAndStartDate` - Delete Earning by Earning Code and Start Date
 * `getAllEarnings` - Get All Earnings
 * `getEarningByEarningCodeAndStartDate` - Get Earning by Earning Code and Start Date
 * `getEarningsByEarningCode` - Get Earnings by Earning Code
+
+### Emergency Contacts
+
+* `addOrUpdateEmergencyContacts` - Add/update emergency contacts
+
+### Employee
+
+* `addEmployee` - Add new employee
 * `getAllEmployees` - Get all employees
-* `getAllLocalTaxes` - Get all local taxes
-* `getCompanySpecificOpenApiDocumentation` - Get Company-Specific Open API Documentation
 * `getEmployee` - Get employee
+* `updateEmployee` - Update employee
+
+### Employee Benefit Setup
+
+* `updateOrAddEmployeeBenefitSetup` - Add/update employee's benefit setup
+
+### Employee Staging
+
+* `addNewEmployeeToWebLink` - Add new employee to Web Link
+
+### Local Taxes
+
+* `addLocalTax` - Add new local tax
+* `deleteLocalTaxByTaxCode` - Delete local tax by tax code
+* `getAllLocalTaxes` - Get all local taxes
 * `getLocalTaxByTaxCode` - Get local taxes by tax code
+
+### Non-Primary State Tax
+
+* `addOrUpdateNonPrimaryStateTax` - Add/update non-primary state tax
+
+### PayStatements
+
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear` - Get employee pay statement details data for the specified year.
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement details data for the specified year and check date.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear` - Get employee pay statement summary data for the specified year.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement summary data for the specified year and check date.
-* `updateEmployee` - Update employee
-* `updateOrAddEmployeeBenefitSetup` - Add/update employee's benefit setup
+
+### Primary State Tax
+
+* `addOrUpdatePrimaryStateTax` - Add/update primary state tax
 
 <!-- End SDK Available Operations -->
 

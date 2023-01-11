@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2FieldDisplayHints = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2FieldDisplayHints
 /**
  * UI display hints for rendering a field.
@@ -33,21 +36,21 @@ var GoogleAppsDriveLabelsV2FieldDisplayHints = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldDisplayHints.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenInSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenInSearch" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldDisplayHints.prototype, "hiddenInSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldDisplayHints.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shownInApply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shownInApply" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldDisplayHints.prototype, "shownInApply", void 0);
     return GoogleAppsDriveLabelsV2FieldDisplayHints;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2FieldDisplayHints };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2FieldDisplayHints = GoogleAppsDriveLabelsV2FieldDisplayHints;

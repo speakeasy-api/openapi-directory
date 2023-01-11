@@ -22,5 +22,5 @@ export class ProtocolNetflowGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolNetflowGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4ThreatEntry } from "./googlesecuritysafebrowsingv4threatentry";
-export var GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatInfo = exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum = exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum = exports.GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4threatentry_1 = require("./googlesecuritysafebrowsingv4threatentry");
+var GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum) {
     GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum["PlatformTypeUnspecified"] = "PLATFORM_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum["Windows"] = "WINDOWS";
@@ -35,8 +38,8 @@ export var GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum;
     GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum["AnyPlatform"] = "ANY_PLATFORM";
     GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum["AllPlatforms"] = "ALL_PLATFORMS";
     GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum["Chrome"] = "CHROME";
-})(GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum || (GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum = {}));
-export var GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum;
+})(GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum = exports.GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum || (exports.GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum = {}));
+var GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum) {
     GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum["ThreatEntryTypeUnspecified"] = "THREAT_ENTRY_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum["Url"] = "URL";
@@ -45,8 +48,8 @@ export var GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum;
     GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum["ChromeExtension"] = "CHROME_EXTENSION";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum["Filename"] = "FILENAME";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum["Cert"] = "CERT";
-})(GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum || (GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum = {}));
-export var GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum;
+})(GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum = exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum || (exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum = {}));
+var GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum) {
     GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum["Malware"] = "MALWARE";
@@ -67,7 +70,7 @@ export var GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum;
     GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum["HighConfidenceAllowlist"] = "HIGH_CONFIDENCE_ALLOWLIST";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum["AccuracyTips"] = "ACCURACY_TIPS";
     GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum["SocialEngineeringLowerPrecision"] = "SOCIAL_ENGINEERING_LOWER_PRECISION";
-})(GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum || (GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum = {}));
+})(GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum = exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum || (exports.GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum = {}));
 // GoogleSecuritySafebrowsingV4ThreatInfo
 /**
  * The information regarding one or more threats that a client submits when checking for matches in threat lists.
@@ -78,21 +81,21 @@ var GoogleSecuritySafebrowsingV4ThreatInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformTypes" }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4ThreatInfo.prototype, "platformTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatEntries", elemType: GoogleSecuritySafebrowsingV4ThreatEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatEntries", elemType: googlesecuritysafebrowsingv4threatentry_1.GoogleSecuritySafebrowsingV4ThreatEntry }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4ThreatInfo.prototype, "threatEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatEntryTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatEntryTypes" }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4ThreatInfo.prototype, "threatEntryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatTypes" }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4ThreatInfo.prototype, "threatTypes", void 0);
     return GoogleSecuritySafebrowsingV4ThreatInfo;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatInfo = GoogleSecuritySafebrowsingV4ThreatInfo;

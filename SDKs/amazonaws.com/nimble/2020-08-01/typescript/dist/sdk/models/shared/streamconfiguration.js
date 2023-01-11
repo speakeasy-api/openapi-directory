@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingClipboardModeEnum } from "./streamingclipboardmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingclipboardmodeenum_1 = require("./streamingclipboardmodeenum");
 // StreamConfiguration
 /**
  * A configuration for a streaming session.
@@ -34,21 +37,21 @@ var StreamConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clipboardMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clipboardMode" }),
         __metadata("design:type", String)
     ], StreamConfiguration.prototype, "clipboardMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2InstanceTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2InstanceTypes" }),
         __metadata("design:type", Array)
     ], StreamConfiguration.prototype, "ec2InstanceTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSessionLengthInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSessionLengthInMinutes" }),
         __metadata("design:type", Number)
     ], StreamConfiguration.prototype, "maxSessionLengthInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamingImageIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingImageIds" }),
         __metadata("design:type", Array)
     ], StreamConfiguration.prototype, "streamingImageIds", void 0);
     return StreamConfiguration;
-}(SpeakeasyBase));
-export { StreamConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.StreamConfiguration = StreamConfiguration;

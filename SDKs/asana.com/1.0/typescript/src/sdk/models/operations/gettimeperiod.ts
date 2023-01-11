@@ -44,5 +44,5 @@ export class GetTimePeriodResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTimePeriod200ApplicationJsonObject?: GetTimePeriod200ApplicationJson;
+  getTimePeriod200ApplicationJSONObject?: GetTimePeriod200ApplicationJson;
 }

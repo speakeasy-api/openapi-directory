@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
-import { Detail } from "./detail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Solution = exports.SolutionUnassigned = void 0;
+var utils_1 = require("../../../internal/utils");
+var detail_1 = require("./detail");
+var route_1 = require("./route");
 var SolutionUnassigned = /** @class */ (function (_super) {
     __extends(SolutionUnassigned, _super);
     function SolutionUnassigned() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breaks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breaks" }),
         __metadata("design:type", Array)
     ], SolutionUnassigned.prototype, "breaks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details", elemType: Detail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details", elemType: detail_1.Detail }),
         __metadata("design:type", Array)
     ], SolutionUnassigned.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
         __metadata("design:type", Array)
     ], SolutionUnassigned.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipments" }),
         __metadata("design:type", Array)
     ], SolutionUnassigned.prototype, "shipments", void 0);
     return SolutionUnassigned;
-}(SpeakeasyBase));
-export { SolutionUnassigned };
+}(utils_1.SpeakeasyBase));
+exports.SolutionUnassigned = SolutionUnassigned;
 // Solution
 /**
  * Only available if status field indicates `finished`.
@@ -59,57 +62,57 @@ var Solution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completion_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completion_time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "completionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costs" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "costs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distance" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "distance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_operation_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_operation_time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "maxOperationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=no_unassigned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=no_unassigned" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "noUnassigned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=no_vehicles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=no_vehicles" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "noVehicles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preparation_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preparation_time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "preparationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routes", elemType: Route }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routes", elemType: route_1.Route }),
         __metadata("design:type", Array)
     ], Solution.prototype, "routes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_duration" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "serviceDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transport_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transport_time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "transportTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unassigned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unassigned" }),
         __metadata("design:type", SolutionUnassigned)
     ], Solution.prototype, "unassigned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waiting_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waiting_time" }),
         __metadata("design:type", Number)
     ], Solution.prototype, "waitingTime", void 0);
     return Solution;
-}(SpeakeasyBase));
-export { Solution };
+}(utils_1.SpeakeasyBase));
+exports.Solution = Solution;

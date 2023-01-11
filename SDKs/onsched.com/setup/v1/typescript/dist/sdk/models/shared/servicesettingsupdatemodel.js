@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceSettingsUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ServiceSettingsUpdateModel = /** @class */ (function (_super) {
     __extends(ServiceSettingsUpdateModel, _super);
     function ServiceSettingsUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadUnit" }),
         __metadata("design:type", Number)
     ], ServiceSettingsUpdateModel.prototype, "bookAheadUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadValue" }),
         __metadata("design:type", Number)
     ], ServiceSettingsUpdateModel.prototype, "bookAheadValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookInAdvance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookInAdvance" }),
         __metadata("design:type", Number)
     ], ServiceSettingsUpdateModel.prototype, "bookInAdvance", void 0);
     return ServiceSettingsUpdateModel;
-}(SpeakeasyBase));
-export { ServiceSettingsUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceSettingsUpdateModel = ServiceSettingsUpdateModel;

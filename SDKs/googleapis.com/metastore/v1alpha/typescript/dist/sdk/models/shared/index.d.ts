@@ -1,4 +1,5 @@
 export * from "./altenum";
+export * from "./altermetadataresourcelocationrequest";
 export * from "./auditconfig";
 export * from "./auditlogconfig";
 export * from "./auxiliaryversionconfig";
@@ -28,9 +29,11 @@ export * from "./metadataexport";
 export * from "./metadataimport";
 export * from "./metadataintegration";
 export * from "./metadatamanagementactivity";
+export * from "./movetabletodatabaserequest";
 export * from "./networkconfig";
 export * from "./operation";
 export * from "./policy";
+export * from "./querymetadatarequest";
 export * from "./removeiampolicyresponse";
 export * from "./restore";
 export * from "./restoreservicerequest";

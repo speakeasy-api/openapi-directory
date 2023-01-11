@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstallationMedia } from "./installationmedia";
+import { InstallationMediaList } from "./installationmedialist";
 export declare class InstallationMediaMessage extends SpeakeasyBase {
-    installationMedia?: InstallationMedia[];
+    installationMedia?: InstallationMediaList[];
     marker?: string;
 }

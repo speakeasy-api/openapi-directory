@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CommentanalyzerCommentsAnalyzeRequest, CommentanalyzerCommentsAnalyzeResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,65 +30,61 @@ const req: CommentanalyzerCommentsAnalyzeRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "suscipit",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "omnis",
-    fields: "quae",
-    key: "et",
-    oauthToken: "similique",
-    prettyPrint: false,
-    quotaUser: "quia",
-    uploadType: "at",
-    uploadProtocol: "voluptatibus",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    clientToken: "repellendus",
+    clientToken: "rerum",
     comment: {
-      text: "sequi",
+      text: "dicta",
       type: "TEXT_TYPE_UNSPECIFIED",
     },
-    communityId: "sit",
+    communityId: "voluptatum",
     context: {
       articleAndParentComment: {
         article: {
-          text: "corporis",
+          text: "et",
           type: "HTML",
         },
         parentComment: {
-          text: "qui",
+          text: "dolorem",
           type: "PLAIN_TEXT",
         },
       },
       entries: [
         {
-          text: "quis",
-          type: "HTML",
+          text: "iste",
+          type: "TEXT_TYPE_UNSPECIFIED",
         },
       ],
     },
     doNotStore: true,
     languages: [
-      "quae",
+      "illum",
     ],
     requestedAttributes: {
-      "placeat": {
-        scoreThreshold: 14.100000,
+      "vel": {
+        scoreThreshold: 20.200001,
         scoreType: "STD_DEV_SCORE",
       },
-      "veniam": {
-        scoreThreshold: 4.200000,
-        scoreType: "SCORE_TYPE_UNSPECIFIED",
-      },
     },
-    sessionId: "sed",
-    spanAnnotations: false,
+    sessionId: "aspernatur",
+    spanAnnotations: true,
   },
 };
 

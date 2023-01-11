@@ -11,25 +11,25 @@ export declare enum CertificateMapEntryStateEnum {
 /**
  * Defines a certificate map entry.
 **/
-export declare class CertificateMapEntryInput extends SpeakeasyBase {
-    certificates?: string[];
-    description?: string;
-    hostname?: string;
-    labels?: Map<string, string>;
-    matcher?: CertificateMapEntryMatcherEnum;
-    name?: string;
-}
-/**
- * Defines a certificate map entry.
-**/
 export declare class CertificateMapEntry extends SpeakeasyBase {
     certificates?: string[];
     createTime?: string;
     description?: string;
     hostname?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     matcher?: CertificateMapEntryMatcherEnum;
     name?: string;
     state?: CertificateMapEntryStateEnum;
     updateTime?: string;
+}
+/**
+ * Defines a certificate map entry.
+**/
+export declare class CertificateMapEntryInput extends SpeakeasyBase {
+    certificates?: string[];
+    description?: string;
+    hostname?: string;
+    labels?: Record<string, string>;
+    matcher?: CertificateMapEntryMatcherEnum;
+    name?: string;
 }

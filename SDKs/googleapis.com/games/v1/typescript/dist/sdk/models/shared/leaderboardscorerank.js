@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaderboardScoreRank = void 0;
+var utils_1 = require("../../../internal/utils");
 // LeaderboardScoreRank
 /**
  * A score rank in a leaderboard.
@@ -33,25 +36,25 @@ var LeaderboardScoreRank = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedNumScores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedNumScores" }),
         __metadata("design:type", String)
     ], LeaderboardScoreRank.prototype, "formattedNumScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedRank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedRank" }),
         __metadata("design:type", String)
     ], LeaderboardScoreRank.prototype, "formattedRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LeaderboardScoreRank.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numScores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numScores" }),
         __metadata("design:type", String)
     ], LeaderboardScoreRank.prototype, "numScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", String)
     ], LeaderboardScoreRank.prototype, "rank", void 0);
     return LeaderboardScoreRank;
-}(SpeakeasyBase));
-export { LeaderboardScoreRank };
+}(utils_1.SpeakeasyBase));
+exports.LeaderboardScoreRank = LeaderboardScoreRank;

@@ -89,16 +89,16 @@ export class PostAnnouncementsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAnnouncements201ApplicationJsonObject?: PostAnnouncements201ApplicationJson;
-
-  @SpeakeasyMetadata()
-  postAnnouncements400ApplicationJsonObject?: PostAnnouncements400ApplicationJson;
-
-  @SpeakeasyMetadata()
-  postAnnouncements403ApplicationJsonObject?: PostAnnouncements403ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  postAnnouncements201ApplicationJSONObject?: PostAnnouncements201ApplicationJson;
+
+  @SpeakeasyMetadata()
+  postAnnouncements400ApplicationJSONObject?: PostAnnouncements400ApplicationJson;
+
+  @SpeakeasyMetadata()
+  postAnnouncements403ApplicationJSONObject?: PostAnnouncements403ApplicationJson;
 
   @SpeakeasyMetadata()
   oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;

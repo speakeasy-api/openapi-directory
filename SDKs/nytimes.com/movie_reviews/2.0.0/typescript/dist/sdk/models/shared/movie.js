@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Movie = exports.MovieMultimedia = exports.MovieMultimediaResource = exports.MovieLink = void 0;
+var utils_1 = require("../../../internal/utils");
 var MovieLink = /** @class */ (function (_super) {
     __extends(MovieLink, _super);
     function MovieLink() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggested_link_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggested_link_text" }),
         __metadata("design:type", String)
     ], MovieLink.prototype, "suggestedLinkText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MovieLink.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], MovieLink.prototype, "url", void 0);
     return MovieLink;
-}(SpeakeasyBase));
-export { MovieLink };
+}(utils_1.SpeakeasyBase));
+exports.MovieLink = MovieLink;
 var MovieMultimediaResource = /** @class */ (function (_super) {
     __extends(MovieMultimediaResource, _super);
     function MovieMultimediaResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], MovieMultimediaResource.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], MovieMultimediaResource.prototype, "src", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MovieMultimediaResource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], MovieMultimediaResource.prototype, "width", void 0);
     return MovieMultimediaResource;
-}(SpeakeasyBase));
-export { MovieMultimediaResource };
+}(utils_1.SpeakeasyBase));
+exports.MovieMultimediaResource = MovieMultimediaResource;
 var MovieMultimedia = /** @class */ (function (_super) {
     __extends(MovieMultimedia, _super);
     function MovieMultimedia() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", MovieMultimediaResource)
     ], MovieMultimedia.prototype, "resource", void 0);
     return MovieMultimedia;
-}(SpeakeasyBase));
-export { MovieMultimedia };
+}(utils_1.SpeakeasyBase));
+exports.MovieMultimedia = MovieMultimedia;
 var Movie = /** @class */ (function (_super) {
     __extends(Movie, _super);
     function Movie() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=byline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byline" }),
         __metadata("design:type", String)
     ], Movie.prototype, "byline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critics_pick" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critics_pick" }),
         __metadata("design:type", Number)
     ], Movie.prototype, "criticsPick", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_updated" }),
         __metadata("design:type", String)
     ], Movie.prototype, "dateUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_title" }),
         __metadata("design:type", String)
     ], Movie.prototype, "displayTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headline" }),
         __metadata("design:type", String)
     ], Movie.prototype, "headline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", MovieLink)
     ], Movie.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mpaa_rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mpaa_rating" }),
         __metadata("design:type", String)
     ], Movie.prototype, "mpaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multimedia" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multimedia" }),
         __metadata("design:type", MovieMultimedia)
     ], Movie.prototype, "multimedia", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opening_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opening_date" }),
         __metadata("design:type", String)
     ], Movie.prototype, "openingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publication_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publication_date" }),
         __metadata("design:type", String)
     ], Movie.prototype, "publicationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary_short" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary_short" }),
         __metadata("design:type", String)
     ], Movie.prototype, "summaryShort", void 0);
     return Movie;
-}(SpeakeasyBase));
-export { Movie };
+}(utils_1.SpeakeasyBase));
+exports.Movie = Movie;

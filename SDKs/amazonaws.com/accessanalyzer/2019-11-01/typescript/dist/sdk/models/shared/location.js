@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PathElement } from "./pathelement";
-import { Span } from "./span";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Location = void 0;
+var utils_1 = require("../../../internal/utils");
+var pathelement_1 = require("./pathelement");
+var span_1 = require("./span");
 // Location
 /**
  * A location in a policy that is represented as a path through the JSON representation and a corresponding span.
@@ -35,13 +38,13 @@ var Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path", elemType: PathElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path", elemType: pathelement_1.PathElement }),
         __metadata("design:type", Array)
     ], Location.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=span" }),
-        __metadata("design:type", Span)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=span" }),
+        __metadata("design:type", span_1.Span)
     ], Location.prototype, "span", void 0);
     return Location;
-}(SpeakeasyBase));
-export { Location };
+}(utils_1.SpeakeasyBase));
+exports.Location = Location;

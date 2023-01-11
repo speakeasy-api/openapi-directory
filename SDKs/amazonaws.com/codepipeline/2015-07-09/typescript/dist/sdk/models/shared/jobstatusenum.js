@@ -1,4 +1,7 @@
-export var JobStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobStatusEnum = void 0;
+var JobStatusEnum;
 (function (JobStatusEnum) {
     JobStatusEnum["Created"] = "Created";
     JobStatusEnum["Queued"] = "Queued";
@@ -7,4 +10,4 @@ export var JobStatusEnum;
     JobStatusEnum["TimedOut"] = "TimedOut";
     JobStatusEnum["Succeeded"] = "Succeeded";
     JobStatusEnum["Failed"] = "Failed";
-})(JobStatusEnum || (JobStatusEnum = {}));
+})(JobStatusEnum = exports.JobStatusEnum || (exports.JobStatusEnum = {}));

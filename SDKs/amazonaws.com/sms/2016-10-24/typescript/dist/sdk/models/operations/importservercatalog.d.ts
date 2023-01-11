@@ -14,11 +14,11 @@ export declare class ImportServerCatalogHeaders extends SpeakeasyBase {
 }
 export declare class ImportServerCatalogRequest extends SpeakeasyBase {
     headers: ImportServerCatalogHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class ImportServerCatalogResponse extends SpeakeasyBase {
     contentType: string;
-    importServerCatalogResponse?: Map<string, any>;
+    importServerCatalogResponse?: Record<string, any>;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     noConnectorsAvailableException?: any;

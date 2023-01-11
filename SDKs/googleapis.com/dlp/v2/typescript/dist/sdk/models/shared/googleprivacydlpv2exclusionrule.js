@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Dictionary } from "./googleprivacydlpv2dictionary";
-import { GooglePrivacyDlpV2ExcludeByHotword } from "./googleprivacydlpv2excludebyhotword";
-import { GooglePrivacyDlpV2ExcludeInfoTypes } from "./googleprivacydlpv2excludeinfotypes";
-import { GooglePrivacyDlpV2Regex } from "./googleprivacydlpv2regex";
-export var GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ExclusionRule = exports.GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2dictionary_1 = require("./googleprivacydlpv2dictionary");
+var googleprivacydlpv2excludebyhotword_1 = require("./googleprivacydlpv2excludebyhotword");
+var googleprivacydlpv2excludeinfotypes_1 = require("./googleprivacydlpv2excludeinfotypes");
+var googleprivacydlpv2regex_1 = require("./googleprivacydlpv2regex");
+var GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum;
 (function (GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum) {
     GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum["MatchingTypeUnspecified"] = "MATCHING_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum["MatchingTypeFullMatch"] = "MATCHING_TYPE_FULL_MATCH";
     GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum["MatchingTypePartialMatch"] = "MATCHING_TYPE_PARTIAL_MATCH";
     GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum["MatchingTypeInverseMatch"] = "MATCHING_TYPE_INVERSE_MATCH";
-})(GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum || (GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum = {}));
+})(GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum = exports.GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum || (exports.GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum = {}));
 // GooglePrivacyDlpV2ExclusionRule
 /**
  * The rule that specifies conditions when findings of infoTypes specified in `InspectionRuleSet` are removed from results.
@@ -44,25 +47,25 @@ var GooglePrivacyDlpV2ExclusionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dictionary" }),
-        __metadata("design:type", GooglePrivacyDlpV2Dictionary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dictionary" }),
+        __metadata("design:type", googleprivacydlpv2dictionary_1.GooglePrivacyDlpV2Dictionary)
     ], GooglePrivacyDlpV2ExclusionRule.prototype, "dictionary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeByHotword" }),
-        __metadata("design:type", GooglePrivacyDlpV2ExcludeByHotword)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeByHotword" }),
+        __metadata("design:type", googleprivacydlpv2excludebyhotword_1.GooglePrivacyDlpV2ExcludeByHotword)
     ], GooglePrivacyDlpV2ExclusionRule.prototype, "excludeByHotword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeInfoTypes" }),
-        __metadata("design:type", GooglePrivacyDlpV2ExcludeInfoTypes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeInfoTypes" }),
+        __metadata("design:type", googleprivacydlpv2excludeinfotypes_1.GooglePrivacyDlpV2ExcludeInfoTypes)
     ], GooglePrivacyDlpV2ExclusionRule.prototype, "excludeInfoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchingType" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ExclusionRule.prototype, "matchingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regex" }),
-        __metadata("design:type", GooglePrivacyDlpV2Regex)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regex" }),
+        __metadata("design:type", googleprivacydlpv2regex_1.GooglePrivacyDlpV2Regex)
     ], GooglePrivacyDlpV2ExclusionRule.prototype, "regex", void 0);
     return GooglePrivacyDlpV2ExclusionRule;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ExclusionRule };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ExclusionRule = GooglePrivacyDlpV2ExclusionRule;

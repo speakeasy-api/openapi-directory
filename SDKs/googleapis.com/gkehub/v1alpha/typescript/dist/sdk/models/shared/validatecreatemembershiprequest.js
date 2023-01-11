@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MembershipInput } from "./membership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidateCreateMembershipRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var membership_1 = require("./membership");
 // ValidateCreateMembershipRequestInput
 /**
  * Request message for the `GkeHub.ValidateCreateMembership` method.
@@ -34,13 +37,13 @@ var ValidateCreateMembershipRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membership" }),
-        __metadata("design:type", MembershipInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membership" }),
+        __metadata("design:type", membership_1.MembershipInput)
     ], ValidateCreateMembershipRequestInput.prototype, "membership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipId" }),
         __metadata("design:type", String)
     ], ValidateCreateMembershipRequestInput.prototype, "membershipId", void 0);
     return ValidateCreateMembershipRequestInput;
-}(SpeakeasyBase));
-export { ValidateCreateMembershipRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.ValidateCreateMembershipRequestInput = ValidateCreateMembershipRequestInput;

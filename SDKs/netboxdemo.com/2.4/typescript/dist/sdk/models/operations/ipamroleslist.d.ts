@@ -18,5 +18,5 @@ export declare class IpamRolesListRequest extends SpeakeasyBase {
 export declare class IpamRolesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamRolesList200ApplicationJsonObject?: IpamRolesList200ApplicationJson;
+    ipamRolesList200ApplicationJSONObject?: IpamRolesList200ApplicationJson;
 }

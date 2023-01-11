@@ -11,7 +11,7 @@ export declare class UpdatereservationRequestBody extends SpeakeasyBase {
 export declare class Updatereservation201ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class UpdatereservationRequest extends SpeakeasyBase {
     pathParams: UpdatereservationPathParams;
@@ -20,5 +20,5 @@ export declare class UpdatereservationRequest extends SpeakeasyBase {
 export declare class UpdatereservationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updatereservation201ApplicationJsonObject?: Updatereservation201ApplicationJson;
+    updatereservation201ApplicationJSONObject?: Updatereservation201ApplicationJson;
 }

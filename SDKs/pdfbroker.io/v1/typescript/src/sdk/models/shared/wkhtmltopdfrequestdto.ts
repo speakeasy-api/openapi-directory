@@ -11,11 +11,11 @@ export class WkHtmlToPdfRequestDto extends SpeakeasyBase {
   htmlBase64String?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Resources" })
-  resources?: Map<string, string>;
+  resources?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Url" })
   url?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WkHtmlToPdfArguments" })
-  wkHtmlToPdfArguments?: Map<string, string>;
+  wkHtmlToPdfArguments?: Record<string, string>;
 }

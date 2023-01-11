@@ -19,5 +19,5 @@ export declare class DcimRackRolesListRequest extends SpeakeasyBase {
 export declare class DcimRackRolesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRackRolesList200ApplicationJsonObject?: DcimRackRolesList200ApplicationJson;
+    dcimRackRolesList200ApplicationJSONObject?: DcimRackRolesList200ApplicationJson;
 }

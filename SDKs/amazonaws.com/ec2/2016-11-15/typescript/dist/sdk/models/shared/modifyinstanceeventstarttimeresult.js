@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceStatusEvent } from "./instancestatusevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyInstanceEventStartTimeResult = exports.ModifyInstanceEventStartTimeResultEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyInstanceEventStartTimeResultEvent
+/**
+ * Describes a scheduled event for an instance.
+**/
+var ModifyInstanceEventStartTimeResultEvent = /** @class */ (function (_super) {
+    __extends(ModifyInstanceEventStartTimeResultEvent, _super);
+    function ModifyInstanceEventStartTimeResultEvent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "instanceEventId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "notAfter", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "notBefore", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventStartTimeResultEvent.prototype, "notBeforeDeadline", void 0);
+    return ModifyInstanceEventStartTimeResultEvent;
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceEventStartTimeResultEvent = ModifyInstanceEventStartTimeResultEvent;
 var ModifyInstanceEventStartTimeResult = /** @class */ (function (_super) {
     __extends(ModifyInstanceEventStartTimeResult, _super);
     function ModifyInstanceEventStartTimeResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceStatusEvent)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyInstanceEventStartTimeResultEvent)
     ], ModifyInstanceEventStartTimeResult.prototype, "event", void 0);
     return ModifyInstanceEventStartTimeResult;
-}(SpeakeasyBase));
-export { ModifyInstanceEventStartTimeResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceEventStartTimeResult = ModifyInstanceEventStartTimeResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationList } from "./applicationlist";
-import { OrganizationList } from "./organizationlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationsList = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationlist_1 = require("./applicationlist");
+var organizationlist_1 = require("./organizationlist");
 var RegistrationsList = /** @class */ (function (_super) {
     __extends(RegistrationsList, _super);
     function RegistrationsList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity" }),
         __metadata("design:type", String)
     ], RegistrationsList.prototype, "activity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity_description" }),
         __metadata("design:type", String)
     ], RegistrationsList.prototype, "activityDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applications", elemType: ApplicationList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applications", elemType: applicationlist_1.ApplicationList }),
         __metadata("design:type", Array)
     ], RegistrationsList.prototype, "applications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", OrganizationList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", organizationlist_1.OrganizationList)
     ], RegistrationsList.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration_no" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration_no" }),
         __metadata("design:type", String)
     ], RegistrationsList.prototype, "registrationNo", void 0);
     return RegistrationsList;
-}(SpeakeasyBase));
-export { RegistrationsList };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsList = RegistrationsList;

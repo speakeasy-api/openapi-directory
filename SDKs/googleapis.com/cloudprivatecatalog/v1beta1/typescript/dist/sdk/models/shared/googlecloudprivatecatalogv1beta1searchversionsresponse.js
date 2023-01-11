@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPrivatecatalogV1beta1Version } from "./googlecloudprivatecatalogv1beta1version";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudprivatecatalogv1beta1version_1 = require("./googlecloudprivatecatalogv1beta1version");
 // GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse
 /**
  * Response message for PrivateCatalog.SearchVersions.
@@ -34,13 +37,13 @@ var GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleCloudPrivatecatalogV1beta1Version }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlecloudprivatecatalogv1beta1version_1.GoogleCloudPrivatecatalogV1beta1Version }),
         __metadata("design:type", Array)
     ], GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse.prototype, "versions", void 0);
     return GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse = GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse;

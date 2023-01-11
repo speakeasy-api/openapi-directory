@@ -4,6 +4,6 @@ export declare class GetAuthValidate200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetAuthValidateResponse extends SpeakeasyBase {
     contentType: string;
-    getAuthValidate200ApplicationJsonObject?: GetAuthValidate200ApplicationJson;
     statusCode: number;
+    getAuthValidate200ApplicationJSONObject?: GetAuthValidate200ApplicationJson;
 }

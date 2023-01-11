@@ -68,5 +68,5 @@ export class CodeScanningListAlertsForRepoResponse extends SpeakeasyBase {
   codeScanningAlertItems?: shared.CodeScanningAlertItems[];
 
   @SpeakeasyMetadata()
-  codeScanningListAlertsForRepo503ApplicationJsonObject?: CodeScanningListAlertsForRepo503ApplicationJson;
+  codeScanningListAlertsForRepo503ApplicationJSONObject?: CodeScanningListAlertsForRepo503ApplicationJson;
 }

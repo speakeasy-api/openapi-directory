@@ -8,5 +8,5 @@ export declare class GetNetworkSwitchLinkAggregationsRequest extends SpeakeasyBa
 export declare class GetNetworkSwitchLinkAggregationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchLinkAggregations200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchLinkAggregations200ApplicationJSONObject?: Record<string, any>;
 }

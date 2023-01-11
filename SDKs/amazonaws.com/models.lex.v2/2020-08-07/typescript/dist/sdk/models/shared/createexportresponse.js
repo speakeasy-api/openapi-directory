@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportStatusEnum } from "./exportstatusenum";
-import { ImportExportFileFormatEnum } from "./importexportfileformatenum";
-import { ExportResourceSpecification } from "./exportresourcespecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateExportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportstatusenum_1 = require("./exportstatusenum");
+var importexportfileformatenum_1 = require("./importexportfileformatenum");
+var exportresourcespecification_1 = require("./exportresourcespecification");
 var CreateExportResponse = /** @class */ (function (_super) {
     __extends(CreateExportResponse, _super);
     function CreateExportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], CreateExportResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportId" }),
         __metadata("design:type", String)
     ], CreateExportResponse.prototype, "exportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportStatus" }),
         __metadata("design:type", String)
     ], CreateExportResponse.prototype, "exportStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileFormat" }),
         __metadata("design:type", String)
     ], CreateExportResponse.prototype, "fileFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceSpecification" }),
-        __metadata("design:type", ExportResourceSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceSpecification" }),
+        __metadata("design:type", exportresourcespecification_1.ExportResourceSpecification)
     ], CreateExportResponse.prototype, "resourceSpecification", void 0);
     return CreateExportResponse;
-}(SpeakeasyBase));
-export { CreateExportResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportResponse = CreateExportResponse;

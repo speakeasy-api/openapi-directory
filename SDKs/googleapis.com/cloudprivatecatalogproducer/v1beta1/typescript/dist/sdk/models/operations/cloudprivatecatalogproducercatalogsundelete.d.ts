@@ -23,7 +23,7 @@ export declare class CloudprivatecatalogproducerCatalogsUndeleteSecurity extends
 export declare class CloudprivatecatalogproducerCatalogsUndeleteRequest extends SpeakeasyBase {
     pathParams: CloudprivatecatalogproducerCatalogsUndeletePathParams;
     queryParams: CloudprivatecatalogproducerCatalogsUndeleteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudprivatecatalogproducerCatalogsUndeleteSecurity;
 }
 export declare class CloudprivatecatalogproducerCatalogsUndeleteResponse extends SpeakeasyBase {

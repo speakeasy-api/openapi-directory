@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WebhooksAddRequest, WebhooksAddResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -39,16 +38,17 @@ const req: WebhooksAddRequest = {
     },
   },
   headers: {
-    xApideckAppId: "quidem",
+    xApideckAppId: "sit",
   },
   request: {
-    deliveryUrl: "incidunt",
-    description: "ratione",
+    deliveryUrl: "voluptas",
+    description: "culpa",
     events: [
-      "crm.lead.updated",
+      "crm.contact.created",
+      "crm.contact.updated",
     ],
-    status: "enabled",
-    unifiedApi: "transactional-email",
+    status: "disabled",
+    unifiedApi: "crm",
   },
 };
 
@@ -63,14 +63,14 @@ sdk.webhooks.webhooksAdd(req).then((res: WebhooksAddResponse | AxiosError) => {
 
 ### Webhooks
 
-* `webhooksAdd` - Create webhook
-* `webhooksAll` - List webhooks
-* `webhooksDelete` - Delete webhook
+* `webhooksAdd` - Create webhook subscription
+* `webhooksAll` - List webhook subscriptions
+* `webhooksDelete` - Delete webhook subscription
 * `webhooksExecute` - Execute a webhook
-* `webhooksOne` - Get webhook
+* `webhooksOne` - Get webhook subscription
 * `webhooksResolve` - Resolve and Execute a connection webhook
 * `webhooksShortExecute` - Execute a webhook
-* `webhooksUpdate` - Update webhook
+* `webhooksUpdate` - Update webhook subscription
 
 <!-- End SDK Available Operations -->
 

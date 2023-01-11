@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerTournamentStatsByPlayerFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerTournamentStatsByPlayerResponse = exports.PlayerTournamentStatsByPlayerRequest = exports.PlayerTournamentStatsByPlayerPathParams = exports.PlayerTournamentStatsByPlayerFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerTournamentStatsByPlayerFormatEnum;
 (function (PlayerTournamentStatsByPlayerFormatEnum) {
     PlayerTournamentStatsByPlayerFormatEnum["Xml"] = "XML";
     PlayerTournamentStatsByPlayerFormatEnum["Json"] = "JSON";
-})(PlayerTournamentStatsByPlayerFormatEnum || (PlayerTournamentStatsByPlayerFormatEnum = {}));
+})(PlayerTournamentStatsByPlayerFormatEnum = exports.PlayerTournamentStatsByPlayerFormatEnum || (exports.PlayerTournamentStatsByPlayerFormatEnum = {}));
 var PlayerTournamentStatsByPlayerPathParams = /** @class */ (function (_super) {
     __extends(PlayerTournamentStatsByPlayerPathParams, _super);
     function PlayerTournamentStatsByPlayerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerTournamentStatsByPlayerPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], PlayerTournamentStatsByPlayerPathParams.prototype, "playerid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
         __metadata("design:type", String)
     ], PlayerTournamentStatsByPlayerPathParams.prototype, "tournamentid", void 0);
     return PlayerTournamentStatsByPlayerPathParams;
-}(SpeakeasyBase));
-export { PlayerTournamentStatsByPlayerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentStatsByPlayerPathParams = PlayerTournamentStatsByPlayerPathParams;
 var PlayerTournamentStatsByPlayerRequest = /** @class */ (function (_super) {
     __extends(PlayerTournamentStatsByPlayerRequest, _super);
     function PlayerTournamentStatsByPlayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerTournamentStatsByPlayerPathParams)
     ], PlayerTournamentStatsByPlayerRequest.prototype, "pathParams", void 0);
     return PlayerTournamentStatsByPlayerRequest;
-}(SpeakeasyBase));
-export { PlayerTournamentStatsByPlayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentStatsByPlayerRequest = PlayerTournamentStatsByPlayerRequest;
 var PlayerTournamentStatsByPlayerResponse = /** @class */ (function (_super) {
     __extends(PlayerTournamentStatsByPlayerResponse, _super);
     function PlayerTournamentStatsByPlayerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerTournamentStatsByPlayerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PlayerTournamentStatsByPlayerResponse.prototype, "playerTournament", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerTournamentStatsByPlayerResponse.prototype, "statusCode", void 0);
     return PlayerTournamentStatsByPlayerResponse;
-}(SpeakeasyBase));
-export { PlayerTournamentStatsByPlayerResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentStatsByPlayerResponse = PlayerTournamentStatsByPlayerResponse;

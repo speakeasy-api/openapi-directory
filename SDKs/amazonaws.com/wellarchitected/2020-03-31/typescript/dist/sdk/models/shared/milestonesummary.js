@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkloadSummary } from "./workloadsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MilestoneSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var workloadsummary_1 = require("./workloadsummary");
 // MilestoneSummary
 /**
  * A milestone summary return object.
@@ -34,21 +37,21 @@ var MilestoneSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MilestoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MilestoneName" }),
         __metadata("design:type", String)
     ], MilestoneSummary.prototype, "milestoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MilestoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MilestoneNumber" }),
         __metadata("design:type", Number)
     ], MilestoneSummary.prototype, "milestoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordedAt" }),
         __metadata("design:type", Date)
     ], MilestoneSummary.prototype, "recordedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadSummary" }),
-        __metadata("design:type", WorkloadSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadSummary" }),
+        __metadata("design:type", workloadsummary_1.WorkloadSummary)
     ], MilestoneSummary.prototype, "workloadSummary", void 0);
     return MilestoneSummary;
-}(SpeakeasyBase));
-export { MilestoneSummary };
+}(utils_1.SpeakeasyBase));
+exports.MilestoneSummary = MilestoneSummary;

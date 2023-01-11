@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1EduData } from "./googlecloudchannelv1edudata";
-export var GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1CloudIdentityInfo = exports.GoogleCloudChannelV1CloudIdentityInfoInput = exports.GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1edudata_1 = require("./googlecloudchannelv1edudata");
+var GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum;
 (function (GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum) {
     GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum["CustomerTypeUnspecified"] = "CUSTOMER_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum["Domain"] = "DOMAIN";
     GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum["Team"] = "TEAM";
-})(GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum || (GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = {}));
+})(GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = exports.GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum || (exports.GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = {}));
 // GoogleCloudChannelV1CloudIdentityInfoInput
 /**
  * Cloud Identity information for the Cloud Channel Customer.
@@ -40,28 +43,28 @@ var GoogleCloudChannelV1CloudIdentityInfoInput = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateEmail" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfoInput.prototype, "alternateEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfoInput.prototype, "customerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eduData" }),
-        __metadata("design:type", GoogleCloudChannelV1EduData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eduData" }),
+        __metadata("design:type", googlecloudchannelv1edudata_1.GoogleCloudChannelV1EduData)
     ], GoogleCloudChannelV1CloudIdentityInfoInput.prototype, "eduData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfoInput.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfoInput.prototype, "phoneNumber", void 0);
     return GoogleCloudChannelV1CloudIdentityInfoInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1CloudIdentityInfoInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1CloudIdentityInfoInput = GoogleCloudChannelV1CloudIdentityInfoInput;
 // GoogleCloudChannelV1CloudIdentityInfo
 /**
  * Cloud Identity information for the Cloud Channel Customer.
@@ -72,37 +75,37 @@ var GoogleCloudChannelV1CloudIdentityInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminConsoleUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminConsoleUri" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "adminConsoleUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateEmail" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "alternateEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "customerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eduData" }),
-        __metadata("design:type", GoogleCloudChannelV1EduData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eduData" }),
+        __metadata("design:type", googlecloudchannelv1edudata_1.GoogleCloudChannelV1EduData)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "eduData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDomainVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDomainVerified" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "isDomainVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDomain" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityInfo.prototype, "primaryDomain", void 0);
     return GoogleCloudChannelV1CloudIdentityInfo;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1CloudIdentityInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1CloudIdentityInfo = GoogleCloudChannelV1CloudIdentityInfo;

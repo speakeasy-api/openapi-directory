@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEventTrackerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateEventTrackerRequest = /** @class */ (function (_super) {
     __extends(CreateEventTrackerRequest, _super);
     function CreateEventTrackerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetGroupArn" }),
         __metadata("design:type", String)
     ], CreateEventTrackerRequest.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateEventTrackerRequest.prototype, "name", void 0);
     return CreateEventTrackerRequest;
-}(SpeakeasyBase));
-export { CreateEventTrackerRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventTrackerRequest = CreateEventTrackerRequest;

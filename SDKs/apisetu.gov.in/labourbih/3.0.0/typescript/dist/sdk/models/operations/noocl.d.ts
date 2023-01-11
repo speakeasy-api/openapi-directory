@@ -106,11 +106,11 @@ export declare class NooclRequest extends SpeakeasyBase {
 export declare class NooclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    noocl400ApplicationJsonObject?: Noocl400ApplicationJson;
-    noocl401ApplicationJsonObject?: Noocl401ApplicationJson;
-    noocl404ApplicationJsonObject?: Noocl404ApplicationJson;
-    noocl500ApplicationJsonObject?: Noocl500ApplicationJson;
-    noocl502ApplicationJsonObject?: Noocl502ApplicationJson;
-    noocl503ApplicationJsonObject?: Noocl503ApplicationJson;
-    noocl504ApplicationJsonObject?: Noocl504ApplicationJson;
+    noocl400ApplicationJSONObject?: Noocl400ApplicationJson;
+    noocl401ApplicationJSONObject?: Noocl401ApplicationJson;
+    noocl404ApplicationJSONObject?: Noocl404ApplicationJson;
+    noocl500ApplicationJSONObject?: Noocl500ApplicationJson;
+    noocl502ApplicationJSONObject?: Noocl502ApplicationJson;
+    noocl503ApplicationJSONObject?: Noocl503ApplicationJson;
+    noocl504ApplicationJSONObject?: Noocl504ApplicationJson;
 }

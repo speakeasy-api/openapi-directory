@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,208 +23,210 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Posts = exports.PostsOwner = exports.PostsOwnerBadgeCounts = exports.PostsLastEditor = exports.PostsLastEditorBadgeCounts = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostsLastEditorBadgeCounts = /** @class */ (function (_super) {
     __extends(PostsLastEditorBadgeCounts, _super);
     function PostsLastEditorBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditorBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditorBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditorBadgeCounts.prototype, "silver", void 0);
     return PostsLastEditorBadgeCounts;
-}(SpeakeasyBase));
-export { PostsLastEditorBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.PostsLastEditorBadgeCounts = PostsLastEditorBadgeCounts;
 var PostsLastEditor = /** @class */ (function (_super) {
     __extends(PostsLastEditor, _super);
     function PostsLastEditor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditor.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostsLastEditorBadgeCounts)
     ], PostsLastEditor.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsLastEditor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsLastEditor.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsLastEditor.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditor.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsLastEditor.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsLastEditor.prototype, "userType", void 0);
     return PostsLastEditor;
-}(SpeakeasyBase));
-export { PostsLastEditor };
+}(utils_1.SpeakeasyBase));
+exports.PostsLastEditor = PostsLastEditor;
 var PostsOwnerBadgeCounts = /** @class */ (function (_super) {
     __extends(PostsOwnerBadgeCounts, _super);
     function PostsOwnerBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwnerBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwnerBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwnerBadgeCounts.prototype, "silver", void 0);
     return PostsOwnerBadgeCounts;
-}(SpeakeasyBase));
-export { PostsOwnerBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.PostsOwnerBadgeCounts = PostsOwnerBadgeCounts;
 var PostsOwner = /** @class */ (function (_super) {
     __extends(PostsOwner, _super);
     function PostsOwner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwner.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostsOwnerBadgeCounts)
     ], PostsOwner.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsOwner.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsOwner.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsOwner.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwner.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostsOwner.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostsOwner.prototype, "userType", void 0);
     return PostsOwner;
-}(SpeakeasyBase));
-export { PostsOwner };
+}(utils_1.SpeakeasyBase));
+exports.PostsOwner = PostsOwner;
 var Posts = /** @class */ (function (_super) {
     __extends(Posts, _super);
     function Posts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "bodyMarkdown", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "commentCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], Posts.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "downVoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Posts.prototype, "downvoted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "lastActivityDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "lastEditDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostsLastEditor)
     ], Posts.prototype, "lastEditor", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostsOwner)
     ], Posts.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "postId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "postType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "shareLink", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Posts.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Posts.prototype, "upVoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Posts.prototype, "upvoted", void 0);
     return Posts;
-}(SpeakeasyBase));
-export { Posts };
+}(utils_1.SpeakeasyBase));
+exports.Posts = Posts;

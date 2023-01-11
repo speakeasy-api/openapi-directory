@@ -1,5 +1,8 @@
-export var PidModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PidModeEnum = void 0;
+var PidModeEnum;
 (function (PidModeEnum) {
     PidModeEnum["Host"] = "host";
     PidModeEnum["Task"] = "task";
-})(PidModeEnum || (PidModeEnum = {}));
+})(PidModeEnum = exports.PidModeEnum || (exports.PidModeEnum = {}));

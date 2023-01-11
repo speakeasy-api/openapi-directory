@@ -19,7 +19,7 @@ export declare class PaymentsresellersubscriptionPartnersSubscriptionsEntitleQue
 export declare class PaymentsresellersubscriptionPartnersSubscriptionsEntitleRequest extends SpeakeasyBase {
     pathParams: PaymentsresellersubscriptionPartnersSubscriptionsEntitlePathParams;
     queryParams: PaymentsresellersubscriptionPartnersSubscriptionsEntitleQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse extends SpeakeasyBase {
     contentType: string;

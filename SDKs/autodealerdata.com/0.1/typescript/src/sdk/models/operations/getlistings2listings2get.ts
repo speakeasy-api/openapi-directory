@@ -11,7 +11,7 @@ export class GetListings2Listings2GetQueryParams extends SpeakeasyBase {
   daysBack?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dealerID" })
-  dealerId?: number;
+  dealerID?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" })
   endDate?: Date;

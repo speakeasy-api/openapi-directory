@@ -14,7 +14,7 @@ export class ItemApplicationListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   itemApplicationListResponse?: shared.ItemApplicationListResponse;

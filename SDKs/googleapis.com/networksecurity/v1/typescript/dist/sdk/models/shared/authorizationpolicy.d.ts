@@ -12,7 +12,7 @@ export declare class AuthorizationPolicy extends SpeakeasyBase {
     action?: AuthorizationPolicyActionEnum;
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     rules?: Rule[];
     updateTime?: string;
@@ -23,7 +23,7 @@ export declare class AuthorizationPolicy extends SpeakeasyBase {
 export declare class AuthorizationPolicyInput extends SpeakeasyBase {
     action?: AuthorizationPolicyActionEnum;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     rules?: Rule[];
 }

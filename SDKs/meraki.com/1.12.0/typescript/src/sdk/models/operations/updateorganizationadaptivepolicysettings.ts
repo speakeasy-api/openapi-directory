@@ -31,5 +31,5 @@ export class UpdateOrganizationAdaptivePolicySettingsResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationAdaptivePolicySettings200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationAdaptivePolicySettings200ApplicationJSONObject?: Record<string, any>;
 }

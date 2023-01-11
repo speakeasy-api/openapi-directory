@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwsSourceDetails } from "./awssourcedetails";
-import { Status } from "./status";
-import { VmwareSourceDetails } from "./vmwaresourcedetails";
-import { AwsSourceDetailsInput } from "./awssourcedetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceInput = exports.Source = void 0;
+var utils_1 = require("../../../internal/utils");
+var awssourcedetails_1 = require("./awssourcedetails");
+var status_1 = require("./status");
+var vmwaresourcedetails_1 = require("./vmwaresourcedetails");
+var awssourcedetails_2 = require("./awssourcedetails");
 // Source
 /**
  * Source message describes a specific vm migration Source resource. It contains the source environment information.
@@ -37,40 +40,40 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aws" }),
-        __metadata("design:type", AwsSourceDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aws" }),
+        __metadata("design:type", awssourcedetails_1.AwsSourceDetails)
     ], Source.prototype, "aws", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Source.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Source.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], Source.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Source.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Source.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Source.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmware" }),
-        __metadata("design:type", VmwareSourceDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmware" }),
+        __metadata("design:type", vmwaresourcedetails_1.VmwareSourceDetails)
     ], Source.prototype, "vmware", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;
 // SourceInput
 /**
  * Source message describes a specific vm migration Source resource. It contains the source environment information.
@@ -81,25 +84,25 @@ var SourceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aws" }),
-        __metadata("design:type", AwsSourceDetailsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aws" }),
+        __metadata("design:type", awssourcedetails_2.AwsSourceDetailsInput)
     ], SourceInput.prototype, "aws", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SourceInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], SourceInput.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], SourceInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmware" }),
-        __metadata("design:type", VmwareSourceDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmware" }),
+        __metadata("design:type", vmwaresourcedetails_1.VmwareSourceDetails)
     ], SourceInput.prototype, "vmware", void 0);
     return SourceInput;
-}(SpeakeasyBase));
-export { SourceInput };
+}(utils_1.SpeakeasyBase));
+exports.SourceInput = SourceInput;

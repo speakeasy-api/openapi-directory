@@ -10,7 +10,7 @@ export declare class RemoveCustomFieldSettingForProjectRequestBody extends Speak
     data?: shared.RemoveCustomFieldSettingRequest;
 }
 export declare class RemoveCustomFieldSettingForProject200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveCustomFieldSettingForProjectRequest extends SpeakeasyBase {
     pathParams: RemoveCustomFieldSettingForProjectPathParams;
@@ -21,5 +21,5 @@ export declare class RemoveCustomFieldSettingForProjectResponse extends Speakeas
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeCustomFieldSettingForProject200ApplicationJsonObject?: RemoveCustomFieldSettingForProject200ApplicationJson;
+    removeCustomFieldSettingForProject200ApplicationJSONObject?: RemoveCustomFieldSettingForProject200ApplicationJson;
 }

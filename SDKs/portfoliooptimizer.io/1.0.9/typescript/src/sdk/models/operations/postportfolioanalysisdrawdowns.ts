@@ -55,8 +55,8 @@ export class PostPortfolioAnalysisDrawdownsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisDrawdowns200ApplicationJsonObject?: PostPortfolioAnalysisDrawdowns200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisDrawdowns200ApplicationJSONObject?: PostPortfolioAnalysisDrawdowns200ApplicationJson;
 }

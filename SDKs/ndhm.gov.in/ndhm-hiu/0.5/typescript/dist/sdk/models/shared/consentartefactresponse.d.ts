@@ -5,7 +5,7 @@ import { Permission } from "./permission";
 import { UsePurpose } from "./usepurpose";
 import { Requester } from "./requester";
 import { ConsentStatusEnum } from "./consentstatusenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare class ConsentArtefactResponseConsentConsentDetailCareContexts extends SpeakeasyBase {
     careContextReference: string;
@@ -41,7 +41,7 @@ export declare class ConsentArtefactResponseConsent extends SpeakeasyBase {
 }
 export declare class ConsentArtefactResponse extends SpeakeasyBase {
     consent?: ConsentArtefactResponseConsent;
-    error?: Error;
+    error?: ErrorT;
     requestId: string;
     resp: RequestReference;
     timestamp: Date;

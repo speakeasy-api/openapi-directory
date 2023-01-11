@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MediaFile } from "./mediafile";
-export var VideoMetadataVastVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoMetadata = exports.VideoMetadataVastVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var mediafile_1 = require("./mediafile");
+var VideoMetadataVastVersionEnum;
 (function (VideoMetadataVastVersionEnum) {
     VideoMetadataVastVersionEnum["VastVersionUnspecified"] = "VAST_VERSION_UNSPECIFIED";
     VideoMetadataVastVersionEnum["VastVersion10"] = "VAST_VERSION_1_0";
     VideoMetadataVastVersionEnum["VastVersion20"] = "VAST_VERSION_2_0";
     VideoMetadataVastVersionEnum["VastVersion30"] = "VAST_VERSION_3_0";
     VideoMetadataVastVersionEnum["VastVersion40"] = "VAST_VERSION_4_0";
-})(VideoMetadataVastVersionEnum || (VideoMetadataVastVersionEnum = {}));
+})(VideoMetadataVastVersionEnum = exports.VideoMetadataVastVersionEnum || (exports.VideoMetadataVastVersionEnum = {}));
 // VideoMetadata
 /**
  * Video metadata for a creative.
@@ -42,29 +45,29 @@ var VideoMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], VideoMetadata.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isValidVast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isValidVast" }),
         __metadata("design:type", Boolean)
     ], VideoMetadata.prototype, "isValidVast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isVpaid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isVpaid" }),
         __metadata("design:type", Boolean)
     ], VideoMetadata.prototype, "isVpaid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaFiles", elemType: MediaFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaFiles", elemType: mediafile_1.MediaFile }),
         __metadata("design:type", Array)
     ], VideoMetadata.prototype, "mediaFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipOffset" }),
         __metadata("design:type", String)
     ], VideoMetadata.prototype, "skipOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vastVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vastVersion" }),
         __metadata("design:type", String)
     ], VideoMetadata.prototype, "vastVersion", void 0);
     return VideoMetadata;
-}(SpeakeasyBase));
-export { VideoMetadata };
+}(utils_1.SpeakeasyBase));
+exports.VideoMetadata = VideoMetadata;

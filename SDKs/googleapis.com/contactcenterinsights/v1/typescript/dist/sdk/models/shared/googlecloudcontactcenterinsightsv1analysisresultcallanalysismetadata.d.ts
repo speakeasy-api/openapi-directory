@@ -10,9 +10,9 @@ import { GoogleCloudContactcenterinsightsV1ConversationLevelSentiment } from "./
 **/
 export declare class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata extends SpeakeasyBase {
     annotations?: GoogleCloudContactcenterinsightsV1CallAnnotation[];
-    entities?: Map<string, GoogleCloudContactcenterinsightsV1Entity>;
-    intents?: Map<string, GoogleCloudContactcenterinsightsV1Intent>;
+    entities?: Record<string, GoogleCloudContactcenterinsightsV1Entity>;
+    intents?: Record<string, GoogleCloudContactcenterinsightsV1Intent>;
     issueModelResult?: GoogleCloudContactcenterinsightsV1IssueModelResult;
-    phraseMatchers?: Map<string, GoogleCloudContactcenterinsightsV1PhraseMatchData>;
+    phraseMatchers?: Record<string, GoogleCloudContactcenterinsightsV1PhraseMatchData>;
     sentiments?: GoogleCloudContactcenterinsightsV1ConversationLevelSentiment[];
 }

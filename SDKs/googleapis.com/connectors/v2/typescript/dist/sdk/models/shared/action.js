@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputParameter } from "./inputparameter";
-import { ResultMetadata } from "./resultmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputparameter_1 = require("./inputparameter");
+var resultmetadata_1 = require("./resultmetadata");
 // Action
 /**
  * Action message contains metadata information about a single action present in the external system.
@@ -35,17 +38,17 @@ var Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputParameters", elemType: InputParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputParameters", elemType: inputparameter_1.InputParameter }),
         __metadata("design:type", Array)
     ], Action.prototype, "inputParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Action.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resultMetadata", elemType: ResultMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resultMetadata", elemType: resultmetadata_1.ResultMetadata }),
         __metadata("design:type", Array)
     ], Action.prototype, "resultMetadata", void 0);
     return Action;
-}(SpeakeasyBase));
-export { Action };
+}(utils_1.SpeakeasyBase));
+exports.Action = Action;

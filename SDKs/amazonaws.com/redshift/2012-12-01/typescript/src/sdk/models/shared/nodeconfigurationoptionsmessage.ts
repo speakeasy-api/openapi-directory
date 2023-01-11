@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NodeConfigurationOption } from "./nodeconfigurationoption";
+import { NodeConfigurationOptionList } from "./nodeconfigurationoptionlist";
 
 
 
@@ -7,6 +7,6 @@ export class NodeConfigurationOptionsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: NodeConfigurationOption })
-  nodeConfigurationOptionList?: NodeConfigurationOption[];
+  @SpeakeasyMetadata({ elemType: NodeConfigurationOptionList })
+  nodeConfigurationOptionList?: NodeConfigurationOptionList[];
 }

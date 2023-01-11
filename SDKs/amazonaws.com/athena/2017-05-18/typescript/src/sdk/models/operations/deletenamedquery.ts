@@ -48,7 +48,7 @@ export class DeleteNamedQueryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteNamedQueryOutput?: Map<string, any>;
+  deleteNamedQueryOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

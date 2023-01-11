@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ImportResponseStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportResponse = exports.ImportResponseStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ImportResponseStateEnum;
 (function (ImportResponseStateEnum) {
     ImportResponseStateEnum["Importing"] = "IMPORTING";
     ImportResponseStateEnum["FinishedSuccess"] = "FINISHED_SUCCESS";
     ImportResponseStateEnum["FinishedFailed"] = "FINISHED_FAILED";
-})(ImportResponseStateEnum || (ImportResponseStateEnum = {}));
+})(ImportResponseStateEnum = exports.ImportResponseStateEnum || (exports.ImportResponseStateEnum = {}));
 var ImportResponse = /** @class */ (function (_super) {
     __extends(ImportResponse, _super);
     function ImportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], ImportResponse.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], ImportResponse.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", Date)
     ], ImportResponse.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
         __metadata("design:type", Number)
     ], ImportResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ImportResponse.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], ImportResponse.prototype, "uuid", void 0);
     return ImportResponse;
-}(SpeakeasyBase));
-export { ImportResponse };
+}(utils_1.SpeakeasyBase));
+exports.ImportResponse = ImportResponse;

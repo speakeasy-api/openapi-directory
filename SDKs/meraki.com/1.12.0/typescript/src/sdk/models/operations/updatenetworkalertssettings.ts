@@ -35,7 +35,7 @@ export class UpdateNetworkAlertsSettingsRequestBodyAlerts extends SpeakeasyBase 
   enabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=filters" })
-  filters?: Map<string, any>;
+  filters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
@@ -87,5 +87,5 @@ export class UpdateNetworkAlertsSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkAlertsSettings200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkAlertsSettings200ApplicationJSONObject?: Record<string, any>;
 }

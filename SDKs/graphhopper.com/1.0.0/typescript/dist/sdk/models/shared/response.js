@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Solution } from "./solution";
-export var ResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Response = exports.ResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var solution_1 = require("./solution");
+var ResponseStatusEnum;
 (function (ResponseStatusEnum) {
     ResponseStatusEnum["WaitingInQueue"] = "waiting_in_queue";
     ResponseStatusEnum["Processing"] = "processing";
     ResponseStatusEnum["Finished"] = "finished";
-})(ResponseStatusEnum || (ResponseStatusEnum = {}));
+})(ResponseStatusEnum = exports.ResponseStatusEnum || (exports.ResponseStatusEnum = {}));
 var Response = /** @class */ (function (_super) {
     __extends(Response, _super);
     function Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyrights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyrights" }),
         __metadata("design:type", Array)
     ], Response.prototype, "copyrights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processing_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processing_time" }),
         __metadata("design:type", Number)
     ], Response.prototype, "processingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=solution" }),
-        __metadata("design:type", Solution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=solution" }),
+        __metadata("design:type", solution_1.Solution)
     ], Response.prototype, "solution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Response.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waiting_time_in_queue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waiting_time_in_queue" }),
         __metadata("design:type", Number)
     ], Response.prototype, "waitingTimeInQueue", void 0);
     return Response;
-}(SpeakeasyBase));
-export { Response };
+}(utils_1.SpeakeasyBase));
+exports.Response = Response;

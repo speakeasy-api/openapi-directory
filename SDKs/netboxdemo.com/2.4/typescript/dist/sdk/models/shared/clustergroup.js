@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var ClusterGroupInput = /** @class */ (function (_super) {
-    __extends(ClusterGroupInput, _super);
-    function ClusterGroupInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ClusterGroupInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
-        __metadata("design:type", String)
-    ], ClusterGroupInput.prototype, "slug", void 0);
-    return ClusterGroupInput;
-}(SpeakeasyBase));
-export { ClusterGroupInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterGroupInput = exports.ClusterGroup = void 0;
+var utils_1 = require("../../../internal/utils");
 var ClusterGroup = /** @class */ (function (_super) {
     __extends(ClusterGroup, _super);
     function ClusterGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ClusterGroup.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ClusterGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], ClusterGroup.prototype, "slug", void 0);
     return ClusterGroup;
-}(SpeakeasyBase));
-export { ClusterGroup };
+}(utils_1.SpeakeasyBase));
+exports.ClusterGroup = ClusterGroup;
+var ClusterGroupInput = /** @class */ (function (_super) {
+    __extends(ClusterGroupInput, _super);
+    function ClusterGroupInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ClusterGroupInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
+        __metadata("design:type", String)
+    ], ClusterGroupInput.prototype, "slug", void 0);
+    return ClusterGroupInput;
+}(utils_1.SpeakeasyBase));
+exports.ClusterGroupInput = ClusterGroupInput;

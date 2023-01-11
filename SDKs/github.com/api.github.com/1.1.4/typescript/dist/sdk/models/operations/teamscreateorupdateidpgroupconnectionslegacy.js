@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,118 +14,143 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse = exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest = exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody = exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups = exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams = /** @class */ (function (_super) {
     __extends(TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams, _super);
     function TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams.prototype, "teamId", void 0);
     return TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams;
-}(SpeakeasyBase));
-export { TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams = TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams;
 var TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups = /** @class */ (function (_super) {
     __extends(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups, _super);
     function TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_description" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "groupDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_id" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_name" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups.prototype, "name", void 0);
     return TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups;
-}(SpeakeasyBase));
-export { TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups };
+}(utils_1.SpeakeasyBase));
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups = TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups;
 var TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody = /** @class */ (function (_super) {
     __extends(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody, _super);
     function TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups", elemType: TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups", elemType: TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBodyGroups }),
         __metadata("design:type", Array)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=synced_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=synced_at" }),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody.prototype, "syncedAt", void 0);
     return TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody;
-}(SpeakeasyBase));
-export { TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody = TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody;
 var TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest = /** @class */ (function (_super) {
     __extends(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest, _super);
     function TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest.prototype, "request", void 0);
     return TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest;
-}(SpeakeasyBase));
-export { TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest = TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest;
 var TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse = /** @class */ (function (_super) {
     __extends(TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse, _super);
     function TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GroupMapping)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse.prototype, "groupMapping", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse.prototype, "validationError", void 0);
     return TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse;
-}(SpeakeasyBase));
-export { TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse = TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse;

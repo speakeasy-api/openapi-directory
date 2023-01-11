@@ -8,7 +8,7 @@ export declare class TestnetGetTransactionInfoRequest extends SpeakeasyBase {
 }
 export declare class TestnetGetTransactionInfoResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTransactionInfoResponse?: shared.GetTransactionInfoResponse;
 }

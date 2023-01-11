@@ -10,7 +10,7 @@ export declare class DescribeStreamHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DescribeStreamRequestBody extends SpeakeasyBase {
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class DescribeStreamRequest extends SpeakeasyBase {

@@ -15,7 +15,7 @@ export class DescribeBotAliasResponse extends SpeakeasyBase {
   botAliasId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=botAliasLocaleSettings", elemType: BotAliasLocaleSettings })
-  botAliasLocaleSettings?: Map<string, BotAliasLocaleSettings>;
+  botAliasLocaleSettings?: Record<string, BotAliasLocaleSettings>;
 
   @SpeakeasyMetadata({ data: "json, name=botAliasName" })
   botAliasName?: string;

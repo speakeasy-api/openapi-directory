@@ -19,7 +19,7 @@ export class GistsCreateRequestBody extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: GistsCreateRequestBodyFiles })
-  files: Map<string, GistsCreateRequestBodyFiles>;
+  files: Record<string, GistsCreateRequestBodyFiles>;
 
   @SpeakeasyMetadata({ data: "json, name=public" })
   public?: any;
@@ -37,7 +37,7 @@ export class GistsCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,5 +1,8 @@
-export var DnsSupportValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DnsSupportValueEnum = void 0;
+var DnsSupportValueEnum;
 (function (DnsSupportValueEnum) {
     DnsSupportValueEnum["Enable"] = "enable";
     DnsSupportValueEnum["Disable"] = "disable";
-})(DnsSupportValueEnum || (DnsSupportValueEnum = {}));
+})(DnsSupportValueEnum = exports.DnsSupportValueEnum || (exports.DnsSupportValueEnum = {}));

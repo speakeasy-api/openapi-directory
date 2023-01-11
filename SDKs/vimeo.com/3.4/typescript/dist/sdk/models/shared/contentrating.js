@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ContentRatingCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentRating = exports.ContentRatingCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ContentRatingCodeEnum;
 (function (ContentRatingCodeEnum) {
     ContentRatingCodeEnum["Drugs"] = "drugs";
     ContentRatingCodeEnum["Language"] = "language";
@@ -31,24 +34,24 @@ export var ContentRatingCodeEnum;
     ContentRatingCodeEnum["Safe"] = "safe";
     ContentRatingCodeEnum["Unrated"] = "unrated";
     ContentRatingCodeEnum["Violence"] = "violence";
-})(ContentRatingCodeEnum || (ContentRatingCodeEnum = {}));
+})(ContentRatingCodeEnum = exports.ContentRatingCodeEnum || (exports.ContentRatingCodeEnum = {}));
 var ContentRating = /** @class */ (function (_super) {
     __extends(ContentRating, _super);
     function ContentRating() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "uri", void 0);
     return ContentRating;
-}(SpeakeasyBase));
-export { ContentRating };
+}(utils_1.SpeakeasyBase));
+exports.ContentRating = ContentRating;

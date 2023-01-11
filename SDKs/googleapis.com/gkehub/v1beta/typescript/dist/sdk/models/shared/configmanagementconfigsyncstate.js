@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementConfigSyncDeploymentState } from "./configmanagementconfigsyncdeploymentstate";
-import { ConfigManagementSyncState } from "./configmanagementsyncstate";
-import { ConfigManagementConfigSyncVersion } from "./configmanagementconfigsyncversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementConfigSyncState = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementconfigsyncdeploymentstate_1 = require("./configmanagementconfigsyncdeploymentstate");
+var configmanagementsyncstate_1 = require("./configmanagementsyncstate");
+var configmanagementconfigsyncversion_1 = require("./configmanagementconfigsyncversion");
 // ConfigManagementConfigSyncState
 /**
  * State information for ConfigSync
@@ -36,17 +39,17 @@ var ConfigManagementConfigSyncState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentState" }),
-        __metadata("design:type", ConfigManagementConfigSyncDeploymentState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentState" }),
+        __metadata("design:type", configmanagementconfigsyncdeploymentstate_1.ConfigManagementConfigSyncDeploymentState)
     ], ConfigManagementConfigSyncState.prototype, "deploymentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncState" }),
-        __metadata("design:type", ConfigManagementSyncState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncState" }),
+        __metadata("design:type", configmanagementsyncstate_1.ConfigManagementSyncState)
     ], ConfigManagementConfigSyncState.prototype, "syncState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", ConfigManagementConfigSyncVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", configmanagementconfigsyncversion_1.ConfigManagementConfigSyncVersion)
     ], ConfigManagementConfigSyncState.prototype, "version", void 0);
     return ConfigManagementConfigSyncState;
-}(SpeakeasyBase));
-export { ConfigManagementConfigSyncState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementConfigSyncState = ConfigManagementConfigSyncState;

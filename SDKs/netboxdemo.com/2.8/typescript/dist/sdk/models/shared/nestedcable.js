@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var NestedCableInput = /** @class */ (function (_super) {
-    __extends(NestedCableInput, _super);
-    function NestedCableInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", String)
-    ], NestedCableInput.prototype, "label", void 0);
-    return NestedCableInput;
-}(SpeakeasyBase));
-export { NestedCableInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestedCableInput = exports.NestedCable = void 0;
+var utils_1 = require("../../../internal/utils");
 var NestedCable = /** @class */ (function (_super) {
     __extends(NestedCable, _super);
     function NestedCable() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NestedCable.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], NestedCable.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], NestedCable.prototype, "url", void 0);
     return NestedCable;
-}(SpeakeasyBase));
-export { NestedCable };
+}(utils_1.SpeakeasyBase));
+exports.NestedCable = NestedCable;
+var NestedCableInput = /** @class */ (function (_super) {
+    __extends(NestedCableInput, _super);
+    function NestedCableInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], NestedCableInput.prototype, "label", void 0);
+    return NestedCableInput;
+}(utils_1.SpeakeasyBase));
+exports.NestedCableInput = NestedCableInput;

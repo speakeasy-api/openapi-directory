@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderReportDisbursement } from "./orderreportdisbursement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderreportsListDisbursementsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderreportdisbursement_1 = require("./orderreportdisbursement");
 var OrderreportsListDisbursementsResponse = /** @class */ (function (_super) {
     __extends(OrderreportsListDisbursementsResponse, _super);
     function OrderreportsListDisbursementsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disbursements", elemType: OrderReportDisbursement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disbursements", elemType: orderreportdisbursement_1.OrderReportDisbursement }),
         __metadata("design:type", Array)
     ], OrderreportsListDisbursementsResponse.prototype, "disbursements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], OrderreportsListDisbursementsResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], OrderreportsListDisbursementsResponse.prototype, "nextPageToken", void 0);
     return OrderreportsListDisbursementsResponse;
-}(SpeakeasyBase));
-export { OrderreportsListDisbursementsResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrderreportsListDisbursementsResponse = OrderreportsListDisbursementsResponse;

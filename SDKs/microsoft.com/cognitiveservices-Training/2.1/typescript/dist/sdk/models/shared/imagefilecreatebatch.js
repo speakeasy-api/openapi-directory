@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageFileCreateEntry } from "./imagefilecreateentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageFileCreateBatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagefilecreateentry_1 = require("./imagefilecreateentry");
 var ImageFileCreateBatch = /** @class */ (function (_super) {
     __extends(ImageFileCreateBatch, _super);
     function ImageFileCreateBatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageFileCreateEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imagefilecreateentry_1.ImageFileCreateEntry }),
         __metadata("design:type", Array)
     ], ImageFileCreateBatch.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagIds" }),
         __metadata("design:type", Array)
     ], ImageFileCreateBatch.prototype, "tagIds", void 0);
     return ImageFileCreateBatch;
-}(SpeakeasyBase));
-export { ImageFileCreateBatch };
+}(utils_1.SpeakeasyBase));
+exports.ImageFileCreateBatch = ImageFileCreateBatch;

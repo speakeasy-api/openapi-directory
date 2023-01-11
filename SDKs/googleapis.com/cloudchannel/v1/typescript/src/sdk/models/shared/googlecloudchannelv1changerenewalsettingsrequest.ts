@@ -1,15 +1,15 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1RenewalSettings } from "./googlecloudchannelv1renewalsettings";
+import { GoogleCloudChannelV1RenewalSettingsInput } from "./googlecloudchannelv1renewalsettings";
 
 
 
-// GoogleCloudChannelV1ChangeRenewalSettingsRequest
+// GoogleCloudChannelV1ChangeRenewalSettingsRequestInput
 /** 
  * Request message for CloudChannelService.ChangeRenewalSettings.
 **/
-export class GoogleCloudChannelV1ChangeRenewalSettingsRequest extends SpeakeasyBase {
+export class GoogleCloudChannelV1ChangeRenewalSettingsRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=renewalSettings" })
-  renewalSettings?: GoogleCloudChannelV1RenewalSettings;
+  renewalSettings?: GoogleCloudChannelV1RenewalSettingsInput;
 
   @SpeakeasyMetadata({ data: "json, name=requestId" })
   requestId?: string;

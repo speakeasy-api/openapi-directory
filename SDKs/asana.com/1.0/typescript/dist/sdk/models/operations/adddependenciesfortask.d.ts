@@ -11,7 +11,7 @@ export declare class AddDependenciesForTaskRequestBody extends SpeakeasyBase {
     data?: shared.ModifyDependenciesRequest;
 }
 export declare class AddDependenciesForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddDependenciesForTaskRequest extends SpeakeasyBase {
     pathParams: AddDependenciesForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class AddDependenciesForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addDependenciesForTask200ApplicationJsonObject?: AddDependenciesForTask200ApplicationJson;
+    addDependenciesForTask200ApplicationJSONObject?: AddDependenciesForTask200ApplicationJson;
 }

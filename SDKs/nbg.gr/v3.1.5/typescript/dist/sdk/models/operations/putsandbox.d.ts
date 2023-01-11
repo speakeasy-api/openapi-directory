@@ -15,6 +15,5 @@ export declare class PutSandboxRequest extends SpeakeasyBase {
 export declare class PutSandboxResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
     statusCode: number;
 }

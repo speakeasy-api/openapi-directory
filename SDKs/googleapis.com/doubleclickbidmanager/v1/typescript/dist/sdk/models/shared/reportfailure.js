@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReportFailureErrorCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportFailure = exports.ReportFailureErrorCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReportFailureErrorCodeEnum;
 (function (ReportFailureErrorCodeEnum) {
     ReportFailureErrorCodeEnum["AuthenticationError"] = "AUTHENTICATION_ERROR";
     ReportFailureErrorCodeEnum["UnauthorizedApiAccess"] = "UNAUTHORIZED_API_ACCESS";
@@ -43,7 +46,7 @@ export var ReportFailureErrorCodeEnum;
     ReportFailureErrorCodeEnum["ReportingInvalidQueryTooManyUnfilteredLargeGroupBys"] = "REPORTING_INVALID_QUERY_TOO_MANY_UNFILTERED_LARGE_GROUP_BYS";
     ReportFailureErrorCodeEnum["ReportingInvalidQueryTitleMissing"] = "REPORTING_INVALID_QUERY_TITLE_MISSING";
     ReportFailureErrorCodeEnum["ReportingInvalidQueryMissingPartnerAndAdvertiserFilters"] = "REPORTING_INVALID_QUERY_MISSING_PARTNER_AND_ADVERTISER_FILTERS";
-})(ReportFailureErrorCodeEnum || (ReportFailureErrorCodeEnum = {}));
+})(ReportFailureErrorCodeEnum = exports.ReportFailureErrorCodeEnum || (exports.ReportFailureErrorCodeEnum = {}));
 // ReportFailure
 /**
  * An explanation of a report failure.
@@ -54,9 +57,9 @@ var ReportFailure = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", String)
     ], ReportFailure.prototype, "errorCode", void 0);
     return ReportFailure;
-}(SpeakeasyBase));
-export { ReportFailure };
+}(utils_1.SpeakeasyBase));
+exports.ReportFailure = ReportFailure;

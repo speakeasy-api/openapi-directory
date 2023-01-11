@@ -67,7 +67,7 @@ export class PutLexiconResponse extends SpeakeasyBase {
   maxLexiconsNumberExceededException?: any;
 
   @SpeakeasyMetadata()
-  putLexiconOutput?: Map<string, any>;
+  putLexiconOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serviceFailureException?: any;

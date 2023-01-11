@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PurchaseProvisionedCapacityResponse = exports.PurchaseProvisionedCapacityRequest = exports.PurchaseProvisionedCapacityHeaders = exports.PurchaseProvisionedCapacityPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PurchaseProvisionedCapacityPathParams = /** @class */ (function (_super) {
     __extends(PurchaseProvisionedCapacityPathParams, _super);
     function PurchaseProvisionedCapacityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityPathParams.prototype, "accountId", void 0);
     return PurchaseProvisionedCapacityPathParams;
-}(SpeakeasyBase));
-export { PurchaseProvisionedCapacityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseProvisionedCapacityPathParams = PurchaseProvisionedCapacityPathParams;
 var PurchaseProvisionedCapacityHeaders = /** @class */ (function (_super) {
     __extends(PurchaseProvisionedCapacityHeaders, _super);
     function PurchaseProvisionedCapacityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PurchaseProvisionedCapacityHeaders;
-}(SpeakeasyBase));
-export { PurchaseProvisionedCapacityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseProvisionedCapacityHeaders = PurchaseProvisionedCapacityHeaders;
 var PurchaseProvisionedCapacityRequest = /** @class */ (function (_super) {
     __extends(PurchaseProvisionedCapacityRequest, _super);
     function PurchaseProvisionedCapacityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PurchaseProvisionedCapacityPathParams)
     ], PurchaseProvisionedCapacityRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PurchaseProvisionedCapacityHeaders)
     ], PurchaseProvisionedCapacityRequest.prototype, "headers", void 0);
     return PurchaseProvisionedCapacityRequest;
-}(SpeakeasyBase));
-export { PurchaseProvisionedCapacityRequest };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseProvisionedCapacityRequest = PurchaseProvisionedCapacityRequest;
 var PurchaseProvisionedCapacityResponse = /** @class */ (function (_super) {
     __extends(PurchaseProvisionedCapacityResponse, _super);
     function PurchaseProvisionedCapacityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PurchaseProvisionedCapacityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PurchaseProvisionedCapacityResponse.prototype, "invalidParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PurchaseProvisionedCapacityResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PurchaseProvisionedCapacityResponse.prototype, "missingParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PurchaseProvisionedCapacityResponse.prototype, "purchaseProvisionedCapacityOutput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PurchaseProvisionedCapacityResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PurchaseProvisionedCapacityResponse.prototype, "statusCode", void 0);
     return PurchaseProvisionedCapacityResponse;
-}(SpeakeasyBase));
-export { PurchaseProvisionedCapacityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseProvisionedCapacityResponse = PurchaseProvisionedCapacityResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketplaceNote } from "./marketplacenote";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatePrivateAuctionProposalRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketplacenote_1 = require("./marketplacenote");
 var UpdatePrivateAuctionProposalRequest = /** @class */ (function (_super) {
     __extends(UpdatePrivateAuctionProposalRequest, _super);
     function UpdatePrivateAuctionProposalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalDealId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalDealId" }),
         __metadata("design:type", String)
     ], UpdatePrivateAuctionProposalRequest.prototype, "externalDealId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
-        __metadata("design:type", MarketplaceNote)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
+        __metadata("design:type", marketplacenote_1.MarketplaceNote)
     ], UpdatePrivateAuctionProposalRequest.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalRevisionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalRevisionNumber" }),
         __metadata("design:type", String)
     ], UpdatePrivateAuctionProposalRequest.prototype, "proposalRevisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateAction" }),
         __metadata("design:type", String)
     ], UpdatePrivateAuctionProposalRequest.prototype, "updateAction", void 0);
     return UpdatePrivateAuctionProposalRequest;
-}(SpeakeasyBase));
-export { UpdatePrivateAuctionProposalRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePrivateAuctionProposalRequest = UpdatePrivateAuctionProposalRequest;

@@ -16,8 +16,8 @@ export class RequestedScopes extends SpeakeasyBase {
   accountSelectionCardinality: AccountSelectionCardinalityEnum;
 
   @SpeakeasyMetadata({ data: "json, name=optional_product_access" })
-  optionalProductAccess: Map<string, any>;
+  optionalProductAccess: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=required_product_access" })
-  requiredProductAccess: Map<string, any>;
+  requiredProductAccess: Record<string, any>;
 }

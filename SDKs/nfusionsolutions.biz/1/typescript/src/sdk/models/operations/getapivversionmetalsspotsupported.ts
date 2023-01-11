@@ -35,11 +35,11 @@ export class GetApiVVersionMetalsSpotSupportedResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiVVersionMetalsSpotSupported200ApplicationJsonStrings?: string[];
-
-  @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiVVersionMetalsSpotSupported200ApplicationJSONStrings?: string[];
 }

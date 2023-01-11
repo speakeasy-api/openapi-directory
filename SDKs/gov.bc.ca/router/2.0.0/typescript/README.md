@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetDirectionsOutputFormatRequest, GetDirectionsOutputFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,18 +33,18 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetDirectionsOutputFormatRequest = {
   pathParams: {
-    outputFormat: "html",
+    outputFormat: "json",
   },
   queryParams: {
-    correctSide: true,
+    correctSide: false,
     criteria: "fastest",
-    departure: "2022-04-20T06:51:19Z",
-    disable: "omnis",
-    distanceUnit: "mi",
-    outputSrs: 7152912201065642640,
-    points: "voluptatibus",
+    departure: "2019-04-21T07:38:14Z",
+    disable: "consequuntur",
+    distanceUnit: "km",
+    outputSRS: 1774932891286980153,
+    points: "voluptas",
     roundTrip: true,
-    routeDescription: "dolor",
+    routeDescription: "et",
   },
 };
 
@@ -71,14 +70,14 @@ sdk.directions.getDirectionsOutputFormat(req).then((res: GetDirectionsOutputForm
 
 ### distance
 
-* `getDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `getDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `getTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points for a commercial vehicle
+* `getDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `getTruckDistanceOutputFormat` - Get distance and travel time between two geographic points for a commercial vehicle
-* `postDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
+* `getTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points for a commercial vehicle
 * `postDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `postTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
+* `postDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 * `postTruckDistanceOutputFormat` - Get distance and travel time between two geographic points
+* `postTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
 
 ### route
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DecisionTaskTimeoutTypeEnum } from "./decisiontasktimeouttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecisionTaskTimedOutEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var decisiontasktimeouttypeenum_1 = require("./decisiontasktimeouttypeenum");
 // DecisionTaskTimedOutEventAttributes
 /**
  * Provides the details of the <code>DecisionTaskTimedOut</code> event.
@@ -34,17 +37,17 @@ var DecisionTaskTimedOutEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEventId" }),
         __metadata("design:type", Number)
     ], DecisionTaskTimedOutEventAttributes.prototype, "scheduledEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedEventId" }),
         __metadata("design:type", Number)
     ], DecisionTaskTimedOutEventAttributes.prototype, "startedEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutType" }),
         __metadata("design:type", String)
     ], DecisionTaskTimedOutEventAttributes.prototype, "timeoutType", void 0);
     return DecisionTaskTimedOutEventAttributes;
-}(SpeakeasyBase));
-export { DecisionTaskTimedOutEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.DecisionTaskTimedOutEventAttributes = DecisionTaskTimedOutEventAttributes;

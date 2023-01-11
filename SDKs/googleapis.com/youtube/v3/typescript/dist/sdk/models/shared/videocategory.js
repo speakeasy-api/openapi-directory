@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoCategorySnippet } from "./videocategorysnippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoCategory = void 0;
+var utils_1 = require("../../../internal/utils");
+var videocategorysnippet_1 = require("./videocategorysnippet");
 // VideoCategory
 /**
  * A *videoCategory* resource identifies a category that has been or could be associated with uploaded videos.
@@ -34,21 +37,21 @@ var VideoCategory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], VideoCategory.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], VideoCategory.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], VideoCategory.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", VideoCategorySnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", videocategorysnippet_1.VideoCategorySnippet)
     ], VideoCategory.prototype, "snippet", void 0);
     return VideoCategory;
-}(SpeakeasyBase));
-export { VideoCategory };
+}(utils_1.SpeakeasyBase));
+exports.VideoCategory = VideoCategory;

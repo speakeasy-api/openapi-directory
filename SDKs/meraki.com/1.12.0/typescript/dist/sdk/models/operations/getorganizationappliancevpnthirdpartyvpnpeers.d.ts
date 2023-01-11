@@ -8,5 +8,5 @@ export declare class GetOrganizationApplianceVpnThirdPartyVpnPeersRequest extend
 export declare class GetOrganizationApplianceVpnThirdPartyVpnPeersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject?: Record<string, any>;
 }

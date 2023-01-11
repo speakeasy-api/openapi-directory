@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidateForVoiceResponse = exports.ValidateForVoiceRequest = exports.ValidateForVoice200ApplicationJson = exports.ValidateForVoiceQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ValidateForVoiceQueryParams = /** @class */ (function (_super) {
     __extends(ValidateForVoiceQueryParams, _super);
     function ValidateForVoiceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ValidateForVoiceQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=number" }),
         __metadata("design:type", String)
     ], ValidateForVoiceQueryParams.prototype, "number", void 0);
     return ValidateForVoiceQueryParams;
-}(SpeakeasyBase));
-export { ValidateForVoiceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ValidateForVoiceQueryParams = ValidateForVoiceQueryParams;
 var ValidateForVoice200ApplicationJson = /** @class */ (function (_super) {
     __extends(ValidateForVoice200ApplicationJson, _super);
     function ValidateForVoice200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ValidateForVoice200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], ValidateForVoice200ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], ValidateForVoice200ApplicationJson.prototype, "success", void 0);
     return ValidateForVoice200ApplicationJson;
-}(SpeakeasyBase));
-export { ValidateForVoice200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ValidateForVoice200ApplicationJson = ValidateForVoice200ApplicationJson;
 var ValidateForVoiceRequest = /** @class */ (function (_super) {
     __extends(ValidateForVoiceRequest, _super);
     function ValidateForVoiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ValidateForVoiceQueryParams)
     ], ValidateForVoiceRequest.prototype, "queryParams", void 0);
     return ValidateForVoiceRequest;
-}(SpeakeasyBase));
-export { ValidateForVoiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.ValidateForVoiceRequest = ValidateForVoiceRequest;
 var ValidateForVoiceResponse = /** @class */ (function (_super) {
     __extends(ValidateForVoiceResponse, _super);
     function ValidateForVoiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ValidateForVoiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ValidateForVoiceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ValidateForVoice200ApplicationJson)
-    ], ValidateForVoiceResponse.prototype, "validateForVoice200ApplicationJsonObject", void 0);
+    ], ValidateForVoiceResponse.prototype, "validateForVoice200ApplicationJSONObject", void 0);
     return ValidateForVoiceResponse;
-}(SpeakeasyBase));
-export { ValidateForVoiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ValidateForVoiceResponse = ValidateForVoiceResponse;

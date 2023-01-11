@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLaunchProfileMemberResponse = exports.DeleteLaunchProfileMemberRequest = exports.DeleteLaunchProfileMemberHeaders = exports.DeleteLaunchProfileMemberPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteLaunchProfileMemberPathParams = /** @class */ (function (_super) {
     __extends(DeleteLaunchProfileMemberPathParams, _super);
     function DeleteLaunchProfileMemberPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=launchProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=launchProfileId" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberPathParams.prototype, "launchProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=principalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=principalId" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberPathParams.prototype, "principalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=studioId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=studioId" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberPathParams.prototype, "studioId", void 0);
     return DeleteLaunchProfileMemberPathParams;
-}(SpeakeasyBase));
-export { DeleteLaunchProfileMemberPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLaunchProfileMemberPathParams = DeleteLaunchProfileMemberPathParams;
 var DeleteLaunchProfileMemberHeaders = /** @class */ (function (_super) {
     __extends(DeleteLaunchProfileMemberHeaders, _super);
     function DeleteLaunchProfileMemberHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Client-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Client-Token" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzClientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteLaunchProfileMemberHeaders;
-}(SpeakeasyBase));
-export { DeleteLaunchProfileMemberHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLaunchProfileMemberHeaders = DeleteLaunchProfileMemberHeaders;
 var DeleteLaunchProfileMemberRequest = /** @class */ (function (_super) {
     __extends(DeleteLaunchProfileMemberRequest, _super);
     function DeleteLaunchProfileMemberRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLaunchProfileMemberPathParams)
     ], DeleteLaunchProfileMemberRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLaunchProfileMemberHeaders)
     ], DeleteLaunchProfileMemberRequest.prototype, "headers", void 0);
     return DeleteLaunchProfileMemberRequest;
-}(SpeakeasyBase));
-export { DeleteLaunchProfileMemberRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLaunchProfileMemberRequest = DeleteLaunchProfileMemberRequest;
 var DeleteLaunchProfileMemberResponse = /** @class */ (function (_super) {
     __extends(DeleteLaunchProfileMemberResponse, _super);
     function DeleteLaunchProfileMemberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteLaunchProfileMemberResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "deleteLaunchProfileMemberResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "internalServerErrorException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteLaunchProfileMemberResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLaunchProfileMemberResponse.prototype, "validationException", void 0);
     return DeleteLaunchProfileMemberResponse;
-}(SpeakeasyBase));
-export { DeleteLaunchProfileMemberResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLaunchProfileMemberResponse = DeleteLaunchProfileMemberResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2BigQueryOptions } from "./googleprivacydlpv2bigqueryoptions";
-import { GooglePrivacyDlpV2CloudStorageOptions } from "./googleprivacydlpv2cloudstorageoptions";
-import { GooglePrivacyDlpV2DatastoreOptions } from "./googleprivacydlpv2datastoreoptions";
-import { GooglePrivacyDlpV2HybridOptions } from "./googleprivacydlpv2hybridoptions";
-import { GooglePrivacyDlpV2TimespanConfig } from "./googleprivacydlpv2timespanconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2StorageConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bigqueryoptions_1 = require("./googleprivacydlpv2bigqueryoptions");
+var googleprivacydlpv2cloudstorageoptions_1 = require("./googleprivacydlpv2cloudstorageoptions");
+var googleprivacydlpv2datastoreoptions_1 = require("./googleprivacydlpv2datastoreoptions");
+var googleprivacydlpv2hybridoptions_1 = require("./googleprivacydlpv2hybridoptions");
+var googleprivacydlpv2timespanconfig_1 = require("./googleprivacydlpv2timespanconfig");
 // GooglePrivacyDlpV2StorageConfig
 /**
  * Shared message indicating Cloud storage type.
@@ -38,25 +41,25 @@ var GooglePrivacyDlpV2StorageConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigQueryOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigQueryOptions" }),
+        __metadata("design:type", googleprivacydlpv2bigqueryoptions_1.GooglePrivacyDlpV2BigQueryOptions)
     ], GooglePrivacyDlpV2StorageConfig.prototype, "bigQueryOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStorageOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2CloudStorageOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStorageOptions" }),
+        __metadata("design:type", googleprivacydlpv2cloudstorageoptions_1.GooglePrivacyDlpV2CloudStorageOptions)
     ], GooglePrivacyDlpV2StorageConfig.prototype, "cloudStorageOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datastoreOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2DatastoreOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datastoreOptions" }),
+        __metadata("design:type", googleprivacydlpv2datastoreoptions_1.GooglePrivacyDlpV2DatastoreOptions)
     ], GooglePrivacyDlpV2StorageConfig.prototype, "datastoreOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hybridOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2HybridOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hybridOptions" }),
+        __metadata("design:type", googleprivacydlpv2hybridoptions_1.GooglePrivacyDlpV2HybridOptions)
     ], GooglePrivacyDlpV2StorageConfig.prototype, "hybridOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timespanConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2TimespanConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timespanConfig" }),
+        __metadata("design:type", googleprivacydlpv2timespanconfig_1.GooglePrivacyDlpV2TimespanConfig)
     ], GooglePrivacyDlpV2StorageConfig.prototype, "timespanConfig", void 0);
     return GooglePrivacyDlpV2StorageConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2StorageConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2StorageConfig = GooglePrivacyDlpV2StorageConfig;

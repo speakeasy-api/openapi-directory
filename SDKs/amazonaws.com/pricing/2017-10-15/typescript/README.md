@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DescribeServicesRequest, DescribeServicesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,28 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: DescribeServicesRequest = {
   queryParams: {
-    maxResults: "et",
-    nextToken: "deleniti",
+    maxResults: "sit",
+    nextToken: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "ratione",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "quas",
-    xAmzDate: "quae",
-    xAmzSecurityToken: "incidunt",
-    xAmzSignature: "sapiente",
-    xAmzSignedHeaders: "dolore",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
     xAmzTarget: "AWSPriceListService.DescribeServices",
   },
   request: {
-    formatVersion: "aut",
-    maxResults: 1425085460978815393,
-    nextToken: "omnis",
-    serviceCode: "amet",
+    formatVersion: "nihil",
+    maxResults: 8325060299420976708,
+    nextToken: "dicta",
+    serviceCode: "debitis",
   },
 };
 
-sdk.sdk.describeServices(req).then((res: DescribeServicesResponse | AxiosError) => {
+sdk.describeServices(req).then((res: DescribeServicesResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CorridorResponse = exports.CorridorRequest = exports.CorridorSecurity = exports.CorridorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CorridorPathParams = /** @class */ (function (_super) {
     __extends(CorridorPathParams, _super);
     function CorridorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=countryIso2From" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=countryIso2From" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "countryIso2From", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=countryIso2To" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=countryIso2To" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "countryIso2To", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=firstNameFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=firstNameFrom" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "firstNameFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=firstNameTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=firstNameTo" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "firstNameTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=lastNameFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=lastNameFrom" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "lastNameFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=lastNameTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=lastNameTo" }),
         __metadata("design:type", String)
     ], CorridorPathParams.prototype, "lastNameTo", void 0);
     return CorridorPathParams;
-}(SpeakeasyBase));
-export { CorridorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CorridorPathParams = CorridorPathParams;
 var CorridorSecurity = /** @class */ (function (_super) {
     __extends(CorridorSecurity, _super);
     function CorridorSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], CorridorSecurity.prototype, "apiKey", void 0);
     return CorridorSecurity;
-}(SpeakeasyBase));
-export { CorridorSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CorridorSecurity = CorridorSecurity;
 var CorridorRequest = /** @class */ (function (_super) {
     __extends(CorridorRequest, _super);
     function CorridorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CorridorPathParams)
     ], CorridorRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CorridorSecurity)
     ], CorridorRequest.prototype, "security", void 0);
     return CorridorRequest;
-}(SpeakeasyBase));
-export { CorridorRequest };
+}(utils_1.SpeakeasyBase));
+exports.CorridorRequest = CorridorRequest;
 var CorridorResponse = /** @class */ (function (_super) {
     __extends(CorridorResponse, _super);
     function CorridorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CorridorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CorridorOut)
     ], CorridorResponse.prototype, "corridorOut", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CorridorResponse.prototype, "statusCode", void 0);
     return CorridorResponse;
-}(SpeakeasyBase));
-export { CorridorResponse };
+}(utils_1.SpeakeasyBase));
+exports.CorridorResponse = CorridorResponse;

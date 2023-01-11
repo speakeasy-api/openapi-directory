@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstallStatus = exports.InstallStatusStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 var InstallStatusStatus = /** @class */ (function (_super) {
     __extends(InstallStatusStatus, _super);
     function InstallStatusStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", Boolean)
     ], InstallStatusStatus.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemCount" }),
         __metadata("design:type", Number)
     ], InstallStatusStatus.prototype, "itemCount", void 0);
     return InstallStatusStatus;
-}(SpeakeasyBase));
-export { InstallStatusStatus };
+}(utils_1.SpeakeasyBase));
+exports.InstallStatusStatus = InstallStatusStatus;
 var InstallStatus = /** @class */ (function (_super) {
     __extends(InstallStatus, _super);
     function InstallStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", InstallStatusStatus)
     ], InstallStatus.prototype, "status", void 0);
     return InstallStatus;
-}(SpeakeasyBase));
-export { InstallStatus };
+}(utils_1.SpeakeasyBase));
+exports.InstallStatus = InstallStatus;

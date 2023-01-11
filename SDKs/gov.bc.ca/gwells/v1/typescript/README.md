@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AquiferCodesDemandListRequest, AquiferCodesDemandListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,12 +33,12 @@ const sdk = new SDK(WithSecurity(
     
 const req: AquiferCodesDemandListRequest = {
   queryParams: {
-    limit: 536948743829112639,
-    offset: 8711658350578709690,
+    limit: 8717895732742165505,
+    offset: 2259404117704393152,
   },
 };
 
-sdk.sdk.aquiferCodesDemandList(req).then((res: AquiferCodesDemandListResponse | AxiosError) => {
+sdk.aquiferCodes.aquiferCodesDemandList(req).then((res: AquiferCodesDemandListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,7 +47,7 @@ sdk.sdk.aquiferCodesDemandList(req).then((res: AquiferCodesDemandListResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### aquifer-codes
 
 * `aquiferCodesDemandList` - return a list of aquifer demand codes
 * `aquiferCodesMaterialsList` - return a list of aquifer material codes
@@ -57,19 +56,43 @@ sdk.sdk.aquiferCodesDemandList(req).then((res: AquiferCodesDemandListResponse | 
 * `aquiferCodesSubtypesList` - return a list of aquifer subtype codes
 * `aquiferCodesVulnerabilityList` - return a list of aquifer vulnerability codes
 * `aquiferCodesWaterUseList` - return a list of water use codes
+
+### aquifers
+
 * `aquifersFilesList` - list files found for the aquifer identified in the uri
 * `aquifersList` - return a list of aquifers
 * `aquifersNamesList` - List all aquifers in a simplified format
 * `aquifersRead` - return details of aquifers
+
+### cities
+
 * `citiesDrillersList` - returns a list of cities with a qualified, registered operator (driller or installer)
 * `citiesInstallersList` - returns a list of cities with a qualified, registered operator (driller or installer)
+
+### config
+
 * `configList` - serves general configuration
+
+### drillers
+
 * `drillersFilesList` - list files found for the aquifer identified in the uri
 * `drillersList` - Returns a list of all person records
 * `drillersNamesList` - Search for a person in the Register
+
+### keycloak
+
 * `keycloakList` - serves keycloak config
+
+### submissions
+
 * `submissionsOptionsList` - Options required for submitting activity report forms
+
+### surveys
+
 * `surveysList` - returns a list of active surveys
+
+### wells
+
 * `wellsFilesList` - list files found for the well identified in the uri
 * `wellsList` - returns a list of wells
 * `wellsRead` - Return well detail.

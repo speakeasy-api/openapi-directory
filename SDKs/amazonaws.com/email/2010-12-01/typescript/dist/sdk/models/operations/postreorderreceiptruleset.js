@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostReorderReceiptRuleSetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostReorderReceiptRuleSetResponse = exports.PostReorderReceiptRuleSetRequest = exports.PostReorderReceiptRuleSetHeaders = exports.PostReorderReceiptRuleSetQueryParams = exports.PostReorderReceiptRuleSetVersionEnum = exports.PostReorderReceiptRuleSetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostReorderReceiptRuleSetActionEnum;
 (function (PostReorderReceiptRuleSetActionEnum) {
     PostReorderReceiptRuleSetActionEnum["ReorderReceiptRuleSet"] = "ReorderReceiptRuleSet";
-})(PostReorderReceiptRuleSetActionEnum || (PostReorderReceiptRuleSetActionEnum = {}));
-export var PostReorderReceiptRuleSetVersionEnum;
+})(PostReorderReceiptRuleSetActionEnum = exports.PostReorderReceiptRuleSetActionEnum || (exports.PostReorderReceiptRuleSetActionEnum = {}));
+var PostReorderReceiptRuleSetVersionEnum;
 (function (PostReorderReceiptRuleSetVersionEnum) {
     PostReorderReceiptRuleSetVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostReorderReceiptRuleSetVersionEnum || (PostReorderReceiptRuleSetVersionEnum = {}));
+})(PostReorderReceiptRuleSetVersionEnum = exports.PostReorderReceiptRuleSetVersionEnum || (exports.PostReorderReceiptRuleSetVersionEnum = {}));
 var PostReorderReceiptRuleSetQueryParams = /** @class */ (function (_super) {
     __extends(PostReorderReceiptRuleSetQueryParams, _super);
     function PostReorderReceiptRuleSetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetQueryParams.prototype, "version", void 0);
     return PostReorderReceiptRuleSetQueryParams;
-}(SpeakeasyBase));
-export { PostReorderReceiptRuleSetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostReorderReceiptRuleSetQueryParams = PostReorderReceiptRuleSetQueryParams;
 var PostReorderReceiptRuleSetHeaders = /** @class */ (function (_super) {
     __extends(PostReorderReceiptRuleSetHeaders, _super);
     function PostReorderReceiptRuleSetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostReorderReceiptRuleSetHeaders;
-}(SpeakeasyBase));
-export { PostReorderReceiptRuleSetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostReorderReceiptRuleSetHeaders = PostReorderReceiptRuleSetHeaders;
 var PostReorderReceiptRuleSetRequest = /** @class */ (function (_super) {
     __extends(PostReorderReceiptRuleSetRequest, _super);
     function PostReorderReceiptRuleSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReorderReceiptRuleSetQueryParams)
     ], PostReorderReceiptRuleSetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReorderReceiptRuleSetHeaders)
     ], PostReorderReceiptRuleSetRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostReorderReceiptRuleSetRequest.prototype, "request", void 0);
     return PostReorderReceiptRuleSetRequest;
-}(SpeakeasyBase));
-export { PostReorderReceiptRuleSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostReorderReceiptRuleSetRequest = PostReorderReceiptRuleSetRequest;
 var PostReorderReceiptRuleSetResponse = /** @class */ (function (_super) {
     __extends(PostReorderReceiptRuleSetResponse, _super);
     function PostReorderReceiptRuleSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostReorderReceiptRuleSetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostReorderReceiptRuleSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostReorderReceiptRuleSetResponse.prototype, "statusCode", void 0);
     return PostReorderReceiptRuleSetResponse;
-}(SpeakeasyBase));
-export { PostReorderReceiptRuleSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostReorderReceiptRuleSetResponse = PostReorderReceiptRuleSetResponse;

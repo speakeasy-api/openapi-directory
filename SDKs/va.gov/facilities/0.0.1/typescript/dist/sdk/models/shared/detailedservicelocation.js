@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppointmentPhoneNumber } from "./appointmentphonenumber";
-import { DetailedServiceEmailContact } from "./detailedserviceemailcontact";
-import { DetailedServiceHours } from "./detailedservicehours";
-import { DetailedServiceAddress } from "./detailedserviceaddress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetailedServiceLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var appointmentphonenumber_1 = require("./appointmentphonenumber");
+var detailedserviceemailcontact_1 = require("./detailedserviceemailcontact");
+var detailedservicehours_1 = require("./detailedservicehours");
+var detailedserviceaddress_1 = require("./detailedserviceaddress");
 // DetailedServiceLocation
 /**
  * Details for a location offering a service.
@@ -37,25 +40,25 @@ var DetailedServiceLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additional_hours_info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additional_hours_info" }),
         __metadata("design:type", String)
     ], DetailedServiceLocation.prototype, "additionalHoursInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appointment_phones", elemType: AppointmentPhoneNumber }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment_phones", elemType: appointmentphonenumber_1.AppointmentPhoneNumber }),
         __metadata("design:type", Array)
     ], DetailedServiceLocation.prototype, "appointmentPhones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email_contacts", elemType: DetailedServiceEmailContact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_contacts", elemType: detailedserviceemailcontact_1.DetailedServiceEmailContact }),
         __metadata("design:type", Array)
     ], DetailedServiceLocation.prototype, "emailContacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facility_service_hours" }),
-        __metadata("design:type", DetailedServiceHours)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facility_service_hours" }),
+        __metadata("design:type", detailedservicehours_1.DetailedServiceHours)
     ], DetailedServiceLocation.prototype, "facilityServiceHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_location_address" }),
-        __metadata("design:type", DetailedServiceAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_location_address" }),
+        __metadata("design:type", detailedserviceaddress_1.DetailedServiceAddress)
     ], DetailedServiceLocation.prototype, "serviceLocationAddress", void 0);
     return DetailedServiceLocation;
-}(SpeakeasyBase));
-export { DetailedServiceLocation };
+}(utils_1.SpeakeasyBase));
+exports.DetailedServiceLocation = DetailedServiceLocation;

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheEngineVersion } from "./cacheengineversion";
+import { CacheEngineVersionList } from "./cacheengineversionlist";
 /**
  * Represents the output of a <a>DescribeCacheEngineVersions</a> operation.
 **/
 export declare class CacheEngineVersionMessage extends SpeakeasyBase {
-    cacheEngineVersions?: CacheEngineVersion[];
+    cacheEngineVersions?: CacheEngineVersionList[];
     marker?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2CustomInfoType } from "./googleprivacydlpv2custominfotype";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
-import { GooglePrivacyDlpV2FindingLimits } from "./googleprivacydlpv2findinglimits";
-import { GooglePrivacyDlpV2InspectionRuleSet } from "./googleprivacydlpv2inspectionruleset";
-export var GooglePrivacyDlpV2InspectConfigContentOptionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectConfig = exports.GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum = exports.GooglePrivacyDlpV2InspectConfigContentOptionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2custominfotype_1 = require("./googleprivacydlpv2custominfotype");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
+var googleprivacydlpv2findinglimits_1 = require("./googleprivacydlpv2findinglimits");
+var googleprivacydlpv2inspectionruleset_1 = require("./googleprivacydlpv2inspectionruleset");
+var GooglePrivacyDlpV2InspectConfigContentOptionsEnum;
 (function (GooglePrivacyDlpV2InspectConfigContentOptionsEnum) {
     GooglePrivacyDlpV2InspectConfigContentOptionsEnum["ContentUnspecified"] = "CONTENT_UNSPECIFIED";
     GooglePrivacyDlpV2InspectConfigContentOptionsEnum["ContentText"] = "CONTENT_TEXT";
     GooglePrivacyDlpV2InspectConfigContentOptionsEnum["ContentImage"] = "CONTENT_IMAGE";
-})(GooglePrivacyDlpV2InspectConfigContentOptionsEnum || (GooglePrivacyDlpV2InspectConfigContentOptionsEnum = {}));
-export var GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum;
+})(GooglePrivacyDlpV2InspectConfigContentOptionsEnum = exports.GooglePrivacyDlpV2InspectConfigContentOptionsEnum || (exports.GooglePrivacyDlpV2InspectConfigContentOptionsEnum = {}));
+var GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum;
 (function (GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum) {
     GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum["LikelihoodUnspecified"] = "LIKELIHOOD_UNSPECIFIED";
     GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum["VeryUnlikely"] = "VERY_UNLIKELY";
@@ -41,7 +44,7 @@ export var GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum;
     GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum["Possible"] = "POSSIBLE";
     GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum["Likely"] = "LIKELY";
     GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum["VeryLikely"] = "VERY_LIKELY";
-})(GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum || (GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum = {}));
+})(GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum = exports.GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum || (exports.GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum = {}));
 // GooglePrivacyDlpV2InspectConfig
 /**
  * Configuration description of the scanning process. When used with redactContent only info_types and min_likelihood are currently used.
@@ -52,37 +55,37 @@ var GooglePrivacyDlpV2InspectConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentOptions" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "contentOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customInfoTypes", elemType: GooglePrivacyDlpV2CustomInfoType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customInfoTypes", elemType: googleprivacydlpv2custominfotype_1.GooglePrivacyDlpV2CustomInfoType }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "customInfoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeInfoTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeInfoTypes" }),
         __metadata("design:type", Boolean)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "excludeInfoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeQuote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeQuote" }),
         __metadata("design:type", Boolean)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "includeQuote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypes", elemType: GooglePrivacyDlpV2InfoType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypes", elemType: googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "infoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limits" }),
-        __metadata("design:type", GooglePrivacyDlpV2FindingLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limits" }),
+        __metadata("design:type", googleprivacydlpv2findinglimits_1.GooglePrivacyDlpV2FindingLimits)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "limits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minLikelihood" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minLikelihood" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "minLikelihood", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleSet", elemType: GooglePrivacyDlpV2InspectionRuleSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleSet", elemType: googleprivacydlpv2inspectionruleset_1.GooglePrivacyDlpV2InspectionRuleSet }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectConfig.prototype, "ruleSet", void 0);
     return GooglePrivacyDlpV2InspectConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectConfig = GooglePrivacyDlpV2InspectConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BooleanColumnStatisticsData = void 0;
+var utils_1 = require("../../../internal/utils");
 // BooleanColumnStatisticsData
 /**
  * Defines column statistics supported for Boolean data columns.
@@ -33,17 +36,17 @@ var BooleanColumnStatisticsData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfFalses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfFalses" }),
         __metadata("design:type", Number)
     ], BooleanColumnStatisticsData.prototype, "numberOfFalses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfNulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfNulls" }),
         __metadata("design:type", Number)
     ], BooleanColumnStatisticsData.prototype, "numberOfNulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfTrues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfTrues" }),
         __metadata("design:type", Number)
     ], BooleanColumnStatisticsData.prototype, "numberOfTrues", void 0);
     return BooleanColumnStatisticsData;
-}(SpeakeasyBase));
-export { BooleanColumnStatisticsData };
+}(utils_1.SpeakeasyBase));
+exports.BooleanColumnStatisticsData = BooleanColumnStatisticsData;

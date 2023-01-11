@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Listener } from "./listener";
-import { ServiceDiscovery } from "./servicediscovery";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualNodeSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var listener_1 = require("./listener");
+var servicediscovery_1 = require("./servicediscovery");
 // VirtualNodeSpec
 /**
  * An object representing the specification of a virtual node.
@@ -35,17 +38,17 @@ var VirtualNodeSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backends" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backends" }),
         __metadata("design:type", Array)
     ], VirtualNodeSpec.prototype, "backends", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listeners", elemType: Listener }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listeners", elemType: listener_1.Listener }),
         __metadata("design:type", Array)
     ], VirtualNodeSpec.prototype, "listeners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDiscovery" }),
-        __metadata("design:type", ServiceDiscovery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDiscovery" }),
+        __metadata("design:type", servicediscovery_1.ServiceDiscovery)
     ], VirtualNodeSpec.prototype, "serviceDiscovery", void 0);
     return VirtualNodeSpec;
-}(SpeakeasyBase));
-export { VirtualNodeSpec };
+}(utils_1.SpeakeasyBase));
+exports.VirtualNodeSpec = VirtualNodeSpec;

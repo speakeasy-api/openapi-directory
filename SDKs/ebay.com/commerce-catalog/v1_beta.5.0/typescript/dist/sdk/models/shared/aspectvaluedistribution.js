@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AspectValueDistribution = void 0;
+var utils_1 = require("../../../internal/utils");
 // AspectValueDistribution
 /**
  * This type contains information about one value of a specified aspect. This value serves as a product refinement.
@@ -33,17 +36,17 @@ var AspectValueDistribution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizedAspectValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizedAspectValue" }),
         __metadata("design:type", String)
     ], AspectValueDistribution.prototype, "localizedAspectValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchCount" }),
         __metadata("design:type", Number)
     ], AspectValueDistribution.prototype, "matchCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refinementHref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refinementHref" }),
         __metadata("design:type", String)
     ], AspectValueDistribution.prototype, "refinementHref", void 0);
     return AspectValueDistribution;
-}(SpeakeasyBase));
-export { AspectValueDistribution };
+}(utils_1.SpeakeasyBase));
+exports.AspectValueDistribution = AspectValueDistribution;

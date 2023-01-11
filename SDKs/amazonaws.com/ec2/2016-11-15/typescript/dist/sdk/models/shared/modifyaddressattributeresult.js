@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressAttribute } from "./addressattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyAddressAttributeResult = exports.ModifyAddressAttributeResultAddress = exports.ModifyAddressAttributeResultAddressPtrRecordUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyAddressAttributeResultAddressPtrRecordUpdate
+/**
+ * The updated PTR record for the IP address.
+**/
+var ModifyAddressAttributeResultAddressPtrRecordUpdate = /** @class */ (function (_super) {
+    __extends(ModifyAddressAttributeResultAddressPtrRecordUpdate, _super);
+    function ModifyAddressAttributeResultAddressPtrRecordUpdate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddressPtrRecordUpdate.prototype, "reason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddressPtrRecordUpdate.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddressPtrRecordUpdate.prototype, "value", void 0);
+    return ModifyAddressAttributeResultAddressPtrRecordUpdate;
+}(utils_1.SpeakeasyBase));
+exports.ModifyAddressAttributeResultAddressPtrRecordUpdate = ModifyAddressAttributeResultAddressPtrRecordUpdate;
+// ModifyAddressAttributeResultAddress
+/**
+ * Information about the Elastic IP address.
+**/
+var ModifyAddressAttributeResultAddress = /** @class */ (function (_super) {
+    __extends(ModifyAddressAttributeResultAddress, _super);
+    function ModifyAddressAttributeResultAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddress.prototype, "allocationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddress.prototype, "ptrRecord", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyAddressAttributeResultAddressPtrRecordUpdate)
+    ], ModifyAddressAttributeResultAddress.prototype, "ptrRecordUpdate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyAddressAttributeResultAddress.prototype, "publicIp", void 0);
+    return ModifyAddressAttributeResultAddress;
+}(utils_1.SpeakeasyBase));
+exports.ModifyAddressAttributeResultAddress = ModifyAddressAttributeResultAddress;
 var ModifyAddressAttributeResult = /** @class */ (function (_super) {
     __extends(ModifyAddressAttributeResult, _super);
     function ModifyAddressAttributeResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AddressAttribute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyAddressAttributeResultAddress)
     ], ModifyAddressAttributeResult.prototype, "address", void 0);
     return ModifyAddressAttributeResult;
-}(SpeakeasyBase));
-export { ModifyAddressAttributeResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyAddressAttributeResult = ModifyAddressAttributeResult;

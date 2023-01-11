@@ -4,10 +4,10 @@ export declare class PostSetupV1LocationsIdEmailTemplatesPathParams extends Spea
     id: string;
 }
 export declare class PostSetupV1LocationsIdEmailTemplatesRequests extends SpeakeasyBase {
-    emailTemplateInputModel?: Map<string, any>;
-    emailTemplateInputModel1?: Map<string, any>;
-    emailTemplateInputModel2?: Map<string, any>;
-    emailTemplateInputModel3?: Map<string, any>;
+    emailTemplateInputModel?: Record<string, any>;
+    emailTemplateInputModel1?: Record<string, any>;
+    emailTemplateInputModel2?: Record<string, any>;
+    emailTemplateInputModel3?: Record<string, any>;
 }
 export declare class PostSetupV1LocationsIdEmailTemplatesRequest extends SpeakeasyBase {
     pathParams: PostSetupV1LocationsIdEmailTemplatesPathParams;

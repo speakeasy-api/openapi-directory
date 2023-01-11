@@ -9,6 +9,6 @@ export declare class CreateAbschlussRequest extends SpeakeasyBase {
 }
 export declare class CreateAbschlussResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

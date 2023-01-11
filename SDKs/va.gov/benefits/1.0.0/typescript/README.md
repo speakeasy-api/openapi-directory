@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetBenefitsDocumentUploadDownloadRequest, GetBenefitsDocumentUploadDownloadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,7 +33,7 @@ const req: GetBenefitsDocumentUploadDownloadRequest = {
     },
   },
   pathParams: {
-    id: "consequatur",
+    id: "sit",
   },
 };
 

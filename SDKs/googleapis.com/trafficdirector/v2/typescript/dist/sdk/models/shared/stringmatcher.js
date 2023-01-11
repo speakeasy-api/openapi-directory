@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexMatcher } from "./regexmatcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StringMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexmatcher_1 = require("./regexmatcher");
 // StringMatcher
 /**
  * Specifies the way to match a string. [#next-free-field: 7]
@@ -34,29 +37,29 @@ var StringMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exact" }),
         __metadata("design:type", String)
     ], StringMatcher.prototype, "exact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreCase" }),
         __metadata("design:type", Boolean)
     ], StringMatcher.prototype, "ignoreCase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], StringMatcher.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regex" }),
         __metadata("design:type", String)
     ], StringMatcher.prototype, "regex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=safeRegex" }),
-        __metadata("design:type", RegexMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=safeRegex" }),
+        __metadata("design:type", regexmatcher_1.RegexMatcher)
     ], StringMatcher.prototype, "safeRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
         __metadata("design:type", String)
     ], StringMatcher.prototype, "suffix", void 0);
     return StringMatcher;
-}(SpeakeasyBase));
-export { StringMatcher };
+}(utils_1.SpeakeasyBase));
+exports.StringMatcher = StringMatcher;

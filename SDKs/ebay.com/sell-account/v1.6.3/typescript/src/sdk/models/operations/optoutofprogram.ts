@@ -26,5 +26,5 @@ export class OptOutOfProgramResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  optOutOfProgram200ApplicationJsonObject?: Map<string, any>;
+  optOutOfProgram200ApplicationJSONObject?: Record<string, any>;
 }

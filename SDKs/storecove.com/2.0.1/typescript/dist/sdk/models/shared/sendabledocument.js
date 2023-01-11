@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Invoice } from "./invoice";
-import { DocumentInvoiceResponse } from "./documentinvoiceresponse";
-import { RawDocumentData } from "./rawdocumentdata";
-export var SendableDocumentDocumentTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendableDocument = exports.SendableDocumentDocumentTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var invoice_1 = require("./invoice");
+var documentinvoiceresponse_1 = require("./documentinvoiceresponse");
+var rawdocumentdata_1 = require("./rawdocumentdata");
+var SendableDocumentDocumentTypeEnum;
 (function (SendableDocumentDocumentTypeEnum) {
     SendableDocumentDocumentTypeEnum["Invoice"] = "invoice";
     SendableDocumentDocumentTypeEnum["InvoiceResponse"] = "invoice_response";
-})(SendableDocumentDocumentTypeEnum || (SendableDocumentDocumentTypeEnum = {}));
+})(SendableDocumentDocumentTypeEnum = exports.SendableDocumentDocumentTypeEnum || (exports.SendableDocumentDocumentTypeEnum = {}));
 // SendableDocument
 /**
  * The document to send.
@@ -41,21 +44,21 @@ var SendableDocument = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentType" }),
         __metadata("design:type", String)
     ], SendableDocument.prototype, "documentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoice" }),
-        __metadata("design:type", Invoice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoice" }),
+        __metadata("design:type", invoice_1.Invoice)
     ], SendableDocument.prototype, "invoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceResponse" }),
-        __metadata("design:type", DocumentInvoiceResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceResponse" }),
+        __metadata("design:type", documentinvoiceresponse_1.DocumentInvoiceResponse)
     ], SendableDocument.prototype, "invoiceResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawDocumentData" }),
-        __metadata("design:type", RawDocumentData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawDocumentData" }),
+        __metadata("design:type", rawdocumentdata_1.RawDocumentData)
     ], SendableDocument.prototype, "rawDocumentData", void 0);
     return SendableDocument;
-}(SpeakeasyBase));
-export { SendableDocument };
+}(utils_1.SpeakeasyBase));
+exports.SendableDocument = SendableDocument;

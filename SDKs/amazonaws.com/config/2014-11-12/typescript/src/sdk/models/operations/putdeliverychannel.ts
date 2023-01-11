@@ -60,7 +60,7 @@ export class PutDeliveryChannelResponse extends SpeakeasyBase {
   invalidS3KmsKeyArnException?: any;
 
   @SpeakeasyMetadata()
-  invalidSnsTopicArnException?: any;
+  invalidSNSTopicARNException?: any;
 
   @SpeakeasyMetadata()
   maxNumberOfDeliveryChannelsExceededException?: any;

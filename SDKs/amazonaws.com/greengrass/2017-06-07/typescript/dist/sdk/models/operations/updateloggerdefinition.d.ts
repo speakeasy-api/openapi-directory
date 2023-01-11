@@ -23,5 +23,5 @@ export declare class UpdateLoggerDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateLoggerDefinitionResponse?: Map<string, any>;
+    updateLoggerDefinitionResponse?: Record<string, any>;
 }

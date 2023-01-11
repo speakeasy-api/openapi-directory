@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatafeedFetchSchedule } from "./datafeedfetchschedule";
-import { DatafeedFormat } from "./datafeedformat";
-import { DatafeedTarget } from "./datafeedtarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Datafeed = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafeedfetchschedule_1 = require("./datafeedfetchschedule");
+var datafeedformat_1 = require("./datafeedformat");
+var datafeedtarget_1 = require("./datafeedtarget");
 // Datafeed
 /**
  * Datafeed configuration data.
@@ -36,53 +39,53 @@ var Datafeed = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeLanguage" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "attributeLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentLanguage" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "contentLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentType" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fetchSchedule" }),
-        __metadata("design:type", DatafeedFetchSchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fetchSchedule" }),
+        __metadata("design:type", datafeedfetchschedule_1.DatafeedFetchSchedule)
     ], Datafeed.prototype, "fetchSchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
-        __metadata("design:type", DatafeedFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
+        __metadata("design:type", datafeedformat_1.DatafeedFormat)
     ], Datafeed.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intendedDestinations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intendedDestinations" }),
         __metadata("design:type", Array)
     ], Datafeed.prototype, "intendedDestinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetCountry" }),
         __metadata("design:type", String)
     ], Datafeed.prototype, "targetCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: DatafeedTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: datafeedtarget_1.DatafeedTarget }),
         __metadata("design:type", Array)
     ], Datafeed.prototype, "targets", void 0);
     return Datafeed;
-}(SpeakeasyBase));
-export { Datafeed };
+}(utils_1.SpeakeasyBase));
+exports.Datafeed = Datafeed;

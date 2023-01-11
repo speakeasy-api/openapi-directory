@@ -53,8 +53,8 @@ export class PostProjectUsernameProjectSshKeyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postProjectUsernameProjectSshKeyDefaultApplicationJsonObject?: PostProjectUsernameProjectSshKeyDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postProjectUsernameProjectSshKeyDefaultApplicationJSONObject?: PostProjectUsernameProjectSshKeyDefaultApplicationJson;
 }

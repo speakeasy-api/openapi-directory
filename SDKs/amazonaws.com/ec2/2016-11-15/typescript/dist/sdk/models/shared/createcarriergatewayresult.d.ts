@@ -1,5 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CarrierGateway } from "./carriergateway";
+/**
+ * Information about the carrier gateway.
+**/
+export declare class CreateCarrierGatewayResultCarrierGateway extends SpeakeasyBase {
+    carrierGatewayId?: Record<string, any>;
+    ownerId?: Record<string, any>;
+    state?: Record<string, any>;
+    tags?: Record<string, any>;
+    vpcId?: Record<string, any>;
+}
 export declare class CreateCarrierGatewayResult extends SpeakeasyBase {
-    carrierGateway?: CarrierGateway;
+    carrierGateway?: CreateCarrierGatewayResultCarrierGateway;
 }

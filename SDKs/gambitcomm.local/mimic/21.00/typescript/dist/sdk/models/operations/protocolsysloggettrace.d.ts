@@ -7,7 +7,7 @@ export declare class ProtocolSyslogGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolSyslogGetTracePathParams;
 }
 export declare class ProtocolSyslogGetTraceResponse extends SpeakeasyBase {
-    configSyslog?: shared.ConfigSyslog;
+    configSYSLOG?: shared.ConfigSyslog;
     contentType: string;
     statusCode: number;
 }

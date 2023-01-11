@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioChannelInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // AudioChannelInput
 /**
  * Identifies which input file, track, and channel should be used.
@@ -33,21 +36,21 @@ var AudioChannelInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", Number)
     ], AudioChannelInput.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gainDb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gainDb" }),
         __metadata("design:type", Number)
     ], AudioChannelInput.prototype, "gainDb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], AudioChannelInput.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=track" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=track" }),
         __metadata("design:type", Number)
     ], AudioChannelInput.prototype, "track", void 0);
     return AudioChannelInput;
-}(SpeakeasyBase));
-export { AudioChannelInput };
+}(utils_1.SpeakeasyBase));
+exports.AudioChannelInput = AudioChannelInput;

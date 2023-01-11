@@ -29,7 +29,7 @@ export class Event extends SpeakeasyBase {
   active?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=additionalInfos" })
-  additionalInfos?: Map<string, string>;
+  additionalInfos?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=attractions", elemType: Attraction })
   attractions?: Attraction[];
@@ -41,7 +41,7 @@ export class Event extends SpeakeasyBase {
   dates?: EventDates;
 
   @SpeakeasyMetadata({ data: "json, name=descriptions" })
-  descriptions?: Map<string, string>;
+  descriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=discoverable" })
   discoverable?: boolean;
@@ -53,19 +53,19 @@ export class Event extends SpeakeasyBase {
   images?: Image[];
 
   @SpeakeasyMetadata({ data: "json, name=infos" })
-  infos?: Map<string, string>;
+  infos?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=location" })
   location?: Location;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=place" })
   place?: Place;
 
   @SpeakeasyMetadata({ data: "json, name=pleaseNotes" })
-  pleaseNotes?: Map<string, string>;
+  pleaseNotes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=priceRanges", elemType: PriceRange })
   priceRanges?: PriceRange[];
@@ -77,10 +77,10 @@ export class Event extends SpeakeasyBase {
   publicVisibility?: PublicVisibility;
 
   @SpeakeasyMetadata({ data: "json, name=references" })
-  references?: Map<string, string>;
+  references?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=relationships" })
-  relationships?: Map<string, any>[];
+  relationships?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=sales" })
   sales?: EventSalesDates;

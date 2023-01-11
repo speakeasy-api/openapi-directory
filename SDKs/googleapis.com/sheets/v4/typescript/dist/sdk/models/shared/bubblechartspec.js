@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-import { ChartData } from "./chartdata";
-import { TextFormat } from "./textformat";
-export var BubbleChartSpecLegendPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BubbleChartSpec = exports.BubbleChartSpecLegendPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var chartdata_1 = require("./chartdata");
+var textformat_1 = require("./textformat");
+var BubbleChartSpecLegendPositionEnum;
 (function (BubbleChartSpecLegendPositionEnum) {
     BubbleChartSpecLegendPositionEnum["BubbleChartLegendPositionUnspecified"] = "BUBBLE_CHART_LEGEND_POSITION_UNSPECIFIED";
     BubbleChartSpecLegendPositionEnum["BottomLegend"] = "BOTTOM_LEGEND";
@@ -36,7 +39,7 @@ export var BubbleChartSpecLegendPositionEnum;
     BubbleChartSpecLegendPositionEnum["TopLegend"] = "TOP_LEGEND";
     BubbleChartSpecLegendPositionEnum["NoLegend"] = "NO_LEGEND";
     BubbleChartSpecLegendPositionEnum["InsideLegend"] = "INSIDE_LEGEND";
-})(BubbleChartSpecLegendPositionEnum || (BubbleChartSpecLegendPositionEnum = {}));
+})(BubbleChartSpecLegendPositionEnum = exports.BubbleChartSpecLegendPositionEnum || (exports.BubbleChartSpecLegendPositionEnum = {}));
 // BubbleChartSpec
 /**
  * A bubble chart.
@@ -47,53 +50,53 @@ var BubbleChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleBorderColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleBorderColor" }),
+        __metadata("design:type", color_1.Color)
     ], BubbleChartSpec.prototype, "bubbleBorderColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleBorderColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleBorderColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], BubbleChartSpec.prototype, "bubbleBorderColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleLabels" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleLabels" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], BubbleChartSpec.prototype, "bubbleLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleMaxRadiusSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleMaxRadiusSize" }),
         __metadata("design:type", Number)
     ], BubbleChartSpec.prototype, "bubbleMaxRadiusSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleMinRadiusSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleMinRadiusSize" }),
         __metadata("design:type", Number)
     ], BubbleChartSpec.prototype, "bubbleMinRadiusSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleOpacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleOpacity" }),
         __metadata("design:type", Number)
     ], BubbleChartSpec.prototype, "bubbleOpacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleSizes" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleSizes" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], BubbleChartSpec.prototype, "bubbleSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bubbleTextStyle" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bubbleTextStyle" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], BubbleChartSpec.prototype, "bubbleTextStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], BubbleChartSpec.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupIds" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupIds" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], BubbleChartSpec.prototype, "groupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legendPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legendPosition" }),
         __metadata("design:type", String)
     ], BubbleChartSpec.prototype, "legendPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], BubbleChartSpec.prototype, "series", void 0);
     return BubbleChartSpec;
-}(SpeakeasyBase));
-export { BubbleChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.BubbleChartSpec = BubbleChartSpec;

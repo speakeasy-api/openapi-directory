@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HeldDriveQuery } from "./helddrivequery";
-import { HeldGroupsQuery } from "./heldgroupsquery";
-import { HeldHangoutsChatQuery } from "./heldhangoutschatquery";
-import { HeldMailQuery } from "./heldmailquery";
-import { HeldVoiceQuery } from "./heldvoicequery";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CorpusQuery = void 0;
+var utils_1 = require("../../../internal/utils");
+var helddrivequery_1 = require("./helddrivequery");
+var heldgroupsquery_1 = require("./heldgroupsquery");
+var heldhangoutschatquery_1 = require("./heldhangoutschatquery");
+var heldmailquery_1 = require("./heldmailquery");
+var heldvoicequery_1 = require("./heldvoicequery");
 // CorpusQuery
 /**
  * Service-specific options for holds.
@@ -38,25 +41,25 @@ var CorpusQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveQuery" }),
-        __metadata("design:type", HeldDriveQuery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveQuery" }),
+        __metadata("design:type", helddrivequery_1.HeldDriveQuery)
     ], CorpusQuery.prototype, "driveQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsQuery" }),
-        __metadata("design:type", HeldGroupsQuery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsQuery" }),
+        __metadata("design:type", heldgroupsquery_1.HeldGroupsQuery)
     ], CorpusQuery.prototype, "groupsQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hangoutsChatQuery" }),
-        __metadata("design:type", HeldHangoutsChatQuery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hangoutsChatQuery" }),
+        __metadata("design:type", heldhangoutschatquery_1.HeldHangoutsChatQuery)
     ], CorpusQuery.prototype, "hangoutsChatQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailQuery" }),
-        __metadata("design:type", HeldMailQuery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailQuery" }),
+        __metadata("design:type", heldmailquery_1.HeldMailQuery)
     ], CorpusQuery.prototype, "mailQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceQuery" }),
-        __metadata("design:type", HeldVoiceQuery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceQuery" }),
+        __metadata("design:type", heldvoicequery_1.HeldVoiceQuery)
     ], CorpusQuery.prototype, "voiceQuery", void 0);
     return CorpusQuery;
-}(SpeakeasyBase));
-export { CorpusQuery };
+}(utils_1.SpeakeasyBase));
+exports.CorpusQuery = CorpusQuery;

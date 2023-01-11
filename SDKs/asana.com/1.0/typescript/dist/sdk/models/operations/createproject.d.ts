@@ -18,5 +18,5 @@ export declare class CreateProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createProject201ApplicationJsonObject?: CreateProject201ApplicationJson;
+    createProject201ApplicationJSONObject?: CreateProject201ApplicationJson;
 }

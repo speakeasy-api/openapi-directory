@@ -7,7 +7,7 @@ export declare enum PaySchedulePaySchedulePayFrequencyEnum {
     Yearly = "Yearly"
 }
 export declare class PaySchedulePaySchedule extends SpeakeasyBase {
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     name?: string;
     payFrequency?: PaySchedulePaySchedulePayFrequencyEnum;
 }

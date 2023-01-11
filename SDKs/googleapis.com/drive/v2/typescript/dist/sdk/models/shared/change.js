@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Drive } from "./drive";
-import { File } from "./file";
-import { TeamDrive } from "./teamdrive";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Change = void 0;
+var utils_1 = require("../../../internal/utils");
+var drive_1 = require("./drive");
+var file_1 = require("./file");
+var teamdrive_1 = require("./teamdrive");
 // Change
 /**
  * Representation of a change to a file or shared drive.
@@ -36,57 +39,57 @@ var Change = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changeType" }),
         __metadata("design:type", String)
     ], Change.prototype, "changeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Change.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drive" }),
-        __metadata("design:type", Drive)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drive" }),
+        __metadata("design:type", drive_1.Drive)
     ], Change.prototype, "drive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveId" }),
         __metadata("design:type", String)
     ], Change.prototype, "driveId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", file_1.File)
     ], Change.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileId" }),
         __metadata("design:type", String)
     ], Change.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Change.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Change.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modificationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modificationDate" }),
         __metadata("design:type", Date)
     ], Change.prototype, "modificationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Change.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDrive" }),
-        __metadata("design:type", TeamDrive)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDrive" }),
+        __metadata("design:type", teamdrive_1.TeamDrive)
     ], Change.prototype, "teamDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDriveId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDriveId" }),
         __metadata("design:type", String)
     ], Change.prototype, "teamDriveId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Change.prototype, "type", void 0);
     return Change;
-}(SpeakeasyBase));
-export { Change };
+}(utils_1.SpeakeasyBase));
+exports.Change = Change;

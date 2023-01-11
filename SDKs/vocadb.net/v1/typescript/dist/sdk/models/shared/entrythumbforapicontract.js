@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryThumbForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
 var EntryThumbForApiContract = /** @class */ (function (_super) {
     __extends(EntryThumbForApiContract, _super);
     function EntryThumbForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mime" }),
         __metadata("design:type", String)
     ], EntryThumbForApiContract.prototype, "mime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlOriginal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlOriginal" }),
         __metadata("design:type", String)
     ], EntryThumbForApiContract.prototype, "urlOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlSmallThumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlSmallThumb" }),
         __metadata("design:type", String)
     ], EntryThumbForApiContract.prototype, "urlSmallThumb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlThumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlThumb" }),
         __metadata("design:type", String)
     ], EntryThumbForApiContract.prototype, "urlThumb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlTinyThumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlTinyThumb" }),
         __metadata("design:type", String)
     ], EntryThumbForApiContract.prototype, "urlTinyThumb", void 0);
     return EntryThumbForApiContract;
-}(SpeakeasyBase));
-export { EntryThumbForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.EntryThumbForApiContract = EntryThumbForApiContract;

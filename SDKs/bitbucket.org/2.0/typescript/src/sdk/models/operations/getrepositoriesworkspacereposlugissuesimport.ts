@@ -41,7 +41,7 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   issueJobStatus?: shared.IssueJobStatus;

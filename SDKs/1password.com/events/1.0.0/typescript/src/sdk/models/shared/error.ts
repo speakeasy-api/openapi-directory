@@ -8,7 +8,7 @@ export class ErrorError extends SpeakeasyBase {
 }
 
 
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Error" })
   error?: ErrorError;
 }

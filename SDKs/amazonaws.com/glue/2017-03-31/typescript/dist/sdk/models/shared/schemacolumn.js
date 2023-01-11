@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchemaColumn = void 0;
+var utils_1 = require("../../../internal/utils");
 // SchemaColumn
 /**
  * A key-value pair representing a column and data type that this transform can run against. The <code>Schema</code> parameter of the <code>MLTransform</code> may contain up to 100 of these structures.
@@ -33,13 +36,13 @@ var SchemaColumn = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataType" }),
         __metadata("design:type", String)
     ], SchemaColumn.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], SchemaColumn.prototype, "name", void 0);
     return SchemaColumn;
-}(SpeakeasyBase));
-export { SchemaColumn };
+}(utils_1.SpeakeasyBase));
+exports.SchemaColumn = SchemaColumn;

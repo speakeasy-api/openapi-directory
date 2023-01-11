@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchCheckLayerAvailabilityRequest, BatchCheckLayerAvailabilityResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,25 +33,25 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchCheckLayerAvailabilityRequest = {
   headers: {
-    xAmzAlgorithm: "voluptate",
-    xAmzContentSha256: "exercitationem",
-    xAmzCredential: "et",
-    xAmzDate: "qui",
-    xAmzSecurityToken: "odit",
-    xAmzSignature: "qui",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability",
   },
   request: {
     layerDigests: [
-      "sint",
+      "et",
     ],
-    registryId: "ratione",
-    repositoryName: "sed",
+    registryId: "nihil",
+    repositoryName: "rerum",
   },
 };
 
-sdk.sdk.batchCheckLayerAvailability(req).then((res: BatchCheckLayerAvailabilityResponse | AxiosError) => {
+sdk.batchCheckLayerAvailability(req).then((res: BatchCheckLayerAvailabilityResponse | AxiosError) => {
    // handle response
 });
 ```

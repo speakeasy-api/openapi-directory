@@ -31,5 +31,5 @@ export class AddOrDeleteRulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addOrDeleteRules200ApplicationJsonOneOf?: any;
+  addOrDeleteRules200ApplicationJSONOneOf?: any;
 }

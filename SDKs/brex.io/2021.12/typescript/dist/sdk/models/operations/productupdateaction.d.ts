@@ -17,7 +17,7 @@ export declare class ProductUpdateActionRequest extends SpeakeasyBase {
 }
 export declare class ProductUpdateActionResponse extends SpeakeasyBase {
     contentType: string;
-    productUpdateAction200ApplicationJsonAny?: any;
-    productUpdateActionDefaultApplicationJsonAny?: any;
+    productUpdateAction200ApplicationJSONAny?: any;
+    productUpdateActionDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

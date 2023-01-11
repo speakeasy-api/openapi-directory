@@ -1,5 +1,8 @@
-export var RequiredAttributeBehaviorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequiredAttributeBehaviorEnum = void 0;
+var RequiredAttributeBehaviorEnum;
 (function (RequiredAttributeBehaviorEnum) {
     RequiredAttributeBehaviorEnum["RequiredAlways"] = "REQUIRED_ALWAYS";
     RequiredAttributeBehaviorEnum["NotRequired"] = "NOT_REQUIRED";
-})(RequiredAttributeBehaviorEnum || (RequiredAttributeBehaviorEnum = {}));
+})(RequiredAttributeBehaviorEnum = exports.RequiredAttributeBehaviorEnum || (exports.RequiredAttributeBehaviorEnum = {}));

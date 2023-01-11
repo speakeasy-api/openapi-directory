@@ -1,4 +1,7 @@
-export var SampleTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SampleTypeEnum = void 0;
+var SampleTypeEnum;
 (function (SampleTypeEnum) {
     SampleTypeEnum["Cpu"] = "CPU";
     SampleTypeEnum["Memory"] = "MEMORY";
@@ -17,4 +20,4 @@ export var SampleTypeEnum;
     SampleTypeEnum["OpenglMinDrawtime"] = "OPENGL_MIN_DRAWTIME";
     SampleTypeEnum["OpenglAvgDrawtime"] = "OPENGL_AVG_DRAWTIME";
     SampleTypeEnum["OpenglMaxDrawtime"] = "OPENGL_MAX_DRAWTIME";
-})(SampleTypeEnum || (SampleTypeEnum = {}));
+})(SampleTypeEnum = exports.SampleTypeEnum || (exports.SampleTypeEnum = {}));

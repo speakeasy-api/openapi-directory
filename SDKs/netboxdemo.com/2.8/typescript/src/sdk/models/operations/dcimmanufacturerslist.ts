@@ -152,5 +152,5 @@ export class DcimManufacturersListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimManufacturersList200ApplicationJsonObject?: DcimManufacturersList200ApplicationJson;
+  dcimManufacturersList200ApplicationJSONObject?: DcimManufacturersList200ApplicationJson;
 }

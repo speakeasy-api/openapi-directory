@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguageDetectionResponse = exports.LanguageDetectionRequest = exports.LanguageDetectionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var LanguageDetectionRequestBody = /** @class */ (function (_super) {
     __extends(LanguageDetectionRequestBody, _super);
     function LanguageDetectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], LanguageDetectionRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], LanguageDetectionRequestBody.prototype, "text", void 0);
     return LanguageDetectionRequestBody;
-}(SpeakeasyBase));
-export { LanguageDetectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LanguageDetectionRequestBody = LanguageDetectionRequestBody;
 var LanguageDetectionRequest = /** @class */ (function (_super) {
     __extends(LanguageDetectionRequest, _super);
     function LanguageDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", LanguageDetectionRequestBody)
     ], LanguageDetectionRequest.prototype, "request", void 0);
     return LanguageDetectionRequest;
-}(SpeakeasyBase));
-export { LanguageDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.LanguageDetectionRequest = LanguageDetectionRequest;
 var LanguageDetectionResponse = /** @class */ (function (_super) {
     __extends(LanguageDetectionResponse, _super);
     function LanguageDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LanguageDetectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LanguageDetectionResponse.prototype, "statusCode", void 0);
     return LanguageDetectionResponse;
-}(SpeakeasyBase));
-export { LanguageDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.LanguageDetectionResponse = LanguageDetectionResponse;

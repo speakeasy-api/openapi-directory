@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationPreferences } from "./recommendationpreferences";
-import { MetricStatisticEnum } from "./metricstatisticenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEc2RecommendationProjectedMetricsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationpreferences_1 = require("./recommendationpreferences");
+var metricstatisticenum_1 = require("./metricstatisticenum");
 var GetEc2RecommendationProjectedMetricsRequest = /** @class */ (function (_super) {
     __extends(GetEc2RecommendationProjectedMetricsRequest, _super);
     function GetEc2RecommendationProjectedMetricsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceArn" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "instanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", Number)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationPreferences" }),
-        __metadata("design:type", RecommendationPreferences)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationPreferences" }),
+        __metadata("design:type", recommendationpreferences_1.RecommendationPreferences)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "recommendationPreferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stat" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "stat", void 0);
     return GetEc2RecommendationProjectedMetricsRequest;
-}(SpeakeasyBase));
-export { GetEc2RecommendationProjectedMetricsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEc2RecommendationProjectedMetricsRequest = GetEc2RecommendationProjectedMetricsRequest;

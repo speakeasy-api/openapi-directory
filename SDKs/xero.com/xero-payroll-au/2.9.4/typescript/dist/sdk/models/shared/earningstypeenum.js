@@ -1,4 +1,7 @@
-export var EarningsTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EarningsTypeEnum = void 0;
+var EarningsTypeEnum;
 (function (EarningsTypeEnum) {
     EarningsTypeEnum["Fixed"] = "FIXED";
     EarningsTypeEnum["Ordinarytimeearnings"] = "ORDINARYTIMEEARNINGS";
@@ -10,4 +13,4 @@ export var EarningsTypeEnum;
     EarningsTypeEnum["Lumpsumb"] = "LUMPSUMB";
     EarningsTypeEnum["Bonusesandcommissions"] = "BONUSESANDCOMMISSIONS";
     EarningsTypeEnum["Lumpsume"] = "LUMPSUME";
-})(EarningsTypeEnum || (EarningsTypeEnum = {}));
+})(EarningsTypeEnum = exports.EarningsTypeEnum || (exports.EarningsTypeEnum = {}));

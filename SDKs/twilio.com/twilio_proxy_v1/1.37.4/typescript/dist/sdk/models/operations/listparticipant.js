@@ -1,0 +1,191 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListParticipantResponse = exports.ListParticipantRequest = exports.ListParticipantListParticipantResponse = exports.ListParticipantListParticipantResponseMeta = exports.ListParticipantSecurity = exports.ListParticipantQueryParams = exports.ListParticipantPathParams = exports.ListParticipantServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.ListParticipantServerList = [
+    "https://proxy.twilio.com",
+];
+var ListParticipantPathParams = /** @class */ (function (_super) {
+    __extends(ListParticipantPathParams, _super);
+    function ListParticipantPathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ServiceSid" }),
+        __metadata("design:type", String)
+    ], ListParticipantPathParams.prototype, "serviceSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=SessionSid" }),
+        __metadata("design:type", String)
+    ], ListParticipantPathParams.prototype, "sessionSid", void 0);
+    return ListParticipantPathParams;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantPathParams = ListParticipantPathParams;
+var ListParticipantQueryParams = /** @class */ (function (_super) {
+    __extends(ListParticipantQueryParams, _super);
+    function ListParticipantQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PageSize" }),
+        __metadata("design:type", Number)
+    ], ListParticipantQueryParams.prototype, "pageSize", void 0);
+    return ListParticipantQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantQueryParams = ListParticipantQueryParams;
+var ListParticipantSecurity = /** @class */ (function (_super) {
+    __extends(ListParticipantSecurity, _super);
+    function ListParticipantSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], ListParticipantSecurity.prototype, "accountSidAuthToken", void 0);
+    return ListParticipantSecurity;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantSecurity = ListParticipantSecurity;
+var ListParticipantListParticipantResponseMeta = /** @class */ (function (_super) {
+    __extends(ListParticipantListParticipantResponseMeta, _super);
+    function ListParticipantListParticipantResponseMeta() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_page_url" }),
+        __metadata("design:type", String)
+    ], ListParticipantListParticipantResponseMeta.prototype, "firstPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", String)
+    ], ListParticipantListParticipantResponseMeta.prototype, "key", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page_url" }),
+        __metadata("design:type", String)
+    ], ListParticipantListParticipantResponseMeta.prototype, "nextPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", Number)
+    ], ListParticipantListParticipantResponseMeta.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_size" }),
+        __metadata("design:type", Number)
+    ], ListParticipantListParticipantResponseMeta.prototype, "pageSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page_url" }),
+        __metadata("design:type", String)
+    ], ListParticipantListParticipantResponseMeta.prototype, "previousPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
+        __metadata("design:type", String)
+    ], ListParticipantListParticipantResponseMeta.prototype, "url", void 0);
+    return ListParticipantListParticipantResponseMeta;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantListParticipantResponseMeta = ListParticipantListParticipantResponseMeta;
+var ListParticipantListParticipantResponse = /** @class */ (function (_super) {
+    __extends(ListParticipantListParticipantResponse, _super);
+    function ListParticipantListParticipantResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", ListParticipantListParticipantResponseMeta)
+    ], ListParticipantListParticipantResponse.prototype, "meta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=participants", elemType: shared.ProxyV1ServiceSessionParticipant }),
+        __metadata("design:type", Array)
+    ], ListParticipantListParticipantResponse.prototype, "participants", void 0);
+    return ListParticipantListParticipantResponse;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantListParticipantResponse = ListParticipantListParticipantResponse;
+var ListParticipantRequest = /** @class */ (function (_super) {
+    __extends(ListParticipantRequest, _super);
+    function ListParticipantRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], ListParticipantRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListParticipantPathParams)
+    ], ListParticipantRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListParticipantQueryParams)
+    ], ListParticipantRequest.prototype, "queryParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListParticipantSecurity)
+    ], ListParticipantRequest.prototype, "security", void 0);
+    return ListParticipantRequest;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantRequest = ListParticipantRequest;
+var ListParticipantResponse = /** @class */ (function (_super) {
+    __extends(ListParticipantResponse, _super);
+    function ListParticipantResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], ListParticipantResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListParticipantListParticipantResponse)
+    ], ListParticipantResponse.prototype, "listParticipantResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], ListParticipantResponse.prototype, "statusCode", void 0);
+    return ListParticipantResponse;
+}(utils_1.SpeakeasyBase));
+exports.ListParticipantResponse = ListParticipantResponse;

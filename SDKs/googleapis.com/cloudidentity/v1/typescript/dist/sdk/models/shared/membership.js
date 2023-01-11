@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityKey } from "./entitykey";
-import { MembershipRole1 } from "./membershiprole1";
-import { MembershipRole } from "./membershiprole";
-export var MembershipTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipInput = exports.Membership = exports.MembershipTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitykey_1 = require("./entitykey");
+var membershiprole_1 = require("./membershiprole");
+var membershiprole1_1 = require("./membershiprole1");
+var MembershipTypeEnum;
 (function (MembershipTypeEnum) {
     MembershipTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     MembershipTypeEnum["User"] = "USER";
@@ -34,27 +37,7 @@ export var MembershipTypeEnum;
     MembershipTypeEnum["Group"] = "GROUP";
     MembershipTypeEnum["SharedDrive"] = "SHARED_DRIVE";
     MembershipTypeEnum["Other"] = "OTHER";
-})(MembershipTypeEnum || (MembershipTypeEnum = {}));
-// MembershipInput
-/**
- * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
-**/
-var MembershipInput = /** @class */ (function (_super) {
-    __extends(MembershipInput, _super);
-    function MembershipInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredMemberKey" }),
-        __metadata("design:type", EntityKey)
-    ], MembershipInput.prototype, "preferredMemberKey", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles", elemType: MembershipRole1 }),
-        __metadata("design:type", Array)
-    ], MembershipInput.prototype, "roles", void 0);
-    return MembershipInput;
-}(SpeakeasyBase));
-export { MembershipInput };
+})(MembershipTypeEnum = exports.MembershipTypeEnum || (exports.MembershipTypeEnum = {}));
 // Membership
 /**
  * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
@@ -65,29 +48,49 @@ var Membership = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Membership.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Membership.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredMemberKey" }),
-        __metadata("design:type", EntityKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredMemberKey" }),
+        __metadata("design:type", entitykey_1.EntityKey)
     ], Membership.prototype, "preferredMemberKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles", elemType: MembershipRole }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles", elemType: membershiprole_1.MembershipRole }),
         __metadata("design:type", Array)
     ], Membership.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Membership.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Membership.prototype, "updateTime", void 0);
     return Membership;
-}(SpeakeasyBase));
-export { Membership };
+}(utils_1.SpeakeasyBase));
+exports.Membership = Membership;
+// MembershipInput
+/**
+ * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
+**/
+var MembershipInput = /** @class */ (function (_super) {
+    __extends(MembershipInput, _super);
+    function MembershipInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredMemberKey" }),
+        __metadata("design:type", entitykey_1.EntityKey)
+    ], MembershipInput.prototype, "preferredMemberKey", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles", elemType: membershiprole1_1.MembershipRole1 }),
+        __metadata("design:type", Array)
+    ], MembershipInput.prototype, "roles", void 0);
+    return MembershipInput;
+}(utils_1.SpeakeasyBase));
+exports.MembershipInput = MembershipInput;

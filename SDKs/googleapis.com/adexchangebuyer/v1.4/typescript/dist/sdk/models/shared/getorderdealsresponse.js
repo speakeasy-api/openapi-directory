@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketplaceDeal } from "./marketplacedeal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrderDealsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketplacedeal_1 = require("./marketplacedeal");
 var GetOrderDealsResponse = /** @class */ (function (_super) {
     __extends(GetOrderDealsResponse, _super);
     function GetOrderDealsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deals", elemType: MarketplaceDeal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deals", elemType: marketplacedeal_1.MarketplaceDeal }),
         __metadata("design:type", Array)
     ], GetOrderDealsResponse.prototype, "deals", void 0);
     return GetOrderDealsResponse;
-}(SpeakeasyBase));
-export { GetOrderDealsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrderDealsResponse = GetOrderDealsResponse;

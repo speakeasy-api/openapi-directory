@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayRef = void 0;
+var utils_1 = require("../../../internal/utils");
 // VirtualGatewayRef
 /**
  * An object that represents a virtual gateway returned by a list operation.
@@ -33,37 +36,37 @@ var VirtualGatewayRef = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], VirtualGatewayRef.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], VirtualGatewayRef.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], VirtualGatewayRef.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], VirtualGatewayRef.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshOwner" }),
         __metadata("design:type", String)
     ], VirtualGatewayRef.prototype, "meshOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOwner" }),
         __metadata("design:type", String)
     ], VirtualGatewayRef.prototype, "resourceOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], VirtualGatewayRef.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualGatewayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualGatewayName" }),
         __metadata("design:type", String)
     ], VirtualGatewayRef.prototype, "virtualGatewayName", void 0);
     return VirtualGatewayRef;
-}(SpeakeasyBase));
-export { VirtualGatewayRef };
+}(utils_1.SpeakeasyBase));
+exports.VirtualGatewayRef = VirtualGatewayRef;

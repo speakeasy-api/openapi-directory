@@ -191,23 +191,23 @@ export class SktscResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  sktsc400ApplicationJsonObject?: Sktsc400ApplicationJson;
+  sktsc400ApplicationJSONObject?: Sktsc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc401ApplicationJsonObject?: Sktsc401ApplicationJson;
+  sktsc401ApplicationJSONObject?: Sktsc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc404ApplicationJsonObject?: Sktsc404ApplicationJson;
+  sktsc404ApplicationJSONObject?: Sktsc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc500ApplicationJsonObject?: Sktsc500ApplicationJson;
+  sktsc500ApplicationJSONObject?: Sktsc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc502ApplicationJsonObject?: Sktsc502ApplicationJson;
+  sktsc502ApplicationJSONObject?: Sktsc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc503ApplicationJsonObject?: Sktsc503ApplicationJson;
+  sktsc503ApplicationJSONObject?: Sktsc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  sktsc504ApplicationJsonObject?: Sktsc504ApplicationJson;
+  sktsc504ApplicationJSONObject?: Sktsc504ApplicationJson;
 }

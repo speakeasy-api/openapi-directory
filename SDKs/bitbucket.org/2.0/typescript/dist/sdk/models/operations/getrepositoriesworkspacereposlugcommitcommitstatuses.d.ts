@@ -22,6 +22,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest
 export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedCommitstatuses?: shared.PaginatedCommitstatuses;
 }

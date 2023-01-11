@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventReminder = void 0;
+var utils_1 = require("../../../internal/utils");
 var EventReminder = /** @class */ (function (_super) {
     __extends(EventReminder, _super);
     function EventReminder() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], EventReminder.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minutes" }),
         __metadata("design:type", Number)
     ], EventReminder.prototype, "minutes", void 0);
     return EventReminder;
-}(SpeakeasyBase));
-export { EventReminder };
+}(utils_1.SpeakeasyBase));
+exports.EventReminder = EventReminder;

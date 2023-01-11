@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDrugByIdResponse = exports.GetDrugByIdRequest = exports.GetDrugByIdQueryParams = exports.GetDrugByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDrugByIdPathParams = /** @class */ (function (_super) {
     __extends(GetDrugByIdPathParams, _super);
     function GetDrugByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=DRUG_ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=DRUG_ID" }),
         __metadata("design:type", String)
-    ], GetDrugByIdPathParams.prototype, "drugId", void 0);
+    ], GetDrugByIdPathParams.prototype, "drugID", void 0);
     return GetDrugByIdPathParams;
-}(SpeakeasyBase));
-export { GetDrugByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDrugByIdPathParams = GetDrugByIdPathParams;
 var GetDrugByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetDrugByIdQueryParams, _super);
     function GetDrugByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=drug_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=drug_id" }),
         __metadata("design:type", String)
     ], GetDrugByIdQueryParams.prototype, "drugId", void 0);
     return GetDrugByIdQueryParams;
-}(SpeakeasyBase));
-export { GetDrugByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDrugByIdQueryParams = GetDrugByIdQueryParams;
 var GetDrugByIdRequest = /** @class */ (function (_super) {
     __extends(GetDrugByIdRequest, _super);
     function GetDrugByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDrugByIdPathParams)
     ], GetDrugByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDrugByIdQueryParams)
     ], GetDrugByIdRequest.prototype, "queryParams", void 0);
     return GetDrugByIdRequest;
-}(SpeakeasyBase));
-export { GetDrugByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDrugByIdRequest = GetDrugByIdRequest;
 var GetDrugByIdResponse = /** @class */ (function (_super) {
     __extends(GetDrugByIdResponse, _super);
     function GetDrugByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDrugByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDrugByIdResponse.prototype, "statusCode", void 0);
     return GetDrugByIdResponse;
-}(SpeakeasyBase));
-export { GetDrugByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDrugByIdResponse = GetDrugByIdResponse;

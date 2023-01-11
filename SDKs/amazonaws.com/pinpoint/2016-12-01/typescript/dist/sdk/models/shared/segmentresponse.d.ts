@@ -18,5 +18,5 @@ export declare class SegmentResponse extends SpeakeasyBase {
     segmentGroups?: SegmentGroupList;
     segmentType: SegmentTypeEnum;
     version?: number;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

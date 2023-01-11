@@ -11,5 +11,5 @@ export declare class StoryIdEventsPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     problemDetail?: any;
-    storyIdEventsPost200ApplicationJsonObject?: Map<string, any>;
+    storyIdEventsPost200ApplicationJSONObject?: Record<string, any>;
 }

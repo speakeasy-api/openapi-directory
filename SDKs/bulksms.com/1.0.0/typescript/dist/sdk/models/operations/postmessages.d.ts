@@ -16,7 +16,7 @@ export declare class PostMessagesRequest extends SpeakeasyBase {
 }
 export declare class PostMessagesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     messages?: shared.Message[];
     statusCode: number;
 }

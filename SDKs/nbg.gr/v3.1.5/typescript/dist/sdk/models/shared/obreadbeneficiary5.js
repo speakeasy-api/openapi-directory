@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataBeneficiary5 } from "./obreaddatabeneficiary5";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadBeneficiary5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddatabeneficiary5_1 = require("./obreaddatabeneficiary5");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadBeneficiary5 = /** @class */ (function (_super) {
     __extends(ObReadBeneficiary5, _super);
     function ObReadBeneficiary5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataBeneficiary5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddatabeneficiary5_1.ObReadDataBeneficiary5)
     ], ObReadBeneficiary5.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadBeneficiary5.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadBeneficiary5.prototype, "meta", void 0);
     return ObReadBeneficiary5;
-}(SpeakeasyBase));
-export { ObReadBeneficiary5 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadBeneficiary5 = ObReadBeneficiary5;

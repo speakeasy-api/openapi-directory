@@ -69,5 +69,5 @@ export class RegisterDomainResponse extends SpeakeasyBase {
   tldRulesViolation?: any;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

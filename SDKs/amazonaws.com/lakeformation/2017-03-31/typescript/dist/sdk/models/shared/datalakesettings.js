@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrincipalPermissions } from "./principalpermissions";
-import { DataLakePrincipal } from "./datalakeprincipal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataLakeSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var principalpermissions_1 = require("./principalpermissions");
+var datalakeprincipal_1 = require("./datalakeprincipal");
 // DataLakeSettings
 /**
  * A structure representing a list of AWS Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions.
@@ -35,21 +38,21 @@ var DataLakeSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateDatabaseDefaultPermissions", elemType: PrincipalPermissions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateDatabaseDefaultPermissions", elemType: principalpermissions_1.PrincipalPermissions }),
         __metadata("design:type", Array)
     ], DataLakeSettings.prototype, "createDatabaseDefaultPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTableDefaultPermissions", elemType: PrincipalPermissions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTableDefaultPermissions", elemType: principalpermissions_1.PrincipalPermissions }),
         __metadata("design:type", Array)
     ], DataLakeSettings.prototype, "createTableDefaultPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataLakeAdmins", elemType: DataLakePrincipal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataLakeAdmins", elemType: datalakeprincipal_1.DataLakePrincipal }),
         __metadata("design:type", Array)
     ], DataLakeSettings.prototype, "dataLakeAdmins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrustedResourceOwners" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrustedResourceOwners" }),
         __metadata("design:type", Array)
     ], DataLakeSettings.prototype, "trustedResourceOwners", void 0);
     return DataLakeSettings;
-}(SpeakeasyBase));
-export { DataLakeSettings };
+}(utils_1.SpeakeasyBase));
+exports.DataLakeSettings = DataLakeSettings;

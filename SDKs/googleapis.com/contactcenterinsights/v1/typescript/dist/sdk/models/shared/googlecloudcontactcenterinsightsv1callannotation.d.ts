@@ -13,11 +13,11 @@ export declare class GoogleCloudContactcenterinsightsV1CallAnnotation extends Sp
     annotationStartBoundary?: GoogleCloudContactcenterinsightsV1AnnotationBoundary;
     channelTag?: number;
     entityMentionData?: GoogleCloudContactcenterinsightsV1EntityMentionData;
-    holdData?: Map<string, any>;
+    holdData?: Record<string, any>;
     intentMatchData?: GoogleCloudContactcenterinsightsV1IntentMatchData;
-    interruptionData?: Map<string, any>;
+    interruptionData?: Record<string, any>;
     issueMatchData?: GoogleCloudContactcenterinsightsV1IssueMatchData;
     phraseMatchData?: GoogleCloudContactcenterinsightsV1PhraseMatchData;
     sentimentData?: GoogleCloudContactcenterinsightsV1SentimentData;
-    silenceData?: Map<string, any>;
+    silenceData?: Record<string, any>;
 }

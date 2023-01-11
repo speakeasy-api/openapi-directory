@@ -13,6 +13,6 @@ export declare class UsRaceEthnicityRequest extends SpeakeasyBase {
 }
 export declare class UsRaceEthnicityResponse extends SpeakeasyBase {
     contentType: string;
-    firstLastNameUsRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
+    firstLastNameUSRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
     statusCode: number;
 }

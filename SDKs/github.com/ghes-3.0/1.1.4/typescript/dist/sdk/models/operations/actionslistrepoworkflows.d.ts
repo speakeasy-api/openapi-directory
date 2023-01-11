@@ -18,7 +18,7 @@ export declare class ActionsListRepoWorkflowsRequest extends SpeakeasyBase {
 }
 export declare class ActionsListRepoWorkflowsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListRepoWorkflows200ApplicationJsonObject?: ActionsListRepoWorkflows200ApplicationJson;
+    actionsListRepoWorkflows200ApplicationJSONObject?: ActionsListRepoWorkflows200ApplicationJson;
 }

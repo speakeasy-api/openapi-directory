@@ -50,7 +50,7 @@ export class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse extends 
   contentType: string;
 
   @SpeakeasyMetadata()
-  referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJsonObject?: Map<string, any>;
+  referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,9 +1,21 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnRouteStatus } from "./clientvpnroutestatus";
 
+
+
+// DeleteClientVpnRouteResultStatus
+/** 
+ * The current state of the route.
+**/
+export class DeleteClientVpnRouteResultStatus extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
 
 
 export class DeleteClientVpnRouteResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  status?: ClientVpnRouteStatus;
+  status?: DeleteClientVpnRouteResultStatus;
 }

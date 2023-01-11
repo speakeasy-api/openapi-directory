@@ -17,7 +17,7 @@ export declare class DeleteSafetyRuleRequest extends SpeakeasyBase {
 }
 export declare class DeleteSafetyRuleResponse extends SpeakeasyBase {
     contentType: string;
-    deleteSafetyRuleResponse?: Map<string, any>;
+    deleteSafetyRuleResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

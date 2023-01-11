@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
-import { Label } from "./label";
-export var SectionSectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Section = exports.SectionSectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var item_1 = require("./item");
+var label_1 = require("./label");
+var SectionSectionTypeEnum;
 (function (SectionSectionTypeEnum) {
     SectionSectionTypeEnum["SectionTypeUnspecified"] = "SECTION_TYPE_UNSPECIFIED";
     SectionSectionTypeEnum["Food"] = "FOOD";
     SectionSectionTypeEnum["Services"] = "SERVICES";
-})(SectionSectionTypeEnum || (SectionSectionTypeEnum = {}));
+})(SectionSectionTypeEnum = exports.SectionSectionTypeEnum || (exports.SectionSectionTypeEnum = {}));
 // Section
 /**
  * A section of the price list containing one or more items.
@@ -41,21 +44,21 @@ var Section = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Item }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: item_1.Item }),
         __metadata("design:type", Array)
     ], Section.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels", elemType: Label }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels", elemType: label_1.Label }),
         __metadata("design:type", Array)
     ], Section.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectionId" }),
         __metadata("design:type", String)
     ], Section.prototype, "sectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectionType" }),
         __metadata("design:type", String)
     ], Section.prototype, "sectionType", void 0);
     return Section;
-}(SpeakeasyBase));
-export { Section };
+}(utils_1.SpeakeasyBase));
+exports.Section = Section;

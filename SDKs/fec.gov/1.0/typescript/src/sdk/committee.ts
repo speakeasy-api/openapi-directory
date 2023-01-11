@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,11 +34,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/committees/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/committees/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -46,19 +46,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdCommitteesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeDetailPage = httpRes?.data;
             }
             break;
@@ -66,7 +68,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -85,11 +86,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/committees/history/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/committees/history/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -97,19 +98,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdCommitteesHistoryResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeHistoryPage = httpRes?.data;
             }
             break;
@@ -117,7 +120,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -136,11 +138,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -148,19 +150,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeHistoryPage = httpRes?.data;
             }
             break;
@@ -168,7 +172,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -187,11 +190,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -199,19 +202,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeDetailPage = httpRes?.data;
             }
             break;
@@ -219,7 +224,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -238,11 +242,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/history/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/history/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -250,19 +254,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdHistoryResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeHistoryPage = httpRes?.data;
             }
             break;
@@ -270,7 +276,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -289,11 +294,11 @@ export class Committee {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/history/{cycle}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/history/{cycle}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -301,19 +306,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdHistoryCycleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeHistoryPage = httpRes?.data;
             }
             break;
@@ -321,7 +328,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -345,7 +351,7 @@ export class Committee {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -353,19 +359,21 @@ export class Committee {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeePage = httpRes?.data;
             }
             break;
@@ -373,7 +381,6 @@ export class Committee {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

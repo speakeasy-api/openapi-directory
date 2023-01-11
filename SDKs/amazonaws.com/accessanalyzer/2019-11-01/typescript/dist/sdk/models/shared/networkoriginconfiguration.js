@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcConfiguration } from "./vpcconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkOriginConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var vpcconfiguration_1 = require("./vpcconfiguration");
 // NetworkOriginConfiguration
 /**
  * The proposed <code>InternetConfiguration</code> or <code>VpcConfiguration</code> to apply to the Amazon S3 access point. <code>VpcConfiguration</code> does not apply to multi-region access points. You can make the access point accessible from the internet, or you can specify that all requests made through that access point must originate from a specific virtual private cloud (VPC). You can specify only one type of network configuration. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html">Creating access points</a>.
@@ -34,13 +37,13 @@ var NetworkOriginConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internetConfiguration" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internetConfiguration" }),
+        __metadata("design:type", Object)
     ], NetworkOriginConfiguration.prototype, "internetConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcConfiguration" }),
-        __metadata("design:type", VpcConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcConfiguration" }),
+        __metadata("design:type", vpcconfiguration_1.VpcConfiguration)
     ], NetworkOriginConfiguration.prototype, "vpcConfiguration", void 0);
     return NetworkOriginConfiguration;
-}(SpeakeasyBase));
-export { NetworkOriginConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.NetworkOriginConfiguration = NetworkOriginConfiguration;

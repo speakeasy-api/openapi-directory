@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,134 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationSamlRoleResponse = exports.UpdateOrganizationSamlRoleRequest = exports.UpdateOrganizationSamlRoleRequestBody = exports.UpdateOrganizationSamlRoleRequestBodyTags = exports.UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum = exports.UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum = exports.UpdateOrganizationSamlRoleRequestBodyNetworks = exports.UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum = exports.UpdateOrganizationSamlRolePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationSamlRolePathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRolePathParams, _super);
     function UpdateOrganizationSamlRolePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRolePathParams.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=samlRoleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=samlRoleId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRolePathParams.prototype, "samlRoleId", void 0);
     return UpdateOrganizationSamlRolePathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRolePathParams };
-export var UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRolePathParams = UpdateOrganizationSamlRolePathParams;
+var UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum;
 (function (UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum) {
     UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum["Full"] = "full";
     UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum["ReadOnly"] = "read-only";
     UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum["GuestAmbassador"] = "guest-ambassador";
     UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum["MonitorOnly"] = "monitor-only";
-})(UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum || (UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum = {}));
+})(UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum = exports.UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum || (exports.UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum = {}));
 var UpdateOrganizationSamlRoleRequestBodyNetworks = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRoleRequestBodyNetworks, _super);
     function UpdateOrganizationSamlRoleRequestBodyNetworks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBodyNetworks.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBodyNetworks.prototype, "id", void 0);
     return UpdateOrganizationSamlRoleRequestBodyNetworks;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRoleRequestBodyNetworks };
-export var UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRoleRequestBodyNetworks = UpdateOrganizationSamlRoleRequestBodyNetworks;
+var UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum;
 (function (UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum) {
     UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum["None"] = "none";
     UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum["ReadOnly"] = "read-only";
     UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum["Full"] = "full";
-})(UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum || (UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum = {}));
-export var UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum;
+})(UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum = exports.UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum || (exports.UpdateOrganizationSamlRoleRequestBodyOrgAccessEnum = {}));
+var UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum;
 (function (UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum) {
     UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum["Full"] = "full";
     UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum["ReadOnly"] = "read-only";
     UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum["GuestAmbassador"] = "guest-ambassador";
     UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum["MonitorOnly"] = "monitor-only";
-})(UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum || (UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum = {}));
+})(UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum = exports.UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum || (exports.UpdateOrganizationSamlRoleRequestBodyTagsAccessEnum = {}));
 var UpdateOrganizationSamlRoleRequestBodyTags = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRoleRequestBodyTags, _super);
     function UpdateOrganizationSamlRoleRequestBodyTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBodyTags.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBodyTags.prototype, "tag", void 0);
     return UpdateOrganizationSamlRoleRequestBodyTags;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRoleRequestBodyTags };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRoleRequestBodyTags = UpdateOrganizationSamlRoleRequestBodyTags;
 var UpdateOrganizationSamlRoleRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRoleRequestBody, _super);
     function UpdateOrganizationSamlRoleRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networks", elemType: UpdateOrganizationSamlRoleRequestBodyNetworks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networks", elemType: UpdateOrganizationSamlRoleRequestBodyNetworks }),
         __metadata("design:type", Array)
     ], UpdateOrganizationSamlRoleRequestBody.prototype, "networks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgAccess" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBody.prototype, "orgAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleRequestBody.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: UpdateOrganizationSamlRoleRequestBodyTags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: UpdateOrganizationSamlRoleRequestBodyTags }),
         __metadata("design:type", Array)
     ], UpdateOrganizationSamlRoleRequestBody.prototype, "tags", void 0);
     return UpdateOrganizationSamlRoleRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRoleRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRoleRequestBody = UpdateOrganizationSamlRoleRequestBody;
 var UpdateOrganizationSamlRoleRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRoleRequest, _super);
     function UpdateOrganizationSamlRoleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationSamlRolePathParams)
     ], UpdateOrganizationSamlRoleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationSamlRoleRequestBody)
     ], UpdateOrganizationSamlRoleRequest.prototype, "request", void 0);
     return UpdateOrganizationSamlRoleRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRoleRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRoleRequest = UpdateOrganizationSamlRoleRequest;
 var UpdateOrganizationSamlRoleResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlRoleResponse, _super);
     function UpdateOrganizationSamlRoleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlRoleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationSamlRoleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationSamlRoleResponse.prototype, "updateOrganizationSamlRole200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationSamlRoleResponse.prototype, "updateOrganizationSamlRole200ApplicationJSONObject", void 0);
     return UpdateOrganizationSamlRoleResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlRoleResponse = UpdateOrganizationSamlRoleResponse;

@@ -2,12 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum EnterpriseAdminListPublicKeysSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Accessed = "accessed"
-}
-
 
 export class EnterpriseAdminListPublicKeysQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
@@ -23,7 +17,7 @@ export class EnterpriseAdminListPublicKeysQueryParams extends SpeakeasyBase {
   since?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: EnterpriseAdminListPublicKeysSortEnum;
+  sort?: shared.DirectionEnum1;
 }
 
 
@@ -38,7 +32,7 @@ export class EnterpriseAdminListPublicKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

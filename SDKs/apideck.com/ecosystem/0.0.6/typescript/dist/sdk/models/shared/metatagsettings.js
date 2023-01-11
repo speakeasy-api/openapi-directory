@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetaTagSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var MetaTagSettings = /** @class */ (function (_super) {
     __extends(MetaTagSettings, _super);
     function MetaTagSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_category_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_category_page" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "descriptionCategoryPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_collection_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_collection_page" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "descriptionCollectionPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_listing_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_listing_page" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "descriptionListingPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keywords" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_postfix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_postfix" }),
         __metadata("design:type", String)
     ], MetaTagSettings.prototype, "titlePostfix", void 0);
     return MetaTagSettings;
-}(SpeakeasyBase));
-export { MetaTagSettings };
+}(utils_1.SpeakeasyBase));
+exports.MetaTagSettings = MetaTagSettings;

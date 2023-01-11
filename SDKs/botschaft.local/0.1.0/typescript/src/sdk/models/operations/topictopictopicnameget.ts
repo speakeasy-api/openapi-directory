@@ -47,5 +47,5 @@ export class TopicTopicTopicNameGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  topicTopicTopicNameGet200ApplicationJsonAny?: any;
+  topicTopicTopicNameGet200ApplicationJSONAny?: any;
 }

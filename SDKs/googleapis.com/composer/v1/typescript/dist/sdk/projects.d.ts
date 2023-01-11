@@ -17,9 +17,17 @@ export declare class Projects {
     **/
     composerProjectsLocationsEnvironmentsList(req: operations.ComposerProjectsLocationsEnvironmentsListRequest, config?: AxiosRequestConfig): Promise<operations.ComposerProjectsLocationsEnvironmentsListResponse>;
     /**
+     * composerProjectsLocationsEnvironmentsLoadSnapshot - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+    **/
+    composerProjectsLocationsEnvironmentsLoadSnapshot(req: operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse>;
+    /**
      * composerProjectsLocationsEnvironmentsPatch - Update an environment.
     **/
     composerProjectsLocationsEnvironmentsPatch(req: operations.ComposerProjectsLocationsEnvironmentsPatchRequest, config?: AxiosRequestConfig): Promise<operations.ComposerProjectsLocationsEnvironmentsPatchResponse>;
+    /**
+     * composerProjectsLocationsEnvironmentsSaveSnapshot - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+    **/
+    composerProjectsLocationsEnvironmentsSaveSnapshot(req: operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse>;
     /**
      * composerProjectsLocationsImageVersionsList - List ImageVersions for provided location.
     **/

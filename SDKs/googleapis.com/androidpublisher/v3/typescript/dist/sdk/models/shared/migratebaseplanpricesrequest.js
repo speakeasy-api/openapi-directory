@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionalPriceMigrationConfig } from "./regionalpricemigrationconfig";
-import { RegionsVersion } from "./regionsversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MigrateBasePlanPricesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionalpricemigrationconfig_1 = require("./regionalpricemigrationconfig");
+var regionsversion_1 = require("./regionsversion");
 // MigrateBasePlanPricesRequest
 /**
  * Request message for MigrateBasePlanPrices.
@@ -35,13 +38,13 @@ var MigrateBasePlanPricesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionalPriceMigrations", elemType: RegionalPriceMigrationConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionalPriceMigrations", elemType: regionalpricemigrationconfig_1.RegionalPriceMigrationConfig }),
         __metadata("design:type", Array)
     ], MigrateBasePlanPricesRequest.prototype, "regionalPriceMigrations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionsVersion" }),
-        __metadata("design:type", RegionsVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionsVersion" }),
+        __metadata("design:type", regionsversion_1.RegionsVersion)
     ], MigrateBasePlanPricesRequest.prototype, "regionsVersion", void 0);
     return MigrateBasePlanPricesRequest;
-}(SpeakeasyBase));
-export { MigrateBasePlanPricesRequest };
+}(utils_1.SpeakeasyBase));
+exports.MigrateBasePlanPricesRequest = MigrateBasePlanPricesRequest;

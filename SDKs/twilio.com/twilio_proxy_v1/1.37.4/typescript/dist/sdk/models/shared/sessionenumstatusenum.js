@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionEnumStatusEnum = void 0;
+var SessionEnumStatusEnum;
+(function (SessionEnumStatusEnum) {
+    SessionEnumStatusEnum["Open"] = "open";
+    SessionEnumStatusEnum["InProgress"] = "in-progress";
+    SessionEnumStatusEnum["Closed"] = "closed";
+    SessionEnumStatusEnum["Failed"] = "failed";
+    SessionEnumStatusEnum["Unknown"] = "unknown";
+})(SessionEnumStatusEnum = exports.SessionEnumStatusEnum || (exports.SessionEnumStatusEnum = {}));

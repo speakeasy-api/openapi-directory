@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DestinationNotWorkingEvidenceDnsErrorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationNotWorkingEvidence = exports.DestinationNotWorkingEvidenceUrlRejectedEnum = exports.DestinationNotWorkingEvidenceRedirectionErrorEnum = exports.DestinationNotWorkingEvidencePlatformEnum = exports.DestinationNotWorkingEvidenceInvalidPageEnum = exports.DestinationNotWorkingEvidenceDnsErrorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DestinationNotWorkingEvidenceDnsErrorEnum;
 (function (DestinationNotWorkingEvidenceDnsErrorEnum) {
     DestinationNotWorkingEvidenceDnsErrorEnum["DnsErrorUnspecified"] = "DNS_ERROR_UNSPECIFIED";
     DestinationNotWorkingEvidenceDnsErrorEnum["ErrorDns"] = "ERROR_DNS";
     DestinationNotWorkingEvidenceDnsErrorEnum["GoogleCrawlerDnsIssue"] = "GOOGLE_CRAWLER_DNS_ISSUE";
-})(DestinationNotWorkingEvidenceDnsErrorEnum || (DestinationNotWorkingEvidenceDnsErrorEnum = {}));
-export var DestinationNotWorkingEvidenceInvalidPageEnum;
+})(DestinationNotWorkingEvidenceDnsErrorEnum = exports.DestinationNotWorkingEvidenceDnsErrorEnum || (exports.DestinationNotWorkingEvidenceDnsErrorEnum = {}));
+var DestinationNotWorkingEvidenceInvalidPageEnum;
 (function (DestinationNotWorkingEvidenceInvalidPageEnum) {
     DestinationNotWorkingEvidenceInvalidPageEnum["InvalidPageUnspecified"] = "INVALID_PAGE_UNSPECIFIED";
     DestinationNotWorkingEvidenceInvalidPageEnum["EmptyOrErrorPage"] = "EMPTY_OR_ERROR_PAGE";
-})(DestinationNotWorkingEvidenceInvalidPageEnum || (DestinationNotWorkingEvidenceInvalidPageEnum = {}));
-export var DestinationNotWorkingEvidencePlatformEnum;
+})(DestinationNotWorkingEvidenceInvalidPageEnum = exports.DestinationNotWorkingEvidenceInvalidPageEnum || (exports.DestinationNotWorkingEvidenceInvalidPageEnum = {}));
+var DestinationNotWorkingEvidencePlatformEnum;
 (function (DestinationNotWorkingEvidencePlatformEnum) {
     DestinationNotWorkingEvidencePlatformEnum["PlatformUnspecified"] = "PLATFORM_UNSPECIFIED";
     DestinationNotWorkingEvidencePlatformEnum["PersonalComputer"] = "PERSONAL_COMPUTER";
     DestinationNotWorkingEvidencePlatformEnum["Android"] = "ANDROID";
     DestinationNotWorkingEvidencePlatformEnum["Ios"] = "IOS";
-})(DestinationNotWorkingEvidencePlatformEnum || (DestinationNotWorkingEvidencePlatformEnum = {}));
-export var DestinationNotWorkingEvidenceRedirectionErrorEnum;
+})(DestinationNotWorkingEvidencePlatformEnum = exports.DestinationNotWorkingEvidencePlatformEnum || (exports.DestinationNotWorkingEvidencePlatformEnum = {}));
+var DestinationNotWorkingEvidenceRedirectionErrorEnum;
 (function (DestinationNotWorkingEvidenceRedirectionErrorEnum) {
     DestinationNotWorkingEvidenceRedirectionErrorEnum["RedirectionErrorUnspecified"] = "REDIRECTION_ERROR_UNSPECIFIED";
     DestinationNotWorkingEvidenceRedirectionErrorEnum["TooManyRedirects"] = "TOO_MANY_REDIRECTS";
     DestinationNotWorkingEvidenceRedirectionErrorEnum["InvalidRedirect"] = "INVALID_REDIRECT";
     DestinationNotWorkingEvidenceRedirectionErrorEnum["EmptyRedirect"] = "EMPTY_REDIRECT";
     DestinationNotWorkingEvidenceRedirectionErrorEnum["RedirectErrorUnknown"] = "REDIRECT_ERROR_UNKNOWN";
-})(DestinationNotWorkingEvidenceRedirectionErrorEnum || (DestinationNotWorkingEvidenceRedirectionErrorEnum = {}));
-export var DestinationNotWorkingEvidenceUrlRejectedEnum;
+})(DestinationNotWorkingEvidenceRedirectionErrorEnum = exports.DestinationNotWorkingEvidenceRedirectionErrorEnum || (exports.DestinationNotWorkingEvidenceRedirectionErrorEnum = {}));
+var DestinationNotWorkingEvidenceUrlRejectedEnum;
 (function (DestinationNotWorkingEvidenceUrlRejectedEnum) {
     DestinationNotWorkingEvidenceUrlRejectedEnum["UrlRejectedUnspecified"] = "URL_REJECTED_UNSPECIFIED";
     DestinationNotWorkingEvidenceUrlRejectedEnum["BadRequest"] = "BAD_REQUEST";
     DestinationNotWorkingEvidenceUrlRejectedEnum["MalformedUrl"] = "MALFORMED_URL";
     DestinationNotWorkingEvidenceUrlRejectedEnum["UrlRejectedUnknown"] = "URL_REJECTED_UNKNOWN";
-})(DestinationNotWorkingEvidenceUrlRejectedEnum || (DestinationNotWorkingEvidenceUrlRejectedEnum = {}));
+})(DestinationNotWorkingEvidenceUrlRejectedEnum = exports.DestinationNotWorkingEvidenceUrlRejectedEnum || (exports.DestinationNotWorkingEvidenceUrlRejectedEnum = {}));
 // DestinationNotWorkingEvidence
 /**
  * Evidence of the creative's destination URL not functioning properly or having been incorrectly set up.
@@ -66,37 +69,37 @@ var DestinationNotWorkingEvidence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsError" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "dnsError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expandedUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expandedUrl" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "expandedUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpError" }),
         __metadata("design:type", Number)
     ], DestinationNotWorkingEvidence.prototype, "httpError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalidPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalidPage" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "invalidPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastCheckTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastCheckTime" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "lastCheckTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirectionError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirectionError" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "redirectionError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlRejected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlRejected" }),
         __metadata("design:type", String)
     ], DestinationNotWorkingEvidence.prototype, "urlRejected", void 0);
     return DestinationNotWorkingEvidence;
-}(SpeakeasyBase));
-export { DestinationNotWorkingEvidence };
+}(utils_1.SpeakeasyBase));
+exports.DestinationNotWorkingEvidence = DestinationNotWorkingEvidence;

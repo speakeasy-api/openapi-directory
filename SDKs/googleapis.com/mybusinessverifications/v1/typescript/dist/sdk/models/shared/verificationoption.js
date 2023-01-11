@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressVerificationData } from "./addressverificationdata";
-import { EmailVerificationData } from "./emailverificationdata";
-export var VerificationOptionVerificationMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationOption = exports.VerificationOptionVerificationMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressverificationdata_1 = require("./addressverificationdata");
+var emailverificationdata_1 = require("./emailverificationdata");
+var VerificationOptionVerificationMethodEnum;
 (function (VerificationOptionVerificationMethodEnum) {
     VerificationOptionVerificationMethodEnum["VerificationMethodUnspecified"] = "VERIFICATION_METHOD_UNSPECIFIED";
     VerificationOptionVerificationMethodEnum["Address"] = "ADDRESS";
@@ -34,7 +37,7 @@ export var VerificationOptionVerificationMethodEnum;
     VerificationOptionVerificationMethodEnum["Sms"] = "SMS";
     VerificationOptionVerificationMethodEnum["Auto"] = "AUTO";
     VerificationOptionVerificationMethodEnum["VettedPartner"] = "VETTED_PARTNER";
-})(VerificationOptionVerificationMethodEnum || (VerificationOptionVerificationMethodEnum = {}));
+})(VerificationOptionVerificationMethodEnum = exports.VerificationOptionVerificationMethodEnum || (exports.VerificationOptionVerificationMethodEnum = {}));
 // VerificationOption
 /**
  * The verification option represents how to verify the location (indicated by verification method) and where the verification will be sent to (indicated by display data).
@@ -45,21 +48,21 @@ var VerificationOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressData" }),
-        __metadata("design:type", AddressVerificationData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressData" }),
+        __metadata("design:type", addressverificationdata_1.AddressVerificationData)
     ], VerificationOption.prototype, "addressData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailData" }),
-        __metadata("design:type", EmailVerificationData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailData" }),
+        __metadata("design:type", emailverificationdata_1.EmailVerificationData)
     ], VerificationOption.prototype, "emailData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], VerificationOption.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationMethod" }),
         __metadata("design:type", String)
     ], VerificationOption.prototype, "verificationMethod", void 0);
     return VerificationOption;
-}(SpeakeasyBase));
-export { VerificationOption };
+}(utils_1.SpeakeasyBase));
+exports.VerificationOption = VerificationOption;

@@ -16,5 +16,5 @@ export declare class AquiferCodesDemandListRequest extends SpeakeasyBase {
 export declare class AquiferCodesDemandListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    aquiferCodesDemandList200ApplicationJsonObject?: AquiferCodesDemandList200ApplicationJson;
+    aquiferCodesDemandList200ApplicationJSONObject?: AquiferCodesDemandList200ApplicationJson;
 }

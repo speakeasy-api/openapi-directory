@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PodcastLookingForField = void 0;
+var utils_1 = require("../../../internal/utils");
 var PodcastLookingForField = /** @class */ (function (_super) {
     __extends(PodcastLookingForField, _super);
     function PodcastLookingForField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cohosts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cohosts" }),
         __metadata("design:type", Boolean)
     ], PodcastLookingForField.prototype, "cohosts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cross_promotion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cross_promotion" }),
         __metadata("design:type", Boolean)
     ], PodcastLookingForField.prototype, "crossPromotion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guests" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guests" }),
         __metadata("design:type", Boolean)
     ], PodcastLookingForField.prototype, "guests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sponsors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sponsors" }),
         __metadata("design:type", Boolean)
     ], PodcastLookingForField.prototype, "sponsors", void 0);
     return PodcastLookingForField;
-}(SpeakeasyBase));
-export { PodcastLookingForField };
+}(utils_1.SpeakeasyBase));
+exports.PodcastLookingForField = PodcastLookingForField;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkFloorPlanResponse = exports.UpdateNetworkFloorPlanRequest = exports.UpdateNetworkFloorPlanRequestBody = exports.UpdateNetworkFloorPlanRequestBodyTopRightCorner = exports.UpdateNetworkFloorPlanRequestBodyTopLeftCorner = exports.UpdateNetworkFloorPlanRequestBodyCenter = exports.UpdateNetworkFloorPlanRequestBodyBottomRightCorner = exports.UpdateNetworkFloorPlanRequestBodyBottomLeftCorner = exports.UpdateNetworkFloorPlanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkFloorPlanPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkFloorPlanPathParams, _super);
     function UpdateNetworkFloorPlanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
         __metadata("design:type", String)
     ], UpdateNetworkFloorPlanPathParams.prototype, "floorPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkFloorPlanPathParams.prototype, "networkId", void 0);
     return UpdateNetworkFloorPlanPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanPathParams = UpdateNetworkFloorPlanPathParams;
 // UpdateNetworkFloorPlanRequestBodyBottomLeftCorner
 /**
  * The longitude and latitude of the bottom left corner of your floor plan.
@@ -49,16 +52,16 @@ var UpdateNetworkFloorPlanRequestBodyBottomLeftCorner = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyBottomLeftCorner.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyBottomLeftCorner.prototype, "lng", void 0);
     return UpdateNetworkFloorPlanRequestBodyBottomLeftCorner;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBodyBottomLeftCorner };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBodyBottomLeftCorner = UpdateNetworkFloorPlanRequestBodyBottomLeftCorner;
 // UpdateNetworkFloorPlanRequestBodyBottomRightCorner
 /**
  * The longitude and latitude of the bottom right corner of your floor plan.
@@ -69,16 +72,16 @@ var UpdateNetworkFloorPlanRequestBodyBottomRightCorner = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyBottomRightCorner.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyBottomRightCorner.prototype, "lng", void 0);
     return UpdateNetworkFloorPlanRequestBodyBottomRightCorner;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBodyBottomRightCorner };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBodyBottomRightCorner = UpdateNetworkFloorPlanRequestBodyBottomRightCorner;
 // UpdateNetworkFloorPlanRequestBodyCenter
 /**
  * The longitude and latitude of the center of your floor plan. If you want to change the geolocation data of your floor plan, either the 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
@@ -89,16 +92,16 @@ var UpdateNetworkFloorPlanRequestBodyCenter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyCenter.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyCenter.prototype, "lng", void 0);
     return UpdateNetworkFloorPlanRequestBodyCenter;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBodyCenter };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBodyCenter = UpdateNetworkFloorPlanRequestBodyCenter;
 // UpdateNetworkFloorPlanRequestBodyTopLeftCorner
 /**
  * The longitude and latitude of the top left corner of your floor plan.
@@ -109,16 +112,16 @@ var UpdateNetworkFloorPlanRequestBodyTopLeftCorner = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyTopLeftCorner.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyTopLeftCorner.prototype, "lng", void 0);
     return UpdateNetworkFloorPlanRequestBodyTopLeftCorner;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBodyTopLeftCorner };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBodyTopLeftCorner = UpdateNetworkFloorPlanRequestBodyTopLeftCorner;
 // UpdateNetworkFloorPlanRequestBodyTopRightCorner
 /**
  * The longitude and latitude of the top right corner of your floor plan.
@@ -129,85 +132,85 @@ var UpdateNetworkFloorPlanRequestBodyTopRightCorner = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyTopRightCorner.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanRequestBodyTopRightCorner.prototype, "lng", void 0);
     return UpdateNetworkFloorPlanRequestBodyTopRightCorner;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBodyTopRightCorner };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBodyTopRightCorner = UpdateNetworkFloorPlanRequestBodyTopRightCorner;
 var UpdateNetworkFloorPlanRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkFloorPlanRequestBody, _super);
     function UpdateNetworkFloorPlanRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottomLeftCorner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottomLeftCorner" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBodyBottomLeftCorner)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "bottomLeftCorner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottomRightCorner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottomRightCorner" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBodyBottomRightCorner)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "bottomRightCorner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=center" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=center" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBodyCenter)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "center", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageContents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageContents" }),
         __metadata("design:type", String)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "imageContents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topLeftCorner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topLeftCorner" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBodyTopLeftCorner)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "topLeftCorner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topRightCorner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topRightCorner" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBodyTopRightCorner)
     ], UpdateNetworkFloorPlanRequestBody.prototype, "topRightCorner", void 0);
     return UpdateNetworkFloorPlanRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequestBody = UpdateNetworkFloorPlanRequestBody;
 var UpdateNetworkFloorPlanRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkFloorPlanRequest, _super);
     function UpdateNetworkFloorPlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkFloorPlanPathParams)
     ], UpdateNetworkFloorPlanRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkFloorPlanRequestBody)
     ], UpdateNetworkFloorPlanRequest.prototype, "request", void 0);
     return UpdateNetworkFloorPlanRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanRequest = UpdateNetworkFloorPlanRequest;
 var UpdateNetworkFloorPlanResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkFloorPlanResponse, _super);
     function UpdateNetworkFloorPlanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkFloorPlanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkFloorPlanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkFloorPlanResponse.prototype, "updateNetworkFloorPlan200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkFloorPlanResponse.prototype, "updateNetworkFloorPlan200ApplicationJSONObject", void 0);
     return UpdateNetworkFloorPlanResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkFloorPlanResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkFloorPlanResponse = UpdateNetworkFloorPlanResponse;

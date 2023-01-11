@@ -11,22 +11,6 @@ export enum ApigatewayApiStateEnum {
 }
 
 
-// ApigatewayApiInput
-/** 
- * An API that can be served by one or more Gateways.
-**/
-export class ApigatewayApiInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=managedService" })
-  managedService?: string;
-}
-
-
 // ApigatewayApi
 /** 
  * An API that can be served by one or more Gateways.
@@ -39,7 +23,7 @@ export class ApigatewayApi extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=managedService" })
   managedService?: string;
@@ -52,4 +36,20 @@ export class ApigatewayApi extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ApigatewayApiInput
+/** 
+ * An API that can be served by one or more Gateways.
+**/
+export class ApigatewayApiInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=managedService" })
+  managedService?: string;
 }

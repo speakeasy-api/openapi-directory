@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Resource extends SpeakeasyBase {
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     service?: string;
     type?: string;

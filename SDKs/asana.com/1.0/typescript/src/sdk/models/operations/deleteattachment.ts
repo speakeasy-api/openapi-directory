@@ -20,7 +20,7 @@ export class DeleteAttachmentQueryParams extends SpeakeasyBase {
 
 export class DeleteAttachment200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class DeleteAttachmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteAttachment200ApplicationJsonObject?: DeleteAttachment200ApplicationJson;
+  deleteAttachment200ApplicationJSONObject?: DeleteAttachment200ApplicationJson;
 }

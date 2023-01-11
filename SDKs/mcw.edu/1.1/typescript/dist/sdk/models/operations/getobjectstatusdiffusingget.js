@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetObjectStatusDiffUsingGetResponse = exports.GetObjectStatusDiffUsingGetRequest = exports.GetObjectStatusDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetObjectStatusDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetObjectStatusDiffUsingGetPathParams, _super);
     function GetObjectStatusDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectStatusDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetObjectStatusDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectStatusDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetObjectStatusDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetObjectStatusDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetObjectStatusDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetObjectStatusDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusDiffUsingGetPathParams = GetObjectStatusDiffUsingGetPathParams;
 var GetObjectStatusDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetObjectStatusDiffUsingGetRequest, _super);
     function GetObjectStatusDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetObjectStatusDiffUsingGetPathParams)
     ], GetObjectStatusDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetObjectStatusDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetObjectStatusDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusDiffUsingGetRequest = GetObjectStatusDiffUsingGetRequest;
 var GetObjectStatusDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetObjectStatusDiffUsingGetResponse, _super);
     function GetObjectStatusDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetObjectStatusDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetObjectStatusDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetObjectStatusDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetObjectStatusDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetObjectStatusDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusDiffUsingGetResponse = GetObjectStatusDiffUsingGetResponse;

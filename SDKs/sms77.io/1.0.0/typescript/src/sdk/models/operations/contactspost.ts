@@ -36,10 +36,10 @@ export class ContactsPostRequest extends SpeakeasyBase {
 
 export class ContactsPostResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  contactsPost200ApplicationJsonString?: string;
+  contactsPOST200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
-  contactsPost200TextPlainString?: string;
+  contactsPOST200TextPlainString?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

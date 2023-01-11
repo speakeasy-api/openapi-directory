@@ -17,7 +17,7 @@ export declare class DeleteWorldTemplateRequest extends SpeakeasyBase {
 }
 export declare class DeleteWorldTemplateResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWorldTemplateResponse?: Map<string, any>;
+    deleteWorldTemplateResponse?: Record<string, any>;
     internalServerException?: any;
     invalidParameterException?: any;
     resourceNotFoundException?: any;

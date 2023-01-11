@@ -20,11 +20,11 @@ export class GetCourseMappingsOfferingIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  getCourseMappingsOfferingId200ApplicationJsonStrings?: string[];
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getCourseMappingsOfferingId200ApplicationJSONStrings?: string[];
 }

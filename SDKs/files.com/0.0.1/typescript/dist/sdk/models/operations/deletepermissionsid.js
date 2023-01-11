@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePermissionsIdResponse = exports.DeletePermissionsIdRequest = exports.DeletePermissionsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePermissionsIdPathParams = /** @class */ (function (_super) {
     __extends(DeletePermissionsIdPathParams, _super);
     function DeletePermissionsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeletePermissionsIdPathParams.prototype, "id", void 0);
     return DeletePermissionsIdPathParams;
-}(SpeakeasyBase));
-export { DeletePermissionsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePermissionsIdPathParams = DeletePermissionsIdPathParams;
 var DeletePermissionsIdRequest = /** @class */ (function (_super) {
     __extends(DeletePermissionsIdRequest, _super);
     function DeletePermissionsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePermissionsIdPathParams)
     ], DeletePermissionsIdRequest.prototype, "pathParams", void 0);
     return DeletePermissionsIdRequest;
-}(SpeakeasyBase));
-export { DeletePermissionsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePermissionsIdRequest = DeletePermissionsIdRequest;
 var DeletePermissionsIdResponse = /** @class */ (function (_super) {
     __extends(DeletePermissionsIdResponse, _super);
     function DeletePermissionsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePermissionsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePermissionsIdResponse.prototype, "statusCode", void 0);
     return DeletePermissionsIdResponse;
-}(SpeakeasyBase));
-export { DeletePermissionsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePermissionsIdResponse = DeletePermissionsIdResponse;

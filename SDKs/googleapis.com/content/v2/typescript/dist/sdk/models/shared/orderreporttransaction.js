@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
-import { Amount } from "./amount";
-import { ProductAmount } from "./productamount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderReportTransaction = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
+var amount_1 = require("./amount");
+var productamount_1 = require("./productamount");
 var OrderReportTransaction = /** @class */ (function (_super) {
     __extends(OrderReportTransaction, _super);
     function OrderReportTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disbursementAmount" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disbursementAmount" }),
+        __metadata("design:type", price_1.Price)
     ], OrderReportTransaction.prototype, "disbursementAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disbursementCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disbursementCreationDate" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "disbursementCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disbursementDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disbursementDate" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "disbursementDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disbursementId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disbursementId" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "disbursementId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantOrderId" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "merchantOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], OrderReportTransaction.prototype, "productAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productAmountWithRemittedTax" }),
-        __metadata("design:type", ProductAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productAmountWithRemittedTax" }),
+        __metadata("design:type", productamount_1.ProductAmount)
     ], OrderReportTransaction.prototype, "productAmountWithRemittedTax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionDate" }),
         __metadata("design:type", String)
     ], OrderReportTransaction.prototype, "transactionDate", void 0);
     return OrderReportTransaction;
-}(SpeakeasyBase));
-export { OrderReportTransaction };
+}(utils_1.SpeakeasyBase));
+exports.OrderReportTransaction = OrderReportTransaction;

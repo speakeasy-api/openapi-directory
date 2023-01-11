@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioSimulationRebalancingFixedWeightResponse = exports.PostPortfolioSimulationRebalancingFixedWeightRequest = exports.PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson = exports.PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios = exports.PostPortfolioSimulationRebalancingFixedWeightRequestBody = exports.PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios = exports.PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets, _super);
     function PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetPrices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetPrices" }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets.prototype, "assetPrices", void 0);
     return PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets = PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets;
 var PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios, _super);
     function PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios.prototype, "assetsWeights", void 0);
     return PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios = PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios;
 var PostPortfolioSimulationRebalancingFixedWeightRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeightRequestBody, _super);
     function PostPortfolioSimulationRebalancingFixedWeightRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeightRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeightRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioSimulationRebalancingFixedWeightRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeightRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeightRequestBody = PostPortfolioSimulationRebalancingFixedWeightRequestBody;
 var PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios, _super);
     function PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioValues" }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios.prototype, "portfolioValues", void 0);
     return PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios = PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios;
 var PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson, _super);
     function PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingFixedWeight200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson = PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson;
 var PostPortfolioSimulationRebalancingFixedWeightRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeightRequest, _super);
     function PostPortfolioSimulationRebalancingFixedWeightRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioSimulationRebalancingFixedWeightRequestBody)
     ], PostPortfolioSimulationRebalancingFixedWeightRequest.prototype, "request", void 0);
     return PostPortfolioSimulationRebalancingFixedWeightRequest;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeightRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeightRequest = PostPortfolioSimulationRebalancingFixedWeightRequest;
 var PostPortfolioSimulationRebalancingFixedWeightResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingFixedWeightResponse, _super);
     function PostPortfolioSimulationRebalancingFixedWeightResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioSimulationRebalancingFixedWeightResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson)
-    ], PostPortfolioSimulationRebalancingFixedWeightResponse.prototype, "postPortfolioSimulationRebalancingFixedWeight200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioSimulationRebalancingFixedWeightResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson)
+    ], PostPortfolioSimulationRebalancingFixedWeightResponse.prototype, "postPortfolioSimulationRebalancingFixedWeight200ApplicationJSONObject", void 0);
     return PostPortfolioSimulationRebalancingFixedWeightResponse;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingFixedWeightResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingFixedWeightResponse = PostPortfolioSimulationRebalancingFixedWeightResponse;

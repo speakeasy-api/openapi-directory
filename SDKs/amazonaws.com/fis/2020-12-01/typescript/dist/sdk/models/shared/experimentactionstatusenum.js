@@ -1,4 +1,7 @@
-export var ExperimentActionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExperimentActionStatusEnum = void 0;
+var ExperimentActionStatusEnum;
 (function (ExperimentActionStatusEnum) {
     ExperimentActionStatusEnum["Pending"] = "pending";
     ExperimentActionStatusEnum["Initiating"] = "initiating";
@@ -8,4 +11,4 @@ export var ExperimentActionStatusEnum;
     ExperimentActionStatusEnum["Stopping"] = "stopping";
     ExperimentActionStatusEnum["Stopped"] = "stopped";
     ExperimentActionStatusEnum["Failed"] = "failed";
-})(ExperimentActionStatusEnum || (ExperimentActionStatusEnum = {}));
+})(ExperimentActionStatusEnum = exports.ExperimentActionStatusEnum || (exports.ExperimentActionStatusEnum = {}));

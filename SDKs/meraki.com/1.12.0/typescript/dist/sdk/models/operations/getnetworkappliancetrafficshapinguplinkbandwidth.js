@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse = exports.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest = exports.GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams, _super);
     function GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams = GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams;
 var GetNetworkApplianceTrafficShapingUplinkBandwidthRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingUplinkBandwidthRequest, _super);
     function GetNetworkApplianceTrafficShapingUplinkBandwidthRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams)
     ], GetNetworkApplianceTrafficShapingUplinkBandwidthRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceTrafficShapingUplinkBandwidthRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingUplinkBandwidthRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest = GetNetworkApplianceTrafficShapingUplinkBandwidthRequest;
 var GetNetworkApplianceTrafficShapingUplinkBandwidthResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingUplinkBandwidthResponse, _super);
     function GetNetworkApplianceTrafficShapingUplinkBandwidthResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingUplinkBandwidthResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceTrafficShapingUplinkBandwidthResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceTrafficShapingUplinkBandwidthResponse.prototype, "getNetworkApplianceTrafficShapingUplinkBandwidth200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceTrafficShapingUplinkBandwidthResponse.prototype, "getNetworkApplianceTrafficShapingUplinkBandwidth200ApplicationJSONObject", void 0);
     return GetNetworkApplianceTrafficShapingUplinkBandwidthResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingUplinkBandwidthResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse = GetNetworkApplianceTrafficShapingUplinkBandwidthResponse;

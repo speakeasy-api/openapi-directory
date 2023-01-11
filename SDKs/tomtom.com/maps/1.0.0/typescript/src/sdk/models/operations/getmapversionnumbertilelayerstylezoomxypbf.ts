@@ -1,18 +1,18 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum {
     Basic = "basic",
     Hybrid = "hybrid",
     Labels = "labels"
 }
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum {
     Main = "main"
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=X" })
   x: number;
 
@@ -20,10 +20,10 @@ export class GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams extends Speake
   y: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=layer" })
-  layer: GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum;
+  layer: GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=style" })
-  style: GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum;
+  style: GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" })
   versionNumber: number;
@@ -32,32 +32,32 @@ export class GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams extends Speake
   zoom: number;
 }
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum {
     Unified = "Unified",
     Il = "IL",
     In = "IN"
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=language" })
   language?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" })
-  view?: GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum;
+  view?: GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum;
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyPbfRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams;
+  pathParams: GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams;
+  queryParams: GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams;
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYPbfResponse extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyPbfResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

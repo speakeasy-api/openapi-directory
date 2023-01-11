@@ -73,5 +73,5 @@ export class GetzipcodeinfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getzipcodeinfo200ApplicationJsonObject?: Getzipcodeinfo200ApplicationJson;
+  getzipcodeinfo200ApplicationJSONObject?: Getzipcodeinfo200ApplicationJson;
 }

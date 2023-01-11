@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportWithRawData } from "./reportwithrawdata";
-import { ReportGroupTrendStats } from "./reportgrouptrendstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReportGroupTrendOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportwithrawdata_1 = require("./reportwithrawdata");
+var reportgrouptrendstats_1 = require("./reportgrouptrendstats");
 var GetReportGroupTrendOutput = /** @class */ (function (_super) {
     __extends(GetReportGroupTrendOutput, _super);
     function GetReportGroupTrendOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawData", elemType: ReportWithRawData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawData", elemType: reportwithrawdata_1.ReportWithRawData }),
         __metadata("design:type", Array)
     ], GetReportGroupTrendOutput.prototype, "rawData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", ReportGroupTrendStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", reportgrouptrendstats_1.ReportGroupTrendStats)
     ], GetReportGroupTrendOutput.prototype, "stats", void 0);
     return GetReportGroupTrendOutput;
-}(SpeakeasyBase));
-export { GetReportGroupTrendOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetReportGroupTrendOutput = GetReportGroupTrendOutput;

@@ -47,8 +47,8 @@ export class PostContentproSimilarTextResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postContentproSimilarText200ApplicationJsonObject?: PostContentproSimilarText200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postContentproSimilarText200ApplicationJSONObject?: PostContentproSimilarText200ApplicationJson;
 }

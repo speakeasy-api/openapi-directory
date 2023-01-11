@@ -6,9 +6,9 @@ import { ActionEnum } from "./actionenum";
 export declare class DefaultPushNotificationMessage extends SpeakeasyBase {
     action?: ActionEnum;
     body?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     silentPush?: boolean;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     title?: string;
     url?: string;
 }

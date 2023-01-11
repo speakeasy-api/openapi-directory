@@ -11,7 +11,7 @@ export declare class CompanyNotificationUnregisterRequest extends SpeakeasyBase 
     security: CompanyNotificationUnregisterSecurity;
 }
 export declare class CompanyNotificationUnregisterResponse extends SpeakeasyBase {
-    companyNotificationUnregisterDefaultApplicationJsonAny?: any;
+    companyNotificationUnregisterDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

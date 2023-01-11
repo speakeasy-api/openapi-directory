@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecommissionDescription = void 0;
+var utils_1 = require("../../../internal/utils");
 var DecommissionDescription = /** @class */ (function (_super) {
     __extends(DecommissionDescription, _super);
     function DecommissionDescription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], DecommissionDescription.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=material" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=material" }),
         __metadata("design:type", String)
     ], DecommissionDescription.prototype, "material", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=observations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=observations" }),
         __metadata("design:type", String)
     ], DecommissionDescription.prototype, "observations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], DecommissionDescription.prototype, "start", void 0);
     return DecommissionDescription;
-}(SpeakeasyBase));
-export { DecommissionDescription };
+}(utils_1.SpeakeasyBase));
+exports.DecommissionDescription = DecommissionDescription;

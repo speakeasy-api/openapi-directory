@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntitlementValue } from "./entitlementvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Entitlement = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitlementvalue_1 = require("./entitlementvalue");
 // Entitlement
 /**
  * An entitlement represents capacity in a product owned by the customer. For example, a customer might own some number of users or seats in an SaaS application or some amount of data capacity in a multi-tenant database.
@@ -34,25 +37,25 @@ var Entitlement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerIdentifier" }),
         __metadata("design:type", String)
     ], Entitlement.prototype, "customerIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimension" }),
         __metadata("design:type", String)
     ], Entitlement.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpirationDate" }),
         __metadata("design:type", Date)
     ], Entitlement.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductCode" }),
         __metadata("design:type", String)
     ], Entitlement.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
-        __metadata("design:type", EntitlementValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
+        __metadata("design:type", entitlementvalue_1.EntitlementValue)
     ], Entitlement.prototype, "value", void 0);
     return Entitlement;
-}(SpeakeasyBase));
-export { Entitlement };
+}(utils_1.SpeakeasyBase));
+exports.Entitlement = Entitlement;

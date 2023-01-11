@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndBalance } from "./endbalance";
-import { Error } from "./error";
-import { StartBalance } from "./startbalance";
-import { StatementLine } from "./statementline";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statement = void 0;
+var utils_1 = require("../../../internal/utils");
+var endbalance_1 = require("./endbalance");
+var error_1 = require("./error");
+var startbalance_1 = require("./startbalance");
+var statementline_1 = require("./statementline");
 var Statement = /** @class */ (function (_super) {
     __extends(Statement, _super);
     function Statement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endBalance" }),
-        __metadata("design:type", EndBalance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endBalance" }),
+        __metadata("design:type", endbalance_1.EndBalance)
     ], Statement.prototype, "endBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], Statement.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], Statement.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedConnectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedConnectionId" }),
         __metadata("design:type", String)
     ], Statement.prototype, "feedConnectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Statement.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startBalance" }),
-        __metadata("design:type", StartBalance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startBalance" }),
+        __metadata("design:type", startbalance_1.StartBalance)
     ], Statement.prototype, "startBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], Statement.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statementLineCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statementLineCount" }),
         __metadata("design:type", Number)
     ], Statement.prototype, "statementLineCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statementLines", elemType: StatementLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statementLines", elemType: statementline_1.StatementLine }),
         __metadata("design:type", Array)
     ], Statement.prototype, "statementLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Object)
     ], Statement.prototype, "status", void 0);
     return Statement;
-}(SpeakeasyBase));
-export { Statement };
+}(utils_1.SpeakeasyBase));
+exports.Statement = Statement;

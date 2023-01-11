@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AnalyticsDataGetRequest, AnalyticsDataGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,30 +31,30 @@ const req: AnalyticsDataGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     alt: "atom",
-    dimensions: "odio",
-    endDate: "expedita",
-    fields: "velit",
-    filters: "officiis",
-    ids: "ullam",
-    key: "quasi",
-    maxResults: 5248010361916851888,
-    metrics: "sunt",
-    oauthToken: "soluta",
+    dimensions: "voluptas",
+    endDate: "culpa",
+    fields: "expedita",
+    filters: "consequuntur",
+    ids: "dolor",
+    key: "expedita",
+    maxResults: 6044372234677422456,
+    metrics: "fugit",
+    oauthToken: "et",
     prettyPrint: true,
-    quotaUser: "earum",
-    segment: "illo",
-    sort: "ducimus",
-    startDate: "est",
-    startIndex: 5819597126225842965,
-    userIp: "non",
+    quotaUser: "rerum",
+    segment: "dicta",
+    sort: "debitis",
+    startDate: "voluptatum",
+    startIndex: 2339563716805116249,
+    userIp: "ut",
   },
 };
 

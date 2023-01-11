@@ -39,13 +39,13 @@ export class SendMessagesHeaders extends SpeakeasyBase {
 **/
 export class SendMessagesRequestBodyMessageRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Addresses", elemType: shared.AddressConfiguration })
-  addresses?: Map<string, shared.AddressConfiguration>;
+  addresses?: Record<string, shared.AddressConfiguration>;
 
   @SpeakeasyMetadata({ data: "json, name=Context" })
-  context?: Map<string, string>;
+  context?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Endpoints", elemType: shared.EndpointSendConfiguration })
-  endpoints?: Map<string, shared.EndpointSendConfiguration>;
+  endpoints?: Record<string, shared.EndpointSendConfiguration>;
 
   @SpeakeasyMetadata({ data: "json, name=MessageConfiguration" })
   messageConfiguration?: shared.DirectMessageConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HumanLoopOutput } from "./humanloopoutput";
-import { HumanLoopStatusEnum } from "./humanloopstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeHumanLoopResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var humanloopoutput_1 = require("./humanloopoutput");
+var humanloopstatusenum_1 = require("./humanloopstatusenum");
 var DescribeHumanLoopResponse = /** @class */ (function (_super) {
     __extends(DescribeHumanLoopResponse, _super);
     function DescribeHumanLoopResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeHumanLoopResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureCode" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureReason" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FlowDefinitionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FlowDefinitionArn" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "flowDefinitionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopArn" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "humanLoopArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopName" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "humanLoopName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopOutput" }),
-        __metadata("design:type", HumanLoopOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopOutput" }),
+        __metadata("design:type", humanloopoutput_1.HumanLoopOutput)
     ], DescribeHumanLoopResponse.prototype, "humanLoopOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopStatus" }),
         __metadata("design:type", String)
     ], DescribeHumanLoopResponse.prototype, "humanLoopStatus", void 0);
     return DescribeHumanLoopResponse;
-}(SpeakeasyBase));
-export { DescribeHumanLoopResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeHumanLoopResponse = DescribeHumanLoopResponse;

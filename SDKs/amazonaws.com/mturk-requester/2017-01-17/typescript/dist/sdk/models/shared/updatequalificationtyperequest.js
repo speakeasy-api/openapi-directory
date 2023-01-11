@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualificationTypeStatusEnum } from "./qualificationtypestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateQualificationTypeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualificationtypestatusenum_1 = require("./qualificationtypestatusenum");
 var UpdateQualificationTypeRequest = /** @class */ (function (_super) {
     __extends(UpdateQualificationTypeRequest, _super);
     function UpdateQualificationTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnswerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnswerKey" }),
         __metadata("design:type", String)
     ], UpdateQualificationTypeRequest.prototype, "answerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGranted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGranted" }),
         __metadata("design:type", Boolean)
     ], UpdateQualificationTypeRequest.prototype, "autoGranted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGrantedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGrantedValue" }),
         __metadata("design:type", Number)
     ], UpdateQualificationTypeRequest.prototype, "autoGrantedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateQualificationTypeRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeId" }),
         __metadata("design:type", String)
     ], UpdateQualificationTypeRequest.prototype, "qualificationTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeStatus" }),
         __metadata("design:type", String)
     ], UpdateQualificationTypeRequest.prototype, "qualificationTypeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetryDelayInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetryDelayInSeconds" }),
         __metadata("design:type", Number)
     ], UpdateQualificationTypeRequest.prototype, "retryDelayInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Test" }),
         __metadata("design:type", String)
     ], UpdateQualificationTypeRequest.prototype, "test", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestDurationInSeconds" }),
         __metadata("design:type", Number)
     ], UpdateQualificationTypeRequest.prototype, "testDurationInSeconds", void 0);
     return UpdateQualificationTypeRequest;
-}(SpeakeasyBase));
-export { UpdateQualificationTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateQualificationTypeRequest = UpdateQualificationTypeRequest;

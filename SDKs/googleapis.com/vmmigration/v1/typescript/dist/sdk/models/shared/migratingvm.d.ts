@@ -32,7 +32,7 @@ export declare class MigratingVm extends SpeakeasyBase {
     displayName?: string;
     error?: Status;
     group?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lastSync?: ReplicationSync;
     name?: string;
     policy?: SchedulePolicy;
@@ -52,7 +52,7 @@ export declare class MigratingVmInput extends SpeakeasyBase {
     description?: string;
     displayName?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lastSync?: ReplicationSync;
     policy?: SchedulePolicy;
     sourceVmId?: string;

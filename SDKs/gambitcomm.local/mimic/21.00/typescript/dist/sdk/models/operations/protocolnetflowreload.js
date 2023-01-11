@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowReloadResponse = exports.ProtocolNetflowReloadRequest = exports.ProtocolNetflowReloadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowReloadPathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowReloadPathParams, _super);
     function ProtocolNetflowReloadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowReloadPathParams.prototype, "agentNum", void 0);
     return ProtocolNetflowReloadPathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowReloadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowReloadPathParams = ProtocolNetflowReloadPathParams;
 var ProtocolNetflowReloadRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowReloadRequest, _super);
     function ProtocolNetflowReloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowReloadPathParams)
     ], ProtocolNetflowReloadRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowReloadRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowReloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowReloadRequest = ProtocolNetflowReloadRequest;
 var ProtocolNetflowReloadResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowReloadResponse, _super);
     function ProtocolNetflowReloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowReloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowReloadResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowReloadResponse.prototype, "protocolNetflowReload200ApplicationJsonString", void 0);
+    ], ProtocolNetflowReloadResponse.prototype, "protocolNetflowReload200ApplicationJSONString", void 0);
     return ProtocolNetflowReloadResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowReloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowReloadResponse = ProtocolNetflowReloadResponse;

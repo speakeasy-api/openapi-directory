@@ -22,5 +22,5 @@ export class GetDeviceAppliancePerformanceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceAppliancePerformance200ApplicationJsonObject?: Map<string, any>;
+  getDeviceAppliancePerformance200ApplicationJSONObject?: Record<string, any>;
 }

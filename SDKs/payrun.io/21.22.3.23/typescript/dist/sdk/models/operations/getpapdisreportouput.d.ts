@@ -20,6 +20,6 @@ export declare class GetPapdisReportOuputRequest extends SpeakeasyBase {
 export declare class GetPapdisReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getPapdisReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getPapdisReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

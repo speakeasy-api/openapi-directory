@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OsImage } from "./osimage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FetchInstanceProvisioningSettingsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var osimage_1 = require("./osimage");
 // FetchInstanceProvisioningSettingsResponse
 /**
  * Response with all provisioning settings.
@@ -34,9 +37,9 @@ var FetchInstanceProvisioningSettingsResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: OsImage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: osimage_1.OsImage }),
         __metadata("design:type", Array)
     ], FetchInstanceProvisioningSettingsResponse.prototype, "images", void 0);
     return FetchInstanceProvisioningSettingsResponse;
-}(SpeakeasyBase));
-export { FetchInstanceProvisioningSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.FetchInstanceProvisioningSettingsResponse = FetchInstanceProvisioningSettingsResponse;

@@ -7,7 +7,7 @@ export class GetStatsUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -19,7 +19,7 @@ export class GetStatsUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class GetStatsUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetStatsUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,14 +58,14 @@ export class GetStatsUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getStatsUsingPost200ApplicationJsonObject?: GetStatsUsingPost200ApplicationJson;
+  getStatsUsingPOST200ApplicationJSONObject?: GetStatsUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingPost400ApplicationJsonObject?: GetStatsUsingPost400ApplicationJson;
+  getStatsUsingPOST400ApplicationJSONObject?: GetStatsUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingPost401ApplicationJsonObject?: GetStatsUsingPost401ApplicationJson;
+  getStatsUsingPOST401ApplicationJSONObject?: GetStatsUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatsUsingPost500ApplicationJsonObject?: GetStatsUsingPost500ApplicationJson;
+  getStatsUsingPOST500ApplicationJSONObject?: GetStatsUsingPost500ApplicationJson;
 }

@@ -14,5 +14,5 @@ export declare class GetcompanymatchRequest extends SpeakeasyBase {
 export declare class GetcompanymatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcompanymatch200ApplicationJsonObject?: Getcompanymatch200ApplicationJson;
+    getcompanymatch200ApplicationJSONObject?: Getcompanymatch200ApplicationJson;
 }

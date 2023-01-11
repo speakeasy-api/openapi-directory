@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrackObject } from "./trackobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TracksObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var trackobject_1 = require("./trackobject");
 var TracksObject = /** @class */ (function (_super) {
     __extends(TracksObject, _super);
     function TracksObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracks", elemType: TrackObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracks", elemType: trackobject_1.TrackObject }),
         __metadata("design:type", Array)
     ], TracksObject.prototype, "tracks", void 0);
     return TracksObject;
-}(SpeakeasyBase));
-export { TracksObject };
+}(utils_1.SpeakeasyBase));
+exports.TracksObject = TracksObject;

@@ -44,7 +44,7 @@ export class GetApiVVersionMetalsBenchmarkSummaryResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

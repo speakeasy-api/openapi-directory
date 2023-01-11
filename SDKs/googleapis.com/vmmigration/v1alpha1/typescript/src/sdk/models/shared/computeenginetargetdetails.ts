@@ -48,7 +48,7 @@ export class ComputeEngineTargetDetails extends SpeakeasyBase {
   hostname?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=licenseType" })
   licenseType?: ComputeEngineTargetDetailsLicenseTypeEnum;
@@ -60,7 +60,7 @@ export class ComputeEngineTargetDetails extends SpeakeasyBase {
   machineTypeSeries?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface })
   networkInterfaces?: NetworkInterface[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNotificationsResponse = exports.GetNotificationsRequest = exports.GetNotificationsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNotificationsQueryParams = /** @class */ (function (_super) {
     __extends(GetNotificationsQueryParams, _super);
     function GetNotificationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetNotificationsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetNotificationsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetNotificationsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetNotificationsQueryParams.prototype, "pagesize", void 0);
     return GetNotificationsQueryParams;
-}(SpeakeasyBase));
-export { GetNotificationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNotificationsQueryParams = GetNotificationsQueryParams;
 var GetNotificationsRequest = /** @class */ (function (_super) {
     __extends(GetNotificationsRequest, _super);
     function GetNotificationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNotificationsQueryParams)
     ], GetNotificationsRequest.prototype, "queryParams", void 0);
     return GetNotificationsRequest;
-}(SpeakeasyBase));
-export { GetNotificationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNotificationsRequest = GetNotificationsRequest;
 var GetNotificationsResponse = /** @class */ (function (_super) {
     __extends(GetNotificationsResponse, _super);
     function GetNotificationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetNotificationsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNotificationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNotificationsResponse.prototype, "statusCode", void 0);
     return GetNotificationsResponse;
-}(SpeakeasyBase));
-export { GetNotificationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNotificationsResponse = GetNotificationsResponse;

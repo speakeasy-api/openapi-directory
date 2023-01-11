@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDeviceType } from "./nesteddevicetype";
-export var RearPortTemplateTypeLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RearPortTemplate = exports.RearPortTemplateType = exports.RearPortTemplateTypeValueEnum = exports.RearPortTemplateTypeLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevicetype_1 = require("./nesteddevicetype");
+var RearPortTemplateTypeLabelEnum;
 (function (RearPortTemplateTypeLabelEnum) {
     RearPortTemplateTypeLabelEnum["EightP8C"] = "8P8C";
     RearPortTemplateTypeLabelEnum["OneHundredAndTenPunch"] = "110 Punch";
@@ -40,8 +43,8 @@ export var RearPortTemplateTypeLabelEnum;
     RearPortTemplateTypeLabelEnum["Sc"] = "SC";
     RearPortTemplateTypeLabelEnum["ScApc"] = "SC/APC";
     RearPortTemplateTypeLabelEnum["St"] = "ST";
-})(RearPortTemplateTypeLabelEnum || (RearPortTemplateTypeLabelEnum = {}));
-export var RearPortTemplateTypeValueEnum;
+})(RearPortTemplateTypeLabelEnum = exports.RearPortTemplateTypeLabelEnum || (exports.RearPortTemplateTypeLabelEnum = {}));
+var RearPortTemplateTypeValueEnum;
 (function (RearPortTemplateTypeValueEnum) {
     RearPortTemplateTypeValueEnum["Eightp8c"] = "8p8c";
     RearPortTemplateTypeValueEnum["OneHundredAndTenPunch"] = "110-punch";
@@ -57,48 +60,48 @@ export var RearPortTemplateTypeValueEnum;
     RearPortTemplateTypeValueEnum["Sc"] = "sc";
     RearPortTemplateTypeValueEnum["ScApc"] = "sc-apc";
     RearPortTemplateTypeValueEnum["St"] = "st";
-})(RearPortTemplateTypeValueEnum || (RearPortTemplateTypeValueEnum = {}));
+})(RearPortTemplateTypeValueEnum = exports.RearPortTemplateTypeValueEnum || (exports.RearPortTemplateTypeValueEnum = {}));
 var RearPortTemplateType = /** @class */ (function (_super) {
     __extends(RearPortTemplateType, _super);
     function RearPortTemplateType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], RearPortTemplateType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], RearPortTemplateType.prototype, "value", void 0);
     return RearPortTemplateType;
-}(SpeakeasyBase));
-export { RearPortTemplateType };
+}(utils_1.SpeakeasyBase));
+exports.RearPortTemplateType = RearPortTemplateType;
 var RearPortTemplate = /** @class */ (function (_super) {
     __extends(RearPortTemplate, _super);
     function RearPortTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], RearPortTemplate.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RearPortTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RearPortTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positions" }),
         __metadata("design:type", Number)
     ], RearPortTemplate.prototype, "positions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", RearPortTemplateType)
     ], RearPortTemplate.prototype, "type", void 0);
     return RearPortTemplate;
-}(SpeakeasyBase));
-export { RearPortTemplate };
+}(utils_1.SpeakeasyBase));
+exports.RearPortTemplate = RearPortTemplate;

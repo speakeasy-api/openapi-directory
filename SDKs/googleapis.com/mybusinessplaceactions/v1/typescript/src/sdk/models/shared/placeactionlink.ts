@@ -19,25 +19,6 @@ export enum PlaceActionLinkProviderTypeEnum {
 }
 
 
-// PlaceActionLinkInput
-/** 
- * Represents a place action link and its attributes.
-**/
-export class PlaceActionLinkInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=isPreferred" })
-  isPreferred?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=placeActionType" })
-  placeActionType?: PlaceActionLinkPlaceActionTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=uri" })
-  uri?: string;
-}
-
-
 // PlaceActionLink
 /** 
  * Represents a place action link and its attributes.
@@ -63,6 +44,25 @@ export class PlaceActionLink extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=uri" })
+  uri?: string;
+}
+
+
+// PlaceActionLinkInput
+/** 
+ * Represents a place action link and its attributes.
+**/
+export class PlaceActionLinkInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=isPreferred" })
+  isPreferred?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=placeActionType" })
+  placeActionType?: PlaceActionLinkPlaceActionTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=uri" })
   uri?: string;

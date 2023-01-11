@@ -22,5 +22,5 @@ export class GetNetworkApplianceTrafficShapingRulesResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceTrafficShapingRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceTrafficShapingRules200ApplicationJSONObject?: Record<string, any>;
 }

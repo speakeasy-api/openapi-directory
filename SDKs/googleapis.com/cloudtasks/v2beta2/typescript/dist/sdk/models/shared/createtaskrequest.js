@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Task } from "./task";
-export var CreateTaskRequestResponseViewEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTaskRequest = exports.CreateTaskRequestResponseViewEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var task_1 = require("./task");
+var CreateTaskRequestResponseViewEnum;
 (function (CreateTaskRequestResponseViewEnum) {
     CreateTaskRequestResponseViewEnum["ViewUnspecified"] = "VIEW_UNSPECIFIED";
     CreateTaskRequestResponseViewEnum["Basic"] = "BASIC";
     CreateTaskRequestResponseViewEnum["Full"] = "FULL";
-})(CreateTaskRequestResponseViewEnum || (CreateTaskRequestResponseViewEnum = {}));
+})(CreateTaskRequestResponseViewEnum = exports.CreateTaskRequestResponseViewEnum || (exports.CreateTaskRequestResponseViewEnum = {}));
 // CreateTaskRequest
 /**
  * Request message for CreateTask.
@@ -40,13 +43,13 @@ var CreateTaskRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseView" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseView" }),
         __metadata("design:type", String)
     ], CreateTaskRequest.prototype, "responseView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
-        __metadata("design:type", Task)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
+        __metadata("design:type", task_1.Task)
     ], CreateTaskRequest.prototype, "task", void 0);
     return CreateTaskRequest;
-}(SpeakeasyBase));
-export { CreateTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTaskRequest = CreateTaskRequest;

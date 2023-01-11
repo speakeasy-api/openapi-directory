@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionIsolationModeEnum } from "./functionisolationmodeenum";
-import { FunctionRunAsConfig } from "./functionrunasconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionDefaultExecutionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var functionisolationmodeenum_1 = require("./functionisolationmodeenum");
+var functionrunasconfig_1 = require("./functionrunasconfig");
 // FunctionDefaultExecutionConfig
 /**
  * Configuration information that specifies how a Lambda function runs.
@@ -35,13 +38,13 @@ var FunctionDefaultExecutionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsolationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsolationMode" }),
         __metadata("design:type", String)
     ], FunctionDefaultExecutionConfig.prototype, "isolationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RunAs" }),
-        __metadata("design:type", FunctionRunAsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RunAs" }),
+        __metadata("design:type", functionrunasconfig_1.FunctionRunAsConfig)
     ], FunctionDefaultExecutionConfig.prototype, "runAs", void 0);
     return FunctionDefaultExecutionConfig;
-}(SpeakeasyBase));
-export { FunctionDefaultExecutionConfig };
+}(utils_1.SpeakeasyBase));
+exports.FunctionDefaultExecutionConfig = FunctionDefaultExecutionConfig;

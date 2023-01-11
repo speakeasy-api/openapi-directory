@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,8 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Devices = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Devices = /** @class */ (function () {
     function Devices(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -30,10 +56,10 @@ var Devices = /** @class */ (function () {
             req = new operations.GetAgentDevicesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/devices/{deviceId}/agent-devices", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/devices/{deviceId}/agent-devices", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -41,7 +67,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -50,7 +76,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -60,8 +86,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDevice - Gets detailed information about a specific device.
@@ -73,10 +98,10 @@ var Devices = /** @class */ (function () {
             req = new operations.GetDeviceRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/devices/{deviceId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/devices/{deviceId}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -84,7 +109,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -93,7 +118,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -102,7 +127,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -112,8 +137,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceAgent - Gets detailed information about an Agent.
@@ -125,10 +149,10 @@ var Devices = /** @class */ (function () {
             req = new operations.GetDeviceAgentRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/devices/{deviceId}/agent", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/devices/{deviceId}/agent", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -136,7 +160,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -145,7 +169,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -155,8 +179,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceEnergyUsage - Gets the energy usage for a specific device and a given period.
@@ -168,12 +191,12 @@ var Devices = /** @class */ (function () {
             req = new operations.GetDeviceEnergyUsageRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/energy-usage/{deviceId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/energy-usage/{deviceId}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -181,7 +204,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -190,7 +213,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -200,8 +223,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceMonitors - Gets the Monitors for a specific device.
@@ -213,10 +235,10 @@ var Devices = /** @class */ (function () {
             req = new operations.GetDeviceMonitorsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/device-monitors/{deviceId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/device-monitors/{deviceId}", req.pathParams);
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -226,7 +248,7 @@ var Devices = /** @class */ (function () {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -236,8 +258,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDeviceParameterHistory - Gets data history for a parameter of a specific device over a given period.
@@ -249,12 +270,12 @@ var Devices = /** @class */ (function () {
             req = new operations.GetDeviceParameterHistoryRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/hardware/devices/{deviceId}/parameter-history", req.pathParams);
+        var url = utils.generateURL(baseURL, "/hardware/devices/{deviceId}/parameter-history", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -262,7 +283,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -271,7 +292,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -281,8 +302,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDevices - Gets summarized information about all monitored devices.
@@ -296,10 +316,10 @@ var Devices = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/hardware/devices";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -307,7 +327,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -316,7 +336,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -325,7 +345,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -335,8 +355,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getDevicesSummary - Gets overall information for all devices.
@@ -347,8 +366,8 @@ var Devices = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/hardware/devices-summary";
         var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -356,7 +375,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -365,7 +384,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -375,8 +394,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getHeatingMarginCoverage - Gets the heating margin values for each monitored device, when available.
@@ -390,10 +408,10 @@ var Devices = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/hardware/heating-margin-devices";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -401,7 +419,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -410,7 +428,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -419,7 +437,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -429,8 +447,7 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * searchDevices - Searches devices by name, model, manufacturer or serial number.
@@ -444,10 +461,10 @@ var Devices = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/hardware/search-devices";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -455,7 +472,7 @@ var Devices = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -464,7 +481,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -473,7 +490,7 @@ var Devices = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    if (utils.MatchContentType(contentType, "*/*")) {
+                    if (utils.matchContentType(contentType, "*/*")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -483,9 +500,8 @@ var Devices = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Devices;
 }());
-export { Devices };
+exports.Devices = Devices;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAuthorizeDbSecurityGroupIngressActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAuthorizeDbSecurityGroupIngressResponse = exports.GetAuthorizeDbSecurityGroupIngressRequest = exports.GetAuthorizeDbSecurityGroupIngressHeaders = exports.GetAuthorizeDbSecurityGroupIngressQueryParams = exports.GetAuthorizeDbSecurityGroupIngressVersionEnum = exports.GetAuthorizeDbSecurityGroupIngressActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAuthorizeDbSecurityGroupIngressActionEnum;
 (function (GetAuthorizeDbSecurityGroupIngressActionEnum) {
     GetAuthorizeDbSecurityGroupIngressActionEnum["AuthorizeDbSecurityGroupIngress"] = "AuthorizeDBSecurityGroupIngress";
-})(GetAuthorizeDbSecurityGroupIngressActionEnum || (GetAuthorizeDbSecurityGroupIngressActionEnum = {}));
-export var GetAuthorizeDbSecurityGroupIngressVersionEnum;
+})(GetAuthorizeDbSecurityGroupIngressActionEnum = exports.GetAuthorizeDbSecurityGroupIngressActionEnum || (exports.GetAuthorizeDbSecurityGroupIngressActionEnum = {}));
+var GetAuthorizeDbSecurityGroupIngressVersionEnum;
 (function (GetAuthorizeDbSecurityGroupIngressVersionEnum) {
     GetAuthorizeDbSecurityGroupIngressVersionEnum["TwoThousandAndFourteen0901"] = "2014-09-01";
-})(GetAuthorizeDbSecurityGroupIngressVersionEnum || (GetAuthorizeDbSecurityGroupIngressVersionEnum = {}));
+})(GetAuthorizeDbSecurityGroupIngressVersionEnum = exports.GetAuthorizeDbSecurityGroupIngressVersionEnum || (exports.GetAuthorizeDbSecurityGroupIngressVersionEnum = {}));
 var GetAuthorizeDbSecurityGroupIngressQueryParams = /** @class */ (function (_super) {
     __extends(GetAuthorizeDbSecurityGroupIngressQueryParams, _super);
     function GetAuthorizeDbSecurityGroupIngressQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CIDRIP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CIDRIP" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "cidrip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBSecurityGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBSecurityGroupName" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "dbSecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupId" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupName" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupOwnerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupOwnerId" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupOwnerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressQueryParams.prototype, "version", void 0);
     return GetAuthorizeDbSecurityGroupIngressQueryParams;
-}(SpeakeasyBase));
-export { GetAuthorizeDbSecurityGroupIngressQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeDbSecurityGroupIngressQueryParams = GetAuthorizeDbSecurityGroupIngressQueryParams;
 var GetAuthorizeDbSecurityGroupIngressHeaders = /** @class */ (function (_super) {
     __extends(GetAuthorizeDbSecurityGroupIngressHeaders, _super);
     function GetAuthorizeDbSecurityGroupIngressHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAuthorizeDbSecurityGroupIngressHeaders;
-}(SpeakeasyBase));
-export { GetAuthorizeDbSecurityGroupIngressHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeDbSecurityGroupIngressHeaders = GetAuthorizeDbSecurityGroupIngressHeaders;
 var GetAuthorizeDbSecurityGroupIngressRequest = /** @class */ (function (_super) {
     __extends(GetAuthorizeDbSecurityGroupIngressRequest, _super);
     function GetAuthorizeDbSecurityGroupIngressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAuthorizeDbSecurityGroupIngressQueryParams)
     ], GetAuthorizeDbSecurityGroupIngressRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAuthorizeDbSecurityGroupIngressHeaders)
     ], GetAuthorizeDbSecurityGroupIngressRequest.prototype, "headers", void 0);
     return GetAuthorizeDbSecurityGroupIngressRequest;
-}(SpeakeasyBase));
-export { GetAuthorizeDbSecurityGroupIngressRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeDbSecurityGroupIngressRequest = GetAuthorizeDbSecurityGroupIngressRequest;
 var GetAuthorizeDbSecurityGroupIngressResponse = /** @class */ (function (_super) {
     __extends(GetAuthorizeDbSecurityGroupIngressResponse, _super);
     function GetAuthorizeDbSecurityGroupIngressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAuthorizeDbSecurityGroupIngressResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAuthorizeDbSecurityGroupIngressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAuthorizeDbSecurityGroupIngressResponse.prototype, "statusCode", void 0);
     return GetAuthorizeDbSecurityGroupIngressResponse;
-}(SpeakeasyBase));
-export { GetAuthorizeDbSecurityGroupIngressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeDbSecurityGroupIngressResponse = GetAuthorizeDbSecurityGroupIngressResponse;

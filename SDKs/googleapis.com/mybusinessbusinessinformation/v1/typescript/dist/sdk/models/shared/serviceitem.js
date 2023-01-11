@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FreeFormServiceItem } from "./freeformserviceitem";
-import { Money } from "./money";
-import { StructuredServiceItem } from "./structuredserviceitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var freeformserviceitem_1 = require("./freeformserviceitem");
+var money_1 = require("./money");
+var structuredserviceitem_1 = require("./structuredserviceitem");
 // ServiceItem
 /**
  * A message that describes a single service item. It is used to describe the type of service that the merchant provides. For example, haircut can be a service.
@@ -36,17 +39,17 @@ var ServiceItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeFormServiceItem" }),
-        __metadata("design:type", FreeFormServiceItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeFormServiceItem" }),
+        __metadata("design:type", freeformserviceitem_1.FreeFormServiceItem)
     ], ServiceItem.prototype, "freeFormServiceItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", money_1.Money)
     ], ServiceItem.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=structuredServiceItem" }),
-        __metadata("design:type", StructuredServiceItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=structuredServiceItem" }),
+        __metadata("design:type", structuredserviceitem_1.StructuredServiceItem)
     ], ServiceItem.prototype, "structuredServiceItem", void 0);
     return ServiceItem;
-}(SpeakeasyBase));
-export { ServiceItem };
+}(utils_1.SpeakeasyBase));
+exports.ServiceItem = ServiceItem;

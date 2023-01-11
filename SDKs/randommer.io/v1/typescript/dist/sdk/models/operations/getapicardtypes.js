@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiCardTypesResponse = exports.GetApiCardTypesRequest = exports.GetApiCardTypesHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiCardTypesHeaders = /** @class */ (function (_super) {
     __extends(GetApiCardTypesHeaders, _super);
     function GetApiCardTypesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiCardTypesHeaders.prototype, "xApiKey", void 0);
     return GetApiCardTypesHeaders;
-}(SpeakeasyBase));
-export { GetApiCardTypesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiCardTypesHeaders = GetApiCardTypesHeaders;
 var GetApiCardTypesRequest = /** @class */ (function (_super) {
     __extends(GetApiCardTypesRequest, _super);
     function GetApiCardTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiCardTypesHeaders)
     ], GetApiCardTypesRequest.prototype, "headers", void 0);
     return GetApiCardTypesRequest;
-}(SpeakeasyBase));
-export { GetApiCardTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiCardTypesRequest = GetApiCardTypesRequest;
 var GetApiCardTypesResponse = /** @class */ (function (_super) {
     __extends(GetApiCardTypesResponse, _super);
     function GetApiCardTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiCardTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiCardTypesResponse.prototype, "statusCode", void 0);
     return GetApiCardTypesResponse;
-}(SpeakeasyBase));
-export { GetApiCardTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiCardTypesResponse = GetApiCardTypesResponse;

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class TdcerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CustID" })
-  custId: string;
+  custID: string;
 
   @SpeakeasyMetadata({ data: "json, name=DOB" })
   dob: string;
@@ -191,23 +191,23 @@ export class TdcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tdcer400ApplicationJsonObject?: Tdcer400ApplicationJson;
+  tdcer400ApplicationJSONObject?: Tdcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer401ApplicationJsonObject?: Tdcer401ApplicationJson;
+  tdcer401ApplicationJSONObject?: Tdcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer404ApplicationJsonObject?: Tdcer404ApplicationJson;
+  tdcer404ApplicationJSONObject?: Tdcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer500ApplicationJsonObject?: Tdcer500ApplicationJson;
+  tdcer500ApplicationJSONObject?: Tdcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer502ApplicationJsonObject?: Tdcer502ApplicationJson;
+  tdcer502ApplicationJSONObject?: Tdcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer503ApplicationJsonObject?: Tdcer503ApplicationJson;
+  tdcer503ApplicationJSONObject?: Tdcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdcer504ApplicationJsonObject?: Tdcer504ApplicationJson;
+  tdcer504ApplicationJSONObject?: Tdcer504ApplicationJson;
 }

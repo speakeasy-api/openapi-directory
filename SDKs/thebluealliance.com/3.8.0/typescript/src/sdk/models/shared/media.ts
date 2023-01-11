@@ -24,7 +24,7 @@ export enum MediaTypeEnum {
 **/
 export class Media extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>;
+  details?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=direct_url" })
   directUrl?: string;

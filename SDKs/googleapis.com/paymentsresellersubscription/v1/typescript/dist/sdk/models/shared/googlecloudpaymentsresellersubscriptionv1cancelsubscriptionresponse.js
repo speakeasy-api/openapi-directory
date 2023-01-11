@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPaymentsResellerSubscriptionV1Subscription } from "./googlecloudpaymentsresellersubscriptionv1subscription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpaymentsresellersubscriptionv1subscription_1 = require("./googlecloudpaymentsresellersubscriptionv1subscription");
 var GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse = /** @class */ (function (_super) {
     __extends(GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse, _super);
     function GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscription" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Subscription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscription" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1subscription_1.GoogleCloudPaymentsResellerSubscriptionV1Subscription)
     ], GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse.prototype, "subscription", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse = GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Blog } from "./blog";
-import { BlogPerUserInfo } from "./blogperuserinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlogUserInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var blog_1 = require("./blog");
+var blogperuserinfo_1 = require("./blogperuserinfo");
 var BlogUserInfo = /** @class */ (function (_super) {
     __extends(BlogUserInfo, _super);
     function BlogUserInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog" }),
-        __metadata("design:type", Blog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog" }),
+        __metadata("design:type", blog_1.Blog)
     ], BlogUserInfo.prototype, "blog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog_user_info" }),
-        __metadata("design:type", BlogPerUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog_user_info" }),
+        __metadata("design:type", blogperuserinfo_1.BlogPerUserInfo)
     ], BlogUserInfo.prototype, "blogUserInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BlogUserInfo.prototype, "kind", void 0);
     return BlogUserInfo;
-}(SpeakeasyBase));
-export { BlogUserInfo };
+}(utils_1.SpeakeasyBase));
+exports.BlogUserInfo = BlogUserInfo;

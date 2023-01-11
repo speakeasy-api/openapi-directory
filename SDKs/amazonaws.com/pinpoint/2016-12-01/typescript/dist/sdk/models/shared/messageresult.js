@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliveryStatusEnum } from "./deliverystatusenum";
-// MessageResult
-/**
- * Provides information about the results of sending a message directly to an endpoint address.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverystatusenum_1 = require("./deliverystatusenum");
 var MessageResult = /** @class */ (function (_super) {
     __extends(MessageResult, _super);
     function MessageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryStatus" }),
         __metadata("design:type", String)
     ], MessageResult.prototype, "deliveryStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageId" }),
         __metadata("design:type", String)
     ], MessageResult.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusCode" }),
         __metadata("design:type", Number)
     ], MessageResult.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusMessage" }),
         __metadata("design:type", String)
     ], MessageResult.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedToken" }),
         __metadata("design:type", String)
     ], MessageResult.prototype, "updatedToken", void 0);
     return MessageResult;
-}(SpeakeasyBase));
-export { MessageResult };
+}(utils_1.SpeakeasyBase));
+exports.MessageResult = MessageResult;

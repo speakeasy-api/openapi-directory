@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ImageStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Image = exports.ImageTypeEnum = exports.ImageStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ImageStatusEnum;
 (function (ImageStatusEnum) {
     ImageStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     ImageStatusEnum["PendingProcessing"] = "PENDING_PROCESSING";
@@ -38,13 +41,13 @@ export var ImageStatusEnum;
     ImageStatusEnum["CrawlSkipped"] = "CRAWL_SKIPPED";
     ImageStatusEnum["Hostloaded"] = "HOSTLOADED";
     ImageStatusEnum["Http404"] = "HTTP_404";
-})(ImageStatusEnum || (ImageStatusEnum = {}));
-export var ImageTypeEnum;
+})(ImageStatusEnum = exports.ImageStatusEnum || (exports.ImageStatusEnum = {}));
+var ImageTypeEnum;
 (function (ImageTypeEnum) {
     ImageTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     ImageTypeEnum["Crawled"] = "CRAWLED";
     ImageTypeEnum["Uploaded"] = "UPLOADED";
-})(ImageTypeEnum || (ImageTypeEnum = {}));
+})(ImageTypeEnum = exports.ImageTypeEnum || (exports.ImageTypeEnum = {}));
 // Image
 /**
  * An image.
@@ -55,17 +58,17 @@ var Image = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], Image.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Image.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Image.prototype, "type", void 0);
     return Image;
-}(SpeakeasyBase));
-export { Image };
+}(utils_1.SpeakeasyBase));
+exports.Image = Image;

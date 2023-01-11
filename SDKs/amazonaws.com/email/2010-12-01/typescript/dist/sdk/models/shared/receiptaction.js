@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddHeaderAction } from "./addheaderaction";
-import { BounceAction } from "./bounceaction";
-import { LambdaAction } from "./lambdaaction";
-import { S3Action } from "./s3action";
-import { SnsAction } from "./snsaction";
-import { StopAction } from "./stopaction";
-import { WorkmailAction } from "./workmailaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiptAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var addheaderaction_1 = require("./addheaderaction");
+var bounceaction_1 = require("./bounceaction");
+var lambdaaction_1 = require("./lambdaaction");
+var s3action_1 = require("./s3action");
+var snsaction_1 = require("./snsaction");
+var stopaction_1 = require("./stopaction");
+var workmailaction_1 = require("./workmailaction");
 // ReceiptAction
 /**
  * <p>An action that Amazon SES can take when it receives an email on behalf of one or more email addresses or domains that you own. An instance of this data type can represent only one action.</p> <p>For information about setting up receipt rules, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html">Amazon SES Developer Guide</a>.</p>
@@ -40,33 +43,33 @@ var ReceiptAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AddHeaderAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", addheaderaction_1.AddHeaderAction)
     ], ReceiptAction.prototype, "addHeaderAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", BounceAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", bounceaction_1.BounceAction)
     ], ReceiptAction.prototype, "bounceAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LambdaAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", lambdaaction_1.LambdaAction)
     ], ReceiptAction.prototype, "lambdaAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", S3Action)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", s3action_1.S3Action)
     ], ReceiptAction.prototype, "s3Action", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SnsAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", snsaction_1.SnsAction)
     ], ReceiptAction.prototype, "snsAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StopAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", stopaction_1.StopAction)
     ], ReceiptAction.prototype, "stopAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", WorkmailAction)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", workmailaction_1.WorkmailAction)
     ], ReceiptAction.prototype, "workmailAction", void 0);
     return ReceiptAction;
-}(SpeakeasyBase));
-export { ReceiptAction };
+}(utils_1.SpeakeasyBase));
+exports.ReceiptAction = ReceiptAction;

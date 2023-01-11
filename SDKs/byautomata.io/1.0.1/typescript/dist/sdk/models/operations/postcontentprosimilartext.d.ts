@@ -19,6 +19,6 @@ export declare class PostContentproSimilarTextRequest extends SpeakeasyBase {
 }
 export declare class PostContentproSimilarTextResponse extends SpeakeasyBase {
     contentType: string;
-    postContentproSimilarText200ApplicationJsonObject?: PostContentproSimilarText200ApplicationJson;
     statusCode: number;
+    postContentproSimilarText200ApplicationJSONObject?: PostContentproSimilarText200ApplicationJson;
 }

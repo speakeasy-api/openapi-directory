@@ -14,21 +14,10 @@ export class ReactionsListForCommitCommentPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ReactionsListForCommitCommentContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
-
 
 export class ReactionsListForCommitCommentQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=content" })
-  content?: ReactionsListForCommitCommentContentEnum;
+  content?: shared.CommentIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -61,7 +50,7 @@ export class ReactionsListForCommitCommentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -73,5 +62,5 @@ export class ReactionsListForCommitCommentResponse extends SpeakeasyBase {
   reactions?: shared.Reaction[];
 
   @SpeakeasyMetadata()
-  reactionsListForCommitComment415ApplicationJsonObject?: ReactionsListForCommitComment415ApplicationJson;
+  reactionsListForCommitComment415ApplicationJSONObject?: ReactionsListForCommitComment415ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Charge = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // Charge
 /**
  * This type is used by the charge container, which is an array of one or more charges related to the transfer.
@@ -34,37 +37,37 @@ var Charge = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellationId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "cancellationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "caseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargeNetAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeNetAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Charge.prototype, "chargeNetAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inquiryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inquiryId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "inquiryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentDisputeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentDisputeId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "paymentDisputeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "refundId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnId" }),
         __metadata("design:type", String)
     ], Charge.prototype, "returnId", void 0);
     return Charge;
-}(SpeakeasyBase));
-export { Charge };
+}(utils_1.SpeakeasyBase));
+exports.Charge = Charge;

@@ -1,30 +1,25 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetDropletMemoryAvailableMetricsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=end" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" })
   end: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=host_id" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=host_id" })
   hostId: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=start" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" })
   start: string;
 }
 
 
-export class GetDropletMemoryAvailableMetricsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: GetDropletMemoryAvailableMetricsQueryParams;
-}
-
-
 export class GetDropletMemoryAvailableMetrics200ApplicationJsonDataResult extends SpeakeasyBase {
-  @Metadata({ data: "json, name=metric" })
-  metric: Map<string, string>;
+  @SpeakeasyMetadata({ data: "json, name=metric" })
+  metric: Record<string, string>;
 
-  @Metadata({ data: "json, name=values" })
+  @SpeakeasyMetadata({ data: "json, name=values" })
   values: any[][];
 }
 
@@ -34,56 +29,62 @@ export enum GetDropletMemoryAvailableMetrics200ApplicationJsonDataResultTypeEnum
 
 
 export class GetDropletMemoryAvailableMetrics200ApplicationJsonData extends SpeakeasyBase {
-  @Metadata({ data: "json, name=result", elemType: operations.GetDropletMemoryAvailableMetrics200ApplicationJsonDataResult })
+  @SpeakeasyMetadata({ data: "json, name=result", elemType: GetDropletMemoryAvailableMetrics200ApplicationJsonDataResult })
   result: GetDropletMemoryAvailableMetrics200ApplicationJsonDataResult[];
 
-  @Metadata({ data: "json, name=resultType" })
+  @SpeakeasyMetadata({ data: "json, name=resultType" })
   resultType: GetDropletMemoryAvailableMetrics200ApplicationJsonDataResultTypeEnum;
 }
 
 export enum GetDropletMemoryAvailableMetrics200ApplicationJsonStatusEnum {
-    Success = "success"
-,    Error = "error"
+    Success = "success",
+    Error = "error"
 }
 
 
 export class GetDropletMemoryAvailableMetrics200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: GetDropletMemoryAvailableMetrics200ApplicationJsonData;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status: GetDropletMemoryAvailableMetrics200ApplicationJsonStatusEnum;
 }
 
 
 export class GetDropletMemoryAvailableMetrics401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDropletMemoryAvailableMetricsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: GetDropletMemoryAvailableMetricsQueryParams;
+}
+
+
 export class GetDropletMemoryAvailableMetricsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDropletMemoryAvailableMetrics200ApplicationJsonObject?: GetDropletMemoryAvailableMetrics200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletMemoryAvailableMetrics200ApplicationJSONObject?: GetDropletMemoryAvailableMetrics200ApplicationJson;
 
-  @Metadata()
-  getDropletMemoryAvailableMetrics401ApplicationJsonObject?: GetDropletMemoryAvailableMetrics401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletMemoryAvailableMetrics401ApplicationJSONObject?: GetDropletMemoryAvailableMetrics401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

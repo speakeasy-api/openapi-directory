@@ -65,7 +65,7 @@ export class GetVolumesId200ApplicationJsonVolume extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=linux_device" })
   linuxDevice: string;
@@ -107,8 +107,8 @@ export class GetVolumesIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getVolumesId200ApplicationJsonObject?: GetVolumesId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getVolumesId200ApplicationJSONObject?: GetVolumesId200ApplicationJson;
 }

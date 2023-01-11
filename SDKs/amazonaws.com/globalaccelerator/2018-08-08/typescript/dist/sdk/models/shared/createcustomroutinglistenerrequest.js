@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortRange } from "./portrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomRoutingListenerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var portrange_1 = require("./portrange");
 var CreateCustomRoutingListenerRequest = /** @class */ (function (_super) {
     __extends(CreateCustomRoutingListenerRequest, _super);
     function CreateCustomRoutingListenerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorArn" }),
         __metadata("design:type", String)
     ], CreateCustomRoutingListenerRequest.prototype, "acceleratorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], CreateCustomRoutingListenerRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortRanges", elemType: PortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortRanges", elemType: portrange_1.PortRange }),
         __metadata("design:type", Array)
     ], CreateCustomRoutingListenerRequest.prototype, "portRanges", void 0);
     return CreateCustomRoutingListenerRequest;
-}(SpeakeasyBase));
-export { CreateCustomRoutingListenerRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomRoutingListenerRequest = CreateCustomRoutingListenerRequest;

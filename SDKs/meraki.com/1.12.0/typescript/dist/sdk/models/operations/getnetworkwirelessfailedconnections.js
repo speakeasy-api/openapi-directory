@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,101 +23,103 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessFailedConnectionsResponse = exports.GetNetworkWirelessFailedConnectionsRequest = exports.GetNetworkWirelessFailedConnectionsQueryParams = exports.GetNetworkWirelessFailedConnectionsBandEnum = exports.GetNetworkWirelessFailedConnectionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessFailedConnectionsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessFailedConnectionsPathParams, _super);
     function GetNetworkWirelessFailedConnectionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsPathParams.prototype, "networkId", void 0);
     return GetNetworkWirelessFailedConnectionsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessFailedConnectionsPathParams };
-export var GetNetworkWirelessFailedConnectionsBandEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessFailedConnectionsPathParams = GetNetworkWirelessFailedConnectionsPathParams;
+var GetNetworkWirelessFailedConnectionsBandEnum;
 (function (GetNetworkWirelessFailedConnectionsBandEnum) {
     GetNetworkWirelessFailedConnectionsBandEnum["Two4"] = "2.4";
     GetNetworkWirelessFailedConnectionsBandEnum["Five"] = "5";
-})(GetNetworkWirelessFailedConnectionsBandEnum || (GetNetworkWirelessFailedConnectionsBandEnum = {}));
+})(GetNetworkWirelessFailedConnectionsBandEnum = exports.GetNetworkWirelessFailedConnectionsBandEnum || (exports.GetNetworkWirelessFailedConnectionsBandEnum = {}));
 var GetNetworkWirelessFailedConnectionsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessFailedConnectionsQueryParams, _super);
     function GetNetworkWirelessFailedConnectionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apTag" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "apTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=band" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=band" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "band", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serial" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ssid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ssid" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "ssid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vlan" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessFailedConnectionsQueryParams.prototype, "vlan", void 0);
     return GetNetworkWirelessFailedConnectionsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessFailedConnectionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessFailedConnectionsQueryParams = GetNetworkWirelessFailedConnectionsQueryParams;
 var GetNetworkWirelessFailedConnectionsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessFailedConnectionsRequest, _super);
     function GetNetworkWirelessFailedConnectionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessFailedConnectionsPathParams)
     ], GetNetworkWirelessFailedConnectionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessFailedConnectionsQueryParams)
     ], GetNetworkWirelessFailedConnectionsRequest.prototype, "queryParams", void 0);
     return GetNetworkWirelessFailedConnectionsRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessFailedConnectionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessFailedConnectionsRequest = GetNetworkWirelessFailedConnectionsRequest;
 var GetNetworkWirelessFailedConnectionsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessFailedConnectionsResponse, _super);
     function GetNetworkWirelessFailedConnectionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessFailedConnectionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessFailedConnectionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessFailedConnectionsResponse.prototype, "getNetworkWirelessFailedConnections200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessFailedConnectionsResponse.prototype, "getNetworkWirelessFailedConnections200ApplicationJSONObject", void 0);
     return GetNetworkWirelessFailedConnectionsResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessFailedConnectionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessFailedConnectionsResponse = GetNetworkWirelessFailedConnectionsResponse;

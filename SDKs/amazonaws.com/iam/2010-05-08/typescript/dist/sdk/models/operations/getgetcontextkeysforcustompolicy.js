@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetContextKeysForCustomPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetContextKeysForCustomPolicyResponse = exports.GetGetContextKeysForCustomPolicyRequest = exports.GetGetContextKeysForCustomPolicyHeaders = exports.GetGetContextKeysForCustomPolicyQueryParams = exports.GetGetContextKeysForCustomPolicyVersionEnum = exports.GetGetContextKeysForCustomPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetContextKeysForCustomPolicyActionEnum;
 (function (GetGetContextKeysForCustomPolicyActionEnum) {
     GetGetContextKeysForCustomPolicyActionEnum["GetContextKeysForCustomPolicy"] = "GetContextKeysForCustomPolicy";
-})(GetGetContextKeysForCustomPolicyActionEnum || (GetGetContextKeysForCustomPolicyActionEnum = {}));
-export var GetGetContextKeysForCustomPolicyVersionEnum;
+})(GetGetContextKeysForCustomPolicyActionEnum = exports.GetGetContextKeysForCustomPolicyActionEnum || (exports.GetGetContextKeysForCustomPolicyActionEnum = {}));
+var GetGetContextKeysForCustomPolicyVersionEnum;
 (function (GetGetContextKeysForCustomPolicyVersionEnum) {
     GetGetContextKeysForCustomPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetContextKeysForCustomPolicyVersionEnum || (GetGetContextKeysForCustomPolicyVersionEnum = {}));
+})(GetGetContextKeysForCustomPolicyVersionEnum = exports.GetGetContextKeysForCustomPolicyVersionEnum || (exports.GetGetContextKeysForCustomPolicyVersionEnum = {}));
 var GetGetContextKeysForCustomPolicyQueryParams = /** @class */ (function (_super) {
     __extends(GetGetContextKeysForCustomPolicyQueryParams, _super);
     function GetGetContextKeysForCustomPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyInputList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyInputList" }),
         __metadata("design:type", Array)
     ], GetGetContextKeysForCustomPolicyQueryParams.prototype, "policyInputList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyQueryParams.prototype, "version", void 0);
     return GetGetContextKeysForCustomPolicyQueryParams;
-}(SpeakeasyBase));
-export { GetGetContextKeysForCustomPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetContextKeysForCustomPolicyQueryParams = GetGetContextKeysForCustomPolicyQueryParams;
 var GetGetContextKeysForCustomPolicyHeaders = /** @class */ (function (_super) {
     __extends(GetGetContextKeysForCustomPolicyHeaders, _super);
     function GetGetContextKeysForCustomPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetContextKeysForCustomPolicyHeaders;
-}(SpeakeasyBase));
-export { GetGetContextKeysForCustomPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetContextKeysForCustomPolicyHeaders = GetGetContextKeysForCustomPolicyHeaders;
 var GetGetContextKeysForCustomPolicyRequest = /** @class */ (function (_super) {
     __extends(GetGetContextKeysForCustomPolicyRequest, _super);
     function GetGetContextKeysForCustomPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetContextKeysForCustomPolicyQueryParams)
     ], GetGetContextKeysForCustomPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetContextKeysForCustomPolicyHeaders)
     ], GetGetContextKeysForCustomPolicyRequest.prototype, "headers", void 0);
     return GetGetContextKeysForCustomPolicyRequest;
-}(SpeakeasyBase));
-export { GetGetContextKeysForCustomPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetContextKeysForCustomPolicyRequest = GetGetContextKeysForCustomPolicyRequest;
 var GetGetContextKeysForCustomPolicyResponse = /** @class */ (function (_super) {
     __extends(GetGetContextKeysForCustomPolicyResponse, _super);
     function GetGetContextKeysForCustomPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetContextKeysForCustomPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetContextKeysForCustomPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetContextKeysForCustomPolicyResponse.prototype, "statusCode", void 0);
     return GetGetContextKeysForCustomPolicyResponse;
-}(SpeakeasyBase));
-export { GetGetContextKeysForCustomPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetContextKeysForCustomPolicyResponse = GetGetContextKeysForCustomPolicyResponse;

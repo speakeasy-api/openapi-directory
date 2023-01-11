@@ -46,11 +46,11 @@ export class RetrieveAUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveAUser200ApplicationJsonObject?: RetrieveAUser200ApplicationJson;
+  retrieveAUser200ApplicationJSONObject?: RetrieveAUser200ApplicationJson;
 }

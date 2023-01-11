@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationBrandingPoliciesPrioritiesResponse = exports.UpdateOrganizationBrandingPoliciesPrioritiesRequest = exports.UpdateOrganizationBrandingPoliciesPrioritiesRequestBody = exports.UpdateOrganizationBrandingPoliciesPrioritiesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationBrandingPoliciesPrioritiesPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPoliciesPrioritiesPathParams, _super);
     function UpdateOrganizationBrandingPoliciesPrioritiesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPoliciesPrioritiesPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationBrandingPoliciesPrioritiesPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPoliciesPrioritiesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPoliciesPrioritiesPathParams = UpdateOrganizationBrandingPoliciesPrioritiesPathParams;
 var UpdateOrganizationBrandingPoliciesPrioritiesRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPoliciesPrioritiesRequestBody, _super);
     function UpdateOrganizationBrandingPoliciesPrioritiesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandingPolicyIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandingPolicyIds" }),
         __metadata("design:type", Array)
     ], UpdateOrganizationBrandingPoliciesPrioritiesRequestBody.prototype, "brandingPolicyIds", void 0);
     return UpdateOrganizationBrandingPoliciesPrioritiesRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPoliciesPrioritiesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPoliciesPrioritiesRequestBody = UpdateOrganizationBrandingPoliciesPrioritiesRequestBody;
 var UpdateOrganizationBrandingPoliciesPrioritiesRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPoliciesPrioritiesRequest, _super);
     function UpdateOrganizationBrandingPoliciesPrioritiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationBrandingPoliciesPrioritiesPathParams)
     ], UpdateOrganizationBrandingPoliciesPrioritiesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationBrandingPoliciesPrioritiesRequestBody)
     ], UpdateOrganizationBrandingPoliciesPrioritiesRequest.prototype, "request", void 0);
     return UpdateOrganizationBrandingPoliciesPrioritiesRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPoliciesPrioritiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPoliciesPrioritiesRequest = UpdateOrganizationBrandingPoliciesPrioritiesRequest;
 var UpdateOrganizationBrandingPoliciesPrioritiesResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationBrandingPoliciesPrioritiesResponse, _super);
     function UpdateOrganizationBrandingPoliciesPrioritiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationBrandingPoliciesPrioritiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationBrandingPoliciesPrioritiesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationBrandingPoliciesPrioritiesResponse.prototype, "updateOrganizationBrandingPoliciesPriorities200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationBrandingPoliciesPrioritiesResponse.prototype, "updateOrganizationBrandingPoliciesPriorities200ApplicationJSONObject", void 0);
     return UpdateOrganizationBrandingPoliciesPrioritiesResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationBrandingPoliciesPrioritiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationBrandingPoliciesPrioritiesResponse = UpdateOrganizationBrandingPoliciesPrioritiesResponse;

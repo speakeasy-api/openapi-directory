@@ -12,7 +12,7 @@ export declare class GetModifyDbInstanceQueryParams extends SpeakeasyBase {
     caCertificateIdentifier?: string;
     dbInstanceClass?: string;
     dbInstanceIdentifier: string;
-    newDbInstanceIdentifier?: string;
+    newDBInstanceIdentifier?: string;
     preferredMaintenanceWindow?: string;
     promotionTier?: number;
     version: GetModifyDbInstanceVersionEnum;

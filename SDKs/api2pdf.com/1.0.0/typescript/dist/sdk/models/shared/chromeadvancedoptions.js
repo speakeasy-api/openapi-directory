@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChromeAdvancedOptions = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChromeAdvancedOptions = /** @class */ (function (_super) {
     __extends(ChromeAdvancedOptions, _super);
     function ChromeAdvancedOptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=landscape" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=landscape" }),
         __metadata("design:type", String)
     ], ChromeAdvancedOptions.prototype, "landscape", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=printBackground" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=printBackground" }),
         __metadata("design:type", Boolean)
     ], ChromeAdvancedOptions.prototype, "printBackground", void 0);
     return ChromeAdvancedOptions;
-}(SpeakeasyBase));
-export { ChromeAdvancedOptions };
+}(utils_1.SpeakeasyBase));
+exports.ChromeAdvancedOptions = ChromeAdvancedOptions;

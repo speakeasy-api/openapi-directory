@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DevicePolicy } from "./devicepolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Condition = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicepolicy_1 = require("./devicepolicy");
 // Condition
 /**
  * A condition necessary for an `AccessLevel` to be granted. The Condition is an AND over its fields. So a Condition is true if: 1) the request IP is from one of the listed subnetworks AND 2) the originating device complies with the listed device policy AND 3) all listed access levels are granted AND 4) the request was sent at a time allowed by the DateTimeRestriction.
@@ -34,29 +37,29 @@ var Condition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePolicy" }),
-        __metadata("design:type", DevicePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePolicy" }),
+        __metadata("design:type", devicepolicy_1.DevicePolicy)
     ], Condition.prototype, "devicePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipSubnetworks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipSubnetworks" }),
         __metadata("design:type", Array)
     ], Condition.prototype, "ipSubnetworks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", Array)
     ], Condition.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negate" }),
         __metadata("design:type", Boolean)
     ], Condition.prototype, "negate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions" }),
         __metadata("design:type", Array)
     ], Condition.prototype, "regions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredAccessLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredAccessLevels" }),
         __metadata("design:type", Array)
     ], Condition.prototype, "requiredAccessLevels", void 0);
     return Condition;
-}(SpeakeasyBase));
-export { Condition };
+}(utils_1.SpeakeasyBase));
+exports.Condition = Condition;

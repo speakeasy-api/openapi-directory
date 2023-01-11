@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpGatewayRouteRewrite } from "./httpgatewayrouterewrite";
-import { GatewayRouteTarget } from "./gatewayroutetarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpGatewayRouteAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var httpgatewayrouterewrite_1 = require("./httpgatewayrouterewrite");
+var gatewayroutetarget_1 = require("./gatewayroutetarget");
 // HttpGatewayRouteAction
 /**
  * An object that represents the action to take if a match is determined.
@@ -35,13 +38,13 @@ var HttpGatewayRouteAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rewrite" }),
-        __metadata("design:type", HttpGatewayRouteRewrite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rewrite" }),
+        __metadata("design:type", httpgatewayrouterewrite_1.HttpGatewayRouteRewrite)
     ], HttpGatewayRouteAction.prototype, "rewrite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
-        __metadata("design:type", GatewayRouteTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
+        __metadata("design:type", gatewayroutetarget_1.GatewayRouteTarget)
     ], HttpGatewayRouteAction.prototype, "target", void 0);
     return HttpGatewayRouteAction;
-}(SpeakeasyBase));
-export { HttpGatewayRouteAction };
+}(utils_1.SpeakeasyBase));
+exports.HttpGatewayRouteAction = HttpGatewayRouteAction;

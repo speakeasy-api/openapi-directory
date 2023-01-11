@@ -8,7 +8,7 @@ export declare class ContestPaymentDisputeSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class ContestPaymentDisputeRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: ContestPaymentDisputePathParams;
     request?: shared.ContestPaymentDisputeRequest;
     security: ContestPaymentDisputeSecurity;

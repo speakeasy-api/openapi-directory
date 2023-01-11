@@ -34,7 +34,7 @@ export declare class Observation extends SpeakeasyBase {
     rdsEventCategories?: string;
     rdsEventMessage?: string;
     s3EventName?: string;
-    sourceArn?: string;
+    sourceARN?: string;
     sourceType?: string;
     startTime?: Date;
     statesArn?: string;

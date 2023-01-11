@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,80 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceFirewallFirewalledServiceResponse = exports.UpdateNetworkApplianceFirewallFirewalledServiceRequest = exports.UpdateNetworkApplianceFirewallFirewalledServiceRequestBody = exports.UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum = exports.UpdateNetworkApplianceFirewallFirewalledServicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceFirewallFirewalledServicePathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallFirewalledServicePathParams, _super);
     function UpdateNetworkApplianceFirewallFirewalledServicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallFirewalledServicePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=service" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallFirewalledServicePathParams.prototype, "service", void 0);
     return UpdateNetworkApplianceFirewallFirewalledServicePathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallFirewalledServicePathParams };
-export var UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallFirewalledServicePathParams = UpdateNetworkApplianceFirewallFirewalledServicePathParams;
+var UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum;
 (function (UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum) {
     UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum["Blocked"] = "blocked";
     UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum["Restricted"] = "restricted";
     UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum["Unrestricted"] = "unrestricted";
-})(UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum || (UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum = {}));
+})(UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum = exports.UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum || (exports.UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum = {}));
 var UpdateNetworkApplianceFirewallFirewalledServiceRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallFirewalledServiceRequestBody, _super);
     function UpdateNetworkApplianceFirewallFirewalledServiceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallFirewalledServiceRequestBody.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedIps" }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceFirewallFirewalledServiceRequestBody.prototype, "allowedIps", void 0);
     return UpdateNetworkApplianceFirewallFirewalledServiceRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallFirewalledServiceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallFirewalledServiceRequestBody = UpdateNetworkApplianceFirewallFirewalledServiceRequestBody;
 var UpdateNetworkApplianceFirewallFirewalledServiceRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallFirewalledServiceRequest, _super);
     function UpdateNetworkApplianceFirewallFirewalledServiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceFirewallFirewalledServicePathParams)
     ], UpdateNetworkApplianceFirewallFirewalledServiceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceFirewallFirewalledServiceRequestBody)
     ], UpdateNetworkApplianceFirewallFirewalledServiceRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceFirewallFirewalledServiceRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallFirewalledServiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallFirewalledServiceRequest = UpdateNetworkApplianceFirewallFirewalledServiceRequest;
 var UpdateNetworkApplianceFirewallFirewalledServiceResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallFirewalledServiceResponse, _super);
     function UpdateNetworkApplianceFirewallFirewalledServiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallFirewalledServiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceFirewallFirewalledServiceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceFirewallFirewalledServiceResponse.prototype, "updateNetworkApplianceFirewallFirewalledService200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceFirewallFirewalledServiceResponse.prototype, "updateNetworkApplianceFirewallFirewalledService200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceFirewallFirewalledServiceResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallFirewalledServiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallFirewalledServiceResponse = UpdateNetworkApplianceFirewallFirewalledServiceResponse;

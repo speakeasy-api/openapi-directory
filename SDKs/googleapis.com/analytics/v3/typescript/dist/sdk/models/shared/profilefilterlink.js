@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterRef } from "./filterref";
-import { ProfileRef } from "./profileref";
-import { FilterRefInput } from "./filterref";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileFilterLinkInput = exports.ProfileFilterLink = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterref_1 = require("./filterref");
+var profileref_1 = require("./profileref");
+var filterref_2 = require("./filterref");
 // ProfileFilterLink
 /**
  * JSON template for an Analytics profile filter link.
@@ -36,32 +39,32 @@ var ProfileFilterLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterRef" }),
-        __metadata("design:type", FilterRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterRef" }),
+        __metadata("design:type", filterref_1.FilterRef)
     ], ProfileFilterLink.prototype, "filterRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ProfileFilterLink.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ProfileFilterLink.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileRef" }),
-        __metadata("design:type", ProfileRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileRef" }),
+        __metadata("design:type", profileref_1.ProfileRef)
     ], ProfileFilterLink.prototype, "profileRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], ProfileFilterLink.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], ProfileFilterLink.prototype, "selfLink", void 0);
     return ProfileFilterLink;
-}(SpeakeasyBase));
-export { ProfileFilterLink };
+}(utils_1.SpeakeasyBase));
+exports.ProfileFilterLink = ProfileFilterLink;
 // ProfileFilterLinkInput
 /**
  * JSON template for an Analytics profile filter link.
@@ -72,21 +75,21 @@ var ProfileFilterLinkInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterRef" }),
-        __metadata("design:type", FilterRefInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterRef" }),
+        __metadata("design:type", filterref_2.FilterRefInput)
     ], ProfileFilterLinkInput.prototype, "filterRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ProfileFilterLinkInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileRef" }),
-        __metadata("design:type", ProfileRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileRef" }),
+        __metadata("design:type", profileref_1.ProfileRef)
     ], ProfileFilterLinkInput.prototype, "profileRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], ProfileFilterLinkInput.prototype, "rank", void 0);
     return ProfileFilterLinkInput;
-}(SpeakeasyBase));
-export { ProfileFilterLinkInput };
+}(utils_1.SpeakeasyBase));
+exports.ProfileFilterLinkInput = ProfileFilterLinkInput;

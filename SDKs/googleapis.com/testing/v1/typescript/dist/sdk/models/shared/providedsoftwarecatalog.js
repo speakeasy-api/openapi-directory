@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvidedSoftwareCatalog = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProvidedSoftwareCatalog
 /**
  * The currently provided software environment on the devices under test.
@@ -33,13 +36,13 @@ var ProvidedSoftwareCatalog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidxOrchestratorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidxOrchestratorVersion" }),
         __metadata("design:type", String)
     ], ProvidedSoftwareCatalog.prototype, "androidxOrchestratorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orchestratorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orchestratorVersion" }),
         __metadata("design:type", String)
     ], ProvidedSoftwareCatalog.prototype, "orchestratorVersion", void 0);
     return ProvidedSoftwareCatalog;
-}(SpeakeasyBase));
-export { ProvidedSoftwareCatalog };
+}(utils_1.SpeakeasyBase));
+exports.ProvidedSoftwareCatalog = ProvidedSoftwareCatalog;

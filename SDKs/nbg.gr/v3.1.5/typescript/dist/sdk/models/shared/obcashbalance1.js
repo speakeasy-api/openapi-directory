@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
-import { ObCreditDebitCodeEnum } from "./obcreditdebitcodeenum";
-import { ObCreditLine1 } from "./obcreditline1";
-import { ObBalanceType1CodeEnum } from "./obbalancetype1codeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObCashBalance1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obactiveorhistoriccurrencyandamount_1 = require("./obactiveorhistoriccurrencyandamount");
+var obcreditdebitcodeenum_1 = require("./obcreditdebitcodeenum");
+var obcreditline1_1 = require("./obcreditline1");
+var obbalancetype1codeenum_1 = require("./obbalancetype1codeenum");
 // ObCashBalance1
 /**
  * Set of elements used to define the balance details.
@@ -37,29 +40,29 @@ var ObCashBalance1 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], ObCashBalance1.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
-        __metadata("design:type", ObActiveOrHistoricCurrencyAndAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
+        __metadata("design:type", obactiveorhistoriccurrencyandamount_1.ObActiveOrHistoricCurrencyAndAmount)
     ], ObCashBalance1.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditDebitIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditDebitIndicator" }),
         __metadata("design:type", String)
     ], ObCashBalance1.prototype, "creditDebitIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditLine", elemType: ObCreditLine1 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditLine", elemType: obcreditline1_1.ObCreditLine1 }),
         __metadata("design:type", Array)
     ], ObCashBalance1.prototype, "creditLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateTime" }),
         __metadata("design:type", Date)
     ], ObCashBalance1.prototype, "dateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ObCashBalance1.prototype, "type", void 0);
     return ObCashBalance1;
-}(SpeakeasyBase));
-export { ObCashBalance1 };
+}(utils_1.SpeakeasyBase));
+exports.ObCashBalance1 = ObCashBalance1;

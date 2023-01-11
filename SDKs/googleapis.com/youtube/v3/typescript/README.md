@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { YoutubeAbuseReportsInsertRequest, YoutubeAbuseReportsInsertResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,63 +31,57 @@ const req: YoutubeAbuseReportsInsertRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "qui",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "est",
-    fields: "eos",
-    key: "qui",
-    oauthToken: "animi",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     part: [
-      "rem",
-      "nobis",
+      "fugit",
+      "et",
+      "nihil",
     ],
-    prettyPrint: false,
-    quotaUser: "quia",
-    uploadType: "ut",
-    uploadProtocol: "ea",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
   request: {
     abuseTypes: [
       {
-        id: "tenetur",
+        id: "ut",
       },
     ],
-    description: "atque",
+    description: "dolorem",
     relatedEntities: [
       {
         entity: {
-          id: "ut",
-          typeId: "ea",
-          url: "harum",
+          id: "voluptate",
+          typeId: "iste",
+          url: "vitae",
         },
       },
       {
         entity: {
-          id: "quos",
-          typeId: "delectus",
-          url: "quisquam",
-        },
-      },
-      {
-        entity: {
-          id: "sed",
-          typeId: "id",
-          url: "numquam",
+          id: "totam",
+          typeId: "dolores",
+          url: "illum",
         },
       },
     ],
     subject: {
-      id: "saepe",
-      typeId: "voluptatem",
-      url: "quaerat",
+      id: "debitis",
+      typeId: "vel",
+      url: "odio",
     },
   },
 };

@@ -28,7 +28,7 @@ export class DeleteSignalingChannelHeaders extends SpeakeasyBase {
 
 export class DeleteSignalingChannelRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn: string;
+  channelARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=CurrentVersion" })
   currentVersion?: string;
@@ -55,7 +55,7 @@ export class DeleteSignalingChannelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSignalingChannelOutput?: Map<string, any>;
+  deleteSignalingChannelOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

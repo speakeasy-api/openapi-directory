@@ -1,15 +1,31 @@
-export * from "./deletedocument";
-export * from "./deletepolicymodule";
-export * from "./getdocument";
-export * from "./getdocumentwithpath";
-export * from "./getdocumentwithwebhook";
-export * from "./gethealth";
-export * from "./getpolicies";
-export * from "./getpolicymodule";
-export * from "./getquery";
-export * from "./patchdocument";
-export * from "./postcompile";
-export * from "./postquery";
-export * from "./postsimplequery";
-export * from "./putdocument";
-export * from "./putpolicymodule";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deletedocument"), exports);
+__exportStar(require("./deletepolicymodule"), exports);
+__exportStar(require("./getdocument"), exports);
+__exportStar(require("./getdocumentwithpath"), exports);
+__exportStar(require("./getdocumentwithwebhook"), exports);
+__exportStar(require("./gethealth"), exports);
+__exportStar(require("./getpolicies"), exports);
+__exportStar(require("./getpolicymodule"), exports);
+__exportStar(require("./getquery"), exports);
+__exportStar(require("./patchdocument"), exports);
+__exportStar(require("./postcompile"), exports);
+__exportStar(require("./postquery"), exports);
+__exportStar(require("./postsimplequery"), exports);
+__exportStar(require("./putdocument"), exports);
+__exportStar(require("./putpolicymodule"), exports);

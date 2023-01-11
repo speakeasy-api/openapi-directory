@@ -28,5 +28,5 @@ export class ProtocolTelnetIpaliasDisableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetIpaliasDisable200ApplicationJsonString?: string;
+  protocolTelnetIpaliasDisable200ApplicationJSONString?: string;
 }

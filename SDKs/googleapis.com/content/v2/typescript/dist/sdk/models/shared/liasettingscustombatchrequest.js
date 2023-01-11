@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiasettingsCustomBatchRequestEntry } from "./liasettingscustombatchrequestentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiasettingsCustomBatchRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var liasettingscustombatchrequestentry_1 = require("./liasettingscustombatchrequestentry");
 var LiasettingsCustomBatchRequest = /** @class */ (function (_super) {
     __extends(LiasettingsCustomBatchRequest, _super);
     function LiasettingsCustomBatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entries", elemType: LiasettingsCustomBatchRequestEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entries", elemType: liasettingscustombatchrequestentry_1.LiasettingsCustomBatchRequestEntry }),
         __metadata("design:type", Array)
     ], LiasettingsCustomBatchRequest.prototype, "entries", void 0);
     return LiasettingsCustomBatchRequest;
-}(SpeakeasyBase));
-export { LiasettingsCustomBatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.LiasettingsCustomBatchRequest = LiasettingsCustomBatchRequest;

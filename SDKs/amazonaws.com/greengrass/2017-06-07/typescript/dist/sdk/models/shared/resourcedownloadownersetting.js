@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PermissionEnum } from "./permissionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceDownloadOwnerSetting = void 0;
+var utils_1 = require("../../../internal/utils");
+var permissionenum_1 = require("./permissionenum");
 // ResourceDownloadOwnerSetting
 /**
  * The owner setting for downloaded machine learning resources.
@@ -34,13 +37,13 @@ var ResourceDownloadOwnerSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupOwner" }),
         __metadata("design:type", String)
     ], ResourceDownloadOwnerSetting.prototype, "groupOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupPermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupPermission" }),
         __metadata("design:type", String)
     ], ResourceDownloadOwnerSetting.prototype, "groupPermission", void 0);
     return ResourceDownloadOwnerSetting;
-}(SpeakeasyBase));
-export { ResourceDownloadOwnerSetting };
+}(utils_1.SpeakeasyBase));
+exports.ResourceDownloadOwnerSetting = ResourceDownloadOwnerSetting;

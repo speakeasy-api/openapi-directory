@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcquisitionTargetingRule } from "./acquisitiontargetingrule";
-import { UpgradeTargetingRule } from "./upgradetargetingrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionOfferTargeting = void 0;
+var utils_1 = require("../../../internal/utils");
+var acquisitiontargetingrule_1 = require("./acquisitiontargetingrule");
+var upgradetargetingrule_1 = require("./upgradetargetingrule");
 // SubscriptionOfferTargeting
 /**
  * Defines the rule a user needs to satisfy to receive this offer.
@@ -35,13 +38,13 @@ var SubscriptionOfferTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acquisitionRule" }),
-        __metadata("design:type", AcquisitionTargetingRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acquisitionRule" }),
+        __metadata("design:type", acquisitiontargetingrule_1.AcquisitionTargetingRule)
     ], SubscriptionOfferTargeting.prototype, "acquisitionRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeRule" }),
-        __metadata("design:type", UpgradeTargetingRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeRule" }),
+        __metadata("design:type", upgradetargetingrule_1.UpgradeTargetingRule)
     ], SubscriptionOfferTargeting.prototype, "upgradeRule", void 0);
     return SubscriptionOfferTargeting;
-}(SpeakeasyBase));
-export { SubscriptionOfferTargeting };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionOfferTargeting = SubscriptionOfferTargeting;

@@ -26,7 +26,7 @@ export class TranslateDocumentRequest extends SpeakeasyBase {
   isTranslateNativePdfOnly?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=model" })
   model?: string;

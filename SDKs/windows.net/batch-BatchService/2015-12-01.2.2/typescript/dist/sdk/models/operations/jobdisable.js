@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobDisableResponse = exports.JobDisableRequest = exports.JobDisableHeaders = exports.JobDisableQueryParams = exports.JobDisablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobDisablePathParams = /** @class */ (function (_super) {
     __extends(JobDisablePathParams, _super);
     function JobDisablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], JobDisablePathParams.prototype, "jobId", void 0);
     return JobDisablePathParams;
-}(SpeakeasyBase));
-export { JobDisablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobDisablePathParams = JobDisablePathParams;
 var JobDisableQueryParams = /** @class */ (function (_super) {
     __extends(JobDisableQueryParams, _super);
     function JobDisableQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], JobDisableQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], JobDisableQueryParams.prototype, "timeout", void 0);
     return JobDisableQueryParams;
-}(SpeakeasyBase));
-export { JobDisableQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JobDisableQueryParams = JobDisableQueryParams;
 var JobDisableHeaders = /** @class */ (function (_super) {
     __extends(JobDisableHeaders, _super);
     function JobDisableHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], JobDisableHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], JobDisableHeaders.prototype, "returnClientRequestId", void 0);
     return JobDisableHeaders;
-}(SpeakeasyBase));
-export { JobDisableHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JobDisableHeaders = JobDisableHeaders;
 var JobDisableRequest = /** @class */ (function (_super) {
     __extends(JobDisableRequest, _super);
     function JobDisableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobDisablePathParams)
     ], JobDisableRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobDisableQueryParams)
     ], JobDisableRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobDisableHeaders)
     ], JobDisableRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], JobDisableRequest.prototype, "request", void 0);
     return JobDisableRequest;
-}(SpeakeasyBase));
-export { JobDisableRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobDisableRequest = JobDisableRequest;
 var JobDisableResponse = /** @class */ (function (_super) {
     __extends(JobDisableResponse, _super);
     function JobDisableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobDisableResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobDisableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], JobDisableResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobDisableResponse.prototype, "statusCode", void 0);
     return JobDisableResponse;
-}(SpeakeasyBase));
-export { JobDisableResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobDisableResponse = JobDisableResponse;

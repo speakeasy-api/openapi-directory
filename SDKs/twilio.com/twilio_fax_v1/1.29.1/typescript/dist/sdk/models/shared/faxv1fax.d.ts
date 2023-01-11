@@ -28,7 +28,7 @@ export declare class FaxV1Fax extends SpeakeasyBase {
     direction?: FaxV1FaxDirectionEnum;
     duration?: number;
     from?: string;
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     mediaSid?: string;
     mediaUrl?: string;
     numPages?: number;

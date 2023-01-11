@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegistryAlias } from "./registryalias";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Registry = void 0;
+var utils_1 = require("../../../internal/utils");
+var registryalias_1 = require("./registryalias");
 // Registry
 /**
  * The details of a public registry.
@@ -34,25 +37,25 @@ var Registry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliases", elemType: RegistryAlias }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliases", elemType: registryalias_1.RegistryAlias }),
         __metadata("design:type", Array)
     ], Registry.prototype, "aliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryArn" }),
         __metadata("design:type", String)
     ], Registry.prototype, "registryArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], Registry.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryUri" }),
         __metadata("design:type", String)
     ], Registry.prototype, "registryUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verified" }),
         __metadata("design:type", Boolean)
     ], Registry.prototype, "verified", void 0);
     return Registry;
-}(SpeakeasyBase));
-export { Registry };
+}(utils_1.SpeakeasyBase));
+exports.Registry = Registry;

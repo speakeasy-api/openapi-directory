@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetLastEditedUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class GetLastEditedUsingGet200ApplicationJsonData extends SpeakeasyBase {
     lastEdited?: number;
@@ -12,17 +12,17 @@ export declare class GetLastEditedUsingGet200ApplicationJson extends SpeakeasyBa
 }
 export declare class GetLastEditedUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetLastEditedUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetLastEditedUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetLastEditedUsingGetRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class GetLastEditedUsingGetRequest extends SpeakeasyBase {
 export declare class GetLastEditedUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getLastEditedUsingGet200ApplicationJsonObject?: GetLastEditedUsingGet200ApplicationJson;
-    getLastEditedUsingGet400ApplicationJsonObject?: GetLastEditedUsingGet400ApplicationJson;
-    getLastEditedUsingGet401ApplicationJsonObject?: GetLastEditedUsingGet401ApplicationJson;
-    getLastEditedUsingGet500ApplicationJsonObject?: GetLastEditedUsingGet500ApplicationJson;
+    getLastEditedUsingGET200ApplicationJSONObject?: GetLastEditedUsingGet200ApplicationJson;
+    getLastEditedUsingGET400ApplicationJSONObject?: GetLastEditedUsingGet400ApplicationJson;
+    getLastEditedUsingGET401ApplicationJSONObject?: GetLastEditedUsingGet401ApplicationJson;
+    getLastEditedUsingGET500ApplicationJSONObject?: GetLastEditedUsingGet500ApplicationJson;
 }

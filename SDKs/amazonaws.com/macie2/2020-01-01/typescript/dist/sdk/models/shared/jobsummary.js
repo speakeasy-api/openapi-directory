@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3BucketCriteriaForJob } from "./s3bucketcriteriaforjob";
-import { S3BucketDefinitionForJob } from "./s3bucketdefinitionforjob";
-import { JobStatusEnum } from "./jobstatusenum";
-import { JobTypeEnum } from "./jobtypeenum";
-import { LastRunErrorStatus } from "./lastrunerrorstatus";
-import { UserPausedDetails } from "./userpauseddetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3bucketcriteriaforjob_1 = require("./s3bucketcriteriaforjob");
+var s3bucketdefinitionforjob_1 = require("./s3bucketdefinitionforjob");
+var jobstatusenum_1 = require("./jobstatusenum");
+var jobtypeenum_1 = require("./jobtypeenum");
+var lastrunerrorstatus_1 = require("./lastrunerrorstatus");
+var userpauseddetails_1 = require("./userpauseddetails");
 // JobSummary
 /**
  * Provides information about a classification job, including the current status of the job.
@@ -39,41 +42,41 @@ var JobSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketCriteria" }),
-        __metadata("design:type", S3BucketCriteriaForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketCriteria" }),
+        __metadata("design:type", s3bucketcriteriaforjob_1.S3BucketCriteriaForJob)
     ], JobSummary.prototype, "bucketCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketDefinitions", elemType: S3BucketDefinitionForJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketDefinitions", elemType: s3bucketdefinitionforjob_1.S3BucketDefinitionForJob }),
         __metadata("design:type", Array)
     ], JobSummary.prototype, "bucketDefinitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], JobSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobStatus" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobType" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRunErrorStatus" }),
-        __metadata("design:type", LastRunErrorStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRunErrorStatus" }),
+        __metadata("design:type", lastrunerrorstatus_1.LastRunErrorStatus)
     ], JobSummary.prototype, "lastRunErrorStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPausedDetails" }),
-        __metadata("design:type", UserPausedDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPausedDetails" }),
+        __metadata("design:type", userpauseddetails_1.UserPausedDetails)
     ], JobSummary.prototype, "userPausedDetails", void 0);
     return JobSummary;
-}(SpeakeasyBase));
-export { JobSummary };
+}(utils_1.SpeakeasyBase));
+exports.JobSummary = JobSummary;

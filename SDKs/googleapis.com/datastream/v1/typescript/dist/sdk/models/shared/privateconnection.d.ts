@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { VpcPeeringConfig } from "./vpcpeeringconfig";
 export declare enum PrivateConnectionStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
@@ -15,8 +15,8 @@ export declare enum PrivateConnectionStateEnum {
 export declare class PrivateConnection extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
-    error?: Error;
-    labels?: Map<string, string>;
+    error?: ErrorT;
+    labels?: Record<string, string>;
     name?: string;
     state?: PrivateConnectionStateEnum;
     updateTime?: string;
@@ -27,7 +27,7 @@ export declare class PrivateConnection extends SpeakeasyBase {
 **/
 export declare class PrivateConnectionInput extends SpeakeasyBase {
     displayName?: string;
-    error?: Error;
-    labels?: Map<string, string>;
+    error?: ErrorT;
+    labels?: Record<string, string>;
     vpcPeeringConfig?: VpcPeeringConfig;
 }

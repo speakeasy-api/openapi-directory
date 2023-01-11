@@ -18,6 +18,6 @@ export declare class DeleteConnectorDefinitionRequest extends SpeakeasyBase {
 export declare class DeleteConnectorDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteConnectorDefinitionResponse?: Map<string, any>;
+    deleteConnectorDefinitionResponse?: Record<string, any>;
     statusCode: number;
 }

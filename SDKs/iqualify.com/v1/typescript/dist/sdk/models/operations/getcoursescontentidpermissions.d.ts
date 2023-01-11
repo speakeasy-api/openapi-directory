@@ -8,7 +8,7 @@ export declare class GetCoursesContentIdPermissionsRequest extends SpeakeasyBase
 }
 export declare class GetCoursesContentIdPermissionsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     userPermission?: any;
 }

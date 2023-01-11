@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SinkEnumSinkTypeEnum = void 0;
+var SinkEnumSinkTypeEnum;
+(function (SinkEnumSinkTypeEnum) {
+    SinkEnumSinkTypeEnum["Kinesis"] = "kinesis";
+    SinkEnumSinkTypeEnum["Webhook"] = "webhook";
+    SinkEnumSinkTypeEnum["Segment"] = "segment";
+})(SinkEnumSinkTypeEnum = exports.SinkEnumSinkTypeEnum || (exports.SinkEnumSinkTypeEnum = {}));

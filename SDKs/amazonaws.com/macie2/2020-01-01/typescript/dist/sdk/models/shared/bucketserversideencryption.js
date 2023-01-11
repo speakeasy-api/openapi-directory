@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TypeEnum } from "./typeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketServerSideEncryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var typeenum_1 = require("./typeenum");
 // BucketServerSideEncryption
 /**
  * Provides information about the default server-side encryption settings for an S3 bucket. For detailed information about these settings, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-encryption.html">Setting default server-side encryption behavior for Amazon S3 buckets</a> in the <i>Amazon Simple Storage Service User Guide</i>.
@@ -34,13 +37,13 @@ var BucketServerSideEncryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsMasterKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsMasterKeyId" }),
         __metadata("design:type", String)
     ], BucketServerSideEncryption.prototype, "kmsMasterKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BucketServerSideEncryption.prototype, "type", void 0);
     return BucketServerSideEncryption;
-}(SpeakeasyBase));
-export { BucketServerSideEncryption };
+}(utils_1.SpeakeasyBase));
+exports.BucketServerSideEncryption = BucketServerSideEncryption;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PropertyNotificationStateEnum } from "./propertynotificationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PropertyNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+var propertynotificationstateenum_1 = require("./propertynotificationstateenum");
 // PropertyNotification
 /**
  * Contains asset property value notification information. When the notification state is enabled, IoT SiteWise publishes property value updates to a unique MQTT topic. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html">Interacting with other services</a> in the <i>IoT SiteWise User Guide</i>.
@@ -34,13 +37,13 @@ var PropertyNotification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PropertyNotification.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], PropertyNotification.prototype, "topic", void 0);
     return PropertyNotification;
-}(SpeakeasyBase));
-export { PropertyNotification };
+}(utils_1.SpeakeasyBase));
+exports.PropertyNotification = PropertyNotification;

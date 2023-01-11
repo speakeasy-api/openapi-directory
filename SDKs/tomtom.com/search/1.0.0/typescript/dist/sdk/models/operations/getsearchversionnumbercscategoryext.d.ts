@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetSearchVersionNumberCSCategoryExtPathParams extends SpeakeasyBase {
+export declare class GetSearchVersionNumberCsCategoryExtPathParams extends SpeakeasyBase {
     category: string;
     ext: shared.ExtEnum;
     versionNumber: number;
 }
-export declare class GetSearchVersionNumberCSCategoryExtQueryParams extends SpeakeasyBase {
+export declare class GetSearchVersionNumberCsCategoryExtQueryParams extends SpeakeasyBase {
     btmRight?: string;
     countrySet?: string;
     idxSet?: string;
@@ -19,11 +19,11 @@ export declare class GetSearchVersionNumberCSCategoryExtQueryParams extends Spea
     typeahead?: boolean;
     view?: shared.ViewEnum;
 }
-export declare class GetSearchVersionNumberCSCategoryExtRequest extends SpeakeasyBase {
-    pathParams: GetSearchVersionNumberCSCategoryExtPathParams;
-    queryParams: GetSearchVersionNumberCSCategoryExtQueryParams;
+export declare class GetSearchVersionNumberCsCategoryExtRequest extends SpeakeasyBase {
+    pathParams: GetSearchVersionNumberCsCategoryExtPathParams;
+    queryParams: GetSearchVersionNumberCsCategoryExtQueryParams;
 }
-export declare class GetSearchVersionNumberCSCategoryExtResponse extends SpeakeasyBase {
+export declare class GetSearchVersionNumberCsCategoryExtResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
 }

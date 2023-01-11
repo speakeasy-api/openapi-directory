@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,122 +14,147 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceDefinitionVersionResponse = exports.GetDeviceDefinitionVersionRequest = exports.GetDeviceDefinitionVersionHeaders = exports.GetDeviceDefinitionVersionQueryParams = exports.GetDeviceDefinitionVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetDeviceDefinitionVersionPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceDefinitionVersionPathParams, _super);
     function GetDeviceDefinitionVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=DeviceDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=DeviceDefinitionId" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionPathParams.prototype, "deviceDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=DeviceDefinitionVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=DeviceDefinitionVersionId" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionPathParams.prototype, "deviceDefinitionVersionId", void 0);
     return GetDeviceDefinitionVersionPathParams;
-}(SpeakeasyBase));
-export { GetDeviceDefinitionVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceDefinitionVersionPathParams = GetDeviceDefinitionVersionPathParams;
 var GetDeviceDefinitionVersionQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceDefinitionVersionQueryParams, _super);
     function GetDeviceDefinitionVersionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionQueryParams.prototype, "nextToken", void 0);
     return GetDeviceDefinitionVersionQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceDefinitionVersionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceDefinitionVersionQueryParams = GetDeviceDefinitionVersionQueryParams;
 var GetDeviceDefinitionVersionHeaders = /** @class */ (function (_super) {
     __extends(GetDeviceDefinitionVersionHeaders, _super);
     function GetDeviceDefinitionVersionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeviceDefinitionVersionHeaders;
-}(SpeakeasyBase));
-export { GetDeviceDefinitionVersionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceDefinitionVersionHeaders = GetDeviceDefinitionVersionHeaders;
 var GetDeviceDefinitionVersionRequest = /** @class */ (function (_super) {
     __extends(GetDeviceDefinitionVersionRequest, _super);
     function GetDeviceDefinitionVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceDefinitionVersionPathParams)
     ], GetDeviceDefinitionVersionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceDefinitionVersionQueryParams)
     ], GetDeviceDefinitionVersionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceDefinitionVersionHeaders)
     ], GetDeviceDefinitionVersionRequest.prototype, "headers", void 0);
     return GetDeviceDefinitionVersionRequest;
-}(SpeakeasyBase));
-export { GetDeviceDefinitionVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceDefinitionVersionRequest = GetDeviceDefinitionVersionRequest;
 var GetDeviceDefinitionVersionResponse = /** @class */ (function (_super) {
     __extends(GetDeviceDefinitionVersionResponse, _super);
     function GetDeviceDefinitionVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetDeviceDefinitionVersionResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceDefinitionVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetDeviceDefinitionVersionResponse)
     ], GetDeviceDefinitionVersionResponse.prototype, "getDeviceDefinitionVersionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceDefinitionVersionResponse.prototype, "statusCode", void 0);
     return GetDeviceDefinitionVersionResponse;
-}(SpeakeasyBase));
-export { GetDeviceDefinitionVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceDefinitionVersionResponse = GetDeviceDefinitionVersionResponse;

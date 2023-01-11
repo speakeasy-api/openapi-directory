@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactStateEnum } from "./artifactstateenum";
-import { ArtifactTypeEnum } from "./artifacttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactMetaData = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifactstateenum_1 = require("./artifactstateenum");
+var artifacttypeenum_1 = require("./artifacttypeenum");
 var ArtifactMetaData = /** @class */ (function (_super) {
     __extends(ArtifactMetaData, _super);
     function ArtifactMetaData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdOn" }),
         __metadata("design:type", Date)
     ], ArtifactMetaData.prototype, "createdOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalId" }),
         __metadata("design:type", Number)
     ], ArtifactMetaData.prototype, "globalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], ArtifactMetaData.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedBy" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "modifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedOn" }),
         __metadata("design:type", Date)
     ], ArtifactMetaData.prototype, "modifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], ArtifactMetaData.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ArtifactMetaData.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], ArtifactMetaData.prototype, "version", void 0);
     return ArtifactMetaData;
-}(SpeakeasyBase));
-export { ArtifactMetaData };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactMetaData = ArtifactMetaData;

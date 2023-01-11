@@ -36,7 +36,7 @@ export declare class GamePlatforms extends SpeakeasyBase {
 }
 export declare class Game extends SpeakeasyBase {
     added?: number;
-    addedByStatus?: Map<string, any>;
+    addedByStatus?: Record<string, any>;
     backgroundImage?: string;
     esrbRating?: GameEsrbRating;
     id?: number;
@@ -46,7 +46,7 @@ export declare class Game extends SpeakeasyBase {
     playtime?: number;
     rating: number;
     ratingTop?: number;
-    ratings?: Map<string, any>;
+    ratings?: Record<string, any>;
     ratingsCount?: number;
     released?: Date;
     reviewsTextCount?: string;

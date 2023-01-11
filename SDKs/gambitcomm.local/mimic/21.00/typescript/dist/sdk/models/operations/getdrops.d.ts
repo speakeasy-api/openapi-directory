@@ -8,5 +8,5 @@ export declare class GetDropsRequest extends SpeakeasyBase {
 export declare class GetDropsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDrops200ApplicationJsonInt32Integer?: number;
+    getDrops200ApplicationJSONInt32Integer?: number;
 }

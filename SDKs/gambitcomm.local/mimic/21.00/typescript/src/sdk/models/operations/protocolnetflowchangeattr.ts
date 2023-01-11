@@ -34,5 +34,5 @@ export class ProtocolNetflowChangeAttrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowChangeAttr200ApplicationJsonString?: string;
+  protocolNetflowChangeAttr200ApplicationJSONString?: string;
 }

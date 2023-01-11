@@ -7,10 +7,10 @@ export class StorageCreateFileRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "multipart_form, name=file" })
   file: string;
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=read" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=read;json=true" })
   read?: string[];
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=write" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=write;json=true" })
   write?: string[];
 }
 

@@ -1,0 +1,105 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = exports.AccountTypeEnum = exports.AccountMasterUser = exports.AccountMasterUserMasterUser = exports.AccountMasterUserMasterUserData = exports.AccountMasterUserMasterUserDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountattributes_1 = require("./accountattributes");
+var AccountMasterUserMasterUserDataTypeEnum;
+(function (AccountMasterUserMasterUserDataTypeEnum) {
+    AccountMasterUserMasterUserDataTypeEnum["User"] = "user";
+})(AccountMasterUserMasterUserDataTypeEnum = exports.AccountMasterUserMasterUserDataTypeEnum || (exports.AccountMasterUserMasterUserDataTypeEnum = {}));
+var AccountMasterUserMasterUserData = /** @class */ (function (_super) {
+    __extends(AccountMasterUserMasterUserData, _super);
+    function AccountMasterUserMasterUserData() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], AccountMasterUserMasterUserData.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountMasterUserMasterUserData.prototype, "type", void 0);
+    return AccountMasterUserMasterUserData;
+}(utils_1.SpeakeasyBase));
+exports.AccountMasterUserMasterUserData = AccountMasterUserMasterUserData;
+var AccountMasterUserMasterUser = /** @class */ (function (_super) {
+    __extends(AccountMasterUserMasterUser, _super);
+    function AccountMasterUserMasterUser() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", AccountMasterUserMasterUserData)
+    ], AccountMasterUserMasterUser.prototype, "data", void 0);
+    return AccountMasterUserMasterUser;
+}(utils_1.SpeakeasyBase));
+exports.AccountMasterUserMasterUser = AccountMasterUserMasterUser;
+var AccountMasterUser = /** @class */ (function (_super) {
+    __extends(AccountMasterUser, _super);
+    function AccountMasterUser() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterUser" }),
+        __metadata("design:type", AccountMasterUserMasterUser)
+    ], AccountMasterUser.prototype, "masterUser", void 0);
+    return AccountMasterUser;
+}(utils_1.SpeakeasyBase));
+exports.AccountMasterUser = AccountMasterUser;
+var AccountTypeEnum;
+(function (AccountTypeEnum) {
+    AccountTypeEnum["Account"] = "account";
+})(AccountTypeEnum = exports.AccountTypeEnum || (exports.AccountTypeEnum = {}));
+// Account
+/**
+ * Object contains all account properties.
+**/
+var Account = /** @class */ (function (_super) {
+    __extends(Account, _super);
+    function Account() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", accountattributes_1.AccountAttributes)
+    ], Account.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], Account.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
+        __metadata("design:type", AccountMasterUser)
+    ], Account.prototype, "relationships", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], Account.prototype, "type", void 0);
+    return Account;
+}(utils_1.SpeakeasyBase));
+exports.Account = Account;

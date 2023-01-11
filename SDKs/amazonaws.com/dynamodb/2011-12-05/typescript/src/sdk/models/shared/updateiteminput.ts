@@ -8,10 +8,10 @@ import { ReturnValueEnum } from "./returnvalueenum";
 
 export class UpdateItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AttributeUpdates", elemType: AttributeValueUpdate })
-  attributeUpdates: Map<string, AttributeValueUpdate>;
+  attributeUpdates: Record<string, AttributeValueUpdate>;
 
   @SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue })
-  expected?: Map<string, ExpectedAttributeValue>;
+  expected?: Record<string, ExpectedAttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=Key" })
   key: Key;

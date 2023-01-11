@@ -19,10 +19,10 @@ export declare class MybusinessAccountsInvitationsDeclineQueryParams extends Spe
 export declare class MybusinessAccountsInvitationsDeclineRequest extends SpeakeasyBase {
     pathParams: MybusinessAccountsInvitationsDeclinePathParams;
     queryParams: MybusinessAccountsInvitationsDeclineQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class MybusinessAccountsInvitationsDeclineResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

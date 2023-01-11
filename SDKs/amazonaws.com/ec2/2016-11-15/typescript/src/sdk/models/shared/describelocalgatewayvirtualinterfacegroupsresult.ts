@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayVirtualInterfaceGroup } from "./localgatewayvirtualinterfacegroup";
 
 
 
 export class DescribeLocalGatewayVirtualInterfaceGroupsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: LocalGatewayVirtualInterfaceGroup })
-  localGatewayVirtualInterfaceGroups?: LocalGatewayVirtualInterfaceGroup[];
+  @SpeakeasyMetadata()
+  localGatewayVirtualInterfaceGroups?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

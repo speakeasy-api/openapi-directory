@@ -43,5 +43,5 @@ export class ActivityMarkRepoNotificationsAsReadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  activityMarkRepoNotificationsAsRead202ApplicationJsonObject?: ActivityMarkRepoNotificationsAsRead202ApplicationJson;
+  activityMarkRepoNotificationsAsRead202ApplicationJSONObject?: ActivityMarkRepoNotificationsAsRead202ApplicationJson;
 }

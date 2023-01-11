@@ -25,5 +25,5 @@ export class GetOrganizationInsightMonitoredMediaServerResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationInsightMonitoredMediaServer200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationInsightMonitoredMediaServer200ApplicationJSONObject?: Record<string, any>;
 }

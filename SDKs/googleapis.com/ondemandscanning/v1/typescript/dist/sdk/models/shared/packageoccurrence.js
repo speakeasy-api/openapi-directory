@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { License } from "./license";
-import { Location } from "./location";
-import { Version } from "./version";
-export var PackageOccurrenceArchitectureEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PackageOccurrence = exports.PackageOccurrenceArchitectureEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var license_1 = require("./license");
+var location_1 = require("./location");
+var version_1 = require("./version");
+var PackageOccurrenceArchitectureEnum;
 (function (PackageOccurrenceArchitectureEnum) {
     PackageOccurrenceArchitectureEnum["ArchitectureUnspecified"] = "ARCHITECTURE_UNSPECIFIED";
     PackageOccurrenceArchitectureEnum["X86"] = "X86";
     PackageOccurrenceArchitectureEnum["X64"] = "X64";
-})(PackageOccurrenceArchitectureEnum || (PackageOccurrenceArchitectureEnum = {}));
+})(PackageOccurrenceArchitectureEnum = exports.PackageOccurrenceArchitectureEnum || (exports.PackageOccurrenceArchitectureEnum = {}));
 // PackageOccurrence
 /**
  * Details on how a particular software package was installed on a system.
@@ -42,33 +45,33 @@ var PackageOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=architecture" }),
         __metadata("design:type", String)
     ], PackageOccurrence.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpeUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpeUri" }),
         __metadata("design:type", String)
     ], PackageOccurrence.prototype, "cpeUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
-        __metadata("design:type", License)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
+        __metadata("design:type", license_1.License)
     ], PackageOccurrence.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location", elemType: Location }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location", elemType: location_1.Location }),
         __metadata("design:type", Array)
     ], PackageOccurrence.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PackageOccurrence.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageType" }),
         __metadata("design:type", String)
     ], PackageOccurrence.prototype, "packageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", Version)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", version_1.Version)
     ], PackageOccurrence.prototype, "version", void 0);
     return PackageOccurrence;
-}(SpeakeasyBase));
-export { PackageOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.PackageOccurrence = PackageOccurrence;

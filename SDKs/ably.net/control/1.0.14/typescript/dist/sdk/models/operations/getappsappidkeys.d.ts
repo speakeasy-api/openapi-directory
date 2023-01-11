@@ -13,6 +13,6 @@ export declare class GetAppsAppIdKeysRequest extends SpeakeasyBase {
 export declare class GetAppsAppIdKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     keyResponses?: shared.KeyResponse[];
 }

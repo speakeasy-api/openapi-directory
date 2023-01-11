@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrimWhitespaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
 // TrimWhitespaceRequest
 /**
  * Trims the whitespace (such as spaces, tabs, or new lines) in every cell in the specified range. This request removes all whitespace from the start and end of each cell's text, and reduces any subsequence of remaining whitespace characters to a single space. If the resulting trimmed text starts with a '+' or '=' character, the text remains as a string value and isn't interpreted as a formula.
@@ -34,9 +37,9 @@ var TrimWhitespaceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], TrimWhitespaceRequest.prototype, "range", void 0);
     return TrimWhitespaceRequest;
-}(SpeakeasyBase));
-export { TrimWhitespaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.TrimWhitespaceRequest = TrimWhitespaceRequest;

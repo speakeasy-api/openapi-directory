@@ -3,10 +3,6 @@ import { Bucket } from "./bucket";
 
 
 
-// UserPageLoadMetricV5
-/** 
- * A CrUX metric object for a single metric and form factor.
-**/
 export class UserPageLoadMetricV5 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=category" })
   category?: string;

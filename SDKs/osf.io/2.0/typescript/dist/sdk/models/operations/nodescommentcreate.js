@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesCommentCreateResponse = exports.NodesCommentCreateRequest = exports.NodesCommentCreateCommentInput = exports.NodesCommentCreateCommentAttributesInput = exports.NodesCommentCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesCommentCreatePathParams = /** @class */ (function (_super) {
     __extends(NodesCommentCreatePathParams, _super);
     function NodesCommentCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesCommentCreatePathParams.prototype, "nodeId", void 0);
     return NodesCommentCreatePathParams;
-}(SpeakeasyBase));
-export { NodesCommentCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentCreatePathParams = NodesCommentCreatePathParams;
 // NodesCommentCreateCommentAttributesInput
 /**
  * The properties of the comment entity.
@@ -45,53 +48,53 @@ var NodesCommentCreateCommentAttributesInput = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], NodesCommentCreateCommentAttributesInput.prototype, "content", void 0);
     return NodesCommentCreateCommentAttributesInput;
-}(SpeakeasyBase));
-export { NodesCommentCreateCommentAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentCreateCommentAttributesInput = NodesCommentCreateCommentAttributesInput;
 var NodesCommentCreateCommentInput = /** @class */ (function (_super) {
     __extends(NodesCommentCreateCommentInput, _super);
     function NodesCommentCreateCommentInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesCommentCreateCommentAttributesInput)
     ], NodesCommentCreateCommentInput.prototype, "attributes", void 0);
     return NodesCommentCreateCommentInput;
-}(SpeakeasyBase));
-export { NodesCommentCreateCommentInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentCreateCommentInput = NodesCommentCreateCommentInput;
 var NodesCommentCreateRequest = /** @class */ (function (_super) {
     __extends(NodesCommentCreateRequest, _super);
     function NodesCommentCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesCommentCreatePathParams)
     ], NodesCommentCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesCommentCreateCommentInput)
     ], NodesCommentCreateRequest.prototype, "request", void 0);
     return NodesCommentCreateRequest;
-}(SpeakeasyBase));
-export { NodesCommentCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentCreateRequest = NodesCommentCreateRequest;
 var NodesCommentCreateResponse = /** @class */ (function (_super) {
     __extends(NodesCommentCreateResponse, _super);
     function NodesCommentCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesCommentCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesCommentCreateResponse.prototype, "statusCode", void 0);
     return NodesCommentCreateResponse;
-}(SpeakeasyBase));
-export { NodesCommentCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentCreateResponse = NodesCommentCreateResponse;

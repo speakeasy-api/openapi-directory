@@ -21,6 +21,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugRefsRequest extends Speakea
 export declare class GetRepositoriesWorkspaceRepoSlugRefsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedRefs?: shared.PaginatedRefs;
 }

@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,62 +31,61 @@ export class SecretManagement {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/accounts/{api_key}/secrets", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/accounts/{api_key}/secrets", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CreateApiSecretResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.secretInfo = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.createApiSecret400ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.createAPISecret400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.createApiSecret401ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.createAPISecret401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.errorApiKeyNotFound = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.errorAPIKeyNotFound = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -103,41 +101,42 @@ export class SecretManagement {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/accounts/{api_key}/secrets/{secret_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/accounts/{api_key}/secrets/{secret_id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.RetrieveApiSecretResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.secretInfo = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.retrieveApiSecret401ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.retrieveAPISecret401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.retrieveApiSecret404ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.retrieveAPISecret404ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -153,41 +152,42 @@ export class SecretManagement {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/accounts/{api_key}/secrets", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/accounts/{api_key}/secrets", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.RetrieveApiSecretsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.retrieveApiSecrets200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.retrieveAPISecrets200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.retrieveApiSecrets401ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.retrieveAPISecrets401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.errorApiKeyNotFound = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.errorAPIKeyNotFound = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -203,16 +203,18 @@ export class SecretManagement {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/accounts/{api_key}/secrets/{secret_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/accounts/{api_key}/secrets/{secret_id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -221,25 +223,24 @@ export class SecretManagement {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.revokeApiSecret401ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.revokeAPISecret401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.revokeApiSecret403ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.revokeAPISecret403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.revokeApiSecret404ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.revokeAPISecret404ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactRequest } from "./contactrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendMessagesRequest = exports.SendMessagesRequestTypeEnum = exports.SendMessagesRequestMedia = exports.SendMessagesRequestFilters = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactrequest_1 = require("./contactrequest");
 var SendMessagesRequestFilters = /** @class */ (function (_super) {
     __extends(SendMessagesRequestFilters, _super);
     function SendMessagesRequestFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", Array)
     ], SendMessagesRequestFilters.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], SendMessagesRequestFilters.prototype, "tags", void 0);
     return SendMessagesRequestFilters;
-}(SpeakeasyBase));
-export { SendMessagesRequestFilters };
+}(utils_1.SpeakeasyBase));
+exports.SendMessagesRequestFilters = SendMessagesRequestFilters;
 var SendMessagesRequestMedia = /** @class */ (function (_super) {
     __extends(SendMessagesRequestMedia, _super);
     function SendMessagesRequestMedia() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], SendMessagesRequestMedia.prototype, "url", void 0);
     return SendMessagesRequestMedia;
-}(SpeakeasyBase));
-export { SendMessagesRequestMedia };
-export var SendMessagesRequestTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.SendMessagesRequestMedia = SendMessagesRequestMedia;
+var SendMessagesRequestTypeEnum;
 (function (SendMessagesRequestTypeEnum) {
     SendMessagesRequestTypeEnum["Sms"] = "SMS";
     SendMessagesRequestTypeEnum["Mms"] = "MMS";
-})(SendMessagesRequestTypeEnum || (SendMessagesRequestTypeEnum = {}));
+})(SendMessagesRequestTypeEnum = exports.SendMessagesRequestTypeEnum || (exports.SendMessagesRequestTypeEnum = {}));
 var SendMessagesRequest = /** @class */ (function (_super) {
     __extends(SendMessagesRequest, _super);
     function SendMessagesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts", elemType: ContactRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts", elemType: contactrequest_1.ContactRequest }),
         __metadata("design:type", Array)
     ], SendMessagesRequest.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversationStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversationStrategy" }),
         __metadata("design:type", String)
     ], SendMessagesRequest.prototype, "conversationStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversations" }),
         __metadata("design:type", Array)
     ], SendMessagesRequest.prototype, "conversations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
         __metadata("design:type", SendMessagesRequestFilters)
     ], SendMessagesRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media", elemType: SendMessagesRequestMedia }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media", elemType: SendMessagesRequestMedia }),
         __metadata("design:type", Array)
     ], SendMessagesRequest.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template" }),
         __metadata("design:type", String)
     ], SendMessagesRequest.prototype, "template", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SendMessagesRequest.prototype, "type", void 0);
     return SendMessagesRequest;
-}(SpeakeasyBase));
-export { SendMessagesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SendMessagesRequest = SendMessagesRequest;

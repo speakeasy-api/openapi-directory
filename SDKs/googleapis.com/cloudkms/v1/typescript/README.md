@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudkmsProjectsLocationsEkmConnectionsCreateRequest, CloudkmsProjectsLocationsEkmConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,57 +31,47 @@ const req: CloudkmsProjectsLocationsEkmConnectionsCreateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    parent: "quidem",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "dolores",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "illo",
-    ekmConnectionId: "nobis",
-    fields: "in",
-    key: "consequuntur",
-    oauthToken: "unde",
-    prettyPrint: true,
-    quotaUser: "debitis",
-    uploadType: "velit",
-    uploadProtocol: "id",
+    callback: "consequuntur",
+    ekmConnectionId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    etag: "occaecati",
+    etag: "debitis",
     serviceResolvers: [
       {
-        endpointFilter: "perferendis",
-        hostname: "sed",
+        endpointFilter: "et",
+        hostname: "ut",
         serverCertificates: [
           {
-            rawDer: "ipsam",
+            rawDer: "et",
           },
           {
-            rawDer: "molestiae",
+            rawDer: "voluptate",
           },
           {
-            rawDer: "mollitia",
+            rawDer: "iste",
           },
         ],
-        serviceDirectoryService: "omnis",
-      },
-      {
-        endpointFilter: "quaerat",
-        hostname: "eligendi",
-        serverCertificates: [
-          {
-            rawDer: "cum",
-          },
-        ],
-        serviceDirectoryService: "doloribus",
+        serviceDirectoryService: "vitae",
       },
     ],
   },

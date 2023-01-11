@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVolumesNameJsonResponse = exports.GetVolumesNameJsonRequest = exports.GetVolumesNameJsonHeaders = exports.GetVolumesNameJsonPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVolumesNameJsonPathParams = /** @class */ (function (_super) {
     __extends(GetVolumesNameJsonPathParams, _super);
     function GetVolumesNameJsonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetVolumesNameJsonPathParams.prototype, "name", void 0);
     return GetVolumesNameJsonPathParams;
-}(SpeakeasyBase));
-export { GetVolumesNameJsonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesNameJsonPathParams = GetVolumesNameJsonPathParams;
 var GetVolumesNameJsonHeaders = /** @class */ (function (_super) {
     __extends(GetVolumesNameJsonHeaders, _super);
     function GetVolumesNameJsonHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], GetVolumesNameJsonHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], GetVolumesNameJsonHeaders.prototype, "xAuthToken", void 0);
     return GetVolumesNameJsonHeaders;
-}(SpeakeasyBase));
-export { GetVolumesNameJsonHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesNameJsonHeaders = GetVolumesNameJsonHeaders;
 var GetVolumesNameJsonRequest = /** @class */ (function (_super) {
     __extends(GetVolumesNameJsonRequest, _super);
     function GetVolumesNameJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesNameJsonPathParams)
     ], GetVolumesNameJsonRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesNameJsonHeaders)
     ], GetVolumesNameJsonRequest.prototype, "headers", void 0);
     return GetVolumesNameJsonRequest;
-}(SpeakeasyBase));
-export { GetVolumesNameJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesNameJsonRequest = GetVolumesNameJsonRequest;
 var GetVolumesNameJsonResponse = /** @class */ (function (_super) {
     __extends(GetVolumesNameJsonResponse, _super);
     function GetVolumesNameJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVolumesNameJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVolumesNameJsonResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetVolumesNameJsonResponse.prototype, "volume", void 0);
     return GetVolumesNameJsonResponse;
-}(SpeakeasyBase));
-export { GetVolumesNameJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesNameJsonResponse = GetVolumesNameJsonResponse;

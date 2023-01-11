@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { KecerRequest, KecerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: KecerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      documentNumber: "enim",
+      documentNumber: "sit",
     },
-    consentArtifact: "quia",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "omnis",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.kecer(req).then((res: KecerResponse | AxiosError) => {
+sdk.apIs.kecer(req).then((res: KecerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.kecer(req).then((res: KecerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `kecer` - Khatha Extract / Certificate
 * `tapcn` - New Tap Connection

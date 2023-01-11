@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MessageFormatValueEnum } from "./messageformatvalueenum";
-import { KafkaSecurityProtocolEnum } from "./kafkasecurityprotocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KafkaSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var messageformatvalueenum_1 = require("./messageformatvalueenum");
+var kafkasecurityprotocolenum_1 = require("./kafkasecurityprotocolenum");
 // KafkaSettings
 /**
  * Provides information that describes an Apache Kafka endpoint. This information includes the output format of records applied to the endpoint and details of transaction and control table data information.
@@ -35,77 +38,77 @@ var KafkaSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Broker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Broker" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "broker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeControlDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeControlDetails" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "includeControlDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeNullAndEmpty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeNullAndEmpty" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "includeNullAndEmpty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludePartitionValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludePartitionValue" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "includePartitionValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeTableAlterOperations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeTableAlterOperations" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "includeTableAlterOperations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeTransactionDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeTransactionDetails" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "includeTransactionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageFormat" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "messageFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageMaxBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageMaxBytes" }),
         __metadata("design:type", Number)
     ], KafkaSettings.prototype, "messageMaxBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoHexPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoHexPrefix" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "noHexPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionIncludeSchemaTable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionIncludeSchemaTable" }),
         __metadata("design:type", Boolean)
     ], KafkaSettings.prototype, "partitionIncludeSchemaTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SaslPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SaslPassword" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "saslPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SaslUsername" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SaslUsername" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "saslUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityProtocol" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "securityProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslCaCertificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslCaCertificateArn" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "sslCaCertificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslClientCertificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslClientCertificateArn" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "sslClientCertificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslClientKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslClientKeyArn" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "sslClientKeyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslClientKeyPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslClientKeyPassword" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "sslClientKeyPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Topic" }),
         __metadata("design:type", String)
     ], KafkaSettings.prototype, "topic", void 0);
     return KafkaSettings;
-}(SpeakeasyBase));
-export { KafkaSettings };
+}(utils_1.SpeakeasyBase));
+exports.KafkaSettings = KafkaSettings;

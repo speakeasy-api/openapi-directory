@@ -2,7 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class RirInput extends SpeakeasyBase {
+export class Rir extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: number;
+
   @SpeakeasyMetadata({ data: "json, name=is_private" })
   isPrivate?: boolean;
 
@@ -14,10 +17,7 @@ export class RirInput extends SpeakeasyBase {
 }
 
 
-export class Rir extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: number;
-
+export class RirInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=is_private" })
   isPrivate?: boolean;
 

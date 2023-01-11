@@ -29,7 +29,7 @@ export class GetQueryResponseResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getQueryResponse200ApplicationJsonBinaryString?: Uint8Array;
+  getQueryResponse200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TableRestoreStatus } from "./tablerestorestatus";
+import { TableRestoreStatusList } from "./tablerestorestatuslist";
 
 
 
@@ -11,6 +11,6 @@ export class TableRestoreStatusMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: TableRestoreStatus })
-  tableRestoreStatusDetails?: TableRestoreStatus[];
+  @SpeakeasyMetadata({ elemType: TableRestoreStatusList })
+  tableRestoreStatusDetails?: TableRestoreStatusList[];
 }

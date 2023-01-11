@@ -19,7 +19,7 @@ export declare class MybusinessAccountsGenerateAccountNumberQueryParams extends 
 export declare class MybusinessAccountsGenerateAccountNumberRequest extends SpeakeasyBase {
     pathParams: MybusinessAccountsGenerateAccountNumberPathParams;
     queryParams: MybusinessAccountsGenerateAccountNumberQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class MybusinessAccountsGenerateAccountNumberResponse extends SpeakeasyBase {
     account?: shared.Account;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface = exports.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum;
 (function (GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum) {
     GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum["InterfaceTypeUnspecified"] = "INTERFACE_TYPE_UNSPECIFIED";
     GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum["Bond"] = "BOND";
     GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum["Nic"] = "NIC";
-})(GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum || (GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum = {}));
+})(GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum = exports.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum || (exports.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum = {}));
 // GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface
 /**
  * Logical interface.
@@ -39,17 +42,17 @@ var GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface.prototype, "type", void 0);
     return GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface;
-}(SpeakeasyBase));
-export { GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface = GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface;

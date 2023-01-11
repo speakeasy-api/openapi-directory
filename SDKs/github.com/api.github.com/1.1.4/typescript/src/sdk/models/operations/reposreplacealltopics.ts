@@ -47,7 +47,7 @@ export class ReposReplaceAllTopicsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposReplaceAllTopics415ApplicationJsonObject?: ReposReplaceAllTopics415ApplicationJson;
+  reposReplaceAllTopics415ApplicationJSONObject?: ReposReplaceAllTopics415ApplicationJson;
 
   @SpeakeasyMetadata()
   topic?: shared.Topic;

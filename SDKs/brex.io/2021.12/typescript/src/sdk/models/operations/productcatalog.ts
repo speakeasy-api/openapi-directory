@@ -29,10 +29,10 @@ export class ProductCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productCatalog200ApplicationJsonAny?: any;
+  productCatalog200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productCatalogDefaultApplicationJsonAny?: any;
+  productCatalogDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

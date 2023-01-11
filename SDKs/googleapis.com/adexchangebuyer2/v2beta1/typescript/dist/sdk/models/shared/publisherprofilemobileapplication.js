@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PublisherProfileMobileApplicationAppStoreEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublisherProfileMobileApplication = exports.PublisherProfileMobileApplicationAppStoreEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PublisherProfileMobileApplicationAppStoreEnum;
 (function (PublisherProfileMobileApplicationAppStoreEnum) {
     PublisherProfileMobileApplicationAppStoreEnum["AppStoreTypeUnspecified"] = "APP_STORE_TYPE_UNSPECIFIED";
     PublisherProfileMobileApplicationAppStoreEnum["AppleItunes"] = "APPLE_ITUNES";
@@ -38,7 +41,7 @@ export var PublisherProfileMobileApplicationAppStoreEnum;
     PublisherProfileMobileApplicationAppStoreEnum["Samsung"] = "SAMSUNG";
     PublisherProfileMobileApplicationAppStoreEnum["Vivo"] = "VIVO";
     PublisherProfileMobileApplicationAppStoreEnum["Xiaomi"] = "XIAOMI";
-})(PublisherProfileMobileApplicationAppStoreEnum || (PublisherProfileMobileApplicationAppStoreEnum = {}));
+})(PublisherProfileMobileApplicationAppStoreEnum = exports.PublisherProfileMobileApplicationAppStoreEnum || (exports.PublisherProfileMobileApplicationAppStoreEnum = {}));
 // PublisherProfileMobileApplication
 /**
  * A mobile application that contains a external app ID, name, and app store.
@@ -49,17 +52,17 @@ var PublisherProfileMobileApplication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appStore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appStore" }),
         __metadata("design:type", String)
     ], PublisherProfileMobileApplication.prototype, "appStore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalAppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalAppId" }),
         __metadata("design:type", String)
     ], PublisherProfileMobileApplication.prototype, "externalAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PublisherProfileMobileApplication.prototype, "name", void 0);
     return PublisherProfileMobileApplication;
-}(SpeakeasyBase));
-export { PublisherProfileMobileApplication };
+}(utils_1.SpeakeasyBase));
+exports.PublisherProfileMobileApplication = PublisherProfileMobileApplication;

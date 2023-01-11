@@ -35,5 +35,5 @@ export class GetAccountsAccountIdAppsResponse extends SpeakeasyBase {
   appResponses?: shared.AppResponse[];
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

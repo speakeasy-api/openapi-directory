@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ThirdPartyLink } from "./thirdpartylink";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThirdPartyLinkListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var thirdpartylink_1 = require("./thirdpartylink");
 var ThirdPartyLinkListResponse = /** @class */ (function (_super) {
     __extends(ThirdPartyLinkListResponse, _super);
     function ThirdPartyLinkListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], ThirdPartyLinkListResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ThirdPartyLink }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: thirdpartylink_1.ThirdPartyLink }),
         __metadata("design:type", Array)
     ], ThirdPartyLinkListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ThirdPartyLinkListResponse.prototype, "kind", void 0);
     return ThirdPartyLinkListResponse;
-}(SpeakeasyBase));
-export { ThirdPartyLinkListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyLinkListResponse = ThirdPartyLinkListResponse;

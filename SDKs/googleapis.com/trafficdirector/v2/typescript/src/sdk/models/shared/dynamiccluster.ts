@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DynamicCluster extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=cluster" })
-  cluster?: Map<string, any>;
+  cluster?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdated" })
   lastUpdated?: string;

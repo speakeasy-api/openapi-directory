@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class UpdateEntitiesWithConditionsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=response" })
-  response?: Map<string, any>;
+  response?: Record<string, any>;
 }

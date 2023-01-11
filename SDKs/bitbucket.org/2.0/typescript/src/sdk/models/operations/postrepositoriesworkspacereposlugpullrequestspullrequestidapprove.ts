@@ -44,8 +44,8 @@ export class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApproveRe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  participant?: Map<string, any>;
+  participant?: Record<string, any>;
 }

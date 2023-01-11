@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetChatHeadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class GetChatHeadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetChatHeadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class GetChatHeadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class GetChatHeadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingGet200ApplicationJsonObject?: GetChatHeadUsingGet200ApplicationJson;
+  getChatHeadUsingGET200ApplicationJSONObject?: GetChatHeadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingGet400ApplicationJsonObject?: GetChatHeadUsingGet400ApplicationJson;
+  getChatHeadUsingGET400ApplicationJSONObject?: GetChatHeadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingGet401ApplicationJsonObject?: GetChatHeadUsingGet401ApplicationJson;
+  getChatHeadUsingGET401ApplicationJSONObject?: GetChatHeadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingGet500ApplicationJsonObject?: GetChatHeadUsingGet500ApplicationJson;
+  getChatHeadUsingGET500ApplicationJSONObject?: GetChatHeadUsingGet500ApplicationJson;
 }

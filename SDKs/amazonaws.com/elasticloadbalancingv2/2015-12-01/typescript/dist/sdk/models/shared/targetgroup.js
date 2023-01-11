@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolEnumEnum } from "./protocolenumenum";
-import { Matcher } from "./matcher";
-import { TargetTypeEnumEnum } from "./targettypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var protocolenumenum_1 = require("./protocolenumenum");
+var matcher_1 = require("./matcher");
+var targettypeenumenum_1 = require("./targettypeenumenum");
 // TargetGroup
 /**
  * Information about a target group.
@@ -36,73 +39,73 @@ var TargetGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], TargetGroup.prototype, "healthCheckEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetGroup.prototype, "healthCheckIntervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "healthCheckPath", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "healthCheckPort", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "healthCheckProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetGroup.prototype, "healthCheckTimeoutSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetGroup.prototype, "healthyThresholdCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TargetGroup.prototype, "loadBalancerArns", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Matcher)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", matcher_1.Matcher)
     ], TargetGroup.prototype, "matcher", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetGroup.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "protocolVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "targetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "targetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "targetType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetGroup.prototype, "unhealthyThresholdCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetGroup.prototype, "vpcId", void 0);
     return TargetGroup;
-}(SpeakeasyBase));
-export { TargetGroup };
+}(utils_1.SpeakeasyBase));
+exports.TargetGroup = TargetGroup;

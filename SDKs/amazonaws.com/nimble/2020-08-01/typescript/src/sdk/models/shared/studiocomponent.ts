@@ -57,7 +57,7 @@ export class StudioComponent extends SpeakeasyBase {
   subtype?: StudioComponentSubtypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: StudioComponentTypeEnum;

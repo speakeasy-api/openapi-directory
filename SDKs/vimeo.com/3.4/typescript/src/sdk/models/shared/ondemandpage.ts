@@ -1,12 +1,12 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Video } from "./video";
-import { OnDemandGenre } from "./ondemandgenre";
 import { PurchaseInteraction } from "./purchaseinteraction";
-import { Category } from "./category";
-import { EmbedSettings } from "./embedsettings";
 import { User } from "./user";
 import { Picture } from "./picture";
+import { Category } from "./category";
+import { EmbedSettings } from "./embedsettings";
 import { Tag } from "./tag";
+import { Video } from "./video";
+import { OnDemandGenre } from "./ondemandgenre";
 
 
 
@@ -314,7 +314,7 @@ export class OnDemandPageSubscription extends SpeakeasyBase {
   period?: string;
 
   @SpeakeasyMetadata({ data: "json, name=price" })
-  price: Map<string, any>;
+  price: Record<string, any>;
 }
 
 export enum OnDemandPageVideoContextActionEnum {
@@ -334,7 +334,7 @@ export class OnDemandPageVideoContext extends SpeakeasyBase {
   action: OnDemandPageVideoContextActionEnum;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
-  resource: Map<string, any>;
+  resource: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resource_type" })
   resourceType: string;

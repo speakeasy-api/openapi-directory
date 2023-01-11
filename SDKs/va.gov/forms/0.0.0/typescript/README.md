@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FindFormByFormNameRequest, FindFormByFormNameResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,11 +33,11 @@ const req: FindFormByFormNameRequest = {
     },
   },
   pathParams: {
-    formName: "qui",
+    formName: "sit",
   },
 };
 
-sdk.sdk.findFormByFormName(req).then((res: FindFormByFormNameResponse | AxiosError) => {
+sdk.forms.findFormByFormName(req).then((res: FindFormByFormNameResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.findFormByFormName(req).then((res: FindFormByFormNameResponse | AxiosErr
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Forms
 
 * `findFormByFormName` - Find form by form name
 * `findForms` - Returns all VA Forms and their last revision date

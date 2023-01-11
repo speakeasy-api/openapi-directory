@@ -45,6 +45,10 @@ export class GistSimpleGistFiles extends SpeakeasyBase {
 }
 
 
+// GistSimpleGistSimpleUser
+/** 
+ * Simple User
+**/
 export class GistSimpleGistSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -126,7 +130,7 @@ export class GistSimpleGist extends SpeakeasyBase {
   description: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: GistSimpleGistFiles })
-  files: Map<string, GistSimpleGistFiles>;
+  files: Record<string, GistSimpleGistFiles>;
 
   @SpeakeasyMetadata({ data: "json, name=forks" })
   forks?: any[];
@@ -193,13 +197,13 @@ export class GistSimple extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: GistSimpleFiles })
-  files?: Map<string, GistSimpleFiles>;
+  files?: Record<string, GistSimpleFiles>;
 
   @SpeakeasyMetadata({ data: "json, name=fork_of" })
   forkOf?: GistSimpleGist;
 
   @SpeakeasyMetadata({ data: "json, name=forks" })
-  forks?: Map<string, any>[];
+  forks?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=forks_url" })
   forksUrl?: string;
@@ -211,7 +215,7 @@ export class GistSimple extends SpeakeasyBase {
   gitPushUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=history" })
-  history?: Map<string, any>[];
+  history?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;

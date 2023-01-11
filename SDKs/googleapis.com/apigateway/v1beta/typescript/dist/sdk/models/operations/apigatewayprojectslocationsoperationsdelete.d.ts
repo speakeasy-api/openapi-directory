@@ -27,6 +27,6 @@ export declare class ApigatewayProjectsLocationsOperationsDeleteRequest extends 
 }
 export declare class ApigatewayProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

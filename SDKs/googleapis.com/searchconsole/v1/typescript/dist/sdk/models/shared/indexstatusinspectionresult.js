@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IndexStatusInspectionResultCrawledAsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IndexStatusInspectionResult = exports.IndexStatusInspectionResultVerdictEnum = exports.IndexStatusInspectionResultRobotsTxtStateEnum = exports.IndexStatusInspectionResultPageFetchStateEnum = exports.IndexStatusInspectionResultIndexingStateEnum = exports.IndexStatusInspectionResultCrawledAsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IndexStatusInspectionResultCrawledAsEnum;
 (function (IndexStatusInspectionResultCrawledAsEnum) {
     IndexStatusInspectionResultCrawledAsEnum["CrawlingUserAgentUnspecified"] = "CRAWLING_USER_AGENT_UNSPECIFIED";
     IndexStatusInspectionResultCrawledAsEnum["Desktop"] = "DESKTOP";
     IndexStatusInspectionResultCrawledAsEnum["Mobile"] = "MOBILE";
-})(IndexStatusInspectionResultCrawledAsEnum || (IndexStatusInspectionResultCrawledAsEnum = {}));
-export var IndexStatusInspectionResultIndexingStateEnum;
+})(IndexStatusInspectionResultCrawledAsEnum = exports.IndexStatusInspectionResultCrawledAsEnum || (exports.IndexStatusInspectionResultCrawledAsEnum = {}));
+var IndexStatusInspectionResultIndexingStateEnum;
 (function (IndexStatusInspectionResultIndexingStateEnum) {
     IndexStatusInspectionResultIndexingStateEnum["IndexingStateUnspecified"] = "INDEXING_STATE_UNSPECIFIED";
     IndexStatusInspectionResultIndexingStateEnum["IndexingAllowed"] = "INDEXING_ALLOWED";
     IndexStatusInspectionResultIndexingStateEnum["BlockedByMetaTag"] = "BLOCKED_BY_META_TAG";
     IndexStatusInspectionResultIndexingStateEnum["BlockedByHttpHeader"] = "BLOCKED_BY_HTTP_HEADER";
     IndexStatusInspectionResultIndexingStateEnum["BlockedByRobotsTxt"] = "BLOCKED_BY_ROBOTS_TXT";
-})(IndexStatusInspectionResultIndexingStateEnum || (IndexStatusInspectionResultIndexingStateEnum = {}));
-export var IndexStatusInspectionResultPageFetchStateEnum;
+})(IndexStatusInspectionResultIndexingStateEnum = exports.IndexStatusInspectionResultIndexingStateEnum || (exports.IndexStatusInspectionResultIndexingStateEnum = {}));
+var IndexStatusInspectionResultPageFetchStateEnum;
 (function (IndexStatusInspectionResultPageFetchStateEnum) {
     IndexStatusInspectionResultPageFetchStateEnum["PageFetchStateUnspecified"] = "PAGE_FETCH_STATE_UNSPECIFIED";
     IndexStatusInspectionResultPageFetchStateEnum["Successful"] = "SUCCESSFUL";
@@ -51,21 +54,21 @@ export var IndexStatusInspectionResultPageFetchStateEnum;
     IndexStatusInspectionResultPageFetchStateEnum["Blocked4Xx"] = "BLOCKED_4XX";
     IndexStatusInspectionResultPageFetchStateEnum["InternalCrawlError"] = "INTERNAL_CRAWL_ERROR";
     IndexStatusInspectionResultPageFetchStateEnum["InvalidUrl"] = "INVALID_URL";
-})(IndexStatusInspectionResultPageFetchStateEnum || (IndexStatusInspectionResultPageFetchStateEnum = {}));
-export var IndexStatusInspectionResultRobotsTxtStateEnum;
+})(IndexStatusInspectionResultPageFetchStateEnum = exports.IndexStatusInspectionResultPageFetchStateEnum || (exports.IndexStatusInspectionResultPageFetchStateEnum = {}));
+var IndexStatusInspectionResultRobotsTxtStateEnum;
 (function (IndexStatusInspectionResultRobotsTxtStateEnum) {
     IndexStatusInspectionResultRobotsTxtStateEnum["RobotsTxtStateUnspecified"] = "ROBOTS_TXT_STATE_UNSPECIFIED";
     IndexStatusInspectionResultRobotsTxtStateEnum["Allowed"] = "ALLOWED";
     IndexStatusInspectionResultRobotsTxtStateEnum["Disallowed"] = "DISALLOWED";
-})(IndexStatusInspectionResultRobotsTxtStateEnum || (IndexStatusInspectionResultRobotsTxtStateEnum = {}));
-export var IndexStatusInspectionResultVerdictEnum;
+})(IndexStatusInspectionResultRobotsTxtStateEnum = exports.IndexStatusInspectionResultRobotsTxtStateEnum || (exports.IndexStatusInspectionResultRobotsTxtStateEnum = {}));
+var IndexStatusInspectionResultVerdictEnum;
 (function (IndexStatusInspectionResultVerdictEnum) {
     IndexStatusInspectionResultVerdictEnum["VerdictUnspecified"] = "VERDICT_UNSPECIFIED";
     IndexStatusInspectionResultVerdictEnum["Pass"] = "PASS";
     IndexStatusInspectionResultVerdictEnum["Partial"] = "PARTIAL";
     IndexStatusInspectionResultVerdictEnum["Fail"] = "FAIL";
     IndexStatusInspectionResultVerdictEnum["Neutral"] = "NEUTRAL";
-})(IndexStatusInspectionResultVerdictEnum || (IndexStatusInspectionResultVerdictEnum = {}));
+})(IndexStatusInspectionResultVerdictEnum = exports.IndexStatusInspectionResultVerdictEnum || (exports.IndexStatusInspectionResultVerdictEnum = {}));
 // IndexStatusInspectionResult
 /**
  * Results of index status inspection for either the live page or the version in Google's index, depending on whether you requested a live inspection or not. For more information, see the [Index coverage report documentation](https://support.google.com/webmasters/answer/7440203).
@@ -76,49 +79,49 @@ var IndexStatusInspectionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverageState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverageState" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "coverageState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crawledAs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crawledAs" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "crawledAs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleCanonical" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "googleCanonical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indexingState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indexingState" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "indexingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastCrawlTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastCrawlTime" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "lastCrawlTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageFetchState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageFetchState" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "pageFetchState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referringUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referringUrls" }),
         __metadata("design:type", Array)
     ], IndexStatusInspectionResult.prototype, "referringUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=robotsTxtState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=robotsTxtState" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "robotsTxtState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sitemap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sitemap" }),
         __metadata("design:type", Array)
     ], IndexStatusInspectionResult.prototype, "sitemap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userCanonical" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "userCanonical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verdict" }),
         __metadata("design:type", String)
     ], IndexStatusInspectionResult.prototype, "verdict", void 0);
     return IndexStatusInspectionResult;
-}(SpeakeasyBase));
-export { IndexStatusInspectionResult };
+}(utils_1.SpeakeasyBase));
+exports.IndexStatusInspectionResult = IndexStatusInspectionResult;

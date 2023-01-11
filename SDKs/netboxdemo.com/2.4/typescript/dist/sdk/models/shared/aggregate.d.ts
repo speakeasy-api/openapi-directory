@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedRir } from "./nestedrir";
 export declare class Aggregate extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     dateAdded?: Date;
     description?: string;
     family?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Channel } from "./channel";
-import { StreamKey } from "./streamkey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var channel_1 = require("./channel");
+var streamkey_1 = require("./streamkey");
 var CreateChannelResponse = /** @class */ (function (_super) {
     __extends(CreateChannelResponse, _super);
     function CreateChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
-        __metadata("design:type", Channel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
+        __metadata("design:type", channel_1.Channel)
     ], CreateChannelResponse.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamKey" }),
-        __metadata("design:type", StreamKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamKey" }),
+        __metadata("design:type", streamkey_1.StreamKey)
     ], CreateChannelResponse.prototype, "streamKey", void 0);
     return CreateChannelResponse;
-}(SpeakeasyBase));
-export { CreateChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateChannelResponse = CreateChannelResponse;

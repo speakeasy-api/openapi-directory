@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Genre } from "./genre";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGenresResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var genre_1 = require("./genre");
 var GetGenresResponse = /** @class */ (function (_super) {
     __extends(GetGenresResponse, _super);
     function GetGenresResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genres", elemType: Genre }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genres", elemType: genre_1.Genre }),
         __metadata("design:type", Array)
     ], GetGenresResponse.prototype, "genres", void 0);
     return GetGenresResponse;
-}(SpeakeasyBase));
-export { GetGenresResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGenresResponse = GetGenresResponse;

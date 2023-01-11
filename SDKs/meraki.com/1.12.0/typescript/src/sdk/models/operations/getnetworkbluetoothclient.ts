@@ -37,5 +37,5 @@ export class GetNetworkBluetoothClientResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkBluetoothClient200ApplicationJsonObject?: Map<string, any>;
+  getNetworkBluetoothClient200ApplicationJSONObject?: Record<string, any>;
 }

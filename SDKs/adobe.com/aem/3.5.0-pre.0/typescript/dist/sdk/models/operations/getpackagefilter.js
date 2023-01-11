@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPackageFilterResponse = exports.GetPackageFilterRequest = exports.GetPackageFilterPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPackageFilterPathParams = /** @class */ (function (_super) {
     __extends(GetPackageFilterPathParams, _super);
     function GetPackageFilterPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=group" }),
         __metadata("design:type", String)
     ], GetPackageFilterPathParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetPackageFilterPathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], GetPackageFilterPathParams.prototype, "version", void 0);
     return GetPackageFilterPathParams;
-}(SpeakeasyBase));
-export { GetPackageFilterPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPackageFilterPathParams = GetPackageFilterPathParams;
 var GetPackageFilterRequest = /** @class */ (function (_super) {
     __extends(GetPackageFilterRequest, _super);
     function GetPackageFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPackageFilterPathParams)
     ], GetPackageFilterRequest.prototype, "pathParams", void 0);
     return GetPackageFilterRequest;
-}(SpeakeasyBase));
-export { GetPackageFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPackageFilterRequest = GetPackageFilterRequest;
 var GetPackageFilterResponse = /** @class */ (function (_super) {
     __extends(GetPackageFilterResponse, _super);
     function GetPackageFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPackageFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPackageFilterResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetPackageFilterResponse.prototype, "getPackageFilterDefaultApplicationJsonString", void 0);
+    ], GetPackageFilterResponse.prototype, "getPackageFilterDefaultApplicationJSONString", void 0);
     return GetPackageFilterResponse;
-}(SpeakeasyBase));
-export { GetPackageFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPackageFilterResponse = GetPackageFilterResponse;

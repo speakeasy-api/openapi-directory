@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FmcerRequest, FmcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: FmcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      uid: "eveniet",
+      uid: "sit",
     },
-    consentArtifact: "aut",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "rem",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.fmcer(req).then((res: FmcerResponse | AxiosError) => {
+sdk.apIs.fmcer(req).then((res: FmcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.fmcer(req).then((res: FmcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `fmcer` - Family Membership Certificate
 

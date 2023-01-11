@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransformProcessingConfig } from "./transformprocessingconfig";
-import { ExpressionVariable } from "./expressionvariable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transform = void 0;
+var utils_1 = require("../../../internal/utils");
+var transformprocessingconfig_1 = require("./transformprocessingconfig");
+var expressionvariable_1 = require("./expressionvariable");
 // Transform
 /**
  * <p>Contains an asset transform property. A transform is a one-to-one mapping of a property's data points from one form to another. For example, you can use a transform to convert a Celsius data stream to Fahrenheit by applying the transformation expression to each data point of the Celsius stream. A transform can only have a data type of <code>DOUBLE</code> and consume properties with data types of <code>INTEGER</code> or <code>DOUBLE</code>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#transforms">Transforms</a> in the <i>IoT SiteWise User Guide</i>.</p>
@@ -35,17 +38,17 @@ var Transform = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], Transform.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingConfig" }),
-        __metadata("design:type", TransformProcessingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingConfig" }),
+        __metadata("design:type", transformprocessingconfig_1.TransformProcessingConfig)
     ], Transform.prototype, "processingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variables", elemType: ExpressionVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variables", elemType: expressionvariable_1.ExpressionVariable }),
         __metadata("design:type", Array)
     ], Transform.prototype, "variables", void 0);
     return Transform;
-}(SpeakeasyBase));
-export { Transform };
+}(utils_1.SpeakeasyBase));
+exports.Transform = Transform;

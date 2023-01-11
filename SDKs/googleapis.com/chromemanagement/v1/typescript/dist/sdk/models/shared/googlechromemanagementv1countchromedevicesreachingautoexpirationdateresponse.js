@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1DeviceAueCountReport } from "./googlechromemanagementv1deviceauecountreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1deviceauecountreport_1 = require("./googlechromemanagementv1deviceauecountreport");
 // GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse
 /**
  * Response containing a list of devices expiring in each month of a selected time frame. Counts are grouped by model and Auto Update Expiration date.
@@ -34,9 +37,9 @@ var GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceAueCountReports", elemType: GoogleChromeManagementV1DeviceAueCountReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceAueCountReports", elemType: googlechromemanagementv1deviceauecountreport_1.GoogleChromeManagementV1DeviceAueCountReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse.prototype, "deviceAueCountReports", void 0);
     return GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse = GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;

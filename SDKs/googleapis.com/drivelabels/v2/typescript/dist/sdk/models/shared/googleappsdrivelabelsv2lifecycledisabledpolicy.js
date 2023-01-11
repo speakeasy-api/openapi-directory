@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2LifecycleDisabledPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2LifecycleDisabledPolicy
 /**
  * The policy that governs how to treat a disabled label, field, or selection choice in different contexts.
@@ -33,13 +36,13 @@ var GoogleAppsDriveLabelsV2LifecycleDisabledPolicy = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideInSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideInSearch" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2LifecycleDisabledPolicy.prototype, "hideInSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showInApply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showInApply" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2LifecycleDisabledPolicy.prototype, "showInApply", void 0);
     return GoogleAppsDriveLabelsV2LifecycleDisabledPolicy;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2LifecycleDisabledPolicy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2LifecycleDisabledPolicy = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy;

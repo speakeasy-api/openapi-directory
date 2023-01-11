@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FunctionSummary } from "./functionsummary";
+import { FunctionSummaryList } from "./functionsummarylist";
 /**
  * A list of CloudFront functions.
 **/
 export declare class FunctionList extends SpeakeasyBase {
-    items?: FunctionSummary[];
+    items?: FunctionSummaryList[];
     maxItems: number;
     nextMarker?: string;
     quantity: number;

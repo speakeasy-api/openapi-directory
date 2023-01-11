@@ -6,6 +6,6 @@ export declare class SamplingTargetDocument extends SpeakeasyBase {
     fixedRate?: number;
     interval?: number;
     reservoirQuota?: number;
-    reservoirQuotaTtl?: Date;
+    reservoirQuotaTTL?: Date;
     ruleName?: string;
 }

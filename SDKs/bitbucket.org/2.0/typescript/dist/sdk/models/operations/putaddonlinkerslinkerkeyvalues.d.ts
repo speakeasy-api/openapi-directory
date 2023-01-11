@@ -15,5 +15,5 @@ export declare class PutAddonLinkersLinkerKeyValuesRequest extends SpeakeasyBase
 export declare class PutAddonLinkersLinkerKeyValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

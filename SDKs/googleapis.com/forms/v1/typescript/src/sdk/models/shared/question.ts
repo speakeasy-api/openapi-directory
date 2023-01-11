@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChoiceQuestion } from "./choicequestion";
+import { ChoiceQuestionInput } from "./choicequestion";
 import { DateQuestion } from "./datequestion";
 import { FileUploadQuestion } from "./fileuploadquestion";
 import { Grading } from "./grading";
@@ -7,17 +7,17 @@ import { RowQuestion } from "./rowquestion";
 import { ScaleQuestion } from "./scalequestion";
 import { TextQuestion } from "./textquestion";
 import { TimeQuestion } from "./timequestion";
-import { ChoiceQuestionInput } from "./choicequestion";
+import { ChoiceQuestion } from "./choicequestion";
 
 
 
-// Question
+// QuestionInput
 /** 
  * Any question. The specific type of question is known by its `kind`.
 **/
-export class Question extends SpeakeasyBase {
+export class QuestionInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=choiceQuestion" })
-  choiceQuestion?: ChoiceQuestion;
+  choiceQuestion?: ChoiceQuestionInput;
 
   @SpeakeasyMetadata({ data: "json, name=dateQuestion" })
   dateQuestion?: DateQuestion;
@@ -48,13 +48,13 @@ export class Question extends SpeakeasyBase {
 }
 
 
-// QuestionInput
+// Question
 /** 
  * Any question. The specific type of question is known by its `kind`.
 **/
-export class QuestionInput extends SpeakeasyBase {
+export class Question extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=choiceQuestion" })
-  choiceQuestion?: ChoiceQuestionInput;
+  choiceQuestion?: ChoiceQuestion;
 
   @SpeakeasyMetadata({ data: "json, name=dateQuestion" })
   dateQuestion?: DateQuestion;

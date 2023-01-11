@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Mds = void 0;
+var utils_1 = require("../../../internal/utils");
 // Mds
 /**
  * Describes Market days supply results for year make model trim combination
@@ -33,37 +36,37 @@ var Mds = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make" }),
         __metadata("design:type", String)
     ], Mds.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mds" }),
         __metadata("design:type", Number)
     ], Mds.prototype, "mds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], Mds.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sold_vins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sold_vins" }),
         __metadata("design:type", Array)
     ], Mds.prototype, "soldVins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_active_cars_for_ymmt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_active_cars_for_ymmt" }),
         __metadata("design:type", Number)
     ], Mds.prototype, "totalActiveCarsForYmmt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_cars_sold_in_last_45_days" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_cars_sold_in_last_45_days" }),
         __metadata("design:type", Number)
     ], Mds.prototype, "totalCarsSoldInLast45Days", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trim" }),
         __metadata("design:type", String)
     ], Mds.prototype, "trim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], Mds.prototype, "year", void 0);
     return Mds;
-}(SpeakeasyBase));
-export { Mds };
+}(utils_1.SpeakeasyBase));
+exports.Mds = Mds;

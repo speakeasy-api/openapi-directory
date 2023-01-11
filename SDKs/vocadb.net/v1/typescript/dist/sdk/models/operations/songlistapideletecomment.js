@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SongListApiDeleteCommentResponse = exports.SongListApiDeleteCommentRequest = exports.SongListApiDeleteCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SongListApiDeleteCommentPathParams = /** @class */ (function (_super) {
     __extends(SongListApiDeleteCommentPathParams, _super);
     function SongListApiDeleteCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commentId" }),
         __metadata("design:type", Number)
     ], SongListApiDeleteCommentPathParams.prototype, "commentId", void 0);
     return SongListApiDeleteCommentPathParams;
-}(SpeakeasyBase));
-export { SongListApiDeleteCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteCommentPathParams = SongListApiDeleteCommentPathParams;
 var SongListApiDeleteCommentRequest = /** @class */ (function (_super) {
     __extends(SongListApiDeleteCommentRequest, _super);
     function SongListApiDeleteCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SongListApiDeleteCommentPathParams)
     ], SongListApiDeleteCommentRequest.prototype, "pathParams", void 0);
     return SongListApiDeleteCommentRequest;
-}(SpeakeasyBase));
-export { SongListApiDeleteCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteCommentRequest = SongListApiDeleteCommentRequest;
 var SongListApiDeleteCommentResponse = /** @class */ (function (_super) {
     __extends(SongListApiDeleteCommentResponse, _super);
     function SongListApiDeleteCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SongListApiDeleteCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SongListApiDeleteCommentResponse.prototype, "statusCode", void 0);
     return SongListApiDeleteCommentResponse;
-}(SpeakeasyBase));
-export { SongListApiDeleteCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteCommentResponse = SongListApiDeleteCommentResponse;

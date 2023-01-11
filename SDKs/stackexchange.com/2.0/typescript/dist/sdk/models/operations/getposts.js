@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPostsOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPostsResponse = exports.GetPostsRequest = exports.GetPostsQueryParams = exports.GetPostsSortEnum = exports.GetPostsOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPostsOrderEnum;
 (function (GetPostsOrderEnum) {
     GetPostsOrderEnum["Desc"] = "desc";
     GetPostsOrderEnum["Asc"] = "asc";
-})(GetPostsOrderEnum || (GetPostsOrderEnum = {}));
-export var GetPostsSortEnum;
+})(GetPostsOrderEnum = exports.GetPostsOrderEnum || (exports.GetPostsOrderEnum = {}));
+var GetPostsSortEnum;
 (function (GetPostsSortEnum) {
     GetPostsSortEnum["Activity"] = "activity";
     GetPostsSortEnum["Creation"] = "creation";
     GetPostsSortEnum["Votes"] = "votes";
-})(GetPostsSortEnum || (GetPostsSortEnum = {}));
+})(GetPostsSortEnum = exports.GetPostsSortEnum || (exports.GetPostsSortEnum = {}));
 var GetPostsQueryParams = /** @class */ (function (_super) {
     __extends(GetPostsQueryParams, _super);
     function GetPostsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetPostsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetPostsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetPostsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetPostsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetPostsQueryParams.prototype, "todate", void 0);
     return GetPostsQueryParams;
-}(SpeakeasyBase));
-export { GetPostsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsQueryParams = GetPostsQueryParams;
 var GetPostsRequest = /** @class */ (function (_super) {
     __extends(GetPostsRequest, _super);
     function GetPostsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPostsQueryParams)
     ], GetPostsRequest.prototype, "queryParams", void 0);
     return GetPostsRequest;
-}(SpeakeasyBase));
-export { GetPostsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsRequest = GetPostsRequest;
 var GetPostsResponse = /** @class */ (function (_super) {
     __extends(GetPostsResponse, _super);
     function GetPostsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPostsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPostsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPostsResponse.prototype, "statusCode", void 0);
     return GetPostsResponse;
-}(SpeakeasyBase));
-export { GetPostsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsResponse = GetPostsResponse;

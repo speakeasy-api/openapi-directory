@@ -7,7 +7,7 @@ export declare class ProtocolMqttGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolMqttGetConfigPathParams;
 }
 export declare class ProtocolMqttGetConfigResponse extends SpeakeasyBase {
-    configMqtt?: shared.ConfigMqtt;
+    configMQTT?: shared.ConfigMqtt;
     contentType: string;
     statusCode: number;
 }

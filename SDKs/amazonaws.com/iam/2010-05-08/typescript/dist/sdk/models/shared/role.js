@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachedPermissionsBoundary } from "./attachedpermissionsboundary";
-import { RoleLastUsed } from "./rolelastused";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Role = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachedpermissionsboundary_1 = require("./attachedpermissionsboundary");
+var rolelastused_1 = require("./rolelastused");
+var tag_1 = require("./tag");
 // Role
 /**
  * Contains information about an IAM role. This structure is returned as a response element in several API operations that interact with roles.
@@ -36,49 +39,49 @@ var Role = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "assumeRolePolicyDocument", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], Role.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Role.prototype, "maxSessionDuration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttachedPermissionsBoundary)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", attachedpermissionsboundary_1.AttachedPermissionsBoundary)
     ], Role.prototype, "permissionsBoundary", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "roleId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RoleLastUsed)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", rolelastused_1.RoleLastUsed)
     ], Role.prototype, "roleLastUsed", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Role.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Role.prototype, "tags", void 0);
     return Role;
-}(SpeakeasyBase));
-export { Role };
+}(utils_1.SpeakeasyBase));
+exports.Role = Role;

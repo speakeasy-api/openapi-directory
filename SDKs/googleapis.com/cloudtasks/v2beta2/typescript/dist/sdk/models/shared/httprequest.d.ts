@@ -16,7 +16,7 @@ export declare enum HttpRequestHttpMethodEnum {
 **/
 export declare class HttpRequest extends SpeakeasyBase {
     body?: string;
-    headers?: Map<string, string>;
+    headers?: Record<string, string>;
     httpMethod?: HttpRequestHttpMethodEnum;
     oauthToken?: OAuthToken;
     oidcToken?: OidcToken;

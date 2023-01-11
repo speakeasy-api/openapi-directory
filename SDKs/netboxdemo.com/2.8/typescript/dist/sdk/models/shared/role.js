@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoleInput = exports.Role = void 0;
+var utils_1 = require("../../../internal/utils");
 var Role = /** @class */ (function (_super) {
     __extends(Role, _super);
     function Role() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Role.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Role.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Role.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix_count" }),
         __metadata("design:type", Number)
     ], Role.prototype, "prefixCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Role.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan_count" }),
         __metadata("design:type", Number)
     ], Role.prototype, "vlanCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], Role.prototype, "weight", void 0);
     return Role;
-}(SpeakeasyBase));
-export { Role };
+}(utils_1.SpeakeasyBase));
+exports.Role = Role;
 var RoleInput = /** @class */ (function (_super) {
     __extends(RoleInput, _super);
     function RoleInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RoleInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RoleInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], RoleInput.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], RoleInput.prototype, "weight", void 0);
     return RoleInput;
-}(SpeakeasyBase));
-export { RoleInput };
+}(utils_1.SpeakeasyBase));
+exports.RoleInput = RoleInput;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddEventSourceRequest, AddEventSourceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddEventSourceRequest = {
   headers: {
-    xAmzAlgorithm: "odit",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "voluptatibus",
-    xAmzDate: "aut",
-    xAmzSecurityToken: "repellendus",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "sunt",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    batchSize: 4853637501029258723,
-    eventSource: "voluptatem",
-    functionName: "natus",
+    batchSize: 6044372234677422456,
+    eventSource: "fugit",
+    functionName: "et",
     parameters: {
-      "incidunt": "voluptatem",
-      "omnis": "illum",
+      "rerum": "dicta",
     },
-    role: "eligendi",
+    role: "debitis",
   },
 };
 
-sdk.sdk.addEventSource(req).then((res: AddEventSourceResponse | AxiosError) => {
+sdk.addEventSource(req).then((res: AddEventSourceResponse | AxiosError) => {
    // handle response
 });
 ```

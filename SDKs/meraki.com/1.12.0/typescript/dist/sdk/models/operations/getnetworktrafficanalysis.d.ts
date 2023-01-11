@@ -8,5 +8,5 @@ export declare class GetNetworkTrafficAnalysisRequest extends SpeakeasyBase {
 export declare class GetNetworkTrafficAnalysisResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkTrafficAnalysis200ApplicationJsonObject?: Map<string, any>;
+    getNetworkTrafficAnalysis200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,4 +1,7 @@
-export var DecisionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecisionTypeEnum = void 0;
+var DecisionTypeEnum;
 (function (DecisionTypeEnum) {
     DecisionTypeEnum["ScheduleActivityTask"] = "ScheduleActivityTask";
     DecisionTypeEnum["RequestCancelActivityTask"] = "RequestCancelActivityTask";
@@ -13,4 +16,4 @@ export var DecisionTypeEnum;
     DecisionTypeEnum["RequestCancelExternalWorkflowExecution"] = "RequestCancelExternalWorkflowExecution";
     DecisionTypeEnum["StartChildWorkflowExecution"] = "StartChildWorkflowExecution";
     DecisionTypeEnum["ScheduleLambdaFunction"] = "ScheduleLambdaFunction";
-})(DecisionTypeEnum || (DecisionTypeEnum = {}));
+})(DecisionTypeEnum = exports.DecisionTypeEnum || (exports.DecisionTypeEnum = {}));

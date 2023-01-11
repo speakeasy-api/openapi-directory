@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -46,15 +45,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -63,7 +64,7 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -75,7 +76,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -105,37 +105,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsAddOrUpdateMembershipForUserInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamMembership = httpRes?.data;
             }
             break;
@@ -147,7 +147,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -177,44 +176,44 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsAddOrUpdateMembershipForUserLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamMembership = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -224,7 +223,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -246,30 +244,30 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -278,15 +276,14 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -308,30 +305,30 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -340,22 +337,22 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -363,7 +360,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -387,30 +383,30 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -422,7 +418,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -446,30 +441,30 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -478,12 +473,12 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -491,7 +486,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -513,22 +507,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCheckPermissionsForProjectInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamProject = httpRes?.data;
             }
             break;
@@ -538,7 +534,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -560,37 +555,38 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCheckPermissionsForProjectLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamProject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             break;
           case httpRes?.status == 415:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsCheckPermissionsForProjectLegacy415ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -616,22 +612,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCheckPermissionsForRepoInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamRepository = httpRes?.data;
             }
             break;
@@ -643,7 +641,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -667,22 +664,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCheckPermissionsForRepoLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamRepository = httpRes?.data;
             }
             break;
@@ -694,7 +693,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -716,47 +714,47 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCreateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -764,7 +762,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -788,37 +785,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCreateDiscussionCommentInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -826,7 +823,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -850,37 +846,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCreateDiscussionCommentLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -888,7 +884,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -912,37 +907,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCreateDiscussionInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -950,7 +945,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -974,37 +968,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsCreateDiscussionLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -1012,7 +1006,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1034,15 +1027,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1054,7 +1049,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1076,15 +1070,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1096,7 +1092,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1118,15 +1113,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1138,7 +1135,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1160,15 +1156,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1180,7 +1178,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1204,15 +1201,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1224,7 +1223,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1248,15 +1246,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1265,12 +1265,12 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -1278,7 +1278,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1300,27 +1299,29 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetByNameResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -1328,7 +1329,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1350,22 +1350,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetDiscussionCommentInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -1373,7 +1375,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1395,22 +1396,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetDiscussionCommentLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -1418,7 +1421,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1440,22 +1442,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetDiscussionInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -1463,7 +1467,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1485,22 +1488,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetDiscussionLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -1508,7 +1513,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1528,27 +1532,29 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -1556,7 +1562,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1580,15 +1585,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -1602,7 +1609,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1631,22 +1637,24 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetMembershipForUserInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamMembership = httpRes?.data;
             }
             break;
@@ -1656,7 +1664,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1685,27 +1692,29 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsGetMembershipForUserLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamMembership = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -1713,7 +1722,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1733,10 +1741,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1744,24 +1752,26 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teams = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -1769,7 +1779,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1791,10 +1800,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/teams", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/teams", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1802,19 +1811,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListChildInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListChildInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teams = httpRes?.data;
             }
             break;
@@ -1822,7 +1833,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1842,10 +1852,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/teams", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/teams", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1853,34 +1863,36 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListChildLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListChildLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teams = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -1888,7 +1900,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1910,10 +1921,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1921,19 +1932,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListDiscussionCommentsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListDiscussionCommentsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComments = httpRes?.data;
             }
             break;
@@ -1941,7 +1954,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1963,10 +1975,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1974,19 +1986,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListDiscussionCommentsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListDiscussionCommentsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComments = httpRes?.data;
             }
             break;
@@ -1994,7 +2008,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2016,10 +2029,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2027,19 +2040,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListDiscussionsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListDiscussionsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussions = httpRes?.data;
             }
             break;
@@ -2047,7 +2062,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2069,10 +2083,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2080,19 +2094,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListDiscussionsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListDiscussionsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussions = httpRes?.data;
             }
             break;
@@ -2100,7 +2116,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2123,7 +2138,7 @@ export class Teams {
     const url: string = baseURL.replace(/\/$/, "") + "/user/teams";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2131,31 +2146,33 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListForAuthenticatedUserResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListForAuthenticatedUserResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFulls = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -2163,7 +2180,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2185,10 +2201,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/members", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/members", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2196,19 +2212,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListMembersInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListMembersInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.simpleUsers = httpRes?.data;
             }
             break;
@@ -2216,7 +2234,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2238,10 +2255,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/members", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/members", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2249,24 +2266,26 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListMembersLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListMembersLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.simpleUsers = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -2274,7 +2293,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2296,10 +2314,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2307,19 +2325,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListProjectsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListProjectsInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamProjects = httpRes?.data;
             }
             break;
@@ -2327,7 +2347,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2349,10 +2368,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/projects", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/projects", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2360,37 +2379,38 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListProjectsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListProjectsLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamProjects = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsListProjectsLegacy415ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsListProjectsLegacy415ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2412,10 +2432,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2423,19 +2443,21 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListReposInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListReposInOrgResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.minimalRepositories = httpRes?.data;
             }
             break;
@@ -2443,7 +2465,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2463,10 +2484,10 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/repos", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/repos", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -2474,24 +2495,26 @@ export class Teams {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.TeamsListReposLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.TeamsListReposLegacyResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.minimalRepositories = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
@@ -2499,7 +2522,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2527,15 +2549,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/members/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2549,7 +2573,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2575,15 +2598,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2597,7 +2622,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2623,15 +2647,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/memberships/{username}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2645,7 +2671,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2667,15 +2692,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2687,7 +2714,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2709,15 +2735,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/projects/{project_id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2726,17 +2754,17 @@ export class Teams {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.teamsRemoveProjectLegacy415ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.teamsRemoveProjectLegacy415ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -2744,7 +2772,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2766,15 +2793,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2786,7 +2815,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2808,15 +2836,17 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/repos/{owner}/{repo}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -2828,7 +2858,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2850,37 +2879,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateDiscussionCommentInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -2888,7 +2917,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2910,37 +2938,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateDiscussionCommentLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussionComment = httpRes?.data;
             }
             break;
@@ -2948,7 +2976,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -2970,37 +2997,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateDiscussionInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -3008,7 +3035,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3030,37 +3056,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}/discussions/{discussion_number}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateDiscussionLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamDiscussion = httpRes?.data;
             }
             break;
@@ -3068,7 +3094,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3090,37 +3115,37 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/orgs/{org}/teams/{team_slug}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateInOrgResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
@@ -3128,7 +3153,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -3152,57 +3176,57 @@ export class Teams {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/teams/{team_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/teams/{team_id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TeamsUpdateLegacyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamFull = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.basicError = httpRes?.data;
             }
             break;
           case httpRes?.status == 422:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.validationError = httpRes?.data;
             }
             break;
@@ -3210,7 +3234,6 @@ export class Teams {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

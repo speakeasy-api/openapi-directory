@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AppendBlockChildrenRequest, AppendBlockChildrenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,7 +28,7 @@ const sdk = new SDK();
     
 const req: AppendBlockChildrenRequest = {
   pathParams: {
-    id: "ut",
+    id: "sit",
   },
   request: {
     children: [
@@ -38,26 +37,20 @@ const req: AppendBlockChildrenRequest = {
           text: [
             {
               text: {
-                content: "quae",
+                content: "expedita",
               },
-              type: "rerum",
+              type: "consequuntur",
             },
             {
               text: {
-                content: "corrupti",
+                content: "dolor",
               },
-              type: "qui",
-            },
-            {
-              text: {
-                content: "animi",
-              },
-              type: "eum",
+              type: "expedita",
             },
           ],
         },
-        object: "occaecati",
-        type: "eum",
+        object: "voluptas",
+        type: "fugit",
       },
     ],
   },

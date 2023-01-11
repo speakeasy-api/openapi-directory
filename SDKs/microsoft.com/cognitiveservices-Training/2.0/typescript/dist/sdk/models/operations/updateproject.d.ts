@@ -7,11 +7,11 @@ export declare class UpdateProjectHeaders extends SpeakeasyBase {
     trainingKey: string;
 }
 export declare class UpdateProjectRequestsInput extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     project?: shared.ProjectInput;
     project1?: shared.ProjectInput;
     project2?: shared.ProjectInput;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class UpdateProjectRequest extends SpeakeasyBase {
     pathParams: UpdateProjectPathParams;

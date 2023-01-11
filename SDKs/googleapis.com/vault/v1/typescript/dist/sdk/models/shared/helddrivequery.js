@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeldDriveQuery = void 0;
+var utils_1 = require("../../../internal/utils");
 // HeldDriveQuery
 /**
  * Options for Drive holds.
@@ -33,13 +36,13 @@ var HeldDriveQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeSharedDriveFiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeSharedDriveFiles" }),
         __metadata("design:type", Boolean)
     ], HeldDriveQuery.prototype, "includeSharedDriveFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeTeamDriveFiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeTeamDriveFiles" }),
         __metadata("design:type", Boolean)
     ], HeldDriveQuery.prototype, "includeTeamDriveFiles", void 0);
     return HeldDriveQuery;
-}(SpeakeasyBase));
-export { HeldDriveQuery };
+}(utils_1.SpeakeasyBase));
+exports.HeldDriveQuery = HeldDriveQuery;

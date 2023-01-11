@@ -10,14 +10,11 @@ export enum OpenInfoStatusEnum {
 }
 
 
-// OpenInfo
+// OpenInfoInput
 /** 
  * Information related to the opening state of the business.
 **/
-export class OpenInfo extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=canReopen" })
-  canReopen?: boolean;
-
+export class OpenInfoInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=openingDate" })
   openingDate?: Date;
 
@@ -26,11 +23,14 @@ export class OpenInfo extends SpeakeasyBase {
 }
 
 
-// OpenInfoInput
+// OpenInfo
 /** 
  * Information related to the opening state of the business.
 **/
-export class OpenInfoInput extends SpeakeasyBase {
+export class OpenInfo extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=canReopen" })
+  canReopen?: boolean;
+
   @SpeakeasyMetadata({ data: "json, name=openingDate" })
   openingDate?: Date;
 

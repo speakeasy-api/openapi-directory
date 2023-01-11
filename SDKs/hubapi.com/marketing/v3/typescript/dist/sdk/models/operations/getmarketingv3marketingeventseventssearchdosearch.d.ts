@@ -4,7 +4,6 @@ export declare class GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParam
     q: string;
 }
 export declare class GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 }

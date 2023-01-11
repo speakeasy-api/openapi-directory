@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActivityTypeConfiguration } from "./activitytypeconfiguration";
-import { ActivityTypeInfo } from "./activitytypeinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityTypeDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var activitytypeconfiguration_1 = require("./activitytypeconfiguration");
+var activitytypeinfo_1 = require("./activitytypeinfo");
 // ActivityTypeDetail
 /**
  * Detailed information about an activity type.
@@ -35,13 +38,13 @@ var ActivityTypeDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ActivityTypeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", activitytypeconfiguration_1.ActivityTypeConfiguration)
     ], ActivityTypeDetail.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeInfo" }),
-        __metadata("design:type", ActivityTypeInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeInfo" }),
+        __metadata("design:type", activitytypeinfo_1.ActivityTypeInfo)
     ], ActivityTypeDetail.prototype, "typeInfo", void 0);
     return ActivityTypeDetail;
-}(SpeakeasyBase));
-export { ActivityTypeDetail };
+}(utils_1.SpeakeasyBase));
+exports.ActivityTypeDetail = ActivityTypeDetail;

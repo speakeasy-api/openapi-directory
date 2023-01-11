@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RecaptchaenterpriseProjectsAssessmentsAnnotateRequest, RecaptchaenterpriseProjectsAssessmentsAnnotateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,34 +30,32 @@ const req: RecaptchaenterpriseProjectsAssessmentsAnnotateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "ipsum",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "ut",
+    accessToken: "culpa",
     alt: "media",
-    callback: "voluptates",
-    fields: "possimus",
-    key: "ipsa",
-    oauthToken: "sint",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "exercitationem",
-    uploadType: "et",
-    uploadProtocol: "qui",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    annotation: "ANNOTATION_UNSPECIFIED",
-    hashedAccountId: "quaerat",
+    annotation: "PASSWORD_INCORRECT",
+    hashedAccountId: "debitis",
     reasons: [
-      "INITIATED_TWO_FACTOR",
-      "INCORRECT_PASSWORD",
-      "REFUND_FRAUD",
+      "TRANSACTION_ACCEPTED",
     ],
   },
 };

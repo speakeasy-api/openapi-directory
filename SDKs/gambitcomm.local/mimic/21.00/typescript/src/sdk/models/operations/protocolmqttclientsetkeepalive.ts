@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetKeepaliveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetKeepalive200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetKeepalive200ApplicationJSONInt32Integers?: number[];
 }

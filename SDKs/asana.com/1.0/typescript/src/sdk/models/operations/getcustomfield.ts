@@ -44,5 +44,5 @@ export class GetCustomFieldResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCustomField200ApplicationJsonObject?: GetCustomField200ApplicationJson;
+  getCustomField200ApplicationJSONObject?: GetCustomField200ApplicationJson;
 }

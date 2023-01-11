@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
-import { InventoryReference } from "./inventoryreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportTask = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
+var inventoryreference_1 = require("./inventoryreference");
 // ReportTask
 /**
  * This type defines the fields in a report task.
@@ -35,85 +38,85 @@ var ReportTask = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignIds" }),
         __metadata("design:type", Array)
     ], ReportTask.prototype, "campaignIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateFrom" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "dateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateTo" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "dateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], ReportTask.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryReferences", elemType: InventoryReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryReferences", elemType: inventoryreference_1.InventoryReference }),
         __metadata("design:type", Array)
     ], ReportTask.prototype, "inventoryReferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingIds" }),
         __metadata("design:type", Array)
     ], ReportTask.prototype, "listingIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricKeys" }),
         __metadata("design:type", Array)
     ], ReportTask.prototype, "metricKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportExpirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportExpirationDate" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportExpirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportFormat" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportHref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportHref" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportId" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportName" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskCompletionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskCompletionDate" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskCompletionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskCreationDate" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskExpectedCompletionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskExpectedCompletionDate" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskExpectedCompletionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskId" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskStatus" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTaskStatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTaskStatusMessage" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportTaskStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportType" }),
         __metadata("design:type", String)
     ], ReportTask.prototype, "reportType", void 0);
     return ReportTask;
-}(SpeakeasyBase));
-export { ReportTask };
+}(utils_1.SpeakeasyBase));
+exports.ReportTask = ReportTask;

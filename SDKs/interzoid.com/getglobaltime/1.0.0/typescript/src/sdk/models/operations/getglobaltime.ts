@@ -76,5 +76,5 @@ export class GetglobaltimeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getglobaltime200ApplicationJsonObject?: Getglobaltime200ApplicationJson;
+  getglobaltime200ApplicationJSONObject?: Getglobaltime200ApplicationJson;
 }

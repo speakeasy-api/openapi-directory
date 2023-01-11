@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Server extends SpeakeasyBase {
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     bingKey?: string;
     coordinateFormat?: string;
     deviceReadonly?: boolean;

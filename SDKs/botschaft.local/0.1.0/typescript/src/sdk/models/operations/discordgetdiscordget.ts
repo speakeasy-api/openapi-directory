@@ -41,5 +41,5 @@ export class DiscordGetDiscordGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  discordGetDiscordGet200ApplicationJsonAny?: any;
+  discordGetDiscordGet200ApplicationJSONAny?: any;
 }

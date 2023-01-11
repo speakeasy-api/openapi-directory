@@ -49,7 +49,7 @@ export enum CheckRunStatusEnum {
 **/
 export class CheckRun extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=app" })
-  app: Map<string, any>;
+  app: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=check_suite" })
   checkSuite: CheckRunCheckSuite;

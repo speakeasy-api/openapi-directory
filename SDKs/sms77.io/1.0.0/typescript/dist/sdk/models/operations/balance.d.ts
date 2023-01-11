@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class BalanceResponse extends SpeakeasyBase {
-    body?: Uint8Array;
+    balance200TextPlainFloatNumber?: string;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Profiles = exports.ProfilesProfiles = exports.ProfilesProfilesProfileConfig = exports.ProfilesProfilesProfileConfigLocators = exports.ProfilesProfilesProfileConfigLocatorsUsername = exports.ProfilesProfilesProfileConfigLocatorsSubmit = exports.ProfilesProfilesProfileConfigLocatorsPassword = exports.ProfilesProfilesProfileConfigCredentials = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProfilesProfilesProfileConfigCredentials = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfigCredentials, _super);
     function ProfilesProfilesProfileConfigCredentials() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigCredentials.prototype, "username", void 0);
     return ProfilesProfilesProfileConfigCredentials;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfigCredentials };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfigCredentials = ProfilesProfilesProfileConfigCredentials;
 var ProfilesProfilesProfileConfigLocatorsPassword = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfigLocatorsPassword, _super);
     function ProfilesProfilesProfileConfigLocatorsPassword() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsPassword.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsPassword.prototype, "value", void 0);
     return ProfilesProfilesProfileConfigLocatorsPassword;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfigLocatorsPassword };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfigLocatorsPassword = ProfilesProfilesProfileConfigLocatorsPassword;
 var ProfilesProfilesProfileConfigLocatorsSubmit = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfigLocatorsSubmit, _super);
     function ProfilesProfilesProfileConfigLocatorsSubmit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsSubmit.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsSubmit.prototype, "value", void 0);
     return ProfilesProfilesProfileConfigLocatorsSubmit;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfigLocatorsSubmit };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfigLocatorsSubmit = ProfilesProfilesProfileConfigLocatorsSubmit;
 var ProfilesProfilesProfileConfigLocatorsUsername = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfigLocatorsUsername, _super);
     function ProfilesProfilesProfileConfigLocatorsUsername() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsUsername.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfigLocatorsUsername.prototype, "value", void 0);
     return ProfilesProfilesProfileConfigLocatorsUsername;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfigLocatorsUsername };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfigLocatorsUsername = ProfilesProfilesProfileConfigLocatorsUsername;
 var ProfilesProfilesProfileConfigLocators = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfigLocators, _super);
     function ProfilesProfilesProfileConfigLocators() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", ProfilesProfilesProfileConfigLocatorsPassword)
     ], ProfilesProfilesProfileConfigLocators.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submit" }),
         __metadata("design:type", ProfilesProfilesProfileConfigLocatorsSubmit)
     ], ProfilesProfilesProfileConfigLocators.prototype, "submit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", ProfilesProfilesProfileConfigLocatorsUsername)
     ], ProfilesProfilesProfileConfigLocators.prototype, "username", void 0);
     return ProfilesProfilesProfileConfigLocators;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfigLocators };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfigLocators = ProfilesProfilesProfileConfigLocators;
 var ProfilesProfilesProfileConfig = /** @class */ (function (_super) {
     __extends(ProfilesProfilesProfileConfig, _super);
     function ProfilesProfilesProfileConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
         __metadata("design:type", ProfilesProfilesProfileConfigCredentials)
     ], ProfilesProfilesProfileConfig.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locators" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locators" }),
         __metadata("design:type", ProfilesProfilesProfileConfigLocators)
     ], ProfilesProfilesProfileConfig.prototype, "locators", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login_url" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfig.prototype, "loginUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile_name" }),
         __metadata("design:type", String)
     ], ProfilesProfilesProfileConfig.prototype, "profileName", void 0);
     return ProfilesProfilesProfileConfig;
-}(SpeakeasyBase));
-export { ProfilesProfilesProfileConfig };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfilesProfileConfig = ProfilesProfilesProfileConfig;
 var ProfilesProfiles = /** @class */ (function (_super) {
     __extends(ProfilesProfiles, _super);
     function ProfilesProfiles() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProfilesProfiles.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile_config" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile_config" }),
         __metadata("design:type", ProfilesProfilesProfileConfig)
     ], ProfilesProfiles.prototype, "profileConfig", void 0);
     return ProfilesProfiles;
-}(SpeakeasyBase));
-export { ProfilesProfiles };
+}(utils_1.SpeakeasyBase));
+exports.ProfilesProfiles = ProfilesProfiles;
 var Profiles = /** @class */ (function (_super) {
     __extends(Profiles, _super);
     function Profiles() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profiles", elemType: ProfilesProfiles }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profiles", elemType: ProfilesProfiles }),
         __metadata("design:type", Array)
     ], Profiles.prototype, "profiles", void 0);
     return Profiles;
-}(SpeakeasyBase));
-export { Profiles };
+}(utils_1.SpeakeasyBase));
+exports.Profiles = Profiles;

@@ -5,7 +5,7 @@ export declare class PostProjectUsernameProjectPathParams extends SpeakeasyBase 
     username: string;
 }
 export declare class PostProjectUsernameProjectRequestBody extends SpeakeasyBase {
-    buildParameters?: Map<string, any>;
+    buildParameters?: Record<string, any>;
     parallel?: string;
     revision?: string;
     tag?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CannedAclForObjectsValueEnum } from "./cannedaclforobjectsvalueenum";
-import { CompressionTypeValueEnum } from "./compressiontypevalueenum";
-import { DataFormatValueEnum } from "./dataformatvalueenum";
-import { DatePartitionDelimiterValueEnum } from "./datepartitiondelimitervalueenum";
-import { DatePartitionSequenceValueEnum } from "./datepartitionsequencevalueenum";
-import { EncodingTypeValueEnum } from "./encodingtypevalueenum";
-import { EncryptionModeValueEnum } from "./encryptionmodevalueenum";
-import { ParquetVersionValueEnum } from "./parquetversionvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Settings = void 0;
+var utils_1 = require("../../../internal/utils");
+var cannedaclforobjectsvalueenum_1 = require("./cannedaclforobjectsvalueenum");
+var compressiontypevalueenum_1 = require("./compressiontypevalueenum");
+var dataformatvalueenum_1 = require("./dataformatvalueenum");
+var datepartitiondelimitervalueenum_1 = require("./datepartitiondelimitervalueenum");
+var datepartitionsequencevalueenum_1 = require("./datepartitionsequencevalueenum");
+var encodingtypevalueenum_1 = require("./encodingtypevalueenum");
+var encryptionmodevalueenum_1 = require("./encryptionmodevalueenum");
+var parquetversionvalueenum_1 = require("./parquetversionvalueenum");
 // S3Settings
 /**
  * Settings for exporting data to Amazon S3.
@@ -41,149 +44,149 @@ var S3Settings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddColumnName" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "addColumnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketFolder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketFolder" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "bucketFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketName" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CannedAclForObjects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CannedAclForObjects" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "cannedAclForObjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcInsertsAndUpdates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcInsertsAndUpdates" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "cdcInsertsAndUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcInsertsOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcInsertsOnly" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "cdcInsertsOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcMaxBatchInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcMaxBatchInterval" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "cdcMaxBatchInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcMinFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcMinFileSize" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "cdcMinFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcPath" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "cdcPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompressionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompressionType" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "compressionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CsvDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CsvDelimiter" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "csvDelimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CsvNoSupValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CsvNoSupValue" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "csvNoSupValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CsvNullValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CsvNullValue" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "csvNullValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CsvRowDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CsvRowDelimiter" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "csvRowDelimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataFormat" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "dataFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataPageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataPageSize" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "dataPageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatePartitionDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatePartitionDelimiter" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "datePartitionDelimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatePartitionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatePartitionEnabled" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "datePartitionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatePartitionSequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatePartitionSequence" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "datePartitionSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DictPageSizeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DictPageSizeLimit" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "dictPageSizeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableStatistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableStatistics" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "enableStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncodingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncodingType" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "encodingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionMode" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "encryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExternalTableDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExternalTableDefinition" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "externalTableDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IgnoreHeaderRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IgnoreHeaderRows" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "ignoreHeaderRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeOpForFullLoad" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeOpForFullLoad" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "includeOpForFullLoad", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxFileSize" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "maxFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParquetTimestampInMillisecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParquetTimestampInMillisecond" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "parquetTimestampInMillisecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParquetVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParquetVersion" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "parquetVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreserveTransactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreserveTransactions" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "preserveTransactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rfc4180" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rfc4180" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "rfc4180", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RowGroupLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RowGroupLength" }),
         __metadata("design:type", Number)
     ], S3Settings.prototype, "rowGroupLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerSideEncryptionKmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerSideEncryptionKmsKeyId" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "serverSideEncryptionKmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceAccessRoleArn" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "serviceAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimestampColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimestampColumnName" }),
         __metadata("design:type", String)
     ], S3Settings.prototype, "timestampColumnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseCsvNoSupValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseCsvNoSupValue" }),
         __metadata("design:type", Boolean)
     ], S3Settings.prototype, "useCsvNoSupValue", void 0);
     return S3Settings;
-}(SpeakeasyBase));
-export { S3Settings };
+}(utils_1.SpeakeasyBase));
+exports.S3Settings = S3Settings;

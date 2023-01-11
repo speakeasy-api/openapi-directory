@@ -8,11 +8,11 @@ export declare class UpdateTagHeaders extends SpeakeasyBase {
     trainingKey: string;
 }
 export declare class UpdateTagRequestsInput extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     tag?: shared.TagInput;
     tag1?: shared.TagInput;
     tag2?: shared.TagInput;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class UpdateTagRequest extends SpeakeasyBase {
     pathParams: UpdateTagPathParams;

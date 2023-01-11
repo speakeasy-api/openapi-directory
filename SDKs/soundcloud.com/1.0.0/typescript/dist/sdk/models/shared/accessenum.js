@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessEnum = void 0;
+var AccessEnum;
+(function (AccessEnum) {
+    AccessEnum["Playable"] = "playable";
+    AccessEnum["Preview"] = "preview";
+    AccessEnum["Blocked"] = "blocked";
+})(AccessEnum = exports.AccessEnum || (exports.AccessEnum = {}));

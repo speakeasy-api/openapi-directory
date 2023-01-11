@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetImportJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
+var tag_1 = require("./tag");
 var CreateDatasetImportJobRequest = /** @class */ (function (_super) {
     __extends(CreateDatasetImportJobRequest, _super);
     function CreateDatasetImportJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSource" }),
-        __metadata("design:type", DataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSource" }),
+        __metadata("design:type", datasource_1.DataSource)
     ], CreateDatasetImportJobRequest.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetArn" }),
         __metadata("design:type", String)
     ], CreateDatasetImportJobRequest.prototype, "datasetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetImportJobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetImportJobName" }),
         __metadata("design:type", String)
     ], CreateDatasetImportJobRequest.prototype, "datasetImportJobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GeolocationFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GeolocationFormat" }),
         __metadata("design:type", String)
     ], CreateDatasetImportJobRequest.prototype, "geolocationFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDatasetImportJobRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeZone" }),
         __metadata("design:type", String)
     ], CreateDatasetImportJobRequest.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimestampFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimestampFormat" }),
         __metadata("design:type", String)
     ], CreateDatasetImportJobRequest.prototype, "timestampFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseGeolocationForTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseGeolocationForTimeZone" }),
         __metadata("design:type", Boolean)
     ], CreateDatasetImportJobRequest.prototype, "useGeolocationForTimeZone", void 0);
     return CreateDatasetImportJobRequest;
-}(SpeakeasyBase));
-export { CreateDatasetImportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetImportJobRequest = CreateDatasetImportJobRequest;

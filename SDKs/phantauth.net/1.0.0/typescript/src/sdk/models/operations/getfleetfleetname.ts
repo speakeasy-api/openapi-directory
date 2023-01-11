@@ -43,8 +43,8 @@ export class GetFleetFleetnameResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getFleetFleetname200ApplicationJsonObject?: GetFleetFleetname200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getFleetFleetname200ApplicationJSONObject?: GetFleetFleetname200ApplicationJson;
 }

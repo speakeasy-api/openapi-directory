@@ -50,7 +50,7 @@ export class CreateFargateProfileRequestBody extends SpeakeasyBase {
   subnets?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

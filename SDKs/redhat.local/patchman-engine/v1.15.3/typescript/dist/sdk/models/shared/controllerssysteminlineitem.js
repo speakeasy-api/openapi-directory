@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ControllersSystemInlineItem = void 0;
+var utils_1 = require("../../../internal/utils");
 var ControllersSystemInlineItem = /** @class */ (function (_super) {
     __extends(ControllersSystemInlineItem, _super);
     function ControllersSystemInlineItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=culled_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=culled_timestamp" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "culledTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insights_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insights_id" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "insightsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_evaluation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_evaluation" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "lastEvaluation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_upload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_upload" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "lastUpload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_major" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_major" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "osMajor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_minor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_minor" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "osMinor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_name" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "osName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=other_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=other_count" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "otherCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packages_installed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packages_installed" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "packagesInstalled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packages_updatable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packages_updatable" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "packagesUpdatable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rhba_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rhba_count" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "rhbaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rhea_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rhea_count" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "rheaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rhsa_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rhsa_count" }),
         __metadata("design:type", Number)
     ], ControllersSystemInlineItem.prototype, "rhsaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rhsm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rhsm" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "rhsm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stale" }),
         __metadata("design:type", Boolean)
     ], ControllersSystemInlineItem.prototype, "stale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stale_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stale_timestamp" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "staleTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stale_warning_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stale_warning_timestamp" }),
         __metadata("design:type", String)
     ], ControllersSystemInlineItem.prototype, "staleWarningTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=third_party" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=third_party" }),
         __metadata("design:type", Boolean)
     ], ControllersSystemInlineItem.prototype, "thirdParty", void 0);
     return ControllersSystemInlineItem;
-}(SpeakeasyBase));
-export { ControllersSystemInlineItem };
+}(utils_1.SpeakeasyBase));
+exports.ControllersSystemInlineItem = ControllersSystemInlineItem;

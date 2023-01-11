@@ -3,7 +3,7 @@ import { CategoryType } from "./categorytype";
 import { Deposit } from "./deposit";
 import { TimeDuration } from "./timeduration";
 import { PaymentMethod } from "./paymentmethod";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -42,6 +42,6 @@ export class SetPaymentPolicyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=paymentPolicyId" })
   paymentPolicyId?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

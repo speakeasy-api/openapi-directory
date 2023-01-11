@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointSettingTypeValueEnum } from "./endpointsettingtypevalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointSetting = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointsettingtypevalueenum_1 = require("./endpointsettingtypevalueenum");
 // EndpointSetting
 /**
  * Endpoint settings.
@@ -34,41 +37,41 @@ var EndpointSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Applicability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Applicability" }),
         __metadata("design:type", String)
     ], EndpointSetting.prototype, "applicability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultValue" }),
         __metadata("design:type", String)
     ], EndpointSetting.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnumValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnumValues" }),
         __metadata("design:type", Array)
     ], EndpointSetting.prototype, "enumValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntValueMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntValueMax" }),
         __metadata("design:type", Number)
     ], EndpointSetting.prototype, "intValueMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntValueMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntValueMin" }),
         __metadata("design:type", Number)
     ], EndpointSetting.prototype, "intValueMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], EndpointSetting.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sensitive" }),
         __metadata("design:type", Boolean)
     ], EndpointSetting.prototype, "sensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], EndpointSetting.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Units" }),
         __metadata("design:type", String)
     ], EndpointSetting.prototype, "units", void 0);
     return EndpointSetting;
-}(SpeakeasyBase));
-export { EndpointSetting };
+}(utils_1.SpeakeasyBase));
+exports.EndpointSetting = EndpointSetting;

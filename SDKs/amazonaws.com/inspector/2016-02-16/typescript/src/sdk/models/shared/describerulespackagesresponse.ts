@@ -6,7 +6,7 @@ import { RulesPackage } from "./rulespackage";
 
 export class DescribeRulesPackagesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails })
-  failedItems: Map<string, FailedItemDetails>;
+  failedItems: Record<string, FailedItemDetails>;
 
   @SpeakeasyMetadata({ data: "json, name=rulesPackages", elemType: RulesPackage })
   rulesPackages: RulesPackage[];

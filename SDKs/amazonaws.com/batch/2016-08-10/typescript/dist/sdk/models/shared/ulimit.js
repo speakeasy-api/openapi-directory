@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ulimit = void 0;
+var utils_1 = require("../../../internal/utils");
 // Ulimit
 /**
  * <p>The <code>ulimit</code> settings to pass to the container.</p> <note> <p>This object isn't applicable to jobs that are running on Fargate resources.</p> </note>
@@ -33,17 +36,17 @@ var Ulimit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hardLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hardLimit" }),
         __metadata("design:type", Number)
     ], Ulimit.prototype, "hardLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Ulimit.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softLimit" }),
         __metadata("design:type", Number)
     ], Ulimit.prototype, "softLimit", void 0);
     return Ulimit;
-}(SpeakeasyBase));
-export { Ulimit };
+}(utils_1.SpeakeasyBase));
+exports.Ulimit = Ulimit;

@@ -13,7 +13,7 @@ export declare class EnterpriseAdminListGlobalWebhooksRequest extends SpeakeasyB
 }
 export declare class EnterpriseAdminListGlobalWebhooksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     globalHooks?: shared.GlobalHook[];
 }

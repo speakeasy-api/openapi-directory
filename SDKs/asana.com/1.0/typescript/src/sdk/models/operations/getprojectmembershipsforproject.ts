@@ -53,5 +53,5 @@ export class GetProjectMembershipsForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getProjectMembershipsForProject200ApplicationJsonObject?: GetProjectMembershipsForProject200ApplicationJson;
+  getProjectMembershipsForProject200ApplicationJSONObject?: GetProjectMembershipsForProject200ApplicationJson;
 }

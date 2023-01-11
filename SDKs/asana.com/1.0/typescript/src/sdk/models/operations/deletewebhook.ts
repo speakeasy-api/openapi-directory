@@ -20,7 +20,7 @@ export class DeleteWebhookQueryParams extends SpeakeasyBase {
 
 export class DeleteWebhook200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class DeleteWebhookResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteWebhook200ApplicationJsonObject?: DeleteWebhook200ApplicationJson;
+  deleteWebhook200ApplicationJSONObject?: DeleteWebhook200ApplicationJson;
 }

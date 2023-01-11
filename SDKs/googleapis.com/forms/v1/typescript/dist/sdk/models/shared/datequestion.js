@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateQuestion = void 0;
+var utils_1 = require("../../../internal/utils");
 // DateQuestion
 /**
  * A date question. Date questions default to just month + day.
@@ -33,13 +36,13 @@ var DateQuestion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeTime" }),
         __metadata("design:type", Boolean)
     ], DateQuestion.prototype, "includeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeYear" }),
         __metadata("design:type", Boolean)
     ], DateQuestion.prototype, "includeYear", void 0);
     return DateQuestion;
-}(SpeakeasyBase));
-export { DateQuestion };
+}(utils_1.SpeakeasyBase));
+exports.DateQuestion = DateQuestion;

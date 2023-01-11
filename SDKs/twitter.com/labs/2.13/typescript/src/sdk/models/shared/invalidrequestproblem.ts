@@ -7,7 +7,7 @@ export class InvalidRequestProblemErrors extends SpeakeasyBase {
   message?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string[]>;
+  parameters?: Record<string, string[]>;
 }
 
 

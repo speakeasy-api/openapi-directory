@@ -18,6 +18,6 @@ export declare class GetHolidayBalanceReportOutputRequest extends SpeakeasyBase 
 export declare class GetHolidayBalanceReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getHolidayBalanceReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getHolidayBalanceReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

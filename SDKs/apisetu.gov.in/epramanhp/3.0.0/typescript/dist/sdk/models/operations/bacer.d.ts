@@ -106,11 +106,11 @@ export declare class BacerRequest extends SpeakeasyBase {
 export declare class BacerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bacer400ApplicationJsonObject?: Bacer400ApplicationJson;
-    bacer401ApplicationJsonObject?: Bacer401ApplicationJson;
-    bacer404ApplicationJsonObject?: Bacer404ApplicationJson;
-    bacer500ApplicationJsonObject?: Bacer500ApplicationJson;
-    bacer502ApplicationJsonObject?: Bacer502ApplicationJson;
-    bacer503ApplicationJsonObject?: Bacer503ApplicationJson;
-    bacer504ApplicationJsonObject?: Bacer504ApplicationJson;
+    bacer400ApplicationJSONObject?: Bacer400ApplicationJson;
+    bacer401ApplicationJSONObject?: Bacer401ApplicationJson;
+    bacer404ApplicationJSONObject?: Bacer404ApplicationJson;
+    bacer500ApplicationJSONObject?: Bacer500ApplicationJson;
+    bacer502ApplicationJSONObject?: Bacer502ApplicationJson;
+    bacer503ApplicationJSONObject?: Bacer503ApplicationJson;
+    bacer504ApplicationJSONObject?: Bacer504ApplicationJson;
 }

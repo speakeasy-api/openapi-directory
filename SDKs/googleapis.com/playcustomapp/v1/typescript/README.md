@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlaycustomappAccountsCustomAppsCreateRequest, PlaycustomappAccountsCustomAppsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: PlaycustomappAccountsCustomAppsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    account: "ad",
+    account: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "est",
-    alt: "json",
-    callback: "incidunt",
-    fields: "inventore",
-    key: "est",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
     oauthToken: "voluptas",
-    prettyPrint: false,
-    quotaUser: "eaque",
-    uploadType: "aspernatur",
-    uploadProtocol: "ea",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
-  request: "quod".encode(),
+  request: "dicta".encode(),
 };
 
 sdk.accounts.playcustomappAccountsCustomAppsCreate(req).then((res: PlaycustomappAccountsCustomAppsCreateResponse | AxiosError) => {

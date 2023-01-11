@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AmpUrl = void 0;
+var utils_1 = require("../../../internal/utils");
 // AmpUrl
 /**
  * AMP URL response for a requested URL.
@@ -33,17 +36,17 @@ var AmpUrl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ampUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ampUrl" }),
         __metadata("design:type", String)
     ], AmpUrl.prototype, "ampUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cdnAmpUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cdnAmpUrl" }),
         __metadata("design:type", String)
     ], AmpUrl.prototype, "cdnAmpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalUrl" }),
         __metadata("design:type", String)
     ], AmpUrl.prototype, "originalUrl", void 0);
     return AmpUrl;
-}(SpeakeasyBase));
-export { AmpUrl };
+}(utils_1.SpeakeasyBase));
+exports.AmpUrl = AmpUrl;

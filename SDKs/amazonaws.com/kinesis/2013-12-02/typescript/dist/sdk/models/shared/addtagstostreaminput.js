@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddTagsToStreamInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // AddTagsToStreamInput
 /**
  * Represents the input for <code>AddTagsToStream</code>.
@@ -33,13 +36,13 @@ var AddTagsToStreamInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], AddTagsToStreamInput.prototype, "streamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], AddTagsToStreamInput.prototype, "tags", void 0);
     return AddTagsToStreamInput;
-}(SpeakeasyBase));
-export { AddTagsToStreamInput };
+}(utils_1.SpeakeasyBase));
+exports.AddTagsToStreamInput = AddTagsToStreamInput;

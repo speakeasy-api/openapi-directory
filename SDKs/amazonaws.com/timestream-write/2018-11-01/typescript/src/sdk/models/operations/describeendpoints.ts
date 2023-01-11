@@ -39,7 +39,7 @@ export class DescribeEndpointsRequest extends SpeakeasyBase {
   headers: DescribeEndpointsHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

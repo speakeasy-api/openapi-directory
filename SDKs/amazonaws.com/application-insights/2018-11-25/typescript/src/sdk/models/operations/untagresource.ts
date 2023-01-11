@@ -54,7 +54,7 @@ export class UntagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  untagResourceResponse?: Map<string, any>;
+  untagResourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

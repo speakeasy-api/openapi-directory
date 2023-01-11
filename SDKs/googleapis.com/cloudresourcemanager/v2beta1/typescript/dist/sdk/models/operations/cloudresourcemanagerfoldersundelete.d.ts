@@ -23,7 +23,7 @@ export declare class CloudresourcemanagerFoldersUndeleteSecurity extends Speakea
 export declare class CloudresourcemanagerFoldersUndeleteRequest extends SpeakeasyBase {
     pathParams: CloudresourcemanagerFoldersUndeletePathParams;
     queryParams: CloudresourcemanagerFoldersUndeleteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudresourcemanagerFoldersUndeleteSecurity;
 }
 export declare class CloudresourcemanagerFoldersUndeleteResponse extends SpeakeasyBase {

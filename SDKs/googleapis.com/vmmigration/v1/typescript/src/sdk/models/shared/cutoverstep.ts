@@ -15,16 +15,16 @@ export class CutoverStep extends SpeakeasyBase {
   finalSync?: ReplicationCycle;
 
   @SpeakeasyMetadata({ data: "json, name=instantiatingMigratedVm" })
-  instantiatingMigratedVm?: Map<string, any>;
+  instantiatingMigratedVm?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=preparingVmDisks" })
-  preparingVmDisks?: Map<string, any>;
+  preparingVmDisks?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=previousReplicationCycle" })
   previousReplicationCycle?: ReplicationCycle;
 
   @SpeakeasyMetadata({ data: "json, name=shuttingDownSourceVm" })
-  shuttingDownSourceVm?: Map<string, any>;
+  shuttingDownSourceVm?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=startTime" })
   startTime?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpotDatafeedSubscription } from "./spotdatafeedsubscription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSpotDatafeedSubscriptionResult = exports.CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription = exports.CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault
+/**
+ * The fault codes for the Spot Instance request, if any.
+**/
+var CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault = /** @class */ (function (_super) {
+    __extends(CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault, _super);
+    function CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault.prototype, "message", void 0);
+    return CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault;
+}(utils_1.SpeakeasyBase));
+exports.CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault = CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault;
+// CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription
+/**
+ * The Spot Instance data feed subscription.
+**/
+var CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription = /** @class */ (function (_super) {
+    __extends(CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription, _super);
+    function CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription.prototype, "bucket", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription.prototype, "fault", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription.prototype, "prefix", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription.prototype, "state", void 0);
+    return CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription;
+}(utils_1.SpeakeasyBase));
+exports.CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription = CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription;
 // CreateSpotDatafeedSubscriptionResult
 /**
  * Contains the output of CreateSpotDatafeedSubscription.
@@ -34,9 +88,9 @@ var CreateSpotDatafeedSubscriptionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SpotDatafeedSubscription)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription)
     ], CreateSpotDatafeedSubscriptionResult.prototype, "spotDatafeedSubscription", void 0);
     return CreateSpotDatafeedSubscriptionResult;
-}(SpeakeasyBase));
-export { CreateSpotDatafeedSubscriptionResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateSpotDatafeedSubscriptionResult = CreateSpotDatafeedSubscriptionResult;

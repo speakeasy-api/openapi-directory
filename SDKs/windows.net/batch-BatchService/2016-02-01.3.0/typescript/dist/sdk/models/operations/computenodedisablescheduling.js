@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeNodeDisableSchedulingResponse = exports.ComputeNodeDisableSchedulingRequest = exports.ComputeNodeDisableSchedulingHeaders = exports.ComputeNodeDisableSchedulingQueryParams = exports.ComputeNodeDisableSchedulingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ComputeNodeDisableSchedulingPathParams = /** @class */ (function (_super) {
     __extends(ComputeNodeDisableSchedulingPathParams, _super);
     function ComputeNodeDisableSchedulingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingPathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingPathParams.prototype, "poolId", void 0);
     return ComputeNodeDisableSchedulingPathParams;
-}(SpeakeasyBase));
-export { ComputeNodeDisableSchedulingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDisableSchedulingPathParams = ComputeNodeDisableSchedulingPathParams;
 var ComputeNodeDisableSchedulingQueryParams = /** @class */ (function (_super) {
     __extends(ComputeNodeDisableSchedulingQueryParams, _super);
     function ComputeNodeDisableSchedulingQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], ComputeNodeDisableSchedulingQueryParams.prototype, "timeout", void 0);
     return ComputeNodeDisableSchedulingQueryParams;
-}(SpeakeasyBase));
-export { ComputeNodeDisableSchedulingQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDisableSchedulingQueryParams = ComputeNodeDisableSchedulingQueryParams;
 var ComputeNodeDisableSchedulingHeaders = /** @class */ (function (_super) {
     __extends(ComputeNodeDisableSchedulingHeaders, _super);
     function ComputeNodeDisableSchedulingHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], ComputeNodeDisableSchedulingHeaders.prototype, "returnClientRequestId", void 0);
     return ComputeNodeDisableSchedulingHeaders;
-}(SpeakeasyBase));
-export { ComputeNodeDisableSchedulingHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDisableSchedulingHeaders = ComputeNodeDisableSchedulingHeaders;
 var ComputeNodeDisableSchedulingRequest = /** @class */ (function (_super) {
     __extends(ComputeNodeDisableSchedulingRequest, _super);
     function ComputeNodeDisableSchedulingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDisableSchedulingPathParams)
     ], ComputeNodeDisableSchedulingRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDisableSchedulingQueryParams)
     ], ComputeNodeDisableSchedulingRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDisableSchedulingHeaders)
     ], ComputeNodeDisableSchedulingRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], ComputeNodeDisableSchedulingRequest.prototype, "request", void 0);
     return ComputeNodeDisableSchedulingRequest;
-}(SpeakeasyBase));
-export { ComputeNodeDisableSchedulingRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDisableSchedulingRequest = ComputeNodeDisableSchedulingRequest;
 var ComputeNodeDisableSchedulingResponse = /** @class */ (function (_super) {
     __extends(ComputeNodeDisableSchedulingResponse, _super);
     function ComputeNodeDisableSchedulingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ComputeNodeDisableSchedulingResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ComputeNodeDisableSchedulingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ComputeNodeDisableSchedulingResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ComputeNodeDisableSchedulingResponse.prototype, "statusCode", void 0);
     return ComputeNodeDisableSchedulingResponse;
-}(SpeakeasyBase));
-export { ComputeNodeDisableSchedulingResponse };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDisableSchedulingResponse = ComputeNodeDisableSchedulingResponse;

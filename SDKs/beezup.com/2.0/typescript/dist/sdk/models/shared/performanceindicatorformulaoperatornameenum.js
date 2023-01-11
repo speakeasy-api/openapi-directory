@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerformanceIndicatorFormulaOperatorNameEnum = void 0;
+var PerformanceIndicatorFormulaOperatorNameEnum;
+(function (PerformanceIndicatorFormulaOperatorNameEnum) {
+    PerformanceIndicatorFormulaOperatorNameEnum["Multiply"] = "Multiply";
+    PerformanceIndicatorFormulaOperatorNameEnum["Divide"] = "Divide";
+})(PerformanceIndicatorFormulaOperatorNameEnum = exports.PerformanceIndicatorFormulaOperatorNameEnum || (exports.PerformanceIndicatorFormulaOperatorNameEnum = {}));

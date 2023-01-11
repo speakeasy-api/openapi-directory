@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest, DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,36 +30,37 @@ const req: DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequ
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "hic",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "sed",
+    accessToken: "culpa",
     alt: "media",
-    callback: "ut",
-    documentId: "perspiciatis",
-    fields: "sunt",
-    key: "qui",
-    oauthToken: "sit",
+    callback: "consequuntur",
+    documentId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "est",
-    uploadType: "et",
-    uploadProtocol: "rerum",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    id: "odio",
-    jsonData: "et",
-    name: "voluptas",
-    parentDocumentId: "est",
-    schemaId: "aut",
+    id: "debitis",
+    jsonData: "voluptatum",
+    name: "et",
+    parentDocumentId: "ut",
+    schemaId: "dolorem",
     structData: {
-      "vero": "nostrum",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
   },
 };

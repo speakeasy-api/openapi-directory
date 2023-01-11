@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteComputeEnvironmentResponse = exports.DeleteComputeEnvironmentRequest = exports.DeleteComputeEnvironmentRequestBody = exports.DeleteComputeEnvironmentHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteComputeEnvironmentHeaders = /** @class */ (function (_super) {
     __extends(DeleteComputeEnvironmentHeaders, _super);
     function DeleteComputeEnvironmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteComputeEnvironmentHeaders;
-}(SpeakeasyBase));
-export { DeleteComputeEnvironmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteComputeEnvironmentHeaders = DeleteComputeEnvironmentHeaders;
 var DeleteComputeEnvironmentRequestBody = /** @class */ (function (_super) {
     __extends(DeleteComputeEnvironmentRequestBody, _super);
     function DeleteComputeEnvironmentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEnvironment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEnvironment" }),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentRequestBody.prototype, "computeEnvironment", void 0);
     return DeleteComputeEnvironmentRequestBody;
-}(SpeakeasyBase));
-export { DeleteComputeEnvironmentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeleteComputeEnvironmentRequestBody = DeleteComputeEnvironmentRequestBody;
 var DeleteComputeEnvironmentRequest = /** @class */ (function (_super) {
     __extends(DeleteComputeEnvironmentRequest, _super);
     function DeleteComputeEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteComputeEnvironmentHeaders)
     ], DeleteComputeEnvironmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeleteComputeEnvironmentRequestBody)
     ], DeleteComputeEnvironmentRequest.prototype, "request", void 0);
     return DeleteComputeEnvironmentRequest;
-}(SpeakeasyBase));
-export { DeleteComputeEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteComputeEnvironmentRequest = DeleteComputeEnvironmentRequest;
 var DeleteComputeEnvironmentResponse = /** @class */ (function (_super) {
     __extends(DeleteComputeEnvironmentResponse, _super);
     function DeleteComputeEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteComputeEnvironmentResponse.prototype, "clientException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteComputeEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteComputeEnvironmentResponse.prototype, "deleteComputeEnvironmentResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteComputeEnvironmentResponse.prototype, "serverException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteComputeEnvironmentResponse.prototype, "statusCode", void 0);
     return DeleteComputeEnvironmentResponse;
-}(SpeakeasyBase));
-export { DeleteComputeEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteComputeEnvironmentResponse = DeleteComputeEnvironmentResponse;

@@ -47,8 +47,8 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRespons
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  issueChange?: Map<string, any>;
+  issueChange?: Record<string, any>;
 }

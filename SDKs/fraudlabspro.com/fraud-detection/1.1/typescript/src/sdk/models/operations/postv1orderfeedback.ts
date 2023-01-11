@@ -42,8 +42,8 @@ export class PostV1OrderFeedbackResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postV1OrderFeedback200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postV1OrderFeedback200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstitutionsGetRequestOptions } from "./institutionsgetrequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstitutionsGetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var institutionsgetrequestoptions_1 = require("./institutionsgetrequestoptions");
 // InstitutionsGetRequest
 /**
  * InstitutionsGetRequest defines the request schema for `/institutions/get`
@@ -34,29 +37,29 @@ var InstitutionsGetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], InstitutionsGetRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], InstitutionsGetRequest.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country_codes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country_codes" }),
         __metadata("design:type", Array)
     ], InstitutionsGetRequest.prototype, "countryCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], InstitutionsGetRequest.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", InstitutionsGetRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", institutionsgetrequestoptions_1.InstitutionsGetRequestOptions)
     ], InstitutionsGetRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], InstitutionsGetRequest.prototype, "secret", void 0);
     return InstitutionsGetRequest;
-}(SpeakeasyBase));
-export { InstitutionsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.InstitutionsGetRequest = InstitutionsGetRequest;

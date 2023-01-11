@@ -1,0 +1,168 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Create = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var Create = /** @class */ (function () {
+    function Create(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * area - Create a point-to-multipoint heatmap
+     *
+     * An area coverage assumes the same receiver height at all locations out to fixed radius (maximum 300km). Due to it's exhaustive processing it is the slowest of all the API calls. Speed can be improved significantly by adjusting the resolution 'res' parameter. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
+    **/
+    Create.prototype.area = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AreaRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/area";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * path - Point-to-point path profile analysis (Tx to Rx)
+     *
+     * A path profile is a single link from A to B. It is much faster than an area calculation and can be used out to 300km. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
+    **/
+    Create.prototype.path = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PathRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/path";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * points - Point-to-multipoint path profile analysis (Many Tx, one Rx)
+     *
+     * The points function tests many transmitters and one receiver and is designed for route analysis. A minimal request needs a transmitters array of (latitude,longitude,altitude) locations, antenna, receiver and output objects defined as a minimum. Model and environment options will enhance accuracy.
+    **/
+    Create.prototype.points = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PointsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/points";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+            }
+            return res;
+        });
+    };
+    return Create;
+}());
+exports.Create = Create;

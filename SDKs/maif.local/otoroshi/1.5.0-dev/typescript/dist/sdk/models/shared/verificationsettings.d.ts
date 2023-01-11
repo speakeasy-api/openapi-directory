@@ -4,6 +4,6 @@ import { MappingSettings } from "./mappingsettings";
  * Settings to verify the value of JWT token fields
 **/
 export declare class VerificationSettings extends SpeakeasyBase {
-    fields: Map<string, string>;
+    fields: Record<string, string>;
     mappingSettings?: MappingSettings;
 }

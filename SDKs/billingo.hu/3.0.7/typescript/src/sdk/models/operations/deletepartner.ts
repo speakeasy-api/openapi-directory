@@ -1,0 +1,33 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class DeletePartnerPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
+  id: number;
+}
+
+
+export class DeletePartnerRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DeletePartnerPathParams;
+}
+
+
+export class DeletePartnerResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  clientErrorResponse?: shared.ClientErrorResponse;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
+
+  @SpeakeasyMetadata()
+  serverErrorResponse?: shared.ServerErrorResponse;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

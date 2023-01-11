@@ -43,5 +43,5 @@ export class RemoveValidatedUserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeValidatedUser200ApplicationJsonObject?: RemoveValidatedUser200ApplicationJson;
+  removeValidatedUser200ApplicationJSONObject?: RemoveValidatedUser200ApplicationJson;
 }

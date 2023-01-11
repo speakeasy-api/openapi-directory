@@ -19,7 +19,7 @@ export declare class CreateComponentRequest extends SpeakeasyBase {
 }
 export declare class CreateComponentResponse extends SpeakeasyBase {
     contentType: string;
-    createComponentResponse?: Map<string, any>;
+    createComponentResponse?: Record<string, any>;
     internalServerException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

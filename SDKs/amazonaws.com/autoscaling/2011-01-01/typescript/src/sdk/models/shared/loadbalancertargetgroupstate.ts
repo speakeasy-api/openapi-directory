@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class LoadBalancerTargetGroupState extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  loadBalancerTargetGroupArn?: string;
+  loadBalancerTargetGroupARN?: string;
 
   @SpeakeasyMetadata()
   state?: string;

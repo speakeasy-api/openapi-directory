@@ -14,5 +14,5 @@ export declare class GetAccountsAccountIdAppsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     appResponses?: shared.AppResponse[];
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

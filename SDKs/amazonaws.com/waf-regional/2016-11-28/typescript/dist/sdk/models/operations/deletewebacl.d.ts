@@ -19,7 +19,7 @@ export declare class DeleteWebAclRequest extends SpeakeasyBase {
 }
 export declare class DeleteWebAclResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWebAclResponse?: shared.DeleteWebAclResponse;
+    deleteWebACLResponse?: shared.DeleteWebAclResponse;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TileCoordinates } from "./tilecoordinates";
-import { FirstDerivativeElevationGrid } from "./firstderivativeelevationgrid";
-import { SecondDerivativeElevationGrid } from "./secondderivativeelevationgrid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TerrainTile = void 0;
+var utils_1 = require("../../../internal/utils");
+var tilecoordinates_1 = require("./tilecoordinates");
+var firstderivativeelevationgrid_1 = require("./firstderivativeelevationgrid");
+var secondderivativeelevationgrid_1 = require("./secondderivativeelevationgrid");
 // TerrainTile
 /**
  * A tile containing information about the terrain located in the region it covers.
@@ -36,21 +39,21 @@ var TerrainTile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinates" }),
-        __metadata("design:type", TileCoordinates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinates" }),
+        __metadata("design:type", tilecoordinates_1.TileCoordinates)
     ], TerrainTile.prototype, "coordinates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstDerivative" }),
-        __metadata("design:type", FirstDerivativeElevationGrid)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstDerivative" }),
+        __metadata("design:type", firstderivativeelevationgrid_1.FirstDerivativeElevationGrid)
     ], TerrainTile.prototype, "firstDerivative", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TerrainTile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondDerivative" }),
-        __metadata("design:type", SecondDerivativeElevationGrid)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondDerivative" }),
+        __metadata("design:type", secondderivativeelevationgrid_1.SecondDerivativeElevationGrid)
     ], TerrainTile.prototype, "secondDerivative", void 0);
     return TerrainTile;
-}(SpeakeasyBase));
-export { TerrainTile };
+}(utils_1.SpeakeasyBase));
+exports.TerrainTile = TerrainTile;

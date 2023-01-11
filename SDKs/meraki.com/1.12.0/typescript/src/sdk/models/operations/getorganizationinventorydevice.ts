@@ -25,5 +25,5 @@ export class GetOrganizationInventoryDeviceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationInventoryDevice200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationInventoryDevice200ApplicationJSONObject?: Record<string, any>;
 }

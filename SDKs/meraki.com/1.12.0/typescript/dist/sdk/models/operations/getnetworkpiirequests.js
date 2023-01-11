@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkPiiRequestsResponse = exports.GetNetworkPiiRequestsRequest = exports.GetNetworkPiiRequestsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkPiiRequestsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkPiiRequestsPathParams, _super);
     function GetNetworkPiiRequestsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkPiiRequestsPathParams.prototype, "networkId", void 0);
     return GetNetworkPiiRequestsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkPiiRequestsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiRequestsPathParams = GetNetworkPiiRequestsPathParams;
 var GetNetworkPiiRequestsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkPiiRequestsRequest, _super);
     function GetNetworkPiiRequestsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkPiiRequestsPathParams)
     ], GetNetworkPiiRequestsRequest.prototype, "pathParams", void 0);
     return GetNetworkPiiRequestsRequest;
-}(SpeakeasyBase));
-export { GetNetworkPiiRequestsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiRequestsRequest = GetNetworkPiiRequestsRequest;
 var GetNetworkPiiRequestsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkPiiRequestsResponse, _super);
     function GetNetworkPiiRequestsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkPiiRequestsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkPiiRequestsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkPiiRequestsResponse.prototype, "getNetworkPiiRequests200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkPiiRequestsResponse.prototype, "getNetworkPiiRequests200ApplicationJSONObject", void 0);
     return GetNetworkPiiRequestsResponse;
-}(SpeakeasyBase));
-export { GetNetworkPiiRequestsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiRequestsResponse = GetNetworkPiiRequestsResponse;

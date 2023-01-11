@@ -7,7 +7,7 @@ export declare class FormDataContentDisposition extends SpeakeasyBase {
     fileName?: string;
     modificationDate?: string;
     name?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     readDate?: string;
     size?: number;
     type?: string;

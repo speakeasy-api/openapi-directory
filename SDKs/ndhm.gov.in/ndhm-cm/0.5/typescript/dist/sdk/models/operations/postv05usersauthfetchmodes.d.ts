@@ -4,7 +4,7 @@ export declare class PostV05UsersAuthFetchModesHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05UsersAuthFetchModesRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthModeQueryRequest?: shared.PatientAuthModeQueryRequest;
 }
 export declare class PostV05UsersAuthFetchModesRequest extends SpeakeasyBase {

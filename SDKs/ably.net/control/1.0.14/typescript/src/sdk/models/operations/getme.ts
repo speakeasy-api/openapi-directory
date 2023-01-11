@@ -23,7 +23,7 @@ export class GetMeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   me?: shared.Me;

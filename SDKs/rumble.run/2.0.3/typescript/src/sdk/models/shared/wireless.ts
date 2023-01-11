@@ -19,7 +19,7 @@ export class Wireless extends SpeakeasyBase {
   createdAt?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=encryption" })
   encryption?: string;

@@ -34,7 +34,7 @@ export class ConsumerConnection extends SpeakeasyBase {
   logo?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -43,7 +43,7 @@ export class ConsumerConnection extends SpeakeasyBase {
   serviceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=settings" })
-  settings?: Map<string, any>;
+  settings?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: ConsumerConnectionStateEnum;

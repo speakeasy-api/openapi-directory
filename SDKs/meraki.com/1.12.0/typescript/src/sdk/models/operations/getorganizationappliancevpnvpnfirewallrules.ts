@@ -22,5 +22,5 @@ export class GetOrganizationApplianceVpnVpnFirewallRulesResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApplianceVpnVpnFirewallRules200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApplianceVpnVpnFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

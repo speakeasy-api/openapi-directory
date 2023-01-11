@@ -22,6 +22,6 @@ export declare class WebriskProjectsOperationsDeleteRequest extends SpeakeasyBas
 }
 export declare class WebriskProjectsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

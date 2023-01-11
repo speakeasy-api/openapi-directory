@@ -74,7 +74,7 @@ export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJ
   contentType: string;
 
   @SpeakeasyMetadata()
-  retryJobResponse?: Map<string, any>;
+  retryJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

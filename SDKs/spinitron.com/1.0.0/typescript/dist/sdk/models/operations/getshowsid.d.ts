@@ -14,7 +14,7 @@ export declare class GetShowsIdRequest extends SpeakeasyBase {
 export declare class GetShowsIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     show?: shared.Show;
     statusCode: number;
 }

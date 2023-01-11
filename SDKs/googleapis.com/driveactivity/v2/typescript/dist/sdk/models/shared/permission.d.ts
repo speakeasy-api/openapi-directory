@@ -17,7 +17,7 @@ export declare enum PermissionRoleEnum {
 **/
 export declare class Permission extends SpeakeasyBase {
     allowDiscovery?: boolean;
-    anyone?: Map<string, any>;
+    anyone?: Record<string, any>;
     domain?: Domain;
     group?: Group;
     role?: PermissionRoleEnum;

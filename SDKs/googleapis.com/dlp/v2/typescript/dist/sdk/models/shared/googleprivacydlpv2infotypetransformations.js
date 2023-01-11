@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoTypeTransformation } from "./googleprivacydlpv2infotypetransformation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InfoTypeTransformations = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotypetransformation_1 = require("./googleprivacydlpv2infotypetransformation");
 // GooglePrivacyDlpV2InfoTypeTransformations
 /**
  * A type of transformation that will scan unstructured text and apply various `PrimitiveTransformation`s to each finding, where the transformation is applied to only values that were identified as a specific info_type.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2InfoTypeTransformations = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformations", elemType: GooglePrivacyDlpV2InfoTypeTransformation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformations", elemType: googleprivacydlpv2infotypetransformation_1.GooglePrivacyDlpV2InfoTypeTransformation }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InfoTypeTransformations.prototype, "transformations", void 0);
     return GooglePrivacyDlpV2InfoTypeTransformations;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InfoTypeTransformations };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InfoTypeTransformations = GooglePrivacyDlpV2InfoTypeTransformations;

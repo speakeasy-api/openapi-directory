@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,353 +14,378 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var PeoplePeopleGetBatchGetSourcesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PeoplePeopleGetBatchGetResponse = exports.PeoplePeopleGetBatchGetRequest = exports.PeoplePeopleGetBatchGetSecurity = exports.PeoplePeopleGetBatchGetSecurityOption11 = exports.PeoplePeopleGetBatchGetSecurityOption10 = exports.PeoplePeopleGetBatchGetSecurityOption9 = exports.PeoplePeopleGetBatchGetSecurityOption8 = exports.PeoplePeopleGetBatchGetSecurityOption7 = exports.PeoplePeopleGetBatchGetSecurityOption6 = exports.PeoplePeopleGetBatchGetSecurityOption5 = exports.PeoplePeopleGetBatchGetSecurityOption4 = exports.PeoplePeopleGetBatchGetSecurityOption3 = exports.PeoplePeopleGetBatchGetSecurityOption2 = exports.PeoplePeopleGetBatchGetSecurityOption1 = exports.PeoplePeopleGetBatchGetQueryParams = exports.PeoplePeopleGetBatchGetSourcesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var PeoplePeopleGetBatchGetSourcesEnum;
 (function (PeoplePeopleGetBatchGetSourcesEnum) {
     PeoplePeopleGetBatchGetSourcesEnum["ReadSourceTypeUnspecified"] = "READ_SOURCE_TYPE_UNSPECIFIED";
     PeoplePeopleGetBatchGetSourcesEnum["ReadSourceTypeProfile"] = "READ_SOURCE_TYPE_PROFILE";
     PeoplePeopleGetBatchGetSourcesEnum["ReadSourceTypeContact"] = "READ_SOURCE_TYPE_CONTACT";
     PeoplePeopleGetBatchGetSourcesEnum["ReadSourceTypeDomainContact"] = "READ_SOURCE_TYPE_DOMAIN_CONTACT";
-})(PeoplePeopleGetBatchGetSourcesEnum || (PeoplePeopleGetBatchGetSourcesEnum = {}));
+})(PeoplePeopleGetBatchGetSourcesEnum = exports.PeoplePeopleGetBatchGetSourcesEnum || (exports.PeoplePeopleGetBatchGetSourcesEnum = {}));
 var PeoplePeopleGetBatchGetQueryParams = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetQueryParams, _super);
     function PeoplePeopleGetBatchGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=personFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=personFields" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "personFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=requestMask.includeField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=requestMask.includeField" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "requestMaskIncludeField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resourceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resourceNames" }),
         __metadata("design:type", Array)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "resourceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sources" }),
         __metadata("design:type", Array)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetQueryParams.prototype, "uploadProtocol", void 0);
     return PeoplePeopleGetBatchGetQueryParams;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetQueryParams = PeoplePeopleGetBatchGetQueryParams;
 var PeoplePeopleGetBatchGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption1, _super);
     function PeoplePeopleGetBatchGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption1.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption1;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption1 = PeoplePeopleGetBatchGetSecurityOption1;
 var PeoplePeopleGetBatchGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption2, _super);
     function PeoplePeopleGetBatchGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption2.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption2;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption2 = PeoplePeopleGetBatchGetSecurityOption2;
 var PeoplePeopleGetBatchGetSecurityOption3 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption3, _super);
     function PeoplePeopleGetBatchGetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption3.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption3;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption3 = PeoplePeopleGetBatchGetSecurityOption3;
 var PeoplePeopleGetBatchGetSecurityOption4 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption4, _super);
     function PeoplePeopleGetBatchGetSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption4.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption4;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption4 = PeoplePeopleGetBatchGetSecurityOption4;
 var PeoplePeopleGetBatchGetSecurityOption5 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption5, _super);
     function PeoplePeopleGetBatchGetSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption5.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption5;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption5 = PeoplePeopleGetBatchGetSecurityOption5;
 var PeoplePeopleGetBatchGetSecurityOption6 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption6, _super);
     function PeoplePeopleGetBatchGetSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption6.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption6;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption6 = PeoplePeopleGetBatchGetSecurityOption6;
 var PeoplePeopleGetBatchGetSecurityOption7 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption7, _super);
     function PeoplePeopleGetBatchGetSecurityOption7() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption7.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption7.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption7;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption7 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption7 = PeoplePeopleGetBatchGetSecurityOption7;
 var PeoplePeopleGetBatchGetSecurityOption8 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption8, _super);
     function PeoplePeopleGetBatchGetSecurityOption8() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption8.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption8.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption8;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption8 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption8 = PeoplePeopleGetBatchGetSecurityOption8;
 var PeoplePeopleGetBatchGetSecurityOption9 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption9, _super);
     function PeoplePeopleGetBatchGetSecurityOption9() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption9.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption9.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption9;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption9 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption9 = PeoplePeopleGetBatchGetSecurityOption9;
 var PeoplePeopleGetBatchGetSecurityOption10 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption10, _super);
     function PeoplePeopleGetBatchGetSecurityOption10() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption10.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption10.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption10;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption10 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption10 = PeoplePeopleGetBatchGetSecurityOption10;
 var PeoplePeopleGetBatchGetSecurityOption11 = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurityOption11, _super);
     function PeoplePeopleGetBatchGetSecurityOption11() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PeoplePeopleGetBatchGetSecurityOption11.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PeoplePeopleGetBatchGetSecurityOption11.prototype, "oauth2c", void 0);
     return PeoplePeopleGetBatchGetSecurityOption11;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurityOption11 };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurityOption11 = PeoplePeopleGetBatchGetSecurityOption11;
 var PeoplePeopleGetBatchGetSecurity = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetSecurity, _super);
     function PeoplePeopleGetBatchGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption1)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption2)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption3)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption4)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption5)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption6)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption7)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option7", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption8)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option8", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption9)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option9", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption10)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option10", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurityOption11)
     ], PeoplePeopleGetBatchGetSecurity.prototype, "option11", void 0);
     return PeoplePeopleGetBatchGetSecurity;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetSecurity = PeoplePeopleGetBatchGetSecurity;
 var PeoplePeopleGetBatchGetRequest = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetRequest, _super);
     function PeoplePeopleGetBatchGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PeoplePeopleGetBatchGetQueryParams)
     ], PeoplePeopleGetBatchGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PeoplePeopleGetBatchGetSecurity)
     ], PeoplePeopleGetBatchGetRequest.prototype, "security", void 0);
     return PeoplePeopleGetBatchGetRequest;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetRequest = PeoplePeopleGetBatchGetRequest;
 var PeoplePeopleGetBatchGetResponse = /** @class */ (function (_super) {
     __extends(PeoplePeopleGetBatchGetResponse, _super);
     function PeoplePeopleGetBatchGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PeoplePeopleGetBatchGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetPeopleResponse)
     ], PeoplePeopleGetBatchGetResponse.prototype, "getPeopleResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PeoplePeopleGetBatchGetResponse.prototype, "statusCode", void 0);
     return PeoplePeopleGetBatchGetResponse;
-}(SpeakeasyBase));
-export { PeoplePeopleGetBatchGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PeoplePeopleGetBatchGetResponse = PeoplePeopleGetBatchGetResponse;

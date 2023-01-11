@@ -47,8 +47,8 @@ export class GetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  get200ApplicationJsonObject?: Get200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  get200ApplicationJSONObject?: Get200ApplicationJson;
 }

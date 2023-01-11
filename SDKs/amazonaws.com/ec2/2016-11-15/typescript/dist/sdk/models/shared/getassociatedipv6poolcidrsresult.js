@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ipv6CidrAssociation } from "./ipv6cidrassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociatedIpv6PoolCidrsResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAssociatedIpv6PoolCidrsResult = /** @class */ (function (_super) {
     __extends(GetAssociatedIpv6PoolCidrsResult, _super);
     function GetAssociatedIpv6PoolCidrsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Ipv6CidrAssociation }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetAssociatedIpv6PoolCidrsResult.prototype, "ipv6CidrAssociations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetAssociatedIpv6PoolCidrsResult.prototype, "nextToken", void 0);
     return GetAssociatedIpv6PoolCidrsResult;
-}(SpeakeasyBase));
-export { GetAssociatedIpv6PoolCidrsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociatedIpv6PoolCidrsResult = GetAssociatedIpv6PoolCidrsResult;

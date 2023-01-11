@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllWorkspacesResponse = exports.AllWorkspaces200ApplicationJson = exports.AllWorkspaces200ApplicationJsonWorkspaces = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllWorkspaces200ApplicationJsonWorkspaces = /** @class */ (function (_super) {
     __extends(AllWorkspaces200ApplicationJsonWorkspaces, _super);
     function AllWorkspaces200ApplicationJsonWorkspaces() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AllWorkspaces200ApplicationJsonWorkspaces.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AllWorkspaces200ApplicationJsonWorkspaces.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AllWorkspaces200ApplicationJsonWorkspaces.prototype, "type", void 0);
     return AllWorkspaces200ApplicationJsonWorkspaces;
-}(SpeakeasyBase));
-export { AllWorkspaces200ApplicationJsonWorkspaces };
+}(utils_1.SpeakeasyBase));
+exports.AllWorkspaces200ApplicationJsonWorkspaces = AllWorkspaces200ApplicationJsonWorkspaces;
 var AllWorkspaces200ApplicationJson = /** @class */ (function (_super) {
     __extends(AllWorkspaces200ApplicationJson, _super);
     function AllWorkspaces200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspaces", elemType: AllWorkspaces200ApplicationJsonWorkspaces }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspaces", elemType: AllWorkspaces200ApplicationJsonWorkspaces }),
         __metadata("design:type", Array)
     ], AllWorkspaces200ApplicationJson.prototype, "workspaces", void 0);
     return AllWorkspaces200ApplicationJson;
-}(SpeakeasyBase));
-export { AllWorkspaces200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllWorkspaces200ApplicationJson = AllWorkspaces200ApplicationJson;
 var AllWorkspacesResponse = /** @class */ (function (_super) {
     __extends(AllWorkspacesResponse, _super);
     function AllWorkspacesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AllWorkspacesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AllWorkspacesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllWorkspaces200ApplicationJson)
-    ], AllWorkspacesResponse.prototype, "allWorkspaces200ApplicationJsonObject", void 0);
+    ], AllWorkspacesResponse.prototype, "allWorkspaces200ApplicationJSONObject", void 0);
     return AllWorkspacesResponse;
-}(SpeakeasyBase));
-export { AllWorkspacesResponse };
+}(utils_1.SpeakeasyBase));
+exports.AllWorkspacesResponse = AllWorkspacesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScoresByWeekResponse = exports.ScoresByWeekRequest = exports.ScoresByWeekPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScoresByWeekPathParams = /** @class */ (function (_super) {
     __extends(ScoresByWeekPathParams, _super);
     function ScoresByWeekPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ScoresByWeekPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ScoresByWeekPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], ScoresByWeekPathParams.prototype, "week", void 0);
     return ScoresByWeekPathParams;
-}(SpeakeasyBase));
-export { ScoresByWeekPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekPathParams = ScoresByWeekPathParams;
 var ScoresByWeekRequest = /** @class */ (function (_super) {
     __extends(ScoresByWeekRequest, _super);
     function ScoresByWeekRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ScoresByWeekPathParams)
     ], ScoresByWeekRequest.prototype, "pathParams", void 0);
     return ScoresByWeekRequest;
-}(SpeakeasyBase));
-export { ScoresByWeekRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekRequest = ScoresByWeekRequest;
 var ScoresByWeekResponse = /** @class */ (function (_super) {
     __extends(ScoresByWeekResponse, _super);
     function ScoresByWeekResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScoresByWeekResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScoresByWeekResponse.prototype, "scores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScoresByWeekResponse.prototype, "statusCode", void 0);
     return ScoresByWeekResponse;
-}(SpeakeasyBase));
-export { ScoresByWeekResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekResponse = ScoresByWeekResponse;

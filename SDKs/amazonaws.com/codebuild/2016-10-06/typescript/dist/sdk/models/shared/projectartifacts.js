@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BucketOwnerAccessEnum } from "./bucketowneraccessenum";
-import { ArtifactNamespaceEnum } from "./artifactnamespaceenum";
-import { ArtifactPackagingEnum } from "./artifactpackagingenum";
-import { ArtifactsTypeEnum } from "./artifactstypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectArtifacts = void 0;
+var utils_1 = require("../../../internal/utils");
+var bucketowneraccessenum_1 = require("./bucketowneraccessenum");
+var artifactnamespaceenum_1 = require("./artifactnamespaceenum");
+var artifactpackagingenum_1 = require("./artifactpackagingenum");
+var artifactstypeenum_1 = require("./artifactstypeenum");
 // ProjectArtifacts
 /**
  * Information about the build output artifacts for the build project.
@@ -37,45 +40,45 @@ var ProjectArtifacts = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactIdentifier" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "artifactIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketOwnerAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketOwnerAccess" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "bucketOwnerAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionDisabled" }),
         __metadata("design:type", Boolean)
     ], ProjectArtifacts.prototype, "encryptionDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespaceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespaceType" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "namespaceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideArtifactName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideArtifactName" }),
         __metadata("design:type", Boolean)
     ], ProjectArtifacts.prototype, "overrideArtifactName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packaging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packaging" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "packaging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProjectArtifacts.prototype, "type", void 0);
     return ProjectArtifacts;
-}(SpeakeasyBase));
-export { ProjectArtifacts };
+}(utils_1.SpeakeasyBase));
+exports.ProjectArtifacts = ProjectArtifacts;

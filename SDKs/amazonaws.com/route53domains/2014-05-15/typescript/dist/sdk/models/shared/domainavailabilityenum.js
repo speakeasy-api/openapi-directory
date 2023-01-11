@@ -1,4 +1,7 @@
-export var DomainAvailabilityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainAvailabilityEnum = void 0;
+var DomainAvailabilityEnum;
 (function (DomainAvailabilityEnum) {
     DomainAvailabilityEnum["Available"] = "AVAILABLE";
     DomainAvailabilityEnum["AvailableReserved"] = "AVAILABLE_RESERVED";
@@ -8,4 +11,4 @@ export var DomainAvailabilityEnum;
     DomainAvailabilityEnum["UnavailableRestricted"] = "UNAVAILABLE_RESTRICTED";
     DomainAvailabilityEnum["Reserved"] = "RESERVED";
     DomainAvailabilityEnum["DontKnow"] = "DONT_KNOW";
-})(DomainAvailabilityEnum || (DomainAvailabilityEnum = {}));
+})(DomainAvailabilityEnum = exports.DomainAvailabilityEnum || (exports.DomainAvailabilityEnum = {}));

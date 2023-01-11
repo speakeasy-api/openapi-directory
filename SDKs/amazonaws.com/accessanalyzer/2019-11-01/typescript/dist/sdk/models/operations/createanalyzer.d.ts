@@ -17,7 +17,7 @@ export declare class CreateAnalyzerRequestBody extends SpeakeasyBase {
     analyzerName: string;
     archiveRules?: shared.InlineArchiveRule[];
     clientToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type: CreateAnalyzerRequestBodyTypeEnum;
 }
 export declare class CreateAnalyzerRequest extends SpeakeasyBase {

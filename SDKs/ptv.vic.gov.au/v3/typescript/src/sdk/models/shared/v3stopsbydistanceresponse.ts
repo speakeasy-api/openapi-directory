@@ -7,7 +7,7 @@ import { V3StopGeosearch } from "./v3stopgeosearch";
 
 export class V3StopsByDistanceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=disruptions", elemType: V3Disruption })
-  disruptions?: Map<string, V3Disruption>;
+  disruptions?: Record<string, V3Disruption>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: V3Status;

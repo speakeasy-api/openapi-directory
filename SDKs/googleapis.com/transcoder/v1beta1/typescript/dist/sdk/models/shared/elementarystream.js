@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AudioStream } from "./audiostream";
-import { TextStream } from "./textstream";
-import { VideoStream } from "./videostream";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ElementaryStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var audiostream_1 = require("./audiostream");
+var textstream_1 = require("./textstream");
+var videostream_1 = require("./videostream");
 // ElementaryStream
 /**
  * Encoding of an input file such as an audio, video, or text track. Elementary streams must be packaged before mapping and sharing between different output formats.
@@ -36,21 +39,21 @@ var ElementaryStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioStream" }),
-        __metadata("design:type", AudioStream)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioStream" }),
+        __metadata("design:type", audiostream_1.AudioStream)
     ], ElementaryStream.prototype, "audioStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ElementaryStream.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textStream" }),
-        __metadata("design:type", TextStream)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textStream" }),
+        __metadata("design:type", textstream_1.TextStream)
     ], ElementaryStream.prototype, "textStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoStream" }),
-        __metadata("design:type", VideoStream)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoStream" }),
+        __metadata("design:type", videostream_1.VideoStream)
     ], ElementaryStream.prototype, "videoStream", void 0);
     return ElementaryStream;
-}(SpeakeasyBase));
-export { ElementaryStream };
+}(utils_1.SpeakeasyBase));
+exports.ElementaryStream = ElementaryStream;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEnableMfaDeviceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnableMfaDeviceResponse = exports.GetEnableMfaDeviceRequest = exports.GetEnableMfaDeviceHeaders = exports.GetEnableMfaDeviceQueryParams = exports.GetEnableMfaDeviceVersionEnum = exports.GetEnableMfaDeviceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEnableMfaDeviceActionEnum;
 (function (GetEnableMfaDeviceActionEnum) {
     GetEnableMfaDeviceActionEnum["EnableMfaDevice"] = "EnableMFADevice";
-})(GetEnableMfaDeviceActionEnum || (GetEnableMfaDeviceActionEnum = {}));
-export var GetEnableMfaDeviceVersionEnum;
+})(GetEnableMfaDeviceActionEnum = exports.GetEnableMfaDeviceActionEnum || (exports.GetEnableMfaDeviceActionEnum = {}));
+var GetEnableMfaDeviceVersionEnum;
 (function (GetEnableMfaDeviceVersionEnum) {
     GetEnableMfaDeviceVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetEnableMfaDeviceVersionEnum || (GetEnableMfaDeviceVersionEnum = {}));
+})(GetEnableMfaDeviceVersionEnum = exports.GetEnableMfaDeviceVersionEnum || (exports.GetEnableMfaDeviceVersionEnum = {}));
 var GetEnableMfaDeviceQueryParams = /** @class */ (function (_super) {
     __extends(GetEnableMfaDeviceQueryParams, _super);
     function GetEnableMfaDeviceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AuthenticationCode1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AuthenticationCode1" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "authenticationCode1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AuthenticationCode2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AuthenticationCode2" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "authenticationCode2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SerialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SerialNumber" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceQueryParams.prototype, "version", void 0);
     return GetEnableMfaDeviceQueryParams;
-}(SpeakeasyBase));
-export { GetEnableMfaDeviceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableMfaDeviceQueryParams = GetEnableMfaDeviceQueryParams;
 var GetEnableMfaDeviceHeaders = /** @class */ (function (_super) {
     __extends(GetEnableMfaDeviceHeaders, _super);
     function GetEnableMfaDeviceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetEnableMfaDeviceHeaders;
-}(SpeakeasyBase));
-export { GetEnableMfaDeviceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableMfaDeviceHeaders = GetEnableMfaDeviceHeaders;
 var GetEnableMfaDeviceRequest = /** @class */ (function (_super) {
     __extends(GetEnableMfaDeviceRequest, _super);
     function GetEnableMfaDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableMfaDeviceQueryParams)
     ], GetEnableMfaDeviceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableMfaDeviceHeaders)
     ], GetEnableMfaDeviceRequest.prototype, "headers", void 0);
     return GetEnableMfaDeviceRequest;
-}(SpeakeasyBase));
-export { GetEnableMfaDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableMfaDeviceRequest = GetEnableMfaDeviceRequest;
 var GetEnableMfaDeviceResponse = /** @class */ (function (_super) {
     __extends(GetEnableMfaDeviceResponse, _super);
     function GetEnableMfaDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEnableMfaDeviceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnableMfaDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnableMfaDeviceResponse.prototype, "statusCode", void 0);
     return GetEnableMfaDeviceResponse;
-}(SpeakeasyBase));
-export { GetEnableMfaDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableMfaDeviceResponse = GetEnableMfaDeviceResponse;

@@ -22,5 +22,5 @@ export declare class UpdateNetworkSmDevicesFieldsRequest extends SpeakeasyBase {
 export declare class UpdateNetworkSmDevicesFieldsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSmDevicesFields200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSmDevicesFields200ApplicationJSONObject?: Record<string, any>;
 }

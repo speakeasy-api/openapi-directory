@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IngressFrom } from "./ingressfrom";
-import { IngressTo } from "./ingressto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IngressPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var ingressfrom_1 = require("./ingressfrom");
+var ingressto_1 = require("./ingressto");
 // IngressPolicy
 /**
  * Policy for ingress into ServicePerimeter. IngressPolicies match requests based on `ingress_from` and `ingress_to` stanzas. For an ingress policy to match, both the `ingress_from` and `ingress_to` stanzas must be matched. If an IngressPolicy matches a request, the request is allowed through the perimeter boundary from outside the perimeter. For example, access from the internet can be allowed either based on an AccessLevel or, for traffic hosted on Google Cloud, the project of the source network. For access from private networks, using the project of the hosting network is required. Individual ingress policies can be limited by restricting which services and/or actions they match using the `ingress_to` field.
@@ -35,13 +38,13 @@ var IngressPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingressFrom" }),
-        __metadata("design:type", IngressFrom)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingressFrom" }),
+        __metadata("design:type", ingressfrom_1.IngressFrom)
     ], IngressPolicy.prototype, "ingressFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingressTo" }),
-        __metadata("design:type", IngressTo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingressTo" }),
+        __metadata("design:type", ingressto_1.IngressTo)
     ], IngressPolicy.prototype, "ingressTo", void 0);
     return IngressPolicy;
-}(SpeakeasyBase));
-export { IngressPolicy };
+}(utils_1.SpeakeasyBase));
+exports.IngressPolicy = IngressPolicy;

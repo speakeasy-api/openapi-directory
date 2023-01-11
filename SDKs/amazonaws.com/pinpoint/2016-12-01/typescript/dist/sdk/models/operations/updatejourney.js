@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,69 +14,94 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateJourneyResponse = exports.UpdateJourneyRequest = exports.UpdateJourneyRequestBody = exports.UpdateJourneyRequestBodyWriteJourneyRequest = exports.UpdateJourneyHeaders = exports.UpdateJourneyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateJourneyPathParams = /** @class */ (function (_super) {
     __extends(UpdateJourneyPathParams, _super);
     function UpdateJourneyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=application-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=application-id" }),
         __metadata("design:type", String)
     ], UpdateJourneyPathParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=journey-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=journey-id" }),
         __metadata("design:type", String)
     ], UpdateJourneyPathParams.prototype, "journeyId", void 0);
     return UpdateJourneyPathParams;
-}(SpeakeasyBase));
-export { UpdateJourneyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyPathParams = UpdateJourneyPathParams;
 var UpdateJourneyHeaders = /** @class */ (function (_super) {
     __extends(UpdateJourneyHeaders, _super);
     function UpdateJourneyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateJourneyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateJourneyHeaders;
-}(SpeakeasyBase));
-export { UpdateJourneyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyHeaders = UpdateJourneyHeaders;
 // UpdateJourneyRequestBodyWriteJourneyRequest
 /**
  * Specifies the configuration and other settings for a journey.
@@ -86,145 +112,145 @@ var UpdateJourneyRequestBodyWriteJourneyRequest = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Activities", elemType: shared.Activity }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Activities", elemType: shared.Activity }),
+        __metadata("design:type", Object)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "activities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limits" }),
         __metadata("design:type", shared.JourneyLimits)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "limits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocalTime" }),
         __metadata("design:type", Boolean)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "localTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuietTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuietTime" }),
         __metadata("design:type", shared.QuietTime)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "quietTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RefreshFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RefreshFrequency" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "refreshFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RefreshOnSegmentUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RefreshOnSegmentUpdate" }),
         __metadata("design:type", Boolean)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "refreshOnSegmentUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
         __metadata("design:type", shared.JourneySchedule)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartActivity" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "startActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartCondition" }),
         __metadata("design:type", shared.StartCondition)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "startCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WaitForQuietTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WaitForQuietTime" }),
         __metadata("design:type", Boolean)
     ], UpdateJourneyRequestBodyWriteJourneyRequest.prototype, "waitForQuietTime", void 0);
     return UpdateJourneyRequestBodyWriteJourneyRequest;
-}(SpeakeasyBase));
-export { UpdateJourneyRequestBodyWriteJourneyRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyRequestBodyWriteJourneyRequest = UpdateJourneyRequestBodyWriteJourneyRequest;
 var UpdateJourneyRequestBody = /** @class */ (function (_super) {
     __extends(UpdateJourneyRequestBody, _super);
     function UpdateJourneyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WriteJourneyRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WriteJourneyRequest" }),
         __metadata("design:type", UpdateJourneyRequestBodyWriteJourneyRequest)
     ], UpdateJourneyRequestBody.prototype, "writeJourneyRequest", void 0);
     return UpdateJourneyRequestBody;
-}(SpeakeasyBase));
-export { UpdateJourneyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyRequestBody = UpdateJourneyRequestBody;
 var UpdateJourneyRequest = /** @class */ (function (_super) {
     __extends(UpdateJourneyRequest, _super);
     function UpdateJourneyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateJourneyPathParams)
     ], UpdateJourneyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateJourneyHeaders)
     ], UpdateJourneyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateJourneyRequestBody)
     ], UpdateJourneyRequest.prototype, "request", void 0);
     return UpdateJourneyRequest;
-}(SpeakeasyBase));
-export { UpdateJourneyRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyRequest = UpdateJourneyRequest;
 var UpdateJourneyResponse = /** @class */ (function (_super) {
     __extends(UpdateJourneyResponse, _super);
     function UpdateJourneyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateJourneyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "forbiddenException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "internalServerErrorException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "methodNotAllowedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "payloadTooLargeException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateJourneyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateJourneyResponse.prototype, "tooManyRequestsException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateJourneyResponse)
     ], UpdateJourneyResponse.prototype, "updateJourneyResponse", void 0);
     return UpdateJourneyResponse;
-}(SpeakeasyBase));
-export { UpdateJourneyResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateJourneyResponse = UpdateJourneyResponse;

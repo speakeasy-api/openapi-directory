@@ -72,5 +72,5 @@ export class UpdateTableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateTableResponse?: Map<string, any>;
+  updateTableResponse?: Record<string, any>;
 }

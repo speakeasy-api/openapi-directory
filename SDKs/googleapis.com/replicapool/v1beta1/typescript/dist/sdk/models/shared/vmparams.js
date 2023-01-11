@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExistingDisk } from "./existingdisk";
-import { NewDisk } from "./newdisk";
-import { Metadata } from "./metadata";
-import { NetworkInterface } from "./networkinterface";
-import { ServiceAccount } from "./serviceaccount";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VmParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var existingdisk_1 = require("./existingdisk");
+var newdisk_1 = require("./newdisk");
+var metadata_1 = require("./metadata");
+var networkinterface_1 = require("./networkinterface");
+var serviceaccount_1 = require("./serviceaccount");
+var tag_1 = require("./tag");
 // VmParams
 /**
  * Parameters for creating a Compute Engine Instance resource. Most fields are identical to the corresponding Compute Engine resource.
@@ -39,49 +42,49 @@ var VmParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseInstanceName" }),
         __metadata("design:type", String)
     ], VmParams.prototype, "baseInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canIpForward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canIpForward" }),
         __metadata("design:type", Boolean)
     ], VmParams.prototype, "canIpForward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], VmParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disksToAttach", elemType: ExistingDisk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disksToAttach", elemType: existingdisk_1.ExistingDisk }),
         __metadata("design:type", Array)
     ], VmParams.prototype, "disksToAttach", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disksToCreate", elemType: NewDisk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disksToCreate", elemType: newdisk_1.NewDisk }),
         __metadata("design:type", Array)
     ], VmParams.prototype, "disksToCreate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], VmParams.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], VmParams.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], VmParams.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onHostMaintenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onHostMaintenance" }),
         __metadata("design:type", String)
     ], VmParams.prototype, "onHostMaintenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccounts", elemType: ServiceAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccounts", elemType: serviceaccount_1.ServiceAccount }),
         __metadata("design:type", Array)
     ], VmParams.prototype, "serviceAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Tag)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", tag_1.Tag)
     ], VmParams.prototype, "tags", void 0);
     return VmParams;
-}(SpeakeasyBase));
-export { VmParams };
+}(utils_1.SpeakeasyBase));
+exports.VmParams = VmParams;

@@ -41,11 +41,11 @@ export class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse extends S
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJsonObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson;
+  enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson;
 }

@@ -1,8 +1,11 @@
-export var TaskStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskStatusEnum = void 0;
+var TaskStatusEnum;
 (function (TaskStatusEnum) {
     TaskStatusEnum["Available"] = "AVAILABLE";
     TaskStatusEnum["Creating"] = "CREATING";
     TaskStatusEnum["Queued"] = "QUEUED";
     TaskStatusEnum["Running"] = "RUNNING";
     TaskStatusEnum["Unavailable"] = "UNAVAILABLE";
-})(TaskStatusEnum || (TaskStatusEnum = {}));
+})(TaskStatusEnum = exports.TaskStatusEnum || (exports.TaskStatusEnum = {}));

@@ -22,5 +22,5 @@ export class ProtocolTelnetServerGetUserdbResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetServerGetUserdb200ApplicationJsonStrings?: string[];
+  protocolTelnetServerGetUserdb200ApplicationJSONStrings?: string[];
 }

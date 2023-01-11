@@ -18,7 +18,7 @@ export declare class ChunkedUploadRequest extends SpeakeasyBase {
 }
 export declare class ChunkedUploadResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

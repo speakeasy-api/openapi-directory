@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SaveRevisionUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -16,7 +16,7 @@ export class SaveRevisionUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SaveRevisionUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SaveRevisionUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SaveRevisionUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SaveRevisionUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingPost200ApplicationJsonObject?: SaveRevisionUsingPost200ApplicationJson;
+  saveRevisionUsingPOST200ApplicationJSONObject?: SaveRevisionUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingPost400ApplicationJsonObject?: SaveRevisionUsingPost400ApplicationJson;
+  saveRevisionUsingPOST400ApplicationJSONObject?: SaveRevisionUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingPost401ApplicationJsonObject?: SaveRevisionUsingPost401ApplicationJson;
+  saveRevisionUsingPOST401ApplicationJSONObject?: SaveRevisionUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingPost500ApplicationJsonObject?: SaveRevisionUsingPost500ApplicationJson;
+  saveRevisionUsingPOST500ApplicationJSONObject?: SaveRevisionUsingPost500ApplicationJson;
 }

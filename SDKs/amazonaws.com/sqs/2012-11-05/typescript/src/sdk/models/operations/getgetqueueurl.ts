@@ -18,7 +18,7 @@ export class GetGetQueueUrlQueryParams extends SpeakeasyBase {
   queueName: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=QueueOwnerAWSAccountId" })
-  queueOwnerAwsAccountId?: string;
+  queueOwnerAWSAccountId?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetGetQueueUrlVersionEnum;

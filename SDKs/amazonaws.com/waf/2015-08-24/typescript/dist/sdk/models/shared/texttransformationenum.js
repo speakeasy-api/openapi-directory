@@ -1,4 +1,7 @@
-export var TextTransformationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextTransformationEnum = void 0;
+var TextTransformationEnum;
 (function (TextTransformationEnum) {
     TextTransformationEnum["None"] = "NONE";
     TextTransformationEnum["CompressWhiteSpace"] = "COMPRESS_WHITE_SPACE";
@@ -6,4 +9,4 @@ export var TextTransformationEnum;
     TextTransformationEnum["Lowercase"] = "LOWERCASE";
     TextTransformationEnum["CmdLine"] = "CMD_LINE";
     TextTransformationEnum["UrlDecode"] = "URL_DECODE";
-})(TextTransformationEnum || (TextTransformationEnum = {}));
+})(TextTransformationEnum = exports.TextTransformationEnum || (exports.TextTransformationEnum = {}));

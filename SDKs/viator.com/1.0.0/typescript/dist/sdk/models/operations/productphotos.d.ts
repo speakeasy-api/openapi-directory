@@ -17,8 +17,8 @@ export declare class ProductPhotos200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -30,5 +30,5 @@ export declare class ProductPhotosRequest extends SpeakeasyBase {
 export declare class ProductPhotosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    productPhotos200ApplicationJsonObject?: ProductPhotos200ApplicationJson;
+    productPhotos200ApplicationJSONObject?: ProductPhotos200ApplicationJson;
 }

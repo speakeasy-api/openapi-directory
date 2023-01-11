@@ -4,17 +4,13 @@ import { CustomMailFromStatusEnum } from "./custommailfromstatusenum";
 
 
 
-// IdentityMailFromDomainAttributes
-/** 
- * Represents the custom MAIL FROM domain attributes of a verified identity (email address or domain).
-**/
 export class IdentityMailFromDomainAttributes extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  behaviorOnMxFailure: BehaviorOnMxFailureEnum;
+  behaviorOnMXFailure?: BehaviorOnMxFailureEnum;
 
   @SpeakeasyMetadata()
-  mailFromDomain: string;
+  mailFromDomain?: string;
 
   @SpeakeasyMetadata()
-  mailFromDomainStatus: CustomMailFromStatusEnum;
+  mailFromDomainStatus?: CustomMailFromStatusEnum;
 }

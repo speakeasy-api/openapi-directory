@@ -65,10 +65,10 @@ export class SearchUsersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchUsers200ApplicationJsonObject?: SearchUsers200ApplicationJson;
+  searchUsers200ApplicationJSONObject?: SearchUsers200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchUsers503ApplicationJsonObject?: SearchUsers503ApplicationJson;
+  searchUsers503ApplicationJSONObject?: SearchUsers503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

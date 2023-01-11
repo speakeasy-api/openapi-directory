@@ -10,8 +10,8 @@ export declare class FetchUploadStatusesRequest extends SpeakeasyBase {
 }
 export declare class FetchUploadStatusesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
     uploadStatuses?: shared.UploadStatuses;
 }

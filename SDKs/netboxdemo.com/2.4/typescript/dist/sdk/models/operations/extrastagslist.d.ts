@@ -19,5 +19,5 @@ export declare class ExtrasTagsListRequest extends SpeakeasyBase {
 export declare class ExtrasTagsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasTagsList200ApplicationJsonObject?: ExtrasTagsList200ApplicationJson;
+    extrasTagsList200ApplicationJSONObject?: ExtrasTagsList200ApplicationJson;
 }

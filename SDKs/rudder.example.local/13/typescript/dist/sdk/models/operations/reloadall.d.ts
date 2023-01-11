@@ -24,5 +24,5 @@ export declare class ReloadAll200ApplicationJson extends SpeakeasyBase {
 export declare class ReloadAllResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reloadAll200ApplicationJsonObject?: ReloadAll200ApplicationJson;
+    reloadAll200ApplicationJSONObject?: ReloadAll200ApplicationJson;
 }

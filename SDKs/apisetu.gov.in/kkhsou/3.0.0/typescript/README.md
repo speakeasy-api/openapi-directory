@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PvcerRequest, PvcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: PvcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      enrolNo: "est",
-      fullName: "alias",
-      year: "non",
+      enrolNO: "sit",
+      fullName: "voluptas",
+      year: "culpa",
     },
-    consentArtifact: "facilis",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "officiis",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.pvcer(req).then((res: PvcerResponse | AxiosError) => {
+sdk.apIs.pvcer(req).then((res: PvcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.pvcer(req).then((res: PvcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pvcer` - Provisional Certificate
 

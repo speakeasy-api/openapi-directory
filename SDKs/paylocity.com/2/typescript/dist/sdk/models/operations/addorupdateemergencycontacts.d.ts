@@ -15,5 +15,5 @@ export declare class AddOrUpdateEmergencyContactsRequest extends SpeakeasyBase {
 export declare class AddOrUpdateEmergencyContactsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

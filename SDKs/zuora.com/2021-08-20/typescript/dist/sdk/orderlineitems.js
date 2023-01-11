@@ -1,0 +1,182 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderLineItems = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var OrderLineItems = /** @class */ (function () {
+    function OrderLineItems(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * getOrderLineItem - Retrieve an order line item
+     *
+     * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * **Note:** You also need to enable the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature to access the Order Line Items feature. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * Retrieves the detailed information about a specified order line item.
+     *
+    **/
+    OrderLineItems.prototype.getOrderLineItem = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetOrderLineItemRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/v1/order-line-items/{itemId}", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json; charset=utf-8")) {
+                        res.getOrderLineItemResponseType = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * putOrderLineItem - Update an order line item
+     *
+     * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * **Note:** You also need to enable the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature to access the Order Line Items feature. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * Updates a specified order line item.
+     *
+    **/
+    OrderLineItems.prototype.putOrderLineItem = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PutOrderLineItemRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/v1/order-line-items/{itemId}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json; charset=utf-8")) {
+                        res.putOrderLineItemResponseType = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postOrderLineItems - Update order line items
+     *
+     * **Note:** The [Order Line Items](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Order_Line_Items/AA_Overview_of_Order_Line_Items) feature is in the **Early Adopter** phase. We are actively soliciting feedback from a small set of early adopters before releasing it as generally available. If you want to join this early adopter program, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * **Note:** You also need to enable the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AA_Overview_of_Orders#Orders) feature to access the Order Line Items feature. Orders is now generally available as of Zuora Billing Release 284 (August 2020). If you are an existing Zuora Subscribe and Amend customer and want to adopt Orders, see [What is Orders Harmonization](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Orders_Harmonization/Orders_Harmonization#What_is_Orders_Harmonization.3F) and join the [Orders Harmonization community group](https://community.zuora.com/t5/Orders-Harmonization/gp-p/Orders-Harmonization) for more information. If you want to enable Orders, submit a request at [Zuora Global Support](https://support.zuora.com/).
+     *
+     * Bulk-updates multiple order line items. You can also choose to generate an invoice for these updated order line items.
+     *
+     * The maximum number of order line items allowable to update in a call is 100.
+     *
+    **/
+    OrderLineItems.prototype.postOrderLineItems = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostOrderLineItemsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/v1/order-line-items/bulk";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json; charset=utf-8")) {
+                        res.getOrderLineItemResponseType = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return OrderLineItems;
+}());
+exports.OrderLineItems = OrderLineItems;

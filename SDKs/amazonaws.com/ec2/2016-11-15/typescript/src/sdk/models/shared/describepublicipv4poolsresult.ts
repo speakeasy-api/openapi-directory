@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicIpv4Pool } from "./publicipv4pool";
 
 
 
 export class DescribePublicIpv4PoolsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: PublicIpv4Pool })
-  publicIpv4Pools?: PublicIpv4Pool[];
+  @SpeakeasyMetadata()
+  publicIpv4Pools?: Record<string, any>;
 }

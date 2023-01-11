@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Drive } from "./drive";
-import { DriveItem } from "./driveitem";
-import { FileComment } from "./filecomment";
-import { TeamDrive } from "./teamdrive";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Target = void 0;
+var utils_1 = require("../../../internal/utils");
+var drive_1 = require("./drive");
+var driveitem_1 = require("./driveitem");
+var filecomment_1 = require("./filecomment");
+var teamdrive_1 = require("./teamdrive");
 // Target
 /**
  * Information about the target of activity.
@@ -37,21 +40,21 @@ var Target = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drive" }),
-        __metadata("design:type", Drive)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drive" }),
+        __metadata("design:type", drive_1.Drive)
     ], Target.prototype, "drive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveItem" }),
-        __metadata("design:type", DriveItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveItem" }),
+        __metadata("design:type", driveitem_1.DriveItem)
     ], Target.prototype, "driveItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileComment" }),
-        __metadata("design:type", FileComment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileComment" }),
+        __metadata("design:type", filecomment_1.FileComment)
     ], Target.prototype, "fileComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDrive" }),
-        __metadata("design:type", TeamDrive)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDrive" }),
+        __metadata("design:type", teamdrive_1.TeamDrive)
     ], Target.prototype, "teamDrive", void 0);
     return Target;
-}(SpeakeasyBase));
-export { Target };
+}(utils_1.SpeakeasyBase));
+exports.Target = Target;

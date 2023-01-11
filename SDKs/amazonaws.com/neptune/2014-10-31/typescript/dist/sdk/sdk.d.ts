@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://rds.{region}.amazonaws.com", "https://rds.{region}.amazonaws.com", "http://rds.amazonaws.com", "https://rds.amazonaws.com", "http://rds.{region}.amazonaws.com.cn", "https://rds.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getAddRoleToDbCluster - Associates an Identity and Access Management (IAM) role from an Neptune DB cluster.
     **/
@@ -72,29 +72,9 @@ export declare class SDK {
     **/
     getFailoverDbCluster(req: operations.GetFailoverDbClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetFailoverDbClusterResponse>;
     /**
-     * getModifyDbCluster - Modify a setting for a DB cluster. You can change one or more database configuration parameters by specifying these parameters and the new values in the request.
-    **/
-    getModifyDbCluster(req: operations.GetModifyDbClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbClusterResponse>;
-    /**
      * getModifyDbClusterEndpoint - Modifies the properties of an endpoint in an Amazon Neptune DB cluster.
     **/
     getModifyDbClusterEndpoint(req: operations.GetModifyDbClusterEndpointRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbClusterEndpointResponse>;
-    /**
-     * getModifyDbClusterSnapshotAttribute - <p>Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot.</p> <p>To share a manual DB cluster snapshot with other Amazon accounts, specify <code>restore</code> as the <code>AttributeName</code> and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the Amazon accounts that are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB cluster snapshot public, which means that it can be copied or restored by all Amazon accounts. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private information that you don't want available to all Amazon accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized Amazon account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this case.</p> <p>To view which Amazon accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API action.</p>
-    **/
-    getModifyDbClusterSnapshotAttribute(req: operations.GetModifyDbClusterSnapshotAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbClusterSnapshotAttributeResponse>;
-    /**
-     * getModifyDbInstance - Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. To learn what modifications you can make to your DB instance, call <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
-    **/
-    getModifyDbInstance(req: operations.GetModifyDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbInstanceResponse>;
-    /**
-     * getModifyDbSubnetGroup - Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the Amazon Region.
-    **/
-    getModifyDbSubnetGroup(req: operations.GetModifyDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbSubnetGroupResponse>;
-    /**
-     * getModifyEventSubscription - <p>Modifies an existing event notification subscription. Note that you can't modify the source identifiers using this call; to change source identifiers for a subscription, use the <a>AddSourceIdentifierToSubscription</a> and <a>RemoveSourceIdentifierFromSubscription</a> calls.</p> <p>You can see a list of the event categories for a given SourceType by using the <b>DescribeEventCategories</b> action.</p>
-    **/
-    getModifyEventSubscription(req: operations.GetModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyEventSubscriptionResponse>;
     /**
      * getPromoteReadReplicaDbCluster - Not supported.
     **/
@@ -376,4 +356,3 @@ export declare class SDK {
     **/
     postStopDbCluster(req: operations.PostStopDbClusterRequest, config?: AxiosRequestConfig): Promise<operations.PostStopDbClusterResponse>;
 }
-export {};

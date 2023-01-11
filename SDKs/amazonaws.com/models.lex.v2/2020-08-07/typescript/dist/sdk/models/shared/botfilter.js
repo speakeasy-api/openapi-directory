@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotFilterNameEnum } from "./botfilternameenum";
-import { BotFilterOperatorEnum } from "./botfilteroperatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var botfilternameenum_1 = require("./botfilternameenum");
+var botfilteroperatorenum_1 = require("./botfilteroperatorenum");
 // BotFilter
 /**
  * Filters the responses returned by the <code>ListBots</code> operation.
@@ -35,17 +38,17 @@ var BotFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BotFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], BotFilter.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], BotFilter.prototype, "values", void 0);
     return BotFilter;
-}(SpeakeasyBase));
-export { BotFilter };
+}(utils_1.SpeakeasyBase));
+exports.BotFilter = BotFilter;

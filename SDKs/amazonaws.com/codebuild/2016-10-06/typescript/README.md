@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchDeleteBuildsRequest, BatchDeleteBuildsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchDeleteBuildsRequest = {
   headers: {
-    xAmzAlgorithm: "illum",
-    xAmzContentSha256: "eum",
-    xAmzCredential: "quo",
-    xAmzDate: "et",
-    xAmzSecurityToken: "non",
-    xAmzSignature: "omnis",
-    xAmzSignedHeaders: "tempora",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "CodeBuild_20161006.BatchDeleteBuilds",
   },
   request: {
     ids: [
-      "fugit",
-      "quam",
+      "et",
     ],
   },
 };
 
-sdk.sdk.batchDeleteBuilds(req).then((res: BatchDeleteBuildsResponse | AxiosError) => {
+sdk.batchDeleteBuilds(req).then((res: BatchDeleteBuildsResponse | AxiosError) => {
    // handle response
 });
 ```

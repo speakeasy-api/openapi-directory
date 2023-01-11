@@ -1,8 +1,11 @@
-export var ReceiptTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiptTypeEnum = void 0;
+var ReceiptTypeEnum;
 (function (ReceiptTypeEnum) {
     ReceiptTypeEnum["Delivered"] = "DELIVERED";
     ReceiptTypeEnum["Error"] = "ERROR";
     ReceiptTypeEnum["Read"] = "READ";
     ReceiptTypeEnum["Sent"] = "SENT";
     ReceiptTypeEnum["Stop"] = "STOP";
-})(ReceiptTypeEnum || (ReceiptTypeEnum = {}));
+})(ReceiptTypeEnum = exports.ReceiptTypeEnum || (exports.ReceiptTypeEnum = {}));

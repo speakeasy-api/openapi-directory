@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WafAction } from "./wafaction";
-import { ExcludedRule } from "./excludedrule";
-import { WafOverrideAction } from "./wafoverrideaction";
-import { WafRuleTypeEnum } from "./wafruletypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivatedRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var wafaction_1 = require("./wafaction");
+var excludedrule_1 = require("./excludedrule");
+var wafoverrideaction_1 = require("./wafoverrideaction");
+var wafruletypeenum_1 = require("./wafruletypeenum");
 // ActivatedRule
 /**
  * <note> <p>This is <b>AWS WAF Classic</b> documentation. For more information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the developer guide.</p> <p> <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the latest version, AWS WAF has a single set of endpoints for regional and global use. </p> </note> <p>The <code>ActivatedRule</code> object in an <a>UpdateWebACL</a> request specifies a <code>Rule</code> that you want to insert or delete, the priority of the <code>Rule</code> in the <code>WebACL</code>, and the action that you want AWS WAF to take when a web request matches the <code>Rule</code> (<code>ALLOW</code>, <code>BLOCK</code>, or <code>COUNT</code>).</p> <p>To specify whether to insert or delete a <code>Rule</code>, use the <code>Action</code> parameter in the <a>WebACLUpdate</a> data type.</p>
@@ -37,29 +40,29 @@ var ActivatedRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
-        __metadata("design:type", WafAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
+        __metadata("design:type", wafaction_1.WafAction)
     ], ActivatedRule.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludedRules", elemType: ExcludedRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludedRules", elemType: excludedrule_1.ExcludedRule }),
         __metadata("design:type", Array)
     ], ActivatedRule.prototype, "excludedRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverrideAction" }),
-        __metadata("design:type", WafOverrideAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverrideAction" }),
+        __metadata("design:type", wafoverrideaction_1.WafOverrideAction)
     ], ActivatedRule.prototype, "overrideAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Priority" }),
         __metadata("design:type", Number)
     ], ActivatedRule.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleId" }),
         __metadata("design:type", String)
     ], ActivatedRule.prototype, "ruleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ActivatedRule.prototype, "type", void 0);
     return ActivatedRule;
-}(SpeakeasyBase));
-export { ActivatedRule };
+}(utils_1.SpeakeasyBase));
+exports.ActivatedRule = ActivatedRule;

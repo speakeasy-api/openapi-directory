@@ -9,7 +9,7 @@ export declare class GetDeleteDbInstanceQueryParams extends SpeakeasyBase {
     action: GetDeleteDbInstanceActionEnum;
     dbInstanceIdentifier: string;
     deleteAutomatedBackups?: boolean;
-    finalDbSnapshotIdentifier?: string;
+    finalDBSnapshotIdentifier?: string;
     skipFinalSnapshot?: boolean;
     version: GetDeleteDbInstanceVersionEnum;
 }

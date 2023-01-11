@@ -20,7 +20,7 @@ export declare class DeletePartitionIndexRequest extends SpeakeasyBase {
 export declare class DeletePartitionIndexResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deletePartitionIndexResponse?: Map<string, any>;
+    deletePartitionIndexResponse?: Record<string, any>;
     entityNotFoundException?: any;
     glueEncryptionException?: any;
     internalServiceException?: any;

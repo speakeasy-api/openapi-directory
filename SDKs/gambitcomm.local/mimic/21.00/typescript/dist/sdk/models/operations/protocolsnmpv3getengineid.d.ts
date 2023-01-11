@@ -8,5 +8,5 @@ export declare class ProtocolSnmpv3GetEngineidRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3GetEngineidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3GetEngineid200ApplicationJsonString?: string;
+    protocolSnmpv3GetEngineid200ApplicationJSONString?: string;
 }

@@ -53,7 +53,7 @@ export class ResultFormattedResults extends SpeakeasyBase {
   locale?: string;
 
   @SpeakeasyMetadata({ elemType: ResultFormattedResultsRuleResults })
-  ruleResults?: Map<string, ResultFormattedResultsRuleResults>;
+  ruleResults?: Record<string, ResultFormattedResultsRuleResults>;
 }
 
 
@@ -149,7 +149,7 @@ export class Result extends SpeakeasyBase {
   responseCode?: number;
 
   @SpeakeasyMetadata({ elemType: ResultRuleGroups })
-  ruleGroups?: Map<string, ResultRuleGroups>;
+  ruleGroups?: Record<string, ResultRuleGroups>;
 
   @SpeakeasyMetadata()
   screenshot?: PagespeedApiImageV2;

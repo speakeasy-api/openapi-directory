@@ -4,6 +4,10 @@ import { ReactionRollup } from "./reactionrollup";
 
 
 
+// IssueCommentSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueCommentSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -97,7 +101,7 @@ export class IssueComment extends SpeakeasyBase {
   nodeId: string;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=reactions" })
   reactions?: ReactionRollup;

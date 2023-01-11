@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentLink } from "./environmentlink";
-import { EnvironmentHealthEnum } from "./environmenthealthenum";
-import { EnvironmentHealthStatusEnum } from "./environmenthealthstatusenum";
-import { EnvironmentResourcesDescription } from "./environmentresourcesdescription";
-import { EnvironmentStatusEnum } from "./environmentstatusenum";
-import { EnvironmentTier } from "./environmenttier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentlink_1 = require("./environmentlink");
+var environmenthealthenum_1 = require("./environmenthealthenum");
+var environmenthealthstatusenum_1 = require("./environmenthealthstatusenum");
+var environmentresourcesdescription_1 = require("./environmentresourcesdescription");
+var environmentstatusenum_1 = require("./environmentstatusenum");
+var environmenttier_1 = require("./environmenttier");
 // EnvironmentDescription
 /**
  * Describes the properties of an environment.
@@ -39,89 +42,89 @@ var EnvironmentDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], EnvironmentDescription.prototype, "abortableOperationInProgress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "cname", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], EnvironmentDescription.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], EnvironmentDescription.prototype, "dateUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], EnvironmentDescription.prototype, "endpointUrl", void 0);
+    ], EnvironmentDescription.prototype, "endpointURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "environmentArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: EnvironmentLink }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: environmentlink_1.EnvironmentLink }),
         __metadata("design:type", Array)
     ], EnvironmentDescription.prototype, "environmentLinks", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "operationsRole", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "platformArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", EnvironmentResourcesDescription)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", environmentresourcesdescription_1.EnvironmentResourcesDescription)
     ], EnvironmentDescription.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "solutionStackName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", EnvironmentTier)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", environmenttier_1.EnvironmentTier)
     ], EnvironmentDescription.prototype, "tier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentDescription.prototype, "versionLabel", void 0);
     return EnvironmentDescription;
-}(SpeakeasyBase));
-export { EnvironmentDescription };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentDescription = EnvironmentDescription;

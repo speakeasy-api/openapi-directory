@@ -15,7 +15,7 @@ export enum RemittanceInformationStructuredScoRorQrRorIpiEnum {
 **/
 export class RemittanceInformationStructured extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=SCORorQRRorIPI" })
-  scoRorQrRorIpi?: RemittanceInformationStructuredScoRorQrRorIpiEnum;
+  scoRorQRRorIPI?: RemittanceInformationStructuredScoRorQrRorIpiEnum;
 
   @SpeakeasyMetadata({ data: "json, name=additionalRemittanceInformation" })
   additionalRemittanceInformation?: string;

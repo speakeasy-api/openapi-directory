@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSshGetStatisticsResponse = exports.ProtocolSshGetStatisticsRequest = exports.ProtocolSshGetStatisticsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSshGetStatisticsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSshGetStatisticsPathParams, _super);
     function ProtocolSshGetStatisticsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSshGetStatisticsPathParams.prototype, "agentNum", void 0);
     return ProtocolSshGetStatisticsPathParams;
-}(SpeakeasyBase));
-export { ProtocolSshGetStatisticsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshGetStatisticsPathParams = ProtocolSshGetStatisticsPathParams;
 var ProtocolSshGetStatisticsRequest = /** @class */ (function (_super) {
     __extends(ProtocolSshGetStatisticsRequest, _super);
     function ProtocolSshGetStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSshGetStatisticsPathParams)
     ], ProtocolSshGetStatisticsRequest.prototype, "pathParams", void 0);
     return ProtocolSshGetStatisticsRequest;
-}(SpeakeasyBase));
-export { ProtocolSshGetStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshGetStatisticsRequest = ProtocolSshGetStatisticsRequest;
 var ProtocolSshGetStatisticsResponse = /** @class */ (function (_super) {
     __extends(ProtocolSshGetStatisticsResponse, _super);
     function ProtocolSshGetStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSshGetStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSshGetStatisticsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolSshGetStatisticsResponse.prototype, "protocolSshGetStatistics200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolSshGetStatisticsResponse.prototype, "protocolSshGetStatistics200ApplicationJSONInt32Integers", void 0);
     return ProtocolSshGetStatisticsResponse;
-}(SpeakeasyBase));
-export { ProtocolSshGetStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshGetStatisticsResponse = ProtocolSshGetStatisticsResponse;

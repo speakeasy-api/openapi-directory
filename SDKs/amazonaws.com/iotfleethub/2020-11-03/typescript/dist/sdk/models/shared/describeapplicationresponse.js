@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationStateEnum } from "./applicationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeApplicationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationstateenum_1 = require("./applicationstateenum");
 var DescribeApplicationResponse = /** @class */ (function (_super) {
     __extends(DescribeApplicationResponse, _super);
     function DescribeApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationArn" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationCreationDate" }),
         __metadata("design:type", Number)
     ], DescribeApplicationResponse.prototype, "applicationCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationDescription" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationId" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationLastUpdateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationLastUpdateDate" }),
         __metadata("design:type", Number)
     ], DescribeApplicationResponse.prototype, "applicationLastUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationState" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationUrl" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "applicationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssoClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssoClientId" }),
         __metadata("design:type", String)
     ], DescribeApplicationResponse.prototype, "ssoClientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], DescribeApplicationResponse.prototype, "tags", void 0);
     return DescribeApplicationResponse;
-}(SpeakeasyBase));
-export { DescribeApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeApplicationResponse = DescribeApplicationResponse;

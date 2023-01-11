@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { MessageCode400SbsEnum } from "./messagecode400sbsenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Error400Sbs = exports.Error400SbsAdditionalErrors = void 0;
+var utils_1 = require("../../../internal/utils");
+var messagecode400sbsenum_1 = require("./messagecode400sbsenum");
+var hreftype_1 = require("./hreftype");
 // Error400SbsAdditionalErrors
 /**
  * This is a data element to support the declaration of additional errors in the context of [RFC7807].
@@ -35,20 +38,20 @@ var Error400SbsAdditionalErrors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Error400SbsAdditionalErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], Error400SbsAdditionalErrors.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Error400SbsAdditionalErrors.prototype, "title", void 0);
     return Error400SbsAdditionalErrors;
-}(SpeakeasyBase));
-export { Error400SbsAdditionalErrors };
+}(utils_1.SpeakeasyBase));
+exports.Error400SbsAdditionalErrors = Error400SbsAdditionalErrors;
 // Error400Sbs
 /**
  * Standardised definition of reporting error information according to [RFC7807]
@@ -61,29 +64,29 @@ var Error400Sbs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], Error400Sbs.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalErrors", elemType: Error400SbsAdditionalErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalErrors", elemType: Error400SbsAdditionalErrors }),
         __metadata("design:type", Array)
     ], Error400Sbs.prototype, "additionalErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Error400Sbs.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], Error400Sbs.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Error400Sbs.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Error400Sbs.prototype, "type", void 0);
     return Error400Sbs;
-}(SpeakeasyBase));
-export { Error400Sbs };
+}(utils_1.SpeakeasyBase));
+exports.Error400Sbs = Error400Sbs;

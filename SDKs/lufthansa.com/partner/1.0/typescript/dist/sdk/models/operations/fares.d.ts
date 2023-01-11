@@ -20,6 +20,6 @@ export declare class FaresRequest extends SpeakeasyBase {
 }
 export declare class FaresResponse extends SpeakeasyBase {
     contentType: string;
-    fares200ApplicationJsonString?: string;
+    fares200ApplicationJSONString?: string;
     statusCode: number;
 }

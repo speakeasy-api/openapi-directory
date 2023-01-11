@@ -18,7 +18,7 @@ export class TcpRoute extends SpeakeasyBase {
   gateways?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=meshes" })
   meshes?: string[];
@@ -49,7 +49,7 @@ export class TcpRouteInput extends SpeakeasyBase {
   gateways?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=meshes" })
   meshes?: string[];

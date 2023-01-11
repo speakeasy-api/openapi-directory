@@ -16,5 +16,5 @@ export declare class TrendingStickersRequest extends SpeakeasyBase {
 export declare class TrendingStickersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    trendingStickers200ApplicationJsonObject?: TrendingStickers200ApplicationJson;
+    trendingStickers200ApplicationJSONObject?: TrendingStickers200ApplicationJson;
 }

@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
 import { Email } from "./email";
 import { PhoneNumber } from "./phonenumber";
+import { CurrencyEnum } from "./currencyenum";
 import { Address } from "./address";
-import { ServiceCharge } from "./servicecharge";
 import { PaymentCard } from "./paymentcard";
-import { ServiceChargeInput } from "./servicecharge";
 import { PaymentCardInput } from "./paymentcard";
+import { ServiceCharge } from "./servicecharge";
+import { ServiceChargeInput } from "./servicecharge";
 export declare class OrderCustomers extends SpeakeasyBase {
     emails?: Email[];
     firstName?: string;
@@ -84,7 +84,7 @@ export declare enum OrderFulfillmentsTypeEnum {
 export declare class OrderFulfillments extends SpeakeasyBase {
     id?: string;
     pickupDetails?: OrderFulfillmentsPickupDetails;
-    shipmentDetails?: Map<string, any>;
+    shipmentDetails?: Record<string, any>;
     status?: OrderFulfillmentsFulfillmentStatusEnum;
     type?: OrderFulfillmentsTypeEnum;
 }
@@ -221,7 +221,7 @@ export declare class OrderFulfillmentsPickupDetailsInput extends SpeakeasyBase {
 export declare class OrderFulfillmentsInput extends SpeakeasyBase {
     id?: string;
     pickupDetails?: OrderFulfillmentsPickupDetailsInput;
-    shipmentDetails?: Map<string, any>;
+    shipmentDetails?: Record<string, any>;
     status?: OrderFulfillmentsFulfillmentStatusEnum;
     type?: OrderFulfillmentsTypeEnum;
 }

@@ -191,23 +191,23 @@ export class TripcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tripc400ApplicationJsonObject?: Tripc400ApplicationJson;
+  tripc400ApplicationJSONObject?: Tripc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc401ApplicationJsonObject?: Tripc401ApplicationJson;
+  tripc401ApplicationJSONObject?: Tripc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc404ApplicationJsonObject?: Tripc404ApplicationJson;
+  tripc404ApplicationJSONObject?: Tripc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc500ApplicationJsonObject?: Tripc500ApplicationJson;
+  tripc500ApplicationJSONObject?: Tripc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc502ApplicationJsonObject?: Tripc502ApplicationJson;
+  tripc502ApplicationJSONObject?: Tripc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc503ApplicationJsonObject?: Tripc503ApplicationJson;
+  tripc503ApplicationJSONObject?: Tripc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tripc504ApplicationJsonObject?: Tripc504ApplicationJson;
+  tripc504ApplicationJSONObject?: Tripc504ApplicationJson;
 }

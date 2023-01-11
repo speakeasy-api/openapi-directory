@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaCompletionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDiscoveryengineV1alphaCompletionInfo
 /**
  * Detailed completion information including completion attribution token and clicked completion info.
@@ -33,13 +36,13 @@ var GoogleCloudDiscoveryengineV1alphaCompletionInfo = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedPosition" }),
         __metadata("design:type", Number)
     ], GoogleCloudDiscoveryengineV1alphaCompletionInfo.prototype, "selectedPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedSuggestion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedSuggestion" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaCompletionInfo.prototype, "selectedSuggestion", void 0);
     return GoogleCloudDiscoveryengineV1alphaCompletionInfo;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaCompletionInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaCompletionInfo = GoogleCloudDiscoveryengineV1alphaCompletionInfo;

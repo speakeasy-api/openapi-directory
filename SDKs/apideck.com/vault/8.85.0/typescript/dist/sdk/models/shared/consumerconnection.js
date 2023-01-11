@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,85 +23,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthTypeEnum } from "./authtypeenum";
-export var ConsumerConnectionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsumerConnection = exports.ConsumerConnectionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var authtypeenum_1 = require("./authtypeenum");
+var ConsumerConnectionStateEnum;
 (function (ConsumerConnectionStateEnum) {
     ConsumerConnectionStateEnum["Available"] = "available";
     ConsumerConnectionStateEnum["Callable"] = "callable";
     ConsumerConnectionStateEnum["Added"] = "added";
     ConsumerConnectionStateEnum["Configured"] = "configured";
     ConsumerConnectionStateEnum["Authorized"] = "authorized";
-})(ConsumerConnectionStateEnum || (ConsumerConnectionStateEnum = {}));
+})(ConsumerConnectionStateEnum = exports.ConsumerConnectionStateEnum || (exports.ConsumerConnectionStateEnum = {}));
 var ConsumerConnection = /** @class */ (function (_super) {
     __extends(ConsumerConnection, _super);
     function ConsumerConnection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth_type" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumer_id" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "consumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ConsumerConnection.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "icon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ConsumerConnection.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_id" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", Object)
     ], ConsumerConnection.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag_line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag_line" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "tagLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unified_api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unified_api" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "unifiedApi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], ConsumerConnection.prototype, "website", void 0);
     return ConsumerConnection;
-}(SpeakeasyBase));
-export { ConsumerConnection };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerConnection = ConsumerConnection;

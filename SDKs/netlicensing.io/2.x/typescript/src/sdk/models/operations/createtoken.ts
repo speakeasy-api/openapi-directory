@@ -33,10 +33,10 @@ export class CreateTokenRequestBody extends SpeakeasyBase {
   apiKeyRole?: CreateTokenRequestBodyApiKeyRoleEnum;
 
   @SpeakeasyMetadata({ data: "form, name=cancelURL;" })
-  cancelUrl?: string;
+  cancelURL?: string;
 
   @SpeakeasyMetadata({ data: "form, name=cancelURLTitle;" })
-  cancelUrlTitle?: string;
+  cancelURLTitle?: string;
 
   @SpeakeasyMetadata({ data: "form, name=licenseTemplateNumber;" })
   licenseTemplateNumber?: string;
@@ -54,10 +54,10 @@ export class CreateTokenRequestBody extends SpeakeasyBase {
   productNumber?: string;
 
   @SpeakeasyMetadata({ data: "form, name=successURL;" })
-  successUrl?: string;
+  successURL?: string;
 
   @SpeakeasyMetadata({ data: "form, name=successURLTitle;" })
-  successUrlTitle?: string;
+  successURLTitle?: string;
 
   @SpeakeasyMetadata({ data: "form, name=tokenType;" })
   tokenType: CreateTokenRequestBodyTokenTypeEnum;

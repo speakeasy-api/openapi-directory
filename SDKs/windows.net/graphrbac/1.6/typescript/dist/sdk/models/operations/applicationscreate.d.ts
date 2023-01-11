@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ApplicationsCreatePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ApplicationsCreateQueryParams extends SpeakeasyBase {
     apiVersion: string;
@@ -16,7 +16,7 @@ export declare class ApplicationsCreateRequest extends SpeakeasyBase {
     request: ApplicationsCreateRequests;
 }
 export declare class ApplicationsCreateResponse extends SpeakeasyBase {
-    application?: Map<string, Map<string, any>>;
+    application?: Record<string, Record<string, any>>;
     contentType: string;
     graphError?: shared.GraphError;
     statusCode: number;

@@ -13,6 +13,6 @@ export declare class AddChannelCategoriesRequest extends SpeakeasyBase {
 export declare class AddChannelCategoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

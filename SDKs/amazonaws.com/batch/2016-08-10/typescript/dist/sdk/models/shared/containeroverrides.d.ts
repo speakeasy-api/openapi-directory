@@ -8,7 +8,7 @@ export declare class ContainerOverrides extends SpeakeasyBase {
     command?: string[];
     environment?: KeyValuePair[];
     instanceType?: string;
-    memory?: number;
+    memory?: Record<string, any>;
     resourceRequirements?: ResourceRequirement[];
-    vcpus?: number;
+    vcpus?: Record<string, any>;
 }

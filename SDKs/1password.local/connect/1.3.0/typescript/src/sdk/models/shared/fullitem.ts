@@ -1,14 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Field } from "./field";
-import { File } from "./file";
 import { FieldInput } from "./field";
 import { FileInput } from "./file";
+import { Field } from "./field";
+import { File } from "./file";
 
-
-export enum FullItemStateEnum {
-    Archived = "ARCHIVED",
-    Deleted = "DELETED"
-}
 
 export enum FullItemCategoryEnum {
     Login = "LOGIN",
@@ -57,6 +52,47 @@ export class FullItemVault extends SpeakeasyBase {
   id: string;
 }
 
+export enum FullItemStateEnum {
+    Archived = "ARCHIVED",
+    Deleted = "DELETED"
+}
+
+
+export class FullItemInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=category" })
+  category: FullItemCategoryEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=favorite" })
+  favorite?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=fields", elemType: FieldInput })
+  fields?: FieldInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=files", elemType: FileInput })
+  files?: FileInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sections", elemType: FullItemSections })
+  sections?: FullItemSections[];
+
+  @SpeakeasyMetadata({ data: "json, name=tags" })
+  tags?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=title" })
+  title?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=urls", elemType: FullItemUrls })
+  urls?: FullItemUrls[];
+
+  @SpeakeasyMetadata({ data: "json, name=vault" })
+  vault: FullItemVault;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: number;
+}
+
 
 export class FullItem extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=category" })
@@ -94,42 +130,6 @@ export class FullItem extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updatedAt" })
   updatedAt?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=urls", elemType: FullItemUrls })
-  urls?: FullItemUrls[];
-
-  @SpeakeasyMetadata({ data: "json, name=vault" })
-  vault: FullItemVault;
-
-  @SpeakeasyMetadata({ data: "json, name=version" })
-  version?: number;
-}
-
-
-export class FullItemInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=category" })
-  category: FullItemCategoryEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=favorite" })
-  favorite?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=fields", elemType: FieldInput })
-  fields?: FieldInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=files", elemType: FileInput })
-  files?: FileInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=sections", elemType: FullItemSections })
-  sections?: FullItemSections[];
-
-  @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=title" })
-  title?: string;
 
   @SpeakeasyMetadata({ data: "json, name=urls", elemType: FullItemUrls })
   urls?: FullItemUrls[];

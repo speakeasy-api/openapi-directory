@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchoolAdmin } from "./schooladmin";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchoolAdminResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var schooladmin_1 = require("./schooladmin");
 var SchoolAdminResponse = /** @class */ (function (_super) {
     __extends(SchoolAdminResponse, _super);
     function SchoolAdminResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", SchoolAdmin)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", schooladmin_1.SchoolAdmin)
     ], SchoolAdminResponse.prototype, "data", void 0);
     return SchoolAdminResponse;
-}(SpeakeasyBase));
-export { SchoolAdminResponse };
+}(utils_1.SpeakeasyBase));
+exports.SchoolAdminResponse = SchoolAdminResponse;

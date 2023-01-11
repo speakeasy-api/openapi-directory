@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityTypeEnum } from "./entitytypeenum";
-import { IpV4Address } from "./ipv4address";
-import { Reference } from "./reference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VCenterManager = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitytypeenum_1 = require("./entitytypeenum");
+var ipv4address_1 = require("./ipv4address");
+var reference_1 = require("./reference");
 var VCenterManager = /** @class */ (function (_super) {
     __extends(VCenterManager, _super);
     function VCenterManager() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], VCenterManager.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], VCenterManager.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fqdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fqdn" }),
         __metadata("design:type", String)
     ], VCenterManager.prototype, "fqdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_address" }),
-        __metadata("design:type", IpV4Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_address" }),
+        __metadata("design:type", ipv4address_1.IpV4Address)
     ], VCenterManager.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VCenterManager.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsx_manager" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsx_manager" }),
+        __metadata("design:type", reference_1.Reference)
     ], VCenterManager.prototype, "nsxManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vm" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vm" }),
+        __metadata("design:type", reference_1.Reference)
     ], VCenterManager.prototype, "vm", void 0);
     return VCenterManager;
-}(SpeakeasyBase));
-export { VCenterManager };
+}(utils_1.SpeakeasyBase));
+exports.VCenterManager = VCenterManager;

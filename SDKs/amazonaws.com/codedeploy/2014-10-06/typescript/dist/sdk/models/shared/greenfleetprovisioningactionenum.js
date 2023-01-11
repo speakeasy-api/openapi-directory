@@ -1,5 +1,8 @@
-export var GreenFleetProvisioningActionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GreenFleetProvisioningActionEnum = void 0;
+var GreenFleetProvisioningActionEnum;
 (function (GreenFleetProvisioningActionEnum) {
     GreenFleetProvisioningActionEnum["DiscoverExisting"] = "DISCOVER_EXISTING";
     GreenFleetProvisioningActionEnum["CopyAutoScalingGroup"] = "COPY_AUTO_SCALING_GROUP";
-})(GreenFleetProvisioningActionEnum || (GreenFleetProvisioningActionEnum = {}));
+})(GreenFleetProvisioningActionEnum = exports.GreenFleetProvisioningActionEnum || (exports.GreenFleetProvisioningActionEnum = {}));

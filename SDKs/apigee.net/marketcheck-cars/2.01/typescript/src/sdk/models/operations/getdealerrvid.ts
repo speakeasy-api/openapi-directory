@@ -35,7 +35,7 @@ export class GetDealerRvIdResponse extends SpeakeasyBase {
   dealer?: shared.Dealer;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

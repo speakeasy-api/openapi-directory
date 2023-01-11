@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageScanFinding } from "./imagescanfinding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageScanFindings = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagescanfinding_1 = require("./imagescanfinding");
 // ImageScanFindings
 /**
  * The details of an image scan.
@@ -34,21 +37,21 @@ var ImageScanFindings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingSeverityCounts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingSeverityCounts" }),
+        __metadata("design:type", Object)
     ], ImageScanFindings.prototype, "findingSeverityCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findings", elemType: ImageScanFinding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findings", elemType: imagescanfinding_1.ImageScanFinding }),
         __metadata("design:type", Array)
     ], ImageScanFindings.prototype, "findings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageScanCompletedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageScanCompletedAt" }),
         __metadata("design:type", Date)
     ], ImageScanFindings.prototype, "imageScanCompletedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vulnerabilitySourceUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vulnerabilitySourceUpdatedAt" }),
         __metadata("design:type", Date)
     ], ImageScanFindings.prototype, "vulnerabilitySourceUpdatedAt", void 0);
     return ImageScanFindings;
-}(SpeakeasyBase));
-export { ImageScanFindings };
+}(utils_1.SpeakeasyBase));
+exports.ImageScanFindings = ImageScanFindings;

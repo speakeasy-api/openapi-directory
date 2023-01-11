@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OrderByOrderTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderBy = exports.OrderBySortOrderEnum = exports.OrderByOrderTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OrderByOrderTypeEnum;
 (function (OrderByOrderTypeEnum) {
     OrderByOrderTypeEnum["OrderTypeUnspecified"] = "ORDER_TYPE_UNSPECIFIED";
     OrderByOrderTypeEnum["Value"] = "VALUE";
@@ -31,13 +34,13 @@ export var OrderByOrderTypeEnum;
     OrderByOrderTypeEnum["Smart"] = "SMART";
     OrderByOrderTypeEnum["HistogramBucket"] = "HISTOGRAM_BUCKET";
     OrderByOrderTypeEnum["DimensionAsInteger"] = "DIMENSION_AS_INTEGER";
-})(OrderByOrderTypeEnum || (OrderByOrderTypeEnum = {}));
-export var OrderBySortOrderEnum;
+})(OrderByOrderTypeEnum = exports.OrderByOrderTypeEnum || (exports.OrderByOrderTypeEnum = {}));
+var OrderBySortOrderEnum;
 (function (OrderBySortOrderEnum) {
     OrderBySortOrderEnum["SortOrderUnspecified"] = "SORT_ORDER_UNSPECIFIED";
     OrderBySortOrderEnum["Ascending"] = "ASCENDING";
     OrderBySortOrderEnum["Descending"] = "DESCENDING";
-})(OrderBySortOrderEnum || (OrderBySortOrderEnum = {}));
+})(OrderBySortOrderEnum = exports.OrderBySortOrderEnum || (exports.OrderBySortOrderEnum = {}));
 // OrderBy
 /**
  * Specifies the sorting options.
@@ -48,17 +51,17 @@ var OrderBy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldName" }),
         __metadata("design:type", String)
     ], OrderBy.prototype, "fieldName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderType" }),
         __metadata("design:type", String)
     ], OrderBy.prototype, "orderType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], OrderBy.prototype, "sortOrder", void 0);
     return OrderBy;
-}(SpeakeasyBase));
-export { OrderBy };
+}(utils_1.SpeakeasyBase));
+exports.OrderBy = OrderBy;

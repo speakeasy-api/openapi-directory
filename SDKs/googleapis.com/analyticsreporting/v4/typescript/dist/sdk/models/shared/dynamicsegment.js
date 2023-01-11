@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SegmentDefinition } from "./segmentdefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicSegment = void 0;
+var utils_1 = require("../../../internal/utils");
+var segmentdefinition_1 = require("./segmentdefinition");
 // DynamicSegment
 /**
  * Dynamic segment definition for defining the segment within the request. A segment can select users, sessions or both.
@@ -34,17 +37,17 @@ var DynamicSegment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DynamicSegment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionSegment" }),
-        __metadata("design:type", SegmentDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionSegment" }),
+        __metadata("design:type", segmentdefinition_1.SegmentDefinition)
     ], DynamicSegment.prototype, "sessionSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userSegment" }),
-        __metadata("design:type", SegmentDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userSegment" }),
+        __metadata("design:type", segmentdefinition_1.SegmentDefinition)
     ], DynamicSegment.prototype, "userSegment", void 0);
     return DynamicSegment;
-}(SpeakeasyBase));
-export { DynamicSegment };
+}(utils_1.SpeakeasyBase));
+exports.DynamicSegment = DynamicSegment;

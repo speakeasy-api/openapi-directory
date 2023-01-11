@@ -19,7 +19,7 @@ export declare class SasportalInstallerGenerateSecretSecurity extends SpeakeasyB
 }
 export declare class SasportalInstallerGenerateSecretRequest extends SpeakeasyBase {
     queryParams: SasportalInstallerGenerateSecretQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: SasportalInstallerGenerateSecretSecurity;
 }
 export declare class SasportalInstallerGenerateSecretResponse extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1AppointmentsResponse = exports.GetSetupV1AppointmentsRequest = exports.GetSetupV1AppointmentsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1AppointmentsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1AppointmentsQueryParams, _super);
     function GetSetupV1AppointmentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bookedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bookedBy" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "bookedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=calendarId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customerId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1AppointmentsQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lastname" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1AppointmentsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1AppointmentsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resourceId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceAllocationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceAllocationId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "serviceAllocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1AppointmentsQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsQueryParams.prototype, "status", void 0);
     return GetSetupV1AppointmentsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1AppointmentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1AppointmentsQueryParams = GetSetupV1AppointmentsQueryParams;
 var GetSetupV1AppointmentsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1AppointmentsRequest, _super);
     function GetSetupV1AppointmentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1AppointmentsQueryParams)
     ], GetSetupV1AppointmentsRequest.prototype, "queryParams", void 0);
     return GetSetupV1AppointmentsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1AppointmentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1AppointmentsRequest = GetSetupV1AppointmentsRequest;
 var GetSetupV1AppointmentsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1AppointmentsResponse, _super);
     function GetSetupV1AppointmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1AppointmentsResponse.prototype, "appointmentListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1AppointmentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1AppointmentsResponse.prototype, "statusCode", void 0);
     return GetSetupV1AppointmentsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1AppointmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1AppointmentsResponse = GetSetupV1AppointmentsResponse;

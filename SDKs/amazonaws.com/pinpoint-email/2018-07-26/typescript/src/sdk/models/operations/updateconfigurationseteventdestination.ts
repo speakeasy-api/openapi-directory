@@ -96,5 +96,5 @@ export class UpdateConfigurationSetEventDestinationResponse extends SpeakeasyBas
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  updateConfigurationSetEventDestinationResponse?: Map<string, any>;
+  updateConfigurationSetEventDestinationResponse?: Record<string, any>;
 }

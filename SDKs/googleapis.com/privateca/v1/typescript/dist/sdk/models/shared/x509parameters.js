@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { X509Extension } from "./x509extension";
-import { CaOptions } from "./caoptions";
-import { KeyUsage } from "./keyusage";
-import { ObjectId } from "./objectid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.X509Parameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var x509extension_1 = require("./x509extension");
+var caoptions_1 = require("./caoptions");
+var keyusage_1 = require("./keyusage");
+var objectid_1 = require("./objectid");
 // X509Parameters
 /**
  * An X509Parameters is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
@@ -37,25 +40,25 @@ var X509Parameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalExtensions", elemType: X509Extension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalExtensions", elemType: x509extension_1.X509Extension }),
         __metadata("design:type", Array)
     ], X509Parameters.prototype, "additionalExtensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aiaOcspServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aiaOcspServers" }),
         __metadata("design:type", Array)
     ], X509Parameters.prototype, "aiaOcspServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caOptions" }),
-        __metadata("design:type", CaOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caOptions" }),
+        __metadata("design:type", caoptions_1.CaOptions)
     ], X509Parameters.prototype, "caOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyUsage" }),
-        __metadata("design:type", KeyUsage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyUsage" }),
+        __metadata("design:type", keyusage_1.KeyUsage)
     ], X509Parameters.prototype, "keyUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyIds", elemType: ObjectId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyIds", elemType: objectid_1.ObjectId }),
         __metadata("design:type", Array)
     ], X509Parameters.prototype, "policyIds", void 0);
     return X509Parameters;
-}(SpeakeasyBase));
-export { X509Parameters };
+}(utils_1.SpeakeasyBase));
+exports.X509Parameters = X509Parameters;

@@ -1,24 +1,40 @@
-export * from "./annotatedgenerequest";
-export * from "./annotation";
-export * from "./annotationrequest";
-export * from "./chromosome";
-export * from "./enrichmentgenerequest";
-export * from "./enrichmentrequest";
-export * from "./gene";
-export * from "./map";
-export * from "./mappair";
-export * from "./mappedgene";
-export * from "./mappedgeneposition";
-export * from "./mappedqtl";
-export * from "./mappedsslp";
-export * from "./orthologrequest";
-export * from "./pathway";
-export * from "./pathwayobject";
-export * from "./qtl";
-export * from "./reference";
-export * from "./rgdidlistrequest";
-export * from "./sslp";
-export * from "./status";
-export * from "./strain";
-export * from "./term";
-export * from "./termxref";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./annotatedgenerequest"), exports);
+__exportStar(require("./annotation"), exports);
+__exportStar(require("./annotationrequest"), exports);
+__exportStar(require("./chromosome"), exports);
+__exportStar(require("./enrichmentgenerequest"), exports);
+__exportStar(require("./enrichmentrequest"), exports);
+__exportStar(require("./gene"), exports);
+__exportStar(require("./map"), exports);
+__exportStar(require("./mappair"), exports);
+__exportStar(require("./mappedgene"), exports);
+__exportStar(require("./mappedgeneposition"), exports);
+__exportStar(require("./mappedqtl"), exports);
+__exportStar(require("./mappedsslp"), exports);
+__exportStar(require("./orthologrequest"), exports);
+__exportStar(require("./pathway"), exports);
+__exportStar(require("./pathwayobject"), exports);
+__exportStar(require("./qtl"), exports);
+__exportStar(require("./reference"), exports);
+__exportStar(require("./rgdidlistrequest"), exports);
+__exportStar(require("./sslp"), exports);
+__exportStar(require("./status"), exports);
+__exportStar(require("./strain"), exports);
+__exportStar(require("./term"), exports);
+__exportStar(require("./termxref"), exports);

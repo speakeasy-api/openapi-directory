@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cluster } from "./cluster";
-import { UnprocessedCluster } from "./unprocessedcluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateClusterResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cluster_1 = require("./cluster");
+var unprocessedcluster_1 = require("./unprocessedcluster");
 var BatchUpdateClusterResponse = /** @class */ (function (_super) {
     __extends(BatchUpdateClusterResponse, _super);
     function BatchUpdateClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProcessedClusters", elemType: Cluster }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProcessedClusters", elemType: cluster_1.Cluster }),
         __metadata("design:type", Array)
     ], BatchUpdateClusterResponse.prototype, "processedClusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedClusters", elemType: UnprocessedCluster }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedClusters", elemType: unprocessedcluster_1.UnprocessedCluster }),
         __metadata("design:type", Array)
     ], BatchUpdateClusterResponse.prototype, "unprocessedClusters", void 0);
     return BatchUpdateClusterResponse;
-}(SpeakeasyBase));
-export { BatchUpdateClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateClusterResponse = BatchUpdateClusterResponse;

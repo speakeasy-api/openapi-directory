@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy = exports.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum;
 (function (GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum) {
     GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum["CopyModeUnspecified"] = "COPY_MODE_UNSPECIFIED";
     GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum["DoNotCopy"] = "DO_NOT_COPY";
     GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum["AlwaysCopy"] = "ALWAYS_COPY";
     GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum["CopyAppliable"] = "COPY_APPLIABLE";
-})(GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum || (GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum = {}));
+})(GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum = exports.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum || (exports.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum = {}));
 // GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy
 /**
  * Behavior of this label when it's applied to Drive items.
@@ -40,9 +43,9 @@ var GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyMode" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy.prototype, "copyMode", void 0);
     return GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy = GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy;

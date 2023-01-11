@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUsersIdResendWelcomeEmailResponse = exports.PostUsersIdResendWelcomeEmailRequest = exports.PostUsersIdResendWelcomeEmailPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostUsersIdResendWelcomeEmailPathParams = /** @class */ (function (_super) {
     __extends(PostUsersIdResendWelcomeEmailPathParams, _super);
     function PostUsersIdResendWelcomeEmailPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostUsersIdResendWelcomeEmailPathParams.prototype, "id", void 0);
     return PostUsersIdResendWelcomeEmailPathParams;
-}(SpeakeasyBase));
-export { PostUsersIdResendWelcomeEmailPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersIdResendWelcomeEmailPathParams = PostUsersIdResendWelcomeEmailPathParams;
 var PostUsersIdResendWelcomeEmailRequest = /** @class */ (function (_super) {
     __extends(PostUsersIdResendWelcomeEmailRequest, _super);
     function PostUsersIdResendWelcomeEmailRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUsersIdResendWelcomeEmailPathParams)
     ], PostUsersIdResendWelcomeEmailRequest.prototype, "pathParams", void 0);
     return PostUsersIdResendWelcomeEmailRequest;
-}(SpeakeasyBase));
-export { PostUsersIdResendWelcomeEmailRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersIdResendWelcomeEmailRequest = PostUsersIdResendWelcomeEmailRequest;
 var PostUsersIdResendWelcomeEmailResponse = /** @class */ (function (_super) {
     __extends(PostUsersIdResendWelcomeEmailResponse, _super);
     function PostUsersIdResendWelcomeEmailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUsersIdResendWelcomeEmailResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUsersIdResendWelcomeEmailResponse.prototype, "statusCode", void 0);
     return PostUsersIdResendWelcomeEmailResponse;
-}(SpeakeasyBase));
-export { PostUsersIdResendWelcomeEmailResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersIdResendWelcomeEmailResponse = PostUsersIdResendWelcomeEmailResponse;

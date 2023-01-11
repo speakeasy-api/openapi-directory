@@ -8,7 +8,7 @@ export class ServicePrincipalsUpdatePasswordCredentialsPathParams extends Speake
   objectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

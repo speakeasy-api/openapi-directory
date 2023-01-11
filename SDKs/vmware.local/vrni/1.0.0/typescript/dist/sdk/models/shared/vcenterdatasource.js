@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PasswordCredentials } from "./passwordcredentials";
-import { DataSourceTypeEnum } from "./datasourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VCenterDataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var passwordcredentials_1 = require("./passwordcredentials");
+var datasourcetypeenum_1 = require("./datasourcetypeenum");
 var VCenterDataSource = /** @class */ (function (_super) {
     __extends(VCenterDataSource, _super);
     function VCenterDataSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
-        __metadata("design:type", PasswordCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
+        __metadata("design:type", passwordcredentials_1.PasswordCredentials)
     ], VCenterDataSource.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], VCenterDataSource.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fqdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fqdn" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "fqdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "nickname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy_id" }),
         __metadata("design:type", String)
     ], VCenterDataSource.prototype, "proxyId", void 0);
     return VCenterDataSource;
-}(SpeakeasyBase));
-export { VCenterDataSource };
+}(utils_1.SpeakeasyBase));
+exports.VCenterDataSource = VCenterDataSource;

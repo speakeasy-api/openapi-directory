@@ -44,14 +44,14 @@ export declare class Connection extends SpeakeasyBase {
     icon?: string;
     id?: string;
     logo?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     oauthGrantType?: OAuthGrantTypeEnum;
     resourceSchemaSupport?: string[];
     resourceSettingsSupport?: string[];
     revokeUrl?: string;
     serviceId?: string;
-    settings?: Map<string, any>;
+    settings?: Record<string, any>;
     settingsRequiredForAuthorization?: string[];
     state?: ConnectionStateEnum;
     status?: ConnectionStatusEnum;
@@ -64,6 +64,6 @@ export declare class Connection extends SpeakeasyBase {
 export declare class ConnectionInput extends SpeakeasyBase {
     configuration?: ConnectionConfigurationInput[];
     enabled?: boolean;
-    metadata?: Map<string, any>;
-    settings?: Map<string, any>;
+    metadata?: Record<string, any>;
+    settings?: Record<string, any>;
 }

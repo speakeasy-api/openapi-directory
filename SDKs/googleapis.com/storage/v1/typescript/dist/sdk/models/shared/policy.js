@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Expr } from "./expr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Policy = exports.PolicyBindings = void 0;
+var utils_1 = require("../../../internal/utils");
+var expr_1 = require("./expr");
 var PolicyBindings = /** @class */ (function (_super) {
     __extends(PolicyBindings, _super);
     function PolicyBindings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", Expr)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", expr_1.Expr)
     ], PolicyBindings.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", Array)
     ], PolicyBindings.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], PolicyBindings.prototype, "role", void 0);
     return PolicyBindings;
-}(SpeakeasyBase));
-export { PolicyBindings };
+}(utils_1.SpeakeasyBase));
+exports.PolicyBindings = PolicyBindings;
 // Policy
 /**
  * A bucket/object IAM policy.
@@ -54,25 +57,25 @@ var Policy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bindings", elemType: PolicyBindings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bindings", elemType: PolicyBindings }),
         __metadata("design:type", Array)
     ], Policy.prototype, "bindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Policy.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Policy.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], Policy.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], Policy.prototype, "version", void 0);
     return Policy;
-}(SpeakeasyBase));
-export { Policy };
+}(utils_1.SpeakeasyBase));
+exports.Policy = Policy;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmbeddedObjectBorder } from "./embeddedobjectborder";
-import { EmbeddedObjectPosition } from "./embeddedobjectposition";
-import { ChartSpec } from "./chartspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmbeddedChart = void 0;
+var utils_1 = require("../../../internal/utils");
+var embeddedobjectborder_1 = require("./embeddedobjectborder");
+var embeddedobjectposition_1 = require("./embeddedobjectposition");
+var chartspec_1 = require("./chartspec");
 // EmbeddedChart
 /**
  * A chart embedded in a sheet.
@@ -36,21 +39,21 @@ var EmbeddedChart = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=border" }),
-        __metadata("design:type", EmbeddedObjectBorder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=border" }),
+        __metadata("design:type", embeddedobjectborder_1.EmbeddedObjectBorder)
     ], EmbeddedChart.prototype, "border", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chartId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chartId" }),
         __metadata("design:type", Number)
     ], EmbeddedChart.prototype, "chartId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
-        __metadata("design:type", EmbeddedObjectPosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
+        __metadata("design:type", embeddedobjectposition_1.EmbeddedObjectPosition)
     ], EmbeddedChart.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", ChartSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", chartspec_1.ChartSpec)
     ], EmbeddedChart.prototype, "spec", void 0);
     return EmbeddedChart;
-}(SpeakeasyBase));
-export { EmbeddedChart };
+}(utils_1.SpeakeasyBase));
+exports.EmbeddedChart = EmbeddedChart;

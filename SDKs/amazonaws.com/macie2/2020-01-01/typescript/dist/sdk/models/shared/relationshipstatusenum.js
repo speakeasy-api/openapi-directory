@@ -1,4 +1,7 @@
-export var RelationshipStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationshipStatusEnum = void 0;
+var RelationshipStatusEnum;
 (function (RelationshipStatusEnum) {
     RelationshipStatusEnum["Enabled"] = "Enabled";
     RelationshipStatusEnum["Paused"] = "Paused";
@@ -10,4 +13,4 @@ export var RelationshipStatusEnum;
     RelationshipStatusEnum["EmailVerificationFailed"] = "EmailVerificationFailed";
     RelationshipStatusEnum["RegionDisabled"] = "RegionDisabled";
     RelationshipStatusEnum["AccountSuspended"] = "AccountSuspended";
-})(RelationshipStatusEnum || (RelationshipStatusEnum = {}));
+})(RelationshipStatusEnum = exports.RelationshipStatusEnum || (exports.RelationshipStatusEnum = {}));

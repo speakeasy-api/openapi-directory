@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeMoney } from "./googletypemoney";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1CostProjection = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypemoney_1 = require("./googletypemoney");
 // GoogleCloudRecommenderV1CostProjection
 /**
  * Contains metadata about how much money a recommendation can save or incur.
@@ -34,13 +37,13 @@ var GoogleCloudRecommenderV1CostProjection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cost" }),
-        __metadata("design:type", GoogleTypeMoney)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cost" }),
+        __metadata("design:type", googletypemoney_1.GoogleTypeMoney)
     ], GoogleCloudRecommenderV1CostProjection.prototype, "cost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1CostProjection.prototype, "duration", void 0);
     return GoogleCloudRecommenderV1CostProjection;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1CostProjection };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1CostProjection = GoogleCloudRecommenderV1CostProjection;

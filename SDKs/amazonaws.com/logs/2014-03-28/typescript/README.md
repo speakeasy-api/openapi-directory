@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateKmsKeyRequest, AssociateKmsKeyResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateKmsKeyRequest = {
   headers: {
-    xAmzAlgorithm: "tempore",
-    xAmzContentSha256: "tempore",
-    xAmzCredential: "assumenda",
-    xAmzDate: "deleniti",
-    xAmzSecurityToken: "ea",
-    xAmzSignature: "aut",
-    xAmzSignedHeaders: "dignissimos",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "Logs_20140328.AssociateKmsKey",
   },
   request: {
-    kmsKeyId: "voluptatem",
-    logGroupName: "quo",
+    kmsKeyId: "fugit",
+    logGroupName: "et",
   },
 };
 
-sdk.sdk.associateKmsKey(req).then((res: AssociateKmsKeyResponse | AxiosError) => {
+sdk.associateKmsKey(req).then((res: AssociateKmsKeyResponse | AxiosError) => {
    // handle response
 });
 ```

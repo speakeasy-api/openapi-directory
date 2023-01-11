@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BaseConfigurationItem } from "./baseconfigurationitem";
-import { ResourceKey } from "./resourcekey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetResourceConfigResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var baseconfigurationitem_1 = require("./baseconfigurationitem");
+var resourcekey_1 = require("./resourcekey");
 var BatchGetResourceConfigResponse = /** @class */ (function (_super) {
     __extends(BatchGetResourceConfigResponse, _super);
     function BatchGetResourceConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseConfigurationItems", elemType: BaseConfigurationItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseConfigurationItems", elemType: baseconfigurationitem_1.BaseConfigurationItem }),
         __metadata("design:type", Array)
     ], BatchGetResourceConfigResponse.prototype, "baseConfigurationItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unprocessedResourceKeys", elemType: ResourceKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unprocessedResourceKeys", elemType: resourcekey_1.ResourceKey }),
         __metadata("design:type", Array)
     ], BatchGetResourceConfigResponse.prototype, "unprocessedResourceKeys", void 0);
     return BatchGetResourceConfigResponse;
-}(SpeakeasyBase));
-export { BatchGetResourceConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetResourceConfigResponse = BatchGetResourceConfigResponse;

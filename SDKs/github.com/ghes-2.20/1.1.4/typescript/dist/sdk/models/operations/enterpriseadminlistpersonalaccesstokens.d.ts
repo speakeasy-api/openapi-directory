@@ -9,7 +9,7 @@ export declare class EnterpriseAdminListPersonalAccessTokensRequest extends Spea
 }
 export declare class EnterpriseAdminListPersonalAccessTokensResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     authorizations?: shared.Authorization[];
 }

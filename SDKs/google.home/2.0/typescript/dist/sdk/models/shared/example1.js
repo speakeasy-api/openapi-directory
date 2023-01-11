@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Aogh } from "./aogh";
-import { Audio } from "./audio";
-import { BuildInfo } from "./buildinfo";
-import { Detail } from "./detail";
-import { DeviceInfo } from "./deviceinfo";
-import { Multizone } from "./multizone";
-import { Net } from "./net";
-import { NightModeParams } from "./nightmodeparams";
-import { Opencast } from "./opencast";
-import { OptIn } from "./optin";
-import { Proxy } from "./proxy";
-import { Settings } from "./settings";
-import { Setup } from "./setup";
-import { Sign } from "./sign";
-import { UserEq } from "./usereq";
-import { Wifi } from "./wifi";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Example1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var aogh_1 = require("./aogh");
+var audio_1 = require("./audio");
+var buildinfo_1 = require("./buildinfo");
+var detail_1 = require("./detail");
+var deviceinfo_1 = require("./deviceinfo");
+var multizone_1 = require("./multizone");
+var net_1 = require("./net");
+var nightmodeparams_1 = require("./nightmodeparams");
+var opencast_1 = require("./opencast");
+var optin_1 = require("./optin");
+var proxy_1 = require("./proxy");
+var settings_1 = require("./settings");
+var setup_1 = require("./setup");
+var sign_1 = require("./sign");
+var usereq_1 = require("./usereq");
+var wifi_1 = require("./wifi");
 var Example1 = /** @class */ (function (_super) {
     __extends(Example1, _super);
     function Example1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aogh" }),
-        __metadata("design:type", Aogh)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aogh" }),
+        __metadata("design:type", aogh_1.Aogh)
     ], Example1.prototype, "aogh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio" }),
-        __metadata("design:type", Audio)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio" }),
+        __metadata("design:type", audio_1.Audio)
     ], Example1.prototype, "audio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_info" }),
-        __metadata("design:type", BuildInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_info" }),
+        __metadata("design:type", buildinfo_1.BuildInfo)
     ], Example1.prototype, "buildInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
-        __metadata("design:type", Detail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", detail_1.Detail)
     ], Example1.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_info" }),
-        __metadata("design:type", DeviceInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_info" }),
+        __metadata("design:type", deviceinfo_1.DeviceInfo)
     ], Example1.prototype, "deviceInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multizone" }),
-        __metadata("design:type", Multizone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multizone" }),
+        __metadata("design:type", multizone_1.Multizone)
     ], Example1.prototype, "multizone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Example1.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net" }),
-        __metadata("design:type", Net)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net" }),
+        __metadata("design:type", net_1.Net)
     ], Example1.prototype, "net", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=night_mode_params" }),
-        __metadata("design:type", NightModeParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=night_mode_params" }),
+        __metadata("design:type", nightmodeparams_1.NightModeParams)
     ], Example1.prototype, "nightModeParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opencast" }),
-        __metadata("design:type", Opencast)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opencast" }),
+        __metadata("design:type", opencast_1.Opencast)
     ], Example1.prototype, "opencast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opt_in" }),
-        __metadata("design:type", OptIn)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opt_in" }),
+        __metadata("design:type", optin_1.OptIn)
     ], Example1.prototype, "optIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy" }),
-        __metadata("design:type", Proxy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy" }),
+        __metadata("design:type", proxy_1.Proxy)
     ], Example1.prototype, "proxy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Settings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", settings_1.Settings)
     ], Example1.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setup" }),
-        __metadata("design:type", Setup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setup" }),
+        __metadata("design:type", setup_1.Setup)
     ], Example1.prototype, "setup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sign" }),
-        __metadata("design:type", Sign)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sign" }),
+        __metadata("design:type", sign_1.Sign)
     ], Example1.prototype, "sign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_eq" }),
-        __metadata("design:type", UserEq)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_eq" }),
+        __metadata("design:type", usereq_1.UserEq)
     ], Example1.prototype, "userEq", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], Example1.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifi" }),
-        __metadata("design:type", Wifi)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifi" }),
+        __metadata("design:type", wifi_1.Wifi)
     ], Example1.prototype, "wifi", void 0);
     return Example1;
-}(SpeakeasyBase));
-export { Example1 };
+}(utils_1.SpeakeasyBase));
+exports.Example1 = Example1;

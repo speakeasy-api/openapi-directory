@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RootV1ScoringsConsolidatedDailyResponse = exports.RootV1ScoringsConsolidatedDailyRequest = exports.RootV1ScoringsConsolidatedDaily200ApplicationJson = exports.RootV1ScoringsConsolidatedDaily200ApplicationJsonResult = exports.RootV1ScoringsConsolidatedDailyQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RootV1ScoringsConsolidatedDailyQueryParams = /** @class */ (function (_super) {
     __extends(RootV1ScoringsConsolidatedDailyQueryParams, _super);
     function RootV1ScoringsConsolidatedDailyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AppId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CompanyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CompanyId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DeviceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DeviceToken" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "deviceToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EndDate" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StartDate" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Tag" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyQueryParams.prototype, "tag", void 0);
     return RootV1ScoringsConsolidatedDailyQueryParams;
-}(SpeakeasyBase));
-export { RootV1ScoringsConsolidatedDailyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RootV1ScoringsConsolidatedDailyQueryParams = RootV1ScoringsConsolidatedDailyQueryParams;
 var RootV1ScoringsConsolidatedDaily200ApplicationJsonResult = /** @class */ (function (_super) {
     __extends(RootV1ScoringsConsolidatedDaily200ApplicationJsonResult, _super);
     function RootV1ScoringsConsolidatedDaily200ApplicationJsonResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccelerationScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccelerationScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "accelerationScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BrakingScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BrakingScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "brakingScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompanyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompanyId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CorneringScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CorneringScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "corneringScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceToken" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "deviceToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DistractedScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DistractedScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "distractedScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverallScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverallScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "overallScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportDate" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "reportDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpeedingScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpeedingScore" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJsonResult.prototype, "speedingScore", void 0);
     return RootV1ScoringsConsolidatedDaily200ApplicationJsonResult;
-}(SpeakeasyBase));
-export { RootV1ScoringsConsolidatedDaily200ApplicationJsonResult };
+}(utils_1.SpeakeasyBase));
+exports.RootV1ScoringsConsolidatedDaily200ApplicationJsonResult = RootV1ScoringsConsolidatedDaily200ApplicationJsonResult;
 var RootV1ScoringsConsolidatedDaily200ApplicationJson = /** @class */ (function (_super) {
     __extends(RootV1ScoringsConsolidatedDaily200ApplicationJson, _super);
     function RootV1ScoringsConsolidatedDaily200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors" }),
         __metadata("design:type", Array)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Result", elemType: RootV1ScoringsConsolidatedDaily200ApplicationJsonResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Result", elemType: RootV1ScoringsConsolidatedDaily200ApplicationJsonResult }),
         __metadata("design:type", Array)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJson.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJson.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDaily200ApplicationJson.prototype, "title", void 0);
     return RootV1ScoringsConsolidatedDaily200ApplicationJson;
-}(SpeakeasyBase));
-export { RootV1ScoringsConsolidatedDaily200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RootV1ScoringsConsolidatedDaily200ApplicationJson = RootV1ScoringsConsolidatedDaily200ApplicationJson;
 var RootV1ScoringsConsolidatedDailyRequest = /** @class */ (function (_super) {
     __extends(RootV1ScoringsConsolidatedDailyRequest, _super);
     function RootV1ScoringsConsolidatedDailyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RootV1ScoringsConsolidatedDailyQueryParams)
     ], RootV1ScoringsConsolidatedDailyRequest.prototype, "queryParams", void 0);
     return RootV1ScoringsConsolidatedDailyRequest;
-}(SpeakeasyBase));
-export { RootV1ScoringsConsolidatedDailyRequest };
+}(utils_1.SpeakeasyBase));
+exports.RootV1ScoringsConsolidatedDailyRequest = RootV1ScoringsConsolidatedDailyRequest;
 var RootV1ScoringsConsolidatedDailyResponse = /** @class */ (function (_super) {
     __extends(RootV1ScoringsConsolidatedDailyResponse, _super);
     function RootV1ScoringsConsolidatedDailyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RootV1ScoringsConsolidatedDaily200ApplicationJson)
-    ], RootV1ScoringsConsolidatedDailyResponse.prototype, "rootV1ScoringsConsolidatedDaily200ApplicationJsonObject", void 0);
+    ], RootV1ScoringsConsolidatedDailyResponse.prototype, "rootV1ScoringsConsolidatedDaily200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RootV1ScoringsConsolidatedDailyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], RootV1ScoringsConsolidatedDailyResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RootV1ScoringsConsolidatedDailyResponse.prototype, "statusCode", void 0);
     return RootV1ScoringsConsolidatedDailyResponse;
-}(SpeakeasyBase));
-export { RootV1ScoringsConsolidatedDailyResponse };
+}(utils_1.SpeakeasyBase));
+exports.RootV1ScoringsConsolidatedDailyResponse = RootV1ScoringsConsolidatedDailyResponse;

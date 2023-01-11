@@ -7,15 +7,15 @@ export declare class FileUploadPartEntity extends SpeakeasyBase {
     askAboutOverwrites?: boolean;
     availableParts?: number;
     expires?: string;
-    headers?: Map<string, any>;
+    headers?: Record<string, any>;
     httpMethod?: string;
     nextPartsize?: number;
     parallelParts?: boolean;
-    parameters?: Map<string, any>;
+    parameters?: Record<string, any>;
     partNumber?: number;
     partsize?: number;
     path?: string;
     ref?: string;
-    send?: Map<string, any>;
+    send?: Record<string, any>;
     uploadUri?: string;
 }

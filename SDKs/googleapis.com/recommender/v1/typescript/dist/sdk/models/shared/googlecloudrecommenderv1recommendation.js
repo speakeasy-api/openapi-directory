@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommenderV1Impact } from "./googlecloudrecommenderv1impact";
-import { GoogleCloudRecommenderV1RecommendationInsightReference } from "./googlecloudrecommenderv1recommendationinsightreference";
-import { GoogleCloudRecommenderV1RecommendationContent } from "./googlecloudrecommenderv1recommendationcontent";
-import { GoogleCloudRecommenderV1RecommendationStateInfo } from "./googlecloudrecommenderv1recommendationstateinfo";
-export var GoogleCloudRecommenderV1RecommendationPriorityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1Recommendation = exports.GoogleCloudRecommenderV1RecommendationPriorityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommenderv1impact_1 = require("./googlecloudrecommenderv1impact");
+var googlecloudrecommenderv1recommendationinsightreference_1 = require("./googlecloudrecommenderv1recommendationinsightreference");
+var googlecloudrecommenderv1recommendationcontent_1 = require("./googlecloudrecommenderv1recommendationcontent");
+var googlecloudrecommenderv1recommendationstateinfo_1 = require("./googlecloudrecommenderv1recommendationstateinfo");
+var GoogleCloudRecommenderV1RecommendationPriorityEnum;
 (function (GoogleCloudRecommenderV1RecommendationPriorityEnum) {
     GoogleCloudRecommenderV1RecommendationPriorityEnum["PriorityUnspecified"] = "PRIORITY_UNSPECIFIED";
     GoogleCloudRecommenderV1RecommendationPriorityEnum["P4"] = "P4";
     GoogleCloudRecommenderV1RecommendationPriorityEnum["P3"] = "P3";
     GoogleCloudRecommenderV1RecommendationPriorityEnum["P2"] = "P2";
     GoogleCloudRecommenderV1RecommendationPriorityEnum["P1"] = "P1";
-})(GoogleCloudRecommenderV1RecommendationPriorityEnum || (GoogleCloudRecommenderV1RecommendationPriorityEnum = {}));
+})(GoogleCloudRecommenderV1RecommendationPriorityEnum = exports.GoogleCloudRecommenderV1RecommendationPriorityEnum || (exports.GoogleCloudRecommenderV1RecommendationPriorityEnum = {}));
 // GoogleCloudRecommenderV1Recommendation
 /**
  * A recommendation along with a suggested action. E.g., a rightsizing recommendation for an underutilized VM, IAM role recommendations, etc
@@ -45,53 +48,53 @@ var GoogleCloudRecommenderV1Recommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalImpact", elemType: GoogleCloudRecommenderV1Impact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalImpact", elemType: googlecloudrecommenderv1impact_1.GoogleCloudRecommenderV1Impact }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "additionalImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedInsights", elemType: GoogleCloudRecommenderV1RecommendationInsightReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedInsights", elemType: googlecloudrecommenderv1recommendationinsightreference_1.GoogleCloudRecommenderV1RecommendationInsightReference }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "associatedInsights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
-        __metadata("design:type", GoogleCloudRecommenderV1RecommendationContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
+        __metadata("design:type", googlecloudrecommenderv1recommendationcontent_1.GoogleCloudRecommenderV1RecommendationContent)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRefreshTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRefreshTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "lastRefreshTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryImpact" }),
-        __metadata("design:type", GoogleCloudRecommenderV1Impact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryImpact" }),
+        __metadata("design:type", googlecloudrecommenderv1impact_1.GoogleCloudRecommenderV1Impact)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "primaryImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommenderSubtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommenderSubtype" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "recommenderSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateInfo" }),
-        __metadata("design:type", GoogleCloudRecommenderV1RecommendationStateInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateInfo" }),
+        __metadata("design:type", googlecloudrecommenderv1recommendationstateinfo_1.GoogleCloudRecommenderV1RecommendationStateInfo)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "stateInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xorGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xorGroupId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Recommendation.prototype, "xorGroupId", void 0);
     return GoogleCloudRecommenderV1Recommendation;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1Recommendation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1Recommendation = GoogleCloudRecommenderV1Recommendation;

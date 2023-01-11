@@ -38,5 +38,5 @@ export class GetMembersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetMembers200ApplicationJson })
-  getMembers200ApplicationJsonObjects?: GetMembers200ApplicationJson[];
+  getMembers200ApplicationJSONObjects?: GetMembers200ApplicationJson[];
 }

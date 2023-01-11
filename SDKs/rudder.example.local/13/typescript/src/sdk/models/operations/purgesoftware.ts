@@ -31,5 +31,5 @@ export class PurgeSoftwareResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  purgeSoftware200ApplicationJsonObject?: PurgeSoftware200ApplicationJson;
+  purgeSoftware200ApplicationJSONObject?: PurgeSoftware200ApplicationJson;
 }

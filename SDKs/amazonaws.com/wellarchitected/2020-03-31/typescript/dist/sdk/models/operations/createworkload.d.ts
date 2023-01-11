@@ -27,7 +27,7 @@ export declare class CreateWorkloadRequestBody extends SpeakeasyBase {
     notes?: string;
     pillarPriorities?: string[];
     reviewOwner: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     workloadName: string;
 }
 export declare class CreateWorkloadRequest extends SpeakeasyBase {

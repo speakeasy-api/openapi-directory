@@ -13,7 +13,7 @@ export declare class CreateShippingFulfillmentRequest extends SpeakeasyBase {
 }
 export declare class CreateShippingFulfillmentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    createShippingFulfillment201ApplicationJsonObject?: Map<string, any>;
+    createShippingFulfillment201ApplicationJSONObject?: Record<string, any>;
 }

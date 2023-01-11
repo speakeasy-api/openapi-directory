@@ -11,13 +11,13 @@ export declare class PutTeamsUsernameProjectsProjectKeySecurity extends Speakeas
 }
 export declare class PutTeamsUsernameProjectsProjectKeyRequest extends SpeakeasyBase {
     pathParams: PutTeamsUsernameProjectsProjectKeyPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PutTeamsUsernameProjectsProjectKeySecurity;
 }
 export declare class PutTeamsUsernameProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

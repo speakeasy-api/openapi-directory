@@ -8,5 +8,5 @@ export declare class ProtocolIpmiGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolIpmiGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolIpmiGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolIpmiGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

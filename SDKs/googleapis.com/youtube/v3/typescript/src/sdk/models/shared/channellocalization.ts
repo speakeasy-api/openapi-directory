@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// ChannelLocalization
-/** 
- * Channel localization setting
-**/
 export class ChannelLocalization extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

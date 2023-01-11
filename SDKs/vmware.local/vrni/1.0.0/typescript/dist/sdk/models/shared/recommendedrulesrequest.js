@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MicroSecGroup } from "./microsecgroup";
-import { TimeRange } from "./timerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendedRulesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var microsecgroup_1 = require("./microsecgroup");
+var timerange_1 = require("./timerange");
 var RecommendedRulesRequest = /** @class */ (function (_super) {
     __extends(RecommendedRulesRequest, _super);
     function RecommendedRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_1" }),
-        __metadata("design:type", MicroSecGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_1" }),
+        __metadata("design:type", microsecgroup_1.MicroSecGroup)
     ], RecommendedRulesRequest.prototype, "group1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_2" }),
-        __metadata("design:type", MicroSecGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_2" }),
+        __metadata("design:type", microsecgroup_1.MicroSecGroup)
     ], RecommendedRulesRequest.prototype, "group2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_range" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_range" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], RecommendedRulesRequest.prototype, "timeRange", void 0);
     return RecommendedRulesRequest;
-}(SpeakeasyBase));
-export { RecommendedRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.RecommendedRulesRequest = RecommendedRulesRequest;

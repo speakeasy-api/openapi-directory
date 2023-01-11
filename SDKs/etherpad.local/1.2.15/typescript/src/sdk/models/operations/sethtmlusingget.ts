@@ -7,7 +7,7 @@ export class SetHtmlUsingGetQueryParams extends SpeakeasyBase {
   html?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -16,7 +16,7 @@ export class SetHtmlUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SetHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SetHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SetHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SetHtmlUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setHtmlUsingGet200ApplicationJsonObject?: SetHtmlUsingGet200ApplicationJson;
+  setHTMLUsingGET200ApplicationJSONObject?: SetHtmlUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingGet400ApplicationJsonObject?: SetHtmlUsingGet400ApplicationJson;
+  setHTMLUsingGET400ApplicationJSONObject?: SetHtmlUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingGet401ApplicationJsonObject?: SetHtmlUsingGet401ApplicationJson;
+  setHTMLUsingGET401ApplicationJSONObject?: SetHtmlUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingGet500ApplicationJsonObject?: SetHtmlUsingGet500ApplicationJson;
+  setHTMLUsingGET500ApplicationJSONObject?: SetHtmlUsingGet500ApplicationJson;
 }

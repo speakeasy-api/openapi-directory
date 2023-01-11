@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BucketOwnerAccessEnum } from "./bucketowneraccessenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildArtifacts = void 0;
+var utils_1 = require("../../../internal/utils");
+var bucketowneraccessenum_1 = require("./bucketowneraccessenum");
 // BuildArtifacts
 /**
  * Information about build output artifacts.
@@ -34,33 +37,33 @@ var BuildArtifacts = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactIdentifier" }),
         __metadata("design:type", String)
     ], BuildArtifacts.prototype, "artifactIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketOwnerAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketOwnerAccess" }),
         __metadata("design:type", String)
     ], BuildArtifacts.prototype, "bucketOwnerAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionDisabled" }),
         __metadata("design:type", Boolean)
     ], BuildArtifacts.prototype, "encryptionDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], BuildArtifacts.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5sum" }),
         __metadata("design:type", String)
     ], BuildArtifacts.prototype, "md5sum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideArtifactName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideArtifactName" }),
         __metadata("design:type", Boolean)
     ], BuildArtifacts.prototype, "overrideArtifactName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256sum" }),
         __metadata("design:type", String)
     ], BuildArtifacts.prototype, "sha256sum", void 0);
     return BuildArtifacts;
-}(SpeakeasyBase));
-export { BuildArtifacts };
+}(utils_1.SpeakeasyBase));
+exports.BuildArtifacts = BuildArtifacts;

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+import { ObjectT } from "./object";
 /**
  * Conditions that must be met for this operation to execute.
 **/
@@ -15,7 +15,7 @@ export declare class ComposeRequestSourceObjects extends SpeakeasyBase {
  * A Compose request.
 **/
 export declare class ComposeRequest extends SpeakeasyBase {
-    destination?: Object;
+    destination?: ObjectT;
     kind?: string;
     sourceObjects?: ComposeRequestSourceObjects[];
 }

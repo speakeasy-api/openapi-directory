@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessRules } from "./accessrules";
-import { ResourceLocation } from "./resourcelocation";
-import { ResourceReceivingAccess } from "./resourcereceivingaccess";
-import { BucketState } from "./bucketstate";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessrules_1 = require("./accessrules");
+var resourcelocation_1 = require("./resourcelocation");
+var resourcereceivingaccess_1 = require("./resourcereceivingaccess");
+var bucketstate_1 = require("./bucketstate");
+var tag_1 = require("./tag");
 // Bucket
 /**
  * Describes an Amazon Lightsail bucket.
@@ -38,65 +41,65 @@ var Bucket = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ableToUpdateBundle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ableToUpdateBundle" }),
         __metadata("design:type", Boolean)
     ], Bucket.prototype, "ableToUpdateBundle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessRules" }),
-        __metadata("design:type", AccessRules)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessRules" }),
+        __metadata("design:type", accessrules_1.AccessRules)
     ], Bucket.prototype, "accessRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Bucket.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], Bucket.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectVersioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectVersioning" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "objectVersioning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonlyAccessAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonlyAccessAccounts" }),
         __metadata("design:type", Array)
     ], Bucket.prototype, "readonlyAccessAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesReceivingAccess", elemType: ResourceReceivingAccess }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesReceivingAccess", elemType: resourcereceivingaccess_1.ResourceReceivingAccess }),
         __metadata("design:type", Array)
     ], Bucket.prototype, "resourcesReceivingAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", BucketState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", bucketstate_1.BucketState)
     ], Bucket.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Bucket.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Bucket.prototype, "url", void 0);
     return Bucket;
-}(SpeakeasyBase));
-export { Bucket };
+}(utils_1.SpeakeasyBase));
+exports.Bucket = Bucket;

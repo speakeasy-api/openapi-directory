@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Option } from "./option";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionslist_1 = require("./optionslist");
 var OptionGroup = /** @class */ (function (_super) {
     __extends(OptionGroup, _super);
     function OptionGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], OptionGroup.prototype, "allowsVpcAndNonVpcInstanceMemberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionGroup.prototype, "engineName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionGroup.prototype, "majorEngineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionGroup.prototype, "optionGroupDescription", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionGroup.prototype, "optionGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Option }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: optionslist_1.OptionsList }),
         __metadata("design:type", Array)
     ], OptionGroup.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionGroup.prototype, "vpcId", void 0);
     return OptionGroup;
-}(SpeakeasyBase));
-export { OptionGroup };
+}(utils_1.SpeakeasyBase));
+exports.OptionGroup = OptionGroup;

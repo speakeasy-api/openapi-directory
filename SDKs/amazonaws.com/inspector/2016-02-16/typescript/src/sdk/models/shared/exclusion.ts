@@ -4,26 +4,22 @@ import { Scope } from "./scope";
 
 
 
-// Exclusion
-/** 
- * Contains information about what was excluded from an assessment run.
-**/
 export class Exclusion extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=arn" })
-  arn: string;
+  arn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute })
   attributes?: Attribute[];
 
   @SpeakeasyMetadata({ data: "json, name=description" })
-  description: string;
+  description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=recommendation" })
-  recommendation: string;
+  recommendation?: string;
 
   @SpeakeasyMetadata({ data: "json, name=scopes", elemType: Scope })
-  scopes: Scope[];
+  scopes?: Scope[];
 
   @SpeakeasyMetadata({ data: "json, name=title" })
-  title: string;
+  title?: string;
 }

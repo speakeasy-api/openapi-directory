@@ -3,10 +3,10 @@ export declare class PutConsumerV1AppointmentsIdNoshowPathParams extends Speakea
     id: number;
 }
 export declare class PutConsumerV1AppointmentsIdNoshowRequests extends SpeakeasyBase {
-    appointmentNoShowModel?: Map<string, any>;
-    appointmentNoShowModel1?: Map<string, any>;
-    appointmentNoShowModel2?: Map<string, any>;
-    appointmentNoShowModel3?: Map<string, any>;
+    appointmentNoShowModel?: Record<string, any>;
+    appointmentNoShowModel1?: Record<string, any>;
+    appointmentNoShowModel2?: Record<string, any>;
+    appointmentNoShowModel3?: Record<string, any>;
 }
 export declare class PutConsumerV1AppointmentsIdNoshowRequest extends SpeakeasyBase {
     pathParams: PutConsumerV1AppointmentsIdNoshowPathParams;

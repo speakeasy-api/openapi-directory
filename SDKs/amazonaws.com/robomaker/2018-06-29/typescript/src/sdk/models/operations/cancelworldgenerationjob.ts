@@ -43,7 +43,7 @@ export class CancelWorldGenerationJobRequest extends SpeakeasyBase {
 
 export class CancelWorldGenerationJobResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelWorldGenerationJobResponse?: Map<string, any>;
+  cancelWorldGenerationJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

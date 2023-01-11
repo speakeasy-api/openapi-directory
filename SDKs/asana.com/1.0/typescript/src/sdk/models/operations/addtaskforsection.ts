@@ -26,7 +26,7 @@ export class AddTaskForSectionRequestBody extends SpeakeasyBase {
 
 export class AddTaskForSection200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddTaskForSectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addTaskForSection200ApplicationJsonObject?: AddTaskForSection200ApplicationJson;
+  addTaskForSection200ApplicationJSONObject?: AddTaskForSection200ApplicationJson;
 }

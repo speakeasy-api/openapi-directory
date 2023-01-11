@@ -1,4 +1,7 @@
-export var AppLaunchStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppLaunchStatusEnum = void 0;
+var AppLaunchStatusEnum;
 (function (AppLaunchStatusEnum) {
     AppLaunchStatusEnum["ReadyForConfiguration"] = "READY_FOR_CONFIGURATION";
     AppLaunchStatusEnum["ConfigurationInProgress"] = "CONFIGURATION_IN_PROGRESS";
@@ -15,4 +18,4 @@ export var AppLaunchStatusEnum;
     AppLaunchStatusEnum["TerminateInProgress"] = "TERMINATE_IN_PROGRESS";
     AppLaunchStatusEnum["TerminateFailed"] = "TERMINATE_FAILED";
     AppLaunchStatusEnum["Terminated"] = "TERMINATED";
-})(AppLaunchStatusEnum || (AppLaunchStatusEnum = {}));
+})(AppLaunchStatusEnum = exports.AppLaunchStatusEnum || (exports.AppLaunchStatusEnum = {}));

@@ -1,4 +1,7 @@
-export var UnitEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnitEnum = void 0;
+var UnitEnum;
 (function (UnitEnum) {
     UnitEnum["Seconds"] = "Seconds";
     UnitEnum["Microseconds"] = "Microseconds";
@@ -27,4 +30,4 @@ export var UnitEnum;
     UnitEnum["TerabitsSecond"] = "Terabits/Second";
     UnitEnum["CountSecond"] = "Count/Second";
     UnitEnum["None"] = "None";
-})(UnitEnum || (UnitEnum = {}));
+})(UnitEnum = exports.UnitEnum || (exports.UnitEnum = {}));

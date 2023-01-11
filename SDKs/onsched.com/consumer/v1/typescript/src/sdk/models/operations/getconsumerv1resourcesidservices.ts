@@ -31,7 +31,7 @@ export class GetConsumerV1ResourcesIdServicesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  resourceServiceListViewModel?: Map<string, any>;
+  resourceServiceListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

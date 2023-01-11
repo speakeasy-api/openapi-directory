@@ -12,6 +12,9 @@ export declare enum OrgMembershipStateEnum {
     Active = "active",
     Pending = "pending"
 }
+/**
+ * Simple User
+**/
 export declare class OrgMembershipSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

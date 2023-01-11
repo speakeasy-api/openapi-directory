@@ -54,7 +54,7 @@ export class AutomationEntity extends SpeakeasyBase {
   path?: string;
 
   @SpeakeasyMetadata({ data: "json, name=schedule" })
-  schedule?: Map<string, any>;
+  schedule?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=source" })
   source?: string;
@@ -75,7 +75,7 @@ export class AutomationEntity extends SpeakeasyBase {
   userIds?: number[];
 
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=webhook_url" })
   webhookUrl?: string;

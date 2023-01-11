@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceConnectivityMonitoringDestinationsReques
 export declare class GetNetworkApplianceConnectivityMonitoringDestinationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

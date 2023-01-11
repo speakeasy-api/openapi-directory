@@ -5,5 +5,5 @@ import { FeaturizationMethodNameEnum } from "./featurizationmethodnameenum";
 **/
 export declare class FeaturizationMethod extends SpeakeasyBase {
     featurizationMethodName: FeaturizationMethodNameEnum;
-    featurizationMethodParameters?: Map<string, string>;
+    featurizationMethodParameters?: Record<string, string>;
 }

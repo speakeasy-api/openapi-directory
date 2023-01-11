@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheParameterGroup } from "./cacheparametergroup";
+import { CacheParameterGroupList } from "./cacheparametergrouplist";
 
 
 
@@ -8,8 +8,8 @@ import { CacheParameterGroup } from "./cacheparametergroup";
  * Represents the output of a <code>DescribeCacheParameterGroups</code> operation.
 **/
 export class CacheParameterGroupsMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CacheParameterGroup })
-  cacheParameterGroups?: CacheParameterGroup[];
+  @SpeakeasyMetadata({ elemType: CacheParameterGroupList })
+  cacheParameterGroups?: CacheParameterGroupList[];
 
   @SpeakeasyMetadata()
   marker?: string;

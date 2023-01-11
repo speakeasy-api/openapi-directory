@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllocationPolicy } from "./allocationpolicy";
-import { LogsPolicy } from "./logspolicy";
-import { JobNotification } from "./jobnotification";
-import { JobStatus } from "./jobstatus";
-import { TaskGroupInput } from "./taskgroup";
-import { TaskGroup } from "./taskgroup";
-// JobInput
-/**
- * The Cloud Batch Job description.
-**/
-var JobInput = /** @class */ (function (_super) {
-    __extends(JobInput, _super);
-    function JobInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=allocationPolicy" }),
-        __metadata("design:type", AllocationPolicy)
-    ], JobInput.prototype, "allocationPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], JobInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsPolicy" }),
-        __metadata("design:type", LogsPolicy)
-    ], JobInput.prototype, "logsPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=notifications", elemType: JobNotification }),
-        __metadata("design:type", Array)
-    ], JobInput.prototype, "notifications", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
-        __metadata("design:type", String)
-    ], JobInput.prototype, "priority", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", JobStatus)
-    ], JobInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroupInput }),
-        __metadata("design:type", Array)
-    ], JobInput.prototype, "taskGroups", void 0);
-    return JobInput;
-}(SpeakeasyBase));
-export { JobInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobInput = exports.Job = void 0;
+var utils_1 = require("../../../internal/utils");
+var allocationpolicy_1 = require("./allocationpolicy");
+var logspolicy_1 = require("./logspolicy");
+var jobnotification_1 = require("./jobnotification");
+var jobstatus_1 = require("./jobstatus");
+var taskgroup_1 = require("./taskgroup");
+var taskgroup_2 = require("./taskgroup");
 // Job
 /**
  * The Cloud Batch Job description.
@@ -79,49 +42,89 @@ var Job = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allocationPolicy" }),
-        __metadata("design:type", AllocationPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allocationPolicy" }),
+        __metadata("design:type", allocationpolicy_1.AllocationPolicy)
     ], Job.prototype, "allocationPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Job.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsPolicy" }),
-        __metadata("design:type", LogsPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsPolicy" }),
+        __metadata("design:type", logspolicy_1.LogsPolicy)
     ], Job.prototype, "logsPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Job.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notifications", elemType: JobNotification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notifications", elemType: jobnotification_1.JobNotification }),
         __metadata("design:type", Array)
     ], Job.prototype, "notifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], Job.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", JobStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", jobstatus_1.JobStatus)
     ], Job.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskGroups", elemType: taskgroup_1.TaskGroup }),
         __metadata("design:type", Array)
     ], Job.prototype, "taskGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Job.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "updateTime", void 0);
     return Job;
-}(SpeakeasyBase));
-export { Job };
+}(utils_1.SpeakeasyBase));
+exports.Job = Job;
+// JobInput
+/**
+ * The Cloud Batch Job description.
+**/
+var JobInput = /** @class */ (function (_super) {
+    __extends(JobInput, _super);
+    function JobInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allocationPolicy" }),
+        __metadata("design:type", allocationpolicy_1.AllocationPolicy)
+    ], JobInput.prototype, "allocationPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], JobInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsPolicy" }),
+        __metadata("design:type", logspolicy_1.LogsPolicy)
+    ], JobInput.prototype, "logsPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notifications", elemType: jobnotification_1.JobNotification }),
+        __metadata("design:type", Array)
+    ], JobInput.prototype, "notifications", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
+        __metadata("design:type", String)
+    ], JobInput.prototype, "priority", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", jobstatus_1.JobStatus)
+    ], JobInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskGroups", elemType: taskgroup_2.TaskGroupInput }),
+        __metadata("design:type", Array)
+    ], JobInput.prototype, "taskGroups", void 0);
+    return JobInput;
+}(utils_1.SpeakeasyBase));
+exports.JobInput = JobInput;

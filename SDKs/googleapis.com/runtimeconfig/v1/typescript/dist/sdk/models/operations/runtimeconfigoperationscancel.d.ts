@@ -31,11 +31,11 @@ export declare class RuntimeconfigOperationsCancelSecurity extends SpeakeasyBase
 export declare class RuntimeconfigOperationsCancelRequest extends SpeakeasyBase {
     pathParams: RuntimeconfigOperationsCancelPathParams;
     queryParams: RuntimeconfigOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RuntimeconfigOperationsCancelSecurity;
 }
 export declare class RuntimeconfigOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

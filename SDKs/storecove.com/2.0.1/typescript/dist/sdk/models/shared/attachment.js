@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AttachmentMimeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attachment = exports.AttachmentMimeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AttachmentMimeTypeEnum;
 (function (AttachmentMimeTypeEnum) {
     AttachmentMimeTypeEnum["ApplicationPdf"] = "application/pdf";
-})(AttachmentMimeTypeEnum || (AttachmentMimeTypeEnum = {}));
+})(AttachmentMimeTypeEnum = exports.AttachmentMimeTypeEnum || (exports.AttachmentMimeTypeEnum = {}));
 // Attachment
 /**
  * A document attachment to the invoice.
@@ -37,21 +40,21 @@ var Attachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "document", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryImage" }),
         __metadata("design:type", Boolean)
     ], Attachment.prototype, "primaryImage", void 0);
     return Attachment;
-}(SpeakeasyBase));
-export { Attachment };
+}(utils_1.SpeakeasyBase));
+exports.Attachment = Attachment;

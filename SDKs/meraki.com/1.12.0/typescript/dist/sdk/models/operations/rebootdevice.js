@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RebootDeviceResponse = exports.RebootDeviceRequest = exports.RebootDevicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RebootDevicePathParams = /** @class */ (function (_super) {
     __extends(RebootDevicePathParams, _super);
     function RebootDevicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], RebootDevicePathParams.prototype, "serial", void 0);
     return RebootDevicePathParams;
-}(SpeakeasyBase));
-export { RebootDevicePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RebootDevicePathParams = RebootDevicePathParams;
 var RebootDeviceRequest = /** @class */ (function (_super) {
     __extends(RebootDeviceRequest, _super);
     function RebootDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RebootDevicePathParams)
     ], RebootDeviceRequest.prototype, "pathParams", void 0);
     return RebootDeviceRequest;
-}(SpeakeasyBase));
-export { RebootDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RebootDeviceRequest = RebootDeviceRequest;
 var RebootDeviceResponse = /** @class */ (function (_super) {
     __extends(RebootDeviceResponse, _super);
     function RebootDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RebootDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RebootDeviceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], RebootDeviceResponse.prototype, "rebootDevice202ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RebootDeviceResponse.prototype, "rebootDevice202ApplicationJSONObject", void 0);
     return RebootDeviceResponse;
-}(SpeakeasyBase));
-export { RebootDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.RebootDeviceResponse = RebootDeviceResponse;

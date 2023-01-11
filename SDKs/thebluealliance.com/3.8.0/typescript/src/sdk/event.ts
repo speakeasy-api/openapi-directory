@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,24 +31,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/district/{district_key}/events", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/district/{district_key}/events", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDistrictEventsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetDistrictEventsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.events = httpRes?.data;
             }
             break;
@@ -60,7 +63,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -76,25 +78,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/district/{district_key}/events/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/district/{district_key}/events/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDistrictEventsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetDistrictEventsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getDistrictEventsKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getDistrictEventsKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -105,7 +110,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -121,24 +125,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/district/{district_key}/events/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/district/{district_key}/events/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDistrictEventsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetDistrictEventsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventSimples = httpRes?.data;
             }
             break;
@@ -150,7 +157,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -166,24 +172,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.event = httpRes?.data;
             }
             break;
@@ -195,7 +204,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -211,24 +219,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/alliances", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/alliances", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventAlliancesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventAlliancesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eliminationAlliances = httpRes?.data;
             }
             break;
@@ -240,7 +251,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -256,24 +266,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/awards", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/awards", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventAwardsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventAwardsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.awards = httpRes?.data;
             }
             break;
@@ -285,7 +298,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -301,24 +313,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/district_points", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/district_points", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventDistrictPointsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventDistrictPointsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventDistrictPoints = httpRes?.data;
             }
             break;
@@ -330,7 +345,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -346,24 +360,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/insights", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/insights", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventInsightsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventInsightsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventInsights = httpRes?.data;
             }
             break;
@@ -375,7 +392,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -393,25 +409,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/matches/timeseries", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/matches/timeseries", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventMatchTimeseriesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventMatchTimeseriesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEventMatchTimeseries200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEventMatchTimeseries200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -422,7 +441,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -438,24 +456,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/matches", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/matches", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventMatchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventMatchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.matches = httpRes?.data;
             }
             break;
@@ -467,7 +488,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -483,25 +503,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/matches/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/matches/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventMatchesKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventMatchesKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEventMatchesKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEventMatchesKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -512,7 +535,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -528,24 +550,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/matches/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/matches/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventMatchesSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventMatchesSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.matchSimples = httpRes?.data;
             }
             break;
@@ -557,7 +582,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -573,25 +597,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/oprs", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/oprs", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventOpRsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventOpRsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.eventOpRs = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.eventOPRs = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -602,7 +629,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -618,24 +644,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/predictions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/predictions", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventPredictionsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventPredictionsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventPredictions = httpRes?.data;
             }
             break;
@@ -647,7 +676,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -663,24 +691,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/rankings", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/rankings", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventRankingsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventRankingsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventRanking = httpRes?.data;
             }
             break;
@@ -692,7 +723,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -708,24 +738,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventSimple = httpRes?.data;
             }
             break;
@@ -737,7 +770,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -753,24 +785,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/teams", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/teams", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventTeamsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventTeamsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teams = httpRes?.data;
             }
             break;
@@ -782,7 +817,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -798,25 +832,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/teams/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/teams/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventTeamsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventTeamsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEventTeamsKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEventTeamsKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -827,7 +864,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -843,24 +879,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/teams/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/teams/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventTeamsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventTeamsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamSimples = httpRes?.data;
             }
             break;
@@ -872,7 +911,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -888,25 +926,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/event/{event_key}/teams/statuses", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/event/{event_key}/teams/statuses", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventTeamsStatusesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventTeamsStatusesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEventTeamsStatuses200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEventTeamsStatuses200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -917,7 +958,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -933,24 +973,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/events/{year}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/events/{year}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventsByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventsByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.events = httpRes?.data;
             }
             break;
@@ -962,7 +1005,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -978,25 +1020,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/events/{year}/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/events/{year}/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventsByYearKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventsByYearKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEventsByYearKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEventsByYearKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -1007,7 +1052,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1023,24 +1067,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/events/{year}/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/events/{year}/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetEventsByYearSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetEventsByYearSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventSimples = httpRes?.data;
             }
             break;
@@ -1052,7 +1099,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1068,24 +1114,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/awards", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/awards", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventAwardsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventAwardsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.awards = httpRes?.data;
             }
             break;
@@ -1097,7 +1146,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1113,24 +1161,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventMatchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventMatchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.matches = httpRes?.data;
             }
             break;
@@ -1142,7 +1193,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1158,25 +1208,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventMatchesKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventMatchesKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getTeamEventMatchesKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getTeamEventMatchesKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -1187,7 +1240,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1203,24 +1255,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/matches/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventMatchesSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventMatchesSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.matches = httpRes?.data;
             }
             break;
@@ -1232,7 +1287,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1248,24 +1302,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/event/{event_key}/status", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/event/{event_key}/status", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.teamEventStatus = httpRes?.data;
             }
             break;
@@ -1277,7 +1334,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1293,24 +1349,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.events = httpRes?.data;
             }
             break;
@@ -1322,7 +1381,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1338,24 +1396,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/{year}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.events = httpRes?.data;
             }
             break;
@@ -1367,7 +1428,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1383,25 +1443,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsByYearKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsByYearKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getTeamEventsByYearKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getTeamEventsByYearKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -1412,7 +1475,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1428,24 +1490,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsByYearSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsByYearSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventSimples = httpRes?.data;
             }
             break;
@@ -1457,7 +1522,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1473,25 +1537,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/keys", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/keys", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsKeysResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getTeamEventsKeys200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getTeamEventsKeys200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -1502,7 +1569,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1518,24 +1584,27 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/simple", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/simple", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsSimpleResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.eventSimples = httpRes?.data;
             }
             break;
@@ -1547,7 +1616,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1563,25 +1631,28 @@ export class Event {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/team/{team_key}/events/{year}/statuses", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/team/{team_key}/events/{year}/statuses", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTeamEventsStatusesByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTeamEventsStatusesByYearResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getTeamEventsStatusesByYear200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getTeamEventsStatusesByYear200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
@@ -1592,7 +1663,6 @@ export class Event {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

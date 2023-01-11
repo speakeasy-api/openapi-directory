@@ -62,5 +62,5 @@ export class GetAllowedNetworksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllowedNetworks200ApplicationJsonObject?: GetAllowedNetworks200ApplicationJson;
+  getAllowedNetworks200ApplicationJSONObject?: GetAllowedNetworks200ApplicationJson;
 }

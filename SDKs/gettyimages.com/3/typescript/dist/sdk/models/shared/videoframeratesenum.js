@@ -1,4 +1,7 @@
-export var VideoFrameRatesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoFrameRatesEnum = void 0;
+var VideoFrameRatesEnum;
 (function (VideoFrameRatesEnum) {
     VideoFrameRatesEnum["TwentyThree98"] = "23.98";
     VideoFrameRatesEnum["TwentyFour"] = "24";
@@ -8,4 +11,4 @@ export var VideoFrameRatesEnum;
     VideoFrameRatesEnum["Fifty"] = "50";
     VideoFrameRatesEnum["FiftyNine94"] = "59.94";
     VideoFrameRatesEnum["Sixty"] = "60";
-})(VideoFrameRatesEnum || (VideoFrameRatesEnum = {}));
+})(VideoFrameRatesEnum = exports.VideoFrameRatesEnum || (exports.VideoFrameRatesEnum = {}));

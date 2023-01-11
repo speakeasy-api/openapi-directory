@@ -12,5 +12,5 @@ export declare class WeekCurrentRequest extends SpeakeasyBase {
 export declare class WeekCurrentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    weekCurrent200ApplicationJsonInteger?: number;
+    weekCurrent200ApplicationJSONInteger?: number;
 }

@@ -1,4 +1,7 @@
-export var InstanceHealthStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceHealthStateEnum = void 0;
+var InstanceHealthStateEnum;
 (function (InstanceHealthStateEnum) {
     InstanceHealthStateEnum["Initial"] = "initial";
     InstanceHealthStateEnum["Healthy"] = "healthy";
@@ -6,4 +9,4 @@ export var InstanceHealthStateEnum;
     InstanceHealthStateEnum["Unused"] = "unused";
     InstanceHealthStateEnum["Draining"] = "draining";
     InstanceHealthStateEnum["Unavailable"] = "unavailable";
-})(InstanceHealthStateEnum || (InstanceHealthStateEnum = {}));
+})(InstanceHealthStateEnum = exports.InstanceHealthStateEnum || (exports.InstanceHealthStateEnum = {}));

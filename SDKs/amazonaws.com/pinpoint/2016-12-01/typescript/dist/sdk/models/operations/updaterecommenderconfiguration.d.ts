@@ -16,7 +16,7 @@ export declare class UpdateRecommenderConfigurationHeaders extends SpeakeasyBase
  * Specifies Amazon Pinpoint configuration settings for retrieving and processing recommendation data from a recommender model.
 **/
 export declare class UpdateRecommenderConfigurationRequestBodyUpdateRecommenderConfiguration extends SpeakeasyBase {
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     description?: string;
     name?: string;
     recommendationProviderIdType?: string;

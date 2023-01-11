@@ -20,6 +20,6 @@ export declare class ReposGetAllTopicsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposGetAllTopics415ApplicationJsonObject?: ReposGetAllTopics415ApplicationJson;
+    reposGetAllTopics415ApplicationJSONObject?: ReposGetAllTopics415ApplicationJson;
     topic?: shared.Topic;
 }

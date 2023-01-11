@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Service } from "./service";
-import { ServiceInput } from "./service";
-export var BackupStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupInput = exports.Backup = exports.BackupStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var service_1 = require("./service");
+var service_2 = require("./service");
+var BackupStateEnum;
 (function (BackupStateEnum) {
     BackupStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     BackupStateEnum["Creating"] = "CREATING";
@@ -33,7 +36,7 @@ export var BackupStateEnum;
     BackupStateEnum["Active"] = "ACTIVE";
     BackupStateEnum["Failed"] = "FAILED";
     BackupStateEnum["Restoring"] = "RESTORING";
-})(BackupStateEnum || (BackupStateEnum = {}));
+})(BackupStateEnum = exports.BackupStateEnum || (exports.BackupStateEnum = {}));
 // Backup
 /**
  * The details of a backup resource.
@@ -44,36 +47,36 @@ var Backup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Backup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Backup.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Backup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restoringServices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restoringServices" }),
         __metadata("design:type", Array)
     ], Backup.prototype, "restoringServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRevision" }),
-        __metadata("design:type", Service)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRevision" }),
+        __metadata("design:type", service_1.Service)
     ], Backup.prototype, "serviceRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Backup.prototype, "state", void 0);
     return Backup;
-}(SpeakeasyBase));
-export { Backup };
+}(utils_1.SpeakeasyBase));
+exports.Backup = Backup;
 // BackupInput
 /**
  * The details of a backup resource.
@@ -84,17 +87,17 @@ var BackupInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BackupInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BackupInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRevision" }),
-        __metadata("design:type", ServiceInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRevision" }),
+        __metadata("design:type", service_2.ServiceInput)
     ], BackupInput.prototype, "serviceRevision", void 0);
     return BackupInput;
-}(SpeakeasyBase));
-export { BackupInput };
+}(utils_1.SpeakeasyBase));
+exports.BackupInput = BackupInput;

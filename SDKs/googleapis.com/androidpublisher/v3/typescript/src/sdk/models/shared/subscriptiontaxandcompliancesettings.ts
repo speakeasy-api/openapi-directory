@@ -18,5 +18,5 @@ export class SubscriptionTaxAndComplianceSettings extends SpeakeasyBase {
   eeaWithdrawalRightType?: SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=taxRateInfoByRegionCode", elemType: RegionalTaxRateInfo })
-  taxRateInfoByRegionCode?: Map<string, RegionalTaxRateInfo>;
+  taxRateInfoByRegionCode?: Record<string, RegionalTaxRateInfo>;
 }

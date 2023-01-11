@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamHealthEnum } from "./streamhealthenum";
-import { StreamStateEnum } from "./streamstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Stream = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamhealthenum_1 = require("./streamhealthenum");
+var streamstateenum_1 = require("./streamstateenum");
 // Stream
 /**
  * Specifies a live video stream that has been ingested and distributed.
@@ -35,29 +38,29 @@ var Stream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelArn" }),
         __metadata("design:type", String)
     ], Stream.prototype, "channelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
         __metadata("design:type", String)
     ], Stream.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playbackUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playbackUrl" }),
         __metadata("design:type", String)
     ], Stream.prototype, "playbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], Stream.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Stream.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewerCount" }),
         __metadata("design:type", Number)
     ], Stream.prototype, "viewerCount", void 0);
     return Stream;
-}(SpeakeasyBase));
-export { Stream };
+}(utils_1.SpeakeasyBase));
+exports.Stream = Stream;

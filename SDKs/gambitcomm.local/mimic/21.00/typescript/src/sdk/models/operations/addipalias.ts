@@ -34,5 +34,5 @@ export class AddIpaliasResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addIpalias200ApplicationJsonString?: string;
+  addIpalias200ApplicationJSONString?: string;
 }

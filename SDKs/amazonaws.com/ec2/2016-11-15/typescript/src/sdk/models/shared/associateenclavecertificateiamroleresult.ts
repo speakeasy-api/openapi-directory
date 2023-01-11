@@ -4,11 +4,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AssociateEnclaveCertificateIamRoleResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  certificateS3BucketName?: string;
+  certificateS3BucketName?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  certificateS3ObjectKey?: string;
+  certificateS3ObjectKey?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  encryptionKmsKeyId?: string;
+  encryptionKmsKeyId?: Record<string, any>;
 }

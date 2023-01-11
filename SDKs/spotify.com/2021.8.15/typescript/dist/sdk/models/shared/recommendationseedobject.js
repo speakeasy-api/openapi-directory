@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationSeedObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // RecommendationSeedObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-recommendationseedobject - Find more info on the official Spotify Web API Reference
@@ -33,29 +36,29 @@ var RecommendationSeedObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=afterFilteringSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=afterFilteringSize" }),
         __metadata("design:type", Number)
     ], RecommendationSeedObject.prototype, "afterFilteringSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=afterRelinkingSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=afterRelinkingSize" }),
         __metadata("design:type", Number)
     ], RecommendationSeedObject.prototype, "afterRelinkingSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], RecommendationSeedObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RecommendationSeedObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialPoolSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialPoolSize" }),
         __metadata("design:type", Number)
     ], RecommendationSeedObject.prototype, "initialPoolSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RecommendationSeedObject.prototype, "type", void 0);
     return RecommendationSeedObject;
-}(SpeakeasyBase));
-export { RecommendationSeedObject };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationSeedObject = RecommendationSeedObject;

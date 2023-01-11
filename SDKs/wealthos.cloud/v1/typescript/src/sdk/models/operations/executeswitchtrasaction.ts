@@ -76,26 +76,26 @@ export class ExecuteSwitchTrasactionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction200ApplicationJsonAny?: any;
+  executeSwitchTrasaction200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction400ApplicationJsonAny?: any;
+  executeSwitchTrasaction400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction401ApplicationJsonAny?: any;
+  executeSwitchTrasaction401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction403ApplicationJsonAny?: any;
+  executeSwitchTrasaction403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction404ApplicationJsonAny?: any;
+  executeSwitchTrasaction404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction409ApplicationJsonAny?: any;
+  executeSwitchTrasaction409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction429ApplicationJsonAny?: any;
+  executeSwitchTrasaction429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeSwitchTrasaction500ApplicationJsonAny?: any;
+  executeSwitchTrasaction500ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApiKey
 /**
  * An Otoroshi Api Key. An Api Key is defined for a group of services to allow usage of the same Api Key for multiple services.
@@ -33,41 +36,41 @@ var ApiKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedEntities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedEntities" }),
         __metadata("design:type", Array)
     ], ApiKey.prototype, "authorizedEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientName" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "clientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyQuota" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "dailyQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ApiKey.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ApiKey.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthlyQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthlyQuota" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "monthlyQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=throttlingQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=throttlingQuota" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "throttlingQuota", void 0);
     return ApiKey;
-}(SpeakeasyBase));
-export { ApiKey };
+}(utils_1.SpeakeasyBase));
+exports.ApiKey = ApiKey;

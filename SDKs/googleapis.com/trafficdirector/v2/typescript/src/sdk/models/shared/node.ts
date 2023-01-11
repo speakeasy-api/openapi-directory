@@ -33,7 +33,7 @@ export class Node extends SpeakeasyBase {
   locality?: Locality;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=userAgentBuildVersion" })
   userAgentBuildVersion?: BuildVersion;

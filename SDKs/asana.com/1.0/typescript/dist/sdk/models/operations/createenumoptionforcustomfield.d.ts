@@ -24,5 +24,5 @@ export declare class CreateEnumOptionForCustomFieldResponse extends SpeakeasyBas
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createEnumOptionForCustomField201ApplicationJsonObject?: CreateEnumOptionForCustomField201ApplicationJson;
+    createEnumOptionForCustomField201ApplicationJSONObject?: CreateEnumOptionForCustomField201ApplicationJson;
 }

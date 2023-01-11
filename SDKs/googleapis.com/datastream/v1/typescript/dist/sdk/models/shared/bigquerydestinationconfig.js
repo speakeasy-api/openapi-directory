@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SingleTargetDataset } from "./singletargetdataset";
-import { SourceHierarchyDatasets } from "./sourcehierarchydatasets";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BigQueryDestinationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var singletargetdataset_1 = require("./singletargetdataset");
+var sourcehierarchydatasets_1 = require("./sourcehierarchydatasets");
 var BigQueryDestinationConfig = /** @class */ (function (_super) {
     __extends(BigQueryDestinationConfig, _super);
     function BigQueryDestinationConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataFreshness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataFreshness" }),
         __metadata("design:type", String)
     ], BigQueryDestinationConfig.prototype, "dataFreshness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleTargetDataset" }),
-        __metadata("design:type", SingleTargetDataset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleTargetDataset" }),
+        __metadata("design:type", singletargetdataset_1.SingleTargetDataset)
     ], BigQueryDestinationConfig.prototype, "singleTargetDataset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceHierarchyDatasets" }),
-        __metadata("design:type", SourceHierarchyDatasets)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceHierarchyDatasets" }),
+        __metadata("design:type", sourcehierarchydatasets_1.SourceHierarchyDatasets)
     ], BigQueryDestinationConfig.prototype, "sourceHierarchyDatasets", void 0);
     return BigQueryDestinationConfig;
-}(SpeakeasyBase));
-export { BigQueryDestinationConfig };
+}(utils_1.SpeakeasyBase));
+exports.BigQueryDestinationConfig = BigQueryDestinationConfig;

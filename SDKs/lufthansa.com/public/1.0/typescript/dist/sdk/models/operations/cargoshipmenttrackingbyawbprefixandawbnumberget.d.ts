@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams extends SpeakeasyBase {
-    aWbNumber: string;
-    aWbPrefix: string;
+    aWBNumber: string;
+    aWBPrefix: string;
 }
 export declare class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetHeaders extends SpeakeasyBase {
     accept: string;
@@ -16,7 +16,7 @@ export declare class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetRequest exte
     security: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetSecurity;
 }
 export declare class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetResponse extends SpeakeasyBase {
-    cargoShipmentTrackingByAwbPrefixAndAwbNumberGet200ApplicationJsonObject?: Map<string, any>;
+    cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

@@ -20,7 +20,7 @@ export class GetAuthIntrospectResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   introspection?: shared.Introspection;

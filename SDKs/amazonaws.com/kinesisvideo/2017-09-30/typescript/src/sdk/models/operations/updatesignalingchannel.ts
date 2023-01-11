@@ -38,7 +38,7 @@ export class UpdateSignalingChannelRequestBodySingleMasterConfiguration extends 
 
 export class UpdateSignalingChannelRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn: string;
+  channelARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=CurrentVersion" })
   currentVersion: string;
@@ -80,7 +80,7 @@ export class UpdateSignalingChannelResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateSignalingChannelOutput?: Map<string, any>;
+  updateSignalingChannelOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

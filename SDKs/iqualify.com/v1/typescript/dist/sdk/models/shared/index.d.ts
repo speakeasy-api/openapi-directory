@@ -30,6 +30,8 @@ export * from "./moderation";
 export * from "./moderator";
 export * from "./offering";
 export * from "./offeringactivitiesresponse";
+export * from "./offeringidenum";
+export * from "./offeringidenum1";
 export * from "./offeringmetadata";
 export * from "./offeringmetadataresponse";
 export * from "./offeringprogressrow";

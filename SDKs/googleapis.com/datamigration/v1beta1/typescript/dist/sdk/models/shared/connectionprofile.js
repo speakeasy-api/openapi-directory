@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudSqlConnectionProfile } from "./cloudsqlconnectionprofile";
-import { Status } from "./status";
-import { MySqlConnectionProfile } from "./mysqlconnectionprofile";
-import { CloudSqlConnectionProfileInput } from "./cloudsqlconnectionprofile";
-import { MySqlConnectionProfileInput } from "./mysqlconnectionprofile";
-export var ConnectionProfileProviderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionProfileInput = exports.ConnectionProfile = exports.ConnectionProfileStateEnum = exports.ConnectionProfileProviderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudsqlconnectionprofile_1 = require("./cloudsqlconnectionprofile");
+var status_1 = require("./status");
+var mysqlconnectionprofile_1 = require("./mysqlconnectionprofile");
+var cloudsqlconnectionprofile_2 = require("./cloudsqlconnectionprofile");
+var mysqlconnectionprofile_2 = require("./mysqlconnectionprofile");
+var ConnectionProfileProviderEnum;
 (function (ConnectionProfileProviderEnum) {
     ConnectionProfileProviderEnum["DatabaseProviderUnspecified"] = "DATABASE_PROVIDER_UNSPECIFIED";
     ConnectionProfileProviderEnum["Cloudsql"] = "CLOUDSQL";
     ConnectionProfileProviderEnum["Rds"] = "RDS";
-})(ConnectionProfileProviderEnum || (ConnectionProfileProviderEnum = {}));
-export var ConnectionProfileStateEnum;
+})(ConnectionProfileProviderEnum = exports.ConnectionProfileProviderEnum || (exports.ConnectionProfileProviderEnum = {}));
+var ConnectionProfileStateEnum;
 (function (ConnectionProfileStateEnum) {
     ConnectionProfileStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ConnectionProfileStateEnum["Draft"] = "DRAFT";
@@ -44,7 +47,7 @@ export var ConnectionProfileStateEnum;
     ConnectionProfileStateEnum["Deleting"] = "DELETING";
     ConnectionProfileStateEnum["Deleted"] = "DELETED";
     ConnectionProfileStateEnum["Failed"] = "FAILED";
-})(ConnectionProfileStateEnum || (ConnectionProfileStateEnum = {}));
+})(ConnectionProfileStateEnum = exports.ConnectionProfileStateEnum || (exports.ConnectionProfileStateEnum = {}));
 // ConnectionProfile
 /**
  * A connection profile definition.
@@ -55,48 +58,48 @@ var ConnectionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudsql" }),
-        __metadata("design:type", CloudSqlConnectionProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudsql" }),
+        __metadata("design:type", cloudsqlconnectionprofile_1.CloudSqlConnectionProfile)
     ], ConnectionProfile.prototype, "cloudsql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], ConnectionProfile.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ConnectionProfile.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mysql" }),
-        __metadata("design:type", MySqlConnectionProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mysql" }),
+        __metadata("design:type", mysqlconnectionprofile_1.MySqlConnectionProfile)
     ], ConnectionProfile.prototype, "mysql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], ConnectionProfile.prototype, "updateTime", void 0);
     return ConnectionProfile;
-}(SpeakeasyBase));
-export { ConnectionProfile };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionProfile = ConnectionProfile;
 // ConnectionProfileInput
 /**
  * A connection profile definition.
@@ -107,37 +110,37 @@ var ConnectionProfileInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudsql" }),
-        __metadata("design:type", CloudSqlConnectionProfileInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudsql" }),
+        __metadata("design:type", cloudsqlconnectionprofile_2.CloudSqlConnectionProfileInput)
     ], ConnectionProfileInput.prototype, "cloudsql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ConnectionProfileInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], ConnectionProfileInput.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ConnectionProfileInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mysql" }),
-        __metadata("design:type", MySqlConnectionProfileInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mysql" }),
+        __metadata("design:type", mysqlconnectionprofile_2.MySqlConnectionProfileInput)
     ], ConnectionProfileInput.prototype, "mysql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConnectionProfileInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], ConnectionProfileInput.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ConnectionProfileInput.prototype, "state", void 0);
     return ConnectionProfileInput;
-}(SpeakeasyBase));
-export { ConnectionProfileInput };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionProfileInput = ConnectionProfileInput;

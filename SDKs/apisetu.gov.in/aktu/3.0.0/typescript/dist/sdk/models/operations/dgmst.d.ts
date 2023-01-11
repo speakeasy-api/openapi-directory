@@ -110,11 +110,11 @@ export declare class DgmstRequest extends SpeakeasyBase {
 export declare class DgmstResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dgmst400ApplicationJsonObject?: Dgmst400ApplicationJson;
-    dgmst401ApplicationJsonObject?: Dgmst401ApplicationJson;
-    dgmst404ApplicationJsonObject?: Dgmst404ApplicationJson;
-    dgmst500ApplicationJsonObject?: Dgmst500ApplicationJson;
-    dgmst502ApplicationJsonObject?: Dgmst502ApplicationJson;
-    dgmst503ApplicationJsonObject?: Dgmst503ApplicationJson;
-    dgmst504ApplicationJsonObject?: Dgmst504ApplicationJson;
+    dgmst400ApplicationJSONObject?: Dgmst400ApplicationJson;
+    dgmst401ApplicationJSONObject?: Dgmst401ApplicationJson;
+    dgmst404ApplicationJSONObject?: Dgmst404ApplicationJson;
+    dgmst500ApplicationJSONObject?: Dgmst500ApplicationJson;
+    dgmst502ApplicationJSONObject?: Dgmst502ApplicationJson;
+    dgmst503ApplicationJSONObject?: Dgmst503ApplicationJson;
+    dgmst504ApplicationJSONObject?: Dgmst504ApplicationJson;
 }

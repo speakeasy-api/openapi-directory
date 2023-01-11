@@ -1,4 +1,7 @@
-export var ImportSortAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportSortAttributeEnum = void 0;
+var ImportSortAttributeEnum;
 (function (ImportSortAttributeEnum) {
     ImportSortAttributeEnum["LastUpdatedDateTime"] = "LastUpdatedDateTime";
-})(ImportSortAttributeEnum || (ImportSortAttributeEnum = {}));
+})(ImportSortAttributeEnum = exports.ImportSortAttributeEnum || (exports.ImportSortAttributeEnum = {}));

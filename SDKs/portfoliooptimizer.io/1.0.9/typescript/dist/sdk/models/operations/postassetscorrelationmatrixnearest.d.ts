@@ -12,6 +12,6 @@ export declare class PostAssetsCorrelationMatrixNearestRequest extends Speakeasy
 }
 export declare class PostAssetsCorrelationMatrixNearestResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCorrelationMatrixNearest200ApplicationJsonObject?: PostAssetsCorrelationMatrixNearest200ApplicationJson;
     statusCode: number;
+    postAssetsCorrelationMatrixNearest200ApplicationJSONObject?: PostAssetsCorrelationMatrixNearest200ApplicationJson;
 }

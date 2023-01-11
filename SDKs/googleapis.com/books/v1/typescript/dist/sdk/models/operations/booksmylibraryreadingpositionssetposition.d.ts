@@ -42,6 +42,6 @@ export declare class BooksMylibraryReadingpositionsSetPositionRequest extends Sp
 }
 export declare class BooksMylibraryReadingpositionsSetPositionResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

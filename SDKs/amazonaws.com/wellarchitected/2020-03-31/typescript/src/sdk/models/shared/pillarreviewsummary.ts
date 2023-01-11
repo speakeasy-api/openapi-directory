@@ -17,5 +17,5 @@ export class PillarReviewSummary extends SpeakeasyBase {
   pillarName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RiskCounts" })
-  riskCounts?: Map<string, number>;
+  riskCounts?: Record<string, number>;
 }

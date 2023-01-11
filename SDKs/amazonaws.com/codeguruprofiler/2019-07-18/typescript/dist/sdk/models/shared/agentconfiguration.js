@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // AgentConfiguration
 /**
  *  The response of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html"> <code>ConfigureAgent</code> </a> that specifies if an agent profiles or not and for how long to return profiling data.
@@ -33,17 +36,17 @@ var AgentConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentParameters" }),
+        __metadata("design:type", Object)
     ], AgentConfiguration.prototype, "agentParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodInSeconds" }),
         __metadata("design:type", Number)
     ], AgentConfiguration.prototype, "periodInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shouldProfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shouldProfile" }),
         __metadata("design:type", Boolean)
     ], AgentConfiguration.prototype, "shouldProfile", void 0);
     return AgentConfiguration;
-}(SpeakeasyBase));
-export { AgentConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AgentConfiguration = AgentConfiguration;

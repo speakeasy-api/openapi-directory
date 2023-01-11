@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBinIdResponse = exports.GetBinIdRequest = exports.GetBinIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBinIdPathParams = /** @class */ (function (_super) {
     __extends(GetBinIdPathParams, _super);
     function GetBinIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetBinIdPathParams.prototype, "id", void 0);
     return GetBinIdPathParams;
-}(SpeakeasyBase));
-export { GetBinIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBinIdPathParams = GetBinIdPathParams;
 var GetBinIdRequest = /** @class */ (function (_super) {
     __extends(GetBinIdRequest, _super);
     function GetBinIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBinIdPathParams)
     ], GetBinIdRequest.prototype, "pathParams", void 0);
     return GetBinIdRequest;
-}(SpeakeasyBase));
-export { GetBinIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBinIdRequest = GetBinIdRequest;
 var GetBinIdResponse = /** @class */ (function (_super) {
     __extends(GetBinIdResponse, _super);
     function GetBinIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBinIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetBinIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetBinIdResponse.prototype, "getBinId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBinIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetBinIdResponse.prototype, "getBinId200ApplicationJSONObject", void 0);
     return GetBinIdResponse;
-}(SpeakeasyBase));
-export { GetBinIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBinIdResponse = GetBinIdResponse;

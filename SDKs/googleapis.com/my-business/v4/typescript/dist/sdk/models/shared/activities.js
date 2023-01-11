@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,126 +23,128 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ActivitiesBeachAccessExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Activities = exports.ActivitiesWatercraftRentalExceptionEnum = exports.ActivitiesWaterSkiingExceptionEnum = exports.ActivitiesTennisExceptionEnum = exports.ActivitiesSnorkelingExceptionEnum = exports.ActivitiesScubaExceptionEnum = exports.ActivitiesPrivateBeachExceptionEnum = exports.ActivitiesNightclubExceptionEnum = exports.ActivitiesHorsebackRidingExceptionEnum = exports.ActivitiesGolfExceptionEnum = exports.ActivitiesGameRoomExceptionEnum = exports.ActivitiesFreeWatercraftRentalExceptionEnum = exports.ActivitiesFreeBicycleRentalExceptionEnum = exports.ActivitiesCasinoExceptionEnum = exports.ActivitiesBoutiqueStoresExceptionEnum = exports.ActivitiesBicycleRentalExceptionEnum = exports.ActivitiesBeachFrontExceptionEnum = exports.ActivitiesBeachAccessExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ActivitiesBeachAccessExceptionEnum;
 (function (ActivitiesBeachAccessExceptionEnum) {
     ActivitiesBeachAccessExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesBeachAccessExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesBeachAccessExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesBeachAccessExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesBeachAccessExceptionEnum || (ActivitiesBeachAccessExceptionEnum = {}));
-export var ActivitiesBeachFrontExceptionEnum;
+})(ActivitiesBeachAccessExceptionEnum = exports.ActivitiesBeachAccessExceptionEnum || (exports.ActivitiesBeachAccessExceptionEnum = {}));
+var ActivitiesBeachFrontExceptionEnum;
 (function (ActivitiesBeachFrontExceptionEnum) {
     ActivitiesBeachFrontExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesBeachFrontExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesBeachFrontExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesBeachFrontExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesBeachFrontExceptionEnum || (ActivitiesBeachFrontExceptionEnum = {}));
-export var ActivitiesBicycleRentalExceptionEnum;
+})(ActivitiesBeachFrontExceptionEnum = exports.ActivitiesBeachFrontExceptionEnum || (exports.ActivitiesBeachFrontExceptionEnum = {}));
+var ActivitiesBicycleRentalExceptionEnum;
 (function (ActivitiesBicycleRentalExceptionEnum) {
     ActivitiesBicycleRentalExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesBicycleRentalExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesBicycleRentalExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesBicycleRentalExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesBicycleRentalExceptionEnum || (ActivitiesBicycleRentalExceptionEnum = {}));
-export var ActivitiesBoutiqueStoresExceptionEnum;
+})(ActivitiesBicycleRentalExceptionEnum = exports.ActivitiesBicycleRentalExceptionEnum || (exports.ActivitiesBicycleRentalExceptionEnum = {}));
+var ActivitiesBoutiqueStoresExceptionEnum;
 (function (ActivitiesBoutiqueStoresExceptionEnum) {
     ActivitiesBoutiqueStoresExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesBoutiqueStoresExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesBoutiqueStoresExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesBoutiqueStoresExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesBoutiqueStoresExceptionEnum || (ActivitiesBoutiqueStoresExceptionEnum = {}));
-export var ActivitiesCasinoExceptionEnum;
+})(ActivitiesBoutiqueStoresExceptionEnum = exports.ActivitiesBoutiqueStoresExceptionEnum || (exports.ActivitiesBoutiqueStoresExceptionEnum = {}));
+var ActivitiesCasinoExceptionEnum;
 (function (ActivitiesCasinoExceptionEnum) {
     ActivitiesCasinoExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesCasinoExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesCasinoExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesCasinoExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesCasinoExceptionEnum || (ActivitiesCasinoExceptionEnum = {}));
-export var ActivitiesFreeBicycleRentalExceptionEnum;
+})(ActivitiesCasinoExceptionEnum = exports.ActivitiesCasinoExceptionEnum || (exports.ActivitiesCasinoExceptionEnum = {}));
+var ActivitiesFreeBicycleRentalExceptionEnum;
 (function (ActivitiesFreeBicycleRentalExceptionEnum) {
     ActivitiesFreeBicycleRentalExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesFreeBicycleRentalExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesFreeBicycleRentalExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesFreeBicycleRentalExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesFreeBicycleRentalExceptionEnum || (ActivitiesFreeBicycleRentalExceptionEnum = {}));
-export var ActivitiesFreeWatercraftRentalExceptionEnum;
+})(ActivitiesFreeBicycleRentalExceptionEnum = exports.ActivitiesFreeBicycleRentalExceptionEnum || (exports.ActivitiesFreeBicycleRentalExceptionEnum = {}));
+var ActivitiesFreeWatercraftRentalExceptionEnum;
 (function (ActivitiesFreeWatercraftRentalExceptionEnum) {
     ActivitiesFreeWatercraftRentalExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesFreeWatercraftRentalExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesFreeWatercraftRentalExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesFreeWatercraftRentalExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesFreeWatercraftRentalExceptionEnum || (ActivitiesFreeWatercraftRentalExceptionEnum = {}));
-export var ActivitiesGameRoomExceptionEnum;
+})(ActivitiesFreeWatercraftRentalExceptionEnum = exports.ActivitiesFreeWatercraftRentalExceptionEnum || (exports.ActivitiesFreeWatercraftRentalExceptionEnum = {}));
+var ActivitiesGameRoomExceptionEnum;
 (function (ActivitiesGameRoomExceptionEnum) {
     ActivitiesGameRoomExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesGameRoomExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesGameRoomExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesGameRoomExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesGameRoomExceptionEnum || (ActivitiesGameRoomExceptionEnum = {}));
-export var ActivitiesGolfExceptionEnum;
+})(ActivitiesGameRoomExceptionEnum = exports.ActivitiesGameRoomExceptionEnum || (exports.ActivitiesGameRoomExceptionEnum = {}));
+var ActivitiesGolfExceptionEnum;
 (function (ActivitiesGolfExceptionEnum) {
     ActivitiesGolfExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesGolfExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesGolfExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesGolfExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesGolfExceptionEnum || (ActivitiesGolfExceptionEnum = {}));
-export var ActivitiesHorsebackRidingExceptionEnum;
+})(ActivitiesGolfExceptionEnum = exports.ActivitiesGolfExceptionEnum || (exports.ActivitiesGolfExceptionEnum = {}));
+var ActivitiesHorsebackRidingExceptionEnum;
 (function (ActivitiesHorsebackRidingExceptionEnum) {
     ActivitiesHorsebackRidingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesHorsebackRidingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesHorsebackRidingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesHorsebackRidingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesHorsebackRidingExceptionEnum || (ActivitiesHorsebackRidingExceptionEnum = {}));
-export var ActivitiesNightclubExceptionEnum;
+})(ActivitiesHorsebackRidingExceptionEnum = exports.ActivitiesHorsebackRidingExceptionEnum || (exports.ActivitiesHorsebackRidingExceptionEnum = {}));
+var ActivitiesNightclubExceptionEnum;
 (function (ActivitiesNightclubExceptionEnum) {
     ActivitiesNightclubExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesNightclubExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesNightclubExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesNightclubExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesNightclubExceptionEnum || (ActivitiesNightclubExceptionEnum = {}));
-export var ActivitiesPrivateBeachExceptionEnum;
+})(ActivitiesNightclubExceptionEnum = exports.ActivitiesNightclubExceptionEnum || (exports.ActivitiesNightclubExceptionEnum = {}));
+var ActivitiesPrivateBeachExceptionEnum;
 (function (ActivitiesPrivateBeachExceptionEnum) {
     ActivitiesPrivateBeachExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesPrivateBeachExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesPrivateBeachExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesPrivateBeachExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesPrivateBeachExceptionEnum || (ActivitiesPrivateBeachExceptionEnum = {}));
-export var ActivitiesScubaExceptionEnum;
+})(ActivitiesPrivateBeachExceptionEnum = exports.ActivitiesPrivateBeachExceptionEnum || (exports.ActivitiesPrivateBeachExceptionEnum = {}));
+var ActivitiesScubaExceptionEnum;
 (function (ActivitiesScubaExceptionEnum) {
     ActivitiesScubaExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesScubaExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesScubaExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesScubaExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesScubaExceptionEnum || (ActivitiesScubaExceptionEnum = {}));
-export var ActivitiesSnorkelingExceptionEnum;
+})(ActivitiesScubaExceptionEnum = exports.ActivitiesScubaExceptionEnum || (exports.ActivitiesScubaExceptionEnum = {}));
+var ActivitiesSnorkelingExceptionEnum;
 (function (ActivitiesSnorkelingExceptionEnum) {
     ActivitiesSnorkelingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesSnorkelingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesSnorkelingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesSnorkelingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesSnorkelingExceptionEnum || (ActivitiesSnorkelingExceptionEnum = {}));
-export var ActivitiesTennisExceptionEnum;
+})(ActivitiesSnorkelingExceptionEnum = exports.ActivitiesSnorkelingExceptionEnum || (exports.ActivitiesSnorkelingExceptionEnum = {}));
+var ActivitiesTennisExceptionEnum;
 (function (ActivitiesTennisExceptionEnum) {
     ActivitiesTennisExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesTennisExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesTennisExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesTennisExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesTennisExceptionEnum || (ActivitiesTennisExceptionEnum = {}));
-export var ActivitiesWaterSkiingExceptionEnum;
+})(ActivitiesTennisExceptionEnum = exports.ActivitiesTennisExceptionEnum || (exports.ActivitiesTennisExceptionEnum = {}));
+var ActivitiesWaterSkiingExceptionEnum;
 (function (ActivitiesWaterSkiingExceptionEnum) {
     ActivitiesWaterSkiingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesWaterSkiingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesWaterSkiingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesWaterSkiingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesWaterSkiingExceptionEnum || (ActivitiesWaterSkiingExceptionEnum = {}));
-export var ActivitiesWatercraftRentalExceptionEnum;
+})(ActivitiesWaterSkiingExceptionEnum = exports.ActivitiesWaterSkiingExceptionEnum || (exports.ActivitiesWaterSkiingExceptionEnum = {}));
+var ActivitiesWatercraftRentalExceptionEnum;
 (function (ActivitiesWatercraftRentalExceptionEnum) {
     ActivitiesWatercraftRentalExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ActivitiesWatercraftRentalExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ActivitiesWatercraftRentalExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ActivitiesWatercraftRentalExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ActivitiesWatercraftRentalExceptionEnum || (ActivitiesWatercraftRentalExceptionEnum = {}));
+})(ActivitiesWatercraftRentalExceptionEnum = exports.ActivitiesWatercraftRentalExceptionEnum || (exports.ActivitiesWatercraftRentalExceptionEnum = {}));
 // Activities
 /**
  * Amenities and features related to leisure and play.
@@ -152,141 +155,141 @@ var Activities = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beachAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beachAccess" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "beachAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beachAccessException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beachAccessException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "beachAccessException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beachFront" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beachFront" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "beachFront", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beachFrontException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beachFrontException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "beachFrontException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bicycleRental" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bicycleRental" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "bicycleRental", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bicycleRentalException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bicycleRentalException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "bicycleRentalException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boutiqueStores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boutiqueStores" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "boutiqueStores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boutiqueStoresException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boutiqueStoresException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "boutiqueStoresException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=casino" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=casino" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "casino", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=casinoException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=casinoException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "casinoException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBicycleRental" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBicycleRental" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "freeBicycleRental", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBicycleRentalException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBicycleRentalException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "freeBicycleRentalException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWatercraftRental" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWatercraftRental" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "freeWatercraftRental", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWatercraftRentalException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWatercraftRentalException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "freeWatercraftRentalException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gameRoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gameRoom" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "gameRoom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gameRoomException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gameRoomException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "gameRoomException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=golf" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=golf" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "golf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=golfException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=golfException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "golfException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=horsebackRiding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=horsebackRiding" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "horsebackRiding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=horsebackRidingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=horsebackRidingException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "horsebackRidingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nightclub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nightclub" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "nightclub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nightclubException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nightclubException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "nightclubException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateBeach" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateBeach" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "privateBeach", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateBeachException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateBeachException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "privateBeachException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scuba" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scuba" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "scuba", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scubaException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scubaException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "scubaException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snorkeling" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snorkeling" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "snorkeling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snorkelingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snorkelingException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "snorkelingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tennis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tennis" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "tennis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tennisException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tennisException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "tennisException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSkiing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSkiing" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "waterSkiing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSkiingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSkiingException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "waterSkiingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watercraftRental" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watercraftRental" }),
         __metadata("design:type", Boolean)
     ], Activities.prototype, "watercraftRental", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watercraftRentalException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watercraftRentalException" }),
         __metadata("design:type", String)
     ], Activities.prototype, "watercraftRentalException", void 0);
     return Activities;
-}(SpeakeasyBase));
-export { Activities };
+}(utils_1.SpeakeasyBase));
+exports.Activities = Activities;

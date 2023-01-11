@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class DeleteSessionUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sessionID" })
-  sessionId?: string;
+  sessionID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class DeleteSessionUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class DeleteSessionUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class DeleteSessionUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class DeleteSessionUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class DeleteSessionUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteSessionUsingPost200ApplicationJsonObject?: DeleteSessionUsingPost200ApplicationJson;
+  deleteSessionUsingPOST200ApplicationJSONObject?: DeleteSessionUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteSessionUsingPost400ApplicationJsonObject?: DeleteSessionUsingPost400ApplicationJson;
+  deleteSessionUsingPOST400ApplicationJSONObject?: DeleteSessionUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteSessionUsingPost401ApplicationJsonObject?: DeleteSessionUsingPost401ApplicationJson;
+  deleteSessionUsingPOST401ApplicationJSONObject?: DeleteSessionUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteSessionUsingPost500ApplicationJsonObject?: DeleteSessionUsingPost500ApplicationJson;
+  deleteSessionUsingPOST500ApplicationJSONObject?: DeleteSessionUsingPost500ApplicationJson;
 }

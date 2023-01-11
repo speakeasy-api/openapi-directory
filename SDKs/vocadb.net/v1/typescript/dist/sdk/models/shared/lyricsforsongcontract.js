@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LyricsForSongContractTranslationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LyricsForSongContract = exports.LyricsForSongContractTranslationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LyricsForSongContractTranslationTypeEnum;
 (function (LyricsForSongContractTranslationTypeEnum) {
     LyricsForSongContractTranslationTypeEnum["Original"] = "Original";
     LyricsForSongContractTranslationTypeEnum["Romanized"] = "Romanized";
     LyricsForSongContractTranslationTypeEnum["Translation"] = "Translation";
-})(LyricsForSongContractTranslationTypeEnum || (LyricsForSongContractTranslationTypeEnum = {}));
+})(LyricsForSongContractTranslationTypeEnum = exports.LyricsForSongContractTranslationTypeEnum || (exports.LyricsForSongContractTranslationTypeEnum = {}));
 var LyricsForSongContract = /** @class */ (function (_super) {
     __extends(LyricsForSongContract, _super);
     function LyricsForSongContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cultureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cultureCode" }),
         __metadata("design:type", String)
     ], LyricsForSongContract.prototype, "cultureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], LyricsForSongContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], LyricsForSongContract.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translationType" }),
         __metadata("design:type", String)
     ], LyricsForSongContract.prototype, "translationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], LyricsForSongContract.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], LyricsForSongContract.prototype, "value", void 0);
     return LyricsForSongContract;
-}(SpeakeasyBase));
-export { LyricsForSongContract };
+}(utils_1.SpeakeasyBase));
+exports.LyricsForSongContract = LyricsForSongContract;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Deidentify } from "./googleprivacydlpv2deidentify";
-import { GooglePrivacyDlpV2PublishToPubSub } from "./googleprivacydlpv2publishtopubsub";
-import { GooglePrivacyDlpV2SaveFindings } from "./googleprivacydlpv2savefindings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2deidentify_1 = require("./googleprivacydlpv2deidentify");
+var googleprivacydlpv2publishtopubsub_1 = require("./googleprivacydlpv2publishtopubsub");
+var googleprivacydlpv2savefindings_1 = require("./googleprivacydlpv2savefindings");
 // GooglePrivacyDlpV2Action
 /**
  * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
@@ -36,33 +39,33 @@ var GooglePrivacyDlpV2Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deidentify" }),
-        __metadata("design:type", GooglePrivacyDlpV2Deidentify)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deidentify" }),
+        __metadata("design:type", googleprivacydlpv2deidentify_1.GooglePrivacyDlpV2Deidentify)
     ], GooglePrivacyDlpV2Action.prototype, "deidentify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobNotificationEmails" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobNotificationEmails" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Action.prototype, "jobNotificationEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubSub" }),
-        __metadata("design:type", GooglePrivacyDlpV2PublishToPubSub)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubSub" }),
+        __metadata("design:type", googleprivacydlpv2publishtopubsub_1.GooglePrivacyDlpV2PublishToPubSub)
     ], GooglePrivacyDlpV2Action.prototype, "pubSub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishFindingsToCloudDataCatalog" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishFindingsToCloudDataCatalog" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Action.prototype, "publishFindingsToCloudDataCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishSummaryToCscc" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishSummaryToCscc" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Action.prototype, "publishSummaryToCscc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishToStackdriver" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishToStackdriver" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Action.prototype, "publishToStackdriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saveFindings" }),
-        __metadata("design:type", GooglePrivacyDlpV2SaveFindings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saveFindings" }),
+        __metadata("design:type", googleprivacydlpv2savefindings_1.GooglePrivacyDlpV2SaveFindings)
     ], GooglePrivacyDlpV2Action.prototype, "saveFindings", void 0);
     return GooglePrivacyDlpV2Action;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Action };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Action = GooglePrivacyDlpV2Action;

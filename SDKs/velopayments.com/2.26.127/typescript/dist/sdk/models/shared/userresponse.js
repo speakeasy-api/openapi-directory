@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Role } from "./role";
-export var UserResponseMfaStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserResponse = exports.UserResponseStatusEnum = exports.UserResponseMfaTypeEnum = exports.UserResponseMfaStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var role_1 = require("./role");
+var UserResponseMfaStatusEnum;
 (function (UserResponseMfaStatusEnum) {
     UserResponseMfaStatusEnum["Registered"] = "REGISTERED";
     UserResponseMfaStatusEnum["Unregistered"] = "UNREGISTERED";
-})(UserResponseMfaStatusEnum || (UserResponseMfaStatusEnum = {}));
-export var UserResponseMfaTypeEnum;
+})(UserResponseMfaStatusEnum = exports.UserResponseMfaStatusEnum || (exports.UserResponseMfaStatusEnum = {}));
+var UserResponseMfaTypeEnum;
 (function (UserResponseMfaTypeEnum) {
     UserResponseMfaTypeEnum["Sms"] = "SMS";
     UserResponseMfaTypeEnum["Yubikey"] = "YUBIKEY";
     UserResponseMfaTypeEnum["Totp"] = "TOTP";
-})(UserResponseMfaTypeEnum || (UserResponseMfaTypeEnum = {}));
-export var UserResponseStatusEnum;
+})(UserResponseMfaTypeEnum = exports.UserResponseMfaTypeEnum || (exports.UserResponseMfaTypeEnum = {}));
+var UserResponseStatusEnum;
 (function (UserResponseStatusEnum) {
     UserResponseStatusEnum["Enabled"] = "ENABLED";
     UserResponseStatusEnum["Disabled"] = "DISABLED";
     UserResponseStatusEnum["Pending"] = "PENDING";
-})(UserResponseStatusEnum || (UserResponseStatusEnum = {}));
+})(UserResponseStatusEnum = exports.UserResponseStatusEnum || (exports.UserResponseStatusEnum = {}));
 var UserResponse = /** @class */ (function (_super) {
     __extends(UserResponse, _super);
     function UserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityId" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockedOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockedOut" }),
         __metadata("design:type", Boolean)
     ], UserResponse.prototype, "lockedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockedOutTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockedOutTimestamp" }),
         __metadata("design:type", Date)
     ], UserResponse.prototype, "lockedOutTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mfaStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mfaStatus" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "mfaStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mfaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mfaType" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "mfaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactNumber" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "primaryContactNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles", elemType: Role }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles", elemType: role_1.Role }),
         __metadata("design:type", Array)
     ], UserResponse.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryContactNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryContactNumber" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "secondaryContactNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsNumber" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "smsNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "status", void 0);
     return UserResponse;
-}(SpeakeasyBase));
-export { UserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserResponse = UserResponse;

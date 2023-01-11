@@ -11,13 +11,13 @@ export declare class PostSnippetsWorkspaceEncodedIdCommentsSecurity extends Spea
 }
 export declare class PostSnippetsWorkspaceEncodedIdCommentsRequest extends SpeakeasyBase {
     pathParams: PostSnippetsWorkspaceEncodedIdCommentsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostSnippetsWorkspaceEncodedIdCommentsSecurity;
 }
 export declare class PostSnippetsWorkspaceEncodedIdCommentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    snippet?: Map<string, any>;
+    error?: Record<string, any>;
+    snippet?: Record<string, any>;
 }

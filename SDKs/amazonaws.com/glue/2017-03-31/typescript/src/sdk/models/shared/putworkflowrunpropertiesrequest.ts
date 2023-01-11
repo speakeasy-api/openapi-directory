@@ -10,5 +10,5 @@ export class PutWorkflowRunPropertiesRequest extends SpeakeasyBase {
   runId: string;
 
   @SpeakeasyMetadata({ data: "json, name=RunProperties" })
-  runProperties: Map<string, string>;
+  runProperties: Record<string, string>;
 }

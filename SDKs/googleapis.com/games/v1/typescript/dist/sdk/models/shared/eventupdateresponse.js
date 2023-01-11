@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventBatchRecordFailure } from "./eventbatchrecordfailure";
-import { EventRecordFailure } from "./eventrecordfailure";
-import { PlayerEvent } from "./playerevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventUpdateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventbatchrecordfailure_1 = require("./eventbatchrecordfailure");
+var eventrecordfailure_1 = require("./eventrecordfailure");
+var playerevent_1 = require("./playerevent");
 // EventUpdateResponse
 /**
  * An event period update resource.
@@ -36,21 +39,21 @@ var EventUpdateResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchFailures", elemType: EventBatchRecordFailure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchFailures", elemType: eventbatchrecordfailure_1.EventBatchRecordFailure }),
         __metadata("design:type", Array)
     ], EventUpdateResponse.prototype, "batchFailures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventFailures", elemType: EventRecordFailure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventFailures", elemType: eventrecordfailure_1.EventRecordFailure }),
         __metadata("design:type", Array)
     ], EventUpdateResponse.prototype, "eventFailures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EventUpdateResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playerEvents", elemType: PlayerEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playerEvents", elemType: playerevent_1.PlayerEvent }),
         __metadata("design:type", Array)
     ], EventUpdateResponse.prototype, "playerEvents", void 0);
     return EventUpdateResponse;
-}(SpeakeasyBase));
-export { EventUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.EventUpdateResponse = EventUpdateResponse;

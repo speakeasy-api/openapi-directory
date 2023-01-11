@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,10 +33,10 @@ export class Tweets {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/labs/2/tweets/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/labs/2/tweets/{id}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,27 +44,29 @@ export class Tweets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.FindTweetByIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.singleTweetLookupResponse = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
                 res.problem = httpRes?.data;
             }
             break;
@@ -72,7 +74,6 @@ export class Tweets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -93,7 +94,7 @@ export class Tweets {
     const url: string = baseURL.replace(/\/$/, "") + "/labs/2/tweets";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -101,27 +102,29 @@ export class Tweets {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.FindTweetsByIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.tweetLookupResponse = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
                 res.problem = httpRes?.data;
             }
             break;
@@ -129,7 +132,6 @@ export class Tweets {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

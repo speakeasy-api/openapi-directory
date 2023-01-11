@@ -19,7 +19,7 @@ export declare class RejectAssignmentRequest extends SpeakeasyBase {
 }
 export declare class RejectAssignmentResponse extends SpeakeasyBase {
     contentType: string;
-    rejectAssignmentResponse?: Map<string, any>;
+    rejectAssignmentResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VoiceWebhooksEndpointTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Voice = exports.VoiceWebhooks = exports.VoiceWebhooksHttpMethodEnum = exports.VoiceWebhooksEndpointTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VoiceWebhooksEndpointTypeEnum;
 (function (VoiceWebhooksEndpointTypeEnum) {
     VoiceWebhooksEndpointTypeEnum["AnswerUrl"] = "answer_url";
     VoiceWebhooksEndpointTypeEnum["EventUrl"] = "event_url";
-})(VoiceWebhooksEndpointTypeEnum || (VoiceWebhooksEndpointTypeEnum = {}));
-export var VoiceWebhooksHttpMethodEnum;
+})(VoiceWebhooksEndpointTypeEnum = exports.VoiceWebhooksEndpointTypeEnum || (exports.VoiceWebhooksEndpointTypeEnum = {}));
+var VoiceWebhooksHttpMethodEnum;
 (function (VoiceWebhooksHttpMethodEnum) {
     VoiceWebhooksHttpMethodEnum["Get"] = "GET";
     VoiceWebhooksHttpMethodEnum["Post"] = "POST";
-})(VoiceWebhooksHttpMethodEnum || (VoiceWebhooksHttpMethodEnum = {}));
+})(VoiceWebhooksHttpMethodEnum = exports.VoiceWebhooksHttpMethodEnum || (exports.VoiceWebhooksHttpMethodEnum = {}));
 var VoiceWebhooks = /** @class */ (function (_super) {
     __extends(VoiceWebhooks, _super);
     function VoiceWebhooks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], VoiceWebhooks.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint_type" }),
         __metadata("design:type", String)
     ], VoiceWebhooks.prototype, "endpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
         __metadata("design:type", String)
     ], VoiceWebhooks.prototype, "httpMethod", void 0);
     return VoiceWebhooks;
-}(SpeakeasyBase));
-export { VoiceWebhooks };
+}(utils_1.SpeakeasyBase));
+exports.VoiceWebhooks = VoiceWebhooks;
 // Voice
 /**
  * The Nexmo product that you access with this application.
@@ -63,9 +66,9 @@ var Voice = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhooks", elemType: VoiceWebhooks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhooks", elemType: VoiceWebhooks }),
         __metadata("design:type", Array)
     ], Voice.prototype, "webhooks", void 0);
     return Voice;
-}(SpeakeasyBase));
-export { Voice };
+}(utils_1.SpeakeasyBase));
+exports.Voice = Voice;

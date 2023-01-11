@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Genre } from "./genre";
-import { PodcastTypeaheadResult } from "./podcasttypeaheadresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypeaheadResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var genre_1 = require("./genre");
+var podcasttypeaheadresult_1 = require("./podcasttypeaheadresult");
 var TypeaheadResponse = /** @class */ (function (_super) {
     __extends(TypeaheadResponse, _super);
     function TypeaheadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genres", elemType: Genre }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genres", elemType: genre_1.Genre }),
         __metadata("design:type", Array)
     ], TypeaheadResponse.prototype, "genres", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcasts", elemType: PodcastTypeaheadResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcasts", elemType: podcasttypeaheadresult_1.PodcastTypeaheadResult }),
         __metadata("design:type", Array)
     ], TypeaheadResponse.prototype, "podcasts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terms" }),
         __metadata("design:type", Array)
     ], TypeaheadResponse.prototype, "terms", void 0);
     return TypeaheadResponse;
-}(SpeakeasyBase));
-export { TypeaheadResponse };
+}(utils_1.SpeakeasyBase));
+exports.TypeaheadResponse = TypeaheadResponse;

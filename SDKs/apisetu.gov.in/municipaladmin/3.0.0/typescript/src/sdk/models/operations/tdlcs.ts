@@ -185,23 +185,23 @@ export class TdlcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tdlcs400ApplicationJsonObject?: Tdlcs400ApplicationJson;
+  tdlcs400ApplicationJSONObject?: Tdlcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs401ApplicationJsonObject?: Tdlcs401ApplicationJson;
+  tdlcs401ApplicationJSONObject?: Tdlcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs404ApplicationJsonObject?: Tdlcs404ApplicationJson;
+  tdlcs404ApplicationJSONObject?: Tdlcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs500ApplicationJsonObject?: Tdlcs500ApplicationJson;
+  tdlcs500ApplicationJSONObject?: Tdlcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs502ApplicationJsonObject?: Tdlcs502ApplicationJson;
+  tdlcs502ApplicationJSONObject?: Tdlcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs503ApplicationJsonObject?: Tdlcs503ApplicationJson;
+  tdlcs503ApplicationJSONObject?: Tdlcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tdlcs504ApplicationJsonObject?: Tdlcs504ApplicationJson;
+  tdlcs504ApplicationJSONObject?: Tdlcs504ApplicationJson;
 }

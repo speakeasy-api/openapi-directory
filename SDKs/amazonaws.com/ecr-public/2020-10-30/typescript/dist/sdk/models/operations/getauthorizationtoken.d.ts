@@ -15,7 +15,7 @@ export declare class GetAuthorizationTokenHeaders extends SpeakeasyBase {
 }
 export declare class GetAuthorizationTokenRequest extends SpeakeasyBase {
     headers: GetAuthorizationTokenHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetAuthorizationTokenResponse extends SpeakeasyBase {
     contentType: string;

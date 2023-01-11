@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -39,56 +38,55 @@ export class AuthorizationApi {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetDeviceCodeIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.deviceAuthorizationCodeResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getDeviceCodeId400ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getDeviceCodeId400ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getDeviceCodeId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getDeviceCodeId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getDeviceCodeId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getDeviceCodeId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

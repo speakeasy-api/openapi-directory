@@ -102,5 +102,5 @@ export class UpdateDeviceManagementInterfaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

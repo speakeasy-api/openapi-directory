@@ -8,7 +8,7 @@ export declare class GetActivitiesSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class GetActivitiesRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: GetActivitiesPathParams;
     security: GetActivitiesSecurity;
 }

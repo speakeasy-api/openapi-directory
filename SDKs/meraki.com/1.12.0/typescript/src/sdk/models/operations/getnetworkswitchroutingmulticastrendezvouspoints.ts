@@ -22,5 +22,5 @@ export class GetNetworkSwitchRoutingMulticastRendezvousPointsResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchRoutingMulticastRendezvousPoints200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchRoutingMulticastRendezvousPoints200ApplicationJSONObject?: Record<string, any>;
 }

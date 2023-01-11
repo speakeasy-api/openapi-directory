@@ -18,5 +18,5 @@ export declare class CreateBatchRequestResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createBatchRequest200ApplicationJsonObject?: CreateBatchRequest200ApplicationJson;
+    createBatchRequest200ApplicationJSONObject?: CreateBatchRequest200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubjectAlternativeNames } from "./subjectalternativenames";
-import { VirtualGatewayTlsValidationContextTrust } from "./virtualgatewaytlsvalidationcontexttrust";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayTlsValidationContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var subjectalternativenames_1 = require("./subjectalternativenames");
+var virtualgatewaytlsvalidationcontexttrust_1 = require("./virtualgatewaytlsvalidationcontexttrust");
 // VirtualGatewayTlsValidationContext
 /**
  * An object that represents a Transport Layer Security (TLS) validation context.
@@ -35,13 +38,13 @@ var VirtualGatewayTlsValidationContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectAlternativeNames" }),
-        __metadata("design:type", SubjectAlternativeNames)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectAlternativeNames" }),
+        __metadata("design:type", subjectalternativenames_1.SubjectAlternativeNames)
     ], VirtualGatewayTlsValidationContext.prototype, "subjectAlternativeNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trust" }),
-        __metadata("design:type", VirtualGatewayTlsValidationContextTrust)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trust" }),
+        __metadata("design:type", virtualgatewaytlsvalidationcontexttrust_1.VirtualGatewayTlsValidationContextTrust)
     ], VirtualGatewayTlsValidationContext.prototype, "trust", void 0);
     return VirtualGatewayTlsValidationContext;
-}(SpeakeasyBase));
-export { VirtualGatewayTlsValidationContext };
+}(utils_1.SpeakeasyBase));
+exports.VirtualGatewayTlsValidationContext = VirtualGatewayTlsValidationContext;

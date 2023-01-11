@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppEngineHttpTarget } from "./appenginehttptarget";
-import { HttpTarget } from "./httptarget";
-import { PubsubTarget } from "./pubsubtarget";
-import { RetryConfig } from "./retryconfig";
-import { Status } from "./status";
-export var JobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Job = exports.JobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appenginehttptarget_1 = require("./appenginehttptarget");
+var httptarget_1 = require("./httptarget");
+var pubsubtarget_1 = require("./pubsubtarget");
+var retryconfig_1 = require("./retryconfig");
+var status_1 = require("./status");
+var JobStateEnum;
 (function (JobStateEnum) {
     JobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     JobStateEnum["Enabled"] = "ENABLED";
     JobStateEnum["Paused"] = "PAUSED";
     JobStateEnum["Disabled"] = "DISABLED";
     JobStateEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(JobStateEnum || (JobStateEnum = {}));
+})(JobStateEnum = exports.JobStateEnum || (exports.JobStateEnum = {}));
 // Job
 /**
  * Configuration for a job. The maximum allowed size for a job is 1MB.
@@ -46,61 +49,61 @@ var Job = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appEngineHttpTarget" }),
-        __metadata("design:type", AppEngineHttpTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineHttpTarget" }),
+        __metadata("design:type", appenginehttptarget_1.AppEngineHttpTarget)
     ], Job.prototype, "appEngineHttpTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attemptDeadline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attemptDeadline" }),
         __metadata("design:type", String)
     ], Job.prototype, "attemptDeadline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Job.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpTarget" }),
-        __metadata("design:type", HttpTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpTarget" }),
+        __metadata("design:type", httptarget_1.HttpTarget)
     ], Job.prototype, "httpTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAttemptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAttemptTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "lastAttemptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Job.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubsubTarget" }),
-        __metadata("design:type", PubsubTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubsubTarget" }),
+        __metadata("design:type", pubsubtarget_1.PubsubTarget)
     ], Job.prototype, "pubsubTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryConfig" }),
-        __metadata("design:type", RetryConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryConfig" }),
+        __metadata("design:type", retryconfig_1.RetryConfig)
     ], Job.prototype, "retryConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
         __metadata("design:type", String)
     ], Job.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "scheduleTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Job.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", status_1.Status)
     ], Job.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], Job.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userUpdateTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "userUpdateTime", void 0);
     return Job;
-}(SpeakeasyBase));
-export { Job };
+}(utils_1.SpeakeasyBase));
+exports.Job = Job;

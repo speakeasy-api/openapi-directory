@@ -71,8 +71,8 @@ export class GetReportingDatesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getReportingDatesDefaultApplicationJsonObject?: GetReportingDatesDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getReportingDatesDefaultApplicationJSONObject?: GetReportingDatesDefaultApplicationJson;
 }

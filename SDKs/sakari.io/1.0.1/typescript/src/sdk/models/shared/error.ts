@@ -2,7 +2,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=code" })
   code?: string;
 

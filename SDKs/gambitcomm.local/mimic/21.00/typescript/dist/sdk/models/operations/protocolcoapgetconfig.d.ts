@@ -7,7 +7,7 @@ export declare class ProtocolCoapGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolCoapGetConfigPathParams;
 }
 export declare class ProtocolCoapGetConfigResponse extends SpeakeasyBase {
-    configCoap?: shared.ConfigCoap;
+    configCOAP?: shared.ConfigCoap;
     contentType: string;
     statusCode: number;
 }

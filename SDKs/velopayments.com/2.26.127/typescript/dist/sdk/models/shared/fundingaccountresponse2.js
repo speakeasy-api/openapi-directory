@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FundingAccountResponse2 = void 0;
+var utils_1 = require("../../../internal/utils");
 var FundingAccountResponse2 = /** @class */ (function (_super) {
     __extends(FundingAccountResponse2, _super);
     function FundingAccountResponse2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
         __metadata("design:type", Boolean)
     ], FundingAccountResponse2.prototype, "archived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "routingNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FundingAccountResponse2.prototype, "type", void 0);
     return FundingAccountResponse2;
-}(SpeakeasyBase));
-export { FundingAccountResponse2 };
+}(utils_1.SpeakeasyBase));
+exports.FundingAccountResponse2 = FundingAccountResponse2;

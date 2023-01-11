@@ -9,5 +9,5 @@ export declare class PutJobSuccessResultInput extends SpeakeasyBase {
     currentRevision?: CurrentRevision;
     executionDetails?: ExecutionDetails;
     jobId: string;
-    outputVariables?: Map<string, string>;
+    outputVariables?: Record<string, string>;
 }

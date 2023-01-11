@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PhcerRequest, PhcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: PhcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "rem",
-      registrationNo: "totam",
+      fullName: "sit",
+      registrationNo: "voluptas",
     },
     consentArtifact: "culpa",
     format: "pdf",
-    txnId: "eos",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.phcer(req).then((res: PhcerResponse | AxiosError) => {
+sdk.apIs.phcer(req).then((res: PhcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.phcer(req).then((res: PhcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `phcer` - Pharmacist Registration Certificate
 * `rpcer` - Pharmacist Renewal certificate

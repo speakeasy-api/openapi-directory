@@ -4,12 +4,12 @@ export declare class CreatePipelineVariableForUserPathParams extends SpeakeasyBa
 }
 export declare class CreatePipelineVariableForUserRequest extends SpeakeasyBase {
     pathParams: CreatePipelineVariableForUserPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class CreatePipelineVariableForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

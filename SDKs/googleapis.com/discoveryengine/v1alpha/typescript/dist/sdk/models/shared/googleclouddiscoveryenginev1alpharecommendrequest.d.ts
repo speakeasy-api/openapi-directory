@@ -6,8 +6,8 @@ import { GoogleCloudDiscoveryengineV1alphaUserEvent } from "./googleclouddiscove
 export declare class GoogleCloudDiscoveryengineV1alphaRecommendRequest extends SpeakeasyBase {
     filter?: string;
     pageSize?: number;
-    params?: Map<string, any>;
+    params?: Record<string, any>;
     userEvent?: GoogleCloudDiscoveryengineV1alphaUserEvent;
-    userLabels?: Map<string, string>;
+    userLabels?: Record<string, string>;
     validateOnly?: boolean;
 }

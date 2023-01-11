@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetricMetricSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metric = exports.MetricMetricSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetricMetricSourceEnum;
 (function (MetricMetricSourceEnum) {
     MetricMetricSourceEnum["MetricSourceUnspecified"] = "METRIC_SOURCE_UNSPECIFIED";
     MetricMetricSourceEnum["MonitoringAgentDefaults"] = "MONITORING_AGENT_DEFAULTS";
@@ -32,7 +35,7 @@ export var MetricMetricSourceEnum;
     MetricMetricSourceEnum["Yarn"] = "YARN";
     MetricMetricSourceEnum["SparkHistoryServer"] = "SPARK_HISTORY_SERVER";
     MetricMetricSourceEnum["Hiveserver2"] = "HIVESERVER2";
-})(MetricMetricSourceEnum || (MetricMetricSourceEnum = {}));
+})(MetricMetricSourceEnum = exports.MetricMetricSourceEnum || (exports.MetricMetricSourceEnum = {}));
 // Metric
 /**
  * A Dataproc OSS metric.
@@ -43,13 +46,13 @@ var Metric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricOverrides" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricOverrides" }),
         __metadata("design:type", Array)
     ], Metric.prototype, "metricOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricSource" }),
         __metadata("design:type", String)
     ], Metric.prototype, "metricSource", void 0);
     return Metric;
-}(SpeakeasyBase));
-export { Metric };
+}(utils_1.SpeakeasyBase));
+exports.Metric = Metric;

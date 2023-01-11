@@ -21,8 +21,8 @@ export declare class CompanyIdSuperRequest extends SpeakeasyBase {
     security: CompanyIdSuperSecurity;
 }
 export declare class CompanyIdSuperResponse extends SpeakeasyBase {
-    companyIdSuper200ApplicationJsonAnies?: any[];
-    companyIdSuperDefaultApplicationJsonAny?: any;
+    companyIdSuper200ApplicationJSONAnies?: any[];
+    companyIdSuperDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

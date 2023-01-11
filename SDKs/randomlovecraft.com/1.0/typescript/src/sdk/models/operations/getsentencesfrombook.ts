@@ -38,5 +38,5 @@ export class GetSentencesFromBookResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSentencesFromBook200ApplicationJsonObject?: GetSentencesFromBook200ApplicationJson;
+  getSentencesFromBook200ApplicationJSONObject?: GetSentencesFromBook200ApplicationJson;
 }

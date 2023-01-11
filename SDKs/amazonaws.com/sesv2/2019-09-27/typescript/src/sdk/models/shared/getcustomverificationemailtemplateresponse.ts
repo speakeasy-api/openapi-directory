@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=FailureRedirectionURL" })
-  failureRedirectionUrl?: string;
+  failureRedirectionURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FromEmailAddress" })
   fromEmailAddress?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuccessRedirectionURL" })
-  successRedirectionUrl?: string;
+  successRedirectionURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TemplateContent" })
   templateContent?: string;

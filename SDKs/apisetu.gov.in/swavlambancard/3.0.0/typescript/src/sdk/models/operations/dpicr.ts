@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class DpicrRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CERT_NO" })
-  certNo: string;
+  certNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=FullName" })
   fullName: string;
@@ -188,23 +188,23 @@ export class DpicrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dpicr400ApplicationJsonObject?: Dpicr400ApplicationJson;
+  dpicr400ApplicationJSONObject?: Dpicr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr401ApplicationJsonObject?: Dpicr401ApplicationJson;
+  dpicr401ApplicationJSONObject?: Dpicr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr404ApplicationJsonObject?: Dpicr404ApplicationJson;
+  dpicr404ApplicationJSONObject?: Dpicr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr500ApplicationJsonObject?: Dpicr500ApplicationJson;
+  dpicr500ApplicationJSONObject?: Dpicr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr502ApplicationJsonObject?: Dpicr502ApplicationJson;
+  dpicr502ApplicationJSONObject?: Dpicr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr503ApplicationJsonObject?: Dpicr503ApplicationJson;
+  dpicr503ApplicationJSONObject?: Dpicr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dpicr504ApplicationJsonObject?: Dpicr504ApplicationJson;
+  dpicr504ApplicationJSONObject?: Dpicr504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentReviewerTypeEnum } from "./deploymentreviewertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PendingDeployment = exports.PendingDeploymentReviewers = exports.PendingDeploymentEnvironment = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentreviewertypeenum_1 = require("./deploymentreviewertypeenum");
 var PendingDeploymentEnvironment = /** @class */ (function (_super) {
     __extends(PendingDeploymentEnvironment, _super);
     function PendingDeploymentEnvironment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PendingDeploymentEnvironment.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PendingDeploymentEnvironment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PendingDeploymentEnvironment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], PendingDeploymentEnvironment.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PendingDeploymentEnvironment.prototype, "url", void 0);
     return PendingDeploymentEnvironment;
-}(SpeakeasyBase));
-export { PendingDeploymentEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.PendingDeploymentEnvironment = PendingDeploymentEnvironment;
 var PendingDeploymentReviewers = /** @class */ (function (_super) {
     __extends(PendingDeploymentReviewers, _super);
     function PendingDeploymentReviewers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewer" }),
         __metadata("design:type", Object)
     ], PendingDeploymentReviewers.prototype, "reviewer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PendingDeploymentReviewers.prototype, "type", void 0);
     return PendingDeploymentReviewers;
-}(SpeakeasyBase));
-export { PendingDeploymentReviewers };
+}(utils_1.SpeakeasyBase));
+exports.PendingDeploymentReviewers = PendingDeploymentReviewers;
 // PendingDeployment
 /**
  * Details of a deployment that is waiting for protection rules to pass
@@ -78,25 +81,25 @@ var PendingDeployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_user_can_approve" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_user_can_approve" }),
         __metadata("design:type", Boolean)
     ], PendingDeployment.prototype, "currentUserCanApprove", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", PendingDeploymentEnvironment)
     ], PendingDeployment.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewers", elemType: PendingDeploymentReviewers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewers", elemType: PendingDeploymentReviewers }),
         __metadata("design:type", Array)
     ], PendingDeployment.prototype, "reviewers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wait_timer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wait_timer" }),
         __metadata("design:type", Number)
     ], PendingDeployment.prototype, "waitTimer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wait_timer_started_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wait_timer_started_at" }),
         __metadata("design:type", Date)
     ], PendingDeployment.prototype, "waitTimerStartedAt", void 0);
     return PendingDeployment;
-}(SpeakeasyBase));
-export { PendingDeployment };
+}(utils_1.SpeakeasyBase));
+exports.PendingDeployment = PendingDeployment;

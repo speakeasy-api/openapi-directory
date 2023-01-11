@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSocibWeatherStationResponse = exports.GetSocibWeatherStationRequest = exports.GetSocibWeatherStationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSocibWeatherStationPathParams = /** @class */ (function (_super) {
     __extends(GetSocibWeatherStationPathParams, _super);
     function GetSocibWeatherStationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=period" }),
         __metadata("design:type", String)
     ], GetSocibWeatherStationPathParams.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stationName" }),
         __metadata("design:type", String)
     ], GetSocibWeatherStationPathParams.prototype, "stationName", void 0);
     return GetSocibWeatherStationPathParams;
-}(SpeakeasyBase));
-export { GetSocibWeatherStationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSocibWeatherStationPathParams = GetSocibWeatherStationPathParams;
 var GetSocibWeatherStationRequest = /** @class */ (function (_super) {
     __extends(GetSocibWeatherStationRequest, _super);
     function GetSocibWeatherStationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSocibWeatherStationPathParams)
     ], GetSocibWeatherStationRequest.prototype, "pathParams", void 0);
     return GetSocibWeatherStationRequest;
-}(SpeakeasyBase));
-export { GetSocibWeatherStationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSocibWeatherStationRequest = GetSocibWeatherStationRequest;
 var GetSocibWeatherStationResponse = /** @class */ (function (_super) {
     __extends(GetSocibWeatherStationResponse, _super);
     function GetSocibWeatherStationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSocibWeatherStationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSocibWeatherStationResponse.prototype, "statusCode", void 0);
     return GetSocibWeatherStationResponse;
-}(SpeakeasyBase));
-export { GetSocibWeatherStationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSocibWeatherStationResponse = GetSocibWeatherStationResponse;

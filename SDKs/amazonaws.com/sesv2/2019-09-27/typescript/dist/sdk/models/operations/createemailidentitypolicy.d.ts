@@ -24,7 +24,7 @@ export declare class CreateEmailIdentityPolicyResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     badRequestException?: any;
     contentType: string;
-    createEmailIdentityPolicyResponse?: Map<string, any>;
+    createEmailIdentityPolicyResponse?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     statusCode: number;

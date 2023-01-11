@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSetWilltopicResponse = exports.ProtocolMqttClientSetWilltopicRequest = exports.ProtocolMqttClientSetWilltopicPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSetWilltopicPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetWilltopicPathParams, _super);
     function ProtocolMqttClientSetWilltopicPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetWilltopicPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=topic" }),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetWilltopicPathParams.prototype, "topic", void 0);
     return ProtocolMqttClientSetWilltopicPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetWilltopicPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetWilltopicPathParams = ProtocolMqttClientSetWilltopicPathParams;
 var ProtocolMqttClientSetWilltopicRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetWilltopicRequest, _super);
     function ProtocolMqttClientSetWilltopicRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSetWilltopicPathParams)
     ], ProtocolMqttClientSetWilltopicRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSetWilltopicRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetWilltopicRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetWilltopicRequest = ProtocolMqttClientSetWilltopicRequest;
 var ProtocolMqttClientSetWilltopicResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetWilltopicResponse, _super);
     function ProtocolMqttClientSetWilltopicResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetWilltopicResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetWilltopicResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSetWilltopicResponse.prototype, "protocolMqttClientSetWilltopic200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientSetWilltopicResponse.prototype, "protocolMqttClientSetWilltopic200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientSetWilltopicResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetWilltopicResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetWilltopicResponse = ProtocolMqttClientSetWilltopicResponse;

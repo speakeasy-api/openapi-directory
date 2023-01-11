@@ -9,7 +9,7 @@ import { ConsumerStatusEnum } from "./consumerstatusenum";
 **/
 export class Consumer extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ConsumerARN" })
-  consumerArn: string;
+  consumerARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=ConsumerCreationTimestamp" })
   consumerCreationTimestamp: Date;

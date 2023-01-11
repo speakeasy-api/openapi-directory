@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PretargetingConfig = exports.PretargetingConfigPlacements = exports.PretargetingConfigExcludedPlacements = exports.PretargetingConfigDimensions = void 0;
+var utils_1 = require("../../../internal/utils");
 var PretargetingConfigDimensions = /** @class */ (function (_super) {
     __extends(PretargetingConfigDimensions, _super);
     function PretargetingConfigDimensions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", String)
     ], PretargetingConfigDimensions.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", String)
     ], PretargetingConfigDimensions.prototype, "width", void 0);
     return PretargetingConfigDimensions;
-}(SpeakeasyBase));
-export { PretargetingConfigDimensions };
+}(utils_1.SpeakeasyBase));
+exports.PretargetingConfigDimensions = PretargetingConfigDimensions;
 var PretargetingConfigExcludedPlacements = /** @class */ (function (_super) {
     __extends(PretargetingConfigExcludedPlacements, _super);
     function PretargetingConfigExcludedPlacements() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], PretargetingConfigExcludedPlacements.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PretargetingConfigExcludedPlacements.prototype, "type", void 0);
     return PretargetingConfigExcludedPlacements;
-}(SpeakeasyBase));
-export { PretargetingConfigExcludedPlacements };
+}(utils_1.SpeakeasyBase));
+exports.PretargetingConfigExcludedPlacements = PretargetingConfigExcludedPlacements;
 var PretargetingConfigPlacements = /** @class */ (function (_super) {
     __extends(PretargetingConfigPlacements, _super);
     function PretargetingConfigPlacements() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], PretargetingConfigPlacements.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PretargetingConfigPlacements.prototype, "type", void 0);
     return PretargetingConfigPlacements;
-}(SpeakeasyBase));
-export { PretargetingConfigPlacements };
+}(utils_1.SpeakeasyBase));
+exports.PretargetingConfigPlacements = PretargetingConfigPlacements;
 var PretargetingConfig = /** @class */ (function (_super) {
     __extends(PretargetingConfig, _super);
     function PretargetingConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingId" }),
         __metadata("design:type", String)
     ], PretargetingConfig.prototype, "billingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configId" }),
         __metadata("design:type", String)
     ], PretargetingConfig.prototype, "configId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configName" }),
         __metadata("design:type", String)
     ], PretargetingConfig.prototype, "configName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeType" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "creativeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: PretargetingConfigDimensions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: PretargetingConfigDimensions }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedContentLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedContentLabels" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "excludedContentLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedGeoCriteriaIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedGeoCriteriaIds" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "excludedGeoCriteriaIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedPlacements", elemType: PretargetingConfigExcludedPlacements }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedPlacements", elemType: PretargetingConfigExcludedPlacements }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "excludedPlacements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedUserLists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedUserLists" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "excludedUserLists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedVerticals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedVerticals" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "excludedVerticals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geoCriteriaIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geoCriteriaIds" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "geoCriteriaIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isActive" }),
         __metadata("design:type", Boolean)
     ], PretargetingConfig.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PretargetingConfig.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumQps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumQps" }),
         __metadata("design:type", String)
     ], PretargetingConfig.prototype, "maximumQps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileCarriers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileCarriers" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "mobileCarriers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileDevices" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "mobileDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileOperatingSystemVersions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileOperatingSystemVersions" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "mobileOperatingSystemVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placements", elemType: PretargetingConfigPlacements }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placements", elemType: PretargetingConfigPlacements }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "placements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "platforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedCreativeAttributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedCreativeAttributes" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "supportedCreativeAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLists" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "userLists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendorTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendorTypes" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "vendorTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verticals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verticals" }),
         __metadata("design:type", Array)
     ], PretargetingConfig.prototype, "verticals", void 0);
     return PretargetingConfig;
-}(SpeakeasyBase));
-export { PretargetingConfig };
+}(utils_1.SpeakeasyBase));
+exports.PretargetingConfig = PretargetingConfig;

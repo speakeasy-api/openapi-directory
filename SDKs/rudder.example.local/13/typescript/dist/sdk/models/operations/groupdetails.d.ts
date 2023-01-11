@@ -24,5 +24,5 @@ export declare class GroupDetailsRequest extends SpeakeasyBase {
 export declare class GroupDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    groupDetails200ApplicationJsonObject?: GroupDetails200ApplicationJson;
+    groupDetails200ApplicationJSONObject?: GroupDetails200ApplicationJson;
 }

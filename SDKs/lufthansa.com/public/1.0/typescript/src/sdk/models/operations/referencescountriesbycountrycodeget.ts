@@ -53,7 +53,7 @@ export class ReferencesCountriesByCountryCodeGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  referencesCountriesByCountryCodeGet200ApplicationJsonObject?: Map<string, any>;
+  referencesCountriesByCountryCodeGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

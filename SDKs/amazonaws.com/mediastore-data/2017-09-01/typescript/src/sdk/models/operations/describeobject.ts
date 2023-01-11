@@ -49,7 +49,7 @@ export class DescribeObjectResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  describeObjectResponse?: Map<string, any>;
+  describeObjectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerError?: any;

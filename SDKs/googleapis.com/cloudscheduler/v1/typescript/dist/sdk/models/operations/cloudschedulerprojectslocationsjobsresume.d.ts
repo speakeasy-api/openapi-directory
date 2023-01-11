@@ -23,7 +23,7 @@ export declare class CloudschedulerProjectsLocationsJobsResumeSecurity extends S
 export declare class CloudschedulerProjectsLocationsJobsResumeRequest extends SpeakeasyBase {
     pathParams: CloudschedulerProjectsLocationsJobsResumePathParams;
     queryParams: CloudschedulerProjectsLocationsJobsResumeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudschedulerProjectsLocationsJobsResumeSecurity;
 }
 export declare class CloudschedulerProjectsLocationsJobsResumeResponse extends SpeakeasyBase {

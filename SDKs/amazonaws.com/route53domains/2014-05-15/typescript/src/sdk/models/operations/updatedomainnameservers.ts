@@ -63,7 +63,7 @@ export class UpdateDomainNameserversResponse extends SpeakeasyBase {
   tldRulesViolation?: any;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 
   @SpeakeasyMetadata()
   updateDomainNameserversResponse?: shared.UpdateDomainNameserversResponse;

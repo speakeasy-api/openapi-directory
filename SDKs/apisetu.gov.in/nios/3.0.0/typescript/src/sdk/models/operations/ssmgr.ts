@@ -191,23 +191,23 @@ export class SsmgrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ssmgr400ApplicationJsonObject?: Ssmgr400ApplicationJson;
+  ssmgr400ApplicationJSONObject?: Ssmgr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr401ApplicationJsonObject?: Ssmgr401ApplicationJson;
+  ssmgr401ApplicationJSONObject?: Ssmgr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr404ApplicationJsonObject?: Ssmgr404ApplicationJson;
+  ssmgr404ApplicationJSONObject?: Ssmgr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr500ApplicationJsonObject?: Ssmgr500ApplicationJson;
+  ssmgr500ApplicationJSONObject?: Ssmgr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr502ApplicationJsonObject?: Ssmgr502ApplicationJson;
+  ssmgr502ApplicationJSONObject?: Ssmgr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr503ApplicationJsonObject?: Ssmgr503ApplicationJson;
+  ssmgr503ApplicationJSONObject?: Ssmgr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ssmgr504ApplicationJsonObject?: Ssmgr504ApplicationJson;
+  ssmgr504ApplicationJSONObject?: Ssmgr504ApplicationJson;
 }

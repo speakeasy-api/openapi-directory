@@ -45,5 +45,5 @@ export class UpdateNetworkApplianceContentFilteringResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceContentFiltering200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceContentFiltering200ApplicationJSONObject?: Record<string, any>;
 }

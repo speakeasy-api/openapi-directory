@@ -20,8 +20,8 @@ export declare class DeleteAclRequest extends SpeakeasyBase {
 export declare class DeleteAclResponse extends SpeakeasyBase {
     aclNotFoundFault?: any;
     contentType: string;
-    deleteAclResponse?: shared.DeleteAclResponse;
-    invalidAclStateFault?: any;
+    deleteACLResponse?: shared.DeleteAclResponse;
+    invalidACLStateFault?: any;
     invalidParameterValueException?: any;
     statusCode: number;
 }

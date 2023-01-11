@@ -7,6 +7,9 @@ export declare enum JobResponseStatusEnum {
     Completed = "completed",
     Failed = "failed"
 }
+/**
+ * A *job* is an object representing a process that handles asynchronous work.
+**/
 export declare class JobResponse extends SpeakeasyBase {
     gid?: string;
     newProject?: ProjectCompact;

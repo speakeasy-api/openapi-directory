@@ -16,5 +16,5 @@ export declare class DcimVirtualChassisListRequest extends SpeakeasyBase {
 export declare class DcimVirtualChassisListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimVirtualChassisList200ApplicationJsonObject?: DcimVirtualChassisList200ApplicationJson;
+    dcimVirtualChassisList200ApplicationJSONObject?: DcimVirtualChassisList200ApplicationJson;
 }

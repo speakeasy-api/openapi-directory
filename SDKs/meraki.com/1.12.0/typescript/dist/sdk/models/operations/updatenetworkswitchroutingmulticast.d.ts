@@ -27,5 +27,5 @@ export declare class UpdateNetworkSwitchRoutingMulticastRequest extends Speakeas
 export declare class UpdateNetworkSwitchRoutingMulticastResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchRoutingMulticast200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchRoutingMulticast200ApplicationJSONObject?: Record<string, any>;
 }

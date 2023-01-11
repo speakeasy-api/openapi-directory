@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateJobActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateJobResponse = exports.GetCreateJobRequest = exports.GetCreateJobQueryParams = exports.GetCreateJobVersionEnum = exports.GetCreateJobOperationEnum = exports.GetCreateJobJobTypeEnum = exports.GetCreateJobActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateJobActionEnum;
 (function (GetCreateJobActionEnum) {
     GetCreateJobActionEnum["CreateJob"] = "CreateJob";
-})(GetCreateJobActionEnum || (GetCreateJobActionEnum = {}));
-export var GetCreateJobJobTypeEnum;
+})(GetCreateJobActionEnum = exports.GetCreateJobActionEnum || (exports.GetCreateJobActionEnum = {}));
+var GetCreateJobJobTypeEnum;
 (function (GetCreateJobJobTypeEnum) {
     GetCreateJobJobTypeEnum["Import"] = "Import";
     GetCreateJobJobTypeEnum["Export"] = "Export";
-})(GetCreateJobJobTypeEnum || (GetCreateJobJobTypeEnum = {}));
-export var GetCreateJobOperationEnum;
+})(GetCreateJobJobTypeEnum = exports.GetCreateJobJobTypeEnum || (exports.GetCreateJobJobTypeEnum = {}));
+var GetCreateJobOperationEnum;
 (function (GetCreateJobOperationEnum) {
     GetCreateJobOperationEnum["CreateJob"] = "CreateJob";
-})(GetCreateJobOperationEnum || (GetCreateJobOperationEnum = {}));
-export var GetCreateJobVersionEnum;
+})(GetCreateJobOperationEnum = exports.GetCreateJobOperationEnum || (exports.GetCreateJobOperationEnum = {}));
+var GetCreateJobVersionEnum;
 (function (GetCreateJobVersionEnum) {
     GetCreateJobVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(GetCreateJobVersionEnum || (GetCreateJobVersionEnum = {}));
+})(GetCreateJobVersionEnum = exports.GetCreateJobVersionEnum || (exports.GetCreateJobVersionEnum = {}));
 var GetCreateJobQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateJobQueryParams, _super);
     function GetCreateJobQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobType" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Manifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Manifest" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "manifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ManifestAddendum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ManifestAddendum" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "manifestAddendum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ValidateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ValidateOnly" }),
         __metadata("design:type", Boolean)
     ], GetCreateJobQueryParams.prototype, "validateOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateJobQueryParams.prototype, "version", void 0);
     return GetCreateJobQueryParams;
-}(SpeakeasyBase));
-export { GetCreateJobQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateJobQueryParams = GetCreateJobQueryParams;
 var GetCreateJobRequest = /** @class */ (function (_super) {
     __extends(GetCreateJobRequest, _super);
     function GetCreateJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateJobQueryParams)
     ], GetCreateJobRequest.prototype, "queryParams", void 0);
     return GetCreateJobRequest;
-}(SpeakeasyBase));
-export { GetCreateJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateJobRequest = GetCreateJobRequest;
 var GetCreateJobResponse = /** @class */ (function (_super) {
     __extends(GetCreateJobResponse, _super);
     function GetCreateJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateJobResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateJobResponse.prototype, "statusCode", void 0);
     return GetCreateJobResponse;
-}(SpeakeasyBase));
-export { GetCreateJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateJobResponse = GetCreateJobResponse;

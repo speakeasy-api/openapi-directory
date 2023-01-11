@@ -1,5 +1,8 @@
-export var PortAccessTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortAccessTypeEnum = void 0;
+var PortAccessTypeEnum;
 (function (PortAccessTypeEnum) {
     PortAccessTypeEnum["Public"] = "Public";
     PortAccessTypeEnum["Private"] = "Private";
-})(PortAccessTypeEnum || (PortAccessTypeEnum = {}));
+})(PortAccessTypeEnum = exports.PortAccessTypeEnum || (exports.PortAccessTypeEnum = {}));

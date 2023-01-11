@@ -18,7 +18,7 @@ export declare class AcceptInvitationRequest extends SpeakeasyBase {
     request: AcceptInvitationRequestBody;
 }
 export declare class AcceptInvitationResponse extends SpeakeasyBase {
-    acceptInvitationResponse?: Map<string, any>;
+    acceptInvitationResponse?: Record<string, any>;
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;

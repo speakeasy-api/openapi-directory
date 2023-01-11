@@ -1,4 +1,7 @@
-export var EventTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTypeEnum = void 0;
+var EventTypeEnum;
 (function (EventTypeEnum) {
     EventTypeEnum["AssignmentAccepted"] = "AssignmentAccepted";
     EventTypeEnum["AssignmentAbandoned"] = "AssignmentAbandoned";
@@ -12,4 +15,4 @@ export var EventTypeEnum;
     EventTypeEnum["HitExtended"] = "HITExtended";
     EventTypeEnum["HitDisposed"] = "HITDisposed";
     EventTypeEnum["Ping"] = "Ping";
-})(EventTypeEnum || (EventTypeEnum = {}));
+})(EventTypeEnum = exports.EventTypeEnum || (exports.EventTypeEnum = {}));

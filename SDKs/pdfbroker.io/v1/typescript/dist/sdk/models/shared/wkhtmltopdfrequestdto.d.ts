@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class WkHtmlToPdfRequestDto extends SpeakeasyBase {
     htmlBase64String?: string;
-    resources?: Map<string, string>;
+    resources?: Record<string, string>;
     url?: string;
-    wkHtmlToPdfArguments?: Map<string, string>;
+    wkHtmlToPdfArguments?: Record<string, string>;
 }

@@ -5,7 +5,7 @@ import { WorkerTypeEnum } from "./workertypeenum";
 
 export class CreateDevEndpointRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Arguments" })
-  arguments?: Map<string, string>;
+  arguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=EndpointName" })
   endpointName: string;
@@ -44,7 +44,7 @@ export class CreateDevEndpointRequest extends SpeakeasyBase {
   subnetId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=WorkerType" })
   workerType?: WorkerTypeEnum;

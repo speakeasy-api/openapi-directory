@@ -10,7 +10,7 @@ export declare class AreGamesInProgressRequest extends SpeakeasyBase {
     pathParams: AreGamesInProgressPathParams;
 }
 export declare class AreGamesInProgressResponse extends SpeakeasyBase {
-    areGamesInProgress200ApplicationJsonBoolean?: boolean;
+    areGamesInProgress200ApplicationJSONBoolean?: boolean;
     contentType: string;
     statusCode: number;
 }

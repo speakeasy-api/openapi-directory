@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMgiMappingUsingGetResponse = exports.GetMgiMappingUsingGetRequest = exports.GetMgiMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMgiMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetMgiMappingUsingGetPathParams, _super);
     function GetMgiMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetMgiMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetMgiMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetMgiMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMgiMappingUsingGetPathParams = GetMgiMappingUsingGetPathParams;
 var GetMgiMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetMgiMappingUsingGetRequest, _super);
     function GetMgiMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMgiMappingUsingGetPathParams)
     ], GetMgiMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetMgiMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetMgiMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMgiMappingUsingGetRequest = GetMgiMappingUsingGetRequest;
 var GetMgiMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetMgiMappingUsingGetResponse, _super);
     function GetMgiMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMgiMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMgiMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMgiMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetMgiMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetMgiMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMgiMappingUsingGetResponse = GetMgiMappingUsingGetResponse;

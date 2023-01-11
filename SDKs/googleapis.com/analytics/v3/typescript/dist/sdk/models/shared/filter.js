@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterExpression } from "./filterexpression";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterInput = exports.Filter = exports.FilterUppercaseDetails = exports.FilterSearchAndReplaceDetails = exports.FilterParentLink = exports.FilterLowercaseDetails = exports.FilterAdvancedDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterexpression_1 = require("./filterexpression");
 // FilterAdvancedDetails
 /**
  * Details for the filter of the type ADVANCED.
@@ -34,60 +37,60 @@ var FilterAdvancedDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseSensitive" }),
         __metadata("design:type", Boolean)
     ], FilterAdvancedDetails.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractA" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "extractA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractB" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractB" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "extractB", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldA" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "fieldA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldAIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldAIndex" }),
         __metadata("design:type", Number)
     ], FilterAdvancedDetails.prototype, "fieldAIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldARequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldARequired" }),
         __metadata("design:type", Boolean)
     ], FilterAdvancedDetails.prototype, "fieldARequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldB" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldB" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "fieldB", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldBIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldBIndex" }),
         __metadata("design:type", Number)
     ], FilterAdvancedDetails.prototype, "fieldBIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldBRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldBRequired" }),
         __metadata("design:type", Boolean)
     ], FilterAdvancedDetails.prototype, "fieldBRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputConstructor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputConstructor" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "outputConstructor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputToField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputToField" }),
         __metadata("design:type", String)
     ], FilterAdvancedDetails.prototype, "outputToField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputToFieldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputToFieldIndex" }),
         __metadata("design:type", Number)
     ], FilterAdvancedDetails.prototype, "outputToFieldIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideOutputField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideOutputField" }),
         __metadata("design:type", Boolean)
     ], FilterAdvancedDetails.prototype, "overrideOutputField", void 0);
     return FilterAdvancedDetails;
-}(SpeakeasyBase));
-export { FilterAdvancedDetails };
+}(utils_1.SpeakeasyBase));
+exports.FilterAdvancedDetails = FilterAdvancedDetails;
 // FilterLowercaseDetails
 /**
  * Details for the filter of the type LOWER.
@@ -98,16 +101,16 @@ var FilterLowercaseDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], FilterLowercaseDetails.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldIndex" }),
         __metadata("design:type", Number)
     ], FilterLowercaseDetails.prototype, "fieldIndex", void 0);
     return FilterLowercaseDetails;
-}(SpeakeasyBase));
-export { FilterLowercaseDetails };
+}(utils_1.SpeakeasyBase));
+exports.FilterLowercaseDetails = FilterLowercaseDetails;
 // FilterParentLink
 /**
  * Parent link for this filter. Points to the account to which this filter belongs.
@@ -118,16 +121,16 @@ var FilterParentLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], FilterParentLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FilterParentLink.prototype, "type", void 0);
     return FilterParentLink;
-}(SpeakeasyBase));
-export { FilterParentLink };
+}(utils_1.SpeakeasyBase));
+exports.FilterParentLink = FilterParentLink;
 // FilterSearchAndReplaceDetails
 /**
  * Details for the filter of the type SEARCH_AND_REPLACE.
@@ -138,28 +141,28 @@ var FilterSearchAndReplaceDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseSensitive" }),
         __metadata("design:type", Boolean)
     ], FilterSearchAndReplaceDetails.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], FilterSearchAndReplaceDetails.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldIndex" }),
         __metadata("design:type", Number)
     ], FilterSearchAndReplaceDetails.prototype, "fieldIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replaceString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replaceString" }),
         __metadata("design:type", String)
     ], FilterSearchAndReplaceDetails.prototype, "replaceString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchString" }),
         __metadata("design:type", String)
     ], FilterSearchAndReplaceDetails.prototype, "searchString", void 0);
     return FilterSearchAndReplaceDetails;
-}(SpeakeasyBase));
-export { FilterSearchAndReplaceDetails };
+}(utils_1.SpeakeasyBase));
+exports.FilterSearchAndReplaceDetails = FilterSearchAndReplaceDetails;
 // FilterUppercaseDetails
 /**
  * Details for the filter of the type UPPER.
@@ -170,72 +173,16 @@ var FilterUppercaseDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], FilterUppercaseDetails.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldIndex" }),
         __metadata("design:type", Number)
     ], FilterUppercaseDetails.prototype, "fieldIndex", void 0);
     return FilterUppercaseDetails;
-}(SpeakeasyBase));
-export { FilterUppercaseDetails };
-// FilterInput
-/**
- * JSON template for an Analytics account filter.
-**/
-var FilterInput = /** @class */ (function (_super) {
-    __extends(FilterInput, _super);
-    function FilterInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
-        __metadata("design:type", String)
-    ], FilterInput.prototype, "accountId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=advancedDetails" }),
-        __metadata("design:type", FilterAdvancedDetails)
-    ], FilterInput.prototype, "advancedDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeDetails" }),
-        __metadata("design:type", FilterExpression)
-    ], FilterInput.prototype, "excludeDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", String)
-    ], FilterInput.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeDetails" }),
-        __metadata("design:type", FilterExpression)
-    ], FilterInput.prototype, "includeDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lowercaseDetails" }),
-        __metadata("design:type", FilterLowercaseDetails)
-    ], FilterInput.prototype, "lowercaseDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], FilterInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
-        __metadata("design:type", FilterParentLink)
-    ], FilterInput.prototype, "parentLink", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchAndReplaceDetails" }),
-        __metadata("design:type", FilterSearchAndReplaceDetails)
-    ], FilterInput.prototype, "searchAndReplaceDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], FilterInput.prototype, "type", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=uppercaseDetails" }),
-        __metadata("design:type", FilterUppercaseDetails)
-    ], FilterInput.prototype, "uppercaseDetails", void 0);
-    return FilterInput;
-}(SpeakeasyBase));
-export { FilterInput };
+}(utils_1.SpeakeasyBase));
+exports.FilterUppercaseDetails = FilterUppercaseDetails;
 // Filter
 /**
  * JSON template for an Analytics account filter.
@@ -246,65 +193,121 @@ var Filter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Filter.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advancedDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advancedDetails" }),
         __metadata("design:type", FilterAdvancedDetails)
     ], Filter.prototype, "advancedDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Filter.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeDetails" }),
-        __metadata("design:type", FilterExpression)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeDetails" }),
+        __metadata("design:type", filterexpression_1.FilterExpression)
     ], Filter.prototype, "excludeDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Filter.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeDetails" }),
-        __metadata("design:type", FilterExpression)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeDetails" }),
+        __metadata("design:type", filterexpression_1.FilterExpression)
     ], Filter.prototype, "includeDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Filter.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lowercaseDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lowercaseDetails" }),
         __metadata("design:type", FilterLowercaseDetails)
     ], Filter.prototype, "lowercaseDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Filter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", FilterParentLink)
     ], Filter.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchAndReplaceDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchAndReplaceDetails" }),
         __metadata("design:type", FilterSearchAndReplaceDetails)
     ], Filter.prototype, "searchAndReplaceDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Filter.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Filter.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Filter.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uppercaseDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uppercaseDetails" }),
         __metadata("design:type", FilterUppercaseDetails)
     ], Filter.prototype, "uppercaseDetails", void 0);
     return Filter;
-}(SpeakeasyBase));
-export { Filter };
+}(utils_1.SpeakeasyBase));
+exports.Filter = Filter;
+// FilterInput
+/**
+ * JSON template for an Analytics account filter.
+**/
+var FilterInput = /** @class */ (function (_super) {
+    __extends(FilterInput, _super);
+    function FilterInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
+        __metadata("design:type", String)
+    ], FilterInput.prototype, "accountId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advancedDetails" }),
+        __metadata("design:type", FilterAdvancedDetails)
+    ], FilterInput.prototype, "advancedDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeDetails" }),
+        __metadata("design:type", filterexpression_1.FilterExpression)
+    ], FilterInput.prototype, "excludeDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], FilterInput.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeDetails" }),
+        __metadata("design:type", filterexpression_1.FilterExpression)
+    ], FilterInput.prototype, "includeDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lowercaseDetails" }),
+        __metadata("design:type", FilterLowercaseDetails)
+    ], FilterInput.prototype, "lowercaseDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], FilterInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
+        __metadata("design:type", FilterParentLink)
+    ], FilterInput.prototype, "parentLink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchAndReplaceDetails" }),
+        __metadata("design:type", FilterSearchAndReplaceDetails)
+    ], FilterInput.prototype, "searchAndReplaceDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], FilterInput.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uppercaseDetails" }),
+        __metadata("design:type", FilterUppercaseDetails)
+    ], FilterInput.prototype, "uppercaseDetails", void 0);
+    return FilterInput;
+}(utils_1.SpeakeasyBase));
+exports.FilterInput = FilterInput;

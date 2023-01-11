@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.X509CertificateDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // X509CertificateDetails
 /**
  * Details of an X.509 certificate. For informational purposes only.
@@ -33,29 +36,29 @@ var X509CertificateDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryTime" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "expiryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKeyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKeyType" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "publicKeyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signatureAlgorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signatureAlgorithm" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "signatureAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], X509CertificateDetails.prototype, "subject", void 0);
     return X509CertificateDetails;
-}(SpeakeasyBase));
-export { X509CertificateDetails };
+}(utils_1.SpeakeasyBase));
+exports.X509CertificateDetails = X509CertificateDetails;

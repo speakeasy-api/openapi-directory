@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMarketdataExchangeComponentsResponse = exports.GetMarketdataExchangeComponents200ApplicationJson = exports.GetMarketdataExchangeComponents200ApplicationJsonMapping = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMarketdataExchangeComponents200ApplicationJsonMapping = /** @class */ (function (_super) {
     __extends(GetMarketdataExchangeComponents200ApplicationJsonMapping, _super);
     function GetMarketdataExchangeComponents200ApplicationJsonMapping() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bit" }),
         __metadata("design:type", Number)
     ], GetMarketdataExchangeComponents200ApplicationJsonMapping.prototype, "bit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], GetMarketdataExchangeComponents200ApplicationJsonMapping.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchange" }),
         __metadata("design:type", String)
     ], GetMarketdataExchangeComponents200ApplicationJsonMapping.prototype, "exchange", void 0);
     return GetMarketdataExchangeComponents200ApplicationJsonMapping;
-}(SpeakeasyBase));
-export { GetMarketdataExchangeComponents200ApplicationJsonMapping };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketdataExchangeComponents200ApplicationJsonMapping = GetMarketdataExchangeComponents200ApplicationJsonMapping;
 var GetMarketdataExchangeComponents200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetMarketdataExchangeComponents200ApplicationJson, _super);
     function GetMarketdataExchangeComponents200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Complete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Complete" }),
         __metadata("design:type", Boolean)
     ], GetMarketdataExchangeComponents200ApplicationJson.prototype, "complete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConId" }),
         __metadata("design:type", Number)
     ], GetMarketdataExchangeComponents200ApplicationJson.prototype, "conId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapping", elemType: GetMarketdataExchangeComponents200ApplicationJsonMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapping", elemType: GetMarketdataExchangeComponents200ApplicationJsonMapping }),
         __metadata("design:type", Array)
     ], GetMarketdataExchangeComponents200ApplicationJson.prototype, "mapping", void 0);
     return GetMarketdataExchangeComponents200ApplicationJson;
-}(SpeakeasyBase));
-export { GetMarketdataExchangeComponents200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketdataExchangeComponents200ApplicationJson = GetMarketdataExchangeComponents200ApplicationJson;
 var GetMarketdataExchangeComponentsResponse = /** @class */ (function (_super) {
     __extends(GetMarketdataExchangeComponentsResponse, _super);
     function GetMarketdataExchangeComponentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMarketdataExchangeComponentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetMarketdataExchangeComponents200ApplicationJson }),
-        __metadata("design:type", Array)
-    ], GetMarketdataExchangeComponentsResponse.prototype, "getMarketdataExchangeComponents200ApplicationJsonObjects", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMarketdataExchangeComponentsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetMarketdataExchangeComponents200ApplicationJson }),
+        __metadata("design:type", Array)
+    ], GetMarketdataExchangeComponentsResponse.prototype, "getMarketdataExchangeComponents200ApplicationJSONObjects", void 0);
     return GetMarketdataExchangeComponentsResponse;
-}(SpeakeasyBase));
-export { GetMarketdataExchangeComponentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketdataExchangeComponentsResponse = GetMarketdataExchangeComponentsResponse;

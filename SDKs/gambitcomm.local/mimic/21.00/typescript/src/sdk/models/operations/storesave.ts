@@ -10,5 +10,5 @@ export class StoreSaveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  storeSave200ApplicationJsonObject?: Map<string, number>;
+  storeSave200ApplicationJSONObject?: Record<string, number>;
 }

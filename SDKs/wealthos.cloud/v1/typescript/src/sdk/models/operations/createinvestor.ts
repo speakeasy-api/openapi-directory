@@ -38,17 +38,17 @@ export class CreateInvestorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createInvestor400ApplicationJsonAny?: any;
+  createInvestor400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createInvestor401ApplicationJsonAny?: any;
+  createInvestor401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createInvestor403ApplicationJsonAny?: any;
+  createInvestor403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createInvestor429ApplicationJsonAny?: any;
+  createInvestor429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createInvestor500ApplicationJsonAny?: any;
+  createInvestor500ApplicationJSONAny?: any;
 }

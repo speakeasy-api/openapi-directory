@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TopicClassificationResponse = exports.TopicClassificationRequest = exports.TopicClassificationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var TopicClassificationRequestBody = /** @class */ (function (_super) {
     __extends(TopicClassificationRequestBody, _super);
     function TopicClassificationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], TopicClassificationRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], TopicClassificationRequestBody.prototype, "text", void 0);
     return TopicClassificationRequestBody;
-}(SpeakeasyBase));
-export { TopicClassificationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TopicClassificationRequestBody = TopicClassificationRequestBody;
 var TopicClassificationRequest = /** @class */ (function (_super) {
     __extends(TopicClassificationRequest, _super);
     function TopicClassificationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", TopicClassificationRequestBody)
     ], TopicClassificationRequest.prototype, "request", void 0);
     return TopicClassificationRequest;
-}(SpeakeasyBase));
-export { TopicClassificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.TopicClassificationRequest = TopicClassificationRequest;
 var TopicClassificationResponse = /** @class */ (function (_super) {
     __extends(TopicClassificationResponse, _super);
     function TopicClassificationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TopicClassificationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TopicClassificationResponse.prototype, "statusCode", void 0);
     return TopicClassificationResponse;
-}(SpeakeasyBase));
-export { TopicClassificationResponse };
+}(utils_1.SpeakeasyBase));
+exports.TopicClassificationResponse = TopicClassificationResponse;

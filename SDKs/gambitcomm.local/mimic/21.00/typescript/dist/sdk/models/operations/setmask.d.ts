@@ -9,5 +9,5 @@ export declare class SetMaskRequest extends SpeakeasyBase {
 export declare class SetMaskResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setMask200ApplicationJsonString?: string;
+    setMask200ApplicationJSONString?: string;
 }

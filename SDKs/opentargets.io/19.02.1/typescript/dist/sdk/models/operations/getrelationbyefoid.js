@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationByEfoidResponse = exports.GetRelationByEfoidRequest = exports.GetRelationByEfoidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRelationByEfoidPathParams = /** @class */ (function (_super) {
     __extends(GetRelationByEfoidPathParams, _super);
     function GetRelationByEfoidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=disease" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=disease" }),
         __metadata("design:type", String)
     ], GetRelationByEfoidPathParams.prototype, "disease", void 0);
     return GetRelationByEfoidPathParams;
-}(SpeakeasyBase));
-export { GetRelationByEfoidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationByEfoidPathParams = GetRelationByEfoidPathParams;
 var GetRelationByEfoidRequest = /** @class */ (function (_super) {
     __extends(GetRelationByEfoidRequest, _super);
     function GetRelationByEfoidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRelationByEfoidPathParams)
     ], GetRelationByEfoidRequest.prototype, "pathParams", void 0);
     return GetRelationByEfoidRequest;
-}(SpeakeasyBase));
-export { GetRelationByEfoidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationByEfoidRequest = GetRelationByEfoidRequest;
 var GetRelationByEfoidResponse = /** @class */ (function (_super) {
     __extends(GetRelationByEfoidResponse, _super);
     function GetRelationByEfoidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRelationByEfoidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRelationByEfoidResponse.prototype, "statusCode", void 0);
     return GetRelationByEfoidResponse;
-}(SpeakeasyBase));
-export { GetRelationByEfoidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationByEfoidResponse = GetRelationByEfoidResponse;

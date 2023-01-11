@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConcurrentAccessRestriction } from "./concurrentaccessrestriction";
-import { DownloadAccessRestriction } from "./downloadaccessrestriction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestAccessData = void 0;
+var utils_1 = require("../../../internal/utils");
+var concurrentaccessrestriction_1 = require("./concurrentaccessrestriction");
+var downloadaccessrestriction_1 = require("./downloadaccessrestriction");
 var RequestAccessData = /** @class */ (function (_super) {
     __extends(RequestAccessData, _super);
     function RequestAccessData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=concurrentAccess" }),
-        __metadata("design:type", ConcurrentAccessRestriction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concurrentAccess" }),
+        __metadata("design:type", concurrentaccessrestriction_1.ConcurrentAccessRestriction)
     ], RequestAccessData.prototype, "concurrentAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadAccess" }),
-        __metadata("design:type", DownloadAccessRestriction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadAccess" }),
+        __metadata("design:type", downloadaccessrestriction_1.DownloadAccessRestriction)
     ], RequestAccessData.prototype, "downloadAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], RequestAccessData.prototype, "kind", void 0);
     return RequestAccessData;
-}(SpeakeasyBase));
-export { RequestAccessData };
+}(utils_1.SpeakeasyBase));
+exports.RequestAccessData = RequestAccessData;

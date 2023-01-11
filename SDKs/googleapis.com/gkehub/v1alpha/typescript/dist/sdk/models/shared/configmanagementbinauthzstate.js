@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementBinauthzVersion } from "./configmanagementbinauthzversion";
-export var ConfigManagementBinauthzStateWebhookEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementBinauthzState = exports.ConfigManagementBinauthzStateWebhookEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementbinauthzversion_1 = require("./configmanagementbinauthzversion");
+var ConfigManagementBinauthzStateWebhookEnum;
 (function (ConfigManagementBinauthzStateWebhookEnum) {
     ConfigManagementBinauthzStateWebhookEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementBinauthzStateWebhookEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementBinauthzStateWebhookEnum["Installed"] = "INSTALLED";
     ConfigManagementBinauthzStateWebhookEnum["Error"] = "ERROR";
-})(ConfigManagementBinauthzStateWebhookEnum || (ConfigManagementBinauthzStateWebhookEnum = {}));
+})(ConfigManagementBinauthzStateWebhookEnum = exports.ConfigManagementBinauthzStateWebhookEnum || (exports.ConfigManagementBinauthzStateWebhookEnum = {}));
 // ConfigManagementBinauthzState
 /**
  * State for Binauthz
@@ -41,13 +44,13 @@ var ConfigManagementBinauthzState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", ConfigManagementBinauthzVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", configmanagementbinauthzversion_1.ConfigManagementBinauthzVersion)
     ], ConfigManagementBinauthzState.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
         __metadata("design:type", String)
     ], ConfigManagementBinauthzState.prototype, "webhook", void 0);
     return ConfigManagementBinauthzState;
-}(SpeakeasyBase));
-export { ConfigManagementBinauthzState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementBinauthzState = ConfigManagementBinauthzState;

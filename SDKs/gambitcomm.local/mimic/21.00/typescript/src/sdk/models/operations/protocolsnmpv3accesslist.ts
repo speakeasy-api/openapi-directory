@@ -22,5 +22,5 @@ export class ProtocolSnmpv3AccessListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmpv3AccessList200ApplicationJsonStrings?: string[];
+  protocolSnmpv3AccessList200ApplicationJSONStrings?: string[];
 }

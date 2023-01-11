@@ -20,7 +20,7 @@ export declare class CreateConnectionRequest extends SpeakeasyBase {
 export declare class CreateConnectionResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     contentType: string;
-    createConnectionResponse?: Map<string, any>;
+    createConnectionResponse?: Record<string, any>;
     glueEncryptionException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;

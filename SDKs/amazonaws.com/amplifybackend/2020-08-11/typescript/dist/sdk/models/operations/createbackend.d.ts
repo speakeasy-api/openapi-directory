@@ -13,7 +13,7 @@ export declare class CreateBackendRequestBody extends SpeakeasyBase {
     appId: string;
     appName: string;
     backendEnvironmentName: string;
-    resourceConfig?: Map<string, any>;
+    resourceConfig?: Record<string, any>;
     resourceName?: string;
 }
 export declare class CreateBackendRequest extends SpeakeasyBase {

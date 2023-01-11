@@ -18,5 +18,5 @@ export declare class ListTechniques200ApplicationJson extends SpeakeasyBase {
 export declare class ListTechniquesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listTechniques200ApplicationJsonObject?: ListTechniques200ApplicationJson;
+    listTechniques200ApplicationJSONObject?: ListTechniques200ApplicationJson;
 }

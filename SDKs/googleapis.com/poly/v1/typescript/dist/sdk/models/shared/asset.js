@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Format } from "./format";
-import { PresentationParams } from "./presentationparams";
-import { RemixInfo } from "./remixinfo";
-import { File } from "./file";
-export var AssetLicenseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Asset = exports.AssetVisibilityEnum = exports.AssetLicenseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var format_1 = require("./format");
+var presentationparams_1 = require("./presentationparams");
+var remixinfo_1 = require("./remixinfo");
+var file_1 = require("./file");
+var AssetLicenseEnum;
 (function (AssetLicenseEnum) {
     AssetLicenseEnum["Unknown"] = "UNKNOWN";
     AssetLicenseEnum["CreativeCommonsBy"] = "CREATIVE_COMMONS_BY";
     AssetLicenseEnum["AllRightsReserved"] = "ALL_RIGHTS_RESERVED";
-})(AssetLicenseEnum || (AssetLicenseEnum = {}));
-export var AssetVisibilityEnum;
+})(AssetLicenseEnum = exports.AssetLicenseEnum || (exports.AssetLicenseEnum = {}));
+var AssetVisibilityEnum;
 (function (AssetVisibilityEnum) {
     AssetVisibilityEnum["VisibilityUnspecified"] = "VISIBILITY_UNSPECIFIED";
     AssetVisibilityEnum["Private"] = "PRIVATE";
     AssetVisibilityEnum["Unlisted"] = "UNLISTED";
     AssetVisibilityEnum["Public"] = "PUBLIC";
-})(AssetVisibilityEnum || (AssetVisibilityEnum = {}));
+})(AssetVisibilityEnum = exports.AssetVisibilityEnum || (exports.AssetVisibilityEnum = {}));
 // Asset
 /**
  * Represents and describes an asset in the Poly library. An asset is a 3D model or scene created using [Tilt Brush](//www.tiltbrush.com), [Blocks](//vr.google.com/blocks/), or any 3D program that produces a file that can be upload to Poly.
@@ -50,61 +53,61 @@ var Asset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorName" }),
         __metadata("design:type", String)
     ], Asset.prototype, "authorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Asset.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Asset.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Asset.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formats", elemType: Format }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formats", elemType: format_1.Format }),
         __metadata("design:type", Array)
     ], Asset.prototype, "formats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCurated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCurated" }),
         __metadata("design:type", Boolean)
     ], Asset.prototype, "isCurated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], Asset.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", String)
     ], Asset.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Asset.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=presentationParams" }),
-        __metadata("design:type", PresentationParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=presentationParams" }),
+        __metadata("design:type", presentationparams_1.PresentationParams)
     ], Asset.prototype, "presentationParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remixInfo" }),
-        __metadata("design:type", RemixInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remixInfo" }),
+        __metadata("design:type", remixinfo_1.RemixInfo)
     ], Asset.prototype, "remixInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
+        __metadata("design:type", file_1.File)
     ], Asset.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Asset.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], Asset.prototype, "visibility", void 0);
     return Asset;
-}(SpeakeasyBase));
-export { Asset };
+}(utils_1.SpeakeasyBase));
+exports.Asset = Asset;

@@ -21,5 +21,5 @@ export class ExperimentSummary extends SpeakeasyBase {
   state?: ExperimentState;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientInfo } from "./clientinfo";
-import { EnvironmentMatrix } from "./environmentmatrix";
-import { ResultStorage } from "./resultstorage";
-import { TestExecution } from "./testexecution";
-import { TestSpecification } from "./testspecification";
-export var TestMatrixInvalidMatrixDetailsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestMatrix = exports.TestMatrixStateEnum = exports.TestMatrixOutcomeSummaryEnum = exports.TestMatrixInvalidMatrixDetailsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientinfo_1 = require("./clientinfo");
+var environmentmatrix_1 = require("./environmentmatrix");
+var resultstorage_1 = require("./resultstorage");
+var testexecution_1 = require("./testexecution");
+var testspecification_1 = require("./testspecification");
+var TestMatrixInvalidMatrixDetailsEnum;
 (function (TestMatrixInvalidMatrixDetailsEnum) {
     TestMatrixInvalidMatrixDetailsEnum["InvalidMatrixDetailsUnspecified"] = "INVALID_MATRIX_DETAILS_UNSPECIFIED";
     TestMatrixInvalidMatrixDetailsEnum["DetailsUnavailable"] = "DETAILS_UNAVAILABLE";
@@ -66,16 +69,20 @@ export var TestMatrixInvalidMatrixDetailsEnum;
     TestMatrixInvalidMatrixDetailsEnum["InvalidInputApk"] = "INVALID_INPUT_APK";
     TestMatrixInvalidMatrixDetailsEnum["InvalidApkPreviewSdk"] = "INVALID_APK_PREVIEW_SDK";
     TestMatrixInvalidMatrixDetailsEnum["MatrixTooLarge"] = "MATRIX_TOO_LARGE";
-})(TestMatrixInvalidMatrixDetailsEnum || (TestMatrixInvalidMatrixDetailsEnum = {}));
-export var TestMatrixOutcomeSummaryEnum;
+    TestMatrixInvalidMatrixDetailsEnum["DeviceQuotaExceeded"] = "DEVICE_QUOTA_EXCEEDED";
+    TestMatrixInvalidMatrixDetailsEnum["TestQuotaExceeded"] = "TEST_QUOTA_EXCEEDED";
+    TestMatrixInvalidMatrixDetailsEnum["ServiceNotActivated"] = "SERVICE_NOT_ACTIVATED";
+    TestMatrixInvalidMatrixDetailsEnum["UnknownPermissionError"] = "UNKNOWN_PERMISSION_ERROR";
+})(TestMatrixInvalidMatrixDetailsEnum = exports.TestMatrixInvalidMatrixDetailsEnum || (exports.TestMatrixInvalidMatrixDetailsEnum = {}));
+var TestMatrixOutcomeSummaryEnum;
 (function (TestMatrixOutcomeSummaryEnum) {
     TestMatrixOutcomeSummaryEnum["OutcomeSummaryUnspecified"] = "OUTCOME_SUMMARY_UNSPECIFIED";
     TestMatrixOutcomeSummaryEnum["Success"] = "SUCCESS";
     TestMatrixOutcomeSummaryEnum["Failure"] = "FAILURE";
     TestMatrixOutcomeSummaryEnum["Inconclusive"] = "INCONCLUSIVE";
     TestMatrixOutcomeSummaryEnum["Skipped"] = "SKIPPED";
-})(TestMatrixOutcomeSummaryEnum || (TestMatrixOutcomeSummaryEnum = {}));
-export var TestMatrixStateEnum;
+})(TestMatrixOutcomeSummaryEnum = exports.TestMatrixOutcomeSummaryEnum || (exports.TestMatrixOutcomeSummaryEnum = {}));
+var TestMatrixStateEnum;
 (function (TestMatrixStateEnum) {
     TestMatrixStateEnum["TestStateUnspecified"] = "TEST_STATE_UNSPECIFIED";
     TestMatrixStateEnum["Validating"] = "VALIDATING";
@@ -88,7 +95,7 @@ export var TestMatrixStateEnum;
     TestMatrixStateEnum["IncompatibleArchitecture"] = "INCOMPATIBLE_ARCHITECTURE";
     TestMatrixStateEnum["Cancelled"] = "CANCELLED";
     TestMatrixStateEnum["Invalid"] = "INVALID";
-})(TestMatrixStateEnum || (TestMatrixStateEnum = {}));
+})(TestMatrixStateEnum = exports.TestMatrixStateEnum || (exports.TestMatrixStateEnum = {}));
 // TestMatrix
 /**
  * TestMatrix captures all details about a test. It contains the environment configuration, test specification, test executions and overall state and outcome.
@@ -99,57 +106,57 @@ var TestMatrix = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientInfo" }),
-        __metadata("design:type", ClientInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientInfo" }),
+        __metadata("design:type", clientinfo_1.ClientInfo)
     ], TestMatrix.prototype, "clientInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentMatrix" }),
-        __metadata("design:type", EnvironmentMatrix)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentMatrix" }),
+        __metadata("design:type", environmentmatrix_1.EnvironmentMatrix)
     ], TestMatrix.prototype, "environmentMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failFast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failFast" }),
         __metadata("design:type", Boolean)
     ], TestMatrix.prototype, "failFast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flakyTestAttempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flakyTestAttempts" }),
         __metadata("design:type", Number)
     ], TestMatrix.prototype, "flakyTestAttempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalidMatrixDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalidMatrixDetails" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "invalidMatrixDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outcomeSummary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outcomeSummary" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "outcomeSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resultStorage" }),
-        __metadata("design:type", ResultStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resultStorage" }),
+        __metadata("design:type", resultstorage_1.ResultStorage)
     ], TestMatrix.prototype, "resultStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testExecutions", elemType: TestExecution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testExecutions", elemType: testexecution_1.TestExecution }),
         __metadata("design:type", Array)
     ], TestMatrix.prototype, "testExecutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testMatrixId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testMatrixId" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "testMatrixId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSpecification" }),
-        __metadata("design:type", TestSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSpecification" }),
+        __metadata("design:type", testspecification_1.TestSpecification)
     ], TestMatrix.prototype, "testSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], TestMatrix.prototype, "timestamp", void 0);
     return TestMatrix;
-}(SpeakeasyBase));
-export { TestMatrix };
+}(utils_1.SpeakeasyBase));
+exports.TestMatrix = TestMatrix;

@@ -57,7 +57,7 @@ export class PutSuppressedDestinationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putSuppressedDestinationResponse?: Map<string, any>;
+  putSuppressedDestinationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudServicebrokerV1beta1Service } from "./googlecloudservicebrokerv1beta1service";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudServicebrokerV1beta1ListCatalogResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudservicebrokerv1beta1service_1 = require("./googlecloudservicebrokerv1beta1service");
 // GoogleCloudServicebrokerV1beta1ListCatalogResponse
 /**
  * Response message for the `ListCatalog()` method.
@@ -34,17 +37,17 @@ var GoogleCloudServicebrokerV1beta1ListCatalogResponse = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1ListCatalogResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1ListCatalogResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleCloudServicebrokerV1beta1Service }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlecloudservicebrokerv1beta1service_1.GoogleCloudServicebrokerV1beta1Service }),
         __metadata("design:type", Array)
     ], GoogleCloudServicebrokerV1beta1ListCatalogResponse.prototype, "services", void 0);
     return GoogleCloudServicebrokerV1beta1ListCatalogResponse;
-}(SpeakeasyBase));
-export { GoogleCloudServicebrokerV1beta1ListCatalogResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudServicebrokerV1beta1ListCatalogResponse = GoogleCloudServicebrokerV1beta1ListCatalogResponse;

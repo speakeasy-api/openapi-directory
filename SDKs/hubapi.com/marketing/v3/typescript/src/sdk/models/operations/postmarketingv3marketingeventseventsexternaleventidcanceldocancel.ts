@@ -16,9 +16,6 @@ export class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelQu
 
 
 export class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
   privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 

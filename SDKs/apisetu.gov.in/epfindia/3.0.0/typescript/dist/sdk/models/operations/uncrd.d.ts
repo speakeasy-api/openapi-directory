@@ -106,11 +106,11 @@ export declare class UncrdRequest extends SpeakeasyBase {
 export declare class UncrdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    uncrd400ApplicationJsonObject?: Uncrd400ApplicationJson;
-    uncrd401ApplicationJsonObject?: Uncrd401ApplicationJson;
-    uncrd404ApplicationJsonObject?: Uncrd404ApplicationJson;
-    uncrd500ApplicationJsonObject?: Uncrd500ApplicationJson;
-    uncrd502ApplicationJsonObject?: Uncrd502ApplicationJson;
-    uncrd503ApplicationJsonObject?: Uncrd503ApplicationJson;
-    uncrd504ApplicationJsonObject?: Uncrd504ApplicationJson;
+    uncrd400ApplicationJSONObject?: Uncrd400ApplicationJson;
+    uncrd401ApplicationJSONObject?: Uncrd401ApplicationJson;
+    uncrd404ApplicationJSONObject?: Uncrd404ApplicationJson;
+    uncrd500ApplicationJSONObject?: Uncrd500ApplicationJson;
+    uncrd502ApplicationJSONObject?: Uncrd502ApplicationJson;
+    uncrd503ApplicationJSONObject?: Uncrd503ApplicationJson;
+    uncrd504ApplicationJSONObject?: Uncrd504ApplicationJson;
 }

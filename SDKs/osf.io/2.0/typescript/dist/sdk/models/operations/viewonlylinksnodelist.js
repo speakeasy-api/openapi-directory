@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewOnlyLinksNodeListResponse = exports.ViewOnlyLinksNodeListRequest = exports.ViewOnlyLinksNodeListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ViewOnlyLinksNodeListPathParams = /** @class */ (function (_super) {
     __extends(ViewOnlyLinksNodeListPathParams, _super);
     function ViewOnlyLinksNodeListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=link_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=link_id" }),
         __metadata("design:type", String)
     ], ViewOnlyLinksNodeListPathParams.prototype, "linkId", void 0);
     return ViewOnlyLinksNodeListPathParams;
-}(SpeakeasyBase));
-export { ViewOnlyLinksNodeListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ViewOnlyLinksNodeListPathParams = ViewOnlyLinksNodeListPathParams;
 var ViewOnlyLinksNodeListRequest = /** @class */ (function (_super) {
     __extends(ViewOnlyLinksNodeListRequest, _super);
     function ViewOnlyLinksNodeListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ViewOnlyLinksNodeListPathParams)
     ], ViewOnlyLinksNodeListRequest.prototype, "pathParams", void 0);
     return ViewOnlyLinksNodeListRequest;
-}(SpeakeasyBase));
-export { ViewOnlyLinksNodeListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ViewOnlyLinksNodeListRequest = ViewOnlyLinksNodeListRequest;
 var ViewOnlyLinksNodeListResponse = /** @class */ (function (_super) {
     __extends(ViewOnlyLinksNodeListResponse, _super);
     function ViewOnlyLinksNodeListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ViewOnlyLinksNodeListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewOnlyLinksNodeListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ViewOnlyLinksNodeListResponse.prototype, "statusCode", void 0);
     return ViewOnlyLinksNodeListResponse;
-}(SpeakeasyBase));
-export { ViewOnlyLinksNodeListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ViewOnlyLinksNodeListResponse = ViewOnlyLinksNodeListResponse;

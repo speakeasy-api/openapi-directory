@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetChartInfoUsingGetResponse = exports.GetChartInfoUsingGetRequest = exports.GetChartInfoUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetChartInfoUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetChartInfoUsingGetPathParams, _super);
     function GetChartInfoUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=refRgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=refRgdId" }),
         __metadata("design:type", Number)
     ], GetChartInfoUsingGetPathParams.prototype, "refRgdId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetChartInfoUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=termString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=termString" }),
         __metadata("design:type", String)
     ], GetChartInfoUsingGetPathParams.prototype, "termString", void 0);
     return GetChartInfoUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetChartInfoUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChartInfoUsingGetPathParams = GetChartInfoUsingGetPathParams;
 var GetChartInfoUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetChartInfoUsingGetRequest, _super);
     function GetChartInfoUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChartInfoUsingGetPathParams)
     ], GetChartInfoUsingGetRequest.prototype, "pathParams", void 0);
     return GetChartInfoUsingGetRequest;
-}(SpeakeasyBase));
-export { GetChartInfoUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetChartInfoUsingGetRequest = GetChartInfoUsingGetRequest;
 var GetChartInfoUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetChartInfoUsingGetResponse, _super);
     function GetChartInfoUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetChartInfoUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetChartInfoUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetChartInfoUsingGetResponse.prototype, "statusCode", void 0);
     return GetChartInfoUsingGetResponse;
-}(SpeakeasyBase));
-export { GetChartInfoUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetChartInfoUsingGetResponse = GetChartInfoUsingGetResponse;

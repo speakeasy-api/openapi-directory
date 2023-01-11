@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class JobLogs extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=JobCompletionReportURI" })
-  jobCompletionReportUri?: string;
+  jobCompletionReportURI?: string;
 
   @SpeakeasyMetadata({ data: "json, name=JobFailureLogURI" })
-  jobFailureLogUri?: string;
+  jobFailureLogURI?: string;
 
   @SpeakeasyMetadata({ data: "json, name=JobSuccessLogURI" })
-  jobSuccessLogUri?: string;
+  jobSuccessLogURI?: string;
 }

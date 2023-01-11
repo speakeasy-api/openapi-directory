@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CdmaLocalId } from "./cdmalocalid";
-import { CdmaNmr } from "./cdmanmr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cdma = void 0;
+var utils_1 = require("../../../internal/utils");
+var cdmalocalid_1 = require("./cdmalocalid");
+var cdmanmr_1 = require("./cdmanmr");
 // Cdma
 /**
  * CDMA measurement
@@ -35,41 +38,41 @@ var Cdma = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseLat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseLat" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "baseLat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseLng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseLng" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "baseLng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bsid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bsid" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "bsid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localId" }),
-        __metadata("design:type", CdmaLocalId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localId" }),
+        __metadata("design:type", cdmalocalid_1.CdmaLocalId)
     ], Cdma.prototype, "localId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nid" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "nid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nmr", elemType: CdmaNmr }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nmr", elemType: cdmanmr_1.CdmaNmr }),
         __metadata("design:type", Array)
     ], Cdma.prototype, "nmr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pilotPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pilotPower" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "pilotPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rz" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "rz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sid" }),
         __metadata("design:type", Number)
     ], Cdma.prototype, "sid", void 0);
     return Cdma;
-}(SpeakeasyBase));
-export { Cdma };
+}(utils_1.SpeakeasyBase));
+exports.Cdma = Cdma;

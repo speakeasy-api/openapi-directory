@@ -90,5 +90,5 @@ export class EndpointGetAnArtistsAlbumsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetAnArtistsAlbums200ApplicationJsonObject?: EndpointGetAnArtistsAlbums200ApplicationJson;
+  endpointGetAnArtistsAlbums200ApplicationJSONObject?: EndpointGetAnArtistsAlbums200ApplicationJson;
 }

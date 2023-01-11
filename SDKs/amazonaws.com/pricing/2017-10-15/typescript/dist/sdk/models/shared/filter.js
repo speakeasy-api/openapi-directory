@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterTypeEnum } from "./filtertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Filter = void 0;
+var utils_1 = require("../../../internal/utils");
+var filtertypeenum_1 = require("./filtertypeenum");
 // Filter
 /**
  * The constraints that you want all returned products to match.
@@ -34,17 +37,17 @@ var Filter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Field" }),
         __metadata("design:type", String)
     ], Filter.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Filter.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], Filter.prototype, "value", void 0);
     return Filter;
-}(SpeakeasyBase));
-export { Filter };
+}(utils_1.SpeakeasyBase));
+exports.Filter = Filter;

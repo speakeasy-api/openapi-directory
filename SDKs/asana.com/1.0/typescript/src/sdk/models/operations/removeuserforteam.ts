@@ -26,7 +26,7 @@ export class RemoveUserForTeamRequestBody extends SpeakeasyBase {
 
 export class RemoveUserForTeam204ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class RemoveUserForTeamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeUserForTeam204ApplicationJsonObject?: RemoveUserForTeam204ApplicationJson;
+  removeUserForTeam204ApplicationJSONObject?: RemoveUserForTeam204ApplicationJson;
 }

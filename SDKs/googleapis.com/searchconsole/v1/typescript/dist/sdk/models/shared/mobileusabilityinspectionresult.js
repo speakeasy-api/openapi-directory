@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MobileUsabilityIssue } from "./mobileusabilityissue";
-export var MobileUsabilityInspectionResultVerdictEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MobileUsabilityInspectionResult = exports.MobileUsabilityInspectionResultVerdictEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var mobileusabilityissue_1 = require("./mobileusabilityissue");
+var MobileUsabilityInspectionResultVerdictEnum;
 (function (MobileUsabilityInspectionResultVerdictEnum) {
     MobileUsabilityInspectionResultVerdictEnum["VerdictUnspecified"] = "VERDICT_UNSPECIFIED";
     MobileUsabilityInspectionResultVerdictEnum["Pass"] = "PASS";
     MobileUsabilityInspectionResultVerdictEnum["Partial"] = "PARTIAL";
     MobileUsabilityInspectionResultVerdictEnum["Fail"] = "FAIL";
     MobileUsabilityInspectionResultVerdictEnum["Neutral"] = "NEUTRAL";
-})(MobileUsabilityInspectionResultVerdictEnum || (MobileUsabilityInspectionResultVerdictEnum = {}));
+})(MobileUsabilityInspectionResultVerdictEnum = exports.MobileUsabilityInspectionResultVerdictEnum || (exports.MobileUsabilityInspectionResultVerdictEnum = {}));
 // MobileUsabilityInspectionResult
 /**
  * Mobile-usability inspection results.
@@ -42,13 +45,13 @@ var MobileUsabilityInspectionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues", elemType: MobileUsabilityIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues", elemType: mobileusabilityissue_1.MobileUsabilityIssue }),
         __metadata("design:type", Array)
     ], MobileUsabilityInspectionResult.prototype, "issues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verdict" }),
         __metadata("design:type", String)
     ], MobileUsabilityInspectionResult.prototype, "verdict", void 0);
     return MobileUsabilityInspectionResult;
-}(SpeakeasyBase));
-export { MobileUsabilityInspectionResult };
+}(utils_1.SpeakeasyBase));
+exports.MobileUsabilityInspectionResult = MobileUsabilityInspectionResult;

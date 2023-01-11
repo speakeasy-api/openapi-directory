@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UpdateDealRequestInput } from "./updatedealrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateDealsRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var updatedealrequest_1 = require("./updatedealrequest");
 // BatchUpdateDealsRequestInput
 /**
  * Request message for batch updating deals.
@@ -34,9 +37,9 @@ var BatchUpdateDealsRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: UpdateDealRequestInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: updatedealrequest_1.UpdateDealRequestInput }),
         __metadata("design:type", Array)
     ], BatchUpdateDealsRequestInput.prototype, "requests", void 0);
     return BatchUpdateDealsRequestInput;
-}(SpeakeasyBase));
-export { BatchUpdateDealsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateDealsRequestInput = BatchUpdateDealsRequestInput;

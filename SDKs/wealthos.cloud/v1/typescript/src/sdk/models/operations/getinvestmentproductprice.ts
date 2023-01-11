@@ -48,20 +48,20 @@ export class GetInvestmentProductPriceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice200ApplicationJsonAny?: any;
+  getInvestmentProductPrice200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice401ApplicationJsonAny?: any;
+  getInvestmentProductPrice401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice403ApplicationJsonAny?: any;
+  getInvestmentProductPrice403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice404ApplicationJsonAny?: any;
+  getInvestmentProductPrice404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice429ApplicationJsonAny?: any;
+  getInvestmentProductPrice429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getInvestmentProductPrice500ApplicationJsonAny?: any;
+  getInvestmentProductPrice500ApplicationJSONAny?: any;
 }

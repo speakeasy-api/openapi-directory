@@ -62,5 +62,5 @@ export declare class UpdateNetworkSwitchAccessPolicyRequest extends SpeakeasyBas
 export declare class UpdateNetworkSwitchAccessPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchAccessPolicy200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchAccessPolicy200ApplicationJSONObject?: Record<string, any>;
 }

@@ -11,5 +11,5 @@ export declare class EnterpriseAdminSyncLdapMappingForUserRequest extends Speake
 export declare class EnterpriseAdminSyncLdapMappingForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminSyncLdapMappingForUser201ApplicationJsonObject?: EnterpriseAdminSyncLdapMappingForUser201ApplicationJson;
+    enterpriseAdminSyncLdapMappingForUser201ApplicationJSONObject?: EnterpriseAdminSyncLdapMappingForUser201ApplicationJson;
 }

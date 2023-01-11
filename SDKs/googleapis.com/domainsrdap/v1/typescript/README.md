@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DomainsrdapAutnumGetRequest, DomainsrdapAutnumGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,20 +28,20 @@ const sdk = new SDK();
     
 const req: DomainsrdapAutnumGetRequest = {
   pathParams: {
-    autnumId: "aperiam",
+    autnumId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "modi",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "ad",
-    fields: "id",
-    key: "accusamus",
-    oauthToken: "quasi",
-    prettyPrint: false,
-    quotaUser: "deserunt",
-    uploadType: "quas",
-    uploadProtocol: "vero",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

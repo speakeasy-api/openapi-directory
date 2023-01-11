@@ -185,23 +185,23 @@ export class LpgtvResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lpgtv400ApplicationJsonObject?: Lpgtv400ApplicationJson;
+  lpgtv400ApplicationJSONObject?: Lpgtv400ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv401ApplicationJsonObject?: Lpgtv401ApplicationJson;
+  lpgtv401ApplicationJSONObject?: Lpgtv401ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv404ApplicationJsonObject?: Lpgtv404ApplicationJson;
+  lpgtv404ApplicationJSONObject?: Lpgtv404ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv500ApplicationJsonObject?: Lpgtv500ApplicationJson;
+  lpgtv500ApplicationJSONObject?: Lpgtv500ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv502ApplicationJsonObject?: Lpgtv502ApplicationJson;
+  lpgtv502ApplicationJSONObject?: Lpgtv502ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv503ApplicationJsonObject?: Lpgtv503ApplicationJson;
+  lpgtv503ApplicationJSONObject?: Lpgtv503ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgtv504ApplicationJsonObject?: Lpgtv504ApplicationJson;
+  lpgtv504ApplicationJSONObject?: Lpgtv504ApplicationJson;
 }

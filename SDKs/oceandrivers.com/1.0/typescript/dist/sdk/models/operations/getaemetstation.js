@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAemetStationResponse = exports.GetAemetStationRequest = exports.GetAemetStationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAemetStationPathParams = /** @class */ (function (_super) {
     __extends(GetAemetStationPathParams, _super);
     function GetAemetStationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=period" }),
         __metadata("design:type", String)
     ], GetAemetStationPathParams.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stationName" }),
         __metadata("design:type", String)
     ], GetAemetStationPathParams.prototype, "stationName", void 0);
     return GetAemetStationPathParams;
-}(SpeakeasyBase));
-export { GetAemetStationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAemetStationPathParams = GetAemetStationPathParams;
 var GetAemetStationRequest = /** @class */ (function (_super) {
     __extends(GetAemetStationRequest, _super);
     function GetAemetStationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAemetStationPathParams)
     ], GetAemetStationRequest.prototype, "pathParams", void 0);
     return GetAemetStationRequest;
-}(SpeakeasyBase));
-export { GetAemetStationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAemetStationRequest = GetAemetStationRequest;
 var GetAemetStationResponse = /** @class */ (function (_super) {
     __extends(GetAemetStationResponse, _super);
     function GetAemetStationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAemetStationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAemetStationResponse.prototype, "statusCode", void 0);
     return GetAemetStationResponse;
-}(SpeakeasyBase));
-export { GetAemetStationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAemetStationResponse = GetAemetStationResponse;

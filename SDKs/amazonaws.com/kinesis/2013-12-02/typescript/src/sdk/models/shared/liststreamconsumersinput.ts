@@ -10,7 +10,7 @@ export class ListStreamConsumersInput extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn: string;
+  streamARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamCreationTimestamp" })
   streamCreationTimestamp?: Date;

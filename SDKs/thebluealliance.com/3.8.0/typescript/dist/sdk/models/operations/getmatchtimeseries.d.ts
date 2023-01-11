@@ -16,7 +16,7 @@ export declare class GetMatchTimeseriesRequest extends SpeakeasyBase {
 }
 export declare class GetMatchTimeseriesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getMatchTimeseries200ApplicationJsonObjects?: Map<string, any>[];
+    getMatchTimeseries200ApplicationJSONObjects?: Record<string, any>[];
 }

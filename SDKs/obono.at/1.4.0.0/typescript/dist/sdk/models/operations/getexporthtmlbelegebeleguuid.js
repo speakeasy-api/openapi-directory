@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetExportHtmlBelegeBelegUuidResponse = exports.GetExportHtmlBelegeBelegUuidRequest = exports.GetExportHtmlBelegeBelegUuidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetExportHtmlBelegeBelegUuidPathParams = /** @class */ (function (_super) {
     __extends(GetExportHtmlBelegeBelegUuidPathParams, _super);
     function GetExportHtmlBelegeBelegUuidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=belegUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=belegUuid" }),
         __metadata("design:type", String)
     ], GetExportHtmlBelegeBelegUuidPathParams.prototype, "belegUuid", void 0);
     return GetExportHtmlBelegeBelegUuidPathParams;
-}(SpeakeasyBase));
-export { GetExportHtmlBelegeBelegUuidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportHtmlBelegeBelegUuidPathParams = GetExportHtmlBelegeBelegUuidPathParams;
 var GetExportHtmlBelegeBelegUuidRequest = /** @class */ (function (_super) {
     __extends(GetExportHtmlBelegeBelegUuidRequest, _super);
     function GetExportHtmlBelegeBelegUuidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportHtmlBelegeBelegUuidPathParams)
     ], GetExportHtmlBelegeBelegUuidRequest.prototype, "pathParams", void 0);
     return GetExportHtmlBelegeBelegUuidRequest;
-}(SpeakeasyBase));
-export { GetExportHtmlBelegeBelegUuidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetExportHtmlBelegeBelegUuidRequest = GetExportHtmlBelegeBelegUuidRequest;
 var GetExportHtmlBelegeBelegUuidResponse = /** @class */ (function (_super) {
     __extends(GetExportHtmlBelegeBelegUuidResponse, _super);
     function GetExportHtmlBelegeBelegUuidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetExportHtmlBelegeBelegUuidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetExportHtmlBelegeBelegUuidResponse.prototype, "statusCode", void 0);
     return GetExportHtmlBelegeBelegUuidResponse;
-}(SpeakeasyBase));
-export { GetExportHtmlBelegeBelegUuidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetExportHtmlBelegeBelegUuidResponse = GetExportHtmlBelegeBelegUuidResponse;

@@ -11,6 +11,6 @@ export declare class Member extends SpeakeasyBase {
     invitedAt?: Date;
     masterAccountId?: string;
     relationshipStatus?: RelationshipStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     updatedAt?: Date;
 }

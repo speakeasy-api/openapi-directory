@@ -137,7 +137,7 @@ export class PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryPara
 
 export class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   calculateRoutePostDataParameters?: shared.CalculateRoutePostDataParameters;

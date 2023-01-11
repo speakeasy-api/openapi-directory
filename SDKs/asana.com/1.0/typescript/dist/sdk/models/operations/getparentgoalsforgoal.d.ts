@@ -18,5 +18,5 @@ export declare class GetParentGoalsForGoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getParentGoalsForGoal200ApplicationJsonObject?: GetParentGoalsForGoal200ApplicationJson;
+    getParentGoalsForGoal200ApplicationJSONObject?: GetParentGoalsForGoal200ApplicationJson;
 }

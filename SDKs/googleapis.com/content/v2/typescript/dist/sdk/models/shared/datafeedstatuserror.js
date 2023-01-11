@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatafeedStatusExample } from "./datafeedstatusexample";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedStatusError = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafeedstatusexample_1 = require("./datafeedstatusexample");
 // DatafeedStatusError
 /**
  * An error occurring in the feed, like "invalid price".
@@ -34,21 +37,21 @@ var DatafeedStatusError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], DatafeedStatusError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", String)
     ], DatafeedStatusError.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=examples", elemType: DatafeedStatusExample }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=examples", elemType: datafeedstatusexample_1.DatafeedStatusExample }),
         __metadata("design:type", Array)
     ], DatafeedStatusError.prototype, "examples", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DatafeedStatusError.prototype, "message", void 0);
     return DatafeedStatusError;
-}(SpeakeasyBase));
-export { DatafeedStatusError };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedStatusError = DatafeedStatusError;

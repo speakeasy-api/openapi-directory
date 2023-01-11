@@ -62,7 +62,7 @@ export class GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedDiffstats?: shared.PaginatedDiffstats;

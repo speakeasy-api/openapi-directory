@@ -27,7 +27,7 @@ export class GetEmailIdentityResponse extends SpeakeasyBase {
   mailFromAttributes?: MailFromAttributes;
 
   @SpeakeasyMetadata({ data: "json, name=Policies" })
-  policies?: Map<string, string>;
+  policies?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag })
   tags?: Tag[];

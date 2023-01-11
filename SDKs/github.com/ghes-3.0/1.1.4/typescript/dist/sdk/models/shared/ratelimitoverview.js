@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RateLimit } from "./ratelimit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateLimitOverview = exports.RateLimitOverviewResources = void 0;
+var utils_1 = require("../../../internal/utils");
+var ratelimit_1 = require("./ratelimit");
 var RateLimitOverviewResources = /** @class */ (function (_super) {
     __extends(RateLimitOverviewResources, _super);
     function RateLimitOverviewResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code_scanning_upload" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code_scanning_upload" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "codeScanningUpload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=core" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=core" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "core", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graphql" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graphql" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "graphql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integration_manifest" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integration_manifest" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "integrationManifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=search" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=search" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "search", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_import" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_import" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverviewResources.prototype, "sourceImport", void 0);
     return RateLimitOverviewResources;
-}(SpeakeasyBase));
-export { RateLimitOverviewResources };
+}(utils_1.SpeakeasyBase));
+exports.RateLimitOverviewResources = RateLimitOverviewResources;
 // RateLimitOverview
 /**
  * Rate Limit Overview
@@ -66,13 +69,13 @@ var RateLimitOverview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
-        __metadata("design:type", RateLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
+        __metadata("design:type", ratelimit_1.RateLimit)
     ], RateLimitOverview.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
         __metadata("design:type", RateLimitOverviewResources)
     ], RateLimitOverview.prototype, "resources", void 0);
     return RateLimitOverview;
-}(SpeakeasyBase));
-export { RateLimitOverview };
+}(utils_1.SpeakeasyBase));
+exports.RateLimitOverview = RateLimitOverview;

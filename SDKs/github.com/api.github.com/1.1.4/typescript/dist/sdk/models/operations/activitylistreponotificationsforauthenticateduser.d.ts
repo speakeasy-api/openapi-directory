@@ -18,7 +18,7 @@ export declare class ActivityListRepoNotificationsForAuthenticatedUserRequest ex
 }
 export declare class ActivityListRepoNotificationsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     threads?: shared.Thread[];
 }

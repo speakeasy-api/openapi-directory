@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterStateEnum } from "./clusterstateenum";
-import { JobTypeEnum } from "./jobtypeenum";
-import { Notification } from "./notification";
-import { OnDeviceServiceConfiguration } from "./ondeviceserviceconfiguration";
-import { JobResource } from "./jobresource";
-import { ShippingOptionEnum } from "./shippingoptionenum";
-import { SnowballTypeEnum } from "./snowballtypeenum";
-import { TaxDocuments } from "./taxdocuments";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterstateenum_1 = require("./clusterstateenum");
+var jobtypeenum_1 = require("./jobtypeenum");
+var notification_1 = require("./notification");
+var ondeviceserviceconfiguration_1 = require("./ondeviceserviceconfiguration");
+var jobresource_1 = require("./jobresource");
+var shippingoptionenum_1 = require("./shippingoptionenum");
+var snowballtypeenum_1 = require("./snowballtypeenum");
+var taxdocuments_1 = require("./taxdocuments");
 // ClusterMetadata
 /**
  * Contains metadata about a specific cluster.
@@ -41,65 +44,65 @@ var ClusterMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressId" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "addressId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterState" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "clusterState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", Date)
     ], ClusterMetadata.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForwardingAddressId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForwardingAddressId" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "forwardingAddressId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobType" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyARN" }),
         __metadata("design:type", String)
-    ], ClusterMetadata.prototype, "kmsKeyArn", void 0);
+    ], ClusterMetadata.prototype, "kmsKeyARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notification" }),
-        __metadata("design:type", Notification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notification" }),
+        __metadata("design:type", notification_1.Notification)
     ], ClusterMetadata.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OnDeviceServiceConfiguration" }),
-        __metadata("design:type", OnDeviceServiceConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OnDeviceServiceConfiguration" }),
+        __metadata("design:type", ondeviceserviceconfiguration_1.OnDeviceServiceConfiguration)
     ], ClusterMetadata.prototype, "onDeviceServiceConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources" }),
-        __metadata("design:type", JobResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources" }),
+        __metadata("design:type", jobresource_1.JobResource)
     ], ClusterMetadata.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], ClusterMetadata.prototype, "roleArn", void 0);
+    ], ClusterMetadata.prototype, "roleARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShippingOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShippingOption" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "shippingOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballType" }),
         __metadata("design:type", String)
     ], ClusterMetadata.prototype, "snowballType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxDocuments" }),
-        __metadata("design:type", TaxDocuments)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxDocuments" }),
+        __metadata("design:type", taxdocuments_1.TaxDocuments)
     ], ClusterMetadata.prototype, "taxDocuments", void 0);
     return ClusterMetadata;
-}(SpeakeasyBase));
-export { ClusterMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ClusterMetadata = ClusterMetadata;

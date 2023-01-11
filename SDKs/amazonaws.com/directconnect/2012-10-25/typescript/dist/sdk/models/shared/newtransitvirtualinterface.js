@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressFamilyEnum } from "./addressfamilyenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewTransitVirtualInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressfamilyenum_1 = require("./addressfamilyenum");
+var tag_1 = require("./tag");
 // NewTransitVirtualInterface
 /**
  * Information about a transit virtual interface.
@@ -35,45 +38,45 @@ var NewTransitVirtualInterface = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressFamily" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "addressFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonAddress" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "amazonAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], NewTransitVirtualInterface.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerAddress" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "customerAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtu" }),
         __metadata("design:type", Number)
     ], NewTransitVirtualInterface.prototype, "mtu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], NewTransitVirtualInterface.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceName" }),
         __metadata("design:type", String)
     ], NewTransitVirtualInterface.prototype, "virtualInterfaceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], NewTransitVirtualInterface.prototype, "vlan", void 0);
     return NewTransitVirtualInterface;
-}(SpeakeasyBase));
-export { NewTransitVirtualInterface };
+}(utils_1.SpeakeasyBase));
+exports.NewTransitVirtualInterface = NewTransitVirtualInterface;

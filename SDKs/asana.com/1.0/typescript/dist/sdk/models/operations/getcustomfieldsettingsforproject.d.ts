@@ -20,5 +20,5 @@ export declare class GetCustomFieldSettingsForProjectResponse extends SpeakeasyB
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getCustomFieldSettingsForProject200ApplicationJsonObject?: GetCustomFieldSettingsForProject200ApplicationJson;
+    getCustomFieldSettingsForProject200ApplicationJSONObject?: GetCustomFieldSettingsForProject200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionGroup = void 0;
+var utils_1 = require("../../../internal/utils");
 // DimensionGroup
 /**
  * <p>A logical grouping of Performance Insights metrics for a related subject area. For example, the <code>db.sql</code> dimension group consists of the following dimensions: <code>db.sql.id</code>, <code>db.sql.db_id</code>, <code>db.sql.statement</code>, and <code>db.sql.tokenized_id</code>.</p> <note> <p>Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500 bytes are returned.</p> </note>
@@ -33,17 +36,17 @@ var DimensionGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions" }),
         __metadata("design:type", Array)
     ], DimensionGroup.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Group" }),
         __metadata("design:type", String)
     ], DimensionGroup.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], DimensionGroup.prototype, "limit", void 0);
     return DimensionGroup;
-}(SpeakeasyBase));
-export { DimensionGroup };
+}(utils_1.SpeakeasyBase));
+exports.DimensionGroup = DimensionGroup;

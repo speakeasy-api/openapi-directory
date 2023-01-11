@@ -47,7 +47,7 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   issueJobStatus?: shared.IssueJobStatus;

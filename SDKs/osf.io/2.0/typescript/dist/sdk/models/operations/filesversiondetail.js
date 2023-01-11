@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilesVersionDetailResponse = exports.FilesVersionDetailRequest = exports.FilesVersionDetailPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FilesVersionDetailPathParams = /** @class */ (function (_super) {
     __extends(FilesVersionDetailPathParams, _super);
     function FilesVersionDetailPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=file_id" }),
         __metadata("design:type", String)
     ], FilesVersionDetailPathParams.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version_id" }),
         __metadata("design:type", String)
     ], FilesVersionDetailPathParams.prototype, "versionId", void 0);
     return FilesVersionDetailPathParams;
-}(SpeakeasyBase));
-export { FilesVersionDetailPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FilesVersionDetailPathParams = FilesVersionDetailPathParams;
 var FilesVersionDetailRequest = /** @class */ (function (_super) {
     __extends(FilesVersionDetailRequest, _super);
     function FilesVersionDetailRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FilesVersionDetailPathParams)
     ], FilesVersionDetailRequest.prototype, "pathParams", void 0);
     return FilesVersionDetailRequest;
-}(SpeakeasyBase));
-export { FilesVersionDetailRequest };
+}(utils_1.SpeakeasyBase));
+exports.FilesVersionDetailRequest = FilesVersionDetailRequest;
 var FilesVersionDetailResponse = /** @class */ (function (_super) {
     __extends(FilesVersionDetailResponse, _super);
     function FilesVersionDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], FilesVersionDetailResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FilesVersionDetailResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FilesVersionDetailResponse.prototype, "statusCode", void 0);
     return FilesVersionDetailResponse;
-}(SpeakeasyBase));
-export { FilesVersionDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.FilesVersionDetailResponse = FilesVersionDetailResponse;

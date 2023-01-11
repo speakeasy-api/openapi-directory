@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetSelectedQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=js" })
   js?: boolean;
@@ -35,7 +35,7 @@ export class GetSelectedResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   pageError?: shared.PageError;
@@ -44,5 +44,5 @@ export class GetSelectedResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSelected200TextHtmlString?: string;
+  getSelected200TextHTMLString?: string;
 }

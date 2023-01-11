@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SummaryReportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // SummaryReportResponse
 /**
  * This type defines the fields in an Promotions Manager Summary report. Reports are formatted in JSON. For more details, see Reading item promotion Summary reports.
@@ -34,25 +37,25 @@ var SummaryReportResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], SummaryReportResponse.prototype, "baseSale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", String)
     ], SummaryReportResponse.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageSalesLift" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageSalesLift" }),
         __metadata("design:type", String)
     ], SummaryReportResponse.prototype, "percentageSalesLift", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], SummaryReportResponse.prototype, "promotionSale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], SummaryReportResponse.prototype, "totalSale", void 0);
     return SummaryReportResponse;
-}(SpeakeasyBase));
-export { SummaryReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.SummaryReportResponse = SummaryReportResponse;

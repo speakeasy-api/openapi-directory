@@ -45,6 +45,10 @@ export class AuthorizationScopedInstallation extends SpeakeasyBase {
 }
 
 
+// AuthorizationSimpleUser
+/** 
+ * Simple User
+**/
 export class AuthorizationSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

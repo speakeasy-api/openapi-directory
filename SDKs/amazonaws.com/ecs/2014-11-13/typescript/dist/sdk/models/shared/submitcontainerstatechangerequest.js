@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkBinding } from "./networkbinding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmitContainerStateChangeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkbinding_1 = require("./networkbinding");
 var SubmitContainerStateChangeRequest = /** @class */ (function (_super) {
     __extends(SubmitContainerStateChangeRequest, _super);
     function SubmitContainerStateChangeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerName" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "containerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitCode" }),
         __metadata("design:type", Number)
     ], SubmitContainerStateChangeRequest.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkBindings", elemType: NetworkBinding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkBindings", elemType: networkbinding_1.NetworkBinding }),
         __metadata("design:type", Array)
     ], SubmitContainerStateChangeRequest.prototype, "networkBindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runtimeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runtimeId" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "runtimeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
         __metadata("design:type", String)
     ], SubmitContainerStateChangeRequest.prototype, "task", void 0);
     return SubmitContainerStateChangeRequest;
-}(SpeakeasyBase));
-export { SubmitContainerStateChangeRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubmitContainerStateChangeRequest = SubmitContainerStateChangeRequest;

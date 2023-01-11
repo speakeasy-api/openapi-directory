@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputContext } from "./inputcontext";
-import { OutputContext } from "./outputcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntentSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputcontext_1 = require("./inputcontext");
+var outputcontext_1 = require("./outputcontext");
 // IntentSummary
 /**
  * Summary information about an intent returned by the <code>ListIntents</code> operation.
@@ -35,33 +38,33 @@ var IntentSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputContexts", elemType: InputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputContexts", elemType: inputcontext_1.InputContext }),
         __metadata("design:type", Array)
     ], IntentSummary.prototype, "inputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentId" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "intentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], IntentSummary.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputContexts", elemType: OutputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputContexts", elemType: outputcontext_1.OutputContext }),
         __metadata("design:type", Array)
     ], IntentSummary.prototype, "outputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentIntentSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentIntentSignature" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "parentIntentSignature", void 0);
     return IntentSummary;
-}(SpeakeasyBase));
-export { IntentSummary };
+}(utils_1.SpeakeasyBase));
+exports.IntentSummary = IntentSummary;

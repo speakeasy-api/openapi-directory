@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateAppCookieStickinessPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateAppCookieStickinessPolicyResponse = exports.GetCreateAppCookieStickinessPolicyRequest = exports.GetCreateAppCookieStickinessPolicyHeaders = exports.GetCreateAppCookieStickinessPolicyQueryParams = exports.GetCreateAppCookieStickinessPolicyVersionEnum = exports.GetCreateAppCookieStickinessPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateAppCookieStickinessPolicyActionEnum;
 (function (GetCreateAppCookieStickinessPolicyActionEnum) {
     GetCreateAppCookieStickinessPolicyActionEnum["CreateAppCookieStickinessPolicy"] = "CreateAppCookieStickinessPolicy";
-})(GetCreateAppCookieStickinessPolicyActionEnum || (GetCreateAppCookieStickinessPolicyActionEnum = {}));
-export var GetCreateAppCookieStickinessPolicyVersionEnum;
+})(GetCreateAppCookieStickinessPolicyActionEnum = exports.GetCreateAppCookieStickinessPolicyActionEnum || (exports.GetCreateAppCookieStickinessPolicyActionEnum = {}));
+var GetCreateAppCookieStickinessPolicyVersionEnum;
 (function (GetCreateAppCookieStickinessPolicyVersionEnum) {
     GetCreateAppCookieStickinessPolicyVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(GetCreateAppCookieStickinessPolicyVersionEnum || (GetCreateAppCookieStickinessPolicyVersionEnum = {}));
+})(GetCreateAppCookieStickinessPolicyVersionEnum = exports.GetCreateAppCookieStickinessPolicyVersionEnum || (exports.GetCreateAppCookieStickinessPolicyVersionEnum = {}));
 var GetCreateAppCookieStickinessPolicyQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateAppCookieStickinessPolicyQueryParams, _super);
     function GetCreateAppCookieStickinessPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CookieName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CookieName" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyQueryParams.prototype, "cookieName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyQueryParams.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyQueryParams.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyQueryParams.prototype, "version", void 0);
     return GetCreateAppCookieStickinessPolicyQueryParams;
-}(SpeakeasyBase));
-export { GetCreateAppCookieStickinessPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAppCookieStickinessPolicyQueryParams = GetCreateAppCookieStickinessPolicyQueryParams;
 var GetCreateAppCookieStickinessPolicyHeaders = /** @class */ (function (_super) {
     __extends(GetCreateAppCookieStickinessPolicyHeaders, _super);
     function GetCreateAppCookieStickinessPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateAppCookieStickinessPolicyHeaders;
-}(SpeakeasyBase));
-export { GetCreateAppCookieStickinessPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAppCookieStickinessPolicyHeaders = GetCreateAppCookieStickinessPolicyHeaders;
 var GetCreateAppCookieStickinessPolicyRequest = /** @class */ (function (_super) {
     __extends(GetCreateAppCookieStickinessPolicyRequest, _super);
     function GetCreateAppCookieStickinessPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateAppCookieStickinessPolicyQueryParams)
     ], GetCreateAppCookieStickinessPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateAppCookieStickinessPolicyHeaders)
     ], GetCreateAppCookieStickinessPolicyRequest.prototype, "headers", void 0);
     return GetCreateAppCookieStickinessPolicyRequest;
-}(SpeakeasyBase));
-export { GetCreateAppCookieStickinessPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAppCookieStickinessPolicyRequest = GetCreateAppCookieStickinessPolicyRequest;
 var GetCreateAppCookieStickinessPolicyResponse = /** @class */ (function (_super) {
     __extends(GetCreateAppCookieStickinessPolicyResponse, _super);
     function GetCreateAppCookieStickinessPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateAppCookieStickinessPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateAppCookieStickinessPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateAppCookieStickinessPolicyResponse.prototype, "statusCode", void 0);
     return GetCreateAppCookieStickinessPolicyResponse;
-}(SpeakeasyBase));
-export { GetCreateAppCookieStickinessPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAppCookieStickinessPolicyResponse = GetCreateAppCookieStickinessPolicyResponse;

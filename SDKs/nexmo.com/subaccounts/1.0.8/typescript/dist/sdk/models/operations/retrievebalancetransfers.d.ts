@@ -36,6 +36,6 @@ export declare class RetrieveBalanceTransfersResponse extends SpeakeasyBase {
     listBalanceTransfersResponse?: any;
     statusCode: number;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    retrieveBalanceTransfers401ApplicationJsonObject?: RetrieveBalanceTransfers401ApplicationJson;
-    retrieveBalanceTransfers404ApplicationJsonObject?: RetrieveBalanceTransfers404ApplicationJson;
+    retrieveBalanceTransfers401ApplicationJSONObject?: RetrieveBalanceTransfers401ApplicationJson;
+    retrieveBalanceTransfers404ApplicationJSONObject?: RetrieveBalanceTransfers404ApplicationJson;
 }

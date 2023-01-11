@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,74 +14,99 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReportsRouteResponse = exports.GetReportsRouteRequest = exports.GetReportsRouteQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetReportsRouteQueryParams = /** @class */ (function (_super) {
     __extends(GetReportsRouteQueryParams, _super);
     function GetReportsRouteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceId" }),
         __metadata("design:type", Array)
     ], GetReportsRouteQueryParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=from" }),
         __metadata("design:type", Date)
     ], GetReportsRouteQueryParams.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupId" }),
         __metadata("design:type", Array)
     ], GetReportsRouteQueryParams.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=to" }),
         __metadata("design:type", Date)
     ], GetReportsRouteQueryParams.prototype, "to", void 0);
     return GetReportsRouteQueryParams;
-}(SpeakeasyBase));
-export { GetReportsRouteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetReportsRouteQueryParams = GetReportsRouteQueryParams;
 var GetReportsRouteRequest = /** @class */ (function (_super) {
     __extends(GetReportsRouteRequest, _super);
     function GetReportsRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReportsRouteQueryParams)
     ], GetReportsRouteRequest.prototype, "queryParams", void 0);
     return GetReportsRouteRequest;
-}(SpeakeasyBase));
-export { GetReportsRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetReportsRouteRequest = GetReportsRouteRequest;
 var GetReportsRouteResponse = /** @class */ (function (_super) {
     __extends(GetReportsRouteResponse, _super);
     function GetReportsRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetReportsRouteResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetReportsRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Position }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Position }),
         __metadata("design:type", Array)
     ], GetReportsRouteResponse.prototype, "positions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetReportsRouteResponse.prototype, "statusCode", void 0);
     return GetReportsRouteResponse;
-}(SpeakeasyBase));
-export { GetReportsRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetReportsRouteResponse = GetReportsRouteResponse;

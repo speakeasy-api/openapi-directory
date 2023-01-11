@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// ContributorActivitySimpleUser
+/** 
+ * Simple User
+**/
 export class ContributorActivitySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

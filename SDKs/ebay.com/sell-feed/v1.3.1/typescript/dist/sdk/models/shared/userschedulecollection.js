@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserScheduleResponse } from "./userscheduleresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserScheduleCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var userscheduleresponse_1 = require("./userscheduleresponse");
 // UserScheduleCollection
 /**
  * The type that defines the fields for a paginated result set of user schedules. The response consists of 0 or more sequenced pages where each page has 0 or more items.
@@ -34,33 +37,33 @@ var UserScheduleCollection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], UserScheduleCollection.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], UserScheduleCollection.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], UserScheduleCollection.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], UserScheduleCollection.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], UserScheduleCollection.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedules", elemType: UserScheduleResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedules", elemType: userscheduleresponse_1.UserScheduleResponse }),
         __metadata("design:type", Array)
     ], UserScheduleCollection.prototype, "schedules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserScheduleCollection.prototype, "total", void 0);
     return UserScheduleCollection;
-}(SpeakeasyBase));
-export { UserScheduleCollection };
+}(utils_1.SpeakeasyBase));
+exports.UserScheduleCollection = UserScheduleCollection;

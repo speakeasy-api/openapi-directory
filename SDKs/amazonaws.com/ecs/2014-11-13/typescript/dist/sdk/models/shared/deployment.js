@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { LaunchTypeEnum } from "./launchtypeenum";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { DeploymentRolloutStateEnum } from "./deploymentrolloutstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Deployment = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var launchtypeenum_1 = require("./launchtypeenum");
+var networkconfiguration_1 = require("./networkconfiguration");
+var deploymentrolloutstateenum_1 = require("./deploymentrolloutstateenum");
 // Deployment
 /**
  * The details of an Amazon ECS service deployment. This is used only when a service uses the <code>ECS</code> deployment controller type.
@@ -37,65 +40,65 @@ var Deployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], Deployment.prototype, "capacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Deployment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desiredCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desiredCount" }),
         __metadata("design:type", Number)
     ], Deployment.prototype, "desiredCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedTasks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedTasks" }),
         __metadata("design:type", Number)
     ], Deployment.prototype, "failedTasks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchType" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "launchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], Deployment.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingCount" }),
         __metadata("design:type", Number)
     ], Deployment.prototype, "pendingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rolloutState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rolloutState" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "rolloutState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rolloutStateReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rolloutStateReason" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "rolloutStateReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runningCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runningCount" }),
         __metadata("design:type", Number)
     ], Deployment.prototype, "runningCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "taskDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Deployment.prototype, "updatedAt", void 0);
     return Deployment;
-}(SpeakeasyBase));
-export { Deployment };
+}(utils_1.SpeakeasyBase));
+exports.Deployment = Deployment;

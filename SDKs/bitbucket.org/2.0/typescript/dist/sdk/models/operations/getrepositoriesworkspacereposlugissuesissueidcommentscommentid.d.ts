@@ -18,5 +18,5 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommen
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    issueComment?: Map<string, any>;
+    issueComment?: Record<string, any>;
 }

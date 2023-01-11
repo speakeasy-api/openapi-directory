@@ -4,8 +4,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class DisassociateTrunkInterfaceResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  clientToken?: string;
+  clientToken?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  return?: boolean;
+  return?: Record<string, any>;
 }

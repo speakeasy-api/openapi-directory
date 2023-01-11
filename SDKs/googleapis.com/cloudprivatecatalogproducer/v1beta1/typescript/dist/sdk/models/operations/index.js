@@ -1,19 +1,35 @@
-export * from "./cloudprivatecatalogproducercatalogsassociationscreate";
-export * from "./cloudprivatecatalogproducercatalogsassociationslist";
-export * from "./cloudprivatecatalogproducercatalogscreate";
-export * from "./cloudprivatecatalogproducercatalogsgetiampolicy";
-export * from "./cloudprivatecatalogproducercatalogslist";
-export * from "./cloudprivatecatalogproducercatalogsproductscopy";
-export * from "./cloudprivatecatalogproducercatalogsproductscreate";
-export * from "./cloudprivatecatalogproducercatalogsproductsiconsupload";
-export * from "./cloudprivatecatalogproducercatalogsproductslist";
-export * from "./cloudprivatecatalogproducercatalogsproductsversionscreate";
-export * from "./cloudprivatecatalogproducercatalogsproductsversionsdelete";
-export * from "./cloudprivatecatalogproducercatalogsproductsversionsget";
-export * from "./cloudprivatecatalogproducercatalogsproductsversionslist";
-export * from "./cloudprivatecatalogproducercatalogsproductsversionspatch";
-export * from "./cloudprivatecatalogproducercatalogssetiampolicy";
-export * from "./cloudprivatecatalogproducercatalogstestiampermissions";
-export * from "./cloudprivatecatalogproducercatalogsundelete";
-export * from "./cloudprivatecatalogproduceroperationscancel";
-export * from "./cloudprivatecatalogproduceroperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./cloudprivatecatalogproducercatalogsassociationscreate"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsassociationslist"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogscreate"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsgetiampolicy"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogslist"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductscopy"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductscreate"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsiconsupload"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductslist"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsversionscreate"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsversionsdelete"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsversionsget"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsversionslist"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsproductsversionspatch"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogssetiampolicy"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogstestiampermissions"), exports);
+__exportStar(require("./cloudprivatecatalogproducercatalogsundelete"), exports);
+__exportStar(require("./cloudprivatecatalogproduceroperationscancel"), exports);
+__exportStar(require("./cloudprivatecatalogproduceroperationslist"), exports);

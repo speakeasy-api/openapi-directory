@@ -53,7 +53,7 @@ export class MediaItem extends SpeakeasyBase {
   externalGuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=foreignSyndicationAPIUrl" })
-  foreignSyndicationApiUrl?: string;
+  foreignSyndicationAPIUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=hash" })
   hash?: string;

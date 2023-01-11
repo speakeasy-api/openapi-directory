@@ -51,7 +51,7 @@ export class DeleteLogPatternResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLogPatternResponse?: Map<string, any>;
+  deleteLogPatternResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

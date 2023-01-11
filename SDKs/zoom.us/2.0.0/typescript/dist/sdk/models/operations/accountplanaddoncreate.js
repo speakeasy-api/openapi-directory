@@ -1,0 +1,320 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountPlanAddonCreateResponse = exports.AccountPlanAddonCreateRequest = exports.AccountPlanAddonCreateRequests = exports.AccountPlanAddonCreateMultipartFormData2 = exports.AccountPlanAddonCreateMultipartFormData2PhonePlan = exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber = exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling = exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase = exports.AccountPlanAddonCreateMultipartFormData1 = exports.AccountPlanAddonCreateApplicationJson2 = exports.AccountPlanAddonCreateApplicationJson2PhonePlan = exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber = exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling = exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase = exports.AccountPlanAddonCreateApplicationJson1 = exports.AccountPlanAddonCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var AccountPlanAddonCreatePathParams = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreatePathParams, _super);
+    function AccountPlanAddonCreatePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreatePathParams.prototype, "accountId", void 0);
+    return AccountPlanAddonCreatePathParams;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreatePathParams = AccountPlanAddonCreatePathParams;
+// AccountPlanAddonCreateApplicationJson1
+/**
+ * Account plan object.
+**/
+var AccountPlanAddonCreateApplicationJson1 = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson1, _super);
+    function AccountPlanAddonCreateApplicationJson1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateApplicationJson1.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson1.prototype, "type", void 0);
+    return AccountPlanAddonCreateApplicationJson1;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson1 = AccountPlanAddonCreateApplicationJson1;
+// AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase
+/**
+ * Additional phone base plans.
+**/
+var AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase, _super);
+    function AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callout_countries" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase.prototype, "calloutCountries", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase.prototype, "type", void 0);
+    return AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase = AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase;
+var AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling, _super);
+    function AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling.prototype, "type", void 0);
+    return AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling = AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling;
+var AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber, _super);
+    function AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber.prototype, "type", void 0);
+    return AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber = AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber;
+// AccountPlanAddonCreateApplicationJson2PhonePlan
+/**
+ * Phone Plan Object
+**/
+var AccountPlanAddonCreateApplicationJson2PhonePlan = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson2PhonePlan, _super);
+    function AccountPlanAddonCreateApplicationJson2PhonePlan() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_base" }),
+        __metadata("design:type", AccountPlanAddonCreateApplicationJson2PhonePlanPlanBase)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlan.prototype, "planBase", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_calling", elemType: AccountPlanAddonCreateApplicationJson2PhonePlanPlanCalling }),
+        __metadata("design:type", Array)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlan.prototype, "planCalling", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_number", elemType: AccountPlanAddonCreateApplicationJson2PhonePlanPlanNumber }),
+        __metadata("design:type", Array)
+    ], AccountPlanAddonCreateApplicationJson2PhonePlan.prototype, "planNumber", void 0);
+    return AccountPlanAddonCreateApplicationJson2PhonePlan;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson2PhonePlan = AccountPlanAddonCreateApplicationJson2PhonePlan;
+// AccountPlanAddonCreateApplicationJson2
+/**
+ * Zoom Phone Plan Object
+**/
+var AccountPlanAddonCreateApplicationJson2 = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateApplicationJson2, _super);
+    function AccountPlanAddonCreateApplicationJson2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_details" }),
+        __metadata("design:type", AccountPlanAddonCreateApplicationJson2PhonePlan)
+    ], AccountPlanAddonCreateApplicationJson2.prototype, "planDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateApplicationJson2.prototype, "type", void 0);
+    return AccountPlanAddonCreateApplicationJson2;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateApplicationJson2 = AccountPlanAddonCreateApplicationJson2;
+// AccountPlanAddonCreateMultipartFormData1
+/**
+ * Account plan object.
+**/
+var AccountPlanAddonCreateMultipartFormData1 = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData1, _super);
+    function AccountPlanAddonCreateMultipartFormData1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateMultipartFormData1.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData1.prototype, "type", void 0);
+    return AccountPlanAddonCreateMultipartFormData1;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData1 = AccountPlanAddonCreateMultipartFormData1;
+// AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase
+/**
+ * Additional phone base plans.
+**/
+var AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase, _super);
+    function AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callout_countries" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase.prototype, "calloutCountries", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase.prototype, "type", void 0);
+    return AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase = AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase;
+var AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling, _super);
+    function AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling.prototype, "type", void 0);
+    return AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling = AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling;
+var AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber, _super);
+    function AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber.prototype, "hosts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber.prototype, "type", void 0);
+    return AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber = AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber;
+// AccountPlanAddonCreateMultipartFormData2PhonePlan
+/**
+ * Phone Plan Object
+**/
+var AccountPlanAddonCreateMultipartFormData2PhonePlan = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData2PhonePlan, _super);
+    function AccountPlanAddonCreateMultipartFormData2PhonePlan() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_base" }),
+        __metadata("design:type", AccountPlanAddonCreateMultipartFormData2PhonePlanPlanBase)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlan.prototype, "planBase", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_calling", elemType: AccountPlanAddonCreateMultipartFormData2PhonePlanPlanCalling }),
+        __metadata("design:type", Array)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlan.prototype, "planCalling", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_number", elemType: AccountPlanAddonCreateMultipartFormData2PhonePlanPlanNumber }),
+        __metadata("design:type", Array)
+    ], AccountPlanAddonCreateMultipartFormData2PhonePlan.prototype, "planNumber", void 0);
+    return AccountPlanAddonCreateMultipartFormData2PhonePlan;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData2PhonePlan = AccountPlanAddonCreateMultipartFormData2PhonePlan;
+// AccountPlanAddonCreateMultipartFormData2
+/**
+ * Zoom Phone Plan Object
+**/
+var AccountPlanAddonCreateMultipartFormData2 = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateMultipartFormData2, _super);
+    function AccountPlanAddonCreateMultipartFormData2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=plan_details;json=true" }),
+        __metadata("design:type", AccountPlanAddonCreateMultipartFormData2PhonePlan)
+    ], AccountPlanAddonCreateMultipartFormData2.prototype, "planDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=type" }),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateMultipartFormData2.prototype, "type", void 0);
+    return AccountPlanAddonCreateMultipartFormData2;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateMultipartFormData2 = AccountPlanAddonCreateMultipartFormData2;
+var AccountPlanAddonCreateRequests = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateRequests, _super);
+    function AccountPlanAddonCreateRequests() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
+    ], AccountPlanAddonCreateRequests.prototype, "oneOf", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
+        __metadata("design:type", Object)
+    ], AccountPlanAddonCreateRequests.prototype, "oneOf1", void 0);
+    return AccountPlanAddonCreateRequests;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateRequests = AccountPlanAddonCreateRequests;
+var AccountPlanAddonCreateRequest = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateRequest, _super);
+    function AccountPlanAddonCreateRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AccountPlanAddonCreatePathParams)
+    ], AccountPlanAddonCreateRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AccountPlanAddonCreateRequests)
+    ], AccountPlanAddonCreateRequest.prototype, "request", void 0);
+    return AccountPlanAddonCreateRequest;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateRequest = AccountPlanAddonCreateRequest;
+var AccountPlanAddonCreateResponse = /** @class */ (function (_super) {
+    __extends(AccountPlanAddonCreateResponse, _super);
+    function AccountPlanAddonCreateResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], AccountPlanAddonCreateResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], AccountPlanAddonCreateResponse.prototype, "statusCode", void 0);
+    return AccountPlanAddonCreateResponse;
+}(utils_1.SpeakeasyBase));
+exports.AccountPlanAddonCreateResponse = AccountPlanAddonCreateResponse;

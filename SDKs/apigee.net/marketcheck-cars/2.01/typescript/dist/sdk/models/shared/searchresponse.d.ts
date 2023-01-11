@@ -4,9 +4,9 @@ import { BaseListing } from "./baselisting";
  * Search query response
 **/
 export declare class SearchResponse extends SpeakeasyBase {
-    facets?: Map<string, any>;
+    facets?: Record<string, any>;
     listings?: BaseListing[];
     numFound?: number;
-    rangeFacets?: Map<string, any>;
-    stats?: Map<string, any>;
+    rangeFacets?: Record<string, any>;
+    stats?: Record<string, any>;
 }

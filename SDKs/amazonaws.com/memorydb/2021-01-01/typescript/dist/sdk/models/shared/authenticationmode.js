@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputAuthenticationTypeEnum } from "./inputauthenticationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticationMode = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputauthenticationtypeenum_1 = require("./inputauthenticationtypeenum");
 // AuthenticationMode
 /**
  * Denotes the user's authentication properties, such as whether it requires a password to authenticate. Used in output responses.
@@ -34,13 +37,13 @@ var AuthenticationMode = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Passwords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Passwords" }),
         __metadata("design:type", Array)
     ], AuthenticationMode.prototype, "passwords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], AuthenticationMode.prototype, "type", void 0);
     return AuthenticationMode;
-}(SpeakeasyBase));
-export { AuthenticationMode };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticationMode = AuthenticationMode;

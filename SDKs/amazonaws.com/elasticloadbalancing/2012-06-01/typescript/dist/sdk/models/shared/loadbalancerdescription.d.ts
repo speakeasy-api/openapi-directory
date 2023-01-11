@@ -12,7 +12,7 @@ export declare class LoadBalancerDescription extends SpeakeasyBase {
     availabilityZones?: string[];
     backendServerDescriptions?: BackendServerDescription[];
     canonicalHostedZoneName?: string;
-    canonicalHostedZoneNameId?: string;
+    canonicalHostedZoneNameID?: string;
     createdTime?: Date;
     dnsName?: string;
     healthCheck?: HealthCheck;

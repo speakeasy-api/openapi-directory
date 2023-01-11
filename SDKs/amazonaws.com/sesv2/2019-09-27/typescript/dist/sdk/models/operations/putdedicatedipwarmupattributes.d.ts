@@ -23,7 +23,7 @@ export declare class PutDedicatedIpWarmupAttributesResponse extends SpeakeasyBas
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putDedicatedIpWarmupAttributesResponse?: Map<string, any>;
+    putDedicatedIpWarmupAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

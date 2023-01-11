@@ -41,7 +41,7 @@ export declare class OnedirectdebitsGetResponses200ContentApplication1jsonSchema
     dateCreated?: Date;
     directDebitReference?: string;
     directDebitUuid?: string;
-    isDdic?: boolean;
+    isDDIC?: boolean;
     lastUpdated?: Date;
     mandateUUid?: string;
     originatorAlias?: string;

@@ -1,0 +1,180 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DrivesUpdateResponse = exports.DrivesUpdateRequest = exports.DrivesUpdateSecurity = exports.DrivesUpdateHeaders = exports.DrivesUpdateQueryParams = exports.DrivesUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var DrivesUpdatePathParams = /** @class */ (function (_super) {
+    __extends(DrivesUpdatePathParams, _super);
+    function DrivesUpdatePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
+        __metadata("design:type", String)
+    ], DrivesUpdatePathParams.prototype, "id", void 0);
+    return DrivesUpdatePathParams;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdatePathParams = DrivesUpdatePathParams;
+var DrivesUpdateQueryParams = /** @class */ (function (_super) {
+    __extends(DrivesUpdateQueryParams, _super);
+    function DrivesUpdateQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=raw" }),
+        __metadata("design:type", Boolean)
+    ], DrivesUpdateQueryParams.prototype, "raw", void 0);
+    return DrivesUpdateQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdateQueryParams = DrivesUpdateQueryParams;
+var DrivesUpdateHeaders = /** @class */ (function (_super) {
+    __extends(DrivesUpdateHeaders, _super);
+    function DrivesUpdateHeaders() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        __metadata("design:type", String)
+    ], DrivesUpdateHeaders.prototype, "xApideckAppId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        __metadata("design:type", String)
+    ], DrivesUpdateHeaders.prototype, "xApideckConsumerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
+        __metadata("design:type", String)
+    ], DrivesUpdateHeaders.prototype, "xApideckServiceId", void 0);
+    return DrivesUpdateHeaders;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdateHeaders = DrivesUpdateHeaders;
+var DrivesUpdateSecurity = /** @class */ (function (_super) {
+    __extends(DrivesUpdateSecurity, _super);
+    function DrivesUpdateSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        __metadata("design:type", shared.SchemeApiKey)
+    ], DrivesUpdateSecurity.prototype, "apiKey", void 0);
+    return DrivesUpdateSecurity;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdateSecurity = DrivesUpdateSecurity;
+var DrivesUpdateRequest = /** @class */ (function (_super) {
+    __extends(DrivesUpdateRequest, _super);
+    function DrivesUpdateRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DrivesUpdatePathParams)
+    ], DrivesUpdateRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DrivesUpdateQueryParams)
+    ], DrivesUpdateRequest.prototype, "queryParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DrivesUpdateHeaders)
+    ], DrivesUpdateRequest.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", shared.DriveInput)
+    ], DrivesUpdateRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DrivesUpdateSecurity)
+    ], DrivesUpdateRequest.prototype, "security", void 0);
+    return DrivesUpdateRequest;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdateRequest = DrivesUpdateRequest;
+var DrivesUpdateResponse = /** @class */ (function (_super) {
+    __extends(DrivesUpdateResponse, _super);
+    function DrivesUpdateResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.BadRequestResponse)
+    ], DrivesUpdateResponse.prototype, "badRequestResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DrivesUpdateResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.NotFoundResponse)
+    ], DrivesUpdateResponse.prototype, "notFoundResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.PaymentRequiredResponse)
+    ], DrivesUpdateResponse.prototype, "paymentRequiredResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], DrivesUpdateResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.UnauthorizedResponse)
+    ], DrivesUpdateResponse.prototype, "unauthorizedResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.UnexpectedErrorResponse)
+    ], DrivesUpdateResponse.prototype, "unexpectedErrorResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.UnprocessableResponse)
+    ], DrivesUpdateResponse.prototype, "unprocessableResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.UpdateDriveResponse)
+    ], DrivesUpdateResponse.prototype, "updateDriveResponse", void 0);
+    return DrivesUpdateResponse;
+}(utils_1.SpeakeasyBase));
+exports.DrivesUpdateResponse = DrivesUpdateResponse;

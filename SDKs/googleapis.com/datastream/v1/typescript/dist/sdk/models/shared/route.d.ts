@@ -7,7 +7,7 @@ export declare class Route extends SpeakeasyBase {
     destinationAddress?: string;
     destinationPort?: number;
     displayName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     updateTime?: string;
 }
@@ -18,5 +18,5 @@ export declare class RouteInput extends SpeakeasyBase {
     destinationAddress?: string;
     destinationPort?: number;
     displayName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
 }

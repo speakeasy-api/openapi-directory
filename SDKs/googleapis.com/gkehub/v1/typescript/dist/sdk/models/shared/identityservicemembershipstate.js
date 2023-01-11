@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityServiceMembershipSpec } from "./identityservicemembershipspec";
-export var IdentityServiceMembershipStateStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityServiceMembershipState = exports.IdentityServiceMembershipStateStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var identityservicemembershipspec_1 = require("./identityservicemembershipspec");
+var IdentityServiceMembershipStateStateEnum;
 (function (IdentityServiceMembershipStateStateEnum) {
     IdentityServiceMembershipStateStateEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     IdentityServiceMembershipStateStateEnum["Ok"] = "OK";
     IdentityServiceMembershipStateStateEnum["Error"] = "ERROR";
-})(IdentityServiceMembershipStateStateEnum || (IdentityServiceMembershipStateStateEnum = {}));
+})(IdentityServiceMembershipStateStateEnum = exports.IdentityServiceMembershipStateStateEnum || (exports.IdentityServiceMembershipStateStateEnum = {}));
 // IdentityServiceMembershipState
 /**
  * **Anthos Identity Service**: State for a single Membership.
@@ -40,21 +43,21 @@ var IdentityServiceMembershipState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], IdentityServiceMembershipState.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installedVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installedVersion" }),
         __metadata("design:type", String)
     ], IdentityServiceMembershipState.prototype, "installedVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberConfig" }),
-        __metadata("design:type", IdentityServiceMembershipSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberConfig" }),
+        __metadata("design:type", identityservicemembershipspec_1.IdentityServiceMembershipSpec)
     ], IdentityServiceMembershipState.prototype, "memberConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], IdentityServiceMembershipState.prototype, "state", void 0);
     return IdentityServiceMembershipState;
-}(SpeakeasyBase));
-export { IdentityServiceMembershipState };
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceMembershipState = IdentityServiceMembershipState;

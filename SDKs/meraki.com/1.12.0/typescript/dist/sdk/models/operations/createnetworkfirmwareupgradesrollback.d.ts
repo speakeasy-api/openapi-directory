@@ -41,5 +41,5 @@ export declare class CreateNetworkFirmwareUpgradesRollbackRequest extends Speake
 export declare class CreateNetworkFirmwareUpgradesRollbackResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkFirmwareUpgradesRollback200ApplicationJsonObject?: Map<string, any>;
+    createNetworkFirmwareUpgradesRollback200ApplicationJSONObject?: Record<string, any>;
 }

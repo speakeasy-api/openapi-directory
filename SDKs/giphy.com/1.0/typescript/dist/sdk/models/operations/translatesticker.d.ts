@@ -13,5 +13,5 @@ export declare class TranslateStickerRequest extends SpeakeasyBase {
 export declare class TranslateStickerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    translateSticker200ApplicationJsonObject?: TranslateSticker200ApplicationJson;
+    translateSticker200ApplicationJSONObject?: TranslateSticker200ApplicationJson;
 }

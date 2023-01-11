@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteInstanceProfileActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteInstanceProfileResponse = exports.PostDeleteInstanceProfileRequest = exports.PostDeleteInstanceProfileHeaders = exports.PostDeleteInstanceProfileQueryParams = exports.PostDeleteInstanceProfileVersionEnum = exports.PostDeleteInstanceProfileActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteInstanceProfileActionEnum;
 (function (PostDeleteInstanceProfileActionEnum) {
     PostDeleteInstanceProfileActionEnum["DeleteInstanceProfile"] = "DeleteInstanceProfile";
-})(PostDeleteInstanceProfileActionEnum || (PostDeleteInstanceProfileActionEnum = {}));
-export var PostDeleteInstanceProfileVersionEnum;
+})(PostDeleteInstanceProfileActionEnum = exports.PostDeleteInstanceProfileActionEnum || (exports.PostDeleteInstanceProfileActionEnum = {}));
+var PostDeleteInstanceProfileVersionEnum;
 (function (PostDeleteInstanceProfileVersionEnum) {
     PostDeleteInstanceProfileVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostDeleteInstanceProfileVersionEnum || (PostDeleteInstanceProfileVersionEnum = {}));
+})(PostDeleteInstanceProfileVersionEnum = exports.PostDeleteInstanceProfileVersionEnum || (exports.PostDeleteInstanceProfileVersionEnum = {}));
 var PostDeleteInstanceProfileQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteInstanceProfileQueryParams, _super);
     function PostDeleteInstanceProfileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileQueryParams.prototype, "version", void 0);
     return PostDeleteInstanceProfileQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteInstanceProfileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInstanceProfileQueryParams = PostDeleteInstanceProfileQueryParams;
 var PostDeleteInstanceProfileHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteInstanceProfileHeaders, _super);
     function PostDeleteInstanceProfileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteInstanceProfileHeaders;
-}(SpeakeasyBase));
-export { PostDeleteInstanceProfileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInstanceProfileHeaders = PostDeleteInstanceProfileHeaders;
 var PostDeleteInstanceProfileRequest = /** @class */ (function (_super) {
     __extends(PostDeleteInstanceProfileRequest, _super);
     function PostDeleteInstanceProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteInstanceProfileQueryParams)
     ], PostDeleteInstanceProfileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteInstanceProfileHeaders)
     ], PostDeleteInstanceProfileRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteInstanceProfileRequest.prototype, "request", void 0);
     return PostDeleteInstanceProfileRequest;
-}(SpeakeasyBase));
-export { PostDeleteInstanceProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInstanceProfileRequest = PostDeleteInstanceProfileRequest;
 var PostDeleteInstanceProfileResponse = /** @class */ (function (_super) {
     __extends(PostDeleteInstanceProfileResponse, _super);
     function PostDeleteInstanceProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteInstanceProfileResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteInstanceProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteInstanceProfileResponse.prototype, "statusCode", void 0);
     return PostDeleteInstanceProfileResponse;
-}(SpeakeasyBase));
-export { PostDeleteInstanceProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInstanceProfileResponse = PostDeleteInstanceProfileResponse;

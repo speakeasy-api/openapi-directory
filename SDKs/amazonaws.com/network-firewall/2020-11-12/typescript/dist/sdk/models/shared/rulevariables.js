@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpSet } from "./ipset";
-import { PortSet } from "./portset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleVariables = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipset_1 = require("./ipset");
+var portset_1 = require("./portset");
 // RuleVariables
 /**
  * Settings that are available for use in the rules in the <a>RuleGroup</a> where this is defined.
@@ -35,13 +38,13 @@ var RuleVariables = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IPSets", elemType: IpSet }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IPSets", elemType: ipset_1.IpSet }),
+        __metadata("design:type", Object)
     ], RuleVariables.prototype, "ipSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortSets", elemType: PortSet }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortSets", elemType: portset_1.PortSet }),
+        __metadata("design:type", Object)
     ], RuleVariables.prototype, "portSets", void 0);
     return RuleVariables;
-}(SpeakeasyBase));
-export { RuleVariables };
+}(utils_1.SpeakeasyBase));
+exports.RuleVariables = RuleVariables;

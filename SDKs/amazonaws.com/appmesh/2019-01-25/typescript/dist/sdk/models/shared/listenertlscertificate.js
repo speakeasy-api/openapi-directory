@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListenerTlsAcmCertificate } from "./listenertlsacmcertificate";
-import { ListenerTlsFileCertificate } from "./listenertlsfilecertificate";
-import { ListenerTlsSdsCertificate } from "./listenertlssdscertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListenerTlsCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
+var listenertlsacmcertificate_1 = require("./listenertlsacmcertificate");
+var listenertlsfilecertificate_1 = require("./listenertlsfilecertificate");
+var listenertlssdscertificate_1 = require("./listenertlssdscertificate");
 // ListenerTlsCertificate
 /**
  * An object that represents a listener's Transport Layer Security (TLS) certificate.
@@ -36,17 +39,17 @@ var ListenerTlsCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acm" }),
-        __metadata("design:type", ListenerTlsAcmCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acm" }),
+        __metadata("design:type", listenertlsacmcertificate_1.ListenerTlsAcmCertificate)
     ], ListenerTlsCertificate.prototype, "acm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", ListenerTlsFileCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", listenertlsfilecertificate_1.ListenerTlsFileCertificate)
     ], ListenerTlsCertificate.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sds" }),
-        __metadata("design:type", ListenerTlsSdsCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sds" }),
+        __metadata("design:type", listenertlssdscertificate_1.ListenerTlsSdsCertificate)
     ], ListenerTlsCertificate.prototype, "sds", void 0);
     return ListenerTlsCertificate;
-}(SpeakeasyBase));
-export { ListenerTlsCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ListenerTlsCertificate = ListenerTlsCertificate;

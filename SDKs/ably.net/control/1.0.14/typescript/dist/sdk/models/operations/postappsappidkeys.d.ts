@@ -14,6 +14,6 @@ export declare class PostAppsAppIdKeysRequest extends SpeakeasyBase {
 export declare class PostAppsAppIdKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     keyResponse?: shared.KeyResponse;
 }

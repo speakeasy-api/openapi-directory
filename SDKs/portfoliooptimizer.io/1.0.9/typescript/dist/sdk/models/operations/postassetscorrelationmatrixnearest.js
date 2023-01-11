@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsCorrelationMatrixNearestResponse = exports.PostAssetsCorrelationMatrixNearestRequest = exports.PostAssetsCorrelationMatrixNearest200ApplicationJson = exports.PostAssetsCorrelationMatrixNearestRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsCorrelationMatrixNearestRequestBody = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixNearestRequestBody, _super);
     function PostAssetsCorrelationMatrixNearestRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostAssetsCorrelationMatrixNearestRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsApproximateCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsApproximateCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCorrelationMatrixNearestRequestBody.prototype, "assetsApproximateCorrelationMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsFixedCorrelations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsFixedCorrelations" }),
         __metadata("design:type", Array)
     ], PostAssetsCorrelationMatrixNearestRequestBody.prototype, "assetsFixedCorrelations", void 0);
     return PostAssetsCorrelationMatrixNearestRequestBody;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixNearestRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixNearestRequestBody = PostAssetsCorrelationMatrixNearestRequestBody;
 var PostAssetsCorrelationMatrixNearest200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixNearest200ApplicationJson, _super);
     function PostAssetsCorrelationMatrixNearest200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCorrelationMatrixNearest200ApplicationJson.prototype, "assetsCorrelationMatrix", void 0);
     return PostAssetsCorrelationMatrixNearest200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixNearest200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixNearest200ApplicationJson = PostAssetsCorrelationMatrixNearest200ApplicationJson;
 var PostAssetsCorrelationMatrixNearestRequest = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixNearestRequest, _super);
     function PostAssetsCorrelationMatrixNearestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAssetsCorrelationMatrixNearestRequestBody)
     ], PostAssetsCorrelationMatrixNearestRequest.prototype, "request", void 0);
     return PostAssetsCorrelationMatrixNearestRequest;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixNearestRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixNearestRequest = PostAssetsCorrelationMatrixNearestRequest;
 var PostAssetsCorrelationMatrixNearestResponse = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixNearestResponse, _super);
     function PostAssetsCorrelationMatrixNearestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsCorrelationMatrixNearestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsCorrelationMatrixNearest200ApplicationJson)
-    ], PostAssetsCorrelationMatrixNearestResponse.prototype, "postAssetsCorrelationMatrixNearest200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsCorrelationMatrixNearestResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsCorrelationMatrixNearest200ApplicationJson)
+    ], PostAssetsCorrelationMatrixNearestResponse.prototype, "postAssetsCorrelationMatrixNearest200ApplicationJSONObject", void 0);
     return PostAssetsCorrelationMatrixNearestResponse;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixNearestResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixNearestResponse = PostAssetsCorrelationMatrixNearestResponse;

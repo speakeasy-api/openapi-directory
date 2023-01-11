@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+import { ObjectT } from "./object";
 
 
 
@@ -18,7 +18,7 @@ export class RewriteResponse extends SpeakeasyBase {
   objectSize?: string;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
-  resource?: Object;
+  resource?: ObjectT;
 
   @SpeakeasyMetadata({ data: "json, name=rewriteToken" })
   rewriteToken?: string;

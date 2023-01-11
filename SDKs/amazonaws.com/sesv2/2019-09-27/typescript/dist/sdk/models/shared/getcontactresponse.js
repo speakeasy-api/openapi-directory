@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TopicPreference } from "./topicpreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContactResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var topicpreference_1 = require("./topicpreference");
 var GetContactResponse = /** @class */ (function (_super) {
     __extends(GetContactResponse, _super);
     function GetContactResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributesData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributesData" }),
         __metadata("design:type", String)
     ], GetContactResponse.prototype, "attributesData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactListName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactListName" }),
         __metadata("design:type", String)
     ], GetContactResponse.prototype, "contactListName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTimestamp" }),
         __metadata("design:type", Date)
     ], GetContactResponse.prototype, "createdTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailAddress" }),
         __metadata("design:type", String)
     ], GetContactResponse.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTimestamp" }),
         __metadata("design:type", Date)
     ], GetContactResponse.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopicDefaultPreferences", elemType: TopicPreference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopicDefaultPreferences", elemType: topicpreference_1.TopicPreference }),
         __metadata("design:type", Array)
     ], GetContactResponse.prototype, "topicDefaultPreferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopicPreferences", elemType: TopicPreference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopicPreferences", elemType: topicpreference_1.TopicPreference }),
         __metadata("design:type", Array)
     ], GetContactResponse.prototype, "topicPreferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnsubscribeAll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnsubscribeAll" }),
         __metadata("design:type", Boolean)
     ], GetContactResponse.prototype, "unsubscribeAll", void 0);
     return GetContactResponse;
-}(SpeakeasyBase));
-export { GetContactResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetContactResponse = GetContactResponse;

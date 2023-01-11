@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAddonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResponse = exports.GetRequest = exports.GetQueryParams = exports.GetPackageEnum = exports.GetLangEnum = exports.GetFormatEnum = exports.GetAddonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAddonEnum;
 (function (GetAddonEnum) {
     GetAddonEnum["Continent"] = "continent";
     GetAddonEnum["Country"] = "country";
@@ -32,13 +35,13 @@ export var GetAddonEnum;
     GetAddonEnum["Geotargeting"] = "geotargeting";
     GetAddonEnum["CountryGroupings"] = "country_groupings";
     GetAddonEnum["TimeZoneInfo"] = "time_zone_info";
-})(GetAddonEnum || (GetAddonEnum = {}));
-export var GetFormatEnum;
+})(GetAddonEnum = exports.GetAddonEnum || (exports.GetAddonEnum = {}));
+var GetFormatEnum;
 (function (GetFormatEnum) {
     GetFormatEnum["Json"] = "json";
     GetFormatEnum["Xml"] = "xml";
-})(GetFormatEnum || (GetFormatEnum = {}));
-export var GetLangEnum;
+})(GetFormatEnum = exports.GetFormatEnum || (exports.GetFormatEnum = {}));
+var GetLangEnum;
 (function (GetLangEnum) {
     GetLangEnum["Ar"] = "ar";
     GetLangEnum["Cs"] = "cs";
@@ -62,8 +65,8 @@ export var GetLangEnum;
     GetLangEnum["Vi"] = "vi";
     GetLangEnum["ZhCn"] = "zh-cn";
     GetLangEnum["ZhTw"] = "zh-tw";
-})(GetLangEnum || (GetLangEnum = {}));
-export var GetPackageEnum;
+})(GetLangEnum = exports.GetLangEnum || (exports.GetLangEnum = {}));
+var GetPackageEnum;
 (function (GetPackageEnum) {
     GetPackageEnum["Ws1"] = "WS1";
     GetPackageEnum["Ws2"] = "WS2";
@@ -90,68 +93,68 @@ export var GetPackageEnum;
     GetPackageEnum["Ws23"] = "WS23";
     GetPackageEnum["Ws24"] = "WS24";
     GetPackageEnum["Ws25"] = "WS25";
-})(GetPackageEnum || (GetPackageEnum = {}));
+})(GetPackageEnum = exports.GetPackageEnum || (exports.GetPackageEnum = {}));
 var GetQueryParams = /** @class */ (function (_super) {
     __extends(GetQueryParams, _super);
     function GetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=addon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=addon" }),
         __metadata("design:type", Array)
     ], GetQueryParams.prototype, "addon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ip" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lang" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lang" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "lang", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=package" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "package", void 0);
     return GetQueryParams;
-}(SpeakeasyBase));
-export { GetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryParams = GetQueryParams;
 var GetRequest = /** @class */ (function (_super) {
     __extends(GetRequest, _super);
     function GetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQueryParams)
     ], GetRequest.prototype, "queryParams", void 0);
     return GetRequest;
-}(SpeakeasyBase));
-export { GetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRequest = GetRequest;
 var GetResponse = /** @class */ (function (_super) {
     __extends(GetResponse, _super);
     function GetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetResponse.prototype, "get200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetResponse.prototype, "get200ApplicationJSONString", void 0);
     return GetResponse;
-}(SpeakeasyBase));
-export { GetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResponse = GetResponse;

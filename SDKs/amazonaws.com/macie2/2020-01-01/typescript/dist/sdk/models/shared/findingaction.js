@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindingActionTypeEnum } from "./findingactiontypeenum";
-import { ApiCallDetails } from "./apicalldetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var findingactiontypeenum_1 = require("./findingactiontypeenum");
+var apicalldetails_1 = require("./apicalldetails");
 // FindingAction
 /**
  * Provides information about an action that occurred for a resource and produced a policy finding.
@@ -35,13 +38,13 @@ var FindingAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionType" }),
         __metadata("design:type", String)
     ], FindingAction.prototype, "actionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiCallDetails" }),
-        __metadata("design:type", ApiCallDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiCallDetails" }),
+        __metadata("design:type", apicalldetails_1.ApiCallDetails)
     ], FindingAction.prototype, "apiCallDetails", void 0);
     return FindingAction;
-}(SpeakeasyBase));
-export { FindingAction };
+}(utils_1.SpeakeasyBase));
+exports.FindingAction = FindingAction;

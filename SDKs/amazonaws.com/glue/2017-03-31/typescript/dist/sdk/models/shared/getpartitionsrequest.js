@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Segment } from "./segment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPartitionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var segment_1 = require("./segment");
 var GetPartitionsRequest = /** @class */ (function (_super) {
     __extends(GetPartitionsRequest, _super);
     function GetPartitionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], GetPartitionsRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], GetPartitionsRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludeColumnSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludeColumnSchema" }),
         __metadata("design:type", Boolean)
     ], GetPartitionsRequest.prototype, "excludeColumnSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expression" }),
         __metadata("design:type", String)
     ], GetPartitionsRequest.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], GetPartitionsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetPartitionsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Segment" }),
-        __metadata("design:type", Segment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Segment" }),
+        __metadata("design:type", segment_1.Segment)
     ], GetPartitionsRequest.prototype, "segment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], GetPartitionsRequest.prototype, "tableName", void 0);
     return GetPartitionsRequest;
-}(SpeakeasyBase));
-export { GetPartitionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPartitionsRequest = GetPartitionsRequest;

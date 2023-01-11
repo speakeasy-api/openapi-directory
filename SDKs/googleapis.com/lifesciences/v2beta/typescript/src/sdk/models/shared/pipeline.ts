@@ -17,7 +17,7 @@ export class Pipeline extends SpeakeasyBase {
   encryptedEnvironment?: Secret;
 
   @SpeakeasyMetadata({ data: "json, name=environment" })
-  environment?: Map<string, string>;
+  environment?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=resources" })
   resources?: Resources;

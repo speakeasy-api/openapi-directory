@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MappingEntry } from "./mappingentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMappingResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var mappingentry_1 = require("./mappingentry");
 var GetMappingResponse = /** @class */ (function (_super) {
     __extends(GetMappingResponse, _super);
     function GetMappingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Mapping", elemType: MappingEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Mapping", elemType: mappingentry_1.MappingEntry }),
         __metadata("design:type", Array)
     ], GetMappingResponse.prototype, "mapping", void 0);
     return GetMappingResponse;
-}(SpeakeasyBase));
-export { GetMappingResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMappingResponse = GetMappingResponse;

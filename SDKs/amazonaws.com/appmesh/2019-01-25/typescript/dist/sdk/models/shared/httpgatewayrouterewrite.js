@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GatewayRouteHostnameRewrite } from "./gatewayroutehostnamerewrite";
-import { HttpGatewayRoutePathRewrite } from "./httpgatewayroutepathrewrite";
-import { HttpGatewayRoutePrefixRewrite } from "./httpgatewayrouteprefixrewrite";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpGatewayRouteRewrite = void 0;
+var utils_1 = require("../../../internal/utils");
+var gatewayroutehostnamerewrite_1 = require("./gatewayroutehostnamerewrite");
+var httpgatewayroutepathrewrite_1 = require("./httpgatewayroutepathrewrite");
+var httpgatewayrouteprefixrewrite_1 = require("./httpgatewayrouteprefixrewrite");
 // HttpGatewayRouteRewrite
 /**
  * An object representing the gateway route to rewrite.
@@ -36,17 +39,17 @@ var HttpGatewayRouteRewrite = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
-        __metadata("design:type", GatewayRouteHostnameRewrite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
+        __metadata("design:type", gatewayroutehostnamerewrite_1.GatewayRouteHostnameRewrite)
     ], HttpGatewayRouteRewrite.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
-        __metadata("design:type", HttpGatewayRoutePathRewrite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
+        __metadata("design:type", httpgatewayroutepathrewrite_1.HttpGatewayRoutePathRewrite)
     ], HttpGatewayRouteRewrite.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
-        __metadata("design:type", HttpGatewayRoutePrefixRewrite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
+        __metadata("design:type", httpgatewayrouteprefixrewrite_1.HttpGatewayRoutePrefixRewrite)
     ], HttpGatewayRouteRewrite.prototype, "prefix", void 0);
     return HttpGatewayRouteRewrite;
-}(SpeakeasyBase));
-export { HttpGatewayRouteRewrite };
+}(utils_1.SpeakeasyBase));
+exports.HttpGatewayRouteRewrite = HttpGatewayRouteRewrite;

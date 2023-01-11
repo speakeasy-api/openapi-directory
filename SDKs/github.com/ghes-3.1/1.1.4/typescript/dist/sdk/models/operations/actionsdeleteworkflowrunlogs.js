@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDeleteWorkflowRunLogsResponse = exports.ActionsDeleteWorkflowRunLogsRequest = exports.ActionsDeleteWorkflowRunLogsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDeleteWorkflowRunLogsPathParams = /** @class */ (function (_super) {
     __extends(ActionsDeleteWorkflowRunLogsPathParams, _super);
     function ActionsDeleteWorkflowRunLogsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDeleteWorkflowRunLogsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDeleteWorkflowRunLogsPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=run_id" }),
         __metadata("design:type", Number)
     ], ActionsDeleteWorkflowRunLogsPathParams.prototype, "runId", void 0);
     return ActionsDeleteWorkflowRunLogsPathParams;
-}(SpeakeasyBase));
-export { ActionsDeleteWorkflowRunLogsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteWorkflowRunLogsPathParams = ActionsDeleteWorkflowRunLogsPathParams;
 var ActionsDeleteWorkflowRunLogsRequest = /** @class */ (function (_super) {
     __extends(ActionsDeleteWorkflowRunLogsRequest, _super);
     function ActionsDeleteWorkflowRunLogsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDeleteWorkflowRunLogsPathParams)
     ], ActionsDeleteWorkflowRunLogsRequest.prototype, "pathParams", void 0);
     return ActionsDeleteWorkflowRunLogsRequest;
-}(SpeakeasyBase));
-export { ActionsDeleteWorkflowRunLogsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteWorkflowRunLogsRequest = ActionsDeleteWorkflowRunLogsRequest;
 var ActionsDeleteWorkflowRunLogsResponse = /** @class */ (function (_super) {
     __extends(ActionsDeleteWorkflowRunLogsResponse, _super);
     function ActionsDeleteWorkflowRunLogsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDeleteWorkflowRunLogsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDeleteWorkflowRunLogsResponse.prototype, "statusCode", void 0);
     return ActionsDeleteWorkflowRunLogsResponse;
-}(SpeakeasyBase));
-export { ActionsDeleteWorkflowRunLogsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteWorkflowRunLogsResponse = ActionsDeleteWorkflowRunLogsResponse;

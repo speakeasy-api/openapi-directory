@@ -1,62 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class AssignProjectResourcesPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
   projectId: string;
 }
 
 
 export class AssignProjectResourcesRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=resources" })
+  @SpeakeasyMetadata({ data: "json, name=resources" })
   resources?: string[];
 }
 
 
-export class AssignProjectResourcesRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: AssignProjectResourcesPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: AssignProjectResourcesRequestBody;
-}
-
-
 export class AssignProjectResources200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=resources", elemType: shared.Onev21projects1Percent7BprojectIdPercent7D1resourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesResourcesItems })
+  @SpeakeasyMetadata({ data: "json, name=resources", elemType: shared.Onev21projects1Percent7BprojectIdPercent7D1resourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesResourcesItems })
   resources?: shared.Onev21projects1Percent7BprojectIdPercent7D1resourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesResourcesItems[];
 }
 
 
 export class AssignProjectResources401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class AssignProjectResourcesRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: AssignProjectResourcesPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: AssignProjectResourcesRequestBody;
+}
+
+
 export class AssignProjectResourcesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  assignProjectResources200ApplicationJsonObject?: AssignProjectResources200ApplicationJson;
+  @SpeakeasyMetadata()
+  assignProjectResources200ApplicationJSONObject?: AssignProjectResources200ApplicationJson;
 
-  @Metadata()
-  assignProjectResources401ApplicationJsonObject?: AssignProjectResources401ApplicationJson;
+  @SpeakeasyMetadata()
+  assignProjectResources401ApplicationJSONObject?: AssignProjectResources401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

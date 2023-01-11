@@ -11,5 +11,5 @@ export class CarRankRequest extends SpeakeasyBase {
   listingIds?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=ranking_criteria" })
-  rankingCriteria?: Map<string, any>;
+  rankingCriteria?: Record<string, any>;
 }

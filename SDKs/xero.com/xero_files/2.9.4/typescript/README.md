@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateFileAssociationRequest, CreateFileAssociationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,16 +33,16 @@ const req: CreateFileAssociationRequest = {
     },
   },
   pathParams: {
-    fileId: "molestiae",
+    fileId: "sit",
   },
   headers: {
-    xeroTenantId: "voluptatem",
+    xeroTenantId: "voluptas",
   },
   request: {
-    fileId: "est",
-    objectGroup: "Invoice",
-    objectId: "eaque",
-    objectType: "Unknown",
+    fileId: "culpa",
+    objectGroup: "Payment",
+    objectId: "consequuntur",
+    objectType: "Accpay",
   },
 };
 

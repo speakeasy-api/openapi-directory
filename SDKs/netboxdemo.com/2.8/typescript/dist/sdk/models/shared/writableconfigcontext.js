@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableConfigContextInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableConfigContextInput = /** @class */ (function (_super) {
     __extends(WritableConfigContextInput, _super);
     function WritableConfigContextInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster_groups" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "clusterGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusters" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "clusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], WritableConfigContextInput.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableConfigContextInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_active" }),
         __metadata("design:type", Boolean)
     ], WritableConfigContextInput.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableConfigContextInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "platforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "regions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sites" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sites" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "sites", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant_groups" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "tenantGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenants" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenants" }),
         __metadata("design:type", Array)
     ], WritableConfigContextInput.prototype, "tenants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], WritableConfigContextInput.prototype, "weight", void 0);
     return WritableConfigContextInput;
-}(SpeakeasyBase));
-export { WritableConfigContextInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableConfigContextInput = WritableConfigContextInput;

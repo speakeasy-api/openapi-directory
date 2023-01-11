@@ -15,5 +15,5 @@ export declare class AddOrUpdatePrimaryStateTaxRequest extends SpeakeasyBase {
 export declare class AddOrUpdatePrimaryStateTaxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

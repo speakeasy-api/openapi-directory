@@ -24,9 +24,8 @@ export declare class DeleteProxyRequest extends SpeakeasyBase {
 }
 export declare class DeleteProxyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
-    deleteProxy200ApplicationJsonAny?: any;
-    deleteProxy401ApplicationJsonObject?: DeleteProxy401ApplicationJson;
-    deleteProxyDefaultApplicationJsonAny?: any;
+    deleteProxy200ApplicationJSONAny?: any;
+    deleteProxy401ApplicationJSONObject?: DeleteProxy401ApplicationJson;
+    deleteProxyDefaultApplicationJSONAny?: any;
 }

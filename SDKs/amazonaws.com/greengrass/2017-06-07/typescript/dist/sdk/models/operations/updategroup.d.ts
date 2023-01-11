@@ -23,5 +23,5 @@ export declare class UpdateGroupResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateGroupResponse?: Map<string, any>;
+    updateGroupResponse?: Record<string, any>;
 }

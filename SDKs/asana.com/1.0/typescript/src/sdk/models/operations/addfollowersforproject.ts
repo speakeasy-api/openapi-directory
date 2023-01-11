@@ -26,7 +26,7 @@ export class AddFollowersForProjectRequestBody extends SpeakeasyBase {
 
 export class AddFollowersForProject200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddFollowersForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addFollowersForProject200ApplicationJsonObject?: AddFollowersForProject200ApplicationJson;
+  addFollowersForProject200ApplicationJSONObject?: AddFollowersForProject200ApplicationJson;
 }

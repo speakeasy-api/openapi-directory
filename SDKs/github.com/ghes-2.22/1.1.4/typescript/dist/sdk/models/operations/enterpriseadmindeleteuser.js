@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeleteUserResponse = exports.EnterpriseAdminDeleteUserRequest = exports.EnterpriseAdminDeleteUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeleteUserPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteUserPathParams, _super);
     function EnterpriseAdminDeleteUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteUserPathParams.prototype, "username", void 0);
     return EnterpriseAdminDeleteUserPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteUserPathParams = EnterpriseAdminDeleteUserPathParams;
 var EnterpriseAdminDeleteUserRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteUserRequest, _super);
     function EnterpriseAdminDeleteUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeleteUserPathParams)
     ], EnterpriseAdminDeleteUserRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminDeleteUserRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteUserRequest = EnterpriseAdminDeleteUserRequest;
 var EnterpriseAdminDeleteUserResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteUserResponse, _super);
     function EnterpriseAdminDeleteUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteUserResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeleteUserResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteUserResponse = EnterpriseAdminDeleteUserResponse;

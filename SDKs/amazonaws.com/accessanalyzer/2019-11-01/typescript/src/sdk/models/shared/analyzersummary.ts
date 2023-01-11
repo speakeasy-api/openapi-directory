@@ -32,7 +32,7 @@ export class AnalyzerSummary extends SpeakeasyBase {
   statusReason?: StatusReason;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: TypeEnum;

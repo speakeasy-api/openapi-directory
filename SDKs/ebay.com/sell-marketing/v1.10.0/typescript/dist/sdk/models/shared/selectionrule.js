@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelectionRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // SelectionRule
 /**
  * This type specifies the selection rules used to create a campaign.
@@ -34,29 +37,29 @@ var SelectionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brands" }),
         __metadata("design:type", Array)
     ], SelectionRule.prototype, "brands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryIds" }),
         __metadata("design:type", Array)
     ], SelectionRule.prototype, "categoryIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryScope" }),
         __metadata("design:type", String)
     ], SelectionRule.prototype, "categoryScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingConditionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingConditionIds" }),
         __metadata("design:type", Array)
     ], SelectionRule.prototype, "listingConditionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPrice" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPrice" }),
+        __metadata("design:type", amount_1.Amount)
     ], SelectionRule.prototype, "maxPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minPrice" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minPrice" }),
+        __metadata("design:type", amount_1.Amount)
     ], SelectionRule.prototype, "minPrice", void 0);
     return SelectionRule;
-}(SpeakeasyBase));
-export { SelectionRule };
+}(utils_1.SpeakeasyBase));
+exports.SelectionRule = SelectionRule;

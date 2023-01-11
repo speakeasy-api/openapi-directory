@@ -31,7 +31,7 @@ export class Channel extends SpeakeasyBase {
   recordingConfigurationArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: ChannelTypeEnum;

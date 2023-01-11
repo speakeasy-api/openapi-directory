@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateDeleteResponse = exports.CertificateDeleteRequest = exports.CertificateDeleteHeaders = exports.CertificateDeleteQueryParams = exports.CertificateDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CertificateDeletePathParams = /** @class */ (function (_super) {
     __extends(CertificateDeletePathParams, _super);
     function CertificateDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=thumbprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=thumbprint" }),
         __metadata("design:type", String)
     ], CertificateDeletePathParams.prototype, "thumbprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=thumbprintAlgorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=thumbprintAlgorithm" }),
         __metadata("design:type", String)
     ], CertificateDeletePathParams.prototype, "thumbprintAlgorithm", void 0);
     return CertificateDeletePathParams;
-}(SpeakeasyBase));
-export { CertificateDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDeletePathParams = CertificateDeletePathParams;
 var CertificateDeleteQueryParams = /** @class */ (function (_super) {
     __extends(CertificateDeleteQueryParams, _super);
     function CertificateDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], CertificateDeleteQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], CertificateDeleteQueryParams.prototype, "timeout", void 0);
     return CertificateDeleteQueryParams;
-}(SpeakeasyBase));
-export { CertificateDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDeleteQueryParams = CertificateDeleteQueryParams;
 var CertificateDeleteHeaders = /** @class */ (function (_super) {
     __extends(CertificateDeleteHeaders, _super);
     function CertificateDeleteHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], CertificateDeleteHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], CertificateDeleteHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], CertificateDeleteHeaders.prototype, "returnClientRequestId", void 0);
     return CertificateDeleteHeaders;
-}(SpeakeasyBase));
-export { CertificateDeleteHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDeleteHeaders = CertificateDeleteHeaders;
 var CertificateDeleteRequest = /** @class */ (function (_super) {
     __extends(CertificateDeleteRequest, _super);
     function CertificateDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CertificateDeletePathParams)
     ], CertificateDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CertificateDeleteQueryParams)
     ], CertificateDeleteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CertificateDeleteHeaders)
     ], CertificateDeleteRequest.prototype, "headers", void 0);
     return CertificateDeleteRequest;
-}(SpeakeasyBase));
-export { CertificateDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDeleteRequest = CertificateDeleteRequest;
 var CertificateDeleteResponse = /** @class */ (function (_super) {
     __extends(CertificateDeleteResponse, _super);
     function CertificateDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CertificateDeleteResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CertificateDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CertificateDeleteResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CertificateDeleteResponse.prototype, "statusCode", void 0);
     return CertificateDeleteResponse;
-}(SpeakeasyBase));
-export { CertificateDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDeleteResponse = CertificateDeleteResponse;

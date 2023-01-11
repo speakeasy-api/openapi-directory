@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleTypeLatLng = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleTypeLatLng
 /**
  * An object that represents a latitude/longitude pair. This is expressed as a pair of doubles to represent degrees latitude and degrees longitude. Unless specified otherwise, this object must conform to the WGS84 standard. Values must be within normalized ranges.
@@ -33,13 +36,13 @@ var GoogleTypeLatLng = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GoogleTypeLatLng.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GoogleTypeLatLng.prototype, "longitude", void 0);
     return GoogleTypeLatLng;
-}(SpeakeasyBase));
-export { GoogleTypeLatLng };
+}(utils_1.SpeakeasyBase));
+exports.GoogleTypeLatLng = GoogleTypeLatLng;

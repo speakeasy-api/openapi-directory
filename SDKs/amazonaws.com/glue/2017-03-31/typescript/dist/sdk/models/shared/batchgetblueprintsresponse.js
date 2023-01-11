@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Blueprint } from "./blueprint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetBlueprintsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var blueprint_1 = require("./blueprint");
 var BatchGetBlueprintsResponse = /** @class */ (function (_super) {
     __extends(BatchGetBlueprintsResponse, _super);
     function BatchGetBlueprintsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Blueprints", elemType: Blueprint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Blueprints", elemType: blueprint_1.Blueprint }),
         __metadata("design:type", Array)
     ], BatchGetBlueprintsResponse.prototype, "blueprints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MissingBlueprints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MissingBlueprints" }),
         __metadata("design:type", Array)
     ], BatchGetBlueprintsResponse.prototype, "missingBlueprints", void 0);
     return BatchGetBlueprintsResponse;
-}(SpeakeasyBase));
-export { BatchGetBlueprintsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetBlueprintsResponse = BatchGetBlueprintsResponse;

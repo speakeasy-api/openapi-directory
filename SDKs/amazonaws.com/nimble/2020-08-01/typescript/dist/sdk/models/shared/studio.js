@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,79 +23,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StudioStateEnum } from "./studiostateenum";
-import { StudioStatusCodeEnum } from "./studiostatuscodeenum";
-import { StudioEncryptionConfiguration } from "./studioencryptionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Studio = void 0;
+var utils_1 = require("../../../internal/utils");
+var studiostateenum_1 = require("./studiostateenum");
+var studiostatuscodeenum_1 = require("./studiostatuscodeenum");
+var studioencryptionconfiguration_1 = require("./studioencryptionconfiguration");
 var Studio = /** @class */ (function (_super) {
     __extends(Studio, _super);
     function Studio() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminRoleArn" }),
         __metadata("design:type", String)
     ], Studio.prototype, "adminRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Studio.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Studio.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Studio.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeRegion" }),
         __metadata("design:type", String)
     ], Studio.prototype, "homeRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssoClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssoClientId" }),
         __metadata("design:type", String)
     ], Studio.prototype, "ssoClientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Studio.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", String)
     ], Studio.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], Studio.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioEncryptionConfiguration" }),
-        __metadata("design:type", StudioEncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioEncryptionConfiguration" }),
+        __metadata("design:type", studioencryptionconfiguration_1.StudioEncryptionConfiguration)
     ], Studio.prototype, "studioEncryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioId" }),
         __metadata("design:type", String)
     ], Studio.prototype, "studioId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioName" }),
         __metadata("design:type", String)
     ], Studio.prototype, "studioName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioUrl" }),
         __metadata("design:type", String)
     ], Studio.prototype, "studioUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Studio.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Studio.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userRoleArn" }),
         __metadata("design:type", String)
     ], Studio.prototype, "userRoleArn", void 0);
     return Studio;
-}(SpeakeasyBase));
-export { Studio };
+}(utils_1.SpeakeasyBase));
+exports.Studio = Studio;

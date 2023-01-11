@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryListArtifactsResponse = exports.RegistryListArtifactsRequest = exports.RegistryListArtifactsQueryParams = exports.RegistryListArtifactsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryListArtifactsPathParams = /** @class */ (function (_super) {
     __extends(RegistryListArtifactsPathParams, _super);
     function RegistryListArtifactsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryListArtifactsPathParams.prototype, "project", void 0);
     return RegistryListArtifactsPathParams;
-}(SpeakeasyBase));
-export { RegistryListArtifactsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListArtifactsPathParams = RegistryListArtifactsPathParams;
 var RegistryListArtifactsQueryParams = /** @class */ (function (_super) {
     __extends(RegistryListArtifactsQueryParams, _super);
     function RegistryListArtifactsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], RegistryListArtifactsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", String)
     ], RegistryListArtifactsQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_token" }),
         __metadata("design:type", String)
     ], RegistryListArtifactsQueryParams.prototype, "pageToken", void 0);
     return RegistryListArtifactsQueryParams;
-}(SpeakeasyBase));
-export { RegistryListArtifactsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListArtifactsQueryParams = RegistryListArtifactsQueryParams;
 var RegistryListArtifactsRequest = /** @class */ (function (_super) {
     __extends(RegistryListArtifactsRequest, _super);
     function RegistryListArtifactsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryListArtifactsPathParams)
     ], RegistryListArtifactsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryListArtifactsQueryParams)
     ], RegistryListArtifactsRequest.prototype, "queryParams", void 0);
     return RegistryListArtifactsRequest;
-}(SpeakeasyBase));
-export { RegistryListArtifactsRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListArtifactsRequest = RegistryListArtifactsRequest;
 var RegistryListArtifactsResponse = /** @class */ (function (_super) {
     __extends(RegistryListArtifactsResponse, _super);
     function RegistryListArtifactsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryListArtifactsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryListArtifactsResponse.prototype, "listArtifactsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryListArtifactsResponse.prototype, "statusCode", void 0);
     return RegistryListArtifactsResponse;
-}(SpeakeasyBase));
-export { RegistryListArtifactsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListArtifactsResponse = RegistryListArtifactsResponse;

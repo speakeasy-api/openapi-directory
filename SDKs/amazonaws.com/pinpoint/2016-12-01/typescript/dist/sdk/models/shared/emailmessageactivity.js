@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JourneyEmailMessage } from "./journeyemailmessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailMessageActivity = void 0;
+var utils_1 = require("../../../internal/utils");
+var journeyemailmessage_1 = require("./journeyemailmessage");
 // EmailMessageActivity
 /**
  * Specifies the settings for an email activity in a journey. This type of activity sends an email message to participants.
@@ -34,21 +37,21 @@ var EmailMessageActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageConfig" }),
-        __metadata("design:type", JourneyEmailMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageConfig" }),
+        __metadata("design:type", journeyemailmessage_1.JourneyEmailMessage)
     ], EmailMessageActivity.prototype, "messageConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextActivity" }),
         __metadata("design:type", String)
     ], EmailMessageActivity.prototype, "nextActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], EmailMessageActivity.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateVersion" }),
         __metadata("design:type", String)
     ], EmailMessageActivity.prototype, "templateVersion", void 0);
     return EmailMessageActivity;
-}(SpeakeasyBase));
-export { EmailMessageActivity };
+}(utils_1.SpeakeasyBase));
+exports.EmailMessageActivity = EmailMessageActivity;

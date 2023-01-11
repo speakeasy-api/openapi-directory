@@ -20,7 +20,7 @@ export class UpdateEvidenceSecurity extends SpeakeasyBase {
 
 export class UpdateEvidenceRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: UpdateEvidencePathParams;

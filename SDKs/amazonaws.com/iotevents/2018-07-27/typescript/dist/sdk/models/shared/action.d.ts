@@ -17,7 +17,7 @@ import { SqsAction } from "./sqsaction";
 **/
 export declare class Action extends SpeakeasyBase {
     clearTimer?: ClearTimerAction;
-    dynamoDb?: DynamoDbAction;
+    dynamoDB?: DynamoDbAction;
     dynamoDBv2?: DynamoDBv2Action;
     firehose?: FirehoseAction;
     iotEvents?: IotEventsAction;

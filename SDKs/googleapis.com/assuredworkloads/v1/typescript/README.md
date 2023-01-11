@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssuredworkloadsOrganizationsLocationsOperationsListRequest, AssuredworkloadsOrganizationsLocationsOperationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: AssuredworkloadsOrganizationsLocationsOperationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "autem",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "officia",
+    accessToken: "culpa",
     alt: "media",
-    callback: "aperiam",
-    fields: "quasi",
-    filter: "enim",
-    key: "incidunt",
-    oauthToken: "tenetur",
-    pageSize: 8458858280201702678,
-    pageToken: "repellat",
-    prettyPrint: false,
-    quotaUser: "totam",
-    uploadType: "quisquam",
-    uploadProtocol: "ad",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 
@@ -72,6 +71,7 @@ sdk.organizations.assuredworkloadsOrganizationsLocationsOperationsList(req).then
 * `assuredworkloadsOrganizationsLocationsWorkloadsCreate` - Creates Assured Workload.
 * `assuredworkloadsOrganizationsLocationsWorkloadsDelete` - Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
 * `assuredworkloadsOrganizationsLocationsWorkloadsList` - Lists Assured Workloads under a CRM Node.
+* `assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions` - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `assuredworkloadsOrganizationsLocationsWorkloadsPatch` - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `assuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources` - Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
 * `assuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge` - Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.

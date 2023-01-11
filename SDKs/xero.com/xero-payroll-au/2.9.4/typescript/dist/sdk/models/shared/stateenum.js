@@ -1,4 +1,7 @@
-export var StateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateEnum = void 0;
+var StateEnum;
 (function (StateEnum) {
     StateEnum["Act"] = "ACT";
     StateEnum["Nsw"] = "NSW";
@@ -8,4 +11,4 @@ export var StateEnum;
     StateEnum["Tas"] = "TAS";
     StateEnum["Vic"] = "VIC";
     StateEnum["Wa"] = "WA";
-})(StateEnum || (StateEnum = {}));
+})(StateEnum = exports.StateEnum || (exports.StateEnum = {}));

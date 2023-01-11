@@ -47,7 +47,7 @@ export declare class PostRoutingVersionNumberCalculateRouteLocationsContentTypeQ
     windingness?: shared.WindingnessEnum;
 }
 export declare class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     calculateRoutePostDataParameters?: shared.CalculateRoutePostDataParameters;
 }
 export declare class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRequest extends SpeakeasyBase {

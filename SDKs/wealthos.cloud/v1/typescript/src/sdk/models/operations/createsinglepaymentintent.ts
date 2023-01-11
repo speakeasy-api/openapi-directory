@@ -35,23 +35,23 @@ export class CreateSinglePaymentIntentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent201ApplicationJsonAny?: any;
+  createSinglePaymentIntent201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent400ApplicationJsonAny?: any;
+  createSinglePaymentIntent400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent401ApplicationJsonAny?: any;
+  createSinglePaymentIntent401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent403ApplicationJsonAny?: any;
+  createSinglePaymentIntent403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent409ApplicationJsonAny?: any;
+  createSinglePaymentIntent409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent429ApplicationJsonAny?: any;
+  createSinglePaymentIntent429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createSinglePaymentIntent500ApplicationJsonAny?: any;
+  createSinglePaymentIntent500ApplicationJSONAny?: any;
 }

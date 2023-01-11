@@ -12,6 +12,6 @@ export declare class ProfilingGroupDescription extends SpeakeasyBase {
     createdAt?: Date;
     name?: string;
     profilingStatus?: ProfilingStatus;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     updatedAt?: Date;
 }

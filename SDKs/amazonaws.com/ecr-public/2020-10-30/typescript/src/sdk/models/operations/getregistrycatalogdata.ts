@@ -39,7 +39,7 @@ export class GetRegistryCatalogDataRequest extends SpeakeasyBase {
   headers: GetRegistryCatalogDataHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

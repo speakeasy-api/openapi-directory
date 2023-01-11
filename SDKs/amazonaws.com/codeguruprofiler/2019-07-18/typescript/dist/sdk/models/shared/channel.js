@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Channel = void 0;
+var utils_1 = require("../../../internal/utils");
 // Channel
 /**
  * Notification medium for users to get alerted for events that occur in application profile. We support SNS topic as a notification channel.
@@ -33,17 +36,17 @@ var Channel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventPublishers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventPublishers" }),
         __metadata("design:type", Array)
     ], Channel.prototype, "eventPublishers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Channel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Channel.prototype, "uri", void 0);
     return Channel;
-}(SpeakeasyBase));
-export { Channel };
+}(utils_1.SpeakeasyBase));
+exports.Channel = Channel;

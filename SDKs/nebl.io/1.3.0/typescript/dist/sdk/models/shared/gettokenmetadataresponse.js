@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTokenMetadataResponse = exports.GetTokenMetadataResponseMetadataOfUtxo = exports.GetTokenMetadataResponseMetadataOfUtxoUserData = exports.GetTokenMetadataResponseMetadataOfIssuance = exports.GetTokenMetadataResponseMetadataOfIssuanceData = exports.GetTokenMetadataResponseMetadataOfIssuanceDataUserData = exports.GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta = /** @class */ (function (_super) {
     __extends(GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta, _super);
     function GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.prototype, "value", void 0);
     return GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta = GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta;
 // GetTokenMetadataResponseMetadataOfIssuanceDataUserData
 /**
  * Metadata set by user on token
@@ -49,36 +52,36 @@ var GetTokenMetadataResponseMetadataOfIssuanceDataUserData = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta", elemType: GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta", elemType: GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta }),
         __metadata("design:type", Array)
     ], GetTokenMetadataResponseMetadataOfIssuanceDataUserData.prototype, "meta", void 0);
     return GetTokenMetadataResponseMetadataOfIssuanceDataUserData;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfIssuanceDataUserData };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfIssuanceDataUserData = GetTokenMetadataResponseMetadataOfIssuanceDataUserData;
 var GetTokenMetadataResponseMetadataOfIssuanceData = /** @class */ (function (_super) {
     __extends(GetTokenMetadataResponseMetadataOfIssuanceData, _super);
     function GetTokenMetadataResponseMetadataOfIssuanceData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponseMetadataOfIssuanceData.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponseMetadataOfIssuanceData.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenName" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponseMetadataOfIssuanceData.prototype, "tokenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
         __metadata("design:type", GetTokenMetadataResponseMetadataOfIssuanceDataUserData)
     ], GetTokenMetadataResponseMetadataOfIssuanceData.prototype, "userData", void 0);
     return GetTokenMetadataResponseMetadataOfIssuanceData;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfIssuanceData };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfIssuanceData = GetTokenMetadataResponseMetadataOfIssuanceData;
 // GetTokenMetadataResponseMetadataOfIssuance
 /**
  * Metadata set at issuance
@@ -89,12 +92,12 @@ var GetTokenMetadataResponseMetadataOfIssuance = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetTokenMetadataResponseMetadataOfIssuanceData)
     ], GetTokenMetadataResponseMetadataOfIssuance.prototype, "data", void 0);
     return GetTokenMetadataResponseMetadataOfIssuance;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfIssuance };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfIssuance = GetTokenMetadataResponseMetadataOfIssuance;
 // GetTokenMetadataResponseMetadataOfUtxoUserData
 /**
  * Metadata set by user on token for UTXO
@@ -105,12 +108,12 @@ var GetTokenMetadataResponseMetadataOfUtxoUserData = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", Array)
     ], GetTokenMetadataResponseMetadataOfUtxoUserData.prototype, "meta", void 0);
     return GetTokenMetadataResponseMetadataOfUtxoUserData;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfUtxoUserData };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfUtxoUserData = GetTokenMetadataResponseMetadataOfUtxoUserData;
 // GetTokenMetadataResponseMetadataOfUtxo
 /**
  * Metadata set for UTXO
@@ -121,81 +124,81 @@ var GetTokenMetadataResponseMetadataOfUtxo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
         __metadata("design:type", GetTokenMetadataResponseMetadataOfUtxoUserData)
     ], GetTokenMetadataResponseMetadataOfUtxo.prototype, "userData", void 0);
     return GetTokenMetadataResponseMetadataOfUtxo;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponseMetadataOfUtxo };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponseMetadataOfUtxo = GetTokenMetadataResponseMetadataOfUtxo;
 var GetTokenMetadataResponse = /** @class */ (function (_super) {
     __extends(GetTokenMetadataResponse, _super);
     function GetTokenMetadataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregationPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregationPolicy" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponse.prototype, "aggregationPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=divisibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=divisibility" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "divisibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstBlock" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "firstBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialIssuanceAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialIssuanceAmount" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "initialIssuanceAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuanceTxid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuanceTxid" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponse.prototype, "issuanceTxid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueAddress" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponse.prototype, "issueAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockStatus" }),
         __metadata("design:type", Boolean)
     ], GetTokenMetadataResponse.prototype, "lockStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataOfIssuance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataOfIssuance" }),
         __metadata("design:type", GetTokenMetadataResponseMetadataOfIssuance)
     ], GetTokenMetadataResponse.prototype, "metadataOfIssuance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataOfUtxo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataOfUtxo" }),
         __metadata("design:type", GetTokenMetadataResponseMetadataOfUtxo)
     ], GetTokenMetadataResponse.prototype, "metadataOfUtxo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numOfBurns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numOfBurns" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "numOfBurns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numOfHolders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numOfHolders" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "numOfHolders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numOfIssuance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numOfIssuance" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "numOfIssuance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numOfTransfers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numOfTransfers" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "numOfTransfers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=someUtxo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=someUtxo" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponse.prototype, "someUtxo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenId" }),
         __metadata("design:type", String)
     ], GetTokenMetadataResponse.prototype, "tokenId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSupply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSupply" }),
         __metadata("design:type", Number)
     ], GetTokenMetadataResponse.prototype, "totalSupply", void 0);
     return GetTokenMetadataResponse;
-}(SpeakeasyBase));
-export { GetTokenMetadataResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTokenMetadataResponse = GetTokenMetadataResponse;

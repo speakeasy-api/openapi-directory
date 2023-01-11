@@ -43,5 +43,5 @@ export class GetAuthinfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAuthinfo200ApplicationJsonObject?: GetAuthinfo200ApplicationJson;
+  getAuthinfo200ApplicationJSONObject?: GetAuthinfo200ApplicationJson;
 }

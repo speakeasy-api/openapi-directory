@@ -9,5 +9,5 @@ import { OpenIdConnectProviderListEntry } from "./openidconnectproviderlistentry
 **/
 export class ListOpenIdConnectProvidersResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: OpenIdConnectProviderListEntry })
-  openIdConnectProviderList?: OpenIdConnectProviderListEntry[];
+  openIDConnectProviderList?: OpenIdConnectProviderListEntry[];
 }

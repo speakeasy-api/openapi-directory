@@ -58,10 +58,11 @@ import { UserCipherUses } from "./usercipheruses";
 import { UserRequests } from "./userrequests";
 import { Users } from "./users";
 import { WebhookTests } from "./webhooktests";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://files.com//app.files.com/api/rest/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     actionNotificationExportResults: ActionNotificationExportResults;
     actionNotificationExports: ActionNotificationExports;
@@ -128,6 +129,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

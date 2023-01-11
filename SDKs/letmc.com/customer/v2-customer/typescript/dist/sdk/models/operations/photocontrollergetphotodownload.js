@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhotoControllerGetPhotoDownloadResponse = exports.PhotoControllerGetPhotoDownloadRequest = exports.PhotoControllerGetPhotoDownloadQueryParams = exports.PhotoControllerGetPhotoDownloadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PhotoControllerGetPhotoDownloadPathParams = /** @class */ (function (_super) {
     __extends(PhotoControllerGetPhotoDownloadPathParams, _super);
     function PhotoControllerGetPhotoDownloadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], PhotoControllerGetPhotoDownloadPathParams.prototype, "shortName", void 0);
     return PhotoControllerGetPhotoDownloadPathParams;
-}(SpeakeasyBase));
-export { PhotoControllerGetPhotoDownloadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PhotoControllerGetPhotoDownloadPathParams = PhotoControllerGetPhotoDownloadPathParams;
 var PhotoControllerGetPhotoDownloadQueryParams = /** @class */ (function (_super) {
     __extends(PhotoControllerGetPhotoDownloadQueryParams, _super);
     function PhotoControllerGetPhotoDownloadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=height" }),
         __metadata("design:type", Number)
     ], PhotoControllerGetPhotoDownloadQueryParams.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=photoID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=photoID" }),
         __metadata("design:type", String)
-    ], PhotoControllerGetPhotoDownloadQueryParams.prototype, "photoId", void 0);
+    ], PhotoControllerGetPhotoDownloadQueryParams.prototype, "photoID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], PhotoControllerGetPhotoDownloadQueryParams.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=width" }),
         __metadata("design:type", Number)
     ], PhotoControllerGetPhotoDownloadQueryParams.prototype, "width", void 0);
     return PhotoControllerGetPhotoDownloadQueryParams;
-}(SpeakeasyBase));
-export { PhotoControllerGetPhotoDownloadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PhotoControllerGetPhotoDownloadQueryParams = PhotoControllerGetPhotoDownloadQueryParams;
 var PhotoControllerGetPhotoDownloadRequest = /** @class */ (function (_super) {
     __extends(PhotoControllerGetPhotoDownloadRequest, _super);
     function PhotoControllerGetPhotoDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PhotoControllerGetPhotoDownloadPathParams)
     ], PhotoControllerGetPhotoDownloadRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PhotoControllerGetPhotoDownloadQueryParams)
     ], PhotoControllerGetPhotoDownloadRequest.prototype, "queryParams", void 0);
     return PhotoControllerGetPhotoDownloadRequest;
-}(SpeakeasyBase));
-export { PhotoControllerGetPhotoDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.PhotoControllerGetPhotoDownloadRequest = PhotoControllerGetPhotoDownloadRequest;
 var PhotoControllerGetPhotoDownloadResponse = /** @class */ (function (_super) {
     __extends(PhotoControllerGetPhotoDownloadResponse, _super);
     function PhotoControllerGetPhotoDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PhotoControllerGetPhotoDownloadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PhotoControllerGetPhotoDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PhotoControllerGetPhotoDownloadResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PhotoControllerGetPhotoDownloadResponse.prototype, "statusCode", void 0);
     return PhotoControllerGetPhotoDownloadResponse;
-}(SpeakeasyBase));
-export { PhotoControllerGetPhotoDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.PhotoControllerGetPhotoDownloadResponse = PhotoControllerGetPhotoDownloadResponse;

@@ -5,10 +5,10 @@ export declare class GetInventoryQueryParams extends SpeakeasyBase {
 }
 export declare class GetInventoryHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare enum GetInventory200ApplicationJsonQuantityUnitEnum {
     Each = "EACH"
@@ -29,5 +29,5 @@ export declare class GetInventoryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getInventory200ApplicationJsonObject?: GetInventory200ApplicationJson;
+    getInventory200ApplicationJSONObject?: GetInventory200ApplicationJson;
 }

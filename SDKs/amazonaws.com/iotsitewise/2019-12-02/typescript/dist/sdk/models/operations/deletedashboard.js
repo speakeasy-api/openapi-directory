@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDashboardResponse = exports.DeleteDashboardRequest = exports.DeleteDashboardHeaders = exports.DeleteDashboardQueryParams = exports.DeleteDashboardPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteDashboardPathParams = /** @class */ (function (_super) {
     __extends(DeleteDashboardPathParams, _super);
     function DeleteDashboardPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dashboardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dashboardId" }),
         __metadata("design:type", String)
     ], DeleteDashboardPathParams.prototype, "dashboardId", void 0);
     return DeleteDashboardPathParams;
-}(SpeakeasyBase));
-export { DeleteDashboardPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDashboardPathParams = DeleteDashboardPathParams;
 var DeleteDashboardQueryParams = /** @class */ (function (_super) {
     __extends(DeleteDashboardQueryParams, _super);
     function DeleteDashboardQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientToken" }),
         __metadata("design:type", String)
     ], DeleteDashboardQueryParams.prototype, "clientToken", void 0);
     return DeleteDashboardQueryParams;
-}(SpeakeasyBase));
-export { DeleteDashboardQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDashboardQueryParams = DeleteDashboardQueryParams;
 var DeleteDashboardHeaders = /** @class */ (function (_super) {
     __extends(DeleteDashboardHeaders, _super);
     function DeleteDashboardHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteDashboardHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteDashboardHeaders;
-}(SpeakeasyBase));
-export { DeleteDashboardHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDashboardHeaders = DeleteDashboardHeaders;
 var DeleteDashboardRequest = /** @class */ (function (_super) {
     __extends(DeleteDashboardRequest, _super);
     function DeleteDashboardRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDashboardPathParams)
     ], DeleteDashboardRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDashboardQueryParams)
     ], DeleteDashboardRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDashboardHeaders)
     ], DeleteDashboardRequest.prototype, "headers", void 0);
     return DeleteDashboardRequest;
-}(SpeakeasyBase));
-export { DeleteDashboardRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDashboardRequest = DeleteDashboardRequest;
 var DeleteDashboardResponse = /** @class */ (function (_super) {
     __extends(DeleteDashboardResponse, _super);
     function DeleteDashboardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteDashboardResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteDashboardResponse.prototype, "deleteDashboardResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDashboardResponse.prototype, "internalFailureException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDashboardResponse.prototype, "invalidRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDashboardResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteDashboardResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDashboardResponse.prototype, "throttlingException", void 0);
     return DeleteDashboardResponse;
-}(SpeakeasyBase));
-export { DeleteDashboardResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDashboardResponse = DeleteDashboardResponse;

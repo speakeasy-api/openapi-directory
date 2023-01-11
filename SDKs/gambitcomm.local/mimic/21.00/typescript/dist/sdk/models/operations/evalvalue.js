@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvalValueResponse = exports.EvalValueRequest = exports.EvalValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EvalValuePathParams = /** @class */ (function (_super) {
     __extends(EvalValuePathParams, _super);
     function EvalValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], EvalValuePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], EvalValuePathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
         __metadata("design:type", String)
     ], EvalValuePathParams.prototype, "object", void 0);
     return EvalValuePathParams;
-}(SpeakeasyBase));
-export { EvalValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EvalValuePathParams = EvalValuePathParams;
 var EvalValueRequest = /** @class */ (function (_super) {
     __extends(EvalValueRequest, _super);
     function EvalValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EvalValuePathParams)
     ], EvalValueRequest.prototype, "pathParams", void 0);
     return EvalValueRequest;
-}(SpeakeasyBase));
-export { EvalValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.EvalValueRequest = EvalValueRequest;
 var EvalValueResponse = /** @class */ (function (_super) {
     __extends(EvalValueResponse, _super);
     function EvalValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EvalValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EvalValueResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], EvalValueResponse.prototype, "evalValue200ApplicationJsonString", void 0);
+    ], EvalValueResponse.prototype, "evalValue200ApplicationJSONString", void 0);
     return EvalValueResponse;
-}(SpeakeasyBase));
-export { EvalValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.EvalValueResponse = EvalValueResponse;

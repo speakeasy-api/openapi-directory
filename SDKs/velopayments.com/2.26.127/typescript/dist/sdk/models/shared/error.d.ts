@@ -8,7 +8,7 @@ export declare enum ErrorLocationTypeEnum {
     Header = "header",
     PathParam = "pathParam"
 }
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     errorCode?: string;
     errorData?: ErrorData;
     errorMessage?: string;

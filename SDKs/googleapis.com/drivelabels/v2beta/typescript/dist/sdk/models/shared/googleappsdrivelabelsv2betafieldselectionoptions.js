@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice } from "./googleappsdrivelabelsv2betafieldselectionoptionschoice";
-import { GoogleAppsDriveLabelsV2betaFieldListOptions } from "./googleappsdrivelabelsv2betafieldlistoptions";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput } from "./googleappsdrivelabelsv2betafieldselectionoptionschoice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput = exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafieldselectionoptionschoice_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoice");
+var googleappsdrivelabelsv2betafieldlistoptions_1 = require("./googleappsdrivelabelsv2betafieldlistoptions");
+var googleappsdrivelabelsv2betafieldselectionoptionschoice_2 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoice");
 // GoogleAppsDriveLabelsV2betaFieldSelectionOptions
 /**
  * Options for the selection field type.
@@ -36,16 +39,16 @@ var GoogleAppsDriveLabelsV2betaFieldSelectionOptions = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choices", elemType: GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choices", elemType: googleappsdrivelabelsv2betafieldselectionoptionschoice_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptions.prototype, "choices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldListOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldlistoptions_1.GoogleAppsDriveLabelsV2betaFieldListOptions)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptions.prototype, "listOptions", void 0);
     return GoogleAppsDriveLabelsV2betaFieldSelectionOptions;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldSelectionOptions };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptions = GoogleAppsDriveLabelsV2betaFieldSelectionOptions;
 // GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput
 /**
  * Options for the selection field type.
@@ -56,13 +59,13 @@ var GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choices", elemType: GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choices", elemType: googleappsdrivelabelsv2betafieldselectionoptionschoice_2.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput.prototype, "choices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldListOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldlistoptions_1.GoogleAppsDriveLabelsV2betaFieldListOptions)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput.prototype, "listOptions", void 0);
     return GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput = GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput;

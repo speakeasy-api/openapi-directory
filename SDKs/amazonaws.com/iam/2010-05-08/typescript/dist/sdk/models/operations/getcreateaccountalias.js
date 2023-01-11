@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateAccountAliasActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateAccountAliasResponse = exports.GetCreateAccountAliasRequest = exports.GetCreateAccountAliasHeaders = exports.GetCreateAccountAliasQueryParams = exports.GetCreateAccountAliasVersionEnum = exports.GetCreateAccountAliasActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateAccountAliasActionEnum;
 (function (GetCreateAccountAliasActionEnum) {
     GetCreateAccountAliasActionEnum["CreateAccountAlias"] = "CreateAccountAlias";
-})(GetCreateAccountAliasActionEnum || (GetCreateAccountAliasActionEnum = {}));
-export var GetCreateAccountAliasVersionEnum;
+})(GetCreateAccountAliasActionEnum = exports.GetCreateAccountAliasActionEnum || (exports.GetCreateAccountAliasActionEnum = {}));
+var GetCreateAccountAliasVersionEnum;
 (function (GetCreateAccountAliasVersionEnum) {
     GetCreateAccountAliasVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetCreateAccountAliasVersionEnum || (GetCreateAccountAliasVersionEnum = {}));
+})(GetCreateAccountAliasVersionEnum = exports.GetCreateAccountAliasVersionEnum || (exports.GetCreateAccountAliasVersionEnum = {}));
 var GetCreateAccountAliasQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateAccountAliasQueryParams, _super);
     function GetCreateAccountAliasQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AccountAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AccountAlias" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasQueryParams.prototype, "accountAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasQueryParams.prototype, "version", void 0);
     return GetCreateAccountAliasQueryParams;
-}(SpeakeasyBase));
-export { GetCreateAccountAliasQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAccountAliasQueryParams = GetCreateAccountAliasQueryParams;
 var GetCreateAccountAliasHeaders = /** @class */ (function (_super) {
     __extends(GetCreateAccountAliasHeaders, _super);
     function GetCreateAccountAliasHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateAccountAliasHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateAccountAliasHeaders;
-}(SpeakeasyBase));
-export { GetCreateAccountAliasHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAccountAliasHeaders = GetCreateAccountAliasHeaders;
 var GetCreateAccountAliasRequest = /** @class */ (function (_super) {
     __extends(GetCreateAccountAliasRequest, _super);
     function GetCreateAccountAliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateAccountAliasQueryParams)
     ], GetCreateAccountAliasRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateAccountAliasHeaders)
     ], GetCreateAccountAliasRequest.prototype, "headers", void 0);
     return GetCreateAccountAliasRequest;
-}(SpeakeasyBase));
-export { GetCreateAccountAliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAccountAliasRequest = GetCreateAccountAliasRequest;
 var GetCreateAccountAliasResponse = /** @class */ (function (_super) {
     __extends(GetCreateAccountAliasResponse, _super);
     function GetCreateAccountAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateAccountAliasResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateAccountAliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateAccountAliasResponse.prototype, "statusCode", void 0);
     return GetCreateAccountAliasResponse;
-}(SpeakeasyBase));
-export { GetCreateAccountAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateAccountAliasResponse = GetCreateAccountAliasResponse;

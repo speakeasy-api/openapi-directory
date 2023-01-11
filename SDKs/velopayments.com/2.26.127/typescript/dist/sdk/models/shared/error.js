@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorData } from "./errordata";
-import { LocalisationDetails } from "./localisationdetails";
-export var ErrorLocationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorT = exports.ErrorLocationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordata_1 = require("./errordata");
+var localisationdetails_1 = require("./localisationdetails");
+var ErrorLocationTypeEnum;
 (function (ErrorLocationTypeEnum) {
     ErrorLocationTypeEnum["RequestBody"] = "requestBody";
     ErrorLocationTypeEnum["QueryParam"] = "queryParam";
     ErrorLocationTypeEnum["RequestParam"] = "requestParam";
     ErrorLocationTypeEnum["Header"] = "header";
     ErrorLocationTypeEnum["PathParam"] = "pathParam";
-})(ErrorLocationTypeEnum || (ErrorLocationTypeEnum = {}));
-var Error = /** @class */ (function (_super) {
-    __extends(Error, _super);
-    function Error() {
+})(ErrorLocationTypeEnum = exports.ErrorLocationTypeEnum || (exports.ErrorLocationTypeEnum = {}));
+var ErrorT = /** @class */ (function (_super) {
+    __extends(ErrorT, _super);
+    function ErrorT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", String)
-    ], Error.prototype, "errorCode", void 0);
+    ], ErrorT.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorData" }),
-        __metadata("design:type", ErrorData)
-    ], Error.prototype, "errorData", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorData" }),
+        __metadata("design:type", errordata_1.ErrorData)
+    ], ErrorT.prototype, "errorData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
-    ], Error.prototype, "errorMessage", void 0);
+    ], ErrorT.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localisationDetails" }),
-        __metadata("design:type", LocalisationDetails)
-    ], Error.prototype, "localisationDetails", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localisationDetails" }),
+        __metadata("design:type", localisationdetails_1.LocalisationDetails)
+    ], ErrorT.prototype, "localisationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
-    ], Error.prototype, "location", void 0);
+    ], ErrorT.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationType" }),
         __metadata("design:type", String)
-    ], Error.prototype, "locationType", void 0);
+    ], ErrorT.prototype, "locationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
-    ], Error.prototype, "reasonCode", void 0);
-    return Error;
-}(SpeakeasyBase));
-export { Error };
+    ], ErrorT.prototype, "reasonCode", void 0);
+    return ErrorT;
+}(utils_1.SpeakeasyBase));
+exports.ErrorT = ErrorT;

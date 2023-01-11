@@ -1,76 +1,57 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Apikeys } from "./apikeys";
-import { AuthConfig } from "./authconfig";
-import { Certificates } from "./certificates";
-import { Configuration } from "./configuration";
-import { DataExporterConfigs } from "./dataexporterconfigs";
-import { Environments } from "./environments";
-import { Groups } from "./groups";
-import { Health } from "./health";
-import { Import } from "./import";
-import { JwtVerifiers } from "./jwtverifiers";
-import { Scripts } from "./scripts";
-import { Services } from "./services";
-import { Snowmonkey } from "./snowmonkey";
-import { Stats } from "./stats";
-import { Templates } from "./templates";
-import { ValidationAuthorities } from "./validationauthorities";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var apikeys_1 = require("./apikeys");
+var authconfig_1 = require("./authconfig");
+var certificates_1 = require("./certificates");
+var configuration_1 = require("./configuration");
+var dataexporterconfigs_1 = require("./dataexporterconfigs");
+var environments_1 = require("./environments");
+var groups_1 = require("./groups");
+var health_1 = require("./health");
+var import_1 = require("./import");
+var jwtverifiers_1 = require("./jwtverifiers");
+var scripts_1 = require("./scripts");
+var services_1 = require("./services");
+var snowmonkey_1 = require("./snowmonkey");
+var stats_1 = require("./stats");
+var templates_1 = require("./templates");
+var validationauthorities_1 = require("./validationauthorities");
+exports.ServerList = [
     "http://otoroshi-api.oto.tools/",
     "http://maif.local",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://maif.github.io/otoroshi/ - Find out more about Otoroshi*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.apikeys = new Apikeys(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.authConfig = new AuthConfig(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.certificates = new Certificates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.configuration = new Configuration(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.dataExporterConfigs = new DataExporterConfigs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.environments = new Environments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.groups = new Groups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.health = new Health(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.import = new Import(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.jwtVerifiers = new JwtVerifiers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.scripts = new Scripts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.services = new Services(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.snowmonkey = new Snowmonkey(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.stats = new Stats(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.templates = new Templates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.validationAuthorities = new ValidationAuthorities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.apikeys = new apikeys_1.Apikeys(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.authConfig = new authconfig_1.AuthConfig(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.certificates = new certificates_1.Certificates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.configuration = new configuration_1.Configuration(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.dataExporterConfigs = new dataexporterconfigs_1.DataExporterConfigs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.environments = new environments_1.Environments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groups = new groups_1.Groups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.health = new health_1.Health(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.import = new import_1.Import(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.jwtVerifiers = new jwtverifiers_1.JwtVerifiers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.scripts = new scripts_1.Scripts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.services = new services_1.Services(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.snowmonkey = new snowmonkey_1.Snowmonkey(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.stats = new stats_1.Stats(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.templates = new templates_1.Templates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.validationAuthorities = new validationauthorities_1.ValidationAuthorities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

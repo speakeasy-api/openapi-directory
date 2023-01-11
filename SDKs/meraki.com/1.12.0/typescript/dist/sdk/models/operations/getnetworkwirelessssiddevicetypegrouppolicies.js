@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse = exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest = exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams, _super);
     function GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams = GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams;
 var GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest, _super);
     function GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams)
     ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest = GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest;
 var GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse, _super);
     function GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse.prototype, "getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse.prototype, "getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse = GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse;

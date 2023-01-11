@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PathSegment } from "./pathsegment";
-import { ValueMatcher } from "./valuematcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StructMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var pathsegment_1 = require("./pathsegment");
+var valuematcher_1 = require("./valuematcher");
 // StructMatcher
 /**
  * StructMatcher provides a general interface to check if a given value is matched in google.protobuf.Struct. It uses `path` to retrieve the value from the struct and then check if it's matched to the specified value. For example, for the following Struct: .. code-block:: yaml fields: a: struct_value: fields: b: struct_value: fields: c: string_value: pro t: list_value: values: - string_value: m - string_value: n The following MetadataMatcher is matched as the path [a, b, c] will retrieve a string value "pro" from the Metadata which is matched to the specified prefix match. .. code-block:: yaml path: - key: a - key: b - key: c value: string_match: prefix: pr The following StructMatcher is matched as the code will match one of the string values in the list at the path [a, t]. .. code-block:: yaml path: - key: a - key: t value: list_match: one_of: string_match: exact: m An example use of StructMatcher is to match metadata in envoy.v*.core.Node.
@@ -35,13 +38,13 @@ var StructMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path", elemType: PathSegment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path", elemType: pathsegment_1.PathSegment }),
         __metadata("design:type", Array)
     ], StructMatcher.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", ValueMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", valuematcher_1.ValueMatcher)
     ], StructMatcher.prototype, "value", void 0);
     return StructMatcher;
-}(SpeakeasyBase));
-export { StructMatcher };
+}(utils_1.SpeakeasyBase));
+exports.StructMatcher = StructMatcher;

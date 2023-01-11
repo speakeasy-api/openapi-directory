@@ -40,7 +40,7 @@ export class Task extends SpeakeasyBase {
   organizationId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, string>;
+  params?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parent_id" })
   parentId?: string;
@@ -67,7 +67,7 @@ export class Task extends SpeakeasyBase {
   startTime?: number;
 
   @SpeakeasyMetadata({ data: "json, name=stats" })
-  stats?: Map<string, any>;
+  stats?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: string;

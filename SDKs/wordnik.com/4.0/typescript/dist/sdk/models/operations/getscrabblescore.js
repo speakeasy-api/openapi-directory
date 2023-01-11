@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetScrabbleScoreResponse = exports.GetScrabbleScoreRequest = exports.GetScrabbleScorePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetScrabbleScorePathParams = /** @class */ (function (_super) {
     __extends(GetScrabbleScorePathParams, _super);
     function GetScrabbleScorePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetScrabbleScorePathParams.prototype, "word", void 0);
     return GetScrabbleScorePathParams;
-}(SpeakeasyBase));
-export { GetScrabbleScorePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetScrabbleScorePathParams = GetScrabbleScorePathParams;
 var GetScrabbleScoreRequest = /** @class */ (function (_super) {
     __extends(GetScrabbleScoreRequest, _super);
     function GetScrabbleScoreRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetScrabbleScorePathParams)
     ], GetScrabbleScoreRequest.prototype, "pathParams", void 0);
     return GetScrabbleScoreRequest;
-}(SpeakeasyBase));
-export { GetScrabbleScoreRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetScrabbleScoreRequest = GetScrabbleScoreRequest;
 var GetScrabbleScoreResponse = /** @class */ (function (_super) {
     __extends(GetScrabbleScoreResponse, _super);
     function GetScrabbleScoreResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetScrabbleScoreResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetScrabbleScoreResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetScrabbleScoreResponse.prototype, "statusCode", void 0);
     return GetScrabbleScoreResponse;
-}(SpeakeasyBase));
-export { GetScrabbleScoreResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetScrabbleScoreResponse = GetScrabbleScoreResponse;

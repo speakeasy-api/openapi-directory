@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationItemTypeEnum } from "./configurationitemtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationTag = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationitemtypeenum_1 = require("./configurationitemtypeenum");
 // ConfigurationTag
 /**
  * Tags for a configuration item. Tags are metadata that help you categorize IT assets.
@@ -34,25 +37,25 @@ var ConfigurationTag = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationId" }),
         __metadata("design:type", String)
     ], ConfigurationTag.prototype, "configurationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationType" }),
         __metadata("design:type", String)
     ], ConfigurationTag.prototype, "configurationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ConfigurationTag.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeOfCreation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeOfCreation" }),
         __metadata("design:type", Date)
     ], ConfigurationTag.prototype, "timeOfCreation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ConfigurationTag.prototype, "value", void 0);
     return ConfigurationTag;
-}(SpeakeasyBase));
-export { ConfigurationTag };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationTag = ConfigurationTag;

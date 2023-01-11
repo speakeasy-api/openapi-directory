@@ -5,7 +5,7 @@ export declare class SandboxIncomeFireWebhookRequest extends SpeakeasyBase {
 }
 export declare class SandboxIncomeFireWebhookResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     sandboxIncomeFireWebhookResponse?: shared.SandboxIncomeFireWebhookResponse;
     statusCode: number;
 }

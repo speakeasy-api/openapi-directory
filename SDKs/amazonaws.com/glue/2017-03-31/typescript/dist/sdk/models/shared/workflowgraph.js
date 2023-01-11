@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Edge } from "./edge";
-import { Node } from "./node";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowGraph = void 0;
+var utils_1 = require("../../../internal/utils");
+var edge_1 = require("./edge");
+var node_1 = require("./node");
 // WorkflowGraph
 /**
  * A workflow graph represents the complete workflow containing all the Glue components present in the workflow and all the directed connections between them.
@@ -35,13 +38,13 @@ var WorkflowGraph = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Edges", elemType: Edge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Edges", elemType: edge_1.Edge }),
         __metadata("design:type", Array)
     ], WorkflowGraph.prototype, "edges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Nodes", elemType: Node }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Nodes", elemType: node_1.Node }),
         __metadata("design:type", Array)
     ], WorkflowGraph.prototype, "nodes", void 0);
     return WorkflowGraph;
-}(SpeakeasyBase));
-export { WorkflowGraph };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowGraph = WorkflowGraph;

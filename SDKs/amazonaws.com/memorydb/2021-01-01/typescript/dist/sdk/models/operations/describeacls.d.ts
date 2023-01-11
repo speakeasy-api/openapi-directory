@@ -20,7 +20,7 @@ export declare class DescribeAcLsRequest extends SpeakeasyBase {
 export declare class DescribeAcLsResponse extends SpeakeasyBase {
     aclNotFoundFault?: any;
     contentType: string;
-    describeAcLsResponse?: shared.DescribeAcLsResponse;
+    describeACLsResponse?: shared.DescribeAcLsResponse;
     invalidParameterCombinationException?: any;
     statusCode: number;
 }

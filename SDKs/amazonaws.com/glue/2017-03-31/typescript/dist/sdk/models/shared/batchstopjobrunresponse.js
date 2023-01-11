@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchStopJobRunError } from "./batchstopjobrunerror";
-import { BatchStopJobRunSuccessfulSubmission } from "./batchstopjobrunsuccessfulsubmission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchStopJobRunResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchstopjobrunerror_1 = require("./batchstopjobrunerror");
+var batchstopjobrunsuccessfulsubmission_1 = require("./batchstopjobrunsuccessfulsubmission");
 var BatchStopJobRunResponse = /** @class */ (function (_super) {
     __extends(BatchStopJobRunResponse, _super);
     function BatchStopJobRunResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors", elemType: BatchStopJobRunError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors", elemType: batchstopjobrunerror_1.BatchStopJobRunError }),
         __metadata("design:type", Array)
     ], BatchStopJobRunResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuccessfulSubmissions", elemType: BatchStopJobRunSuccessfulSubmission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuccessfulSubmissions", elemType: batchstopjobrunsuccessfulsubmission_1.BatchStopJobRunSuccessfulSubmission }),
         __metadata("design:type", Array)
     ], BatchStopJobRunResponse.prototype, "successfulSubmissions", void 0);
     return BatchStopJobRunResponse;
-}(SpeakeasyBase));
-export { BatchStopJobRunResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchStopJobRunResponse = BatchStopJobRunResponse;

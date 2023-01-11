@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Money } from "./money";
-export var TransferParametersSupportedPrivacyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferParameters = exports.TransferParametersTransferLockStateEnum = exports.TransferParametersSupportedPrivacyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var money_1 = require("./money");
+var TransferParametersSupportedPrivacyEnum;
 (function (TransferParametersSupportedPrivacyEnum) {
     TransferParametersSupportedPrivacyEnum["ContactPrivacyUnspecified"] = "CONTACT_PRIVACY_UNSPECIFIED";
     TransferParametersSupportedPrivacyEnum["PublicContactData"] = "PUBLIC_CONTACT_DATA";
     TransferParametersSupportedPrivacyEnum["PrivateContactData"] = "PRIVATE_CONTACT_DATA";
     TransferParametersSupportedPrivacyEnum["RedactedContactData"] = "REDACTED_CONTACT_DATA";
-})(TransferParametersSupportedPrivacyEnum || (TransferParametersSupportedPrivacyEnum = {}));
-export var TransferParametersTransferLockStateEnum;
+})(TransferParametersSupportedPrivacyEnum = exports.TransferParametersSupportedPrivacyEnum || (exports.TransferParametersSupportedPrivacyEnum = {}));
+var TransferParametersTransferLockStateEnum;
 (function (TransferParametersTransferLockStateEnum) {
     TransferParametersTransferLockStateEnum["TransferLockStateUnspecified"] = "TRANSFER_LOCK_STATE_UNSPECIFIED";
     TransferParametersTransferLockStateEnum["Unlocked"] = "UNLOCKED";
     TransferParametersTransferLockStateEnum["Locked"] = "LOCKED";
-})(TransferParametersTransferLockStateEnum || (TransferParametersTransferLockStateEnum = {}));
+})(TransferParametersTransferLockStateEnum = exports.TransferParametersTransferLockStateEnum || (exports.TransferParametersTransferLockStateEnum = {}));
 // TransferParameters
 /**
  * Parameters required to transfer a domain from another registrar.
@@ -47,33 +50,33 @@ var TransferParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentRegistrar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentRegistrar" }),
         __metadata("design:type", String)
     ], TransferParameters.prototype, "currentRegistrar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentRegistrarUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentRegistrarUri" }),
         __metadata("design:type", String)
     ], TransferParameters.prototype, "currentRegistrarUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], TransferParameters.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameServers" }),
         __metadata("design:type", Array)
     ], TransferParameters.prototype, "nameServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedPrivacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedPrivacy" }),
         __metadata("design:type", Array)
     ], TransferParameters.prototype, "supportedPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferLockState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferLockState" }),
         __metadata("design:type", String)
     ], TransferParameters.prototype, "transferLockState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearlyPrice" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearlyPrice" }),
+        __metadata("design:type", money_1.Money)
     ], TransferParameters.prototype, "yearlyPrice", void 0);
     return TransferParameters;
-}(SpeakeasyBase));
-export { TransferParameters };
+}(utils_1.SpeakeasyBase));
+exports.TransferParameters = TransferParameters;

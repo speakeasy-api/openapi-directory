@@ -9,5 +9,5 @@ import { AttributeValue } from "./attributevalue";
 **/
 export class PutRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Item", elemType: AttributeValue })
-  item: Map<string, AttributeValue>;
+  item: Record<string, AttributeValue>;
 }

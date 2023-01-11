@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AppengineAppsAuthorizedCertificatesCreateRequest, AppengineAppsAuthorizedCertificatesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,48 +30,48 @@ const req: AppengineAppsAuthorizedCertificatesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    appsId: "dolorem",
+    appsId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "molestiae",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "voluptatum",
-    fields: "quos",
-    key: "laboriosam",
-    oauthToken: "incidunt",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "explicabo",
-    uploadType: "fuga",
-    uploadProtocol: "dignissimos",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     certificateRawData: {
-      privateKey: "perferendis",
-      publicCertificate: "fuga",
+      privateKey: "dicta",
+      publicCertificate: "debitis",
     },
     displayName: "voluptatum",
-    domainMappingsCount: 2502447430483721171,
+    domainMappingsCount: 2339563716805116249,
     domainNames: [
-      "quibusdam",
+      "dolorem",
+      "et",
+      "voluptate",
     ],
-    expireTime: "explicabo",
-    id: "vel",
+    expireTime: "iste",
+    id: "vitae",
     managedCertificate: {
-      lastRenewalTime: "earum",
+      lastRenewalTime: "totam",
       status: "FAILED_RETRYING_NOT_VISIBLE",
     },
-    name: "voluptatem",
+    name: "illum",
     visibleDomainMappings: [
-      "vitae",
-      "harum",
-      "ab",
+      "vel",
     ],
   },
 };

@@ -75,7 +75,7 @@ export class DetachPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  detachPolicyResponse?: Map<string, any>;
+  detachPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   directoryNotEnabledException?: any;

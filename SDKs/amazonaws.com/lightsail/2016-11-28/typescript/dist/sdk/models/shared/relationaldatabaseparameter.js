@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseParameter = void 0;
+var utils_1 = require("../../../internal/utils");
 // RelationalDatabaseParameter
 /**
  * Describes the parameters of a database.
@@ -33,37 +36,37 @@ var RelationalDatabaseParameter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedValues" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "allowedValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyMethod" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "applyMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyType" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "applyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isModifiable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isModifiable" }),
         __metadata("design:type", Boolean)
     ], RelationalDatabaseParameter.prototype, "isModifiable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameterName" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "parameterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameterValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameterValue" }),
         __metadata("design:type", String)
     ], RelationalDatabaseParameter.prototype, "parameterValue", void 0);
     return RelationalDatabaseParameter;
-}(SpeakeasyBase));
-export { RelationalDatabaseParameter };
+}(utils_1.SpeakeasyBase));
+exports.RelationalDatabaseParameter = RelationalDatabaseParameter;

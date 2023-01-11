@@ -20,7 +20,7 @@ export class GetUsersUserEmailProgressResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   learnerResponse?: shared.LearnerResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeInput } from "./attribute";
-import { Attribute } from "./attribute";
-// AttributesInput
-/**
- * A container for all the attributes for a given location.
-**/
-var AttributesInput = /** @class */ (function (_super) {
-    __extends(AttributesInput, _super);
-    function AttributesInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: AttributeInput }),
-        __metadata("design:type", Array)
-    ], AttributesInput.prototype, "attributes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], AttributesInput.prototype, "name", void 0);
-    return AttributesInput;
-}(SpeakeasyBase));
-export { AttributesInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributesInput = exports.Attributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribute_1 = require("./attribute");
+var attribute_2 = require("./attribute");
 // Attributes
 /**
  * A container for all the attributes for a given location.
@@ -55,13 +38,33 @@ var Attributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], Attributes.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Attributes.prototype, "name", void 0);
     return Attributes;
-}(SpeakeasyBase));
-export { Attributes };
+}(utils_1.SpeakeasyBase));
+exports.Attributes = Attributes;
+// AttributesInput
+/**
+ * A container for all the attributes for a given location.
+**/
+var AttributesInput = /** @class */ (function (_super) {
+    __extends(AttributesInput, _super);
+    function AttributesInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_2.AttributeInput }),
+        __metadata("design:type", Array)
+    ], AttributesInput.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], AttributesInput.prototype, "name", void 0);
+    return AttributesInput;
+}(utils_1.SpeakeasyBase));
+exports.AttributesInput = AttributesInput;

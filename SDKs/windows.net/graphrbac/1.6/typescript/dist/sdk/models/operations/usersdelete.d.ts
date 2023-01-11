@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class UsersDeletePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
     upnOrObjectId: string;
 }
 export declare class UsersDeleteQueryParams extends SpeakeasyBase {

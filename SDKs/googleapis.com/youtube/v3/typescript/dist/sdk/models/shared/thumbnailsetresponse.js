@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ThumbnailDetails } from "./thumbnaildetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThumbnailSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var thumbnaildetails_1 = require("./thumbnaildetails");
 var ThumbnailSetResponse = /** @class */ (function (_super) {
     __extends(ThumbnailSetResponse, _super);
     function ThumbnailSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], ThumbnailSetResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], ThumbnailSetResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ThumbnailDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: thumbnaildetails_1.ThumbnailDetails }),
         __metadata("design:type", Array)
     ], ThumbnailSetResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ThumbnailSetResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], ThumbnailSetResponse.prototype, "visitorId", void 0);
     return ThumbnailSetResponse;
-}(SpeakeasyBase));
-export { ThumbnailSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ThumbnailSetResponse = ThumbnailSetResponse;

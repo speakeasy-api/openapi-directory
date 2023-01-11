@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteAttributesComputedIdRequest, DeleteAttributesComputedIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
@@ -35,7 +34,7 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteAttributesComputedIdRequest = {
   pathParams: {
-    id: 8186267910158351880,
+    id: 8717895732742165505,
   },
 };
 

@@ -19,7 +19,7 @@ export declare class CreateDataSourceFromRdsRequest extends SpeakeasyBase {
 }
 export declare class CreateDataSourceFromRdsResponse extends SpeakeasyBase {
     contentType: string;
-    createDataSourceFromRdsOutput?: shared.CreateDataSourceFromRdsOutput;
+    createDataSourceFromRDSOutput?: shared.CreateDataSourceFromRdsOutput;
     idempotentParameterMismatchException?: any;
     internalServerException?: any;
     invalidInputException?: any;

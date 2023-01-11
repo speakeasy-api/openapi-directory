@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness } from "./googleplaydeveloperreportingv1beta1freshnessinfofreshness";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1beta1FreshnessInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplaydeveloperreportingv1beta1freshnessinfofreshness_1 = require("./googleplaydeveloperreportingv1beta1freshnessinfofreshness");
 // GooglePlayDeveloperReportingV1beta1FreshnessInfo
 /**
  * Represents the latest available time that can be requested in a TimelineSpec. Different aggregation periods have different freshness. For example, `DAILY` aggregation may lag behind `HOURLY` in cases where such aggregation is computed only once at the end of the day.
@@ -34,9 +37,9 @@ var GooglePlayDeveloperReportingV1beta1FreshnessInfo = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freshnesses", elemType: GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freshnesses", elemType: googleplaydeveloperreportingv1beta1freshnessinfofreshness_1.GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1beta1FreshnessInfo.prototype, "freshnesses", void 0);
     return GooglePlayDeveloperReportingV1beta1FreshnessInfo;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1beta1FreshnessInfo };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1beta1FreshnessInfo = GooglePlayDeveloperReportingV1beta1FreshnessInfo;

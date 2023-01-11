@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteEnvironmentResponse = exports.DeleteEnvironmentRequest = exports.DeleteEnvironmentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteEnvironmentPathParams = /** @class */ (function (_super) {
     __extends(DeleteEnvironmentPathParams, _super);
     function DeleteEnvironmentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environmentId" }),
         __metadata("design:type", String)
     ], DeleteEnvironmentPathParams.prototype, "environmentId", void 0);
     return DeleteEnvironmentPathParams;
-}(SpeakeasyBase));
-export { DeleteEnvironmentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEnvironmentPathParams = DeleteEnvironmentPathParams;
 var DeleteEnvironmentRequest = /** @class */ (function (_super) {
     __extends(DeleteEnvironmentRequest, _super);
     function DeleteEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteEnvironmentPathParams)
     ], DeleteEnvironmentRequest.prototype, "pathParams", void 0);
     return DeleteEnvironmentRequest;
-}(SpeakeasyBase));
-export { DeleteEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEnvironmentRequest = DeleteEnvironmentRequest;
 var DeleteEnvironmentResponse = /** @class */ (function (_super) {
     __extends(DeleteEnvironmentResponse, _super);
     function DeleteEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteEnvironmentResponse.prototype, "statusCode", void 0);
     return DeleteEnvironmentResponse;
-}(SpeakeasyBase));
-export { DeleteEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEnvironmentResponse = DeleteEnvironmentResponse;

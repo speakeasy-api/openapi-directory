@@ -38,6 +38,6 @@ export declare class GetNameConceptTypeSpecificConceptJsonRequest extends Speake
 }
 export declare class GetNameConceptTypeSpecificConceptJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getNameConceptTypeSpecificConceptJson200ApplicationJsonObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJson;
     statusCode: number;
+    getNameConceptTypeSpecificConceptJSON200ApplicationJSONObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJson;
 }

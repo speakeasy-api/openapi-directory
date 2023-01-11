@@ -109,11 +109,11 @@ export declare class VochseRequest extends SpeakeasyBase {
 export declare class VochseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vochse400ApplicationJsonObject?: Vochse400ApplicationJson;
-    vochse401ApplicationJsonObject?: Vochse401ApplicationJson;
-    vochse404ApplicationJsonObject?: Vochse404ApplicationJson;
-    vochse500ApplicationJsonObject?: Vochse500ApplicationJson;
-    vochse502ApplicationJsonObject?: Vochse502ApplicationJson;
-    vochse503ApplicationJsonObject?: Vochse503ApplicationJson;
-    vochse504ApplicationJsonObject?: Vochse504ApplicationJson;
+    vochse400ApplicationJSONObject?: Vochse400ApplicationJson;
+    vochse401ApplicationJSONObject?: Vochse401ApplicationJson;
+    vochse404ApplicationJSONObject?: Vochse404ApplicationJson;
+    vochse500ApplicationJSONObject?: Vochse500ApplicationJson;
+    vochse502ApplicationJSONObject?: Vochse502ApplicationJson;
+    vochse503ApplicationJSONObject?: Vochse503ApplicationJson;
+    vochse504ApplicationJSONObject?: Vochse504ApplicationJson;
 }

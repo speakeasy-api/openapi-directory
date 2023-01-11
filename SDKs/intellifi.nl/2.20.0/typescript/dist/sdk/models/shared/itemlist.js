@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemListInput = exports.ItemList = void 0;
+var utils_1 = require("../../../internal/utils");
 var ItemList = /** @class */ (function (_super) {
     __extends(ItemList, _super);
     function ItemList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], ItemList.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=list" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "list", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ItemList.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha1" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "sha1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], ItemList.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ItemList.prototype, "total", void 0);
     return ItemList;
-}(SpeakeasyBase));
-export { ItemList };
+}(utils_1.SpeakeasyBase));
+exports.ItemList = ItemList;
 var ItemListInput = /** @class */ (function (_super) {
     __extends(ItemListInput, _super);
     function ItemListInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], ItemListInput.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ItemListInput.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ItemListInput.prototype, "metadata", void 0);
     return ItemListInput;
-}(SpeakeasyBase));
-export { ItemListInput };
+}(utils_1.SpeakeasyBase));
+exports.ItemListInput = ItemListInput;

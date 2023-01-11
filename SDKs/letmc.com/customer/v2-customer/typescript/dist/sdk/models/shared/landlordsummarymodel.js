@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LandlordSummaryTenancyModel } from "./landlordsummarytenancymodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordSummaryModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var landlordsummarytenancymodel_1 = require("./landlordsummarytenancymodel");
 // LandlordSummaryModel
 /**
  * Landlord Summary - Landing Page.
@@ -34,21 +37,21 @@ var LandlordSummaryModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountBalance" }),
         __metadata("design:type", Number)
     ], LandlordSummaryModel.prototype, "accountBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastPayment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastPayment" }),
         __metadata("design:type", Date)
     ], LandlordSummaryModel.prototype, "lastPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenancies", elemType: LandlordSummaryTenancyModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenancies", elemType: landlordsummarytenancymodel_1.LandlordSummaryTenancyModel }),
         __metadata("design:type", Array)
     ], LandlordSummaryModel.prototype, "tenancies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalRentArrears" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalRentArrears" }),
         __metadata("design:type", Number)
     ], LandlordSummaryModel.prototype, "totalRentArrears", void 0);
     return LandlordSummaryModel;
-}(SpeakeasyBase));
-export { LandlordSummaryModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordSummaryModel = LandlordSummaryModel;

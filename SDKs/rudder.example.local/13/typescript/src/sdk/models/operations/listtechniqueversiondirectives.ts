@@ -53,5 +53,5 @@ export class ListTechniqueVersionDirectivesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listTechniqueVersionDirectives200ApplicationJsonObject?: ListTechniqueVersionDirectives200ApplicationJson;
+  listTechniqueVersionDirectives200ApplicationJSONObject?: ListTechniqueVersionDirectives200ApplicationJson;
 }

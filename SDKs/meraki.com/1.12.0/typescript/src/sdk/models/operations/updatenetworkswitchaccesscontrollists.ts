@@ -78,5 +78,5 @@ export class UpdateNetworkSwitchAccessControlListsResponse extends SpeakeasyBase
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchAccessControlLists200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchAccessControlLists200ApplicationJSONObject?: Record<string, any>;
 }

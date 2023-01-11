@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LandlordChaseNoteModel } from "./landlordchasenotemodel";
-import { LandlordRentOustandingItem } from "./landlordrentoustandingitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordRentArrearsModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var landlordchasenotemodel_1 = require("./landlordchasenotemodel");
+var landlordrentoustandingitem_1 = require("./landlordrentoustandingitem");
 // LandlordRentArrearsModel
 /**
  * Landlord Rent Arrears.
@@ -35,21 +38,21 @@ var LandlordRentArrearsModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChaseNotes", elemType: LandlordChaseNoteModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChaseNotes", elemType: landlordchasenotemodel_1.LandlordChaseNoteModel }),
         __metadata("design:type", Array)
     ], LandlordRentArrearsModel.prototype, "chaseNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RentCollected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RentCollected" }),
         __metadata("design:type", Number)
     ], LandlordRentArrearsModel.prototype, "rentCollected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RentOutstanding", elemType: LandlordRentOustandingItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RentOutstanding", elemType: landlordrentoustandingitem_1.LandlordRentOustandingItem }),
         __metadata("design:type", Array)
     ], LandlordRentArrearsModel.prototype, "rentOutstanding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalRentArrears" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalRentArrears" }),
         __metadata("design:type", Number)
     ], LandlordRentArrearsModel.prototype, "totalRentArrears", void 0);
     return LandlordRentArrearsModel;
-}(SpeakeasyBase));
-export { LandlordRentArrearsModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordRentArrearsModel = LandlordRentArrearsModel;

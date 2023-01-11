@@ -1,61 +1,42 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { BaseConversion } from "./baseconversion";
-import { NumberChecks } from "./numberchecks";
-import { NumberFacts } from "./numberfacts";
-import { NumberGeneration } from "./numbergeneration";
-import { NumberSystemsConversion } from "./numbersystemsconversion";
-import { NumberOfTheDay } from "./numberoftheday";
-import { Pi } from "./pi";
-import { Prime } from "./prime";
-import { Spell } from "./spell";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var baseconversion_1 = require("./baseconversion");
+var numberchecks_1 = require("./numberchecks");
+var numberfacts_1 = require("./numberfacts");
+var numbergeneration_1 = require("./numbergeneration");
+var numbersystemsconversion_1 = require("./numbersystemsconversion");
+var numberoftheday_1 = require("./numberoftheday");
+var pi_1 = require("./pi");
+var prime_1 = require("./prime");
+var spell_1 = require("./spell");
+exports.ServerList = [
     "https://api.math.tools",
     "http://api.math.tools",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.baseConversion = new BaseConversion(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.numberChecks = new NumberChecks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.numberFacts = new NumberFacts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.numberGeneration = new NumberGeneration(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.numberSystemsConversion = new NumberSystemsConversion(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.numberOfTheDay = new NumberOfTheDay(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.pi = new Pi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.prime = new Prime(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.spell = new Spell(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.baseConversion = new baseconversion_1.BaseConversion(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.numberChecks = new numberchecks_1.NumberChecks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.numberFacts = new numberfacts_1.NumberFacts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.numberGeneration = new numbergeneration_1.NumberGeneration(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.numberSystemsConversion = new numbersystemsconversion_1.NumberSystemsConversion(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.numberOfTheDay = new numberoftheday_1.NumberOfTheDay(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.pi = new pi_1.Pi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.prime = new prime_1.Prime(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.spell = new spell_1.Spell(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

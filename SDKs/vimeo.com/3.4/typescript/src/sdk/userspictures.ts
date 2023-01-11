@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,23 +31,25 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/pictures", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/pictures", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CreatePictureResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -56,7 +57,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -76,19 +76,21 @@ export class UsersPictures {
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CreatePictureAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -96,7 +98,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -112,16 +113,18 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -133,7 +136,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -149,16 +151,18 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -170,7 +174,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -186,12 +189,12 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -199,25 +202,25 @@ export class UsersPictures {
     }
     
     const client: AxiosInstance = this._securityClient!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.EditPictureResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -225,7 +228,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -241,12 +243,12 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -254,25 +256,25 @@ export class UsersPictures {
     }
     
     const client: AxiosInstance = this._securityClient!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.EditPictureAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -280,7 +282,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -296,23 +297,25 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/pictures/{portraitset_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPictureResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -320,7 +323,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -336,23 +338,25 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/pictures/{portraitset_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPictureAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
@@ -360,7 +364,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -376,11 +379,11 @@ export class UsersPictures {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/pictures", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/pictures", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -388,19 +391,21 @@ export class UsersPictures {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPicturesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.pictures = httpRes?.data;
             }
             break;
@@ -408,7 +413,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -428,7 +432,7 @@ export class UsersPictures {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -436,19 +440,21 @@ export class UsersPictures {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetPicturesAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.pictures = httpRes?.data;
             }
             break;
@@ -456,7 +462,6 @@ export class UsersPictures {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

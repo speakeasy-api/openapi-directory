@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnsemblGeneMappingUsingGetResponse = exports.GetEnsemblGeneMappingUsingGetRequest = exports.GetEnsemblGeneMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEnsemblGeneMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetEnsemblGeneMappingUsingGetPathParams, _super);
     function GetEnsemblGeneMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetEnsemblGeneMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetEnsemblGeneMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetEnsemblGeneMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnsemblGeneMappingUsingGetPathParams = GetEnsemblGeneMappingUsingGetPathParams;
 var GetEnsemblGeneMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetEnsemblGeneMappingUsingGetRequest, _super);
     function GetEnsemblGeneMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnsemblGeneMappingUsingGetPathParams)
     ], GetEnsemblGeneMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetEnsemblGeneMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetEnsemblGeneMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnsemblGeneMappingUsingGetRequest = GetEnsemblGeneMappingUsingGetRequest;
 var GetEnsemblGeneMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetEnsemblGeneMappingUsingGetResponse, _super);
     function GetEnsemblGeneMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEnsemblGeneMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnsemblGeneMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnsemblGeneMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetEnsemblGeneMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetEnsemblGeneMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnsemblGeneMappingUsingGetResponse = GetEnsemblGeneMappingUsingGetResponse;

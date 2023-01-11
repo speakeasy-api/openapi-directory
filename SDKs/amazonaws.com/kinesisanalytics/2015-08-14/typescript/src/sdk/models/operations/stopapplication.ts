@@ -57,7 +57,7 @@ export class StopApplicationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopApplicationResponse?: Map<string, any>;
+  stopApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   unsupportedOperationException?: any;

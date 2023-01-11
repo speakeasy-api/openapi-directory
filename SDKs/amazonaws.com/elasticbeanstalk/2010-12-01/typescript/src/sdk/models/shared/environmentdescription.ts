@@ -32,7 +32,7 @@ export class EnvironmentDescription extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata()
-  endpointUrl?: string;
+  endpointURL?: string;
 
   @SpeakeasyMetadata()
   environmentArn?: string;

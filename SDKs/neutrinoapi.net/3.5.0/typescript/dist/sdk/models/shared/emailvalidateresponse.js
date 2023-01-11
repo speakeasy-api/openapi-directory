@@ -1,0 +1,76 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailValidateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var EmailValidateResponse = /** @class */ (function (_super) {
+    __extends(EmailValidateResponse, _super);
+    function EmailValidateResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", String)
+    ], EmailValidateResponse.prototype, "domain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainError" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "domainError", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
+        __metadata("design:type", String)
+    ], EmailValidateResponse.prototype, "email", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisposable" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "isDisposable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isFreemail" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "isFreemail", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPersonal" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "isPersonal", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
+        __metadata("design:type", String)
+    ], EmailValidateResponse.prototype, "provider", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syntaxError" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "syntaxError", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typosFixed" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "typosFixed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid" }),
+        __metadata("design:type", Boolean)
+    ], EmailValidateResponse.prototype, "valid", void 0);
+    return EmailValidateResponse;
+}(utils_1.SpeakeasyBase));
+exports.EmailValidateResponse = EmailValidateResponse;

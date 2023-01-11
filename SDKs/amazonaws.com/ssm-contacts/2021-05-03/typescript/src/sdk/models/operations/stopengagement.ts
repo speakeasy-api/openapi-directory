@@ -60,7 +60,7 @@ export class StopEngagementResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopEngagementResult?: Map<string, any>;
+  stopEngagementResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   throttlingException?: any;

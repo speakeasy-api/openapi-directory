@@ -106,11 +106,11 @@ export declare class AlsfcRequest extends SpeakeasyBase {
 export declare class AlsfcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    alsfc400ApplicationJsonObject?: Alsfc400ApplicationJson;
-    alsfc401ApplicationJsonObject?: Alsfc401ApplicationJson;
-    alsfc404ApplicationJsonObject?: Alsfc404ApplicationJson;
-    alsfc500ApplicationJsonObject?: Alsfc500ApplicationJson;
-    alsfc502ApplicationJsonObject?: Alsfc502ApplicationJson;
-    alsfc503ApplicationJsonObject?: Alsfc503ApplicationJson;
-    alsfc504ApplicationJsonObject?: Alsfc504ApplicationJson;
+    alsfc400ApplicationJSONObject?: Alsfc400ApplicationJson;
+    alsfc401ApplicationJSONObject?: Alsfc401ApplicationJson;
+    alsfc404ApplicationJSONObject?: Alsfc404ApplicationJson;
+    alsfc500ApplicationJSONObject?: Alsfc500ApplicationJson;
+    alsfc502ApplicationJSONObject?: Alsfc502ApplicationJson;
+    alsfc503ApplicationJSONObject?: Alsfc503ApplicationJson;
+    alsfc504ApplicationJSONObject?: Alsfc504ApplicationJson;
 }

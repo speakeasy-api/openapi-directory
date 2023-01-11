@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSubnetGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CreateSubnetGroupRequest = /** @class */ (function (_super) {
     __extends(CreateSubnetGroupRequest, _super);
     function CreateSubnetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateSubnetGroupRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetGroupName" }),
         __metadata("design:type", String)
     ], CreateSubnetGroupRequest.prototype, "subnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], CreateSubnetGroupRequest.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateSubnetGroupRequest.prototype, "tags", void 0);
     return CreateSubnetGroupRequest;
-}(SpeakeasyBase));
-export { CreateSubnetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateSubnetGroupRequest = CreateSubnetGroupRequest;

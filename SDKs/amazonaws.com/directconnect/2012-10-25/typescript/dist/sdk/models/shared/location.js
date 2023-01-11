@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Location = void 0;
+var utils_1 = require("../../../internal/utils");
 // Location
 /**
  * Information about an Direct Connect location.
@@ -33,29 +36,29 @@ var Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableMacSecPortSpeeds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableMacSecPortSpeeds" }),
         __metadata("design:type", Array)
     ], Location.prototype, "availableMacSecPortSpeeds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availablePortSpeeds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availablePortSpeeds" }),
         __metadata("design:type", Array)
     ], Location.prototype, "availablePortSpeeds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableProviders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableProviders" }),
         __metadata("design:type", Array)
     ], Location.prototype, "availableProviders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationCode" }),
         __metadata("design:type", String)
     ], Location.prototype, "locationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], Location.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], Location.prototype, "region", void 0);
     return Location;
-}(SpeakeasyBase));
-export { Location };
+}(utils_1.SpeakeasyBase));
+exports.Location = Location;

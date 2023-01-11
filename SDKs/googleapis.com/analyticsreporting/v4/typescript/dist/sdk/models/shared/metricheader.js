@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricHeaderEntry } from "./metricheaderentry";
-import { PivotHeader } from "./pivotheader";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricHeader = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricheaderentry_1 = require("./metricheaderentry");
+var pivotheader_1 = require("./pivotheader");
 // MetricHeader
 /**
  * The headers for the metrics.
@@ -35,13 +38,13 @@ var MetricHeader = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricHeaderEntries", elemType: MetricHeaderEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricHeaderEntries", elemType: metricheaderentry_1.MetricHeaderEntry }),
         __metadata("design:type", Array)
     ], MetricHeader.prototype, "metricHeaderEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pivotHeaders", elemType: PivotHeader }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pivotHeaders", elemType: pivotheader_1.PivotHeader }),
         __metadata("design:type", Array)
     ], MetricHeader.prototype, "pivotHeaders", void 0);
     return MetricHeader;
-}(SpeakeasyBase));
-export { MetricHeader };
+}(utils_1.SpeakeasyBase));
+exports.MetricHeader = MetricHeader;

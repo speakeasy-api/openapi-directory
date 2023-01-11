@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInformTimeoutResponse = exports.GetInformTimeoutRequest = exports.GetInformTimeoutPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetInformTimeoutPathParams = /** @class */ (function (_super) {
     __extends(GetInformTimeoutPathParams, _super);
     function GetInformTimeoutPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetInformTimeoutPathParams.prototype, "agentNum", void 0);
     return GetInformTimeoutPathParams;
-}(SpeakeasyBase));
-export { GetInformTimeoutPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInformTimeoutPathParams = GetInformTimeoutPathParams;
 var GetInformTimeoutRequest = /** @class */ (function (_super) {
     __extends(GetInformTimeoutRequest, _super);
     function GetInformTimeoutRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInformTimeoutPathParams)
     ], GetInformTimeoutRequest.prototype, "pathParams", void 0);
     return GetInformTimeoutRequest;
-}(SpeakeasyBase));
-export { GetInformTimeoutRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInformTimeoutRequest = GetInformTimeoutRequest;
 var GetInformTimeoutResponse = /** @class */ (function (_super) {
     __extends(GetInformTimeoutResponse, _super);
     function GetInformTimeoutResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInformTimeoutResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInformTimeoutResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetInformTimeoutResponse.prototype, "getInformTimeout200ApplicationJsonInt32Integer", void 0);
+    ], GetInformTimeoutResponse.prototype, "getInformTimeout200ApplicationJSONInt32Integer", void 0);
     return GetInformTimeoutResponse;
-}(SpeakeasyBase));
-export { GetInformTimeoutResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInformTimeoutResponse = GetInformTimeoutResponse;

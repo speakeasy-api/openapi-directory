@@ -3,12 +3,6 @@ import { CreativeServingDecision } from "./creativeservingdecision";
 import { HtmlContent } from "./htmlcontent";
 import { NativeContent } from "./nativecontent";
 import { VideoContent } from "./videocontent";
-export declare enum CreativeCreativeFormatEnum {
-    CreativeFormatUnspecified = "CREATIVE_FORMAT_UNSPECIFIED",
-    Html = "HTML",
-    Video = "VIDEO",
-    Native = "NATIVE"
-}
 export declare enum CreativeDeclaredAttributesEnum {
     AttributeUnspecified = "ATTRIBUTE_UNSPECIFIED",
     ImageRichMedia = "IMAGE_RICH_MEDIA",
@@ -57,6 +51,32 @@ export declare enum CreativeRestrictedCategoriesEnum {
     RestrictedCategoryUnspecified = "RESTRICTED_CATEGORY_UNSPECIFIED",
     Alcohol = "ALCOHOL"
 }
+export declare enum CreativeCreativeFormatEnum {
+    CreativeFormatUnspecified = "CREATIVE_FORMAT_UNSPECIFIED",
+    Html = "HTML",
+    Video = "VIDEO",
+    Native = "NATIVE"
+}
+/**
+ * A creative and its classification data.
+**/
+export declare class CreativeInput extends SpeakeasyBase {
+    adChoicesDestinationUrl?: string;
+    advertiserName?: string;
+    agencyId?: string;
+    creativeId?: string;
+    creativeServingDecision?: CreativeServingDecision;
+    declaredAttributes?: CreativeDeclaredAttributesEnum[];
+    declaredClickThroughUrls?: string[];
+    declaredRestrictedCategories?: CreativeDeclaredRestrictedCategoriesEnum[];
+    declaredVendorIds?: number[];
+    html?: HtmlContent;
+    impressionTrackingUrls?: string[];
+    native?: NativeContent;
+    renderUrl?: string;
+    restrictedCategories?: CreativeRestrictedCategoriesEnum[];
+    video?: VideoContent;
+}
 /**
  * A creative and its classification data.
 **/
@@ -81,25 +101,5 @@ export declare class Creative extends SpeakeasyBase {
     renderUrl?: string;
     restrictedCategories?: CreativeRestrictedCategoriesEnum[];
     version?: number;
-    video?: VideoContent;
-}
-/**
- * A creative and its classification data.
-**/
-export declare class CreativeInput extends SpeakeasyBase {
-    adChoicesDestinationUrl?: string;
-    advertiserName?: string;
-    agencyId?: string;
-    creativeId?: string;
-    creativeServingDecision?: CreativeServingDecision;
-    declaredAttributes?: CreativeDeclaredAttributesEnum[];
-    declaredClickThroughUrls?: string[];
-    declaredRestrictedCategories?: CreativeDeclaredRestrictedCategoriesEnum[];
-    declaredVendorIds?: number[];
-    html?: HtmlContent;
-    impressionTrackingUrls?: string[];
-    native?: NativeContent;
-    renderUrl?: string;
-    restrictedCategories?: CreativeRestrictedCategoriesEnum[];
     video?: VideoContent;
 }

@@ -20,8 +20,8 @@ export declare class CompanyAlternativeSearchRequest extends SpeakeasyBase {
     security: CompanyAlternativeSearchSecurity;
 }
 export declare class CompanyAlternativeSearchResponse extends SpeakeasyBase {
-    companyAlternativeSearch200ApplicationJsonAnies?: any[];
-    companyAlternativeSearchDefaultApplicationJsonAny?: any;
+    companyAlternativeSearch200ApplicationJSONAnies?: any[];
+    companyAlternativeSearchDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

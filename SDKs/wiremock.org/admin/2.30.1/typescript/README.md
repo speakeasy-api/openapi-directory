@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAdminRequestsUnmatchedNearMissesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -54,8 +53,8 @@ sdk.nearMisses.getAdminRequestsUnmatchedNearMisses().then((res: GetAdminRequests
 * `deleteAdminRequests` - Delete all requests in journal
 * `deleteAdminRequestsRequestId` - Delete request by ID
 * `getAdminRequests` - Get all requests in journal
-* `getAdminRequestsRequestId` - Get request by ID
 * `getAdminRequestsUnmatched` - Find unmatched requests
+* `getAdminRequestsRequestId` - Get request by ID
 * `postAdminRequestsCount` - Count requests by criteria
 * `postAdminRequestsFind` - Find requests by criteria
 * `postAdminRequestsRemove` - Remove requests by criteria

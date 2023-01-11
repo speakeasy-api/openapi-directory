@@ -1,0 +1,175 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDiscoveryV2SuggestResponse = exports.GetDiscoveryV2SuggestRequest = exports.GetDiscoveryV2SuggestQueryParams = exports.GetDiscoveryV2SuggestUnitEnum = exports.GetDiscoveryV2SuggestSourceEnum = exports.GetDiscoveryV2SuggestIncludeTbdEnum = exports.GetDiscoveryV2SuggestIncludeTbaEnum = exports.GetDiscoveryV2SuggestIncludeSpellcheckEnum = exports.GetDiscoveryV2SuggestIncludeLicensedContentEnum = exports.GetDiscoveryV2SuggestIncludeFuzzyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDiscoveryV2SuggestIncludeFuzzyEnum;
+(function (GetDiscoveryV2SuggestIncludeFuzzyEnum) {
+    GetDiscoveryV2SuggestIncludeFuzzyEnum["Yes"] = "yes";
+    GetDiscoveryV2SuggestIncludeFuzzyEnum["No"] = " no";
+})(GetDiscoveryV2SuggestIncludeFuzzyEnum = exports.GetDiscoveryV2SuggestIncludeFuzzyEnum || (exports.GetDiscoveryV2SuggestIncludeFuzzyEnum = {}));
+var GetDiscoveryV2SuggestIncludeLicensedContentEnum;
+(function (GetDiscoveryV2SuggestIncludeLicensedContentEnum) {
+    GetDiscoveryV2SuggestIncludeLicensedContentEnum["Yes"] = "yes";
+    GetDiscoveryV2SuggestIncludeLicensedContentEnum["No"] = " no";
+})(GetDiscoveryV2SuggestIncludeLicensedContentEnum = exports.GetDiscoveryV2SuggestIncludeLicensedContentEnum || (exports.GetDiscoveryV2SuggestIncludeLicensedContentEnum = {}));
+var GetDiscoveryV2SuggestIncludeSpellcheckEnum;
+(function (GetDiscoveryV2SuggestIncludeSpellcheckEnum) {
+    GetDiscoveryV2SuggestIncludeSpellcheckEnum["Yes"] = "yes";
+    GetDiscoveryV2SuggestIncludeSpellcheckEnum["No"] = " no";
+})(GetDiscoveryV2SuggestIncludeSpellcheckEnum = exports.GetDiscoveryV2SuggestIncludeSpellcheckEnum || (exports.GetDiscoveryV2SuggestIncludeSpellcheckEnum = {}));
+var GetDiscoveryV2SuggestIncludeTbaEnum;
+(function (GetDiscoveryV2SuggestIncludeTbaEnum) {
+    GetDiscoveryV2SuggestIncludeTbaEnum["Yes"] = "yes";
+    GetDiscoveryV2SuggestIncludeTbaEnum["No"] = " no";
+    GetDiscoveryV2SuggestIncludeTbaEnum["Only"] = " only";
+})(GetDiscoveryV2SuggestIncludeTbaEnum = exports.GetDiscoveryV2SuggestIncludeTbaEnum || (exports.GetDiscoveryV2SuggestIncludeTbaEnum = {}));
+var GetDiscoveryV2SuggestIncludeTbdEnum;
+(function (GetDiscoveryV2SuggestIncludeTbdEnum) {
+    GetDiscoveryV2SuggestIncludeTbdEnum["Yes"] = "yes";
+    GetDiscoveryV2SuggestIncludeTbdEnum["No"] = " no";
+    GetDiscoveryV2SuggestIncludeTbdEnum["Only"] = " only";
+})(GetDiscoveryV2SuggestIncludeTbdEnum = exports.GetDiscoveryV2SuggestIncludeTbdEnum || (exports.GetDiscoveryV2SuggestIncludeTbdEnum = {}));
+var GetDiscoveryV2SuggestSourceEnum;
+(function (GetDiscoveryV2SuggestSourceEnum) {
+    GetDiscoveryV2SuggestSourceEnum["Ticketmaster"] = "ticketmaster";
+    GetDiscoveryV2SuggestSourceEnum["Universe"] = " universe";
+    GetDiscoveryV2SuggestSourceEnum["Frontgate"] = " frontgate";
+    GetDiscoveryV2SuggestSourceEnum["Tmr"] = " tmr";
+})(GetDiscoveryV2SuggestSourceEnum = exports.GetDiscoveryV2SuggestSourceEnum || (exports.GetDiscoveryV2SuggestSourceEnum = {}));
+var GetDiscoveryV2SuggestUnitEnum;
+(function (GetDiscoveryV2SuggestUnitEnum) {
+    GetDiscoveryV2SuggestUnitEnum["Miles"] = "miles";
+    GetDiscoveryV2SuggestUnitEnum["Km"] = "km";
+})(GetDiscoveryV2SuggestUnitEnum = exports.GetDiscoveryV2SuggestUnitEnum || (exports.GetDiscoveryV2SuggestUnitEnum = {}));
+var GetDiscoveryV2SuggestQueryParams = /** @class */ (function (_super) {
+    __extends(GetDiscoveryV2SuggestQueryParams, _super);
+    function GetDiscoveryV2SuggestQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientVisibility" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "clientVisibility", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=countryCode" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "countryCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=geoPoint" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "geoPoint", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeFuzzy" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "includeFuzzy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeLicensedContent" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "includeLicensedContent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeSpellcheck" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "includeSpellcheck", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeTBA" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "includeTBA", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeTBD" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "includeTBD", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keyword" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "keyword", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=latlong" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "latlong", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locale" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "locale", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=radius" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "radius", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=segmentId" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "segmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=size" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "size", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=source" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "source", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=unit" }),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestQueryParams.prototype, "unit", void 0);
+    return GetDiscoveryV2SuggestQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetDiscoveryV2SuggestQueryParams = GetDiscoveryV2SuggestQueryParams;
+var GetDiscoveryV2SuggestRequest = /** @class */ (function (_super) {
+    __extends(GetDiscoveryV2SuggestRequest, _super);
+    function GetDiscoveryV2SuggestRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetDiscoveryV2SuggestQueryParams)
+    ], GetDiscoveryV2SuggestRequest.prototype, "queryParams", void 0);
+    return GetDiscoveryV2SuggestRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetDiscoveryV2SuggestRequest = GetDiscoveryV2SuggestRequest;
+var GetDiscoveryV2SuggestResponse = /** @class */ (function (_super) {
+    __extends(GetDiscoveryV2SuggestResponse, _super);
+    function GetDiscoveryV2SuggestResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], GetDiscoveryV2SuggestResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestResponse.prototype, "getDiscoveryV2Suggest200ApplicationHalPlusJsonString", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetDiscoveryV2SuggestResponse.prototype, "getDiscoveryV2Suggest200ApplicationJSONString", void 0);
+    return GetDiscoveryV2SuggestResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetDiscoveryV2SuggestResponse = GetDiscoveryV2SuggestResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Enterprise = void 0;
+var utils_1 = require("../../../internal/utils");
 // Enterprise
 /**
  * An enterprise account
@@ -33,45 +36,45 @@ var Enterprise = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Enterprise.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Enterprise.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Enterprise.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website_url" }),
         __metadata("design:type", String)
     ], Enterprise.prototype, "websiteUrl", void 0);
     return Enterprise;
-}(SpeakeasyBase));
-export { Enterprise };
+}(utils_1.SpeakeasyBase));
+exports.Enterprise = Enterprise;

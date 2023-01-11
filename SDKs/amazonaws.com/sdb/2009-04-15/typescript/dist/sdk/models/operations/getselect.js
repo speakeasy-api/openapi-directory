@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSelectActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSelectResponse = exports.GetSelectRequest = exports.GetSelectQueryParams = exports.GetSelectVersionEnum = exports.GetSelectActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSelectActionEnum;
 (function (GetSelectActionEnum) {
     GetSelectActionEnum["Select"] = "Select";
-})(GetSelectActionEnum || (GetSelectActionEnum = {}));
-export var GetSelectVersionEnum;
+})(GetSelectActionEnum = exports.GetSelectActionEnum || (exports.GetSelectActionEnum = {}));
+var GetSelectVersionEnum;
 (function (GetSelectVersionEnum) {
     GetSelectVersionEnum["TwoThousandAndNine0415"] = "2009-04-15";
-})(GetSelectVersionEnum || (GetSelectVersionEnum = {}));
+})(GetSelectVersionEnum = exports.GetSelectVersionEnum || (exports.GetSelectVersionEnum = {}));
 var GetSelectQueryParams = /** @class */ (function (_super) {
     __extends(GetSelectQueryParams, _super);
     function GetSelectQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConsistentRead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConsistentRead" }),
         __metadata("design:type", Boolean)
     ], GetSelectQueryParams.prototype, "consistentRead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SelectExpression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SelectExpression" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "selectExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetSelectQueryParams.prototype, "version", void 0);
     return GetSelectQueryParams;
-}(SpeakeasyBase));
-export { GetSelectQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSelectQueryParams = GetSelectQueryParams;
 var GetSelectRequest = /** @class */ (function (_super) {
     __extends(GetSelectRequest, _super);
     function GetSelectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSelectQueryParams)
     ], GetSelectRequest.prototype, "queryParams", void 0);
     return GetSelectRequest;
-}(SpeakeasyBase));
-export { GetSelectRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSelectRequest = GetSelectRequest;
 var GetSelectResponse = /** @class */ (function (_super) {
     __extends(GetSelectResponse, _super);
     function GetSelectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSelectResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSelectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSelectResponse.prototype, "statusCode", void 0);
     return GetSelectResponse;
-}(SpeakeasyBase));
-export { GetSelectResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSelectResponse = GetSelectResponse;

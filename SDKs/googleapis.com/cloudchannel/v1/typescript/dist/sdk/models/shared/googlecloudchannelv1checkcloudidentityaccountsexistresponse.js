@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1CloudIdentityCustomerAccount } from "./googlecloudchannelv1cloudidentitycustomeraccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1cloudidentitycustomeraccount_1 = require("./googlecloudchannelv1cloudidentitycustomeraccount");
 // GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse
 /**
  * Response message for CloudChannelService.CheckCloudIdentityAccountsExist.
@@ -34,9 +37,9 @@ var GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudIdentityAccounts", elemType: GoogleCloudChannelV1CloudIdentityCustomerAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudIdentityAccounts", elemType: googlecloudchannelv1cloudidentitycustomeraccount_1.GoogleCloudChannelV1CloudIdentityCustomerAccount }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse.prototype, "cloudIdentityAccounts", void 0);
     return GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse = GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse;

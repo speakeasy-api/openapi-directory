@@ -15,7 +15,7 @@ export declare class ReposListContributorsRequest extends SpeakeasyBase {
 }
 export declare class ReposListContributorsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     contributors?: shared.Contributor[];

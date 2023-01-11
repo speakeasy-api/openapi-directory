@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcRoute } from "./grpcroute";
-import { HttpRoute } from "./httproute";
-import { TcpRoute } from "./tcproute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcroute_1 = require("./grpcroute");
+var httproute_1 = require("./httproute");
+var tcproute_1 = require("./tcproute");
 // RouteSpec
 /**
  * An object that represents a route specification. Specify one route type.
@@ -36,25 +39,25 @@ var RouteSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpcRoute" }),
-        __metadata("design:type", GrpcRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpcRoute" }),
+        __metadata("design:type", grpcroute_1.GrpcRoute)
     ], RouteSpec.prototype, "grpcRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http2Route" }),
-        __metadata("design:type", HttpRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http2Route" }),
+        __metadata("design:type", httproute_1.HttpRoute)
     ], RouteSpec.prototype, "http2Route", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpRoute" }),
-        __metadata("design:type", HttpRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpRoute" }),
+        __metadata("design:type", httproute_1.HttpRoute)
     ], RouteSpec.prototype, "httpRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], RouteSpec.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tcpRoute" }),
-        __metadata("design:type", TcpRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tcpRoute" }),
+        __metadata("design:type", tcproute_1.TcpRoute)
     ], RouteSpec.prototype, "tcpRoute", void 0);
     return RouteSpec;
-}(SpeakeasyBase));
-export { RouteSpec };
+}(utils_1.SpeakeasyBase));
+exports.RouteSpec = RouteSpec;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetStatusActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetStatusResponse = exports.GetGetStatusRequest = exports.GetGetStatusQueryParams = exports.GetGetStatusVersionEnum = exports.GetGetStatusOperationEnum = exports.GetGetStatusActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetStatusActionEnum;
 (function (GetGetStatusActionEnum) {
     GetGetStatusActionEnum["GetStatus"] = "GetStatus";
-})(GetGetStatusActionEnum || (GetGetStatusActionEnum = {}));
-export var GetGetStatusOperationEnum;
+})(GetGetStatusActionEnum = exports.GetGetStatusActionEnum || (exports.GetGetStatusActionEnum = {}));
+var GetGetStatusOperationEnum;
 (function (GetGetStatusOperationEnum) {
     GetGetStatusOperationEnum["GetStatus"] = "GetStatus";
-})(GetGetStatusOperationEnum || (GetGetStatusOperationEnum = {}));
-export var GetGetStatusVersionEnum;
+})(GetGetStatusOperationEnum = exports.GetGetStatusOperationEnum || (exports.GetGetStatusOperationEnum = {}));
+var GetGetStatusVersionEnum;
 (function (GetGetStatusVersionEnum) {
     GetGetStatusVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(GetGetStatusVersionEnum || (GetGetStatusVersionEnum = {}));
+})(GetGetStatusVersionEnum = exports.GetGetStatusVersionEnum || (exports.GetGetStatusVersionEnum = {}));
 var GetGetStatusQueryParams = /** @class */ (function (_super) {
     __extends(GetGetStatusQueryParams, _super);
     function GetGetStatusQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobId" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetStatusQueryParams.prototype, "version", void 0);
     return GetGetStatusQueryParams;
-}(SpeakeasyBase));
-export { GetGetStatusQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetStatusQueryParams = GetGetStatusQueryParams;
 var GetGetStatusRequest = /** @class */ (function (_super) {
     __extends(GetGetStatusRequest, _super);
     function GetGetStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetStatusQueryParams)
     ], GetGetStatusRequest.prototype, "queryParams", void 0);
     return GetGetStatusRequest;
-}(SpeakeasyBase));
-export { GetGetStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetStatusRequest = GetGetStatusRequest;
 var GetGetStatusResponse = /** @class */ (function (_super) {
     __extends(GetGetStatusResponse, _super);
     function GetGetStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetStatusResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetStatusResponse.prototype, "statusCode", void 0);
     return GetGetStatusResponse;
-}(SpeakeasyBase));
-export { GetGetStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetStatusResponse = GetGetStatusResponse;

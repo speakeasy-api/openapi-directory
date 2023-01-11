@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskList } from "./tasklist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PollForActivityTaskInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var tasklist_1 = require("./tasklist");
 var PollForActivityTaskInput = /** @class */ (function (_super) {
     __extends(PollForActivityTaskInput, _super);
     function PollForActivityTaskInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], PollForActivityTaskInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
         __metadata("design:type", String)
     ], PollForActivityTaskInput.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], PollForActivityTaskInput.prototype, "taskList", void 0);
     return PollForActivityTaskInput;
-}(SpeakeasyBase));
-export { PollForActivityTaskInput };
+}(utils_1.SpeakeasyBase));
+exports.PollForActivityTaskInput = PollForActivityTaskInput;

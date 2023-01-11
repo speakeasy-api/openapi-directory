@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkTokenCreateRequestAuth } from "./linktokencreaterequestauth";
-import { LinkTokenCreateRequestDepositSwitch } from "./linktokencreaterequestdepositswitch";
-import { LinkTokenEuConfig } from "./linktokeneuconfig";
-import { LinkTokenCreateRequestIncomeVerification } from "./linktokencreaterequestincomeverification";
-import { LinkTokenCreateRequestPaymentInitiation } from "./linktokencreaterequestpaymentinitiation";
-import { LinkTokenCreateRequestUser } from "./linktokencreaterequestuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkTokenCreateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var linktokencreaterequestauth_1 = require("./linktokencreaterequestauth");
+var linktokencreaterequestdepositswitch_1 = require("./linktokencreaterequestdepositswitch");
+var linktokeneuconfig_1 = require("./linktokeneuconfig");
+var linktokencreaterequestincomeverification_1 = require("./linktokencreaterequestincomeverification");
+var linktokencreaterequestpaymentinitiation_1 = require("./linktokencreaterequestpaymentinitiation");
+var linktokencreaterequestuser_1 = require("./linktokencreaterequestuser");
 // LinkTokenCreateRequest
 /**
  * LinkTokenCreateRequest defines the request schema for `/link/token/create`
@@ -39,81 +42,81 @@ var LinkTokenCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_filters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_filters" }),
+        __metadata("design:type", Object)
     ], LinkTokenCreateRequest.prototype, "accountFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=android_package_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=android_package_name" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "androidPackageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth" }),
-        __metadata("design:type", LinkTokenCreateRequestAuth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth" }),
+        __metadata("design:type", linktokencreaterequestauth_1.LinkTokenCreateRequestAuth)
     ], LinkTokenCreateRequest.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_name" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "clientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country_codes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country_codes" }),
         __metadata("design:type", Array)
     ], LinkTokenCreateRequest.prototype, "countryCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deposit_switch" }),
-        __metadata("design:type", LinkTokenCreateRequestDepositSwitch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deposit_switch" }),
+        __metadata("design:type", linktokencreaterequestdepositswitch_1.LinkTokenCreateRequestDepositSwitch)
     ], LinkTokenCreateRequest.prototype, "depositSwitch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eu_config" }),
-        __metadata("design:type", LinkTokenEuConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eu_config" }),
+        __metadata("design:type", linktokeneuconfig_1.LinkTokenEuConfig)
     ], LinkTokenCreateRequest.prototype, "euConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=income_verification" }),
-        __metadata("design:type", LinkTokenCreateRequestIncomeVerification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=income_verification" }),
+        __metadata("design:type", linktokencreaterequestincomeverification_1.LinkTokenCreateRequestIncomeVerification)
     ], LinkTokenCreateRequest.prototype, "incomeVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=institution_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=institution_id" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "institutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_customization_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_customization_name" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "linkCustomizationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_initiation" }),
-        __metadata("design:type", LinkTokenCreateRequestPaymentInitiation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_initiation" }),
+        __metadata("design:type", linktokencreaterequestpaymentinitiation_1.LinkTokenCreateRequestPaymentInitiation)
     ], LinkTokenCreateRequest.prototype, "paymentInitiation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products" }),
         __metadata("design:type", Array)
     ], LinkTokenCreateRequest.prototype, "products", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect_uri" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "redirectUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", LinkTokenCreateRequestUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", linktokencreaterequestuser_1.LinkTokenCreateRequestUser)
     ], LinkTokenCreateRequest.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequest.prototype, "webhook", void 0);
     return LinkTokenCreateRequest;
-}(SpeakeasyBase));
-export { LinkTokenCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.LinkTokenCreateRequest = LinkTokenCreateRequest;

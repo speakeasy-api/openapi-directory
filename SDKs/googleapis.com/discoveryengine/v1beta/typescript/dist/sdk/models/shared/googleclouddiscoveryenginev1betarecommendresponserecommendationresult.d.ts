@@ -6,5 +6,5 @@ import { GoogleCloudDiscoveryengineV1betaDocument } from "./googleclouddiscovery
 export declare class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult extends SpeakeasyBase {
     document?: GoogleCloudDiscoveryengineV1betaDocument;
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationDefinitionRead = void 0;
+var utils_1 = require("../../../internal/utils");
 var DestinationDefinitionRead = /** @class */ (function (_super) {
     __extends(DestinationDefinitionRead, _super);
     function DestinationDefinitionRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationDefinitionId" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "destinationDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dockerImageTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dockerImageTag" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "dockerImageTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dockerRepository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dockerRepository" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "dockerRepository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUrl" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "icon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DestinationDefinitionRead.prototype, "name", void 0);
     return DestinationDefinitionRead;
-}(SpeakeasyBase));
-export { DestinationDefinitionRead };
+}(utils_1.SpeakeasyBase));
+exports.DestinationDefinitionRead = DestinationDefinitionRead;

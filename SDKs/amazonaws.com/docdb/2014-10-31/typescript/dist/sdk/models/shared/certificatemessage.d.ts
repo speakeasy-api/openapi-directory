@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
+import { CertificateList } from "./certificatelist";
 export declare class CertificateMessage extends SpeakeasyBase {
-    certificates?: Certificate[];
+    certificates?: CertificateList[];
     marker?: string;
 }

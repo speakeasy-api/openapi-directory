@@ -106,11 +106,11 @@ export declare class SicrdRequest extends SpeakeasyBase {
 export declare class SicrdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sicrd400ApplicationJsonObject?: Sicrd400ApplicationJson;
-    sicrd401ApplicationJsonObject?: Sicrd401ApplicationJson;
-    sicrd404ApplicationJsonObject?: Sicrd404ApplicationJson;
-    sicrd500ApplicationJsonObject?: Sicrd500ApplicationJson;
-    sicrd502ApplicationJsonObject?: Sicrd502ApplicationJson;
-    sicrd503ApplicationJsonObject?: Sicrd503ApplicationJson;
-    sicrd504ApplicationJsonObject?: Sicrd504ApplicationJson;
+    sicrd400ApplicationJSONObject?: Sicrd400ApplicationJson;
+    sicrd401ApplicationJSONObject?: Sicrd401ApplicationJson;
+    sicrd404ApplicationJSONObject?: Sicrd404ApplicationJson;
+    sicrd500ApplicationJSONObject?: Sicrd500ApplicationJson;
+    sicrd502ApplicationJSONObject?: Sicrd502ApplicationJson;
+    sicrd503ApplicationJSONObject?: Sicrd503ApplicationJson;
+    sicrd504ApplicationJSONObject?: Sicrd504ApplicationJson;
 }

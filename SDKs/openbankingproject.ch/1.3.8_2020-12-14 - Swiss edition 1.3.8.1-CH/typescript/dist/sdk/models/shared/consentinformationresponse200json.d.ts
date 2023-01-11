@@ -6,7 +6,7 @@ import { ConsentStatusEnum } from "./consentstatusenum";
  * Body of the JSON response for a successfull get consent request.
 **/
 export declare class ConsentInformationResponse200Json extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     access: AccountAccess;
     consentStatus: ConsentStatusEnum;
     frequencyPerDay: number;

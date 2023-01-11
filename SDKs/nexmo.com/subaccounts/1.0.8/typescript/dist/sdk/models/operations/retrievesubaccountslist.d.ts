@@ -30,6 +30,6 @@ export declare class RetrieveSubaccountsListResponse extends SpeakeasyBase {
     statusCode: number;
     subaccountsAllResponse?: any;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    retrieveSubaccountsList401ApplicationJsonObject?: RetrieveSubaccountsList401ApplicationJson;
-    retrieveSubaccountsList404ApplicationJsonObject?: RetrieveSubaccountsList404ApplicationJson;
+    retrieveSubaccountsList401ApplicationJSONObject?: RetrieveSubaccountsList401ApplicationJson;
+    retrieveSubaccountsList404ApplicationJSONObject?: RetrieveSubaccountsList404ApplicationJson;
 }

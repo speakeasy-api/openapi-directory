@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppValidationStrategyEnum } from "./appvalidationstrategyenum";
-import { SsmValidationParameters } from "./ssmvalidationparameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppValidationConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var appvalidationstrategyenum_1 = require("./appvalidationstrategyenum");
+var ssmvalidationparameters_1 = require("./ssmvalidationparameters");
 // AppValidationConfiguration
 /**
  * Configuration for validating an application.
@@ -35,21 +38,21 @@ var AppValidationConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appValidationStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appValidationStrategy" }),
         __metadata("design:type", String)
     ], AppValidationConfiguration.prototype, "appValidationStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AppValidationConfiguration.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssmValidationParameters" }),
-        __metadata("design:type", SsmValidationParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssmValidationParameters" }),
+        __metadata("design:type", ssmvalidationparameters_1.SsmValidationParameters)
     ], AppValidationConfiguration.prototype, "ssmValidationParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationId" }),
         __metadata("design:type", String)
     ], AppValidationConfiguration.prototype, "validationId", void 0);
     return AppValidationConfiguration;
-}(SpeakeasyBase));
-export { AppValidationConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AppValidationConfiguration = AppValidationConfiguration;

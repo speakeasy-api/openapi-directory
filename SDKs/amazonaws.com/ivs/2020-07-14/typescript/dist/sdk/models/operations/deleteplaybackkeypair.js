@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePlaybackKeyPairResponse = exports.DeletePlaybackKeyPairRequest = exports.DeletePlaybackKeyPairRequestBody = exports.DeletePlaybackKeyPairHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePlaybackKeyPairHeaders = /** @class */ (function (_super) {
     __extends(DeletePlaybackKeyPairHeaders, _super);
     function DeletePlaybackKeyPairHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeletePlaybackKeyPairHeaders;
-}(SpeakeasyBase));
-export { DeletePlaybackKeyPairHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlaybackKeyPairHeaders = DeletePlaybackKeyPairHeaders;
 var DeletePlaybackKeyPairRequestBody = /** @class */ (function (_super) {
     __extends(DeletePlaybackKeyPairRequestBody, _super);
     function DeletePlaybackKeyPairRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairRequestBody.prototype, "arn", void 0);
     return DeletePlaybackKeyPairRequestBody;
-}(SpeakeasyBase));
-export { DeletePlaybackKeyPairRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlaybackKeyPairRequestBody = DeletePlaybackKeyPairRequestBody;
 var DeletePlaybackKeyPairRequest = /** @class */ (function (_super) {
     __extends(DeletePlaybackKeyPairRequest, _super);
     function DeletePlaybackKeyPairRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePlaybackKeyPairHeaders)
     ], DeletePlaybackKeyPairRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeletePlaybackKeyPairRequestBody)
     ], DeletePlaybackKeyPairRequest.prototype, "request", void 0);
     return DeletePlaybackKeyPairRequest;
-}(SpeakeasyBase));
-export { DeletePlaybackKeyPairRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlaybackKeyPairRequest = DeletePlaybackKeyPairRequest;
 var DeletePlaybackKeyPairResponse = /** @class */ (function (_super) {
     __extends(DeletePlaybackKeyPairResponse, _super);
     function DeletePlaybackKeyPairResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeletePlaybackKeyPairResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePlaybackKeyPairResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeletePlaybackKeyPairResponse.prototype, "deletePlaybackKeyPairResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeletePlaybackKeyPairResponse.prototype, "pendingVerification", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeletePlaybackKeyPairResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePlaybackKeyPairResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeletePlaybackKeyPairResponse.prototype, "validationException", void 0);
     return DeletePlaybackKeyPairResponse;
-}(SpeakeasyBase));
-export { DeletePlaybackKeyPairResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlaybackKeyPairResponse = DeletePlaybackKeyPairResponse;

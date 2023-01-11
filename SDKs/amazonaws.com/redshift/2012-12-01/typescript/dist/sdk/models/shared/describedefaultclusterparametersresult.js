@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DefaultClusterParameters } from "./defaultclusterparameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDefaultClusterParametersResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var defaultclusterparameters_1 = require("./defaultclusterparameters");
 var DescribeDefaultClusterParametersResult = /** @class */ (function (_super) {
     __extends(DescribeDefaultClusterParametersResult, _super);
     function DescribeDefaultClusterParametersResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DefaultClusterParameters)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", defaultclusterparameters_1.DefaultClusterParameters)
     ], DescribeDefaultClusterParametersResult.prototype, "defaultClusterParameters", void 0);
     return DescribeDefaultClusterParametersResult;
-}(SpeakeasyBase));
-export { DescribeDefaultClusterParametersResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDefaultClusterParametersResult = DescribeDefaultClusterParametersResult;

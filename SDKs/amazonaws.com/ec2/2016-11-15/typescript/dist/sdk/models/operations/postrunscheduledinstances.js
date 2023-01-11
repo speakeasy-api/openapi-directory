@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRunScheduledInstancesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRunScheduledInstancesResponse = exports.PostRunScheduledInstancesRequest = exports.PostRunScheduledInstancesHeaders = exports.PostRunScheduledInstancesQueryParams = exports.PostRunScheduledInstancesVersionEnum = exports.PostRunScheduledInstancesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRunScheduledInstancesActionEnum;
 (function (PostRunScheduledInstancesActionEnum) {
     PostRunScheduledInstancesActionEnum["RunScheduledInstances"] = "RunScheduledInstances";
-})(PostRunScheduledInstancesActionEnum || (PostRunScheduledInstancesActionEnum = {}));
-export var PostRunScheduledInstancesVersionEnum;
+})(PostRunScheduledInstancesActionEnum = exports.PostRunScheduledInstancesActionEnum || (exports.PostRunScheduledInstancesActionEnum = {}));
+var PostRunScheduledInstancesVersionEnum;
 (function (PostRunScheduledInstancesVersionEnum) {
     PostRunScheduledInstancesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostRunScheduledInstancesVersionEnum || (PostRunScheduledInstancesVersionEnum = {}));
+})(PostRunScheduledInstancesVersionEnum = exports.PostRunScheduledInstancesVersionEnum || (exports.PostRunScheduledInstancesVersionEnum = {}));
 var PostRunScheduledInstancesQueryParams = /** @class */ (function (_super) {
     __extends(PostRunScheduledInstancesQueryParams, _super);
     function PostRunScheduledInstancesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesQueryParams.prototype, "version", void 0);
     return PostRunScheduledInstancesQueryParams;
-}(SpeakeasyBase));
-export { PostRunScheduledInstancesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRunScheduledInstancesQueryParams = PostRunScheduledInstancesQueryParams;
 var PostRunScheduledInstancesHeaders = /** @class */ (function (_super) {
     __extends(PostRunScheduledInstancesHeaders, _super);
     function PostRunScheduledInstancesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRunScheduledInstancesHeaders;
-}(SpeakeasyBase));
-export { PostRunScheduledInstancesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRunScheduledInstancesHeaders = PostRunScheduledInstancesHeaders;
 var PostRunScheduledInstancesRequest = /** @class */ (function (_super) {
     __extends(PostRunScheduledInstancesRequest, _super);
     function PostRunScheduledInstancesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRunScheduledInstancesQueryParams)
     ], PostRunScheduledInstancesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRunScheduledInstancesHeaders)
     ], PostRunScheduledInstancesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRunScheduledInstancesRequest.prototype, "request", void 0);
     return PostRunScheduledInstancesRequest;
-}(SpeakeasyBase));
-export { PostRunScheduledInstancesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRunScheduledInstancesRequest = PostRunScheduledInstancesRequest;
 var PostRunScheduledInstancesResponse = /** @class */ (function (_super) {
     __extends(PostRunScheduledInstancesResponse, _super);
     function PostRunScheduledInstancesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRunScheduledInstancesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRunScheduledInstancesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRunScheduledInstancesResponse.prototype, "statusCode", void 0);
     return PostRunScheduledInstancesResponse;
-}(SpeakeasyBase));
-export { PostRunScheduledInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRunScheduledInstancesResponse = PostRunScheduledInstancesResponse;

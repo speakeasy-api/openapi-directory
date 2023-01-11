@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataTypeField } from "./datatypefield";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataType = void 0;
+var utils_1 = require("../../../internal/utils");
+var datatypefield_1 = require("./datatypefield");
 var DataType = /** @class */ (function (_super) {
     __extends(DataType, _super);
     function DataType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field", elemType: DataTypeField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field", elemType: datatypefield_1.DataTypeField }),
         __metadata("design:type", Array)
     ], DataType.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DataType.prototype, "name", void 0);
     return DataType;
-}(SpeakeasyBase));
-export { DataType };
+}(utils_1.SpeakeasyBase));
+exports.DataType = DataType;

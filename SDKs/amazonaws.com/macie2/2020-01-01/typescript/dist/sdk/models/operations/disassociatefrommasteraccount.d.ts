@@ -15,7 +15,7 @@ export declare class DisassociateFromMasterAccountResponse extends SpeakeasyBase
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    disassociateFromMasterAccountResponse?: Map<string, any>;
+    disassociateFromMasterAccountResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

@@ -1,0 +1,81 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguagePairsReport = exports.LanguagePairsReportReport = exports.LanguagePairsReportReportLanguagePair = void 0;
+var utils_1 = require("../../../internal/utils");
+var pagingmeta_1 = require("./pagingmeta");
+var LanguagePairsReportReportLanguagePair = /** @class */ (function (_super) {
+    __extends(LanguagePairsReportReportLanguagePair, _super);
+    function LanguagePairsReportReportLanguagePair() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_language" }),
+        __metadata("design:type", String)
+    ], LanguagePairsReportReportLanguagePair.prototype, "sourceLanguage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_language" }),
+        __metadata("design:type", String)
+    ], LanguagePairsReportReportLanguagePair.prototype, "targetLanguage", void 0);
+    return LanguagePairsReportReportLanguagePair;
+}(utils_1.SpeakeasyBase));
+exports.LanguagePairsReportReportLanguagePair = LanguagePairsReportReportLanguagePair;
+var LanguagePairsReportReport = /** @class */ (function (_super) {
+    __extends(LanguagePairsReportReport, _super);
+    function LanguagePairsReportReport() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language_pair" }),
+        __metadata("design:type", LanguagePairsReportReportLanguagePair)
+    ], LanguagePairsReportReport.prototype, "languagePair", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spending" }),
+        __metadata("design:type", Number)
+    ], LanguagePairsReportReport.prototype, "spending", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=word_count" }),
+        __metadata("design:type", Number)
+    ], LanguagePairsReportReport.prototype, "wordCount", void 0);
+    return LanguagePairsReportReport;
+}(utils_1.SpeakeasyBase));
+exports.LanguagePairsReportReport = LanguagePairsReportReport;
+var LanguagePairsReport = /** @class */ (function (_super) {
+    __extends(LanguagePairsReport, _super);
+    function LanguagePairsReport() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", pagingmeta_1.PagingMeta)
+    ], LanguagePairsReport.prototype, "meta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report", elemType: LanguagePairsReportReport }),
+        __metadata("design:type", Array)
+    ], LanguagePairsReport.prototype, "report", void 0);
+    return LanguagePairsReport;
+}(utils_1.SpeakeasyBase));
+exports.LanguagePairsReport = LanguagePairsReport;

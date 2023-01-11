@@ -15,7 +15,7 @@ export declare class CreateContainerServiceRegistryLoginHeaders extends Speakeas
 }
 export declare class CreateContainerServiceRegistryLoginRequest extends SpeakeasyBase {
     headers: CreateContainerServiceRegistryLoginHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreateContainerServiceRegistryLoginResponse extends SpeakeasyBase {
     accessDeniedException?: any;

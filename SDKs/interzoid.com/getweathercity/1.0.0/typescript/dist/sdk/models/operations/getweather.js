@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetweatherResponse = exports.GetweatherRequest = exports.Getweather200ApplicationJson = exports.GetweatherQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetweatherQueryParams = /** @class */ (function (_super) {
     __extends(GetweatherQueryParams, _super);
     function GetweatherQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=city" }),
         __metadata("design:type", String)
     ], GetweatherQueryParams.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=license" }),
         __metadata("design:type", String)
     ], GetweatherQueryParams.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=state" }),
         __metadata("design:type", String)
     ], GetweatherQueryParams.prototype, "state", void 0);
     return GetweatherQueryParams;
-}(SpeakeasyBase));
-export { GetweatherQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetweatherQueryParams = GetweatherQueryParams;
 var Getweather200ApplicationJson = /** @class */ (function (_super) {
     __extends(Getweather200ApplicationJson, _super);
     function Getweather200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=City" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=City" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credits" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "credits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RelativeHumidity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RelativeHumidity" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "relativeHumidity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TempC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TempC" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "tempC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TempF" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TempF" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "tempF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VisibilityMiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VisibilityMiles" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "visibilityMiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Weather" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Weather" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "weather", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WindDir" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WindDir" }),
         __metadata("design:type", String)
     ], Getweather200ApplicationJson.prototype, "windDir", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WindMPH" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WindMPH" }),
         __metadata("design:type", String)
-    ], Getweather200ApplicationJson.prototype, "windMph", void 0);
+    ], Getweather200ApplicationJson.prototype, "windMPH", void 0);
     return Getweather200ApplicationJson;
-}(SpeakeasyBase));
-export { Getweather200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Getweather200ApplicationJson = Getweather200ApplicationJson;
 var GetweatherRequest = /** @class */ (function (_super) {
     __extends(GetweatherRequest, _super);
     function GetweatherRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetweatherQueryParams)
     ], GetweatherRequest.prototype, "queryParams", void 0);
     return GetweatherRequest;
-}(SpeakeasyBase));
-export { GetweatherRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetweatherRequest = GetweatherRequest;
 var GetweatherResponse = /** @class */ (function (_super) {
     __extends(GetweatherResponse, _super);
     function GetweatherResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetweatherResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetweatherResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Getweather200ApplicationJson)
-    ], GetweatherResponse.prototype, "getweather200ApplicationJsonObject", void 0);
+    ], GetweatherResponse.prototype, "getweather200ApplicationJSONObject", void 0);
     return GetweatherResponse;
-}(SpeakeasyBase));
-export { GetweatherResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetweatherResponse = GetweatherResponse;

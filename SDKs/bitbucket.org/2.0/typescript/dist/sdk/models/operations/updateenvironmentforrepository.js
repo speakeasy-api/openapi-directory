@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEnvironmentForRepositoryResponse = exports.UpdateEnvironmentForRepositoryRequest = exports.UpdateEnvironmentForRepositoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateEnvironmentForRepositoryPathParams = /** @class */ (function (_super) {
     __extends(UpdateEnvironmentForRepositoryPathParams, _super);
     function UpdateEnvironmentForRepositoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentForRepositoryPathParams.prototype, "environmentUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentForRepositoryPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentForRepositoryPathParams.prototype, "workspace", void 0);
     return UpdateEnvironmentForRepositoryPathParams;
-}(SpeakeasyBase));
-export { UpdateEnvironmentForRepositoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEnvironmentForRepositoryPathParams = UpdateEnvironmentForRepositoryPathParams;
 var UpdateEnvironmentForRepositoryRequest = /** @class */ (function (_super) {
     __extends(UpdateEnvironmentForRepositoryRequest, _super);
     function UpdateEnvironmentForRepositoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateEnvironmentForRepositoryPathParams)
     ], UpdateEnvironmentForRepositoryRequest.prototype, "pathParams", void 0);
     return UpdateEnvironmentForRepositoryRequest;
-}(SpeakeasyBase));
-export { UpdateEnvironmentForRepositoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEnvironmentForRepositoryRequest = UpdateEnvironmentForRepositoryRequest;
 var UpdateEnvironmentForRepositoryResponse = /** @class */ (function (_super) {
     __extends(UpdateEnvironmentForRepositoryResponse, _super);
     function UpdateEnvironmentForRepositoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateEnvironmentForRepositoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateEnvironmentForRepositoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateEnvironmentForRepositoryResponse.prototype, "error", void 0);
     return UpdateEnvironmentForRepositoryResponse;
-}(SpeakeasyBase));
-export { UpdateEnvironmentForRepositoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEnvironmentForRepositoryResponse = UpdateEnvironmentForRepositoryResponse;

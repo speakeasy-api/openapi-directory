@@ -19,7 +19,7 @@ export declare class CreateDataCatalogRequest extends SpeakeasyBase {
 }
 export declare class CreateDataCatalogResponse extends SpeakeasyBase {
     contentType: string;
-    createDataCatalogOutput?: Map<string, any>;
+    createDataCatalogOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

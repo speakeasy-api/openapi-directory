@@ -1,25 +1,41 @@
-export * from "./accessconfig";
-export * from "./action";
-export * from "./altenum";
-export * from "./diskattachment";
-export * from "./envvariable";
-export * from "./existingdisk";
-export * from "./healthcheck";
-export * from "./label";
-export * from "./metadata";
-export * from "./metadataitem";
-export * from "./networkinterface";
-export * from "./newdisk";
-export * from "./newdiskinitializeparams";
-export * from "./pool";
-export * from "./poolsdeleterequest";
-export * from "./poolslistresponse";
-export * from "./replica";
-export * from "./replicasdeleterequest";
-export * from "./replicaslistresponse";
-export * from "./replicastatus";
-export * from "./security";
-export * from "./serviceaccount";
-export * from "./tag";
-export * from "./template";
-export * from "./vmparams";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./accessconfig"), exports);
+__exportStar(require("./action"), exports);
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./diskattachment"), exports);
+__exportStar(require("./envvariable"), exports);
+__exportStar(require("./existingdisk"), exports);
+__exportStar(require("./healthcheck"), exports);
+__exportStar(require("./label"), exports);
+__exportStar(require("./metadata"), exports);
+__exportStar(require("./metadataitem"), exports);
+__exportStar(require("./networkinterface"), exports);
+__exportStar(require("./newdisk"), exports);
+__exportStar(require("./newdiskinitializeparams"), exports);
+__exportStar(require("./pool"), exports);
+__exportStar(require("./poolsdeleterequest"), exports);
+__exportStar(require("./poolslistresponse"), exports);
+__exportStar(require("./replica"), exports);
+__exportStar(require("./replicasdeleterequest"), exports);
+__exportStar(require("./replicaslistresponse"), exports);
+__exportStar(require("./replicastatus"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./serviceaccount"), exports);
+__exportStar(require("./tag"), exports);
+__exportStar(require("./template"), exports);
+__exportStar(require("./vmparams"), exports);

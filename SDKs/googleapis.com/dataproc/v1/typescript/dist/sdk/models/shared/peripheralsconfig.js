@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SparkHistoryServerConfig } from "./sparkhistoryserverconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PeripheralsConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var sparkhistoryserverconfig_1 = require("./sparkhistoryserverconfig");
 // PeripheralsConfig
 /**
  * Auxiliary services configuration for a workload.
@@ -34,13 +37,13 @@ var PeripheralsConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metastoreService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metastoreService" }),
         __metadata("design:type", String)
     ], PeripheralsConfig.prototype, "metastoreService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sparkHistoryServerConfig" }),
-        __metadata("design:type", SparkHistoryServerConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sparkHistoryServerConfig" }),
+        __metadata("design:type", sparkhistoryserverconfig_1.SparkHistoryServerConfig)
     ], PeripheralsConfig.prototype, "sparkHistoryServerConfig", void 0);
     return PeripheralsConfig;
-}(SpeakeasyBase));
-export { PeripheralsConfig };
+}(utils_1.SpeakeasyBase));
+exports.PeripheralsConfig = PeripheralsConfig;

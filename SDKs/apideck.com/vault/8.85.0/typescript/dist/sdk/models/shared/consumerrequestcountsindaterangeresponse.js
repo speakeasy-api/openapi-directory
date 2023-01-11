@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestCountAllocation } from "./requestcountallocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsumerRequestCountsInDateRangeResponse = exports.ConsumerRequestCountsInDateRangeResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var requestcountallocation_1 = require("./requestcountallocation");
 var ConsumerRequestCountsInDateRangeResponseData = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsInDateRangeResponseData, _super);
     function ConsumerRequestCountsInDateRangeResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregated_request_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregated_request_count" }),
         __metadata("design:type", Number)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "aggregatedRequestCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application_id" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumer_id" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "consumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_datetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_datetime" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "endDatetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_counts" }),
-        __metadata("design:type", RequestCountAllocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_counts" }),
+        __metadata("design:type", requestcountallocation_1.RequestCountAllocation)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "requestCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_datetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_datetime" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsInDateRangeResponseData.prototype, "startDatetime", void 0);
     return ConsumerRequestCountsInDateRangeResponseData;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsInDateRangeResponseData };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsInDateRangeResponseData = ConsumerRequestCountsInDateRangeResponseData;
 var ConsumerRequestCountsInDateRangeResponse = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsInDateRangeResponse, _super);
     function ConsumerRequestCountsInDateRangeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ConsumerRequestCountsInDateRangeResponseData)
     ], ConsumerRequestCountsInDateRangeResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsInDateRangeResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], ConsumerRequestCountsInDateRangeResponse.prototype, "statusCode", void 0);
     return ConsumerRequestCountsInDateRangeResponse;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsInDateRangeResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsInDateRangeResponse = ConsumerRequestCountsInDateRangeResponse;

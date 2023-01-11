@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceFilterAttributeEnum } from "./devicefilterattributeenum";
-import { RuleOperatorEnum } from "./ruleoperatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicefilterattributeenum_1 = require("./devicefilterattributeenum");
+var ruleoperatorenum_1 = require("./ruleoperatorenum");
 // DeviceFilter
 /**
  * <p>Represents a device filter used to select a set of devices to be included in a test run. This data structure is passed in as the <code>deviceSelectionConfiguration</code> parameter to <code>ScheduleRun</code>. For an example of the JSON request syntax, see <a>ScheduleRun</a>.</p> <p>It is also passed in as the <code>filters</code> parameter to <code>ListDevices</code>. For an example of the JSON request syntax, see <a>ListDevices</a>.</p>
@@ -35,17 +38,17 @@ var DeviceFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], DeviceFilter.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], DeviceFilter.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], DeviceFilter.prototype, "values", void 0);
     return DeviceFilter;
-}(SpeakeasyBase));
-export { DeviceFilter };
+}(utils_1.SpeakeasyBase));
+exports.DeviceFilter = DeviceFilter;

@@ -12,7 +12,7 @@ import { ScaStatusEnum } from "./scastatusenum";
 **/
 export class UpdatePsuIdenticationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links: Map<string, HrefType>;
+  links: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=currencyConversionFees" })
   currencyConversionFees?: Amount;

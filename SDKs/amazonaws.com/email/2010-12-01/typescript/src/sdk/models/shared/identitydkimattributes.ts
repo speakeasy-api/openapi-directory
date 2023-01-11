@@ -3,17 +3,13 @@ import { VerificationStatusEnum } from "./verificationstatusenum";
 
 
 
-// IdentityDkimAttributes
-/** 
- * Represents the DKIM attributes of a verified email address or a domain.
-**/
 export class IdentityDkimAttributes extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  dkimEnabled: boolean;
+  dkimEnabled?: boolean;
 
   @SpeakeasyMetadata()
   dkimTokens?: string[];
 
   @SpeakeasyMetadata()
-  dkimVerificationStatus: VerificationStatusEnum;
+  dkimVerificationStatus?: VerificationStatusEnum;
 }

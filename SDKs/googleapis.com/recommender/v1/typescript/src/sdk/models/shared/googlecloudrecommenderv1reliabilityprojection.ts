@@ -15,7 +15,7 @@ export enum GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum {
 **/
 export class GoogleCloudRecommenderV1ReliabilityProjection extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>;
+  details?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=risks" })
   risks?: GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum[];

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { PatientDemographicResponse } from "./patientdemographicresponse";
 import { AccessTokenValidity } from "./accesstokenvalidity";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 /**
  * depending on the purpose of auth, as specified in /auth/init, the response may include the following
@@ -17,7 +17,7 @@ export declare class PatientAuthConfirmResponseAuth extends SpeakeasyBase {
 }
 export declare class PatientAuthConfirmResponse extends SpeakeasyBase {
     auth?: PatientAuthConfirmResponseAuth;
-    error?: Error;
+    error?: ErrorT;
     requestId: string;
     resp: RequestReference;
     timestamp: Date;

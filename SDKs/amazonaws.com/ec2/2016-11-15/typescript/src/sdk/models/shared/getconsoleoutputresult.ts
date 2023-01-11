@@ -4,11 +4,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetConsoleOutputResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  instanceId?: string;
+  instanceId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  output?: string;
+  output?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  timestamp?: Date;
+  timestamp?: Record<string, any>;
 }

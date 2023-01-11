@@ -9,5 +9,5 @@ export declare class SetStarttimeRequest extends SpeakeasyBase {
 export declare class SetStarttimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setStarttime200ApplicationJsonString?: string;
+    setStarttime200ApplicationJSONString?: string;
 }

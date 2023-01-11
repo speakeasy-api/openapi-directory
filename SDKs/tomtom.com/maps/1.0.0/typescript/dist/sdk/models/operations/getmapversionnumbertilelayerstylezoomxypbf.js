@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum;
-(function (GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum) {
-    GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum["Basic"] = "basic";
-    GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum["Hybrid"] = "hybrid";
-    GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum["Labels"] = "labels";
-})(GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum || (GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum = {}));
-export var GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum;
-(function (GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum) {
-    GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum["Main"] = "main";
-})(GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum || (GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum = {}));
-var GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams, _super);
-    function GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams() {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberTileLayerStyleZoomXyPbfResponse = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfRequest = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum;
+(function (GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum) {
+    GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum["Basic"] = "basic";
+    GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum["Hybrid"] = "hybrid";
+    GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum["Labels"] = "labels";
+})(GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum || (exports.GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum = {}));
+var GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum;
+(function (GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum) {
+    GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum["Main"] = "main";
+})(GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum || (exports.GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum = {}));
+var GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams, _super);
+    function GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=X" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=X" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "x", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=Y" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Y" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "y", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "y", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=layer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=layer" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "layer", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "layer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=style" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "style", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "style", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "versionNumber", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "versionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=zoom" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.prototype, "zoom", void 0);
-    return GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams };
-export var GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum;
-(function (GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum) {
-    GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum["Unified"] = "Unified";
-    GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum["Il"] = "IL";
-    GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum["In"] = "IN";
-})(GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum || (GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = {}));
-var GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams, _super);
-    function GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams() {
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams.prototype, "zoom", void 0);
+    return GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams = GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams;
+var GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum;
+(function (GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum) {
+    GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum["Unified"] = "Unified";
+    GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum["Il"] = "IL";
+    GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum["In"] = "IN";
+})(GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum = exports.GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum || (exports.GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum = {}));
+var GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams, _super);
+    function GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=language" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams.prototype, "language", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=view" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams.prototype, "view", void 0);
-    return GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams };
-var GetMapVersionNumberTileLayerStyleZoomXYPbfRequest = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberTileLayerStyleZoomXYPbfRequest, _super);
-    function GetMapVersionNumberTileLayerStyleZoomXYPbfRequest() {
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams.prototype, "view", void 0);
+    return GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams = GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams;
+var GetMapVersionNumberTileLayerStyleZoomXyPbfRequest = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberTileLayerStyleZoomXyPbfRequest, _super);
+    function GetMapVersionNumberTileLayerStyleZoomXyPbfRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfRequest.prototype, "pathParams", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams)
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfRequest.prototype, "queryParams", void 0);
-    return GetMapVersionNumberTileLayerStyleZoomXYPbfRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberTileLayerStyleZoomXYPbfRequest };
-var GetMapVersionNumberTileLayerStyleZoomXYPbfResponse = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberTileLayerStyleZoomXYPbfResponse, _super);
-    function GetMapVersionNumberTileLayerStyleZoomXYPbfResponse() {
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams)
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfRequest.prototype, "queryParams", void 0);
+    return GetMapVersionNumberTileLayerStyleZoomXyPbfRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberTileLayerStyleZoomXyPbfRequest = GetMapVersionNumberTileLayerStyleZoomXyPbfRequest;
+var GetMapVersionNumberTileLayerStyleZoomXyPbfResponse = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberTileLayerStyleZoomXyPbfResponse, _super);
+    function GetMapVersionNumberTileLayerStyleZoomXyPbfResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfResponse.prototype, "contentType", void 0);
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberTileLayerStyleZoomXYPbfResponse.prototype, "statusCode", void 0);
-    return GetMapVersionNumberTileLayerStyleZoomXYPbfResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberTileLayerStyleZoomXYPbfResponse };
+    ], GetMapVersionNumberTileLayerStyleZoomXyPbfResponse.prototype, "statusCode", void 0);
+    return GetMapVersionNumberTileLayerStyleZoomXyPbfResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberTileLayerStyleZoomXyPbfResponse = GetMapVersionNumberTileLayerStyleZoomXyPbfResponse;

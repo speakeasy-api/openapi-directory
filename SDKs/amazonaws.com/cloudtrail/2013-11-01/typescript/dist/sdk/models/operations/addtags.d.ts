@@ -18,8 +18,8 @@ export declare class AddTagsRequest extends SpeakeasyBase {
     request: shared.AddTagsRequest;
 }
 export declare class AddTagsResponse extends SpeakeasyBase {
-    addTagsResponse?: Map<string, any>;
-    cloudTrailArnInvalidException?: any;
+    addTagsResponse?: Record<string, any>;
+    cloudTrailARNInvalidException?: any;
     contentType: string;
     invalidTagParameterException?: any;
     invalidTrailNameException?: any;

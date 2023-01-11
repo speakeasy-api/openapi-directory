@@ -10,6 +10,6 @@ export declare class GetAdminScenarios200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetAdminScenariosResponse extends SpeakeasyBase {
     contentType: string;
-    getAdminScenarios200ApplicationJsonObject?: GetAdminScenarios200ApplicationJson;
     statusCode: number;
+    getAdminScenarios200ApplicationJSONObject?: GetAdminScenarios200ApplicationJson;
 }

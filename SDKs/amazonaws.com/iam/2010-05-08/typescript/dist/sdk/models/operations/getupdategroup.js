@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUpdateGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateGroupResponse = exports.GetUpdateGroupRequest = exports.GetUpdateGroupHeaders = exports.GetUpdateGroupQueryParams = exports.GetUpdateGroupVersionEnum = exports.GetUpdateGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUpdateGroupActionEnum;
 (function (GetUpdateGroupActionEnum) {
     GetUpdateGroupActionEnum["UpdateGroup"] = "UpdateGroup";
-})(GetUpdateGroupActionEnum || (GetUpdateGroupActionEnum = {}));
-export var GetUpdateGroupVersionEnum;
+})(GetUpdateGroupActionEnum = exports.GetUpdateGroupActionEnum || (exports.GetUpdateGroupActionEnum = {}));
+var GetUpdateGroupVersionEnum;
 (function (GetUpdateGroupVersionEnum) {
     GetUpdateGroupVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetUpdateGroupVersionEnum || (GetUpdateGroupVersionEnum = {}));
+})(GetUpdateGroupVersionEnum = exports.GetUpdateGroupVersionEnum || (exports.GetUpdateGroupVersionEnum = {}));
 var GetUpdateGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateGroupQueryParams, _super);
     function GetUpdateGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=GroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=GroupName" }),
         __metadata("design:type", String)
     ], GetUpdateGroupQueryParams.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NewGroupName" }),
         __metadata("design:type", String)
     ], GetUpdateGroupQueryParams.prototype, "newGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NewPath" }),
         __metadata("design:type", String)
     ], GetUpdateGroupQueryParams.prototype, "newPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateGroupQueryParams.prototype, "version", void 0);
     return GetUpdateGroupQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateGroupQueryParams = GetUpdateGroupQueryParams;
 var GetUpdateGroupHeaders = /** @class */ (function (_super) {
     __extends(GetUpdateGroupHeaders, _super);
     function GetUpdateGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetUpdateGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetUpdateGroupHeaders;
-}(SpeakeasyBase));
-export { GetUpdateGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateGroupHeaders = GetUpdateGroupHeaders;
 var GetUpdateGroupRequest = /** @class */ (function (_super) {
     __extends(GetUpdateGroupRequest, _super);
     function GetUpdateGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateGroupQueryParams)
     ], GetUpdateGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateGroupHeaders)
     ], GetUpdateGroupRequest.prototype, "headers", void 0);
     return GetUpdateGroupRequest;
-}(SpeakeasyBase));
-export { GetUpdateGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateGroupRequest = GetUpdateGroupRequest;
 var GetUpdateGroupResponse = /** @class */ (function (_super) {
     __extends(GetUpdateGroupResponse, _super);
     function GetUpdateGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateGroupResponse.prototype, "statusCode", void 0);
     return GetUpdateGroupResponse;
-}(SpeakeasyBase));
-export { GetUpdateGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateGroupResponse = GetUpdateGroupResponse;

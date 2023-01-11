@@ -3,7 +3,7 @@ import { UsageLimitBreachActionEnum } from "./usagelimitbreachactionenum";
 import { UsageLimitFeatureTypeEnum } from "./usagelimitfeaturetypeenum";
 import { UsageLimitLimitTypeEnum } from "./usagelimitlimittypeenum";
 import { UsageLimitPeriodEnum } from "./usagelimitperiodenum";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 /**
  * Describes a usage limit object for a cluster.
 **/
@@ -14,6 +14,6 @@ export declare class UsageLimit extends SpeakeasyBase {
     featureType?: UsageLimitFeatureTypeEnum;
     limitType?: UsageLimitLimitTypeEnum;
     period?: UsageLimitPeriodEnum;
-    tags?: Tag[];
+    tags?: TagList[];
     usageLimitId?: string;
 }

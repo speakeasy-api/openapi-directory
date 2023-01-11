@@ -48,7 +48,7 @@ export class DeleteReportResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteReportOutput?: Map<string, any>;
+  deleteReportOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

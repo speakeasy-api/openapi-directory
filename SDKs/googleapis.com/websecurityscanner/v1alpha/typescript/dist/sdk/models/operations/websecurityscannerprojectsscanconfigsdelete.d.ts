@@ -27,6 +27,6 @@ export declare class WebsecurityscannerProjectsScanConfigsDeleteRequest extends 
 }
 export declare class WebsecurityscannerProjectsScanConfigsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

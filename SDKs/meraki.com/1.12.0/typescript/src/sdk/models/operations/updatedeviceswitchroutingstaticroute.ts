@@ -46,5 +46,5 @@ export class UpdateDeviceSwitchRoutingStaticRouteResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceSwitchRoutingStaticRoute200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceSwitchRoutingStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

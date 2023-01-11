@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rotation = void 0;
+var utils_1 = require("../../../internal/utils");
 // Rotation
 /**
  * The rotation time and period for a Secret. At next_rotation_time, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. Secret.topics must be set to configure rotation.
@@ -33,13 +36,13 @@ var Rotation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextRotationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextRotationTime" }),
         __metadata("design:type", String)
     ], Rotation.prototype, "nextRotationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationPeriod" }),
         __metadata("design:type", String)
     ], Rotation.prototype, "rotationPeriod", void 0);
     return Rotation;
-}(SpeakeasyBase));
-export { Rotation };
+}(utils_1.SpeakeasyBase));
+exports.Rotation = Rotation;

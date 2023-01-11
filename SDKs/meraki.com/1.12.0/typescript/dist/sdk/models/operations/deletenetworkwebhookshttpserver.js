@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkWebhooksHttpServerResponse = exports.DeleteNetworkWebhooksHttpServerRequest = exports.DeleteNetworkWebhooksHttpServerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkWebhooksHttpServerPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkWebhooksHttpServerPathParams, _super);
     function DeleteNetworkWebhooksHttpServerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=httpServerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=httpServerId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWebhooksHttpServerPathParams.prototype, "httpServerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWebhooksHttpServerPathParams.prototype, "networkId", void 0);
     return DeleteNetworkWebhooksHttpServerPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkWebhooksHttpServerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWebhooksHttpServerPathParams = DeleteNetworkWebhooksHttpServerPathParams;
 var DeleteNetworkWebhooksHttpServerRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkWebhooksHttpServerRequest, _super);
     function DeleteNetworkWebhooksHttpServerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkWebhooksHttpServerPathParams)
     ], DeleteNetworkWebhooksHttpServerRequest.prototype, "pathParams", void 0);
     return DeleteNetworkWebhooksHttpServerRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkWebhooksHttpServerRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWebhooksHttpServerRequest = DeleteNetworkWebhooksHttpServerRequest;
 var DeleteNetworkWebhooksHttpServerResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkWebhooksHttpServerResponse, _super);
     function DeleteNetworkWebhooksHttpServerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkWebhooksHttpServerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkWebhooksHttpServerResponse.prototype, "statusCode", void 0);
     return DeleteNetworkWebhooksHttpServerResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkWebhooksHttpServerResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWebhooksHttpServerResponse = DeleteNetworkWebhooksHttpServerResponse;

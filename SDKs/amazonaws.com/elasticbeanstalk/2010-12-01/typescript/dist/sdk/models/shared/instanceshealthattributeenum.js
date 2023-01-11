@@ -1,4 +1,7 @@
-export var InstancesHealthAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancesHealthAttributeEnum = void 0;
+var InstancesHealthAttributeEnum;
 (function (InstancesHealthAttributeEnum) {
     InstancesHealthAttributeEnum["HealthStatus"] = "HealthStatus";
     InstancesHealthAttributeEnum["Color"] = "Color";
@@ -11,4 +14,4 @@ export var InstancesHealthAttributeEnum;
     InstancesHealthAttributeEnum["AvailabilityZone"] = "AvailabilityZone";
     InstancesHealthAttributeEnum["InstanceType"] = "InstanceType";
     InstancesHealthAttributeEnum["All"] = "All";
-})(InstancesHealthAttributeEnum || (InstancesHealthAttributeEnum = {}));
+})(InstancesHealthAttributeEnum = exports.InstancesHealthAttributeEnum || (exports.InstancesHealthAttributeEnum = {}));

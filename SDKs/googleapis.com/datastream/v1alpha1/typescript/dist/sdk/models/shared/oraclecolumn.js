@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OracleColumn = void 0;
+var utils_1 = require("../../../internal/utils");
 // OracleColumn
 /**
  * Oracle Column.
@@ -33,41 +36,41 @@ var OracleColumn = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnName" }),
         __metadata("design:type", String)
     ], OracleColumn.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], OracleColumn.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], OracleColumn.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], OracleColumn.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullable" }),
         __metadata("design:type", Boolean)
     ], OracleColumn.prototype, "nullable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ordinalPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ordinalPosition" }),
         __metadata("design:type", Number)
     ], OracleColumn.prototype, "ordinalPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precision" }),
         __metadata("design:type", Number)
     ], OracleColumn.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryKey" }),
         __metadata("design:type", Boolean)
     ], OracleColumn.prototype, "primaryKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
         __metadata("design:type", Number)
     ], OracleColumn.prototype, "scale", void 0);
     return OracleColumn;
-}(SpeakeasyBase));
-export { OracleColumn };
+}(utils_1.SpeakeasyBase));
+exports.OracleColumn = OracleColumn;

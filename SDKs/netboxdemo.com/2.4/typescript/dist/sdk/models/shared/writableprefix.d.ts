@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritablePrefixInput extends SpeakeasyBase {
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     isPool?: boolean;
     prefix: string;

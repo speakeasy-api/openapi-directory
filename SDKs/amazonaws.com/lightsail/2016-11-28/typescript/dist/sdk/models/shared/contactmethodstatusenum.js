@@ -1,6 +1,9 @@
-export var ContactMethodStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactMethodStatusEnum = void 0;
+var ContactMethodStatusEnum;
 (function (ContactMethodStatusEnum) {
     ContactMethodStatusEnum["PendingVerification"] = "PendingVerification";
     ContactMethodStatusEnum["Valid"] = "Valid";
     ContactMethodStatusEnum["Invalid"] = "Invalid";
-})(ContactMethodStatusEnum || (ContactMethodStatusEnum = {}));
+})(ContactMethodStatusEnum = exports.ContactMethodStatusEnum || (exports.ContactMethodStatusEnum = {}));

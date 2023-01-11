@@ -1,4 +1,7 @@
-export var ObExternalPermissions1CodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObExternalPermissions1CodeEnum = void 0;
+var ObExternalPermissions1CodeEnum;
 (function (ObExternalPermissions1CodeEnum) {
     ObExternalPermissions1CodeEnum["ReadAccountsBasic"] = "ReadAccountsBasic";
     ObExternalPermissions1CodeEnum["ReadAccountsDetail"] = "ReadAccountsDetail";
@@ -21,4 +24,4 @@ export var ObExternalPermissions1CodeEnum;
     ObExternalPermissions1CodeEnum["ReadTransactionsCredits"] = "ReadTransactionsCredits";
     ObExternalPermissions1CodeEnum["ReadTransactionsDebits"] = "ReadTransactionsDebits";
     ObExternalPermissions1CodeEnum["ReadTransactionsDetail"] = "ReadTransactionsDetail";
-})(ObExternalPermissions1CodeEnum || (ObExternalPermissions1CodeEnum = {}));
+})(ObExternalPermissions1CodeEnum = exports.ObExternalPermissions1CodeEnum || (exports.ObExternalPermissions1CodeEnum = {}));

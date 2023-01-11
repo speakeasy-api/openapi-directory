@@ -62,7 +62,7 @@ export class GetProjectsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.Project })
   projects?: shared.Project[];

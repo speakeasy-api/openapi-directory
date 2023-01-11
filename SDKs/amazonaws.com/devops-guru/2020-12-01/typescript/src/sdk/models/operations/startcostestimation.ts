@@ -72,7 +72,7 @@ export class StartCostEstimationResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  startCostEstimationResponse?: Map<string, any>;
+  startCostEstimationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

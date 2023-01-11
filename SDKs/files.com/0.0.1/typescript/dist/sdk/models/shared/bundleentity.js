@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormFieldSetEntity } from "./formfieldsetentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var formfieldsetentity_1 = require("./formfieldsetentity");
 // BundleEntity
 /**
  * Create Bundle
@@ -34,85 +37,85 @@ var BundleEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickwrap_body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickwrap_body" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "clickwrapBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickwrap_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickwrap_id" }),
         __metadata("design:type", Number)
     ], BundleEntity.prototype, "clickwrapId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], BundleEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", Date)
     ], BundleEntity.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_field_set" }),
-        __metadata("design:type", FormFieldSetEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_field_set" }),
+        __metadata("design:type", formfieldsetentity_1.FormFieldSetEntity)
     ], BundleEntity.prototype, "formFieldSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_inbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_inbox" }),
         __metadata("design:type", Boolean)
     ], BundleEntity.prototype, "hasInbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], BundleEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inbox_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inbox_id" }),
         __metadata("design:type", Number)
     ], BundleEntity.prototype, "inboxId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_uses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_uses" }),
         __metadata("design:type", Number)
     ], BundleEntity.prototype, "maxUses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password_protected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password_protected" }),
         __metadata("design:type", Boolean)
     ], BundleEntity.prototype, "passwordProtected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paths" }),
         __metadata("design:type", Array)
     ], BundleEntity.prototype, "paths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_only" }),
         __metadata("design:type", Boolean)
     ], BundleEntity.prototype, "previewOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_registration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_registration" }),
         __metadata("design:type", Boolean)
     ], BundleEntity.prototype, "requireRegistration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_share_recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_share_recipient" }),
         __metadata("design:type", Boolean)
     ], BundleEntity.prototype, "requireShareRecipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], BundleEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], BundleEntity.prototype, "username", void 0);
     return BundleEntity;
-}(SpeakeasyBase));
-export { BundleEntity };
+}(utils_1.SpeakeasyBase));
+exports.BundleEntity = BundleEntity;

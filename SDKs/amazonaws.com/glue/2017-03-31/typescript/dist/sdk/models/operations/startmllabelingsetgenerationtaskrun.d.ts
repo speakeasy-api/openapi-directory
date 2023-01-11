@@ -24,6 +24,6 @@ export declare class StartMlLabelingSetGenerationTaskRunResponse extends Speakea
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    startMlLabelingSetGenerationTaskRunResponse?: shared.StartMlLabelingSetGenerationTaskRunResponse;
+    startMLLabelingSetGenerationTaskRunResponse?: shared.StartMlLabelingSetGenerationTaskRunResponse;
     statusCode: number;
 }

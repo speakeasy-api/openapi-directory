@@ -1,0 +1,129 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAnalyticsAdminV1betaCustomMetricInput = exports.GoogleAnalyticsAdminV1betaCustomMetric = exports.GoogleAnalyticsAdminV1betaCustomMetricScopeEnum = exports.GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum = exports.GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum;
+(function (GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum) {
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["MeasurementUnitUnspecified"] = "MEASUREMENT_UNIT_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Standard"] = "STANDARD";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Currency"] = "CURRENCY";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Feet"] = "FEET";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Meters"] = "METERS";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Kilometers"] = "KILOMETERS";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Miles"] = "MILES";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Milliseconds"] = "MILLISECONDS";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Seconds"] = "SECONDS";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Minutes"] = "MINUTES";
+    GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum["Hours"] = "HOURS";
+})(GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum = exports.GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum || (exports.GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum = {}));
+var GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum;
+(function (GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum) {
+    GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum["RestrictedMetricTypeUnspecified"] = "RESTRICTED_METRIC_TYPE_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum["CostData"] = "COST_DATA";
+    GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum["RevenueData"] = "REVENUE_DATA";
+})(GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum = exports.GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum || (exports.GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum = {}));
+var GoogleAnalyticsAdminV1betaCustomMetricScopeEnum;
+(function (GoogleAnalyticsAdminV1betaCustomMetricScopeEnum) {
+    GoogleAnalyticsAdminV1betaCustomMetricScopeEnum["MetricScopeUnspecified"] = "METRIC_SCOPE_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaCustomMetricScopeEnum["Event"] = "EVENT";
+})(GoogleAnalyticsAdminV1betaCustomMetricScopeEnum = exports.GoogleAnalyticsAdminV1betaCustomMetricScopeEnum || (exports.GoogleAnalyticsAdminV1betaCustomMetricScopeEnum = {}));
+// GoogleAnalyticsAdminV1betaCustomMetric
+/**
+ * A definition for a custom metric.
+**/
+var GoogleAnalyticsAdminV1betaCustomMetric = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaCustomMetric, _super);
+    function GoogleAnalyticsAdminV1betaCustomMetric() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurementUnit" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "measurementUnit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameterName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "parameterName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedMetricType" }),
+        __metadata("design:type", Array)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "restrictedMetricType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetric.prototype, "scope", void 0);
+    return GoogleAnalyticsAdminV1betaCustomMetric;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaCustomMetric = GoogleAnalyticsAdminV1betaCustomMetric;
+// GoogleAnalyticsAdminV1betaCustomMetricInput
+/**
+ * A definition for a custom metric.
+**/
+var GoogleAnalyticsAdminV1betaCustomMetricInput = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaCustomMetricInput, _super);
+    function GoogleAnalyticsAdminV1betaCustomMetricInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurementUnit" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "measurementUnit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameterName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "parameterName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedMetricType" }),
+        __metadata("design:type", Array)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "restrictedMetricType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaCustomMetricInput.prototype, "scope", void 0);
+    return GoogleAnalyticsAdminV1betaCustomMetricInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaCustomMetricInput = GoogleAnalyticsAdminV1betaCustomMetricInput;

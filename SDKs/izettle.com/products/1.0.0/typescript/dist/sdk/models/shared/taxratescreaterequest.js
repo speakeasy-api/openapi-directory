@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaxRate } from "./taxrate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxRatesCreateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var taxrate_1 = require("./taxrate");
 var TaxRatesCreateRequest = /** @class */ (function (_super) {
     __extends(TaxRatesCreateRequest, _super);
     function TaxRatesCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxRates", elemType: TaxRate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxRates", elemType: taxrate_1.TaxRate }),
         __metadata("design:type", Array)
     ], TaxRatesCreateRequest.prototype, "taxRates", void 0);
     return TaxRatesCreateRequest;
-}(SpeakeasyBase));
-export { TaxRatesCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaxRatesCreateRequest = TaxRatesCreateRequest;

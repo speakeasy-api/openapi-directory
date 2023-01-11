@@ -8,5 +8,5 @@ export declare class ProtocolMqttClientRuntimeDisconnectRequest extends Speakeas
 export declare class ProtocolMqttClientRuntimeDisconnectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientRuntimeDisconnect200ApplicationJsonStrings?: string[];
+    protocolMqttClientRuntimeDisconnect200ApplicationJSONStrings?: string[];
 }

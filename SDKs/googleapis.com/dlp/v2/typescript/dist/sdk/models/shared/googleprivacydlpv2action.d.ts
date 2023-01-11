@@ -7,10 +7,10 @@ import { GooglePrivacyDlpV2SaveFindings } from "./googleprivacydlpv2savefindings
 **/
 export declare class GooglePrivacyDlpV2Action extends SpeakeasyBase {
     deidentify?: GooglePrivacyDlpV2Deidentify;
-    jobNotificationEmails?: Map<string, any>;
+    jobNotificationEmails?: Record<string, any>;
     pubSub?: GooglePrivacyDlpV2PublishToPubSub;
-    publishFindingsToCloudDataCatalog?: Map<string, any>;
-    publishSummaryToCscc?: Map<string, any>;
-    publishToStackdriver?: Map<string, any>;
+    publishFindingsToCloudDataCatalog?: Record<string, any>;
+    publishSummaryToCscc?: Record<string, any>;
+    publishToStackdriver?: Record<string, any>;
     saveFindings?: GooglePrivacyDlpV2SaveFindings;
 }

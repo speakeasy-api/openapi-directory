@@ -4,7 +4,7 @@ export declare class PostV05UsersAuthOnNotifyHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05UsersAuthOnNotifyRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthNotificationAcknowledgement?: shared.PatientAuthNotificationAcknowledgement;
 }
 export declare class PostV05UsersAuthOnNotifyRequest extends SpeakeasyBase {

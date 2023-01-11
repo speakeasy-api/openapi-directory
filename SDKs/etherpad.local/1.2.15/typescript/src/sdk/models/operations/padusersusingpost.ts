@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class PadUsersUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class PadUsersUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class PadUsersUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class PadUsersUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class PadUsersUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  padUsersUsingPost200ApplicationJsonObject?: PadUsersUsingPost200ApplicationJson;
+  padUsersUsingPOST200ApplicationJSONObject?: PadUsersUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingPost400ApplicationJsonObject?: PadUsersUsingPost400ApplicationJson;
+  padUsersUsingPOST400ApplicationJSONObject?: PadUsersUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingPost401ApplicationJsonObject?: PadUsersUsingPost401ApplicationJson;
+  padUsersUsingPOST401ApplicationJSONObject?: PadUsersUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingPost500ApplicationJsonObject?: PadUsersUsingPost500ApplicationJson;
+  padUsersUsingPOST500ApplicationJSONObject?: PadUsersUsingPost500ApplicationJson;
 }

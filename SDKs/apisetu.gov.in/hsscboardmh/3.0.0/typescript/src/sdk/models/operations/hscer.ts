@@ -201,23 +201,23 @@ export class HscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  hscer400ApplicationJsonObject?: Hscer400ApplicationJson;
+  hscer400ApplicationJSONObject?: Hscer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer401ApplicationJsonObject?: Hscer401ApplicationJson;
+  hscer401ApplicationJSONObject?: Hscer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer404ApplicationJsonObject?: Hscer404ApplicationJson;
+  hscer404ApplicationJSONObject?: Hscer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer500ApplicationJsonObject?: Hscer500ApplicationJson;
+  hscer500ApplicationJSONObject?: Hscer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer502ApplicationJsonObject?: Hscer502ApplicationJson;
+  hscer502ApplicationJSONObject?: Hscer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer503ApplicationJsonObject?: Hscer503ApplicationJson;
+  hscer503ApplicationJSONObject?: Hscer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  hscer504ApplicationJsonObject?: Hscer504ApplicationJson;
+  hscer504ApplicationJSONObject?: Hscer504ApplicationJson;
 }

@@ -66,7 +66,7 @@ export class AvailableProducts200ApplicationJsonDataPasTourGrades extends Speake
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=languageServices" })
-  languageServices?: Map<string, any[]>;
+  languageServices?: Record<string, any[]>;
 
   @SpeakeasyMetadata({ data: "json, name=sapi" })
   sapi?: boolean;
@@ -96,7 +96,7 @@ export class AvailableProducts200ApplicationJsonDataPas extends SpeakeasyBase {
   removedChildAges?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tourGrades", elemType: AvailableProducts200ApplicationJsonDataPasTourGrades })
-  tourGrades?: Map<string, AvailableProducts200ApplicationJsonDataPasTourGrades>;
+  tourGrades?: Record<string, AvailableProducts200ApplicationJsonDataPasTourGrades>;
 
   @SpeakeasyMetadata({ data: "json, name=travellerMix" })
   travellerMix?: string;
@@ -222,10 +222,10 @@ export class AvailableProducts200ApplicationJsonData extends SpeakeasyBase {
   supplierName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" })
-  thumbnailHiResUrl?: string;
+  thumbnailHiResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
   title?: string;
@@ -240,7 +240,7 @@ export class AvailableProducts200ApplicationJsonData extends SpeakeasyBase {
   videoCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=webURL" })
-  webUrl?: string;
+  webURL?: string;
 }
 
 
@@ -270,10 +270,10 @@ export class AvailableProducts200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -303,5 +303,5 @@ export class AvailableProductsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  availableProducts200ApplicationJsonObject?: AvailableProducts200ApplicationJson;
+  availableProducts200ApplicationJSONObject?: AvailableProducts200ApplicationJson;
 }

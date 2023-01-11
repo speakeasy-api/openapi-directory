@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirstLastNameOriginedOut } from "./firstlastnameoriginedout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstLastNamePhoneNumberGeoIn = void 0;
+var utils_1 = require("../../../internal/utils");
+var firstlastnameoriginedout_1 = require("./firstlastnameoriginedout");
 var FirstLastNamePhoneNumberGeoIn = /** @class */ (function (_super) {
     __extends(FirstLastNamePhoneNumberGeoIn, _super);
     function FirstLastNamePhoneNumberGeoIn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstLastNameOriginedOut" }),
-        __metadata("design:type", FirstLastNameOriginedOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstLastNameOriginedOut" }),
+        __metadata("design:type", firstlastnameoriginedout_1.FirstLastNameOriginedOut)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "firstLastNameOriginedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryIso2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryIso2" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "countryIso2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryIso2Alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryIso2Alt" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "countryIso2Alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberGeoIn.prototype, "phoneNumber", void 0);
     return FirstLastNamePhoneNumberGeoIn;
-}(SpeakeasyBase));
-export { FirstLastNamePhoneNumberGeoIn };
+}(utils_1.SpeakeasyBase));
+exports.FirstLastNamePhoneNumberGeoIn = FirstLastNamePhoneNumberGeoIn;

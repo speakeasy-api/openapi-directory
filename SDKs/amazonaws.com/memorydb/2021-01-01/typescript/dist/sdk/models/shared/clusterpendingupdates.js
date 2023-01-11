@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcLsUpdateStatus } from "./aclsupdatestatus";
-import { ReshardingStatus } from "./reshardingstatus";
-import { PendingModifiedServiceUpdate } from "./pendingmodifiedserviceupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterPendingUpdates = void 0;
+var utils_1 = require("../../../internal/utils");
+var aclsupdatestatus_1 = require("./aclsupdatestatus");
+var reshardingstatus_1 = require("./reshardingstatus");
+var pendingmodifiedserviceupdate_1 = require("./pendingmodifiedserviceupdate");
 // ClusterPendingUpdates
 /**
  * A list of updates being applied to the cluster
@@ -36,17 +39,17 @@ var ClusterPendingUpdates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ACLs" }),
-        __metadata("design:type", AcLsUpdateStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ACLs" }),
+        __metadata("design:type", aclsupdatestatus_1.AcLsUpdateStatus)
     ], ClusterPendingUpdates.prototype, "acLs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resharding" }),
-        __metadata("design:type", ReshardingStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resharding" }),
+        __metadata("design:type", reshardingstatus_1.ReshardingStatus)
     ], ClusterPendingUpdates.prototype, "resharding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceUpdates", elemType: PendingModifiedServiceUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceUpdates", elemType: pendingmodifiedserviceupdate_1.PendingModifiedServiceUpdate }),
         __metadata("design:type", Array)
     ], ClusterPendingUpdates.prototype, "serviceUpdates", void 0);
     return ClusterPendingUpdates;
-}(SpeakeasyBase));
-export { ClusterPendingUpdates };
+}(utils_1.SpeakeasyBase));
+exports.ClusterPendingUpdates = ClusterPendingUpdates;

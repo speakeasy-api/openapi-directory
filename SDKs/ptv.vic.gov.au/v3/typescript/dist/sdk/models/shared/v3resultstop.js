@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3ResultRoute } from "./v3resultroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ResultStop = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3resultroute_1 = require("./v3resultroute");
 var V3ResultStop = /** @class */ (function (_super) {
     __extends(V3ResultStop, _super);
     function V3ResultStop() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_type" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "routeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routes", elemType: V3ResultRoute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routes", elemType: v3resultroute_1.V3ResultRoute }),
         __metadata("design:type", Array)
     ], V3ResultStop.prototype, "routes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_distance" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "stopDistance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_id" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "stopId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_landmark" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_landmark" }),
         __metadata("design:type", String)
     ], V3ResultStop.prototype, "stopLandmark", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_latitude" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "stopLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_longitude" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "stopLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_name" }),
         __metadata("design:type", String)
     ], V3ResultStop.prototype, "stopName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_sequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_sequence" }),
         __metadata("design:type", Number)
     ], V3ResultStop.prototype, "stopSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_suburb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_suburb" }),
         __metadata("design:type", String)
     ], V3ResultStop.prototype, "stopSuburb", void 0);
     return V3ResultStop;
-}(SpeakeasyBase));
-export { V3ResultStop };
+}(utils_1.SpeakeasyBase));
+exports.V3ResultStop = V3ResultStop;

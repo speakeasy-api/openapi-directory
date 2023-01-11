@@ -12,5 +12,5 @@ export class PutEventSelectorsResponse extends SpeakeasyBase {
   eventSelectors?: EventSelector[];
 
   @SpeakeasyMetadata({ data: "json, name=TrailARN" })
-  trailArn?: string;
+  trailARN?: string;
 }

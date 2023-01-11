@@ -23,7 +23,7 @@ export class Queue1 extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=pullTarget" })
-  pullTarget?: Map<string, any>;
+  pullTarget?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=purgeTime" })
   purgeTime?: string;

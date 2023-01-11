@@ -60,5 +60,5 @@ export class ResendContactReachabilityEmailResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

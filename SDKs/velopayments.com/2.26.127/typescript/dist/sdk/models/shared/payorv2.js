@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayorAddressV2 } from "./payoraddressv2";
-import { KycStateEnum } from "./kycstateenum";
-import { PaymentRailsEnum } from "./paymentrailsenum";
-import { TransmissionTypes2 } from "./transmissiontypes2";
-export var PayorV2LanguageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayorV2 = exports.PayorV2LanguageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var payoraddressv2_1 = require("./payoraddressv2");
+var kycstateenum_1 = require("./kycstateenum");
+var paymentrailsenum_1 = require("./paymentrailsenum");
+var transmissiontypes2_1 = require("./transmissiontypes2");
+var PayorV2LanguageEnum;
 (function (PayorV2LanguageEnum) {
     PayorV2LanguageEnum["En"] = "EN";
     PayorV2LanguageEnum["Fr"] = "FR";
-})(PayorV2LanguageEnum || (PayorV2LanguageEnum = {}));
+})(PayorV2LanguageEnum = exports.PayorV2LanguageEnum || (exports.PayorV2LanguageEnum = {}));
 var PayorV2 = /** @class */ (function (_super) {
     __extends(PayorV2, _super);
     function PayorV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PayorAddressV2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", payoraddressv2_1.PayorAddressV2)
     ], PayorV2.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowsLanguageChoice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowsLanguageChoice" }),
         __metadata("design:type", Boolean)
     ], PayorV2.prototype, "allowsLanguageChoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectiveAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectiveAlias" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "collectiveAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dbaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dbaName" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "dbaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includesReports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includesReports" }),
         __metadata("design:type", Boolean)
     ], PayorV2.prototype, "includesReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kycState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kycState" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "kycState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manualLockout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manualLockout" }),
         __metadata("design:type", Boolean)
     ], PayorV2.prototype, "manualLockout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxMasterPayorAdmins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxMasterPayorAdmins" }),
         __metadata("design:type", Number)
     ], PayorV2.prototype, "maxMasterPayorAdmins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeGracePeriodDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeGracePeriodDays" }),
         __metadata("design:type", Number)
     ], PayorV2.prototype, "payeeGracePeriodDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeGracePeriodProcessingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeGracePeriodProcessingEnabled" }),
         __metadata("design:type", Boolean)
     ], PayorV2.prototype, "payeeGracePeriodProcessingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentRails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentRails" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "paymentRails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorName" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "payorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorXid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorXid" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "payorXid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactEmail" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "primaryContactEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactName" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "primaryContactName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactPhone" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "primaryContactPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reminderEmailsOptOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminderEmailsOptOut" }),
         __metadata("design:type", Boolean)
     ], PayorV2.prototype, "reminderEmailsOptOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteSystemIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteSystemIds" }),
         __metadata("design:type", Array)
     ], PayorV2.prototype, "remoteSystemIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportContact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportContact" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "supportContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transmissionTypes" }),
-        __metadata("design:type", TransmissionTypes2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transmissionTypes" }),
+        __metadata("design:type", transmissiontypes2_1.TransmissionTypes2)
     ], PayorV2.prototype, "transmissionTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wuCustomerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wuCustomerId" }),
         __metadata("design:type", String)
     ], PayorV2.prototype, "wuCustomerId", void 0);
     return PayorV2;
-}(SpeakeasyBase));
-export { PayorV2 };
+}(utils_1.SpeakeasyBase));
+exports.PayorV2 = PayorV2;

@@ -8,6 +8,6 @@ export declare class GetSetupV1CompaniesRegionsRequest extends SpeakeasyBase {
 }
 export declare class GetSetupV1CompaniesRegionsResponse extends SpeakeasyBase {
     contentType: string;
-    regionListViewModel?: Map<string, any>;
+    regionListViewModel?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaggedDatabase } from "./taggeddatabase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchDatabasesByLfTagsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var taggeddatabase_1 = require("./taggeddatabase");
 var SearchDatabasesByLfTagsResponse = /** @class */ (function (_super) {
     __extends(SearchDatabasesByLfTagsResponse, _super);
     function SearchDatabasesByLfTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseList", elemType: TaggedDatabase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseList", elemType: taggeddatabase_1.TaggedDatabase }),
         __metadata("design:type", Array)
     ], SearchDatabasesByLfTagsResponse.prototype, "databaseList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], SearchDatabasesByLfTagsResponse.prototype, "nextToken", void 0);
     return SearchDatabasesByLfTagsResponse;
-}(SpeakeasyBase));
-export { SearchDatabasesByLfTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchDatabasesByLfTagsResponse = SearchDatabasesByLfTagsResponse;

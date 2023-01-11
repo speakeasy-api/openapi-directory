@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { RepositoryAssociation } from "./repositoryassociation";
 export declare class DisassociateRepositoryResponse extends SpeakeasyBase {
     repositoryAssociation?: RepositoryAssociation;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

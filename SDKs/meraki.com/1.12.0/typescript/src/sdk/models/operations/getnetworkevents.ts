@@ -76,11 +76,11 @@ export class GetNetworkEventsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkEvents200ApplicationJsonObject?: Map<string, any>;
+  getNetworkEvents200ApplicationJSONObject?: Record<string, any>;
 }

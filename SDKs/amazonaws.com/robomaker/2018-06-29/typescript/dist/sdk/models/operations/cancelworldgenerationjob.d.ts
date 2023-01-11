@@ -16,7 +16,7 @@ export declare class CancelWorldGenerationJobRequest extends SpeakeasyBase {
     request: CancelWorldGenerationJobRequestBody;
 }
 export declare class CancelWorldGenerationJobResponse extends SpeakeasyBase {
-    cancelWorldGenerationJobResponse?: Map<string, any>;
+    cancelWorldGenerationJobResponse?: Record<string, any>;
     contentType: string;
     internalServerException?: any;
     invalidParameterException?: any;

@@ -4,7 +4,7 @@ export declare class PostV05LinksLinkOnInitHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05LinksLinkOnInitRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientLinkReferenceResult?: shared.PatientLinkReferenceResult;
 }
 export declare class PostV05LinksLinkOnInitRequest extends SpeakeasyBase {

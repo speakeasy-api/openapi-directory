@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataLakePrincipal } from "./datalakeprincipal";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrantPermissionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datalakeprincipal_1 = require("./datalakeprincipal");
+var resource_1 = require("./resource");
 var GrantPermissionsRequest = /** @class */ (function (_super) {
     __extends(GrantPermissionsRequest, _super);
     function GrantPermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], GrantPermissionsRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", Array)
     ], GrantPermissionsRequest.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PermissionsWithGrantOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PermissionsWithGrantOption" }),
         __metadata("design:type", Array)
     ], GrantPermissionsRequest.prototype, "permissionsWithGrantOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Principal" }),
-        __metadata("design:type", DataLakePrincipal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Principal" }),
+        __metadata("design:type", datalakeprincipal_1.DataLakePrincipal)
     ], GrantPermissionsRequest.prototype, "principal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], GrantPermissionsRequest.prototype, "resource", void 0);
     return GrantPermissionsRequest;
-}(SpeakeasyBase));
-export { GrantPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GrantPermissionsRequest = GrantPermissionsRequest;

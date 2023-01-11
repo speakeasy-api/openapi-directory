@@ -31,6 +31,6 @@ export declare class BooksPromoofferAcceptRequest extends SpeakeasyBase {
 }
 export declare class BooksPromoofferAcceptResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

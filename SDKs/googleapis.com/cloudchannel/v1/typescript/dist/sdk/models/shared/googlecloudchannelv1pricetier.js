@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Price } from "./googlecloudchannelv1price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1PriceTier = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1price_1 = require("./googlecloudchannelv1price");
 // GoogleCloudChannelV1PriceTier
 /**
  * Defines price at resource tier level. For example, an offer with following definition : * Tier 1: Provide 25% discount for all seats between 1 and 25. * Tier 2: Provide 10% discount for all seats between 26 and 100. * Tier 3: Provide flat 15% discount for all seats above 100. Each of these tiers is represented as a PriceTier.
@@ -34,17 +37,17 @@ var GoogleCloudChannelV1PriceTier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstResource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstResource" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1PriceTier.prototype, "firstResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastResource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastResource" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1PriceTier.prototype, "lastResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", GoogleCloudChannelV1Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", googlecloudchannelv1price_1.GoogleCloudChannelV1Price)
     ], GoogleCloudChannelV1PriceTier.prototype, "price", void 0);
     return GoogleCloudChannelV1PriceTier;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1PriceTier };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1PriceTier = GoogleCloudChannelV1PriceTier;

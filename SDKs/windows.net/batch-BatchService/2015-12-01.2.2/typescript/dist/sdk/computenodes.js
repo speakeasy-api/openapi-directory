@@ -1,0 +1,478 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeNodes = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var ComputeNodes = /** @class */ (function () {
+    function ComputeNodes(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * computeNodeAddUser - Adds a user account to the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeAddUser = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeAddUserRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/users", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeDeleteUser - Deletes a user account from the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeDeleteUser = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeDeleteUserRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeDisableScheduling - Disable task scheduling of the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeDisableScheduling = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeDisableSchedulingRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/disablescheduling", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeEnableScheduling - Enable task scheduling of the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeEnableScheduling = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeEnableSchedulingRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/enablescheduling", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "post", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeGet - Gets information about the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeGet = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeGetRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.computeNode = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeGetRemoteDesktop - Gets the Remote Desktop Protocol file for the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeGetRemoteDesktop = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeGetRemoteDesktopRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/rdp", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeList - Lists the compute nodes in the specified pool.
+    **/
+    ComputeNodes.prototype.computeNodeList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes", req.pathParams);
+        var client = this._defaultClient;
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.computeNodeListResult = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeReboot - Restarts the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeReboot = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeRebootRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/reboot", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeReimage - Reinstalls the operating system on the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeReimage = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeReimageRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/reimage", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * computeNodeUpdateUser - Updates the password or expiration time of a user account on the specified compute node.
+    **/
+    ComputeNodes.prototype.computeNodeUpdateUser = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ComputeNodeUpdateUserRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * poolRemoveNodes - Removes compute nodes from the specified pool.
+    **/
+    ComputeNodes.prototype.poolRemoveNodes = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PoolRemoveNodesRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/pools/{poolId}/removenodes", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._defaultClient;
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 202:
+                    break;
+                default:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.batchError = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return ComputeNodes;
+}());
+exports.ComputeNodes = ComputeNodes;

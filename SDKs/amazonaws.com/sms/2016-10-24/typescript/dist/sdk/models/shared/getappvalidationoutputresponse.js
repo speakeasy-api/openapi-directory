@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValidationOutput } from "./validationoutput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppValidationOutputResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var validationoutput_1 = require("./validationoutput");
 var GetAppValidationOutputResponse = /** @class */ (function (_super) {
     __extends(GetAppValidationOutputResponse, _super);
     function GetAppValidationOutputResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationOutputList", elemType: ValidationOutput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationOutputList", elemType: validationoutput_1.ValidationOutput }),
         __metadata("design:type", Array)
     ], GetAppValidationOutputResponse.prototype, "validationOutputList", void 0);
     return GetAppValidationOutputResponse;
-}(SpeakeasyBase));
-export { GetAppValidationOutputResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppValidationOutputResponse = GetAppValidationOutputResponse;

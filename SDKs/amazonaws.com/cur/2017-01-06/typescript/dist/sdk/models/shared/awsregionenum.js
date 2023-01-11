@@ -1,4 +1,7 @@
-export var AwsRegionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsRegionEnum = void 0;
+var AwsRegionEnum;
 (function (AwsRegionEnum) {
     AwsRegionEnum["AfSouth1"] = "af-south-1";
     AwsRegionEnum["ApEast1"] = "ap-east-1";
@@ -23,4 +26,4 @@ export var AwsRegionEnum;
     AwsRegionEnum["UsWest2"] = "us-west-2";
     AwsRegionEnum["CnNorth1"] = "cn-north-1";
     AwsRegionEnum["CnNorthwest1"] = "cn-northwest-1";
-})(AwsRegionEnum || (AwsRegionEnum = {}));
+})(AwsRegionEnum = exports.AwsRegionEnum || (exports.AwsRegionEnum = {}));

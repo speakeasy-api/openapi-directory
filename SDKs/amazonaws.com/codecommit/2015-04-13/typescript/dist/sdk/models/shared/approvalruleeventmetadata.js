@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApprovalRuleEventMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApprovalRuleEventMetadata
 /**
  * Returns information about an event for an approval rule.
@@ -33,17 +36,17 @@ var ApprovalRuleEventMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleContent" }),
         __metadata("design:type", String)
     ], ApprovalRuleEventMetadata.prototype, "approvalRuleContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleId" }),
         __metadata("design:type", String)
     ], ApprovalRuleEventMetadata.prototype, "approvalRuleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleName" }),
         __metadata("design:type", String)
     ], ApprovalRuleEventMetadata.prototype, "approvalRuleName", void 0);
     return ApprovalRuleEventMetadata;
-}(SpeakeasyBase));
-export { ApprovalRuleEventMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ApprovalRuleEventMetadata = ApprovalRuleEventMetadata;

@@ -17,6 +17,6 @@ export declare class AddChannelModeratorsRequest extends SpeakeasyBase {
 export declare class AddChannelModeratorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

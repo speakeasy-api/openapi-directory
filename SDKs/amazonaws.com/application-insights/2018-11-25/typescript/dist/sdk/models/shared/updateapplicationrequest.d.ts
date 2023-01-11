@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class UpdateApplicationRequest extends SpeakeasyBase {
     cweMonitorEnabled?: boolean;
     opsCenterEnabled?: boolean;
-    opsItemSnsTopicArn?: string;
-    removeSnsTopic?: boolean;
+    opsItemSNSTopicArn?: string;
+    removeSNSTopic?: boolean;
     resourceGroupName: string;
 }

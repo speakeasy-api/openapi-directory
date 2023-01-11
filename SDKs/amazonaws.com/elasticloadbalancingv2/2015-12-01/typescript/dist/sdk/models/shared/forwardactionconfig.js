@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetGroupStickinessConfig } from "./targetgroupstickinessconfig";
-import { TargetGroupTuple } from "./targetgrouptuple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForwardActionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetgroupstickinessconfig_1 = require("./targetgroupstickinessconfig");
+var targetgrouptuple_1 = require("./targetgrouptuple");
 // ForwardActionConfig
 /**
  * Information about a forward action.
@@ -35,13 +38,13 @@ var ForwardActionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TargetGroupStickinessConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", targetgroupstickinessconfig_1.TargetGroupStickinessConfig)
     ], ForwardActionConfig.prototype, "targetGroupStickinessConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TargetGroupTuple }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: targetgrouptuple_1.TargetGroupTuple }),
         __metadata("design:type", Array)
     ], ForwardActionConfig.prototype, "targetGroups", void 0);
     return ForwardActionConfig;
-}(SpeakeasyBase));
-export { ForwardActionConfig };
+}(utils_1.SpeakeasyBase));
+exports.ForwardActionConfig = ForwardActionConfig;

@@ -15,8 +15,8 @@ export declare class CreateRouteResponseHeaders extends SpeakeasyBase {
 }
 export declare class CreateRouteResponseRequestBody extends SpeakeasyBase {
     modelSelectionExpression?: string;
-    responseModels?: Map<string, string>;
-    responseParameters?: Map<string, shared.ParameterConstraints>;
+    responseModels?: Record<string, string>;
+    responseParameters?: Record<string, shared.ParameterConstraints>;
     routeResponseKey: string;
 }
 export declare class CreateRouteResponseRequest extends SpeakeasyBase {

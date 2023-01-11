@@ -28,6 +28,6 @@ export declare class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierReq
 }
 export declare class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJsonObject?: PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject?: PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJson;
 }

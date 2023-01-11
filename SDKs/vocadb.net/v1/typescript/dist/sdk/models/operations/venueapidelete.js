@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VenueApiDeleteResponse = exports.VenueApiDeleteRequest = exports.VenueApiDeleteQueryParams = exports.VenueApiDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VenueApiDeletePathParams = /** @class */ (function (_super) {
     __extends(VenueApiDeletePathParams, _super);
     function VenueApiDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], VenueApiDeletePathParams.prototype, "id", void 0);
     return VenueApiDeletePathParams;
-}(SpeakeasyBase));
-export { VenueApiDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiDeletePathParams = VenueApiDeletePathParams;
 var VenueApiDeleteQueryParams = /** @class */ (function (_super) {
     __extends(VenueApiDeleteQueryParams, _super);
     function VenueApiDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
         __metadata("design:type", Boolean)
     ], VenueApiDeleteQueryParams.prototype, "hardDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], VenueApiDeleteQueryParams.prototype, "notes", void 0);
     return VenueApiDeleteQueryParams;
-}(SpeakeasyBase));
-export { VenueApiDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiDeleteQueryParams = VenueApiDeleteQueryParams;
 var VenueApiDeleteRequest = /** @class */ (function (_super) {
     __extends(VenueApiDeleteRequest, _super);
     function VenueApiDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VenueApiDeletePathParams)
     ], VenueApiDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VenueApiDeleteQueryParams)
     ], VenueApiDeleteRequest.prototype, "queryParams", void 0);
     return VenueApiDeleteRequest;
-}(SpeakeasyBase));
-export { VenueApiDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiDeleteRequest = VenueApiDeleteRequest;
 var VenueApiDeleteResponse = /** @class */ (function (_super) {
     __extends(VenueApiDeleteResponse, _super);
     function VenueApiDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VenueApiDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VenueApiDeleteResponse.prototype, "statusCode", void 0);
     return VenueApiDeleteResponse;
-}(SpeakeasyBase));
-export { VenueApiDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiDeleteResponse = VenueApiDeleteResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedClientInput } from "./allowedclient";
-import { AllowedClient } from "./allowedclient";
-export var NfsShareStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NfsShareInput = exports.NfsShare = exports.NfsShareStorageTypeEnum = exports.NfsShareStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowedclient_1 = require("./allowedclient");
+var allowedclient_2 = require("./allowedclient");
+var NfsShareStateEnum;
 (function (NfsShareStateEnum) {
     NfsShareStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     NfsShareStateEnum["Provisioned"] = "PROVISIONED";
     NfsShareStateEnum["Creating"] = "CREATING";
     NfsShareStateEnum["Updating"] = "UPDATING";
     NfsShareStateEnum["Deleting"] = "DELETING";
-})(NfsShareStateEnum || (NfsShareStateEnum = {}));
-export var NfsShareStorageTypeEnum;
+})(NfsShareStateEnum = exports.NfsShareStateEnum || (exports.NfsShareStateEnum = {}));
+var NfsShareStorageTypeEnum;
 (function (NfsShareStorageTypeEnum) {
     NfsShareStorageTypeEnum["StorageTypeUnspecified"] = "STORAGE_TYPE_UNSPECIFIED";
     NfsShareStorageTypeEnum["Ssd"] = "SSD";
     NfsShareStorageTypeEnum["Hdd"] = "HDD";
-})(NfsShareStorageTypeEnum || (NfsShareStorageTypeEnum = {}));
-// NfsShareInput
-/**
- * An NFS share.
-**/
-var NfsShareInput = /** @class */ (function (_super) {
-    __extends(NfsShareInput, _super);
-    function NfsShareInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedClients", elemType: AllowedClientInput }),
-        __metadata("design:type", Array)
-    ], NfsShareInput.prototype, "allowedClients", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], NfsShareInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], NfsShareInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedSizeGib" }),
-        __metadata("design:type", String)
-    ], NfsShareInput.prototype, "requestedSizeGib", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageType" }),
-        __metadata("design:type", String)
-    ], NfsShareInput.prototype, "storageType", void 0);
-    return NfsShareInput;
-}(SpeakeasyBase));
-export { NfsShareInput };
+})(NfsShareStorageTypeEnum = exports.NfsShareStorageTypeEnum || (exports.NfsShareStorageTypeEnum = {}));
 // NfsShare
 /**
  * An NFS share.
@@ -81,41 +52,73 @@ var NfsShare = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedClients", elemType: AllowedClient }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedClients", elemType: allowedclient_1.AllowedClient }),
         __metadata("design:type", Array)
     ], NfsShare.prototype, "allowedClients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], NfsShare.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfsShareId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfsShareId" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "nfsShareId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedSizeGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedSizeGib" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "requestedSizeGib", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageType" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "storageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", String)
     ], NfsShare.prototype, "volume", void 0);
     return NfsShare;
-}(SpeakeasyBase));
-export { NfsShare };
+}(utils_1.SpeakeasyBase));
+exports.NfsShare = NfsShare;
+// NfsShareInput
+/**
+ * An NFS share.
+**/
+var NfsShareInput = /** @class */ (function (_super) {
+    __extends(NfsShareInput, _super);
+    function NfsShareInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedClients", elemType: allowedclient_2.AllowedClientInput }),
+        __metadata("design:type", Array)
+    ], NfsShareInput.prototype, "allowedClients", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], NfsShareInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], NfsShareInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedSizeGib" }),
+        __metadata("design:type", String)
+    ], NfsShareInput.prototype, "requestedSizeGib", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageType" }),
+        __metadata("design:type", String)
+    ], NfsShareInput.prototype, "storageType", void 0);
+    return NfsShareInput;
+}(utils_1.SpeakeasyBase));
+exports.NfsShareInput = NfsShareInput;

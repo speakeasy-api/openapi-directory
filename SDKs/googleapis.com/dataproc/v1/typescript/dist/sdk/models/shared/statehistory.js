@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var StateHistoryStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateHistory = exports.StateHistoryStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var StateHistoryStateEnum;
 (function (StateHistoryStateEnum) {
     StateHistoryStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     StateHistoryStateEnum["Pending"] = "PENDING";
@@ -32,7 +35,7 @@ export var StateHistoryStateEnum;
     StateHistoryStateEnum["Cancelled"] = "CANCELLED";
     StateHistoryStateEnum["Succeeded"] = "SUCCEEDED";
     StateHistoryStateEnum["Failed"] = "FAILED";
-})(StateHistoryStateEnum || (StateHistoryStateEnum = {}));
+})(StateHistoryStateEnum = exports.StateHistoryStateEnum || (exports.StateHistoryStateEnum = {}));
 // StateHistory
 /**
  * Historical state information.
@@ -43,17 +46,17 @@ var StateHistory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], StateHistory.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateMessage" }),
         __metadata("design:type", String)
     ], StateHistory.prototype, "stateMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateStartTime" }),
         __metadata("design:type", String)
     ], StateHistory.prototype, "stateStartTime", void 0);
     return StateHistory;
-}(SpeakeasyBase));
-export { StateHistory };
+}(utils_1.SpeakeasyBase));
+exports.StateHistory = StateHistory;

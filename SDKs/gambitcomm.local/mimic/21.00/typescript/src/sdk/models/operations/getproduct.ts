@@ -10,5 +10,5 @@ export class GetProductResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getProduct200ApplicationJsonObject?: Map<string, number>;
+  getProduct200ApplicationJSONObject?: Record<string, number>;
 }

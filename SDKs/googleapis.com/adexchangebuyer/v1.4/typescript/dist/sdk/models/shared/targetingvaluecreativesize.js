@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetingValueSize } from "./targetingvaluesize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetingValueCreativeSize = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetingvaluesize_1 = require("./targetingvaluesize");
 // TargetingValueCreativeSize
 /**
  * Next Id: 7
@@ -34,29 +37,29 @@ var TargetingValueCreativeSize = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedFormats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedFormats" }),
         __metadata("design:type", Array)
     ], TargetingValueCreativeSize.prototype, "allowedFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companionSizes", elemType: TargetingValueSize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companionSizes", elemType: targetingvaluesize_1.TargetingValueSize }),
         __metadata("design:type", Array)
     ], TargetingValueCreativeSize.prototype, "companionSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeSizeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeSizeType" }),
         __metadata("design:type", String)
     ], TargetingValueCreativeSize.prototype, "creativeSizeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nativeTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nativeTemplate" }),
         __metadata("design:type", String)
     ], TargetingValueCreativeSize.prototype, "nativeTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
-        __metadata("design:type", TargetingValueSize)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
+        __metadata("design:type", targetingvaluesize_1.TargetingValueSize)
     ], TargetingValueCreativeSize.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skippableAdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skippableAdType" }),
         __metadata("design:type", String)
     ], TargetingValueCreativeSize.prototype, "skippableAdType", void 0);
     return TargetingValueCreativeSize;
-}(SpeakeasyBase));
-export { TargetingValueCreativeSize };
+}(utils_1.SpeakeasyBase));
+exports.TargetingValueCreativeSize = TargetingValueCreativeSize;

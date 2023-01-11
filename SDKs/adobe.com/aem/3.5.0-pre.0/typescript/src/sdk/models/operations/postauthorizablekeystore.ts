@@ -94,10 +94,10 @@ export class PostAuthorizableKeystoreRequest extends SpeakeasyBase {
 
 export class PostAuthorizableKeystoreResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  keystoreInfo?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

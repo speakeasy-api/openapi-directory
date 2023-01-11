@@ -48,7 +48,7 @@ export class DeleteSecurityConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSecurityConfigurationResponse?: Map<string, any>;
+  deleteSecurityConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

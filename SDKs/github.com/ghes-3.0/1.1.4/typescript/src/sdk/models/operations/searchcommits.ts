@@ -61,8 +61,8 @@ export class SearchCommitsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchCommits200ApplicationJsonObject?: SearchCommits200ApplicationJson;
+  searchCommits200ApplicationJSONObject?: SearchCommits200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchCommits415ApplicationJsonObject?: SearchCommits415ApplicationJson;
+  searchCommits415ApplicationJSONObject?: SearchCommits415ApplicationJson;
 }

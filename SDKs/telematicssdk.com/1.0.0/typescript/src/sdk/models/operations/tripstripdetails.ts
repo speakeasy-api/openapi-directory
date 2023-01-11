@@ -256,11 +256,11 @@ export class TripsTripDetailsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tripsTripDetails200ApplicationJsonObject?: TripsTripDetails200ApplicationJson;
+  tripsTripDetails200ApplicationJSONObject?: TripsTripDetails200ApplicationJson;
 }

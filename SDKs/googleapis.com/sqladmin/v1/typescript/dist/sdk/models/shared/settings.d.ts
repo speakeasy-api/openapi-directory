@@ -73,5 +73,5 @@ export declare class Settings extends SpeakeasyBase {
     storageAutoResizeLimit?: string;
     tier?: string;
     timeZone?: string;
-    userLabels?: Map<string, string>;
+    userLabels?: Record<string, string>;
 }

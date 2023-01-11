@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteFileCommentReactionsIdResponse = exports.DeleteFileCommentReactionsIdRequest = exports.DeleteFileCommentReactionsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteFileCommentReactionsIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteFileCommentReactionsIdPathParams, _super);
     function DeleteFileCommentReactionsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteFileCommentReactionsIdPathParams.prototype, "id", void 0);
     return DeleteFileCommentReactionsIdPathParams;
-}(SpeakeasyBase));
-export { DeleteFileCommentReactionsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFileCommentReactionsIdPathParams = DeleteFileCommentReactionsIdPathParams;
 var DeleteFileCommentReactionsIdRequest = /** @class */ (function (_super) {
     __extends(DeleteFileCommentReactionsIdRequest, _super);
     function DeleteFileCommentReactionsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteFileCommentReactionsIdPathParams)
     ], DeleteFileCommentReactionsIdRequest.prototype, "pathParams", void 0);
     return DeleteFileCommentReactionsIdRequest;
-}(SpeakeasyBase));
-export { DeleteFileCommentReactionsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFileCommentReactionsIdRequest = DeleteFileCommentReactionsIdRequest;
 var DeleteFileCommentReactionsIdResponse = /** @class */ (function (_super) {
     __extends(DeleteFileCommentReactionsIdResponse, _super);
     function DeleteFileCommentReactionsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteFileCommentReactionsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteFileCommentReactionsIdResponse.prototype, "statusCode", void 0);
     return DeleteFileCommentReactionsIdResponse;
-}(SpeakeasyBase));
-export { DeleteFileCommentReactionsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFileCommentReactionsIdResponse = DeleteFileCommentReactionsIdResponse;

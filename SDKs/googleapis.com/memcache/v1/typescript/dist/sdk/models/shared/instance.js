@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceMessage } from "./instancemessage";
-import { GoogleCloudMemcacheV1MaintenancePolicyInput } from "./googlecloudmemcachev1maintenancepolicy";
-import { NodeConfig } from "./nodeconfig";
-import { MemcacheParametersInput } from "./memcacheparameters";
-import { GoogleCloudMemcacheV1MaintenancePolicy } from "./googlecloudmemcachev1maintenancepolicy";
-import { MaintenanceSchedule } from "./maintenanceschedule";
-import { Node } from "./node";
-import { MemcacheParameters } from "./memcacheparameters";
-export var InstanceMemcacheVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = exports.InstanceInput = exports.InstanceStateEnum = exports.InstanceMemcacheVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancemessage_1 = require("./instancemessage");
+var googlecloudmemcachev1maintenancepolicy_1 = require("./googlecloudmemcachev1maintenancepolicy");
+var nodeconfig_1 = require("./nodeconfig");
+var memcacheparameters_1 = require("./memcacheparameters");
+var googlecloudmemcachev1maintenancepolicy_2 = require("./googlecloudmemcachev1maintenancepolicy");
+var maintenanceschedule_1 = require("./maintenanceschedule");
+var node_1 = require("./node");
+var memcacheparameters_2 = require("./memcacheparameters");
+var InstanceMemcacheVersionEnum;
 (function (InstanceMemcacheVersionEnum) {
     InstanceMemcacheVersionEnum["MemcacheVersionUnspecified"] = "MEMCACHE_VERSION_UNSPECIFIED";
     InstanceMemcacheVersionEnum["Memcache15"] = "MEMCACHE_1_5";
-})(InstanceMemcacheVersionEnum || (InstanceMemcacheVersionEnum = {}));
-export var InstanceStateEnum;
+})(InstanceMemcacheVersionEnum = exports.InstanceMemcacheVersionEnum || (exports.InstanceMemcacheVersionEnum = {}));
+var InstanceStateEnum;
 (function (InstanceStateEnum) {
     InstanceStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     InstanceStateEnum["Creating"] = "CREATING";
@@ -44,7 +47,7 @@ export var InstanceStateEnum;
     InstanceStateEnum["Updating"] = "UPDATING";
     InstanceStateEnum["Deleting"] = "DELETING";
     InstanceStateEnum["PerformingMaintenance"] = "PERFORMING_MAINTENANCE";
-})(InstanceStateEnum || (InstanceStateEnum = {}));
+})(InstanceStateEnum = exports.InstanceStateEnum || (exports.InstanceStateEnum = {}));
 // InstanceInput
 /**
  * A Memorystore for Memcached instance
@@ -55,52 +58,52 @@ var InstanceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedNetwork" }),
         __metadata("design:type", String)
     ], InstanceInput.prototype, "authorizedNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], InstanceInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceMessages", elemType: InstanceMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceMessages", elemType: instancemessage_1.InstanceMessage }),
         __metadata("design:type", Array)
     ], InstanceInput.prototype, "instanceMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], InstanceInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenancePolicy" }),
-        __metadata("design:type", GoogleCloudMemcacheV1MaintenancePolicyInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenancePolicy" }),
+        __metadata("design:type", googlecloudmemcachev1maintenancepolicy_1.GoogleCloudMemcacheV1MaintenancePolicyInput)
     ], InstanceInput.prototype, "maintenancePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memcacheVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memcacheVersion" }),
         __metadata("design:type", String)
     ], InstanceInput.prototype, "memcacheVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InstanceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeConfig" }),
-        __metadata("design:type", NodeConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeConfig" }),
+        __metadata("design:type", nodeconfig_1.NodeConfig)
     ], InstanceInput.prototype, "nodeConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeCount" }),
         __metadata("design:type", Number)
     ], InstanceInput.prototype, "nodeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", MemcacheParametersInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", memcacheparameters_1.MemcacheParametersInput)
     ], InstanceInput.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zones" }),
         __metadata("design:type", Array)
     ], InstanceInput.prototype, "zones", void 0);
     return InstanceInput;
-}(SpeakeasyBase));
-export { InstanceInput };
+}(utils_1.SpeakeasyBase));
+exports.InstanceInput = InstanceInput;
 // Instance
 /**
  * A Memorystore for Memcached instance
@@ -111,77 +114,77 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedNetwork" }),
         __metadata("design:type", String)
     ], Instance.prototype, "authorizedNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Instance.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discoveryEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discoveryEndpoint" }),
         __metadata("design:type", String)
     ], Instance.prototype, "discoveryEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Instance.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceMessages", elemType: InstanceMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceMessages", elemType: instancemessage_1.InstanceMessage }),
         __metadata("design:type", Array)
     ], Instance.prototype, "instanceMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Instance.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenancePolicy" }),
-        __metadata("design:type", GoogleCloudMemcacheV1MaintenancePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenancePolicy" }),
+        __metadata("design:type", googlecloudmemcachev1maintenancepolicy_2.GoogleCloudMemcacheV1MaintenancePolicy)
     ], Instance.prototype, "maintenancePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenanceSchedule" }),
-        __metadata("design:type", MaintenanceSchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenanceSchedule" }),
+        __metadata("design:type", maintenanceschedule_1.MaintenanceSchedule)
     ], Instance.prototype, "maintenanceSchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memcacheFullVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memcacheFullVersion" }),
         __metadata("design:type", String)
     ], Instance.prototype, "memcacheFullVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memcacheNodes", elemType: Node }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memcacheNodes", elemType: node_1.Node }),
         __metadata("design:type", Array)
     ], Instance.prototype, "memcacheNodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memcacheVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memcacheVersion" }),
         __metadata("design:type", String)
     ], Instance.prototype, "memcacheVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Instance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeConfig" }),
-        __metadata("design:type", NodeConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeConfig" }),
+        __metadata("design:type", nodeconfig_1.NodeConfig)
     ], Instance.prototype, "nodeConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeCount" }),
         __metadata("design:type", Number)
     ], Instance.prototype, "nodeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", MemcacheParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", memcacheparameters_2.MemcacheParameters)
     ], Instance.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Instance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Instance.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zones" }),
         __metadata("design:type", Array)
     ], Instance.prototype, "zones", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

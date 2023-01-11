@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegistryAliasStatusEnum } from "./registryaliasstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryAlias = void 0;
+var utils_1 = require("../../../internal/utils");
+var registryaliasstatusenum_1 = require("./registryaliasstatusenum");
 // RegistryAlias
 /**
  * An object representing the aliases for a public registry. A public registry is given an alias upon creation but a custom alias can be set using the Amazon ECR console. For more information, see <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html">Registries</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
@@ -34,21 +37,21 @@ var RegistryAlias = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultRegistryAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultRegistryAlias" }),
         __metadata("design:type", Boolean)
     ], RegistryAlias.prototype, "defaultRegistryAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RegistryAlias.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryRegistryAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryRegistryAlias" }),
         __metadata("design:type", Boolean)
     ], RegistryAlias.prototype, "primaryRegistryAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], RegistryAlias.prototype, "status", void 0);
     return RegistryAlias;
-}(SpeakeasyBase));
-export { RegistryAlias };
+}(utils_1.SpeakeasyBase));
+exports.RegistryAlias = RegistryAlias;

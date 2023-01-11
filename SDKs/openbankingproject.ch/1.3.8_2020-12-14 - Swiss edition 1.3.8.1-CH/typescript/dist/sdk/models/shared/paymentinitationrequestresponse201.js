@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { ChallengeData } from "./challengedata";
-import { ChosenScaMethod } from "./chosenscamethod";
-import { Amount } from "./amount";
-import { AuthenticationObject } from "./authenticationobject";
-import { TppMessage2Xx } from "./tppmessage2xx";
-import { TransactionStatusEnum } from "./transactionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentInitationRequestResponse201 = void 0;
+var utils_1 = require("../../../internal/utils");
+var hreftype_1 = require("./hreftype");
+var challengedata_1 = require("./challengedata");
+var chosenscamethod_1 = require("./chosenscamethod");
+var amount_1 = require("./amount");
+var authenticationobject_1 = require("./authenticationobject");
+var tppmessage2xx_1 = require("./tppmessage2xx");
+var transactionstatusenum_1 = require("./transactionstatusenum");
 // PaymentInitationRequestResponse201
 /**
  * Body of the response for a successful payment initiation request.
@@ -40,57 +43,57 @@ var PaymentInitationRequestResponse201 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], PaymentInitationRequestResponse201.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challengeData" }),
-        __metadata("design:type", ChallengeData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challengeData" }),
+        __metadata("design:type", challengedata_1.ChallengeData)
     ], PaymentInitationRequestResponse201.prototype, "challengeData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chosenScaMethod" }),
-        __metadata("design:type", ChosenScaMethod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chosenScaMethod" }),
+        __metadata("design:type", chosenscamethod_1.ChosenScaMethod)
     ], PaymentInitationRequestResponse201.prototype, "chosenScaMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyConversionFee" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyConversionFee" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitationRequestResponse201.prototype, "currencyConversionFee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimatedInterbankSettlementAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimatedInterbankSettlementAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitationRequestResponse201.prototype, "estimatedInterbankSettlementAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimatedTotalAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimatedTotalAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitationRequestResponse201.prototype, "estimatedTotalAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentId" }),
         __metadata("design:type", String)
     ], PaymentInitationRequestResponse201.prototype, "paymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=psuMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=psuMessage" }),
         __metadata("design:type", String)
     ], PaymentInitationRequestResponse201.prototype, "psuMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaMethods", elemType: AuthenticationObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaMethods", elemType: authenticationobject_1.AuthenticationObject }),
         __metadata("design:type", Array)
     ], PaymentInitationRequestResponse201.prototype, "scaMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tppMessages", elemType: TppMessage2Xx }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tppMessages", elemType: tppmessage2xx_1.TppMessage2Xx }),
         __metadata("design:type", Array)
     ], PaymentInitationRequestResponse201.prototype, "tppMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionFeeIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionFeeIndicator" }),
         __metadata("design:type", Boolean)
     ], PaymentInitationRequestResponse201.prototype, "transactionFeeIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionFees" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionFees" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitationRequestResponse201.prototype, "transactionFees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionStatus" }),
         __metadata("design:type", String)
     ], PaymentInitationRequestResponse201.prototype, "transactionStatus", void 0);
     return PaymentInitationRequestResponse201;
-}(SpeakeasyBase));
-export { PaymentInitationRequestResponse201 };
+}(utils_1.SpeakeasyBase));
+exports.PaymentInitationRequestResponse201 = PaymentInitationRequestResponse201;

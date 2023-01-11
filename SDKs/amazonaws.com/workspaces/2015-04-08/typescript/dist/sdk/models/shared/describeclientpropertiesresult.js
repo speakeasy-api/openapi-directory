@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientPropertiesResult } from "./clientpropertiesresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeClientPropertiesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientpropertiesresult_1 = require("./clientpropertiesresult");
 var DescribeClientPropertiesResult = /** @class */ (function (_super) {
     __extends(DescribeClientPropertiesResult, _super);
     function DescribeClientPropertiesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientPropertiesList", elemType: ClientPropertiesResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientPropertiesList", elemType: clientpropertiesresult_1.ClientPropertiesResult }),
         __metadata("design:type", Array)
     ], DescribeClientPropertiesResult.prototype, "clientPropertiesList", void 0);
     return DescribeClientPropertiesResult;
-}(SpeakeasyBase));
-export { DescribeClientPropertiesResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeClientPropertiesResult = DescribeClientPropertiesResult;

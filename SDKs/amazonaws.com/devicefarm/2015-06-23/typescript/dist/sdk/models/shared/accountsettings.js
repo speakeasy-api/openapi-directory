@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrialMinutes } from "./trialminutes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var trialminutes_1 = require("./trialminutes");
 // AccountSettings
 /**
  * A container for account-level settings in AWS Device Farm.
@@ -34,37 +37,37 @@ var AccountSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsAccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsAccountNumber" }),
         __metadata("design:type", String)
     ], AccountSettings.prototype, "awsAccountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultJobTimeoutMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultJobTimeoutMinutes" }),
         __metadata("design:type", Number)
     ], AccountSettings.prototype, "defaultJobTimeoutMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxJobTimeoutMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxJobTimeoutMinutes" }),
         __metadata("design:type", Number)
     ], AccountSettings.prototype, "maxJobTimeoutMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSlots" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSlots" }),
+        __metadata("design:type", Object)
     ], AccountSettings.prototype, "maxSlots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipAppResign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipAppResign" }),
         __metadata("design:type", Boolean)
     ], AccountSettings.prototype, "skipAppResign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialMinutes" }),
-        __metadata("design:type", TrialMinutes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialMinutes" }),
+        __metadata("design:type", trialminutes_1.TrialMinutes)
     ], AccountSettings.prototype, "trialMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unmeteredDevices" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unmeteredDevices" }),
+        __metadata("design:type", Object)
     ], AccountSettings.prototype, "unmeteredDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unmeteredRemoteAccessDevices" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unmeteredRemoteAccessDevices" }),
+        __metadata("design:type", Object)
     ], AccountSettings.prototype, "unmeteredRemoteAccessDevices", void 0);
     return AccountSettings;
-}(SpeakeasyBase));
-export { AccountSettings };
+}(utils_1.SpeakeasyBase));
+exports.AccountSettings = AccountSettings;

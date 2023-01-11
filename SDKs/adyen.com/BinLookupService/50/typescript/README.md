@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostGet3dsAvailabilityRequest, PostGet3dsAvailabilityResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,10 +33,10 @@ const req: PostGet3dsAvailabilityRequest = {
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "reprehenderit",
+  request: "sit",
 };
 
-sdk.sdk.postGet3dsAvailability(req).then((res: PostGet3dsAvailabilityResponse | AxiosError) => {
+sdk.general.postGet3dsAvailability(req).then((res: PostGet3dsAvailabilityResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,7 +45,7 @@ sdk.sdk.postGet3dsAvailability(req).then((res: PostGet3dsAvailabilityResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `postGet3dsAvailability` - Checks 3D Secure availability.
 * `postGetCostEstimate` - Gets a cost estimate.

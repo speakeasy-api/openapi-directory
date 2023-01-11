@@ -25,5 +25,5 @@ export class GetDeviceSwitchRoutingInterfaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceSwitchRoutingInterface200ApplicationJsonObject?: Map<string, any>;
+  getDeviceSwitchRoutingInterface200ApplicationJSONObject?: Record<string, any>;
 }

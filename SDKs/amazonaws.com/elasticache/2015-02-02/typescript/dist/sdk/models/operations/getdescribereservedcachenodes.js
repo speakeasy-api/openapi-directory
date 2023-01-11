@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,134 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeReservedCacheNodesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeReservedCacheNodesResponse = exports.GetDescribeReservedCacheNodesRequest = exports.GetDescribeReservedCacheNodesHeaders = exports.GetDescribeReservedCacheNodesQueryParams = exports.GetDescribeReservedCacheNodesVersionEnum = exports.GetDescribeReservedCacheNodesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeReservedCacheNodesActionEnum;
 (function (GetDescribeReservedCacheNodesActionEnum) {
     GetDescribeReservedCacheNodesActionEnum["DescribeReservedCacheNodes"] = "DescribeReservedCacheNodes";
-})(GetDescribeReservedCacheNodesActionEnum || (GetDescribeReservedCacheNodesActionEnum = {}));
-export var GetDescribeReservedCacheNodesVersionEnum;
+})(GetDescribeReservedCacheNodesActionEnum = exports.GetDescribeReservedCacheNodesActionEnum || (exports.GetDescribeReservedCacheNodesActionEnum = {}));
+var GetDescribeReservedCacheNodesVersionEnum;
 (function (GetDescribeReservedCacheNodesVersionEnum) {
     GetDescribeReservedCacheNodesVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(GetDescribeReservedCacheNodesVersionEnum || (GetDescribeReservedCacheNodesVersionEnum = {}));
+})(GetDescribeReservedCacheNodesVersionEnum = exports.GetDescribeReservedCacheNodesVersionEnum || (exports.GetDescribeReservedCacheNodesVersionEnum = {}));
 var GetDescribeReservedCacheNodesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeReservedCacheNodesQueryParams, _super);
     function GetDescribeReservedCacheNodesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CacheNodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CacheNodeType" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Duration" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OfferingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=OfferingType" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "offeringType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ProductDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ProductDescription" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "productDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedCacheNodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReservedCacheNodeId" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "reservedCacheNodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedCacheNodesOfferingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReservedCacheNodesOfferingId" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "reservedCacheNodesOfferingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesQueryParams.prototype, "version", void 0);
     return GetDescribeReservedCacheNodesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeReservedCacheNodesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedCacheNodesQueryParams = GetDescribeReservedCacheNodesQueryParams;
 var GetDescribeReservedCacheNodesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeReservedCacheNodesHeaders, _super);
     function GetDescribeReservedCacheNodesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeReservedCacheNodesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeReservedCacheNodesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedCacheNodesHeaders = GetDescribeReservedCacheNodesHeaders;
 var GetDescribeReservedCacheNodesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeReservedCacheNodesRequest, _super);
     function GetDescribeReservedCacheNodesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeReservedCacheNodesQueryParams)
     ], GetDescribeReservedCacheNodesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeReservedCacheNodesHeaders)
     ], GetDescribeReservedCacheNodesRequest.prototype, "headers", void 0);
     return GetDescribeReservedCacheNodesRequest;
-}(SpeakeasyBase));
-export { GetDescribeReservedCacheNodesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedCacheNodesRequest = GetDescribeReservedCacheNodesRequest;
 var GetDescribeReservedCacheNodesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeReservedCacheNodesResponse, _super);
     function GetDescribeReservedCacheNodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeReservedCacheNodesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeReservedCacheNodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeReservedCacheNodesResponse.prototype, "statusCode", void 0);
     return GetDescribeReservedCacheNodesResponse;
-}(SpeakeasyBase));
-export { GetDescribeReservedCacheNodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedCacheNodesResponse = GetDescribeReservedCacheNodesResponse;

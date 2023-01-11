@@ -188,23 +188,23 @@ export class LvcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lvcer400ApplicationJsonObject?: Lvcer400ApplicationJson;
+  lvcer400ApplicationJSONObject?: Lvcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer401ApplicationJsonObject?: Lvcer401ApplicationJson;
+  lvcer401ApplicationJSONObject?: Lvcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer404ApplicationJsonObject?: Lvcer404ApplicationJson;
+  lvcer404ApplicationJSONObject?: Lvcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer500ApplicationJsonObject?: Lvcer500ApplicationJson;
+  lvcer500ApplicationJSONObject?: Lvcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer502ApplicationJsonObject?: Lvcer502ApplicationJson;
+  lvcer502ApplicationJSONObject?: Lvcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer503ApplicationJsonObject?: Lvcer503ApplicationJson;
+  lvcer503ApplicationJSONObject?: Lvcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  lvcer504ApplicationJsonObject?: Lvcer504ApplicationJson;
+  lvcer504ApplicationJSONObject?: Lvcer504ApplicationJson;
 }

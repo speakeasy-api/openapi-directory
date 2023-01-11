@@ -6,6 +6,13 @@ import { EventPublishConfig } from "./eventpublishconfig";
 import { NetworkConfig } from "./networkconfig";
 
 
+export enum InstanceTypeEnum {
+    TypeUnspecified = "TYPE_UNSPECIFIED",
+    Basic = "BASIC",
+    Enterprise = "ENTERPRISE",
+    Developer = "DEVELOPER"
+}
+
 export enum InstanceDisabledReasonEnum {
     DisabledReasonUnspecified = "DISABLED_REASON_UNSPECIFIED",
     KmsKeyIssue = "KMS_KEY_ISSUE"
@@ -25,11 +32,62 @@ export enum InstanceStateEnum {
     Disabled = "DISABLED"
 }
 
-export enum InstanceTypeEnum {
-    TypeUnspecified = "TYPE_UNSPECIFIED",
-    Basic = "BASIC",
-    Enterprise = "ENTERPRISE",
-    Developer = "DEVELOPER"
+
+// InstanceInput
+/** 
+ * Represents a Data Fusion instance.
+**/
+export class InstanceInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=accelerators", elemType: Accelerator })
+  accelerators?: Accelerator[];
+
+  @SpeakeasyMetadata({ data: "json, name=availableVersion", elemType: Version })
+  availableVersion?: Version[];
+
+  @SpeakeasyMetadata({ data: "json, name=cryptoKeyConfig" })
+  cryptoKeyConfig?: CryptoKeyConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=dataprocServiceAccount" })
+  dataprocServiceAccount?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=enableRbac" })
+  enableRbac?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=enableStackdriverLogging" })
+  enableStackdriverLogging?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=enableStackdriverMonitoring" })
+  enableStackdriverMonitoring?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=eventPublishConfig" })
+  eventPublishConfig?: EventPublishConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=networkConfig" })
+  networkConfig?: NetworkConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=options" })
+  options?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=privateInstance" })
+  privateInstance?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: InstanceTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=zone" })
+  zone?: string;
 }
 
 
@@ -81,7 +139,7 @@ export class Instance extends SpeakeasyBase {
   gcsBucket?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -90,7 +148,7 @@ export class Instance extends SpeakeasyBase {
   networkConfig?: NetworkConfig;
 
   @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, string>;
+  options?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=p4ServiceAccount" })
   p4ServiceAccount?: string;
@@ -118,64 +176,6 @@ export class Instance extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=version" })
-  version?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=zone" })
-  zone?: string;
-}
-
-
-// InstanceInput
-/** 
- * Represents a Data Fusion instance.
-**/
-export class InstanceInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=accelerators", elemType: Accelerator })
-  accelerators?: Accelerator[];
-
-  @SpeakeasyMetadata({ data: "json, name=availableVersion", elemType: Version })
-  availableVersion?: Version[];
-
-  @SpeakeasyMetadata({ data: "json, name=cryptoKeyConfig" })
-  cryptoKeyConfig?: CryptoKeyConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=dataprocServiceAccount" })
-  dataprocServiceAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=enableRbac" })
-  enableRbac?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=enableStackdriverLogging" })
-  enableStackdriverLogging?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=enableStackdriverMonitoring" })
-  enableStackdriverMonitoring?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=eventPublishConfig" })
-  eventPublishConfig?: EventPublishConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=networkConfig" })
-  networkConfig?: NetworkConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=privateInstance" })
-  privateInstance?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: InstanceTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

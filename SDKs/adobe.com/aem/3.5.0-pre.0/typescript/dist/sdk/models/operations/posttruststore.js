@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostTruststoreResponse = exports.PostTruststoreRequest = exports.PostTruststoreRequestBody = exports.PostTruststoreRequestBodyCertificate = exports.PostTruststoreQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostTruststoreQueryParams = /** @class */ (function (_super) {
     __extends(PostTruststoreQueryParams, _super);
     function PostTruststoreQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=:operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=:operation" }),
         __metadata("design:type", String)
     ], PostTruststoreQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keyStoreType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keyStoreType" }),
         __metadata("design:type", String)
     ], PostTruststoreQueryParams.prototype, "keyStoreType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=newPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=newPassword" }),
         __metadata("design:type", String)
     ], PostTruststoreQueryParams.prototype, "newPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rePassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rePassword" }),
         __metadata("design:type", String)
     ], PostTruststoreQueryParams.prototype, "rePassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=removeAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=removeAlias" }),
         __metadata("design:type", String)
     ], PostTruststoreQueryParams.prototype, "removeAlias", void 0);
     return PostTruststoreQueryParams;
-}(SpeakeasyBase));
-export { PostTruststoreQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststoreQueryParams = PostTruststoreQueryParams;
 var PostTruststoreRequestBodyCertificate = /** @class */ (function (_super) {
     __extends(PostTruststoreRequestBodyCertificate, _super);
     function PostTruststoreRequestBodyCertificate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=certificate" }),
         __metadata("design:type", String)
     ], PostTruststoreRequestBodyCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PostTruststoreRequestBodyCertificate.prototype, "content", void 0);
     return PostTruststoreRequestBodyCertificate;
-}(SpeakeasyBase));
-export { PostTruststoreRequestBodyCertificate };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststoreRequestBodyCertificate = PostTruststoreRequestBodyCertificate;
 var PostTruststoreRequestBody = /** @class */ (function (_super) {
     __extends(PostTruststoreRequestBody, _super);
     function PostTruststoreRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PostTruststoreRequestBodyCertificate)
     ], PostTruststoreRequestBody.prototype, "certificate", void 0);
     return PostTruststoreRequestBody;
-}(SpeakeasyBase));
-export { PostTruststoreRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststoreRequestBody = PostTruststoreRequestBody;
 var PostTruststoreRequest = /** @class */ (function (_super) {
     __extends(PostTruststoreRequest, _super);
     function PostTruststoreRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostTruststoreQueryParams)
     ], PostTruststoreRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostTruststoreRequestBody)
     ], PostTruststoreRequest.prototype, "request", void 0);
     return PostTruststoreRequest;
-}(SpeakeasyBase));
-export { PostTruststoreRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststoreRequest = PostTruststoreRequest;
 var PostTruststoreResponse = /** @class */ (function (_super) {
     __extends(PostTruststoreResponse, _super);
     function PostTruststoreResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTruststoreResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostTruststoreResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTruststoreResponse.prototype, "postTruststoreDefaultTextPlainString", void 0);
     return PostTruststoreResponse;
-}(SpeakeasyBase));
-export { PostTruststoreResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststoreResponse = PostTruststoreResponse;

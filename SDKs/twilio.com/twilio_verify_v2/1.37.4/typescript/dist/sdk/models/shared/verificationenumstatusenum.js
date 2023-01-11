@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationEnumStatusEnum = void 0;
+var VerificationEnumStatusEnum;
+(function (VerificationEnumStatusEnum) {
+    VerificationEnumStatusEnum["Canceled"] = "canceled";
+    VerificationEnumStatusEnum["Approved"] = "approved";
+})(VerificationEnumStatusEnum = exports.VerificationEnumStatusEnum || (exports.VerificationEnumStatusEnum = {}));

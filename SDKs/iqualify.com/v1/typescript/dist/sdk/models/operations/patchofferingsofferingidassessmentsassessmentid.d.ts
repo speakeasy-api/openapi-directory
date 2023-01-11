@@ -11,6 +11,6 @@ export declare class PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest exte
 export declare class PatchOfferingsOfferingIdAssessmentsAssessmentIdResponse extends SpeakeasyBase {
     assessmentResponse?: shared.AssessmentResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

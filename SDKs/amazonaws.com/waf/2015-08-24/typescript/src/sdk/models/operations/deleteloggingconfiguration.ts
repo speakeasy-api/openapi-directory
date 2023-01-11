@@ -48,7 +48,7 @@ export class DeleteLoggingConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLoggingConfigurationResponse?: Map<string, any>;
+  deleteLoggingConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

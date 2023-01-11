@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewsSearchReadResponse = exports.NewsSearchReadRequest = exports.NewsSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NewsSearchReadPathParams = /** @class */ (function (_super) {
     __extends(NewsSearchReadPathParams, _super);
     function NewsSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=title" }),
         __metadata("design:type", String)
     ], NewsSearchReadPathParams.prototype, "title", void 0);
     return NewsSearchReadPathParams;
-}(SpeakeasyBase));
-export { NewsSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NewsSearchReadPathParams = NewsSearchReadPathParams;
 var NewsSearchReadRequest = /** @class */ (function (_super) {
     __extends(NewsSearchReadRequest, _super);
     function NewsSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NewsSearchReadPathParams)
     ], NewsSearchReadRequest.prototype, "pathParams", void 0);
     return NewsSearchReadRequest;
-}(SpeakeasyBase));
-export { NewsSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewsSearchReadRequest = NewsSearchReadRequest;
 var NewsSearchReadResponse = /** @class */ (function (_super) {
     __extends(NewsSearchReadResponse, _super);
     function NewsSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NewsSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NewsSearchReadResponse.prototype, "statusCode", void 0);
     return NewsSearchReadResponse;
-}(SpeakeasyBase));
-export { NewsSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewsSearchReadResponse = NewsSearchReadResponse;

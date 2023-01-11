@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CopyImageResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  imageId?: string;
+  imageId?: Record<string, any>;
 }

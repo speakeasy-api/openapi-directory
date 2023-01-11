@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdAnalyticsLearnersProgressRequest exte
 }
 export declare class GetOfferingsOfferingIdAnalyticsLearnersProgressResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     learnerProgressResponses?: shared.LearnerProgressResponse[];
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirstHref } from "./firsthref";
-import { NextHref } from "./nexthref";
-import { PrevHref } from "./prevhref";
-import { SelfHref } from "./selfhref";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Links = void 0;
+var utils_1 = require("../../../internal/utils");
+var firsthref_1 = require("./firsthref");
+var nexthref_1 = require("./nexthref");
+var prevhref_1 = require("./prevhref");
+var selfhref_1 = require("./selfhref");
 var Links = /** @class */ (function (_super) {
     __extends(Links, _super);
     function Links() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first" }),
-        __metadata("design:type", FirstHref)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first" }),
+        __metadata("design:type", firsthref_1.FirstHref)
     ], Links.prototype, "first", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
-        __metadata("design:type", NextHref)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
+        __metadata("design:type", nexthref_1.NextHref)
     ], Links.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
-        __metadata("design:type", PrevHref)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
+        __metadata("design:type", prevhref_1.PrevHref)
     ], Links.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", SelfHref)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", selfhref_1.SelfHref)
     ], Links.prototype, "self", void 0);
     return Links;
-}(SpeakeasyBase));
-export { Links };
+}(utils_1.SpeakeasyBase));
+exports.Links = Links;

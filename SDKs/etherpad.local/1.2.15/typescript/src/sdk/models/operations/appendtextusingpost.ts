@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AppendTextUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" })
   text?: string;
@@ -16,7 +16,7 @@ export class AppendTextUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class AppendTextUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class AppendTextUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class AppendTextUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class AppendTextUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appendTextUsingPost200ApplicationJsonObject?: AppendTextUsingPost200ApplicationJson;
+  appendTextUsingPOST200ApplicationJSONObject?: AppendTextUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingPost400ApplicationJsonObject?: AppendTextUsingPost400ApplicationJson;
+  appendTextUsingPOST400ApplicationJSONObject?: AppendTextUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingPost401ApplicationJsonObject?: AppendTextUsingPost401ApplicationJson;
+  appendTextUsingPOST401ApplicationJSONObject?: AppendTextUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingPost500ApplicationJsonObject?: AppendTextUsingPost500ApplicationJson;
+  appendTextUsingPOST500ApplicationJSONObject?: AppendTextUsingPost500ApplicationJson;
 }

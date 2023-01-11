@@ -20,5 +20,5 @@ export declare class CreateOrganizationExportResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createOrganizationExport201ApplicationJsonObject?: CreateOrganizationExport201ApplicationJson;
+    createOrganizationExport201ApplicationJSONObject?: CreateOrganizationExport201ApplicationJson;
 }

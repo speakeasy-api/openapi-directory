@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SsoStrategyEntityDeprovisionBehaviorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SsoStrategyEntity = exports.SsoStrategyEntityScimAuthenticationMethodEnum = exports.SsoStrategyEntityProviderEnum = exports.SsoStrategyEntityProtocolEnum = exports.SsoStrategyEntityLdapUsernameFieldEnum = exports.SsoStrategyEntityDeprovisionBehaviorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SsoStrategyEntityDeprovisionBehaviorEnum;
 (function (SsoStrategyEntityDeprovisionBehaviorEnum) {
     SsoStrategyEntityDeprovisionBehaviorEnum["Disable"] = "disable";
     SsoStrategyEntityDeprovisionBehaviorEnum["Delete"] = "delete";
-})(SsoStrategyEntityDeprovisionBehaviorEnum || (SsoStrategyEntityDeprovisionBehaviorEnum = {}));
-export var SsoStrategyEntityLdapUsernameFieldEnum;
+})(SsoStrategyEntityDeprovisionBehaviorEnum = exports.SsoStrategyEntityDeprovisionBehaviorEnum || (exports.SsoStrategyEntityDeprovisionBehaviorEnum = {}));
+var SsoStrategyEntityLdapUsernameFieldEnum;
 (function (SsoStrategyEntityLdapUsernameFieldEnum) {
     SsoStrategyEntityLdapUsernameFieldEnum["SAmAccountName"] = "sAMAccountName";
     SsoStrategyEntityLdapUsernameFieldEnum["UserPrincipalName"] = "userPrincipalName";
-})(SsoStrategyEntityLdapUsernameFieldEnum || (SsoStrategyEntityLdapUsernameFieldEnum = {}));
-export var SsoStrategyEntityProtocolEnum;
+})(SsoStrategyEntityLdapUsernameFieldEnum = exports.SsoStrategyEntityLdapUsernameFieldEnum || (exports.SsoStrategyEntityLdapUsernameFieldEnum = {}));
+var SsoStrategyEntityProtocolEnum;
 (function (SsoStrategyEntityProtocolEnum) {
     SsoStrategyEntityProtocolEnum["Oauth2"] = "oauth2";
     SsoStrategyEntityProtocolEnum["UnusedOpenid2"] = "_unused_openid2";
@@ -41,8 +44,8 @@ export var SsoStrategyEntityProtocolEnum;
     SsoStrategyEntityProtocolEnum["ActiveDirectory"] = "active_directory";
     SsoStrategyEntityProtocolEnum["OpenLdap"] = "open_ldap";
     SsoStrategyEntityProtocolEnum["Scim"] = "scim";
-})(SsoStrategyEntityProtocolEnum || (SsoStrategyEntityProtocolEnum = {}));
-export var SsoStrategyEntityProviderEnum;
+})(SsoStrategyEntityProtocolEnum = exports.SsoStrategyEntityProtocolEnum || (exports.SsoStrategyEntityProtocolEnum = {}));
+var SsoStrategyEntityProviderEnum;
 (function (SsoStrategyEntityProviderEnum) {
     SsoStrategyEntityProviderEnum["Google"] = "google";
     SsoStrategyEntityProviderEnum["Auth0"] = "auth0";
@@ -58,13 +61,13 @@ export var SsoStrategyEntityProviderEnum;
     SsoStrategyEntityProviderEnum["Idaptive"] = "idaptive";
     SsoStrategyEntityProviderEnum["Ldap"] = "ldap";
     SsoStrategyEntityProviderEnum["Scim"] = "scim";
-})(SsoStrategyEntityProviderEnum || (SsoStrategyEntityProviderEnum = {}));
-export var SsoStrategyEntityScimAuthenticationMethodEnum;
+})(SsoStrategyEntityProviderEnum = exports.SsoStrategyEntityProviderEnum || (exports.SsoStrategyEntityProviderEnum = {}));
+var SsoStrategyEntityScimAuthenticationMethodEnum;
 (function (SsoStrategyEntityScimAuthenticationMethodEnum) {
     SsoStrategyEntityScimAuthenticationMethodEnum["None"] = "none";
     SsoStrategyEntityScimAuthenticationMethodEnum["Basic"] = "basic";
     SsoStrategyEntityScimAuthenticationMethodEnum["Token"] = "token";
-})(SsoStrategyEntityScimAuthenticationMethodEnum || (SsoStrategyEntityScimAuthenticationMethodEnum = {}));
+})(SsoStrategyEntityScimAuthenticationMethodEnum = exports.SsoStrategyEntityScimAuthenticationMethodEnum || (exports.SsoStrategyEntityScimAuthenticationMethodEnum = {}));
 // SsoStrategyEntity
 /**
  * List Sso Strategies
@@ -75,177 +78,177 @@ var SsoStrategyEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprovision_behavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprovision_behavior" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "deprovisionBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprovision_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprovision_groups" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "deprovisionGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprovision_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprovision_users" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "deprovisionUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], SsoStrategyEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_base_dn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_base_dn" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapBaseDn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_domain" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_host" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_host_2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_host_2" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapHost2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_host_3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_host_3" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapHost3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_port" }),
         __metadata("design:type", Number)
     ], SsoStrategyEntity.prototype, "ldapPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_secure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_secure" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "ldapSecure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_username" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_username_field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_username_field" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "ldapUsernameField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_url" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "logoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_attachments_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_attachments_permission" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionAttachmentsPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_company" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionCompany", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_dav_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_dav_permission" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionDavPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_email_signup_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_email_signup_groups" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionEmailSignupGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_ftp_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_ftp_permission" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionFtpPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_group_default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_group_default" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionGroupDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_group_exclusion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_group_exclusion" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionGroupExclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_group_inclusion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_group_inclusion" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionGroupInclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_group_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_group_required" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionGroupRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_groups" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_sftp_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_sftp_permission" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionSftpPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_site_admin_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_site_admin_groups" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionSiteAdminGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_time_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_time_zone" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "provisionTimeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provision_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provision_users" }),
         __metadata("design:type", Boolean)
     ], SsoStrategyEntity.prototype, "provisionUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_cert_fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_cert_fingerprint" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderCertFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_issuer_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_issuer_url" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderIssuerUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_metadata_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_metadata_content" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderMetadataContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_metadata_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_metadata_url" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderMetadataUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_slo_target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_slo_target_url" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderSloTargetUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml_provider_sso_target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml_provider_sso_target_url" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "samlProviderSsoTargetUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scim_authentication_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scim_authentication_method" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "scimAuthenticationMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scim_oauth_access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scim_oauth_access_token" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "scimOauthAccessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scim_oauth_access_token_expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scim_oauth_access_token_expires_at" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "scimOauthAccessTokenExpiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scim_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scim_username" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "scimUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain" }),
         __metadata("design:type", String)
     ], SsoStrategyEntity.prototype, "subdomain", void 0);
     return SsoStrategyEntity;
-}(SpeakeasyBase));
-export { SsoStrategyEntity };
+}(utils_1.SpeakeasyBase));
+exports.SsoStrategyEntity = SsoStrategyEntity;

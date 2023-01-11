@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugHooksUidResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  webhookSubscription?: Map<string, any>;
+  webhookSubscription?: Record<string, any>;
 }

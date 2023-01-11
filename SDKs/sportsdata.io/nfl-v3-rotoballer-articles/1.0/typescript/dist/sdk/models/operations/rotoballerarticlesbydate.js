@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RotoballerArticlesByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RotoballerArticlesByDateResponse = exports.RotoballerArticlesByDateRequest = exports.RotoballerArticlesByDatePathParams = exports.RotoballerArticlesByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RotoballerArticlesByDateFormatEnum;
 (function (RotoballerArticlesByDateFormatEnum) {
     RotoballerArticlesByDateFormatEnum["Xml"] = "xml";
     RotoballerArticlesByDateFormatEnum["Json"] = "json";
-})(RotoballerArticlesByDateFormatEnum || (RotoballerArticlesByDateFormatEnum = {}));
+})(RotoballerArticlesByDateFormatEnum = exports.RotoballerArticlesByDateFormatEnum || (exports.RotoballerArticlesByDateFormatEnum = {}));
 var RotoballerArticlesByDatePathParams = /** @class */ (function (_super) {
     __extends(RotoballerArticlesByDatePathParams, _super);
     function RotoballerArticlesByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], RotoballerArticlesByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], RotoballerArticlesByDatePathParams.prototype, "format", void 0);
     return RotoballerArticlesByDatePathParams;
-}(SpeakeasyBase));
-export { RotoballerArticlesByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesByDatePathParams = RotoballerArticlesByDatePathParams;
 var RotoballerArticlesByDateRequest = /** @class */ (function (_super) {
     __extends(RotoballerArticlesByDateRequest, _super);
     function RotoballerArticlesByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RotoballerArticlesByDatePathParams)
     ], RotoballerArticlesByDateRequest.prototype, "pathParams", void 0);
     return RotoballerArticlesByDateRequest;
-}(SpeakeasyBase));
-export { RotoballerArticlesByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesByDateRequest = RotoballerArticlesByDateRequest;
 var RotoballerArticlesByDateResponse = /** @class */ (function (_super) {
     __extends(RotoballerArticlesByDateResponse, _super);
     function RotoballerArticlesByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], RotoballerArticlesByDateResponse.prototype, "articles", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RotoballerArticlesByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RotoballerArticlesByDateResponse.prototype, "statusCode", void 0);
     return RotoballerArticlesByDateResponse;
-}(SpeakeasyBase));
-export { RotoballerArticlesByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesByDateResponse = RotoballerArticlesByDateResponse;

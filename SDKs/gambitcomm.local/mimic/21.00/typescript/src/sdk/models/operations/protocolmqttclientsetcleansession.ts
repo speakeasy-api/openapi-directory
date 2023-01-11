@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetCleansessionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetCleansession200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetCleansession200ApplicationJSONInt32Integers?: number[];
 }

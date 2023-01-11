@@ -12,6 +12,6 @@ export declare class GetAnnotationRequest extends SpeakeasyBase {
 export declare class GetAnnotationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    reportAnnotation?: Map<string, any>;
+    error?: Record<string, any>;
+    reportAnnotation?: Record<string, any>;
 }

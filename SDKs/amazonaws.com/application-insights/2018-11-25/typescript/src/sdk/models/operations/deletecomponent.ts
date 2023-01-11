@@ -48,7 +48,7 @@ export class DeleteComponentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteComponentResponse?: Map<string, any>;
+  deleteComponentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

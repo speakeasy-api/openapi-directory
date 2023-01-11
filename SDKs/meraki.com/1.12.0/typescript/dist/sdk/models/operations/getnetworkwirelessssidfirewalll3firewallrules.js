@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidFirewallL3FirewallRulesResponse = exports.GetNetworkWirelessSsidFirewallL3FirewallRulesRequest = exports.GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams, _super);
     function GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams = GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams;
 var GetNetworkWirelessSsidFirewallL3FirewallRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidFirewallL3FirewallRulesRequest, _super);
     function GetNetworkWirelessSsidFirewallL3FirewallRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams)
     ], GetNetworkWirelessSsidFirewallL3FirewallRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidFirewallL3FirewallRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidFirewallL3FirewallRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidFirewallL3FirewallRulesRequest = GetNetworkWirelessSsidFirewallL3FirewallRulesRequest;
 var GetNetworkWirelessSsidFirewallL3FirewallRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidFirewallL3FirewallRulesResponse, _super);
     function GetNetworkWirelessSsidFirewallL3FirewallRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidFirewallL3FirewallRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidFirewallL3FirewallRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidFirewallL3FirewallRulesResponse.prototype, "getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidFirewallL3FirewallRulesResponse.prototype, "getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidFirewallL3FirewallRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidFirewallL3FirewallRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidFirewallL3FirewallRulesResponse = GetNetworkWirelessSsidFirewallL3FirewallRulesResponse;

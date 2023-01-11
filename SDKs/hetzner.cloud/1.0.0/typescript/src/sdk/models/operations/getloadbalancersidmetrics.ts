@@ -47,7 +47,7 @@ export class GetLoadBalancersIdMetrics200ApplicationJsonMetrics extends Speakeas
   step: number;
 
   @SpeakeasyMetadata({ data: "json, name=time_series", elemType: GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries })
-  timeSeries: Map<string, GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries>;
+  timeSeries: Record<string, GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries>;
 }
 
 
@@ -71,8 +71,8 @@ export class GetLoadBalancersIdMetricsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLoadBalancersIdMetrics200ApplicationJsonObject?: GetLoadBalancersIdMetrics200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getLoadBalancersIdMetrics200ApplicationJSONObject?: GetLoadBalancersIdMetrics200ApplicationJson;
 }

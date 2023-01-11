@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeInNanos } from "./timeinnanos";
-import { Variant } from "./variant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InterpolatedAssetPropertyValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeinnanos_1 = require("./timeinnanos");
+var variant_1 = require("./variant");
 // InterpolatedAssetPropertyValue
 /**
  * Contains information about an interpolated asset property value.
@@ -35,13 +38,13 @@ var InterpolatedAssetPropertyValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
-        __metadata("design:type", TimeInNanos)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
+        __metadata("design:type", timeinnanos_1.TimeInNanos)
     ], InterpolatedAssetPropertyValue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Variant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", variant_1.Variant)
     ], InterpolatedAssetPropertyValue.prototype, "value", void 0);
     return InterpolatedAssetPropertyValue;
-}(SpeakeasyBase));
-export { InterpolatedAssetPropertyValue };
+}(utils_1.SpeakeasyBase));
+exports.InterpolatedAssetPropertyValue = InterpolatedAssetPropertyValue;

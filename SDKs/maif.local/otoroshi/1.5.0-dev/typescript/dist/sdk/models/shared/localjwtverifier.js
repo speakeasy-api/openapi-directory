@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalJwtVerifier = void 0;
+var utils_1 = require("../../../internal/utils");
 // LocalJwtVerifier
 /**
  * A JWT verifier used only for the current service descriptor
@@ -33,29 +36,29 @@ var LocalJwtVerifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algoSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algoSettings" }),
         __metadata("design:type", Object)
     ], LocalJwtVerifier.prototype, "algoSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], LocalJwtVerifier.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", Object)
     ], LocalJwtVerifier.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strategy" }),
         __metadata("design:type", Object)
     ], LocalJwtVerifier.prototype, "strategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strict" }),
         __metadata("design:type", Boolean)
     ], LocalJwtVerifier.prototype, "strict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LocalJwtVerifier.prototype, "type", void 0);
     return LocalJwtVerifier;
-}(SpeakeasyBase));
-export { LocalJwtVerifier };
+}(utils_1.SpeakeasyBase));
+exports.LocalJwtVerifier = LocalJwtVerifier;

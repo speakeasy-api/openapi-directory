@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AutomationEntityAutomationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutomationEntity = exports.AutomationEntityTriggerEnum = exports.AutomationEntityAutomationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AutomationEntityAutomationEnum;
 (function (AutomationEntityAutomationEnum) {
     AutomationEntityAutomationEnum["CreateFolder"] = "create_folder";
     AutomationEntityAutomationEnum["RequestFile"] = "request_file";
@@ -32,8 +35,8 @@ export var AutomationEntityAutomationEnum;
     AutomationEntityAutomationEnum["DeleteFile"] = "delete_file";
     AutomationEntityAutomationEnum["CopyFile"] = "copy_file";
     AutomationEntityAutomationEnum["MoveFile"] = "move_file";
-})(AutomationEntityAutomationEnum || (AutomationEntityAutomationEnum = {}));
-export var AutomationEntityTriggerEnum;
+})(AutomationEntityAutomationEnum = exports.AutomationEntityAutomationEnum || (exports.AutomationEntityAutomationEnum = {}));
+var AutomationEntityTriggerEnum;
 (function (AutomationEntityTriggerEnum) {
     AutomationEntityTriggerEnum["Realtime"] = "realtime";
     AutomationEntityTriggerEnum["Daily"] = "daily";
@@ -41,7 +44,7 @@ export var AutomationEntityTriggerEnum;
     AutomationEntityTriggerEnum["Webhook"] = "webhook";
     AutomationEntityTriggerEnum["Email"] = "email";
     AutomationEntityTriggerEnum["Action"] = "action";
-})(AutomationEntityTriggerEnum || (AutomationEntityTriggerEnum = {}));
+})(AutomationEntityTriggerEnum = exports.AutomationEntityTriggerEnum || (exports.AutomationEntityTriggerEnum = {}));
 // AutomationEntity
 /**
  * List Automations
@@ -52,77 +55,77 @@ var AutomationEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automation" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "automation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_replace_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_replace_from" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "destinationReplaceFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_replace_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_replace_to" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "destinationReplaceTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_ids" }),
         __metadata("design:type", Array)
     ], AutomationEntity.prototype, "groupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AutomationEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_process_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_process_on" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "nextProcessOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
+        __metadata("design:type", Object)
     ], AutomationEntity.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "trigger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger_action_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger_action_path" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "triggerActionPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger_actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger_actions" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "triggerActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], AutomationEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_ids" }),
         __metadata("design:type", Array)
     ], AutomationEntity.prototype, "userIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], AutomationEntity.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook_url" }),
         __metadata("design:type", String)
     ], AutomationEntity.prototype, "webhookUrl", void 0);
     return AutomationEntity;
-}(SpeakeasyBase));
-export { AutomationEntity };
+}(utils_1.SpeakeasyBase));
+exports.AutomationEntity = AutomationEntity;

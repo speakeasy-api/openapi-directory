@@ -14,7 +14,7 @@ export class EarningsLine extends SpeakeasyBase {
   calculationType?: EarningsRateCalculationTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=EarningsRateID" })
-  earningsRateId: string;
+  earningsRateID: string;
 
   @SpeakeasyMetadata({ data: "json, name=FixedAmount" })
   fixedAmount?: number;

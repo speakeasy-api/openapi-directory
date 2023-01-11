@@ -6,7 +6,7 @@ export declare class PostProjectUsernameProjectTreeBranchPathParams extends Spea
     username: string;
 }
 export declare class PostProjectUsernameProjectTreeBranchRequestBody extends SpeakeasyBase {
-    buildParameters?: Map<string, any>;
+    buildParameters?: Record<string, any>;
     parallel?: string;
     revision?: string;
 }
@@ -17,6 +17,6 @@ export declare class PostProjectUsernameProjectTreeBranchRequest extends Speakea
 export declare class PostProjectUsernameProjectTreeBranchResponse extends SpeakeasyBase {
     build?: shared.Build;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

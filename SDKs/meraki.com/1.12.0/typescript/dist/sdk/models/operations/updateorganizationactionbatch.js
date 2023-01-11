@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationActionBatchResponse = exports.UpdateOrganizationActionBatchRequest = exports.UpdateOrganizationActionBatchRequestBody = exports.UpdateOrganizationActionBatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationActionBatchPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationActionBatchPathParams, _super);
     function UpdateOrganizationActionBatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=actionBatchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=actionBatchId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationActionBatchPathParams.prototype, "actionBatchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationActionBatchPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationActionBatchPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationActionBatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationActionBatchPathParams = UpdateOrganizationActionBatchPathParams;
 var UpdateOrganizationActionBatchRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationActionBatchRequestBody, _super);
     function UpdateOrganizationActionBatchRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationActionBatchRequestBody.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=synchronous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=synchronous" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationActionBatchRequestBody.prototype, "synchronous", void 0);
     return UpdateOrganizationActionBatchRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationActionBatchRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationActionBatchRequestBody = UpdateOrganizationActionBatchRequestBody;
 var UpdateOrganizationActionBatchRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationActionBatchRequest, _super);
     function UpdateOrganizationActionBatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationActionBatchPathParams)
     ], UpdateOrganizationActionBatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationActionBatchRequestBody)
     ], UpdateOrganizationActionBatchRequest.prototype, "request", void 0);
     return UpdateOrganizationActionBatchRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationActionBatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationActionBatchRequest = UpdateOrganizationActionBatchRequest;
 var UpdateOrganizationActionBatchResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationActionBatchResponse, _super);
     function UpdateOrganizationActionBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationActionBatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationActionBatchResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationActionBatchResponse.prototype, "updateOrganizationActionBatch200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationActionBatchResponse.prototype, "updateOrganizationActionBatch200ApplicationJSONObject", void 0);
     return UpdateOrganizationActionBatchResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationActionBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationActionBatchResponse = UpdateOrganizationActionBatchResponse;

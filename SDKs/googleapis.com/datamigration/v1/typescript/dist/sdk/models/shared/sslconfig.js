@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SslConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SslConfigInput = exports.SslConfig = exports.SslConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SslConfigTypeEnum;
 (function (SslConfigTypeEnum) {
     SslConfigTypeEnum["SslTypeUnspecified"] = "SSL_TYPE_UNSPECIFIED";
     SslConfigTypeEnum["ServerOnly"] = "SERVER_ONLY";
     SslConfigTypeEnum["ServerClient"] = "SERVER_CLIENT";
-})(SslConfigTypeEnum || (SslConfigTypeEnum = {}));
-// SslConfigInput
-/**
- * SSL configuration information.
-**/
-var SslConfigInput = /** @class */ (function (_super) {
-    __extends(SslConfigInput, _super);
-    function SslConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
-        __metadata("design:type", String)
-    ], SslConfigInput.prototype, "caCertificate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
-        __metadata("design:type", String)
-    ], SslConfigInput.prototype, "clientCertificate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
-        __metadata("design:type", String)
-    ], SslConfigInput.prototype, "clientKey", void 0);
-    return SslConfigInput;
-}(SpeakeasyBase));
-export { SslConfigInput };
+})(SslConfigTypeEnum = exports.SslConfigTypeEnum || (exports.SslConfigTypeEnum = {}));
 // SslConfig
 /**
  * SSL configuration information.
@@ -63,21 +42,45 @@ var SslConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
         __metadata("design:type", String)
     ], SslConfig.prototype, "caCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
         __metadata("design:type", String)
     ], SslConfig.prototype, "clientCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
         __metadata("design:type", String)
     ], SslConfig.prototype, "clientKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SslConfig.prototype, "type", void 0);
     return SslConfig;
-}(SpeakeasyBase));
-export { SslConfig };
+}(utils_1.SpeakeasyBase));
+exports.SslConfig = SslConfig;
+// SslConfigInput
+/**
+ * SSL configuration information.
+**/
+var SslConfigInput = /** @class */ (function (_super) {
+    __extends(SslConfigInput, _super);
+    function SslConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
+        __metadata("design:type", String)
+    ], SslConfigInput.prototype, "caCertificate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
+        __metadata("design:type", String)
+    ], SslConfigInput.prototype, "clientCertificate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
+        __metadata("design:type", String)
+    ], SslConfigInput.prototype, "clientKey", void 0);
+    return SslConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.SslConfigInput = SslConfigInput;

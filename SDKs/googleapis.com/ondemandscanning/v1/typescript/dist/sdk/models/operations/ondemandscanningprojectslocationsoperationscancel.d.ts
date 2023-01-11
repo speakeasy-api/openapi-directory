@@ -27,6 +27,6 @@ export declare class OndemandscanningProjectsLocationsOperationsCancelRequest ex
 }
 export declare class OndemandscanningProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

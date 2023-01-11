@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AtimeEnum } from "./atimeenum";
-import { GidEnum } from "./gidenum";
-import { LogLevelEnum } from "./loglevelenum";
-import { MtimeEnum } from "./mtimeenum";
-import { OverwriteModeEnum } from "./overwritemodeenum";
-import { PosixPermissionsEnum } from "./posixpermissionsenum";
-import { PreserveDeletedFilesEnum } from "./preservedeletedfilesenum";
-import { PreserveDevicesEnum } from "./preservedevicesenum";
-import { SmbSecurityDescriptorCopyFlagsEnum } from "./smbsecuritydescriptorcopyflagsenum";
-import { TaskQueueingEnum } from "./taskqueueingenum";
-import { TransferModeEnum } from "./transfermodeenum";
-import { UidEnum } from "./uidenum";
-import { VerifyModeEnum } from "./verifymodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Options = void 0;
+var utils_1 = require("../../../internal/utils");
+var atimeenum_1 = require("./atimeenum");
+var gidenum_1 = require("./gidenum");
+var loglevelenum_1 = require("./loglevelenum");
+var mtimeenum_1 = require("./mtimeenum");
+var overwritemodeenum_1 = require("./overwritemodeenum");
+var posixpermissionsenum_1 = require("./posixpermissionsenum");
+var preservedeletedfilesenum_1 = require("./preservedeletedfilesenum");
+var preservedevicesenum_1 = require("./preservedevicesenum");
+var smbsecuritydescriptorcopyflagsenum_1 = require("./smbsecuritydescriptorcopyflagsenum");
+var taskqueueingenum_1 = require("./taskqueueingenum");
+var transfermodeenum_1 = require("./transfermodeenum");
+var uidenum_1 = require("./uidenum");
+var verifymodeenum_1 = require("./verifymodeenum");
 // Options
 /**
  * <p>Represents the options that are available to control the behavior of a <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html">StartTaskExecution</a> operation. Behavior includes preserving metadata such as user ID (UID), group ID (GID), and file permissions, and also overwriting files in the destination, data integrity verification, and so on.</p> <p>A task has a set of default options associated with it. If you don't specify an option in <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html">StartTaskExecution</a>, the default value is used. You can override the defaults options on each task execution by specifying an overriding <code>Options</code> value to <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html">StartTaskExecution</a>.</p>
@@ -46,61 +49,61 @@ var Options = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Atime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Atime" }),
         __metadata("design:type", String)
     ], Options.prototype, "atime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BytesPerSecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BytesPerSecond" }),
         __metadata("design:type", Number)
     ], Options.prototype, "bytesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Gid" }),
         __metadata("design:type", String)
     ], Options.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogLevel" }),
         __metadata("design:type", String)
     ], Options.prototype, "logLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Mtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Mtime" }),
         __metadata("design:type", String)
     ], Options.prototype, "mtime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverwriteMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverwriteMode" }),
         __metadata("design:type", String)
     ], Options.prototype, "overwriteMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PosixPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PosixPermissions" }),
         __metadata("design:type", String)
     ], Options.prototype, "posixPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreserveDeletedFiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreserveDeletedFiles" }),
         __metadata("design:type", String)
     ], Options.prototype, "preserveDeletedFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreserveDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreserveDevices" }),
         __metadata("design:type", String)
     ], Options.prototype, "preserveDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityDescriptorCopyFlags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityDescriptorCopyFlags" }),
         __metadata("design:type", String)
     ], Options.prototype, "securityDescriptorCopyFlags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskQueueing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskQueueing" }),
         __metadata("design:type", String)
     ], Options.prototype, "taskQueueing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransferMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransferMode" }),
         __metadata("design:type", String)
     ], Options.prototype, "transferMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Uid" }),
         __metadata("design:type", String)
     ], Options.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VerifyMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VerifyMode" }),
         __metadata("design:type", String)
     ], Options.prototype, "verifyMode", void 0);
     return Options;
-}(SpeakeasyBase));
-export { Options };
+}(utils_1.SpeakeasyBase));
+exports.Options = Options;

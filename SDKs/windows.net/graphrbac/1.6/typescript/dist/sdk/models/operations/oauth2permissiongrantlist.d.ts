@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class OAuth2PermissionGrantListPathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class OAuth2PermissionGrantListQueryParams extends SpeakeasyBase {
     dollarFilter?: string;

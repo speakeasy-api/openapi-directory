@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorValue } from "./errorvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtendedValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorvalue_1 = require("./errorvalue");
 // ExtendedValue
 /**
  * The kinds of value that a cell in a spreadsheet can have.
@@ -34,25 +37,25 @@ var ExtendedValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boolValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boolValue" }),
         __metadata("design:type", Boolean)
     ], ExtendedValue.prototype, "boolValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorValue" }),
-        __metadata("design:type", ErrorValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorValue" }),
+        __metadata("design:type", errorvalue_1.ErrorValue)
     ], ExtendedValue.prototype, "errorValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formulaValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formulaValue" }),
         __metadata("design:type", String)
     ], ExtendedValue.prototype, "formulaValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberValue" }),
         __metadata("design:type", Number)
     ], ExtendedValue.prototype, "numberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], ExtendedValue.prototype, "stringValue", void 0);
     return ExtendedValue;
-}(SpeakeasyBase));
-export { ExtendedValue };
+}(utils_1.SpeakeasyBase));
+exports.ExtendedValue = ExtendedValue;

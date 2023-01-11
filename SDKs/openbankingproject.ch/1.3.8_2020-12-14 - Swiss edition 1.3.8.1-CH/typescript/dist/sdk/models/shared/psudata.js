@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PsuData = void 0;
+var utils_1 = require("../../../internal/utils");
 // PsuData
 /**
  * PSU Data for Update PSU authentication.
@@ -33,21 +36,21 @@ var PsuData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalEncryptedPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalEncryptedPassword" }),
         __metadata("design:type", String)
     ], PsuData.prototype, "additionalEncryptedPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalPassword" }),
         __metadata("design:type", String)
     ], PsuData.prototype, "additionalPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedPassword" }),
         __metadata("design:type", String)
     ], PsuData.prototype, "encryptedPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PsuData.prototype, "password", void 0);
     return PsuData;
-}(SpeakeasyBase));
-export { PsuData };
+}(utils_1.SpeakeasyBase));
+exports.PsuData = PsuData;

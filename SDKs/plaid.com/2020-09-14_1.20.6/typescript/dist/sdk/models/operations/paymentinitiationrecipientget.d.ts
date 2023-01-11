@@ -5,6 +5,6 @@ export declare class PaymentInitiationRecipientGetRequest extends SpeakeasyBase 
 }
 export declare class PaymentInitiationRecipientGetResponse extends SpeakeasyBase {
     contentType: string;
-    paymentInitiationRecipientGetResponse?: Map<string, any>;
+    paymentInitiationRecipientGetResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -28,7 +28,7 @@ export class ImageAttachment extends SpeakeasyBase {
   objectId: number;
 
   @SpeakeasyMetadata({ data: "json, name=parent" })
-  parent?: Map<string, string>;
+  parent?: Record<string, string>;
 }
 
 

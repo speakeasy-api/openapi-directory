@@ -10,5 +10,5 @@ export class ListTagsForResourceInput extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 }

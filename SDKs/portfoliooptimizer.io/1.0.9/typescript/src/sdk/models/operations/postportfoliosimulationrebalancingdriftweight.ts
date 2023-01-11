@@ -46,8 +46,8 @@ export class PostPortfolioSimulationRebalancingDriftWeightResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioSimulationRebalancingDriftWeight200ApplicationJsonObject?: PostPortfolioSimulationRebalancingDriftWeight200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioSimulationRebalancingDriftWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingDriftWeight200ApplicationJson;
 }

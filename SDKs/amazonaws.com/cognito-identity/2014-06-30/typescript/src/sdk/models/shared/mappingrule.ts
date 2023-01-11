@@ -15,7 +15,7 @@ export class MappingRule extends SpeakeasyBase {
   matchType: MappingRuleMatchTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn: string;
+  roleARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=Value" })
   value: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetareacodefromnumberResponse = exports.GetareacodefromnumberRequest = exports.Getareacodefromnumber200ApplicationJson = exports.GetareacodefromnumberQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetareacodefromnumberQueryParams = /** @class */ (function (_super) {
     __extends(GetareacodefromnumberQueryParams, _super);
     function GetareacodefromnumberQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=license" }),
         __metadata("design:type", String)
     ], GetareacodefromnumberQueryParams.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=number" }),
         __metadata("design:type", String)
     ], GetareacodefromnumberQueryParams.prototype, "number", void 0);
     return GetareacodefromnumberQueryParams;
-}(SpeakeasyBase));
-export { GetareacodefromnumberQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetareacodefromnumberQueryParams = GetareacodefromnumberQueryParams;
 var Getareacodefromnumber200ApplicationJson = /** @class */ (function (_super) {
     __extends(Getareacodefromnumber200ApplicationJson, _super);
     function Getareacodefromnumber200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Abbreviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Abbreviation" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "abbreviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AreaCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AreaCode" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "areaCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credits" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "credits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Locale" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrimaryCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrimaryCity" }),
         __metadata("design:type", String)
     ], Getareacodefromnumber200ApplicationJson.prototype, "primaryCity", void 0);
     return Getareacodefromnumber200ApplicationJson;
-}(SpeakeasyBase));
-export { Getareacodefromnumber200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Getareacodefromnumber200ApplicationJson = Getareacodefromnumber200ApplicationJson;
 var GetareacodefromnumberRequest = /** @class */ (function (_super) {
     __extends(GetareacodefromnumberRequest, _super);
     function GetareacodefromnumberRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetareacodefromnumberQueryParams)
     ], GetareacodefromnumberRequest.prototype, "queryParams", void 0);
     return GetareacodefromnumberRequest;
-}(SpeakeasyBase));
-export { GetareacodefromnumberRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetareacodefromnumberRequest = GetareacodefromnumberRequest;
 var GetareacodefromnumberResponse = /** @class */ (function (_super) {
     __extends(GetareacodefromnumberResponse, _super);
     function GetareacodefromnumberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetareacodefromnumberResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetareacodefromnumberResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Getareacodefromnumber200ApplicationJson)
-    ], GetareacodefromnumberResponse.prototype, "getareacodefromnumber200ApplicationJsonObject", void 0);
+    ], GetareacodefromnumberResponse.prototype, "getareacodefromnumber200ApplicationJSONObject", void 0);
     return GetareacodefromnumberResponse;
-}(SpeakeasyBase));
-export { GetareacodefromnumberResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetareacodefromnumberResponse = GetareacodefromnumberResponse;

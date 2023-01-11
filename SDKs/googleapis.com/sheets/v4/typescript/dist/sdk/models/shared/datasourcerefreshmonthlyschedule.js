@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeOfDay } from "./timeofday";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceRefreshMonthlySchedule = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeofday_1 = require("./timeofday");
 // DataSourceRefreshMonthlySchedule
 /**
  * A monthly schedule for data to refresh on specific days in the month in a given time interval.
@@ -34,13 +37,13 @@ var DataSourceRefreshMonthlySchedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=daysOfMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=daysOfMonth" }),
         __metadata("design:type", Array)
     ], DataSourceRefreshMonthlySchedule.prototype, "daysOfMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], DataSourceRefreshMonthlySchedule.prototype, "startTime", void 0);
     return DataSourceRefreshMonthlySchedule;
-}(SpeakeasyBase));
-export { DataSourceRefreshMonthlySchedule };
+}(utils_1.SpeakeasyBase));
+exports.DataSourceRefreshMonthlySchedule = DataSourceRefreshMonthlySchedule;

@@ -74,5 +74,5 @@ export class UpdateNetworkApplianceFirewallOneToManyNatRulesResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceFirewallOneToManyNatRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceFirewallOneToManyNatRules200ApplicationJSONObject?: Record<string, any>;
 }

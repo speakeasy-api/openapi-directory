@@ -1,4 +1,7 @@
-export var HeaderEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeaderEnumEnum = void 0;
+var HeaderEnumEnum;
 (function (HeaderEnumEnum) {
     HeaderEnumEnum["Accept"] = "Accept";
     HeaderEnumEnum["AcceptCharset"] = "Accept-Charset";
@@ -15,4 +18,4 @@ export var HeaderEnumEnum;
     HeaderEnumEnum["Host"] = "Host";
     HeaderEnumEnum["Origin"] = "Origin";
     HeaderEnumEnum["Referer"] = "Referer";
-})(HeaderEnumEnum || (HeaderEnumEnum = {}));
+})(HeaderEnumEnum = exports.HeaderEnumEnum || (exports.HeaderEnumEnum = {}));

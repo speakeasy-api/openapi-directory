@@ -46,5 +46,5 @@ export class DeletebulkDataExporterConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: DeletebulkDataExporterConfig200ApplicationJson })
-  deletebulkDataExporterConfig200ApplicationJsonObjects?: DeletebulkDataExporterConfig200ApplicationJson[];
+  deletebulkDataExporterConfig200ApplicationJSONObjects?: DeletebulkDataExporterConfig200ApplicationJson[];
 }

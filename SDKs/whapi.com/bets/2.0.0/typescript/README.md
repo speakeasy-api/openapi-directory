@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CashinRequest, CashinResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,20 +28,20 @@ const sdk = new SDK();
     
 const req: CashinRequest = {
   pathParams: {
-    betId: "tenetur",
+    betId: "sit",
   },
   queryParams: {
-    cashInValue: 13.200000,
-    cashinBetDelayId: "minus",
+    cashInValue: 14.200000,
+    cashinBetDelayId: "expedita",
   },
   headers: {
-    apiKey: "sint",
-    apiSecret: "est",
-    apiTicket: "autem",
+    apiKey: "consequuntur",
+    apiSecret: "dolor",
+    apiTicket: "expedita",
   },
 };
 
-sdk.sdk.cashin(req).then((res: CashinResponse | AxiosError) => {
+sdk.bets.cashin(req).then((res: CashinResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -51,7 +50,7 @@ sdk.sdk.cashin(req).then((res: CashinResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Bets
 
 * `cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
 * `getBetHistory` - Retrieves the customer’s bet history.

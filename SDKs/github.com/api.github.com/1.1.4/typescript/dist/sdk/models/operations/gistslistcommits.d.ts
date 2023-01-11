@@ -13,7 +13,7 @@ export declare class GistsListCommitsRequest extends SpeakeasyBase {
 }
 export declare class GistsListCommitsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gistCommits?: shared.GistCommit[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteInternetGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteInternetGatewayResponse = exports.GetDeleteInternetGatewayRequest = exports.GetDeleteInternetGatewayHeaders = exports.GetDeleteInternetGatewayQueryParams = exports.GetDeleteInternetGatewayVersionEnum = exports.GetDeleteInternetGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteInternetGatewayActionEnum;
 (function (GetDeleteInternetGatewayActionEnum) {
     GetDeleteInternetGatewayActionEnum["DeleteInternetGateway"] = "DeleteInternetGateway";
-})(GetDeleteInternetGatewayActionEnum || (GetDeleteInternetGatewayActionEnum = {}));
-export var GetDeleteInternetGatewayVersionEnum;
+})(GetDeleteInternetGatewayActionEnum = exports.GetDeleteInternetGatewayActionEnum || (exports.GetDeleteInternetGatewayActionEnum = {}));
+var GetDeleteInternetGatewayVersionEnum;
 (function (GetDeleteInternetGatewayVersionEnum) {
     GetDeleteInternetGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteInternetGatewayVersionEnum || (GetDeleteInternetGatewayVersionEnum = {}));
+})(GetDeleteInternetGatewayVersionEnum = exports.GetDeleteInternetGatewayVersionEnum || (exports.GetDeleteInternetGatewayVersionEnum = {}));
 var GetDeleteInternetGatewayQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteInternetGatewayQueryParams, _super);
     function GetDeleteInternetGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteInternetGatewayQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InternetGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InternetGatewayId" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayQueryParams.prototype, "internetGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayQueryParams.prototype, "version", void 0);
     return GetDeleteInternetGatewayQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteInternetGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInternetGatewayQueryParams = GetDeleteInternetGatewayQueryParams;
 var GetDeleteInternetGatewayHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteInternetGatewayHeaders, _super);
     function GetDeleteInternetGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteInternetGatewayHeaders;
-}(SpeakeasyBase));
-export { GetDeleteInternetGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInternetGatewayHeaders = GetDeleteInternetGatewayHeaders;
 var GetDeleteInternetGatewayRequest = /** @class */ (function (_super) {
     __extends(GetDeleteInternetGatewayRequest, _super);
     function GetDeleteInternetGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteInternetGatewayQueryParams)
     ], GetDeleteInternetGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteInternetGatewayHeaders)
     ], GetDeleteInternetGatewayRequest.prototype, "headers", void 0);
     return GetDeleteInternetGatewayRequest;
-}(SpeakeasyBase));
-export { GetDeleteInternetGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInternetGatewayRequest = GetDeleteInternetGatewayRequest;
 var GetDeleteInternetGatewayResponse = /** @class */ (function (_super) {
     __extends(GetDeleteInternetGatewayResponse, _super);
     function GetDeleteInternetGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteInternetGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteInternetGatewayResponse.prototype, "statusCode", void 0);
     return GetDeleteInternetGatewayResponse;
-}(SpeakeasyBase));
-export { GetDeleteInternetGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInternetGatewayResponse = GetDeleteInternetGatewayResponse;

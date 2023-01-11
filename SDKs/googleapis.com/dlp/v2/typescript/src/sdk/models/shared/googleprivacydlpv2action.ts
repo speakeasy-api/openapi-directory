@@ -14,19 +14,19 @@ export class GooglePrivacyDlpV2Action extends SpeakeasyBase {
   deidentify?: GooglePrivacyDlpV2Deidentify;
 
   @SpeakeasyMetadata({ data: "json, name=jobNotificationEmails" })
-  jobNotificationEmails?: Map<string, any>;
+  jobNotificationEmails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=pubSub" })
   pubSub?: GooglePrivacyDlpV2PublishToPubSub;
 
   @SpeakeasyMetadata({ data: "json, name=publishFindingsToCloudDataCatalog" })
-  publishFindingsToCloudDataCatalog?: Map<string, any>;
+  publishFindingsToCloudDataCatalog?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=publishSummaryToCscc" })
-  publishSummaryToCscc?: Map<string, any>;
+  publishSummaryToCscc?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=publishToStackdriver" })
-  publishToStackdriver?: Map<string, any>;
+  publishToStackdriver?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=saveFindings" })
   saveFindings?: GooglePrivacyDlpV2SaveFindings;

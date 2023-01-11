@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceSecurityIntrusionRequest extends Speakea
 export declare class GetNetworkApplianceSecurityIntrusionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceSecurityIntrusion200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceSecurityIntrusion200ApplicationJSONObject?: Record<string, any>;
 }

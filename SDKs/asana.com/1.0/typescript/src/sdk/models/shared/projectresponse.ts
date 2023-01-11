@@ -33,6 +33,10 @@ export enum ProjectResponseCurrentStatusColorEnum {
 }
 
 
+// ProjectResponseCurrentStatus
+/** 
+ * A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+**/
 export class ProjectResponseCurrentStatus extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=author" })
   author?: UserCompact;
@@ -110,7 +114,7 @@ export enum ProjectResponseIconEnum {
 
 // ProjectResponseOwner
 /** 
- * The current owner of the project, may be null.
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 **/
 export class ProjectResponseOwner extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
@@ -124,6 +128,10 @@ export class ProjectResponseOwner extends SpeakeasyBase {
 }
 
 
+// ProjectResponseTeam
+/** 
+ * *Create-only*. The team that this project is shared with. This field only exists for projects in organizations.
+**/
 export class ProjectResponseTeam extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -136,6 +144,10 @@ export class ProjectResponseTeam extends SpeakeasyBase {
 }
 
 
+// ProjectResponseWorkspace
+/** 
+ * *Create-only*. The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.
+**/
 export class ProjectResponseWorkspace extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -148,6 +160,10 @@ export class ProjectResponseWorkspace extends SpeakeasyBase {
 }
 
 
+// ProjectResponse
+/** 
+ * A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
+**/
 export class ProjectResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=archived" })
   archived?: boolean;

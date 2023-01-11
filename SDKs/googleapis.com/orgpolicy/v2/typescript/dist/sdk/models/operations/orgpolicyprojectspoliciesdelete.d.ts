@@ -27,6 +27,6 @@ export declare class OrgpolicyProjectsPoliciesDeleteRequest extends SpeakeasyBas
 }
 export declare class OrgpolicyProjectsPoliciesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PermissionEntityPermissionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionEntity = exports.PermissionEntityPermissionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PermissionEntityPermissionEnum;
 (function (PermissionEntityPermissionEnum) {
     PermissionEntityPermissionEnum["Full"] = "full";
     PermissionEntityPermissionEnum["Readonly"] = "readonly";
@@ -32,7 +35,7 @@ export var PermissionEntityPermissionEnum;
     PermissionEntityPermissionEnum["History"] = "history";
     PermissionEntityPermissionEnum["Admin"] = "admin";
     PermissionEntityPermissionEnum["Bundle"] = "bundle";
-})(PermissionEntityPermissionEnum || (PermissionEntityPermissionEnum = {}));
+})(PermissionEntityPermissionEnum = exports.PermissionEntityPermissionEnum || (exports.PermissionEntityPermissionEnum = {}));
 // PermissionEntity
 /**
  * List Permissions
@@ -43,37 +46,37 @@ var PermissionEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_id" }),
         __metadata("design:type", Number)
     ], PermissionEntity.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_name" }),
         __metadata("design:type", String)
     ], PermissionEntity.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PermissionEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], PermissionEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], PermissionEntity.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursive" }),
         __metadata("design:type", Boolean)
     ], PermissionEntity.prototype, "recursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], PermissionEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PermissionEntity.prototype, "username", void 0);
     return PermissionEntity;
-}(SpeakeasyBase));
-export { PermissionEntity };
+}(utils_1.SpeakeasyBase));
+exports.PermissionEntity = PermissionEntity;

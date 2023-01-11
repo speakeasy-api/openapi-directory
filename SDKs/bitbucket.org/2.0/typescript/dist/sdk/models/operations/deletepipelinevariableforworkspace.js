@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePipelineVariableForWorkspaceResponse = exports.DeletePipelineVariableForWorkspaceRequest = exports.DeletePipelineVariableForWorkspacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePipelineVariableForWorkspacePathParams = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForWorkspacePathParams, _super);
     function DeletePipelineVariableForWorkspacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], DeletePipelineVariableForWorkspacePathParams.prototype, "variableUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeletePipelineVariableForWorkspacePathParams.prototype, "workspace", void 0);
     return DeletePipelineVariableForWorkspacePathParams;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForWorkspacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForWorkspacePathParams = DeletePipelineVariableForWorkspacePathParams;
 var DeletePipelineVariableForWorkspaceRequest = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForWorkspaceRequest, _super);
     function DeletePipelineVariableForWorkspaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePipelineVariableForWorkspacePathParams)
     ], DeletePipelineVariableForWorkspaceRequest.prototype, "pathParams", void 0);
     return DeletePipelineVariableForWorkspaceRequest;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForWorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForWorkspaceRequest = DeletePipelineVariableForWorkspaceRequest;
 var DeletePipelineVariableForWorkspaceResponse = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForWorkspaceResponse, _super);
     function DeletePipelineVariableForWorkspaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePipelineVariableForWorkspaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePipelineVariableForWorkspaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeletePipelineVariableForWorkspaceResponse.prototype, "error", void 0);
     return DeletePipelineVariableForWorkspaceResponse;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForWorkspaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForWorkspaceResponse = DeletePipelineVariableForWorkspaceResponse;

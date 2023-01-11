@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// LighthouseAuditResultV5
-/**
- * An audit's result object in a Lighthouse result.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LighthouseAuditResultV5 = void 0;
+var utils_1 = require("../../../internal/utils");
 var LighthouseAuditResultV5 = /** @class */ (function (_super) {
     __extends(LighthouseAuditResultV5, _super);
     function LighthouseAuditResultV5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", Object)
     ], LighthouseAuditResultV5.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayValue" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "displayValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explanation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explanation" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "explanation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numericUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numericUnit" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "numericUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numericValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numericValue" }),
         __metadata("design:type", Number)
     ], LighthouseAuditResultV5.prototype, "numericValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Object)
     ], LighthouseAuditResultV5.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreDisplayMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreDisplayMode" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "scoreDisplayMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], LighthouseAuditResultV5.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings" }),
         __metadata("design:type", Object)
     ], LighthouseAuditResultV5.prototype, "warnings", void 0);
     return LighthouseAuditResultV5;
-}(SpeakeasyBase));
-export { LighthouseAuditResultV5 };
+}(utils_1.SpeakeasyBase));
+exports.LighthouseAuditResultV5 = LighthouseAuditResultV5;

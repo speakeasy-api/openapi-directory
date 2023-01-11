@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemotestartResponse = exports.RemotestartRequest = exports.Remotestart201ApplicationJson = exports.RemotestartRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemotestartRequestBody = /** @class */ (function (_super) {
     __extends(RemotestartRequestBody, _super);
     function RemotestartRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargestation" }),
         __metadata("design:type", String)
     ], RemotestartRequestBody.prototype, "chargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connector" }),
         __metadata("design:type", String)
     ], RemotestartRequestBody.prototype, "connector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driver" }),
         __metadata("design:type", String)
     ], RemotestartRequestBody.prototype, "driver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], RemotestartRequestBody.prototype, "token", void 0);
     return RemotestartRequestBody;
-}(SpeakeasyBase));
-export { RemotestartRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RemotestartRequestBody = RemotestartRequestBody;
 var Remotestart201ApplicationJson = /** @class */ (function (_super) {
     __extends(Remotestart201ApplicationJson, _super);
     function Remotestart201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
+        __metadata("design:type", Object)
     ], Remotestart201ApplicationJson.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Remotestart201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Remotestart201ApplicationJson.prototype, "ok", void 0);
     return Remotestart201ApplicationJson;
-}(SpeakeasyBase));
-export { Remotestart201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Remotestart201ApplicationJson = Remotestart201ApplicationJson;
 var RemotestartRequest = /** @class */ (function (_super) {
     __extends(RemotestartRequest, _super);
     function RemotestartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", RemotestartRequestBody)
     ], RemotestartRequest.prototype, "request", void 0);
     return RemotestartRequest;
-}(SpeakeasyBase));
-export { RemotestartRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemotestartRequest = RemotestartRequest;
 var RemotestartResponse = /** @class */ (function (_super) {
     __extends(RemotestartResponse, _super);
     function RemotestartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemotestartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemotestartResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Remotestart201ApplicationJson)
-    ], RemotestartResponse.prototype, "remotestart201ApplicationJsonObject", void 0);
+    ], RemotestartResponse.prototype, "remotestart201ApplicationJSONObject", void 0);
     return RemotestartResponse;
-}(SpeakeasyBase));
-export { RemotestartResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemotestartResponse = RemotestartResponse;

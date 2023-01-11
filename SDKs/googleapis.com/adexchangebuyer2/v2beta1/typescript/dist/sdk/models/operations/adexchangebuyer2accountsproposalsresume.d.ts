@@ -24,7 +24,7 @@ export declare class Adexchangebuyer2AccountsProposalsResumeSecurity extends Spe
 export declare class Adexchangebuyer2AccountsProposalsResumeRequest extends SpeakeasyBase {
     pathParams: Adexchangebuyer2AccountsProposalsResumePathParams;
     queryParams: Adexchangebuyer2AccountsProposalsResumeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: Adexchangebuyer2AccountsProposalsResumeSecurity;
 }
 export declare class Adexchangebuyer2AccountsProposalsResumeResponse extends SpeakeasyBase {

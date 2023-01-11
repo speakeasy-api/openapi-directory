@@ -209,5 +209,5 @@ export class IpamIpAddressesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamIpAddressesList200ApplicationJsonObject?: IpamIpAddressesList200ApplicationJson;
+  ipamIpAddressesList200ApplicationJSONObject?: IpamIpAddressesList200ApplicationJson;
 }

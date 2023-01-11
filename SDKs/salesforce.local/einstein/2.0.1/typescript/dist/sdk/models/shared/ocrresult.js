@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attributes } from "./attributes";
-import { BoundingBox } from "./boundingbox";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OcrResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributes_1 = require("./attributes");
+var boundingbox_1 = require("./boundingbox");
 // OcrResult
 /**
  * Array of probabilities for the prediction.
@@ -35,21 +38,21 @@ var OcrResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Attributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", attributes_1.Attributes)
     ], OcrResult.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundingBox" }),
-        __metadata("design:type", BoundingBox)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundingBox" }),
+        __metadata("design:type", boundingbox_1.BoundingBox)
     ], OcrResult.prototype, "boundingBox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], OcrResult.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probability" }),
         __metadata("design:type", Number)
     ], OcrResult.prototype, "probability", void 0);
     return OcrResult;
-}(SpeakeasyBase));
-export { OcrResult };
+}(utils_1.SpeakeasyBase));
+exports.OcrResult = OcrResult;

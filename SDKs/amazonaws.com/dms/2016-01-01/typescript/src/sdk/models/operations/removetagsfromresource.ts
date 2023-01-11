@@ -48,7 +48,7 @@ export class RemoveTagsFromResourceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  removeTagsFromResourceResponse?: Map<string, any>;
+  removeTagsFromResourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundFault?: any;

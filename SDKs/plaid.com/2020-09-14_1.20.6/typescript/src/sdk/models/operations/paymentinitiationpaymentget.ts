@@ -14,7 +14,7 @@ export class PaymentInitiationPaymentGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  paymentInitiationPaymentGetResponse?: Map<string, any>;
+  paymentInitiationPaymentGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

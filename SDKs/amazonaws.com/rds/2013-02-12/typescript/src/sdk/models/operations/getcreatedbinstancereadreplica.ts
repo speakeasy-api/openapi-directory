@@ -39,7 +39,7 @@ export class GetCreateDbInstanceReadReplicaQueryParams extends SpeakeasyBase {
   publiclyAccessible?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceIdentifier" })
-  sourceDbInstanceIdentifier: string;
+  sourceDBInstanceIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetCreateDbInstanceReadReplicaVersionEnum;

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Repository } from "./repository";
+/**
+ * Simple User
+**/
 export declare class MigrationSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

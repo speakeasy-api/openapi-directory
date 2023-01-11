@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListDomainNamesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListDomainNamesResponse = exports.PostListDomainNamesRequest = exports.PostListDomainNamesHeaders = exports.PostListDomainNamesQueryParams = exports.PostListDomainNamesVersionEnum = exports.PostListDomainNamesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListDomainNamesActionEnum;
 (function (PostListDomainNamesActionEnum) {
     PostListDomainNamesActionEnum["ListDomainNames"] = "ListDomainNames";
-})(PostListDomainNamesActionEnum || (PostListDomainNamesActionEnum = {}));
-export var PostListDomainNamesVersionEnum;
+})(PostListDomainNamesActionEnum = exports.PostListDomainNamesActionEnum || (exports.PostListDomainNamesActionEnum = {}));
+var PostListDomainNamesVersionEnum;
 (function (PostListDomainNamesVersionEnum) {
     PostListDomainNamesVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(PostListDomainNamesVersionEnum || (PostListDomainNamesVersionEnum = {}));
+})(PostListDomainNamesVersionEnum = exports.PostListDomainNamesVersionEnum || (exports.PostListDomainNamesVersionEnum = {}));
 var PostListDomainNamesQueryParams = /** @class */ (function (_super) {
     __extends(PostListDomainNamesQueryParams, _super);
     function PostListDomainNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListDomainNamesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListDomainNamesQueryParams.prototype, "version", void 0);
     return PostListDomainNamesQueryParams;
-}(SpeakeasyBase));
-export { PostListDomainNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListDomainNamesQueryParams = PostListDomainNamesQueryParams;
 var PostListDomainNamesHeaders = /** @class */ (function (_super) {
     __extends(PostListDomainNamesHeaders, _super);
     function PostListDomainNamesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListDomainNamesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListDomainNamesHeaders;
-}(SpeakeasyBase));
-export { PostListDomainNamesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListDomainNamesHeaders = PostListDomainNamesHeaders;
 var PostListDomainNamesRequest = /** @class */ (function (_super) {
     __extends(PostListDomainNamesRequest, _super);
     function PostListDomainNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListDomainNamesQueryParams)
     ], PostListDomainNamesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListDomainNamesHeaders)
     ], PostListDomainNamesRequest.prototype, "headers", void 0);
     return PostListDomainNamesRequest;
-}(SpeakeasyBase));
-export { PostListDomainNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListDomainNamesRequest = PostListDomainNamesRequest;
 var PostListDomainNamesResponse = /** @class */ (function (_super) {
     __extends(PostListDomainNamesResponse, _super);
     function PostListDomainNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListDomainNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListDomainNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListDomainNamesResponse.prototype, "statusCode", void 0);
     return PostListDomainNamesResponse;
-}(SpeakeasyBase));
-export { PostListDomainNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListDomainNamesResponse = PostListDomainNamesResponse;

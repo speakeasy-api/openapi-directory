@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldDateOptionsInput } from "./googleappsdrivelabelsv2betafielddateoptions";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput } from "./googleappsdrivelabelsv2betafieldselectionoptions";
-import { GoogleAppsDriveLabelsV2betaFieldUserOptions } from "./googleappsdrivelabelsv2betafielduseroptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafielddateoptions_1 = require("./googleappsdrivelabelsv2betafielddateoptions");
+var googleappsdrivelabelsv2betafieldselectionoptions_1 = require("./googleappsdrivelabelsv2betafieldselectionoptions");
+var googleappsdrivelabelsv2betafielduseroptions_1 = require("./googleappsdrivelabelsv2betafielduseroptions");
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput
 /**
  * Request to change the type of a Field.
@@ -36,25 +39,25 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInpu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldDateOptionsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafielddateoptions_1.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput.prototype, "dateOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptions_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput.prototype, "selectionOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput.prototype, "updateMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldUserOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafielduseroptions_1.GoogleAppsDriveLabelsV2betaFieldUserOptions)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput.prototype, "userOptions", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput;

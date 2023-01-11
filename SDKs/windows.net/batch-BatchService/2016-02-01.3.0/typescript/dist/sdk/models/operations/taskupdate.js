@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskUpdateResponse = exports.TaskUpdateRequest = exports.TaskUpdateHeaders = exports.TaskUpdateQueryParams = exports.TaskUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaskUpdatePathParams = /** @class */ (function (_super) {
     __extends(TaskUpdatePathParams, _super);
     function TaskUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], TaskUpdatePathParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taskId" }),
         __metadata("design:type", String)
     ], TaskUpdatePathParams.prototype, "taskId", void 0);
     return TaskUpdatePathParams;
-}(SpeakeasyBase));
-export { TaskUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskUpdatePathParams = TaskUpdatePathParams;
 var TaskUpdateQueryParams = /** @class */ (function (_super) {
     __extends(TaskUpdateQueryParams, _super);
     function TaskUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], TaskUpdateQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], TaskUpdateQueryParams.prototype, "timeout", void 0);
     return TaskUpdateQueryParams;
-}(SpeakeasyBase));
-export { TaskUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskUpdateQueryParams = TaskUpdateQueryParams;
 var TaskUpdateHeaders = /** @class */ (function (_super) {
     __extends(TaskUpdateHeaders, _super);
     function TaskUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], TaskUpdateHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], TaskUpdateHeaders.prototype, "returnClientRequestId", void 0);
     return TaskUpdateHeaders;
-}(SpeakeasyBase));
-export { TaskUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TaskUpdateHeaders = TaskUpdateHeaders;
 var TaskUpdateRequest = /** @class */ (function (_super) {
     __extends(TaskUpdateRequest, _super);
     function TaskUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskUpdatePathParams)
     ], TaskUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskUpdateQueryParams)
     ], TaskUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskUpdateHeaders)
     ], TaskUpdateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], TaskUpdateRequest.prototype, "request", void 0);
     return TaskUpdateRequest;
-}(SpeakeasyBase));
-export { TaskUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskUpdateRequest = TaskUpdateRequest;
 var TaskUpdateResponse = /** @class */ (function (_super) {
     __extends(TaskUpdateResponse, _super);
     function TaskUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskUpdateResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaskUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TaskUpdateResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaskUpdateResponse.prototype, "statusCode", void 0);
     return TaskUpdateResponse;
-}(SpeakeasyBase));
-export { TaskUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaskUpdateResponse = TaskUpdateResponse;

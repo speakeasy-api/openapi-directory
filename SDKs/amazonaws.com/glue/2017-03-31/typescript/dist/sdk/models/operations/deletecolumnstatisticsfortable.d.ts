@@ -19,7 +19,7 @@ export declare class DeleteColumnStatisticsForTableRequest extends SpeakeasyBase
 }
 export declare class DeleteColumnStatisticsForTableResponse extends SpeakeasyBase {
     contentType: string;
-    deleteColumnStatisticsForTableResponse?: Map<string, any>;
+    deleteColumnStatisticsForTableResponse?: Record<string, any>;
     entityNotFoundException?: any;
     glueEncryptionException?: any;
     internalServiceException?: any;

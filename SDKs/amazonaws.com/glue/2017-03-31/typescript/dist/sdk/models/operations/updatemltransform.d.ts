@@ -25,5 +25,5 @@ export declare class UpdateMlTransformResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateMlTransformResponse?: shared.UpdateMlTransformResponse;
+    updateMLTransformResponse?: shared.UpdateMlTransformResponse;
 }

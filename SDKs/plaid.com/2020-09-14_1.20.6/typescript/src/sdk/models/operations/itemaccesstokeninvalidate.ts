@@ -14,7 +14,7 @@ export class ItemAccessTokenInvalidateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  itemAccessTokenInvalidateResponse?: Map<string, any>;
+  itemAccessTokenInvalidateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

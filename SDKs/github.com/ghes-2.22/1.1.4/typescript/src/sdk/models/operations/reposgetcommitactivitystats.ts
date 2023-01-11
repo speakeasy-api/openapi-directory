@@ -29,5 +29,5 @@ export class ReposGetCommitActivityStatsResponse extends SpeakeasyBase {
   commitActivities?: shared.CommitActivity[];
 
   @SpeakeasyMetadata()
-  reposGetCommitActivityStats202ApplicationJsonObject?: Map<string, any>;
+  reposGetCommitActivityStats202ApplicationJSONObject?: Record<string, any>;
 }

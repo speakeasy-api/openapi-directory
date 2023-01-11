@@ -10,5 +10,5 @@ export class AppsGetAuthenticatedResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  integration?: Map<string, any>;
+  integration?: Record<string, any>;
 }

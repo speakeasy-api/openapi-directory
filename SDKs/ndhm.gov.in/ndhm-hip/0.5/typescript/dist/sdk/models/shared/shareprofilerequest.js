@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,87 +23,89 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientAddress } from "./patientaddress";
-import { PatientGenderEnum } from "./patientgenderenum";
-import { Identifier } from "./identifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShareProfileRequest = exports.ShareProfileRequestPatient = exports.ShareProfileRequestPatientUserDemographics = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientaddress_1 = require("./patientaddress");
+var patientgenderenum_1 = require("./patientgenderenum");
+var identifier_1 = require("./identifier");
 var ShareProfileRequestPatientUserDemographics = /** @class */ (function (_super) {
     __extends(ShareProfileRequestPatientUserDemographics, _super);
     function ShareProfileRequestPatientUserDemographics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PatientAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", patientaddress_1.PatientAddress)
     ], ShareProfileRequestPatientUserDemographics.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfBirth" }),
         __metadata("design:type", Number)
     ], ShareProfileRequestPatientUserDemographics.prototype, "dayOfBirth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], ShareProfileRequestPatientUserDemographics.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthId" }),
         __metadata("design:type", String)
     ], ShareProfileRequestPatientUserDemographics.prototype, "healthId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthIdNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthIdNumber" }),
         __metadata("design:type", String)
     ], ShareProfileRequestPatientUserDemographics.prototype, "healthIdNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifiers", elemType: Identifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifiers", elemType: identifier_1.Identifier }),
         __metadata("design:type", Array)
     ], ShareProfileRequestPatientUserDemographics.prototype, "identifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthOfBirth" }),
         __metadata("design:type", Number)
     ], ShareProfileRequestPatientUserDemographics.prototype, "monthOfBirth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ShareProfileRequestPatientUserDemographics.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearOfBirth" }),
         __metadata("design:type", Number)
     ], ShareProfileRequestPatientUserDemographics.prototype, "yearOfBirth", void 0);
     return ShareProfileRequestPatientUserDemographics;
-}(SpeakeasyBase));
-export { ShareProfileRequestPatientUserDemographics };
+}(utils_1.SpeakeasyBase));
+exports.ShareProfileRequestPatientUserDemographics = ShareProfileRequestPatientUserDemographics;
 var ShareProfileRequestPatient = /** @class */ (function (_super) {
     __extends(ShareProfileRequestPatient, _super);
     function ShareProfileRequestPatient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hipCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hipCode" }),
         __metadata("design:type", String)
     ], ShareProfileRequestPatient.prototype, "hipCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userDemographics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userDemographics" }),
         __metadata("design:type", ShareProfileRequestPatientUserDemographics)
     ], ShareProfileRequestPatient.prototype, "userDemographics", void 0);
     return ShareProfileRequestPatient;
-}(SpeakeasyBase));
-export { ShareProfileRequestPatient };
+}(utils_1.SpeakeasyBase));
+exports.ShareProfileRequestPatient = ShareProfileRequestPatient;
 var ShareProfileRequest = /** @class */ (function (_super) {
     __extends(ShareProfileRequest, _super);
     function ShareProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
         __metadata("design:type", ShareProfileRequestPatient)
     ], ShareProfileRequest.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ShareProfileRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], ShareProfileRequest.prototype, "timestamp", void 0);
     return ShareProfileRequest;
-}(SpeakeasyBase));
-export { ShareProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.ShareProfileRequest = ShareProfileRequest;

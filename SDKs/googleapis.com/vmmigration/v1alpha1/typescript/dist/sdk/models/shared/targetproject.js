@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetProjectInput = exports.TargetProject = void 0;
+var utils_1 = require("../../../internal/utils");
 // TargetProject
 /**
  * TargetProject message represents a target Compute Engine project for a migration or a clone.
@@ -33,28 +36,28 @@ var TargetProject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], TargetProject.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TargetProject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TargetProject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], TargetProject.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], TargetProject.prototype, "updateTime", void 0);
     return TargetProject;
-}(SpeakeasyBase));
-export { TargetProject };
+}(utils_1.SpeakeasyBase));
+exports.TargetProject = TargetProject;
 // TargetProjectInput
 /**
  * TargetProject message represents a target Compute Engine project for a migration or a clone.
@@ -65,13 +68,13 @@ var TargetProjectInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TargetProjectInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], TargetProjectInput.prototype, "project", void 0);
     return TargetProjectInput;
-}(SpeakeasyBase));
-export { TargetProjectInput };
+}(utils_1.SpeakeasyBase));
+exports.TargetProjectInput = TargetProjectInput;

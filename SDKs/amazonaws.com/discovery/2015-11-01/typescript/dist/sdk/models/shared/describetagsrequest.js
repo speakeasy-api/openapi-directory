@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagFilter } from "./tagfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTagsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tagfilter_1 = require("./tagfilter");
 var DescribeTagsRequest = /** @class */ (function (_super) {
     __extends(DescribeTagsRequest, _super);
     function DescribeTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: TagFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: tagfilter_1.TagFilter }),
         __metadata("design:type", Array)
     ], DescribeTagsRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], DescribeTagsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeTagsRequest.prototype, "nextToken", void 0);
     return DescribeTagsRequest;
-}(SpeakeasyBase));
-export { DescribeTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTagsRequest = DescribeTagsRequest;

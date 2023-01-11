@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-export var InterpolationPointTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InterpolationPoint = exports.InterpolationPointTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var InterpolationPointTypeEnum;
 (function (InterpolationPointTypeEnum) {
     InterpolationPointTypeEnum["InterpolationPointTypeUnspecified"] = "INTERPOLATION_POINT_TYPE_UNSPECIFIED";
     InterpolationPointTypeEnum["Min"] = "MIN";
@@ -33,7 +36,7 @@ export var InterpolationPointTypeEnum;
     InterpolationPointTypeEnum["Number"] = "NUMBER";
     InterpolationPointTypeEnum["Percent"] = "PERCENT";
     InterpolationPointTypeEnum["Percentile"] = "PERCENTILE";
-})(InterpolationPointTypeEnum || (InterpolationPointTypeEnum = {}));
+})(InterpolationPointTypeEnum = exports.InterpolationPointTypeEnum || (exports.InterpolationPointTypeEnum = {}));
 // InterpolationPoint
 /**
  * A single interpolation point on a gradient conditional format. These pin the gradient color scale according to the color, type and value chosen.
@@ -44,21 +47,21 @@ var InterpolationPoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", color_1.Color)
     ], InterpolationPoint.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], InterpolationPoint.prototype, "colorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], InterpolationPoint.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], InterpolationPoint.prototype, "value", void 0);
     return InterpolationPoint;
-}(SpeakeasyBase));
-export { InterpolationPoint };
+}(utils_1.SpeakeasyBase));
+exports.InterpolationPoint = InterpolationPoint;

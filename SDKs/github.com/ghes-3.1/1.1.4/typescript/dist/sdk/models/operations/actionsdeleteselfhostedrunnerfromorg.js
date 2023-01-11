@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDeleteSelfHostedRunnerFromOrgResponse = exports.ActionsDeleteSelfHostedRunnerFromOrgRequest = exports.ActionsDeleteSelfHostedRunnerFromOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDeleteSelfHostedRunnerFromOrgPathParams = /** @class */ (function (_super) {
     __extends(ActionsDeleteSelfHostedRunnerFromOrgPathParams, _super);
     function ActionsDeleteSelfHostedRunnerFromOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsDeleteSelfHostedRunnerFromOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
         __metadata("design:type", Number)
     ], ActionsDeleteSelfHostedRunnerFromOrgPathParams.prototype, "runnerId", void 0);
     return ActionsDeleteSelfHostedRunnerFromOrgPathParams;
-}(SpeakeasyBase));
-export { ActionsDeleteSelfHostedRunnerFromOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteSelfHostedRunnerFromOrgPathParams = ActionsDeleteSelfHostedRunnerFromOrgPathParams;
 var ActionsDeleteSelfHostedRunnerFromOrgRequest = /** @class */ (function (_super) {
     __extends(ActionsDeleteSelfHostedRunnerFromOrgRequest, _super);
     function ActionsDeleteSelfHostedRunnerFromOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDeleteSelfHostedRunnerFromOrgPathParams)
     ], ActionsDeleteSelfHostedRunnerFromOrgRequest.prototype, "pathParams", void 0);
     return ActionsDeleteSelfHostedRunnerFromOrgRequest;
-}(SpeakeasyBase));
-export { ActionsDeleteSelfHostedRunnerFromOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteSelfHostedRunnerFromOrgRequest = ActionsDeleteSelfHostedRunnerFromOrgRequest;
 var ActionsDeleteSelfHostedRunnerFromOrgResponse = /** @class */ (function (_super) {
     __extends(ActionsDeleteSelfHostedRunnerFromOrgResponse, _super);
     function ActionsDeleteSelfHostedRunnerFromOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDeleteSelfHostedRunnerFromOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDeleteSelfHostedRunnerFromOrgResponse.prototype, "statusCode", void 0);
     return ActionsDeleteSelfHostedRunnerFromOrgResponse;
-}(SpeakeasyBase));
-export { ActionsDeleteSelfHostedRunnerFromOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteSelfHostedRunnerFromOrgResponse = ActionsDeleteSelfHostedRunnerFromOrgResponse;

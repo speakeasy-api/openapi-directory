@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSetUsernameResponse = exports.ProtocolMqttClientSetUsernameRequest = exports.ProtocolMqttClientSetUsernamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSetUsernamePathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetUsernamePathParams, _super);
     function ProtocolMqttClientSetUsernamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetUsernamePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetUsernamePathParams.prototype, "username", void 0);
     return ProtocolMqttClientSetUsernamePathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetUsernamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetUsernamePathParams = ProtocolMqttClientSetUsernamePathParams;
 var ProtocolMqttClientSetUsernameRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetUsernameRequest, _super);
     function ProtocolMqttClientSetUsernameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSetUsernamePathParams)
     ], ProtocolMqttClientSetUsernameRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSetUsernameRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetUsernameRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetUsernameRequest = ProtocolMqttClientSetUsernameRequest;
 var ProtocolMqttClientSetUsernameResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetUsernameResponse, _super);
     function ProtocolMqttClientSetUsernameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetUsernameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetUsernameResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSetUsernameResponse.prototype, "protocolMqttClientSetUsername200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientSetUsernameResponse.prototype, "protocolMqttClientSetUsername200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientSetUsernameResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetUsernameResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetUsernameResponse = ProtocolMqttClientSetUsernameResponse;

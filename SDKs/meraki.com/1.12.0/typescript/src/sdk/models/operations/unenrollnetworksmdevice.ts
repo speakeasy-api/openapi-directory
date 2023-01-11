@@ -25,5 +25,5 @@ export class UnenrollNetworkSmDeviceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unenrollNetworkSmDevice200ApplicationJsonObject?: Map<string, any>;
+  unenrollNetworkSmDevice200ApplicationJSONObject?: Record<string, any>;
 }

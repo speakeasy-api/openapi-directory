@@ -10,6 +10,6 @@ export declare class GetOfferingsOfferingIdChannelsChannelIdLearnersRequest exte
 export declare class GetOfferingsOfferingIdChannelsChannelIdLearnersResponse extends SpeakeasyBase {
     channelResponse?: shared.ChannelResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -1,4 +1,7 @@
-export var UnitOfMeasureEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnitOfMeasureEnum = void 0;
+var UnitOfMeasureEnum;
 (function (UnitOfMeasureEnum) {
     UnitOfMeasureEnum["Mg"] = "mg";
     UnitOfMeasureEnum["G"] = "g";
@@ -8,4 +11,4 @@ export var UnitOfMeasureEnum;
     UnitOfMeasureEnum["Toz"] = "toz";
     UnitOfMeasureEnum["Ct"] = "ct";
     UnitOfMeasureEnum["Dwt"] = "dwt";
-})(UnitOfMeasureEnum || (UnitOfMeasureEnum = {}));
+})(UnitOfMeasureEnum = exports.UnitOfMeasureEnum || (exports.UnitOfMeasureEnum = {}));

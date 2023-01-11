@@ -7,7 +7,7 @@ import { TierEnum } from "./tierenum";
 export declare class ApplicationComponent extends SpeakeasyBase {
     componentName?: string;
     componentRemarks?: string;
-    detectedWorkload?: Map<string, Map<string, string>>;
+    detectedWorkload?: Record<string, Record<string, string>>;
     monitor?: boolean;
     osType?: OsTypeEnum;
     resourceType?: string;

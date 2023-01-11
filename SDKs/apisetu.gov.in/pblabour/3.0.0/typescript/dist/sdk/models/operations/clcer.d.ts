@@ -106,11 +106,11 @@ export declare class ClcerRequest extends SpeakeasyBase {
 export declare class ClcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    clcer400ApplicationJsonObject?: Clcer400ApplicationJson;
-    clcer401ApplicationJsonObject?: Clcer401ApplicationJson;
-    clcer404ApplicationJsonObject?: Clcer404ApplicationJson;
-    clcer500ApplicationJsonObject?: Clcer500ApplicationJson;
-    clcer502ApplicationJsonObject?: Clcer502ApplicationJson;
-    clcer503ApplicationJsonObject?: Clcer503ApplicationJson;
-    clcer504ApplicationJsonObject?: Clcer504ApplicationJson;
+    clcer400ApplicationJSONObject?: Clcer400ApplicationJson;
+    clcer401ApplicationJSONObject?: Clcer401ApplicationJson;
+    clcer404ApplicationJSONObject?: Clcer404ApplicationJson;
+    clcer500ApplicationJSONObject?: Clcer500ApplicationJson;
+    clcer502ApplicationJSONObject?: Clcer502ApplicationJson;
+    clcer503ApplicationJSONObject?: Clcer503ApplicationJson;
+    clcer504ApplicationJSONObject?: Clcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ResendTokenRequestTokenTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResendTokenRequest = exports.ResendTokenRequestTokenTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ResendTokenRequestTokenTypeEnum;
 (function (ResendTokenRequestTokenTypeEnum) {
     ResendTokenRequestTokenTypeEnum["InviteMfaUser"] = "INVITE_MFA_USER";
     ResendTokenRequestTokenTypeEnum["MfaRegistration"] = "MFA_REGISTRATION";
-})(ResendTokenRequestTokenTypeEnum || (ResendTokenRequestTokenTypeEnum = {}));
+})(ResendTokenRequestTokenTypeEnum = exports.ResendTokenRequestTokenTypeEnum || (exports.ResendTokenRequestTokenTypeEnum = {}));
 var ResendTokenRequest = /** @class */ (function (_super) {
     __extends(ResendTokenRequest, _super);
     function ResendTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenType" }),
         __metadata("design:type", String)
     ], ResendTokenRequest.prototype, "tokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationCode" }),
         __metadata("design:type", String)
     ], ResendTokenRequest.prototype, "verificationCode", void 0);
     return ResendTokenRequest;
-}(SpeakeasyBase));
-export { ResendTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResendTokenRequest = ResendTokenRequest;

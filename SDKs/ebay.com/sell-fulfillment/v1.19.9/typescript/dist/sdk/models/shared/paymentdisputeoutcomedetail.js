@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleAmount } from "./simpleamount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentDisputeOutcomeDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleamount_1 = require("./simpleamount");
 // PaymentDisputeOutcomeDetail
 /**
  * This type is used by the resolution container that is returned for payment disputes that have been resolved.
@@ -34,29 +37,29 @@ var PaymentDisputeOutcomeDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fees" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fees" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], PaymentDisputeOutcomeDetail.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectedAmount" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectedAmount" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], PaymentDisputeOutcomeDetail.prototype, "protectedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionStatus" }),
         __metadata("design:type", String)
     ], PaymentDisputeOutcomeDetail.prototype, "protectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonForClosure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonForClosure" }),
         __metadata("design:type", String)
     ], PaymentDisputeOutcomeDetail.prototype, "reasonForClosure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recoupAmount" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recoupAmount" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], PaymentDisputeOutcomeDetail.prototype, "recoupAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalFeeCredit" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalFeeCredit" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], PaymentDisputeOutcomeDetail.prototype, "totalFeeCredit", void 0);
     return PaymentDisputeOutcomeDetail;
-}(SpeakeasyBase));
-export { PaymentDisputeOutcomeDetail };
+}(utils_1.SpeakeasyBase));
+exports.PaymentDisputeOutcomeDetail = PaymentDisputeOutcomeDetail;

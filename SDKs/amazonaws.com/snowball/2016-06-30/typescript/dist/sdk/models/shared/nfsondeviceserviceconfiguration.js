@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StorageUnitEnum } from "./storageunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NfsOnDeviceServiceConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var storageunitenum_1 = require("./storageunitenum");
 // NfsOnDeviceServiceConfiguration
 /**
  * An object that represents metadata and configuration settings for NFS service on an AWS Snow Family device.
@@ -34,13 +37,13 @@ var NfsOnDeviceServiceConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StorageLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StorageLimit" }),
         __metadata("design:type", Number)
     ], NfsOnDeviceServiceConfiguration.prototype, "storageLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StorageUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StorageUnit" }),
         __metadata("design:type", String)
     ], NfsOnDeviceServiceConfiguration.prototype, "storageUnit", void 0);
     return NfsOnDeviceServiceConfiguration;
-}(SpeakeasyBase));
-export { NfsOnDeviceServiceConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.NfsOnDeviceServiceConfiguration = NfsOnDeviceServiceConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyCurrentDbClusterCapacityActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyCurrentDbClusterCapacityResponse = exports.PostModifyCurrentDbClusterCapacityRequest = exports.PostModifyCurrentDbClusterCapacityHeaders = exports.PostModifyCurrentDbClusterCapacityQueryParams = exports.PostModifyCurrentDbClusterCapacityVersionEnum = exports.PostModifyCurrentDbClusterCapacityActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyCurrentDbClusterCapacityActionEnum;
 (function (PostModifyCurrentDbClusterCapacityActionEnum) {
     PostModifyCurrentDbClusterCapacityActionEnum["ModifyCurrentDbClusterCapacity"] = "ModifyCurrentDBClusterCapacity";
-})(PostModifyCurrentDbClusterCapacityActionEnum || (PostModifyCurrentDbClusterCapacityActionEnum = {}));
-export var PostModifyCurrentDbClusterCapacityVersionEnum;
+})(PostModifyCurrentDbClusterCapacityActionEnum = exports.PostModifyCurrentDbClusterCapacityActionEnum || (exports.PostModifyCurrentDbClusterCapacityActionEnum = {}));
+var PostModifyCurrentDbClusterCapacityVersionEnum;
 (function (PostModifyCurrentDbClusterCapacityVersionEnum) {
     PostModifyCurrentDbClusterCapacityVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostModifyCurrentDbClusterCapacityVersionEnum || (PostModifyCurrentDbClusterCapacityVersionEnum = {}));
+})(PostModifyCurrentDbClusterCapacityVersionEnum = exports.PostModifyCurrentDbClusterCapacityVersionEnum || (exports.PostModifyCurrentDbClusterCapacityVersionEnum = {}));
 var PostModifyCurrentDbClusterCapacityQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyCurrentDbClusterCapacityQueryParams, _super);
     function PostModifyCurrentDbClusterCapacityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityQueryParams.prototype, "version", void 0);
     return PostModifyCurrentDbClusterCapacityQueryParams;
-}(SpeakeasyBase));
-export { PostModifyCurrentDbClusterCapacityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCurrentDbClusterCapacityQueryParams = PostModifyCurrentDbClusterCapacityQueryParams;
 var PostModifyCurrentDbClusterCapacityHeaders = /** @class */ (function (_super) {
     __extends(PostModifyCurrentDbClusterCapacityHeaders, _super);
     function PostModifyCurrentDbClusterCapacityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyCurrentDbClusterCapacityHeaders;
-}(SpeakeasyBase));
-export { PostModifyCurrentDbClusterCapacityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCurrentDbClusterCapacityHeaders = PostModifyCurrentDbClusterCapacityHeaders;
 var PostModifyCurrentDbClusterCapacityRequest = /** @class */ (function (_super) {
     __extends(PostModifyCurrentDbClusterCapacityRequest, _super);
     function PostModifyCurrentDbClusterCapacityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyCurrentDbClusterCapacityQueryParams)
     ], PostModifyCurrentDbClusterCapacityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyCurrentDbClusterCapacityHeaders)
     ], PostModifyCurrentDbClusterCapacityRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyCurrentDbClusterCapacityRequest.prototype, "request", void 0);
     return PostModifyCurrentDbClusterCapacityRequest;
-}(SpeakeasyBase));
-export { PostModifyCurrentDbClusterCapacityRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCurrentDbClusterCapacityRequest = PostModifyCurrentDbClusterCapacityRequest;
 var PostModifyCurrentDbClusterCapacityResponse = /** @class */ (function (_super) {
     __extends(PostModifyCurrentDbClusterCapacityResponse, _super);
     function PostModifyCurrentDbClusterCapacityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyCurrentDbClusterCapacityResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyCurrentDbClusterCapacityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyCurrentDbClusterCapacityResponse.prototype, "statusCode", void 0);
     return PostModifyCurrentDbClusterCapacityResponse;
-}(SpeakeasyBase));
-export { PostModifyCurrentDbClusterCapacityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCurrentDbClusterCapacityResponse = PostModifyCurrentDbClusterCapacityResponse;

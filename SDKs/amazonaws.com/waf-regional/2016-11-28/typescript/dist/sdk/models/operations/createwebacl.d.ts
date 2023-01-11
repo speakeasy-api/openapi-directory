@@ -19,7 +19,7 @@ export declare class CreateWebAclRequest extends SpeakeasyBase {
 }
 export declare class CreateWebAclResponse extends SpeakeasyBase {
     contentType: string;
-    createWebAclResponse?: shared.CreateWebAclResponse;
+    createWebACLResponse?: shared.CreateWebAclResponse;
     statusCode: number;
     wafBadRequestException?: any;
     wafDisallowedNameException?: any;

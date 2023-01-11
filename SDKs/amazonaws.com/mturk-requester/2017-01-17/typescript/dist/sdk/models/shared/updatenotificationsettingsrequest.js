@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NotificationSpecification } from "./notificationspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNotificationSettingsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var notificationspecification_1 = require("./notificationspecification");
 var UpdateNotificationSettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateNotificationSettingsRequest, _super);
     function UpdateNotificationSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Active" }),
         __metadata("design:type", Boolean)
     ], UpdateNotificationSettingsRequest.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITTypeId" }),
         __metadata("design:type", String)
     ], UpdateNotificationSettingsRequest.prototype, "hitTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notification" }),
-        __metadata("design:type", NotificationSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notification" }),
+        __metadata("design:type", notificationspecification_1.NotificationSpecification)
     ], UpdateNotificationSettingsRequest.prototype, "notification", void 0);
     return UpdateNotificationSettingsRequest;
-}(SpeakeasyBase));
-export { UpdateNotificationSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNotificationSettingsRequest = UpdateNotificationSettingsRequest;

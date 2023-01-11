@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointList = void 0;
+var utils_1 = require("../../../internal/utils");
 var EndpointList = /** @class */ (function (_super) {
     __extends(EndpointList, _super);
     function EndpointList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endPoints" }),
         __metadata("design:type", Array)
     ], EndpointList.prototype, "endPoints", void 0);
     return EndpointList;
-}(SpeakeasyBase));
-export { EndpointList };
+}(utils_1.SpeakeasyBase));
+exports.EndpointList = EndpointList;

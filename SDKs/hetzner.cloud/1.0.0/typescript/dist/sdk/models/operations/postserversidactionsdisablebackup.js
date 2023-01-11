@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostServersIdActionsDisableBackupResponse = exports.PostServersIdActionsDisableBackupRequest = exports.PostServersIdActionsDisableBackupActionResponse = exports.PostServersIdActionsDisableBackupActionResponseAction = exports.PostServersIdActionsDisableBackupActionResponseActionStatusEnum = exports.PostServersIdActionsDisableBackupActionResponseActionResources = exports.PostServersIdActionsDisableBackupActionResponseActionError = exports.PostServersIdActionsDisableBackupPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostServersIdActionsDisableBackupPathParams = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupPathParams, _super);
     function PostServersIdActionsDisableBackupPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsDisableBackupPathParams.prototype, "id", void 0);
     return PostServersIdActionsDisableBackupPathParams;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupPathParams = PostServersIdActionsDisableBackupPathParams;
 // PostServersIdActionsDisableBackupActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -45,119 +48,119 @@ var PostServersIdActionsDisableBackupActionResponseActionError = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseActionError.prototype, "message", void 0);
     return PostServersIdActionsDisableBackupActionResponseActionError;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupActionResponseActionError = PostServersIdActionsDisableBackupActionResponseActionError;
 var PostServersIdActionsDisableBackupActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupActionResponseActionResources, _super);
     function PostServersIdActionsDisableBackupActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsDisableBackupActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseActionResources.prototype, "type", void 0);
     return PostServersIdActionsDisableBackupActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupActionResponseActionResources };
-export var PostServersIdActionsDisableBackupActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupActionResponseActionResources = PostServersIdActionsDisableBackupActionResponseActionResources;
+var PostServersIdActionsDisableBackupActionResponseActionStatusEnum;
 (function (PostServersIdActionsDisableBackupActionResponseActionStatusEnum) {
     PostServersIdActionsDisableBackupActionResponseActionStatusEnum["Success"] = "success";
     PostServersIdActionsDisableBackupActionResponseActionStatusEnum["Running"] = "running";
     PostServersIdActionsDisableBackupActionResponseActionStatusEnum["Error"] = "error";
-})(PostServersIdActionsDisableBackupActionResponseActionStatusEnum || (PostServersIdActionsDisableBackupActionResponseActionStatusEnum = {}));
+})(PostServersIdActionsDisableBackupActionResponseActionStatusEnum = exports.PostServersIdActionsDisableBackupActionResponseActionStatusEnum || (exports.PostServersIdActionsDisableBackupActionResponseActionStatusEnum = {}));
 var PostServersIdActionsDisableBackupActionResponseAction = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupActionResponseAction, _super);
     function PostServersIdActionsDisableBackupActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostServersIdActionsDisableBackupActionResponseActionError)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostServersIdActionsDisableBackupActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostServersIdActionsDisableBackupActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupActionResponseAction.prototype, "status", void 0);
     return PostServersIdActionsDisableBackupActionResponseAction;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupActionResponseAction = PostServersIdActionsDisableBackupActionResponseAction;
 var PostServersIdActionsDisableBackupActionResponse = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupActionResponse, _super);
     function PostServersIdActionsDisableBackupActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostServersIdActionsDisableBackupActionResponseAction)
     ], PostServersIdActionsDisableBackupActionResponse.prototype, "action", void 0);
     return PostServersIdActionsDisableBackupActionResponse;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupActionResponse = PostServersIdActionsDisableBackupActionResponse;
 var PostServersIdActionsDisableBackupRequest = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupRequest, _super);
     function PostServersIdActionsDisableBackupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostServersIdActionsDisableBackupPathParams)
     ], PostServersIdActionsDisableBackupRequest.prototype, "pathParams", void 0);
     return PostServersIdActionsDisableBackupRequest;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupRequest = PostServersIdActionsDisableBackupRequest;
 var PostServersIdActionsDisableBackupResponse = /** @class */ (function (_super) {
     __extends(PostServersIdActionsDisableBackupResponse, _super);
     function PostServersIdActionsDisableBackupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostServersIdActionsDisableBackupActionResponse)
     ], PostServersIdActionsDisableBackupResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostServersIdActionsDisableBackupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostServersIdActionsDisableBackupResponse.prototype, "statusCode", void 0);
     return PostServersIdActionsDisableBackupResponse;
-}(SpeakeasyBase));
-export { PostServersIdActionsDisableBackupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsDisableBackupResponse = PostServersIdActionsDisableBackupResponse;

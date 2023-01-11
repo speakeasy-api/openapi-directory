@@ -12,11 +12,11 @@ export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecuri
 }
 export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

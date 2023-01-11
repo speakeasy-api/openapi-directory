@@ -37,5 +37,5 @@ export class CreateNetworkApplianceStaticRouteResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkApplianceStaticRoute201ApplicationJsonObject?: Map<string, any>;
+  createNetworkApplianceStaticRoute201ApplicationJSONObject?: Record<string, any>;
 }

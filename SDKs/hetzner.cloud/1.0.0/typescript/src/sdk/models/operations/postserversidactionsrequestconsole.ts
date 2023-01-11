@@ -86,8 +86,8 @@ export class PostServersIdActionsRequestConsoleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postServersIdActionsRequestConsole201ApplicationJsonObject?: PostServersIdActionsRequestConsole201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postServersIdActionsRequestConsole201ApplicationJSONObject?: PostServersIdActionsRequestConsole201ApplicationJson;
 }

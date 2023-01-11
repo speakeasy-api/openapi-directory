@@ -15,13 +15,13 @@ export class GetCreateCustomVerificationEmailTemplateQueryParams extends Speakea
   action: GetCreateCustomVerificationEmailTemplateActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FailureRedirectionURL" })
-  failureRedirectionUrl: string;
+  failureRedirectionURL: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FromEmailAddress" })
   fromEmailAddress: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SuccessRedirectionURL" })
-  successRedirectionUrl: string;
+  successRedirectionURL: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TemplateContent" })
   templateContent: string;

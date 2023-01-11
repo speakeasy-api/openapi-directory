@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeAttachment } from "./volumeattachment";
-import { VolumeStateEnum } from "./volumestateenum";
-import { Tag } from "./tag";
-import { VolumeTypeEnum } from "./volumetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
 // Volume
 /**
  * Describes a volume.
@@ -37,69 +36,69 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: VolumeAttachment }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "fastRestored", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "multiAttachEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "outpostArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "snapshotId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "throughput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "volumeId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Volume.prototype, "volumeType", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

@@ -1,4 +1,7 @@
-export var DayOfWeekEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DayOfWeekEnum = void 0;
+var DayOfWeekEnum;
 (function (DayOfWeekEnum) {
     DayOfWeekEnum["Sunday"] = "SUNDAY";
     DayOfWeekEnum["Monday"] = "MONDAY";
@@ -7,4 +10,4 @@ export var DayOfWeekEnum;
     DayOfWeekEnum["Thursday"] = "THURSDAY";
     DayOfWeekEnum["Friday"] = "FRIDAY";
     DayOfWeekEnum["Saturday"] = "SATURDAY";
-})(DayOfWeekEnum || (DayOfWeekEnum = {}));
+})(DayOfWeekEnum = exports.DayOfWeekEnum || (exports.DayOfWeekEnum = {}));

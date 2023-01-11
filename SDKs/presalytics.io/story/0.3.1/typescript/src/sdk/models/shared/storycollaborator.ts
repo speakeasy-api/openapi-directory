@@ -5,7 +5,7 @@ import { PermissionType } from "./permissiontype";
 
 // StoryCollaborator
 /** 
- * Description of a user that can collaborate on a story
+ * Base model for all types
 **/
 export class StoryCollaborator extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=active" })

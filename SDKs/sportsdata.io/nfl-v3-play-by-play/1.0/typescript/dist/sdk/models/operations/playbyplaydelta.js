@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayByPlayDeltaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayByPlayDeltaResponse = exports.PlayByPlayDeltaRequest = exports.PlayByPlayDeltaPathParams = exports.PlayByPlayDeltaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayByPlayDeltaFormatEnum;
 (function (PlayByPlayDeltaFormatEnum) {
     PlayByPlayDeltaFormatEnum["Xml"] = "XML";
     PlayByPlayDeltaFormatEnum["Json"] = "JSON";
-})(PlayByPlayDeltaFormatEnum || (PlayByPlayDeltaFormatEnum = {}));
+})(PlayByPlayDeltaFormatEnum = exports.PlayByPlayDeltaFormatEnum || (exports.PlayByPlayDeltaFormatEnum = {}));
 var PlayByPlayDeltaPathParams = /** @class */ (function (_super) {
     __extends(PlayByPlayDeltaPathParams, _super);
     function PlayByPlayDeltaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayByPlayDeltaPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], PlayByPlayDeltaPathParams.prototype, "minutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayByPlayDeltaPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], PlayByPlayDeltaPathParams.prototype, "week", void 0);
     return PlayByPlayDeltaPathParams;
-}(SpeakeasyBase));
-export { PlayByPlayDeltaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayDeltaPathParams = PlayByPlayDeltaPathParams;
 var PlayByPlayDeltaRequest = /** @class */ (function (_super) {
     __extends(PlayByPlayDeltaRequest, _super);
     function PlayByPlayDeltaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayByPlayDeltaPathParams)
     ], PlayByPlayDeltaRequest.prototype, "pathParams", void 0);
     return PlayByPlayDeltaRequest;
-}(SpeakeasyBase));
-export { PlayByPlayDeltaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayDeltaRequest = PlayByPlayDeltaRequest;
 var PlayByPlayDeltaResponse = /** @class */ (function (_super) {
     __extends(PlayByPlayDeltaResponse, _super);
     function PlayByPlayDeltaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayByPlayDeltaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayByPlayDeltaResponse.prototype, "playByPlays", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayByPlayDeltaResponse.prototype, "statusCode", void 0);
     return PlayByPlayDeltaResponse;
-}(SpeakeasyBase));
-export { PlayByPlayDeltaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayDeltaResponse = PlayByPlayDeltaResponse;

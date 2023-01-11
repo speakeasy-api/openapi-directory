@@ -22,5 +22,5 @@ export class ProtocolTelnetServerGetRulesdbResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetServerGetRulesdb200ApplicationJsonStrings?: string[];
+  protocolTelnetServerGetRulesdb200ApplicationJSONStrings?: string[];
 }

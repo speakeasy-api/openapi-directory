@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AchievementUpdateResponseCurrentStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AchievementUpdateResponse = exports.AchievementUpdateResponseCurrentStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AchievementUpdateResponseCurrentStateEnum;
 (function (AchievementUpdateResponseCurrentStateEnum) {
     AchievementUpdateResponseCurrentStateEnum["UpdatedAchievementStateUnspecified"] = "UPDATED_ACHIEVEMENT_STATE_UNSPECIFIED";
     AchievementUpdateResponseCurrentStateEnum["Hidden"] = "HIDDEN";
     AchievementUpdateResponseCurrentStateEnum["Revealed"] = "REVEALED";
     AchievementUpdateResponseCurrentStateEnum["Unlocked"] = "UNLOCKED";
-})(AchievementUpdateResponseCurrentStateEnum || (AchievementUpdateResponseCurrentStateEnum = {}));
+})(AchievementUpdateResponseCurrentStateEnum = exports.AchievementUpdateResponseCurrentStateEnum || (exports.AchievementUpdateResponseCurrentStateEnum = {}));
 // AchievementUpdateResponse
 /**
  * An updated achievement.
@@ -40,29 +43,29 @@ var AchievementUpdateResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=achievementId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=achievementId" }),
         __metadata("design:type", String)
     ], AchievementUpdateResponse.prototype, "achievementId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentState" }),
         __metadata("design:type", String)
     ], AchievementUpdateResponse.prototype, "currentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentSteps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentSteps" }),
         __metadata("design:type", Number)
     ], AchievementUpdateResponse.prototype, "currentSteps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AchievementUpdateResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newlyUnlocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newlyUnlocked" }),
         __metadata("design:type", Boolean)
     ], AchievementUpdateResponse.prototype, "newlyUnlocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateOccurred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateOccurred" }),
         __metadata("design:type", Boolean)
     ], AchievementUpdateResponse.prototype, "updateOccurred", void 0);
     return AchievementUpdateResponse;
-}(SpeakeasyBase));
-export { AchievementUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.AchievementUpdateResponse = AchievementUpdateResponse;

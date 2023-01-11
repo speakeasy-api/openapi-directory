@@ -32,11 +32,11 @@ export class CloneCampaignResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cloneCampaign201ApplicationJsonObject?: Map<string, any>;
+  cloneCampaign201ApplicationJSONObject?: Record<string, any>;
 }

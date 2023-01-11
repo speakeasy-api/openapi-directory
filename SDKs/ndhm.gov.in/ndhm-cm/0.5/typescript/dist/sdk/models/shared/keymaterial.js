@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyObject } from "./keyobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyMaterial = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyobject_1 = require("./keyobject");
 var KeyMaterial = /** @class */ (function (_super) {
     __extends(KeyMaterial, _super);
     function KeyMaterial() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoAlg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoAlg" }),
         __metadata("design:type", String)
     ], KeyMaterial.prototype, "cryptoAlg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=curve" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=curve" }),
         __metadata("design:type", String)
     ], KeyMaterial.prototype, "curve", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dhPublicKey" }),
-        __metadata("design:type", KeyObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dhPublicKey" }),
+        __metadata("design:type", keyobject_1.KeyObject)
     ], KeyMaterial.prototype, "dhPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonce" }),
         __metadata("design:type", String)
     ], KeyMaterial.prototype, "nonce", void 0);
     return KeyMaterial;
-}(SpeakeasyBase));
-export { KeyMaterial };
+}(utils_1.SpeakeasyBase));
+exports.KeyMaterial = KeyMaterial;

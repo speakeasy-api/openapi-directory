@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMultiNodeInventoryResponse = exports.UpdateMultiNodeInventoryRequest = exports.UpdateMultiNodeInventory200ApplicationJson = exports.UpdateMultiNodeInventory200ApplicationJsonNodes = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrors = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum = exports.UpdateMultiNodeInventoryRequestBody = exports.UpdateMultiNodeInventoryRequestBodyInventories = exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodes = exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty = exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum = exports.UpdateMultiNodeInventoryHeaders = exports.UpdateMultiNodeInventoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateMultiNodeInventoryPathParams = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryPathParams, _super);
     function UpdateMultiNodeInventoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sku" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventoryPathParams.prototype, "sku", void 0);
     return UpdateMultiNodeInventoryPathParams;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryPathParams = UpdateMultiNodeInventoryPathParams;
 var UpdateMultiNodeInventoryHeaders = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryHeaders, _super);
     function UpdateMultiNodeInventoryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventoryHeaders.prototype, "authorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
         __metadata("design:type", String)
-    ], UpdateMultiNodeInventoryHeaders.prototype, "wmConsumerChannelType", void 0);
+    ], UpdateMultiNodeInventoryHeaders.prototype, "wmCONSUMERCHANNELTYPE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
         __metadata("design:type", String)
-    ], UpdateMultiNodeInventoryHeaders.prototype, "wmQosCorrelationId", void 0);
+    ], UpdateMultiNodeInventoryHeaders.prototype, "wmQOSCORRELATIONID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
         __metadata("design:type", String)
-    ], UpdateMultiNodeInventoryHeaders.prototype, "wmSecAccessToken", void 0);
+    ], UpdateMultiNodeInventoryHeaders.prototype, "wmSECACCESSTOKEN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
         __metadata("design:type", String)
-    ], UpdateMultiNodeInventoryHeaders.prototype, "wmSvcName", void 0);
+    ], UpdateMultiNodeInventoryHeaders.prototype, "wmSVCNAME", void 0);
     return UpdateMultiNodeInventoryHeaders;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryHeaders };
-export var UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryHeaders = UpdateMultiNodeInventoryHeaders;
+var UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum;
 (function (UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum) {
     UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum["Each"] = "EACH";
-})(UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum || (UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum = {}));
+})(UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum = exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum || (exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum = {}));
 var UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty, _super);
     function UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty.prototype, "unit", void 0);
     return UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty = UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty;
 var UpdateMultiNodeInventoryRequestBodyInventoriesNodes = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryRequestBodyInventoriesNodes, _super);
     function UpdateMultiNodeInventoryRequestBodyInventoriesNodes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputQty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputQty" }),
         __metadata("design:type", UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty)
     ], UpdateMultiNodeInventoryRequestBodyInventoriesNodes.prototype, "inputQty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipNode" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventoryRequestBodyInventoriesNodes.prototype, "shipNode", void 0);
     return UpdateMultiNodeInventoryRequestBodyInventoriesNodes;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryRequestBodyInventoriesNodes };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryRequestBodyInventoriesNodes = UpdateMultiNodeInventoryRequestBodyInventoriesNodes;
 var UpdateMultiNodeInventoryRequestBodyInventories = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryRequestBodyInventories, _super);
     function UpdateMultiNodeInventoryRequestBodyInventories() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodes", elemType: UpdateMultiNodeInventoryRequestBodyInventoriesNodes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodes", elemType: UpdateMultiNodeInventoryRequestBodyInventoriesNodes }),
         __metadata("design:type", Array)
     ], UpdateMultiNodeInventoryRequestBodyInventories.prototype, "nodes", void 0);
     return UpdateMultiNodeInventoryRequestBodyInventories;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryRequestBodyInventories };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryRequestBodyInventories = UpdateMultiNodeInventoryRequestBodyInventories;
 var UpdateMultiNodeInventoryRequestBody = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryRequestBody, _super);
     function UpdateMultiNodeInventoryRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventories" }),
         __metadata("design:type", UpdateMultiNodeInventoryRequestBodyInventories)
     ], UpdateMultiNodeInventoryRequestBody.prototype, "inventories", void 0);
     return UpdateMultiNodeInventoryRequestBody;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryRequestBody };
-export var UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryRequestBody = UpdateMultiNodeInventoryRequestBody;
+var UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum;
 (function (UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum) {
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum["Application"] = "APPLICATION";
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum["System"] = "SYSTEM";
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum["Request"] = "REQUEST";
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum["Data"] = "DATA";
-})(UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum || (UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum = {}));
+})(UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum || (exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCategoryEnum = {}));
 var UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses, _super);
     function UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses.prototype, "type", void 0);
     return UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses };
-export var UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses = UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses;
+var UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum;
 (function (UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum) {
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum["Info"] = "INFO";
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum["Warn"] = "WARN";
     UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum["Error"] = "ERROR";
-})(UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum || (UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum = {}));
+})(UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum = exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum || (exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum = {}));
 // UpdateMultiNodeInventory200ApplicationJsonNodesErrors
 /**
  * Node Update Error description.
@@ -170,113 +173,113 @@ var UpdateMultiNodeInventory200ApplicationJsonNodesErrors = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=causes", elemType: UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=causes", elemType: UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses }),
         __metadata("design:type", Array)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "causes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorIdentifiers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorIdentifiers" }),
+        __metadata("design:type", Object)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "errorIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodesErrors.prototype, "severity", void 0);
     return UpdateMultiNodeInventory200ApplicationJsonNodesErrors;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventory200ApplicationJsonNodesErrors };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventory200ApplicationJsonNodesErrors = UpdateMultiNodeInventory200ApplicationJsonNodesErrors;
 var UpdateMultiNodeInventory200ApplicationJsonNodes = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventory200ApplicationJsonNodes, _super);
     function UpdateMultiNodeInventory200ApplicationJsonNodes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: UpdateMultiNodeInventory200ApplicationJsonNodesErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: UpdateMultiNodeInventory200ApplicationJsonNodesErrors }),
         __metadata("design:type", Array)
     ], UpdateMultiNodeInventory200ApplicationJsonNodes.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipNode" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodes.prototype, "shipNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJsonNodes.prototype, "status", void 0);
     return UpdateMultiNodeInventory200ApplicationJsonNodes;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventory200ApplicationJsonNodes };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventory200ApplicationJsonNodes = UpdateMultiNodeInventory200ApplicationJsonNodes;
 var UpdateMultiNodeInventory200ApplicationJson = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventory200ApplicationJson, _super);
     function UpdateMultiNodeInventory200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodes", elemType: UpdateMultiNodeInventory200ApplicationJsonNodes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodes", elemType: UpdateMultiNodeInventory200ApplicationJsonNodes }),
         __metadata("design:type", Array)
     ], UpdateMultiNodeInventory200ApplicationJson.prototype, "nodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sku" }),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventory200ApplicationJson.prototype, "sku", void 0);
     return UpdateMultiNodeInventory200ApplicationJson;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventory200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventory200ApplicationJson = UpdateMultiNodeInventory200ApplicationJson;
 var UpdateMultiNodeInventoryRequest = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryRequest, _super);
     function UpdateMultiNodeInventoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMultiNodeInventoryPathParams)
     ], UpdateMultiNodeInventoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMultiNodeInventoryHeaders)
     ], UpdateMultiNodeInventoryRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateMultiNodeInventoryRequestBody)
     ], UpdateMultiNodeInventoryRequest.prototype, "request", void 0);
     return UpdateMultiNodeInventoryRequest;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryRequest = UpdateMultiNodeInventoryRequest;
 var UpdateMultiNodeInventoryResponse = /** @class */ (function (_super) {
     __extends(UpdateMultiNodeInventoryResponse, _super);
     function UpdateMultiNodeInventoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateMultiNodeInventoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateMultiNodeInventoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMultiNodeInventory200ApplicationJson)
-    ], UpdateMultiNodeInventoryResponse.prototype, "updateMultiNodeInventory200ApplicationJsonObject", void 0);
+    ], UpdateMultiNodeInventoryResponse.prototype, "updateMultiNodeInventory200ApplicationJSONObject", void 0);
     return UpdateMultiNodeInventoryResponse;
-}(SpeakeasyBase));
-export { UpdateMultiNodeInventoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMultiNodeInventoryResponse = UpdateMultiNodeInventoryResponse;

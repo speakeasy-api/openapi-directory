@@ -15,6 +15,6 @@ export declare class GetEmployerSummaryReportOuputRequest extends SpeakeasyBase 
 export declare class GetEmployerSummaryReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getEmployerSummaryReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getEmployerSummaryReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

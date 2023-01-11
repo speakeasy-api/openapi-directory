@@ -28,7 +28,6 @@ export * from "./describeproblemobservationsrequest";
 export * from "./describeproblemobservationsresponse";
 export * from "./describeproblemrequest";
 export * from "./describeproblemresponse";
-export * from "./feedbackvalueenum";
 export * from "./listapplicationsrequest";
 export * from "./listapplicationsresponse";
 export * from "./listcomponentsrequest";

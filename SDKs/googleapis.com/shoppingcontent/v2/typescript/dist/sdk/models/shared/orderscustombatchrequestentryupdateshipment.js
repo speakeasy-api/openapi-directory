@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrdersCustomBatchRequestEntryUpdateShipment = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrdersCustomBatchRequestEntryUpdateShipment = /** @class */ (function (_super) {
     __extends(OrdersCustomBatchRequestEntryUpdateShipment, _super);
     function OrdersCustomBatchRequestEntryUpdateShipment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrier" }),
         __metadata("design:type", String)
     ], OrdersCustomBatchRequestEntryUpdateShipment.prototype, "carrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryDate" }),
         __metadata("design:type", String)
     ], OrdersCustomBatchRequestEntryUpdateShipment.prototype, "deliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentId" }),
         __metadata("design:type", String)
     ], OrdersCustomBatchRequestEntryUpdateShipment.prototype, "shipmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OrdersCustomBatchRequestEntryUpdateShipment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingId" }),
         __metadata("design:type", String)
     ], OrdersCustomBatchRequestEntryUpdateShipment.prototype, "trackingId", void 0);
     return OrdersCustomBatchRequestEntryUpdateShipment;
-}(SpeakeasyBase));
-export { OrdersCustomBatchRequestEntryUpdateShipment };
+}(utils_1.SpeakeasyBase));
+exports.OrdersCustomBatchRequestEntryUpdateShipment = OrdersCustomBatchRequestEntryUpdateShipment;

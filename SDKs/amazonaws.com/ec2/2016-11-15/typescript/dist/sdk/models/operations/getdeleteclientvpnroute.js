@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteClientVpnRouteActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteClientVpnRouteResponse = exports.GetDeleteClientVpnRouteRequest = exports.GetDeleteClientVpnRouteHeaders = exports.GetDeleteClientVpnRouteQueryParams = exports.GetDeleteClientVpnRouteVersionEnum = exports.GetDeleteClientVpnRouteActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteClientVpnRouteActionEnum;
 (function (GetDeleteClientVpnRouteActionEnum) {
     GetDeleteClientVpnRouteActionEnum["DeleteClientVpnRoute"] = "DeleteClientVpnRoute";
-})(GetDeleteClientVpnRouteActionEnum || (GetDeleteClientVpnRouteActionEnum = {}));
-export var GetDeleteClientVpnRouteVersionEnum;
+})(GetDeleteClientVpnRouteActionEnum = exports.GetDeleteClientVpnRouteActionEnum || (exports.GetDeleteClientVpnRouteActionEnum = {}));
+var GetDeleteClientVpnRouteVersionEnum;
 (function (GetDeleteClientVpnRouteVersionEnum) {
     GetDeleteClientVpnRouteVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteClientVpnRouteVersionEnum || (GetDeleteClientVpnRouteVersionEnum = {}));
+})(GetDeleteClientVpnRouteVersionEnum = exports.GetDeleteClientVpnRouteVersionEnum || (exports.GetDeleteClientVpnRouteVersionEnum = {}));
 var GetDeleteClientVpnRouteQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteClientVpnRouteQueryParams, _super);
     function GetDeleteClientVpnRouteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "clientVpnEndpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DestinationCidrBlock" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "destinationCidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetVpcSubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TargetVpcSubnetId" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "targetVpcSubnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteQueryParams.prototype, "version", void 0);
     return GetDeleteClientVpnRouteQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteClientVpnRouteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClientVpnRouteQueryParams = GetDeleteClientVpnRouteQueryParams;
 var GetDeleteClientVpnRouteHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteClientVpnRouteHeaders, _super);
     function GetDeleteClientVpnRouteHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteClientVpnRouteHeaders;
-}(SpeakeasyBase));
-export { GetDeleteClientVpnRouteHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClientVpnRouteHeaders = GetDeleteClientVpnRouteHeaders;
 var GetDeleteClientVpnRouteRequest = /** @class */ (function (_super) {
     __extends(GetDeleteClientVpnRouteRequest, _super);
     function GetDeleteClientVpnRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteClientVpnRouteQueryParams)
     ], GetDeleteClientVpnRouteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteClientVpnRouteHeaders)
     ], GetDeleteClientVpnRouteRequest.prototype, "headers", void 0);
     return GetDeleteClientVpnRouteRequest;
-}(SpeakeasyBase));
-export { GetDeleteClientVpnRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClientVpnRouteRequest = GetDeleteClientVpnRouteRequest;
 var GetDeleteClientVpnRouteResponse = /** @class */ (function (_super) {
     __extends(GetDeleteClientVpnRouteResponse, _super);
     function GetDeleteClientVpnRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteClientVpnRouteResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteClientVpnRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteClientVpnRouteResponse.prototype, "statusCode", void 0);
     return GetDeleteClientVpnRouteResponse;
-}(SpeakeasyBase));
-export { GetDeleteClientVpnRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClientVpnRouteResponse = GetDeleteClientVpnRouteResponse;

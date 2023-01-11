@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackendConnectionErrors } from "./backendconnectionerrors";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TelemetryRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var backendconnectionerrors_1 = require("./backendconnectionerrors");
 // TelemetryRecord
 /**
  * <p/>
@@ -34,29 +37,29 @@ var TelemetryRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackendConnectionErrors" }),
-        __metadata("design:type", BackendConnectionErrors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackendConnectionErrors" }),
+        __metadata("design:type", backendconnectionerrors_1.BackendConnectionErrors)
     ], TelemetryRecord.prototype, "backendConnectionErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentsReceivedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentsReceivedCount" }),
         __metadata("design:type", Number)
     ], TelemetryRecord.prototype, "segmentsReceivedCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentsRejectedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentsRejectedCount" }),
         __metadata("design:type", Number)
     ], TelemetryRecord.prototype, "segmentsRejectedCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentsSentCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentsSentCount" }),
         __metadata("design:type", Number)
     ], TelemetryRecord.prototype, "segmentsSentCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentsSpilloverCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentsSpilloverCount" }),
         __metadata("design:type", Number)
     ], TelemetryRecord.prototype, "segmentsSpilloverCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], TelemetryRecord.prototype, "timestamp", void 0);
     return TelemetryRecord;
-}(SpeakeasyBase));
-export { TelemetryRecord };
+}(utils_1.SpeakeasyBase));
+exports.TelemetryRecord = TelemetryRecord;

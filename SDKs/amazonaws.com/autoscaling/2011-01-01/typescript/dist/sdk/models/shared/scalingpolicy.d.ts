@@ -16,7 +16,7 @@ export declare class ScalingPolicy extends SpeakeasyBase {
     metricAggregationType?: string;
     minAdjustmentMagnitude?: number;
     minAdjustmentStep?: number;
-    policyArn?: string;
+    policyARN?: string;
     policyName?: string;
     policyType?: string;
     predictiveScalingConfiguration?: PredictiveScalingConfiguration;

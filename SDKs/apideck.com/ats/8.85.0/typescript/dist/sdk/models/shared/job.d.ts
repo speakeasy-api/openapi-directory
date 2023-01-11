@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CurrencyEnum } from "./currencyenum";
 import { Address } from "./address";
 import { Department } from "./department";
-import { CurrencyEnum } from "./currencyenum";
 import { JobStatusEnum } from "./jobstatusenum";
 /**
  * Details of the branch for which the job is created.

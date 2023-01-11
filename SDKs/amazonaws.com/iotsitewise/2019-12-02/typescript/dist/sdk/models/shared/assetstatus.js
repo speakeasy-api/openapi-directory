@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetails } from "./errordetails";
-import { AssetStateEnum } from "./assetstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetails_1 = require("./errordetails");
+var assetstateenum_1 = require("./assetstateenum");
 // AssetStatus
 /**
  * Contains information about the current status of an asset. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-and-model-states.html">Asset and model states</a> in the <i>IoT SiteWise User Guide</i>.
@@ -35,13 +38,13 @@ var AssetStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", ErrorDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", errordetails_1.ErrorDetails)
     ], AssetStatus.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], AssetStatus.prototype, "state", void 0);
     return AssetStatus;
-}(SpeakeasyBase));
-export { AssetStatus };
+}(utils_1.SpeakeasyBase));
+exports.AssetStatus = AssetStatus;

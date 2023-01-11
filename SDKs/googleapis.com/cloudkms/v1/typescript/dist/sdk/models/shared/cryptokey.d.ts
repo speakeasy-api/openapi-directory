@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CryptoKeyVersionInput } from "./cryptokeyversion";
-import { CryptoKeyVersionTemplate } from "./cryptokeyversiontemplate";
 import { CryptoKeyVersion } from "./cryptokeyversion";
+import { CryptoKeyVersionTemplate } from "./cryptokeyversiontemplate";
+import { CryptoKeyVersionInput } from "./cryptokeyversion";
 export declare enum CryptoKeyPurposeEnum {
     CryptoKeyPurposeUnspecified = "CRYPTO_KEY_PURPOSE_UNSPECIFIED",
     EncryptDecrypt = "ENCRYPT_DECRYPT",
@@ -12,13 +12,15 @@ export declare enum CryptoKeyPurposeEnum {
 /**
  * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey is made up of zero or more versions, which represent the actual key material used in cryptographic operations.
 **/
-export declare class CryptoKeyInput extends SpeakeasyBase {
+export declare class CryptoKey extends SpeakeasyBase {
+    createTime?: string;
     cryptoKeyBackend?: string;
     destroyScheduledDuration?: string;
     importOnly?: boolean;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
+    name?: string;
     nextRotationTime?: string;
-    primary?: CryptoKeyVersionInput;
+    primary?: CryptoKeyVersion;
     purpose?: CryptoKeyPurposeEnum;
     rotationPeriod?: string;
     versionTemplate?: CryptoKeyVersionTemplate;
@@ -26,15 +28,13 @@ export declare class CryptoKeyInput extends SpeakeasyBase {
 /**
  * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey is made up of zero or more versions, which represent the actual key material used in cryptographic operations.
 **/
-export declare class CryptoKey extends SpeakeasyBase {
-    createTime?: string;
+export declare class CryptoKeyInput extends SpeakeasyBase {
     cryptoKeyBackend?: string;
     destroyScheduledDuration?: string;
     importOnly?: boolean;
-    labels?: Map<string, string>;
-    name?: string;
+    labels?: Record<string, string>;
     nextRotationTime?: string;
-    primary?: CryptoKeyVersion;
+    primary?: CryptoKeyVersionInput;
     purpose?: CryptoKeyPurposeEnum;
     rotationPeriod?: string;
     versionTemplate?: CryptoKeyVersionTemplate;

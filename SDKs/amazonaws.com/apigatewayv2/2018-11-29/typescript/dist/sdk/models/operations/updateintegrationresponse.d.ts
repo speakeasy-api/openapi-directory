@@ -21,8 +21,8 @@ export declare enum UpdateIntegrationResponseRequestBodyContentHandlingStrategyE
 export declare class UpdateIntegrationResponseRequestBody extends SpeakeasyBase {
     contentHandlingStrategy?: UpdateIntegrationResponseRequestBodyContentHandlingStrategyEnum;
     integrationResponseKey?: string;
-    responseParameters?: Map<string, string>;
-    responseTemplates?: Map<string, string>;
+    responseParameters?: Record<string, string>;
+    responseTemplates?: Record<string, string>;
     templateSelectionExpression?: string;
 }
 export declare class UpdateIntegrationResponseRequest extends SpeakeasyBase {

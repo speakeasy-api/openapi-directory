@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppsAppIdNamespacesResponse = exports.GetAppsAppIdNamespacesRequest = exports.GetAppsAppIdNamespacesSecurity = exports.GetAppsAppIdNamespacesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetAppsAppIdNamespacesPathParams = /** @class */ (function (_super) {
     __extends(GetAppsAppIdNamespacesPathParams, _super);
     function GetAppsAppIdNamespacesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_id" }),
         __metadata("design:type", String)
     ], GetAppsAppIdNamespacesPathParams.prototype, "appId", void 0);
     return GetAppsAppIdNamespacesPathParams;
-}(SpeakeasyBase));
-export { GetAppsAppIdNamespacesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdNamespacesPathParams = GetAppsAppIdNamespacesPathParams;
 var GetAppsAppIdNamespacesSecurity = /** @class */ (function (_super) {
     __extends(GetAppsAppIdNamespacesSecurity, _super);
     function GetAppsAppIdNamespacesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", shared.SchemeBearerAuth)
     ], GetAppsAppIdNamespacesSecurity.prototype, "bearerAuth", void 0);
     return GetAppsAppIdNamespacesSecurity;
-}(SpeakeasyBase));
-export { GetAppsAppIdNamespacesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdNamespacesSecurity = GetAppsAppIdNamespacesSecurity;
 var GetAppsAppIdNamespacesRequest = /** @class */ (function (_super) {
     __extends(GetAppsAppIdNamespacesRequest, _super);
     function GetAppsAppIdNamespacesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdNamespacesPathParams)
     ], GetAppsAppIdNamespacesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdNamespacesSecurity)
     ], GetAppsAppIdNamespacesRequest.prototype, "security", void 0);
     return GetAppsAppIdNamespacesRequest;
-}(SpeakeasyBase));
-export { GetAppsAppIdNamespacesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdNamespacesRequest = GetAppsAppIdNamespacesRequest;
 var GetAppsAppIdNamespacesResponse = /** @class */ (function (_super) {
     __extends(GetAppsAppIdNamespacesResponse, _super);
     function GetAppsAppIdNamespacesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAppsAppIdNamespacesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAppsAppIdNamespacesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", shared.Error)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ErrorT)
     ], GetAppsAppIdNamespacesResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.NamespaceResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.NamespaceResponse }),
         __metadata("design:type", Array)
     ], GetAppsAppIdNamespacesResponse.prototype, "namespaceResponses", void 0);
     return GetAppsAppIdNamespacesResponse;
-}(SpeakeasyBase));
-export { GetAppsAppIdNamespacesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdNamespacesResponse = GetAppsAppIdNamespacesResponse;

@@ -5,10 +5,6 @@ import { TextAnswers } from "./textanswers";
 
 
 
-// Answer
-/** 
- * The submitted answer for a question.
-**/
 export class Answer extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fileUploadAnswers" })
   fileUploadAnswers?: FileUploadAnswers;

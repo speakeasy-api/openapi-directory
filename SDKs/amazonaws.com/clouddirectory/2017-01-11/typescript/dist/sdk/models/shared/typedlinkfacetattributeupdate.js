@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UpdateActionTypeEnum } from "./updateactiontypeenum";
-import { TypedLinkAttributeDefinition } from "./typedlinkattributedefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedLinkFacetAttributeUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var updateactiontypeenum_1 = require("./updateactiontypeenum");
+var typedlinkattributedefinition_1 = require("./typedlinkattributedefinition");
 // TypedLinkFacetAttributeUpdate
 /**
  * A typed link facet attribute update.
@@ -35,13 +38,13 @@ var TypedLinkFacetAttributeUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
         __metadata("design:type", String)
     ], TypedLinkFacetAttributeUpdate.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attribute" }),
-        __metadata("design:type", TypedLinkAttributeDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attribute" }),
+        __metadata("design:type", typedlinkattributedefinition_1.TypedLinkAttributeDefinition)
     ], TypedLinkFacetAttributeUpdate.prototype, "attribute", void 0);
     return TypedLinkFacetAttributeUpdate;
-}(SpeakeasyBase));
-export { TypedLinkFacetAttributeUpdate };
+}(utils_1.SpeakeasyBase));
+exports.TypedLinkFacetAttributeUpdate = TypedLinkFacetAttributeUpdate;

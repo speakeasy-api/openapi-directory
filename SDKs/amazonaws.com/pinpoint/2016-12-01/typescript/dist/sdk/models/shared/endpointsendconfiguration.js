@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// EndpointSendConfiguration
-/**
- * Specifies the content, including message variables and attributes, to use in a message that's sent directly to an endpoint.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointSendConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 var EndpointSendConfiguration = /** @class */ (function (_super) {
     __extends(EndpointSendConfiguration, _super);
     function EndpointSendConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BodyOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BodyOverride" }),
         __metadata("design:type", String)
     ], EndpointSendConfiguration.prototype, "bodyOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Context" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Context" }),
+        __metadata("design:type", Object)
     ], EndpointSendConfiguration.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RawContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RawContent" }),
         __metadata("design:type", String)
     ], EndpointSendConfiguration.prototype, "rawContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Substitutions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Substitutions" }),
+        __metadata("design:type", Object)
     ], EndpointSendConfiguration.prototype, "substitutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TitleOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TitleOverride" }),
         __metadata("design:type", String)
     ], EndpointSendConfiguration.prototype, "titleOverride", void 0);
     return EndpointSendConfiguration;
-}(SpeakeasyBase));
-export { EndpointSendConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.EndpointSendConfiguration = EndpointSendConfiguration;

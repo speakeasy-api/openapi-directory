@@ -3,15 +3,9 @@ import * as shared from "../shared";
 export declare class UsersGetContextForUserPathParams extends SpeakeasyBase {
     username: string;
 }
-export declare enum UsersGetContextForUserSubjectTypeEnum {
-    Organization = "organization",
-    Repository = "repository",
-    Issue = "issue",
-    PullRequest = "pull_request"
-}
 export declare class UsersGetContextForUserQueryParams extends SpeakeasyBase {
     subjectId?: string;
-    subjectType?: UsersGetContextForUserSubjectTypeEnum;
+    subjectType?: shared.UsernameEnum;
 }
 export declare class UsersGetContextForUserRequest extends SpeakeasyBase {
     pathParams: UsersGetContextForUserPathParams;

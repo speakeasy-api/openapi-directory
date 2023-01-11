@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprintsPartialUpdateResponse = exports.PreprintsPartialUpdateRequest = exports.PreprintsPartialUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreprintsPartialUpdatePathParams = /** @class */ (function (_super) {
     __extends(PreprintsPartialUpdatePathParams, _super);
     function PreprintsPartialUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=preprint_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=preprint_id" }),
         __metadata("design:type", String)
     ], PreprintsPartialUpdatePathParams.prototype, "preprintId", void 0);
     return PreprintsPartialUpdatePathParams;
-}(SpeakeasyBase));
-export { PreprintsPartialUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsPartialUpdatePathParams = PreprintsPartialUpdatePathParams;
 var PreprintsPartialUpdateRequest = /** @class */ (function (_super) {
     __extends(PreprintsPartialUpdateRequest, _super);
     function PreprintsPartialUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PreprintsPartialUpdatePathParams)
     ], PreprintsPartialUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PreprintsPartialUpdateRequest.prototype, "request", void 0);
     return PreprintsPartialUpdateRequest;
-}(SpeakeasyBase));
-export { PreprintsPartialUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsPartialUpdateRequest = PreprintsPartialUpdateRequest;
 var PreprintsPartialUpdateResponse = /** @class */ (function (_super) {
     __extends(PreprintsPartialUpdateResponse, _super);
     function PreprintsPartialUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PreprintsPartialUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PreprintsPartialUpdateResponse.prototype, "statusCode", void 0);
     return PreprintsPartialUpdateResponse;
-}(SpeakeasyBase));
-export { PreprintsPartialUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsPartialUpdateResponse = PreprintsPartialUpdateResponse;

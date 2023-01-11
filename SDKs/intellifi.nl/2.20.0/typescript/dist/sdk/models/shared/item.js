@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,136 +23,138 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ItemProtocolEnum } from "./itemprotocolenum";
-import { TechnologyEnum } from "./technologyenum";
-import { ItemTypeEnum } from "./itemtypeenum";
-import { GeoCoordsReadOnly } from "./geocoordsreadonly";
-var ItemInput = /** @class */ (function (_super) {
-    __extends(ItemInput, _super);
-    function ItemInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=code_hex" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "codeHex", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_request" }),
-        __metadata("design:type", Map)
-    ], ItemInput.prototype, "configRequest", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
-        __metadata("design:type", Object)
-    ], ItemInput.prototype, "custom", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "label", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_request" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "locationRequest", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
-    ], ItemInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "protocol", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=technology" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "technology", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], ItemInput.prototype, "type", void 0);
-    return ItemInput;
-}(SpeakeasyBase));
-export { ItemInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemInput = exports.Item = void 0;
+var utils_1 = require("../../../internal/utils");
+var geocoordsreadonly_1 = require("./geocoordsreadonly");
+var itemprotocolenum_1 = require("./itemprotocolenum");
+var technologyenum_1 = require("./technologyenum");
+var itemtypeenum_1 = require("./itemtypeenum");
 var Item = /** @class */ (function (_super) {
     __extends(Item, _super);
     function Item() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code_hex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code_hex" }),
         __metadata("design:type", String)
     ], Item.prototype, "codeHex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_request" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_request" }),
+        __metadata("design:type", Object)
     ], Item.prototype, "configRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], Item.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo_coords" }),
-        __metadata("design:type", GeoCoordsReadOnly)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo_coords" }),
+        __metadata("design:type", geocoordsreadonly_1.GeoCoordsReadOnly)
     ], Item.prototype, "geoCoords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Item.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_present" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_present" }),
         __metadata("design:type", Boolean)
     ], Item.prototype, "isPresent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], Item.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_request" }),
         __metadata("design:type", String)
     ], Item.prototype, "locationRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], Item.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=move_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=move_count" }),
         __metadata("design:type", Number)
     ], Item.prototype, "moveCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], Item.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sets" }),
         __metadata("design:type", Array)
     ], Item.prototype, "sets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=technology" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technology" }),
         __metadata("design:type", String)
     ], Item.prototype, "technology", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], Item.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_last_present" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_last_present" }),
         __metadata("design:type", String)
     ], Item.prototype, "timeLastPresent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_moved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_moved" }),
         __metadata("design:type", String)
     ], Item.prototype, "timeMoved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], Item.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Item.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Item.prototype, "url", void 0);
     return Item;
-}(SpeakeasyBase));
-export { Item };
+}(utils_1.SpeakeasyBase));
+exports.Item = Item;
+var ItemInput = /** @class */ (function (_super) {
+    __extends(ItemInput, _super);
+    function ItemInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code_hex" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "codeHex", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_request" }),
+        __metadata("design:type", Object)
+    ], ItemInput.prototype, "configRequest", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
+        __metadata("design:type", Object)
+    ], ItemInput.prototype, "custom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "label", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_request" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "locationRequest", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], ItemInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "protocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technology" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "technology", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], ItemInput.prototype, "type", void 0);
+    return ItemInput;
+}(utils_1.SpeakeasyBase));
+exports.ItemInput = ItemInput;

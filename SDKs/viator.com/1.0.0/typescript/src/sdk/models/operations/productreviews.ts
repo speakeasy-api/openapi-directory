@@ -50,10 +50,10 @@ export class ProductReviews200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -83,5 +83,5 @@ export class ProductReviewsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  productReviews200ApplicationJsonObject?: ProductReviews200ApplicationJson;
+  productReviews200ApplicationJSONObject?: ProductReviews200ApplicationJson;
 }

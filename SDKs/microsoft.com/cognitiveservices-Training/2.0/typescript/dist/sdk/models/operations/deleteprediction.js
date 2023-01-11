@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePredictionResponse = exports.DeletePredictionRequest = exports.DeletePredictionHeaders = exports.DeletePredictionQueryParams = exports.DeletePredictionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePredictionPathParams = /** @class */ (function (_super) {
     __extends(DeletePredictionPathParams, _super);
     function DeletePredictionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], DeletePredictionPathParams.prototype, "projectId", void 0);
     return DeletePredictionPathParams;
-}(SpeakeasyBase));
-export { DeletePredictionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePredictionPathParams = DeletePredictionPathParams;
 var DeletePredictionQueryParams = /** @class */ (function (_super) {
     __extends(DeletePredictionQueryParams, _super);
     function DeletePredictionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=ids" }),
         __metadata("design:type", Array)
     ], DeletePredictionQueryParams.prototype, "ids", void 0);
     return DeletePredictionQueryParams;
-}(SpeakeasyBase));
-export { DeletePredictionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePredictionQueryParams = DeletePredictionQueryParams;
 var DeletePredictionHeaders = /** @class */ (function (_super) {
     __extends(DeletePredictionHeaders, _super);
     function DeletePredictionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], DeletePredictionHeaders.prototype, "trainingKey", void 0);
     return DeletePredictionHeaders;
-}(SpeakeasyBase));
-export { DeletePredictionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeletePredictionHeaders = DeletePredictionHeaders;
 var DeletePredictionRequest = /** @class */ (function (_super) {
     __extends(DeletePredictionRequest, _super);
     function DeletePredictionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePredictionPathParams)
     ], DeletePredictionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePredictionQueryParams)
     ], DeletePredictionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePredictionHeaders)
     ], DeletePredictionRequest.prototype, "headers", void 0);
     return DeletePredictionRequest;
-}(SpeakeasyBase));
-export { DeletePredictionRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePredictionRequest = DeletePredictionRequest;
 var DeletePredictionResponse = /** @class */ (function (_super) {
     __extends(DeletePredictionResponse, _super);
     function DeletePredictionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePredictionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePredictionResponse.prototype, "statusCode", void 0);
     return DeletePredictionResponse;
-}(SpeakeasyBase));
-export { DeletePredictionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePredictionResponse = DeletePredictionResponse;

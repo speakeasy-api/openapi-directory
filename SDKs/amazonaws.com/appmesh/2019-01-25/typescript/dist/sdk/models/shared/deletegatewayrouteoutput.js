@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GatewayRouteData } from "./gatewayroutedata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteGatewayRouteOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var gatewayroutedata_1 = require("./gatewayroutedata");
 var DeleteGatewayRouteOutput = /** @class */ (function (_super) {
     __extends(DeleteGatewayRouteOutput, _super);
     function DeleteGatewayRouteOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayRoute" }),
-        __metadata("design:type", GatewayRouteData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayRoute" }),
+        __metadata("design:type", gatewayroutedata_1.GatewayRouteData)
     ], DeleteGatewayRouteOutput.prototype, "gatewayRoute", void 0);
     return DeleteGatewayRouteOutput;
-}(SpeakeasyBase));
-export { DeleteGatewayRouteOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGatewayRouteOutput = DeleteGatewayRouteOutput;

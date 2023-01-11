@@ -57,7 +57,7 @@ export declare class UpdateWorkspaceRequest extends SpeakeasyBase {
 export declare class UpdateWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateWorkspace200ApplicationJsonObject?: UpdateWorkspace200ApplicationJson;
-    updateWorkspace403ApplicationJsonObject?: UpdateWorkspace403ApplicationJson;
-    updateWorkspace404ApplicationJsonObject?: UpdateWorkspace404ApplicationJson;
+    updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJson;
+    updateWorkspace403ApplicationJSONObject?: UpdateWorkspace403ApplicationJson;
+    updateWorkspace404ApplicationJSONObject?: UpdateWorkspace404ApplicationJson;
 }

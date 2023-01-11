@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchFacetsResponse } from "./searchfacetsresponse";
-import { RelatedSearch } from "./relatedsearch";
-import { EditorialVideoSearchItem } from "./editorialvideosearchitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorialVideoSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchfacetsresponse_1 = require("./searchfacetsresponse");
+var relatedsearch_1 = require("./relatedsearch");
+var editorialvideosearchitem_1 = require("./editorialvideosearchitem");
 var EditorialVideoSearchResults = /** @class */ (function (_super) {
     __extends(EditorialVideoSearchResults, _super);
     function EditorialVideoSearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facets" }),
-        __metadata("design:type", SearchFacetsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facets" }),
+        __metadata("design:type", searchfacetsresponse_1.SearchFacetsResponse)
     ], EditorialVideoSearchResults.prototype, "facets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_searches", elemType: RelatedSearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_searches", elemType: relatedsearch_1.RelatedSearch }),
         __metadata("design:type", Array)
     ], EditorialVideoSearchResults.prototype, "relatedSearches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], EditorialVideoSearchResults.prototype, "resultCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos", elemType: EditorialVideoSearchItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos", elemType: editorialvideosearchitem_1.EditorialVideoSearchItem }),
         __metadata("design:type", Array)
     ], EditorialVideoSearchResults.prototype, "videos", void 0);
     return EditorialVideoSearchResults;
-}(SpeakeasyBase));
-export { EditorialVideoSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.EditorialVideoSearchResults = EditorialVideoSearchResults;

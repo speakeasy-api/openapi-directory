@@ -10,7 +10,7 @@ export declare class CreateMemberRequestBody extends SpeakeasyBase {
     action?: shared.MemberActionEnum;
     channel: shared.Channel;
     knockingId?: string;
-    media?: Map<string, any>;
+    media?: Record<string, any>;
     memberId?: string;
     memberIdInviting?: string;
     userId: string;
@@ -31,5 +31,5 @@ export declare class CreateMemberRequest extends SpeakeasyBase {
 export declare class CreateMemberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createMember201ApplicationJsonObject?: CreateMember201ApplicationJson;
+    createMember201ApplicationJSONObject?: CreateMember201ApplicationJson;
 }

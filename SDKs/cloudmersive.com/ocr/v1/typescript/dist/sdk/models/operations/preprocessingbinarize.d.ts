@@ -16,9 +16,9 @@ export declare class PreprocessingBinarizeRequest extends SpeakeasyBase {
 }
 export declare class PreprocessingBinarizeResponse extends SpeakeasyBase {
     contentType: string;
-    preprocessingBinarize200ApplicationJsonByteString?: string;
-    preprocessingBinarize200ApplicationXmlByteString?: string;
-    preprocessingBinarize200TextJsonByteString?: string;
-    preprocessingBinarize200TextXmlByteString?: string;
+    preprocessingBinarize200ApplicationJSONByteString?: string;
+    preprocessingBinarize200ApplicationXMLByteString?: string;
+    preprocessingBinarize200TextJSONByteString?: string;
+    preprocessingBinarize200TextXMLByteString?: string;
     statusCode: number;
 }

@@ -4,14 +4,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetApiMappingResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiId" })
-  apiId?: string;
+  apiId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiMappingId" })
-  apiMappingId?: string;
+  apiMappingId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiMappingKey" })
-  apiMappingKey?: string;
+  apiMappingKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Stage" })
-  stage?: string;
+  stage?: Record<string, any>;
 }

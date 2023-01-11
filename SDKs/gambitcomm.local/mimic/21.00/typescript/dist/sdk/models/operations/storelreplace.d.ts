@@ -10,5 +10,5 @@ export declare class StoreLreplaceRequest extends SpeakeasyBase {
 export declare class StoreLreplaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    storeLreplace200ApplicationJsonString?: string;
+    storeLreplace200ApplicationJSONString?: string;
 }

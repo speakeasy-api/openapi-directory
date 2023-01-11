@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveReference } from "./drivereference";
-import { DriveItemReference } from "./driveitemreference";
-import { TeamDriveReference } from "./teamdrivereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetReference = void 0;
+var utils_1 = require("../../../internal/utils");
+var drivereference_1 = require("./drivereference");
+var driveitemreference_1 = require("./driveitemreference");
+var teamdrivereference_1 = require("./teamdrivereference");
 // TargetReference
 /**
  * A lightweight reference to the target of activity.
@@ -36,17 +39,17 @@ var TargetReference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drive" }),
-        __metadata("design:type", DriveReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drive" }),
+        __metadata("design:type", drivereference_1.DriveReference)
     ], TargetReference.prototype, "drive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveItem" }),
-        __metadata("design:type", DriveItemReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveItem" }),
+        __metadata("design:type", driveitemreference_1.DriveItemReference)
     ], TargetReference.prototype, "driveItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDrive" }),
-        __metadata("design:type", TeamDriveReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDrive" }),
+        __metadata("design:type", teamdrivereference_1.TeamDriveReference)
     ], TargetReference.prototype, "teamDrive", void 0);
     return TargetReference;
-}(SpeakeasyBase));
-export { TargetReference };
+}(utils_1.SpeakeasyBase));
+exports.TargetReference = TargetReference;

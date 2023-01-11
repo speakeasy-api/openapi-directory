@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValidStorageOptions } from "./validstorageoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidDbInstanceModificationsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var validstorageoptionslist_1 = require("./validstorageoptionslist");
 // ValidDbInstanceModificationsMessage
 /**
  * Information about valid modifications that you can make to your DB instance. Contains the result of a successful call to the <a>DescribeValidDBInstanceModifications</a> action. You can use this information when you call <a>ModifyDBInstance</a>.
@@ -34,9 +37,9 @@ var ValidDbInstanceModificationsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ValidStorageOptions }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: validstorageoptionslist_1.ValidStorageOptionsList }),
         __metadata("design:type", Array)
     ], ValidDbInstanceModificationsMessage.prototype, "storage", void 0);
     return ValidDbInstanceModificationsMessage;
-}(SpeakeasyBase));
-export { ValidDbInstanceModificationsMessage };
+}(utils_1.SpeakeasyBase));
+exports.ValidDbInstanceModificationsMessage = ValidDbInstanceModificationsMessage;

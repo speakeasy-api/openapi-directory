@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-import { EntityTypeEnum } from "./entitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecurityTag = void 0;
+var utils_1 = require("../../../internal/utils");
+var reference_1 = require("./reference");
+var entitytypeenum_1 = require("./entitytypeenum");
 var SecurityTag = /** @class */ (function (_super) {
     __extends(SecurityTag, _super);
     function SecurityTag() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SecurityTag.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct_security_groups", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct_security_groups", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], SecurityTag.prototype, "directSecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], SecurityTag.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], SecurityTag.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SecurityTag.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsx_manager" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsx_manager" }),
+        __metadata("design:type", reference_1.Reference)
     ], SecurityTag.prototype, "nsxManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=security_groups", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=security_groups", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], SecurityTag.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendor_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendor_id" }),
         __metadata("design:type", String)
     ], SecurityTag.prototype, "vendorId", void 0);
     return SecurityTag;
-}(SpeakeasyBase));
-export { SecurityTag };
+}(utils_1.SpeakeasyBase));
+exports.SecurityTag = SecurityTag;

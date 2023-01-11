@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudassetAssetsListRequest, CloudassetAssetsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,33 +30,35 @@ const req: CloudassetAssetsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "qui",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "rerum",
-    alt: "proto",
+    accessToken: "culpa",
+    alt: "media",
     assetTypes: [
-      "nesciunt",
+      "dolor",
+      "expedita",
+      "voluptas",
     ],
-    callback: "cumque",
-    contentType: "IAM_POLICY",
-    fields: "quasi",
-    key: "corrupti",
-    oauthToken: "sed",
-    pageSize: 6483753444866358335,
-    pageToken: "molestiae",
-    prettyPrint: true,
-    quotaUser: "provident",
-    readTime: "et",
-    uploadType: "autem",
-    uploadProtocol: "at",
+    callback: "fugit",
+    contentType: "ORG_POLICY",
+    fields: "nihil",
+    key: "rerum",
+    oauthToken: "dicta",
+    pageSize: 2518412263346885298,
+    pageToken: "voluptatum",
+    prettyPrint: false,
+    quotaUser: "ut",
+    readTime: "dolorem",
+    uploadType: "et",
+    uploadProtocol: "voluptate",
   },
 };
 

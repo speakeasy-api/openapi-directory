@@ -173,5 +173,5 @@ export class DcimFrontPortsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimFrontPortsList200ApplicationJsonObject?: DcimFrontPortsList200ApplicationJson;
+  dcimFrontPortsList200ApplicationJSONObject?: DcimFrontPortsList200ApplicationJson;
 }

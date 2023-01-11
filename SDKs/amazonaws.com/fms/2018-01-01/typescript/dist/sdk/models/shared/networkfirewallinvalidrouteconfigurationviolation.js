@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
-import { ExpectedRoute } from "./expectedroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkFirewallInvalidRouteConfigurationViolation = void 0;
+var utils_1 = require("../../../internal/utils");
+var route_1 = require("./route");
+var expectedroute_1 = require("./expectedroute");
 // NetworkFirewallInvalidRouteConfigurationViolation
 /**
  * Violation detail for the improperly configured subnet route. It's possible there is a missing route table route, or a configuration that causes traffic to cross an Availability Zone boundary.
@@ -35,69 +38,69 @@ var NetworkFirewallInvalidRouteConfigurationViolation = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActualFirewallEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActualFirewallEndpoint" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "actualFirewallEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActualFirewallSubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActualFirewallSubnetId" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "actualFirewallSubnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActualFirewallSubnetRoutes", elemType: Route }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActualFirewallSubnetRoutes", elemType: route_1.Route }),
         __metadata("design:type", Array)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "actualFirewallSubnetRoutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActualInternetGatewayRoutes", elemType: Route }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActualInternetGatewayRoutes", elemType: route_1.Route }),
         __metadata("design:type", Array)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "actualInternetGatewayRoutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AffectedSubnets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AffectedSubnets" }),
         __metadata("design:type", Array)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "affectedSubnets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentFirewallSubnetRouteTable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentFirewallSubnetRouteTable" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "currentFirewallSubnetRouteTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentInternetGatewayRouteTable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentInternetGatewayRouteTable" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "currentInternetGatewayRouteTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpectedFirewallEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpectedFirewallEndpoint" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "expectedFirewallEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpectedFirewallSubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpectedFirewallSubnetId" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "expectedFirewallSubnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpectedFirewallSubnetRoutes", elemType: ExpectedRoute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpectedFirewallSubnetRoutes", elemType: expectedroute_1.ExpectedRoute }),
         __metadata("design:type", Array)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "expectedFirewallSubnetRoutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpectedInternetGatewayRoutes", elemType: ExpectedRoute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpectedInternetGatewayRoutes", elemType: expectedroute_1.ExpectedRoute }),
         __metadata("design:type", Array)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "expectedInternetGatewayRoutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InternetGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InternetGatewayId" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "internetGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsRouteTableUsedInDifferentAZ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsRouteTableUsedInDifferentAZ" }),
         __metadata("design:type", Boolean)
-    ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "isRouteTableUsedInDifferentAz", void 0);
+    ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "isRouteTableUsedInDifferentAZ", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteTableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteTableId" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "routeTableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolatingRoute" }),
-        __metadata("design:type", Route)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolatingRoute" }),
+        __metadata("design:type", route_1.Route)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "violatingRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], NetworkFirewallInvalidRouteConfigurationViolation.prototype, "vpcId", void 0);
     return NetworkFirewallInvalidRouteConfigurationViolation;
-}(SpeakeasyBase));
-export { NetworkFirewallInvalidRouteConfigurationViolation };
+}(utils_1.SpeakeasyBase));
+exports.NetworkFirewallInvalidRouteConfigurationViolation = NetworkFirewallInvalidRouteConfigurationViolation;

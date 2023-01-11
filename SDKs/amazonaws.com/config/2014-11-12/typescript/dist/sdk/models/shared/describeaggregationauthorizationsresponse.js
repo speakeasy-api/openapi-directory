@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregationAuthorization } from "./aggregationauthorization";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAggregationAuthorizationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregationauthorization_1 = require("./aggregationauthorization");
 var DescribeAggregationAuthorizationsResponse = /** @class */ (function (_super) {
     __extends(DescribeAggregationAuthorizationsResponse, _super);
     function DescribeAggregationAuthorizationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AggregationAuthorizations", elemType: AggregationAuthorization }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AggregationAuthorizations", elemType: aggregationauthorization_1.AggregationAuthorization }),
         __metadata("design:type", Array)
     ], DescribeAggregationAuthorizationsResponse.prototype, "aggregationAuthorizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeAggregationAuthorizationsResponse.prototype, "nextToken", void 0);
     return DescribeAggregationAuthorizationsResponse;
-}(SpeakeasyBase));
-export { DescribeAggregationAuthorizationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAggregationAuthorizationsResponse = DescribeAggregationAuthorizationsResponse;

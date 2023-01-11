@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class SearchFlightOffersHeaders extends SpeakeasyBase {
-    xHttpMethodOverride: string;
+    xHTTPMethodOverride: string;
 }
 export declare class SearchFlightOffersRequest extends SpeakeasyBase {
     headers: SearchFlightOffersHeaders;

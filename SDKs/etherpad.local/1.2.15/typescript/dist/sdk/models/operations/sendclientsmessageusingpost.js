@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendClientsMessageUsingPostResponse = exports.SendClientsMessageUsingPostRequest = exports.SendClientsMessageUsingPost500ApplicationJson = exports.SendClientsMessageUsingPost401ApplicationJson = exports.SendClientsMessageUsingPost400ApplicationJson = exports.SendClientsMessageUsingPost200ApplicationJson = exports.SendClientsMessageUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SendClientsMessageUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPostQueryParams, _super);
     function SendClientsMessageUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=msg" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPostQueryParams.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], SendClientsMessageUsingPostQueryParams.prototype, "padId", void 0);
+    ], SendClientsMessageUsingPostQueryParams.prototype, "padID", void 0);
     return SendClientsMessageUsingPostQueryParams;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPostQueryParams = SendClientsMessageUsingPostQueryParams;
 var SendClientsMessageUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPost200ApplicationJson, _super);
     function SendClientsMessageUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPost200ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPost200ApplicationJson = SendClientsMessageUsingPost200ApplicationJson;
 var SendClientsMessageUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPost400ApplicationJson, _super);
     function SendClientsMessageUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPost400ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPost400ApplicationJson = SendClientsMessageUsingPost400ApplicationJson;
 var SendClientsMessageUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPost401ApplicationJson, _super);
     function SendClientsMessageUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPost401ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPost401ApplicationJson = SendClientsMessageUsingPost401ApplicationJson;
 var SendClientsMessageUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPost500ApplicationJson, _super);
     function SendClientsMessageUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPost500ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPost500ApplicationJson = SendClientsMessageUsingPost500ApplicationJson;
 var SendClientsMessageUsingPostRequest = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPostRequest, _super);
     function SendClientsMessageUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingPostQueryParams)
     ], SendClientsMessageUsingPostRequest.prototype, "queryParams", void 0);
     return SendClientsMessageUsingPostRequest;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPostRequest = SendClientsMessageUsingPostRequest;
 var SendClientsMessageUsingPostResponse = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingPostResponse, _super);
     function SendClientsMessageUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SendClientsMessageUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingPost200ApplicationJson)
-    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPost200ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingPost400ApplicationJson)
-    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPost400ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingPost401ApplicationJson)
-    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPost401ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingPost500ApplicationJson)
-    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPost500ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingPostResponse.prototype, "sendClientsMessageUsingPOST500ApplicationJSONObject", void 0);
     return SendClientsMessageUsingPostResponse;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingPostResponse = SendClientsMessageUsingPostResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolExceptionReasonEnum } from "./protocolexceptionreasonenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolException = void 0;
+var utils_1 = require("../../../internal/utils");
+var protocolexceptionreasonenum_1 = require("./protocolexceptionreasonenum");
 var ProtocolException = /** @class */ (function (_super) {
     __extends(ProtocolException, _super);
     function ProtocolException() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ProtocolException.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=methodIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=methodIndex" }),
         __metadata("design:type", Number)
     ], ProtocolException.prototype, "methodIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=methodName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=methodName" }),
         __metadata("design:type", String)
     ], ProtocolException.prototype, "methodName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ProtocolException.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryWithDelay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryWithDelay" }),
         __metadata("design:type", Number)
     ], ProtocolException.prototype, "retryWithDelay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trace" }),
         __metadata("design:type", Array)
     ], ProtocolException.prototype, "trace", void 0);
     return ProtocolException;
-}(SpeakeasyBase));
-export { ProtocolException };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolException = ProtocolException;

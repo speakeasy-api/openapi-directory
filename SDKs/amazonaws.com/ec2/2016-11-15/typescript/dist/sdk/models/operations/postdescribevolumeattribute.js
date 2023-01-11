@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeVolumeAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeVolumeAttributeResponse = exports.PostDescribeVolumeAttributeRequest = exports.PostDescribeVolumeAttributeHeaders = exports.PostDescribeVolumeAttributeQueryParams = exports.PostDescribeVolumeAttributeVersionEnum = exports.PostDescribeVolumeAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeVolumeAttributeActionEnum;
 (function (PostDescribeVolumeAttributeActionEnum) {
     PostDescribeVolumeAttributeActionEnum["DescribeVolumeAttribute"] = "DescribeVolumeAttribute";
-})(PostDescribeVolumeAttributeActionEnum || (PostDescribeVolumeAttributeActionEnum = {}));
-export var PostDescribeVolumeAttributeVersionEnum;
+})(PostDescribeVolumeAttributeActionEnum = exports.PostDescribeVolumeAttributeActionEnum || (exports.PostDescribeVolumeAttributeActionEnum = {}));
+var PostDescribeVolumeAttributeVersionEnum;
 (function (PostDescribeVolumeAttributeVersionEnum) {
     PostDescribeVolumeAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeVolumeAttributeVersionEnum || (PostDescribeVolumeAttributeVersionEnum = {}));
+})(PostDescribeVolumeAttributeVersionEnum = exports.PostDescribeVolumeAttributeVersionEnum || (exports.PostDescribeVolumeAttributeVersionEnum = {}));
 var PostDescribeVolumeAttributeQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeVolumeAttributeQueryParams, _super);
     function PostDescribeVolumeAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeQueryParams.prototype, "version", void 0);
     return PostDescribeVolumeAttributeQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeVolumeAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeVolumeAttributeQueryParams = PostDescribeVolumeAttributeQueryParams;
 var PostDescribeVolumeAttributeHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeVolumeAttributeHeaders, _super);
     function PostDescribeVolumeAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeVolumeAttributeHeaders;
-}(SpeakeasyBase));
-export { PostDescribeVolumeAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeVolumeAttributeHeaders = PostDescribeVolumeAttributeHeaders;
 var PostDescribeVolumeAttributeRequest = /** @class */ (function (_super) {
     __extends(PostDescribeVolumeAttributeRequest, _super);
     function PostDescribeVolumeAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeVolumeAttributeQueryParams)
     ], PostDescribeVolumeAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeVolumeAttributeHeaders)
     ], PostDescribeVolumeAttributeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeVolumeAttributeRequest.prototype, "request", void 0);
     return PostDescribeVolumeAttributeRequest;
-}(SpeakeasyBase));
-export { PostDescribeVolumeAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeVolumeAttributeRequest = PostDescribeVolumeAttributeRequest;
 var PostDescribeVolumeAttributeResponse = /** @class */ (function (_super) {
     __extends(PostDescribeVolumeAttributeResponse, _super);
     function PostDescribeVolumeAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeVolumeAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeVolumeAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeVolumeAttributeResponse.prototype, "statusCode", void 0);
     return PostDescribeVolumeAttributeResponse;
-}(SpeakeasyBase));
-export { PostDescribeVolumeAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeVolumeAttributeResponse = PostDescribeVolumeAttributeResponse;

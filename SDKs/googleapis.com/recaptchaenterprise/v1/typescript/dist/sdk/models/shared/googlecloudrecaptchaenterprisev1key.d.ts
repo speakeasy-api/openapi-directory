@@ -12,7 +12,7 @@ export declare class GoogleCloudRecaptchaenterpriseV1Key extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
     iosSettings?: GoogleCloudRecaptchaenterpriseV1IosKeySettings;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     testingOptions?: GoogleCloudRecaptchaenterpriseV1TestingOptions;
     wafSettings?: GoogleCloudRecaptchaenterpriseV1WafSettings;

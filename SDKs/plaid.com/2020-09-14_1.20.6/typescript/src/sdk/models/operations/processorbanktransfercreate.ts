@@ -14,10 +14,10 @@ export class ProcessorBankTransferCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  processorBankTransferCreateResponse?: Map<string, any>;
+  processorBankTransferCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

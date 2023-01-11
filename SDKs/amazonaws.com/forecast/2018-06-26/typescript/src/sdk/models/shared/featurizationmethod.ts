@@ -12,5 +12,5 @@ export class FeaturizationMethod extends SpeakeasyBase {
   featurizationMethodName: FeaturizationMethodNameEnum;
 
   @SpeakeasyMetadata({ data: "json, name=FeaturizationMethodParameters" })
-  featurizationMethodParameters?: Map<string, string>;
+  featurizationMethodParameters?: Record<string, string>;
 }

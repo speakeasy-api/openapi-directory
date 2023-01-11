@@ -11,7 +11,7 @@ export class CreateInstancesFromSnapshotRequest extends SpeakeasyBase {
   addOns?: AddOnRequest[];
 
   @SpeakeasyMetadata({ data: "json, name=attachedDiskMapping", elemType: DiskMap, elemDepth: 2 })
-  attachedDiskMapping?: Map<string, DiskMap[]>;
+  attachedDiskMapping?: Record<string, DiskMap[]>;
 
   @SpeakeasyMetadata({ data: "json, name=availabilityZone" })
   availabilityZone: string;

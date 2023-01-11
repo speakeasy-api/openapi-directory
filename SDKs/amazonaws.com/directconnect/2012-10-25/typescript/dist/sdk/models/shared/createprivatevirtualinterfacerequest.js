@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NewPrivateVirtualInterface } from "./newprivatevirtualinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePrivateVirtualInterfaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var newprivatevirtualinterface_1 = require("./newprivatevirtualinterface");
 var CreatePrivateVirtualInterfaceRequest = /** @class */ (function (_super) {
     __extends(CreatePrivateVirtualInterfaceRequest, _super);
     function CreatePrivateVirtualInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], CreatePrivateVirtualInterfaceRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPrivateVirtualInterface" }),
-        __metadata("design:type", NewPrivateVirtualInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPrivateVirtualInterface" }),
+        __metadata("design:type", newprivatevirtualinterface_1.NewPrivateVirtualInterface)
     ], CreatePrivateVirtualInterfaceRequest.prototype, "newPrivateVirtualInterface", void 0);
     return CreatePrivateVirtualInterfaceRequest;
-}(SpeakeasyBase));
-export { CreatePrivateVirtualInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePrivateVirtualInterfaceRequest = CreatePrivateVirtualInterfaceRequest;

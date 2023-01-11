@@ -19,7 +19,7 @@ export declare class DeleteAppValidationConfigurationRequest extends SpeakeasyBa
 }
 export declare class DeleteAppValidationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAppValidationConfigurationResponse?: Map<string, any>;
+    deleteAppValidationConfigurationResponse?: Record<string, any>;
     internalError?: any;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;

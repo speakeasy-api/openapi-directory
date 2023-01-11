@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInventoryResponse = exports.GetInventoryRequest = exports.GetInventoryItemInventoryArrayV2 = exports.GetInventoryItemInventoryArrayV2Meta = exports.GetInventoryItemInventoryArrayV2MetaPaginationV2 = exports.GetInventoryItemInventoryArrayV2ItemInventoryV2 = exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity = exports.GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal = exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant = exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Item = exports.GetInventorySecurity = exports.GetInventoryQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetInventoryQueryParams = /** @class */ (function (_super) {
     __extends(GetInventoryQueryParams, _super);
     function GetInventoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=externalSkuNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=externalSkuNames" }),
         __metadata("design:type", Array)
     ], GetInventoryQueryParams.prototype, "externalSkuNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetInventoryQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=merchantIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=merchantIds" }),
         __metadata("design:type", Array)
     ], GetInventoryQueryParams.prototype, "merchantIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetInventoryQueryParams.prototype, "page", void 0);
     return GetInventoryQueryParams;
-}(SpeakeasyBase));
-export { GetInventoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryQueryParams = GetInventoryQueryParams;
 var GetInventorySecurity = /** @class */ (function (_super) {
     __extends(GetInventorySecurity, _super);
     function GetInventorySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeFdcAuth)
     ], GetInventorySecurity.prototype, "fdcAuth", void 0);
     return GetInventorySecurity;
-}(SpeakeasyBase));
-export { GetInventorySecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetInventorySecurity = GetInventorySecurity;
 // GetInventoryItemInventoryArrayV2ItemInventoryV2Item
 /**
  * Item this inventory data is based on
@@ -70,16 +96,16 @@ var GetInventoryItemInventoryArrayV2ItemInventoryV2Item = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2Item.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skuReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skuReference" }),
         __metadata("design:type", String)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2Item.prototype, "skuReference", void 0);
     return GetInventoryItemInventoryArrayV2ItemInventoryV2Item;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2ItemInventoryV2Item };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Item = GetInventoryItemInventoryArrayV2ItemInventoryV2Item;
 // GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant
 /**
  * Merchant that owns this item
@@ -90,145 +116,145 @@ var GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant.prototype, "name", void 0);
     return GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant = GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant;
 var GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal, _super);
     function GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableToPromise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableToPromise" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal.prototype, "availableToPromise", void 0);
     return GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal = GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal;
 var GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity, _super);
     function GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity.prototype, "total", void 0);
     return GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity = GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity;
 var GetInventoryItemInventoryArrayV2ItemInventoryV2 = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2ItemInventoryV2, _super);
     function GetInventoryItemInventoryArrayV2ItemInventoryV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2ItemInventoryV2Item)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchant" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2.prototype, "merchant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity)
     ], GetInventoryItemInventoryArrayV2ItemInventoryV2.prototype, "quantity", void 0);
     return GetInventoryItemInventoryArrayV2ItemInventoryV2;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2ItemInventoryV2 };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2ItemInventoryV2 = GetInventoryItemInventoryArrayV2ItemInventoryV2;
 var GetInventoryItemInventoryArrayV2MetaPaginationV2 = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2MetaPaginationV2, _super);
     function GetInventoryItemInventoryArrayV2MetaPaginationV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2MetaPaginationV2.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentPage" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2MetaPaginationV2.prototype, "currentPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2MetaPaginationV2.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPages" }),
         __metadata("design:type", Number)
     ], GetInventoryItemInventoryArrayV2MetaPaginationV2.prototype, "totalPages", void 0);
     return GetInventoryItemInventoryArrayV2MetaPaginationV2;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2MetaPaginationV2 };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2MetaPaginationV2 = GetInventoryItemInventoryArrayV2MetaPaginationV2;
 var GetInventoryItemInventoryArrayV2Meta = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2Meta, _super);
     function GetInventoryItemInventoryArrayV2Meta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2MetaPaginationV2)
     ], GetInventoryItemInventoryArrayV2Meta.prototype, "pagination", void 0);
     return GetInventoryItemInventoryArrayV2Meta;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2Meta };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2Meta = GetInventoryItemInventoryArrayV2Meta;
 var GetInventoryItemInventoryArrayV2 = /** @class */ (function (_super) {
     __extends(GetInventoryItemInventoryArrayV2, _super);
     function GetInventoryItemInventoryArrayV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GetInventoryItemInventoryArrayV2ItemInventoryV2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: GetInventoryItemInventoryArrayV2ItemInventoryV2 }),
         __metadata("design:type", Array)
     ], GetInventoryItemInventoryArrayV2.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetInventoryItemInventoryArrayV2Meta)
     ], GetInventoryItemInventoryArrayV2.prototype, "meta", void 0);
     return GetInventoryItemInventoryArrayV2;
-}(SpeakeasyBase));
-export { GetInventoryItemInventoryArrayV2 };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryItemInventoryArrayV2 = GetInventoryItemInventoryArrayV2;
 var GetInventoryRequest = /** @class */ (function (_super) {
     __extends(GetInventoryRequest, _super);
     function GetInventoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInventoryQueryParams)
     ], GetInventoryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInventorySecurity)
     ], GetInventoryRequest.prototype, "security", void 0);
     return GetInventoryRequest;
-}(SpeakeasyBase));
-export { GetInventoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryRequest = GetInventoryRequest;
 var GetInventoryResponse = /** @class */ (function (_super) {
     __extends(GetInventoryResponse, _super);
     function GetInventoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInventoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInventoryItemInventoryArrayV2)
     ], GetInventoryResponse.prototype, "itemInventoryArrayV2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInventoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OneordersGetResponses404ContentApplication1jsonSchema)
     ], GetInventoryResponse.prototype, "oneordersGetResponses404ContentApplication1jsonSchema", void 0);
     return GetInventoryResponse;
-}(SpeakeasyBase));
-export { GetInventoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInventoryResponse = GetInventoryResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,122 +23,124 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BillAbstract } from "./billabstract";
-import { BillAction } from "./billaction";
-import { BillDocumentOrVersion } from "./billdocumentorversion";
-import { Organization } from "./organization";
-import { CompactJurisdiction } from "./compactjurisdiction";
-import { BillIdentifier } from "./billidentifier";
-import { BillTitle } from "./billtitle";
-import { Link } from "./link";
-import { BillSponsorship } from "./billsponsorship";
-import { VoteEvent } from "./voteevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bill = void 0;
+var utils_1 = require("../../../internal/utils");
+var billabstract_1 = require("./billabstract");
+var billaction_1 = require("./billaction");
+var billdocumentorversion_1 = require("./billdocumentorversion");
+var organization_1 = require("./organization");
+var compactjurisdiction_1 = require("./compactjurisdiction");
+var billidentifier_1 = require("./billidentifier");
+var billtitle_1 = require("./billtitle");
+var link_1 = require("./link");
+var billsponsorship_1 = require("./billsponsorship");
+var voteevent_1 = require("./voteevent");
 var Bill = /** @class */ (function (_super) {
     __extends(Bill, _super);
     function Bill() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abstracts", elemType: BillAbstract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abstracts", elemType: billabstract_1.BillAbstract }),
         __metadata("design:type", Array)
     ], Bill.prototype, "abstracts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: BillAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: billaction_1.BillAction }),
         __metadata("design:type", Array)
     ], Bill.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification" }),
         __metadata("design:type", Array)
     ], Bill.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Bill.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documents", elemType: BillDocumentOrVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documents", elemType: billdocumentorversion_1.BillDocumentOrVersion }),
         __metadata("design:type", Array)
     ], Bill.prototype, "documents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extras" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extras" }),
+        __metadata("design:type", Object)
     ], Bill.prototype, "extras", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_action_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_action_date" }),
         __metadata("design:type", String)
     ], Bill.prototype, "firstActionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_organization" }),
-        __metadata("design:type", Organization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_organization" }),
+        __metadata("design:type", organization_1.Organization)
     ], Bill.prototype, "fromOrganization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Bill.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], Bill.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jurisdiction" }),
-        __metadata("design:type", CompactJurisdiction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jurisdiction" }),
+        __metadata("design:type", compactjurisdiction_1.CompactJurisdiction)
     ], Bill.prototype, "jurisdiction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_action_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_action_date" }),
         __metadata("design:type", String)
     ], Bill.prototype, "latestActionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_action_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_action_description" }),
         __metadata("design:type", String)
     ], Bill.prototype, "latestActionDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_passage_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_passage_date" }),
         __metadata("design:type", String)
     ], Bill.prototype, "latestPassageDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openstates_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openstates_url" }),
         __metadata("design:type", String)
     ], Bill.prototype, "openstatesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=other_identifiers", elemType: BillIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=other_identifiers", elemType: billidentifier_1.BillIdentifier }),
         __metadata("design:type", Array)
     ], Bill.prototype, "otherIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=other_titles", elemType: BillTitle }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=other_titles", elemType: billtitle_1.BillTitle }),
         __metadata("design:type", Array)
     ], Bill.prototype, "otherTitles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session" }),
         __metadata("design:type", String)
     ], Bill.prototype, "session", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], Bill.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sponsorships", elemType: BillSponsorship }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sponsorships", elemType: billsponsorship_1.BillSponsorship }),
         __metadata("design:type", Array)
     ], Bill.prototype, "sponsorships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", Array)
     ], Bill.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Bill.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Bill.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versions", elemType: BillDocumentOrVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versions", elemType: billdocumentorversion_1.BillDocumentOrVersion }),
         __metadata("design:type", Array)
     ], Bill.prototype, "versions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=votes", elemType: VoteEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=votes", elemType: voteevent_1.VoteEvent }),
         __metadata("design:type", Array)
     ], Bill.prototype, "votes", void 0);
     return Bill;
-}(SpeakeasyBase));
-export { Bill };
+}(utils_1.SpeakeasyBase));
+exports.Bill = Bill;

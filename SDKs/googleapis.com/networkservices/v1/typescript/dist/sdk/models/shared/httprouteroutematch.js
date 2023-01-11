@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteHeaderMatch } from "./httprouteheadermatch";
-import { HttpRouteQueryParameterMatch } from "./httproutequeryparametermatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteRouteMatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var httprouteheadermatch_1 = require("./httprouteheadermatch");
+var httproutequeryparametermatch_1 = require("./httproutequeryparametermatch");
 // HttpRouteRouteMatch
 /**
  * RouteMatch defines specifications used to match requests. If multiple match types are set, this RouteMatch will match if ALL type of matches are matched.
@@ -35,29 +38,29 @@ var HttpRouteRouteMatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullPathMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullPathMatch" }),
         __metadata("design:type", String)
     ], HttpRouteRouteMatch.prototype, "fullPathMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: HttpRouteHeaderMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: httprouteheadermatch_1.HttpRouteHeaderMatch }),
         __metadata("design:type", Array)
     ], HttpRouteRouteMatch.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreCase" }),
         __metadata("design:type", Boolean)
     ], HttpRouteRouteMatch.prototype, "ignoreCase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefixMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefixMatch" }),
         __metadata("design:type", String)
     ], HttpRouteRouteMatch.prototype, "prefixMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters", elemType: HttpRouteQueryParameterMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters", elemType: httproutequeryparametermatch_1.HttpRouteQueryParameterMatch }),
         __metadata("design:type", Array)
     ], HttpRouteRouteMatch.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regexMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regexMatch" }),
         __metadata("design:type", String)
     ], HttpRouteRouteMatch.prototype, "regexMatch", void 0);
     return HttpRouteRouteMatch;
-}(SpeakeasyBase));
-export { HttpRouteRouteMatch };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteRouteMatch = HttpRouteRouteMatch;

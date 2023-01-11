@@ -13,7 +13,7 @@ export class ImageSearchItemCreative extends SpeakeasyBase {
   allowedUse?: AllowedUse;
 
   @SpeakeasyMetadata({ data: "json, name=alternative_ids" })
-  alternativeIds?: Map<string, string>;
+  alternativeIds?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=artist" })
   artist?: string;

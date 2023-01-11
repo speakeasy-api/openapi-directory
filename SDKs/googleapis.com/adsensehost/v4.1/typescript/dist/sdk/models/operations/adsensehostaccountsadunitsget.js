@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdsensehostAccountsAdunitsGetResponse = exports.AdsensehostAccountsAdunitsGetRequest = exports.AdsensehostAccountsAdunitsGetSecurity = exports.AdsensehostAccountsAdunitsGetQueryParams = exports.AdsensehostAccountsAdunitsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AdsensehostAccountsAdunitsGetPathParams = /** @class */ (function (_super) {
     __extends(AdsensehostAccountsAdunitsGetPathParams, _super);
     function AdsensehostAccountsAdunitsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetPathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=adClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=adClientId" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetPathParams.prototype, "adClientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=adUnitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=adUnitId" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetPathParams.prototype, "adUnitId", void 0);
     return AdsensehostAccountsAdunitsGetPathParams;
-}(SpeakeasyBase));
-export { AdsensehostAccountsAdunitsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostAccountsAdunitsGetPathParams = AdsensehostAccountsAdunitsGetPathParams;
 var AdsensehostAccountsAdunitsGetQueryParams = /** @class */ (function (_super) {
     __extends(AdsensehostAccountsAdunitsGetQueryParams, _super);
     function AdsensehostAccountsAdunitsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetQueryParams.prototype, "userIp", void 0);
     return AdsensehostAccountsAdunitsGetQueryParams;
-}(SpeakeasyBase));
-export { AdsensehostAccountsAdunitsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostAccountsAdunitsGetQueryParams = AdsensehostAccountsAdunitsGetQueryParams;
 var AdsensehostAccountsAdunitsGetSecurity = /** @class */ (function (_super) {
     __extends(AdsensehostAccountsAdunitsGetSecurity, _super);
     function AdsensehostAccountsAdunitsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AdsensehostAccountsAdunitsGetSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AdsensehostAccountsAdunitsGetSecurity.prototype, "oauth2c", void 0);
     return AdsensehostAccountsAdunitsGetSecurity;
-}(SpeakeasyBase));
-export { AdsensehostAccountsAdunitsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostAccountsAdunitsGetSecurity = AdsensehostAccountsAdunitsGetSecurity;
 var AdsensehostAccountsAdunitsGetRequest = /** @class */ (function (_super) {
     __extends(AdsensehostAccountsAdunitsGetRequest, _super);
     function AdsensehostAccountsAdunitsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostAccountsAdunitsGetPathParams)
     ], AdsensehostAccountsAdunitsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostAccountsAdunitsGetQueryParams)
     ], AdsensehostAccountsAdunitsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostAccountsAdunitsGetSecurity)
     ], AdsensehostAccountsAdunitsGetRequest.prototype, "security", void 0);
     return AdsensehostAccountsAdunitsGetRequest;
-}(SpeakeasyBase));
-export { AdsensehostAccountsAdunitsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostAccountsAdunitsGetRequest = AdsensehostAccountsAdunitsGetRequest;
 var AdsensehostAccountsAdunitsGetResponse = /** @class */ (function (_super) {
     __extends(AdsensehostAccountsAdunitsGetResponse, _super);
     function AdsensehostAccountsAdunitsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AdUnit)
     ], AdsensehostAccountsAdunitsGetResponse.prototype, "adUnit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AdsensehostAccountsAdunitsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AdsensehostAccountsAdunitsGetResponse.prototype, "statusCode", void 0);
     return AdsensehostAccountsAdunitsGetResponse;
-}(SpeakeasyBase));
-export { AdsensehostAccountsAdunitsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostAccountsAdunitsGetResponse = AdsensehostAccountsAdunitsGetResponse;

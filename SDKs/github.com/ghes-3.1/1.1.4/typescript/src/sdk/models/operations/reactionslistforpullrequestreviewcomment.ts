@@ -14,21 +14,10 @@ export class ReactionsListForPullRequestReviewCommentPathParams extends Speakeas
   repo: string;
 }
 
-export enum ReactionsListForPullRequestReviewCommentContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
-
 
 export class ReactionsListForPullRequestReviewCommentQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=content" })
-  content?: ReactionsListForPullRequestReviewCommentContentEnum;
+  content?: shared.CommentIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -61,7 +50,7 @@ export class ReactionsListForPullRequestReviewCommentResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -73,5 +62,5 @@ export class ReactionsListForPullRequestReviewCommentResponse extends SpeakeasyB
   reactions?: shared.Reaction[];
 
   @SpeakeasyMetadata()
-  reactionsListForPullRequestReviewComment415ApplicationJsonObject?: ReactionsListForPullRequestReviewComment415ApplicationJson;
+  reactionsListForPullRequestReviewComment415ApplicationJSONObject?: ReactionsListForPullRequestReviewComment415ApplicationJson;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { PendingCloudwatchLogsExports } from "./pendingcloudwatchlogsexports";
-import { ProcessorFeature } from "./processorfeature";
+import { ProcessorFeatureList } from "./processorfeaturelist";
 
 
 
@@ -43,7 +43,7 @@ export class PendingModifiedValues extends SpeakeasyBase {
   masterUserPassword?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   pendingCloudwatchLogsExports?: PendingCloudwatchLogsExports;
@@ -51,8 +51,8 @@ export class PendingModifiedValues extends SpeakeasyBase {
   @SpeakeasyMetadata()
   port?: number;
 
-  @SpeakeasyMetadata({ elemType: ProcessorFeature })
-  processorFeatures?: ProcessorFeature[];
+  @SpeakeasyMetadata({ elemType: ProcessorFeatureList })
+  processorFeatures?: ProcessorFeatureList[];
 
   @SpeakeasyMetadata()
   storageType?: string;

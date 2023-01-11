@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicysimulatorV1beta1AccessStateDiff } from "./googlecloudpolicysimulatorv1beta1accessstatediff";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1beta1ReplayDiff = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicysimulatorv1beta1accessstatediff_1 = require("./googlecloudpolicysimulatorv1beta1accessstatediff");
 // GoogleCloudPolicysimulatorV1beta1ReplayDiff
 /**
  * The difference between the results of evaluating an access tuple under the current (baseline) policies and under the proposed (simulated) policies. This difference explains how a member's access could change if the proposed policies were applied.
@@ -34,9 +37,9 @@ var GoogleCloudPolicysimulatorV1beta1ReplayDiff = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessDiff" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1beta1AccessStateDiff)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessDiff" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1beta1accessstatediff_1.GoogleCloudPolicysimulatorV1beta1AccessStateDiff)
     ], GoogleCloudPolicysimulatorV1beta1ReplayDiff.prototype, "accessDiff", void 0);
     return GoogleCloudPolicysimulatorV1beta1ReplayDiff;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1beta1ReplayDiff };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1beta1ReplayDiff = GoogleCloudPolicysimulatorV1beta1ReplayDiff;

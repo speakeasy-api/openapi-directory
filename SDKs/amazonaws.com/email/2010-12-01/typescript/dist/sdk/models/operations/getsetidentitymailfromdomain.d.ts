@@ -11,7 +11,7 @@ export declare enum GetSetIdentityMailFromDomainVersionEnum {
 }
 export declare class GetSetIdentityMailFromDomainQueryParams extends SpeakeasyBase {
     action: GetSetIdentityMailFromDomainActionEnum;
-    behaviorOnMxFailure?: GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum;
+    behaviorOnMXFailure?: GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum;
     identity: string;
     mailFromDomain?: string;
     version: GetSetIdentityMailFromDomainVersionEnum;

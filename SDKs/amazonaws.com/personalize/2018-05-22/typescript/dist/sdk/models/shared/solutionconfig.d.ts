@@ -6,10 +6,10 @@ import { OptimizationObjective } from "./optimizationobjective";
  * Describes the configuration properties for the solution.
 **/
 export declare class SolutionConfig extends SpeakeasyBase {
-    algorithmHyperParameters?: Map<string, string>;
-    autoMlConfig?: AutoMlConfig;
+    algorithmHyperParameters?: Record<string, string>;
+    autoMLConfig?: AutoMlConfig;
     eventValueThreshold?: string;
-    featureTransformationParameters?: Map<string, string>;
+    featureTransformationParameters?: Record<string, string>;
     hpoConfig?: HpoConfig;
     optimizationObjective?: OptimizationObjective;
 }

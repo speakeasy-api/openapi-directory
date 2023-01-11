@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportStatusEnum } from "./importstatusenum";
-import { MergeStrategyEnum } from "./mergestrategyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var importstatusenum_1 = require("./importstatusenum");
+var mergestrategyenum_1 = require("./mergestrategyenum");
 // ImportSummary
 /**
  * Provides summary information about an import in an import list.
@@ -35,33 +38,33 @@ var ImportSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], ImportSummary.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importId" }),
         __metadata("design:type", String)
     ], ImportSummary.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importStatus" }),
         __metadata("design:type", String)
     ], ImportSummary.prototype, "importStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importedResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importedResourceId" }),
         __metadata("design:type", String)
     ], ImportSummary.prototype, "importedResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importedResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importedResourceName" }),
         __metadata("design:type", String)
     ], ImportSummary.prototype, "importedResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], ImportSummary.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeStrategy" }),
         __metadata("design:type", String)
     ], ImportSummary.prototype, "mergeStrategy", void 0);
     return ImportSummary;
-}(SpeakeasyBase));
-export { ImportSummary };
+}(utils_1.SpeakeasyBase));
+exports.ImportSummary = ImportSummary;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A revision repository for story outlines
+ * Base model for all types
 **/
 export declare class StoryOutlineHistory extends SpeakeasyBase {
     collaboratorUserId?: string;

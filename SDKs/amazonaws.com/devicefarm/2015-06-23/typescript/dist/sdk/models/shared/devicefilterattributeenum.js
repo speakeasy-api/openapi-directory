@@ -1,4 +1,7 @@
-export var DeviceFilterAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceFilterAttributeEnum = void 0;
+var DeviceFilterAttributeEnum;
 (function (DeviceFilterAttributeEnum) {
     DeviceFilterAttributeEnum["Arn"] = "ARN";
     DeviceFilterAttributeEnum["Platform"] = "PLATFORM";
@@ -12,4 +15,4 @@ export var DeviceFilterAttributeEnum;
     DeviceFilterAttributeEnum["InstanceArn"] = "INSTANCE_ARN";
     DeviceFilterAttributeEnum["InstanceLabels"] = "INSTANCE_LABELS";
     DeviceFilterAttributeEnum["FleetType"] = "FLEET_TYPE";
-})(DeviceFilterAttributeEnum || (DeviceFilterAttributeEnum = {}));
+})(DeviceFilterAttributeEnum = exports.DeviceFilterAttributeEnum || (exports.DeviceFilterAttributeEnum = {}));

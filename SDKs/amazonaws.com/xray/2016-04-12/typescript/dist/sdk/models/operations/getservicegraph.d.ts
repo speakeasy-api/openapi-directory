@@ -14,7 +14,7 @@ export declare class GetServiceGraphHeaders extends SpeakeasyBase {
 }
 export declare class GetServiceGraphRequestBody extends SpeakeasyBase {
     endTime: Date;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     nextToken?: string;
     startTime: Date;

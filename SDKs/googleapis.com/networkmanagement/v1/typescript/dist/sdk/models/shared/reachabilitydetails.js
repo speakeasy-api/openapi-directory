@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
-import { Trace } from "./trace";
-export var ReachabilityDetailsResultEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReachabilityDetails = exports.ReachabilityDetailsResultEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
+var trace_1 = require("./trace");
+var ReachabilityDetailsResultEnum;
 (function (ReachabilityDetailsResultEnum) {
     ReachabilityDetailsResultEnum["ResultUnspecified"] = "RESULT_UNSPECIFIED";
     ReachabilityDetailsResultEnum["Reachable"] = "REACHABLE";
     ReachabilityDetailsResultEnum["Unreachable"] = "UNREACHABLE";
     ReachabilityDetailsResultEnum["Ambiguous"] = "AMBIGUOUS";
     ReachabilityDetailsResultEnum["Undetermined"] = "UNDETERMINED";
-})(ReachabilityDetailsResultEnum || (ReachabilityDetailsResultEnum = {}));
+})(ReachabilityDetailsResultEnum = exports.ReachabilityDetailsResultEnum || (exports.ReachabilityDetailsResultEnum = {}));
 // ReachabilityDetails
 /**
  * Results of the configuration analysis from the last run of the test.
@@ -43,21 +46,21 @@ var ReachabilityDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], ReachabilityDetails.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ReachabilityDetails.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=traces", elemType: Trace }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=traces", elemType: trace_1.Trace }),
         __metadata("design:type", Array)
     ], ReachabilityDetails.prototype, "traces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyTime" }),
         __metadata("design:type", String)
     ], ReachabilityDetails.prototype, "verifyTime", void 0);
     return ReachabilityDetails;
-}(SpeakeasyBase));
-export { ReachabilityDetails };
+}(utils_1.SpeakeasyBase));
+exports.ReachabilityDetails = ReachabilityDetails;

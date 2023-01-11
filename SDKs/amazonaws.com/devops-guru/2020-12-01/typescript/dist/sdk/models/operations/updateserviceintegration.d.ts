@@ -29,6 +29,6 @@ export declare class UpdateServiceIntegrationResponse extends SpeakeasyBase {
     internalServerException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateServiceIntegrationResponse?: Map<string, any>;
+    updateServiceIntegrationResponse?: Record<string, any>;
     validationException?: any;
 }

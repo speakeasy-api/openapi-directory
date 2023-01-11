@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRetrieveEnvironmentInfoActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRetrieveEnvironmentInfoResponse = exports.PostRetrieveEnvironmentInfoRequest = exports.PostRetrieveEnvironmentInfoHeaders = exports.PostRetrieveEnvironmentInfoQueryParams = exports.PostRetrieveEnvironmentInfoVersionEnum = exports.PostRetrieveEnvironmentInfoActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRetrieveEnvironmentInfoActionEnum;
 (function (PostRetrieveEnvironmentInfoActionEnum) {
     PostRetrieveEnvironmentInfoActionEnum["RetrieveEnvironmentInfo"] = "RetrieveEnvironmentInfo";
-})(PostRetrieveEnvironmentInfoActionEnum || (PostRetrieveEnvironmentInfoActionEnum = {}));
-export var PostRetrieveEnvironmentInfoVersionEnum;
+})(PostRetrieveEnvironmentInfoActionEnum = exports.PostRetrieveEnvironmentInfoActionEnum || (exports.PostRetrieveEnvironmentInfoActionEnum = {}));
+var PostRetrieveEnvironmentInfoVersionEnum;
 (function (PostRetrieveEnvironmentInfoVersionEnum) {
     PostRetrieveEnvironmentInfoVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostRetrieveEnvironmentInfoVersionEnum || (PostRetrieveEnvironmentInfoVersionEnum = {}));
+})(PostRetrieveEnvironmentInfoVersionEnum = exports.PostRetrieveEnvironmentInfoVersionEnum || (exports.PostRetrieveEnvironmentInfoVersionEnum = {}));
 var PostRetrieveEnvironmentInfoQueryParams = /** @class */ (function (_super) {
     __extends(PostRetrieveEnvironmentInfoQueryParams, _super);
     function PostRetrieveEnvironmentInfoQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoQueryParams.prototype, "version", void 0);
     return PostRetrieveEnvironmentInfoQueryParams;
-}(SpeakeasyBase));
-export { PostRetrieveEnvironmentInfoQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRetrieveEnvironmentInfoQueryParams = PostRetrieveEnvironmentInfoQueryParams;
 var PostRetrieveEnvironmentInfoHeaders = /** @class */ (function (_super) {
     __extends(PostRetrieveEnvironmentInfoHeaders, _super);
     function PostRetrieveEnvironmentInfoHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRetrieveEnvironmentInfoHeaders;
-}(SpeakeasyBase));
-export { PostRetrieveEnvironmentInfoHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRetrieveEnvironmentInfoHeaders = PostRetrieveEnvironmentInfoHeaders;
 var PostRetrieveEnvironmentInfoRequest = /** @class */ (function (_super) {
     __extends(PostRetrieveEnvironmentInfoRequest, _super);
     function PostRetrieveEnvironmentInfoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRetrieveEnvironmentInfoQueryParams)
     ], PostRetrieveEnvironmentInfoRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRetrieveEnvironmentInfoHeaders)
     ], PostRetrieveEnvironmentInfoRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRetrieveEnvironmentInfoRequest.prototype, "request", void 0);
     return PostRetrieveEnvironmentInfoRequest;
-}(SpeakeasyBase));
-export { PostRetrieveEnvironmentInfoRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRetrieveEnvironmentInfoRequest = PostRetrieveEnvironmentInfoRequest;
 var PostRetrieveEnvironmentInfoResponse = /** @class */ (function (_super) {
     __extends(PostRetrieveEnvironmentInfoResponse, _super);
     function PostRetrieveEnvironmentInfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRetrieveEnvironmentInfoResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRetrieveEnvironmentInfoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRetrieveEnvironmentInfoResponse.prototype, "statusCode", void 0);
     return PostRetrieveEnvironmentInfoResponse;
-}(SpeakeasyBase));
-export { PostRetrieveEnvironmentInfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRetrieveEnvironmentInfoResponse = PostRetrieveEnvironmentInfoResponse;

@@ -23,6 +23,6 @@ export declare class DeleteRuleCategoryRequest extends SpeakeasyBase {
 }
 export declare class DeleteRuleCategoryResponse extends SpeakeasyBase {
     contentType: string;
-    deleteRuleCategory200ApplicationJsonObject?: DeleteRuleCategory200ApplicationJson;
+    deleteRuleCategory200ApplicationJSONObject?: DeleteRuleCategory200ApplicationJson;
     statusCode: number;
 }

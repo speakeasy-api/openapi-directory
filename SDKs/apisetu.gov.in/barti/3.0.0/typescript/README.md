@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CvcerRequest, CvcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: CvcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "non",
-      vcNo: "fuga",
+      dob: "sit",
+      vcNo: "voluptas",
     },
-    consentArtifact: "maiores",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "minima",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.cvcer(req).then((res: CvcerResponse | AxiosError) => {
+sdk.apIs.cvcer(req).then((res: CvcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.cvcer(req).then((res: CvcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cvcer` - Caste Validity Certificate
 

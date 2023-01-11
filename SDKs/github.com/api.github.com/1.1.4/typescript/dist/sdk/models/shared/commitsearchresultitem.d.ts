@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { Verification } from "./verification";
 import { MinimalRepository } from "./minimalrepository";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
+/**
+ * Simple User
+**/
 export declare class CommitSearchResultItemSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -28,6 +31,9 @@ export declare class CommitSearchResultItemCommitAuthor extends SpeakeasyBase {
     email: string;
     name: string;
 }
+/**
+ * Metaproperties for Git author/committer information.
+**/
 export declare class CommitSearchResultItemCommitGitUser extends SpeakeasyBase {
     date?: string;
     email?: string;
@@ -46,6 +52,9 @@ export declare class CommitSearchResultItemCommit extends SpeakeasyBase {
     url: string;
     verification?: Verification;
 }
+/**
+ * Metaproperties for Git author/committer information.
+**/
 export declare class CommitSearchResultItemGitUser extends SpeakeasyBase {
     date?: string;
     email?: string;

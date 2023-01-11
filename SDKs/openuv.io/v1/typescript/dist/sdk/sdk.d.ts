@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.openuv.io/api/{version}"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getForecast - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
     **/
@@ -25,4 +26,3 @@ export declare class SDK {
     **/
     getUv(req: operations.GetUvRequest, config?: AxiosRequestConfig): Promise<operations.GetUvResponse>;
 }
-export {};

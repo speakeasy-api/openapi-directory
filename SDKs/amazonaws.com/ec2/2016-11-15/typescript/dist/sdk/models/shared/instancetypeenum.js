@@ -1,4 +1,7 @@
-export var InstanceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceTypeEnum = void 0;
+var InstanceTypeEnum;
 (function (InstanceTypeEnum) {
     InstanceTypeEnum["T1Micro"] = "t1.micro";
     InstanceTypeEnum["T2Nano"] = "t2.nano";
@@ -420,4 +423,4 @@ export var InstanceTypeEnum;
     InstanceTypeEnum["Vt13xlarge"] = "vt1.3xlarge";
     InstanceTypeEnum["Vt16xlarge"] = "vt1.6xlarge";
     InstanceTypeEnum["Vt124xlarge"] = "vt1.24xlarge";
-})(InstanceTypeEnum || (InstanceTypeEnum = {}));
+})(InstanceTypeEnum = exports.InstanceTypeEnum || (exports.InstanceTypeEnum = {}));

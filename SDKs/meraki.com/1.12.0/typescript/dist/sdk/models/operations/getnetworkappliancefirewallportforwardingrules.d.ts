@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceFirewallPortForwardingRulesRequest exten
 export declare class GetNetworkApplianceFirewallPortForwardingRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceFirewallPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceFirewallPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlotTypeSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // SlotTypeSummary
 /**
  * Provides summary information about a slot type.
@@ -33,25 +36,25 @@ var SlotTypeSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SlotTypeSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], SlotTypeSummary.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentSlotTypeSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentSlotTypeSignature" }),
         __metadata("design:type", String)
     ], SlotTypeSummary.prototype, "parentSlotTypeSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeId" }),
         __metadata("design:type", String)
     ], SlotTypeSummary.prototype, "slotTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeName" }),
         __metadata("design:type", String)
     ], SlotTypeSummary.prototype, "slotTypeName", void 0);
     return SlotTypeSummary;
-}(SpeakeasyBase));
-export { SlotTypeSummary };
+}(utils_1.SpeakeasyBase));
+exports.SlotTypeSummary = SlotTypeSummary;

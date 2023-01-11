@@ -5,5 +5,5 @@ export declare class CreateDataSourceFromRdsInput extends SpeakeasyBase {
     dataSourceId: string;
     dataSourceName?: string;
     rdsData: RdsDataSpec;
-    roleArn: string;
+    roleARN: string;
 }

@@ -22,5 +22,5 @@ export class GetNetworkApplianceVpnBgpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceVpnBgp200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceVpnBgp200ApplicationJSONObject?: Record<string, any>;
 }

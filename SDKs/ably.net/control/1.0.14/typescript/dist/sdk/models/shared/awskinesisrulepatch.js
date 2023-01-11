@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,82 +23,84 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AwsKinesisRulePatchRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsKinesisRulePatch = exports.AwsKinesisRulePatchTarget = exports.AwsKinesisRulePatchTargetFormatEnum = exports.AwsKinesisRulePatchStatusEnum = exports.AwsKinesisRulePatchRuleTypeEnum = exports.AwsKinesisRulePatchRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AwsKinesisRulePatchRequestModeEnum;
 (function (AwsKinesisRulePatchRequestModeEnum) {
     AwsKinesisRulePatchRequestModeEnum["Single"] = "single";
-})(AwsKinesisRulePatchRequestModeEnum || (AwsKinesisRulePatchRequestModeEnum = {}));
-export var AwsKinesisRulePatchRuleTypeEnum;
+})(AwsKinesisRulePatchRequestModeEnum = exports.AwsKinesisRulePatchRequestModeEnum || (exports.AwsKinesisRulePatchRequestModeEnum = {}));
+var AwsKinesisRulePatchRuleTypeEnum;
 (function (AwsKinesisRulePatchRuleTypeEnum) {
     AwsKinesisRulePatchRuleTypeEnum["AwsKinesis"] = "aws/kinesis";
-})(AwsKinesisRulePatchRuleTypeEnum || (AwsKinesisRulePatchRuleTypeEnum = {}));
-export var AwsKinesisRulePatchStatusEnum;
+})(AwsKinesisRulePatchRuleTypeEnum = exports.AwsKinesisRulePatchRuleTypeEnum || (exports.AwsKinesisRulePatchRuleTypeEnum = {}));
+var AwsKinesisRulePatchStatusEnum;
 (function (AwsKinesisRulePatchStatusEnum) {
     AwsKinesisRulePatchStatusEnum["Enabled"] = "enabled";
     AwsKinesisRulePatchStatusEnum["Disabled"] = "disabled";
-})(AwsKinesisRulePatchStatusEnum || (AwsKinesisRulePatchStatusEnum = {}));
-export var AwsKinesisRulePatchTargetFormatEnum;
+})(AwsKinesisRulePatchStatusEnum = exports.AwsKinesisRulePatchStatusEnum || (exports.AwsKinesisRulePatchStatusEnum = {}));
+var AwsKinesisRulePatchTargetFormatEnum;
 (function (AwsKinesisRulePatchTargetFormatEnum) {
     AwsKinesisRulePatchTargetFormatEnum["Json"] = "json";
-})(AwsKinesisRulePatchTargetFormatEnum || (AwsKinesisRulePatchTargetFormatEnum = {}));
+})(AwsKinesisRulePatchTargetFormatEnum = exports.AwsKinesisRulePatchTargetFormatEnum || (exports.AwsKinesisRulePatchTargetFormatEnum = {}));
 var AwsKinesisRulePatchTarget = /** @class */ (function (_super) {
     __extends(AwsKinesisRulePatchTarget, _super);
     function AwsKinesisRulePatchTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", Object)
     ], AwsKinesisRulePatchTarget.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AwsKinesisRulePatchTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatchTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partitionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partitionKey" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatchTarget.prototype, "partitionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatchTarget.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamName" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatchTarget.prototype, "streamName", void 0);
     return AwsKinesisRulePatchTarget;
-}(SpeakeasyBase));
-export { AwsKinesisRulePatchTarget };
+}(utils_1.SpeakeasyBase));
+exports.AwsKinesisRulePatchTarget = AwsKinesisRulePatchTarget;
 var AwsKinesisRulePatch = /** @class */ (function (_super) {
     __extends(AwsKinesisRulePatch, _super);
     function AwsKinesisRulePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatch.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatch.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AwsKinesisRulePatch.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AwsKinesisRulePatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AwsKinesisRulePatchTarget)
     ], AwsKinesisRulePatch.prototype, "target", void 0);
     return AwsKinesisRulePatch;
-}(SpeakeasyBase));
-export { AwsKinesisRulePatch };
+}(utils_1.SpeakeasyBase));
+exports.AwsKinesisRulePatch = AwsKinesisRulePatch;

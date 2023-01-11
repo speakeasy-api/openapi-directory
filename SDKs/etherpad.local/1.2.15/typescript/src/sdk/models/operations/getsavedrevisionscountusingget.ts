@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetSavedRevisionsCountUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class GetSavedRevisionsCountUsingGet200ApplicationJson extends SpeakeasyB
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class GetSavedRevisionsCountUsingGet400ApplicationJson extends SpeakeasyB
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class GetSavedRevisionsCountUsingGet401ApplicationJson extends SpeakeasyB
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class GetSavedRevisionsCountUsingGet500ApplicationJson extends SpeakeasyB
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class GetSavedRevisionsCountUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingGet200ApplicationJsonObject?: GetSavedRevisionsCountUsingGet200ApplicationJson;
+  getSavedRevisionsCountUsingGET200ApplicationJSONObject?: GetSavedRevisionsCountUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingGet400ApplicationJsonObject?: GetSavedRevisionsCountUsingGet400ApplicationJson;
+  getSavedRevisionsCountUsingGET400ApplicationJSONObject?: GetSavedRevisionsCountUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingGet401ApplicationJsonObject?: GetSavedRevisionsCountUsingGet401ApplicationJson;
+  getSavedRevisionsCountUsingGET401ApplicationJSONObject?: GetSavedRevisionsCountUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingGet500ApplicationJsonObject?: GetSavedRevisionsCountUsingGet500ApplicationJson;
+  getSavedRevisionsCountUsingGET500ApplicationJSONObject?: GetSavedRevisionsCountUsingGet500ApplicationJson;
 }

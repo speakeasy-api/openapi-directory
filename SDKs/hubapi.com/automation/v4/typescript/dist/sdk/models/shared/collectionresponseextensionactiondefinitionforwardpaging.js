@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ForwardPaging } from "./forwardpaging";
-import { ExtensionActionDefinition } from "./extensionactiondefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionResponseExtensionActionDefinitionForwardPaging = void 0;
+var utils_1 = require("../../../internal/utils");
+var forwardpaging_1 = require("./forwardpaging");
+var extensionactiondefinition_1 = require("./extensionactiondefinition");
 var CollectionResponseExtensionActionDefinitionForwardPaging = /** @class */ (function (_super) {
     __extends(CollectionResponseExtensionActionDefinitionForwardPaging, _super);
     function CollectionResponseExtensionActionDefinitionForwardPaging() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paging" }),
-        __metadata("design:type", ForwardPaging)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paging" }),
+        __metadata("design:type", forwardpaging_1.ForwardPaging)
     ], CollectionResponseExtensionActionDefinitionForwardPaging.prototype, "paging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ExtensionActionDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: extensionactiondefinition_1.ExtensionActionDefinition }),
         __metadata("design:type", Array)
     ], CollectionResponseExtensionActionDefinitionForwardPaging.prototype, "results", void 0);
     return CollectionResponseExtensionActionDefinitionForwardPaging;
-}(SpeakeasyBase));
-export { CollectionResponseExtensionActionDefinitionForwardPaging };
+}(utils_1.SpeakeasyBase));
+exports.CollectionResponseExtensionActionDefinitionForwardPaging = CollectionResponseExtensionActionDefinitionForwardPaging;

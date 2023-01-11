@@ -38,7 +38,7 @@ export class ImportServerCatalogRequest extends SpeakeasyBase {
   headers: ImportServerCatalogHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -47,7 +47,7 @@ export class ImportServerCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  importServerCatalogResponse?: Map<string, any>;
+  importServerCatalogResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterException?: any;

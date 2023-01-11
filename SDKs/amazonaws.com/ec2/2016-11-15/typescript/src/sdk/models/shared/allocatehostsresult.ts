@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class AllocateHostsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hostIds?: string[];
+  hostIds?: Record<string, any>;
 }

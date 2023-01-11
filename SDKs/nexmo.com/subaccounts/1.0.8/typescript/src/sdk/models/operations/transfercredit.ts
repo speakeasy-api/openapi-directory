@@ -102,11 +102,11 @@ export class TransferCreditResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  transferCredit401ApplicationJsonObject?: TransferCredit401ApplicationJson;
+  transferCredit401ApplicationJSONObject?: TransferCredit401ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferCredit404ApplicationJsonObject?: TransferCredit404ApplicationJson;
+  transferCredit404ApplicationJSONObject?: TransferCredit404ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferCredit422ApplicationJsonObject?: TransferCredit422ApplicationJson;
+  transferCredit422ApplicationJSONObject?: TransferCredit422ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QuantumTaskStatusEnum } from "./quantumtaskstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuantumTaskSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var quantumtaskstatusenum_1 = require("./quantumtaskstatusenum");
 // QuantumTaskSummary
 /**
  * Includes information about a quantum task.
@@ -34,41 +37,41 @@ var QuantumTaskSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], QuantumTaskSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceArn" }),
         __metadata("design:type", String)
     ], QuantumTaskSummary.prototype, "deviceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endedAt" }),
         __metadata("design:type", Date)
     ], QuantumTaskSummary.prototype, "endedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputS3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputS3Bucket" }),
         __metadata("design:type", String)
     ], QuantumTaskSummary.prototype, "outputS3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputS3Directory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputS3Directory" }),
         __metadata("design:type", String)
     ], QuantumTaskSummary.prototype, "outputS3Directory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantumTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantumTaskArn" }),
         __metadata("design:type", String)
     ], QuantumTaskSummary.prototype, "quantumTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shots" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shots" }),
         __metadata("design:type", Number)
     ], QuantumTaskSummary.prototype, "shots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], QuantumTaskSummary.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], QuantumTaskSummary.prototype, "tags", void 0);
     return QuantumTaskSummary;
-}(SpeakeasyBase));
-export { QuantumTaskSummary };
+}(utils_1.SpeakeasyBase));
+exports.QuantumTaskSummary = QuantumTaskSummary;

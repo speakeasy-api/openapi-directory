@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAuthorizeSnapshotAccessActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAuthorizeSnapshotAccessResponse = exports.PostAuthorizeSnapshotAccessRequest = exports.PostAuthorizeSnapshotAccessHeaders = exports.PostAuthorizeSnapshotAccessQueryParams = exports.PostAuthorizeSnapshotAccessVersionEnum = exports.PostAuthorizeSnapshotAccessActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAuthorizeSnapshotAccessActionEnum;
 (function (PostAuthorizeSnapshotAccessActionEnum) {
     PostAuthorizeSnapshotAccessActionEnum["AuthorizeSnapshotAccess"] = "AuthorizeSnapshotAccess";
-})(PostAuthorizeSnapshotAccessActionEnum || (PostAuthorizeSnapshotAccessActionEnum = {}));
-export var PostAuthorizeSnapshotAccessVersionEnum;
+})(PostAuthorizeSnapshotAccessActionEnum = exports.PostAuthorizeSnapshotAccessActionEnum || (exports.PostAuthorizeSnapshotAccessActionEnum = {}));
+var PostAuthorizeSnapshotAccessVersionEnum;
 (function (PostAuthorizeSnapshotAccessVersionEnum) {
     PostAuthorizeSnapshotAccessVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostAuthorizeSnapshotAccessVersionEnum || (PostAuthorizeSnapshotAccessVersionEnum = {}));
+})(PostAuthorizeSnapshotAccessVersionEnum = exports.PostAuthorizeSnapshotAccessVersionEnum || (exports.PostAuthorizeSnapshotAccessVersionEnum = {}));
 var PostAuthorizeSnapshotAccessQueryParams = /** @class */ (function (_super) {
     __extends(PostAuthorizeSnapshotAccessQueryParams, _super);
     function PostAuthorizeSnapshotAccessQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessQueryParams.prototype, "version", void 0);
     return PostAuthorizeSnapshotAccessQueryParams;
-}(SpeakeasyBase));
-export { PostAuthorizeSnapshotAccessQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeSnapshotAccessQueryParams = PostAuthorizeSnapshotAccessQueryParams;
 var PostAuthorizeSnapshotAccessHeaders = /** @class */ (function (_super) {
     __extends(PostAuthorizeSnapshotAccessHeaders, _super);
     function PostAuthorizeSnapshotAccessHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAuthorizeSnapshotAccessHeaders;
-}(SpeakeasyBase));
-export { PostAuthorizeSnapshotAccessHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeSnapshotAccessHeaders = PostAuthorizeSnapshotAccessHeaders;
 var PostAuthorizeSnapshotAccessRequest = /** @class */ (function (_super) {
     __extends(PostAuthorizeSnapshotAccessRequest, _super);
     function PostAuthorizeSnapshotAccessRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAuthorizeSnapshotAccessQueryParams)
     ], PostAuthorizeSnapshotAccessRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAuthorizeSnapshotAccessHeaders)
     ], PostAuthorizeSnapshotAccessRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAuthorizeSnapshotAccessRequest.prototype, "request", void 0);
     return PostAuthorizeSnapshotAccessRequest;
-}(SpeakeasyBase));
-export { PostAuthorizeSnapshotAccessRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeSnapshotAccessRequest = PostAuthorizeSnapshotAccessRequest;
 var PostAuthorizeSnapshotAccessResponse = /** @class */ (function (_super) {
     __extends(PostAuthorizeSnapshotAccessResponse, _super);
     function PostAuthorizeSnapshotAccessResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAuthorizeSnapshotAccessResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAuthorizeSnapshotAccessResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAuthorizeSnapshotAccessResponse.prototype, "statusCode", void 0);
     return PostAuthorizeSnapshotAccessResponse;
-}(SpeakeasyBase));
-export { PostAuthorizeSnapshotAccessResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeSnapshotAccessResponse = PostAuthorizeSnapshotAccessResponse;

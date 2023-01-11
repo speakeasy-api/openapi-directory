@@ -343,11 +343,11 @@ export class RetrieveAPageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveAPage200ApplicationJsonObject?: RetrieveAPage200ApplicationJson;
+  retrieveAPage200ApplicationJSONObject?: RetrieveAPage200ApplicationJson;
 }

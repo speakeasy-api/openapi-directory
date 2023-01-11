@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnStatistics } from "./columnstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateColumnStatisticsForPartitionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnstatistics_1 = require("./columnstatistics");
 var UpdateColumnStatisticsForPartitionRequest = /** @class */ (function (_super) {
     __extends(UpdateColumnStatisticsForPartitionRequest, _super);
     function UpdateColumnStatisticsForPartitionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForPartitionRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnStatisticsList", elemType: ColumnStatistics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnStatisticsList", elemType: columnstatistics_1.ColumnStatistics }),
         __metadata("design:type", Array)
     ], UpdateColumnStatisticsForPartitionRequest.prototype, "columnStatisticsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForPartitionRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionValues" }),
         __metadata("design:type", Array)
     ], UpdateColumnStatisticsForPartitionRequest.prototype, "partitionValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForPartitionRequest.prototype, "tableName", void 0);
     return UpdateColumnStatisticsForPartitionRequest;
-}(SpeakeasyBase));
-export { UpdateColumnStatisticsForPartitionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateColumnStatisticsForPartitionRequest = UpdateColumnStatisticsForPartitionRequest;

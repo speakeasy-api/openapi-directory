@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,80 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AwsSqsRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsSqsRulePost = exports.AwsSqsRulePostTarget = exports.AwsSqsRulePostStatusEnum = exports.AwsSqsRulePostRuleTypeEnum = exports.AwsSqsRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AwsSqsRulePostRequestModeEnum;
 (function (AwsSqsRulePostRequestModeEnum) {
     AwsSqsRulePostRequestModeEnum["Single"] = "single";
-})(AwsSqsRulePostRequestModeEnum || (AwsSqsRulePostRequestModeEnum = {}));
-export var AwsSqsRulePostRuleTypeEnum;
+})(AwsSqsRulePostRequestModeEnum = exports.AwsSqsRulePostRequestModeEnum || (exports.AwsSqsRulePostRequestModeEnum = {}));
+var AwsSqsRulePostRuleTypeEnum;
 (function (AwsSqsRulePostRuleTypeEnum) {
     AwsSqsRulePostRuleTypeEnum["AwsSqs"] = "aws/sqs";
-})(AwsSqsRulePostRuleTypeEnum || (AwsSqsRulePostRuleTypeEnum = {}));
-export var AwsSqsRulePostStatusEnum;
+})(AwsSqsRulePostRuleTypeEnum = exports.AwsSqsRulePostRuleTypeEnum || (exports.AwsSqsRulePostRuleTypeEnum = {}));
+var AwsSqsRulePostStatusEnum;
 (function (AwsSqsRulePostStatusEnum) {
     AwsSqsRulePostStatusEnum["Enabled"] = "enabled";
     AwsSqsRulePostStatusEnum["Disabled"] = "disabled";
-})(AwsSqsRulePostStatusEnum || (AwsSqsRulePostStatusEnum = {}));
+})(AwsSqsRulePostStatusEnum = exports.AwsSqsRulePostStatusEnum || (exports.AwsSqsRulePostStatusEnum = {}));
 var AwsSqsRulePostTarget = /** @class */ (function (_super) {
     __extends(AwsSqsRulePostTarget, _super);
     function AwsSqsRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", Object)
     ], AwsSqsRulePostTarget.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsAccountId" }),
         __metadata("design:type", String)
     ], AwsSqsRulePostTarget.prototype, "awsAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AwsSqsRulePostTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AwsSqsRulePostTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueName" }),
         __metadata("design:type", String)
     ], AwsSqsRulePostTarget.prototype, "queueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AwsSqsRulePostTarget.prototype, "region", void 0);
     return AwsSqsRulePostTarget;
-}(SpeakeasyBase));
-export { AwsSqsRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.AwsSqsRulePostTarget = AwsSqsRulePostTarget;
 var AwsSqsRulePost = /** @class */ (function (_super) {
     __extends(AwsSqsRulePost, _super);
     function AwsSqsRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AwsSqsRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AwsSqsRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AwsSqsRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AwsSqsRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AwsSqsRulePostTarget)
     ], AwsSqsRulePost.prototype, "target", void 0);
     return AwsSqsRulePost;
-}(SpeakeasyBase));
-export { AwsSqsRulePost };
+}(utils_1.SpeakeasyBase));
+exports.AwsSqsRulePost = AwsSqsRulePost;

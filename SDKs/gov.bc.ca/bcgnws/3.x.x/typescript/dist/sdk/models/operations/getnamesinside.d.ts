@@ -22,7 +22,7 @@ export declare class GetNamesInsideQueryParams extends SpeakeasyBase {
     featureType?: string;
     itemsPerPage?: number;
     outputFormat: GetNamesInsideOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesInsideOutputStyleEnum;
     sortBy?: GetNamesInsideSortByEnum;
     startIndex?: number;

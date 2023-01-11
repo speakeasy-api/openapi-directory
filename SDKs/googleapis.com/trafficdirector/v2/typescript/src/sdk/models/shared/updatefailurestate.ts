@@ -7,7 +7,7 @@ export class UpdateFailureState extends SpeakeasyBase {
   details?: string;
 
   @SpeakeasyMetadata({ data: "json, name=failedConfiguration" })
-  failedConfiguration?: Map<string, any>;
+  failedConfiguration?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdateAttempt" })
   lastUpdateAttempt?: string;

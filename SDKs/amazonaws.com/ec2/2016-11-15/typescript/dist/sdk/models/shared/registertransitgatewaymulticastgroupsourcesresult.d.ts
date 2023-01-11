@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayMulticastRegisteredGroupSources } from "./transitgatewaymulticastregisteredgroupsources";
+/**
+ * Information about the transit gateway multicast group sources.
+**/
+export declare class RegisterTransitGatewayMulticastGroupSourcesResultRegisteredMulticastGroupSources extends SpeakeasyBase {
+    groupIpAddress?: Record<string, any>;
+    registeredNetworkInterfaceIds?: Record<string, any>;
+    transitGatewayMulticastDomainId?: Record<string, any>;
+}
 export declare class RegisterTransitGatewayMulticastGroupSourcesResult extends SpeakeasyBase {
-    registeredMulticastGroupSources?: TransitGatewayMulticastRegisteredGroupSources;
+    registeredMulticastGroupSources?: RegisterTransitGatewayMulticastGroupSourcesResultRegisteredMulticastGroupSources;
 }

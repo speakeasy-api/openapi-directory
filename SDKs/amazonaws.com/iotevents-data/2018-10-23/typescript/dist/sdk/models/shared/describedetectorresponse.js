@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Detector } from "./detector";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDetectorResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var detector_1 = require("./detector");
 var DescribeDetectorResponse = /** @class */ (function (_super) {
     __extends(DescribeDetectorResponse, _super);
     function DescribeDetectorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detector" }),
-        __metadata("design:type", Detector)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detector" }),
+        __metadata("design:type", detector_1.Detector)
     ], DescribeDetectorResponse.prototype, "detector", void 0);
     return DescribeDetectorResponse;
-}(SpeakeasyBase));
-export { DescribeDetectorResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDetectorResponse = DescribeDetectorResponse;

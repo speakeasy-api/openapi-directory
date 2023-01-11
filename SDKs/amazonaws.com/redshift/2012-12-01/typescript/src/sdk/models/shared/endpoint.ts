@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcEndpoint } from "./vpcendpoint";
+import { VpcEndpointsList } from "./vpcendpointslist";
 
 
 
@@ -14,6 +14,6 @@ export class Endpoint extends SpeakeasyBase {
   @SpeakeasyMetadata()
   port?: number;
 
-  @SpeakeasyMetadata({ elemType: VpcEndpoint })
-  vpcEndpoints?: VpcEndpoint[];
+  @SpeakeasyMetadata({ elemType: VpcEndpointsList })
+  vpcEndpoints?: VpcEndpointsList[];
 }

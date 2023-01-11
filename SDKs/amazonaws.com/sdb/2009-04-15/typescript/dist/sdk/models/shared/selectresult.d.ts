@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
+import { ItemList } from "./itemlist";
 export declare class SelectResult extends SpeakeasyBase {
-    items?: Item[];
+    items?: ItemList[];
     nextToken?: string;
 }

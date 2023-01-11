@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutOrdersIdStatusResponse = exports.PutOrdersIdStatusRequest = exports.PutOrdersIdStatusSecurity = exports.PutOrdersIdStatusStatusTypeSimpleV2 = exports.PutOrdersIdStatusStatusTypeSimpleV2Status = exports.PutOrdersIdStatusPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PutOrdersIdStatusPathParams = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusPathParams, _super);
     function PutOrdersIdStatusPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PutOrdersIdStatusPathParams.prototype, "id", void 0);
     return PutOrdersIdStatusPathParams;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusPathParams = PutOrdersIdStatusPathParams;
 var PutOrdersIdStatusStatusTypeSimpleV2Status = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusStatusTypeSimpleV2Status, _super);
     function PutOrdersIdStatusStatusTypeSimpleV2Status() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PutOrdersIdStatusStatusTypeSimpleV2Status.prototype, "code", void 0);
     return PutOrdersIdStatusStatusTypeSimpleV2Status;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusStatusTypeSimpleV2Status };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusStatusTypeSimpleV2Status = PutOrdersIdStatusStatusTypeSimpleV2Status;
 var PutOrdersIdStatusStatusTypeSimpleV2 = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusStatusTypeSimpleV2, _super);
     function PutOrdersIdStatusStatusTypeSimpleV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], PutOrdersIdStatusStatusTypeSimpleV2.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", PutOrdersIdStatusStatusTypeSimpleV2Status)
     ], PutOrdersIdStatusStatusTypeSimpleV2.prototype, "status", void 0);
     return PutOrdersIdStatusStatusTypeSimpleV2;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusStatusTypeSimpleV2 };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusStatusTypeSimpleV2 = PutOrdersIdStatusStatusTypeSimpleV2;
 var PutOrdersIdStatusSecurity = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusSecurity, _super);
     function PutOrdersIdStatusSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeFdcAuth)
     ], PutOrdersIdStatusSecurity.prototype, "fdcAuth", void 0);
     return PutOrdersIdStatusSecurity;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusSecurity = PutOrdersIdStatusSecurity;
 var PutOrdersIdStatusRequest = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusRequest, _super);
     function PutOrdersIdStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutOrdersIdStatusPathParams)
     ], PutOrdersIdStatusRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutOrdersIdStatusStatusTypeSimpleV2)
     ], PutOrdersIdStatusRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutOrdersIdStatusSecurity)
     ], PutOrdersIdStatusRequest.prototype, "security", void 0);
     return PutOrdersIdStatusRequest;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusRequest = PutOrdersIdStatusRequest;
 var PutOrdersIdStatusResponse = /** @class */ (function (_super) {
     __extends(PutOrdersIdStatusResponse, _super);
     function PutOrdersIdStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutOrdersIdStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutOrdersIdStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OneordersPostResponses201ContentApplication1jsonSchema)
     ], PutOrdersIdStatusResponse.prototype, "oneordersPostResponses201ContentApplication1jsonSchema", void 0);
     return PutOrdersIdStatusResponse;
-}(SpeakeasyBase));
-export { PutOrdersIdStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutOrdersIdStatusResponse = PutOrdersIdStatusResponse;

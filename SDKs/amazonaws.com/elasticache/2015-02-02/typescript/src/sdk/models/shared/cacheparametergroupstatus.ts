@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CacheParameterGroupStatus extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cacheNodeIdsToReboot?: string[];
+  cacheNodeIdsToReboot?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   cacheParameterGroupName?: string;

@@ -25,5 +25,5 @@ export class GetNetworkSmDeviceCertsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDeviceCerts200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDeviceCerts200ApplicationJSONObject?: Record<string, any>;
 }

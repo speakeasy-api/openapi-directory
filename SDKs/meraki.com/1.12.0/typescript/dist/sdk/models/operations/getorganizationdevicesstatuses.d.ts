@@ -3,7 +3,7 @@ export declare class GetOrganizationDevicesStatusesPathParams extends SpeakeasyB
     organizationId: string;
 }
 export declare class GetOrganizationDevicesStatusesQueryParams extends SpeakeasyBase {
-    components?: Map<string, any>;
+    components?: Record<string, any>;
     endingBefore?: string;
     perPage?: number;
     startingAfter?: string;
@@ -14,7 +14,7 @@ export declare class GetOrganizationDevicesStatusesRequest extends SpeakeasyBase
 }
 export declare class GetOrganizationDevicesStatusesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationDevicesStatuses200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationDevicesStatuses200ApplicationJSONObject?: Record<string, any>;
 }

@@ -5,7 +5,7 @@ export declare class PlayerGamePpaAveragePpa extends SpeakeasyBase {
     rush?: number;
 }
 export declare class PlayerGamePpa extends SpeakeasyBase {
-    averagePpa?: PlayerGamePpaAveragePpa;
+    averagePPA?: PlayerGamePpaAveragePpa;
     name?: string;
     opponent?: string;
     position?: string;

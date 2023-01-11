@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PurchaseInteraction = exports.PurchaseInteractionSubscribe = exports.PurchaseInteractionSubscribeStreamEnum = exports.PurchaseInteractionBuy = void 0;
+var utils_1 = require("../../../internal/utils");
 // PurchaseInteractionBuy
 /**
  * Information on purchasing this video.
@@ -33,19 +36,19 @@ var PurchaseInteractionBuy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drm" }),
         __metadata("design:type", Boolean)
     ], PurchaseInteractionBuy.prototype, "drm", void 0);
     return PurchaseInteractionBuy;
-}(SpeakeasyBase));
-export { PurchaseInteractionBuy };
-export var PurchaseInteractionSubscribeStreamEnum;
+}(utils_1.SpeakeasyBase));
+exports.PurchaseInteractionBuy = PurchaseInteractionBuy;
+var PurchaseInteractionSubscribeStreamEnum;
 (function (PurchaseInteractionSubscribeStreamEnum) {
     PurchaseInteractionSubscribeStreamEnum["Available"] = "available";
     PurchaseInteractionSubscribeStreamEnum["Purchased"] = "purchased";
     PurchaseInteractionSubscribeStreamEnum["Restricted"] = "restricted";
     PurchaseInteractionSubscribeStreamEnum["Unavailable"] = "unavailable";
-})(PurchaseInteractionSubscribeStreamEnum || (PurchaseInteractionSubscribeStreamEnum = {}));
+})(PurchaseInteractionSubscribeStreamEnum = exports.PurchaseInteractionSubscribeStreamEnum || (exports.PurchaseInteractionSubscribeStreamEnum = {}));
 // PurchaseInteractionSubscribe
 /**
  * Information on subscribing to this video.
@@ -56,49 +59,49 @@ var PurchaseInteractionSubscribe = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drm" }),
         __metadata("design:type", Boolean)
     ], PurchaseInteractionSubscribe.prototype, "drm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_time" }),
         __metadata("design:type", String)
     ], PurchaseInteractionSubscribe.prototype, "expiresTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], PurchaseInteractionSubscribe.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchase_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchase_time" }),
         __metadata("design:type", String)
     ], PurchaseInteractionSubscribe.prototype, "purchaseTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stream" }),
         __metadata("design:type", String)
     ], PurchaseInteractionSubscribe.prototype, "stream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], PurchaseInteractionSubscribe.prototype, "uri", void 0);
     return PurchaseInteractionSubscribe;
-}(SpeakeasyBase));
-export { PurchaseInteractionSubscribe };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseInteractionSubscribe = PurchaseInteractionSubscribe;
 var PurchaseInteraction = /** @class */ (function (_super) {
     __extends(PurchaseInteraction, _super);
     function PurchaseInteraction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buy" }),
         __metadata("design:type", PurchaseInteractionBuy)
     ], PurchaseInteraction.prototype, "buy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rent" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rent" }),
+        __metadata("design:type", Object)
     ], PurchaseInteraction.prototype, "rent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscribe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscribe" }),
         __metadata("design:type", PurchaseInteractionSubscribe)
     ], PurchaseInteraction.prototype, "subscribe", void 0);
     return PurchaseInteraction;
-}(SpeakeasyBase));
-export { PurchaseInteraction };
+}(utils_1.SpeakeasyBase));
+exports.PurchaseInteraction = PurchaseInteraction;

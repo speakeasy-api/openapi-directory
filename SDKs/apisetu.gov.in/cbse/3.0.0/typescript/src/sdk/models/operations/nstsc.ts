@@ -191,23 +191,23 @@ export class NstscResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  nstsc400ApplicationJsonObject?: Nstsc400ApplicationJson;
+  nstsc400ApplicationJSONObject?: Nstsc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc401ApplicationJsonObject?: Nstsc401ApplicationJson;
+  nstsc401ApplicationJSONObject?: Nstsc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc404ApplicationJsonObject?: Nstsc404ApplicationJson;
+  nstsc404ApplicationJSONObject?: Nstsc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc500ApplicationJsonObject?: Nstsc500ApplicationJson;
+  nstsc500ApplicationJSONObject?: Nstsc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc502ApplicationJsonObject?: Nstsc502ApplicationJson;
+  nstsc502ApplicationJSONObject?: Nstsc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc503ApplicationJsonObject?: Nstsc503ApplicationJson;
+  nstsc503ApplicationJSONObject?: Nstsc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  nstsc504ApplicationJsonObject?: Nstsc504ApplicationJson;
+  nstsc504ApplicationJSONObject?: Nstsc504ApplicationJson;
 }

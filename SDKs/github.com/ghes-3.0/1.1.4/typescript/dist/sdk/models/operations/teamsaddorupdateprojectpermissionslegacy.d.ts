@@ -28,7 +28,7 @@ export declare class TeamsAddOrUpdateProjectPermissionsLegacyResponse extends Sp
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJson;
-    teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJson;
+    teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJson;
+    teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJson;
     validationError?: shared.ValidationError;
 }

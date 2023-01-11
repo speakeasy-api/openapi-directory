@@ -8,5 +8,5 @@ export declare class CodesOfConductGetAllCodesOfConductResponse extends Speakeas
     contentType: string;
     statusCode: number;
     codeOfConducts?: shared.CodeOfConduct[];
-    codesOfConductGetAllCodesOfConduct415ApplicationJsonObject?: CodesOfConductGetAllCodesOfConduct415ApplicationJson;
+    codesOfConductGetAllCodesOfConduct415ApplicationJSONObject?: CodesOfConductGetAllCodesOfConduct415ApplicationJson;
 }

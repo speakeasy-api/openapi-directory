@@ -41,5 +41,5 @@ export class ContactsRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  contactsRemove200ApplicationJsonObject?: ContactsRemove200ApplicationJson;
+  contactsRemove200ApplicationJSONObject?: ContactsRemove200ApplicationJson;
 }

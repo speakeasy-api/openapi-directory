@@ -41,7 +41,7 @@ export class GetEventResponse extends SpeakeasyBase {
   event?: shared.Event;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

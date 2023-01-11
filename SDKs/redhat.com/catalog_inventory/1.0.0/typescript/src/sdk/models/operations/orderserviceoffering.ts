@@ -32,5 +32,5 @@ export class OrderServiceOfferingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  orderServiceOffering200ApplicationJsonObject?: OrderServiceOffering200ApplicationJson;
+  orderServiceOffering200ApplicationJSONObject?: OrderServiceOffering200ApplicationJson;
 }

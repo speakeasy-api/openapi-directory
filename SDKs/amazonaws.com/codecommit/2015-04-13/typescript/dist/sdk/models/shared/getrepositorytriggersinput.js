@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRepositoryTriggersInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // GetRepositoryTriggersInput
 /**
  * Represents the input of a get repository triggers operation.
@@ -33,9 +36,9 @@ var GetRepositoryTriggersInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], GetRepositoryTriggersInput.prototype, "repositoryName", void 0);
     return GetRepositoryTriggersInput;
-}(SpeakeasyBase));
-export { GetRepositoryTriggersInput };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoryTriggersInput = GetRepositoryTriggersInput;

@@ -11,10 +11,10 @@ export class ScanfordevicesRequest extends SpeakeasyBase {
 
 export class ScanfordevicesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  scanfordevices200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

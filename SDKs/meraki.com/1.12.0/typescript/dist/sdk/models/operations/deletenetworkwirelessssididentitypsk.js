@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkWirelessSsidIdentityPskResponse = exports.DeleteNetworkWirelessSsidIdentityPskRequest = exports.DeleteNetworkWirelessSsidIdentityPskPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkWirelessSsidIdentityPskPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessSsidIdentityPskPathParams, _super);
     function DeleteNetworkWirelessSsidIdentityPskPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=identityPskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=identityPskId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessSsidIdentityPskPathParams.prototype, "identityPskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessSsidIdentityPskPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessSsidIdentityPskPathParams.prototype, "number", void 0);
     return DeleteNetworkWirelessSsidIdentityPskPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessSsidIdentityPskPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessSsidIdentityPskPathParams = DeleteNetworkWirelessSsidIdentityPskPathParams;
 var DeleteNetworkWirelessSsidIdentityPskRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessSsidIdentityPskRequest, _super);
     function DeleteNetworkWirelessSsidIdentityPskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkWirelessSsidIdentityPskPathParams)
     ], DeleteNetworkWirelessSsidIdentityPskRequest.prototype, "pathParams", void 0);
     return DeleteNetworkWirelessSsidIdentityPskRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessSsidIdentityPskRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessSsidIdentityPskRequest = DeleteNetworkWirelessSsidIdentityPskRequest;
 var DeleteNetworkWirelessSsidIdentityPskResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkWirelessSsidIdentityPskResponse, _super);
     function DeleteNetworkWirelessSsidIdentityPskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkWirelessSsidIdentityPskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkWirelessSsidIdentityPskResponse.prototype, "statusCode", void 0);
     return DeleteNetworkWirelessSsidIdentityPskResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkWirelessSsidIdentityPskResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkWirelessSsidIdentityPskResponse = DeleteNetworkWirelessSsidIdentityPskResponse;

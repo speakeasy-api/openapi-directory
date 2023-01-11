@@ -11,7 +11,7 @@ export declare class ReposUploadReleaseAssetQueryParams extends SpeakeasyBase {
     name?: string;
 }
 export declare class ReposUploadReleaseAssetRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: ReposUploadReleaseAssetPathParams;
     queryParams: ReposUploadReleaseAssetQueryParams;
     request?: string;

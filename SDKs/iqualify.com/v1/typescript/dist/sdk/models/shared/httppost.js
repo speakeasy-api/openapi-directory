@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DocumentResponse } from "./documentresponse";
-import { Moderation } from "./moderation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpPost = void 0;
+var utils_1 = require("../../../internal/utils");
+var documentresponse_1 = require("./documentresponse");
+var moderation_1 = require("./moderation");
 var HttpPost = /** @class */ (function (_super) {
     __extends(HttpPost, _super);
     function HttpPost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments", elemType: DocumentResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments", elemType: documentresponse_1.DocumentResponse }),
         __metadata("design:type", Array)
     ], HttpPost.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], HttpPost.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], HttpPost.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], HttpPost.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HttpPost.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isFacilitatorPost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isFacilitatorPost" }),
         __metadata("design:type", Boolean)
     ], HttpPost.prototype, "isFacilitatorPost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderation" }),
-        __metadata("design:type", Moderation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderation" }),
+        __metadata("design:type", moderation_1.Moderation)
     ], HttpPost.prototype, "moderation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], HttpPost.prototype, "title", void 0);
     return HttpPost;
-}(SpeakeasyBase));
-export { HttpPost };
+}(utils_1.SpeakeasyBase));
+exports.HttpPost = HttpPost;

@@ -1,5 +1,8 @@
-export var TargetDbTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetDbTypeEnum = void 0;
+var TargetDbTypeEnum;
 (function (TargetDbTypeEnum) {
     TargetDbTypeEnum["SpecificDatabase"] = "specific-database";
     TargetDbTypeEnum["MultipleDatabases"] = "multiple-databases";
-})(TargetDbTypeEnum || (TargetDbTypeEnum = {}));
+})(TargetDbTypeEnum = exports.TargetDbTypeEnum || (exports.TargetDbTypeEnum = {}));

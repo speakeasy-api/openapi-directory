@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BloggerBlogsGetRequest, BloggerBlogsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: BloggerBlogsGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    blogId: "et",
+    blogId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "quod",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "at",
-    fields: "ut",
-    key: "numquam",
-    oauthToken: "dolores",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "distinctio",
-    uploadType: "incidunt",
-    uploadProtocol: "ut",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

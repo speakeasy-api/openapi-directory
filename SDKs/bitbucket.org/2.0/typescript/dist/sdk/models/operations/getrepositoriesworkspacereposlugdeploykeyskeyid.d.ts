@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest exte
 export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deployKey?: Map<string, any>;
-    error?: Map<string, any>;
+    deployKey?: Record<string, any>;
+    error?: Record<string, any>;
 }

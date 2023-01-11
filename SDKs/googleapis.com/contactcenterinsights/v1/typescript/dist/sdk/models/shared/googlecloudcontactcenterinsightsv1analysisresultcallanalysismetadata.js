@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1CallAnnotation } from "./googlecloudcontactcenterinsightsv1callannotation";
-import { GoogleCloudContactcenterinsightsV1Entity } from "./googlecloudcontactcenterinsightsv1entity";
-import { GoogleCloudContactcenterinsightsV1Intent } from "./googlecloudcontactcenterinsightsv1intent";
-import { GoogleCloudContactcenterinsightsV1IssueModelResult } from "./googlecloudcontactcenterinsightsv1issuemodelresult";
-import { GoogleCloudContactcenterinsightsV1PhraseMatchData } from "./googlecloudcontactcenterinsightsv1phrasematchdata";
-import { GoogleCloudContactcenterinsightsV1ConversationLevelSentiment } from "./googlecloudcontactcenterinsightsv1conversationlevelsentiment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1callannotation_1 = require("./googlecloudcontactcenterinsightsv1callannotation");
+var googlecloudcontactcenterinsightsv1entity_1 = require("./googlecloudcontactcenterinsightsv1entity");
+var googlecloudcontactcenterinsightsv1intent_1 = require("./googlecloudcontactcenterinsightsv1intent");
+var googlecloudcontactcenterinsightsv1issuemodelresult_1 = require("./googlecloudcontactcenterinsightsv1issuemodelresult");
+var googlecloudcontactcenterinsightsv1phrasematchdata_1 = require("./googlecloudcontactcenterinsightsv1phrasematchdata");
+var googlecloudcontactcenterinsightsv1conversationlevelsentiment_1 = require("./googlecloudcontactcenterinsightsv1conversationlevelsentiment");
 // GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata
 /**
  * Call-specific metadata created during analysis.
@@ -39,29 +42,29 @@ var GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata = /** @
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations", elemType: GoogleCloudContactcenterinsightsV1CallAnnotation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations", elemType: googlecloudcontactcenterinsightsv1callannotation_1.GoogleCloudContactcenterinsightsV1CallAnnotation }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entities", elemType: GoogleCloudContactcenterinsightsV1Entity }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entities", elemType: googlecloudcontactcenterinsightsv1entity_1.GoogleCloudContactcenterinsightsV1Entity }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "entities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intents", elemType: GoogleCloudContactcenterinsightsV1Intent }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intents", elemType: googlecloudcontactcenterinsightsv1intent_1.GoogleCloudContactcenterinsightsV1Intent }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "intents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueModelResult" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueModelResult" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodelresult_1.GoogleCloudContactcenterinsightsV1IssueModelResult)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "issueModelResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phraseMatchers", elemType: GoogleCloudContactcenterinsightsV1PhraseMatchData }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phraseMatchers", elemType: googlecloudcontactcenterinsightsv1phrasematchdata_1.GoogleCloudContactcenterinsightsV1PhraseMatchData }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "phraseMatchers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentiments", elemType: GoogleCloudContactcenterinsightsV1ConversationLevelSentiment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentiments", elemType: googlecloudcontactcenterinsightsv1conversationlevelsentiment_1.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.prototype, "sentiments", void 0);
     return GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata = GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata;

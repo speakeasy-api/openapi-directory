@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadataInput } from "./fieldmetadata";
-import { FieldMetadata } from "./fieldmetadata";
-// SkillInput
-/**
- * A skill that the person has.
-**/
-var SkillInput = /** @class */ (function (_super) {
-    __extends(SkillInput, _super);
-    function SkillInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
-    ], SkillInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", String)
-    ], SkillInput.prototype, "value", void 0);
-    return SkillInput;
-}(SpeakeasyBase));
-export { SkillInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SkillInput = exports.Skill = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Skill
 /**
  * A skill that the person has.
@@ -55,13 +38,33 @@ var Skill = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Skill.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Skill.prototype, "value", void 0);
     return Skill;
-}(SpeakeasyBase));
-export { Skill };
+}(utils_1.SpeakeasyBase));
+exports.Skill = Skill;
+// SkillInput
+/**
+ * A skill that the person has.
+**/
+var SkillInput = /** @class */ (function (_super) {
+    __extends(SkillInput, _super);
+    function SkillInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
+    ], SkillInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], SkillInput.prototype, "value", void 0);
+    return SkillInput;
+}(utils_1.SpeakeasyBase));
+exports.SkillInput = SkillInput;

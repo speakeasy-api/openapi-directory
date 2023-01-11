@@ -9,5 +9,5 @@ export declare class ProtocolNetflowChangeTfsRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowChangeTfsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowChangeTfs200ApplicationJsonString?: string;
+    protocolNetflowChangeTfs200ApplicationJSONString?: string;
 }

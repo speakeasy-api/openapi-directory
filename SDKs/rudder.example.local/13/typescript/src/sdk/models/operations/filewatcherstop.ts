@@ -31,5 +31,5 @@ export class FileWatcherStopResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fileWatcherStop200ApplicationJsonObject?: FileWatcherStop200ApplicationJson;
+  fileWatcherStop200ApplicationJSONObject?: FileWatcherStop200ApplicationJson;
 }

@@ -28,6 +28,6 @@ export declare class BooksMylibraryAnnotationsDeleteRequest extends SpeakeasyBas
 }
 export declare class BooksMylibraryAnnotationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

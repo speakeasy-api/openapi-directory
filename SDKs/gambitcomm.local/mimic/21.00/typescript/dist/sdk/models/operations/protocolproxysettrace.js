@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolProxySetTraceResponse = exports.ProtocolProxySetTraceRequest = exports.ProtocolProxySetTracePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolProxySetTracePathParams = /** @class */ (function (_super) {
     __extends(ProtocolProxySetTracePathParams, _super);
     function ProtocolProxySetTracePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolProxySetTracePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
         __metadata("design:type", String)
     ], ProtocolProxySetTracePathParams.prototype, "enableOrNot", void 0);
     return ProtocolProxySetTracePathParams;
-}(SpeakeasyBase));
-export { ProtocolProxySetTracePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetTracePathParams = ProtocolProxySetTracePathParams;
 var ProtocolProxySetTraceRequest = /** @class */ (function (_super) {
     __extends(ProtocolProxySetTraceRequest, _super);
     function ProtocolProxySetTraceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolProxySetTracePathParams)
     ], ProtocolProxySetTraceRequest.prototype, "pathParams", void 0);
     return ProtocolProxySetTraceRequest;
-}(SpeakeasyBase));
-export { ProtocolProxySetTraceRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetTraceRequest = ProtocolProxySetTraceRequest;
 var ProtocolProxySetTraceResponse = /** @class */ (function (_super) {
     __extends(ProtocolProxySetTraceResponse, _super);
     function ProtocolProxySetTraceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolProxySetTraceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolProxySetTraceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolProxySetTraceResponse.prototype, "protocolProxySetTrace200ApplicationJsonString", void 0);
+    ], ProtocolProxySetTraceResponse.prototype, "protocolProxySetTrace200ApplicationJSONString", void 0);
     return ProtocolProxySetTraceResponse;
-}(SpeakeasyBase));
-export { ProtocolProxySetTraceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetTraceResponse = ProtocolProxySetTraceResponse;

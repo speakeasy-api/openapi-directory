@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EntityInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, any>;
+  fields?: Record<string, any>;
 }
 
 
@@ -18,7 +18,7 @@ export class EntityInput extends SpeakeasyBase {
 **/
 export class Entity extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, any>;
+  fields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

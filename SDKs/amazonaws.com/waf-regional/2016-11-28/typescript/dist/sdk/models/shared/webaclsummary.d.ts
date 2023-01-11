@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class WebAclSummary extends SpeakeasyBase {
     name: string;
-    webAclId: string;
+    webACLId: string;
 }

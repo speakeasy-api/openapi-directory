@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Project } from "./project";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetProjectsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var project_1 = require("./project");
 var BatchGetProjectsOutput = /** @class */ (function (_super) {
     __extends(BatchGetProjectsOutput, _super);
     function BatchGetProjectsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projects", elemType: Project }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projects", elemType: project_1.Project }),
         __metadata("design:type", Array)
     ], BatchGetProjectsOutput.prototype, "projects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectsNotFound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectsNotFound" }),
         __metadata("design:type", Array)
     ], BatchGetProjectsOutput.prototype, "projectsNotFound", void 0);
     return BatchGetProjectsOutput;
-}(SpeakeasyBase));
-export { BatchGetProjectsOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetProjectsOutput = BatchGetProjectsOutput;

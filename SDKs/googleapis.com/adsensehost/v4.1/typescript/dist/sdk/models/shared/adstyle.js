@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdStyle = exports.AdStyleFont = exports.AdStyleColors = void 0;
+var utils_1 = require("../../../internal/utils");
 // AdStyleColors
 /**
  * The colors included in the style. These are represented as six hexadecimal characters, similar to HTML color codes, but without the leading hash.
@@ -33,28 +36,28 @@ var AdStyleColors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], AdStyleColors.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=border" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=border" }),
         __metadata("design:type", String)
     ], AdStyleColors.prototype, "border", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], AdStyleColors.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], AdStyleColors.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AdStyleColors.prototype, "url", void 0);
     return AdStyleColors;
-}(SpeakeasyBase));
-export { AdStyleColors };
+}(utils_1.SpeakeasyBase));
+exports.AdStyleColors = AdStyleColors;
 // AdStyleFont
 /**
  * The font which is included in the style.
@@ -65,37 +68,37 @@ var AdStyleFont = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", String)
     ], AdStyleFont.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], AdStyleFont.prototype, "size", void 0);
     return AdStyleFont;
-}(SpeakeasyBase));
-export { AdStyleFont };
+}(utils_1.SpeakeasyBase));
+exports.AdStyleFont = AdStyleFont;
 var AdStyle = /** @class */ (function (_super) {
     __extends(AdStyle, _super);
     function AdStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colors" }),
         __metadata("design:type", AdStyleColors)
     ], AdStyle.prototype, "colors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corners" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corners" }),
         __metadata("design:type", String)
     ], AdStyle.prototype, "corners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=font" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=font" }),
         __metadata("design:type", AdStyleFont)
     ], AdStyle.prototype, "font", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AdStyle.prototype, "kind", void 0);
     return AdStyle;
-}(SpeakeasyBase));
-export { AdStyle };
+}(utils_1.SpeakeasyBase));
+exports.AdStyle = AdStyle;

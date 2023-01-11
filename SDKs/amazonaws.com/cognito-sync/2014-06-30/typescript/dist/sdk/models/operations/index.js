@@ -1,17 +1,33 @@
-export * from "./bulkpublish";
-export * from "./deletedataset";
-export * from "./describedataset";
-export * from "./describeidentitypoolusage";
-export * from "./describeidentityusage";
-export * from "./getbulkpublishdetails";
-export * from "./getcognitoevents";
-export * from "./getidentitypoolconfiguration";
-export * from "./listdatasets";
-export * from "./listidentitypoolusage";
-export * from "./listrecords";
-export * from "./registerdevice";
-export * from "./setcognitoevents";
-export * from "./setidentitypoolconfiguration";
-export * from "./subscribetodataset";
-export * from "./unsubscribefromdataset";
-export * from "./updaterecords";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./bulkpublish"), exports);
+__exportStar(require("./deletedataset"), exports);
+__exportStar(require("./describedataset"), exports);
+__exportStar(require("./describeidentitypoolusage"), exports);
+__exportStar(require("./describeidentityusage"), exports);
+__exportStar(require("./getbulkpublishdetails"), exports);
+__exportStar(require("./getcognitoevents"), exports);
+__exportStar(require("./getidentitypoolconfiguration"), exports);
+__exportStar(require("./listdatasets"), exports);
+__exportStar(require("./listidentitypoolusage"), exports);
+__exportStar(require("./listrecords"), exports);
+__exportStar(require("./registerdevice"), exports);
+__exportStar(require("./setcognitoevents"), exports);
+__exportStar(require("./setidentitypoolconfiguration"), exports);
+__exportStar(require("./subscribetodataset"), exports);
+__exportStar(require("./unsubscribefromdataset"), exports);
+__exportStar(require("./updaterecords"), exports);

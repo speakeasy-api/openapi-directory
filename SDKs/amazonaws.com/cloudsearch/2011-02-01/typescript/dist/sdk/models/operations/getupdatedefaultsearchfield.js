@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUpdateDefaultSearchFieldActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateDefaultSearchFieldResponse = exports.GetUpdateDefaultSearchFieldRequest = exports.GetUpdateDefaultSearchFieldHeaders = exports.GetUpdateDefaultSearchFieldQueryParams = exports.GetUpdateDefaultSearchFieldVersionEnum = exports.GetUpdateDefaultSearchFieldActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUpdateDefaultSearchFieldActionEnum;
 (function (GetUpdateDefaultSearchFieldActionEnum) {
     GetUpdateDefaultSearchFieldActionEnum["UpdateDefaultSearchField"] = "UpdateDefaultSearchField";
-})(GetUpdateDefaultSearchFieldActionEnum || (GetUpdateDefaultSearchFieldActionEnum = {}));
-export var GetUpdateDefaultSearchFieldVersionEnum;
+})(GetUpdateDefaultSearchFieldActionEnum = exports.GetUpdateDefaultSearchFieldActionEnum || (exports.GetUpdateDefaultSearchFieldActionEnum = {}));
+var GetUpdateDefaultSearchFieldVersionEnum;
 (function (GetUpdateDefaultSearchFieldVersionEnum) {
     GetUpdateDefaultSearchFieldVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(GetUpdateDefaultSearchFieldVersionEnum || (GetUpdateDefaultSearchFieldVersionEnum = {}));
+})(GetUpdateDefaultSearchFieldVersionEnum = exports.GetUpdateDefaultSearchFieldVersionEnum || (exports.GetUpdateDefaultSearchFieldVersionEnum = {}));
 var GetUpdateDefaultSearchFieldQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateDefaultSearchFieldQueryParams, _super);
     function GetUpdateDefaultSearchFieldQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DefaultSearchField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DefaultSearchField" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldQueryParams.prototype, "defaultSearchField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldQueryParams.prototype, "version", void 0);
     return GetUpdateDefaultSearchFieldQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateDefaultSearchFieldQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateDefaultSearchFieldQueryParams = GetUpdateDefaultSearchFieldQueryParams;
 var GetUpdateDefaultSearchFieldHeaders = /** @class */ (function (_super) {
     __extends(GetUpdateDefaultSearchFieldHeaders, _super);
     function GetUpdateDefaultSearchFieldHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetUpdateDefaultSearchFieldHeaders;
-}(SpeakeasyBase));
-export { GetUpdateDefaultSearchFieldHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateDefaultSearchFieldHeaders = GetUpdateDefaultSearchFieldHeaders;
 var GetUpdateDefaultSearchFieldRequest = /** @class */ (function (_super) {
     __extends(GetUpdateDefaultSearchFieldRequest, _super);
     function GetUpdateDefaultSearchFieldRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateDefaultSearchFieldQueryParams)
     ], GetUpdateDefaultSearchFieldRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateDefaultSearchFieldHeaders)
     ], GetUpdateDefaultSearchFieldRequest.prototype, "headers", void 0);
     return GetUpdateDefaultSearchFieldRequest;
-}(SpeakeasyBase));
-export { GetUpdateDefaultSearchFieldRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateDefaultSearchFieldRequest = GetUpdateDefaultSearchFieldRequest;
 var GetUpdateDefaultSearchFieldResponse = /** @class */ (function (_super) {
     __extends(GetUpdateDefaultSearchFieldResponse, _super);
     function GetUpdateDefaultSearchFieldResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateDefaultSearchFieldResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateDefaultSearchFieldResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateDefaultSearchFieldResponse.prototype, "statusCode", void 0);
     return GetUpdateDefaultSearchFieldResponse;
-}(SpeakeasyBase));
-export { GetUpdateDefaultSearchFieldResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateDefaultSearchFieldResponse = GetUpdateDefaultSearchFieldResponse;

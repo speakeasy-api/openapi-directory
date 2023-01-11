@@ -35,7 +35,7 @@ export class CreateAccessPreviewRequestBody extends SpeakeasyBase {
   clientToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=configurations", elemType: shared.Configuration })
-  configurations: Map<string, shared.Configuration>;
+  configurations: Record<string, shared.Configuration>;
 }
 
 

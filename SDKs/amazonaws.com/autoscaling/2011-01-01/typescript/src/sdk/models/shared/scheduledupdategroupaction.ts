@@ -26,7 +26,7 @@ export class ScheduledUpdateGroupAction extends SpeakeasyBase {
   recurrence?: string;
 
   @SpeakeasyMetadata()
-  scheduledActionArn?: string;
+  scheduledActionARN?: string;
 
   @SpeakeasyMetadata()
   scheduledActionName?: string;

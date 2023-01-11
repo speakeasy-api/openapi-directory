@@ -145,7 +145,7 @@ export class StorageObjectsGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: shared.Object;
+  object?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   statusCode: number;

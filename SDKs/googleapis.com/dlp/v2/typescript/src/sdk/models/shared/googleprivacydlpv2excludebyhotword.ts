@@ -6,7 +6,7 @@ import { GooglePrivacyDlpV2Proximity } from "./googleprivacydlpv2proximity";
 
 // GooglePrivacyDlpV2ExcludeByHotword
 /** 
- * The rule to exclude findings based on a hotword. For record inspection of tables, column names are considered hotwords. An example of this is to exclude a finding if a BigQuery column matches a specific pattern.
+ * The rule to exclude findings based on a hotword. For record inspection of tables, column names are considered hotwords. An example of this is to exclude a finding if it belongs to a BigQuery column that matches a specific pattern.
 **/
 export class GooglePrivacyDlpV2ExcludeByHotword extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=hotwordRegex" })

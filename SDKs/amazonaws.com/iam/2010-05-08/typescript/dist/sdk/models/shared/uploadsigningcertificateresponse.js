@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SigningCertificate } from "./signingcertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadSigningCertificateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var signingcertificate_1 = require("./signingcertificate");
 // UploadSigningCertificateResponse
 /**
  * Contains the response to a successful <a>UploadSigningCertificate</a> request.
@@ -34,9 +37,9 @@ var UploadSigningCertificateResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SigningCertificate)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", signingcertificate_1.SigningCertificate)
     ], UploadSigningCertificateResponse.prototype, "certificate", void 0);
     return UploadSigningCertificateResponse;
-}(SpeakeasyBase));
-export { UploadSigningCertificateResponse };
+}(utils_1.SpeakeasyBase));
+exports.UploadSigningCertificateResponse = UploadSigningCertificateResponse;

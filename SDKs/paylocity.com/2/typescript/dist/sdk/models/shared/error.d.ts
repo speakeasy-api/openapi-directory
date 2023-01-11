@@ -9,7 +9,7 @@ export declare class ErrorOptions extends SpeakeasyBase {
 /**
  * The error model
 **/
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     field?: string;
     message?: string;
     options?: ErrorOptions[];

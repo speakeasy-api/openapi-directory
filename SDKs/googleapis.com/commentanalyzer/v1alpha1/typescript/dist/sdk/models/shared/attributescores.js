@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpanScore } from "./spanscore";
-import { Score } from "./score";
-// AttributeScores
-/**
- * This holds score values for a single attribute. It contains both per-span scores as well as an overall summary score..
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeScores = void 0;
+var utils_1 = require("../../../internal/utils");
+var spanscore_1 = require("./spanscore");
+var score_1 = require("./score");
 var AttributeScores = /** @class */ (function (_super) {
     __extends(AttributeScores, _super);
     function AttributeScores() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spanScores", elemType: SpanScore }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spanScores", elemType: spanscore_1.SpanScore }),
         __metadata("design:type", Array)
     ], AttributeScores.prototype, "spanScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summaryScore" }),
-        __metadata("design:type", Score)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summaryScore" }),
+        __metadata("design:type", score_1.Score)
     ], AttributeScores.prototype, "summaryScore", void 0);
     return AttributeScores;
-}(SpeakeasyBase));
-export { AttributeScores };
+}(utils_1.SpeakeasyBase));
+exports.AttributeScores = AttributeScores;

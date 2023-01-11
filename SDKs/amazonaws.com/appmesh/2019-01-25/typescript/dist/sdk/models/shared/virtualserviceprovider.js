@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualNodeServiceProvider } from "./virtualnodeserviceprovider";
-import { VirtualRouterServiceProvider } from "./virtualrouterserviceprovider";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualServiceProvider = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualnodeserviceprovider_1 = require("./virtualnodeserviceprovider");
+var virtualrouterserviceprovider_1 = require("./virtualrouterserviceprovider");
 // VirtualServiceProvider
 /**
  * An object that represents the provider for a virtual service.
@@ -35,13 +38,13 @@ var VirtualServiceProvider = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualNode" }),
-        __metadata("design:type", VirtualNodeServiceProvider)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualNode" }),
+        __metadata("design:type", virtualnodeserviceprovider_1.VirtualNodeServiceProvider)
     ], VirtualServiceProvider.prototype, "virtualNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualRouter" }),
-        __metadata("design:type", VirtualRouterServiceProvider)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualRouter" }),
+        __metadata("design:type", virtualrouterserviceprovider_1.VirtualRouterServiceProvider)
     ], VirtualServiceProvider.prototype, "virtualRouter", void 0);
     return VirtualServiceProvider;
-}(SpeakeasyBase));
-export { VirtualServiceProvider };
+}(utils_1.SpeakeasyBase));
+exports.VirtualServiceProvider = VirtualServiceProvider;

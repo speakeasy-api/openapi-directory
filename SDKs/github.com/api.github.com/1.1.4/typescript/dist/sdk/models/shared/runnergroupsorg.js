@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunnerGroupsOrg = void 0;
+var utils_1 = require("../../../internal/utils");
 var RunnerGroupsOrg = /** @class */ (function (_super) {
     __extends(RunnerGroupsOrg, _super);
     function RunnerGroupsOrg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allows_public_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allows_public_repositories" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsOrg.prototype, "allowsPublicRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsOrg.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RunnerGroupsOrg.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inherited" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inherited" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsOrg.prototype, "inherited", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inherited_allows_public_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inherited_allows_public_repositories" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsOrg.prototype, "inheritedAllowsPublicRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RunnerGroupsOrg.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runners_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runners_url" }),
         __metadata("design:type", String)
     ], RunnerGroupsOrg.prototype, "runnersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_repositories_url" }),
         __metadata("design:type", String)
     ], RunnerGroupsOrg.prototype, "selectedRepositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], RunnerGroupsOrg.prototype, "visibility", void 0);
     return RunnerGroupsOrg;
-}(SpeakeasyBase));
-export { RunnerGroupsOrg };
+}(utils_1.SpeakeasyBase));
+exports.RunnerGroupsOrg = RunnerGroupsOrg;

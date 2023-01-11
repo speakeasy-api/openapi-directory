@@ -7,7 +7,7 @@ import { SentimentAnalysisSettings } from "./sentimentanalysissettings";
 export declare class DescribeBotAliasResponse extends SpeakeasyBase {
     botAliasHistoryEvents?: BotAliasHistoryEvent[];
     botAliasId?: string;
-    botAliasLocaleSettings?: Map<string, BotAliasLocaleSettings>;
+    botAliasLocaleSettings?: Record<string, BotAliasLocaleSettings>;
     botAliasName?: string;
     botAliasStatus?: BotAliasStatusEnum;
     botId?: string;

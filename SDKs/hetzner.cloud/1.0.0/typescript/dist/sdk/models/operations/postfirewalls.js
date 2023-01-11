@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostFirewallsResponse = exports.PostFirewallsRequest = exports.PostFirewallsCreateFirewallResponse = exports.PostFirewallsCreateFirewallResponseFirewall = exports.PostFirewallsCreateFirewallResponseFirewallRule = exports.PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum = exports.PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum = exports.PostFirewallsCreateFirewallResponseFirewallAppliedTo = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToServer = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer = exports.PostFirewallsCreateFirewallResponseAction = exports.PostFirewallsCreateFirewallResponseActionStatusEnum = exports.PostFirewallsCreateFirewallResponseActionResources = exports.PostFirewallsCreateFirewallResponseActionError = exports.PostFirewallsCreateFirewallRequest = exports.PostFirewallsCreateFirewallRequestRule = exports.PostFirewallsCreateFirewallRequestRuleProtocolEnum = exports.PostFirewallsCreateFirewallRequestRuleDirectionEnum = exports.PostFirewallsCreateFirewallRequestApplyTo = exports.PostFirewallsCreateFirewallRequestApplyToTypeEnum = exports.PostFirewallsCreateFirewallRequestApplyToServer = exports.PostFirewallsCreateFirewallRequestApplyToLabelSelector = void 0;
+var utils_1 = require("../../../internal/utils");
 // PostFirewallsCreateFirewallRequestApplyToLabelSelector
 /**
  * Configuration for type LabelSelector, required if type is `label_selector`
@@ -33,12 +36,12 @@ var PostFirewallsCreateFirewallRequestApplyToLabelSelector = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selector" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestApplyToLabelSelector.prototype, "selector", void 0);
     return PostFirewallsCreateFirewallRequestApplyToLabelSelector;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallRequestApplyToLabelSelector };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallRequestApplyToLabelSelector = PostFirewallsCreateFirewallRequestApplyToLabelSelector;
 // PostFirewallsCreateFirewallRequestApplyToServer
 /**
  * Configuration for type Server, required if type is `server`
@@ -49,106 +52,106 @@ var PostFirewallsCreateFirewallRequestApplyToServer = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallRequestApplyToServer.prototype, "id", void 0);
     return PostFirewallsCreateFirewallRequestApplyToServer;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallRequestApplyToServer };
-export var PostFirewallsCreateFirewallRequestApplyToTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallRequestApplyToServer = PostFirewallsCreateFirewallRequestApplyToServer;
+var PostFirewallsCreateFirewallRequestApplyToTypeEnum;
 (function (PostFirewallsCreateFirewallRequestApplyToTypeEnum) {
     PostFirewallsCreateFirewallRequestApplyToTypeEnum["Server"] = "server";
     PostFirewallsCreateFirewallRequestApplyToTypeEnum["LabelSelector"] = "label_selector";
-})(PostFirewallsCreateFirewallRequestApplyToTypeEnum || (PostFirewallsCreateFirewallRequestApplyToTypeEnum = {}));
+})(PostFirewallsCreateFirewallRequestApplyToTypeEnum = exports.PostFirewallsCreateFirewallRequestApplyToTypeEnum || (exports.PostFirewallsCreateFirewallRequestApplyToTypeEnum = {}));
 var PostFirewallsCreateFirewallRequestApplyTo = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallRequestApplyTo, _super);
     function PostFirewallsCreateFirewallRequestApplyTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label_selector" }),
         __metadata("design:type", PostFirewallsCreateFirewallRequestApplyToLabelSelector)
     ], PostFirewallsCreateFirewallRequestApplyTo.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", PostFirewallsCreateFirewallRequestApplyToServer)
     ], PostFirewallsCreateFirewallRequestApplyTo.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestApplyTo.prototype, "type", void 0);
     return PostFirewallsCreateFirewallRequestApplyTo;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallRequestApplyTo };
-export var PostFirewallsCreateFirewallRequestRuleDirectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallRequestApplyTo = PostFirewallsCreateFirewallRequestApplyTo;
+var PostFirewallsCreateFirewallRequestRuleDirectionEnum;
 (function (PostFirewallsCreateFirewallRequestRuleDirectionEnum) {
     PostFirewallsCreateFirewallRequestRuleDirectionEnum["In"] = "in";
     PostFirewallsCreateFirewallRequestRuleDirectionEnum["Out"] = "out";
-})(PostFirewallsCreateFirewallRequestRuleDirectionEnum || (PostFirewallsCreateFirewallRequestRuleDirectionEnum = {}));
-export var PostFirewallsCreateFirewallRequestRuleProtocolEnum;
+})(PostFirewallsCreateFirewallRequestRuleDirectionEnum = exports.PostFirewallsCreateFirewallRequestRuleDirectionEnum || (exports.PostFirewallsCreateFirewallRequestRuleDirectionEnum = {}));
+var PostFirewallsCreateFirewallRequestRuleProtocolEnum;
 (function (PostFirewallsCreateFirewallRequestRuleProtocolEnum) {
     PostFirewallsCreateFirewallRequestRuleProtocolEnum["Tcp"] = "tcp";
     PostFirewallsCreateFirewallRequestRuleProtocolEnum["Udp"] = "udp";
     PostFirewallsCreateFirewallRequestRuleProtocolEnum["Icmp"] = "icmp";
     PostFirewallsCreateFirewallRequestRuleProtocolEnum["Esp"] = "esp";
     PostFirewallsCreateFirewallRequestRuleProtocolEnum["Gre"] = "gre";
-})(PostFirewallsCreateFirewallRequestRuleProtocolEnum || (PostFirewallsCreateFirewallRequestRuleProtocolEnum = {}));
+})(PostFirewallsCreateFirewallRequestRuleProtocolEnum = exports.PostFirewallsCreateFirewallRequestRuleProtocolEnum || (exports.PostFirewallsCreateFirewallRequestRuleProtocolEnum = {}));
 var PostFirewallsCreateFirewallRequestRule = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallRequestRule, _super);
     function PostFirewallsCreateFirewallRequestRule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_ips" }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "destinationIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_ips" }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallRequestRule.prototype, "sourceIps", void 0);
     return PostFirewallsCreateFirewallRequestRule;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallRequestRule };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallRequestRule = PostFirewallsCreateFirewallRequestRule;
 var PostFirewallsCreateFirewallRequest = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallRequest, _super);
     function PostFirewallsCreateFirewallRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apply_to", elemType: PostFirewallsCreateFirewallRequestApplyTo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apply_to", elemType: PostFirewallsCreateFirewallRequestApplyTo }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallRequest.prototype, "applyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostFirewallsCreateFirewallRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: PostFirewallsCreateFirewallRequestRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: PostFirewallsCreateFirewallRequestRule }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallRequest.prototype, "rules", void 0);
     return PostFirewallsCreateFirewallRequest;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallRequest = PostFirewallsCreateFirewallRequest;
 // PostFirewallsCreateFirewallResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -159,285 +162,285 @@ var PostFirewallsCreateFirewallResponseActionError = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseActionError.prototype, "message", void 0);
     return PostFirewallsCreateFirewallResponseActionError;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseActionError = PostFirewallsCreateFirewallResponseActionError;
 var PostFirewallsCreateFirewallResponseActionResources = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseActionResources, _super);
     function PostFirewallsCreateFirewallResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseActionResources.prototype, "type", void 0);
     return PostFirewallsCreateFirewallResponseActionResources;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseActionResources };
-export var PostFirewallsCreateFirewallResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseActionResources = PostFirewallsCreateFirewallResponseActionResources;
+var PostFirewallsCreateFirewallResponseActionStatusEnum;
 (function (PostFirewallsCreateFirewallResponseActionStatusEnum) {
     PostFirewallsCreateFirewallResponseActionStatusEnum["Success"] = "success";
     PostFirewallsCreateFirewallResponseActionStatusEnum["Running"] = "running";
     PostFirewallsCreateFirewallResponseActionStatusEnum["Error"] = "error";
-})(PostFirewallsCreateFirewallResponseActionStatusEnum || (PostFirewallsCreateFirewallResponseActionStatusEnum = {}));
+})(PostFirewallsCreateFirewallResponseActionStatusEnum = exports.PostFirewallsCreateFirewallResponseActionStatusEnum || (exports.PostFirewallsCreateFirewallResponseActionStatusEnum = {}));
 var PostFirewallsCreateFirewallResponseAction = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseAction, _super);
     function PostFirewallsCreateFirewallResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostFirewallsCreateFirewallResponseActionError)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostFirewallsCreateFirewallResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostFirewallsCreateFirewallResponseActionResources }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseAction.prototype, "status", void 0);
     return PostFirewallsCreateFirewallResponseAction;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseAction = PostFirewallsCreateFirewallResponseAction;
 var PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer, _super);
     function PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer.prototype, "id", void 0);
     return PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer };
-export var PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer = PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer;
+var PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum;
 (function (PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum) {
     PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum["Server"] = "server";
-})(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum || (PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = {}));
+})(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum || (exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = {}));
 var PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources, _super);
     function PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesServer)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources.prototype, "type", void 0);
     return PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources = PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources;
 var PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector, _super);
     function PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selector" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector.prototype, "selector", void 0);
     return PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector = PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector;
 var PostFirewallsCreateFirewallResponseFirewallAppliedToServer = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallAppliedToServer, _super);
     function PostFirewallsCreateFirewallResponseFirewallAppliedToServer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedToServer.prototype, "id", void 0);
     return PostFirewallsCreateFirewallResponseFirewallAppliedToServer;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallAppliedToServer };
-export var PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallAppliedToServer = PostFirewallsCreateFirewallResponseFirewallAppliedToServer;
+var PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum;
 (function (PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum) {
     PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum["Server"] = "server";
     PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum["LabelSelector"] = "label_selector";
-})(PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum || (PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum = {}));
+})(PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum = exports.PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum || (exports.PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum = {}));
 var PostFirewallsCreateFirewallResponseFirewallAppliedTo = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallAppliedTo, _super);
     function PostFirewallsCreateFirewallResponseFirewallAppliedTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applied_to_resources", elemType: PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applied_to_resources", elemType: PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResources }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedTo.prototype, "appliedToResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label_selector" }),
         __metadata("design:type", PostFirewallsCreateFirewallResponseFirewallAppliedToLabelSelector)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedTo.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", PostFirewallsCreateFirewallResponseFirewallAppliedToServer)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedTo.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallAppliedTo.prototype, "type", void 0);
     return PostFirewallsCreateFirewallResponseFirewallAppliedTo;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallAppliedTo };
-export var PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallAppliedTo = PostFirewallsCreateFirewallResponseFirewallAppliedTo;
+var PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum;
 (function (PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum) {
     PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum["In"] = "in";
     PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum["Out"] = "out";
-})(PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum || (PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum = {}));
-export var PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum;
+})(PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum = exports.PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum || (exports.PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum = {}));
+var PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum;
 (function (PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum) {
     PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum["Tcp"] = "tcp";
     PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum["Udp"] = "udp";
     PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum["Icmp"] = "icmp";
     PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum["Esp"] = "esp";
     PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum["Gre"] = "gre";
-})(PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum || (PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum = {}));
+})(PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum = exports.PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum || (exports.PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum = {}));
 var PostFirewallsCreateFirewallResponseFirewallRule = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewallRule, _super);
     function PostFirewallsCreateFirewallResponseFirewallRule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_ips" }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "destinationIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_ips" }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseFirewallRule.prototype, "sourceIps", void 0);
     return PostFirewallsCreateFirewallResponseFirewallRule;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewallRule };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewallRule = PostFirewallsCreateFirewallResponseFirewallRule;
 var PostFirewallsCreateFirewallResponseFirewall = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponseFirewall, _super);
     function PostFirewallsCreateFirewallResponseFirewall() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applied_to", elemType: PostFirewallsCreateFirewallResponseFirewallAppliedTo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applied_to", elemType: PostFirewallsCreateFirewallResponseFirewallAppliedTo }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "appliedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: PostFirewallsCreateFirewallResponseFirewallRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: PostFirewallsCreateFirewallResponseFirewallRule }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponseFirewall.prototype, "rules", void 0);
     return PostFirewallsCreateFirewallResponseFirewall;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponseFirewall };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponseFirewall = PostFirewallsCreateFirewallResponseFirewall;
 var PostFirewallsCreateFirewallResponse = /** @class */ (function (_super) {
     __extends(PostFirewallsCreateFirewallResponse, _super);
     function PostFirewallsCreateFirewallResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: PostFirewallsCreateFirewallResponseAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: PostFirewallsCreateFirewallResponseAction }),
         __metadata("design:type", Array)
     ], PostFirewallsCreateFirewallResponse.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewall" }),
         __metadata("design:type", PostFirewallsCreateFirewallResponseFirewall)
     ], PostFirewallsCreateFirewallResponse.prototype, "firewall", void 0);
     return PostFirewallsCreateFirewallResponse;
-}(SpeakeasyBase));
-export { PostFirewallsCreateFirewallResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsCreateFirewallResponse = PostFirewallsCreateFirewallResponse;
 var PostFirewallsRequest = /** @class */ (function (_super) {
     __extends(PostFirewallsRequest, _super);
     function PostFirewallsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostFirewallsCreateFirewallRequest)
     ], PostFirewallsRequest.prototype, "request", void 0);
     return PostFirewallsRequest;
-}(SpeakeasyBase));
-export { PostFirewallsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsRequest = PostFirewallsRequest;
 var PostFirewallsResponse = /** @class */ (function (_super) {
     __extends(PostFirewallsResponse, _super);
     function PostFirewallsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostFirewallsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFirewallsCreateFirewallResponse)
     ], PostFirewallsResponse.prototype, "createFirewallResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostFirewallsResponse.prototype, "statusCode", void 0);
     return PostFirewallsResponse;
-}(SpeakeasyBase));
-export { PostFirewallsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsResponse = PostFirewallsResponse;

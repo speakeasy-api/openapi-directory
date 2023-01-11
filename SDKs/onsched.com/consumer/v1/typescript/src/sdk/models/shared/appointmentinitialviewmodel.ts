@@ -29,7 +29,7 @@ export class AppointmentInitialViewModel extends SpeakeasyBase {
   createDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=customFields", elemType: CustomFieldViewModel })
-  customFields?: Map<string, CustomFieldViewModel>;
+  customFields?: Record<string, CustomFieldViewModel>;
 
   @SpeakeasyMetadata({ data: "json, name=customerId" })
   customerId?: string;

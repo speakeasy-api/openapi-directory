@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PersonResponse } from "./personresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateContactsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var personresponse_1 = require("./personresponse");
 // BatchUpdateContactsResponse
 /**
  * If not successful, returns BatchUpdateContactsErrorDetails, a list of errors corresponding to each contact. The response to a request to update a batch of contacts.
@@ -34,9 +37,9 @@ var BatchUpdateContactsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateResult", elemType: PersonResponse }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateResult", elemType: personresponse_1.PersonResponse }),
+        __metadata("design:type", Object)
     ], BatchUpdateContactsResponse.prototype, "updateResult", void 0);
     return BatchUpdateContactsResponse;
-}(SpeakeasyBase));
-export { BatchUpdateContactsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateContactsResponse = BatchUpdateContactsResponse;

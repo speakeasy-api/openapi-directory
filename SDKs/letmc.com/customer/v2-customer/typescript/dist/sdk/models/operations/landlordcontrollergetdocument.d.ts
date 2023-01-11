@@ -13,6 +13,6 @@ export declare class LandlordControllerGetDocumentRequest extends SpeakeasyBase 
 export declare class LandlordControllerGetDocumentResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

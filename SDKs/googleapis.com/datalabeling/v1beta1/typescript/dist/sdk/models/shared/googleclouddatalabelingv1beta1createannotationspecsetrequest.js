@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpecSet } from "./googleclouddatalabelingv1beta1annotationspecset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspecset_1 = require("./googleclouddatalabelingv1beta1annotationspecset");
 // GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest
 /**
  * Request message for CreateAnnotationSpecSet.
@@ -34,9 +37,9 @@ var GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpecSet" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1AnnotationSpecSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpecSet" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1annotationspecset_1.GoogleCloudDatalabelingV1beta1AnnotationSpecSet)
     ], GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest.prototype, "annotationSpecSet", void 0);
     return GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest = GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;

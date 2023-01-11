@@ -8,13 +8,13 @@ export class PostBehaviorsWebhookTestRequestBody extends SpeakeasyBase {
   action?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=body;json=true" })
-  body?: Map<string, any>;
+  body?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=encoding" })
   encoding?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=headers;json=true" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=method" })
   method?: string;

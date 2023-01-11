@@ -23,11 +23,11 @@ export declare class MemcacheProjectsLocationsOperationsCancelSecurity extends S
 export declare class MemcacheProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: MemcacheProjectsLocationsOperationsCancelPathParams;
     queryParams: MemcacheProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: MemcacheProjectsLocationsOperationsCancelSecurity;
 }
 export declare class MemcacheProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

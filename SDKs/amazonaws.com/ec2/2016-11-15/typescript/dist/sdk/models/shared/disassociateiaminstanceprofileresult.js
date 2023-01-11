@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IamInstanceProfileAssociation } from "./iaminstanceprofileassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateIamInstanceProfileResult = exports.DisassociateIamInstanceProfileResultIamInstanceProfileAssociation = exports.DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+// DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile
+/**
+ * The IAM instance profile.
+**/
+var DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile = /** @class */ (function (_super) {
+    __extends(DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile, _super);
+    function DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile.prototype, "arn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile.prototype, "id", void 0);
+    return DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile;
+}(utils_1.SpeakeasyBase));
+exports.DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile = DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile;
+// DisassociateIamInstanceProfileResultIamInstanceProfileAssociation
+/**
+ * Information about the IAM instance profile association.
+**/
+var DisassociateIamInstanceProfileResultIamInstanceProfileAssociation = /** @class */ (function (_super) {
+    __extends(DisassociateIamInstanceProfileResultIamInstanceProfileAssociation, _super);
+    function DisassociateIamInstanceProfileResultIamInstanceProfileAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociation.prototype, "associationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociation.prototype, "iamInstanceProfile", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociation.prototype, "instanceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociation.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateIamInstanceProfileResultIamInstanceProfileAssociation.prototype, "timestamp", void 0);
+    return DisassociateIamInstanceProfileResultIamInstanceProfileAssociation;
+}(utils_1.SpeakeasyBase));
+exports.DisassociateIamInstanceProfileResultIamInstanceProfileAssociation = DisassociateIamInstanceProfileResultIamInstanceProfileAssociation;
 var DisassociateIamInstanceProfileResult = /** @class */ (function (_super) {
     __extends(DisassociateIamInstanceProfileResult, _super);
     function DisassociateIamInstanceProfileResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", IamInstanceProfileAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisassociateIamInstanceProfileResultIamInstanceProfileAssociation)
     ], DisassociateIamInstanceProfileResult.prototype, "iamInstanceProfileAssociation", void 0);
     return DisassociateIamInstanceProfileResult;
-}(SpeakeasyBase));
-export { DisassociateIamInstanceProfileResult };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateIamInstanceProfileResult = DisassociateIamInstanceProfileResult;

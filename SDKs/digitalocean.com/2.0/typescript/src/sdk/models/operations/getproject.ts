@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetProjectPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
   projectId: string;
 }
 
 
-export class GetProjectRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetProjectPathParams;
-}
-
-
 export class GetProject401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetProjectRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetProjectPathParams;
+}
+
+
 export class GetProjectResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getProject200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  getProject200ApplicationJSONAny?: any;
 
-  @Metadata()
-  getProject401ApplicationJsonObject?: GetProject401ApplicationJson;
+  @SpeakeasyMetadata()
+  getProject401ApplicationJSONObject?: GetProject401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

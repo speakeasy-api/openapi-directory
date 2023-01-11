@@ -57,5 +57,5 @@ export class CheckDomainAvailabilityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

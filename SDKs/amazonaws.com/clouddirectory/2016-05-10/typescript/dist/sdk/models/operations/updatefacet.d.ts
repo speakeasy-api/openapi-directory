@@ -37,6 +37,6 @@ export declare class UpdateFacetResponse extends SpeakeasyBase {
     resourceNotFoundException?: shared.ResourceNotFoundException;
     retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
-    updateFacetResponse?: Map<string, any>;
+    updateFacetResponse?: Record<string, any>;
     validationException?: shared.ValidationException;
 }

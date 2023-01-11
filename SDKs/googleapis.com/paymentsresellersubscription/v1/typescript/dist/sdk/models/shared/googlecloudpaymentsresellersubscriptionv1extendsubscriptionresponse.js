@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse = /** @class */ (function (_super) {
     __extends(GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse, _super);
     function GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycleEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycleEndTime" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse.prototype, "cycleEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeTrialEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeTrialEndTime" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse.prototype, "freeTrialEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewalTime" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse.prototype, "renewalTime", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse = GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse;

@@ -34,5 +34,5 @@ export class SignConfirmResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  signConfirm202ApplicationJsonObject?: SignConfirm202ApplicationJson;
+  signConfirm202ApplicationJSONObject?: SignConfirm202ApplicationJson;
 }

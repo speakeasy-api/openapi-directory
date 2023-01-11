@@ -15,7 +15,7 @@ export declare class GetApiVVersionCurrenciesSummaryRequest extends SpeakeasyBas
 export declare class GetApiVVersionCurrenciesSummaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
     summaryResponses?: shared.SummaryResponse[];
 }

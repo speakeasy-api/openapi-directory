@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BrlcsRequest, BrlcsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: BrlcsRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certificateNumber: "voluptates",
+      certificateNumber: "sit",
     },
-    consentArtifact: "nihil",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "recusandae",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.brlcs(req).then((res: BrlcsResponse | AxiosError) => {
+sdk.apIs.brlcs(req).then((res: BrlcsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.brlcs(req).then((res: BrlcsResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `brlcs` - Bar License
 * `dpcer` - Dependency Certificate

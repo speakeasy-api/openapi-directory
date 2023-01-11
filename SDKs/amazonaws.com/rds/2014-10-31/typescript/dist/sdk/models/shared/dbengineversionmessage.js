@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbEngineVersion } from "./dbengineversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbEngineVersionMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbengineversionlist_1 = require("./dbengineversionlist");
 // DbEngineVersionMessage
 /**
  *  Contains the result of a successful invocation of the <code>DescribeDBEngineVersions</code> action.
@@ -34,13 +37,13 @@ var DbEngineVersionMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DbEngineVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbengineversionlist_1.DbEngineVersionList }),
         __metadata("design:type", Array)
     ], DbEngineVersionMessage.prototype, "dbEngineVersions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbEngineVersionMessage.prototype, "marker", void 0);
     return DbEngineVersionMessage;
-}(SpeakeasyBase));
-export { DbEngineVersionMessage };
+}(utils_1.SpeakeasyBase));
+exports.DbEngineVersionMessage = DbEngineVersionMessage;

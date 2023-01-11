@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CountryEnum } from "./countryenum";
-export var LegalEntityDocumentTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LegalEntity = exports.LegalEntityDocumentTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var countryenum_1 = require("./countryenum");
+var LegalEntityDocumentTypeEnum;
 (function (LegalEntityDocumentTypeEnum) {
     LegalEntityDocumentTypeEnum["Invoice"] = "invoice";
     LegalEntityDocumentTypeEnum["InvoiceResponse"] = "invoice_response";
-})(LegalEntityDocumentTypeEnum || (LegalEntityDocumentTypeEnum = {}));
+})(LegalEntityDocumentTypeEnum = exports.LegalEntityDocumentTypeEnum || (exports.LegalEntityDocumentTypeEnum = {}));
 var LegalEntity = /** @class */ (function (_super) {
     __extends(LegalEntity, _super);
     function LegalEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertisements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertisements" }),
         __metadata("design:type", Array)
     ], LegalEntity.prototype, "advertisements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=county" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "county", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], LegalEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line1" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line2" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party_name" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "partyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=peppol_identifiers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=peppol_identifiers" }),
         __metadata("design:type", Array)
     ], LegalEntity.prototype, "peppolIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], LegalEntity.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant_id" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "tenantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip" }),
         __metadata("design:type", String)
     ], LegalEntity.prototype, "zip", void 0);
     return LegalEntity;
-}(SpeakeasyBase));
-export { LegalEntity };
+}(utils_1.SpeakeasyBase));
+exports.LegalEntity = LegalEntity;

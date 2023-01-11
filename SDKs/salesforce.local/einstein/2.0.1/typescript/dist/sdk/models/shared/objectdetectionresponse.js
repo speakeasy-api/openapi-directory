@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectionResult } from "./detectionresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectDetectionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var detectionresult_1 = require("./detectionresult");
 var ObjectDetectionResponse = /** @class */ (function (_super) {
     __extends(ObjectDetectionResponse, _super);
     function ObjectDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], ObjectDetectionResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilities", elemType: DetectionResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilities", elemType: detectionresult_1.DetectionResult }),
         __metadata("design:type", Array)
     ], ObjectDetectionResponse.prototype, "probabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId" }),
         __metadata("design:type", String)
     ], ObjectDetectionResponse.prototype, "sampleId", void 0);
     return ObjectDetectionResponse;
-}(SpeakeasyBase));
-export { ObjectDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.ObjectDetectionResponse = ObjectDetectionResponse;

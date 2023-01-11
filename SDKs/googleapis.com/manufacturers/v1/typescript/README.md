@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ManufacturersAccountsProductsDeleteRequest, ManufacturersAccountsProductsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: ManufacturersAccountsProductsDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "est",
-    parent: "est",
+    name: "sit",
+    parent: "voluptas",
   },
   queryParams: {
-    dollarXgafv: "1",
-    accessToken: "aut",
-    alt: "json",
-    callback: "aut",
-    fields: "ea",
-    key: "voluptates",
-    oauthToken: "rerum",
-    prettyPrint: true,
-    quotaUser: "aut",
+    dollarXgafv: "2",
+    accessToken: "expedita",
+    alt: "proto",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
     uploadType: "rerum",
-    uploadProtocol: "earum",
+    uploadProtocol: "dicta",
   },
 };
 

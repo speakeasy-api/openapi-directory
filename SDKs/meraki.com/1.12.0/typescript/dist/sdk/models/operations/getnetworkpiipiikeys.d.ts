@@ -17,5 +17,5 @@ export declare class GetNetworkPiiPiiKeysRequest extends SpeakeasyBase {
 export declare class GetNetworkPiiPiiKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkPiiPiiKeys200ApplicationJsonObject?: Map<string, any>;
+    getNetworkPiiPiiKeys200ApplicationJSONObject?: Record<string, any>;
 }

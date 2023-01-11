@@ -80,5 +80,5 @@ export class DcimInterfacesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimInterfacesList200ApplicationJsonObject?: DcimInterfacesList200ApplicationJson;
+  dcimInterfacesList200ApplicationJSONObject?: DcimInterfacesList200ApplicationJson;
 }

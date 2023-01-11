@@ -26,7 +26,7 @@ export class RemoveFollowerForTaskRequestBody extends SpeakeasyBase {
 
 export class RemoveFollowerForTask200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class RemoveFollowerForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeFollowerForTask200ApplicationJsonObject?: RemoveFollowerForTask200ApplicationJson;
+  removeFollowerForTask200ApplicationJSONObject?: RemoveFollowerForTask200ApplicationJson;
 }

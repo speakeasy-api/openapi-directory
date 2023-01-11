@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FamilyInfo = exports.FamilyInfoMembership = void 0;
+var utils_1 = require("../../../internal/utils");
 // FamilyInfoMembership
 /**
  * Family membership info of the user that made the request.
@@ -33,41 +36,41 @@ var FamilyInfoMembership = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acquirePermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acquirePermission" }),
         __metadata("design:type", String)
     ], FamilyInfoMembership.prototype, "acquirePermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageGroup" }),
         __metadata("design:type", String)
     ], FamilyInfoMembership.prototype, "ageGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedMaturityRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedMaturityRating" }),
         __metadata("design:type", String)
     ], FamilyInfoMembership.prototype, "allowedMaturityRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isInFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isInFamily" }),
         __metadata("design:type", Boolean)
     ], FamilyInfoMembership.prototype, "isInFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], FamilyInfoMembership.prototype, "role", void 0);
     return FamilyInfoMembership;
-}(SpeakeasyBase));
-export { FamilyInfoMembership };
+}(utils_1.SpeakeasyBase));
+exports.FamilyInfoMembership = FamilyInfoMembership;
 var FamilyInfo = /** @class */ (function (_super) {
     __extends(FamilyInfo, _super);
     function FamilyInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], FamilyInfo.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membership" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membership" }),
         __metadata("design:type", FamilyInfoMembership)
     ], FamilyInfo.prototype, "membership", void 0);
     return FamilyInfo;
-}(SpeakeasyBase));
-export { FamilyInfo };
+}(utils_1.SpeakeasyBase));
+exports.FamilyInfo = FamilyInfo;

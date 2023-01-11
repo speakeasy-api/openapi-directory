@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountEnrollmentStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var statusenum_1 = require("./statusenum");
 // AccountEnrollmentStatus
 /**
  * Describes the enrollment status of an organization's member accounts in Compute Optimizer.
@@ -34,21 +37,21 @@ var AccountEnrollmentStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AccountEnrollmentStatus.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedTimestamp" }),
         __metadata("design:type", Date)
     ], AccountEnrollmentStatus.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AccountEnrollmentStatus.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], AccountEnrollmentStatus.prototype, "statusReason", void 0);
     return AccountEnrollmentStatus;
-}(SpeakeasyBase));
-export { AccountEnrollmentStatus };
+}(utils_1.SpeakeasyBase));
+exports.AccountEnrollmentStatus = AccountEnrollmentStatus;

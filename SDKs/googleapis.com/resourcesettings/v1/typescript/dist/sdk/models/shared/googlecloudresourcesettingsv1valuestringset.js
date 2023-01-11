@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudResourcesettingsV1ValueStringSet = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudResourcesettingsV1ValueStringSet
 /**
  * A string set value that can hold a set of strings. The maximum length of each string is 200 characters and there can be a maximum of 50 strings in the string set.
@@ -33,9 +36,9 @@ var GoogleCloudResourcesettingsV1ValueStringSet = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], GoogleCloudResourcesettingsV1ValueStringSet.prototype, "values", void 0);
     return GoogleCloudResourcesettingsV1ValueStringSet;
-}(SpeakeasyBase));
-export { GoogleCloudResourcesettingsV1ValueStringSet };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudResourcesettingsV1ValueStringSet = GoogleCloudResourcesettingsV1ValueStringSet;

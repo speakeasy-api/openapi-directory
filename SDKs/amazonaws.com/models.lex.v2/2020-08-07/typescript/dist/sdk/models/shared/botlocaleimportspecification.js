@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VoiceSettings } from "./voicesettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotLocaleImportSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var voicesettings_1 = require("./voicesettings");
 // BotLocaleImportSpecification
 /**
  * Provides the bot locale parameters required for importing a bot locale.
@@ -34,25 +37,25 @@ var BotLocaleImportSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], BotLocaleImportSpecification.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], BotLocaleImportSpecification.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], BotLocaleImportSpecification.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nluIntentConfidenceThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nluIntentConfidenceThreshold" }),
         __metadata("design:type", Number)
     ], BotLocaleImportSpecification.prototype, "nluIntentConfidenceThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceSettings" }),
-        __metadata("design:type", VoiceSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceSettings" }),
+        __metadata("design:type", voicesettings_1.VoiceSettings)
     ], BotLocaleImportSpecification.prototype, "voiceSettings", void 0);
     return BotLocaleImportSpecification;
-}(SpeakeasyBase));
-export { BotLocaleImportSpecification };
+}(utils_1.SpeakeasyBase));
+exports.BotLocaleImportSpecification = BotLocaleImportSpecification;

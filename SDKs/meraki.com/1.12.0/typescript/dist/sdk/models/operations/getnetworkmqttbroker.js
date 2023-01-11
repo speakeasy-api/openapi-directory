@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkMqttBrokerResponse = exports.GetNetworkMqttBrokerRequest = exports.GetNetworkMqttBrokerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkMqttBrokerPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkMqttBrokerPathParams, _super);
     function GetNetworkMqttBrokerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
         __metadata("design:type", String)
     ], GetNetworkMqttBrokerPathParams.prototype, "mqttBrokerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkMqttBrokerPathParams.prototype, "networkId", void 0);
     return GetNetworkMqttBrokerPathParams;
-}(SpeakeasyBase));
-export { GetNetworkMqttBrokerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMqttBrokerPathParams = GetNetworkMqttBrokerPathParams;
 var GetNetworkMqttBrokerRequest = /** @class */ (function (_super) {
     __extends(GetNetworkMqttBrokerRequest, _super);
     function GetNetworkMqttBrokerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkMqttBrokerPathParams)
     ], GetNetworkMqttBrokerRequest.prototype, "pathParams", void 0);
     return GetNetworkMqttBrokerRequest;
-}(SpeakeasyBase));
-export { GetNetworkMqttBrokerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMqttBrokerRequest = GetNetworkMqttBrokerRequest;
 var GetNetworkMqttBrokerResponse = /** @class */ (function (_super) {
     __extends(GetNetworkMqttBrokerResponse, _super);
     function GetNetworkMqttBrokerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkMqttBrokerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkMqttBrokerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkMqttBrokerResponse.prototype, "getNetworkMqttBroker200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkMqttBrokerResponse.prototype, "getNetworkMqttBroker200ApplicationJSONObject", void 0);
     return GetNetworkMqttBrokerResponse;
-}(SpeakeasyBase));
-export { GetNetworkMqttBrokerResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMqttBrokerResponse = GetNetworkMqttBrokerResponse;

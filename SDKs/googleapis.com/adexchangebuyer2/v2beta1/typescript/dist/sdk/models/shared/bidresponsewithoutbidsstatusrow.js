@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricValue } from "./metricvalue";
-import { RowDimensions } from "./rowdimensions";
-export var BidResponseWithoutBidsStatusRowStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BidResponseWithoutBidsStatusRow = exports.BidResponseWithoutBidsStatusRowStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricvalue_1 = require("./metricvalue");
+var rowdimensions_1 = require("./rowdimensions");
+var BidResponseWithoutBidsStatusRowStatusEnum;
 (function (BidResponseWithoutBidsStatusRowStatusEnum) {
     BidResponseWithoutBidsStatusRowStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     BidResponseWithoutBidsStatusRowStatusEnum["ResponsesWithoutBids"] = "RESPONSES_WITHOUT_BIDS";
     BidResponseWithoutBidsStatusRowStatusEnum["ResponsesWithoutBidsForAccount"] = "RESPONSES_WITHOUT_BIDS_FOR_ACCOUNT";
     BidResponseWithoutBidsStatusRowStatusEnum["ResponsesWithoutBidsForDeal"] = "RESPONSES_WITHOUT_BIDS_FOR_DEAL";
-})(BidResponseWithoutBidsStatusRowStatusEnum || (BidResponseWithoutBidsStatusRowStatusEnum = {}));
+})(BidResponseWithoutBidsStatusRowStatusEnum = exports.BidResponseWithoutBidsStatusRowStatusEnum || (exports.BidResponseWithoutBidsStatusRowStatusEnum = {}));
 // BidResponseWithoutBidsStatusRow
 /**
  * The number of impressions with the specified dimension values that were considered to have no applicable bids, as described by the specified status.
@@ -42,17 +45,17 @@ var BidResponseWithoutBidsStatusRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionCount" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionCount" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidResponseWithoutBidsStatusRow.prototype, "impressionCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowDimensions" }),
-        __metadata("design:type", RowDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowDimensions" }),
+        __metadata("design:type", rowdimensions_1.RowDimensions)
     ], BidResponseWithoutBidsStatusRow.prototype, "rowDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], BidResponseWithoutBidsStatusRow.prototype, "status", void 0);
     return BidResponseWithoutBidsStatusRow;
-}(SpeakeasyBase));
-export { BidResponseWithoutBidsStatusRow };
+}(utils_1.SpeakeasyBase));
+exports.BidResponseWithoutBidsStatusRow = BidResponseWithoutBidsStatusRow;

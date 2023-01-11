@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationDefinitionCreate = void 0;
+var utils_1 = require("../../../internal/utils");
 var DestinationDefinitionCreate = /** @class */ (function (_super) {
     __extends(DestinationDefinitionCreate, _super);
     function DestinationDefinitionCreate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dockerImageTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dockerImageTag" }),
         __metadata("design:type", String)
     ], DestinationDefinitionCreate.prototype, "dockerImageTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dockerRepository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dockerRepository" }),
         __metadata("design:type", String)
     ], DestinationDefinitionCreate.prototype, "dockerRepository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUrl" }),
         __metadata("design:type", String)
     ], DestinationDefinitionCreate.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon" }),
         __metadata("design:type", String)
     ], DestinationDefinitionCreate.prototype, "icon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DestinationDefinitionCreate.prototype, "name", void 0);
     return DestinationDefinitionCreate;
-}(SpeakeasyBase));
-export { DestinationDefinitionCreate };
+}(utils_1.SpeakeasyBase));
+exports.DestinationDefinitionCreate = DestinationDefinitionCreate;

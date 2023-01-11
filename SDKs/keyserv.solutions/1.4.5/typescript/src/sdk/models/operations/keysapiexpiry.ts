@@ -19,7 +19,7 @@ export class KeysApiExpiryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  keysApiExpiry200ApplicationJsonOneOf?: any;
+  keysApiExpiry200ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

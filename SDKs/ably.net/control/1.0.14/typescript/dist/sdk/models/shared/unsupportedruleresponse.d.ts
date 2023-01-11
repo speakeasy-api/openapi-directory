@@ -15,7 +15,7 @@ export declare class UnsupportedRuleResponseTarget extends SpeakeasyBase {
     url: string;
 }
 export declare class UnsupportedRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

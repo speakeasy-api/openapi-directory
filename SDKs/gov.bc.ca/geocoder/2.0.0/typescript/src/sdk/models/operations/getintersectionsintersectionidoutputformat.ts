@@ -14,7 +14,7 @@ export enum GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum {
 
 export class GetIntersectionsIntersectionIdOutputFormatPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=intersectionID" })
-  intersectionId: string;
+  intersectionID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" })
   outputFormat: GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
@@ -23,7 +23,7 @@ export class GetIntersectionsIntersectionIdOutputFormatPathParams extends Speake
 
 export class GetIntersectionsIntersectionIdOutputFormatQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 }
 
 

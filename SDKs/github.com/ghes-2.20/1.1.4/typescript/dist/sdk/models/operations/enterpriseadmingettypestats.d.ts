@@ -8,5 +8,5 @@ export declare class EnterpriseAdminGetTypeStatsRequest extends SpeakeasyBase {
 export declare class EnterpriseAdminGetTypeStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminGetTypeStats200ApplicationJsonAnyOf?: any;
+    enterpriseAdminGetTypeStats200ApplicationJSONAnyOf?: any;
 }

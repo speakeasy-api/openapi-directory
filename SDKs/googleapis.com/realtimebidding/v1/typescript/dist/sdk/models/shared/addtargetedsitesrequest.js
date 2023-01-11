@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AddTargetedSitesRequestTargetingModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddTargetedSitesRequest = exports.AddTargetedSitesRequestTargetingModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AddTargetedSitesRequestTargetingModeEnum;
 (function (AddTargetedSitesRequestTargetingModeEnum) {
     AddTargetedSitesRequestTargetingModeEnum["TargetingModeUnspecified"] = "TARGETING_MODE_UNSPECIFIED";
     AddTargetedSitesRequestTargetingModeEnum["Inclusive"] = "INCLUSIVE";
     AddTargetedSitesRequestTargetingModeEnum["Exclusive"] = "EXCLUSIVE";
-})(AddTargetedSitesRequestTargetingModeEnum || (AddTargetedSitesRequestTargetingModeEnum = {}));
+})(AddTargetedSitesRequestTargetingModeEnum = exports.AddTargetedSitesRequestTargetingModeEnum || (exports.AddTargetedSitesRequestTargetingModeEnum = {}));
 // AddTargetedSitesRequest
 /**
  * A request to start targeting the provided sites in a specific pretargeting configuration. The pretargeting configuration itself specifies how these sites are targeted in PretargetingConfig.webTargeting.
@@ -39,13 +42,13 @@ var AddTargetedSitesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sites" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sites" }),
         __metadata("design:type", Array)
     ], AddTargetedSitesRequest.prototype, "sites", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetingMode" }),
         __metadata("design:type", String)
     ], AddTargetedSitesRequest.prototype, "targetingMode", void 0);
     return AddTargetedSitesRequest;
-}(SpeakeasyBase));
-export { AddTargetedSitesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddTargetedSitesRequest = AddTargetedSitesRequest;

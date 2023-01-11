@@ -23,7 +23,7 @@ export declare class Site extends SpeakeasyBase {
     contactName?: string;
     contactPhone?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     deviceCount?: number;
     facility?: string;

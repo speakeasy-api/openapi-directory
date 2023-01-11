@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostVisitorIdentificationV3TokensCreateGenerateTokenRequest, PostVisitorIdentificationV3TokensCreateGenerateTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,9 +33,9 @@ const req: PostVisitorIdentificationV3TokensCreateGenerateTokenRequest = {
     },
   },
   request: {
-    email: "harum",
-    firstName: "ratione",
-    lastName: "ad",
+    email: "sit",
+    firstName: "voluptas",
+    lastName: "culpa",
   },
 };
 

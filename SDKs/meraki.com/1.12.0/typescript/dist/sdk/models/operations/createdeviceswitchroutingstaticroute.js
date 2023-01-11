@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeviceSwitchRoutingStaticRouteResponse = exports.CreateDeviceSwitchRoutingStaticRouteRequest = exports.CreateDeviceSwitchRoutingStaticRouteRequestBody = exports.CreateDeviceSwitchRoutingStaticRoutePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDeviceSwitchRoutingStaticRoutePathParams = /** @class */ (function (_super) {
     __extends(CreateDeviceSwitchRoutingStaticRoutePathParams, _super);
     function CreateDeviceSwitchRoutingStaticRoutePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], CreateDeviceSwitchRoutingStaticRoutePathParams.prototype, "serial", void 0);
     return CreateDeviceSwitchRoutingStaticRoutePathParams;
-}(SpeakeasyBase));
-export { CreateDeviceSwitchRoutingStaticRoutePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeviceSwitchRoutingStaticRoutePathParams = CreateDeviceSwitchRoutingStaticRoutePathParams;
 var CreateDeviceSwitchRoutingStaticRouteRequestBody = /** @class */ (function (_super) {
     __extends(CreateDeviceSwitchRoutingStaticRouteRequestBody, _super);
     function CreateDeviceSwitchRoutingStaticRouteRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiseViaOspfEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiseViaOspfEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateDeviceSwitchRoutingStaticRouteRequestBody.prototype, "advertiseViaOspfEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateDeviceSwitchRoutingStaticRouteRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextHopIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextHopIp" }),
         __metadata("design:type", String)
     ], CreateDeviceSwitchRoutingStaticRouteRequestBody.prototype, "nextHopIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferOverOspfRoutesEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferOverOspfRoutesEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateDeviceSwitchRoutingStaticRouteRequestBody.prototype, "preferOverOspfRoutesEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnet" }),
         __metadata("design:type", String)
     ], CreateDeviceSwitchRoutingStaticRouteRequestBody.prototype, "subnet", void 0);
     return CreateDeviceSwitchRoutingStaticRouteRequestBody;
-}(SpeakeasyBase));
-export { CreateDeviceSwitchRoutingStaticRouteRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeviceSwitchRoutingStaticRouteRequestBody = CreateDeviceSwitchRoutingStaticRouteRequestBody;
 var CreateDeviceSwitchRoutingStaticRouteRequest = /** @class */ (function (_super) {
     __extends(CreateDeviceSwitchRoutingStaticRouteRequest, _super);
     function CreateDeviceSwitchRoutingStaticRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDeviceSwitchRoutingStaticRoutePathParams)
     ], CreateDeviceSwitchRoutingStaticRouteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateDeviceSwitchRoutingStaticRouteRequestBody)
     ], CreateDeviceSwitchRoutingStaticRouteRequest.prototype, "request", void 0);
     return CreateDeviceSwitchRoutingStaticRouteRequest;
-}(SpeakeasyBase));
-export { CreateDeviceSwitchRoutingStaticRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeviceSwitchRoutingStaticRouteRequest = CreateDeviceSwitchRoutingStaticRouteRequest;
 var CreateDeviceSwitchRoutingStaticRouteResponse = /** @class */ (function (_super) {
     __extends(CreateDeviceSwitchRoutingStaticRouteResponse, _super);
     function CreateDeviceSwitchRoutingStaticRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateDeviceSwitchRoutingStaticRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateDeviceSwitchRoutingStaticRouteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateDeviceSwitchRoutingStaticRouteResponse.prototype, "createDeviceSwitchRoutingStaticRoute201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateDeviceSwitchRoutingStaticRouteResponse.prototype, "createDeviceSwitchRoutingStaticRoute201ApplicationJSONObject", void 0);
     return CreateDeviceSwitchRoutingStaticRouteResponse;
-}(SpeakeasyBase));
-export { CreateDeviceSwitchRoutingStaticRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeviceSwitchRoutingStaticRouteResponse = CreateDeviceSwitchRoutingStaticRouteResponse;

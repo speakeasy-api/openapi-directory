@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncListItemEnumQueryFromBoundTypeEnum = void 0;
+var SyncListItemEnumQueryFromBoundTypeEnum;
+(function (SyncListItemEnumQueryFromBoundTypeEnum) {
+    SyncListItemEnumQueryFromBoundTypeEnum["Inclusive"] = "inclusive";
+    SyncListItemEnumQueryFromBoundTypeEnum["Exclusive"] = "exclusive";
+})(SyncListItemEnumQueryFromBoundTypeEnum = exports.SyncListItemEnumQueryFromBoundTypeEnum || (exports.SyncListItemEnumQueryFromBoundTypeEnum = {}));

@@ -37,11 +37,11 @@ export class GetNetworkSmDeviceDesktopLogsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDeviceDesktopLogs200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDeviceDesktopLogs200ApplicationJSONObject?: Record<string, any>;
 }

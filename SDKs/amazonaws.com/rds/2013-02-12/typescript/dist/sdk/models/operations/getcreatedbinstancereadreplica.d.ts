@@ -15,7 +15,7 @@ export declare class GetCreateDbInstanceReadReplicaQueryParams extends Speakeasy
     optionGroupName?: string;
     port?: number;
     publiclyAccessible?: boolean;
-    sourceDbInstanceIdentifier: string;
+    sourceDBInstanceIdentifier: string;
     version: GetCreateDbInstanceReadReplicaVersionEnum;
 }
 export declare class GetCreateDbInstanceReadReplicaHeaders extends SpeakeasyBase {

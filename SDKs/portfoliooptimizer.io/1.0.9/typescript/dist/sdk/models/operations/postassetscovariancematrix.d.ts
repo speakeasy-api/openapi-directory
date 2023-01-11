@@ -23,6 +23,6 @@ export declare class PostAssetsCovarianceMatrixRequest extends SpeakeasyBase {
 }
 export declare class PostAssetsCovarianceMatrixResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCovarianceMatrix200ApplicationJsonObject?: PostAssetsCovarianceMatrix200ApplicationJson;
     statusCode: number;
+    postAssetsCovarianceMatrix200ApplicationJSONObject?: PostAssetsCovarianceMatrix200ApplicationJson;
 }

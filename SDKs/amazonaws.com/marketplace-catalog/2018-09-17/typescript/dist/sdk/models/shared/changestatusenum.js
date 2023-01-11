@@ -1,8 +1,11 @@
-export var ChangeStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeStatusEnum = void 0;
+var ChangeStatusEnum;
 (function (ChangeStatusEnum) {
     ChangeStatusEnum["Preparing"] = "PREPARING";
     ChangeStatusEnum["Applying"] = "APPLYING";
     ChangeStatusEnum["Succeeded"] = "SUCCEEDED";
     ChangeStatusEnum["Cancelled"] = "CANCELLED";
     ChangeStatusEnum["Failed"] = "FAILED";
-})(ChangeStatusEnum || (ChangeStatusEnum = {}));
+})(ChangeStatusEnum = exports.ChangeStatusEnum || (exports.ChangeStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoreExistsResponse = exports.StoreExistsRequest = exports.StoreExistsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoreExistsPathParams = /** @class */ (function (_super) {
     __extends(StoreExistsPathParams, _super);
     function StoreExistsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=var" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=var" }),
         __metadata("design:type", String)
     ], StoreExistsPathParams.prototype, "var", void 0);
     return StoreExistsPathParams;
-}(SpeakeasyBase));
-export { StoreExistsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoreExistsPathParams = StoreExistsPathParams;
 var StoreExistsRequest = /** @class */ (function (_super) {
     __extends(StoreExistsRequest, _super);
     function StoreExistsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoreExistsPathParams)
     ], StoreExistsRequest.prototype, "pathParams", void 0);
     return StoreExistsRequest;
-}(SpeakeasyBase));
-export { StoreExistsRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoreExistsRequest = StoreExistsRequest;
 var StoreExistsResponse = /** @class */ (function (_super) {
     __extends(StoreExistsResponse, _super);
     function StoreExistsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoreExistsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoreExistsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], StoreExistsResponse.prototype, "storeExists200ApplicationJsonString", void 0);
+    ], StoreExistsResponse.prototype, "storeExists200ApplicationJSONString", void 0);
     return StoreExistsResponse;
-}(SpeakeasyBase));
-export { StoreExistsResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoreExistsResponse = StoreExistsResponse;

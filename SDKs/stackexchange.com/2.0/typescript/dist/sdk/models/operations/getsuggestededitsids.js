@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,115 +23,117 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSuggestedEditsIdsResponse = exports.GetSuggestedEditsIdsRequest = exports.GetSuggestedEditsIdsQueryParams = exports.GetSuggestedEditsIdsSortEnum = exports.GetSuggestedEditsIdsOrderEnum = exports.GetSuggestedEditsIdsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSuggestedEditsIdsPathParams = /** @class */ (function (_super) {
     __extends(GetSuggestedEditsIdsPathParams, _super);
     function GetSuggestedEditsIdsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsPathParams.prototype, "ids", void 0);
     return GetSuggestedEditsIdsPathParams;
-}(SpeakeasyBase));
-export { GetSuggestedEditsIdsPathParams };
-export var GetSuggestedEditsIdsOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestedEditsIdsPathParams = GetSuggestedEditsIdsPathParams;
+var GetSuggestedEditsIdsOrderEnum;
 (function (GetSuggestedEditsIdsOrderEnum) {
     GetSuggestedEditsIdsOrderEnum["Desc"] = "desc";
     GetSuggestedEditsIdsOrderEnum["Asc"] = "asc";
-})(GetSuggestedEditsIdsOrderEnum || (GetSuggestedEditsIdsOrderEnum = {}));
-export var GetSuggestedEditsIdsSortEnum;
+})(GetSuggestedEditsIdsOrderEnum = exports.GetSuggestedEditsIdsOrderEnum || (exports.GetSuggestedEditsIdsOrderEnum = {}));
+var GetSuggestedEditsIdsSortEnum;
 (function (GetSuggestedEditsIdsSortEnum) {
     GetSuggestedEditsIdsSortEnum["Creation"] = "creation";
     GetSuggestedEditsIdsSortEnum["Approval"] = "approval";
     GetSuggestedEditsIdsSortEnum["Rejection"] = "rejection";
-})(GetSuggestedEditsIdsSortEnum || (GetSuggestedEditsIdsSortEnum = {}));
+})(GetSuggestedEditsIdsSortEnum = exports.GetSuggestedEditsIdsSortEnum || (exports.GetSuggestedEditsIdsSortEnum = {}));
 var GetSuggestedEditsIdsQueryParams = /** @class */ (function (_super) {
     __extends(GetSuggestedEditsIdsQueryParams, _super);
     function GetSuggestedEditsIdsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetSuggestedEditsIdsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetSuggestedEditsIdsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetSuggestedEditsIdsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetSuggestedEditsIdsQueryParams.prototype, "todate", void 0);
     return GetSuggestedEditsIdsQueryParams;
-}(SpeakeasyBase));
-export { GetSuggestedEditsIdsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestedEditsIdsQueryParams = GetSuggestedEditsIdsQueryParams;
 var GetSuggestedEditsIdsRequest = /** @class */ (function (_super) {
     __extends(GetSuggestedEditsIdsRequest, _super);
     function GetSuggestedEditsIdsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSuggestedEditsIdsPathParams)
     ], GetSuggestedEditsIdsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSuggestedEditsIdsQueryParams)
     ], GetSuggestedEditsIdsRequest.prototype, "queryParams", void 0);
     return GetSuggestedEditsIdsRequest;
-}(SpeakeasyBase));
-export { GetSuggestedEditsIdsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestedEditsIdsRequest = GetSuggestedEditsIdsRequest;
 var GetSuggestedEditsIdsResponse = /** @class */ (function (_super) {
     __extends(GetSuggestedEditsIdsResponse, _super);
     function GetSuggestedEditsIdsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSuggestedEditsIdsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSuggestedEditsIdsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSuggestedEditsIdsResponse.prototype, "statusCode", void 0);
     return GetSuggestedEditsIdsResponse;
-}(SpeakeasyBase));
-export { GetSuggestedEditsIdsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestedEditsIdsResponse = GetSuggestedEditsIdsResponse;

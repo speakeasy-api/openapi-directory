@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,73 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vehicle = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
 var Vehicle = /** @class */ (function (_super) {
     __extends(Vehicle, _super);
     function Vehicle() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=break" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=break" }),
         __metadata("design:type", Object)
     ], Vehicle.prototype, "break", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earliest_start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earliest_start" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "earliestStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_address" }),
+        __metadata("design:type", address_1.Address)
     ], Vehicle.prototype, "endAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_end" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "latestEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_activities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_activities" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "maxActivities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_distance" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "maxDistance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_driving_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_driving_time" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "maxDrivingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_jobs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_jobs" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "maxJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min_jobs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min_jobs" }),
         __metadata("design:type", Number)
     ], Vehicle.prototype, "minJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=move_to_end_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=move_to_end_address" }),
         __metadata("design:type", Boolean)
     ], Vehicle.prototype, "moveToEndAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=return_to_depot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=return_to_depot" }),
         __metadata("design:type", Boolean)
     ], Vehicle.prototype, "returnToDepot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skills" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skills" }),
         __metadata("design:type", Array)
     ], Vehicle.prototype, "skills", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_address" }),
+        __metadata("design:type", address_1.Address)
     ], Vehicle.prototype, "startAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type_id" }),
         __metadata("design:type", String)
     ], Vehicle.prototype, "typeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vehicle_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vehicle_id" }),
         __metadata("design:type", String)
     ], Vehicle.prototype, "vehicleId", void 0);
     return Vehicle;
-}(SpeakeasyBase));
-export { Vehicle };
+}(utils_1.SpeakeasyBase));
+exports.Vehicle = Vehicle;

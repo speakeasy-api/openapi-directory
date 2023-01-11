@@ -28,7 +28,7 @@ export declare class PutLaunchProfileMembersResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
     internalServerErrorException?: any;
-    putLaunchProfileMembersResponse?: Map<string, any>;
+    putLaunchProfileMembersResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;
     statusCode: number;

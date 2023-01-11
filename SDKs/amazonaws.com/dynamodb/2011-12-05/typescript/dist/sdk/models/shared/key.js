@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeValue } from "./attributevalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Key = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributevalue_1 = require("./attributevalue");
 // Key
 /**
  * The primary key that uniquely identifies each item in a table. A primary key can be a one attribute (hash) primary key or a two attribute (hash-and-range) primary key.
@@ -34,13 +37,13 @@ var Key = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HashKeyElement" }),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HashKeyElement" }),
+        __metadata("design:type", attributevalue_1.AttributeValue)
     ], Key.prototype, "hashKeyElement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RangeKeyElement" }),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RangeKeyElement" }),
+        __metadata("design:type", attributevalue_1.AttributeValue)
     ], Key.prototype, "rangeKeyElement", void 0);
     return Key;
-}(SpeakeasyBase));
-export { Key };
+}(utils_1.SpeakeasyBase));
+exports.Key = Key;

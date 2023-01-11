@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterClientResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegisterClientResponse = /** @class */ (function (_super) {
     __extends(RegisterClientResponse, _super);
     function RegisterClientResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationEndpoint" }),
         __metadata("design:type", String)
     ], RegisterClientResponse.prototype, "authorizationEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], RegisterClientResponse.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientIdIssuedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientIdIssuedAt" }),
         __metadata("design:type", Number)
     ], RegisterClientResponse.prototype, "clientIdIssuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], RegisterClientResponse.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecretExpiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecretExpiresAt" }),
         __metadata("design:type", Number)
     ], RegisterClientResponse.prototype, "clientSecretExpiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenEndpoint" }),
         __metadata("design:type", String)
     ], RegisterClientResponse.prototype, "tokenEndpoint", void 0);
     return RegisterClientResponse;
-}(SpeakeasyBase));
-export { RegisterClientResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegisterClientResponse = RegisterClientResponse;

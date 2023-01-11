@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransportProtocolEnum } from "./transportprotocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortMapping = void 0;
+var utils_1 = require("../../../internal/utils");
+var transportprotocolenum_1 = require("./transportprotocolenum");
 // PortMapping
 /**
  * <p>Port mappings allow containers to access ports on the host container instance to send or receive traffic. Port mappings are specified as part of the container definition.</p> <p>If you are using containers in a task with the <code>awsvpc</code> or <code>host</code> network mode, exposed ports should be specified using <code>containerPort</code>. The <code>hostPort</code> can be left blank or it must be the same value as the <code>containerPort</code>.</p> <note> <p>You cannot expose the same container port for multiple protocols. An error will be returned if this is attempted</p> </note> <p>After a task reaches the <code>RUNNING</code> status, manual and automatic host and container port assignments are visible in the <code>networkBindings</code> section of <a>DescribeTasks</a> API responses.</p>
@@ -34,17 +37,17 @@ var PortMapping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPort" }),
         __metadata("design:type", Number)
     ], PortMapping.prototype, "containerPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostPort" }),
         __metadata("design:type", Number)
     ], PortMapping.prototype, "hostPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], PortMapping.prototype, "protocol", void 0);
     return PortMapping;
-}(SpeakeasyBase));
-export { PortMapping };
+}(utils_1.SpeakeasyBase));
+exports.PortMapping = PortMapping;

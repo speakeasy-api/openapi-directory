@@ -3,7 +3,7 @@ export declare class SetAllowedNetworksPathParams extends SpeakeasyBase {
     nodeId: string;
 }
 export declare class SetAllowedNetworksRequestBody extends SpeakeasyBase {
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }
 export declare enum SetAllowedNetworks200ApplicationJsonActionEnum {
     ModifyAllowedNetworks = "modifyAllowedNetworks"
@@ -31,5 +31,5 @@ export declare class SetAllowedNetworksRequest extends SpeakeasyBase {
 export declare class SetAllowedNetworksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setAllowedNetworks200ApplicationJsonObject?: SetAllowedNetworks200ApplicationJson;
+    setAllowedNetworks200ApplicationJSONObject?: SetAllowedNetworks200ApplicationJson;
 }

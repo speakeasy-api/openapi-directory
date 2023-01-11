@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesRequest extends Speak
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedIssues?: shared.PaginatedIssues;
 }

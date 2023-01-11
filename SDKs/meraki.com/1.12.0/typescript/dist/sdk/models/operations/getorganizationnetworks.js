@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationNetworksResponse = exports.GetOrganizationNetworksRequest = exports.GetOrganizationNetworksQueryParams = exports.GetOrganizationNetworksTagsFilterTypeEnum = exports.GetOrganizationNetworksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationNetworksPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationNetworksPathParams, _super);
     function GetOrganizationNetworksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationNetworksPathParams.prototype, "organizationId", void 0);
     return GetOrganizationNetworksPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationNetworksPathParams };
-export var GetOrganizationNetworksTagsFilterTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationNetworksPathParams = GetOrganizationNetworksPathParams;
+var GetOrganizationNetworksTagsFilterTypeEnum;
 (function (GetOrganizationNetworksTagsFilterTypeEnum) {
     GetOrganizationNetworksTagsFilterTypeEnum["WithAnyTags"] = "withAnyTags";
     GetOrganizationNetworksTagsFilterTypeEnum["WithAllTags"] = "withAllTags";
-})(GetOrganizationNetworksTagsFilterTypeEnum || (GetOrganizationNetworksTagsFilterTypeEnum = {}));
+})(GetOrganizationNetworksTagsFilterTypeEnum = exports.GetOrganizationNetworksTagsFilterTypeEnum || (exports.GetOrganizationNetworksTagsFilterTypeEnum = {}));
 var GetOrganizationNetworksQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationNetworksQueryParams, _super);
     function GetOrganizationNetworksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=configTemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=configTemplateId" }),
         __metadata("design:type", String)
     ], GetOrganizationNetworksQueryParams.prototype, "configTemplateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationNetworksQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationNetworksQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationNetworksQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=tags" }),
         __metadata("design:type", Array)
     ], GetOrganizationNetworksQueryParams.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tagsFilterType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tagsFilterType" }),
         __metadata("design:type", String)
     ], GetOrganizationNetworksQueryParams.prototype, "tagsFilterType", void 0);
     return GetOrganizationNetworksQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationNetworksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationNetworksQueryParams = GetOrganizationNetworksQueryParams;
 var GetOrganizationNetworksRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationNetworksRequest, _super);
     function GetOrganizationNetworksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationNetworksPathParams)
     ], GetOrganizationNetworksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationNetworksQueryParams)
     ], GetOrganizationNetworksRequest.prototype, "queryParams", void 0);
     return GetOrganizationNetworksRequest;
-}(SpeakeasyBase));
-export { GetOrganizationNetworksRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationNetworksRequest = GetOrganizationNetworksRequest;
 var GetOrganizationNetworksResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationNetworksResponse, _super);
     function GetOrganizationNetworksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationNetworksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationNetworksResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationNetworksResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationNetworksResponse.prototype, "getOrganizationNetworks200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationNetworksResponse.prototype, "getOrganizationNetworks200ApplicationJSONObject", void 0);
     return GetOrganizationNetworksResponse;
-}(SpeakeasyBase));
-export { GetOrganizationNetworksResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationNetworksResponse = GetOrganizationNetworksResponse;

@@ -109,20 +109,20 @@ export class DeleteTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteTemplate200ApplicationJsonObject?: DeleteTemplate200ApplicationJson;
+  deleteTemplate200ApplicationJSONObject?: DeleteTemplate200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteTemplate401ApplicationJsonObject?: DeleteTemplate401ApplicationJson;
+  deleteTemplate401ApplicationJSONObject?: DeleteTemplate401ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteTemplate403ApplicationJsonObject?: DeleteTemplate403ApplicationJson;
+  deleteTemplate403ApplicationJSONObject?: DeleteTemplate403ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteTemplate404ApplicationJsonObject?: DeleteTemplate404ApplicationJson;
+  deleteTemplate404ApplicationJSONObject?: DeleteTemplate404ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteTemplate422ApplicationJsonObject?: DeleteTemplate422ApplicationJson;
+  deleteTemplate422ApplicationJSONObject?: DeleteTemplate422ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteTemplate500ApplicationJsonObject?: DeleteTemplate500ApplicationJson;
+  deleteTemplate500ApplicationJSONObject?: DeleteTemplate500ApplicationJson;
 }

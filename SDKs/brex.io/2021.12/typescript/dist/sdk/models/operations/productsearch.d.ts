@@ -12,7 +12,7 @@ export declare class ProductSearchRequest extends SpeakeasyBase {
 }
 export declare class ProductSearchResponse extends SpeakeasyBase {
     contentType: string;
-    productSearch200ApplicationJsonAnies?: any[];
-    productSearchDefaultApplicationJsonAny?: any;
+    productSearch200ApplicationJSONAnies?: any[];
+    productSearchDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

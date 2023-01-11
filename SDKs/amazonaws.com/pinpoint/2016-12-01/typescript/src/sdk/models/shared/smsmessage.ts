@@ -30,7 +30,7 @@ export class SmsMessage extends SpeakeasyBase {
   senderId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=TemplateId" })
   templateId?: string;

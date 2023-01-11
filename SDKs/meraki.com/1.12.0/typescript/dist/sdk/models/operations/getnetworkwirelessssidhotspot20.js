@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidHotspot20Response = exports.GetNetworkWirelessSsidHotspot20Request = exports.GetNetworkWirelessSsidHotspot20PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidHotspot20PathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidHotspot20PathParams, _super);
     function GetNetworkWirelessSsidHotspot20PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidHotspot20PathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidHotspot20PathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidHotspot20PathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidHotspot20PathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidHotspot20PathParams = GetNetworkWirelessSsidHotspot20PathParams;
 var GetNetworkWirelessSsidHotspot20Request = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidHotspot20Request, _super);
     function GetNetworkWirelessSsidHotspot20Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidHotspot20PathParams)
     ], GetNetworkWirelessSsidHotspot20Request.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidHotspot20Request;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidHotspot20Request };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidHotspot20Request = GetNetworkWirelessSsidHotspot20Request;
 var GetNetworkWirelessSsidHotspot20Response = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidHotspot20Response, _super);
     function GetNetworkWirelessSsidHotspot20Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidHotspot20Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidHotspot20Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidHotspot20Response.prototype, "getNetworkWirelessSsidHotspot20200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidHotspot20Response.prototype, "getNetworkWirelessSsidHotspot20200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidHotspot20Response;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidHotspot20Response };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidHotspot20Response = GetNetworkWirelessSsidHotspot20Response;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HashKeyRange } from "./hashkeyrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChildShard = void 0;
+var utils_1 = require("../../../internal/utils");
+var hashkeyrange_1 = require("./hashkeyrange");
 var ChildShard = /** @class */ (function (_super) {
     __extends(ChildShard, _super);
     function ChildShard() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HashKeyRange" }),
-        __metadata("design:type", HashKeyRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HashKeyRange" }),
+        __metadata("design:type", hashkeyrange_1.HashKeyRange)
     ], ChildShard.prototype, "hashKeyRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentShards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentShards" }),
         __metadata("design:type", Array)
     ], ChildShard.prototype, "parentShards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardId" }),
         __metadata("design:type", String)
     ], ChildShard.prototype, "shardId", void 0);
     return ChildShard;
-}(SpeakeasyBase));
-export { ChildShard };
+}(utils_1.SpeakeasyBase));
+exports.ChildShard = ChildShard;

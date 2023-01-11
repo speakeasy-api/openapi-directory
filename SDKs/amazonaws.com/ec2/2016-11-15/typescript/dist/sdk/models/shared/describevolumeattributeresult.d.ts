@@ -1,8 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AttributeBooleanValue } from "./attributebooleanvalue";
-import { ProductCode } from "./productcode";
+/**
+ * The state of <code>autoEnableIO</code> attribute.
+**/
+export declare class DescribeVolumeAttributeResultAutoEnableIo extends SpeakeasyBase {
+    value?: Record<string, any>;
+}
 export declare class DescribeVolumeAttributeResult extends SpeakeasyBase {
-    autoEnableIo?: AttributeBooleanValue;
-    productCodes?: ProductCode[];
-    volumeId?: string;
+    autoEnableIO?: DescribeVolumeAttributeResultAutoEnableIo;
+    productCodes?: Record<string, any>;
+    volumeId?: Record<string, any>;
 }

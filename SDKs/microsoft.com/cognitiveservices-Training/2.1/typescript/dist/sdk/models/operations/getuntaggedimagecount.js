@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUntaggedImageCountResponse = exports.GetUntaggedImageCountRequest = exports.GetUntaggedImageCountHeaders = exports.GetUntaggedImageCountQueryParams = exports.GetUntaggedImageCountPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUntaggedImageCountPathParams = /** @class */ (function (_super) {
     __extends(GetUntaggedImageCountPathParams, _super);
     function GetUntaggedImageCountPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], GetUntaggedImageCountPathParams.prototype, "projectId", void 0);
     return GetUntaggedImageCountPathParams;
-}(SpeakeasyBase));
-export { GetUntaggedImageCountPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUntaggedImageCountPathParams = GetUntaggedImageCountPathParams;
 var GetUntaggedImageCountQueryParams = /** @class */ (function (_super) {
     __extends(GetUntaggedImageCountQueryParams, _super);
     function GetUntaggedImageCountQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=iterationId" }),
         __metadata("design:type", String)
     ], GetUntaggedImageCountQueryParams.prototype, "iterationId", void 0);
     return GetUntaggedImageCountQueryParams;
-}(SpeakeasyBase));
-export { GetUntaggedImageCountQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUntaggedImageCountQueryParams = GetUntaggedImageCountQueryParams;
 var GetUntaggedImageCountHeaders = /** @class */ (function (_super) {
     __extends(GetUntaggedImageCountHeaders, _super);
     function GetUntaggedImageCountHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], GetUntaggedImageCountHeaders.prototype, "trainingKey", void 0);
     return GetUntaggedImageCountHeaders;
-}(SpeakeasyBase));
-export { GetUntaggedImageCountHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUntaggedImageCountHeaders = GetUntaggedImageCountHeaders;
 var GetUntaggedImageCountRequest = /** @class */ (function (_super) {
     __extends(GetUntaggedImageCountRequest, _super);
     function GetUntaggedImageCountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUntaggedImageCountPathParams)
     ], GetUntaggedImageCountRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUntaggedImageCountQueryParams)
     ], GetUntaggedImageCountRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUntaggedImageCountHeaders)
     ], GetUntaggedImageCountRequest.prototype, "headers", void 0);
     return GetUntaggedImageCountRequest;
-}(SpeakeasyBase));
-export { GetUntaggedImageCountRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUntaggedImageCountRequest = GetUntaggedImageCountRequest;
 var GetUntaggedImageCountResponse = /** @class */ (function (_super) {
     __extends(GetUntaggedImageCountResponse, _super);
     function GetUntaggedImageCountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUntaggedImageCountResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUntaggedImageCountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetUntaggedImageCountResponse.prototype, "getUntaggedImageCount200ApplicationJsonInt32Integer", void 0);
+    ], GetUntaggedImageCountResponse.prototype, "getUntaggedImageCount200ApplicationJSONInt32Integer", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetUntaggedImageCountResponse.prototype, "getUntaggedImageCount200TextJsonInt32Integer", void 0);
+    ], GetUntaggedImageCountResponse.prototype, "getUntaggedImageCount200TextJSONInt32Integer", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUntaggedImageCountResponse.prototype, "statusCode", void 0);
     return GetUntaggedImageCountResponse;
-}(SpeakeasyBase));
-export { GetUntaggedImageCountResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUntaggedImageCountResponse = GetUntaggedImageCountResponse;

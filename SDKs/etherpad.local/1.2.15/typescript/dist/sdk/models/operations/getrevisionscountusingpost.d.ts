@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetRevisionsCountUsingPostQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class GetRevisionsCountUsingPost200ApplicationJsonData extends SpeakeasyBase {
     revisions?: number;
@@ -12,17 +12,17 @@ export declare class GetRevisionsCountUsingPost200ApplicationJson extends Speake
 }
 export declare class GetRevisionsCountUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetRevisionsCountUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetRevisionsCountUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetRevisionsCountUsingPostRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class GetRevisionsCountUsingPostRequest extends SpeakeasyBase {
 export declare class GetRevisionsCountUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getRevisionsCountUsingPost200ApplicationJsonObject?: GetRevisionsCountUsingPost200ApplicationJson;
-    getRevisionsCountUsingPost400ApplicationJsonObject?: GetRevisionsCountUsingPost400ApplicationJson;
-    getRevisionsCountUsingPost401ApplicationJsonObject?: GetRevisionsCountUsingPost401ApplicationJson;
-    getRevisionsCountUsingPost500ApplicationJsonObject?: GetRevisionsCountUsingPost500ApplicationJson;
+    getRevisionsCountUsingPOST200ApplicationJSONObject?: GetRevisionsCountUsingPost200ApplicationJson;
+    getRevisionsCountUsingPOST400ApplicationJSONObject?: GetRevisionsCountUsingPost400ApplicationJson;
+    getRevisionsCountUsingPOST401ApplicationJSONObject?: GetRevisionsCountUsingPost401ApplicationJson;
+    getRevisionsCountUsingPOST500ApplicationJSONObject?: GetRevisionsCountUsingPost500ApplicationJson;
 }

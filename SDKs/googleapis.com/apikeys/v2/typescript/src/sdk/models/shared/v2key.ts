@@ -3,29 +3,13 @@ import { V2Restrictions } from "./v2restrictions";
 
 
 
-// V2KeyInput
-/** 
- * The representation of a key managed by the API Keys API.
-**/
-export class V2KeyInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=restrictions" })
-  restrictions?: V2Restrictions;
-}
-
-
 // V2Key
 /** 
  * The representation of a key managed by the API Keys API.
 **/
 export class V2Key extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -53,4 +37,20 @@ export class V2Key extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// V2KeyInput
+/** 
+ * The representation of a key managed by the API Keys API.
+**/
+export class V2KeyInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=annotations" })
+  annotations?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=restrictions" })
+  restrictions?: V2Restrictions;
 }

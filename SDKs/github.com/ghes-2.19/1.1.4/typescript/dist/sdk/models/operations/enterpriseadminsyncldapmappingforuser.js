@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminSyncLdapMappingForUserResponse = exports.EnterpriseAdminSyncLdapMappingForUserRequest = exports.EnterpriseAdminSyncLdapMappingForUser201ApplicationJson = exports.EnterpriseAdminSyncLdapMappingForUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminSyncLdapMappingForUserPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSyncLdapMappingForUserPathParams, _super);
     function EnterpriseAdminSyncLdapMappingForUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSyncLdapMappingForUserPathParams.prototype, "username", void 0);
     return EnterpriseAdminSyncLdapMappingForUserPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminSyncLdapMappingForUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSyncLdapMappingForUserPathParams = EnterpriseAdminSyncLdapMappingForUserPathParams;
 var EnterpriseAdminSyncLdapMappingForUser201ApplicationJson = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSyncLdapMappingForUser201ApplicationJson, _super);
     function EnterpriseAdminSyncLdapMappingForUser201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSyncLdapMappingForUser201ApplicationJson.prototype, "status", void 0);
     return EnterpriseAdminSyncLdapMappingForUser201ApplicationJson;
-}(SpeakeasyBase));
-export { EnterpriseAdminSyncLdapMappingForUser201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSyncLdapMappingForUser201ApplicationJson = EnterpriseAdminSyncLdapMappingForUser201ApplicationJson;
 var EnterpriseAdminSyncLdapMappingForUserRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSyncLdapMappingForUserRequest, _super);
     function EnterpriseAdminSyncLdapMappingForUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminSyncLdapMappingForUserPathParams)
     ], EnterpriseAdminSyncLdapMappingForUserRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminSyncLdapMappingForUserRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminSyncLdapMappingForUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSyncLdapMappingForUserRequest = EnterpriseAdminSyncLdapMappingForUserRequest;
 var EnterpriseAdminSyncLdapMappingForUserResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSyncLdapMappingForUserResponse, _super);
     function EnterpriseAdminSyncLdapMappingForUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminSyncLdapMappingForUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminSyncLdapMappingForUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminSyncLdapMappingForUser201ApplicationJson)
-    ], EnterpriseAdminSyncLdapMappingForUserResponse.prototype, "enterpriseAdminSyncLdapMappingForUser201ApplicationJsonObject", void 0);
+    ], EnterpriseAdminSyncLdapMappingForUserResponse.prototype, "enterpriseAdminSyncLdapMappingForUser201ApplicationJSONObject", void 0);
     return EnterpriseAdminSyncLdapMappingForUserResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminSyncLdapMappingForUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSyncLdapMappingForUserResponse = EnterpriseAdminSyncLdapMappingForUserResponse;

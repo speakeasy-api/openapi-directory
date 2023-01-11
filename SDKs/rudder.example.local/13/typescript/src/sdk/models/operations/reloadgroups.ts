@@ -41,5 +41,5 @@ export class ReloadGroupsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reloadGroups200ApplicationJsonObject?: ReloadGroups200ApplicationJson;
+  reloadGroups200ApplicationJSONObject?: ReloadGroups200ApplicationJson;
 }

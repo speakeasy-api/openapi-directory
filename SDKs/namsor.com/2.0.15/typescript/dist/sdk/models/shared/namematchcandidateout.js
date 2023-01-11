@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NameMatchCandidateOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // NameMatchCandidateOut
 /**
  * The ordered list of name matching candidates
@@ -33,21 +36,21 @@ var NameMatchCandidateOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidateName" }),
         __metadata("design:type", String)
     ], NameMatchCandidateOut.prototype, "candidateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predScoreFamilyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predScoreFamilyName" }),
         __metadata("design:type", Number)
     ], NameMatchCandidateOut.prototype, "predScoreFamilyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predScoreGivenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predScoreGivenName" }),
         __metadata("design:type", Number)
     ], NameMatchCandidateOut.prototype, "predScoreGivenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probability" }),
         __metadata("design:type", Number)
     ], NameMatchCandidateOut.prototype, "probability", void 0);
     return NameMatchCandidateOut;
-}(SpeakeasyBase));
-export { NameMatchCandidateOut };
+}(utils_1.SpeakeasyBase));
+exports.NameMatchCandidateOut = NameMatchCandidateOut;

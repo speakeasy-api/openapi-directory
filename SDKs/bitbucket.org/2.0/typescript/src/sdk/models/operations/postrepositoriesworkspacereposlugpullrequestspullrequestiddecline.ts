@@ -44,8 +44,8 @@ export class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDeclineRe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pullrequest?: Map<string, any>;
+  pullrequest?: Record<string, any>;
 }

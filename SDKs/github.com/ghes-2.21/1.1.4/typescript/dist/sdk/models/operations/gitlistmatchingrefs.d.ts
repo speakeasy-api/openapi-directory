@@ -15,7 +15,7 @@ export declare class GitListMatchingRefsRequest extends SpeakeasyBase {
 }
 export declare class GitListMatchingRefsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     gitRefs?: shared.GitRef[];
 }

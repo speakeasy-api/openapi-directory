@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,70 +14,95 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGet3dsAvailabilityResponse = exports.PostGet3dsAvailabilityRequest = exports.PostGet3dsAvailabilitySecurity = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostGet3dsAvailabilitySecurity = /** @class */ (function (_super) {
     __extends(PostGet3dsAvailabilitySecurity, _super);
     function PostGet3dsAvailabilitySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasicAuth)
     ], PostGet3dsAvailabilitySecurity.prototype, "basicAuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKeyAuth)
     ], PostGet3dsAvailabilitySecurity.prototype, "apiKeyAuth", void 0);
     return PostGet3dsAvailabilitySecurity;
-}(SpeakeasyBase));
-export { PostGet3dsAvailabilitySecurity };
+}(utils_1.SpeakeasyBase));
+exports.PostGet3dsAvailabilitySecurity = PostGet3dsAvailabilitySecurity;
 var PostGet3dsAvailabilityRequest = /** @class */ (function (_super) {
     __extends(PostGet3dsAvailabilityRequest, _super);
     function PostGet3dsAvailabilityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PostGet3dsAvailabilityRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGet3dsAvailabilitySecurity)
     ], PostGet3dsAvailabilityRequest.prototype, "security", void 0);
     return PostGet3dsAvailabilityRequest;
-}(SpeakeasyBase));
-export { PostGet3dsAvailabilityRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGet3dsAvailabilityRequest = PostGet3dsAvailabilityRequest;
 var PostGet3dsAvailabilityResponse = /** @class */ (function (_super) {
     __extends(PostGet3dsAvailabilityResponse, _super);
     function PostGet3dsAvailabilityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGet3dsAvailabilityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PostGet3dsAvailabilityResponse.prototype, "serviceError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGet3dsAvailabilityResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], PostGet3dsAvailabilityResponse.prototype, "threeDsAvailabilityResponse", void 0);
+    ], PostGet3dsAvailabilityResponse.prototype, "threeDSAvailabilityResponse", void 0);
     return PostGet3dsAvailabilityResponse;
-}(SpeakeasyBase));
-export { PostGet3dsAvailabilityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGet3dsAvailabilityResponse = PostGet3dsAvailabilityResponse;

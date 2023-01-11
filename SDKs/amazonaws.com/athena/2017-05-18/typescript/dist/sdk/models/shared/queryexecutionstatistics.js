@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryExecutionStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // QueryExecutionStatistics
 /**
  * The amount of data scanned during the query execution and the amount of time that it took to execute, and the type of statement that was run.
@@ -33,33 +36,33 @@ var QueryExecutionStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataManifestLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataManifestLocation" }),
         __metadata("design:type", String)
     ], QueryExecutionStatistics.prototype, "dataManifestLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataScannedInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataScannedInBytes" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "dataScannedInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineExecutionTimeInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineExecutionTimeInMillis" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "engineExecutionTimeInMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryPlanningTimeInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryPlanningTimeInMillis" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "queryPlanningTimeInMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryQueueTimeInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryQueueTimeInMillis" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "queryQueueTimeInMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceProcessingTimeInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceProcessingTimeInMillis" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "serviceProcessingTimeInMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalExecutionTimeInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalExecutionTimeInMillis" }),
         __metadata("design:type", Number)
     ], QueryExecutionStatistics.prototype, "totalExecutionTimeInMillis", void 0);
     return QueryExecutionStatistics;
-}(SpeakeasyBase));
-export { QueryExecutionStatistics };
+}(utils_1.SpeakeasyBase));
+exports.QueryExecutionStatistics = QueryExecutionStatistics;

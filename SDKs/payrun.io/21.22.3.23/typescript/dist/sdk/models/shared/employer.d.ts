@@ -126,7 +126,7 @@ export declare class EmployerEmployer extends SpeakeasyBase {
     claimSmallEmployerRelief?: boolean;
     effectiveDate?: Date;
     hmrcSettings?: EmployerEmployerHmrcSettings;
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     name?: string;
     region?: EmployerEmployerRegionEnum;
     revision?: number;

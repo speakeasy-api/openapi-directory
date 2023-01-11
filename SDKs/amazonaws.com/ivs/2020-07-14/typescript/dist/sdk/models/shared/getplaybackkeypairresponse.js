@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlaybackKeyPair } from "./playbackkeypair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlaybackKeyPairResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var playbackkeypair_1 = require("./playbackkeypair");
 var GetPlaybackKeyPairResponse = /** @class */ (function (_super) {
     __extends(GetPlaybackKeyPairResponse, _super);
     function GetPlaybackKeyPairResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyPair" }),
-        __metadata("design:type", PlaybackKeyPair)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyPair" }),
+        __metadata("design:type", playbackkeypair_1.PlaybackKeyPair)
     ], GetPlaybackKeyPairResponse.prototype, "keyPair", void 0);
     return GetPlaybackKeyPairResponse;
-}(SpeakeasyBase));
-export { GetPlaybackKeyPairResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlaybackKeyPairResponse = GetPlaybackKeyPairResponse;

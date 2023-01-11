@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteTransitGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteTransitGatewayResponse = exports.PostDeleteTransitGatewayRequest = exports.PostDeleteTransitGatewayHeaders = exports.PostDeleteTransitGatewayQueryParams = exports.PostDeleteTransitGatewayVersionEnum = exports.PostDeleteTransitGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteTransitGatewayActionEnum;
 (function (PostDeleteTransitGatewayActionEnum) {
     PostDeleteTransitGatewayActionEnum["DeleteTransitGateway"] = "DeleteTransitGateway";
-})(PostDeleteTransitGatewayActionEnum || (PostDeleteTransitGatewayActionEnum = {}));
-export var PostDeleteTransitGatewayVersionEnum;
+})(PostDeleteTransitGatewayActionEnum = exports.PostDeleteTransitGatewayActionEnum || (exports.PostDeleteTransitGatewayActionEnum = {}));
+var PostDeleteTransitGatewayVersionEnum;
 (function (PostDeleteTransitGatewayVersionEnum) {
     PostDeleteTransitGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteTransitGatewayVersionEnum || (PostDeleteTransitGatewayVersionEnum = {}));
+})(PostDeleteTransitGatewayVersionEnum = exports.PostDeleteTransitGatewayVersionEnum || (exports.PostDeleteTransitGatewayVersionEnum = {}));
 var PostDeleteTransitGatewayQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayQueryParams, _super);
     function PostDeleteTransitGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayQueryParams.prototype, "version", void 0);
     return PostDeleteTransitGatewayQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayQueryParams = PostDeleteTransitGatewayQueryParams;
 var PostDeleteTransitGatewayHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayHeaders, _super);
     function PostDeleteTransitGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteTransitGatewayHeaders;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayHeaders = PostDeleteTransitGatewayHeaders;
 var PostDeleteTransitGatewayRequest = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayRequest, _super);
     function PostDeleteTransitGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayQueryParams)
     ], PostDeleteTransitGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayHeaders)
     ], PostDeleteTransitGatewayRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayRequest.prototype, "request", void 0);
     return PostDeleteTransitGatewayRequest;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayRequest = PostDeleteTransitGatewayRequest;
 var PostDeleteTransitGatewayResponse = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayResponse, _super);
     function PostDeleteTransitGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteTransitGatewayResponse.prototype, "statusCode", void 0);
     return PostDeleteTransitGatewayResponse;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayResponse = PostDeleteTransitGatewayResponse;

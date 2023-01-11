@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplianceCluster } from "./appliancecluster";
-import { EdgeCluster } from "./edgecluster";
-import { GkeCluster } from "./gkecluster";
-import { KubernetesMetadata } from "./kubernetesmetadata";
-import { KubernetesResource } from "./kubernetesresource";
-import { MultiCloudCluster } from "./multicloudcluster";
-import { OnPremCluster } from "./onpremcluster";
-import { GkeClusterInput } from "./gkecluster";
-import { KubernetesResourceInput } from "./kubernetesresource";
-import { MultiCloudClusterInput } from "./multicloudcluster";
-import { OnPremClusterInput } from "./onpremcluster";
-// MembershipEndpoint
-/**
- * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
-**/
-var MembershipEndpoint = /** @class */ (function (_super) {
-    __extends(MembershipEndpoint, _super);
-    function MembershipEndpoint() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=applianceCluster" }),
-        __metadata("design:type", ApplianceCluster)
-    ], MembershipEndpoint.prototype, "applianceCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=edgeCluster" }),
-        __metadata("design:type", EdgeCluster)
-    ], MembershipEndpoint.prototype, "edgeCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeCluster" }),
-        __metadata("design:type", GkeCluster)
-    ], MembershipEndpoint.prototype, "gkeCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesMetadata" }),
-        __metadata("design:type", KubernetesMetadata)
-    ], MembershipEndpoint.prototype, "kubernetesMetadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesResource" }),
-        __metadata("design:type", KubernetesResource)
-    ], MembershipEndpoint.prototype, "kubernetesResource", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiCloudCluster" }),
-        __metadata("design:type", MultiCloudCluster)
-    ], MembershipEndpoint.prototype, "multiCloudCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremCluster" }),
-        __metadata("design:type", OnPremCluster)
-    ], MembershipEndpoint.prototype, "onPremCluster", void 0);
-    return MembershipEndpoint;
-}(SpeakeasyBase));
-export { MembershipEndpoint };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipEndpoint = exports.MembershipEndpointInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var appliancecluster_1 = require("./appliancecluster");
+var edgecluster_1 = require("./edgecluster");
+var gkecluster_1 = require("./gkecluster");
+var kubernetesresource_1 = require("./kubernetesresource");
+var multicloudcluster_1 = require("./multicloudcluster");
+var onpremcluster_1 = require("./onpremcluster");
+var gkecluster_2 = require("./gkecluster");
+var kubernetesmetadata_1 = require("./kubernetesmetadata");
+var kubernetesresource_2 = require("./kubernetesresource");
+var multicloudcluster_2 = require("./multicloudcluster");
+var onpremcluster_2 = require("./onpremcluster");
 // MembershipEndpointInput
 /**
  * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
@@ -84,29 +47,69 @@ var MembershipEndpointInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applianceCluster" }),
-        __metadata("design:type", ApplianceCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applianceCluster" }),
+        __metadata("design:type", appliancecluster_1.ApplianceCluster)
     ], MembershipEndpointInput.prototype, "applianceCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=edgeCluster" }),
-        __metadata("design:type", EdgeCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=edgeCluster" }),
+        __metadata("design:type", edgecluster_1.EdgeCluster)
     ], MembershipEndpointInput.prototype, "edgeCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeCluster" }),
-        __metadata("design:type", GkeClusterInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeCluster" }),
+        __metadata("design:type", gkecluster_1.GkeClusterInput)
     ], MembershipEndpointInput.prototype, "gkeCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesResource" }),
-        __metadata("design:type", KubernetesResourceInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesResource" }),
+        __metadata("design:type", kubernetesresource_1.KubernetesResourceInput)
     ], MembershipEndpointInput.prototype, "kubernetesResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiCloudCluster" }),
-        __metadata("design:type", MultiCloudClusterInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiCloudCluster" }),
+        __metadata("design:type", multicloudcluster_1.MultiCloudClusterInput)
     ], MembershipEndpointInput.prototype, "multiCloudCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremCluster" }),
-        __metadata("design:type", OnPremClusterInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremCluster" }),
+        __metadata("design:type", onpremcluster_1.OnPremClusterInput)
     ], MembershipEndpointInput.prototype, "onPremCluster", void 0);
     return MembershipEndpointInput;
-}(SpeakeasyBase));
-export { MembershipEndpointInput };
+}(utils_1.SpeakeasyBase));
+exports.MembershipEndpointInput = MembershipEndpointInput;
+// MembershipEndpoint
+/**
+ * MembershipEndpoint contains information needed to contact a Kubernetes API, endpoint and any additional Kubernetes metadata.
+**/
+var MembershipEndpoint = /** @class */ (function (_super) {
+    __extends(MembershipEndpoint, _super);
+    function MembershipEndpoint() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applianceCluster" }),
+        __metadata("design:type", appliancecluster_1.ApplianceCluster)
+    ], MembershipEndpoint.prototype, "applianceCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=edgeCluster" }),
+        __metadata("design:type", edgecluster_1.EdgeCluster)
+    ], MembershipEndpoint.prototype, "edgeCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeCluster" }),
+        __metadata("design:type", gkecluster_2.GkeCluster)
+    ], MembershipEndpoint.prototype, "gkeCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesMetadata" }),
+        __metadata("design:type", kubernetesmetadata_1.KubernetesMetadata)
+    ], MembershipEndpoint.prototype, "kubernetesMetadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesResource" }),
+        __metadata("design:type", kubernetesresource_2.KubernetesResource)
+    ], MembershipEndpoint.prototype, "kubernetesResource", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiCloudCluster" }),
+        __metadata("design:type", multicloudcluster_2.MultiCloudCluster)
+    ], MembershipEndpoint.prototype, "multiCloudCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremCluster" }),
+        __metadata("design:type", onpremcluster_2.OnPremCluster)
+    ], MembershipEndpoint.prototype, "onPremCluster", void 0);
+    return MembershipEndpoint;
+}(utils_1.SpeakeasyBase));
+exports.MembershipEndpoint = MembershipEndpoint;

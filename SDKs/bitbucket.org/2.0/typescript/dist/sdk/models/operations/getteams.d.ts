@@ -20,6 +20,6 @@ export declare class GetTeamsRequest extends SpeakeasyBase {
 export declare class GetTeamsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedTeams?: shared.PaginatedTeams;
 }

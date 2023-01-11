@@ -17,6 +17,6 @@ export declare class GetVVersionReportsStartDateToEndDateReportTypeRequest exten
 }
 export declare class GetVVersionReportsStartDateToEndDateReportTypeResponse extends SpeakeasyBase {
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

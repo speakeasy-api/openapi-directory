@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HealthCheck } from "./healthcheck";
-import { Label } from "./label";
-import { Template } from "./template";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pool = void 0;
+var utils_1 = require("../../../internal/utils");
+var healthcheck_1 = require("./healthcheck");
+var label_1 = require("./label");
+var template_1 = require("./template");
 var Pool = /** @class */ (function (_super) {
     __extends(Pool, _super);
     function Pool() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRestart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRestart" }),
         __metadata("design:type", Boolean)
     ], Pool.prototype, "autoRestart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseInstanceName" }),
         __metadata("design:type", String)
     ], Pool.prototype, "baseInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentNumReplicas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentNumReplicas" }),
         __metadata("design:type", Number)
     ], Pool.prototype, "currentNumReplicas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Pool.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthChecks", elemType: HealthCheck }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthChecks", elemType: healthcheck_1.HealthCheck }),
         __metadata("design:type", Array)
     ], Pool.prototype, "healthChecks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialNumReplicas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialNumReplicas" }),
         __metadata("design:type", Number)
     ], Pool.prototype, "initialNumReplicas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels", elemType: Label }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels", elemType: label_1.Label }),
         __metadata("design:type", Array)
     ], Pool.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Pool.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numReplicas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numReplicas" }),
         __metadata("design:type", Number)
     ], Pool.prototype, "numReplicas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceViews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceViews" }),
         __metadata("design:type", Array)
     ], Pool.prototype, "resourceViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Pool.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPool" }),
         __metadata("design:type", String)
     ], Pool.prototype, "targetPool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPools" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPools" }),
         __metadata("design:type", Array)
     ], Pool.prototype, "targetPools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template" }),
-        __metadata("design:type", Template)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template" }),
+        __metadata("design:type", template_1.Template)
     ], Pool.prototype, "template", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Pool.prototype, "type", void 0);
     return Pool;
-}(SpeakeasyBase));
-export { Pool };
+}(utils_1.SpeakeasyBase));
+exports.Pool = Pool;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementGatekeeperDeploymentState } from "./configmanagementgatekeeperdeploymentstate";
-import { ConfigManagementPolicyControllerVersion } from "./configmanagementpolicycontrollerversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementPolicyControllerState = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementgatekeeperdeploymentstate_1 = require("./configmanagementgatekeeperdeploymentstate");
+var configmanagementpolicycontrollerversion_1 = require("./configmanagementpolicycontrollerversion");
 // ConfigManagementPolicyControllerState
 /**
  * State for PolicyControllerState.
@@ -35,13 +38,13 @@ var ConfigManagementPolicyControllerState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentState" }),
-        __metadata("design:type", ConfigManagementGatekeeperDeploymentState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentState" }),
+        __metadata("design:type", configmanagementgatekeeperdeploymentstate_1.ConfigManagementGatekeeperDeploymentState)
     ], ConfigManagementPolicyControllerState.prototype, "deploymentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", ConfigManagementPolicyControllerVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", configmanagementpolicycontrollerversion_1.ConfigManagementPolicyControllerVersion)
     ], ConfigManagementPolicyControllerState.prototype, "version", void 0);
     return ConfigManagementPolicyControllerState;
-}(SpeakeasyBase));
-export { ConfigManagementPolicyControllerState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementPolicyControllerState = ConfigManagementPolicyControllerState;

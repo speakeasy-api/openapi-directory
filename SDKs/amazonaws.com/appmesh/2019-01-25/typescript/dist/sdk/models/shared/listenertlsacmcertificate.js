@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListenerTlsAcmCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
 // ListenerTlsAcmCertificate
 /**
  * An object that represents an AWS Certicate Manager (ACM) certificate.
@@ -33,9 +36,9 @@ var ListenerTlsAcmCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateArn" }),
         __metadata("design:type", String)
     ], ListenerTlsAcmCertificate.prototype, "certificateArn", void 0);
     return ListenerTlsAcmCertificate;
-}(SpeakeasyBase));
-export { ListenerTlsAcmCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ListenerTlsAcmCertificate = ListenerTlsAcmCertificate;

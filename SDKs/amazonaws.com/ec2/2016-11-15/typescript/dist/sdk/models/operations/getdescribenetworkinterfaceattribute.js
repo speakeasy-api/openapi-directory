@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,119 +23,121 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeNetworkInterfaceAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeNetworkInterfaceAttributeResponse = exports.GetDescribeNetworkInterfaceAttributeRequest = exports.GetDescribeNetworkInterfaceAttributeHeaders = exports.GetDescribeNetworkInterfaceAttributeQueryParams = exports.GetDescribeNetworkInterfaceAttributeVersionEnum = exports.GetDescribeNetworkInterfaceAttributeAttributeEnum = exports.GetDescribeNetworkInterfaceAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeNetworkInterfaceAttributeActionEnum;
 (function (GetDescribeNetworkInterfaceAttributeActionEnum) {
     GetDescribeNetworkInterfaceAttributeActionEnum["DescribeNetworkInterfaceAttribute"] = "DescribeNetworkInterfaceAttribute";
-})(GetDescribeNetworkInterfaceAttributeActionEnum || (GetDescribeNetworkInterfaceAttributeActionEnum = {}));
-export var GetDescribeNetworkInterfaceAttributeAttributeEnum;
+})(GetDescribeNetworkInterfaceAttributeActionEnum = exports.GetDescribeNetworkInterfaceAttributeActionEnum || (exports.GetDescribeNetworkInterfaceAttributeActionEnum = {}));
+var GetDescribeNetworkInterfaceAttributeAttributeEnum;
 (function (GetDescribeNetworkInterfaceAttributeAttributeEnum) {
     GetDescribeNetworkInterfaceAttributeAttributeEnum["Description"] = "description";
     GetDescribeNetworkInterfaceAttributeAttributeEnum["GroupSet"] = "groupSet";
     GetDescribeNetworkInterfaceAttributeAttributeEnum["SourceDestCheck"] = "sourceDestCheck";
     GetDescribeNetworkInterfaceAttributeAttributeEnum["Attachment"] = "attachment";
-})(GetDescribeNetworkInterfaceAttributeAttributeEnum || (GetDescribeNetworkInterfaceAttributeAttributeEnum = {}));
-export var GetDescribeNetworkInterfaceAttributeVersionEnum;
+})(GetDescribeNetworkInterfaceAttributeAttributeEnum = exports.GetDescribeNetworkInterfaceAttributeAttributeEnum || (exports.GetDescribeNetworkInterfaceAttributeAttributeEnum = {}));
+var GetDescribeNetworkInterfaceAttributeVersionEnum;
 (function (GetDescribeNetworkInterfaceAttributeVersionEnum) {
     GetDescribeNetworkInterfaceAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDescribeNetworkInterfaceAttributeVersionEnum || (GetDescribeNetworkInterfaceAttributeVersionEnum = {}));
+})(GetDescribeNetworkInterfaceAttributeVersionEnum = exports.GetDescribeNetworkInterfaceAttributeVersionEnum || (exports.GetDescribeNetworkInterfaceAttributeVersionEnum = {}));
 var GetDescribeNetworkInterfaceAttributeQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeNetworkInterfaceAttributeQueryParams, _super);
     function GetDescribeNetworkInterfaceAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Attribute" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeQueryParams.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDescribeNetworkInterfaceAttributeQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NetworkInterfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NetworkInterfaceId" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeQueryParams.prototype, "networkInterfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeQueryParams.prototype, "version", void 0);
     return GetDescribeNetworkInterfaceAttributeQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeNetworkInterfaceAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeNetworkInterfaceAttributeQueryParams = GetDescribeNetworkInterfaceAttributeQueryParams;
 var GetDescribeNetworkInterfaceAttributeHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeNetworkInterfaceAttributeHeaders, _super);
     function GetDescribeNetworkInterfaceAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeNetworkInterfaceAttributeHeaders;
-}(SpeakeasyBase));
-export { GetDescribeNetworkInterfaceAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeNetworkInterfaceAttributeHeaders = GetDescribeNetworkInterfaceAttributeHeaders;
 var GetDescribeNetworkInterfaceAttributeRequest = /** @class */ (function (_super) {
     __extends(GetDescribeNetworkInterfaceAttributeRequest, _super);
     function GetDescribeNetworkInterfaceAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeNetworkInterfaceAttributeQueryParams)
     ], GetDescribeNetworkInterfaceAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeNetworkInterfaceAttributeHeaders)
     ], GetDescribeNetworkInterfaceAttributeRequest.prototype, "headers", void 0);
     return GetDescribeNetworkInterfaceAttributeRequest;
-}(SpeakeasyBase));
-export { GetDescribeNetworkInterfaceAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeNetworkInterfaceAttributeRequest = GetDescribeNetworkInterfaceAttributeRequest;
 var GetDescribeNetworkInterfaceAttributeResponse = /** @class */ (function (_super) {
     __extends(GetDescribeNetworkInterfaceAttributeResponse, _super);
     function GetDescribeNetworkInterfaceAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeNetworkInterfaceAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeNetworkInterfaceAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeNetworkInterfaceAttributeResponse.prototype, "statusCode", void 0);
     return GetDescribeNetworkInterfaceAttributeResponse;
-}(SpeakeasyBase));
-export { GetDescribeNetworkInterfaceAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeNetworkInterfaceAttributeResponse = GetDescribeNetworkInterfaceAttributeResponse;

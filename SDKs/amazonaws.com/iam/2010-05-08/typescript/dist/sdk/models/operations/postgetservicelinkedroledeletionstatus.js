@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetServiceLinkedRoleDeletionStatusActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetServiceLinkedRoleDeletionStatusResponse = exports.PostGetServiceLinkedRoleDeletionStatusRequest = exports.PostGetServiceLinkedRoleDeletionStatusHeaders = exports.PostGetServiceLinkedRoleDeletionStatusQueryParams = exports.PostGetServiceLinkedRoleDeletionStatusVersionEnum = exports.PostGetServiceLinkedRoleDeletionStatusActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetServiceLinkedRoleDeletionStatusActionEnum;
 (function (PostGetServiceLinkedRoleDeletionStatusActionEnum) {
     PostGetServiceLinkedRoleDeletionStatusActionEnum["GetServiceLinkedRoleDeletionStatus"] = "GetServiceLinkedRoleDeletionStatus";
-})(PostGetServiceLinkedRoleDeletionStatusActionEnum || (PostGetServiceLinkedRoleDeletionStatusActionEnum = {}));
-export var PostGetServiceLinkedRoleDeletionStatusVersionEnum;
+})(PostGetServiceLinkedRoleDeletionStatusActionEnum = exports.PostGetServiceLinkedRoleDeletionStatusActionEnum || (exports.PostGetServiceLinkedRoleDeletionStatusActionEnum = {}));
+var PostGetServiceLinkedRoleDeletionStatusVersionEnum;
 (function (PostGetServiceLinkedRoleDeletionStatusVersionEnum) {
     PostGetServiceLinkedRoleDeletionStatusVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostGetServiceLinkedRoleDeletionStatusVersionEnum || (PostGetServiceLinkedRoleDeletionStatusVersionEnum = {}));
+})(PostGetServiceLinkedRoleDeletionStatusVersionEnum = exports.PostGetServiceLinkedRoleDeletionStatusVersionEnum || (exports.PostGetServiceLinkedRoleDeletionStatusVersionEnum = {}));
 var PostGetServiceLinkedRoleDeletionStatusQueryParams = /** @class */ (function (_super) {
     __extends(PostGetServiceLinkedRoleDeletionStatusQueryParams, _super);
     function PostGetServiceLinkedRoleDeletionStatusQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusQueryParams.prototype, "version", void 0);
     return PostGetServiceLinkedRoleDeletionStatusQueryParams;
-}(SpeakeasyBase));
-export { PostGetServiceLinkedRoleDeletionStatusQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetServiceLinkedRoleDeletionStatusQueryParams = PostGetServiceLinkedRoleDeletionStatusQueryParams;
 var PostGetServiceLinkedRoleDeletionStatusHeaders = /** @class */ (function (_super) {
     __extends(PostGetServiceLinkedRoleDeletionStatusHeaders, _super);
     function PostGetServiceLinkedRoleDeletionStatusHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetServiceLinkedRoleDeletionStatusHeaders;
-}(SpeakeasyBase));
-export { PostGetServiceLinkedRoleDeletionStatusHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetServiceLinkedRoleDeletionStatusHeaders = PostGetServiceLinkedRoleDeletionStatusHeaders;
 var PostGetServiceLinkedRoleDeletionStatusRequest = /** @class */ (function (_super) {
     __extends(PostGetServiceLinkedRoleDeletionStatusRequest, _super);
     function PostGetServiceLinkedRoleDeletionStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetServiceLinkedRoleDeletionStatusQueryParams)
     ], PostGetServiceLinkedRoleDeletionStatusRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetServiceLinkedRoleDeletionStatusHeaders)
     ], PostGetServiceLinkedRoleDeletionStatusRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetServiceLinkedRoleDeletionStatusRequest.prototype, "request", void 0);
     return PostGetServiceLinkedRoleDeletionStatusRequest;
-}(SpeakeasyBase));
-export { PostGetServiceLinkedRoleDeletionStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetServiceLinkedRoleDeletionStatusRequest = PostGetServiceLinkedRoleDeletionStatusRequest;
 var PostGetServiceLinkedRoleDeletionStatusResponse = /** @class */ (function (_super) {
     __extends(PostGetServiceLinkedRoleDeletionStatusResponse, _super);
     function PostGetServiceLinkedRoleDeletionStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetServiceLinkedRoleDeletionStatusResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetServiceLinkedRoleDeletionStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetServiceLinkedRoleDeletionStatusResponse.prototype, "statusCode", void 0);
     return PostGetServiceLinkedRoleDeletionStatusResponse;
-}(SpeakeasyBase));
-export { PostGetServiceLinkedRoleDeletionStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetServiceLinkedRoleDeletionStatusResponse = PostGetServiceLinkedRoleDeletionStatusResponse;

@@ -49,7 +49,7 @@ export class PutAccountSendingAttributesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putAccountSendingAttributesResponse?: Map<string, any>;
+  putAccountSendingAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -3,10 +3,6 @@ import { Money } from "./money";
 
 
 
-// ConvertedRegionPrice
-/** 
- * A converted region price.
-**/
 export class ConvertedRegionPrice extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=price" })
   price?: Money;

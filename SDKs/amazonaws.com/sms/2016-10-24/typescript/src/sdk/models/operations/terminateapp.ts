@@ -63,7 +63,7 @@ export class TerminateAppResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  terminateAppResponse?: Map<string, any>;
+  terminateAppResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   unauthorizedOperationException?: any;

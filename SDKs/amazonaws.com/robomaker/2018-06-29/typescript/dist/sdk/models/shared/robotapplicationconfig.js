@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchConfig } from "./launchconfig";
-import { Tool } from "./tool";
-import { UploadConfiguration } from "./uploadconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RobotApplicationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchconfig_1 = require("./launchconfig");
+var tool_1 = require("./tool");
+var uploadconfiguration_1 = require("./uploadconfiguration");
 // RobotApplicationConfig
 /**
  * Application configuration information for a robot.
@@ -36,33 +39,33 @@ var RobotApplicationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application" }),
         __metadata("design:type", String)
     ], RobotApplicationConfig.prototype, "application", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationVersion" }),
         __metadata("design:type", String)
     ], RobotApplicationConfig.prototype, "applicationVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchConfig" }),
-        __metadata("design:type", LaunchConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchConfig" }),
+        __metadata("design:type", launchconfig_1.LaunchConfig)
     ], RobotApplicationConfig.prototype, "launchConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tools", elemType: Tool }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tools", elemType: tool_1.Tool }),
         __metadata("design:type", Array)
     ], RobotApplicationConfig.prototype, "tools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadConfigurations", elemType: UploadConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadConfigurations", elemType: uploadconfiguration_1.UploadConfiguration }),
         __metadata("design:type", Array)
     ], RobotApplicationConfig.prototype, "uploadConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useDefaultTools" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useDefaultTools" }),
         __metadata("design:type", Boolean)
     ], RobotApplicationConfig.prototype, "useDefaultTools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useDefaultUploadConfigurations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useDefaultUploadConfigurations" }),
         __metadata("design:type", Boolean)
     ], RobotApplicationConfig.prototype, "useDefaultUploadConfigurations", void 0);
     return RobotApplicationConfig;
-}(SpeakeasyBase));
-export { RobotApplicationConfig };
+}(utils_1.SpeakeasyBase));
+exports.RobotApplicationConfig = RobotApplicationConfig;

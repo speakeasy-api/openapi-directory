@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainDeliverabilityCampaign = void 0;
+var utils_1 = require("../../../internal/utils");
 // DomainDeliverabilityCampaign
 /**
  * An object that contains the deliverability data for a specific campaign. This data is available for a campaign only if the campaign sent email by using a domain that the Deliverability dashboard is enabled for (<code>PutDeliverabilityDashboardOption</code> operation).
@@ -33,61 +36,61 @@ var DomainDeliverabilityCampaign = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CampaignId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CampaignId" }),
         __metadata("design:type", String)
     ], DomainDeliverabilityCampaign.prototype, "campaignId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteRate" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "deleteRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Esps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Esps" }),
         __metadata("design:type", Array)
     ], DomainDeliverabilityCampaign.prototype, "esps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstSeenDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstSeenDateTime" }),
         __metadata("design:type", Date)
     ], DomainDeliverabilityCampaign.prototype, "firstSeenDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromAddress" }),
         __metadata("design:type", String)
     ], DomainDeliverabilityCampaign.prototype, "fromAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageUrl" }),
         __metadata("design:type", String)
     ], DomainDeliverabilityCampaign.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InboxCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InboxCount" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "inboxCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastSeenDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastSeenDateTime" }),
         __metadata("design:type", Date)
     ], DomainDeliverabilityCampaign.prototype, "lastSeenDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProjectedVolume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProjectedVolume" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "projectedVolume", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadDeleteRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadDeleteRate" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "readDeleteRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadRate" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "readRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingIps" }),
         __metadata("design:type", Array)
     ], DomainDeliverabilityCampaign.prototype, "sendingIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpamCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpamCount" }),
         __metadata("design:type", Number)
     ], DomainDeliverabilityCampaign.prototype, "spamCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], DomainDeliverabilityCampaign.prototype, "subject", void 0);
     return DomainDeliverabilityCampaign;
-}(SpeakeasyBase));
-export { DomainDeliverabilityCampaign };
+}(utils_1.SpeakeasyBase));
+exports.DomainDeliverabilityCampaign = DomainDeliverabilityCampaign;

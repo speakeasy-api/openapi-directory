@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationResourceDetailedStatusFilters } from "./organizationresourcedetailedstatusfilters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationConformancePackDetailedStatusRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationresourcedetailedstatusfilters_1 = require("./organizationresourcedetailedstatusfilters");
 var GetOrganizationConformancePackDetailedStatusRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationConformancePackDetailedStatusRequest, _super);
     function GetOrganizationConformancePackDetailedStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filters" }),
-        __metadata("design:type", OrganizationResourceDetailedStatusFilters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filters" }),
+        __metadata("design:type", organizationresourcedetailedstatusfilters_1.OrganizationResourceDetailedStatusFilters)
     ], GetOrganizationConformancePackDetailedStatusRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], GetOrganizationConformancePackDetailedStatusRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetOrganizationConformancePackDetailedStatusRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConformancePackName" }),
         __metadata("design:type", String)
     ], GetOrganizationConformancePackDetailedStatusRequest.prototype, "organizationConformancePackName", void 0);
     return GetOrganizationConformancePackDetailedStatusRequest;
-}(SpeakeasyBase));
-export { GetOrganizationConformancePackDetailedStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConformancePackDetailedStatusRequest = GetOrganizationConformancePackDetailedStatusRequest;

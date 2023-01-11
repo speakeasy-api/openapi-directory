@@ -3,7 +3,7 @@ import { NestedTenantGroup } from "./nestedtenantgroup";
 export declare class Tenant extends SpeakeasyBase {
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     group?: NestedTenantGroup;
     id?: number;

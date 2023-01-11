@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostCreateNotificationConfigurationRequest, PostCreateNotificationConfigurationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,10 +33,10 @@ const req: PostCreateNotificationConfigurationRequest = {
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "dolores",
+  request: "sit",
 };
 
-sdk.sdk.postCreateNotificationConfiguration(req).then((res: PostCreateNotificationConfigurationResponse | AxiosError) => {
+sdk.general.postCreateNotificationConfiguration(req).then((res: PostCreateNotificationConfigurationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,7 +45,7 @@ sdk.sdk.postCreateNotificationConfiguration(req).then((res: PostCreateNotificati
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `postCreateNotificationConfiguration` - Subscribe to notifications.
 * `postDeleteNotificationConfigurations` - Delete an existing notification subscription configuration.

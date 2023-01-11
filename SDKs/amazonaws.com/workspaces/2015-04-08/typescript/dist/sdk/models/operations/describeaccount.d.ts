@@ -15,7 +15,7 @@ export declare class DescribeAccountHeaders extends SpeakeasyBase {
 }
 export declare class DescribeAccountRequest extends SpeakeasyBase {
     headers: DescribeAccountHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DescribeAccountResponse extends SpeakeasyBase {
     accessDeniedException?: any;

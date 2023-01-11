@@ -192,7 +192,7 @@ export class GetListsFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListsFormat200ApplicationJsonObject?: GetListsFormat200ApplicationJson;
+  getListsFormat200ApplicationJSONObject?: GetListsFormat200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

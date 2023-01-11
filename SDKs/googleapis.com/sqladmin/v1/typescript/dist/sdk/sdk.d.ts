@@ -9,10 +9,11 @@ import { Projects } from "./projects";
 import { SslCerts } from "./sslcerts";
 import { Tiers } from "./tiers";
 import { Users } from "./users";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://sqladmin.googleapis.com/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     backupRuns: BackupRuns;
     connect: Connect;
@@ -30,6 +31,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

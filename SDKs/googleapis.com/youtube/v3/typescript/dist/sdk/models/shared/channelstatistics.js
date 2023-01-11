@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelStatistics
 /**
  * Statistics about a channel: number of subscribers, number of videos in the channel, etc.
@@ -33,25 +36,25 @@ var ChannelStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commentCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commentCount" }),
         __metadata("design:type", String)
     ], ChannelStatistics.prototype, "commentCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenSubscriberCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenSubscriberCount" }),
         __metadata("design:type", Boolean)
     ], ChannelStatistics.prototype, "hiddenSubscriberCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriberCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriberCount" }),
         __metadata("design:type", String)
     ], ChannelStatistics.prototype, "subscriberCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoCount" }),
         __metadata("design:type", String)
     ], ChannelStatistics.prototype, "videoCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewCount" }),
         __metadata("design:type", String)
     ], ChannelStatistics.prototype, "viewCount", void 0);
     return ChannelStatistics;
-}(SpeakeasyBase));
-export { ChannelStatistics };
+}(utils_1.SpeakeasyBase));
+exports.ChannelStatistics = ChannelStatistics;

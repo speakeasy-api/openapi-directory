@@ -18,7 +18,7 @@ export declare class DeleteProfilingGroupRequest extends SpeakeasyBase {
 export declare class DeleteProfilingGroupResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deleteProfilingGroupResponse?: Map<string, any>;
+    deleteProfilingGroupResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

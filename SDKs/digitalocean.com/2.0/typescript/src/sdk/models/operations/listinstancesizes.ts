@@ -1,83 +1,84 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum ListInstanceSizes200ApplicationJsonInstanceSizesSharedSharedVCpuCoresDedicatedDedicatedVCpuCoresEnum {
-    Unspecified = "UNSPECIFIED"
-,    Shared = "SHARED"
-,    Dedicated = "DEDICATED"
+    Unspecified = "UNSPECIFIED",
+    Shared = "SHARED",
+    Dedicated = "DEDICATED"
 }
 
 
 export class ListInstanceSizes200ApplicationJsonInstanceSizes extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cpu_type" })
+  @SpeakeasyMetadata({ data: "json, name=cpu_type" })
   cpuType?: ListInstanceSizes200ApplicationJsonInstanceSizesSharedSharedVCpuCoresDedicatedDedicatedVCpuCoresEnum;
 
-  @Metadata({ data: "json, name=cpus" })
+  @SpeakeasyMetadata({ data: "json, name=cpus" })
   cpus?: string;
 
-  @Metadata({ data: "json, name=memory_bytes" })
+  @SpeakeasyMetadata({ data: "json, name=memory_bytes" })
   memoryBytes?: string;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug?: string;
 
-  @Metadata({ data: "json, name=tier_downgrade_to" })
+  @SpeakeasyMetadata({ data: "json, name=tier_downgrade_to" })
   tierDowngradeTo?: string;
 
-  @Metadata({ data: "json, name=tier_slug" })
+  @SpeakeasyMetadata({ data: "json, name=tier_slug" })
   tierSlug?: string;
 
-  @Metadata({ data: "json, name=tier_upgrade_to" })
+  @SpeakeasyMetadata({ data: "json, name=tier_upgrade_to" })
   tierUpgradeTo?: string;
 
-  @Metadata({ data: "json, name=usd_per_month" })
+  @SpeakeasyMetadata({ data: "json, name=usd_per_month" })
   usdPerMonth?: string;
 
-  @Metadata({ data: "json, name=usd_per_second" })
+  @SpeakeasyMetadata({ data: "json, name=usd_per_second" })
   usdPerSecond?: string;
 }
 
 
 export class ListInstanceSizes200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=discount_percent" })
+  @SpeakeasyMetadata({ data: "json, name=discount_percent" })
   discountPercent?: number;
 
-  @Metadata({ data: "json, name=instance_sizes", elemType: operations.ListInstanceSizes200ApplicationJsonInstanceSizes })
+  @SpeakeasyMetadata({ data: "json, name=instance_sizes", elemType: ListInstanceSizes200ApplicationJsonInstanceSizes })
   instanceSizes?: ListInstanceSizes200ApplicationJsonInstanceSizes[];
 }
 
 
 export class ListInstanceSizes401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
 export class ListInstanceSizesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listInstanceSizes200ApplicationJsonObject?: ListInstanceSizes200ApplicationJson;
+  @SpeakeasyMetadata()
+  listInstanceSizes200ApplicationJSONObject?: ListInstanceSizes200ApplicationJson;
 
-  @Metadata()
-  listInstanceSizes401ApplicationJsonObject?: ListInstanceSizes401ApplicationJson;
+  @SpeakeasyMetadata()
+  listInstanceSizes401ApplicationJSONObject?: ListInstanceSizes401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

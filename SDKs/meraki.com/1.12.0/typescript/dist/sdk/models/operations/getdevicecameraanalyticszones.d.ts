@@ -8,5 +8,5 @@ export declare class GetDeviceCameraAnalyticsZonesRequest extends SpeakeasyBase 
 export declare class GetDeviceCameraAnalyticsZonesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraAnalyticsZones200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraAnalyticsZones200ApplicationJSONObject?: Record<string, any>;
 }

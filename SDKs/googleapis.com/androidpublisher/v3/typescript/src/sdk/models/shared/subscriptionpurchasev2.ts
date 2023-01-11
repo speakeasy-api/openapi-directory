@@ -66,5 +66,5 @@ export class SubscriptionPurchaseV2 extends SpeakeasyBase {
   subscriptionState?: SubscriptionPurchaseV2SubscriptionStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=testPurchase" })
-  testPurchase?: Map<string, any>;
+  testPurchase?: Record<string, any>;
 }

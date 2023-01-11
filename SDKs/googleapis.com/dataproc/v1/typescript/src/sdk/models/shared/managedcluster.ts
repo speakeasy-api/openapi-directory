@@ -1,23 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterConfigInput } from "./clusterconfig";
 import { ClusterConfig } from "./clusterconfig";
+import { ClusterConfigInput } from "./clusterconfig";
 
-
-
-// ManagedClusterInput
-/** 
- * Cluster that is managed by the workflow.
-**/
-export class ManagedClusterInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=clusterName" })
-  clusterName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=config" })
-  config?: ClusterConfigInput;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-}
 
 
 // ManagedCluster
@@ -32,5 +16,21 @@ export class ManagedCluster extends SpeakeasyBase {
   config?: ClusterConfig;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
+}
+
+
+// ManagedClusterInput
+/** 
+ * Cluster that is managed by the workflow.
+**/
+export class ManagedClusterInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=clusterName" })
+  clusterName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=config" })
+  config?: ClusterConfigInput;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
 }

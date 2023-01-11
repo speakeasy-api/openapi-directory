@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterCondition } from "./filtercondition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListResourcesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filtercondition_1 = require("./filtercondition");
 var ListResourcesRequest = /** @class */ (function (_super) {
     __extends(ListResourcesRequest, _super);
     function ListResourcesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FilterConditionList", elemType: FilterCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FilterConditionList", elemType: filtercondition_1.FilterCondition }),
         __metadata("design:type", Array)
     ], ListResourcesRequest.prototype, "filterConditionList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListResourcesRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListResourcesRequest.prototype, "nextToken", void 0);
     return ListResourcesRequest;
-}(SpeakeasyBase));
-export { ListResourcesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListResourcesRequest = ListResourcesRequest;

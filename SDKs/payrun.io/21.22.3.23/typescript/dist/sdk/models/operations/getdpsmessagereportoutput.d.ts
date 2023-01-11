@@ -20,6 +20,6 @@ export declare class GetDpsMessageReportOutputRequest extends SpeakeasyBase {
 export declare class GetDpsMessageReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getDpsMessageReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getDpsMessageReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

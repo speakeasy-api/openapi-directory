@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperatingSystemConfigurationManager } from "./operatingsystemconfigurationmanager";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperatingSystem = void 0;
+var utils_1 = require("../../../internal/utils");
+var operatingsystemconfigurationmanager_1 = require("./operatingsystemconfigurationmanager");
 // OperatingSystem
 /**
  * Describes supported operating systems in AWS OpsWorks Stacks.
@@ -34,33 +37,33 @@ var OperatingSystem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationManagers", elemType: OperatingSystemConfigurationManager }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationManagers", elemType: operatingsystemconfigurationmanager_1.OperatingSystemConfigurationManager }),
         __metadata("design:type", Array)
     ], OperatingSystem.prototype, "configurationManagers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], OperatingSystem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], OperatingSystem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportedName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportedName" }),
         __metadata("design:type", String)
     ], OperatingSystem.prototype, "reportedName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportedVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportedVersion" }),
         __metadata("design:type", String)
     ], OperatingSystem.prototype, "reportedVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Supported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Supported" }),
         __metadata("design:type", Boolean)
     ], OperatingSystem.prototype, "supported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], OperatingSystem.prototype, "type", void 0);
     return OperatingSystem;
-}(SpeakeasyBase));
-export { OperatingSystem };
+}(utils_1.SpeakeasyBase));
+exports.OperatingSystem = OperatingSystem;

@@ -9,7 +9,7 @@ export declare class RestorePlan extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     restoreConfig?: RestoreConfig;
     uid?: string;
@@ -22,6 +22,6 @@ export declare class RestorePlanInput extends SpeakeasyBase {
     backupPlan?: string;
     cluster?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     restoreConfig?: RestoreConfig;
 }

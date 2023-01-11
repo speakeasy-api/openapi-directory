@@ -21,5 +21,5 @@ export declare class AddCustomFieldSettingForProjectResponse extends SpeakeasyBa
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addCustomFieldSettingForProject200ApplicationJsonObject?: AddCustomFieldSettingForProject200ApplicationJson;
+    addCustomFieldSettingForProject200ApplicationJSONObject?: AddCustomFieldSettingForProject200ApplicationJson;
 }

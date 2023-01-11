@@ -108,11 +108,11 @@ export declare class Ror1bRequest extends SpeakeasyBase {
 export declare class Ror1bResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ror1b400ApplicationJsonObject?: Ror1b400ApplicationJson;
-    ror1b401ApplicationJsonObject?: Ror1b401ApplicationJson;
-    ror1b404ApplicationJsonObject?: Ror1b404ApplicationJson;
-    ror1b500ApplicationJsonObject?: Ror1b500ApplicationJson;
-    ror1b502ApplicationJsonObject?: Ror1b502ApplicationJson;
-    ror1b503ApplicationJsonObject?: Ror1b503ApplicationJson;
-    ror1b504ApplicationJsonObject?: Ror1b504ApplicationJson;
+    ror1b400ApplicationJSONObject?: Ror1b400ApplicationJson;
+    ror1b401ApplicationJSONObject?: Ror1b401ApplicationJson;
+    ror1b404ApplicationJSONObject?: Ror1b404ApplicationJson;
+    ror1b500ApplicationJSONObject?: Ror1b500ApplicationJson;
+    ror1b502ApplicationJSONObject?: Ror1b502ApplicationJson;
+    ror1b503ApplicationJSONObject?: Ror1b503ApplicationJson;
+    ror1b504ApplicationJSONObject?: Ror1b504ApplicationJson;
 }

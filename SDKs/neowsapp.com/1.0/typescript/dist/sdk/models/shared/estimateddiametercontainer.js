@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EstimatedDiameter } from "./estimateddiameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EstimatedDiameterContainer = void 0;
+var utils_1 = require("../../../internal/utils");
+var estimateddiameter_1 = require("./estimateddiameter");
 var EstimatedDiameterContainer = /** @class */ (function (_super) {
     __extends(EstimatedDiameterContainer, _super);
     function EstimatedDiameterContainer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feet" }),
-        __metadata("design:type", EstimatedDiameter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feet" }),
+        __metadata("design:type", estimateddiameter_1.EstimatedDiameter)
     ], EstimatedDiameterContainer.prototype, "feet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kilometers" }),
-        __metadata("design:type", EstimatedDiameter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kilometers" }),
+        __metadata("design:type", estimateddiameter_1.EstimatedDiameter)
     ], EstimatedDiameterContainer.prototype, "kilometers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meters" }),
-        __metadata("design:type", EstimatedDiameter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meters" }),
+        __metadata("design:type", estimateddiameter_1.EstimatedDiameter)
     ], EstimatedDiameterContainer.prototype, "meters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles" }),
-        __metadata("design:type", EstimatedDiameter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles" }),
+        __metadata("design:type", estimateddiameter_1.EstimatedDiameter)
     ], EstimatedDiameterContainer.prototype, "miles", void 0);
     return EstimatedDiameterContainer;
-}(SpeakeasyBase));
-export { EstimatedDiameterContainer };
+}(utils_1.SpeakeasyBase));
+exports.EstimatedDiameterContainer = EstimatedDiameterContainer;

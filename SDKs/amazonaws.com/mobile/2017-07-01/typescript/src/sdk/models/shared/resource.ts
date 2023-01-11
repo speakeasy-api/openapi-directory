@@ -11,7 +11,7 @@ export class Resource extends SpeakeasyBase {
   arn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=feature" })
   feature?: string;

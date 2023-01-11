@@ -14,7 +14,7 @@ export declare class NetworkFirewallInternetTrafficNotInspectedViolation extends
     expectedInternetGatewayRoutes?: ExpectedRoute[];
     firewallSubnetId?: string;
     internetGatewayId?: string;
-    isRouteTableUsedInDifferentAz?: boolean;
+    isRouteTableUsedInDifferentAZ?: boolean;
     routeTableId?: string;
     subnetAvailabilityZone?: string;
     subnetId?: string;

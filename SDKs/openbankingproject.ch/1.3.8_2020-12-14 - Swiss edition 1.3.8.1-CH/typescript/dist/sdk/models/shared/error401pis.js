@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { MessageCode401PisEnum } from "./messagecode401pisenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Error401Pis = exports.Error401PisAdditionalErrors = void 0;
+var utils_1 = require("../../../internal/utils");
+var messagecode401pisenum_1 = require("./messagecode401pisenum");
+var hreftype_1 = require("./hreftype");
 // Error401PisAdditionalErrors
 /**
  * This is a data element to support the declaration of additional errors in the context of [RFC7807].
@@ -35,20 +38,20 @@ var Error401PisAdditionalErrors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Error401PisAdditionalErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], Error401PisAdditionalErrors.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Error401PisAdditionalErrors.prototype, "title", void 0);
     return Error401PisAdditionalErrors;
-}(SpeakeasyBase));
-export { Error401PisAdditionalErrors };
+}(utils_1.SpeakeasyBase));
+exports.Error401PisAdditionalErrors = Error401PisAdditionalErrors;
 // Error401Pis
 /**
  * Standardised definition of reporting error information according to [RFC7807]
@@ -61,29 +64,29 @@ var Error401Pis = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], Error401Pis.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalErrors", elemType: Error401PisAdditionalErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalErrors", elemType: Error401PisAdditionalErrors }),
         __metadata("design:type", Array)
     ], Error401Pis.prototype, "additionalErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Error401Pis.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], Error401Pis.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Error401Pis.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Error401Pis.prototype, "type", void 0);
     return Error401Pis;
-}(SpeakeasyBase));
-export { Error401Pis };
+}(utils_1.SpeakeasyBase));
+exports.Error401Pis = Error401Pis;

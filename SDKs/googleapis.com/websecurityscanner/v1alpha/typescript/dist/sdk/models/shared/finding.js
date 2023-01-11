@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OutdatedLibrary } from "./outdatedlibrary";
-import { ViolatingResource } from "./violatingresource";
-import { VulnerableHeaders } from "./vulnerableheaders";
-import { VulnerableParameters } from "./vulnerableparameters";
-import { Xss } from "./xss";
-export var FindingFindingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Finding = exports.FindingFindingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var outdatedlibrary_1 = require("./outdatedlibrary");
+var violatingresource_1 = require("./violatingresource");
+var vulnerableheaders_1 = require("./vulnerableheaders");
+var vulnerableparameters_1 = require("./vulnerableparameters");
+var xss_1 = require("./xss");
+var FindingFindingTypeEnum;
 (function (FindingFindingTypeEnum) {
     FindingFindingTypeEnum["FindingTypeUnspecified"] = "FINDING_TYPE_UNSPECIFIED";
     FindingFindingTypeEnum["MixedContent"] = "MIXED_CONTENT";
@@ -42,7 +45,7 @@ export var FindingFindingTypeEnum;
     FindingFindingTypeEnum["InvalidHeader"] = "INVALID_HEADER";
     FindingFindingTypeEnum["MisspelledSecurityHeaderName"] = "MISSPELLED_SECURITY_HEADER_NAME";
     FindingFindingTypeEnum["MismatchingSecurityHeaderValues"] = "MISMATCHING_SECURITY_HEADER_VALUES";
-})(FindingFindingTypeEnum || (FindingFindingTypeEnum = {}));
+})(FindingFindingTypeEnum = exports.FindingFindingTypeEnum || (exports.FindingFindingTypeEnum = {}));
 // Finding
 /**
  * A Finding resource represents a vulnerability instance identified during a ScanRun.
@@ -53,65 +56,65 @@ var Finding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Finding.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Finding.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalUrl" }),
         __metadata("design:type", String)
     ], Finding.prototype, "finalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingType" }),
         __metadata("design:type", String)
     ], Finding.prototype, "findingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameUrl" }),
         __metadata("design:type", String)
     ], Finding.prototype, "frameUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fuzzedUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fuzzedUrl" }),
         __metadata("design:type", String)
     ], Finding.prototype, "fuzzedUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], Finding.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Finding.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outdatedLibrary" }),
-        __metadata("design:type", OutdatedLibrary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outdatedLibrary" }),
+        __metadata("design:type", outdatedlibrary_1.OutdatedLibrary)
     ], Finding.prototype, "outdatedLibrary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reproductionUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reproductionUrl" }),
         __metadata("design:type", String)
     ], Finding.prototype, "reproductionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingId" }),
         __metadata("design:type", String)
     ], Finding.prototype, "trackingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=violatingResource" }),
-        __metadata("design:type", ViolatingResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=violatingResource" }),
+        __metadata("design:type", violatingresource_1.ViolatingResource)
     ], Finding.prototype, "violatingResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vulnerableHeaders" }),
-        __metadata("design:type", VulnerableHeaders)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vulnerableHeaders" }),
+        __metadata("design:type", vulnerableheaders_1.VulnerableHeaders)
     ], Finding.prototype, "vulnerableHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vulnerableParameters" }),
-        __metadata("design:type", VulnerableParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vulnerableParameters" }),
+        __metadata("design:type", vulnerableparameters_1.VulnerableParameters)
     ], Finding.prototype, "vulnerableParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xss" }),
-        __metadata("design:type", Xss)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xss" }),
+        __metadata("design:type", xss_1.Xss)
     ], Finding.prototype, "xss", void 0);
     return Finding;
-}(SpeakeasyBase));
-export { Finding };
+}(utils_1.SpeakeasyBase));
+exports.Finding = Finding;

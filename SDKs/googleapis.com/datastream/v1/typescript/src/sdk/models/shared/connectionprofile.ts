@@ -15,7 +15,7 @@ import { MysqlProfileInput } from "./mysqlprofile";
 **/
 export class ConnectionProfile extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bigqueryProfile" })
-  bigqueryProfile?: Map<string, any>;
+  bigqueryProfile?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -30,7 +30,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   gcsProfile?: GcsProfile;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysqlProfile" })
   mysqlProfile?: MysqlProfile;
@@ -48,7 +48,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   privateConnectivity?: PrivateConnectivity;
 
   @SpeakeasyMetadata({ data: "json, name=staticServiceIpConnectivity" })
-  staticServiceIpConnectivity?: Map<string, any>;
+  staticServiceIpConnectivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
@@ -61,7 +61,7 @@ export class ConnectionProfile extends SpeakeasyBase {
 **/
 export class ConnectionProfileInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bigqueryProfile" })
-  bigqueryProfile?: Map<string, any>;
+  bigqueryProfile?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;
@@ -73,7 +73,7 @@ export class ConnectionProfileInput extends SpeakeasyBase {
   gcsProfile?: GcsProfile;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysqlProfile" })
   mysqlProfile?: MysqlProfileInput;
@@ -88,5 +88,5 @@ export class ConnectionProfileInput extends SpeakeasyBase {
   privateConnectivity?: PrivateConnectivity;
 
   @SpeakeasyMetadata({ data: "json, name=staticServiceIpConnectivity" })
-  staticServiceIpConnectivity?: Map<string, any>;
+  staticServiceIpConnectivity?: Record<string, any>;
 }

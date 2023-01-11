@@ -11,5 +11,5 @@ export declare class ProtocolSnmpv3GroupAddRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3GroupAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3GroupAdd200ApplicationJsonString?: string;
+    protocolSnmpv3GroupAdd200ApplicationJSONString?: string;
 }

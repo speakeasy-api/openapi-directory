@@ -8,11 +8,11 @@ export declare class CreateOrUpdateAnnotationPathParams extends SpeakeasyBase {
 }
 export declare class CreateOrUpdateAnnotationRequest extends SpeakeasyBase {
     pathParams: CreateOrUpdateAnnotationPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreateOrUpdateAnnotationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    reportAnnotation?: Map<string, any>;
+    error?: Record<string, any>;
+    reportAnnotation?: Record<string, any>;
 }

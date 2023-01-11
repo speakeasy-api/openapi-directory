@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionResponse = /** @class */ (function (_super) {
     __extends(SessionResponse, _super);
     function SessionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessToken" }),
         __metadata("design:type", String)
     ], SessionResponse.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresIn" }),
         __metadata("design:type", Number)
     ], SessionResponse.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refreshExpiresIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refreshExpiresIn" }),
         __metadata("design:type", Number)
     ], SessionResponse.prototype, "refreshExpiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refreshToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refreshToken" }),
         __metadata("design:type", String)
     ], SessionResponse.prototype, "refreshToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenType" }),
         __metadata("design:type", String)
     ], SessionResponse.prototype, "tokenType", void 0);
     return SessionResponse;
-}(SpeakeasyBase));
-export { SessionResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionResponse = SessionResponse;

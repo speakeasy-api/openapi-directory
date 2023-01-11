@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnimationEnd } from "./animationend";
-import { AnimationFade } from "./animationfade";
-import { AnimationStatic } from "./animationstatic";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Animation = void 0;
+var utils_1 = require("../../../internal/utils");
+var animationend_1 = require("./animationend");
+var animationfade_1 = require("./animationfade");
+var animationstatic_1 = require("./animationstatic");
 // Animation
 /**
  * Animation types.
@@ -36,17 +39,17 @@ var Animation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=animationEnd" }),
-        __metadata("design:type", AnimationEnd)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=animationEnd" }),
+        __metadata("design:type", animationend_1.AnimationEnd)
     ], Animation.prototype, "animationEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=animationFade" }),
-        __metadata("design:type", AnimationFade)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=animationFade" }),
+        __metadata("design:type", animationfade_1.AnimationFade)
     ], Animation.prototype, "animationFade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=animationStatic" }),
-        __metadata("design:type", AnimationStatic)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=animationStatic" }),
+        __metadata("design:type", animationstatic_1.AnimationStatic)
     ], Animation.prototype, "animationStatic", void 0);
     return Animation;
-}(SpeakeasyBase));
-export { Animation };
+}(utils_1.SpeakeasyBase));
+exports.Animation = Animation;

@@ -9,7 +9,7 @@ import { GoogleCloudRecaptchaenterpriseV1ScoreDistribution } from "./googlecloud
 **/
 export class GoogleCloudRecaptchaenterpriseV1ScoreMetrics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actionMetrics", elemType: GoogleCloudRecaptchaenterpriseV1ScoreDistribution })
-  actionMetrics?: Map<string, GoogleCloudRecaptchaenterpriseV1ScoreDistribution>;
+  actionMetrics?: Record<string, GoogleCloudRecaptchaenterpriseV1ScoreDistribution>;
 
   @SpeakeasyMetadata({ data: "json, name=overallMetrics" })
   overallMetrics?: GoogleCloudRecaptchaenterpriseV1ScoreDistribution;

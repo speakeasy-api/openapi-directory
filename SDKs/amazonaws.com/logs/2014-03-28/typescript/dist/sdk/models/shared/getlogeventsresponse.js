@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OutputLogEvent } from "./outputlogevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLogEventsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var outputlogevent_1 = require("./outputlogevent");
 var GetLogEventsResponse = /** @class */ (function (_super) {
     __extends(GetLogEventsResponse, _super);
     function GetLogEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events", elemType: OutputLogEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events", elemType: outputlogevent_1.OutputLogEvent }),
         __metadata("design:type", Array)
     ], GetLogEventsResponse.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextBackwardToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextBackwardToken" }),
         __metadata("design:type", String)
     ], GetLogEventsResponse.prototype, "nextBackwardToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextForwardToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextForwardToken" }),
         __metadata("design:type", String)
     ], GetLogEventsResponse.prototype, "nextForwardToken", void 0);
     return GetLogEventsResponse;
-}(SpeakeasyBase));
-export { GetLogEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLogEventsResponse = GetLogEventsResponse;

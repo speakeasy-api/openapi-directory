@@ -4,10 +4,10 @@ export declare class ListSourceTasksPathParams extends SpeakeasyBase {
     id: string;
 }
 export declare class ListSourceTasksQueryParams extends SpeakeasyBase {
-    filter?: Map<string, any>;
+    filter?: Record<string, any>;
     limit?: number;
     offset?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class ListSourceTasksRequest extends SpeakeasyBase {
     pathParams: ListSourceTasksPathParams;

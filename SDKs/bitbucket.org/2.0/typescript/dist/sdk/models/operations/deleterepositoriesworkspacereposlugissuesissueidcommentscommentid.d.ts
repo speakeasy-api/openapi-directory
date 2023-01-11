@@ -13,7 +13,7 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCom
 }
 export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest extends SpeakeasyBase {
     pathParams: DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity;
 }
 export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse extends SpeakeasyBase {

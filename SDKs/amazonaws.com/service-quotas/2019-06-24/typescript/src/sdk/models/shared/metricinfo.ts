@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class MetricInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=MetricDimensions" })
-  metricDimensions?: Map<string, string>;
+  metricDimensions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=MetricName" })
   metricName?: string;

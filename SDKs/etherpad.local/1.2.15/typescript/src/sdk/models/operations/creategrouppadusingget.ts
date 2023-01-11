@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateGroupPadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padName" })
   padName?: string;
@@ -19,7 +19,7 @@ export class CreateGroupPadUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CreateGroupPadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateGroupPadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateGroupPadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateGroupPadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingGet200ApplicationJsonObject?: CreateGroupPadUsingGet200ApplicationJson;
+  createGroupPadUsingGET200ApplicationJSONObject?: CreateGroupPadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingGet400ApplicationJsonObject?: CreateGroupPadUsingGet400ApplicationJson;
+  createGroupPadUsingGET400ApplicationJSONObject?: CreateGroupPadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingGet401ApplicationJsonObject?: CreateGroupPadUsingGet401ApplicationJson;
+  createGroupPadUsingGET401ApplicationJSONObject?: CreateGroupPadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingGet500ApplicationJsonObject?: CreateGroupPadUsingGet500ApplicationJson;
+  createGroupPadUsingGET500ApplicationJSONObject?: CreateGroupPadUsingGet500ApplicationJson;
 }

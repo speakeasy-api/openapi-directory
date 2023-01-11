@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Domain } from "./domain";
-import { Group } from "./group";
-import { User } from "./user";
-export var PermissionRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = exports.PermissionRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var domain_1 = require("./domain");
+var group_1 = require("./group");
+var user_1 = require("./user");
+var PermissionRoleEnum;
 (function (PermissionRoleEnum) {
     PermissionRoleEnum["RoleUnspecified"] = "ROLE_UNSPECIFIED";
     PermissionRoleEnum["Owner"] = "OWNER";
@@ -36,7 +39,7 @@ export var PermissionRoleEnum;
     PermissionRoleEnum["Commenter"] = "COMMENTER";
     PermissionRoleEnum["Viewer"] = "VIEWER";
     PermissionRoleEnum["PublishedViewer"] = "PUBLISHED_VIEWER";
-})(PermissionRoleEnum || (PermissionRoleEnum = {}));
+})(PermissionRoleEnum = exports.PermissionRoleEnum || (exports.PermissionRoleEnum = {}));
 // Permission
 /**
  * The permission setting of an object.
@@ -47,29 +50,29 @@ var Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowDiscovery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowDiscovery" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "allowDiscovery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anyone" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anyone" }),
+        __metadata("design:type", Object)
     ], Permission.prototype, "anyone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", Domain)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", domain_1.Domain)
     ], Permission.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
-        __metadata("design:type", Group)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
+        __metadata("design:type", group_1.Group)
     ], Permission.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Permission.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], Permission.prototype, "user", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

@@ -54,7 +54,7 @@ export class GoogleAppsCloudidentityDevicesV1ClientState extends SpeakeasyBase {
   healthScore?: GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum;
 
   @SpeakeasyMetadata({ data: "json, name=keyValuePairs", elemType: GoogleAppsCloudidentityDevicesV1CustomAttributeValue })
-  keyValuePairs?: Map<string, GoogleAppsCloudidentityDevicesV1CustomAttributeValue>;
+  keyValuePairs?: Record<string, GoogleAppsCloudidentityDevicesV1CustomAttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdateTime" })
   lastUpdateTime?: string;

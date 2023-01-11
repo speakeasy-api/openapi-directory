@@ -13,6 +13,6 @@ export declare class GetResultFileRequest extends SpeakeasyBase {
 export declare class GetResultFileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

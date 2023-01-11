@@ -18,7 +18,7 @@ export declare class AddApplicationOutputRequest extends SpeakeasyBase {
     request: shared.AddApplicationOutputRequest;
 }
 export declare class AddApplicationOutputResponse extends SpeakeasyBase {
-    addApplicationOutputResponse?: Map<string, any>;
+    addApplicationOutputResponse?: Record<string, any>;
     concurrentModificationException?: any;
     contentType: string;
     invalidArgumentException?: any;

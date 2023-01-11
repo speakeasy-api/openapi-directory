@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageEnumOrderTypeEnum = void 0;
+var MessageEnumOrderTypeEnum;
+(function (MessageEnumOrderTypeEnum) {
+    MessageEnumOrderTypeEnum["Asc"] = "asc";
+    MessageEnumOrderTypeEnum["Desc"] = "desc";
+})(MessageEnumOrderTypeEnum = exports.MessageEnumOrderTypeEnum || (exports.MessageEnumOrderTypeEnum = {}));

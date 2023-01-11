@@ -7,7 +7,7 @@ export declare class FunctionsCreateRequestBody extends SpeakeasyBase {
     runtime: string;
     schedule?: string;
     timeout?: number;
-    vars?: Map<string, any>;
+    vars?: Record<string, any>;
 }
 export declare class FunctionsCreateSecurity extends SpeakeasyBase {
     key: shared.SchemeKey;

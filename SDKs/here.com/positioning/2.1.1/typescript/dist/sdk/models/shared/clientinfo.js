@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // ClientInfo
 /**
  * Information about the client
@@ -33,29 +36,29 @@ var ClientInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firmware" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firmware" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "firmware", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ClientInfo.prototype, "version", void 0);
     return ClientInfo;
-}(SpeakeasyBase));
-export { ClientInfo };
+}(utils_1.SpeakeasyBase));
+exports.ClientInfo = ClientInfo;

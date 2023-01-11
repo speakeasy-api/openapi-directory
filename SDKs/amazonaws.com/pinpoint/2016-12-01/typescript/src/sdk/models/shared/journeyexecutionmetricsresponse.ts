@@ -17,5 +17,5 @@ export class JourneyExecutionMetricsResponse extends SpeakeasyBase {
   lastEvaluatedTime: string;
 
   @SpeakeasyMetadata({ data: "json, name=Metrics" })
-  metrics: Map<string, string>;
+  metrics: Record<string, string>;
 }

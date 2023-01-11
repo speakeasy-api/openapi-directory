@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceFeatures = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeviceFeatures = /** @class */ (function (_super) {
     __extends(DeviceFeatures, _super);
     function DeviceFeatures() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ftp_banner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ftp_banner" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "ftpBanner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http_response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_response" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "httpResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=https_response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=https_response" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "httpsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nic_mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nic_mac" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "nicMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snmp_sysdescr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snmp_sysdescr" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "snmpSysdescr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snmp_sysoid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snmp_sysoid" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "snmpSysoid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telnet_banner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telnet_banner" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "telnetBanner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upnp_response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upnp_response" }),
         __metadata("design:type", String)
     ], DeviceFeatures.prototype, "upnpResponse", void 0);
     return DeviceFeatures;
-}(SpeakeasyBase));
-export { DeviceFeatures };
+}(utils_1.SpeakeasyBase));
+exports.DeviceFeatures = DeviceFeatures;

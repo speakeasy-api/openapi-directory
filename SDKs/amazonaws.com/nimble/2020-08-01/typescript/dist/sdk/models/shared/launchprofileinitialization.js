@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchProfileInitializationActiveDirectory } from "./launchprofileinitializationactivedirectory";
-import { LaunchProfilePlatformEnum } from "./launchprofileplatformenum";
-import { LaunchProfileInitializationScript } from "./launchprofileinitializationscript";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchProfileInitialization = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchprofileinitializationactivedirectory_1 = require("./launchprofileinitializationactivedirectory");
+var launchprofileplatformenum_1 = require("./launchprofileplatformenum");
+var launchprofileinitializationscript_1 = require("./launchprofileinitializationscript");
 var LaunchProfileInitialization = /** @class */ (function (_super) {
     __extends(LaunchProfileInitialization, _super);
     function LaunchProfileInitialization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeDirectory" }),
-        __metadata("design:type", LaunchProfileInitializationActiveDirectory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeDirectory" }),
+        __metadata("design:type", launchprofileinitializationactivedirectory_1.LaunchProfileInitializationActiveDirectory)
     ], LaunchProfileInitialization.prototype, "activeDirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], LaunchProfileInitialization.prototype, "ec2SecurityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchProfileId" }),
         __metadata("design:type", String)
     ], LaunchProfileInitialization.prototype, "launchProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchProfileProtocolVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchProfileProtocolVersion" }),
         __metadata("design:type", String)
     ], LaunchProfileInitialization.prototype, "launchProfileProtocolVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchPurpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchPurpose" }),
         __metadata("design:type", String)
     ], LaunchProfileInitialization.prototype, "launchPurpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LaunchProfileInitialization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], LaunchProfileInitialization.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=systemInitializationScripts", elemType: LaunchProfileInitializationScript }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=systemInitializationScripts", elemType: launchprofileinitializationscript_1.LaunchProfileInitializationScript }),
         __metadata("design:type", Array)
     ], LaunchProfileInitialization.prototype, "systemInitializationScripts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userInitializationScripts", elemType: LaunchProfileInitializationScript }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userInitializationScripts", elemType: launchprofileinitializationscript_1.LaunchProfileInitializationScript }),
         __metadata("design:type", Array)
     ], LaunchProfileInitialization.prototype, "userInitializationScripts", void 0);
     return LaunchProfileInitialization;
-}(SpeakeasyBase));
-export { LaunchProfileInitialization };
+}(utils_1.SpeakeasyBase));
+exports.LaunchProfileInitialization = LaunchProfileInitialization;

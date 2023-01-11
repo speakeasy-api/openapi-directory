@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupClientData } from "./groupclientdata";
-import { ContactGroupMetadata } from "./contactgroupmetadata";
-export var ContactGroupGroupTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactGroupInput = exports.ContactGroup = exports.ContactGroupGroupTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupclientdata_1 = require("./groupclientdata");
+var contactgroupmetadata_1 = require("./contactgroupmetadata");
+var ContactGroupGroupTypeEnum;
 (function (ContactGroupGroupTypeEnum) {
     ContactGroupGroupTypeEnum["GroupTypeUnspecified"] = "GROUP_TYPE_UNSPECIFIED";
     ContactGroupGroupTypeEnum["UserContactGroup"] = "USER_CONTACT_GROUP";
     ContactGroupGroupTypeEnum["SystemContactGroup"] = "SYSTEM_CONTACT_GROUP";
-})(ContactGroupGroupTypeEnum || (ContactGroupGroupTypeEnum = {}));
-// ContactGroupInput
-/**
- * A contact group.
-**/
-var ContactGroupInput = /** @class */ (function (_super) {
-    __extends(ContactGroupInput, _super);
-    function ContactGroupInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientData", elemType: GroupClientData }),
-        __metadata("design:type", Array)
-    ], ContactGroupInput.prototype, "clientData", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], ContactGroupInput.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ContactGroupInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
-        __metadata("design:type", String)
-    ], ContactGroupInput.prototype, "resourceName", void 0);
-    return ContactGroupInput;
-}(SpeakeasyBase));
-export { ContactGroupInput };
+})(ContactGroupGroupTypeEnum = exports.ContactGroupGroupTypeEnum || (exports.ContactGroupGroupTypeEnum = {}));
 // ContactGroup
 /**
  * A contact group.
@@ -69,41 +44,69 @@ var ContactGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientData", elemType: GroupClientData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientData", elemType: groupclientdata_1.GroupClientData }),
         __metadata("design:type", Array)
     ], ContactGroup.prototype, "clientData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], ContactGroup.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedName" }),
         __metadata("design:type", String)
     ], ContactGroup.prototype, "formattedName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupType" }),
         __metadata("design:type", String)
     ], ContactGroup.prototype, "groupType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberCount" }),
         __metadata("design:type", Number)
     ], ContactGroup.prototype, "memberCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberResourceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberResourceNames" }),
         __metadata("design:type", Array)
     ], ContactGroup.prototype, "memberResourceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ContactGroupMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", contactgroupmetadata_1.ContactGroupMetadata)
     ], ContactGroup.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ContactGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ContactGroup.prototype, "resourceName", void 0);
     return ContactGroup;
-}(SpeakeasyBase));
-export { ContactGroup };
+}(utils_1.SpeakeasyBase));
+exports.ContactGroup = ContactGroup;
+// ContactGroupInput
+/**
+ * A contact group.
+**/
+var ContactGroupInput = /** @class */ (function (_super) {
+    __extends(ContactGroupInput, _super);
+    function ContactGroupInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientData", elemType: groupclientdata_1.GroupClientData }),
+        __metadata("design:type", Array)
+    ], ContactGroupInput.prototype, "clientData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], ContactGroupInput.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ContactGroupInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
+        __metadata("design:type", String)
+    ], ContactGroupInput.prototype, "resourceName", void 0);
+    return ContactGroupInput;
+}(utils_1.SpeakeasyBase));
+exports.ContactGroupInput = ContactGroupInput;

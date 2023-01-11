@@ -31,8 +31,8 @@ export declare class RootV1ScoringsConsolidatedDailyRequest extends SpeakeasyBas
     queryParams: RootV1ScoringsConsolidatedDailyQueryParams;
 }
 export declare class RootV1ScoringsConsolidatedDailyResponse extends SpeakeasyBase {
-    rootV1ScoringsConsolidatedDaily200ApplicationJsonObject?: RootV1ScoringsConsolidatedDaily200ApplicationJson;
+    rootV1ScoringsConsolidatedDaily200ApplicationJSONObject?: RootV1ScoringsConsolidatedDaily200ApplicationJson;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

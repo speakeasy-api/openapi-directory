@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VpceConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // VpceConfiguration
 /**
  * Represents an Amazon Virtual Private Cloud (VPC) endpoint configuration.
@@ -33,25 +36,25 @@ var VpceConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], VpceConfiguration.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDnsName" }),
         __metadata("design:type", String)
     ], VpceConfiguration.prototype, "serviceDnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfigurationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfigurationDescription" }),
         __metadata("design:type", String)
     ], VpceConfiguration.prototype, "vpceConfigurationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfigurationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfigurationName" }),
         __metadata("design:type", String)
     ], VpceConfiguration.prototype, "vpceConfigurationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceServiceName" }),
         __metadata("design:type", String)
     ], VpceConfiguration.prototype, "vpceServiceName", void 0);
     return VpceConfiguration;
-}(SpeakeasyBase));
-export { VpceConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.VpceConfiguration = VpceConfiguration;

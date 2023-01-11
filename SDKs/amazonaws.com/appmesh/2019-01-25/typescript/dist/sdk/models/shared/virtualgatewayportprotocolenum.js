@@ -1,6 +1,9 @@
-export var VirtualGatewayPortProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayPortProtocolEnum = void 0;
+var VirtualGatewayPortProtocolEnum;
 (function (VirtualGatewayPortProtocolEnum) {
     VirtualGatewayPortProtocolEnum["Http"] = "http";
     VirtualGatewayPortProtocolEnum["Http2"] = "http2";
     VirtualGatewayPortProtocolEnum["Grpc"] = "grpc";
-})(VirtualGatewayPortProtocolEnum || (VirtualGatewayPortProtocolEnum = {}));
+})(VirtualGatewayPortProtocolEnum = exports.VirtualGatewayPortProtocolEnum || (exports.VirtualGatewayPortProtocolEnum = {}));

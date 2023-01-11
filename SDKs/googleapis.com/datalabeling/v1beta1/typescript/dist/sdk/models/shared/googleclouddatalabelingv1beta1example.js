@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1Annotation } from "./googleclouddatalabelingv1beta1annotation";
-import { GoogleCloudDatalabelingV1beta1ImagePayload } from "./googleclouddatalabelingv1beta1imagepayload";
-import { GoogleCloudDatalabelingV1beta1TextPayload } from "./googleclouddatalabelingv1beta1textpayload";
-import { GoogleCloudDatalabelingV1beta1VideoPayload } from "./googleclouddatalabelingv1beta1videopayload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1Example = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotation_1 = require("./googleclouddatalabelingv1beta1annotation");
+var googleclouddatalabelingv1beta1imagepayload_1 = require("./googleclouddatalabelingv1beta1imagepayload");
+var googleclouddatalabelingv1beta1textpayload_1 = require("./googleclouddatalabelingv1beta1textpayload");
+var googleclouddatalabelingv1beta1videopayload_1 = require("./googleclouddatalabelingv1beta1videopayload");
 // GoogleCloudDatalabelingV1beta1Example
 /**
  * An Example is a piece of data and its annotation. For example, an image with label "house".
@@ -37,25 +40,25 @@ var GoogleCloudDatalabelingV1beta1Example = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations", elemType: GoogleCloudDatalabelingV1beta1Annotation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations", elemType: googleclouddatalabelingv1beta1annotation_1.GoogleCloudDatalabelingV1beta1Annotation }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1Example.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imagePayload" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1ImagePayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imagePayload" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1imagepayload_1.GoogleCloudDatalabelingV1beta1ImagePayload)
     ], GoogleCloudDatalabelingV1beta1Example.prototype, "imagePayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Example.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textPayload" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1TextPayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textPayload" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1textpayload_1.GoogleCloudDatalabelingV1beta1TextPayload)
     ], GoogleCloudDatalabelingV1beta1Example.prototype, "textPayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoPayload" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1VideoPayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoPayload" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1videopayload_1.GoogleCloudDatalabelingV1beta1VideoPayload)
     ], GoogleCloudDatalabelingV1beta1Example.prototype, "videoPayload", void 0);
     return GoogleCloudDatalabelingV1beta1Example;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1Example };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1Example = GoogleCloudDatalabelingV1beta1Example;

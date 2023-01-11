@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
-import { TenancyEnum } from "./tenancyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterWorkspaceDirectoryRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
+var tenancyenum_1 = require("./tenancyenum");
 var RegisterWorkspaceDirectoryRequest = /** @class */ (function (_super) {
     __extends(RegisterWorkspaceDirectoryRequest, _super);
     function RegisterWorkspaceDirectoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryId" }),
         __metadata("design:type", String)
     ], RegisterWorkspaceDirectoryRequest.prototype, "directoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableSelfService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableSelfService" }),
         __metadata("design:type", Boolean)
     ], RegisterWorkspaceDirectoryRequest.prototype, "enableSelfService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableWorkDocs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableWorkDocs" }),
         __metadata("design:type", Boolean)
     ], RegisterWorkspaceDirectoryRequest.prototype, "enableWorkDocs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], RegisterWorkspaceDirectoryRequest.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], RegisterWorkspaceDirectoryRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenancy" }),
         __metadata("design:type", String)
     ], RegisterWorkspaceDirectoryRequest.prototype, "tenancy", void 0);
     return RegisterWorkspaceDirectoryRequest;
-}(SpeakeasyBase));
-export { RegisterWorkspaceDirectoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegisterWorkspaceDirectoryRequest = RegisterWorkspaceDirectoryRequest;

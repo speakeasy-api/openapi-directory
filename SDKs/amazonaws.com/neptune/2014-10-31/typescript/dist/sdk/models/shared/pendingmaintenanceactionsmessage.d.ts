@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ResourcePendingMaintenanceActions } from "./resourcependingmaintenanceactions";
+import { PendingMaintenanceActions } from "./pendingmaintenanceactions";
 export declare class PendingMaintenanceActionsMessage extends SpeakeasyBase {
     marker?: string;
-    pendingMaintenanceActions?: ResourcePendingMaintenanceActions[];
+    pendingMaintenanceActions?: PendingMaintenanceActions[];
 }

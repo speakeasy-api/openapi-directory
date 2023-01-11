@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SalesStats = void 0;
+var utils_1 = require("../../../internal/utils");
 // SalesStats
 /**
  * Sales stats response
@@ -33,41 +36,41 @@ var SalesStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absolute_mean_deviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absolute_mean_deviation" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "absoluteMeanDeviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iqr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iqr" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "iqr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mean" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mean" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "mean", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=median" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=median" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "median", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=population_standard_deviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=population_standard_deviation" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "populationStandardDeviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standard_deviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standard_deviation" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "standardDeviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trimmed_mean" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trimmed_mean" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "trimmedMean", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variance" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "variance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weighted_mean" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weighted_mean" }),
         __metadata("design:type", Number)
     ], SalesStats.prototype, "weightedMean", void 0);
     return SalesStats;
-}(SpeakeasyBase));
-export { SalesStats };
+}(utils_1.SpeakeasyBase));
+exports.SalesStats = SalesStats;

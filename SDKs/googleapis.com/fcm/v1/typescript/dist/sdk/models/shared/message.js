@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidConfig } from "./androidconfig";
-import { ApnsConfig } from "./apnsconfig";
-import { FcmOptions } from "./fcmoptions";
-import { Notification } from "./notification";
-import { WebpushConfig } from "./webpushconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Message = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidconfig_1 = require("./androidconfig");
+var apnsconfig_1 = require("./apnsconfig");
+var fcmoptions_1 = require("./fcmoptions");
+var notification_1 = require("./notification");
+var webpushconfig_1 = require("./webpushconfig");
 // Message
 /**
  * Message to send by Firebase Cloud Messaging Service.
@@ -38,45 +41,45 @@ var Message = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=android" }),
-        __metadata("design:type", AndroidConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=android" }),
+        __metadata("design:type", androidconfig_1.AndroidConfig)
     ], Message.prototype, "android", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apns" }),
-        __metadata("design:type", ApnsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apns" }),
+        __metadata("design:type", apnsconfig_1.ApnsConfig)
     ], Message.prototype, "apns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], Message.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], Message.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fcmOptions" }),
-        __metadata("design:type", FcmOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fcmOptions" }),
+        __metadata("design:type", fcmoptions_1.FcmOptions)
     ], Message.prototype, "fcmOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Message.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification" }),
-        __metadata("design:type", Notification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification" }),
+        __metadata("design:type", notification_1.Notification)
     ], Message.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], Message.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], Message.prototype, "topic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webpush" }),
-        __metadata("design:type", WebpushConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webpush" }),
+        __metadata("design:type", webpushconfig_1.WebpushConfig)
     ], Message.prototype, "webpush", void 0);
     return Message;
-}(SpeakeasyBase));
-export { Message };
+}(utils_1.SpeakeasyBase));
+exports.Message = Message;

@@ -17,7 +17,7 @@ export class GetAccountBalanceQueryParams extends SpeakeasyBase {
 
 export class GetAccountBalanceRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: GetAccountBalanceQueryParams;

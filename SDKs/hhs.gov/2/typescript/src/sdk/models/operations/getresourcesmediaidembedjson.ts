@@ -49,8 +49,8 @@ export class GetResourcesMediaIdEmbedJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesMediaIdEmbedJson200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesMediaIdEmbedJSON200ApplicationJSONString?: string;
 }

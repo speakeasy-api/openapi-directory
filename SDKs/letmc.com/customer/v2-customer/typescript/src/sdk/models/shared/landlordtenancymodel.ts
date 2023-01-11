@@ -21,7 +21,7 @@ export class LandlordTenancyModel extends SpeakeasyBase {
   bond?: number;
 
   @SpeakeasyMetadata({ data: "json, name=BranchID" })
-  branchId?: string;
+  branchID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Certificates", elemType: LandlordMaintenanceCertificateModel })
   certificates?: LandlordMaintenanceCertificateModel[];

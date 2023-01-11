@@ -17,7 +17,7 @@ export declare class MembershipInput extends SpeakeasyBase {
     endpoint?: MembershipEndpointInput;
     externalId?: string;
     infrastructureType?: MembershipInfrastructureTypeEnum;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
 }
 /**
  * Membership contains information about a member cluster.
@@ -30,7 +30,7 @@ export declare class Membership extends SpeakeasyBase {
     endpoint?: MembershipEndpoint;
     externalId?: string;
     infrastructureType?: MembershipInfrastructureTypeEnum;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lastConnectionTime?: string;
     name?: string;
     state?: MembershipState;

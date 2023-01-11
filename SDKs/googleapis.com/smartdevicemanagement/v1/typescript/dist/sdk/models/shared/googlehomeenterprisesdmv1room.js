@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleHomeEnterpriseSdmV1Room = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleHomeEnterpriseSdmV1Room
 /**
  * Room resource represents an instance of sub-space within a structure such as rooms in a hotel suite or rental apartment.
@@ -33,13 +36,13 @@ var GoogleHomeEnterpriseSdmV1Room = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleHomeEnterpriseSdmV1Room.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=traits" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=traits" }),
+        __metadata("design:type", Object)
     ], GoogleHomeEnterpriseSdmV1Room.prototype, "traits", void 0);
     return GoogleHomeEnterpriseSdmV1Room;
-}(SpeakeasyBase));
-export { GoogleHomeEnterpriseSdmV1Room };
+}(utils_1.SpeakeasyBase));
+exports.GoogleHomeEnterpriseSdmV1Room = GoogleHomeEnterpriseSdmV1Room;

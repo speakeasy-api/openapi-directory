@@ -1,4 +1,7 @@
-export var LifecycleEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecycleEnum = void 0;
+var LifecycleEnum;
 (function (LifecycleEnum) {
     LifecycleEnum["Queued"] = "queued";
     LifecycleEnum["Scheduled"] = "scheduled";
@@ -6,4 +9,4 @@ export var LifecycleEnum;
     LifecycleEnum["NotRunning"] = "not_running";
     LifecycleEnum["Running"] = "running";
     LifecycleEnum["Finished"] = "finished";
-})(LifecycleEnum || (LifecycleEnum = {}));
+})(LifecycleEnum = exports.LifecycleEnum || (exports.LifecycleEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrimaryStep } from "./primarystep";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MultiStep = void 0;
+var utils_1 = require("../../../internal/utils");
+var primarystep_1 = require("./primarystep");
 // MultiStep
 /**
  * Details when multiple steps are run with the same configuration as a group.
@@ -34,17 +37,17 @@ var MultiStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multistepNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multistepNumber" }),
         __metadata("design:type", Number)
     ], MultiStep.prototype, "multistepNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryStep" }),
-        __metadata("design:type", PrimaryStep)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryStep" }),
+        __metadata("design:type", primarystep_1.PrimaryStep)
     ], MultiStep.prototype, "primaryStep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryStepId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryStepId" }),
         __metadata("design:type", String)
     ], MultiStep.prototype, "primaryStepId", void 0);
     return MultiStep;
-}(SpeakeasyBase));
-export { MultiStep };
+}(utils_1.SpeakeasyBase));
+exports.MultiStep = MultiStep;

@@ -13,7 +13,7 @@ export declare class ActivityListNotificationsForAuthenticatedUserRequest extend
 }
 export declare class ActivityListNotificationsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     threads?: shared.Thread[];

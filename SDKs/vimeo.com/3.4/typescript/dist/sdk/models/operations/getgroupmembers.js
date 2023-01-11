@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,112 +14,137 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGroupMembersResponse = exports.GetGroupMembersRequest = exports.GetGroupMembersQueryParams = exports.GetGroupMembersSortEnum = exports.GetGroupMembersFilterEnum = exports.GetGroupMembersDirectionEnum = exports.GetGroupMembersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetGroupMembersPathParams = /** @class */ (function (_super) {
     __extends(GetGroupMembersPathParams, _super);
     function GetGroupMembersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=group_id" }),
         __metadata("design:type", Number)
     ], GetGroupMembersPathParams.prototype, "groupId", void 0);
     return GetGroupMembersPathParams;
-}(SpeakeasyBase));
-export { GetGroupMembersPathParams };
-export var GetGroupMembersDirectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetGroupMembersPathParams = GetGroupMembersPathParams;
+var GetGroupMembersDirectionEnum;
 (function (GetGroupMembersDirectionEnum) {
     GetGroupMembersDirectionEnum["Asc"] = "asc";
     GetGroupMembersDirectionEnum["Desc"] = "desc";
-})(GetGroupMembersDirectionEnum || (GetGroupMembersDirectionEnum = {}));
-export var GetGroupMembersFilterEnum;
+})(GetGroupMembersDirectionEnum = exports.GetGroupMembersDirectionEnum || (exports.GetGroupMembersDirectionEnum = {}));
+var GetGroupMembersFilterEnum;
 (function (GetGroupMembersFilterEnum) {
     GetGroupMembersFilterEnum["Moderators"] = "moderators";
-})(GetGroupMembersFilterEnum || (GetGroupMembersFilterEnum = {}));
-export var GetGroupMembersSortEnum;
+})(GetGroupMembersFilterEnum = exports.GetGroupMembersFilterEnum || (exports.GetGroupMembersFilterEnum = {}));
+var GetGroupMembersSortEnum;
 (function (GetGroupMembersSortEnum) {
     GetGroupMembersSortEnum["Alphabetical"] = "alphabetical";
     GetGroupMembersSortEnum["Date"] = "date";
-})(GetGroupMembersSortEnum || (GetGroupMembersSortEnum = {}));
+})(GetGroupMembersSortEnum = exports.GetGroupMembersSortEnum || (exports.GetGroupMembersSortEnum = {}));
 var GetGroupMembersQueryParams = /** @class */ (function (_super) {
     __extends(GetGroupMembersQueryParams, _super);
     function GetGroupMembersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], GetGroupMembersQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetGroupMembersQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetGroupMembersQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], GetGroupMembersQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetGroupMembersQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetGroupMembersQueryParams.prototype, "sort", void 0);
     return GetGroupMembersQueryParams;
-}(SpeakeasyBase));
-export { GetGroupMembersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupMembersQueryParams = GetGroupMembersQueryParams;
 var GetGroupMembersRequest = /** @class */ (function (_super) {
     __extends(GetGroupMembersRequest, _super);
     function GetGroupMembersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGroupMembersPathParams)
     ], GetGroupMembersRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGroupMembersQueryParams)
     ], GetGroupMembersRequest.prototype, "queryParams", void 0);
     return GetGroupMembersRequest;
-}(SpeakeasyBase));
-export { GetGroupMembersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupMembersRequest = GetGroupMembersRequest;
 var GetGroupMembersResponse = /** @class */ (function (_super) {
     __extends(GetGroupMembersResponse, _super);
     function GetGroupMembersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGroupMembersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGroupMembersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], GetGroupMembersResponse.prototype, "legacyError", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.User }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.User }),
         __metadata("design:type", Array)
     ], GetGroupMembersResponse.prototype, "users", void 0);
     return GetGroupMembersResponse;
-}(SpeakeasyBase));
-export { GetGroupMembersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupMembersResponse = GetGroupMembersResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateLimit = void 0;
+var utils_1 = require("../../../internal/utils");
 var RateLimit = /** @class */ (function (_super) {
     __extends(RateLimit, _super);
     function RateLimit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], RateLimit.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remaining" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remaining" }),
         __metadata("design:type", Number)
     ], RateLimit.prototype, "remaining", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reset" }),
         __metadata("design:type", Number)
     ], RateLimit.prototype, "reset", void 0);
     return RateLimit;
-}(SpeakeasyBase));
-export { RateLimit };
+}(utils_1.SpeakeasyBase));
+exports.RateLimit = RateLimit;

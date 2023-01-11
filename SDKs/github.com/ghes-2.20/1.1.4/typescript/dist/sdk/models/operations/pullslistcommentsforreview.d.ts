@@ -16,7 +16,7 @@ export declare class PullsListCommentsForReviewRequest extends SpeakeasyBase {
 }
 export declare class PullsListCommentsForReviewResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     reviewComments?: shared.ReviewComment[];

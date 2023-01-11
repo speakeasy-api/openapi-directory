@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetGroupsForCapacityReservationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetGroupsForCapacityReservationResponse = exports.PostGetGroupsForCapacityReservationRequest = exports.PostGetGroupsForCapacityReservationHeaders = exports.PostGetGroupsForCapacityReservationQueryParams = exports.PostGetGroupsForCapacityReservationVersionEnum = exports.PostGetGroupsForCapacityReservationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetGroupsForCapacityReservationActionEnum;
 (function (PostGetGroupsForCapacityReservationActionEnum) {
     PostGetGroupsForCapacityReservationActionEnum["GetGroupsForCapacityReservation"] = "GetGroupsForCapacityReservation";
-})(PostGetGroupsForCapacityReservationActionEnum || (PostGetGroupsForCapacityReservationActionEnum = {}));
-export var PostGetGroupsForCapacityReservationVersionEnum;
+})(PostGetGroupsForCapacityReservationActionEnum = exports.PostGetGroupsForCapacityReservationActionEnum || (exports.PostGetGroupsForCapacityReservationActionEnum = {}));
+var PostGetGroupsForCapacityReservationVersionEnum;
 (function (PostGetGroupsForCapacityReservationVersionEnum) {
     PostGetGroupsForCapacityReservationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostGetGroupsForCapacityReservationVersionEnum || (PostGetGroupsForCapacityReservationVersionEnum = {}));
+})(PostGetGroupsForCapacityReservationVersionEnum = exports.PostGetGroupsForCapacityReservationVersionEnum || (exports.PostGetGroupsForCapacityReservationVersionEnum = {}));
 var PostGetGroupsForCapacityReservationQueryParams = /** @class */ (function (_super) {
     __extends(PostGetGroupsForCapacityReservationQueryParams, _super);
     function PostGetGroupsForCapacityReservationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationQueryParams.prototype, "version", void 0);
     return PostGetGroupsForCapacityReservationQueryParams;
-}(SpeakeasyBase));
-export { PostGetGroupsForCapacityReservationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetGroupsForCapacityReservationQueryParams = PostGetGroupsForCapacityReservationQueryParams;
 var PostGetGroupsForCapacityReservationHeaders = /** @class */ (function (_super) {
     __extends(PostGetGroupsForCapacityReservationHeaders, _super);
     function PostGetGroupsForCapacityReservationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetGroupsForCapacityReservationHeaders;
-}(SpeakeasyBase));
-export { PostGetGroupsForCapacityReservationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetGroupsForCapacityReservationHeaders = PostGetGroupsForCapacityReservationHeaders;
 var PostGetGroupsForCapacityReservationRequest = /** @class */ (function (_super) {
     __extends(PostGetGroupsForCapacityReservationRequest, _super);
     function PostGetGroupsForCapacityReservationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetGroupsForCapacityReservationQueryParams)
     ], PostGetGroupsForCapacityReservationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetGroupsForCapacityReservationHeaders)
     ], PostGetGroupsForCapacityReservationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetGroupsForCapacityReservationRequest.prototype, "request", void 0);
     return PostGetGroupsForCapacityReservationRequest;
-}(SpeakeasyBase));
-export { PostGetGroupsForCapacityReservationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetGroupsForCapacityReservationRequest = PostGetGroupsForCapacityReservationRequest;
 var PostGetGroupsForCapacityReservationResponse = /** @class */ (function (_super) {
     __extends(PostGetGroupsForCapacityReservationResponse, _super);
     function PostGetGroupsForCapacityReservationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetGroupsForCapacityReservationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetGroupsForCapacityReservationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetGroupsForCapacityReservationResponse.prototype, "statusCode", void 0);
     return PostGetGroupsForCapacityReservationResponse;
-}(SpeakeasyBase));
-export { PostGetGroupsForCapacityReservationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetGroupsForCapacityReservationResponse = PostGetGroupsForCapacityReservationResponse;

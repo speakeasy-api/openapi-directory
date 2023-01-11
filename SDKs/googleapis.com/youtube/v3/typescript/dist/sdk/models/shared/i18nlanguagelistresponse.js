@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { I18nLanguage } from "./i18nlanguage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.I18nLanguageListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var i18nlanguage_1 = require("./i18nlanguage");
 var I18nLanguageListResponse = /** @class */ (function (_super) {
     __extends(I18nLanguageListResponse, _super);
     function I18nLanguageListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], I18nLanguageListResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], I18nLanguageListResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: I18nLanguage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: i18nlanguage_1.I18nLanguage }),
         __metadata("design:type", Array)
     ], I18nLanguageListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], I18nLanguageListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], I18nLanguageListResponse.prototype, "visitorId", void 0);
     return I18nLanguageListResponse;
-}(SpeakeasyBase));
-export { I18nLanguageListResponse };
+}(utils_1.SpeakeasyBase));
+exports.I18nLanguageListResponse = I18nLanguageListResponse;

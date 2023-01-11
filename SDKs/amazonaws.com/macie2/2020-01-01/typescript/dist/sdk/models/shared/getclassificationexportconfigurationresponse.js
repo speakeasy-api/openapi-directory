@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClassificationExportConfiguration } from "./classificationexportconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetClassificationExportConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var classificationexportconfiguration_1 = require("./classificationexportconfiguration");
 var GetClassificationExportConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetClassificationExportConfigurationResponse, _super);
     function GetClassificationExportConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ClassificationExportConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", classificationexportconfiguration_1.ClassificationExportConfiguration)
     ], GetClassificationExportConfigurationResponse.prototype, "configuration", void 0);
     return GetClassificationExportConfigurationResponse;
-}(SpeakeasyBase));
-export { GetClassificationExportConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetClassificationExportConfigurationResponse = GetClassificationExportConfigurationResponse;

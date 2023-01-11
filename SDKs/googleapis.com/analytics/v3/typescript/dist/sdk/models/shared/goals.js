@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Goal } from "./goal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Goals = void 0;
+var utils_1 = require("../../../internal/utils");
+var goal_1 = require("./goal");
 // Goals
 /**
  * A goal collection lists Analytics goals to which the user has access. Each view (profile) can have a set of goals. Each resource in the Goal collection corresponds to a single Analytics goal.
@@ -34,37 +37,37 @@ var Goals = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Goal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: goal_1.Goal }),
         __metadata("design:type", Array)
     ], Goals.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], Goals.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Goals.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextLink" }),
         __metadata("design:type", String)
     ], Goals.prototype, "nextLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousLink" }),
         __metadata("design:type", String)
     ], Goals.prototype, "previousLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], Goals.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], Goals.prototype, "totalResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Goals.prototype, "username", void 0);
     return Goals;
-}(SpeakeasyBase));
-export { Goals };
+}(utils_1.SpeakeasyBase));
+exports.Goals = Goals;

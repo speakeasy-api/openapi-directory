@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DatafusionProjectsLocationsInstancesCreateRequest, DatafusionProjectsLocationsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,97 +30,94 @@ const req: DatafusionProjectsLocationsInstancesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "velit",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "nostrum",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "veritatis",
-    fields: "quis",
-    instanceId: "quidem",
-    key: "ratione",
-    oauthToken: "sed",
+    callback: "consequuntur",
+    fields: "dolor",
+    instanceId: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "enim",
-    uploadType: "natus",
-    uploadProtocol: "repudiandae",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     accelerators: [
       {
-        acceleratorType: "CCAI_INSIGHTS",
-        state: "STATE_UNSPECIFIED",
-      },
-      {
-        acceleratorType: "CCAI_INSIGHTS",
-        state: "ENABLED",
+        acceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
+        state: "DISABLED",
       },
     ],
     availableVersion: [
       {
         availableFeatures: [
-          "sed",
+          "et",
+          "voluptate",
+          "iste",
         ],
         defaultVersion: true,
-        type: "TYPE_UNSPECIFIED",
-        versionNumber: "est",
+        type: "TYPE_GENERAL_AVAILABILITY",
+        versionNumber: "dolores",
       },
       {
         availableFeatures: [
-          "dolores",
-          "officia",
+          "debitis",
+          "vel",
+          "odio",
         ],
-        defaultVersion: false,
+        defaultVersion: true,
         type: "TYPE_PREVIEW",
-        versionNumber: "aut",
+        versionNumber: "aspernatur",
       },
       {
         availableFeatures: [
-          "iure",
-          "voluptatem",
-          "modi",
+          "totam",
+          "commodi",
+          "quis",
         ],
         defaultVersion: false,
-        type: "TYPE_UNSPECIFIED",
-        versionNumber: "totam",
+        type: "TYPE_GENERAL_AVAILABILITY",
+        versionNumber: "odit",
       },
     ],
     cryptoKeyConfig: {
-      keyReference: "ea",
+      keyReference: "non",
     },
-    dataprocServiceAccount: "nisi",
-    description: "dicta",
-    displayName: "provident",
-    enableRbac: false,
+    dataprocServiceAccount: "voluptas",
+    description: "omnis",
+    displayName: "aut",
+    enableRbac: true,
     enableStackdriverLogging: false,
     enableStackdriverMonitoring: false,
     eventPublishConfig: {
       enabled: true,
-      topic: "mollitia",
+      topic: "consectetur",
     },
     labels: {
-      "perferendis": "voluptatem",
-      "et": "asperiores",
-      "reprehenderit": "sequi",
+      "odio": "qui",
     },
     networkConfig: {
-      ipAllocation: "at",
-      network: "ea",
+      ipAllocation: "recusandae",
+      network: "at",
     },
     options: {
-      "facere": "veritatis",
+      "eveniet": "modi",
     },
     privateInstance: true,
-    type: "TYPE_UNSPECIFIED",
-    version: "nostrum",
-    zone: "minus",
+    type: "BASIC",
+    version: "ut",
+    zone: "exercitationem",
   },
 };
 

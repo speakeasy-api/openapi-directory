@@ -29,7 +29,7 @@ export class GetGroupHeaders extends SpeakeasyBase {
 
 export class GetGroupRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=GroupARN" })
-  groupArn?: string;
+  groupARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GroupName" })
   groupName?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse = exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest = exports.EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson = exports.EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors = exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams, _super);
     function EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pre_receive_environment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pre_receive_environment_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams.prototype, "preReceiveEnvironmentId", void 0);
     return EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams = EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams;
 var EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors = /** @class */ (function (_super) {
     __extends(EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors, _super);
     function EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors.prototype, "resource", void 0);
     return EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors;
-}(SpeakeasyBase));
-export { EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors = EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors;
 var EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson = /** @class */ (function (_super) {
     __extends(EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson, _super);
     function EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonErrors }),
         __metadata("design:type", Array)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson.prototype, "message", void 0);
     return EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
-}(SpeakeasyBase));
-export { EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson = EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
 var EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest, _super);
     function EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest = EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest;
 var EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse, _super);
     function EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson)
-    ], EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse.prototype, "enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonObject", void 0);
+    ], EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse.prototype, "enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PreReceiveEnvironmentDownloadStatus)
     ], EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse.prototype, "preReceiveEnvironmentDownloadStatus", void 0);
     return EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse = EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse;

@@ -47,13 +47,13 @@ export class SongListApiGetFeaturedListNamesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  songListApiGetFeaturedListNames200ApplicationJsonStrings?: string[];
+  songListApiGetFeaturedListNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   songListApiGetFeaturedListNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  songListApiGetFeaturedListNames200TextJsonStrings?: string[];
+  songListApiGetFeaturedListNames200TextJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -48,7 +48,7 @@ export class DeleteClassifierResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteClassifierResponse?: Map<string, any>;
+  deleteClassifierResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

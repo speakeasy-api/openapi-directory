@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
-import { GoogleTypeTimeOfDay } from "./googletypetimeofday";
-export var GooglePrivacyDlpV2ValueDayOfWeekValueEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Value = exports.GooglePrivacyDlpV2ValueDayOfWeekValueEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
+var googletypetimeofday_1 = require("./googletypetimeofday");
+var GooglePrivacyDlpV2ValueDayOfWeekValueEnum;
 (function (GooglePrivacyDlpV2ValueDayOfWeekValueEnum) {
     GooglePrivacyDlpV2ValueDayOfWeekValueEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     GooglePrivacyDlpV2ValueDayOfWeekValueEnum["Monday"] = "MONDAY";
@@ -35,7 +38,7 @@ export var GooglePrivacyDlpV2ValueDayOfWeekValueEnum;
     GooglePrivacyDlpV2ValueDayOfWeekValueEnum["Friday"] = "FRIDAY";
     GooglePrivacyDlpV2ValueDayOfWeekValueEnum["Saturday"] = "SATURDAY";
     GooglePrivacyDlpV2ValueDayOfWeekValueEnum["Sunday"] = "SUNDAY";
-})(GooglePrivacyDlpV2ValueDayOfWeekValueEnum || (GooglePrivacyDlpV2ValueDayOfWeekValueEnum = {}));
+})(GooglePrivacyDlpV2ValueDayOfWeekValueEnum = exports.GooglePrivacyDlpV2ValueDayOfWeekValueEnum || (exports.GooglePrivacyDlpV2ValueDayOfWeekValueEnum = {}));
 // GooglePrivacyDlpV2Value
 /**
  * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a 'Value' is based on its representation as a UTF-8 encoded string. For example, if 'integer_value' is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
@@ -46,37 +49,37 @@ var GooglePrivacyDlpV2Value = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=booleanValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=booleanValue" }),
         __metadata("design:type", Boolean)
     ], GooglePrivacyDlpV2Value.prototype, "booleanValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateValue" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateValue" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GooglePrivacyDlpV2Value.prototype, "dateValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfWeekValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfWeekValue" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Value.prototype, "dayOfWeekValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floatValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floatValue" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2Value.prototype, "floatValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integerValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integerValue" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Value.prototype, "integerValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Value.prototype, "stringValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeValue" }),
-        __metadata("design:type", GoogleTypeTimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeValue" }),
+        __metadata("design:type", googletypetimeofday_1.GoogleTypeTimeOfDay)
     ], GooglePrivacyDlpV2Value.prototype, "timeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestampValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestampValue" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Value.prototype, "timestampValue", void 0);
     return GooglePrivacyDlpV2Value;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Value };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Value = GooglePrivacyDlpV2Value;

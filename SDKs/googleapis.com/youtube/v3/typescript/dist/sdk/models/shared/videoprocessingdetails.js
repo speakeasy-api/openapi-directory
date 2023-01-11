@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoProcessingDetailsProcessingProgress } from "./videoprocessingdetailsprocessingprogress";
-export var VideoProcessingDetailsProcessingFailureReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoProcessingDetails = exports.VideoProcessingDetailsProcessingStatusEnum = exports.VideoProcessingDetailsProcessingFailureReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var videoprocessingdetailsprocessingprogress_1 = require("./videoprocessingdetailsprocessingprogress");
+var VideoProcessingDetailsProcessingFailureReasonEnum;
 (function (VideoProcessingDetailsProcessingFailureReasonEnum) {
     VideoProcessingDetailsProcessingFailureReasonEnum["UploadFailed"] = "uploadFailed";
     VideoProcessingDetailsProcessingFailureReasonEnum["TranscodeFailed"] = "transcodeFailed";
     VideoProcessingDetailsProcessingFailureReasonEnum["StreamingFailed"] = "streamingFailed";
     VideoProcessingDetailsProcessingFailureReasonEnum["Other"] = "other";
-})(VideoProcessingDetailsProcessingFailureReasonEnum || (VideoProcessingDetailsProcessingFailureReasonEnum = {}));
-export var VideoProcessingDetailsProcessingStatusEnum;
+})(VideoProcessingDetailsProcessingFailureReasonEnum = exports.VideoProcessingDetailsProcessingFailureReasonEnum || (exports.VideoProcessingDetailsProcessingFailureReasonEnum = {}));
+var VideoProcessingDetailsProcessingStatusEnum;
 (function (VideoProcessingDetailsProcessingStatusEnum) {
     VideoProcessingDetailsProcessingStatusEnum["Processing"] = "processing";
     VideoProcessingDetailsProcessingStatusEnum["Succeeded"] = "succeeded";
     VideoProcessingDetailsProcessingStatusEnum["Failed"] = "failed";
     VideoProcessingDetailsProcessingStatusEnum["Terminated"] = "terminated";
-})(VideoProcessingDetailsProcessingStatusEnum || (VideoProcessingDetailsProcessingStatusEnum = {}));
+})(VideoProcessingDetailsProcessingStatusEnum = exports.VideoProcessingDetailsProcessingStatusEnum || (exports.VideoProcessingDetailsProcessingStatusEnum = {}));
 // VideoProcessingDetails
 /**
  * Describes processing status and progress and availability of some other Video resource parts.
@@ -48,37 +51,37 @@ var VideoProcessingDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=editorSuggestionsAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editorSuggestionsAvailability" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "editorSuggestionsAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileDetailsAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileDetailsAvailability" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "fileDetailsAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingFailureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingFailureReason" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "processingFailureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingIssuesAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingIssuesAvailability" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "processingIssuesAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingProgress" }),
-        __metadata("design:type", VideoProcessingDetailsProcessingProgress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingProgress" }),
+        __metadata("design:type", videoprocessingdetailsprocessingprogress_1.VideoProcessingDetailsProcessingProgress)
     ], VideoProcessingDetails.prototype, "processingProgress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingStatus" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "processingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagSuggestionsAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagSuggestionsAvailability" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "tagSuggestionsAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailsAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailsAvailability" }),
         __metadata("design:type", String)
     ], VideoProcessingDetails.prototype, "thumbnailsAvailability", void 0);
     return VideoProcessingDetails;
-}(SpeakeasyBase));
-export { VideoProcessingDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoProcessingDetails = VideoProcessingDetails;

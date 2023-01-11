@@ -12,6 +12,25 @@ export enum GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum {
 }
 
 
+// GoogleCloudChannelV1RenewalSettingsInput
+/** 
+ * Renewal settings for renewable Offers.
+**/
+export class GoogleCloudChannelV1RenewalSettingsInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=enableRenewal" })
+  enableRenewal?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=paymentCycle" })
+  paymentCycle?: GoogleCloudChannelV1Period;
+
+  @SpeakeasyMetadata({ data: "json, name=paymentPlan" })
+  paymentPlan?: GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=resizeUnitCount" })
+  resizeUnitCount?: boolean;
+}
+
+
 // GoogleCloudChannelV1RenewalSettings
 /** 
  * Renewal settings for renewable Offers.
@@ -28,4 +47,7 @@ export class GoogleCloudChannelV1RenewalSettings extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=resizeUnitCount" })
   resizeUnitCount?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=scheduledRenewalOffer" })
+  scheduledRenewalOffer?: string;
 }

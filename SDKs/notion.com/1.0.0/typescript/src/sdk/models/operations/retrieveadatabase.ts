@@ -46,7 +46,7 @@ export class RetrieveADatabase200ApplicationJsonPropertiesLink extends Speakeasy
   type?: string;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
-  url?: Map<string, any>;
+  url?: Record<string, any>;
 }
 
 
@@ -55,7 +55,7 @@ export class RetrieveADatabase200ApplicationJsonPropertiesName extends Speakeasy
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
-  title?: Map<string, any>;
+  title?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
@@ -94,7 +94,7 @@ export class RetrieveADatabase200ApplicationJsonPropertiesPublisher extends Spea
 
 export class RetrieveADatabase200ApplicationJsonPropertiesPublishingReleaseDate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
-  date?: Map<string, any>;
+  date?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -106,7 +106,7 @@ export class RetrieveADatabase200ApplicationJsonPropertiesPublishingReleaseDate 
 
 export class RetrieveADatabase200ApplicationJsonPropertiesRead extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=checkbox" })
-  checkbox?: Map<string, any>;
+  checkbox?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -181,7 +181,7 @@ export class RetrieveADatabase200ApplicationJsonPropertiesSummary extends Speake
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=text" })
-  text?: Map<string, any>;
+  text?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;
@@ -331,11 +331,11 @@ export class RetrieveADatabaseResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveADatabase200ApplicationJsonObject?: RetrieveADatabase200ApplicationJson;
+  retrieveADatabase200ApplicationJSONObject?: RetrieveADatabase200ApplicationJson;
 }

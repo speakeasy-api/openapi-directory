@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig } from "./googlecloudrecommendationenginev1beta1catalogitemlevelconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1Catalog = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1catalogitemlevelconfig_1 = require("./googlecloudrecommendationenginev1beta1catalogitemlevelconfig");
 // GoogleCloudRecommendationengineV1beta1Catalog
 /**
  * The catalog configuration. Next ID: 5.
@@ -34,21 +37,21 @@ var GoogleCloudRecommendationengineV1beta1Catalog = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catalogItemLevelConfig" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catalogItemLevelConfig" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1catalogitemlevelconfig_1.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig)
     ], GoogleCloudRecommendationengineV1beta1Catalog.prototype, "catalogItemLevelConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultEventStoreId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultEventStoreId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1Catalog.prototype, "defaultEventStoreId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1Catalog.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1Catalog.prototype, "name", void 0);
     return GoogleCloudRecommendationengineV1beta1Catalog;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1Catalog };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1Catalog = GoogleCloudRecommendationengineV1beta1Catalog;

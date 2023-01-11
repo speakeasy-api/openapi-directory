@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Simple User
+**/
 export declare class StargazerSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginRequestPolicyConfig } from "./originrequestpolicyconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OriginRequestPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var originrequestpolicyconfig_1 = require("./originrequestpolicyconfig");
 // OriginRequestPolicy
 /**
  * <p>An origin request policy.</p> <p>When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:</p> <ul> <li> <p>The request body and the URL path (without the domain name) from the viewer request.</p> </li> <li> <p>The headers that CloudFront automatically includes in every origin request, including <code>Host</code>, <code>User-Agent</code>, and <code>X-Amz-Cf-Id</code>.</p> </li> <li> <p>All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.</p> </li> </ul> <p>CloudFront sends a request when it can’t find an object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use <code>CachePolicy</code>.</p>
@@ -34,17 +37,17 @@ var OriginRequestPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OriginRequestPolicy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], OriginRequestPolicy.prototype, "lastModifiedTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OriginRequestPolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", originrequestpolicyconfig_1.OriginRequestPolicyConfig)
     ], OriginRequestPolicy.prototype, "originRequestPolicyConfig", void 0);
     return OriginRequestPolicy;
-}(SpeakeasyBase));
-export { OriginRequestPolicy };
+}(utils_1.SpeakeasyBase));
+exports.OriginRequestPolicy = OriginRequestPolicy;

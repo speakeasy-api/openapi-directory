@@ -10,7 +10,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
-    resourceArn: string;
+    resourceARN: string;
     tags: shared.Tag[];
 }
 export declare class TagResourceRequest extends SpeakeasyBase {
@@ -22,7 +22,7 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     invalidRequestException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     throttledException?: any;
     tooManyTagsException?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,172 +23,174 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSamlConfigurationResponse = exports.PostSamlConfigurationRequest = exports.PostSamlConfigurationQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostSamlConfigurationQueryParams = /** @class */ (function (_super) {
     __extends(PostSamlConfigurationQueryParams, _super);
     function PostSamlConfigurationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$location" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "dollarLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=addGroupMemberships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=addGroupMemberships" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "addGroupMemberships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apply" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "apply", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assertionConsumerServiceURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=assertionConsumerServiceURL" }),
         __metadata("design:type", String)
-    ], PostSamlConfigurationQueryParams.prototype, "assertionConsumerServiceUrl", void 0);
+    ], PostSamlConfigurationQueryParams.prototype, "assertionConsumerServiceURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clockTolerance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clockTolerance" }),
         __metadata("design:type", Number)
     ], PostSamlConfigurationQueryParams.prototype, "clockTolerance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createUser" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "createUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=defaultGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=defaultGroups" }),
         __metadata("design:type", Array)
     ], PostSamlConfigurationQueryParams.prototype, "defaultGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=defaultRedirectUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=defaultRedirectUrl" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "defaultRedirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=delete" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "delete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=digestMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=digestMethod" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "digestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupMembershipAttribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupMembershipAttribute" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "groupMembershipAttribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=handleLogout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=handleLogout" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "handleLogout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=idpCertAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=idpCertAlias" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "idpCertAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=idpHttpRedirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=idpHttpRedirect" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "idpHttpRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=idpUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=idpUrl" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "idpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keyStorePassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keyStorePassword" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "keyStorePassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=logoutUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=logoutUrl" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "logoutUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nameIdFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nameIdFormat" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "nameIdFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=path" }),
         __metadata("design:type", Array)
     ], PostSamlConfigurationQueryParams.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=post" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=post" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "post", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=propertylist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=propertylist" }),
         __metadata("design:type", Array)
     ], PostSamlConfigurationQueryParams.prototype, "propertylist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=service.ranking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=service.ranking" }),
         __metadata("design:type", Number)
     ], PostSamlConfigurationQueryParams.prototype, "serviceRanking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceProviderEntityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceProviderEntityId" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "serviceProviderEntityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=signatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=signatureMethod" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spPrivateKeyAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spPrivateKeyAlias" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "spPrivateKeyAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=synchronizeAttributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=synchronizeAttributes" }),
         __metadata("design:type", Array)
     ], PostSamlConfigurationQueryParams.prototype, "synchronizeAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useEncryption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useEncryption" }),
         __metadata("design:type", Boolean)
     ], PostSamlConfigurationQueryParams.prototype, "useEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIDAttribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIDAttribute" }),
         __metadata("design:type", String)
-    ], PostSamlConfigurationQueryParams.prototype, "userIdAttribute", void 0);
+    ], PostSamlConfigurationQueryParams.prototype, "userIDAttribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIntermediatePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIntermediatePath" }),
         __metadata("design:type", String)
     ], PostSamlConfigurationQueryParams.prototype, "userIntermediatePath", void 0);
     return PostSamlConfigurationQueryParams;
-}(SpeakeasyBase));
-export { PostSamlConfigurationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSamlConfigurationQueryParams = PostSamlConfigurationQueryParams;
 var PostSamlConfigurationRequest = /** @class */ (function (_super) {
     __extends(PostSamlConfigurationRequest, _super);
     function PostSamlConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSamlConfigurationQueryParams)
     ], PostSamlConfigurationRequest.prototype, "queryParams", void 0);
     return PostSamlConfigurationRequest;
-}(SpeakeasyBase));
-export { PostSamlConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSamlConfigurationRequest = PostSamlConfigurationRequest;
 var PostSamlConfigurationResponse = /** @class */ (function (_super) {
     __extends(PostSamlConfigurationResponse, _super);
     function PostSamlConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Uint8Array)
-    ], PostSamlConfigurationResponse.prototype, "body", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSamlConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], PostSamlConfigurationResponse.prototype, "samlConfigurationInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSamlConfigurationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSamlConfigurationResponse.prototype, "postSamlConfiguration302TextPlainString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSamlConfigurationResponse.prototype, "postSamlConfigurationDefaultTextPlainString", void 0);
     return PostSamlConfigurationResponse;
-}(SpeakeasyBase));
-export { PostSamlConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSamlConfigurationResponse = PostSamlConfigurationResponse;

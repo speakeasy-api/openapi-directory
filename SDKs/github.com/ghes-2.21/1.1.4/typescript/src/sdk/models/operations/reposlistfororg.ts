@@ -8,32 +8,10 @@ export class ReposListForOrgPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum ReposListForOrgDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum ReposListForOrgSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Pushed = "pushed",
-    FullName = "full_name"
-}
-
-export enum ReposListForOrgTypeEnum {
-    All = "all",
-    Public = "public",
-    Private = "private",
-    Forks = "forks",
-    Sources = "sources",
-    Member = "member",
-    Internal = "internal"
-}
-
 
 export class ReposListForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: ReposListForOrgDirectionEnum;
+  direction?: shared.OrgEnum6;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -42,10 +20,10 @@ export class ReposListForOrgQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: ReposListForOrgSortEnum;
+  sort?: shared.OrgEnum5;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" })
-  type?: ReposListForOrgTypeEnum;
+  type?: shared.OrgEnum4;
 }
 
 
@@ -63,7 +41,7 @@ export class ReposListForOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

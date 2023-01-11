@@ -23,6 +23,6 @@ export declare class PostProjectUsernameProjectSshKeyRequest extends SpeakeasyBa
 }
 export declare class PostProjectUsernameProjectSshKeyResponse extends SpeakeasyBase {
     contentType: string;
-    postProjectUsernameProjectSshKeyDefaultApplicationJsonObject?: PostProjectUsernameProjectSshKeyDefaultApplicationJson;
     statusCode: number;
+    postProjectUsernameProjectSshKeyDefaultApplicationJSONObject?: PostProjectUsernameProjectSshKeyDefaultApplicationJson;
 }

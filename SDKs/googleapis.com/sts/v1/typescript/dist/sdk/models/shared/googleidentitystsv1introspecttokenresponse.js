@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityStsV1IntrospectTokenResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleIdentityStsV1IntrospectTokenResponse
 /**
  * Response message for IntrospectToken.
@@ -33,37 +36,37 @@ var GoogleIdentityStsV1IntrospectTokenResponse = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exp" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "exp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iat" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "iat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iss" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iss" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "iss", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "sub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenResponse.prototype, "username", void 0);
     return GoogleIdentityStsV1IntrospectTokenResponse;
-}(SpeakeasyBase));
-export { GoogleIdentityStsV1IntrospectTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityStsV1IntrospectTokenResponse = GoogleIdentityStsV1IntrospectTokenResponse;

@@ -28,5 +28,5 @@ export class FromAddResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fromAdd200ApplicationJsonString?: string;
+  fromAdd200ApplicationJSONString?: string;
 }

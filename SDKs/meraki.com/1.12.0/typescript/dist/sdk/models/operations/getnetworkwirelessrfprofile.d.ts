@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessRfProfileRequest extends SpeakeasyBase {
 export declare class GetNetworkWirelessRfProfileResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessRfProfile200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessRfProfile200ApplicationJSONObject?: Record<string, any>;
 }

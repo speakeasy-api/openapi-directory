@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TextEntryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextEntry = exports.TextEntryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TextEntryTypeEnum;
 (function (TextEntryTypeEnum) {
     TextEntryTypeEnum["TextTypeUnspecified"] = "TEXT_TYPE_UNSPECIFIED";
     TextEntryTypeEnum["PlainText"] = "PLAIN_TEXT";
     TextEntryTypeEnum["Html"] = "HTML";
-})(TextEntryTypeEnum || (TextEntryTypeEnum = {}));
+})(TextEntryTypeEnum = exports.TextEntryTypeEnum || (exports.TextEntryTypeEnum = {}));
 // TextEntry
 /**
  * Represents a body of text.
@@ -39,13 +42,13 @@ var TextEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], TextEntry.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TextEntry.prototype, "type", void 0);
     return TextEntry;
-}(SpeakeasyBase));
-export { TextEntry };
+}(utils_1.SpeakeasyBase));
+exports.TextEntry = TextEntry;

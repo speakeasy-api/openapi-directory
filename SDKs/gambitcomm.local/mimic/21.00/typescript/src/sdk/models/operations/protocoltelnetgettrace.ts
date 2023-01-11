@@ -17,7 +17,7 @@ export class ProtocolTelnetGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolTelnetGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configTelnet?: shared.ConfigTelnet;
+  configTELNET?: shared.ConfigTelnet;
 
   @SpeakeasyMetadata()
   contentType: string;

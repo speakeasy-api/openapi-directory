@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1AudioStatusReport } from "./googlechromemanagementv1audiostatusreport";
-import { GoogleChromeManagementV1BatteryInfo } from "./googlechromemanagementv1batteryinfo";
-import { GoogleChromeManagementV1BatteryStatusReport } from "./googlechromemanagementv1batterystatusreport";
-import { GoogleChromeManagementV1BootPerformanceReport } from "./googlechromemanagementv1bootperformancereport";
-import { GoogleChromeManagementV1CpuInfo } from "./googlechromemanagementv1cpuinfo";
-import { GoogleChromeManagementV1CpuStatusReport } from "./googlechromemanagementv1cpustatusreport";
-import { GoogleChromeManagementV1GraphicsInfo } from "./googlechromemanagementv1graphicsinfo";
-import { GoogleChromeManagementV1GraphicsStatusReport } from "./googlechromemanagementv1graphicsstatusreport";
-import { GoogleChromeManagementV1MemoryInfo } from "./googlechromemanagementv1memoryinfo";
-import { GoogleChromeManagementV1MemoryStatusReport } from "./googlechromemanagementv1memorystatusreport";
-import { GoogleChromeManagementV1NetworkDiagnosticsReport } from "./googlechromemanagementv1networkdiagnosticsreport";
-import { GoogleChromeManagementV1NetworkInfo } from "./googlechromemanagementv1networkinfo";
-import { GoogleChromeManagementV1NetworkStatusReport } from "./googlechromemanagementv1networkstatusreport";
-import { GoogleChromeManagementV1OsUpdateStatus } from "./googlechromemanagementv1osupdatestatus";
-import { GoogleChromeManagementV1StorageInfo } from "./googlechromemanagementv1storageinfo";
-import { GoogleChromeManagementV1StorageStatusReport } from "./googlechromemanagementv1storagestatusreport";
-import { GoogleChromeManagementV1ThunderboltInfo } from "./googlechromemanagementv1thunderboltinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1TelemetryDevice = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1audiostatusreport_1 = require("./googlechromemanagementv1audiostatusreport");
+var googlechromemanagementv1batteryinfo_1 = require("./googlechromemanagementv1batteryinfo");
+var googlechromemanagementv1batterystatusreport_1 = require("./googlechromemanagementv1batterystatusreport");
+var googlechromemanagementv1bootperformancereport_1 = require("./googlechromemanagementv1bootperformancereport");
+var googlechromemanagementv1cpuinfo_1 = require("./googlechromemanagementv1cpuinfo");
+var googlechromemanagementv1cpustatusreport_1 = require("./googlechromemanagementv1cpustatusreport");
+var googlechromemanagementv1graphicsinfo_1 = require("./googlechromemanagementv1graphicsinfo");
+var googlechromemanagementv1graphicsstatusreport_1 = require("./googlechromemanagementv1graphicsstatusreport");
+var googlechromemanagementv1memoryinfo_1 = require("./googlechromemanagementv1memoryinfo");
+var googlechromemanagementv1memorystatusreport_1 = require("./googlechromemanagementv1memorystatusreport");
+var googlechromemanagementv1networkdiagnosticsreport_1 = require("./googlechromemanagementv1networkdiagnosticsreport");
+var googlechromemanagementv1networkinfo_1 = require("./googlechromemanagementv1networkinfo");
+var googlechromemanagementv1networkstatusreport_1 = require("./googlechromemanagementv1networkstatusreport");
+var googlechromemanagementv1osupdatestatus_1 = require("./googlechromemanagementv1osupdatestatus");
+var googlechromemanagementv1storageinfo_1 = require("./googlechromemanagementv1storageinfo");
+var googlechromemanagementv1storagestatusreport_1 = require("./googlechromemanagementv1storagestatusreport");
+var googlechromemanagementv1thunderboltinfo_1 = require("./googlechromemanagementv1thunderboltinfo");
 // GoogleChromeManagementV1TelemetryDevice
 /**
  * Telemetry data collected from a managed device.
@@ -50,93 +53,93 @@ var GoogleChromeManagementV1TelemetryDevice = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioStatusReport", elemType: GoogleChromeManagementV1AudioStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioStatusReport", elemType: googlechromemanagementv1audiostatusreport_1.GoogleChromeManagementV1AudioStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "audioStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batteryInfo", elemType: GoogleChromeManagementV1BatteryInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batteryInfo", elemType: googlechromemanagementv1batteryinfo_1.GoogleChromeManagementV1BatteryInfo }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "batteryInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batteryStatusReport", elemType: GoogleChromeManagementV1BatteryStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batteryStatusReport", elemType: googlechromemanagementv1batterystatusreport_1.GoogleChromeManagementV1BatteryStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "batteryStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootPerformanceReport", elemType: GoogleChromeManagementV1BootPerformanceReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootPerformanceReport", elemType: googlechromemanagementv1bootperformancereport_1.GoogleChromeManagementV1BootPerformanceReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "bootPerformanceReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuInfo", elemType: GoogleChromeManagementV1CpuInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuInfo", elemType: googlechromemanagementv1cpuinfo_1.GoogleChromeManagementV1CpuInfo }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "cpuInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuStatusReport", elemType: GoogleChromeManagementV1CpuStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuStatusReport", elemType: googlechromemanagementv1cpustatusreport_1.GoogleChromeManagementV1CpuStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "cpuStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "customer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graphicsInfo" }),
-        __metadata("design:type", GoogleChromeManagementV1GraphicsInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graphicsInfo" }),
+        __metadata("design:type", googlechromemanagementv1graphicsinfo_1.GoogleChromeManagementV1GraphicsInfo)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "graphicsInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graphicsStatusReport", elemType: GoogleChromeManagementV1GraphicsStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graphicsStatusReport", elemType: googlechromemanagementv1graphicsstatusreport_1.GoogleChromeManagementV1GraphicsStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "graphicsStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryInfo" }),
-        __metadata("design:type", GoogleChromeManagementV1MemoryInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryInfo" }),
+        __metadata("design:type", googlechromemanagementv1memoryinfo_1.GoogleChromeManagementV1MemoryInfo)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "memoryInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryStatusReport", elemType: GoogleChromeManagementV1MemoryStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryStatusReport", elemType: googlechromemanagementv1memorystatusreport_1.GoogleChromeManagementV1MemoryStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "memoryStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkDiagnosticsReport", elemType: GoogleChromeManagementV1NetworkDiagnosticsReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkDiagnosticsReport", elemType: googlechromemanagementv1networkdiagnosticsreport_1.GoogleChromeManagementV1NetworkDiagnosticsReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "networkDiagnosticsReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInfo" }),
-        __metadata("design:type", GoogleChromeManagementV1NetworkInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInfo" }),
+        __metadata("design:type", googlechromemanagementv1networkinfo_1.GoogleChromeManagementV1NetworkInfo)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "networkInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkStatusReport", elemType: GoogleChromeManagementV1NetworkStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkStatusReport", elemType: googlechromemanagementv1networkstatusreport_1.GoogleChromeManagementV1NetworkStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "networkStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgUnitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgUnitId" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "orgUnitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osUpdateStatus", elemType: GoogleChromeManagementV1OsUpdateStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osUpdateStatus", elemType: googlechromemanagementv1osupdatestatus_1.GoogleChromeManagementV1OsUpdateStatus }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "osUpdateStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageInfo" }),
-        __metadata("design:type", GoogleChromeManagementV1StorageInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageInfo" }),
+        __metadata("design:type", googlechromemanagementv1storageinfo_1.GoogleChromeManagementV1StorageInfo)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "storageInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageStatusReport", elemType: GoogleChromeManagementV1StorageStatusReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageStatusReport", elemType: googlechromemanagementv1storagestatusreport_1.GoogleChromeManagementV1StorageStatusReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "storageStatusReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thunderboltInfo", elemType: GoogleChromeManagementV1ThunderboltInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thunderboltInfo", elemType: googlechromemanagementv1thunderboltinfo_1.GoogleChromeManagementV1ThunderboltInfo }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1TelemetryDevice.prototype, "thunderboltInfo", void 0);
     return GoogleChromeManagementV1TelemetryDevice;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1TelemetryDevice };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1TelemetryDevice = GoogleChromeManagementV1TelemetryDevice;

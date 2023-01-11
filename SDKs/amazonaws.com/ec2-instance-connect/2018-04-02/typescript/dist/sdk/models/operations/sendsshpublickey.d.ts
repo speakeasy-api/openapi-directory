@@ -22,7 +22,7 @@ export declare class SendSshPublicKeyResponse extends SpeakeasyBase {
     contentType: string;
     ec2InstanceNotFoundException?: any;
     invalidArgsException?: any;
-    sendSshPublicKeyResponse?: shared.SendSshPublicKeyResponse;
+    sendSSHPublicKeyResponse?: shared.SendSshPublicKeyResponse;
     serviceException?: any;
     statusCode: number;
     throttlingException?: any;

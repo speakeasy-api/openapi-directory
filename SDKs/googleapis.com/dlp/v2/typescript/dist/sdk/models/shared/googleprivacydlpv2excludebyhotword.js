@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Regex } from "./googleprivacydlpv2regex";
-import { GooglePrivacyDlpV2Proximity } from "./googleprivacydlpv2proximity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ExcludeByHotword = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2regex_1 = require("./googleprivacydlpv2regex");
+var googleprivacydlpv2proximity_1 = require("./googleprivacydlpv2proximity");
 // GooglePrivacyDlpV2ExcludeByHotword
 /**
- * The rule to exclude findings based on a hotword. For record inspection of tables, column names are considered hotwords. An example of this is to exclude a finding if a BigQuery column matches a specific pattern.
+ * The rule to exclude findings based on a hotword. For record inspection of tables, column names are considered hotwords. An example of this is to exclude a finding if it belongs to a BigQuery column that matches a specific pattern.
 **/
 var GooglePrivacyDlpV2ExcludeByHotword = /** @class */ (function (_super) {
     __extends(GooglePrivacyDlpV2ExcludeByHotword, _super);
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2ExcludeByHotword = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hotwordRegex" }),
-        __metadata("design:type", GooglePrivacyDlpV2Regex)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hotwordRegex" }),
+        __metadata("design:type", googleprivacydlpv2regex_1.GooglePrivacyDlpV2Regex)
     ], GooglePrivacyDlpV2ExcludeByHotword.prototype, "hotwordRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proximity" }),
-        __metadata("design:type", GooglePrivacyDlpV2Proximity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proximity" }),
+        __metadata("design:type", googleprivacydlpv2proximity_1.GooglePrivacyDlpV2Proximity)
     ], GooglePrivacyDlpV2ExcludeByHotword.prototype, "proximity", void 0);
     return GooglePrivacyDlpV2ExcludeByHotword;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ExcludeByHotword };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ExcludeByHotword = GooglePrivacyDlpV2ExcludeByHotword;

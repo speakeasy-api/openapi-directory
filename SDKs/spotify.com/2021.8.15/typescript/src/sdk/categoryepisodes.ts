@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -36,11 +36,12 @@ export class CategoryEpisodes {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/episodes/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/episodes/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -48,25 +49,27 @@ export class CategoryEpisodes {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.EndpointGetAnEpisodeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.episodeObject = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.errorResponseObject = httpRes?.data;
             }
             break;
@@ -74,7 +77,6 @@ export class CategoryEpisodes {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -96,9 +98,10 @@ export class CategoryEpisodes {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/episodes";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -106,25 +109,27 @@ export class CategoryEpisodes {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.EndpointGetMultipleEpisodesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.episodesObject = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.errorResponseObject = httpRes?.data;
             }
             break;
@@ -132,7 +137,6 @@ export class CategoryEpisodes {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

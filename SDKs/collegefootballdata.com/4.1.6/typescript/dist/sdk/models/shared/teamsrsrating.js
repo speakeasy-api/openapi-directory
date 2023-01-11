@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamSrsRating = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamSrsRating = /** @class */ (function (_super) {
     __extends(TeamSrsRating, _super);
     function TeamSrsRating() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], TeamSrsRating.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=division" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=division" }),
         __metadata("design:type", String)
     ], TeamSrsRating.prototype, "division", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranking" }),
         __metadata("design:type", Number)
     ], TeamSrsRating.prototype, "ranking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], TeamSrsRating.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], TeamSrsRating.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], TeamSrsRating.prototype, "year", void 0);
     return TeamSrsRating;
-}(SpeakeasyBase));
-export { TeamSrsRating };
+}(utils_1.SpeakeasyBase));
+exports.TeamSrsRating = TeamSrsRating;

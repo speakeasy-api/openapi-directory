@@ -20,6 +20,6 @@ export declare class GetBng2latlongEastingNorthingRequest extends SpeakeasyBase 
 }
 export declare class GetBng2latlongEastingNorthingResponse extends SpeakeasyBase {
     contentType: string;
-    getBng2latlongEastingNorthing200ApplicationJsonObject?: GetBng2latlongEastingNorthing200ApplicationJson;
     statusCode: number;
+    getBng2latlongEastingNorthing200ApplicationJSONObject?: GetBng2latlongEastingNorthing200ApplicationJson;
 }

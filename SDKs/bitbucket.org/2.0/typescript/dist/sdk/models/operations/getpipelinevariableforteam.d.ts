@@ -9,6 +9,6 @@ export declare class GetPipelineVariableForTeamRequest extends SpeakeasyBase {
 export declare class GetPipelineVariableForTeamResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

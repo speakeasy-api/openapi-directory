@@ -80,10 +80,10 @@ export class LinkApplicationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  linkApplication403ApplicationJsonObject?: LinkApplication403ApplicationJson;
+  linkApplication403ApplicationJSONObject?: LinkApplication403ApplicationJson;
 
   @SpeakeasyMetadata()
-  linkApplication409ApplicationJsonObject?: LinkApplication409ApplicationJson;
+  linkApplication409ApplicationJSONObject?: LinkApplication409ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -20,7 +20,7 @@ export class GetOfferingsOfferingIdAnalyticsSocialNotesResponse extends Speakeas
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.SocialNotesResponse })
   socialNotesResponses?: shared.SocialNotesResponse[];

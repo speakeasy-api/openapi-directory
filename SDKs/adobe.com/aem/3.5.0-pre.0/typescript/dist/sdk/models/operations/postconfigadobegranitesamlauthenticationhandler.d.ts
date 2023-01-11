@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams extends SpeakeasyBase {
     addGroupMemberships?: boolean;
     addGroupMembershipsAtTypeHint?: string;
-    assertionConsumerServiceUrl?: string;
-    assertionConsumerServiceUrlAtTypeHint?: string;
+    assertionConsumerServiceURL?: string;
+    assertionConsumerServiceURLAtTypeHint?: string;
     clockTolerance?: number;
     clockToleranceAtTypeHint?: string;
     createUser?: boolean;
@@ -44,8 +44,8 @@ export declare class PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams 
     synchronizeAttributesAtTypeHint?: string;
     useEncryption?: boolean;
     useEncryptionAtTypeHint?: string;
-    userIdAttribute?: string;
-    userIdAttributeAtTypeHint?: string;
+    userIDAttribute?: string;
+    userIDAttributeAtTypeHint?: string;
     userIntermediatePath?: string;
     userIntermediatePathAtTypeHint?: string;
 }

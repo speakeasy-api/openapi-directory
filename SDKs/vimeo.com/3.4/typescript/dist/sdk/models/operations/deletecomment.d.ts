@@ -14,6 +14,6 @@ export declare class DeleteCommentRequest extends SpeakeasyBase {
 export declare class DeleteCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

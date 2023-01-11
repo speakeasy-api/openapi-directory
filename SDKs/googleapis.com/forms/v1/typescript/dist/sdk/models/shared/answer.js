@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileUploadAnswers } from "./fileuploadanswers";
-import { Grade } from "./grade";
-import { TextAnswers } from "./textanswers";
-// Answer
-/**
- * The submitted answer for a question.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Answer = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileuploadanswers_1 = require("./fileuploadanswers");
+var grade_1 = require("./grade");
+var textanswers_1 = require("./textanswers");
 var Answer = /** @class */ (function (_super) {
     __extends(Answer, _super);
     function Answer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUploadAnswers" }),
-        __metadata("design:type", FileUploadAnswers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUploadAnswers" }),
+        __metadata("design:type", fileuploadanswers_1.FileUploadAnswers)
     ], Answer.prototype, "fileUploadAnswers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grade" }),
-        __metadata("design:type", Grade)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grade" }),
+        __metadata("design:type", grade_1.Grade)
     ], Answer.prototype, "grade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionId" }),
         __metadata("design:type", String)
     ], Answer.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textAnswers" }),
-        __metadata("design:type", TextAnswers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textAnswers" }),
+        __metadata("design:type", textanswers_1.TextAnswers)
     ], Answer.prototype, "textAnswers", void 0);
     return Answer;
-}(SpeakeasyBase));
-export { Answer };
+}(utils_1.SpeakeasyBase));
+exports.Answer = Answer;

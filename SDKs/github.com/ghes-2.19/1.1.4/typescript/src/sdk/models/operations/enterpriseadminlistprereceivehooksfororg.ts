@@ -8,12 +8,6 @@ export class EnterpriseAdminListPreReceiveHooksForOrgPathParams extends Speakeas
   org: string;
 }
 
-export enum EnterpriseAdminListPreReceiveHooksForOrgSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Name = "name"
-}
-
 
 export class EnterpriseAdminListPreReceiveHooksForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
@@ -26,7 +20,7 @@ export class EnterpriseAdminListPreReceiveHooksForOrgQueryParams extends Speakea
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: EnterpriseAdminListPreReceiveHooksForOrgSortEnum;
+  sort?: shared.DirectionEnum2;
 }
 
 

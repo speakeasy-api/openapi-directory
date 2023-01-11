@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeadCommercialCreditCardsResponse = exports.HeadCommercialCreditCardsRequest = exports.HeadCommercialCreditCardsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var HeadCommercialCreditCardsHeaders = /** @class */ (function (_super) {
     __extends(HeadCommercialCreditCardsHeaders, _super);
     function HeadCommercialCreditCardsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], HeadCommercialCreditCardsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], HeadCommercialCreditCardsHeaders.prototype, "ifNoneMatch", void 0);
     return HeadCommercialCreditCardsHeaders;
-}(SpeakeasyBase));
-export { HeadCommercialCreditCardsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.HeadCommercialCreditCardsHeaders = HeadCommercialCreditCardsHeaders;
 var HeadCommercialCreditCardsRequest = /** @class */ (function (_super) {
     __extends(HeadCommercialCreditCardsRequest, _super);
     function HeadCommercialCreditCardsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HeadCommercialCreditCardsHeaders)
     ], HeadCommercialCreditCardsRequest.prototype, "headers", void 0);
     return HeadCommercialCreditCardsRequest;
-}(SpeakeasyBase));
-export { HeadCommercialCreditCardsRequest };
+}(utils_1.SpeakeasyBase));
+exports.HeadCommercialCreditCardsRequest = HeadCommercialCreditCardsRequest;
 var HeadCommercialCreditCardsResponse = /** @class */ (function (_super) {
     __extends(HeadCommercialCreditCardsResponse, _super);
     function HeadCommercialCreditCardsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HeadCommercialCreditCardsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], HeadCommercialCreditCardsResponse.prototype, "noResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HeadCommercialCreditCardsResponse.prototype, "statusCode", void 0);
     return HeadCommercialCreditCardsResponse;
-}(SpeakeasyBase));
-export { HeadCommercialCreditCardsResponse };
+}(utils_1.SpeakeasyBase));
+exports.HeadCommercialCreditCardsResponse = HeadCommercialCreditCardsResponse;

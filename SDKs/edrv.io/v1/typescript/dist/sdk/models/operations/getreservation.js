@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReservationResponse = exports.GetReservationRequest = exports.GetReservationQueryParams = exports.GetReservationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetReservationPathParams = /** @class */ (function (_super) {
     __extends(GetReservationPathParams, _super);
     function GetReservationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetReservationPathParams.prototype, "id", void 0);
     return GetReservationPathParams;
-}(SpeakeasyBase));
-export { GetReservationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetReservationPathParams = GetReservationPathParams;
 var GetReservationQueryParams = /** @class */ (function (_super) {
     __extends(GetReservationQueryParams, _super);
     function GetReservationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_chargestation" }),
         __metadata("design:type", Boolean)
     ], GetReservationQueryParams.prototype, "includeChargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_organization" }),
         __metadata("design:type", Boolean)
     ], GetReservationQueryParams.prototype, "includeOrganization", void 0);
     return GetReservationQueryParams;
-}(SpeakeasyBase));
-export { GetReservationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetReservationQueryParams = GetReservationQueryParams;
 var GetReservationRequest = /** @class */ (function (_super) {
     __extends(GetReservationRequest, _super);
     function GetReservationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReservationPathParams)
     ], GetReservationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReservationQueryParams)
     ], GetReservationRequest.prototype, "queryParams", void 0);
     return GetReservationRequest;
-}(SpeakeasyBase));
-export { GetReservationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetReservationRequest = GetReservationRequest;
 var GetReservationResponse = /** @class */ (function (_super) {
     __extends(GetReservationResponse, _super);
     function GetReservationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetReservationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetReservationResponse.prototype, "statusCode", void 0);
     return GetReservationResponse;
-}(SpeakeasyBase));
-export { GetReservationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetReservationResponse = GetReservationResponse;

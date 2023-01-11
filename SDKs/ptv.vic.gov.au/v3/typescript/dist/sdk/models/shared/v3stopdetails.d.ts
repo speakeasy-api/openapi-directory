@@ -6,7 +6,7 @@ import { V3StopStaffing } from "./v3stopstaffing";
 export declare class V3StopDetails extends SpeakeasyBase {
     disruptionIds?: number[];
     routeType?: number;
-    routes?: Map<string, any>[];
+    routes?: Record<string, any>[];
     stationDescription?: string;
     stationType?: string;
     stopAccessibility?: V3StopAccessibility;

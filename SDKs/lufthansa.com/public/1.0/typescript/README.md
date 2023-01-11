@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest, CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,17 +33,17 @@ const req: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest = {
     },
   },
   pathParams: {
-    destination: "nulla",
-    fromDate: "beatae",
-    origin: "nobis",
-    productCode: "ZXB",
+    destination: "sit",
+    fromDate: "voluptas",
+    origin: "culpa",
+    productCode: "FUN",
   },
   headers: {
-    accept: "rerum",
+    accept: "consequuntur",
   },
 };
 
-sdk.sdk.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req).then((res: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse | AxiosError) => {
+sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req).then((res: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -53,17 +52,26 @@ sdk.sdk.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req).then((res
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Cargo
 
 * `cargoGetRouteFromDateProductCodeByOriginAndDestinationGet` - Retrieve all flights
 * `cargoShipmentTrackingByAwbPrefixAndAwbNumberGet` - Shipment Tracking
+
+### Offers
+
 * `offersLoungesByLocationGet` - Lounges
 * `offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet` - Seat Maps
+
+### Operations
+
 * `operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet` - Flight Status at Arrival Airport
 * `operationsFlightstatusByFlightNumberAndDateGet` - Flight Status
 * `operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet` - Flight Status at Departure Airport
 * `operationsFlightstatusRouteDateByOriginAndDestinationGet` - Flight Status by Route
 * `operationsSchedulesFromDateTimeByOriginAndDestinationGet` - Flight Schedules
+
+### Reference Data
+
 * `referencesAircraftByAircraftCodeGet` - Aircraft
 * `referencesAirlinesByAirlineCodeGet` - Airlines
 * `referencesAirportsByAirportCodeGet` - Airports

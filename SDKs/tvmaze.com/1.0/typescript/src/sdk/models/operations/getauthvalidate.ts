@@ -13,8 +13,8 @@ export class GetAuthValidateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAuthValidate200ApplicationJsonObject?: GetAuthValidate200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAuthValidate200ApplicationJSONObject?: GetAuthValidate200ApplicationJson;
 }

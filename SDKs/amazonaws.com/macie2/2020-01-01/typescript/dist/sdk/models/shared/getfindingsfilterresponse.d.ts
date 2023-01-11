@@ -9,5 +9,5 @@ export declare class GetFindingsFilterResponse extends SpeakeasyBase {
     id?: string;
     name?: string;
     position?: number;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

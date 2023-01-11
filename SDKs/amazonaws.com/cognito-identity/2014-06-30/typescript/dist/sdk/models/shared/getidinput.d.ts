@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetIdInput extends SpeakeasyBase {
     accountId?: string;
     identityPoolId: string;
-    logins?: Map<string, string>;
+    logins?: Record<string, string>;
 }

@@ -3,7 +3,7 @@ export declare class Position extends SpeakeasyBase {
     accuracy?: number;
     address?: string;
     altitude?: number;
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     course?: number;
     deviceId?: number;
     deviceTime?: Date;
@@ -11,7 +11,7 @@ export declare class Position extends SpeakeasyBase {
     id?: number;
     latitude?: number;
     longitude?: number;
-    network?: Map<string, any>;
+    network?: Record<string, any>;
     outdated?: boolean;
     protocol?: string;
     serverTime?: Date;

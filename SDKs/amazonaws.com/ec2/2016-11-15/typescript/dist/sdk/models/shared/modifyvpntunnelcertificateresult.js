@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpnConnection } from "./vpnconnection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyVpnTunnelCertificateResult = exports.ModifyVpnTunnelCertificateResultVpnConnection = exports.ModifyVpnTunnelCertificateResultVpnConnectionOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyVpnTunnelCertificateResultVpnConnectionOptions
+/**
+ * The VPN connection options.
+**/
+var ModifyVpnTunnelCertificateResultVpnConnectionOptions = /** @class */ (function (_super) {
+    __extends(ModifyVpnTunnelCertificateResultVpnConnectionOptions, _super);
+    function ModifyVpnTunnelCertificateResultVpnConnectionOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "enableAcceleration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "localIpv4NetworkCidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "localIpv6NetworkCidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "remoteIpv4NetworkCidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "remoteIpv6NetworkCidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "staticRoutesOnly", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "tunnelInsideIpVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnectionOptions.prototype, "tunnelOptions", void 0);
+    return ModifyVpnTunnelCertificateResultVpnConnectionOptions;
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpnTunnelCertificateResultVpnConnectionOptions = ModifyVpnTunnelCertificateResultVpnConnectionOptions;
+// ModifyVpnTunnelCertificateResultVpnConnection
+/**
+ * Describes a VPN connection.
+**/
+var ModifyVpnTunnelCertificateResultVpnConnection = /** @class */ (function (_super) {
+    __extends(ModifyVpnTunnelCertificateResultVpnConnection, _super);
+    function ModifyVpnTunnelCertificateResultVpnConnection() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "category", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "customerGatewayConfiguration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "customerGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyVpnTunnelCertificateResultVpnConnectionOptions)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "options", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "routes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "transitGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "vgwTelemetry", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "vpnConnectionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpnTunnelCertificateResultVpnConnection.prototype, "vpnGatewayId", void 0);
+    return ModifyVpnTunnelCertificateResultVpnConnection;
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpnTunnelCertificateResultVpnConnection = ModifyVpnTunnelCertificateResultVpnConnection;
 var ModifyVpnTunnelCertificateResult = /** @class */ (function (_super) {
     __extends(ModifyVpnTunnelCertificateResult, _super);
     function ModifyVpnTunnelCertificateResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpnConnection)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyVpnTunnelCertificateResultVpnConnection)
     ], ModifyVpnTunnelCertificateResult.prototype, "vpnConnection", void 0);
     return ModifyVpnTunnelCertificateResult;
-}(SpeakeasyBase));
-export { ModifyVpnTunnelCertificateResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpnTunnelCertificateResult = ModifyVpnTunnelCertificateResult;

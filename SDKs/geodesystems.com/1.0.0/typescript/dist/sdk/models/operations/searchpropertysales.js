@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchPropertySalesResponse = exports.SearchPropertySalesRequest = exports.SearchPropertySalesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchPropertySalesQueryParams = /** @class */ (function (_super) {
     __extends(SearchPropertySalesQueryParams, _super);
     function SearchPropertySalesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.building_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.building_description" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesBuildingDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.building_design" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.building_design" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesBuildingDesign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.buyer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.buyer" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesBuyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.city" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.location" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.property_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.property_address" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesPropertyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.sale_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.sale_date" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesSaleDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.sale_price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.sale_price" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesSalePrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.seller" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.seller" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesSeller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.subdivision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.subdivision" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesSubdivision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.type" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.zipcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_property_sales.zipcode" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "searchDbPropertySalesZipcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchPropertySalesQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchPropertySalesQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchPropertySalesQueryParams.prototype, "todate", void 0);
     return SearchPropertySalesQueryParams;
-}(SpeakeasyBase));
-export { SearchPropertySalesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchPropertySalesQueryParams = SearchPropertySalesQueryParams;
 var SearchPropertySalesRequest = /** @class */ (function (_super) {
     __extends(SearchPropertySalesRequest, _super);
     function SearchPropertySalesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchPropertySalesQueryParams)
     ], SearchPropertySalesRequest.prototype, "queryParams", void 0);
     return SearchPropertySalesRequest;
-}(SpeakeasyBase));
-export { SearchPropertySalesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchPropertySalesRequest = SearchPropertySalesRequest;
 var SearchPropertySalesResponse = /** @class */ (function (_super) {
     __extends(SearchPropertySalesResponse, _super);
     function SearchPropertySalesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchPropertySalesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchPropertySalesResponse.prototype, "statusCode", void 0);
     return SearchPropertySalesResponse;
-}(SpeakeasyBase));
-export { SearchPropertySalesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchPropertySalesResponse = SearchPropertySalesResponse;

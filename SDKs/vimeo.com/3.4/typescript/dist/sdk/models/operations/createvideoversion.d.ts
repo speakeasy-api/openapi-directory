@@ -26,6 +26,6 @@ export declare class CreateVideoVersionRequest extends SpeakeasyBase {
 export declare class CreateVideoVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     videoVersions?: shared.VideoVersions;
 }

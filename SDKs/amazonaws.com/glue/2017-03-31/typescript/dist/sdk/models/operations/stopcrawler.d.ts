@@ -24,5 +24,5 @@ export declare class StopCrawlerResponse extends SpeakeasyBase {
     entityNotFoundException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    stopCrawlerResponse?: Map<string, any>;
+    stopCrawlerResponse?: Record<string, any>;
 }

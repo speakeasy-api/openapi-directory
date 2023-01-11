@@ -8,10 +8,11 @@ import { V1Product } from "./v1product";
 import { V1System } from "./v1system";
 import { V1TinVerification } from "./v1tinverification";
 import { V1VatVerification } from "./v1vatverification";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.kompany.com/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     v1Company: V1Company;
     v1EinVerification: V1EinVerification;
@@ -28,6 +29,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

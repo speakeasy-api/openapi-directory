@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TreatmentResource } from "./treatmentresource";
-import { CustomDeliveryConfiguration } from "./customdeliveryconfiguration";
-import { CampaignState } from "./campaignstate";
-import { CampaignHook } from "./campaignhook";
-import { CampaignLimits } from "./campaignlimits";
-import { MessageConfiguration } from "./messageconfiguration";
-import { Schedule } from "./schedule";
-import { TemplateConfiguration } from "./templateconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var treatmentresource_1 = require("./treatmentresource");
+var customdeliveryconfiguration_1 = require("./customdeliveryconfiguration");
+var campaignstate_1 = require("./campaignstate");
+var campaignhook_1 = require("./campaignhook");
+var campaignlimits_1 = require("./campaignlimits");
+var messageconfiguration_1 = require("./messageconfiguration");
+var schedule_1 = require("./schedule");
+var templateconfiguration_1 = require("./templateconfiguration");
 // CampaignResponse
 /**
  * Provides information about the status, configuration, and other settings for a campaign.
@@ -41,105 +44,105 @@ var CampaignResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalTreatments", elemType: TreatmentResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalTreatments", elemType: treatmentresource_1.TreatmentResource }),
         __metadata("design:type", Array)
     ], CampaignResponse.prototype, "additionalTreatments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomDeliveryConfiguration" }),
-        __metadata("design:type", CustomDeliveryConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomDeliveryConfiguration" }),
+        __metadata("design:type", customdeliveryconfiguration_1.CustomDeliveryConfiguration)
     ], CampaignResponse.prototype, "customDeliveryConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultState" }),
-        __metadata("design:type", CampaignState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultState" }),
+        __metadata("design:type", campaignstate_1.CampaignState)
     ], CampaignResponse.prototype, "defaultState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldoutPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldoutPercent" }),
         __metadata("design:type", Number)
     ], CampaignResponse.prototype, "holdoutPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hook" }),
-        __metadata("design:type", CampaignHook)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hook" }),
+        __metadata("design:type", campaignhook_1.CampaignHook)
     ], CampaignResponse.prototype, "hook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsPaused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsPaused" }),
         __metadata("design:type", Boolean)
     ], CampaignResponse.prototype, "isPaused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limits" }),
-        __metadata("design:type", CampaignLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limits" }),
+        __metadata("design:type", campaignlimits_1.CampaignLimits)
     ], CampaignResponse.prototype, "limits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageConfiguration" }),
-        __metadata("design:type", MessageConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageConfiguration" }),
+        __metadata("design:type", messageconfiguration_1.MessageConfiguration)
     ], CampaignResponse.prototype, "messageConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Priority" }),
         __metadata("design:type", Number)
     ], CampaignResponse.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
-        __metadata("design:type", Schedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
+        __metadata("design:type", schedule_1.Schedule)
     ], CampaignResponse.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentId" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "segmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentVersion" }),
         __metadata("design:type", Number)
     ], CampaignResponse.prototype, "segmentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
-        __metadata("design:type", CampaignState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
+        __metadata("design:type", campaignstate_1.CampaignState)
     ], CampaignResponse.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateConfiguration" }),
-        __metadata("design:type", TemplateConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateConfiguration" }),
+        __metadata("design:type", templateconfiguration_1.TemplateConfiguration)
     ], CampaignResponse.prototype, "templateConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TreatmentDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TreatmentDescription" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "treatmentDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TreatmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TreatmentName" }),
         __metadata("design:type", String)
     ], CampaignResponse.prototype, "treatmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], CampaignResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], CampaignResponse.prototype, "tags", void 0);
     return CampaignResponse;
-}(SpeakeasyBase));
-export { CampaignResponse };
+}(utils_1.SpeakeasyBase));
+exports.CampaignResponse = CampaignResponse;

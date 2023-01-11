@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DatabaseDumpDatabaseTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseDump = exports.DatabaseDumpTypeEnum = exports.DatabaseDumpDatabaseTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DatabaseDumpDatabaseTypeEnum;
 (function (DatabaseDumpDatabaseTypeEnum) {
     DatabaseDumpDatabaseTypeEnum["DatabaseTypeUnspecified"] = "DATABASE_TYPE_UNSPECIFIED";
     DatabaseDumpDatabaseTypeEnum["Mysql"] = "MYSQL";
-})(DatabaseDumpDatabaseTypeEnum || (DatabaseDumpDatabaseTypeEnum = {}));
-export var DatabaseDumpTypeEnum;
+})(DatabaseDumpDatabaseTypeEnum = exports.DatabaseDumpDatabaseTypeEnum || (exports.DatabaseDumpDatabaseTypeEnum = {}));
+var DatabaseDumpTypeEnum;
 (function (DatabaseDumpTypeEnum) {
     DatabaseDumpTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     DatabaseDumpTypeEnum["Mysql"] = "MYSQL";
     DatabaseDumpTypeEnum["Avro"] = "AVRO";
-})(DatabaseDumpTypeEnum || (DatabaseDumpTypeEnum = {}));
+})(DatabaseDumpTypeEnum = exports.DatabaseDumpTypeEnum || (exports.DatabaseDumpTypeEnum = {}));
 // DatabaseDump
 /**
  * A specification of the location of and metadata about a database dump from a relational database management system.
@@ -44,21 +47,21 @@ var DatabaseDump = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseType" }),
         __metadata("design:type", String)
     ], DatabaseDump.prototype, "databaseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsUri" }),
         __metadata("design:type", String)
     ], DatabaseDump.prototype, "gcsUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceDatabase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceDatabase" }),
         __metadata("design:type", String)
     ], DatabaseDump.prototype, "sourceDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DatabaseDump.prototype, "type", void 0);
     return DatabaseDump;
-}(SpeakeasyBase));
-export { DatabaseDump };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseDump = DatabaseDump;

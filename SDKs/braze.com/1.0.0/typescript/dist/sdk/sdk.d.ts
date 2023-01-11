@@ -15,10 +15,11 @@ import { Segment } from "./segment";
 import { SessionAnalytics } from "./sessionanalytics";
 import { SubscriptionGroups } from "./subscriptiongroups";
 import { Templates } from "./templates";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://rest.iad-01.braze.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     campaign: Campaign;
     canvas: Canvas;
@@ -42,6 +43,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

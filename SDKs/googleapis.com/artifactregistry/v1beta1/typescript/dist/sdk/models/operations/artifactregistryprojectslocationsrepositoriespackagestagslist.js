@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,178 +14,203 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2 = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1 = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams = exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams.prototype, "parent", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams.prototype, "uploadProtocol", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1.prototype, "oauth2c", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1 = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2.prototype, "oauth2c", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2 = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption1)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurityOption2)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity.prototype, "option2", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListPathParams)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListQueryParams)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest.prototype, "security", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest;
 var ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse, _super);
     function ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListTagsResponse)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse.prototype, "listTagsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse.prototype, "statusCode", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse = ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse;

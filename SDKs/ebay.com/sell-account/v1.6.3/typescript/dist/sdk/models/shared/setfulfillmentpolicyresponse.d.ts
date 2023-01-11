@@ -3,7 +3,7 @@ import { CategoryType } from "./categorytype";
 import { TimeDuration } from "./timeduration";
 import { RegionSet } from "./regionset";
 import { ShippingOption } from "./shippingoption";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 /**
  * Complex type that that gets populated with a response containing a fulfillment policy.
 **/
@@ -20,5 +20,5 @@ export declare class SetFulfillmentPolicyResponse extends SpeakeasyBase {
     pickupDropOff?: boolean;
     shipToLocations?: RegionSet;
     shippingOptions?: ShippingOption[];
-    warnings?: Error[];
+    warnings?: ErrorT[];
 }

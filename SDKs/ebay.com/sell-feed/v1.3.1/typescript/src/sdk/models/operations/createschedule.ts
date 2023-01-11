@@ -23,11 +23,11 @@ export class CreateScheduleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createSchedule201ApplicationJsonObject?: Map<string, any>;
+  createSchedule201ApplicationJSONObject?: Record<string, any>;
 }

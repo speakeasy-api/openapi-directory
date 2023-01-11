@@ -17,5 +17,5 @@ export class WebhookVerificationKeyGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  webhookVerificationKeyGetResponse?: Map<string, any>;
+  webhookVerificationKeyGetResponse?: Record<string, any>;
 }

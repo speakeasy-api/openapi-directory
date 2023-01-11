@@ -8,7 +8,7 @@ export declare class HistoryListForFolderQueryParams extends SpeakeasyBase {
     display?: string;
     endAt?: Date;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
     startAt?: Date;
 }
 export declare class HistoryListForFolderRequest extends SpeakeasyBase {

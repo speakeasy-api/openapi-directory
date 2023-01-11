@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // QueryStatistics
 /**
  * Contains the number of log events scanned by the query, the number of log events that matched the query criteria, and the total number of bytes in the log events that were scanned.
@@ -33,17 +36,17 @@ var QueryStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesScanned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesScanned" }),
         __metadata("design:type", Number)
     ], QueryStatistics.prototype, "bytesScanned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordsMatched" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordsMatched" }),
         __metadata("design:type", Number)
     ], QueryStatistics.prototype, "recordsMatched", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordsScanned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordsScanned" }),
         __metadata("design:type", Number)
     ], QueryStatistics.prototype, "recordsScanned", void 0);
     return QueryStatistics;
-}(SpeakeasyBase));
-export { QueryStatistics };
+}(utils_1.SpeakeasyBase));
+exports.QueryStatistics = QueryStatistics;

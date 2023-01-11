@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RirInput = exports.Rir = void 0;
+var utils_1 = require("../../../internal/utils");
 var Rir = /** @class */ (function (_super) {
     __extends(Rir, _super);
     function Rir() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregate_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregate_count" }),
         __metadata("design:type", Number)
     ], Rir.prototype, "aggregateCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Rir.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Rir.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_private" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_private" }),
         __metadata("design:type", Boolean)
     ], Rir.prototype, "isPrivate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Rir.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Rir.prototype, "slug", void 0);
     return Rir;
-}(SpeakeasyBase));
-export { Rir };
+}(utils_1.SpeakeasyBase));
+exports.Rir = Rir;
 var RirInput = /** @class */ (function (_super) {
     __extends(RirInput, _super);
     function RirInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RirInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_private" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_private" }),
         __metadata("design:type", Boolean)
     ], RirInput.prototype, "isPrivate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RirInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], RirInput.prototype, "slug", void 0);
     return RirInput;
-}(SpeakeasyBase));
-export { RirInput };
+}(utils_1.SpeakeasyBase));
+exports.RirInput = RirInput;

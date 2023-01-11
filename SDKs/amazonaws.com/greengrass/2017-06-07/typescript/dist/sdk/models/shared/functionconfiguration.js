@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncodingTypeEnum } from "./encodingtypeenum";
-import { FunctionConfigurationEnvironment } from "./functionconfigurationenvironment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var encodingtypeenum_1 = require("./encodingtypeenum");
+var functionconfigurationenvironment_1 = require("./functionconfigurationenvironment");
 // FunctionConfiguration
 /**
  * The configuration of the Lambda function.
@@ -35,33 +38,33 @@ var FunctionConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncodingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncodingType" }),
         __metadata("design:type", String)
     ], FunctionConfiguration.prototype, "encodingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Environment" }),
-        __metadata("design:type", FunctionConfigurationEnvironment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Environment" }),
+        __metadata("design:type", functionconfigurationenvironment_1.FunctionConfigurationEnvironment)
     ], FunctionConfiguration.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecArgs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecArgs" }),
         __metadata("design:type", String)
     ], FunctionConfiguration.prototype, "execArgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Executable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Executable" }),
         __metadata("design:type", String)
     ], FunctionConfiguration.prototype, "executable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemorySize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemorySize" }),
         __metadata("design:type", Number)
     ], FunctionConfiguration.prototype, "memorySize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Pinned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Pinned" }),
         __metadata("design:type", Boolean)
     ], FunctionConfiguration.prototype, "pinned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timeout" }),
         __metadata("design:type", Number)
     ], FunctionConfiguration.prototype, "timeout", void 0);
     return FunctionConfiguration;
-}(SpeakeasyBase));
-export { FunctionConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.FunctionConfiguration = FunctionConfiguration;

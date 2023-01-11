@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetRecoveryCredentialResponse = exports.SetRecoveryCredentialRequest = exports.SetRecoveryCredentialRequestBody = exports.SetRecoveryCredentialRequestBodyCredentials = exports.SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion = exports.SetRecoveryCredentialPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetRecoveryCredentialPathParams = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialPathParams, _super);
     function SetRecoveryCredentialPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], SetRecoveryCredentialPathParams.prototype, "userId", void 0);
     return SetRecoveryCredentialPathParams;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialPathParams = SetRecoveryCredentialPathParams;
 var SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion, _super);
     function SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answer" }),
         __metadata("design:type", String)
     ], SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion.prototype, "answer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
         __metadata("design:type", String)
     ], SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion.prototype, "question", void 0);
     return SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion = SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion;
 var SetRecoveryCredentialRequestBodyCredentials = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialRequestBodyCredentials, _super);
     function SetRecoveryCredentialRequestBodyCredentials() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovery_question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovery_question" }),
         __metadata("design:type", SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion)
     ], SetRecoveryCredentialRequestBodyCredentials.prototype, "recoveryQuestion", void 0);
     return SetRecoveryCredentialRequestBodyCredentials;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialRequestBodyCredentials };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialRequestBodyCredentials = SetRecoveryCredentialRequestBodyCredentials;
 var SetRecoveryCredentialRequestBody = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialRequestBody, _super);
     function SetRecoveryCredentialRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
         __metadata("design:type", SetRecoveryCredentialRequestBodyCredentials)
     ], SetRecoveryCredentialRequestBody.prototype, "credentials", void 0);
     return SetRecoveryCredentialRequestBody;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialRequestBody = SetRecoveryCredentialRequestBody;
 var SetRecoveryCredentialRequest = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialRequest, _super);
     function SetRecoveryCredentialRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetRecoveryCredentialPathParams)
     ], SetRecoveryCredentialRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SetRecoveryCredentialRequestBody)
     ], SetRecoveryCredentialRequest.prototype, "request", void 0);
     return SetRecoveryCredentialRequest;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialRequest = SetRecoveryCredentialRequest;
 var SetRecoveryCredentialResponse = /** @class */ (function (_super) {
     __extends(SetRecoveryCredentialResponse, _super);
     function SetRecoveryCredentialResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetRecoveryCredentialResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetRecoveryCredentialResponse.prototype, "statusCode", void 0);
     return SetRecoveryCredentialResponse;
-}(SpeakeasyBase));
-export { SetRecoveryCredentialResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetRecoveryCredentialResponse = SetRecoveryCredentialResponse;

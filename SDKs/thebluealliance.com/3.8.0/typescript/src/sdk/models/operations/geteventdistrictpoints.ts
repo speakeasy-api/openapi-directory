@@ -41,7 +41,7 @@ export class GetEventDistrictPointsResponse extends SpeakeasyBase {
   eventDistrictPoints?: shared.EventDistrictPoints;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

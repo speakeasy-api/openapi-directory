@@ -10,7 +10,7 @@ export declare class RotatePagesV1RequestBody extends SpeakeasyBase {
     lastPage?: number;
 }
 export declare class RotatePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -22,5 +22,5 @@ export declare class RotatePagesV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     rotatePagesV1200ApplicationPdfBinaryString?: Uint8Array;
-    rotatePagesV14XxApplicationProblemPlusJsonObject?: RotatePagesV14XxApplicationProblemPlusJson;
+    rotatePagesV14XXApplicationProblemPlusJsonObject?: RotatePagesV14XxApplicationProblemPlusJson;
 }

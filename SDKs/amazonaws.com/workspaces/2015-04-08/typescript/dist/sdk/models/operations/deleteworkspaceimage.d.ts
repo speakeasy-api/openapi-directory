@@ -20,7 +20,7 @@ export declare class DeleteWorkspaceImageRequest extends SpeakeasyBase {
 export declare class DeleteWorkspaceImageResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteWorkspaceImageResult?: Map<string, any>;
+    deleteWorkspaceImageResult?: Record<string, any>;
     invalidResourceStateException?: any;
     resourceAssociatedException?: any;
     statusCode: number;

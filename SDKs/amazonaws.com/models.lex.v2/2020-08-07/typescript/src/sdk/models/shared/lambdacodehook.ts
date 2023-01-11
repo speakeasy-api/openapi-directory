@@ -11,5 +11,5 @@ export class LambdaCodeHook extends SpeakeasyBase {
   codeHookInterfaceVersion: string;
 
   @SpeakeasyMetadata({ data: "json, name=lambdaARN" })
-  lambdaArn: string;
+  lambdaARN: string;
 }

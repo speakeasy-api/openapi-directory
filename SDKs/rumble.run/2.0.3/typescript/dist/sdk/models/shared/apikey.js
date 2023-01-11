@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiKey = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApiKey = /** @class */ (function (_super) {
     __extends(ApiKey, _super);
     function ApiKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counter" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "counter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inactive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inactive" }),
         __metadata("design:type", Boolean)
     ], ApiKey.prototype, "inactive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_used_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_used_at" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "lastUsedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_used_ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_used_ip" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "lastUsedIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_used_ua" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_used_ua" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "lastUsedUa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_id" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ApiKey.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_limit" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "usageLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_today" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_today" }),
         __metadata("design:type", Number)
     ], ApiKey.prototype, "usageToday", void 0);
     return ApiKey;
-}(SpeakeasyBase));
-export { ApiKey };
+}(utils_1.SpeakeasyBase));
+exports.ApiKey = ApiKey;

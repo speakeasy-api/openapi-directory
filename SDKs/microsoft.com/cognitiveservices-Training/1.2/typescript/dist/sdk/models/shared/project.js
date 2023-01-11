@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectSettings } from "./projectsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectInput = exports.Project = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectsettings_1 = require("./projectsettings");
 // Project
 /**
  * Represents a project
@@ -34,40 +37,40 @@ var Project = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Created" }),
         __metadata("design:type", Date)
     ], Project.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentIterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentIterationId" }),
         __metadata("design:type", String)
     ], Project.prototype, "currentIterationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Project.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Project.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModified" }),
         __metadata("design:type", Date)
     ], Project.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Project.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Settings" }),
-        __metadata("design:type", ProjectSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Settings" }),
+        __metadata("design:type", projectsettings_1.ProjectSettings)
     ], Project.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThumbnailUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThumbnailUri" }),
         __metadata("design:type", String)
     ], Project.prototype, "thumbnailUri", void 0);
     return Project;
-}(SpeakeasyBase));
-export { Project };
+}(utils_1.SpeakeasyBase));
+exports.Project = Project;
 // ProjectInput
 /**
  * Represents a project
@@ -78,17 +81,17 @@ var ProjectInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description, form, name=Description;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description, form, name=Description;" }),
         __metadata("design:type", String)
     ], ProjectInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name, form, name=Name;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name, form, name=Name;" }),
         __metadata("design:type", String)
     ], ProjectInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Settings, form, name=Settings;" }),
-        __metadata("design:type", ProjectSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Settings, form, name=Settings;json=true" }),
+        __metadata("design:type", projectsettings_1.ProjectSettings)
     ], ProjectInput.prototype, "settings", void 0);
     return ProjectInput;
-}(SpeakeasyBase));
-export { ProjectInput };
+}(utils_1.SpeakeasyBase));
+exports.ProjectInput = ProjectInput;

@@ -11,5 +11,5 @@ export declare class GetQueryRequest extends SpeakeasyBase {
 export declare class GetQueryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getQueryDefaultApplicationJsonString?: string;
+    getQueryDefaultApplicationJSONString?: string;
 }

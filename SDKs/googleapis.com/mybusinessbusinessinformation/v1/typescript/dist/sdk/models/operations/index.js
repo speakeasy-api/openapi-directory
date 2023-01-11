@@ -1,13 +1,29 @@
-export * from "./mybusinessbusinessinformationaccountslocationscreate";
-export * from "./mybusinessbusinessinformationaccountslocationslist";
-export * from "./mybusinessbusinessinformationattributeslist";
-export * from "./mybusinessbusinessinformationcategoriesbatchget";
-export * from "./mybusinessbusinessinformationcategorieslist";
-export * from "./mybusinessbusinessinformationchainssearch";
-export * from "./mybusinessbusinessinformationgooglelocationssearch";
-export * from "./mybusinessbusinessinformationlocationsassociate";
-export * from "./mybusinessbusinessinformationlocationsattributesgetgoogleupdated";
-export * from "./mybusinessbusinessinformationlocationsclearlocationassociation";
-export * from "./mybusinessbusinessinformationlocationsdelete";
-export * from "./mybusinessbusinessinformationlocationsgetattributes";
-export * from "./mybusinessbusinessinformationlocationsupdateattributes";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./mybusinessbusinessinformationaccountslocationscreate"), exports);
+__exportStar(require("./mybusinessbusinessinformationaccountslocationslist"), exports);
+__exportStar(require("./mybusinessbusinessinformationattributeslist"), exports);
+__exportStar(require("./mybusinessbusinessinformationcategoriesbatchget"), exports);
+__exportStar(require("./mybusinessbusinessinformationcategorieslist"), exports);
+__exportStar(require("./mybusinessbusinessinformationchainssearch"), exports);
+__exportStar(require("./mybusinessbusinessinformationgooglelocationssearch"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsassociate"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsattributesgetgoogleupdated"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsclearlocationassociation"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsdelete"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsgetattributes"), exports);
+__exportStar(require("./mybusinessbusinessinformationlocationsupdateattributes"), exports);

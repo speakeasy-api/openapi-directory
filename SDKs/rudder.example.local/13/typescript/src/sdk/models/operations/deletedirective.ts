@@ -50,5 +50,5 @@ export class DeleteDirectiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteDirective200ApplicationJsonObject?: DeleteDirective200ApplicationJson;
+  deleteDirective200ApplicationJSONObject?: DeleteDirective200ApplicationJson;
 }

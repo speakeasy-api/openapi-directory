@@ -3,9 +3,9 @@ import * as shared from "../shared";
 export declare class SourcesGetV2SourcesGetQueryParams extends SpeakeasyBase {
     limit?: number;
     offset?: number;
-    orderBy?: shared.SourcesOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceId?: number[];
     sourceName?: string[];
     sourceSlug?: string[];
@@ -16,6 +16,6 @@ export declare class SourcesGetV2SourcesGetRequest extends SpeakeasyBase {
 export declare class SourcesGetV2SourcesGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

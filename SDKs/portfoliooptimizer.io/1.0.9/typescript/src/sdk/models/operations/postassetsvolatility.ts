@@ -58,8 +58,8 @@ export class PostAssetsVolatilityResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsVolatility200ApplicationJsonObject?: PostAssetsVolatility200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsVolatility200ApplicationJSONObject?: PostAssetsVolatility200ApplicationJson;
 }

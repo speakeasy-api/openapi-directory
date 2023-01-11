@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// GoogleCloudContactcenterinsightsV1DialogflowSourceInput
-/**
- * A Dialogflow source of conversation data.
-**/
-var GoogleCloudContactcenterinsightsV1DialogflowSourceInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudContactcenterinsightsV1DialogflowSourceInput, _super);
-    function GoogleCloudContactcenterinsightsV1DialogflowSourceInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioUri" }),
-        __metadata("design:type", String)
-    ], GoogleCloudContactcenterinsightsV1DialogflowSourceInput.prototype, "audioUri", void 0);
-    return GoogleCloudContactcenterinsightsV1DialogflowSourceInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1DialogflowSourceInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1DialogflowSourceInput = exports.GoogleCloudContactcenterinsightsV1DialogflowSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudContactcenterinsightsV1DialogflowSource
 /**
  * A Dialogflow source of conversation data.
@@ -49,13 +36,29 @@ var GoogleCloudContactcenterinsightsV1DialogflowSource = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioUri" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1DialogflowSource.prototype, "audioUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowConversation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowConversation" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1DialogflowSource.prototype, "dialogflowConversation", void 0);
     return GoogleCloudContactcenterinsightsV1DialogflowSource;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1DialogflowSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1DialogflowSource = GoogleCloudContactcenterinsightsV1DialogflowSource;
+// GoogleCloudContactcenterinsightsV1DialogflowSourceInput
+/**
+ * A Dialogflow source of conversation data.
+**/
+var GoogleCloudContactcenterinsightsV1DialogflowSourceInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudContactcenterinsightsV1DialogflowSourceInput, _super);
+    function GoogleCloudContactcenterinsightsV1DialogflowSourceInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioUri" }),
+        __metadata("design:type", String)
+    ], GoogleCloudContactcenterinsightsV1DialogflowSourceInput.prototype, "audioUri", void 0);
+    return GoogleCloudContactcenterinsightsV1DialogflowSourceInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1DialogflowSourceInput = GoogleCloudContactcenterinsightsV1DialogflowSourceInput;

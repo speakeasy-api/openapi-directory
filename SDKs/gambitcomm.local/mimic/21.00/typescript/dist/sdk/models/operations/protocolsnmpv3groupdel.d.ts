@@ -9,5 +9,5 @@ export declare class ProtocolSnmpv3GroupDelRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3GroupDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3GroupDel200ApplicationJsonString?: string;
+    protocolSnmpv3GroupDel200ApplicationJSONString?: string;
 }

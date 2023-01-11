@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdmMessage } from "./admmessage";
-import { ApnsMessage } from "./apnsmessage";
-import { BaiduMessage } from "./baidumessage";
-import { DefaultMessage } from "./defaultmessage";
-import { DefaultPushNotificationMessage } from "./defaultpushnotificationmessage";
-import { EmailMessage } from "./emailmessage";
-import { GcmMessage } from "./gcmmessage";
-import { SmsMessage } from "./smsmessage";
-import { VoiceMessage } from "./voicemessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectMessageConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var admmessage_1 = require("./admmessage");
+var apnsmessage_1 = require("./apnsmessage");
+var baidumessage_1 = require("./baidumessage");
+var defaultmessage_1 = require("./defaultmessage");
+var defaultpushnotificationmessage_1 = require("./defaultpushnotificationmessage");
+var emailmessage_1 = require("./emailmessage");
+var gcmmessage_1 = require("./gcmmessage");
+var smsmessage_1 = require("./smsmessage");
+var voicemessage_1 = require("./voicemessage");
 // DirectMessageConfiguration
 /**
  * Specifies the settings and content for the default message and any default messages that you tailored for specific channels.
@@ -42,41 +45,41 @@ var DirectMessageConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ADMMessage" }),
-        __metadata("design:type", AdmMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ADMMessage" }),
+        __metadata("design:type", admmessage_1.AdmMessage)
     ], DirectMessageConfiguration.prototype, "admMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=APNSMessage" }),
-        __metadata("design:type", ApnsMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=APNSMessage" }),
+        __metadata("design:type", apnsmessage_1.ApnsMessage)
     ], DirectMessageConfiguration.prototype, "apnsMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BaiduMessage" }),
-        __metadata("design:type", BaiduMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BaiduMessage" }),
+        __metadata("design:type", baidumessage_1.BaiduMessage)
     ], DirectMessageConfiguration.prototype, "baiduMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultMessage" }),
-        __metadata("design:type", DefaultMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultMessage" }),
+        __metadata("design:type", defaultmessage_1.DefaultMessage)
     ], DirectMessageConfiguration.prototype, "defaultMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultPushNotificationMessage" }),
-        __metadata("design:type", DefaultPushNotificationMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultPushNotificationMessage" }),
+        __metadata("design:type", defaultpushnotificationmessage_1.DefaultPushNotificationMessage)
     ], DirectMessageConfiguration.prototype, "defaultPushNotificationMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailMessage" }),
-        __metadata("design:type", EmailMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailMessage" }),
+        __metadata("design:type", emailmessage_1.EmailMessage)
     ], DirectMessageConfiguration.prototype, "emailMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GCMMessage" }),
-        __metadata("design:type", GcmMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GCMMessage" }),
+        __metadata("design:type", gcmmessage_1.GcmMessage)
     ], DirectMessageConfiguration.prototype, "gcmMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SMSMessage" }),
-        __metadata("design:type", SmsMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SMSMessage" }),
+        __metadata("design:type", smsmessage_1.SmsMessage)
     ], DirectMessageConfiguration.prototype, "smsMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VoiceMessage" }),
-        __metadata("design:type", VoiceMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VoiceMessage" }),
+        __metadata("design:type", voicemessage_1.VoiceMessage)
     ], DirectMessageConfiguration.prototype, "voiceMessage", void 0);
     return DirectMessageConfiguration;
-}(SpeakeasyBase));
-export { DirectMessageConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DirectMessageConfiguration = DirectMessageConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DomainPermissionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Domain = exports.DomainPermissionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DomainPermissionEnum;
 (function (DomainPermissionEnum) {
     DomainPermissionEnum["PermissionUnspecified"] = "PERMISSION_UNSPECIFIED";
     DomainPermissionEnum["Owner"] = "OWNER";
     DomainPermissionEnum["Reader"] = "READER";
     DomainPermissionEnum["None"] = "NONE";
-})(DomainPermissionEnum || (DomainPermissionEnum = {}));
+})(DomainPermissionEnum = exports.DomainPermissionEnum || (exports.DomainPermissionEnum = {}));
 // Domain
 /**
  * A registered domain resource in the Postmaster API.
@@ -40,17 +43,17 @@ var Domain = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Domain.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Domain.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], Domain.prototype, "permission", void 0);
     return Domain;
-}(SpeakeasyBase));
-export { Domain };
+}(utils_1.SpeakeasyBase));
+exports.Domain = Domain;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportGroup } from "./reportgroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetReportGroupsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportgroup_1 = require("./reportgroup");
 var BatchGetReportGroupsOutput = /** @class */ (function (_super) {
     __extends(BatchGetReportGroupsOutput, _super);
     function BatchGetReportGroupsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportGroups", elemType: ReportGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportGroups", elemType: reportgroup_1.ReportGroup }),
         __metadata("design:type", Array)
     ], BatchGetReportGroupsOutput.prototype, "reportGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportGroupsNotFound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportGroupsNotFound" }),
         __metadata("design:type", Array)
     ], BatchGetReportGroupsOutput.prototype, "reportGroupsNotFound", void 0);
     return BatchGetReportGroupsOutput;
-}(SpeakeasyBase));
-export { BatchGetReportGroupsOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetReportGroupsOutput = BatchGetReportGroupsOutput;

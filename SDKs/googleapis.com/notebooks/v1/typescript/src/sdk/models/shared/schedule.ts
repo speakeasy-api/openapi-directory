@@ -14,28 +14,6 @@ export enum ScheduleStateEnum {
 }
 
 
-// ScheduleInput
-/** 
- * The definition of a schedule.
-**/
-export class ScheduleInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=cronSchedule" })
-  cronSchedule?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=executionTemplate" })
-  executionTemplate?: ExecutionTemplate;
-
-  @SpeakeasyMetadata({ data: "json, name=state" })
-  state?: ScheduleStateEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=timeZone" })
-  timeZone?: string;
-}
-
-
 // Schedule
 /** 
  * The definition of a schedule.
@@ -70,4 +48,26 @@ export class Schedule extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ScheduleInput
+/** 
+ * The definition of a schedule.
+**/
+export class ScheduleInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=cronSchedule" })
+  cronSchedule?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=executionTemplate" })
+  executionTemplate?: ExecutionTemplate;
+
+  @SpeakeasyMetadata({ data: "json, name=state" })
+  state?: ScheduleStateEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=timeZone" })
+  timeZone?: string;
 }

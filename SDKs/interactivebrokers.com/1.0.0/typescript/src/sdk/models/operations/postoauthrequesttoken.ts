@@ -40,8 +40,8 @@ export class PostOauthRequestTokenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postOauthRequestToken200ApplicationJsonObject?: PostOauthRequestToken200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postOauthRequestToken200ApplicationJSONObject?: PostOauthRequestToken200ApplicationJson;
 }

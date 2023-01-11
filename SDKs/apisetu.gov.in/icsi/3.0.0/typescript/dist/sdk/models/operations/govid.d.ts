@@ -106,11 +106,11 @@ export declare class GovidRequest extends SpeakeasyBase {
 export declare class GovidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    govid400ApplicationJsonObject?: Govid400ApplicationJson;
-    govid401ApplicationJsonObject?: Govid401ApplicationJson;
-    govid404ApplicationJsonObject?: Govid404ApplicationJson;
-    govid500ApplicationJsonObject?: Govid500ApplicationJson;
-    govid502ApplicationJsonObject?: Govid502ApplicationJson;
-    govid503ApplicationJsonObject?: Govid503ApplicationJson;
-    govid504ApplicationJsonObject?: Govid504ApplicationJson;
+    govid400ApplicationJSONObject?: Govid400ApplicationJson;
+    govid401ApplicationJSONObject?: Govid401ApplicationJson;
+    govid404ApplicationJSONObject?: Govid404ApplicationJson;
+    govid500ApplicationJSONObject?: Govid500ApplicationJson;
+    govid502ApplicationJSONObject?: Govid502ApplicationJson;
+    govid503ApplicationJSONObject?: Govid503ApplicationJson;
+    govid504ApplicationJSONObject?: Govid504ApplicationJson;
 }

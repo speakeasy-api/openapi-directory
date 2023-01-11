@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BaseListing } from "./baselisting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var baselisting_1 = require("./baselisting");
 // SearchResponse
 /**
  * Search query response
@@ -34,25 +37,25 @@ var SearchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facets" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facets" }),
+        __metadata("design:type", Object)
     ], SearchResponse.prototype, "facets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listings", elemType: BaseListing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listings", elemType: baselisting_1.BaseListing }),
         __metadata("design:type", Array)
     ], SearchResponse.prototype, "listings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_found" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_found" }),
         __metadata("design:type", Number)
     ], SearchResponse.prototype, "numFound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range_facets" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range_facets" }),
+        __metadata("design:type", Object)
     ], SearchResponse.prototype, "rangeFacets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", Object)
     ], SearchResponse.prototype, "stats", void 0);
     return SearchResponse;
-}(SpeakeasyBase));
-export { SearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponse = SearchResponse;

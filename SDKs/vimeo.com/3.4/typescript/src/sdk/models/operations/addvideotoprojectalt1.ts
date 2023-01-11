@@ -35,5 +35,5 @@ export class AddVideoToProjectAlt1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

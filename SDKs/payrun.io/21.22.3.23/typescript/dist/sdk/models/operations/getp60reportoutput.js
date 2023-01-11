@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetP60ReportOutputResponse = exports.GetP60ReportOutputRequest = exports.GetP60ReportOutputHeaders = exports.GetP60ReportOutputQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetP60ReportOutputQueryParams = /** @class */ (function (_super) {
     __extends(GetP60ReportOutputQueryParams, _super);
     function GetP60ReportOutputQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EmployeeCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EmployeeCodes" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "employeeCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EmployerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EmployerKey" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "employerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxIndex" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "maxIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StartIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StartIndex" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TaxYear" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TransformDefinitionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TransformDefinitionKey" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputQueryParams.prototype, "transformDefinitionKey", void 0);
     return GetP60ReportOutputQueryParams;
-}(SpeakeasyBase));
-export { GetP60ReportOutputQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetP60ReportOutputQueryParams = GetP60ReportOutputQueryParams;
 var GetP60ReportOutputHeaders = /** @class */ (function (_super) {
     __extends(GetP60ReportOutputHeaders, _super);
     function GetP60ReportOutputHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Api-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Api-Version" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputHeaders.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], GetP60ReportOutputHeaders.prototype, "authorization", void 0);
     return GetP60ReportOutputHeaders;
-}(SpeakeasyBase));
-export { GetP60ReportOutputHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetP60ReportOutputHeaders = GetP60ReportOutputHeaders;
 var GetP60ReportOutputRequest = /** @class */ (function (_super) {
     __extends(GetP60ReportOutputRequest, _super);
     function GetP60ReportOutputRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetP60ReportOutputQueryParams)
     ], GetP60ReportOutputRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetP60ReportOutputHeaders)
     ], GetP60ReportOutputRequest.prototype, "headers", void 0);
     return GetP60ReportOutputRequest;
-}(SpeakeasyBase));
-export { GetP60ReportOutputRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetP60ReportOutputRequest = GetP60ReportOutputRequest;
 var GetP60ReportOutputResponse = /** @class */ (function (_super) {
     __extends(GetP60ReportOutputResponse, _super);
     function GetP60ReportOutputResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetP60ReportOutputResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], GetP60ReportOutputResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
-    ], GetP60ReportOutputResponse.prototype, "getP60ReportOutput200ApplicationJsonBinaryString", void 0);
+    ], GetP60ReportOutputResponse.prototype, "getP60ReportOutput200ApplicationJSONBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetP60ReportOutputResponse.prototype, "statusCode", void 0);
     return GetP60ReportOutputResponse;
-}(SpeakeasyBase));
-export { GetP60ReportOutputResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetP60ReportOutputResponse = GetP60ReportOutputResponse;

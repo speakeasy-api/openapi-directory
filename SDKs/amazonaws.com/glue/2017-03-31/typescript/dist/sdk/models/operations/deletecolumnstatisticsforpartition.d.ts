@@ -19,7 +19,7 @@ export declare class DeleteColumnStatisticsForPartitionRequest extends Speakeasy
 }
 export declare class DeleteColumnStatisticsForPartitionResponse extends SpeakeasyBase {
     contentType: string;
-    deleteColumnStatisticsForPartitionResponse?: Map<string, any>;
+    deleteColumnStatisticsForPartitionResponse?: Record<string, any>;
     entityNotFoundException?: any;
     glueEncryptionException?: any;
     internalServiceException?: any;

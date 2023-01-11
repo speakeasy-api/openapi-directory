@@ -21,5 +21,5 @@ export declare class TerminateJobResponse extends SpeakeasyBase {
     contentType: string;
     serverException?: any;
     statusCode: number;
-    terminateJobResponse?: Map<string, any>;
+    terminateJobResponse?: Record<string, any>;
 }

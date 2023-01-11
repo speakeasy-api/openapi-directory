@@ -24,14 +24,14 @@ export declare class GetFileFromUriIdRequest extends SpeakeasyBase {
 }
 export declare class GetFileFromUriIdResponse extends SpeakeasyBase {
     contentType: string;
-    getFileFromUriId200ApplicationPdfString?: string;
-    getFileFromUriId200ImageJpegString?: string;
-    getFileFromUriId200ImageJpgString?: string;
-    getFileFromUriId200ImagePngString?: string;
-    getFileFromUriId400ApplicationJsonObject?: GetFileFromUriId400ApplicationJson;
-    getFileFromUriId401ApplicationJsonObject?: GetFileFromUriId401ApplicationJson;
-    getFileFromUriId404ApplicationJsonObject?: GetFileFromUriId404ApplicationJson;
-    getFileFromUriId500ApplicationJsonOneOf?: any;
-    getFileFromUriId503ApplicationJsonOneOf?: any;
+    getFileFromURIId200ApplicationPdfString?: string;
+    getFileFromURIId200ImageJpegString?: string;
+    getFileFromURIId200ImageJpgString?: string;
+    getFileFromURIId200ImagePngString?: string;
+    getFileFromURIId400ApplicationJSONObject?: GetFileFromUriId400ApplicationJson;
+    getFileFromURIId401ApplicationJSONObject?: GetFileFromUriId401ApplicationJson;
+    getFileFromURIId404ApplicationJSONObject?: GetFileFromUriId404ApplicationJson;
+    getFileFromURIId500ApplicationJSONOneOf?: any;
+    getFileFromURIId503ApplicationJSONOneOf?: any;
     statusCode: number;
 }

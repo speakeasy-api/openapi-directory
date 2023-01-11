@@ -26,5 +26,5 @@ export declare class GetMlModelOutput extends SpeakeasyBase {
     startedAt?: Date;
     status?: EntityStatusEnum;
     trainingDataSourceId?: string;
-    trainingParameters?: Map<string, string>;
+    trainingParameters?: Record<string, string>;
 }

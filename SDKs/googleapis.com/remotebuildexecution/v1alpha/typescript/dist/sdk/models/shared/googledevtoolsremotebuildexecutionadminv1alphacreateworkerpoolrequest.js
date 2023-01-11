@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool } from "./googledevtoolsremotebuildexecutionadminv1alphaworkerpool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googledevtoolsremotebuildexecutionadminv1alphaworkerpool_1 = require("./googledevtoolsremotebuildexecutionadminv1alphaworkerpool");
 // GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest
 /**
  * The request used for `CreateWorkerPool`.
@@ -34,17 +37,17 @@ var GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poolId" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest.prototype, "poolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerPool" }),
-        __metadata("design:type", GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerPool" }),
+        __metadata("design:type", googledevtoolsremotebuildexecutionadminv1alphaworkerpool_1.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest.prototype, "workerPool", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest = GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest;

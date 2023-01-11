@@ -7,16 +7,16 @@ export class OptCapProgramInPriceHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType?: string;
+  wmCONSUMERCHANNELTYPE?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 
@@ -64,5 +64,5 @@ export class OptCapProgramInPriceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  optCapProgramInPrice200ApplicationJsonObject?: OptCapProgramInPrice200ApplicationJson;
+  optCapProgramInPrice200ApplicationJSONObject?: OptCapProgramInPrice200ApplicationJson;
 }

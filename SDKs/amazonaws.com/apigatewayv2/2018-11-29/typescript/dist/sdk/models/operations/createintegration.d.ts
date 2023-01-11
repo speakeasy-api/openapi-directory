@@ -36,7 +36,7 @@ export declare enum CreateIntegrationRequestBodyPassthroughBehaviorEnum {
  * The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.
 **/
 export declare class CreateIntegrationRequestBodyTlsConfig extends SpeakeasyBase {
-    serverNameToVerify?: string;
+    serverNameToVerify?: Record<string, any>;
 }
 export declare class CreateIntegrationRequestBody extends SpeakeasyBase {
     connectionId?: string;
@@ -50,9 +50,9 @@ export declare class CreateIntegrationRequestBody extends SpeakeasyBase {
     integrationUri?: string;
     passthroughBehavior?: CreateIntegrationRequestBodyPassthroughBehaviorEnum;
     payloadFormatVersion?: string;
-    requestParameters?: Map<string, string>;
-    requestTemplates?: Map<string, string>;
-    responseParameters?: Map<string, Map<string, string>>;
+    requestParameters?: Record<string, string>;
+    requestTemplates?: Record<string, string>;
+    responseParameters?: Record<string, Record<string, string>>;
     templateSelectionExpression?: string;
     timeoutInMillis?: number;
     tlsConfig?: CreateIntegrationRequestBodyTlsConfig;

@@ -44,5 +44,5 @@ export class NodeInheritedPropertiesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  nodeInheritedProperties200ApplicationJsonObject?: NodeInheritedProperties200ApplicationJson;
+  nodeInheritedProperties200ApplicationJSONObject?: NodeInheritedProperties200ApplicationJson;
 }

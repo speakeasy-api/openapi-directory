@@ -19,7 +19,7 @@ export class ReversePagesV1RequestBody extends SpeakeasyBase {
 
 export class ReversePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -49,5 +49,5 @@ export class ReversePagesV1Response extends SpeakeasyBase {
   reversePagesV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  reversePagesV14XxApplicationProblemPlusJsonObject?: ReversePagesV14XxApplicationProblemPlusJson;
+  reversePagesV14XXApplicationProblemPlusJsonObject?: ReversePagesV14XxApplicationProblemPlusJson;
 }

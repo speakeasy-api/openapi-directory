@@ -17,5 +17,5 @@ export declare class CreateUserRequest extends SpeakeasyBase {
 export declare class CreateUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createUser200ApplicationJsonObject?: CreateUser200ApplicationJson;
+    createUser200ApplicationJSONObject?: CreateUser200ApplicationJson;
 }

@@ -47,6 +47,6 @@ export declare class CreateWorkspaceRequest extends SpeakeasyBase {
 export declare class CreateWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createWorkspace200ApplicationJsonObject?: CreateWorkspace200ApplicationJson;
-    createWorkspace400ApplicationJsonObject?: CreateWorkspace400ApplicationJson;
+    createWorkspace200ApplicationJSONObject?: CreateWorkspace200ApplicationJson;
+    createWorkspace400ApplicationJSONObject?: CreateWorkspace400ApplicationJson;
 }

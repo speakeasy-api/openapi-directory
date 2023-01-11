@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUsersId2faResetResponse = exports.PostUsersId2faResetRequest = exports.PostUsersId2faResetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostUsersId2faResetPathParams = /** @class */ (function (_super) {
     __extends(PostUsersId2faResetPathParams, _super);
     function PostUsersId2faResetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostUsersId2faResetPathParams.prototype, "id", void 0);
     return PostUsersId2faResetPathParams;
-}(SpeakeasyBase));
-export { PostUsersId2faResetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersId2faResetPathParams = PostUsersId2faResetPathParams;
 var PostUsersId2faResetRequest = /** @class */ (function (_super) {
     __extends(PostUsersId2faResetRequest, _super);
     function PostUsersId2faResetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUsersId2faResetPathParams)
     ], PostUsersId2faResetRequest.prototype, "pathParams", void 0);
     return PostUsersId2faResetRequest;
-}(SpeakeasyBase));
-export { PostUsersId2faResetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersId2faResetRequest = PostUsersId2faResetRequest;
 var PostUsersId2faResetResponse = /** @class */ (function (_super) {
     __extends(PostUsersId2faResetResponse, _super);
     function PostUsersId2faResetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUsersId2faResetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUsersId2faResetResponse.prototype, "statusCode", void 0);
     return PostUsersId2faResetResponse;
-}(SpeakeasyBase));
-export { PostUsersId2faResetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUsersId2faResetResponse = PostUsersId2faResetResponse;

@@ -10,20 +10,20 @@ export declare enum ApigatewayApiStateEnum {
 /**
  * An API that can be served by one or more Gateways.
 **/
-export declare class ApigatewayApiInput extends SpeakeasyBase {
-    displayName?: string;
-    labels?: Map<string, string>;
-    managedService?: string;
-}
-/**
- * An API that can be served by one or more Gateways.
-**/
 export declare class ApigatewayApi extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     managedService?: string;
     name?: string;
     state?: ApigatewayApiStateEnum;
     updateTime?: string;
+}
+/**
+ * An API that can be served by one or more Gateways.
+**/
+export declare class ApigatewayApiInput extends SpeakeasyBase {
+    displayName?: string;
+    labels?: Record<string, string>;
+    managedService?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstitutionsUsersListResponse = exports.InstitutionsUsersListRequest = exports.InstitutionsUsersListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var InstitutionsUsersListPathParams = /** @class */ (function (_super) {
     __extends(InstitutionsUsersListPathParams, _super);
     function InstitutionsUsersListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=institution_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=institution_id" }),
         __metadata("design:type", String)
     ], InstitutionsUsersListPathParams.prototype, "institutionId", void 0);
     return InstitutionsUsersListPathParams;
-}(SpeakeasyBase));
-export { InstitutionsUsersListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.InstitutionsUsersListPathParams = InstitutionsUsersListPathParams;
 var InstitutionsUsersListRequest = /** @class */ (function (_super) {
     __extends(InstitutionsUsersListRequest, _super);
     function InstitutionsUsersListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", InstitutionsUsersListPathParams)
     ], InstitutionsUsersListRequest.prototype, "pathParams", void 0);
     return InstitutionsUsersListRequest;
-}(SpeakeasyBase));
-export { InstitutionsUsersListRequest };
+}(utils_1.SpeakeasyBase));
+exports.InstitutionsUsersListRequest = InstitutionsUsersListRequest;
 var InstitutionsUsersListResponse = /** @class */ (function (_super) {
     __extends(InstitutionsUsersListResponse, _super);
     function InstitutionsUsersListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], InstitutionsUsersListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstitutionsUsersListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InstitutionsUsersListResponse.prototype, "statusCode", void 0);
     return InstitutionsUsersListResponse;
-}(SpeakeasyBase));
-export { InstitutionsUsersListResponse };
+}(utils_1.SpeakeasyBase));
+exports.InstitutionsUsersListResponse = InstitutionsUsersListResponse;

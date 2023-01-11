@@ -105,11 +105,11 @@ export declare class LccepRequest extends SpeakeasyBase {
 export declare class LccepResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lccep400ApplicationJsonObject?: Lccep400ApplicationJson;
-    lccep401ApplicationJsonObject?: Lccep401ApplicationJson;
-    lccep404ApplicationJsonObject?: Lccep404ApplicationJson;
-    lccep500ApplicationJsonObject?: Lccep500ApplicationJson;
-    lccep502ApplicationJsonObject?: Lccep502ApplicationJson;
-    lccep503ApplicationJsonObject?: Lccep503ApplicationJson;
-    lccep504ApplicationJsonObject?: Lccep504ApplicationJson;
+    lccep400ApplicationJSONObject?: Lccep400ApplicationJson;
+    lccep401ApplicationJSONObject?: Lccep401ApplicationJson;
+    lccep404ApplicationJSONObject?: Lccep404ApplicationJson;
+    lccep500ApplicationJSONObject?: Lccep500ApplicationJson;
+    lccep502ApplicationJSONObject?: Lccep502ApplicationJson;
+    lccep503ApplicationJSONObject?: Lccep503ApplicationJson;
+    lccep504ApplicationJSONObject?: Lccep504ApplicationJson;
 }

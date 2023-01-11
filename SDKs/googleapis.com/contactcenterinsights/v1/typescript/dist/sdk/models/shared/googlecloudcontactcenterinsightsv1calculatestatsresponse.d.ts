@@ -9,8 +9,8 @@ export declare class GoogleCloudContactcenterinsightsV1CalculateStatsResponse ex
     averageTurnCount?: number;
     conversationCount?: number;
     conversationCountTimeSeries?: GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries;
-    customHighlighterMatches?: Map<string, number>;
-    issueMatches?: Map<string, number>;
-    issueMatchesStats?: Map<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
-    smartHighlighterMatches?: Map<string, number>;
+    customHighlighterMatches?: Record<string, number>;
+    issueMatches?: Record<string, number>;
+    issueMatchesStats?: Record<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
+    smartHighlighterMatches?: Record<string, number>;
 }

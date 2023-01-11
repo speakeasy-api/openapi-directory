@@ -21,5 +21,5 @@ export declare class CreateNetworkSwitchLinkAggregationRequest extends Speakeasy
 export declare class CreateNetworkSwitchLinkAggregationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkSwitchLinkAggregation201ApplicationJsonObject?: Map<string, any>;
+    createNetworkSwitchLinkAggregation201ApplicationJSONObject?: Record<string, any>;
 }

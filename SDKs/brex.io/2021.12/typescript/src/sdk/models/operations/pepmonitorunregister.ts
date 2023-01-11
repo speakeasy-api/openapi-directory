@@ -29,10 +29,10 @@ export class PepMonitorUnregisterResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pepMonitorUnregister200ApplicationJsonAny?: any;
+  pepMonitorUnregister200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  pepMonitorUnregisterDefaultApplicationJsonAny?: any;
+  pepMonitorUnregisterDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

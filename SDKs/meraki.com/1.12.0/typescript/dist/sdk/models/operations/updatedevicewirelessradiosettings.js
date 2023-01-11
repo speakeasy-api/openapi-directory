@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceWirelessRadioSettingsResponse = exports.UpdateDeviceWirelessRadioSettingsRequest = exports.UpdateDeviceWirelessRadioSettingsRequestBody = exports.UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings = exports.UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings = exports.UpdateDeviceWirelessRadioSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceWirelessRadioSettingsPathParams = /** @class */ (function (_super) {
     __extends(UpdateDeviceWirelessRadioSettingsPathParams, _super);
     function UpdateDeviceWirelessRadioSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDeviceWirelessRadioSettingsPathParams.prototype, "serial", void 0);
     return UpdateDeviceWirelessRadioSettingsPathParams;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsPathParams = UpdateDeviceWirelessRadioSettingsPathParams;
 // UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings
 /**
  * Manual radio settings for 5 GHz.
@@ -45,20 +48,20 @@ var UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelWidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelWidth" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings.prototype, "channelWidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPower" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings.prototype, "targetPower", void 0);
     return UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings = UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings;
 // UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings
 /**
  * Manual radio settings for 2.4 GHz.
@@ -69,69 +72,69 @@ var UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPower" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings.prototype, "targetPower", void 0);
     return UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings = UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings;
 var UpdateDeviceWirelessRadioSettingsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceWirelessRadioSettingsRequestBody, _super);
     function UpdateDeviceWirelessRadioSettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fiveGhzSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fiveGhzSettings" }),
         __metadata("design:type", UpdateDeviceWirelessRadioSettingsRequestBodyFiveGhzSettings)
     ], UpdateDeviceWirelessRadioSettingsRequestBody.prototype, "fiveGhzSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rfProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rfProfileId" }),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsRequestBody.prototype, "rfProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twoFourGhzSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twoFourGhzSettings" }),
         __metadata("design:type", UpdateDeviceWirelessRadioSettingsRequestBodyTwoFourGhzSettings)
     ], UpdateDeviceWirelessRadioSettingsRequestBody.prototype, "twoFourGhzSettings", void 0);
     return UpdateDeviceWirelessRadioSettingsRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsRequestBody = UpdateDeviceWirelessRadioSettingsRequestBody;
 var UpdateDeviceWirelessRadioSettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceWirelessRadioSettingsRequest, _super);
     function UpdateDeviceWirelessRadioSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeviceWirelessRadioSettingsPathParams)
     ], UpdateDeviceWirelessRadioSettingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceWirelessRadioSettingsRequestBody)
     ], UpdateDeviceWirelessRadioSettingsRequest.prototype, "request", void 0);
     return UpdateDeviceWirelessRadioSettingsRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsRequest = UpdateDeviceWirelessRadioSettingsRequest;
 var UpdateDeviceWirelessRadioSettingsResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceWirelessRadioSettingsResponse, _super);
     function UpdateDeviceWirelessRadioSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceWirelessRadioSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceWirelessRadioSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceWirelessRadioSettingsResponse.prototype, "updateDeviceWirelessRadioSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceWirelessRadioSettingsResponse.prototype, "updateDeviceWirelessRadioSettings200ApplicationJSONObject", void 0);
     return UpdateDeviceWirelessRadioSettingsResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceWirelessRadioSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceWirelessRadioSettingsResponse = UpdateDeviceWirelessRadioSettingsResponse;

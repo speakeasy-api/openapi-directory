@@ -23,7 +23,7 @@ export declare class DatamigrationProjectsLocationsMigrationJobsPromoteSecurity 
 export declare class DatamigrationProjectsLocationsMigrationJobsPromoteRequest extends SpeakeasyBase {
     pathParams: DatamigrationProjectsLocationsMigrationJobsPromotePathParams;
     queryParams: DatamigrationProjectsLocationsMigrationJobsPromoteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatamigrationProjectsLocationsMigrationJobsPromoteSecurity;
 }
 export declare class DatamigrationProjectsLocationsMigrationJobsPromoteResponse extends SpeakeasyBase {

@@ -1,4 +1,5 @@
 export declare enum BankTransferDirectionEnum {
     Outbound = "outbound",
-    Inbound = "inbound"
+    Inbound = "inbound",
+    Null = "null"
 }

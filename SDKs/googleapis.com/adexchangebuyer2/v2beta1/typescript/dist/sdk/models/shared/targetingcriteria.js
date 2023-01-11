@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetingValue } from "./targetingvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetingCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetingvalue_1 = require("./targetingvalue");
 // TargetingCriteria
 /**
  * Advertisers can target different attributes of an ad slot. For example, they can choose to show ads only if the user is in the U.S. Such targeting criteria can be specified as part of Shared Targeting.
@@ -34,17 +37,17 @@ var TargetingCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusions", elemType: TargetingValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusions", elemType: targetingvalue_1.TargetingValue }),
         __metadata("design:type", Array)
     ], TargetingCriteria.prototype, "exclusions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inclusions", elemType: TargetingValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inclusions", elemType: targetingvalue_1.TargetingValue }),
         __metadata("design:type", Array)
     ], TargetingCriteria.prototype, "inclusions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], TargetingCriteria.prototype, "key", void 0);
     return TargetingCriteria;
-}(SpeakeasyBase));
-export { TargetingCriteria };
+}(utils_1.SpeakeasyBase));
+exports.TargetingCriteria = TargetingCriteria;

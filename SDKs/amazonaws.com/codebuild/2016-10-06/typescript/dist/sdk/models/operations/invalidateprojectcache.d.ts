@@ -20,7 +20,7 @@ export declare class InvalidateProjectCacheRequest extends SpeakeasyBase {
 export declare class InvalidateProjectCacheResponse extends SpeakeasyBase {
     contentType: string;
     invalidInputException?: any;
-    invalidateProjectCacheOutput?: Map<string, any>;
+    invalidateProjectCacheOutput?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

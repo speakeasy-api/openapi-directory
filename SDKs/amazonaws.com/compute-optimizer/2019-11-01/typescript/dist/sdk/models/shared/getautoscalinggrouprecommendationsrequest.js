@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Filter } from "./filter";
-import { RecommendationPreferences } from "./recommendationpreferences";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAutoScalingGroupRecommendationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filter_1 = require("./filter");
+var recommendationpreferences_1 = require("./recommendationpreferences");
 var GetAutoScalingGroupRecommendationsRequest = /** @class */ (function (_super) {
     __extends(GetAutoScalingGroupRecommendationsRequest, _super);
     function GetAutoScalingGroupRecommendationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountIds" }),
         __metadata("design:type", Array)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "accountIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroupArns" }),
         __metadata("design:type", Array)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "autoScalingGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: Filter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: filter_1.Filter }),
         __metadata("design:type", Array)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationPreferences" }),
-        __metadata("design:type", RecommendationPreferences)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationPreferences" }),
+        __metadata("design:type", recommendationpreferences_1.RecommendationPreferences)
     ], GetAutoScalingGroupRecommendationsRequest.prototype, "recommendationPreferences", void 0);
     return GetAutoScalingGroupRecommendationsRequest;
-}(SpeakeasyBase));
-export { GetAutoScalingGroupRecommendationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAutoScalingGroupRecommendationsRequest = GetAutoScalingGroupRecommendationsRequest;

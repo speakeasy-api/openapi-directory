@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayorLogoRequest = exports.PayorLogoRequestLogo = void 0;
+var utils_1 = require("../../../internal/utils");
 var PayorLogoRequestLogo = /** @class */ (function (_super) {
     __extends(PayorLogoRequestLogo, _super);
     function PayorLogoRequestLogo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PayorLogoRequestLogo.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=logo" }),
         __metadata("design:type", String)
     ], PayorLogoRequestLogo.prototype, "logo", void 0);
     return PayorLogoRequestLogo;
-}(SpeakeasyBase));
-export { PayorLogoRequestLogo };
+}(utils_1.SpeakeasyBase));
+exports.PayorLogoRequestLogo = PayorLogoRequestLogo;
 var PayorLogoRequest = /** @class */ (function (_super) {
     __extends(PayorLogoRequest, _super);
     function PayorLogoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PayorLogoRequestLogo)
     ], PayorLogoRequest.prototype, "logo", void 0);
     return PayorLogoRequest;
-}(SpeakeasyBase));
-export { PayorLogoRequest };
+}(utils_1.SpeakeasyBase));
+exports.PayorLogoRequest = PayorLogoRequest;

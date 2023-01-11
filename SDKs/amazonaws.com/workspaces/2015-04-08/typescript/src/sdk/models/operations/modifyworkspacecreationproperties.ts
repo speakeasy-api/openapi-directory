@@ -54,7 +54,7 @@ export class ModifyWorkspaceCreationPropertiesResponse extends SpeakeasyBase {
   invalidParameterValuesException?: any;
 
   @SpeakeasyMetadata()
-  modifyWorkspaceCreationPropertiesResult?: Map<string, any>;
+  modifyWorkspaceCreationPropertiesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   operationNotSupportedException?: any;

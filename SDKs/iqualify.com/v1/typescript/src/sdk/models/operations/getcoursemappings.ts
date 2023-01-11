@@ -8,11 +8,11 @@ export class GetCourseMappingsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  courseMappings?: Map<string, string>;
+  courseMappings?: Record<string, string>;
 }

@@ -1,24 +1,23 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
 
 
 
 export class GetDeploymentResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AutoDeployed" })
-  autoDeployed?: boolean;
+  autoDeployed?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CreatedDate" })
-  createdDate?: Date;
+  createdDate?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DeploymentId" })
-  deploymentId?: string;
+  deploymentId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DeploymentStatus" })
-  deploymentStatus?: DeploymentStatusEnum;
+  deploymentStatus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DeploymentStatusMessage" })
-  deploymentStatusMessage?: string;
+  deploymentStatusMessage?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
-  description?: string;
+  description?: Record<string, any>;
 }

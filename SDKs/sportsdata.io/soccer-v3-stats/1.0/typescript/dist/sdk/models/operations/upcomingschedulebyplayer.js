@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpcomingScheduleByPlayerFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpcomingScheduleByPlayerResponse = exports.UpcomingScheduleByPlayerRequest = exports.UpcomingScheduleByPlayerPathParams = exports.UpcomingScheduleByPlayerFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpcomingScheduleByPlayerFormatEnum;
 (function (UpcomingScheduleByPlayerFormatEnum) {
     UpcomingScheduleByPlayerFormatEnum["Xml"] = "xml";
     UpcomingScheduleByPlayerFormatEnum["Json"] = "json";
-})(UpcomingScheduleByPlayerFormatEnum || (UpcomingScheduleByPlayerFormatEnum = {}));
+})(UpcomingScheduleByPlayerFormatEnum = exports.UpcomingScheduleByPlayerFormatEnum || (exports.UpcomingScheduleByPlayerFormatEnum = {}));
 var UpcomingScheduleByPlayerPathParams = /** @class */ (function (_super) {
     __extends(UpcomingScheduleByPlayerPathParams, _super);
     function UpcomingScheduleByPlayerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], UpcomingScheduleByPlayerPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], UpcomingScheduleByPlayerPathParams.prototype, "playerid", void 0);
     return UpcomingScheduleByPlayerPathParams;
-}(SpeakeasyBase));
-export { UpcomingScheduleByPlayerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingScheduleByPlayerPathParams = UpcomingScheduleByPlayerPathParams;
 var UpcomingScheduleByPlayerRequest = /** @class */ (function (_super) {
     __extends(UpcomingScheduleByPlayerRequest, _super);
     function UpcomingScheduleByPlayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpcomingScheduleByPlayerPathParams)
     ], UpcomingScheduleByPlayerRequest.prototype, "pathParams", void 0);
     return UpcomingScheduleByPlayerRequest;
-}(SpeakeasyBase));
-export { UpcomingScheduleByPlayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingScheduleByPlayerRequest = UpcomingScheduleByPlayerRequest;
 var UpcomingScheduleByPlayerResponse = /** @class */ (function (_super) {
     __extends(UpcomingScheduleByPlayerResponse, _super);
     function UpcomingScheduleByPlayerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpcomingScheduleByPlayerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], UpcomingScheduleByPlayerResponse.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpcomingScheduleByPlayerResponse.prototype, "statusCode", void 0);
     return UpcomingScheduleByPlayerResponse;
-}(SpeakeasyBase));
-export { UpcomingScheduleByPlayerResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingScheduleByPlayerResponse = UpcomingScheduleByPlayerResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentInitiationRecipientCreateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // PaymentInitiationRecipientCreateRequest
 /**
  * PaymentInitiationRecipientCreateRequest defines the request schema for `/payment_initiation/recipient/create`
@@ -33,29 +36,29 @@ var PaymentInitiationRecipientCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", Object)
     ], PaymentInitiationRecipientCreateRequest.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bacs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bacs" }),
+        __metadata("design:type", Object)
     ], PaymentInitiationRecipientCreateRequest.prototype, "bacs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], PaymentInitiationRecipientCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], PaymentInitiationRecipientCreateRequest.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PaymentInitiationRecipientCreateRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], PaymentInitiationRecipientCreateRequest.prototype, "secret", void 0);
     return PaymentInitiationRecipientCreateRequest;
-}(SpeakeasyBase));
-export { PaymentInitiationRecipientCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PaymentInitiationRecipientCreateRequest = PaymentInitiationRecipientCreateRequest;

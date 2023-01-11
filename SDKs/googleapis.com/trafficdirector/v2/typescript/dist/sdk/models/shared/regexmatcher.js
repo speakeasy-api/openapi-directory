@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleRe2 } from "./googlere2";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegexMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlere2_1 = require("./googlere2");
 // RegexMatcher
 /**
  * A regex matcher designed for safety when used with untrusted input.
@@ -34,13 +37,13 @@ var RegexMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleRe2" }),
-        __metadata("design:type", GoogleRe2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleRe2" }),
+        __metadata("design:type", googlere2_1.GoogleRe2)
     ], RegexMatcher.prototype, "googleRe2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regex" }),
         __metadata("design:type", String)
     ], RegexMatcher.prototype, "regex", void 0);
     return RegexMatcher;
-}(SpeakeasyBase));
-export { RegexMatcher };
+}(utils_1.SpeakeasyBase));
+exports.RegexMatcher = RegexMatcher;

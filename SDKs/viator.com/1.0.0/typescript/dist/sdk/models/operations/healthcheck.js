@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HealthCheckResponse = exports.HealthCheckRequest = exports.HealthCheck200ApplicationJson = exports.HealthCheckHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var HealthCheckHeaders = /** @class */ (function (_super) {
     __extends(HealthCheckHeaders, _super);
     function HealthCheckHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], HealthCheckHeaders.prototype, "acceptLanguage", void 0);
     return HealthCheckHeaders;
-}(SpeakeasyBase));
-export { HealthCheckHeaders };
+}(utils_1.SpeakeasyBase));
+exports.HealthCheckHeaders = HealthCheckHeaders;
 var HealthCheck200ApplicationJson = /** @class */ (function (_super) {
     __extends(HealthCheck200ApplicationJson, _super);
     function HealthCheck200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allGood" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allGood" }),
         __metadata("design:type", Boolean)
     ], HealthCheck200ApplicationJson.prototype, "allGood", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capiOk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capiOk" }),
         __metadata("design:type", Boolean)
     ], HealthCheck200ApplicationJson.prototype, "capiOk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dbOk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dbOk" }),
         __metadata("design:type", Boolean)
     ], HealthCheck200ApplicationJson.prototype, "dbOk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memcachedOk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memcachedOk" }),
         __metadata("design:type", Boolean)
     ], HealthCheck200ApplicationJson.prototype, "memcachedOk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], HealthCheck200ApplicationJson.prototype, "message", void 0);
     return HealthCheck200ApplicationJson;
-}(SpeakeasyBase));
-export { HealthCheck200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.HealthCheck200ApplicationJson = HealthCheck200ApplicationJson;
 var HealthCheckRequest = /** @class */ (function (_super) {
     __extends(HealthCheckRequest, _super);
     function HealthCheckRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HealthCheckHeaders)
     ], HealthCheckRequest.prototype, "headers", void 0);
     return HealthCheckRequest;
-}(SpeakeasyBase));
-export { HealthCheckRequest };
+}(utils_1.SpeakeasyBase));
+exports.HealthCheckRequest = HealthCheckRequest;
 var HealthCheckResponse = /** @class */ (function (_super) {
     __extends(HealthCheckResponse, _super);
     function HealthCheckResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HealthCheckResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HealthCheckResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HealthCheck200ApplicationJson)
-    ], HealthCheckResponse.prototype, "healthCheck200ApplicationJsonObject", void 0);
+    ], HealthCheckResponse.prototype, "healthCheck200ApplicationJSONObject", void 0);
     return HealthCheckResponse;
-}(SpeakeasyBase));
-export { HealthCheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.HealthCheckResponse = HealthCheckResponse;

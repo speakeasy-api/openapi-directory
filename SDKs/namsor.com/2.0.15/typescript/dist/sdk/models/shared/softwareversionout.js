@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SoftwareVersionOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // SoftwareVersionOut
 /**
  * The software version.
@@ -33,13 +36,13 @@ var SoftwareVersionOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareNameAndVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareNameAndVersion" }),
         __metadata("design:type", String)
     ], SoftwareVersionOut.prototype, "softwareNameAndVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareVersion" }),
         __metadata("design:type", Array)
     ], SoftwareVersionOut.prototype, "softwareVersion", void 0);
     return SoftwareVersionOut;
-}(SpeakeasyBase));
-export { SoftwareVersionOut };
+}(utils_1.SpeakeasyBase));
+exports.SoftwareVersionOut = SoftwareVersionOut;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SetInstanceAcceleratorRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetInstanceAcceleratorRequest = exports.SetInstanceAcceleratorRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SetInstanceAcceleratorRequestTypeEnum;
 (function (SetInstanceAcceleratorRequestTypeEnum) {
     SetInstanceAcceleratorRequestTypeEnum["AcceleratorTypeUnspecified"] = "ACCELERATOR_TYPE_UNSPECIFIED";
     SetInstanceAcceleratorRequestTypeEnum["NvidiaTeslaK80"] = "NVIDIA_TESLA_K80";
@@ -37,7 +40,7 @@ export var SetInstanceAcceleratorRequestTypeEnum;
     SetInstanceAcceleratorRequestTypeEnum["NvidiaTeslaP4Vws"] = "NVIDIA_TESLA_P4_VWS";
     SetInstanceAcceleratorRequestTypeEnum["TpuV2"] = "TPU_V2";
     SetInstanceAcceleratorRequestTypeEnum["TpuV3"] = "TPU_V3";
-})(SetInstanceAcceleratorRequestTypeEnum || (SetInstanceAcceleratorRequestTypeEnum = {}));
+})(SetInstanceAcceleratorRequestTypeEnum = exports.SetInstanceAcceleratorRequestTypeEnum || (exports.SetInstanceAcceleratorRequestTypeEnum = {}));
 // SetInstanceAcceleratorRequest
 /**
  * Request for setting instance accelerator.
@@ -48,13 +51,13 @@ var SetInstanceAcceleratorRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coreCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coreCount" }),
         __metadata("design:type", String)
     ], SetInstanceAcceleratorRequest.prototype, "coreCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SetInstanceAcceleratorRequest.prototype, "type", void 0);
     return SetInstanceAcceleratorRequest;
-}(SpeakeasyBase));
-export { SetInstanceAcceleratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetInstanceAcceleratorRequest = SetInstanceAcceleratorRequest;

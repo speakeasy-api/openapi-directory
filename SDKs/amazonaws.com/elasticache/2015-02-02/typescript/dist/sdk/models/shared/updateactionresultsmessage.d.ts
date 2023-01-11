@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProcessedUpdateAction } from "./processedupdateaction";
-import { UnprocessedUpdateAction } from "./unprocessedupdateaction";
+import { ProcessedUpdateActionList } from "./processedupdateactionlist";
+import { UnprocessedUpdateActionList } from "./unprocessedupdateactionlist";
 export declare class UpdateActionResultsMessage extends SpeakeasyBase {
-    processedUpdateActions?: ProcessedUpdateAction[];
-    unprocessedUpdateActions?: UnprocessedUpdateAction[];
+    processedUpdateActions?: ProcessedUpdateActionList[];
+    unprocessedUpdateActions?: UnprocessedUpdateActionList[];
 }

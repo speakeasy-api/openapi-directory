@@ -29,5 +29,5 @@ export class GetSrsRatingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: shared.TeamSrsRating })
-  teamSrsRatings?: shared.TeamSrsRating[];
+  teamSRSRatings?: shared.TeamSrsRating[];
 }

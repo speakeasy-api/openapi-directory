@@ -23,11 +23,11 @@ export declare class CloudchannelOperationsCancelSecurity extends SpeakeasyBase 
 export declare class CloudchannelOperationsCancelRequest extends SpeakeasyBase {
     pathParams: CloudchannelOperationsCancelPathParams;
     queryParams: CloudchannelOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudchannelOperationsCancelSecurity;
 }
 export declare class CloudchannelOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

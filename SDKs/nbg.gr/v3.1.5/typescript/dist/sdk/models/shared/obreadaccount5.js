@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataAccount5 } from "./obreaddataaccount5";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadAccount5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddataaccount5_1 = require("./obreaddataaccount5");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadAccount5 = /** @class */ (function (_super) {
     __extends(ObReadAccount5, _super);
     function ObReadAccount5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataAccount5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddataaccount5_1.ObReadDataAccount5)
     ], ObReadAccount5.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadAccount5.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadAccount5.prototype, "meta", void 0);
     return ObReadAccount5;
-}(SpeakeasyBase));
-export { ObReadAccount5 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadAccount5 = ObReadAccount5;

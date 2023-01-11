@@ -41,7 +41,7 @@ export class ReposListBranchesForHeadCommitResponse extends SpeakeasyBase {
   branchShorts?: shared.BranchShort[];
 
   @SpeakeasyMetadata()
-  reposListBranchesForHeadCommit415ApplicationJsonObject?: ReposListBranchesForHeadCommit415ApplicationJson;
+  reposListBranchesForHeadCommit415ApplicationJSONObject?: ReposListBranchesForHeadCommit415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetPasswordRequest extends SpeakeasyBase 
 export declare class ProtocolMqttClientSetPasswordResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetPassword200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetPassword200ApplicationJSONInt32Integers?: number[];
 }

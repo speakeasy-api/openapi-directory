@@ -11,7 +11,7 @@ import { Context } from "./context";
 **/
 export class SuggestCommentScoreRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributeScores", elemType: AttributeScores })
-  attributeScores?: Map<string, AttributeScores>;
+  attributeScores?: Record<string, AttributeScores>;
 
   @SpeakeasyMetadata({ data: "json, name=clientToken" })
   clientToken?: string;

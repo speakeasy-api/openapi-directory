@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnsuccessfulItem } from "./unsuccessfulitem";
 
 
 
 export class ReleaseHostsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  successful?: string[];
+  successful?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: UnsuccessfulItem })
-  unsuccessful?: UnsuccessfulItem[];
+  @SpeakeasyMetadata()
+  unsuccessful?: Record<string, any>;
 }

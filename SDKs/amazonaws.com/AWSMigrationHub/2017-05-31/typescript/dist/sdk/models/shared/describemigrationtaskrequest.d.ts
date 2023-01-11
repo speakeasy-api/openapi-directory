@@ -1,5 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class DescribeMigrationTaskRequest extends SpeakeasyBase {
-    migrationTaskName: string;
-    progressUpdateStream: string;
-}

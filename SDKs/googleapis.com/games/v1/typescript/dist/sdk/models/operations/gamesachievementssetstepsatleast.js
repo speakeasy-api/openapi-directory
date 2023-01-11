@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GamesAchievementsSetStepsAtLeastResponse = exports.GamesAchievementsSetStepsAtLeastRequest = exports.GamesAchievementsSetStepsAtLeastSecurity = exports.GamesAchievementsSetStepsAtLeastQueryParams = exports.GamesAchievementsSetStepsAtLeastPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GamesAchievementsSetStepsAtLeastPathParams = /** @class */ (function (_super) {
     __extends(GamesAchievementsSetStepsAtLeastPathParams, _super);
     function GamesAchievementsSetStepsAtLeastPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=achievementId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=achievementId" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastPathParams.prototype, "achievementId", void 0);
     return GamesAchievementsSetStepsAtLeastPathParams;
-}(SpeakeasyBase));
-export { GamesAchievementsSetStepsAtLeastPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GamesAchievementsSetStepsAtLeastPathParams = GamesAchievementsSetStepsAtLeastPathParams;
 var GamesAchievementsSetStepsAtLeastQueryParams = /** @class */ (function (_super) {
     __extends(GamesAchievementsSetStepsAtLeastQueryParams, _super);
     function GamesAchievementsSetStepsAtLeastQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=steps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=steps" }),
         __metadata("design:type", Number)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "steps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastQueryParams.prototype, "uploadProtocol", void 0);
     return GamesAchievementsSetStepsAtLeastQueryParams;
-}(SpeakeasyBase));
-export { GamesAchievementsSetStepsAtLeastQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GamesAchievementsSetStepsAtLeastQueryParams = GamesAchievementsSetStepsAtLeastQueryParams;
 var GamesAchievementsSetStepsAtLeastSecurity = /** @class */ (function (_super) {
     __extends(GamesAchievementsSetStepsAtLeastSecurity, _super);
     function GamesAchievementsSetStepsAtLeastSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], GamesAchievementsSetStepsAtLeastSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], GamesAchievementsSetStepsAtLeastSecurity.prototype, "oauth2c", void 0);
     return GamesAchievementsSetStepsAtLeastSecurity;
-}(SpeakeasyBase));
-export { GamesAchievementsSetStepsAtLeastSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GamesAchievementsSetStepsAtLeastSecurity = GamesAchievementsSetStepsAtLeastSecurity;
 var GamesAchievementsSetStepsAtLeastRequest = /** @class */ (function (_super) {
     __extends(GamesAchievementsSetStepsAtLeastRequest, _super);
     function GamesAchievementsSetStepsAtLeastRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesAchievementsSetStepsAtLeastPathParams)
     ], GamesAchievementsSetStepsAtLeastRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesAchievementsSetStepsAtLeastQueryParams)
     ], GamesAchievementsSetStepsAtLeastRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesAchievementsSetStepsAtLeastSecurity)
     ], GamesAchievementsSetStepsAtLeastRequest.prototype, "security", void 0);
     return GamesAchievementsSetStepsAtLeastRequest;
-}(SpeakeasyBase));
-export { GamesAchievementsSetStepsAtLeastRequest };
+}(utils_1.SpeakeasyBase));
+exports.GamesAchievementsSetStepsAtLeastRequest = GamesAchievementsSetStepsAtLeastRequest;
 var GamesAchievementsSetStepsAtLeastResponse = /** @class */ (function (_super) {
     __extends(GamesAchievementsSetStepsAtLeastResponse, _super);
     function GamesAchievementsSetStepsAtLeastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AchievementSetStepsAtLeastResponse)
     ], GamesAchievementsSetStepsAtLeastResponse.prototype, "achievementSetStepsAtLeastResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GamesAchievementsSetStepsAtLeastResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GamesAchievementsSetStepsAtLeastResponse.prototype, "statusCode", void 0);
     return GamesAchievementsSetStepsAtLeastResponse;
-}(SpeakeasyBase));
-export { GamesAchievementsSetStepsAtLeastResponse };
+}(utils_1.SpeakeasyBase));
+exports.GamesAchievementsSetStepsAtLeastResponse = GamesAchievementsSetStepsAtLeastResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { Deposit } from "./deposit";
-import { TimeDuration } from "./timeduration";
-import { PaymentMethod } from "./paymentmethod";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetPaymentPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var deposit_1 = require("./deposit");
+var timeduration_1 = require("./timeduration");
+var paymentmethod_1 = require("./paymentmethod");
+var error_1 = require("./error");
 // SetPaymentPolicyResponse
 /**
  * Complex type that that gets populated with a response containing a payment policy.
@@ -38,49 +41,49 @@ var SetPaymentPolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], SetPaymentPolicyResponse.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deposit" }),
-        __metadata("design:type", Deposit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deposit" }),
+        __metadata("design:type", deposit_1.Deposit)
     ], SetPaymentPolicyResponse.prototype, "deposit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SetPaymentPolicyResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullPaymentDueIn" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullPaymentDueIn" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], SetPaymentPolicyResponse.prototype, "fullPaymentDueIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=immediatePay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=immediatePay" }),
         __metadata("design:type", Boolean)
     ], SetPaymentPolicyResponse.prototype, "immediatePay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], SetPaymentPolicyResponse.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SetPaymentPolicyResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentInstructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentInstructions" }),
         __metadata("design:type", String)
     ], SetPaymentPolicyResponse.prototype, "paymentInstructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMethods", elemType: PaymentMethod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMethods", elemType: paymentmethod_1.PaymentMethod }),
         __metadata("design:type", Array)
     ], SetPaymentPolicyResponse.prototype, "paymentMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentPolicyId" }),
         __metadata("design:type", String)
     ], SetPaymentPolicyResponse.prototype, "paymentPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], SetPaymentPolicyResponse.prototype, "warnings", void 0);
     return SetPaymentPolicyResponse;
-}(SpeakeasyBase));
-export { SetPaymentPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetPaymentPolicyResponse = SetPaymentPolicyResponse;

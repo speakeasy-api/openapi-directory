@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactSettings } from "./contactsettings";
-import { DnsSettingsInput } from "./dnssettings";
-import { ManagementSettingsInput } from "./managementsettings";
-import { DnsSettings } from "./dnssettings";
-import { ManagementSettings } from "./managementsettings";
-export var RegistrationIssuesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationInput = exports.Registration = exports.RegistrationTransferFailureReasonEnum = exports.RegistrationSupportedPrivacyEnum = exports.RegistrationStateEnum = exports.RegistrationRegisterFailureReasonEnum = exports.RegistrationIssuesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactsettings_1 = require("./contactsettings");
+var dnssettings_1 = require("./dnssettings");
+var managementsettings_1 = require("./managementsettings");
+var dnssettings_2 = require("./dnssettings");
+var managementsettings_2 = require("./managementsettings");
+var RegistrationIssuesEnum;
 (function (RegistrationIssuesEnum) {
     RegistrationIssuesEnum["IssueUnspecified"] = "ISSUE_UNSPECIFIED";
     RegistrationIssuesEnum["ContactSupport"] = "CONTACT_SUPPORT";
     RegistrationIssuesEnum["UnverifiedEmail"] = "UNVERIFIED_EMAIL";
-})(RegistrationIssuesEnum || (RegistrationIssuesEnum = {}));
-export var RegistrationRegisterFailureReasonEnum;
+})(RegistrationIssuesEnum = exports.RegistrationIssuesEnum || (exports.RegistrationIssuesEnum = {}));
+var RegistrationRegisterFailureReasonEnum;
 (function (RegistrationRegisterFailureReasonEnum) {
     RegistrationRegisterFailureReasonEnum["RegisterFailureReasonUnspecified"] = "REGISTER_FAILURE_REASON_UNSPECIFIED";
     RegistrationRegisterFailureReasonEnum["RegisterFailureReasonUnknown"] = "REGISTER_FAILURE_REASON_UNKNOWN";
     RegistrationRegisterFailureReasonEnum["DomainNotAvailable"] = "DOMAIN_NOT_AVAILABLE";
     RegistrationRegisterFailureReasonEnum["InvalidContacts"] = "INVALID_CONTACTS";
-})(RegistrationRegisterFailureReasonEnum || (RegistrationRegisterFailureReasonEnum = {}));
-export var RegistrationStateEnum;
+})(RegistrationRegisterFailureReasonEnum = exports.RegistrationRegisterFailureReasonEnum || (exports.RegistrationRegisterFailureReasonEnum = {}));
+var RegistrationStateEnum;
 (function (RegistrationStateEnum) {
     RegistrationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     RegistrationStateEnum["RegistrationPending"] = "REGISTRATION_PENDING";
@@ -52,15 +55,15 @@ export var RegistrationStateEnum;
     RegistrationStateEnum["Active"] = "ACTIVE";
     RegistrationStateEnum["Suspended"] = "SUSPENDED";
     RegistrationStateEnum["Exported"] = "EXPORTED";
-})(RegistrationStateEnum || (RegistrationStateEnum = {}));
-export var RegistrationSupportedPrivacyEnum;
+})(RegistrationStateEnum = exports.RegistrationStateEnum || (exports.RegistrationStateEnum = {}));
+var RegistrationSupportedPrivacyEnum;
 (function (RegistrationSupportedPrivacyEnum) {
     RegistrationSupportedPrivacyEnum["ContactPrivacyUnspecified"] = "CONTACT_PRIVACY_UNSPECIFIED";
     RegistrationSupportedPrivacyEnum["PublicContactData"] = "PUBLIC_CONTACT_DATA";
     RegistrationSupportedPrivacyEnum["PrivateContactData"] = "PRIVATE_CONTACT_DATA";
     RegistrationSupportedPrivacyEnum["RedactedContactData"] = "REDACTED_CONTACT_DATA";
-})(RegistrationSupportedPrivacyEnum || (RegistrationSupportedPrivacyEnum = {}));
-export var RegistrationTransferFailureReasonEnum;
+})(RegistrationSupportedPrivacyEnum = exports.RegistrationSupportedPrivacyEnum || (exports.RegistrationSupportedPrivacyEnum = {}));
+var RegistrationTransferFailureReasonEnum;
 (function (RegistrationTransferFailureReasonEnum) {
     RegistrationTransferFailureReasonEnum["TransferFailureReasonUnspecified"] = "TRANSFER_FAILURE_REASON_UNSPECIFIED";
     RegistrationTransferFailureReasonEnum["TransferFailureReasonUnknown"] = "TRANSFER_FAILURE_REASON_UNKNOWN";
@@ -73,43 +76,7 @@ export var RegistrationTransferFailureReasonEnum;
     RegistrationTransferFailureReasonEnum["InvalidRegistrantEmailAddress"] = "INVALID_REGISTRANT_EMAIL_ADDRESS";
     RegistrationTransferFailureReasonEnum["DomainNotEligibleForTransfer"] = "DOMAIN_NOT_ELIGIBLE_FOR_TRANSFER";
     RegistrationTransferFailureReasonEnum["TransferAlreadyPending"] = "TRANSFER_ALREADY_PENDING";
-})(RegistrationTransferFailureReasonEnum || (RegistrationTransferFailureReasonEnum = {}));
-// RegistrationInput
-/**
- * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
-**/
-var RegistrationInput = /** @class */ (function (_super) {
-    __extends(RegistrationInput, _super);
-    function RegistrationInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactSettings" }),
-        __metadata("design:type", ContactSettings)
-    ], RegistrationInput.prototype, "contactSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsSettings" }),
-        __metadata("design:type", DnsSettingsInput)
-    ], RegistrationInput.prototype, "dnsSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
-        __metadata("design:type", String)
-    ], RegistrationInput.prototype, "domainName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], RegistrationInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=managementSettings" }),
-        __metadata("design:type", ManagementSettingsInput)
-    ], RegistrationInput.prototype, "managementSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingContactSettings" }),
-        __metadata("design:type", ContactSettings)
-    ], RegistrationInput.prototype, "pendingContactSettings", void 0);
-    return RegistrationInput;
-}(SpeakeasyBase));
-export { RegistrationInput };
+})(RegistrationTransferFailureReasonEnum = exports.RegistrationTransferFailureReasonEnum || (exports.RegistrationTransferFailureReasonEnum = {}));
 // Registration
 /**
  * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
@@ -120,61 +87,97 @@ var Registration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactSettings" }),
-        __metadata("design:type", ContactSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactSettings" }),
+        __metadata("design:type", contactsettings_1.ContactSettings)
     ], Registration.prototype, "contactSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Registration.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsSettings" }),
-        __metadata("design:type", DnsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsSettings" }),
+        __metadata("design:type", dnssettings_1.DnsSettings)
     ], Registration.prototype, "dnsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], Registration.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], Registration.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues" }),
         __metadata("design:type", Array)
     ], Registration.prototype, "issues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Registration.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managementSettings" }),
-        __metadata("design:type", ManagementSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managementSettings" }),
+        __metadata("design:type", managementsettings_1.ManagementSettings)
     ], Registration.prototype, "managementSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Registration.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingContactSettings" }),
-        __metadata("design:type", ContactSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingContactSettings" }),
+        __metadata("design:type", contactsettings_1.ContactSettings)
     ], Registration.prototype, "pendingContactSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registerFailureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registerFailureReason" }),
         __metadata("design:type", String)
     ], Registration.prototype, "registerFailureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Registration.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedPrivacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedPrivacy" }),
         __metadata("design:type", Array)
     ], Registration.prototype, "supportedPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferFailureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferFailureReason" }),
         __metadata("design:type", String)
     ], Registration.prototype, "transferFailureReason", void 0);
     return Registration;
-}(SpeakeasyBase));
-export { Registration };
+}(utils_1.SpeakeasyBase));
+exports.Registration = Registration;
+// RegistrationInput
+/**
+ * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
+**/
+var RegistrationInput = /** @class */ (function (_super) {
+    __extends(RegistrationInput, _super);
+    function RegistrationInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactSettings" }),
+        __metadata("design:type", contactsettings_1.ContactSettings)
+    ], RegistrationInput.prototype, "contactSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsSettings" }),
+        __metadata("design:type", dnssettings_2.DnsSettingsInput)
+    ], RegistrationInput.prototype, "dnsSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
+        __metadata("design:type", String)
+    ], RegistrationInput.prototype, "domainName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], RegistrationInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managementSettings" }),
+        __metadata("design:type", managementsettings_2.ManagementSettingsInput)
+    ], RegistrationInput.prototype, "managementSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingContactSettings" }),
+        __metadata("design:type", contactsettings_1.ContactSettings)
+    ], RegistrationInput.prototype, "pendingContactSettings", void 0);
+    return RegistrationInput;
+}(utils_1.SpeakeasyBase));
+exports.RegistrationInput = RegistrationInput;

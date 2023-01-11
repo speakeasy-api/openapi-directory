@@ -22,14 +22,14 @@ export class GoogleCloudContactcenterinsightsV1CalculateStatsResponse extends Sp
   conversationCountTimeSeries?: GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries;
 
   @SpeakeasyMetadata({ data: "json, name=customHighlighterMatches" })
-  customHighlighterMatches?: Map<string, number>;
+  customHighlighterMatches?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=issueMatches" })
-  issueMatches?: Map<string, number>;
+  issueMatches?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=issueMatchesStats", elemType: GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats })
-  issueMatchesStats?: Map<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
+  issueMatchesStats?: Record<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
 
   @SpeakeasyMetadata({ data: "json, name=smartHighlighterMatches" })
-  smartHighlighterMatches?: Map<string, number>;
+  smartHighlighterMatches?: Record<string, number>;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BinaryauthorizationProjectsAttestorsCreateRequest, BinaryauthorizationProjectsAttestorsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,50 +30,59 @@ const req: BinaryauthorizationProjectsAttestorsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "ut",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "qui",
-    alt: "json",
-    attestorId: "qui",
-    callback: "earum",
-    fields: "distinctio",
-    key: "consequuntur",
-    oauthToken: "doloribus",
-    prettyPrint: true,
-    quotaUser: "repudiandae",
-    uploadType: "accusamus",
-    uploadProtocol: "mollitia",
+    accessToken: "culpa",
+    alt: "media",
+    attestorId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    description: "aperiam",
-    etag: "dignissimos",
-    name: "libero",
+    description: "debitis",
+    etag: "voluptatum",
+    name: "et",
     userOwnedGrafeasNote: {
-      noteReference: "aperiam",
+      noteReference: "ut",
       publicKeys: [
         {
-          asciiArmoredPgpPublicKey: "sed",
-          comment: "quos",
-          id: "aliquid",
+          asciiArmoredPgpPublicKey: "et",
+          comment: "voluptate",
+          id: "iste",
           pkixPublicKey: {
-            publicKeyPem: "dolorem",
-            signatureAlgorithm: "ECDSA_P384_SHA384",
+            publicKeyPem: "vitae",
+            signatureAlgorithm: "ECDSA_P521_SHA512",
           },
         },
         {
-          asciiArmoredPgpPublicKey: "ipsam",
-          comment: "facilis",
-          id: "et",
+          asciiArmoredPgpPublicKey: "dolores",
+          comment: "illum",
+          id: "debitis",
           pkixPublicKey: {
-            publicKeyPem: "perspiciatis",
+            publicKeyPem: "vel",
+            signatureAlgorithm: "EC_SIGN_P256_SHA256",
+          },
+        },
+        {
+          asciiArmoredPgpPublicKey: "dolore",
+          comment: "id",
+          id: "aspernatur",
+          pkixPublicKey: {
+            publicKeyPem: "accusantium",
             signatureAlgorithm: "ECDSA_P256_SHA256",
           },
         },

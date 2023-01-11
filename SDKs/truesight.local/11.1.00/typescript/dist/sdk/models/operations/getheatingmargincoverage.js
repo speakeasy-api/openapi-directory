@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetHeatingMarginCoverageDirectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHeatingMarginCoverageResponse = exports.GetHeatingMarginCoverageRequest = exports.GetHeatingMarginCoverageQueryParams = exports.GetHeatingMarginCoverageDirectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetHeatingMarginCoverageDirectionEnum;
 (function (GetHeatingMarginCoverageDirectionEnum) {
     GetHeatingMarginCoverageDirectionEnum["Asc"] = "asc";
     GetHeatingMarginCoverageDirectionEnum["Desc"] = "desc";
-})(GetHeatingMarginCoverageDirectionEnum || (GetHeatingMarginCoverageDirectionEnum = {}));
+})(GetHeatingMarginCoverageDirectionEnum = exports.GetHeatingMarginCoverageDirectionEnum || (exports.GetHeatingMarginCoverageDirectionEnum = {}));
 var GetHeatingMarginCoverageQueryParams = /** @class */ (function (_super) {
     __extends(GetHeatingMarginCoverageQueryParams, _super);
     function GetHeatingMarginCoverageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=applicationId" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=covered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=covered" }),
         __metadata("design:type", Boolean)
     ], GetHeatingMarginCoverageQueryParams.prototype, "covered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupId" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetHeatingMarginCoverageQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageQueryParams.prototype, "sort", void 0);
     return GetHeatingMarginCoverageQueryParams;
-}(SpeakeasyBase));
-export { GetHeatingMarginCoverageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHeatingMarginCoverageQueryParams = GetHeatingMarginCoverageQueryParams;
 var GetHeatingMarginCoverageRequest = /** @class */ (function (_super) {
     __extends(GetHeatingMarginCoverageRequest, _super);
     function GetHeatingMarginCoverageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHeatingMarginCoverageQueryParams)
     ], GetHeatingMarginCoverageRequest.prototype, "queryParams", void 0);
     return GetHeatingMarginCoverageRequest;
-}(SpeakeasyBase));
-export { GetHeatingMarginCoverageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHeatingMarginCoverageRequest = GetHeatingMarginCoverageRequest;
 var GetHeatingMarginCoverageResponse = /** @class */ (function (_super) {
     __extends(GetHeatingMarginCoverageResponse, _super);
     function GetHeatingMarginCoverageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetHeatingMarginCoverageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHeatingMarginCoverageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHeatingMarginCoverageResponse.prototype, "statusCode", void 0);
     return GetHeatingMarginCoverageResponse;
-}(SpeakeasyBase));
-export { GetHeatingMarginCoverageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHeatingMarginCoverageResponse = GetHeatingMarginCoverageResponse;

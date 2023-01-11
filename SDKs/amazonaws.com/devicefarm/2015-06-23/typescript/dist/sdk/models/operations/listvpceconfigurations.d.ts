@@ -20,7 +20,7 @@ export declare class ListVpceConfigurationsRequest extends SpeakeasyBase {
 export declare class ListVpceConfigurationsResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    listVpceConfigurationsResult?: shared.ListVpceConfigurationsResult;
+    listVPCEConfigurationsResult?: shared.ListVpceConfigurationsResult;
     serviceAccountException?: any;
     statusCode: number;
 }

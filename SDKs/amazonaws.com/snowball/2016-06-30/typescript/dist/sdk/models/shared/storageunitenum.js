@@ -1,4 +1,7 @@
-export var StorageUnitEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageUnitEnum = void 0;
+var StorageUnitEnum;
 (function (StorageUnitEnum) {
     StorageUnitEnum["Tb"] = "TB";
-})(StorageUnitEnum || (StorageUnitEnum = {}));
+})(StorageUnitEnum = exports.StorageUnitEnum || (exports.StorageUnitEnum = {}));

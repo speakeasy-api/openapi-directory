@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostFirewallsIdActionsApplyToResourcesResponse = exports.PostFirewallsIdActionsApplyToResourcesRequest = exports.PostFirewallsIdActionsApplyToResourcesActionsResponse = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseMeta = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseAction = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionError = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector = exports.PostFirewallsIdActionsApplyToResourcesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostFirewallsIdActionsApplyToResourcesPathParams = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesPathParams, _super);
     function PostFirewallsIdActionsApplyToResourcesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesPathParams.prototype, "id", void 0);
     return PostFirewallsIdActionsApplyToResourcesPathParams;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesPathParams = PostFirewallsIdActionsApplyToResourcesPathParams;
 // PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector
 /**
  * Configuration for type label_selector, required if type is `label_selector`
@@ -45,12 +48,12 @@ var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyTo
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selector" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector.prototype, "selector", void 0);
     return PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector = PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector;
 // PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer
 /**
  * Configuration for type server, required if type is `server`
@@ -61,49 +64,49 @@ var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyTo
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer.prototype, "id", void 0);
     return PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer };
-export var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer = PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer;
+var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum;
 (function (PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum) {
     PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum["Server"] = "server";
     PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum["LabelSelector"] = "label_selector";
-})(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum || (PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum = {}));
+})(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum = exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum || (exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum = {}));
 var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources, _super);
     function PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label_selector" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources.prototype, "type", void 0);
     return PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources = PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources;
 var PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest, _super);
     function PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apply_to", elemType: PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apply_to", elemType: PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources }),
         __metadata("design:type", Array)
     ], PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest.prototype, "applyTo", void 0);
     return PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest = PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest;
 // PostFirewallsIdActionsApplyToResourcesActionsResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -114,171 +117,171 @@ var PostFirewallsIdActionsApplyToResourcesActionsResponseActionError = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseActionError.prototype, "message", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponseActionError;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionError = PostFirewallsIdActionsApplyToResourcesActionsResponseActionError;
 var PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources, _super);
     function PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources.prototype, "type", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources };
-export var PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources = PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources;
+var PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum;
 (function (PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum) {
     PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum["Success"] = "success";
     PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum["Running"] = "running";
     PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum["Error"] = "error";
-})(PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum || (PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum = {}));
+})(PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum = exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum || (exports.PostFirewallsIdActionsApplyToResourcesActionsResponseActionStatusEnum = {}));
 var PostFirewallsIdActionsApplyToResourcesActionsResponseAction = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesActionsResponseAction, _super);
     function PostFirewallsIdActionsApplyToResourcesActionsResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesActionsResponseActionError)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostFirewallsIdActionsApplyToResourcesActionsResponseActionResources }),
         __metadata("design:type", Array)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseAction.prototype, "status", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponseAction;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponseAction = PostFirewallsIdActionsApplyToResourcesActionsResponseAction;
 var PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination, _super);
     function PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination.prototype, "totalEntries", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination = PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination;
 var PostFirewallsIdActionsApplyToResourcesActionsResponseMeta = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesActionsResponseMeta, _super);
     function PostFirewallsIdActionsApplyToResourcesActionsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesActionsResponseMetaPagination)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponseMeta.prototype, "pagination", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponseMeta;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponseMeta };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponseMeta = PostFirewallsIdActionsApplyToResourcesActionsResponseMeta;
 var PostFirewallsIdActionsApplyToResourcesActionsResponse = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesActionsResponse, _super);
     function PostFirewallsIdActionsApplyToResourcesActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: PostFirewallsIdActionsApplyToResourcesActionsResponseAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: PostFirewallsIdActionsApplyToResourcesActionsResponseAction }),
         __metadata("design:type", Array)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponse.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesActionsResponseMeta)
     ], PostFirewallsIdActionsApplyToResourcesActionsResponse.prototype, "meta", void 0);
     return PostFirewallsIdActionsApplyToResourcesActionsResponse;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesActionsResponse = PostFirewallsIdActionsApplyToResourcesActionsResponse;
 var PostFirewallsIdActionsApplyToResourcesRequest = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesRequest, _super);
     function PostFirewallsIdActionsApplyToResourcesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesPathParams)
     ], PostFirewallsIdActionsApplyToResourcesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequest)
     ], PostFirewallsIdActionsApplyToResourcesRequest.prototype, "request", void 0);
     return PostFirewallsIdActionsApplyToResourcesRequest;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesRequest = PostFirewallsIdActionsApplyToResourcesRequest;
 var PostFirewallsIdActionsApplyToResourcesResponse = /** @class */ (function (_super) {
     __extends(PostFirewallsIdActionsApplyToResourcesResponse, _super);
     function PostFirewallsIdActionsApplyToResourcesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFirewallsIdActionsApplyToResourcesActionsResponse)
     ], PostFirewallsIdActionsApplyToResourcesResponse.prototype, "actionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostFirewallsIdActionsApplyToResourcesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostFirewallsIdActionsApplyToResourcesResponse.prototype, "statusCode", void 0);
     return PostFirewallsIdActionsApplyToResourcesResponse;
-}(SpeakeasyBase));
-export { PostFirewallsIdActionsApplyToResourcesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFirewallsIdActionsApplyToResourcesResponse = PostFirewallsIdActionsApplyToResourcesResponse;

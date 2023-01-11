@@ -1,6 +1,9 @@
-export var SavingsPlanPaymentOptionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavingsPlanPaymentOptionEnum = void 0;
+var SavingsPlanPaymentOptionEnum;
 (function (SavingsPlanPaymentOptionEnum) {
     SavingsPlanPaymentOptionEnum["AllUpfront"] = "All Upfront";
     SavingsPlanPaymentOptionEnum["PartialUpfront"] = "Partial Upfront";
     SavingsPlanPaymentOptionEnum["NoUpfront"] = "No Upfront";
-})(SavingsPlanPaymentOptionEnum || (SavingsPlanPaymentOptionEnum = {}));
+})(SavingsPlanPaymentOptionEnum = exports.SavingsPlanPaymentOptionEnum || (exports.SavingsPlanPaymentOptionEnum = {}));

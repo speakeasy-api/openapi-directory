@@ -5,7 +5,7 @@ export declare class ActionsCreateWorkflowDispatchPathParams extends SpeakeasyBa
     workflowId: any;
 }
 export declare class ActionsCreateWorkflowDispatchRequestBody extends SpeakeasyBase {
-    inputs?: Map<string, string>;
+    inputs?: Record<string, string>;
     ref: string;
 }
 export declare class ActionsCreateWorkflowDispatchRequest extends SpeakeasyBase {

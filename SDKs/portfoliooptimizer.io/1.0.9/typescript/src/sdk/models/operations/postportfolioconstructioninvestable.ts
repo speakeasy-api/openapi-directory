@@ -55,8 +55,8 @@ export class PostPortfolioConstructionInvestableResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioConstructionInvestable200ApplicationJsonObject?: PostPortfolioConstructionInvestable200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioConstructionInvestable200ApplicationJSONObject?: PostPortfolioConstructionInvestable200ApplicationJson;
 }

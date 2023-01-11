@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessDirectionEnum } from "./accessdirectionenum";
-import { PortAccessTypeEnum } from "./portaccesstypeenum";
-import { NetworkProtocolEnum } from "./networkprotocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancePortInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessdirectionenum_1 = require("./accessdirectionenum");
+var portaccesstypeenum_1 = require("./portaccesstypeenum");
+var networkprotocolenum_1 = require("./networkprotocolenum");
 // InstancePortInfo
 /**
  * Describes information about ports for an Amazon Lightsail instance.
@@ -36,45 +39,45 @@ var InstancePortInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessDirection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessDirection" }),
         __metadata("design:type", String)
     ], InstancePortInfo.prototype, "accessDirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessFrom" }),
         __metadata("design:type", String)
     ], InstancePortInfo.prototype, "accessFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessType" }),
         __metadata("design:type", String)
     ], InstancePortInfo.prototype, "accessType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrListAliases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrListAliases" }),
         __metadata("design:type", Array)
     ], InstancePortInfo.prototype, "cidrListAliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrs" }),
         __metadata("design:type", Array)
     ], InstancePortInfo.prototype, "cidrs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonName" }),
         __metadata("design:type", String)
     ], InstancePortInfo.prototype, "commonName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromPort" }),
         __metadata("design:type", Number)
     ], InstancePortInfo.prototype, "fromPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Cidrs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Cidrs" }),
         __metadata("design:type", Array)
     ], InstancePortInfo.prototype, "ipv6Cidrs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], InstancePortInfo.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toPort" }),
         __metadata("design:type", Number)
     ], InstancePortInfo.prototype, "toPort", void 0);
     return InstancePortInfo;
-}(SpeakeasyBase));
-export { InstancePortInfo };
+}(utils_1.SpeakeasyBase));
+exports.InstancePortInfo = InstancePortInfo;

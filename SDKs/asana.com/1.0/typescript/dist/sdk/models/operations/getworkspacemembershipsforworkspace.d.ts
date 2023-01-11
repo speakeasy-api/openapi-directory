@@ -20,5 +20,5 @@ export declare class GetWorkspaceMembershipsForWorkspaceRequest extends Speakeas
 export declare class GetWorkspaceMembershipsForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getWorkspaceMembershipsForWorkspace200ApplicationJsonObject?: GetWorkspaceMembershipsForWorkspace200ApplicationJson;
+    getWorkspaceMembershipsForWorkspace200ApplicationJSONObject?: GetWorkspaceMembershipsForWorkspace200ApplicationJson;
 }

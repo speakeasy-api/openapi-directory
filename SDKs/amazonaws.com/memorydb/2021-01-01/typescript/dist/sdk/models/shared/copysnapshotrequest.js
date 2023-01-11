@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CopySnapshotRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CopySnapshotRequest = /** @class */ (function (_super) {
     __extends(CopySnapshotRequest, _super);
     function CopySnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], CopySnapshotRequest.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceSnapshotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceSnapshotName" }),
         __metadata("design:type", String)
     ], CopySnapshotRequest.prototype, "sourceSnapshotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CopySnapshotRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetBucket" }),
         __metadata("design:type", String)
     ], CopySnapshotRequest.prototype, "targetBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetSnapshotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetSnapshotName" }),
         __metadata("design:type", String)
     ], CopySnapshotRequest.prototype, "targetSnapshotName", void 0);
     return CopySnapshotRequest;
-}(SpeakeasyBase));
-export { CopySnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.CopySnapshotRequest = CopySnapshotRequest;

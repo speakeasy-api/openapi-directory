@@ -20,10 +20,10 @@ export declare class GoogleCloudContactcenterinsightsV1Conversation extends Spea
     callMetadata?: GoogleCloudContactcenterinsightsV1ConversationCallMetadata;
     createTime?: string;
     dataSource?: GoogleCloudContactcenterinsightsV1ConversationDataSource;
-    dialogflowIntents?: Map<string, GoogleCloudContactcenterinsightsV1DialogflowIntent>;
+    dialogflowIntents?: Record<string, GoogleCloudContactcenterinsightsV1DialogflowIntent>;
     duration?: string;
     expireTime?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     languageCode?: string;
     latestAnalysis?: GoogleCloudContactcenterinsightsV1Analysis;
     medium?: GoogleCloudContactcenterinsightsV1ConversationMediumEnum;
@@ -44,7 +44,7 @@ export declare class GoogleCloudContactcenterinsightsV1ConversationInput extends
     callMetadata?: GoogleCloudContactcenterinsightsV1ConversationCallMetadata;
     dataSource?: GoogleCloudContactcenterinsightsV1ConversationDataSourceInput;
     expireTime?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     languageCode?: string;
     latestAnalysis?: GoogleCloudContactcenterinsightsV1AnalysisInput;
     medium?: GoogleCloudContactcenterinsightsV1ConversationMediumEnum;

@@ -31,5 +31,5 @@ export class AllEnvironmentsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  allEnvironments200ApplicationJsonObject?: AllEnvironments200ApplicationJson;
+  allEnvironments200ApplicationJSONObject?: AllEnvironments200ApplicationJson;
 }

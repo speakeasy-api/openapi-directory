@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteFloatingIpsIdResponse = exports.DeleteFloatingIpsIdRequest = exports.DeleteFloatingIpsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteFloatingIpsIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteFloatingIpsIdPathParams, _super);
     function DeleteFloatingIpsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteFloatingIpsIdPathParams.prototype, "id", void 0);
     return DeleteFloatingIpsIdPathParams;
-}(SpeakeasyBase));
-export { DeleteFloatingIpsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFloatingIpsIdPathParams = DeleteFloatingIpsIdPathParams;
 var DeleteFloatingIpsIdRequest = /** @class */ (function (_super) {
     __extends(DeleteFloatingIpsIdRequest, _super);
     function DeleteFloatingIpsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteFloatingIpsIdPathParams)
     ], DeleteFloatingIpsIdRequest.prototype, "pathParams", void 0);
     return DeleteFloatingIpsIdRequest;
-}(SpeakeasyBase));
-export { DeleteFloatingIpsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFloatingIpsIdRequest = DeleteFloatingIpsIdRequest;
 var DeleteFloatingIpsIdResponse = /** @class */ (function (_super) {
     __extends(DeleteFloatingIpsIdResponse, _super);
     function DeleteFloatingIpsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteFloatingIpsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteFloatingIpsIdResponse.prototype, "statusCode", void 0);
     return DeleteFloatingIpsIdResponse;
-}(SpeakeasyBase));
-export { DeleteFloatingIpsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFloatingIpsIdResponse = DeleteFloatingIpsIdResponse;

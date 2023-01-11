@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateComplianceByConformancePack } from "./aggregatecompliancebyconformancepack";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAggregateComplianceByConformancePacksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatecompliancebyconformancepack_1 = require("./aggregatecompliancebyconformancepack");
 var DescribeAggregateComplianceByConformancePacksResponse = /** @class */ (function (_super) {
     __extends(DescribeAggregateComplianceByConformancePacksResponse, _super);
     function DescribeAggregateComplianceByConformancePacksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AggregateComplianceByConformancePacks", elemType: AggregateComplianceByConformancePack }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AggregateComplianceByConformancePacks", elemType: aggregatecompliancebyconformancepack_1.AggregateComplianceByConformancePack }),
         __metadata("design:type", Array)
     ], DescribeAggregateComplianceByConformancePacksResponse.prototype, "aggregateComplianceByConformancePacks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeAggregateComplianceByConformancePacksResponse.prototype, "nextToken", void 0);
     return DescribeAggregateComplianceByConformancePacksResponse;
-}(SpeakeasyBase));
-export { DescribeAggregateComplianceByConformancePacksResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAggregateComplianceByConformancePacksResponse = DescribeAggregateComplianceByConformancePacksResponse;

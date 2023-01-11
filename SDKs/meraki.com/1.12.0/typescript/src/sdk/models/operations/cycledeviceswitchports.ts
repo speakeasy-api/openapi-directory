@@ -31,5 +31,5 @@ export class CycleDeviceSwitchPortsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cycleDeviceSwitchPorts200ApplicationJsonObject?: Map<string, any>;
+  cycleDeviceSwitchPorts200ApplicationJSONObject?: Record<string, any>;
 }

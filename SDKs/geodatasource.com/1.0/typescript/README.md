@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCityRequest, GetCityResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,13 +29,13 @@ const sdk = new SDK();
 const req: GetCityRequest = {
   queryParams: {
     format: "json",
-    key: "voluptatem",
-    lat: 62.200001,
-    lng: 0.100000,
+    key: "voluptas",
+    lat: 53.099998,
+    lng: 15.100000,
   },
 };
 
-sdk.sdk.getCity(req).then((res: GetCityResponse | AxiosError) => {
+sdk.getCity(req).then((res: GetCityResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceTagNotificationAttribute } from "./instancetagnotificationattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeregisterInstanceEventNotificationAttributesResult = exports.DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute
+/**
+ * The resulting set of tag keys.
+**/
+var DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute = /** @class */ (function (_super) {
+    __extends(DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute, _super);
+    function DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute.prototype, "includeAllTagsOfInstance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute.prototype, "instanceTagKeys", void 0);
+    return DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute;
+}(utils_1.SpeakeasyBase));
+exports.DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute = DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute;
 var DeregisterInstanceEventNotificationAttributesResult = /** @class */ (function (_super) {
     __extends(DeregisterInstanceEventNotificationAttributesResult, _super);
     function DeregisterInstanceEventNotificationAttributesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceTagNotificationAttribute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeregisterInstanceEventNotificationAttributesResultInstanceTagAttribute)
     ], DeregisterInstanceEventNotificationAttributesResult.prototype, "instanceTagAttribute", void 0);
     return DeregisterInstanceEventNotificationAttributesResult;
-}(SpeakeasyBase));
-export { DeregisterInstanceEventNotificationAttributesResult };
+}(utils_1.SpeakeasyBase));
+exports.DeregisterInstanceEventNotificationAttributesResult = DeregisterInstanceEventNotificationAttributesResult;

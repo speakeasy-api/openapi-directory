@@ -59,5 +59,5 @@ export class CreateEnumOptionForCustomFieldResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createEnumOptionForCustomField201ApplicationJsonObject?: CreateEnumOptionForCustomField201ApplicationJson;
+  createEnumOptionForCustomField201ApplicationJSONObject?: CreateEnumOptionForCustomField201ApplicationJson;
 }

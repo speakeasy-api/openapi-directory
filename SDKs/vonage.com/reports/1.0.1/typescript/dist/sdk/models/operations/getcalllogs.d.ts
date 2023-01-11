@@ -3,13 +3,9 @@ import * as shared from "../shared";
 export declare class GetCallLogsPathParams extends SpeakeasyBase {
     accountId: string;
 }
-export declare enum GetCallLogsDirectionEnum {
-    Inbound = "Inbound",
-    Outbound = "Outbound"
-}
 export declare class GetCallLogsQueryParams extends SpeakeasyBase {
     destinationUser?: string;
-    direction?: GetCallLogsDirectionEnum;
+    direction?: shared.AccountIdEnum;
     endGte?: string;
     endLte?: string;
     from?: string;

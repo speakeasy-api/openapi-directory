@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentFilter } from "./agentfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAssessmentRunAgentsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var agentfilter_1 = require("./agentfilter");
 var ListAssessmentRunAgentsRequest = /** @class */ (function (_super) {
     __extends(ListAssessmentRunAgentsRequest, _super);
     function ListAssessmentRunAgentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArn" }),
         __metadata("design:type", String)
     ], ListAssessmentRunAgentsRequest.prototype, "assessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
-        __metadata("design:type", AgentFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
+        __metadata("design:type", agentfilter_1.AgentFilter)
     ], ListAssessmentRunAgentsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListAssessmentRunAgentsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListAssessmentRunAgentsRequest.prototype, "nextToken", void 0);
     return ListAssessmentRunAgentsRequest;
-}(SpeakeasyBase));
-export { ListAssessmentRunAgentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListAssessmentRunAgentsRequest = ListAssessmentRunAgentsRequest;

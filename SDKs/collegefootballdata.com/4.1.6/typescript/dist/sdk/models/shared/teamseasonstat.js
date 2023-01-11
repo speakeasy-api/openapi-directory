@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamSeasonStat = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamSeasonStat = /** @class */ (function (_super) {
     __extends(TeamSeasonStat, _super);
     function TeamSeasonStat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], TeamSeasonStat.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], TeamSeasonStat.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statName" }),
         __metadata("design:type", String)
     ], TeamSeasonStat.prototype, "statName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statValue" }),
         __metadata("design:type", Number)
     ], TeamSeasonStat.prototype, "statValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], TeamSeasonStat.prototype, "team", void 0);
     return TeamSeasonStat;
-}(SpeakeasyBase));
-export { TeamSeasonStat };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStat = TeamSeasonStat;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class TagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+    resourceARN: string;
 }
 export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;
@@ -12,7 +12,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags: Map<string, string>;
+    tags: Record<string, string>;
 }
 export declare class TagResourceRequest extends SpeakeasyBase {
     pathParams: TagResourcePathParams;
@@ -24,7 +24,7 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     throttlingException?: any;
     validationException?: any;
 }

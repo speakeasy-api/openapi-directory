@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RunQueryRequestDataRangeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunQueryRequest = exports.RunQueryRequestDataRangeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RunQueryRequestDataRangeEnum;
 (function (RunQueryRequestDataRangeEnum) {
     RunQueryRequestDataRangeEnum["CustomDates"] = "CUSTOM_DATES";
     RunQueryRequestDataRangeEnum["CurrentDay"] = "CURRENT_DAY";
@@ -45,7 +48,7 @@ export var RunQueryRequestDataRangeEnum;
     RunQueryRequestDataRangeEnum["Last14Days"] = "LAST_14_DAYS";
     RunQueryRequestDataRangeEnum["TypeNotSupported"] = "TYPE_NOT_SUPPORTED";
     RunQueryRequestDataRangeEnum["Last60Days"] = "LAST_60_DAYS";
-})(RunQueryRequestDataRangeEnum || (RunQueryRequestDataRangeEnum = {}));
+})(RunQueryRequestDataRangeEnum = exports.RunQueryRequestDataRangeEnum || (exports.RunQueryRequestDataRangeEnum = {}));
 // RunQueryRequest
 /**
  * Request to run a stored query to generate a report.
@@ -56,21 +59,21 @@ var RunQueryRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRange" }),
         __metadata("design:type", String)
     ], RunQueryRequest.prototype, "dataRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportDataEndTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportDataEndTimeMs" }),
         __metadata("design:type", String)
     ], RunQueryRequest.prototype, "reportDataEndTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportDataStartTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportDataStartTimeMs" }),
         __metadata("design:type", String)
     ], RunQueryRequest.prototype, "reportDataStartTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneCode" }),
         __metadata("design:type", String)
     ], RunQueryRequest.prototype, "timezoneCode", void 0);
     return RunQueryRequest;
-}(SpeakeasyBase));
-export { RunQueryRequest };
+}(utils_1.SpeakeasyBase));
+exports.RunQueryRequest = RunQueryRequest;

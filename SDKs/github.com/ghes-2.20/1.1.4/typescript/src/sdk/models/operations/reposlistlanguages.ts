@@ -25,5 +25,5 @@ export class ReposListLanguagesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  language?: Map<string, number>;
+  language?: Record<string, number>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionAliasAssociation } from "./connectionaliasassociation";
-import { ConnectionAliasStateEnum } from "./connectionaliasstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionAlias = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectionaliasassociation_1 = require("./connectionaliasassociation");
+var connectionaliasstateenum_1 = require("./connectionaliasstateenum");
 // ConnectionAlias
 /**
  * Describes a connection alias. Connection aliases are used for cross-Region redirection. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region Redirection for Amazon WorkSpaces</a>.
@@ -35,25 +38,25 @@ var ConnectionAlias = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AliasId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AliasId" }),
         __metadata("design:type", String)
     ], ConnectionAlias.prototype, "aliasId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Associations", elemType: ConnectionAliasAssociation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Associations", elemType: connectionaliasassociation_1.ConnectionAliasAssociation }),
         __metadata("design:type", Array)
     ], ConnectionAlias.prototype, "associations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionString" }),
         __metadata("design:type", String)
     ], ConnectionAlias.prototype, "connectionString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnerAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnerAccountId" }),
         __metadata("design:type", String)
     ], ConnectionAlias.prototype, "ownerAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], ConnectionAlias.prototype, "state", void 0);
     return ConnectionAlias;
-}(SpeakeasyBase));
-export { ConnectionAlias };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionAlias = ConnectionAlias;

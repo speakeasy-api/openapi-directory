@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Organization = void 0;
+var utils_1 = require("../../../internal/utils");
 var Organization = /** @class */ (function (_super) {
     __extends(Organization, _super);
     function Organization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_count" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "assetCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], Organization.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deactivated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deactivated_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "deactivatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Organization.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_token" }),
         __metadata("design:type", String)
     ], Organization.prototype, "downloadToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_token_created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_token_created_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "downloadTokenCreatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiration_assets_offline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiration_assets_offline" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "expirationAssetsOffline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiration_assets_stale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiration_assets_stale" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "expirationAssetsStale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiration_scans" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiration_scans" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "expirationScans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_token" }),
         __metadata("design:type", String)
     ], Organization.prototype, "exportToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_token_counter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_token_counter" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "exportTokenCounter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_token_created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_token_created_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "exportTokenCreatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_token_last_used_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_token_last_used_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "exportTokenLastUsedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=export_token_last_used_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=export_token_last_used_by" }),
         __metadata("design:type", String)
     ], Organization.prototype, "exportTokenLastUsedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Organization.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inactive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inactive" }),
         __metadata("design:type", Boolean)
     ], Organization.prototype, "inactive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Organization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", String)
     ], Organization.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permanent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permanent" }),
         __metadata("design:type", Boolean)
     ], Organization.prototype, "permanent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", Boolean)
     ], Organization.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_count" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "serviceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_count_arp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_count_arp" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "serviceCountArp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_count_icmp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_count_icmp" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "serviceCountIcmp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_count_tcp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_count_tcp" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "serviceCountTcp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_count_udp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_count_udp" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "serviceCountUdp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "updatedAt", void 0);
     return Organization;
-}(SpeakeasyBase));
-export { Organization };
+}(utils_1.SpeakeasyBase));
+exports.Organization = Organization;

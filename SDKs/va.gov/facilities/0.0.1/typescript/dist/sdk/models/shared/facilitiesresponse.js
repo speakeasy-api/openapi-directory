@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Facility } from "./facility";
-import { PageLinks } from "./pagelinks";
-import { FacilitiesMetadata } from "./facilitiesmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FacilitiesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var facility_1 = require("./facility");
+var pagelinks_1 = require("./pagelinks");
+var facilitiesmetadata_1 = require("./facilitiesmetadata");
 var FacilitiesResponse = /** @class */ (function (_super) {
     __extends(FacilitiesResponse, _super);
     function FacilitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Facility }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: facility_1.Facility }),
         __metadata("design:type", Array)
     ], FacilitiesResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", PageLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", pagelinks_1.PageLinks)
     ], FacilitiesResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", FacilitiesMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", facilitiesmetadata_1.FacilitiesMetadata)
     ], FacilitiesResponse.prototype, "meta", void 0);
     return FacilitiesResponse;
-}(SpeakeasyBase));
-export { FacilitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.FacilitiesResponse = FacilitiesResponse;

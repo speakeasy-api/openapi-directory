@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var KeyPatchCapabilitiesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyPatch = exports.KeyPatchCapabilitiesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var KeyPatchCapabilitiesEnum;
 (function (KeyPatchCapabilitiesEnum) {
     KeyPatchCapabilitiesEnum["Publish"] = "publish";
     KeyPatchCapabilitiesEnum["Subscribe"] = "subscribe";
@@ -33,24 +36,24 @@ export var KeyPatchCapabilitiesEnum;
     KeyPatchCapabilitiesEnum["PushAdmin"] = "push-admin";
     KeyPatchCapabilitiesEnum["PushSubscribe"] = "push-subscribe";
     KeyPatchCapabilitiesEnum["Statistics"] = "statistics";
-})(KeyPatchCapabilitiesEnum || (KeyPatchCapabilitiesEnum = {}));
+})(KeyPatchCapabilitiesEnum = exports.KeyPatchCapabilitiesEnum || (exports.KeyPatchCapabilitiesEnum = {}));
 var KeyPatch = /** @class */ (function (_super) {
     __extends(KeyPatch, _super);
     function KeyPatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
         __metadata("design:type", Array)
     ], KeyPatch.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channels" }),
         __metadata("design:type", String)
     ], KeyPatch.prototype, "channels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], KeyPatch.prototype, "name", void 0);
     return KeyPatch;
-}(SpeakeasyBase));
-export { KeyPatch };
+}(utils_1.SpeakeasyBase));
+exports.KeyPatch = KeyPatch;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvVariable } from "./envvariable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var envvariable_1 = require("./envvariable");
 // Action
 /**
  * An action that gets executed during initialization of the replicas.
@@ -34,17 +37,17 @@ var Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commands" }),
         __metadata("design:type", Array)
     ], Action.prototype, "commands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=envVariables", elemType: EnvVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=envVariables", elemType: envvariable_1.EnvVariable }),
         __metadata("design:type", Array)
     ], Action.prototype, "envVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutMilliSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutMilliSeconds" }),
         __metadata("design:type", Number)
     ], Action.prototype, "timeoutMilliSeconds", void 0);
     return Action;
-}(SpeakeasyBase));
-export { Action };
+}(utils_1.SpeakeasyBase));
+exports.Action = Action;

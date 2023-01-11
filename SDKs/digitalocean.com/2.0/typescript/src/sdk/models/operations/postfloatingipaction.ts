@@ -1,75 +1,76 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class PostFloatingIpActionPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=floating_ip" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=floating_ip" })
   floatingIp: string;
 }
 
 export enum PostFloatingIpActionRequestBody1TypeEnum {
-    Assign = "assign"
-,    Unassign = "unassign"
+    Assign = "assign",
+    Unassign = "unassign"
 }
 
 
 export class PostFloatingIpActionRequestBody1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: PostFloatingIpActionRequestBody1TypeEnum;
 }
 
 export enum PostFloatingIpActionRequestBody2TypeEnum {
-    Assign = "assign"
-,    Unassign = "unassign"
+    Assign = "assign",
+    Unassign = "unassign"
 }
 
 
 export class PostFloatingIpActionRequestBody2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=droplet_id" })
+  @SpeakeasyMetadata({ data: "json, name=droplet_id" })
   dropletId: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: PostFloatingIpActionRequestBody2TypeEnum;
 }
 
 
-export class PostFloatingIpActionRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: PostFloatingIpActionPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: any;
-}
-
-
 export class PostFloatingIpAction401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class PostFloatingIpActionRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PostFloatingIpActionPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: any;
+}
+
+
 export class PostFloatingIpActionResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  postFloatingIpAction201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  postFloatingIpAction201ApplicationJSONAny?: any;
 
-  @Metadata()
-  postFloatingIpAction401ApplicationJsonObject?: PostFloatingIpAction401ApplicationJson;
+  @SpeakeasyMetadata()
+  postFloatingIpAction401ApplicationJSONObject?: PostFloatingIpAction401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

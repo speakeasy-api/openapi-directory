@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthenticateCognitoActionConditionalBehaviorEnumEnum } from "./authenticatecognitoactionconditionalbehaviorenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticateCognitoActionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var authenticatecognitoactionconditionalbehaviorenumenum_1 = require("./authenticatecognitoactionconditionalbehaviorenumenum");
 // AuthenticateCognitoActionConfig
 /**
  * Request parameters to use when integrating with Amazon Cognito to authenticate users.
@@ -34,37 +37,37 @@ var AuthenticateCognitoActionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AuthenticateCognitoActionConfig.prototype, "authenticationRequestExtraParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "onUnauthenticatedRequest", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "sessionCookieName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AuthenticateCognitoActionConfig.prototype, "sessionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "userPoolArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "userPoolClientId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateCognitoActionConfig.prototype, "userPoolDomain", void 0);
     return AuthenticateCognitoActionConfig;
-}(SpeakeasyBase));
-export { AuthenticateCognitoActionConfig };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateCognitoActionConfig = AuthenticateCognitoActionConfig;

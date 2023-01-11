@@ -19,7 +19,7 @@ export declare class DeleteStoredQueryRequest extends SpeakeasyBase {
 }
 export declare class DeleteStoredQueryResponse extends SpeakeasyBase {
     contentType: string;
-    deleteStoredQueryResponse?: Map<string, any>;
+    deleteStoredQueryResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     validationException?: any;

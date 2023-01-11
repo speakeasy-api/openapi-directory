@@ -3,12 +3,12 @@ import { ErrorDetail } from "./errordetail";
 
 
 
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata()
   category: string;
 
   @SpeakeasyMetadata()
-  context?: Map<string, string[]>;
+  context?: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   correlationId: string;
@@ -17,7 +17,7 @@ export class Error extends SpeakeasyBase {
   errors?: ErrorDetail[];
 
   @SpeakeasyMetadata()
-  links?: Map<string, string>;
+  links?: Record<string, string>;
 
   @SpeakeasyMetadata()
   message: string;

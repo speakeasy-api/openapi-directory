@@ -19,7 +19,7 @@ export declare class CloudidentityCustomersUserinvitationsSendQueryParams extend
 export declare class CloudidentityCustomersUserinvitationsSendRequest extends SpeakeasyBase {
     pathParams: CloudidentityCustomersUserinvitationsSendPathParams;
     queryParams: CloudidentityCustomersUserinvitationsSendQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class CloudidentityCustomersUserinvitationsSendResponse extends SpeakeasyBase {
     contentType: string;

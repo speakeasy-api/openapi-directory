@@ -37,6 +37,6 @@ export class AddEmployeeResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.EmployeeIdResponse })
   employeeIdResponses?: shared.EmployeeIdResponse[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

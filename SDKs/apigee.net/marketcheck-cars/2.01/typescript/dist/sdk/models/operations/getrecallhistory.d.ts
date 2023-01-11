@@ -13,7 +13,7 @@ export declare class GetRecallHistoryRequest extends SpeakeasyBase {
 }
 export declare class GetRecallHistoryResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

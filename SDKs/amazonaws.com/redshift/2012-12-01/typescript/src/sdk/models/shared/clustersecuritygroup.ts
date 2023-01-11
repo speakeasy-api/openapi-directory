@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2SecurityGroup } from "./ec2securitygroup";
-import { IpRange } from "./iprange";
-import { Tag } from "./tag";
+import { Ec2SecurityGroupList } from "./ec2securitygrouplist";
+import { IpRangeList } from "./iprangelist";
+import { TagList } from "./taglist";
 
 
 
@@ -16,12 +16,12 @@ export class ClusterSecurityGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   description?: string;
 
-  @SpeakeasyMetadata({ elemType: Ec2SecurityGroup })
-  ec2SecurityGroups?: Ec2SecurityGroup[];
+  @SpeakeasyMetadata({ elemType: Ec2SecurityGroupList })
+  ec2SecurityGroups?: Ec2SecurityGroupList[];
 
-  @SpeakeasyMetadata({ elemType: IpRange })
-  ipRanges?: IpRange[];
+  @SpeakeasyMetadata({ elemType: IpRangeList })
+  ipRanges?: IpRangeList[];
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 }

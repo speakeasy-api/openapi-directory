@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Links = void 0;
+var utils_1 = require("../../../internal/utils");
 // Links
 /**
  * Links relevant to the payload
@@ -33,25 +36,25 @@ var Links = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=First" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=First" }),
         __metadata("design:type", String)
     ], Links.prototype, "first", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Last" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Last" }),
         __metadata("design:type", String)
     ], Links.prototype, "last", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Next" }),
         __metadata("design:type", String)
     ], Links.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Prev" }),
         __metadata("design:type", String)
     ], Links.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Self" }),
         __metadata("design:type", String)
     ], Links.prototype, "self", void 0);
     return Links;
-}(SpeakeasyBase));
-export { Links };
+}(utils_1.SpeakeasyBase));
+exports.Links = Links;

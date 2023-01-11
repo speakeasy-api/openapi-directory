@@ -15,6 +15,6 @@ export declare class GetWorkspacesWorkspaceHooksRequest extends SpeakeasyBase {
 export declare class GetWorkspacesWorkspaceHooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWebhookSubscriptions?: shared.PaginatedWebhookSubscriptions;
 }

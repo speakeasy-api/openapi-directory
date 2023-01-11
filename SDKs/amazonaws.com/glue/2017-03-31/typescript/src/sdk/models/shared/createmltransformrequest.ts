@@ -35,7 +35,7 @@ export class CreateMlTransformRequest extends SpeakeasyBase {
   role: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Timeout" })
   timeout?: number;

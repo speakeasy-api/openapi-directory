@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { QueryForecastRequest, QueryForecastResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,28 +33,27 @@ const sdk = new SDK(WithSecurity(
     
 const req: QueryForecastRequest = {
   headers: {
-    xAmzAlgorithm: "maiores",
-    xAmzContentSha256: "repellendus",
-    xAmzCredential: "repellendus",
-    xAmzDate: "error",
-    xAmzSecurityToken: "ea",
-    xAmzSignature: "fugit",
-    xAmzSignedHeaders: "est",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonForecastRuntime.QueryForecast",
   },
   request: {
-    endDate: "aut",
+    endDate: "fugit",
     filters: {
-      "nam": "molestias",
-      "et": "cumque",
+      "nihil": "rerum",
     },
-    forecastArn: "aut",
-    nextToken: "deserunt",
-    startDate: "voluptatem",
+    forecastArn: "dicta",
+    nextToken: "debitis",
+    startDate: "voluptatum",
   },
 };
 
-sdk.sdk.queryForecast(req).then((res: QueryForecastResponse | AxiosError) => {
+sdk.queryForecast(req).then((res: QueryForecastResponse | AxiosError) => {
    // handle response
 });
 ```

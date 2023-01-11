@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FirewallInfoFirewallRuleTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirewallInfo = exports.FirewallInfoFirewallRuleTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FirewallInfoFirewallRuleTypeEnum;
 (function (FirewallInfoFirewallRuleTypeEnum) {
     FirewallInfoFirewallRuleTypeEnum["FirewallRuleTypeUnspecified"] = "FIREWALL_RULE_TYPE_UNSPECIFIED";
     FirewallInfoFirewallRuleTypeEnum["HierarchicalFirewallPolicyRule"] = "HIERARCHICAL_FIREWALL_POLICY_RULE";
@@ -31,7 +34,7 @@ export var FirewallInfoFirewallRuleTypeEnum;
     FirewallInfoFirewallRuleTypeEnum["ImpliedVpcFirewallRule"] = "IMPLIED_VPC_FIREWALL_RULE";
     FirewallInfoFirewallRuleTypeEnum["ServerlessVpcAccessManagedFirewallRule"] = "SERVERLESS_VPC_ACCESS_MANAGED_FIREWALL_RULE";
     FirewallInfoFirewallRuleTypeEnum["NetworkFirewallPolicyRule"] = "NETWORK_FIREWALL_POLICY_RULE";
-})(FirewallInfoFirewallRuleTypeEnum || (FirewallInfoFirewallRuleTypeEnum = {}));
+})(FirewallInfoFirewallRuleTypeEnum = exports.FirewallInfoFirewallRuleTypeEnum || (exports.FirewallInfoFirewallRuleTypeEnum = {}));
 // FirewallInfo
 /**
  * For display only. Metadata associated with a VPC firewall rule, an implied VPC firewall rule, or a hierarchical firewall policy rule.
@@ -42,45 +45,45 @@ var FirewallInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewallRuleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewallRuleType" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "firewallRuleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkUri" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "networkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], FirewallInfo.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetServiceAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetServiceAccounts" }),
         __metadata("design:type", Array)
     ], FirewallInfo.prototype, "targetServiceAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetTags" }),
         __metadata("design:type", Array)
     ], FirewallInfo.prototype, "targetTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], FirewallInfo.prototype, "uri", void 0);
     return FirewallInfo;
-}(SpeakeasyBase));
-export { FirewallInfo };
+}(utils_1.SpeakeasyBase));
+exports.FirewallInfo = FirewallInfo;

@@ -9,7 +9,7 @@ import { ScaStatusEnum } from "./scastatusenum";
  * Body of the JSON response for a successful update PSU authentication request.
 **/
 export declare class UpdatePsuAuthenticationResponse extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     authorisationId?: string;
     challengeData?: ChallengeData;
     chosenScaMethod?: ChosenScaMethod;

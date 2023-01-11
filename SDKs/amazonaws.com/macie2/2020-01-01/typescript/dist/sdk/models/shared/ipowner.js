@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpOwner = void 0;
+var utils_1 = require("../../../internal/utils");
 // IpOwner
 /**
  * Provides information about the registered owner of an IP address.
@@ -33,21 +36,21 @@ var IpOwner = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", String)
     ], IpOwner.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asnOrg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asnOrg" }),
         __metadata("design:type", String)
     ], IpOwner.prototype, "asnOrg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isp" }),
         __metadata("design:type", String)
     ], IpOwner.prototype, "isp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org" }),
         __metadata("design:type", String)
     ], IpOwner.prototype, "org", void 0);
     return IpOwner;
-}(SpeakeasyBase));
-export { IpOwner };
+}(utils_1.SpeakeasyBase));
+exports.IpOwner = IpOwner;

@@ -22,5 +22,5 @@ export class ResumeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  resume200ApplicationJsonString?: string;
+  resume200ApplicationJSONString?: string;
 }

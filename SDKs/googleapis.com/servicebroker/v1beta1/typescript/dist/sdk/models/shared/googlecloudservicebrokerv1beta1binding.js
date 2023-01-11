@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudServicebrokerV1beta1Binding = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudServicebrokerV1beta1Binding
 /**
  * Describes the binding.
@@ -33,37 +36,37 @@ var GoogleCloudServicebrokerV1beta1Binding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bind_resource" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bind_resource" }),
+        __metadata("design:type", Object)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "bindResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binding_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binding_id" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "bindingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentName" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "deploymentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plan_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan_id" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "planId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_id" }),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Binding.prototype, "serviceId", void 0);
     return GoogleCloudServicebrokerV1beta1Binding;
-}(SpeakeasyBase));
-export { GoogleCloudServicebrokerV1beta1Binding };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudServicebrokerV1beta1Binding = GoogleCloudServicebrokerV1beta1Binding;

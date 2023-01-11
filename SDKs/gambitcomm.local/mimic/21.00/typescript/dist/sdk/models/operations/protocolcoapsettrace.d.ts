@@ -9,5 +9,5 @@ export declare class ProtocolCoapSetTraceRequest extends SpeakeasyBase {
 export declare class ProtocolCoapSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolCoapSetTrace200ApplicationJsonString?: string;
+    protocolCoapSetTrace200ApplicationJSONString?: string;
 }

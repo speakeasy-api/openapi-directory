@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DurationEnum } from "./durationenum";
-import { RecencyTypeEnum } from "./recencytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecencyDimension = void 0;
+var utils_1 = require("../../../internal/utils");
+var durationenum_1 = require("./durationenum");
+var recencytypeenum_1 = require("./recencytypeenum");
 // RecencyDimension
 /**
  * Specifies criteria for including or excluding endpoints from a segment based on how recently an endpoint was active.
@@ -35,13 +38,13 @@ var RecencyDimension = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Duration" }),
         __metadata("design:type", String)
     ], RecencyDimension.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecencyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecencyType" }),
         __metadata("design:type", String)
     ], RecencyDimension.prototype, "recencyType", void 0);
     return RecencyDimension;
-}(SpeakeasyBase));
-export { RecencyDimension };
+}(utils_1.SpeakeasyBase));
+exports.RecencyDimension = RecencyDimension;

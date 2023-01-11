@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// NamespaceInput
-/**
- * A container for services. Namespaces allow administrators to group services together and define permissions for a collection of services.
-**/
-var NamespaceInput = /** @class */ (function (_super) {
-    __extends(NamespaceInput, _super);
-    function NamespaceInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], NamespaceInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], NamespaceInput.prototype, "name", void 0);
-    return NamespaceInput;
-}(SpeakeasyBase));
-export { NamespaceInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamespaceInput = exports.Namespace = void 0;
+var utils_1 = require("../../../internal/utils");
 // Namespace
 /**
  * A container for services. Namespaces allow administrators to group services together and define permissions for a collection of services.
@@ -53,17 +36,37 @@ var Namespace = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Namespace.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Namespace.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Namespace.prototype, "uid", void 0);
     return Namespace;
-}(SpeakeasyBase));
-export { Namespace };
+}(utils_1.SpeakeasyBase));
+exports.Namespace = Namespace;
+// NamespaceInput
+/**
+ * A container for services. Namespaces allow administrators to group services together and define permissions for a collection of services.
+**/
+var NamespaceInput = /** @class */ (function (_super) {
+    __extends(NamespaceInput, _super);
+    function NamespaceInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], NamespaceInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], NamespaceInput.prototype, "name", void 0);
+    return NamespaceInput;
+}(utils_1.SpeakeasyBase));
+exports.NamespaceInput = NamespaceInput;

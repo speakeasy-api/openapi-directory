@@ -1,5 +1,8 @@
-export var IpAddressTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpAddressTypeEnum = void 0;
+var IpAddressTypeEnum;
 (function (IpAddressTypeEnum) {
     IpAddressTypeEnum["Ipv4"] = "ipv4";
     IpAddressTypeEnum["Dualstack"] = "dualstack";
-})(IpAddressTypeEnum || (IpAddressTypeEnum = {}));
+})(IpAddressTypeEnum = exports.IpAddressTypeEnum || (exports.IpAddressTypeEnum = {}));

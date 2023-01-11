@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilmographySearchReadResponse = exports.FilmographySearchReadRequest = exports.FilmographySearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FilmographySearchReadPathParams = /** @class */ (function (_super) {
     __extends(FilmographySearchReadPathParams, _super);
     function FilmographySearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
         __metadata("design:type", String)
     ], FilmographySearchReadPathParams.prototype, "movieTitle", void 0);
     return FilmographySearchReadPathParams;
-}(SpeakeasyBase));
-export { FilmographySearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FilmographySearchReadPathParams = FilmographySearchReadPathParams;
 var FilmographySearchReadRequest = /** @class */ (function (_super) {
     __extends(FilmographySearchReadRequest, _super);
     function FilmographySearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FilmographySearchReadPathParams)
     ], FilmographySearchReadRequest.prototype, "pathParams", void 0);
     return FilmographySearchReadRequest;
-}(SpeakeasyBase));
-export { FilmographySearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.FilmographySearchReadRequest = FilmographySearchReadRequest;
 var FilmographySearchReadResponse = /** @class */ (function (_super) {
     __extends(FilmographySearchReadResponse, _super);
     function FilmographySearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FilmographySearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FilmographySearchReadResponse.prototype, "statusCode", void 0);
     return FilmographySearchReadResponse;
-}(SpeakeasyBase));
-export { FilmographySearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.FilmographySearchReadResponse = FilmographySearchReadResponse;

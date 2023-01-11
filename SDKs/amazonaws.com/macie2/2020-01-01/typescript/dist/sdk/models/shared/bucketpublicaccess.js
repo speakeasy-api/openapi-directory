@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EffectivePermissionEnum } from "./effectivepermissionenum";
-import { BucketPermissionConfiguration } from "./bucketpermissionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketPublicAccess = void 0;
+var utils_1 = require("../../../internal/utils");
+var effectivepermissionenum_1 = require("./effectivepermissionenum");
+var bucketpermissionconfiguration_1 = require("./bucketpermissionconfiguration");
 // BucketPublicAccess
 /**
  * Provides information about the permissions settings that determine whether an S3 bucket is publicly accessible.
@@ -35,13 +38,13 @@ var BucketPublicAccess = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectivePermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectivePermission" }),
         __metadata("design:type", String)
     ], BucketPublicAccess.prototype, "effectivePermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionConfiguration" }),
-        __metadata("design:type", BucketPermissionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionConfiguration" }),
+        __metadata("design:type", bucketpermissionconfiguration_1.BucketPermissionConfiguration)
     ], BucketPublicAccess.prototype, "permissionConfiguration", void 0);
     return BucketPublicAccess;
-}(SpeakeasyBase));
-export { BucketPublicAccess };
+}(utils_1.SpeakeasyBase));
+exports.BucketPublicAccess = BucketPublicAccess;

@@ -4,6 +4,9 @@ export declare class GistCommitChangeStatus extends SpeakeasyBase {
     deletions?: number;
     total?: number;
 }
+/**
+ * Simple User
+**/
 export declare class GistCommitSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

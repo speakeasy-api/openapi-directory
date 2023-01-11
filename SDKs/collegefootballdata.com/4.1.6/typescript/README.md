@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetLinesRequest, GetLinesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyAuth: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,14 +33,14 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetLinesRequest = {
   queryParams: {
-    away: "blanditiis",
-    conference: "voluptatem",
-    gameId: 1968362912832942364,
-    home: "consequatur",
-    seasonType: "voluptatem",
-    team: "nam",
-    week: 6118617986052237062,
-    year: 2385020320511952434,
+    away: "sit",
+    conference: "voluptas",
+    gameId: 6050128673802995827,
+    home: "expedita",
+    seasonType: "consequuntur",
+    team: "dolor",
+    week: 1774932891286980153,
+    year: 6044372234677422456,
   },
 };
 

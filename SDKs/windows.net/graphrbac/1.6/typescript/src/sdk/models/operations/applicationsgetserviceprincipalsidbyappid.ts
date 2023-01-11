@@ -5,10 +5,10 @@ import * as shared from "../shared";
 
 export class ApplicationsGetServicePrincipalsIdByAppIdPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=applicationID" })
-  applicationId: string;
+  applicationID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

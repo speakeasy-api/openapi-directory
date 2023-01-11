@@ -51,7 +51,7 @@ export class DeleteNetworkProfileResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteNetworkProfileResult?: Map<string, any>;
+  deleteNetworkProfileResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

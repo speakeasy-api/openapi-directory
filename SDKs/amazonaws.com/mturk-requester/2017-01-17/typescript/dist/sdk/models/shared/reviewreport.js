@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReviewActionDetail } from "./reviewactiondetail";
-import { ReviewResultDetail } from "./reviewresultdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReviewReport = void 0;
+var utils_1 = require("../../../internal/utils");
+var reviewactiondetail_1 = require("./reviewactiondetail");
+var reviewresultdetail_1 = require("./reviewresultdetail");
 // ReviewReport
 /**
  *  Contains both ReviewResult and ReviewAction elements for a particular HIT.
@@ -35,13 +38,13 @@ var ReviewReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReviewActions", elemType: ReviewActionDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReviewActions", elemType: reviewactiondetail_1.ReviewActionDetail }),
         __metadata("design:type", Array)
     ], ReviewReport.prototype, "reviewActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReviewResults", elemType: ReviewResultDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReviewResults", elemType: reviewresultdetail_1.ReviewResultDetail }),
         __metadata("design:type", Array)
     ], ReviewReport.prototype, "reviewResults", void 0);
     return ReviewReport;
-}(SpeakeasyBase));
-export { ReviewReport };
+}(utils_1.SpeakeasyBase));
+exports.ReviewReport = ReviewReport;

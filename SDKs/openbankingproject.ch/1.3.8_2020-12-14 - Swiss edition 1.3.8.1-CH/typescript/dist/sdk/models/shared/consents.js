@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountAccess } from "./accountaccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Consents = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountaccess_1 = require("./accountaccess");
 // Consents
 /**
  * Content of the body of a consent request.
@@ -35,25 +38,25 @@ var Consents = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
-        __metadata("design:type", AccountAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
+        __metadata("design:type", accountaccess_1.AccountAccess)
     ], Consents.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=combinedServiceIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=combinedServiceIndicator" }),
         __metadata("design:type", Boolean)
     ], Consents.prototype, "combinedServiceIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyPerDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyPerDay" }),
         __metadata("design:type", Number)
     ], Consents.prototype, "frequencyPerDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recurringIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurringIndicator" }),
         __metadata("design:type", Boolean)
     ], Consents.prototype, "recurringIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validUntil" }),
         __metadata("design:type", Date)
     ], Consents.prototype, "validUntil", void 0);
     return Consents;
-}(SpeakeasyBase));
-export { Consents };
+}(utils_1.SpeakeasyBase));
+exports.Consents = Consents;

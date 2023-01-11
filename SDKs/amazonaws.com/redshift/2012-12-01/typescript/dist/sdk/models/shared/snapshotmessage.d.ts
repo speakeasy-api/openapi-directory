@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Snapshot } from "./snapshot";
+import { SnapshotList } from "./snapshotlist";
 /**
  * Contains the output from the <a>DescribeClusterSnapshots</a> action.
 **/
 export declare class SnapshotMessage extends SpeakeasyBase {
     marker?: string;
-    snapshots?: Snapshot[];
+    snapshots?: SnapshotList[];
 }

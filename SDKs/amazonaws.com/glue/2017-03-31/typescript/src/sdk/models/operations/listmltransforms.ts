@@ -69,7 +69,7 @@ export class ListMlTransformsResponse extends SpeakeasyBase {
   invalidInputException?: any;
 
   @SpeakeasyMetadata()
-  listMlTransformsResponse?: shared.ListMlTransformsResponse;
+  listMLTransformsResponse?: shared.ListMlTransformsResponse;
 
   @SpeakeasyMetadata()
   operationTimeoutException?: any;

@@ -50,10 +50,10 @@ export class CompanyAlternativeSearchRequest extends SpeakeasyBase {
 
 export class CompanyAlternativeSearchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyAlternativeSearch200ApplicationJsonAnies?: any[];
+  companyAlternativeSearch200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companyAlternativeSearchDefaultApplicationJsonAny?: any;
+  companyAlternativeSearchDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

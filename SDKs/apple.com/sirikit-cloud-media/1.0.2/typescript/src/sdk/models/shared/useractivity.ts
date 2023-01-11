@@ -13,7 +13,7 @@ export class UserActivity extends SpeakeasyBase {
   title?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userInfo" })
-  userInfo?: Map<string, any>;
+  userInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version: string;

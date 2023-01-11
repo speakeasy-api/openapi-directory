@@ -24,6 +24,6 @@ export declare class SasportalInstallerValidateRequest extends SpeakeasyBase {
 }
 export declare class SasportalInstallerValidateResponse extends SpeakeasyBase {
     contentType: string;
-    sasPortalValidateInstallerResponse?: Map<string, any>;
+    sasPortalValidateInstallerResponse?: Record<string, any>;
     statusCode: number;
 }

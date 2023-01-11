@@ -13,6 +13,6 @@ export declare class GetAppsAppIdQueuesRequest extends SpeakeasyBase {
 export declare class GetAppsAppIdQueuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     queueResponses?: shared.QueueResponse[];
 }

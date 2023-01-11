@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayRouteTablePropagation } from "./transitgatewayroutetablepropagation";
 
 
 
 export class GetTransitGatewayRouteTablePropagationsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TransitGatewayRouteTablePropagation })
-  transitGatewayRouteTablePropagations?: TransitGatewayRouteTablePropagation[];
+  @SpeakeasyMetadata()
+  transitGatewayRouteTablePropagations?: Record<string, any>;
 }

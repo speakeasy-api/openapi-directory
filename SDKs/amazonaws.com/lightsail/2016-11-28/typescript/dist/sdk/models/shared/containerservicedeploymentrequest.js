@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Container } from "./container";
-import { EndpointRequest } from "./endpointrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceDeploymentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var container_1 = require("./container");
+var endpointrequest_1 = require("./endpointrequest");
 // ContainerServiceDeploymentRequest
 /**
  * <p>Describes a container deployment configuration of an Amazon Lightsail container service.</p> <p>A deployment specifies the settings, such as the ports and launch command, of containers that are deployed to your container service.</p>
@@ -35,13 +38,13 @@ var ContainerServiceDeploymentRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containers", elemType: Container }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containers", elemType: container_1.Container }),
+        __metadata("design:type", Object)
     ], ContainerServiceDeploymentRequest.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicEndpoint" }),
-        __metadata("design:type", EndpointRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicEndpoint" }),
+        __metadata("design:type", endpointrequest_1.EndpointRequest)
     ], ContainerServiceDeploymentRequest.prototype, "publicEndpoint", void 0);
     return ContainerServiceDeploymentRequest;
-}(SpeakeasyBase));
-export { ContainerServiceDeploymentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ContainerServiceDeploymentRequest = ContainerServiceDeploymentRequest;

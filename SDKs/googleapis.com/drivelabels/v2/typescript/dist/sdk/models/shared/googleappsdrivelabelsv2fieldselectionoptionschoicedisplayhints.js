@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2BadgeColors } from "./googleappsdrivelabelsv2badgecolors";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2badgecolors_1 = require("./googleappsdrivelabelsv2badgecolors");
 // GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints
 /**
  * UI display hints for rendering an option.
@@ -34,29 +37,29 @@ var GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badgeColors" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2BadgeColors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badgeColors" }),
+        __metadata("design:type", googleappsdrivelabelsv2badgecolors_1.GoogleAppsDriveLabelsV2BadgeColors)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "badgeColors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badgePriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badgePriority" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "badgePriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=darkBadgeColors" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2BadgeColors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=darkBadgeColors" }),
+        __metadata("design:type", googleappsdrivelabelsv2badgecolors_1.GoogleAppsDriveLabelsV2BadgeColors)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "darkBadgeColors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenInSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenInSearch" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "hiddenInSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shownInApply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shownInApply" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints.prototype, "shownInApply", void 0);
     return GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints = GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints;

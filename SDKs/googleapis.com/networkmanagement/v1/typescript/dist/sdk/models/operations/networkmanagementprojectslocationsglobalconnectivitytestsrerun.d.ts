@@ -23,7 +23,7 @@ export declare class NetworkmanagementProjectsLocationsGlobalConnectivityTestsRe
 export declare class NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunRequest extends SpeakeasyBase {
     pathParams: NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunPathParams;
     queryParams: NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunSecurity;
 }
 export declare class NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunResponse extends SpeakeasyBase {

@@ -51,7 +51,7 @@ export class DeleteWorkspaceImageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWorkspaceImageResult?: Map<string, any>;
+  deleteWorkspaceImageResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidResourceStateException?: any;

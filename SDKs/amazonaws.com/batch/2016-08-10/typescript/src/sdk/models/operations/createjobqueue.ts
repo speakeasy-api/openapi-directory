@@ -46,7 +46,7 @@ export class CreateJobQueueRequestBody extends SpeakeasyBase {
   state?: CreateJobQueueRequestBodyStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

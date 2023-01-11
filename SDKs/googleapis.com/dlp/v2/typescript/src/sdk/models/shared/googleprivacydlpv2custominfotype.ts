@@ -48,5 +48,5 @@ export class GooglePrivacyDlpV2CustomInfoType extends SpeakeasyBase {
   storedType?: GooglePrivacyDlpV2StoredType;
 
   @SpeakeasyMetadata({ data: "json, name=surrogateType" })
-  surrogateType?: Map<string, any>;
+  surrogateType?: Record<string, any>;
 }

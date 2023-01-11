@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BudgetSummary } from "./budgetsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BudgetSummaryResponse = exports.BudgetSummaryResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var budgetsummary_1 = require("./budgetsummary");
 var BudgetSummaryResponseData = /** @class */ (function (_super) {
     __extends(BudgetSummaryResponseData, _super);
     function BudgetSummaryResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budgets", elemType: BudgetSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budgets", elemType: budgetsummary_1.BudgetSummary }),
         __metadata("design:type", Array)
     ], BudgetSummaryResponseData.prototype, "budgets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default_budget" }),
-        __metadata("design:type", BudgetSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default_budget" }),
+        __metadata("design:type", budgetsummary_1.BudgetSummary)
     ], BudgetSummaryResponseData.prototype, "defaultBudget", void 0);
     return BudgetSummaryResponseData;
-}(SpeakeasyBase));
-export { BudgetSummaryResponseData };
+}(utils_1.SpeakeasyBase));
+exports.BudgetSummaryResponseData = BudgetSummaryResponseData;
 var BudgetSummaryResponse = /** @class */ (function (_super) {
     __extends(BudgetSummaryResponse, _super);
     function BudgetSummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BudgetSummaryResponseData)
     ], BudgetSummaryResponse.prototype, "data", void 0);
     return BudgetSummaryResponse;
-}(SpeakeasyBase));
-export { BudgetSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.BudgetSummaryResponse = BudgetSummaryResponse;

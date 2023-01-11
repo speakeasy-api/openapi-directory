@@ -1,4 +1,7 @@
-export var TargetStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetStatusEnum = void 0;
+var TargetStatusEnum;
 (function (TargetStatusEnum) {
     TargetStatusEnum["Pending"] = "Pending";
     TargetStatusEnum["InProgress"] = "InProgress";
@@ -7,4 +10,4 @@ export var TargetStatusEnum;
     TargetStatusEnum["Skipped"] = "Skipped";
     TargetStatusEnum["Unknown"] = "Unknown";
     TargetStatusEnum["Ready"] = "Ready";
-})(TargetStatusEnum || (TargetStatusEnum = {}));
+})(TargetStatusEnum = exports.TargetStatusEnum || (exports.TargetStatusEnum = {}));

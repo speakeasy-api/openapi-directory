@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDeviceType } from "./nesteddevicetype";
-export var ConsoleServerPortTemplateTypeLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsoleServerPortTemplate = exports.ConsoleServerPortTemplateType = exports.ConsoleServerPortTemplateTypeValueEnum = exports.ConsoleServerPortTemplateTypeLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevicetype_1 = require("./nesteddevicetype");
+var ConsoleServerPortTemplateTypeLabelEnum;
 (function (ConsoleServerPortTemplateTypeLabelEnum) {
     ConsoleServerPortTemplateTypeLabelEnum["De9"] = "DE-9";
     ConsoleServerPortTemplateTypeLabelEnum["Db25"] = "DB-25";
@@ -39,8 +42,8 @@ export var ConsoleServerPortTemplateTypeLabelEnum;
     ConsoleServerPortTemplateTypeLabelEnum["UsbMicroA"] = "USB Micro A";
     ConsoleServerPortTemplateTypeLabelEnum["UsbMicroB"] = "USB Micro B";
     ConsoleServerPortTemplateTypeLabelEnum["Other"] = "Other";
-})(ConsoleServerPortTemplateTypeLabelEnum || (ConsoleServerPortTemplateTypeLabelEnum = {}));
-export var ConsoleServerPortTemplateTypeValueEnum;
+})(ConsoleServerPortTemplateTypeLabelEnum = exports.ConsoleServerPortTemplateTypeLabelEnum || (exports.ConsoleServerPortTemplateTypeLabelEnum = {}));
+var ConsoleServerPortTemplateTypeValueEnum;
 (function (ConsoleServerPortTemplateTypeValueEnum) {
     ConsoleServerPortTemplateTypeValueEnum["De9"] = "de-9";
     ConsoleServerPortTemplateTypeValueEnum["Db25"] = "db-25";
@@ -55,44 +58,44 @@ export var ConsoleServerPortTemplateTypeValueEnum;
     ConsoleServerPortTemplateTypeValueEnum["UsbMicroA"] = "usb-micro-a";
     ConsoleServerPortTemplateTypeValueEnum["UsbMicroB"] = "usb-micro-b";
     ConsoleServerPortTemplateTypeValueEnum["Other"] = "other";
-})(ConsoleServerPortTemplateTypeValueEnum || (ConsoleServerPortTemplateTypeValueEnum = {}));
+})(ConsoleServerPortTemplateTypeValueEnum = exports.ConsoleServerPortTemplateTypeValueEnum || (exports.ConsoleServerPortTemplateTypeValueEnum = {}));
 var ConsoleServerPortTemplateType = /** @class */ (function (_super) {
     __extends(ConsoleServerPortTemplateType, _super);
     function ConsoleServerPortTemplateType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ConsoleServerPortTemplateType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ConsoleServerPortTemplateType.prototype, "value", void 0);
     return ConsoleServerPortTemplateType;
-}(SpeakeasyBase));
-export { ConsoleServerPortTemplateType };
+}(utils_1.SpeakeasyBase));
+exports.ConsoleServerPortTemplateType = ConsoleServerPortTemplateType;
 var ConsoleServerPortTemplate = /** @class */ (function (_super) {
     __extends(ConsoleServerPortTemplate, _super);
     function ConsoleServerPortTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], ConsoleServerPortTemplate.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ConsoleServerPortTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConsoleServerPortTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", ConsoleServerPortTemplateType)
     ], ConsoleServerPortTemplate.prototype, "type", void 0);
     return ConsoleServerPortTemplate;
-}(SpeakeasyBase));
-export { ConsoleServerPortTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ConsoleServerPortTemplate = ConsoleServerPortTemplate;

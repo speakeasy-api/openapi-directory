@@ -19,31 +19,31 @@ export class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
   chasisNo?: string;
 
   @SpeakeasyMetadata()
-  class?: Map<string, any>;
+  class?: Record<string, any>;
 
   @SpeakeasyMetadata()
   color?: string;
 
   @SpeakeasyMetadata()
-  cubicCapacity?: Map<string, any>;
+  cubicCapacity?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  cylinder?: Map<string, any>;
+  cylinder?: Record<string, any>;
 
   @SpeakeasyMetadata()
   engineNo?: string;
 
   @SpeakeasyMetadata()
-  fitTill?: Map<string, any>;
+  fitTill?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  fuelDesc?: Map<string, any>;
+  fuelDesc?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  make?: Map<string, any>;
+  make?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  mfgDate?: Map<string, any>;
+  mfgDate?: Record<string, any>;
 
   @SpeakeasyMetadata()
   model?: string;
@@ -55,13 +55,13 @@ export class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
   sleeperCapacity?: string;
 
   @SpeakeasyMetadata()
-  standingCapacity?: Map<string, any>;
+  standingCapacity?: Record<string, any>;
 
   @SpeakeasyMetadata()
   unladenWeight?: string;
 
   @SpeakeasyMetadata()
-  wheelbase?: Map<string, any>;
+  wheelbase?: Record<string, any>;
 }
 
 

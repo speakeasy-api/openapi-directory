@@ -1,6 +1,9 @@
-export var ActionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionTypeEnum = void 0;
+var ActionTypeEnum;
 (function (ActionTypeEnum) {
     ActionTypeEnum["InstanceRefresh"] = "InstanceRefresh";
     ActionTypeEnum["PlatformUpdate"] = "PlatformUpdate";
     ActionTypeEnum["Unknown"] = "Unknown";
-})(ActionTypeEnum || (ActionTypeEnum = {}));
+})(ActionTypeEnum = exports.ActionTypeEnum || (exports.ActionTypeEnum = {}));

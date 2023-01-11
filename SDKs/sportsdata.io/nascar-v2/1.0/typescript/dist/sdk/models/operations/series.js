@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SeriesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SeriesResponse = exports.SeriesRequest = exports.SeriesPathParams = exports.SeriesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SeriesFormatEnum;
 (function (SeriesFormatEnum) {
     SeriesFormatEnum["Xml"] = "xml";
     SeriesFormatEnum["Json"] = "json";
-})(SeriesFormatEnum || (SeriesFormatEnum = {}));
+})(SeriesFormatEnum = exports.SeriesFormatEnum || (exports.SeriesFormatEnum = {}));
 var SeriesPathParams = /** @class */ (function (_super) {
     __extends(SeriesPathParams, _super);
     function SeriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], SeriesPathParams.prototype, "format", void 0);
     return SeriesPathParams;
-}(SpeakeasyBase));
-export { SeriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SeriesPathParams = SeriesPathParams;
 var SeriesRequest = /** @class */ (function (_super) {
     __extends(SeriesRequest, _super);
     function SeriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeriesPathParams)
     ], SeriesRequest.prototype, "pathParams", void 0);
     return SeriesRequest;
-}(SpeakeasyBase));
-export { SeriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SeriesRequest = SeriesRequest;
 var SeriesResponse = /** @class */ (function (_super) {
     __extends(SeriesResponse, _super);
     function SeriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SeriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], SeriesResponse.prototype, "series", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SeriesResponse.prototype, "statusCode", void 0);
     return SeriesResponse;
-}(SpeakeasyBase));
-export { SeriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SeriesResponse = SeriesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryPipelineKeyPairResponse = exports.UpdateRepositoryPipelineKeyPairRequest = exports.UpdateRepositoryPipelineKeyPairPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryPipelineKeyPairPathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKeyPairPathParams, _super);
     function UpdateRepositoryPipelineKeyPairPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKeyPairPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKeyPairPathParams.prototype, "workspace", void 0);
     return UpdateRepositoryPipelineKeyPairPathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKeyPairPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKeyPairPathParams = UpdateRepositoryPipelineKeyPairPathParams;
 var UpdateRepositoryPipelineKeyPairRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKeyPairRequest, _super);
     function UpdateRepositoryPipelineKeyPairRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryPipelineKeyPairPathParams)
     ], UpdateRepositoryPipelineKeyPairRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKeyPairRequest.prototype, "request", void 0);
     return UpdateRepositoryPipelineKeyPairRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKeyPairRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKeyPairRequest = UpdateRepositoryPipelineKeyPairRequest;
 var UpdateRepositoryPipelineKeyPairResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKeyPairResponse, _super);
     function UpdateRepositoryPipelineKeyPairResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKeyPairResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryPipelineKeyPairResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKeyPairResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKeyPairResponse.prototype, "pipelineSshKeyPair", void 0);
     return UpdateRepositoryPipelineKeyPairResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKeyPairResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKeyPairResponse = UpdateRepositoryPipelineKeyPairResponse;

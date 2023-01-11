@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Errors } from "./errors";
-import { ShippingSettings } from "./shippingsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingsettingsCustomBatchResponseEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var errors_1 = require("./errors");
+var shippingsettings_1 = require("./shippingsettings");
 // ShippingsettingsCustomBatchResponseEntry
 /**
  * A batch entry encoding a single non-batch shipping settings response.
@@ -35,21 +38,21 @@ var ShippingsettingsCustomBatchResponseEntry = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], ShippingsettingsCustomBatchResponseEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Errors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errors_1.Errors)
     ], ShippingsettingsCustomBatchResponseEntry.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ShippingsettingsCustomBatchResponseEntry.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingSettings" }),
-        __metadata("design:type", ShippingSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingSettings" }),
+        __metadata("design:type", shippingsettings_1.ShippingSettings)
     ], ShippingsettingsCustomBatchResponseEntry.prototype, "shippingSettings", void 0);
     return ShippingsettingsCustomBatchResponseEntry;
-}(SpeakeasyBase));
-export { ShippingsettingsCustomBatchResponseEntry };
+}(utils_1.SpeakeasyBase));
+exports.ShippingsettingsCustomBatchResponseEntry = ShippingsettingsCustomBatchResponseEntry;

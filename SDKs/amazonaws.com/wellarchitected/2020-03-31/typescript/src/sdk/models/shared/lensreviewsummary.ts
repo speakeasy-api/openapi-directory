@@ -21,7 +21,7 @@ export class LensReviewSummary extends SpeakeasyBase {
   lensVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RiskCounts" })
-  riskCounts?: Map<string, number>;
+  riskCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedAt" })
   updatedAt?: Date;

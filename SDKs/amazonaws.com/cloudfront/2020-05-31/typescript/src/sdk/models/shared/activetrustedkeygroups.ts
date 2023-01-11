@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KgKeyPairIds } from "./kgkeypairids";
+import { KgKeyPairIdsList } from "./kgkeypairidslist";
 
 
 
@@ -11,8 +11,8 @@ export class ActiveTrustedKeyGroups extends SpeakeasyBase {
   @SpeakeasyMetadata()
   enabled: boolean;
 
-  @SpeakeasyMetadata({ elemType: KgKeyPairIds })
-  items?: KgKeyPairIds[];
+  @SpeakeasyMetadata({ elemType: KgKeyPairIdsList })
+  items?: KgKeyPairIdsList[];
 
   @SpeakeasyMetadata()
   quantity: number;

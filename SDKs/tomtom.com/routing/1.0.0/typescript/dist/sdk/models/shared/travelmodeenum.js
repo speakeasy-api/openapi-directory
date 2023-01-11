@@ -1,4 +1,7 @@
-export var TravelModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TravelModeEnum = void 0;
+var TravelModeEnum;
 (function (TravelModeEnum) {
     TravelModeEnum["Car"] = "car";
     TravelModeEnum["Truck"] = "truck";
@@ -8,4 +11,4 @@ export var TravelModeEnum;
     TravelModeEnum["Motorcycle"] = "motorcycle";
     TravelModeEnum["Bicycle"] = "bicycle";
     TravelModeEnum["Pedestrian"] = "pedestrian";
-})(TravelModeEnum || (TravelModeEnum = {}));
+})(TravelModeEnum = exports.TravelModeEnum || (exports.TravelModeEnum = {}));

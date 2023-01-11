@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SqlExternalSyncSettingErrorTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlExternalSyncSettingError = exports.SqlExternalSyncSettingErrorTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SqlExternalSyncSettingErrorTypeEnum;
 (function (SqlExternalSyncSettingErrorTypeEnum) {
     SqlExternalSyncSettingErrorTypeEnum["SqlExternalSyncSettingErrorTypeUnspecified"] = "SQL_EXTERNAL_SYNC_SETTING_ERROR_TYPE_UNSPECIFIED";
     SqlExternalSyncSettingErrorTypeEnum["ConnectionFailure"] = "CONNECTION_FAILURE";
@@ -53,7 +56,7 @@ export var SqlExternalSyncSettingErrorTypeEnum;
     SqlExternalSyncSettingErrorTypeEnum["BinlogRetentionSetting"] = "BINLOG_RETENTION_SETTING";
     SqlExternalSyncSettingErrorTypeEnum["UnsupportedStorageEngine"] = "UNSUPPORTED_STORAGE_ENGINE";
     SqlExternalSyncSettingErrorTypeEnum["LimitedSupportTables"] = "LIMITED_SUPPORT_TABLES";
-})(SqlExternalSyncSettingErrorTypeEnum || (SqlExternalSyncSettingErrorTypeEnum = {}));
+})(SqlExternalSyncSettingErrorTypeEnum = exports.SqlExternalSyncSettingErrorTypeEnum || (exports.SqlExternalSyncSettingErrorTypeEnum = {}));
 // SqlExternalSyncSettingError
 /**
  * External primary instance migration setting error/warning.
@@ -64,17 +67,17 @@ var SqlExternalSyncSettingError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], SqlExternalSyncSettingError.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], SqlExternalSyncSettingError.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SqlExternalSyncSettingError.prototype, "type", void 0);
     return SqlExternalSyncSettingError;
-}(SpeakeasyBase));
-export { SqlExternalSyncSettingError };
+}(utils_1.SpeakeasyBase));
+exports.SqlExternalSyncSettingError = SqlExternalSyncSettingError;

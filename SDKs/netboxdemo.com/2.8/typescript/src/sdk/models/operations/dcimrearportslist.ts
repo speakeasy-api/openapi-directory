@@ -191,5 +191,5 @@ export class DcimRearPortsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimRearPortsList200ApplicationJsonObject?: DcimRearPortsList200ApplicationJson;
+  dcimRearPortsList200ApplicationJSONObject?: DcimRearPortsList200ApplicationJson;
 }

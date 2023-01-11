@@ -25,5 +25,5 @@ export class GetNetworkWirelessRfProfileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessRfProfile200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessRfProfile200ApplicationJSONObject?: Record<string, any>;
 }

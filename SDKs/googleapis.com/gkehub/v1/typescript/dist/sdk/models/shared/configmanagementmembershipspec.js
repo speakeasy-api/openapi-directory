@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementConfigSync } from "./configmanagementconfigsync";
-import { ConfigManagementHierarchyControllerConfig } from "./configmanagementhierarchycontrollerconfig";
-import { ConfigManagementPolicyController } from "./configmanagementpolicycontroller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementMembershipSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementconfigsync_1 = require("./configmanagementconfigsync");
+var configmanagementhierarchycontrollerconfig_1 = require("./configmanagementhierarchycontrollerconfig");
+var configmanagementpolicycontroller_1 = require("./configmanagementpolicycontroller");
 // ConfigManagementMembershipSpec
 /**
  * **Anthos Config Management**: Configuration for a single cluster. Intended to parallel the ConfigManagement CR.
@@ -36,21 +39,21 @@ var ConfigManagementMembershipSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configSync" }),
-        __metadata("design:type", ConfigManagementConfigSync)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configSync" }),
+        __metadata("design:type", configmanagementconfigsync_1.ConfigManagementConfigSync)
     ], ConfigManagementMembershipSpec.prototype, "configSync", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hierarchyController" }),
-        __metadata("design:type", ConfigManagementHierarchyControllerConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hierarchyController" }),
+        __metadata("design:type", configmanagementhierarchycontrollerconfig_1.ConfigManagementHierarchyControllerConfig)
     ], ConfigManagementMembershipSpec.prototype, "hierarchyController", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyController" }),
-        __metadata("design:type", ConfigManagementPolicyController)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyController" }),
+        __metadata("design:type", configmanagementpolicycontroller_1.ConfigManagementPolicyController)
     ], ConfigManagementMembershipSpec.prototype, "policyController", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ConfigManagementMembershipSpec.prototype, "version", void 0);
     return ConfigManagementMembershipSpec;
-}(SpeakeasyBase));
-export { ConfigManagementMembershipSpec };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementMembershipSpec = ConfigManagementMembershipSpec;

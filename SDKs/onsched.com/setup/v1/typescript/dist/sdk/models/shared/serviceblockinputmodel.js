@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepeatInputModel } from "./repeatinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceBlockInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var repeatinputmodel_1 = require("./repeatinputmodel");
 var ServiceBlockInputModel = /** @class */ (function (_super) {
     __extends(ServiceBlockInputModel, _super);
     function ServiceBlockInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], ServiceBlockInputModel.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], ServiceBlockInputModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ServiceBlockInputModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ServiceBlockInputModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeat" }),
-        __metadata("design:type", RepeatInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeat" }),
+        __metadata("design:type", repeatinputmodel_1.RepeatInputModel)
     ], ServiceBlockInputModel.prototype, "repeat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Boolean)
     ], ServiceBlockInputModel.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], ServiceBlockInputModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], ServiceBlockInputModel.prototype, "startTime", void 0);
     return ServiceBlockInputModel;
-}(SpeakeasyBase));
-export { ServiceBlockInputModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceBlockInputModel = ServiceBlockInputModel;

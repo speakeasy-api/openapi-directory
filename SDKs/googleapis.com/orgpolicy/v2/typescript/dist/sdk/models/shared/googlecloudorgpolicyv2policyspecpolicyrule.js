@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeExpr } from "./googletypeexpr";
-import { GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues } from "./googlecloudorgpolicyv2policyspecpolicyrulestringvalues";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV2PolicySpecPolicyRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypeexpr_1 = require("./googletypeexpr");
+var googlecloudorgpolicyv2policyspecpolicyrulestringvalues_1 = require("./googlecloudorgpolicyv2policyspecpolicyrulestringvalues");
 // GoogleCloudOrgpolicyV2PolicySpecPolicyRule
 /**
  * A rule used to express this policy.
@@ -35,25 +38,25 @@ var GoogleCloudOrgpolicyV2PolicySpecPolicyRule = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowAll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowAll" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudOrgpolicyV2PolicySpecPolicyRule.prototype, "allowAll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", GoogleTypeExpr)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", googletypeexpr_1.GoogleTypeExpr)
     ], GoogleCloudOrgpolicyV2PolicySpecPolicyRule.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=denyAll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=denyAll" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudOrgpolicyV2PolicySpecPolicyRule.prototype, "denyAll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforce" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudOrgpolicyV2PolicySpecPolicyRule.prototype, "enforce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
+        __metadata("design:type", googlecloudorgpolicyv2policyspecpolicyrulestringvalues_1.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues)
     ], GoogleCloudOrgpolicyV2PolicySpecPolicyRule.prototype, "values", void 0);
     return GoogleCloudOrgpolicyV2PolicySpecPolicyRule;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2PolicySpecPolicyRule };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2PolicySpecPolicyRule = GoogleCloudOrgpolicyV2PolicySpecPolicyRule;

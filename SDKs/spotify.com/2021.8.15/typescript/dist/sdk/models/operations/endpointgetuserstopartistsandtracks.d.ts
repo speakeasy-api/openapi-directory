@@ -36,5 +36,5 @@ export declare class EndpointGetUsersTopArtistsAndTracksResponse extends Speakea
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetUsersTopArtistsAndTracks200ApplicationJsonObject?: EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
+    endpointGetUsersTopArtistsAndTracks200ApplicationJSONObject?: EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
 }

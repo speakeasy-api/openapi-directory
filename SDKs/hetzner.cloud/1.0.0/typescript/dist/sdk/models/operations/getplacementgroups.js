@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPlacementGroupsSortEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlacementGroupsResponse = exports.GetPlacementGroupsRequest = exports.GetPlacementGroupsPlacementGroupsResponse = exports.GetPlacementGroupsPlacementGroupsResponsePlacementGroup = exports.GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum = exports.GetPlacementGroupsPlacementGroupsResponseMeta = exports.GetPlacementGroupsPlacementGroupsResponseMetaPagination = exports.GetPlacementGroupsQueryParams = exports.GetPlacementGroupsTypeParameterTypeEnum = exports.GetPlacementGroupsSortEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPlacementGroupsSortEnum;
 (function (GetPlacementGroupsSortEnum) {
     GetPlacementGroupsSortEnum["Id"] = "id";
     GetPlacementGroupsSortEnum["IdAsc"] = "id:asc";
@@ -34,160 +37,160 @@ export var GetPlacementGroupsSortEnum;
     GetPlacementGroupsSortEnum["Created"] = "created";
     GetPlacementGroupsSortEnum["CreatedAsc"] = "created:asc";
     GetPlacementGroupsSortEnum["CreatedDesc"] = "created:desc";
-})(GetPlacementGroupsSortEnum || (GetPlacementGroupsSortEnum = {}));
-export var GetPlacementGroupsTypeParameterTypeEnum;
+})(GetPlacementGroupsSortEnum = exports.GetPlacementGroupsSortEnum || (exports.GetPlacementGroupsSortEnum = {}));
+var GetPlacementGroupsTypeParameterTypeEnum;
 (function (GetPlacementGroupsTypeParameterTypeEnum) {
     GetPlacementGroupsTypeParameterTypeEnum["Spread"] = "spread";
-})(GetPlacementGroupsTypeParameterTypeEnum || (GetPlacementGroupsTypeParameterTypeEnum = {}));
+})(GetPlacementGroupsTypeParameterTypeEnum = exports.GetPlacementGroupsTypeParameterTypeEnum || (exports.GetPlacementGroupsTypeParameterTypeEnum = {}));
 var GetPlacementGroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsQueryParams, _super);
     function GetPlacementGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=label_selector" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsQueryParams.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsQueryParams.prototype, "type", void 0);
     return GetPlacementGroupsQueryParams;
-}(SpeakeasyBase));
-export { GetPlacementGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsQueryParams = GetPlacementGroupsQueryParams;
 var GetPlacementGroupsPlacementGroupsResponseMetaPagination = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsPlacementGroupsResponseMetaPagination, _super);
     function GetPlacementGroupsPlacementGroupsResponseMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponseMetaPagination.prototype, "totalEntries", void 0);
     return GetPlacementGroupsPlacementGroupsResponseMetaPagination;
-}(SpeakeasyBase));
-export { GetPlacementGroupsPlacementGroupsResponseMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsPlacementGroupsResponseMetaPagination = GetPlacementGroupsPlacementGroupsResponseMetaPagination;
 var GetPlacementGroupsPlacementGroupsResponseMeta = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsPlacementGroupsResponseMeta, _super);
     function GetPlacementGroupsPlacementGroupsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetPlacementGroupsPlacementGroupsResponseMetaPagination)
     ], GetPlacementGroupsPlacementGroupsResponseMeta.prototype, "pagination", void 0);
     return GetPlacementGroupsPlacementGroupsResponseMeta;
-}(SpeakeasyBase));
-export { GetPlacementGroupsPlacementGroupsResponseMeta };
-export var GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsPlacementGroupsResponseMeta = GetPlacementGroupsPlacementGroupsResponseMeta;
+var GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum;
 (function (GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum) {
     GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum["Spread"] = "spread";
-})(GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum || (GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum = {}));
+})(GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum = exports.GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum || (exports.GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum = {}));
 var GetPlacementGroupsPlacementGroupsResponsePlacementGroup = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsPlacementGroupsResponsePlacementGroup, _super);
     function GetPlacementGroupsPlacementGroupsResponsePlacementGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Array)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetPlacementGroupsPlacementGroupsResponsePlacementGroup.prototype, "type", void 0);
     return GetPlacementGroupsPlacementGroupsResponsePlacementGroup;
-}(SpeakeasyBase));
-export { GetPlacementGroupsPlacementGroupsResponsePlacementGroup };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsPlacementGroupsResponsePlacementGroup = GetPlacementGroupsPlacementGroupsResponsePlacementGroup;
 var GetPlacementGroupsPlacementGroupsResponse = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsPlacementGroupsResponse, _super);
     function GetPlacementGroupsPlacementGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetPlacementGroupsPlacementGroupsResponseMeta)
     ], GetPlacementGroupsPlacementGroupsResponse.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placement_groups", elemType: GetPlacementGroupsPlacementGroupsResponsePlacementGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placement_groups", elemType: GetPlacementGroupsPlacementGroupsResponsePlacementGroup }),
         __metadata("design:type", Array)
     ], GetPlacementGroupsPlacementGroupsResponse.prototype, "placementGroups", void 0);
     return GetPlacementGroupsPlacementGroupsResponse;
-}(SpeakeasyBase));
-export { GetPlacementGroupsPlacementGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsPlacementGroupsResponse = GetPlacementGroupsPlacementGroupsResponse;
 var GetPlacementGroupsRequest = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsRequest, _super);
     function GetPlacementGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlacementGroupsQueryParams)
     ], GetPlacementGroupsRequest.prototype, "queryParams", void 0);
     return GetPlacementGroupsRequest;
-}(SpeakeasyBase));
-export { GetPlacementGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsRequest = GetPlacementGroupsRequest;
 var GetPlacementGroupsResponse = /** @class */ (function (_super) {
     __extends(GetPlacementGroupsResponse, _super);
     function GetPlacementGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPlacementGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlacementGroupsPlacementGroupsResponse)
     ], GetPlacementGroupsResponse.prototype, "placementGroupsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPlacementGroupsResponse.prototype, "statusCode", void 0);
     return GetPlacementGroupsResponse;
-}(SpeakeasyBase));
-export { GetPlacementGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlacementGroupsResponse = GetPlacementGroupsResponse;

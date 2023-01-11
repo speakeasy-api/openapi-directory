@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailureInfo } from "./failureinfo";
-import { ImportDataSource } from "./importdatasource";
-import { ImportDestination } from "./importdestination";
-import { JobStatusEnum } from "./jobstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImportJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var failureinfo_1 = require("./failureinfo");
+var importdatasource_1 = require("./importdatasource");
+var importdestination_1 = require("./importdestination");
+var jobstatusenum_1 = require("./jobstatusenum");
 // GetImportJobResponse
 /**
  * An HTTP 200 response if the request succeeds, or an error message if the request fails.
@@ -37,41 +40,41 @@ var GetImportJobResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedTimestamp" }),
         __metadata("design:type", Date)
     ], GetImportJobResponse.prototype, "completedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTimestamp" }),
         __metadata("design:type", Date)
     ], GetImportJobResponse.prototype, "createdTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailedRecordsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailedRecordsCount" }),
         __metadata("design:type", Number)
     ], GetImportJobResponse.prototype, "failedRecordsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureInfo" }),
-        __metadata("design:type", FailureInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureInfo" }),
+        __metadata("design:type", failureinfo_1.FailureInfo)
     ], GetImportJobResponse.prototype, "failureInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportDataSource" }),
-        __metadata("design:type", ImportDataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportDataSource" }),
+        __metadata("design:type", importdatasource_1.ImportDataSource)
     ], GetImportJobResponse.prototype, "importDataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportDestination" }),
-        __metadata("design:type", ImportDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportDestination" }),
+        __metadata("design:type", importdestination_1.ImportDestination)
     ], GetImportJobResponse.prototype, "importDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobId" }),
         __metadata("design:type", String)
     ], GetImportJobResponse.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobStatus" }),
         __metadata("design:type", String)
     ], GetImportJobResponse.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProcessedRecordsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProcessedRecordsCount" }),
         __metadata("design:type", Number)
     ], GetImportJobResponse.prototype, "processedRecordsCount", void 0);
     return GetImportJobResponse;
-}(SpeakeasyBase));
-export { GetImportJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImportJobResponse = GetImportJobResponse;

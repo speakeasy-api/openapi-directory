@@ -44,5 +44,5 @@ export declare class GetUsersRequest extends SpeakeasyBase {
 export declare class GetUsersResponseOutput extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getUsers200ApplicationJsonObject?: GetUsers200ApplicationJsonOutput;
+    getUsers200ApplicationJSONObject?: GetUsers200ApplicationJsonOutput;
 }

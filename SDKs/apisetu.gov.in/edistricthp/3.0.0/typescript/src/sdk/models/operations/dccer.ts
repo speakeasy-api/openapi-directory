@@ -185,23 +185,23 @@ export class DccerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dccer400ApplicationJsonObject?: Dccer400ApplicationJson;
+  dccer400ApplicationJSONObject?: Dccer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer401ApplicationJsonObject?: Dccer401ApplicationJson;
+  dccer401ApplicationJSONObject?: Dccer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer404ApplicationJsonObject?: Dccer404ApplicationJson;
+  dccer404ApplicationJSONObject?: Dccer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer500ApplicationJsonObject?: Dccer500ApplicationJson;
+  dccer500ApplicationJSONObject?: Dccer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer502ApplicationJsonObject?: Dccer502ApplicationJson;
+  dccer502ApplicationJSONObject?: Dccer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer503ApplicationJsonObject?: Dccer503ApplicationJson;
+  dccer503ApplicationJSONObject?: Dccer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dccer504ApplicationJsonObject?: Dccer504ApplicationJson;
+  dccer504ApplicationJSONObject?: Dccer504ApplicationJson;
 }

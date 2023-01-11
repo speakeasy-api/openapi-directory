@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactDetail } from "./contactdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDomainContactRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactdetail_1 = require("./contactdetail");
 // UpdateDomainContactRequest
 /**
  * The UpdateDomainContact request includes the following elements.
@@ -34,21 +37,21 @@ var UpdateDomainContactRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdminContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdminContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], UpdateDomainContactRequest.prototype, "adminContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
         __metadata("design:type", String)
     ], UpdateDomainContactRequest.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrantContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrantContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], UpdateDomainContactRequest.prototype, "registrantContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TechContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TechContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], UpdateDomainContactRequest.prototype, "techContact", void 0);
     return UpdateDomainContactRequest;
-}(SpeakeasyBase));
-export { UpdateDomainContactRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDomainContactRequest = UpdateDomainContactRequest;

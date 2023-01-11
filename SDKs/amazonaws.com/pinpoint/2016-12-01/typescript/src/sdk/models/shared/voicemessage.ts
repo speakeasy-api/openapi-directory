@@ -17,7 +17,7 @@ export class VoiceMessage extends SpeakeasyBase {
   originationNumber?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=VoiceId" })
   voiceId?: string;

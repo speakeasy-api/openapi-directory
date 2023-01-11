@@ -20,7 +20,7 @@ export declare class GetMlTaskRunRequest extends SpeakeasyBase {
 export declare class GetMlTaskRunResponse extends SpeakeasyBase {
     contentType: string;
     entityNotFoundException?: any;
-    getMlTaskRunResponse?: shared.GetMlTaskRunResponse;
+    getMLTaskRunResponse?: shared.GetMlTaskRunResponse;
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;

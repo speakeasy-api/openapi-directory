@@ -11,7 +11,7 @@ export declare enum InsuranceNetworkStateEnum {
 **/
 export declare class InsuranceNetwork extends SpeakeasyBase {
     networkId?: string;
-    networkNames?: Map<string, string>;
-    payerNames?: Map<string, string>;
+    networkNames?: Record<string, string>;
+    payerNames?: Record<string, string>;
     state?: InsuranceNetworkStateEnum;
 }

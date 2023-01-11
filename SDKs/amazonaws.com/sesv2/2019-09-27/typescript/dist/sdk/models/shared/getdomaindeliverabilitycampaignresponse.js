@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainDeliverabilityCampaign } from "./domaindeliverabilitycampaign";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainDeliverabilityCampaignResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domaindeliverabilitycampaign_1 = require("./domaindeliverabilitycampaign");
 // GetDomainDeliverabilityCampaignResponse
 /**
  * An object that contains all the deliverability data for a specific campaign. This data is available for a campaign only if the campaign sent email by using a domain that the Deliverability dashboard is enabled for.
@@ -34,9 +37,9 @@ var GetDomainDeliverabilityCampaignResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainDeliverabilityCampaign" }),
-        __metadata("design:type", DomainDeliverabilityCampaign)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainDeliverabilityCampaign" }),
+        __metadata("design:type", domaindeliverabilitycampaign_1.DomainDeliverabilityCampaign)
     ], GetDomainDeliverabilityCampaignResponse.prototype, "domainDeliverabilityCampaign", void 0);
     return GetDomainDeliverabilityCampaignResponse;
-}(SpeakeasyBase));
-export { GetDomainDeliverabilityCampaignResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDeliverabilityCampaignResponse = GetDomainDeliverabilityCampaignResponse;

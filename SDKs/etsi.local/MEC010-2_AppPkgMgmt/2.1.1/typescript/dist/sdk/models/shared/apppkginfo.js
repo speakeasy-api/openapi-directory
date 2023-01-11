@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppPkgInfoLinks } from "./apppkginfolinks";
-import { Checksum } from "./checksum";
-import { OnboardingStateEnum } from "./onboardingstateenum";
-import { AppPkgOperationalStateEnum } from "./apppkgoperationalstateenum";
-import { UsageStateEnum } from "./usagestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var apppkginfolinks_1 = require("./apppkginfolinks");
+var checksum_1 = require("./checksum");
+var onboardingstateenum_1 = require("./onboardingstateenum");
+var apppkgoperationalstateenum_1 = require("./apppkgoperationalstateenum");
+var usagestateenum_1 = require("./usagestateenum");
 // AppPkgInfo
 /**
  * 'The data type AppPkgInfo represents the parameters for an application package resource'
@@ -38,61 +41,61 @@ var AppPkgInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", AppPkgInfoLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", apppkginfolinks_1.AppPkgInfoLinks)
     ], AppPkgInfo.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalArtifacts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalArtifacts" }),
         __metadata("design:type", Object)
     ], AppPkgInfo.prototype, "additionalArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appDId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appDId" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "appDId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appDVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appDVersion" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "appDVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appName" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "appName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appProvider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appProvider" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "appProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appSoftwareVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appSoftwareVersion" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "appSoftwareVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checksum" }),
-        __metadata("design:type", Checksum)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checksum" }),
+        __metadata("design:type", checksum_1.Checksum)
     ], AppPkgInfo.prototype, "checksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onboardingState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onboardingState" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "onboardingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationalState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationalState" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "operationalState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareImages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareImages" }),
         __metadata("design:type", Object)
     ], AppPkgInfo.prototype, "softwareImages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageState" }),
         __metadata("design:type", String)
     ], AppPkgInfo.prototype, "usageState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userDefinedData" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userDefinedData" }),
+        __metadata("design:type", Object)
     ], AppPkgInfo.prototype, "userDefinedData", void 0);
     return AppPkgInfo;
-}(SpeakeasyBase));
-export { AppPkgInfo };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgInfo = AppPkgInfo;

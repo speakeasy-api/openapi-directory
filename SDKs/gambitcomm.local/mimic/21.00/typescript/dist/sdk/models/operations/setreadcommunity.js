@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetReadCommunityResponse = exports.SetReadCommunityRequest = exports.SetReadCommunityPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetReadCommunityPathParams = /** @class */ (function (_super) {
     __extends(SetReadCommunityPathParams, _super);
     function SetReadCommunityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetReadCommunityPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=read" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=read" }),
         __metadata("design:type", String)
     ], SetReadCommunityPathParams.prototype, "read", void 0);
     return SetReadCommunityPathParams;
-}(SpeakeasyBase));
-export { SetReadCommunityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetReadCommunityPathParams = SetReadCommunityPathParams;
 var SetReadCommunityRequest = /** @class */ (function (_super) {
     __extends(SetReadCommunityRequest, _super);
     function SetReadCommunityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetReadCommunityPathParams)
     ], SetReadCommunityRequest.prototype, "pathParams", void 0);
     return SetReadCommunityRequest;
-}(SpeakeasyBase));
-export { SetReadCommunityRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetReadCommunityRequest = SetReadCommunityRequest;
 var SetReadCommunityResponse = /** @class */ (function (_super) {
     __extends(SetReadCommunityResponse, _super);
     function SetReadCommunityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetReadCommunityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetReadCommunityResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetReadCommunityResponse.prototype, "setReadCommunity200ApplicationJsonString", void 0);
+    ], SetReadCommunityResponse.prototype, "setReadCommunity200ApplicationJSONString", void 0);
     return SetReadCommunityResponse;
-}(SpeakeasyBase));
-export { SetReadCommunityResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetReadCommunityResponse = SetReadCommunityResponse;

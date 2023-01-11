@@ -1,5 +1,8 @@
-export var SchedulingStrategyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchedulingStrategyEnum = void 0;
+var SchedulingStrategyEnum;
 (function (SchedulingStrategyEnum) {
     SchedulingStrategyEnum["Replica"] = "REPLICA";
     SchedulingStrategyEnum["Daemon"] = "DAEMON";
-})(SchedulingStrategyEnum || (SchedulingStrategyEnum = {}));
+})(SchedulingStrategyEnum = exports.SchedulingStrategyEnum || (exports.SchedulingStrategyEnum = {}));

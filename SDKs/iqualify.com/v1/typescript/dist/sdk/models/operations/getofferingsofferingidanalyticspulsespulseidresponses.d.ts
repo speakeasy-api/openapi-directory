@@ -9,7 +9,7 @@ export declare class GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesReques
 }
 export declare class GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     pulseResponses?: shared.PulseResponse[];
     statusCode: number;
 }

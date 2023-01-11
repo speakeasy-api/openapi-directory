@@ -1,6 +1,40 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpotDatafeedSubscription } from "./spotdatafeedsubscription";
 
+
+
+// CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault
+/** 
+ * The fault codes for the Spot Instance request, if any.
+**/
+export class CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
+
+
+// CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription
+/** 
+ * The Spot Instance data feed subscription.
+**/
+export class CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  bucket?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  fault?: CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault;
+
+  @SpeakeasyMetadata()
+  ownerId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  prefix?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  state?: Record<string, any>;
+}
 
 
 // CreateSpotDatafeedSubscriptionResult
@@ -9,5 +43,5 @@ import { SpotDatafeedSubscription } from "./spotdatafeedsubscription";
 **/
 export class CreateSpotDatafeedSubscriptionResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  spotDatafeedSubscription?: SpotDatafeedSubscription;
+  spotDatafeedSubscription?: CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription;
 }

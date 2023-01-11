@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// ProjectCardSimpleUser
+/** 
+ * Simple User
+**/
 export class ProjectCardSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

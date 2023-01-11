@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListPoliciesGrantingServiceAccessEntry } from "./listpoliciesgrantingserviceaccessentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPoliciesGrantingServiceAccessResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var listpoliciesgrantingserviceaccessentry_1 = require("./listpoliciesgrantingserviceaccessentry");
 var ListPoliciesGrantingServiceAccessResponse = /** @class */ (function (_super) {
     __extends(ListPoliciesGrantingServiceAccessResponse, _super);
     function ListPoliciesGrantingServiceAccessResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ListPoliciesGrantingServiceAccessResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListPoliciesGrantingServiceAccessResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ListPoliciesGrantingServiceAccessEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: listpoliciesgrantingserviceaccessentry_1.ListPoliciesGrantingServiceAccessEntry }),
         __metadata("design:type", Array)
     ], ListPoliciesGrantingServiceAccessResponse.prototype, "policiesGrantingServiceAccess", void 0);
     return ListPoliciesGrantingServiceAccessResponse;
-}(SpeakeasyBase));
-export { ListPoliciesGrantingServiceAccessResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPoliciesGrantingServiceAccessResponse = ListPoliciesGrantingServiceAccessResponse;

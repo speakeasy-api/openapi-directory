@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Team } from "./team";
-import { SimpleUser } from "./simpleuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtectedBranchPullRequestReview = exports.ProtectedBranchPullRequestReviewDismissalRestrictions = void 0;
+var utils_1 = require("../../../internal/utils");
+var team_1 = require("./team");
+var simpleuser_1 = require("./simpleuser");
 var ProtectedBranchPullRequestReviewDismissalRestrictions = /** @class */ (function (_super) {
     __extends(ProtectedBranchPullRequestReviewDismissalRestrictions, _super);
     function ProtectedBranchPullRequestReviewDismissalRestrictions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teams", elemType: Team }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teams", elemType: team_1.Team }),
         __metadata("design:type", Array)
     ], ProtectedBranchPullRequestReviewDismissalRestrictions.prototype, "teams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teams_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teams_url" }),
         __metadata("design:type", String)
     ], ProtectedBranchPullRequestReviewDismissalRestrictions.prototype, "teamsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ProtectedBranchPullRequestReviewDismissalRestrictions.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users", elemType: SimpleUser }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users", elemType: simpleuser_1.SimpleUser }),
         __metadata("design:type", Array)
     ], ProtectedBranchPullRequestReviewDismissalRestrictions.prototype, "users", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users_url" }),
         __metadata("design:type", String)
     ], ProtectedBranchPullRequestReviewDismissalRestrictions.prototype, "usersUrl", void 0);
     return ProtectedBranchPullRequestReviewDismissalRestrictions;
-}(SpeakeasyBase));
-export { ProtectedBranchPullRequestReviewDismissalRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.ProtectedBranchPullRequestReviewDismissalRestrictions = ProtectedBranchPullRequestReviewDismissalRestrictions;
 // ProtectedBranchPullRequestReview
 /**
  * Protected Branch Pull Request Review
@@ -63,25 +66,25 @@ var ProtectedBranchPullRequestReview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismiss_stale_reviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismiss_stale_reviews" }),
         __metadata("design:type", Boolean)
     ], ProtectedBranchPullRequestReview.prototype, "dismissStaleReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismissal_restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismissal_restrictions" }),
         __metadata("design:type", ProtectedBranchPullRequestReviewDismissalRestrictions)
     ], ProtectedBranchPullRequestReview.prototype, "dismissalRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_code_owner_reviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_code_owner_reviews" }),
         __metadata("design:type", Boolean)
     ], ProtectedBranchPullRequestReview.prototype, "requireCodeOwnerReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_approving_review_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_approving_review_count" }),
         __metadata("design:type", Number)
     ], ProtectedBranchPullRequestReview.prototype, "requiredApprovingReviewCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ProtectedBranchPullRequestReview.prototype, "url", void 0);
     return ProtectedBranchPullRequestReview;
-}(SpeakeasyBase));
-export { ProtectedBranchPullRequestReview };
+}(utils_1.SpeakeasyBase));
+exports.ProtectedBranchPullRequestReview = ProtectedBranchPullRequestReview;

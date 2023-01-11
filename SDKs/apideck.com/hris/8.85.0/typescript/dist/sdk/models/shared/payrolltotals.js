@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayrollTotals = void 0;
+var utils_1 = require("../../../internal/utils");
 var PayrollTotals = /** @class */ (function (_super) {
     __extends(PayrollTotals, _super);
     function PayrollTotals() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=check_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=check_amount" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "checkAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_debit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_debit" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "companyDebit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_benefit_deductions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_benefit_deductions" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "employeeBenefitDeductions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_taxes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_taxes" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "employeeTaxes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employer_benefit_contributions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employer_benefit_contributions" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "employerBenefitContributions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employer_taxes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employer_taxes" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "employerTaxes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gross_pay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gross_pay" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "grossPay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net_pay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net_pay" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "netPay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tax_debit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tax_debit" }),
         __metadata("design:type", Number)
     ], PayrollTotals.prototype, "taxDebit", void 0);
     return PayrollTotals;
-}(SpeakeasyBase));
-export { PayrollTotals };
+}(utils_1.SpeakeasyBase));
+exports.PayrollTotals = PayrollTotals;

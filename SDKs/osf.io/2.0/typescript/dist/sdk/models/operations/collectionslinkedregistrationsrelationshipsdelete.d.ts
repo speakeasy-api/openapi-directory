@@ -4,7 +4,7 @@ export declare class CollectionsLinkedRegistrationsRelationshipsDeletePathParams
 }
 export declare class CollectionsLinkedRegistrationsRelationshipsDeleteRequest extends SpeakeasyBase {
     pathParams: CollectionsLinkedRegistrationsRelationshipsDeletePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CollectionsLinkedRegistrationsRelationshipsDeleteResponse extends SpeakeasyBase {
     contentType: string;

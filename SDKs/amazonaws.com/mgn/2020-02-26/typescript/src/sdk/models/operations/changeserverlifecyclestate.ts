@@ -42,7 +42,7 @@ export class ChangeServerLifeCycleStateRequestBody extends SpeakeasyBase {
   lifeCycle: ChangeServerLifeCycleStateRequestBodyLifeCycle;
 
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

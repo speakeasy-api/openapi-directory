@@ -32,7 +32,7 @@ export class OrgsListBlockedUsersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  orgsListBlockedUsers415ApplicationJsonObject?: OrgsListBlockedUsers415ApplicationJson;
+  orgsListBlockedUsers415ApplicationJSONObject?: OrgsListBlockedUsers415ApplicationJson;
 
   @SpeakeasyMetadata({ elemType: shared.SimpleUser })
   simpleUsers?: shared.SimpleUser[];

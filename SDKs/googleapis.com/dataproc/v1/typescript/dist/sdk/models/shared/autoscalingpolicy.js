@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasicAutoscalingAlgorithm } from "./basicautoscalingalgorithm";
-import { InstanceGroupAutoscalingPolicyConfig } from "./instancegroupautoscalingpolicyconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoscalingPolicyInput = exports.AutoscalingPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var basicautoscalingalgorithm_1 = require("./basicautoscalingalgorithm");
+var instancegroupautoscalingpolicyconfig_1 = require("./instancegroupautoscalingpolicyconfig");
 // AutoscalingPolicy
 /**
  * Describes an autoscaling policy for Dataproc cluster autoscaler.
@@ -35,32 +38,32 @@ var AutoscalingPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAlgorithm" }),
-        __metadata("design:type", BasicAutoscalingAlgorithm)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAlgorithm" }),
+        __metadata("design:type", basicautoscalingalgorithm_1.BasicAutoscalingAlgorithm)
     ], AutoscalingPolicy.prototype, "basicAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AutoscalingPolicy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AutoscalingPolicy.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AutoscalingPolicy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryWorkerConfig" }),
-        __metadata("design:type", InstanceGroupAutoscalingPolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryWorkerConfig" }),
+        __metadata("design:type", instancegroupautoscalingpolicyconfig_1.InstanceGroupAutoscalingPolicyConfig)
     ], AutoscalingPolicy.prototype, "secondaryWorkerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerConfig" }),
-        __metadata("design:type", InstanceGroupAutoscalingPolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerConfig" }),
+        __metadata("design:type", instancegroupautoscalingpolicyconfig_1.InstanceGroupAutoscalingPolicyConfig)
     ], AutoscalingPolicy.prototype, "workerConfig", void 0);
     return AutoscalingPolicy;
-}(SpeakeasyBase));
-export { AutoscalingPolicy };
+}(utils_1.SpeakeasyBase));
+exports.AutoscalingPolicy = AutoscalingPolicy;
 // AutoscalingPolicyInput
 /**
  * Describes an autoscaling policy for Dataproc cluster autoscaler.
@@ -71,25 +74,25 @@ var AutoscalingPolicyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAlgorithm" }),
-        __metadata("design:type", BasicAutoscalingAlgorithm)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAlgorithm" }),
+        __metadata("design:type", basicautoscalingalgorithm_1.BasicAutoscalingAlgorithm)
     ], AutoscalingPolicyInput.prototype, "basicAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AutoscalingPolicyInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AutoscalingPolicyInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryWorkerConfig" }),
-        __metadata("design:type", InstanceGroupAutoscalingPolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryWorkerConfig" }),
+        __metadata("design:type", instancegroupautoscalingpolicyconfig_1.InstanceGroupAutoscalingPolicyConfig)
     ], AutoscalingPolicyInput.prototype, "secondaryWorkerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerConfig" }),
-        __metadata("design:type", InstanceGroupAutoscalingPolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerConfig" }),
+        __metadata("design:type", instancegroupautoscalingpolicyconfig_1.InstanceGroupAutoscalingPolicyConfig)
     ], AutoscalingPolicyInput.prototype, "workerConfig", void 0);
     return AutoscalingPolicyInput;
-}(SpeakeasyBase));
-export { AutoscalingPolicyInput };
+}(utils_1.SpeakeasyBase));
+exports.AutoscalingPolicyInput = AutoscalingPolicyInput;

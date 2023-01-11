@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetSetConfigResponse = exports.ProtocolTelnetSetConfigRequest = exports.ProtocolTelnetSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetConfigPathParams, _super);
     function ProtocolTelnetSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolTelnetSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolTelnetSetConfigPathParams.prototype, "value", void 0);
     return ProtocolTelnetSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetConfigPathParams = ProtocolTelnetSetConfigPathParams;
 var ProtocolTelnetSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetConfigRequest, _super);
     function ProtocolTelnetSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetSetConfigPathParams)
     ], ProtocolTelnetSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetConfigRequest = ProtocolTelnetSetConfigRequest;
 var ProtocolTelnetSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetConfigResponse, _super);
     function ProtocolTelnetSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTelnetSetConfigResponse.prototype, "protocolTelnetSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolTelnetSetConfigResponse.prototype, "protocolTelnetSetConfig200ApplicationJSONString", void 0);
     return ProtocolTelnetSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetConfigResponse = ProtocolTelnetSetConfigResponse;

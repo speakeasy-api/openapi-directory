@@ -105,11 +105,11 @@ export declare class BpcrdRequest extends SpeakeasyBase {
 export declare class BpcrdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bpcrd400ApplicationJsonObject?: Bpcrd400ApplicationJson;
-    bpcrd401ApplicationJsonObject?: Bpcrd401ApplicationJson;
-    bpcrd404ApplicationJsonObject?: Bpcrd404ApplicationJson;
-    bpcrd500ApplicationJsonObject?: Bpcrd500ApplicationJson;
-    bpcrd502ApplicationJsonObject?: Bpcrd502ApplicationJson;
-    bpcrd503ApplicationJsonObject?: Bpcrd503ApplicationJson;
-    bpcrd504ApplicationJsonObject?: Bpcrd504ApplicationJson;
+    bpcrd400ApplicationJSONObject?: Bpcrd400ApplicationJson;
+    bpcrd401ApplicationJSONObject?: Bpcrd401ApplicationJson;
+    bpcrd404ApplicationJSONObject?: Bpcrd404ApplicationJson;
+    bpcrd500ApplicationJSONObject?: Bpcrd500ApplicationJson;
+    bpcrd502ApplicationJSONObject?: Bpcrd502ApplicationJson;
+    bpcrd503ApplicationJSONObject?: Bpcrd503ApplicationJson;
+    bpcrd504ApplicationJSONObject?: Bpcrd504ApplicationJson;
 }

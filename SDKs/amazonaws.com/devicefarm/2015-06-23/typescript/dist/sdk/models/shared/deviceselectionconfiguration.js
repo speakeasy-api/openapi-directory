@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceFilter } from "./devicefilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceSelectionConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicefilter_1 = require("./devicefilter");
 // DeviceSelectionConfiguration
 /**
  * Represents the device filters used in a test run and the maximum number of devices to be included in the run. It is passed in as the <code>deviceSelectionConfiguration</code> request parameter in <a>ScheduleRun</a>.
@@ -34,13 +37,13 @@ var DeviceSelectionConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: DeviceFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: devicefilter_1.DeviceFilter }),
         __metadata("design:type", Array)
     ], DeviceSelectionConfiguration.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDevices" }),
         __metadata("design:type", Number)
     ], DeviceSelectionConfiguration.prototype, "maxDevices", void 0);
     return DeviceSelectionConfiguration;
-}(SpeakeasyBase));
-export { DeviceSelectionConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DeviceSelectionConfiguration = DeviceSelectionConfiguration;

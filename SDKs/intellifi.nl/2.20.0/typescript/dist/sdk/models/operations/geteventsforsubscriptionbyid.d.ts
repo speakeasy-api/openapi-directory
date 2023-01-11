@@ -43,5 +43,5 @@ export declare class GetEventsForSubscriptionByIdRequest extends SpeakeasyBase {
 export declare class GetEventsForSubscriptionByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEventsForSubscriptionById200ApplicationJsonObject?: GetEventsForSubscriptionById200ApplicationJson;
+    getEventsForSubscriptionById200ApplicationJSONObject?: GetEventsForSubscriptionById200ApplicationJson;
 }

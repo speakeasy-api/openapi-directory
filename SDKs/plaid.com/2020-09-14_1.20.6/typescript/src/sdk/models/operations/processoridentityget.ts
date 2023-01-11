@@ -14,7 +14,7 @@ export class ProcessorIdentityGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  processorIdentityGetResponse?: Map<string, any>;
+  processorIdentityGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

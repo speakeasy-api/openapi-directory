@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallInboundFirewallRulesResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallInboundFirewallRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallInboundFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

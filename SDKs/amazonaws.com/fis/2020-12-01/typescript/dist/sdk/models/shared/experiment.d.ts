@@ -7,7 +7,7 @@ import { ExperimentTarget } from "./experimenttarget";
  * Describes an experiment.
 **/
 export declare class Experiment extends SpeakeasyBase {
-    actions?: Map<string, ExperimentAction>;
+    actions?: Record<string, ExperimentAction>;
     creationTime?: Date;
     endTime?: Date;
     experimentTemplateId?: string;
@@ -16,6 +16,6 @@ export declare class Experiment extends SpeakeasyBase {
     startTime?: Date;
     state?: ExperimentState;
     stopConditions?: ExperimentStopCondition[];
-    tags?: Map<string, string>;
-    targets?: Map<string, ExperimentTarget>;
+    tags?: Record<string, string>;
+    targets?: Record<string, ExperimentTarget>;
 }

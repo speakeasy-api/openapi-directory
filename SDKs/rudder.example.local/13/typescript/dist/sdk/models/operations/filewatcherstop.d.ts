@@ -14,5 +14,5 @@ export declare class FileWatcherStop200ApplicationJson extends SpeakeasyBase {
 export declare class FileWatcherStopResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    fileWatcherStop200ApplicationJsonObject?: FileWatcherStop200ApplicationJson;
+    fileWatcherStop200ApplicationJSONObject?: FileWatcherStop200ApplicationJson;
 }

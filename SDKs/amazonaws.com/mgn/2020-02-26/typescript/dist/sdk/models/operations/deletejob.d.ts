@@ -9,7 +9,7 @@ export declare class DeleteJobHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteJobRequestBody extends SpeakeasyBase {
-    jobId: string;
+    jobID: string;
 }
 export declare class DeleteJobRequest extends SpeakeasyBase {
     headers: DeleteJobHeaders;
@@ -18,7 +18,7 @@ export declare class DeleteJobRequest extends SpeakeasyBase {
 export declare class DeleteJobResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deleteJobResponse?: Map<string, any>;
+    deleteJobResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     uninitializedAccountException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Environment } from "./environment";
-import { TaskSpec } from "./taskspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskGroupInput = exports.TaskGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var environment_1 = require("./environment");
+var taskspec_1 = require("./taskspec");
 // TaskGroup
 /**
  * A TaskGroup contains one or multiple Tasks that share the same Runnable but with different runtime parameters.
@@ -35,40 +38,40 @@ var TaskGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TaskGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parallelism" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parallelism" }),
         __metadata("design:type", String)
     ], TaskGroup.prototype, "parallelism", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissiveSsh" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissiveSsh" }),
         __metadata("design:type", Boolean)
     ], TaskGroup.prototype, "permissiveSsh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireHostsFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireHostsFile" }),
         __metadata("design:type", Boolean)
     ], TaskGroup.prototype, "requireHostsFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskCount" }),
         __metadata("design:type", String)
     ], TaskGroup.prototype, "taskCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskCountPerNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskCountPerNode" }),
         __metadata("design:type", String)
     ], TaskGroup.prototype, "taskCountPerNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskEnvironments", elemType: Environment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskEnvironments", elemType: environment_1.Environment }),
         __metadata("design:type", Array)
     ], TaskGroup.prototype, "taskEnvironments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSpec" }),
-        __metadata("design:type", TaskSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSpec" }),
+        __metadata("design:type", taskspec_1.TaskSpec)
     ], TaskGroup.prototype, "taskSpec", void 0);
     return TaskGroup;
-}(SpeakeasyBase));
-export { TaskGroup };
+}(utils_1.SpeakeasyBase));
+exports.TaskGroup = TaskGroup;
 // TaskGroupInput
 /**
  * A TaskGroup contains one or multiple Tasks that share the same Runnable but with different runtime parameters.
@@ -79,33 +82,33 @@ var TaskGroupInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parallelism" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parallelism" }),
         __metadata("design:type", String)
     ], TaskGroupInput.prototype, "parallelism", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissiveSsh" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissiveSsh" }),
         __metadata("design:type", Boolean)
     ], TaskGroupInput.prototype, "permissiveSsh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireHostsFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireHostsFile" }),
         __metadata("design:type", Boolean)
     ], TaskGroupInput.prototype, "requireHostsFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskCount" }),
         __metadata("design:type", String)
     ], TaskGroupInput.prototype, "taskCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskCountPerNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskCountPerNode" }),
         __metadata("design:type", String)
     ], TaskGroupInput.prototype, "taskCountPerNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskEnvironments", elemType: Environment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskEnvironments", elemType: environment_1.Environment }),
         __metadata("design:type", Array)
     ], TaskGroupInput.prototype, "taskEnvironments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSpec" }),
-        __metadata("design:type", TaskSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSpec" }),
+        __metadata("design:type", taskspec_1.TaskSpec)
     ], TaskGroupInput.prototype, "taskSpec", void 0);
     return TaskGroupInput;
-}(SpeakeasyBase));
-export { TaskGroupInput };
+}(utils_1.SpeakeasyBase));
+exports.TaskGroupInput = TaskGroupInput;

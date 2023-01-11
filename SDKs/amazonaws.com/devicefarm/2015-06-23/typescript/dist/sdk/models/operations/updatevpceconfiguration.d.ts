@@ -24,5 +24,5 @@ export declare class UpdateVpceConfigurationResponse extends SpeakeasyBase {
     notFoundException?: any;
     serviceAccountException?: any;
     statusCode: number;
-    updateVpceConfigurationResult?: shared.UpdateVpceConfigurationResult;
+    updateVPCEConfigurationResult?: shared.UpdateVpceConfigurationResult;
 }

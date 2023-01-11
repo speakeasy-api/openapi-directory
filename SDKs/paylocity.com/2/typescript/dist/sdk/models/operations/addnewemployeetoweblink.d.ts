@@ -14,6 +14,6 @@ export declare class AddNewEmployeeToWebLinkRequest extends SpeakeasyBase {
 export declare class AddNewEmployeeToWebLinkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
     trackingNumberResponses?: shared.TrackingNumberResponse[];
 }

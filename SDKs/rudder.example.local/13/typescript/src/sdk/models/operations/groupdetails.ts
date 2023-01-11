@@ -50,5 +50,5 @@ export class GroupDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  groupDetails200ApplicationJsonObject?: GroupDetails200ApplicationJson;
+  groupDetails200ApplicationJSONObject?: GroupDetails200ApplicationJson;
 }

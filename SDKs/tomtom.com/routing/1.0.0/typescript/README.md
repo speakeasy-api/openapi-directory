@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest, GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,45 +34,45 @@ const sdk = new SDK(WithSecurity(
 const req: GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest = {
   pathParams: {
     contentType: "xml",
-    origin: "nemo",
-    versionNumber: 3236422529230403831,
+    origin: "voluptas",
+    versionNumber: 6050128673802995827,
   },
   queryParams: {
-    accelerationEfficiency: 2.100000,
-    arriveAt: "et",
-    auxiliaryPowerInLitersPerHour: 99.099998,
-    avoid: "dignissimos",
-    callback: "rerum",
-    constantSpeedConsumptionInLitersPerHundredkm: "commodi",
-    constantSpeedConsumptionInkWhPerHundredkm: "veritatis",
-    currentFuelInLiters: 19.200001,
-    decelerationEfficiency: 9.100000,
-    departAt: "id",
-    downhillEfficiency: 6.100000,
-    energyBudgetInkWh: 86.199997,
-    fuelBudgetInLiters: 72.099998,
-    fuelEnergyDensityInMJoulesPerLiter: 25.200001,
+    accelerationEfficiency: 6.200000,
+    arriveAt: "dolor",
+    auxiliaryPowerInLitersPerHour: 67.199997,
+    avoid: "fugit",
+    callback: "et",
+    constantSpeedConsumptionInLitersPerHundredkm: "nihil",
+    constantSpeedConsumptionInkWhPerHundredkm: "rerum",
+    currentFuelInLiters: 59.099998,
+    decelerationEfficiency: 52.099998,
+    departAt: "ut",
+    downhillEfficiency: 50.099998,
+    energyBudgetInkWh: 94.199997,
+    fuelBudgetInLiters: 68.099998,
+    fuelEnergyDensityInMJoulesPerLiter: 80.199997,
     hilliness: "low",
     report: "effectiveSettings",
-    routeType: "thrilling",
-    timeBudgetInSec: 84.099998,
+    routeType: "fastest",
+    timeBudgetInSec: 91.099998,
     traffic: true,
-    travelMode: "bus",
-    uphillEfficiency: 38.200001,
-    vehicleAxleWeight: 2631421531907859636,
-    vehicleCommercial: true,
+    travelMode: "van",
+    uphillEfficiency: 45.099998,
+    vehicleAxleWeight: 2897681629866238117,
+    vehicleCommercial: false,
     vehicleEngineType: "combustion",
-    vehicleHeight: 80.099998,
-    vehicleLength: 34.099998,
+    vehicleHeight: 10.200000,
+    vehicleLength: 14.200000,
     vehicleLoadType: "aut",
-    vehicleMaxSpeed: 4236942523811675930,
-    vehicleWeight: 8034398868187943685,
-    vehicleWidth: 83.099998,
-    windingness: "high",
+    vehicleMaxSpeed: 6972732843819909978,
+    vehicleWeight: 5558237345453186302,
+    vehicleWidth: 19.200001,
+    windingness: "low",
   },
 };
 
-sdk.sdk.getRoutingVersionNumberCalculateReachableRangeOriginContentType(req).then((res: GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse | AxiosError) => {
+sdk.routing.getRoutingVersionNumberCalculateReachableRangeOriginContentType(req).then((res: GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -82,7 +81,7 @@ sdk.sdk.getRoutingVersionNumberCalculateReachableRangeOriginContentType(req).the
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Routing
 
 * `getRoutingVersionNumberCalculateReachableRangeOriginContentType` - Reachable Range
 * `getRoutingVersionNumberCalculateRouteLocationsContentType` - Calculate Route

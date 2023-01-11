@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,228 +23,230 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxonomyAttractionsResponse = exports.TaxonomyAttractionsRequest = exports.TaxonomyAttractions200ApplicationJson = exports.TaxonomyAttractions200ApplicationJsonData = exports.TaxonomyAttractionsRequestBody = exports.TaxonomyAttractionsRequestBodySortOrderEnum = exports.TaxonomyAttractionsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaxonomyAttractionsHeaders = /** @class */ (function (_super) {
     __extends(TaxonomyAttractionsHeaders, _super);
     function TaxonomyAttractionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], TaxonomyAttractionsHeaders.prototype, "acceptLanguage", void 0);
     return TaxonomyAttractionsHeaders;
-}(SpeakeasyBase));
-export { TaxonomyAttractionsHeaders };
-export var TaxonomyAttractionsRequestBodySortOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractionsHeaders = TaxonomyAttractionsHeaders;
+var TaxonomyAttractionsRequestBodySortOrderEnum;
 (function (TaxonomyAttractionsRequestBodySortOrderEnum) {
     TaxonomyAttractionsRequestBodySortOrderEnum["SeoPublishedDateD"] = "SEO_PUBLISHED_DATE_D";
     TaxonomyAttractionsRequestBodySortOrderEnum["SeoPublishedDateA"] = "SEO_PUBLISHED_DATE_A";
     TaxonomyAttractionsRequestBodySortOrderEnum["SeoReviewAvgRatingD"] = "SEO_REVIEW_AVG_RATING_D";
     TaxonomyAttractionsRequestBodySortOrderEnum["SeoReviewAvgRatingA"] = "SEO_REVIEW_AVG_RATING_A";
     TaxonomyAttractionsRequestBodySortOrderEnum["SeoAlphabetical"] = "SEO_ALPHABETICAL";
-})(TaxonomyAttractionsRequestBodySortOrderEnum || (TaxonomyAttractionsRequestBodySortOrderEnum = {}));
+})(TaxonomyAttractionsRequestBodySortOrderEnum = exports.TaxonomyAttractionsRequestBodySortOrderEnum || (exports.TaxonomyAttractionsRequestBodySortOrderEnum = {}));
 var TaxonomyAttractionsRequestBody = /** @class */ (function (_super) {
     __extends(TaxonomyAttractionsRequestBody, _super);
     function TaxonomyAttractionsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destId" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractionsRequestBody.prototype, "destId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], TaxonomyAttractionsRequestBody.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topX" }),
         __metadata("design:type", String)
     ], TaxonomyAttractionsRequestBody.prototype, "topX", void 0);
     return TaxonomyAttractionsRequestBody;
-}(SpeakeasyBase));
-export { TaxonomyAttractionsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractionsRequestBody = TaxonomyAttractionsRequestBody;
 var TaxonomyAttractions200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(TaxonomyAttractions200ApplicationJsonData, _super);
     function TaxonomyAttractions200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attractionCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attractionCity" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "attractionCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attractionLatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attractionLatitude" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "attractionLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attractionLongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attractionLongitude" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "attractionLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attractionState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attractionState" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "attractionState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attractionStreetAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attractionStreetAddress" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "attractionStreetAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationId" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "destinationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageUrlName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageUrlName" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "pageUrlName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoCount" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "photoCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationId" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "primaryDestinationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationName" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "primaryDestinationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDestinationUrlName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDestinationUrlName" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "primaryDestinationUrlName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCount" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "productCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedDate" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "publishedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seoId" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "seoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailHiResURL" }),
         __metadata("design:type", String)
-    ], TaxonomyAttractions200ApplicationJsonData.prototype, "thumbnailHiResUrl", void 0);
+    ], TaxonomyAttractions200ApplicationJsonData.prototype, "thumbnailHiResURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailURL" }),
         __metadata("design:type", String)
-    ], TaxonomyAttractions200ApplicationJsonData.prototype, "thumbnailUrl", void 0);
+    ], TaxonomyAttractions200ApplicationJsonData.prototype, "thumbnailURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJsonData.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webURL" }),
         __metadata("design:type", String)
-    ], TaxonomyAttractions200ApplicationJsonData.prototype, "webUrl", void 0);
+    ], TaxonomyAttractions200ApplicationJsonData.prototype, "webURL", void 0);
     return TaxonomyAttractions200ApplicationJsonData;
-}(SpeakeasyBase));
-export { TaxonomyAttractions200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractions200ApplicationJsonData = TaxonomyAttractions200ApplicationJsonData;
 var TaxonomyAttractions200ApplicationJson = /** @class */ (function (_super) {
     __extends(TaxonomyAttractions200ApplicationJson, _super);
     function TaxonomyAttractions200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: TaxonomyAttractions200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: TaxonomyAttractions200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], TaxonomyAttractions200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], TaxonomyAttractions200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], TaxonomyAttractions200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], TaxonomyAttractions200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], TaxonomyAttractions200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], TaxonomyAttractions200ApplicationJson.prototype, "vmid", void 0);
     return TaxonomyAttractions200ApplicationJson;
-}(SpeakeasyBase));
-export { TaxonomyAttractions200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractions200ApplicationJson = TaxonomyAttractions200ApplicationJson;
 var TaxonomyAttractionsRequest = /** @class */ (function (_super) {
     __extends(TaxonomyAttractionsRequest, _super);
     function TaxonomyAttractionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaxonomyAttractionsHeaders)
     ], TaxonomyAttractionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TaxonomyAttractionsRequestBody)
     ], TaxonomyAttractionsRequest.prototype, "request", void 0);
     return TaxonomyAttractionsRequest;
-}(SpeakeasyBase));
-export { TaxonomyAttractionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractionsRequest = TaxonomyAttractionsRequest;
 var TaxonomyAttractionsResponse = /** @class */ (function (_super) {
     __extends(TaxonomyAttractionsResponse, _super);
     function TaxonomyAttractionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaxonomyAttractionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaxonomyAttractionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaxonomyAttractions200ApplicationJson)
-    ], TaxonomyAttractionsResponse.prototype, "taxonomyAttractions200ApplicationJsonObject", void 0);
+    ], TaxonomyAttractionsResponse.prototype, "taxonomyAttractions200ApplicationJSONObject", void 0);
     return TaxonomyAttractionsResponse;
-}(SpeakeasyBase));
-export { TaxonomyAttractionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaxonomyAttractionsResponse = TaxonomyAttractionsResponse;

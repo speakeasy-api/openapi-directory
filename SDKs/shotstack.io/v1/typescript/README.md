@@ -16,29 +16,28 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteAssetRequest, DeleteAssetResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetRenderRequest, GetRenderResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: DeleteAssetRequest = {
+const req: GetRenderRequest = {
   security: {
     developerKey: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   pathParams: {
-    id: "veritatis",
+    id: "sit",
   },
 };
 
-sdk.sdk.deleteAsset(req).then((res: DeleteAssetResponse | AxiosError) => {
+sdk.edit.getRender(req).then((res: GetRenderResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,13 +46,16 @@ sdk.sdk.deleteAsset(req).then((res: DeleteAssetResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Edit
+
+* `getRender` - Get Render Status
+* `postRender` - Render Asset
+
+### Serve
 
 * `deleteAsset` - Delete Asset
 * `getAsset` - Get Asset
 * `getAssetByRenderId` - Get Asset by Render ID
-* `getRender` - Get Render Status
-* `postRender` - Render Asset
 
 <!-- End SDK Available Operations -->
 

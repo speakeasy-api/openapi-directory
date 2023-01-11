@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest, AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,176 +30,94 @@ const req: AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "qui",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "aut",
-    alt: "proto",
-    callback: "ab",
-    fields: "voluptate",
-    key: "voluptates",
-    oauthToken: "rerum",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "ducimus",
-    uploadType: "saepe",
-    uploadProtocol: "quis",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     basic: {
-      combiningFunction: "AND",
+      combiningFunction: "OR",
       conditions: [
         {
           devicePolicy: {
             allowedDeviceManagementLevels: [
-              "NONE",
               "BASIC",
-              "MANAGEMENT_UNSPECIFIED",
             ],
             allowedEncryptionStatuses: [
-              "ENCRYPTION_UNSPECIFIED",
-              "ENCRYPTION_UNSPECIFIED",
-            ],
-            osConstraints: [
-              {
-                minimumVersion: "voluptas",
-                osType: "DESKTOP_CHROME_OS",
-                requireVerifiedChromeOs: true,
-              },
-              {
-                minimumVersion: "sequi",
-                osType: "DESKTOP_LINUX",
-                requireVerifiedChromeOs: false,
-              },
-            ],
-            requireAdminApproval: false,
-            requireCorpOwned: false,
-            requireScreenlock: true,
-          },
-          ipSubnetworks: [
-            "saepe",
-          ],
-          members: [
-            "ut",
-            "labore",
-            "voluptatem",
-          ],
-          negate: true,
-          regions: [
-            "qui",
-            "quidem",
-          ],
-          requiredAccessLevels: [
-            "recusandae",
-            "molestiae",
-            "alias",
-          ],
-        },
-        {
-          devicePolicy: {
-            allowedDeviceManagementLevels: [
-              "MANAGEMENT_UNSPECIFIED",
-            ],
-            allowedEncryptionStatuses: [
-              "ENCRYPTED",
-              "ENCRYPTION_UNSPECIFIED",
+              "UNENCRYPTED",
+              "UNENCRYPTED",
               "UNENCRYPTED",
             ],
             osConstraints: [
               {
-                minimumVersion: "accusamus",
-                osType: "DESKTOP_MAC",
+                minimumVersion: "vitae",
+                osType: "DESKTOP_CHROME_OS",
                 requireVerifiedChromeOs: true,
               },
               {
-                minimumVersion: "perspiciatis",
+                minimumVersion: "illum",
                 osType: "DESKTOP_LINUX",
-                requireVerifiedChromeOs: true,
-              },
-            ],
-            requireAdminApproval: false,
-            requireCorpOwned: false,
-            requireScreenlock: true,
-          },
-          ipSubnetworks: [
-            "et",
-          ],
-          members: [
-            "aliquam",
-            "numquam",
-          ],
-          negate: true,
-          regions: [
-            "voluptas",
-            "nulla",
-          ],
-          requiredAccessLevels: [
-            "repudiandae",
-          ],
-        },
-        {
-          devicePolicy: {
-            allowedDeviceManagementLevels: [
-              "COMPLETE",
-            ],
-            allowedEncryptionStatuses: [
-              "ENCRYPTION_UNSUPPORTED",
-              "ENCRYPTION_UNSPECIFIED",
-            ],
-            osConstraints: [
-              {
-                minimumVersion: "iste",
-                osType: "DESKTOP_MAC",
                 requireVerifiedChromeOs: false,
               },
               {
-                minimumVersion: "consequuntur",
-                osType: "ANDROID",
-                requireVerifiedChromeOs: true,
+                minimumVersion: "odio",
+                osType: "OS_UNSPECIFIED",
+                requireVerifiedChromeOs: false,
               },
             ],
-            requireAdminApproval: false,
-            requireCorpOwned: false,
-            requireScreenlock: true,
+            requireAdminApproval: true,
+            requireCorpOwned: true,
+            requireScreenlock: false,
           },
           ipSubnetworks: [
-            "quisquam",
-            "ea",
-            "ullam",
+            "quis",
+            "est",
           ],
           members: [
-            "nobis",
-            "excepturi",
+            "odit",
+            "non",
+            "voluptas",
           ],
           negate: true,
           regions: [
-            "necessitatibus",
-            "est",
+            "illo",
           ],
           requiredAccessLevels: [
-            "similique",
-            "omnis",
+            "officiis",
+            "autem",
+            "consectetur",
           ],
         },
       ],
     },
     custom: {
       expr: {
-        description: "provident",
-        expression: "voluptatem",
-        location: "eaque",
-        title: "eligendi",
+        description: "nobis",
+        expression: "odio",
+        location: "qui",
+        title: "recusandae",
       },
     },
-    description: "non",
-    name: "ab",
-    title: "sint",
+    description: "at",
+    name: "ipsum",
+    title: "eveniet",
   },
 };
 

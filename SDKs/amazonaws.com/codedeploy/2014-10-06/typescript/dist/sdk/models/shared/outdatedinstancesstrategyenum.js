@@ -1,5 +1,8 @@
-export var OutdatedInstancesStrategyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OutdatedInstancesStrategyEnum = void 0;
+var OutdatedInstancesStrategyEnum;
 (function (OutdatedInstancesStrategyEnum) {
     OutdatedInstancesStrategyEnum["Update"] = "UPDATE";
     OutdatedInstancesStrategyEnum["Ignore"] = "IGNORE";
-})(OutdatedInstancesStrategyEnum || (OutdatedInstancesStrategyEnum = {}));
+})(OutdatedInstancesStrategyEnum = exports.OutdatedInstancesStrategyEnum || (exports.OutdatedInstancesStrategyEnum = {}));

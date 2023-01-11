@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Command extends SpeakeasyBase {
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     description?: string;
     deviceId?: number;
     id?: number;

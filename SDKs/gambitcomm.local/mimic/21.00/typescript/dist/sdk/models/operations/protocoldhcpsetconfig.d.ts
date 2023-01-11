@@ -10,5 +10,5 @@ export declare class ProtocolDhcpSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolDhcpSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolDhcpSetConfig200ApplicationJsonString?: string;
+    protocolDhcpSetConfig200ApplicationJSONString?: string;
 }

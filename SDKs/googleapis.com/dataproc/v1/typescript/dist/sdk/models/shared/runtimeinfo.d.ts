@@ -6,7 +6,7 @@ import { UsageMetrics } from "./usagemetrics";
 export declare class RuntimeInfo extends SpeakeasyBase {
     approximateUsage?: UsageMetrics;
     diagnosticOutputUri?: string;
-    endpoints?: Map<string, string>;
+    endpoints?: Record<string, string>;
     outputUri?: string;
 }
 /**

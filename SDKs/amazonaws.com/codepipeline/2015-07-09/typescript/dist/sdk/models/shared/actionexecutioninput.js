@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionTypeId } from "./actiontypeid";
-import { ArtifactDetail } from "./artifactdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionExecutionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var actiontypeid_1 = require("./actiontypeid");
+var artifactdetail_1 = require("./artifactdetail");
 // ActionExecutionInput
 /**
  * Input information used for an action execution.
@@ -35,33 +38,33 @@ var ActionExecutionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionTypeId" }),
-        __metadata("design:type", ActionTypeId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionTypeId" }),
+        __metadata("design:type", actiontypeid_1.ActionTypeId)
     ], ActionExecutionInput.prototype, "actionTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", Object)
     ], ActionExecutionInput.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputArtifacts", elemType: ArtifactDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputArtifacts", elemType: artifactdetail_1.ArtifactDetail }),
         __metadata("design:type", Array)
     ], ActionExecutionInput.prototype, "inputArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
         __metadata("design:type", String)
     ], ActionExecutionInput.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], ActionExecutionInput.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolvedConfiguration" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolvedConfiguration" }),
+        __metadata("design:type", Object)
     ], ActionExecutionInput.prototype, "resolvedConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], ActionExecutionInput.prototype, "roleArn", void 0);
     return ActionExecutionInput;
-}(SpeakeasyBase));
-export { ActionExecutionInput };
+}(utils_1.SpeakeasyBase));
+exports.ActionExecutionInput = ActionExecutionInput;

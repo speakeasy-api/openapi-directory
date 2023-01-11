@@ -21,7 +21,7 @@ export declare class ModifyClientPropertiesResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
     invalidParameterValuesException?: any;
-    modifyClientPropertiesResult?: Map<string, any>;
+    modifyClientPropertiesResult?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

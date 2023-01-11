@@ -1,0 +1,41 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { GamesAchievementDefinitionsListRequest, GamesAchievementDefinitionsListResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+
+const sdk = new SDK();
+    
+const req: GamesAchievementDefinitionsListRequest = {
+  security: {
+    oauth2: {
+      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    },
+    oauth2c: {
+      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    },
+  },
+  queryParams: {
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    language: "expedita",
+    maxResults: 6044372234677422456,
+    oauthToken: "fugit",
+    pageToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
+  },
+};
+
+sdk.achievementDefinitions.gamesAchievementDefinitionsList(req).then((res: GamesAchievementDefinitionsListResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

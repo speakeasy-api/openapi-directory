@@ -1,53 +1,54 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class PurgeCdnCachePathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=cdn_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cdn_id" })
   cdnId: string;
 }
 
 
 export class PurgeCdnCacheRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=files" })
+  @SpeakeasyMetadata({ data: "json, name=files" })
   files: string[];
 }
 
 
-export class PurgeCdnCacheRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: PurgeCdnCachePathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: PurgeCdnCacheRequestBody;
-}
-
-
 export class PurgeCdnCache401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class PurgeCdnCacheRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PurgeCdnCachePathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: PurgeCdnCacheRequestBody;
+}
+
+
 export class PurgeCdnCacheResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  purgeCdnCache401ApplicationJsonObject?: PurgeCdnCache401ApplicationJson;
+  @SpeakeasyMetadata()
+  purgeCdnCache401ApplicationJSONObject?: PurgeCdnCache401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

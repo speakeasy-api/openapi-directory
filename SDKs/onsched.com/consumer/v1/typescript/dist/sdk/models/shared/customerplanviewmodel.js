@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerPlanViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomerPlanViewModel = /** @class */ (function (_super) {
     __extends(CustomerPlanViewModel, _super);
     function CustomerPlanViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], CustomerPlanViewModel.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceGroupId" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "serviceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripePlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripePlanId" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "stripePlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], CustomerPlanViewModel.prototype, "uid", void 0);
     return CustomerPlanViewModel;
-}(SpeakeasyBase));
-export { CustomerPlanViewModel };
+}(utils_1.SpeakeasyBase));
+exports.CustomerPlanViewModel = CustomerPlanViewModel;

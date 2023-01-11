@@ -2,18 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class SpotListInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=custom" })
-  custom?: any;
-
-  @SpeakeasyMetadata({ data: "json, name=label" })
-  label?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
-}
-
-
 export class SpotList extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom" })
   custom?: any;
@@ -28,7 +16,7 @@ export class SpotList extends SpeakeasyBase {
   list?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=time_created" })
   timeCreated?: string;
@@ -38,4 +26,16 @@ export class SpotList extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=total" })
   total?: number;
+}
+
+
+export class SpotListInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=custom" })
+  custom?: any;
+
+  @SpeakeasyMetadata({ data: "json, name=label" })
+  label?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=metadata" })
+  metadata?: Record<string, any>;
 }

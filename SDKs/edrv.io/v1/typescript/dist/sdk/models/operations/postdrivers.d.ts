@@ -28,7 +28,7 @@ export declare class PostDriversRequestBody extends SpeakeasyBase {
 export declare class PostDrivers200ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PostDriversRequest extends SpeakeasyBase {
     request: PostDriversRequestBody;
@@ -36,5 +36,5 @@ export declare class PostDriversRequest extends SpeakeasyBase {
 export declare class PostDriversResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postDrivers200ApplicationJsonObject?: PostDrivers200ApplicationJson;
+    postDrivers200ApplicationJSONObject?: PostDrivers200ApplicationJson;
 }

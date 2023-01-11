@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Dataproc job config.
 **/
 export declare class JobPlacement extends SpeakeasyBase {
-    clusterLabels?: Map<string, string>;
+    clusterLabels?: Record<string, string>;
     clusterName?: string;
     clusterUuid?: string;
 }
@@ -11,6 +11,6 @@ export declare class JobPlacement extends SpeakeasyBase {
  * Dataproc job config.
 **/
 export declare class JobPlacementInput extends SpeakeasyBase {
-    clusterLabels?: Map<string, string>;
+    clusterLabels?: Record<string, string>;
     clusterName?: string;
 }

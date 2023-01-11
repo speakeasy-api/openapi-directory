@@ -20,6 +20,6 @@ export declare class UpdateProductRequest extends SpeakeasyBase {
 export declare class UpdateProductResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

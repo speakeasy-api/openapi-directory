@@ -5,5 +5,5 @@ import { FailureInfo } from "./failureinfo";
 
 export class TagResourcesOutput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=FailedResourcesMap", elemType: FailureInfo })
-  failedResourcesMap?: Map<string, FailureInfo>;
+  failedResourcesMap?: Record<string, FailureInfo>;
 }

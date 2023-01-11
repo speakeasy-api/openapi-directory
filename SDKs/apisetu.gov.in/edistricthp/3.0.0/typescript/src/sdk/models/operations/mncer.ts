@@ -185,23 +185,23 @@ export class MncerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mncer400ApplicationJsonObject?: Mncer400ApplicationJson;
+  mncer400ApplicationJSONObject?: Mncer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer401ApplicationJsonObject?: Mncer401ApplicationJson;
+  mncer401ApplicationJSONObject?: Mncer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer404ApplicationJsonObject?: Mncer404ApplicationJson;
+  mncer404ApplicationJSONObject?: Mncer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer500ApplicationJsonObject?: Mncer500ApplicationJson;
+  mncer500ApplicationJSONObject?: Mncer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer502ApplicationJsonObject?: Mncer502ApplicationJson;
+  mncer502ApplicationJSONObject?: Mncer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer503ApplicationJsonObject?: Mncer503ApplicationJson;
+  mncer503ApplicationJSONObject?: Mncer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mncer504ApplicationJsonObject?: Mncer504ApplicationJson;
+  mncer504ApplicationJSONObject?: Mncer504ApplicationJson;
 }

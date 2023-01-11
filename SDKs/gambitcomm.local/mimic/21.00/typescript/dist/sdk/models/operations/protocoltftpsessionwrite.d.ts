@@ -9,5 +9,5 @@ export declare class ProtocolTftpSessionWriteRequest extends SpeakeasyBase {
 export declare class ProtocolTftpSessionWriteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTftpSessionWrite200ApplicationJsonInt32Integers?: number[];
+    protocolTftpSessionWrite200ApplicationJSONInt32Integers?: number[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationCategoryEnum } from "./recommendationcategoryenum";
-import { RuleMetadata } from "./rulemetadata";
-import { SeverityEnum } from "./severityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationcategoryenum_1 = require("./recommendationcategoryenum");
+var rulemetadata_1 = require("./rulemetadata");
+var severityenum_1 = require("./severityenum");
 // RecommendationSummary
 /**
  *  Information about recommendations.
@@ -36,37 +39,37 @@ var RecommendationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], RecommendationSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndLine" }),
         __metadata("design:type", Number)
     ], RecommendationSummary.prototype, "endLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FilePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FilePath" }),
         __metadata("design:type", String)
     ], RecommendationSummary.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationCategory" }),
         __metadata("design:type", String)
     ], RecommendationSummary.prototype, "recommendationCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationId" }),
         __metadata("design:type", String)
     ], RecommendationSummary.prototype, "recommendationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleMetadata" }),
-        __metadata("design:type", RuleMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleMetadata" }),
+        __metadata("design:type", rulemetadata_1.RuleMetadata)
     ], RecommendationSummary.prototype, "ruleMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Severity" }),
         __metadata("design:type", String)
     ], RecommendationSummary.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartLine" }),
         __metadata("design:type", Number)
     ], RecommendationSummary.prototype, "startLine", void 0);
     return RecommendationSummary;
-}(SpeakeasyBase));
-export { RecommendationSummary };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationSummary = RecommendationSummary;

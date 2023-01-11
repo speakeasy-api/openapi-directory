@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationSmVppAccountsResponse = exports.GetOrganizationSmVppAccountsRequest = exports.GetOrganizationSmVppAccountsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationSmVppAccountsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountsPathParams, _super);
     function GetOrganizationSmVppAccountsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationSmVppAccountsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationSmVppAccountsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountsPathParams = GetOrganizationSmVppAccountsPathParams;
 var GetOrganizationSmVppAccountsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountsRequest, _super);
     function GetOrganizationSmVppAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationSmVppAccountsPathParams)
     ], GetOrganizationSmVppAccountsRequest.prototype, "pathParams", void 0);
     return GetOrganizationSmVppAccountsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountsRequest = GetOrganizationSmVppAccountsRequest;
 var GetOrganizationSmVppAccountsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountsResponse, _super);
     function GetOrganizationSmVppAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationSmVppAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationSmVppAccountsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationSmVppAccountsResponse.prototype, "getOrganizationSmVppAccounts200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationSmVppAccountsResponse.prototype, "getOrganizationSmVppAccounts200ApplicationJSONObject", void 0);
     return GetOrganizationSmVppAccountsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountsResponse = GetOrganizationSmVppAccountsResponse;

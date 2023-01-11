@@ -9,7 +9,7 @@ export declare enum ExtensionDataRelatedEntityTypeEnum {
  * This class defines an extenstion data on the Publish API
 **/
 export declare class ExtensionData extends SpeakeasyBase {
-    data: Map<string, any>;
+    data: Record<string, any>;
     relatedEntityId?: string;
     relatedEntitySource?: Source;
     relatedEntityType: ExtensionDataRelatedEntityTypeEnum;

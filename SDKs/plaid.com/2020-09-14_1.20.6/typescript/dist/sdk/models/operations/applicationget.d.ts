@@ -6,6 +6,6 @@ export declare class ApplicationGetRequest extends SpeakeasyBase {
 export declare class ApplicationGetResponse extends SpeakeasyBase {
     applicationGetResponse?: shared.ApplicationGetResponse;
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     statusCode: number;
 }

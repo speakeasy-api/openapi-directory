@@ -16,7 +16,7 @@ export declare class Studio extends SpeakeasyBase {
     studioId?: string;
     studioName?: string;
     studioUrl?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     updatedAt?: Date;
     userRoleArn?: string;
 }

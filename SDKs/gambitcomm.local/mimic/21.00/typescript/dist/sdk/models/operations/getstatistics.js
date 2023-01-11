@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStatisticsResponse = exports.GetStatisticsRequest = exports.GetStatisticsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetStatisticsPathParams = /** @class */ (function (_super) {
     __extends(GetStatisticsPathParams, _super);
     function GetStatisticsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetStatisticsPathParams.prototype, "agentNum", void 0);
     return GetStatisticsPathParams;
-}(SpeakeasyBase));
-export { GetStatisticsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStatisticsPathParams = GetStatisticsPathParams;
 var GetStatisticsRequest = /** @class */ (function (_super) {
     __extends(GetStatisticsRequest, _super);
     function GetStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStatisticsPathParams)
     ], GetStatisticsRequest.prototype, "pathParams", void 0);
     return GetStatisticsRequest;
-}(SpeakeasyBase));
-export { GetStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStatisticsRequest = GetStatisticsRequest;
 var GetStatisticsResponse = /** @class */ (function (_super) {
     __extends(GetStatisticsResponse, _super);
     function GetStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStatisticsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], GetStatisticsResponse.prototype, "getStatistics200ApplicationJsonInt32Integers", void 0);
+    ], GetStatisticsResponse.prototype, "getStatistics200ApplicationJSONInt32Integers", void 0);
     return GetStatisticsResponse;
-}(SpeakeasyBase));
-export { GetStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStatisticsResponse = GetStatisticsResponse;

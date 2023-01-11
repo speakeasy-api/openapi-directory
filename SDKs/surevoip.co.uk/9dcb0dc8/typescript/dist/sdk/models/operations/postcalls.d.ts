@@ -29,9 +29,9 @@ export declare class PostCallsRequest extends SpeakeasyBase {
 }
 export declare class PostCallsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
-    postCalls202ApplicationJsonObject?: PostCalls202ApplicationJson;
+    headers: Record<string, string[]>;
     statusCode: number;
+    postCalls202ApplicationJSONObject?: PostCalls202ApplicationJson;
     oneannouncementsPostResponses400ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses400ContentApplication1jsonSchema;
     oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
-export var GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2BigQueryOptions = exports.GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
+var GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum;
 (function (GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum) {
     GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum["SampleMethodUnspecified"] = "SAMPLE_METHOD_UNSPECIFIED";
     GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum["Top"] = "TOP";
     GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum["RandomStart"] = "RANDOM_START";
-})(GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum || (GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum = {}));
+})(GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum = exports.GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum || (exports.GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum = {}));
 // GooglePrivacyDlpV2BigQueryOptions
 /**
  * Options defining BigQuery table and row identifiers.
@@ -41,33 +44,33 @@ var GooglePrivacyDlpV2BigQueryOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedFields", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedFields", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "excludedFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifyingFields", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifyingFields", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "identifyingFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includedFields", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includedFields", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "includedFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowsLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowsLimit" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "rowsLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowsLimitPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowsLimitPercent" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "rowsLimitPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleMethod" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "sampleMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableReference" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableReference" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2BigQueryOptions.prototype, "tableReference", void 0);
     return GooglePrivacyDlpV2BigQueryOptions;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2BigQueryOptions };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2BigQueryOptions = GooglePrivacyDlpV2BigQueryOptions;

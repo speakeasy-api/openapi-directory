@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManualTaxTypeEnum } from "./manualtaxtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var manualtaxtypeenum_1 = require("./manualtaxtypeenum");
 var TaxLine = /** @class */ (function (_super) {
     __extends(TaxLine, _super);
     function TaxLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
         __metadata("design:type", Number)
     ], TaxLine.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], TaxLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LiabilityAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LiabilityAccount" }),
         __metadata("design:type", String)
     ], TaxLine.prototype, "liabilityAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ManualTaxType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ManualTaxType" }),
         __metadata("design:type", String)
     ], TaxLine.prototype, "manualTaxType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayslipTaxLineID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayslipTaxLineID" }),
         __metadata("design:type", String)
-    ], TaxLine.prototype, "payslipTaxLineId", void 0);
+    ], TaxLine.prototype, "payslipTaxLineID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxTypeName" }),
         __metadata("design:type", String)
     ], TaxLine.prototype, "taxTypeName", void 0);
     return TaxLine;
-}(SpeakeasyBase));
-export { TaxLine };
+}(utils_1.SpeakeasyBase));
+exports.TaxLine = TaxLine;

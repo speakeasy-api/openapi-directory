@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionalMetricValue } from "./dimensionalmetricvalue";
-export var MetricValueMetricEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricValue = exports.MetricValueMetricEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionalmetricvalue_1 = require("./dimensionalmetricvalue");
+var MetricValueMetricEnum;
 (function (MetricValueMetricEnum) {
     MetricValueMetricEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     MetricValueMetricEnum["All"] = "ALL";
@@ -42,7 +45,7 @@ export var MetricValueMetricEnum;
     MetricValueMetricEnum["PhotosCountCustomers"] = "PHOTOS_COUNT_CUSTOMERS";
     MetricValueMetricEnum["LocalPostViewsSearch"] = "LOCAL_POST_VIEWS_SEARCH";
     MetricValueMetricEnum["LocalPostActionsCallToAction"] = "LOCAL_POST_ACTIONS_CALL_TO_ACTION";
-})(MetricValueMetricEnum || (MetricValueMetricEnum = {}));
+})(MetricValueMetricEnum = exports.MetricValueMetricEnum || (exports.MetricValueMetricEnum = {}));
 // MetricValue
 /**
  * A value for a single Metric from a starting time.
@@ -53,17 +56,17 @@ var MetricValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionalValues", elemType: DimensionalMetricValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionalValues", elemType: dimensionalmetricvalue_1.DimensionalMetricValue }),
         __metadata("design:type", Array)
     ], MetricValue.prototype, "dimensionalValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", String)
     ], MetricValue.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalValue" }),
-        __metadata("design:type", DimensionalMetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalValue" }),
+        __metadata("design:type", dimensionalmetricvalue_1.DimensionalMetricValue)
     ], MetricValue.prototype, "totalValue", void 0);
     return MetricValue;
-}(SpeakeasyBase));
-export { MetricValue };
+}(utils_1.SpeakeasyBase));
+exports.MetricValue = MetricValue;

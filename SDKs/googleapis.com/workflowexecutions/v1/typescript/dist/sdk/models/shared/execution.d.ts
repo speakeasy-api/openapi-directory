@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { Status } from "./status";
 export declare enum ExecutionCallLogLevelEnum {
     CallLogLevelUnspecified = "CALL_LOG_LEVEL_UNSPECIFIED",
@@ -20,7 +20,7 @@ export declare class Execution extends SpeakeasyBase {
     argument?: string;
     callLogLevel?: ExecutionCallLogLevelEnum;
     endTime?: string;
-    error?: Error;
+    error?: ErrorT;
     name?: string;
     result?: string;
     startTime?: string;
@@ -34,6 +34,6 @@ export declare class Execution extends SpeakeasyBase {
 export declare class ExecutionInput extends SpeakeasyBase {
     argument?: string;
     callLogLevel?: ExecutionCallLogLevelEnum;
-    error?: Error;
+    error?: ErrorT;
     status?: Status;
 }

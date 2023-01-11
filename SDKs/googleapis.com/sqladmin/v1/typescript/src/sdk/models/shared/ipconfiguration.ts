@@ -14,6 +14,9 @@ export class IpConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorizedNetworks", elemType: AclEntry })
   authorizedNetworks?: AclEntry[];
 
+  @SpeakeasyMetadata({ data: "json, name=enablePrivatePathForGoogleCloudServices" })
+  enablePrivatePathForGoogleCloudServices?: boolean;
+
   @SpeakeasyMetadata({ data: "json, name=ipv4Enabled" })
   ipv4Enabled?: boolean;
 

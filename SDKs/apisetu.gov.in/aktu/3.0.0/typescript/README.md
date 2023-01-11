@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DgcerRequest, DgcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: DgcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "et",
-      enrollmentNo: "aspernatur",
-      fullName: "voluptates",
-      rollNo: "necessitatibus",
-      uid: "totam",
+      dob: "sit",
+      enrollmentNo: "voluptas",
+      fullName: "culpa",
+      rollNo: "expedita",
+      uid: "consequuntur",
     },
-    consentArtifact: "nemo",
+    consentArtifact: "dolor",
     format: "pdf",
-    txnId: "voluptates",
+    txnId: "voluptas",
   },
 };
 
-sdk.sdk.dgcer(req).then((res: DgcerResponse | AxiosError) => {
+sdk.apIs.dgcer(req).then((res: DgcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -59,7 +58,7 @@ sdk.sdk.dgcer(req).then((res: DgcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dgcer` - Degree/ Diploma Certificate
 * `dgmst` - Degree/ Diploma Marksheet

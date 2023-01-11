@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Layersummary = void 0;
+var utils_1 = require("../../../internal/utils");
 var Layersummary = /** @class */ (function (_super) {
     __extends(Layersummary, _super);
     function Layersummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationCount" }),
         __metadata("design:type", Number)
     ], Layersummary.prototype, "annotationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationTypes" }),
         __metadata("design:type", Array)
     ], Layersummary.prototype, "annotationTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationsDataLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationsDataLink" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "annotationsDataLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationsLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationsLink" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "annotationsLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentVersion" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "contentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataCount" }),
         __metadata("design:type", Number)
     ], Layersummary.prototype, "dataCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerId" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeAnnotationsVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeAnnotationsVersion" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "volumeAnnotationsVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeId" }),
         __metadata("design:type", String)
     ], Layersummary.prototype, "volumeId", void 0);
     return Layersummary;
-}(SpeakeasyBase));
-export { Layersummary };
+}(utils_1.SpeakeasyBase));
+exports.Layersummary = Layersummary;

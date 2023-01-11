@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChainName } from "./chainname";
-import { ChainUri } from "./chainuri";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Chain = void 0;
+var utils_1 = require("../../../internal/utils");
+var chainname_1 = require("./chainname");
+var chainuri_1 = require("./chainuri");
 // Chain
 /**
  * A chain is a brand that your business's locations can be affiliated with.
@@ -35,21 +38,21 @@ var Chain = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chainNames", elemType: ChainName }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chainNames", elemType: chainname_1.ChainName }),
         __metadata("design:type", Array)
     ], Chain.prototype, "chainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationCount" }),
         __metadata("design:type", Number)
     ], Chain.prototype, "locationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Chain.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: ChainUri }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: chainuri_1.ChainUri }),
         __metadata("design:type", Array)
     ], Chain.prototype, "websites", void 0);
     return Chain;
-}(SpeakeasyBase));
-export { Chain };
+}(utils_1.SpeakeasyBase));
+exports.Chain = Chain;

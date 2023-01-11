@@ -1,4 +1,7 @@
-export var PermissionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionEnum = void 0;
+var PermissionEnum;
 (function (PermissionEnum) {
     PermissionEnum["All"] = "ALL";
     PermissionEnum["Select"] = "SELECT";
@@ -9,4 +12,4 @@ export var PermissionEnum;
     PermissionEnum["CreateDatabase"] = "CREATE_DATABASE";
     PermissionEnum["CreateTable"] = "CREATE_TABLE";
     PermissionEnum["DataLocationAccess"] = "DATA_LOCATION_ACCESS";
-})(PermissionEnum || (PermissionEnum = {}));
+})(PermissionEnum = exports.PermissionEnum || (exports.PermissionEnum = {}));

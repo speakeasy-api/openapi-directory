@@ -43,8 +43,8 @@ export class GetTeamTeamnameResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getTeamTeamname200ApplicationJsonObject?: GetTeamTeamname200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getTeamTeamname200ApplicationJSONObject?: GetTeamTeamname200ApplicationJson;
 }

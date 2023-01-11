@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerProperties } from "./containerproperties";
-import { NodeProperties } from "./nodeproperties";
-import { RetryStrategy } from "./retrystrategy";
-import { JobTimeout } from "./jobtimeout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerproperties_1 = require("./containerproperties");
+var nodeproperties_1 = require("./nodeproperties");
+var retrystrategy_1 = require("./retrystrategy");
+var jobtimeout_1 = require("./jobtimeout");
 // JobDefinition
 /**
  * An object representing an Batch job definition.
@@ -37,57 +40,57 @@ var JobDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerProperties" }),
-        __metadata("design:type", ContainerProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerProperties" }),
+        __metadata("design:type", containerproperties_1.ContainerProperties)
     ], JobDefinition.prototype, "containerProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDefinitionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDefinitionArn" }),
         __metadata("design:type", String)
     ], JobDefinition.prototype, "jobDefinitionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDefinitionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDefinitionName" }),
         __metadata("design:type", String)
     ], JobDefinition.prototype, "jobDefinitionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeProperties" }),
-        __metadata("design:type", NodeProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeProperties" }),
+        __metadata("design:type", nodeproperties_1.NodeProperties)
     ], JobDefinition.prototype, "nodeProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], JobDefinition.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformCapabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformCapabilities" }),
         __metadata("design:type", Array)
     ], JobDefinition.prototype, "platformCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propagateTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propagateTags" }),
         __metadata("design:type", Boolean)
     ], JobDefinition.prototype, "propagateTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryStrategy" }),
-        __metadata("design:type", RetryStrategy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryStrategy" }),
+        __metadata("design:type", retrystrategy_1.RetryStrategy)
     ], JobDefinition.prototype, "retryStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision" }),
         __metadata("design:type", Number)
     ], JobDefinition.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], JobDefinition.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], JobDefinition.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
-        __metadata("design:type", JobTimeout)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
+        __metadata("design:type", jobtimeout_1.JobTimeout)
     ], JobDefinition.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], JobDefinition.prototype, "type", void 0);
     return JobDefinition;
-}(SpeakeasyBase));
-export { JobDefinition };
+}(utils_1.SpeakeasyBase));
+exports.JobDefinition = JobDefinition;

@@ -188,23 +188,23 @@ export class SicrdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  sicrd400ApplicationJsonObject?: Sicrd400ApplicationJson;
+  sicrd400ApplicationJSONObject?: Sicrd400ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd401ApplicationJsonObject?: Sicrd401ApplicationJson;
+  sicrd401ApplicationJSONObject?: Sicrd401ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd404ApplicationJsonObject?: Sicrd404ApplicationJson;
+  sicrd404ApplicationJSONObject?: Sicrd404ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd500ApplicationJsonObject?: Sicrd500ApplicationJson;
+  sicrd500ApplicationJSONObject?: Sicrd500ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd502ApplicationJsonObject?: Sicrd502ApplicationJson;
+  sicrd502ApplicationJSONObject?: Sicrd502ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd503ApplicationJsonObject?: Sicrd503ApplicationJson;
+  sicrd503ApplicationJSONObject?: Sicrd503ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicrd504ApplicationJsonObject?: Sicrd504ApplicationJson;
+  sicrd504ApplicationJSONObject?: Sicrd504ApplicationJson;
 }

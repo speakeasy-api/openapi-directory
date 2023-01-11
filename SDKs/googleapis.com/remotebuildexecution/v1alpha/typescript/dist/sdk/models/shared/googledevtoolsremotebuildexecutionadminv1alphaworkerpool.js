@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale } from "./googledevtoolsremotebuildexecutionadminv1alphaautoscale";
-import { GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig } from "./googledevtoolsremotebuildexecutionadminv1alphaworkerconfig";
-export var GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool = exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googledevtoolsremotebuildexecutionadminv1alphaautoscale_1 = require("./googledevtoolsremotebuildexecutionadminv1alphaautoscale");
+var googledevtoolsremotebuildexecutionadminv1alphaworkerconfig_1 = require("./googledevtoolsremotebuildexecutionadminv1alphaworkerconfig");
+var GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum;
 (function (GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum) {
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum["Creating"] = "CREATING";
@@ -33,7 +36,7 @@ export var GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum;
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum["Updating"] = "UPDATING";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum["Deleting"] = "DELETING";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum["Inactive"] = "INACTIVE";
-})(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum || (GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum = {}));
+})(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum = exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum || (exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum = {}));
 // GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool
 /**
  * A worker pool resource in the Remote Build Execution API.
@@ -44,33 +47,33 @@ var GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoscale" }),
-        __metadata("design:type", GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoscale" }),
+        __metadata("design:type", googledevtoolsremotebuildexecutionadminv1alphaautoscale_1.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "autoscale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostOs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostOs" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "hostOs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerConfig" }),
-        __metadata("design:type", GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerConfig" }),
+        __metadata("design:type", googledevtoolsremotebuildexecutionadminv1alphaworkerconfig_1.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "workerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerCount" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool.prototype, "workerCount", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool = GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool;

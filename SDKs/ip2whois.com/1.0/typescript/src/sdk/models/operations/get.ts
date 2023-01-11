@@ -25,8 +25,8 @@ export class GetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  get200TextHtmlString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  get200TextHTMLString?: string;
 }

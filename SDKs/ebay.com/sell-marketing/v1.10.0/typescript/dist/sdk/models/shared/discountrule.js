@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiscountBenefit } from "./discountbenefit";
-import { DiscountSpecification } from "./discountspecification";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscountRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var discountbenefit_1 = require("./discountbenefit");
+var discountspecification_1 = require("./discountspecification");
+var amount_1 = require("./amount");
 // DiscountRule
 /**
  * This complex type defines a promotion as being either a monetary amount or a percentage of a sales price that's subtracted from the price of an item or order. Set the amount of the discount and the rules that govern when the discount triggers using the discountBenefit and discountSpecification fields. Note: In volume pricing promotions, you must configure at least two discountRule containers and at most four.
@@ -36,21 +39,21 @@ var DiscountRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountBenefit" }),
-        __metadata("design:type", DiscountBenefit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountBenefit" }),
+        __metadata("design:type", discountbenefit_1.DiscountBenefit)
     ], DiscountRule.prototype, "discountBenefit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountSpecification" }),
-        __metadata("design:type", DiscountSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountSpecification" }),
+        __metadata("design:type", discountspecification_1.DiscountSpecification)
     ], DiscountRule.prototype, "discountSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDiscountAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDiscountAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], DiscountRule.prototype, "maxDiscountAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleOrder" }),
         __metadata("design:type", Number)
     ], DiscountRule.prototype, "ruleOrder", void 0);
     return DiscountRule;
-}(SpeakeasyBase));
-export { DiscountRule };
+}(utils_1.SpeakeasyBase));
+exports.DiscountRule = DiscountRule;

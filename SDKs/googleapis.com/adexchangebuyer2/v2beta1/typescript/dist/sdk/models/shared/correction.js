@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServingContext } from "./servingcontext";
-export var CorrectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Correction = exports.CorrectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var servingcontext_1 = require("./servingcontext");
+var CorrectionTypeEnum;
 (function (CorrectionTypeEnum) {
     CorrectionTypeEnum["CorrectionTypeUnspecified"] = "CORRECTION_TYPE_UNSPECIFIED";
     CorrectionTypeEnum["VendorIdsAdded"] = "VENDOR_IDS_ADDED";
@@ -38,7 +41,7 @@ export var CorrectionTypeEnum;
     CorrectionTypeEnum["MraidAttributeAdded"] = "MRAID_ATTRIBUTE_ADDED";
     CorrectionTypeEnum["FlashAttributeRemoved"] = "FLASH_ATTRIBUTE_REMOVED";
     CorrectionTypeEnum["VideoInSnippetAttributeAdded"] = "VIDEO_IN_SNIPPET_ATTRIBUTE_ADDED";
-})(CorrectionTypeEnum || (CorrectionTypeEnum = {}));
+})(CorrectionTypeEnum = exports.CorrectionTypeEnum || (exports.CorrectionTypeEnum = {}));
 // Correction
 /**
  * Output only. Shows any corrections that were applied to this creative.
@@ -49,17 +52,17 @@ var Correction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts", elemType: ServingContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts", elemType: servingcontext_1.ServingContext }),
         __metadata("design:type", Array)
     ], Correction.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", Array)
     ], Correction.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Correction.prototype, "type", void 0);
     return Correction;
-}(SpeakeasyBase));
-export { Correction };
+}(utils_1.SpeakeasyBase));
+exports.Correction = Correction;

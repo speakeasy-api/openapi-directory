@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchEncryption } from "./cloudwatchencryption";
-import { JobBookmarksEncryption } from "./jobbookmarksencryption";
-import { S3Encryption } from "./s3encryption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncryptionConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchencryption_1 = require("./cloudwatchencryption");
+var jobbookmarksencryption_1 = require("./jobbookmarksencryption");
+var s3encryption_1 = require("./s3encryption");
 // EncryptionConfiguration
 /**
  * Specifies an encryption configuration.
@@ -36,17 +39,17 @@ var EncryptionConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchEncryption" }),
-        __metadata("design:type", CloudWatchEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchEncryption" }),
+        __metadata("design:type", cloudwatchencryption_1.CloudWatchEncryption)
     ], EncryptionConfiguration.prototype, "cloudWatchEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobBookmarksEncryption" }),
-        __metadata("design:type", JobBookmarksEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobBookmarksEncryption" }),
+        __metadata("design:type", jobbookmarksencryption_1.JobBookmarksEncryption)
     ], EncryptionConfiguration.prototype, "jobBookmarksEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Encryption", elemType: S3Encryption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Encryption", elemType: s3encryption_1.S3Encryption }),
         __metadata("design:type", Array)
     ], EncryptionConfiguration.prototype, "s3Encryption", void 0);
     return EncryptionConfiguration;
-}(SpeakeasyBase));
-export { EncryptionConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.EncryptionConfiguration = EncryptionConfiguration;

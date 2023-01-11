@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyClusterSnapshotActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyClusterSnapshotResponse = exports.PostModifyClusterSnapshotRequest = exports.PostModifyClusterSnapshotHeaders = exports.PostModifyClusterSnapshotQueryParams = exports.PostModifyClusterSnapshotVersionEnum = exports.PostModifyClusterSnapshotActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyClusterSnapshotActionEnum;
 (function (PostModifyClusterSnapshotActionEnum) {
     PostModifyClusterSnapshotActionEnum["ModifyClusterSnapshot"] = "ModifyClusterSnapshot";
-})(PostModifyClusterSnapshotActionEnum || (PostModifyClusterSnapshotActionEnum = {}));
-export var PostModifyClusterSnapshotVersionEnum;
+})(PostModifyClusterSnapshotActionEnum = exports.PostModifyClusterSnapshotActionEnum || (exports.PostModifyClusterSnapshotActionEnum = {}));
+var PostModifyClusterSnapshotVersionEnum;
 (function (PostModifyClusterSnapshotVersionEnum) {
     PostModifyClusterSnapshotVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostModifyClusterSnapshotVersionEnum || (PostModifyClusterSnapshotVersionEnum = {}));
+})(PostModifyClusterSnapshotVersionEnum = exports.PostModifyClusterSnapshotVersionEnum || (exports.PostModifyClusterSnapshotVersionEnum = {}));
 var PostModifyClusterSnapshotQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyClusterSnapshotQueryParams, _super);
     function PostModifyClusterSnapshotQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotQueryParams.prototype, "version", void 0);
     return PostModifyClusterSnapshotQueryParams;
-}(SpeakeasyBase));
-export { PostModifyClusterSnapshotQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyClusterSnapshotQueryParams = PostModifyClusterSnapshotQueryParams;
 var PostModifyClusterSnapshotHeaders = /** @class */ (function (_super) {
     __extends(PostModifyClusterSnapshotHeaders, _super);
     function PostModifyClusterSnapshotHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyClusterSnapshotHeaders;
-}(SpeakeasyBase));
-export { PostModifyClusterSnapshotHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyClusterSnapshotHeaders = PostModifyClusterSnapshotHeaders;
 var PostModifyClusterSnapshotRequest = /** @class */ (function (_super) {
     __extends(PostModifyClusterSnapshotRequest, _super);
     function PostModifyClusterSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyClusterSnapshotQueryParams)
     ], PostModifyClusterSnapshotRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyClusterSnapshotHeaders)
     ], PostModifyClusterSnapshotRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyClusterSnapshotRequest.prototype, "request", void 0);
     return PostModifyClusterSnapshotRequest;
-}(SpeakeasyBase));
-export { PostModifyClusterSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyClusterSnapshotRequest = PostModifyClusterSnapshotRequest;
 var PostModifyClusterSnapshotResponse = /** @class */ (function (_super) {
     __extends(PostModifyClusterSnapshotResponse, _super);
     function PostModifyClusterSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyClusterSnapshotResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyClusterSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyClusterSnapshotResponse.prototype, "statusCode", void 0);
     return PostModifyClusterSnapshotResponse;
-}(SpeakeasyBase));
-export { PostModifyClusterSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyClusterSnapshotResponse = PostModifyClusterSnapshotResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchCommunityResourceResponse = exports.SearchCommunityResourceRequest = exports.SearchCommunityResourceQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchCommunityResourceQueryParams = /** @class */ (function (_super) {
     __extends(SearchCommunityResourceQueryParams, _super);
     function SearchCommunityResourceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.community_resource.address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.community_resource.address" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "searchCommunityResourceAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.community_resource.city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.community_resource.city" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "searchCommunityResourceCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.community_resource.resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.community_resource.resource_type" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "searchCommunityResourceResourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.community_resource.state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.community_resource.state" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "searchCommunityResourceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.community_resource.zipcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.community_resource.zipcode" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "searchCommunityResourceZipcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchCommunityResourceQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchCommunityResourceQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchCommunityResourceQueryParams.prototype, "todate", void 0);
     return SearchCommunityResourceQueryParams;
-}(SpeakeasyBase));
-export { SearchCommunityResourceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchCommunityResourceQueryParams = SearchCommunityResourceQueryParams;
 var SearchCommunityResourceRequest = /** @class */ (function (_super) {
     __extends(SearchCommunityResourceRequest, _super);
     function SearchCommunityResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchCommunityResourceQueryParams)
     ], SearchCommunityResourceRequest.prototype, "queryParams", void 0);
     return SearchCommunityResourceRequest;
-}(SpeakeasyBase));
-export { SearchCommunityResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchCommunityResourceRequest = SearchCommunityResourceRequest;
 var SearchCommunityResourceResponse = /** @class */ (function (_super) {
     __extends(SearchCommunityResourceResponse, _super);
     function SearchCommunityResourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchCommunityResourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchCommunityResourceResponse.prototype, "statusCode", void 0);
     return SearchCommunityResourceResponse;
-}(SpeakeasyBase));
-export { SearchCommunityResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchCommunityResourceResponse = SearchCommunityResourceResponse;

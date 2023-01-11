@@ -33,8 +33,8 @@ export declare class SevenGetListOfPaymentsRequest extends SpeakeasyBase {
     queryParams: SevenGetListOfPaymentsQueryParams;
 }
 export declare class SevenGetListOfPaymentsResponse extends SpeakeasyBase {
-    sevenGetListOfPayments200ApplicationJsonObject?: SevenGetListOfPayments200ApplicationJson;
+    sevenGetListOfPayments200ApplicationJSONObject?: SevenGetListOfPayments200ApplicationJson;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

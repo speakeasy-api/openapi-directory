@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogEvent } from "./logevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseLogEventsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var logevent_1 = require("./logevent");
 var GetRelationalDatabaseLogEventsResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseLogEventsResult, _super);
     function GetRelationalDatabaseLogEventsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextBackwardToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextBackwardToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseLogEventsResult.prototype, "nextBackwardToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextForwardToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextForwardToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseLogEventsResult.prototype, "nextForwardToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLogEvents", elemType: LogEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLogEvents", elemType: logevent_1.LogEvent }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseLogEventsResult.prototype, "resourceLogEvents", void 0);
     return GetRelationalDatabaseLogEventsResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseLogEventsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseLogEventsResult = GetRelationalDatabaseLogEventsResult;

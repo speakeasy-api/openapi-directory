@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChildShard } from "./childshard";
-import { Record } from "./record";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRecordsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var childshard_1 = require("./childshard");
+var record_1 = require("./record");
 // GetRecordsOutput
 /**
  * Represents the output for <a>GetRecords</a>.
@@ -35,21 +38,21 @@ var GetRecordsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChildShards", elemType: ChildShard }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChildShards", elemType: childshard_1.ChildShard }),
         __metadata("design:type", Array)
     ], GetRecordsOutput.prototype, "childShards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MillisBehindLatest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MillisBehindLatest" }),
         __metadata("design:type", Number)
     ], GetRecordsOutput.prototype, "millisBehindLatest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextShardIterator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextShardIterator" }),
         __metadata("design:type", String)
     ], GetRecordsOutput.prototype, "nextShardIterator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Records", elemType: Record }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Records", elemType: record_1.RecordT }),
         __metadata("design:type", Array)
     ], GetRecordsOutput.prototype, "records", void 0);
     return GetRecordsOutput;
-}(SpeakeasyBase));
-export { GetRecordsOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetRecordsOutput = GetRecordsOutput;

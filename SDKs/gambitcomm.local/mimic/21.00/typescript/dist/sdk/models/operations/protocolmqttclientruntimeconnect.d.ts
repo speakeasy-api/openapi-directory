@@ -8,5 +8,5 @@ export declare class ProtocolMqttClientRuntimeConnectRequest extends SpeakeasyBa
 export declare class ProtocolMqttClientRuntimeConnectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientRuntimeConnect200ApplicationJsonStrings?: string[];
+    protocolMqttClientRuntimeConnect200ApplicationJSONStrings?: string[];
 }

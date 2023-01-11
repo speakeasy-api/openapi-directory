@@ -1,6 +1,9 @@
-export var FileHeaderInfoEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileHeaderInfoEnum = void 0;
+var FileHeaderInfoEnum;
 (function (FileHeaderInfoEnum) {
     FileHeaderInfoEnum["Use"] = "USE";
     FileHeaderInfoEnum["Ignore"] = "IGNORE";
     FileHeaderInfoEnum["None"] = "NONE";
-})(FileHeaderInfoEnum || (FileHeaderInfoEnum = {}));
+})(FileHeaderInfoEnum = exports.FileHeaderInfoEnum || (exports.FileHeaderInfoEnum = {}));

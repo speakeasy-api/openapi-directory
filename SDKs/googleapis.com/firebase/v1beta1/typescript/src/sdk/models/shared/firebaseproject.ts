@@ -15,7 +15,7 @@ export enum FirebaseProjectStateEnum {
 **/
 export class FirebaseProject extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;

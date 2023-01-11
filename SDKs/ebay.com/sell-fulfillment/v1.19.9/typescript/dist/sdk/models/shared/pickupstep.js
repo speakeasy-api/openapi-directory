@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PickupStep = void 0;
+var utils_1 = require("../../../internal/utils");
 // PickupStep
 /**
  * This type is used to indicate the merchant's store where the buyer will pickup their In-Store Pickup order. The pickupStep container is only returned for In-Store Pickup orders. The In-Store Pickup feature is supported in the US, Canada, UK, Germany, and Australia marketplaces.
@@ -33,9 +36,9 @@ var PickupStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantLocationKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantLocationKey" }),
         __metadata("design:type", String)
     ], PickupStep.prototype, "merchantLocationKey", void 0);
     return PickupStep;
-}(SpeakeasyBase));
-export { PickupStep };
+}(utils_1.SpeakeasyBase));
+exports.PickupStep = PickupStep;

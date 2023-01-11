@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebhookResource } from "./webhookresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWebhooksResponse = exports.ListWebhooksResponseLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var webhookresource_1 = require("./webhookresource");
 var ListWebhooksResponseLinks = /** @class */ (function (_super) {
     __extends(ListWebhooksResponseLinks, _super);
     function ListWebhooksResponseLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ListWebhooksResponseLinks.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], ListWebhooksResponseLinks.prototype, "prev", void 0);
     return ListWebhooksResponseLinks;
-}(SpeakeasyBase));
-export { ListWebhooksResponseLinks };
+}(utils_1.SpeakeasyBase));
+exports.ListWebhooksResponseLinks = ListWebhooksResponseLinks;
 // ListWebhooksResponse
 /**
  * Successful response to get all webhooks. This returns a paginated list of
@@ -53,13 +56,13 @@ var ListWebhooksResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: WebhookResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: webhookresource_1.WebhookResource }),
         __metadata("design:type", Array)
     ], ListWebhooksResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", ListWebhooksResponseLinks)
     ], ListWebhooksResponse.prototype, "links", void 0);
     return ListWebhooksResponse;
-}(SpeakeasyBase));
-export { ListWebhooksResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListWebhooksResponse = ListWebhooksResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbInstanceAutomatedBackupsReplication } from "./dbinstanceautomatedbackupsreplication";
-import { RestoreWindow } from "./restorewindow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbInstanceAutomatedBackup = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbinstanceautomatedbackupsreplicationlist_1 = require("./dbinstanceautomatedbackupsreplicationlist");
+var restorewindow_1 = require("./restorewindow");
 // DbInstanceAutomatedBackup
 /**
  * An automated backup of a DB instance. It consists of system backups, transaction logs, and the database instance properties that existed at the time you deleted the source instance.
@@ -35,109 +38,109 @@ var DbInstanceAutomatedBackup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstanceAutomatedBackup.prototype, "allocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstanceAutomatedBackup.prototype, "backupRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "dbInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "dbInstanceAutomatedBackupsArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbInstanceAutomatedBackupsReplication }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbinstanceautomatedbackupsreplicationlist_1.DbInstanceAutomatedBackupsReplicationList }),
         __metadata("design:type", Array)
     ], DbInstanceAutomatedBackup.prototype, "dbInstanceAutomatedBackupsReplications", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "dbiResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstanceAutomatedBackup.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstanceAutomatedBackup.prototype, "iamDatabaseAuthenticationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbInstanceAutomatedBackup.prototype, "instanceCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstanceAutomatedBackup.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "licenseModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "masterUsername", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "optionGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstanceAutomatedBackup.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RestoreWindow)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", restorewindow_1.RestoreWindow)
     ], DbInstanceAutomatedBackup.prototype, "restoreWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "storageType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "tdeCredentialArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstanceAutomatedBackup.prototype, "vpcId", void 0);
     return DbInstanceAutomatedBackup;
-}(SpeakeasyBase));
-export { DbInstanceAutomatedBackup };
+}(utils_1.SpeakeasyBase));
+exports.DbInstanceAutomatedBackup = DbInstanceAutomatedBackup;

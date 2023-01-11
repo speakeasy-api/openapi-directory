@@ -8,6 +8,6 @@ export declare class HeadCommercialCreditCardsRequest extends SpeakeasyBase {
 }
 export declare class HeadCommercialCreditCardsResponse extends SpeakeasyBase {
     contentType: string;
-    noResponse?: Map<string, any>;
+    noResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientGenderEnum } from "./patientgenderenum";
-import { AuthConfirmIdentifier } from "./authconfirmidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientDemographic = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientgenderenum_1 = require("./patientgenderenum");
+var authconfirmidentifier_1 = require("./authconfirmidentifier");
 // PatientDemographic
 /**
  * Demographic details are only required for demographic auth at this point. Demographic details must be same as registered
@@ -35,21 +38,21 @@ var PatientDemographic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateOfBirth" }),
         __metadata("design:type", String)
     ], PatientDemographic.prototype, "dateOfBirth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], PatientDemographic.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
-        __metadata("design:type", AuthConfirmIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
+        __metadata("design:type", authconfirmidentifier_1.AuthConfirmIdentifier)
     ], PatientDemographic.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PatientDemographic.prototype, "name", void 0);
     return PatientDemographic;
-}(SpeakeasyBase));
-export { PatientDemographic };
+}(utils_1.SpeakeasyBase));
+exports.PatientDemographic = PatientDemographic;

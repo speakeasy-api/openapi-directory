@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupsAddOwnerResponse = exports.GroupsAddOwnerRequest = exports.GroupsAddOwnerRequests = exports.GroupsAddOwnerQueryParams = exports.GroupsAddOwnerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GroupsAddOwnerPathParams = /** @class */ (function (_super) {
     __extends(GroupsAddOwnerPathParams, _super);
     function GroupsAddOwnerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=objectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=objectId" }),
         __metadata("design:type", String)
     ], GroupsAddOwnerPathParams.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
         __metadata("design:type", String)
-    ], GroupsAddOwnerPathParams.prototype, "tenantId", void 0);
+    ], GroupsAddOwnerPathParams.prototype, "tenantID", void 0);
     return GroupsAddOwnerPathParams;
-}(SpeakeasyBase));
-export { GroupsAddOwnerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GroupsAddOwnerPathParams = GroupsAddOwnerPathParams;
 var GroupsAddOwnerQueryParams = /** @class */ (function (_super) {
     __extends(GroupsAddOwnerQueryParams, _super);
     function GroupsAddOwnerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], GroupsAddOwnerQueryParams.prototype, "apiVersion", void 0);
     return GroupsAddOwnerQueryParams;
-}(SpeakeasyBase));
-export { GroupsAddOwnerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GroupsAddOwnerQueryParams = GroupsAddOwnerQueryParams;
 var GroupsAddOwnerRequests = /** @class */ (function (_super) {
     __extends(GroupsAddOwnerRequests, _super);
     function GroupsAddOwnerRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], GroupsAddOwnerRequests.prototype, "addOwnerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
+        __metadata("design:type", Object)
     ], GroupsAddOwnerRequests.prototype, "addOwnerParameters1", void 0);
     return GroupsAddOwnerRequests;
-}(SpeakeasyBase));
-export { GroupsAddOwnerRequests };
+}(utils_1.SpeakeasyBase));
+exports.GroupsAddOwnerRequests = GroupsAddOwnerRequests;
 var GroupsAddOwnerRequest = /** @class */ (function (_super) {
     __extends(GroupsAddOwnerRequest, _super);
     function GroupsAddOwnerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GroupsAddOwnerPathParams)
     ], GroupsAddOwnerRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GroupsAddOwnerQueryParams)
     ], GroupsAddOwnerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GroupsAddOwnerRequests)
     ], GroupsAddOwnerRequest.prototype, "request", void 0);
     return GroupsAddOwnerRequest;
-}(SpeakeasyBase));
-export { GroupsAddOwnerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GroupsAddOwnerRequest = GroupsAddOwnerRequest;
 var GroupsAddOwnerResponse = /** @class */ (function (_super) {
     __extends(GroupsAddOwnerResponse, _super);
     function GroupsAddOwnerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GroupsAddOwnerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GraphError)
     ], GroupsAddOwnerResponse.prototype, "graphError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GroupsAddOwnerResponse.prototype, "statusCode", void 0);
     return GroupsAddOwnerResponse;
-}(SpeakeasyBase));
-export { GroupsAddOwnerResponse };
+}(utils_1.SpeakeasyBase));
+exports.GroupsAddOwnerResponse = GroupsAddOwnerResponse;

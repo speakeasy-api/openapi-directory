@@ -9,7 +9,7 @@ export declare class RequestApiKeyRequestBody extends SpeakeasyBase {
     userLastName: string;
 }
 export declare class RequestApiKeyRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: RequestApiKeyRequestBody;
 }
 export declare class RequestApiKeyResponse extends SpeakeasyBase {

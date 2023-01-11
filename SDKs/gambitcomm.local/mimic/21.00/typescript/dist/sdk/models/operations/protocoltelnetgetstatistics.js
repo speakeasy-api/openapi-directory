@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetGetStatisticsResponse = exports.ProtocolTelnetGetStatisticsRequest = exports.ProtocolTelnetGetStatisticsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetGetStatisticsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetGetStatisticsPathParams, _super);
     function ProtocolTelnetGetStatisticsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetGetStatisticsPathParams.prototype, "agentNum", void 0);
     return ProtocolTelnetGetStatisticsPathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetGetStatisticsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetGetStatisticsPathParams = ProtocolTelnetGetStatisticsPathParams;
 var ProtocolTelnetGetStatisticsRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetGetStatisticsRequest, _super);
     function ProtocolTelnetGetStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetGetStatisticsPathParams)
     ], ProtocolTelnetGetStatisticsRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetGetStatisticsRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetGetStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetGetStatisticsRequest = ProtocolTelnetGetStatisticsRequest;
 var ProtocolTelnetGetStatisticsResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetGetStatisticsResponse, _super);
     function ProtocolTelnetGetStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetGetStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetGetStatisticsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolTelnetGetStatisticsResponse.prototype, "protocolTelnetGetStatistics200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolTelnetGetStatisticsResponse.prototype, "protocolTelnetGetStatistics200ApplicationJSONInt32Integers", void 0);
     return ProtocolTelnetGetStatisticsResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetGetStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetGetStatisticsResponse = ProtocolTelnetGetStatisticsResponse;

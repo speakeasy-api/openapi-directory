@@ -23,6 +23,6 @@ export declare class DrivelabelsLabelsRevisionsPermissionsBatchDeleteRequest ext
 }
 export declare class DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

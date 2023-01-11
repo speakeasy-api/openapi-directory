@@ -15,7 +15,7 @@ export class CreatePredictorRequest extends SpeakeasyBase {
   algorithmArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=AutoMLOverrideStrategy" })
-  autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+  autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
 
   @SpeakeasyMetadata({ data: "json, name=EncryptionConfig" })
   encryptionConfig?: EncryptionConfig;
@@ -42,10 +42,10 @@ export class CreatePredictorRequest extends SpeakeasyBase {
   optimizationMetric?: OptimizationMetricEnum;
 
   @SpeakeasyMetadata({ data: "json, name=PerformAutoML" })
-  performAutoMl?: boolean;
+  performAutoML?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PerformHPO" })
-  performHpo?: boolean;
+  performHPO?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PredictorName" })
   predictorName: string;
@@ -54,5 +54,5 @@ export class CreatePredictorRequest extends SpeakeasyBase {
   tags?: Tag[];
 
   @SpeakeasyMetadata({ data: "json, name=TrainingParameters" })
-  trainingParameters?: Map<string, string>;
+  trainingParameters?: Record<string, string>;
 }

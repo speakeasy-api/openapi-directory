@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityInputModel } from "./availabilityinputmodel";
-import { ServiceFeesUpdateModel } from "./servicefeesupdatemodel";
-import { ServiceOptionsUpdateModel } from "./serviceoptionsupdatemodel";
-import { ServiceSettingsUpdateModel } from "./servicesettingsupdatemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityinputmodel_1 = require("./availabilityinputmodel");
+var servicefeesupdatemodel_1 = require("./servicefeesupdatemodel");
+var serviceoptionsupdatemodel_1 = require("./serviceoptionsupdatemodel");
+var servicesettingsupdatemodel_1 = require("./servicesettingsupdatemodel");
 var ServiceUpdateModel = /** @class */ (function (_super) {
     __extends(ServiceUpdateModel, _super);
     function ServiceUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availability" }),
-        __metadata("design:type", AvailabilityInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availability" }),
+        __metadata("design:type", availabilityinputmodel_1.AvailabilityInputModel)
     ], ServiceUpdateModel.prototype, "availability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingInterval" }),
         __metadata("design:type", Number)
     ], ServiceUpdateModel.prototype, "bookingInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingLimit" }),
         __metadata("design:type", Number)
     ], ServiceUpdateModel.prototype, "bookingLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], ServiceUpdateModel.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fees" }),
-        __metadata("design:type", ServiceFeesUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fees" }),
+        __metadata("design:type", servicefeesupdatemodel_1.ServiceFeesUpdateModel)
     ], ServiceUpdateModel.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCapacity" }),
         __metadata("design:type", Number)
     ], ServiceUpdateModel.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxGroupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxGroupSize" }),
         __metadata("design:type", Number)
     ], ServiceUpdateModel.prototype, "maxGroupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaPageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaPageUrl" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "mediaPageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", ServiceOptionsUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", serviceoptionsupdatemodel_1.ServiceOptionsUpdateModel)
     ], ServiceUpdateModel.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], ServiceUpdateModel.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceGroupId" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "serviceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", ServiceSettingsUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", servicesettingsupdatemodel_1.ServiceSettingsUpdateModel)
     ], ServiceUpdateModel.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ServiceUpdateModel.prototype, "type", void 0);
     return ServiceUpdateModel;
-}(SpeakeasyBase));
-export { ServiceUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceUpdateModel = ServiceUpdateModel;

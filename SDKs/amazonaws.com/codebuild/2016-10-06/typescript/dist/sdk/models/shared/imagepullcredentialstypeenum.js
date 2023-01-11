@@ -1,5 +1,8 @@
-export var ImagePullCredentialsTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImagePullCredentialsTypeEnum = void 0;
+var ImagePullCredentialsTypeEnum;
 (function (ImagePullCredentialsTypeEnum) {
     ImagePullCredentialsTypeEnum["Codebuild"] = "CODEBUILD";
     ImagePullCredentialsTypeEnum["ServiceRole"] = "SERVICE_ROLE";
-})(ImagePullCredentialsTypeEnum || (ImagePullCredentialsTypeEnum = {}));
+})(ImagePullCredentialsTypeEnum = exports.ImagePullCredentialsTypeEnum || (exports.ImagePullCredentialsTypeEnum = {}));

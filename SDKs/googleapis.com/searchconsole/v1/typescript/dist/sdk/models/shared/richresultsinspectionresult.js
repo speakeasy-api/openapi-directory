@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectedItems } from "./detecteditems";
-export var RichResultsInspectionResultVerdictEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RichResultsInspectionResult = exports.RichResultsInspectionResultVerdictEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var detecteditems_1 = require("./detecteditems");
+var RichResultsInspectionResultVerdictEnum;
 (function (RichResultsInspectionResultVerdictEnum) {
     RichResultsInspectionResultVerdictEnum["VerdictUnspecified"] = "VERDICT_UNSPECIFIED";
     RichResultsInspectionResultVerdictEnum["Pass"] = "PASS";
     RichResultsInspectionResultVerdictEnum["Partial"] = "PARTIAL";
     RichResultsInspectionResultVerdictEnum["Fail"] = "FAIL";
     RichResultsInspectionResultVerdictEnum["Neutral"] = "NEUTRAL";
-})(RichResultsInspectionResultVerdictEnum || (RichResultsInspectionResultVerdictEnum = {}));
+})(RichResultsInspectionResultVerdictEnum = exports.RichResultsInspectionResultVerdictEnum || (exports.RichResultsInspectionResultVerdictEnum = {}));
 // RichResultsInspectionResult
 /**
  * Rich-Results inspection result, including any rich results found at this URL.
@@ -42,13 +45,13 @@ var RichResultsInspectionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedItems", elemType: DetectedItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedItems", elemType: detecteditems_1.DetectedItems }),
         __metadata("design:type", Array)
     ], RichResultsInspectionResult.prototype, "detectedItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verdict" }),
         __metadata("design:type", String)
     ], RichResultsInspectionResult.prototype, "verdict", void 0);
     return RichResultsInspectionResult;
-}(SpeakeasyBase));
-export { RichResultsInspectionResult };
+}(utils_1.SpeakeasyBase));
+exports.RichResultsInspectionResult = RichResultsInspectionResult;

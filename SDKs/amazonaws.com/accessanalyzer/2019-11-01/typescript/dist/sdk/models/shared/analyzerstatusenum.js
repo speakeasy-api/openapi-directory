@@ -1,7 +1,10 @@
-export var AnalyzerStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzerStatusEnum = void 0;
+var AnalyzerStatusEnum;
 (function (AnalyzerStatusEnum) {
     AnalyzerStatusEnum["Active"] = "ACTIVE";
     AnalyzerStatusEnum["Creating"] = "CREATING";
     AnalyzerStatusEnum["Disabled"] = "DISABLED";
     AnalyzerStatusEnum["Failed"] = "FAILED";
-})(AnalyzerStatusEnum || (AnalyzerStatusEnum = {}));
+})(AnalyzerStatusEnum = exports.AnalyzerStatusEnum || (exports.AnalyzerStatusEnum = {}));

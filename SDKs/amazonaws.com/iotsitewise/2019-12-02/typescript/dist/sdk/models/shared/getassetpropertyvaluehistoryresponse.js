@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetPropertyValue } from "./assetpropertyvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssetPropertyValueHistoryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetpropertyvalue_1 = require("./assetpropertyvalue");
 var GetAssetPropertyValueHistoryResponse = /** @class */ (function (_super) {
     __extends(GetAssetPropertyValueHistoryResponse, _super);
     function GetAssetPropertyValueHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetPropertyValueHistory", elemType: AssetPropertyValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetPropertyValueHistory", elemType: assetpropertyvalue_1.AssetPropertyValue }),
         __metadata("design:type", Array)
     ], GetAssetPropertyValueHistoryResponse.prototype, "assetPropertyValueHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetAssetPropertyValueHistoryResponse.prototype, "nextToken", void 0);
     return GetAssetPropertyValueHistoryResponse;
-}(SpeakeasyBase));
-export { GetAssetPropertyValueHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssetPropertyValueHistoryResponse = GetAssetPropertyValueHistoryResponse;

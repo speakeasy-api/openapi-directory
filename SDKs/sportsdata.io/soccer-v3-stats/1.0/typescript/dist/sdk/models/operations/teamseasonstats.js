@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamSeasonStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamSeasonStatsResponse = exports.TeamSeasonStatsRequest = exports.TeamSeasonStatsPathParams = exports.TeamSeasonStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamSeasonStatsFormatEnum;
 (function (TeamSeasonStatsFormatEnum) {
     TeamSeasonStatsFormatEnum["Xml"] = "xml";
     TeamSeasonStatsFormatEnum["Json"] = "json";
-})(TeamSeasonStatsFormatEnum || (TeamSeasonStatsFormatEnum = {}));
+})(TeamSeasonStatsFormatEnum = exports.TeamSeasonStatsFormatEnum || (exports.TeamSeasonStatsFormatEnum = {}));
 var TeamSeasonStatsPathParams = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsPathParams, _super);
     function TeamSeasonStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamSeasonStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=roundid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=roundid" }),
         __metadata("design:type", String)
     ], TeamSeasonStatsPathParams.prototype, "roundid", void 0);
     return TeamSeasonStatsPathParams;
-}(SpeakeasyBase));
-export { TeamSeasonStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsPathParams = TeamSeasonStatsPathParams;
 var TeamSeasonStatsRequest = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsRequest, _super);
     function TeamSeasonStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamSeasonStatsPathParams)
     ], TeamSeasonStatsRequest.prototype, "pathParams", void 0);
     return TeamSeasonStatsRequest;
-}(SpeakeasyBase));
-export { TeamSeasonStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsRequest = TeamSeasonStatsRequest;
 var TeamSeasonStatsResponse = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsResponse, _super);
     function TeamSeasonStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamSeasonStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamSeasonStatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamSeasonStatsResponse.prototype, "teamSeasons", void 0);
     return TeamSeasonStatsResponse;
-}(SpeakeasyBase));
-export { TeamSeasonStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsResponse = TeamSeasonStatsResponse;

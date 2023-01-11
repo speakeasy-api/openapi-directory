@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedScalingStatusEnum } from "./managedscalingstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedScaling = void 0;
+var utils_1 = require("../../../internal/utils");
+var managedscalingstatusenum_1 = require("./managedscalingstatusenum");
 // ManagedScaling
 /**
  * <p>The managed scaling settings for the Auto Scaling group capacity provider.</p> <p>When managed scaling is enabled, Amazon ECS manages the scale-in and scale-out actions of the Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon ECS-managed CloudWatch metric with the specified <code>targetCapacity</code> value as the target value for the metric. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling">Using Managed Scaling</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <p>If managed scaling is disabled, the user must manage the scaling of the Auto Scaling group.</p>
@@ -34,25 +37,25 @@ var ManagedScaling = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceWarmupPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceWarmupPeriod" }),
         __metadata("design:type", Number)
     ], ManagedScaling.prototype, "instanceWarmupPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumScalingStepSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumScalingStepSize" }),
         __metadata("design:type", Number)
     ], ManagedScaling.prototype, "maximumScalingStepSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumScalingStepSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumScalingStepSize" }),
         __metadata("design:type", Number)
     ], ManagedScaling.prototype, "minimumScalingStepSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ManagedScaling.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetCapacity" }),
         __metadata("design:type", Number)
     ], ManagedScaling.prototype, "targetCapacity", void 0);
     return ManagedScaling;
-}(SpeakeasyBase));
-export { ManagedScaling };
+}(utils_1.SpeakeasyBase));
+exports.ManagedScaling = ManagedScaling;

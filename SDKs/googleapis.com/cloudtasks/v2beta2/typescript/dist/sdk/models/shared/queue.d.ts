@@ -16,7 +16,7 @@ export declare class Queue extends SpeakeasyBase {
     appEngineHttpTarget?: AppEngineHttpTarget;
     httpTarget?: HttpTarget;
     name?: string;
-    pullTarget?: Map<string, any>;
+    pullTarget?: Record<string, any>;
     purgeTime?: string;
     rateLimits?: RateLimits;
     retryConfig?: RetryConfig;

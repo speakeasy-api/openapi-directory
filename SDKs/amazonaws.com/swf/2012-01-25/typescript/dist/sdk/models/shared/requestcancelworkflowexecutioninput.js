@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestCancelWorkflowExecutionInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var RequestCancelWorkflowExecutionInput = /** @class */ (function (_super) {
     __extends(RequestCancelWorkflowExecutionInput, _super);
     function RequestCancelWorkflowExecutionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], RequestCancelWorkflowExecutionInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runId" }),
         __metadata("design:type", String)
     ], RequestCancelWorkflowExecutionInput.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowId" }),
         __metadata("design:type", String)
     ], RequestCancelWorkflowExecutionInput.prototype, "workflowId", void 0);
     return RequestCancelWorkflowExecutionInput;
-}(SpeakeasyBase));
-export { RequestCancelWorkflowExecutionInput };
+}(utils_1.SpeakeasyBase));
+exports.RequestCancelWorkflowExecutionInput = RequestCancelWorkflowExecutionInput;

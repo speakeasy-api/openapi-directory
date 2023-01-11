@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportJobResponse } from "./importjobresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var importjobresponse_1 = require("./importjobresponse");
 // ImportJobsResponse
 /**
  * Provides information about the status and settings of all the import jobs that are associated with an application or segment. An import job is a job that imports endpoint definitions from one or more files.
@@ -34,13 +37,13 @@ var ImportJobsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Item", elemType: ImportJobResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Item", elemType: importjobresponse_1.ImportJobResponse }),
         __metadata("design:type", Array)
     ], ImportJobsResponse.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ImportJobsResponse.prototype, "nextToken", void 0);
     return ImportJobsResponse;
-}(SpeakeasyBase));
-export { ImportJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ImportJobsResponse = ImportJobsResponse;

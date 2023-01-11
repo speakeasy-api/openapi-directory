@@ -11,7 +11,7 @@ import { TppMessage401Sbs } from "./tppmessage401sbs";
 **/
 export class Error401NgSbs extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=tppMessages", elemType: TppMessage401Sbs })
   tppMessages?: TppMessage401Sbs[];

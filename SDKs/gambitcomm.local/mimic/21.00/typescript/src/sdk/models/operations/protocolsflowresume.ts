@@ -22,5 +22,5 @@ export class ProtocolSflowResumeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSflowResume200ApplicationJsonString?: string;
+  protocolSflowResume200ApplicationJSONString?: string;
 }

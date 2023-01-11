@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecuteCommandLogConfiguration } from "./executecommandlogconfiguration";
-import { ExecuteCommandLoggingEnum } from "./executecommandloggingenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecuteCommandConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var executecommandlogconfiguration_1 = require("./executecommandlogconfiguration");
+var executecommandloggingenum_1 = require("./executecommandloggingenum");
 // ExecuteCommandConfiguration
 /**
  * The details of the execute command configuration.
@@ -35,17 +38,17 @@ var ExecuteCommandConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], ExecuteCommandConfiguration.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logConfiguration" }),
-        __metadata("design:type", ExecuteCommandLogConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logConfiguration" }),
+        __metadata("design:type", executecommandlogconfiguration_1.ExecuteCommandLogConfiguration)
     ], ExecuteCommandConfiguration.prototype, "logConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logging" }),
         __metadata("design:type", String)
     ], ExecuteCommandConfiguration.prototype, "logging", void 0);
     return ExecuteCommandConfiguration;
-}(SpeakeasyBase));
-export { ExecuteCommandConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ExecuteCommandConfiguration = ExecuteCommandConfiguration;

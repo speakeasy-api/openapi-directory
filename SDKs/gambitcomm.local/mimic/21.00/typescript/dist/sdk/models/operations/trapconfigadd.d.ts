@@ -10,5 +10,5 @@ export declare class TrapConfigAddRequest extends SpeakeasyBase {
 export declare class TrapConfigAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    trapConfigAdd200ApplicationJsonString?: string;
+    trapConfigAdd200ApplicationJSONString?: string;
 }

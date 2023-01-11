@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AbortVaultLockResponse = exports.AbortVaultLockRequest = exports.AbortVaultLockHeaders = exports.AbortVaultLockPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AbortVaultLockPathParams = /** @class */ (function (_super) {
     __extends(AbortVaultLockPathParams, _super);
     function AbortVaultLockPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], AbortVaultLockPathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=vaultName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=vaultName" }),
         __metadata("design:type", String)
     ], AbortVaultLockPathParams.prototype, "vaultName", void 0);
     return AbortVaultLockPathParams;
-}(SpeakeasyBase));
-export { AbortVaultLockPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AbortVaultLockPathParams = AbortVaultLockPathParams;
 var AbortVaultLockHeaders = /** @class */ (function (_super) {
     __extends(AbortVaultLockHeaders, _super);
     function AbortVaultLockHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], AbortVaultLockHeaders.prototype, "xAmzSignedHeaders", void 0);
     return AbortVaultLockHeaders;
-}(SpeakeasyBase));
-export { AbortVaultLockHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AbortVaultLockHeaders = AbortVaultLockHeaders;
 var AbortVaultLockRequest = /** @class */ (function (_super) {
     __extends(AbortVaultLockRequest, _super);
     function AbortVaultLockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AbortVaultLockPathParams)
     ], AbortVaultLockRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AbortVaultLockHeaders)
     ], AbortVaultLockRequest.prototype, "headers", void 0);
     return AbortVaultLockRequest;
-}(SpeakeasyBase));
-export { AbortVaultLockRequest };
+}(utils_1.SpeakeasyBase));
+exports.AbortVaultLockRequest = AbortVaultLockRequest;
 var AbortVaultLockResponse = /** @class */ (function (_super) {
     __extends(AbortVaultLockResponse, _super);
     function AbortVaultLockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AbortVaultLockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AbortVaultLockResponse.prototype, "invalidParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AbortVaultLockResponse.prototype, "missingParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AbortVaultLockResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AbortVaultLockResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AbortVaultLockResponse.prototype, "statusCode", void 0);
     return AbortVaultLockResponse;
-}(SpeakeasyBase));
-export { AbortVaultLockResponse };
+}(utils_1.SpeakeasyBase));
+exports.AbortVaultLockResponse = AbortVaultLockResponse;

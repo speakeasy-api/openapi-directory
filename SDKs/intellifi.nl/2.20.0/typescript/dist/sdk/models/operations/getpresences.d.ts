@@ -39,5 +39,5 @@ export declare class GetPresencesRequest extends SpeakeasyBase {
 export declare class GetPresencesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPresences200ApplicationJsonObject?: GetPresences200ApplicationJson;
+    getPresences200ApplicationJSONObject?: GetPresences200ApplicationJson;
 }

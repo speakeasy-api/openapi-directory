@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Option } from "./option";
-export var FieldTypeDefinitionFieldTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldTypeDefinition = exports.FieldTypeDefinitionTypeEnum = exports.FieldTypeDefinitionReferencedObjectTypeEnum = exports.FieldTypeDefinitionFieldTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var option_1 = require("./option");
+var FieldTypeDefinitionFieldTypeEnum;
 (function (FieldTypeDefinitionFieldTypeEnum) {
     FieldTypeDefinitionFieldTypeEnum["Booleancheckbox"] = "booleancheckbox";
     FieldTypeDefinitionFieldTypeEnum["Checkbox"] = "checkbox";
@@ -41,8 +44,8 @@ export var FieldTypeDefinitionFieldTypeEnum;
     FieldTypeDefinitionFieldTypeEnum["CalculationScore"] = "calculation_score";
     FieldTypeDefinitionFieldTypeEnum["CalculationReadTime"] = "calculation_read_time";
     FieldTypeDefinitionFieldTypeEnum["Unknown"] = "unknown";
-})(FieldTypeDefinitionFieldTypeEnum || (FieldTypeDefinitionFieldTypeEnum = {}));
-export var FieldTypeDefinitionReferencedObjectTypeEnum;
+})(FieldTypeDefinitionFieldTypeEnum = exports.FieldTypeDefinitionFieldTypeEnum || (exports.FieldTypeDefinitionFieldTypeEnum = {}));
+var FieldTypeDefinitionReferencedObjectTypeEnum;
 (function (FieldTypeDefinitionReferencedObjectTypeEnum) {
     FieldTypeDefinitionReferencedObjectTypeEnum["Contact"] = "CONTACT";
     FieldTypeDefinitionReferencedObjectTypeEnum["Company"] = "COMPANY";
@@ -106,8 +109,8 @@ export var FieldTypeDefinitionReferencedObjectTypeEnum;
     FieldTypeDefinitionReferencedObjectTypeEnum["Snippet"] = "SNIPPET";
     FieldTypeDefinitionReferencedObjectTypeEnum["Template"] = "TEMPLATE";
     FieldTypeDefinitionReferencedObjectTypeEnum["Unknown"] = "UNKNOWN";
-})(FieldTypeDefinitionReferencedObjectTypeEnum || (FieldTypeDefinitionReferencedObjectTypeEnum = {}));
-export var FieldTypeDefinitionTypeEnum;
+})(FieldTypeDefinitionReferencedObjectTypeEnum = exports.FieldTypeDefinitionReferencedObjectTypeEnum || (exports.FieldTypeDefinitionReferencedObjectTypeEnum = {}));
+var FieldTypeDefinitionTypeEnum;
 (function (FieldTypeDefinitionTypeEnum) {
     FieldTypeDefinitionTypeEnum["String"] = "string";
     FieldTypeDefinitionTypeEnum["Number"] = "number";
@@ -119,7 +122,7 @@ export var FieldTypeDefinitionTypeEnum;
     FieldTypeDefinitionTypeEnum["CurrencyNumber"] = "currency_number";
     FieldTypeDefinitionTypeEnum["Json"] = "json";
     FieldTypeDefinitionTypeEnum["ObjectCoordinates"] = "object_coordinates";
-})(FieldTypeDefinitionTypeEnum || (FieldTypeDefinitionTypeEnum = {}));
+})(FieldTypeDefinitionTypeEnum = exports.FieldTypeDefinitionTypeEnum || (exports.FieldTypeDefinitionTypeEnum = {}));
 // FieldTypeDefinition
 /**
  * The data type expected by an input field.
@@ -130,29 +133,29 @@ var FieldTypeDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldType" }),
         __metadata("design:type", String)
     ], FieldTypeDefinition.prototype, "fieldType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FieldTypeDefinition.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options", elemType: Option }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options", elemType: option_1.Option }),
         __metadata("design:type", Array)
     ], FieldTypeDefinition.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optionsUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optionsUrl" }),
         __metadata("design:type", String)
     ], FieldTypeDefinition.prototype, "optionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referencedObjectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referencedObjectType" }),
         __metadata("design:type", String)
     ], FieldTypeDefinition.prototype, "referencedObjectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FieldTypeDefinition.prototype, "type", void 0);
     return FieldTypeDefinition;
-}(SpeakeasyBase));
-export { FieldTypeDefinition };
+}(utils_1.SpeakeasyBase));
+exports.FieldTypeDefinition = FieldTypeDefinition;

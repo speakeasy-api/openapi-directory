@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEnableAvailabilityZonesForLoadBalancerActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnableAvailabilityZonesForLoadBalancerResponse = exports.GetEnableAvailabilityZonesForLoadBalancerRequest = exports.GetEnableAvailabilityZonesForLoadBalancerHeaders = exports.GetEnableAvailabilityZonesForLoadBalancerQueryParams = exports.GetEnableAvailabilityZonesForLoadBalancerVersionEnum = exports.GetEnableAvailabilityZonesForLoadBalancerActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEnableAvailabilityZonesForLoadBalancerActionEnum;
 (function (GetEnableAvailabilityZonesForLoadBalancerActionEnum) {
     GetEnableAvailabilityZonesForLoadBalancerActionEnum["EnableAvailabilityZonesForLoadBalancer"] = "EnableAvailabilityZonesForLoadBalancer";
-})(GetEnableAvailabilityZonesForLoadBalancerActionEnum || (GetEnableAvailabilityZonesForLoadBalancerActionEnum = {}));
-export var GetEnableAvailabilityZonesForLoadBalancerVersionEnum;
+})(GetEnableAvailabilityZonesForLoadBalancerActionEnum = exports.GetEnableAvailabilityZonesForLoadBalancerActionEnum || (exports.GetEnableAvailabilityZonesForLoadBalancerActionEnum = {}));
+var GetEnableAvailabilityZonesForLoadBalancerVersionEnum;
 (function (GetEnableAvailabilityZonesForLoadBalancerVersionEnum) {
     GetEnableAvailabilityZonesForLoadBalancerVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(GetEnableAvailabilityZonesForLoadBalancerVersionEnum || (GetEnableAvailabilityZonesForLoadBalancerVersionEnum = {}));
+})(GetEnableAvailabilityZonesForLoadBalancerVersionEnum = exports.GetEnableAvailabilityZonesForLoadBalancerVersionEnum || (exports.GetEnableAvailabilityZonesForLoadBalancerVersionEnum = {}));
 var GetEnableAvailabilityZonesForLoadBalancerQueryParams = /** @class */ (function (_super) {
     __extends(GetEnableAvailabilityZonesForLoadBalancerQueryParams, _super);
     function GetEnableAvailabilityZonesForLoadBalancerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AvailabilityZones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AvailabilityZones" }),
         __metadata("design:type", Array)
     ], GetEnableAvailabilityZonesForLoadBalancerQueryParams.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerQueryParams.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerQueryParams.prototype, "version", void 0);
     return GetEnableAvailabilityZonesForLoadBalancerQueryParams;
-}(SpeakeasyBase));
-export { GetEnableAvailabilityZonesForLoadBalancerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAvailabilityZonesForLoadBalancerQueryParams = GetEnableAvailabilityZonesForLoadBalancerQueryParams;
 var GetEnableAvailabilityZonesForLoadBalancerHeaders = /** @class */ (function (_super) {
     __extends(GetEnableAvailabilityZonesForLoadBalancerHeaders, _super);
     function GetEnableAvailabilityZonesForLoadBalancerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetEnableAvailabilityZonesForLoadBalancerHeaders;
-}(SpeakeasyBase));
-export { GetEnableAvailabilityZonesForLoadBalancerHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAvailabilityZonesForLoadBalancerHeaders = GetEnableAvailabilityZonesForLoadBalancerHeaders;
 var GetEnableAvailabilityZonesForLoadBalancerRequest = /** @class */ (function (_super) {
     __extends(GetEnableAvailabilityZonesForLoadBalancerRequest, _super);
     function GetEnableAvailabilityZonesForLoadBalancerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableAvailabilityZonesForLoadBalancerQueryParams)
     ], GetEnableAvailabilityZonesForLoadBalancerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableAvailabilityZonesForLoadBalancerHeaders)
     ], GetEnableAvailabilityZonesForLoadBalancerRequest.prototype, "headers", void 0);
     return GetEnableAvailabilityZonesForLoadBalancerRequest;
-}(SpeakeasyBase));
-export { GetEnableAvailabilityZonesForLoadBalancerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAvailabilityZonesForLoadBalancerRequest = GetEnableAvailabilityZonesForLoadBalancerRequest;
 var GetEnableAvailabilityZonesForLoadBalancerResponse = /** @class */ (function (_super) {
     __extends(GetEnableAvailabilityZonesForLoadBalancerResponse, _super);
     function GetEnableAvailabilityZonesForLoadBalancerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEnableAvailabilityZonesForLoadBalancerResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnableAvailabilityZonesForLoadBalancerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnableAvailabilityZonesForLoadBalancerResponse.prototype, "statusCode", void 0);
     return GetEnableAvailabilityZonesForLoadBalancerResponse;
-}(SpeakeasyBase));
-export { GetEnableAvailabilityZonesForLoadBalancerResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAvailabilityZonesForLoadBalancerResponse = GetEnableAvailabilityZonesForLoadBalancerResponse;

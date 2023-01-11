@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrefixList } from "./prefixlist";
 
 
 
 export class DescribePrefixListsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: PrefixList })
-  prefixLists?: PrefixList[];
+  @SpeakeasyMetadata()
+  prefixLists?: Record<string, any>;
 }

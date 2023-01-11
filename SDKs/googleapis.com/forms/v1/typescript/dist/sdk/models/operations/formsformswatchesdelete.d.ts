@@ -56,6 +56,6 @@ export declare class FormsFormsWatchesDeleteRequest extends SpeakeasyBase {
 }
 export declare class FormsFormsWatchesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1SearchUrisResponseThreatUri = exports.GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum;
 (function (GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum) {
     GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum["Malware"] = "MALWARE";
     GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum["SocialEngineering"] = "SOCIAL_ENGINEERING";
     GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum["UnwantedSoftware"] = "UNWANTED_SOFTWARE";
     GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum["SocialEngineeringExtendedCoverage"] = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE";
-})(GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum || (GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum = {}));
+})(GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum = exports.GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum || (exports.GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum = {}));
 // GoogleCloudWebriskV1SearchUrisResponseThreatUri
 /**
  * Contains threat information on a matching uri.
@@ -41,13 +44,13 @@ var GoogleCloudWebriskV1SearchUrisResponseThreatUri = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], GoogleCloudWebriskV1SearchUrisResponseThreatUri.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatTypes" }),
         __metadata("design:type", Array)
     ], GoogleCloudWebriskV1SearchUrisResponseThreatUri.prototype, "threatTypes", void 0);
     return GoogleCloudWebriskV1SearchUrisResponseThreatUri;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1SearchUrisResponseThreatUri };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1SearchUrisResponseThreatUri = GoogleCloudWebriskV1SearchUrisResponseThreatUri;

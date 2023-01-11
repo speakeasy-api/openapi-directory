@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetVolumesSortEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVolumesResponse = exports.GetVolumesRequest = exports.GetVolumes200ApplicationJson = exports.GetVolumes200ApplicationJsonVolumes = exports.GetVolumes200ApplicationJsonVolumesStatusEnum = exports.GetVolumes200ApplicationJsonVolumesProtection = exports.GetVolumes200ApplicationJsonVolumesLocation = exports.GetVolumes200ApplicationJsonMeta = exports.GetVolumes200ApplicationJsonMetaPagination = exports.GetVolumesQueryParams = exports.GetVolumesStatusEnum = exports.GetVolumesSortEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetVolumesSortEnum;
 (function (GetVolumesSortEnum) {
     GetVolumesSortEnum["Id"] = "id";
     GetVolumesSortEnum["IdAsc"] = "id:asc";
@@ -34,80 +37,80 @@ export var GetVolumesSortEnum;
     GetVolumesSortEnum["Created"] = "created";
     GetVolumesSortEnum["CreatedAsc"] = "created:asc";
     GetVolumesSortEnum["CreatedDesc"] = "created:desc";
-})(GetVolumesSortEnum || (GetVolumesSortEnum = {}));
-export var GetVolumesStatusEnum;
+})(GetVolumesSortEnum = exports.GetVolumesSortEnum || (exports.GetVolumesSortEnum = {}));
+var GetVolumesStatusEnum;
 (function (GetVolumesStatusEnum) {
     GetVolumesStatusEnum["Available"] = "available";
     GetVolumesStatusEnum["Creating"] = "creating";
-})(GetVolumesStatusEnum || (GetVolumesStatusEnum = {}));
+})(GetVolumesStatusEnum = exports.GetVolumesStatusEnum || (exports.GetVolumesStatusEnum = {}));
 var GetVolumesQueryParams = /** @class */ (function (_super) {
     __extends(GetVolumesQueryParams, _super);
     function GetVolumesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=label_selector" }),
         __metadata("design:type", String)
     ], GetVolumesQueryParams.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetVolumesQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetVolumesQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetVolumesQueryParams.prototype, "status", void 0);
     return GetVolumesQueryParams;
-}(SpeakeasyBase));
-export { GetVolumesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesQueryParams = GetVolumesQueryParams;
 var GetVolumes200ApplicationJsonMetaPagination = /** @class */ (function (_super) {
     __extends(GetVolumes200ApplicationJsonMetaPagination, _super);
     function GetVolumes200ApplicationJsonMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonMetaPagination.prototype, "totalEntries", void 0);
     return GetVolumes200ApplicationJsonMetaPagination;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJsonMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJsonMetaPagination = GetVolumes200ApplicationJsonMetaPagination;
 var GetVolumes200ApplicationJsonMeta = /** @class */ (function (_super) {
     __extends(GetVolumes200ApplicationJsonMeta, _super);
     function GetVolumes200ApplicationJsonMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetVolumes200ApplicationJsonMetaPagination)
     ], GetVolumes200ApplicationJsonMeta.prototype, "pagination", void 0);
     return GetVolumes200ApplicationJsonMeta;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJsonMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJsonMeta = GetVolumes200ApplicationJsonMeta;
 // GetVolumes200ApplicationJsonVolumesLocation
 /**
  * Location of the Volume. Volume can only be attached to Servers in the same Location.
@@ -118,40 +121,40 @@ var GetVolumes200ApplicationJsonVolumesLocation = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumesLocation.prototype, "networkZone", void 0);
     return GetVolumes200ApplicationJsonVolumesLocation;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJsonVolumesLocation };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJsonVolumesLocation = GetVolumes200ApplicationJsonVolumesLocation;
 // GetVolumes200ApplicationJsonVolumesProtection
 /**
  * Protection configuration for the Resource
@@ -162,114 +165,114 @@ var GetVolumes200ApplicationJsonVolumesProtection = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], GetVolumes200ApplicationJsonVolumesProtection.prototype, "delete", void 0);
     return GetVolumes200ApplicationJsonVolumesProtection;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJsonVolumesProtection };
-export var GetVolumes200ApplicationJsonVolumesStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJsonVolumesProtection = GetVolumes200ApplicationJsonVolumesProtection;
+var GetVolumes200ApplicationJsonVolumesStatusEnum;
 (function (GetVolumes200ApplicationJsonVolumesStatusEnum) {
     GetVolumes200ApplicationJsonVolumesStatusEnum["Creating"] = "creating";
     GetVolumes200ApplicationJsonVolumesStatusEnum["Available"] = "available";
-})(GetVolumes200ApplicationJsonVolumesStatusEnum || (GetVolumes200ApplicationJsonVolumesStatusEnum = {}));
+})(GetVolumes200ApplicationJsonVolumesStatusEnum = exports.GetVolumes200ApplicationJsonVolumesStatusEnum || (exports.GetVolumes200ApplicationJsonVolumesStatusEnum = {}));
 var GetVolumes200ApplicationJsonVolumes = /** @class */ (function (_super) {
     __extends(GetVolumes200ApplicationJsonVolumes, _super);
     function GetVolumes200ApplicationJsonVolumes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linux_device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linux_device" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "linuxDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", GetVolumes200ApplicationJsonVolumesLocation)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", GetVolumes200ApplicationJsonVolumesProtection)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetVolumes200ApplicationJsonVolumes.prototype, "status", void 0);
     return GetVolumes200ApplicationJsonVolumes;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJsonVolumes };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJsonVolumes = GetVolumes200ApplicationJsonVolumes;
 var GetVolumes200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetVolumes200ApplicationJson, _super);
     function GetVolumes200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetVolumes200ApplicationJsonMeta)
     ], GetVolumes200ApplicationJson.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: GetVolumes200ApplicationJsonVolumes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: GetVolumes200ApplicationJsonVolumes }),
         __metadata("design:type", Array)
     ], GetVolumes200ApplicationJson.prototype, "volumes", void 0);
     return GetVolumes200ApplicationJson;
-}(SpeakeasyBase));
-export { GetVolumes200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumes200ApplicationJson = GetVolumes200ApplicationJson;
 var GetVolumesRequest = /** @class */ (function (_super) {
     __extends(GetVolumesRequest, _super);
     function GetVolumesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesQueryParams)
     ], GetVolumesRequest.prototype, "queryParams", void 0);
     return GetVolumesRequest;
-}(SpeakeasyBase));
-export { GetVolumesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesRequest = GetVolumesRequest;
 var GetVolumesResponse = /** @class */ (function (_super) {
     __extends(GetVolumesResponse, _super);
     function GetVolumesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVolumesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetVolumes200ApplicationJson)
-    ], GetVolumesResponse.prototype, "getVolumes200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVolumesResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetVolumes200ApplicationJson)
+    ], GetVolumesResponse.prototype, "getVolumes200ApplicationJSONObject", void 0);
     return GetVolumesResponse;
-}(SpeakeasyBase));
-export { GetVolumesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesResponse = GetVolumesResponse;

@@ -15,5 +15,5 @@ export declare class WipeNetworkSmDevicesRequest extends SpeakeasyBase {
 export declare class WipeNetworkSmDevicesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    wipeNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+    wipeNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

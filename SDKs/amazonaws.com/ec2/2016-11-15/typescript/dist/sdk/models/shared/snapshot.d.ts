@@ -1,23 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotStateEnum } from "./snapshotstateenum";
-import { Tag } from "./tag";
 /**
  * Describes a snapshot.
 **/
 export declare class Snapshot extends SpeakeasyBase {
-    dataEncryptionKeyId?: string;
-    description?: string;
-    encrypted?: boolean;
-    kmsKeyId?: string;
-    outpostArn?: string;
-    ownerAlias?: string;
-    ownerId?: string;
-    progress?: string;
-    snapshotId?: string;
-    startTime?: Date;
-    state?: SnapshotStateEnum;
-    stateMessage?: string;
-    tags?: Tag[];
-    volumeId?: string;
-    volumeSize?: number;
+    dataEncryptionKeyId?: Record<string, any>;
+    description?: Record<string, any>;
+    encrypted?: Record<string, any>;
+    kmsKeyId?: Record<string, any>;
+    outpostArn?: Record<string, any>;
+    ownerAlias?: Record<string, any>;
+    ownerId?: Record<string, any>;
+    progress?: Record<string, any>;
+    snapshotId?: Record<string, any>;
+    startTime?: Record<string, any>;
+    state?: Record<string, any>;
+    stateMessage?: Record<string, any>;
+    tags?: Record<string, any>;
+    volumeId?: Record<string, any>;
+    volumeSize?: Record<string, any>;
 }

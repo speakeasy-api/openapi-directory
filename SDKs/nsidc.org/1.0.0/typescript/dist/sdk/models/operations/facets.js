@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FacetsSortKeysEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FacetsResponse = exports.FacetsRequest = exports.FacetsQueryParams = exports.FacetsSourceEnum = exports.FacetsSortKeysEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FacetsSortKeysEnum;
 (function (FacetsSortKeysEnum) {
     FacetsSortKeysEnum["ScoreDesc"] = "score,,desc";
     FacetsSortKeysEnum["SpatialAreaAsc"] = "spatial_area,,asc";
@@ -31,85 +34,85 @@ export var FacetsSortKeysEnum;
     FacetsSortKeysEnum["TemporalDurationAsc"] = "temporal_duration,,asc";
     FacetsSortKeysEnum["TemporalDurationDesc"] = "temporal_duration,,desc";
     FacetsSortKeysEnum["UpdatedDesc"] = "updated,,desc";
-})(FacetsSortKeysEnum || (FacetsSortKeysEnum = {}));
-export var FacetsSourceEnum;
+})(FacetsSortKeysEnum = exports.FacetsSortKeysEnum || (exports.FacetsSortKeysEnum = {}));
+var FacetsSourceEnum;
 (function (FacetsSourceEnum) {
     FacetsSourceEnum["Nsidc"] = "NSIDC";
     FacetsSourceEnum["Ade"] = "ADE";
-})(FacetsSourceEnum || (FacetsSourceEnum = {}));
+})(FacetsSourceEnum = exports.FacetsSourceEnum || (exports.FacetsSourceEnum = {}));
 var FacetsQueryParams = /** @class */ (function (_super) {
     __extends(FacetsQueryParams, _super);
     function FacetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=count" }),
         __metadata("design:type", Number)
     ], FacetsQueryParams.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], FacetsQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=facetFilters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=facetFilters" }),
         __metadata("design:type", String)
     ], FacetsQueryParams.prototype, "facetFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
         __metadata("design:type", String)
     ], FacetsQueryParams.prototype, "searchTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortKeys" }),
         __metadata("design:type", String)
     ], FacetsQueryParams.prototype, "sortKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=source" }),
         __metadata("design:type", String)
     ], FacetsQueryParams.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spatial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spatial" }),
         __metadata("design:type", String)
     ], FacetsQueryParams.prototype, "spatial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], FacetsQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], FacetsQueryParams.prototype, "startIndex", void 0);
     return FacetsQueryParams;
-}(SpeakeasyBase));
-export { FacetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FacetsQueryParams = FacetsQueryParams;
 var FacetsRequest = /** @class */ (function (_super) {
     __extends(FacetsRequest, _super);
     function FacetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FacetsQueryParams)
     ], FacetsRequest.prototype, "queryParams", void 0);
     return FacetsRequest;
-}(SpeakeasyBase));
-export { FacetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.FacetsRequest = FacetsRequest;
 var FacetsResponse = /** @class */ (function (_super) {
     __extends(FacetsResponse, _super);
     function FacetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FacetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FacetsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FacetsResponse.prototype, "facets200ApplicationNsidcfacetsPlusXmlString", void 0);
     return FacetsResponse;
-}(SpeakeasyBase));
-export { FacetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.FacetsResponse = FacetsResponse;

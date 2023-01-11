@@ -12,5 +12,5 @@ export declare class UpdateOrganizationAdaptivePolicySettingsRequest extends Spe
 export declare class UpdateOrganizationAdaptivePolicySettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationAdaptivePolicySettings200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationAdaptivePolicySettings200ApplicationJSONObject?: Record<string, any>;
 }

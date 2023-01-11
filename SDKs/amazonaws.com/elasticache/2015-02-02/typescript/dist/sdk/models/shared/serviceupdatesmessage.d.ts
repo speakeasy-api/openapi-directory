@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ServiceUpdate } from "./serviceupdate";
+import { ServiceUpdateList } from "./serviceupdatelist";
 export declare class ServiceUpdatesMessage extends SpeakeasyBase {
     marker?: string;
-    serviceUpdates?: ServiceUpdate[];
+    serviceUpdates?: ServiceUpdateList[];
 }

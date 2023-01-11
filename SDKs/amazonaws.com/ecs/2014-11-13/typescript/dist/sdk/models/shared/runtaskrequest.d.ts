@@ -11,7 +11,7 @@ export declare class RunTaskRequest extends SpeakeasyBase {
     capacityProviderStrategy?: CapacityProviderStrategyItem[];
     cluster?: string;
     count?: number;
-    enableEcsManagedTags?: boolean;
+    enableECSManagedTags?: boolean;
     enableExecuteCommand?: boolean;
     group?: string;
     launchType?: LaunchTypeEnum;

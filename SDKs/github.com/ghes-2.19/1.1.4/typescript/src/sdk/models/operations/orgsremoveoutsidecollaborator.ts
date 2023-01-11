@@ -34,5 +34,5 @@ export class OrgsRemoveOutsideCollaboratorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  orgsRemoveOutsideCollaborator422ApplicationJsonObject?: OrgsRemoveOutsideCollaborator422ApplicationJson;
+  orgsRemoveOutsideCollaborator422ApplicationJSONObject?: OrgsRemoveOutsideCollaborator422ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceFormula } from "./datasourceformula";
-import { DataSourceTable } from "./datasourcetable";
-import { DataValidationRule } from "./datavalidationrule";
-import { CellFormat } from "./cellformat";
-import { ExtendedValue } from "./extendedvalue";
-import { PivotTable } from "./pivottable";
-import { TextFormatRun } from "./textformatrun";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CellData = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourceformula_1 = require("./datasourceformula");
+var datasourcetable_1 = require("./datasourcetable");
+var datavalidationrule_1 = require("./datavalidationrule");
+var cellformat_1 = require("./cellformat");
+var extendedvalue_1 = require("./extendedvalue");
+var pivottable_1 = require("./pivottable");
+var textformatrun_1 = require("./textformatrun");
 // CellData
 /**
  * Data about a specific cell.
@@ -40,53 +43,53 @@ var CellData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceFormula" }),
-        __metadata("design:type", DataSourceFormula)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceFormula" }),
+        __metadata("design:type", datasourceformula_1.DataSourceFormula)
     ], CellData.prototype, "dataSourceFormula", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceTable" }),
-        __metadata("design:type", DataSourceTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceTable" }),
+        __metadata("design:type", datasourcetable_1.DataSourceTable)
     ], CellData.prototype, "dataSourceTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataValidation" }),
-        __metadata("design:type", DataValidationRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataValidation" }),
+        __metadata("design:type", datavalidationrule_1.DataValidationRule)
     ], CellData.prototype, "dataValidation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveFormat" }),
-        __metadata("design:type", CellFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveFormat" }),
+        __metadata("design:type", cellformat_1.CellFormat)
     ], CellData.prototype, "effectiveFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveValue" }),
-        __metadata("design:type", ExtendedValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveValue" }),
+        __metadata("design:type", extendedvalue_1.ExtendedValue)
     ], CellData.prototype, "effectiveValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedValue" }),
         __metadata("design:type", String)
     ], CellData.prototype, "formattedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hyperlink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hyperlink" }),
         __metadata("design:type", String)
     ], CellData.prototype, "hyperlink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], CellData.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pivotTable" }),
-        __metadata("design:type", PivotTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pivotTable" }),
+        __metadata("design:type", pivottable_1.PivotTable)
     ], CellData.prototype, "pivotTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textFormatRuns", elemType: TextFormatRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textFormatRuns", elemType: textformatrun_1.TextFormatRun }),
         __metadata("design:type", Array)
     ], CellData.prototype, "textFormatRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEnteredFormat" }),
-        __metadata("design:type", CellFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEnteredFormat" }),
+        __metadata("design:type", cellformat_1.CellFormat)
     ], CellData.prototype, "userEnteredFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEnteredValue" }),
-        __metadata("design:type", ExtendedValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEnteredValue" }),
+        __metadata("design:type", extendedvalue_1.ExtendedValue)
     ], CellData.prototype, "userEnteredValue", void 0);
     return CellData;
-}(SpeakeasyBase));
-export { CellData };
+}(utils_1.SpeakeasyBase));
+exports.CellData = CellData;

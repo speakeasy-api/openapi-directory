@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,161 +23,163 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Link } from "./link";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Spin = exports.SpinLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var link_1 = require("./link");
 var SpinLinks = /** @class */ (function (_super) {
     __extends(SpinLinks, _super);
     function SpinLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playlist" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playlist" }),
+        __metadata("design:type", link_1.Link)
     ], SpinLinks.prototype, "playlist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", link_1.Link)
     ], SpinLinks.prototype, "self", void 0);
     return SpinLinks;
-}(SpeakeasyBase));
-export { SpinLinks };
+}(utils_1.SpeakeasyBase));
+exports.SpinLinks = SpinLinks;
 var Spin = /** @class */ (function (_super) {
     __extends(Spin, _super);
     function Spin() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", SpinLinks)
     ], Spin.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
         __metadata("design:type", String)
     ], Spin.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist-custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist-custom" }),
         __metadata("design:type", String)
     ], Spin.prototype, "artistCustom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catalog-number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catalog-number" }),
         __metadata("design:type", String)
     ], Spin.prototype, "catalogNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classical" }),
         __metadata("design:type", Boolean)
     ], Spin.prototype, "classical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=composer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=composer" }),
         __metadata("design:type", String)
     ], Spin.prototype, "composer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conductor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conductor" }),
         __metadata("design:type", String)
     ], Spin.prototype, "conductor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], Spin.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", Date)
     ], Spin.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ensemble" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ensemble" }),
         __metadata("design:type", String)
     ], Spin.prototype, "ensemble", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genre" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genre" }),
         __metadata("design:type", String)
     ], Spin.prototype, "genre", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Spin.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], Spin.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isrc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isrc" }),
         __metadata("design:type", String)
     ], Spin.prototype, "isrc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iswc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iswc" }),
         __metadata("design:type", String)
     ], Spin.prototype, "iswc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], Spin.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label-custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label-custom" }),
         __metadata("design:type", String)
     ], Spin.prototype, "labelCustom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=local" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local" }),
         __metadata("design:type", Boolean)
     ], Spin.prototype, "local", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], Spin.prototype, "medium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new" }),
         __metadata("design:type", Boolean)
     ], Spin.prototype, "new", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], Spin.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performers" }),
         __metadata("design:type", String)
     ], Spin.prototype, "performers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playlist_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playlist_id" }),
         __metadata("design:type", Number)
     ], Spin.prototype, "playlistId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release" }),
         __metadata("design:type", String)
     ], Spin.prototype, "release", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release-custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release-custom" }),
         __metadata("design:type", String)
     ], Spin.prototype, "releaseCustom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=released" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=released" }),
         __metadata("design:type", Number)
     ], Spin.prototype, "released", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request" }),
         __metadata("design:type", Boolean)
     ], Spin.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=song" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=song" }),
         __metadata("design:type", String)
     ], Spin.prototype, "song", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Date)
     ], Spin.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], Spin.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upc" }),
         __metadata("design:type", String)
     ], Spin.prototype, "upc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=va" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=va" }),
         __metadata("design:type", Boolean)
     ], Spin.prototype, "va", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=work" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=work" }),
         __metadata("design:type", String)
     ], Spin.prototype, "work", void 0);
     return Spin;
-}(SpeakeasyBase));
-export { Spin };
+}(utils_1.SpeakeasyBase));
+exports.Spin = Spin;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSignalingChannelResponse = exports.DeleteSignalingChannelRequest = exports.DeleteSignalingChannelRequestBody = exports.DeleteSignalingChannelHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSignalingChannelHeaders = /** @class */ (function (_super) {
     __extends(DeleteSignalingChannelHeaders, _super);
     function DeleteSignalingChannelHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteSignalingChannelHeaders;
-}(SpeakeasyBase));
-export { DeleteSignalingChannelHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSignalingChannelHeaders = DeleteSignalingChannelHeaders;
 var DeleteSignalingChannelRequestBody = /** @class */ (function (_super) {
     __extends(DeleteSignalingChannelRequestBody, _super);
     function DeleteSignalingChannelRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelARN" }),
         __metadata("design:type", String)
-    ], DeleteSignalingChannelRequestBody.prototype, "channelArn", void 0);
+    ], DeleteSignalingChannelRequestBody.prototype, "channelARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentVersion" }),
         __metadata("design:type", String)
     ], DeleteSignalingChannelRequestBody.prototype, "currentVersion", void 0);
     return DeleteSignalingChannelRequestBody;
-}(SpeakeasyBase));
-export { DeleteSignalingChannelRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSignalingChannelRequestBody = DeleteSignalingChannelRequestBody;
 var DeleteSignalingChannelRequest = /** @class */ (function (_super) {
     __extends(DeleteSignalingChannelRequest, _super);
     function DeleteSignalingChannelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSignalingChannelHeaders)
     ], DeleteSignalingChannelRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeleteSignalingChannelRequestBody)
     ], DeleteSignalingChannelRequest.prototype, "request", void 0);
     return DeleteSignalingChannelRequest;
-}(SpeakeasyBase));
-export { DeleteSignalingChannelRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSignalingChannelRequest = DeleteSignalingChannelRequest;
 var DeleteSignalingChannelResponse = /** @class */ (function (_super) {
     __extends(DeleteSignalingChannelResponse, _super);
     function DeleteSignalingChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "clientLimitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSignalingChannelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "deleteSignalingChannelOutput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "invalidArgumentException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "resourceInUseException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSignalingChannelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSignalingChannelResponse.prototype, "versionMismatchException", void 0);
     return DeleteSignalingChannelResponse;
-}(SpeakeasyBase));
-export { DeleteSignalingChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSignalingChannelResponse = DeleteSignalingChannelResponse;

@@ -27,7 +27,7 @@ export declare class HttpRuleResponseTarget extends SpeakeasyBase {
     url: string;
 }
 export declare class HttpRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

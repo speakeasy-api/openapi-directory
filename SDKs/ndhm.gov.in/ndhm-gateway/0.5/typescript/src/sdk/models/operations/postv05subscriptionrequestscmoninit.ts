@@ -8,7 +8,7 @@ export class PostV05SubscriptionRequestsCmOnInitHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" })
-  xHiuId: string;
+  xHIUID: string;
 }
 
 

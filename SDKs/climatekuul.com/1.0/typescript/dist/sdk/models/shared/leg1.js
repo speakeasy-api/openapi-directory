@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Leg1 = void 0;
+var utils_1 = require("../../../internal/utils");
 var Leg1 = /** @class */ (function (_super) {
     __extends(Leg1, _super);
     function Leg1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_airport_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_airport_code" }),
         __metadata("design:type", String)
     ], Leg1.prototype, "destinationAirportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin_airport_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin_airport_code" }),
         __metadata("design:type", String)
     ], Leg1.prototype, "originAirportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travel_class" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travel_class" }),
         __metadata("design:type", String)
     ], Leg1.prototype, "travelClass", void 0);
     return Leg1;
-}(SpeakeasyBase));
-export { Leg1 };
+}(utils_1.SpeakeasyBase));
+exports.Leg1 = Leg1;

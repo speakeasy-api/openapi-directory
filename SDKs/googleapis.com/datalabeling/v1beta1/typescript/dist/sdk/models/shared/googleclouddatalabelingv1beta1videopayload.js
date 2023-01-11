@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1VideoThumbnail } from "./googleclouddatalabelingv1beta1videothumbnail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1VideoPayload = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1videothumbnail_1 = require("./googleclouddatalabelingv1beta1videothumbnail");
 // GoogleCloudDatalabelingV1beta1VideoPayload
 /**
  * Container of information of a video.
@@ -34,25 +37,25 @@ var GoogleCloudDatalabelingV1beta1VideoPayload = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRate" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1VideoPayload.prototype, "frameRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1VideoPayload.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signedUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signedUri" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1VideoPayload.prototype, "signedUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoThumbnails", elemType: GoogleCloudDatalabelingV1beta1VideoThumbnail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoThumbnails", elemType: googleclouddatalabelingv1beta1videothumbnail_1.GoogleCloudDatalabelingV1beta1VideoThumbnail }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1VideoPayload.prototype, "videoThumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoUri" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1VideoPayload.prototype, "videoUri", void 0);
     return GoogleCloudDatalabelingV1beta1VideoPayload;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1VideoPayload };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1VideoPayload = GoogleCloudDatalabelingV1beta1VideoPayload;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Pipe } from "./pipe";
-import { SocketAddress } from "./socketaddress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Address = void 0;
+var utils_1 = require("../../../internal/utils");
+var pipe_1 = require("./pipe");
+var socketaddress_1 = require("./socketaddress");
 // Address
 /**
  * Addresses specify either a logical or physical address and port, which are used to tell Envoy where to bind/listen, connect to upstream and find management servers.
@@ -35,13 +38,13 @@ var Address = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipe" }),
-        __metadata("design:type", Pipe)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipe" }),
+        __metadata("design:type", pipe_1.Pipe)
     ], Address.prototype, "pipe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=socketAddress" }),
-        __metadata("design:type", SocketAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=socketAddress" }),
+        __metadata("design:type", socketaddress_1.SocketAddress)
     ], Address.prototype, "socketAddress", void 0);
     return Address;
-}(SpeakeasyBase));
-export { Address };
+}(utils_1.SpeakeasyBase));
+exports.Address = Address;

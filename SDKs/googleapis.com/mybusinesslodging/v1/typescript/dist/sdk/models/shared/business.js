@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BusinessBusinessCenterExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Business = exports.BusinessMeetingRoomsExceptionEnum = exports.BusinessMeetingRoomsCountExceptionEnum = exports.BusinessBusinessCenterExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BusinessBusinessCenterExceptionEnum;
 (function (BusinessBusinessCenterExceptionEnum) {
     BusinessBusinessCenterExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     BusinessBusinessCenterExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     BusinessBusinessCenterExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     BusinessBusinessCenterExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(BusinessBusinessCenterExceptionEnum || (BusinessBusinessCenterExceptionEnum = {}));
-export var BusinessMeetingRoomsCountExceptionEnum;
+})(BusinessBusinessCenterExceptionEnum = exports.BusinessBusinessCenterExceptionEnum || (exports.BusinessBusinessCenterExceptionEnum = {}));
+var BusinessMeetingRoomsCountExceptionEnum;
 (function (BusinessMeetingRoomsCountExceptionEnum) {
     BusinessMeetingRoomsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     BusinessMeetingRoomsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     BusinessMeetingRoomsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     BusinessMeetingRoomsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(BusinessMeetingRoomsCountExceptionEnum || (BusinessMeetingRoomsCountExceptionEnum = {}));
-export var BusinessMeetingRoomsExceptionEnum;
+})(BusinessMeetingRoomsCountExceptionEnum = exports.BusinessMeetingRoomsCountExceptionEnum || (exports.BusinessMeetingRoomsCountExceptionEnum = {}));
+var BusinessMeetingRoomsExceptionEnum;
 (function (BusinessMeetingRoomsExceptionEnum) {
     BusinessMeetingRoomsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     BusinessMeetingRoomsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     BusinessMeetingRoomsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     BusinessMeetingRoomsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(BusinessMeetingRoomsExceptionEnum || (BusinessMeetingRoomsExceptionEnum = {}));
+})(BusinessMeetingRoomsExceptionEnum = exports.BusinessMeetingRoomsExceptionEnum || (exports.BusinessMeetingRoomsExceptionEnum = {}));
 // Business
 /**
  * Features of the property of specific interest to the business traveler.
@@ -54,29 +57,29 @@ var Business = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessCenter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessCenter" }),
         __metadata("design:type", Boolean)
     ], Business.prototype, "businessCenter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessCenterException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessCenterException" }),
         __metadata("design:type", String)
     ], Business.prototype, "businessCenterException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meetingRooms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meetingRooms" }),
         __metadata("design:type", Boolean)
     ], Business.prototype, "meetingRooms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meetingRoomsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meetingRoomsCount" }),
         __metadata("design:type", Number)
     ], Business.prototype, "meetingRoomsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meetingRoomsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meetingRoomsCountException" }),
         __metadata("design:type", String)
     ], Business.prototype, "meetingRoomsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meetingRoomsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meetingRoomsException" }),
         __metadata("design:type", String)
     ], Business.prototype, "meetingRoomsException", void 0);
     return Business;
-}(SpeakeasyBase));
-export { Business };
+}(utils_1.SpeakeasyBase));
+exports.Business = Business;

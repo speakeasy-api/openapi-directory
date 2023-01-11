@@ -110,11 +110,11 @@ export declare class TwipcRequest extends SpeakeasyBase {
 export declare class TwipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    twipc400ApplicationJsonObject?: Twipc400ApplicationJson;
-    twipc401ApplicationJsonObject?: Twipc401ApplicationJson;
-    twipc404ApplicationJsonObject?: Twipc404ApplicationJson;
-    twipc500ApplicationJsonObject?: Twipc500ApplicationJson;
-    twipc502ApplicationJsonObject?: Twipc502ApplicationJson;
-    twipc503ApplicationJsonObject?: Twipc503ApplicationJson;
-    twipc504ApplicationJsonObject?: Twipc504ApplicationJson;
+    twipc400ApplicationJSONObject?: Twipc400ApplicationJson;
+    twipc401ApplicationJSONObject?: Twipc401ApplicationJson;
+    twipc404ApplicationJSONObject?: Twipc404ApplicationJson;
+    twipc500ApplicationJSONObject?: Twipc500ApplicationJson;
+    twipc502ApplicationJSONObject?: Twipc502ApplicationJson;
+    twipc503ApplicationJSONObject?: Twipc503ApplicationJson;
+    twipc504ApplicationJSONObject?: Twipc504ApplicationJson;
 }

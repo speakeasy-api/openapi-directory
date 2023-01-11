@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Stack } from "./stack";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeStacksResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var stack_1 = require("./stack");
 // DescribeStacksResult
 /**
  * Contains the response to a <code>DescribeStacks</code> request.
@@ -34,9 +37,9 @@ var DescribeStacksResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stacks", elemType: Stack }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stacks", elemType: stack_1.Stack }),
         __metadata("design:type", Array)
     ], DescribeStacksResult.prototype, "stacks", void 0);
     return DescribeStacksResult;
-}(SpeakeasyBase));
-export { DescribeStacksResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeStacksResult = DescribeStacksResult;

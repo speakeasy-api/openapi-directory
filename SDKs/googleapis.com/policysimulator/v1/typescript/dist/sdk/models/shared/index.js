@@ -1,24 +1,40 @@
-export * from "./altenum";
-export * from "./googlecloudpolicysimulatorv1accessstatediff";
-export * from "./googlecloudpolicysimulatorv1accesstuple";
-export * from "./googlecloudpolicysimulatorv1bindingexplanation";
-export * from "./googlecloudpolicysimulatorv1bindingexplanationannotatedmembership";
-export * from "./googlecloudpolicysimulatorv1explainedaccess";
-export * from "./googlecloudpolicysimulatorv1explainedpolicy";
-export * from "./googlecloudpolicysimulatorv1listreplayresultsresponse";
-export * from "./googlecloudpolicysimulatorv1replay";
-export * from "./googlecloudpolicysimulatorv1replayconfig";
-export * from "./googlecloudpolicysimulatorv1replaydiff";
-export * from "./googlecloudpolicysimulatorv1replayresult";
-export * from "./googlecloudpolicysimulatorv1replayresultssummary";
-export * from "./googleiamv1auditconfig";
-export * from "./googleiamv1auditlogconfig";
-export * from "./googleiamv1binding";
-export * from "./googleiamv1policy";
-export * from "./googlelongrunninglistoperationsresponse";
-export * from "./googlelongrunningoperation";
-export * from "./googlerpcstatus";
-export * from "./googletypedate";
-export * from "./googletypeexpr";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1accessstatediff"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1accesstuple"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1bindingexplanation"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1bindingexplanationannotatedmembership"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1explainedaccess"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1explainedpolicy"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1listreplayresultsresponse"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1replay"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1replayconfig"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1replaydiff"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1replayresult"), exports);
+__exportStar(require("./googlecloudpolicysimulatorv1replayresultssummary"), exports);
+__exportStar(require("./googleiamv1auditconfig"), exports);
+__exportStar(require("./googleiamv1auditlogconfig"), exports);
+__exportStar(require("./googleiamv1binding"), exports);
+__exportStar(require("./googleiamv1policy"), exports);
+__exportStar(require("./googlelongrunninglistoperationsresponse"), exports);
+__exportStar(require("./googlelongrunningoperation"), exports);
+__exportStar(require("./googlerpcstatus"), exports);
+__exportStar(require("./googletypedate"), exports);
+__exportStar(require("./googletypeexpr"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

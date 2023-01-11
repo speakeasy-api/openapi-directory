@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionConfiguration } from "./actionconfiguration";
-import { ActionTypeId } from "./actiontypeid";
-import { AwsSessionCredentials } from "./awssessioncredentials";
-import { EncryptionKey } from "./encryptionkey";
-import { Artifact } from "./artifact";
-import { PipelineContext } from "./pipelinecontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThirdPartyJobData = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionconfiguration_1 = require("./actionconfiguration");
+var actiontypeid_1 = require("./actiontypeid");
+var awssessioncredentials_1 = require("./awssessioncredentials");
+var encryptionkey_1 = require("./encryptionkey");
+var artifact_1 = require("./artifact");
+var pipelinecontext_1 = require("./pipelinecontext");
 // ThirdPartyJobData
 /**
  * Represents information about the job data for a partner action.
@@ -39,37 +42,37 @@ var ThirdPartyJobData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionConfiguration" }),
-        __metadata("design:type", ActionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionConfiguration" }),
+        __metadata("design:type", actionconfiguration_1.ActionConfiguration)
     ], ThirdPartyJobData.prototype, "actionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionTypeId" }),
-        __metadata("design:type", ActionTypeId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionTypeId" }),
+        __metadata("design:type", actiontypeid_1.ActionTypeId)
     ], ThirdPartyJobData.prototype, "actionTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactCredentials" }),
-        __metadata("design:type", AwsSessionCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactCredentials" }),
+        __metadata("design:type", awssessioncredentials_1.AwsSessionCredentials)
     ], ThirdPartyJobData.prototype, "artifactCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continuationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continuationToken" }),
         __metadata("design:type", String)
     ], ThirdPartyJobData.prototype, "continuationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKey" }),
-        __metadata("design:type", EncryptionKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKey" }),
+        __metadata("design:type", encryptionkey_1.EncryptionKey)
     ], ThirdPartyJobData.prototype, "encryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputArtifacts", elemType: Artifact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputArtifacts", elemType: artifact_1.Artifact }),
         __metadata("design:type", Array)
     ], ThirdPartyJobData.prototype, "inputArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputArtifacts", elemType: Artifact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputArtifacts", elemType: artifact_1.Artifact }),
         __metadata("design:type", Array)
     ], ThirdPartyJobData.prototype, "outputArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineContext" }),
-        __metadata("design:type", PipelineContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineContext" }),
+        __metadata("design:type", pipelinecontext_1.PipelineContext)
     ], ThirdPartyJobData.prototype, "pipelineContext", void 0);
     return ThirdPartyJobData;
-}(SpeakeasyBase));
-export { ThirdPartyJobData };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyJobData = ThirdPartyJobData;

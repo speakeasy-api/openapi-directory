@@ -13,7 +13,7 @@ export class PendingModifiedValues extends SpeakeasyBase {
   authTokenStatus?: AuthTokenUpdateStatusEnum;
 
   @SpeakeasyMetadata()
-  cacheNodeIdsToRemove?: string[];
+  cacheNodeIdsToRemove?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   cacheNodeType?: string;

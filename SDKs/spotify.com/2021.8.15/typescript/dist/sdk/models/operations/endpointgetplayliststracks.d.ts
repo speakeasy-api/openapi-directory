@@ -38,5 +38,5 @@ export declare class EndpointGetPlaylistsTracksResponse extends SpeakeasyBase {
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetPlaylistsTracks200ApplicationJsonObject?: EndpointGetPlaylistsTracks200ApplicationJson;
+    endpointGetPlaylistsTracks200ApplicationJSONObject?: EndpointGetPlaylistsTracks200ApplicationJson;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AccountListNodeAgentSkusRequest, AccountListNodeAgentSkusResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,19 +28,19 @@ const sdk = new SDK();
     
 const req: AccountListNodeAgentSkusRequest = {
   queryParams: {
-    dollarFilter: "nihil",
-    apiVersion: "soluta",
-    maxresults: 8214170773306648303,
-    timeout: 3015821487863314727,
+    dollarFilter: "sit",
+    apiVersion: "voluptas",
+    maxresults: 6050128673802995827,
+    timeout: 501233450539197794,
   },
   headers: {
-    clientRequestId: "voluptates",
-    ocpDate: "ea",
+    clientRequestId: "consequuntur",
+    ocpDate: "dolor",
     returnClientRequestId: true,
   },
 };
 
-sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusResponse | AxiosError) => {
+sdk.accounts.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,16 +49,25 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Accounts
 
 * `accountListNodeAgentSkus` - Lists all node agent SKUs supported by the Azure Batch service.
+
+### Applications
+
 * `applicationGet` - Gets information about the specified application.
 * `applicationList` - Lists all of the applications available in the specified account.
+
+### Certificates
+
 * `certificateAdd` - Adds a certificate to the specified account.
 * `certificateCancelDeletion` - Cancels a failed deletion of a certificate from the specified account.
 * `certificateDelete` - Deletes a certificate from the specified account.
 * `certificateGet` - Gets information about the specified certificate.
 * `certificateList` - Lists all of the certificates that have been added to the specified account.
+
+### ComputeNodes
+
 * `computeNodeAddUser` - Adds a user account to the specified compute node.
 * `computeNodeDeleteUser` - Deletes a user account from the specified compute node.
 * `computeNodeDisableScheduling` - Disable task scheduling of the specified compute node.
@@ -71,6 +79,10 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 * `computeNodeReboot` - Restarts the specified compute node.
 * `computeNodeReimage` - Reinstalls the operating system on the specified compute node.
 * `computeNodeUpdateUser` - Updates the password or expiration time of a user account on the specified compute node.
+* `poolRemoveNodes` - Removes compute nodes from the specified pool.
+
+### Files
+
 * `fileDeleteFromComputeNode` - Deletes the specified task file from the compute node.
 * `fileDeleteFromTask` - Deletes the specified task file from the compute node where the task ran.
 * `fileGetFromComputeNode` - Returns the content of the specified task file.
@@ -79,6 +91,9 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 * `fileGetNodeFilePropertiesFromTask` - Gets the properties of the specified task file.
 * `fileListFromComputeNode` - Lists all of the files in task directories on the specified compute node.
 * `fileListFromTask` - Lists the files in a task's directory on its compute node.
+
+### JobSchedules
+
 * `jobScheduleAdd` - Adds a job schedule to the specified account.
 * `jobScheduleDelete` - Deletes a job schedule from the specified account.
 * `jobScheduleDisable` - Disables a job schedule.
@@ -89,6 +104,9 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 * `jobSchedulePatch` - Updates the properties of the specified job schedule.
 * `jobScheduleTerminate` - Terminates a job schedule.
 * `jobScheduleUpdate` - Updates the properties of the specified job schedule.
+
+### Jobs
+
 * `jobAdd` - Adds a job to the specified account.
 * `jobDelete` - Deletes a job.
 * `jobDisable` - Disables the specified job, preventing new tasks from running.
@@ -101,6 +119,9 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 * `jobPatch` - Updates the properties of a job.
 * `jobTerminate` - Terminates the specified job, marking it as completed.
 * `jobUpdate` - Updates the properties of a job.
+
+### Pools
+
 * `poolAdd` - Adds a pool to the specified account.
 * `poolDelete` - Deletes a pool from the specified account.
 * `poolDisableAutoScale` - Disables automatic scaling for a pool.
@@ -112,11 +133,13 @@ sdk.sdk.accountListNodeAgentSkus(req).then((res: AccountListNodeAgentSkusRespons
 * `poolList` - Lists all of the pools in the specified account.
 * `poolListPoolUsageMetrics` - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
 * `poolPatch` - Updates the properties of a pool.
-* `poolRemoveNodes` - Removes compute nodes from the specified pool.
 * `poolResize` - Changes the number of compute nodes that are assigned to a pool.
 * `poolStopResize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 * `poolUpdateProperties` - Updates the properties of a pool.
 * `poolUpgradeOs` - Upgrades the operating system of the specified pool.
+
+### Tasks
+
 * `taskAdd` - Adds a task to the specified job.
 * `taskAddCollection` - Adds a collection of tasks to the specified job.
 * `taskDelete` - Deletes a task from the specified job.

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublisherProfile } from "./publisherprofile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPublisherProfilesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var publisherprofile_1 = require("./publisherprofile");
 // ListPublisherProfilesResponse
 /**
  * Response message for profiles visible to the buyer.
@@ -34,13 +37,13 @@ var ListPublisherProfilesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListPublisherProfilesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherProfiles", elemType: PublisherProfile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherProfiles", elemType: publisherprofile_1.PublisherProfile }),
         __metadata("design:type", Array)
     ], ListPublisherProfilesResponse.prototype, "publisherProfiles", void 0);
     return ListPublisherProfilesResponse;
-}(SpeakeasyBase));
-export { ListPublisherProfilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPublisherProfilesResponse = ListPublisherProfilesResponse;

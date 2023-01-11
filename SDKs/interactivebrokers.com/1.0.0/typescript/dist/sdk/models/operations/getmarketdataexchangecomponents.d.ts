@@ -11,6 +11,6 @@ export declare class GetMarketdataExchangeComponents200ApplicationJson extends S
 }
 export declare class GetMarketdataExchangeComponentsResponse extends SpeakeasyBase {
     contentType: string;
-    getMarketdataExchangeComponents200ApplicationJsonObjects?: GetMarketdataExchangeComponents200ApplicationJson[];
     statusCode: number;
+    getMarketdataExchangeComponents200ApplicationJSONObjects?: GetMarketdataExchangeComponents200ApplicationJson[];
 }

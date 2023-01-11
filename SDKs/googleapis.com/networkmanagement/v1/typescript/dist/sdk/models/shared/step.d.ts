@@ -1,6 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AbortInfo } from "./abortinfo";
+import { AppEngineVersionInfo } from "./appengineversioninfo";
 import { CloudFunctionInfo } from "./cloudfunctioninfo";
+import { CloudRunRevisionInfo } from "./cloudrunrevisioninfo";
 import { CloudSqlInstanceInfo } from "./cloudsqlinstanceinfo";
 import { DeliverInfo } from "./deliverinfo";
 import { DropInfo } from "./dropinfo";
@@ -24,6 +26,8 @@ export declare enum StepStateEnum {
     StartFromGkeMaster = "START_FROM_GKE_MASTER",
     StartFromCloudSqlInstance = "START_FROM_CLOUD_SQL_INSTANCE",
     StartFromCloudFunction = "START_FROM_CLOUD_FUNCTION",
+    StartFromAppEngineVersion = "START_FROM_APP_ENGINE_VERSION",
+    StartFromCloudRunRevision = "START_FROM_CLOUD_RUN_REVISION",
     ApplyIngressFirewallRule = "APPLY_INGRESS_FIREWALL_RULE",
     ApplyEgressFirewallRule = "APPLY_EGRESS_FIREWALL_RULE",
     ApplyRoute = "APPLY_ROUTE",
@@ -48,8 +52,10 @@ export declare enum StepStateEnum {
 **/
 export declare class Step extends SpeakeasyBase {
     abort?: AbortInfo;
+    appEngineVersion?: AppEngineVersionInfo;
     causesDrop?: boolean;
     cloudFunction?: CloudFunctionInfo;
+    cloudRunRevision?: CloudRunRevisionInfo;
     cloudSqlInstance?: CloudSqlInstanceInfo;
     deliver?: DeliverInfo;
     description?: string;

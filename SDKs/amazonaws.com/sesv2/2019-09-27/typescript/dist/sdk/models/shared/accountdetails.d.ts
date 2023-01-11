@@ -11,5 +11,5 @@ export declare class AccountDetails extends SpeakeasyBase {
     mailType?: MailTypeEnum;
     reviewDetails?: ReviewDetails;
     useCaseDescription?: string;
-    websiteUrl?: string;
+    websiteURL?: string;
 }

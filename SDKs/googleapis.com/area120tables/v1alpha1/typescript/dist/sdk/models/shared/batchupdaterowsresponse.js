@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Row } from "./row";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateRowsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var row_1 = require("./row");
 // BatchUpdateRowsResponse
 /**
  * Response message for TablesService.BatchUpdateRows.
@@ -34,9 +37,9 @@ var BatchUpdateRowsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: Row }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: row_1.Row }),
         __metadata("design:type", Array)
     ], BatchUpdateRowsResponse.prototype, "rows", void 0);
     return BatchUpdateRowsResponse;
-}(SpeakeasyBase));
-export { BatchUpdateRowsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateRowsResponse = BatchUpdateRowsResponse;

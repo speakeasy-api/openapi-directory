@@ -9,7 +9,7 @@ import { DataSetTypeEnum } from "./datasettypeenum";
 **/
 export class GenerateDataSetRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=customerDefinedValues" })
-  customerDefinedValues?: Map<string, string>;
+  customerDefinedValues?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=dataSetPublicationDate" })
   dataSetPublicationDate: Date;

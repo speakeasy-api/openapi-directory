@@ -28,7 +28,7 @@ export class Database extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=TargetDatabase" })
   targetDatabase?: DatabaseIdentifier;

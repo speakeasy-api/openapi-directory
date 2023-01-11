@@ -21,24 +21,24 @@ export declare enum EventTypeEnum {
 **/
 export declare class Event extends SpeakeasyBase {
     active?: boolean;
-    additionalInfos?: Map<string, string>;
+    additionalInfos?: Record<string, string>;
     attractions?: Attraction[];
     classifications?: Classification[];
     dates?: EventDates;
-    descriptions?: Map<string, string>;
+    descriptions?: Record<string, string>;
     discoverable?: boolean;
     distance?: number;
     images?: Image[];
-    infos?: Map<string, string>;
+    infos?: Record<string, string>;
     location?: Location;
-    names?: Map<string, string>;
+    names?: Record<string, string>;
     place?: Place;
-    pleaseNotes?: Map<string, string>;
+    pleaseNotes?: Record<string, string>;
     priceRanges?: PriceRange[];
     promoter?: Promoter;
     publicVisibility?: PublicVisibility;
-    references?: Map<string, string>;
-    relationships?: Map<string, any>[];
+    references?: Record<string, string>;
+    relationships?: Record<string, any>[];
     sales?: EventSalesDates;
     source?: Source;
     test?: boolean;

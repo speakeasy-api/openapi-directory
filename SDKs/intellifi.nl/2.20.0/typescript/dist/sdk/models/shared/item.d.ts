@@ -1,29 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { GeoCoordsReadOnly } from "./geocoordsreadonly";
 import { ItemProtocolEnum } from "./itemprotocolenum";
 import { TechnologyEnum } from "./technologyenum";
 import { ItemTypeEnum } from "./itemtypeenum";
-import { GeoCoordsReadOnly } from "./geocoordsreadonly";
-export declare class ItemInput extends SpeakeasyBase {
-    codeHex?: string;
-    configRequest?: Map<string, any>;
-    custom?: any;
-    label?: string;
-    locationRequest?: string;
-    metadata?: Map<string, any>;
-    protocol?: ItemProtocolEnum;
-    technology?: TechnologyEnum;
-    type?: ItemTypeEnum;
-}
 export declare class Item extends SpeakeasyBase {
     codeHex?: string;
-    configRequest?: Map<string, any>;
+    configRequest?: Record<string, any>;
     custom?: any;
     geoCoords?: GeoCoordsReadOnly;
     id?: string;
     isPresent?: boolean;
     label?: string;
     locationRequest?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     moveCount?: number;
     protocol?: ItemProtocolEnum;
     sets?: string[];
@@ -34,4 +23,15 @@ export declare class Item extends SpeakeasyBase {
     timeUpdated?: string;
     type?: ItemTypeEnum;
     url?: string;
+}
+export declare class ItemInput extends SpeakeasyBase {
+    codeHex?: string;
+    configRequest?: Record<string, any>;
+    custom?: any;
+    label?: string;
+    locationRequest?: string;
+    metadata?: Record<string, any>;
+    protocol?: ItemProtocolEnum;
+    technology?: TechnologyEnum;
+    type?: ItemTypeEnum;
 }

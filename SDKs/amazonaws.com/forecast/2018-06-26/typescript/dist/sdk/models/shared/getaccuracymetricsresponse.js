@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoMlOverrideStrategyEnum } from "./automloverridestrategyenum";
-import { OptimizationMetricEnum } from "./optimizationmetricenum";
-import { EvaluationResult } from "./evaluationresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccuracyMetricsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var automloverridestrategyenum_1 = require("./automloverridestrategyenum");
+var optimizationmetricenum_1 = require("./optimizationmetricenum");
+var evaluationresult_1 = require("./evaluationresult");
 var GetAccuracyMetricsResponse = /** @class */ (function (_super) {
     __extends(GetAccuracyMetricsResponse, _super);
     function GetAccuracyMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoMLOverrideStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoMLOverrideStrategy" }),
         __metadata("design:type", String)
-    ], GetAccuracyMetricsResponse.prototype, "autoMlOverrideStrategy", void 0);
+    ], GetAccuracyMetricsResponse.prototype, "autoMLOverrideStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptimizationMetric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptimizationMetric" }),
         __metadata("design:type", String)
     ], GetAccuracyMetricsResponse.prototype, "optimizationMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorEvaluationResults", elemType: EvaluationResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorEvaluationResults", elemType: evaluationresult_1.EvaluationResult }),
         __metadata("design:type", Array)
     ], GetAccuracyMetricsResponse.prototype, "predictorEvaluationResults", void 0);
     return GetAccuracyMetricsResponse;
-}(SpeakeasyBase));
-export { GetAccuracyMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccuracyMetricsResponse = GetAccuracyMetricsResponse;

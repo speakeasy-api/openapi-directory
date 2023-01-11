@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestTypeEnum } from "./testtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleRunTest = void 0;
+var utils_1 = require("../../../internal/utils");
+var testtypeenum_1 = require("./testtypeenum");
 // ScheduleRunTest
 /**
  * Represents test settings. This data structure is passed in as the test parameter to ScheduleRun. For an example of the JSON request syntax, see <a>ScheduleRun</a>.
@@ -34,25 +37,25 @@ var ScheduleRunTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], ScheduleRunTest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], ScheduleRunTest.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testPackageArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testPackageArn" }),
         __metadata("design:type", String)
     ], ScheduleRunTest.prototype, "testPackageArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSpecArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSpecArn" }),
         __metadata("design:type", String)
     ], ScheduleRunTest.prototype, "testSpecArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ScheduleRunTest.prototype, "type", void 0);
     return ScheduleRunTest;
-}(SpeakeasyBase));
-export { ScheduleRunTest };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleRunTest = ScheduleRunTest;

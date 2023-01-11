@@ -56,5 +56,5 @@ export class GistsGetCommentResponse extends SpeakeasyBase {
   gistComment?: shared.GistComment;
 
   @SpeakeasyMetadata()
-  gistsGetComment403ApplicationJsonObject?: GistsGetComment403ApplicationJson;
+  gistsGetComment403ApplicationJSONObject?: GistsGetComment403ApplicationJson;
 }

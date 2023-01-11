@@ -98,5 +98,5 @@ export class DcimDeviceBayTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimDeviceBayTemplatesList200ApplicationJsonObject?: DcimDeviceBayTemplatesList200ApplicationJson;
+  dcimDeviceBayTemplatesList200ApplicationJSONObject?: DcimDeviceBayTemplatesList200ApplicationJson;
 }

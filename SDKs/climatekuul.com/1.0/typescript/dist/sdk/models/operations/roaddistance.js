@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RoadDistanceServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoadDistanceResponse = exports.RoadDistanceRequest = exports.RoadDistanceRequestBody = exports.RoadDistanceServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.RoadDistanceServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var RoadDistanceRequestBody = /** @class */ (function (_super) {
@@ -32,69 +35,69 @@ var RoadDistanceRequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], RoadDistanceRequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], RoadDistanceRequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=travel_distance;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=travel_distance;" }),
         __metadata("design:type", Number)
     ], RoadDistanceRequestBody.prototype, "travelDistance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=trip_end;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=trip_end;" }),
         __metadata("design:type", Number)
     ], RoadDistanceRequestBody.prototype, "tripEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=trip_start;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=trip_start;" }),
         __metadata("design:type", Number)
     ], RoadDistanceRequestBody.prototype, "tripStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=vehicle_make;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=vehicle_make;" }),
         __metadata("design:type", String)
     ], RoadDistanceRequestBody.prototype, "vehicleMake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=vehicle_type;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=vehicle_type;" }),
         __metadata("design:type", String)
     ], RoadDistanceRequestBody.prototype, "vehicleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=vehicle_year;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=vehicle_year;" }),
         __metadata("design:type", Number)
     ], RoadDistanceRequestBody.prototype, "vehicleYear", void 0);
     return RoadDistanceRequestBody;
-}(SpeakeasyBase));
-export { RoadDistanceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RoadDistanceRequestBody = RoadDistanceRequestBody;
 var RoadDistanceRequest = /** @class */ (function (_super) {
     __extends(RoadDistanceRequest, _super);
     function RoadDistanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], RoadDistanceRequest.prototype, "serverUrl", void 0);
+    ], RoadDistanceRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", RoadDistanceRequestBody)
     ], RoadDistanceRequest.prototype, "request", void 0);
     return RoadDistanceRequest;
-}(SpeakeasyBase));
-export { RoadDistanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RoadDistanceRequest = RoadDistanceRequest;
 var RoadDistanceResponse = /** @class */ (function (_super) {
     __extends(RoadDistanceResponse, _super);
     function RoadDistanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RoadDistanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RoadDistanceResponse.prototype, "statusCode", void 0);
     return RoadDistanceResponse;
-}(SpeakeasyBase));
-export { RoadDistanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.RoadDistanceResponse = RoadDistanceResponse;

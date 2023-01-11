@@ -64,7 +64,7 @@ export class UpdateLaunchConfigurationRequestBody extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 
   @SpeakeasyMetadata({ data: "json, name=targetInstanceTypeRightSizingMethod" })
   targetInstanceTypeRightSizingMethod?: UpdateLaunchConfigurationRequestBodyTargetInstanceTypeRightSizingMethodEnum;

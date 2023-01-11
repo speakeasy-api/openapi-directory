@@ -6,7 +6,7 @@ export declare class FindListingRecommendationsQueryParams extends SpeakeasyBase
     offset?: string;
 }
 export declare class FindListingRecommendationsHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class FindListingRecommendationsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

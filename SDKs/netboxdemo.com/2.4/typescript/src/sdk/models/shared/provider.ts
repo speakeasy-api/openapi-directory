@@ -2,7 +2,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class ProviderInput extends SpeakeasyBase {
+export class Provider extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=account" })
   account?: string;
 
@@ -15,8 +15,17 @@ export class ProviderInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=comments" })
   comments?: string;
 
+  @SpeakeasyMetadata({ data: "json, name=created" })
+  created?: Date;
+
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=last_updated" })
+  lastUpdated?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -35,7 +44,7 @@ export class ProviderInput extends SpeakeasyBase {
 }
 
 
-export class Provider extends SpeakeasyBase {
+export class ProviderInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=account" })
   account?: string;
 
@@ -48,17 +57,8 @@ export class Provider extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=comments" })
   comments?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=created" })
-  created?: Date;
-
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=last_updated" })
-  lastUpdated?: Date;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

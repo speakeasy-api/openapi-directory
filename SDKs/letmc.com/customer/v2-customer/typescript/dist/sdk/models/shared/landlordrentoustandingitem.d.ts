@@ -7,5 +7,5 @@ export declare class LandlordRentOustandingItem extends SpeakeasyBase {
     outstandingRent?: number;
     property?: string;
     tenant?: string;
-    tenantId?: string;
+    tenantID?: string;
 }

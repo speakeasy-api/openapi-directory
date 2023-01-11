@@ -1,0 +1,25 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { TagList } from "./taglist";
+
+
+
+// HsmConfigurationList
+/** 
+ * Returns information about an HSM configuration, which is an object that describes to Amazon Redshift clusters the information they require to connect to an HSM where they can store database encryption keys.
+**/
+export class HsmConfigurationList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  description?: string;
+
+  @SpeakeasyMetadata()
+  hsmConfigurationIdentifier?: string;
+
+  @SpeakeasyMetadata()
+  hsmIpAddress?: string;
+
+  @SpeakeasyMetadata()
+  hsmPartitionName?: string;
+
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
+}

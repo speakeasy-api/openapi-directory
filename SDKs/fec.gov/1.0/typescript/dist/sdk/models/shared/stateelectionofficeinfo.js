@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateElectionOfficeInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var StateElectionOfficeInfo = /** @class */ (function (_super) {
     __extends(StateElectionOfficeInfo, _super);
     function StateElectionOfficeInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address_line1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address_line1" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "addressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address_line2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address_line2" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "addressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax_number" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "faxNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailing_address1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_address1" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "mailingAddress1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailing_address2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_address2" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "mailingAddress2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailing_city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_city" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "mailingCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailing_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_state" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "mailingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailing_zipcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_zipcode" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "mailingZipcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=office_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office_name" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "officeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=office_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office_type" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "officeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_phone_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_phone_number" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "primaryPhoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondary_phone_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary_phone_number" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "secondaryPhoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state_full_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state_full_name" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "stateFullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website_url1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website_url1" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "websiteUrl1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website_url2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website_url2" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "websiteUrl2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
         __metadata("design:type", String)
     ], StateElectionOfficeInfo.prototype, "zipCode", void 0);
     return StateElectionOfficeInfo;
-}(SpeakeasyBase));
-export { StateElectionOfficeInfo };
+}(utils_1.SpeakeasyBase));
+exports.StateElectionOfficeInfo = StateElectionOfficeInfo;

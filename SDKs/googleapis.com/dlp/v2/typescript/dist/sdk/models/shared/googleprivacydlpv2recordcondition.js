@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Expressions } from "./googleprivacydlpv2expressions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RecordCondition = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2expressions_1 = require("./googleprivacydlpv2expressions");
 // GooglePrivacyDlpV2RecordCondition
 /**
  * A condition for determining whether a transformation should be applied to a field.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2RecordCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expressions" }),
-        __metadata("design:type", GooglePrivacyDlpV2Expressions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expressions" }),
+        __metadata("design:type", googleprivacydlpv2expressions_1.GooglePrivacyDlpV2Expressions)
     ], GooglePrivacyDlpV2RecordCondition.prototype, "expressions", void 0);
     return GooglePrivacyDlpV2RecordCondition;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RecordCondition };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RecordCondition = GooglePrivacyDlpV2RecordCondition;

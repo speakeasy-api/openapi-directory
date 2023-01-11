@@ -11,7 +11,7 @@ export declare class GetSetupV1LocationsIdServicesRequest extends SpeakeasyBase 
     queryParams: GetSetupV1LocationsIdServicesQueryParams;
 }
 export declare class GetSetupV1LocationsIdServicesResponse extends SpeakeasyBase {
-    businessServiceListViewModel?: Map<string, any>;
+    businessServiceListViewModel?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

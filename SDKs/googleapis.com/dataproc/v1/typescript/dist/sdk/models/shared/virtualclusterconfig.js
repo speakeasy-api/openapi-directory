@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuxiliaryServicesConfig } from "./auxiliaryservicesconfig";
-import { KubernetesClusterConfig } from "./kubernetesclusterconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualClusterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var auxiliaryservicesconfig_1 = require("./auxiliaryservicesconfig");
+var kubernetesclusterconfig_1 = require("./kubernetesclusterconfig");
 // VirtualClusterConfig
 /**
  * The Dataproc cluster config for a cluster that does not directly control the underlying compute resources, such as a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke).
@@ -35,17 +38,17 @@ var VirtualClusterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryServicesConfig" }),
-        __metadata("design:type", AuxiliaryServicesConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryServicesConfig" }),
+        __metadata("design:type", auxiliaryservicesconfig_1.AuxiliaryServicesConfig)
     ], VirtualClusterConfig.prototype, "auxiliaryServicesConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesClusterConfig" }),
-        __metadata("design:type", KubernetesClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesClusterConfig" }),
+        __metadata("design:type", kubernetesclusterconfig_1.KubernetesClusterConfig)
     ], VirtualClusterConfig.prototype, "kubernetesClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stagingBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stagingBucket" }),
         __metadata("design:type", String)
     ], VirtualClusterConfig.prototype, "stagingBucket", void 0);
     return VirtualClusterConfig;
-}(SpeakeasyBase));
-export { VirtualClusterConfig };
+}(utils_1.SpeakeasyBase));
+exports.VirtualClusterConfig = VirtualClusterConfig;

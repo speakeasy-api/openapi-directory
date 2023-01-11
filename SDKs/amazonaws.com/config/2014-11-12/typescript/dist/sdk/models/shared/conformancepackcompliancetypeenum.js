@@ -1,6 +1,9 @@
-export var ConformancePackComplianceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConformancePackComplianceTypeEnum = void 0;
+var ConformancePackComplianceTypeEnum;
 (function (ConformancePackComplianceTypeEnum) {
     ConformancePackComplianceTypeEnum["Compliant"] = "COMPLIANT";
     ConformancePackComplianceTypeEnum["NonCompliant"] = "NON_COMPLIANT";
     ConformancePackComplianceTypeEnum["InsufficientData"] = "INSUFFICIENT_DATA";
-})(ConformancePackComplianceTypeEnum || (ConformancePackComplianceTypeEnum = {}));
+})(ConformancePackComplianceTypeEnum = exports.ConformancePackComplianceTypeEnum || (exports.ConformancePackComplianceTypeEnum = {}));

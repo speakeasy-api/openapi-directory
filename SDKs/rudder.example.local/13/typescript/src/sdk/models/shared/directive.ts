@@ -27,7 +27,7 @@ export class Directive extends SpeakeasyBase {
   longDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=policyMode" })
   policyMode?: DirectivePolicyModeEnum;

@@ -1,6 +1,9 @@
-export var MergeOptionTypeEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergeOptionTypeEnumEnum = void 0;
+var MergeOptionTypeEnumEnum;
 (function (MergeOptionTypeEnumEnum) {
     MergeOptionTypeEnumEnum["FastForwardMerge"] = "FAST_FORWARD_MERGE";
     MergeOptionTypeEnumEnum["SquashMerge"] = "SQUASH_MERGE";
     MergeOptionTypeEnumEnum["ThreeWayMerge"] = "THREE_WAY_MERGE";
-})(MergeOptionTypeEnumEnum || (MergeOptionTypeEnumEnum = {}));
+})(MergeOptionTypeEnumEnum = exports.MergeOptionTypeEnumEnum || (exports.MergeOptionTypeEnumEnum = {}));

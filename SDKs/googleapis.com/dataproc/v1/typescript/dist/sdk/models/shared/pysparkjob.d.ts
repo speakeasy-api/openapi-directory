@@ -10,6 +10,6 @@ export declare class PySparkJob extends SpeakeasyBase {
     jarFileUris?: string[];
     loggingConfig?: LoggingConfig;
     mainPythonFileUri?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     pythonFileUris?: string[];
 }

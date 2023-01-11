@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatalabelingv1beta1annotationspec";
-import { GoogleCloudDatalabelingV1beta1BoundingPoly } from "./googleclouddatalabelingv1beta1boundingpoly";
-import { GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly } from "./googleclouddatalabelingv1beta1normalizedboundingpoly";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspec_1 = require("./googleclouddatalabelingv1beta1annotationspec");
+var googleclouddatalabelingv1beta1boundingpoly_1 = require("./googleclouddatalabelingv1beta1boundingpoly");
+var googleclouddatalabelingv1beta1normalizedboundingpoly_1 = require("./googleclouddatalabelingv1beta1normalizedboundingpoly");
 // GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation
 /**
  * Image bounding poly annotation. It represents a polygon including bounding box in the image.
@@ -36,17 +39,17 @@ var GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpec" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1AnnotationSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpec" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1annotationspec_1.GoogleCloudDatalabelingV1beta1AnnotationSpec)
     ], GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation.prototype, "annotationSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundingPoly" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1BoundingPoly)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundingPoly" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1boundingpoly_1.GoogleCloudDatalabelingV1beta1BoundingPoly)
     ], GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation.prototype, "boundingPoly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=normalizedBoundingPoly" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=normalizedBoundingPoly" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1normalizedboundingpoly_1.GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly)
     ], GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation.prototype, "normalizedBoundingPoly", void 0);
     return GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation = GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation;

@@ -3,11 +3,11 @@ import { ErrorParameter } from "./errorparameter";
 
 
 
-// Error
+// ErrorT
 /** 
  * This type defines the fields returned in an error condition.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=category" })
   category?: string;
 

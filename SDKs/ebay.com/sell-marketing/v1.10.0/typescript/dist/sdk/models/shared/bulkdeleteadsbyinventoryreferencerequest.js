@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeleteAdsByInventoryReferenceRequest } from "./deleteadsbyinventoryreferencerequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkDeleteAdsByInventoryReferenceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var deleteadsbyinventoryreferencerequest_1 = require("./deleteadsbyinventoryreferencerequest");
 // BulkDeleteAdsByInventoryReferenceRequest
 /**
  * This type defines the request fields that bulkDeleteAdsByInventoryReference uses to delete ads in bulk.
@@ -34,9 +37,9 @@ var BulkDeleteAdsByInventoryReferenceRequest = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: DeleteAdsByInventoryReferenceRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: deleteadsbyinventoryreferencerequest_1.DeleteAdsByInventoryReferenceRequest }),
         __metadata("design:type", Array)
     ], BulkDeleteAdsByInventoryReferenceRequest.prototype, "requests", void 0);
     return BulkDeleteAdsByInventoryReferenceRequest;
-}(SpeakeasyBase));
-export { BulkDeleteAdsByInventoryReferenceRequest };
+}(utils_1.SpeakeasyBase));
+exports.BulkDeleteAdsByInventoryReferenceRequest = BulkDeleteAdsByInventoryReferenceRequest;

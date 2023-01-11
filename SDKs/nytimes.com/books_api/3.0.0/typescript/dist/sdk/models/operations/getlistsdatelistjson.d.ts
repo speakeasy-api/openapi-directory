@@ -53,7 +53,7 @@ export declare class GetListsDateListJson200ApplicationJsonResultsBooks extends 
 export declare class GetListsDateListJson200ApplicationJsonResults extends SpeakeasyBase {
     bestsellersDate?: string;
     books?: GetListsDateListJson200ApplicationJsonResultsBooks[];
-    corrections?: Map<string, any>[];
+    corrections?: Record<string, any>[];
     displayName?: string;
     listName?: string;
     normalListEndsAt?: number;
@@ -74,6 +74,6 @@ export declare class GetListsDateListJsonRequest extends SpeakeasyBase {
 }
 export declare class GetListsDateListJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getListsDateListJson200ApplicationJsonObject?: GetListsDateListJson200ApplicationJson;
+    getListsDateListJSON200ApplicationJSONObject?: GetListsDateListJson200ApplicationJson;
     statusCode: number;
 }

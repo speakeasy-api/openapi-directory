@@ -106,11 +106,11 @@ export declare class CvcerRequest extends SpeakeasyBase {
 export declare class CvcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cvcer400ApplicationJsonObject?: Cvcer400ApplicationJson;
-    cvcer401ApplicationJsonObject?: Cvcer401ApplicationJson;
-    cvcer404ApplicationJsonObject?: Cvcer404ApplicationJson;
-    cvcer500ApplicationJsonObject?: Cvcer500ApplicationJson;
-    cvcer502ApplicationJsonObject?: Cvcer502ApplicationJson;
-    cvcer503ApplicationJsonObject?: Cvcer503ApplicationJson;
-    cvcer504ApplicationJsonObject?: Cvcer504ApplicationJson;
+    cvcer400ApplicationJSONObject?: Cvcer400ApplicationJson;
+    cvcer401ApplicationJSONObject?: Cvcer401ApplicationJson;
+    cvcer404ApplicationJSONObject?: Cvcer404ApplicationJson;
+    cvcer500ApplicationJSONObject?: Cvcer500ApplicationJson;
+    cvcer502ApplicationJSONObject?: Cvcer502ApplicationJson;
+    cvcer503ApplicationJSONObject?: Cvcer503ApplicationJson;
+    cvcer504ApplicationJSONObject?: Cvcer504ApplicationJson;
 }

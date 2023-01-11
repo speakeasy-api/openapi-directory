@@ -19,7 +19,7 @@ export declare class AppsCreateInstallationAccessTokenRequest extends SpeakeasyB
 export declare class AppsCreateInstallationAccessTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsCreateInstallationAccessToken415ApplicationJsonObject?: AppsCreateInstallationAccessToken415ApplicationJson;
+    appsCreateInstallationAccessToken415ApplicationJSONObject?: AppsCreateInstallationAccessToken415ApplicationJson;
     basicError?: shared.BasicError;
     installationToken?: shared.InstallationToken;
     validationError?: shared.ValidationError;

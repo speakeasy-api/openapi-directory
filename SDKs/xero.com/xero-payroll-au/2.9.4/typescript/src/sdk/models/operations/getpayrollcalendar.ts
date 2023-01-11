@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetPayrollCalendarPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=PayrollCalendarID" })
-  payrollCalendarId: string;
+  payrollCalendarID: string;
 }
 
 

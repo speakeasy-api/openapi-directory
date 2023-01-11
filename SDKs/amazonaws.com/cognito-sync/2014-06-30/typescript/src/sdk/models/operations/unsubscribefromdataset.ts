@@ -76,5 +76,5 @@ export class UnsubscribeFromDatasetResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  unsubscribeFromDatasetResponse?: Map<string, any>;
+  unsubscribeFromDatasetResponse?: Record<string, any>;
 }

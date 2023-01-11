@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1CustomersIdPrivacyResponse = exports.GetSetupV1CustomersIdPrivacyRequest = exports.GetSetupV1CustomersIdPrivacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1CustomersIdPrivacyPathParams = /** @class */ (function (_super) {
     __extends(GetSetupV1CustomersIdPrivacyPathParams, _super);
     function GetSetupV1CustomersIdPrivacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetSetupV1CustomersIdPrivacyPathParams.prototype, "id", void 0);
     return GetSetupV1CustomersIdPrivacyPathParams;
-}(SpeakeasyBase));
-export { GetSetupV1CustomersIdPrivacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CustomersIdPrivacyPathParams = GetSetupV1CustomersIdPrivacyPathParams;
 var GetSetupV1CustomersIdPrivacyRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1CustomersIdPrivacyRequest, _super);
     function GetSetupV1CustomersIdPrivacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1CustomersIdPrivacyPathParams)
     ], GetSetupV1CustomersIdPrivacyRequest.prototype, "pathParams", void 0);
     return GetSetupV1CustomersIdPrivacyRequest;
-}(SpeakeasyBase));
-export { GetSetupV1CustomersIdPrivacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CustomersIdPrivacyRequest = GetSetupV1CustomersIdPrivacyRequest;
 var GetSetupV1CustomersIdPrivacyResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1CustomersIdPrivacyResponse, _super);
     function GetSetupV1CustomersIdPrivacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1CustomersIdPrivacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1CustomersIdPrivacyResponse.prototype, "customerPrivacyViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1CustomersIdPrivacyResponse.prototype, "statusCode", void 0);
     return GetSetupV1CustomersIdPrivacyResponse;
-}(SpeakeasyBase));
-export { GetSetupV1CustomersIdPrivacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CustomersIdPrivacyResponse = GetSetupV1CustomersIdPrivacyResponse;

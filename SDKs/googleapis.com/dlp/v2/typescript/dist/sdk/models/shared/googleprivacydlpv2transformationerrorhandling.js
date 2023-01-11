@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2TransformationErrorHandling = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2TransformationErrorHandling
 /**
  * How to handle transformation errors during de-identification. A transformation error occurs when the requested transformation is incompatible with the data. For example, trying to de-identify an IP address using a `DateShift` transformation would result in a transformation error, since date info cannot be extracted from an IP address. Information about any incompatible transformations, and how they were handled, is returned in the response as part of the `TransformationOverviews`.
@@ -33,13 +36,13 @@ var GooglePrivacyDlpV2TransformationErrorHandling = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leaveUntransformed" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leaveUntransformed" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2TransformationErrorHandling.prototype, "leaveUntransformed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=throwError" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=throwError" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2TransformationErrorHandling.prototype, "throwError", void 0);
     return GooglePrivacyDlpV2TransformationErrorHandling;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2TransformationErrorHandling };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2TransformationErrorHandling = GooglePrivacyDlpV2TransformationErrorHandling;

@@ -8,28 +8,10 @@ export class ReposListForUserPathParams extends SpeakeasyBase {
   username: string;
 }
 
-export enum ReposListForUserDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum ReposListForUserSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Pushed = "pushed",
-    FullName = "full_name"
-}
-
-export enum ReposListForUserTypeEnum {
-    All = "all",
-    Owner = "owner",
-    Member = "member"
-}
-
 
 export class ReposListForUserQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: ReposListForUserDirectionEnum;
+  direction?: shared.UsernameEnum4;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -38,10 +20,10 @@ export class ReposListForUserQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: ReposListForUserSortEnum;
+  sort?: shared.UsernameEnum3;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" })
-  type?: ReposListForUserTypeEnum;
+  type?: shared.UsernameEnum2;
 }
 
 
@@ -59,7 +41,7 @@ export class ReposListForUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

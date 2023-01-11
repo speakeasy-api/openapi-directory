@@ -1,5 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
+ * Options for exporting BAK files (SQL Server-only)
+**/
+export declare class ExportContextBakExportOptions extends SpeakeasyBase {
+    stripeCount?: number;
+    striped?: boolean;
+}
+/**
  * Options for exporting data as CSV. `MySQL` and `PostgreSQL` instances only.
 **/
 export declare class ExportContextCsvExportOptions extends SpeakeasyBase {
@@ -33,6 +40,7 @@ export declare class ExportContextSqlExportOptions extends SpeakeasyBase {
  * Database instance export context.
 **/
 export declare class ExportContext extends SpeakeasyBase {
+    bakExportOptions?: ExportContextBakExportOptions;
     csvExportOptions?: ExportContextCsvExportOptions;
     databases?: string[];
     fileType?: ExportContextFileTypeEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeleteImpersonationOAuthTokenResponse = exports.EnterpriseAdminDeleteImpersonationOAuthTokenRequest = exports.EnterpriseAdminDeleteImpersonationOAuthTokenPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeleteImpersonationOAuthTokenPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteImpersonationOAuthTokenPathParams, _super);
     function EnterpriseAdminDeleteImpersonationOAuthTokenPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteImpersonationOAuthTokenPathParams.prototype, "username", void 0);
     return EnterpriseAdminDeleteImpersonationOAuthTokenPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteImpersonationOAuthTokenPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteImpersonationOAuthTokenPathParams = EnterpriseAdminDeleteImpersonationOAuthTokenPathParams;
 var EnterpriseAdminDeleteImpersonationOAuthTokenRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteImpersonationOAuthTokenRequest, _super);
     function EnterpriseAdminDeleteImpersonationOAuthTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeleteImpersonationOAuthTokenPathParams)
     ], EnterpriseAdminDeleteImpersonationOAuthTokenRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminDeleteImpersonationOAuthTokenRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteImpersonationOAuthTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteImpersonationOAuthTokenRequest = EnterpriseAdminDeleteImpersonationOAuthTokenRequest;
 var EnterpriseAdminDeleteImpersonationOAuthTokenResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteImpersonationOAuthTokenResponse, _super);
     function EnterpriseAdminDeleteImpersonationOAuthTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteImpersonationOAuthTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteImpersonationOAuthTokenResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeleteImpersonationOAuthTokenResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteImpersonationOAuthTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteImpersonationOAuthTokenResponse = EnterpriseAdminDeleteImpersonationOAuthTokenResponse;

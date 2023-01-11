@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetMetricStreamActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetMetricStreamResponse = exports.GetGetMetricStreamRequest = exports.GetGetMetricStreamHeaders = exports.GetGetMetricStreamQueryParams = exports.GetGetMetricStreamVersionEnum = exports.GetGetMetricStreamActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetMetricStreamActionEnum;
 (function (GetGetMetricStreamActionEnum) {
     GetGetMetricStreamActionEnum["GetMetricStream"] = "GetMetricStream";
-})(GetGetMetricStreamActionEnum || (GetGetMetricStreamActionEnum = {}));
-export var GetGetMetricStreamVersionEnum;
+})(GetGetMetricStreamActionEnum = exports.GetGetMetricStreamActionEnum || (exports.GetGetMetricStreamActionEnum = {}));
+var GetGetMetricStreamVersionEnum;
 (function (GetGetMetricStreamVersionEnum) {
     GetGetMetricStreamVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(GetGetMetricStreamVersionEnum || (GetGetMetricStreamVersionEnum = {}));
+})(GetGetMetricStreamVersionEnum = exports.GetGetMetricStreamVersionEnum || (exports.GetGetMetricStreamVersionEnum = {}));
 var GetGetMetricStreamQueryParams = /** @class */ (function (_super) {
     __extends(GetGetMetricStreamQueryParams, _super);
     function GetGetMetricStreamQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Name" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamQueryParams.prototype, "version", void 0);
     return GetGetMetricStreamQueryParams;
-}(SpeakeasyBase));
-export { GetGetMetricStreamQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetMetricStreamQueryParams = GetGetMetricStreamQueryParams;
 var GetGetMetricStreamHeaders = /** @class */ (function (_super) {
     __extends(GetGetMetricStreamHeaders, _super);
     function GetGetMetricStreamHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetMetricStreamHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetMetricStreamHeaders;
-}(SpeakeasyBase));
-export { GetGetMetricStreamHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetMetricStreamHeaders = GetGetMetricStreamHeaders;
 var GetGetMetricStreamRequest = /** @class */ (function (_super) {
     __extends(GetGetMetricStreamRequest, _super);
     function GetGetMetricStreamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetMetricStreamQueryParams)
     ], GetGetMetricStreamRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetMetricStreamHeaders)
     ], GetGetMetricStreamRequest.prototype, "headers", void 0);
     return GetGetMetricStreamRequest;
-}(SpeakeasyBase));
-export { GetGetMetricStreamRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetMetricStreamRequest = GetGetMetricStreamRequest;
 var GetGetMetricStreamResponse = /** @class */ (function (_super) {
     __extends(GetGetMetricStreamResponse, _super);
     function GetGetMetricStreamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetMetricStreamResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetMetricStreamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetMetricStreamResponse.prototype, "statusCode", void 0);
     return GetGetMetricStreamResponse;
-}(SpeakeasyBase));
-export { GetGetMetricStreamResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetMetricStreamResponse = GetGetMetricStreamResponse;

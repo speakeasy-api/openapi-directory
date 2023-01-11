@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetObjectsWithReferenceDiffUsingGetPathParams extends SpeakeasyBase {
-    dateFromYyyymmdd: string;
-    dateToYyyymmdd: string;
+    dateFromYYYYMMDD: string;
+    dateToYYYYMMDD: string;
     speciesTypeKey: number;
 }
 export declare class GetObjectsWithReferenceDiffUsingGetRequest extends SpeakeasyBase {

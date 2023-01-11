@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { IeTotalsByCandidate } from "./ietotalsbycandidate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IeTotalsByCandidatePage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var ietotalsbycandidate_1 = require("./ietotalsbycandidate");
 var IeTotalsByCandidatePage = /** @class */ (function (_super) {
     __extends(IeTotalsByCandidatePage, _super);
     function IeTotalsByCandidatePage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], IeTotalsByCandidatePage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: IeTotalsByCandidate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: ietotalsbycandidate_1.IeTotalsByCandidate }),
         __metadata("design:type", Array)
     ], IeTotalsByCandidatePage.prototype, "results", void 0);
     return IeTotalsByCandidatePage;
-}(SpeakeasyBase));
-export { IeTotalsByCandidatePage };
+}(utils_1.SpeakeasyBase));
+exports.IeTotalsByCandidatePage = IeTotalsByCandidatePage;

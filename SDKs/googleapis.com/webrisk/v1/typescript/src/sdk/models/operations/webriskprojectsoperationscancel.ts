@@ -53,7 +53,7 @@ export class WebriskProjectsOperationsCancelRequest extends SpeakeasyBase {
   queryParams: WebriskProjectsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -62,7 +62,7 @@ export class WebriskProjectsOperationsCancelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

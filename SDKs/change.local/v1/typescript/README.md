@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApiV1DonationsCarbonCalculateRequest, GetApiV1DonationsCarbonCalculateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -35,15 +34,15 @@ const req: GetApiV1DonationsCarbonCalculateRequest = {
     },
   },
   queryParams: {
-    destinationAddress: 24.200001,
-    distanceMi: 76.199997,
-    originAddress: 3.200000,
-    transportationMethod: "truck",
-    weightLb: 79.199997,
+    destinationAddress: 74.099998,
+    distanceMi: 53.099998,
+    originAddress: 15.100000,
+    transportationMethod: "sea",
+    weightLb: 77.099998,
   },
 };
 
-sdk.sdk.getApiV1DonationsCarbonCalculate(req).then((res: GetApiV1DonationsCarbonCalculateResponse | AxiosError) => {
+sdk.getApiV1DonationsCarbonCalculate(req).then((res: GetApiV1DonationsCarbonCalculateResponse | AxiosError) => {
    // handle response
 });
 ```

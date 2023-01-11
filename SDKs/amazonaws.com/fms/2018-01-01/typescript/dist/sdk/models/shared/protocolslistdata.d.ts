@@ -8,6 +8,6 @@ export declare class ProtocolsListData extends SpeakeasyBase {
     listId?: string;
     listName: string;
     listUpdateToken?: string;
-    previousProtocolsList?: Map<string, string[]>;
+    previousProtocolsList?: Record<string, string[]>;
     protocolsList: string[];
 }

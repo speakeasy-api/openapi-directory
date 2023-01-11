@@ -120,8 +120,8 @@ export class PostV1OrderScreenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postV1OrderScreen200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postV1OrderScreen200ApplicationJSONString?: string;
 }

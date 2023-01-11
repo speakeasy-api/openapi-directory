@@ -16,5 +16,5 @@ export declare class DeleteTeamsUsernameHooksUidRequest extends SpeakeasyBase {
 export declare class DeleteTeamsUsernameHooksUidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

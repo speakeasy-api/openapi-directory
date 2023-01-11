@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransformSortColumnTypeEnum } from "./transformsortcolumntypeenum";
-import { SortDirectionTypeEnum } from "./sortdirectiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformSortCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var transformsortcolumntypeenum_1 = require("./transformsortcolumntypeenum");
+var sortdirectiontypeenum_1 = require("./sortdirectiontypeenum");
 // TransformSortCriteria
 /**
  * The sorting criteria that are associated with the machine learning transform.
@@ -35,13 +38,13 @@ var TransformSortCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Column" }),
         __metadata("design:type", String)
     ], TransformSortCriteria.prototype, "column", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SortDirection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SortDirection" }),
         __metadata("design:type", String)
     ], TransformSortCriteria.prototype, "sortDirection", void 0);
     return TransformSortCriteria;
-}(SpeakeasyBase));
-export { TransformSortCriteria };
+}(utils_1.SpeakeasyBase));
+exports.TransformSortCriteria = TransformSortCriteria;

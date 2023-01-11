@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketplaceDeal } from "./marketplacedeal";
-import { Proposal } from "./proposal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditAllOrderDealsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketplacedeal_1 = require("./marketplacedeal");
+var proposal_1 = require("./proposal");
 var EditAllOrderDealsRequest = /** @class */ (function (_super) {
     __extends(EditAllOrderDealsRequest, _super);
     function EditAllOrderDealsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deals", elemType: MarketplaceDeal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deals", elemType: marketplacedeal_1.MarketplaceDeal }),
         __metadata("design:type", Array)
     ], EditAllOrderDealsRequest.prototype, "deals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposal" }),
-        __metadata("design:type", Proposal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposal" }),
+        __metadata("design:type", proposal_1.Proposal)
     ], EditAllOrderDealsRequest.prototype, "proposal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalRevisionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalRevisionNumber" }),
         __metadata("design:type", String)
     ], EditAllOrderDealsRequest.prototype, "proposalRevisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateAction" }),
         __metadata("design:type", String)
     ], EditAllOrderDealsRequest.prototype, "updateAction", void 0);
     return EditAllOrderDealsRequest;
-}(SpeakeasyBase));
-export { EditAllOrderDealsRequest };
+}(utils_1.SpeakeasyBase));
+exports.EditAllOrderDealsRequest = EditAllOrderDealsRequest;

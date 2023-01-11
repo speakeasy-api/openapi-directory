@@ -16,6 +16,6 @@ export declare class GetSnippetsWorkspaceEncodedIdCommitsRequest extends Speakea
 export declare class GetSnippetsWorkspaceEncodedIdCommitsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedSnippetCommit?: shared.PaginatedSnippetCommit;
 }

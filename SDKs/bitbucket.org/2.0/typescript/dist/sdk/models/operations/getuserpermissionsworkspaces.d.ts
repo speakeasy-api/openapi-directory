@@ -16,6 +16,6 @@ export declare class GetUserPermissionsWorkspacesRequest extends SpeakeasyBase {
 export declare class GetUserPermissionsWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWorkspaceMemberships?: shared.PaginatedWorkspaceMemberships;
 }

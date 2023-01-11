@@ -47,7 +47,7 @@ export class GetWorkspacesWorkspacePermissionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedWorkspaceMemberships?: shared.PaginatedWorkspaceMemberships;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MergeHunkDetail } from "./mergehunkdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergeHunk = void 0;
+var utils_1 = require("../../../internal/utils");
+var mergehunkdetail_1 = require("./mergehunkdetail");
 // MergeHunk
 /**
  * Information about merge hunks in a merge or pull request operation.
@@ -34,21 +37,21 @@ var MergeHunk = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base" }),
-        __metadata("design:type", MergeHunkDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base" }),
+        __metadata("design:type", mergehunkdetail_1.MergeHunkDetail)
     ], MergeHunk.prototype, "base", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", MergeHunkDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", mergehunkdetail_1.MergeHunkDetail)
     ], MergeHunk.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isConflict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isConflict" }),
         __metadata("design:type", Boolean)
     ], MergeHunk.prototype, "isConflict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", MergeHunkDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", mergehunkdetail_1.MergeHunkDetail)
     ], MergeHunk.prototype, "source", void 0);
     return MergeHunk;
-}(SpeakeasyBase));
-export { MergeHunk };
+}(utils_1.SpeakeasyBase));
+exports.MergeHunk = MergeHunk;

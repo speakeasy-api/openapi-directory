@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPipelineStepLogForRepositoryResponse = exports.GetPipelineStepLogForRepositoryRequest = exports.GetPipelineStepLogForRepositoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPipelineStepLogForRepositoryPathParams = /** @class */ (function (_super) {
     __extends(GetPipelineStepLogForRepositoryPathParams, _super);
     function GetPipelineStepLogForRepositoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pipeline_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pipeline_uuid" }),
         __metadata("design:type", String)
     ], GetPipelineStepLogForRepositoryPathParams.prototype, "pipelineUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], GetPipelineStepLogForRepositoryPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=step_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=step_uuid" }),
         __metadata("design:type", String)
     ], GetPipelineStepLogForRepositoryPathParams.prototype, "stepUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetPipelineStepLogForRepositoryPathParams.prototype, "workspace", void 0);
     return GetPipelineStepLogForRepositoryPathParams;
-}(SpeakeasyBase));
-export { GetPipelineStepLogForRepositoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineStepLogForRepositoryPathParams = GetPipelineStepLogForRepositoryPathParams;
 var GetPipelineStepLogForRepositoryRequest = /** @class */ (function (_super) {
     __extends(GetPipelineStepLogForRepositoryRequest, _super);
     function GetPipelineStepLogForRepositoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPipelineStepLogForRepositoryPathParams)
     ], GetPipelineStepLogForRepositoryRequest.prototype, "pathParams", void 0);
     return GetPipelineStepLogForRepositoryRequest;
-}(SpeakeasyBase));
-export { GetPipelineStepLogForRepositoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineStepLogForRepositoryRequest = GetPipelineStepLogForRepositoryRequest;
 var GetPipelineStepLogForRepositoryResponse = /** @class */ (function (_super) {
     __extends(GetPipelineStepLogForRepositoryResponse, _super);
     function GetPipelineStepLogForRepositoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPipelineStepLogForRepositoryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPipelineStepLogForRepositoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPipelineStepLogForRepositoryResponse.prototype, "statusCode", void 0);
     return GetPipelineStepLogForRepositoryResponse;
-}(SpeakeasyBase));
-export { GetPipelineStepLogForRepositoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineStepLogForRepositoryResponse = GetPipelineStepLogForRepositoryResponse;

@@ -17,10 +17,10 @@ export enum HiveMetastoreConfigEndpointProtocolEnum {
 **/
 export class HiveMetastoreConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfig })
-  auxiliaryVersions?: Map<string, AuxiliaryVersionConfig>;
+  auxiliaryVersions?: Record<string, AuxiliaryVersionConfig>;
 
   @SpeakeasyMetadata({ data: "json, name=configOverrides" })
-  configOverrides?: Map<string, string>;
+  configOverrides?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endpointProtocol" })
   endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;
@@ -39,10 +39,10 @@ export class HiveMetastoreConfig extends SpeakeasyBase {
 **/
 export class HiveMetastoreConfigInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfigInput })
-  auxiliaryVersions?: Map<string, AuxiliaryVersionConfigInput>;
+  auxiliaryVersions?: Record<string, AuxiliaryVersionConfigInput>;
 
   @SpeakeasyMetadata({ data: "json, name=configOverrides" })
-  configOverrides?: Map<string, string>;
+  configOverrides?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endpointProtocol" })
   endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;

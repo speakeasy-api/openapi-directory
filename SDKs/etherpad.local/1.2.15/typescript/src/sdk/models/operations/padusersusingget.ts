@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class PadUsersUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class PadUsersUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class PadUsersUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class PadUsersUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class PadUsersUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  padUsersUsingGet200ApplicationJsonObject?: PadUsersUsingGet200ApplicationJson;
+  padUsersUsingGET200ApplicationJSONObject?: PadUsersUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingGet400ApplicationJsonObject?: PadUsersUsingGet400ApplicationJson;
+  padUsersUsingGET400ApplicationJSONObject?: PadUsersUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingGet401ApplicationJsonObject?: PadUsersUsingGet401ApplicationJson;
+  padUsersUsingGET401ApplicationJSONObject?: PadUsersUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersUsingGet500ApplicationJsonObject?: PadUsersUsingGet500ApplicationJson;
+  padUsersUsingGET500ApplicationJSONObject?: PadUsersUsingGet500ApplicationJson;
 }

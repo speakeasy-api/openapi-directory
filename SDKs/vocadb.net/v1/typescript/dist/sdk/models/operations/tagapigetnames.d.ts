@@ -11,7 +11,7 @@ export declare class TagApiGetNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    tagApiGetNames200ApplicationJsonStrings?: string[];
+    tagApiGetNames200ApplicationJSONStrings?: string[];
     tagApiGetNames200ApplicationJsonpStrings?: string[];
-    tagApiGetNames200TextJsonStrings?: string[];
+    tagApiGetNames200TextJSONStrings?: string[];
 }

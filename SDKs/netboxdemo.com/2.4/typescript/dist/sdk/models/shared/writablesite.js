@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableSiteInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableSiteInput = /** @class */ (function (_super) {
     __extends(WritableSiteInput, _super);
     function WritableSiteInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], WritableSiteInput.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_email" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "contactEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_name" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "contactName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_phone" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "contactPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], WritableSiteInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facility" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "facility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physical_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physical_address" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "physicalAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", Number)
     ], WritableSiteInput.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipping_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipping_address" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "shippingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], WritableSiteInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableSiteInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", Number)
     ], WritableSiteInput.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_zone" }),
         __metadata("design:type", String)
     ], WritableSiteInput.prototype, "timeZone", void 0);
     return WritableSiteInput;
-}(SpeakeasyBase));
-export { WritableSiteInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableSiteInput = WritableSiteInput;

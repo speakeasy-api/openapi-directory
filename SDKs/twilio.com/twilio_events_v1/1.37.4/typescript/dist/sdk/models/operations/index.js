@@ -1,0 +1,38 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./createsink"), exports);
+__exportStar(require("./createsinktest"), exports);
+__exportStar(require("./createsinkvalidate"), exports);
+__exportStar(require("./createsubscribedevent"), exports);
+__exportStar(require("./createsubscription"), exports);
+__exportStar(require("./deletesink"), exports);
+__exportStar(require("./deletesubscribedevent"), exports);
+__exportStar(require("./deletesubscription"), exports);
+__exportStar(require("./fetcheventtype"), exports);
+__exportStar(require("./fetchschema"), exports);
+__exportStar(require("./fetchschemaversion"), exports);
+__exportStar(require("./fetchsink"), exports);
+__exportStar(require("./fetchsubscribedevent"), exports);
+__exportStar(require("./fetchsubscription"), exports);
+__exportStar(require("./listeventtype"), exports);
+__exportStar(require("./listschemaversion"), exports);
+__exportStar(require("./listsink"), exports);
+__exportStar(require("./listsubscribedevent"), exports);
+__exportStar(require("./listsubscription"), exports);
+__exportStar(require("./updatesink"), exports);
+__exportStar(require("./updatesubscribedevent"), exports);
+__exportStar(require("./updatesubscription"), exports);

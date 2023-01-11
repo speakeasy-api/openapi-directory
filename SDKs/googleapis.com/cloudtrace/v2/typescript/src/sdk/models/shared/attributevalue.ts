@@ -3,10 +3,6 @@ import { TruncatableString } from "./truncatablestring";
 
 
 
-// AttributeValue
-/** 
- * The allowed types for `[VALUE]` in a `[KEY]:[VALUE]` attribute.
-**/
 export class AttributeValue extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=boolValue" })
   boolValue?: boolean;

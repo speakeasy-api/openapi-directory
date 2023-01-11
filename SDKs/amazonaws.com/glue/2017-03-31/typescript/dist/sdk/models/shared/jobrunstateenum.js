@@ -1,4 +1,7 @@
-export var JobRunStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobRunStateEnum = void 0;
+var JobRunStateEnum;
 (function (JobRunStateEnum) {
     JobRunStateEnum["Starting"] = "STARTING";
     JobRunStateEnum["Running"] = "RUNNING";
@@ -7,4 +10,4 @@ export var JobRunStateEnum;
     JobRunStateEnum["Succeeded"] = "SUCCEEDED";
     JobRunStateEnum["Failed"] = "FAILED";
     JobRunStateEnum["Timeout"] = "TIMEOUT";
-})(JobRunStateEnum || (JobRunStateEnum = {}));
+})(JobRunStateEnum = exports.JobRunStateEnum || (exports.JobRunStateEnum = {}));

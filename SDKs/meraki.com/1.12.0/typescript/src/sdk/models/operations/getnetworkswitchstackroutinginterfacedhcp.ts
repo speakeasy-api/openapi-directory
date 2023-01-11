@@ -28,5 +28,5 @@ export class GetNetworkSwitchStackRoutingInterfaceDhcpResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

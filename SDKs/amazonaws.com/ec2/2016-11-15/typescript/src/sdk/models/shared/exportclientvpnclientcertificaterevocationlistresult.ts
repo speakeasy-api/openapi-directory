@@ -1,12 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientCertificateRevocationListStatus } from "./clientcertificaterevocationliststatus";
 
+
+
+// ExportClientVpnClientCertificateRevocationListResultStatus
+/** 
+ * The current state of the client certificate revocation list.
+**/
+export class ExportClientVpnClientCertificateRevocationListResultStatus extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
 
 
 export class ExportClientVpnClientCertificateRevocationListResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  certificateRevocationList?: string;
+  certificateRevocationList?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: ClientCertificateRevocationListStatus;
+  status?: ExportClientVpnClientCertificateRevocationListResultStatus;
 }

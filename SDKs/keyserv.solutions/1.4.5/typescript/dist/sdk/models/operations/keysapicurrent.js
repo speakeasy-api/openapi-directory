@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeysApiCurrentResponse = exports.KeysApiCurrentRequest = exports.KeysApiCurrentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KeysApiCurrentPathParams = /** @class */ (function (_super) {
     __extends(KeysApiCurrentPathParams, _super);
     function KeysApiCurrentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], KeysApiCurrentPathParams.prototype, "serial", void 0);
     return KeysApiCurrentPathParams;
-}(SpeakeasyBase));
-export { KeysApiCurrentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCurrentPathParams = KeysApiCurrentPathParams;
 var KeysApiCurrentRequest = /** @class */ (function (_super) {
     __extends(KeysApiCurrentRequest, _super);
     function KeysApiCurrentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeysApiCurrentPathParams)
     ], KeysApiCurrentRequest.prototype, "pathParams", void 0);
     return KeysApiCurrentRequest;
-}(SpeakeasyBase));
-export { KeysApiCurrentRequest };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCurrentRequest = KeysApiCurrentRequest;
 var KeysApiCurrentResponse = /** @class */ (function (_super) {
     __extends(KeysApiCurrentResponse, _super);
     function KeysApiCurrentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KeysApiCurrentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], KeysApiCurrentResponse.prototype, "keysApiCurrent200ApplicationJsonOneOf", void 0);
+    ], KeysApiCurrentResponse.prototype, "keysApiCurrent200ApplicationJSONOneOf", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KeysApiCurrentResponse.prototype, "statusCode", void 0);
     return KeysApiCurrentResponse;
-}(SpeakeasyBase));
-export { KeysApiCurrentResponse };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCurrentResponse = KeysApiCurrentResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesMediaMostPopularMediaFormatResponse = exports.GetResourcesMediaMostPopularMediaFormatRequest = exports.GetResourcesMediaMostPopularMediaFormatQueryParams = exports.GetResourcesMediaMostPopularMediaFormatPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetResourcesMediaMostPopularMediaFormatPathParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaMostPopularMediaFormatPathParams, _super);
     function GetResourcesMediaMostPopularMediaFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GetResourcesMediaMostPopularMediaFormatPathParams.prototype, "format", void 0);
     return GetResourcesMediaMostPopularMediaFormatPathParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaMostPopularMediaFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaMostPopularMediaFormatPathParams = GetResourcesMediaMostPopularMediaFormatPathParams;
 var GetResourcesMediaMostPopularMediaFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaMostPopularMediaFormatQueryParams, _super);
     function GetResourcesMediaMostPopularMediaFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=max" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaMostPopularMediaFormatQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=offset" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaMostPopularMediaFormatQueryParams.prototype, "offset", void 0);
     return GetResourcesMediaMostPopularMediaFormatQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaMostPopularMediaFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaMostPopularMediaFormatQueryParams = GetResourcesMediaMostPopularMediaFormatQueryParams;
 var GetResourcesMediaMostPopularMediaFormatRequest = /** @class */ (function (_super) {
     __extends(GetResourcesMediaMostPopularMediaFormatRequest, _super);
     function GetResourcesMediaMostPopularMediaFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaMostPopularMediaFormatPathParams)
     ], GetResourcesMediaMostPopularMediaFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaMostPopularMediaFormatQueryParams)
     ], GetResourcesMediaMostPopularMediaFormatRequest.prototype, "queryParams", void 0);
     return GetResourcesMediaMostPopularMediaFormatRequest;
-}(SpeakeasyBase));
-export { GetResourcesMediaMostPopularMediaFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaMostPopularMediaFormatRequest = GetResourcesMediaMostPopularMediaFormatRequest;
 var GetResourcesMediaMostPopularMediaFormatResponse = /** @class */ (function (_super) {
     __extends(GetResourcesMediaMostPopularMediaFormatResponse, _super);
     function GetResourcesMediaMostPopularMediaFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesMediaMostPopularMediaFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.MediaItemWrapped }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.MediaItemWrapped }),
         __metadata("design:type", Array)
     ], GetResourcesMediaMostPopularMediaFormatResponse.prototype, "mediaItemWrappeds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesMediaMostPopularMediaFormatResponse.prototype, "statusCode", void 0);
     return GetResourcesMediaMostPopularMediaFormatResponse;
-}(SpeakeasyBase));
-export { GetResourcesMediaMostPopularMediaFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaMostPopularMediaFormatResponse = GetResourcesMediaMostPopularMediaFormatResponse;

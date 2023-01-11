@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrganizationResponse = exports.CreateOrganizationRequest = exports.CreateOrganizationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrganizationRequestBody = /** @class */ (function (_super) {
     __extends(CreateOrganizationRequestBody, _super);
     function CreateOrganizationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateOrganizationRequestBody.prototype, "name", void 0);
     return CreateOrganizationRequestBody;
-}(SpeakeasyBase));
-export { CreateOrganizationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationRequestBody = CreateOrganizationRequestBody;
 var CreateOrganizationRequest = /** @class */ (function (_super) {
     __extends(CreateOrganizationRequest, _super);
     function CreateOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateOrganizationRequestBody)
     ], CreateOrganizationRequest.prototype, "request", void 0);
     return CreateOrganizationRequest;
-}(SpeakeasyBase));
-export { CreateOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationRequest = CreateOrganizationRequest;
 var CreateOrganizationResponse = /** @class */ (function (_super) {
     __extends(CreateOrganizationResponse, _super);
     function CreateOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrganizationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateOrganizationResponse.prototype, "createOrganization201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateOrganizationResponse.prototype, "createOrganization201ApplicationJSONObject", void 0);
     return CreateOrganizationResponse;
-}(SpeakeasyBase));
-export { CreateOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationResponse = CreateOrganizationResponse;

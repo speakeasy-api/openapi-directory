@@ -4,7 +4,7 @@ export declare class GetListingViolationsSummaryQueryParams extends SpeakeasyBas
     complianceType?: string;
 }
 export declare class GetListingViolationsSummaryHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId?: string;
+    xEBAYCMARKETPLACEID?: string;
 }
 export declare class GetListingViolationsSummarySecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

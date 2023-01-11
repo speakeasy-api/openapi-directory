@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesResponse = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequest = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams, _super);
     function UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams };
-export var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams = UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams;
+var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum;
 (function (UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum) {
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum["Allow"] = "allow";
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum["Deny"] = "deny";
-})(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum || (UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum = {}));
-export var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum;
+})(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum || (exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesPolicyEnum = {}));
+var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum;
 (function (UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum) {
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum["Tcp"] = "tcp";
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum["Udp"] = "udp";
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum["Icmp"] = "icmp";
     UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum["Any"] = "any";
-})(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum || (UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum = {}));
+})(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum = exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum || (exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRulesProtocolEnum = {}));
 var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules, _super);
     function UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destCidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "destCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destPort" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "destPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcCidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "srcCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcPort" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "srcPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syslogEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syslogEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules.prototype, "syslogEnabled", void 0);
     return UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules = UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules;
 var UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody, _super);
     function UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBodyRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody.prototype, "rules", void 0);
     return UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody = UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody;
 var UpdateNetworkApplianceFirewallCellularFirewallRulesRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallCellularFirewallRulesRequest, _super);
     function UpdateNetworkApplianceFirewallCellularFirewallRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceFirewallCellularFirewallRulesPathParams)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceFirewallCellularFirewallRulesRequestBody)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceFirewallCellularFirewallRulesRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallCellularFirewallRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesRequest = UpdateNetworkApplianceFirewallCellularFirewallRulesRequest;
 var UpdateNetworkApplianceFirewallCellularFirewallRulesResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceFirewallCellularFirewallRulesResponse, _super);
     function UpdateNetworkApplianceFirewallCellularFirewallRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceFirewallCellularFirewallRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceFirewallCellularFirewallRulesResponse.prototype, "updateNetworkApplianceFirewallCellularFirewallRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceFirewallCellularFirewallRulesResponse.prototype, "updateNetworkApplianceFirewallCellularFirewallRules200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceFirewallCellularFirewallRulesResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceFirewallCellularFirewallRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceFirewallCellularFirewallRulesResponse = UpdateNetworkApplianceFirewallCellularFirewallRulesResponse;

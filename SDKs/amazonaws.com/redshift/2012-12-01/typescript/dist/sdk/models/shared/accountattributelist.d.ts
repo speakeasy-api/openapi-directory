@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AccountAttribute } from "./accountattribute";
+import { AttributeList } from "./attributelist";
 export declare class AccountAttributeList extends SpeakeasyBase {
-    accountAttributes?: AccountAttribute[];
+    accountAttributes?: AttributeList[];
 }

@@ -20,7 +20,7 @@ export class RendererFormattedStrings extends SpeakeasyBase {
   crcLongestDurationLabel?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dropdownCopyJSON" })
-  dropdownCopyJson?: string;
+  dropdownCopyJSON?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dropdownDarkTheme" })
   dropdownDarkTheme?: string;
@@ -35,10 +35,10 @@ export class RendererFormattedStrings extends SpeakeasyBase {
   dropdownSaveGist?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dropdownSaveHTML" })
-  dropdownSaveHtml?: string;
+  dropdownSaveHTML?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dropdownSaveJSON" })
-  dropdownSaveJson?: string;
+  dropdownSaveJSON?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dropdownViewer" })
   dropdownViewer?: string;
@@ -89,7 +89,7 @@ export class RendererFormattedStrings extends SpeakeasyBase {
   runtimeSettingsBenchmark?: string;
 
   @SpeakeasyMetadata({ data: "json, name=runtimeSettingsCPUThrottling" })
-  runtimeSettingsCpuThrottling?: string;
+  runtimeSettingsCPUThrottling?: string;
 
   @SpeakeasyMetadata({ data: "json, name=runtimeSettingsChannel" })
   runtimeSettingsChannel?: string;
@@ -107,10 +107,10 @@ export class RendererFormattedStrings extends SpeakeasyBase {
   runtimeSettingsTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=runtimeSettingsUA" })
-  runtimeSettingsUa?: string;
+  runtimeSettingsUA?: string;
 
   @SpeakeasyMetadata({ data: "json, name=runtimeSettingsUANetwork" })
-  runtimeSettingsUaNetwork?: string;
+  runtimeSettingsUANetwork?: string;
 
   @SpeakeasyMetadata({ data: "json, name=runtimeSettingsUrl" })
   runtimeSettingsUrl?: string;

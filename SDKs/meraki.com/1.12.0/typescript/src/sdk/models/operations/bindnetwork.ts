@@ -34,5 +34,5 @@ export class BindNetworkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bindNetwork200ApplicationJsonObject?: Map<string, any>;
+  bindNetwork200ApplicationJSONObject?: Record<string, any>;
 }

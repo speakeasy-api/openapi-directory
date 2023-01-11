@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig } from "./googleclouddatalabelingv1beta1annotationspecsetconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1VideoClassificationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspecsetconfig_1 = require("./googleclouddatalabelingv1beta1annotationspecsetconfig");
 // GoogleCloudDatalabelingV1beta1VideoClassificationConfig
 /**
  * Config for video classification human labeling task. Currently two types of video classification are supported: 1. Assign labels on the entire video. 2. Split the video into multiple video clips based on camera shot, and assign labels on each video clip.
@@ -34,13 +37,13 @@ var GoogleCloudDatalabelingV1beta1VideoClassificationConfig = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpecSetConfigs", elemType: GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpecSetConfigs", elemType: googleclouddatalabelingv1beta1annotationspecsetconfig_1.GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1VideoClassificationConfig.prototype, "annotationSpecSetConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyShotDetection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyShotDetection" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudDatalabelingV1beta1VideoClassificationConfig.prototype, "applyShotDetection", void 0);
     return GoogleCloudDatalabelingV1beta1VideoClassificationConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1VideoClassificationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1VideoClassificationConfig = GoogleCloudDatalabelingV1beta1VideoClassificationConfig;

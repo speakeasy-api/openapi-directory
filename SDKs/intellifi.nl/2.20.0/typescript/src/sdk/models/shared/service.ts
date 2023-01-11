@@ -7,10 +7,10 @@ export class Service extends SpeakeasyBase {
   bootCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=config" })
-  config?: Map<string, any>;
+  config?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -37,7 +37,7 @@ export class Service extends SpeakeasyBase {
 
 export class ServiceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=restart_request" })
   restartRequest?: boolean;

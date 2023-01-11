@@ -8,5 +8,5 @@ export declare class ProtocolSnmptcpGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolSnmptcpGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmptcpGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConstraintPermutationsForEntitiesResponse = exports.GetConstraintPermutationsForEntitiesRequest = exports.GetConstraintPermutationsForEntitiesHeaders = exports.GetConstraintPermutationsForEntitiesQueryParams = exports.GetConstraintPermutationsForEntitiesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConstraintPermutationsForEntitiesPathParams = /** @class */ (function (_super) {
     __extends(GetConstraintPermutationsForEntitiesPathParams, _super);
     function GetConstraintPermutationsForEntitiesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable" }),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesPathParams.prototype, "variable", void 0);
     return GetConstraintPermutationsForEntitiesPathParams;
-}(SpeakeasyBase));
-export { GetConstraintPermutationsForEntitiesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConstraintPermutationsForEntitiesPathParams = GetConstraintPermutationsForEntitiesPathParams;
 var GetConstraintPermutationsForEntitiesQueryParams = /** @class */ (function (_super) {
     __extends(GetConstraintPermutationsForEntitiesQueryParams, _super);
     function GetConstraintPermutationsForEntitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=constraint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=constraint" }),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesQueryParams.prototype, "constraint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesQueryParams.prototype, "entityId", void 0);
     return GetConstraintPermutationsForEntitiesQueryParams;
-}(SpeakeasyBase));
-export { GetConstraintPermutationsForEntitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConstraintPermutationsForEntitiesQueryParams = GetConstraintPermutationsForEntitiesQueryParams;
 var GetConstraintPermutationsForEntitiesHeaders = /** @class */ (function (_super) {
     __extends(GetConstraintPermutationsForEntitiesHeaders, _super);
     function GetConstraintPermutationsForEntitiesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesHeaders.prototype, "xAppToken", void 0);
     return GetConstraintPermutationsForEntitiesHeaders;
-}(SpeakeasyBase));
-export { GetConstraintPermutationsForEntitiesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetConstraintPermutationsForEntitiesHeaders = GetConstraintPermutationsForEntitiesHeaders;
 var GetConstraintPermutationsForEntitiesRequest = /** @class */ (function (_super) {
     __extends(GetConstraintPermutationsForEntitiesRequest, _super);
     function GetConstraintPermutationsForEntitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConstraintPermutationsForEntitiesPathParams)
     ], GetConstraintPermutationsForEntitiesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConstraintPermutationsForEntitiesQueryParams)
     ], GetConstraintPermutationsForEntitiesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConstraintPermutationsForEntitiesHeaders)
     ], GetConstraintPermutationsForEntitiesRequest.prototype, "headers", void 0);
     return GetConstraintPermutationsForEntitiesRequest;
-}(SpeakeasyBase));
-export { GetConstraintPermutationsForEntitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConstraintPermutationsForEntitiesRequest = GetConstraintPermutationsForEntitiesRequest;
 var GetConstraintPermutationsForEntitiesResponse = /** @class */ (function (_super) {
     __extends(GetConstraintPermutationsForEntitiesResponse, _super);
     function GetConstraintPermutationsForEntitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConstraintPermutationsForEntitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConstraintPermutationsForEntitiesResponse.prototype, "statusCode", void 0);
     return GetConstraintPermutationsForEntitiesResponse;
-}(SpeakeasyBase));
-export { GetConstraintPermutationsForEntitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConstraintPermutationsForEntitiesResponse = GetConstraintPermutationsForEntitiesResponse;

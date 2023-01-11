@@ -15,5 +15,5 @@ export declare class UpdateOrAddEmployeeBenefitSetupRequest extends SpeakeasyBas
 export declare class UpdateOrAddEmployeeBenefitSetupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

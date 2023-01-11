@@ -47,7 +47,7 @@ export class DeleteRuleCategoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRuleCategory200ApplicationJsonObject?: DeleteRuleCategory200ApplicationJson;
+  deleteRuleCategory200ApplicationJSONObject?: DeleteRuleCategory200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

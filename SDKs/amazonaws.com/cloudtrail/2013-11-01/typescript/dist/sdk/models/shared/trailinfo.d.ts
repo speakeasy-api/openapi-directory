@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class TrailInfo extends SpeakeasyBase {
     homeRegion?: string;
     name?: string;
-    trailArn?: string;
+    trailARN?: string;
 }

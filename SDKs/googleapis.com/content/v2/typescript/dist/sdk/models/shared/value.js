@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Value = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 // Value
 /**
  * The single value of a rate group or the value of a rate group table's cell. Exactly one of `noShipping`, `flatRate`, `pricePercentage`, `carrierRateName`, `subtableName` must be set.
@@ -34,25 +37,25 @@ var Value = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrierRateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrierRateName" }),
         __metadata("design:type", String)
     ], Value.prototype, "carrierRateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flatRate" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flatRate" }),
+        __metadata("design:type", price_1.Price)
     ], Value.prototype, "flatRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noShipping" }),
         __metadata("design:type", Boolean)
     ], Value.prototype, "noShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricePercentage" }),
         __metadata("design:type", String)
     ], Value.prototype, "pricePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtableName" }),
         __metadata("design:type", String)
     ], Value.prototype, "subtableName", void 0);
     return Value;
-}(SpeakeasyBase));
-export { Value };
+}(utils_1.SpeakeasyBase));
+exports.Value = Value;

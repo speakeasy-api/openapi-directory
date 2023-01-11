@@ -13,6 +13,6 @@ export declare class RootV1StatisticsConsolidatedDailyRequest extends SpeakeasyB
 }
 export declare class RootV1StatisticsConsolidatedDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

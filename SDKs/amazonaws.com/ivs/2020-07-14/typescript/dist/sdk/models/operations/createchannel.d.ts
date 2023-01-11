@@ -22,7 +22,7 @@ export declare class CreateChannelRequestBody extends SpeakeasyBase {
     latencyMode?: CreateChannelRequestBodyLatencyModeEnum;
     name?: string;
     recordingConfigurationArn?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: CreateChannelRequestBodyTypeEnum;
 }
 export declare class CreateChannelRequest extends SpeakeasyBase {

@@ -10,5 +10,5 @@ export class GetLogResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLog200ApplicationJsonObject?: Map<string, number>;
+  getLog200ApplicationJSONObject?: Record<string, number>;
 }

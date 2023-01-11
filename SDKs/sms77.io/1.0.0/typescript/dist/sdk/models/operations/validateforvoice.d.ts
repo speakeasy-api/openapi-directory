@@ -14,5 +14,5 @@ export declare class ValidateForVoiceRequest extends SpeakeasyBase {
 export declare class ValidateForVoiceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    validateForVoice200ApplicationJsonObject?: ValidateForVoice200ApplicationJson;
+    validateForVoice200ApplicationJSONObject?: ValidateForVoice200ApplicationJson;
 }

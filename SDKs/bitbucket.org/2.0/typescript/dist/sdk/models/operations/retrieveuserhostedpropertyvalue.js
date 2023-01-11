@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetrieveUserHostedPropertyValueResponse = exports.RetrieveUserHostedPropertyValueRequest = exports.RetrieveUserHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RetrieveUserHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(RetrieveUserHostedPropertyValuePathParams, _super);
     function RetrieveUserHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], RetrieveUserHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], RetrieveUserHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=selected_user" }),
         __metadata("design:type", String)
     ], RetrieveUserHostedPropertyValuePathParams.prototype, "selectedUser", void 0);
     return RetrieveUserHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { RetrieveUserHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveUserHostedPropertyValuePathParams = RetrieveUserHostedPropertyValuePathParams;
 var RetrieveUserHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(RetrieveUserHostedPropertyValueRequest, _super);
     function RetrieveUserHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RetrieveUserHostedPropertyValuePathParams)
     ], RetrieveUserHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return RetrieveUserHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { RetrieveUserHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveUserHostedPropertyValueRequest = RetrieveUserHostedPropertyValueRequest;
 var RetrieveUserHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(RetrieveUserHostedPropertyValueResponse, _super);
     function RetrieveUserHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RetrieveUserHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RetrieveUserHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return RetrieveUserHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { RetrieveUserHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveUserHostedPropertyValueResponse = RetrieveUserHostedPropertyValueResponse;

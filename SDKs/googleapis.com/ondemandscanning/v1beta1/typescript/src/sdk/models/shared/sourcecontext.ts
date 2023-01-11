@@ -20,5 +20,5 @@ export class SourceContext extends SpeakeasyBase {
   git?: GitSourceContext;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 }

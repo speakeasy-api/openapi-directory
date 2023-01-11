@@ -15,5 +15,5 @@ export declare class ProjectsDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsDelete403ApplicationJsonObject?: ProjectsDelete403ApplicationJson;
+    projectsDelete403ApplicationJSONObject?: ProjectsDelete403ApplicationJson;
 }

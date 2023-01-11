@@ -15,6 +15,6 @@ export declare class CreateDiscountRequest extends SpeakeasyBase {
 export declare class CreateDiscountResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

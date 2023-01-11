@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOnRequest } from "./addonrequest";
-import { DiskMap } from "./diskmap";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInstancesFromSnapshotRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var addonrequest_1 = require("./addonrequest");
+var diskmap_1 = require("./diskmap");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var tag_1 = require("./tag");
 var CreateInstancesFromSnapshotRequest = /** @class */ (function (_super) {
     __extends(CreateInstancesFromSnapshotRequest, _super);
     function CreateInstancesFromSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOns", elemType: AddOnRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOns", elemType: addonrequest_1.AddOnRequest }),
         __metadata("design:type", Array)
     ], CreateInstancesFromSnapshotRequest.prototype, "addOns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachedDiskMapping", elemType: DiskMap, elemDepth: 2 }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachedDiskMapping", elemType: diskmap_1.DiskMap, elemDepth: 2 }),
+        __metadata("design:type", Object)
     ], CreateInstancesFromSnapshotRequest.prototype, "attachedDiskMapping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZone" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceNames" }),
         __metadata("design:type", Array)
     ], CreateInstancesFromSnapshotRequest.prototype, "instanceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceSnapshotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceSnapshotName" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "instanceSnapshotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyPairName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyPairName" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "keyPairName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restoreDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restoreDate" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "restoreDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceInstanceName" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "sourceInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateInstancesFromSnapshotRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useLatestRestorableAutoSnapshot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useLatestRestorableAutoSnapshot" }),
         __metadata("design:type", Boolean)
     ], CreateInstancesFromSnapshotRequest.prototype, "useLatestRestorableAutoSnapshot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
         __metadata("design:type", String)
     ], CreateInstancesFromSnapshotRequest.prototype, "userData", void 0);
     return CreateInstancesFromSnapshotRequest;
-}(SpeakeasyBase));
-export { CreateInstancesFromSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateInstancesFromSnapshotRequest = CreateInstancesFromSnapshotRequest;

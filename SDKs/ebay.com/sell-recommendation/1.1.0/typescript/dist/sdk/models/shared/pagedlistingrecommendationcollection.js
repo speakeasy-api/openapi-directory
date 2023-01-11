@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListingRecommendation } from "./listingrecommendation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagedListingRecommendationCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var listingrecommendation_1 = require("./listingrecommendation");
 // PagedListingRecommendationCollection
 /**
  * The high-level object used to return a set of Promoted Listings ad recommendations.
@@ -34,33 +37,33 @@ var PagedListingRecommendationCollection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PagedListingRecommendationCollection.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], PagedListingRecommendationCollection.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingRecommendations", elemType: ListingRecommendation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingRecommendations", elemType: listingrecommendation_1.ListingRecommendation }),
         __metadata("design:type", Array)
     ], PagedListingRecommendationCollection.prototype, "listingRecommendations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], PagedListingRecommendationCollection.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], PagedListingRecommendationCollection.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], PagedListingRecommendationCollection.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], PagedListingRecommendationCollection.prototype, "total", void 0);
     return PagedListingRecommendationCollection;
-}(SpeakeasyBase));
-export { PagedListingRecommendationCollection };
+}(utils_1.SpeakeasyBase));
+exports.PagedListingRecommendationCollection = PagedListingRecommendationCollection;

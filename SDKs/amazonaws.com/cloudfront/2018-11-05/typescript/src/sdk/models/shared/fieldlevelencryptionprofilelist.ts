@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldLevelEncryptionProfileSummary } from "./fieldlevelencryptionprofilesummary";
+import { FieldLevelEncryptionProfileSummaryList } from "./fieldlevelencryptionprofilesummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { FieldLevelEncryptionProfileSummary } from "./fieldlevelencryptionprofil
  * List of field-level encryption profiles.
 **/
 export class FieldLevelEncryptionProfileList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: FieldLevelEncryptionProfileSummary })
-  items?: FieldLevelEncryptionProfileSummary[];
+  @SpeakeasyMetadata({ elemType: FieldLevelEncryptionProfileSummaryList })
+  items?: FieldLevelEncryptionProfileSummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

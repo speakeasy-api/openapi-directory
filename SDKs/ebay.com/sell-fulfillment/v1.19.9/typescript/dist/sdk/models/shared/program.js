@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PostSaleAuthenticationProgram } from "./postsaleauthenticationprogram";
-import { EbayFulfillmentProgram } from "./ebayfulfillmentprogram";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Program = void 0;
+var utils_1 = require("../../../internal/utils");
+var postsaleauthenticationprogram_1 = require("./postsaleauthenticationprogram");
+var ebayfulfillmentprogram_1 = require("./ebayfulfillmentprogram");
 // Program
 /**
  * This type is returned for order line items eligible for the Authenticity Guarantee service and/or for order line items fulfilled by the eBay Fulfillment program.
@@ -35,13 +38,13 @@ var Program = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticityVerification" }),
-        __metadata("design:type", PostSaleAuthenticationProgram)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticityVerification" }),
+        __metadata("design:type", postsaleauthenticationprogram_1.PostSaleAuthenticationProgram)
     ], Program.prototype, "authenticityVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentProgram" }),
-        __metadata("design:type", EbayFulfillmentProgram)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentProgram" }),
+        __metadata("design:type", ebayfulfillmentprogram_1.EbayFulfillmentProgram)
     ], Program.prototype, "fulfillmentProgram", void 0);
     return Program;
-}(SpeakeasyBase));
-export { Program };
+}(utils_1.SpeakeasyBase));
+exports.Program = Program;

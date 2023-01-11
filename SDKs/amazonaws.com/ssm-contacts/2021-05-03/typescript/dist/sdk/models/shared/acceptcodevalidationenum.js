@@ -1,5 +1,8 @@
-export var AcceptCodeValidationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceptCodeValidationEnum = void 0;
+var AcceptCodeValidationEnum;
 (function (AcceptCodeValidationEnum) {
     AcceptCodeValidationEnum["Ignore"] = "IGNORE";
     AcceptCodeValidationEnum["Enforce"] = "ENFORCE";
-})(AcceptCodeValidationEnum || (AcceptCodeValidationEnum = {}));
+})(AcceptCodeValidationEnum = exports.AcceptCodeValidationEnum || (exports.AcceptCodeValidationEnum = {}));

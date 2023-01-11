@@ -1,6 +1,9 @@
-export var SeverityLevelEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SeverityLevelEnum = void 0;
+var SeverityLevelEnum;
 (function (SeverityLevelEnum) {
     SeverityLevelEnum["Low"] = "Low";
     SeverityLevelEnum["Medium"] = "Medium";
     SeverityLevelEnum["High"] = "High";
-})(SeverityLevelEnum || (SeverityLevelEnum = {}));
+})(SeverityLevelEnum = exports.SeverityLevelEnum || (exports.SeverityLevelEnum = {}));

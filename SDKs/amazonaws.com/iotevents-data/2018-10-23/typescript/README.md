@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchAcknowledgeAlarmRequest, BatchAcknowledgeAlarmResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,39 +33,39 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchAcknowledgeAlarmRequest = {
   headers: {
-    xAmzAlgorithm: "alias",
-    xAmzContentSha256: "tempore",
-    xAmzCredential: "ipsum",
-    xAmzDate: "omnis",
-    xAmzSecurityToken: "error",
-    xAmzSignature: "reprehenderit",
-    xAmzSignedHeaders: "explicabo",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     acknowledgeActionRequests: [
       {
-        alarmModelName: "eum",
-        keyValue: "recusandae",
-        note: "ratione",
-        requestId: "labore",
+        alarmModelName: "fugit",
+        keyValue: "et",
+        note: "nihil",
+        requestId: "rerum",
       },
       {
-        alarmModelName: "necessitatibus",
-        keyValue: "saepe",
-        note: "libero",
-        requestId: "nobis",
+        alarmModelName: "dicta",
+        keyValue: "debitis",
+        note: "voluptatum",
+        requestId: "et",
       },
       {
         alarmModelName: "ut",
-        keyValue: "accusamus",
-        note: "qui",
-        requestId: "hic",
+        keyValue: "dolorem",
+        note: "et",
+        requestId: "voluptate",
       },
     ],
   },
 };
 
-sdk.sdk.batchAcknowledgeAlarm(req).then((res: BatchAcknowledgeAlarmResponse | AxiosError) => {
+sdk.batchAcknowledgeAlarm(req).then((res: BatchAcknowledgeAlarmResponse | AxiosError) => {
    // handle response
 });
 ```

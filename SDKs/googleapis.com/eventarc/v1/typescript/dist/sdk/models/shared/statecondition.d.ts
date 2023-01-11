@@ -18,9 +18,6 @@ export declare enum StateConditionCodeEnum {
     Unavailable = "UNAVAILABLE",
     DataLoss = "DATA_LOSS"
 }
-/**
- * A condition that is part of the trigger state computation.
-**/
 export declare class StateCondition extends SpeakeasyBase {
     code?: StateConditionCodeEnum;
     message?: string;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Google Cloud Storage location for input content. format.
+ * Cloud Storage location for input content.
 **/
 export declare class GoogleCloudDiscoveryengineV1betaGcsSource extends SpeakeasyBase {
     dataSchema?: string;

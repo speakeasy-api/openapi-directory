@@ -10,10 +10,10 @@ export class PostAdminNearMissesRequestRequestBody extends SpeakeasyBase {
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
@@ -31,10 +31,10 @@ export class PostAdminNearMissesRequest200ApplicationJsonNearMisses extends Spea
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
@@ -61,8 +61,8 @@ export class PostAdminNearMissesRequestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAdminNearMissesRequest200ApplicationJsonObject?: PostAdminNearMissesRequest200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAdminNearMissesRequest200ApplicationJSONObject?: PostAdminNearMissesRequest200ApplicationJson;
 }

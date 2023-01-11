@@ -28,5 +28,5 @@ export class ProtocolSshIpaliasDisableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSshIpaliasDisable200ApplicationJsonString?: string;
+  protocolSshIpaliasDisable200ApplicationJSONString?: string;
 }

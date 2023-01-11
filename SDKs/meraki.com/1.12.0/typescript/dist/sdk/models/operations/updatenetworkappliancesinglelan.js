@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceSingleLanResponse = exports.UpdateNetworkApplianceSingleLanRequest = exports.UpdateNetworkApplianceSingleLanRequestBody = exports.UpdateNetworkApplianceSingleLanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceSingleLanPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSingleLanPathParams, _super);
     function UpdateNetworkApplianceSingleLanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSingleLanPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceSingleLanPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSingleLanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSingleLanPathParams = UpdateNetworkApplianceSingleLanPathParams;
 var UpdateNetworkApplianceSingleLanRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSingleLanRequestBody, _super);
     function UpdateNetworkApplianceSingleLanRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applianceIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applianceIp" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSingleLanRequestBody.prototype, "applianceIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnet" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSingleLanRequestBody.prototype, "subnet", void 0);
     return UpdateNetworkApplianceSingleLanRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSingleLanRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSingleLanRequestBody = UpdateNetworkApplianceSingleLanRequestBody;
 var UpdateNetworkApplianceSingleLanRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSingleLanRequest, _super);
     function UpdateNetworkApplianceSingleLanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceSingleLanPathParams)
     ], UpdateNetworkApplianceSingleLanRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceSingleLanRequestBody)
     ], UpdateNetworkApplianceSingleLanRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceSingleLanRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSingleLanRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSingleLanRequest = UpdateNetworkApplianceSingleLanRequest;
 var UpdateNetworkApplianceSingleLanResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceSingleLanResponse, _super);
     function UpdateNetworkApplianceSingleLanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceSingleLanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceSingleLanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceSingleLanResponse.prototype, "updateNetworkApplianceSingleLan200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceSingleLanResponse.prototype, "updateNetworkApplianceSingleLan200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceSingleLanResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceSingleLanResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceSingleLanResponse = UpdateNetworkApplianceSingleLanResponse;

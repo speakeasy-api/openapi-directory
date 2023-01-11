@@ -23,7 +23,7 @@ export class FetchFaxMediaSecurity extends SpeakeasyBase {
 
 export class FetchFaxMediaRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: FetchFaxMediaPathParams;

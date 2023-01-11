@@ -83,5 +83,5 @@ export class CreateUsageChargeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createUsageCharge201ApplicationJsonObject?: CreateUsageCharge201ApplicationJson;
+  createUsageCharge201ApplicationJSONObject?: CreateUsageCharge201ApplicationJson;
 }

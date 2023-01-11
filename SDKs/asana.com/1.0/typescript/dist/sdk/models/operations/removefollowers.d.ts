@@ -22,5 +22,5 @@ export declare class RemoveFollowersResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeFollowers201ApplicationJsonObject?: RemoveFollowers201ApplicationJson;
+    removeFollowers201ApplicationJSONObject?: RemoveFollowers201ApplicationJson;
 }

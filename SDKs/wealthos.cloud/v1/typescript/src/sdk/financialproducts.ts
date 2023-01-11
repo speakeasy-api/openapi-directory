@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -36,6 +36,7 @@ export class FinancialProducts {
     const url: string = baseURL.replace(/\/$/, "") + "/tenant/financial-products/v1";
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
     const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
@@ -45,13 +46,15 @@ export class FinancialProducts {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -59,44 +62,43 @@ export class FinancialProducts {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts200ApplicationJsonObject = httpRes?.data;
+                res.getAllFinancialProducts200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts400ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts401ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts403ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts404ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts429ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllFinancialProducts500ApplicationJsonAny = httpRes?.data;
+                res.getAllFinancialProducts500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

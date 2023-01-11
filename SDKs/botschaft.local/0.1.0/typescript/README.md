@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ConfigConfigGetRequest, ConfigConfigGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: ConfigConfigGetRequest = {
   headers: {
-    authorization: "eaque",
+    authorization: "sit",
   },
 };
 
-sdk.sdk.configConfigGet(req).then((res: ConfigConfigGetResponse | AxiosError) => {
+sdk.configConfigGet(req).then((res: ConfigConfigGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,13 +44,25 @@ sdk.sdk.configConfigGet(req).then((res: ConfigConfigGetResponse | AxiosError) =>
 ### SDK SDK
 
 * `configConfigGet` - Config
+* `topicTopicTopicNameGet` - Topic
+
+### discord
+
 * `discordGetDiscordGet` - Discord Get
 * `discordPostDiscordPost` - Discord Post
+
+### slack
+
 * `slackGetSlackGet` - Slack Get
 * `slackPostSlackPost` - Slack Post
+
+### sns
+
 * `snsGetSnsGet` - Sns Get
 * `snsPostSnsPost` - Sns Post
-* `topicTopicTopicNameGet` - Topic
+
+### twilio
+
 * `twilioMessageGetTwilioGet` - Twilio Message Get
 * `twilioMessagePostTwilioPost` - Twilio Message Post
 

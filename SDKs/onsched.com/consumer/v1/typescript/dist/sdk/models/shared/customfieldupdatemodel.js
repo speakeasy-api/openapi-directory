@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomFieldUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomFieldUpdateModel = /** @class */ (function (_super) {
     __extends(CustomFieldUpdateModel, _super);
     function CustomFieldUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field1" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field10" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field10" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field10", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field2" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field3" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field4" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field5" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field6" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field7" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field7" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field7", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field8" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field8" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field8", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field9" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field9" }),
         __metadata("design:type", String)
     ], CustomFieldUpdateModel.prototype, "field9", void 0);
     return CustomFieldUpdateModel;
-}(SpeakeasyBase));
-export { CustomFieldUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.CustomFieldUpdateModel = CustomFieldUpdateModel;

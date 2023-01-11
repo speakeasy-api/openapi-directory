@@ -1,4 +1,7 @@
-export var CannedAclForObjectsValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CannedAclForObjectsValueEnum = void 0;
+var CannedAclForObjectsValueEnum;
 (function (CannedAclForObjectsValueEnum) {
     CannedAclForObjectsValueEnum["None"] = "none";
     CannedAclForObjectsValueEnum["Private"] = "private";
@@ -8,4 +11,4 @@ export var CannedAclForObjectsValueEnum;
     CannedAclForObjectsValueEnum["AwsExecRead"] = "aws-exec-read";
     CannedAclForObjectsValueEnum["BucketOwnerRead"] = "bucket-owner-read";
     CannedAclForObjectsValueEnum["BucketOwnerFullControl"] = "bucket-owner-full-control";
-})(CannedAclForObjectsValueEnum || (CannedAclForObjectsValueEnum = {}));
+})(CannedAclForObjectsValueEnum = exports.CannedAclForObjectsValueEnum || (exports.CannedAclForObjectsValueEnum = {}));

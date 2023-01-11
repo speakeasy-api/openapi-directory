@@ -48,7 +48,7 @@ export class DeleteTagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTagsResult?: Map<string, any>;
+  deleteTagsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

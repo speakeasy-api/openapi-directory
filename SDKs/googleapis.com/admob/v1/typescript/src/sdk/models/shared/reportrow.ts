@@ -10,8 +10,8 @@ import { ReportRowMetricValue } from "./reportrowmetricvalue";
 **/
 export class ReportRow extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dimensionValues", elemType: ReportRowDimensionValue })
-  dimensionValues?: Map<string, ReportRowDimensionValue>;
+  dimensionValues?: Record<string, ReportRowDimensionValue>;
 
   @SpeakeasyMetadata({ data: "json, name=metricValues", elemType: ReportRowMetricValue })
-  metricValues?: Map<string, ReportRowMetricValue>;
+  metricValues?: Record<string, ReportRowMetricValue>;
 }

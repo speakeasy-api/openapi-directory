@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetSearchVersionNumberAdditionalDataExtRequest, GetSearchVersionNumberAdditionalDataExtResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,15 +34,15 @@ const sdk = new SDK(WithSecurity(
 const req: GetSearchVersionNumberAdditionalDataExtRequest = {
   pathParams: {
     ext: "json",
-    versionNumber: 3763609783641361390,
+    versionNumber: 2259404117704393152,
   },
   queryParams: {
-    geometries: "voluptas",
-    geometriesZoom: 3744373318943545361,
+    geometries: "culpa",
+    geometriesZoom: 501233450539197794,
   },
 };
 
-sdk.sdk.getSearchVersionNumberAdditionalDataExt(req).then((res: GetSearchVersionNumberAdditionalDataExtResponse | AxiosError) => {
+sdk.additionalData.getSearchVersionNumberAdditionalDataExt(req).then((res: GetSearchVersionNumberAdditionalDataExtResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -52,26 +51,38 @@ sdk.sdk.getSearchVersionNumberAdditionalDataExt(req).then((res: GetSearchVersion
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Additional Data
 
 * `getSearchVersionNumberAdditionalDataExt` - Additional Data
+
+### Filters
+
+* `getSearchVersionNumberGeometryFilterExt` - Geometry Filter
+* `getSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+* `postSearchVersionNumberGeometryFilterExt` - Geometry Filter
+* `postSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+
+### Geocoding
+
+* `getSearchVersionNumberGeocodeQueryExt` - Geocode
+* `getSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
+
+### Reverse Geocoding
+
+* `getSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
+* `getSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
+
+### Search
+
 * `getSearchVersionNumberCSCategoryExt` - Low Bandwith Category Search
 * `getSearchVersionNumberCategorySearchQueryExt` - Category Search
-* `getSearchVersionNumberGeocodeQueryExt` - Geocode
-* `getSearchVersionNumberGeometryFilterExt` - Geometry Filter
 * `getSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
 * `getSearchVersionNumberNearbySearchExt` - Nearby Search
 * `getSearchVersionNumberPoiSearchQueryExt` - Points of Interest Search
-* `getSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
-* `getSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
-* `getSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
 * `getSearchVersionNumberRoutedSearchQueryPositionHeadingExt` - Routed Search
 * `getSearchVersionNumberSQueryExt` - Low bandwith Search
 * `getSearchVersionNumberSearchQueryExt` - Fuzzy Search
-* `getSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
-* `postSearchVersionNumberGeometryFilterExt` - Geometry Filter
 * `postSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `postSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
 * `postSearchVersionNumberSearchAlongRouteQueryExt` - Along Route Search
 
 <!-- End SDK Available Operations -->

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolGetAllPoolsLifetimeStatisticsResponse = exports.PoolGetAllPoolsLifetimeStatisticsRequest = exports.PoolGetAllPoolsLifetimeStatisticsHeaders = exports.PoolGetAllPoolsLifetimeStatisticsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PoolGetAllPoolsLifetimeStatisticsQueryParams = /** @class */ (function (_super) {
     __extends(PoolGetAllPoolsLifetimeStatisticsQueryParams, _super);
     function PoolGetAllPoolsLifetimeStatisticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], PoolGetAllPoolsLifetimeStatisticsQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], PoolGetAllPoolsLifetimeStatisticsQueryParams.prototype, "timeout", void 0);
     return PoolGetAllPoolsLifetimeStatisticsQueryParams;
-}(SpeakeasyBase));
-export { PoolGetAllPoolsLifetimeStatisticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolGetAllPoolsLifetimeStatisticsQueryParams = PoolGetAllPoolsLifetimeStatisticsQueryParams;
 var PoolGetAllPoolsLifetimeStatisticsHeaders = /** @class */ (function (_super) {
     __extends(PoolGetAllPoolsLifetimeStatisticsHeaders, _super);
     function PoolGetAllPoolsLifetimeStatisticsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], PoolGetAllPoolsLifetimeStatisticsHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], PoolGetAllPoolsLifetimeStatisticsHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], PoolGetAllPoolsLifetimeStatisticsHeaders.prototype, "returnClientRequestId", void 0);
     return PoolGetAllPoolsLifetimeStatisticsHeaders;
-}(SpeakeasyBase));
-export { PoolGetAllPoolsLifetimeStatisticsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PoolGetAllPoolsLifetimeStatisticsHeaders = PoolGetAllPoolsLifetimeStatisticsHeaders;
 var PoolGetAllPoolsLifetimeStatisticsRequest = /** @class */ (function (_super) {
     __extends(PoolGetAllPoolsLifetimeStatisticsRequest, _super);
     function PoolGetAllPoolsLifetimeStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolGetAllPoolsLifetimeStatisticsQueryParams)
     ], PoolGetAllPoolsLifetimeStatisticsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolGetAllPoolsLifetimeStatisticsHeaders)
     ], PoolGetAllPoolsLifetimeStatisticsRequest.prototype, "headers", void 0);
     return PoolGetAllPoolsLifetimeStatisticsRequest;
-}(SpeakeasyBase));
-export { PoolGetAllPoolsLifetimeStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PoolGetAllPoolsLifetimeStatisticsRequest = PoolGetAllPoolsLifetimeStatisticsRequest;
 var PoolGetAllPoolsLifetimeStatisticsResponse = /** @class */ (function (_super) {
     __extends(PoolGetAllPoolsLifetimeStatisticsResponse, _super);
     function PoolGetAllPoolsLifetimeStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolGetAllPoolsLifetimeStatisticsResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolGetAllPoolsLifetimeStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PoolGetAllPoolsLifetimeStatisticsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolGetAllPoolsLifetimeStatisticsResponse.prototype, "poolStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PoolGetAllPoolsLifetimeStatisticsResponse.prototype, "statusCode", void 0);
     return PoolGetAllPoolsLifetimeStatisticsResponse;
-}(SpeakeasyBase));
-export { PoolGetAllPoolsLifetimeStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolGetAllPoolsLifetimeStatisticsResponse = PoolGetAllPoolsLifetimeStatisticsResponse;

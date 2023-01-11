@@ -19,6 +19,6 @@ export declare class GetContentproSearchRequest extends SpeakeasyBase {
 }
 export declare class GetContentproSearchResponse extends SpeakeasyBase {
     contentType: string;
-    getContentproSearch200ApplicationJsonObject?: GetContentproSearch200ApplicationJson;
     statusCode: number;
+    getContentproSearch200ApplicationJSONObject?: GetContentproSearch200ApplicationJson;
 }

@@ -1,12 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class UserInput extends SpeakeasyBase {
-    email?: string;
-    firstName?: string;
-    isAdmin?: boolean;
-    isLocked?: boolean;
-    lastName?: string;
-    password?: string;
-}
 export declare class UserOutput extends SpeakeasyBase {
     email?: string;
     firstName?: string;
@@ -17,4 +9,12 @@ export declare class UserOutput extends SpeakeasyBase {
     timeCreated?: string;
     timeUpdated?: string;
     url?: string;
+}
+export declare class UserInput extends SpeakeasyBase {
+    email?: string;
+    firstName?: string;
+    isAdmin?: boolean;
+    isLocked?: boolean;
+    lastName?: string;
+    password?: string;
 }

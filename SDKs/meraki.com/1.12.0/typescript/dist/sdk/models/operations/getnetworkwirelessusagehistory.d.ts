@@ -25,5 +25,5 @@ export declare class GetNetworkWirelessUsageHistoryRequest extends SpeakeasyBase
 export declare class GetNetworkWirelessUsageHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessUsageHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

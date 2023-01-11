@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OverrideButtonConfiguration } from "./overridebuttonconfiguration";
-import { DefaultButtonConfiguration } from "./defaultbuttonconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InAppMessageButton = void 0;
+var utils_1 = require("../../../internal/utils");
+var overridebuttonconfiguration_1 = require("./overridebuttonconfiguration");
+var defaultbuttonconfiguration_1 = require("./defaultbuttonconfiguration");
 // InAppMessageButton
 /**
  * Button Config for an in-app message.
@@ -35,21 +38,21 @@ var InAppMessageButton = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Android" }),
-        __metadata("design:type", OverrideButtonConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Android" }),
+        __metadata("design:type", overridebuttonconfiguration_1.OverrideButtonConfiguration)
     ], InAppMessageButton.prototype, "android", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultConfig" }),
-        __metadata("design:type", DefaultButtonConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultConfig" }),
+        __metadata("design:type", defaultbuttonconfiguration_1.DefaultButtonConfiguration)
     ], InAppMessageButton.prototype, "defaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IOS" }),
-        __metadata("design:type", OverrideButtonConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IOS" }),
+        __metadata("design:type", overridebuttonconfiguration_1.OverrideButtonConfiguration)
     ], InAppMessageButton.prototype, "ios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Web" }),
-        __metadata("design:type", OverrideButtonConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Web" }),
+        __metadata("design:type", overridebuttonconfiguration_1.OverrideButtonConfiguration)
     ], InAppMessageButton.prototype, "web", void 0);
     return InAppMessageButton;
-}(SpeakeasyBase));
-export { InAppMessageButton };
+}(utils_1.SpeakeasyBase));
+exports.InAppMessageButton = InAppMessageButton;

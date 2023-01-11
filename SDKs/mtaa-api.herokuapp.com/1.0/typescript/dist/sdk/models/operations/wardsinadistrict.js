@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WardsInADistrictResponse = exports.WardsInADistrictRequest = exports.WardsInADistrictPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var WardsInADistrictPathParams = /** @class */ (function (_super) {
     __extends(WardsInADistrictPathParams, _super);
     function WardsInADistrictPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=country" }),
         __metadata("design:type", String)
     ], WardsInADistrictPathParams.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=district" }),
         __metadata("design:type", String)
     ], WardsInADistrictPathParams.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], WardsInADistrictPathParams.prototype, "region", void 0);
     return WardsInADistrictPathParams;
-}(SpeakeasyBase));
-export { WardsInADistrictPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WardsInADistrictPathParams = WardsInADistrictPathParams;
 var WardsInADistrictRequest = /** @class */ (function (_super) {
     __extends(WardsInADistrictRequest, _super);
     function WardsInADistrictRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WardsInADistrictPathParams)
     ], WardsInADistrictRequest.prototype, "pathParams", void 0);
     return WardsInADistrictRequest;
-}(SpeakeasyBase));
-export { WardsInADistrictRequest };
+}(utils_1.SpeakeasyBase));
+exports.WardsInADistrictRequest = WardsInADistrictRequest;
 var WardsInADistrictResponse = /** @class */ (function (_super) {
     __extends(WardsInADistrictResponse, _super);
     function WardsInADistrictResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WardsInADistrictResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WardsInADistrictResponse.prototype, "statusCode", void 0);
     return WardsInADistrictResponse;
-}(SpeakeasyBase));
-export { WardsInADistrictResponse };
+}(utils_1.SpeakeasyBase));
+exports.WardsInADistrictResponse = WardsInADistrictResponse;

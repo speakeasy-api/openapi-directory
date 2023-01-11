@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdReputationHistoryFullResponse = exports.GetUsersIdReputationHistoryFullRequest = exports.GetUsersIdReputationHistoryFullQueryParams = exports.GetUsersIdReputationHistoryFullPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdReputationHistoryFullPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdReputationHistoryFullPathParams, _super);
     function GetUsersIdReputationHistoryFullPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetUsersIdReputationHistoryFullPathParams.prototype, "id", void 0);
     return GetUsersIdReputationHistoryFullPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdReputationHistoryFullPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdReputationHistoryFullPathParams = GetUsersIdReputationHistoryFullPathParams;
 var GetUsersIdReputationHistoryFullQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdReputationHistoryFullQueryParams, _super);
     function GetUsersIdReputationHistoryFullQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdReputationHistoryFullQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdReputationHistoryFullQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdReputationHistoryFullQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdReputationHistoryFullQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdReputationHistoryFullQueryParams.prototype, "site", void 0);
     return GetUsersIdReputationHistoryFullQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdReputationHistoryFullQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdReputationHistoryFullQueryParams = GetUsersIdReputationHistoryFullQueryParams;
 var GetUsersIdReputationHistoryFullRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdReputationHistoryFullRequest, _super);
     function GetUsersIdReputationHistoryFullRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdReputationHistoryFullPathParams)
     ], GetUsersIdReputationHistoryFullRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdReputationHistoryFullQueryParams)
     ], GetUsersIdReputationHistoryFullRequest.prototype, "queryParams", void 0);
     return GetUsersIdReputationHistoryFullRequest;
-}(SpeakeasyBase));
-export { GetUsersIdReputationHistoryFullRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdReputationHistoryFullRequest = GetUsersIdReputationHistoryFullRequest;
 var GetUsersIdReputationHistoryFullResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdReputationHistoryFullResponse, _super);
     function GetUsersIdReputationHistoryFullResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdReputationHistoryFullResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdReputationHistoryFullResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdReputationHistoryFullResponse.prototype, "statusCode", void 0);
     return GetUsersIdReputationHistoryFullResponse;
-}(SpeakeasyBase));
-export { GetUsersIdReputationHistoryFullResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdReputationHistoryFullResponse = GetUsersIdReputationHistoryFullResponse;

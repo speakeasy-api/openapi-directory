@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudResourcesettingsV1ValueStringMap extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=mappings" })
-  mappings?: Map<string, string>;
+  mappings?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SslSetupResponse = exports.SslSetupRequest = exports.SslSetupRequestBody = exports.SslSetupRequestBodyPrivatekeyFile = exports.SslSetupRequestBodyCertificateFile = exports.SslSetupQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SslSetupQueryParams = /** @class */ (function (_super) {
     __extends(SslSetupQueryParams, _super);
     function SslSetupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=httpsHostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=httpsHostname" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "httpsHostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=httpsPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=httpsPort" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "httpsPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keystorePassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keystorePassword" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "keystorePassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keystorePasswordConfirm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keystorePasswordConfirm" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "keystorePasswordConfirm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=truststorePassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=truststorePassword" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "truststorePassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=truststorePasswordConfirm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=truststorePasswordConfirm" }),
         __metadata("design:type", String)
     ], SslSetupQueryParams.prototype, "truststorePasswordConfirm", void 0);
     return SslSetupQueryParams;
-}(SpeakeasyBase));
-export { SslSetupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupQueryParams = SslSetupQueryParams;
 var SslSetupRequestBodyCertificateFile = /** @class */ (function (_super) {
     __extends(SslSetupRequestBodyCertificateFile, _super);
     function SslSetupRequestBodyCertificateFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=certificateFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=certificateFile" }),
         __metadata("design:type", String)
     ], SslSetupRequestBodyCertificateFile.prototype, "certificateFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], SslSetupRequestBodyCertificateFile.prototype, "content", void 0);
     return SslSetupRequestBodyCertificateFile;
-}(SpeakeasyBase));
-export { SslSetupRequestBodyCertificateFile };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupRequestBodyCertificateFile = SslSetupRequestBodyCertificateFile;
 var SslSetupRequestBodyPrivatekeyFile = /** @class */ (function (_super) {
     __extends(SslSetupRequestBodyPrivatekeyFile, _super);
     function SslSetupRequestBodyPrivatekeyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], SslSetupRequestBodyPrivatekeyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=privatekeyFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=privatekeyFile" }),
         __metadata("design:type", String)
     ], SslSetupRequestBodyPrivatekeyFile.prototype, "privatekeyFile", void 0);
     return SslSetupRequestBodyPrivatekeyFile;
-}(SpeakeasyBase));
-export { SslSetupRequestBodyPrivatekeyFile };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupRequestBodyPrivatekeyFile = SslSetupRequestBodyPrivatekeyFile;
 var SslSetupRequestBody = /** @class */ (function (_super) {
     __extends(SslSetupRequestBody, _super);
     function SslSetupRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", SslSetupRequestBodyCertificateFile)
     ], SslSetupRequestBody.prototype, "certificateFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", SslSetupRequestBodyPrivatekeyFile)
     ], SslSetupRequestBody.prototype, "privatekeyFile", void 0);
     return SslSetupRequestBody;
-}(SpeakeasyBase));
-export { SslSetupRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupRequestBody = SslSetupRequestBody;
 var SslSetupRequest = /** @class */ (function (_super) {
     __extends(SslSetupRequest, _super);
     function SslSetupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SslSetupQueryParams)
     ], SslSetupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", SslSetupRequestBody)
     ], SslSetupRequest.prototype, "request", void 0);
     return SslSetupRequest;
-}(SpeakeasyBase));
-export { SslSetupRequest };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupRequest = SslSetupRequest;
 var SslSetupResponse = /** @class */ (function (_super) {
     __extends(SslSetupResponse, _super);
     function SslSetupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SslSetupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SslSetupResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SslSetupResponse.prototype, "sslSetupDefaultTextPlainString", void 0);
     return SslSetupResponse;
-}(SpeakeasyBase));
-export { SslSetupResponse };
+}(utils_1.SpeakeasyBase));
+exports.SslSetupResponse = SslSetupResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IncludeConditions } from "./includeconditions";
-import { LinkedForeignAccount } from "./linkedforeignaccount";
-import { LinkedForeignAccountInput } from "./linkedforeignaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemarketingAudienceInput = exports.RemarketingAudience = exports.RemarketingAudienceStateBasedAudienceDefinition = exports.RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions = exports.RemarketingAudienceAudienceDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var includeconditions_1 = require("./includeconditions");
+var linkedforeignaccount_1 = require("./linkedforeignaccount");
+var linkedforeignaccount_2 = require("./linkedforeignaccount");
 // RemarketingAudienceAudienceDefinition
 /**
  * The simple audience definition that will cause a user to be added to an audience.
@@ -36,12 +39,12 @@ var RemarketingAudienceAudienceDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeConditions" }),
-        __metadata("design:type", IncludeConditions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeConditions" }),
+        __metadata("design:type", includeconditions_1.IncludeConditions)
     ], RemarketingAudienceAudienceDefinition.prototype, "includeConditions", void 0);
     return RemarketingAudienceAudienceDefinition;
-}(SpeakeasyBase));
-export { RemarketingAudienceAudienceDefinition };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudienceAudienceDefinition = RemarketingAudienceAudienceDefinition;
 // RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions
 /**
  * Defines the conditions to exclude users from the audience.
@@ -52,16 +55,16 @@ var RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusionDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusionDuration" }),
         __metadata("design:type", String)
     ], RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions.prototype, "exclusionDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segment" }),
         __metadata("design:type", String)
     ], RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions.prototype, "segment", void 0);
     return RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions;
-}(SpeakeasyBase));
-export { RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions = RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions;
 // RemarketingAudienceStateBasedAudienceDefinition
 /**
  * A state based audience definition that will cause a user to be added or removed from an audience.
@@ -72,16 +75,16 @@ var RemarketingAudienceStateBasedAudienceDefinition = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeConditions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeConditions" }),
         __metadata("design:type", RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions)
     ], RemarketingAudienceStateBasedAudienceDefinition.prototype, "excludeConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeConditions" }),
-        __metadata("design:type", IncludeConditions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeConditions" }),
+        __metadata("design:type", includeconditions_1.IncludeConditions)
     ], RemarketingAudienceStateBasedAudienceDefinition.prototype, "includeConditions", void 0);
     return RemarketingAudienceStateBasedAudienceDefinition;
-}(SpeakeasyBase));
-export { RemarketingAudienceStateBasedAudienceDefinition };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudienceStateBasedAudienceDefinition = RemarketingAudienceStateBasedAudienceDefinition;
 // RemarketingAudience
 /**
  * JSON template for an Analytics remarketing audience.
@@ -92,64 +95,64 @@ var RemarketingAudience = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audienceDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audienceDefinition" }),
         __metadata("design:type", RemarketingAudienceAudienceDefinition)
     ], RemarketingAudience.prototype, "audienceDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audienceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audienceType" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "audienceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], RemarketingAudience.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedAdAccounts", elemType: LinkedForeignAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedAdAccounts", elemType: linkedforeignaccount_1.LinkedForeignAccount }),
         __metadata("design:type", Array)
     ], RemarketingAudience.prototype, "linkedAdAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedViews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedViews" }),
         __metadata("design:type", Array)
     ], RemarketingAudience.prototype, "linkedViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateBasedAudienceDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateBasedAudienceDefinition" }),
         __metadata("design:type", RemarketingAudienceStateBasedAudienceDefinition)
     ], RemarketingAudience.prototype, "stateBasedAudienceDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], RemarketingAudience.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], RemarketingAudience.prototype, "webPropertyId", void 0);
     return RemarketingAudience;
-}(SpeakeasyBase));
-export { RemarketingAudience };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudience = RemarketingAudience;
 // RemarketingAudienceInput
 /**
  * JSON template for an Analytics remarketing audience.
@@ -160,45 +163,45 @@ var RemarketingAudienceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audienceDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audienceDefinition" }),
         __metadata("design:type", RemarketingAudienceAudienceDefinition)
     ], RemarketingAudienceInput.prototype, "audienceDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audienceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audienceType" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "audienceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedAdAccounts", elemType: LinkedForeignAccountInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedAdAccounts", elemType: linkedforeignaccount_2.LinkedForeignAccountInput }),
         __metadata("design:type", Array)
     ], RemarketingAudienceInput.prototype, "linkedAdAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedViews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedViews" }),
         __metadata("design:type", Array)
     ], RemarketingAudienceInput.prototype, "linkedViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateBasedAudienceDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateBasedAudienceDefinition" }),
         __metadata("design:type", RemarketingAudienceStateBasedAudienceDefinition)
     ], RemarketingAudienceInput.prototype, "stateBasedAudienceDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], RemarketingAudienceInput.prototype, "webPropertyId", void 0);
     return RemarketingAudienceInput;
-}(SpeakeasyBase));
-export { RemarketingAudienceInput };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudienceInput = RemarketingAudienceInput;

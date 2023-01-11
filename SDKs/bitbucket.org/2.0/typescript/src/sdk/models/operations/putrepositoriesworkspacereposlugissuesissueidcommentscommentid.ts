@@ -35,7 +35,7 @@ export class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
   pathParams: PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity;
@@ -50,8 +50,8 @@ export class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRespo
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  issueComment?: Map<string, any>;
+  issueComment?: Record<string, any>;
 }

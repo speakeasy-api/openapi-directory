@@ -11,5 +11,5 @@ export declare class CheckDomainRequest extends SpeakeasyBase {
 export declare class CheckDomainResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checkDomain200ApplicationJsonObject?: CheckDomain200ApplicationJson;
+    checkDomain200ApplicationJSONObject?: CheckDomain200ApplicationJson;
 }

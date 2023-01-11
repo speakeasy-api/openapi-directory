@@ -12,6 +12,6 @@ export declare class DepositSwitchAltCreateRequest extends SpeakeasyBase {
     countryCode?: DepositSwitchAltCreateRequestCountryCodeEnum;
     options?: DepositSwitchCreateRequestOptions;
     secret?: string;
-    targetAccount: Map<string, any>;
-    targetUser: Map<string, any>;
+    targetAccount: Record<string, any>;
+    targetUser: Record<string, any>;
 }

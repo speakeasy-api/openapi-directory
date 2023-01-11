@@ -13,5 +13,5 @@ export declare class FindGlobalAuthModuleByIdRequest extends SpeakeasyBase {
 export declare class FindGlobalAuthModuleByIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    findGlobalAuthModuleById200ApplicationJsonOneOf?: any;
+    findGlobalAuthModuleById200ApplicationJSONOneOf?: any;
 }

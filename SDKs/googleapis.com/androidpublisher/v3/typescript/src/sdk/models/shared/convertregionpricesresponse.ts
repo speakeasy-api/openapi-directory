@@ -13,5 +13,5 @@ export class ConvertRegionPricesResponse extends SpeakeasyBase {
   convertedOtherRegionsPrice?: ConvertedOtherRegionsPrice;
 
   @SpeakeasyMetadata({ data: "json, name=convertedRegionPrices", elemType: ConvertedRegionPrice })
-  convertedRegionPrices?: Map<string, ConvertedRegionPrice>;
+  convertedRegionPrices?: Record<string, ConvertedRegionPrice>;
 }

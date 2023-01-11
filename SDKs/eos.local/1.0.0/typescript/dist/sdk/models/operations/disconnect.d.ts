@@ -8,5 +8,5 @@ export declare class DisconnectRequest extends SpeakeasyBase {
 export declare class DisconnectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    disconnect200ApplicationJsonString?: string;
+    disconnect200ApplicationJSONString?: string;
 }

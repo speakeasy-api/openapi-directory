@@ -5,10 +5,6 @@ import { RoleMappingTypeEnum } from "./rolemappingtypeenum";
 
 
 
-// RoleMapping
-/** 
- * A role mapping.
-**/
 export class RoleMapping extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AmbiguousRoleResolution" })
   ambiguousRoleResolution?: AmbiguousRoleResolutionTypeEnum;
@@ -17,5 +13,5 @@ export class RoleMapping extends SpeakeasyBase {
   rulesConfiguration?: RulesConfigurationType;
 
   @SpeakeasyMetadata({ data: "json, name=Type" })
-  type: RoleMappingTypeEnum;
+  type?: RoleMappingTypeEnum;
 }

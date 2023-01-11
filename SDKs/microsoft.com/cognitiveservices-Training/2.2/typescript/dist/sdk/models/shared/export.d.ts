@@ -1,0 +1,25 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare enum ExportFlavorEnum {
+    Linux = "Linux",
+    Windows = "Windows",
+    Onnx10 = "ONNX10",
+    Onnx12 = "ONNX12"
+}
+export declare enum ExportPlatformEnum {
+    CoreMl = "CoreML",
+    TensorFlow = "TensorFlow",
+    DockerFile = "DockerFile",
+    Onnx = "ONNX"
+}
+export declare enum ExportStatusEnum {
+    Exporting = "Exporting",
+    Failed = "Failed",
+    Done = "Done"
+}
+export declare class Export extends SpeakeasyBase {
+    downloadUri?: string;
+    flavor?: ExportFlavorEnum;
+    newerVersionAvailable?: boolean;
+    platform?: ExportPlatformEnum;
+    status?: ExportStatusEnum;
+}

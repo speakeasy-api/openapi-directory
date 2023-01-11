@@ -64,5 +64,5 @@ export class UntagResourceResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  untagResourceResponse?: Map<string, any>;
+  untagResourceResponse?: Record<string, any>;
 }

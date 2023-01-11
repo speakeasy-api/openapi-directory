@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDetachLoadBalancersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDetachLoadBalancersResponse = exports.GetDetachLoadBalancersRequest = exports.GetDetachLoadBalancersHeaders = exports.GetDetachLoadBalancersQueryParams = exports.GetDetachLoadBalancersVersionEnum = exports.GetDetachLoadBalancersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDetachLoadBalancersActionEnum;
 (function (GetDetachLoadBalancersActionEnum) {
     GetDetachLoadBalancersActionEnum["DetachLoadBalancers"] = "DetachLoadBalancers";
-})(GetDetachLoadBalancersActionEnum || (GetDetachLoadBalancersActionEnum = {}));
-export var GetDetachLoadBalancersVersionEnum;
+})(GetDetachLoadBalancersActionEnum = exports.GetDetachLoadBalancersActionEnum || (exports.GetDetachLoadBalancersActionEnum = {}));
+var GetDetachLoadBalancersVersionEnum;
 (function (GetDetachLoadBalancersVersionEnum) {
     GetDetachLoadBalancersVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetDetachLoadBalancersVersionEnum || (GetDetachLoadBalancersVersionEnum = {}));
+})(GetDetachLoadBalancersVersionEnum = exports.GetDetachLoadBalancersVersionEnum || (exports.GetDetachLoadBalancersVersionEnum = {}));
 var GetDetachLoadBalancersQueryParams = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancersQueryParams, _super);
     function GetDetachLoadBalancersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerNames" }),
         __metadata("design:type", Array)
     ], GetDetachLoadBalancersQueryParams.prototype, "loadBalancerNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersQueryParams.prototype, "version", void 0);
     return GetDetachLoadBalancersQueryParams;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancersQueryParams = GetDetachLoadBalancersQueryParams;
 var GetDetachLoadBalancersHeaders = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancersHeaders, _super);
     function GetDetachLoadBalancersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDetachLoadBalancersHeaders;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancersHeaders = GetDetachLoadBalancersHeaders;
 var GetDetachLoadBalancersRequest = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancersRequest, _super);
     function GetDetachLoadBalancersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDetachLoadBalancersQueryParams)
     ], GetDetachLoadBalancersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDetachLoadBalancersHeaders)
     ], GetDetachLoadBalancersRequest.prototype, "headers", void 0);
     return GetDetachLoadBalancersRequest;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancersRequest = GetDetachLoadBalancersRequest;
 var GetDetachLoadBalancersResponse = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancersResponse, _super);
     function GetDetachLoadBalancersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDetachLoadBalancersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDetachLoadBalancersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDetachLoadBalancersResponse.prototype, "statusCode", void 0);
     return GetDetachLoadBalancersResponse;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancersResponse = GetDetachLoadBalancersResponse;

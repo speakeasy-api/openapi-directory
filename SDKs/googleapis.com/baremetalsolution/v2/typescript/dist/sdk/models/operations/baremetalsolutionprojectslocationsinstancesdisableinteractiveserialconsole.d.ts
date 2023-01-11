@@ -23,7 +23,7 @@ export declare class BaremetalsolutionProjectsLocationsInstancesDisableInteracti
 export declare class BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest extends SpeakeasyBase {
     pathParams: BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsolePathParams;
     queryParams: BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleSecurity;
 }
 export declare class BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse extends SpeakeasyBase {

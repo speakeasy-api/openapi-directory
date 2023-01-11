@@ -6,6 +6,10 @@ export enum PhotoTypeEnum {
 }
 
 
+// Photo
+/** 
+ * This contains the list of the fields that are common to all media returned.
+**/
 export class Photo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=height" })
   height?: number;

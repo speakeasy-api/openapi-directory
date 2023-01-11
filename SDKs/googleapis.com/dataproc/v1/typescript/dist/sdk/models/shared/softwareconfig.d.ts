@@ -21,5 +21,5 @@ export declare enum SoftwareConfigOptionalComponentsEnum {
 export declare class SoftwareConfig extends SpeakeasyBase {
     imageVersion?: string;
     optionalComponents?: SoftwareConfigOptionalComponentsEnum[];
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
 }

@@ -36,6 +36,6 @@ export declare class RetrieveCreditTransfersResponse extends SpeakeasyBase {
     listCreditTransfersResponse?: any;
     statusCode: number;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    retrieveCreditTransfers401ApplicationJsonObject?: RetrieveCreditTransfers401ApplicationJson;
-    retrieveCreditTransfers404ApplicationJsonObject?: RetrieveCreditTransfers404ApplicationJson;
+    retrieveCreditTransfers401ApplicationJSONObject?: RetrieveCreditTransfers401ApplicationJson;
+    retrieveCreditTransfers404ApplicationJSONObject?: RetrieveCreditTransfers404ApplicationJson;
 }

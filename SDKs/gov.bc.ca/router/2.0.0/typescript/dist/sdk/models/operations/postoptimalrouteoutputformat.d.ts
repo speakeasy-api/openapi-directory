@@ -21,7 +21,7 @@ export declare class PostOptimalRouteOutputFormatQueryParams extends SpeakeasyBa
     departure?: Date;
     disable?: string;
     distanceUnit?: PostOptimalRouteOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

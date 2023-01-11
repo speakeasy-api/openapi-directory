@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentApplicationConfig } from "./deploymentapplicationconfig";
-import { DeploymentConfig } from "./deploymentconfig";
-import { DeploymentJobErrorCodeEnum } from "./deploymentjoberrorcodeenum";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncDeploymentJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentapplicationconfig_1 = require("./deploymentapplicationconfig");
+var deploymentconfig_1 = require("./deploymentconfig");
+var deploymentjoberrorcodeenum_1 = require("./deploymentjoberrorcodeenum");
+var deploymentstatusenum_1 = require("./deploymentstatusenum");
 var SyncDeploymentJobResponse = /** @class */ (function (_super) {
     __extends(SyncDeploymentJobResponse, _super);
     function SyncDeploymentJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], SyncDeploymentJobResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], SyncDeploymentJobResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentApplicationConfigs", elemType: DeploymentApplicationConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentApplicationConfigs", elemType: deploymentapplicationconfig_1.DeploymentApplicationConfig }),
         __metadata("design:type", Array)
     ], SyncDeploymentJobResponse.prototype, "deploymentApplicationConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfig" }),
-        __metadata("design:type", DeploymentConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfig" }),
+        __metadata("design:type", deploymentconfig_1.DeploymentConfig)
     ], SyncDeploymentJobResponse.prototype, "deploymentConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCode" }),
         __metadata("design:type", String)
     ], SyncDeploymentJobResponse.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], SyncDeploymentJobResponse.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fleet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fleet" }),
         __metadata("design:type", String)
     ], SyncDeploymentJobResponse.prototype, "fleet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SyncDeploymentJobResponse.prototype, "status", void 0);
     return SyncDeploymentJobResponse;
-}(SpeakeasyBase));
-export { SyncDeploymentJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.SyncDeploymentJobResponse = SyncDeploymentJobResponse;

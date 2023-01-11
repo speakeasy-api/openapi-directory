@@ -10,7 +10,7 @@ export declare enum BatchUpdateContactsRequestSourcesEnum {
  * A request to update a batch of contacts.
 **/
 export declare class BatchUpdateContactsRequestInput extends SpeakeasyBase {
-    contacts?: Map<string, PersonInput>;
+    contacts?: Record<string, PersonInput>;
     readMask?: string;
     sources?: BatchUpdateContactsRequestSourcesEnum[];
     updateMask?: string;

@@ -52,7 +52,7 @@ export class DeleteMemberResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteMemberResponse?: Map<string, any>;
+  deleteMemberResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

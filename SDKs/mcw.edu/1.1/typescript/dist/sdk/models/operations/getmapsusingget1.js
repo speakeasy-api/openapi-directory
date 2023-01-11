@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapsUsingGet1Response = exports.GetMapsUsingGet1Request = exports.GetMapsUsingGet1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMapsUsingGet1PathParams = /** @class */ (function (_super) {
     __extends(GetMapsUsingGet1PathParams, _super);
     function GetMapsUsingGet1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accId" }),
         __metadata("design:type", String)
     ], GetMapsUsingGet1PathParams.prototype, "accId", void 0);
     return GetMapsUsingGet1PathParams;
-}(SpeakeasyBase));
-export { GetMapsUsingGet1PathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapsUsingGet1PathParams = GetMapsUsingGet1PathParams;
 var GetMapsUsingGet1Request = /** @class */ (function (_super) {
     __extends(GetMapsUsingGet1Request, _super);
     function GetMapsUsingGet1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapsUsingGet1PathParams)
     ], GetMapsUsingGet1Request.prototype, "pathParams", void 0);
     return GetMapsUsingGet1Request;
-}(SpeakeasyBase));
-export { GetMapsUsingGet1Request };
+}(utils_1.SpeakeasyBase));
+exports.GetMapsUsingGet1Request = GetMapsUsingGet1Request;
 var GetMapsUsingGet1Response = /** @class */ (function (_super) {
     __extends(GetMapsUsingGet1Response, _super);
     function GetMapsUsingGet1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMapsUsingGet1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMapsUsingGet1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetMapsUsingGet1Response.prototype, "getMapsUsingGet1200WildcardString", void 0);
+    ], GetMapsUsingGet1Response.prototype, "getMapsUsingGET1200WildcardString", void 0);
     return GetMapsUsingGet1Response;
-}(SpeakeasyBase));
-export { GetMapsUsingGet1Response };
+}(utils_1.SpeakeasyBase));
+exports.GetMapsUsingGet1Response = GetMapsUsingGet1Response;

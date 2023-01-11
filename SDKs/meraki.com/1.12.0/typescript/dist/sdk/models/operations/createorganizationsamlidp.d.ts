@@ -13,5 +13,5 @@ export declare class CreateOrganizationSamlIdpRequest extends SpeakeasyBase {
 export declare class CreateOrganizationSamlIdpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganizationSamlIdp201ApplicationJsonObject?: Map<string, any>;
+    createOrganizationSamlIdp201ApplicationJSONObject?: Record<string, any>;
 }

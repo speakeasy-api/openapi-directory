@@ -22,7 +22,7 @@ export class ConfirmsPlanting4RequestBody extends SpeakeasyBase {
 
 export class ConfirmsPlanting4Request extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: ConfirmsPlanting4RequestBody;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1CompaniesRegionsResponse = exports.GetSetupV1CompaniesRegionsRequest = exports.GetSetupV1CompaniesRegionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1CompaniesRegionsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1CompaniesRegionsQueryParams, _super);
     function GetSetupV1CompaniesRegionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1CompaniesRegionsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1CompaniesRegionsQueryParams.prototype, "offset", void 0);
     return GetSetupV1CompaniesRegionsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1CompaniesRegionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CompaniesRegionsQueryParams = GetSetupV1CompaniesRegionsQueryParams;
 var GetSetupV1CompaniesRegionsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1CompaniesRegionsRequest, _super);
     function GetSetupV1CompaniesRegionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1CompaniesRegionsQueryParams)
     ], GetSetupV1CompaniesRegionsRequest.prototype, "queryParams", void 0);
     return GetSetupV1CompaniesRegionsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1CompaniesRegionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CompaniesRegionsRequest = GetSetupV1CompaniesRegionsRequest;
 var GetSetupV1CompaniesRegionsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1CompaniesRegionsResponse, _super);
     function GetSetupV1CompaniesRegionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1CompaniesRegionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1CompaniesRegionsResponse.prototype, "regionListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1CompaniesRegionsResponse.prototype, "statusCode", void 0);
     return GetSetupV1CompaniesRegionsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1CompaniesRegionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CompaniesRegionsResponse = GetSetupV1CompaniesRegionsResponse;

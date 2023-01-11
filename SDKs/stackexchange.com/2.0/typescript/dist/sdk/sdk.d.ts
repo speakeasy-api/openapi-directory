@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.stackexchange.com/2.0"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getAccessTokensAccessTokens - Reads the properties for a set of access tokens.
      *
@@ -114,36 +115,6 @@ export declare class SDK {
     **/
     getBadges(req: operations.GetBadgesRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesResponse>;
     /**
-     * getBadgesIds - Gets the badges identified in id.
-     *
-     * Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
-     *
-     * Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
-     *
-     * This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
-     *
-     * For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
-     *
-     * rank is the default sort.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-     *
-     * This method returns a list of badges.
-     *
-    **/
-    getBadgesIds(req: operations.GetBadgesIdsRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesIdsResponse>;
-    /**
-     * getBadgesIdsRecipients - Returns recently awarded badges in the system, constrained to a certain set of badges.
-     *
-     * As these badges have been awarded, they will have the badge.user property set.
-     *
-     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-     *
-     * This method returns a list of badges.
-     *
-    **/
-    getBadgesIdsRecipients(req: operations.GetBadgesIdsRecipientsRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesIdsRecipientsResponse>;
-    /**
      * getBadgesName - Gets all explicitly named badges in the system.
      *
      * A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
@@ -176,6 +147,36 @@ export declare class SDK {
      *
     **/
     getBadgesTags(req: operations.GetBadgesTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesTagsResponse>;
+    /**
+     * getBadgesIds - Gets the badges identified in id.
+     *
+     * Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
+     *
+     * Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
+     *
+     * This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
+     *
+     * For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+     *
+     * rank is the default sort.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+     *
+     * This method returns a list of badges.
+     *
+    **/
+    getBadgesIds(req: operations.GetBadgesIdsRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesIdsResponse>;
+    /**
+     * getBadgesIdsRecipients - Returns recently awarded badges in the system, constrained to a certain set of badges.
+     *
+     * As these badges have been awarded, they will have the badge.user property set.
+     *
+     * {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+     *
+     * This method returns a list of badges.
+     *
+    **/
+    getBadgesIdsRecipients(req: operations.GetBadgesIdsRecipientsRequest, config?: AxiosRequestConfig): Promise<operations.GetBadgesIdsRecipientsResponse>;
     /**
      * getComments - Gets all the comments on the site.
      *
@@ -695,6 +696,52 @@ export declare class SDK {
     **/
     getQuestionsFeatured(req: operations.GetQuestionsFeaturedRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsFeaturedResponse>;
     /**
+     * getQuestionsNoAnswers - Returns questions which have received no answers.
+     *
+     * Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
+     *
+     * This method corresponds roughly with the this site tab.
+     *
+     * To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    getQuestionsNoAnswers(req: operations.GetQuestionsNoAnswersRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsNoAnswersResponse>;
+    /**
+     * getQuestionsUnanswered - Returns questions the site considers to be unanswered.
+     *
+     * Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
+     *
+     * To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+     *
+     * Compare with /questions/no-answers.
+     *
+     * This method corresponds roughly with the unanswered tab.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    getQuestionsUnanswered(req: operations.GetQuestionsUnansweredRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsUnansweredResponse>;
+    /**
      * getQuestionsIds - Returns the questions identified in {ids}.
      *
      * This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
@@ -810,52 +857,6 @@ export declare class SDK {
      *
     **/
     getQuestionsIdsTimeline(req: operations.GetQuestionsIdsTimelineRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsIdsTimelineResponse>;
-    /**
-     * getQuestionsNoAnswers - Returns questions which have received no answers.
-     *
-     * Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
-     *
-     * This method corresponds roughly with the this site tab.
-     *
-     * To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-     *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of questions.
-     *
-    **/
-    getQuestionsNoAnswers(req: operations.GetQuestionsNoAnswersRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsNoAnswersResponse>;
-    /**
-     * getQuestionsUnanswered - Returns questions the site considers to be unanswered.
-     *
-     * Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
-     *
-     * To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-     *
-     * Compare with /questions/no-answers.
-     *
-     * This method corresponds roughly with the unanswered tab.
-     *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
-     *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
-     *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-     *
-     *
-     * This method returns a list of questions.
-     *
-    **/
-    getQuestionsUnanswered(req: operations.GetQuestionsUnansweredRequest, config?: AxiosRequestConfig): Promise<operations.GetQuestionsUnansweredResponse>;
     /**
      * getRevisionsIds - Returns edit revisions identified by ids in {ids}.
      *
@@ -1063,24 +1064,6 @@ export declare class SDK {
     **/
     getTagsSynonyms(req: operations.GetTagsSynonymsRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsSynonymsResponse>;
     /**
-     * getTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
-     *
-     * This is a view onto the data presented on the tag info page on the sites.
-     *
-     * This method returns a list of tag score objects.
-     *
-    **/
-    getTagsTagTopAnswerersPeriod(req: operations.GetTagsTagTopAnswerersPeriodRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsTagTopAnswerersPeriodResponse>;
-    /**
-     * getTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
-     *
-     * This is a view onto the data presented on the tag info page on the sites.
-     *
-     * This method returns a list of tag score objects.
-     *
-    **/
-    getTagsTagTopAskersPeriod(req: operations.GetTagsTagTopAskersPeriodRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsTagTopAskersPeriodResponse>;
-    /**
      * getTagsTagsFaq - Returns the frequently asked questions for the given set of tags in {tags}.
      *
      * For a question to be returned, it must have all the tags in {tags} and be considered "frequently asked". The exact algorithm for determining whether a question is considered a FAQ is subject to change at any time.
@@ -1151,6 +1134,24 @@ export declare class SDK {
     **/
     getTagsTagsWikis(req: operations.GetTagsTagsWikisRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsTagsWikisResponse>;
     /**
+     * getTagsTagTopAnswerersPeriod - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+     *
+     * This is a view onto the data presented on the tag info page on the sites.
+     *
+     * This method returns a list of tag score objects.
+     *
+    **/
+    getTagsTagTopAnswerersPeriod(req: operations.GetTagsTagTopAnswerersPeriodRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsTagTopAnswerersPeriodResponse>;
+    /**
+     * getTagsTagTopAskersPeriod - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+     *
+     * This is a view onto the data presented on the tag info page on the sites.
+     *
+     * This method returns a list of tag score objects.
+     *
+    **/
+    getTagsTagTopAskersPeriod(req: operations.GetTagsTagTopAskersPeriodRequest, config?: AxiosRequestConfig): Promise<operations.GetTagsTagTopAskersPeriodResponse>;
+    /**
      * getUsers - Returns all users on a site.
      *
      * This method returns a list of users.
@@ -1170,138 +1171,43 @@ export declare class SDK {
     **/
     getUsers(req: operations.GetUsersRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersResponse>;
     /**
-     * getUsersIdInbox - Returns a user's inbox.
+     * getUsersModerators - Gets those users on a site who can exercise moderation powers.
      *
-     * This method requires an access_token, with a scope containing "read_inbox".
+     * Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
      *
-     * This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of inbox items.
-     *
-    **/
-    getUsersIdInbox(req: operations.GetUsersIdInboxRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdInboxResponse>;
-    /**
-     * getUsersIdInboxUnread - Returns the unread items in a user's inbox.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of inbox items.
-     *
-    **/
-    getUsersIdInboxUnread(req: operations.GetUsersIdInboxUnreadRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdInboxUnreadResponse>;
-    /**
-     * getUsersIdNotifications - Returns a user's notifications.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method returns a list of notifications.
-     *
-    **/
-    getUsersIdNotifications(req: operations.GetUsersIdNotificationsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdNotificationsResponse>;
-    /**
-     * getUsersIdNotificationsUnread - Returns a user's unread notifications.
-     *
-     * This method requires an access_token, with a scope containing "read_inbox".
-     *
-     * This method returns a list of notifications.
-     *
-    **/
-    getUsersIdNotificationsUnread(req: operations.GetUsersIdNotificationsUnreadRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdNotificationsUnreadResponse>;
-    /**
-     * getUsersIdPrivileges - Returns the privileges a user has.
-     *
-     * Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
-     *
-     * {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of privileges.
-     *
-    **/
-    getUsersIdPrivileges(req: operations.GetUsersIdPrivilegesRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdPrivilegesResponse>;
-    /**
-     * getUsersIdReputationHistoryFull - Returns a user's full reputation history, including private events.
-     *
-     * This method requires an access_token, with a scope containing "private_info".
-     *
-     * This method returns a list of reputation_history.
-     *
-    **/
-    getUsersIdReputationHistoryFull(req: operations.GetUsersIdReputationHistoryFullRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdReputationHistoryFullResponse>;
-    /**
-     * getUsersIdTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
-     *
-     * The sorts accepted by this method operate on the follow fields of the answer object:
-     *  - activity - last_activity_date
+     * The sorts accepted by this method operate on the follow fields of the user object:
+     *  - reputation - reputation
      *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
+     *  - name - display_name
+     *  - modified - last_modified_date
+     *   reputation is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of answers.
+     * This method returns a list of users.
      *
     **/
-    getUsersIdTagsTagsTopAnswers(req: operations.GetUsersIdTagsTagsTopAnswersRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTagsTagsTopAnswersResponse>;
+    getUsersModerators(req: operations.GetUsersModeratorsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersModeratorsResponse>;
     /**
-     * getUsersIdTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
+     * getUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
      *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+     * This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
      *
-     * The sorts accepted by this method operate on the follow fields of the question object:
-     *  - activity - last_activity_date
+     * The sorts accepted by this method operate on the follow fields of the user object:
+     *  - reputation - reputation
      *  - creation - creation_date
-     *  - votes - score
-     *   activity is the default sort.
+     *  - name - display_name
+     *  - modified - last_modified_date
+     *   reputation is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of questions.
+     * This method returns a list of users.
      *
     **/
-    getUsersIdTagsTagsTopQuestions(req: operations.GetUsersIdTagsTagsTopQuestionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTagsTagsTopQuestionsResponse>;
-    /**
-     * getUsersIdTopAnswerTags - Returns a single user's top tags by answer score.
-     *
-     * This a subset of the data returned on a user's tags tab.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of top_tag objects.
-     *
-    **/
-    getUsersIdTopAnswerTags(req: operations.GetUsersIdTopAnswerTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTopAnswerTagsResponse>;
-    /**
-     * getUsersIdTopQuestionTags - Returns a single user's top tags by question score.
-     *
-     * This a subset of the data returned on a user's tags tab.
-     *
-     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-     *
-     * This method returns a list of top_tag objects.
-     *
-    **/
-    getUsersIdTopQuestionTags(req: operations.GetUsersIdTopQuestionTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTopQuestionTagsResponse>;
-    /**
-     * getUsersIdWritePermissions - Returns the write permissions a user has via the api.
-     *
-     * The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
-     *
-     * This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
-     *
-     * This method returns a list of write_permissions.
-     *
-    **/
-    getUsersIdWritePermissions(req: operations.GetUsersIdWritePermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdWritePermissionsResponse>;
+    getUsersModeratorsElected(req: operations.GetUsersModeratorsElectedRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersModeratorsElectedResponse>;
     /**
      * getUsersIds - Gets the users identified in ids in {ids}.
      *
@@ -1622,43 +1528,138 @@ export declare class SDK {
     **/
     getUsersIdsTimeline(req: operations.GetUsersIdsTimelineRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdsTimelineResponse>;
     /**
-     * getUsersModerators - Gets those users on a site who can exercise moderation powers.
+     * getUsersIdInbox - Returns a user's inbox.
      *
-     * Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
+     * This method requires an access_token, with a scope containing "read_inbox".
      *
-     * The sorts accepted by this method operate on the follow fields of the user object:
-     *  - reputation - reputation
-     *  - creation - creation_date
-     *  - name - display_name
-     *  - modified - last_modified_date
-     *   reputation is the default sort.
+     * This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
      *
-     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
      *
-     *
-     * This method returns a list of users.
+     * This method returns a list of inbox items.
      *
     **/
-    getUsersModerators(req: operations.GetUsersModeratorsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersModeratorsResponse>;
+    getUsersIdInbox(req: operations.GetUsersIdInboxRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdInboxResponse>;
     /**
-     * getUsersModeratorsElected - Returns those users on a site who both have moderator powers, and were actually elected.
+     * getUsersIdInboxUnread - Returns the unread items in a user's inbox.
      *
-     * This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
+     * This method requires an access_token, with a scope containing "read_inbox".
      *
-     * The sorts accepted by this method operate on the follow fields of the user object:
-     *  - reputation - reputation
+     * This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of inbox items.
+     *
+    **/
+    getUsersIdInboxUnread(req: operations.GetUsersIdInboxUnreadRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdInboxUnreadResponse>;
+    /**
+     * getUsersIdNotifications - Returns a user's notifications.
+     *
+     * This method requires an access_token, with a scope containing "read_inbox".
+     *
+     * This method returns a list of notifications.
+     *
+    **/
+    getUsersIdNotifications(req: operations.GetUsersIdNotificationsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdNotificationsResponse>;
+    /**
+     * getUsersIdNotificationsUnread - Returns a user's unread notifications.
+     *
+     * This method requires an access_token, with a scope containing "read_inbox".
+     *
+     * This method returns a list of notifications.
+     *
+    **/
+    getUsersIdNotificationsUnread(req: operations.GetUsersIdNotificationsUnreadRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdNotificationsUnreadResponse>;
+    /**
+     * getUsersIdPrivileges - Returns the privileges a user has.
+     *
+     * Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
+     *
+     * {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of privileges.
+     *
+    **/
+    getUsersIdPrivileges(req: operations.GetUsersIdPrivilegesRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdPrivilegesResponse>;
+    /**
+     * getUsersIdReputationHistoryFull - Returns a user's full reputation history, including private events.
+     *
+     * This method requires an access_token, with a scope containing "private_info".
+     *
+     * This method returns a list of reputation_history.
+     *
+    **/
+    getUsersIdReputationHistoryFull(req: operations.GetUsersIdReputationHistoryFullRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdReputationHistoryFullResponse>;
+    /**
+     * getUsersIdTagsTagsTopAnswers - Returns the top 30 answers a user has posted in response to questions with the given tags.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+     *
+     * The sorts accepted by this method operate on the follow fields of the answer object:
+     *  - activity - last_activity_date
      *  - creation - creation_date
-     *  - name - display_name
-     *  - modified - last_modified_date
-     *   reputation is the default sort.
+     *  - votes - score
+     *   activity is the default sort.
      *
      *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
      *
      *
-     * This method returns a list of users.
+     * This method returns a list of answers.
      *
     **/
-    getUsersModeratorsElected(req: operations.GetUsersModeratorsElectedRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersModeratorsElectedResponse>;
+    getUsersIdTagsTagsTopAnswers(req: operations.GetUsersIdTagsTagsTopAnswersRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTagsTagsTopAnswersResponse>;
+    /**
+     * getUsersIdTagsTagsTopQuestions - Returns the top 30 questions a user has asked with the given tags.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+     *
+     * The sorts accepted by this method operate on the follow fields of the question object:
+     *  - activity - last_activity_date
+     *  - creation - creation_date
+     *  - votes - score
+     *   activity is the default sort.
+     *
+     *  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+     *
+     *
+     * This method returns a list of questions.
+     *
+    **/
+    getUsersIdTagsTagsTopQuestions(req: operations.GetUsersIdTagsTagsTopQuestionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTagsTagsTopQuestionsResponse>;
+    /**
+     * getUsersIdTopAnswerTags - Returns a single user's top tags by answer score.
+     *
+     * This a subset of the data returned on a user's tags tab.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of top_tag objects.
+     *
+    **/
+    getUsersIdTopAnswerTags(req: operations.GetUsersIdTopAnswerTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTopAnswerTagsResponse>;
+    /**
+     * getUsersIdTopQuestionTags - Returns a single user's top tags by question score.
+     *
+     * This a subset of the data returned on a user's tags tab.
+     *
+     * {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+     *
+     * This method returns a list of top_tag objects.
+     *
+    **/
+    getUsersIdTopQuestionTags(req: operations.GetUsersIdTopQuestionTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdTopQuestionTagsResponse>;
+    /**
+     * getUsersIdWritePermissions - Returns the write permissions a user has via the api.
+     *
+     * The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
+     *
+     * This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
+     *
+     * This method returns a list of write_permissions.
+     *
+    **/
+    getUsersIdWritePermissions(req: operations.GetUsersIdWritePermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetUsersIdWritePermissionsResponse>;
     /**
      * postCommentsIdDelete - Deletes a comment.
      *
@@ -1687,4 +1688,3 @@ export declare class SDK {
     **/
     postPostsIdCommentsAdd(req: operations.PostPostsIdCommentsAddRequest, config?: AxiosRequestConfig): Promise<operations.PostPostsIdCommentsAddResponse>;
 }
-export {};

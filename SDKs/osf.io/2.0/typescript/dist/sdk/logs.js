@@ -1,0 +1,174 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Logs = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var Logs = /** @class */ (function () {
+    function Logs(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * logsActions - Actions
+     *
+     *
+     * A log can have one of many actions. The complete list of loggable actions (in the format {identifier}: {description}) is as follows:
+     * * `project_created`: A Node is created
+     * * `project_registered`: A Node is registered
+     * * `project_deleted`: A Node is deleted
+     * * `created_from`: A Node is created using an existing Node as a template
+     * * `pointer_created`: A Pointer is created
+     * * `pointer_forked`: A Pointer is forked
+     * * `pointer_removed`: A Pointer is removed
+     * * `node_removed`: A component is deleted
+     * * `node_forked`: A Node is forked
+     * ---
+     * * `made_public`: A Node is made public
+     * * `made_private`: A Node is made private
+     * * `tag_added`: A tag is added to a Node
+     * * `tag_removed`: A tag is removed from a Node
+     * * `edit_title`: A Node's title is changed
+     * * `edit_description`: A Node's description is changed
+     * * `updated_fields`: One or more of a Node's fields are changed
+     * * `external_ids_added`: An external identifier is added to a Node (e.g. DOI, ARK)
+     * * `view_only_link_added`: A view-only link was added to a Node
+     * * `view_only_link_removed`:  A view-only link was removed from a Node
+     * ---
+     * * `contributor_added`: A Contributor is added to a Node
+     * * `contributor_removed`: A Contributor is removed from a Node
+     * * `contributors_reordered`: A Contributor's position in a Node's bibliography is changed
+     * * `permissions_updated`: A Contributor`s permissions on a Node are changed
+     * * `made_contributor_visible`: A Contributor is made bibliographically visible on a Node
+     * * `made_contributor_invisible`: A Contributor is made bibliographically invisible on a Node
+     * ---
+     * * `wiki_updated`: A Node's wiki is updated
+     * * `wiki_deleted`: A Node's wiki is deleted
+     * * `wiki_renamed`: A Node's wiki is renamed
+     * * `made_wiki_public`: A Node's wiki is made public
+     * * `made_wiki_private`: A Node's wiki is made private
+     * ---
+     * * `addon_added`: An add-on is linked to a Node
+     * * `addon_removed`: An add-on is unlinked from a Node
+     * * `addon_file_moved`: A File in a Node's linked add-on is moved
+     * * `addon_file_copied`: A File in a Node's linked add-on is copied
+     * * `addon_file_renamed`: A File in a Node's linked add-on is renamed
+     * * `node_authorized`: An addon is authorized for a project
+     * * `node_deauthorized`: An addon is deauthorized for a project
+     * * `folder_created`: A Folder is created in a Node's linked add-on
+     * * `file_added`: A File is added to a Node's linked add-on
+     * * `file_updated`: A File is updated on a Node's linked add-on
+     * * `file_removed`: A File is removed from a Node's linked add-on
+     * * `file_restored`: A File is restored in a Node's linked add-on
+     * ---
+     * * `comment_added`: A Comment is added to some item
+     * * `comment_removed`: A Comment is removed from some item
+     * * `comment_updated`: A Comment is updated on some item
+     * ---
+     * * `embargo_initiated`: An embargoed Registration is proposed on a Node
+     * * `embargo_approved`: A proposed Embargo of a Node is approved
+     * * `embargo_cancelled`: A proposed Embargo of a Node is cancelled
+     * * `embargo_completed`: A proposed Embargo of a Node is completed
+     * * `retraction_initiated`: A Withdrawal of a Registration is proposed
+     * * `retraction_approved`: A Withdrawal of a Registration is approved
+     * * `retraction_cancelled`: A Withdrawal of a Registration is cancelled
+     * * `registration_initiated`: A Registration of a Node is proposed
+     * * `registration_approved`: A proposed Registration is approved
+     * * `registration_cancelled`: A proposed Registration is cancelled
+    **/
+    Logs.prototype.logsActions = function (config) {
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/actions/";
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * logsRead - Retrieve a log
+     *
+     * Retrieves the details of a log.
+     * A log is permanent immutable record of a node's history. A log is created when a user performs one of many actions. See the [actions](#Logs_logs_actions) section for more details.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing the representation of the requested log, if the request was successful.
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    Logs.prototype.logsRead = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.LogsReadRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/logs/{log_id}/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return Logs;
+}());
+exports.Logs = Logs;

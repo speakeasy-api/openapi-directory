@@ -20,7 +20,7 @@ export declare class CreateLfTagRequest extends SpeakeasyBase {
 export declare class CreateLfTagResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    createLfTagResponse?: Map<string, any>;
+    createLFTagResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

@@ -22,5 +22,5 @@ export class GetMaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMask200ApplicationJsonString?: string;
+  getMask200ApplicationJSONString?: string;
 }

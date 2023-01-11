@@ -24,7 +24,7 @@ export class CurrentSeasontypeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  currentSeasontype200ApplicationJsonString?: string;
+  currentSeasontype200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -22,8 +22,8 @@ export class ConnectionImportData extends SpeakeasyBase {
   credentials?: ConnectionImportDataCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=settings" })
-  settings?: Map<string, any>;
+  settings?: Record<string, any>;
 }

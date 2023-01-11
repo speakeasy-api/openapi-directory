@@ -6,7 +6,7 @@ export declare class PostRouteRequest extends SpeakeasyBase {
 export declare class PostRouteResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     routeResponse?: shared.RouteResponse;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowSetConfigResponse = exports.ProtocolNetflowSetConfigRequest = exports.ProtocolNetflowSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetConfigPathParams, _super);
     function ProtocolNetflowSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolNetflowSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolNetflowSetConfigPathParams.prototype, "value", void 0);
     return ProtocolNetflowSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetConfigPathParams = ProtocolNetflowSetConfigPathParams;
 var ProtocolNetflowSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetConfigRequest, _super);
     function ProtocolNetflowSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowSetConfigPathParams)
     ], ProtocolNetflowSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetConfigRequest = ProtocolNetflowSetConfigRequest;
 var ProtocolNetflowSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetConfigResponse, _super);
     function ProtocolNetflowSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowSetConfigResponse.prototype, "protocolNetflowSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolNetflowSetConfigResponse.prototype, "protocolNetflowSetConfig200ApplicationJSONString", void 0);
     return ProtocolNetflowSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetConfigResponse = ProtocolNetflowSetConfigResponse;

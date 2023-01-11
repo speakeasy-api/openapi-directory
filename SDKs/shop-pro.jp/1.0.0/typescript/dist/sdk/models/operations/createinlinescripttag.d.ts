@@ -47,5 +47,5 @@ export declare class CreateInlineScriptTagRequest extends SpeakeasyBase {
 export declare class CreateInlineScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createInlineScriptTag201ApplicationJsonObject?: CreateInlineScriptTag201ApplicationJson;
+    createInlineScriptTag201ApplicationJSONObject?: CreateInlineScriptTag201ApplicationJson;
 }

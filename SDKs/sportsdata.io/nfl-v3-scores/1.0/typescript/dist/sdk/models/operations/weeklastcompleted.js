@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WeekLastCompletedFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WeekLastCompletedResponse = exports.WeekLastCompletedRequest = exports.WeekLastCompletedPathParams = exports.WeekLastCompletedFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WeekLastCompletedFormatEnum;
 (function (WeekLastCompletedFormatEnum) {
     WeekLastCompletedFormatEnum["Xml"] = "XML";
     WeekLastCompletedFormatEnum["Json"] = "JSON";
-})(WeekLastCompletedFormatEnum || (WeekLastCompletedFormatEnum = {}));
+})(WeekLastCompletedFormatEnum = exports.WeekLastCompletedFormatEnum || (exports.WeekLastCompletedFormatEnum = {}));
 var WeekLastCompletedPathParams = /** @class */ (function (_super) {
     __extends(WeekLastCompletedPathParams, _super);
     function WeekLastCompletedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], WeekLastCompletedPathParams.prototype, "format", void 0);
     return WeekLastCompletedPathParams;
-}(SpeakeasyBase));
-export { WeekLastCompletedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WeekLastCompletedPathParams = WeekLastCompletedPathParams;
 var WeekLastCompletedRequest = /** @class */ (function (_super) {
     __extends(WeekLastCompletedRequest, _super);
     function WeekLastCompletedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WeekLastCompletedPathParams)
     ], WeekLastCompletedRequest.prototype, "pathParams", void 0);
     return WeekLastCompletedRequest;
-}(SpeakeasyBase));
-export { WeekLastCompletedRequest };
+}(utils_1.SpeakeasyBase));
+exports.WeekLastCompletedRequest = WeekLastCompletedRequest;
 var WeekLastCompletedResponse = /** @class */ (function (_super) {
     __extends(WeekLastCompletedResponse, _super);
     function WeekLastCompletedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WeekLastCompletedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WeekLastCompletedResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], WeekLastCompletedResponse.prototype, "weekLastCompleted200ApplicationJsonInteger", void 0);
+    ], WeekLastCompletedResponse.prototype, "weekLastCompleted200ApplicationJSONInteger", void 0);
     return WeekLastCompletedResponse;
-}(SpeakeasyBase));
-export { WeekLastCompletedResponse };
+}(utils_1.SpeakeasyBase));
+exports.WeekLastCompletedResponse = WeekLastCompletedResponse;

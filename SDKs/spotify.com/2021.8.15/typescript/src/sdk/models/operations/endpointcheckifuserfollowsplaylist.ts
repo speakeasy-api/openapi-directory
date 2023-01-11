@@ -53,5 +53,5 @@ export class EndpointCheckIfUserFollowsPlaylistResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointCheckIfUserFollowsPlaylist200ApplicationJsonBooleans?: boolean[];
+  endpointCheckIfUserFollowsPlaylist200ApplicationJSONBooleans?: boolean[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonthlyTransfer } from "./monthlytransfer";
-import { InstancePortInfo } from "./instanceportinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceNetworking = void 0;
+var utils_1 = require("../../../internal/utils");
+var monthlytransfer_1 = require("./monthlytransfer");
+var instanceportinfo_1 = require("./instanceportinfo");
 // InstanceNetworking
 /**
  * Describes monthly data transfer rates and port information for an instance.
@@ -35,13 +38,13 @@ var InstanceNetworking = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthlyTransfer" }),
-        __metadata("design:type", MonthlyTransfer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthlyTransfer" }),
+        __metadata("design:type", monthlytransfer_1.MonthlyTransfer)
     ], InstanceNetworking.prototype, "monthlyTransfer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports", elemType: InstancePortInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports", elemType: instanceportinfo_1.InstancePortInfo }),
         __metadata("design:type", Array)
     ], InstanceNetworking.prototype, "ports", void 0);
     return InstanceNetworking;
-}(SpeakeasyBase));
-export { InstanceNetworking };
+}(utils_1.SpeakeasyBase));
+exports.InstanceNetworking = InstanceNetworking;

@@ -3,7 +3,7 @@ import { UsageLimitBreachActionEnum } from "./usagelimitbreachactionenum";
 import { UsageLimitFeatureTypeEnum } from "./usagelimitfeaturetypeenum";
 import { UsageLimitLimitTypeEnum } from "./usagelimitlimittypeenum";
 import { UsageLimitPeriodEnum } from "./usagelimitperiodenum";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 
 
 
@@ -30,8 +30,8 @@ export class UsageLimit extends SpeakeasyBase {
   @SpeakeasyMetadata()
   period?: UsageLimitPeriodEnum;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 
   @SpeakeasyMetadata()
   usageLimitId?: string;

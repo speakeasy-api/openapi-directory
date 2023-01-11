@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ExecuteActionRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,160 +23,162 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagWikis = exports.TagWikisLastExcerptEditor = exports.TagWikisLastExcerptEditorBadgeCounts = exports.TagWikisLastBodyEditor = exports.TagWikisLastBodyEditorBadgeCounts = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagWikisLastBodyEditorBadgeCounts = /** @class */ (function (_super) {
     __extends(TagWikisLastBodyEditorBadgeCounts, _super);
     function TagWikisLastBodyEditorBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditorBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditorBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditorBadgeCounts.prototype, "silver", void 0);
     return TagWikisLastBodyEditorBadgeCounts;
-}(SpeakeasyBase));
-export { TagWikisLastBodyEditorBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.TagWikisLastBodyEditorBadgeCounts = TagWikisLastBodyEditorBadgeCounts;
 var TagWikisLastBodyEditor = /** @class */ (function (_super) {
     __extends(TagWikisLastBodyEditor, _super);
     function TagWikisLastBodyEditor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditor.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagWikisLastBodyEditorBadgeCounts)
     ], TagWikisLastBodyEditor.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastBodyEditor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastBodyEditor.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastBodyEditor.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditor.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastBodyEditor.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastBodyEditor.prototype, "userType", void 0);
     return TagWikisLastBodyEditor;
-}(SpeakeasyBase));
-export { TagWikisLastBodyEditor };
+}(utils_1.SpeakeasyBase));
+exports.TagWikisLastBodyEditor = TagWikisLastBodyEditor;
 var TagWikisLastExcerptEditorBadgeCounts = /** @class */ (function (_super) {
     __extends(TagWikisLastExcerptEditorBadgeCounts, _super);
     function TagWikisLastExcerptEditorBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditorBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditorBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditorBadgeCounts.prototype, "silver", void 0);
     return TagWikisLastExcerptEditorBadgeCounts;
-}(SpeakeasyBase));
-export { TagWikisLastExcerptEditorBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.TagWikisLastExcerptEditorBadgeCounts = TagWikisLastExcerptEditorBadgeCounts;
 var TagWikisLastExcerptEditor = /** @class */ (function (_super) {
     __extends(TagWikisLastExcerptEditor, _super);
     function TagWikisLastExcerptEditor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditor.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagWikisLastExcerptEditorBadgeCounts)
     ], TagWikisLastExcerptEditor.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastExcerptEditor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastExcerptEditor.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastExcerptEditor.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditor.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikisLastExcerptEditor.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikisLastExcerptEditor.prototype, "userType", void 0);
     return TagWikisLastExcerptEditor;
-}(SpeakeasyBase));
-export { TagWikisLastExcerptEditor };
+}(utils_1.SpeakeasyBase));
+exports.TagWikisLastExcerptEditor = TagWikisLastExcerptEditor;
 var TagWikis = /** @class */ (function (_super) {
     __extends(TagWikis, _super);
     function TagWikis() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikis.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikis.prototype, "bodyLastEditDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikis.prototype, "excerpt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagWikis.prototype, "excerptLastEditDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagWikisLastBodyEditor)
     ], TagWikis.prototype, "lastBodyEditor", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagWikisLastExcerptEditor)
     ], TagWikis.prototype, "lastExcerptEditor", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagWikis.prototype, "tagName", void 0);
     return TagWikis;
-}(SpeakeasyBase));
-export { TagWikis };
+}(utils_1.SpeakeasyBase));
+exports.TagWikis = TagWikis;

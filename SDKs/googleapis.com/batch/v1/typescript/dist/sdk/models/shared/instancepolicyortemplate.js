@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstancePolicy } from "./instancepolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancePolicyOrTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancepolicy_1 = require("./instancepolicy");
 // InstancePolicyOrTemplate
 /**
  * Either an InstancePolicy or an instance template.
@@ -34,17 +37,17 @@ var InstancePolicyOrTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installGpuDrivers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installGpuDrivers" }),
         __metadata("design:type", Boolean)
     ], InstancePolicyOrTemplate.prototype, "installGpuDrivers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceTemplate" }),
         __metadata("design:type", String)
     ], InstancePolicyOrTemplate.prototype, "instanceTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
-        __metadata("design:type", InstancePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
+        __metadata("design:type", instancepolicy_1.InstancePolicy)
     ], InstancePolicyOrTemplate.prototype, "policy", void 0);
     return InstancePolicyOrTemplate;
-}(SpeakeasyBase));
-export { InstancePolicyOrTemplate };
+}(utils_1.SpeakeasyBase));
+exports.InstancePolicyOrTemplate = InstancePolicyOrTemplate;

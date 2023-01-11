@@ -29,7 +29,7 @@ export class GetRepositoryPipelineScheduleExecutionsResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedPipelineScheduleExecutions?: shared.PaginatedPipelineScheduleExecutions;

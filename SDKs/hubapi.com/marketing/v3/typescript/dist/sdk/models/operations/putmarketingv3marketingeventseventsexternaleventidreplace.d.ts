@@ -4,7 +4,6 @@ export declare class PutMarketingV3MarketingEventsEventsExternalEventIdReplacePa
     externalEventId: string;
 }
 export declare class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
 }

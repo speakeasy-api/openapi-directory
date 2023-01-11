@@ -41,5 +41,5 @@ export class CampaignsRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  campaignsRemove200ApplicationJsonObject?: CampaignsRemove200ApplicationJson;
+  campaignsRemove200ApplicationJSONObject?: CampaignsRemove200ApplicationJson;
 }

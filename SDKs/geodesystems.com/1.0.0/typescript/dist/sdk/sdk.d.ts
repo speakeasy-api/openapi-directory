@@ -240,10 +240,11 @@ import { TypeUsPlaces } from "./typeusplaces";
 import { TypeVoteYesno } from "./typevoteyesno";
 import { TypeWeblog } from "./typeweblog";
 import { TypeWikipage } from "./typewikipage";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://geodesystems.com:443/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     serviceMediaTabularExtractsheet: ServiceMediaTabularExtractsheet;
     type2017BoulderElectionExpenditures: Type2017BoulderElectionExpenditures;
@@ -454,7 +455,7 @@ export declare class SDK {
     typeTypePointNoaaMadis: TypeTypePointNoaaMadis;
     typeTypePointNoaaTower: TypeTypePointNoaaTower;
     typeTypePointOceanCnv: TypeTypePointOceanCnv;
-    typeTypePointOceanCsvSadoTts: TypeTypePointOceanCsvSadoTts;
+    typeTypePointOceanCsvSadoTTS: TypeTypePointOceanCsvSadoTts;
     typeTypePointOceanCsvSadoMeteo: TypeTypePointOceanCsvSadoMeteo;
     typeTypePointOceanCsvSadoPosition: TypeTypePointOceanCsvSadoPosition;
     typeTypePointOceanNetcdfGlider: TypeTypePointOceanNetcdfGlider;
@@ -492,6 +493,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

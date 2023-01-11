@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabase } from "./relationaldatabase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabase_1 = require("./relationaldatabase");
 var GetRelationalDatabaseResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseResult, _super);
     function GetRelationalDatabaseResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabase" }),
-        __metadata("design:type", RelationalDatabase)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabase" }),
+        __metadata("design:type", relationaldatabase_1.RelationalDatabase)
     ], GetRelationalDatabaseResult.prototype, "relationalDatabase", void 0);
     return GetRelationalDatabaseResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseResult = GetRelationalDatabaseResult;

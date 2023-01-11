@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NumberDetailsUpdateMessagesCallbackTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NumberDetailsUpdate = exports.NumberDetailsUpdateVoiceCallbackTypeEnum = exports.NumberDetailsUpdateMessagesCallbackTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NumberDetailsUpdateMessagesCallbackTypeEnum;
 (function (NumberDetailsUpdateMessagesCallbackTypeEnum) {
     NumberDetailsUpdateMessagesCallbackTypeEnum["App"] = "app";
-})(NumberDetailsUpdateMessagesCallbackTypeEnum || (NumberDetailsUpdateMessagesCallbackTypeEnum = {}));
-export var NumberDetailsUpdateVoiceCallbackTypeEnum;
+})(NumberDetailsUpdateMessagesCallbackTypeEnum = exports.NumberDetailsUpdateMessagesCallbackTypeEnum || (exports.NumberDetailsUpdateMessagesCallbackTypeEnum = {}));
+var NumberDetailsUpdateVoiceCallbackTypeEnum;
 (function (NumberDetailsUpdateVoiceCallbackTypeEnum) {
     NumberDetailsUpdateVoiceCallbackTypeEnum["Sip"] = "sip";
     NumberDetailsUpdateVoiceCallbackTypeEnum["Tel"] = "tel";
     NumberDetailsUpdateVoiceCallbackTypeEnum["App"] = "app";
-})(NumberDetailsUpdateVoiceCallbackTypeEnum || (NumberDetailsUpdateVoiceCallbackTypeEnum = {}));
+})(NumberDetailsUpdateVoiceCallbackTypeEnum = exports.NumberDetailsUpdateVoiceCallbackTypeEnum || (exports.NumberDetailsUpdateVoiceCallbackTypeEnum = {}));
 var NumberDetailsUpdate = /** @class */ (function (_super) {
     __extends(NumberDetailsUpdate, _super);
     function NumberDetailsUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=app_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=app_id;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=country;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=country;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=messagesCallbackType;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=messagesCallbackType;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "messagesCallbackType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=messagesCallbackValue;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=messagesCallbackValue;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "messagesCallbackValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=moHttpUrl;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=moHttpUrl;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "moHttpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=moSmppSysType;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=moSmppSysType;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "moSmppSysType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=msisdn;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=msisdn;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "msisdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=voiceCallbackType;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=voiceCallbackType;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "voiceCallbackType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=voiceCallbackValue;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=voiceCallbackValue;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "voiceCallbackValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=voiceStatusCallback;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=voiceStatusCallback;" }),
         __metadata("design:type", String)
     ], NumberDetailsUpdate.prototype, "voiceStatusCallback", void 0);
     return NumberDetailsUpdate;
-}(SpeakeasyBase));
-export { NumberDetailsUpdate };
+}(utils_1.SpeakeasyBase));
+exports.NumberDetailsUpdate = NumberDetailsUpdate;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TumblingWindow = void 0;
+var utils_1 = require("../../../internal/utils");
 // TumblingWindow
 /**
  * <p>Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous time window. You use this window in metrics to aggregate data from properties and other assets.</p> <p>You can use <code>m</code>, <code>h</code>, <code>d</code>, and <code>w</code> when you specify an interval or offset. Note that <code>m</code> represents minutes, and <code>w</code> represents weeks. You can also use <code>s</code> to represent seconds in <code>offset</code>.</p> <p>The <code>interval</code> and <code>offset</code> parameters support the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a>. For example, <code>PT5S</code> represents five seconds, <code>PT5M</code> represents five minutes, and <code>PT5H</code> represents five hours.</p>
@@ -33,13 +36,13 @@ var TumblingWindow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", String)
     ], TumblingWindow.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", String)
     ], TumblingWindow.prototype, "offset", void 0);
     return TumblingWindow;
-}(SpeakeasyBase));
-export { TumblingWindow };
+}(utils_1.SpeakeasyBase));
+exports.TumblingWindow = TumblingWindow;

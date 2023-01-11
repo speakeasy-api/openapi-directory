@@ -44,5 +44,5 @@ export class ActionsListSelfHostedRunnerGroupsForOrgResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListSelfHostedRunnerGroupsForOrg200ApplicationJsonObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson;
+  actionsListSelfHostedRunnerGroupsForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson;
 }

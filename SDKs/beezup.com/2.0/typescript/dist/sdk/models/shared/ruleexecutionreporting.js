@@ -1,0 +1,97 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleExecutionReporting = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruleexecutionreportingerrortypeenum_1 = require("./ruleexecutionreportingerrortypeenum");
+var ruleexecutionreportingexecutionsourceenum_1 = require("./ruleexecutionreportingexecutionsourceenum");
+var ruleexecutionreportinglinks_1 = require("./ruleexecutionreportinglinks");
+var optimisationactionnameenum_1 = require("./optimisationactionnameenum");
+var ruleexecutionreportingstatusenum_1 = require("./ruleexecutionreportingstatusenum");
+var RuleExecutionReporting = /** @class */ (function (_super) {
+    __extends(RuleExecutionReporting, _super);
+    function RuleExecutionReporting() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeAffectedProductCount" }),
+        __metadata("design:type", Number)
+    ], RuleExecutionReporting.prototype, "activeAffectedProductCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=affectedChannelCount" }),
+        __metadata("design:type", Number)
+    ], RuleExecutionReporting.prototype, "affectedChannelCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=affectedProductCount" }),
+        __metadata("design:type", Number)
+    ], RuleExecutionReporting.prototype, "affectedProductCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completedUtcDate" }),
+        __metadata("design:type", Date)
+    ], RuleExecutionReporting.prototype, "completedUtcDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "errorType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionSource" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "executionSource", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", ruleexecutionreportinglinks_1.RuleExecutionReportingLinks)
+    ], RuleExecutionReporting.prototype, "links", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optimisationActionName" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "optimisationActionName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportUrl" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "reportUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleId" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "ruleId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleName" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "ruleName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedUtcDate" }),
+        __metadata("design:type", Date)
+    ], RuleExecutionReporting.prototype, "startedUtcDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
+        __metadata("design:type", String)
+    ], RuleExecutionReporting.prototype, "userId", void 0);
+    return RuleExecutionReporting;
+}(utils_1.SpeakeasyBase));
+exports.RuleExecutionReporting = RuleExecutionReporting;

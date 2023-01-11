@@ -8,6 +8,6 @@ export declare class CreateANewQuestionRequest extends SpeakeasyBase {
 }
 export declare class CreateANewQuestionResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

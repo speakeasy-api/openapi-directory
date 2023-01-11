@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaLabelLockCapabilities } from "./googleappsdrivelabelsv2betalabellockcapabilities";
-import { GoogleAppsDriveLabelsV2betaUserInfo } from "./googleappsdrivelabelsv2betauserinfo";
-export var GoogleAppsDriveLabelsV2betaLabelLockStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaLabelLock = exports.GoogleAppsDriveLabelsV2betaLabelLockStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalabellockcapabilities_1 = require("./googleappsdrivelabelsv2betalabellockcapabilities");
+var googleappsdrivelabelsv2betauserinfo_1 = require("./googleappsdrivelabelsv2betauserinfo");
+var GoogleAppsDriveLabelsV2betaLabelLockStateEnum;
 (function (GoogleAppsDriveLabelsV2betaLabelLockStateEnum) {
     GoogleAppsDriveLabelsV2betaLabelLockStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleAppsDriveLabelsV2betaLabelLockStateEnum["Active"] = "ACTIVE";
     GoogleAppsDriveLabelsV2betaLabelLockStateEnum["Deleting"] = "DELETING";
-})(GoogleAppsDriveLabelsV2betaLabelLockStateEnum || (GoogleAppsDriveLabelsV2betaLabelLockStateEnum = {}));
+})(GoogleAppsDriveLabelsV2betaLabelLockStateEnum = exports.GoogleAppsDriveLabelsV2betaLabelLockStateEnum || (exports.GoogleAppsDriveLabelsV2betaLabelLockStateEnum = {}));
 // GoogleAppsDriveLabelsV2betaLabelLock
 /**
  * A Lock that can be applied to a Label, Field, or Choice.
@@ -41,37 +44,37 @@ var GoogleAppsDriveLabelsV2betaLabelLock = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelLockCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabellockcapabilities_1.GoogleAppsDriveLabelsV2betaLabelLockCapabilities)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choiceId" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "choiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "deleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldId" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "fieldId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLock.prototype, "state", void 0);
     return GoogleAppsDriveLabelsV2betaLabelLock;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaLabelLock };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaLabelLock = GoogleAppsDriveLabelsV2betaLabelLock;

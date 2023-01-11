@@ -17,7 +17,7 @@ export class ProtocolCoapGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolCoapGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configCoap?: shared.ConfigCoap;
+  configCOAP?: shared.ConfigCoap;
 
   @SpeakeasyMetadata()
   contentType: string;

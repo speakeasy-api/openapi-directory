@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,318 +14,343 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NstscResponse = exports.NstscRequest = exports.Nstsc504ApplicationJson = exports.Nstsc504ApplicationJsonErrorDescriptionEnum = exports.Nstsc504ApplicationJsonErrorEnum = exports.Nstsc503ApplicationJson = exports.Nstsc503ApplicationJsonErrorDescriptionEnum = exports.Nstsc503ApplicationJsonErrorEnum = exports.Nstsc502ApplicationJson = exports.Nstsc502ApplicationJsonErrorDescriptionEnum = exports.Nstsc502ApplicationJsonErrorEnum = exports.Nstsc500ApplicationJson = exports.Nstsc500ApplicationJsonErrorDescriptionEnum = exports.Nstsc500ApplicationJsonErrorEnum = exports.Nstsc404ApplicationJson = exports.Nstsc404ApplicationJsonErrorDescriptionEnum = exports.Nstsc404ApplicationJsonErrorEnum = exports.Nstsc401ApplicationJson = exports.Nstsc401ApplicationJsonErrorDescriptionEnum = exports.Nstsc401ApplicationJsonErrorEnum = exports.Nstsc400ApplicationJson = exports.Nstsc400ApplicationJsonErrorDescriptionEnum = exports.Nstsc400ApplicationJsonErrorEnum = exports.NstscSecurity = exports.NstscRequestBody = exports.NstscRequestBodyFormatEnum = exports.NstscRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var NstscRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(NstscRequestBodyCertificateParameters, _super);
     function NstscRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullName" }),
         __metadata("design:type", String)
     ], NstscRequestBodyCertificateParameters.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rollno" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rollno" }),
         __metadata("design:type", String)
     ], NstscRequestBodyCertificateParameters.prototype, "rollno", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", String)
     ], NstscRequestBodyCertificateParameters.prototype, "year", void 0);
     return NstscRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { NstscRequestBodyCertificateParameters };
-export var NstscRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.NstscRequestBodyCertificateParameters = NstscRequestBodyCertificateParameters;
+var NstscRequestBodyFormatEnum;
 (function (NstscRequestBodyFormatEnum) {
     NstscRequestBodyFormatEnum["Pdf"] = "pdf";
-})(NstscRequestBodyFormatEnum || (NstscRequestBodyFormatEnum = {}));
+})(NstscRequestBodyFormatEnum = exports.NstscRequestBodyFormatEnum || (exports.NstscRequestBodyFormatEnum = {}));
 var NstscRequestBody = /** @class */ (function (_super) {
     __extends(NstscRequestBody, _super);
     function NstscRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", NstscRequestBodyCertificateParameters)
     ], NstscRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], NstscRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], NstscRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], NstscRequestBody.prototype, "txnId", void 0);
     return NstscRequestBody;
-}(SpeakeasyBase));
-export { NstscRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.NstscRequestBody = NstscRequestBody;
 var NstscSecurity = /** @class */ (function (_super) {
     __extends(NstscSecurity, _super);
     function NstscSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], NstscSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], NstscSecurity.prototype, "clientId", void 0);
     return NstscSecurity;
-}(SpeakeasyBase));
-export { NstscSecurity };
-export var Nstsc400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.NstscSecurity = NstscSecurity;
+var Nstsc400ApplicationJsonErrorEnum;
 (function (Nstsc400ApplicationJsonErrorEnum) {
     Nstsc400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Nstsc400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Nstsc400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Nstsc400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Nstsc400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Nstsc400ApplicationJsonErrorEnum || (Nstsc400ApplicationJsonErrorEnum = {}));
-export var Nstsc400ApplicationJsonErrorDescriptionEnum;
+})(Nstsc400ApplicationJsonErrorEnum = exports.Nstsc400ApplicationJsonErrorEnum || (exports.Nstsc400ApplicationJsonErrorEnum = {}));
+var Nstsc400ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc400ApplicationJsonErrorDescriptionEnum) {
     Nstsc400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Nstsc400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Nstsc400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Nstsc400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Nstsc400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Nstsc400ApplicationJsonErrorDescriptionEnum || (Nstsc400ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc400ApplicationJsonErrorDescriptionEnum = exports.Nstsc400ApplicationJsonErrorDescriptionEnum || (exports.Nstsc400ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc400ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc400ApplicationJson, _super);
     function Nstsc400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc400ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc400ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc400ApplicationJson };
-export var Nstsc401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc400ApplicationJson = Nstsc400ApplicationJson;
+var Nstsc401ApplicationJsonErrorEnum;
 (function (Nstsc401ApplicationJsonErrorEnum) {
     Nstsc401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Nstsc401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Nstsc401ApplicationJsonErrorEnum || (Nstsc401ApplicationJsonErrorEnum = {}));
-export var Nstsc401ApplicationJsonErrorDescriptionEnum;
+})(Nstsc401ApplicationJsonErrorEnum = exports.Nstsc401ApplicationJsonErrorEnum || (exports.Nstsc401ApplicationJsonErrorEnum = {}));
+var Nstsc401ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc401ApplicationJsonErrorDescriptionEnum) {
     Nstsc401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Nstsc401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Nstsc401ApplicationJsonErrorDescriptionEnum || (Nstsc401ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc401ApplicationJsonErrorDescriptionEnum = exports.Nstsc401ApplicationJsonErrorDescriptionEnum || (exports.Nstsc401ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc401ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc401ApplicationJson, _super);
     function Nstsc401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc401ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc401ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc401ApplicationJson };
-export var Nstsc404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc401ApplicationJson = Nstsc401ApplicationJson;
+var Nstsc404ApplicationJsonErrorEnum;
 (function (Nstsc404ApplicationJsonErrorEnum) {
     Nstsc404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Nstsc404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Nstsc404ApplicationJsonErrorEnum || (Nstsc404ApplicationJsonErrorEnum = {}));
-export var Nstsc404ApplicationJsonErrorDescriptionEnum;
+})(Nstsc404ApplicationJsonErrorEnum = exports.Nstsc404ApplicationJsonErrorEnum || (exports.Nstsc404ApplicationJsonErrorEnum = {}));
+var Nstsc404ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc404ApplicationJsonErrorDescriptionEnum) {
     Nstsc404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Nstsc404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Nstsc404ApplicationJsonErrorDescriptionEnum || (Nstsc404ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc404ApplicationJsonErrorDescriptionEnum = exports.Nstsc404ApplicationJsonErrorDescriptionEnum || (exports.Nstsc404ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc404ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc404ApplicationJson, _super);
     function Nstsc404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc404ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc404ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc404ApplicationJson };
-export var Nstsc500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc404ApplicationJson = Nstsc404ApplicationJson;
+var Nstsc500ApplicationJsonErrorEnum;
 (function (Nstsc500ApplicationJsonErrorEnum) {
     Nstsc500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Nstsc500ApplicationJsonErrorEnum || (Nstsc500ApplicationJsonErrorEnum = {}));
-export var Nstsc500ApplicationJsonErrorDescriptionEnum;
+})(Nstsc500ApplicationJsonErrorEnum = exports.Nstsc500ApplicationJsonErrorEnum || (exports.Nstsc500ApplicationJsonErrorEnum = {}));
+var Nstsc500ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc500ApplicationJsonErrorDescriptionEnum) {
     Nstsc500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Nstsc500ApplicationJsonErrorDescriptionEnum || (Nstsc500ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc500ApplicationJsonErrorDescriptionEnum = exports.Nstsc500ApplicationJsonErrorDescriptionEnum || (exports.Nstsc500ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc500ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc500ApplicationJson, _super);
     function Nstsc500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc500ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc500ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc500ApplicationJson };
-export var Nstsc502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc500ApplicationJson = Nstsc500ApplicationJson;
+var Nstsc502ApplicationJsonErrorEnum;
 (function (Nstsc502ApplicationJsonErrorEnum) {
     Nstsc502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Nstsc502ApplicationJsonErrorEnum || (Nstsc502ApplicationJsonErrorEnum = {}));
-export var Nstsc502ApplicationJsonErrorDescriptionEnum;
+})(Nstsc502ApplicationJsonErrorEnum = exports.Nstsc502ApplicationJsonErrorEnum || (exports.Nstsc502ApplicationJsonErrorEnum = {}));
+var Nstsc502ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc502ApplicationJsonErrorDescriptionEnum) {
     Nstsc502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Nstsc502ApplicationJsonErrorDescriptionEnum || (Nstsc502ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc502ApplicationJsonErrorDescriptionEnum = exports.Nstsc502ApplicationJsonErrorDescriptionEnum || (exports.Nstsc502ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc502ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc502ApplicationJson, _super);
     function Nstsc502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc502ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc502ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc502ApplicationJson };
-export var Nstsc503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc502ApplicationJson = Nstsc502ApplicationJson;
+var Nstsc503ApplicationJsonErrorEnum;
 (function (Nstsc503ApplicationJsonErrorEnum) {
     Nstsc503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Nstsc503ApplicationJsonErrorEnum || (Nstsc503ApplicationJsonErrorEnum = {}));
-export var Nstsc503ApplicationJsonErrorDescriptionEnum;
+})(Nstsc503ApplicationJsonErrorEnum = exports.Nstsc503ApplicationJsonErrorEnum || (exports.Nstsc503ApplicationJsonErrorEnum = {}));
+var Nstsc503ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc503ApplicationJsonErrorDescriptionEnum) {
     Nstsc503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Nstsc503ApplicationJsonErrorDescriptionEnum || (Nstsc503ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc503ApplicationJsonErrorDescriptionEnum = exports.Nstsc503ApplicationJsonErrorDescriptionEnum || (exports.Nstsc503ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc503ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc503ApplicationJson, _super);
     function Nstsc503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc503ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc503ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc503ApplicationJson };
-export var Nstsc504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Nstsc503ApplicationJson = Nstsc503ApplicationJson;
+var Nstsc504ApplicationJsonErrorEnum;
 (function (Nstsc504ApplicationJsonErrorEnum) {
     Nstsc504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Nstsc504ApplicationJsonErrorEnum || (Nstsc504ApplicationJsonErrorEnum = {}));
-export var Nstsc504ApplicationJsonErrorDescriptionEnum;
+})(Nstsc504ApplicationJsonErrorEnum = exports.Nstsc504ApplicationJsonErrorEnum || (exports.Nstsc504ApplicationJsonErrorEnum = {}));
+var Nstsc504ApplicationJsonErrorDescriptionEnum;
 (function (Nstsc504ApplicationJsonErrorDescriptionEnum) {
     Nstsc504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Nstsc504ApplicationJsonErrorDescriptionEnum || (Nstsc504ApplicationJsonErrorDescriptionEnum = {}));
+})(Nstsc504ApplicationJsonErrorDescriptionEnum = exports.Nstsc504ApplicationJsonErrorDescriptionEnum || (exports.Nstsc504ApplicationJsonErrorDescriptionEnum = {}));
 var Nstsc504ApplicationJson = /** @class */ (function (_super) {
     __extends(Nstsc504ApplicationJson, _super);
     function Nstsc504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Nstsc504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Nstsc504ApplicationJson.prototype, "errorDescription", void 0);
     return Nstsc504ApplicationJson;
-}(SpeakeasyBase));
-export { Nstsc504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Nstsc504ApplicationJson = Nstsc504ApplicationJson;
 var NstscRequest = /** @class */ (function (_super) {
     __extends(NstscRequest, _super);
     function NstscRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NstscRequestBody)
     ], NstscRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NstscSecurity)
     ], NstscRequest.prototype, "security", void 0);
     return NstscRequest;
-}(SpeakeasyBase));
-export { NstscRequest };
+}(utils_1.SpeakeasyBase));
+exports.NstscRequest = NstscRequest;
 var NstscResponse = /** @class */ (function (_super) {
     __extends(NstscResponse, _super);
     function NstscResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NstscResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NstscResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc400ApplicationJson)
-    ], NstscResponse.prototype, "nstsc400ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc401ApplicationJson)
-    ], NstscResponse.prototype, "nstsc401ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc404ApplicationJson)
-    ], NstscResponse.prototype, "nstsc404ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc500ApplicationJson)
-    ], NstscResponse.prototype, "nstsc500ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc502ApplicationJson)
-    ], NstscResponse.prototype, "nstsc502ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc503ApplicationJson)
-    ], NstscResponse.prototype, "nstsc503ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Nstsc504ApplicationJson)
-    ], NstscResponse.prototype, "nstsc504ApplicationJsonObject", void 0);
+    ], NstscResponse.prototype, "nstsc504ApplicationJSONObject", void 0);
     return NstscResponse;
-}(SpeakeasyBase));
-export { NstscResponse };
+}(utils_1.SpeakeasyBase));
+exports.NstscResponse = NstscResponse;

@@ -30,9 +30,9 @@ export class GetAccountsAccountPositionsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 
-  @SpeakeasyMetadata({ elemType: GetAccountsAccountPositions200ApplicationJson })
-  getAccountsAccountPositions200ApplicationJsonObjects?: GetAccountsAccountPositions200ApplicationJson[];
-
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata({ elemType: GetAccountsAccountPositions200ApplicationJson })
+  getAccountsAccountPositions200ApplicationJSONObjects?: GetAccountsAccountPositions200ApplicationJson[];
 }

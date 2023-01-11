@@ -106,5 +106,5 @@ export class UpdateInlineScriptTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateInlineScriptTag200ApplicationJsonObject?: UpdateInlineScriptTag200ApplicationJson;
+  updateInlineScriptTag200ApplicationJSONObject?: UpdateInlineScriptTag200ApplicationJson;
 }

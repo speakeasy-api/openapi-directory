@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { EventReminder } from "./eventreminder";
 import { EventAttachment } from "./eventattachment";
 import { EventAttendee } from "./eventattendee";
 import { ConferenceData } from "./conferencedata";
 import { EventDateTime } from "./eventdatetime";
-import { EventReminder } from "./eventreminder";
 
 
 
@@ -32,10 +32,10 @@ export class EventCreator extends SpeakeasyBase {
 **/
 export class EventExtendedProperties extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=private" })
-  private?: Map<string, string>;
+  private?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=shared" })
-  shared?: Map<string, string>;
+  shared?: Record<string, string>;
 }
 
 
@@ -57,7 +57,7 @@ export class EventGadget extends SpeakeasyBase {
   link?: string;
 
   @SpeakeasyMetadata({ data: "json, name=preferences" })
-  preferences?: Map<string, string>;
+  preferences?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
   title?: string;
@@ -177,7 +177,7 @@ export class Event extends SpeakeasyBase {
   htmlLink?: string;
 
   @SpeakeasyMetadata({ data: "json, name=iCalUID" })
-  iCalUid?: string;
+  iCalUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

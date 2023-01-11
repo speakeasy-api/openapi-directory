@@ -16,13 +16,13 @@ export class CrawlerTargets extends SpeakeasyBase {
   catalogTargets?: CatalogTarget[];
 
   @SpeakeasyMetadata({ data: "json, name=DynamoDBTargets", elemType: DynamoDbTarget })
-  dynamoDbTargets?: DynamoDbTarget[];
+  dynamoDBTargets?: DynamoDbTarget[];
 
   @SpeakeasyMetadata({ data: "json, name=JdbcTargets", elemType: JdbcTarget })
   jdbcTargets?: JdbcTarget[];
 
   @SpeakeasyMetadata({ data: "json, name=MongoDBTargets", elemType: MongoDbTarget })
-  mongoDbTargets?: MongoDbTarget[];
+  mongoDBTargets?: MongoDbTarget[];
 
   @SpeakeasyMetadata({ data: "json, name=S3Targets", elemType: S3Target })
   s3Targets?: S3Target[];

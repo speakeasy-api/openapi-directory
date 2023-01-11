@@ -5,6 +5,10 @@ import { SearchResultTextMatches } from "./searchresulttextmatches";
 
 
 
+// CommitSearchResultItemSimpleUser
+/** 
+ * Simple User
+**/
 export class CommitSearchResultItemSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -77,6 +81,10 @@ export class CommitSearchResultItemCommitAuthor extends SpeakeasyBase {
 }
 
 
+// CommitSearchResultItemCommitGitUser
+/** 
+ * Metaproperties for Git author/committer information.
+**/
 export class CommitSearchResultItemCommitGitUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
   date?: string;
@@ -122,6 +130,10 @@ export class CommitSearchResultItemCommit extends SpeakeasyBase {
 }
 
 
+// CommitSearchResultItemGitUser
+/** 
+ * Metaproperties for Git author/committer information.
+**/
 export class CommitSearchResultItemGitUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
   date?: string;

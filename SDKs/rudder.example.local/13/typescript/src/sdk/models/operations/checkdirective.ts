@@ -53,5 +53,5 @@ export class CheckDirectiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkDirective200ApplicationJsonObject?: CheckDirective200ApplicationJson;
+  checkDirective200ApplicationJSONObject?: CheckDirective200ApplicationJson;
 }

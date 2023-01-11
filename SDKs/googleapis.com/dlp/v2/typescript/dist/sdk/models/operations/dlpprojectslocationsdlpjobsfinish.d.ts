@@ -23,11 +23,11 @@ export declare class DlpProjectsLocationsDlpJobsFinishSecurity extends Speakeasy
 export declare class DlpProjectsLocationsDlpJobsFinishRequest extends SpeakeasyBase {
     pathParams: DlpProjectsLocationsDlpJobsFinishPathParams;
     queryParams: DlpProjectsLocationsDlpJobsFinishQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DlpProjectsLocationsDlpJobsFinishSecurity;
 }
 export declare class DlpProjectsLocationsDlpJobsFinishResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

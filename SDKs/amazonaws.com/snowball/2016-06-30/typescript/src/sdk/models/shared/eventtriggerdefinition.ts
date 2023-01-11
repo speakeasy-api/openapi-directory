@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EventTriggerDefinition extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=EventResourceARN" })
-  eventResourceArn?: string;
+  eventResourceARN?: string;
 }

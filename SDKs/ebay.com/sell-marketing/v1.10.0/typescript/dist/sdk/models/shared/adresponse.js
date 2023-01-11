@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
 // AdResponse
 /**
  * This type defines the fields returned in an ad response.
@@ -34,25 +37,25 @@ var AdResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adId" }),
         __metadata("design:type", String)
     ], AdResponse.prototype, "adId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], AdResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], AdResponse.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingId" }),
         __metadata("design:type", String)
     ], AdResponse.prototype, "listingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", Number)
     ], AdResponse.prototype, "statusCode", void 0);
     return AdResponse;
-}(SpeakeasyBase));
-export { AdResponse };
+}(utils_1.SpeakeasyBase));
+exports.AdResponse = AdResponse;

@@ -140,5 +140,5 @@ export class Settings extends SpeakeasyBase {
   timeZone?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
+  userLabels?: Record<string, string>;
 }

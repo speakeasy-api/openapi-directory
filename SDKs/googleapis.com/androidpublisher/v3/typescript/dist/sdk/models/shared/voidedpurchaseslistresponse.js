@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PageInfo } from "./pageinfo";
-import { TokenPagination } from "./tokenpagination";
-import { VoidedPurchase } from "./voidedpurchase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoidedPurchasesListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var pageinfo_1 = require("./pageinfo");
+var tokenpagination_1 = require("./tokenpagination");
+var voidedpurchase_1 = require("./voidedpurchase");
 // VoidedPurchasesListResponse
 /**
  * Response for the voidedpurchases.list API.
@@ -36,17 +39,17 @@ var VoidedPurchasesListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageInfo" }),
-        __metadata("design:type", PageInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageInfo" }),
+        __metadata("design:type", pageinfo_1.PageInfo)
     ], VoidedPurchasesListResponse.prototype, "pageInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenPagination" }),
-        __metadata("design:type", TokenPagination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenPagination" }),
+        __metadata("design:type", tokenpagination_1.TokenPagination)
     ], VoidedPurchasesListResponse.prototype, "tokenPagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voidedPurchases", elemType: VoidedPurchase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voidedPurchases", elemType: voidedpurchase_1.VoidedPurchase }),
         __metadata("design:type", Array)
     ], VoidedPurchasesListResponse.prototype, "voidedPurchases", void 0);
     return VoidedPurchasesListResponse;
-}(SpeakeasyBase));
-export { VoidedPurchasesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.VoidedPurchasesListResponse = VoidedPurchasesListResponse;

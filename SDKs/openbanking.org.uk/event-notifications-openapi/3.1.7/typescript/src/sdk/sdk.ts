@@ -1,111 +1,46 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
-import * as operations from "./models/operations";
+import axios, { AxiosInstance } from "axios";
 import * as utils from "../internal/utils";
 
+import { EventNotification } from "./eventnotification";
 
-
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"https://openbanking.org.uk",
 	"https://openbanking.org.uk/open-banking/v3.1",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
+
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  serverUrl?: string;
 }
 
 
 export class SDK {
+  public eventNotification: EventNotification;
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      this._securityClient = this._defaultClient;
-    }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    this._securityClient = this._defaultClient;
     
+    this.eventNotification = new EventNotification(
+      this._defaultClient,
+      this._securityClient,
+      this._serverURL,
+      this._language,
+      this._sdkVersion,
+      this._genVersion
+    );
   }
-  
-  /**
-   * createEventNotification - Send an event notification
-  **/
-  createEventNotification(
-    req: operations.CreateEventNotificationRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.CreateEventNotificationResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.CreateEventNotificationRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/event-notifications";
-
-    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
-
-    try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
-    } catch (e: unknown) {
-      if (e instanceof Error) {
-        throw new Error(`Error serializing request body, cause: ${e.message}`);
-      }
-    }
-    
-    const client: AxiosInstance = this._defaultClient!;const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.CreateEventNotificationResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 202:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHistoryResponse = exports.GetHistoryRequest = exports.GetHistoryQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetHistoryQueryParams = /** @class */ (function (_super) {
     __extends(GetHistoryQueryParams, _super);
     function GetHistoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=applicationId" }),
         __metadata("design:type", String)
     ], GetHistoryQueryParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=from" }),
         __metadata("design:type", Number)
     ], GetHistoryQueryParams.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupId" }),
         __metadata("design:type", String)
     ], GetHistoryQueryParams.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], GetHistoryQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=to" }),
         __metadata("design:type", Number)
     ], GetHistoryQueryParams.prototype, "to", void 0);
     return GetHistoryQueryParams;
-}(SpeakeasyBase));
-export { GetHistoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHistoryQueryParams = GetHistoryQueryParams;
 var GetHistoryRequest = /** @class */ (function (_super) {
     __extends(GetHistoryRequest, _super);
     function GetHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHistoryQueryParams)
     ], GetHistoryRequest.prototype, "queryParams", void 0);
     return GetHistoryRequest;
-}(SpeakeasyBase));
-export { GetHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHistoryRequest = GetHistoryRequest;
 var GetHistoryResponse = /** @class */ (function (_super) {
     __extends(GetHistoryResponse, _super);
     function GetHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetHistoryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHistoryResponse.prototype, "statusCode", void 0);
     return GetHistoryResponse;
-}(SpeakeasyBase));
-export { GetHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHistoryResponse = GetHistoryResponse;

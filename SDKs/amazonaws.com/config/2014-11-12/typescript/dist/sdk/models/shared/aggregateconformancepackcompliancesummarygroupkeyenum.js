@@ -1,5 +1,8 @@
-export var AggregateConformancePackComplianceSummaryGroupKeyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateConformancePackComplianceSummaryGroupKeyEnum = void 0;
+var AggregateConformancePackComplianceSummaryGroupKeyEnum;
 (function (AggregateConformancePackComplianceSummaryGroupKeyEnum) {
     AggregateConformancePackComplianceSummaryGroupKeyEnum["AccountId"] = "ACCOUNT_ID";
     AggregateConformancePackComplianceSummaryGroupKeyEnum["AwsRegion"] = "AWS_REGION";
-})(AggregateConformancePackComplianceSummaryGroupKeyEnum || (AggregateConformancePackComplianceSummaryGroupKeyEnum = {}));
+})(AggregateConformancePackComplianceSummaryGroupKeyEnum = exports.AggregateConformancePackComplianceSummaryGroupKeyEnum || (exports.AggregateConformancePackComplianceSummaryGroupKeyEnum = {}));

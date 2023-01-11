@@ -22,7 +22,7 @@ export declare class ModifyWorkspacePropertiesResponse extends SpeakeasyBase {
     contentType: string;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
-    modifyWorkspacePropertiesResult?: Map<string, any>;
+    modifyWorkspacePropertiesResult?: Record<string, any>;
     operationInProgressException?: any;
     resourceNotFoundException?: any;
     resourceUnavailableException?: any;

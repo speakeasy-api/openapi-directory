@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAliasRequest, CreateAliasResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,34 +33,48 @@ const req: CreateAliasRequest = {
     },
   },
   queryParams: {
-    aliasName: "consequatur",
-    domainName: "exercitationem",
+    aliasName: "sit",
+    domainName: "voluptas",
   },
   request: {
     destinations: [
       {
-        country: "velit",
-        os: "dolor",
-        url: "aut",
+        country: "expedita",
+        os: "consequuntur",
+        url: "dolor",
+      },
+      {
+        country: "expedita",
+        os: "voluptas",
+        url: "fugit",
       },
     ],
     metatags: [
       {
-        content: "repellat",
-        name: "omnis",
-      },
-      {
-        content: "quo",
-        name: "in",
+        content: "nihil",
+        name: "rerum",
       },
     ],
     snippets: [
       {
-        id: "et",
+        id: "debitis",
         parameters: {
-          "amet": "quo",
-          "eligendi": "non",
-          "quod": "doloribus",
+          "et": "ut",
+        },
+      },
+      {
+        id: "dolorem",
+        parameters: {
+          "voluptate": "iste",
+          "vitae": "totam",
+        },
+      },
+      {
+        id: "dolores",
+        parameters: {
+          "debitis": "vel",
+          "odio": "dolore",
+          "id": "aspernatur",
         },
       },
     ],

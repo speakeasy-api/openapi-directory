@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessRfProfileResponse = exports.UpdateNetworkWirelessRfProfileRequest = exports.UpdateNetworkWirelessRfProfileRequestBody = exports.UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings = exports.UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum = exports.UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings = exports.UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum = exports.UpdateNetworkWirelessRfProfileRequestBodyApBandSettings = exports.UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum = exports.UpdateNetworkWirelessRfProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessRfProfilePathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessRfProfilePathParams, _super);
     function UpdateNetworkWirelessRfProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfilePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfilePathParams.prototype, "rfProfileId", void 0);
     return UpdateNetworkWirelessRfProfilePathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfilePathParams };
-export var UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfilePathParams = UpdateNetworkWirelessRfProfilePathParams;
+var UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum;
 (function (UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum) {
     UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum["Dual"] = "dual";
     UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum["Two4ghz"] = "2.4ghz";
     UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum["Fiveghz"] = "5ghz";
-})(UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum || (UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum = {}));
+})(UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum = exports.UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum || (exports.UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum = {}));
 // UpdateNetworkWirelessRfProfileRequestBodyApBandSettings
 /**
  * Settings that will be enabled if selectionType is set to 'ap'.
@@ -55,21 +58,21 @@ var UpdateNetworkWirelessRfProfileRequestBodyApBandSettings = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandOperationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandOperationMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileRequestBodyApBandSettings.prototype, "bandOperationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandSteeringEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandSteeringEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessRfProfileRequestBodyApBandSettings.prototype, "bandSteeringEnabled", void 0);
     return UpdateNetworkWirelessRfProfileRequestBodyApBandSettings;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileRequestBodyApBandSettings };
-export var UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileRequestBodyApBandSettings = UpdateNetworkWirelessRfProfileRequestBodyApBandSettings;
+var UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum;
 (function (UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum) {
     UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum["Ssid"] = "ssid";
     UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum["Ap"] = "ap";
-})(UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum || (UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum = {}));
+})(UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum = exports.UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum || (exports.UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum = {}));
 // UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings
 /**
  * Settings related to 5Ghz band
@@ -80,37 +83,37 @@ var UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelWidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelWidth" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "channelWidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPower" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "maxPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minBitrate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minBitrate" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "minBitrate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minPower" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "minPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rxsop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rxsop" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "rxsop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validAutoChannels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validAutoChannels" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings.prototype, "validAutoChannels", void 0);
     return UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings };
-export var UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings = UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings;
+var UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum;
 (function (UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum) {
     UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum["Band"] = "band";
     UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum["Ssid"] = "ssid";
-})(UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum || (UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum = {}));
+})(UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum = exports.UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum || (exports.UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum = {}));
 // UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings
 /**
  * Settings related to 2.4Ghz band
@@ -121,101 +124,101 @@ var UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=axEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=axEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "axEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPower" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "maxPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minBitrate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minBitrate" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "minBitrate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minPower" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "minPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rxsop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rxsop" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "rxsop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validAutoChannels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validAutoChannels" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings.prototype, "validAutoChannels", void 0);
     return UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings = UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings;
 var UpdateNetworkWirelessRfProfileRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessRfProfileRequestBody, _super);
     function UpdateNetworkWirelessRfProfileRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apBandSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apBandSettings" }),
         __metadata("design:type", UpdateNetworkWirelessRfProfileRequestBodyApBandSettings)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "apBandSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandSelectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandSelectionType" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "bandSelectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientBalancingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientBalancingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "clientBalancingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fiveGhzSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fiveGhzSettings" }),
         __metadata("design:type", UpdateNetworkWirelessRfProfileRequestBodyFiveGhzSettings)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "fiveGhzSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minBitrateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minBitrateType" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "minBitrateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twoFourGhzSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twoFourGhzSettings" }),
         __metadata("design:type", UpdateNetworkWirelessRfProfileRequestBodyTwoFourGhzSettings)
     ], UpdateNetworkWirelessRfProfileRequestBody.prototype, "twoFourGhzSettings", void 0);
     return UpdateNetworkWirelessRfProfileRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileRequestBody = UpdateNetworkWirelessRfProfileRequestBody;
 var UpdateNetworkWirelessRfProfileRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessRfProfileRequest, _super);
     function UpdateNetworkWirelessRfProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessRfProfilePathParams)
     ], UpdateNetworkWirelessRfProfileRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessRfProfileRequestBody)
     ], UpdateNetworkWirelessRfProfileRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessRfProfileRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileRequest = UpdateNetworkWirelessRfProfileRequest;
 var UpdateNetworkWirelessRfProfileResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessRfProfileResponse, _super);
     function UpdateNetworkWirelessRfProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessRfProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessRfProfileResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessRfProfileResponse.prototype, "updateNetworkWirelessRfProfile200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessRfProfileResponse.prototype, "updateNetworkWirelessRfProfile200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessRfProfileResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessRfProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessRfProfileResponse = UpdateNetworkWirelessRfProfileResponse;

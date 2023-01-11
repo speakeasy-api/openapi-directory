@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatFanFundingEventDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var LiveChatFanFundingEventDetails = /** @class */ (function (_super) {
     __extends(LiveChatFanFundingEventDetails, _super);
     function LiveChatFanFundingEventDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountDisplayString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountDisplayString" }),
         __metadata("design:type", String)
     ], LiveChatFanFundingEventDetails.prototype, "amountDisplayString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountMicros" }),
         __metadata("design:type", String)
     ], LiveChatFanFundingEventDetails.prototype, "amountMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], LiveChatFanFundingEventDetails.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userComment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userComment" }),
         __metadata("design:type", String)
     ], LiveChatFanFundingEventDetails.prototype, "userComment", void 0);
     return LiveChatFanFundingEventDetails;
-}(SpeakeasyBase));
-export { LiveChatFanFundingEventDetails };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatFanFundingEventDetails = LiveChatFanFundingEventDetails;

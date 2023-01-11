@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutorConfiguration } from "./executorconfiguration";
-import { ExecutorTypeEnum } from "./executortypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionTypeExecutor = void 0;
+var utils_1 = require("../../../internal/utils");
+var executorconfiguration_1 = require("./executorconfiguration");
+var executortypeenum_1 = require("./executortypeenum");
 // ActionTypeExecutor
 /**
  * The action engine, or executor, for an action type created for a provider, where the action is to be used by customers of the provider. The action engine is associated with the model used to create and update the action, such as the Lambda integration model.
@@ -35,21 +38,21 @@ var ActionTypeExecutor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ExecutorConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", executorconfiguration_1.ExecutorConfiguration)
     ], ActionTypeExecutor.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobTimeout" }),
         __metadata("design:type", Number)
     ], ActionTypeExecutor.prototype, "jobTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyStatementsTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyStatementsTemplate" }),
         __metadata("design:type", String)
     ], ActionTypeExecutor.prototype, "policyStatementsTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ActionTypeExecutor.prototype, "type", void 0);
     return ActionTypeExecutor;
-}(SpeakeasyBase));
-export { ActionTypeExecutor };
+}(utils_1.SpeakeasyBase));
+exports.ActionTypeExecutor = ActionTypeExecutor;

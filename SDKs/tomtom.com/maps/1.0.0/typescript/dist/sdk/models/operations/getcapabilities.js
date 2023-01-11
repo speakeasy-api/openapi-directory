@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCapabilitiesResponse = exports.GetCapabilitiesRequest = exports.GetCapabilitiesQueryParams = exports.GetCapabilitiesVersionEnum = exports.GetCapabilitiesServiceEnum = exports.GetCapabilitiesRequestEnum = exports.GetCapabilitiesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCapabilitiesPathParams = /** @class */ (function (_super) {
     __extends(GetCapabilitiesPathParams, _super);
     function GetCapabilitiesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetCapabilitiesPathParams.prototype, "versionNumber", void 0);
     return GetCapabilitiesPathParams;
-}(SpeakeasyBase));
-export { GetCapabilitiesPathParams };
-export var GetCapabilitiesRequestEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCapabilitiesPathParams = GetCapabilitiesPathParams;
+var GetCapabilitiesRequestEnum;
 (function (GetCapabilitiesRequestEnum) {
     GetCapabilitiesRequestEnum["GetCapabilities"] = "GetCapabilities";
-})(GetCapabilitiesRequestEnum || (GetCapabilitiesRequestEnum = {}));
-export var GetCapabilitiesServiceEnum;
+})(GetCapabilitiesRequestEnum = exports.GetCapabilitiesRequestEnum || (exports.GetCapabilitiesRequestEnum = {}));
+var GetCapabilitiesServiceEnum;
 (function (GetCapabilitiesServiceEnum) {
     GetCapabilitiesServiceEnum["Wms"] = "WMS";
-})(GetCapabilitiesServiceEnum || (GetCapabilitiesServiceEnum = {}));
-export var GetCapabilitiesVersionEnum;
+})(GetCapabilitiesServiceEnum = exports.GetCapabilitiesServiceEnum || (exports.GetCapabilitiesServiceEnum = {}));
+var GetCapabilitiesVersionEnum;
 (function (GetCapabilitiesVersionEnum) {
     GetCapabilitiesVersionEnum["One11"] = "1.1.1";
-})(GetCapabilitiesVersionEnum || (GetCapabilitiesVersionEnum = {}));
+})(GetCapabilitiesVersionEnum = exports.GetCapabilitiesVersionEnum || (exports.GetCapabilitiesVersionEnum = {}));
 var GetCapabilitiesQueryParams = /** @class */ (function (_super) {
     __extends(GetCapabilitiesQueryParams, _super);
     function GetCapabilitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=request" }),
         __metadata("design:type", String)
     ], GetCapabilitiesQueryParams.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=service" }),
         __metadata("design:type", String)
     ], GetCapabilitiesQueryParams.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=version" }),
         __metadata("design:type", String)
     ], GetCapabilitiesQueryParams.prototype, "version", void 0);
     return GetCapabilitiesQueryParams;
-}(SpeakeasyBase));
-export { GetCapabilitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCapabilitiesQueryParams = GetCapabilitiesQueryParams;
 var GetCapabilitiesRequest = /** @class */ (function (_super) {
     __extends(GetCapabilitiesRequest, _super);
     function GetCapabilitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCapabilitiesPathParams)
     ], GetCapabilitiesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCapabilitiesQueryParams)
     ], GetCapabilitiesRequest.prototype, "queryParams", void 0);
     return GetCapabilitiesRequest;
-}(SpeakeasyBase));
-export { GetCapabilitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCapabilitiesRequest = GetCapabilitiesRequest;
 var GetCapabilitiesResponse = /** @class */ (function (_super) {
     __extends(GetCapabilitiesResponse, _super);
     function GetCapabilitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCapabilitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCapabilitiesResponse.prototype, "statusCode", void 0);
     return GetCapabilitiesResponse;
-}(SpeakeasyBase));
-export { GetCapabilitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCapabilitiesResponse = GetCapabilitiesResponse;

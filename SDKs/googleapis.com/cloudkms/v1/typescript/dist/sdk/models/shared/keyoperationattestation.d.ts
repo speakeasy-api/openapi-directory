@@ -8,14 +8,14 @@ export declare enum KeyOperationAttestationFormatEnum {
 /**
  * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
 **/
-export declare class KeyOperationAttestationInput extends SpeakeasyBase {
-    certChains?: CertificateChains;
-}
-/**
- * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
-**/
 export declare class KeyOperationAttestation extends SpeakeasyBase {
     certChains?: CertificateChains;
     content?: string;
     format?: KeyOperationAttestationFormatEnum;
+}
+/**
+ * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
+**/
+export declare class KeyOperationAttestationInput extends SpeakeasyBase {
+    certChains?: CertificateChains;
 }

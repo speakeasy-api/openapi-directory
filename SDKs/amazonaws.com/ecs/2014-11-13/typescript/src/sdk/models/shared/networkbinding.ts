@@ -9,7 +9,7 @@ import { TransportProtocolEnum } from "./transportprotocolenum";
 **/
 export class NetworkBinding extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bindIP" })
-  bindIp?: string;
+  bindIP?: string;
 
   @SpeakeasyMetadata({ data: "json, name=containerPort" })
   containerPort?: number;

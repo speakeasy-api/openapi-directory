@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBundleResponse = exports.PostBundleRequest = exports.PostBundleQueryParams = exports.PostBundlePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostBundlePathParams = /** @class */ (function (_super) {
     __extends(PostBundlePathParams, _super);
     function PostBundlePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], PostBundlePathParams.prototype, "name", void 0);
     return PostBundlePathParams;
-}(SpeakeasyBase));
-export { PostBundlePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBundlePathParams = PostBundlePathParams;
 var PostBundleQueryParams = /** @class */ (function (_super) {
     __extends(PostBundleQueryParams, _super);
     function PostBundleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], PostBundleQueryParams.prototype, "action", void 0);
     return PostBundleQueryParams;
-}(SpeakeasyBase));
-export { PostBundleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBundleQueryParams = PostBundleQueryParams;
 var PostBundleRequest = /** @class */ (function (_super) {
     __extends(PostBundleRequest, _super);
     function PostBundleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBundlePathParams)
     ], PostBundleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBundleQueryParams)
     ], PostBundleRequest.prototype, "queryParams", void 0);
     return PostBundleRequest;
-}(SpeakeasyBase));
-export { PostBundleRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBundleRequest = PostBundleRequest;
 var PostBundleResponse = /** @class */ (function (_super) {
     __extends(PostBundleResponse, _super);
     function PostBundleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBundleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBundleResponse.prototype, "statusCode", void 0);
     return PostBundleResponse;
-}(SpeakeasyBase));
-export { PostBundleResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBundleResponse = PostBundleResponse;

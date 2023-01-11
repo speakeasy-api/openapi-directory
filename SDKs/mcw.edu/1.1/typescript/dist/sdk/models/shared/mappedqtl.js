@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Qtl } from "./qtl";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MappedQtl = void 0;
+var utils_1 = require("../../../internal/utils");
+var qtl_1 = require("./qtl");
 var MappedQtl = /** @class */ (function (_super) {
     __extends(MappedQtl, _super);
     function MappedQtl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MappedQtl.prototype, "chromosome", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedQtl.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Qtl)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", qtl_1.Qtl)
     ], MappedQtl.prototype, "qtl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedQtl.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedQtl.prototype, "stop", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MappedQtl.prototype, "strand", void 0);
     return MappedQtl;
-}(SpeakeasyBase));
-export { MappedQtl };
+}(utils_1.SpeakeasyBase));
+exports.MappedQtl = MappedQtl;

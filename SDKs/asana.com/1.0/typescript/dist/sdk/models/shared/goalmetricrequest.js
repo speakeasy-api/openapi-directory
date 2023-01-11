@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoalMetricRequestUnitEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalMetricRequestInput = exports.GoalMetricRequestUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoalMetricRequestUnitEnum;
 (function (GoalMetricRequestUnitEnum) {
     GoalMetricRequestUnitEnum["None"] = "none";
     GoalMetricRequestUnitEnum["Currency"] = "currency";
     GoalMetricRequestUnitEnum["Percentage"] = "percentage";
-})(GoalMetricRequestUnitEnum || (GoalMetricRequestUnitEnum = {}));
+})(GoalMetricRequestUnitEnum = exports.GoalMetricRequestUnitEnum || (exports.GoalMetricRequestUnitEnum = {}));
+// GoalMetricRequestInput
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var GoalMetricRequestInput = /** @class */ (function (_super) {
     __extends(GoalMetricRequestInput, _super);
     function GoalMetricRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_code" }),
         __metadata("design:type", String)
     ], GoalMetricRequestInput.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_display_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_display_value" }),
         __metadata("design:type", String)
     ], GoalMetricRequestInput.prototype, "currentDisplayValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_number_value" }),
         __metadata("design:type", Number)
     ], GoalMetricRequestInput.prototype, "currentNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initial_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initial_number_value" }),
         __metadata("design:type", Number)
     ], GoalMetricRequestInput.prototype, "initialNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precision" }),
         __metadata("design:type", Number)
     ], GoalMetricRequestInput.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_number_value" }),
         __metadata("design:type", Number)
     ], GoalMetricRequestInput.prototype, "targetNumberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], GoalMetricRequestInput.prototype, "unit", void 0);
     return GoalMetricRequestInput;
-}(SpeakeasyBase));
-export { GoalMetricRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoalMetricRequestInput = GoalMetricRequestInput;

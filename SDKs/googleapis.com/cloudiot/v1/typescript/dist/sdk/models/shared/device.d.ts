@@ -28,7 +28,7 @@ export declare class Device extends SpeakeasyBase {
     lastHeartbeatTime?: string;
     lastStateTime?: string;
     logLevel?: DeviceLogLevelEnum;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name?: string;
     numId?: string;
     state?: DeviceState;

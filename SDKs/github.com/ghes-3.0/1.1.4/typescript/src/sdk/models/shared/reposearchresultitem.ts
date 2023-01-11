@@ -3,6 +3,10 @@ import { SearchResultTextMatches } from "./searchresulttextmatches";
 
 
 
+// RepoSearchResultItemLicenseSimple
+/** 
+ * License Simple
+**/
 export class RepoSearchResultItemLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -24,6 +28,10 @@ export class RepoSearchResultItemLicenseSimple extends SpeakeasyBase {
 }
 
 
+// RepoSearchResultItemSimpleUser
+/** 
+ * Simple User
+**/
 export class RepoSearchResultItemSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

@@ -8,16 +8,16 @@ export class PostV05UsersAuthOnConfirmHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIP-ID" })
-  xHipId: string;
+  xHIPID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" })
-  xHiuId: string;
+  xHIUID: string;
 }
 
 
 export class PostV05UsersAuthOnConfirmRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   patientAuthConfirmResponse?: shared.PatientAuthConfirmResponse;

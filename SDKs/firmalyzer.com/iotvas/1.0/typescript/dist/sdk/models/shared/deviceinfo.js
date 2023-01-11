@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Vulnerability } from "./vulnerability";
-import { FirmwareInfo } from "./firmwareinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceInfo = exports.DeviceInfoFirmwareInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var vulnerability_1 = require("./vulnerability");
+var DeviceInfoFirmwareInfo = /** @class */ (function (_super) {
+    __extends(DeviceInfoFirmwareInfo, _super);
+    function DeviceInfoFirmwareInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
+        __metadata("design:type", String)
+    ], DeviceInfoFirmwareInfo.prototype, "downloadUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], DeviceInfoFirmwareInfo.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_date" }),
+        __metadata("design:type", String)
+    ], DeviceInfoFirmwareInfo.prototype, "releaseDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha2" }),
+        __metadata("design:type", String)
+    ], DeviceInfoFirmwareInfo.prototype, "sha2", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", String)
+    ], DeviceInfoFirmwareInfo.prototype, "version", void 0);
+    return DeviceInfoFirmwareInfo;
+}(utils_1.SpeakeasyBase));
+exports.DeviceInfoFirmwareInfo = DeviceInfoFirmwareInfo;
 var DeviceInfo = /** @class */ (function (_super) {
     __extends(DeviceInfo, _super);
     function DeviceInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cve_list", elemType: Vulnerability }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cve_list", elemType: vulnerability_1.Vulnerability }),
         __metadata("design:type", Array)
     ], DeviceInfo.prototype, "cveList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firmware_info" }),
-        __metadata("design:type", FirmwareInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firmware_info" }),
+        __metadata("design:type", DeviceInfoFirmwareInfo)
     ], DeviceInfo.prototype, "firmwareInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firmware_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firmware_version" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "firmwareVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_discontinued" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_discontinued" }),
         __metadata("design:type", Boolean)
     ], DeviceInfo.prototype, "isDiscontinued", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_firmware_info" }),
-        __metadata("design:type", FirmwareInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_firmware_info" }),
+        __metadata("design:type", DeviceInfoFirmwareInfo)
     ], DeviceInfo.prototype, "latestFirmwareInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model_name" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "modelName", void 0);
     return DeviceInfo;
-}(SpeakeasyBase));
-export { DeviceInfo };
+}(utils_1.SpeakeasyBase));
+exports.DeviceInfo = DeviceInfo;

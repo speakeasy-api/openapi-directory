@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,111 +23,113 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDistanceBetweenPairsOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDistanceBetweenPairsOutputFormatResponse = exports.PostDistanceBetweenPairsOutputFormatRequest = exports.PostDistanceBetweenPairsOutputFormatQueryParams = exports.PostDistanceBetweenPairsOutputFormatDistanceUnitEnum = exports.PostDistanceBetweenPairsOutputFormatCriteriaEnum = exports.PostDistanceBetweenPairsOutputFormatPathParams = exports.PostDistanceBetweenPairsOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDistanceBetweenPairsOutputFormatOutputFormatEnum;
 (function (PostDistanceBetweenPairsOutputFormatOutputFormatEnum) {
     PostDistanceBetweenPairsOutputFormatOutputFormatEnum["Json"] = "json";
     PostDistanceBetweenPairsOutputFormatOutputFormatEnum["Html"] = "html";
-})(PostDistanceBetweenPairsOutputFormatOutputFormatEnum || (PostDistanceBetweenPairsOutputFormatOutputFormatEnum = {}));
+})(PostDistanceBetweenPairsOutputFormatOutputFormatEnum = exports.PostDistanceBetweenPairsOutputFormatOutputFormatEnum || (exports.PostDistanceBetweenPairsOutputFormatOutputFormatEnum = {}));
 var PostDistanceBetweenPairsOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(PostDistanceBetweenPairsOutputFormatPathParams, _super);
     function PostDistanceBetweenPairsOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatPathParams.prototype, "outputFormat", void 0);
     return PostDistanceBetweenPairsOutputFormatPathParams;
-}(SpeakeasyBase));
-export { PostDistanceBetweenPairsOutputFormatPathParams };
-export var PostDistanceBetweenPairsOutputFormatCriteriaEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostDistanceBetweenPairsOutputFormatPathParams = PostDistanceBetweenPairsOutputFormatPathParams;
+var PostDistanceBetweenPairsOutputFormatCriteriaEnum;
 (function (PostDistanceBetweenPairsOutputFormatCriteriaEnum) {
     PostDistanceBetweenPairsOutputFormatCriteriaEnum["Shortest"] = "shortest";
     PostDistanceBetweenPairsOutputFormatCriteriaEnum["Fastest"] = "fastest";
-})(PostDistanceBetweenPairsOutputFormatCriteriaEnum || (PostDistanceBetweenPairsOutputFormatCriteriaEnum = {}));
-export var PostDistanceBetweenPairsOutputFormatDistanceUnitEnum;
+})(PostDistanceBetweenPairsOutputFormatCriteriaEnum = exports.PostDistanceBetweenPairsOutputFormatCriteriaEnum || (exports.PostDistanceBetweenPairsOutputFormatCriteriaEnum = {}));
+var PostDistanceBetweenPairsOutputFormatDistanceUnitEnum;
 (function (PostDistanceBetweenPairsOutputFormatDistanceUnitEnum) {
     PostDistanceBetweenPairsOutputFormatDistanceUnitEnum["Km"] = "km";
     PostDistanceBetweenPairsOutputFormatDistanceUnitEnum["Mi"] = "mi";
-})(PostDistanceBetweenPairsOutputFormatDistanceUnitEnum || (PostDistanceBetweenPairsOutputFormatDistanceUnitEnum = {}));
+})(PostDistanceBetweenPairsOutputFormatDistanceUnitEnum = exports.PostDistanceBetweenPairsOutputFormatDistanceUnitEnum || (exports.PostDistanceBetweenPairsOutputFormatDistanceUnitEnum = {}));
 var PostDistanceBetweenPairsOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(PostDistanceBetweenPairsOutputFormatQueryParams, _super);
     function PostDistanceBetweenPairsOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=correctSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=correctSide" }),
         __metadata("design:type", Boolean)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "correctSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=criteria" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departure" }),
         __metadata("design:type", Date)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disable" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "disable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "distanceUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromPoints" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "fromPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxPairs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxPairs" }),
         __metadata("design:type", Number)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "maxPairs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "routeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=toPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=toPoints" }),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatQueryParams.prototype, "toPoints", void 0);
     return PostDistanceBetweenPairsOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { PostDistanceBetweenPairsOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDistanceBetweenPairsOutputFormatQueryParams = PostDistanceBetweenPairsOutputFormatQueryParams;
 var PostDistanceBetweenPairsOutputFormatRequest = /** @class */ (function (_super) {
     __extends(PostDistanceBetweenPairsOutputFormatRequest, _super);
     function PostDistanceBetweenPairsOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDistanceBetweenPairsOutputFormatPathParams)
     ], PostDistanceBetweenPairsOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDistanceBetweenPairsOutputFormatQueryParams)
     ], PostDistanceBetweenPairsOutputFormatRequest.prototype, "queryParams", void 0);
     return PostDistanceBetweenPairsOutputFormatRequest;
-}(SpeakeasyBase));
-export { PostDistanceBetweenPairsOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDistanceBetweenPairsOutputFormatRequest = PostDistanceBetweenPairsOutputFormatRequest;
 var PostDistanceBetweenPairsOutputFormatResponse = /** @class */ (function (_super) {
     __extends(PostDistanceBetweenPairsOutputFormatResponse, _super);
     function PostDistanceBetweenPairsOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDistanceBetweenPairsOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDistanceBetweenPairsOutputFormatResponse.prototype, "statusCode", void 0);
     return PostDistanceBetweenPairsOutputFormatResponse;
-}(SpeakeasyBase));
-export { PostDistanceBetweenPairsOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDistanceBetweenPairsOutputFormatResponse = PostDistanceBetweenPairsOutputFormatResponse;

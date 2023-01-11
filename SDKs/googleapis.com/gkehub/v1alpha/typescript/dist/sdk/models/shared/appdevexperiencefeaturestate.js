@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppDevExperienceFeatureState = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
 // AppDevExperienceFeatureState
 /**
  * State for App Dev Exp Feature.
@@ -34,9 +37,9 @@ var AppDevExperienceFeatureState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkingInstallSucceeded" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkingInstallSucceeded" }),
+        __metadata("design:type", status_1.Status)
     ], AppDevExperienceFeatureState.prototype, "networkingInstallSucceeded", void 0);
     return AppDevExperienceFeatureState;
-}(SpeakeasyBase));
-export { AppDevExperienceFeatureState };
+}(utils_1.SpeakeasyBase));
+exports.AppDevExperienceFeatureState = AppDevExperienceFeatureState;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse = exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest = exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams, _super);
     function DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=developerId" }),
         __metadata("design:type", String)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams.prototype, "developerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stripeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stripeId" }),
         __metadata("design:type", String)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams.prototype, "stripeId", void 0);
     return DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams = DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams;
 var DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest, _super);
     function DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest.prototype, "pathParams", void 0);
     return DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest = DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest;
 var DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse, _super);
     function DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse.prototype, "statusCode", void 0);
     return DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse = DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse;

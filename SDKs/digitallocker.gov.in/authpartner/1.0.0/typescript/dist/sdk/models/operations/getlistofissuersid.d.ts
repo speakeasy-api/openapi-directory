@@ -21,9 +21,9 @@ export declare class GetListOfIssuersIdRequest extends SpeakeasyBase {
 }
 export declare class GetListOfIssuersIdResponse extends SpeakeasyBase {
     contentType: string;
-    getListOfIssuersId400ApplicationJsonObject?: GetListOfIssuersId400ApplicationJson;
-    getListOfIssuersId401ApplicationJsonObject?: GetListOfIssuersId401ApplicationJson;
-    getListOfIssuersId500ApplicationJsonObject?: GetListOfIssuersId500ApplicationJson;
+    getListOfIssuersId400ApplicationJSONObject?: GetListOfIssuersId400ApplicationJson;
+    getListOfIssuersId401ApplicationJSONObject?: GetListOfIssuersId401ApplicationJson;
+    getListOfIssuersId500ApplicationJSONObject?: GetListOfIssuersId500ApplicationJson;
     issuerResponse?: shared.IssuerResponse;
     statusCode: number;
 }

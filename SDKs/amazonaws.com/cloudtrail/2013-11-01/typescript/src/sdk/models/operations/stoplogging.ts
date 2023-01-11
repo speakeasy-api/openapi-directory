@@ -66,7 +66,7 @@ export class StopLoggingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopLoggingResponse?: Map<string, any>;
+  stopLoggingResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   trailNotFoundException?: any;

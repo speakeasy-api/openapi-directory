@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateDescription } from "./certificatedescription";
-import { CertificateConfig } from "./certificateconfig";
-import { RevocationDetails } from "./revocationdetails";
-export var CertificateSubjectModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateInput = exports.Certificate = exports.CertificateSubjectModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificatedescription_1 = require("./certificatedescription");
+var certificateconfig_1 = require("./certificateconfig");
+var revocationdetails_1 = require("./revocationdetails");
+var CertificateSubjectModeEnum;
 (function (CertificateSubjectModeEnum) {
     CertificateSubjectModeEnum["SubjectRequestModeUnspecified"] = "SUBJECT_REQUEST_MODE_UNSPECIFIED";
     CertificateSubjectModeEnum["Default"] = "DEFAULT";
     CertificateSubjectModeEnum["ReflectedSpiffe"] = "REFLECTED_SPIFFE";
-})(CertificateSubjectModeEnum || (CertificateSubjectModeEnum = {}));
-// CertificateInput
-/**
- * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
-**/
-var CertificateInput = /** @class */ (function (_super) {
-    __extends(CertificateInput, _super);
-    function CertificateInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateDescription" }),
-        __metadata("design:type", CertificateDescription)
-    ], CertificateInput.prototype, "certificateDescription", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateTemplate" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "certificateTemplate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", CertificateConfig)
-    ], CertificateInput.prototype, "config", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], CertificateInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "lifetime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCsr" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "pemCsr", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=revocationDetails" }),
-        __metadata("design:type", RevocationDetails)
-    ], CertificateInput.prototype, "revocationDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectMode" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "subjectMode", void 0);
-    return CertificateInput;
-}(SpeakeasyBase));
-export { CertificateInput };
+})(CertificateSubjectModeEnum = exports.CertificateSubjectModeEnum || (exports.CertificateSubjectModeEnum = {}));
 // Certificate
 /**
  * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
@@ -86,61 +45,105 @@ var Certificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateDescription" }),
-        __metadata("design:type", CertificateDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateDescription" }),
+        __metadata("design:type", certificatedescription_1.CertificateDescription)
     ], Certificate.prototype, "certificateDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateTemplate" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificateTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", CertificateConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", certificateconfig_1.CertificateConfig)
     ], Certificate.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuerCertificateAuthority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuerCertificateAuthority" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "issuerCertificateAuthority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Certificate.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "lifetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCertificate" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "pemCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCertificateChain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCertificateChain" }),
         __metadata("design:type", Array)
     ], Certificate.prototype, "pemCertificateChain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCsr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCsr" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "pemCsr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revocationDetails" }),
-        __metadata("design:type", RevocationDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revocationDetails" }),
+        __metadata("design:type", revocationdetails_1.RevocationDetails)
     ], Certificate.prototype, "revocationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectMode" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "subjectMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "updateTime", void 0);
     return Certificate;
-}(SpeakeasyBase));
-export { Certificate };
+}(utils_1.SpeakeasyBase));
+exports.Certificate = Certificate;
+// CertificateInput
+/**
+ * A Certificate corresponds to a signed X.509 certificate issued by a CertificateAuthority.
+**/
+var CertificateInput = /** @class */ (function (_super) {
+    __extends(CertificateInput, _super);
+    function CertificateInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateDescription" }),
+        __metadata("design:type", certificatedescription_1.CertificateDescription)
+    ], CertificateInput.prototype, "certificateDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateTemplate" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "certificateTemplate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", certificateconfig_1.CertificateConfig)
+    ], CertificateInput.prototype, "config", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], CertificateInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "lifetime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCsr" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "pemCsr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revocationDetails" }),
+        __metadata("design:type", revocationdetails_1.RevocationDetails)
+    ], CertificateInput.prototype, "revocationDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectMode" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "subjectMode", void 0);
+    return CertificateInput;
+}(utils_1.SpeakeasyBase));
+exports.CertificateInput = CertificateInput;

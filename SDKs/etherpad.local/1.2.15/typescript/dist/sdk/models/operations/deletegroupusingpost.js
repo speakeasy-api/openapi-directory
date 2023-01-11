@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteGroupUsingPostResponse = exports.DeleteGroupUsingPostRequest = exports.DeleteGroupUsingPost500ApplicationJson = exports.DeleteGroupUsingPost401ApplicationJson = exports.DeleteGroupUsingPost400ApplicationJson = exports.DeleteGroupUsingPost200ApplicationJson = exports.DeleteGroupUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteGroupUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPostQueryParams, _super);
     function DeleteGroupUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupID" }),
         __metadata("design:type", String)
-    ], DeleteGroupUsingPostQueryParams.prototype, "groupId", void 0);
+    ], DeleteGroupUsingPostQueryParams.prototype, "groupID", void 0);
     return DeleteGroupUsingPostQueryParams;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPostQueryParams = DeleteGroupUsingPostQueryParams;
 var DeleteGroupUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPost200ApplicationJson, _super);
     function DeleteGroupUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteGroupUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteGroupUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteGroupUsingPost200ApplicationJson.prototype, "message", void 0);
     return DeleteGroupUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPost200ApplicationJson = DeleteGroupUsingPost200ApplicationJson;
 var DeleteGroupUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPost400ApplicationJson, _super);
     function DeleteGroupUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteGroupUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteGroupUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteGroupUsingPost400ApplicationJson.prototype, "message", void 0);
     return DeleteGroupUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPost400ApplicationJson = DeleteGroupUsingPost400ApplicationJson;
 var DeleteGroupUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPost401ApplicationJson, _super);
     function DeleteGroupUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteGroupUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteGroupUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteGroupUsingPost401ApplicationJson.prototype, "message", void 0);
     return DeleteGroupUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPost401ApplicationJson = DeleteGroupUsingPost401ApplicationJson;
 var DeleteGroupUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPost500ApplicationJson, _super);
     function DeleteGroupUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteGroupUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteGroupUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteGroupUsingPost500ApplicationJson.prototype, "message", void 0);
     return DeleteGroupUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPost500ApplicationJson = DeleteGroupUsingPost500ApplicationJson;
 var DeleteGroupUsingPostRequest = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPostRequest, _super);
     function DeleteGroupUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupUsingPostQueryParams)
     ], DeleteGroupUsingPostRequest.prototype, "queryParams", void 0);
     return DeleteGroupUsingPostRequest;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPostRequest = DeleteGroupUsingPostRequest;
 var DeleteGroupUsingPostResponse = /** @class */ (function (_super) {
     __extends(DeleteGroupUsingPostResponse, _super);
     function DeleteGroupUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteGroupUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteGroupUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupUsingPost200ApplicationJson)
-    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPost200ApplicationJsonObject", void 0);
+    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupUsingPost400ApplicationJson)
-    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPost400ApplicationJsonObject", void 0);
+    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupUsingPost401ApplicationJson)
-    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPost401ApplicationJsonObject", void 0);
+    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupUsingPost500ApplicationJson)
-    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPost500ApplicationJsonObject", void 0);
+    ], DeleteGroupUsingPostResponse.prototype, "deleteGroupUsingPOST500ApplicationJSONObject", void 0);
     return DeleteGroupUsingPostResponse;
-}(SpeakeasyBase));
-export { DeleteGroupUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupUsingPostResponse = DeleteGroupUsingPostResponse;

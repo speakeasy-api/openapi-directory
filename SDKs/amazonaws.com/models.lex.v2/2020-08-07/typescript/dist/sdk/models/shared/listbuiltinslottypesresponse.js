@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuiltInSlotTypeSummary } from "./builtinslottypesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListBuiltInSlotTypesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var builtinslottypesummary_1 = require("./builtinslottypesummary");
 var ListBuiltInSlotTypesResponse = /** @class */ (function (_super) {
     __extends(ListBuiltInSlotTypesResponse, _super);
     function ListBuiltInSlotTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtInSlotTypeSummaries", elemType: BuiltInSlotTypeSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtInSlotTypeSummaries", elemType: builtinslottypesummary_1.BuiltInSlotTypeSummary }),
         __metadata("design:type", Array)
     ], ListBuiltInSlotTypesResponse.prototype, "builtInSlotTypeSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], ListBuiltInSlotTypesResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListBuiltInSlotTypesResponse.prototype, "nextToken", void 0);
     return ListBuiltInSlotTypesResponse;
-}(SpeakeasyBase));
-export { ListBuiltInSlotTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListBuiltInSlotTypesResponse = ListBuiltInSlotTypesResponse;

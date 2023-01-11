@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageInput } from "./image";
-import { Image } from "./image";
-export var OptionGoToActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Option = exports.OptionInput = exports.OptionGoToActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
+var image_2 = require("./image");
+var OptionGoToActionEnum;
 (function (OptionGoToActionEnum) {
     OptionGoToActionEnum["GoToActionUnspecified"] = "GO_TO_ACTION_UNSPECIFIED";
     OptionGoToActionEnum["NextSection"] = "NEXT_SECTION";
     OptionGoToActionEnum["RestartForm"] = "RESTART_FORM";
     OptionGoToActionEnum["SubmitForm"] = "SUBMIT_FORM";
-})(OptionGoToActionEnum || (OptionGoToActionEnum = {}));
+})(OptionGoToActionEnum = exports.OptionGoToActionEnum || (exports.OptionGoToActionEnum = {}));
 // OptionInput
 /**
  * An option for a Choice question.
@@ -42,28 +45,28 @@ var OptionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goToAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goToAction" }),
         __metadata("design:type", String)
     ], OptionInput.prototype, "goToAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goToSectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goToSectionId" }),
         __metadata("design:type", String)
     ], OptionInput.prototype, "goToSectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", ImageInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.ImageInput)
     ], OptionInput.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isOther" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isOther" }),
         __metadata("design:type", Boolean)
     ], OptionInput.prototype, "isOther", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], OptionInput.prototype, "value", void 0);
     return OptionInput;
-}(SpeakeasyBase));
-export { OptionInput };
+}(utils_1.SpeakeasyBase));
+exports.OptionInput = OptionInput;
 // Option
 /**
  * An option for a Choice question.
@@ -74,25 +77,25 @@ var Option = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goToAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goToAction" }),
         __metadata("design:type", String)
     ], Option.prototype, "goToAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goToSectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goToSectionId" }),
         __metadata("design:type", String)
     ], Option.prototype, "goToSectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_2.Image)
     ], Option.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isOther" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isOther" }),
         __metadata("design:type", Boolean)
     ], Option.prototype, "isOther", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Option.prototype, "value", void 0);
     return Option;
-}(SpeakeasyBase));
-export { Option };
+}(utils_1.SpeakeasyBase));
+exports.Option = Option;

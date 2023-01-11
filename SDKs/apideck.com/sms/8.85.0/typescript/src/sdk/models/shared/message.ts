@@ -60,36 +60,6 @@ export enum MessageMessageTypeEnum {
 }
 
 
-export class MessageInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=body" })
-  body: string;
-
-  @SpeakeasyMetadata({ data: "json, name=from" })
-  from: string;
-
-  @SpeakeasyMetadata({ data: "json, name=messaging_service_id" })
-  messagingServiceId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=reference" })
-  reference?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=scheduled_at" })
-  scheduledAt?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=subject" })
-  subject?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=to" })
-  to: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: MessageMessageTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=webhook_url" })
-  webhookUrl?: string;
-}
-
-
 export class Message extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=body" })
   body: string;
@@ -150,6 +120,36 @@ export class Message extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated_by" })
   updatedBy?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=webhook_url" })
+  webhookUrl?: string;
+}
+
+
+export class MessageInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=body" })
+  body: string;
+
+  @SpeakeasyMetadata({ data: "json, name=from" })
+  from: string;
+
+  @SpeakeasyMetadata({ data: "json, name=messaging_service_id" })
+  messagingServiceId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=reference" })
+  reference?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=scheduled_at" })
+  scheduledAt?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=subject" })
+  subject?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=to" })
+  to: string;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: MessageMessageTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=webhook_url" })
   webhookUrl?: string;

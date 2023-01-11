@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { VpcPeeringConfig } from "./vpcpeeringconfig";
 export declare enum PrivateConnectionStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
@@ -12,22 +12,22 @@ export declare enum PrivateConnectionStateEnum {
 /**
  * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
 **/
-export declare class PrivateConnectionInput extends SpeakeasyBase {
+export declare class PrivateConnection extends SpeakeasyBase {
+    createTime?: string;
     displayName?: string;
-    error?: Error;
-    labels?: Map<string, string>;
+    error?: ErrorT;
+    labels?: Record<string, string>;
+    name?: string;
+    state?: PrivateConnectionStateEnum;
+    updateTime?: string;
     vpcPeeringConfig?: VpcPeeringConfig;
 }
 /**
  * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
 **/
-export declare class PrivateConnection extends SpeakeasyBase {
-    createTime?: string;
+export declare class PrivateConnectionInput extends SpeakeasyBase {
     displayName?: string;
-    error?: Error;
-    labels?: Map<string, string>;
-    name?: string;
-    state?: PrivateConnectionStateEnum;
-    updateTime?: string;
+    error?: ErrorT;
+    labels?: Record<string, string>;
     vpcPeeringConfig?: VpcPeeringConfig;
 }

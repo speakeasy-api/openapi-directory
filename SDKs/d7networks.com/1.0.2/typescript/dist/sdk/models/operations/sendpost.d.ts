@@ -10,6 +10,6 @@ export declare class SendPostRequest extends SpeakeasyBase {
 }
 export declare class SendPostResponse extends SpeakeasyBase {
     contentType: string;
-    sendPost500ApplicationJsonAny?: any;
+    sendPost500ApplicationJSONAny?: any;
     statusCode: number;
 }

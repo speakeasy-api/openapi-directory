@@ -6,7 +6,7 @@ import { GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult }
 export declare class GoogleCloudRecommendationengineV1beta1PredictResponse extends SpeakeasyBase {
     dryRun?: boolean;
     itemsMissingInCatalog?: string[];
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     nextPageToken?: string;
     recommendationToken?: string;
     results?: GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult[];

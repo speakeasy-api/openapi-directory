@@ -1,4 +1,7 @@
-export var NodeUpdateStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeUpdateStatusEnum = void 0;
+var NodeUpdateStatusEnum;
 (function (NodeUpdateStatusEnum) {
     NodeUpdateStatusEnum["NotApplied"] = "not-applied";
     NodeUpdateStatusEnum["WaitingToStart"] = "waiting-to-start";
@@ -6,4 +9,4 @@ export var NodeUpdateStatusEnum;
     NodeUpdateStatusEnum["Stopping"] = "stopping";
     NodeUpdateStatusEnum["Stopped"] = "stopped";
     NodeUpdateStatusEnum["Complete"] = "complete";
-})(NodeUpdateStatusEnum || (NodeUpdateStatusEnum = {}));
+})(NodeUpdateStatusEnum = exports.NodeUpdateStatusEnum || (exports.NodeUpdateStatusEnum = {}));

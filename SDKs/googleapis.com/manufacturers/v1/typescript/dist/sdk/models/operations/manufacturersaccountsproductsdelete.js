@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManufacturersAccountsProductsDeleteResponse = exports.ManufacturersAccountsProductsDeleteRequest = exports.ManufacturersAccountsProductsDeleteSecurity = exports.ManufacturersAccountsProductsDeleteQueryParams = exports.ManufacturersAccountsProductsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ManufacturersAccountsProductsDeletePathParams = /** @class */ (function (_super) {
     __extends(ManufacturersAccountsProductsDeletePathParams, _super);
     function ManufacturersAccountsProductsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeletePathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeletePathParams.prototype, "parent", void 0);
     return ManufacturersAccountsProductsDeletePathParams;
-}(SpeakeasyBase));
-export { ManufacturersAccountsProductsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ManufacturersAccountsProductsDeletePathParams = ManufacturersAccountsProductsDeletePathParams;
 var ManufacturersAccountsProductsDeleteQueryParams = /** @class */ (function (_super) {
     __extends(ManufacturersAccountsProductsDeleteQueryParams, _super);
     function ManufacturersAccountsProductsDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteQueryParams.prototype, "uploadProtocol", void 0);
     return ManufacturersAccountsProductsDeleteQueryParams;
-}(SpeakeasyBase));
-export { ManufacturersAccountsProductsDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ManufacturersAccountsProductsDeleteQueryParams = ManufacturersAccountsProductsDeleteQueryParams;
 var ManufacturersAccountsProductsDeleteSecurity = /** @class */ (function (_super) {
     __extends(ManufacturersAccountsProductsDeleteSecurity, _super);
     function ManufacturersAccountsProductsDeleteSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ManufacturersAccountsProductsDeleteSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ManufacturersAccountsProductsDeleteSecurity.prototype, "oauth2c", void 0);
     return ManufacturersAccountsProductsDeleteSecurity;
-}(SpeakeasyBase));
-export { ManufacturersAccountsProductsDeleteSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ManufacturersAccountsProductsDeleteSecurity = ManufacturersAccountsProductsDeleteSecurity;
 var ManufacturersAccountsProductsDeleteRequest = /** @class */ (function (_super) {
     __extends(ManufacturersAccountsProductsDeleteRequest, _super);
     function ManufacturersAccountsProductsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ManufacturersAccountsProductsDeletePathParams)
     ], ManufacturersAccountsProductsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ManufacturersAccountsProductsDeleteQueryParams)
     ], ManufacturersAccountsProductsDeleteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ManufacturersAccountsProductsDeleteSecurity)
     ], ManufacturersAccountsProductsDeleteRequest.prototype, "security", void 0);
     return ManufacturersAccountsProductsDeleteRequest;
-}(SpeakeasyBase));
-export { ManufacturersAccountsProductsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ManufacturersAccountsProductsDeleteRequest = ManufacturersAccountsProductsDeleteRequest;
 var ManufacturersAccountsProductsDeleteResponse = /** @class */ (function (_super) {
     __extends(ManufacturersAccountsProductsDeleteResponse, _super);
     function ManufacturersAccountsProductsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ManufacturersAccountsProductsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ManufacturersAccountsProductsDeleteResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ManufacturersAccountsProductsDeleteResponse.prototype, "statusCode", void 0);
     return ManufacturersAccountsProductsDeleteResponse;
-}(SpeakeasyBase));
-export { ManufacturersAccountsProductsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ManufacturersAccountsProductsDeleteResponse = ManufacturersAccountsProductsDeleteResponse;

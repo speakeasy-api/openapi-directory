@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var Snmp3ConfigAuthenticationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Snmp3Config = exports.Snmp3ConfigPrivacyTypeEnum = exports.Snmp3ConfigAuthenticationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var Snmp3ConfigAuthenticationTypeEnum;
 (function (Snmp3ConfigAuthenticationTypeEnum) {
     Snmp3ConfigAuthenticationTypeEnum["NoAuth"] = "NO_AUTH";
     Snmp3ConfigAuthenticationTypeEnum["Md5"] = "MD5";
     Snmp3ConfigAuthenticationTypeEnum["Sha"] = "SHA";
-})(Snmp3ConfigAuthenticationTypeEnum || (Snmp3ConfigAuthenticationTypeEnum = {}));
-export var Snmp3ConfigPrivacyTypeEnum;
+})(Snmp3ConfigAuthenticationTypeEnum = exports.Snmp3ConfigAuthenticationTypeEnum || (exports.Snmp3ConfigAuthenticationTypeEnum = {}));
+var Snmp3ConfigPrivacyTypeEnum;
 (function (Snmp3ConfigPrivacyTypeEnum) {
     Snmp3ConfigPrivacyTypeEnum["Aes"] = "AES";
     Snmp3ConfigPrivacyTypeEnum["Des"] = "DES";
@@ -38,36 +41,36 @@ export var Snmp3ConfigPrivacyTypeEnum;
     Snmp3ConfigPrivacyTypeEnum["Aes256"] = "AES256";
     Snmp3ConfigPrivacyTypeEnum["ThreeDes"] = "3DES";
     Snmp3ConfigPrivacyTypeEnum["NoPriv"] = "NO_PRIV";
-})(Snmp3ConfigPrivacyTypeEnum || (Snmp3ConfigPrivacyTypeEnum = {}));
+})(Snmp3ConfigPrivacyTypeEnum = exports.Snmp3ConfigPrivacyTypeEnum || (exports.Snmp3ConfigPrivacyTypeEnum = {}));
 var Snmp3Config = /** @class */ (function (_super) {
     __extends(Snmp3Config, _super);
     function Snmp3Config() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication_password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication_password" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "authenticationPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication_type" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "authenticationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context_name" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "contextName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy_password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy_password" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "privacyPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy_type" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "privacyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Snmp3Config.prototype, "username", void 0);
     return Snmp3Config;
-}(SpeakeasyBase));
-export { Snmp3Config };
+}(utils_1.SpeakeasyBase));
+exports.Snmp3Config = Snmp3Config;

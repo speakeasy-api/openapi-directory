@@ -8,5 +8,5 @@ export declare class GetDelayRequest extends SpeakeasyBase {
 export declare class GetDelayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDelay200ApplicationJsonInt32Integer?: number;
+    getDelay200ApplicationJSONInt32Integer?: number;
 }

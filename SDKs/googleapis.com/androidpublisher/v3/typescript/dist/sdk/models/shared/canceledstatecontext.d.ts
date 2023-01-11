@@ -4,8 +4,8 @@ import { UserInitiatedCancellation } from "./userinitiatedcancellation";
  * Information specific to a subscription in canceled state.
 **/
 export declare class CanceledStateContext extends SpeakeasyBase {
-    developerInitiatedCancellation?: Map<string, any>;
-    replacementCancellation?: Map<string, any>;
-    systemInitiatedCancellation?: Map<string, any>;
+    developerInitiatedCancellation?: Record<string, any>;
+    replacementCancellation?: Record<string, any>;
+    systemInitiatedCancellation?: Record<string, any>;
     userInitiatedCancellation?: UserInitiatedCancellation;
 }

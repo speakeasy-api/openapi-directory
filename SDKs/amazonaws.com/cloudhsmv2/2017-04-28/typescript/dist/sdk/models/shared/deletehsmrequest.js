@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteHsmRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteHsmRequest = /** @class */ (function (_super) {
     __extends(DeleteHsmRequest, _super);
     function DeleteHsmRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], DeleteHsmRequest.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniId" }),
         __metadata("design:type", String)
     ], DeleteHsmRequest.prototype, "eniId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniIp" }),
         __metadata("design:type", String)
     ], DeleteHsmRequest.prototype, "eniIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmId" }),
         __metadata("design:type", String)
     ], DeleteHsmRequest.prototype, "hsmId", void 0);
     return DeleteHsmRequest;
-}(SpeakeasyBase));
-export { DeleteHsmRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteHsmRequest = DeleteHsmRequest;

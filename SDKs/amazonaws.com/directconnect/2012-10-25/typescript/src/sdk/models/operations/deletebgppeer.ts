@@ -48,7 +48,7 @@ export class DeleteBgpPeerResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteBgpPeerResponse?: shared.DeleteBgpPeerResponse;
+  deleteBGPPeerResponse?: shared.DeleteBgpPeerResponse;
 
   @SpeakeasyMetadata()
   directConnectClientException?: any;

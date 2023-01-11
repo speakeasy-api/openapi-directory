@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Reddit = void 0;
+var utils_1 = require("../../../internal/utils");
 var Reddit = /** @class */ (function (_super) {
     __extends(Reddit, _super);
     function Reddit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Reddit.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Reddit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username_url" }),
         __metadata("design:type", String)
     ], Reddit.prototype, "usernameUrl", void 0);
     return Reddit;
-}(SpeakeasyBase));
-export { Reddit };
+}(utils_1.SpeakeasyBase));
+exports.Reddit = Reddit;

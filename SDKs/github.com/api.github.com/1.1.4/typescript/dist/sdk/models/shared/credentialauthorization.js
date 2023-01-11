@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CredentialAuthorization = void 0;
+var utils_1 = require("../../../internal/utils");
 // CredentialAuthorization
 /**
  * Credential Authorization
@@ -33,49 +36,49 @@ var CredentialAuthorization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorized_credential_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorized_credential_id" }),
         __metadata("design:type", Number)
     ], CredentialAuthorization.prototype, "authorizedCredentialId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorized_credential_note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorized_credential_note" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "authorizedCredentialNote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorized_credential_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorized_credential_title" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "authorizedCredentialTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credential_accessed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credential_accessed_at" }),
         __metadata("design:type", Date)
     ], CredentialAuthorization.prototype, "credentialAccessedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credential_authorized_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credential_authorized_at" }),
         __metadata("design:type", Date)
     ], CredentialAuthorization.prototype, "credentialAuthorizedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credential_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credential_id" }),
         __metadata("design:type", Number)
     ], CredentialAuthorization.prototype, "credentialId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credential_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credential_type" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "credentialType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
         __metadata("design:type", Array)
     ], CredentialAuthorization.prototype, "scopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_last_eight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_last_eight" }),
         __metadata("design:type", String)
     ], CredentialAuthorization.prototype, "tokenLastEight", void 0);
     return CredentialAuthorization;
-}(SpeakeasyBase));
-export { CredentialAuthorization };
+}(utils_1.SpeakeasyBase));
+exports.CredentialAuthorization = CredentialAuthorization;

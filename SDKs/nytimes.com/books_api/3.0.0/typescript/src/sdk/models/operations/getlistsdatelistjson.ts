@@ -139,7 +139,7 @@ export class GetListsDateListJson200ApplicationJsonResults extends SpeakeasyBase
   books?: GetListsDateListJson200ApplicationJsonResultsBooks[];
 
   @SpeakeasyMetadata({ data: "json, name=corrections" })
-  corrections?: Map<string, any>[];
+  corrections?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=display_name" })
   displayName?: string;
@@ -193,7 +193,7 @@ export class GetListsDateListJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListsDateListJson200ApplicationJsonObject?: GetListsDateListJson200ApplicationJson;
+  getListsDateListJSON200ApplicationJSONObject?: GetListsDateListJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

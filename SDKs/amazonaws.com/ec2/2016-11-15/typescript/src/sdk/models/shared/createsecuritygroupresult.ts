@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
 
 
 
 export class CreateSecurityGroupResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  groupId?: string;
+  groupId?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
 }

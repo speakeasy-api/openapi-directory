@@ -1,8 +1,11 @@
-export var AccountRoleStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountRoleStatusEnum = void 0;
+var AccountRoleStatusEnum;
 (function (AccountRoleStatusEnum) {
     AccountRoleStatusEnum["Ready"] = "READY";
     AccountRoleStatusEnum["Creating"] = "CREATING";
     AccountRoleStatusEnum["PendingDeletion"] = "PENDING_DELETION";
     AccountRoleStatusEnum["Deleting"] = "DELETING";
     AccountRoleStatusEnum["Deleted"] = "DELETED";
-})(AccountRoleStatusEnum || (AccountRoleStatusEnum = {}));
+})(AccountRoleStatusEnum = exports.AccountRoleStatusEnum || (exports.AccountRoleStatusEnum = {}));

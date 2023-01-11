@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityMention } from "./entitymention";
-export var EntityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Entity = exports.EntityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitymention_1 = require("./entitymention");
+var EntityTypeEnum;
 (function (EntityTypeEnum) {
     EntityTypeEnum["Unknown"] = "UNKNOWN";
     EntityTypeEnum["Person"] = "PERSON";
@@ -34,7 +37,7 @@ export var EntityTypeEnum;
     EntityTypeEnum["WorkOfArt"] = "WORK_OF_ART";
     EntityTypeEnum["ConsumerGood"] = "CONSUMER_GOOD";
     EntityTypeEnum["Other"] = "OTHER";
-})(EntityTypeEnum || (EntityTypeEnum = {}));
+})(EntityTypeEnum = exports.EntityTypeEnum || (exports.EntityTypeEnum = {}));
 // Entity
 /**
  * Represents a phrase in the text that is a known entity, such as a person, an organization, or location. The API associates information, such as salience and mentions, with entities.
@@ -45,25 +48,25 @@ var Entity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mentions", elemType: EntityMention }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mentions", elemType: entitymention_1.EntityMention }),
         __metadata("design:type", Array)
     ], Entity.prototype, "mentions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], Entity.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Entity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salience" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salience" }),
         __metadata("design:type", Number)
     ], Entity.prototype, "salience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Entity.prototype, "type", void 0);
     return Entity;
-}(SpeakeasyBase));
-export { Entity };
+}(utils_1.SpeakeasyBase));
+exports.Entity = Entity;

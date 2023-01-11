@@ -1,0 +1,385 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+export enum OfficeCountryEnum {
+    Unknown = "",
+    Af = "AF",
+    Ax = "AX",
+    Al = "AL",
+    Dz = "DZ",
+    As = "AS",
+    Ad = "AD",
+    Ao = "AO",
+    Ai = "AI",
+    Aq = "AQ",
+    Ag = "AG",
+    Ar = "AR",
+    Am = "AM",
+    Aw = "AW",
+    Au = "AU",
+    At = "AT",
+    Az = "AZ",
+    Bs = "BS",
+    Bh = "BH",
+    Bd = "BD",
+    Bb = "BB",
+    By = "BY",
+    Be = "BE",
+    Bz = "BZ",
+    Bj = "BJ",
+    Bm = "BM",
+    Bt = "BT",
+    Bo = "BO",
+    Bq = "BQ",
+    Ba = "BA",
+    Bw = "BW",
+    Bv = "BV",
+    Br = "BR",
+    Io = "IO",
+    Bn = "BN",
+    Bg = "BG",
+    Bf = "BF",
+    Bi = "BI",
+    Kh = "KH",
+    Cm = "CM",
+    Ca = "CA",
+    Cv = "CV",
+    Ky = "KY",
+    Cf = "CF",
+    Td = "TD",
+    Cl = "CL",
+    Cn = "CN",
+    Cx = "CX",
+    Cc = "CC",
+    Co = "CO",
+    Km = "KM",
+    Cg = "CG",
+    Cd = "CD",
+    Ck = "CK",
+    Cr = "CR",
+    Ci = "CI",
+    Hr = "HR",
+    Cu = "CU",
+    Cw = "CW",
+    Cy = "CY",
+    Cz = "CZ",
+    Cym = "CYM",
+    Dk = "DK",
+    Dj = "DJ",
+    Dm = "DM",
+    Do = "DO",
+    Ec = "EC",
+    Eg = "EG",
+    Sv = "SV",
+    Gq = "GQ",
+    Er = "ER",
+    Ee = "EE",
+    Et = "ET",
+    Fk = "FK",
+    Fo = "FO",
+    Fj = "FJ",
+    Fi = "FI",
+    Fr = "FR",
+    Gf = "GF",
+    Pf = "PF",
+    Tf = "TF",
+    Ga = "GA",
+    Gm = "GM",
+    Ge = "GE",
+    De = "DE",
+    Gh = "GH",
+    Gi = "GI",
+    Gr = "GR",
+    Gl = "GL",
+    Gd = "GD",
+    Gp = "GP",
+    Gu = "GU",
+    Gt = "GT",
+    Gg = "GG",
+    Gn = "GN",
+    Gw = "GW",
+    Gy = "GY",
+    Ht = "HT",
+    Hm = "HM",
+    Va = "VA",
+    Hn = "HN",
+    Hk = "HK",
+    Hu = "HU",
+    Is = "IS",
+    In = "IN",
+    Id = "ID",
+    Ir = "IR",
+    Iq = "IQ",
+    Ie = "IE",
+    Im = "IM",
+    Il = "IL",
+    It = "IT",
+    Jm = "JM",
+    Jp = "JP",
+    Je = "JE",
+    Jo = "JO",
+    Kz = "KZ",
+    Ke = "KE",
+    Ki = "KI",
+    Kp = "KP",
+    Kr = "KR",
+    Xk = "XK",
+    Kw = "KW",
+    Kg = "KG",
+    La = "LA",
+    Lv = "LV",
+    Lb = "LB",
+    Ls = "LS",
+    Lr = "LR",
+    Ly = "LY",
+    Li = "LI",
+    Lt = "LT",
+    Lu = "LU",
+    Mo = "MO",
+    Mk = "MK",
+    Mg = "MG",
+    Mw = "MW",
+    My = "MY",
+    Mv = "MV",
+    Ml = "ML",
+    Mt = "MT",
+    Mh = "MH",
+    Mq = "MQ",
+    Mr = "MR",
+    Mu = "MU",
+    Yt = "YT",
+    Mx = "MX",
+    Fm = "FM",
+    Md = "MD",
+    Mc = "MC",
+    Mn = "MN",
+    Me = "ME",
+    Ms = "MS",
+    Ma = "MA",
+    Mz = "MZ",
+    Mm = "MM",
+    Na = "NA",
+    Nr = "NR",
+    Np = "NP",
+    Nl = "NL",
+    Nc = "NC",
+    Nz = "NZ",
+    Ni = "NI",
+    Ne = "NE",
+    Ng = "NG",
+    Nu = "NU",
+    Nf = "NF",
+    Mp = "MP",
+    No = "NO",
+    Om = "OM",
+    Pk = "PK",
+    Pw = "PW",
+    Ps = "PS",
+    Pa = "PA",
+    Pg = "PG",
+    Py = "PY",
+    Pe = "PE",
+    Ph = "PH",
+    Pn = "PN",
+    Pl = "PL",
+    Pt = "PT",
+    Pr = "PR",
+    Qa = "QA",
+    Re = "RE",
+    Ro = "RO",
+    Ru = "RU",
+    Rw = "RW",
+    Bl = "BL",
+    Sh = "SH",
+    Kn = "KN",
+    Lc = "LC",
+    Mf = "MF",
+    Pm = "PM",
+    Vc = "VC",
+    Ws = "WS",
+    Sm = "SM",
+    St = "ST",
+    Sa = "SA",
+    Sn = "SN",
+    Rs = "RS",
+    Sc = "SC",
+    Sl = "SL",
+    Sg = "SG",
+    Sx = "SX",
+    Sk = "SK",
+    Si = "SI",
+    Sb = "SB",
+    So = "SO",
+    Za = "ZA",
+    Gs = "GS",
+    Ss = "SS",
+    Es = "ES",
+    Lk = "LK",
+    Sd = "SD",
+    Sr = "SR",
+    Sj = "SJ",
+    Sz = "SZ",
+    Se = "SE",
+    Ch = "CH",
+    Sy = "SY",
+    Tw = "TW",
+    Tj = "TJ",
+    Tz = "TZ",
+    Th = "TH",
+    Tl = "TL",
+    Tg = "TG",
+    Tk = "TK",
+    To = "TO",
+    Tt = "TT",
+    Tn = "TN",
+    Tr = "TR",
+    Tm = "TM",
+    Tc = "TC",
+    Tv = "TV",
+    Ug = "UG",
+    Ua = "UA",
+    Ae = "AE",
+    Gb = "GB",
+    Us = "US",
+    Um = "UM",
+    Uy = "UY",
+    Uz = "UZ",
+    Vu = "VU",
+    Ve = "VE",
+    Vn = "VN",
+    Vg = "VG",
+    Vi = "VI",
+    Wf = "WF",
+    Eh = "EH",
+    Ye = "YE",
+    Zm = "ZM",
+    Zw = "ZW"
+}
+
+
+export class OfficeOfficeOnlineHours extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=day" })
+  day?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=hour" })
+  hour?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=minute" })
+  minute?: number;
+}
+
+export enum OfficeStateEnum {
+    Al = "AL",
+    Ak = "AK",
+    As = "AS",
+    Az = "AZ",
+    Ar = "AR",
+    Aa = "AA",
+    Ae = "AE",
+    Ap = "AP",
+    Ca = "CA",
+    Co = "CO",
+    Ct = "CT",
+    De = "DE",
+    Dc = "DC",
+    Fl = "FL",
+    Ga = "GA",
+    Gu = "GU",
+    Hi = "HI",
+    Id = "ID",
+    Il = "IL",
+    In = "IN",
+    Ia = "IA",
+    Ks = "KS",
+    Ky = "KY",
+    La = "LA",
+    Me = "ME",
+    Md = "MD",
+    Ma = "MA",
+    Mi = "MI",
+    Mn = "MN",
+    Ms = "MS",
+    Mo = "MO",
+    Mt = "MT",
+    Ne = "NE",
+    Nv = "NV",
+    Nh = "NH",
+    Nj = "NJ",
+    Nm = "NM",
+    Ny = "NY",
+    Nc = "NC",
+    Nd = "ND",
+    Mp = "MP",
+    Oh = "OH",
+    Ok = "OK",
+    Or = "OR",
+    Pa = "PA",
+    Pr = "PR",
+    Ri = "RI",
+    Sc = "SC",
+    Sd = "SD",
+    Tn = "TN",
+    Tx = "TX",
+    Ut = "UT",
+    Vt = "VT",
+    Vi = "VI",
+    Va = "VA",
+    Wa = "WA",
+    Wv = "WV",
+    Wi = "WI",
+    Wy = "WY"
+}
+
+
+export class Office extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=address" })
+  address?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=archived" })
+  archived?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=city" })
+  city?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=country" })
+  country?: OfficeCountryEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=doctor" })
+  doctor?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=end_time" })
+  endTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=exam_rooms" })
+  examRooms?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=fax_number" })
+  faxNumber?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=online_scheduling" })
+  onlineScheduling?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=online_timeslots", elemType: OfficeOfficeOnlineHours })
+  onlineTimeslots?: OfficeOfficeOnlineHours[];
+
+  @SpeakeasyMetadata({ data: "json, name=phone_number" })
+  phoneNumber?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=start_time" })
+  startTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=state" })
+  state?: OfficeStateEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=tax_id_number_professional" })
+  taxIdNumberProfessional?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=zip_code" })
+  zipCode?: string;
+}

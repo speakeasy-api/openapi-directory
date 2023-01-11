@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BindNetworkResponse = exports.BindNetworkRequest = exports.BindNetworkRequestBody = exports.BindNetworkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BindNetworkPathParams = /** @class */ (function (_super) {
     __extends(BindNetworkPathParams, _super);
     function BindNetworkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], BindNetworkPathParams.prototype, "networkId", void 0);
     return BindNetworkPathParams;
-}(SpeakeasyBase));
-export { BindNetworkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BindNetworkPathParams = BindNetworkPathParams;
 var BindNetworkRequestBody = /** @class */ (function (_super) {
     __extends(BindNetworkRequestBody, _super);
     function BindNetworkRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoBind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoBind" }),
         __metadata("design:type", Boolean)
     ], BindNetworkRequestBody.prototype, "autoBind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configTemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configTemplateId" }),
         __metadata("design:type", String)
     ], BindNetworkRequestBody.prototype, "configTemplateId", void 0);
     return BindNetworkRequestBody;
-}(SpeakeasyBase));
-export { BindNetworkRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.BindNetworkRequestBody = BindNetworkRequestBody;
 var BindNetworkRequest = /** @class */ (function (_super) {
     __extends(BindNetworkRequest, _super);
     function BindNetworkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BindNetworkPathParams)
     ], BindNetworkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", BindNetworkRequestBody)
     ], BindNetworkRequest.prototype, "request", void 0);
     return BindNetworkRequest;
-}(SpeakeasyBase));
-export { BindNetworkRequest };
+}(utils_1.SpeakeasyBase));
+exports.BindNetworkRequest = BindNetworkRequest;
 var BindNetworkResponse = /** @class */ (function (_super) {
     __extends(BindNetworkResponse, _super);
     function BindNetworkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BindNetworkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BindNetworkResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], BindNetworkResponse.prototype, "bindNetwork200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BindNetworkResponse.prototype, "bindNetwork200ApplicationJSONObject", void 0);
     return BindNetworkResponse;
-}(SpeakeasyBase));
-export { BindNetworkResponse };
+}(utils_1.SpeakeasyBase));
+exports.BindNetworkResponse = BindNetworkResponse;

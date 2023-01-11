@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Auth0Config = void 0;
+var utils_1 = require("../../../internal/utils");
 // Auth0Config
 /**
  * Configuration for Auth0 domain
@@ -33,21 +36,21 @@ var Auth0Config = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackUrl" }),
         __metadata("design:type", String)
     ], Auth0Config.prototype, "callbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], Auth0Config.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], Auth0Config.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Auth0Config.prototype, "domain", void 0);
     return Auth0Config;
-}(SpeakeasyBase));
-export { Auth0Config };
+}(utils_1.SpeakeasyBase));
+exports.Auth0Config = Auth0Config;

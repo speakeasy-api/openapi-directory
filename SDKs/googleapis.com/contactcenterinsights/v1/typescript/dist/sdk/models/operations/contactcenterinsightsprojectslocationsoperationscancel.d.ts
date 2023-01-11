@@ -27,6 +27,6 @@ export declare class ContactcenterinsightsProjectsLocationsOperationsCancelReque
 }
 export declare class ContactcenterinsightsProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

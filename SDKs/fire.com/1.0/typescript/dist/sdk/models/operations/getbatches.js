@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetBatchesBatchStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBatchesResponse = exports.GetBatchesRequest = exports.GetBatchesBatchItems = exports.GetBatchesBatchItemsBatchItem = exports.GetBatchesBatchItemsBatchItemStatusEnum = exports.GetBatchesBatchItemsBatchItemResult = exports.GetBatchesQueryParams = exports.GetBatchesOrderByEnum = exports.GetBatchesOrderEnum = exports.GetBatchesBatchTypesEnum = exports.GetBatchesBatchStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetBatchesBatchStatusEnum;
 (function (GetBatchesBatchStatusEnum) {
     GetBatchesBatchStatusEnum["Submitted"] = "SUBMITTED";
     GetBatchesBatchStatusEnum["Removed"] = "REMOVED";
     GetBatchesBatchStatusEnum["Succeeded"] = "SUCCEEDED";
     GetBatchesBatchStatusEnum["Failed"] = "FAILED";
-})(GetBatchesBatchStatusEnum || (GetBatchesBatchStatusEnum = {}));
-export var GetBatchesBatchTypesEnum;
+})(GetBatchesBatchStatusEnum = exports.GetBatchesBatchStatusEnum || (exports.GetBatchesBatchStatusEnum = {}));
+var GetBatchesBatchTypesEnum;
 (function (GetBatchesBatchTypesEnum) {
     GetBatchesBatchTypesEnum["InternalTransfer"] = "INTERNAL_TRANSFER";
     GetBatchesBatchTypesEnum["BankTransfer"] = "BANK_TRANSFER";
     GetBatchesBatchTypesEnum["NewPayee"] = "NEW_PAYEE";
-})(GetBatchesBatchTypesEnum || (GetBatchesBatchTypesEnum = {}));
-export var GetBatchesOrderEnum;
+})(GetBatchesBatchTypesEnum = exports.GetBatchesBatchTypesEnum || (exports.GetBatchesBatchTypesEnum = {}));
+var GetBatchesOrderEnum;
 (function (GetBatchesOrderEnum) {
     GetBatchesOrderEnum["Desc"] = "DESC";
     GetBatchesOrderEnum["Asc"] = "ASC";
-})(GetBatchesOrderEnum || (GetBatchesOrderEnum = {}));
-export var GetBatchesOrderByEnum;
+})(GetBatchesOrderEnum = exports.GetBatchesOrderEnum || (exports.GetBatchesOrderEnum = {}));
+var GetBatchesOrderByEnum;
 (function (GetBatchesOrderByEnum) {
     GetBatchesOrderByEnum["Date"] = "DATE";
-})(GetBatchesOrderByEnum || (GetBatchesOrderByEnum = {}));
+})(GetBatchesOrderByEnum = exports.GetBatchesOrderByEnum || (exports.GetBatchesOrderByEnum = {}));
 var GetBatchesQueryParams = /** @class */ (function (_super) {
     __extends(GetBatchesQueryParams, _super);
     function GetBatchesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=batchStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=batchStatus" }),
         __metadata("design:type", String)
     ], GetBatchesQueryParams.prototype, "batchStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=batchTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=batchTypes" }),
         __metadata("design:type", String)
     ], GetBatchesQueryParams.prototype, "batchTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetBatchesQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orderBy" }),
         __metadata("design:type", String)
     ], GetBatchesQueryParams.prototype, "orderBy", void 0);
     return GetBatchesQueryParams;
-}(SpeakeasyBase));
-export { GetBatchesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesQueryParams = GetBatchesQueryParams;
 // GetBatchesBatchItemsBatchItemResult
 /**
  * The outcome of the attempted transaction.
@@ -79,128 +82,128 @@ var GetBatchesBatchItemsBatchItemResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItemResult.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetBatchesBatchItemsBatchItemResult.prototype, "message", void 0);
     return GetBatchesBatchItemsBatchItemResult;
-}(SpeakeasyBase));
-export { GetBatchesBatchItemsBatchItemResult };
-export var GetBatchesBatchItemsBatchItemStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesBatchItemsBatchItemResult = GetBatchesBatchItemsBatchItemResult;
+var GetBatchesBatchItemsBatchItemStatusEnum;
 (function (GetBatchesBatchItemsBatchItemStatusEnum) {
     GetBatchesBatchItemsBatchItemStatusEnum["Submitted"] = "SUBMITTED";
     GetBatchesBatchItemsBatchItemStatusEnum["Removed"] = "REMOVED";
     GetBatchesBatchItemsBatchItemStatusEnum["Succeeded"] = "SUCCEEDED";
     GetBatchesBatchItemsBatchItemStatusEnum["Failed"] = "FAILED";
-})(GetBatchesBatchItemsBatchItemStatusEnum || (GetBatchesBatchItemsBatchItemStatusEnum = {}));
+})(GetBatchesBatchItemsBatchItemStatusEnum = exports.GetBatchesBatchItemsBatchItemStatusEnum || (exports.GetBatchesBatchItemsBatchItemStatusEnum = {}));
 var GetBatchesBatchItemsBatchItem = /** @class */ (function (_super) {
     __extends(GetBatchesBatchItemsBatchItem, _super);
     function GetBatchesBatchItemsBatchItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountAfterCharges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountAfterCharges" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "amountAfterCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchItemUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchItemUuid" }),
         __metadata("design:type", String)
     ], GetBatchesBatchItemsBatchItem.prototype, "batchItemUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateCreated" }),
         __metadata("design:type", Date)
     ], GetBatchesBatchItemsBatchItem.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeAmount" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanFrom" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "icanFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanTo" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "icanTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], GetBatchesBatchItemsBatchItem.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], GetBatchesBatchItemsBatchItem.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refId" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "refId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", GetBatchesBatchItemsBatchItemResult)
     ], GetBatchesBatchItemsBatchItem.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetBatchesBatchItemsBatchItem.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItemsBatchItem.prototype, "taxAmount", void 0);
     return GetBatchesBatchItemsBatchItem;
-}(SpeakeasyBase));
-export { GetBatchesBatchItemsBatchItem };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesBatchItemsBatchItem = GetBatchesBatchItemsBatchItem;
 var GetBatchesBatchItems = /** @class */ (function (_super) {
     __extends(GetBatchesBatchItems, _super);
     function GetBatchesBatchItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: GetBatchesBatchItemsBatchItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: GetBatchesBatchItemsBatchItem }),
         __metadata("design:type", Array)
     ], GetBatchesBatchItems.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], GetBatchesBatchItems.prototype, "total", void 0);
     return GetBatchesBatchItems;
-}(SpeakeasyBase));
-export { GetBatchesBatchItems };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesBatchItems = GetBatchesBatchItems;
 var GetBatchesRequest = /** @class */ (function (_super) {
     __extends(GetBatchesRequest, _super);
     function GetBatchesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBatchesQueryParams)
     ], GetBatchesRequest.prototype, "queryParams", void 0);
     return GetBatchesRequest;
-}(SpeakeasyBase));
-export { GetBatchesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesRequest = GetBatchesRequest;
 var GetBatchesResponse = /** @class */ (function (_super) {
     __extends(GetBatchesResponse, _super);
     function GetBatchesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBatchesBatchItems)
     ], GetBatchesResponse.prototype, "batchItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBatchesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBatchesResponse.prototype, "statusCode", void 0);
     return GetBatchesResponse;
-}(SpeakeasyBase));
-export { GetBatchesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchesResponse = GetBatchesResponse;

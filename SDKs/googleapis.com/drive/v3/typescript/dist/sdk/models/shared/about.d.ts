@@ -27,11 +27,11 @@ export declare class About extends SpeakeasyBase {
     canCreateDrives?: boolean;
     canCreateTeamDrives?: boolean;
     driveThemes?: AboutDriveThemes[];
-    exportFormats?: Map<string, string[]>;
+    exportFormats?: Record<string, string[]>;
     folderColorPalette?: string[];
-    importFormats?: Map<string, string[]>;
+    importFormats?: Record<string, string[]>;
     kind?: string;
-    maxImportSizes?: Map<string, string>;
+    maxImportSizes?: Record<string, string>;
     maxUploadSize?: string;
     storageQuota?: AboutStorageQuota;
     teamDriveThemes?: AboutTeamDriveThemes[];

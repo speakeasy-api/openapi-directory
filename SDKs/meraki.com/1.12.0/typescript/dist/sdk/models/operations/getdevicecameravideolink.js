@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCameraVideoLinkResponse = exports.GetDeviceCameraVideoLinkRequest = exports.GetDeviceCameraVideoLinkQueryParams = exports.GetDeviceCameraVideoLinkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCameraVideoLinkPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoLinkPathParams, _super);
     function GetDeviceCameraVideoLinkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCameraVideoLinkPathParams.prototype, "serial", void 0);
     return GetDeviceCameraVideoLinkPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoLinkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoLinkPathParams = GetDeviceCameraVideoLinkPathParams;
 var GetDeviceCameraVideoLinkQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoLinkQueryParams, _super);
     function GetDeviceCameraVideoLinkQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timestamp" }),
         __metadata("design:type", Date)
     ], GetDeviceCameraVideoLinkQueryParams.prototype, "timestamp", void 0);
     return GetDeviceCameraVideoLinkQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoLinkQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoLinkQueryParams = GetDeviceCameraVideoLinkQueryParams;
 var GetDeviceCameraVideoLinkRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoLinkRequest, _super);
     function GetDeviceCameraVideoLinkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraVideoLinkPathParams)
     ], GetDeviceCameraVideoLinkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraVideoLinkQueryParams)
     ], GetDeviceCameraVideoLinkRequest.prototype, "queryParams", void 0);
     return GetDeviceCameraVideoLinkRequest;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoLinkRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoLinkRequest = GetDeviceCameraVideoLinkRequest;
 var GetDeviceCameraVideoLinkResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoLinkResponse, _super);
     function GetDeviceCameraVideoLinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCameraVideoLinkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCameraVideoLinkResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCameraVideoLinkResponse.prototype, "getDeviceCameraVideoLink200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCameraVideoLinkResponse.prototype, "getDeviceCameraVideoLink200ApplicationJSONObject", void 0);
     return GetDeviceCameraVideoLinkResponse;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoLinkResponse = GetDeviceCameraVideoLinkResponse;

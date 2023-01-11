@@ -155,7 +155,7 @@ export declare class QueryADatabaseRequest extends SpeakeasyBase {
 }
 export declare class QueryADatabaseResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    queryADatabase200ApplicationJsonObject?: QueryADatabase200ApplicationJson;
+    queryADatabase200ApplicationJSONObject?: QueryADatabase200ApplicationJson;
 }

@@ -48,7 +48,7 @@ export class DeleteHitResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteHitResponse?: Map<string, any>;
+  deleteHITResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

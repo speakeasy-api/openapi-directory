@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupedResourceCount } from "./groupedresourcecount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateDiscoveredResourceCountsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupedresourcecount_1 = require("./groupedresourcecount");
 var GetAggregateDiscoveredResourceCountsResponse = /** @class */ (function (_super) {
     __extends(GetAggregateDiscoveredResourceCountsResponse, _super);
     function GetAggregateDiscoveredResourceCountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupByKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupByKey" }),
         __metadata("design:type", String)
     ], GetAggregateDiscoveredResourceCountsResponse.prototype, "groupByKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupedResourceCounts", elemType: GroupedResourceCount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupedResourceCounts", elemType: groupedresourcecount_1.GroupedResourceCount }),
         __metadata("design:type", Array)
     ], GetAggregateDiscoveredResourceCountsResponse.prototype, "groupedResourceCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetAggregateDiscoveredResourceCountsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalDiscoveredResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalDiscoveredResources" }),
         __metadata("design:type", Number)
     ], GetAggregateDiscoveredResourceCountsResponse.prototype, "totalDiscoveredResources", void 0);
     return GetAggregateDiscoveredResourceCountsResponse;
-}(SpeakeasyBase));
-export { GetAggregateDiscoveredResourceCountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateDiscoveredResourceCountsResponse = GetAggregateDiscoveredResourceCountsResponse;

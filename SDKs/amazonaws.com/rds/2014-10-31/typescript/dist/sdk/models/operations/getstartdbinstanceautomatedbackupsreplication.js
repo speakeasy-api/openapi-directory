@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStartDbInstanceAutomatedBackupsReplicationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStartDbInstanceAutomatedBackupsReplicationResponse = exports.GetStartDbInstanceAutomatedBackupsReplicationRequest = exports.GetStartDbInstanceAutomatedBackupsReplicationHeaders = exports.GetStartDbInstanceAutomatedBackupsReplicationQueryParams = exports.GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = exports.GetStartDbInstanceAutomatedBackupsReplicationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStartDbInstanceAutomatedBackupsReplicationActionEnum;
 (function (GetStartDbInstanceAutomatedBackupsReplicationActionEnum) {
     GetStartDbInstanceAutomatedBackupsReplicationActionEnum["StartDbInstanceAutomatedBackupsReplication"] = "StartDBInstanceAutomatedBackupsReplication";
-})(GetStartDbInstanceAutomatedBackupsReplicationActionEnum || (GetStartDbInstanceAutomatedBackupsReplicationActionEnum = {}));
-export var GetStartDbInstanceAutomatedBackupsReplicationVersionEnum;
+})(GetStartDbInstanceAutomatedBackupsReplicationActionEnum = exports.GetStartDbInstanceAutomatedBackupsReplicationActionEnum || (exports.GetStartDbInstanceAutomatedBackupsReplicationActionEnum = {}));
+var GetStartDbInstanceAutomatedBackupsReplicationVersionEnum;
 (function (GetStartDbInstanceAutomatedBackupsReplicationVersionEnum) {
     GetStartDbInstanceAutomatedBackupsReplicationVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetStartDbInstanceAutomatedBackupsReplicationVersionEnum || (GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = {}));
+})(GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = exports.GetStartDbInstanceAutomatedBackupsReplicationVersionEnum || (exports.GetStartDbInstanceAutomatedBackupsReplicationVersionEnum = {}));
 var GetStartDbInstanceAutomatedBackupsReplicationQueryParams = /** @class */ (function (_super) {
     __extends(GetStartDbInstanceAutomatedBackupsReplicationQueryParams, _super);
     function GetStartDbInstanceAutomatedBackupsReplicationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=BackupRetentionPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=BackupRetentionPeriod" }),
         __metadata("design:type", Number)
     ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "backupRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=KmsKeyId" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PreSignedUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PreSignedUrl" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "preSignedUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceArn" }),
         __metadata("design:type", String)
-    ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "sourceDbInstanceArn", void 0);
+    ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "sourceDBInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationQueryParams.prototype, "version", void 0);
     return GetStartDbInstanceAutomatedBackupsReplicationQueryParams;
-}(SpeakeasyBase));
-export { GetStartDbInstanceAutomatedBackupsReplicationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStartDbInstanceAutomatedBackupsReplicationQueryParams = GetStartDbInstanceAutomatedBackupsReplicationQueryParams;
 var GetStartDbInstanceAutomatedBackupsReplicationHeaders = /** @class */ (function (_super) {
     __extends(GetStartDbInstanceAutomatedBackupsReplicationHeaders, _super);
     function GetStartDbInstanceAutomatedBackupsReplicationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetStartDbInstanceAutomatedBackupsReplicationHeaders;
-}(SpeakeasyBase));
-export { GetStartDbInstanceAutomatedBackupsReplicationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetStartDbInstanceAutomatedBackupsReplicationHeaders = GetStartDbInstanceAutomatedBackupsReplicationHeaders;
 var GetStartDbInstanceAutomatedBackupsReplicationRequest = /** @class */ (function (_super) {
     __extends(GetStartDbInstanceAutomatedBackupsReplicationRequest, _super);
     function GetStartDbInstanceAutomatedBackupsReplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStartDbInstanceAutomatedBackupsReplicationQueryParams)
     ], GetStartDbInstanceAutomatedBackupsReplicationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStartDbInstanceAutomatedBackupsReplicationHeaders)
     ], GetStartDbInstanceAutomatedBackupsReplicationRequest.prototype, "headers", void 0);
     return GetStartDbInstanceAutomatedBackupsReplicationRequest;
-}(SpeakeasyBase));
-export { GetStartDbInstanceAutomatedBackupsReplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStartDbInstanceAutomatedBackupsReplicationRequest = GetStartDbInstanceAutomatedBackupsReplicationRequest;
 var GetStartDbInstanceAutomatedBackupsReplicationResponse = /** @class */ (function (_super) {
     __extends(GetStartDbInstanceAutomatedBackupsReplicationResponse, _super);
     function GetStartDbInstanceAutomatedBackupsReplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStartDbInstanceAutomatedBackupsReplicationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStartDbInstanceAutomatedBackupsReplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStartDbInstanceAutomatedBackupsReplicationResponse.prototype, "statusCode", void 0);
     return GetStartDbInstanceAutomatedBackupsReplicationResponse;
-}(SpeakeasyBase));
-export { GetStartDbInstanceAutomatedBackupsReplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStartDbInstanceAutomatedBackupsReplicationResponse = GetStartDbInstanceAutomatedBackupsReplicationResponse;

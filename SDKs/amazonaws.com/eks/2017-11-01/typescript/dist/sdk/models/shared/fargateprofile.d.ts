@@ -13,5 +13,5 @@ export declare class FargateProfile extends SpeakeasyBase {
     selectors?: FargateProfileSelector[];
     status?: FargateProfileStatusEnum;
     subnets?: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

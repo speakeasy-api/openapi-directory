@@ -38,5 +38,5 @@ export class ProjectsDeleteCardResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsDeleteCard403ApplicationJsonObject?: ProjectsDeleteCard403ApplicationJson;
+  projectsDeleteCard403ApplicationJSONObject?: ProjectsDeleteCard403ApplicationJson;
 }

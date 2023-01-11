@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlayintegrityDecodeIntegrityTokenRequest, PlayintegrityDecodeIntegrityTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: PlayintegrityDecodeIntegrityTokenRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    packageName: "sint",
+    packageName: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "nobis",
-    alt: "json",
-    callback: "sint",
-    fields: "enim",
-    key: "soluta",
-    oauthToken: "veniam",
-    prettyPrint: false,
-    quotaUser: "quis",
-    uploadType: "reprehenderit",
-    uploadProtocol: "enim",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    integrityToken: "voluptate",
+    integrityToken: "dicta",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GradeCategory } from "./gradecategory";
-export var GradebookSettingsCalculationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GradebookSettings = exports.GradebookSettingsDisplaySettingEnum = exports.GradebookSettingsCalculationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gradecategory_1 = require("./gradecategory");
+var GradebookSettingsCalculationTypeEnum;
 (function (GradebookSettingsCalculationTypeEnum) {
     GradebookSettingsCalculationTypeEnum["CalculationTypeUnspecified"] = "CALCULATION_TYPE_UNSPECIFIED";
     GradebookSettingsCalculationTypeEnum["TotalPoints"] = "TOTAL_POINTS";
     GradebookSettingsCalculationTypeEnum["WeightedCategories"] = "WEIGHTED_CATEGORIES";
-})(GradebookSettingsCalculationTypeEnum || (GradebookSettingsCalculationTypeEnum = {}));
-export var GradebookSettingsDisplaySettingEnum;
+})(GradebookSettingsCalculationTypeEnum = exports.GradebookSettingsCalculationTypeEnum || (exports.GradebookSettingsCalculationTypeEnum = {}));
+var GradebookSettingsDisplaySettingEnum;
 (function (GradebookSettingsDisplaySettingEnum) {
     GradebookSettingsDisplaySettingEnum["DisplaySettingUnspecified"] = "DISPLAY_SETTING_UNSPECIFIED";
     GradebookSettingsDisplaySettingEnum["ShowOverallGrade"] = "SHOW_OVERALL_GRADE";
     GradebookSettingsDisplaySettingEnum["HideOverallGrade"] = "HIDE_OVERALL_GRADE";
     GradebookSettingsDisplaySettingEnum["ShowTeachersOnly"] = "SHOW_TEACHERS_ONLY";
-})(GradebookSettingsDisplaySettingEnum || (GradebookSettingsDisplaySettingEnum = {}));
+})(GradebookSettingsDisplaySettingEnum = exports.GradebookSettingsDisplaySettingEnum || (exports.GradebookSettingsDisplaySettingEnum = {}));
 // GradebookSettings
 /**
  * The gradebook settings for a course. See the [help center article](https://support.google.com/edu/classroom/answer/9184995) for details.
@@ -47,17 +50,17 @@ var GradebookSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calculationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calculationType" }),
         __metadata("design:type", String)
     ], GradebookSettings.prototype, "calculationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displaySetting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displaySetting" }),
         __metadata("design:type", String)
     ], GradebookSettings.prototype, "displaySetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeCategories", elemType: GradeCategory }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeCategories", elemType: gradecategory_1.GradeCategory }),
         __metadata("design:type", Array)
     ], GradebookSettings.prototype, "gradeCategories", void 0);
     return GradebookSettings;
-}(SpeakeasyBase));
-export { GradebookSettings };
+}(utils_1.SpeakeasyBase));
+exports.GradebookSettings = GradebookSettings;

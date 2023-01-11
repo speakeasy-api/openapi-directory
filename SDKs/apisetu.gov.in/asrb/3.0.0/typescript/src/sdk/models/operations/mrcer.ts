@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class MrcerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CERT_TYPE" })
-  certType: string;
+  certTYPE: string;
 
   @SpeakeasyMetadata({ data: "json, name=FullName" })
   fullName: string;
@@ -191,23 +191,23 @@ export class MrcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mrcer400ApplicationJsonObject?: Mrcer400ApplicationJson;
+  mrcer400ApplicationJSONObject?: Mrcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer401ApplicationJsonObject?: Mrcer401ApplicationJson;
+  mrcer401ApplicationJSONObject?: Mrcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer404ApplicationJsonObject?: Mrcer404ApplicationJson;
+  mrcer404ApplicationJSONObject?: Mrcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer500ApplicationJsonObject?: Mrcer500ApplicationJson;
+  mrcer500ApplicationJSONObject?: Mrcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer502ApplicationJsonObject?: Mrcer502ApplicationJson;
+  mrcer502ApplicationJSONObject?: Mrcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer503ApplicationJsonObject?: Mrcer503ApplicationJson;
+  mrcer503ApplicationJSONObject?: Mrcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mrcer504ApplicationJsonObject?: Mrcer504ApplicationJson;
+  mrcer504ApplicationJSONObject?: Mrcer504ApplicationJson;
 }

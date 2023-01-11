@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostNetworksResponse = exports.PostNetworksRequest = exports.PostNetworks201ApplicationJson = exports.PostNetworks201ApplicationJsonNetwork = exports.PostNetworks201ApplicationJsonNetworkSubnets = exports.PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum = exports.PostNetworks201ApplicationJsonNetworkRoutes = exports.PostNetworks201ApplicationJsonNetworkProtection = exports.PostNetworksCreateNetworkRequest = exports.PostNetworksCreateNetworkRequestSubnets = exports.PostNetworksCreateNetworkRequestSubnetsTypeEnum = exports.PostNetworksCreateNetworkRequestRoutes = exports.PostNetworksCreateNetworkRequestLabels = void 0;
+var utils_1 = require("../../../internal/utils");
 // PostNetworksCreateNetworkRequestLabels
 /**
  * User-defined labels (key-value pairs)
@@ -33,82 +36,82 @@ var PostNetworksCreateNetworkRequestLabels = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelkey" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestLabels.prototype, "labelkey", void 0);
     return PostNetworksCreateNetworkRequestLabels;
-}(SpeakeasyBase));
-export { PostNetworksCreateNetworkRequestLabels };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksCreateNetworkRequestLabels = PostNetworksCreateNetworkRequestLabels;
 var PostNetworksCreateNetworkRequestRoutes = /** @class */ (function (_super) {
     __extends(PostNetworksCreateNetworkRequestRoutes, _super);
     function PostNetworksCreateNetworkRequestRoutes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestRoutes.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestRoutes.prototype, "gateway", void 0);
     return PostNetworksCreateNetworkRequestRoutes;
-}(SpeakeasyBase));
-export { PostNetworksCreateNetworkRequestRoutes };
-export var PostNetworksCreateNetworkRequestSubnetsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksCreateNetworkRequestRoutes = PostNetworksCreateNetworkRequestRoutes;
+var PostNetworksCreateNetworkRequestSubnetsTypeEnum;
 (function (PostNetworksCreateNetworkRequestSubnetsTypeEnum) {
     PostNetworksCreateNetworkRequestSubnetsTypeEnum["Cloud"] = "cloud";
     PostNetworksCreateNetworkRequestSubnetsTypeEnum["Server"] = "server";
     PostNetworksCreateNetworkRequestSubnetsTypeEnum["Vswitch"] = "vswitch";
-})(PostNetworksCreateNetworkRequestSubnetsTypeEnum || (PostNetworksCreateNetworkRequestSubnetsTypeEnum = {}));
+})(PostNetworksCreateNetworkRequestSubnetsTypeEnum = exports.PostNetworksCreateNetworkRequestSubnetsTypeEnum || (exports.PostNetworksCreateNetworkRequestSubnetsTypeEnum = {}));
 var PostNetworksCreateNetworkRequestSubnets = /** @class */ (function (_super) {
     __extends(PostNetworksCreateNetworkRequestSubnets, _super);
     function PostNetworksCreateNetworkRequestSubnets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestSubnets.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestSubnets.prototype, "networkZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequestSubnets.prototype, "type", void 0);
     return PostNetworksCreateNetworkRequestSubnets;
-}(SpeakeasyBase));
-export { PostNetworksCreateNetworkRequestSubnets };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksCreateNetworkRequestSubnets = PostNetworksCreateNetworkRequestSubnets;
 var PostNetworksCreateNetworkRequest = /** @class */ (function (_super) {
     __extends(PostNetworksCreateNetworkRequest, _super);
     function PostNetworksCreateNetworkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequest.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", PostNetworksCreateNetworkRequestLabels)
     ], PostNetworksCreateNetworkRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostNetworksCreateNetworkRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routes", elemType: PostNetworksCreateNetworkRequestRoutes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routes", elemType: PostNetworksCreateNetworkRequestRoutes }),
         __metadata("design:type", Array)
     ], PostNetworksCreateNetworkRequest.prototype, "routes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnets", elemType: PostNetworksCreateNetworkRequestSubnets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnets", elemType: PostNetworksCreateNetworkRequestSubnets }),
         __metadata("design:type", Array)
     ], PostNetworksCreateNetworkRequest.prototype, "subnets", void 0);
     return PostNetworksCreateNetworkRequest;
-}(SpeakeasyBase));
-export { PostNetworksCreateNetworkRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksCreateNetworkRequest = PostNetworksCreateNetworkRequest;
 // PostNetworks201ApplicationJsonNetworkProtection
 /**
  * Protection configuration for the Network
@@ -119,147 +122,147 @@ var PostNetworks201ApplicationJsonNetworkProtection = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], PostNetworks201ApplicationJsonNetworkProtection.prototype, "delete", void 0);
     return PostNetworks201ApplicationJsonNetworkProtection;
-}(SpeakeasyBase));
-export { PostNetworks201ApplicationJsonNetworkProtection };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworks201ApplicationJsonNetworkProtection = PostNetworks201ApplicationJsonNetworkProtection;
 var PostNetworks201ApplicationJsonNetworkRoutes = /** @class */ (function (_super) {
     __extends(PostNetworks201ApplicationJsonNetworkRoutes, _super);
     function PostNetworks201ApplicationJsonNetworkRoutes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkRoutes.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkRoutes.prototype, "gateway", void 0);
     return PostNetworks201ApplicationJsonNetworkRoutes;
-}(SpeakeasyBase));
-export { PostNetworks201ApplicationJsonNetworkRoutes };
-export var PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostNetworks201ApplicationJsonNetworkRoutes = PostNetworks201ApplicationJsonNetworkRoutes;
+var PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum;
 (function (PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum) {
     PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum["Cloud"] = "cloud";
     PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum["Server"] = "server";
     PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum["Vswitch"] = "vswitch";
-})(PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum || (PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum = {}));
+})(PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum = exports.PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum || (exports.PostNetworks201ApplicationJsonNetworkSubnetsTypeEnum = {}));
 var PostNetworks201ApplicationJsonNetworkSubnets = /** @class */ (function (_super) {
     __extends(PostNetworks201ApplicationJsonNetworkSubnets, _super);
     function PostNetworks201ApplicationJsonNetworkSubnets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkSubnets.prototype, "gateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkSubnets.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkSubnets.prototype, "networkZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetworkSubnets.prototype, "type", void 0);
     return PostNetworks201ApplicationJsonNetworkSubnets;
-}(SpeakeasyBase));
-export { PostNetworks201ApplicationJsonNetworkSubnets };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworks201ApplicationJsonNetworkSubnets = PostNetworks201ApplicationJsonNetworkSubnets;
 var PostNetworks201ApplicationJsonNetwork = /** @class */ (function (_super) {
     __extends(PostNetworks201ApplicationJsonNetwork, _super);
     function PostNetworks201ApplicationJsonNetwork() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_balancers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_balancers" }),
         __metadata("design:type", Array)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", PostNetworks201ApplicationJsonNetworkProtection)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routes", elemType: PostNetworks201ApplicationJsonNetworkRoutes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routes", elemType: PostNetworks201ApplicationJsonNetworkRoutes }),
         __metadata("design:type", Array)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "routes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Array)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnets", elemType: PostNetworks201ApplicationJsonNetworkSubnets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnets", elemType: PostNetworks201ApplicationJsonNetworkSubnets }),
         __metadata("design:type", Array)
     ], PostNetworks201ApplicationJsonNetwork.prototype, "subnets", void 0);
     return PostNetworks201ApplicationJsonNetwork;
-}(SpeakeasyBase));
-export { PostNetworks201ApplicationJsonNetwork };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworks201ApplicationJsonNetwork = PostNetworks201ApplicationJsonNetwork;
 var PostNetworks201ApplicationJson = /** @class */ (function (_super) {
     __extends(PostNetworks201ApplicationJson, _super);
     function PostNetworks201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", PostNetworks201ApplicationJsonNetwork)
     ], PostNetworks201ApplicationJson.prototype, "network", void 0);
     return PostNetworks201ApplicationJson;
-}(SpeakeasyBase));
-export { PostNetworks201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworks201ApplicationJson = PostNetworks201ApplicationJson;
 var PostNetworksRequest = /** @class */ (function (_super) {
     __extends(PostNetworksRequest, _super);
     function PostNetworksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostNetworksCreateNetworkRequest)
     ], PostNetworksRequest.prototype, "request", void 0);
     return PostNetworksRequest;
-}(SpeakeasyBase));
-export { PostNetworksRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksRequest = PostNetworksRequest;
 var PostNetworksResponse = /** @class */ (function (_super) {
     __extends(PostNetworksResponse, _super);
     function PostNetworksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostNetworksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostNetworks201ApplicationJson)
-    ], PostNetworksResponse.prototype, "postNetworks201ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostNetworksResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostNetworks201ApplicationJson)
+    ], PostNetworksResponse.prototype, "postNetworks201ApplicationJSONObject", void 0);
     return PostNetworksResponse;
-}(SpeakeasyBase));
-export { PostNetworksResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksResponse = PostNetworksResponse;

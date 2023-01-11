@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetAccessKeyLastUsedActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetAccessKeyLastUsedResponse = exports.PostGetAccessKeyLastUsedRequest = exports.PostGetAccessKeyLastUsedHeaders = exports.PostGetAccessKeyLastUsedQueryParams = exports.PostGetAccessKeyLastUsedVersionEnum = exports.PostGetAccessKeyLastUsedActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetAccessKeyLastUsedActionEnum;
 (function (PostGetAccessKeyLastUsedActionEnum) {
     PostGetAccessKeyLastUsedActionEnum["GetAccessKeyLastUsed"] = "GetAccessKeyLastUsed";
-})(PostGetAccessKeyLastUsedActionEnum || (PostGetAccessKeyLastUsedActionEnum = {}));
-export var PostGetAccessKeyLastUsedVersionEnum;
+})(PostGetAccessKeyLastUsedActionEnum = exports.PostGetAccessKeyLastUsedActionEnum || (exports.PostGetAccessKeyLastUsedActionEnum = {}));
+var PostGetAccessKeyLastUsedVersionEnum;
 (function (PostGetAccessKeyLastUsedVersionEnum) {
     PostGetAccessKeyLastUsedVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostGetAccessKeyLastUsedVersionEnum || (PostGetAccessKeyLastUsedVersionEnum = {}));
+})(PostGetAccessKeyLastUsedVersionEnum = exports.PostGetAccessKeyLastUsedVersionEnum || (exports.PostGetAccessKeyLastUsedVersionEnum = {}));
 var PostGetAccessKeyLastUsedQueryParams = /** @class */ (function (_super) {
     __extends(PostGetAccessKeyLastUsedQueryParams, _super);
     function PostGetAccessKeyLastUsedQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedQueryParams.prototype, "version", void 0);
     return PostGetAccessKeyLastUsedQueryParams;
-}(SpeakeasyBase));
-export { PostGetAccessKeyLastUsedQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetAccessKeyLastUsedQueryParams = PostGetAccessKeyLastUsedQueryParams;
 var PostGetAccessKeyLastUsedHeaders = /** @class */ (function (_super) {
     __extends(PostGetAccessKeyLastUsedHeaders, _super);
     function PostGetAccessKeyLastUsedHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetAccessKeyLastUsedHeaders;
-}(SpeakeasyBase));
-export { PostGetAccessKeyLastUsedHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetAccessKeyLastUsedHeaders = PostGetAccessKeyLastUsedHeaders;
 var PostGetAccessKeyLastUsedRequest = /** @class */ (function (_super) {
     __extends(PostGetAccessKeyLastUsedRequest, _super);
     function PostGetAccessKeyLastUsedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetAccessKeyLastUsedQueryParams)
     ], PostGetAccessKeyLastUsedRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetAccessKeyLastUsedHeaders)
     ], PostGetAccessKeyLastUsedRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetAccessKeyLastUsedRequest.prototype, "request", void 0);
     return PostGetAccessKeyLastUsedRequest;
-}(SpeakeasyBase));
-export { PostGetAccessKeyLastUsedRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetAccessKeyLastUsedRequest = PostGetAccessKeyLastUsedRequest;
 var PostGetAccessKeyLastUsedResponse = /** @class */ (function (_super) {
     __extends(PostGetAccessKeyLastUsedResponse, _super);
     function PostGetAccessKeyLastUsedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetAccessKeyLastUsedResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetAccessKeyLastUsedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetAccessKeyLastUsedResponse.prototype, "statusCode", void 0);
     return PostGetAccessKeyLastUsedResponse;
-}(SpeakeasyBase));
-export { PostGetAccessKeyLastUsedResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetAccessKeyLastUsedResponse = PostGetAccessKeyLastUsedResponse;

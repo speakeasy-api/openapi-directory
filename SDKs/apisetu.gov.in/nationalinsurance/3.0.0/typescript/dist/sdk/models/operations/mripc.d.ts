@@ -107,11 +107,11 @@ export declare class MripcRequest extends SpeakeasyBase {
 export declare class MripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mripc400ApplicationJsonObject?: Mripc400ApplicationJson;
-    mripc401ApplicationJsonObject?: Mripc401ApplicationJson;
-    mripc404ApplicationJsonObject?: Mripc404ApplicationJson;
-    mripc500ApplicationJsonObject?: Mripc500ApplicationJson;
-    mripc502ApplicationJsonObject?: Mripc502ApplicationJson;
-    mripc503ApplicationJsonObject?: Mripc503ApplicationJson;
-    mripc504ApplicationJsonObject?: Mripc504ApplicationJson;
+    mripc400ApplicationJSONObject?: Mripc400ApplicationJson;
+    mripc401ApplicationJSONObject?: Mripc401ApplicationJson;
+    mripc404ApplicationJSONObject?: Mripc404ApplicationJson;
+    mripc500ApplicationJSONObject?: Mripc500ApplicationJson;
+    mripc502ApplicationJSONObject?: Mripc502ApplicationJson;
+    mripc503ApplicationJSONObject?: Mripc503ApplicationJson;
+    mripc504ApplicationJSONObject?: Mripc504ApplicationJson;
 }

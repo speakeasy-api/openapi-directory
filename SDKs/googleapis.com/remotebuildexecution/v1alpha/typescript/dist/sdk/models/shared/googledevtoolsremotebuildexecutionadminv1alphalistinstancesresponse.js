@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance } from "./googledevtoolsremotebuildexecutionadminv1alphainstance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googledevtoolsremotebuildexecutionadminv1alphainstance_1 = require("./googledevtoolsremotebuildexecutionadminv1alphainstance");
 var GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse = /** @class */ (function (_super) {
     __extends(GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse, _super);
     function GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: googledevtoolsremotebuildexecutionadminv1alphainstance_1.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance }),
         __metadata("design:type", Array)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse.prototype, "unreachable", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse = GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse;

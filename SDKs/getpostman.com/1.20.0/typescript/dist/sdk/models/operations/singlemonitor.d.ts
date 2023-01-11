@@ -33,7 +33,7 @@ export declare class SingleMonitor200ApplicationJsonMonitorOptions extends Speak
     followRedirects?: boolean;
     requestDelay?: number;
     requestTimeout?: number;
-    strictSsl?: boolean;
+    strictSSL?: boolean;
 }
 export declare class SingleMonitor200ApplicationJsonMonitorSchedule extends SpeakeasyBase {
     cron?: string;
@@ -69,6 +69,6 @@ export declare class SingleMonitorRequest extends SpeakeasyBase {
 export declare class SingleMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleMonitor200ApplicationJsonObject?: SingleMonitor200ApplicationJson;
-    singleMonitor404ApplicationJsonObject?: SingleMonitor404ApplicationJson;
+    singleMonitor200ApplicationJSONObject?: SingleMonitor200ApplicationJson;
+    singleMonitor404ApplicationJSONObject?: SingleMonitor404ApplicationJson;
 }

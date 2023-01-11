@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,58 +14,83 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSetupV1LocationsIdServicesResponse = exports.DeleteSetupV1LocationsIdServicesRequest = exports.DeleteSetupV1LocationsIdServicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeleteSetupV1LocationsIdServicesPathParams = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdServicesPathParams, _super);
     function DeleteSetupV1LocationsIdServicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdServicesPathParams.prototype, "id", void 0);
     return DeleteSetupV1LocationsIdServicesPathParams;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdServicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdServicesPathParams = DeleteSetupV1LocationsIdServicesPathParams;
 var DeleteSetupV1LocationsIdServicesRequest = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdServicesRequest, _super);
     function DeleteSetupV1LocationsIdServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSetupV1LocationsIdServicesPathParams)
     ], DeleteSetupV1LocationsIdServicesRequest.prototype, "pathParams", void 0);
     return DeleteSetupV1LocationsIdServicesRequest;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdServicesRequest = DeleteSetupV1LocationsIdServicesRequest;
 var DeleteSetupV1LocationsIdServicesResponse = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdServicesResponse, _super);
     function DeleteSetupV1LocationsIdServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LocationViewModel)
     ], DeleteSetupV1LocationsIdServicesResponse.prototype, "locationViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSetupV1LocationsIdServicesResponse.prototype, "statusCode", void 0);
     return DeleteSetupV1LocationsIdServicesResponse;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdServicesResponse = DeleteSetupV1LocationsIdServicesResponse;

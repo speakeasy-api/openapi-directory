@@ -1,0 +1,104 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteCustomObjectDefinitionByTypeResponse = exports.DeleteCustomObjectDefinitionByTypeRequest = exports.DeleteCustomObjectDefinitionByTypeHeaders = exports.DeleteCustomObjectDefinitionByTypePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeleteCustomObjectDefinitionByTypePathParams = /** @class */ (function (_super) {
+    __extends(DeleteCustomObjectDefinitionByTypePathParams, _super);
+    function DeleteCustomObjectDefinitionByTypePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypePathParams.prototype, "object", void 0);
+    return DeleteCustomObjectDefinitionByTypePathParams;
+}(utils_1.SpeakeasyBase));
+exports.DeleteCustomObjectDefinitionByTypePathParams = DeleteCustomObjectDefinitionByTypePathParams;
+var DeleteCustomObjectDefinitionByTypeHeaders = /** @class */ (function (_super) {
+    __extends(DeleteCustomObjectDefinitionByTypeHeaders, _super);
+    function DeleteCustomObjectDefinitionByTypeHeaders() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypeHeaders.prototype, "authorization", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Zuora-Entity-Ids" }),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypeHeaders.prototype, "zuoraEntityIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Zuora-Track-Id" }),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypeHeaders.prototype, "zuoraTrackId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Zuora-Version" }),
+        __metadata("design:type", Date)
+    ], DeleteCustomObjectDefinitionByTypeHeaders.prototype, "zuoraVersion", void 0);
+    return DeleteCustomObjectDefinitionByTypeHeaders;
+}(utils_1.SpeakeasyBase));
+exports.DeleteCustomObjectDefinitionByTypeHeaders = DeleteCustomObjectDefinitionByTypeHeaders;
+var DeleteCustomObjectDefinitionByTypeRequest = /** @class */ (function (_super) {
+    __extends(DeleteCustomObjectDefinitionByTypeRequest, _super);
+    function DeleteCustomObjectDefinitionByTypeRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteCustomObjectDefinitionByTypePathParams)
+    ], DeleteCustomObjectDefinitionByTypeRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteCustomObjectDefinitionByTypeHeaders)
+    ], DeleteCustomObjectDefinitionByTypeRequest.prototype, "headers", void 0);
+    return DeleteCustomObjectDefinitionByTypeRequest;
+}(utils_1.SpeakeasyBase));
+exports.DeleteCustomObjectDefinitionByTypeRequest = DeleteCustomObjectDefinitionByTypeRequest;
+var DeleteCustomObjectDefinitionByTypeResponse = /** @class */ (function (_super) {
+    __extends(DeleteCustomObjectDefinitionByTypeResponse, _super);
+    function DeleteCustomObjectDefinitionByTypeResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypeResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DeleteCustomObjectDefinitionByTypeResponse.prototype, "deleteCustomObjectDefinitionByType200ApplicationJSONUriString", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteCustomObjectDefinitionByTypeResponse.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], DeleteCustomObjectDefinitionByTypeResponse.prototype, "statusCode", void 0);
+    return DeleteCustomObjectDefinitionByTypeResponse;
+}(utils_1.SpeakeasyBase));
+exports.DeleteCustomObjectDefinitionByTypeResponse = DeleteCustomObjectDefinitionByTypeResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeRankExpressionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeRankExpressionsResponse = exports.PostDescribeRankExpressionsRequest = exports.PostDescribeRankExpressionsHeaders = exports.PostDescribeRankExpressionsQueryParams = exports.PostDescribeRankExpressionsVersionEnum = exports.PostDescribeRankExpressionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeRankExpressionsActionEnum;
 (function (PostDescribeRankExpressionsActionEnum) {
     PostDescribeRankExpressionsActionEnum["DescribeRankExpressions"] = "DescribeRankExpressions";
-})(PostDescribeRankExpressionsActionEnum || (PostDescribeRankExpressionsActionEnum = {}));
-export var PostDescribeRankExpressionsVersionEnum;
+})(PostDescribeRankExpressionsActionEnum = exports.PostDescribeRankExpressionsActionEnum || (exports.PostDescribeRankExpressionsActionEnum = {}));
+var PostDescribeRankExpressionsVersionEnum;
 (function (PostDescribeRankExpressionsVersionEnum) {
     PostDescribeRankExpressionsVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(PostDescribeRankExpressionsVersionEnum || (PostDescribeRankExpressionsVersionEnum = {}));
+})(PostDescribeRankExpressionsVersionEnum = exports.PostDescribeRankExpressionsVersionEnum || (exports.PostDescribeRankExpressionsVersionEnum = {}));
 var PostDescribeRankExpressionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeRankExpressionsQueryParams, _super);
     function PostDescribeRankExpressionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsQueryParams.prototype, "version", void 0);
     return PostDescribeRankExpressionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeRankExpressionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeRankExpressionsQueryParams = PostDescribeRankExpressionsQueryParams;
 var PostDescribeRankExpressionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeRankExpressionsHeaders, _super);
     function PostDescribeRankExpressionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeRankExpressionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeRankExpressionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeRankExpressionsHeaders = PostDescribeRankExpressionsHeaders;
 var PostDescribeRankExpressionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeRankExpressionsRequest, _super);
     function PostDescribeRankExpressionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeRankExpressionsQueryParams)
     ], PostDescribeRankExpressionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeRankExpressionsHeaders)
     ], PostDescribeRankExpressionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeRankExpressionsRequest.prototype, "request", void 0);
     return PostDescribeRankExpressionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeRankExpressionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeRankExpressionsRequest = PostDescribeRankExpressionsRequest;
 var PostDescribeRankExpressionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeRankExpressionsResponse, _super);
     function PostDescribeRankExpressionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeRankExpressionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeRankExpressionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeRankExpressionsResponse.prototype, "statusCode", void 0);
     return PostDescribeRankExpressionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeRankExpressionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeRankExpressionsResponse = PostDescribeRankExpressionsResponse;

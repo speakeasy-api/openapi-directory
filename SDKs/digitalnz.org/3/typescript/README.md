@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetRecordsFormatRequest, GetRecordsFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyAuth: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,43 +33,43 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetRecordsFormatRequest = {
   pathParams: {
-    format: "xml",
+    format: "json",
   },
   queryParams: {
-    andCategory: "Archives",
-    andCentury: "dignissimos",
-    andCollection: "nesciunt",
-    andContentPartner: "commodi",
+    andCategory: "Manuscripts",
+    andCentury: "culpa",
+    andCollection: "expedita",
+    andContentPartner: "consequuntur",
     andCreator: "dolor",
-    andDate: "natus",
-    andDcType: "est",
-    andDecade: "praesentium",
-    andFormat: "quam",
+    andDate: "expedita",
+    andDcType: "voluptas",
+    andDecade: "fugit",
+    andFormat: "et",
     andHasLargeThumbnailUrl: "Y",
     andHasLatLng: true,
     andIsCommercialUse: false,
-    andOrFilterField: "in",
-    andPlacename: "laboriosam",
-    andPrimaryCollection: "molestiae",
-    andSubject: "error",
-    andTitle: "recusandae",
+    andOrFilterField: "debitis",
+    andPlacename: "voluptatum",
+    andPrimaryCollection: "et",
+    andSubject: "ut",
+    andTitle: "dolorem",
     andUsage: "Share",
-    andYear: "accusantium",
-    apiKey: "qui",
-    direction: "desc",
-    excludeFiltersFromFacets: false,
+    andYear: "voluptate",
+    apiKey: "iste",
+    direction: "asc",
+    excludeFiltersFromFacets: true,
     facets: [
-      "year",
+      "usage",
     ],
-    facetsPage: 6145129450379232766,
-    facetsPerPage: 3615018601672790208,
-    fields: "nesciunt",
-    geoBbox: "quia",
-    page: 2021619814846964830,
-    perPage: 5952694347717306601,
+    facetsPage: 6392442863481646880,
+    facetsPerPage: 3706853784096366226,
+    fields: "odio",
+    geoBbox: "dolore",
+    page: 4035568504096476779,
+    perPage: 959367522974354090,
     sort: "syndication_date",
-    text: "eum",
-    withoutFilterField: "debitis",
+    text: "totam",
+    withoutFilterField: "commodi",
   },
 };
 

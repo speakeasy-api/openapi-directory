@@ -1,7 +1,10 @@
-export var RuleTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleTypeEnum = void 0;
+var RuleTypeEnum;
 (function (RuleTypeEnum) {
     RuleTypeEnum["BinaryLength"] = "BINARY_LENGTH";
     RuleTypeEnum["NumberComparison"] = "NUMBER_COMPARISON";
     RuleTypeEnum["StringFromSet"] = "STRING_FROM_SET";
     RuleTypeEnum["StringLength"] = "STRING_LENGTH";
-})(RuleTypeEnum || (RuleTypeEnum = {}));
+})(RuleTypeEnum = exports.RuleTypeEnum || (exports.RuleTypeEnum = {}));

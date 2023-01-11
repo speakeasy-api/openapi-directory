@@ -1,13 +1,13 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlloyDbConnectionProfileInput } from "./alloydbconnectionprofile";
-import { CloudSqlConnectionProfileInput } from "./cloudsqlconnectionprofile";
-import { Status } from "./status";
-import { MySqlConnectionProfileInput } from "./mysqlconnectionprofile";
-import { PostgreSqlConnectionProfileInput } from "./postgresqlconnectionprofile";
 import { AlloyDbConnectionProfile } from "./alloydbconnectionprofile";
 import { CloudSqlConnectionProfile } from "./cloudsqlconnectionprofile";
+import { Status } from "./status";
 import { MySqlConnectionProfile } from "./mysqlconnectionprofile";
 import { PostgreSqlConnectionProfile } from "./postgresqlconnectionprofile";
+import { AlloyDbConnectionProfileInput } from "./alloydbconnectionprofile";
+import { CloudSqlConnectionProfileInput } from "./cloudsqlconnectionprofile";
+import { MySqlConnectionProfileInput } from "./mysqlconnectionprofile";
+import { PostgreSqlConnectionProfileInput } from "./postgresqlconnectionprofile";
 
 
 export enum ConnectionProfileProviderEnum {
@@ -27,43 +27,6 @@ export enum ConnectionProfileStateEnum {
     Deleting = "DELETING",
     Deleted = "DELETED",
     Failed = "FAILED"
-}
-
-
-// ConnectionProfileInput
-/** 
- * A connection profile definition.
-**/
-export class ConnectionProfileInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=alloydb" })
-  alloydb?: AlloyDbConnectionProfileInput;
-
-  @SpeakeasyMetadata({ data: "json, name=cloudsql" })
-  cloudsql?: CloudSqlConnectionProfileInput;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Status;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=mysql" })
-  mysql?: MySqlConnectionProfileInput;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=postgresql" })
-  postgresql?: PostgreSqlConnectionProfileInput;
-
-  @SpeakeasyMetadata({ data: "json, name=provider" })
-  provider?: ConnectionProfileProviderEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=state" })
-  state?: ConnectionProfileStateEnum;
 }
 
 
@@ -88,7 +51,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysql" })
   mysql?: MySqlConnectionProfile;
@@ -107,4 +70,41 @@ export class ConnectionProfile extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ConnectionProfileInput
+/** 
+ * A connection profile definition.
+**/
+export class ConnectionProfileInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=alloydb" })
+  alloydb?: AlloyDbConnectionProfileInput;
+
+  @SpeakeasyMetadata({ data: "json, name=cloudsql" })
+  cloudsql?: CloudSqlConnectionProfileInput;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: Status;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=mysql" })
+  mysql?: MySqlConnectionProfileInput;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=postgresql" })
+  postgresql?: PostgreSqlConnectionProfileInput;
+
+  @SpeakeasyMetadata({ data: "json, name=provider" })
+  provider?: ConnectionProfileProviderEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=state" })
+  state?: ConnectionProfileStateEnum;
 }

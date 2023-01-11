@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScoresByWeekSimulationFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScoresByWeekSimulationResponse = exports.ScoresByWeekSimulationRequest = exports.ScoresByWeekSimulationPathParams = exports.ScoresByWeekSimulationFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScoresByWeekSimulationFormatEnum;
 (function (ScoresByWeekSimulationFormatEnum) {
     ScoresByWeekSimulationFormatEnum["Xml"] = "XML";
     ScoresByWeekSimulationFormatEnum["Json"] = "JSON";
-})(ScoresByWeekSimulationFormatEnum || (ScoresByWeekSimulationFormatEnum = {}));
+})(ScoresByWeekSimulationFormatEnum = exports.ScoresByWeekSimulationFormatEnum || (exports.ScoresByWeekSimulationFormatEnum = {}));
 var ScoresByWeekSimulationPathParams = /** @class */ (function (_super) {
     __extends(ScoresByWeekSimulationPathParams, _super);
     function ScoresByWeekSimulationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ScoresByWeekSimulationPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
         __metadata("design:type", String)
     ], ScoresByWeekSimulationPathParams.prototype, "numberofplays", void 0);
     return ScoresByWeekSimulationPathParams;
-}(SpeakeasyBase));
-export { ScoresByWeekSimulationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekSimulationPathParams = ScoresByWeekSimulationPathParams;
 var ScoresByWeekSimulationRequest = /** @class */ (function (_super) {
     __extends(ScoresByWeekSimulationRequest, _super);
     function ScoresByWeekSimulationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ScoresByWeekSimulationPathParams)
     ], ScoresByWeekSimulationRequest.prototype, "pathParams", void 0);
     return ScoresByWeekSimulationRequest;
-}(SpeakeasyBase));
-export { ScoresByWeekSimulationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekSimulationRequest = ScoresByWeekSimulationRequest;
 var ScoresByWeekSimulationResponse = /** @class */ (function (_super) {
     __extends(ScoresByWeekSimulationResponse, _super);
     function ScoresByWeekSimulationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScoresByWeekSimulationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScoresByWeekSimulationResponse.prototype, "scores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScoresByWeekSimulationResponse.prototype, "statusCode", void 0);
     return ScoresByWeekSimulationResponse;
-}(SpeakeasyBase));
-export { ScoresByWeekSimulationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByWeekSimulationResponse = ScoresByWeekSimulationResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSessionResponse = exports.CreateSessionResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateSessionResponseData = /** @class */ (function (_super) {
     __extends(CreateSessionResponseData, _super);
     function CreateSessionResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session_token" }),
         __metadata("design:type", String)
     ], CreateSessionResponseData.prototype, "sessionToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session_uri" }),
         __metadata("design:type", String)
     ], CreateSessionResponseData.prototype, "sessionUri", void 0);
     return CreateSessionResponseData;
-}(SpeakeasyBase));
-export { CreateSessionResponseData };
+}(utils_1.SpeakeasyBase));
+exports.CreateSessionResponseData = CreateSessionResponseData;
 var CreateSessionResponse = /** @class */ (function (_super) {
     __extends(CreateSessionResponse, _super);
     function CreateSessionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CreateSessionResponseData)
     ], CreateSessionResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CreateSessionResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], CreateSessionResponse.prototype, "statusCode", void 0);
     return CreateSessionResponse;
-}(SpeakeasyBase));
-export { CreateSessionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateSessionResponse = CreateSessionResponse;

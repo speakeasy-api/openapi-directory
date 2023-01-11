@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EvaluationResult } from "./evaluationresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyComplianceStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluationresult_1 = require("./evaluationresult");
 // PolicyComplianceStatus
 /**
  * Indicates whether the account is compliant with the specified policy. An account is considered noncompliant if it includes resources that are not protected by the policy, for WAF and Shield Advanced policies, or that are noncompliant with the policy, for security group policies.
@@ -34,33 +37,33 @@ var PolicyComplianceStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationResults", elemType: EvaluationResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationResults", elemType: evaluationresult_1.EvaluationResult }),
         __metadata("design:type", Array)
     ], PolicyComplianceStatus.prototype, "evaluationResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IssueInfoMap" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IssueInfoMap" }),
+        __metadata("design:type", Object)
     ], PolicyComplianceStatus.prototype, "issueInfoMap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], PolicyComplianceStatus.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemberAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemberAccount" }),
         __metadata("design:type", String)
     ], PolicyComplianceStatus.prototype, "memberAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], PolicyComplianceStatus.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyName" }),
         __metadata("design:type", String)
     ], PolicyComplianceStatus.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyOwner" }),
         __metadata("design:type", String)
     ], PolicyComplianceStatus.prototype, "policyOwner", void 0);
     return PolicyComplianceStatus;
-}(SpeakeasyBase));
-export { PolicyComplianceStatus };
+}(utils_1.SpeakeasyBase));
+exports.PolicyComplianceStatus = PolicyComplianceStatus;

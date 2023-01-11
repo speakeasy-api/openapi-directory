@@ -22,5 +22,5 @@ export class GetNetworkSwitchQosRulesOrderResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchQosRulesOrder200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchQosRulesOrder200ApplicationJSONObject?: Record<string, any>;
 }

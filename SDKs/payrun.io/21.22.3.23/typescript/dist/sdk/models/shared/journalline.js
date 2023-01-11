@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JournalLine = exports.JournalLineJournalLine = exports.JournalLineJournalLineSubContractor = exports.JournalLineJournalLinePayRun = exports.JournalLineJournalLinePayFrequencyEnum = exports.JournalLineJournalLineEmployee = void 0;
+var utils_1 = require("../../../internal/utils");
 // JournalLineJournalLineEmployee
 /**
  * The journal lines' employee
@@ -33,28 +36,28 @@ var JournalLineJournalLineEmployee = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineEmployee.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineEmployee.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineEmployee.prototype, "atTitle", void 0);
     return JournalLineJournalLineEmployee;
-}(SpeakeasyBase));
-export { JournalLineJournalLineEmployee };
-export var JournalLineJournalLinePayFrequencyEnum;
+}(utils_1.SpeakeasyBase));
+exports.JournalLineJournalLineEmployee = JournalLineJournalLineEmployee;
+var JournalLineJournalLinePayFrequencyEnum;
 (function (JournalLineJournalLinePayFrequencyEnum) {
     JournalLineJournalLinePayFrequencyEnum["Weekly"] = "Weekly";
     JournalLineJournalLinePayFrequencyEnum["Monthly"] = "Monthly";
     JournalLineJournalLinePayFrequencyEnum["TwoWeekly"] = "TwoWeekly";
     JournalLineJournalLinePayFrequencyEnum["FourWeekly"] = "FourWeekly";
     JournalLineJournalLinePayFrequencyEnum["Yearly"] = "Yearly";
-})(JournalLineJournalLinePayFrequencyEnum || (JournalLineJournalLinePayFrequencyEnum = {}));
+})(JournalLineJournalLinePayFrequencyEnum = exports.JournalLineJournalLinePayFrequencyEnum || (exports.JournalLineJournalLinePayFrequencyEnum = {}));
 // JournalLineJournalLinePayRun
 /**
  * The journal lines' pay run
@@ -65,20 +68,20 @@ var JournalLineJournalLinePayRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], JournalLineJournalLinePayRun.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], JournalLineJournalLinePayRun.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], JournalLineJournalLinePayRun.prototype, "atTitle", void 0);
     return JournalLineJournalLinePayRun;
-}(SpeakeasyBase));
-export { JournalLineJournalLinePayRun };
+}(utils_1.SpeakeasyBase));
+exports.JournalLineJournalLinePayRun = JournalLineJournalLinePayRun;
 // JournalLineJournalLineSubContractor
 /**
  * The journal lines' sub contractor
@@ -89,93 +92,93 @@ var JournalLineJournalLineSubContractor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineSubContractor.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineSubContractor.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], JournalLineJournalLineSubContractor.prototype, "atTitle", void 0);
     return JournalLineJournalLineSubContractor;
-}(SpeakeasyBase));
-export { JournalLineJournalLineSubContractor };
+}(utils_1.SpeakeasyBase));
+exports.JournalLineJournalLineSubContractor = JournalLineJournalLineSubContractor;
 var JournalLineJournalLine = /** @class */ (function (_super) {
     __extends(JournalLineJournalLine, _super);
     function JournalLineJournalLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credit" }),
         __metadata("design:type", Number)
     ], JournalLineJournalLine.prototype, "credit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Debit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Debit" }),
         __metadata("design:type", Number)
     ], JournalLineJournalLine.prototype, "debit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employee" }),
         __metadata("design:type", JournalLineJournalLineEmployee)
     ], JournalLineJournalLine.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Generated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Generated" }),
         __metadata("design:type", Date)
     ], JournalLineJournalLine.prototype, "generated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Grouping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Grouping" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "grouping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LedgerTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LedgerTarget" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "ledgerTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NomCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NomCode" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "nomCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayFrequency" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "payFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayRun" }),
         __metadata("design:type", JournalLineJournalLinePayRun)
     ], JournalLineJournalLine.prototype, "payRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubContractor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubContractor" }),
         __metadata("design:type", JournalLineJournalLineSubContractor)
     ], JournalLineJournalLine.prototype, "subContractor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubNomCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubNomCode" }),
         __metadata("design:type", String)
     ], JournalLineJournalLine.prototype, "subNomCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxPeriod" }),
         __metadata("design:type", Number)
     ], JournalLineJournalLine.prototype, "taxPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], JournalLineJournalLine.prototype, "taxYear", void 0);
     return JournalLineJournalLine;
-}(SpeakeasyBase));
-export { JournalLineJournalLine };
+}(utils_1.SpeakeasyBase));
+exports.JournalLineJournalLine = JournalLineJournalLine;
 var JournalLine = /** @class */ (function (_super) {
     __extends(JournalLine, _super);
     function JournalLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JournalLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JournalLine" }),
         __metadata("design:type", JournalLineJournalLine)
     ], JournalLine.prototype, "journalLine", void 0);
     return JournalLine;
-}(SpeakeasyBase));
-export { JournalLine };
+}(utils_1.SpeakeasyBase));
+exports.JournalLine = JournalLine;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBng2latlongEastingNorthingResponse = exports.GetBng2latlongEastingNorthingRequest = exports.GetBng2latlongEastingNorthing200ApplicationJson = exports.GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum = exports.GetBng2latlongEastingNorthingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBng2latlongEastingNorthingPathParams = /** @class */ (function (_super) {
     __extends(GetBng2latlongEastingNorthingPathParams, _super);
     function GetBng2latlongEastingNorthingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=easting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=easting" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthingPathParams.prototype, "easting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=northing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=northing" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthingPathParams.prototype, "northing", void 0);
     return GetBng2latlongEastingNorthingPathParams;
-}(SpeakeasyBase));
-export { GetBng2latlongEastingNorthingPathParams };
-export var GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetBng2latlongEastingNorthingPathParams = GetBng2latlongEastingNorthingPathParams;
+var GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum;
 (function (GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum) {
     GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum["Ok"] = "ok";
     GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum["Error"] = "error";
-})(GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum || (GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum = {}));
+})(GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum = exports.GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum || (exports.GetBng2latlongEastingNorthing200ApplicationJsonStatusEnum = {}));
 var GetBng2latlongEastingNorthing200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetBng2latlongEastingNorthing200ApplicationJson, _super);
     function GetBng2latlongEastingNorthing200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=easting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=easting" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "easting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=northing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=northing" }),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "northing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetBng2latlongEastingNorthing200ApplicationJson.prototype, "status", void 0);
     return GetBng2latlongEastingNorthing200ApplicationJson;
-}(SpeakeasyBase));
-export { GetBng2latlongEastingNorthing200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetBng2latlongEastingNorthing200ApplicationJson = GetBng2latlongEastingNorthing200ApplicationJson;
 var GetBng2latlongEastingNorthingRequest = /** @class */ (function (_super) {
     __extends(GetBng2latlongEastingNorthingRequest, _super);
     function GetBng2latlongEastingNorthingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBng2latlongEastingNorthingPathParams)
     ], GetBng2latlongEastingNorthingRequest.prototype, "pathParams", void 0);
     return GetBng2latlongEastingNorthingRequest;
-}(SpeakeasyBase));
-export { GetBng2latlongEastingNorthingRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBng2latlongEastingNorthingRequest = GetBng2latlongEastingNorthingRequest;
 var GetBng2latlongEastingNorthingResponse = /** @class */ (function (_super) {
     __extends(GetBng2latlongEastingNorthingResponse, _super);
     function GetBng2latlongEastingNorthingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBng2latlongEastingNorthingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetBng2latlongEastingNorthing200ApplicationJson)
-    ], GetBng2latlongEastingNorthingResponse.prototype, "getBng2latlongEastingNorthing200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBng2latlongEastingNorthingResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetBng2latlongEastingNorthing200ApplicationJson)
+    ], GetBng2latlongEastingNorthingResponse.prototype, "getBng2latlongEastingNorthing200ApplicationJSONObject", void 0);
     return GetBng2latlongEastingNorthingResponse;
-}(SpeakeasyBase));
-export { GetBng2latlongEastingNorthingResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBng2latlongEastingNorthingResponse = GetBng2latlongEastingNorthingResponse;

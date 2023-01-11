@@ -8,7 +8,7 @@ export declare class GetEventItemsQueryParams extends SpeakeasyBase {
     offset?: string;
 }
 export declare class GetEventItemsHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class GetEventItemsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

@@ -58,10 +58,10 @@ export declare class Cable extends SpeakeasyBase {
     length?: number;
     lengthUnit?: CableLengthUnit;
     status?: CableStatus;
-    terminationA?: Map<string, string>;
+    terminationA?: Record<string, string>;
     terminationAId: number;
     terminationAType: string;
-    terminationB?: Map<string, string>;
+    terminationB?: Record<string, string>;
     terminationBId: number;
     terminationBType: string;
     type?: CableTypeEnum;

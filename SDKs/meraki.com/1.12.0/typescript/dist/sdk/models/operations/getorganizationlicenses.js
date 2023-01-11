@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationLicensesResponse = exports.GetOrganizationLicensesRequest = exports.GetOrganizationLicensesQueryParams = exports.GetOrganizationLicensesStateEnum = exports.GetOrganizationLicensesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationLicensesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationLicensesPathParams, _super);
     function GetOrganizationLicensesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationLicensesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationLicensesPathParams };
-export var GetOrganizationLicensesStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationLicensesPathParams = GetOrganizationLicensesPathParams;
+var GetOrganizationLicensesStateEnum;
 (function (GetOrganizationLicensesStateEnum) {
     GetOrganizationLicensesStateEnum["Active"] = "active";
     GetOrganizationLicensesStateEnum["Expired"] = "expired";
@@ -43,76 +46,76 @@ export var GetOrganizationLicensesStateEnum;
     GetOrganizationLicensesStateEnum["Unused"] = "unused";
     GetOrganizationLicensesStateEnum["UnusedActive"] = "unusedActive";
     GetOrganizationLicensesStateEnum["RecentlyQueued"] = "recentlyQueued";
-})(GetOrganizationLicensesStateEnum || (GetOrganizationLicensesStateEnum = {}));
+})(GetOrganizationLicensesStateEnum = exports.GetOrganizationLicensesStateEnum || (exports.GetOrganizationLicensesStateEnum = {}));
 var GetOrganizationLicensesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationLicensesQueryParams, _super);
     function GetOrganizationLicensesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceSerial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceSerial" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesQueryParams.prototype, "deviceSerial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=networkId" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesQueryParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationLicensesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=state" }),
         __metadata("design:type", String)
     ], GetOrganizationLicensesQueryParams.prototype, "state", void 0);
     return GetOrganizationLicensesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationLicensesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationLicensesQueryParams = GetOrganizationLicensesQueryParams;
 var GetOrganizationLicensesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationLicensesRequest, _super);
     function GetOrganizationLicensesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationLicensesPathParams)
     ], GetOrganizationLicensesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationLicensesQueryParams)
     ], GetOrganizationLicensesRequest.prototype, "queryParams", void 0);
     return GetOrganizationLicensesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationLicensesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationLicensesRequest = GetOrganizationLicensesRequest;
 var GetOrganizationLicensesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationLicensesResponse, _super);
     function GetOrganizationLicensesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationLicensesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationLicensesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationLicensesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationLicensesResponse.prototype, "getOrganizationLicenses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationLicensesResponse.prototype, "getOrganizationLicenses200ApplicationJSONObject", void 0);
     return GetOrganizationLicensesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationLicensesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationLicensesResponse = GetOrganizationLicensesResponse;

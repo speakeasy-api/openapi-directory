@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostNetworksIdActionsDeleteRouteResponse = exports.PostNetworksIdActionsDeleteRouteRequest = exports.PostNetworksIdActionsDeleteRouteActionResponse = exports.PostNetworksIdActionsDeleteRouteActionResponseAction = exports.PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum = exports.PostNetworksIdActionsDeleteRouteActionResponseActionResources = exports.PostNetworksIdActionsDeleteRouteActionResponseActionError = exports.PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest = exports.PostNetworksIdActionsDeleteRoutePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostNetworksIdActionsDeleteRoutePathParams = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRoutePathParams, _super);
     function PostNetworksIdActionsDeleteRoutePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsDeleteRoutePathParams.prototype, "id", void 0);
     return PostNetworksIdActionsDeleteRoutePathParams;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRoutePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRoutePathParams = PostNetworksIdActionsDeleteRoutePathParams;
 var PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest, _super);
     function PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest.prototype, "gateway", void 0);
     return PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest = PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest;
 // PostNetworksIdActionsDeleteRouteActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -61,123 +64,123 @@ var PostNetworksIdActionsDeleteRouteActionResponseActionError = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseActionError.prototype, "message", void 0);
     return PostNetworksIdActionsDeleteRouteActionResponseActionError;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteActionResponseActionError = PostNetworksIdActionsDeleteRouteActionResponseActionError;
 var PostNetworksIdActionsDeleteRouteActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteActionResponseActionResources, _super);
     function PostNetworksIdActionsDeleteRouteActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsDeleteRouteActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseActionResources.prototype, "type", void 0);
     return PostNetworksIdActionsDeleteRouteActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteActionResponseActionResources };
-export var PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteActionResponseActionResources = PostNetworksIdActionsDeleteRouteActionResponseActionResources;
+var PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum;
 (function (PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum) {
     PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum["Success"] = "success";
     PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum["Running"] = "running";
     PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum["Error"] = "error";
-})(PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum || (PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum = {}));
+})(PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum = exports.PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum || (exports.PostNetworksIdActionsDeleteRouteActionResponseActionStatusEnum = {}));
 var PostNetworksIdActionsDeleteRouteActionResponseAction = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteActionResponseAction, _super);
     function PostNetworksIdActionsDeleteRouteActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostNetworksIdActionsDeleteRouteActionResponseActionError)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostNetworksIdActionsDeleteRouteActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostNetworksIdActionsDeleteRouteActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteActionResponseAction.prototype, "status", void 0);
     return PostNetworksIdActionsDeleteRouteActionResponseAction;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteActionResponseAction = PostNetworksIdActionsDeleteRouteActionResponseAction;
 var PostNetworksIdActionsDeleteRouteActionResponse = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteActionResponse, _super);
     function PostNetworksIdActionsDeleteRouteActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostNetworksIdActionsDeleteRouteActionResponseAction)
     ], PostNetworksIdActionsDeleteRouteActionResponse.prototype, "action", void 0);
     return PostNetworksIdActionsDeleteRouteActionResponse;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteActionResponse = PostNetworksIdActionsDeleteRouteActionResponse;
 var PostNetworksIdActionsDeleteRouteRequest = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteRequest, _super);
     function PostNetworksIdActionsDeleteRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNetworksIdActionsDeleteRoutePathParams)
     ], PostNetworksIdActionsDeleteRouteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest)
     ], PostNetworksIdActionsDeleteRouteRequest.prototype, "request", void 0);
     return PostNetworksIdActionsDeleteRouteRequest;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteRequest = PostNetworksIdActionsDeleteRouteRequest;
 var PostNetworksIdActionsDeleteRouteResponse = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsDeleteRouteResponse, _super);
     function PostNetworksIdActionsDeleteRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNetworksIdActionsDeleteRouteActionResponse)
     ], PostNetworksIdActionsDeleteRouteResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostNetworksIdActionsDeleteRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsDeleteRouteResponse.prototype, "statusCode", void 0);
     return PostNetworksIdActionsDeleteRouteResponse;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsDeleteRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsDeleteRouteResponse = PostNetworksIdActionsDeleteRouteResponse;

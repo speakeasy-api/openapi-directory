@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionsApiEnable2Response = exports.SubscriptionsApiEnable2Request = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubscriptionsApiEnable2Request = /** @class */ (function (_super) {
     __extends(SubscriptionsApiEnable2Request, _super);
     function SubscriptionsApiEnable2Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], SubscriptionsApiEnable2Request.prototype, "request", void 0);
     return SubscriptionsApiEnable2Request;
-}(SpeakeasyBase));
-export { SubscriptionsApiEnable2Request };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionsApiEnable2Request = SubscriptionsApiEnable2Request;
 var SubscriptionsApiEnable2Response = /** @class */ (function (_super) {
     __extends(SubscriptionsApiEnable2Response, _super);
     function SubscriptionsApiEnable2Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SubscriptionsApiEnable2Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SubscriptionsApiEnable2Response.prototype, "statusCode", void 0);
     return SubscriptionsApiEnable2Response;
-}(SpeakeasyBase));
-export { SubscriptionsApiEnable2Response };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionsApiEnable2Response = SubscriptionsApiEnable2Response;

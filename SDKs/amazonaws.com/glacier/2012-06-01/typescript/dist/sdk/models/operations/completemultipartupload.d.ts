@@ -20,7 +20,7 @@ export declare class CompleteMultipartUploadRequest extends SpeakeasyBase {
     headers: CompleteMultipartUploadHeaders;
 }
 export declare class CompleteMultipartUploadResponse extends SpeakeasyBase {
-    archiveCreationOutput?: Map<string, any>;
+    archiveCreationOutput?: Record<string, any>;
     contentType: string;
     invalidParameterValueException?: any;
     missingParameterValueException?: any;

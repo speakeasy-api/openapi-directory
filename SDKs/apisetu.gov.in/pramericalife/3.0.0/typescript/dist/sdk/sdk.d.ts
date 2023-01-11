@@ -1,22 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { ApIs } from "./apis";
 export declare const ServerList: readonly ["https://apisetu.gov.in/pramericalife/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    apIs: ApIs;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * licer - Insurance Policy - Life
-     *
-     * API to verify Insurance Policy - Life.
-    **/
-    licer(req: operations.LicerRequest, config?: AxiosRequestConfig): Promise<operations.LicerResponse>;
+    constructor(props: SDKProps);
 }
-export {};

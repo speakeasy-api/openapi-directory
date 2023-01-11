@@ -35,10 +35,10 @@ export class RetrieveApiSecretResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveApiSecret401ApplicationJsonAny?: any;
+  retrieveAPISecret401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  retrieveApiSecret404ApplicationJsonOneOf?: any;
+  retrieveAPISecret404ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   secretInfo?: shared.SecretInfo;

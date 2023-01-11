@@ -52,7 +52,7 @@ export class DeleteRoutingControlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRoutingControlResponse?: Map<string, any>;
+  deleteRoutingControlResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

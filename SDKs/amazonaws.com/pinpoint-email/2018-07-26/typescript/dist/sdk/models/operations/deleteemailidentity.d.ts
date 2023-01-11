@@ -19,7 +19,7 @@ export declare class DeleteEmailIdentityResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    deleteEmailIdentityResponse?: Map<string, any>;
+    deleteEmailIdentityResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

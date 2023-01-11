@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpConfig } from "./ipconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GclbTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipconfig_1 = require("./ipconfig");
 // GclbTarget
 /**
  * Describes a Target Proxy that uses this Certificate Map.
@@ -34,17 +37,17 @@ var GclbTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipConfigs", elemType: IpConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipConfigs", elemType: ipconfig_1.IpConfig }),
         __metadata("design:type", Array)
     ], GclbTarget.prototype, "ipConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetHttpsProxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetHttpsProxy" }),
         __metadata("design:type", String)
     ], GclbTarget.prototype, "targetHttpsProxy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetSslProxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetSslProxy" }),
         __metadata("design:type", String)
     ], GclbTarget.prototype, "targetSslProxy", void 0);
     return GclbTarget;
-}(SpeakeasyBase));
-export { GclbTarget };
+}(utils_1.SpeakeasyBase));
+exports.GclbTarget = GclbTarget;

@@ -1,7 +1,10 @@
-export var AutomaticFailoverStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutomaticFailoverStatusEnum = void 0;
+var AutomaticFailoverStatusEnum;
 (function (AutomaticFailoverStatusEnum) {
     AutomaticFailoverStatusEnum["Enabled"] = "enabled";
     AutomaticFailoverStatusEnum["Disabled"] = "disabled";
     AutomaticFailoverStatusEnum["Enabling"] = "enabling";
     AutomaticFailoverStatusEnum["Disabling"] = "disabling";
-})(AutomaticFailoverStatusEnum || (AutomaticFailoverStatusEnum = {}));
+})(AutomaticFailoverStatusEnum = exports.AutomaticFailoverStatusEnum || (exports.AutomaticFailoverStatusEnum = {}));

@@ -47,23 +47,23 @@ export class UpdateInvestorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateInvestor400ApplicationJsonAny?: any;
+  updateInvestor400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor401ApplicationJsonAny?: any;
+  updateInvestor401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor403ApplicationJsonAny?: any;
+  updateInvestor403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor404ApplicationJsonAny?: any;
+  updateInvestor404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor409ApplicationJsonAny?: any;
+  updateInvestor409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor429ApplicationJsonAny?: any;
+  updateInvestor429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updateInvestor500ApplicationJsonAny?: any;
+  updateInvestor500ApplicationJSONAny?: any;
 }

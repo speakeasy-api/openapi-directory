@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.XmlFormatSchema = exports.XmlFormatSchemaSignature = exports.XmlFormatSchemaSignatureKeyInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var XmlFormatSchemaSignatureKeyInfo = /** @class */ (function (_super) {
     __extends(XmlFormatSchemaSignatureKeyInfo, _super);
     function XmlFormatSchemaSignatureKeyInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], XmlFormatSchemaSignatureKeyInfo.prototype, "x509Data", void 0);
     return XmlFormatSchemaSignatureKeyInfo;
-}(SpeakeasyBase));
-export { XmlFormatSchemaSignatureKeyInfo };
+}(utils_1.SpeakeasyBase));
+exports.XmlFormatSchemaSignatureKeyInfo = XmlFormatSchemaSignatureKeyInfo;
 var XmlFormatSchemaSignature = /** @class */ (function (_super) {
     __extends(XmlFormatSchemaSignature, _super);
     function XmlFormatSchemaSignature() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", XmlFormatSchemaSignatureKeyInfo)
     ], XmlFormatSchemaSignature.prototype, "keyInfo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], XmlFormatSchemaSignature.prototype, "signatureValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], XmlFormatSchemaSignature.prototype, "signedInfo", void 0);
     return XmlFormatSchemaSignature;
-}(SpeakeasyBase));
-export { XmlFormatSchemaSignature };
+}(utils_1.SpeakeasyBase));
+exports.XmlFormatSchemaSignature = XmlFormatSchemaSignature;
 var XmlFormatSchema = /** @class */ (function (_super) {
     __extends(XmlFormatSchema, _super);
     function XmlFormatSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], XmlFormatSchema.prototype, "certificateData", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", XmlFormatSchemaSignature)
     ], XmlFormatSchema.prototype, "signature", void 0);
     return XmlFormatSchema;
-}(SpeakeasyBase));
-export { XmlFormatSchema };
+}(utils_1.SpeakeasyBase));
+exports.XmlFormatSchema = XmlFormatSchema;

@@ -22,5 +22,5 @@ export class GetBulkDeploymentStatusResponse extends SpeakeasyBase {
   errorMessage?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

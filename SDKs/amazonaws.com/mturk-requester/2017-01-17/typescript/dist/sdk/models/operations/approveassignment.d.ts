@@ -18,7 +18,7 @@ export declare class ApproveAssignmentRequest extends SpeakeasyBase {
     request: shared.ApproveAssignmentRequest;
 }
 export declare class ApproveAssignmentResponse extends SpeakeasyBase {
-    approveAssignmentResponse?: Map<string, any>;
+    approveAssignmentResponse?: Record<string, any>;
     contentType: string;
     requestError?: any;
     serviceFault?: any;

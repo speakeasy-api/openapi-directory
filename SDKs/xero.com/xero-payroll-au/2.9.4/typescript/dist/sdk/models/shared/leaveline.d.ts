@@ -9,6 +9,6 @@ export declare class LeaveLine extends SpeakeasyBase {
     entitlementFinalPayPayoutType?: EntitlementFinalPayPayoutTypeEnum;
     fullTimeNumberOfUnitsPerPeriod?: number;
     includeSuperannuationGuaranteeContribution?: boolean;
-    leaveTypeId?: string;
+    leaveTypeID?: string;
     numberOfUnits?: number;
 }

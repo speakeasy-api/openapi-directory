@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Domain = void 0;
+var utils_1 = require("../../../internal/utils");
 var Domain = /** @class */ (function (_super) {
     __extends(Domain, _super);
     function Domain() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=correctCname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=correctCname" }),
         __metadata("design:type", String)
     ], Domain.prototype, "correctCname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Domain.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Domain.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Domain.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isResolving" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isResolving" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isResolving", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSslEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSslEnabled" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isSslEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSslOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSslOnly" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isSslOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUsedForBlogPost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUsedForBlogPost" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isUsedForBlogPost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUsedForEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUsedForEmail" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isUsedForEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUsedForKnowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUsedForKnowledge" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isUsedForKnowledge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUsedForLandingPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUsedForLandingPage" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isUsedForLandingPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isUsedForSitePage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isUsedForSitePage" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "isUsedForSitePage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manuallyMarkedAsResolving" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manuallyMarkedAsResolving" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "manuallyMarkedAsResolving", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryBlogPost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryBlogPost" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "primaryBlogPost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryEmail" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "primaryEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryKnowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryKnowledge" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "primaryKnowledge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryLandingPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryLandingPage" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "primaryLandingPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primarySitePage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primarySitePage" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "primarySitePage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryToDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryToDomain" }),
         __metadata("design:type", String)
     ], Domain.prototype, "secondaryToDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Domain.prototype, "updated", void 0);
     return Domain;
-}(SpeakeasyBase));
-export { Domain };
+}(utils_1.SpeakeasyBase));
+exports.Domain = Domain;

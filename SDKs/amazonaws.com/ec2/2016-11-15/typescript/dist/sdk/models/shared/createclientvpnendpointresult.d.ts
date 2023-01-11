@@ -1,7 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnEndpointStatus } from "./clientvpnendpointstatus";
+/**
+ * The current state of the Client VPN endpoint.
+**/
+export declare class CreateClientVpnEndpointResultStatus extends SpeakeasyBase {
+    code?: Record<string, any>;
+    message?: Record<string, any>;
+}
 export declare class CreateClientVpnEndpointResult extends SpeakeasyBase {
-    clientVpnEndpointId?: string;
-    dnsName?: string;
-    status?: ClientVpnEndpointStatus;
+    clientVpnEndpointId?: Record<string, any>;
+    dnsName?: Record<string, any>;
+    status?: CreateClientVpnEndpointResultStatus;
 }

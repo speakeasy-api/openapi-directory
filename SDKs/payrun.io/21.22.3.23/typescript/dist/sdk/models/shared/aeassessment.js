@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AeAssessmentAeAssessmentAssessmentCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AeAssessment = exports.AeAssessmentAeAssessment = exports.AeAssessmentAeAssessmentAssessmentResultEnum = exports.AeAssessmentAeAssessmentAssessmentOverrideEnum = exports.AeAssessmentAeAssessmentAssessmentEventEnum = exports.AeAssessmentAeAssessmentAssessmentCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AeAssessmentAeAssessmentAssessmentCodeEnum;
 (function (AeAssessmentAeAssessmentAssessmentCodeEnum) {
     AeAssessmentAeAssessmentAssessmentCodeEnum["Excluded"] = "Excluded";
     AeAssessmentAeAssessmentAssessmentCodeEnum["EligibleJobHolder"] = "EligibleJobHolder";
     AeAssessmentAeAssessmentAssessmentCodeEnum["NonEligibleJobHolder"] = "NonEligibleJobHolder";
     AeAssessmentAeAssessmentAssessmentCodeEnum["EntitledWorker"] = "EntitledWorker";
-})(AeAssessmentAeAssessmentAssessmentCodeEnum || (AeAssessmentAeAssessmentAssessmentCodeEnum = {}));
-export var AeAssessmentAeAssessmentAssessmentEventEnum;
+})(AeAssessmentAeAssessmentAssessmentCodeEnum = exports.AeAssessmentAeAssessmentAssessmentCodeEnum || (exports.AeAssessmentAeAssessmentAssessmentCodeEnum = {}));
+var AeAssessmentAeAssessmentAssessmentEventEnum;
 (function (AeAssessmentAeAssessmentAssessmentEventEnum) {
     AeAssessmentAeAssessmentAssessmentEventEnum["NonEnrolmentEvent"] = "NonEnrolmentEvent";
     AeAssessmentAeAssessmentAssessmentEventEnum["AutomaticEnrolment"] = "AutomaticEnrolment";
     AeAssessmentAeAssessmentAssessmentEventEnum["OptIn"] = "OptIn";
     AeAssessmentAeAssessmentAssessmentEventEnum["VoluntaryJoiner"] = "VoluntaryJoiner";
     AeAssessmentAeAssessmentAssessmentEventEnum["ContractualEnrolment"] = "ContractualEnrolment";
-})(AeAssessmentAeAssessmentAssessmentEventEnum || (AeAssessmentAeAssessmentAssessmentEventEnum = {}));
-export var AeAssessmentAeAssessmentAssessmentOverrideEnum;
+})(AeAssessmentAeAssessmentAssessmentEventEnum = exports.AeAssessmentAeAssessmentAssessmentEventEnum || (exports.AeAssessmentAeAssessmentAssessmentEventEnum = {}));
+var AeAssessmentAeAssessmentAssessmentOverrideEnum;
 (function (AeAssessmentAeAssessmentAssessmentOverrideEnum) {
     AeAssessmentAeAssessmentAssessmentOverrideEnum["None"] = "None";
     AeAssessmentAeAssessmentAssessmentOverrideEnum["OptOut"] = "OptOut";
@@ -48,87 +51,87 @@ export var AeAssessmentAeAssessmentAssessmentOverrideEnum;
     AeAssessmentAeAssessmentAssessmentOverrideEnum["CeasedMembership"] = "CeasedMembership";
     AeAssessmentAeAssessmentAssessmentOverrideEnum["Leaver"] = "Leaver";
     AeAssessmentAeAssessmentAssessmentOverrideEnum["Excluded"] = "Excluded";
-})(AeAssessmentAeAssessmentAssessmentOverrideEnum || (AeAssessmentAeAssessmentAssessmentOverrideEnum = {}));
-export var AeAssessmentAeAssessmentAssessmentResultEnum;
+})(AeAssessmentAeAssessmentAssessmentOverrideEnum = exports.AeAssessmentAeAssessmentAssessmentOverrideEnum || (exports.AeAssessmentAeAssessmentAssessmentOverrideEnum = {}));
+var AeAssessmentAeAssessmentAssessmentResultEnum;
 (function (AeAssessmentAeAssessmentAssessmentResultEnum) {
     AeAssessmentAeAssessmentAssessmentResultEnum["Inconclusive"] = "Inconclusive";
     AeAssessmentAeAssessmentAssessmentResultEnum["NoChange"] = "NoChange";
     AeAssessmentAeAssessmentAssessmentResultEnum["Enrol"] = "Enrol";
     AeAssessmentAeAssessmentAssessmentResultEnum["Exit"] = "Exit";
-})(AeAssessmentAeAssessmentAssessmentResultEnum || (AeAssessmentAeAssessmentAssessmentResultEnum = {}));
+})(AeAssessmentAeAssessmentAssessmentResultEnum = exports.AeAssessmentAeAssessmentAssessmentResultEnum || (exports.AeAssessmentAeAssessmentAssessmentResultEnum = {}));
 var AeAssessmentAeAssessment = /** @class */ (function (_super) {
     __extends(AeAssessmentAeAssessment, _super);
     function AeAssessmentAeAssessment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Age" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Age" }),
         __metadata("design:type", Number)
     ], AeAssessmentAeAssessment.prototype, "age", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentCode" }),
         __metadata("design:type", String)
     ], AeAssessmentAeAssessment.prototype, "assessmentCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentDate" }),
         __metadata("design:type", Date)
     ], AeAssessmentAeAssessment.prototype, "assessmentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentEvent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentEvent" }),
         __metadata("design:type", String)
     ], AeAssessmentAeAssessment.prototype, "assessmentEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentOverride" }),
         __metadata("design:type", String)
     ], AeAssessmentAeAssessment.prototype, "assessmentOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentResult" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentResult" }),
         __metadata("design:type", String)
     ], AeAssessmentAeAssessment.prototype, "assessmentResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsMemberOfAlternativePensionScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsMemberOfAlternativePensionScheme" }),
         __metadata("design:type", Boolean)
     ], AeAssessmentAeAssessment.prototype, "isMemberOfAlternativePensionScheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptOutWindowEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptOutWindowEndDate" }),
         __metadata("design:type", Date)
     ], AeAssessmentAeAssessment.prototype, "optOutWindowEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualifyingEarnings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualifyingEarnings" }),
         __metadata("design:type", Number)
     ], AeAssessmentAeAssessment.prototype, "qualifyingEarnings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReenrolmentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReenrolmentDate" }),
         __metadata("design:type", Date)
     ], AeAssessmentAeAssessment.prototype, "reenrolmentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatePensionAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatePensionAge" }),
         __metadata("design:type", Number)
     ], AeAssessmentAeAssessment.prototype, "statePensionAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatePensionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatePensionDate" }),
         __metadata("design:type", Date)
     ], AeAssessmentAeAssessment.prototype, "statePensionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxPeriod" }),
         __metadata("design:type", Number)
     ], AeAssessmentAeAssessment.prototype, "taxPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], AeAssessmentAeAssessment.prototype, "taxYear", void 0);
     return AeAssessmentAeAssessment;
-}(SpeakeasyBase));
-export { AeAssessmentAeAssessment };
+}(utils_1.SpeakeasyBase));
+exports.AeAssessmentAeAssessment = AeAssessmentAeAssessment;
 var AeAssessment = /** @class */ (function (_super) {
     __extends(AeAssessment, _super);
     function AeAssessment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AEAssessment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AEAssessment" }),
         __metadata("design:type", AeAssessmentAeAssessment)
     ], AeAssessment.prototype, "aeAssessment", void 0);
     return AeAssessment;
-}(SpeakeasyBase));
-export { AeAssessment };
+}(utils_1.SpeakeasyBase));
+exports.AeAssessment = AeAssessment;

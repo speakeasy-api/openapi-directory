@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
-import { SecretScanningAlertStateEnum } from "./secretscanningalertstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecretScanningAlert = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
+var secretscanningalertstateenum_1 = require("./secretscanningalertstateenum");
 var SecretScanningAlert = /** @class */ (function (_super) {
     __extends(SecretScanningAlert, _super);
     function SecretScanningAlert() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], SecretScanningAlert.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], SecretScanningAlert.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolved_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolved_at" }),
         __metadata("design:type", Date)
     ], SecretScanningAlert.prototype, "resolvedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolved_by" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolved_by" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], SecretScanningAlert.prototype, "resolvedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret_type" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "secretType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], SecretScanningAlert.prototype, "url", void 0);
     return SecretScanningAlert;
-}(SpeakeasyBase));
-export { SecretScanningAlert };
+}(utils_1.SpeakeasyBase));
+exports.SecretScanningAlert = SecretScanningAlert;

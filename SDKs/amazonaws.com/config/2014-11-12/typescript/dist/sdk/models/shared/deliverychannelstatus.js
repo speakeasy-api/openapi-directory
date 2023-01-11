@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigExportDeliveryInfo } from "./configexportdeliveryinfo";
-import { ConfigStreamDeliveryInfo } from "./configstreamdeliveryinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryChannelStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var configexportdeliveryinfo_1 = require("./configexportdeliveryinfo");
+var configstreamdeliveryinfo_1 = require("./configstreamdeliveryinfo");
 // DeliveryChannelStatus
 /**
  * <p>The status of a specified delivery channel.</p> <p>Valid values: <code>Success</code> | <code>Failure</code> </p>
@@ -35,21 +38,21 @@ var DeliveryChannelStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configHistoryDeliveryInfo" }),
-        __metadata("design:type", ConfigExportDeliveryInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configHistoryDeliveryInfo" }),
+        __metadata("design:type", configexportdeliveryinfo_1.ConfigExportDeliveryInfo)
     ], DeliveryChannelStatus.prototype, "configHistoryDeliveryInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configSnapshotDeliveryInfo" }),
-        __metadata("design:type", ConfigExportDeliveryInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configSnapshotDeliveryInfo" }),
+        __metadata("design:type", configexportdeliveryinfo_1.ConfigExportDeliveryInfo)
     ], DeliveryChannelStatus.prototype, "configSnapshotDeliveryInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configStreamDeliveryInfo" }),
-        __metadata("design:type", ConfigStreamDeliveryInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configStreamDeliveryInfo" }),
+        __metadata("design:type", configstreamdeliveryinfo_1.ConfigStreamDeliveryInfo)
     ], DeliveryChannelStatus.prototype, "configStreamDeliveryInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeliveryChannelStatus.prototype, "name", void 0);
     return DeliveryChannelStatus;
-}(SpeakeasyBase));
-export { DeliveryChannelStatus };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryChannelStatus = DeliveryChannelStatus;

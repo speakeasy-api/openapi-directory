@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DisapprovalReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Disapproval = exports.DisapprovalReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DisapprovalReasonEnum;
 (function (DisapprovalReasonEnum) {
     DisapprovalReasonEnum["LengthOfImageAnimation"] = "LENGTH_OF_IMAGE_ANIMATION";
     DisapprovalReasonEnum["BrokenUrl"] = "BROKEN_URL";
@@ -127,7 +130,7 @@ export var DisapprovalReasonEnum;
     DisapprovalReasonEnum["TemporaryPause"] = "TEMPORARY_PAUSE";
     DisapprovalReasonEnum["BailBonds"] = "BAIL_BONDS";
     DisapprovalReasonEnum["ExperimentalMedicalTreatment"] = "EXPERIMENTAL_MEDICAL_TREATMENT";
-})(DisapprovalReasonEnum || (DisapprovalReasonEnum = {}));
+})(DisapprovalReasonEnum = exports.DisapprovalReasonEnum || (exports.DisapprovalReasonEnum = {}));
 // Disapproval
 /**
  * Output only. The reason and details for a disapproval.
@@ -138,13 +141,13 @@ var Disapproval = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", Array)
     ], Disapproval.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], Disapproval.prototype, "reason", void 0);
     return Disapproval;
-}(SpeakeasyBase));
-export { Disapproval };
+}(utils_1.SpeakeasyBase));
+exports.Disapproval = Disapproval;

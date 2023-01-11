@@ -52,7 +52,7 @@ export class DisconnectParticipantResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disconnectParticipantResponse?: Map<string, any>;
+  disconnectParticipantResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

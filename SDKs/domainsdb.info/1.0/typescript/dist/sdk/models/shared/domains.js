@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MxRecords } from "./mxrecords";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Domains = void 0;
+var utils_1 = require("../../../internal/utils");
+var mxrecords_1 = require("./mxrecords");
 var Domains = /** @class */ (function (_super) {
     __extends(Domains, _super);
     function Domains() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=A" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=A" }),
         __metadata("design:type", Array)
     ], Domains.prototype, "a", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CNAME" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CNAME" }),
         __metadata("design:type", Array)
     ], Domains.prototype, "cname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MX", elemType: MxRecords }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MX", elemType: mxrecords_1.MxRecords }),
         __metadata("design:type", Array)
     ], Domains.prototype, "mx", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NS" }),
         __metadata("design:type", Array)
     ], Domains.prototype, "ns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TXT" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TXT" }),
         __metadata("design:type", Array)
     ], Domains.prototype, "txt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], Domains.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=create_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=create_date" }),
         __metadata("design:type", Date)
     ], Domains.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Domains.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDead" }),
         __metadata("design:type", String)
     ], Domains.prototype, "isDead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=update_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=update_date" }),
         __metadata("design:type", Date)
     ], Domains.prototype, "updateDate", void 0);
     return Domains;
-}(SpeakeasyBase));
-export { Domains };
+}(utils_1.SpeakeasyBase));
+exports.Domains = Domains;

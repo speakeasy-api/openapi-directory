@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayPrefixListReference } from "./transitgatewayprefixlistreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyTransitGatewayPrefixListReferenceResult = exports.ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference = exports.ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment
+/**
+ * Information about the transit gateway attachment.
+**/
+var ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment = /** @class */ (function (_super) {
+    __extends(ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment, _super);
+    function ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment.prototype, "resourceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment.prototype, "resourceType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment.prototype, "transitGatewayAttachmentId", void 0);
+    return ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment;
+}(utils_1.SpeakeasyBase));
+exports.ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment = ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment;
+// ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference
+/**
+ * Information about the prefix list reference.
+**/
+var ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference = /** @class */ (function (_super) {
+    __extends(ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference, _super);
+    function ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "blackhole", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "prefixListId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "prefixListOwnerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReferenceTransitGatewayAttachment)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "transitGatewayAttachment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference.prototype, "transitGatewayRouteTableId", void 0);
+    return ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference;
+}(utils_1.SpeakeasyBase));
+exports.ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference = ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference;
 var ModifyTransitGatewayPrefixListReferenceResult = /** @class */ (function (_super) {
     __extends(ModifyTransitGatewayPrefixListReferenceResult, _super);
     function ModifyTransitGatewayPrefixListReferenceResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayPrefixListReference)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference)
     ], ModifyTransitGatewayPrefixListReferenceResult.prototype, "transitGatewayPrefixListReference", void 0);
     return ModifyTransitGatewayPrefixListReferenceResult;
-}(SpeakeasyBase));
-export { ModifyTransitGatewayPrefixListReferenceResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyTransitGatewayPrefixListReferenceResult = ModifyTransitGatewayPrefixListReferenceResult;

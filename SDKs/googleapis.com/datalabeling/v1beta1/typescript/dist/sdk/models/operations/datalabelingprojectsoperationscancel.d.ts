@@ -27,6 +27,6 @@ export declare class DatalabelingProjectsOperationsCancelRequest extends Speakea
 }
 export declare class DatalabelingProjectsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

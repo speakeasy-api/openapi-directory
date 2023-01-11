@@ -37,5 +37,5 @@ export class DeleteMockResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteMock200ApplicationJsonObject?: DeleteMock200ApplicationJson;
+  deleteMock200ApplicationJSONObject?: DeleteMock200ApplicationJson;
 }

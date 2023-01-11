@@ -37,5 +37,5 @@ export declare class UpdateNetworkSwitchAccessControlListsRequest extends Speake
 export declare class UpdateNetworkSwitchAccessControlListsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchAccessControlLists200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchAccessControlLists200ApplicationJSONObject?: Record<string, any>;
 }

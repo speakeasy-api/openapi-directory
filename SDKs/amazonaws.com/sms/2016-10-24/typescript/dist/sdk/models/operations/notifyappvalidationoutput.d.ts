@@ -22,7 +22,7 @@ export declare class NotifyAppValidationOutputResponse extends SpeakeasyBase {
     internalError?: any;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
-    notifyAppValidationOutputResponse?: Map<string, any>;
+    notifyAppValidationOutputResponse?: Record<string, any>;
     operationNotPermittedException?: any;
     statusCode: number;
     unauthorizedOperationException?: any;

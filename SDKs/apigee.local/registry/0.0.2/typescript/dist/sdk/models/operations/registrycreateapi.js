@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryCreateApiResponse = exports.RegistryCreateApiRequest = exports.RegistryCreateApiQueryParams = exports.RegistryCreateApiPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryCreateApiPathParams = /** @class */ (function (_super) {
     __extends(RegistryCreateApiPathParams, _super);
     function RegistryCreateApiPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryCreateApiPathParams.prototype, "project", void 0);
     return RegistryCreateApiPathParams;
-}(SpeakeasyBase));
-export { RegistryCreateApiPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCreateApiPathParams = RegistryCreateApiPathParams;
 var RegistryCreateApiQueryParams = /** @class */ (function (_super) {
     __extends(RegistryCreateApiQueryParams, _super);
     function RegistryCreateApiQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_id" }),
         __metadata("design:type", String)
     ], RegistryCreateApiQueryParams.prototype, "apiId", void 0);
     return RegistryCreateApiQueryParams;
-}(SpeakeasyBase));
-export { RegistryCreateApiQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCreateApiQueryParams = RegistryCreateApiQueryParams;
 var RegistryCreateApiRequest = /** @class */ (function (_super) {
     __extends(RegistryCreateApiRequest, _super);
     function RegistryCreateApiRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryCreateApiPathParams)
     ], RegistryCreateApiRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryCreateApiQueryParams)
     ], RegistryCreateApiRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], RegistryCreateApiRequest.prototype, "request", void 0);
     return RegistryCreateApiRequest;
-}(SpeakeasyBase));
-export { RegistryCreateApiRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCreateApiRequest = RegistryCreateApiRequest;
 var RegistryCreateApiResponse = /** @class */ (function (_super) {
     __extends(RegistryCreateApiResponse, _super);
     function RegistryCreateApiResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryCreateApiResponse.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryCreateApiResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryCreateApiResponse.prototype, "statusCode", void 0);
     return RegistryCreateApiResponse;
-}(SpeakeasyBase));
-export { RegistryCreateApiResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCreateApiResponse = RegistryCreateApiResponse;

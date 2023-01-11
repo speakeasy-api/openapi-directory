@@ -8,15 +8,10 @@ export class OrgsListOutsideCollaboratorsPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum OrgsListOutsideCollaboratorsFilterEnum {
-    TwofaDisabled = "2fa_disabled",
-    All = "all"
-}
-
 
 export class OrgsListOutsideCollaboratorsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: OrgsListOutsideCollaboratorsFilterEnum;
+  filter?: shared.OrgEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -40,7 +35,7 @@ export class OrgsListOutsideCollaboratorsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -68,5 +68,5 @@ export class GetRepositoriesWorkspaceRepoSlugDiffSpecResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

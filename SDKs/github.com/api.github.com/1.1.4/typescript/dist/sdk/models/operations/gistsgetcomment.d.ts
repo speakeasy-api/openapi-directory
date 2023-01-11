@@ -22,5 +22,5 @@ export declare class GistsGetCommentResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     gistComment?: shared.GistComment;
-    gistsGetComment403ApplicationJsonObject?: GistsGetComment403ApplicationJson;
+    gistsGetComment403ApplicationJSONObject?: GistsGetComment403ApplicationJson;
 }

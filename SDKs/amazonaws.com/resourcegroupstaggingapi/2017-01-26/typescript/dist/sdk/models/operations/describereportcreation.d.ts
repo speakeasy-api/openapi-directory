@@ -15,7 +15,7 @@ export declare class DescribeReportCreationHeaders extends SpeakeasyBase {
 }
 export declare class DescribeReportCreationRequest extends SpeakeasyBase {
     headers: DescribeReportCreationHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DescribeReportCreationResponse extends SpeakeasyBase {
     constraintViolationException?: any;

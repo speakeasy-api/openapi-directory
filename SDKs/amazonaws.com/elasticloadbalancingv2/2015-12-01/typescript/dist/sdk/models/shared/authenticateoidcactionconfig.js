@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthenticateOidcActionConditionalBehaviorEnumEnum } from "./authenticateoidcactionconditionalbehaviorenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticateOidcActionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var authenticateoidcactionconditionalbehaviorenumenum_1 = require("./authenticateoidcactionconditionalbehaviorenumenum");
 // AuthenticateOidcActionConfig
 /**
  * Request parameters when using an identity provider (IdP) that is compliant with OpenID Connect (OIDC) to authenticate users.
@@ -34,53 +37,53 @@ var AuthenticateOidcActionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AuthenticateOidcActionConfig.prototype, "authenticationRequestExtraParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "authorizationEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "onUnauthenticatedRequest", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "sessionCookieName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AuthenticateOidcActionConfig.prototype, "sessionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "tokenEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], AuthenticateOidcActionConfig.prototype, "useExistingClientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateOidcActionConfig.prototype, "userInfoEndpoint", void 0);
     return AuthenticateOidcActionConfig;
-}(SpeakeasyBase));
-export { AuthenticateOidcActionConfig };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateOidcActionConfig = AuthenticateOidcActionConfig;

@@ -10,7 +10,7 @@ export class CreateAuthorUsingPostQueryParams extends SpeakeasyBase {
 
 export class CreateAuthorUsingPost200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class CreateAuthorUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateAuthorUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateAuthorUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateAuthorUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createAuthorUsingPost200ApplicationJsonObject?: CreateAuthorUsingPost200ApplicationJson;
+  createAuthorUsingPOST200ApplicationJSONObject?: CreateAuthorUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingPost400ApplicationJsonObject?: CreateAuthorUsingPost400ApplicationJson;
+  createAuthorUsingPOST400ApplicationJSONObject?: CreateAuthorUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingPost401ApplicationJsonObject?: CreateAuthorUsingPost401ApplicationJson;
+  createAuthorUsingPOST401ApplicationJSONObject?: CreateAuthorUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingPost500ApplicationJsonObject?: CreateAuthorUsingPost500ApplicationJson;
+  createAuthorUsingPOST500ApplicationJSONObject?: CreateAuthorUsingPost500ApplicationJson;
 }

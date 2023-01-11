@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingFinance = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListingFinance = /** @class */ (function (_super) {
     __extends(ListingFinance, _super);
     function ListingFinance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=down_payment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=down_payment" }),
         __metadata("design:type", Number)
     ], ListingFinance.prototype, "downPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=down_payment_percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=down_payment_percentage" }),
         __metadata("design:type", Number)
     ], ListingFinance.prototype, "downPaymentPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_monthly_payment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_monthly_payment" }),
         __metadata("design:type", Number)
     ], ListingFinance.prototype, "estimatedMonthlyPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loan_apr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loan_apr" }),
         __metadata("design:type", Number)
     ], ListingFinance.prototype, "loanApr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loan_term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loan_term" }),
         __metadata("design:type", Number)
     ], ListingFinance.prototype, "loanTerm", void 0);
     return ListingFinance;
-}(SpeakeasyBase));
-export { ListingFinance };
+}(utils_1.SpeakeasyBase));
+exports.ListingFinance = ListingFinance;

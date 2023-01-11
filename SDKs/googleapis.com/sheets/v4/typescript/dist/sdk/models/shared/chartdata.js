@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { ChartGroupRule } from "./chartgrouprule";
-import { ChartSourceRange } from "./chartsourcerange";
-export var ChartDataAggregateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChartData = exports.ChartDataAggregateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var chartgrouprule_1 = require("./chartgrouprule");
+var chartsourcerange_1 = require("./chartsourcerange");
+var ChartDataAggregateTypeEnum;
 (function (ChartDataAggregateTypeEnum) {
     ChartDataAggregateTypeEnum["ChartAggregateTypeUnspecified"] = "CHART_AGGREGATE_TYPE_UNSPECIFIED";
     ChartDataAggregateTypeEnum["Average"] = "AVERAGE";
@@ -35,7 +38,7 @@ export var ChartDataAggregateTypeEnum;
     ChartDataAggregateTypeEnum["Median"] = "MEDIAN";
     ChartDataAggregateTypeEnum["Min"] = "MIN";
     ChartDataAggregateTypeEnum["Sum"] = "SUM";
-})(ChartDataAggregateTypeEnum || (ChartDataAggregateTypeEnum = {}));
+})(ChartDataAggregateTypeEnum = exports.ChartDataAggregateTypeEnum || (exports.ChartDataAggregateTypeEnum = {}));
 // ChartData
 /**
  * The data included in a domain or series.
@@ -46,21 +49,21 @@ var ChartData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregateType" }),
         __metadata("design:type", String)
     ], ChartData.prototype, "aggregateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], ChartData.prototype, "columnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupRule" }),
-        __metadata("design:type", ChartGroupRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupRule" }),
+        __metadata("design:type", chartgrouprule_1.ChartGroupRule)
     ], ChartData.prototype, "groupRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceRange" }),
-        __metadata("design:type", ChartSourceRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceRange" }),
+        __metadata("design:type", chartsourcerange_1.ChartSourceRange)
     ], ChartData.prototype, "sourceRange", void 0);
     return ChartData;
-}(SpeakeasyBase));
-export { ChartData };
+}(utils_1.SpeakeasyBase));
+exports.ChartData = ChartData;

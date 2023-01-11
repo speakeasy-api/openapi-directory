@@ -19,5 +19,5 @@ export declare class GetUserTaskListForUserResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getUserTaskListForUser200ApplicationJsonObject?: GetUserTaskListForUser200ApplicationJson;
+    getUserTaskListForUser200ApplicationJSONObject?: GetUserTaskListForUser200ApplicationJson;
 }

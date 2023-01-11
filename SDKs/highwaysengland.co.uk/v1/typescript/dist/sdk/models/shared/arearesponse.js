@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Area } from "./area";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AreaResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var area_1 = require("./area");
 var AreaResponse = /** @class */ (function (_super) {
     __extends(AreaResponse, _super);
     function AreaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=areas", elemType: Area }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=areas", elemType: area_1.Area }),
         __metadata("design:type", Array)
     ], AreaResponse.prototype, "areas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=row_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row_count" }),
         __metadata("design:type", Number)
     ], AreaResponse.prototype, "rowCount", void 0);
     return AreaResponse;
-}(SpeakeasyBase));
-export { AreaResponse };
+}(utils_1.SpeakeasyBase));
+exports.AreaResponse = AreaResponse;

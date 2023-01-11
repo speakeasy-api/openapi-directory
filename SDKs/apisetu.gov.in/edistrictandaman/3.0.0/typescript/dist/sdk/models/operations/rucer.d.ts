@@ -105,11 +105,11 @@ export declare class RucerRequest extends SpeakeasyBase {
 export declare class RucerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    rucer400ApplicationJsonObject?: Rucer400ApplicationJson;
-    rucer401ApplicationJsonObject?: Rucer401ApplicationJson;
-    rucer404ApplicationJsonObject?: Rucer404ApplicationJson;
-    rucer500ApplicationJsonObject?: Rucer500ApplicationJson;
-    rucer502ApplicationJsonObject?: Rucer502ApplicationJson;
-    rucer503ApplicationJsonObject?: Rucer503ApplicationJson;
-    rucer504ApplicationJsonObject?: Rucer504ApplicationJson;
+    rucer400ApplicationJSONObject?: Rucer400ApplicationJson;
+    rucer401ApplicationJSONObject?: Rucer401ApplicationJson;
+    rucer404ApplicationJSONObject?: Rucer404ApplicationJson;
+    rucer500ApplicationJSONObject?: Rucer500ApplicationJson;
+    rucer502ApplicationJSONObject?: Rucer502ApplicationJson;
+    rucer503ApplicationJSONObject?: Rucer503ApplicationJson;
+    rucer504ApplicationJSONObject?: Rucer504ApplicationJson;
 }

@@ -518,7 +518,7 @@ export declare class CreatePayeesCsvRequest2 extends SpeakeasyBase {
     addressZipOrPostcode: string;
     challengeDescription?: string;
     challengeValue?: string;
-    companyEin?: string;
+    companyEIN?: string;
     companyName?: string;
     companyOperatingName?: string;
     email: string;

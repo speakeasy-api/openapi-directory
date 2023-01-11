@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,167 +14,192 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var PlusPeopleListByActivityCollectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlusPeopleListByActivityResponse = exports.PlusPeopleListByActivityRequest = exports.PlusPeopleListByActivitySecurity = exports.PlusPeopleListByActivitySecurityOption2 = exports.PlusPeopleListByActivitySecurityOption1 = exports.PlusPeopleListByActivityQueryParams = exports.PlusPeopleListByActivityPathParams = exports.PlusPeopleListByActivityCollectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var PlusPeopleListByActivityCollectionEnum;
 (function (PlusPeopleListByActivityCollectionEnum) {
     PlusPeopleListByActivityCollectionEnum["Plusoners"] = "plusoners";
     PlusPeopleListByActivityCollectionEnum["Resharers"] = "resharers";
-})(PlusPeopleListByActivityCollectionEnum || (PlusPeopleListByActivityCollectionEnum = {}));
+})(PlusPeopleListByActivityCollectionEnum = exports.PlusPeopleListByActivityCollectionEnum || (exports.PlusPeopleListByActivityCollectionEnum = {}));
 var PlusPeopleListByActivityPathParams = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivityPathParams, _super);
     function PlusPeopleListByActivityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=activityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=activityId" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityPathParams.prototype, "activityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityPathParams.prototype, "collection", void 0);
     return PlusPeopleListByActivityPathParams;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivityPathParams = PlusPeopleListByActivityPathParams;
 var PlusPeopleListByActivityQueryParams = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivityQueryParams, _super);
     function PlusPeopleListByActivityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], PlusPeopleListByActivityQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], PlusPeopleListByActivityQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityQueryParams.prototype, "userIp", void 0);
     return PlusPeopleListByActivityQueryParams;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivityQueryParams = PlusPeopleListByActivityQueryParams;
 var PlusPeopleListByActivitySecurityOption1 = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivitySecurityOption1, _super);
     function PlusPeopleListByActivitySecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PlusPeopleListByActivitySecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PlusPeopleListByActivitySecurityOption1.prototype, "oauth2c", void 0);
     return PlusPeopleListByActivitySecurityOption1;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivitySecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivitySecurityOption1 = PlusPeopleListByActivitySecurityOption1;
 var PlusPeopleListByActivitySecurityOption2 = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivitySecurityOption2, _super);
     function PlusPeopleListByActivitySecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], PlusPeopleListByActivitySecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], PlusPeopleListByActivitySecurityOption2.prototype, "oauth2c", void 0);
     return PlusPeopleListByActivitySecurityOption2;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivitySecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivitySecurityOption2 = PlusPeopleListByActivitySecurityOption2;
 var PlusPeopleListByActivitySecurity = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivitySecurity, _super);
     function PlusPeopleListByActivitySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PlusPeopleListByActivitySecurityOption1)
     ], PlusPeopleListByActivitySecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", PlusPeopleListByActivitySecurityOption2)
     ], PlusPeopleListByActivitySecurity.prototype, "option2", void 0);
     return PlusPeopleListByActivitySecurity;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivitySecurity };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivitySecurity = PlusPeopleListByActivitySecurity;
 var PlusPeopleListByActivityRequest = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivityRequest, _super);
     function PlusPeopleListByActivityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlusPeopleListByActivityPathParams)
     ], PlusPeopleListByActivityRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlusPeopleListByActivityQueryParams)
     ], PlusPeopleListByActivityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlusPeopleListByActivitySecurity)
     ], PlusPeopleListByActivityRequest.prototype, "security", void 0);
     return PlusPeopleListByActivityRequest;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivityRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivityRequest = PlusPeopleListByActivityRequest;
 var PlusPeopleListByActivityResponse = /** @class */ (function (_super) {
     __extends(PlusPeopleListByActivityResponse, _super);
     function PlusPeopleListByActivityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlusPeopleListByActivityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PeopleFeed)
     ], PlusPeopleListByActivityResponse.prototype, "peopleFeed", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlusPeopleListByActivityResponse.prototype, "statusCode", void 0);
     return PlusPeopleListByActivityResponse;
-}(SpeakeasyBase));
-export { PlusPeopleListByActivityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlusPeopleListByActivityResponse = PlusPeopleListByActivityResponse;

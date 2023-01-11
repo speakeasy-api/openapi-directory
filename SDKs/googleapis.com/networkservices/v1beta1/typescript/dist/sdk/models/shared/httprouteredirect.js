@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HttpRouteRedirectResponseCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteRedirect = exports.HttpRouteRedirectResponseCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HttpRouteRedirectResponseCodeEnum;
 (function (HttpRouteRedirectResponseCodeEnum) {
     HttpRouteRedirectResponseCodeEnum["ResponseCodeUnspecified"] = "RESPONSE_CODE_UNSPECIFIED";
     HttpRouteRedirectResponseCodeEnum["MovedPermanentlyDefault"] = "MOVED_PERMANENTLY_DEFAULT";
@@ -31,7 +34,7 @@ export var HttpRouteRedirectResponseCodeEnum;
     HttpRouteRedirectResponseCodeEnum["SeeOther"] = "SEE_OTHER";
     HttpRouteRedirectResponseCodeEnum["TemporaryRedirect"] = "TEMPORARY_REDIRECT";
     HttpRouteRedirectResponseCodeEnum["PermanentRedirect"] = "PERMANENT_REDIRECT";
-})(HttpRouteRedirectResponseCodeEnum || (HttpRouteRedirectResponseCodeEnum = {}));
+})(HttpRouteRedirectResponseCodeEnum = exports.HttpRouteRedirectResponseCodeEnum || (exports.HttpRouteRedirectResponseCodeEnum = {}));
 // HttpRouteRedirect
 /**
  * The specification for redirecting traffic.
@@ -42,33 +45,33 @@ var HttpRouteRedirect = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostRedirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostRedirect" }),
         __metadata("design:type", String)
     ], HttpRouteRedirect.prototype, "hostRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpsRedirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpsRedirect" }),
         __metadata("design:type", Boolean)
     ], HttpRouteRedirect.prototype, "httpsRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pathRedirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pathRedirect" }),
         __metadata("design:type", String)
     ], HttpRouteRedirect.prototype, "pathRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portRedirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portRedirect" }),
         __metadata("design:type", Number)
     ], HttpRouteRedirect.prototype, "portRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefixRewrite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefixRewrite" }),
         __metadata("design:type", String)
     ], HttpRouteRedirect.prototype, "prefixRewrite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseCode" }),
         __metadata("design:type", String)
     ], HttpRouteRedirect.prototype, "responseCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripQuery" }),
         __metadata("design:type", Boolean)
     ], HttpRouteRedirect.prototype, "stripQuery", void 0);
     return HttpRouteRedirect;
-}(SpeakeasyBase));
-export { HttpRouteRedirect };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteRedirect = HttpRouteRedirect;

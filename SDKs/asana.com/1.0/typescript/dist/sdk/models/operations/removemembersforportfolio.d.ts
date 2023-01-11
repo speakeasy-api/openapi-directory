@@ -11,7 +11,7 @@ export declare class RemoveMembersForPortfolioRequestBody extends SpeakeasyBase 
     data?: shared.RemoveMembersRequest;
 }
 export declare class RemoveMembersForPortfolio200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveMembersForPortfolioRequest extends SpeakeasyBase {
     pathParams: RemoveMembersForPortfolioPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveMembersForPortfolioResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeMembersForPortfolio200ApplicationJsonObject?: RemoveMembersForPortfolio200ApplicationJson;
+    removeMembersForPortfolio200ApplicationJSONObject?: RemoveMembersForPortfolio200ApplicationJson;
 }

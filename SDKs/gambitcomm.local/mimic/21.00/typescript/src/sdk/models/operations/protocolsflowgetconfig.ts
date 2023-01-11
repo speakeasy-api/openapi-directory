@@ -17,7 +17,7 @@ export class ProtocolSflowGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolSflowGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configSflow?: shared.ConfigSflow;
+  configSFLOW?: shared.ConfigSflow;
 
   @SpeakeasyMetadata()
   contentType: string;

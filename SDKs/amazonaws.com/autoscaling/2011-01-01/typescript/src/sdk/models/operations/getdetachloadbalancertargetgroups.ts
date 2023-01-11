@@ -18,7 +18,7 @@ export class GetDetachLoadBalancerTargetGroupsQueryParams extends SpeakeasyBase 
   autoScalingGroupName: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetGroupARNs" })
-  targetGroupArNs: string[];
+  targetGroupARNs: string[];
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetDetachLoadBalancerTargetGroupsVersionEnum;

@@ -14,5 +14,5 @@ export class NotificationConfiguration extends SpeakeasyBase {
   notificationType?: string;
 
   @SpeakeasyMetadata()
-  topicArn?: string;
+  topicARN?: string;
 }

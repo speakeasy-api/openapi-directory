@@ -49,7 +49,7 @@ export class DeleteObjectResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteObjectResponse?: Map<string, any>;
+  deleteObjectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerError?: any;

@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DestroyClusterPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
-export class DestroyClusterRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DestroyClusterPathParams;
-}
-
-
 export class DestroyCluster401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DestroyClusterRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DestroyClusterPathParams;
+}
+
+
 export class DestroyClusterResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  destroyCluster401ApplicationJsonObject?: DestroyCluster401ApplicationJson;
+  @SpeakeasyMetadata()
+  destroyCluster401ApplicationJSONObject?: DestroyCluster401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

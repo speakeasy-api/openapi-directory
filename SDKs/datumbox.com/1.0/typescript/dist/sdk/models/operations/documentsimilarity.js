@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentSimilarityResponse = exports.DocumentSimilarityRequest = exports.DocumentSimilarityRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var DocumentSimilarityRequestBody = /** @class */ (function (_super) {
     __extends(DocumentSimilarityRequestBody, _super);
     function DocumentSimilarityRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], DocumentSimilarityRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=copy;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=copy;" }),
         __metadata("design:type", String)
     ], DocumentSimilarityRequestBody.prototype, "copy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=original;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=original;" }),
         __metadata("design:type", String)
     ], DocumentSimilarityRequestBody.prototype, "original", void 0);
     return DocumentSimilarityRequestBody;
-}(SpeakeasyBase));
-export { DocumentSimilarityRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DocumentSimilarityRequestBody = DocumentSimilarityRequestBody;
 var DocumentSimilarityRequest = /** @class */ (function (_super) {
     __extends(DocumentSimilarityRequest, _super);
     function DocumentSimilarityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", DocumentSimilarityRequestBody)
     ], DocumentSimilarityRequest.prototype, "request", void 0);
     return DocumentSimilarityRequest;
-}(SpeakeasyBase));
-export { DocumentSimilarityRequest };
+}(utils_1.SpeakeasyBase));
+exports.DocumentSimilarityRequest = DocumentSimilarityRequest;
 var DocumentSimilarityResponse = /** @class */ (function (_super) {
     __extends(DocumentSimilarityResponse, _super);
     function DocumentSimilarityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DocumentSimilarityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DocumentSimilarityResponse.prototype, "statusCode", void 0);
     return DocumentSimilarityResponse;
-}(SpeakeasyBase));
-export { DocumentSimilarityResponse };
+}(utils_1.SpeakeasyBase));
+exports.DocumentSimilarityResponse = DocumentSimilarityResponse;

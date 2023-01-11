@@ -1,0 +1,167 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentLocationResult = exports.AgentLocationResultAddress = exports.AgentLocationResultAddressStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AgentLocationResultAddressStateEnum;
+(function (AgentLocationResultAddressStateEnum) {
+    AgentLocationResultAddressStateEnum["Ak"] = "AK";
+    AgentLocationResultAddressStateEnum["Al"] = "AL";
+    AgentLocationResultAddressStateEnum["Ar"] = "AR";
+    AgentLocationResultAddressStateEnum["As"] = "AS";
+    AgentLocationResultAddressStateEnum["Az"] = "AZ";
+    AgentLocationResultAddressStateEnum["Ca"] = "CA";
+    AgentLocationResultAddressStateEnum["Co"] = "CO";
+    AgentLocationResultAddressStateEnum["Ct"] = "CT";
+    AgentLocationResultAddressStateEnum["Dc"] = "DC";
+    AgentLocationResultAddressStateEnum["De"] = "DE";
+    AgentLocationResultAddressStateEnum["Fl"] = "FL";
+    AgentLocationResultAddressStateEnum["Fm"] = "FM";
+    AgentLocationResultAddressStateEnum["Ga"] = "GA";
+    AgentLocationResultAddressStateEnum["Gu"] = "GU";
+    AgentLocationResultAddressStateEnum["Hi"] = "HI";
+    AgentLocationResultAddressStateEnum["Ia"] = "IA";
+    AgentLocationResultAddressStateEnum["Id"] = "ID";
+    AgentLocationResultAddressStateEnum["Il"] = "IL";
+    AgentLocationResultAddressStateEnum["In"] = "IN";
+    AgentLocationResultAddressStateEnum["Ks"] = "KS";
+    AgentLocationResultAddressStateEnum["Ky"] = "KY";
+    AgentLocationResultAddressStateEnum["La"] = "LA";
+    AgentLocationResultAddressStateEnum["Ma"] = "MA";
+    AgentLocationResultAddressStateEnum["Md"] = "MD";
+    AgentLocationResultAddressStateEnum["Me"] = "ME";
+    AgentLocationResultAddressStateEnum["Mh"] = "MH";
+    AgentLocationResultAddressStateEnum["Mi"] = "MI";
+    AgentLocationResultAddressStateEnum["Mn"] = "MN";
+    AgentLocationResultAddressStateEnum["Mo"] = "MO";
+    AgentLocationResultAddressStateEnum["Mp"] = "MP";
+    AgentLocationResultAddressStateEnum["Ms"] = "MS";
+    AgentLocationResultAddressStateEnum["Mt"] = "MT";
+    AgentLocationResultAddressStateEnum["Nc"] = "NC";
+    AgentLocationResultAddressStateEnum["Nd"] = "ND";
+    AgentLocationResultAddressStateEnum["Ne"] = "NE";
+    AgentLocationResultAddressStateEnum["Nh"] = "NH";
+    AgentLocationResultAddressStateEnum["Nj"] = "NJ";
+    AgentLocationResultAddressStateEnum["Nm"] = "NM";
+    AgentLocationResultAddressStateEnum["Nv"] = "NV";
+    AgentLocationResultAddressStateEnum["Ny"] = "NY";
+    AgentLocationResultAddressStateEnum["Oh"] = "OH";
+    AgentLocationResultAddressStateEnum["Ok"] = "OK";
+    AgentLocationResultAddressStateEnum["Or"] = "OR";
+    AgentLocationResultAddressStateEnum["Pa"] = "PA";
+    AgentLocationResultAddressStateEnum["Pr"] = "PR";
+    AgentLocationResultAddressStateEnum["Pw"] = "PW";
+    AgentLocationResultAddressStateEnum["Ri"] = "RI";
+    AgentLocationResultAddressStateEnum["Sc"] = "SC";
+    AgentLocationResultAddressStateEnum["Sd"] = "SD";
+    AgentLocationResultAddressStateEnum["Tn"] = "TN";
+    AgentLocationResultAddressStateEnum["Tx"] = "TX";
+    AgentLocationResultAddressStateEnum["Um"] = "UM";
+    AgentLocationResultAddressStateEnum["Ut"] = "UT";
+    AgentLocationResultAddressStateEnum["Va"] = "VA";
+    AgentLocationResultAddressStateEnum["Vi"] = "VI";
+    AgentLocationResultAddressStateEnum["Vt"] = "VT";
+    AgentLocationResultAddressStateEnum["Wa"] = "WA";
+    AgentLocationResultAddressStateEnum["Wi"] = "WI";
+    AgentLocationResultAddressStateEnum["Wv"] = "WV";
+    AgentLocationResultAddressStateEnum["Wy"] = "WY";
+})(AgentLocationResultAddressStateEnum = exports.AgentLocationResultAddressStateEnum || (exports.AgentLocationResultAddressStateEnum = {}));
+// AgentLocationResultAddress
+/**
+ * Address of the agent location
+**/
+var AgentLocationResultAddress = /** @class */ (function (_super) {
+    __extends(AgentLocationResultAddress, _super);
+    function AgentLocationResultAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "city", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "county", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_one" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "streetOne", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_two" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "streetTwo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
+        __metadata("design:type", String)
+    ], AgentLocationResultAddress.prototype, "zipCode", void 0);
+    return AgentLocationResultAddress;
+}(utils_1.SpeakeasyBase));
+exports.AgentLocationResultAddress = AgentLocationResultAddress;
+var AgentLocationResult = /** @class */ (function (_super) {
+    __extends(AgentLocationResult, _super);
+    function AgentLocationResult() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", AgentLocationResultAddress)
+    ], AgentLocationResult.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agent_id" }),
+        __metadata("design:type", String)
+    ], AgentLocationResult.prototype, "agentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
+        __metadata("design:type", Number)
+    ], AgentLocationResult.prototype, "created", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
+        __metadata("design:type", String)
+    ], AgentLocationResult.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], AgentLocationResult.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified" }),
+        __metadata("design:type", Number)
+    ], AgentLocationResult.prototype, "modified", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_location" }),
+        __metadata("design:type", Boolean)
+    ], AgentLocationResult.prototype, "primaryLocation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", String)
+    ], AgentLocationResult.prototype, "version", void 0);
+    return AgentLocationResult;
+}(utils_1.SpeakeasyBase));
+exports.AgentLocationResult = AgentLocationResult;

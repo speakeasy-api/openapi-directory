@@ -22,5 +22,5 @@ export class GetSurveyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  surveyResponse?: Map<string, any>;
+  surveyResponse?: Record<string, any>;
 }

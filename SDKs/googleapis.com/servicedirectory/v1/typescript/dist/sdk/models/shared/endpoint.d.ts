@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Endpoint extends SpeakeasyBase {
     address?: string;
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     name?: string;
     network?: string;
     port?: number;
@@ -15,7 +15,7 @@ export declare class Endpoint extends SpeakeasyBase {
 **/
 export declare class EndpointInput extends SpeakeasyBase {
     address?: string;
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     name?: string;
     network?: string;
     port?: number;

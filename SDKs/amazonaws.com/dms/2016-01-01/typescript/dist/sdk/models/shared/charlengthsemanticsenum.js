@@ -1,6 +1,9 @@
-export var CharLengthSemanticsEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CharLengthSemanticsEnum = void 0;
+var CharLengthSemanticsEnum;
 (function (CharLengthSemanticsEnum) {
     CharLengthSemanticsEnum["Default"] = "default";
     CharLengthSemanticsEnum["Char"] = "char";
     CharLengthSemanticsEnum["Byte"] = "byte";
-})(CharLengthSemanticsEnum || (CharLengthSemanticsEnum = {}));
+})(CharLengthSemanticsEnum = exports.CharLengthSemanticsEnum || (exports.CharLengthSemanticsEnum = {}));

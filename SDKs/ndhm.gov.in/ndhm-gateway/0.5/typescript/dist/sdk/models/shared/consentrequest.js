@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CareContextDefinition } from "./carecontextdefinition";
-import { Permission } from "./permission";
-import { UsePurpose } from "./usepurpose";
-import { Requester } from "./requester";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentRequest = exports.ConsentRequestConsent = exports.ConsentRequestConsentPatient = exports.ConsentRequestConsentHiu = exports.ConsentRequestConsentHip = void 0;
+var utils_1 = require("../../../internal/utils");
+var carecontextdefinition_1 = require("./carecontextdefinition");
+var permission_1 = require("./permission");
+var usepurpose_1 = require("./usepurpose");
+var requester_1 = require("./requester");
 var ConsentRequestConsentHip = /** @class */ (function (_super) {
     __extends(ConsentRequestConsentHip, _super);
     function ConsentRequestConsentHip() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ConsentRequestConsentHip.prototype, "id", void 0);
     return ConsentRequestConsentHip;
-}(SpeakeasyBase));
-export { ConsentRequestConsentHip };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestConsentHip = ConsentRequestConsentHip;
 var ConsentRequestConsentHiu = /** @class */ (function (_super) {
     __extends(ConsentRequestConsentHiu, _super);
     function ConsentRequestConsentHiu() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ConsentRequestConsentHiu.prototype, "id", void 0);
     return ConsentRequestConsentHiu;
-}(SpeakeasyBase));
-export { ConsentRequestConsentHiu };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestConsentHiu = ConsentRequestConsentHiu;
 var ConsentRequestConsentPatient = /** @class */ (function (_super) {
     __extends(ConsentRequestConsentPatient, _super);
     function ConsentRequestConsentPatient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ConsentRequestConsentPatient.prototype, "id", void 0);
     return ConsentRequestConsentPatient;
-}(SpeakeasyBase));
-export { ConsentRequestConsentPatient };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestConsentPatient = ConsentRequestConsentPatient;
 var ConsentRequestConsent = /** @class */ (function (_super) {
     __extends(ConsentRequestConsent, _super);
     function ConsentRequestConsent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContexts", elemType: CareContextDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContexts", elemType: carecontextdefinition_1.CareContextDefinition }),
         __metadata("design:type", Array)
     ], ConsentRequestConsent.prototype, "careContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiTypes" }),
         __metadata("design:type", Array)
     ], ConsentRequestConsent.prototype, "hiTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hip" }),
         __metadata("design:type", ConsentRequestConsentHip)
     ], ConsentRequestConsent.prototype, "hip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiu" }),
         __metadata("design:type", ConsentRequestConsentHiu)
     ], ConsentRequestConsent.prototype, "hiu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
         __metadata("design:type", ConsentRequestConsentPatient)
     ], ConsentRequestConsent.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
-        __metadata("design:type", Permission)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
+        __metadata("design:type", permission_1.Permission)
     ], ConsentRequestConsent.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
-        __metadata("design:type", UsePurpose)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
+        __metadata("design:type", usepurpose_1.UsePurpose)
     ], ConsentRequestConsent.prototype, "purpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requester" }),
-        __metadata("design:type", Requester)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requester" }),
+        __metadata("design:type", requester_1.Requester)
     ], ConsentRequestConsent.prototype, "requester", void 0);
     return ConsentRequestConsent;
-}(SpeakeasyBase));
-export { ConsentRequestConsent };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequestConsent = ConsentRequestConsent;
 var ConsentRequest = /** @class */ (function (_super) {
     __extends(ConsentRequest, _super);
     function ConsentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consent" }),
         __metadata("design:type", ConsentRequestConsent)
     ], ConsentRequest.prototype, "consent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ConsentRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], ConsentRequest.prototype, "timestamp", void 0);
     return ConsentRequest;
-}(SpeakeasyBase));
-export { ConsentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConsentRequest = ConsentRequest;

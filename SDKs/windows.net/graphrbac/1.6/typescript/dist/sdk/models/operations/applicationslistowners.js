@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationsListOwnersResponse = exports.ApplicationsListOwnersRequest = exports.ApplicationsListOwnersQueryParams = exports.ApplicationsListOwnersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ApplicationsListOwnersPathParams = /** @class */ (function (_super) {
     __extends(ApplicationsListOwnersPathParams, _super);
     function ApplicationsListOwnersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=applicationObjectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=applicationObjectId" }),
         __metadata("design:type", String)
     ], ApplicationsListOwnersPathParams.prototype, "applicationObjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
         __metadata("design:type", String)
-    ], ApplicationsListOwnersPathParams.prototype, "tenantId", void 0);
+    ], ApplicationsListOwnersPathParams.prototype, "tenantID", void 0);
     return ApplicationsListOwnersPathParams;
-}(SpeakeasyBase));
-export { ApplicationsListOwnersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationsListOwnersPathParams = ApplicationsListOwnersPathParams;
 var ApplicationsListOwnersQueryParams = /** @class */ (function (_super) {
     __extends(ApplicationsListOwnersQueryParams, _super);
     function ApplicationsListOwnersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ApplicationsListOwnersQueryParams.prototype, "apiVersion", void 0);
     return ApplicationsListOwnersQueryParams;
-}(SpeakeasyBase));
-export { ApplicationsListOwnersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationsListOwnersQueryParams = ApplicationsListOwnersQueryParams;
 var ApplicationsListOwnersRequest = /** @class */ (function (_super) {
     __extends(ApplicationsListOwnersRequest, _super);
     function ApplicationsListOwnersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplicationsListOwnersPathParams)
     ], ApplicationsListOwnersRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplicationsListOwnersQueryParams)
     ], ApplicationsListOwnersRequest.prototype, "queryParams", void 0);
     return ApplicationsListOwnersRequest;
-}(SpeakeasyBase));
-export { ApplicationsListOwnersRequest };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationsListOwnersRequest = ApplicationsListOwnersRequest;
 var ApplicationsListOwnersResponse = /** @class */ (function (_super) {
     __extends(ApplicationsListOwnersResponse, _super);
     function ApplicationsListOwnersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationsListOwnersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.DirectoryObjectListResult)
     ], ApplicationsListOwnersResponse.prototype, "directoryObjectListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GraphError)
     ], ApplicationsListOwnersResponse.prototype, "graphError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApplicationsListOwnersResponse.prototype, "statusCode", void 0);
     return ApplicationsListOwnersResponse;
-}(SpeakeasyBase));
-export { ApplicationsListOwnersResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationsListOwnersResponse = ApplicationsListOwnersResponse;

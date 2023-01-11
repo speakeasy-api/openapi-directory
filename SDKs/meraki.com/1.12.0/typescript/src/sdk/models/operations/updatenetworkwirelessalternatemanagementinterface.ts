@@ -68,5 +68,5 @@ export class UpdateNetworkWirelessAlternateManagementInterfaceResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessAlternateManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessAlternateManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

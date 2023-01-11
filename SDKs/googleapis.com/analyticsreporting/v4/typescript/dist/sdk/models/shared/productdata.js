@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductData = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProductData
 /**
  * Details of the products in an e-commerce transaction.
@@ -33,21 +36,21 @@ var ProductData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemRevenue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemRevenue" }),
         __metadata("design:type", Number)
     ], ProductData.prototype, "itemRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productName" }),
         __metadata("design:type", String)
     ], ProductData.prototype, "productName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productQuantity" }),
         __metadata("design:type", String)
     ], ProductData.prototype, "productQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productSku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productSku" }),
         __metadata("design:type", String)
     ], ProductData.prototype, "productSku", void 0);
     return ProductData;
-}(SpeakeasyBase));
-export { ProductData };
+}(utils_1.SpeakeasyBase));
+exports.ProductData = ProductData;

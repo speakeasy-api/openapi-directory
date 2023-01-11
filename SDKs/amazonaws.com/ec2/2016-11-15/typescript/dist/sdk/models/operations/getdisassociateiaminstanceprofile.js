@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisassociateIamInstanceProfileActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisassociateIamInstanceProfileResponse = exports.GetDisassociateIamInstanceProfileRequest = exports.GetDisassociateIamInstanceProfileHeaders = exports.GetDisassociateIamInstanceProfileQueryParams = exports.GetDisassociateIamInstanceProfileVersionEnum = exports.GetDisassociateIamInstanceProfileActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisassociateIamInstanceProfileActionEnum;
 (function (GetDisassociateIamInstanceProfileActionEnum) {
     GetDisassociateIamInstanceProfileActionEnum["DisassociateIamInstanceProfile"] = "DisassociateIamInstanceProfile";
-})(GetDisassociateIamInstanceProfileActionEnum || (GetDisassociateIamInstanceProfileActionEnum = {}));
-export var GetDisassociateIamInstanceProfileVersionEnum;
+})(GetDisassociateIamInstanceProfileActionEnum = exports.GetDisassociateIamInstanceProfileActionEnum || (exports.GetDisassociateIamInstanceProfileActionEnum = {}));
+var GetDisassociateIamInstanceProfileVersionEnum;
 (function (GetDisassociateIamInstanceProfileVersionEnum) {
     GetDisassociateIamInstanceProfileVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDisassociateIamInstanceProfileVersionEnum || (GetDisassociateIamInstanceProfileVersionEnum = {}));
+})(GetDisassociateIamInstanceProfileVersionEnum = exports.GetDisassociateIamInstanceProfileVersionEnum || (exports.GetDisassociateIamInstanceProfileVersionEnum = {}));
 var GetDisassociateIamInstanceProfileQueryParams = /** @class */ (function (_super) {
     __extends(GetDisassociateIamInstanceProfileQueryParams, _super);
     function GetDisassociateIamInstanceProfileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileQueryParams.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileQueryParams.prototype, "version", void 0);
     return GetDisassociateIamInstanceProfileQueryParams;
-}(SpeakeasyBase));
-export { GetDisassociateIamInstanceProfileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateIamInstanceProfileQueryParams = GetDisassociateIamInstanceProfileQueryParams;
 var GetDisassociateIamInstanceProfileHeaders = /** @class */ (function (_super) {
     __extends(GetDisassociateIamInstanceProfileHeaders, _super);
     function GetDisassociateIamInstanceProfileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisassociateIamInstanceProfileHeaders;
-}(SpeakeasyBase));
-export { GetDisassociateIamInstanceProfileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateIamInstanceProfileHeaders = GetDisassociateIamInstanceProfileHeaders;
 var GetDisassociateIamInstanceProfileRequest = /** @class */ (function (_super) {
     __extends(GetDisassociateIamInstanceProfileRequest, _super);
     function GetDisassociateIamInstanceProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateIamInstanceProfileQueryParams)
     ], GetDisassociateIamInstanceProfileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateIamInstanceProfileHeaders)
     ], GetDisassociateIamInstanceProfileRequest.prototype, "headers", void 0);
     return GetDisassociateIamInstanceProfileRequest;
-}(SpeakeasyBase));
-export { GetDisassociateIamInstanceProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateIamInstanceProfileRequest = GetDisassociateIamInstanceProfileRequest;
 var GetDisassociateIamInstanceProfileResponse = /** @class */ (function (_super) {
     __extends(GetDisassociateIamInstanceProfileResponse, _super);
     function GetDisassociateIamInstanceProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDisassociateIamInstanceProfileResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisassociateIamInstanceProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisassociateIamInstanceProfileResponse.prototype, "statusCode", void 0);
     return GetDisassociateIamInstanceProfileResponse;
-}(SpeakeasyBase));
-export { GetDisassociateIamInstanceProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateIamInstanceProfileResponse = GetDisassociateIamInstanceProfileResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationTypeEnum } from "./destinationtypeenum";
-import { TargetTypeEnum } from "./targettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Route = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationtypeenum_1 = require("./destinationtypeenum");
+var targettypeenum_1 = require("./targettypeenum");
 // Route
 /**
  * Describes a route in a route table.
@@ -35,21 +38,21 @@ var Route = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
         __metadata("design:type", String)
     ], Route.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationType" }),
         __metadata("design:type", String)
     ], Route.prototype, "destinationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Target" }),
         __metadata("design:type", String)
     ], Route.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetType" }),
         __metadata("design:type", String)
     ], Route.prototype, "targetType", void 0);
     return Route;
-}(SpeakeasyBase));
-export { Route };
+}(utils_1.SpeakeasyBase));
+exports.Route = Route;

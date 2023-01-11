@@ -11,7 +11,7 @@ export declare class GetCustomersAccountAnnouncementsRequest extends SpeakeasyBa
 }
 export declare class GetCustomersAccountAnnouncementsResponse extends SpeakeasyBase {
     contentType: string;
-    getCustomersAccountAnnouncements200ApplicationJsonObject?: GetCustomersAccountAnnouncements200ApplicationJson;
     statusCode: number;
+    getCustomersAccountAnnouncements200ApplicationJSONObject?: GetCustomersAccountAnnouncements200ApplicationJson;
     oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;
 }

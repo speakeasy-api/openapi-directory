@@ -14,6 +14,6 @@ export declare class GetPlayerSeasonPpaRequest extends SpeakeasyBase {
 }
 export declare class GetPlayerSeasonPpaResponse extends SpeakeasyBase {
     contentType: string;
-    playerSeasonPpas?: shared.PlayerSeasonPpa[];
+    playerSeasonPPAS?: shared.PlayerSeasonPpa[];
     statusCode: number;
 }

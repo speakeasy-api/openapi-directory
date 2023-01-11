@@ -17,7 +17,7 @@ export class ProtocolTodGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolTodGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configTod?: shared.ConfigTod;
+  configTOD?: shared.ConfigTod;
 
   @SpeakeasyMetadata()
   contentType: string;

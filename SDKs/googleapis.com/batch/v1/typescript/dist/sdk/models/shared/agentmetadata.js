@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // AgentMetadata
 /**
  * AgentMetadata never changes for a single instance of VM agent.
@@ -33,33 +36,33 @@ var AgentMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instance" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceId" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osRelease" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osRelease" }),
+        __metadata("design:type", Object)
     ], AgentMetadata.prototype, "osRelease", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], AgentMetadata.prototype, "zone", void 0);
     return AgentMetadata;
-}(SpeakeasyBase));
-export { AgentMetadata };
+}(utils_1.SpeakeasyBase));
+exports.AgentMetadata = AgentMetadata;

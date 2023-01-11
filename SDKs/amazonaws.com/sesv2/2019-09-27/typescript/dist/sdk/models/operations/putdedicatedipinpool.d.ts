@@ -23,7 +23,7 @@ export declare class PutDedicatedIpInPoolResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putDedicatedIpInPoolResponse?: Map<string, any>;
+    putDedicatedIpInPoolResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

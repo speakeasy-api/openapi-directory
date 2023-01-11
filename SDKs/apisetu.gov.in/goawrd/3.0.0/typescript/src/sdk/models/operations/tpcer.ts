@@ -188,23 +188,23 @@ export class TpcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tpcer400ApplicationJsonObject?: Tpcer400ApplicationJson;
+  tpcer400ApplicationJSONObject?: Tpcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer401ApplicationJsonObject?: Tpcer401ApplicationJson;
+  tpcer401ApplicationJSONObject?: Tpcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer404ApplicationJsonObject?: Tpcer404ApplicationJson;
+  tpcer404ApplicationJSONObject?: Tpcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer500ApplicationJsonObject?: Tpcer500ApplicationJson;
+  tpcer500ApplicationJSONObject?: Tpcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer502ApplicationJsonObject?: Tpcer502ApplicationJson;
+  tpcer502ApplicationJSONObject?: Tpcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer503ApplicationJsonObject?: Tpcer503ApplicationJson;
+  tpcer503ApplicationJSONObject?: Tpcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tpcer504ApplicationJsonObject?: Tpcer504ApplicationJson;
+  tpcer504ApplicationJSONObject?: Tpcer504ApplicationJson;
 }

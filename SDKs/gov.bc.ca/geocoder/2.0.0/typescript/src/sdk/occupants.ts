@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,11 +33,11 @@ export class Occupants {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/occupants/addresses.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/occupants/addresses.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -45,12 +45,14 @@ export class Occupants {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -62,7 +64,6 @@ export class Occupants {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -80,11 +81,11 @@ export class Occupants {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/occupants/near.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/occupants/near.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -92,12 +93,14 @@ export class Occupants {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -109,7 +112,6 @@ export class Occupants {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -127,11 +129,11 @@ export class Occupants {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/occupants/nearest.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/occupants/nearest.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -139,12 +141,14 @@ export class Occupants {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -156,54 +160,6 @@ export class Occupants {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getOccupantsOccupantIdOutputFormat - Get an occupant (of a site) by its unique ID
-   *
-   * Represents an individual occupant
-  **/
-  getOccupantsOccupantIdOutputFormat(
-    req: operations.GetOccupantsOccupantIdOutputFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetOccupantsOccupantIdOutputFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetOccupantsOccupantIdOutputFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/occupants/{occupantID}.{outputFormat}", req.pathParams);
-    
-    const client: AxiosInstance = this._securityClient!;
-    
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetOccupantsOccupantIdOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -221,11 +177,11 @@ export class Occupants {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/occupants/within.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/occupants/within.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -233,12 +189,14 @@ export class Occupants {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -250,7 +208,54 @@ export class Occupants {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getOccupantsOccupantIdOutputFormat - Get an occupant (of a site) by its unique ID
+   *
+   * Represents an individual occupant
+  **/
+  getOccupantsOccupantIdOutputFormat(
+    req: operations.GetOccupantsOccupantIdOutputFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetOccupantsOccupantIdOutputFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetOccupantsOccupantIdOutputFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/occupants/{occupantID}.{outputFormat}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetOccupantsOccupantIdOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

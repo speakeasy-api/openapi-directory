@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TweetMetrics } from "./tweetmetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TweetMetricsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var tweetmetrics_1 = require("./tweetmetrics");
 var TweetMetricsResponse = /** @class */ (function (_super) {
     __extends(TweetMetricsResponse, _super);
     function TweetMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: TweetMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: tweetmetrics_1.TweetMetrics }),
         __metadata("design:type", Array)
     ], TweetMetricsResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
         __metadata("design:type", Array)
     ], TweetMetricsResponse.prototype, "errors", void 0);
     return TweetMetricsResponse;
-}(SpeakeasyBase));
-export { TweetMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TweetMetricsResponse = TweetMetricsResponse;

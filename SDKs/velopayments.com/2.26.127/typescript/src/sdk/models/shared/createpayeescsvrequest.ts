@@ -545,7 +545,7 @@ export class CreatePayeesCsvRequest extends SpeakeasyBase {
   challengeValue?: string;
 
   @SpeakeasyMetadata({ data: "json, name=companyEIN" })
-  companyEin?: string;
+  companyEIN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=companyName" })
   companyName?: string;

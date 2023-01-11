@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadataInput } from "./fieldmetadata";
-import { FieldMetadata } from "./fieldmetadata";
-// GenderInput
-/**
- * A person's gender.
-**/
-var GenderInput = /** @class */ (function (_super) {
-    __extends(GenderInput, _super);
-    function GenderInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressMeAs" }),
-        __metadata("design:type", String)
-    ], GenderInput.prototype, "addressMeAs", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
-    ], GenderInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", String)
-    ], GenderInput.prototype, "value", void 0);
-    return GenderInput;
-}(SpeakeasyBase));
-export { GenderInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenderInput = exports.Gender = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Gender
 /**
  * A person's gender.
@@ -59,21 +38,45 @@ var Gender = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressMeAs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressMeAs" }),
         __metadata("design:type", String)
     ], Gender.prototype, "addressMeAs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedValue" }),
         __metadata("design:type", String)
     ], Gender.prototype, "formattedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Gender.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Gender.prototype, "value", void 0);
     return Gender;
-}(SpeakeasyBase));
-export { Gender };
+}(utils_1.SpeakeasyBase));
+exports.Gender = Gender;
+// GenderInput
+/**
+ * A person's gender.
+**/
+var GenderInput = /** @class */ (function (_super) {
+    __extends(GenderInput, _super);
+    function GenderInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressMeAs" }),
+        __metadata("design:type", String)
+    ], GenderInput.prototype, "addressMeAs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
+    ], GenderInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], GenderInput.prototype, "value", void 0);
+    return GenderInput;
+}(utils_1.SpeakeasyBase));
+exports.GenderInput = GenderInput;

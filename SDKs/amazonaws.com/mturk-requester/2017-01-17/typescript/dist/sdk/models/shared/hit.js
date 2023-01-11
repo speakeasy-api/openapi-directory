@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HitReviewStatusEnum } from "./hitreviewstatusenum";
-import { HitStatusEnum } from "./hitstatusenum";
-import { QualificationRequirement } from "./qualificationrequirement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hit = void 0;
+var utils_1 = require("../../../internal/utils");
+var hitreviewstatusenum_1 = require("./hitreviewstatusenum");
+var hitstatusenum_1 = require("./hitstatusenum");
+var qualificationrequirement_1 = require("./qualificationrequirement");
 // Hit
 /**
  *  The HIT data structure represents a single HIT, including all the information necessary for a Worker to accept and complete the HIT.
@@ -36,89 +39,89 @@ var Hit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentDurationInSeconds" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "assignmentDurationInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoApprovalDelayInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoApprovalDelayInSeconds" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "autoApprovalDelayInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], Hit.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Hit.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expiration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expiration" }),
         __metadata("design:type", Date)
     ], Hit.prototype, "expiration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITGroupId" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITId" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITLayoutId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITLayoutId" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitLayoutId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITReviewStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITReviewStatus" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitReviewStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITStatus" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITTypeId" }),
         __metadata("design:type", String)
     ], Hit.prototype, "hitTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keywords" }),
         __metadata("design:type", String)
     ], Hit.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxAssignments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxAssignments" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "maxAssignments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfAssignmentsAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfAssignmentsAvailable" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "numberOfAssignmentsAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfAssignmentsCompleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfAssignmentsCompleted" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "numberOfAssignmentsCompleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfAssignmentsPending" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfAssignmentsPending" }),
         __metadata("design:type", Number)
     ], Hit.prototype, "numberOfAssignmentsPending", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationRequirements", elemType: QualificationRequirement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationRequirements", elemType: qualificationrequirement_1.QualificationRequirement }),
         __metadata("design:type", Array)
     ], Hit.prototype, "qualificationRequirements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Question" }),
         __metadata("design:type", String)
     ], Hit.prototype, "question", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterAnnotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterAnnotation" }),
         __metadata("design:type", String)
     ], Hit.prototype, "requesterAnnotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reward" }),
         __metadata("design:type", String)
     ], Hit.prototype, "reward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], Hit.prototype, "title", void 0);
     return Hit;
-}(SpeakeasyBase));
-export { Hit };
+}(utils_1.SpeakeasyBase));
+exports.Hit = Hit;

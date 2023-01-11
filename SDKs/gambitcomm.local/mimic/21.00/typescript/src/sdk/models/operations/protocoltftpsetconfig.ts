@@ -28,5 +28,5 @@ export class ProtocolTftpSetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpSetConfig200ApplicationJsonString?: string;
+  protocolTftpSetConfig200ApplicationJSONString?: string;
 }

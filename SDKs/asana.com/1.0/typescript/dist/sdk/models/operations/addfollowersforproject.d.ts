@@ -11,7 +11,7 @@ export declare class AddFollowersForProjectRequestBody extends SpeakeasyBase {
     data?: shared.AddFollowersRequest;
 }
 export declare class AddFollowersForProject200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddFollowersForProjectRequest extends SpeakeasyBase {
     pathParams: AddFollowersForProjectPathParams;
@@ -22,5 +22,5 @@ export declare class AddFollowersForProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addFollowersForProject200ApplicationJsonObject?: AddFollowersForProject200ApplicationJson;
+    addFollowersForProject200ApplicationJSONObject?: AddFollowersForProject200ApplicationJson;
 }

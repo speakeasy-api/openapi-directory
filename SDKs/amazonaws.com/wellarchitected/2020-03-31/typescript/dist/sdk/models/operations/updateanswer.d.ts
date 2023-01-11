@@ -22,7 +22,7 @@ export declare enum UpdateAnswerRequestBodyReasonEnum {
     None = "NONE"
 }
 export declare class UpdateAnswerRequestBody extends SpeakeasyBase {
-    choiceUpdates?: Map<string, shared.ChoiceUpdate>;
+    choiceUpdates?: Record<string, shared.ChoiceUpdate>;
     isApplicable?: boolean;
     notes?: string;
     reason?: UpdateAnswerRequestBodyReasonEnum;

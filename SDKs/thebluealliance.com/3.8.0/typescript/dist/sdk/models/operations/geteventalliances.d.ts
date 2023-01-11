@@ -17,6 +17,6 @@ export declare class GetEventAlliancesRequest extends SpeakeasyBase {
 export declare class GetEventAlliancesResponse extends SpeakeasyBase {
     contentType: string;
     eliminationAlliances?: shared.EliminationAlliance[];
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceFirewallL3FirewallRulesResponse = exports.GetNetworkApplianceFirewallL3FirewallRulesRequest = exports.GetNetworkApplianceFirewallL3FirewallRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceFirewallL3FirewallRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallL3FirewallRulesPathParams, _super);
     function GetNetworkApplianceFirewallL3FirewallRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallL3FirewallRulesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceFirewallL3FirewallRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallL3FirewallRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallL3FirewallRulesPathParams = GetNetworkApplianceFirewallL3FirewallRulesPathParams;
 var GetNetworkApplianceFirewallL3FirewallRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallL3FirewallRulesRequest, _super);
     function GetNetworkApplianceFirewallL3FirewallRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceFirewallL3FirewallRulesPathParams)
     ], GetNetworkApplianceFirewallL3FirewallRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceFirewallL3FirewallRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallL3FirewallRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallL3FirewallRulesRequest = GetNetworkApplianceFirewallL3FirewallRulesRequest;
 var GetNetworkApplianceFirewallL3FirewallRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallL3FirewallRulesResponse, _super);
     function GetNetworkApplianceFirewallL3FirewallRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallL3FirewallRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceFirewallL3FirewallRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceFirewallL3FirewallRulesResponse.prototype, "getNetworkApplianceFirewallL3FirewallRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceFirewallL3FirewallRulesResponse.prototype, "getNetworkApplianceFirewallL3FirewallRules200ApplicationJSONObject", void 0);
     return GetNetworkApplianceFirewallL3FirewallRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallL3FirewallRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallL3FirewallRulesResponse = GetNetworkApplianceFirewallL3FirewallRulesResponse;

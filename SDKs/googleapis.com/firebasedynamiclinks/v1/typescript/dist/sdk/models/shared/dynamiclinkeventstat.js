@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DynamicLinkEventStatEventEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicLinkEventStat = exports.DynamicLinkEventStatPlatformEnum = exports.DynamicLinkEventStatEventEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DynamicLinkEventStatEventEnum;
 (function (DynamicLinkEventStatEventEnum) {
     DynamicLinkEventStatEventEnum["DynamicLinkEventUnspecified"] = "DYNAMIC_LINK_EVENT_UNSPECIFIED";
     DynamicLinkEventStatEventEnum["Click"] = "CLICK";
@@ -31,15 +34,15 @@ export var DynamicLinkEventStatEventEnum;
     DynamicLinkEventStatEventEnum["AppInstall"] = "APP_INSTALL";
     DynamicLinkEventStatEventEnum["AppFirstOpen"] = "APP_FIRST_OPEN";
     DynamicLinkEventStatEventEnum["AppReOpen"] = "APP_RE_OPEN";
-})(DynamicLinkEventStatEventEnum || (DynamicLinkEventStatEventEnum = {}));
-export var DynamicLinkEventStatPlatformEnum;
+})(DynamicLinkEventStatEventEnum = exports.DynamicLinkEventStatEventEnum || (exports.DynamicLinkEventStatEventEnum = {}));
+var DynamicLinkEventStatPlatformEnum;
 (function (DynamicLinkEventStatPlatformEnum) {
     DynamicLinkEventStatPlatformEnum["DynamicLinkPlatformUnspecified"] = "DYNAMIC_LINK_PLATFORM_UNSPECIFIED";
     DynamicLinkEventStatPlatformEnum["Android"] = "ANDROID";
     DynamicLinkEventStatPlatformEnum["Ios"] = "IOS";
     DynamicLinkEventStatPlatformEnum["Desktop"] = "DESKTOP";
     DynamicLinkEventStatPlatformEnum["Other"] = "OTHER";
-})(DynamicLinkEventStatPlatformEnum || (DynamicLinkEventStatPlatformEnum = {}));
+})(DynamicLinkEventStatPlatformEnum = exports.DynamicLinkEventStatPlatformEnum || (exports.DynamicLinkEventStatPlatformEnum = {}));
 // DynamicLinkEventStat
 /**
  * Dynamic Link event stat.
@@ -50,17 +53,17 @@ var DynamicLinkEventStat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", String)
     ], DynamicLinkEventStat.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", String)
     ], DynamicLinkEventStat.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], DynamicLinkEventStat.prototype, "platform", void 0);
     return DynamicLinkEventStat;
-}(SpeakeasyBase));
-export { DynamicLinkEventStat };
+}(utils_1.SpeakeasyBase));
+exports.DynamicLinkEventStat = DynamicLinkEventStat;

@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V1Product = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var V1Product = /** @class */ (function () {
     function V1Product(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -31,10 +56,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductAvailabilityRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/availability/{sku}/{subjectId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/availability/{sku}/{subjectId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -42,19 +67,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productAvailability200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productAvailability200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productAvailabilityDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productAvailabilityDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productCatalog - Returns a catalog of products
@@ -66,10 +90,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductCatalogRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/catalog/{country}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/catalog/{country}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -77,19 +101,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productCatalog200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productCatalog200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productCatalogDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productCatalogDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productNotifier - Returns metadata for a notifier
@@ -101,10 +124,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductNotifierRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/notifier/{notifierId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/notifier/{notifierId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -112,19 +135,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productNotifier200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productNotifier200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productNotifierDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productNotifierDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productNotifierCreate - Creates a notifier for an order
@@ -136,10 +158,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductNotifierCreateRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/notifier/{orderId}/{type}/{uri}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "post" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/notifier/{orderId}/{type}/{uri}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "post" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -147,19 +169,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productNotifierCreate200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productNotifierCreate200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productNotifierCreateDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productNotifierCreateDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productOrder - Places a product order
@@ -171,10 +192,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductOrderRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/order/{sku}/{subjectId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "post" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/order/{sku}/{subjectId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "post" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -182,19 +203,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrder200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrder200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productOrderConcierge - Places a concierge order
@@ -210,22 +230,17 @@ var V1Product = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/api/v1/product/order/concierge";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -233,19 +248,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderConcierge200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderConcierge200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderConciergeDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderConciergeDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productOrderUbo - Places a UBO order
@@ -261,22 +275,17 @@ var V1Product = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/api/v1/product/order/ubo";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -284,19 +293,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderUbo200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderUbo200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderUboDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderUboDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productOrderWithOption - Places a product order
@@ -308,10 +316,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductOrderWithOptionRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/order/{sku}/{option}/{subjectId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "post" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/order/{sku}/{option}/{subjectId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "post" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -319,19 +327,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderWithOption200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderWithOption200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productOrderWithOptionDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productOrderWithOptionDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productRetrieve - Retrieves the result of an order
@@ -343,10 +350,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductRetrieveRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/{orderId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/{orderId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -354,19 +361,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productRetrieve200ApplicationJsonOneOf = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productRetrieve200ApplicationJSONOneOf = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productRetrieveDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productRetrieveDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productSearch - Returns a list of products
@@ -378,10 +384,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductSearchRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/search/{subjectId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/search/{subjectId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -389,19 +395,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productSearch200ApplicationJsonAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productSearch200ApplicationJSONAnies = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productSearchDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productSearchDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productStatus - Returns metadata for a order
@@ -413,10 +418,10 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductStatusRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/status/{orderId}", req.pathParams);
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var url = utils.generateURL(baseURL, "/api/v1/product/status/{orderId}", req.pathParams);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -424,19 +429,18 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productStatus200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productStatus200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productStatusDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productStatusDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * productUpdateAction - Updates metadata of an order
@@ -449,25 +453,20 @@ var V1Product = /** @class */ (function () {
             req = new operations.ProductUpdateActionRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/api/v1/product/update/{action}/{orderId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/api/v1/product/update/{action}/{orderId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
                 throw new Error("Error serializing request body, cause: ".concat(e.message));
             }
         }
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -475,20 +474,19 @@ var V1Product = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productUpdateAction200ApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productUpdateAction200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 default:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.productUpdateActionDefaultApplicationJsonAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.productUpdateActionDefaultApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return V1Product;
 }());
-export { V1Product };
+exports.V1Product = V1Product;

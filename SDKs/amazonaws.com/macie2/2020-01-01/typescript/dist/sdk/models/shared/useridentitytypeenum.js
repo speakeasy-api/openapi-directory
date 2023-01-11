@@ -1,4 +1,7 @@
-export var UserIdentityTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserIdentityTypeEnum = void 0;
+var UserIdentityTypeEnum;
 (function (UserIdentityTypeEnum) {
     UserIdentityTypeEnum["AssumedRole"] = "AssumedRole";
     UserIdentityTypeEnum["IamUser"] = "IAMUser";
@@ -6,4 +9,4 @@ export var UserIdentityTypeEnum;
     UserIdentityTypeEnum["Root"] = "Root";
     UserIdentityTypeEnum["AwsAccount"] = "AWSAccount";
     UserIdentityTypeEnum["AwsService"] = "AWSService";
-})(UserIdentityTypeEnum || (UserIdentityTypeEnum = {}));
+})(UserIdentityTypeEnum = exports.UserIdentityTypeEnum || (exports.UserIdentityTypeEnum = {}));

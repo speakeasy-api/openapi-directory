@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MessageData } from "./messagedata";
-import { StatusCodeEnum } from "./statuscodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricDataResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var messagedata_1 = require("./messagedata");
+var statuscodeenum_1 = require("./statuscodeenum");
 // MetricDataResult
 /**
  * A <code>GetMetricData</code> call returns an array of <code>MetricDataResult</code> structures. Each of these structures includes the data points for that metric, along with the timestamps of those data points and other identifying information.
@@ -35,29 +38,29 @@ var MetricDataResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricDataResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricDataResult.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: MessageData }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: messagedata_1.MessageData }),
         __metadata("design:type", Array)
     ], MetricDataResult.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricDataResult.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MetricDataResult.prototype, "timestamps", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MetricDataResult.prototype, "values", void 0);
     return MetricDataResult;
-}(SpeakeasyBase));
-export { MetricDataResult };
+}(utils_1.SpeakeasyBase));
+exports.MetricDataResult = MetricDataResult;

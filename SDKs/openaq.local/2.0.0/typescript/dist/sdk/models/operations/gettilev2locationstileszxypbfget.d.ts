@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetTileV2LocationsTilesZXYPbfGetPathParams extends SpeakeasyBase {
+export declare class GetTileV2LocationsTilesZxyPbfGetPathParams extends SpeakeasyBase {
     x: number;
     y: number;
     z: number;
 }
-export declare class GetTileV2LocationsTilesZXYPbfGetQueryParams extends SpeakeasyBase {
+export declare class GetTileV2LocationsTilesZxyPbfGetQueryParams extends SpeakeasyBase {
     isAnalysis?: boolean;
     isMobile?: boolean;
     lastUpdatedFrom?: any;
@@ -14,11 +14,11 @@ export declare class GetTileV2LocationsTilesZXYPbfGetQueryParams extends Speakea
     parameter?: any;
     project?: number;
 }
-export declare class GetTileV2LocationsTilesZXYPbfGetRequest extends SpeakeasyBase {
-    pathParams: GetTileV2LocationsTilesZXYPbfGetPathParams;
-    queryParams: GetTileV2LocationsTilesZXYPbfGetQueryParams;
+export declare class GetTileV2LocationsTilesZxyPbfGetRequest extends SpeakeasyBase {
+    pathParams: GetTileV2LocationsTilesZxyPbfGetPathParams;
+    queryParams: GetTileV2LocationsTilesZxyPbfGetQueryParams;
 }
-export declare class GetTileV2LocationsTilesZXYPbfGetResponse extends SpeakeasyBase {
+export declare class GetTileV2LocationsTilesZxyPbfGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;

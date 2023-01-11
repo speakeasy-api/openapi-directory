@@ -1,21 +1,20 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistoryRecordEntry } from "./historyrecordentry";
 
 
 
 export class DescribeFleetHistoryResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  fleetId?: string;
-
-  @SpeakeasyMetadata({ elemType: HistoryRecordEntry })
-  historyRecords?: HistoryRecordEntry[];
+  fleetId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  lastEvaluatedTime?: Date;
+  historyRecords?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  lastEvaluatedTime?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  startTime?: Date;
+  nextToken?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  startTime?: Record<string, any>;
 }

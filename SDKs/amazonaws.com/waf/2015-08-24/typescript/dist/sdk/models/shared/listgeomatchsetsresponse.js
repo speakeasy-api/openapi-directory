@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeoMatchSetSummary } from "./geomatchsetsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListGeoMatchSetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var geomatchsetsummary_1 = require("./geomatchsetsummary");
 var ListGeoMatchSetsResponse = /** @class */ (function (_super) {
     __extends(ListGeoMatchSetsResponse, _super);
     function ListGeoMatchSetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GeoMatchSets", elemType: GeoMatchSetSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GeoMatchSets", elemType: geomatchsetsummary_1.GeoMatchSetSummary }),
         __metadata("design:type", Array)
     ], ListGeoMatchSetsResponse.prototype, "geoMatchSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextMarker" }),
         __metadata("design:type", String)
     ], ListGeoMatchSetsResponse.prototype, "nextMarker", void 0);
     return ListGeoMatchSetsResponse;
-}(SpeakeasyBase));
-export { ListGeoMatchSetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListGeoMatchSetsResponse = ListGeoMatchSetsResponse;

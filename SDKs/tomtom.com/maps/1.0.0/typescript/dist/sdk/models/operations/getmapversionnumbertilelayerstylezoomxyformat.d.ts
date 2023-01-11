@@ -1,39 +1,39 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyFormatFormatEnum {
     Jpg = "jpg",
     Png = "png"
 }
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyFormatLayerEnum {
     Basic = "basic",
     Hybrid = "hybrid",
     Labels = "labels"
 }
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyFormatStyleEnum {
     Main = "main",
     Night = "night"
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyFormatPathParams extends SpeakeasyBase {
     x: number;
     y: number;
-    format: GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum;
-    layer: GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum;
-    style: GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum;
+    format: GetMapVersionNumberTileLayerStyleZoomXyFormatFormatEnum;
+    layer: GetMapVersionNumberTileLayerStyleZoomXyFormatLayerEnum;
+    style: GetMapVersionNumberTileLayerStyleZoomXyFormatStyleEnum;
     versionNumber: number;
     zoom: number;
 }
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyFormatViewEnum {
     Unified = "Unified",
     In = "IN"
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyFormatQueryParams extends SpeakeasyBase {
     tileSize?: number;
-    view?: GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum;
+    view?: GetMapVersionNumberTileLayerStyleZoomXyFormatViewEnum;
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYFormatRequest extends SpeakeasyBase {
-    pathParams: GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams;
-    queryParams: GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams;
+export declare class GetMapVersionNumberTileLayerStyleZoomXyFormatRequest extends SpeakeasyBase {
+    pathParams: GetMapVersionNumberTileLayerStyleZoomXyFormatPathParams;
+    queryParams: GetMapVersionNumberTileLayerStyleZoomXyFormatQueryParams;
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYFormatResponse extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyFormatResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
 }

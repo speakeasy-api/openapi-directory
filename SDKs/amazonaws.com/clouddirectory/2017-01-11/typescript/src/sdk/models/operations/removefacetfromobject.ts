@@ -93,7 +93,7 @@ export class RemoveFacetFromObjectResponse extends SpeakeasyBase {
   limitExceededException?: any;
 
   @SpeakeasyMetadata()
-  removeFacetFromObjectResponse?: Map<string, any>;
+  removeFacetFromObjectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

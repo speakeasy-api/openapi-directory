@@ -10,5 +10,5 @@ export declare class GetCustomDataIdentifierResponse extends SpeakeasyBase {
     maximumMatchDistance?: number;
     name?: string;
     regex?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

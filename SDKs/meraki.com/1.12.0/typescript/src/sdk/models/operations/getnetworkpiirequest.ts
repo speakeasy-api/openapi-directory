@@ -25,5 +25,5 @@ export class GetNetworkPiiRequestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkPiiRequest200ApplicationJsonObject?: Map<string, any>;
+  getNetworkPiiRequest200ApplicationJSONObject?: Record<string, any>;
 }

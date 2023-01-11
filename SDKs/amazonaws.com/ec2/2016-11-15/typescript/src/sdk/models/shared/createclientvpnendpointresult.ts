@@ -1,15 +1,27 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnEndpointStatus } from "./clientvpnendpointstatus";
 
+
+
+// CreateClientVpnEndpointResultStatus
+/** 
+ * The current state of the Client VPN endpoint.
+**/
+export class CreateClientVpnEndpointResultStatus extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
 
 
 export class CreateClientVpnEndpointResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  clientVpnEndpointId?: string;
+  clientVpnEndpointId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  dnsName?: string;
+  dnsName?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: ClientVpnEndpointStatus;
+  status?: CreateClientVpnEndpointResultStatus;
 }

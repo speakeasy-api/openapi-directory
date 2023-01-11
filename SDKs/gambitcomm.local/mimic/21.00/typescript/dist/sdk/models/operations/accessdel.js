@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessDelResponse = exports.AccessDelRequest = exports.AccessDelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccessDelPathParams = /** @class */ (function (_super) {
     __extends(AccessDelPathParams, _super);
     function AccessDelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user" }),
         __metadata("design:type", String)
     ], AccessDelPathParams.prototype, "user", void 0);
     return AccessDelPathParams;
-}(SpeakeasyBase));
-export { AccessDelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AccessDelPathParams = AccessDelPathParams;
 var AccessDelRequest = /** @class */ (function (_super) {
     __extends(AccessDelRequest, _super);
     function AccessDelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AccessDelPathParams)
     ], AccessDelRequest.prototype, "pathParams", void 0);
     return AccessDelRequest;
-}(SpeakeasyBase));
-export { AccessDelRequest };
+}(utils_1.SpeakeasyBase));
+exports.AccessDelRequest = AccessDelRequest;
 var AccessDelResponse = /** @class */ (function (_super) {
     __extends(AccessDelResponse, _super);
     function AccessDelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AccessDelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AccessDelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AccessDelResponse.prototype, "accessDel200ApplicationJsonString", void 0);
+    ], AccessDelResponse.prototype, "accessDel200ApplicationJSONString", void 0);
     return AccessDelResponse;
-}(SpeakeasyBase));
-export { AccessDelResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccessDelResponse = AccessDelResponse;

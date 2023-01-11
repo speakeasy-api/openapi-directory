@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AreGamesInProgressRequest, AreGamesInProgressResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -38,7 +37,7 @@ const req: AreGamesInProgressRequest = {
   },
 };
 
-sdk.sdk.areGamesInProgress(req).then((res: AreGamesInProgressResponse | AxiosError) => {
+sdk.areGamesInProgress(req).then((res: AreGamesInProgressResponse | AxiosError) => {
    // handle response
 });
 ```

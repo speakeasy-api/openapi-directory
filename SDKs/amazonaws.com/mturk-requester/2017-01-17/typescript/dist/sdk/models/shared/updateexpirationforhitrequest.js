@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateExpirationForHitRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateExpirationForHitRequest = /** @class */ (function (_super) {
     __extends(UpdateExpirationForHitRequest, _super);
     function UpdateExpirationForHitRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpireAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpireAt" }),
         __metadata("design:type", Date)
     ], UpdateExpirationForHitRequest.prototype, "expireAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITId" }),
         __metadata("design:type", String)
     ], UpdateExpirationForHitRequest.prototype, "hitId", void 0);
     return UpdateExpirationForHitRequest;
-}(SpeakeasyBase));
-export { UpdateExpirationForHitRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateExpirationForHitRequest = UpdateExpirationForHitRequest;

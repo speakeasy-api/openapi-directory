@@ -25,7 +25,7 @@ export declare class PutWorkflowRunPropertiesResponse extends SpeakeasyBase {
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    putWorkflowRunPropertiesResponse?: Map<string, any>;
+    putWorkflowRunPropertiesResponse?: Record<string, any>;
     resourceNumberLimitExceededException?: any;
     statusCode: number;
 }

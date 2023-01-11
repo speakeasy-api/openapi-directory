@@ -34,7 +34,7 @@ export declare enum CreateEnvironmentRequestBodyWebserverAccessModeEnum {
     PublicOnly = "PUBLIC_ONLY"
 }
 export declare class CreateEnvironmentRequestBody extends SpeakeasyBase {
-    airflowConfigurationOptions?: Map<string, string>;
+    airflowConfigurationOptions?: Record<string, string>;
     airflowVersion?: string;
     dagS3Path: string;
     environmentClass?: string;
@@ -50,7 +50,7 @@ export declare class CreateEnvironmentRequestBody extends SpeakeasyBase {
     requirementsS3Path?: string;
     schedulers?: number;
     sourceBucketArn: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     webserverAccessMode?: CreateEnvironmentRequestBodyWebserverAccessModeEnum;
     weeklyMaintenanceWindowStart?: string;
 }

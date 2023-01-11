@@ -6,5 +6,5 @@ export declare class ProtocolExceptionInvocationResponse extends SpeakeasyBase {
     exception: ProtocolException;
     method: string;
     metrics?: ExecutionMetrics;
-    result: Map<string, any>;
+    result: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchRoutingMulticastResponse = exports.UpdateNetworkSwitchRoutingMulticastRequest = exports.UpdateNetworkSwitchRoutingMulticastRequestBody = exports.UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides = exports.UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings = exports.UpdateNetworkSwitchRoutingMulticastPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchRoutingMulticastPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchRoutingMulticastPathParams, _super);
     function UpdateNetworkSwitchRoutingMulticastPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchRoutingMulticastPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSwitchRoutingMulticastPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastPathParams = UpdateNetworkSwitchRoutingMulticastPathParams;
 // UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings
 /**
  * Default multicast setting for entire network. IGMP snooping and Flood unknown multicast traffic settings are enabled by default.
@@ -45,93 +48,93 @@ var UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floodUnknownMulticastTrafficEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floodUnknownMulticastTrafficEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings.prototype, "floodUnknownMulticastTrafficEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=igmpSnoopingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=igmpSnoopingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings.prototype, "igmpSnoopingEnabled", void 0);
     return UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings = UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings;
 var UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides, _super);
     function UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floodUnknownMulticastTrafficEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floodUnknownMulticastTrafficEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides.prototype, "floodUnknownMulticastTrafficEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=igmpSnoopingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=igmpSnoopingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides.prototype, "igmpSnoopingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stacks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stacks" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides.prototype, "stacks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switchProfiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switchProfiles" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides.prototype, "switchProfiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switches" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switches" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides.prototype, "switches", void 0);
     return UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides = UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides;
 var UpdateNetworkSwitchRoutingMulticastRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchRoutingMulticastRequestBody, _super);
     function UpdateNetworkSwitchRoutingMulticastRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultSettings" }),
         __metadata("design:type", UpdateNetworkSwitchRoutingMulticastRequestBodyDefaultSettings)
     ], UpdateNetworkSwitchRoutingMulticastRequestBody.prototype, "defaultSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrides", elemType: UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrides", elemType: UpdateNetworkSwitchRoutingMulticastRequestBodyOverrides }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchRoutingMulticastRequestBody.prototype, "overrides", void 0);
     return UpdateNetworkSwitchRoutingMulticastRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastRequestBody = UpdateNetworkSwitchRoutingMulticastRequestBody;
 var UpdateNetworkSwitchRoutingMulticastRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchRoutingMulticastRequest, _super);
     function UpdateNetworkSwitchRoutingMulticastRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchRoutingMulticastPathParams)
     ], UpdateNetworkSwitchRoutingMulticastRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchRoutingMulticastRequestBody)
     ], UpdateNetworkSwitchRoutingMulticastRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchRoutingMulticastRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastRequest = UpdateNetworkSwitchRoutingMulticastRequest;
 var UpdateNetworkSwitchRoutingMulticastResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchRoutingMulticastResponse, _super);
     function UpdateNetworkSwitchRoutingMulticastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchRoutingMulticastResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchRoutingMulticastResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchRoutingMulticastResponse.prototype, "updateNetworkSwitchRoutingMulticast200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchRoutingMulticastResponse.prototype, "updateNetworkSwitchRoutingMulticast200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchRoutingMulticastResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchRoutingMulticastResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchRoutingMulticastResponse = UpdateNetworkSwitchRoutingMulticastResponse;

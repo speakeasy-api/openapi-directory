@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudprivatecatalogproducerCatalogsAssociationsCreateRequest, CloudprivatecatalogproducerCatalogsAssociationsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: CloudprivatecatalogproducerCatalogsAssociationsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dolorem",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "quo",
-    alt: "json",
-    callback: "natus",
-    fields: "quo",
-    key: "est",
-    oauthToken: "molestiae",
-    prettyPrint: false,
-    quotaUser: "quae",
-    uploadType: "quasi",
-    uploadProtocol: "saepe",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     association: {
-      createTime: "sit",
-      name: "temporibus",
-      resource: "fugiat",
+      createTime: "dicta",
+      name: "debitis",
+      resource: "voluptatum",
     },
   },
 };

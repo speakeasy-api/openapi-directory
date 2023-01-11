@@ -191,23 +191,23 @@ export class MripcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mripc400ApplicationJsonObject?: Mripc400ApplicationJson;
+  mripc400ApplicationJSONObject?: Mripc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc401ApplicationJsonObject?: Mripc401ApplicationJson;
+  mripc401ApplicationJSONObject?: Mripc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc404ApplicationJsonObject?: Mripc404ApplicationJson;
+  mripc404ApplicationJSONObject?: Mripc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc500ApplicationJsonObject?: Mripc500ApplicationJson;
+  mripc500ApplicationJSONObject?: Mripc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc502ApplicationJsonObject?: Mripc502ApplicationJson;
+  mripc502ApplicationJSONObject?: Mripc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc503ApplicationJsonObject?: Mripc503ApplicationJson;
+  mripc503ApplicationJSONObject?: Mripc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mripc504ApplicationJsonObject?: Mripc504ApplicationJson;
+  mripc504ApplicationJSONObject?: Mripc504ApplicationJson;
 }

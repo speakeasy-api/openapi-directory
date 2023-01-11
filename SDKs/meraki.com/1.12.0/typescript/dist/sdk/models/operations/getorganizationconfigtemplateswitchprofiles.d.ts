@@ -9,5 +9,5 @@ export declare class GetOrganizationConfigTemplateSwitchProfilesRequest extends 
 export declare class GetOrganizationConfigTemplateSwitchProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationConfigTemplateSwitchProfiles200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationConfigTemplateSwitchProfiles200ApplicationJSONObject?: Record<string, any>;
 }

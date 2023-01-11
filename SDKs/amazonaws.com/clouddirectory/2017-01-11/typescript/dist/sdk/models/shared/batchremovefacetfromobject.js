@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectReference } from "./objectreference";
-import { SchemaFacet } from "./schemafacet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchRemoveFacetFromObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectreference_1 = require("./objectreference");
+var schemafacet_1 = require("./schemafacet");
 // BatchRemoveFacetFromObject
 /**
  * A batch operation to remove a facet from an object.
@@ -35,13 +38,13 @@ var BatchRemoveFacetFromObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchRemoveFacetFromObject.prototype, "objectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaFacet" }),
-        __metadata("design:type", SchemaFacet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaFacet" }),
+        __metadata("design:type", schemafacet_1.SchemaFacet)
     ], BatchRemoveFacetFromObject.prototype, "schemaFacet", void 0);
     return BatchRemoveFacetFromObject;
-}(SpeakeasyBase));
-export { BatchRemoveFacetFromObject };
+}(utils_1.SpeakeasyBase));
+exports.BatchRemoveFacetFromObject = BatchRemoveFacetFromObject;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// TargetArtifact
-/**
- * The artifacts produced by a target render operation.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetArtifact = void 0;
+var utils_1 = require("../../../internal/utils");
 var TargetArtifact = /** @class */ (function (_super) {
     __extends(TargetArtifact, _super);
     function TargetArtifact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactUri" }),
         __metadata("design:type", String)
     ], TargetArtifact.prototype, "artifactUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manifestPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manifestPath" }),
         __metadata("design:type", String)
     ], TargetArtifact.prototype, "manifestPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skaffoldConfigPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skaffoldConfigPath" }),
         __metadata("design:type", String)
     ], TargetArtifact.prototype, "skaffoldConfigPath", void 0);
     return TargetArtifact;
-}(SpeakeasyBase));
-export { TargetArtifact };
+}(utils_1.SpeakeasyBase));
+exports.TargetArtifact = TargetArtifact;

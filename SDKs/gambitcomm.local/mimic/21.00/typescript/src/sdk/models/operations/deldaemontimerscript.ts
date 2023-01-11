@@ -28,5 +28,5 @@ export class DelDaemonTimerScriptResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  delDaemonTimerScript200ApplicationJsonString?: string;
+  delDaemonTimerScript200ApplicationJSONString?: string;
 }

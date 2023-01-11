@@ -5,7 +5,7 @@ export declare class PostSimpleQueryQueryParams extends SpeakeasyBase {
 }
 export declare class PostSimpleQueryRequest extends SpeakeasyBase {
     queryParams: PostSimpleQueryQueryParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class PostSimpleQueryResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;

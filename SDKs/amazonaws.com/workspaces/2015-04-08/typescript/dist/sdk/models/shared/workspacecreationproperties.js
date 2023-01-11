@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceCreationProperties = void 0;
+var utils_1 = require("../../../internal/utils");
 // WorkspaceCreationProperties
 /**
  * Describes the default properties that are used for creating WorkSpaces. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/update-directory-details.html">Update Directory Details for Your WorkSpaces</a>.
@@ -33,29 +36,29 @@ var WorkspaceCreationProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomSecurityGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomSecurityGroupId" }),
         __metadata("design:type", String)
     ], WorkspaceCreationProperties.prototype, "customSecurityGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultOu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultOu" }),
         __metadata("design:type", String)
     ], WorkspaceCreationProperties.prototype, "defaultOu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableInternetAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableInternetAccess" }),
         __metadata("design:type", Boolean)
     ], WorkspaceCreationProperties.prototype, "enableInternetAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableMaintenanceMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableMaintenanceMode" }),
         __metadata("design:type", Boolean)
     ], WorkspaceCreationProperties.prototype, "enableMaintenanceMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableWorkDocs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableWorkDocs" }),
         __metadata("design:type", Boolean)
     ], WorkspaceCreationProperties.prototype, "enableWorkDocs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserEnabledAsLocalAdministrator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserEnabledAsLocalAdministrator" }),
         __metadata("design:type", Boolean)
     ], WorkspaceCreationProperties.prototype, "userEnabledAsLocalAdministrator", void 0);
     return WorkspaceCreationProperties;
-}(SpeakeasyBase));
-export { WorkspaceCreationProperties };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceCreationProperties = WorkspaceCreationProperties;

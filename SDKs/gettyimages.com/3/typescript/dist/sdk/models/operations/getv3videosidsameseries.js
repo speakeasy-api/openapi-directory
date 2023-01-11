@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV3VideosIdSameSeriesResponse = exports.GetV3VideosIdSameSeriesRequest = exports.GetV3VideosIdSameSeriesHeaders = exports.GetV3VideosIdSameSeriesQueryParams = exports.GetV3VideosIdSameSeriesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetV3VideosIdSameSeriesPathParams = /** @class */ (function (_super) {
     __extends(GetV3VideosIdSameSeriesPathParams, _super);
     function GetV3VideosIdSameSeriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetV3VideosIdSameSeriesPathParams.prototype, "id", void 0);
     return GetV3VideosIdSameSeriesPathParams;
-}(SpeakeasyBase));
-export { GetV3VideosIdSameSeriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3VideosIdSameSeriesPathParams = GetV3VideosIdSameSeriesPathParams;
 var GetV3VideosIdSameSeriesQueryParams = /** @class */ (function (_super) {
     __extends(GetV3VideosIdSameSeriesQueryParams, _super);
     function GetV3VideosIdSameSeriesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=fields" }),
         __metadata("design:type", Array)
     ], GetV3VideosIdSameSeriesQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetV3VideosIdSameSeriesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetV3VideosIdSameSeriesQueryParams.prototype, "pageSize", void 0);
     return GetV3VideosIdSameSeriesQueryParams;
-}(SpeakeasyBase));
-export { GetV3VideosIdSameSeriesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3VideosIdSameSeriesQueryParams = GetV3VideosIdSameSeriesQueryParams;
 var GetV3VideosIdSameSeriesHeaders = /** @class */ (function (_super) {
     __extends(GetV3VideosIdSameSeriesHeaders, _super);
     function GetV3VideosIdSameSeriesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], GetV3VideosIdSameSeriesHeaders.prototype, "acceptLanguage", void 0);
     return GetV3VideosIdSameSeriesHeaders;
-}(SpeakeasyBase));
-export { GetV3VideosIdSameSeriesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetV3VideosIdSameSeriesHeaders = GetV3VideosIdSameSeriesHeaders;
 var GetV3VideosIdSameSeriesRequest = /** @class */ (function (_super) {
     __extends(GetV3VideosIdSameSeriesRequest, _super);
     function GetV3VideosIdSameSeriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3VideosIdSameSeriesPathParams)
     ], GetV3VideosIdSameSeriesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3VideosIdSameSeriesQueryParams)
     ], GetV3VideosIdSameSeriesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3VideosIdSameSeriesHeaders)
     ], GetV3VideosIdSameSeriesRequest.prototype, "headers", void 0);
     return GetV3VideosIdSameSeriesRequest;
-}(SpeakeasyBase));
-export { GetV3VideosIdSameSeriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV3VideosIdSameSeriesRequest = GetV3VideosIdSameSeriesRequest;
 var GetV3VideosIdSameSeriesResponse = /** @class */ (function (_super) {
     __extends(GetV3VideosIdSameSeriesResponse, _super);
     function GetV3VideosIdSameSeriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV3VideosIdSameSeriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV3VideosIdSameSeriesResponse.prototype, "statusCode", void 0);
     return GetV3VideosIdSameSeriesResponse;
-}(SpeakeasyBase));
-export { GetV3VideosIdSameSeriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV3VideosIdSameSeriesResponse = GetV3VideosIdSameSeriesResponse;

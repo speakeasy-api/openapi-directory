@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Server = void 0;
+var utils_1 = require("../../../internal/utils");
 var Server = /** @class */ (function (_super) {
     __extends(Server, _super);
     function Server() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], Server.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bingKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bingKey" }),
         __metadata("design:type", String)
     ], Server.prototype, "bingKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinateFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinateFormat" }),
         __metadata("design:type", String)
     ], Server.prototype, "coordinateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceReadonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceReadonly" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "deviceReadonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forceSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forceSettings" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "forceSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Server.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], Server.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitCommands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitCommands" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "limitCommands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], Server.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=map" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=map" }),
         __metadata("design:type", String)
     ], Server.prototype, "map", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapUrl" }),
         __metadata("design:type", String)
     ], Server.prototype, "mapUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poiLayer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poiLayer" }),
         __metadata("design:type", String)
     ], Server.prototype, "poiLayer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonly" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "readonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "registration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twelveHourFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twelveHourFormat" }),
         __metadata("design:type", Boolean)
     ], Server.prototype, "twelveHourFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Server.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zoom" }),
         __metadata("design:type", Number)
     ], Server.prototype, "zoom", void 0);
     return Server;
-}(SpeakeasyBase));
-export { Server };
+}(utils_1.SpeakeasyBase));
+exports.Server = Server;

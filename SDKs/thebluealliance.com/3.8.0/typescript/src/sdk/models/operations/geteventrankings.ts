@@ -41,7 +41,7 @@ export class GetEventRankingsResponse extends SpeakeasyBase {
   eventRanking?: shared.EventRanking;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

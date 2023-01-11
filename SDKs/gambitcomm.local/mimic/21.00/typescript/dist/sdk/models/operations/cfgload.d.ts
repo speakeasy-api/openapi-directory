@@ -11,5 +11,5 @@ export declare class CfgLoadRequest extends SpeakeasyBase {
 export declare class CfgLoadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cfgLoad200ApplicationJsonObject?: Map<string, number>;
+    cfgLoad200ApplicationJSONObject?: Record<string, number>;
 }

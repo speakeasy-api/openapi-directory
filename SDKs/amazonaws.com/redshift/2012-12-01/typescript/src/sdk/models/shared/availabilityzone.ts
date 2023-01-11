@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SupportedPlatform } from "./supportedplatform";
+import { SupportedPlatformsList } from "./supportedplatformslist";
 
 
 
@@ -11,6 +11,6 @@ export class AvailabilityZone extends SpeakeasyBase {
   @SpeakeasyMetadata()
   name?: string;
 
-  @SpeakeasyMetadata({ elemType: SupportedPlatform })
-  supportedPlatforms?: SupportedPlatform[];
+  @SpeakeasyMetadata({ elemType: SupportedPlatformsList })
+  supportedPlatforms?: SupportedPlatformsList[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdTopAnswerTagsResponse = exports.GetUsersIdTopAnswerTagsRequest = exports.GetUsersIdTopAnswerTagsQueryParams = exports.GetUsersIdTopAnswerTagsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdTopAnswerTagsPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdTopAnswerTagsPathParams, _super);
     function GetUsersIdTopAnswerTagsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetUsersIdTopAnswerTagsPathParams.prototype, "id", void 0);
     return GetUsersIdTopAnswerTagsPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdTopAnswerTagsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdTopAnswerTagsPathParams = GetUsersIdTopAnswerTagsPathParams;
 var GetUsersIdTopAnswerTagsQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdTopAnswerTagsQueryParams, _super);
     function GetUsersIdTopAnswerTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdTopAnswerTagsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdTopAnswerTagsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdTopAnswerTagsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdTopAnswerTagsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdTopAnswerTagsQueryParams.prototype, "site", void 0);
     return GetUsersIdTopAnswerTagsQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdTopAnswerTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdTopAnswerTagsQueryParams = GetUsersIdTopAnswerTagsQueryParams;
 var GetUsersIdTopAnswerTagsRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdTopAnswerTagsRequest, _super);
     function GetUsersIdTopAnswerTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdTopAnswerTagsPathParams)
     ], GetUsersIdTopAnswerTagsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdTopAnswerTagsQueryParams)
     ], GetUsersIdTopAnswerTagsRequest.prototype, "queryParams", void 0);
     return GetUsersIdTopAnswerTagsRequest;
-}(SpeakeasyBase));
-export { GetUsersIdTopAnswerTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdTopAnswerTagsRequest = GetUsersIdTopAnswerTagsRequest;
 var GetUsersIdTopAnswerTagsResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdTopAnswerTagsResponse, _super);
     function GetUsersIdTopAnswerTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdTopAnswerTagsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdTopAnswerTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdTopAnswerTagsResponse.prototype, "statusCode", void 0);
     return GetUsersIdTopAnswerTagsResponse;
-}(SpeakeasyBase));
-export { GetUsersIdTopAnswerTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdTopAnswerTagsResponse = GetUsersIdTopAnswerTagsResponse;

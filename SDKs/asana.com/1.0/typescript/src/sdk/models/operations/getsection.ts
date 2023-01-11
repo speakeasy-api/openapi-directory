@@ -44,5 +44,5 @@ export class GetSectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSection200ApplicationJsonObject?: GetSection200ApplicationJson;
+  getSection200ApplicationJSONObject?: GetSection200ApplicationJson;
 }

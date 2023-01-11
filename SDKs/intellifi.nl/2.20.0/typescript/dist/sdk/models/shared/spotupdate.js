@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeoCoordsInput } from "./geocoords";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpotUpdateInput = exports.SpotUpdateAntennaReportLocationsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var geocoords_1 = require("./geocoords");
 var SpotUpdateAntennaReportLocationsInput = /** @class */ (function (_super) {
     __extends(SpotUpdateAntennaReportLocationsInput, _super);
     function SpotUpdateAntennaReportLocationsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antenna_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antenna_number" }),
         __metadata("design:type", Number)
     ], SpotUpdateAntennaReportLocationsInput.prototype, "antennaNumber", void 0);
     return SpotUpdateAntennaReportLocationsInput;
-}(SpeakeasyBase));
-export { SpotUpdateAntennaReportLocationsInput };
+}(utils_1.SpeakeasyBase));
+exports.SpotUpdateAntennaReportLocationsInput = SpotUpdateAntennaReportLocationsInput;
 var SpotUpdateInput = /** @class */ (function (_super) {
     __extends(SpotUpdateInput, _super);
     function SpotUpdateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antenna_report_locations", elemType: SpotUpdateAntennaReportLocationsInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antenna_report_locations", elemType: SpotUpdateAntennaReportLocationsInput }),
         __metadata("design:type", Array)
     ], SpotUpdateInput.prototype, "antennaReportLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_request" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_request" }),
+        __metadata("design:type", Object)
     ], SpotUpdateInput.prototype, "configRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo_coords" }),
-        __metadata("design:type", GeoCoordsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo_coords" }),
+        __metadata("design:type", geocoords_1.GeoCoordsInput)
     ], SpotUpdateInput.prototype, "geoCoords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_location" }),
         __metadata("design:type", String)
     ], SpotUpdateInput.prototype, "reportLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=senses_request" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=senses_request" }),
+        __metadata("design:type", Object)
     ], SpotUpdateInput.prototype, "sensesRequest", void 0);
     return SpotUpdateInput;
-}(SpeakeasyBase));
-export { SpotUpdateInput };
+}(utils_1.SpeakeasyBase));
+exports.SpotUpdateInput = SpotUpdateInput;

@@ -8,7 +8,7 @@ export declare class User extends SpeakeasyBase {
     emailVerification: boolean;
     name: string;
     passwordUpdate: number;
-    prefs: Map<string, any>;
+    prefs: Record<string, any>;
     registration: number;
     status: number;
 }

@@ -23,8 +23,8 @@ export class SystemCountriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  systemCountries200ApplicationJsonAnies?: any[];
+  systemCountries200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  systemCountriesDefaultApplicationJsonAny?: any;
+  systemCountriesDefaultApplicationJSONAny?: any;
 }

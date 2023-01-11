@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RemoteAccessSession } from "./remoteaccesssession";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRemoteAccessSessionsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var remoteaccesssession_1 = require("./remoteaccesssession");
 // ListRemoteAccessSessionsResult
 /**
  * Represents the response from the server after AWS Device Farm makes a request to return information about the remote access session.
@@ -34,13 +37,13 @@ var ListRemoteAccessSessionsResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListRemoteAccessSessionsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteAccessSessions", elemType: RemoteAccessSession }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteAccessSessions", elemType: remoteaccesssession_1.RemoteAccessSession }),
         __metadata("design:type", Array)
     ], ListRemoteAccessSessionsResult.prototype, "remoteAccessSessions", void 0);
     return ListRemoteAccessSessionsResult;
-}(SpeakeasyBase));
-export { ListRemoteAccessSessionsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListRemoteAccessSessionsResult = ListRemoteAccessSessionsResult;

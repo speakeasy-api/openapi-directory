@@ -11,6 +11,6 @@ export declare class TypedLinkAttributeDefinition extends SpeakeasyBase {
     isImmutable?: boolean;
     name: string;
     requiredBehavior: RequiredAttributeBehaviorEnum;
-    rules?: Map<string, Rule>;
+    rules?: Record<string, Rule>;
     type: FacetAttributeTypeEnum;
 }

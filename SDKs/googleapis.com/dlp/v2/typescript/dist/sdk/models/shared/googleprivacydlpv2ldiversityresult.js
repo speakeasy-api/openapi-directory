@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2LDiversityHistogramBucket } from "./googleprivacydlpv2ldiversityhistogrambucket";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2LDiversityResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2ldiversityhistogrambucket_1 = require("./googleprivacydlpv2ldiversityhistogrambucket");
 // GooglePrivacyDlpV2LDiversityResult
 /**
  * Result of the l-diversity computation.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2LDiversityResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sensitiveValueFrequencyHistogramBuckets", elemType: GooglePrivacyDlpV2LDiversityHistogramBucket }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sensitiveValueFrequencyHistogramBuckets", elemType: googleprivacydlpv2ldiversityhistogrambucket_1.GooglePrivacyDlpV2LDiversityHistogramBucket }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2LDiversityResult.prototype, "sensitiveValueFrequencyHistogramBuckets", void 0);
     return GooglePrivacyDlpV2LDiversityResult;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2LDiversityResult };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2LDiversityResult = GooglePrivacyDlpV2LDiversityResult;

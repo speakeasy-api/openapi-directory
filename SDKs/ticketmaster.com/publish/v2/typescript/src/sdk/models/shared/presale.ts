@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Presale extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=descriptions" })
-  descriptions?: Map<string, string>;
+  descriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endDateTime" })
   endDateTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=startDateTime" })
   startDateTime?: Date;

@@ -20,10 +20,10 @@ export class HealthCheckResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  healthCheck200ApplicationJsonAnies?: any[];
+  healthCheck200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  healthCheckDefaultApplicationJsonAny?: any;
+  healthCheckDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

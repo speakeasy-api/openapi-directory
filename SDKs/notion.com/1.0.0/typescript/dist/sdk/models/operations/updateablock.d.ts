@@ -52,7 +52,7 @@ export declare class UpdateABlockRequest extends SpeakeasyBase {
 }
 export declare class UpdateABlockResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    updateABlock200ApplicationJsonObject?: UpdateABlock200ApplicationJson;
+    updateABlock200ApplicationJSONObject?: UpdateABlock200ApplicationJson;
 }

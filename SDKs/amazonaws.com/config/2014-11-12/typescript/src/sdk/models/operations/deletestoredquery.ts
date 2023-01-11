@@ -48,7 +48,7 @@ export class DeleteStoredQueryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteStoredQueryResponse?: Map<string, any>;
+  deleteStoredQueryResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

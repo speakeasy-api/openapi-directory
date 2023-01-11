@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ValidateAttestationOccurrenceResponseResultEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidateAttestationOccurrenceResponse = exports.ValidateAttestationOccurrenceResponseResultEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ValidateAttestationOccurrenceResponseResultEnum;
 (function (ValidateAttestationOccurrenceResponseResultEnum) {
     ValidateAttestationOccurrenceResponseResultEnum["ResultUnspecified"] = "RESULT_UNSPECIFIED";
     ValidateAttestationOccurrenceResponseResultEnum["Verified"] = "VERIFIED";
     ValidateAttestationOccurrenceResponseResultEnum["AttestationNotVerifiable"] = "ATTESTATION_NOT_VERIFIABLE";
-})(ValidateAttestationOccurrenceResponseResultEnum || (ValidateAttestationOccurrenceResponseResultEnum = {}));
+})(ValidateAttestationOccurrenceResponseResultEnum = exports.ValidateAttestationOccurrenceResponseResultEnum || (exports.ValidateAttestationOccurrenceResponseResultEnum = {}));
 // ValidateAttestationOccurrenceResponse
 /**
  * Response message for ValidationHelperV1.ValidateAttestationOccurrence.
@@ -39,13 +42,13 @@ var ValidateAttestationOccurrenceResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=denialReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=denialReason" }),
         __metadata("design:type", String)
     ], ValidateAttestationOccurrenceResponse.prototype, "denialReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ValidateAttestationOccurrenceResponse.prototype, "result", void 0);
     return ValidateAttestationOccurrenceResponse;
-}(SpeakeasyBase));
-export { ValidateAttestationOccurrenceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ValidateAttestationOccurrenceResponse = ValidateAttestationOccurrenceResponse;

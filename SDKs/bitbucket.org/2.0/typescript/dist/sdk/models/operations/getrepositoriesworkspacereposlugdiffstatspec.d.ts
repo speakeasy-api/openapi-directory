@@ -24,6 +24,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest extends
 export declare class GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedDiffstats?: shared.PaginatedDiffstats;
 }

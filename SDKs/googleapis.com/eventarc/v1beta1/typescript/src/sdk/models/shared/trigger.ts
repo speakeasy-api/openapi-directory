@@ -21,7 +21,7 @@ export class Trigger extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=matchingCriteria", elemType: MatchingCriteria })
   matchingCriteria?: MatchingCriteria[];
@@ -49,7 +49,7 @@ export class TriggerInput extends SpeakeasyBase {
   destination?: Destination;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=matchingCriteria", elemType: MatchingCriteria })
   matchingCriteria?: MatchingCriteria[];

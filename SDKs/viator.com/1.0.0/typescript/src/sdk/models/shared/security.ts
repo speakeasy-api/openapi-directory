@@ -19,5 +19,5 @@ export class Security extends SpeakeasyBase {
   apiKey?: SchemeApiKey;
 
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  legacyApiKey?: SchemeLegacyApiKey;
+  legacyAPIKey?: SchemeLegacyApiKey;
 }

@@ -73,8 +73,8 @@ export class PostPortfolioAnalysisMeanVarianceEfficientFrontierResponse extends 
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJsonObject?: PostPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJSONObject?: PostPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJson;
 }

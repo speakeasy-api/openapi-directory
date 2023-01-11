@@ -20,5 +20,5 @@ export declare class GamesGameSeriesListRequest extends SpeakeasyBase {
 export declare class GamesGameSeriesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gamesGameSeriesList200ApplicationJsonObject?: GamesGameSeriesList200ApplicationJson;
+    gamesGameSeriesList200ApplicationJSONObject?: GamesGameSeriesList200ApplicationJson;
 }

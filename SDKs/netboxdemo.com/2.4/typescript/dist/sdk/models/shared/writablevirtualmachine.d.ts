@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableVirtualMachineInput extends SpeakeasyBase {
     cluster: number;
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     disk?: number;
     localContextData?: string;
     memory?: number;

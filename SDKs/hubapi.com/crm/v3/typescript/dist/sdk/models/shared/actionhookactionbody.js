@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionConfirmationBody } from "./actionconfirmationbody";
-export var ActionHookActionBodyHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionHookActionBody = exports.ActionHookActionBodyTypeEnum = exports.ActionHookActionBodyHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionconfirmationbody_1 = require("./actionconfirmationbody");
+var ActionHookActionBodyHttpMethodEnum;
 (function (ActionHookActionBodyHttpMethodEnum) {
     ActionHookActionBodyHttpMethodEnum["Connect"] = "CONNECT";
     ActionHookActionBodyHttpMethodEnum["Delete"] = "DELETE";
@@ -35,40 +38,40 @@ export var ActionHookActionBodyHttpMethodEnum;
     ActionHookActionBodyHttpMethodEnum["Post"] = "POST";
     ActionHookActionBodyHttpMethodEnum["Put"] = "PUT";
     ActionHookActionBodyHttpMethodEnum["Trace"] = "TRACE";
-})(ActionHookActionBodyHttpMethodEnum || (ActionHookActionBodyHttpMethodEnum = {}));
-export var ActionHookActionBodyTypeEnum;
+})(ActionHookActionBodyHttpMethodEnum = exports.ActionHookActionBodyHttpMethodEnum || (exports.ActionHookActionBodyHttpMethodEnum = {}));
+var ActionHookActionBodyTypeEnum;
 (function (ActionHookActionBodyTypeEnum) {
     ActionHookActionBodyTypeEnum["ActionHook"] = "ACTION_HOOK";
-})(ActionHookActionBodyTypeEnum || (ActionHookActionBodyTypeEnum = {}));
+})(ActionHookActionBodyTypeEnum = exports.ActionHookActionBodyTypeEnum || (exports.ActionHookActionBodyTypeEnum = {}));
 var ActionHookActionBody = /** @class */ (function (_super) {
     __extends(ActionHookActionBody, _super);
     function ActionHookActionBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmation" }),
-        __metadata("design:type", ActionConfirmationBody)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmation" }),
+        __metadata("design:type", actionconfirmationbody_1.ActionConfirmationBody)
     ], ActionHookActionBody.prototype, "confirmation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], ActionHookActionBody.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ActionHookActionBody.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propertyNamesIncluded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyNamesIncluded" }),
         __metadata("design:type", Array)
     ], ActionHookActionBody.prototype, "propertyNamesIncluded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ActionHookActionBody.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ActionHookActionBody.prototype, "url", void 0);
     return ActionHookActionBody;
-}(SpeakeasyBase));
-export { ActionHookActionBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionHookActionBody = ActionHookActionBody;

@@ -22,8 +22,8 @@ export class GetVolumesFsFlavorsJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getVolumesFsFlavorsJson200ApplicationJsonIntegers?: number[];
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getVolumesFsFlavorsJSON200ApplicationJSONIntegers?: number[];
 }

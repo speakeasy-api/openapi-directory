@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentUpdateTypeEnum } from "./deploymentupdatetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEnvironmentInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentupdatetypeenum_1 = require("./deploymentupdatetypeenum");
 var UpdateEnvironmentInput = /** @class */ (function (_super) {
     __extends(UpdateEnvironmentInput, _super);
     function UpdateEnvironmentInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentType" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "deploymentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentAccountConnectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentAccountConnectionId" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "environmentAccountConnectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protonServiceRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protonServiceRoleArn" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "protonServiceRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMajorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMajorVersion" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "templateMajorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMinorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMinorVersion" }),
         __metadata("design:type", String)
     ], UpdateEnvironmentInput.prototype, "templateMinorVersion", void 0);
     return UpdateEnvironmentInput;
-}(SpeakeasyBase));
-export { UpdateEnvironmentInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEnvironmentInput = UpdateEnvironmentInput;

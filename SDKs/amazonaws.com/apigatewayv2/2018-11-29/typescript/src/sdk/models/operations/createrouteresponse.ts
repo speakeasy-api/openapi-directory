@@ -41,10 +41,10 @@ export class CreateRouteResponseRequestBody extends SpeakeasyBase {
   modelSelectionExpression?: string;
 
   @SpeakeasyMetadata({ data: "json, name=responseModels" })
-  responseModels?: Map<string, string>;
+  responseModels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=responseParameters", elemType: shared.ParameterConstraints })
-  responseParameters?: Map<string, shared.ParameterConstraints>;
+  responseParameters?: Record<string, shared.ParameterConstraints>;
 
   @SpeakeasyMetadata({ data: "json, name=routeResponseKey" })
   routeResponseKey: string;

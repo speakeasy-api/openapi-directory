@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessSetAcldbResponse = exports.AccessSetAcldbRequest = exports.AccessSetAcldbPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccessSetAcldbPathParams = /** @class */ (function (_super) {
     __extends(AccessSetAcldbPathParams, _super);
     function AccessSetAcldbPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=databaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=databaseName" }),
         __metadata("design:type", String)
     ], AccessSetAcldbPathParams.prototype, "databaseName", void 0);
     return AccessSetAcldbPathParams;
-}(SpeakeasyBase));
-export { AccessSetAcldbPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetAcldbPathParams = AccessSetAcldbPathParams;
 var AccessSetAcldbRequest = /** @class */ (function (_super) {
     __extends(AccessSetAcldbRequest, _super);
     function AccessSetAcldbRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AccessSetAcldbPathParams)
     ], AccessSetAcldbRequest.prototype, "pathParams", void 0);
     return AccessSetAcldbRequest;
-}(SpeakeasyBase));
-export { AccessSetAcldbRequest };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetAcldbRequest = AccessSetAcldbRequest;
 var AccessSetAcldbResponse = /** @class */ (function (_super) {
     __extends(AccessSetAcldbResponse, _super);
     function AccessSetAcldbResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AccessSetAcldbResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AccessSetAcldbResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AccessSetAcldbResponse.prototype, "accessSetAcldb200ApplicationJsonString", void 0);
+    ], AccessSetAcldbResponse.prototype, "accessSetAcldb200ApplicationJSONString", void 0);
     return AccessSetAcldbResponse;
-}(SpeakeasyBase));
-export { AccessSetAcldbResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetAcldbResponse = AccessSetAcldbResponse;

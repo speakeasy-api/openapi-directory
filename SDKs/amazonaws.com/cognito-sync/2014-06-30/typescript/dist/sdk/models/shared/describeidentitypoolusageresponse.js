@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityPoolUsage } from "./identitypoolusage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeIdentityPoolUsageResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var identitypoolusage_1 = require("./identitypoolusage");
 // DescribeIdentityPoolUsageResponse
 /**
  * Response to a successful DescribeIdentityPoolUsage request.
@@ -34,9 +37,9 @@ var DescribeIdentityPoolUsageResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityPoolUsage" }),
-        __metadata("design:type", IdentityPoolUsage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityPoolUsage" }),
+        __metadata("design:type", identitypoolusage_1.IdentityPoolUsage)
     ], DescribeIdentityPoolUsageResponse.prototype, "identityPoolUsage", void 0);
     return DescribeIdentityPoolUsageResponse;
-}(SpeakeasyBase));
-export { DescribeIdentityPoolUsageResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeIdentityPoolUsageResponse = DescribeIdentityPoolUsageResponse;

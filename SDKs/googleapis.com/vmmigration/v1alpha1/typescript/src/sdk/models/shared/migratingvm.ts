@@ -1,15 +1,15 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AwsSourceVmDetails } from "./awssourcevmdetails";
-import { ComputeEngineTargetDefaultsInput } from "./computeenginetargetdefaults";
-import { TargetVmDetailsInput } from "./targetvmdetails";
+import { ComputeEngineTargetDefaults } from "./computeenginetargetdefaults";
+import { TargetVmDetails } from "./targetvmdetails";
 import { ReplicationCycle } from "./replicationcycle";
 import { Status } from "./status";
 import { ReplicationSync } from "./replicationsync";
 import { SchedulePolicy } from "./schedulepolicy";
-import { ComputeEngineTargetDefaults } from "./computeenginetargetdefaults";
-import { TargetVmDetails } from "./targetvmdetails";
 import { CloneJob } from "./clonejob";
 import { CutoverJob } from "./cutoverjob";
+import { ComputeEngineTargetDefaultsInput } from "./computeenginetargetdefaults";
+import { TargetVmDetailsInput } from "./targetvmdetails";
 
 
 export enum MigratingVmStateEnum {
@@ -25,49 +25,6 @@ export enum MigratingVmStateEnum {
     Finalizing = "FINALIZING",
     Finalized = "FINALIZED",
     Error = "ERROR"
-}
-
-
-// MigratingVmInput
-/** 
- * MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
-**/
-export class MigratingVmInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=awsSourceVmDetails" })
-  awsSourceVmDetails?: AwsSourceVmDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDefaults" })
-  computeEngineTargetDefaults?: ComputeEngineTargetDefaultsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=computeEngineVmDefaults" })
-  computeEngineVmDefaults?: TargetVmDetailsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=currentSyncInfo" })
-  currentSyncInfo?: ReplicationCycle;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Status;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=lastSync" })
-  lastSync?: ReplicationSync;
-
-  @SpeakeasyMetadata({ data: "json, name=policy" })
-  policy?: SchedulePolicy;
-
-  @SpeakeasyMetadata({ data: "json, name=sourceVmId" })
-  sourceVmId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=targetDefaults" })
-  targetDefaults?: TargetVmDetailsInput;
 }
 
 
@@ -104,7 +61,7 @@ export class MigratingVm extends SpeakeasyBase {
   group?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastSync" })
   lastSync?: ReplicationSync;
@@ -135,4 +92,47 @@ export class MigratingVm extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// MigratingVmInput
+/** 
+ * MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
+**/
+export class MigratingVmInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=awsSourceVmDetails" })
+  awsSourceVmDetails?: AwsSourceVmDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDefaults" })
+  computeEngineTargetDefaults?: ComputeEngineTargetDefaultsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=computeEngineVmDefaults" })
+  computeEngineVmDefaults?: TargetVmDetailsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=currentSyncInfo" })
+  currentSyncInfo?: ReplicationCycle;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: Status;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=lastSync" })
+  lastSync?: ReplicationSync;
+
+  @SpeakeasyMetadata({ data: "json, name=policy" })
+  policy?: SchedulePolicy;
+
+  @SpeakeasyMetadata({ data: "json, name=sourceVmId" })
+  sourceVmId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=targetDefaults" })
+  targetDefaults?: TargetVmDetailsInput;
 }

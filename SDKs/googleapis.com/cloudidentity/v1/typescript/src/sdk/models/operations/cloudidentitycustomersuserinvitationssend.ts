@@ -53,7 +53,7 @@ export class CloudidentityCustomersUserinvitationsSendRequest extends SpeakeasyB
   queryParams: CloudidentityCustomersUserinvitationsSendQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 

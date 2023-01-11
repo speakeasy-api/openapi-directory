@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionGroupOption } from "./optiongroupoption";
+import { OptionGroupOptionsList } from "./optiongroupoptionslist";
 
 
 
@@ -7,6 +7,6 @@ export class OptionGroupOptionsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: OptionGroupOption })
-  optionGroupOptions?: OptionGroupOption[];
+  @SpeakeasyMetadata({ elemType: OptionGroupOptionsList })
+  optionGroupOptions?: OptionGroupOptionsList[];
 }

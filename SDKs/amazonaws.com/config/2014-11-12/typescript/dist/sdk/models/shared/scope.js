@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Scope = void 0;
+var utils_1 = require("../../../internal/utils");
 // Scope
 /**
  * Defines which resources trigger an evaluation for an Config rule. The scope can include one or more resource types, a combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a scope to constrain which resources trigger an evaluation for a rule. Otherwise, evaluations for the rule are triggered when any resource in your recording group changes in configuration.
@@ -33,21 +36,21 @@ var Scope = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceResourceId" }),
         __metadata("design:type", String)
     ], Scope.prototype, "complianceResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceResourceTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceResourceTypes" }),
         __metadata("design:type", Array)
     ], Scope.prototype, "complianceResourceTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagKey" }),
         __metadata("design:type", String)
     ], Scope.prototype, "tagKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagValue" }),
         __metadata("design:type", String)
     ], Scope.prototype, "tagValue", void 0);
     return Scope;
-}(SpeakeasyBase));
-export { Scope };
+}(utils_1.SpeakeasyBase));
+exports.Scope = Scope;

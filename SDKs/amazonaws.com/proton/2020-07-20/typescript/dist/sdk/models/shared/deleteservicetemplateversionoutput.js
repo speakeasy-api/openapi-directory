@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceTemplateVersion } from "./servicetemplateversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteServiceTemplateVersionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicetemplateversion_1 = require("./servicetemplateversion");
 var DeleteServiceTemplateVersionOutput = /** @class */ (function (_super) {
     __extends(DeleteServiceTemplateVersionOutput, _super);
     function DeleteServiceTemplateVersionOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceTemplateVersion" }),
-        __metadata("design:type", ServiceTemplateVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceTemplateVersion" }),
+        __metadata("design:type", servicetemplateversion_1.ServiceTemplateVersion)
     ], DeleteServiceTemplateVersionOutput.prototype, "serviceTemplateVersion", void 0);
     return DeleteServiceTemplateVersionOutput;
-}(SpeakeasyBase));
-export { DeleteServiceTemplateVersionOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteServiceTemplateVersionOutput = DeleteServiceTemplateVersionOutput;

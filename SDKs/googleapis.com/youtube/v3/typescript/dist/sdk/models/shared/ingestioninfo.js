@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IngestionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // IngestionInfo
 /**
  * Describes information necessary for ingesting an RTMP, HTTP, or SRT stream.
@@ -33,25 +36,25 @@ var IngestionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupIngestionAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupIngestionAddress" }),
         __metadata("design:type", String)
     ], IngestionInfo.prototype, "backupIngestionAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingestionAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingestionAddress" }),
         __metadata("design:type", String)
     ], IngestionInfo.prototype, "ingestionAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rtmpsBackupIngestionAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rtmpsBackupIngestionAddress" }),
         __metadata("design:type", String)
     ], IngestionInfo.prototype, "rtmpsBackupIngestionAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rtmpsIngestionAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rtmpsIngestionAddress" }),
         __metadata("design:type", String)
     ], IngestionInfo.prototype, "rtmpsIngestionAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamName" }),
         __metadata("design:type", String)
     ], IngestionInfo.prototype, "streamName", void 0);
     return IngestionInfo;
-}(SpeakeasyBase));
-export { IngestionInfo };
+}(utils_1.SpeakeasyBase));
+exports.IngestionInfo = IngestionInfo;

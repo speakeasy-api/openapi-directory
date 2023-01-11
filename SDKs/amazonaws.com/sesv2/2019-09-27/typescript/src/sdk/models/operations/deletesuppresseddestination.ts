@@ -49,7 +49,7 @@ export class DeleteSuppressedDestinationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSuppressedDestinationResponse?: Map<string, any>;
+  deleteSuppressedDestinationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

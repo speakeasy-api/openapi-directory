@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorMetric = void 0;
+var utils_1 = require("../../../internal/utils");
 // ErrorMetric
 /**
  *  Provides detailed error metrics to evaluate the performance of a predictor. This object is part of the <a>Metrics</a> object.
@@ -33,25 +36,25 @@ var ErrorMetric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastType" }),
         __metadata("design:type", String)
     ], ErrorMetric.prototype, "forecastType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MAPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MAPE" }),
         __metadata("design:type", Number)
     ], ErrorMetric.prototype, "mape", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MASE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MASE" }),
         __metadata("design:type", Number)
     ], ErrorMetric.prototype, "mase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RMSE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RMSE" }),
         __metadata("design:type", Number)
     ], ErrorMetric.prototype, "rmse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WAPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WAPE" }),
         __metadata("design:type", Number)
     ], ErrorMetric.prototype, "wape", void 0);
     return ErrorMetric;
-}(SpeakeasyBase));
-export { ErrorMetric };
+}(utils_1.SpeakeasyBase));
+exports.ErrorMetric = ErrorMetric;

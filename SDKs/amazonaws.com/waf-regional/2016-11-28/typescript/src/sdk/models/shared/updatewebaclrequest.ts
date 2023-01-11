@@ -15,5 +15,5 @@ export class UpdateWebAclRequest extends SpeakeasyBase {
   updates?: WebAclUpdate[];
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

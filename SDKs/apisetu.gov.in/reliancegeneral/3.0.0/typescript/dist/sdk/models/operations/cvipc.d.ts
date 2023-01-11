@@ -109,11 +109,11 @@ export declare class CvipcRequest extends SpeakeasyBase {
 export declare class CvipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cvipc400ApplicationJsonObject?: Cvipc400ApplicationJson;
-    cvipc401ApplicationJsonObject?: Cvipc401ApplicationJson;
-    cvipc404ApplicationJsonObject?: Cvipc404ApplicationJson;
-    cvipc500ApplicationJsonObject?: Cvipc500ApplicationJson;
-    cvipc502ApplicationJsonObject?: Cvipc502ApplicationJson;
-    cvipc503ApplicationJsonObject?: Cvipc503ApplicationJson;
-    cvipc504ApplicationJsonObject?: Cvipc504ApplicationJson;
+    cvipc400ApplicationJSONObject?: Cvipc400ApplicationJson;
+    cvipc401ApplicationJSONObject?: Cvipc401ApplicationJson;
+    cvipc404ApplicationJSONObject?: Cvipc404ApplicationJson;
+    cvipc500ApplicationJSONObject?: Cvipc500ApplicationJson;
+    cvipc502ApplicationJSONObject?: Cvipc502ApplicationJson;
+    cvipc503ApplicationJSONObject?: Cvipc503ApplicationJson;
+    cvipc504ApplicationJSONObject?: Cvipc504ApplicationJson;
 }

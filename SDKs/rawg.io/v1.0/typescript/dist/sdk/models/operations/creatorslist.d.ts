@@ -16,5 +16,5 @@ export declare class CreatorsListRequest extends SpeakeasyBase {
 export declare class CreatorsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    creatorsList200ApplicationJsonObject?: CreatorsList200ApplicationJson;
+    creatorsList200ApplicationJSONObject?: CreatorsList200ApplicationJson;
 }

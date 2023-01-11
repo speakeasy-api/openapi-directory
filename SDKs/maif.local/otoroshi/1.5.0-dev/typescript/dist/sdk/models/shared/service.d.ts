@@ -15,7 +15,7 @@ import { Target } from "./target";
 **/
 export declare class Service extends SpeakeasyBase {
     canary?: Canary;
-    additionalHeaders?: Map<string, string>;
+    additionalHeaders?: Record<string, string>;
     api?: ExposedApi;
     authConfigRef?: string;
     buildMode: boolean;
@@ -30,7 +30,7 @@ export declare class Service extends SpeakeasyBase {
     forceHttps: boolean;
     groups: string[];
     gzip?: Gzip;
-    headersVerification?: Map<string, string>;
+    headersVerification?: Record<string, string>;
     healthCheck?: HealthCheck;
     id: string;
     ipFiltering?: IpFiltering;
@@ -38,9 +38,9 @@ export declare class Service extends SpeakeasyBase {
     localHost?: string;
     localScheme?: string;
     maintenanceMode: boolean;
-    matchingHeaders?: Map<string, string>;
+    matchingHeaders?: Record<string, string>;
     matchingRoot?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name: string;
     overrideHost?: boolean;
     privateApp: boolean;

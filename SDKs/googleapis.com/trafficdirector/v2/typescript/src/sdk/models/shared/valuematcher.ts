@@ -20,7 +20,7 @@ export class ValueMatcher extends SpeakeasyBase {
   listMatch?: ListMatcher;
 
   @SpeakeasyMetadata({ data: "json, name=nullMatch" })
-  nullMatch?: Map<string, any>;
+  nullMatch?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=presentMatch" })
   presentMatch?: boolean;

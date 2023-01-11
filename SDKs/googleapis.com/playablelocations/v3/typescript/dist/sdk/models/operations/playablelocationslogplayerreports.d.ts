@@ -19,6 +19,6 @@ export declare class PlayablelocationsLogPlayerReportsRequest extends SpeakeasyB
 }
 export declare class PlayablelocationsLogPlayerReportsResponse extends SpeakeasyBase {
     contentType: string;
-    googleMapsPlayablelocationsV3LogPlayerReportsResponse?: Map<string, any>;
+    googleMapsPlayablelocationsV3LogPlayerReportsResponse?: Record<string, any>;
     statusCode: number;
 }

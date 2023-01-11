@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DefaultCategoricalHyperParameterRange } from "./defaultcategoricalhyperparameterrange";
-import { DefaultContinuousHyperParameterRange } from "./defaultcontinuoushyperparameterrange";
-import { DefaultIntegerHyperParameterRange } from "./defaultintegerhyperparameterrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultHyperParameterRanges = void 0;
+var utils_1 = require("../../../internal/utils");
+var defaultcategoricalhyperparameterrange_1 = require("./defaultcategoricalhyperparameterrange");
+var defaultcontinuoushyperparameterrange_1 = require("./defaultcontinuoushyperparameterrange");
+var defaultintegerhyperparameterrange_1 = require("./defaultintegerhyperparameterrange");
 // DefaultHyperParameterRanges
 /**
  * Specifies the hyperparameters and their default ranges. Hyperparameters can be categorical, continuous, or integer-valued.
@@ -36,17 +39,17 @@ var DefaultHyperParameterRanges = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoricalHyperParameterRanges", elemType: DefaultCategoricalHyperParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoricalHyperParameterRanges", elemType: defaultcategoricalhyperparameterrange_1.DefaultCategoricalHyperParameterRange }),
         __metadata("design:type", Array)
     ], DefaultHyperParameterRanges.prototype, "categoricalHyperParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continuousHyperParameterRanges", elemType: DefaultContinuousHyperParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continuousHyperParameterRanges", elemType: defaultcontinuoushyperparameterrange_1.DefaultContinuousHyperParameterRange }),
         __metadata("design:type", Array)
     ], DefaultHyperParameterRanges.prototype, "continuousHyperParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integerHyperParameterRanges", elemType: DefaultIntegerHyperParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integerHyperParameterRanges", elemType: defaultintegerhyperparameterrange_1.DefaultIntegerHyperParameterRange }),
         __metadata("design:type", Array)
     ], DefaultHyperParameterRanges.prototype, "integerHyperParameterRanges", void 0);
     return DefaultHyperParameterRanges;
-}(SpeakeasyBase));
-export { DefaultHyperParameterRanges };
+}(utils_1.SpeakeasyBase));
+exports.DefaultHyperParameterRanges = DefaultHyperParameterRanges;

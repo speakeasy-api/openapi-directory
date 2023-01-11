@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AclPendingChanges } from "./aclpendingchanges";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Acl = void 0;
+var utils_1 = require("../../../internal/utils");
+var aclpendingchanges_1 = require("./aclpendingchanges");
 // Acl
 /**
  * An Access Control List. You can authenticate users with Access Contol Lists. ACLs enable you to control cluster access by grouping users. These Access control lists are designed as a way to organize access to clusters.
@@ -34,33 +37,33 @@ var Acl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ARN" }),
         __metadata("design:type", String)
     ], Acl.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Clusters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Clusters" }),
         __metadata("design:type", Array)
     ], Acl.prototype, "clusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumEngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumEngineVersion" }),
         __metadata("design:type", String)
     ], Acl.prototype, "minimumEngineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Acl.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PendingChanges" }),
-        __metadata("design:type", AclPendingChanges)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PendingChanges" }),
+        __metadata("design:type", aclpendingchanges_1.AclPendingChanges)
     ], Acl.prototype, "pendingChanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Acl.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserNames" }),
         __metadata("design:type", Array)
     ], Acl.prototype, "userNames", void 0);
     return Acl;
-}(SpeakeasyBase));
-export { Acl };
+}(utils_1.SpeakeasyBase));
+exports.Acl = Acl;

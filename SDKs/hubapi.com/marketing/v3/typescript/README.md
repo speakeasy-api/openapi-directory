@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest, PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,43 +28,35 @@ const sdk = new SDK();
     
 const req: PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest = {
   security: {
-    hapikey: {
+    privateAppsLegacy: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   pathParams: {
-    externalEventId: "at",
-    subscriberState: "alias",
+    externalEventId: "sit",
+    subscriberState: "voluptas",
   },
   queryParams: {
-    externalAccountId: "itaque",
+    externalAccountId: "culpa",
   },
   request: {
     inputs: [
       {
-        interactionDateTime: 2302967267970027547,
+        interactionDateTime: 3390393562759376202,
         properties: {
-          "molestias": "unde",
-          "est": "magni",
+          "expedita": "voluptas",
+          "fugit": "et",
         },
-        vid: 7565841782221576307,
+        vid: 2661732831099943416,
       },
       {
-        interactionDateTime: 2142591452447809195,
+        interactionDateTime: 8325060299420976708,
         properties: {
-          "sed": "et",
-          "aut": "magni",
-          "suscipit": "itaque",
+          "debitis": "voluptatum",
+          "et": "ut",
+          "dolorem": "et",
         },
-        vid: 1952180925797314726,
-      },
-      {
-        interactionDateTime: 5471217105972249296,
-        properties: {
-          "laudantium": "molestiae",
-          "omnis": "maiores",
-        },
-        vid: 1075583259233509778,
+        vid: 7373105480197164748,
       },
     ],
   },

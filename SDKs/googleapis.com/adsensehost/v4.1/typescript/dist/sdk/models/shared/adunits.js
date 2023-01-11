@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdUnit } from "./adunit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdUnits = void 0;
+var utils_1 = require("../../../internal/utils");
+var adunit_1 = require("./adunit");
 var AdUnits = /** @class */ (function (_super) {
     __extends(AdUnits, _super);
     function AdUnits() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], AdUnits.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: AdUnit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: adunit_1.AdUnit }),
         __metadata("design:type", Array)
     ], AdUnits.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AdUnits.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], AdUnits.prototype, "nextPageToken", void 0);
     return AdUnits;
-}(SpeakeasyBase));
-export { AdUnits };
+}(utils_1.SpeakeasyBase));
+exports.AdUnits = AdUnits;

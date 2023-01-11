@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class UntagResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+    resourceARN: string;
 }
 export declare class UntagResourceQueryParams extends SpeakeasyBase {
     tagKeys: string[];
@@ -25,6 +25,6 @@ export declare class UntagResourceResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    untagResourceResponse?: Map<string, any>;
+    untagResourceResponse?: Record<string, any>;
     validationException?: any;
 }

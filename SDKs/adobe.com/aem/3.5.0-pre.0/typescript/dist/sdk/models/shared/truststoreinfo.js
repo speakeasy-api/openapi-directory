@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TruststoreItems } from "./truststoreitems";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TruststoreInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var truststoreitems_1 = require("./truststoreitems");
 var TruststoreInfo = /** @class */ (function (_super) {
     __extends(TruststoreInfo, _super);
     function TruststoreInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliases", elemType: TruststoreItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliases", elemType: truststoreitems_1.TruststoreItems }),
         __metadata("design:type", Array)
     ], TruststoreInfo.prototype, "aliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exists" }),
         __metadata("design:type", Boolean)
     ], TruststoreInfo.prototype, "exists", void 0);
     return TruststoreInfo;
-}(SpeakeasyBase));
-export { TruststoreInfo };
+}(utils_1.SpeakeasyBase));
+exports.TruststoreInfo = TruststoreInfo;

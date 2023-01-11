@@ -97,5 +97,5 @@ export class GetTransactionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTransactions200ApplicationJsonObject?: GetTransactions200ApplicationJson;
+  getTransactions200ApplicationJSONObject?: GetTransactions200ApplicationJson;
 }

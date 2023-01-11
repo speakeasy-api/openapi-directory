@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryUpdateProjectResponse = exports.RegistryUpdateProjectRequest = exports.RegistryUpdateProjectQueryParams = exports.RegistryUpdateProjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryUpdateProjectPathParams = /** @class */ (function (_super) {
     __extends(RegistryUpdateProjectPathParams, _super);
     function RegistryUpdateProjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryUpdateProjectPathParams.prototype, "project", void 0);
     return RegistryUpdateProjectPathParams;
-}(SpeakeasyBase));
-export { RegistryUpdateProjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateProjectPathParams = RegistryUpdateProjectPathParams;
 var RegistryUpdateProjectQueryParams = /** @class */ (function (_super) {
     __extends(RegistryUpdateProjectQueryParams, _super);
     function RegistryUpdateProjectQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=update_mask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=update_mask" }),
         __metadata("design:type", String)
     ], RegistryUpdateProjectQueryParams.prototype, "updateMask", void 0);
     return RegistryUpdateProjectQueryParams;
-}(SpeakeasyBase));
-export { RegistryUpdateProjectQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateProjectQueryParams = RegistryUpdateProjectQueryParams;
 var RegistryUpdateProjectRequest = /** @class */ (function (_super) {
     __extends(RegistryUpdateProjectRequest, _super);
     function RegistryUpdateProjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryUpdateProjectPathParams)
     ], RegistryUpdateProjectRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryUpdateProjectQueryParams)
     ], RegistryUpdateProjectRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], RegistryUpdateProjectRequest.prototype, "request", void 0);
     return RegistryUpdateProjectRequest;
-}(SpeakeasyBase));
-export { RegistryUpdateProjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateProjectRequest = RegistryUpdateProjectRequest;
 var RegistryUpdateProjectResponse = /** @class */ (function (_super) {
     __extends(RegistryUpdateProjectResponse, _super);
     function RegistryUpdateProjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryUpdateProjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryUpdateProjectResponse.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryUpdateProjectResponse.prototype, "statusCode", void 0);
     return RegistryUpdateProjectResponse;
-}(SpeakeasyBase));
-export { RegistryUpdateProjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateProjectResponse = RegistryUpdateProjectResponse;

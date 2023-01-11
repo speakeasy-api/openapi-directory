@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CouponConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // CouponConfiguration
 /**
  * This container defines a coded coupon promotion. It is required if the promotion type is CODED_COUPON.
@@ -33,17 +36,17 @@ var CouponConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=couponCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=couponCode" }),
         __metadata("design:type", String)
     ], CouponConfiguration.prototype, "couponCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=couponType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=couponType" }),
         __metadata("design:type", String)
     ], CouponConfiguration.prototype, "couponType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCouponRedemptionPerUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCouponRedemptionPerUser" }),
         __metadata("design:type", Number)
     ], CouponConfiguration.prototype, "maxCouponRedemptionPerUser", void 0);
     return CouponConfiguration;
-}(SpeakeasyBase));
-export { CouponConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.CouponConfiguration = CouponConfiguration;

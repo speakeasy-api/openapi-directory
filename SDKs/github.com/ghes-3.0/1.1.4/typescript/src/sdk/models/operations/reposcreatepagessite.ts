@@ -72,7 +72,7 @@ export class ReposCreatePagesSiteResponse extends SpeakeasyBase {
   page?: shared.Page;
 
   @SpeakeasyMetadata()
-  reposCreatePagesSite415ApplicationJsonObject?: ReposCreatePagesSite415ApplicationJson;
+  reposCreatePagesSite415ApplicationJSONObject?: ReposCreatePagesSite415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

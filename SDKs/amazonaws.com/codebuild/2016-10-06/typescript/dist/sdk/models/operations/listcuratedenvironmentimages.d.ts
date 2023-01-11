@@ -15,7 +15,7 @@ export declare class ListCuratedEnvironmentImagesHeaders extends SpeakeasyBase {
 }
 export declare class ListCuratedEnvironmentImagesRequest extends SpeakeasyBase {
     headers: ListCuratedEnvironmentImagesHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class ListCuratedEnvironmentImagesResponse extends SpeakeasyBase {
     contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrackTargetedCountry } from "./tracktargetedcountry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrackCountryAvailability = void 0;
+var utils_1 = require("../../../internal/utils");
+var tracktargetedcountry_1 = require("./tracktargetedcountry");
 // TrackCountryAvailability
 /**
  * Resource for per-track country availability information.
@@ -34,17 +37,17 @@ var TrackCountryAvailability = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries", elemType: TrackTargetedCountry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries", elemType: tracktargetedcountry_1.TrackTargetedCountry }),
         __metadata("design:type", Array)
     ], TrackCountryAvailability.prototype, "countries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restOfWorld" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restOfWorld" }),
         __metadata("design:type", Boolean)
     ], TrackCountryAvailability.prototype, "restOfWorld", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncWithProduction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncWithProduction" }),
         __metadata("design:type", Boolean)
     ], TrackCountryAvailability.prototype, "syncWithProduction", void 0);
     return TrackCountryAvailability;
-}(SpeakeasyBase));
-export { TrackCountryAvailability };
+}(utils_1.SpeakeasyBase));
+exports.TrackCountryAvailability = TrackCountryAvailability;

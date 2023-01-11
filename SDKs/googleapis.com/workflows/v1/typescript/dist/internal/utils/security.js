@@ -1,8 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createSecurityClient = void 0;
 var securityMetadataKey = "security";
-export function CreateSecurityClient(client, security) {
-    return ParseSecurityClass(client, security);
+function createSecurityClient(client, security) {
+    return parseSecurityClass(client, security);
 }
-function ParseSecurityDecorator(securityAnn) {
+exports.createSecurityClient = createSecurityClient;
+function parseSecurityDecorator(securityAnn) {
     // scheme=true;type=apiKey;subtype=header"
     var option = false;
     var scheme = false;
@@ -30,49 +34,49 @@ function ParseSecurityDecorator(securityAnn) {
     });
     return new SecurityDecorator(name, securityType, option, scheme, securitySubType);
 }
-function ParseSecurityClass(client, security) {
+function parseSecurityClass(client, security) {
     var fieldNames = Object.getOwnPropertyNames(security);
     fieldNames.forEach(function (fname) {
         var securityAnn = Reflect.getMetadata(securityMetadataKey, security, fname);
         if (securityAnn == null)
             return;
-        var securityDecorator = ParseSecurityDecorator(securityAnn);
+        var securityDecorator = parseSecurityDecorator(securityAnn);
         if (securityDecorator == null)
             return;
         if (securityDecorator.Option) {
-            return ParseSecurityOption(client, security[fname]);
+            return parseSecurityOption(client, security[fname]);
         }
         else if (securityDecorator.Scheme) {
-            return ParseSecurityScheme(client, securityDecorator, security[fname]);
+            return parseSecurityScheme(client, securityDecorator, security[fname]);
         }
     });
     return client;
 }
-function ParseSecurityOption(client, optionType) {
+function parseSecurityOption(client, optionType) {
     var fieldNames = Object.getOwnPropertyNames(optionType);
     fieldNames.forEach(function (fname) {
         var securityAnn = Reflect.getMetadata(securityMetadataKey, optionType, fname);
         if (securityAnn == null)
             return;
-        var securityDecorator = ParseSecurityDecorator(securityAnn);
+        var securityDecorator = parseSecurityDecorator(securityAnn);
         if (securityDecorator != null && securityDecorator.Scheme)
             return;
         if (securityDecorator.Scheme) {
-            return ParseSecurityScheme(client, securityDecorator, optionType[fname]);
+            return parseSecurityScheme(client, securityDecorator, optionType[fname]);
         }
     });
     return client;
 }
-function ParseSecurityScheme(client, schemeDecorator, scheme) {
+function parseSecurityScheme(client, schemeDecorator, scheme) {
     if (schemeDecorator.Type === "http" && schemeDecorator.SubType === "basic") {
-        return ParseBasicAuthScheme(client, scheme);
+        return parseBasicAuthScheme(client, scheme);
     }
     var fieldNames = Object.getOwnPropertyNames(scheme);
     fieldNames.forEach(function (fname) {
         var securityAnn = Reflect.getMetadata(securityMetadataKey, scheme, fname);
         if (securityAnn == null)
             return;
-        var securityDecorator = ParseSecurityDecorator(securityAnn);
+        var securityDecorator = parseSecurityDecorator(securityAnn);
         if (securityDecorator == null || securityDecorator.Name === "")
             return;
         switch (schemeDecorator.Type) {
@@ -118,14 +122,14 @@ function ParseSecurityScheme(client, schemeDecorator, scheme) {
     });
     return client;
 }
-function ParseBasicAuthScheme(client, scheme) {
+function parseBasicAuthScheme(client, scheme) {
     var username, password = "";
     var fieldNames = Object.getOwnPropertyNames(scheme);
     fieldNames.forEach(function (fname) {
         var securityAnn = Reflect.getMetadata(securityMetadataKey, scheme, fname);
         if (securityAnn == null)
             return;
-        var securityDecorator = ParseSecurityDecorator(securityAnn);
+        var securityDecorator = parseSecurityDecorator(securityAnn);
         if (securityDecorator == null || securityDecorator.Name === "")
             return;
         switch (securityDecorator.Name) {

@@ -32,5 +32,5 @@ export class ReposGetAppsWithAccessToProtectedBranchResponse extends SpeakeasyBa
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  integrations?: Map<string, any>[];
+  integrations?: Record<string, any>[];
 }

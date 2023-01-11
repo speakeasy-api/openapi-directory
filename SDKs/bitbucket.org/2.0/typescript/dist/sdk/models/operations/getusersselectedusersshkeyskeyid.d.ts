@@ -16,6 +16,6 @@ export declare class GetUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBa
 export declare class GetUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    sshAccountKey?: Map<string, any>;
+    error?: Record<string, any>;
+    sshAccountKey?: Record<string, any>;
 }

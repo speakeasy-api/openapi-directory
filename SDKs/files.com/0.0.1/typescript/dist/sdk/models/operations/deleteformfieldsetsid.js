@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteFormFieldSetsIdResponse = exports.DeleteFormFieldSetsIdRequest = exports.DeleteFormFieldSetsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteFormFieldSetsIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteFormFieldSetsIdPathParams, _super);
     function DeleteFormFieldSetsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteFormFieldSetsIdPathParams.prototype, "id", void 0);
     return DeleteFormFieldSetsIdPathParams;
-}(SpeakeasyBase));
-export { DeleteFormFieldSetsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFormFieldSetsIdPathParams = DeleteFormFieldSetsIdPathParams;
 var DeleteFormFieldSetsIdRequest = /** @class */ (function (_super) {
     __extends(DeleteFormFieldSetsIdRequest, _super);
     function DeleteFormFieldSetsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteFormFieldSetsIdPathParams)
     ], DeleteFormFieldSetsIdRequest.prototype, "pathParams", void 0);
     return DeleteFormFieldSetsIdRequest;
-}(SpeakeasyBase));
-export { DeleteFormFieldSetsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFormFieldSetsIdRequest = DeleteFormFieldSetsIdRequest;
 var DeleteFormFieldSetsIdResponse = /** @class */ (function (_super) {
     __extends(DeleteFormFieldSetsIdResponse, _super);
     function DeleteFormFieldSetsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteFormFieldSetsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteFormFieldSetsIdResponse.prototype, "statusCode", void 0);
     return DeleteFormFieldSetsIdResponse;
-}(SpeakeasyBase));
-export { DeleteFormFieldSetsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFormFieldSetsIdResponse = DeleteFormFieldSetsIdResponse;

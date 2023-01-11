@@ -1,26 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudSqlPropertiesInput } from "./cloudsqlproperties";
 import { CloudSqlProperties } from "./cloudsqlproperties";
+import { CloudSqlPropertiesInput } from "./cloudsqlproperties";
 
-
-
-// ConnectionInput
-/** 
- * Configuration parameters to establish connection with an external data source, except the credential attributes.
-**/
-export class ConnectionInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=cloudSql" })
-  cloudSql?: CloudSqlPropertiesInput;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=friendlyName" })
-  friendlyName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-}
 
 
 // Connection
@@ -45,6 +26,25 @@ export class Connection extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=lastModifiedTime" })
   lastModifiedTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+}
+
+
+// ConnectionInput
+/** 
+ * Configuration parameters to establish connection with an external data source, except the credential attributes.
+**/
+export class ConnectionInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=cloudSql" })
+  cloudSql?: CloudSqlPropertiesInput;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=friendlyName" })
+  friendlyName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Player } from "./player";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var player_1 = require("./player");
 // PlayerListResponse
 /**
  * A third party player list response.
@@ -34,17 +37,17 @@ var PlayerListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Player }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: player_1.Player }),
         __metadata("design:type", Array)
     ], PlayerListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PlayerListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], PlayerListResponse.prototype, "nextPageToken", void 0);
     return PlayerListResponse;
-}(SpeakeasyBase));
-export { PlayerListResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerListResponse = PlayerListResponse;

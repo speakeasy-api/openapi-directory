@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DifferenceStatusEnum } from "./differencestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionDifference = void 0;
+var utils_1 = require("../../../internal/utils");
+var differencestatusenum_1 = require("./differencestatusenum");
 // QuestionDifference
 /**
  * A question difference return object.
@@ -34,17 +37,17 @@ var QuestionDifference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DifferenceStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DifferenceStatus" }),
         __metadata("design:type", String)
     ], QuestionDifference.prototype, "differenceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuestionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuestionId" }),
         __metadata("design:type", String)
     ], QuestionDifference.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuestionTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuestionTitle" }),
         __metadata("design:type", String)
     ], QuestionDifference.prototype, "questionTitle", void 0);
     return QuestionDifference;
-}(SpeakeasyBase));
-export { QuestionDifference };
+}(utils_1.SpeakeasyBase));
+exports.QuestionDifference = QuestionDifference;

@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest extend
 export declare class GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJSONObject?: Record<string, any>;
 }

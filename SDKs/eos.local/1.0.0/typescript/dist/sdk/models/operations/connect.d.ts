@@ -8,5 +8,5 @@ export declare class ConnectRequest extends SpeakeasyBase {
 export declare class ConnectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    connect200ApplicationJsonString?: string;
+    connect200ApplicationJSONString?: string;
 }

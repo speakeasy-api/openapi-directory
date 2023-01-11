@@ -28,6 +28,6 @@ export declare class EssentialcontactsProjectsContactsSendTestMessageRequest ext
 }
 export declare class EssentialcontactsProjectsContactsSendTestMessageResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

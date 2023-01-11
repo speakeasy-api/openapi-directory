@@ -10,7 +10,7 @@ export class ProtocolTftpSessionSetParameterPathParams extends SpeakeasyBase {
   parameter: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sessionID" })
-  sessionId: string;
+  sessionID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" })
   value: string;
@@ -31,5 +31,5 @@ export class ProtocolTftpSessionSetParameterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpSessionSetParameter200ApplicationJsonString?: string;
+  protocolTftpSessionSetParameter200ApplicationJSONString?: string;
 }

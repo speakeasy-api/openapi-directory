@@ -30,7 +30,7 @@ export class UpdateJobRequest extends SpeakeasyBase {
   resources?: JobResource;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ShippingOption" })
   shippingOption?: ShippingOptionEnum;

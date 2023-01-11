@@ -47,7 +47,7 @@ export class Images200ApplicationJson extends SpeakeasyBase {
   imageResults?: Images200ApplicationJsonImageResults[];
 
   @SpeakeasyMetadata({ data: "json, name=results" })
-  results?: Map<string, any>[];
+  results?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=total" })
   total?: number;
@@ -68,7 +68,7 @@ export class ImagesResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  images200ApplicationJsonObject?: Images200ApplicationJson;
+  images200ApplicationJSONObject?: Images200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

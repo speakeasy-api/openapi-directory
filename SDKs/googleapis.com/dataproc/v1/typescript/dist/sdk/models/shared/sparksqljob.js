@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingConfig } from "./loggingconfig";
-import { QueryList } from "./querylist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SparkSqlJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var loggingconfig_1 = require("./loggingconfig");
+var querylist_1 = require("./querylist");
 // SparkSqlJob
 /**
  * A Dataproc job for running Apache Spark SQL (https://spark.apache.org/sql/) queries.
@@ -35,29 +38,29 @@ var SparkSqlJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jarFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jarFileUris" }),
         __metadata("design:type", Array)
     ], SparkSqlJob.prototype, "jarFileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loggingConfig" }),
-        __metadata("design:type", LoggingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loggingConfig" }),
+        __metadata("design:type", loggingconfig_1.LoggingConfig)
     ], SparkSqlJob.prototype, "loggingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], SparkSqlJob.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryFileUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryFileUri" }),
         __metadata("design:type", String)
     ], SparkSqlJob.prototype, "queryFileUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryList" }),
-        __metadata("design:type", QueryList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryList" }),
+        __metadata("design:type", querylist_1.QueryList)
     ], SparkSqlJob.prototype, "queryList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptVariables" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptVariables" }),
+        __metadata("design:type", Object)
     ], SparkSqlJob.prototype, "scriptVariables", void 0);
     return SparkSqlJob;
-}(SpeakeasyBase));
-export { SparkSqlJob };
+}(utils_1.SpeakeasyBase));
+exports.SparkSqlJob = SparkSqlJob;

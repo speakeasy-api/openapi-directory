@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CatalogEncryptionModeEnum } from "./catalogencryptionmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncryptionAtRest = void 0;
+var utils_1 = require("../../../internal/utils");
+var catalogencryptionmodeenum_1 = require("./catalogencryptionmodeenum");
 // EncryptionAtRest
 /**
  * Specifies the encryption-at-rest configuration for the Data Catalog.
@@ -34,13 +37,13 @@ var EncryptionAtRest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogEncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogEncryptionMode" }),
         __metadata("design:type", String)
     ], EncryptionAtRest.prototype, "catalogEncryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SseAwsKmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SseAwsKmsKeyId" }),
         __metadata("design:type", String)
     ], EncryptionAtRest.prototype, "sseAwsKmsKeyId", void 0);
     return EncryptionAtRest;
-}(SpeakeasyBase));
-export { EncryptionAtRest };
+}(utils_1.SpeakeasyBase));
+exports.EncryptionAtRest = EncryptionAtRest;

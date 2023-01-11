@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2SecurityGroup } from "./ec2securitygroup";
+import { Ec2SecurityGroupList } from "./ec2securitygrouplist";
 
 
 
@@ -17,8 +17,8 @@ export class CacheSecurityGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   description?: string;
 
-  @SpeakeasyMetadata({ elemType: Ec2SecurityGroup })
-  ec2SecurityGroups?: Ec2SecurityGroup[];
+  @SpeakeasyMetadata({ elemType: Ec2SecurityGroupList })
+  ec2SecurityGroups?: Ec2SecurityGroupList[];
 
   @SpeakeasyMetadata()
   ownerId?: string;

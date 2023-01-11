@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MatchAlliance } from "./matchalliance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchSimple = exports.MatchSimpleWinningAllianceEnum = exports.MatchSimpleCompLevelEnum = exports.MatchSimpleAlliances = void 0;
+var utils_1 = require("../../../internal/utils");
+var matchalliance_1 = require("./matchalliance");
 // MatchSimpleAlliances
 /**
  * A list of alliances, the teams on the alliances, and their score.
@@ -34,75 +37,75 @@ var MatchSimpleAlliances = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blue" }),
-        __metadata("design:type", MatchAlliance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blue" }),
+        __metadata("design:type", matchalliance_1.MatchAlliance)
     ], MatchSimpleAlliances.prototype, "blue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=red" }),
-        __metadata("design:type", MatchAlliance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=red" }),
+        __metadata("design:type", matchalliance_1.MatchAlliance)
     ], MatchSimpleAlliances.prototype, "red", void 0);
     return MatchSimpleAlliances;
-}(SpeakeasyBase));
-export { MatchSimpleAlliances };
-export var MatchSimpleCompLevelEnum;
+}(utils_1.SpeakeasyBase));
+exports.MatchSimpleAlliances = MatchSimpleAlliances;
+var MatchSimpleCompLevelEnum;
 (function (MatchSimpleCompLevelEnum) {
     MatchSimpleCompLevelEnum["Qm"] = "qm";
     MatchSimpleCompLevelEnum["Ef"] = "ef";
     MatchSimpleCompLevelEnum["Qf"] = "qf";
     MatchSimpleCompLevelEnum["Sf"] = "sf";
     MatchSimpleCompLevelEnum["F"] = "f";
-})(MatchSimpleCompLevelEnum || (MatchSimpleCompLevelEnum = {}));
-export var MatchSimpleWinningAllianceEnum;
+})(MatchSimpleCompLevelEnum = exports.MatchSimpleCompLevelEnum || (exports.MatchSimpleCompLevelEnum = {}));
+var MatchSimpleWinningAllianceEnum;
 (function (MatchSimpleWinningAllianceEnum) {
     MatchSimpleWinningAllianceEnum["Red"] = "red";
     MatchSimpleWinningAllianceEnum["Blue"] = "blue";
     MatchSimpleWinningAllianceEnum["Unknown"] = "";
-})(MatchSimpleWinningAllianceEnum || (MatchSimpleWinningAllianceEnum = {}));
+})(MatchSimpleWinningAllianceEnum = exports.MatchSimpleWinningAllianceEnum || (exports.MatchSimpleWinningAllianceEnum = {}));
 var MatchSimple = /** @class */ (function (_super) {
     __extends(MatchSimple, _super);
     function MatchSimple() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actual_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actual_time" }),
         __metadata("design:type", Number)
     ], MatchSimple.prototype, "actualTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliances" }),
         __metadata("design:type", MatchSimpleAlliances)
     ], MatchSimple.prototype, "alliances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comp_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comp_level" }),
         __metadata("design:type", String)
     ], MatchSimple.prototype, "compLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_key" }),
         __metadata("design:type", String)
     ], MatchSimple.prototype, "eventKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], MatchSimple.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=match_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=match_number" }),
         __metadata("design:type", Number)
     ], MatchSimple.prototype, "matchNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predicted_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predicted_time" }),
         __metadata("design:type", Number)
     ], MatchSimple.prototype, "predictedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=set_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=set_number" }),
         __metadata("design:type", Number)
     ], MatchSimple.prototype, "setNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], MatchSimple.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=winning_alliance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=winning_alliance" }),
         __metadata("design:type", String)
     ], MatchSimple.prototype, "winningAlliance", void 0);
     return MatchSimple;
-}(SpeakeasyBase));
-export { MatchSimple };
+}(utils_1.SpeakeasyBase));
+exports.MatchSimple = MatchSimple;

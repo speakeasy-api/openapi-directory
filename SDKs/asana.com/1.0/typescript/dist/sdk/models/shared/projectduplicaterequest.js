@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectDuplicateRequestIncludeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectDuplicateRequest = exports.ProjectDuplicateRequestScheduleDates = exports.ProjectDuplicateRequestIncludeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectDuplicateRequestIncludeEnum;
 (function (ProjectDuplicateRequestIncludeEnum) {
     ProjectDuplicateRequestIncludeEnum["Members"] = "members";
     ProjectDuplicateRequestIncludeEnum["Notes"] = "notes";
@@ -37,7 +40,7 @@ export var ProjectDuplicateRequestIncludeEnum;
     ProjectDuplicateRequestIncludeEnum["TaskFollowers"] = "task_followers";
     ProjectDuplicateRequestIncludeEnum["TaskTags"] = "task_tags";
     ProjectDuplicateRequestIncludeEnum["TaskProjects"] = "task_projects";
-})(ProjectDuplicateRequestIncludeEnum || (ProjectDuplicateRequestIncludeEnum = {}));
+})(ProjectDuplicateRequestIncludeEnum = exports.ProjectDuplicateRequestIncludeEnum || (exports.ProjectDuplicateRequestIncludeEnum = {}));
 // ProjectDuplicateRequestScheduleDates
 /**
  * A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires either `start_on` or `due_on`, but not both.
@@ -48,41 +51,41 @@ var ProjectDuplicateRequestScheduleDates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=due_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=due_on" }),
         __metadata("design:type", String)
     ], ProjectDuplicateRequestScheduleDates.prototype, "dueOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=should_skip_weekends" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=should_skip_weekends" }),
         __metadata("design:type", Boolean)
     ], ProjectDuplicateRequestScheduleDates.prototype, "shouldSkipWeekends", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_on" }),
         __metadata("design:type", String)
     ], ProjectDuplicateRequestScheduleDates.prototype, "startOn", void 0);
     return ProjectDuplicateRequestScheduleDates;
-}(SpeakeasyBase));
-export { ProjectDuplicateRequestScheduleDates };
+}(utils_1.SpeakeasyBase));
+exports.ProjectDuplicateRequestScheduleDates = ProjectDuplicateRequestScheduleDates;
 var ProjectDuplicateRequest = /** @class */ (function (_super) {
     __extends(ProjectDuplicateRequest, _super);
     function ProjectDuplicateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=include" }),
         __metadata("design:type", String)
     ], ProjectDuplicateRequest.prototype, "include", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProjectDuplicateRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule_dates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule_dates" }),
         __metadata("design:type", ProjectDuplicateRequestScheduleDates)
     ], ProjectDuplicateRequest.prototype, "scheduleDates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], ProjectDuplicateRequest.prototype, "team", void 0);
     return ProjectDuplicateRequest;
-}(SpeakeasyBase));
-export { ProjectDuplicateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectDuplicateRequest = ProjectDuplicateRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,41 +14,66 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetNameConceptTypeSpecificConceptJsonConceptTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNameConceptTypeSpecificConceptJsonResponse = exports.GetNameConceptTypeSpecificConceptJsonRequest = exports.GetNameConceptTypeSpecificConceptJson200ApplicationJson = exports.GetNameConceptTypeSpecificConceptJsonQueryParams = exports.GetNameConceptTypeSpecificConceptJsonFieldsEnum = exports.GetNameConceptTypeSpecificConceptJsonPathParams = exports.GetNameConceptTypeSpecificConceptJsonConceptTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetNameConceptTypeSpecificConceptJsonConceptTypeEnum;
 (function (GetNameConceptTypeSpecificConceptJsonConceptTypeEnum) {
     GetNameConceptTypeSpecificConceptJsonConceptTypeEnum["NytdGeo"] = "nytd_geo";
     GetNameConceptTypeSpecificConceptJsonConceptTypeEnum["NytdPer"] = "nytd_per";
     GetNameConceptTypeSpecificConceptJsonConceptTypeEnum["NytdOrg"] = "nytd_org";
     GetNameConceptTypeSpecificConceptJsonConceptTypeEnum["NytdDes"] = "nytd_des";
-})(GetNameConceptTypeSpecificConceptJsonConceptTypeEnum || (GetNameConceptTypeSpecificConceptJsonConceptTypeEnum = {}));
+})(GetNameConceptTypeSpecificConceptJsonConceptTypeEnum = exports.GetNameConceptTypeSpecificConceptJsonConceptTypeEnum || (exports.GetNameConceptTypeSpecificConceptJsonConceptTypeEnum = {}));
 var GetNameConceptTypeSpecificConceptJsonPathParams = /** @class */ (function (_super) {
     __extends(GetNameConceptTypeSpecificConceptJsonPathParams, _super);
     function GetNameConceptTypeSpecificConceptJsonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=concept-type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=concept-type" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJsonPathParams.prototype, "conceptType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=specific-concept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=specific-concept" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJsonPathParams.prototype, "specificConcept", void 0);
     return GetNameConceptTypeSpecificConceptJsonPathParams;
-}(SpeakeasyBase));
-export { GetNameConceptTypeSpecificConceptJsonPathParams };
-export var GetNameConceptTypeSpecificConceptJsonFieldsEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNameConceptTypeSpecificConceptJsonPathParams = GetNameConceptTypeSpecificConceptJsonPathParams;
+var GetNameConceptTypeSpecificConceptJsonFieldsEnum;
 (function (GetNameConceptTypeSpecificConceptJsonFieldsEnum) {
     GetNameConceptTypeSpecificConceptJsonFieldsEnum["All"] = "all";
     GetNameConceptTypeSpecificConceptJsonFieldsEnum["Pages"] = "pages";
@@ -59,80 +85,80 @@ export var GetNameConceptTypeSpecificConceptJsonFieldsEnum;
     GetNameConceptTypeSpecificConceptJsonFieldsEnum["ArticleList"] = "article_list";
     GetNameConceptTypeSpecificConceptJsonFieldsEnum["ScopeNotes"] = "scope_notes";
     GetNameConceptTypeSpecificConceptJsonFieldsEnum["SearchApiQuery"] = "search_api_query";
-})(GetNameConceptTypeSpecificConceptJsonFieldsEnum || (GetNameConceptTypeSpecificConceptJsonFieldsEnum = {}));
+})(GetNameConceptTypeSpecificConceptJsonFieldsEnum = exports.GetNameConceptTypeSpecificConceptJsonFieldsEnum || (exports.GetNameConceptTypeSpecificConceptJsonFieldsEnum = {}));
 var GetNameConceptTypeSpecificConceptJsonQueryParams = /** @class */ (function (_super) {
     __extends(GetNameConceptTypeSpecificConceptJsonQueryParams, _super);
     function GetNameConceptTypeSpecificConceptJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJsonQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJsonQueryParams.prototype, "query", void 0);
     return GetNameConceptTypeSpecificConceptJsonQueryParams;
-}(SpeakeasyBase));
-export { GetNameConceptTypeSpecificConceptJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNameConceptTypeSpecificConceptJsonQueryParams = GetNameConceptTypeSpecificConceptJsonQueryParams;
 var GetNameConceptTypeSpecificConceptJson200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetNameConceptTypeSpecificConceptJson200ApplicationJson, _super);
     function GetNameConceptTypeSpecificConceptJson200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyright" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyright" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJson200ApplicationJson.prototype, "copyright", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_results" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_results" }),
         __metadata("design:type", Number)
     ], GetNameConceptTypeSpecificConceptJson200ApplicationJson.prototype, "numResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.Concept }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.Concept }),
         __metadata("design:type", Array)
     ], GetNameConceptTypeSpecificConceptJson200ApplicationJson.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJson200ApplicationJson.prototype, "status", void 0);
     return GetNameConceptTypeSpecificConceptJson200ApplicationJson;
-}(SpeakeasyBase));
-export { GetNameConceptTypeSpecificConceptJson200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetNameConceptTypeSpecificConceptJson200ApplicationJson = GetNameConceptTypeSpecificConceptJson200ApplicationJson;
 var GetNameConceptTypeSpecificConceptJsonRequest = /** @class */ (function (_super) {
     __extends(GetNameConceptTypeSpecificConceptJsonRequest, _super);
     function GetNameConceptTypeSpecificConceptJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNameConceptTypeSpecificConceptJsonPathParams)
     ], GetNameConceptTypeSpecificConceptJsonRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNameConceptTypeSpecificConceptJsonQueryParams)
     ], GetNameConceptTypeSpecificConceptJsonRequest.prototype, "queryParams", void 0);
     return GetNameConceptTypeSpecificConceptJsonRequest;
-}(SpeakeasyBase));
-export { GetNameConceptTypeSpecificConceptJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNameConceptTypeSpecificConceptJsonRequest = GetNameConceptTypeSpecificConceptJsonRequest;
 var GetNameConceptTypeSpecificConceptJsonResponse = /** @class */ (function (_super) {
     __extends(GetNameConceptTypeSpecificConceptJsonResponse, _super);
     function GetNameConceptTypeSpecificConceptJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNameConceptTypeSpecificConceptJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetNameConceptTypeSpecificConceptJson200ApplicationJson)
-    ], GetNameConceptTypeSpecificConceptJsonResponse.prototype, "getNameConceptTypeSpecificConceptJson200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNameConceptTypeSpecificConceptJsonResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetNameConceptTypeSpecificConceptJson200ApplicationJson)
+    ], GetNameConceptTypeSpecificConceptJsonResponse.prototype, "getNameConceptTypeSpecificConceptJSON200ApplicationJSONObject", void 0);
     return GetNameConceptTypeSpecificConceptJsonResponse;
-}(SpeakeasyBase));
-export { GetNameConceptTypeSpecificConceptJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNameConceptTypeSpecificConceptJsonResponse = GetNameConceptTypeSpecificConceptJsonResponse;

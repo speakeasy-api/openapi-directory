@@ -25,8 +25,8 @@ export class PostPortfolioOptimizationEqualWeightedResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationEqualWeighted200ApplicationJsonObject?: PostPortfolioOptimizationEqualWeighted200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationEqualWeighted200ApplicationJSONObject?: PostPortfolioOptimizationEqualWeighted200ApplicationJson;
 }

@@ -25,7 +25,7 @@ export class CreateOrUpdateAnnotationRequest extends SpeakeasyBase {
   pathParams: CreateOrUpdateAnnotationPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -37,8 +37,8 @@ export class CreateOrUpdateAnnotationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  reportAnnotation?: Map<string, any>;
+  reportAnnotation?: Record<string, any>;
 }

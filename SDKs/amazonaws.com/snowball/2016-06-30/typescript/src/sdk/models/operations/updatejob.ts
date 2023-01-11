@@ -69,5 +69,5 @@ export class UpdateJobResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateJobResult?: Map<string, any>;
+  updateJobResult?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPutNotificationConfigurationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPutNotificationConfigurationResponse = exports.GetPutNotificationConfigurationRequest = exports.GetPutNotificationConfigurationHeaders = exports.GetPutNotificationConfigurationQueryParams = exports.GetPutNotificationConfigurationVersionEnum = exports.GetPutNotificationConfigurationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPutNotificationConfigurationActionEnum;
 (function (GetPutNotificationConfigurationActionEnum) {
     GetPutNotificationConfigurationActionEnum["PutNotificationConfiguration"] = "PutNotificationConfiguration";
-})(GetPutNotificationConfigurationActionEnum || (GetPutNotificationConfigurationActionEnum = {}));
-export var GetPutNotificationConfigurationVersionEnum;
+})(GetPutNotificationConfigurationActionEnum = exports.GetPutNotificationConfigurationActionEnum || (exports.GetPutNotificationConfigurationActionEnum = {}));
+var GetPutNotificationConfigurationVersionEnum;
 (function (GetPutNotificationConfigurationVersionEnum) {
     GetPutNotificationConfigurationVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetPutNotificationConfigurationVersionEnum || (GetPutNotificationConfigurationVersionEnum = {}));
+})(GetPutNotificationConfigurationVersionEnum = exports.GetPutNotificationConfigurationVersionEnum || (exports.GetPutNotificationConfigurationVersionEnum = {}));
 var GetPutNotificationConfigurationQueryParams = /** @class */ (function (_super) {
     __extends(GetPutNotificationConfigurationQueryParams, _super);
     function GetPutNotificationConfigurationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NotificationTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NotificationTypes" }),
         __metadata("design:type", Array)
     ], GetPutNotificationConfigurationQueryParams.prototype, "notificationTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TopicARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TopicARN" }),
         __metadata("design:type", String)
-    ], GetPutNotificationConfigurationQueryParams.prototype, "topicArn", void 0);
+    ], GetPutNotificationConfigurationQueryParams.prototype, "topicARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationQueryParams.prototype, "version", void 0);
     return GetPutNotificationConfigurationQueryParams;
-}(SpeakeasyBase));
-export { GetPutNotificationConfigurationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPutNotificationConfigurationQueryParams = GetPutNotificationConfigurationQueryParams;
 var GetPutNotificationConfigurationHeaders = /** @class */ (function (_super) {
     __extends(GetPutNotificationConfigurationHeaders, _super);
     function GetPutNotificationConfigurationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetPutNotificationConfigurationHeaders;
-}(SpeakeasyBase));
-export { GetPutNotificationConfigurationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPutNotificationConfigurationHeaders = GetPutNotificationConfigurationHeaders;
 var GetPutNotificationConfigurationRequest = /** @class */ (function (_super) {
     __extends(GetPutNotificationConfigurationRequest, _super);
     function GetPutNotificationConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutNotificationConfigurationQueryParams)
     ], GetPutNotificationConfigurationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutNotificationConfigurationHeaders)
     ], GetPutNotificationConfigurationRequest.prototype, "headers", void 0);
     return GetPutNotificationConfigurationRequest;
-}(SpeakeasyBase));
-export { GetPutNotificationConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPutNotificationConfigurationRequest = GetPutNotificationConfigurationRequest;
 var GetPutNotificationConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetPutNotificationConfigurationResponse, _super);
     function GetPutNotificationConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPutNotificationConfigurationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPutNotificationConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPutNotificationConfigurationResponse.prototype, "statusCode", void 0);
     return GetPutNotificationConfigurationResponse;
-}(SpeakeasyBase));
-export { GetPutNotificationConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPutNotificationConfigurationResponse = GetPutNotificationConfigurationResponse;

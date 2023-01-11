@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostReviewsResponse = exports.PostReviewsRequest = exports.PostReviewsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostReviewsQueryParams = /** @class */ (function (_super) {
     __extends(PostReviewsQueryParams, _super);
     function PostReviewsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=appId" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=autoApprove" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=autoApprove" }),
         __metadata("design:type", Boolean)
     ], PostReviewsQueryParams.prototype, "autoApprove", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=headline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=headline" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "headline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mustOwnApp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mustOwnApp" }),
         __metadata("design:type", Boolean)
     ], PostReviewsQueryParams.prototype, "mustOwnApp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rating" }),
         __metadata("design:type", Number)
     ], PostReviewsQueryParams.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userAccountId" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "userAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], PostReviewsQueryParams.prototype, "userId", void 0);
     return PostReviewsQueryParams;
-}(SpeakeasyBase));
-export { PostReviewsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostReviewsQueryParams = PostReviewsQueryParams;
 var PostReviewsRequest = /** @class */ (function (_super) {
     __extends(PostReviewsRequest, _super);
     function PostReviewsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReviewsQueryParams)
     ], PostReviewsRequest.prototype, "queryParams", void 0);
     return PostReviewsRequest;
-}(SpeakeasyBase));
-export { PostReviewsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostReviewsRequest = PostReviewsRequest;
 var PostReviewsResponse = /** @class */ (function (_super) {
     __extends(PostReviewsResponse, _super);
     function PostReviewsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostReviewsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostReviewsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostReviewsResponse.prototype, "statusCode", void 0);
     return PostReviewsResponse;
-}(SpeakeasyBase));
-export { PostReviewsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostReviewsResponse = PostReviewsResponse;

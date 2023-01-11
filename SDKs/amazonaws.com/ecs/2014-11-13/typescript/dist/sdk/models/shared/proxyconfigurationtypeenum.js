@@ -1,4 +1,7 @@
-export var ProxyConfigurationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProxyConfigurationTypeEnum = void 0;
+var ProxyConfigurationTypeEnum;
 (function (ProxyConfigurationTypeEnum) {
     ProxyConfigurationTypeEnum["Appmesh"] = "APPMESH";
-})(ProxyConfigurationTypeEnum || (ProxyConfigurationTypeEnum = {}));
+})(ProxyConfigurationTypeEnum = exports.ProxyConfigurationTypeEnum || (exports.ProxyConfigurationTypeEnum = {}));

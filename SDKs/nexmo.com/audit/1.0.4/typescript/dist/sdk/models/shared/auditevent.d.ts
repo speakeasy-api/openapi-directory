@@ -12,7 +12,7 @@ export declare enum AuditEventSourceDescriptionEnum {
 export declare class AuditEvent extends SpeakeasyBase {
     links?: EventLink;
     accountId?: string;
-    context?: Map<string, any>;
+    context?: Record<string, any>;
     createdAt?: Date;
     eventType?: EventTypesEnum;
     eventTypeDescription?: string;

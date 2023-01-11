@@ -18,8 +18,8 @@ export declare class ProductReviews200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -31,5 +31,5 @@ export declare class ProductReviewsRequest extends SpeakeasyBase {
 export declare class ProductReviewsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    productReviews200ApplicationJsonObject?: ProductReviews200ApplicationJson;
+    productReviews200ApplicationJSONObject?: ProductReviews200ApplicationJson;
 }

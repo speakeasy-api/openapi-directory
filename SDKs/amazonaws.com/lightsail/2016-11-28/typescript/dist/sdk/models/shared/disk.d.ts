@@ -11,9 +11,9 @@ export declare class Disk extends SpeakeasyBase {
     addOns?: AddOn[];
     arn?: string;
     attachedTo?: string;
-    attachmentState?: string;
+    attachmentState?: Record<string, any>;
     createdAt?: Date;
-    gbInUse?: number;
+    gbInUse?: Record<string, any>;
     iops?: number;
     isAttached?: boolean;
     isSystemDisk?: boolean;

@@ -149,7 +149,7 @@ export class BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries e
   priceFormatted?: string;
 
   @SpeakeasyMetadata({ data: "json, name=priceUSD" })
-  priceUsd?: number;
+  priceUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=productCode" })
   productCode?: string;
@@ -209,7 +209,7 @@ export class BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries e
   voucherRequirements?: string;
 
   @SpeakeasyMetadata({ data: "json, name=voucherURL" })
-  voucherUrl?: string;
+  voucherURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=vouchers" })
   vouchers?: string;
@@ -252,7 +252,7 @@ export class BookingCalculateprice200ApplicationJsonDataItinerary extends Speake
   omniPreRuleList?: number;
 
   @SpeakeasyMetadata({ data: "json, name=paypalRedirectURL" })
-  paypalRedirectUrl?: string;
+  paypalRedirectURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rulesApplied" })
   rulesApplied?: string[];
@@ -270,7 +270,7 @@ export class BookingCalculateprice200ApplicationJsonDataItinerary extends Speake
   totalPriceFormatted?: string;
 
   @SpeakeasyMetadata({ data: "json, name=totalPriceUSD" })
-  totalPriceUsd?: number;
+  totalPriceUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=userId" })
   userId?: number;
@@ -279,7 +279,7 @@ export class BookingCalculateprice200ApplicationJsonDataItinerary extends Speake
   voucherKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=voucherURL" })
-  voucherUrl?: string;
+  voucherURL?: string;
 }
 
 
@@ -354,10 +354,10 @@ export class BookingCalculateprice200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -387,5 +387,5 @@ export class BookingCalculatepriceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingCalculateprice200ApplicationJsonObject?: BookingCalculateprice200ApplicationJson;
+  bookingCalculateprice200ApplicationJSONObject?: BookingCalculateprice200ApplicationJson;
 }

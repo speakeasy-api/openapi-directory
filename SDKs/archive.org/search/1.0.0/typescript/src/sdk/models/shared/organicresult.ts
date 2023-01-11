@@ -11,7 +11,7 @@ export class OrganicResult extends SpeakeasyBase {
   count?: number;
 
   @SpeakeasyMetadata({ data: "json, name=items" })
-  items?: Map<string, any>[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=total" })
   total?: number;

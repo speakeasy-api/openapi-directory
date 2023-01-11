@@ -1,0 +1,100 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutSubscriptionResumeType = void 0;
+var utils_1 = require("../../../internal/utils");
+var PutSubscriptionResumeType = /** @class */ (function (_super) {
+    __extends(PutSubscriptionResumeType, _super);
+    function PutSubscriptionResumeType() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationOrder" }),
+        __metadata("design:type", Array)
+    ], PutSubscriptionResumeType.prototype, "applicationOrder", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyCredit" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "applyCredit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyCreditBalance" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "applyCreditBalance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collect" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "collect", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contractEffectiveDate" }),
+        __metadata("design:type", Date)
+    ], PutSubscriptionResumeType.prototype, "contractEffectiveDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentDate" }),
+        __metadata("design:type", Date)
+    ], PutSubscriptionResumeType.prototype, "documentDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendsTerm" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "extendsTerm", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoice" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "invoice", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceCollect" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "invoiceCollect", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceTargetDate" }),
+        __metadata("design:type", Date)
+    ], PutSubscriptionResumeType.prototype, "invoiceTargetDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resumePeriods" }),
+        __metadata("design:type", String)
+    ], PutSubscriptionResumeType.prototype, "resumePeriods", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resumePeriodsType" }),
+        __metadata("design:type", String)
+    ], PutSubscriptionResumeType.prototype, "resumePeriodsType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resumePolicy" }),
+        __metadata("design:type", String)
+    ], PutSubscriptionResumeType.prototype, "resumePolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resumeSpecificDate" }),
+        __metadata("design:type", Date)
+    ], PutSubscriptionResumeType.prototype, "resumeSpecificDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runBilling" }),
+        __metadata("design:type", Boolean)
+    ], PutSubscriptionResumeType.prototype, "runBilling", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDate" }),
+        __metadata("design:type", Date)
+    ], PutSubscriptionResumeType.prototype, "targetDate", void 0);
+    return PutSubscriptionResumeType;
+}(utils_1.SpeakeasyBase));
+exports.PutSubscriptionResumeType = PutSubscriptionResumeType;

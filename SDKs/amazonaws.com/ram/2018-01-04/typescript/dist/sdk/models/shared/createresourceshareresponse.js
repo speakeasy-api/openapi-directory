@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceShare } from "./resourceshare";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateResourceShareResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceshare_1 = require("./resourceshare");
 var CreateResourceShareResponse = /** @class */ (function (_super) {
     __extends(CreateResourceShareResponse, _super);
     function CreateResourceShareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], CreateResourceShareResponse.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceShare" }),
-        __metadata("design:type", ResourceShare)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceShare" }),
+        __metadata("design:type", resourceshare_1.ResourceShare)
     ], CreateResourceShareResponse.prototype, "resourceShare", void 0);
     return CreateResourceShareResponse;
-}(SpeakeasyBase));
-export { CreateResourceShareResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateResourceShareResponse = CreateResourceShareResponse;

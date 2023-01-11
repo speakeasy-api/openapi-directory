@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * A set of filters to specify a whitelist for what types of events will be delivered.
+**/
 export declare class WebhookRequestFilters extends SpeakeasyBase {
     action?: string;
     fields?: string[];

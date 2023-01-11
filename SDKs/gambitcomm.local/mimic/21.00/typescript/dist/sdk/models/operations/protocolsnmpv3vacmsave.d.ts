@@ -8,5 +8,5 @@ export declare class ProtocolSnmpv3VacmSaveRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3VacmSaveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3VacmSave200ApplicationJsonStrings?: string[];
+    protocolSnmpv3VacmSave200ApplicationJSONStrings?: string[];
 }

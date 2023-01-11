@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Image } from "./image";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NativeContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
 // NativeContent
 /**
  * Native content for a creative.
@@ -34,57 +37,57 @@ var NativeContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiserName" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "advertiserName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appIcon" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appIcon" }),
+        __metadata("design:type", image_1.Image)
     ], NativeContent.prototype, "appIcon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callToAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callToAction" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "callToAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickLinkUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickLinkUrl" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "clickLinkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickTrackingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickTrackingUrl" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "clickTrackingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headline" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "headline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.Image)
     ], NativeContent.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
+        __metadata("design:type", image_1.Image)
     ], NativeContent.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceDisplayText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceDisplayText" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "priceDisplayText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starRating" }),
         __metadata("design:type", Number)
     ], NativeContent.prototype, "starRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoUrl" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "videoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoVastXml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoVastXml" }),
         __metadata("design:type", String)
     ], NativeContent.prototype, "videoVastXml", void 0);
     return NativeContent;
-}(SpeakeasyBase));
-export { NativeContent };
+}(utils_1.SpeakeasyBase));
+exports.NativeContent = NativeContent;

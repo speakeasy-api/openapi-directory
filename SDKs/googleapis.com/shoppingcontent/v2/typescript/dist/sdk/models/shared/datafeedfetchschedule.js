@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedFetchSchedule = void 0;
+var utils_1 = require("../../../internal/utils");
 // DatafeedFetchSchedule
 /**
  * The required fields vary based on the frequency of fetching. For a monthly fetch schedule, day_of_month and hour are required. For a weekly fetch schedule, weekday and hour are required. For a daily fetch schedule, only hour is required.
@@ -33,41 +36,41 @@ var DatafeedFetchSchedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfMonth" }),
         __metadata("design:type", Number)
     ], DatafeedFetchSchedule.prototype, "dayOfMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fetchUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fetchUrl" }),
         __metadata("design:type", String)
     ], DatafeedFetchSchedule.prototype, "fetchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hour" }),
         __metadata("design:type", Number)
     ], DatafeedFetchSchedule.prototype, "hour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minuteOfHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minuteOfHour" }),
         __metadata("design:type", Number)
     ], DatafeedFetchSchedule.prototype, "minuteOfHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], DatafeedFetchSchedule.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paused" }),
         __metadata("design:type", Boolean)
     ], DatafeedFetchSchedule.prototype, "paused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], DatafeedFetchSchedule.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], DatafeedFetchSchedule.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weekday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weekday" }),
         __metadata("design:type", String)
     ], DatafeedFetchSchedule.prototype, "weekday", void 0);
     return DatafeedFetchSchedule;
-}(SpeakeasyBase));
-export { DatafeedFetchSchedule };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedFetchSchedule = DatafeedFetchSchedule;

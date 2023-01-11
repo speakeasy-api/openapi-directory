@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RunnerLabelsTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Runner = exports.RunnerLabels = exports.RunnerLabelsTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RunnerLabelsTypeEnum;
 (function (RunnerLabelsTypeEnum) {
     RunnerLabelsTypeEnum["ReadOnly"] = "read-only";
     RunnerLabelsTypeEnum["Custom"] = "custom";
-})(RunnerLabelsTypeEnum || (RunnerLabelsTypeEnum = {}));
+})(RunnerLabelsTypeEnum = exports.RunnerLabelsTypeEnum || (exports.RunnerLabelsTypeEnum = {}));
 var RunnerLabels = /** @class */ (function (_super) {
     __extends(RunnerLabels, _super);
     function RunnerLabels() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RunnerLabels.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RunnerLabels.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RunnerLabels.prototype, "type", void 0);
     return RunnerLabels;
-}(SpeakeasyBase));
-export { RunnerLabels };
+}(utils_1.SpeakeasyBase));
+exports.RunnerLabels = RunnerLabels;
 // Runner
 /**
  * A self hosted runner
@@ -58,29 +61,29 @@ var Runner = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=busy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=busy" }),
         __metadata("design:type", Boolean)
     ], Runner.prototype, "busy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Runner.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels", elemType: RunnerLabels }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels", elemType: RunnerLabels }),
         __metadata("design:type", Array)
     ], Runner.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Runner.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os" }),
         __metadata("design:type", String)
     ], Runner.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Runner.prototype, "status", void 0);
     return Runner;
-}(SpeakeasyBase));
-export { Runner };
+}(utils_1.SpeakeasyBase));
+exports.Runner = Runner;

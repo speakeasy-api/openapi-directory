@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RealtimeEndpointInfo } from "./realtimeendpointinfo";
-import { MlModelTypeEnum } from "./mlmodeltypeenum";
-import { EntityStatusEnum } from "./entitystatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMlModelOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var realtimeendpointinfo_1 = require("./realtimeendpointinfo");
+var mlmodeltypeenum_1 = require("./mlmodeltypeenum");
+var entitystatusenum_1 = require("./entitystatusenum");
 // GetMlModelOutput
 /**
  * Represents the output of a <code>GetMLModel</code> operation, and provides detailed information about a <code>MLModel</code>.
@@ -36,89 +39,89 @@ var GetMlModelOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeTime" }),
         __metadata("design:type", Number)
     ], GetMlModelOutput.prototype, "computeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", Date)
     ], GetMlModelOutput.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedByIamUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedByIamUser" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "createdByIamUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointInfo" }),
-        __metadata("design:type", RealtimeEndpointInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointInfo" }),
+        __metadata("design:type", realtimeendpointinfo_1.RealtimeEndpointInfo)
     ], GetMlModelOutput.prototype, "endpointInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FinishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FinishedAt" }),
         __metadata("design:type", Date)
     ], GetMlModelOutput.prototype, "finishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputDataLocationS3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputDataLocationS3" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "inputDataLocationS3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedAt" }),
         __metadata("design:type", Date)
     ], GetMlModelOutput.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogUri" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "logUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelType" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "mlModelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Recipe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Recipe" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "recipe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schema" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScoreThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScoreThreshold" }),
         __metadata("design:type", Number)
     ], GetMlModelOutput.prototype, "scoreThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScoreThresholdLastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScoreThresholdLastUpdatedAt" }),
         __metadata("design:type", Date)
     ], GetMlModelOutput.prototype, "scoreThresholdLastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SizeInBytes" }),
         __metadata("design:type", Number)
     ], GetMlModelOutput.prototype, "sizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartedAt" }),
         __metadata("design:type", Date)
     ], GetMlModelOutput.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrainingDataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrainingDataSourceId" }),
         __metadata("design:type", String)
     ], GetMlModelOutput.prototype, "trainingDataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrainingParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrainingParameters" }),
+        __metadata("design:type", Object)
     ], GetMlModelOutput.prototype, "trainingParameters", void 0);
     return GetMlModelOutput;
-}(SpeakeasyBase));
-export { GetMlModelOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetMlModelOutput = GetMlModelOutput;

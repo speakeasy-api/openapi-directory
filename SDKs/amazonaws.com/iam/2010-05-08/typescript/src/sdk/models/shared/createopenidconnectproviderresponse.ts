@@ -9,7 +9,7 @@ import { Tag } from "./tag";
 **/
 export class CreateOpenIdConnectProviderResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  openIdConnectProviderArn?: string;
+  openIDConnectProviderArn?: string;
 
   @SpeakeasyMetadata({ elemType: Tag })
   tags?: Tag[];

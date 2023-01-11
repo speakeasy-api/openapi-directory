@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceVpnSiteToSiteVpnRequest extends Speakeas
 export declare class GetNetworkApplianceVpnSiteToSiteVpnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceVpnSiteToSiteVpn200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONObject?: Record<string, any>;
 }

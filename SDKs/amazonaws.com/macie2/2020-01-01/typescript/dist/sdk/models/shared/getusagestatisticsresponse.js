@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageRecord } from "./usagerecord";
-import { TimeRangeEnum } from "./timerangeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsageStatisticsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagerecord_1 = require("./usagerecord");
+var timerangeenum_1 = require("./timerangeenum");
 var GetUsageStatisticsResponse = /** @class */ (function (_super) {
     __extends(GetUsageStatisticsResponse, _super);
     function GetUsageStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetUsageStatisticsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=records", elemType: UsageRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=records", elemType: usagerecord_1.UsageRecord }),
         __metadata("design:type", Array)
     ], GetUsageStatisticsResponse.prototype, "records", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeRange" }),
         __metadata("design:type", String)
     ], GetUsageStatisticsResponse.prototype, "timeRange", void 0);
     return GetUsageStatisticsResponse;
-}(SpeakeasyBase));
-export { GetUsageStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsageStatisticsResponse = GetUsageStatisticsResponse;

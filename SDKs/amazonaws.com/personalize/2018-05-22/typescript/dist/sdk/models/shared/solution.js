@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoMlResult } from "./automlresult";
-import { SolutionVersionSummary } from "./solutionversionsummary";
-import { SolutionConfig } from "./solutionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Solution = void 0;
+var utils_1 = require("../../../internal/utils");
+var automlresult_1 = require("./automlresult");
+var solutionversionsummary_1 = require("./solutionversionsummary");
+var solutionconfig_1 = require("./solutionconfig");
 // Solution
 /**
  * An object that provides information about a solution. A solution is a trained model that can be deployed as a campaign.
@@ -36,57 +39,57 @@ var Solution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoMLResult" }),
-        __metadata("design:type", AutoMlResult)
-    ], Solution.prototype, "autoMlResult", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoMLResult" }),
+        __metadata("design:type", automlresult_1.AutoMlResult)
+    ], Solution.prototype, "autoMLResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], Solution.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetGroupArn" }),
         __metadata("design:type", String)
     ], Solution.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], Solution.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], Solution.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestSolutionVersion" }),
-        __metadata("design:type", SolutionVersionSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestSolutionVersion" }),
+        __metadata("design:type", solutionversionsummary_1.SolutionVersionSummary)
     ], Solution.prototype, "latestSolutionVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Solution.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performAutoML" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performAutoML" }),
         __metadata("design:type", Boolean)
-    ], Solution.prototype, "performAutoMl", void 0);
+    ], Solution.prototype, "performAutoML", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performHPO" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performHPO" }),
         __metadata("design:type", Boolean)
-    ], Solution.prototype, "performHpo", void 0);
+    ], Solution.prototype, "performHPO", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipeArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipeArn" }),
         __metadata("design:type", String)
     ], Solution.prototype, "recipeArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=solutionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=solutionArn" }),
         __metadata("design:type", String)
     ], Solution.prototype, "solutionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=solutionConfig" }),
-        __metadata("design:type", SolutionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=solutionConfig" }),
+        __metadata("design:type", solutionconfig_1.SolutionConfig)
     ], Solution.prototype, "solutionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Solution.prototype, "status", void 0);
     return Solution;
-}(SpeakeasyBase));
-export { Solution };
+}(utils_1.SpeakeasyBase));
+exports.Solution = Solution;

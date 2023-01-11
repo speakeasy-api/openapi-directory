@@ -1,4 +1,7 @@
-export var StreamingSessionStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingSessionStatusCodeEnum = void 0;
+var StreamingSessionStatusCodeEnum;
 (function (StreamingSessionStatusCodeEnum) {
     StreamingSessionStatusCodeEnum["StreamingSessionReady"] = "STREAMING_SESSION_READY";
     StreamingSessionStatusCodeEnum["StreamingSessionDeleted"] = "STREAMING_SESSION_DELETED";
@@ -11,4 +14,4 @@ export var StreamingSessionStatusCodeEnum;
     StreamingSessionStatusCodeEnum["InitializationScriptError"] = "INITIALIZATION_SCRIPT_ERROR";
     StreamingSessionStatusCodeEnum["DecryptStreamingImageError"] = "DECRYPT_STREAMING_IMAGE_ERROR";
     StreamingSessionStatusCodeEnum["NetworkInterfaceError"] = "NETWORK_INTERFACE_ERROR";
-})(StreamingSessionStatusCodeEnum || (StreamingSessionStatusCodeEnum = {}));
+})(StreamingSessionStatusCodeEnum = exports.StreamingSessionStatusCodeEnum || (exports.StreamingSessionStatusCodeEnum = {}));

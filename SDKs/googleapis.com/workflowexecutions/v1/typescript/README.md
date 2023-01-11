@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest, WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,31 +30,31 @@ const req: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest =
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "quod",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "cum",
-    alt: "proto",
-    callback: "delectus",
-    fields: "voluptate",
-    key: "quis",
-    oauthToken: "voluptatem",
-    prettyPrint: false,
-    quotaUser: "doloribus",
-    uploadType: "quis",
-    uploadProtocol: "sed",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "accusamus": "non",
-    "similique": "officiis",
-    "omnis": "quas",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

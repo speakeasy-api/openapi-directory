@@ -9,5 +9,5 @@ export declare class DeleteRepositoryPipelineKeyPairRequest extends SpeakeasyBas
 export declare class DeleteRepositoryPipelineKeyPairResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2LabelAppliedCapabilities = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2LabelAppliedCapabilities
 /**
  * The capabilities a user has on this label's applied metadata.
@@ -33,17 +36,17 @@ var GoogleAppsDriveLabelsV2LabelAppliedCapabilities = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canApply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canApply" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2LabelAppliedCapabilities.prototype, "canApply", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRead" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2LabelAppliedCapabilities.prototype, "canRead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRemove" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRemove" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2LabelAppliedCapabilities.prototype, "canRemove", void 0);
     return GoogleAppsDriveLabelsV2LabelAppliedCapabilities;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2LabelAppliedCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2LabelAppliedCapabilities = GoogleAppsDriveLabelsV2LabelAppliedCapabilities;

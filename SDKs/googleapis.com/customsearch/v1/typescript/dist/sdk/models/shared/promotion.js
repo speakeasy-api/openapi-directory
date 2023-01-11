@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Promotion = exports.PromotionImage = exports.PromotionBodyLines = void 0;
+var utils_1 = require("../../../internal/utils");
 // PromotionBodyLines
 /**
  * Block object belonging to a promotion.
@@ -33,24 +36,24 @@ var PromotionBodyLines = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=htmlTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=htmlTitle" }),
         __metadata("design:type", String)
     ], PromotionBodyLines.prototype, "htmlTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], PromotionBodyLines.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PromotionBodyLines.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PromotionBodyLines.prototype, "url", void 0);
     return PromotionBodyLines;
-}(SpeakeasyBase));
-export { PromotionBodyLines };
+}(utils_1.SpeakeasyBase));
+exports.PromotionBodyLines = PromotionBodyLines;
 // PromotionImage
 /**
  * Image belonging to a promotion.
@@ -61,20 +64,20 @@ var PromotionImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], PromotionImage.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], PromotionImage.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], PromotionImage.prototype, "width", void 0);
     return PromotionImage;
-}(SpeakeasyBase));
-export { PromotionImage };
+}(utils_1.SpeakeasyBase));
+exports.PromotionImage = PromotionImage;
 // Promotion
 /**
  * Promotion result.
@@ -85,29 +88,29 @@ var Promotion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyLines", elemType: PromotionBodyLines }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyLines", elemType: PromotionBodyLines }),
         __metadata("design:type", Array)
     ], Promotion.prototype, "bodyLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayLink" }),
         __metadata("design:type", String)
     ], Promotion.prototype, "displayLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=htmlTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=htmlTitle" }),
         __metadata("design:type", String)
     ], Promotion.prototype, "htmlTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", PromotionImage)
     ], Promotion.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], Promotion.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Promotion.prototype, "title", void 0);
     return Promotion;
-}(SpeakeasyBase));
-export { Promotion };
+}(utils_1.SpeakeasyBase));
+exports.Promotion = Promotion;

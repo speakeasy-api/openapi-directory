@@ -59,11 +59,8 @@ export class GetAccountsAccountIdStatementsStatementIdFileResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString?: Uint8Array;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString?: Uint8Array;
 }

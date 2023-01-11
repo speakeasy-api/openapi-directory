@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseEvent } from "./relationaldatabaseevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseEventsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabaseevent_1 = require("./relationaldatabaseevent");
 var GetRelationalDatabaseEventsResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseEventsResult, _super);
     function GetRelationalDatabaseEventsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseEventsResult.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseEvents", elemType: RelationalDatabaseEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseEvents", elemType: relationaldatabaseevent_1.RelationalDatabaseEvent }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseEventsResult.prototype, "relationalDatabaseEvents", void 0);
     return GetRelationalDatabaseEventsResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseEventsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseEventsResult = GetRelationalDatabaseEventsResult;

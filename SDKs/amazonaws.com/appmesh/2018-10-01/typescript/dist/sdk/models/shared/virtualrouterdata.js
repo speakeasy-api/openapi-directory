@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceMetadata } from "./resourcemetadata";
-import { VirtualRouterSpec } from "./virtualrouterspec";
-import { VirtualRouterStatus } from "./virtualrouterstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualRouterData = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcemetadata_1 = require("./resourcemetadata");
+var virtualrouterspec_1 = require("./virtualrouterspec");
+var virtualrouterstatus_1 = require("./virtualrouterstatus");
 // VirtualRouterData
 /**
  * An object representing a virtual router returned by a describe operation.
@@ -36,25 +39,25 @@ var VirtualRouterData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], VirtualRouterData.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ResourceMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", resourcemetadata_1.ResourceMetadata)
     ], VirtualRouterData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", VirtualRouterSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", virtualrouterspec_1.VirtualRouterSpec)
     ], VirtualRouterData.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", VirtualRouterStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", virtualrouterstatus_1.VirtualRouterStatus)
     ], VirtualRouterData.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualRouterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualRouterName" }),
         __metadata("design:type", String)
     ], VirtualRouterData.prototype, "virtualRouterName", void 0);
     return VirtualRouterData;
-}(SpeakeasyBase));
-export { VirtualRouterData };
+}(utils_1.SpeakeasyBase));
+exports.VirtualRouterData = VirtualRouterData;

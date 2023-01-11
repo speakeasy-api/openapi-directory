@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3BucketCriteriaForJob } from "./s3bucketcriteriaforjob";
-import { S3BucketDefinitionForJob } from "./s3bucketdefinitionforjob";
-import { Scoping } from "./scoping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3JobDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3bucketcriteriaforjob_1 = require("./s3bucketcriteriaforjob");
+var s3bucketdefinitionforjob_1 = require("./s3bucketdefinitionforjob");
+var scoping_1 = require("./scoping");
 // S3JobDefinition
 /**
  * Specifies which S3 buckets contain the objects that a classification job analyzes, and the scope of that analysis. The bucket specification can be static (bucketDefinitions) or dynamic (bucketCriteria). If it's static, the job analyzes objects in the same predefined set of buckets each time the job runs. If it's dynamic, the job analyzes objects in any buckets that match the specified criteria each time the job starts to run.
@@ -36,17 +39,17 @@ var S3JobDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketCriteria" }),
-        __metadata("design:type", S3BucketCriteriaForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketCriteria" }),
+        __metadata("design:type", s3bucketcriteriaforjob_1.S3BucketCriteriaForJob)
     ], S3JobDefinition.prototype, "bucketCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketDefinitions", elemType: S3BucketDefinitionForJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketDefinitions", elemType: s3bucketdefinitionforjob_1.S3BucketDefinitionForJob }),
         __metadata("design:type", Array)
     ], S3JobDefinition.prototype, "bucketDefinitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoping" }),
-        __metadata("design:type", Scoping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoping" }),
+        __metadata("design:type", scoping_1.Scoping)
     ], S3JobDefinition.prototype, "scoping", void 0);
     return S3JobDefinition;
-}(SpeakeasyBase));
-export { S3JobDefinition };
+}(utils_1.SpeakeasyBase));
+exports.S3JobDefinition = S3JobDefinition;

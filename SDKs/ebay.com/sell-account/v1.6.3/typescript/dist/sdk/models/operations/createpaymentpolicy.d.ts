@@ -9,7 +9,7 @@ export declare class CreatePaymentPolicyRequest extends SpeakeasyBase {
 }
 export declare class CreatePaymentPolicyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     setPaymentPolicyResponse?: shared.SetPaymentPolicyResponse;
     statusCode: number;
 }

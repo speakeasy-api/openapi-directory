@@ -48,7 +48,7 @@ export class AddLfTagsToResourceResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  addLfTagsToResourceResponse?: shared.AddLfTagsToResourceResponse;
+  addLFTagsToResourceResponse?: shared.AddLfTagsToResourceResponse;
 
   @SpeakeasyMetadata()
   concurrentModificationException?: any;

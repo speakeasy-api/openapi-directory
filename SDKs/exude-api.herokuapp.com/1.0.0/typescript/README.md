@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FilterFileDataStoppingsRequest, FilterFileDataStoppingsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,17 +28,17 @@ const sdk = new SDK();
     
 const req: FilterFileDataStoppingsRequest = {
   pathParams: {
-    type: "earum",
+    type: "sit",
   },
   request: {
     file: {
-      content: "esse".encode(),
-      file: "non",
+      content: "voluptas".encode(),
+      file: "culpa",
     },
   },
 };
 
-sdk.sdk.filterFileDataStoppings(req).then((res: FilterFileDataStoppingsResponse | AxiosError) => {
+sdk.exude.filterFileDataStoppings(req).then((res: FilterFileDataStoppingsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,7 +47,7 @@ sdk.sdk.filterFileDataStoppings(req).then((res: FilterFileDataStoppingsResponse 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### exude
 
 * `filterFileDataStoppings` - Filter the stopping words from the provided input file
 * `filterStoppings` - Filter the stopping words from the provided input data or links

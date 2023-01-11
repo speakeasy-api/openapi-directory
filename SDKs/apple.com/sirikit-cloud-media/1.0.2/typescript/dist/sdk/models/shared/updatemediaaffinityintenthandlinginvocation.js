@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Session } from "./session";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMediaAffinityIntentHandlingInvocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var session_1 = require("./session");
 var UpdateMediaAffinityIntentHandlingInvocation = /** @class */ (function (_super) {
     __extends(UpdateMediaAffinityIntentHandlingInvocation, _super);
     function UpdateMediaAffinityIntentHandlingInvocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], UpdateMediaAffinityIntentHandlingInvocation.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params" }),
+        __metadata("design:type", Object)
     ], UpdateMediaAffinityIntentHandlingInvocation.prototype, "params", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session" }),
-        __metadata("design:type", Session)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session" }),
+        __metadata("design:type", session_1.Session)
     ], UpdateMediaAffinityIntentHandlingInvocation.prototype, "session", void 0);
     return UpdateMediaAffinityIntentHandlingInvocation;
-}(SpeakeasyBase));
-export { UpdateMediaAffinityIntentHandlingInvocation };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMediaAffinityIntentHandlingInvocation = UpdateMediaAffinityIntentHandlingInvocation;

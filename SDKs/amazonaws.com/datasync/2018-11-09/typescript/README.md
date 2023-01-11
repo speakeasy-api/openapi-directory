@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelTaskExecutionRequest, CancelTaskExecutionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelTaskExecutionRequest = {
   headers: {
-    xAmzAlgorithm: "iste",
-    xAmzContentSha256: "temporibus",
-    xAmzCredential: "explicabo",
-    xAmzDate: "eaque",
-    xAmzSecurityToken: "rem",
-    xAmzSignature: "explicabo",
-    xAmzSignedHeaders: "veritatis",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "FmrsService.CancelTaskExecution",
   },
   request: {
-    taskExecutionArn: "ut",
+    taskExecutionArn: "fugit",
   },
 };
 
-sdk.sdk.cancelTaskExecution(req).then((res: CancelTaskExecutionResponse | AxiosError) => {
+sdk.cancelTaskExecution(req).then((res: CancelTaskExecutionResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationNotCrawlableEvidence } from "./destinationnotcrawlableevidence";
-import { DestinationNotWorkingEvidence } from "./destinationnotworkingevidence";
-import { DestinationUrlEvidence } from "./destinationurlevidence";
-import { DomainCallEvidence } from "./domaincallevidence";
-import { DownloadSizeEvidence } from "./downloadsizeevidence";
-import { HttpCallEvidence } from "./httpcallevidence";
-import { HttpCookieEvidence } from "./httpcookieevidence";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyTopicEvidence = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationnotcrawlableevidence_1 = require("./destinationnotcrawlableevidence");
+var destinationnotworkingevidence_1 = require("./destinationnotworkingevidence");
+var destinationurlevidence_1 = require("./destinationurlevidence");
+var domaincallevidence_1 = require("./domaincallevidence");
+var downloadsizeevidence_1 = require("./downloadsizeevidence");
+var httpcallevidence_1 = require("./httpcallevidence");
+var httpcookieevidence_1 = require("./httpcookieevidence");
 // PolicyTopicEvidence
 /**
  * Evidence associated with a policy topic entry.
@@ -40,33 +43,33 @@ var PolicyTopicEvidence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationNotCrawlable" }),
-        __metadata("design:type", DestinationNotCrawlableEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationNotCrawlable" }),
+        __metadata("design:type", destinationnotcrawlableevidence_1.DestinationNotCrawlableEvidence)
     ], PolicyTopicEvidence.prototype, "destinationNotCrawlable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationNotWorking" }),
-        __metadata("design:type", DestinationNotWorkingEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationNotWorking" }),
+        __metadata("design:type", destinationnotworkingevidence_1.DestinationNotWorkingEvidence)
     ], PolicyTopicEvidence.prototype, "destinationNotWorking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationUrl" }),
-        __metadata("design:type", DestinationUrlEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationUrl" }),
+        __metadata("design:type", destinationurlevidence_1.DestinationUrlEvidence)
     ], PolicyTopicEvidence.prototype, "destinationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainCall" }),
-        __metadata("design:type", DomainCallEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainCall" }),
+        __metadata("design:type", domaincallevidence_1.DomainCallEvidence)
     ], PolicyTopicEvidence.prototype, "domainCall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadSize" }),
-        __metadata("design:type", DownloadSizeEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadSize" }),
+        __metadata("design:type", downloadsizeevidence_1.DownloadSizeEvidence)
     ], PolicyTopicEvidence.prototype, "downloadSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpCall" }),
-        __metadata("design:type", HttpCallEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpCall" }),
+        __metadata("design:type", httpcallevidence_1.HttpCallEvidence)
     ], PolicyTopicEvidence.prototype, "httpCall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpCookie" }),
-        __metadata("design:type", HttpCookieEvidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpCookie" }),
+        __metadata("design:type", httpcookieevidence_1.HttpCookieEvidence)
     ], PolicyTopicEvidence.prototype, "httpCookie", void 0);
     return PolicyTopicEvidence;
-}(SpeakeasyBase));
-export { PolicyTopicEvidence };
+}(utils_1.SpeakeasyBase));
+exports.PolicyTopicEvidence = PolicyTopicEvidence;

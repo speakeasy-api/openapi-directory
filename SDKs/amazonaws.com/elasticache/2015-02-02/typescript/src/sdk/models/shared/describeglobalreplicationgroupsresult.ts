@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalReplicationGroup } from "./globalreplicationgroup";
+import { GlobalReplicationGroupList } from "./globalreplicationgrouplist";
 
 
 
 export class DescribeGlobalReplicationGroupsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: GlobalReplicationGroup })
-  globalReplicationGroups?: GlobalReplicationGroup[];
+  @SpeakeasyMetadata({ elemType: GlobalReplicationGroupList })
+  globalReplicationGroups?: GlobalReplicationGroupList[];
 
   @SpeakeasyMetadata()
   marker?: string;

@@ -51,7 +51,7 @@ export class SendTestEventNotificationResponse extends SpeakeasyBase {
   requestError?: any;
 
   @SpeakeasyMetadata()
-  sendTestEventNotificationResponse?: Map<string, any>;
+  sendTestEventNotificationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serviceFault?: any;

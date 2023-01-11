@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDeviceSwitchRoutingInterfaceResponse = exports.DeleteDeviceSwitchRoutingInterfaceRequest = exports.DeleteDeviceSwitchRoutingInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteDeviceSwitchRoutingInterfacePathParams = /** @class */ (function (_super) {
     __extends(DeleteDeviceSwitchRoutingInterfacePathParams, _super);
     function DeleteDeviceSwitchRoutingInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
         __metadata("design:type", String)
     ], DeleteDeviceSwitchRoutingInterfacePathParams.prototype, "interfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], DeleteDeviceSwitchRoutingInterfacePathParams.prototype, "serial", void 0);
     return DeleteDeviceSwitchRoutingInterfacePathParams;
-}(SpeakeasyBase));
-export { DeleteDeviceSwitchRoutingInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeviceSwitchRoutingInterfacePathParams = DeleteDeviceSwitchRoutingInterfacePathParams;
 var DeleteDeviceSwitchRoutingInterfaceRequest = /** @class */ (function (_super) {
     __extends(DeleteDeviceSwitchRoutingInterfaceRequest, _super);
     function DeleteDeviceSwitchRoutingInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDeviceSwitchRoutingInterfacePathParams)
     ], DeleteDeviceSwitchRoutingInterfaceRequest.prototype, "pathParams", void 0);
     return DeleteDeviceSwitchRoutingInterfaceRequest;
-}(SpeakeasyBase));
-export { DeleteDeviceSwitchRoutingInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeviceSwitchRoutingInterfaceRequest = DeleteDeviceSwitchRoutingInterfaceRequest;
 var DeleteDeviceSwitchRoutingInterfaceResponse = /** @class */ (function (_super) {
     __extends(DeleteDeviceSwitchRoutingInterfaceResponse, _super);
     function DeleteDeviceSwitchRoutingInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteDeviceSwitchRoutingInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteDeviceSwitchRoutingInterfaceResponse.prototype, "statusCode", void 0);
     return DeleteDeviceSwitchRoutingInterfaceResponse;
-}(SpeakeasyBase));
-export { DeleteDeviceSwitchRoutingInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeviceSwitchRoutingInterfaceResponse = DeleteDeviceSwitchRoutingInterfaceResponse;

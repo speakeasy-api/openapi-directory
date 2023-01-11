@@ -38,7 +38,7 @@ export class AssociateServiceQuotaTemplateRequest extends SpeakeasyBase {
   headers: AssociateServiceQuotaTemplateHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -50,7 +50,7 @@ export class AssociateServiceQuotaTemplateResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  associateServiceQuotaTemplateResponse?: Map<string, any>;
+  associateServiceQuotaTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

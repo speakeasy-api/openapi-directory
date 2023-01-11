@@ -7,5 +7,5 @@ export declare class ExperimentTemplateSummary extends SpeakeasyBase {
     description?: string;
     id?: string;
     lastUpdateTime?: Date;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

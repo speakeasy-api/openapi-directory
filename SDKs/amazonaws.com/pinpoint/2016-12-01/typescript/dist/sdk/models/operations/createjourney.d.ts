@@ -16,7 +16,7 @@ export declare class CreateJourneyHeaders extends SpeakeasyBase {
  * Specifies the configuration and other settings for a journey.
 **/
 export declare class CreateJourneyRequestBodyWriteJourneyRequest extends SpeakeasyBase {
-    activities?: Map<string, shared.Activity>;
+    activities?: Record<string, shared.Activity>;
     creationDate?: string;
     lastModifiedDate?: string;
     limits?: shared.JourneyLimits;

@@ -1,44 +1,50 @@
-import qs from "qs";
-import { ParseParamDecorator } from "./utils";
-export var qpMetadataKey = "queryParam";
-export function GetQueryParamSerializer(queryParams) {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getQueryParamSerializer = exports.qpMetadataKey = void 0;
+var utils_1 = require("./utils");
+var qs_1 = __importDefault(require("qs"));
+exports.qpMetadataKey = "queryParam";
+function getQueryParamSerializer(queryParams) {
     var paramsSerializer = {
-        encode: FormSerializerExplode,
+        serialize: formSerializerExplode,
     };
     if (queryParams == null)
         return paramsSerializer;
     var fieldNames = Object.getOwnPropertyNames(queryParams);
     fieldNames.forEach(function (fname) {
-        var qpAnn = Reflect.getMetadata(qpMetadataKey, queryParams, fname);
+        var qpAnn = Reflect.getMetadata(exports.qpMetadataKey, queryParams, fname);
         if (qpAnn == null)
-            return { encode: function (params) { return ""; } };
-        var qpDecorator = ParseParamDecorator(qpAnn, fname, "form", true);
+            return { serialize: function (params) { return ""; } };
+        var qpDecorator = (0, utils_1.parseParamDecorator)(qpAnn, fname, "form", true);
         if (qpDecorator == null)
             return;
         if (qpDecorator.Serialization === "json")
             paramsSerializer = {
-                encode: function (params) {
-                    return JSON.stringify(params);
-                },
+                serialize: function (params) { return Object.keys(params).map(function (key) {
+                    return "".concat(key, "=").concat(JSON.stringify(params[key]));
+                }).join("&"); },
             };
         else {
             switch (qpDecorator.Style) {
                 case "deepObject":
                     paramsSerializer = {
-                        encode: function (params) {
-                            return qs.stringify(params, { arrayFormat: "repeat" });
+                        serialize: function (params) {
+                            return qs_1.default.stringify(params);
                         },
                     };
                     break;
                 case "form":
                     if (qpDecorator.Explode) {
                         paramsSerializer = {
-                            encode: FormSerializerExplode,
+                            serialize: formSerializerExplode,
                         };
                     }
                     else {
                         paramsSerializer = {
-                            encode: FormSerializer,
+                            serialize: formSerializer,
                         };
                     }
                     break;
@@ -50,7 +56,8 @@ export function GetQueryParamSerializer(queryParams) {
     });
     return paramsSerializer;
 }
-function FormSerializer(params) {
+exports.getQueryParamSerializer = getQueryParamSerializer;
+function formSerializer(params) {
     var query = [];
     Object.entries(Object.assign({}, params)).forEach(function (_a) {
         var key = _a[0], value = _a[1];
@@ -72,7 +79,7 @@ function FormSerializer(params) {
     });
     return query.join("&");
 }
-function FormSerializerExplode(params) {
+function formSerializerExplode(params) {
     var query = [];
     Object.entries(Object.assign({}, params)).forEach(function (_a) {
         var key = _a[0], value = _a[1];

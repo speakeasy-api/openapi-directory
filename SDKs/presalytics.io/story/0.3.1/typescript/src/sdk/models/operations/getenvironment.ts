@@ -10,7 +10,7 @@ export class GetEnvironmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEnvironment200ApplicationJsonObject?: Map<string, any>;
+  getEnvironment200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   problemDetail?: any;

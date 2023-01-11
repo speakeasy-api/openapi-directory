@@ -3,6 +3,6 @@ export declare class ErrorError extends SpeakeasyBase {
     details?: string;
     name?: string;
 }
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     error?: ErrorError;
 }

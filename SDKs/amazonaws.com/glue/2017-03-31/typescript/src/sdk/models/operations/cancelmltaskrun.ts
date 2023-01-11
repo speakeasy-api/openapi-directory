@@ -45,7 +45,7 @@ export class CancelMlTaskRunRequest extends SpeakeasyBase {
 
 export class CancelMlTaskRunResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelMlTaskRunResponse?: shared.CancelMlTaskRunResponse;
+  cancelMLTaskRunResponse?: shared.CancelMlTaskRunResponse;
 
   @SpeakeasyMetadata()
   contentType: string;

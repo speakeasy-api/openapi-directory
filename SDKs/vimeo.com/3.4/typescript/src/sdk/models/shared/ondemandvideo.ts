@@ -13,7 +13,7 @@ export class OnDemandVideoBuy extends SpeakeasyBase {
   active: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=price" })
-  price: Map<string, any>;
+  price: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=purchased" })
   purchased?: boolean;
@@ -131,7 +131,7 @@ export class OnDemandVideoRent extends SpeakeasyBase {
   active: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=price" })
-  price: Map<string, any>;
+  price: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=purchased" })
   purchased?: boolean;

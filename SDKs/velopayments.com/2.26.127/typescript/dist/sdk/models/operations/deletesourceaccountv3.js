@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSourceAccountV3Response = exports.DeleteSourceAccountV3Request = exports.DeleteSourceAccountV3PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSourceAccountV3PathParams = /** @class */ (function (_super) {
     __extends(DeleteSourceAccountV3PathParams, _super);
     function DeleteSourceAccountV3PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sourceAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sourceAccountId" }),
         __metadata("design:type", String)
     ], DeleteSourceAccountV3PathParams.prototype, "sourceAccountId", void 0);
     return DeleteSourceAccountV3PathParams;
-}(SpeakeasyBase));
-export { DeleteSourceAccountV3PathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSourceAccountV3PathParams = DeleteSourceAccountV3PathParams;
 var DeleteSourceAccountV3Request = /** @class */ (function (_super) {
     __extends(DeleteSourceAccountV3Request, _super);
     function DeleteSourceAccountV3Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSourceAccountV3PathParams)
     ], DeleteSourceAccountV3Request.prototype, "pathParams", void 0);
     return DeleteSourceAccountV3Request;
-}(SpeakeasyBase));
-export { DeleteSourceAccountV3Request };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSourceAccountV3Request = DeleteSourceAccountV3Request;
 var DeleteSourceAccountV3Response = /** @class */ (function (_super) {
     __extends(DeleteSourceAccountV3Response, _super);
     function DeleteSourceAccountV3Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSourceAccountV3Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSourceAccountV3Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSourceAccountV3Response.prototype, "inlineResponse400", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSourceAccountV3Response.prototype, "inlineResponse401", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSourceAccountV3Response.prototype, "inlineResponse403", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSourceAccountV3Response.prototype, "inlineResponse404", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteSourceAccountV3Response.prototype, "inlineResponse409", void 0);
     return DeleteSourceAccountV3Response;
-}(SpeakeasyBase));
-export { DeleteSourceAccountV3Response };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSourceAccountV3Response = DeleteSourceAccountV3Response;

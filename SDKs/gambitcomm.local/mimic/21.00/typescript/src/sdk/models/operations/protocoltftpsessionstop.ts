@@ -7,7 +7,7 @@ export class ProtocolTftpSessionStopPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sessionID" })
-  sessionId: string;
+  sessionID: string;
 }
 
 
@@ -25,5 +25,5 @@ export class ProtocolTftpSessionStopResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpSessionStop200ApplicationJsonString?: string;
+  protocolTftpSessionStop200ApplicationJSONString?: string;
 }

@@ -8,5 +8,5 @@ export declare class FunctionConfigurationEnvironment extends SpeakeasyBase {
     accessSysfs?: boolean;
     execution?: FunctionExecutionConfig;
     resourceAccessPolicies?: ResourceAccessPolicy[];
-    variables?: Map<string, string>;
+    variables?: Record<string, string>;
 }

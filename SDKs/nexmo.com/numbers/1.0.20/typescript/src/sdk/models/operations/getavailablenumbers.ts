@@ -2,23 +2,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetAvailableNumbersFeaturesEnum {
-    Sms = "SMS",
-    Voice = "VOICE",
-    SmsVoice = "SMS,VOICE",
-    Mms = "MMS",
-    SmsMms = "SMS,MMS",
-    VoiceMms = "VOICE,MMS",
-    SmsMmsVoice = "SMS,MMS,VOICE"
-}
-
 
 export class GetAvailableNumbersQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=country" })
   country: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=features" })
-  features?: GetAvailableNumbersFeaturesEnum;
+  features?: shared.SearchPatternEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=index" })
   index?: number;

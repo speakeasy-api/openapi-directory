@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Alias } from "./alias";
-import { HistogramEntry } from "./histogramentry";
-import { EdgeStatistics } from "./edgestatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Edge = void 0;
+var utils_1 = require("../../../internal/utils");
+var alias_1 = require("./alias");
+var histogramentry_1 = require("./histogramentry");
+var edgestatistics_1 = require("./edgestatistics");
 // Edge
 /**
  * Information about a connection between two services.
@@ -36,29 +39,29 @@ var Edge = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Aliases", elemType: Alias }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Aliases", elemType: alias_1.Alias }),
         __metadata("design:type", Array)
     ], Edge.prototype, "aliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], Edge.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", Number)
     ], Edge.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseTimeHistogram", elemType: HistogramEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseTimeHistogram", elemType: histogramentry_1.HistogramEntry }),
         __metadata("design:type", Array)
     ], Edge.prototype, "responseTimeHistogram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], Edge.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SummaryStatistics" }),
-        __metadata("design:type", EdgeStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SummaryStatistics" }),
+        __metadata("design:type", edgestatistics_1.EdgeStatistics)
     ], Edge.prototype, "summaryStatistics", void 0);
     return Edge;
-}(SpeakeasyBase));
-export { Edge };
+}(utils_1.SpeakeasyBase));
+exports.Edge = Edge;

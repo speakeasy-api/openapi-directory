@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorldCount = void 0;
+var utils_1 = require("../../../internal/utils");
 // WorldCount
 /**
  * <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
@@ -33,13 +36,13 @@ var WorldCount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorplanCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorplanCount" }),
         __metadata("design:type", Number)
     ], WorldCount.prototype, "floorplanCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interiorCountPerFloorplan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interiorCountPerFloorplan" }),
         __metadata("design:type", Number)
     ], WorldCount.prototype, "interiorCountPerFloorplan", void 0);
     return WorldCount;
-}(SpeakeasyBase));
-export { WorldCount };
+}(utils_1.SpeakeasyBase));
+exports.WorldCount = WorldCount;

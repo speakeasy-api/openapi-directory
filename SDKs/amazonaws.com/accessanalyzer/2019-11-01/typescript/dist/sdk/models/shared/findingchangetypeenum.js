@@ -1,6 +1,9 @@
-export var FindingChangeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingChangeTypeEnum = void 0;
+var FindingChangeTypeEnum;
 (function (FindingChangeTypeEnum) {
     FindingChangeTypeEnum["Changed"] = "CHANGED";
     FindingChangeTypeEnum["New"] = "NEW";
     FindingChangeTypeEnum["Unchanged"] = "UNCHANGED";
-})(FindingChangeTypeEnum || (FindingChangeTypeEnum = {}));
+})(FindingChangeTypeEnum = exports.FindingChangeTypeEnum || (exports.FindingChangeTypeEnum = {}));

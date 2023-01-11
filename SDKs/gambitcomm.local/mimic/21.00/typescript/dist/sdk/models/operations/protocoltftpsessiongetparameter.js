@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTftpSessionGetParameterResponse = exports.ProtocolTftpSessionGetParameterRequest = exports.ProtocolTftpSessionGetParameterPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTftpSessionGetParameterPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionGetParameterPathParams, _super);
     function ProtocolTftpSessionGetParameterPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTftpSessionGetParameterPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parameter" }),
         __metadata("design:type", String)
     ], ProtocolTftpSessionGetParameterPathParams.prototype, "parameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sessionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sessionID" }),
         __metadata("design:type", String)
-    ], ProtocolTftpSessionGetParameterPathParams.prototype, "sessionId", void 0);
+    ], ProtocolTftpSessionGetParameterPathParams.prototype, "sessionID", void 0);
     return ProtocolTftpSessionGetParameterPathParams;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionGetParameterPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionGetParameterPathParams = ProtocolTftpSessionGetParameterPathParams;
 var ProtocolTftpSessionGetParameterRequest = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionGetParameterRequest, _super);
     function ProtocolTftpSessionGetParameterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTftpSessionGetParameterPathParams)
     ], ProtocolTftpSessionGetParameterRequest.prototype, "pathParams", void 0);
     return ProtocolTftpSessionGetParameterRequest;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionGetParameterRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionGetParameterRequest = ProtocolTftpSessionGetParameterRequest;
 var ProtocolTftpSessionGetParameterResponse = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionGetParameterResponse, _super);
     function ProtocolTftpSessionGetParameterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTftpSessionGetParameterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTftpSessionGetParameterResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTftpSessionGetParameterResponse.prototype, "protocolTftpSessionGetParameter200ApplicationJsonString", void 0);
+    ], ProtocolTftpSessionGetParameterResponse.prototype, "protocolTftpSessionGetParameter200ApplicationJSONString", void 0);
     return ProtocolTftpSessionGetParameterResponse;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionGetParameterResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionGetParameterResponse = ProtocolTftpSessionGetParameterResponse;

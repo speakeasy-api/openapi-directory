@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -35,9 +35,9 @@ export class V1TinVerification {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/tin-verification/basic-check";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -45,32 +45,33 @@ export class V1TinVerification {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TinVerificationBasicCheckResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationBasicCheck200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationBasicCheck200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationBasicCheckDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationBasicCheckDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -90,9 +91,9 @@ export class V1TinVerification {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/tin-verification/comprehensive-check";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -100,32 +101,33 @@ export class V1TinVerification {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TinVerificationComprehensiveCheckResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationComprehensiveCheck200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationComprehensiveCheck200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationComprehensiveCheckDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationComprehensiveCheckDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -145,9 +147,9 @@ export class V1TinVerification {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/tin-verification/name-lookup";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -155,32 +157,33 @@ export class V1TinVerification {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.TinVerificationNameLookupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationNameLookup200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationNameLookup200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tinVerificationNameLookupDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tinVerificationNameLookupDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

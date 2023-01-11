@@ -1,10 +1,10 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { SasPortalDeviceConfig } from "./sasportaldeviceconfig";
-import { SasPortalChannelWithScore } from "./sasportalchannelwithscore";
-import { SasPortalDeviceMetadata } from "./sasportaldevicemetadata";
+import { SasPortalDeviceMetadataInput } from "./sasportaldevicemetadata";
 import { SasPortalFrequencyRange } from "./sasportalfrequencyrange";
 import { SasPortalDeviceGrant } from "./sasportaldevicegrant";
-import { SasPortalDeviceMetadataInput } from "./sasportaldevicemetadata";
+import { SasPortalChannelWithScore } from "./sasportalchannelwithscore";
+import { SasPortalDeviceMetadata } from "./sasportaldevicemetadata";
 
 
 export enum SasPortalDeviceStateEnum {
@@ -15,15 +15,12 @@ export enum SasPortalDeviceStateEnum {
 }
 
 
-export class SasPortalDevice extends SpeakeasyBase {
+export class SasPortalDeviceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=activeConfig" })
   activeConfig?: SasPortalDeviceConfig;
 
-  @SpeakeasyMetadata({ data: "json, name=currentChannels", elemType: SasPortalChannelWithScore })
-  currentChannels?: SasPortalChannelWithScore[];
-
   @SpeakeasyMetadata({ data: "json, name=deviceMetadata" })
-  deviceMetadata?: SasPortalDeviceMetadata;
+  deviceMetadata?: SasPortalDeviceMetadataInput;
 
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;
@@ -51,12 +48,15 @@ export class SasPortalDevice extends SpeakeasyBase {
 }
 
 
-export class SasPortalDeviceInput extends SpeakeasyBase {
+export class SasPortalDevice extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=activeConfig" })
   activeConfig?: SasPortalDeviceConfig;
 
+  @SpeakeasyMetadata({ data: "json, name=currentChannels", elemType: SasPortalChannelWithScore })
+  currentChannels?: SasPortalChannelWithScore[];
+
   @SpeakeasyMetadata({ data: "json, name=deviceMetadata" })
-  deviceMetadata?: SasPortalDeviceMetadataInput;
+  deviceMetadata?: SasPortalDeviceMetadata;
 
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;

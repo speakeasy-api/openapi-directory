@@ -38,7 +38,7 @@ export class PatchAppsAppIdNamespacesNamespaceIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   namespaceResponse?: shared.NamespaceResponse;

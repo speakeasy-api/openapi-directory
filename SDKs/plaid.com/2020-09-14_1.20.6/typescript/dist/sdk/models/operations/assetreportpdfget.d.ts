@@ -4,7 +4,7 @@ export declare class AssetReportPdfGetRequest extends SpeakeasyBase {
     request: shared.AssetReportPdfGetRequest;
 }
 export declare class AssetReportPdfGetResponse extends SpeakeasyBase {
-    assetReportPdfGetResponse?: Uint8Array;
+    assetReportPDFGetResponse?: Uint8Array;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeReputationResponse = exports.GetMeReputationRequest = exports.GetMeReputationQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMeReputationQueryParams = /** @class */ (function (_super) {
     __extends(GetMeReputationQueryParams, _super);
     function GetMeReputationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeReputationQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeReputationQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetMeReputationQueryParams.prototype, "site", void 0);
     return GetMeReputationQueryParams;
-}(SpeakeasyBase));
-export { GetMeReputationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeReputationQueryParams = GetMeReputationQueryParams;
 var GetMeReputationRequest = /** @class */ (function (_super) {
     __extends(GetMeReputationRequest, _super);
     function GetMeReputationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeReputationQueryParams)
     ], GetMeReputationRequest.prototype, "queryParams", void 0);
     return GetMeReputationRequest;
-}(SpeakeasyBase));
-export { GetMeReputationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeReputationRequest = GetMeReputationRequest;
 var GetMeReputationResponse = /** @class */ (function (_super) {
     __extends(GetMeReputationResponse, _super);
     function GetMeReputationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeReputationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeReputationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeReputationResponse.prototype, "statusCode", void 0);
     return GetMeReputationResponse;
-}(SpeakeasyBase));
-export { GetMeReputationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeReputationResponse = GetMeReputationResponse;

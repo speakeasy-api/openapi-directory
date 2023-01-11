@@ -8,7 +8,7 @@ export declare class UsRaceEthnicityBatchRequest extends SpeakeasyBase {
     security: UsRaceEthnicityBatchSecurity;
 }
 export declare class UsRaceEthnicityBatchResponse extends SpeakeasyBase {
-    batchFirstLastNameUsRaceEthnicityOut?: shared.BatchFirstLastNameUsRaceEthnicityOut;
+    batchFirstLastNameUSRaceEthnicityOut?: shared.BatchFirstLastNameUsRaceEthnicityOut;
     contentType: string;
     statusCode: number;
 }

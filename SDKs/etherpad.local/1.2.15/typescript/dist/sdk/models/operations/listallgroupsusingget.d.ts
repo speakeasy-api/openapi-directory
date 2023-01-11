@@ -9,24 +9,24 @@ export declare class ListAllGroupsUsingGet200ApplicationJson extends SpeakeasyBa
 }
 export declare class ListAllGroupsUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllGroupsUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllGroupsUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllGroupsUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listAllGroupsUsingGet200ApplicationJsonObject?: ListAllGroupsUsingGet200ApplicationJson;
-    listAllGroupsUsingGet400ApplicationJsonObject?: ListAllGroupsUsingGet400ApplicationJson;
-    listAllGroupsUsingGet401ApplicationJsonObject?: ListAllGroupsUsingGet401ApplicationJson;
-    listAllGroupsUsingGet500ApplicationJsonObject?: ListAllGroupsUsingGet500ApplicationJson;
+    listAllGroupsUsingGET200ApplicationJSONObject?: ListAllGroupsUsingGet200ApplicationJson;
+    listAllGroupsUsingGET400ApplicationJSONObject?: ListAllGroupsUsingGet400ApplicationJson;
+    listAllGroupsUsingGET401ApplicationJSONObject?: ListAllGroupsUsingGet401ApplicationJson;
+    listAllGroupsUsingGET500ApplicationJSONObject?: ListAllGroupsUsingGet500ApplicationJson;
 }

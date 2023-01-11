@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ResellerCustomersGetRequest, ResellerCustomersGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,26 +31,26 @@ const req: ResellerCustomersGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    customerId: "dolor",
+    customerId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "assumenda",
+    accessToken: "culpa",
     alt: "media",
-    callback: "perspiciatis",
-    fields: "excepturi",
-    key: "doloremque",
-    oauthToken: "dolorum",
-    prettyPrint: false,
-    quotaUser: "ipsam",
-    uploadType: "odio",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
     uploadProtocol: "rerum",
   },
 };

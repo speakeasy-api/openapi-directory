@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionDeferralInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // SubscriptionDeferralInfo
 /**
  * A SubscriptionDeferralInfo contains the data needed to defer a subscription purchase to a future expiry time.
@@ -33,13 +36,13 @@ var SubscriptionDeferralInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desiredExpiryTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desiredExpiryTimeMillis" }),
         __metadata("design:type", String)
     ], SubscriptionDeferralInfo.prototype, "desiredExpiryTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expectedExpiryTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expectedExpiryTimeMillis" }),
         __metadata("design:type", String)
     ], SubscriptionDeferralInfo.prototype, "expectedExpiryTimeMillis", void 0);
     return SubscriptionDeferralInfo;
-}(SpeakeasyBase));
-export { SubscriptionDeferralInfo };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionDeferralInfo = SubscriptionDeferralInfo;

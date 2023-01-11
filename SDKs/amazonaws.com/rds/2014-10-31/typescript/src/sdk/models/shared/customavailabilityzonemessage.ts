@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomAvailabilityZone } from "./customavailabilityzone";
+import { CustomAvailabilityZoneList } from "./customavailabilityzonelist";
 
 
 
 export class CustomAvailabilityZoneMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CustomAvailabilityZone })
-  customAvailabilityZones?: CustomAvailabilityZone[];
+  @SpeakeasyMetadata({ elemType: CustomAvailabilityZoneList })
+  customAvailabilityZones?: CustomAvailabilityZoneList[];
 
   @SpeakeasyMetadata()
   marker?: string;

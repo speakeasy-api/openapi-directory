@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InvitationRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Invitation = exports.InvitationRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InvitationRoleEnum;
 (function (InvitationRoleEnum) {
     InvitationRoleEnum["CourseRoleUnspecified"] = "COURSE_ROLE_UNSPECIFIED";
     InvitationRoleEnum["Student"] = "STUDENT";
     InvitationRoleEnum["Teacher"] = "TEACHER";
     InvitationRoleEnum["Owner"] = "OWNER";
-})(InvitationRoleEnum || (InvitationRoleEnum = {}));
+})(InvitationRoleEnum = exports.InvitationRoleEnum || (exports.InvitationRoleEnum = {}));
 // Invitation
 /**
  * An invitation to join a course.
@@ -40,21 +43,21 @@ var Invitation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=courseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=courseId" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "courseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "userId", void 0);
     return Invitation;
-}(SpeakeasyBase));
-export { Invitation };
+}(utils_1.SpeakeasyBase));
+exports.Invitation = Invitation;

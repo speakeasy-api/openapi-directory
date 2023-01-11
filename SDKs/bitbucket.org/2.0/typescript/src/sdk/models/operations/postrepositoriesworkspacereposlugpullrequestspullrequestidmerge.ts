@@ -41,7 +41,7 @@ export class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequ
   queryParams: PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeSecurity;
@@ -56,8 +56,8 @@ export class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pullrequest?: Map<string, any>;
+  pullrequest?: Record<string, any>;
 }

@@ -12,7 +12,7 @@ export declare class GetListingHeavyEquipmentIdRequest extends SpeakeasyBase {
 }
 export declare class GetListingHeavyEquipmentIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     heavyEquipmentsListing?: shared.HeavyEquipmentsListing;
     statusCode: number;
 }

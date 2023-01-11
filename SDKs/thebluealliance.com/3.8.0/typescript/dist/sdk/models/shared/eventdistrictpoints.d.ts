@@ -11,6 +11,6 @@ export declare class EventDistrictPointsTiebreakers extends SpeakeasyBase {
     qualWins?: number;
 }
 export declare class EventDistrictPoints extends SpeakeasyBase {
-    points: Map<string, EventDistrictPointsPoints>;
-    tiebreakers?: Map<string, EventDistrictPointsTiebreakers>;
+    points: Record<string, EventDistrictPointsPoints>;
+    tiebreakers?: Record<string, EventDistrictPointsTiebreakers>;
 }

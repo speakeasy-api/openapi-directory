@@ -34,6 +34,6 @@ export declare class ReposCreatePagesSiteResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     page?: shared.Page;
-    reposCreatePagesSite415ApplicationJsonObject?: ReposCreatePagesSite415ApplicationJson;
+    reposCreatePagesSite415ApplicationJSONObject?: ReposCreatePagesSite415ApplicationJson;
     validationError?: shared.ValidationError;
 }

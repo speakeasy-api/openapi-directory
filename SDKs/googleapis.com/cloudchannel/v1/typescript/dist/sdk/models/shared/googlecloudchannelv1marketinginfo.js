@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Media } from "./googlecloudchannelv1media";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1MarketingInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1media_1 = require("./googlecloudchannelv1media");
 // GoogleCloudChannelV1MarketingInfo
 /**
  * Represents the marketing information for a Product, SKU or Offer.
@@ -34,17 +37,17 @@ var GoogleCloudChannelV1MarketingInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLogo" }),
-        __metadata("design:type", GoogleCloudChannelV1Media)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLogo" }),
+        __metadata("design:type", googlecloudchannelv1media_1.GoogleCloudChannelV1Media)
     ], GoogleCloudChannelV1MarketingInfo.prototype, "defaultLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1MarketingInfo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1MarketingInfo.prototype, "displayName", void 0);
     return GoogleCloudChannelV1MarketingInfo;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1MarketingInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1MarketingInfo = GoogleCloudChannelV1MarketingInfo;

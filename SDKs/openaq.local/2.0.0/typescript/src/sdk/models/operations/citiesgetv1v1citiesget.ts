@@ -23,13 +23,13 @@ export class CitiesGetv1V1CitiesGetQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.CitiesOrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 }
 
 
@@ -47,7 +47,7 @@ export class CitiesGetv1V1CitiesGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqCitiesResult?: shared.OpenAqCitiesResult;
+  openAQCitiesResult?: shared.OpenAqCitiesResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

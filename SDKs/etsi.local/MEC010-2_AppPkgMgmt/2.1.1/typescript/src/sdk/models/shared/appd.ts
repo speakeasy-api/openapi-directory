@@ -15,7 +15,7 @@ export class AppD extends SpeakeasyBase {
   appDId: string;
 
   @SpeakeasyMetadata({ elemType: DnsRuleDescriptor })
-  appDnsRule?: DnsRuleDescriptor[];
+  appDNSRule?: DnsRuleDescriptor[];
 
   @SpeakeasyMetadata()
   appDVersion: string;

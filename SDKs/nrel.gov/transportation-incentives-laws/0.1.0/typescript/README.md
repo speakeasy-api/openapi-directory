@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetV1CategoryListOutputFormatRequest, GetV1CategoryListOutputFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,15 +28,15 @@ const sdk = new SDK();
     
 const req: GetV1CategoryListOutputFormatRequest = {
   pathParams: {
-    outputFormat: "xml",
+    outputFormat: "json",
   },
   queryParams: {
-    apiKey: "necessitatibus",
+    apiKey: "voluptas",
     type: "user",
   },
 };
 
-sdk.sdk.getV1CategoryListOutputFormat(req).then((res: GetV1CategoryListOutputFormatResponse | AxiosError) => {
+sdk.getV1CategoryListOutputFormat(req).then((res: GetV1CategoryListOutputFormatResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,8 +48,8 @@ sdk.sdk.getV1CategoryListOutputFormat(req).then((res: GetV1CategoryListOutputFor
 ### SDK SDK
 
 * `getV1CategoryListOutputFormat` - Return the law categories for a given category type.
-* `getV1IdOutputFormat` - Fetch the details of a specific law given the law's ID.
 * `getV1PocsOutputFormat` - Get the points of contact for a given jurisdiction.
+* `getV1IdOutputFormat` - Fetch the details of a specific law given the law's ID.
 * `transportationIncentivesLaws` - Return a full list of laws and incentives that match your query.
 
 <!-- End SDK Available Operations -->

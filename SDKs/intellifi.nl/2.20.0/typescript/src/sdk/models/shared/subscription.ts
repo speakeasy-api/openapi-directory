@@ -22,10 +22,10 @@ export class Subscription extends SpeakeasyBase {
   populateEvents?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=target_delivery_last_failure" })
-  targetDeliveryLastFailure?: Map<string, any>;
+  targetDeliveryLastFailure?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=target_delivery_status" })
-  targetDeliveryStatus?: Map<string, any>;
+  targetDeliveryStatus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=target_retry" })
   targetRetry?: boolean;

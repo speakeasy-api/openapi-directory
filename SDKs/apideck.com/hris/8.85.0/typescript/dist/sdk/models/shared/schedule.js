@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Schedule = exports.ScheduleWorkPattern = exports.ScheduleWorkPatternOddWeeks = exports.ScheduleWorkPatternEvenWeeks = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScheduleWorkPatternEvenWeeks = /** @class */ (function (_super) {
     __extends(ScheduleWorkPatternEvenWeeks, _super);
     function ScheduleWorkPatternEvenWeeks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_friday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_friday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursFriday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_monday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_monday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursMonday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_saturday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_saturday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursSaturday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_sunday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_sunday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursSunday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_thursday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_thursday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursThursday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_tuesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_tuesday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursTuesday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_wednesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_wednesday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternEvenWeeks.prototype, "hoursWednesday", void 0);
     return ScheduleWorkPatternEvenWeeks;
-}(SpeakeasyBase));
-export { ScheduleWorkPatternEvenWeeks };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleWorkPatternEvenWeeks = ScheduleWorkPatternEvenWeeks;
 var ScheduleWorkPatternOddWeeks = /** @class */ (function (_super) {
     __extends(ScheduleWorkPatternOddWeeks, _super);
     function ScheduleWorkPatternOddWeeks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_friday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_friday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursFriday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_monday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_monday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursMonday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_saturday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_saturday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursSaturday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_sunday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_sunday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursSunday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_thursday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_thursday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursThursday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_tuesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_tuesday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursTuesday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours_wednesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_wednesday" }),
         __metadata("design:type", Number)
     ], ScheduleWorkPatternOddWeeks.prototype, "hoursWednesday", void 0);
     return ScheduleWorkPatternOddWeeks;
-}(SpeakeasyBase));
-export { ScheduleWorkPatternOddWeeks };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleWorkPatternOddWeeks = ScheduleWorkPatternOddWeeks;
 var ScheduleWorkPattern = /** @class */ (function (_super) {
     __extends(ScheduleWorkPattern, _super);
     function ScheduleWorkPattern() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=even_weeks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=even_weeks" }),
         __metadata("design:type", ScheduleWorkPatternEvenWeeks)
     ], ScheduleWorkPattern.prototype, "evenWeeks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=odd_weeks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=odd_weeks" }),
         __metadata("design:type", ScheduleWorkPatternOddWeeks)
     ], ScheduleWorkPattern.prototype, "oddWeeks", void 0);
     return ScheduleWorkPattern;
-}(SpeakeasyBase));
-export { ScheduleWorkPattern };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleWorkPattern = ScheduleWorkPattern;
 var Schedule = /** @class */ (function (_super) {
     __extends(Schedule, _super);
     function Schedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=work_pattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=work_pattern" }),
         __metadata("design:type", ScheduleWorkPattern)
     ], Schedule.prototype, "workPattern", void 0);
     return Schedule;
-}(SpeakeasyBase));
-export { Schedule };
+}(utils_1.SpeakeasyBase));
+exports.Schedule = Schedule;

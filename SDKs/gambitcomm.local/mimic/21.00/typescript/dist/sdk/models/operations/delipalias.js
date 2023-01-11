@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DelIpaliasResponse = exports.DelIpaliasRequest = exports.DelIpaliasPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DelIpaliasPathParams = /** @class */ (function (_super) {
     __extends(DelIpaliasPathParams, _super);
     function DelIpaliasPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=IP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=IP" }),
         __metadata("design:type", String)
     ], DelIpaliasPathParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], DelIpaliasPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], DelIpaliasPathParams.prototype, "port", void 0);
     return DelIpaliasPathParams;
-}(SpeakeasyBase));
-export { DelIpaliasPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DelIpaliasPathParams = DelIpaliasPathParams;
 var DelIpaliasRequest = /** @class */ (function (_super) {
     __extends(DelIpaliasRequest, _super);
     function DelIpaliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DelIpaliasPathParams)
     ], DelIpaliasRequest.prototype, "pathParams", void 0);
     return DelIpaliasRequest;
-}(SpeakeasyBase));
-export { DelIpaliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.DelIpaliasRequest = DelIpaliasRequest;
 var DelIpaliasResponse = /** @class */ (function (_super) {
     __extends(DelIpaliasResponse, _super);
     function DelIpaliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DelIpaliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DelIpaliasResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DelIpaliasResponse.prototype, "delIpalias200ApplicationJsonString", void 0);
+    ], DelIpaliasResponse.prototype, "delIpalias200ApplicationJSONString", void 0);
     return DelIpaliasResponse;
-}(SpeakeasyBase));
-export { DelIpaliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.DelIpaliasResponse = DelIpaliasResponse;

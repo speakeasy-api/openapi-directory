@@ -23,5 +23,5 @@ export class FindAllGlobalAuthModulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  findAllGlobalAuthModules200ApplicationJsonOneoves?: any[];
+  findAllGlobalAuthModules200ApplicationJSONOneoves?: any[];
 }

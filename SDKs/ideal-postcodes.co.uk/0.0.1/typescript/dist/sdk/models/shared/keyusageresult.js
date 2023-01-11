@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyUsageDailyCountEpoch } from "./keyusagedailycountepoch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyUsageResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyusagedailycountepoch_1 = require("./keyusagedailycountepoch");
 var KeyUsageResult = /** @class */ (function (_super) {
     __extends(KeyUsageResult, _super);
     function KeyUsageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyCount", elemType: KeyUsageDailyCountEpoch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyCount", elemType: keyusagedailycountepoch_1.KeyUsageDailyCountEpoch }),
         __metadata("design:type", Array)
     ], KeyUsageResult.prototype, "dailyCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], KeyUsageResult.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], KeyUsageResult.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], KeyUsageResult.prototype, "total", void 0);
     return KeyUsageResult;
-}(SpeakeasyBase));
-export { KeyUsageResult };
+}(utils_1.SpeakeasyBase));
+exports.KeyUsageResult = KeyUsageResult;

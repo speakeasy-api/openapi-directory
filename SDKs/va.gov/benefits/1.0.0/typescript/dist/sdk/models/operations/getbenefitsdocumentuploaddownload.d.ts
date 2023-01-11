@@ -35,9 +35,9 @@ export declare class GetBenefitsDocumentUploadDownloadResponse extends Speakeasy
     contentType: string;
     statusCode: number;
     getBenefitsDocumentUploadDownload200ApplicationZipBinaryString?: Uint8Array;
-    getBenefitsDocumentUploadDownload401ApplicationJsonObject?: GetBenefitsDocumentUploadDownload401ApplicationJson;
-    getBenefitsDocumentUploadDownload403ApplicationJsonObject?: GetBenefitsDocumentUploadDownload403ApplicationJson;
-    getBenefitsDocumentUploadDownload404ApplicationJsonObject?: GetBenefitsDocumentUploadDownload404ApplicationJson;
-    getBenefitsDocumentUploadDownload429ApplicationJsonObject?: GetBenefitsDocumentUploadDownload429ApplicationJson;
-    getBenefitsDocumentUploadDownload500ApplicationJsonObject?: GetBenefitsDocumentUploadDownload500ApplicationJson;
+    getBenefitsDocumentUploadDownload401ApplicationJSONObject?: GetBenefitsDocumentUploadDownload401ApplicationJson;
+    getBenefitsDocumentUploadDownload403ApplicationJSONObject?: GetBenefitsDocumentUploadDownload403ApplicationJson;
+    getBenefitsDocumentUploadDownload404ApplicationJSONObject?: GetBenefitsDocumentUploadDownload404ApplicationJson;
+    getBenefitsDocumentUploadDownload429ApplicationJSONObject?: GetBenefitsDocumentUploadDownload429ApplicationJson;
+    getBenefitsDocumentUploadDownload500ApplicationJSONObject?: GetBenefitsDocumentUploadDownload500ApplicationJson;
 }

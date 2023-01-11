@@ -49,7 +49,7 @@ export class CreateResourcePolicyStatementRequestBody extends SpeakeasyBase {
   action: string[];
 
   @SpeakeasyMetadata({ data: "json, name=condition" })
-  condition?: Map<string, Map<string, string>>;
+  condition?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata({ data: "json, name=effect" })
   effect: CreateResourcePolicyStatementRequestBodyEffectEnum;

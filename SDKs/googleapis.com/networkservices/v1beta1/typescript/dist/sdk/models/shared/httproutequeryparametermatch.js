@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteQueryParameterMatch = void 0;
+var utils_1 = require("../../../internal/utils");
 // HttpRouteQueryParameterMatch
 /**
  * Specifications to match a query parameter in the request.
@@ -33,21 +36,21 @@ var HttpRouteQueryParameterMatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exactMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exactMatch" }),
         __metadata("design:type", String)
     ], HttpRouteQueryParameterMatch.prototype, "exactMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=presentMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=presentMatch" }),
         __metadata("design:type", Boolean)
     ], HttpRouteQueryParameterMatch.prototype, "presentMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameter" }),
         __metadata("design:type", String)
     ], HttpRouteQueryParameterMatch.prototype, "queryParameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regexMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regexMatch" }),
         __metadata("design:type", String)
     ], HttpRouteQueryParameterMatch.prototype, "regexMatch", void 0);
     return HttpRouteQueryParameterMatch;
-}(SpeakeasyBase));
-export { HttpRouteQueryParameterMatch };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteQueryParameterMatch = HttpRouteQueryParameterMatch;

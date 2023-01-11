@@ -53,5 +53,5 @@ export class UpdateTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateTask200ApplicationJsonObject?: UpdateTask200ApplicationJson;
+  updateTask200ApplicationJSONObject?: UpdateTask200ApplicationJson;
 }

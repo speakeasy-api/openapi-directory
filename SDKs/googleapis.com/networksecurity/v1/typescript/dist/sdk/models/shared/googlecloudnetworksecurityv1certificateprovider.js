@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateProviderInstance } from "./certificateproviderinstance";
-import { GoogleCloudNetworksecurityV1GrpcEndpoint } from "./googlecloudnetworksecurityv1grpcendpoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudNetworksecurityV1CertificateProvider = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificateproviderinstance_1 = require("./certificateproviderinstance");
+var googlecloudnetworksecurityv1grpcendpoint_1 = require("./googlecloudnetworksecurityv1grpcendpoint");
 // GoogleCloudNetworksecurityV1CertificateProvider
 /**
  * Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
@@ -35,13 +38,13 @@ var GoogleCloudNetworksecurityV1CertificateProvider = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateProviderInstance" }),
-        __metadata("design:type", CertificateProviderInstance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateProviderInstance" }),
+        __metadata("design:type", certificateproviderinstance_1.CertificateProviderInstance)
     ], GoogleCloudNetworksecurityV1CertificateProvider.prototype, "certificateProviderInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpcEndpoint" }),
-        __metadata("design:type", GoogleCloudNetworksecurityV1GrpcEndpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpcEndpoint" }),
+        __metadata("design:type", googlecloudnetworksecurityv1grpcendpoint_1.GoogleCloudNetworksecurityV1GrpcEndpoint)
     ], GoogleCloudNetworksecurityV1CertificateProvider.prototype, "grpcEndpoint", void 0);
     return GoogleCloudNetworksecurityV1CertificateProvider;
-}(SpeakeasyBase));
-export { GoogleCloudNetworksecurityV1CertificateProvider };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudNetworksecurityV1CertificateProvider = GoogleCloudNetworksecurityV1CertificateProvider;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,178 +14,203 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicapoolPoolsUpdatetemplateResponse = exports.ReplicapoolPoolsUpdatetemplateRequest = exports.ReplicapoolPoolsUpdatetemplateSecurity = exports.ReplicapoolPoolsUpdatetemplateSecurityOption3 = exports.ReplicapoolPoolsUpdatetemplateSecurityOption2 = exports.ReplicapoolPoolsUpdatetemplateSecurityOption1 = exports.ReplicapoolPoolsUpdatetemplateQueryParams = exports.ReplicapoolPoolsUpdatetemplatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReplicapoolPoolsUpdatetemplatePathParams = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplatePathParams, _super);
     function ReplicapoolPoolsUpdatetemplatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolName" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplatePathParams.prototype, "poolName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectName" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplatePathParams.prototype, "projectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=zone" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplatePathParams.prototype, "zone", void 0);
     return ReplicapoolPoolsUpdatetemplatePathParams;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplatePathParams = ReplicapoolPoolsUpdatetemplatePathParams;
 var ReplicapoolPoolsUpdatetemplateQueryParams = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateQueryParams, _super);
     function ReplicapoolPoolsUpdatetemplateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateQueryParams.prototype, "userIp", void 0);
     return ReplicapoolPoolsUpdatetemplateQueryParams;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateQueryParams = ReplicapoolPoolsUpdatetemplateQueryParams;
 var ReplicapoolPoolsUpdatetemplateSecurityOption1 = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateSecurityOption1, _super);
     function ReplicapoolPoolsUpdatetemplateSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption1.prototype, "oauth2c", void 0);
     return ReplicapoolPoolsUpdatetemplateSecurityOption1;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateSecurityOption1 = ReplicapoolPoolsUpdatetemplateSecurityOption1;
 var ReplicapoolPoolsUpdatetemplateSecurityOption2 = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateSecurityOption2, _super);
     function ReplicapoolPoolsUpdatetemplateSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption2.prototype, "oauth2c", void 0);
     return ReplicapoolPoolsUpdatetemplateSecurityOption2;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateSecurityOption2 = ReplicapoolPoolsUpdatetemplateSecurityOption2;
 var ReplicapoolPoolsUpdatetemplateSecurityOption3 = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateSecurityOption3, _super);
     function ReplicapoolPoolsUpdatetemplateSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ReplicapoolPoolsUpdatetemplateSecurityOption3.prototype, "oauth2c", void 0);
     return ReplicapoolPoolsUpdatetemplateSecurityOption3;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateSecurityOption3 = ReplicapoolPoolsUpdatetemplateSecurityOption3;
 var ReplicapoolPoolsUpdatetemplateSecurity = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateSecurity, _super);
     function ReplicapoolPoolsUpdatetemplateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplateSecurityOption1)
     ], ReplicapoolPoolsUpdatetemplateSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplateSecurityOption2)
     ], ReplicapoolPoolsUpdatetemplateSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplateSecurityOption3)
     ], ReplicapoolPoolsUpdatetemplateSecurity.prototype, "option3", void 0);
     return ReplicapoolPoolsUpdatetemplateSecurity;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateSecurity = ReplicapoolPoolsUpdatetemplateSecurity;
 var ReplicapoolPoolsUpdatetemplateRequest = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateRequest, _super);
     function ReplicapoolPoolsUpdatetemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplatePathParams)
     ], ReplicapoolPoolsUpdatetemplateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplateQueryParams)
     ], ReplicapoolPoolsUpdatetemplateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Template)
     ], ReplicapoolPoolsUpdatetemplateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReplicapoolPoolsUpdatetemplateSecurity)
     ], ReplicapoolPoolsUpdatetemplateRequest.prototype, "security", void 0);
     return ReplicapoolPoolsUpdatetemplateRequest;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateRequest = ReplicapoolPoolsUpdatetemplateRequest;
 var ReplicapoolPoolsUpdatetemplateResponse = /** @class */ (function (_super) {
     __extends(ReplicapoolPoolsUpdatetemplateResponse, _super);
     function ReplicapoolPoolsUpdatetemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicapoolPoolsUpdatetemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReplicapoolPoolsUpdatetemplateResponse.prototype, "statusCode", void 0);
     return ReplicapoolPoolsUpdatetemplateResponse;
-}(SpeakeasyBase));
-export { ReplicapoolPoolsUpdatetemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReplicapoolPoolsUpdatetemplateResponse = ReplicapoolPoolsUpdatetemplateResponse;

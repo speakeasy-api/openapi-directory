@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeletePlatformVersionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeletePlatformVersionResponse = exports.PostDeletePlatformVersionRequest = exports.PostDeletePlatformVersionHeaders = exports.PostDeletePlatformVersionQueryParams = exports.PostDeletePlatformVersionVersionEnum = exports.PostDeletePlatformVersionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeletePlatformVersionActionEnum;
 (function (PostDeletePlatformVersionActionEnum) {
     PostDeletePlatformVersionActionEnum["DeletePlatformVersion"] = "DeletePlatformVersion";
-})(PostDeletePlatformVersionActionEnum || (PostDeletePlatformVersionActionEnum = {}));
-export var PostDeletePlatformVersionVersionEnum;
+})(PostDeletePlatformVersionActionEnum = exports.PostDeletePlatformVersionActionEnum || (exports.PostDeletePlatformVersionActionEnum = {}));
+var PostDeletePlatformVersionVersionEnum;
 (function (PostDeletePlatformVersionVersionEnum) {
     PostDeletePlatformVersionVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostDeletePlatformVersionVersionEnum || (PostDeletePlatformVersionVersionEnum = {}));
+})(PostDeletePlatformVersionVersionEnum = exports.PostDeletePlatformVersionVersionEnum || (exports.PostDeletePlatformVersionVersionEnum = {}));
 var PostDeletePlatformVersionQueryParams = /** @class */ (function (_super) {
     __extends(PostDeletePlatformVersionQueryParams, _super);
     function PostDeletePlatformVersionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionQueryParams.prototype, "version", void 0);
     return PostDeletePlatformVersionQueryParams;
-}(SpeakeasyBase));
-export { PostDeletePlatformVersionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePlatformVersionQueryParams = PostDeletePlatformVersionQueryParams;
 var PostDeletePlatformVersionHeaders = /** @class */ (function (_super) {
     __extends(PostDeletePlatformVersionHeaders, _super);
     function PostDeletePlatformVersionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeletePlatformVersionHeaders;
-}(SpeakeasyBase));
-export { PostDeletePlatformVersionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePlatformVersionHeaders = PostDeletePlatformVersionHeaders;
 var PostDeletePlatformVersionRequest = /** @class */ (function (_super) {
     __extends(PostDeletePlatformVersionRequest, _super);
     function PostDeletePlatformVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeletePlatformVersionQueryParams)
     ], PostDeletePlatformVersionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeletePlatformVersionHeaders)
     ], PostDeletePlatformVersionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeletePlatformVersionRequest.prototype, "request", void 0);
     return PostDeletePlatformVersionRequest;
-}(SpeakeasyBase));
-export { PostDeletePlatformVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePlatformVersionRequest = PostDeletePlatformVersionRequest;
 var PostDeletePlatformVersionResponse = /** @class */ (function (_super) {
     __extends(PostDeletePlatformVersionResponse, _super);
     function PostDeletePlatformVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeletePlatformVersionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeletePlatformVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeletePlatformVersionResponse.prototype, "statusCode", void 0);
     return PostDeletePlatformVersionResponse;
-}(SpeakeasyBase));
-export { PostDeletePlatformVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePlatformVersionResponse = PostDeletePlatformVersionResponse;

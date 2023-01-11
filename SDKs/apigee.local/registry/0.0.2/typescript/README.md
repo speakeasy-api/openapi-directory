@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RegistryCreateApiRequest, RegistryCreateApiResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,15 +28,15 @@ const sdk = new SDK();
     
 const req: RegistryCreateApiRequest = {
   pathParams: {
-    project: "ipsum",
+    project: "sit",
   },
   queryParams: {
-    apiId: "rem",
+    apiId: "voluptas",
   },
-  request: "consequuntur",
+  request: "culpa",
 };
 
-sdk.sdk.registryCreateApi(req).then((res: RegistryCreateApiResponse | AxiosError) => {
+sdk.registryCreateApi(req).then((res: RegistryCreateApiResponse | AxiosError) => {
    // handle response
 });
 ```

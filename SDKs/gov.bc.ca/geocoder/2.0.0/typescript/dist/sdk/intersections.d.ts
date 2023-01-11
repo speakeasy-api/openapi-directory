@@ -15,12 +15,6 @@ export declare class Intersections {
     **/
     getAddressesOutputFormat(req: operations.GetAddressesOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetAddressesOutputFormatResponse>;
     /**
-     * getIntersectionsIntersectionIdOutputFormat - Get an intersection by its unique ID
-     *
-     * Represents a individual intersection
-    **/
-    getIntersectionsIntersectionIdOutputFormat(req: operations.GetIntersectionsIntersectionIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsIntersectionIdOutputFormatResponse>;
-    /**
      * getIntersectionsNearOutputFormat - Find intersections near to a geographic point
      *
      * Represents intersections near a given point
@@ -38,4 +32,10 @@ export declare class Intersections {
      * Represents all intersections within a given area
     **/
     getIntersectionsWithinOutputFormat(req: operations.GetIntersectionsWithinOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsWithinOutputFormatResponse>;
+    /**
+     * getIntersectionsIntersectionIdOutputFormat - Get an intersection by its unique ID
+     *
+     * Represents a individual intersection
+    **/
+    getIntersectionsIntersectionIdOutputFormat(req: operations.GetIntersectionsIntersectionIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetIntersectionsIntersectionIdOutputFormatResponse>;
 }

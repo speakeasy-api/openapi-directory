@@ -38,5 +38,5 @@ export declare class RealtimeData extends SpeakeasyBase {
     rows?: string[][];
     selfLink?: string;
     totalResults?: number;
-    totalsForAllResults?: Map<string, string>;
+    totalsForAllResults?: Record<string, string>;
 }

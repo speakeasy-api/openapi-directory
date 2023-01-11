@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Portfolio = exports.PortfolioSortEnum = exports.PortfolioMetadata = exports.PortfolioMetadataConnections = exports.PortfolioMetadataConnectionsVideos = void 0;
+var utils_1 = require("../../../internal/utils");
 // PortfolioMetadataConnectionsVideos
 /**
  * Information about the videos contained within this portfolio.
@@ -33,20 +36,20 @@ var PortfolioMetadataConnectionsVideos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], PortfolioMetadataConnectionsVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], PortfolioMetadataConnectionsVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], PortfolioMetadataConnectionsVideos.prototype, "uri", void 0);
     return PortfolioMetadataConnectionsVideos;
-}(SpeakeasyBase));
-export { PortfolioMetadataConnectionsVideos };
+}(utils_1.SpeakeasyBase));
+exports.PortfolioMetadataConnectionsVideos = PortfolioMetadataConnectionsVideos;
 // PortfolioMetadataConnections
 /**
  * A list of resource URIs related to the album.
@@ -57,12 +60,12 @@ var PortfolioMetadataConnections = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", PortfolioMetadataConnectionsVideos)
     ], PortfolioMetadataConnections.prototype, "videos", void 0);
     return PortfolioMetadataConnections;
-}(SpeakeasyBase));
-export { PortfolioMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.PortfolioMetadataConnections = PortfolioMetadataConnections;
 // PortfolioMetadata
 /**
  * Metadata about the album.
@@ -73,56 +76,56 @@ var PortfolioMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", PortfolioMetadataConnections)
     ], PortfolioMetadata.prototype, "connections", void 0);
     return PortfolioMetadata;
-}(SpeakeasyBase));
-export { PortfolioMetadata };
-export var PortfolioSortEnum;
+}(utils_1.SpeakeasyBase));
+exports.PortfolioMetadata = PortfolioMetadata;
+var PortfolioSortEnum;
 (function (PortfolioSortEnum) {
     PortfolioSortEnum["Alphabetical"] = "alphabetical";
     PortfolioSortEnum["Clips"] = "clips";
     PortfolioSortEnum["Modified"] = "modified";
     PortfolioSortEnum["Recent"] = "recent";
-})(PortfolioSortEnum || (PortfolioSortEnum = {}));
+})(PortfolioSortEnum = exports.PortfolioSortEnum || (exports.PortfolioSortEnum = {}));
 var Portfolio = /** @class */ (function (_super) {
     __extends(Portfolio, _super);
     function Portfolio() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_time" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", PortfolioMetadata)
     ], Portfolio.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified_time" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "modifiedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Portfolio.prototype, "uri", void 0);
     return Portfolio;
-}(SpeakeasyBase));
-export { Portfolio };
+}(utils_1.SpeakeasyBase));
+exports.Portfolio = Portfolio;

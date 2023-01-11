@@ -4,7 +4,7 @@ export declare class PostV05HealthInformationNotifyHeaders extends SpeakeasyBase
     authorization: string;
 }
 export declare class PostV05HealthInformationNotifyRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     healthInformationNotification?: shared.HealthInformationNotification;
 }
 export declare class PostV05HealthInformationNotifyRequest extends SpeakeasyBase {

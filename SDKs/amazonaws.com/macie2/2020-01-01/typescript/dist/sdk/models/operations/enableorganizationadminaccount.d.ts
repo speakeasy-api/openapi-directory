@@ -20,7 +20,7 @@ export declare class EnableOrganizationAdminAccountResponse extends SpeakeasyBas
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    enableOrganizationAdminAccountResponse?: Map<string, any>;
+    enableOrganizationAdminAccountResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

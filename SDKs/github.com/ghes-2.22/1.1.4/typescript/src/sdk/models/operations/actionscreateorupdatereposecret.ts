@@ -40,5 +40,5 @@ export class ActionsCreateOrUpdateRepoSecretResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsCreateOrUpdateRepoSecret201ApplicationJsonObject?: Map<string, any>;
+  actionsCreateOrUpdateRepoSecret201ApplicationJSONObject?: Record<string, any>;
 }

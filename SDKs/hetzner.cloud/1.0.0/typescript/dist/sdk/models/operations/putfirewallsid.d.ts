@@ -3,7 +3,7 @@ export declare class PutFirewallsIdPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class PutFirewallsIdUpdateFirewallRequest extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 export declare class PutFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesServer extends SpeakeasyBase {
@@ -55,7 +55,7 @@ export declare class PutFirewallsIdFirewallResponseFirewall extends SpeakeasyBas
     appliedTo: PutFirewallsIdFirewallResponseFirewallAppliedTo[];
     created: string;
     id: number;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name: string;
     rules: PutFirewallsIdFirewallResponseFirewallRule[];
 }

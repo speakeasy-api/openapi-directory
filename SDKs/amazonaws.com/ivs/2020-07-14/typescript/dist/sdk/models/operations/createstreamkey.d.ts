@@ -11,7 +11,7 @@ export declare class CreateStreamKeyHeaders extends SpeakeasyBase {
 }
 export declare class CreateStreamKeyRequestBody extends SpeakeasyBase {
     channelArn: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateStreamKeyRequest extends SpeakeasyBase {
     headers: CreateStreamKeyHeaders;

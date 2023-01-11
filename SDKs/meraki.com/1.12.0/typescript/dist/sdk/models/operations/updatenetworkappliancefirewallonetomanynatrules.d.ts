@@ -33,5 +33,5 @@ export declare class UpdateNetworkApplianceFirewallOneToManyNatRulesRequest exte
 export declare class UpdateNetworkApplianceFirewallOneToManyNatRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceFirewallOneToManyNatRules200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceFirewallOneToManyNatRules200ApplicationJSONObject?: Record<string, any>;
 }

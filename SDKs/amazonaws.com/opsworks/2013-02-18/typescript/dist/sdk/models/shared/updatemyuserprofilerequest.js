@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMyUserProfileRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateMyUserProfileRequest = /** @class */ (function (_super) {
     __extends(UpdateMyUserProfileRequest, _super);
     function UpdateMyUserProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshPublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshPublicKey" }),
         __metadata("design:type", String)
     ], UpdateMyUserProfileRequest.prototype, "sshPublicKey", void 0);
     return UpdateMyUserProfileRequest;
-}(SpeakeasyBase));
-export { UpdateMyUserProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMyUserProfileRequest = UpdateMyUserProfileRequest;

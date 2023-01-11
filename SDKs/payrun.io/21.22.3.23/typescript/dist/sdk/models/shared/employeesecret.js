@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeeSecret = exports.EmployeeSecretEmployeeSecret = void 0;
+var utils_1 = require("../../../internal/utils");
 var EmployeeSecretEmployeeSecret = /** @class */ (function (_super) {
     __extends(EmployeeSecretEmployeeSecret, _super);
     function EmployeeSecretEmployeeSecret() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Created" }),
         __metadata("design:type", Date)
     ], EmployeeSecretEmployeeSecret.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], EmployeeSecretEmployeeSecret.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], EmployeeSecretEmployeeSecret.prototype, "value", void 0);
     return EmployeeSecretEmployeeSecret;
-}(SpeakeasyBase));
-export { EmployeeSecretEmployeeSecret };
+}(utils_1.SpeakeasyBase));
+exports.EmployeeSecretEmployeeSecret = EmployeeSecretEmployeeSecret;
 var EmployeeSecret = /** @class */ (function (_super) {
     __extends(EmployeeSecret, _super);
     function EmployeeSecret() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeSecret" }),
         __metadata("design:type", EmployeeSecretEmployeeSecret)
     ], EmployeeSecret.prototype, "employeeSecret", void 0);
     return EmployeeSecret;
-}(SpeakeasyBase));
-export { EmployeeSecret };
+}(utils_1.SpeakeasyBase));
+exports.EmployeeSecret = EmployeeSecret;

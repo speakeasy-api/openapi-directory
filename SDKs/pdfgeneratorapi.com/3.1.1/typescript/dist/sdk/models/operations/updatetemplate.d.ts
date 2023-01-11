@@ -59,10 +59,10 @@ export declare class UpdateTemplateRequest extends SpeakeasyBase {
 export declare class UpdateTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateTemplate200ApplicationJsonObject?: UpdateTemplate200ApplicationJson;
-    updateTemplate401ApplicationJsonObject?: UpdateTemplate401ApplicationJson;
-    updateTemplate403ApplicationJsonObject?: UpdateTemplate403ApplicationJson;
-    updateTemplate404ApplicationJsonObject?: UpdateTemplate404ApplicationJson;
-    updateTemplate422ApplicationJsonObject?: UpdateTemplate422ApplicationJson;
-    updateTemplate500ApplicationJsonObject?: UpdateTemplate500ApplicationJson;
+    updateTemplate200ApplicationJSONObject?: UpdateTemplate200ApplicationJson;
+    updateTemplate401ApplicationJSONObject?: UpdateTemplate401ApplicationJson;
+    updateTemplate403ApplicationJSONObject?: UpdateTemplate403ApplicationJson;
+    updateTemplate404ApplicationJSONObject?: UpdateTemplate404ApplicationJson;
+    updateTemplate422ApplicationJSONObject?: UpdateTemplate422ApplicationJson;
+    updateTemplate500ApplicationJSONObject?: UpdateTemplate500ApplicationJson;
 }

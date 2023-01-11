@@ -1,20 +1,19 @@
 import { AxiosInstance } from "axios";
 import { Security } from "./models/shared";
 import { PdfGeneration } from "./pdfgeneration";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://dynamicdocs.p.rapidapi.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     pdfGeneration: PdfGeneration;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

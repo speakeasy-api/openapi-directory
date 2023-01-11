@@ -3,6 +3,10 @@ import { MinimalRepository } from "./minimalrepository";
 
 
 
+// RepositoryInvitationSimpleUser
+/** 
+ * Simple User
+**/
 export class RepositoryInvitationSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

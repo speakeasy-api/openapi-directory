@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolProxyPortIsstartedResponse = exports.ProtocolProxyPortIsstartedRequest = exports.ProtocolProxyPortIsstartedPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolProxyPortIsstartedPathParams = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortIsstartedPathParams, _super);
     function ProtocolProxyPortIsstartedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolProxyPortIsstartedPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], ProtocolProxyPortIsstartedPathParams.prototype, "port", void 0);
     return ProtocolProxyPortIsstartedPathParams;
-}(SpeakeasyBase));
-export { ProtocolProxyPortIsstartedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortIsstartedPathParams = ProtocolProxyPortIsstartedPathParams;
 var ProtocolProxyPortIsstartedRequest = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortIsstartedRequest, _super);
     function ProtocolProxyPortIsstartedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolProxyPortIsstartedPathParams)
     ], ProtocolProxyPortIsstartedRequest.prototype, "pathParams", void 0);
     return ProtocolProxyPortIsstartedRequest;
-}(SpeakeasyBase));
-export { ProtocolProxyPortIsstartedRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortIsstartedRequest = ProtocolProxyPortIsstartedRequest;
 var ProtocolProxyPortIsstartedResponse = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortIsstartedResponse, _super);
     function ProtocolProxyPortIsstartedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolProxyPortIsstartedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolProxyPortIsstartedResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolProxyPortIsstartedResponse.prototype, "protocolProxyPortIsstarted200ApplicationJsonString", void 0);
+    ], ProtocolProxyPortIsstartedResponse.prototype, "protocolProxyPortIsstarted200ApplicationJSONString", void 0);
     return ProtocolProxyPortIsstartedResponse;
-}(SpeakeasyBase));
-export { ProtocolProxyPortIsstartedResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortIsstartedResponse = ProtocolProxyPortIsstartedResponse;

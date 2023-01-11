@@ -9,7 +9,7 @@ export declare class FetchFaxMediaSecurity extends SpeakeasyBase {
     accountSidAuthToken: shared.SchemeAccountSidAuthToken;
 }
 export declare class FetchFaxMediaRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: FetchFaxMediaPathParams;
     security: FetchFaxMediaSecurity;
 }

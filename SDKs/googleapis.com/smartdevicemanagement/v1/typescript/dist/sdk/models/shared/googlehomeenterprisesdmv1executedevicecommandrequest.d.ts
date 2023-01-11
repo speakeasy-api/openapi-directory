@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest extends SpeakeasyBase {
     command?: string;
-    params?: Map<string, any>;
+    params?: Record<string, any>;
 }

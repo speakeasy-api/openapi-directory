@@ -22,5 +22,5 @@ export class ProtocolTelnetServerGetKeymapResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetServerGetKeymap200ApplicationJsonStrings?: string[];
+  protocolTelnetServerGetKeymap200ApplicationJSONStrings?: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldLevelEncryptionList } from "./fieldlevelencryptionlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFieldLevelEncryptionConfigsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldlevelencryptionlist_1 = require("./fieldlevelencryptionlist");
 var ListFieldLevelEncryptionConfigsResult = /** @class */ (function (_super) {
     __extends(ListFieldLevelEncryptionConfigsResult, _super);
     function ListFieldLevelEncryptionConfigsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FieldLevelEncryptionList)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", fieldlevelencryptionlist_1.FieldLevelEncryptionList)
     ], ListFieldLevelEncryptionConfigsResult.prototype, "fieldLevelEncryptionList", void 0);
     return ListFieldLevelEncryptionConfigsResult;
-}(SpeakeasyBase));
-export { ListFieldLevelEncryptionConfigsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListFieldLevelEncryptionConfigsResult = ListFieldLevelEncryptionConfigsResult;

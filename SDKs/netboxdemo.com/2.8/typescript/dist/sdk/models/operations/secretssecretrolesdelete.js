@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecretsSecretRolesDeleteResponse = exports.SecretsSecretRolesDeleteRequest = exports.SecretsSecretRolesDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SecretsSecretRolesDeletePathParams = /** @class */ (function (_super) {
     __extends(SecretsSecretRolesDeletePathParams, _super);
     function SecretsSecretRolesDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], SecretsSecretRolesDeletePathParams.prototype, "id", void 0);
     return SecretsSecretRolesDeletePathParams;
-}(SpeakeasyBase));
-export { SecretsSecretRolesDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SecretsSecretRolesDeletePathParams = SecretsSecretRolesDeletePathParams;
 var SecretsSecretRolesDeleteRequest = /** @class */ (function (_super) {
     __extends(SecretsSecretRolesDeleteRequest, _super);
     function SecretsSecretRolesDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SecretsSecretRolesDeletePathParams)
     ], SecretsSecretRolesDeleteRequest.prototype, "pathParams", void 0);
     return SecretsSecretRolesDeleteRequest;
-}(SpeakeasyBase));
-export { SecretsSecretRolesDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.SecretsSecretRolesDeleteRequest = SecretsSecretRolesDeleteRequest;
 var SecretsSecretRolesDeleteResponse = /** @class */ (function (_super) {
     __extends(SecretsSecretRolesDeleteResponse, _super);
     function SecretsSecretRolesDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SecretsSecretRolesDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SecretsSecretRolesDeleteResponse.prototype, "statusCode", void 0);
     return SecretsSecretRolesDeleteResponse;
-}(SpeakeasyBase));
-export { SecretsSecretRolesDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.SecretsSecretRolesDeleteResponse = SecretsSecretRolesDeleteResponse;

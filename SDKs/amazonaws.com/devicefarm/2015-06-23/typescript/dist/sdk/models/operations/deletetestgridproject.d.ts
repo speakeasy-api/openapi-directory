@@ -21,7 +21,7 @@ export declare class DeleteTestGridProjectResponse extends SpeakeasyBase {
     argumentException?: any;
     cannotDeleteException?: any;
     contentType: string;
-    deleteTestGridProjectResult?: Map<string, any>;
+    deleteTestGridProjectResult?: Record<string, any>;
     internalServiceException?: any;
     notFoundException?: any;
     statusCode: number;

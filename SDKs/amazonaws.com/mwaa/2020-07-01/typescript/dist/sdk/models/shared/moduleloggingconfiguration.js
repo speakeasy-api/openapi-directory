@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingLevelEnum } from "./logginglevelenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModuleLoggingConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var logginglevelenum_1 = require("./logginglevelenum");
 // ModuleLoggingConfiguration
 /**
  * Defines the type of logs to send for the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>). Valid values: <code>CloudWatchLogGroupArn</code>, <code>Enabled</code>, <code>LogLevel</code>.
@@ -34,17 +37,17 @@ var ModuleLoggingConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLogGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLogGroupArn" }),
         __metadata("design:type", String)
     ], ModuleLoggingConfiguration.prototype, "cloudWatchLogGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], ModuleLoggingConfiguration.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogLevel" }),
         __metadata("design:type", String)
     ], ModuleLoggingConfiguration.prototype, "logLevel", void 0);
     return ModuleLoggingConfiguration;
-}(SpeakeasyBase));
-export { ModuleLoggingConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ModuleLoggingConfiguration = ModuleLoggingConfiguration;

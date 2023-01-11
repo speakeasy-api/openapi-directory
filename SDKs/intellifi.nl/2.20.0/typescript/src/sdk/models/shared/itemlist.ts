@@ -16,7 +16,7 @@ export class ItemList extends SpeakeasyBase {
   list?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=sha1" })
   sha1?: string;
@@ -40,5 +40,5 @@ export class ItemListInput extends SpeakeasyBase {
   label?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 }

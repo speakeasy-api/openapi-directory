@@ -16,7 +16,7 @@ export declare class Table extends SpeakeasyBase {
     lastAnalyzedTime?: Date;
     name: string;
     owner?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     partitionKeys?: Column[];
     retention?: number;
     storageDescriptor?: StorageDescriptor;

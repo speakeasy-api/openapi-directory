@@ -35,8 +35,8 @@ export class RedactMessageResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  redactMessage403ApplicationJsonOneOf?: any;
+  redactMessage403ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  redactMessage422ApplicationJsonOneOf?: any;
+  redactMessage422ApplicationJSONOneOf?: any;
 }

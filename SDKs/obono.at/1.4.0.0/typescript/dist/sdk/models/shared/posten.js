@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostenSatzEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Posten = exports.PostenSatzEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostenSatzEnum;
 (function (PostenSatzEnum) {
     PostenSatzEnum["Normal"] = "NORMAL";
     PostenSatzEnum["Ermaessigt1"] = "ERMAESSIGT1";
     PostenSatzEnum["Ermaessigt2"] = "ERMAESSIGT2";
     PostenSatzEnum["Besonders"] = "BESONDERS";
     PostenSatzEnum["Null"] = "NULL";
-})(PostenSatzEnum || (PostenSatzEnum = {}));
+})(PostenSatzEnum = exports.PostenSatzEnum || (exports.PostenSatzEnum = {}));
 var Posten = /** @class */ (function (_super) {
     __extends(Posten, _super);
     function Posten() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Bezeichnung" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Bezeichnung" }),
         __metadata("design:type", String)
     ], Posten.prototype, "bezeichnung", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BruttoBetrag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BruttoBetrag" }),
         __metadata("design:type", Number)
     ], Posten.prototype, "bruttoBetrag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Belegkreis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Belegkreis" }),
         __metadata("design:type", String)
     ], Posten.prototype, "externerBelegBelegkreis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Bezeichnung" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Bezeichnung" }),
         __metadata("design:type", String)
     ], Posten.prototype, "externerBelegBezeichnung", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Referenz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Referenz" }),
         __metadata("design:type", String)
     ], Posten.prototype, "externerBelegReferenz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Menge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Menge" }),
         __metadata("design:type", Number)
     ], Posten.prototype, "menge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NettoBetrag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NettoBetrag" }),
         __metadata("design:type", Number)
     ], Posten.prototype, "nettoBetrag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Satz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Satz" }),
         __metadata("design:type", String)
     ], Posten.prototype, "satz", void 0);
     return Posten;
-}(SpeakeasyBase));
-export { Posten };
+}(utils_1.SpeakeasyBase));
+exports.Posten = Posten;

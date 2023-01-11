@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Communication } from "./communication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecentCaseCommunications = void 0;
+var utils_1 = require("../../../internal/utils");
+var communication_1 = require("./communication");
 // RecentCaseCommunications
 /**
  * The five most recent communications associated with the case.
@@ -34,13 +37,13 @@ var RecentCaseCommunications = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communications", elemType: Communication }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communications", elemType: communication_1.Communication }),
         __metadata("design:type", Array)
     ], RecentCaseCommunications.prototype, "communications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], RecentCaseCommunications.prototype, "nextToken", void 0);
     return RecentCaseCommunications;
-}(SpeakeasyBase));
-export { RecentCaseCommunications };
+}(utils_1.SpeakeasyBase));
+exports.RecentCaseCommunications = RecentCaseCommunications;

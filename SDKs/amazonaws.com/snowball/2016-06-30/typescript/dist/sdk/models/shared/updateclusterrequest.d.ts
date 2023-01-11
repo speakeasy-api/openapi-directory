@@ -11,6 +11,6 @@ export declare class UpdateClusterRequest extends SpeakeasyBase {
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     resources?: JobResource;
-    roleArn?: string;
+    roleARN?: string;
     shippingOption?: ShippingOptionEnum;
 }

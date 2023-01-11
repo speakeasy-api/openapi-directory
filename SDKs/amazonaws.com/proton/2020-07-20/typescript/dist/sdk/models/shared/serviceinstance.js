@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentstatusenum_1 = require("./deploymentstatusenum");
 // ServiceInstance
 /**
  * The service instance detail data.
@@ -34,57 +37,57 @@ var ServiceInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStatus" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "deploymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStatusMessage" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "deploymentStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentName" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastDeploymentAttemptedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastDeploymentAttemptedAt" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "lastDeploymentAttemptedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastDeploymentSucceededAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastDeploymentSucceededAt" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "lastDeploymentSucceededAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMajorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMajorVersion" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "templateMajorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMinorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMinorVersion" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "templateMinorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateName" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "templateName", void 0);
     return ServiceInstance;
-}(SpeakeasyBase));
-export { ServiceInstance };
+}(utils_1.SpeakeasyBase));
+exports.ServiceInstance = ServiceInstance;

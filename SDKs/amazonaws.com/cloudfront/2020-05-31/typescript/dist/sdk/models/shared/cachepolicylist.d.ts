@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicySummary } from "./cachepolicysummary";
+import { CachePolicySummaryList } from "./cachepolicysummarylist";
 /**
  * A list of cache policies.
 **/
 export declare class CachePolicyList extends SpeakeasyBase {
-    items?: CachePolicySummary[];
+    items?: CachePolicySummaryList[];
     maxItems: number;
     nextMarker?: string;
     quantity: number;

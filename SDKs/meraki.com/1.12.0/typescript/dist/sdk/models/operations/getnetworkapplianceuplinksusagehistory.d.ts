@@ -15,5 +15,5 @@ export declare class GetNetworkApplianceUplinksUsageHistoryRequest extends Speak
 export declare class GetNetworkApplianceUplinksUsageHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceUplinksUsageHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceUplinksUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

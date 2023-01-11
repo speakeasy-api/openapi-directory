@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Parameter } from "./parameter";
+import { ParametersList } from "./parameterslist";
 
 
 
@@ -14,6 +14,6 @@ export class DefaultClusterParameters extends SpeakeasyBase {
   @SpeakeasyMetadata()
   parameterGroupFamily?: string;
 
-  @SpeakeasyMetadata({ elemType: Parameter })
-  parameters?: Parameter[];
+  @SpeakeasyMetadata({ elemType: ParametersList })
+  parameters?: ParametersList[];
 }

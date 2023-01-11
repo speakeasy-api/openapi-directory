@@ -18,7 +18,7 @@ export declare class AssociateConfigurationItemsToApplicationRequest extends Spe
     request: shared.AssociateConfigurationItemsToApplicationRequest;
 }
 export declare class AssociateConfigurationItemsToApplicationResponse extends SpeakeasyBase {
-    associateConfigurationItemsToApplicationResponse?: Map<string, any>;
+    associateConfigurationItemsToApplicationResponse?: Record<string, any>;
     authorizationErrorException?: any;
     contentType: string;
     homeRegionNotSetException?: any;

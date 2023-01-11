@@ -33,5 +33,5 @@ export declare class UpdateEmailTemplateResponse extends SpeakeasyBase {
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateEmailTemplateResponse?: Map<string, any>;
+    updateEmailTemplateResponse?: Record<string, any>;
 }

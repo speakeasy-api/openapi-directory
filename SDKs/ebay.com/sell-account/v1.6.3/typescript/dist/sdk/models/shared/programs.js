@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Program } from "./program";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Programs = void 0;
+var utils_1 = require("../../../internal/utils");
+var program_1 = require("./program");
 // Programs
 /**
  * A list of the supported seller programs.
@@ -34,9 +37,9 @@ var Programs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=programs", elemType: Program }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=programs", elemType: program_1.Program }),
         __metadata("design:type", Array)
     ], Programs.prototype, "programs", void 0);
     return Programs;
-}(SpeakeasyBase));
-export { Programs };
+}(utils_1.SpeakeasyBase));
+exports.Programs = Programs;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DemoV2LocationsTilesViewerGetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DemoV2LocationsTilesViewerGetResponse = /** @class */ (function (_super) {
     __extends(DemoV2LocationsTilesViewerGetResponse, _super);
     function DemoV2LocationsTilesViewerGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DemoV2LocationsTilesViewerGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DemoV2LocationsTilesViewerGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DemoV2LocationsTilesViewerGetResponse.prototype, "demoV2LocationsTilesViewerGet200TextHtmlString", void 0);
+    ], DemoV2LocationsTilesViewerGetResponse.prototype, "demoV2LocationsTilesViewerGet200TextHTMLString", void 0);
     return DemoV2LocationsTilesViewerGetResponse;
-}(SpeakeasyBase));
-export { DemoV2LocationsTilesViewerGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DemoV2LocationsTilesViewerGetResponse = DemoV2LocationsTilesViewerGetResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Destination } from "./destination";
-import { ReplacementEmailContent } from "./replacementemailcontent";
-import { MessageTag } from "./messagetag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkEmailEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var destination_1 = require("./destination");
+var replacementemailcontent_1 = require("./replacementemailcontent");
+var messagetag_1 = require("./messagetag");
 var BulkEmailEntry = /** @class */ (function (_super) {
     __extends(BulkEmailEntry, _super);
     function BulkEmailEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
-        __metadata("design:type", Destination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
+        __metadata("design:type", destination_1.Destination)
     ], BulkEmailEntry.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplacementEmailContent" }),
-        __metadata("design:type", ReplacementEmailContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplacementEmailContent" }),
+        __metadata("design:type", replacementemailcontent_1.ReplacementEmailContent)
     ], BulkEmailEntry.prototype, "replacementEmailContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplacementTags", elemType: MessageTag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplacementTags", elemType: messagetag_1.MessageTag }),
         __metadata("design:type", Array)
     ], BulkEmailEntry.prototype, "replacementTags", void 0);
     return BulkEmailEntry;
-}(SpeakeasyBase));
-export { BulkEmailEntry };
+}(utils_1.SpeakeasyBase));
+exports.BulkEmailEntry = BulkEmailEntry;

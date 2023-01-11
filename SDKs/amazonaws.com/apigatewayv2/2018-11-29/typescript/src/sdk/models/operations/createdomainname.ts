@@ -33,10 +33,10 @@ export class CreateDomainNameHeaders extends SpeakeasyBase {
 **/
 export class CreateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TruststoreUri" })
-  truststoreUri?: string;
+  truststoreUri?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TruststoreVersion" })
-  truststoreVersion?: string;
+  truststoreVersion?: Record<string, any>;
 }
 
 
@@ -51,7 +51,7 @@ export class CreateDomainNameRequestBody extends SpeakeasyBase {
   mutualTlsAuthentication?: CreateDomainNameRequestBodyMutualTlsAuthentication;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

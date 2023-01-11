@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVodResponse = exports.CreateVodRequest = exports.CreateVodRequestBody = exports.CreateVodRequestBodyTypeEnum = exports.CreateVodRequestBodySubscription = exports.CreateVodRequestBodySubscriptionMonthly = exports.CreateVodRequestBodySubscriptionMonthlyPrice = exports.CreateVodRequestBodyRent = exports.CreateVodRequestBodyRentPrice = exports.CreateVodRequestBodyRentPeriodEnum = exports.CreateVodRequestBodyEpisodes = exports.CreateVodRequestBodyEpisodesRent = exports.CreateVodRequestBodyEpisodesRentPrice = exports.CreateVodRequestBodyEpisodesRentPeriodEnum = exports.CreateVodRequestBodyEpisodesBuy = exports.CreateVodRequestBodyEpisodesBuyPrice = exports.CreateVodRequestBodyContentRatingEnum = exports.CreateVodRequestBodyBuy = exports.CreateVodRequestBodyBuyPrice = exports.CreateVodRequestBodyAcceptedCurrenciesEnum = exports.CreateVodPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateVodPathParams = /** @class */ (function (_super) {
     __extends(CreateVodPathParams, _super);
     function CreateVodPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", Number)
     ], CreateVodPathParams.prototype, "userId", void 0);
     return CreateVodPathParams;
-}(SpeakeasyBase));
-export { CreateVodPathParams };
-export var CreateVodRequestBodyAcceptedCurrenciesEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateVodPathParams = CreateVodPathParams;
+var CreateVodRequestBodyAcceptedCurrenciesEnum;
 (function (CreateVodRequestBodyAcceptedCurrenciesEnum) {
     CreateVodRequestBodyAcceptedCurrenciesEnum["Aud"] = "AUD";
     CreateVodRequestBodyAcceptedCurrenciesEnum["Cad"] = "CAD";
@@ -50,84 +76,84 @@ export var CreateVodRequestBodyAcceptedCurrenciesEnum;
     CreateVodRequestBodyAcceptedCurrenciesEnum["Pln"] = "PLN";
     CreateVodRequestBodyAcceptedCurrenciesEnum["Sek"] = "SEK";
     CreateVodRequestBodyAcceptedCurrenciesEnum["Usd"] = "USD";
-})(CreateVodRequestBodyAcceptedCurrenciesEnum || (CreateVodRequestBodyAcceptedCurrenciesEnum = {}));
+})(CreateVodRequestBodyAcceptedCurrenciesEnum = exports.CreateVodRequestBodyAcceptedCurrenciesEnum || (exports.CreateVodRequestBodyAcceptedCurrenciesEnum = {}));
 var CreateVodRequestBodyBuyPrice = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyBuyPrice, _super);
     function CreateVodRequestBodyBuyPrice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AUD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AUD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "aud", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CAD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CAD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "cad", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CHF" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CHF" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "chf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DKK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DKK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "dkk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EUR" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EUR" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "eur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GBP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GBP" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "gbp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JPY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JPY" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "jpy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KRW" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KRW" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "krw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NOK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NOK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "nok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PLN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PLN" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "pln", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SEK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SEK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "sek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyBuyPrice.prototype, "usd", void 0);
     return CreateVodRequestBodyBuyPrice;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyBuyPrice };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyBuyPrice = CreateVodRequestBodyBuyPrice;
 var CreateVodRequestBodyBuy = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyBuy, _super);
     function CreateVodRequestBodyBuy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyBuy.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyBuy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", CreateVodRequestBodyBuyPrice)
     ], CreateVodRequestBodyBuy.prototype, "price", void 0);
     return CreateVodRequestBodyBuy;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyBuy };
-export var CreateVodRequestBodyContentRatingEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyBuy = CreateVodRequestBodyBuy;
+var CreateVodRequestBodyContentRatingEnum;
 (function (CreateVodRequestBodyContentRatingEnum) {
     CreateVodRequestBodyContentRatingEnum["Drugs"] = "drugs";
     CreateVodRequestBodyContentRatingEnum["Language"] = "language";
@@ -135,40 +161,40 @@ export var CreateVodRequestBodyContentRatingEnum;
     CreateVodRequestBodyContentRatingEnum["Safe"] = "safe";
     CreateVodRequestBodyContentRatingEnum["Unrated"] = "unrated";
     CreateVodRequestBodyContentRatingEnum["Violence"] = "violence";
-})(CreateVodRequestBodyContentRatingEnum || (CreateVodRequestBodyContentRatingEnum = {}));
+})(CreateVodRequestBodyContentRatingEnum = exports.CreateVodRequestBodyContentRatingEnum || (exports.CreateVodRequestBodyContentRatingEnum = {}));
 var CreateVodRequestBodyEpisodesBuyPrice = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyEpisodesBuyPrice, _super);
     function CreateVodRequestBodyEpisodesBuyPrice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyEpisodesBuyPrice.prototype, "usd", void 0);
     return CreateVodRequestBodyEpisodesBuyPrice;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyEpisodesBuyPrice };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyEpisodesBuyPrice = CreateVodRequestBodyEpisodesBuyPrice;
 var CreateVodRequestBodyEpisodesBuy = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyEpisodesBuy, _super);
     function CreateVodRequestBodyEpisodesBuy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyEpisodesBuy.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyEpisodesBuy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", CreateVodRequestBodyEpisodesBuyPrice)
     ], CreateVodRequestBodyEpisodesBuy.prototype, "price", void 0);
     return CreateVodRequestBodyEpisodesBuy;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyEpisodesBuy };
-export var CreateVodRequestBodyEpisodesRentPeriodEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyEpisodesBuy = CreateVodRequestBodyEpisodesBuy;
+var CreateVodRequestBodyEpisodesRentPeriodEnum;
 (function (CreateVodRequestBodyEpisodesRentPeriodEnum) {
     CreateVodRequestBodyEpisodesRentPeriodEnum["OneWeek"] = "1 week";
     CreateVodRequestBodyEpisodesRentPeriodEnum["OneYear"] = "1 year";
@@ -178,56 +204,56 @@ export var CreateVodRequestBodyEpisodesRentPeriodEnum;
     CreateVodRequestBodyEpisodesRentPeriodEnum["FortyEightHour"] = "48 hour";
     CreateVodRequestBodyEpisodesRentPeriodEnum["SixMonth"] = "6 month";
     CreateVodRequestBodyEpisodesRentPeriodEnum["SeventyTwoHour"] = "72 hour";
-})(CreateVodRequestBodyEpisodesRentPeriodEnum || (CreateVodRequestBodyEpisodesRentPeriodEnum = {}));
+})(CreateVodRequestBodyEpisodesRentPeriodEnum = exports.CreateVodRequestBodyEpisodesRentPeriodEnum || (exports.CreateVodRequestBodyEpisodesRentPeriodEnum = {}));
 var CreateVodRequestBodyEpisodesRentPrice = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyEpisodesRentPrice, _super);
     function CreateVodRequestBodyEpisodesRentPrice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyEpisodesRentPrice.prototype, "usd", void 0);
     return CreateVodRequestBodyEpisodesRentPrice;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyEpisodesRentPrice };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyEpisodesRentPrice = CreateVodRequestBodyEpisodesRentPrice;
 var CreateVodRequestBodyEpisodesRent = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyEpisodesRent, _super);
     function CreateVodRequestBodyEpisodesRent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyEpisodesRent.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], CreateVodRequestBodyEpisodesRent.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", CreateVodRequestBodyEpisodesRentPrice)
     ], CreateVodRequestBodyEpisodesRent.prototype, "price", void 0);
     return CreateVodRequestBodyEpisodesRent;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyEpisodesRent };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyEpisodesRent = CreateVodRequestBodyEpisodesRent;
 var CreateVodRequestBodyEpisodes = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyEpisodes, _super);
     function CreateVodRequestBodyEpisodes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buy" }),
         __metadata("design:type", CreateVodRequestBodyEpisodesBuy)
     ], CreateVodRequestBodyEpisodes.prototype, "buy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rent" }),
         __metadata("design:type", CreateVodRequestBodyEpisodesRent)
     ], CreateVodRequestBodyEpisodes.prototype, "rent", void 0);
     return CreateVodRequestBodyEpisodes;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyEpisodes };
-export var CreateVodRequestBodyRentPeriodEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyEpisodes = CreateVodRequestBodyEpisodes;
+var CreateVodRequestBodyRentPeriodEnum;
 (function (CreateVodRequestBodyRentPeriodEnum) {
     CreateVodRequestBodyRentPeriodEnum["OneWeek"] = "1 week";
     CreateVodRequestBodyRentPeriodEnum["OneYear"] = "1 year";
@@ -237,213 +263,213 @@ export var CreateVodRequestBodyRentPeriodEnum;
     CreateVodRequestBodyRentPeriodEnum["FortyEightHour"] = "48 hour";
     CreateVodRequestBodyRentPeriodEnum["SixMonth"] = "6 month";
     CreateVodRequestBodyRentPeriodEnum["SeventyTwoHour"] = "72 hour";
-})(CreateVodRequestBodyRentPeriodEnum || (CreateVodRequestBodyRentPeriodEnum = {}));
+})(CreateVodRequestBodyRentPeriodEnum = exports.CreateVodRequestBodyRentPeriodEnum || (exports.CreateVodRequestBodyRentPeriodEnum = {}));
 var CreateVodRequestBodyRentPrice = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyRentPrice, _super);
     function CreateVodRequestBodyRentPrice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AUD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AUD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "aud", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CAD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CAD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "cad", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CHF" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CHF" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "chf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DKK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DKK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "dkk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EUR" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EUR" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "eur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GBP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GBP" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "gbp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JPY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JPY" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "jpy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KRW" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KRW" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "krw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NOK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NOK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "nok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PLN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PLN" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "pln", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SEK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SEK" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "sek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodyRentPrice.prototype, "usd", void 0);
     return CreateVodRequestBodyRentPrice;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyRentPrice };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyRentPrice = CreateVodRequestBodyRentPrice;
 var CreateVodRequestBodyRent = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodyRent, _super);
     function CreateVodRequestBodyRent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodyRent.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], CreateVodRequestBodyRent.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", CreateVodRequestBodyRentPrice)
     ], CreateVodRequestBodyRent.prototype, "price", void 0);
     return CreateVodRequestBodyRent;
-}(SpeakeasyBase));
-export { CreateVodRequestBodyRent };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodyRent = CreateVodRequestBodyRent;
 var CreateVodRequestBodySubscriptionMonthlyPrice = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodySubscriptionMonthlyPrice, _super);
     function CreateVodRequestBodySubscriptionMonthlyPrice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USD" }),
         __metadata("design:type", Number)
     ], CreateVodRequestBodySubscriptionMonthlyPrice.prototype, "usd", void 0);
     return CreateVodRequestBodySubscriptionMonthlyPrice;
-}(SpeakeasyBase));
-export { CreateVodRequestBodySubscriptionMonthlyPrice };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodySubscriptionMonthlyPrice = CreateVodRequestBodySubscriptionMonthlyPrice;
 var CreateVodRequestBodySubscriptionMonthly = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodySubscriptionMonthly, _super);
     function CreateVodRequestBodySubscriptionMonthly() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVodRequestBodySubscriptionMonthly.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", CreateVodRequestBodySubscriptionMonthlyPrice)
     ], CreateVodRequestBodySubscriptionMonthly.prototype, "price", void 0);
     return CreateVodRequestBodySubscriptionMonthly;
-}(SpeakeasyBase));
-export { CreateVodRequestBodySubscriptionMonthly };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodySubscriptionMonthly = CreateVodRequestBodySubscriptionMonthly;
 var CreateVodRequestBodySubscription = /** @class */ (function (_super) {
     __extends(CreateVodRequestBodySubscription, _super);
     function CreateVodRequestBodySubscription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthly" }),
         __metadata("design:type", CreateVodRequestBodySubscriptionMonthly)
     ], CreateVodRequestBodySubscription.prototype, "monthly", void 0);
     return CreateVodRequestBodySubscription;
-}(SpeakeasyBase));
-export { CreateVodRequestBodySubscription };
-export var CreateVodRequestBodyTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBodySubscription = CreateVodRequestBodySubscription;
+var CreateVodRequestBodyTypeEnum;
 (function (CreateVodRequestBodyTypeEnum) {
     CreateVodRequestBodyTypeEnum["Film"] = "film";
     CreateVodRequestBodyTypeEnum["Series"] = "series";
-})(CreateVodRequestBodyTypeEnum || (CreateVodRequestBodyTypeEnum = {}));
+})(CreateVodRequestBodyTypeEnum = exports.CreateVodRequestBodyTypeEnum || (exports.CreateVodRequestBodyTypeEnum = {}));
 var CreateVodRequestBody = /** @class */ (function (_super) {
     __extends(CreateVodRequestBody, _super);
     function CreateVodRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accepted_currencies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accepted_currencies" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "acceptedCurrencies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buy" }),
         __metadata("design:type", CreateVodRequestBodyBuy)
     ], CreateVodRequestBody.prototype, "buy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_rating" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "contentRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain_link" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "domainLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episodes" }),
         __metadata("design:type", CreateVodRequestBodyEpisodes)
     ], CreateVodRequestBody.prototype, "episodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rent" }),
         __metadata("design:type", CreateVodRequestBodyRent)
     ], CreateVodRequestBody.prototype, "rent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscription" }),
         __metadata("design:type", CreateVodRequestBodySubscription)
     ], CreateVodRequestBody.prototype, "subscription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreateVodRequestBody.prototype, "type", void 0);
     return CreateVodRequestBody;
-}(SpeakeasyBase));
-export { CreateVodRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequestBody = CreateVodRequestBody;
 var CreateVodRequest = /** @class */ (function (_super) {
     __extends(CreateVodRequest, _super);
     function CreateVodRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateVodPathParams)
     ], CreateVodRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateVodRequestBody)
     ], CreateVodRequest.prototype, "request", void 0);
     return CreateVodRequest;
-}(SpeakeasyBase));
-export { CreateVodRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodRequest = CreateVodRequest;
 var CreateVodResponse = /** @class */ (function (_super) {
     __extends(CreateVodResponse, _super);
     function CreateVodResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateVodResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateVodResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OnDemandPage)
     ], CreateVodResponse.prototype, "onDemandPage", void 0);
     return CreateVodResponse;
-}(SpeakeasyBase));
-export { CreateVodResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateVodResponse = CreateVodResponse;

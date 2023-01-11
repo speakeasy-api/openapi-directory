@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource
 /**
  * Describes where the config file that kicked off the build came from. This is effectively a pointer to the source where buildConfig came from.
@@ -33,17 +36,17 @@ var GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=digest" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=digest" }),
+        __metadata("design:type", Object)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource.prototype, "digest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryPoint" }),
         __metadata("design:type", String)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource.prototype, "entryPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource.prototype, "uri", void 0);
     return GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource;
-}(SpeakeasyBase));
-export { GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource };
+}(utils_1.SpeakeasyBase));
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource = GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource;

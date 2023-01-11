@@ -191,23 +191,23 @@ export class OscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  oscer400ApplicationJsonObject?: Oscer400ApplicationJson;
+  oscer400ApplicationJSONObject?: Oscer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer401ApplicationJsonObject?: Oscer401ApplicationJson;
+  oscer401ApplicationJSONObject?: Oscer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer404ApplicationJsonObject?: Oscer404ApplicationJson;
+  oscer404ApplicationJSONObject?: Oscer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer500ApplicationJsonObject?: Oscer500ApplicationJson;
+  oscer500ApplicationJSONObject?: Oscer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer502ApplicationJsonObject?: Oscer502ApplicationJson;
+  oscer502ApplicationJSONObject?: Oscer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer503ApplicationJsonObject?: Oscer503ApplicationJson;
+  oscer503ApplicationJSONObject?: Oscer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  oscer504ApplicationJsonObject?: Oscer504ApplicationJson;
+  oscer504ApplicationJSONObject?: Oscer504ApplicationJson;
 }

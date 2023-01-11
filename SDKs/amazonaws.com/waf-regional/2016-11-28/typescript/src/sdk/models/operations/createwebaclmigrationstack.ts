@@ -48,7 +48,7 @@ export class CreateWebAclMigrationStackResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createWebAclMigrationStackResponse?: shared.CreateWebAclMigrationStackResponse;
+  createWebACLMigrationStackResponse?: shared.CreateWebAclMigrationStackResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

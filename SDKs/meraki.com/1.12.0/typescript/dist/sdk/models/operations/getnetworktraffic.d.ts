@@ -20,5 +20,5 @@ export declare class GetNetworkTrafficRequest extends SpeakeasyBase {
 export declare class GetNetworkTrafficResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkTraffic200ApplicationJsonObject?: Map<string, any>;
+    getNetworkTraffic200ApplicationJSONObject?: Record<string, any>;
 }

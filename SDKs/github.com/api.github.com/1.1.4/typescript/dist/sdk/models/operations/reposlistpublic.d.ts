@@ -8,7 +8,7 @@ export declare class ReposListPublicRequest extends SpeakeasyBase {
 }
 export declare class ReposListPublicResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     minimalRepositories?: shared.MinimalRepository[];
     validationError?: shared.ValidationError;

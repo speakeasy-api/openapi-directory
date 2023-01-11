@@ -1,4 +1,7 @@
-export var LagStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LagStateEnum = void 0;
+var LagStateEnum;
 (function (LagStateEnum) {
     LagStateEnum["Requested"] = "requested";
     LagStateEnum["Pending"] = "pending";
@@ -7,4 +10,4 @@ export var LagStateEnum;
     LagStateEnum["Deleting"] = "deleting";
     LagStateEnum["Deleted"] = "deleted";
     LagStateEnum["Unknown"] = "unknown";
-})(LagStateEnum || (LagStateEnum = {}));
+})(LagStateEnum = exports.LagStateEnum || (exports.LagStateEnum = {}));

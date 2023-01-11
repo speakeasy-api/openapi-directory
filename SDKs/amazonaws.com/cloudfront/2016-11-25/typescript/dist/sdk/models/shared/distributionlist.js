@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DistributionSummary } from "./distributionsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DistributionList = void 0;
+var utils_1 = require("../../../internal/utils");
+var distributionsummarylist_1 = require("./distributionsummarylist");
 // DistributionList
 /**
  * A distribution list.
@@ -34,29 +37,29 @@ var DistributionList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DistributionList.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DistributionSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: distributionsummarylist_1.DistributionSummaryList }),
         __metadata("design:type", Array)
     ], DistributionList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionList.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DistributionList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DistributionList.prototype, "quantity", void 0);
     return DistributionList;
-}(SpeakeasyBase));
-export { DistributionList };
+}(utils_1.SpeakeasyBase));
+exports.DistributionList = DistributionList;

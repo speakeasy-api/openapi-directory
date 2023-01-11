@@ -25,7 +25,7 @@ export class Source extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=info" })
-  info?: Map<string, any>;
+  info?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=last_available_at" })
   lastAvailableAt?: Date;

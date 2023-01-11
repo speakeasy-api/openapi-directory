@@ -12,7 +12,7 @@ export declare class ProductRetrieveRequest extends SpeakeasyBase {
 }
 export declare class ProductRetrieveResponse extends SpeakeasyBase {
     contentType: string;
-    productRetrieve200ApplicationJsonOneOf?: any;
-    productRetrieveDefaultApplicationJsonAny?: any;
+    productRetrieve200ApplicationJSONOneOf?: any;
+    productRetrieveDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

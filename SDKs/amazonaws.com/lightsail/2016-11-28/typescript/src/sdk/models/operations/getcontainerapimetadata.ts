@@ -39,7 +39,7 @@ export class GetContainerApiMetadataRequest extends SpeakeasyBase {
   headers: GetContainerApiMetadataHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -51,7 +51,7 @@ export class GetContainerApiMetadataResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getContainerApiMetadataResult?: shared.GetContainerApiMetadataResult;
+  getContainerAPIMetadataResult?: shared.GetContainerApiMetadataResult;
 
   @SpeakeasyMetadata()
   serviceException?: any;

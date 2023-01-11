@@ -14,6 +14,10 @@ export class LicenseContentLinks extends SpeakeasyBase {
 }
 
 
+// LicenseContentLicenseSimple
+/** 
+ * License Simple
+**/
 export class LicenseContentLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;

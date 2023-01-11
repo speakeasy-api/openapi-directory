@@ -9,11 +9,11 @@ import { FirstBootEnum } from "./firstbootenum";
 **/
 export class LaunchedInstance extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ec2InstanceID" })
-  ec2InstanceId?: string;
+  ec2InstanceID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=firstBoot" })
   firstBoot?: FirstBootEnum;
 
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId?: string;
+  jobID?: string;
 }

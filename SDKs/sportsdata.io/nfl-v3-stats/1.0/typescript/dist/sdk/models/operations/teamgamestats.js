@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamGameStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamGameStatsResponse = exports.TeamGameStatsRequest = exports.TeamGameStatsPathParams = exports.TeamGameStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamGameStatsFormatEnum;
 (function (TeamGameStatsFormatEnum) {
     TeamGameStatsFormatEnum["Xml"] = "XML";
     TeamGameStatsFormatEnum["Json"] = "JSON";
-})(TeamGameStatsFormatEnum || (TeamGameStatsFormatEnum = {}));
+})(TeamGameStatsFormatEnum = exports.TeamGameStatsFormatEnum || (exports.TeamGameStatsFormatEnum = {}));
 var TeamGameStatsPathParams = /** @class */ (function (_super) {
     __extends(TeamGameStatsPathParams, _super);
     function TeamGameStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamGameStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], TeamGameStatsPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], TeamGameStatsPathParams.prototype, "week", void 0);
     return TeamGameStatsPathParams;
-}(SpeakeasyBase));
-export { TeamGameStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsPathParams = TeamGameStatsPathParams;
 var TeamGameStatsRequest = /** @class */ (function (_super) {
     __extends(TeamGameStatsRequest, _super);
     function TeamGameStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamGameStatsPathParams)
     ], TeamGameStatsRequest.prototype, "pathParams", void 0);
     return TeamGameStatsRequest;
-}(SpeakeasyBase));
-export { TeamGameStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsRequest = TeamGameStatsRequest;
 var TeamGameStatsResponse = /** @class */ (function (_super) {
     __extends(TeamGameStatsResponse, _super);
     function TeamGameStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamGameStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamGameStatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamGameStatsResponse.prototype, "teamGames", void 0);
     return TeamGameStatsResponse;
-}(SpeakeasyBase));
-export { TeamGameStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsResponse = TeamGameStatsResponse;

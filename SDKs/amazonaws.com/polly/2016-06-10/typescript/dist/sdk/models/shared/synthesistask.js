@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EngineEnum } from "./engineenum";
-import { LanguageCodeEnum } from "./languagecodeenum";
-import { OutputFormatEnum } from "./outputformatenum";
-import { TaskStatusEnum } from "./taskstatusenum";
-import { TextTypeEnum } from "./texttypeenum";
-import { VoiceIdEnum } from "./voiceidenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynthesisTask = void 0;
+var utils_1 = require("../../../internal/utils");
+var engineenum_1 = require("./engineenum");
+var languagecodeenum_1 = require("./languagecodeenum");
+var outputformatenum_1 = require("./outputformatenum");
+var taskstatusenum_1 = require("./taskstatusenum");
+var texttypeenum_1 = require("./texttypeenum");
+var voiceidenum_1 = require("./voiceidenum");
 // SynthesisTask
 /**
  * SynthesisTask object that provides information about a speech synthesis task.
@@ -39,65 +42,65 @@ var SynthesisTask = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], SynthesisTask.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Engine" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LanguageCode" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LexiconNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LexiconNames" }),
         __metadata("design:type", Array)
     ], SynthesisTask.prototype, "lexiconNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputFormat" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputUri" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "outputUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestCharacters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestCharacters" }),
         __metadata("design:type", Number)
     ], SynthesisTask.prototype, "requestCharacters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SampleRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SampleRate" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "sampleRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsTopicArn" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "snsTopicArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpeechMarkTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpeechMarkTypes" }),
         __metadata("design:type", Array)
     ], SynthesisTask.prototype, "speechMarkTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskId" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "taskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskStatus" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "taskStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskStatusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskStatusReason" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "taskStatusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TextType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TextType" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "textType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VoiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VoiceId" }),
         __metadata("design:type", String)
     ], SynthesisTask.prototype, "voiceId", void 0);
     return SynthesisTask;
-}(SpeakeasyBase));
-export { SynthesisTask };
+}(utils_1.SpeakeasyBase));
+exports.SynthesisTask = SynthesisTask;

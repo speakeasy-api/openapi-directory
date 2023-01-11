@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Notification extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom_attributes" })
-  customAttributes?: Map<string, string>;
+  customAttributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=etag" })
   etag?: string;

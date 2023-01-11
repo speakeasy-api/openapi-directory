@@ -1,4 +1,7 @@
-export var NodegroupIssueCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodegroupIssueCodeEnum = void 0;
+var NodegroupIssueCodeEnum;
 (function (NodegroupIssueCodeEnum) {
     NodegroupIssueCodeEnum["AutoScalingGroupNotFound"] = "AutoScalingGroupNotFound";
     NodegroupIssueCodeEnum["AutoScalingGroupInvalidConfiguration"] = "AutoScalingGroupInvalidConfiguration";
@@ -18,4 +21,4 @@ export var NodegroupIssueCodeEnum;
     NodegroupIssueCodeEnum["AccessDenied"] = "AccessDenied";
     NodegroupIssueCodeEnum["InternalFailure"] = "InternalFailure";
     NodegroupIssueCodeEnum["ClusterUnreachable"] = "ClusterUnreachable";
-})(NodegroupIssueCodeEnum || (NodegroupIssueCodeEnum = {}));
+})(NodegroupIssueCodeEnum = exports.NodegroupIssueCodeEnum || (exports.NodegroupIssueCodeEnum = {}));

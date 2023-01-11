@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PredictorBacktestExportJobSummary } from "./predictorbacktestexportjobsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPredictorBacktestExportJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var predictorbacktestexportjobsummary_1 = require("./predictorbacktestexportjobsummary");
 var ListPredictorBacktestExportJobsResponse = /** @class */ (function (_super) {
     __extends(ListPredictorBacktestExportJobsResponse, _super);
     function ListPredictorBacktestExportJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListPredictorBacktestExportJobsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorBacktestExportJobs", elemType: PredictorBacktestExportJobSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorBacktestExportJobs", elemType: predictorbacktestexportjobsummary_1.PredictorBacktestExportJobSummary }),
         __metadata("design:type", Array)
     ], ListPredictorBacktestExportJobsResponse.prototype, "predictorBacktestExportJobs", void 0);
     return ListPredictorBacktestExportJobsResponse;
-}(SpeakeasyBase));
-export { ListPredictorBacktestExportJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPredictorBacktestExportJobsResponse = ListPredictorBacktestExportJobsResponse;

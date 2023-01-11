@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotErrorMessage } from "./snapshoterrormessage";
+import { BatchSnapshotOperationErrors } from "./batchsnapshotoperationerrors";
 export declare class BatchModifyClusterSnapshotsOutputMessage extends SpeakeasyBase {
-    errors?: SnapshotErrorMessage[];
-    resources?: string[];
+    errors?: BatchSnapshotOperationErrors[];
+    resources?: Record<string, any>[];
 }

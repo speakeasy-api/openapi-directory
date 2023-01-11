@@ -5,7 +5,7 @@ import { Segment } from "./segment";
 
 export class Itinerary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=baseFareUSD" })
-  baseFareUsd?: number;
+  baseFareUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

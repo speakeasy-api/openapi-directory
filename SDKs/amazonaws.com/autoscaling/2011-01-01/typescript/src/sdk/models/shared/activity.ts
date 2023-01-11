@@ -12,7 +12,7 @@ export class Activity extends SpeakeasyBase {
   activityId: string;
 
   @SpeakeasyMetadata()
-  autoScalingGroupArn?: string;
+  autoScalingGroupARN?: string;
 
   @SpeakeasyMetadata()
   autoScalingGroupName: string;

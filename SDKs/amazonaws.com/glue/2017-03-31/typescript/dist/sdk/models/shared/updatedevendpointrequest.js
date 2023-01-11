@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DevEndpointCustomLibraries } from "./devendpointcustomlibraries";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDevEndpointRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var devendpointcustomlibraries_1 = require("./devendpointcustomlibraries");
 var UpdateDevEndpointRequest = /** @class */ (function (_super) {
     __extends(UpdateDevEndpointRequest, _super);
     function UpdateDevEndpointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddArguments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddArguments" }),
+        __metadata("design:type", Object)
     ], UpdateDevEndpointRequest.prototype, "addArguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddPublicKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddPublicKeys" }),
         __metadata("design:type", Array)
     ], UpdateDevEndpointRequest.prototype, "addPublicKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomLibraries" }),
-        __metadata("design:type", DevEndpointCustomLibraries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomLibraries" }),
+        __metadata("design:type", devendpointcustomlibraries_1.DevEndpointCustomLibraries)
     ], UpdateDevEndpointRequest.prototype, "customLibraries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteArguments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteArguments" }),
         __metadata("design:type", Array)
     ], UpdateDevEndpointRequest.prototype, "deleteArguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeletePublicKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeletePublicKeys" }),
         __metadata("design:type", Array)
     ], UpdateDevEndpointRequest.prototype, "deletePublicKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointName" }),
         __metadata("design:type", String)
     ], UpdateDevEndpointRequest.prototype, "endpointName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicKey" }),
         __metadata("design:type", String)
     ], UpdateDevEndpointRequest.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateEtlLibraries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateEtlLibraries" }),
         __metadata("design:type", Boolean)
     ], UpdateDevEndpointRequest.prototype, "updateEtlLibraries", void 0);
     return UpdateDevEndpointRequest;
-}(SpeakeasyBase));
-export { UpdateDevEndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDevEndpointRequest = UpdateDevEndpointRequest;

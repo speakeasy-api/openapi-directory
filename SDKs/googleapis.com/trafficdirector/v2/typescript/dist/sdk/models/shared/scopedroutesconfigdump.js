@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicScopedRouteConfigs } from "./dynamicscopedrouteconfigs";
-import { InlineScopedRouteConfigs } from "./inlinescopedrouteconfigs";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScopedRoutesConfigDump = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamicscopedrouteconfigs_1 = require("./dynamicscopedrouteconfigs");
+var inlinescopedrouteconfigs_1 = require("./inlinescopedrouteconfigs");
 // ScopedRoutesConfigDump
 /**
  * Envoy's scoped RDS implementation fills this message with all currently loaded route configuration scopes (defined via ScopedRouteConfigurationsSet protos). This message lists both the scopes defined inline with the higher order object (i.e., the HttpConnectionManager) and the dynamically obtained scopes via the SRDS API.
@@ -35,13 +38,13 @@ var ScopedRoutesConfigDump = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicScopedRouteConfigs", elemType: DynamicScopedRouteConfigs }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicScopedRouteConfigs", elemType: dynamicscopedrouteconfigs_1.DynamicScopedRouteConfigs }),
         __metadata("design:type", Array)
     ], ScopedRoutesConfigDump.prototype, "dynamicScopedRouteConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inlineScopedRouteConfigs", elemType: InlineScopedRouteConfigs }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inlineScopedRouteConfigs", elemType: inlinescopedrouteconfigs_1.InlineScopedRouteConfigs }),
         __metadata("design:type", Array)
     ], ScopedRoutesConfigDump.prototype, "inlineScopedRouteConfigs", void 0);
     return ScopedRoutesConfigDump;
-}(SpeakeasyBase));
-export { ScopedRoutesConfigDump };
+}(utils_1.SpeakeasyBase));
+exports.ScopedRoutesConfigDump = ScopedRoutesConfigDump;

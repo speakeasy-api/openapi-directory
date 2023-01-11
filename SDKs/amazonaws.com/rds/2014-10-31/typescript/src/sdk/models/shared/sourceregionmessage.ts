@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceRegion } from "./sourceregion";
+import { SourceRegionList } from "./sourceregionlist";
 
 
 
@@ -11,6 +11,6 @@ export class SourceRegionMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: SourceRegion })
-  sourceRegions?: SourceRegion[];
+  @SpeakeasyMetadata({ elemType: SourceRegionList })
+  sourceRegions?: SourceRegionList[];
 }

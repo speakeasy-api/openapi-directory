@@ -11,7 +11,7 @@ export class InfoResponse extends SpeakeasyBase {
   bbox?: string;
 
   @SpeakeasyMetadata({ data: "json, name=features" })
-  features?: Map<string, any>;
+  features?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

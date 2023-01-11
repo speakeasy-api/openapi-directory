@@ -47,5 +47,5 @@ export class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComment
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

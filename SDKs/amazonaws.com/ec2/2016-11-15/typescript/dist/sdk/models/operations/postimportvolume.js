@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostImportVolumeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostImportVolumeResponse = exports.PostImportVolumeRequest = exports.PostImportVolumeHeaders = exports.PostImportVolumeQueryParams = exports.PostImportVolumeVersionEnum = exports.PostImportVolumeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostImportVolumeActionEnum;
 (function (PostImportVolumeActionEnum) {
     PostImportVolumeActionEnum["ImportVolume"] = "ImportVolume";
-})(PostImportVolumeActionEnum || (PostImportVolumeActionEnum = {}));
-export var PostImportVolumeVersionEnum;
+})(PostImportVolumeActionEnum = exports.PostImportVolumeActionEnum || (exports.PostImportVolumeActionEnum = {}));
+var PostImportVolumeVersionEnum;
 (function (PostImportVolumeVersionEnum) {
     PostImportVolumeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostImportVolumeVersionEnum || (PostImportVolumeVersionEnum = {}));
+})(PostImportVolumeVersionEnum = exports.PostImportVolumeVersionEnum || (exports.PostImportVolumeVersionEnum = {}));
 var PostImportVolumeQueryParams = /** @class */ (function (_super) {
     __extends(PostImportVolumeQueryParams, _super);
     function PostImportVolumeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostImportVolumeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostImportVolumeQueryParams.prototype, "version", void 0);
     return PostImportVolumeQueryParams;
-}(SpeakeasyBase));
-export { PostImportVolumeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostImportVolumeQueryParams = PostImportVolumeQueryParams;
 var PostImportVolumeHeaders = /** @class */ (function (_super) {
     __extends(PostImportVolumeHeaders, _super);
     function PostImportVolumeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostImportVolumeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostImportVolumeHeaders;
-}(SpeakeasyBase));
-export { PostImportVolumeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostImportVolumeHeaders = PostImportVolumeHeaders;
 var PostImportVolumeRequest = /** @class */ (function (_super) {
     __extends(PostImportVolumeRequest, _super);
     function PostImportVolumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostImportVolumeQueryParams)
     ], PostImportVolumeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostImportVolumeHeaders)
     ], PostImportVolumeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostImportVolumeRequest.prototype, "request", void 0);
     return PostImportVolumeRequest;
-}(SpeakeasyBase));
-export { PostImportVolumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostImportVolumeRequest = PostImportVolumeRequest;
 var PostImportVolumeResponse = /** @class */ (function (_super) {
     __extends(PostImportVolumeResponse, _super);
     function PostImportVolumeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostImportVolumeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostImportVolumeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostImportVolumeResponse.prototype, "statusCode", void 0);
     return PostImportVolumeResponse;
-}(SpeakeasyBase));
-export { PostImportVolumeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostImportVolumeResponse = PostImportVolumeResponse;

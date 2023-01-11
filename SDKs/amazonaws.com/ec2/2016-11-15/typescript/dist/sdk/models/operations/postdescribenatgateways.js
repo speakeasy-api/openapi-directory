@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeNatGatewaysActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeNatGatewaysResponse = exports.PostDescribeNatGatewaysRequest = exports.PostDescribeNatGatewaysHeaders = exports.PostDescribeNatGatewaysQueryParams = exports.PostDescribeNatGatewaysVersionEnum = exports.PostDescribeNatGatewaysActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeNatGatewaysActionEnum;
 (function (PostDescribeNatGatewaysActionEnum) {
     PostDescribeNatGatewaysActionEnum["DescribeNatGateways"] = "DescribeNatGateways";
-})(PostDescribeNatGatewaysActionEnum || (PostDescribeNatGatewaysActionEnum = {}));
-export var PostDescribeNatGatewaysVersionEnum;
+})(PostDescribeNatGatewaysActionEnum = exports.PostDescribeNatGatewaysActionEnum || (exports.PostDescribeNatGatewaysActionEnum = {}));
+var PostDescribeNatGatewaysVersionEnum;
 (function (PostDescribeNatGatewaysVersionEnum) {
     PostDescribeNatGatewaysVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeNatGatewaysVersionEnum || (PostDescribeNatGatewaysVersionEnum = {}));
+})(PostDescribeNatGatewaysVersionEnum = exports.PostDescribeNatGatewaysVersionEnum || (exports.PostDescribeNatGatewaysVersionEnum = {}));
 var PostDescribeNatGatewaysQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeNatGatewaysQueryParams, _super);
     function PostDescribeNatGatewaysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysQueryParams.prototype, "version", void 0);
     return PostDescribeNatGatewaysQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeNatGatewaysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNatGatewaysQueryParams = PostDescribeNatGatewaysQueryParams;
 var PostDescribeNatGatewaysHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeNatGatewaysHeaders, _super);
     function PostDescribeNatGatewaysHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeNatGatewaysHeaders;
-}(SpeakeasyBase));
-export { PostDescribeNatGatewaysHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNatGatewaysHeaders = PostDescribeNatGatewaysHeaders;
 var PostDescribeNatGatewaysRequest = /** @class */ (function (_super) {
     __extends(PostDescribeNatGatewaysRequest, _super);
     function PostDescribeNatGatewaysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeNatGatewaysQueryParams)
     ], PostDescribeNatGatewaysRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeNatGatewaysHeaders)
     ], PostDescribeNatGatewaysRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeNatGatewaysRequest.prototype, "request", void 0);
     return PostDescribeNatGatewaysRequest;
-}(SpeakeasyBase));
-export { PostDescribeNatGatewaysRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNatGatewaysRequest = PostDescribeNatGatewaysRequest;
 var PostDescribeNatGatewaysResponse = /** @class */ (function (_super) {
     __extends(PostDescribeNatGatewaysResponse, _super);
     function PostDescribeNatGatewaysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeNatGatewaysResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeNatGatewaysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeNatGatewaysResponse.prototype, "statusCode", void 0);
     return PostDescribeNatGatewaysResponse;
-}(SpeakeasyBase));
-export { PostDescribeNatGatewaysResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNatGatewaysResponse = PostDescribeNatGatewaysResponse;

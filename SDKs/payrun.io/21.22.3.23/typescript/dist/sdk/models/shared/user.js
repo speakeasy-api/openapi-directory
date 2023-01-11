@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = exports.UserUser = exports.UserUserRoles = exports.UserUserPermission = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserUserPermission
 /**
  * The users' permissions
@@ -33,12 +36,12 @@ var UserUserPermission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permission" }),
         __metadata("design:type", Array)
     ], UserUserPermission.prototype, "permission", void 0);
     return UserUserPermission;
-}(SpeakeasyBase));
-export { UserUserPermission };
+}(utils_1.SpeakeasyBase));
+exports.UserUserPermission = UserUserPermission;
 // UserUserRoles
 /**
  * The users' roles
@@ -49,45 +52,45 @@ var UserUserRoles = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Role" }),
         __metadata("design:type", Array)
     ], UserUserRoles.prototype, "role", void 0);
     return UserUserRoles;
-}(SpeakeasyBase));
-export { UserUserRoles };
+}(utils_1.SpeakeasyBase));
+exports.UserUserRoles = UserUserRoles;
 var UserUser = /** @class */ (function (_super) {
     __extends(UserUser, _super);
     function UserUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetaData" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetaData" }),
+        __metadata("design:type", Object)
     ], UserUser.prototype, "metaData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", UserUserPermission)
     ], UserUser.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Roles" }),
         __metadata("design:type", UserUserRoles)
     ], UserUser.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserIdentifier" }),
         __metadata("design:type", String)
     ], UserUser.prototype, "userIdentifier", void 0);
     return UserUser;
-}(SpeakeasyBase));
-export { UserUser };
+}(utils_1.SpeakeasyBase));
+exports.UserUser = UserUser;
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
     function User() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=User" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=User" }),
         __metadata("design:type", UserUser)
     ], User.prototype, "user", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

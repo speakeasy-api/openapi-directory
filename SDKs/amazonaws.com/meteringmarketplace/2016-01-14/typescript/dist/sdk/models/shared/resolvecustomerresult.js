@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResolveCustomerResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // ResolveCustomerResult
 /**
  * The result of the ResolveCustomer operation. Contains the CustomerIdentifier and product code.
@@ -33,13 +36,13 @@ var ResolveCustomerResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerIdentifier" }),
         __metadata("design:type", String)
     ], ResolveCustomerResult.prototype, "customerIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductCode" }),
         __metadata("design:type", String)
     ], ResolveCustomerResult.prototype, "productCode", void 0);
     return ResolveCustomerResult;
-}(SpeakeasyBase));
-export { ResolveCustomerResult };
+}(utils_1.SpeakeasyBase));
+exports.ResolveCustomerResult = ResolveCustomerResult;

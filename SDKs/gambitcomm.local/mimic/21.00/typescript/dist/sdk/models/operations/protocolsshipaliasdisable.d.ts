@@ -10,5 +10,5 @@ export declare class ProtocolSshIpaliasDisableRequest extends SpeakeasyBase {
 export declare class ProtocolSshIpaliasDisableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSshIpaliasDisable200ApplicationJsonString?: string;
+    protocolSshIpaliasDisable200ApplicationJSONString?: string;
 }

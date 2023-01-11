@@ -7,5 +7,5 @@ import { ArtifactDetail } from "./artifactdetail";
 export declare class ActionExecutionOutput extends SpeakeasyBase {
     executionResult?: ActionExecutionResult;
     outputArtifacts?: ArtifactDetail[];
-    outputVariables?: Map<string, string>;
+    outputVariables?: Record<string, string>;
 }

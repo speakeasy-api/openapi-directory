@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Member } from "./member";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityWithMember = void 0;
+var utils_1 = require("../../../internal/utils");
+var member_1 = require("./member");
 var ActivityWithMember = /** @class */ (function (_super) {
     __extends(ActivityWithMember, _super);
     function ActivityWithMember() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity_type" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "activityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_text" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "linkText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=member" }),
-        __metadata("design:type", Member)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=member" }),
+        __metadata("design:type", member_1.Member)
     ], ActivityWithMember.prototype, "member", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=occurred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occurred_at" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "occurredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], ActivityWithMember.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", String)
     ], ActivityWithMember.prototype, "weight", void 0);
     return ActivityWithMember;
-}(SpeakeasyBase));
-export { ActivityWithMember };
+}(utils_1.SpeakeasyBase));
+exports.ActivityWithMember = ActivityWithMember;

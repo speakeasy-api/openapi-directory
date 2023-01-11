@@ -1,4 +1,7 @@
-export var RemediationTargetTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemediationTargetTypeEnum = void 0;
+var RemediationTargetTypeEnum;
 (function (RemediationTargetTypeEnum) {
     RemediationTargetTypeEnum["SsmDocument"] = "SSM_DOCUMENT";
-})(RemediationTargetTypeEnum || (RemediationTargetTypeEnum = {}));
+})(RemediationTargetTypeEnum = exports.RemediationTargetTypeEnum || (exports.RemediationTargetTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVehicleChargeResponse = exports.GetVehicleChargeRequest = exports.GetVehicleChargePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVehicleChargePathParams = /** @class */ (function (_super) {
     __extends(GetVehicleChargePathParams, _super);
     function GetVehicleChargePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetVehicleChargePathParams.prototype, "id", void 0);
     return GetVehicleChargePathParams;
-}(SpeakeasyBase));
-export { GetVehicleChargePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleChargePathParams = GetVehicleChargePathParams;
 var GetVehicleChargeRequest = /** @class */ (function (_super) {
     __extends(GetVehicleChargeRequest, _super);
     function GetVehicleChargeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVehicleChargePathParams)
     ], GetVehicleChargeRequest.prototype, "pathParams", void 0);
     return GetVehicleChargeRequest;
-}(SpeakeasyBase));
-export { GetVehicleChargeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleChargeRequest = GetVehicleChargeRequest;
 var GetVehicleChargeResponse = /** @class */ (function (_super) {
     __extends(GetVehicleChargeResponse, _super);
     function GetVehicleChargeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVehicleChargeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVehicleChargeResponse.prototype, "statusCode", void 0);
     return GetVehicleChargeResponse;
-}(SpeakeasyBase));
-export { GetVehicleChargeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleChargeResponse = GetVehicleChargeResponse;

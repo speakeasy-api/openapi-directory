@@ -63,5 +63,5 @@ export class GetNetworkWirelessSignalQualityHistoryResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSignalQualityHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSignalQualityHistory200ApplicationJSONObject?: Record<string, any>;
 }

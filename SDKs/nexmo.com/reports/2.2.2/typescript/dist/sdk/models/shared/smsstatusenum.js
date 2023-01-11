@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SmsStatusEnum = void 0;
+var SmsStatusEnum;
+(function (SmsStatusEnum) {
+    SmsStatusEnum["Delivered"] = "delivered";
+    SmsStatusEnum["Expired"] = "expired";
+    SmsStatusEnum["Failed"] = "failed";
+    SmsStatusEnum["Rejected"] = "rejected";
+    SmsStatusEnum["Accepted"] = "accepted";
+    SmsStatusEnum["Buffered"] = "buffered";
+    SmsStatusEnum["Unknown"] = "unknown";
+})(SmsStatusEnum = exports.SmsStatusEnum || (exports.SmsStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PropertyBuiltYearExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Property = exports.PropertyRoomsCountExceptionEnum = exports.PropertyLastRenovatedYearExceptionEnum = exports.PropertyFloorsCountExceptionEnum = exports.PropertyBuiltYearExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PropertyBuiltYearExceptionEnum;
 (function (PropertyBuiltYearExceptionEnum) {
     PropertyBuiltYearExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PropertyBuiltYearExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PropertyBuiltYearExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PropertyBuiltYearExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PropertyBuiltYearExceptionEnum || (PropertyBuiltYearExceptionEnum = {}));
-export var PropertyFloorsCountExceptionEnum;
+})(PropertyBuiltYearExceptionEnum = exports.PropertyBuiltYearExceptionEnum || (exports.PropertyBuiltYearExceptionEnum = {}));
+var PropertyFloorsCountExceptionEnum;
 (function (PropertyFloorsCountExceptionEnum) {
     PropertyFloorsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PropertyFloorsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PropertyFloorsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PropertyFloorsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PropertyFloorsCountExceptionEnum || (PropertyFloorsCountExceptionEnum = {}));
-export var PropertyLastRenovatedYearExceptionEnum;
+})(PropertyFloorsCountExceptionEnum = exports.PropertyFloorsCountExceptionEnum || (exports.PropertyFloorsCountExceptionEnum = {}));
+var PropertyLastRenovatedYearExceptionEnum;
 (function (PropertyLastRenovatedYearExceptionEnum) {
     PropertyLastRenovatedYearExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PropertyLastRenovatedYearExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PropertyLastRenovatedYearExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PropertyLastRenovatedYearExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PropertyLastRenovatedYearExceptionEnum || (PropertyLastRenovatedYearExceptionEnum = {}));
-export var PropertyRoomsCountExceptionEnum;
+})(PropertyLastRenovatedYearExceptionEnum = exports.PropertyLastRenovatedYearExceptionEnum || (exports.PropertyLastRenovatedYearExceptionEnum = {}));
+var PropertyRoomsCountExceptionEnum;
 (function (PropertyRoomsCountExceptionEnum) {
     PropertyRoomsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PropertyRoomsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PropertyRoomsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PropertyRoomsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PropertyRoomsCountExceptionEnum || (PropertyRoomsCountExceptionEnum = {}));
+})(PropertyRoomsCountExceptionEnum = exports.PropertyRoomsCountExceptionEnum || (exports.PropertyRoomsCountExceptionEnum = {}));
 // Property
 /**
  * General factual information about the property's physical structure and important dates.
@@ -61,37 +64,37 @@ var Property = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtYear" }),
         __metadata("design:type", Number)
     ], Property.prototype, "builtYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtYearException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtYearException" }),
         __metadata("design:type", String)
     ], Property.prototype, "builtYearException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorsCount" }),
         __metadata("design:type", Number)
     ], Property.prototype, "floorsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorsCountException" }),
         __metadata("design:type", String)
     ], Property.prototype, "floorsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRenovatedYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRenovatedYear" }),
         __metadata("design:type", Number)
     ], Property.prototype, "lastRenovatedYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRenovatedYearException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRenovatedYearException" }),
         __metadata("design:type", String)
     ], Property.prototype, "lastRenovatedYearException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomsCount" }),
         __metadata("design:type", Number)
     ], Property.prototype, "roomsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomsCountException" }),
         __metadata("design:type", String)
     ], Property.prototype, "roomsCountException", void 0);
     return Property;
-}(SpeakeasyBase));
-export { Property };
+}(utils_1.SpeakeasyBase));
+exports.Property = Property;

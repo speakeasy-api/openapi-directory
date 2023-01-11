@@ -4,11 +4,11 @@ export declare class SongApiPostRatingPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class SongApiPostRatingRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     songRatingContract?: shared.SongRatingContract;
     songRatingContract1?: shared.SongRatingContract;
     songRatingContract2?: shared.SongRatingContract;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class SongApiPostRatingRequest extends SpeakeasyBase {
     pathParams: SongApiPostRatingPathParams;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDomainRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteDomainRequest = /** @class */ (function (_super) {
     __extends(DeleteDomainRequest, _super);
     function DeleteDomainRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], DeleteDomainRequest.prototype, "domainName", void 0);
     return DeleteDomainRequest;
-}(SpeakeasyBase));
-export { DeleteDomainRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDomainRequest = DeleteDomainRequest;

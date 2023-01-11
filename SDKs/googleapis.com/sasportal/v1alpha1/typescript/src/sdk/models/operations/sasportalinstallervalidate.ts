@@ -65,7 +65,7 @@ export class SasportalInstallerValidateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sasPortalValidateInstallerResponse?: Map<string, any>;
+  sasPortalValidateInstallerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

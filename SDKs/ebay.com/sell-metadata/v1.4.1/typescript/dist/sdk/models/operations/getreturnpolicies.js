@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReturnPoliciesResponse = exports.GetReturnPoliciesRequest = exports.GetReturnPoliciesSecurity = exports.GetReturnPoliciesQueryParams = exports.GetReturnPoliciesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetReturnPoliciesPathParams = /** @class */ (function (_super) {
     __extends(GetReturnPoliciesPathParams, _super);
     function GetReturnPoliciesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=marketplace_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=marketplace_id" }),
         __metadata("design:type", String)
     ], GetReturnPoliciesPathParams.prototype, "marketplaceId", void 0);
     return GetReturnPoliciesPathParams;
-}(SpeakeasyBase));
-export { GetReturnPoliciesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetReturnPoliciesPathParams = GetReturnPoliciesPathParams;
 var GetReturnPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(GetReturnPoliciesQueryParams, _super);
     function GetReturnPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetReturnPoliciesQueryParams.prototype, "filter", void 0);
     return GetReturnPoliciesQueryParams;
-}(SpeakeasyBase));
-export { GetReturnPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetReturnPoliciesQueryParams = GetReturnPoliciesQueryParams;
 var GetReturnPoliciesSecurity = /** @class */ (function (_super) {
     __extends(GetReturnPoliciesSecurity, _super);
     function GetReturnPoliciesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeApiAuth)
     ], GetReturnPoliciesSecurity.prototype, "apiAuth", void 0);
     return GetReturnPoliciesSecurity;
-}(SpeakeasyBase));
-export { GetReturnPoliciesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetReturnPoliciesSecurity = GetReturnPoliciesSecurity;
 var GetReturnPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetReturnPoliciesRequest, _super);
     function GetReturnPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReturnPoliciesPathParams)
     ], GetReturnPoliciesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReturnPoliciesQueryParams)
     ], GetReturnPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetReturnPoliciesSecurity)
     ], GetReturnPoliciesRequest.prototype, "security", void 0);
     return GetReturnPoliciesRequest;
-}(SpeakeasyBase));
-export { GetReturnPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetReturnPoliciesRequest = GetReturnPoliciesRequest;
 var GetReturnPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetReturnPoliciesResponse, _super);
     function GetReturnPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetReturnPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ReturnPolicyResponse)
     ], GetReturnPoliciesResponse.prototype, "returnPolicyResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetReturnPoliciesResponse.prototype, "statusCode", void 0);
     return GetReturnPoliciesResponse;
-}(SpeakeasyBase));
-export { GetReturnPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetReturnPoliciesResponse = GetReturnPoliciesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionConfiguration } from "./functionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFunctionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var functionconfiguration_1 = require("./functionconfiguration");
 // ListFunctionsResponse
 /**
  * Contains a list of AWS Lambda function configurations (see <a>API_FunctionConfiguration</a>.
@@ -34,13 +37,13 @@ var ListFunctionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Functions", elemType: FunctionConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Functions", elemType: functionconfiguration_1.FunctionConfiguration }),
         __metadata("design:type", Array)
     ], ListFunctionsResponse.prototype, "functions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextMarker" }),
         __metadata("design:type", String)
     ], ListFunctionsResponse.prototype, "nextMarker", void 0);
     return ListFunctionsResponse;
-}(SpeakeasyBase));
-export { ListFunctionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListFunctionsResponse = ListFunctionsResponse;

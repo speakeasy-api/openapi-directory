@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest, BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,32 +28,32 @@ const sdk = new SDK();
     
 const req: BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest = {
   pathParams: {
-    name: "ut",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "magni",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "maiores",
-    dailyMetric: "BUSINESS_FOOD_ORDERS",
-    dailyRangeEndDateDay: 6910391474305585133,
-    dailyRangeEndDateMonth: 5695242762713337677,
-    dailyRangeEndDateYear: 7386097625889100208,
-    dailyRangeStartDateDay: 5016857923634303661,
-    dailyRangeStartDateMonth: 743896963189385316,
-    dailyRangeStartDateYear: 4029721498741443506,
-    dailySubEntityTypeDayOfWeek: "THURSDAY",
-    dailySubEntityTypeTimeOfDayHours: 7753313494815849564,
-    dailySubEntityTypeTimeOfDayMinutes: 3820220690062292513,
-    dailySubEntityTypeTimeOfDayNanos: 4531441787659076409,
-    dailySubEntityTypeTimeOfDaySeconds: 63846108552878779,
-    fields: "et",
-    key: "cum",
-    oauthToken: "qui",
+    callback: "consequuntur",
+    dailyMetric: "BUSINESS_IMPRESSIONS_DESKTOP_MAPS",
+    dailyRangeEndDateDay: 1774932891286980153,
+    dailyRangeEndDateMonth: 6044372234677422456,
+    dailyRangeEndDateYear: 8274930044578894929,
+    dailyRangeStartDateDay: 1543572285742637646,
+    dailyRangeStartDateMonth: 2661732831099943416,
+    dailyRangeStartDateYear: 8325060299420976708,
+    dailySubEntityTypeDayOfWeek: "WEDNESDAY",
+    dailySubEntityTypeTimeOfDayHours: 2518412263346885298,
+    dailySubEntityTypeTimeOfDayMinutes: 5617773211005988520,
+    dailySubEntityTypeTimeOfDayNanos: 2339563716805116249,
+    dailySubEntityTypeTimeOfDaySeconds: 7144924247938981575,
+    fields: "dolorem",
+    key: "et",
+    oauthToken: "voluptate",
     prettyPrint: true,
-    quotaUser: "ratione",
-    uploadType: "aliquam",
-    uploadProtocol: "quia",
+    quotaUser: "vitae",
+    uploadType: "totam",
+    uploadProtocol: "dolores",
   },
 };
 

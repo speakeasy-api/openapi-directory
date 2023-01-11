@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-export var BankAccountAccountTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BankAccount = exports.BankAccountAccountTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
+var BankAccountAccountTypeEnum;
 (function (BankAccountAccountTypeEnum) {
     BankAccountAccountTypeEnum["BankAccount"] = "bank_account";
     BankAccountAccountTypeEnum["CreditCard"] = "credit_card";
     BankAccountAccountTypeEnum["Other"] = "other";
-})(BankAccountAccountTypeEnum || (BankAccountAccountTypeEnum = {}));
+})(BankAccountAccountTypeEnum = exports.BankAccountAccountTypeEnum || (exports.BankAccountAccountTypeEnum = {}));
 var BankAccount = /** @class */ (function (_super) {
     __extends(BankAccount, _super);
     function BankAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_name" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_number" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_type" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bank_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_code" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "bankCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bic" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branch_identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branch_identifier" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "branchIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bsb_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bsb_number" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "bsbNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], BankAccount.prototype, "iban", void 0);
     return BankAccount;
-}(SpeakeasyBase));
-export { BankAccount };
+}(utils_1.SpeakeasyBase));
+exports.BankAccount = BankAccount;

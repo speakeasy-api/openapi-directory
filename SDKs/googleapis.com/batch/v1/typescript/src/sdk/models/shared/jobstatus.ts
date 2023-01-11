@@ -29,5 +29,5 @@ export class JobStatus extends SpeakeasyBase {
   statusEvents?: StatusEvent[];
 
   @SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroupStatus })
-  taskGroups?: Map<string, TaskGroupStatus>;
+  taskGroups?: Record<string, TaskGroupStatus>;
 }

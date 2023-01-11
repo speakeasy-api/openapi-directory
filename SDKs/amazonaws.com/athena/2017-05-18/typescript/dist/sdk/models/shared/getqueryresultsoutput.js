@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResultSet } from "./resultset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetQueryResultsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var resultset_1 = require("./resultset");
 var GetQueryResultsOutput = /** @class */ (function (_super) {
     __extends(GetQueryResultsOutput, _super);
     function GetQueryResultsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetQueryResultsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultSet" }),
-        __metadata("design:type", ResultSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultSet" }),
+        __metadata("design:type", resultset_1.ResultSet)
     ], GetQueryResultsOutput.prototype, "resultSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateCount" }),
         __metadata("design:type", Number)
     ], GetQueryResultsOutput.prototype, "updateCount", void 0);
     return GetQueryResultsOutput;
-}(SpeakeasyBase));
-export { GetQueryResultsOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryResultsOutput = GetQueryResultsOutput;

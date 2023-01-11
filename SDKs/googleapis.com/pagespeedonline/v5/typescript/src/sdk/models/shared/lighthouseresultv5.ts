@@ -17,13 +17,13 @@ import { Timing } from "./timing";
 **/
 export class LighthouseResultV5 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=audits", elemType: LighthouseAuditResultV5 })
-  audits?: Map<string, LighthouseAuditResultV5>;
+  audits?: Record<string, LighthouseAuditResultV5>;
 
   @SpeakeasyMetadata({ data: "json, name=categories" })
   categories?: Categories;
 
   @SpeakeasyMetadata({ data: "json, name=categoryGroups", elemType: CategoryGroupV5 })
-  categoryGroups?: Map<string, CategoryGroupV5>;
+  categoryGroups?: Record<string, CategoryGroupV5>;
 
   @SpeakeasyMetadata({ data: "json, name=configSettings" })
   configSettings?: ConfigSettings;

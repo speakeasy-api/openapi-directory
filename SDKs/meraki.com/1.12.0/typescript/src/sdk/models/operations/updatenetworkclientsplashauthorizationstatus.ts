@@ -236,5 +236,5 @@ export class UpdateNetworkClientSplashAuthorizationStatusResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkClientSplashAuthorizationStatus200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkClientSplashAuthorizationStatus200ApplicationJSONObject?: Record<string, any>;
 }

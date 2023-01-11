@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Compatibility = void 0;
+var utils_1 = require("../../../internal/utils");
 // Compatibility
 /**
  * Compatibility information.
@@ -33,17 +36,17 @@ var Compatibility = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterVersion" }),
         __metadata("design:type", String)
     ], Compatibility.prototype, "clusterVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultVersion" }),
         __metadata("design:type", Boolean)
     ], Compatibility.prototype, "defaultVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersions" }),
         __metadata("design:type", Array)
     ], Compatibility.prototype, "platformVersions", void 0);
     return Compatibility;
-}(SpeakeasyBase));
-export { Compatibility };
+}(utils_1.SpeakeasyBase));
+exports.Compatibility = Compatibility;

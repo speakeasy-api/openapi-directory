@@ -4,6 +4,6 @@ export declare class BehavioralEventHttpCompletionRequest extends SpeakeasyBase 
     eventName: string;
     objectId?: string;
     occurredAt?: Date;
-    properties: Map<string, string>;
+    properties: Record<string, string>;
     utk?: string;
 }

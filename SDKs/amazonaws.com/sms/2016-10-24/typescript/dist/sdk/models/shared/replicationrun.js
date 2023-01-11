@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationRunStageDetails } from "./replicationrunstagedetails";
-import { ReplicationRunStateEnum } from "./replicationrunstateenum";
-import { ReplicationRunTypeEnum } from "./replicationruntypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationRun = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationrunstagedetails_1 = require("./replicationrunstagedetails");
+var replicationrunstateenum_1 = require("./replicationrunstateenum");
+var replicationruntypeenum_1 = require("./replicationruntypeenum");
 // ReplicationRun
 /**
  * Represents a replication run.
@@ -36,49 +39,49 @@ var ReplicationRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amiId" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "amiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completedTime" }),
         __metadata("design:type", Date)
     ], ReplicationRun.prototype, "completedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted" }),
         __metadata("design:type", Boolean)
     ], ReplicationRun.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationRunId" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "replicationRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledStartTime" }),
         __metadata("design:type", Date)
     ], ReplicationRun.prototype, "scheduledStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stageDetails" }),
-        __metadata("design:type", ReplicationRunStageDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stageDetails" }),
+        __metadata("design:type", replicationrunstagedetails_1.ReplicationRunStageDetails)
     ], ReplicationRun.prototype, "stageDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ReplicationRun.prototype, "type", void 0);
     return ReplicationRun;
-}(SpeakeasyBase));
-export { ReplicationRun };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationRun = ReplicationRun;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ClientRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientInput = exports.Client = exports.ClientStateEnum = exports.ClientRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClientRoleEnum;
 (function (ClientRoleEnum) {
     ClientRoleEnum["ClientRoleUnspecified"] = "CLIENT_ROLE_UNSPECIFIED";
     ClientRoleEnum["ClientDealViewer"] = "CLIENT_DEAL_VIEWER";
     ClientRoleEnum["ClientDealNegotiator"] = "CLIENT_DEAL_NEGOTIATOR";
     ClientRoleEnum["ClientDealApprover"] = "CLIENT_DEAL_APPROVER";
-})(ClientRoleEnum || (ClientRoleEnum = {}));
-export var ClientStateEnum;
+})(ClientRoleEnum = exports.ClientRoleEnum || (exports.ClientRoleEnum = {}));
+var ClientStateEnum;
 (function (ClientStateEnum) {
     ClientStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ClientStateEnum["Active"] = "ACTIVE";
     ClientStateEnum["Inactive"] = "INACTIVE";
-})(ClientStateEnum || (ClientStateEnum = {}));
+})(ClientStateEnum = exports.ClientStateEnum || (exports.ClientStateEnum = {}));
 // Client
 /**
  * A client represents an agency, a brand, or an advertiser customer of the buyer. Based on the client's role, its client users will have varying levels of restricted access to the Marketplace and certain other sections of the Authorized Buyers UI.
@@ -46,32 +49,32 @@ var Client = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Client.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Client.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partnerClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partnerClientId" }),
         __metadata("design:type", String)
     ], Client.prototype, "partnerClientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Client.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerVisible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerVisible" }),
         __metadata("design:type", Boolean)
     ], Client.prototype, "sellerVisible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Client.prototype, "state", void 0);
     return Client;
-}(SpeakeasyBase));
-export { Client };
+}(utils_1.SpeakeasyBase));
+exports.Client = Client;
 // ClientInput
 /**
  * A client represents an agency, a brand, or an advertiser customer of the buyer. Based on the client's role, its client users will have varying levels of restricted access to the Marketplace and certain other sections of the Authorized Buyers UI.
@@ -82,21 +85,21 @@ var ClientInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ClientInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partnerClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partnerClientId" }),
         __metadata("design:type", String)
     ], ClientInput.prototype, "partnerClientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], ClientInput.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerVisible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerVisible" }),
         __metadata("design:type", Boolean)
     ], ClientInput.prototype, "sellerVisible", void 0);
     return ClientInput;
-}(SpeakeasyBase));
-export { ClientInput };
+}(utils_1.SpeakeasyBase));
+exports.ClientInput = ClientInput;

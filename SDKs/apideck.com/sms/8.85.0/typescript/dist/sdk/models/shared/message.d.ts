@@ -40,17 +40,6 @@ export declare enum MessageMessageTypeEnum {
     Sms = "sms",
     Mms = "mms"
 }
-export declare class MessageInput extends SpeakeasyBase {
-    body: string;
-    from: string;
-    messagingServiceId?: string;
-    reference?: string;
-    scheduledAt?: Date;
-    subject?: string;
-    to: string;
-    type?: MessageMessageTypeEnum;
-    webhookUrl?: string;
-}
 export declare class Message extends SpeakeasyBase {
     body: string;
     createdAt?: Date;
@@ -72,5 +61,16 @@ export declare class Message extends SpeakeasyBase {
     type?: MessageMessageTypeEnum;
     updatedAt?: Date;
     updatedBy?: string;
+    webhookUrl?: string;
+}
+export declare class MessageInput extends SpeakeasyBase {
+    body: string;
+    from: string;
+    messagingServiceId?: string;
+    reference?: string;
+    scheduledAt?: Date;
+    subject?: string;
+    to: string;
+    type?: MessageMessageTypeEnum;
     webhookUrl?: string;
 }

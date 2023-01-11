@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InteractionChannelParticipantEnumTypeEnum = void 0;
+var InteractionChannelParticipantEnumTypeEnum;
+(function (InteractionChannelParticipantEnumTypeEnum) {
+    InteractionChannelParticipantEnumTypeEnum["Supervisor"] = "supervisor";
+    InteractionChannelParticipantEnumTypeEnum["Customer"] = "customer";
+    InteractionChannelParticipantEnumTypeEnum["External"] = "external";
+    InteractionChannelParticipantEnumTypeEnum["Agent"] = "agent";
+    InteractionChannelParticipantEnumTypeEnum["Unknown"] = "unknown";
+})(InteractionChannelParticipantEnumTypeEnum = exports.InteractionChannelParticipantEnumTypeEnum || (exports.InteractionChannelParticipantEnumTypeEnum = {}));

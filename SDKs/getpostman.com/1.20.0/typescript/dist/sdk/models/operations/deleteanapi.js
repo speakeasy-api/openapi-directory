@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAnApiResponse = exports.DeleteAnApiRequest = exports.DeleteAnApi200ApplicationJson = exports.DeleteAnApi200ApplicationJsonApi = exports.DeleteAnApiPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAnApiPathParams = /** @class */ (function (_super) {
     __extends(DeleteAnApiPathParams, _super);
     function DeleteAnApiPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], DeleteAnApiPathParams.prototype, "apiId", void 0);
     return DeleteAnApiPathParams;
-}(SpeakeasyBase));
-export { DeleteAnApiPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiPathParams = DeleteAnApiPathParams;
 var DeleteAnApi200ApplicationJsonApi = /** @class */ (function (_super) {
     __extends(DeleteAnApi200ApplicationJsonApi, _super);
     function DeleteAnApi200ApplicationJsonApi() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeleteAnApi200ApplicationJsonApi.prototype, "id", void 0);
     return DeleteAnApi200ApplicationJsonApi;
-}(SpeakeasyBase));
-export { DeleteAnApi200ApplicationJsonApi };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApi200ApplicationJsonApi = DeleteAnApi200ApplicationJsonApi;
 var DeleteAnApi200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteAnApi200ApplicationJson, _super);
     function DeleteAnApi200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", DeleteAnApi200ApplicationJsonApi)
     ], DeleteAnApi200ApplicationJson.prototype, "api", void 0);
     return DeleteAnApi200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteAnApi200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApi200ApplicationJson = DeleteAnApi200ApplicationJson;
 var DeleteAnApiRequest = /** @class */ (function (_super) {
     __extends(DeleteAnApiRequest, _super);
     function DeleteAnApiRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAnApiPathParams)
     ], DeleteAnApiRequest.prototype, "pathParams", void 0);
     return DeleteAnApiRequest;
-}(SpeakeasyBase));
-export { DeleteAnApiRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiRequest = DeleteAnApiRequest;
 var DeleteAnApiResponse = /** @class */ (function (_super) {
     __extends(DeleteAnApiResponse, _super);
     function DeleteAnApiResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAnApiResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAnApiResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAnApi200ApplicationJson)
-    ], DeleteAnApiResponse.prototype, "deleteAnApi200ApplicationJsonObject", void 0);
+    ], DeleteAnApiResponse.prototype, "deleteAnApi200ApplicationJSONObject", void 0);
     return DeleteAnApiResponse;
-}(SpeakeasyBase));
-export { DeleteAnApiResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiResponse = DeleteAnApiResponse;

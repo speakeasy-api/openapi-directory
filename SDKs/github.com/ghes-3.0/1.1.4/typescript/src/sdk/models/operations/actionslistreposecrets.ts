@@ -44,11 +44,11 @@ export class ActionsListRepoSecretsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListRepoSecrets200ApplicationJsonObject?: ActionsListRepoSecrets200ApplicationJson;
+  actionsListRepoSecrets200ApplicationJSONObject?: ActionsListRepoSecrets200ApplicationJson;
 }

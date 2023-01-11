@@ -43,10 +43,10 @@ export class PepRetrieveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pepRetrieve200ApplicationJsonAny?: any;
+  pepRetrieve200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  pepRetrieveDefaultApplicationJsonAny?: any;
+  pepRetrieveDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

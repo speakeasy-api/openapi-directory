@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMapVersionNumberCopyrightsCaptionFormatFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberCopyrightsCaptionFormatResponse = exports.GetMapVersionNumberCopyrightsCaptionFormatRequest = exports.GetMapVersionNumberCopyrightsCaptionFormatQueryParams = exports.GetMapVersionNumberCopyrightsCaptionFormatPathParams = exports.GetMapVersionNumberCopyrightsCaptionFormatFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMapVersionNumberCopyrightsCaptionFormatFormatEnum;
 (function (GetMapVersionNumberCopyrightsCaptionFormatFormatEnum) {
     GetMapVersionNumberCopyrightsCaptionFormatFormatEnum["Json"] = "json";
     GetMapVersionNumberCopyrightsCaptionFormatFormatEnum["Jsonp"] = "jsonp";
     GetMapVersionNumberCopyrightsCaptionFormatFormatEnum["Xml"] = "xml";
-})(GetMapVersionNumberCopyrightsCaptionFormatFormatEnum || (GetMapVersionNumberCopyrightsCaptionFormatFormatEnum = {}));
+})(GetMapVersionNumberCopyrightsCaptionFormatFormatEnum = exports.GetMapVersionNumberCopyrightsCaptionFormatFormatEnum || (exports.GetMapVersionNumberCopyrightsCaptionFormatFormatEnum = {}));
 var GetMapVersionNumberCopyrightsCaptionFormatPathParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsCaptionFormatPathParams, _super);
     function GetMapVersionNumberCopyrightsCaptionFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsCaptionFormatPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsCaptionFormatPathParams.prototype, "versionNumber", void 0);
     return GetMapVersionNumberCopyrightsCaptionFormatPathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsCaptionFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsCaptionFormatPathParams = GetMapVersionNumberCopyrightsCaptionFormatPathParams;
 var GetMapVersionNumberCopyrightsCaptionFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsCaptionFormatQueryParams, _super);
     function GetMapVersionNumberCopyrightsCaptionFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsCaptionFormatQueryParams.prototype, "callback", void 0);
     return GetMapVersionNumberCopyrightsCaptionFormatQueryParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsCaptionFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsCaptionFormatQueryParams = GetMapVersionNumberCopyrightsCaptionFormatQueryParams;
 var GetMapVersionNumberCopyrightsCaptionFormatRequest = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsCaptionFormatRequest, _super);
     function GetMapVersionNumberCopyrightsCaptionFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberCopyrightsCaptionFormatPathParams)
     ], GetMapVersionNumberCopyrightsCaptionFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberCopyrightsCaptionFormatQueryParams)
     ], GetMapVersionNumberCopyrightsCaptionFormatRequest.prototype, "queryParams", void 0);
     return GetMapVersionNumberCopyrightsCaptionFormatRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsCaptionFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsCaptionFormatRequest = GetMapVersionNumberCopyrightsCaptionFormatRequest;
 var GetMapVersionNumberCopyrightsCaptionFormatResponse = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsCaptionFormatResponse, _super);
     function GetMapVersionNumberCopyrightsCaptionFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsCaptionFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsCaptionFormatResponse.prototype, "statusCode", void 0);
     return GetMapVersionNumberCopyrightsCaptionFormatResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsCaptionFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsCaptionFormatResponse = GetMapVersionNumberCopyrightsCaptionFormatResponse;

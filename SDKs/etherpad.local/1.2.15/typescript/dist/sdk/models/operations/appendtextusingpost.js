@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppendTextUsingPostResponse = exports.AppendTextUsingPostRequest = exports.AppendTextUsingPost500ApplicationJson = exports.AppendTextUsingPost401ApplicationJson = exports.AppendTextUsingPost400ApplicationJson = exports.AppendTextUsingPost200ApplicationJson = exports.AppendTextUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppendTextUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(AppendTextUsingPostQueryParams, _super);
     function AppendTextUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], AppendTextUsingPostQueryParams.prototype, "padId", void 0);
+    ], AppendTextUsingPostQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], AppendTextUsingPostQueryParams.prototype, "text", void 0);
     return AppendTextUsingPostQueryParams;
-}(SpeakeasyBase));
-export { AppendTextUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPostQueryParams = AppendTextUsingPostQueryParams;
 var AppendTextUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingPost200ApplicationJson, _super);
     function AppendTextUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingPost200ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPost200ApplicationJson = AppendTextUsingPost200ApplicationJson;
 var AppendTextUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingPost400ApplicationJson, _super);
     function AppendTextUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingPost400ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPost400ApplicationJson = AppendTextUsingPost400ApplicationJson;
 var AppendTextUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingPost401ApplicationJson, _super);
     function AppendTextUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingPost401ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPost401ApplicationJson = AppendTextUsingPost401ApplicationJson;
 var AppendTextUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingPost500ApplicationJson, _super);
     function AppendTextUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingPost500ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPost500ApplicationJson = AppendTextUsingPost500ApplicationJson;
 var AppendTextUsingPostRequest = /** @class */ (function (_super) {
     __extends(AppendTextUsingPostRequest, _super);
     function AppendTextUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingPostQueryParams)
     ], AppendTextUsingPostRequest.prototype, "queryParams", void 0);
     return AppendTextUsingPostRequest;
-}(SpeakeasyBase));
-export { AppendTextUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPostRequest = AppendTextUsingPostRequest;
 var AppendTextUsingPostResponse = /** @class */ (function (_super) {
     __extends(AppendTextUsingPostResponse, _super);
     function AppendTextUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppendTextUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppendTextUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingPost200ApplicationJson)
-    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPost200ApplicationJsonObject", void 0);
+    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingPost400ApplicationJson)
-    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPost400ApplicationJsonObject", void 0);
+    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingPost401ApplicationJson)
-    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPost401ApplicationJsonObject", void 0);
+    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingPost500ApplicationJson)
-    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPost500ApplicationJsonObject", void 0);
+    ], AppendTextUsingPostResponse.prototype, "appendTextUsingPOST500ApplicationJSONObject", void 0);
     return AppendTextUsingPostResponse;
-}(SpeakeasyBase));
-export { AppendTextUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingPostResponse = AppendTextUsingPostResponse;

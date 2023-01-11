@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidpublisherEditsApksAddexternallyhostedResponse = exports.AndroidpublisherEditsApksAddexternallyhostedRequest = exports.AndroidpublisherEditsApksAddexternallyhostedSecurity = exports.AndroidpublisherEditsApksAddexternallyhostedQueryParams = exports.AndroidpublisherEditsApksAddexternallyhostedPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AndroidpublisherEditsApksAddexternallyhostedPathParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApksAddexternallyhostedPathParams, _super);
     function AndroidpublisherEditsApksAddexternallyhostedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=editId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=editId" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedPathParams.prototype, "editId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packageName" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedPathParams.prototype, "packageName", void 0);
     return AndroidpublisherEditsApksAddexternallyhostedPathParams;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApksAddexternallyhostedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApksAddexternallyhostedPathParams = AndroidpublisherEditsApksAddexternallyhostedPathParams;
 var AndroidpublisherEditsApksAddexternallyhostedQueryParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApksAddexternallyhostedQueryParams, _super);
     function AndroidpublisherEditsApksAddexternallyhostedQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedQueryParams.prototype, "uploadProtocol", void 0);
     return AndroidpublisherEditsApksAddexternallyhostedQueryParams;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApksAddexternallyhostedQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApksAddexternallyhostedQueryParams = AndroidpublisherEditsApksAddexternallyhostedQueryParams;
 var AndroidpublisherEditsApksAddexternallyhostedSecurity = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApksAddexternallyhostedSecurity, _super);
     function AndroidpublisherEditsApksAddexternallyhostedSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AndroidpublisherEditsApksAddexternallyhostedSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AndroidpublisherEditsApksAddexternallyhostedSecurity.prototype, "oauth2c", void 0);
     return AndroidpublisherEditsApksAddexternallyhostedSecurity;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApksAddexternallyhostedSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApksAddexternallyhostedSecurity = AndroidpublisherEditsApksAddexternallyhostedSecurity;
 var AndroidpublisherEditsApksAddexternallyhostedRequest = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApksAddexternallyhostedRequest, _super);
     function AndroidpublisherEditsApksAddexternallyhostedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApksAddexternallyhostedPathParams)
     ], AndroidpublisherEditsApksAddexternallyhostedRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApksAddexternallyhostedQueryParams)
     ], AndroidpublisherEditsApksAddexternallyhostedRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ApksAddExternallyHostedRequest)
     ], AndroidpublisherEditsApksAddexternallyhostedRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApksAddexternallyhostedSecurity)
     ], AndroidpublisherEditsApksAddexternallyhostedRequest.prototype, "security", void 0);
     return AndroidpublisherEditsApksAddexternallyhostedRequest;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApksAddexternallyhostedRequest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApksAddexternallyhostedRequest = AndroidpublisherEditsApksAddexternallyhostedRequest;
 var AndroidpublisherEditsApksAddexternallyhostedResponse = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApksAddexternallyhostedResponse, _super);
     function AndroidpublisherEditsApksAddexternallyhostedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ApksAddExternallyHostedResponse)
     ], AndroidpublisherEditsApksAddexternallyhostedResponse.prototype, "apksAddExternallyHostedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApksAddexternallyhostedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AndroidpublisherEditsApksAddexternallyhostedResponse.prototype, "statusCode", void 0);
     return AndroidpublisherEditsApksAddexternallyhostedResponse;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApksAddexternallyhostedResponse };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApksAddexternallyhostedResponse = AndroidpublisherEditsApksAddexternallyhostedResponse;

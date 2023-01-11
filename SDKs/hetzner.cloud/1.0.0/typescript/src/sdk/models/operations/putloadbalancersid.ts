@@ -10,7 +10,7 @@ export class PutLoadBalancersIdPathParams extends SpeakeasyBase {
 
 export class PutLoadBalancersIdRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -405,7 +405,7 @@ export class PutLoadBalancersId200ApplicationJsonLoadBalancer extends SpeakeasyB
   ingoingTraffic: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=load_balancer_type" })
   loadBalancerType: PutLoadBalancersId200ApplicationJsonLoadBalancerLoadBalancerType;
@@ -456,8 +456,8 @@ export class PutLoadBalancersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putLoadBalancersId200ApplicationJsonObject?: PutLoadBalancersId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putLoadBalancersId200ApplicationJSONObject?: PutLoadBalancersId200ApplicationJson;
 }

@@ -44,5 +44,5 @@ export class CasesSearchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  casesSearch200ApplicationJsonObject?: CasesSearch200ApplicationJson;
+  casesSearch200ApplicationJSONObject?: CasesSearch200ApplicationJson;
 }

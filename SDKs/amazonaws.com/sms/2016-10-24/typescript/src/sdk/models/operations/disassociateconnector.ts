@@ -48,7 +48,7 @@ export class DisassociateConnectorResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateConnectorResponse?: Map<string, any>;
+  disassociateConnectorResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterException?: any;

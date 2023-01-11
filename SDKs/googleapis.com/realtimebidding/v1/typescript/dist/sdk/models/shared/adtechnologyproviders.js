@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdTechnologyProviders = void 0;
+var utils_1 = require("../../../internal/utils");
 // AdTechnologyProviders
 /**
  * The list of detected Ad Technology Providers for this creative. Bids placed for inventory that will serve to EEA or UK users are expected to comply with GDPR requirements. You must ensure that the creatives used in such bids should contain only user consented ad technology providers as indicated in the bid request. Google reserves the right to filter non-compliant bids. User consented ad technology providers can be found in the [Google Protocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto) with the `BidRequest.adslot.consented_providers_settings` field, and can be found as an [OpenRTB extension](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto) with the `BidRequest.user.ext.consented_providers_settings` and `BidRequest.user.ext.consent` fields. See https://support.google.com/authorizedbuyers/answer/9789378 for additional information about the Google TCF v2 integration.
@@ -33,17 +36,17 @@ var AdTechnologyProviders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedGvlIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedGvlIds" }),
         __metadata("design:type", Array)
     ], AdTechnologyProviders.prototype, "detectedGvlIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedProviderIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedProviderIds" }),
         __metadata("design:type", Array)
     ], AdTechnologyProviders.prototype, "detectedProviderIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unidentifiedProviderDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unidentifiedProviderDomains" }),
         __metadata("design:type", Array)
     ], AdTechnologyProviders.prototype, "unidentifiedProviderDomains", void 0);
     return AdTechnologyProviders;
-}(SpeakeasyBase));
-export { AdTechnologyProviders };
+}(utils_1.SpeakeasyBase));
+exports.AdTechnologyProviders = AdTechnologyProviders;

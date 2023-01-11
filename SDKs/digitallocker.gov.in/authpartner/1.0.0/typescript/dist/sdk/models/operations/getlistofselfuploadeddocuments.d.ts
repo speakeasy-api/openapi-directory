@@ -20,9 +20,9 @@ export declare class GetListOfSelfUploadedDocumentsRequest extends SpeakeasyBase
 }
 export declare class GetListOfSelfUploadedDocumentsResponse extends SpeakeasyBase {
     contentType: string;
-    getListOfSelfUploadedDocuments401ApplicationJsonObject?: GetListOfSelfUploadedDocuments401ApplicationJson;
-    getListOfSelfUploadedDocuments404ApplicationJsonObject?: GetListOfSelfUploadedDocuments404ApplicationJson;
-    getListOfSelfUploadedDocuments500ApplicationJsonObject?: GetListOfSelfUploadedDocuments500ApplicationJson;
+    getListOfSelfUploadedDocuments401ApplicationJSONObject?: GetListOfSelfUploadedDocuments401ApplicationJson;
+    getListOfSelfUploadedDocuments404ApplicationJSONObject?: GetListOfSelfUploadedDocuments404ApplicationJson;
+    getListOfSelfUploadedDocuments500ApplicationJSONObject?: GetListOfSelfUploadedDocuments500ApplicationJson;
     sample?: any;
     statusCode: number;
 }

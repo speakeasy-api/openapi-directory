@@ -10,7 +10,7 @@ export class V3StopGeosearch extends SpeakeasyBase {
   routeType?: number;
 
   @SpeakeasyMetadata({ data: "json, name=routes" })
-  routes?: Map<string, any>[];
+  routes?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=stop_distance" })
   stopDistance?: number;

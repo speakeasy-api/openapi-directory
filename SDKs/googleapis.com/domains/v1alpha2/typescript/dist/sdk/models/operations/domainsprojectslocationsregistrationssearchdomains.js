@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsResponse = exports.DomainsProjectsLocationsRegistrationsSearchDomainsRequest = exports.DomainsProjectsLocationsRegistrationsSearchDomainsSecurity = exports.DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams = exports.DomainsProjectsLocationsRegistrationsSearchDomainsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DomainsProjectsLocationsRegistrationsSearchDomainsPathParams = /** @class */ (function (_super) {
     __extends(DomainsProjectsLocationsRegistrationsSearchDomainsPathParams, _super);
     function DomainsProjectsLocationsRegistrationsSearchDomainsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=location" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsPathParams.prototype, "location", void 0);
     return DomainsProjectsLocationsRegistrationsSearchDomainsPathParams;
-}(SpeakeasyBase));
-export { DomainsProjectsLocationsRegistrationsSearchDomainsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsPathParams = DomainsProjectsLocationsRegistrationsSearchDomainsPathParams;
 var DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams = /** @class */ (function (_super) {
     __extends(DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams, _super);
     function DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.prototype, "uploadProtocol", void 0);
     return DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams;
-}(SpeakeasyBase));
-export { DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams = DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams;
 var DomainsProjectsLocationsRegistrationsSearchDomainsSecurity = /** @class */ (function (_super) {
     __extends(DomainsProjectsLocationsRegistrationsSearchDomainsSecurity, _super);
     function DomainsProjectsLocationsRegistrationsSearchDomainsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsSecurity.prototype, "oauth2c", void 0);
     return DomainsProjectsLocationsRegistrationsSearchDomainsSecurity;
-}(SpeakeasyBase));
-export { DomainsProjectsLocationsRegistrationsSearchDomainsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsSecurity = DomainsProjectsLocationsRegistrationsSearchDomainsSecurity;
 var DomainsProjectsLocationsRegistrationsSearchDomainsRequest = /** @class */ (function (_super) {
     __extends(DomainsProjectsLocationsRegistrationsSearchDomainsRequest, _super);
     function DomainsProjectsLocationsRegistrationsSearchDomainsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DomainsProjectsLocationsRegistrationsSearchDomainsPathParams)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DomainsProjectsLocationsRegistrationsSearchDomainsSecurity)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsRequest.prototype, "security", void 0);
     return DomainsProjectsLocationsRegistrationsSearchDomainsRequest;
-}(SpeakeasyBase));
-export { DomainsProjectsLocationsRegistrationsSearchDomainsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsRequest = DomainsProjectsLocationsRegistrationsSearchDomainsRequest;
 var DomainsProjectsLocationsRegistrationsSearchDomainsResponse = /** @class */ (function (_super) {
     __extends(DomainsProjectsLocationsRegistrationsSearchDomainsResponse, _super);
     function DomainsProjectsLocationsRegistrationsSearchDomainsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SearchDomainsResponse)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsResponse.prototype, "searchDomainsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DomainsProjectsLocationsRegistrationsSearchDomainsResponse.prototype, "statusCode", void 0);
     return DomainsProjectsLocationsRegistrationsSearchDomainsResponse;
-}(SpeakeasyBase));
-export { DomainsProjectsLocationsRegistrationsSearchDomainsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DomainsProjectsLocationsRegistrationsSearchDomainsResponse = DomainsProjectsLocationsRegistrationsSearchDomainsResponse;

@@ -95,17 +95,17 @@ export class TransferNumberResponse extends SpeakeasyBase {
   transferNumberResponse?: any;
 
   @SpeakeasyMetadata()
-  transferNumber401ApplicationJsonObject?: TransferNumber401ApplicationJson;
+  transferNumber401ApplicationJSONObject?: TransferNumber401ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferNumber403ApplicationJsonOneOf?: any;
+  transferNumber403ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  transferNumber404ApplicationJsonOneOf?: any;
+  transferNumber404ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  transferNumber409ApplicationJsonObject?: TransferNumber409ApplicationJson;
+  transferNumber409ApplicationJSONObject?: TransferNumber409ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferNumber422ApplicationJsonObject?: TransferNumber422ApplicationJson;
+  transferNumber422ApplicationJSONObject?: TransferNumber422ApplicationJson;
 }

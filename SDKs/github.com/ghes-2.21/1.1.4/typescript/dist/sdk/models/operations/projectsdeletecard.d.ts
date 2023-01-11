@@ -15,5 +15,5 @@ export declare class ProjectsDeleteCardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsDeleteCard403ApplicationJsonObject?: ProjectsDeleteCard403ApplicationJson;
+    projectsDeleteCard403ApplicationJSONObject?: ProjectsDeleteCard403ApplicationJson;
 }

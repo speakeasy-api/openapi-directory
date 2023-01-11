@@ -14,8 +14,8 @@ export declare class FetchFarmOrganizationByTypeAndIdRequest extends SpeakeasyBa
 }
 export declare class FetchFarmOrganizationByTypeAndIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     farmOrganization?: any;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

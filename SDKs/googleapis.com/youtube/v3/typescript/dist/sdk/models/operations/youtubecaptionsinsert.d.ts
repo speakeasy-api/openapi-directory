@@ -19,7 +19,7 @@ export declare class YoutubeCaptionsInsertQueryParams extends SpeakeasyBase {
 }
 export declare class YoutubeCaptionsInsertRequests extends SpeakeasyBase {
     applicationOctetStream: Uint8Array;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class YoutubeCaptionsInsertSecurityOption1 extends SpeakeasyBase {
     oauth2: shared.SchemeOauth2;

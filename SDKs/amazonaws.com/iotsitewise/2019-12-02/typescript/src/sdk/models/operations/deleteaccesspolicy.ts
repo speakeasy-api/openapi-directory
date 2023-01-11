@@ -55,7 +55,7 @@ export class DeleteAccessPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAccessPolicyResponse?: Map<string, any>;
+  deleteAccessPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

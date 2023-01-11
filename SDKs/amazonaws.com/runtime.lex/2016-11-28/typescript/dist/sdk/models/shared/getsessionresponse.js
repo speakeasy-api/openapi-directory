@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActiveContext } from "./activecontext";
-import { DialogAction } from "./dialogaction";
-import { IntentSummary } from "./intentsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSessionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var activecontext_1 = require("./activecontext");
+var dialogaction_1 = require("./dialogaction");
+var intentsummary_1 = require("./intentsummary");
 var GetSessionResponse = /** @class */ (function (_super) {
     __extends(GetSessionResponse, _super);
     function GetSessionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeContexts", elemType: ActiveContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeContexts", elemType: activecontext_1.ActiveContext }),
         __metadata("design:type", Array)
     ], GetSessionResponse.prototype, "activeContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogAction" }),
-        __metadata("design:type", DialogAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogAction" }),
+        __metadata("design:type", dialogaction_1.DialogAction)
     ], GetSessionResponse.prototype, "dialogAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recentIntentSummaryView", elemType: IntentSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recentIntentSummaryView", elemType: intentsummary_1.IntentSummary }),
         __metadata("design:type", Array)
     ], GetSessionResponse.prototype, "recentIntentSummaryView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionAttributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionAttributes" }),
+        __metadata("design:type", Object)
     ], GetSessionResponse.prototype, "sessionAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], GetSessionResponse.prototype, "sessionId", void 0);
     return GetSessionResponse;
-}(SpeakeasyBase));
-export { GetSessionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionResponse = GetSessionResponse;

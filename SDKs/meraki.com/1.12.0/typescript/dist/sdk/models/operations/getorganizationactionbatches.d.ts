@@ -17,5 +17,5 @@ export declare class GetOrganizationActionBatchesRequest extends SpeakeasyBase {
 export declare class GetOrganizationActionBatchesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationActionBatches200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationActionBatches200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionRange } from "./dimensionrange";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDuplicatesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionrange_1 = require("./dimensionrange");
+var gridrange_1 = require("./gridrange");
 // DeleteDuplicatesRequest
 /**
  * Removes rows within this range that contain values in the specified columns that are duplicates of values in any previous row. Rows with identical values but different letter cases, formatting, or formulas are considered to be duplicates. This request also removes duplicate rows hidden from view (for example, due to a filter). When removing duplicates, the first instance of each duplicate row scanning from the top downwards is kept in the resulting range. Content outside of the specified range isn't removed, and rows considered duplicates do not have to be adjacent to each other in the range.
@@ -35,13 +38,13 @@ var DeleteDuplicatesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonColumns", elemType: DimensionRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonColumns", elemType: dimensionrange_1.DimensionRange }),
         __metadata("design:type", Array)
     ], DeleteDuplicatesRequest.prototype, "comparisonColumns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], DeleteDuplicatesRequest.prototype, "range", void 0);
     return DeleteDuplicatesRequest;
-}(SpeakeasyBase));
-export { DeleteDuplicatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDuplicatesRequest = DeleteDuplicatesRequest;

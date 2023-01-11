@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContextObject } from "./contextobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CurrentlyPlayingObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var contextobject_1 = require("./contextobject");
 // CurrentlyPlayingObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-currentlyplayingobject - Find more info on the official Spotify Web API Reference
@@ -34,29 +37,29 @@ var CurrentlyPlayingObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", ContextObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", contextobject_1.ContextObject)
     ], CurrentlyPlayingObject.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currently_playing_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currently_playing_type" }),
         __metadata("design:type", String)
     ], CurrentlyPlayingObject.prototype, "currentlyPlayingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_playing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_playing" }),
         __metadata("design:type", Boolean)
     ], CurrentlyPlayingObject.prototype, "isPlaying", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item" }),
         __metadata("design:type", Object)
     ], CurrentlyPlayingObject.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress_ms" }),
         __metadata("design:type", Number)
     ], CurrentlyPlayingObject.prototype, "progressMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Number)
     ], CurrentlyPlayingObject.prototype, "timestamp", void 0);
     return CurrentlyPlayingObject;
-}(SpeakeasyBase));
-export { CurrentlyPlayingObject };
+}(utils_1.SpeakeasyBase));
+exports.CurrentlyPlayingObject = CurrentlyPlayingObject;

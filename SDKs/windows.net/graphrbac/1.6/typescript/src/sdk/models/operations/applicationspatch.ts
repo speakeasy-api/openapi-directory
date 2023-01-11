@@ -8,7 +8,7 @@ export class ApplicationsPatchPathParams extends SpeakeasyBase {
   applicationObjectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

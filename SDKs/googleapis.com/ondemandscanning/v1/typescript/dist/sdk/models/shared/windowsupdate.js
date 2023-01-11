@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
-import { Identity } from "./identity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WindowsUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var category_1 = require("./category");
+var identity_1 = require("./identity");
 // WindowsUpdate
 /**
  * Windows Update represents the metadata about the update for the Windows operating system. The fields in this message come from the Windows Update API documented at https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
@@ -35,33 +38,33 @@ var WindowsUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories", elemType: Category }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: category_1.Category }),
         __metadata("design:type", Array)
     ], WindowsUpdate.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WindowsUpdate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
-        __metadata("design:type", Identity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
+        __metadata("design:type", identity_1.Identity)
     ], WindowsUpdate.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kbArticleIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kbArticleIds" }),
         __metadata("design:type", Array)
     ], WindowsUpdate.prototype, "kbArticleIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastPublishedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastPublishedTimestamp" }),
         __metadata("design:type", String)
     ], WindowsUpdate.prototype, "lastPublishedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportUrl" }),
         __metadata("design:type", String)
     ], WindowsUpdate.prototype, "supportUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], WindowsUpdate.prototype, "title", void 0);
     return WindowsUpdate;
-}(SpeakeasyBase));
-export { WindowsUpdate };
+}(utils_1.SpeakeasyBase));
+exports.WindowsUpdate = WindowsUpdate;

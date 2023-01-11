@@ -1,4 +1,7 @@
-export var WebhookEventTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookEventTypeEnum = void 0;
+var WebhookEventTypeEnum;
 (function (WebhookEventTypeEnum) {
     WebhookEventTypeEnum["Wildcard"] = "*";
     WebhookEventTypeEnum["CrmActivityCreated"] = "crm.activity.created";
@@ -88,4 +91,7 @@ export var WebhookEventTypeEnum;
     WebhookEventTypeEnum["HrisCompanyCreated"] = "hris.company.created";
     WebhookEventTypeEnum["HrisCompanyUpdated"] = "hris.company.updated";
     WebhookEventTypeEnum["HrisCompanyDeleted"] = "hris.company.deleted";
-})(WebhookEventTypeEnum || (WebhookEventTypeEnum = {}));
+    WebhookEventTypeEnum["FileStorageFileCreated"] = "file-storage.file.created";
+    WebhookEventTypeEnum["FileStorageFileUpdated"] = "file-storage.file.updated";
+    WebhookEventTypeEnum["FileStorageFileDeleted"] = "file-storage.file.deleted";
+})(WebhookEventTypeEnum = exports.WebhookEventTypeEnum || (exports.WebhookEventTypeEnum = {}));

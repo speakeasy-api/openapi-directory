@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlatformSummary } from "./platformsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteSummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var platformsummary_1 = require("./platformsummary");
 // SiteSummaryResponse
 /**
  * Response message for GetSiteSummary.
@@ -34,17 +37,17 @@ var SiteSummaryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desktopSummary" }),
-        __metadata("design:type", PlatformSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desktopSummary" }),
+        __metadata("design:type", platformsummary_1.PlatformSummary)
     ], SiteSummaryResponse.prototype, "desktopSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileSummary" }),
-        __metadata("design:type", PlatformSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileSummary" }),
+        __metadata("design:type", platformsummary_1.PlatformSummary)
     ], SiteSummaryResponse.prototype, "mobileSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewedSite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewedSite" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "reviewedSite", void 0);
     return SiteSummaryResponse;
-}(SpeakeasyBase));
-export { SiteSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.SiteSummaryResponse = SiteSummaryResponse;

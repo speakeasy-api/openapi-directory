@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVariantsForTaxonUsingGetResponse = exports.GetVariantsForTaxonUsingGetRequest = exports.GetVariantsForTaxonUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVariantsForTaxonUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetVariantsForTaxonUsingGetPathParams, _super);
     function GetVariantsForTaxonUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
         __metadata("design:type", String)
     ], GetVariantsForTaxonUsingGetPathParams.prototype, "taxonId", void 0);
     return GetVariantsForTaxonUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetVariantsForTaxonUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVariantsForTaxonUsingGetPathParams = GetVariantsForTaxonUsingGetPathParams;
 var GetVariantsForTaxonUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetVariantsForTaxonUsingGetRequest, _super);
     function GetVariantsForTaxonUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVariantsForTaxonUsingGetPathParams)
     ], GetVariantsForTaxonUsingGetRequest.prototype, "pathParams", void 0);
     return GetVariantsForTaxonUsingGetRequest;
-}(SpeakeasyBase));
-export { GetVariantsForTaxonUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVariantsForTaxonUsingGetRequest = GetVariantsForTaxonUsingGetRequest;
 var GetVariantsForTaxonUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetVariantsForTaxonUsingGetResponse, _super);
     function GetVariantsForTaxonUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetVariantsForTaxonUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVariantsForTaxonUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVariantsForTaxonUsingGetResponse.prototype, "statusCode", void 0);
     return GetVariantsForTaxonUsingGetResponse;
-}(SpeakeasyBase));
-export { GetVariantsForTaxonUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVariantsForTaxonUsingGetResponse = GetVariantsForTaxonUsingGetResponse;

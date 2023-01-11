@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetRecentChangesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetRecentChangesResponse = exports.GetGetRecentChangesRequest = exports.GetGetRecentChangesQueryParams = exports.GetGetRecentChangesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetRecentChangesFormatEnum;
 (function (GetGetRecentChangesFormatEnum) {
     GetGetRecentChangesFormatEnum["Json"] = "json";
     GetGetRecentChangesFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetGetRecentChangesFormatEnum;
     GetGetRecentChangesFormatEnum["Dump"] = "dump";
     GetGetRecentChangesFormatEnum["Jpg"] = "jpg";
     GetGetRecentChangesFormatEnum["Pdf"] = "pdf";
-})(GetGetRecentChangesFormatEnum || (GetGetRecentChangesFormatEnum = {}));
+})(GetGetRecentChangesFormatEnum = exports.GetGetRecentChangesFormatEnum || (exports.GetGetRecentChangesFormatEnum = {}));
 var GetGetRecentChangesQueryParams = /** @class */ (function (_super) {
     __extends(GetGetRecentChangesQueryParams, _super);
     function GetGetRecentChangesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetGetRecentChangesQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timestamp" }),
         __metadata("design:type", String)
     ], GetGetRecentChangesQueryParams.prototype, "timestamp", void 0);
     return GetGetRecentChangesQueryParams;
-}(SpeakeasyBase));
-export { GetGetRecentChangesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRecentChangesQueryParams = GetGetRecentChangesQueryParams;
 var GetGetRecentChangesRequest = /** @class */ (function (_super) {
     __extends(GetGetRecentChangesRequest, _super);
     function GetGetRecentChangesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetRecentChangesQueryParams)
     ], GetGetRecentChangesRequest.prototype, "queryParams", void 0);
     return GetGetRecentChangesRequest;
-}(SpeakeasyBase));
-export { GetGetRecentChangesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRecentChangesRequest = GetGetRecentChangesRequest;
 var GetGetRecentChangesResponse = /** @class */ (function (_super) {
     __extends(GetGetRecentChangesResponse, _super);
     function GetGetRecentChangesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetRecentChangesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetRecentChangesResponse.prototype, "statusCode", void 0);
     return GetGetRecentChangesResponse;
-}(SpeakeasyBase));
-export { GetGetRecentChangesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetRecentChangesResponse = GetGetRecentChangesResponse;

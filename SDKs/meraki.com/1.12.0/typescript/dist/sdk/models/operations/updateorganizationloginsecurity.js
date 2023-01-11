@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationLoginSecurityResponse = exports.UpdateOrganizationLoginSecurityRequest = exports.UpdateOrganizationLoginSecurityRequestBody = exports.UpdateOrganizationLoginSecurityPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationLoginSecurityPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationLoginSecurityPathParams, _super);
     function UpdateOrganizationLoginSecurityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationLoginSecurityPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationLoginSecurityPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationLoginSecurityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationLoginSecurityPathParams = UpdateOrganizationLoginSecurityPathParams;
 var UpdateOrganizationLoginSecurityRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationLoginSecurityRequestBody, _super);
     function UpdateOrganizationLoginSecurityRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountLockoutAttempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountLockoutAttempts" }),
         __metadata("design:type", Number)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "accountLockoutAttempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceAccountLockout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceAccountLockout" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceAccountLockout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceDifferentPasswords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceDifferentPasswords" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceDifferentPasswords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceIdleTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceIdleTimeout" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceIdleTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceLoginIpRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceLoginIpRanges" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceLoginIpRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcePasswordExpiration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcePasswordExpiration" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforcePasswordExpiration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceStrongPasswords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceStrongPasswords" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceStrongPasswords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceTwoFactorAuth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceTwoFactorAuth" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "enforceTwoFactorAuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleTimeoutMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleTimeoutMinutes" }),
         __metadata("design:type", Number)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "idleTimeoutMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loginIpRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loginIpRanges" }),
         __metadata("design:type", Array)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "loginIpRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numDifferentPasswords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numDifferentPasswords" }),
         __metadata("design:type", Number)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "numDifferentPasswords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordExpirationDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordExpirationDays" }),
         __metadata("design:type", Number)
     ], UpdateOrganizationLoginSecurityRequestBody.prototype, "passwordExpirationDays", void 0);
     return UpdateOrganizationLoginSecurityRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationLoginSecurityRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationLoginSecurityRequestBody = UpdateOrganizationLoginSecurityRequestBody;
 var UpdateOrganizationLoginSecurityRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationLoginSecurityRequest, _super);
     function UpdateOrganizationLoginSecurityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationLoginSecurityPathParams)
     ], UpdateOrganizationLoginSecurityRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationLoginSecurityRequestBody)
     ], UpdateOrganizationLoginSecurityRequest.prototype, "request", void 0);
     return UpdateOrganizationLoginSecurityRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationLoginSecurityRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationLoginSecurityRequest = UpdateOrganizationLoginSecurityRequest;
 var UpdateOrganizationLoginSecurityResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationLoginSecurityResponse, _super);
     function UpdateOrganizationLoginSecurityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationLoginSecurityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationLoginSecurityResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationLoginSecurityResponse.prototype, "updateOrganizationLoginSecurity200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationLoginSecurityResponse.prototype, "updateOrganizationLoginSecurity200ApplicationJSONObject", void 0);
     return UpdateOrganizationLoginSecurityResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationLoginSecurityResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationLoginSecurityResponse = UpdateOrganizationLoginSecurityResponse;

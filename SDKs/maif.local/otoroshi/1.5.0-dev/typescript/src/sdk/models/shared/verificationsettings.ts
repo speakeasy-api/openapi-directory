@@ -9,7 +9,7 @@ import { MappingSettings } from "./mappingsettings";
 **/
 export class VerificationSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields: Map<string, string>;
+  fields: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mappingSettings" })
   mappingSettings?: MappingSettings;

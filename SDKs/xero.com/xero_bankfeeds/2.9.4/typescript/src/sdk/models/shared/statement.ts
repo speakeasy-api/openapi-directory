@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { EndBalance } from "./endbalance";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { StartBalance } from "./startbalance";
 import { StatementLine } from "./statementline";
 
@@ -13,8 +13,8 @@ export class Statement extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=endDate" })
   endDate?: Date;
 
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: Error })
-  errors?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorT })
+  errors?: ErrorT[];
 
   @SpeakeasyMetadata({ data: "json, name=feedConnectionId" })
   feedConnectionId?: string;

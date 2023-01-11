@@ -11,7 +11,7 @@ export declare class AddSupportingWorkForGoalRequestBody extends SpeakeasyBase {
     data?: shared.GoalAddSupportingWorkRequest;
 }
 export declare class AddSupportingWorkForGoal200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddSupportingWorkForGoalRequest extends SpeakeasyBase {
     pathParams: AddSupportingWorkForGoalPathParams;
@@ -22,5 +22,5 @@ export declare class AddSupportingWorkForGoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addSupportingWorkForGoal200ApplicationJsonObject?: AddSupportingWorkForGoal200ApplicationJson;
+    addSupportingWorkForGoal200ApplicationJSONObject?: AddSupportingWorkForGoal200ApplicationJson;
 }

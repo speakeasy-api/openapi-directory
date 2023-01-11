@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCameraSenseObjectDetectionModelsResponse = exports.GetDeviceCameraSenseObjectDetectionModelsRequest = exports.GetDeviceCameraSenseObjectDetectionModelsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCameraSenseObjectDetectionModelsPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraSenseObjectDetectionModelsPathParams, _super);
     function GetDeviceCameraSenseObjectDetectionModelsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCameraSenseObjectDetectionModelsPathParams.prototype, "serial", void 0);
     return GetDeviceCameraSenseObjectDetectionModelsPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraSenseObjectDetectionModelsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraSenseObjectDetectionModelsPathParams = GetDeviceCameraSenseObjectDetectionModelsPathParams;
 var GetDeviceCameraSenseObjectDetectionModelsRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCameraSenseObjectDetectionModelsRequest, _super);
     function GetDeviceCameraSenseObjectDetectionModelsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraSenseObjectDetectionModelsPathParams)
     ], GetDeviceCameraSenseObjectDetectionModelsRequest.prototype, "pathParams", void 0);
     return GetDeviceCameraSenseObjectDetectionModelsRequest;
-}(SpeakeasyBase));
-export { GetDeviceCameraSenseObjectDetectionModelsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraSenseObjectDetectionModelsRequest = GetDeviceCameraSenseObjectDetectionModelsRequest;
 var GetDeviceCameraSenseObjectDetectionModelsResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCameraSenseObjectDetectionModelsResponse, _super);
     function GetDeviceCameraSenseObjectDetectionModelsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCameraSenseObjectDetectionModelsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCameraSenseObjectDetectionModelsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCameraSenseObjectDetectionModelsResponse.prototype, "getDeviceCameraSenseObjectDetectionModels200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCameraSenseObjectDetectionModelsResponse.prototype, "getDeviceCameraSenseObjectDetectionModels200ApplicationJSONObject", void 0);
     return GetDeviceCameraSenseObjectDetectionModelsResponse;
-}(SpeakeasyBase));
-export { GetDeviceCameraSenseObjectDetectionModelsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraSenseObjectDetectionModelsResponse = GetDeviceCameraSenseObjectDetectionModelsResponse;

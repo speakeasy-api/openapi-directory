@@ -8,5 +8,5 @@ export declare class GetOrganizationSmApnsCertRequest extends SpeakeasyBase {
 export declare class GetOrganizationSmApnsCertResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationSmApnsCert200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationSmApnsCert200ApplicationJSONObject?: Record<string, any>;
 }

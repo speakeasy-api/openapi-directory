@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListHypernymsResponse = exports.ListHypernymsRequest = exports.ListHypernymsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListHypernymsQueryParams = /** @class */ (function (_super) {
     __extends(ListHypernymsQueryParams, _super);
     function ListHypernymsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=family" }),
         __metadata("design:type", String)
     ], ListHypernymsQueryParams.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxLevel" }),
         __metadata("design:type", String)
     ], ListHypernymsQueryParams.prototype, "maxLevel", void 0);
     return ListHypernymsQueryParams;
-}(SpeakeasyBase));
-export { ListHypernymsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListHypernymsQueryParams = ListHypernymsQueryParams;
 var ListHypernymsRequest = /** @class */ (function (_super) {
     __extends(ListHypernymsRequest, _super);
     function ListHypernymsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListHypernymsQueryParams)
     ], ListHypernymsRequest.prototype, "queryParams", void 0);
     return ListHypernymsRequest;
-}(SpeakeasyBase));
-export { ListHypernymsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListHypernymsRequest = ListHypernymsRequest;
 var ListHypernymsResponse = /** @class */ (function (_super) {
     __extends(ListHypernymsResponse, _super);
     function ListHypernymsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListHypernymsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListHypernymsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ListHypernymsResponse.prototype, "listHypernyms200ApplicationJsonArrays", void 0);
+    ], ListHypernymsResponse.prototype, "listHypernyms200ApplicationJSONArrays", void 0);
     return ListHypernymsResponse;
-}(SpeakeasyBase));
-export { ListHypernymsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListHypernymsResponse = ListHypernymsResponse;

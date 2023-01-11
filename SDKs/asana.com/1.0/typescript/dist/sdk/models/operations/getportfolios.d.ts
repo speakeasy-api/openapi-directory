@@ -18,5 +18,5 @@ export declare class GetPortfoliosResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getPortfolios200ApplicationJsonObject?: GetPortfolios200ApplicationJson;
+    getPortfolios200ApplicationJSONObject?: GetPortfolios200ApplicationJson;
 }

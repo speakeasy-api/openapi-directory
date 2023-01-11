@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCameraAnalyticsOverviewResponse = exports.GetDeviceCameraAnalyticsOverviewRequest = exports.GetDeviceCameraAnalyticsOverviewQueryParams = exports.GetDeviceCameraAnalyticsOverviewObjectTypeEnum = exports.GetDeviceCameraAnalyticsOverviewPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCameraAnalyticsOverviewPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraAnalyticsOverviewPathParams, _super);
     function GetDeviceCameraAnalyticsOverviewPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCameraAnalyticsOverviewPathParams.prototype, "serial", void 0);
     return GetDeviceCameraAnalyticsOverviewPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraAnalyticsOverviewPathParams };
-export var GetDeviceCameraAnalyticsOverviewObjectTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraAnalyticsOverviewPathParams = GetDeviceCameraAnalyticsOverviewPathParams;
+var GetDeviceCameraAnalyticsOverviewObjectTypeEnum;
 (function (GetDeviceCameraAnalyticsOverviewObjectTypeEnum) {
     GetDeviceCameraAnalyticsOverviewObjectTypeEnum["Person"] = "person";
     GetDeviceCameraAnalyticsOverviewObjectTypeEnum["Vehicle"] = "vehicle";
-})(GetDeviceCameraAnalyticsOverviewObjectTypeEnum || (GetDeviceCameraAnalyticsOverviewObjectTypeEnum = {}));
+})(GetDeviceCameraAnalyticsOverviewObjectTypeEnum = exports.GetDeviceCameraAnalyticsOverviewObjectTypeEnum || (exports.GetDeviceCameraAnalyticsOverviewObjectTypeEnum = {}));
 var GetDeviceCameraAnalyticsOverviewQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraAnalyticsOverviewQueryParams, _super);
     function GetDeviceCameraAnalyticsOverviewQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=objectType" }),
         __metadata("design:type", String)
     ], GetDeviceCameraAnalyticsOverviewQueryParams.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetDeviceCameraAnalyticsOverviewQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetDeviceCameraAnalyticsOverviewQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetDeviceCameraAnalyticsOverviewQueryParams.prototype, "timespan", void 0);
     return GetDeviceCameraAnalyticsOverviewQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraAnalyticsOverviewQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraAnalyticsOverviewQueryParams = GetDeviceCameraAnalyticsOverviewQueryParams;
 var GetDeviceCameraAnalyticsOverviewRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCameraAnalyticsOverviewRequest, _super);
     function GetDeviceCameraAnalyticsOverviewRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraAnalyticsOverviewPathParams)
     ], GetDeviceCameraAnalyticsOverviewRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraAnalyticsOverviewQueryParams)
     ], GetDeviceCameraAnalyticsOverviewRequest.prototype, "queryParams", void 0);
     return GetDeviceCameraAnalyticsOverviewRequest;
-}(SpeakeasyBase));
-export { GetDeviceCameraAnalyticsOverviewRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraAnalyticsOverviewRequest = GetDeviceCameraAnalyticsOverviewRequest;
 var GetDeviceCameraAnalyticsOverviewResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCameraAnalyticsOverviewResponse, _super);
     function GetDeviceCameraAnalyticsOverviewResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCameraAnalyticsOverviewResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCameraAnalyticsOverviewResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCameraAnalyticsOverviewResponse.prototype, "getDeviceCameraAnalyticsOverview200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCameraAnalyticsOverviewResponse.prototype, "getDeviceCameraAnalyticsOverview200ApplicationJSONObject", void 0);
     return GetDeviceCameraAnalyticsOverviewResponse;
-}(SpeakeasyBase));
-export { GetDeviceCameraAnalyticsOverviewResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraAnalyticsOverviewResponse = GetDeviceCameraAnalyticsOverviewResponse;

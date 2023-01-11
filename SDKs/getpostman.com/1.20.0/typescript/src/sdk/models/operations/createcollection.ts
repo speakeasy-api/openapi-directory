@@ -130,8 +130,8 @@ export class CreateCollectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createCollection200ApplicationJsonObject?: CreateCollection200ApplicationJson;
+  createCollection200ApplicationJSONObject?: CreateCollection200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createCollection400ApplicationJsonObject?: CreateCollection400ApplicationJson;
+  createCollection400ApplicationJSONObject?: CreateCollection400ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindingSourceDetail } from "./findingsourcedetail";
-import { FindingSourceTypeEnum } from "./findingsourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var findingsourcedetail_1 = require("./findingsourcedetail");
+var findingsourcetypeenum_1 = require("./findingsourcetypeenum");
 // FindingSource
 /**
  * The source of the finding. This indicates how the access that generated the finding is granted. It is populated for Amazon S3 bucket findings.
@@ -35,13 +38,13 @@ var FindingSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
-        __metadata("design:type", FindingSourceDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", findingsourcedetail_1.FindingSourceDetail)
     ], FindingSource.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FindingSource.prototype, "type", void 0);
     return FindingSource;
-}(SpeakeasyBase));
-export { FindingSource };
+}(utils_1.SpeakeasyBase));
+exports.FindingSource = FindingSource;

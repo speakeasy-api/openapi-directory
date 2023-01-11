@@ -29,7 +29,7 @@ export class TagResourceHeaders extends SpeakeasyBase {
 
 export class TagResourceRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags", elemType: shared.Tag })
   tags: shared.Tag[];
@@ -65,7 +65,7 @@ export class TagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagResourceOutput?: Map<string, any>;
+  tagResourceOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   tagsPerResourceExceededLimitException?: any;

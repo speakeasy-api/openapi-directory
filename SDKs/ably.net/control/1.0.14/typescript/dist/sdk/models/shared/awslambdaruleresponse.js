@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,98 +23,100 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AwsLambdaRuleResponseRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsLambdaRuleResponse = exports.AwsLambdaRuleResponseTarget = exports.AwsLambdaRuleResponseStatusEnum = exports.AwsLambdaRuleResponseRuleTypeEnum = exports.AwsLambdaRuleResponseRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AwsLambdaRuleResponseRequestModeEnum;
 (function (AwsLambdaRuleResponseRequestModeEnum) {
     AwsLambdaRuleResponseRequestModeEnum["Single"] = "single";
-})(AwsLambdaRuleResponseRequestModeEnum || (AwsLambdaRuleResponseRequestModeEnum = {}));
-export var AwsLambdaRuleResponseRuleTypeEnum;
+})(AwsLambdaRuleResponseRequestModeEnum = exports.AwsLambdaRuleResponseRequestModeEnum || (exports.AwsLambdaRuleResponseRequestModeEnum = {}));
+var AwsLambdaRuleResponseRuleTypeEnum;
 (function (AwsLambdaRuleResponseRuleTypeEnum) {
     AwsLambdaRuleResponseRuleTypeEnum["AwsLambda"] = "aws/lambda";
-})(AwsLambdaRuleResponseRuleTypeEnum || (AwsLambdaRuleResponseRuleTypeEnum = {}));
-export var AwsLambdaRuleResponseStatusEnum;
+})(AwsLambdaRuleResponseRuleTypeEnum = exports.AwsLambdaRuleResponseRuleTypeEnum || (exports.AwsLambdaRuleResponseRuleTypeEnum = {}));
+var AwsLambdaRuleResponseStatusEnum;
 (function (AwsLambdaRuleResponseStatusEnum) {
     AwsLambdaRuleResponseStatusEnum["Enabled"] = "enabled";
     AwsLambdaRuleResponseStatusEnum["Disabled"] = "disabled";
-})(AwsLambdaRuleResponseStatusEnum || (AwsLambdaRuleResponseStatusEnum = {}));
+})(AwsLambdaRuleResponseStatusEnum = exports.AwsLambdaRuleResponseStatusEnum || (exports.AwsLambdaRuleResponseStatusEnum = {}));
 var AwsLambdaRuleResponseTarget = /** @class */ (function (_super) {
     __extends(AwsLambdaRuleResponseTarget, _super);
     function AwsLambdaRuleResponseTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", Object)
     ], AwsLambdaRuleResponseTarget.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AwsLambdaRuleResponseTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponseTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionName" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponseTarget.prototype, "functionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponseTarget.prototype, "region", void 0);
     return AwsLambdaRuleResponseTarget;
-}(SpeakeasyBase));
-export { AwsLambdaRuleResponseTarget };
+}(utils_1.SpeakeasyBase));
+exports.AwsLambdaRuleResponseTarget = AwsLambdaRuleResponseTarget;
 var AwsLambdaRuleResponse = /** @class */ (function (_super) {
     __extends(AwsLambdaRuleResponse, _super);
     function AwsLambdaRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", Object)
     ], AwsLambdaRuleResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Number)
     ], AwsLambdaRuleResponse.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified" }),
         __metadata("design:type", Number)
     ], AwsLambdaRuleResponse.prototype, "modified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AwsLambdaRuleResponse.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AwsLambdaRuleResponseTarget)
     ], AwsLambdaRuleResponse.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], AwsLambdaRuleResponse.prototype, "version", void 0);
     return AwsLambdaRuleResponse;
-}(SpeakeasyBase));
-export { AwsLambdaRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.AwsLambdaRuleResponse = AwsLambdaRuleResponse;

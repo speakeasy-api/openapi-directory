@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,110 +14,135 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposCreateOrUpdateEnvironmentResponse = exports.ReposCreateOrUpdateEnvironmentRequest = exports.ReposCreateOrUpdateEnvironmentRequestBody = exports.ReposCreateOrUpdateEnvironmentRequestBodyReviewers = exports.ReposCreateOrUpdateEnvironmentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposCreateOrUpdateEnvironmentPathParams = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateEnvironmentPathParams, _super);
     function ReposCreateOrUpdateEnvironmentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_name" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateEnvironmentPathParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateEnvironmentPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateEnvironmentPathParams.prototype, "repo", void 0);
     return ReposCreateOrUpdateEnvironmentPathParams;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateEnvironmentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateEnvironmentPathParams = ReposCreateOrUpdateEnvironmentPathParams;
 var ReposCreateOrUpdateEnvironmentRequestBodyReviewers = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateEnvironmentRequestBodyReviewers, _super);
     function ReposCreateOrUpdateEnvironmentRequestBodyReviewers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ReposCreateOrUpdateEnvironmentRequestBodyReviewers.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateEnvironmentRequestBodyReviewers.prototype, "type", void 0);
     return ReposCreateOrUpdateEnvironmentRequestBodyReviewers;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateEnvironmentRequestBodyReviewers };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateEnvironmentRequestBodyReviewers = ReposCreateOrUpdateEnvironmentRequestBodyReviewers;
 var ReposCreateOrUpdateEnvironmentRequestBody = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateEnvironmentRequestBody, _super);
     function ReposCreateOrUpdateEnvironmentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployment_branch_policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployment_branch_policy" }),
         __metadata("design:type", shared.DeploymentBranchPolicy)
     ], ReposCreateOrUpdateEnvironmentRequestBody.prototype, "deploymentBranchPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewers", elemType: ReposCreateOrUpdateEnvironmentRequestBodyReviewers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewers", elemType: ReposCreateOrUpdateEnvironmentRequestBodyReviewers }),
         __metadata("design:type", Array)
     ], ReposCreateOrUpdateEnvironmentRequestBody.prototype, "reviewers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wait_timer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wait_timer" }),
         __metadata("design:type", Number)
     ], ReposCreateOrUpdateEnvironmentRequestBody.prototype, "waitTimer", void 0);
     return ReposCreateOrUpdateEnvironmentRequestBody;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateEnvironmentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateEnvironmentRequestBody = ReposCreateOrUpdateEnvironmentRequestBody;
 var ReposCreateOrUpdateEnvironmentRequest = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateEnvironmentRequest, _super);
     function ReposCreateOrUpdateEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposCreateOrUpdateEnvironmentPathParams)
     ], ReposCreateOrUpdateEnvironmentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposCreateOrUpdateEnvironmentRequestBody)
     ], ReposCreateOrUpdateEnvironmentRequest.prototype, "request", void 0);
     return ReposCreateOrUpdateEnvironmentRequest;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateEnvironmentRequest = ReposCreateOrUpdateEnvironmentRequest;
 var ReposCreateOrUpdateEnvironmentResponse = /** @class */ (function (_super) {
     __extends(ReposCreateOrUpdateEnvironmentResponse, _super);
     function ReposCreateOrUpdateEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposCreateOrUpdateEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposCreateOrUpdateEnvironmentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ReposCreateOrUpdateEnvironmentResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Environment)
     ], ReposCreateOrUpdateEnvironmentResponse.prototype, "environment", void 0);
     return ReposCreateOrUpdateEnvironmentResponse;
-}(SpeakeasyBase));
-export { ReposCreateOrUpdateEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateOrUpdateEnvironmentResponse = ReposCreateOrUpdateEnvironmentResponse;

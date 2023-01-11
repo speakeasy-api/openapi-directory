@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { AppliedInventoriesTagsForServiceOfferingRequest, AppliedInventoriesTagsForServiceOfferingResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetDocumentationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     userSecurity: {
       password: "YOUR_PASSWORD_HERE",
@@ -32,21 +31,8 @@ const sdk = new SDK(WithSecurity(
     },
   }
 ));
-    
-const req: AppliedInventoriesTagsForServiceOfferingRequest = {
-  pathParams: {
-    id: "consequatur",
-  },
-  request: {
-    serviceParameters: {
-      "non": "ipsa",
-      "aut": "debitis",
-      "doloribus": "distinctio",
-    },
-  },
-};
 
-sdk.sdk.appliedInventoriesTagsForServiceOffering(req).then((res: AppliedInventoriesTagsForServiceOfferingResponse | AxiosError) => {
+sdk.getDocumentation().then((res: GetDocumentationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,20 +43,55 @@ sdk.sdk.appliedInventoriesTagsForServiceOffering(req).then((res: AppliedInventor
 
 ### SDK SDK
 
-* `appliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `getDocumentation` - Return this API document in JSON format
-* `incrementalRefreshSource` - Incremental Refresh an existing Source
-* `listServiceCredentialTypes` - List ServiceCredentialTypes
+* `postGraphQl` - Perform a GraphQL Query
+
+### ServiceCredential
+
 * `listServiceCredentials` - List ServiceCredentials
+* `showServiceCredential` - Show an existing ServiceCredential
+
+### ServiceCredentialType
+
+* `listServiceCredentialTypes` - List ServiceCredentialTypes
+* `showServiceCredentialType` - Show an existing ServiceCredentialType
+
+### ServiceInstance
+
 * `listServiceInstances` - List ServiceInstances
+* `showServiceInstance` - Show an existing ServiceInstance
+
+### ServiceInventory
+
 * `listServiceInventories` - List ServiceInventories
 * `listServiceInventoryTags` - List Tags for ServiceInventory
-* `listServiceOfferingNodes` - List ServiceOfferingNodes
+* `showServiceInventory` - Show an existing ServiceInventory
+* `tagServiceInventory` - Tag a ServiceInventory
+* `untagServiceInventory` - Untag a ServiceInventory
+
+### ServiceOffering
+
+* `appliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `listServiceOfferingServiceInstances` - List ServiceInstances for ServiceOffering
 * `listServiceOfferingServiceOfferingNodes` - List ServiceOfferingNodes for ServiceOffering
 * `listServiceOfferingServicePlans` - List ServicePlans for ServiceOffering
 * `listServiceOfferings` - List ServiceOfferings
+* `orderServiceOffering` - Order an existing ServiceOffering
+* `showServiceOffering` - Show an existing ServiceOffering
+
+### ServiceOfferingNode
+
+* `listServiceOfferingNodes` - List ServiceOfferingNodes
+* `showServiceOfferingNode` - Show an existing ServiceOfferingNode
+
+### ServicePlan
+
 * `listServicePlans` - List ServicePlans
+* `showServicePlan` - Show an existing ServicePlan
+
+### Source
+
+* `incrementalRefreshSource` - Incremental Refresh an existing Source
 * `listSourceServiceInstances` - List ServiceInstances for Source
 * `listSourceServiceInventories` - List ServiceInventories for Source
 * `listSourceServiceOfferingNodes` - List ServiceOfferingNodes for Source
@@ -78,22 +99,17 @@ sdk.sdk.appliedInventoriesTagsForServiceOffering(req).then((res: AppliedInventor
 * `listSourceServicePlans` - List ServicePlans for Source
 * `listSourceTasks` - List Tasks for Source
 * `listSources` - List Sources
-* `listTags` - List Tags
-* `listTasks` - List Tasks
-* `orderServiceOffering` - Order an existing ServiceOffering
-* `postGraphQl` - Perform a GraphQL Query
 * `refreshSource` -  Refresh an existing Source
-* `showServiceCredential` - Show an existing ServiceCredential
-* `showServiceCredentialType` - Show an existing ServiceCredentialType
-* `showServiceInstance` - Show an existing ServiceInstance
-* `showServiceInventory` - Show an existing ServiceInventory
-* `showServiceOffering` - Show an existing ServiceOffering
-* `showServiceOfferingNode` - Show an existing ServiceOfferingNode
-* `showServicePlan` - Show an existing ServicePlan
 * `showSource` - Show an existing Source
+
+### Tags
+
+* `listTags` - List Tags
+
+### Task
+
+* `listTasks` - List Tasks
 * `showTask` - Show an existing Task
-* `tagServiceInventory` - Tag a ServiceInventory
-* `untagServiceInventory` - Untag a ServiceInventory
 * `updateTask` - Update an existing Task
 
 <!-- End SDK Available Operations -->

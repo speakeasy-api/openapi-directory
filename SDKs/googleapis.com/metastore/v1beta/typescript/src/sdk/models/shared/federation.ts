@@ -12,32 +12,13 @@ export enum FederationStateEnum {
 }
 
 
-// FederationInput
-/** 
- * Represents a federation of multiple backend metastores.
-**/
-export class FederationInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=backendMetastores", elemType: BackendMetastore })
-  backendMetastores?: Map<string, BackendMetastore>;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=version" })
-  version?: string;
-}
-
-
 // Federation
 /** 
  * Represents a federation of multiple backend metastores.
 **/
 export class Federation extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=backendMetastores", elemType: BackendMetastore })
-  backendMetastores?: Map<string, BackendMetastore>;
+  backendMetastores?: Record<string, BackendMetastore>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -46,7 +27,7 @@ export class Federation extends SpeakeasyBase {
   endpointUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -62,6 +43,25 @@ export class Federation extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: string;
+}
+
+
+// FederationInput
+/** 
+ * Represents a federation of multiple backend metastores.
+**/
+export class FederationInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=backendMetastores", elemType: BackendMetastore })
+  backendMetastores?: Record<string, BackendMetastore>;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

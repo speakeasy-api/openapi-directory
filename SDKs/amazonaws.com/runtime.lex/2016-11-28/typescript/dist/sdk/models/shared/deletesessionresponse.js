@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSessionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSessionResponse = /** @class */ (function (_super) {
     __extends(DeleteSessionResponse, _super);
     function DeleteSessionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAlias" }),
         __metadata("design:type", String)
     ], DeleteSessionResponse.prototype, "botAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botName" }),
         __metadata("design:type", String)
     ], DeleteSessionResponse.prototype, "botName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], DeleteSessionResponse.prototype, "sessionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], DeleteSessionResponse.prototype, "userId", void 0);
     return DeleteSessionResponse;
-}(SpeakeasyBase));
-export { DeleteSessionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionResponse = DeleteSessionResponse;

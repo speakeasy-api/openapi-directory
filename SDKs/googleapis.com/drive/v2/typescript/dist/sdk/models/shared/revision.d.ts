@@ -6,7 +6,7 @@ import { User } from "./user";
 export declare class Revision extends SpeakeasyBase {
     downloadUrl?: string;
     etag?: string;
-    exportLinks?: Map<string, string>;
+    exportLinks?: Record<string, string>;
     fileSize?: string;
     id?: string;
     kind?: string;

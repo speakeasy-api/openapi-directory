@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PublicSubscriptionStatusLegalBasisEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicSubscriptionStatus = exports.PublicSubscriptionStatusStatusEnum = exports.PublicSubscriptionStatusSourceOfStatusEnum = exports.PublicSubscriptionStatusLegalBasisEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PublicSubscriptionStatusLegalBasisEnum;
 (function (PublicSubscriptionStatusLegalBasisEnum) {
     PublicSubscriptionStatusLegalBasisEnum["LegitimateInterestPql"] = "LEGITIMATE_INTEREST_PQL";
     PublicSubscriptionStatusLegalBasisEnum["LegitimateInterestClient"] = "LEGITIMATE_INTEREST_CLIENT";
@@ -32,18 +35,18 @@ export var PublicSubscriptionStatusLegalBasisEnum;
     PublicSubscriptionStatusLegalBasisEnum["NonGdpr"] = "NON_GDPR";
     PublicSubscriptionStatusLegalBasisEnum["ProcessAndStore"] = "PROCESS_AND_STORE";
     PublicSubscriptionStatusLegalBasisEnum["LegitimateInterestOther"] = "LEGITIMATE_INTEREST_OTHER";
-})(PublicSubscriptionStatusLegalBasisEnum || (PublicSubscriptionStatusLegalBasisEnum = {}));
-export var PublicSubscriptionStatusSourceOfStatusEnum;
+})(PublicSubscriptionStatusLegalBasisEnum = exports.PublicSubscriptionStatusLegalBasisEnum || (exports.PublicSubscriptionStatusLegalBasisEnum = {}));
+var PublicSubscriptionStatusSourceOfStatusEnum;
 (function (PublicSubscriptionStatusSourceOfStatusEnum) {
     PublicSubscriptionStatusSourceOfStatusEnum["PortalWideStatus"] = "PORTAL_WIDE_STATUS";
     PublicSubscriptionStatusSourceOfStatusEnum["BrandWideStatus"] = "BRAND_WIDE_STATUS";
     PublicSubscriptionStatusSourceOfStatusEnum["SubscriptionStatus"] = "SUBSCRIPTION_STATUS";
-})(PublicSubscriptionStatusSourceOfStatusEnum || (PublicSubscriptionStatusSourceOfStatusEnum = {}));
-export var PublicSubscriptionStatusStatusEnum;
+})(PublicSubscriptionStatusSourceOfStatusEnum = exports.PublicSubscriptionStatusSourceOfStatusEnum || (exports.PublicSubscriptionStatusSourceOfStatusEnum = {}));
+var PublicSubscriptionStatusStatusEnum;
 (function (PublicSubscriptionStatusStatusEnum) {
     PublicSubscriptionStatusStatusEnum["Subscribed"] = "SUBSCRIBED";
     PublicSubscriptionStatusStatusEnum["NotSubscribed"] = "NOT_SUBSCRIBED";
-})(PublicSubscriptionStatusStatusEnum || (PublicSubscriptionStatusStatusEnum = {}));
+})(PublicSubscriptionStatusStatusEnum = exports.PublicSubscriptionStatusStatusEnum || (exports.PublicSubscriptionStatusStatusEnum = {}));
 // PublicSubscriptionStatus
 /**
  * The status of a subscription for a contact.
@@ -54,41 +57,41 @@ var PublicSubscriptionStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandId" }),
         __metadata("design:type", Number)
     ], PublicSubscriptionStatus.prototype, "brandId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legalBasis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legalBasis" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "legalBasis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legalBasisExplanation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legalBasisExplanation" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "legalBasisExplanation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferenceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferenceGroupName" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "preferenceGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceOfStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceOfStatus" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "sourceOfStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatus.prototype, "status", void 0);
     return PublicSubscriptionStatus;
-}(SpeakeasyBase));
-export { PublicSubscriptionStatus };
+}(utils_1.SpeakeasyBase));
+exports.PublicSubscriptionStatus = PublicSubscriptionStatus;

@@ -29,7 +29,7 @@ export class ProfilingGroupDescription extends SpeakeasyBase {
   profilingStatus?: ProfilingStatus;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=updatedAt" })
   updatedAt?: Date;

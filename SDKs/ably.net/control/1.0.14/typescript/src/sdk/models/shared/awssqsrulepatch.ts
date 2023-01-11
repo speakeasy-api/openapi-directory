@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
 import { AwsAccessKeys } from "./awsaccesskeys";
 import { AwsAssumeRole } from "./awsassumerole";
+import { RuleSource } from "./rulesource";
 
 
 export enum AwsSqsRulePatchRequestModeEnum {

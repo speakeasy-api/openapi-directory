@@ -28,6 +28,6 @@ export declare class UntagResourceResponse extends SpeakeasyBase {
     serviceQuotaExceededException?: any;
     statusCode: number;
     throttlingException?: any;
-    untagResourceResponse?: Map<string, any>;
+    untagResourceResponse?: Record<string, any>;
     validationException?: any;
 }

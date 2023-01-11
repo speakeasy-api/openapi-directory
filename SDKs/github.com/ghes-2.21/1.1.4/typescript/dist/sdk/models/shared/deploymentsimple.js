@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentSimple = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeploymentSimple
 /**
  * A deployment created as the result of an Actions check run from a workflow that references an environment
@@ -33,61 +36,61 @@ var DeploymentSimple = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], DeploymentSimple.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DeploymentSimple.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=original_environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=original_environment" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "originalEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performed_via_github_app" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performed_via_github_app" }),
+        __metadata("design:type", Object)
     ], DeploymentSimple.prototype, "performedViaGithubApp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=production_environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=production_environment" }),
         __metadata("design:type", Boolean)
     ], DeploymentSimple.prototype, "productionEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_url" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "repositoryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statuses_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statuses_url" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "statusesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "task", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transient_environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transient_environment" }),
         __metadata("design:type", Boolean)
     ], DeploymentSimple.prototype, "transientEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], DeploymentSimple.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DeploymentSimple.prototype, "url", void 0);
     return DeploymentSimple;
-}(SpeakeasyBase));
-export { DeploymentSimple };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentSimple = DeploymentSimple;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
 // UsageMetrics
 /**
  * Usage metrics represent approximate total resources consumed by a workload.
@@ -33,13 +36,13 @@ var UsageMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=milliDcuSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=milliDcuSeconds" }),
         __metadata("design:type", String)
     ], UsageMetrics.prototype, "milliDcuSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shuffleStorageGbSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shuffleStorageGbSeconds" }),
         __metadata("design:type", String)
     ], UsageMetrics.prototype, "shuffleStorageGbSeconds", void 0);
     return UsageMetrics;
-}(SpeakeasyBase));
-export { UsageMetrics };
+}(utils_1.SpeakeasyBase));
+exports.UsageMetrics = UsageMetrics;

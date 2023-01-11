@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFrontOriginAccessIdentitySummary } from "./cloudfrontoriginaccessidentitysummary";
+import { CloudFrontOriginAccessIdentitySummaryList } from "./cloudfrontoriginaccessidentitysummarylist";
 
 
 
@@ -11,8 +11,8 @@ export class CloudFrontOriginAccessIdentityList extends SpeakeasyBase {
   @SpeakeasyMetadata()
   isTruncated: boolean;
 
-  @SpeakeasyMetadata({ elemType: CloudFrontOriginAccessIdentitySummary })
-  items?: CloudFrontOriginAccessIdentitySummary[];
+  @SpeakeasyMetadata({ elemType: CloudFrontOriginAccessIdentitySummaryList })
+  items?: CloudFrontOriginAccessIdentitySummaryList[];
 
   @SpeakeasyMetadata()
   marker: string;

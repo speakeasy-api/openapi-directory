@@ -64,5 +64,5 @@ export class UploadInventoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  uploadInventory200ApplicationJsonObject?: UploadInventory200ApplicationJson;
+  uploadInventory200ApplicationJSONObject?: UploadInventory200ApplicationJson;
 }

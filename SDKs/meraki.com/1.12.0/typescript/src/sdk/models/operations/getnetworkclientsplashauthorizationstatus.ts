@@ -25,5 +25,5 @@ export class GetNetworkClientSplashAuthorizationStatusResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClientSplashAuthorizationStatus200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClientSplashAuthorizationStatus200ApplicationJSONObject?: Record<string, any>;
 }

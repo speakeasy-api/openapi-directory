@@ -15,7 +15,7 @@ export declare class PullsListCommitsRequest extends SpeakeasyBase {
 }
 export declare class PullsListCommitsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     commits?: shared.Commit[];
 }

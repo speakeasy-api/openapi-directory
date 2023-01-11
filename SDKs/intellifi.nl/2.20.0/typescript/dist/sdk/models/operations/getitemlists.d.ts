@@ -40,5 +40,5 @@ export declare class GetItemListsRequest extends SpeakeasyBase {
 export declare class GetItemListsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getItemLists200ApplicationJsonObject?: GetItemLists200ApplicationJson;
+    getItemLists200ApplicationJSONObject?: GetItemLists200ApplicationJson;
 }

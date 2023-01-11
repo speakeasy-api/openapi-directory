@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Schema1 = void 0;
+var utils_1 = require("../../../internal/utils");
 var Schema1 = /** @class */ (function (_super) {
     __extends(Schema1, _super);
     function Schema1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], Schema1.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], Schema1.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], Schema1.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], Schema1.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], Schema1.prototype, "public", void 0);
     return Schema1;
-}(SpeakeasyBase));
-export { Schema1 };
+}(utils_1.SpeakeasyBase));
+exports.Schema1 = Schema1;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResponse = exports.GetRequest = exports.GetQueryParams = exports.GetFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetFormatEnum;
 (function (GetFormatEnum) {
     GetFormatEnum["Json"] = "json";
     GetFormatEnum["Xml"] = "xml";
-})(GetFormatEnum || (GetFormatEnum = {}));
+})(GetFormatEnum = exports.GetFormatEnum || (exports.GetFormatEnum = {}));
 var GetQueryParams = /** @class */ (function (_super) {
     __extends(GetQueryParams, _super);
     function GetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ip" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=package" }),
         __metadata("design:type", String)
     ], GetQueryParams.prototype, "package", void 0);
     return GetQueryParams;
-}(SpeakeasyBase));
-export { GetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryParams = GetQueryParams;
 var GetRequest = /** @class */ (function (_super) {
     __extends(GetRequest, _super);
     function GetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQueryParams)
     ], GetRequest.prototype, "queryParams", void 0);
     return GetRequest;
-}(SpeakeasyBase));
-export { GetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRequest = GetRequest;
 var GetResponse = /** @class */ (function (_super) {
     __extends(GetResponse, _super);
     function GetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetResponse.prototype, "get200TextHtmlString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetResponse.prototype, "get200TextHTMLString", void 0);
     return GetResponse;
-}(SpeakeasyBase));
-export { GetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResponse = GetResponse;

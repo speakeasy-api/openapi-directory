@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest, BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,186 +30,115 @@ const req: BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    location: "omnis",
-    project: "molestiae",
+    location: "sit",
+    project: "voluptas",
   },
   queryParams: {
-    dollarXgafv: "1",
-    accessToken: "rerum",
+    dollarXgafv: "2",
+    accessToken: "expedita",
     alt: "proto",
-    callback: "minima",
-    fields: "dignissimos",
-    key: "quas",
-    oauthToken: "ut",
-    prettyPrint: true,
-    quotaUser: "omnis",
-    uploadType: "laboriosam",
-    uploadProtocol: "quaerat",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    email: "at",
+    email: "debitis",
     provisioningConfig: {
       instances: [
         {
           clientNetwork: {
-            address: "voluptas",
-            existingNetworkId: "doloremque",
-            networkId: "sint",
-          },
-          hyperthreading: true,
-          id: "incidunt",
-          instanceType: "ad",
-          location: "explicabo",
-          osImage: "sunt",
-          privateNetwork: {
-            address: "qui",
-            existingNetworkId: "at",
-            networkId: "expedita",
-          },
-          userNote: "rerum",
-        },
-        {
-          clientNetwork: {
-            address: "iste",
-            existingNetworkId: "modi",
-            networkId: "error",
-          },
-          hyperthreading: true,
-          id: "ut",
-          instanceType: "temporibus",
-          location: "sint",
-          osImage: "harum",
-          privateNetwork: {
-            address: "minima",
-            existingNetworkId: "quia",
-            networkId: "quisquam",
-          },
-          userNote: "minus",
-        },
-        {
-          clientNetwork: {
-            address: "provident",
-            existingNetworkId: "aut",
-            networkId: "illo",
+            address: "et",
+            existingNetworkId: "ut",
+            networkId: "dolorem",
           },
           hyperthreading: false,
-          id: "aspernatur",
-          instanceType: "illo",
-          location: "ut",
-          osImage: "et",
+          id: "voluptate",
+          instanceType: "iste",
+          location: "vitae",
+          osImage: "totam",
           privateNetwork: {
-            address: "non",
-            existingNetworkId: "aliquam",
-            networkId: "ipsa",
+            address: "dolores",
+            existingNetworkId: "illum",
+            networkId: "debitis",
           },
-          userNote: "expedita",
+          userNote: "vel",
         },
       ],
       networks: [
         {
-          bandwidth: "BW_5_GBPS",
-          cidr: "temporibus",
-          id: "quidem",
-          location: "rerum",
-          serviceCidr: "HIGH_28",
-          type: "CLIENT",
-          userNote: "voluptatem",
-          vlanAttachments: [
-            {
-              id: "asperiores",
-              pairingKey: "sit",
-            },
-            {
-              id: "dolorum",
-              pairingKey: "animi",
-            },
-            {
-              id: "aperiam",
-              pairingKey: "omnis",
-            },
-          ],
-        },
-        {
-          bandwidth: "BW_2_GBPS",
-          cidr: "consectetur",
-          id: "repudiandae",
-          location: "quasi",
-          serviceCidr: "SERVICE_CIDR_UNSPECIFIED",
-          type: "PRIVATE",
-          userNote: "necessitatibus",
-          vlanAttachments: [
-            {
-              id: "sit",
-              pairingKey: "expedita",
-            },
-            {
-              id: "sunt",
-              pairingKey: "ut",
-            },
-          ],
-        },
-        {
           bandwidth: "BW_1_GBPS",
-          cidr: "sapiente",
-          id: "culpa",
-          location: "sed",
-          serviceCidr: "HIGH_28",
-          type: "PRIVATE",
-          userNote: "rerum",
+          cidr: "id",
+          id: "aspernatur",
+          location: "accusantium",
+          serviceCidr: "SERVICE_CIDR_UNSPECIFIED",
+          type: "CLIENT",
+          userNote: "quis",
           vlanAttachments: [
             {
-              id: "quis",
-              pairingKey: "aliquam",
+              id: "aut",
+              pairingKey: "odit",
             },
             {
-              id: "quam",
-              pairingKey: "officiis",
-            },
-            {
-              id: "sequi",
-              pairingKey: "magni",
+              id: "non",
+              pairingKey: "voluptas",
             },
           ],
         },
       ],
-      ticketId: "et",
+      ticketId: "omnis",
       volumes: [
         {
-          id: "ducimus",
-          location: "distinctio",
+          id: "illo",
+          location: "sed",
           lunRanges: [
             {
-              quantity: 740268334717324780,
-              sizeGb: 7481213423248665986,
+              quantity: 771642788862502430,
+              sizeGb: 8514850266767180993,
+            },
+            {
+              quantity: 8683452355129068124,
+              sizeGb: 4345851588384648695,
             },
           ],
           machineIds: [
-            "et",
-            "rerum",
-            "accusamus",
+            "recusandae",
           ],
           nfsExports: [
             {
+              allowDev: false,
+              allowSuid: true,
+              cidr: "modi",
+              machineId: "sint",
+              networkId: "inventore",
+              noRootSquash: true,
+              permissions: "READ_WRITE",
+            },
+            {
               allowDev: true,
               allowSuid: false,
-              cidr: "ut",
-              machineId: "placeat",
-              networkId: "consectetur",
-              noRootSquash: true,
-              permissions: "PERMISSIONS_UNSPECIFIED",
+              cidr: "tempore",
+              machineId: "maiores",
+              networkId: "incidunt",
+              noRootSquash: false,
+              permissions: "READ_WRITE",
             },
           ],
-          protocol: "PROTOCOL_NFS",
-          sizeGb: 2389271512943804651,
-          snapshotsEnabled: true,
+          protocol: "PROTOCOL_FC",
+          sizeGb: 2671030200101705776,
+          snapshotsEnabled: false,
           type: "FLASH",
-          userNote: "exercitationem",
+          userNote: "ipsum",
         },
       ],
     },

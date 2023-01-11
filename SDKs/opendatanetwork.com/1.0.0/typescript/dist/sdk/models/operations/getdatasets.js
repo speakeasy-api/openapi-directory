@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDatasetsResponse = exports.GetDatasetsRequest = exports.GetDatasetsHeaders = exports.GetDatasetsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDatasetsQueryParams = /** @class */ (function (_super) {
     __extends(GetDatasetsQueryParams, _super);
     function GetDatasetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], GetDatasetsQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dataset_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dataset_id" }),
         __metadata("design:type", String)
     ], GetDatasetsQueryParams.prototype, "datasetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], GetDatasetsQueryParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetDatasetsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetDatasetsQueryParams.prototype, "offset", void 0);
     return GetDatasetsQueryParams;
-}(SpeakeasyBase));
-export { GetDatasetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDatasetsQueryParams = GetDatasetsQueryParams;
 var GetDatasetsHeaders = /** @class */ (function (_super) {
     __extends(GetDatasetsHeaders, _super);
     function GetDatasetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], GetDatasetsHeaders.prototype, "xAppToken", void 0);
     return GetDatasetsHeaders;
-}(SpeakeasyBase));
-export { GetDatasetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDatasetsHeaders = GetDatasetsHeaders;
 var GetDatasetsRequest = /** @class */ (function (_super) {
     __extends(GetDatasetsRequest, _super);
     function GetDatasetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatasetsQueryParams)
     ], GetDatasetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatasetsHeaders)
     ], GetDatasetsRequest.prototype, "headers", void 0);
     return GetDatasetsRequest;
-}(SpeakeasyBase));
-export { GetDatasetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDatasetsRequest = GetDatasetsRequest;
 var GetDatasetsResponse = /** @class */ (function (_super) {
     __extends(GetDatasetsResponse, _super);
     function GetDatasetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDatasetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDatasetsResponse.prototype, "statusCode", void 0);
     return GetDatasetsResponse;
-}(SpeakeasyBase));
-export { GetDatasetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDatasetsResponse = GetDatasetsResponse;

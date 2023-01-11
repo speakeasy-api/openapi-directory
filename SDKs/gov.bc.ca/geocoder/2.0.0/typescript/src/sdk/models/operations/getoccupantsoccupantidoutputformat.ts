@@ -14,7 +14,7 @@ export enum GetOccupantsOccupantIdOutputFormatOutputFormatEnum {
 
 export class GetOccupantsOccupantIdOutputFormatPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=occupantID" })
-  occupantId: string;
+  occupantID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" })
   outputFormat: GetOccupantsOccupantIdOutputFormatOutputFormatEnum;
@@ -38,7 +38,7 @@ export class GetOccupantsOccupantIdOutputFormatQueryParams extends SpeakeasyBase
   locationDescriptor?: GetOccupantsOccupantIdOutputFormatLocationDescriptorEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setBack" })
   setBack?: number;

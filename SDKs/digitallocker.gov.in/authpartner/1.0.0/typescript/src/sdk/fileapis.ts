@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,23 +33,25 @@ export class FileApIs {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/oauth2/1/xml/{uri}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/oauth2/1/xml/{uri}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCertificateDataInXmlFormatFromUriIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/xml`)) {
+            if (utils.matchContentType(contentType, `application/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -58,35 +59,34 @@ export class FileApIs {
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getCertificateDataInXmlFormatFromUriId400ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getCertificateDataInXMLFormatFromURIId400ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getCertificateDataInXmlFormatFromUriId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getCertificateDataInXMLFormatFromURIId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getCertificateDataInXmlFormatFromUriId404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getCertificateDataInXMLFormatFromURIId404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getCertificateDataInXmlFormatFromUriId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getCertificateDataInXMLFormatFromURIId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getCertificateDataInXmlFormatFromUriId503ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getCertificateDataInXMLFormatFromURIId503ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -104,65 +104,66 @@ export class FileApIs {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/oauth2/1/file/{uri}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/oauth2/1/file/{uri}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetFileFromUriIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/pdf`)) {
-                res.getFileFromUriId200ApplicationPdfString = JSON.stringify(httpRes?.data);
+            if (utils.matchContentType(contentType, `application/pdf`)) {
+                res.getFileFromURIId200ApplicationPdfString = JSON.stringify(httpRes?.data);
             }
-            if (utils.MatchContentType(contentType, `image/jpeg`)) {
-                res.getFileFromUriId200ImageJpegString = JSON.stringify(httpRes?.data);
+            if (utils.matchContentType(contentType, `image/jpeg`)) {
+                res.getFileFromURIId200ImageJpegString = JSON.stringify(httpRes?.data);
             }
-            if (utils.MatchContentType(contentType, `image/jpg`)) {
-                res.getFileFromUriId200ImageJpgString = JSON.stringify(httpRes?.data);
+            if (utils.matchContentType(contentType, `image/jpg`)) {
+                res.getFileFromURIId200ImageJpgString = JSON.stringify(httpRes?.data);
             }
-            if (utils.MatchContentType(contentType, `image/png`)) {
-                res.getFileFromUriId200ImagePngString = JSON.stringify(httpRes?.data);
+            if (utils.matchContentType(contentType, `image/png`)) {
+                res.getFileFromURIId200ImagePngString = JSON.stringify(httpRes?.data);
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getFileFromUriId400ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getFileFromURIId400ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getFileFromUriId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getFileFromURIId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getFileFromUriId404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getFileFromURIId404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getFileFromUriId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getFileFromURIId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getFileFromUriId503ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getFileFromURIId503ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -182,44 +183,45 @@ export class FileApIs {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/oauth2/1/files/";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetListOfSelfUploadedDocumentsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.sample = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocuments401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocuments401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocuments404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocuments404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocuments500ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocuments500ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -237,46 +239,47 @@ export class FileApIs {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/oauth2/1/files/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/oauth2/1/files/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetListOfSelfUploadedDocumentsIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.sample = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocumentsId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocumentsId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocumentsId404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocumentsId404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfSelfUploadedDocumentsId500ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfSelfUploadedDocumentsId500ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -296,39 +299,40 @@ export class FileApIs {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/oauth2/1/files/issued";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetListOfIssuedDocumentsVersion1IdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.sample = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfIssuedDocumentsVersion1Id401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfIssuedDocumentsVersion1Id401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfIssuedDocumentsVersion1Id500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfIssuedDocumentsVersion1Id500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -344,37 +348,38 @@ export class FileApIs {
     const url: string = baseURL.replace(/\/$/, "") + "/oauth2/2/files/issued";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetListOfIssuedDocumentsIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfIssuedDocumentsId200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfIssuedDocumentsId200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfIssuedDocumentsId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfIssuedDocumentsId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getListOfIssuedDocumentsId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getListOfIssuedDocumentsId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -394,21 +399,23 @@ export class FileApIs {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/oauth2/2/xml/eaadhaar";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetEAadhaarDataInXmlFormatIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/xml`)) {
+            if (utils.matchContentType(contentType, `application/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -416,30 +423,29 @@ export class FileApIs {
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEAadhaarDataInXmlFormatId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEAadhaarDataInXMLFormatId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEAadhaarDataInXmlFormatId404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEAadhaarDataInXMLFormatId404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEAadhaarDataInXmlFormatId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEAadhaarDataInXMLFormatId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getEAadhaarDataInXmlFormatId503ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getEAadhaarDataInXMLFormatId503ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -462,61 +468,60 @@ export class FileApIs {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PullDocumentIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.sample = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.pullDocumentId400ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.pullDocumentId400ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.pullDocumentId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.pullDocumentId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.pullDocumentId404ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.pullDocumentId404ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.pullDocumentId500ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.pullDocumentId500ApplicationJSONOneOf = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -539,56 +544,55 @@ export class FileApIs {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.UploadFileToLockerIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.fileUploadResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.uploadFileToLockerId400ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.uploadFileToLockerId400ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.uploadFileToLockerId401ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.uploadFileToLockerId401ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.uploadFileToLockerId500ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.uploadFileToLockerId500ApplicationJSONObject = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

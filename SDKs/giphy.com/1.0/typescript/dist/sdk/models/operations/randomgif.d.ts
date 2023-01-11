@@ -14,5 +14,5 @@ export declare class RandomGifRequest extends SpeakeasyBase {
 export declare class RandomGifResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    randomGif200ApplicationJsonObject?: RandomGif200ApplicationJson;
+    randomGif200ApplicationJSONObject?: RandomGif200ApplicationJson;
 }

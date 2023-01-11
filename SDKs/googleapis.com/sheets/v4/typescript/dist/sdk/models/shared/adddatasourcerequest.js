@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddDataSourceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
 // AddDataSourceRequest
 /**
  * Adds a data source. After the data source is added successfully, an associated DATA_SOURCE sheet is created and an execution is triggered to refresh the sheet to read data from the data source. The request requires an additional `bigquery.readonly` OAuth scope.
@@ -34,9 +37,9 @@ var AddDataSourceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSource" }),
-        __metadata("design:type", DataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSource" }),
+        __metadata("design:type", datasource_1.DataSource)
     ], AddDataSourceRequest.prototype, "dataSource", void 0);
     return AddDataSourceRequest;
-}(SpeakeasyBase));
-export { AddDataSourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddDataSourceRequest = AddDataSourceRequest;

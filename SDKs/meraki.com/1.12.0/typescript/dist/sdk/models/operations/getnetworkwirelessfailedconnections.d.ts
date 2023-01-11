@@ -24,5 +24,5 @@ export declare class GetNetworkWirelessFailedConnectionsRequest extends Speakeas
 export declare class GetNetworkWirelessFailedConnectionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessFailedConnections200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessFailedConnections200ApplicationJSONObject?: Record<string, any>;
 }

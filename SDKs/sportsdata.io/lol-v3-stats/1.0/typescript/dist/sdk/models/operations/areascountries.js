@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AreasCountriesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AreasCountriesResponse = exports.AreasCountriesRequest = exports.AreasCountriesPathParams = exports.AreasCountriesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AreasCountriesFormatEnum;
 (function (AreasCountriesFormatEnum) {
     AreasCountriesFormatEnum["Xml"] = "xml";
     AreasCountriesFormatEnum["Json"] = "json";
-})(AreasCountriesFormatEnum || (AreasCountriesFormatEnum = {}));
+})(AreasCountriesFormatEnum = exports.AreasCountriesFormatEnum || (exports.AreasCountriesFormatEnum = {}));
 var AreasCountriesPathParams = /** @class */ (function (_super) {
     __extends(AreasCountriesPathParams, _super);
     function AreasCountriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], AreasCountriesPathParams.prototype, "format", void 0);
     return AreasCountriesPathParams;
-}(SpeakeasyBase));
-export { AreasCountriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AreasCountriesPathParams = AreasCountriesPathParams;
 var AreasCountriesRequest = /** @class */ (function (_super) {
     __extends(AreasCountriesRequest, _super);
     function AreasCountriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AreasCountriesPathParams)
     ], AreasCountriesRequest.prototype, "pathParams", void 0);
     return AreasCountriesRequest;
-}(SpeakeasyBase));
-export { AreasCountriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AreasCountriesRequest = AreasCountriesRequest;
 var AreasCountriesResponse = /** @class */ (function (_super) {
     __extends(AreasCountriesResponse, _super);
     function AreasCountriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], AreasCountriesResponse.prototype, "areas", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AreasCountriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AreasCountriesResponse.prototype, "statusCode", void 0);
     return AreasCountriesResponse;
-}(SpeakeasyBase));
-export { AreasCountriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.AreasCountriesResponse = AreasCountriesResponse;

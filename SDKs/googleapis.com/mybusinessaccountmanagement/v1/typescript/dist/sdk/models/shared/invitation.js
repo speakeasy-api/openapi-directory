@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { TargetLocation } from "./targetlocation";
-export var InvitationRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Invitation = exports.InvitationTargetTypeEnum = exports.InvitationRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var targetlocation_1 = require("./targetlocation");
+var InvitationRoleEnum;
 (function (InvitationRoleEnum) {
     InvitationRoleEnum["AdminRoleUnspecified"] = "ADMIN_ROLE_UNSPECIFIED";
     InvitationRoleEnum["PrimaryOwner"] = "PRIMARY_OWNER";
     InvitationRoleEnum["Owner"] = "OWNER";
     InvitationRoleEnum["Manager"] = "MANAGER";
     InvitationRoleEnum["SiteManager"] = "SITE_MANAGER";
-})(InvitationRoleEnum || (InvitationRoleEnum = {}));
-export var InvitationTargetTypeEnum;
+})(InvitationRoleEnum = exports.InvitationRoleEnum || (exports.InvitationRoleEnum = {}));
+var InvitationTargetTypeEnum;
 (function (InvitationTargetTypeEnum) {
     InvitationTargetTypeEnum["TargetTypeUnspecified"] = "TARGET_TYPE_UNSPECIFIED";
     InvitationTargetTypeEnum["AccountsOnly"] = "ACCOUNTS_ONLY";
     InvitationTargetTypeEnum["LocationsOnly"] = "LOCATIONS_ONLY";
-})(InvitationTargetTypeEnum || (InvitationTargetTypeEnum = {}));
+})(InvitationTargetTypeEnum = exports.InvitationTargetTypeEnum || (exports.InvitationTargetTypeEnum = {}));
 // Invitation
 /**
  * Represents a pending invitation.
@@ -49,25 +52,25 @@ var Invitation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetAccount" }),
-        __metadata("design:type", Account)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetAccount" }),
+        __metadata("design:type", account_1.Account)
     ], Invitation.prototype, "targetAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetLocation" }),
-        __metadata("design:type", TargetLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetLocation" }),
+        __metadata("design:type", targetlocation_1.TargetLocation)
     ], Invitation.prototype, "targetLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetType" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "targetType", void 0);
     return Invitation;
-}(SpeakeasyBase));
-export { Invitation };
+}(utils_1.SpeakeasyBase));
+exports.Invitation = Invitation;

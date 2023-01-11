@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class KinesisStreamConfig extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  roleArn: string;
+  roleARN: string;
 
   @SpeakeasyMetadata()
-  streamArn: string;
+  streamARN: string;
 }

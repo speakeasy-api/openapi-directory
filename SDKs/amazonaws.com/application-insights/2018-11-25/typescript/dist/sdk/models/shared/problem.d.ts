@@ -1,5 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FeedbackValueEnum } from "./feedbackvalueenum";
 import { SeverityLevelEnum } from "./severitylevelenum";
 import { StatusEnum } from "./statusenum";
 /**
@@ -8,7 +7,7 @@ import { StatusEnum } from "./statusenum";
 export declare class Problem extends SpeakeasyBase {
     affectedResource?: string;
     endTime?: Date;
-    feedback?: Map<string, FeedbackValueEnum>;
+    feedback?: Record<string, string>;
     id?: string;
     insights?: string;
     resourceGroupName?: string;

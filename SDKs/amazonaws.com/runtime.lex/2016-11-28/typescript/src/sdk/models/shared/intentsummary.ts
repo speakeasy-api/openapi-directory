@@ -29,5 +29,5 @@ export class IntentSummary extends SpeakeasyBase {
   slotToElicit?: string;
 
   @SpeakeasyMetadata({ data: "json, name=slots" })
-  slots?: Map<string, string>;
+  slots?: Record<string, string>;
 }

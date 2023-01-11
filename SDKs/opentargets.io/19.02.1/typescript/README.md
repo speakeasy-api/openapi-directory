@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAssociationFilterRequest, GetAssociationFilterResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,26 +28,26 @@ const sdk = new SDK();
     
 const req: GetAssociationFilterRequest = {
   queryParams: {
-    datasource: "officiis",
-    datastructure: "dolorem",
-    datatype: "qui",
-    direct: true,
-    disease: "dolor",
-    facets: true,
-    fields: "ab",
-    format: "nam",
-    from: 14.100000,
-    pathway: "id",
-    scorevalueMax: 66.099998,
-    scorevalueMin: 34.200001,
-    scorevalueTypes: "dolore",
-    search: "occaecati",
-    size: 15.100000,
-    sort: "ipsum",
-    target: "et",
-    targetClass: "quia",
-    therapeuticArea: "fugit",
-    uniprotkw: "nulla",
+    datasource: "sit",
+    datastructure: "voluptas",
+    datatype: "culpa",
+    direct: false,
+    disease: "consequuntur",
+    facets: false,
+    fields: "expedita",
+    format: "voluptas",
+    from: 88.099998,
+    pathway: "nihil",
+    scorevalueMax: 47.200001,
+    scorevalueMin: 48.099998,
+    scorevalueTypes: "et",
+    search: "ut",
+    size: 50.099998,
+    sort: "voluptate",
+    target: "iste",
+    targetClass: "vitae",
+    therapeuticArea: "totam",
+    uniprotkw: "dolores",
   },
 };
 

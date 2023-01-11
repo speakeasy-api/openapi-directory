@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserDefinedFunctionInput } from "./userdefinedfunctioninput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateUserDefinedFunctionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var userdefinedfunctioninput_1 = require("./userdefinedfunctioninput");
 var UpdateUserDefinedFunctionRequest = /** @class */ (function (_super) {
     __extends(UpdateUserDefinedFunctionRequest, _super);
     function UpdateUserDefinedFunctionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], UpdateUserDefinedFunctionRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], UpdateUserDefinedFunctionRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FunctionInput" }),
-        __metadata("design:type", UserDefinedFunctionInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FunctionInput" }),
+        __metadata("design:type", userdefinedfunctioninput_1.UserDefinedFunctionInput)
     ], UpdateUserDefinedFunctionRequest.prototype, "functionInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FunctionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FunctionName" }),
         __metadata("design:type", String)
     ], UpdateUserDefinedFunctionRequest.prototype, "functionName", void 0);
     return UpdateUserDefinedFunctionRequest;
-}(SpeakeasyBase));
-export { UpdateUserDefinedFunctionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserDefinedFunctionRequest = UpdateUserDefinedFunctionRequest;

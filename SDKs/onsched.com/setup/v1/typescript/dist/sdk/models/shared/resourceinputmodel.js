@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressInputModel } from "./addressinputmodel";
-import { AvailabilityInputModel } from "./availabilityinputmodel";
-import { ContactInputModel } from "./contactinputmodel";
-import { CustomFieldInputModel } from "./customfieldinputmodel";
-import { ResourceOptionsInputModel } from "./resourceoptionsinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressinputmodel_1 = require("./addressinputmodel");
+var availabilityinputmodel_1 = require("./availabilityinputmodel");
+var contactinputmodel_1 = require("./contactinputmodel");
+var customfieldinputmodel_1 = require("./customfieldinputmodel");
+var resourceoptionsinputmodel_1 = require("./resourceoptionsinputmodel");
 var ResourceInputModel = /** @class */ (function (_super) {
     __extends(ResourceInputModel, _super);
     function ResourceInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", AddressInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", addressinputmodel_1.AddressInputModel)
     ], ResourceInputModel.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availability" }),
-        __metadata("design:type", AvailabilityInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availability" }),
+        __metadata("design:type", availabilityinputmodel_1.AvailabilityInputModel)
     ], ResourceInputModel.prototype, "availability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact" }),
-        __metadata("design:type", ContactInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact" }),
+        __metadata("design:type", contactinputmodel_1.ContactInputModel)
     ], ResourceInputModel.prototype, "contact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customFields" }),
-        __metadata("design:type", CustomFieldInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customFields" }),
+        __metadata("design:type", customfieldinputmodel_1.CustomFieldInputModel)
     ], ResourceInputModel.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupId" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", ResourceOptionsInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", resourceoptionsinputmodel_1.ResourceOptionsInputModel)
     ], ResourceInputModel.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceIds" }),
         __metadata("design:type", Array)
     ], ResourceInputModel.prototype, "serviceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneId" }),
         __metadata("design:type", String)
     ], ResourceInputModel.prototype, "timezoneId", void 0);
     return ResourceInputModel;
-}(SpeakeasyBase));
-export { ResourceInputModel };
+}(utils_1.SpeakeasyBase));
+exports.ResourceInputModel = ResourceInputModel;

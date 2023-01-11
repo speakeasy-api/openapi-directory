@@ -10,5 +10,5 @@ export class GetAemProductInfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAemProductInfoDefaultApplicationJsonStrings?: string[];
+  getAemProductInfoDefaultApplicationJSONStrings?: string[];
 }

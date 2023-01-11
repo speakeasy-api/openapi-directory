@@ -23,7 +23,7 @@ export declare class NotebooksProjectsLocationsSchedulesTriggerSecurity extends 
 export declare class NotebooksProjectsLocationsSchedulesTriggerRequest extends SpeakeasyBase {
     pathParams: NotebooksProjectsLocationsSchedulesTriggerPathParams;
     queryParams: NotebooksProjectsLocationsSchedulesTriggerQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: NotebooksProjectsLocationsSchedulesTriggerSecurity;
 }
 export declare class NotebooksProjectsLocationsSchedulesTriggerResponse extends SpeakeasyBase {

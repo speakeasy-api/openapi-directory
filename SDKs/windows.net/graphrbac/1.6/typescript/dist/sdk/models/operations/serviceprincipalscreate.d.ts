@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ServicePrincipalsCreatePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ServicePrincipalsCreateQueryParams extends SpeakeasyBase {
     apiVersion: string;
@@ -18,6 +18,6 @@ export declare class ServicePrincipalsCreateRequest extends SpeakeasyBase {
 export declare class ServicePrincipalsCreateResponse extends SpeakeasyBase {
     contentType: string;
     graphError?: shared.GraphError;
-    servicePrincipal?: Map<string, Map<string, any>>;
+    servicePrincipal?: Record<string, Record<string, any>>;
     statusCode: number;
 }

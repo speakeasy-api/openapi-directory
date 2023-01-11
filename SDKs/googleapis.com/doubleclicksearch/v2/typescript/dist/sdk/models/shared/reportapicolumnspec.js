@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportApiColumnSpec = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReportApiColumnSpec
 /**
  * A request object used to create a DoubleClick Search report.
@@ -33,45 +36,45 @@ var ReportApiColumnSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnName" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDimensionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDimensionName" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "customDimensionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customMetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customMetricName" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "customMetricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupByColumn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupByColumn" }),
         __metadata("design:type", Boolean)
     ], ReportApiColumnSpec.prototype, "groupByColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headerText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headerText" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "headerText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformSource" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "platformSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productReportPerspective" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productReportPerspective" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "productReportPerspective", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savedColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savedColumnName" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "savedColumnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], ReportApiColumnSpec.prototype, "startDate", void 0);
     return ReportApiColumnSpec;
-}(SpeakeasyBase));
-export { ReportApiColumnSpec };
+}(utils_1.SpeakeasyBase));
+exports.ReportApiColumnSpec = ReportApiColumnSpec;

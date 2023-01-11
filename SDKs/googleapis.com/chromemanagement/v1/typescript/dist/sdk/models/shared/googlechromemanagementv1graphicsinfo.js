@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1GraphicsAdapterInfo } from "./googlechromemanagementv1graphicsadapterinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1GraphicsInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1graphicsadapterinfo_1 = require("./googlechromemanagementv1graphicsadapterinfo");
 // GoogleChromeManagementV1GraphicsInfo
 /**
  * Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -34,9 +37,9 @@ var GoogleChromeManagementV1GraphicsInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adapterInfo" }),
-        __metadata("design:type", GoogleChromeManagementV1GraphicsAdapterInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adapterInfo" }),
+        __metadata("design:type", googlechromemanagementv1graphicsadapterinfo_1.GoogleChromeManagementV1GraphicsAdapterInfo)
     ], GoogleChromeManagementV1GraphicsInfo.prototype, "adapterInfo", void 0);
     return GoogleChromeManagementV1GraphicsInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1GraphicsInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1GraphicsInfo = GoogleChromeManagementV1GraphicsInfo;

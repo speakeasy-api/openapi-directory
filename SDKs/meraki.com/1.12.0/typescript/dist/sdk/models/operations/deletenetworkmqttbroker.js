@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkMqttBrokerResponse = exports.DeleteNetworkMqttBrokerRequest = exports.DeleteNetworkMqttBrokerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkMqttBrokerPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkMqttBrokerPathParams, _super);
     function DeleteNetworkMqttBrokerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
         __metadata("design:type", String)
     ], DeleteNetworkMqttBrokerPathParams.prototype, "mqttBrokerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkMqttBrokerPathParams.prototype, "networkId", void 0);
     return DeleteNetworkMqttBrokerPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkMqttBrokerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkMqttBrokerPathParams = DeleteNetworkMqttBrokerPathParams;
 var DeleteNetworkMqttBrokerRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkMqttBrokerRequest, _super);
     function DeleteNetworkMqttBrokerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkMqttBrokerPathParams)
     ], DeleteNetworkMqttBrokerRequest.prototype, "pathParams", void 0);
     return DeleteNetworkMqttBrokerRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkMqttBrokerRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkMqttBrokerRequest = DeleteNetworkMqttBrokerRequest;
 var DeleteNetworkMqttBrokerResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkMqttBrokerResponse, _super);
     function DeleteNetworkMqttBrokerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkMqttBrokerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkMqttBrokerResponse.prototype, "statusCode", void 0);
     return DeleteNetworkMqttBrokerResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkMqttBrokerResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkMqttBrokerResponse = DeleteNetworkMqttBrokerResponse;

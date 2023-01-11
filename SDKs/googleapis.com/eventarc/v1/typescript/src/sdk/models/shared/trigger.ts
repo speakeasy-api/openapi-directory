@@ -16,7 +16,7 @@ export class Trigger extends SpeakeasyBase {
   channel?: string;
 
   @SpeakeasyMetadata({ data: "json, name=conditions", elemType: StateCondition })
-  conditions?: Map<string, StateCondition>;
+  conditions?: Record<string, StateCondition>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -31,7 +31,7 @@ export class Trigger extends SpeakeasyBase {
   eventFilters?: EventFilter[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -65,7 +65,7 @@ export class TriggerInput extends SpeakeasyBase {
   eventFilters?: EventFilter[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

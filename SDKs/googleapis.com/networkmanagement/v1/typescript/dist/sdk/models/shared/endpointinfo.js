@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // EndpointInfo
 /**
  * For display only. The specification of the endpoints for the test. EndpointInfo is derived from source and destination Endpoint and validated by the backend data plane model.
@@ -33,33 +36,33 @@ var EndpointInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationIp" }),
         __metadata("design:type", String)
     ], EndpointInfo.prototype, "destinationIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationNetworkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationNetworkUri" }),
         __metadata("design:type", String)
     ], EndpointInfo.prototype, "destinationNetworkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationPort" }),
         __metadata("design:type", Number)
     ], EndpointInfo.prototype, "destinationPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], EndpointInfo.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceIp" }),
         __metadata("design:type", String)
     ], EndpointInfo.prototype, "sourceIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceNetworkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceNetworkUri" }),
         __metadata("design:type", String)
     ], EndpointInfo.prototype, "sourceNetworkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourcePort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourcePort" }),
         __metadata("design:type", Number)
     ], EndpointInfo.prototype, "sourcePort", void 0);
     return EndpointInfo;
-}(SpeakeasyBase));
-export { EndpointInfo };
+}(utils_1.SpeakeasyBase));
+exports.EndpointInfo = EndpointInfo;

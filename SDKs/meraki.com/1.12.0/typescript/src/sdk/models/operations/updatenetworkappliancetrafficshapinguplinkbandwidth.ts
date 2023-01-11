@@ -86,5 +86,5 @@ export class UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse extends
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceTrafficShapingUplinkBandwidth200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceTrafficShapingUplinkBandwidth200ApplicationJSONObject?: Record<string, any>;
 }

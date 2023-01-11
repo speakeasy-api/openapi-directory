@@ -54,7 +54,7 @@ export class PutDataLakeSettingsResponse extends SpeakeasyBase {
   invalidInputException?: any;
 
   @SpeakeasyMetadata()
-  putDataLakeSettingsResponse?: Map<string, any>;
+  putDataLakeSettingsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateApplicationRequest, CreateApplicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,30 +33,38 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateApplicationRequest = {
   headers: {
-    xAmzAlgorithm: "amet",
-    xAmzContentSha256: "blanditiis",
-    xAmzCredential: "unde",
-    xAmzDate: "nihil",
-    xAmzSecurityToken: "asperiores",
-    xAmzSignature: "quaerat",
-    xAmzSignedHeaders: "hic",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "EC2WindowsBarleyService.CreateApplication",
   },
   request: {
-    cweMonitorEnabled: false,
+    cweMonitorEnabled: true,
     opsCenterEnabled: false,
-    opsItemSnsTopicArn: "pariatur",
-    resourceGroupName: "enim",
+    opsItemSNSTopicArn: "nihil",
+    resourceGroupName: "rerum",
     tags: [
       {
-        key: "possimus",
-        value: "temporibus",
+        key: "debitis",
+        value: "voluptatum",
+      },
+      {
+        key: "et",
+        value: "ut",
+      },
+      {
+        key: "dolorem",
+        value: "et",
       },
     ],
   },
 };
 
-sdk.sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
+sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
    // handle response
 });
 ```

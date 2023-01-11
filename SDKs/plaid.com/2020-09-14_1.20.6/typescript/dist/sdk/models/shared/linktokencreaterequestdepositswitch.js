@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkTokenCreateRequestDepositSwitch = void 0;
+var utils_1 = require("../../../internal/utils");
 // LinkTokenCreateRequestDepositSwitch
 /**
  * Specifies options for initializing Link for use with the Deposit Switch (beta) product. This field is required if `deposit_switch` is included in the `products` array.
@@ -33,9 +36,9 @@ var LinkTokenCreateRequestDepositSwitch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deposit_switch_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deposit_switch_id" }),
         __metadata("design:type", String)
     ], LinkTokenCreateRequestDepositSwitch.prototype, "depositSwitchId", void 0);
     return LinkTokenCreateRequestDepositSwitch;
-}(SpeakeasyBase));
-export { LinkTokenCreateRequestDepositSwitch };
+}(utils_1.SpeakeasyBase));
+exports.LinkTokenCreateRequestDepositSwitch = LinkTokenCreateRequestDepositSwitch;

@@ -27,5 +27,5 @@ export declare class GooglePrivacyDlpV2CustomInfoType extends SpeakeasyBase {
     likelihood?: GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum;
     regex?: GooglePrivacyDlpV2Regex;
     storedType?: GooglePrivacyDlpV2StoredType;
-    surrogateType?: Map<string, any>;
+    surrogateType?: Record<string, any>;
 }

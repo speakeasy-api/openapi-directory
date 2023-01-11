@@ -65,7 +65,7 @@ export class Adexchangebuyer2AccountsProposalsResumeRequest extends SpeakeasyBas
   queryParams: Adexchangebuyer2AccountsProposalsResumeQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: Adexchangebuyer2AccountsProposalsResumeSecurity;

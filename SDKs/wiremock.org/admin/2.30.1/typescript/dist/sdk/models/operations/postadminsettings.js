@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAdminSettingsResponse = exports.PostAdminSettingsRequest = exports.PostAdminSettingsRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAdminSettingsRequestBody = /** @class */ (function (_super) {
     __extends(PostAdminSettingsRequestBody, _super);
     function PostAdminSettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedDelay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedDelay" }),
         __metadata("design:type", Number)
     ], PostAdminSettingsRequestBody.prototype, "fixedDelay", void 0);
     return PostAdminSettingsRequestBody;
-}(SpeakeasyBase));
-export { PostAdminSettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminSettingsRequestBody = PostAdminSettingsRequestBody;
 var PostAdminSettingsRequest = /** @class */ (function (_super) {
     __extends(PostAdminSettingsRequest, _super);
     function PostAdminSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAdminSettingsRequestBody)
     ], PostAdminSettingsRequest.prototype, "request", void 0);
     return PostAdminSettingsRequest;
-}(SpeakeasyBase));
-export { PostAdminSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminSettingsRequest = PostAdminSettingsRequest;
 var PostAdminSettingsResponse = /** @class */ (function (_super) {
     __extends(PostAdminSettingsResponse, _super);
     function PostAdminSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAdminSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAdminSettingsResponse.prototype, "statusCode", void 0);
     return PostAdminSettingsResponse;
-}(SpeakeasyBase));
-export { PostAdminSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminSettingsResponse = PostAdminSettingsResponse;

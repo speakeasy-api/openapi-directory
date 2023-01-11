@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthorAssociationEnum } from "./authorassociationenum";
+/**
+ * Simple User
+**/
 export declare class GistCommentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

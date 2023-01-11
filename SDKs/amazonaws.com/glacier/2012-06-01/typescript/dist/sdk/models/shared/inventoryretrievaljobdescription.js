@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InventoryRetrievalJobDescription = void 0;
+var utils_1 = require("../../../internal/utils");
 // InventoryRetrievalJobDescription
 /**
  * Describes the options for a range inventory retrieval job.
@@ -33,25 +36,25 @@ var InventoryRetrievalJobDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", String)
     ], InventoryRetrievalJobDescription.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Format" }),
         __metadata("design:type", String)
     ], InventoryRetrievalJobDescription.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", String)
     ], InventoryRetrievalJobDescription.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], InventoryRetrievalJobDescription.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", String)
     ], InventoryRetrievalJobDescription.prototype, "startDate", void 0);
     return InventoryRetrievalJobDescription;
-}(SpeakeasyBase));
-export { InventoryRetrievalJobDescription };
+}(utils_1.SpeakeasyBase));
+exports.InventoryRetrievalJobDescription = InventoryRetrievalJobDescription;

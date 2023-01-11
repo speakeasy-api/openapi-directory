@@ -23,7 +23,7 @@ export declare class PutEmailIdentityConfigurationSetAttributesResponse extends 
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putEmailIdentityConfigurationSetAttributesResponse?: Map<string, any>;
+    putEmailIdentityConfigurationSetAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

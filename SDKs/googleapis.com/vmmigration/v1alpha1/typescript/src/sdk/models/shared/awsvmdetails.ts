@@ -76,7 +76,7 @@ export class AwsVmDetails extends SpeakeasyBase {
   sourceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=virtualizationType" })
   virtualizationType?: AwsVmDetailsVirtualizationTypeEnum;

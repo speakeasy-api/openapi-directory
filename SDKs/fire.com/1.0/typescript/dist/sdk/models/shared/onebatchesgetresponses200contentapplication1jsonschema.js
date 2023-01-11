@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnebatchesGetResponses200ContentApplication1jsonSchema = exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem = exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum = exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult
 /**
  * The outcome of the attempted transaction.
@@ -33,96 +36,96 @@ var OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult.prototype, "message", void 0);
     return OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult;
-}(SpeakeasyBase));
-export { OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult };
-export var OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult = OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult;
+var OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum;
 (function (OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum) {
     OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum["Submitted"] = "SUBMITTED";
     OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum["Removed"] = "REMOVED";
     OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum["Succeeded"] = "SUCCEEDED";
     OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum["Failed"] = "FAILED";
-})(OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum || (OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum = {}));
+})(OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum = exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum || (exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemStatusEnum = {}));
 var OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem = /** @class */ (function (_super) {
     __extends(OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem, _super);
     function OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountAfterCharges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountAfterCharges" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "amountAfterCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchItemUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchItemUuid" }),
         __metadata("design:type", String)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "batchItemUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateCreated" }),
         __metadata("design:type", Date)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeAmount" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanFrom" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "icanFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanTo" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "icanTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refId" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "refId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItemResult)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem.prototype, "taxAmount", void 0);
     return OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem;
-}(SpeakeasyBase));
-export { OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem };
+}(utils_1.SpeakeasyBase));
+exports.OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem = OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem;
 var OnebatchesGetResponses200ContentApplication1jsonSchema = /** @class */ (function (_super) {
     __extends(OnebatchesGetResponses200ContentApplication1jsonSchema, _super);
     function OnebatchesGetResponses200ContentApplication1jsonSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: OnebatchesGetResponses200ContentApplication1jsonSchemaBatchItem }),
         __metadata("design:type", Array)
     ], OnebatchesGetResponses200ContentApplication1jsonSchema.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnebatchesGetResponses200ContentApplication1jsonSchema.prototype, "total", void 0);
     return OnebatchesGetResponses200ContentApplication1jsonSchema;
-}(SpeakeasyBase));
-export { OnebatchesGetResponses200ContentApplication1jsonSchema };
+}(utils_1.SpeakeasyBase));
+exports.OnebatchesGetResponses200ContentApplication1jsonSchema = OnebatchesGetResponses200ContentApplication1jsonSchema;

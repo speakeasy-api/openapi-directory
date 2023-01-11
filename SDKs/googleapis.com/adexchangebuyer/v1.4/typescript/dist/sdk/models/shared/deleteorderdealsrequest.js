@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteOrderDealsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteOrderDealsRequest = /** @class */ (function (_super) {
     __extends(DeleteOrderDealsRequest, _super);
     function DeleteOrderDealsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealIds" }),
         __metadata("design:type", Array)
     ], DeleteOrderDealsRequest.prototype, "dealIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalRevisionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalRevisionNumber" }),
         __metadata("design:type", String)
     ], DeleteOrderDealsRequest.prototype, "proposalRevisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateAction" }),
         __metadata("design:type", String)
     ], DeleteOrderDealsRequest.prototype, "updateAction", void 0);
     return DeleteOrderDealsRequest;
-}(SpeakeasyBase));
-export { DeleteOrderDealsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrderDealsRequest = DeleteOrderDealsRequest;

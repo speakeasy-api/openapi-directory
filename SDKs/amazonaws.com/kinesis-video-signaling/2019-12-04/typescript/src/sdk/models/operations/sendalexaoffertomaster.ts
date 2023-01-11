@@ -29,7 +29,7 @@ export class SendAlexaOfferToMasterHeaders extends SpeakeasyBase {
 
 export class SendAlexaOfferToMasterRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn: string;
+  channelARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=MessagePayload" })
   messagePayload: string;

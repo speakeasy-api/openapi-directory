@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,73 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApplyPolicyAllNodes200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplyPolicyAllNodesResponse = exports.ApplyPolicyAllNodes200ApplicationJson = exports.ApplyPolicyAllNodes200ApplicationJsonResultEnum = exports.ApplyPolicyAllNodes200ApplicationJsonData = exports.ApplyPolicyAllNodes200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApplyPolicyAllNodes200ApplicationJsonActionEnum;
 (function (ApplyPolicyAllNodes200ApplicationJsonActionEnum) {
     ApplyPolicyAllNodes200ApplicationJsonActionEnum["ApplyPolicyAllNodes"] = "applyPolicyAllNodes";
-})(ApplyPolicyAllNodes200ApplicationJsonActionEnum || (ApplyPolicyAllNodes200ApplicationJsonActionEnum = {}));
+})(ApplyPolicyAllNodes200ApplicationJsonActionEnum = exports.ApplyPolicyAllNodes200ApplicationJsonActionEnum || (exports.ApplyPolicyAllNodes200ApplicationJsonActionEnum = {}));
 var ApplyPolicyAllNodes200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ApplyPolicyAllNodes200ApplicationJsonData, _super);
     function ApplyPolicyAllNodes200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodes200ApplicationJsonData.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodes200ApplicationJsonData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodes200ApplicationJsonData.prototype, "result", void 0);
     return ApplyPolicyAllNodes200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ApplyPolicyAllNodes200ApplicationJsonData };
-export var ApplyPolicyAllNodes200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ApplyPolicyAllNodes200ApplicationJsonData = ApplyPolicyAllNodes200ApplicationJsonData;
+var ApplyPolicyAllNodes200ApplicationJsonResultEnum;
 (function (ApplyPolicyAllNodes200ApplicationJsonResultEnum) {
     ApplyPolicyAllNodes200ApplicationJsonResultEnum["Success"] = "success";
     ApplyPolicyAllNodes200ApplicationJsonResultEnum["Error"] = "error";
-})(ApplyPolicyAllNodes200ApplicationJsonResultEnum || (ApplyPolicyAllNodes200ApplicationJsonResultEnum = {}));
+})(ApplyPolicyAllNodes200ApplicationJsonResultEnum = exports.ApplyPolicyAllNodes200ApplicationJsonResultEnum || (exports.ApplyPolicyAllNodes200ApplicationJsonResultEnum = {}));
 var ApplyPolicyAllNodes200ApplicationJson = /** @class */ (function (_super) {
     __extends(ApplyPolicyAllNodes200ApplicationJson, _super);
     function ApplyPolicyAllNodes200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodes200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ApplyPolicyAllNodes200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: ApplyPolicyAllNodes200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], ApplyPolicyAllNodes200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodes200ApplicationJson.prototype, "result", void 0);
     return ApplyPolicyAllNodes200ApplicationJson;
-}(SpeakeasyBase));
-export { ApplyPolicyAllNodes200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ApplyPolicyAllNodes200ApplicationJson = ApplyPolicyAllNodes200ApplicationJson;
 var ApplyPolicyAllNodesResponse = /** @class */ (function (_super) {
     __extends(ApplyPolicyAllNodesResponse, _super);
     function ApplyPolicyAllNodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplyPolicyAllNodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApplyPolicyAllNodesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplyPolicyAllNodes200ApplicationJson)
-    ], ApplyPolicyAllNodesResponse.prototype, "applyPolicyAllNodes200ApplicationJsonObject", void 0);
+    ], ApplyPolicyAllNodesResponse.prototype, "applyPolicyAllNodes200ApplicationJSONObject", void 0);
     return ApplyPolicyAllNodesResponse;
-}(SpeakeasyBase));
-export { ApplyPolicyAllNodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApplyPolicyAllNodesResponse = ApplyPolicyAllNodesResponse;

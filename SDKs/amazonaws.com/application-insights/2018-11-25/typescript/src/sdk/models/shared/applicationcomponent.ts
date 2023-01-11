@@ -16,7 +16,7 @@ export class ApplicationComponent extends SpeakeasyBase {
   componentRemarks?: string;
 
   @SpeakeasyMetadata({ data: "json, name=DetectedWorkload" })
-  detectedWorkload?: Map<string, Map<string, string>>;
+  detectedWorkload?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata({ data: "json, name=Monitor" })
   monitor?: boolean;

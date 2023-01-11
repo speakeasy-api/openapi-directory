@@ -12,5 +12,5 @@ export declare class ReposGetAllStatusCheckContextsResponse extends SpeakeasyBas
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposGetAllStatusCheckContexts200ApplicationJsonStrings?: string[];
+    reposGetAllStatusCheckContexts200ApplicationJSONStrings?: string[];
 }

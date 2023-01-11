@@ -66,7 +66,7 @@ export class IncreaseReplicationFactorResponse extends SpeakeasyBase {
   invalidParameterValueException?: any;
 
   @SpeakeasyMetadata()
-  invalidVpcNetworkStateFault?: any;
+  invalidVPCNetworkStateFault?: any;
 
   @SpeakeasyMetadata()
   nodeQuotaForClusterExceededFault?: any;

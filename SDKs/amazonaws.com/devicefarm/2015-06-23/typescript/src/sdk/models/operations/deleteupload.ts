@@ -51,7 +51,7 @@ export class DeleteUploadResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteUploadResult?: Map<string, any>;
+  deleteUploadResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

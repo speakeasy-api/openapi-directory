@@ -8,5 +8,5 @@ export declare class CreateOrganizationRequest extends SpeakeasyBase {
 export declare class CreateOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganization201ApplicationJsonObject?: Map<string, any>;
+    createOrganization201ApplicationJSONObject?: Record<string, any>;
 }

@@ -16,13 +16,13 @@ export declare class Locationsv1GetV1LocationsGetQueryParams extends SpeakeasyBa
     manufacturerName?: string[];
     modelName?: string[];
     offset?: number;
-    orderBy?: shared.LocationsOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
     parameter?: any[];
     parameterId?: number;
     radius?: number;
     sensorType?: shared.SensorTypesEnum;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceName?: string[];
     unit?: string[];
 }
@@ -32,6 +32,6 @@ export declare class Locationsv1GetV1LocationsGetRequest extends SpeakeasyBase {
 export declare class Locationsv1GetV1LocationsGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

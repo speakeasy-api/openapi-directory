@@ -1,5 +1,8 @@
-export var CompressionTypeValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompressionTypeValueEnum = void 0;
+var CompressionTypeValueEnum;
 (function (CompressionTypeValueEnum) {
     CompressionTypeValueEnum["None"] = "none";
     CompressionTypeValueEnum["Gzip"] = "gzip";
-})(CompressionTypeValueEnum || (CompressionTypeValueEnum = {}));
+})(CompressionTypeValueEnum = exports.CompressionTypeValueEnum || (exports.CompressionTypeValueEnum = {}));

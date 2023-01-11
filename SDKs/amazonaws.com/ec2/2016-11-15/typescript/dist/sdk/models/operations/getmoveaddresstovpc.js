@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMoveAddressToVpcActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMoveAddressToVpcResponse = exports.GetMoveAddressToVpcRequest = exports.GetMoveAddressToVpcHeaders = exports.GetMoveAddressToVpcQueryParams = exports.GetMoveAddressToVpcVersionEnum = exports.GetMoveAddressToVpcActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMoveAddressToVpcActionEnum;
 (function (GetMoveAddressToVpcActionEnum) {
     GetMoveAddressToVpcActionEnum["MoveAddressToVpc"] = "MoveAddressToVpc";
-})(GetMoveAddressToVpcActionEnum || (GetMoveAddressToVpcActionEnum = {}));
-export var GetMoveAddressToVpcVersionEnum;
+})(GetMoveAddressToVpcActionEnum = exports.GetMoveAddressToVpcActionEnum || (exports.GetMoveAddressToVpcActionEnum = {}));
+var GetMoveAddressToVpcVersionEnum;
 (function (GetMoveAddressToVpcVersionEnum) {
     GetMoveAddressToVpcVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetMoveAddressToVpcVersionEnum || (GetMoveAddressToVpcVersionEnum = {}));
+})(GetMoveAddressToVpcVersionEnum = exports.GetMoveAddressToVpcVersionEnum || (exports.GetMoveAddressToVpcVersionEnum = {}));
 var GetMoveAddressToVpcQueryParams = /** @class */ (function (_super) {
     __extends(GetMoveAddressToVpcQueryParams, _super);
     function GetMoveAddressToVpcQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetMoveAddressToVpcQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PublicIp" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcQueryParams.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcQueryParams.prototype, "version", void 0);
     return GetMoveAddressToVpcQueryParams;
-}(SpeakeasyBase));
-export { GetMoveAddressToVpcQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMoveAddressToVpcQueryParams = GetMoveAddressToVpcQueryParams;
 var GetMoveAddressToVpcHeaders = /** @class */ (function (_super) {
     __extends(GetMoveAddressToVpcHeaders, _super);
     function GetMoveAddressToVpcHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetMoveAddressToVpcHeaders;
-}(SpeakeasyBase));
-export { GetMoveAddressToVpcHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetMoveAddressToVpcHeaders = GetMoveAddressToVpcHeaders;
 var GetMoveAddressToVpcRequest = /** @class */ (function (_super) {
     __extends(GetMoveAddressToVpcRequest, _super);
     function GetMoveAddressToVpcRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMoveAddressToVpcQueryParams)
     ], GetMoveAddressToVpcRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMoveAddressToVpcHeaders)
     ], GetMoveAddressToVpcRequest.prototype, "headers", void 0);
     return GetMoveAddressToVpcRequest;
-}(SpeakeasyBase));
-export { GetMoveAddressToVpcRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMoveAddressToVpcRequest = GetMoveAddressToVpcRequest;
 var GetMoveAddressToVpcResponse = /** @class */ (function (_super) {
     __extends(GetMoveAddressToVpcResponse, _super);
     function GetMoveAddressToVpcResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMoveAddressToVpcResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMoveAddressToVpcResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMoveAddressToVpcResponse.prototype, "statusCode", void 0);
     return GetMoveAddressToVpcResponse;
-}(SpeakeasyBase));
-export { GetMoveAddressToVpcResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMoveAddressToVpcResponse = GetMoveAddressToVpcResponse;

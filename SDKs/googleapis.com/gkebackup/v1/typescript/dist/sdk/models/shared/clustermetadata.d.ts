@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ClusterMetadata extends SpeakeasyBase {
     anthosVersion?: string;
-    backupCrdVersions?: Map<string, string>;
+    backupCrdVersions?: Record<string, string>;
     cluster?: string;
     gkeVersion?: string;
     k8sVersion?: string;

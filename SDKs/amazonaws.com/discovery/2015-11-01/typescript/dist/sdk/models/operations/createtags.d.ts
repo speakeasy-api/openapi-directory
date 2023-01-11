@@ -20,7 +20,7 @@ export declare class CreateTagsRequest extends SpeakeasyBase {
 export declare class CreateTagsResponse extends SpeakeasyBase {
     authorizationErrorException?: any;
     contentType: string;
-    createTagsResponse?: Map<string, any>;
+    createTagsResponse?: Record<string, any>;
     homeRegionNotSetException?: any;
     invalidParameterException?: any;
     invalidParameterValueException?: any;

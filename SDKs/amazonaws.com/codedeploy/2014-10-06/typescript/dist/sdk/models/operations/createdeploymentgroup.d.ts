@@ -38,7 +38,7 @@ export declare class CreateDeploymentGroupResponse extends SpeakeasyBase {
     invalidDeploymentStyleException?: any;
     invalidEc2TagCombinationException?: any;
     invalidEc2TagException?: any;
-    invalidEcsServiceException?: any;
+    invalidECSServiceException?: any;
     invalidInputException?: any;
     invalidLoadBalancerInfoException?: any;
     invalidOnPremisesTagCombinationException?: any;

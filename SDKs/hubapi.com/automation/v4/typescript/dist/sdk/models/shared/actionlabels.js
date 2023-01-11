@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ActionLabels
-/**
- * User-facing labels for this custom workflow action.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionLabels = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionLabels = /** @class */ (function (_super) {
     __extends(ActionLabels, _super);
     function ActionLabels() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionCardContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionCardContent" }),
         __metadata("design:type", String)
     ], ActionLabels.prototype, "actionCardContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionDescription" }),
         __metadata("design:type", String)
     ], ActionLabels.prototype, "actionDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionName" }),
         __metadata("design:type", String)
     ], ActionLabels.prototype, "actionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appDisplayName" }),
         __metadata("design:type", String)
     ], ActionLabels.prototype, "appDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputFieldDescriptions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputFieldDescriptions" }),
+        __metadata("design:type", Object)
     ], ActionLabels.prototype, "inputFieldDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputFieldLabels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputFieldLabels" }),
+        __metadata("design:type", Object)
     ], ActionLabels.prototype, "inputFieldLabels", void 0);
     return ActionLabels;
-}(SpeakeasyBase));
-export { ActionLabels };
+}(utils_1.SpeakeasyBase));
+exports.ActionLabels = ActionLabels;

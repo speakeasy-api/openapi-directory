@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,119 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGlobalCompliance200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGlobalComplianceResponse = exports.GetGlobalCompliance200ApplicationJson = exports.GetGlobalCompliance200ApplicationJsonResultEnum = exports.GetGlobalCompliance200ApplicationJsonData = exports.GetGlobalCompliance200ApplicationJsonDataGlobalCompliance = exports.GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails = exports.GetGlobalCompliance200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGlobalCompliance200ApplicationJsonActionEnum;
 (function (GetGlobalCompliance200ApplicationJsonActionEnum) {
     GetGlobalCompliance200ApplicationJsonActionEnum["GetGlobalCompliance"] = "getGlobalCompliance";
-})(GetGlobalCompliance200ApplicationJsonActionEnum || (GetGlobalCompliance200ApplicationJsonActionEnum = {}));
+})(GetGlobalCompliance200ApplicationJsonActionEnum = exports.GetGlobalCompliance200ApplicationJsonActionEnum || (exports.GetGlobalCompliance200ApplicationJsonActionEnum = {}));
 var GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails = /** @class */ (function (_super) {
     __extends(GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails, _super);
     function GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noReport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noReport" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "noReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successAlreadyOK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successAlreadyOK" }),
         __metadata("design:type", Number)
-    ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "successAlreadyOk", void 0);
+    ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "successAlreadyOK", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successNotApplicable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successNotApplicable" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "successNotApplicable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRepaired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRepaired" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "successRepaired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unexpectedMissingComponent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unexpectedMissingComponent" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "unexpectedMissingComponent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unexpectedUnknownComponent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unexpectedUnknownComponent" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails.prototype, "unexpectedUnknownComponent", void 0);
     return GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails;
-}(SpeakeasyBase));
-export { GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails };
+}(utils_1.SpeakeasyBase));
+exports.GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails = GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails;
 var GetGlobalCompliance200ApplicationJsonDataGlobalCompliance = /** @class */ (function (_super) {
     __extends(GetGlobalCompliance200ApplicationJsonDataGlobalCompliance, _super);
     function GetGlobalCompliance200ApplicationJsonDataGlobalCompliance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compliance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compliance" }),
         __metadata("design:type", Number)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalCompliance.prototype, "compliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceDetails" }),
         __metadata("design:type", GetGlobalCompliance200ApplicationJsonDataGlobalComplianceComplianceDetails)
     ], GetGlobalCompliance200ApplicationJsonDataGlobalCompliance.prototype, "complianceDetails", void 0);
     return GetGlobalCompliance200ApplicationJsonDataGlobalCompliance;
-}(SpeakeasyBase));
-export { GetGlobalCompliance200ApplicationJsonDataGlobalCompliance };
+}(utils_1.SpeakeasyBase));
+exports.GetGlobalCompliance200ApplicationJsonDataGlobalCompliance = GetGlobalCompliance200ApplicationJsonDataGlobalCompliance;
 var GetGlobalCompliance200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetGlobalCompliance200ApplicationJsonData, _super);
     function GetGlobalCompliance200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalCompliance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalCompliance" }),
         __metadata("design:type", GetGlobalCompliance200ApplicationJsonDataGlobalCompliance)
     ], GetGlobalCompliance200ApplicationJsonData.prototype, "globalCompliance", void 0);
     return GetGlobalCompliance200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetGlobalCompliance200ApplicationJsonData };
-export var GetGlobalCompliance200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetGlobalCompliance200ApplicationJsonData = GetGlobalCompliance200ApplicationJsonData;
+var GetGlobalCompliance200ApplicationJsonResultEnum;
 (function (GetGlobalCompliance200ApplicationJsonResultEnum) {
     GetGlobalCompliance200ApplicationJsonResultEnum["Success"] = "success";
     GetGlobalCompliance200ApplicationJsonResultEnum["Error"] = "error";
-})(GetGlobalCompliance200ApplicationJsonResultEnum || (GetGlobalCompliance200ApplicationJsonResultEnum = {}));
+})(GetGlobalCompliance200ApplicationJsonResultEnum = exports.GetGlobalCompliance200ApplicationJsonResultEnum || (exports.GetGlobalCompliance200ApplicationJsonResultEnum = {}));
 var GetGlobalCompliance200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetGlobalCompliance200ApplicationJson, _super);
     function GetGlobalCompliance200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetGlobalCompliance200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetGlobalCompliance200ApplicationJsonData)
     ], GetGlobalCompliance200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetGlobalCompliance200ApplicationJson.prototype, "result", void 0);
     return GetGlobalCompliance200ApplicationJson;
-}(SpeakeasyBase));
-export { GetGlobalCompliance200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetGlobalCompliance200ApplicationJson = GetGlobalCompliance200ApplicationJson;
 var GetGlobalComplianceResponse = /** @class */ (function (_super) {
     __extends(GetGlobalComplianceResponse, _super);
     function GetGlobalComplianceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGlobalComplianceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGlobalComplianceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGlobalCompliance200ApplicationJson)
-    ], GetGlobalComplianceResponse.prototype, "getGlobalCompliance200ApplicationJsonObject", void 0);
+    ], GetGlobalComplianceResponse.prototype, "getGlobalCompliance200ApplicationJSONObject", void 0);
     return GetGlobalComplianceResponse;
-}(SpeakeasyBase));
-export { GetGlobalComplianceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGlobalComplianceResponse = GetGlobalComplianceResponse;

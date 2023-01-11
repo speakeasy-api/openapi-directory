@@ -16,24 +16,25 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetResourcesCampaignsIdJsonRequest, GetResourcesCampaignsIdJsonResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetResourcesCampaignsJsonRequest, GetResourcesCampaignsJsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: GetResourcesCampaignsIdJsonRequest = {
-  pathParams: {
-    id: 7387490049421462216,
+const req: GetResourcesCampaignsJsonRequest = {
+  queryParams: {
+    max: 8717895732742165505,
+    offset: 2259404117704393152,
+    sort: "culpa",
   },
 };
 
-sdk.campaigns.getResourcesCampaignsIdJson(req).then((res: GetResourcesCampaignsIdJsonResponse | AxiosError) => {
+sdk.campaigns.getResourcesCampaignsJson(req).then((res: GetResourcesCampaignsJsonResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,30 +45,30 @@ sdk.campaigns.getResourcesCampaignsIdJson(req).then((res: GetResourcesCampaignsI
 
 ### campaigns
 
+* `getResourcesCampaignsJson` - Get Campaigns
 * `getResourcesCampaignsIdJson` - Get Campaign by ID
 * `getResourcesCampaignsIdMediaJson` - Get MediaItems by Campaign ID
 * `getResourcesCampaignsIdSyndicateFormat` - Get MediaItems for Campaign
-* `getResourcesCampaignsJson` - Get Campaigns
 
 ### languages
 
-* `getResourcesLanguagesIdJson` - Get Language by ID
 * `getResourcesLanguagesJson` - Get Languages
+* `getResourcesLanguagesIdJson` - Get Language by ID
 
 ### media
 
+* `getResourcesMediaJson` - Get MediaItems
 * `getResourcesMediaFeaturedJson` - Get the list of featured content in the syndication system
+* `getResourcesMediaMostPopularMediaFormat` - Get MediaItems by popularity
+* `getResourcesMediaSearchResultsJson` - Get MediaItems by search query
+* `getResourcesMediaIdJson` - Get MediaItem by ID
 * `getResourcesMediaIdContent` - Get content for MediaItem
 * `getResourcesMediaIdEmbedJson` - Get embed code for MediaItem
-* `getResourcesMediaIdJson` - Get MediaItem by ID
 * `getResourcesMediaIdPreviewJpg` - Get Tag by ID
 * `getResourcesMediaIdRelatedMediaFormat` - Get related MediaItems by ID
 * `getResourcesMediaIdSyndicateFormat` - Get syndicated content for MediaItem
 * `getResourcesMediaIdThumbnailJpg` - Get JPG thumbnail for MediaItem
 * `getResourcesMediaIdYoutubeMetaDataJson` - Get Youtube metadata for MediaItem
-* `getResourcesMediaJson` - Get MediaItems
-* `getResourcesMediaMostPopularMediaFormat` - Get MediaItems by popularity
-* `getResourcesMediaSearchResultsJson` - Get MediaItems by search query
 
 ### mediaTypes
 
@@ -79,19 +80,19 @@ sdk.campaigns.getResourcesCampaignsIdJson(req).then((res: GetResourcesCampaignsI
 
 ### sources
 
+* `getResourcesSourcesJson` - Get Sources
 * `getResourcesSourcesIdJson` - Get Source by ID
 * `getResourcesSourcesIdSyndicateFormat` - Get MediaItems for Source
-* `getResourcesSourcesJson` - Get Sources
 
 ### tags
 
 * `getResourcesTagsFormat` - Get Tags
+* `getResourcesTagsTagLanguagesFormat` - Get TagLanguages
+* `getResourcesTagsTagTypesFormat` - Get MediaItems for Tag
 * `getResourcesTagsIdFormat` - Get Tag by ID
 * `getResourcesTagsIdMediaFormat` - Get MediaItems for Tag
 * `getResourcesTagsIdRelatedFormat` - Get related Tags by ID
 * `getResourcesTagsIdSyndicateFormat` - Get MediaItems for Tag
-* `getResourcesTagsTagLanguagesFormat` - Get TagLanguages
-* `getResourcesTagsTagTypesFormat` - Get MediaItems for Tag
 
 ### userMediaLists
 

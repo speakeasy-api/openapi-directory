@@ -11,8 +11,8 @@ export class ClusterNode extends SpeakeasyBase {
   nodeRole?: string;
 
   @SpeakeasyMetadata()
-  privateIpAddress?: string;
+  privateIPAddress?: string;
 
   @SpeakeasyMetadata()
-  publicIpAddress?: string;
+  publicIPAddress?: string;
 }

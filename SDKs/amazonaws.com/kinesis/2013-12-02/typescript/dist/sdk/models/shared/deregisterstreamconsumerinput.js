@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeregisterStreamConsumerInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeregisterStreamConsumerInput = /** @class */ (function (_super) {
     __extends(DeregisterStreamConsumerInput, _super);
     function DeregisterStreamConsumerInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerARN" }),
         __metadata("design:type", String)
-    ], DeregisterStreamConsumerInput.prototype, "consumerArn", void 0);
+    ], DeregisterStreamConsumerInput.prototype, "consumerARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerName" }),
         __metadata("design:type", String)
     ], DeregisterStreamConsumerInput.prototype, "consumerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamARN" }),
         __metadata("design:type", String)
-    ], DeregisterStreamConsumerInput.prototype, "streamArn", void 0);
+    ], DeregisterStreamConsumerInput.prototype, "streamARN", void 0);
     return DeregisterStreamConsumerInput;
-}(SpeakeasyBase));
-export { DeregisterStreamConsumerInput };
+}(utils_1.SpeakeasyBase));
+exports.DeregisterStreamConsumerInput = DeregisterStreamConsumerInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,162 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GistSimple = exports.GistSimpleGist = exports.GistSimpleGistSimpleUser = exports.GistSimpleGistFiles = exports.GistSimpleFiles = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
 var GistSimpleFiles = /** @class */ (function (_super) {
     __extends(GistSimpleFiles, _super);
     function GistSimpleFiles() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], GistSimpleFiles.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], GistSimpleFiles.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], GistSimpleFiles.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_url" }),
         __metadata("design:type", String)
     ], GistSimpleFiles.prototype, "rawUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], GistSimpleFiles.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truncated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truncated" }),
         __metadata("design:type", Boolean)
     ], GistSimpleFiles.prototype, "truncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GistSimpleFiles.prototype, "type", void 0);
     return GistSimpleFiles;
-}(SpeakeasyBase));
-export { GistSimpleFiles };
+}(utils_1.SpeakeasyBase));
+exports.GistSimpleFiles = GistSimpleFiles;
 var GistSimpleGistFiles = /** @class */ (function (_super) {
     __extends(GistSimpleGistFiles, _super);
     function GistSimpleGistFiles() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], GistSimpleGistFiles.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], GistSimpleGistFiles.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistFiles.prototype, "rawUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], GistSimpleGistFiles.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GistSimpleGistFiles.prototype, "type", void 0);
     return GistSimpleGistFiles;
-}(SpeakeasyBase));
-export { GistSimpleGistFiles };
+}(utils_1.SpeakeasyBase));
+exports.GistSimpleGistFiles = GistSimpleGistFiles;
+// GistSimpleGistSimpleUser
+/**
+ * Simple User
+**/
 var GistSimpleGistSimpleUser = /** @class */ (function (_super) {
     __extends(GistSimpleGistSimpleUser, _super);
     function GistSimpleGistSimpleUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GistSimpleGistSimpleUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "organizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=received_events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_events_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "receivedEventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], GistSimpleGistSimpleUser.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_at" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "starredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions_url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "subscriptionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GistSimpleGistSimpleUser.prototype, "url", void 0);
     return GistSimpleGistSimpleUser;
-}(SpeakeasyBase));
-export { GistSimpleGistSimpleUser };
+}(utils_1.SpeakeasyBase));
+exports.GistSimpleGistSimpleUser = GistSimpleGistSimpleUser;
 // GistSimpleGist
 /**
  * Gist
@@ -182,88 +189,88 @@ var GistSimpleGist = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", Number)
     ], GistSimpleGist.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "commentsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commits_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commits_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "commitsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], GistSimpleGist.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: GistSimpleGistFiles }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: GistSimpleGistFiles }),
+        __metadata("design:type", Object)
     ], GistSimpleGist.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forks" }),
         __metadata("design:type", Array)
     ], GistSimpleGist.prototype, "forks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forks_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forks_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "forksUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_pull_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_pull_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "gitPullUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_push_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_push_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "gitPushUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=history" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=history" }),
         __metadata("design:type", Array)
     ], GistSimpleGist.prototype, "history", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", GistSimpleGistSimpleUser)
     ], GistSimpleGist.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], GistSimpleGist.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truncated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truncated" }),
         __metadata("design:type", Boolean)
     ], GistSimpleGist.prototype, "truncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], GistSimpleGist.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GistSimpleGist.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", GistSimpleGistSimpleUser)
     ], GistSimpleGist.prototype, "user", void 0);
     return GistSimpleGist;
-}(SpeakeasyBase));
-export { GistSimpleGist };
+}(utils_1.SpeakeasyBase));
+exports.GistSimpleGist = GistSimpleGist;
 // GistSimple
 /**
  * Gist Simple
@@ -274,89 +281,89 @@ var GistSimple = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", Number)
     ], GistSimple.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "commentsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commits_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commits_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "commitsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: GistSimpleFiles }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: GistSimpleFiles }),
+        __metadata("design:type", Object)
     ], GistSimple.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fork_of" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fork_of" }),
         __metadata("design:type", GistSimpleGist)
     ], GistSimple.prototype, "forkOf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forks" }),
         __metadata("design:type", Array)
     ], GistSimple.prototype, "forks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forks_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forks_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "forksUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_pull_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_pull_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "gitPullUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_push_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_push_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "gitPushUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=history" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=history" }),
         __metadata("design:type", Array)
     ], GistSimple.prototype, "history", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], GistSimple.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], GistSimple.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truncated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truncated" }),
         __metadata("design:type", Boolean)
     ], GistSimple.prototype, "truncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], GistSimple.prototype, "user", void 0);
     return GistSimple;
-}(SpeakeasyBase));
-export { GistSimple };
+}(utils_1.SpeakeasyBase));
+exports.GistSimple = GistSimple;

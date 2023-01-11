@@ -1,6 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class CreateTrackerResponse extends SpeakeasyBase {
-    createTime: Date;
-    trackerArn: string;
-    trackerName: string;
-}

@@ -1,4 +1,7 @@
-export var ScaStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScaStatusEnum = void 0;
+var ScaStatusEnum;
 (function (ScaStatusEnum) {
     ScaStatusEnum["Received"] = "received";
     ScaStatusEnum["PsuIdentified"] = "psuIdentified";
@@ -9,4 +12,4 @@ export var ScaStatusEnum;
     ScaStatusEnum["Finalised"] = "finalised";
     ScaStatusEnum["Failed"] = "failed";
     ScaStatusEnum["Exempted"] = "exempted";
-})(ScaStatusEnum || (ScaStatusEnum = {}));
+})(ScaStatusEnum = exports.ScaStatusEnum || (exports.ScaStatusEnum = {}));

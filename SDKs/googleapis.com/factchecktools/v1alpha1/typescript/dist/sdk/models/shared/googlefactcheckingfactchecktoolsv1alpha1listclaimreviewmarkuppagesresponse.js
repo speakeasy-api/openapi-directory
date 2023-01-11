@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage } from "./googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkuppage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkuppage_1 = require("./googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkuppage");
 // GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse
 /**
  * Response from listing `ClaimReview` markup.
@@ -34,13 +37,13 @@ var GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse =
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimReviewMarkupPages", elemType: GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimReviewMarkupPages", elemType: googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkuppage_1.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage }),
         __metadata("design:type", Array)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse.prototype, "claimReviewMarkupPages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse.prototype, "nextPageToken", void 0);
     return GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse;
-}(SpeakeasyBase));
-export { GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse = GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse;

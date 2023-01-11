@@ -8,7 +8,7 @@ export declare class FormFieldDefinition extends SpeakeasyBase {
     anchorMode?: string;
     bottomAnchor?: string;
     dataType?: string;
-    fieldId?: string;
+    fieldID?: string;
     horizontalAlignmentType?: string;
     ignore?: string[];
     leftAnchor?: string;

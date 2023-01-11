@@ -43,7 +43,7 @@ export declare class GetNetworkWirelessClientConnectivityEventsRequest extends S
 }
 export declare class GetNetworkWirelessClientConnectivityEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkWirelessClientConnectivityEvents200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessClientConnectivityEvents200ApplicationJSONObject?: Record<string, any>;
 }

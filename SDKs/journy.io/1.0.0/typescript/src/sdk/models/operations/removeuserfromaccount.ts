@@ -27,6 +27,10 @@ export class RemoveUserFromAccount201ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount201ApplicationJson
+/** 
+ * The object was created
+**/
 export class RemoveUserFromAccount201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -42,13 +46,13 @@ export class RemoveUserFromAccount201ApplicationJson extends SpeakeasyBase {
 **/
 export class RemoveUserFromAccount400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -58,7 +62,7 @@ export class RemoveUserFromAccount400ApplicationJsonErrorsParameters extends Spe
 **/
 export class RemoveUserFromAccount400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: RemoveUserFromAccount400ApplicationJsonErrorsParameters;
@@ -74,6 +78,10 @@ export class RemoveUserFromAccount400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class RemoveUserFromAccount400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: RemoveUserFromAccount400ApplicationJsonErrors;
@@ -95,6 +103,10 @@ export class RemoveUserFromAccount401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class RemoveUserFromAccount401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -113,6 +125,10 @@ export class RemoveUserFromAccount403ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount403ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class RemoveUserFromAccount403ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -131,6 +147,10 @@ export class RemoveUserFromAccount429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class RemoveUserFromAccount429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -149,6 +169,10 @@ export class RemoveUserFromAccount500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// RemoveUserFromAccount500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class RemoveUserFromAccount500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -172,26 +196,26 @@ export class RemoveUserFromAccountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount201ApplicationJsonObject?: RemoveUserFromAccount201ApplicationJson;
+  removeUserFromAccount201ApplicationJSONObject?: RemoveUserFromAccount201ApplicationJson;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount400ApplicationJsonObject?: RemoveUserFromAccount400ApplicationJson;
+  removeUserFromAccount400ApplicationJSONObject?: RemoveUserFromAccount400ApplicationJson;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount401ApplicationJsonObject?: RemoveUserFromAccount401ApplicationJson;
+  removeUserFromAccount401ApplicationJSONObject?: RemoveUserFromAccount401ApplicationJson;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount403ApplicationJsonObject?: RemoveUserFromAccount403ApplicationJson;
+  removeUserFromAccount403ApplicationJSONObject?: RemoveUserFromAccount403ApplicationJson;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount429ApplicationJsonObject?: RemoveUserFromAccount429ApplicationJson;
+  removeUserFromAccount429ApplicationJSONObject?: RemoveUserFromAccount429ApplicationJson;
 
   @SpeakeasyMetadata()
-  removeUserFromAccount500ApplicationJsonObject?: RemoveUserFromAccount500ApplicationJson;
+  removeUserFromAccount500ApplicationJSONObject?: RemoveUserFromAccount500ApplicationJson;
 }

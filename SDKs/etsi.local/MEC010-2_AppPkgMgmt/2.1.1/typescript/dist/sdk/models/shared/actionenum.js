@@ -1,4 +1,7 @@
-export var ActionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionEnum = void 0;
+var ActionEnum;
 (function (ActionEnum) {
     ActionEnum["Drop"] = "DROP";
     ActionEnum["ForwardDecapsulated"] = "FORWARD_DECAPSULATED";
@@ -6,4 +9,4 @@ export var ActionEnum;
     ActionEnum["Passthrough"] = "PASSTHROUGH";
     ActionEnum["DuplicatedDecapsulated"] = "DUPLICATED_DECAPSULATED";
     ActionEnum["DuplicateAsIs"] = "DUPLICATE_AS_IS";
-})(ActionEnum || (ActionEnum = {}));
+})(ActionEnum = exports.ActionEnum || (exports.ActionEnum = {}));

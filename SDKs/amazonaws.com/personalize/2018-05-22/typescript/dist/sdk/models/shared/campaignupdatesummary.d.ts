@@ -8,7 +8,7 @@ export declare class CampaignUpdateSummary extends SpeakeasyBase {
     creationDateTime?: Date;
     failureReason?: string;
     lastUpdatedDateTime?: Date;
-    minProvisionedTps?: number;
+    minProvisionedTPS?: number;
     solutionVersionArn?: string;
     status?: string;
 }

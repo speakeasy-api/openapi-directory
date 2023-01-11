@@ -44,5 +44,5 @@ export class CreateRuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createRule200ApplicationJsonObject?: CreateRule200ApplicationJson;
+  createRule200ApplicationJSONObject?: CreateRule200ApplicationJson;
 }

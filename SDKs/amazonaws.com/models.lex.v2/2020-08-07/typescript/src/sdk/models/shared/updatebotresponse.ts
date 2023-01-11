@@ -24,7 +24,7 @@ export class UpdateBotResponse extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" })
-  idleSessionTtlInSeconds?: number;
+  idleSessionTTLInSeconds?: number;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" })
   lastUpdatedDateTime?: Date;

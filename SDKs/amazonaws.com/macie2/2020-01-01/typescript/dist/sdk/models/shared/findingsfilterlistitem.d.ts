@@ -8,5 +8,5 @@ export declare class FindingsFilterListItem extends SpeakeasyBase {
     arn?: string;
     id?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

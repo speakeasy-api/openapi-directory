@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Screen } from "./screen";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScreenshotCluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var screen_1 = require("./screen");
 var ScreenshotCluster = /** @class */ (function (_super) {
     __extends(ScreenshotCluster, _super);
     function ScreenshotCluster() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity" }),
         __metadata("design:type", String)
     ], ScreenshotCluster.prototype, "activity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterId" }),
         __metadata("design:type", String)
     ], ScreenshotCluster.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyScreen" }),
-        __metadata("design:type", Screen)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyScreen" }),
+        __metadata("design:type", screen_1.Screen)
     ], ScreenshotCluster.prototype, "keyScreen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screens", elemType: Screen }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screens", elemType: screen_1.Screen }),
         __metadata("design:type", Array)
     ], ScreenshotCluster.prototype, "screens", void 0);
     return ScreenshotCluster;
-}(SpeakeasyBase));
-export { ScreenshotCluster };
+}(utils_1.SpeakeasyBase));
+exports.ScreenshotCluster = ScreenshotCluster;

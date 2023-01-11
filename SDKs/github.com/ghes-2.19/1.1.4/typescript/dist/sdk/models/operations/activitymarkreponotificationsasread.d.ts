@@ -17,5 +17,5 @@ export declare class ActivityMarkRepoNotificationsAsReadRequest extends Speakeas
 export declare class ActivityMarkRepoNotificationsAsReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    activityMarkRepoNotificationsAsRead202ApplicationJsonObject?: ActivityMarkRepoNotificationsAsRead202ApplicationJson;
+    activityMarkRepoNotificationsAsRead202ApplicationJSONObject?: ActivityMarkRepoNotificationsAsRead202ApplicationJson;
 }

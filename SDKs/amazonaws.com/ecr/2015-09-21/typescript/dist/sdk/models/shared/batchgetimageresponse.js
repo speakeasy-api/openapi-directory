@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageFailure } from "./imagefailure";
-import { Image } from "./image";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetImageResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagefailure_1 = require("./imagefailure");
+var image_1 = require("./image");
 var BatchGetImageResponse = /** @class */ (function (_super) {
     __extends(BatchGetImageResponse, _super);
     function BatchGetImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failures", elemType: ImageFailure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failures", elemType: imagefailure_1.ImageFailure }),
         __metadata("design:type", Array)
     ], BatchGetImageResponse.prototype, "failures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: Image }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: image_1.Image }),
         __metadata("design:type", Array)
     ], BatchGetImageResponse.prototype, "images", void 0);
     return BatchGetImageResponse;
-}(SpeakeasyBase));
-export { BatchGetImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetImageResponse = BatchGetImageResponse;

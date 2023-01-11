@@ -13,7 +13,7 @@ export declare class VirtualMachineWithConfigContext extends SpeakeasyBase {
     comments?: string;
     configContext?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     disk?: number;
     id?: number;
     lastUpdated?: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsCancelWorkflowRunResponse = exports.ActionsCancelWorkflowRunRequest = exports.ActionsCancelWorkflowRunPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsCancelWorkflowRunPathParams = /** @class */ (function (_super) {
     __extends(ActionsCancelWorkflowRunPathParams, _super);
     function ActionsCancelWorkflowRunPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsCancelWorkflowRunPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsCancelWorkflowRunPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=run_id" }),
         __metadata("design:type", Number)
     ], ActionsCancelWorkflowRunPathParams.prototype, "runId", void 0);
     return ActionsCancelWorkflowRunPathParams;
-}(SpeakeasyBase));
-export { ActionsCancelWorkflowRunPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCancelWorkflowRunPathParams = ActionsCancelWorkflowRunPathParams;
 var ActionsCancelWorkflowRunRequest = /** @class */ (function (_super) {
     __extends(ActionsCancelWorkflowRunRequest, _super);
     function ActionsCancelWorkflowRunRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsCancelWorkflowRunPathParams)
     ], ActionsCancelWorkflowRunRequest.prototype, "pathParams", void 0);
     return ActionsCancelWorkflowRunRequest;
-}(SpeakeasyBase));
-export { ActionsCancelWorkflowRunRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCancelWorkflowRunRequest = ActionsCancelWorkflowRunRequest;
 var ActionsCancelWorkflowRunResponse = /** @class */ (function (_super) {
     __extends(ActionsCancelWorkflowRunResponse, _super);
     function ActionsCancelWorkflowRunResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsCancelWorkflowRunResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsCancelWorkflowRunResponse.prototype, "statusCode", void 0);
     return ActionsCancelWorkflowRunResponse;
-}(SpeakeasyBase));
-export { ActionsCancelWorkflowRunResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCancelWorkflowRunResponse = ActionsCancelWorkflowRunResponse;

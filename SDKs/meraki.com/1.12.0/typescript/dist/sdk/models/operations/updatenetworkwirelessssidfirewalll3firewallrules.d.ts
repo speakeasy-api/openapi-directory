@@ -31,5 +31,5 @@ export declare class UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest ext
 export declare class UpdateNetworkWirelessSsidFirewallL3FirewallRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

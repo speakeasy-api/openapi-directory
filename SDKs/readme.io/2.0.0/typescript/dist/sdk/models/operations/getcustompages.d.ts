@@ -13,6 +13,6 @@ export declare class GetCustomPagesRequest extends SpeakeasyBase {
 }
 export declare class GetCustomPagesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

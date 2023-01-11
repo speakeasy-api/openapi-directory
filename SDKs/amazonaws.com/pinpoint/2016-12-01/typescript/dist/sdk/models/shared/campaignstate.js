@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CampaignStatusEnum } from "./campaignstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignState = void 0;
+var utils_1 = require("../../../internal/utils");
+var campaignstatusenum_1 = require("./campaignstatusenum");
 // CampaignState
 /**
  * Provides information about the status of a campaign.
@@ -34,9 +37,9 @@ var CampaignState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CampaignStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CampaignStatus" }),
         __metadata("design:type", String)
     ], CampaignState.prototype, "campaignStatus", void 0);
     return CampaignState;
-}(SpeakeasyBase));
-export { CampaignState };
+}(utils_1.SpeakeasyBase));
+exports.CampaignState = CampaignState;

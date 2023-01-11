@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiVersion } from "./apiversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiVersions = void 0;
+var utils_1 = require("../../../internal/utils");
+var apiversion_1 = require("./apiversion");
 var ApiVersions = /** @class */ (function (_super) {
     __extends(ApiVersions, _super);
     function ApiVersions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all", elemType: ApiVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all", elemType: apiversion_1.ApiVersion }),
         __metadata("design:type", Array)
     ], ApiVersions.prototype, "all", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest" }),
         __metadata("design:type", Number)
     ], ApiVersions.prototype, "latest", void 0);
     return ApiVersions;
-}(SpeakeasyBase));
-export { ApiVersions };
+}(utils_1.SpeakeasyBase));
+exports.ApiVersions = ApiVersions;

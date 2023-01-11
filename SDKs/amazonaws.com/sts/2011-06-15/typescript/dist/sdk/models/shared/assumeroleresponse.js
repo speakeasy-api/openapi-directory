@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssumedRoleUser } from "./assumedroleuser";
-import { Credentials } from "./credentials";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssumeRoleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assumedroleuser_1 = require("./assumedroleuser");
+var credentials_1 = require("./credentials");
 // AssumeRoleResponse
 /**
  * Contains the response to a successful <a>AssumeRole</a> request, including temporary Amazon Web Services credentials that can be used to make Amazon Web Services requests.
@@ -35,21 +38,21 @@ var AssumeRoleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AssumedRoleUser)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", assumedroleuser_1.AssumedRoleUser)
     ], AssumeRoleResponse.prototype, "assumedRoleUser", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Credentials)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", credentials_1.Credentials)
     ], AssumeRoleResponse.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AssumeRoleResponse.prototype, "packedPolicySize", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AssumeRoleResponse.prototype, "sourceIdentity", void 0);
     return AssumeRoleResponse;
-}(SpeakeasyBase));
-export { AssumeRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.AssumeRoleResponse = AssumeRoleResponse;

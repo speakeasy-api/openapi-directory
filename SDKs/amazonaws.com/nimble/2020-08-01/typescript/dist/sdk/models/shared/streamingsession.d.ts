@@ -13,7 +13,7 @@ export declare class StreamingSession extends SpeakeasyBase {
     statusCode?: StreamingSessionStatusCodeEnum;
     statusMessage?: string;
     streamingImageId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     terminateAt?: Date;
     updatedAt?: Date;
     updatedBy?: string;

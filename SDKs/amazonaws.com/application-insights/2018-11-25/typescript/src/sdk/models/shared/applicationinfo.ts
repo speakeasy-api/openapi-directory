@@ -17,7 +17,7 @@ export class ApplicationInfo extends SpeakeasyBase {
   opsCenterEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=OpsItemSNSTopicArn" })
-  opsItemSnsTopicArn?: string;
+  opsItemSNSTopicArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Remarks" })
   remarks?: string;

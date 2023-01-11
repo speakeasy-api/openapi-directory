@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
-import { UnifiedApiIdEnum } from "./unifiedapiidenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Webhook = void 0;
+var utils_1 = require("../../../internal/utils");
+var statusenum_1 = require("./statusenum");
+var unifiedapiidenum_1 = require("./unifiedapiidenum");
 var Webhook = /** @class */ (function (_super) {
     __extends(Webhook, _super);
     function Webhook() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Webhook.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delivery_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delivery_url" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "deliveryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", Array)
     ], Webhook.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=execute_base_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=execute_base_url" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "executeBaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unified_api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unified_api" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "unifiedApi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Webhook.prototype, "updatedAt", void 0);
     return Webhook;
-}(SpeakeasyBase));
-export { Webhook };
+}(utils_1.SpeakeasyBase));
+exports.Webhook = Webhook;

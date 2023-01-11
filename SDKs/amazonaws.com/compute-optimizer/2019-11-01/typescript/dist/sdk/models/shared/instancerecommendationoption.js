@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UtilizationMetric } from "./utilizationmetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceRecommendationOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var utilizationmetric_1 = require("./utilizationmetric");
 // InstanceRecommendationOption
 /**
  * Describes a recommendation option for an Amazon EC2 instance.
@@ -34,25 +37,25 @@ var InstanceRecommendationOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], InstanceRecommendationOption.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performanceRisk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performanceRisk" }),
         __metadata("design:type", Number)
     ], InstanceRecommendationOption.prototype, "performanceRisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformDifferences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformDifferences" }),
         __metadata("design:type", Array)
     ], InstanceRecommendationOption.prototype, "platformDifferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectedUtilizationMetrics", elemType: UtilizationMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectedUtilizationMetrics", elemType: utilizationmetric_1.UtilizationMetric }),
         __metadata("design:type", Array)
     ], InstanceRecommendationOption.prototype, "projectedUtilizationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], InstanceRecommendationOption.prototype, "rank", void 0);
     return InstanceRecommendationOption;
-}(SpeakeasyBase));
-export { InstanceRecommendationOption };
+}(utils_1.SpeakeasyBase));
+exports.InstanceRecommendationOption = InstanceRecommendationOption;

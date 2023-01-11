@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetFeaturesFeatureIdRequest, GetFeaturesFeatureIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,7 +28,7 @@ const sdk = new SDK();
     
 const req: GetFeaturesFeatureIdRequest = {
   pathParams: {
-    featureId: 914375363837464697,
+    featureId: 8717895732742165505,
   },
 };
 
@@ -58,11 +57,11 @@ sdk.feature.getFeaturesFeatureId(req).then((res: GetFeaturesFeatureIdResponse | 
 * `getNamesDecisionsRecent` - Search for names affected by recent naming decision
 * `getNamesDecisionsYear` - Search for names affected by naming decisions in a given year
 * `getNamesInside` - Search in a geographic area
-* `getNamesNameIdOutputFormat` - Get a name by its nameId
 * `getNamesNear` - Search near to a geographic point
 * `getNamesNotOfficialSearch` - Search by name, limit to unofficial names only
 * `getNamesOfficialSearch` - Search by name, limit to official names only
 * `getNamesSearch` - Search by name
+* `getNamesNameIdOutputFormat` - Get a name by its nameId
 
 ### name authority
 

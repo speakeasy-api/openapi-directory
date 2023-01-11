@@ -15,7 +15,7 @@ export declare class PullsListFilesRequest extends SpeakeasyBase {
 }
 export declare class PullsListFilesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     diffEntries?: shared.DiffEntry[];

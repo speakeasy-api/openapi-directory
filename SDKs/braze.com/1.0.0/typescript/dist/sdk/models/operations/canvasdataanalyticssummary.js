@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CanvasDataAnalyticsSummaryResponse = exports.CanvasDataAnalyticsSummaryRequest = exports.CanvasDataAnalyticsSummaryQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CanvasDataAnalyticsSummaryQueryParams = /** @class */ (function (_super) {
     __extends(CanvasDataAnalyticsSummaryQueryParams, _super);
     function CanvasDataAnalyticsSummaryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=canvas_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=canvas_id" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "canvasId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_deleted_step_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_deleted_step_data" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "includeDeletedStepData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_step_breakdown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_step_breakdown" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "includeStepBreakdown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_variant_breakdown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_variant_breakdown" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "includeVariantBreakdown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=starting_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=starting_at" }),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryQueryParams.prototype, "startingAt", void 0);
     return CanvasDataAnalyticsSummaryQueryParams;
-}(SpeakeasyBase));
-export { CanvasDataAnalyticsSummaryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDataAnalyticsSummaryQueryParams = CanvasDataAnalyticsSummaryQueryParams;
 var CanvasDataAnalyticsSummaryRequest = /** @class */ (function (_super) {
     __extends(CanvasDataAnalyticsSummaryRequest, _super);
     function CanvasDataAnalyticsSummaryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CanvasDataAnalyticsSummaryQueryParams)
     ], CanvasDataAnalyticsSummaryRequest.prototype, "queryParams", void 0);
     return CanvasDataAnalyticsSummaryRequest;
-}(SpeakeasyBase));
-export { CanvasDataAnalyticsSummaryRequest };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDataAnalyticsSummaryRequest = CanvasDataAnalyticsSummaryRequest;
 var CanvasDataAnalyticsSummaryResponse = /** @class */ (function (_super) {
     __extends(CanvasDataAnalyticsSummaryResponse, _super);
     function CanvasDataAnalyticsSummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CanvasDataAnalyticsSummaryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CanvasDataAnalyticsSummaryResponse.prototype, "statusCode", void 0);
     return CanvasDataAnalyticsSummaryResponse;
-}(SpeakeasyBase));
-export { CanvasDataAnalyticsSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDataAnalyticsSummaryResponse = CanvasDataAnalyticsSummaryResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-export var UrlRestrictionRestrictionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UrlRestriction = exports.UrlRestrictionRestrictionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var UrlRestrictionRestrictionTypeEnum;
 (function (UrlRestrictionRestrictionTypeEnum) {
     UrlRestrictionRestrictionTypeEnum["RestrictionTypeUnspecified"] = "RESTRICTION_TYPE_UNSPECIFIED";
     UrlRestrictionRestrictionTypeEnum["Contains"] = "CONTAINS";
@@ -35,7 +38,7 @@ export var UrlRestrictionRestrictionTypeEnum;
     UrlRestrictionRestrictionTypeEnum["DoesNotContain"] = "DOES_NOT_CONTAIN";
     UrlRestrictionRestrictionTypeEnum["DoesNotStartWith"] = "DOES_NOT_START_WITH";
     UrlRestrictionRestrictionTypeEnum["DoesNotEndWith"] = "DOES_NOT_END_WITH";
-})(UrlRestrictionRestrictionTypeEnum || (UrlRestrictionRestrictionTypeEnum = {}));
+})(UrlRestrictionRestrictionTypeEnum = exports.UrlRestrictionRestrictionTypeEnum || (exports.UrlRestrictionRestrictionTypeEnum = {}));
 // UrlRestriction
 /**
  * Represents the URL restriction (for the URL captured by the pixel callback) for a user list.
@@ -46,21 +49,21 @@ var UrlRestriction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", date_1.Date)
     ], UrlRestriction.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictionType" }),
         __metadata("design:type", String)
     ], UrlRestriction.prototype, "restrictionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", date_1.Date)
     ], UrlRestriction.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UrlRestriction.prototype, "url", void 0);
     return UrlRestriction;
-}(SpeakeasyBase));
-export { UrlRestriction };
+}(utils_1.SpeakeasyBase));
+exports.UrlRestriction = UrlRestriction;

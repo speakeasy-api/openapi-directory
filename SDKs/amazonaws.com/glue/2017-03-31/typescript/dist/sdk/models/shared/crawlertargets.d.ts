@@ -9,8 +9,8 @@ import { S3Target } from "./s3target";
 **/
 export declare class CrawlerTargets extends SpeakeasyBase {
     catalogTargets?: CatalogTarget[];
-    dynamoDbTargets?: DynamoDbTarget[];
+    dynamoDBTargets?: DynamoDbTarget[];
     jdbcTargets?: JdbcTarget[];
-    mongoDbTargets?: MongoDbTarget[];
+    mongoDBTargets?: MongoDbTarget[];
     s3Targets?: S3Target[];
 }

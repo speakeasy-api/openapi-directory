@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
-import { CycleStep } from "./cyclestep";
-export var ReplicationCycleStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationCycle = exports.ReplicationCycleStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
+var cyclestep_1 = require("./cyclestep");
+var ReplicationCycleStateEnum;
 (function (ReplicationCycleStateEnum) {
     ReplicationCycleStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ReplicationCycleStateEnum["Running"] = "RUNNING";
     ReplicationCycleStateEnum["Paused"] = "PAUSED";
     ReplicationCycleStateEnum["Failed"] = "FAILED";
     ReplicationCycleStateEnum["Succeeded"] = "SUCCEEDED";
-})(ReplicationCycleStateEnum || (ReplicationCycleStateEnum = {}));
+})(ReplicationCycleStateEnum = exports.ReplicationCycleStateEnum || (exports.ReplicationCycleStateEnum = {}));
 // ReplicationCycle
 /**
  * ReplicationCycle contains information about the current replication cycle status.
@@ -43,41 +46,41 @@ var ReplicationCycle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycleNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycleNumber" }),
         __metadata("design:type", Number)
     ], ReplicationCycle.prototype, "cycleNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], ReplicationCycle.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], ReplicationCycle.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReplicationCycle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progressPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progressPercent" }),
         __metadata("design:type", Number)
     ], ReplicationCycle.prototype, "progressPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], ReplicationCycle.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ReplicationCycle.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps", elemType: CycleStep }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps", elemType: cyclestep_1.CycleStep }),
         __metadata("design:type", Array)
     ], ReplicationCycle.prototype, "steps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPauseDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPauseDuration" }),
         __metadata("design:type", String)
     ], ReplicationCycle.prototype, "totalPauseDuration", void 0);
     return ReplicationCycle;
-}(SpeakeasyBase));
-export { ReplicationCycle };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationCycle = ReplicationCycle;

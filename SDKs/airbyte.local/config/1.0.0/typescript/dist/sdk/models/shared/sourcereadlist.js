@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceRead } from "./sourceread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceReadList = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceread_1 = require("./sourceread");
 var SourceReadList = /** @class */ (function (_super) {
     __extends(SourceReadList, _super);
     function SourceReadList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: SourceRead }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: sourceread_1.SourceRead }),
         __metadata("design:type", Array)
     ], SourceReadList.prototype, "sources", void 0);
     return SourceReadList;
-}(SpeakeasyBase));
-export { SourceReadList };
+}(utils_1.SpeakeasyBase));
+exports.SourceReadList = SourceReadList;

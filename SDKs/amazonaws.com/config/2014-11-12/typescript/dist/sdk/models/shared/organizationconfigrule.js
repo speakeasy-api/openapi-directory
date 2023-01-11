@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationCustomRuleMetadata } from "./organizationcustomrulemetadata";
-import { OrganizationManagedRuleMetadata } from "./organizationmanagedrulemetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationConfigRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationcustomrulemetadata_1 = require("./organizationcustomrulemetadata");
+var organizationmanagedrulemetadata_1 = require("./organizationmanagedrulemetadata");
 // OrganizationConfigRule
 /**
  * An organization config rule that has information about config rules that Config creates in member accounts.
@@ -35,29 +38,29 @@ var OrganizationConfigRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludedAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludedAccounts" }),
         __metadata("design:type", Array)
     ], OrganizationConfigRule.prototype, "excludedAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], OrganizationConfigRule.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConfigRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConfigRuleArn" }),
         __metadata("design:type", String)
     ], OrganizationConfigRule.prototype, "organizationConfigRuleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConfigRuleName" }),
         __metadata("design:type", String)
     ], OrganizationConfigRule.prototype, "organizationConfigRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationCustomRuleMetadata" }),
-        __metadata("design:type", OrganizationCustomRuleMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationCustomRuleMetadata" }),
+        __metadata("design:type", organizationcustomrulemetadata_1.OrganizationCustomRuleMetadata)
     ], OrganizationConfigRule.prototype, "organizationCustomRuleMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationManagedRuleMetadata" }),
-        __metadata("design:type", OrganizationManagedRuleMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationManagedRuleMetadata" }),
+        __metadata("design:type", organizationmanagedrulemetadata_1.OrganizationManagedRuleMetadata)
     ], OrganizationConfigRule.prototype, "organizationManagedRuleMetadata", void 0);
     return OrganizationConfigRule;
-}(SpeakeasyBase));
-export { OrganizationConfigRule };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationConfigRule = OrganizationConfigRule;

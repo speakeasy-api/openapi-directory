@@ -8,15 +8,10 @@ export class AppsListAccountsForPlanPathParams extends SpeakeasyBase {
   planId: number;
 }
 
-export enum AppsListAccountsForPlanDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
 
 export class AppsListAccountsForPlanQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: AppsListAccountsForPlanDirectionEnum;
+  direction?: shared.SortEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -43,7 +38,7 @@ export class AppsListAccountsForPlanResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

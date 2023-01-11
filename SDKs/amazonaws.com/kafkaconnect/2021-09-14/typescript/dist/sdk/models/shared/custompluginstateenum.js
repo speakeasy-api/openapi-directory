@@ -1,4 +1,7 @@
-export var CustomPluginStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomPluginStateEnum = void 0;
+var CustomPluginStateEnum;
 (function (CustomPluginStateEnum) {
     CustomPluginStateEnum["Creating"] = "CREATING";
     CustomPluginStateEnum["CreateFailed"] = "CREATE_FAILED";
@@ -6,4 +9,4 @@ export var CustomPluginStateEnum;
     CustomPluginStateEnum["Updating"] = "UPDATING";
     CustomPluginStateEnum["UpdateFailed"] = "UPDATE_FAILED";
     CustomPluginStateEnum["Deleting"] = "DELETING";
-})(CustomPluginStateEnum || (CustomPluginStateEnum = {}));
+})(CustomPluginStateEnum = exports.CustomPluginStateEnum || (exports.CustomPluginStateEnum = {}));

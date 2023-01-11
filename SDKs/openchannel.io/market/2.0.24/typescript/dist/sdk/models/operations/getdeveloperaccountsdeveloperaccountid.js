@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeveloperAccountsDeveloperAccountIdResponse = exports.GetDeveloperAccountsDeveloperAccountIdRequest = exports.GetDeveloperAccountsDeveloperAccountIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeveloperAccountsDeveloperAccountIdPathParams = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsDeveloperAccountIdPathParams, _super);
     function GetDeveloperAccountsDeveloperAccountIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=developerAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=developerAccountId" }),
         __metadata("design:type", String)
     ], GetDeveloperAccountsDeveloperAccountIdPathParams.prototype, "developerAccountId", void 0);
     return GetDeveloperAccountsDeveloperAccountIdPathParams;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsDeveloperAccountIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsDeveloperAccountIdPathParams = GetDeveloperAccountsDeveloperAccountIdPathParams;
 var GetDeveloperAccountsDeveloperAccountIdRequest = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsDeveloperAccountIdRequest, _super);
     function GetDeveloperAccountsDeveloperAccountIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeveloperAccountsDeveloperAccountIdPathParams)
     ], GetDeveloperAccountsDeveloperAccountIdRequest.prototype, "pathParams", void 0);
     return GetDeveloperAccountsDeveloperAccountIdRequest;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsDeveloperAccountIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsDeveloperAccountIdRequest = GetDeveloperAccountsDeveloperAccountIdRequest;
 var GetDeveloperAccountsDeveloperAccountIdResponse = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsDeveloperAccountIdResponse, _super);
     function GetDeveloperAccountsDeveloperAccountIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeveloperAccountsDeveloperAccountIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeveloperAccountsDeveloperAccountIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeveloperAccountsDeveloperAccountIdResponse.prototype, "statusCode", void 0);
     return GetDeveloperAccountsDeveloperAccountIdResponse;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsDeveloperAccountIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsDeveloperAccountIdResponse = GetDeveloperAccountsDeveloperAccountIdResponse;

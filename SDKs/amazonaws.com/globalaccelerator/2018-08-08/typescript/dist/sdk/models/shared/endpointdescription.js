@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HealthStateEnum } from "./healthstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var healthstateenum_1 = require("./healthstateenum");
 // EndpointDescription
 /**
  * A complex type for an endpoint. Each endpoint group can include one or more endpoints, such as load balancers.
@@ -34,25 +37,25 @@ var EndpointDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientIPPreservationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientIPPreservationEnabled" }),
         __metadata("design:type", Boolean)
-    ], EndpointDescription.prototype, "clientIpPreservationEnabled", void 0);
+    ], EndpointDescription.prototype, "clientIPPreservationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointId" }),
         __metadata("design:type", String)
     ], EndpointDescription.prototype, "endpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthReason" }),
         __metadata("design:type", String)
     ], EndpointDescription.prototype, "healthReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthState" }),
         __metadata("design:type", String)
     ], EndpointDescription.prototype, "healthState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Weight" }),
         __metadata("design:type", Number)
     ], EndpointDescription.prototype, "weight", void 0);
     return EndpointDescription;
-}(SpeakeasyBase));
-export { EndpointDescription };
+}(utils_1.SpeakeasyBase));
+exports.EndpointDescription = EndpointDescription;

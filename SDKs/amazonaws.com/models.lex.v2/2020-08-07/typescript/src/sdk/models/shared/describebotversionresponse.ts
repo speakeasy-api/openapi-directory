@@ -30,7 +30,7 @@ export class DescribeBotVersionResponse extends SpeakeasyBase {
   failureReasons?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" })
-  idleSessionTtlInSeconds?: number;
+  idleSessionTTLInSeconds?: number;
 
   @SpeakeasyMetadata({ data: "json, name=roleArn" })
   roleArn?: string;

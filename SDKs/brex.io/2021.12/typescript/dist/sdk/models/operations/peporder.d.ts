@@ -37,7 +37,7 @@ export declare class PepOrderRequest extends SpeakeasyBase {
 }
 export declare class PepOrderResponse extends SpeakeasyBase {
     contentType: string;
-    pepOrder200ApplicationJsonAny?: any;
-    pepOrderDefaultApplicationJsonAny?: any;
+    pepOrder200ApplicationJSONAny?: any;
+    pepOrderDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

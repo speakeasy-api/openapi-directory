@@ -28,6 +28,6 @@ export declare class CloudtasksProjectsLocationsQueuesTasksAcknowledgeRequest ex
 }
 export declare class CloudtasksProjectsLocationsQueuesTasksAcknowledgeResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

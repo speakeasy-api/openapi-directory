@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPaymentsResellerSubscriptionV1Duration } from "./googlecloudpaymentsresellersubscriptionv1duration";
-import { GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails } from "./googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails";
-import { GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsInput } from "./googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails";
-export var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput = exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec = exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpaymentsresellersubscriptionv1duration_1 = require("./googlecloudpaymentsresellersubscriptionv1duration");
+var googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails_1 = require("./googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails");
+var googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails_2 = require("./googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails");
+var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum;
 (function (GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum) {
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum["PromotionTypeUnspecified"] = "PROMOTION_TYPE_UNSPECIFIED";
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum["PromotionTypeFreeTrial"] = "PROMOTION_TYPE_FREE_TRIAL";
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum["PromotionTypeIntroductoryPricing"] = "PROMOTION_TYPE_INTRODUCTORY_PRICING";
-})(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum || (GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum = {}));
+})(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum = exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum || (exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum = {}));
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec
 /**
  * Describes the spec for one promotion.
@@ -42,24 +45,24 @@ var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeTrialDuration" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeTrialDuration" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1duration_1.GoogleCloudPaymentsResellerSubscriptionV1Duration)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec.prototype, "freeTrialDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPricingDetails" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPricingDetails" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails_1.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec.prototype, "introductoryPricingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotion" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec.prototype, "promotion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec.prototype, "type", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec;
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput
 /**
  * Describes the spec for one promotion.
@@ -70,17 +73,17 @@ var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput = /*
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeTrialDuration" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeTrialDuration" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1duration_1.GoogleCloudPaymentsResellerSubscriptionV1Duration)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput.prototype, "freeTrialDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPricingDetails" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPricingDetails" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails_2.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsInput)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput.prototype, "introductoryPricingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotion" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput.prototype, "promotion", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput;

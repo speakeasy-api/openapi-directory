@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritablePowerPortTemplateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritablePowerPortTemplateInput = exports.WritablePowerPortTemplateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritablePowerPortTemplateTypeEnum;
 (function (WritablePowerPortTemplateTypeEnum) {
     WritablePowerPortTemplateTypeEnum["Iec60320C6"] = "iec-60320-c6";
     WritablePowerPortTemplateTypeEnum["Iec60320C8"] = "iec-60320-c8";
@@ -91,32 +94,32 @@ export var WritablePowerPortTemplateTypeEnum;
     WritablePowerPortTemplateTypeEnum["ItaM"] = "ita-m";
     WritablePowerPortTemplateTypeEnum["ItaN"] = "ita-n";
     WritablePowerPortTemplateTypeEnum["ItaO"] = "ita-o";
-})(WritablePowerPortTemplateTypeEnum || (WritablePowerPortTemplateTypeEnum = {}));
+})(WritablePowerPortTemplateTypeEnum = exports.WritablePowerPortTemplateTypeEnum || (exports.WritablePowerPortTemplateTypeEnum = {}));
 var WritablePowerPortTemplateInput = /** @class */ (function (_super) {
     __extends(WritablePowerPortTemplateInput, _super);
     function WritablePowerPortTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allocated_draw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allocated_draw" }),
         __metadata("design:type", Number)
     ], WritablePowerPortTemplateInput.prototype, "allocatedDraw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], WritablePowerPortTemplateInput.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximum_draw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximum_draw" }),
         __metadata("design:type", Number)
     ], WritablePowerPortTemplateInput.prototype, "maximumDraw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritablePowerPortTemplateInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritablePowerPortTemplateInput.prototype, "type", void 0);
     return WritablePowerPortTemplateInput;
-}(SpeakeasyBase));
-export { WritablePowerPortTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritablePowerPortTemplateInput = WritablePowerPortTemplateInput;

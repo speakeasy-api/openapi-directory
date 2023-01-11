@@ -46,7 +46,7 @@ export class DeleteSafetyRuleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSafetyRuleResponse?: Map<string, any>;
+  deleteSafetyRuleResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

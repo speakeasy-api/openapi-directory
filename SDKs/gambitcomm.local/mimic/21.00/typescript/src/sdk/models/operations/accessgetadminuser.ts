@@ -10,5 +10,5 @@ export class AccessGetAdminuserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  accessGetAdminuser200ApplicationJsonString?: string;
+  accessGetAdminuser200ApplicationJSONString?: string;
 }

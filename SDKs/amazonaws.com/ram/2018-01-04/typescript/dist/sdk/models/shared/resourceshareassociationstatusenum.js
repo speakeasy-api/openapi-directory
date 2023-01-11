@@ -1,8 +1,11 @@
-export var ResourceShareAssociationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceShareAssociationStatusEnum = void 0;
+var ResourceShareAssociationStatusEnum;
 (function (ResourceShareAssociationStatusEnum) {
     ResourceShareAssociationStatusEnum["Associating"] = "ASSOCIATING";
     ResourceShareAssociationStatusEnum["Associated"] = "ASSOCIATED";
     ResourceShareAssociationStatusEnum["Failed"] = "FAILED";
     ResourceShareAssociationStatusEnum["Disassociating"] = "DISASSOCIATING";
     ResourceShareAssociationStatusEnum["Disassociated"] = "DISASSOCIATED";
-})(ResourceShareAssociationStatusEnum || (ResourceShareAssociationStatusEnum = {}));
+})(ResourceShareAssociationStatusEnum = exports.ResourceShareAssociationStatusEnum || (exports.ResourceShareAssociationStatusEnum = {}));

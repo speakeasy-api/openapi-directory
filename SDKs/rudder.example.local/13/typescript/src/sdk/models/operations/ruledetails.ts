@@ -50,5 +50,5 @@ export class RuleDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ruleDetails200ApplicationJsonObject?: RuleDetails200ApplicationJson;
+  ruleDetails200ApplicationJSONObject?: RuleDetails200ApplicationJson;
 }

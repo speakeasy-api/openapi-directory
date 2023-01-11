@@ -47,5 +47,5 @@ export class GetUserTaskListForUserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getUserTaskListForUser200ApplicationJsonObject?: GetUserTaskListForUser200ApplicationJson;
+  getUserTaskListForUser200ApplicationJSONObject?: GetUserTaskListForUser200ApplicationJson;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest, PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest = 
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "ut",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "eos",
-    alt: "json",
-    callback: "sunt",
-    fields: "expedita",
-    filter: "rem",
-    key: "libero",
-    oauthToken: "aut",
-    pageSize: 7955735477697176788,
-    pageToken: "minus",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
     prettyPrint: true,
-    quotaUser: "delectus",
+    quotaUser: "dicta",
     uploadType: "debitis",
-    uploadProtocol: "aut",
+    uploadProtocol: "voluptatum",
   },
 };
 

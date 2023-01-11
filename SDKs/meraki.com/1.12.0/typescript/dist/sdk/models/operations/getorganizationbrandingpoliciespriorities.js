@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationBrandingPoliciesPrioritiesResponse = exports.GetOrganizationBrandingPoliciesPrioritiesRequest = exports.GetOrganizationBrandingPoliciesPrioritiesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationBrandingPoliciesPrioritiesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationBrandingPoliciesPrioritiesPathParams, _super);
     function GetOrganizationBrandingPoliciesPrioritiesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationBrandingPoliciesPrioritiesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationBrandingPoliciesPrioritiesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationBrandingPoliciesPrioritiesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationBrandingPoliciesPrioritiesPathParams = GetOrganizationBrandingPoliciesPrioritiesPathParams;
 var GetOrganizationBrandingPoliciesPrioritiesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationBrandingPoliciesPrioritiesRequest, _super);
     function GetOrganizationBrandingPoliciesPrioritiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationBrandingPoliciesPrioritiesPathParams)
     ], GetOrganizationBrandingPoliciesPrioritiesRequest.prototype, "pathParams", void 0);
     return GetOrganizationBrandingPoliciesPrioritiesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationBrandingPoliciesPrioritiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationBrandingPoliciesPrioritiesRequest = GetOrganizationBrandingPoliciesPrioritiesRequest;
 var GetOrganizationBrandingPoliciesPrioritiesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationBrandingPoliciesPrioritiesResponse, _super);
     function GetOrganizationBrandingPoliciesPrioritiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationBrandingPoliciesPrioritiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationBrandingPoliciesPrioritiesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationBrandingPoliciesPrioritiesResponse.prototype, "getOrganizationBrandingPoliciesPriorities200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationBrandingPoliciesPrioritiesResponse.prototype, "getOrganizationBrandingPoliciesPriorities200ApplicationJSONObject", void 0);
     return GetOrganizationBrandingPoliciesPrioritiesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationBrandingPoliciesPrioritiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationBrandingPoliciesPrioritiesResponse = GetOrganizationBrandingPoliciesPrioritiesResponse;

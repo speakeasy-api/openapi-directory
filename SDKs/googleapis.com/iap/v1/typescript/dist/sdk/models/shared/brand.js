@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// BrandInput
-/**
- * OAuth brand data. NOTE: Only contains a portion of the data that describes a brand.
-**/
-var BrandInput = /** @class */ (function (_super) {
-    __extends(BrandInput, _super);
-    function BrandInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationTitle" }),
-        __metadata("design:type", String)
-    ], BrandInput.prototype, "applicationTitle", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportEmail" }),
-        __metadata("design:type", String)
-    ], BrandInput.prototype, "supportEmail", void 0);
-    return BrandInput;
-}(SpeakeasyBase));
-export { BrandInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BrandInput = exports.Brand = void 0;
+var utils_1 = require("../../../internal/utils");
 // Brand
 /**
  * OAuth brand data. NOTE: Only contains a portion of the data that describes a brand.
@@ -53,21 +36,41 @@ var Brand = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationTitle" }),
         __metadata("design:type", String)
     ], Brand.prototype, "applicationTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Brand.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgInternalOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgInternalOnly" }),
         __metadata("design:type", Boolean)
     ], Brand.prototype, "orgInternalOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportEmail" }),
         __metadata("design:type", String)
     ], Brand.prototype, "supportEmail", void 0);
     return Brand;
-}(SpeakeasyBase));
-export { Brand };
+}(utils_1.SpeakeasyBase));
+exports.Brand = Brand;
+// BrandInput
+/**
+ * OAuth brand data. NOTE: Only contains a portion of the data that describes a brand.
+**/
+var BrandInput = /** @class */ (function (_super) {
+    __extends(BrandInput, _super);
+    function BrandInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationTitle" }),
+        __metadata("design:type", String)
+    ], BrandInput.prototype, "applicationTitle", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportEmail" }),
+        __metadata("design:type", String)
+    ], BrandInput.prototype, "supportEmail", void 0);
+    return BrandInput;
+}(utils_1.SpeakeasyBase));
+exports.BrandInput = BrandInput;

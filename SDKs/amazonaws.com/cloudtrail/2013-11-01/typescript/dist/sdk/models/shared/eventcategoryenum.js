@@ -1,4 +1,7 @@
-export var EventCategoryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventCategoryEnum = void 0;
+var EventCategoryEnum;
 (function (EventCategoryEnum) {
     EventCategoryEnum["Insight"] = "insight";
-})(EventCategoryEnum || (EventCategoryEnum = {}));
+})(EventCategoryEnum = exports.EventCategoryEnum || (exports.EventCategoryEnum = {}));

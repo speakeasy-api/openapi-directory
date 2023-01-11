@@ -15,7 +15,7 @@ export class GetStopDbInstanceAutomatedBackupsReplicationQueryParams extends Spe
   action: GetStopDbInstanceAutomatedBackupsReplicationActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceArn" })
-  sourceDbInstanceArn: string;
+  sourceDBInstanceArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetStopDbInstanceAutomatedBackupsReplicationVersionEnum;

@@ -20,5 +20,5 @@ export declare class GetDependentsForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getDependentsForTask200ApplicationJsonObject?: GetDependentsForTask200ApplicationJson;
+    getDependentsForTask200ApplicationJSONObject?: GetDependentsForTask200ApplicationJson;
 }

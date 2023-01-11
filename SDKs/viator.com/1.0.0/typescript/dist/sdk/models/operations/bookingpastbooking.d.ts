@@ -56,7 +56,7 @@ export declare class BookingPastbooking200ApplicationJsonDataItemSummaries exten
     passbooks?: string;
     price?: number;
     priceFormatted?: string;
-    priceUsd?: number;
+    priceUSD?: number;
     productCode?: string;
     productPulledDown?: boolean;
     productTitle?: string;
@@ -73,7 +73,7 @@ export declare class BookingPastbooking200ApplicationJsonDataItemSummaries exten
     voucherKey?: string;
     voucherOption?: string;
     voucherRequirements?: string;
-    voucherUrl?: string;
+    voucherURL?: string;
     vouchers?: string;
 }
 /**
@@ -93,10 +93,10 @@ export declare class BookingPastbooking200ApplicationJsonData extends SpeakeasyB
     sortOrder?: number;
     totalPrice?: number;
     totalPriceFormatted?: string;
-    totalPriceUsd?: number;
+    totalPriceUSD?: number;
     userId?: string;
     voucherKey?: string;
-    voucherUrl?: string;
+    voucherURL?: string;
 }
 export declare class BookingPastbooking200ApplicationJson extends SpeakeasyBase {
     data?: BookingPastbooking200ApplicationJsonData;
@@ -107,8 +107,8 @@ export declare class BookingPastbooking200ApplicationJson extends SpeakeasyBase 
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -120,5 +120,5 @@ export declare class BookingPastbookingRequest extends SpeakeasyBase {
 export declare class BookingPastbookingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingPastbooking200ApplicationJsonObject?: BookingPastbooking200ApplicationJson;
+    bookingPastbooking200ApplicationJSONObject?: BookingPastbooking200ApplicationJson;
 }

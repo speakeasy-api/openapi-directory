@@ -31,7 +31,7 @@ export declare class PutRawMessageContentResponse extends SpeakeasyBase {
     invalidContentLocation?: any;
     messageFrozen?: any;
     messageRejected?: any;
-    putRawMessageContentResponse?: Map<string, any>;
+    putRawMessageContentResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThreeGetEstimatedPriceResponse = exports.ThreeGetEstimatedPriceRequest = exports.ThreeGetEstimatedPrice200ApplicationJson = exports.ThreeGetEstimatedPriceQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ThreeGetEstimatedPriceQueryParams = /** @class */ (function (_super) {
     __extends(ThreeGetEstimatedPriceQueryParams, _super);
     function ThreeGetEstimatedPriceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=amount" }),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPriceQueryParams.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=currency_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=currency_from" }),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPriceQueryParams.prototype, "currencyFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=currency_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=currency_to" }),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPriceQueryParams.prototype, "currencyTo", void 0);
     return ThreeGetEstimatedPriceQueryParams;
-}(SpeakeasyBase));
-export { ThreeGetEstimatedPriceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ThreeGetEstimatedPriceQueryParams = ThreeGetEstimatedPriceQueryParams;
 var ThreeGetEstimatedPrice200ApplicationJson = /** @class */ (function (_super) {
     __extends(ThreeGetEstimatedPrice200ApplicationJson, _super);
     function ThreeGetEstimatedPrice200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount_from" }),
         __metadata("design:type", Number)
     ], ThreeGetEstimatedPrice200ApplicationJson.prototype, "amountFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_from" }),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPrice200ApplicationJson.prototype, "currencyFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_to" }),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPrice200ApplicationJson.prototype, "currencyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_amount" }),
         __metadata("design:type", Number)
     ], ThreeGetEstimatedPrice200ApplicationJson.prototype, "estimatedAmount", void 0);
     return ThreeGetEstimatedPrice200ApplicationJson;
-}(SpeakeasyBase));
-export { ThreeGetEstimatedPrice200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ThreeGetEstimatedPrice200ApplicationJson = ThreeGetEstimatedPrice200ApplicationJson;
 var ThreeGetEstimatedPriceRequest = /** @class */ (function (_super) {
     __extends(ThreeGetEstimatedPriceRequest, _super);
     function ThreeGetEstimatedPriceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ThreeGetEstimatedPriceQueryParams)
     ], ThreeGetEstimatedPriceRequest.prototype, "queryParams", void 0);
     return ThreeGetEstimatedPriceRequest;
-}(SpeakeasyBase));
-export { ThreeGetEstimatedPriceRequest };
+}(utils_1.SpeakeasyBase));
+exports.ThreeGetEstimatedPriceRequest = ThreeGetEstimatedPriceRequest;
 var ThreeGetEstimatedPriceResponse = /** @class */ (function (_super) {
     __extends(ThreeGetEstimatedPriceResponse, _super);
     function ThreeGetEstimatedPriceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ThreeGetEstimatedPrice200ApplicationJson)
-    ], ThreeGetEstimatedPriceResponse.prototype, "threeGetEstimatedPrice200ApplicationJsonObject", void 0);
+    ], ThreeGetEstimatedPriceResponse.prototype, "threeGetEstimatedPrice200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ThreeGetEstimatedPriceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ThreeGetEstimatedPriceResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ThreeGetEstimatedPriceResponse.prototype, "statusCode", void 0);
     return ThreeGetEstimatedPriceResponse;
-}(SpeakeasyBase));
-export { ThreeGetEstimatedPriceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ThreeGetEstimatedPriceResponse = ThreeGetEstimatedPriceResponse;

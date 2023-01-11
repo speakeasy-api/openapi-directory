@@ -10,7 +10,7 @@ export declare class GetGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class GetGroupRequestBody extends SpeakeasyBase {
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
 }
 export declare class GetGroupRequest extends SpeakeasyBase {

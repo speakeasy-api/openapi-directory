@@ -12,7 +12,7 @@ export declare class RecordConversationRequestBody extends SpeakeasyBase {
     split?: string;
 }
 export declare class RecordConversationRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: RecordConversationPathParams;
     request?: RecordConversationRequestBody;
 }

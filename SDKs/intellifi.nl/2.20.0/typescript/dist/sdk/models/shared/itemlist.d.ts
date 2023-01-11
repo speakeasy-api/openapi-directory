@@ -4,7 +4,7 @@ export declare class ItemList extends SpeakeasyBase {
     id?: string;
     label?: string;
     list?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     sha1?: string;
     timeCreated?: string;
     timeUpdated?: string;
@@ -13,5 +13,5 @@ export declare class ItemList extends SpeakeasyBase {
 export declare class ItemListInput extends SpeakeasyBase {
     custom?: any;
     label?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
 }

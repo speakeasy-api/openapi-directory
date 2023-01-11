@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SongForApiContractInput } from "./songforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SongInListEditContractInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var songforapicontract_1 = require("./songforapicontract");
 var SongInListEditContractInput = /** @class */ (function (_super) {
     __extends(SongInListEditContractInput, _super);
     function SongInListEditContractInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], SongInListEditContractInput.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order" }),
         __metadata("design:type", Number)
     ], SongInListEditContractInput.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=song" }),
-        __metadata("design:type", SongForApiContractInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=song" }),
+        __metadata("design:type", songforapicontract_1.SongForApiContractInput)
     ], SongInListEditContractInput.prototype, "song", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=songInListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=songInListId" }),
         __metadata("design:type", Number)
     ], SongInListEditContractInput.prototype, "songInListId", void 0);
     return SongInListEditContractInput;
-}(SpeakeasyBase));
-export { SongInListEditContractInput };
+}(utils_1.SpeakeasyBase));
+exports.SongInListEditContractInput = SongInListEditContractInput;

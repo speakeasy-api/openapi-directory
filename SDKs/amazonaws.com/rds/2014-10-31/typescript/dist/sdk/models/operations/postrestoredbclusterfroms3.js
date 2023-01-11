@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRestoreDbClusterFromS3ActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRestoreDbClusterFromS3Response = exports.PostRestoreDbClusterFromS3Request = exports.PostRestoreDbClusterFromS3Headers = exports.PostRestoreDbClusterFromS3QueryParams = exports.PostRestoreDbClusterFromS3VersionEnum = exports.PostRestoreDbClusterFromS3ActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRestoreDbClusterFromS3ActionEnum;
 (function (PostRestoreDbClusterFromS3ActionEnum) {
     PostRestoreDbClusterFromS3ActionEnum["RestoreDbClusterFromS3"] = "RestoreDBClusterFromS3";
-})(PostRestoreDbClusterFromS3ActionEnum || (PostRestoreDbClusterFromS3ActionEnum = {}));
-export var PostRestoreDbClusterFromS3VersionEnum;
+})(PostRestoreDbClusterFromS3ActionEnum = exports.PostRestoreDbClusterFromS3ActionEnum || (exports.PostRestoreDbClusterFromS3ActionEnum = {}));
+var PostRestoreDbClusterFromS3VersionEnum;
 (function (PostRestoreDbClusterFromS3VersionEnum) {
     PostRestoreDbClusterFromS3VersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostRestoreDbClusterFromS3VersionEnum || (PostRestoreDbClusterFromS3VersionEnum = {}));
+})(PostRestoreDbClusterFromS3VersionEnum = exports.PostRestoreDbClusterFromS3VersionEnum || (exports.PostRestoreDbClusterFromS3VersionEnum = {}));
 var PostRestoreDbClusterFromS3QueryParams = /** @class */ (function (_super) {
     __extends(PostRestoreDbClusterFromS3QueryParams, _super);
     function PostRestoreDbClusterFromS3QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3QueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3QueryParams.prototype, "version", void 0);
     return PostRestoreDbClusterFromS3QueryParams;
-}(SpeakeasyBase));
-export { PostRestoreDbClusterFromS3QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbClusterFromS3QueryParams = PostRestoreDbClusterFromS3QueryParams;
 var PostRestoreDbClusterFromS3Headers = /** @class */ (function (_super) {
     __extends(PostRestoreDbClusterFromS3Headers, _super);
     function PostRestoreDbClusterFromS3Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Headers.prototype, "xAmzSignedHeaders", void 0);
     return PostRestoreDbClusterFromS3Headers;
-}(SpeakeasyBase));
-export { PostRestoreDbClusterFromS3Headers };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbClusterFromS3Headers = PostRestoreDbClusterFromS3Headers;
 var PostRestoreDbClusterFromS3Request = /** @class */ (function (_super) {
     __extends(PostRestoreDbClusterFromS3Request, _super);
     function PostRestoreDbClusterFromS3Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRestoreDbClusterFromS3QueryParams)
     ], PostRestoreDbClusterFromS3Request.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRestoreDbClusterFromS3Headers)
     ], PostRestoreDbClusterFromS3Request.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRestoreDbClusterFromS3Request.prototype, "request", void 0);
     return PostRestoreDbClusterFromS3Request;
-}(SpeakeasyBase));
-export { PostRestoreDbClusterFromS3Request };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbClusterFromS3Request = PostRestoreDbClusterFromS3Request;
 var PostRestoreDbClusterFromS3Response = /** @class */ (function (_super) {
     __extends(PostRestoreDbClusterFromS3Response, _super);
     function PostRestoreDbClusterFromS3Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRestoreDbClusterFromS3Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRestoreDbClusterFromS3Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRestoreDbClusterFromS3Response.prototype, "statusCode", void 0);
     return PostRestoreDbClusterFromS3Response;
-}(SpeakeasyBase));
-export { PostRestoreDbClusterFromS3Response };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbClusterFromS3Response = PostRestoreDbClusterFromS3Response;

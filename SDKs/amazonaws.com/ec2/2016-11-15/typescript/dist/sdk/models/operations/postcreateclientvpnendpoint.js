@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateClientVpnEndpointActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateClientVpnEndpointResponse = exports.PostCreateClientVpnEndpointRequest = exports.PostCreateClientVpnEndpointHeaders = exports.PostCreateClientVpnEndpointQueryParams = exports.PostCreateClientVpnEndpointVersionEnum = exports.PostCreateClientVpnEndpointActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateClientVpnEndpointActionEnum;
 (function (PostCreateClientVpnEndpointActionEnum) {
     PostCreateClientVpnEndpointActionEnum["CreateClientVpnEndpoint"] = "CreateClientVpnEndpoint";
-})(PostCreateClientVpnEndpointActionEnum || (PostCreateClientVpnEndpointActionEnum = {}));
-export var PostCreateClientVpnEndpointVersionEnum;
+})(PostCreateClientVpnEndpointActionEnum = exports.PostCreateClientVpnEndpointActionEnum || (exports.PostCreateClientVpnEndpointActionEnum = {}));
+var PostCreateClientVpnEndpointVersionEnum;
 (function (PostCreateClientVpnEndpointVersionEnum) {
     PostCreateClientVpnEndpointVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCreateClientVpnEndpointVersionEnum || (PostCreateClientVpnEndpointVersionEnum = {}));
+})(PostCreateClientVpnEndpointVersionEnum = exports.PostCreateClientVpnEndpointVersionEnum || (exports.PostCreateClientVpnEndpointVersionEnum = {}));
 var PostCreateClientVpnEndpointQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateClientVpnEndpointQueryParams, _super);
     function PostCreateClientVpnEndpointQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointQueryParams.prototype, "version", void 0);
     return PostCreateClientVpnEndpointQueryParams;
-}(SpeakeasyBase));
-export { PostCreateClientVpnEndpointQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateClientVpnEndpointQueryParams = PostCreateClientVpnEndpointQueryParams;
 var PostCreateClientVpnEndpointHeaders = /** @class */ (function (_super) {
     __extends(PostCreateClientVpnEndpointHeaders, _super);
     function PostCreateClientVpnEndpointHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateClientVpnEndpointHeaders;
-}(SpeakeasyBase));
-export { PostCreateClientVpnEndpointHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateClientVpnEndpointHeaders = PostCreateClientVpnEndpointHeaders;
 var PostCreateClientVpnEndpointRequest = /** @class */ (function (_super) {
     __extends(PostCreateClientVpnEndpointRequest, _super);
     function PostCreateClientVpnEndpointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateClientVpnEndpointQueryParams)
     ], PostCreateClientVpnEndpointRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateClientVpnEndpointHeaders)
     ], PostCreateClientVpnEndpointRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateClientVpnEndpointRequest.prototype, "request", void 0);
     return PostCreateClientVpnEndpointRequest;
-}(SpeakeasyBase));
-export { PostCreateClientVpnEndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateClientVpnEndpointRequest = PostCreateClientVpnEndpointRequest;
 var PostCreateClientVpnEndpointResponse = /** @class */ (function (_super) {
     __extends(PostCreateClientVpnEndpointResponse, _super);
     function PostCreateClientVpnEndpointResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateClientVpnEndpointResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateClientVpnEndpointResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateClientVpnEndpointResponse.prototype, "statusCode", void 0);
     return PostCreateClientVpnEndpointResponse;
-}(SpeakeasyBase));
-export { PostCreateClientVpnEndpointResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateClientVpnEndpointResponse = PostCreateClientVpnEndpointResponse;

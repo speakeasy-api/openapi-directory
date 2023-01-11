@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateContactInMailinglistRequest, CreateContactInMailinglistResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,18 +28,18 @@ const sdk = new SDK();
     
 const req: CreateContactInMailinglistRequest = {
   pathParams: {
-    directoryId: "aut",
-    mailingListId: "sapiente",
+    directoryId: "sit",
+    mailingListId: "voluptas",
   },
   request: {
-    email: "magni",
-    firstName: "alias",
-    lastName: "possimus",
-    unsubscribed: true,
+    email: "culpa",
+    firstName: "expedita",
+    lastName: "consequuntur",
+    unsubscribed: false,
   },
 };
 
-sdk.sdk.createContactInMailinglist(req).then((res: CreateContactInMailinglistResponse | AxiosError) => {
+sdk.createContactInMailinglist(req).then((res: CreateContactInMailinglistResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -177,5 +177,5 @@ export class CreateNetworkSwitchPortScheduleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkSwitchPortSchedule201ApplicationJsonObject?: Map<string, any>;
+  createNetworkSwitchPortSchedule201ApplicationJSONObject?: Record<string, any>;
 }

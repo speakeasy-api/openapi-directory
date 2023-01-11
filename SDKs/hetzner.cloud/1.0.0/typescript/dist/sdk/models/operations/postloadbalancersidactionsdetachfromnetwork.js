@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostLoadBalancersIdActionsDetachFromNetworkResponse = exports.PostLoadBalancersIdActionsDetachFromNetworkRequest = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponse = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError = exports.PostLoadBalancersIdActionsDetachFromNetworkRequestBody = exports.PostLoadBalancersIdActionsDetachFromNetworkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostLoadBalancersIdActionsDetachFromNetworkPathParams = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkPathParams, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkPathParams.prototype, "id", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkPathParams;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkPathParams = PostLoadBalancersIdActionsDetachFromNetworkPathParams;
 var PostLoadBalancersIdActionsDetachFromNetworkRequestBody = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkRequestBody, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkRequestBody.prototype, "network", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkRequestBody;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkRequestBody = PostLoadBalancersIdActionsDetachFromNetworkRequestBody;
 // PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -57,123 +60,123 @@ var PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError = /** @
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError.prototype, "message", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError = PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError;
 var PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources.prototype, "type", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources };
-export var PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources = PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources;
+var PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum;
 (function (PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum) {
     PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum["Success"] = "success";
     PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum["Running"] = "running";
     PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum["Error"] = "error";
-})(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum || (PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum = {}));
+})(PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum = exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum || (exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionStatusEnum = {}));
 var PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.prototype, "status", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction = PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction;
 var PostLoadBalancersIdActionsDetachFromNetworkActionResponse = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkActionResponse, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction)
     ], PostLoadBalancersIdActionsDetachFromNetworkActionResponse.prototype, "action", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkActionResponse;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkActionResponse = PostLoadBalancersIdActionsDetachFromNetworkActionResponse;
 var PostLoadBalancersIdActionsDetachFromNetworkRequest = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkRequest, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostLoadBalancersIdActionsDetachFromNetworkPathParams)
     ], PostLoadBalancersIdActionsDetachFromNetworkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostLoadBalancersIdActionsDetachFromNetworkRequestBody)
     ], PostLoadBalancersIdActionsDetachFromNetworkRequest.prototype, "request", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkRequest;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkRequest = PostLoadBalancersIdActionsDetachFromNetworkRequest;
 var PostLoadBalancersIdActionsDetachFromNetworkResponse = /** @class */ (function (_super) {
     __extends(PostLoadBalancersIdActionsDetachFromNetworkResponse, _super);
     function PostLoadBalancersIdActionsDetachFromNetworkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostLoadBalancersIdActionsDetachFromNetworkActionResponse)
     ], PostLoadBalancersIdActionsDetachFromNetworkResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostLoadBalancersIdActionsDetachFromNetworkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostLoadBalancersIdActionsDetachFromNetworkResponse.prototype, "statusCode", void 0);
     return PostLoadBalancersIdActionsDetachFromNetworkResponse;
-}(SpeakeasyBase));
-export { PostLoadBalancersIdActionsDetachFromNetworkResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostLoadBalancersIdActionsDetachFromNetworkResponse = PostLoadBalancersIdActionsDetachFromNetworkResponse;

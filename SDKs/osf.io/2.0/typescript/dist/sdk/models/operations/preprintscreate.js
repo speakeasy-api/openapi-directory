@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprintsCreateResponse = exports.PreprintsCreateRequest = exports.PreprintsCreatePreprintInput = exports.PreprintsCreatePreprintRelationshipsInput = exports.PreprintsCreatePreprintAttributesInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // PreprintsCreatePreprintAttributesInput
 /**
  * The properties of the preprint entity.
@@ -33,20 +36,20 @@ var PreprintsCreatePreprintAttributesInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doi" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintAttributesInput.prototype, "doi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license_record" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license_record" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintAttributesInput.prototype, "licenseRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjects" }),
         __metadata("design:type", Array)
     ], PreprintsCreatePreprintAttributesInput.prototype, "subjects", void 0);
     return PreprintsCreatePreprintAttributesInput;
-}(SpeakeasyBase));
-export { PreprintsCreatePreprintAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCreatePreprintAttributesInput = PreprintsCreatePreprintAttributesInput;
 // PreprintsCreatePreprintRelationshipsInput
 /**
  * URLs to other entities or entity collections that have a relationship to the preprint entity.
@@ -57,69 +60,69 @@ var PreprintsCreatePreprintRelationshipsInput = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintRelationshipsInput.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintRelationshipsInput.prototype, "node", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_file" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintRelationshipsInput.prototype, "primaryFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintRelationshipsInput.prototype, "provider", void 0);
     return PreprintsCreatePreprintRelationshipsInput;
-}(SpeakeasyBase));
-export { PreprintsCreatePreprintRelationshipsInput };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCreatePreprintRelationshipsInput = PreprintsCreatePreprintRelationshipsInput;
 var PreprintsCreatePreprintInput = /** @class */ (function (_super) {
     __extends(PreprintsCreatePreprintInput, _super);
     function PreprintsCreatePreprintInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", PreprintsCreatePreprintAttributesInput)
     ], PreprintsCreatePreprintInput.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", PreprintsCreatePreprintRelationshipsInput)
     ], PreprintsCreatePreprintInput.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PreprintsCreatePreprintInput.prototype, "type", void 0);
     return PreprintsCreatePreprintInput;
-}(SpeakeasyBase));
-export { PreprintsCreatePreprintInput };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCreatePreprintInput = PreprintsCreatePreprintInput;
 var PreprintsCreateRequest = /** @class */ (function (_super) {
     __extends(PreprintsCreateRequest, _super);
     function PreprintsCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PreprintsCreatePreprintInput)
     ], PreprintsCreateRequest.prototype, "request", void 0);
     return PreprintsCreateRequest;
-}(SpeakeasyBase));
-export { PreprintsCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCreateRequest = PreprintsCreateRequest;
 var PreprintsCreateResponse = /** @class */ (function (_super) {
     __extends(PreprintsCreateResponse, _super);
     function PreprintsCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PreprintsCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PreprintsCreateResponse.prototype, "statusCode", void 0);
     return PreprintsCreateResponse;
-}(SpeakeasyBase));
-export { PreprintsCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCreateResponse = PreprintsCreateResponse;

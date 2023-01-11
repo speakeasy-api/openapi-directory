@@ -26,6 +26,6 @@ export declare class UpdateRoutingControlStatesResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateRoutingControlStatesResponse?: Map<string, any>;
+    updateRoutingControlStatesResponse?: Record<string, any>;
     validationException?: any;
 }

@@ -34,7 +34,7 @@ export declare class AddFacetToObjectRequest extends SpeakeasyBase {
 }
 export declare class AddFacetToObjectResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
-    addFacetToObjectResponse?: Map<string, any>;
+    addFacetToObjectResponse?: Record<string, any>;
     contentType: string;
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
     facetValidationException?: shared.FacetValidationException;

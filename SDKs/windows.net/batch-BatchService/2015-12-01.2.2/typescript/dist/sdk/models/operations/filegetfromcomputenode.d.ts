@@ -24,7 +24,7 @@ export declare class FileGetFromComputeNodeRequest extends SpeakeasyBase {
 export declare class FileGetFromComputeNodeResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    fileGetFromComputeNode200ApplicationJsonBinaryString?: Uint8Array;
-    headers: Map<string, string[]>;
+    fileGetFromComputeNode200ApplicationJSONBinaryString?: Uint8Array;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

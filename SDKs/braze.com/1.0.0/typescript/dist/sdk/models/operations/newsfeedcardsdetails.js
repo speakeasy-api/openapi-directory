@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewsFeedCardsDetailsResponse = exports.NewsFeedCardsDetailsRequest = exports.NewsFeedCardsDetailsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NewsFeedCardsDetailsQueryParams = /** @class */ (function (_super) {
     __extends(NewsFeedCardsDetailsQueryParams, _super);
     function NewsFeedCardsDetailsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=card_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=card_id" }),
         __metadata("design:type", String)
     ], NewsFeedCardsDetailsQueryParams.prototype, "cardId", void 0);
     return NewsFeedCardsDetailsQueryParams;
-}(SpeakeasyBase));
-export { NewsFeedCardsDetailsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardsDetailsQueryParams = NewsFeedCardsDetailsQueryParams;
 var NewsFeedCardsDetailsRequest = /** @class */ (function (_super) {
     __extends(NewsFeedCardsDetailsRequest, _super);
     function NewsFeedCardsDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NewsFeedCardsDetailsQueryParams)
     ], NewsFeedCardsDetailsRequest.prototype, "queryParams", void 0);
     return NewsFeedCardsDetailsRequest;
-}(SpeakeasyBase));
-export { NewsFeedCardsDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardsDetailsRequest = NewsFeedCardsDetailsRequest;
 var NewsFeedCardsDetailsResponse = /** @class */ (function (_super) {
     __extends(NewsFeedCardsDetailsResponse, _super);
     function NewsFeedCardsDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NewsFeedCardsDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NewsFeedCardsDetailsResponse.prototype, "statusCode", void 0);
     return NewsFeedCardsDetailsResponse;
-}(SpeakeasyBase));
-export { NewsFeedCardsDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardsDetailsResponse = NewsFeedCardsDetailsResponse;

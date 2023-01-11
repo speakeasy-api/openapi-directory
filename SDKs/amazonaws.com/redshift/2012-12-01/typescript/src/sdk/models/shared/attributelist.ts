@@ -1,0 +1,16 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { AttributeValueList } from "./attributevaluelist";
+
+
+
+// AttributeList
+/** 
+ * A name value pair that describes an aspect of an account. 
+**/
+export class AttributeList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  attributeName?: string;
+
+  @SpeakeasyMetadata({ elemType: AttributeValueList })
+  attributeValues?: AttributeValueList[];
+}

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunnerApplication = void 0;
+var utils_1 = require("../../../internal/utils");
 // RunnerApplication
 /**
  * Runner Application
@@ -33,29 +36,29 @@ var RunnerApplication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=architecture" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256_checksum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256_checksum" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "sha256Checksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=temp_download_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temp_download_token" }),
         __metadata("design:type", String)
     ], RunnerApplication.prototype, "tempDownloadToken", void 0);
     return RunnerApplication;
-}(SpeakeasyBase));
-export { RunnerApplication };
+}(utils_1.SpeakeasyBase));
+exports.RunnerApplication = RunnerApplication;

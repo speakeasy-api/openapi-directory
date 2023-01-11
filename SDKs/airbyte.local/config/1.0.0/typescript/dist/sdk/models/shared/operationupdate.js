@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperatorConfiguration } from "./operatorconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var operatorconfiguration_1 = require("./operatorconfiguration");
 var OperationUpdate = /** @class */ (function (_super) {
     __extends(OperationUpdate, _super);
     function OperationUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OperationUpdate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationId" }),
         __metadata("design:type", String)
     ], OperationUpdate.prototype, "operationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorConfiguration" }),
-        __metadata("design:type", OperatorConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorConfiguration" }),
+        __metadata("design:type", operatorconfiguration_1.OperatorConfiguration)
     ], OperationUpdate.prototype, "operatorConfiguration", void 0);
     return OperationUpdate;
-}(SpeakeasyBase));
-export { OperationUpdate };
+}(utils_1.SpeakeasyBase));
+exports.OperationUpdate = OperationUpdate;

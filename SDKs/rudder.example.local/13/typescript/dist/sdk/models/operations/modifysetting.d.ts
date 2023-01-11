@@ -31,5 +31,5 @@ export declare class ModifySettingRequest extends SpeakeasyBase {
 export declare class ModifySettingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    modifySetting200ApplicationJsonObject?: ModifySetting200ApplicationJson;
+    modifySetting200ApplicationJSONObject?: ModifySetting200ApplicationJson;
 }

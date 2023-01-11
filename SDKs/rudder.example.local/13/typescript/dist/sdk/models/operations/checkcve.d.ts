@@ -18,5 +18,5 @@ export declare class CheckCve200ApplicationJson extends SpeakeasyBase {
 export declare class CheckCveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checkCve200ApplicationJsonObject?: CheckCve200ApplicationJson;
+    checkCVE200ApplicationJSONObject?: CheckCve200ApplicationJson;
 }

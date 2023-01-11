@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiV2PredictionsIdResponse = exports.GetApiV2PredictionsIdRequest = exports.GetApiV2PredictionsId404ApplicationJson = exports.GetApiV2PredictionsId200ApplicationJson = exports.GetApiV2PredictionsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiV2PredictionsIdPathParams = /** @class */ (function (_super) {
     __extends(GetApiV2PredictionsIdPathParams, _super);
     function GetApiV2PredictionsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetApiV2PredictionsIdPathParams.prototype, "id", void 0);
     return GetApiV2PredictionsIdPathParams;
-}(SpeakeasyBase));
-export { GetApiV2PredictionsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApiV2PredictionsIdPathParams = GetApiV2PredictionsIdPathParams;
 var GetApiV2PredictionsId200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetApiV2PredictionsId200ApplicationJson, _super);
     function GetApiV2PredictionsId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", Array)
     ], GetApiV2PredictionsId200ApplicationJson.prototype, "data", void 0);
     return GetApiV2PredictionsId200ApplicationJson;
-}(SpeakeasyBase));
-export { GetApiV2PredictionsId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetApiV2PredictionsId200ApplicationJson = GetApiV2PredictionsId200ApplicationJson;
 var GetApiV2PredictionsId404ApplicationJson = /** @class */ (function (_super) {
     __extends(GetApiV2PredictionsId404ApplicationJson, _super);
     function GetApiV2PredictionsId404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", Object)
     ], GetApiV2PredictionsId404ApplicationJson.prototype, "errors", void 0);
     return GetApiV2PredictionsId404ApplicationJson;
-}(SpeakeasyBase));
-export { GetApiV2PredictionsId404ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetApiV2PredictionsId404ApplicationJson = GetApiV2PredictionsId404ApplicationJson;
 var GetApiV2PredictionsIdRequest = /** @class */ (function (_super) {
     __extends(GetApiV2PredictionsIdRequest, _super);
     function GetApiV2PredictionsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiV2PredictionsIdPathParams)
     ], GetApiV2PredictionsIdRequest.prototype, "pathParams", void 0);
     return GetApiV2PredictionsIdRequest;
-}(SpeakeasyBase));
-export { GetApiV2PredictionsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiV2PredictionsIdRequest = GetApiV2PredictionsIdRequest;
 var GetApiV2PredictionsIdResponse = /** @class */ (function (_super) {
     __extends(GetApiV2PredictionsIdResponse, _super);
     function GetApiV2PredictionsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiV2PredictionsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetApiV2PredictionsId200ApplicationJson)
-    ], GetApiV2PredictionsIdResponse.prototype, "getApiV2PredictionsId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetApiV2PredictionsId404ApplicationJson)
-    ], GetApiV2PredictionsIdResponse.prototype, "getApiV2PredictionsId404ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiV2PredictionsIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetApiV2PredictionsId200ApplicationJson)
+    ], GetApiV2PredictionsIdResponse.prototype, "getApiV2PredictionsId200ApplicationJSONObject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetApiV2PredictionsId404ApplicationJson)
+    ], GetApiV2PredictionsIdResponse.prototype, "getApiV2PredictionsId404ApplicationJSONObject", void 0);
     return GetApiV2PredictionsIdResponse;
-}(SpeakeasyBase));
-export { GetApiV2PredictionsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiV2PredictionsIdResponse = GetApiV2PredictionsIdResponse;

@@ -18,7 +18,7 @@ export declare class CreateRecordingConfigurationRequestBodyDestinationConfigura
 export declare class CreateRecordingConfigurationRequestBody extends SpeakeasyBase {
     destinationConfiguration: CreateRecordingConfigurationRequestBodyDestinationConfiguration;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateRecordingConfigurationRequest extends SpeakeasyBase {
     headers: CreateRecordingConfigurationHeaders;

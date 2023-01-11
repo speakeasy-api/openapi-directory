@@ -53,5 +53,5 @@ export class UpdateCustomFieldResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateCustomField200ApplicationJsonObject?: UpdateCustomField200ApplicationJson;
+  updateCustomField200ApplicationJSONObject?: UpdateCustomField200ApplicationJson;
 }

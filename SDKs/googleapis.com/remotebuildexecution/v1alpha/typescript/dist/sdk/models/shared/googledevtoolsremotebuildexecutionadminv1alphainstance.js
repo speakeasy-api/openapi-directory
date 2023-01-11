@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy } from "./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy";
-export var GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance = exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy_1 = require("./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy");
+var GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum;
 (function (GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum) {
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum["Creating"] = "CREATING";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum["Running"] = "RUNNING";
     GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum["Inactive"] = "INACTIVE";
-})(GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum || (GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum = {}));
+})(GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum = exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum || (exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum = {}));
 // GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance
 /**
  * Instance conceptually encapsulates all Remote Build Execution resources for remote builds. An instance consists of storage and compute resources (for example, `ContentAddressableStorage`, `ActionCache`, `WorkerPools`) used for running remote builds. All Remote Build Execution API calls are scoped to an instance.
@@ -41,25 +44,25 @@ var GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featurePolicy" }),
-        __metadata("design:type", GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featurePolicy" }),
+        __metadata("design:type", googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy_1.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance.prototype, "featurePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loggingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loggingEnabled" }),
         __metadata("design:type", Boolean)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance.prototype, "loggingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance.prototype, "state", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance = GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance;

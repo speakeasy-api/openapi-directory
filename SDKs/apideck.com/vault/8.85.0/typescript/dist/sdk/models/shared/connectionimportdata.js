@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionImportData = exports.ConnectionImportDataCredentials = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConnectionImportDataCredentials = /** @class */ (function (_super) {
     __extends(ConnectionImportDataCredentials, _super);
     function ConnectionImportDataCredentials() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], ConnectionImportDataCredentials.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_in" }),
         __metadata("design:type", Number)
     ], ConnectionImportDataCredentials.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issued_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issued_at" }),
         __metadata("design:type", Date)
     ], ConnectionImportDataCredentials.prototype, "issuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_token" }),
         __metadata("design:type", String)
     ], ConnectionImportDataCredentials.prototype, "refreshToken", void 0);
     return ConnectionImportDataCredentials;
-}(SpeakeasyBase));
-export { ConnectionImportDataCredentials };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionImportDataCredentials = ConnectionImportDataCredentials;
 var ConnectionImportData = /** @class */ (function (_super) {
     __extends(ConnectionImportData, _super);
     function ConnectionImportData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
         __metadata("design:type", ConnectionImportDataCredentials)
     ], ConnectionImportData.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ConnectionImportData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", Object)
     ], ConnectionImportData.prototype, "settings", void 0);
     return ConnectionImportData;
-}(SpeakeasyBase));
-export { ConnectionImportData };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionImportData = ConnectionImportData;

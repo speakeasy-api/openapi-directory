@@ -4,13 +4,8 @@ export declare class ReposListCollaboratorsPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum ReposListCollaboratorsAffiliationEnum {
-    Outside = "outside",
-    Direct = "direct",
-    All = "all"
-}
 export declare class ReposListCollaboratorsQueryParams extends SpeakeasyBase {
-    affiliation?: ReposListCollaboratorsAffiliationEnum;
+    affiliation?: shared.RepoEnum;
     page?: number;
     perPage?: number;
 }
@@ -20,7 +15,7 @@ export declare class ReposListCollaboratorsRequest extends SpeakeasyBase {
 }
 export declare class ReposListCollaboratorsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     collaborators?: shared.Collaborator[];

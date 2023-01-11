@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VmCreationConfig } from "./vmcreationconfig";
-import { VmSelectionConfig } from "./vmselectionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenerateSshScriptRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var vmcreationconfig_1 = require("./vmcreationconfig");
+var vmselectionconfig_1 = require("./vmselectionconfig");
 // GenerateSshScriptRequest
 /**
  * Request message for 'GenerateSshScript' request.
@@ -35,21 +38,21 @@ var GenerateSshScriptRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vm" }),
         __metadata("design:type", String)
     ], GenerateSshScriptRequest.prototype, "vm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmCreationConfig" }),
-        __metadata("design:type", VmCreationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmCreationConfig" }),
+        __metadata("design:type", vmcreationconfig_1.VmCreationConfig)
     ], GenerateSshScriptRequest.prototype, "vmCreationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmPort" }),
         __metadata("design:type", Number)
     ], GenerateSshScriptRequest.prototype, "vmPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmSelectionConfig" }),
-        __metadata("design:type", VmSelectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmSelectionConfig" }),
+        __metadata("design:type", vmselectionconfig_1.VmSelectionConfig)
     ], GenerateSshScriptRequest.prototype, "vmSelectionConfig", void 0);
     return GenerateSshScriptRequest;
-}(SpeakeasyBase));
-export { GenerateSshScriptRequest };
+}(utils_1.SpeakeasyBase));
+exports.GenerateSshScriptRequest = GenerateSshScriptRequest;

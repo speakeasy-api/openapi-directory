@@ -57,5 +57,5 @@ export class UpdateWorkGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWorkGroupOutput?: Map<string, any>;
+  updateWorkGroupOutput?: Record<string, any>;
 }

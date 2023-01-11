@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Critic = exports.CriticMultimedia = exports.CriticMultimediaResource = void 0;
+var utils_1 = require("../../../internal/utils");
 var CriticMultimediaResource = /** @class */ (function (_super) {
     __extends(CriticMultimediaResource, _super);
     function CriticMultimediaResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credit" }),
         __metadata("design:type", String)
     ], CriticMultimediaResource.prototype, "credit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], CriticMultimediaResource.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], CriticMultimediaResource.prototype, "src", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CriticMultimediaResource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], CriticMultimediaResource.prototype, "width", void 0);
     return CriticMultimediaResource;
-}(SpeakeasyBase));
-export { CriticMultimediaResource };
+}(utils_1.SpeakeasyBase));
+exports.CriticMultimediaResource = CriticMultimediaResource;
 var CriticMultimedia = /** @class */ (function (_super) {
     __extends(CriticMultimedia, _super);
     function CriticMultimedia() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", CriticMultimediaResource)
     ], CriticMultimedia.prototype, "resource", void 0);
     return CriticMultimedia;
-}(SpeakeasyBase));
-export { CriticMultimedia };
+}(utils_1.SpeakeasyBase));
+exports.CriticMultimedia = CriticMultimedia;
 var Critic = /** @class */ (function (_super) {
     __extends(Critic, _super);
     function Critic() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bio" }),
         __metadata("design:type", String)
     ], Critic.prototype, "bio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], Critic.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multimedia" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multimedia" }),
         __metadata("design:type", CriticMultimedia)
     ], Critic.prototype, "multimedia", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seo_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seo_name" }),
         __metadata("design:type", String)
     ], Critic.prototype, "seoName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort_name" }),
         __metadata("design:type", String)
     ], Critic.prototype, "sortName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Critic.prototype, "status", void 0);
     return Critic;
-}(SpeakeasyBase));
-export { Critic };
+}(utils_1.SpeakeasyBase));
+exports.Critic = Critic;

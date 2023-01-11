@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcRouteMetadataMatchMethod } from "./grpcroutemetadatamatchmethod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrpcRouteMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcroutemetadatamatchmethod_1 = require("./grpcroutemetadatamatchmethod");
 // GrpcRouteMetadata
 /**
  * An object that represents the match metadata for the route.
@@ -34,17 +37,17 @@ var GrpcRouteMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invert" }),
         __metadata("design:type", Boolean)
     ], GrpcRouteMetadata.prototype, "invert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=match" }),
-        __metadata("design:type", GrpcRouteMetadataMatchMethod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=match" }),
+        __metadata("design:type", grpcroutemetadatamatchmethod_1.GrpcRouteMetadataMatchMethod)
     ], GrpcRouteMetadata.prototype, "match", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GrpcRouteMetadata.prototype, "name", void 0);
     return GrpcRouteMetadata;
-}(SpeakeasyBase));
-export { GrpcRouteMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GrpcRouteMetadata = GrpcRouteMetadata;

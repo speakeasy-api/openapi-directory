@@ -1,8 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class OrderTypeInput extends SpeakeasyBase {
-    default?: boolean;
-    name?: string;
-}
 export declare class OrderType extends SpeakeasyBase {
     createdAt?: Date;
     createdBy?: string;
@@ -11,4 +7,8 @@ export declare class OrderType extends SpeakeasyBase {
     name?: string;
     updatedAt?: Date;
     updatedBy?: string;
+}
+export declare class OrderTypeInput extends SpeakeasyBase {
+    default?: boolean;
+    name?: string;
 }

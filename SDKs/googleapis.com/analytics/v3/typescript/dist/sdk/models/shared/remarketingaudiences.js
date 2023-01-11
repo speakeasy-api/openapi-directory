@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RemarketingAudience } from "./remarketingaudience";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemarketingAudiences = void 0;
+var utils_1 = require("../../../internal/utils");
+var remarketingaudience_1 = require("./remarketingaudience");
 // RemarketingAudiences
 /**
  * A remarketing audience collection lists Analytics remarketing audiences to which the user has access. Each resource in the collection corresponds to a single Analytics remarketing audience.
@@ -34,37 +37,37 @@ var RemarketingAudiences = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: RemarketingAudience }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: remarketingaudience_1.RemarketingAudience }),
         __metadata("design:type", Array)
     ], RemarketingAudiences.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], RemarketingAudiences.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], RemarketingAudiences.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextLink" }),
         __metadata("design:type", String)
     ], RemarketingAudiences.prototype, "nextLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousLink" }),
         __metadata("design:type", String)
     ], RemarketingAudiences.prototype, "previousLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], RemarketingAudiences.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], RemarketingAudiences.prototype, "totalResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], RemarketingAudiences.prototype, "username", void 0);
     return RemarketingAudiences;
-}(SpeakeasyBase));
-export { RemarketingAudiences };
+}(utils_1.SpeakeasyBase));
+exports.RemarketingAudiences = RemarketingAudiences;

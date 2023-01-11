@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublisherProvidedForecast = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
 // PublisherProvidedForecast
 /**
  * This message carries publisher provided forecasting information.
@@ -34,17 +37,17 @@ var PublisherProvidedForecast = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], PublisherProvidedForecast.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weeklyImpressions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weeklyImpressions" }),
         __metadata("design:type", String)
     ], PublisherProvidedForecast.prototype, "weeklyImpressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weeklyUniques" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weeklyUniques" }),
         __metadata("design:type", String)
     ], PublisherProvidedForecast.prototype, "weeklyUniques", void 0);
     return PublisherProvidedForecast;
-}(SpeakeasyBase));
-export { PublisherProvidedForecast };
+}(utils_1.SpeakeasyBase));
+exports.PublisherProvidedForecast = PublisherProvidedForecast;

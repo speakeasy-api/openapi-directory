@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ElectioneeringByCandidate = void 0;
+var utils_1 = require("../../../internal/utils");
 var ElectioneeringByCandidate = /** @class */ (function (_super) {
     __extends(ElectioneeringByCandidate, _super);
     function ElectioneeringByCandidate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "candidate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_name" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "candidateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "committee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_id" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_name" }),
         __metadata("design:type", String)
     ], ElectioneeringByCandidate.prototype, "committeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], ElectioneeringByCandidate.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycle" }),
         __metadata("design:type", Number)
     ], ElectioneeringByCandidate.prototype, "cycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ElectioneeringByCandidate.prototype, "total", void 0);
     return ElectioneeringByCandidate;
-}(SpeakeasyBase));
-export { ElectioneeringByCandidate };
+}(utils_1.SpeakeasyBase));
+exports.ElectioneeringByCandidate = ElectioneeringByCandidate;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionRestrictions } from "./regionrestrictions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LicensingInformation = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionrestrictions_1 = require("./regionrestrictions");
 // LicensingInformation
 /**
  * This class defines an entitlement data on the Publish API
@@ -34,13 +37,13 @@ var LicensingInformation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], LicensingInformation.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionRestriction" }),
-        __metadata("design:type", RegionRestrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionRestriction" }),
+        __metadata("design:type", regionrestrictions_1.RegionRestrictions)
     ], LicensingInformation.prototype, "regionRestriction", void 0);
     return LicensingInformation;
-}(SpeakeasyBase));
-export { LicensingInformation };
+}(utils_1.SpeakeasyBase));
+exports.LicensingInformation = LicensingInformation;

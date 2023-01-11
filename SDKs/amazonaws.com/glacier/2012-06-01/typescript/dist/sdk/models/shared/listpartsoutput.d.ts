@@ -10,5 +10,5 @@ export declare class ListPartsOutput extends SpeakeasyBase {
     multipartUploadId?: string;
     partSizeInBytes?: number;
     parts?: PartListElement[];
-    vaultArn?: string;
+    vaultARN?: string;
 }

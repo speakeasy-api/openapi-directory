@@ -24,5 +24,5 @@ export declare class DeleteRuleRequest extends SpeakeasyBase {
 export declare class DeleteRuleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteRule200ApplicationJsonObject?: DeleteRule200ApplicationJson;
+    deleteRule200ApplicationJSONObject?: DeleteRule200ApplicationJson;
 }

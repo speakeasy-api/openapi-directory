@@ -10,5 +10,5 @@ export class GetMaxResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMax200ApplicationJsonInt32Integer?: number;
+  getMax200ApplicationJSONInt32Integer?: number;
 }

@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class SnsDestination extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  topicArn: string;
+  topicARN: string;
 }

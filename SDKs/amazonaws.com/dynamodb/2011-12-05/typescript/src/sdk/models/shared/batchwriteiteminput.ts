@@ -5,5 +5,5 @@ import { WriteRequest } from "./writerequest";
 
 export class BatchWriteItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=RequestItems", elemType: WriteRequest, elemDepth: 2 })
-  requestItems: Map<string, WriteRequest[]>;
+  requestItems: Record<string, WriteRequest[]>;
 }

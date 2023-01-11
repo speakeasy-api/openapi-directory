@@ -51,7 +51,7 @@ export class ModifyWorkspaceAccessPropertiesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  modifyWorkspaceAccessPropertiesResult?: Map<string, any>;
+  modifyWorkspaceAccessPropertiesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

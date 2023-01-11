@@ -11,6 +11,6 @@ export declare class ValidateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    validate400ApplicationJsonAny?: any;
+    validate400ApplicationJSONAny?: any;
     validationResult?: shared.ValidationResult;
 }

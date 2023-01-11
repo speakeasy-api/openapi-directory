@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisputeAmount = void 0;
+var utils_1 = require("../../../internal/utils");
 // DisputeAmount
 /**
  * This type defines the monetary value of an amount. It can provide the amount in both the currency used on the eBay site where an item is being offered and the conversion of that value into another currency, if applicable.
@@ -33,25 +36,25 @@ var DisputeAmount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=convertedFromCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=convertedFromCurrency" }),
         __metadata("design:type", String)
     ], DisputeAmount.prototype, "convertedFromCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=convertedFromValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=convertedFromValue" }),
         __metadata("design:type", String)
     ], DisputeAmount.prototype, "convertedFromValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], DisputeAmount.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchangeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchangeRate" }),
         __metadata("design:type", String)
     ], DisputeAmount.prototype, "exchangeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DisputeAmount.prototype, "value", void 0);
     return DisputeAmount;
-}(SpeakeasyBase));
-export { DisputeAmount };
+}(utils_1.SpeakeasyBase));
+exports.DisputeAmount = DisputeAmount;

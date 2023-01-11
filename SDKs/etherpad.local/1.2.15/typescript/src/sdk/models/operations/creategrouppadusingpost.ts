@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateGroupPadUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padName" })
   padName?: string;
@@ -19,7 +19,7 @@ export class CreateGroupPadUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CreateGroupPadUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateGroupPadUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateGroupPadUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateGroupPadUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingPost200ApplicationJsonObject?: CreateGroupPadUsingPost200ApplicationJson;
+  createGroupPadUsingPOST200ApplicationJSONObject?: CreateGroupPadUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingPost400ApplicationJsonObject?: CreateGroupPadUsingPost400ApplicationJson;
+  createGroupPadUsingPOST400ApplicationJSONObject?: CreateGroupPadUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingPost401ApplicationJsonObject?: CreateGroupPadUsingPost401ApplicationJson;
+  createGroupPadUsingPOST401ApplicationJSONObject?: CreateGroupPadUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupPadUsingPost500ApplicationJsonObject?: CreateGroupPadUsingPost500ApplicationJson;
+  createGroupPadUsingPOST500ApplicationJSONObject?: CreateGroupPadUsingPost500ApplicationJson;
 }

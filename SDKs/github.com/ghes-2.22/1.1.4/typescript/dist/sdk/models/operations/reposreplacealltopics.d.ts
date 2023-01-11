@@ -19,7 +19,7 @@ export declare class ReposReplaceAllTopicsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposReplaceAllTopics415ApplicationJsonObject?: ReposReplaceAllTopics415ApplicationJson;
+    reposReplaceAllTopics415ApplicationJSONObject?: ReposReplaceAllTopics415ApplicationJson;
     topic?: shared.Topic;
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

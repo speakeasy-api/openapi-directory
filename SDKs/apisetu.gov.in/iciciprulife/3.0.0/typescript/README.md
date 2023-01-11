@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LicerRequest, LicerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: LicerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "eos",
-      policynumber: "officiis",
+      dob: "sit",
+      policynumber: "voluptas",
     },
-    consentArtifact: "omnis",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "at",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.licer(req).then((res: LicerResponse | AxiosError) => {
+sdk.apIs.licer(req).then((res: LicerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.licer(req).then((res: LicerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `licer` - Insurance Policy - Life
 

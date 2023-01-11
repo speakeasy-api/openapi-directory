@@ -1,5 +1,8 @@
-export var LoadBalancerProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerProtocolEnum = void 0;
+var LoadBalancerProtocolEnum;
 (function (LoadBalancerProtocolEnum) {
     LoadBalancerProtocolEnum["HttpHttps"] = "HTTP_HTTPS";
     LoadBalancerProtocolEnum["Http"] = "HTTP";
-})(LoadBalancerProtocolEnum || (LoadBalancerProtocolEnum = {}));
+})(LoadBalancerProtocolEnum = exports.LoadBalancerProtocolEnum || (exports.LoadBalancerProtocolEnum = {}));

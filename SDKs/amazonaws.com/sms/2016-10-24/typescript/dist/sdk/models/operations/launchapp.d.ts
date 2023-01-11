@@ -21,7 +21,7 @@ export declare class LaunchAppResponse extends SpeakeasyBase {
     contentType: string;
     internalError?: any;
     invalidParameterException?: any;
-    launchAppResponse?: Map<string, any>;
+    launchAppResponse?: Record<string, any>;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
     statusCode: number;

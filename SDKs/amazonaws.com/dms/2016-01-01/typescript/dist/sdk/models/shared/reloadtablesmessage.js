@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReloadOptionValueEnum } from "./reloadoptionvalueenum";
-import { TableToReload } from "./tabletoreload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReloadTablesMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var reloadoptionvalueenum_1 = require("./reloadoptionvalueenum");
+var tabletoreload_1 = require("./tabletoreload");
 var ReloadTablesMessage = /** @class */ (function (_super) {
     __extends(ReloadTablesMessage, _super);
     function ReloadTablesMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReloadOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReloadOption" }),
         __metadata("design:type", String)
     ], ReloadTablesMessage.prototype, "reloadOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], ReloadTablesMessage.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesToReload", elemType: TableToReload }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesToReload", elemType: tabletoreload_1.TableToReload }),
         __metadata("design:type", Array)
     ], ReloadTablesMessage.prototype, "tablesToReload", void 0);
     return ReloadTablesMessage;
-}(SpeakeasyBase));
-export { ReloadTablesMessage };
+}(utils_1.SpeakeasyBase));
+exports.ReloadTablesMessage = ReloadTablesMessage;

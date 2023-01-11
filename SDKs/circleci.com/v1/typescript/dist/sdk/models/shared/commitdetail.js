@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommitDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 var CommitDetail = /** @class */ (function (_super) {
     __extends(CommitDetail, _super);
     function CommitDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_date" }),
         __metadata("design:type", Date)
     ], CommitDetail.prototype, "authorDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_email" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "authorEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_login" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "authorLogin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_name" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "authorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_url" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "commitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_date" }),
         __metadata("design:type", Date)
     ], CommitDetail.prototype, "committerDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_email" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "committerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_login" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "committerLogin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_name" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "committerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], CommitDetail.prototype, "subject", void 0);
     return CommitDetail;
-}(SpeakeasyBase));
-export { CommitDetail };
+}(utils_1.SpeakeasyBase));
+exports.CommitDetail = CommitDetail;

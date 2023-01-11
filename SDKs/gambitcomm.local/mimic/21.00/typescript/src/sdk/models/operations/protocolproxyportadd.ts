@@ -31,5 +31,5 @@ export class ProtocolProxyPortAddResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolProxyPortAdd200ApplicationJsonString?: string;
+  protocolProxyPortAdd200ApplicationJSONString?: string;
 }

@@ -20,7 +20,7 @@ export declare class GetServersIdMetrics200ApplicationJsonMetrics extends Speake
     end: string;
     start: string;
     step: number;
-    timeSeries: Map<string, GetServersIdMetrics200ApplicationJsonMetricsTimeSeries>;
+    timeSeries: Record<string, GetServersIdMetrics200ApplicationJsonMetricsTimeSeries>;
 }
 export declare class GetServersIdMetrics200ApplicationJson extends SpeakeasyBase {
     metrics: GetServersIdMetrics200ApplicationJsonMetrics;
@@ -31,6 +31,6 @@ export declare class GetServersIdMetricsRequest extends SpeakeasyBase {
 }
 export declare class GetServersIdMetricsResponse extends SpeakeasyBase {
     contentType: string;
-    getServersIdMetrics200ApplicationJsonObject?: GetServersIdMetrics200ApplicationJson;
     statusCode: number;
+    getServersIdMetrics200ApplicationJSONObject?: GetServersIdMetrics200ApplicationJson;
 }

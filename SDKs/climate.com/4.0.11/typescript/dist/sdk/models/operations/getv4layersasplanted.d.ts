@@ -22,9 +22,9 @@ export declare class GetV4LayersAsPlantedRequest extends SpeakeasyBase {
 }
 export declare class GetV4LayersAsPlantedResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     plantingActivities?: any;
     statusCode: number;
 }

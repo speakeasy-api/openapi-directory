@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1CalendarsIdServicesResponse = exports.GetSetupV1CalendarsIdServicesRequest = exports.GetSetupV1CalendarsIdServicesQueryParams = exports.GetSetupV1CalendarsIdServicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1CalendarsIdServicesPathParams = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsIdServicesPathParams, _super);
     function GetSetupV1CalendarsIdServicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetSetupV1CalendarsIdServicesPathParams.prototype, "id", void 0);
     return GetSetupV1CalendarsIdServicesPathParams;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsIdServicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsIdServicesPathParams = GetSetupV1CalendarsIdServicesPathParams;
 var GetSetupV1CalendarsIdServicesQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsIdServicesQueryParams, _super);
     function GetSetupV1CalendarsIdServicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsIdServicesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsIdServicesQueryParams.prototype, "offset", void 0);
     return GetSetupV1CalendarsIdServicesQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsIdServicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsIdServicesQueryParams = GetSetupV1CalendarsIdServicesQueryParams;
 var GetSetupV1CalendarsIdServicesRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsIdServicesRequest, _super);
     function GetSetupV1CalendarsIdServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1CalendarsIdServicesPathParams)
     ], GetSetupV1CalendarsIdServicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1CalendarsIdServicesQueryParams)
     ], GetSetupV1CalendarsIdServicesRequest.prototype, "queryParams", void 0);
     return GetSetupV1CalendarsIdServicesRequest;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsIdServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsIdServicesRequest = GetSetupV1CalendarsIdServicesRequest;
 var GetSetupV1CalendarsIdServicesResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsIdServicesResponse, _super);
     function GetSetupV1CalendarsIdServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1CalendarsIdServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1CalendarsIdServicesResponse.prototype, "serviceListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsIdServicesResponse.prototype, "statusCode", void 0);
     return GetSetupV1CalendarsIdServicesResponse;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsIdServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsIdServicesResponse = GetSetupV1CalendarsIdServicesResponse;

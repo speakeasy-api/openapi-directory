@@ -13,8 +13,8 @@ export declare class GetResourceOwnerRequest extends SpeakeasyBase {
 }
 export declare class GetResourceOwnerResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     resourceOwner?: shared.ResourceOwner;
     statusCode: number;
 }

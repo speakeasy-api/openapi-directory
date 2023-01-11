@@ -29,7 +29,7 @@ export class DescribeStreamHeaders extends SpeakeasyBase {
 
 export class DescribeStreamRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

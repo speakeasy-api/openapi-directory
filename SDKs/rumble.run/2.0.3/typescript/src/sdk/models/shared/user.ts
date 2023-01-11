@@ -43,7 +43,7 @@ export class User extends SpeakeasyBase {
   orgDefaultRole?: string;
 
   @SpeakeasyMetadata({ data: "json, name=org_roles" })
-  orgRoles?: Map<string, any>;
+  orgRoles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=reset_token_expiration" })
   resetTokenExpiration?: number;

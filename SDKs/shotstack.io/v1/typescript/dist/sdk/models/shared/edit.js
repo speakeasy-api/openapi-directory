@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Output } from "./output";
-import { Timeline } from "./timeline";
-export var EditDiskEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Edit = exports.EditDiskEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var output_1 = require("./output");
+var timeline_1 = require("./timeline");
+var EditDiskEnum;
 (function (EditDiskEnum) {
     EditDiskEnum["Local"] = "local";
     EditDiskEnum["Mount"] = "mount";
-})(EditDiskEnum || (EditDiskEnum = {}));
+})(EditDiskEnum = exports.EditDiskEnum || (exports.EditDiskEnum = {}));
 // Edit
 /**
  * An edit defines the arrangement of a video on a timeline, an audio edit or an image design and the output format.
@@ -40,21 +43,21 @@ var Edit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], Edit.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk" }),
         __metadata("design:type", String)
     ], Edit.prototype, "disk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=output" }),
-        __metadata("design:type", Output)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=output" }),
+        __metadata("design:type", output_1.Output)
     ], Edit.prototype, "output", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeline" }),
-        __metadata("design:type", Timeline)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeline" }),
+        __metadata("design:type", timeline_1.Timeline)
     ], Edit.prototype, "timeline", void 0);
     return Edit;
-}(SpeakeasyBase));
-export { Edit };
+}(utils_1.SpeakeasyBase));
+exports.Edit = Edit;

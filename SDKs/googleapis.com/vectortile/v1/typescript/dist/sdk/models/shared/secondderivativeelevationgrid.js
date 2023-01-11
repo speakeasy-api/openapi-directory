@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecondDerivativeElevationGrid = void 0;
+var utils_1 = require("../../../internal/utils");
 // SecondDerivativeElevationGrid
 /**
  * A packed representation of a 2D grid of uniformly spaced points containing elevation data. Each point within the grid represents the altitude in meters above average sea level at that location within the tile. Elevations provided are (generally) relative to the EGM96 geoid, however some areas will be relative to NAVD88. EGM96 and NAVD88 are off by no more than 2 meters. The grid is oriented north-west to south-east, as illustrated: rows[0].a[0] rows[0].a[m] +-----------------+ | | | N | | ^ | | | | | W <-----> E | | | | | v | | S | | | +-----------------+ rows[n].a[0] rows[n].a[m] Rather than storing the altitudes directly, we store the diffs of the diffs between them as integers at some requested level of precision to take advantage of integer packing. Note that the data is packed in such a way that is fast to decode in Unity and that further optimizes wire size.
@@ -33,21 +36,21 @@ var SecondDerivativeElevationGrid = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=altitudeMultiplier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=altitudeMultiplier" }),
         __metadata("design:type", Number)
     ], SecondDerivativeElevationGrid.prototype, "altitudeMultiplier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnCount" }),
         __metadata("design:type", Number)
     ], SecondDerivativeElevationGrid.prototype, "columnCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodedData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodedData" }),
         __metadata("design:type", String)
     ], SecondDerivativeElevationGrid.prototype, "encodedData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowCount" }),
         __metadata("design:type", Number)
     ], SecondDerivativeElevationGrid.prototype, "rowCount", void 0);
     return SecondDerivativeElevationGrid;
-}(SpeakeasyBase));
-export { SecondDerivativeElevationGrid };
+}(utils_1.SpeakeasyBase));
+exports.SecondDerivativeElevationGrid = SecondDerivativeElevationGrid;

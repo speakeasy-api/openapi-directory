@@ -15,6 +15,6 @@ export declare class PostV1VerificationSendRequest extends SpeakeasyBase {
 }
 export declare class PostV1VerificationSendResponse extends SpeakeasyBase {
     contentType: string;
-    postV1VerificationSend200ApplicationJsonString?: string;
     statusCode: number;
+    postV1VerificationSend200ApplicationJSONString?: string;
 }

@@ -22,6 +22,6 @@ export declare class SearchRequest extends SpeakeasyBase {
 export declare class SearchResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    search200ApplicationJsonObject?: Search200ApplicationJson;
+    search200ApplicationJSONObject?: Search200ApplicationJson;
     statusCode: number;
 }

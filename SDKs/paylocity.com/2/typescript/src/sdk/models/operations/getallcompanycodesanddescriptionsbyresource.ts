@@ -37,6 +37,6 @@ export class GetAllCompanyCodesAndDescriptionsByResourceResponse extends Speakea
   @SpeakeasyMetadata({ elemType: shared.CompanyCodes })
   companyCodes?: shared.CompanyCodes[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

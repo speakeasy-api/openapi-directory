@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationEventResourceTypeEnum } from "./configurationeventresourcetypeenum";
-import { ConfigurationEventStatusEnum } from "./configurationeventstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationeventresourcetypeenum_1 = require("./configurationeventresourcetypeenum");
+var configurationeventstatusenum_1 = require("./configurationeventstatusenum");
 // ConfigurationEvent
 /**
  *  The event information.
@@ -35,29 +38,29 @@ var ConfigurationEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventDetail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventDetail" }),
         __metadata("design:type", String)
     ], ConfigurationEvent.prototype, "eventDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventResourceName" }),
         __metadata("design:type", String)
     ], ConfigurationEvent.prototype, "eventResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventResourceType" }),
         __metadata("design:type", String)
     ], ConfigurationEvent.prototype, "eventResourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventStatus" }),
         __metadata("design:type", String)
     ], ConfigurationEvent.prototype, "eventStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventTime" }),
         __metadata("design:type", Date)
     ], ConfigurationEvent.prototype, "eventTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MonitoredResourceARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MonitoredResourceARN" }),
         __metadata("design:type", String)
-    ], ConfigurationEvent.prototype, "monitoredResourceArn", void 0);
+    ], ConfigurationEvent.prototype, "monitoredResourceARN", void 0);
     return ConfigurationEvent;
-}(SpeakeasyBase));
-export { ConfigurationEvent };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationEvent = ConfigurationEvent;

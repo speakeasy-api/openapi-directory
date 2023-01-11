@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopInstanceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var StopInstanceRequest = /** @class */ (function (_super) {
     __extends(StopInstanceRequest, _super);
     function StopInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Force" }),
         __metadata("design:type", Boolean)
     ], StopInstanceRequest.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], StopInstanceRequest.prototype, "instanceId", void 0);
     return StopInstanceRequest;
-}(SpeakeasyBase));
-export { StopInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.StopInstanceRequest = StopInstanceRequest;

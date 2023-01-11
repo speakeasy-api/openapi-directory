@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EndpointBidProtocolEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Endpoint = exports.EndpointTradingLocationEnum = exports.EndpointBidProtocolEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EndpointBidProtocolEnum;
 (function (EndpointBidProtocolEnum) {
     EndpointBidProtocolEnum["BidProtocolUnspecified"] = "BID_PROTOCOL_UNSPECIFIED";
     EndpointBidProtocolEnum["GoogleRtb"] = "GOOGLE_RTB";
@@ -36,15 +39,15 @@ export var EndpointBidProtocolEnum;
     EndpointBidProtocolEnum["OpenrtbProtobuf24"] = "OPENRTB_PROTOBUF_2_4";
     EndpointBidProtocolEnum["Openrtb25"] = "OPENRTB_2_5";
     EndpointBidProtocolEnum["OpenrtbProtobuf25"] = "OPENRTB_PROTOBUF_2_5";
-})(EndpointBidProtocolEnum || (EndpointBidProtocolEnum = {}));
-export var EndpointTradingLocationEnum;
+})(EndpointBidProtocolEnum = exports.EndpointBidProtocolEnum || (exports.EndpointBidProtocolEnum = {}));
+var EndpointTradingLocationEnum;
 (function (EndpointTradingLocationEnum) {
     EndpointTradingLocationEnum["TradingLocationUnspecified"] = "TRADING_LOCATION_UNSPECIFIED";
     EndpointTradingLocationEnum["UsWest"] = "US_WEST";
     EndpointTradingLocationEnum["UsEast"] = "US_EAST";
     EndpointTradingLocationEnum["Europe"] = "EUROPE";
     EndpointTradingLocationEnum["Asia"] = "ASIA";
-})(EndpointTradingLocationEnum || (EndpointTradingLocationEnum = {}));
+})(EndpointTradingLocationEnum = exports.EndpointTradingLocationEnum || (exports.EndpointTradingLocationEnum = {}));
 // Endpoint
 /**
  * Bidder endpoint that receives bid requests.
@@ -55,25 +58,25 @@ var Endpoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidProtocol" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "bidProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumQps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumQps" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "maximumQps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tradingLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tradingLocation" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "tradingLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "url", void 0);
     return Endpoint;
-}(SpeakeasyBase));
-export { Endpoint };
+}(utils_1.SpeakeasyBase));
+exports.Endpoint = Endpoint;

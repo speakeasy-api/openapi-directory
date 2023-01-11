@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivateMandateResponse = exports.ActivateMandateRequest = exports.ActivateMandatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActivateMandatePathParams = /** @class */ (function (_super) {
     __extends(ActivateMandatePathParams, _super);
     function ActivateMandatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mandateUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mandateUuid" }),
         __metadata("design:type", String)
     ], ActivateMandatePathParams.prototype, "mandateUuid", void 0);
     return ActivateMandatePathParams;
-}(SpeakeasyBase));
-export { ActivateMandatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActivateMandatePathParams = ActivateMandatePathParams;
 var ActivateMandateRequest = /** @class */ (function (_super) {
     __extends(ActivateMandateRequest, _super);
     function ActivateMandateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActivateMandatePathParams)
     ], ActivateMandateRequest.prototype, "pathParams", void 0);
     return ActivateMandateRequest;
-}(SpeakeasyBase));
-export { ActivateMandateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActivateMandateRequest = ActivateMandateRequest;
 var ActivateMandateResponse = /** @class */ (function (_super) {
     __extends(ActivateMandateResponse, _super);
     function ActivateMandateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActivateMandateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActivateMandateResponse.prototype, "statusCode", void 0);
     return ActivateMandateResponse;
-}(SpeakeasyBase));
-export { ActivateMandateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActivateMandateResponse = ActivateMandateResponse;

@@ -6,6 +6,6 @@ export declare class VoiceMessage extends SpeakeasyBase {
     body?: string;
     languageCode?: string;
     originationNumber?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     voiceId?: string;
 }

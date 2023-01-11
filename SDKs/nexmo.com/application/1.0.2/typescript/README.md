@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateApplicationRequest, CreateApplicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,22 @@ const sdk = new SDK();
     
 const req: CreateApplicationRequest = {
   request: {
-    answerMethod: "quia",
-    answerUrl: "ipsam",
-    apiKey: "rerum",
-    apiSecret: "voluptates",
-    eventMethod: "aut",
-    eventUrl: "sequi",
-    inboundMethod: "ut",
-    inboundUrl: "eius",
-    name: "nemo",
+    answerMethod: "sit",
+    answerUrl: "voluptas",
+    apiKey: "culpa",
+    apiSecret: "expedita",
+    eventMethod: "consequuntur",
+    eventUrl: "dolor",
+    inboundMethod: "expedita",
+    inboundUrl: "voluptas",
+    name: "fugit",
     statusMethod: "et",
-    statusUrl: "rerum",
+    statusUrl: "nihil",
     type: "messages",
   },
 };
 
-sdk.sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
+sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
    // handle response
 });
 ```

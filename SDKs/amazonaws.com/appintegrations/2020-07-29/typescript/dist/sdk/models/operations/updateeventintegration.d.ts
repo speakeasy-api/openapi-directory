@@ -27,5 +27,5 @@ export declare class UpdateEventIntegrationResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateEventIntegrationResponse?: Map<string, any>;
+    updateEventIntegrationResponse?: Record<string, any>;
 }

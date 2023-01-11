@@ -21,7 +21,7 @@ export declare class PostTruckOptimalRouteOutputFormatQueryParams extends Speake
     departure?: Date;
     disable?: string;
     distanceUnit?: PostTruckOptimalRouteOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

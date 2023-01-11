@@ -15,7 +15,7 @@ export enum ExtensionDataRelatedEntityTypeEnum {
 **/
 export class ExtensionData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data: Map<string, any>;
+  data: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=relatedEntityId" })
   relatedEntityId?: string;

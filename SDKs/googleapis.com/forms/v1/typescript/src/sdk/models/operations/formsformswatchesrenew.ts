@@ -131,7 +131,7 @@ export class FormsFormsWatchesRenewRequest extends SpeakeasyBase {
   queryParams: FormsFormsWatchesRenewQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: FormsFormsWatchesRenewSecurity;

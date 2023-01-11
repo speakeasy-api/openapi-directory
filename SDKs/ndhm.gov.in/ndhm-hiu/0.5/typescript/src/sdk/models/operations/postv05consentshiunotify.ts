@@ -11,13 +11,13 @@ export class PostV05ConsentsHiuNotifyHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" })
-  xHiuId: string;
+  xHIUID: string;
 }
 
 
 export class PostV05ConsentsHiuNotifyRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   headers: PostV05ConsentsHiuNotifyHeaders;

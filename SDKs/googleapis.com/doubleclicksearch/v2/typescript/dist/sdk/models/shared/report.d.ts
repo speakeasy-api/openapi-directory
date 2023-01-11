@@ -14,7 +14,7 @@ export declare class Report extends SpeakeasyBase {
     kind?: string;
     request?: ReportRequest;
     rowCount?: number;
-    rows?: Map<string, any>[];
+    rows?: Record<string, any>[];
     statisticsCurrencyCode?: string;
     statisticsTimeZone?: string;
 }

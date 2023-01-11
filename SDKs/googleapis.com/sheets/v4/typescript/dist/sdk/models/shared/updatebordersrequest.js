@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Border } from "./border";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateBordersRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var border_1 = require("./border");
+var gridrange_1 = require("./gridrange");
 // UpdateBordersRequest
 /**
  * Updates the borders of a range. If a field is not set in the request, that means the border remains as-is. For example, with two subsequent UpdateBordersRequest: 1. range: A1:A5 `{ top: RED, bottom: WHITE }` 2. range: A1:A5 `{ left: BLUE }` That would result in A1:A5 having a borders of `{ top: RED, bottom: WHITE, left: BLUE }`. If you want to clear a border, explicitly set the style to NONE.
@@ -35,33 +38,33 @@ var UpdateBordersRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottom" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottom" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "bottom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=innerHorizontal" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=innerHorizontal" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "innerHorizontal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=innerVertical" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=innerVertical" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "innerVertical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=left" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=left" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], UpdateBordersRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=right" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=right" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "right", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=top" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=top" }),
+        __metadata("design:type", border_1.Border)
     ], UpdateBordersRequest.prototype, "top", void 0);
     return UpdateBordersRequest;
-}(SpeakeasyBase));
-export { UpdateBordersRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateBordersRequest = UpdateBordersRequest;

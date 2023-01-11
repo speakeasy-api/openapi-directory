@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1RenewalSettings } from "./googlecloudchannelv1renewalsettings";
+import { GoogleCloudChannelV1RenewalSettingsInput } from "./googlecloudchannelv1renewalsettings";
 /**
  * Commitment settings for commitment-based offers.
 **/
@@ -12,5 +13,5 @@ export declare class GoogleCloudChannelV1CommitmentSettings extends SpeakeasyBas
  * Commitment settings for commitment-based offers.
 **/
 export declare class GoogleCloudChannelV1CommitmentSettingsInput extends SpeakeasyBase {
-    renewalSettings?: GoogleCloudChannelV1RenewalSettings;
+    renewalSettings?: GoogleCloudChannelV1RenewalSettingsInput;
 }

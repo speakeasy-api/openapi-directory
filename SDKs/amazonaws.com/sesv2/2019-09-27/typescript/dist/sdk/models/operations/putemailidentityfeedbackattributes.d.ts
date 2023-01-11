@@ -23,7 +23,7 @@ export declare class PutEmailIdentityFeedbackAttributesResponse extends Speakeas
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putEmailIdentityFeedbackAttributesResponse?: Map<string, any>;
+    putEmailIdentityFeedbackAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

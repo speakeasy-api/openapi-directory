@@ -52,7 +52,7 @@ export class MigratingVm extends SpeakeasyBase {
   group?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastSync" })
   lastSync?: ReplicationSync;
@@ -104,7 +104,7 @@ export class MigratingVmInput extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastSync" })
   lastSync?: ReplicationSync;

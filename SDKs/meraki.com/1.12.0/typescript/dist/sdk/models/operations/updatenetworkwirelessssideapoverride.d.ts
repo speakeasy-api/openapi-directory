@@ -30,5 +30,5 @@ export declare class UpdateNetworkWirelessSsidEapOverrideRequest extends Speakea
 export declare class UpdateNetworkWirelessSsidEapOverrideResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidEapOverride200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidEapOverride200ApplicationJSONObject?: Record<string, any>;
 }

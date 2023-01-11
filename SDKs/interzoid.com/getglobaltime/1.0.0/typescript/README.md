@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetglobaltimeRequest, GetglobaltimeResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetglobaltimeRequest = {
   queryParams: {
-    license: "vero",
-    locale: "a",
+    license: "sit",
+    locale: "voluptas",
   },
 };
 
-sdk.sdk.getglobaltime(req).then((res: GetglobaltimeResponse | AxiosError) => {
+sdk.currentGlobalTime.getglobaltime(req).then((res: GetglobaltimeResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getglobaltime(req).then((res: GetglobaltimeResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Current Global Time
 
 * `getglobaltime` - Gets the current time for a global locale
 

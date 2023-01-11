@@ -16,22 +16,6 @@ export enum ExecutionStateEnum {
 }
 
 
-// ExecutionInput
-/** 
- * The definition of a single executed notebook.
-**/
-export class ExecutionInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=executionTemplate" })
-  executionTemplate?: ExecutionTemplate;
-
-  @SpeakeasyMetadata({ data: "json, name=outputNotebookFile" })
-  outputNotebookFile?: string;
-}
-
-
 // Execution
 /** 
  * The definition of a single executed notebook.
@@ -63,4 +47,20 @@ export class Execution extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ExecutionInput
+/** 
+ * The definition of a single executed notebook.
+**/
+export class ExecutionInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=executionTemplate" })
+  executionTemplate?: ExecutionTemplate;
+
+  @SpeakeasyMetadata({ data: "json, name=outputNotebookFile" })
+  outputNotebookFile?: string;
 }

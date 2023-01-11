@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventDistrictPoints = exports.EventDistrictPointsTiebreakers = exports.EventDistrictPointsPoints = void 0;
+var utils_1 = require("../../../internal/utils");
 var EventDistrictPointsPoints = /** @class */ (function (_super) {
     __extends(EventDistrictPointsPoints, _super);
     function EventDistrictPointsPoints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliance_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliance_points" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsPoints.prototype, "alliancePoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=award_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=award_points" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsPoints.prototype, "awardPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elim_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elim_points" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsPoints.prototype, "elimPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qual_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qual_points" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsPoints.prototype, "qualPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsPoints.prototype, "total", void 0);
     return EventDistrictPointsPoints;
-}(SpeakeasyBase));
-export { EventDistrictPointsPoints };
+}(utils_1.SpeakeasyBase));
+exports.EventDistrictPointsPoints = EventDistrictPointsPoints;
 var EventDistrictPointsTiebreakers = /** @class */ (function (_super) {
     __extends(EventDistrictPointsTiebreakers, _super);
     function EventDistrictPointsTiebreakers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highest_qual_scores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highest_qual_scores" }),
         __metadata("design:type", Array)
     ], EventDistrictPointsTiebreakers.prototype, "highestQualScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qual_wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qual_wins" }),
         __metadata("design:type", Number)
     ], EventDistrictPointsTiebreakers.prototype, "qualWins", void 0);
     return EventDistrictPointsTiebreakers;
-}(SpeakeasyBase));
-export { EventDistrictPointsTiebreakers };
+}(utils_1.SpeakeasyBase));
+exports.EventDistrictPointsTiebreakers = EventDistrictPointsTiebreakers;
 var EventDistrictPoints = /** @class */ (function (_super) {
     __extends(EventDistrictPoints, _super);
     function EventDistrictPoints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=points", elemType: EventDistrictPointsPoints }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=points", elemType: EventDistrictPointsPoints }),
+        __metadata("design:type", Object)
     ], EventDistrictPoints.prototype, "points", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tiebreakers", elemType: EventDistrictPointsTiebreakers }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tiebreakers", elemType: EventDistrictPointsTiebreakers }),
+        __metadata("design:type", Object)
     ], EventDistrictPoints.prototype, "tiebreakers", void 0);
     return EventDistrictPoints;
-}(SpeakeasyBase));
-export { EventDistrictPoints };
+}(utils_1.SpeakeasyBase));
+exports.EventDistrictPoints = EventDistrictPoints;

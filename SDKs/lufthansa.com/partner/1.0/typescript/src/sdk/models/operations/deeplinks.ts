@@ -92,7 +92,7 @@ export class DeepLinksResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deepLinks200ApplicationJsonString?: string;
+  deepLinks200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,71 +23,73 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsCorrelationMatrixValidationResponse = exports.PostAssetsCorrelationMatrixValidationRequest = exports.PostAssetsCorrelationMatrixValidation200ApplicationJson = exports.PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum = exports.PostAssetsCorrelationMatrixValidationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsCorrelationMatrixValidationRequestBody = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixValidationRequestBody, _super);
     function PostAssetsCorrelationMatrixValidationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostAssetsCorrelationMatrixValidationRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCorrelationMatrixValidationRequestBody.prototype, "assetsCorrelationMatrix", void 0);
     return PostAssetsCorrelationMatrixValidationRequestBody;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixValidationRequestBody };
-export var PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixValidationRequestBody = PostAssetsCorrelationMatrixValidationRequestBody;
+var PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum;
 (function (PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum) {
     PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum["ValidCorrelationMatrix"] = "valid correlation matrix";
     PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum["InvalidCorrelationMatrixNonSymmetricMatrix"] = "invalid correlation matrix - non symmetric matrix";
     PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum["InvalidCorrelationMatrixNonPositiveDiagonalElements"] = "invalid correlation matrix - non positive diagonal elements";
     PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum["InvalidCorrelationMatrixNonPositiveSemiDefiniteMatrix"] = "invalid correlation matrix - non positive semi-definite matrix";
-})(PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum || (PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum = {}));
+})(PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum = exports.PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum || (exports.PostAssetsCorrelationMatrixValidation200ApplicationJsonMessageEnum = {}));
 var PostAssetsCorrelationMatrixValidation200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixValidation200ApplicationJson, _super);
     function PostAssetsCorrelationMatrixValidation200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostAssetsCorrelationMatrixValidation200ApplicationJson.prototype, "message", void 0);
     return PostAssetsCorrelationMatrixValidation200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixValidation200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixValidation200ApplicationJson = PostAssetsCorrelationMatrixValidation200ApplicationJson;
 var PostAssetsCorrelationMatrixValidationRequest = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixValidationRequest, _super);
     function PostAssetsCorrelationMatrixValidationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAssetsCorrelationMatrixValidationRequestBody)
     ], PostAssetsCorrelationMatrixValidationRequest.prototype, "request", void 0);
     return PostAssetsCorrelationMatrixValidationRequest;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixValidationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixValidationRequest = PostAssetsCorrelationMatrixValidationRequest;
 var PostAssetsCorrelationMatrixValidationResponse = /** @class */ (function (_super) {
     __extends(PostAssetsCorrelationMatrixValidationResponse, _super);
     function PostAssetsCorrelationMatrixValidationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsCorrelationMatrixValidationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsCorrelationMatrixValidation200ApplicationJson)
-    ], PostAssetsCorrelationMatrixValidationResponse.prototype, "postAssetsCorrelationMatrixValidation200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsCorrelationMatrixValidationResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsCorrelationMatrixValidation200ApplicationJson)
+    ], PostAssetsCorrelationMatrixValidationResponse.prototype, "postAssetsCorrelationMatrixValidation200ApplicationJSONObject", void 0);
     return PostAssetsCorrelationMatrixValidationResponse;
-}(SpeakeasyBase));
-export { PostAssetsCorrelationMatrixValidationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCorrelationMatrixValidationResponse = PostAssetsCorrelationMatrixValidationResponse;

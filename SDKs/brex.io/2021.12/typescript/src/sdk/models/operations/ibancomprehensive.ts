@@ -29,7 +29,7 @@ export class IbanComprehensiveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  ibanComprehensiveDefaultApplicationJsonAny?: any;
+  ibanComprehensiveDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

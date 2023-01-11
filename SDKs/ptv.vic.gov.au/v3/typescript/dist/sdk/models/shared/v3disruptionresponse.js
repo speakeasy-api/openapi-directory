@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3Disruption } from "./v3disruption";
-import { V3Status } from "./v3status";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3DisruptionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3disruption_1 = require("./v3disruption");
+var v3status_1 = require("./v3status");
 var V3DisruptionResponse = /** @class */ (function (_super) {
     __extends(V3DisruptionResponse, _super);
     function V3DisruptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disruption" }),
-        __metadata("design:type", V3Disruption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disruption" }),
+        __metadata("design:type", v3disruption_1.V3Disruption)
     ], V3DisruptionResponse.prototype, "disruption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", V3Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", v3status_1.V3Status)
     ], V3DisruptionResponse.prototype, "status", void 0);
     return V3DisruptionResponse;
-}(SpeakeasyBase));
-export { V3DisruptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.V3DisruptionResponse = V3DisruptionResponse;

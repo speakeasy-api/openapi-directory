@@ -56,11 +56,11 @@ export class ActionsListWorkflowRunsForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListWorkflowRunsForRepo200ApplicationJsonObject?: ActionsListWorkflowRunsForRepo200ApplicationJson;
+  actionsListWorkflowRunsForRepo200ApplicationJSONObject?: ActionsListWorkflowRunsForRepo200ApplicationJson;
 }

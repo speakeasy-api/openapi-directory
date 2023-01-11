@@ -28,6 +28,6 @@ export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollou
 }
 export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse extends SpeakeasyBase {
     contentType: string;
-    retryJobResponse?: Map<string, any>;
+    retryJobResponse?: Record<string, any>;
     statusCode: number;
 }

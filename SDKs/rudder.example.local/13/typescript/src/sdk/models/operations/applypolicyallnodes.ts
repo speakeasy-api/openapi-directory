@@ -43,5 +43,5 @@ export class ApplyPolicyAllNodesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  applyPolicyAllNodes200ApplicationJsonObject?: ApplyPolicyAllNodes200ApplicationJson;
+  applyPolicyAllNodes200ApplicationJSONObject?: ApplyPolicyAllNodes200ApplicationJson;
 }

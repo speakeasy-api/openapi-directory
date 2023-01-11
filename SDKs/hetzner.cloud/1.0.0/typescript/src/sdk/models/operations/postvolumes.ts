@@ -10,7 +10,7 @@ export class PostVolumesCreateVolumeRequest extends SpeakeasyBase {
   format?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=location" })
   location?: string;
@@ -138,7 +138,7 @@ export class PostVolumes201ApplicationJsonVolume extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=linux_device" })
   linuxDevice: string;
@@ -186,8 +186,8 @@ export class PostVolumesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postVolumes201ApplicationJsonObject?: PostVolumes201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postVolumes201ApplicationJSONObject?: PostVolumes201ApplicationJson;
 }

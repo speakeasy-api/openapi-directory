@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EventDirectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = exports.EventTypeEnum = exports.EventStateEnum = exports.EventDirectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EventDirectionEnum;
 (function (EventDirectionEnum) {
     EventDirectionEnum["Inbound"] = "INBOUND";
     EventDirectionEnum["Outbound"] = "OUTBOUND";
-})(EventDirectionEnum || (EventDirectionEnum = {}));
-export var EventStateEnum;
+})(EventDirectionEnum = exports.EventDirectionEnum || (exports.EventDirectionEnum = {}));
+var EventStateEnum;
 (function (EventStateEnum) {
     EventStateEnum["Initializing"] = "INITIALIZING";
     EventStateEnum["Ringing"] = "RINGING";
@@ -40,76 +43,76 @@ export var EventStateEnum;
     EventStateEnum["Cancelled"] = "CANCELLED";
     EventStateEnum["Answered"] = "ANSWERED";
     EventStateEnum["Missed"] = "MISSED";
-})(EventStateEnum || (EventStateEnum = {}));
-export var EventTypeEnum;
+})(EventStateEnum = exports.EventStateEnum || (exports.EventStateEnum = {}));
+var EventTypeEnum;
 (function (EventTypeEnum) {
     EventTypeEnum["Call"] = "CALL";
-})(EventTypeEnum || (EventTypeEnum = {}));
+})(EventTypeEnum = exports.EventTypeEnum || (exports.EventTypeEnum = {}));
 var Event = /** @class */ (function (_super) {
     __extends(Event, _super);
     function Event() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", Number)
     ], Event.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answerTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answerTime" }),
         __metadata("design:type", Date)
     ], Event.prototype, "answerTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callerId" }),
         __metadata("design:type", String)
     ], Event.prototype, "callerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], Event.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], Event.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], Event.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], Event.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Event.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], Event.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsData" }),
         __metadata("design:type", String)
     ], Event.prototype, "smsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], Event.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Event.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Event.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uciId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uciId" }),
         __metadata("design:type", Number)
     ], Event.prototype, "uciId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", Number)
     ], Event.prototype, "userId", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

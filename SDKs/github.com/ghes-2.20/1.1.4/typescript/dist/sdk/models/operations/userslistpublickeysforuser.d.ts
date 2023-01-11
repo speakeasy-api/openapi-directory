@@ -13,7 +13,7 @@ export declare class UsersListPublicKeysForUserRequest extends SpeakeasyBase {
 }
 export declare class UsersListPublicKeysForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     keySimples?: shared.KeySimple[];
 }

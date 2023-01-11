@@ -76,7 +76,7 @@ export class BookingAvailabilityTourgrades200ApplicationJsonData extends Speakea
   gradeTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=langServices" })
-  langServices?: Map<string, any>;
+  langServices?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=merchantNetPrice" })
   merchantNetPrice?: number;
@@ -124,10 +124,10 @@ export class BookingAvailabilityTourgrades200ApplicationJson extends SpeakeasyBa
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -157,5 +157,5 @@ export class BookingAvailabilityTourgradesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingAvailabilityTourgrades200ApplicationJsonObject?: BookingAvailabilityTourgrades200ApplicationJson;
+  bookingAvailabilityTourgrades200ApplicationJSONObject?: BookingAvailabilityTourgrades200ApplicationJson;
 }

@@ -38,5 +38,5 @@ export declare class UpdateMockRequest extends SpeakeasyBase {
 export declare class UpdateMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateMock200ApplicationJsonObject?: UpdateMock200ApplicationJson;
+    updateMock200ApplicationJSONObject?: UpdateMock200ApplicationJson;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheEngineVersion } from "./cacheengineversion";
+import { CacheEngineVersionList } from "./cacheengineversionlist";
 
 
 
@@ -8,8 +8,8 @@ import { CacheEngineVersion } from "./cacheengineversion";
  * Represents the output of a <a>DescribeCacheEngineVersions</a> operation.
 **/
 export class CacheEngineVersionMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CacheEngineVersion })
-  cacheEngineVersions?: CacheEngineVersion[];
+  @SpeakeasyMetadata({ elemType: CacheEngineVersionList })
+  cacheEngineVersions?: CacheEngineVersionList[];
 
   @SpeakeasyMetadata()
   marker?: string;

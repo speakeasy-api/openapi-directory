@@ -3,6 +3,6 @@ export declare class UserActivity extends SpeakeasyBase {
     activityType: string;
     persistentIdentifier?: string;
     title?: string;
-    userInfo?: Map<string, any>;
+    userInfo?: Record<string, any>;
     version: string;
 }

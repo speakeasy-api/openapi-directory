@@ -4,7 +4,7 @@ export declare class DatabaseCreateDocumentPathParams extends SpeakeasyBase {
     collectionId: string;
 }
 export declare class DatabaseCreateDocumentRequestBody extends SpeakeasyBase {
-    data: Map<string, any>;
+    data: Record<string, any>;
     parentDocument?: string;
     parentProperty?: string;
     parentPropertyType?: string;
@@ -24,5 +24,5 @@ export declare class DatabaseCreateDocumentRequest extends SpeakeasyBase {
 export declare class DatabaseCreateDocumentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    document?: Map<string, any>;
+    document?: Record<string, any>;
 }

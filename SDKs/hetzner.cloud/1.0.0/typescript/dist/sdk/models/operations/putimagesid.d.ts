@@ -7,7 +7,7 @@ export declare enum PutImagesIdUpdateImageRequestTypeEnum {
 }
 export declare class PutImagesIdUpdateImageRequest extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     type?: PutImagesIdUpdateImageRequestTypeEnum;
 }
 /**
@@ -53,7 +53,7 @@ export declare class PutImagesId200ApplicationJsonImage extends SpeakeasyBase {
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: PutImagesId200ApplicationJsonImageOsFlavorEnum;
     osVersion: string;
@@ -71,6 +71,6 @@ export declare class PutImagesIdRequest extends SpeakeasyBase {
 }
 export declare class PutImagesIdResponse extends SpeakeasyBase {
     contentType: string;
-    putImagesId200ApplicationJsonObject?: PutImagesId200ApplicationJson;
     statusCode: number;
+    putImagesId200ApplicationJSONObject?: PutImagesId200ApplicationJson;
 }

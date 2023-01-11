@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindMatchesParameters } from "./findmatchesparameters";
-import { TransformTypeEnum } from "./transformtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var findmatchesparameters_1 = require("./findmatchesparameters");
+var transformtypeenum_1 = require("./transformtypeenum");
 // TransformParameters
 /**
  * The algorithm-specific parameters that are associated with the machine learning transform.
@@ -35,13 +38,13 @@ var TransformParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FindMatchesParameters" }),
-        __metadata("design:type", FindMatchesParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FindMatchesParameters" }),
+        __metadata("design:type", findmatchesparameters_1.FindMatchesParameters)
     ], TransformParameters.prototype, "findMatchesParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformType" }),
         __metadata("design:type", String)
     ], TransformParameters.prototype, "transformType", void 0);
     return TransformParameters;
-}(SpeakeasyBase));
-export { TransformParameters };
+}(utils_1.SpeakeasyBase));
+exports.TransformParameters = TransformParameters;

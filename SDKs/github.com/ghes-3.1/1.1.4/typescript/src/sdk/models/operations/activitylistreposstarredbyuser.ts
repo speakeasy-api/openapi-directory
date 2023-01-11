@@ -38,11 +38,11 @@ export class ActivityListReposStarredByUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  activityListReposStarredByUser200ApplicationJsonAnyOf?: any;
+  activityListReposStarredByUser200ApplicationJSONAnyOf?: any;
 }

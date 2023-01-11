@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Picture } from "./picture";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnDemandVideo = exports.OnDemandVideoTypeEnum = exports.OnDemandVideoRent = exports.OnDemandVideoMetadata = exports.OnDemandVideoMetadataInteractions = exports.OnDemandVideoMetadataInteractionsWatchlater = exports.OnDemandVideoMetadataInteractionsLikes = exports.OnDemandVideoMetadataConnections = exports.OnDemandVideoMetadataConnectionsSeason = exports.OnDemandVideoInteractions = exports.OnDemandVideoInteractionsPage = exports.OnDemandVideoBuy = void 0;
+var utils_1 = require("../../../internal/utils");
+var picture_1 = require("./picture");
+var user_1 = require("./user");
 // OnDemandVideoBuy
 /**
  * Information about purchasing this video.
@@ -35,20 +38,20 @@ var OnDemandVideoBuy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoBuy.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", Object)
     ], OnDemandVideoBuy.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchased" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchased" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoBuy.prototype, "purchased", void 0);
     return OnDemandVideoBuy;
-}(SpeakeasyBase));
-export { OnDemandVideoBuy };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoBuy = OnDemandVideoBuy;
 // OnDemandVideoInteractionsPage
 /**
  * Information about how the authenticated user can interact with the connection to the video's On Demand page.
@@ -59,20 +62,20 @@ var OnDemandVideoInteractionsPage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoInteractionsPage.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandVideoInteractionsPage.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandVideoInteractionsPage.prototype, "uri", void 0);
     return OnDemandVideoInteractionsPage;
-}(SpeakeasyBase));
-export { OnDemandVideoInteractionsPage };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoInteractionsPage = OnDemandVideoInteractionsPage;
 // OnDemandVideoInteractions
 /**
  * An object containing information about how the authenticated user can interact with this On Demand page.
@@ -83,12 +86,12 @@ var OnDemandVideoInteractions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", OnDemandVideoInteractionsPage)
     ], OnDemandVideoInteractions.prototype, "page", void 0);
     return OnDemandVideoInteractions;
-}(SpeakeasyBase));
-export { OnDemandVideoInteractions };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoInteractions = OnDemandVideoInteractions;
 // OnDemandVideoMetadataConnectionsSeason
 /**
  * Information about this season.
@@ -99,32 +102,32 @@ var OnDemandVideoMetadataConnectionsSeason = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataConnectionsSeason.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandVideoMetadataConnectionsSeason.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataConnectionsSeason.prototype, "uri", void 0);
     return OnDemandVideoMetadataConnectionsSeason;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadataConnectionsSeason };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadataConnectionsSeason = OnDemandVideoMetadataConnectionsSeason;
 var OnDemandVideoMetadataConnections = /** @class */ (function (_super) {
     __extends(OnDemandVideoMetadataConnections, _super);
     function OnDemandVideoMetadataConnections() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", OnDemandVideoMetadataConnectionsSeason)
     ], OnDemandVideoMetadataConnections.prototype, "season", void 0);
     return OnDemandVideoMetadataConnections;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadataConnections = OnDemandVideoMetadataConnections;
 // OnDemandVideoMetadataInteractionsLikes
 /**
  * Information about the user's Like interactions with this video.
@@ -135,20 +138,20 @@ var OnDemandVideoMetadataInteractionsLikes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoMetadataInteractionsLikes.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_time" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataInteractionsLikes.prototype, "addedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataInteractionsLikes.prototype, "uri", void 0);
     return OnDemandVideoMetadataInteractionsLikes;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadataInteractionsLikes };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadataInteractionsLikes = OnDemandVideoMetadataInteractionsLikes;
 // OnDemandVideoMetadataInteractionsWatchlater
 /**
  * Information about the user's Watch Later interactions with this video.
@@ -159,36 +162,36 @@ var OnDemandVideoMetadataInteractionsWatchlater = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoMetadataInteractionsWatchlater.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_time" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataInteractionsWatchlater.prototype, "addedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandVideoMetadataInteractionsWatchlater.prototype, "uri", void 0);
     return OnDemandVideoMetadataInteractionsWatchlater;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadataInteractionsWatchlater };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadataInteractionsWatchlater = OnDemandVideoMetadataInteractionsWatchlater;
 var OnDemandVideoMetadataInteractions = /** @class */ (function (_super) {
     __extends(OnDemandVideoMetadataInteractions, _super);
     function OnDemandVideoMetadataInteractions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likes" }),
         __metadata("design:type", OnDemandVideoMetadataInteractionsLikes)
     ], OnDemandVideoMetadataInteractions.prototype, "likes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlater" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlater" }),
         __metadata("design:type", OnDemandVideoMetadataInteractionsWatchlater)
     ], OnDemandVideoMetadataInteractions.prototype, "watchlater", void 0);
     return OnDemandVideoMetadataInteractions;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadataInteractions };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadataInteractions = OnDemandVideoMetadataInteractions;
 // OnDemandVideoMetadata
 /**
  * Metadata information about this video.
@@ -199,16 +202,16 @@ var OnDemandVideoMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", OnDemandVideoMetadataConnections)
     ], OnDemandVideoMetadata.prototype, "connections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactions" }),
         __metadata("design:type", OnDemandVideoMetadataInteractions)
     ], OnDemandVideoMetadata.prototype, "interactions", void 0);
     return OnDemandVideoMetadata;
-}(SpeakeasyBase));
-export { OnDemandVideoMetadata };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoMetadata = OnDemandVideoMetadata;
 // OnDemandVideoRent
 /**
  * Information about renting this video.
@@ -219,103 +222,103 @@ var OnDemandVideoRent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoRent.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", Object)
     ], OnDemandVideoRent.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchased" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchased" }),
         __metadata("design:type", Boolean)
     ], OnDemandVideoRent.prototype, "purchased", void 0);
     return OnDemandVideoRent;
-}(SpeakeasyBase));
-export { OnDemandVideoRent };
-export var OnDemandVideoTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideoRent = OnDemandVideoRent;
+var OnDemandVideoTypeEnum;
 (function (OnDemandVideoTypeEnum) {
     OnDemandVideoTypeEnum["Extra"] = "extra";
     OnDemandVideoTypeEnum["Main"] = "main";
     OnDemandVideoTypeEnum["Trailer"] = "trailer";
-})(OnDemandVideoTypeEnum || (OnDemandVideoTypeEnum = {}));
+})(OnDemandVideoTypeEnum = exports.OnDemandVideoTypeEnum || (exports.OnDemandVideoTypeEnum = {}));
 var OnDemandVideo = /** @class */ (function (_super) {
     __extends(OnDemandVideo, _super);
     function OnDemandVideo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buy" }),
         __metadata("design:type", OnDemandVideoBuy)
     ], OnDemandVideo.prototype, "buy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode" }),
         __metadata("design:type", Number)
     ], OnDemandVideo.prototype, "episode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactions" }),
         __metadata("design:type", OnDemandVideoInteractions)
     ], OnDemandVideo.prototype, "interactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", OnDemandVideoMetadata)
     ], OnDemandVideo.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandVideo.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictures" }),
-        __metadata("design:type", Picture)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictures" }),
+        __metadata("design:type", picture_1.Picture)
     ], OnDemandVideo.prototype, "pictures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=play_progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=play_progress" }),
         __metadata("design:type", Number)
     ], OnDemandVideo.prototype, "playProgress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", Number)
     ], OnDemandVideo.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_date" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_year" }),
         __metadata("design:type", Number)
     ], OnDemandVideo.prototype, "releaseYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rent" }),
         __metadata("design:type", OnDemandVideoRent)
     ], OnDemandVideo.prototype, "rent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandVideo.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], OnDemandVideo.prototype, "user", void 0);
     return OnDemandVideo;
-}(SpeakeasyBase));
-export { OnDemandVideo };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandVideo = OnDemandVideo;

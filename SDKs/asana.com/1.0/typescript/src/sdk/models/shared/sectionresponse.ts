@@ -3,6 +3,10 @@ import { ProjectCompact } from "./projectcompact";
 
 
 
+// SectionResponse
+/** 
+ * A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
+**/
 export class SectionResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

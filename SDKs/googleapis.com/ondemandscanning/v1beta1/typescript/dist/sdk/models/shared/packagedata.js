@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LanguagePackageDependency } from "./languagepackagedependency";
-import { FileLocation } from "./filelocation";
-export var PackageDataPackageTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PackageData = exports.PackageDataPackageTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var languagepackagedependency_1 = require("./languagepackagedependency");
+var filelocation_1 = require("./filelocation");
+var PackageDataPackageTypeEnum;
 (function (PackageDataPackageTypeEnum) {
     PackageDataPackageTypeEnum["PackageTypeUnspecified"] = "PACKAGE_TYPE_UNSPECIFIED";
     PackageDataPackageTypeEnum["Os"] = "OS";
     PackageDataPackageTypeEnum["Maven"] = "MAVEN";
     PackageDataPackageTypeEnum["Go"] = "GO";
     PackageDataPackageTypeEnum["GoStdlib"] = "GO_STDLIB";
-})(PackageDataPackageTypeEnum || (PackageDataPackageTypeEnum = {}));
+})(PackageDataPackageTypeEnum = exports.PackageDataPackageTypeEnum || (exports.PackageDataPackageTypeEnum = {}));
 var PackageData = /** @class */ (function (_super) {
     __extends(PackageData, _super);
     function PackageData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpeUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpeUri" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "cpeUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependencyChain", elemType: LanguagePackageDependency }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependencyChain", elemType: languagepackagedependency_1.LanguagePackageDependency }),
         __metadata("design:type", Array)
     ], PackageData.prototype, "dependencyChain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileLocation", elemType: FileLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileLocation", elemType: filelocation_1.FileLocation }),
         __metadata("design:type", Array)
     ], PackageData.prototype, "fileLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hashDigest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hashDigest" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "hashDigest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osVersion" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "osVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageType" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "packageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patchedCve" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patchedCve" }),
         __metadata("design:type", Array)
     ], PackageData.prototype, "patchedCve", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unused" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "unused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], PackageData.prototype, "version", void 0);
     return PackageData;
-}(SpeakeasyBase));
-export { PackageData };
+}(utils_1.SpeakeasyBase));
+exports.PackageData = PackageData;

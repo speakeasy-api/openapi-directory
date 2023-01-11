@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TendersUpdateResponse = exports.TendersUpdateRequest = exports.TendersUpdateSecurity = exports.TendersUpdateHeaders = exports.TendersUpdateQueryParams = exports.TendersUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TendersUpdatePathParams = /** @class */ (function (_super) {
     __extends(TendersUpdatePathParams, _super);
     function TendersUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], TendersUpdatePathParams.prototype, "id", void 0);
     return TendersUpdatePathParams;
-}(SpeakeasyBase));
-export { TendersUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdatePathParams = TendersUpdatePathParams;
 var TendersUpdateQueryParams = /** @class */ (function (_super) {
     __extends(TendersUpdateQueryParams, _super);
     function TendersUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=raw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=raw" }),
         __metadata("design:type", Boolean)
     ], TendersUpdateQueryParams.prototype, "raw", void 0);
     return TendersUpdateQueryParams;
-}(SpeakeasyBase));
-export { TendersUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdateQueryParams = TendersUpdateQueryParams;
 var TendersUpdateHeaders = /** @class */ (function (_super) {
     __extends(TendersUpdateHeaders, _super);
     function TendersUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], TendersUpdateHeaders.prototype, "xApideckAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
         __metadata("design:type", String)
     ], TendersUpdateHeaders.prototype, "xApideckConsumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
         __metadata("design:type", String)
     ], TendersUpdateHeaders.prototype, "xApideckServiceId", void 0);
     return TendersUpdateHeaders;
-}(SpeakeasyBase));
-export { TendersUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdateHeaders = TendersUpdateHeaders;
 var TendersUpdateSecurity = /** @class */ (function (_super) {
     __extends(TendersUpdateSecurity, _super);
     function TendersUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], TendersUpdateSecurity.prototype, "apiKey", void 0);
     return TendersUpdateSecurity;
-}(SpeakeasyBase));
-export { TendersUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdateSecurity = TendersUpdateSecurity;
 var TendersUpdateRequest = /** @class */ (function (_super) {
     __extends(TendersUpdateRequest, _super);
     function TendersUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TendersUpdatePathParams)
     ], TendersUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TendersUpdateQueryParams)
     ], TendersUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TendersUpdateHeaders)
     ], TendersUpdateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.TenderInput)
     ], TendersUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TendersUpdateSecurity)
     ], TendersUpdateRequest.prototype, "security", void 0);
     return TendersUpdateRequest;
-}(SpeakeasyBase));
-export { TendersUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdateRequest = TendersUpdateRequest;
 var TendersUpdateResponse = /** @class */ (function (_super) {
     __extends(TendersUpdateResponse, _super);
     function TendersUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BadRequestResponse)
     ], TendersUpdateResponse.prototype, "badRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TendersUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotFoundResponse)
     ], TendersUpdateResponse.prototype, "notFoundResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PaymentRequiredResponse)
     ], TendersUpdateResponse.prototype, "paymentRequiredResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TendersUpdateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnauthorizedResponse)
     ], TendersUpdateResponse.prototype, "unauthorizedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnexpectedErrorResponse)
     ], TendersUpdateResponse.prototype, "unexpectedErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnprocessableResponse)
     ], TendersUpdateResponse.prototype, "unprocessableResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateTenderResponse)
     ], TendersUpdateResponse.prototype, "updateTenderResponse", void 0);
     return TendersUpdateResponse;
-}(SpeakeasyBase));
-export { TendersUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.TendersUpdateResponse = TendersUpdateResponse;

@@ -18,5 +18,5 @@ export declare class VirtualizationClusterGroupsListRequest extends SpeakeasyBas
 export declare class VirtualizationClusterGroupsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationClusterGroupsList200ApplicationJsonObject?: VirtualizationClusterGroupsList200ApplicationJson;
+    virtualizationClusterGroupsList200ApplicationJSONObject?: VirtualizationClusterGroupsList200ApplicationJson;
 }

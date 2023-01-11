@@ -10,6 +10,6 @@ export declare class SourceServer extends SpeakeasyBase {
     launchedInstance?: LaunchedInstance;
     lifeCycle?: LifeCycle;
     sourceProperties?: SourceProperties;
-    sourceServerId?: string;
-    tags?: Map<string, string>;
+    sourceServerID?: string;
+    tags?: Record<string, string>;
 }

@@ -21,5 +21,5 @@ export declare class AppPkgInfo extends SpeakeasyBase {
     operationalState: AppPkgOperationalStateEnum;
     softwareImages: any;
     usageState: UsageStateEnum;
-    userDefinedData?: Map<string, any>;
+    userDefinedData?: Record<string, any>;
 }

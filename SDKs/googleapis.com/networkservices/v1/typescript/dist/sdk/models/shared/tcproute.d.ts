@@ -7,7 +7,7 @@ export declare class TcpRoute extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     gateways?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: TcpRouteRouteRule[];
@@ -20,7 +20,7 @@ export declare class TcpRoute extends SpeakeasyBase {
 export declare class TcpRouteInput extends SpeakeasyBase {
     description?: string;
     gateways?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: TcpRouteRouteRule[];

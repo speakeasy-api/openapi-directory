@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Credentials } from "./credentials";
-import { Location } from "./location";
-import { Name } from "./name";
-export var StudentEllStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Student = exports.StudentRaceEnum = exports.StudentHispanicEthnicityEnum = exports.StudentGradeEnum = exports.StudentGenderEnum = exports.StudentEllStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var credentials_1 = require("./credentials");
+var location_1 = require("./location");
+var name_1 = require("./name");
+var StudentEllStatusEnum;
 (function (StudentEllStatusEnum) {
     StudentEllStatusEnum["Y"] = "Y";
     StudentEllStatusEnum["N"] = "N";
     StudentEllStatusEnum["Unknown"] = "";
-})(StudentEllStatusEnum || (StudentEllStatusEnum = {}));
-export var StudentGenderEnum;
+})(StudentEllStatusEnum = exports.StudentEllStatusEnum || (exports.StudentEllStatusEnum = {}));
+var StudentGenderEnum;
 (function (StudentGenderEnum) {
     StudentGenderEnum["M"] = "M";
     StudentGenderEnum["F"] = "F";
     StudentGenderEnum["Unknown"] = "";
-})(StudentGenderEnum || (StudentGenderEnum = {}));
-export var StudentGradeEnum;
+})(StudentGenderEnum = exports.StudentGenderEnum || (exports.StudentGenderEnum = {}));
+var StudentGradeEnum;
 (function (StudentGradeEnum) {
     StudentGradeEnum["One"] = "1";
     StudentGradeEnum["Two"] = "2";
@@ -56,14 +59,14 @@ export var StudentGradeEnum;
     StudentGradeEnum["Kindergarten"] = "Kindergarten";
     StudentGradeEnum["PostGraduate"] = "PostGraduate";
     StudentGradeEnum["Other"] = "Other";
-})(StudentGradeEnum || (StudentGradeEnum = {}));
-export var StudentHispanicEthnicityEnum;
+})(StudentGradeEnum = exports.StudentGradeEnum || (exports.StudentGradeEnum = {}));
+var StudentHispanicEthnicityEnum;
 (function (StudentHispanicEthnicityEnum) {
     StudentHispanicEthnicityEnum["Y"] = "Y";
     StudentHispanicEthnicityEnum["N"] = "N";
     StudentHispanicEthnicityEnum["Unknown"] = "";
-})(StudentHispanicEthnicityEnum || (StudentHispanicEthnicityEnum = {}));
-export var StudentRaceEnum;
+})(StudentHispanicEthnicityEnum = exports.StudentHispanicEthnicityEnum || (exports.StudentHispanicEthnicityEnum = {}));
+var StudentRaceEnum;
 (function (StudentRaceEnum) {
     StudentRaceEnum["Caucasian"] = "Caucasian";
     StudentRaceEnum["Asian"] = "Asian";
@@ -73,92 +76,92 @@ export var StudentRaceEnum;
     StudentRaceEnum["TwoOrMoreRaces"] = "Two or More Races";
     StudentRaceEnum["UnknownMixed"] = "Unknown";
     StudentRaceEnum["UnknownUpper"] = "";
-})(StudentRaceEnum || (StudentRaceEnum = {}));
+})(StudentRaceEnum = exports.StudentRaceEnum || (exports.StudentRaceEnum = {}));
 var Student = /** @class */ (function (_super) {
     __extends(Student, _super);
     function Student() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], Student.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
-        __metadata("design:type", Credentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
+        __metadata("design:type", credentials_1.Credentials)
     ], Student.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=district" }),
         __metadata("design:type", String)
     ], Student.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dob" }),
         __metadata("design:type", String)
     ], Student.prototype, "dob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ell_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ell_status" }),
         __metadata("design:type", String)
     ], Student.prototype, "ellStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], Student.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], Student.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grade" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grade" }),
         __metadata("design:type", String)
     ], Student.prototype, "grade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graduation_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graduation_year" }),
         __metadata("design:type", String)
     ], Student.prototype, "graduationYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hispanic_ethnicity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hispanic_ethnicity" }),
         __metadata("design:type", String)
     ], Student.prototype, "hispanicEthnicity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Student.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_modified" }),
         __metadata("design:type", String)
     ], Student.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], Student.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", Name)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", name_1.Name)
     ], Student.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=race" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=race" }),
         __metadata("design:type", String)
     ], Student.prototype, "race", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school" }),
         __metadata("design:type", String)
     ], Student.prototype, "school", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schools" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schools" }),
         __metadata("design:type", Array)
     ], Student.prototype, "schools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sis_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sis_id" }),
         __metadata("design:type", String)
     ], Student.prototype, "sisId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state_id" }),
         __metadata("design:type", String)
     ], Student.prototype, "stateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=student_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=student_number" }),
         __metadata("design:type", String)
     ], Student.prototype, "studentNumber", void 0);
     return Student;
-}(SpeakeasyBase));
-export { Student };
+}(utils_1.SpeakeasyBase));
+exports.Student = Student;

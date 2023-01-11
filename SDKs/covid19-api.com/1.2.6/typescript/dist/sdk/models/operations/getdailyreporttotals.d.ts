@@ -29,5 +29,5 @@ export declare class GetDailyReportTotalsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getDailyReportTotals200ApplicationJsonObjects?: GetDailyReportTotals200ApplicationJson[];
+    getDailyReportTotals200ApplicationJSONObjects?: GetDailyReportTotals200ApplicationJson[];
 }

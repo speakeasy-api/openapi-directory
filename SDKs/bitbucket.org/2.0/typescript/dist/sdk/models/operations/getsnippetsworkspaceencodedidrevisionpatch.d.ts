@@ -17,5 +17,5 @@ export declare class GetSnippetsWorkspaceEncodedIdRevisionPatchRequest extends S
 export declare class GetSnippetsWorkspaceEncodedIdRevisionPatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

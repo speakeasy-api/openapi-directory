@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ReservedNodeOffering } from "./reservednodeoffering";
+import { ReservedNodeOfferingList } from "./reservednodeofferinglist";
 export declare class GetReservedNodeExchangeOfferingsOutputMessage extends SpeakeasyBase {
     marker?: string;
-    reservedNodeOfferings?: ReservedNodeOffering[];
+    reservedNodeOfferings?: ReservedNodeOfferingList[];
 }

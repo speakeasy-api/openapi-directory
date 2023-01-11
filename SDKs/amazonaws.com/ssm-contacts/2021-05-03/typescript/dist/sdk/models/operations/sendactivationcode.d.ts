@@ -23,7 +23,7 @@ export declare class SendActivationCodeResponse extends SpeakeasyBase {
     dataEncryptionException?: any;
     internalServerException?: any;
     resourceNotFoundException?: any;
-    sendActivationCodeResult?: Map<string, any>;
+    sendActivationCodeResult?: Record<string, any>;
     serviceQuotaExceededException?: any;
     statusCode: number;
     throttlingException?: any;

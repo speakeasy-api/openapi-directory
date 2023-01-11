@@ -17,14 +17,14 @@ export declare class MeasurementsGetV2MeasurementsGetQueryParams extends Speakea
     location?: any[];
     locationId?: number;
     offset?: number;
-    orderBy?: shared.MeasOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
     parameter?: any[];
     parameterId?: number;
     project?: number;
     radius?: number;
     sensorType?: shared.SensorTypesEnum;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     unit?: string[];
     valueFrom?: number;
     valueTo?: number;
@@ -36,5 +36,5 @@ export declare class MeasurementsGetV2MeasurementsGetResponse extends SpeakeasyB
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    measurementsGetV2MeasurementsGet200ApplicationJsonAny?: any;
+    measurementsGetV2MeasurementsGet200ApplicationJSONAny?: any;
 }

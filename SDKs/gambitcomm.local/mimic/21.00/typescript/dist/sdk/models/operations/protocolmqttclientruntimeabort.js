@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientRuntimeAbortResponse = exports.ProtocolMqttClientRuntimeAbortRequest = exports.ProtocolMqttClientRuntimeAbortPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientRuntimeAbortPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientRuntimeAbortPathParams, _super);
     function ProtocolMqttClientRuntimeAbortPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientRuntimeAbortPathParams.prototype, "agentNum", void 0);
     return ProtocolMqttClientRuntimeAbortPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientRuntimeAbortPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientRuntimeAbortPathParams = ProtocolMqttClientRuntimeAbortPathParams;
 var ProtocolMqttClientRuntimeAbortRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientRuntimeAbortRequest, _super);
     function ProtocolMqttClientRuntimeAbortRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientRuntimeAbortPathParams)
     ], ProtocolMqttClientRuntimeAbortRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientRuntimeAbortRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientRuntimeAbortRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientRuntimeAbortRequest = ProtocolMqttClientRuntimeAbortRequest;
 var ProtocolMqttClientRuntimeAbortResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientRuntimeAbortResponse, _super);
     function ProtocolMqttClientRuntimeAbortResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientRuntimeAbortResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientRuntimeAbortResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientRuntimeAbortResponse.prototype, "protocolMqttClientRuntimeAbort200ApplicationJsonStrings", void 0);
+    ], ProtocolMqttClientRuntimeAbortResponse.prototype, "protocolMqttClientRuntimeAbort200ApplicationJSONStrings", void 0);
     return ProtocolMqttClientRuntimeAbortResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientRuntimeAbortResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientRuntimeAbortResponse = ProtocolMqttClientRuntimeAbortResponse;

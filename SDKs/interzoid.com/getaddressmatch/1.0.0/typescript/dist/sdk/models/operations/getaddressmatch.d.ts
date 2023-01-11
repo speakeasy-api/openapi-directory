@@ -14,5 +14,5 @@ export declare class GetaddressmatchRequest extends SpeakeasyBase {
 export declare class GetaddressmatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getaddressmatch200ApplicationJsonObject?: Getaddressmatch200ApplicationJson;
+    getaddressmatch200ApplicationJSONObject?: Getaddressmatch200ApplicationJson;
 }

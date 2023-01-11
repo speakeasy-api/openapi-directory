@@ -3,10 +3,6 @@ import { Session } from "./session";
 
 
 
-// Event
-/** 
- * Specifies information about an event that reports data to Amazon Pinpoint.
-**/
 export class Event extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AppPackageName" })
   appPackageName?: string;
@@ -18,16 +14,16 @@ export class Event extends SpeakeasyBase {
   appVersionCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ClientSdkVersion" })
   clientSdkVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EventType" })
-  eventType: string;
+  eventType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Metrics" })
-  metrics?: Map<string, number>;
+  metrics?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=SdkName" })
   sdkName?: string;
@@ -36,5 +32,5 @@ export class Event extends SpeakeasyBase {
   session?: Session;
 
   @SpeakeasyMetadata({ data: "json, name=Timestamp" })
-  timestamp: string;
+  timestamp?: string;
 }

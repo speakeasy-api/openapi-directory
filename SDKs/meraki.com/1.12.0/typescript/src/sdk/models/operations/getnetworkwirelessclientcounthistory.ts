@@ -63,5 +63,5 @@ export class GetNetworkWirelessClientCountHistoryResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessClientCountHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessClientCountHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,6 +1,9 @@
-export var RegistryAliasStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryAliasStatusEnum = void 0;
+var RegistryAliasStatusEnum;
 (function (RegistryAliasStatusEnum) {
     RegistryAliasStatusEnum["Active"] = "ACTIVE";
     RegistryAliasStatusEnum["Pending"] = "PENDING";
     RegistryAliasStatusEnum["Rejected"] = "REJECTED";
-})(RegistryAliasStatusEnum || (RegistryAliasStatusEnum = {}));
+})(RegistryAliasStatusEnum = exports.RegistryAliasStatusEnum || (exports.RegistryAliasStatusEnum = {}));

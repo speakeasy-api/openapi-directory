@@ -64,10 +64,10 @@ export class FileGetFromTaskResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  fileGetFromTask200ApplicationJsonBinaryString?: Uint8Array;
+  fileGetFromTask200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

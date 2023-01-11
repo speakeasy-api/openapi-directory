@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentJobs } from "./deploymentjobs";
-export var PhaseStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Phase = exports.PhaseStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentjobs_1 = require("./deploymentjobs");
+var PhaseStateEnum;
 (function (PhaseStateEnum) {
     PhaseStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     PhaseStateEnum["Pending"] = "PENDING";
@@ -32,7 +35,7 @@ export var PhaseStateEnum;
     PhaseStateEnum["Succeeded"] = "SUCCEEDED";
     PhaseStateEnum["Failed"] = "FAILED";
     PhaseStateEnum["Aborted"] = "ABORTED";
-})(PhaseStateEnum || (PhaseStateEnum = {}));
+})(PhaseStateEnum = exports.PhaseStateEnum || (exports.PhaseStateEnum = {}));
 // Phase
 /**
  * Phase represents a collection of jobs that are logically grouped together for a `Rollout`.
@@ -43,17 +46,17 @@ var Phase = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentJobs" }),
-        __metadata("design:type", DeploymentJobs)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentJobs" }),
+        __metadata("design:type", deploymentjobs_1.DeploymentJobs)
     ], Phase.prototype, "deploymentJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Phase.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Phase.prototype, "state", void 0);
     return Phase;
-}(SpeakeasyBase));
-export { Phase };
+}(utils_1.SpeakeasyBase));
+exports.Phase = Phase;

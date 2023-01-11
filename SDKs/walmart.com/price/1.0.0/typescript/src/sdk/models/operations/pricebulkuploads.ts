@@ -18,16 +18,16 @@ export class PriceBulkUploadsHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType?: string;
+  wmCONSUMERCHANNELTYPE?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 
@@ -48,10 +48,10 @@ export class PriceBulkUploadsRequestBody extends SpeakeasyBase {
 
 export class PriceBulkUploads200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalAttributes" })
-  additionalAttributes?: Map<string, any>;
+  additionalAttributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=feedId" })
   feedId?: string;
@@ -81,5 +81,5 @@ export class PriceBulkUploadsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  priceBulkUploads200ApplicationJsonObject?: PriceBulkUploads200ApplicationJson;
+  priceBulkUploads200ApplicationJSONObject?: PriceBulkUploads200ApplicationJson;
 }

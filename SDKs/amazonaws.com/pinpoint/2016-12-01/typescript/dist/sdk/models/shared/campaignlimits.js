@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignLimits = void 0;
+var utils_1 = require("../../../internal/utils");
 // CampaignLimits
 /**
  * For a campaign, specifies limits on the messages that the campaign can send. For an application, specifies the default limits for messages that campaigns in the application can send.
@@ -33,25 +36,25 @@ var CampaignLimits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Daily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Daily" }),
         __metadata("design:type", Number)
     ], CampaignLimits.prototype, "daily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumDuration" }),
         __metadata("design:type", Number)
     ], CampaignLimits.prototype, "maximumDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessagesPerSecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessagesPerSecond" }),
         __metadata("design:type", Number)
     ], CampaignLimits.prototype, "messagesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Session" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Session" }),
         __metadata("design:type", Number)
     ], CampaignLimits.prototype, "session", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Total" }),
         __metadata("design:type", Number)
     ], CampaignLimits.prototype, "total", void 0);
     return CampaignLimits;
-}(SpeakeasyBase));
-export { CampaignLimits };
+}(utils_1.SpeakeasyBase));
+exports.CampaignLimits = CampaignLimits;

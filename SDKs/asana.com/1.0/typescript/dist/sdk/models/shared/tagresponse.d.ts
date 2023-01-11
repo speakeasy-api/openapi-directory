@@ -22,6 +22,9 @@ export declare enum TagResponseColorEnum {
     LightPurple = "light-purple",
     LightWarmGray = "light-warm-gray"
 }
+/**
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 export declare class TagResponse extends SpeakeasyBase {
     color?: TagResponseColorEnum;
     followers?: UserCompact[];
@@ -31,6 +34,9 @@ export declare class TagResponse extends SpeakeasyBase {
     resourceType?: string;
     workspace?: WorkspaceCompact;
 }
+/**
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 export declare class TagResponseInput extends SpeakeasyBase {
     color?: TagResponseColorEnum;
     name?: string;

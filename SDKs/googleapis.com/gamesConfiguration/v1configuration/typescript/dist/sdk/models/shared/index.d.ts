@@ -4,7 +4,6 @@ export * from "./achievementconfigurationlistresponse";
 export * from "./altenum";
 export * from "./gamesnumberaffixconfiguration";
 export * from "./gamesnumberformatconfiguration";
-export * from "./imageconfiguration";
 export * from "./leaderboardconfiguration";
 export * from "./leaderboardconfigurationdetail";
 export * from "./leaderboardconfigurationlistresponse";

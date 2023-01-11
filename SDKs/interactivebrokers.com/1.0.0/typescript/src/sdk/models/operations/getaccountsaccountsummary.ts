@@ -55,7 +55,7 @@ export class GetAccountsAccountSummary200ApplicationJsonInfo extends SpeakeasyBa
   tradingTypeS?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WhatIfPMEnabled" })
-  whatIfPmEnabled?: string;
+  whatIfPMEnabled?: string;
 }
 
 
@@ -64,7 +64,7 @@ export class GetAccountsAccountSummary200ApplicationJsonLedger extends Speakeasy
   cashBalance?: number;
 
   @SpeakeasyMetadata({ data: "json, name=CashBalanceFXSegment" })
-  cashBalanceFxSegment?: number;
+  cashBalanceFXSegment?: number;
 
   @SpeakeasyMetadata({ data: "json, name=CashCumQty" })
   cashCumQty?: number;
@@ -76,7 +76,7 @@ export class GetAccountsAccountSummary200ApplicationJsonLedger extends Speakeasy
   futureOptionMarketValue?: number;
 
   @SpeakeasyMetadata({ data: "json, name=FuturePNL" })
-  futurePnl?: number;
+  futurePNL?: number;
 
   @SpeakeasyMetadata({ data: "json, name=NetDividend" })
   netDividend?: number;
@@ -91,7 +91,7 @@ export class GetAccountsAccountSummary200ApplicationJsonLedger extends Speakeasy
   optionMarketValue?: number;
 
   @SpeakeasyMetadata({ data: "json, name=RealizedPNL" })
-  realizedPnl?: number;
+  realizedPNL?: number;
 
   @SpeakeasyMetadata({ data: "json, name=StockMarketValue" })
   stockMarketValue?: number;
@@ -100,7 +100,7 @@ export class GetAccountsAccountSummary200ApplicationJsonLedger extends Speakeasy
   totalCashBalance?: number;
 
   @SpeakeasyMetadata({ data: "json, name=UnrealizedPNL" })
-  unrealizedPnl?: number;
+  unrealizedPNL?: number;
 }
 
 
@@ -370,8 +370,8 @@ export class GetAccountsAccountSummaryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAccountsAccountSummary200ApplicationJsonObject?: GetAccountsAccountSummary200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAccountsAccountSummary200ApplicationJSONObject?: GetAccountsAccountSummary200ApplicationJson;
 }

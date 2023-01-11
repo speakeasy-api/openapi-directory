@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetEntitlementsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Filter" })
-  filter?: Map<string, string[]>;
+  filter?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=MaxResults" })
   maxResults?: number;

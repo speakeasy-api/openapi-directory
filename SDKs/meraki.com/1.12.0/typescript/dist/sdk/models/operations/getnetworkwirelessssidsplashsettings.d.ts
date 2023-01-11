@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidSplashSettingsRequest extends Speakea
 export declare class GetNetworkWirelessSsidSplashSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidSplashSettings200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidSplashSettings200ApplicationJSONObject?: Record<string, any>;
 }

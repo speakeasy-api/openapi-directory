@@ -10,6 +10,6 @@ export declare class GetEnvironmentForRepositoryRequest extends SpeakeasyBase {
 export declare class GetEnvironmentForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deploymentEnvironment?: Map<string, any>;
-    error?: Map<string, any>;
+    deploymentEnvironment?: Record<string, any>;
+    error?: Record<string, any>;
 }

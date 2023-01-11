@@ -17,7 +17,7 @@ export class CalculateMatrixResponse extends SpeakeasyBase {
   ghError?: shared.GhError;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   jobId?: shared.JobId;

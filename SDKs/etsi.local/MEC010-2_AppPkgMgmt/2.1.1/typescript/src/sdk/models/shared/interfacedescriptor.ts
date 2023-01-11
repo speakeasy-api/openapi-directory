@@ -6,16 +6,16 @@ import { TunnelInfo } from "./tunnelinfo";
 
 export class InterfaceDescriptor extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  dstIpAddress?: string;
+  dstIPAddress?: string;
 
   @SpeakeasyMetadata()
-  dstMacAddress?: string;
+  dstMACAddress?: string;
 
   @SpeakeasyMetadata()
   interfaceType: InterfaceTypeEnum;
 
   @SpeakeasyMetadata()
-  srcMacAddress?: string;
+  srcMACAddress?: string;
 
   @SpeakeasyMetadata()
   tunnelInfo?: TunnelInfo;

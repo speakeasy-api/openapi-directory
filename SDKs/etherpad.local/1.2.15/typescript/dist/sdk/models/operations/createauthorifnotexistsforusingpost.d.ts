@@ -4,7 +4,7 @@ export declare class CreateAuthorIfNotExistsForUsingPostQueryParams extends Spea
     name?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -13,17 +13,17 @@ export declare class CreateAuthorIfNotExistsForUsingPost200ApplicationJson exten
 }
 export declare class CreateAuthorIfNotExistsForUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingPostRequest extends SpeakeasyBase {
@@ -32,8 +32,8 @@ export declare class CreateAuthorIfNotExistsForUsingPostRequest extends Speakeas
 export declare class CreateAuthorIfNotExistsForUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createAuthorIfNotExistsForUsingPost200ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
-    createAuthorIfNotExistsForUsingPost400ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
-    createAuthorIfNotExistsForUsingPost401ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
-    createAuthorIfNotExistsForUsingPost500ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
+    createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
+    createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
+    createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
+    createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
 }

@@ -15,7 +15,7 @@ export declare class GetContainerServicePowersHeaders extends SpeakeasyBase {
 }
 export declare class GetContainerServicePowersRequest extends SpeakeasyBase {
     headers: GetContainerServicePowersHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetContainerServicePowersResponse extends SpeakeasyBase {
     accessDeniedException?: any;

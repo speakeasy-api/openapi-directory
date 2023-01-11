@@ -21,5 +21,5 @@ export declare class CreateAttachmentForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createAttachmentForTask200ApplicationJsonObject?: CreateAttachmentForTask200ApplicationJson;
+    createAttachmentForTask200ApplicationJSONObject?: CreateAttachmentForTask200ApplicationJson;
 }

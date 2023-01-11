@@ -1,5 +1,8 @@
-export var TelemetryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TelemetryEnum = void 0;
+var TelemetryEnum;
 (function (TelemetryEnum) {
     TelemetryEnum["On"] = "On";
     TelemetryEnum["Off"] = "Off";
-})(TelemetryEnum || (TelemetryEnum = {}));
+})(TelemetryEnum = exports.TelemetryEnum || (exports.TelemetryEnum = {}));

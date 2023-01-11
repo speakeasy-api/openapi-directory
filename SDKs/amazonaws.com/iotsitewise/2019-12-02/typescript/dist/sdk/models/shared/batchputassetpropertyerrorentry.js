@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchPutAssetPropertyError } from "./batchputassetpropertyerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchPutAssetPropertyErrorEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchputassetpropertyerror_1 = require("./batchputassetpropertyerror");
 // BatchPutAssetPropertyErrorEntry
 /**
  * Contains error information for asset property value entries that are associated with the <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_BatchPutAssetPropertyValue.html">BatchPutAssetPropertyValue</a> API.
@@ -34,13 +37,13 @@ var BatchPutAssetPropertyErrorEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryId" }),
         __metadata("design:type", String)
     ], BatchPutAssetPropertyErrorEntry.prototype, "entryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: BatchPutAssetPropertyError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: batchputassetpropertyerror_1.BatchPutAssetPropertyError }),
         __metadata("design:type", Array)
     ], BatchPutAssetPropertyErrorEntry.prototype, "errors", void 0);
     return BatchPutAssetPropertyErrorEntry;
-}(SpeakeasyBase));
-export { BatchPutAssetPropertyErrorEntry };
+}(utils_1.SpeakeasyBase));
+exports.BatchPutAssetPropertyErrorEntry = BatchPutAssetPropertyErrorEntry;

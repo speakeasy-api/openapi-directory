@@ -9,5 +9,5 @@ export declare class SetValidateRequest extends SpeakeasyBase {
 export declare class SetValidateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setValidate200ApplicationJsonInt32Integer?: number;
+    setValidate200ApplicationJSONInt32Integer?: number;
 }

@@ -7,7 +7,7 @@ export class DynamicListenerState extends SpeakeasyBase {
   lastUpdated?: string;
 
   @SpeakeasyMetadata({ data: "json, name=listener" })
-  listener?: Map<string, any>;
+  listener?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=versionInfo" })
   versionInfo?: string;

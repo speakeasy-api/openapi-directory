@@ -18,7 +18,7 @@ export enum SpokeStateEnum {
 
 // Spoke
 /** 
- * A Network Connectivity Center spoke represents a connection between your Google Cloud network resources and a non-Google-Cloud network. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
+ * A Network Connectivity Center spoke represents one or more network connectivity resources. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
 **/
 export class Spoke extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=createTime" })
@@ -31,7 +31,7 @@ export class Spoke extends SpeakeasyBase {
   hub?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=linkedInterconnectAttachments" })
   linkedInterconnectAttachments?: LinkedInterconnectAttachments;
@@ -58,7 +58,7 @@ export class Spoke extends SpeakeasyBase {
 
 // SpokeInput
 /** 
- * A Network Connectivity Center spoke represents a connection between your Google Cloud network resources and a non-Google-Cloud network. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
+ * A Network Connectivity Center spoke represents one or more network connectivity resources. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
 **/
 export class SpokeInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
@@ -68,7 +68,7 @@ export class SpokeInput extends SpeakeasyBase {
   hub?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=linkedInterconnectAttachments" })
   linkedInterconnectAttachments?: LinkedInterconnectAttachmentsInput;

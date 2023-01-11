@@ -58,7 +58,7 @@ export class RestartSimulationJobResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  restartSimulationJobResponse?: Map<string, any>;
+  restartSimulationJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

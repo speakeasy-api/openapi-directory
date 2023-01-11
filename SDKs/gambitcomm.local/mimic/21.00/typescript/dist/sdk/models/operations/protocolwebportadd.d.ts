@@ -9,5 +9,5 @@ export declare class ProtocolWebPortAddRequest extends SpeakeasyBase {
 export declare class ProtocolWebPortAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolWebPortAdd200ApplicationJsonString?: string;
+    protocolWebPortAdd200ApplicationJSONString?: string;
 }

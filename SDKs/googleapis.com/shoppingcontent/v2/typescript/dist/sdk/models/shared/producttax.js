@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductTax = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductTax = /** @class */ (function (_super) {
     __extends(ProductTax, _super);
     function ProductTax() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], ProductTax.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ProductTax.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], ProductTax.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", Number)
     ], ProductTax.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], ProductTax.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxShip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxShip" }),
         __metadata("design:type", Boolean)
     ], ProductTax.prototype, "taxShip", void 0);
     return ProductTax;
-}(SpeakeasyBase));
-export { ProductTax };
+}(utils_1.SpeakeasyBase));
+exports.ProductTax = ProductTax;

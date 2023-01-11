@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchResourcesComparatorEnum } from "./searchresourcescomparatorenum";
-import { SearchResourcesSimpleCriterionKeyEnum } from "./searchresourcessimplecriterionkeyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResourcesSimpleCriterion = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchresourcescomparatorenum_1 = require("./searchresourcescomparatorenum");
+var searchresourcessimplecriterionkeyenum_1 = require("./searchresourcessimplecriterionkeyenum");
 // SearchResourcesSimpleCriterion
 /**
  * Specifies a property-based filter condition that determines which Amazon Web Services resources are included or excluded from the query results.
@@ -35,17 +38,17 @@ var SearchResourcesSimpleCriterion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], SearchResourcesSimpleCriterion.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], SearchResourcesSimpleCriterion.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], SearchResourcesSimpleCriterion.prototype, "values", void 0);
     return SearchResourcesSimpleCriterion;
-}(SpeakeasyBase));
-export { SearchResourcesSimpleCriterion };
+}(utils_1.SpeakeasyBase));
+exports.SearchResourcesSimpleCriterion = SearchResourcesSimpleCriterion;

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DescribeDbLogFilesDetails } from "./describedblogfilesdetails";
+import { DescribeDbLogFilesList } from "./describedblogfileslist";
 
 
 
@@ -8,8 +8,8 @@ import { DescribeDbLogFilesDetails } from "./describedblogfilesdetails";
  *  The response from a call to <code>DescribeDBLogFiles</code>. 
 **/
 export class DescribeDbLogFilesResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DescribeDbLogFilesDetails })
-  describeDbLogFiles?: DescribeDbLogFilesDetails[];
+  @SpeakeasyMetadata({ elemType: DescribeDbLogFilesList })
+  describeDBLogFiles?: DescribeDbLogFilesList[];
 
   @SpeakeasyMetadata()
   marker?: string;

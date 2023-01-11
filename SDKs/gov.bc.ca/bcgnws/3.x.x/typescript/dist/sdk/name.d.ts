@@ -33,12 +33,6 @@ export declare class Name {
     **/
     getNamesInside(req: operations.GetNamesInsideRequest, config?: AxiosRequestConfig): Promise<operations.GetNamesInsideResponse>;
     /**
-     * getNamesNameIdOutputFormat - Get a name by its nameId
-     *
-     * Get information about the geographical name with the specified nameId.
-    **/
-    getNamesNameIdOutputFormat(req: operations.GetNamesNameIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetNamesNameIdOutputFormatResponse>;
-    /**
      * getNamesNear - Search near to a geographic point
      *
      * Search for information about geographical names that correspond to features within a geographic area defined by a centre point and a radius.  Various options and filter parameters are available to refine the search.
@@ -62,4 +56,10 @@ export declare class Name {
      * Search for information about geographical names by the text of the name itself.  The response will include both official and unofficial names.  Various options and filter parameters are available to refine the search.
     **/
     getNamesSearch(req: operations.GetNamesSearchRequest, config?: AxiosRequestConfig): Promise<operations.GetNamesSearchResponse>;
+    /**
+     * getNamesNameIdOutputFormat - Get a name by its nameId
+     *
+     * Get information about the geographical name with the specified nameId.
+    **/
+    getNamesNameIdOutputFormat(req: operations.GetNamesNameIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetNamesNameIdOutputFormatResponse>;
 }

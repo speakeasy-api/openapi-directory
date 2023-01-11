@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiskAttachment } from "./diskattachment";
-import { NewDiskInitializeParams } from "./newdiskinitializeparams";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewDisk = void 0;
+var utils_1 = require("../../../internal/utils");
+var diskattachment_1 = require("./diskattachment");
+var newdiskinitializeparams_1 = require("./newdiskinitializeparams");
 // NewDisk
 /**
  * A Persistent Disk resource that will be created and attached to each Replica in the Pool. Each Replica will have a unique persistent disk that is created and attached to that Replica in READ_WRITE mode.
@@ -35,21 +38,21 @@ var NewDisk = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachment" }),
-        __metadata("design:type", DiskAttachment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachment" }),
+        __metadata("design:type", diskattachment_1.DiskAttachment)
     ], NewDisk.prototype, "attachment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoDelete" }),
         __metadata("design:type", Boolean)
     ], NewDisk.prototype, "autoDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boot" }),
         __metadata("design:type", Boolean)
     ], NewDisk.prototype, "boot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initializeParams" }),
-        __metadata("design:type", NewDiskInitializeParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initializeParams" }),
+        __metadata("design:type", newdiskinitializeparams_1.NewDiskInitializeParams)
     ], NewDisk.prototype, "initializeParams", void 0);
     return NewDisk;
-}(SpeakeasyBase));
-export { NewDisk };
+}(utils_1.SpeakeasyBase));
+exports.NewDisk = NewDisk;

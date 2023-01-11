@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostErc20AddressResponse = exports.PostErc20AddressRequest = exports.PostErc20AddressPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostErc20AddressPathParams = /** @class */ (function (_super) {
     __extends(PostErc20AddressPathParams, _super);
     function PostErc20AddressPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=address" }),
         __metadata("design:type", String)
     ], PostErc20AddressPathParams.prototype, "address", void 0);
     return PostErc20AddressPathParams;
-}(SpeakeasyBase));
-export { PostErc20AddressPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostErc20AddressPathParams = PostErc20AddressPathParams;
 var PostErc20AddressRequest = /** @class */ (function (_super) {
     __extends(PostErc20AddressRequest, _super);
     function PostErc20AddressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostErc20AddressPathParams)
     ], PostErc20AddressRequest.prototype, "pathParams", void 0);
     return PostErc20AddressRequest;
-}(SpeakeasyBase));
-export { PostErc20AddressRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostErc20AddressRequest = PostErc20AddressRequest;
 var PostErc20AddressResponse = /** @class */ (function (_super) {
     __extends(PostErc20AddressResponse, _super);
     function PostErc20AddressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostErc20AddressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PostErc20AddressResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostErc20AddressResponse.prototype, "statusCode", void 0);
     return PostErc20AddressResponse;
-}(SpeakeasyBase));
-export { PostErc20AddressResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostErc20AddressResponse = PostErc20AddressResponse;

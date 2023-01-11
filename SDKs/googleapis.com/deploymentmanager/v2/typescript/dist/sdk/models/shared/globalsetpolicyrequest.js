@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Binding } from "./binding";
-import { Policy } from "./policy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlobalSetPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var binding_1 = require("./binding");
+var policy_1 = require("./policy");
 var GlobalSetPolicyRequest = /** @class */ (function (_super) {
     __extends(GlobalSetPolicyRequest, _super);
     function GlobalSetPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bindings", elemType: Binding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bindings", elemType: binding_1.Binding }),
         __metadata("design:type", Array)
     ], GlobalSetPolicyRequest.prototype, "bindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GlobalSetPolicyRequest.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
-        __metadata("design:type", Policy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
+        __metadata("design:type", policy_1.Policy)
     ], GlobalSetPolicyRequest.prototype, "policy", void 0);
     return GlobalSetPolicyRequest;
-}(SpeakeasyBase));
-export { GlobalSetPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GlobalSetPolicyRequest = GlobalSetPolicyRequest;

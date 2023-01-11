@@ -39,7 +39,7 @@ export class GetMessagesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.Message })
   messages?: shared.Message[];

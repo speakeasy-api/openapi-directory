@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddTagsRequest, AddTagsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,36 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddTagsRequest = {
   headers: {
-    xAmzAlgorithm: "qui",
-    xAmzContentSha256: "et",
-    xAmzCredential: "ex",
-    xAmzDate: "adipisci",
-    xAmzSecurityToken: "ipsum",
-    xAmzSignature: "placeat",
-    xAmzSignedHeaders: "ut",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonML_20141212.AddTags",
   },
   request: {
-    resourceId: "sed",
-    resourceType: "DataSource",
+    resourceId: "fugit",
+    resourceType: "BatchPrediction",
     tags: [
       {
-        key: "atque",
-        value: "expedita",
-      },
-      {
-        key: "quo",
-        value: "facere",
-      },
-      {
-        key: "perferendis",
-        value: "voluptate",
+        key: "rerum",
+        value: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.addTags(req).then((res: AddTagsResponse | AxiosError) => {
+sdk.addTags(req).then((res: AddTagsResponse | AxiosError) => {
    // handle response
 });
 ```

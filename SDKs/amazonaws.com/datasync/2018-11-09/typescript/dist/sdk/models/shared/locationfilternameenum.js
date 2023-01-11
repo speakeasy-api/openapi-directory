@@ -1,6 +1,9 @@
-export var LocationFilterNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationFilterNameEnum = void 0;
+var LocationFilterNameEnum;
 (function (LocationFilterNameEnum) {
     LocationFilterNameEnum["LocationUri"] = "LocationUri";
     LocationFilterNameEnum["LocationType"] = "LocationType";
     LocationFilterNameEnum["CreationTime"] = "CreationTime";
-})(LocationFilterNameEnum || (LocationFilterNameEnum = {}));
+})(LocationFilterNameEnum = exports.LocationFilterNameEnum || (exports.LocationFilterNameEnum = {}));

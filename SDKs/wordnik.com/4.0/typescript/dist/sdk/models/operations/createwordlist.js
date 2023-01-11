@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWordListResponse = exports.CreateWordListRequest = exports.CreateWordListHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateWordListHeaders = /** @class */ (function (_super) {
     __extends(CreateWordListHeaders, _super);
     function CreateWordListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], CreateWordListHeaders.prototype, "authToken", void 0);
     return CreateWordListHeaders;
-}(SpeakeasyBase));
-export { CreateWordListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateWordListHeaders = CreateWordListHeaders;
 var CreateWordListRequest = /** @class */ (function (_super) {
     __extends(CreateWordListRequest, _super);
     function CreateWordListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateWordListHeaders)
     ], CreateWordListRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], CreateWordListRequest.prototype, "request", void 0);
     return CreateWordListRequest;
-}(SpeakeasyBase));
-export { CreateWordListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateWordListRequest = CreateWordListRequest;
 var CreateWordListResponse = /** @class */ (function (_super) {
     __extends(CreateWordListResponse, _super);
     function CreateWordListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], CreateWordListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateWordListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateWordListResponse.prototype, "statusCode", void 0);
     return CreateWordListResponse;
-}(SpeakeasyBase));
-export { CreateWordListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateWordListResponse = CreateWordListResponse;

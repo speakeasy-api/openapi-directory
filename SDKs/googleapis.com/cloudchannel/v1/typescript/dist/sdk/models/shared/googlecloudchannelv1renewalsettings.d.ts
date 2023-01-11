@@ -11,9 +11,19 @@ export declare enum GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum {
 /**
  * Renewal settings for renewable Offers.
 **/
+export declare class GoogleCloudChannelV1RenewalSettingsInput extends SpeakeasyBase {
+    enableRenewal?: boolean;
+    paymentCycle?: GoogleCloudChannelV1Period;
+    paymentPlan?: GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum;
+    resizeUnitCount?: boolean;
+}
+/**
+ * Renewal settings for renewable Offers.
+**/
 export declare class GoogleCloudChannelV1RenewalSettings extends SpeakeasyBase {
     enableRenewal?: boolean;
     paymentCycle?: GoogleCloudChannelV1Period;
     paymentPlan?: GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum;
     resizeUnitCount?: boolean;
+    scheduledRenewalOffer?: string;
 }

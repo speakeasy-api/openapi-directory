@@ -185,23 +185,23 @@ export class BhcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bhcer400ApplicationJsonObject?: Bhcer400ApplicationJson;
+  bhcer400ApplicationJSONObject?: Bhcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer401ApplicationJsonObject?: Bhcer401ApplicationJson;
+  bhcer401ApplicationJSONObject?: Bhcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer404ApplicationJsonObject?: Bhcer404ApplicationJson;
+  bhcer404ApplicationJSONObject?: Bhcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer500ApplicationJsonObject?: Bhcer500ApplicationJson;
+  bhcer500ApplicationJSONObject?: Bhcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer502ApplicationJsonObject?: Bhcer502ApplicationJson;
+  bhcer502ApplicationJSONObject?: Bhcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer503ApplicationJsonObject?: Bhcer503ApplicationJson;
+  bhcer503ApplicationJSONObject?: Bhcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  bhcer504ApplicationJsonObject?: Bhcer504ApplicationJson;
+  bhcer504ApplicationJSONObject?: Bhcer504ApplicationJson;
 }

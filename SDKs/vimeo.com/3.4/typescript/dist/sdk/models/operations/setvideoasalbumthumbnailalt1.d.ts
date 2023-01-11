@@ -19,5 +19,5 @@ export declare class SetVideoAsAlbumThumbnailAlt1Response extends SpeakeasyBase 
     contentType: string;
     statusCode: number;
     album?: shared.Album;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

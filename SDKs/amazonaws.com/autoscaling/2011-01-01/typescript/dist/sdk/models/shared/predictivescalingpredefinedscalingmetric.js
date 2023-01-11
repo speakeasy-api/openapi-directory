@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PredefinedScalingMetricTypeEnum } from "./predefinedscalingmetrictypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictiveScalingPredefinedScalingMetric = void 0;
+var utils_1 = require("../../../internal/utils");
+var predefinedscalingmetrictypeenum_1 = require("./predefinedscalingmetrictypeenum");
 // PredictiveScalingPredefinedScalingMetric
 /**
  * <p>Describes a scaling metric for a predictive scaling policy.</p> <p>When returned in the output of <code>DescribePolicies</code>, it indicates that a predictive scaling policy uses individually specified load and scaling metrics instead of a metric pair.</p>
@@ -34,13 +37,13 @@ var PredictiveScalingPredefinedScalingMetric = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PredictiveScalingPredefinedScalingMetric.prototype, "predefinedMetricType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PredictiveScalingPredefinedScalingMetric.prototype, "resourceLabel", void 0);
     return PredictiveScalingPredefinedScalingMetric;
-}(SpeakeasyBase));
-export { PredictiveScalingPredefinedScalingMetric };
+}(utils_1.SpeakeasyBase));
+exports.PredictiveScalingPredefinedScalingMetric = PredictiveScalingPredefinedScalingMetric;

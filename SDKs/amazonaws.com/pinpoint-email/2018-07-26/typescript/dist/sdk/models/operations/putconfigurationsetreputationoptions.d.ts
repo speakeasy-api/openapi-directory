@@ -23,7 +23,7 @@ export declare class PutConfigurationSetReputationOptionsResponse extends Speake
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putConfigurationSetReputationOptionsResponse?: Map<string, any>;
+    putConfigurationSetReputationOptionsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

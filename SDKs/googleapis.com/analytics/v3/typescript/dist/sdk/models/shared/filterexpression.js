@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterExpression = void 0;
+var utils_1 = require("../../../internal/utils");
 // FilterExpression
 /**
  * JSON template for an Analytics filter expression.
@@ -33,29 +36,29 @@ var FilterExpression = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseSensitive" }),
         __metadata("design:type", Boolean)
     ], FilterExpression.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expressionValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expressionValue" }),
         __metadata("design:type", String)
     ], FilterExpression.prototype, "expressionValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], FilterExpression.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldIndex" }),
         __metadata("design:type", Number)
     ], FilterExpression.prototype, "fieldIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], FilterExpression.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchType" }),
         __metadata("design:type", String)
     ], FilterExpression.prototype, "matchType", void 0);
     return FilterExpression;
-}(SpeakeasyBase));
-export { FilterExpression };
+}(utils_1.SpeakeasyBase));
+exports.FilterExpression = FilterExpression;

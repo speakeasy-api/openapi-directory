@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
-import { NodeSnapshot } from "./nodesnapshot";
+import { NodeSnapshotList } from "./nodesnapshotlist";
 
 
 
@@ -42,8 +42,8 @@ export class Snapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
   kmsKeyId?: string;
 
-  @SpeakeasyMetadata({ elemType: NodeSnapshot })
-  nodeSnapshots?: NodeSnapshot[];
+  @SpeakeasyMetadata({ elemType: NodeSnapshotList })
+  nodeSnapshots?: NodeSnapshotList[];
 
   @SpeakeasyMetadata()
   numCacheNodes?: number;

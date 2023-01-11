@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DkimSigningAttributesOriginEnum } from "./dkimsigningattributesoriginenum";
-import { DkimStatusEnum } from "./dkimstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DkimAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var dkimsigningattributesoriginenum_1 = require("./dkimsigningattributesoriginenum");
+var dkimstatusenum_1 = require("./dkimstatusenum");
 // DkimAttributes
 /**
  * <p>An object that contains information about the DKIM authentication status for an email identity.</p> <p>Amazon SES determines the authentication status by searching for specific records in the DNS configuration for the domain. If you used <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Easy DKIM</a> to set up DKIM authentication, Amazon SES tries to find three unique CNAME records in the DNS configuration for your domain. If you provided a public key to perform DKIM authentication, Amazon SES tries to find a TXT record that uses the selector that you specified. The value of the TXT record must be a public key that's paired with the private key that you specified in the process of creating the identity</p>
@@ -35,21 +38,21 @@ var DkimAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SigningAttributesOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SigningAttributesOrigin" }),
         __metadata("design:type", String)
     ], DkimAttributes.prototype, "signingAttributesOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SigningEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SigningEnabled" }),
         __metadata("design:type", Boolean)
     ], DkimAttributes.prototype, "signingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DkimAttributes.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tokens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tokens" }),
         __metadata("design:type", Array)
     ], DkimAttributes.prototype, "tokens", void 0);
     return DkimAttributes;
-}(SpeakeasyBase));
-export { DkimAttributes };
+}(utils_1.SpeakeasyBase));
+exports.DkimAttributes = DkimAttributes;

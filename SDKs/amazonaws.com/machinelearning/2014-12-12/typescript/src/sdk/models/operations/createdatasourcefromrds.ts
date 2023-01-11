@@ -48,7 +48,7 @@ export class CreateDataSourceFromRdsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createDataSourceFromRdsOutput?: shared.CreateDataSourceFromRdsOutput;
+  createDataSourceFromRDSOutput?: shared.CreateDataSourceFromRdsOutput;
 
   @SpeakeasyMetadata()
   idempotentParameterMismatchException?: any;

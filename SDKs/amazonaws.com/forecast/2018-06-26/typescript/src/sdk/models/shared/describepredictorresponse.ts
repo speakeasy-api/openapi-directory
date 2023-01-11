@@ -15,10 +15,10 @@ export class DescribePredictorResponse extends SpeakeasyBase {
   algorithmArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=AutoMLAlgorithmArns" })
-  autoMlAlgorithmArns?: string[];
+  autoMLAlgorithmArns?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=AutoMLOverrideStrategy" })
-  autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+  autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
 
   @SpeakeasyMetadata({ data: "json, name=CreationTime" })
   creationTime?: Date;
@@ -60,10 +60,10 @@ export class DescribePredictorResponse extends SpeakeasyBase {
   optimizationMetric?: OptimizationMetricEnum;
 
   @SpeakeasyMetadata({ data: "json, name=PerformAutoML" })
-  performAutoMl?: boolean;
+  performAutoML?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PerformHPO" })
-  performHpo?: boolean;
+  performHPO?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PredictorArn" })
   predictorArn?: string;
@@ -78,5 +78,5 @@ export class DescribePredictorResponse extends SpeakeasyBase {
   status?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrainingParameters" })
-  trainingParameters?: Map<string, string>;
+  trainingParameters?: Record<string, string>;
 }

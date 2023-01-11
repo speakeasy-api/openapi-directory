@@ -22,7 +22,7 @@ export class Message extends SpeakeasyBase {
   condition?: string;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=fcmOptions" })
   fcmOptions?: FcmOptions;

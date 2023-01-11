@@ -14,6 +14,9 @@ export declare enum ReviewCommentStartSideEnum {
     Left = "LEFT",
     Right = "RIGHT"
 }
+/**
+ * Simple User
+**/
 export declare class ReviewCommentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

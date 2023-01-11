@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -36,14 +36,17 @@ export class Rates {
     const url: string = utils.generateURL(baseURL, "/tenant/rates/v1/{rate_type}/getAll", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -51,39 +54,38 @@ export class Rates {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates200ApplicationJsonObject = httpRes?.data;
+                res.getRates200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates401ApplicationJsonAny = httpRes?.data;
+                res.getRates401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates403ApplicationJsonAny = httpRes?.data;
+                res.getRates403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates404ApplicationJsonAny = httpRes?.data;
+                res.getRates404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates429ApplicationJsonAny = httpRes?.data;
+                res.getRates429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRates500ApplicationJsonAny = httpRes?.data;
+                res.getRates500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

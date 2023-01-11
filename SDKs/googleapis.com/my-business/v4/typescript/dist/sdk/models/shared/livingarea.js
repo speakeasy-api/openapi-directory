@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LivingAreaAccessibility } from "./livingareaaccessibility";
-import { LivingAreaEating } from "./livingareaeating";
-import { LivingAreaFeatures } from "./livingareafeatures";
-import { LivingAreaLayout } from "./livingarealayout";
-import { LivingAreaSleeping } from "./livingareasleeping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LivingArea = void 0;
+var utils_1 = require("../../../internal/utils");
+var livingareaaccessibility_1 = require("./livingareaaccessibility");
+var livingareaeating_1 = require("./livingareaeating");
+var livingareafeatures_1 = require("./livingareafeatures");
+var livingarealayout_1 = require("./livingarealayout");
+var livingareasleeping_1 = require("./livingareasleeping");
 // LivingArea
 /**
  * An individual room, such as kitchen, bathroom, bedroom, within a bookable guest unit.
@@ -38,25 +41,25 @@ var LivingArea = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessibility" }),
-        __metadata("design:type", LivingAreaAccessibility)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessibility" }),
+        __metadata("design:type", livingareaaccessibility_1.LivingAreaAccessibility)
     ], LivingArea.prototype, "accessibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eating" }),
-        __metadata("design:type", LivingAreaEating)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eating" }),
+        __metadata("design:type", livingareaeating_1.LivingAreaEating)
     ], LivingArea.prototype, "eating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
-        __metadata("design:type", LivingAreaFeatures)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
+        __metadata("design:type", livingareafeatures_1.LivingAreaFeatures)
     ], LivingArea.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layout" }),
-        __metadata("design:type", LivingAreaLayout)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layout" }),
+        __metadata("design:type", livingarealayout_1.LivingAreaLayout)
     ], LivingArea.prototype, "layout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sleeping" }),
-        __metadata("design:type", LivingAreaSleeping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sleeping" }),
+        __metadata("design:type", livingareasleeping_1.LivingAreaSleeping)
     ], LivingArea.prototype, "sleeping", void 0);
     return LivingArea;
-}(SpeakeasyBase));
-export { LivingArea };
+}(utils_1.SpeakeasyBase));
+exports.LivingArea = LivingArea;

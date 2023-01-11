@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountAttribute } from "./accountattribute";
+import { AttributeList } from "./attributelist";
 
 
 
 export class AccountAttributeList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: AccountAttribute })
-  accountAttributes?: AccountAttribute[];
+  @SpeakeasyMetadata({ elemType: AttributeList })
+  accountAttributes?: AttributeList[];
 }

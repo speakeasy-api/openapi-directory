@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetIdFromOrder } from "./assetidfromorder";
-import { OrderNotes } from "./ordernotes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetidfromorder_1 = require("./assetidfromorder");
+var ordernotes_1 = require("./ordernotes");
 var OrderDetail = /** @class */ (function (_super) {
     __extends(OrderDetail, _super);
     function OrderDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: AssetIdFromOrder }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: assetidfromorder_1.AssetIdFromOrder }),
         __metadata("design:type", Array)
     ], OrderDetail.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_client" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_client" }),
         __metadata("design:type", String)
     ], OrderDetail.prototype, "endClient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OrderDetail.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoice_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoice_number" }),
         __metadata("design:type", String)
     ], OrderDetail.prototype, "invoiceNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
-        __metadata("design:type", OrderNotes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
+        __metadata("design:type", ordernotes_1.OrderNotes)
     ], OrderDetail.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order_date" }),
         __metadata("design:type", Date)
     ], OrderDetail.prototype, "orderDate", void 0);
     return OrderDetail;
-}(SpeakeasyBase));
-export { OrderDetail };
+}(utils_1.SpeakeasyBase));
+exports.OrderDetail = OrderDetail;

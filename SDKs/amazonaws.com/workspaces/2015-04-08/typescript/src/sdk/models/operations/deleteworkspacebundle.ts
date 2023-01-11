@@ -51,7 +51,7 @@ export class DeleteWorkspaceBundleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWorkspaceBundleResult?: Map<string, any>;
+  deleteWorkspaceBundleResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

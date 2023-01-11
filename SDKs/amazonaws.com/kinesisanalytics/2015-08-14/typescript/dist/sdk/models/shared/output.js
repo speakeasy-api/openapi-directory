@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationSchema } from "./destinationschema";
-import { KinesisFirehoseOutput } from "./kinesisfirehoseoutput";
-import { KinesisStreamsOutput } from "./kinesisstreamsoutput";
-import { LambdaOutput } from "./lambdaoutput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Output = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationschema_1 = require("./destinationschema");
+var kinesisfirehoseoutput_1 = require("./kinesisfirehoseoutput");
+var kinesisstreamsoutput_1 = require("./kinesisstreamsoutput");
+var lambdaoutput_1 = require("./lambdaoutput");
 // Output
 /**
  * <p> Describes application output configuration in which you identify an in-application stream and a destination where you want the in-application stream data to be written. The destination can be an Amazon Kinesis stream or an Amazon Kinesis Firehose delivery stream. </p> <p/> <p>For limits on how many destinations an application can write and other limitations, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html">Limits</a>. </p>
@@ -37,25 +40,25 @@ var Output = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationSchema" }),
-        __metadata("design:type", DestinationSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationSchema" }),
+        __metadata("design:type", destinationschema_1.DestinationSchema)
     ], Output.prototype, "destinationSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisFirehoseOutput" }),
-        __metadata("design:type", KinesisFirehoseOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisFirehoseOutput" }),
+        __metadata("design:type", kinesisfirehoseoutput_1.KinesisFirehoseOutput)
     ], Output.prototype, "kinesisFirehoseOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisStreamsOutput" }),
-        __metadata("design:type", KinesisStreamsOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisStreamsOutput" }),
+        __metadata("design:type", kinesisstreamsoutput_1.KinesisStreamsOutput)
     ], Output.prototype, "kinesisStreamsOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LambdaOutput" }),
-        __metadata("design:type", LambdaOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LambdaOutput" }),
+        __metadata("design:type", lambdaoutput_1.LambdaOutput)
     ], Output.prototype, "lambdaOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Output.prototype, "name", void 0);
     return Output;
-}(SpeakeasyBase));
-export { Output };
+}(utils_1.SpeakeasyBase));
+exports.Output = Output;

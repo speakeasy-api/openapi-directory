@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Regex } from "./googleprivacydlpv2regex";
-import { GooglePrivacyDlpV2LikelihoodAdjustment } from "./googleprivacydlpv2likelihoodadjustment";
-import { GooglePrivacyDlpV2Proximity } from "./googleprivacydlpv2proximity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2HotwordRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2regex_1 = require("./googleprivacydlpv2regex");
+var googleprivacydlpv2likelihoodadjustment_1 = require("./googleprivacydlpv2likelihoodadjustment");
+var googleprivacydlpv2proximity_1 = require("./googleprivacydlpv2proximity");
 // GooglePrivacyDlpV2HotwordRule
 /**
  * The rule that adjusts the likelihood of findings within a certain proximity of hotwords.
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2HotwordRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hotwordRegex" }),
-        __metadata("design:type", GooglePrivacyDlpV2Regex)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hotwordRegex" }),
+        __metadata("design:type", googleprivacydlpv2regex_1.GooglePrivacyDlpV2Regex)
     ], GooglePrivacyDlpV2HotwordRule.prototype, "hotwordRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likelihoodAdjustment" }),
-        __metadata("design:type", GooglePrivacyDlpV2LikelihoodAdjustment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likelihoodAdjustment" }),
+        __metadata("design:type", googleprivacydlpv2likelihoodadjustment_1.GooglePrivacyDlpV2LikelihoodAdjustment)
     ], GooglePrivacyDlpV2HotwordRule.prototype, "likelihoodAdjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proximity" }),
-        __metadata("design:type", GooglePrivacyDlpV2Proximity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proximity" }),
+        __metadata("design:type", googleprivacydlpv2proximity_1.GooglePrivacyDlpV2Proximity)
     ], GooglePrivacyDlpV2HotwordRule.prototype, "proximity", void 0);
     return GooglePrivacyDlpV2HotwordRule;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2HotwordRule };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2HotwordRule = GooglePrivacyDlpV2HotwordRule;

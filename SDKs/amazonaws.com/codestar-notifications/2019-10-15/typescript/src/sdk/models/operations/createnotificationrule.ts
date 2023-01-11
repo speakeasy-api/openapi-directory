@@ -57,7 +57,7 @@ export class CreateNotificationRuleRequestBody extends SpeakeasyBase {
   status?: CreateNotificationRuleRequestBodyStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Targets", elemType: shared.Target })
   targets: shared.Target[];

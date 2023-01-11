@@ -1,71 +1,52 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { CategoryAlbums } from "./categoryalbums";
-import { CategoryArtists } from "./categoryartists";
-import { CategoryBrowse } from "./categorybrowse";
-import { CategoryEpisodes } from "./categoryepisodes";
-import { CategoryFollow } from "./categoryfollow";
-import { CategoryLibrary } from "./categorylibrary";
-import { CategoryMarkets } from "./categorymarkets";
-import { CategoryPersonalization } from "./categorypersonalization";
-import { CategoryPlayer } from "./categoryplayer";
-import { CategoryPlaylists } from "./categoryplaylists";
-import { CategorySearch } from "./categorysearch";
-import { CategoryShows } from "./categoryshows";
-import { CategoryTracks } from "./categorytracks";
-import { CategoryUsersProfile } from "./categoryusersprofile";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var categoryalbums_1 = require("./categoryalbums");
+var categoryartists_1 = require("./categoryartists");
+var categorybrowse_1 = require("./categorybrowse");
+var categoryepisodes_1 = require("./categoryepisodes");
+var categoryfollow_1 = require("./categoryfollow");
+var categorylibrary_1 = require("./categorylibrary");
+var categorymarkets_1 = require("./categorymarkets");
+var categorypersonalization_1 = require("./categorypersonalization");
+var categoryplayer_1 = require("./categoryplayer");
+var categoryplaylists_1 = require("./categoryplaylists");
+var categorysearch_1 = require("./categorysearch");
+var categoryshows_1 = require("./categoryshows");
+var categorytracks_1 = require("./categorytracks");
+var categoryusersprofile_1 = require("./categoryusersprofile");
+exports.ServerList = [
     "https://api.spotify.com/v1",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://developer.spotify.com/documentation/web-api/reference - Find more info on the official Spotify Web API Reference*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.categoryAlbums = new CategoryAlbums(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryArtists = new CategoryArtists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryBrowse = new CategoryBrowse(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryEpisodes = new CategoryEpisodes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryFollow = new CategoryFollow(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryLibrary = new CategoryLibrary(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryMarkets = new CategoryMarkets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryPersonalization = new CategoryPersonalization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryPlayer = new CategoryPlayer(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryPlaylists = new CategoryPlaylists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categorySearch = new CategorySearch(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryShows = new CategoryShows(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryTracks = new CategoryTracks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoryUsersProfile = new CategoryUsersProfile(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.categoryAlbums = new categoryalbums_1.CategoryAlbums(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryArtists = new categoryartists_1.CategoryArtists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryBrowse = new categorybrowse_1.CategoryBrowse(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryEpisodes = new categoryepisodes_1.CategoryEpisodes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryFollow = new categoryfollow_1.CategoryFollow(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryLibrary = new categorylibrary_1.CategoryLibrary(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryMarkets = new categorymarkets_1.CategoryMarkets(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryPersonalization = new categorypersonalization_1.CategoryPersonalization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryPlayer = new categoryplayer_1.CategoryPlayer(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryPlaylists = new categoryplaylists_1.CategoryPlaylists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categorySearch = new categorysearch_1.CategorySearch(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryShows = new categoryshows_1.CategoryShows(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryTracks = new categorytracks_1.CategoryTracks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoryUsersProfile = new categoryusersprofile_1.CategoryUsersProfile(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

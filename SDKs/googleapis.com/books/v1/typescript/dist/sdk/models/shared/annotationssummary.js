@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnnotationsSummary = exports.AnnotationsSummaryLayers = void 0;
+var utils_1 = require("../../../internal/utils");
 var AnnotationsSummaryLayers = /** @class */ (function (_super) {
     __extends(AnnotationsSummaryLayers, _super);
     function AnnotationsSummaryLayers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedCharacterCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedCharacterCount" }),
         __metadata("design:type", Number)
     ], AnnotationsSummaryLayers.prototype, "allowedCharacterCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerId" }),
         __metadata("design:type", String)
     ], AnnotationsSummaryLayers.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitType" }),
         __metadata("design:type", String)
     ], AnnotationsSummaryLayers.prototype, "limitType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remainingCharacterCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remainingCharacterCount" }),
         __metadata("design:type", Number)
     ], AnnotationsSummaryLayers.prototype, "remainingCharacterCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], AnnotationsSummaryLayers.prototype, "updated", void 0);
     return AnnotationsSummaryLayers;
-}(SpeakeasyBase));
-export { AnnotationsSummaryLayers };
+}(utils_1.SpeakeasyBase));
+exports.AnnotationsSummaryLayers = AnnotationsSummaryLayers;
 var AnnotationsSummary = /** @class */ (function (_super) {
     __extends(AnnotationsSummary, _super);
     function AnnotationsSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AnnotationsSummary.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layers", elemType: AnnotationsSummaryLayers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layers", elemType: AnnotationsSummaryLayers }),
         __metadata("design:type", Array)
     ], AnnotationsSummary.prototype, "layers", void 0);
     return AnnotationsSummary;
-}(SpeakeasyBase));
-export { AnnotationsSummary };
+}(utils_1.SpeakeasyBase));
+exports.AnnotationsSummary = AnnotationsSummary;

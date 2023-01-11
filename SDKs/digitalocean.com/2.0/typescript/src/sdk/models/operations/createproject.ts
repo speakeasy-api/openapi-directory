@@ -1,77 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum CreateProjectRequestBodyEnvironmentEnum {
-    Development = "Development"
-,    Staging = "Staging"
-,    Production = "Production"
+    Development = "Development",
+    Staging = "Staging",
+    Production = "Production"
 }
 
 
-export class CreateProjectRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
-  createdAt?: Date;
-
-  @Metadata({ data: "json, name=description" })
+export class CreateProjectRequestBodyInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=environment" })
+  @SpeakeasyMetadata({ data: "json, name=environment" })
   environment?: CreateProjectRequestBodyEnvironmentEnum;
 
-  @Metadata({ data: "json, name=id" })
-  id?: string;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=owner_id" })
-  ownerId?: number;
-
-  @Metadata({ data: "json, name=owner_uuid" })
-  ownerUuid?: string;
-
-  @Metadata({ data: "json, name=purpose" })
+  @SpeakeasyMetadata({ data: "json, name=purpose" })
   purpose: string;
-
-  @Metadata({ data: "json, name=updated_at" })
-  updatedAt?: Date;
-}
-
-
-export class CreateProjectRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: CreateProjectRequestBody;
 }
 
 
 export class CreateProject401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateProjectRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: CreateProjectRequestBodyInput;
+}
+
+
 export class CreateProjectResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createProject201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createProject201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createProject401ApplicationJsonObject?: CreateProject401ApplicationJson;
+  @SpeakeasyMetadata()
+  createProject401ApplicationJSONObject?: CreateProject401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

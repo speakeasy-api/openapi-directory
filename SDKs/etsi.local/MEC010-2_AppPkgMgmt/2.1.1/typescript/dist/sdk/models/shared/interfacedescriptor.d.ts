@@ -2,9 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { InterfaceTypeEnum } from "./interfacetypeenum";
 import { TunnelInfo } from "./tunnelinfo";
 export declare class InterfaceDescriptor extends SpeakeasyBase {
-    dstIpAddress?: string;
-    dstMacAddress?: string;
+    dstIPAddress?: string;
+    dstMACAddress?: string;
     interfaceType: InterfaceTypeEnum;
-    srcMacAddress?: string;
+    srcMACAddress?: string;
     tunnelInfo?: TunnelInfo;
 }

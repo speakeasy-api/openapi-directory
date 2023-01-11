@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Secret = void 0;
+var utils_1 = require("../../../internal/utils");
 // Secret
 /**
  * Holds encrypted information that is only decrypted and stored in RAM by the worker VM when running the pipeline.
@@ -33,13 +36,13 @@ var Secret = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cipherText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cipherText" }),
         __metadata("design:type", String)
     ], Secret.prototype, "cipherText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyName" }),
         __metadata("design:type", String)
     ], Secret.prototype, "keyName", void 0);
     return Secret;
-}(SpeakeasyBase));
-export { Secret };
+}(utils_1.SpeakeasyBase));
+exports.Secret = Secret;

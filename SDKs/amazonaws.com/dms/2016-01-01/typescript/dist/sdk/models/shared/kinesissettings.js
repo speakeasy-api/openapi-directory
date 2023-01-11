@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MessageFormatValueEnum } from "./messageformatvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KinesisSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var messageformatvalueenum_1 = require("./messageformatvalueenum");
 // KinesisSettings
 /**
  * Provides information that describes an Amazon Kinesis Data Stream endpoint. This information includes the output format of records applied to the endpoint and details of transaction and control table data information.
@@ -34,45 +37,45 @@ var KinesisSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeControlDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeControlDetails" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "includeControlDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeNullAndEmpty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeNullAndEmpty" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "includeNullAndEmpty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludePartitionValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludePartitionValue" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "includePartitionValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeTableAlterOperations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeTableAlterOperations" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "includeTableAlterOperations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeTransactionDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeTransactionDetails" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "includeTransactionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageFormat" }),
         __metadata("design:type", String)
     ], KinesisSettings.prototype, "messageFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoHexPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoHexPrefix" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "noHexPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionIncludeSchemaTable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionIncludeSchemaTable" }),
         __metadata("design:type", Boolean)
     ], KinesisSettings.prototype, "partitionIncludeSchemaTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceAccessRoleArn" }),
         __metadata("design:type", String)
     ], KinesisSettings.prototype, "serviceAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamArn" }),
         __metadata("design:type", String)
     ], KinesisSettings.prototype, "streamArn", void 0);
     return KinesisSettings;
-}(SpeakeasyBase));
-export { KinesisSettings };
+}(utils_1.SpeakeasyBase));
+exports.KinesisSettings = KinesisSettings;

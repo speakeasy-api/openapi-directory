@@ -54,7 +54,7 @@ export class ModifyWorkspaceStateResponse extends SpeakeasyBase {
   invalidResourceStateException?: any;
 
   @SpeakeasyMetadata()
-  modifyWorkspaceStateResult?: Map<string, any>;
+  modifyWorkspaceStateResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

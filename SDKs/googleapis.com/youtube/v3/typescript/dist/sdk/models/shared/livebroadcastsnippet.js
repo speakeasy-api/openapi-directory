@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ThumbnailDetails } from "./thumbnaildetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveBroadcastSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var thumbnaildetails_1 = require("./thumbnaildetails");
 // LiveBroadcastSnippet
 /**
  * Basic broadcast information.
@@ -34,49 +37,49 @@ var LiveBroadcastSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actualEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actualEndTime" }),
         __metadata("design:type", Date)
     ], LiveBroadcastSnippet.prototype, "actualEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actualStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actualStartTime" }),
         __metadata("design:type", Date)
     ], LiveBroadcastSnippet.prototype, "actualStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], LiveBroadcastSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LiveBroadcastSnippet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefaultBroadcast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefaultBroadcast" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastSnippet.prototype, "isDefaultBroadcast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveChatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveChatId" }),
         __metadata("design:type", String)
     ], LiveBroadcastSnippet.prototype, "liveChatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], LiveBroadcastSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEndTime" }),
         __metadata("design:type", Date)
     ], LiveBroadcastSnippet.prototype, "scheduledEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledStartTime" }),
         __metadata("design:type", Date)
     ], LiveBroadcastSnippet.prototype, "scheduledStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnails" }),
-        __metadata("design:type", ThumbnailDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnails" }),
+        __metadata("design:type", thumbnaildetails_1.ThumbnailDetails)
     ], LiveBroadcastSnippet.prototype, "thumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], LiveBroadcastSnippet.prototype, "title", void 0);
     return LiveBroadcastSnippet;
-}(SpeakeasyBase));
-export { LiveBroadcastSnippet };
+}(utils_1.SpeakeasyBase));
+exports.LiveBroadcastSnippet = LiveBroadcastSnippet;

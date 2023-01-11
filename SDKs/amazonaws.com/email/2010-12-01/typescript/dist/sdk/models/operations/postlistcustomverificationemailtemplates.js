@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListCustomVerificationEmailTemplatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListCustomVerificationEmailTemplatesResponse = exports.PostListCustomVerificationEmailTemplatesRequest = exports.PostListCustomVerificationEmailTemplatesHeaders = exports.PostListCustomVerificationEmailTemplatesQueryParams = exports.PostListCustomVerificationEmailTemplatesVersionEnum = exports.PostListCustomVerificationEmailTemplatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListCustomVerificationEmailTemplatesActionEnum;
 (function (PostListCustomVerificationEmailTemplatesActionEnum) {
     PostListCustomVerificationEmailTemplatesActionEnum["ListCustomVerificationEmailTemplates"] = "ListCustomVerificationEmailTemplates";
-})(PostListCustomVerificationEmailTemplatesActionEnum || (PostListCustomVerificationEmailTemplatesActionEnum = {}));
-export var PostListCustomVerificationEmailTemplatesVersionEnum;
+})(PostListCustomVerificationEmailTemplatesActionEnum = exports.PostListCustomVerificationEmailTemplatesActionEnum || (exports.PostListCustomVerificationEmailTemplatesActionEnum = {}));
+var PostListCustomVerificationEmailTemplatesVersionEnum;
 (function (PostListCustomVerificationEmailTemplatesVersionEnum) {
     PostListCustomVerificationEmailTemplatesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostListCustomVerificationEmailTemplatesVersionEnum || (PostListCustomVerificationEmailTemplatesVersionEnum = {}));
+})(PostListCustomVerificationEmailTemplatesVersionEnum = exports.PostListCustomVerificationEmailTemplatesVersionEnum || (exports.PostListCustomVerificationEmailTemplatesVersionEnum = {}));
 var PostListCustomVerificationEmailTemplatesQueryParams = /** @class */ (function (_super) {
     __extends(PostListCustomVerificationEmailTemplatesQueryParams, _super);
     function PostListCustomVerificationEmailTemplatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesQueryParams.prototype, "version", void 0);
     return PostListCustomVerificationEmailTemplatesQueryParams;
-}(SpeakeasyBase));
-export { PostListCustomVerificationEmailTemplatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListCustomVerificationEmailTemplatesQueryParams = PostListCustomVerificationEmailTemplatesQueryParams;
 var PostListCustomVerificationEmailTemplatesHeaders = /** @class */ (function (_super) {
     __extends(PostListCustomVerificationEmailTemplatesHeaders, _super);
     function PostListCustomVerificationEmailTemplatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListCustomVerificationEmailTemplatesHeaders;
-}(SpeakeasyBase));
-export { PostListCustomVerificationEmailTemplatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListCustomVerificationEmailTemplatesHeaders = PostListCustomVerificationEmailTemplatesHeaders;
 var PostListCustomVerificationEmailTemplatesRequest = /** @class */ (function (_super) {
     __extends(PostListCustomVerificationEmailTemplatesRequest, _super);
     function PostListCustomVerificationEmailTemplatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListCustomVerificationEmailTemplatesQueryParams)
     ], PostListCustomVerificationEmailTemplatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListCustomVerificationEmailTemplatesHeaders)
     ], PostListCustomVerificationEmailTemplatesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListCustomVerificationEmailTemplatesRequest.prototype, "request", void 0);
     return PostListCustomVerificationEmailTemplatesRequest;
-}(SpeakeasyBase));
-export { PostListCustomVerificationEmailTemplatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListCustomVerificationEmailTemplatesRequest = PostListCustomVerificationEmailTemplatesRequest;
 var PostListCustomVerificationEmailTemplatesResponse = /** @class */ (function (_super) {
     __extends(PostListCustomVerificationEmailTemplatesResponse, _super);
     function PostListCustomVerificationEmailTemplatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListCustomVerificationEmailTemplatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListCustomVerificationEmailTemplatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListCustomVerificationEmailTemplatesResponse.prototype, "statusCode", void 0);
     return PostListCustomVerificationEmailTemplatesResponse;
-}(SpeakeasyBase));
-export { PostListCustomVerificationEmailTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListCustomVerificationEmailTemplatesResponse = PostListCustomVerificationEmailTemplatesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BooleanCondition } from "./booleancondition";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-// FilterCriteria
-/**
- * Criteria for showing/hiding rows in a filter or filter view.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var booleancondition_1 = require("./booleancondition");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
 var FilterCriteria = /** @class */ (function (_super) {
     __extends(FilterCriteria, _super);
     function FilterCriteria() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", BooleanCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", booleancondition_1.BooleanCondition)
     ], FilterCriteria.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenValues" }),
         __metadata("design:type", Array)
     ], FilterCriteria.prototype, "hiddenValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleBackgroundColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleBackgroundColor" }),
+        __metadata("design:type", color_1.Color)
     ], FilterCriteria.prototype, "visibleBackgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleBackgroundColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleBackgroundColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], FilterCriteria.prototype, "visibleBackgroundColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleForegroundColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleForegroundColor" }),
+        __metadata("design:type", color_1.Color)
     ], FilterCriteria.prototype, "visibleForegroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleForegroundColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleForegroundColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], FilterCriteria.prototype, "visibleForegroundColorStyle", void 0);
     return FilterCriteria;
-}(SpeakeasyBase));
-export { FilterCriteria };
+}(utils_1.SpeakeasyBase));
+exports.FilterCriteria = FilterCriteria;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DayPart } from "./daypart";
-export var DayPartTargetingTimeZoneTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DayPartTargeting = exports.DayPartTargetingTimeZoneTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var daypart_1 = require("./daypart");
+var DayPartTargetingTimeZoneTypeEnum;
 (function (DayPartTargetingTimeZoneTypeEnum) {
     DayPartTargetingTimeZoneTypeEnum["TimeZoneSourceUnspecified"] = "TIME_ZONE_SOURCE_UNSPECIFIED";
     DayPartTargetingTimeZoneTypeEnum["Publisher"] = "PUBLISHER";
     DayPartTargetingTimeZoneTypeEnum["User"] = "USER";
-})(DayPartTargetingTimeZoneTypeEnum || (DayPartTargetingTimeZoneTypeEnum = {}));
+})(DayPartTargetingTimeZoneTypeEnum = exports.DayPartTargetingTimeZoneTypeEnum || (exports.DayPartTargetingTimeZoneTypeEnum = {}));
 // DayPartTargeting
 /**
  * Specifies the day part targeting criteria.
@@ -40,13 +43,13 @@ var DayPartTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayParts", elemType: DayPart }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayParts", elemType: daypart_1.DayPart }),
         __metadata("design:type", Array)
     ], DayPartTargeting.prototype, "dayParts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZoneType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZoneType" }),
         __metadata("design:type", String)
     ], DayPartTargeting.prototype, "timeZoneType", void 0);
     return DayPartTargeting;
-}(SpeakeasyBase));
-export { DayPartTargeting };
+}(utils_1.SpeakeasyBase));
+exports.DayPartTargeting = DayPartTargeting;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MappingSettings } from "./mappingsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var mappingsettings_1 = require("./mappingsettings");
 // VerificationSettings
 /**
  * Settings to verify the value of JWT token fields
@@ -34,13 +37,13 @@ var VerificationSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
+        __metadata("design:type", Object)
     ], VerificationSettings.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mappingSettings" }),
-        __metadata("design:type", MappingSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mappingSettings" }),
+        __metadata("design:type", mappingsettings_1.MappingSettings)
     ], VerificationSettings.prototype, "mappingSettings", void 0);
     return VerificationSettings;
-}(SpeakeasyBase));
-export { VerificationSettings };
+}(utils_1.SpeakeasyBase));
+exports.VerificationSettings = VerificationSettings;

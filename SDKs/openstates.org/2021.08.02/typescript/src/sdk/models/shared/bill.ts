@@ -29,7 +29,7 @@ export class Bill extends SpeakeasyBase {
   documents?: BillDocumentOrVersion[];
 
   @SpeakeasyMetadata({ data: "json, name=extras" })
-  extras?: Map<string, any>;
+  extras?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=first_action_date" })
   firstActionDate?: string;

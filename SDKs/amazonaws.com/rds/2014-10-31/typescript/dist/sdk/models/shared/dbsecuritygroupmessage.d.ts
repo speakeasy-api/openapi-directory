@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbSecurityGroup } from "./dbsecuritygroup";
+import { DbSecurityGroups } from "./dbsecuritygroups";
 /**
  *  Contains the result of a successful invocation of the <code>DescribeDBSecurityGroups</code> action.
 **/
 export declare class DbSecurityGroupMessage extends SpeakeasyBase {
-    dbSecurityGroups?: DbSecurityGroup[];
+    dbSecurityGroups?: DbSecurityGroups[];
     marker?: string;
 }

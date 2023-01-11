@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OneGetResponses200ContentApplication1jsonSchemaStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OneGetResponses200ContentApplication1jsonSchema = exports.OneGetResponses200ContentApplication1jsonSchemaStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OneGetResponses200ContentApplication1jsonSchemaStatusEnum;
 (function (OneGetResponses200ContentApplication1jsonSchemaStatusEnum) {
     OneGetResponses200ContentApplication1jsonSchemaStatusEnum["Ok"] = "OK";
-})(OneGetResponses200ContentApplication1jsonSchemaStatusEnum || (OneGetResponses200ContentApplication1jsonSchemaStatusEnum = {}));
+})(OneGetResponses200ContentApplication1jsonSchemaStatusEnum = exports.OneGetResponses200ContentApplication1jsonSchemaStatusEnum || (exports.OneGetResponses200ContentApplication1jsonSchemaStatusEnum = {}));
 var OneGetResponses200ContentApplication1jsonSchema = /** @class */ (function (_super) {
     __extends(OneGetResponses200ContentApplication1jsonSchema, _super);
     function OneGetResponses200ContentApplication1jsonSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OneGetResponses200ContentApplication1jsonSchema.prototype, "status", void 0);
     return OneGetResponses200ContentApplication1jsonSchema;
-}(SpeakeasyBase));
-export { OneGetResponses200ContentApplication1jsonSchema };
+}(utils_1.SpeakeasyBase));
+exports.OneGetResponses200ContentApplication1jsonSchema = OneGetResponses200ContentApplication1jsonSchema;

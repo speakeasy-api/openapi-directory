@@ -108,11 +108,11 @@ export declare class AlltrRequest extends SpeakeasyBase {
 export declare class AlltrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    alltr400ApplicationJsonObject?: Alltr400ApplicationJson;
-    alltr401ApplicationJsonObject?: Alltr401ApplicationJson;
-    alltr404ApplicationJsonObject?: Alltr404ApplicationJson;
-    alltr500ApplicationJsonObject?: Alltr500ApplicationJson;
-    alltr502ApplicationJsonObject?: Alltr502ApplicationJson;
-    alltr503ApplicationJsonObject?: Alltr503ApplicationJson;
-    alltr504ApplicationJsonObject?: Alltr504ApplicationJson;
+    alltr400ApplicationJSONObject?: Alltr400ApplicationJson;
+    alltr401ApplicationJSONObject?: Alltr401ApplicationJson;
+    alltr404ApplicationJSONObject?: Alltr404ApplicationJson;
+    alltr500ApplicationJSONObject?: Alltr500ApplicationJson;
+    alltr502ApplicationJSONObject?: Alltr502ApplicationJson;
+    alltr503ApplicationJSONObject?: Alltr503ApplicationJson;
+    alltr504ApplicationJSONObject?: Alltr504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedCertificateInput } from "./managedcertificate";
-import { SelfManagedCertificate } from "./selfmanagedcertificate";
-import { ManagedCertificate } from "./managedcertificate";
-export var CertificateScopeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateInput = exports.Certificate = exports.CertificateScopeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var managedcertificate_1 = require("./managedcertificate");
+var selfmanagedcertificate_1 = require("./selfmanagedcertificate");
+var managedcertificate_2 = require("./managedcertificate");
+var CertificateScopeEnum;
 (function (CertificateScopeEnum) {
     CertificateScopeEnum["Default"] = "DEFAULT";
     CertificateScopeEnum["EdgeCache"] = "EDGE_CACHE";
-})(CertificateScopeEnum || (CertificateScopeEnum = {}));
-// CertificateInput
-/**
- * Defines TLS certificate.
-**/
-var CertificateInput = /** @class */ (function (_super) {
-    __extends(CertificateInput, _super);
-    function CertificateInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], CertificateInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=managed" }),
-        __metadata("design:type", ManagedCertificateInput)
-    ], CertificateInput.prototype, "managed", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
-        __metadata("design:type", String)
-    ], CertificateInput.prototype, "scope", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfManaged" }),
-        __metadata("design:type", SelfManagedCertificate)
-    ], CertificateInput.prototype, "selfManaged", void 0);
-    return CertificateInput;
-}(SpeakeasyBase));
-export { CertificateInput };
+})(CertificateScopeEnum = exports.CertificateScopeEnum || (exports.CertificateScopeEnum = {}));
 // Certificate
 /**
  * Defines TLS certificate.
@@ -77,49 +44,85 @@ var Certificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Certificate.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managed" }),
-        __metadata("design:type", ManagedCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managed" }),
+        __metadata("design:type", managedcertificate_1.ManagedCertificate)
     ], Certificate.prototype, "managed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCertificate" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "pemCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sanDnsnames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sanDnsnames" }),
         __metadata("design:type", Array)
     ], Certificate.prototype, "sanDnsnames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfManaged" }),
-        __metadata("design:type", SelfManagedCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfManaged" }),
+        __metadata("design:type", selfmanagedcertificate_1.SelfManagedCertificate)
     ], Certificate.prototype, "selfManaged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "updateTime", void 0);
     return Certificate;
-}(SpeakeasyBase));
-export { Certificate };
+}(utils_1.SpeakeasyBase));
+exports.Certificate = Certificate;
+// CertificateInput
+/**
+ * Defines TLS certificate.
+**/
+var CertificateInput = /** @class */ (function (_super) {
+    __extends(CertificateInput, _super);
+    function CertificateInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], CertificateInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managed" }),
+        __metadata("design:type", managedcertificate_2.ManagedCertificateInput)
+    ], CertificateInput.prototype, "managed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
+        __metadata("design:type", String)
+    ], CertificateInput.prototype, "scope", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfManaged" }),
+        __metadata("design:type", selfmanagedcertificate_1.SelfManagedCertificate)
+    ], CertificateInput.prototype, "selfManaged", void 0);
+    return CertificateInput;
+}(utils_1.SpeakeasyBase));
+exports.CertificateInput = CertificateInput;

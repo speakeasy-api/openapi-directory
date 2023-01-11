@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceShareInvitation } from "./resourceshareinvitation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectResourceShareInvitationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceshareinvitation_1 = require("./resourceshareinvitation");
 var RejectResourceShareInvitationResponse = /** @class */ (function (_super) {
     __extends(RejectResourceShareInvitationResponse, _super);
     function RejectResourceShareInvitationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], RejectResourceShareInvitationResponse.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceShareInvitation" }),
-        __metadata("design:type", ResourceShareInvitation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceShareInvitation" }),
+        __metadata("design:type", resourceshareinvitation_1.ResourceShareInvitation)
     ], RejectResourceShareInvitationResponse.prototype, "resourceShareInvitation", void 0);
     return RejectResourceShareInvitationResponse;
-}(SpeakeasyBase));
-export { RejectResourceShareInvitationResponse };
+}(utils_1.SpeakeasyBase));
+exports.RejectResourceShareInvitationResponse = RejectResourceShareInvitationResponse;

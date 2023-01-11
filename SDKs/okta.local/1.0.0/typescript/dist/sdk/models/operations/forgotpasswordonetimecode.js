@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForgotPasswordOneTimeCodeResponse = exports.ForgotPasswordOneTimeCodeRequest = exports.ForgotPasswordOneTimeCodeQueryParams = exports.ForgotPasswordOneTimeCodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ForgotPasswordOneTimeCodePathParams = /** @class */ (function (_super) {
     __extends(ForgotPasswordOneTimeCodePathParams, _super);
     function ForgotPasswordOneTimeCodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], ForgotPasswordOneTimeCodePathParams.prototype, "userId", void 0);
     return ForgotPasswordOneTimeCodePathParams;
-}(SpeakeasyBase));
-export { ForgotPasswordOneTimeCodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ForgotPasswordOneTimeCodePathParams = ForgotPasswordOneTimeCodePathParams;
 var ForgotPasswordOneTimeCodeQueryParams = /** @class */ (function (_super) {
     __extends(ForgotPasswordOneTimeCodeQueryParams, _super);
     function ForgotPasswordOneTimeCodeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sendEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sendEmail" }),
         __metadata("design:type", String)
     ], ForgotPasswordOneTimeCodeQueryParams.prototype, "sendEmail", void 0);
     return ForgotPasswordOneTimeCodeQueryParams;
-}(SpeakeasyBase));
-export { ForgotPasswordOneTimeCodeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ForgotPasswordOneTimeCodeQueryParams = ForgotPasswordOneTimeCodeQueryParams;
 var ForgotPasswordOneTimeCodeRequest = /** @class */ (function (_super) {
     __extends(ForgotPasswordOneTimeCodeRequest, _super);
     function ForgotPasswordOneTimeCodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ForgotPasswordOneTimeCodePathParams)
     ], ForgotPasswordOneTimeCodeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ForgotPasswordOneTimeCodeQueryParams)
     ], ForgotPasswordOneTimeCodeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/plain" }),
         __metadata("design:type", Uint8Array)
     ], ForgotPasswordOneTimeCodeRequest.prototype, "request", void 0);
     return ForgotPasswordOneTimeCodeRequest;
-}(SpeakeasyBase));
-export { ForgotPasswordOneTimeCodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ForgotPasswordOneTimeCodeRequest = ForgotPasswordOneTimeCodeRequest;
 var ForgotPasswordOneTimeCodeResponse = /** @class */ (function (_super) {
     __extends(ForgotPasswordOneTimeCodeResponse, _super);
     function ForgotPasswordOneTimeCodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ForgotPasswordOneTimeCodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ForgotPasswordOneTimeCodeResponse.prototype, "statusCode", void 0);
     return ForgotPasswordOneTimeCodeResponse;
-}(SpeakeasyBase));
-export { ForgotPasswordOneTimeCodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.ForgotPasswordOneTimeCodeResponse = ForgotPasswordOneTimeCodeResponse;

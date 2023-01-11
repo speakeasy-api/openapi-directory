@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentNetworkInfo } from "./agentnetworkinfo";
-import { AgentStatusEnum } from "./agentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var agentnetworkinfo_1 = require("./agentnetworkinfo");
+var agentstatusenum_1 = require("./agentstatusenum");
 // AgentInfo
 /**
  * Information about agents or connectors associated with the user’s AWS account. Information includes agent or connector IDs, IP addresses, media access control (MAC) addresses, agent or connector health, hostname where the agent or connector resides, and agent version for each agent.
@@ -35,45 +38,45 @@ var AgentInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentNetworkInfoList", elemType: AgentNetworkInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentNetworkInfoList", elemType: agentnetworkinfo_1.AgentNetworkInfo }),
         __metadata("design:type", Array)
     ], AgentInfo.prototype, "agentNetworkInfoList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentType" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "agentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectionStatus" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "collectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorId" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "connectorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostName" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "hostName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastHealthPingTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastHealthPingTime" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "lastHealthPingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredTime" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "registeredTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "version", void 0);
     return AgentInfo;
-}(SpeakeasyBase));
-export { AgentInfo };
+}(utils_1.SpeakeasyBase));
+exports.AgentInfo = AgentInfo;

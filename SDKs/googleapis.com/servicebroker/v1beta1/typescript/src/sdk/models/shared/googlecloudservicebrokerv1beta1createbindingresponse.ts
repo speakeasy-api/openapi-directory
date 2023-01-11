@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudServicebrokerV1beta1CreateBindingResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  credentials?: Map<string, any>;
+  credentials?: Record<string, any>;
 
   @SpeakeasyMetadata()
   description?: string;
@@ -23,5 +23,5 @@ export class GoogleCloudServicebrokerV1beta1CreateBindingResponse extends Speake
   syslogDrainUrl?: string;
 
   @SpeakeasyMetadata()
-  volumeMounts?: Map<string, any>[];
+  volumeMounts?: Record<string, any>[];
 }

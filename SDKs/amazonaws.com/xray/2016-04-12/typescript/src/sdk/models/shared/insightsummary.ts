@@ -22,7 +22,7 @@ export class InsightSummary extends SpeakeasyBase {
   endTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=GroupARN" })
-  groupArn?: string;
+  groupARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GroupName" })
   groupName?: string;

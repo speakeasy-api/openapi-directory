@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetail } from "./errordetail";
-import { UpdateParam } from "./updateparam";
-import { UpdateStatusEnum } from "./updatestatusenum";
-import { UpdateTypeEnum } from "./updatetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Update = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetail_1 = require("./errordetail");
+var updateparam_1 = require("./updateparam");
+var updatestatusenum_1 = require("./updatestatusenum");
+var updatetypeenum_1 = require("./updatetypeenum");
 // Update
 /**
  * An object representing an asynchronous update.
@@ -37,29 +40,29 @@ var Update = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Update.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: errordetail_1.ErrorDetail }),
         __metadata("design:type", Array)
     ], Update.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Update.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params", elemType: UpdateParam }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params", elemType: updateparam_1.UpdateParam }),
         __metadata("design:type", Array)
     ], Update.prototype, "params", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Update.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Update.prototype, "type", void 0);
     return Update;
-}(SpeakeasyBase));
-export { Update };
+}(utils_1.SpeakeasyBase));
+exports.Update = Update;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyTopicEvidence } from "./policytopicevidence";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyTopicEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var policytopicevidence_1 = require("./policytopicevidence");
 // PolicyTopicEntry
 /**
  * Each policy topic entry will represent a violation of a policy topic for a creative, with the policy topic information and optional evidence for the policy violation.
@@ -34,17 +37,17 @@ var PolicyTopicEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidences", elemType: PolicyTopicEvidence }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidences", elemType: policytopicevidence_1.PolicyTopicEvidence }),
         __metadata("design:type", Array)
     ], PolicyTopicEntry.prototype, "evidences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=helpCenterUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=helpCenterUrl" }),
         __metadata("design:type", String)
     ], PolicyTopicEntry.prototype, "helpCenterUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyTopic" }),
         __metadata("design:type", String)
     ], PolicyTopicEntry.prototype, "policyTopic", void 0);
     return PolicyTopicEntry;
-}(SpeakeasyBase));
-export { PolicyTopicEntry };
+}(utils_1.SpeakeasyBase));
+exports.PolicyTopicEntry = PolicyTopicEntry;

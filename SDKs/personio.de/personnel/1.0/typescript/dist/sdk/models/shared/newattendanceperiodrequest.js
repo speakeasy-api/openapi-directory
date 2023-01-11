@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewAttendancePeriodRequest = exports.NewAttendancePeriodRequestAttendances = void 0;
+var utils_1 = require("../../../internal/utils");
 var NewAttendancePeriodRequestAttendances = /** @class */ (function (_super) {
     __extends(NewAttendancePeriodRequestAttendances, _super);
     function NewAttendancePeriodRequestAttendances() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=break" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=break" }),
         __metadata("design:type", Number)
     ], NewAttendancePeriodRequestAttendances.prototype, "break", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], NewAttendancePeriodRequestAttendances.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], NewAttendancePeriodRequestAttendances.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
         __metadata("design:type", Number)
     ], NewAttendancePeriodRequestAttendances.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
         __metadata("design:type", String)
     ], NewAttendancePeriodRequestAttendances.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
         __metadata("design:type", String)
     ], NewAttendancePeriodRequestAttendances.prototype, "startTime", void 0);
     return NewAttendancePeriodRequestAttendances;
-}(SpeakeasyBase));
-export { NewAttendancePeriodRequestAttendances };
+}(utils_1.SpeakeasyBase));
+exports.NewAttendancePeriodRequestAttendances = NewAttendancePeriodRequestAttendances;
 var NewAttendancePeriodRequest = /** @class */ (function (_super) {
     __extends(NewAttendancePeriodRequest, _super);
     function NewAttendancePeriodRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attendances", elemType: NewAttendancePeriodRequestAttendances }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attendances", elemType: NewAttendancePeriodRequestAttendances }),
         __metadata("design:type", Array)
     ], NewAttendancePeriodRequest.prototype, "attendances", void 0);
     return NewAttendancePeriodRequest;
-}(SpeakeasyBase));
-export { NewAttendancePeriodRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewAttendancePeriodRequest = NewAttendancePeriodRequest;

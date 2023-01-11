@@ -47,7 +47,7 @@ export declare class GetSearchRvActiveRequest extends SpeakeasyBase {
 }
 export declare class GetSearchRvActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     rvSearchResponse?: shared.RvSearchResponse;
     statusCode: number;
 }

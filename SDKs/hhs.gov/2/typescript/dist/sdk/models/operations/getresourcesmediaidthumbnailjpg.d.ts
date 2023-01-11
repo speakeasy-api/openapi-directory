@@ -7,6 +7,6 @@ export declare class GetResourcesMediaIdThumbnailJpgRequest extends SpeakeasyBas
 }
 export declare class GetResourcesMediaIdThumbnailJpgResponse extends SpeakeasyBase {
     contentType: string;
-    getResourcesMediaIdThumbnailJpg200ApplicationJsonObject?: Map<string, any>;
     statusCode: number;
+    getResourcesMediaIdThumbnailJpg200ApplicationJSONObject?: Record<string, any>;
 }

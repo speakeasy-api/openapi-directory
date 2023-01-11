@@ -27,6 +27,6 @@ export declare class IapProjectsIapTunnelLocationsDestGroupsDeleteRequest extend
 }
 export declare class IapProjectsIapTunnelLocationsDestGroupsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

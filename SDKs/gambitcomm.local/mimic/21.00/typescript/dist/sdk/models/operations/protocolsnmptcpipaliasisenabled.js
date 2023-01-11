@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmptcpIpaliasIsenabledResponse = exports.ProtocolSnmptcpIpaliasIsenabledRequest = exports.ProtocolSnmptcpIpaliasIsenabledPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmptcpIpaliasIsenabledPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpIpaliasIsenabledPathParams, _super);
     function ProtocolSnmptcpIpaliasIsenabledPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpIpaliasIsenabledPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ipaddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ipaddress" }),
         __metadata("design:type", String)
     ], ProtocolSnmptcpIpaliasIsenabledPathParams.prototype, "ipaddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpIpaliasIsenabledPathParams.prototype, "port", void 0);
     return ProtocolSnmptcpIpaliasIsenabledPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpIpaliasIsenabledPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpIpaliasIsenabledPathParams = ProtocolSnmptcpIpaliasIsenabledPathParams;
 var ProtocolSnmptcpIpaliasIsenabledRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpIpaliasIsenabledRequest, _super);
     function ProtocolSnmptcpIpaliasIsenabledRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmptcpIpaliasIsenabledPathParams)
     ], ProtocolSnmptcpIpaliasIsenabledRequest.prototype, "pathParams", void 0);
     return ProtocolSnmptcpIpaliasIsenabledRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpIpaliasIsenabledRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpIpaliasIsenabledRequest = ProtocolSnmptcpIpaliasIsenabledRequest;
 var ProtocolSnmptcpIpaliasIsenabledResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpIpaliasIsenabledResponse, _super);
     function ProtocolSnmptcpIpaliasIsenabledResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmptcpIpaliasIsenabledResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpIpaliasIsenabledResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmptcpIpaliasIsenabledResponse.prototype, "protocolSnmptcpIpaliasIsenabled200ApplicationJsonString", void 0);
+    ], ProtocolSnmptcpIpaliasIsenabledResponse.prototype, "protocolSnmptcpIpaliasIsenabled200ApplicationJSONString", void 0);
     return ProtocolSnmptcpIpaliasIsenabledResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpIpaliasIsenabledResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpIpaliasIsenabledResponse = ProtocolSnmptcpIpaliasIsenabledResponse;

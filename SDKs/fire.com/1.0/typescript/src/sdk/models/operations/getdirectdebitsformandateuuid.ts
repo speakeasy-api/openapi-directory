@@ -64,7 +64,7 @@ export class GetDirectDebitsForMandateUuidDirectDebitsDirectDebit extends Speake
   directDebitUuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=isDDIC" })
-  isDdic?: boolean;
+  isDDIC?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdated" })
   lastUpdated?: Date;

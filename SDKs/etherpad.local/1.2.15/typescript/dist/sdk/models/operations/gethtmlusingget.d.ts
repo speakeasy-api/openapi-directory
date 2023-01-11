@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetHtmlUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
     rev?: string;
 }
 export declare class GetHtmlUsingGet200ApplicationJsonData extends SpeakeasyBase {
@@ -13,17 +13,17 @@ export declare class GetHtmlUsingGet200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetHtmlUsingGetRequest extends SpeakeasyBase {
@@ -32,8 +32,8 @@ export declare class GetHtmlUsingGetRequest extends SpeakeasyBase {
 export declare class GetHtmlUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getHtmlUsingGet200ApplicationJsonObject?: GetHtmlUsingGet200ApplicationJson;
-    getHtmlUsingGet400ApplicationJsonObject?: GetHtmlUsingGet400ApplicationJson;
-    getHtmlUsingGet401ApplicationJsonObject?: GetHtmlUsingGet401ApplicationJson;
-    getHtmlUsingGet500ApplicationJsonObject?: GetHtmlUsingGet500ApplicationJson;
+    getHTMLUsingGET200ApplicationJSONObject?: GetHtmlUsingGet200ApplicationJson;
+    getHTMLUsingGET400ApplicationJSONObject?: GetHtmlUsingGet400ApplicationJson;
+    getHTMLUsingGET401ApplicationJSONObject?: GetHtmlUsingGet401ApplicationJson;
+    getHTMLUsingGET500ApplicationJSONObject?: GetHtmlUsingGet500ApplicationJson;
 }

@@ -13,7 +13,7 @@ export class Queue extends SpeakeasyBase {
   contentItemsCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=controls", elemType: PlayMediaControl })
-  controls?: Map<string, PlayMediaControl>;
+  controls?: Record<string, PlayMediaControl>;
 
   @SpeakeasyMetadata({ data: "json, name=identifier" })
   identifier: string;

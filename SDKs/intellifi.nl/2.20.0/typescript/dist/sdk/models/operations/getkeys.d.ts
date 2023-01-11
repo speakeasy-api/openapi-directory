@@ -42,5 +42,5 @@ export declare class GetKeysRequest extends SpeakeasyBase {
 export declare class GetKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getKeys200ApplicationJsonObject?: GetKeys200ApplicationJson;
+    getKeys200ApplicationJSONObject?: GetKeys200ApplicationJson;
 }

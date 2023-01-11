@@ -13,7 +13,6 @@ export declare class UpdateMediaAffinityIntentHandlingRequest extends SpeakeasyB
 }
 export declare class UpdateMediaAffinityIntentHandlingResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
     updateMediaAffinityIntentHandlingInvocationResponses?: any[];
 }

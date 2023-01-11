@@ -10,5 +10,5 @@ export class EmojisGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  emojisGet200ApplicationJsonObject?: Map<string, string>;
+  emojisGet200ApplicationJSONObject?: Record<string, string>;
 }

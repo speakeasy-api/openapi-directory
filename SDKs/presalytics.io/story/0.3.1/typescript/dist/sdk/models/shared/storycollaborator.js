@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PermissionType } from "./permissiontype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryCollaborator = void 0;
+var utils_1 = require("../../../internal/utils");
+var permissiontype_1 = require("./permissiontype");
 // StoryCollaborator
 /**
- * Description of a user that can collaborate on a story
+ * Base model for all types
 **/
 var StoryCollaborator = /** @class */ (function (_super) {
     __extends(StoryCollaborator, _super);
@@ -34,57 +37,57 @@ var StoryCollaborator = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], StoryCollaborator.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], StoryCollaborator.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_id" }),
         __metadata("design:type", Number)
     ], StoryCollaborator.prototype, "leadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission_type" }),
-        __metadata("design:type", PermissionType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission_type" }),
+        __metadata("design:type", permissiontype_1.PermissionType)
     ], StoryCollaborator.prototype, "permissionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission_type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission_type_id" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "permissionTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=story_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=story_id" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "storyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], StoryCollaborator.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "updatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", String)
     ], StoryCollaborator.prototype, "userId", void 0);
     return StoryCollaborator;
-}(SpeakeasyBase));
-export { StoryCollaborator };
+}(utils_1.SpeakeasyBase));
+exports.StoryCollaborator = StoryCollaborator;

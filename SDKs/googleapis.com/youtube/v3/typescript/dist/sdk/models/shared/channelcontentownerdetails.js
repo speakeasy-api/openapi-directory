@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelContentOwnerDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelContentOwnerDetails
 /**
  * The contentOwnerDetails object encapsulates channel data that is relevant for YouTube Partners linked with the channel.
@@ -33,13 +36,13 @@ var ChannelContentOwnerDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentOwner" }),
         __metadata("design:type", String)
     ], ChannelContentOwnerDetails.prototype, "contentOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeLinked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeLinked" }),
         __metadata("design:type", Date)
     ], ChannelContentOwnerDetails.prototype, "timeLinked", void 0);
     return ChannelContentOwnerDetails;
-}(SpeakeasyBase));
-export { ChannelContentOwnerDetails };
+}(utils_1.SpeakeasyBase));
+exports.ChannelContentOwnerDetails = ChannelContentOwnerDetails;

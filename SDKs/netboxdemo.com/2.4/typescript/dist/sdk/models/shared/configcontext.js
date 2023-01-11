@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedPlatform } from "./nestedplatform";
-import { NestedRegion } from "./nestedregion";
-import { NestedDeviceRole } from "./nesteddevicerole";
-import { NestedSite } from "./nestedsite";
-import { NestedTenantGroup } from "./nestedtenantgroup";
-import { NestedTenant } from "./nestedtenant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedplatform_1 = require("./nestedplatform");
+var nestedregion_1 = require("./nestedregion");
+var nesteddevicerole_1 = require("./nesteddevicerole");
+var nestedsite_1 = require("./nestedsite");
+var nestedtenantgroup_1 = require("./nestedtenantgroup");
+var nestedtenant_1 = require("./nestedtenant");
 var ConfigContext = /** @class */ (function (_super) {
     __extends(ConfigContext, _super);
     function ConfigContext() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], ConfigContext.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ConfigContext.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ConfigContext.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_active" }),
         __metadata("design:type", Boolean)
     ], ConfigContext.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConfigContext.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms", elemType: NestedPlatform }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms", elemType: nestedplatform_1.NestedPlatform }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "platforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions", elemType: NestedRegion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions", elemType: nestedregion_1.NestedRegion }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "regions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles", elemType: NestedDeviceRole }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles", elemType: nesteddevicerole_1.NestedDeviceRole }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sites", elemType: NestedSite }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sites", elemType: nestedsite_1.NestedSite }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "sites", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant_groups", elemType: NestedTenantGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant_groups", elemType: nestedtenantgroup_1.NestedTenantGroup }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "tenantGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenants", elemType: NestedTenant }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenants", elemType: nestedtenant_1.NestedTenant }),
         __metadata("design:type", Array)
     ], ConfigContext.prototype, "tenants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], ConfigContext.prototype, "weight", void 0);
     return ConfigContext;
-}(SpeakeasyBase));
-export { ConfigContext };
+}(utils_1.SpeakeasyBase));
+exports.ConfigContext = ConfigContext;

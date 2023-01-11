@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse = exports.EnterpriseAdminPromoteUserToBeSiteAdministratorRequest = exports.EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams, _super);
     function EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams.prototype, "username", void 0);
     return EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams = EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams;
 var EnterpriseAdminPromoteUserToBeSiteAdministratorRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPromoteUserToBeSiteAdministratorRequest, _super);
     function EnterpriseAdminPromoteUserToBeSiteAdministratorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams)
     ], EnterpriseAdminPromoteUserToBeSiteAdministratorRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminPromoteUserToBeSiteAdministratorRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminPromoteUserToBeSiteAdministratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPromoteUserToBeSiteAdministratorRequest = EnterpriseAdminPromoteUserToBeSiteAdministratorRequest;
 var EnterpriseAdminPromoteUserToBeSiteAdministratorResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPromoteUserToBeSiteAdministratorResponse, _super);
     function EnterpriseAdminPromoteUserToBeSiteAdministratorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminPromoteUserToBeSiteAdministratorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminPromoteUserToBeSiteAdministratorResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminPromoteUserToBeSiteAdministratorResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminPromoteUserToBeSiteAdministratorResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse = EnterpriseAdminPromoteUserToBeSiteAdministratorResponse;

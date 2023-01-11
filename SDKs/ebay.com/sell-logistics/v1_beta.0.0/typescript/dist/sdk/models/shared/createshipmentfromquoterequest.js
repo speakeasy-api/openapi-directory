@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdditionalOption } from "./additionaloption";
-import { Contact } from "./contact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateShipmentFromQuoteRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var additionaloption_1 = require("./additionaloption");
+var contact_1 = require("./contact");
 // CreateShipmentFromQuoteRequest
 /**
  * This complex type contains the request payload for the createFromShippingQuote method.
@@ -35,29 +38,29 @@ var CreateShipmentFromQuoteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalOptions", elemType: AdditionalOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalOptions", elemType: additionaloption_1.AdditionalOption }),
         __metadata("design:type", Array)
     ], CreateShipmentFromQuoteRequest.prototype, "additionalOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelCustomMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelCustomMessage" }),
         __metadata("design:type", String)
     ], CreateShipmentFromQuoteRequest.prototype, "labelCustomMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelSize" }),
         __metadata("design:type", String)
     ], CreateShipmentFromQuoteRequest.prototype, "labelSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateId" }),
         __metadata("design:type", String)
     ], CreateShipmentFromQuoteRequest.prototype, "rateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnTo" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnTo" }),
+        __metadata("design:type", contact_1.Contact)
     ], CreateShipmentFromQuoteRequest.prototype, "returnTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingQuoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingQuoteId" }),
         __metadata("design:type", String)
     ], CreateShipmentFromQuoteRequest.prototype, "shippingQuoteId", void 0);
     return CreateShipmentFromQuoteRequest;
-}(SpeakeasyBase));
-export { CreateShipmentFromQuoteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateShipmentFromQuoteRequest = CreateShipmentFromQuoteRequest;

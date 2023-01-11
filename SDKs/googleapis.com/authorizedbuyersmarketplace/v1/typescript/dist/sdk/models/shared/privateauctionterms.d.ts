@@ -3,13 +3,13 @@ import { Price } from "./price";
 /**
  * Pricing terms for Private Auctions.
 **/
-export declare class PrivateAuctionTermsInput extends SpeakeasyBase {
+export declare class PrivateAuctionTerms extends SpeakeasyBase {
     floorPrice?: Price;
+    openAuctionAllowed?: boolean;
 }
 /**
  * Pricing terms for Private Auctions.
 **/
-export declare class PrivateAuctionTerms extends SpeakeasyBase {
+export declare class PrivateAuctionTermsInput extends SpeakeasyBase {
     floorPrice?: Price;
-    openAuctionAllowed?: boolean;
 }

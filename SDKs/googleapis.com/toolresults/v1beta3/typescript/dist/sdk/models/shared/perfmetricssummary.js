@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppStartTime } from "./appstarttime";
-import { GraphicsStats } from "./graphicsstats";
-import { PerfEnvironment } from "./perfenvironment";
-export var PerfMetricsSummaryPerfMetricsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerfMetricsSummary = exports.PerfMetricsSummaryPerfMetricsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appstarttime_1 = require("./appstarttime");
+var graphicsstats_1 = require("./graphicsstats");
+var perfenvironment_1 = require("./perfenvironment");
+var PerfMetricsSummaryPerfMetricsEnum;
 (function (PerfMetricsSummaryPerfMetricsEnum) {
     PerfMetricsSummaryPerfMetricsEnum["PerfMetricTypeUnspecified"] = "perfMetricTypeUnspecified";
     PerfMetricsSummaryPerfMetricsEnum["Memory"] = "memory";
     PerfMetricsSummaryPerfMetricsEnum["Cpu"] = "cpu";
     PerfMetricsSummaryPerfMetricsEnum["Network"] = "network";
     PerfMetricsSummaryPerfMetricsEnum["Graphics"] = "graphics";
-})(PerfMetricsSummaryPerfMetricsEnum || (PerfMetricsSummaryPerfMetricsEnum = {}));
+})(PerfMetricsSummaryPerfMetricsEnum = exports.PerfMetricsSummaryPerfMetricsEnum || (exports.PerfMetricsSummaryPerfMetricsEnum = {}));
 // PerfMetricsSummary
 /**
  * A summary of perf metrics collected and performance environment info
@@ -44,37 +47,37 @@ var PerfMetricsSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appStartTime" }),
-        __metadata("design:type", AppStartTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appStartTime" }),
+        __metadata("design:type", appstarttime_1.AppStartTime)
     ], PerfMetricsSummary.prototype, "appStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionId" }),
         __metadata("design:type", String)
     ], PerfMetricsSummary.prototype, "executionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graphicsStats" }),
-        __metadata("design:type", GraphicsStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graphicsStats" }),
+        __metadata("design:type", graphicsstats_1.GraphicsStats)
     ], PerfMetricsSummary.prototype, "graphicsStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=historyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=historyId" }),
         __metadata("design:type", String)
     ], PerfMetricsSummary.prototype, "historyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfEnvironment" }),
-        __metadata("design:type", PerfEnvironment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfEnvironment" }),
+        __metadata("design:type", perfenvironment_1.PerfEnvironment)
     ], PerfMetricsSummary.prototype, "perfEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfMetrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfMetrics" }),
         __metadata("design:type", Array)
     ], PerfMetricsSummary.prototype, "perfMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], PerfMetricsSummary.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stepId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stepId" }),
         __metadata("design:type", String)
     ], PerfMetricsSummary.prototype, "stepId", void 0);
     return PerfMetricsSummary;
-}(SpeakeasyBase));
-export { PerfMetricsSummary };
+}(utils_1.SpeakeasyBase));
+exports.PerfMetricsSummary = PerfMetricsSummary;

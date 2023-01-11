@@ -51,7 +51,7 @@ export class DeleteContainerServiceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteContainerServiceResult?: Map<string, any>;
+  deleteContainerServiceResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

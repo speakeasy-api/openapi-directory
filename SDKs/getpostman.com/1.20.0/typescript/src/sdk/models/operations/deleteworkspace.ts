@@ -34,5 +34,5 @@ export class DeleteWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteWorkspace200ApplicationJsonObject?: DeleteWorkspace200ApplicationJson;
+  deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJson;
 }

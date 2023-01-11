@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportStops = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReportStops = /** @class */ (function (_super) {
     __extends(ReportStops, _super);
     function ReportStops() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], ReportStops.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceName" }),
         __metadata("design:type", String)
     ], ReportStops.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], ReportStops.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineHours" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "engineHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lon" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "lon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spentFuel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spentFuel" }),
         __metadata("design:type", Number)
     ], ReportStops.prototype, "spentFuel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], ReportStops.prototype, "startTime", void 0);
     return ReportStops;
-}(SpeakeasyBase));
-export { ReportStops };
+}(utils_1.SpeakeasyBase));
+exports.ReportStops = ReportStops;

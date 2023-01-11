@@ -6,7 +6,7 @@ export declare class GetAccountBalanceQueryParams extends SpeakeasyBase {
     apiSecret: string;
 }
 export declare class GetAccountBalanceRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: GetAccountBalanceQueryParams;
 }
 export declare class GetAccountBalanceResponse extends SpeakeasyBase {

@@ -15,6 +15,7 @@ export declare class AppDgetRequest extends SpeakeasyBase {
     queryParams: AppDgetQueryParams;
 }
 export declare class AppDgetResponse extends SpeakeasyBase {
+    appD?: string;
     body?: Uint8Array;
     contentType: string;
     problemDetails?: shared.ProblemDetails;

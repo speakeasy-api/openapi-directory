@@ -19,7 +19,7 @@ export declare class CreatePreparedStatementRequest extends SpeakeasyBase {
 }
 export declare class CreatePreparedStatementResponse extends SpeakeasyBase {
     contentType: string;
-    createPreparedStatementOutput?: Map<string, any>;
+    createPreparedStatementOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

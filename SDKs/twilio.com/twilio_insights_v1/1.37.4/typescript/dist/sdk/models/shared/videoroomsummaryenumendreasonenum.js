@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoRoomSummaryEnumEndReasonEnum = void 0;
+var VideoRoomSummaryEnumEndReasonEnum;
+(function (VideoRoomSummaryEnumEndReasonEnum) {
+    VideoRoomSummaryEnumEndReasonEnum["RoomEndedViaApi"] = "room_ended_via_api";
+    VideoRoomSummaryEnumEndReasonEnum["Timeout"] = "timeout";
+})(VideoRoomSummaryEnumEndReasonEnum = exports.VideoRoomSummaryEnumEndReasonEnum || (exports.VideoRoomSummaryEnumEndReasonEnum = {}));

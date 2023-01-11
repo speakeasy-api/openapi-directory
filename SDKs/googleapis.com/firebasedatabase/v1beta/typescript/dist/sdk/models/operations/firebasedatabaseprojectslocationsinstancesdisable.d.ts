@@ -31,7 +31,7 @@ export declare class FirebasedatabaseProjectsLocationsInstancesDisableSecurity e
 export declare class FirebasedatabaseProjectsLocationsInstancesDisableRequest extends SpeakeasyBase {
     pathParams: FirebasedatabaseProjectsLocationsInstancesDisablePathParams;
     queryParams: FirebasedatabaseProjectsLocationsInstancesDisableQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FirebasedatabaseProjectsLocationsInstancesDisableSecurity;
 }
 export declare class FirebasedatabaseProjectsLocationsInstancesDisableResponse extends SpeakeasyBase {

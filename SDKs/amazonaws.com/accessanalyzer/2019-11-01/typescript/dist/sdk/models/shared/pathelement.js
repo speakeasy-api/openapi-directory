@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Substring } from "./substring";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PathElement = void 0;
+var utils_1 = require("../../../internal/utils");
+var substring_1 = require("./substring");
 // PathElement
 /**
  * A single element in a path through the JSON representation of a policy.
@@ -34,21 +37,21 @@ var PathElement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], PathElement.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], PathElement.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=substring" }),
-        __metadata("design:type", Substring)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=substring" }),
+        __metadata("design:type", substring_1.Substring)
     ], PathElement.prototype, "substring", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PathElement.prototype, "value", void 0);
     return PathElement;
-}(SpeakeasyBase));
-export { PathElement };
+}(utils_1.SpeakeasyBase));
+exports.PathElement = PathElement;

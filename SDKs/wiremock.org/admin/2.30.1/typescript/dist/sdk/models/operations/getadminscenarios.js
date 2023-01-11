@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdminScenariosResponse = exports.GetAdminScenarios200ApplicationJson = exports.GetAdminScenarios200ApplicationJsonScenarios = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAdminScenarios200ApplicationJsonScenarios = /** @class */ (function (_super) {
     __extends(GetAdminScenarios200ApplicationJsonScenarios, _super);
     function GetAdminScenarios200ApplicationJsonScenarios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetAdminScenarios200ApplicationJsonScenarios.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetAdminScenarios200ApplicationJsonScenarios.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=possibleStates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=possibleStates" }),
         __metadata("design:type", Array)
     ], GetAdminScenarios200ApplicationJsonScenarios.prototype, "possibleStates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GetAdminScenarios200ApplicationJsonScenarios.prototype, "state", void 0);
     return GetAdminScenarios200ApplicationJsonScenarios;
-}(SpeakeasyBase));
-export { GetAdminScenarios200ApplicationJsonScenarios };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminScenarios200ApplicationJsonScenarios = GetAdminScenarios200ApplicationJsonScenarios;
 var GetAdminScenarios200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAdminScenarios200ApplicationJson, _super);
     function GetAdminScenarios200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scenarios", elemType: GetAdminScenarios200ApplicationJsonScenarios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scenarios", elemType: GetAdminScenarios200ApplicationJsonScenarios }),
         __metadata("design:type", Array)
     ], GetAdminScenarios200ApplicationJson.prototype, "scenarios", void 0);
     return GetAdminScenarios200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAdminScenarios200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminScenarios200ApplicationJson = GetAdminScenarios200ApplicationJson;
 var GetAdminScenariosResponse = /** @class */ (function (_super) {
     __extends(GetAdminScenariosResponse, _super);
     function GetAdminScenariosResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdminScenariosResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAdminScenarios200ApplicationJson)
-    ], GetAdminScenariosResponse.prototype, "getAdminScenarios200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdminScenariosResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAdminScenarios200ApplicationJson)
+    ], GetAdminScenariosResponse.prototype, "getAdminScenarios200ApplicationJSONObject", void 0);
     return GetAdminScenariosResponse;
-}(SpeakeasyBase));
-export { GetAdminScenariosResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminScenariosResponse = GetAdminScenariosResponse;

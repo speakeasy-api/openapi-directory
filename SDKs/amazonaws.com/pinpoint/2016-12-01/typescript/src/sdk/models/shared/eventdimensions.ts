@@ -11,11 +11,11 @@ import { MetricDimension } from "./metricdimension";
 **/
 export class EventDimensions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes", elemType: AttributeDimension })
-  attributes?: Map<string, AttributeDimension>;
+  attributes?: Record<string, AttributeDimension>;
 
   @SpeakeasyMetadata({ data: "json, name=EventType" })
   eventType?: SetDimension;
 
   @SpeakeasyMetadata({ data: "json, name=Metrics", elemType: MetricDimension })
-  metrics?: Map<string, MetricDimension>;
+  metrics?: Record<string, MetricDimension>;
 }

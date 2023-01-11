@@ -16,6 +16,6 @@ export declare class ProjectsCreateForAuthenticatedUserResponse extends Speakeas
     statusCode: number;
     basicError?: shared.BasicError;
     project?: shared.Project;
-    projectsCreateForAuthenticatedUser415ApplicationJsonObject?: ProjectsCreateForAuthenticatedUser415ApplicationJson;
+    projectsCreateForAuthenticatedUser415ApplicationJSONObject?: ProjectsCreateForAuthenticatedUser415ApplicationJson;
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

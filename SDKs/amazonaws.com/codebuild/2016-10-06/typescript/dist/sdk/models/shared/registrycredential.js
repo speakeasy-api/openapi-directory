@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CredentialProviderTypeEnum } from "./credentialprovidertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryCredential = void 0;
+var utils_1 = require("../../../internal/utils");
+var credentialprovidertypeenum_1 = require("./credentialprovidertypeenum");
 // RegistryCredential
 /**
  * <p> Information about credentials that provide access to a private Docker registry. When this is set: </p> <ul> <li> <p> <code>imagePullCredentialsType</code> must be set to <code>SERVICE_ROLE</code>. </p> </li> <li> <p> images cannot be curated or an Amazon ECR image.</p> </li> </ul> <p> For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html">Private Registry with Secrets Manager Sample for CodeBuild</a>. </p>
@@ -34,13 +37,13 @@ var RegistryCredential = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credential" }),
         __metadata("design:type", String)
     ], RegistryCredential.prototype, "credential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentialProvider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentialProvider" }),
         __metadata("design:type", String)
     ], RegistryCredential.prototype, "credentialProvider", void 0);
     return RegistryCredential;
-}(SpeakeasyBase));
-export { RegistryCredential };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCredential = RegistryCredential;

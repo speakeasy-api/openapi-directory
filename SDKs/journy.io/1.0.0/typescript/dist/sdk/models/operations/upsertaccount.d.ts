@@ -25,12 +25,15 @@ export declare class UpsertAccountRequestBodyMembers extends SpeakeasyBase {
 export declare class UpsertAccountRequestBody extends SpeakeasyBase {
     identification: UpsertAccountRequestBodyIdentification;
     members?: UpsertAccountRequestBodyMembers[];
-    properties?: Map<string, any>;
+    properties?: Record<string, any>;
 }
 export declare class UpsertAccount201ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * The object was created
+**/
 export declare class UpsertAccount201ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: UpsertAccount201ApplicationJsonMeta;
@@ -39,21 +42,24 @@ export declare class UpsertAccount201ApplicationJson extends SpeakeasyBase {
  * All query-, header- and path- parameters that seemed incorrect
 **/
 export declare class UpsertAccount400ApplicationJsonErrorsParameters extends SpeakeasyBase {
-    header?: Map<string, string>;
-    path?: Map<string, string>;
-    query?: Map<string, string>;
+    header?: Record<string, string>;
+    path?: Record<string, string>;
+    query?: Record<string, string>;
 }
 /**
  * Map that sums up all received values that seemed incorrect
 **/
 export declare class UpsertAccount400ApplicationJsonErrors extends SpeakeasyBase {
-    fields?: Map<string, string>;
+    fields?: Record<string, string>;
     parameters?: UpsertAccount400ApplicationJsonErrorsParameters;
 }
 export declare class UpsertAccount400ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * Specify the fields and/ or parameters that had errors
+**/
 export declare class UpsertAccount400ApplicationJson extends SpeakeasyBase {
     errors: UpsertAccount400ApplicationJsonErrors;
     message: string;
@@ -63,6 +69,9 @@ export declare class UpsertAccount401ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class UpsertAccount401ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: UpsertAccount401ApplicationJsonMeta;
@@ -71,6 +80,9 @@ export declare class UpsertAccount429ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class UpsertAccount429ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: UpsertAccount429ApplicationJsonMeta;
@@ -79,6 +91,9 @@ export declare class UpsertAccount500ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class UpsertAccount500ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: UpsertAccount500ApplicationJsonMeta;
@@ -88,11 +103,11 @@ export declare class UpsertAccountRequest extends SpeakeasyBase {
 }
 export declare class UpsertAccountResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    upsertAccount201ApplicationJsonObject?: UpsertAccount201ApplicationJson;
-    upsertAccount400ApplicationJsonObject?: UpsertAccount400ApplicationJson;
-    upsertAccount401ApplicationJsonObject?: UpsertAccount401ApplicationJson;
-    upsertAccount429ApplicationJsonObject?: UpsertAccount429ApplicationJson;
-    upsertAccount500ApplicationJsonObject?: UpsertAccount500ApplicationJson;
+    upsertAccount201ApplicationJSONObject?: UpsertAccount201ApplicationJson;
+    upsertAccount400ApplicationJSONObject?: UpsertAccount400ApplicationJson;
+    upsertAccount401ApplicationJSONObject?: UpsertAccount401ApplicationJson;
+    upsertAccount429ApplicationJSONObject?: UpsertAccount429ApplicationJson;
+    upsertAccount500ApplicationJSONObject?: UpsertAccount500ApplicationJson;
 }

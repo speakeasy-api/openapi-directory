@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcknowledgeFlow } from "./acknowledgeflow";
-import { InitializationConfiguration } from "./initializationconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlarmCapabilities = void 0;
+var utils_1 = require("../../../internal/utils");
+var acknowledgeflow_1 = require("./acknowledgeflow");
+var initializationconfiguration_1 = require("./initializationconfiguration");
 // AlarmCapabilities
 /**
  * Contains the configuration information of alarm state changes.
@@ -35,13 +38,13 @@ var AlarmCapabilities = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgeFlow" }),
-        __metadata("design:type", AcknowledgeFlow)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgeFlow" }),
+        __metadata("design:type", acknowledgeflow_1.AcknowledgeFlow)
     ], AlarmCapabilities.prototype, "acknowledgeFlow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initializationConfiguration" }),
-        __metadata("design:type", InitializationConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initializationConfiguration" }),
+        __metadata("design:type", initializationconfiguration_1.InitializationConfiguration)
     ], AlarmCapabilities.prototype, "initializationConfiguration", void 0);
     return AlarmCapabilities;
-}(SpeakeasyBase));
-export { AlarmCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.AlarmCapabilities = AlarmCapabilities;

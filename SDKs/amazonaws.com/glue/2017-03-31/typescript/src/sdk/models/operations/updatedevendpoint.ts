@@ -63,7 +63,7 @@ export class UpdateDevEndpointResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDevEndpointResponse?: Map<string, any>;
+  updateDevEndpointResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

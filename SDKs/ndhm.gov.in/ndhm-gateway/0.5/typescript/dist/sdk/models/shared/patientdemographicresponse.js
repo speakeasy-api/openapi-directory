@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientAddress } from "./patientaddress";
-import { PatientGenderEnum } from "./patientgenderenum";
-import { Identifier } from "./identifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientDemographicResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientaddress_1 = require("./patientaddress");
+var patientgenderenum_1 = require("./patientgenderenum");
+var identifier_1 = require("./identifier");
 var PatientDemographicResponse = /** @class */ (function (_super) {
     __extends(PatientDemographicResponse, _super);
     function PatientDemographicResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PatientAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", patientaddress_1.PatientAddress)
     ], PatientDemographicResponse.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], PatientDemographicResponse.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PatientDemographicResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifiers", elemType: Identifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifiers", elemType: identifier_1.Identifier }),
         __metadata("design:type", Array)
     ], PatientDemographicResponse.prototype, "identifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PatientDemographicResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearOfBirth" }),
         __metadata("design:type", Number)
     ], PatientDemographicResponse.prototype, "yearOfBirth", void 0);
     return PatientDemographicResponse;
-}(SpeakeasyBase));
-export { PatientDemographicResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatientDemographicResponse = PatientDemographicResponse;

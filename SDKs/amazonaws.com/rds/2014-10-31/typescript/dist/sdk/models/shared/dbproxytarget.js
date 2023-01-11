@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetRoleEnum } from "./targetroleenum";
-import { TargetHealth } from "./targethealth";
-import { TargetTypeEnum } from "./targettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbProxyTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetroleenum_1 = require("./targetroleenum");
+var targethealth_1 = require("./targethealth");
+var targettypeenum_1 = require("./targettypeenum");
 // DbProxyTarget
 /**
  * <p>Contains the details for an RDS Proxy target. It represents an RDS DB instance or Aurora DB cluster that the proxy can connect to. One or more targets are associated with an RDS Proxy target group.</p> <p>This data type is used as a response element in the <code>DescribeDBProxyTargets</code> action.</p>
@@ -36,37 +39,37 @@ var DbProxyTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbProxyTarget.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "rdsResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "targetArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TargetHealth)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", targethealth_1.TargetHealth)
     ], DbProxyTarget.prototype, "targetHealth", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "trackedClusterId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbProxyTarget.prototype, "type", void 0);
     return DbProxyTarget;
-}(SpeakeasyBase));
-export { DbProxyTarget };
+}(utils_1.SpeakeasyBase));
+exports.DbProxyTarget = DbProxyTarget;

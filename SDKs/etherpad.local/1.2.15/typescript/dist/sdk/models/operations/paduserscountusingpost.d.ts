@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PadUsersCountUsingPostQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class PadUsersCountUsingPost200ApplicationJsonData extends SpeakeasyBase {
     padUsersCount?: number;
@@ -12,17 +12,17 @@ export declare class PadUsersCountUsingPost200ApplicationJson extends SpeakeasyB
 }
 export declare class PadUsersCountUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingPostRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class PadUsersCountUsingPostRequest extends SpeakeasyBase {
 export declare class PadUsersCountUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    padUsersCountUsingPost200ApplicationJsonObject?: PadUsersCountUsingPost200ApplicationJson;
-    padUsersCountUsingPost400ApplicationJsonObject?: PadUsersCountUsingPost400ApplicationJson;
-    padUsersCountUsingPost401ApplicationJsonObject?: PadUsersCountUsingPost401ApplicationJson;
-    padUsersCountUsingPost500ApplicationJsonObject?: PadUsersCountUsingPost500ApplicationJson;
+    padUsersCountUsingPOST200ApplicationJSONObject?: PadUsersCountUsingPost200ApplicationJson;
+    padUsersCountUsingPOST400ApplicationJSONObject?: PadUsersCountUsingPost400ApplicationJson;
+    padUsersCountUsingPOST401ApplicationJSONObject?: PadUsersCountUsingPost401ApplicationJson;
+    padUsersCountUsingPOST500ApplicationJSONObject?: PadUsersCountUsingPost500ApplicationJson;
 }

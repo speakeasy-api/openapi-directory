@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CoipPool } from "./coippool";
 
 
 
 export class DescribeCoipPoolsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CoipPool })
-  coipPools?: CoipPool[];
+  @SpeakeasyMetadata()
+  coipPools?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

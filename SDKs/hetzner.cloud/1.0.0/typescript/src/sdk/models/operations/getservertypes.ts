@@ -106,8 +106,8 @@ export class GetServerTypesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getServerTypes200ApplicationJsonObject?: GetServerTypes200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getServerTypes200ApplicationJSONObject?: GetServerTypes200ApplicationJson;
 }

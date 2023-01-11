@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesDraftRegistrationsPartialUpdateResponse = exports.NodesDraftRegistrationsPartialUpdateRequest = exports.NodesDraftRegistrationsPartialUpdateDraftRegistrationInput = exports.NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput = exports.NodesDraftRegistrationsPartialUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesDraftRegistrationsPartialUpdatePathParams = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsPartialUpdatePathParams, _super);
     function NodesDraftRegistrationsPartialUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=draft_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=draft_id" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsPartialUpdatePathParams.prototype, "draftId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsPartialUpdatePathParams.prototype, "nodeId", void 0);
     return NodesDraftRegistrationsPartialUpdatePathParams;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsPartialUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsPartialUpdatePathParams = NodesDraftRegistrationsPartialUpdatePathParams;
 // NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput
 /**
  * The properties of the draft registration entity.
@@ -49,57 +52,57 @@ var NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput = /** @
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration_metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration_metadata" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput.prototype, "registrationMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration_supplement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration_supplement" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput.prototype, "registrationSupplement", void 0);
     return NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput = NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput;
 var NodesDraftRegistrationsPartialUpdateDraftRegistrationInput = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsPartialUpdateDraftRegistrationInput, _super);
     function NodesDraftRegistrationsPartialUpdateDraftRegistrationInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput)
     ], NodesDraftRegistrationsPartialUpdateDraftRegistrationInput.prototype, "attributes", void 0);
     return NodesDraftRegistrationsPartialUpdateDraftRegistrationInput;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsPartialUpdateDraftRegistrationInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsPartialUpdateDraftRegistrationInput = NodesDraftRegistrationsPartialUpdateDraftRegistrationInput;
 var NodesDraftRegistrationsPartialUpdateRequest = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsPartialUpdateRequest, _super);
     function NodesDraftRegistrationsPartialUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesDraftRegistrationsPartialUpdatePathParams)
     ], NodesDraftRegistrationsPartialUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesDraftRegistrationsPartialUpdateDraftRegistrationInput)
     ], NodesDraftRegistrationsPartialUpdateRequest.prototype, "request", void 0);
     return NodesDraftRegistrationsPartialUpdateRequest;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsPartialUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsPartialUpdateRequest = NodesDraftRegistrationsPartialUpdateRequest;
 var NodesDraftRegistrationsPartialUpdateResponse = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsPartialUpdateResponse, _super);
     function NodesDraftRegistrationsPartialUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsPartialUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesDraftRegistrationsPartialUpdateResponse.prototype, "statusCode", void 0);
     return NodesDraftRegistrationsPartialUpdateResponse;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsPartialUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsPartialUpdateResponse = NodesDraftRegistrationsPartialUpdateResponse;

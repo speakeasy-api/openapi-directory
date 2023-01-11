@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthConfig } from "./authconfig";
-import { ConfigVariable } from "./configvariable";
-import { DestinationConfig } from "./destinationconfig";
-import { LockConfig } from "./lockconfig";
-import { NodeConfig } from "./nodeconfig";
-import { ConnectionStatus } from "./connectionstatus";
-// Connection
-/**
- * Connection represents an instance of connector.
-**/
-var Connection = /** @class */ (function (_super) {
-    __extends(Connection, _super);
-    function Connection() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=authConfig" }),
-        __metadata("design:type", AuthConfig)
-    ], Connection.prototype, "authConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=configVariables", elemType: ConfigVariable }),
-        __metadata("design:type", Array)
-    ], Connection.prototype, "configVariables", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorVersion" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "connectorVersion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationConfigs", elemType: DestinationConfig }),
-        __metadata("design:type", Array)
-    ], Connection.prototype, "destinationConfigs", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=envoyImageLocation" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "envoyImageLocation", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageLocation" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "imageLocation", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], Connection.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockConfig" }),
-        __metadata("design:type", LockConfig)
-    ], Connection.prototype, "lockConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeConfig" }),
-        __metadata("design:type", NodeConfig)
-    ], Connection.prototype, "nodeConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "serviceAccount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDirectory" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "serviceDirectory", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", ConnectionStatus)
-    ], Connection.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended" }),
-        __metadata("design:type", Boolean)
-    ], Connection.prototype, "suspended", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], Connection.prototype, "updateTime", void 0);
-    return Connection;
-}(SpeakeasyBase));
-export { Connection };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Connection = exports.ConnectionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var authconfig_1 = require("./authconfig");
+var configvariable_1 = require("./configvariable");
+var destinationconfig_1 = require("./destinationconfig");
+var lockconfig_1 = require("./lockconfig");
+var nodeconfig_1 = require("./nodeconfig");
+var connectionstatus_1 = require("./connectionstatus");
 // ConnectionInput
 /**
  * Connection represents an instance of connector.
@@ -119,49 +42,129 @@ var ConnectionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authConfig" }),
-        __metadata("design:type", AuthConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authConfig" }),
+        __metadata("design:type", authconfig_1.AuthConfig)
     ], ConnectionInput.prototype, "authConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configVariables", elemType: ConfigVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configVariables", elemType: configvariable_1.ConfigVariable }),
         __metadata("design:type", Array)
     ], ConnectionInput.prototype, "configVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorVersion" }),
         __metadata("design:type", String)
     ], ConnectionInput.prototype, "connectorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ConnectionInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationConfigs", elemType: DestinationConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationConfigs", elemType: destinationconfig_1.DestinationConfig }),
         __metadata("design:type", Array)
     ], ConnectionInput.prototype, "destinationConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ConnectionInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockConfig" }),
-        __metadata("design:type", LockConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockConfig" }),
+        __metadata("design:type", lockconfig_1.LockConfig)
     ], ConnectionInput.prototype, "lockConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeConfig" }),
-        __metadata("design:type", NodeConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeConfig" }),
+        __metadata("design:type", nodeconfig_1.NodeConfig)
     ], ConnectionInput.prototype, "nodeConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], ConnectionInput.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", ConnectionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", connectionstatus_1.ConnectionStatus)
     ], ConnectionInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended" }),
         __metadata("design:type", Boolean)
     ], ConnectionInput.prototype, "suspended", void 0);
     return ConnectionInput;
-}(SpeakeasyBase));
-export { ConnectionInput };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionInput = ConnectionInput;
+// Connection
+/**
+ * Connection represents an instance of connector.
+**/
+var Connection = /** @class */ (function (_super) {
+    __extends(Connection, _super);
+    function Connection() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authConfig" }),
+        __metadata("design:type", authconfig_1.AuthConfig)
+    ], Connection.prototype, "authConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configVariables", elemType: configvariable_1.ConfigVariable }),
+        __metadata("design:type", Array)
+    ], Connection.prototype, "configVariables", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorVersion" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "connectorVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationConfigs", elemType: destinationconfig_1.DestinationConfig }),
+        __metadata("design:type", Array)
+    ], Connection.prototype, "destinationConfigs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=envoyImageLocation" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "envoyImageLocation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageLocation" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "imageLocation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], Connection.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockConfig" }),
+        __metadata("design:type", lockconfig_1.LockConfig)
+    ], Connection.prototype, "lockConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeConfig" }),
+        __metadata("design:type", nodeconfig_1.NodeConfig)
+    ], Connection.prototype, "nodeConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "serviceAccount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDirectory" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "serviceDirectory", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", connectionstatus_1.ConnectionStatus)
+    ], Connection.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended" }),
+        __metadata("design:type", Boolean)
+    ], Connection.prototype, "suspended", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], Connection.prototype, "updateTime", void 0);
+    return Connection;
+}(utils_1.SpeakeasyBase));
+exports.Connection = Connection;

@@ -40,6 +40,6 @@ export declare class DeleteParameterRequest extends SpeakeasyBase {
 export declare class DeleteParameterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteParameter200ApplicationJsonObject?: DeleteParameter200ApplicationJson;
-    deleteParameter500ApplicationJsonObject?: DeleteParameter500ApplicationJson;
+    deleteParameter200ApplicationJSONObject?: DeleteParameter200ApplicationJson;
+    deleteParameter500ApplicationJSONObject?: DeleteParameter500ApplicationJson;
 }

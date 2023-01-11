@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccountsAccountPositionsResponse = exports.GetAccountsAccountPositionsRequest = exports.GetAccountsAccountPositions200ApplicationJson = exports.GetAccountsAccountPositionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAccountsAccountPositionsPathParams = /** @class */ (function (_super) {
     __extends(GetAccountsAccountPositionsPathParams, _super);
     function GetAccountsAccountPositionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=account" }),
         __metadata("design:type", String)
     ], GetAccountsAccountPositionsPathParams.prototype, "account", void 0);
     return GetAccountsAccountPositionsPathParams;
-}(SpeakeasyBase));
-export { GetAccountsAccountPositionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsAccountPositionsPathParams = GetAccountsAccountPositionsPathParams;
 var GetAccountsAccountPositions200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAccountsAccountPositions200ApplicationJson, _super);
     function GetAccountsAccountPositions200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AverageCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AverageCost" }),
         __metadata("design:type", Number)
     ], GetAccountsAccountPositions200ApplicationJson.prototype, "averageCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContractId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContractId" }),
         __metadata("design:type", Number)
     ], GetAccountsAccountPositions200ApplicationJson.prototype, "contractId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Position" }),
         __metadata("design:type", Number)
     ], GetAccountsAccountPositions200ApplicationJson.prototype, "position", void 0);
     return GetAccountsAccountPositions200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAccountsAccountPositions200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsAccountPositions200ApplicationJson = GetAccountsAccountPositions200ApplicationJson;
 var GetAccountsAccountPositionsRequest = /** @class */ (function (_super) {
     __extends(GetAccountsAccountPositionsRequest, _super);
     function GetAccountsAccountPositionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAccountsAccountPositionsPathParams)
     ], GetAccountsAccountPositionsRequest.prototype, "pathParams", void 0);
     return GetAccountsAccountPositionsRequest;
-}(SpeakeasyBase));
-export { GetAccountsAccountPositionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsAccountPositionsRequest = GetAccountsAccountPositionsRequest;
 var GetAccountsAccountPositionsResponse = /** @class */ (function (_super) {
     __extends(GetAccountsAccountPositionsResponse, _super);
     function GetAccountsAccountPositionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAccountsAccountPositionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetAccountsAccountPositions200ApplicationJson }),
-        __metadata("design:type", Array)
-    ], GetAccountsAccountPositionsResponse.prototype, "getAccountsAccountPositions200ApplicationJsonObjects", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAccountsAccountPositionsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetAccountsAccountPositions200ApplicationJson }),
+        __metadata("design:type", Array)
+    ], GetAccountsAccountPositionsResponse.prototype, "getAccountsAccountPositions200ApplicationJSONObjects", void 0);
     return GetAccountsAccountPositionsResponse;
-}(SpeakeasyBase));
-export { GetAccountsAccountPositionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsAccountPositionsResponse = GetAccountsAccountPositionsResponse;

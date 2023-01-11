@@ -4,7 +4,7 @@ export declare class CreateAuthorIfNotExistsForUsingGetQueryParams extends Speak
     name?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -13,17 +13,17 @@ export declare class CreateAuthorIfNotExistsForUsingGet200ApplicationJson extend
 }
 export declare class CreateAuthorIfNotExistsForUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateAuthorIfNotExistsForUsingGetRequest extends SpeakeasyBase {
@@ -32,8 +32,8 @@ export declare class CreateAuthorIfNotExistsForUsingGetRequest extends Speakeasy
 export declare class CreateAuthorIfNotExistsForUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createAuthorIfNotExistsForUsingGet200ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingGet200ApplicationJson;
-    createAuthorIfNotExistsForUsingGet400ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingGet400ApplicationJson;
-    createAuthorIfNotExistsForUsingGet401ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingGet401ApplicationJson;
-    createAuthorIfNotExistsForUsingGet500ApplicationJsonObject?: CreateAuthorIfNotExistsForUsingGet500ApplicationJson;
+    createAuthorIfNotExistsForUsingGET200ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet200ApplicationJson;
+    createAuthorIfNotExistsForUsingGET400ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet400ApplicationJson;
+    createAuthorIfNotExistsForUsingGET401ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet401ApplicationJson;
+    createAuthorIfNotExistsForUsingGET500ApplicationJSONObject?: CreateAuthorIfNotExistsForUsingGet500ApplicationJson;
 }

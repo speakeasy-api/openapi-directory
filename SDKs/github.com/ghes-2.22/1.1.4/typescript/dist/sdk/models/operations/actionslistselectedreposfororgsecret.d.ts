@@ -19,5 +19,5 @@ export declare class ActionsListSelectedReposForOrgSecretRequest extends Speakea
 export declare class ActionsListSelectedReposForOrgSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelectedReposForOrgSecret200ApplicationJsonObject?: ActionsListSelectedReposForOrgSecret200ApplicationJson;
+    actionsListSelectedReposForOrgSecret200ApplicationJSONObject?: ActionsListSelectedReposForOrgSecret200ApplicationJson;
 }

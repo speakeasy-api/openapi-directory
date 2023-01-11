@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2KMapEstimationQuasiIdValues } from "./googleprivacydlpv2kmapestimationquasiidvalues";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KMapEstimationHistogramBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2kmapestimationquasiidvalues_1 = require("./googleprivacydlpv2kmapestimationquasiidvalues");
 // GooglePrivacyDlpV2KMapEstimationHistogramBucket
 /**
  * A KMapEstimationHistogramBucket message with the following values: min_anonymity: 3 max_anonymity: 5 frequency: 42 means that there are 42 records whose quasi-identifier values correspond to 3, 4 or 5 people in the overlying population. An important particular case is when min_anonymity = max_anonymity = 1: the frequency field then corresponds to the number of uniquely identifiable records.
@@ -34,25 +37,25 @@ var GooglePrivacyDlpV2KMapEstimationHistogramBucket = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketSize" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KMapEstimationHistogramBucket.prototype, "bucketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValueCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValueCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KMapEstimationHistogramBucket.prototype, "bucketValueCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValues", elemType: GooglePrivacyDlpV2KMapEstimationQuasiIdValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValues", elemType: googleprivacydlpv2kmapestimationquasiidvalues_1.GooglePrivacyDlpV2KMapEstimationQuasiIdValues }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KMapEstimationHistogramBucket.prototype, "bucketValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAnonymity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAnonymity" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KMapEstimationHistogramBucket.prototype, "maxAnonymity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minAnonymity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minAnonymity" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KMapEstimationHistogramBucket.prototype, "minAnonymity", void 0);
     return GooglePrivacyDlpV2KMapEstimationHistogramBucket;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KMapEstimationHistogramBucket };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KMapEstimationHistogramBucket = GooglePrivacyDlpV2KMapEstimationHistogramBucket;

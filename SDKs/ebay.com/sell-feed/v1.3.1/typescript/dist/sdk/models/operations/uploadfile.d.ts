@@ -14,5 +14,5 @@ export declare class UploadFileRequest extends SpeakeasyBase {
 export declare class UploadFileResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    uploadFile200ApplicationJsonObject?: Map<string, any>;
+    uploadFile200ApplicationJSONObject?: Record<string, any>;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AuthTokenRequest, AuthTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,9 +28,9 @@ const sdk = new SDK();
     
 const req: AuthTokenRequest = {
   request: {
-    clientId: "occaecati",
-    clientSecret: "debitis",
-    grantType: "et",
+    clientId: "sit",
+    clientSecret: "voluptas",
+    grantType: "culpa",
   },
 };
 
@@ -92,6 +91,7 @@ sdk.authentication.authToken(req).then((res: AuthTokenResponse | AxiosError) => 
 
 * `webhooksFetchAll` - Fetch active webhooks
 * `webhooksSubscribe` - Subscribe to message events
+* `webhooksUnsubscribe` - Unsubscribe to message events
 
 <!-- End SDK Available Operations -->
 

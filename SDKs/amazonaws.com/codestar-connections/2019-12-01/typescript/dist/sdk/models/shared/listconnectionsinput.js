@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProviderTypeEnum } from "./providertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListConnectionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var providertypeenum_1 = require("./providertypeenum");
 var ListConnectionsInput = /** @class */ (function (_super) {
     __extends(ListConnectionsInput, _super);
     function ListConnectionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HostArnFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HostArnFilter" }),
         __metadata("design:type", String)
     ], ListConnectionsInput.prototype, "hostArnFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListConnectionsInput.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListConnectionsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderTypeFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderTypeFilter" }),
         __metadata("design:type", String)
     ], ListConnectionsInput.prototype, "providerTypeFilter", void 0);
     return ListConnectionsInput;
-}(SpeakeasyBase));
-export { ListConnectionsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListConnectionsInput = ListConnectionsInput;

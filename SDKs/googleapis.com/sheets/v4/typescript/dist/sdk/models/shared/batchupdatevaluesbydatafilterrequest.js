@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataFilterValueRange } from "./datafiltervaluerange";
-export var BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateValuesByDataFilterRequest = exports.BatchUpdateValuesByDataFilterRequestValueInputOptionEnum = exports.BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum = exports.BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafiltervaluerange_1 = require("./datafiltervaluerange");
+var BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum;
 (function (BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum) {
     BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum["SerialNumber"] = "SERIAL_NUMBER";
     BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum["FormattedString"] = "FORMATTED_STRING";
-})(BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum || (BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum = {}));
-export var BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum;
+})(BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum = exports.BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum || (exports.BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum = {}));
+var BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum;
 (function (BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum) {
     BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum["FormattedValue"] = "FORMATTED_VALUE";
     BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum["UnformattedValue"] = "UNFORMATTED_VALUE";
     BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum["Formula"] = "FORMULA";
-})(BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum || (BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum = {}));
-export var BatchUpdateValuesByDataFilterRequestValueInputOptionEnum;
+})(BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum = exports.BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum || (exports.BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum = {}));
+var BatchUpdateValuesByDataFilterRequestValueInputOptionEnum;
 (function (BatchUpdateValuesByDataFilterRequestValueInputOptionEnum) {
     BatchUpdateValuesByDataFilterRequestValueInputOptionEnum["InputValueOptionUnspecified"] = "INPUT_VALUE_OPTION_UNSPECIFIED";
     BatchUpdateValuesByDataFilterRequestValueInputOptionEnum["Raw"] = "RAW";
     BatchUpdateValuesByDataFilterRequestValueInputOptionEnum["UserEntered"] = "USER_ENTERED";
-})(BatchUpdateValuesByDataFilterRequestValueInputOptionEnum || (BatchUpdateValuesByDataFilterRequestValueInputOptionEnum = {}));
+})(BatchUpdateValuesByDataFilterRequestValueInputOptionEnum = exports.BatchUpdateValuesByDataFilterRequestValueInputOptionEnum || (exports.BatchUpdateValuesByDataFilterRequestValueInputOptionEnum = {}));
 // BatchUpdateValuesByDataFilterRequest
 /**
  * The request for updating more than one range of values in a spreadsheet.
@@ -51,25 +54,25 @@ var BatchUpdateValuesByDataFilterRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: DataFilterValueRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: datafiltervaluerange_1.DataFilterValueRange }),
         __metadata("design:type", Array)
     ], BatchUpdateValuesByDataFilterRequest.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeValuesInResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeValuesInResponse" }),
         __metadata("design:type", Boolean)
     ], BatchUpdateValuesByDataFilterRequest.prototype, "includeValuesInResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseDateTimeRenderOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseDateTimeRenderOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesByDataFilterRequest.prototype, "responseDateTimeRenderOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseValueRenderOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseValueRenderOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesByDataFilterRequest.prototype, "responseValueRenderOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueInputOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueInputOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesByDataFilterRequest.prototype, "valueInputOption", void 0);
     return BatchUpdateValuesByDataFilterRequest;
-}(SpeakeasyBase));
-export { BatchUpdateValuesByDataFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateValuesByDataFilterRequest = BatchUpdateValuesByDataFilterRequest;

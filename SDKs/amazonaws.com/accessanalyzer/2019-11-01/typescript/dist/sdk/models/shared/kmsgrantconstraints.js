@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KmsGrantConstraints = void 0;
+var utils_1 = require("../../../internal/utils");
 // KmsGrantConstraints
 /**
  * Use this structure to propose allowing <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operations</a> in the grant only when the operation request includes the specified <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">encryption context</a>. You can specify only one type of encryption context. An empty map is treated as not specified. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_GrantConstraints.html">GrantConstraints</a>.
@@ -33,13 +36,13 @@ var KmsGrantConstraints = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionContextEquals" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionContextEquals" }),
+        __metadata("design:type", Object)
     ], KmsGrantConstraints.prototype, "encryptionContextEquals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionContextSubset" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionContextSubset" }),
+        __metadata("design:type", Object)
     ], KmsGrantConstraints.prototype, "encryptionContextSubset", void 0);
     return KmsGrantConstraints;
-}(SpeakeasyBase));
-export { KmsGrantConstraints };
+}(utils_1.SpeakeasyBase));
+exports.KmsGrantConstraints = KmsGrantConstraints;

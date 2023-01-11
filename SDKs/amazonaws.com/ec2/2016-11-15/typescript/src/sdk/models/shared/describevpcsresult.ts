@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Vpc } from "./vpc";
 
 
 
 export class DescribeVpcsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Vpc })
-  vpcs?: Vpc[];
+  @SpeakeasyMetadata()
+  vpcs?: Record<string, any>;
 }

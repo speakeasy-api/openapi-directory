@@ -1,0 +1,159 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioRenderTimelineSpanRegion = exports.AudioRenderTimelineSpanRegionRegionEnum = exports.AudioRenderTimelineSpanRegionKey = exports.AudioRenderTimelineSpanRegionKeyTonicQualityEnum = exports.AudioRenderTimelineSpanRegionKeyTonicNoteEnum = exports.AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum = exports.AudioRenderTimelineSpanRegionEndType = exports.AudioRenderTimelineSpanRegionEndTypeTypeEnum = exports.AudioRenderTimelineSpanRegionEndTypeEventEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AudioRenderTimelineSpanRegionEndTypeEventEnum;
+(function (AudioRenderTimelineSpanRegionEndTypeEventEnum) {
+    AudioRenderTimelineSpanRegionEndTypeEventEnum["Ending"] = "ending";
+    AudioRenderTimelineSpanRegionEndTypeEventEnum["Transition"] = "transition";
+})(AudioRenderTimelineSpanRegionEndTypeEventEnum = exports.AudioRenderTimelineSpanRegionEndTypeEventEnum || (exports.AudioRenderTimelineSpanRegionEndTypeEventEnum = {}));
+var AudioRenderTimelineSpanRegionEndTypeTypeEnum;
+(function (AudioRenderTimelineSpanRegionEndTypeTypeEnum) {
+    AudioRenderTimelineSpanRegionEndTypeTypeEnum["Ringout"] = "ringout";
+    AudioRenderTimelineSpanRegionEndTypeTypeEnum["Cut"] = "cut";
+})(AudioRenderTimelineSpanRegionEndTypeTypeEnum = exports.AudioRenderTimelineSpanRegionEndTypeTypeEnum || (exports.AudioRenderTimelineSpanRegionEndTypeTypeEnum = {}));
+// AudioRenderTimelineSpanRegionEndType
+/**
+ * A high-level description of how a region ends
+**/
+var AudioRenderTimelineSpanRegionEndType = /** @class */ (function (_super) {
+    __extends(AudioRenderTimelineSpanRegionEndType, _super);
+    function AudioRenderTimelineSpanRegionEndType() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beat" }),
+        __metadata("design:type", Number)
+    ], AudioRenderTimelineSpanRegionEndType.prototype, "beat", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegionEndType.prototype, "event", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegionEndType.prototype, "type", void 0);
+    return AudioRenderTimelineSpanRegionEndType;
+}(utils_1.SpeakeasyBase));
+exports.AudioRenderTimelineSpanRegionEndType = AudioRenderTimelineSpanRegionEndType;
+var AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum;
+(function (AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum) {
+    AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum["DoubleFlat"] = "double flat";
+    AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum["Flat"] = "flat";
+    AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum["Natural"] = "natural";
+    AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum["Sharp"] = "sharp";
+    AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum["DoubleSharp"] = "double sharp";
+})(AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum = exports.AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum || (exports.AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum = {}));
+var AudioRenderTimelineSpanRegionKeyTonicNoteEnum;
+(function (AudioRenderTimelineSpanRegionKeyTonicNoteEnum) {
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["C"] = "c";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["D"] = "d";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["E"] = "e";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["F"] = "f";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["G"] = "g";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["A"] = "a";
+    AudioRenderTimelineSpanRegionKeyTonicNoteEnum["B"] = "b";
+})(AudioRenderTimelineSpanRegionKeyTonicNoteEnum = exports.AudioRenderTimelineSpanRegionKeyTonicNoteEnum || (exports.AudioRenderTimelineSpanRegionKeyTonicNoteEnum = {}));
+var AudioRenderTimelineSpanRegionKeyTonicQualityEnum;
+(function (AudioRenderTimelineSpanRegionKeyTonicQualityEnum) {
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Major"] = "major";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["NaturalMinor"] = "natural_minor";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["HarmonicMinor"] = "harmonic_minor";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["MelodicMinor"] = "melodic_minor";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Ionian"] = "ionian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Dorian"] = "dorian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Phrygian"] = "phrygian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Lydian"] = "lydian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Mixolydian"] = "mixolydian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Aeolian"] = "aeolian";
+    AudioRenderTimelineSpanRegionKeyTonicQualityEnum["Locrian"] = "locrian";
+})(AudioRenderTimelineSpanRegionKeyTonicQualityEnum = exports.AudioRenderTimelineSpanRegionKeyTonicQualityEnum || (exports.AudioRenderTimelineSpanRegionKeyTonicQualityEnum = {}));
+// AudioRenderTimelineSpanRegionKey
+/**
+ * The key signature active at the beginning of the region
+**/
+var AudioRenderTimelineSpanRegionKey = /** @class */ (function (_super) {
+    __extends(AudioRenderTimelineSpanRegionKey, _super);
+    function AudioRenderTimelineSpanRegionKey() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tonic_accidental" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegionKey.prototype, "tonicAccidental", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tonic_note" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegionKey.prototype, "tonicNote", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tonic_quality" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegionKey.prototype, "tonicQuality", void 0);
+    return AudioRenderTimelineSpanRegionKey;
+}(utils_1.SpeakeasyBase));
+exports.AudioRenderTimelineSpanRegionKey = AudioRenderTimelineSpanRegionKey;
+var AudioRenderTimelineSpanRegionRegionEnum;
+(function (AudioRenderTimelineSpanRegionRegionEnum) {
+    AudioRenderTimelineSpanRegionRegionEnum["Music"] = "music";
+    AudioRenderTimelineSpanRegionRegionEnum["Silence"] = "silence";
+})(AudioRenderTimelineSpanRegionRegionEnum = exports.AudioRenderTimelineSpanRegionRegionEnum || (exports.AudioRenderTimelineSpanRegionRegionEnum = {}));
+// AudioRenderTimelineSpanRegion
+/**
+ * A period of music or silence, measured in beats
+**/
+var AudioRenderTimelineSpanRegion = /** @class */ (function (_super) {
+    __extends(AudioRenderTimelineSpanRegion, _super);
+    function AudioRenderTimelineSpanRegion() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beat" }),
+        __metadata("design:type", Number)
+    ], AudioRenderTimelineSpanRegion.prototype, "beat", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=descriptor" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegion.prototype, "descriptor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_type" }),
+        __metadata("design:type", AudioRenderTimelineSpanRegionEndType)
+    ], AudioRenderTimelineSpanRegion.prototype, "endType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], AudioRenderTimelineSpanRegion.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", AudioRenderTimelineSpanRegionKey)
+    ], AudioRenderTimelineSpanRegion.prototype, "key", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
+        __metadata("design:type", String)
+    ], AudioRenderTimelineSpanRegion.prototype, "region", void 0);
+    return AudioRenderTimelineSpanRegion;
+}(utils_1.SpeakeasyBase));
+exports.AudioRenderTimelineSpanRegion = AudioRenderTimelineSpanRegion;

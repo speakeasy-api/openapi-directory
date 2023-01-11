@@ -62,7 +62,7 @@ export class NetworkservicesProjectsLocationsOperationsCancelRequest extends Spe
   queryParams: NetworkservicesProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: NetworkservicesProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class NetworkservicesProjectsLocationsOperationsCancelResponse extends Sp
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

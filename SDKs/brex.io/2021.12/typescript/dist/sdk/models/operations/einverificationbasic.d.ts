@@ -12,7 +12,7 @@ export declare class EinVerificationBasicRequest extends SpeakeasyBase {
 }
 export declare class EinVerificationBasicResponse extends SpeakeasyBase {
     contentType: string;
-    einVerificationBasic200ApplicationJsonAny?: any;
-    einVerificationBasicDefaultApplicationJsonAny?: any;
+    einVerificationBasic200ApplicationJSONAny?: any;
+    einVerificationBasicDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

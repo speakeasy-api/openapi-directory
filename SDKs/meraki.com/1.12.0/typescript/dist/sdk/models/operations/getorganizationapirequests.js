@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApiRequestsResponse = exports.GetOrganizationApiRequestsRequest = exports.GetOrganizationApiRequestsQueryParams = exports.GetOrganizationApiRequestsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApiRequestsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApiRequestsPathParams, _super);
     function GetOrganizationApiRequestsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApiRequestsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApiRequestsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApiRequestsPathParams = GetOrganizationApiRequestsPathParams;
 var GetOrganizationApiRequestsQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApiRequestsQueryParams, _super);
     function GetOrganizationApiRequestsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=adminId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=adminId" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "adminId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=method" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=path" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationApiRequestsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=responseCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=responseCode" }),
         __metadata("design:type", Number)
     ], GetOrganizationApiRequestsQueryParams.prototype, "responseCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sourceIp" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "sourceIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetOrganizationApiRequestsQueryParams.prototype, "timespan", void 0);
     return GetOrganizationApiRequestsQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationApiRequestsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApiRequestsQueryParams = GetOrganizationApiRequestsQueryParams;
 var GetOrganizationApiRequestsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApiRequestsRequest, _super);
     function GetOrganizationApiRequestsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApiRequestsPathParams)
     ], GetOrganizationApiRequestsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApiRequestsQueryParams)
     ], GetOrganizationApiRequestsRequest.prototype, "queryParams", void 0);
     return GetOrganizationApiRequestsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApiRequestsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApiRequestsRequest = GetOrganizationApiRequestsRequest;
 var GetOrganizationApiRequestsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApiRequestsResponse, _super);
     function GetOrganizationApiRequestsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApiRequestsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationApiRequestsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApiRequestsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApiRequestsResponse.prototype, "getOrganizationApiRequests200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApiRequestsResponse.prototype, "getOrganizationApiRequests200ApplicationJSONObject", void 0);
     return GetOrganizationApiRequestsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApiRequestsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApiRequestsResponse = GetOrganizationApiRequestsResponse;

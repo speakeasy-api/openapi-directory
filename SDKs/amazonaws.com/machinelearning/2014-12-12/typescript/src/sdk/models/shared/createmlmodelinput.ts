@@ -14,7 +14,7 @@ export class CreateMlModelInput extends SpeakeasyBase {
   mlModelType: MlModelTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Recipe" })
   recipe?: string;

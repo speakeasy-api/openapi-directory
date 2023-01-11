@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VehicleProfileIdEnum } from "./vehicleprofileidenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatrixRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var vehicleprofileidenum_1 = require("./vehicleprofileidenum");
 var MatrixRequest = /** @class */ (function (_super) {
     __extends(MatrixRequest, _super);
     function MatrixRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fail_fast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fail_fast" }),
         __metadata("design:type", Boolean)
     ], MatrixRequest.prototype, "failFast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_curbsides" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_curbsides" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "fromCurbsides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_point_hints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_point_hints" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "fromPointHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_points" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "fromPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=out_arrays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=out_arrays" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "outArrays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snap_preventions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snap_preventions" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "snapPreventions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_curbsides" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_curbsides" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "toCurbsides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_point_hints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_point_hints" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "toPointHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_points" }),
         __metadata("design:type", Array)
     ], MatrixRequest.prototype, "toPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=turn_costs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=turn_costs" }),
         __metadata("design:type", Boolean)
     ], MatrixRequest.prototype, "turnCosts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vehicle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vehicle" }),
         __metadata("design:type", String)
     ], MatrixRequest.prototype, "vehicle", void 0);
     return MatrixRequest;
-}(SpeakeasyBase));
-export { MatrixRequest };
+}(utils_1.SpeakeasyBase));
+exports.MatrixRequest = MatrixRequest;

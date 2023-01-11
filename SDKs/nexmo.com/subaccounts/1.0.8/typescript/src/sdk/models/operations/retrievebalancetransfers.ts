@@ -87,8 +87,8 @@ export class RetrieveBalanceTransfersResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  retrieveBalanceTransfers401ApplicationJsonObject?: RetrieveBalanceTransfers401ApplicationJson;
+  retrieveBalanceTransfers401ApplicationJSONObject?: RetrieveBalanceTransfers401ApplicationJson;
 
   @SpeakeasyMetadata()
-  retrieveBalanceTransfers404ApplicationJsonObject?: RetrieveBalanceTransfers404ApplicationJson;
+  retrieveBalanceTransfers404ApplicationJSONObject?: RetrieveBalanceTransfers404ApplicationJson;
 }

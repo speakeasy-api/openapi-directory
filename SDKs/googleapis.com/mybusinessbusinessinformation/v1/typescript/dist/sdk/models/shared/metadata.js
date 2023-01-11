@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // Metadata
 /**
  * Additional non-user-editable information about the location.
@@ -33,61 +36,61 @@ var Metadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDelete" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canHaveBusinessCalls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canHaveBusinessCalls" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canHaveBusinessCalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canHaveFoodMenus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canHaveFoodMenus" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canHaveFoodMenus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canModifyServiceList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canModifyServiceList" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canModifyServiceList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canOperateHealthData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canOperateHealthData" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canOperateHealthData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canOperateLocalPost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canOperateLocalPost" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canOperateLocalPost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canOperateLodgingData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canOperateLodgingData" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "canOperateLodgingData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duplicateLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duplicateLocation" }),
         __metadata("design:type", String)
     ], Metadata.prototype, "duplicateLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasGoogleUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasGoogleUpdated" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "hasGoogleUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPendingEdits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPendingEdits" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "hasPendingEdits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasVoiceOfMerchant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasVoiceOfMerchant" }),
         __metadata("design:type", Boolean)
     ], Metadata.prototype, "hasVoiceOfMerchant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapsUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapsUri" }),
         __metadata("design:type", String)
     ], Metadata.prototype, "mapsUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newReviewUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newReviewUri" }),
         __metadata("design:type", String)
     ], Metadata.prototype, "newReviewUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeId" }),
         __metadata("design:type", String)
     ], Metadata.prototype, "placeId", void 0);
     return Metadata;
-}(SpeakeasyBase));
-export { Metadata };
+}(utils_1.SpeakeasyBase));
+exports.Metadata = Metadata;

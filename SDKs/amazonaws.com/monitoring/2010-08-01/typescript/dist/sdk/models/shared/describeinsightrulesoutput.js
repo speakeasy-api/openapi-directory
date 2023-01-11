@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightRule } from "./insightrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeInsightRulesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightrule_1 = require("./insightrule");
 var DescribeInsightRulesOutput = /** @class */ (function (_super) {
     __extends(DescribeInsightRulesOutput, _super);
     function DescribeInsightRulesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: InsightRule }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: insightrule_1.InsightRule }),
         __metadata("design:type", Array)
     ], DescribeInsightRulesOutput.prototype, "insightRules", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeInsightRulesOutput.prototype, "nextToken", void 0);
     return DescribeInsightRulesOutput;
-}(SpeakeasyBase));
-export { DescribeInsightRulesOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeInsightRulesOutput = DescribeInsightRulesOutput;

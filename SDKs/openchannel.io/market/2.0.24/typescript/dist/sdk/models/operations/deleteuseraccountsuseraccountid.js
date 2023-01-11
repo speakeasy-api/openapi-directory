@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteUserAccountsUserAccountIdResponse = exports.DeleteUserAccountsUserAccountIdRequest = exports.DeleteUserAccountsUserAccountIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteUserAccountsUserAccountIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteUserAccountsUserAccountIdPathParams, _super);
     function DeleteUserAccountsUserAccountIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userAccountId" }),
         __metadata("design:type", String)
     ], DeleteUserAccountsUserAccountIdPathParams.prototype, "userAccountId", void 0);
     return DeleteUserAccountsUserAccountIdPathParams;
-}(SpeakeasyBase));
-export { DeleteUserAccountsUserAccountIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserAccountsUserAccountIdPathParams = DeleteUserAccountsUserAccountIdPathParams;
 var DeleteUserAccountsUserAccountIdRequest = /** @class */ (function (_super) {
     __extends(DeleteUserAccountsUserAccountIdRequest, _super);
     function DeleteUserAccountsUserAccountIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteUserAccountsUserAccountIdPathParams)
     ], DeleteUserAccountsUserAccountIdRequest.prototype, "pathParams", void 0);
     return DeleteUserAccountsUserAccountIdRequest;
-}(SpeakeasyBase));
-export { DeleteUserAccountsUserAccountIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserAccountsUserAccountIdRequest = DeleteUserAccountsUserAccountIdRequest;
 var DeleteUserAccountsUserAccountIdResponse = /** @class */ (function (_super) {
     __extends(DeleteUserAccountsUserAccountIdResponse, _super);
     function DeleteUserAccountsUserAccountIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteUserAccountsUserAccountIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteUserAccountsUserAccountIdResponse.prototype, "statusCode", void 0);
     return DeleteUserAccountsUserAccountIdResponse;
-}(SpeakeasyBase));
-export { DeleteUserAccountsUserAccountIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserAccountsUserAccountIdResponse = DeleteUserAccountsUserAccountIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportTaskRunnerHeartbeatInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReportTaskRunnerHeartbeatInput
 /**
  * Contains the parameters for ReportTaskRunnerHeartbeat.
@@ -33,17 +36,17 @@ var ReportTaskRunnerHeartbeatInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], ReportTaskRunnerHeartbeatInput.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskrunnerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskrunnerId" }),
         __metadata("design:type", String)
     ], ReportTaskRunnerHeartbeatInput.prototype, "taskrunnerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerGroup" }),
         __metadata("design:type", String)
     ], ReportTaskRunnerHeartbeatInput.prototype, "workerGroup", void 0);
     return ReportTaskRunnerHeartbeatInput;
-}(SpeakeasyBase));
-export { ReportTaskRunnerHeartbeatInput };
+}(utils_1.SpeakeasyBase));
+exports.ReportTaskRunnerHeartbeatInput = ReportTaskRunnerHeartbeatInput;

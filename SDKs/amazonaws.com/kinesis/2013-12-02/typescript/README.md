@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddTagsToStreamRequest, AddTagsToStreamResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,25 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddTagsToStreamRequest = {
   headers: {
-    xAmzAlgorithm: "temporibus",
-    xAmzContentSha256: "alias",
-    xAmzCredential: "error",
-    xAmzDate: "voluptatem",
-    xAmzSecurityToken: "quia",
-    xAmzSignature: "enim",
-    xAmzSignedHeaders: "aut",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "Kinesis_20131202.AddTagsToStream",
   },
   request: {
-    streamName: "ratione",
+    streamName: "fugit",
     tags: {
-      "eius": "quisquam",
-      "sequi": "quia",
+      "nihil": "rerum",
     },
   },
 };
 
-sdk.sdk.addTagsToStream(req).then((res: AddTagsToStreamResponse | AxiosError) => {
+sdk.addTagsToStream(req).then((res: AddTagsToStreamResponse | AxiosError) => {
    // handle response
 });
 ```

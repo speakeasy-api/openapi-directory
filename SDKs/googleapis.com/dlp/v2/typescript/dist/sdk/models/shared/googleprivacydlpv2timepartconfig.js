@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePrivacyDlpV2TimePartConfigPartToExtractEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2TimePartConfig = exports.GooglePrivacyDlpV2TimePartConfigPartToExtractEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePrivacyDlpV2TimePartConfigPartToExtractEnum;
 (function (GooglePrivacyDlpV2TimePartConfigPartToExtractEnum) {
     GooglePrivacyDlpV2TimePartConfigPartToExtractEnum["TimePartUnspecified"] = "TIME_PART_UNSPECIFIED";
     GooglePrivacyDlpV2TimePartConfigPartToExtractEnum["Year"] = "YEAR";
@@ -32,7 +35,7 @@ export var GooglePrivacyDlpV2TimePartConfigPartToExtractEnum;
     GooglePrivacyDlpV2TimePartConfigPartToExtractEnum["DayOfWeek"] = "DAY_OF_WEEK";
     GooglePrivacyDlpV2TimePartConfigPartToExtractEnum["WeekOfYear"] = "WEEK_OF_YEAR";
     GooglePrivacyDlpV2TimePartConfigPartToExtractEnum["HourOfDay"] = "HOUR_OF_DAY";
-})(GooglePrivacyDlpV2TimePartConfigPartToExtractEnum || (GooglePrivacyDlpV2TimePartConfigPartToExtractEnum = {}));
+})(GooglePrivacyDlpV2TimePartConfigPartToExtractEnum = exports.GooglePrivacyDlpV2TimePartConfigPartToExtractEnum || (exports.GooglePrivacyDlpV2TimePartConfigPartToExtractEnum = {}));
 // GooglePrivacyDlpV2TimePartConfig
 /**
  * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
@@ -43,9 +46,9 @@ var GooglePrivacyDlpV2TimePartConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partToExtract" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partToExtract" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2TimePartConfig.prototype, "partToExtract", void 0);
     return GooglePrivacyDlpV2TimePartConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2TimePartConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2TimePartConfig = GooglePrivacyDlpV2TimePartConfig;

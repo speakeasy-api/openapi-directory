@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserForApiContract } from "./userforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscussionFolderContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var userforapicontract_1 = require("./userforapicontract");
 var DiscussionFolderContract = /** @class */ (function (_super) {
     __extends(DiscussionFolderContract, _super);
     function DiscussionFolderContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DiscussionFolderContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DiscussionFolderContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastTopicAuthor" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastTopicAuthor" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], DiscussionFolderContract.prototype, "lastTopicAuthor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastTopicDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastTopicDate" }),
         __metadata("design:type", Date)
     ], DiscussionFolderContract.prototype, "lastTopicDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DiscussionFolderContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicCount" }),
         __metadata("design:type", Number)
     ], DiscussionFolderContract.prototype, "topicCount", void 0);
     return DiscussionFolderContract;
-}(SpeakeasyBase));
-export { DiscussionFolderContract };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionFolderContract = DiscussionFolderContract;

@@ -22,5 +22,5 @@ export class GetNetworkSwitchPortSchedulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchPortSchedules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchPortSchedules200ApplicationJSONObject?: Record<string, any>;
 }

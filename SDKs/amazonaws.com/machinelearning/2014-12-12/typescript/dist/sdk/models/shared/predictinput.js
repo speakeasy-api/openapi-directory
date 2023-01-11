@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var PredictInput = /** @class */ (function (_super) {
     __extends(PredictInput, _super);
     function PredictInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], PredictInput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictEndpoint" }),
         __metadata("design:type", String)
     ], PredictInput.prototype, "predictEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Record" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Record" }),
+        __metadata("design:type", Object)
     ], PredictInput.prototype, "record", void 0);
     return PredictInput;
-}(SpeakeasyBase));
-export { PredictInput };
+}(utils_1.SpeakeasyBase));
+exports.PredictInput = PredictInput;

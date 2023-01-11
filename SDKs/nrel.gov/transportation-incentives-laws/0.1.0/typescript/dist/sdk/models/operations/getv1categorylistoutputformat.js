@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetV1CategoryListOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV1CategoryListOutputFormatResponse = exports.GetV1CategoryListOutputFormatRequest = exports.GetV1CategoryListOutputFormatQueryParams = exports.GetV1CategoryListOutputFormatTypeEnum = exports.GetV1CategoryListOutputFormatPathParams = exports.GetV1CategoryListOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetV1CategoryListOutputFormatOutputFormatEnum;
 (function (GetV1CategoryListOutputFormatOutputFormatEnum) {
     GetV1CategoryListOutputFormatOutputFormatEnum["Json"] = "json";
     GetV1CategoryListOutputFormatOutputFormatEnum["Xml"] = "xml";
-})(GetV1CategoryListOutputFormatOutputFormatEnum || (GetV1CategoryListOutputFormatOutputFormatEnum = {}));
+})(GetV1CategoryListOutputFormatOutputFormatEnum = exports.GetV1CategoryListOutputFormatOutputFormatEnum || (exports.GetV1CategoryListOutputFormatOutputFormatEnum = {}));
 var GetV1CategoryListOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetV1CategoryListOutputFormatPathParams, _super);
     function GetV1CategoryListOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=output_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=output_format" }),
         __metadata("design:type", String)
     ], GetV1CategoryListOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetV1CategoryListOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetV1CategoryListOutputFormatPathParams };
-export var GetV1CategoryListOutputFormatTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetV1CategoryListOutputFormatPathParams = GetV1CategoryListOutputFormatPathParams;
+var GetV1CategoryListOutputFormatTypeEnum;
 (function (GetV1CategoryListOutputFormatTypeEnum) {
     GetV1CategoryListOutputFormatTypeEnum["Tech"] = "tech";
     GetV1CategoryListOutputFormatTypeEnum["User"] = "user";
     GetV1CategoryListOutputFormatTypeEnum["Regulation"] = "regulation";
     GetV1CategoryListOutputFormatTypeEnum["Incentive"] = "incentive";
-})(GetV1CategoryListOutputFormatTypeEnum || (GetV1CategoryListOutputFormatTypeEnum = {}));
+})(GetV1CategoryListOutputFormatTypeEnum = exports.GetV1CategoryListOutputFormatTypeEnum || (exports.GetV1CategoryListOutputFormatTypeEnum = {}));
 var GetV1CategoryListOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetV1CategoryListOutputFormatQueryParams, _super);
     function GetV1CategoryListOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetV1CategoryListOutputFormatQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], GetV1CategoryListOutputFormatQueryParams.prototype, "type", void 0);
     return GetV1CategoryListOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetV1CategoryListOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV1CategoryListOutputFormatQueryParams = GetV1CategoryListOutputFormatQueryParams;
 var GetV1CategoryListOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetV1CategoryListOutputFormatRequest, _super);
     function GetV1CategoryListOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV1CategoryListOutputFormatPathParams)
     ], GetV1CategoryListOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV1CategoryListOutputFormatQueryParams)
     ], GetV1CategoryListOutputFormatRequest.prototype, "queryParams", void 0);
     return GetV1CategoryListOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetV1CategoryListOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV1CategoryListOutputFormatRequest = GetV1CategoryListOutputFormatRequest;
 var GetV1CategoryListOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetV1CategoryListOutputFormatResponse, _super);
     function GetV1CategoryListOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetV1CategoryListOutputFormatResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV1CategoryListOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV1CategoryListOutputFormatResponse.prototype, "statusCode", void 0);
     return GetV1CategoryListOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetV1CategoryListOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV1CategoryListOutputFormatResponse = GetV1CategoryListOutputFormatResponse;

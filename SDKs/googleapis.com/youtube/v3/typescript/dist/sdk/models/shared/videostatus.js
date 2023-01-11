@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VideoStatusFailureReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoStatus = exports.VideoStatusUploadStatusEnum = exports.VideoStatusRejectionReasonEnum = exports.VideoStatusPrivacyStatusEnum = exports.VideoStatusLicenseEnum = exports.VideoStatusFailureReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VideoStatusFailureReasonEnum;
 (function (VideoStatusFailureReasonEnum) {
     VideoStatusFailureReasonEnum["Conversion"] = "conversion";
     VideoStatusFailureReasonEnum["InvalidFile"] = "invalidFile";
@@ -31,19 +34,19 @@ export var VideoStatusFailureReasonEnum;
     VideoStatusFailureReasonEnum["TooSmall"] = "tooSmall";
     VideoStatusFailureReasonEnum["Codec"] = "codec";
     VideoStatusFailureReasonEnum["UploadAborted"] = "uploadAborted";
-})(VideoStatusFailureReasonEnum || (VideoStatusFailureReasonEnum = {}));
-export var VideoStatusLicenseEnum;
+})(VideoStatusFailureReasonEnum = exports.VideoStatusFailureReasonEnum || (exports.VideoStatusFailureReasonEnum = {}));
+var VideoStatusLicenseEnum;
 (function (VideoStatusLicenseEnum) {
     VideoStatusLicenseEnum["Youtube"] = "youtube";
     VideoStatusLicenseEnum["CreativeCommon"] = "creativeCommon";
-})(VideoStatusLicenseEnum || (VideoStatusLicenseEnum = {}));
-export var VideoStatusPrivacyStatusEnum;
+})(VideoStatusLicenseEnum = exports.VideoStatusLicenseEnum || (exports.VideoStatusLicenseEnum = {}));
+var VideoStatusPrivacyStatusEnum;
 (function (VideoStatusPrivacyStatusEnum) {
     VideoStatusPrivacyStatusEnum["Public"] = "public";
     VideoStatusPrivacyStatusEnum["Unlisted"] = "unlisted";
     VideoStatusPrivacyStatusEnum["Private"] = "private";
-})(VideoStatusPrivacyStatusEnum || (VideoStatusPrivacyStatusEnum = {}));
-export var VideoStatusRejectionReasonEnum;
+})(VideoStatusPrivacyStatusEnum = exports.VideoStatusPrivacyStatusEnum || (exports.VideoStatusPrivacyStatusEnum = {}));
+var VideoStatusRejectionReasonEnum;
 (function (VideoStatusRejectionReasonEnum) {
     VideoStatusRejectionReasonEnum["Copyright"] = "copyright";
     VideoStatusRejectionReasonEnum["Inappropriate"] = "inappropriate";
@@ -55,15 +58,15 @@ export var VideoStatusRejectionReasonEnum;
     VideoStatusRejectionReasonEnum["UploaderAccountClosed"] = "uploaderAccountClosed";
     VideoStatusRejectionReasonEnum["Trademark"] = "trademark";
     VideoStatusRejectionReasonEnum["Legal"] = "legal";
-})(VideoStatusRejectionReasonEnum || (VideoStatusRejectionReasonEnum = {}));
-export var VideoStatusUploadStatusEnum;
+})(VideoStatusRejectionReasonEnum = exports.VideoStatusRejectionReasonEnum || (exports.VideoStatusRejectionReasonEnum = {}));
+var VideoStatusUploadStatusEnum;
 (function (VideoStatusUploadStatusEnum) {
     VideoStatusUploadStatusEnum["Uploaded"] = "uploaded";
     VideoStatusUploadStatusEnum["Processed"] = "processed";
     VideoStatusUploadStatusEnum["Failed"] = "failed";
     VideoStatusUploadStatusEnum["Rejected"] = "rejected";
     VideoStatusUploadStatusEnum["Deleted"] = "deleted";
-})(VideoStatusUploadStatusEnum || (VideoStatusUploadStatusEnum = {}));
+})(VideoStatusUploadStatusEnum = exports.VideoStatusUploadStatusEnum || (exports.VideoStatusUploadStatusEnum = {}));
 // VideoStatus
 /**
  * Basic details about a video category, such as its localized title. Next Id: 18
@@ -74,45 +77,45 @@ var VideoStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embeddable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embeddable" }),
         __metadata("design:type", Boolean)
     ], VideoStatus.prototype, "embeddable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], VideoStatus.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], VideoStatus.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=madeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=madeForKids" }),
         __metadata("design:type", Boolean)
     ], VideoStatus.prototype, "madeForKids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacyStatus" }),
         __metadata("design:type", String)
     ], VideoStatus.prototype, "privacyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicStatsViewable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicStatsViewable" }),
         __metadata("design:type", Boolean)
     ], VideoStatus.prototype, "publicStatsViewable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishAt" }),
         __metadata("design:type", Date)
     ], VideoStatus.prototype, "publishAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rejectionReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rejectionReason" }),
         __metadata("design:type", String)
     ], VideoStatus.prototype, "rejectionReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfDeclaredMadeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfDeclaredMadeForKids" }),
         __metadata("design:type", Boolean)
     ], VideoStatus.prototype, "selfDeclaredMadeForKids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadStatus" }),
         __metadata("design:type", String)
     ], VideoStatus.prototype, "uploadStatus", void 0);
     return VideoStatus;
-}(SpeakeasyBase));
-export { VideoStatus };
+}(utils_1.SpeakeasyBase));
+exports.VideoStatus = VideoStatus;

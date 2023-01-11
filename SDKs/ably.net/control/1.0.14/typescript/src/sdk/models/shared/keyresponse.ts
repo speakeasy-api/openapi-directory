@@ -18,7 +18,7 @@ export class KeyResponse extends SpeakeasyBase {
   appId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=capability" })
-  capability?: Map<string, KeyResponseCapabilityEnum[]>;
+  capability?: Record<string, KeyResponseCapabilityEnum[]>;
 
   @SpeakeasyMetadata({ data: "json, name=created" })
   created?: number;

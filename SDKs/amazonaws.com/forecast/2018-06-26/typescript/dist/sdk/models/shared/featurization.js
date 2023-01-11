@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FeaturizationMethod } from "./featurizationmethod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Featurization = void 0;
+var utils_1 = require("../../../internal/utils");
+var featurizationmethod_1 = require("./featurizationmethod");
 // Featurization
 /**
  * <p>Provides featurization (transformation) information for a dataset field. This object is part of the <a>FeaturizationConfig</a> object.</p> <p>For example:</p> <p> <code>{</code> </p> <p> <code>"AttributeName": "demand",</code> </p> <p> <code>FeaturizationPipeline [ {</code> </p> <p> <code>"FeaturizationMethodName": "filling",</code> </p> <p> <code>"FeaturizationMethodParameters": {"aggregation": "avg", "backfill": "nan"}</code> </p> <p> <code>} ]</code> </p> <p> <code>}</code> </p>
@@ -34,13 +37,13 @@ var Featurization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeName" }),
         __metadata("design:type", String)
     ], Featurization.prototype, "attributeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeaturizationPipeline", elemType: FeaturizationMethod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeaturizationPipeline", elemType: featurizationmethod_1.FeaturizationMethod }),
         __metadata("design:type", Array)
     ], Featurization.prototype, "featurizationPipeline", void 0);
     return Featurization;
-}(SpeakeasyBase));
-export { Featurization };
+}(utils_1.SpeakeasyBase));
+exports.Featurization = Featurization;

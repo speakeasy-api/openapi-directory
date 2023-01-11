@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NewPublicVirtualInterface } from "./newpublicvirtualinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePublicVirtualInterfaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var newpublicvirtualinterface_1 = require("./newpublicvirtualinterface");
 var CreatePublicVirtualInterfaceRequest = /** @class */ (function (_super) {
     __extends(CreatePublicVirtualInterfaceRequest, _super);
     function CreatePublicVirtualInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], CreatePublicVirtualInterfaceRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPublicVirtualInterface" }),
-        __metadata("design:type", NewPublicVirtualInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPublicVirtualInterface" }),
+        __metadata("design:type", newpublicvirtualinterface_1.NewPublicVirtualInterface)
     ], CreatePublicVirtualInterfaceRequest.prototype, "newPublicVirtualInterface", void 0);
     return CreatePublicVirtualInterfaceRequest;
-}(SpeakeasyBase));
-export { CreatePublicVirtualInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePublicVirtualInterfaceRequest = CreatePublicVirtualInterfaceRequest;

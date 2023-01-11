@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllowCustomRoutingTrafficRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllowCustomRoutingTrafficRequest = /** @class */ (function (_super) {
     __extends(AllowCustomRoutingTrafficRequest, _super);
     function AllowCustomRoutingTrafficRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowAllTrafficToEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowAllTrafficToEndpoint" }),
         __metadata("design:type", Boolean)
     ], AllowCustomRoutingTrafficRequest.prototype, "allowAllTrafficToEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationAddresses" }),
         __metadata("design:type", Array)
     ], AllowCustomRoutingTrafficRequest.prototype, "destinationAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationPorts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationPorts" }),
         __metadata("design:type", Array)
     ], AllowCustomRoutingTrafficRequest.prototype, "destinationPorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], AllowCustomRoutingTrafficRequest.prototype, "endpointGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointId" }),
         __metadata("design:type", String)
     ], AllowCustomRoutingTrafficRequest.prototype, "endpointId", void 0);
     return AllowCustomRoutingTrafficRequest;
-}(SpeakeasyBase));
-export { AllowCustomRoutingTrafficRequest };
+}(utils_1.SpeakeasyBase));
+exports.AllowCustomRoutingTrafficRequest = AllowCustomRoutingTrafficRequest;

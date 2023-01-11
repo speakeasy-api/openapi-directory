@@ -10,6 +10,6 @@ export declare class GetPipelineForRepositoryRequest extends SpeakeasyBase {
 export declare class GetPipelineForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipeline?: Map<string, any>;
+    error?: Record<string, any>;
+    pipeline?: Record<string, any>;
 }

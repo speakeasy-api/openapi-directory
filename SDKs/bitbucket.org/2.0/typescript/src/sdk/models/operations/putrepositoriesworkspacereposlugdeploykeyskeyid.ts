@@ -44,8 +44,8 @@ export class PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deployKey?: Map<string, any>;
+  deployKey?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

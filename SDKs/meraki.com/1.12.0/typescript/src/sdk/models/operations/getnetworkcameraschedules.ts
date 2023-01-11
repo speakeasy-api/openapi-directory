@@ -22,5 +22,5 @@ export class GetNetworkCameraSchedulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCameraSchedules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCameraSchedules200ApplicationJSONObject?: Record<string, any>;
 }

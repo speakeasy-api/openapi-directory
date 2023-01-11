@@ -17,7 +17,7 @@ export declare class CreateStreamingImageRequestBody extends SpeakeasyBase {
     description?: string;
     ec2ImageId: string;
     name: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateStreamingImageRequest extends SpeakeasyBase {
     pathParams: CreateStreamingImagePathParams;

@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ShareProfileAcknowledgement } from "./shareprofileacknowledgement";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare class ShareProfileResult extends SpeakeasyBase {
     acknowledgement: ShareProfileAcknowledgement;
-    error?: Error;
+    error?: ErrorT;
     requestId: string;
     resp: RequestReference;
     timestamp: Date;

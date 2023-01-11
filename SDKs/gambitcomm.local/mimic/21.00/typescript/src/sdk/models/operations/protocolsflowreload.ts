@@ -22,5 +22,5 @@ export class ProtocolSflowReloadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSflowReload200ApplicationJsonString?: string;
+  protocolSflowReload200ApplicationJSONString?: string;
 }

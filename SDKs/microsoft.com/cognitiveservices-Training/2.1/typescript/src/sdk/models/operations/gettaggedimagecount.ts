@@ -43,10 +43,10 @@ export class GetTaggedImageCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getTaggedImageCount200ApplicationJsonInt32Integer?: number;
+  getTaggedImageCount200ApplicationJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
-  getTaggedImageCount200TextJsonInt32Integer?: number;
+  getTaggedImageCount200TextJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
   statusCode: number;

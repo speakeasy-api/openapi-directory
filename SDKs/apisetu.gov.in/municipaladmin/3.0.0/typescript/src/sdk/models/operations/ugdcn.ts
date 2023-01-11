@@ -185,23 +185,23 @@ export class UgdcnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ugdcn400ApplicationJsonObject?: Ugdcn400ApplicationJson;
+  ugdcn400ApplicationJSONObject?: Ugdcn400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn401ApplicationJsonObject?: Ugdcn401ApplicationJson;
+  ugdcn401ApplicationJSONObject?: Ugdcn401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn404ApplicationJsonObject?: Ugdcn404ApplicationJson;
+  ugdcn404ApplicationJSONObject?: Ugdcn404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn500ApplicationJsonObject?: Ugdcn500ApplicationJson;
+  ugdcn500ApplicationJSONObject?: Ugdcn500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn502ApplicationJsonObject?: Ugdcn502ApplicationJson;
+  ugdcn502ApplicationJSONObject?: Ugdcn502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn503ApplicationJsonObject?: Ugdcn503ApplicationJson;
+  ugdcn503ApplicationJSONObject?: Ugdcn503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ugdcn504ApplicationJsonObject?: Ugdcn504ApplicationJson;
+  ugdcn504ApplicationJSONObject?: Ugdcn504ApplicationJson;
 }

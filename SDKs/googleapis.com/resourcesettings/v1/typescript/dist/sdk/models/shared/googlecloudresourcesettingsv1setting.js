@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudResourcesettingsV1Value } from "./googlecloudresourcesettingsv1value";
-import { GoogleCloudResourcesettingsV1SettingMetadata } from "./googlecloudresourcesettingsv1settingmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudResourcesettingsV1Setting = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudresourcesettingsv1value_1 = require("./googlecloudresourcesettingsv1value");
+var googlecloudresourcesettingsv1settingmetadata_1 = require("./googlecloudresourcesettingsv1settingmetadata");
 // GoogleCloudResourcesettingsV1Setting
 /**
  * The schema for settings.
@@ -35,25 +38,25 @@ var GoogleCloudResourcesettingsV1Setting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1value_1.GoogleCloudResourcesettingsV1Value)
     ], GoogleCloudResourcesettingsV1Setting.prototype, "effectiveValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1Setting.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1value_1.GoogleCloudResourcesettingsV1Value)
     ], GoogleCloudResourcesettingsV1Setting.prototype, "localValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1SettingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", googlecloudresourcesettingsv1settingmetadata_1.GoogleCloudResourcesettingsV1SettingMetadata)
     ], GoogleCloudResourcesettingsV1Setting.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1Setting.prototype, "name", void 0);
     return GoogleCloudResourcesettingsV1Setting;
-}(SpeakeasyBase));
-export { GoogleCloudResourcesettingsV1Setting };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudResourcesettingsV1Setting = GoogleCloudResourcesettingsV1Setting;

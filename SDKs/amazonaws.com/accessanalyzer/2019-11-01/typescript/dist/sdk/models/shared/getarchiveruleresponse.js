@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArchiveRuleSummary } from "./archiverulesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetArchiveRuleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var archiverulesummary_1 = require("./archiverulesummary");
 // GetArchiveRuleResponse
 /**
  * The response to the request.
@@ -34,9 +37,9 @@ var GetArchiveRuleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveRule" }),
-        __metadata("design:type", ArchiveRuleSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveRule" }),
+        __metadata("design:type", archiverulesummary_1.ArchiveRuleSummary)
     ], GetArchiveRuleResponse.prototype, "archiveRule", void 0);
     return GetArchiveRuleResponse;
-}(SpeakeasyBase));
-export { GetArchiveRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetArchiveRuleResponse = GetArchiveRuleResponse;

@@ -194,23 +194,23 @@ export class RfcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  rfcer400ApplicationJsonObject?: Rfcer400ApplicationJson;
+  rfcer400ApplicationJSONObject?: Rfcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer401ApplicationJsonObject?: Rfcer401ApplicationJson;
+  rfcer401ApplicationJSONObject?: Rfcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer404ApplicationJsonObject?: Rfcer404ApplicationJson;
+  rfcer404ApplicationJSONObject?: Rfcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer500ApplicationJsonObject?: Rfcer500ApplicationJson;
+  rfcer500ApplicationJSONObject?: Rfcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer502ApplicationJsonObject?: Rfcer502ApplicationJson;
+  rfcer502ApplicationJSONObject?: Rfcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer503ApplicationJsonObject?: Rfcer503ApplicationJson;
+  rfcer503ApplicationJSONObject?: Rfcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  rfcer504ApplicationJsonObject?: Rfcer504ApplicationJson;
+  rfcer504ApplicationJSONObject?: Rfcer504ApplicationJson;
 }

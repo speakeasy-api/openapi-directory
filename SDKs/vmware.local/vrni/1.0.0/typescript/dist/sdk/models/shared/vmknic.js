@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityTypeEnum } from "./entitytypeenum";
-import { Reference } from "./reference";
-import { IpV4Address } from "./ipv4address";
-import { Vlan } from "./vlan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vmknic = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitytypeenum_1 = require("./entitytypeenum");
+var reference_1 = require("./reference");
+var ipv4address_1 = require("./ipv4address");
+var vlan_1 = require("./vlan");
 var Vmknic = /** @class */ (function (_super) {
     __extends(Vmknic, _super);
     function Vmknic() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], Vmknic.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], Vmknic.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
+        __metadata("design:type", reference_1.Reference)
     ], Vmknic.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_addresses", elemType: IpV4Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_addresses", elemType: ipv4address_1.IpV4Address }),
         __metadata("design:type", Array)
     ], Vmknic.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layer2_network" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layer2_network" }),
+        __metadata("design:type", reference_1.Reference)
     ], Vmknic.prototype, "layer2Network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Vmknic.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
-        __metadata("design:type", Vlan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
+        __metadata("design:type", vlan_1.Vlan)
     ], Vmknic.prototype, "vlan", void 0);
     return Vmknic;
-}(SpeakeasyBase));
-export { Vmknic };
+}(utils_1.SpeakeasyBase));
+exports.Vmknic = Vmknic;

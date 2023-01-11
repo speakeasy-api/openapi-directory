@@ -4,16 +4,11 @@ export declare class EnterpriseAdminListPreReceiveHooksForRepoPathParams extends
     owner: string;
     repo: string;
 }
-export declare enum EnterpriseAdminListPreReceiveHooksForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Name = "name"
-}
 export declare class EnterpriseAdminListPreReceiveHooksForRepoQueryParams extends SpeakeasyBase {
     direction?: shared.DirectionEnum;
     page?: number;
     perPage?: number;
-    sort?: EnterpriseAdminListPreReceiveHooksForRepoSortEnum;
+    sort?: shared.DirectionEnum2;
 }
 export declare class EnterpriseAdminListPreReceiveHooksForRepoRequest extends SpeakeasyBase {
     pathParams: EnterpriseAdminListPreReceiveHooksForRepoPathParams;

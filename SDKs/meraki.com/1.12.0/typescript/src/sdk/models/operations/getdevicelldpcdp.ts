@@ -22,5 +22,5 @@ export class GetDeviceLldpCdpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceLldpCdp200ApplicationJsonObject?: Map<string, any>;
+  getDeviceLldpCdp200ApplicationJSONObject?: Record<string, any>;
 }

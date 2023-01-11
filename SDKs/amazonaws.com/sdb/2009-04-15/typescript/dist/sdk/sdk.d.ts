@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://sdb.amazonaws.com", "https://sdb.amazonaws.com", "http://sdb.{region}.amazonaws.com", "https://sdb.{region}.amazonaws.com", "http://sdb.{region}.amazonaws.com.cn", "https://sdb.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getCreateDomain - <p> The <code>CreateDomain</code> operation creates a new domain. The domain name should be unique among the domains associated with the Access Key ID provided in the request. The <code>CreateDomain</code> operation may take 10 or more seconds to complete. </p> <note> CreateDomain is an idempotent operation; running it multiple times using the same domain name will not result in an error response. </note> <p> The client can create up to 100 domains per account. </p> <p> If the client requires additional domains, go to <a href="http://aws.amazon.com/contact-us/simpledb-limit-request/"> http://aws.amazon.com/contact-us/simpledb-limit-request/</a>. </p>
     **/
@@ -27,10 +27,6 @@ export declare class SDK {
      * getDomainMetadata -  Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values.
     **/
     getDomainMetadata(req: operations.GetDomainMetadataRequest, config?: AxiosRequestConfig): Promise<operations.GetDomainMetadataResponse>;
-    /**
-     * getGetAttributes - <p> Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter. </p> <p> If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas. </p> <note> If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned. </note>
-    **/
-    getGetAttributes(req: operations.GetGetAttributesRequest, config?: AxiosRequestConfig): Promise<operations.GetGetAttributesResponse>;
     /**
      * getListDomains -  The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by <a href="#MaxNumberOfDomains">MaxNumberOfDomains</a>. A <a href="#NextToken">NextToken</a> is returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more domain names with each successive operation call.
     **/
@@ -80,4 +76,3 @@ export declare class SDK {
     **/
     postSelect(req: operations.PostSelectRequest, config?: AxiosRequestConfig): Promise<operations.PostSelectResponse>;
 }
-export {};

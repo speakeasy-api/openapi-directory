@@ -9,7 +9,7 @@ import { AuthenticateCognitoActionConditionalBehaviorEnumEnum } from "./authenti
 **/
 export class AuthenticateCognitoActionConfig extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  authenticationRequestExtraParams?: Map<string, string>;
+  authenticationRequestExtraParams?: Record<string, string>;
 
   @SpeakeasyMetadata()
   onUnauthenticatedRequest?: AuthenticateCognitoActionConditionalBehaviorEnumEnum;

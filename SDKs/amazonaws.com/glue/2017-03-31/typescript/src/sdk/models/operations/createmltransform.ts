@@ -54,7 +54,7 @@ export class CreateMlTransformResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createMlTransformResponse?: shared.CreateMlTransformResponse;
+  createMLTransformResponse?: shared.CreateMlTransformResponse;
 
   @SpeakeasyMetadata()
   idempotentParameterMismatchException?: any;

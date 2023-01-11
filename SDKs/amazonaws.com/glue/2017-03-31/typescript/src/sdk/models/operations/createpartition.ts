@@ -51,7 +51,7 @@ export class CreatePartitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createPartitionResponse?: Map<string, any>;
+  createPartitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

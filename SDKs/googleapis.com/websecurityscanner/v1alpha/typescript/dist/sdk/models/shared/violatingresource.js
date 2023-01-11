@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViolatingResource = void 0;
+var utils_1 = require("../../../internal/utils");
 // ViolatingResource
 /**
  * Information regarding any resource causing the vulnerability such as JavaScript sources, image, audio files, etc.
@@ -33,13 +36,13 @@ var ViolatingResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentType" }),
         __metadata("design:type", String)
     ], ViolatingResource.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUrl" }),
         __metadata("design:type", String)
     ], ViolatingResource.prototype, "resourceUrl", void 0);
     return ViolatingResource;
-}(SpeakeasyBase));
-export { ViolatingResource };
+}(utils_1.SpeakeasyBase));
+exports.ViolatingResource = ViolatingResource;

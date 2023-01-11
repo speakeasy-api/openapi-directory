@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ManagementSettingsRenewalMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagementSettingsInput = exports.ManagementSettings = exports.ManagementSettingsTransferLockStateEnum = exports.ManagementSettingsRenewalMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ManagementSettingsRenewalMethodEnum;
 (function (ManagementSettingsRenewalMethodEnum) {
     ManagementSettingsRenewalMethodEnum["RenewalMethodUnspecified"] = "RENEWAL_METHOD_UNSPECIFIED";
     ManagementSettingsRenewalMethodEnum["AutomaticRenewal"] = "AUTOMATIC_RENEWAL";
     ManagementSettingsRenewalMethodEnum["ManualRenewal"] = "MANUAL_RENEWAL";
-})(ManagementSettingsRenewalMethodEnum || (ManagementSettingsRenewalMethodEnum = {}));
-export var ManagementSettingsTransferLockStateEnum;
+})(ManagementSettingsRenewalMethodEnum = exports.ManagementSettingsRenewalMethodEnum || (exports.ManagementSettingsRenewalMethodEnum = {}));
+var ManagementSettingsTransferLockStateEnum;
 (function (ManagementSettingsTransferLockStateEnum) {
     ManagementSettingsTransferLockStateEnum["TransferLockStateUnspecified"] = "TRANSFER_LOCK_STATE_UNSPECIFIED";
     ManagementSettingsTransferLockStateEnum["Unlocked"] = "UNLOCKED";
     ManagementSettingsTransferLockStateEnum["Locked"] = "LOCKED";
-})(ManagementSettingsTransferLockStateEnum || (ManagementSettingsTransferLockStateEnum = {}));
-// ManagementSettingsInput
-/**
- * Defines renewal, billing, and transfer settings for a `Registration`.
-**/
-var ManagementSettingsInput = /** @class */ (function (_super) {
-    __extends(ManagementSettingsInput, _super);
-    function ManagementSettingsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferLockState" }),
-        __metadata("design:type", String)
-    ], ManagementSettingsInput.prototype, "transferLockState", void 0);
-    return ManagementSettingsInput;
-}(SpeakeasyBase));
-export { ManagementSettingsInput };
+})(ManagementSettingsTransferLockStateEnum = exports.ManagementSettingsTransferLockStateEnum || (exports.ManagementSettingsTransferLockStateEnum = {}));
 // ManagementSettings
 /**
  * Defines renewal, billing, and transfer settings for a `Registration`.
@@ -61,13 +48,29 @@ var ManagementSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewalMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewalMethod" }),
         __metadata("design:type", String)
     ], ManagementSettings.prototype, "renewalMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferLockState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferLockState" }),
         __metadata("design:type", String)
     ], ManagementSettings.prototype, "transferLockState", void 0);
     return ManagementSettings;
-}(SpeakeasyBase));
-export { ManagementSettings };
+}(utils_1.SpeakeasyBase));
+exports.ManagementSettings = ManagementSettings;
+// ManagementSettingsInput
+/**
+ * Defines renewal, billing, and transfer settings for a `Registration`.
+**/
+var ManagementSettingsInput = /** @class */ (function (_super) {
+    __extends(ManagementSettingsInput, _super);
+    function ManagementSettingsInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferLockState" }),
+        __metadata("design:type", String)
+    ], ManagementSettingsInput.prototype, "transferLockState", void 0);
+    return ManagementSettingsInput;
+}(utils_1.SpeakeasyBase));
+exports.ManagementSettingsInput = ManagementSettingsInput;

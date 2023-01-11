@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2DetectionRule } from "./googleprivacydlpv2detectionrule";
-import { GooglePrivacyDlpV2Dictionary } from "./googleprivacydlpv2dictionary";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
-import { GooglePrivacyDlpV2Regex } from "./googleprivacydlpv2regex";
-import { GooglePrivacyDlpV2StoredType } from "./googleprivacydlpv2storedtype";
-export var GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CustomInfoType = exports.GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum = exports.GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2detectionrule_1 = require("./googleprivacydlpv2detectionrule");
+var googleprivacydlpv2dictionary_1 = require("./googleprivacydlpv2dictionary");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
+var googleprivacydlpv2regex_1 = require("./googleprivacydlpv2regex");
+var googleprivacydlpv2storedtype_1 = require("./googleprivacydlpv2storedtype");
+var GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum;
 (function (GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum) {
     GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum["ExclusionTypeUnspecified"] = "EXCLUSION_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum["ExclusionTypeExclude"] = "EXCLUSION_TYPE_EXCLUDE";
-})(GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum || (GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum = {}));
-export var GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum;
+})(GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum = exports.GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum || (exports.GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum = {}));
+var GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum;
 (function (GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum) {
     GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum["LikelihoodUnspecified"] = "LIKELIHOOD_UNSPECIFIED";
     GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum["VeryUnlikely"] = "VERY_UNLIKELY";
@@ -41,7 +44,7 @@ export var GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum;
     GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum["Possible"] = "POSSIBLE";
     GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum["Likely"] = "LIKELY";
     GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum["VeryLikely"] = "VERY_LIKELY";
-})(GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum || (GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum = {}));
+})(GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum = exports.GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum || (exports.GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum = {}));
 // GooglePrivacyDlpV2CustomInfoType
 /**
  * Custom information type provided by the user. Used to find domain-specific sensitive information configurable to the data in question.
@@ -52,37 +55,37 @@ var GooglePrivacyDlpV2CustomInfoType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectionRules", elemType: GooglePrivacyDlpV2DetectionRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectionRules", elemType: googleprivacydlpv2detectionrule_1.GooglePrivacyDlpV2DetectionRule }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "detectionRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dictionary" }),
-        __metadata("design:type", GooglePrivacyDlpV2Dictionary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dictionary" }),
+        __metadata("design:type", googleprivacydlpv2dictionary_1.GooglePrivacyDlpV2Dictionary)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "dictionary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusionType" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "exclusionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoType" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoType" }),
+        __metadata("design:type", googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "infoType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likelihood" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likelihood" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "likelihood", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regex" }),
-        __metadata("design:type", GooglePrivacyDlpV2Regex)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regex" }),
+        __metadata("design:type", googleprivacydlpv2regex_1.GooglePrivacyDlpV2Regex)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "regex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storedType" }),
-        __metadata("design:type", GooglePrivacyDlpV2StoredType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storedType" }),
+        __metadata("design:type", googleprivacydlpv2storedtype_1.GooglePrivacyDlpV2StoredType)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "storedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=surrogateType" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=surrogateType" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2CustomInfoType.prototype, "surrogateType", void 0);
     return GooglePrivacyDlpV2CustomInfoType;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CustomInfoType };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CustomInfoType = GooglePrivacyDlpV2CustomInfoType;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuggestionProto } from "./suggestionproto";
-export var SuggestionClusterProtoCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuggestionClusterProto = exports.SuggestionClusterProtoCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var suggestionproto_1 = require("./suggestionproto");
+var SuggestionClusterProtoCategoryEnum;
 (function (SuggestionClusterProtoCategoryEnum) {
     SuggestionClusterProtoCategoryEnum["UnknownCategory"] = "unknownCategory";
     SuggestionClusterProtoCategoryEnum["ContentLabeling"] = "contentLabeling";
     SuggestionClusterProtoCategoryEnum["TouchTargetSize"] = "touchTargetSize";
     SuggestionClusterProtoCategoryEnum["LowContrast"] = "lowContrast";
     SuggestionClusterProtoCategoryEnum["Implementation"] = "implementation";
-})(SuggestionClusterProtoCategoryEnum || (SuggestionClusterProtoCategoryEnum = {}));
+})(SuggestionClusterProtoCategoryEnum = exports.SuggestionClusterProtoCategoryEnum || (exports.SuggestionClusterProtoCategoryEnum = {}));
 // SuggestionClusterProto
 /**
  * A set of similar suggestions that we suspect are closely related. This proto and most of the nested protos are branched from foxandcrown.prelaunchreport.service.SuggestionClusterProto, replacing PLR's dependencies with FTL's.
@@ -42,13 +45,13 @@ var SuggestionClusterProto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], SuggestionClusterProto.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggestions", elemType: SuggestionProto }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggestions", elemType: suggestionproto_1.SuggestionProto }),
         __metadata("design:type", Array)
     ], SuggestionClusterProto.prototype, "suggestions", void 0);
     return SuggestionClusterProto;
-}(SpeakeasyBase));
-export { SuggestionClusterProto };
+}(utils_1.SpeakeasyBase));
+exports.SuggestionClusterProto = SuggestionClusterProto;

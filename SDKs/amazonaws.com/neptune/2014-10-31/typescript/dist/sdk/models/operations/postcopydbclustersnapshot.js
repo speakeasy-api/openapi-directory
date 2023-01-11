@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCopyDbClusterSnapshotActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCopyDbClusterSnapshotResponse = exports.PostCopyDbClusterSnapshotRequest = exports.PostCopyDbClusterSnapshotHeaders = exports.PostCopyDbClusterSnapshotQueryParams = exports.PostCopyDbClusterSnapshotVersionEnum = exports.PostCopyDbClusterSnapshotActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCopyDbClusterSnapshotActionEnum;
 (function (PostCopyDbClusterSnapshotActionEnum) {
     PostCopyDbClusterSnapshotActionEnum["CopyDbClusterSnapshot"] = "CopyDBClusterSnapshot";
-})(PostCopyDbClusterSnapshotActionEnum || (PostCopyDbClusterSnapshotActionEnum = {}));
-export var PostCopyDbClusterSnapshotVersionEnum;
+})(PostCopyDbClusterSnapshotActionEnum = exports.PostCopyDbClusterSnapshotActionEnum || (exports.PostCopyDbClusterSnapshotActionEnum = {}));
+var PostCopyDbClusterSnapshotVersionEnum;
 (function (PostCopyDbClusterSnapshotVersionEnum) {
     PostCopyDbClusterSnapshotVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostCopyDbClusterSnapshotVersionEnum || (PostCopyDbClusterSnapshotVersionEnum = {}));
+})(PostCopyDbClusterSnapshotVersionEnum = exports.PostCopyDbClusterSnapshotVersionEnum || (exports.PostCopyDbClusterSnapshotVersionEnum = {}));
 var PostCopyDbClusterSnapshotQueryParams = /** @class */ (function (_super) {
     __extends(PostCopyDbClusterSnapshotQueryParams, _super);
     function PostCopyDbClusterSnapshotQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotQueryParams.prototype, "version", void 0);
     return PostCopyDbClusterSnapshotQueryParams;
-}(SpeakeasyBase));
-export { PostCopyDbClusterSnapshotQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyDbClusterSnapshotQueryParams = PostCopyDbClusterSnapshotQueryParams;
 var PostCopyDbClusterSnapshotHeaders = /** @class */ (function (_super) {
     __extends(PostCopyDbClusterSnapshotHeaders, _super);
     function PostCopyDbClusterSnapshotHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCopyDbClusterSnapshotHeaders;
-}(SpeakeasyBase));
-export { PostCopyDbClusterSnapshotHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyDbClusterSnapshotHeaders = PostCopyDbClusterSnapshotHeaders;
 var PostCopyDbClusterSnapshotRequest = /** @class */ (function (_super) {
     __extends(PostCopyDbClusterSnapshotRequest, _super);
     function PostCopyDbClusterSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyDbClusterSnapshotQueryParams)
     ], PostCopyDbClusterSnapshotRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyDbClusterSnapshotHeaders)
     ], PostCopyDbClusterSnapshotRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCopyDbClusterSnapshotRequest.prototype, "request", void 0);
     return PostCopyDbClusterSnapshotRequest;
-}(SpeakeasyBase));
-export { PostCopyDbClusterSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyDbClusterSnapshotRequest = PostCopyDbClusterSnapshotRequest;
 var PostCopyDbClusterSnapshotResponse = /** @class */ (function (_super) {
     __extends(PostCopyDbClusterSnapshotResponse, _super);
     function PostCopyDbClusterSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCopyDbClusterSnapshotResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCopyDbClusterSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCopyDbClusterSnapshotResponse.prototype, "statusCode", void 0);
     return PostCopyDbClusterSnapshotResponse;
-}(SpeakeasyBase));
-export { PostCopyDbClusterSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyDbClusterSnapshotResponse = PostCopyDbClusterSnapshotResponse;

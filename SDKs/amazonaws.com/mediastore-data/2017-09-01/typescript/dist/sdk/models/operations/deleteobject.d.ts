@@ -18,7 +18,7 @@ export declare class DeleteObjectRequest extends SpeakeasyBase {
 export declare class DeleteObjectResponse extends SpeakeasyBase {
     containerNotFoundException?: any;
     contentType: string;
-    deleteObjectResponse?: Map<string, any>;
+    deleteObjectResponse?: Record<string, any>;
     internalServerError?: any;
     objectNotFoundException?: any;
     statusCode: number;

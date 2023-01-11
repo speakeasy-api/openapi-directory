@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelToStoreLinkDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelToStoreLinkDetails
 /**
  * Information specific to a store on a merchandising platform linked to a YouTube channel.
@@ -33,17 +36,17 @@ var ChannelToStoreLinkDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], ChannelToStoreLinkDetails.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeName" }),
         __metadata("design:type", String)
     ], ChannelToStoreLinkDetails.prototype, "storeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeUrl" }),
         __metadata("design:type", String)
     ], ChannelToStoreLinkDetails.prototype, "storeUrl", void 0);
     return ChannelToStoreLinkDetails;
-}(SpeakeasyBase));
-export { ChannelToStoreLinkDetails };
+}(utils_1.SpeakeasyBase));
+exports.ChannelToStoreLinkDetails = ChannelToStoreLinkDetails;

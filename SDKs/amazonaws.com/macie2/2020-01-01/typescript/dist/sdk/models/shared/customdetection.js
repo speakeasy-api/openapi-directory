@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Occurrences } from "./occurrences";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomDetection = void 0;
+var utils_1 = require("../../../internal/utils");
+var occurrences_1 = require("./occurrences");
 // CustomDetection
 /**
  * Provides information about a custom data identifier that produced a sensitive data finding, and the sensitive data that it detected for the finding.
@@ -34,21 +37,21 @@ var CustomDetection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], CustomDetection.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], CustomDetection.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomDetection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=occurrences" }),
-        __metadata("design:type", Occurrences)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occurrences" }),
+        __metadata("design:type", occurrences_1.Occurrences)
     ], CustomDetection.prototype, "occurrences", void 0);
     return CustomDetection;
-}(SpeakeasyBase));
-export { CustomDetection };
+}(utils_1.SpeakeasyBase));
+exports.CustomDetection = CustomDetection;

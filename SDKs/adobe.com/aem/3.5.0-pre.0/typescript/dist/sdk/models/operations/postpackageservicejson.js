@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPackageServiceJsonResponse = exports.PostPackageServiceJsonRequest = exports.PostPackageServiceJsonRequestBody = exports.PostPackageServiceJsonRequestBodyPackage = exports.PostPackageServiceJsonQueryParams = exports.PostPackageServiceJsonPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPackageServiceJsonPathParams = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonPathParams, _super);
     function PostPackageServiceJsonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonPathParams.prototype, "path", void 0);
     return PostPackageServiceJsonPathParams;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonPathParams = PostPackageServiceJsonPathParams;
 var PostPackageServiceJsonQueryParams = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonQueryParams, _super);
     function PostPackageServiceJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=_charset_" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=_charset_" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonQueryParams.prototype, "charset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cmd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cmd" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonQueryParams.prototype, "cmd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=force" }),
         __metadata("design:type", Boolean)
     ], PostPackageServiceJsonQueryParams.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupName" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonQueryParams.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=packageName" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonQueryParams.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=packageVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=packageVersion" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonQueryParams.prototype, "packageVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recursive" }),
         __metadata("design:type", Boolean)
     ], PostPackageServiceJsonQueryParams.prototype, "recursive", void 0);
     return PostPackageServiceJsonQueryParams;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonQueryParams = PostPackageServiceJsonQueryParams;
 var PostPackageServiceJsonRequestBodyPackage = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonRequestBodyPackage, _super);
     function PostPackageServiceJsonRequestBodyPackage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PostPackageServiceJsonRequestBodyPackage.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=package" }),
         __metadata("design:type", String)
     ], PostPackageServiceJsonRequestBodyPackage.prototype, "package", void 0);
     return PostPackageServiceJsonRequestBodyPackage;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonRequestBodyPackage };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonRequestBodyPackage = PostPackageServiceJsonRequestBodyPackage;
 var PostPackageServiceJsonRequestBody = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonRequestBody, _super);
     function PostPackageServiceJsonRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PostPackageServiceJsonRequestBodyPackage)
     ], PostPackageServiceJsonRequestBody.prototype, "package", void 0);
     return PostPackageServiceJsonRequestBody;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonRequestBody = PostPackageServiceJsonRequestBody;
 var PostPackageServiceJsonRequest = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonRequest, _super);
     function PostPackageServiceJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPackageServiceJsonPathParams)
     ], PostPackageServiceJsonRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPackageServiceJsonQueryParams)
     ], PostPackageServiceJsonRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostPackageServiceJsonRequestBody)
     ], PostPackageServiceJsonRequest.prototype, "request", void 0);
     return PostPackageServiceJsonRequest;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonRequest = PostPackageServiceJsonRequest;
 var PostPackageServiceJsonResponse = /** @class */ (function (_super) {
     __extends(PostPackageServiceJsonResponse, _super);
     function PostPackageServiceJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPackageServiceJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPackageServiceJsonResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], PostPackageServiceJsonResponse.prototype, "postPackageServiceJsonDefaultApplicationJsonString", void 0);
+    ], PostPackageServiceJsonResponse.prototype, "postPackageServiceJSONDefaultApplicationJSONString", void 0);
     return PostPackageServiceJsonResponse;
-}(SpeakeasyBase));
-export { PostPackageServiceJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPackageServiceJsonResponse = PostPackageServiceJsonResponse;

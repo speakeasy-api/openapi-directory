@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOn } from "./addon";
-import { InstanceHardware } from "./instancehardware";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { ResourceLocation } from "./resourcelocation";
-import { InstanceNetworking } from "./instancenetworking";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { InstanceState } from "./instancestate";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = void 0;
+var utils_1 = require("../../../internal/utils");
+var addon_1 = require("./addon");
+var instancehardware_1 = require("./instancehardware");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var resourcelocation_1 = require("./resourcelocation");
+var instancenetworking_1 = require("./instancenetworking");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var instancestate_1 = require("./instancestate");
+var tag_1 = require("./tag");
 // Instance
 /**
  * Describes an instance (a virtual private server).
@@ -41,89 +44,89 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOns", elemType: AddOn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOns", elemType: addon_1.AddOn }),
         __metadata("design:type", Array)
     ], Instance.prototype, "addOns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Instance.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprintId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprintId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "blueprintId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprintName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprintName" }),
         __metadata("design:type", String)
     ], Instance.prototype, "blueprintName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Instance.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hardware" }),
-        __metadata("design:type", InstanceHardware)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hardware" }),
+        __metadata("design:type", instancehardware_1.InstanceHardware)
     ], Instance.prototype, "hardware", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Addresses" }),
         __metadata("design:type", Array)
     ], Instance.prototype, "ipv6Addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isStaticIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isStaticIp" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "isStaticIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], Instance.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Instance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networking" }),
-        __metadata("design:type", InstanceNetworking)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networking" }),
+        __metadata("design:type", instancenetworking_1.InstanceNetworking)
     ], Instance.prototype, "networking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpAddress" }),
         __metadata("design:type", String)
     ], Instance.prototype, "privateIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIpAddress" }),
         __metadata("design:type", String)
     ], Instance.prototype, "publicIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sshKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshKeyName" }),
         __metadata("design:type", String)
     ], Instance.prototype, "sshKeyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", InstanceState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", instancestate_1.InstanceState)
     ], Instance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], Instance.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Instance.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Instance.prototype, "username", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

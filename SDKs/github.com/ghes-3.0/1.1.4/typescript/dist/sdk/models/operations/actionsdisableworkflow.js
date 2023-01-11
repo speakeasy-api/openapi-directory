@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDisableWorkflowResponse = exports.ActionsDisableWorkflowRequest = exports.ActionsDisableWorkflowPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDisableWorkflowPathParams = /** @class */ (function (_super) {
     __extends(ActionsDisableWorkflowPathParams, _super);
     function ActionsDisableWorkflowPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDisableWorkflowPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDisableWorkflowPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workflow_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workflow_id" }),
         __metadata("design:type", Object)
     ], ActionsDisableWorkflowPathParams.prototype, "workflowId", void 0);
     return ActionsDisableWorkflowPathParams;
-}(SpeakeasyBase));
-export { ActionsDisableWorkflowPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDisableWorkflowPathParams = ActionsDisableWorkflowPathParams;
 var ActionsDisableWorkflowRequest = /** @class */ (function (_super) {
     __extends(ActionsDisableWorkflowRequest, _super);
     function ActionsDisableWorkflowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDisableWorkflowPathParams)
     ], ActionsDisableWorkflowRequest.prototype, "pathParams", void 0);
     return ActionsDisableWorkflowRequest;
-}(SpeakeasyBase));
-export { ActionsDisableWorkflowRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDisableWorkflowRequest = ActionsDisableWorkflowRequest;
 var ActionsDisableWorkflowResponse = /** @class */ (function (_super) {
     __extends(ActionsDisableWorkflowResponse, _super);
     function ActionsDisableWorkflowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDisableWorkflowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDisableWorkflowResponse.prototype, "statusCode", void 0);
     return ActionsDisableWorkflowResponse;
-}(SpeakeasyBase));
-export { ActionsDisableWorkflowResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDisableWorkflowResponse = ActionsDisableWorkflowResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MediaTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Media = exports.MediaTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MediaTypeEnum;
 (function (MediaTypeEnum) {
     MediaTypeEnum["Youtube"] = "youtube";
     MediaTypeEnum["Cdphotothread"] = "cdphotothread";
@@ -38,7 +41,7 @@ export var MediaTypeEnum;
     MediaTypeEnum["InstagramImage"] = "instagram-image";
     MediaTypeEnum["ExternalLink"] = "external-link";
     MediaTypeEnum["Avatar"] = "avatar";
-})(MediaTypeEnum || (MediaTypeEnum = {}));
+})(MediaTypeEnum = exports.MediaTypeEnum || (exports.MediaTypeEnum = {}));
 // Media
 /**
  * The `Media` object contains a reference for most any media associated with a team or event on TBA.
@@ -49,29 +52,29 @@ var Media = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", Object)
     ], Media.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct_url" }),
         __metadata("design:type", String)
     ], Media.prototype, "directUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foreign_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foreign_key" }),
         __metadata("design:type", String)
     ], Media.prototype, "foreignKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferred" }),
         __metadata("design:type", Boolean)
     ], Media.prototype, "preferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Media.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view_url" }),
         __metadata("design:type", String)
     ], Media.prototype, "viewUrl", void 0);
     return Media;
-}(SpeakeasyBase));
-export { Media };
+}(utils_1.SpeakeasyBase));
+exports.Media = Media;

@@ -35,13 +35,13 @@ export class DownloadFileByIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  downloadFileById200ApplicationOctetStreamBinaryString?: Uint8Array;
+  downloadFileByID200ApplicationOctetStreamBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   errorResponse?: shared.ErrorResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

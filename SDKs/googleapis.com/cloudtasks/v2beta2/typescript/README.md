@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudtasksApiQueueUpdateRequest, CloudtasksApiQueueUpdateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,36 +30,31 @@ const req: CloudtasksApiQueueUpdateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "harum",
-    alt: "proto",
-    appId: "voluptatem",
-    callback: "tenetur",
-    fields: "et",
-    key: "facilis",
-    oauthToken: "architecto",
+    accessToken: "voluptas",
+    alt: "media",
+    appId: "expedita",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "qui",
-    uploadType: "id",
-    uploadProtocol: "soluta",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    contentType: "voluptas",
-    data: "saepe",
+    contentType: "dicta",
+    data: "debitis",
     extensions: [
       {
-        "aperiam": "perspiciatis",
-        "nemo": "tempore",
-      },
-      {
-        "voluptates": "magnam",
-        "a": "velit",
+        "ut": "dolorem",
       },
     ],
   },

@@ -18,9 +18,9 @@ export declare class AlbumApiGetTracksFieldsRequest extends SpeakeasyBase {
     queryParams: AlbumApiGetTracksFieldsQueryParams;
 }
 export declare class AlbumApiGetTracksFieldsResponse extends SpeakeasyBase {
-    albumApiGetTracksFields200ApplicationJsonObjects?: Map<string, string>[];
-    albumApiGetTracksFields200ApplicationJsonpObjects?: Map<string, string>[];
-    albumApiGetTracksFields200TextJsonObjects?: Map<string, string>[];
+    albumApiGetTracksFields200ApplicationJSONObjects?: Record<string, string>[];
+    albumApiGetTracksFields200ApplicationJsonpObjects?: Record<string, string>[];
+    albumApiGetTracksFields200TextJSONObjects?: Record<string, string>[];
     body?: Uint8Array;
     contentType: string;
     statusCode: number;

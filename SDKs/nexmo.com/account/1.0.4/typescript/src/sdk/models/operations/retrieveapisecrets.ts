@@ -29,14 +29,14 @@ export class RetrieveApiSecretsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  errorApiKeyNotFound?: shared.ErrorApiKeyNotFound;
+  errorAPIKeyNotFound?: shared.ErrorApiKeyNotFound;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveApiSecrets200ApplicationJsonAny?: any;
+  retrieveAPISecrets200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  retrieveApiSecrets401ApplicationJsonAny?: any;
+  retrieveAPISecrets401ApplicationJSONAny?: any;
 }

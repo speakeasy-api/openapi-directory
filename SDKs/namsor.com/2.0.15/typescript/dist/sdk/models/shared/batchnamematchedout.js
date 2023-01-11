@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NameMatchedOut } from "./namematchedout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchNameMatchedOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var namematchedout_1 = require("./namematchedout");
 var BatchNameMatchedOut = /** @class */ (function (_super) {
     __extends(BatchNameMatchedOut, _super);
     function BatchNameMatchedOut() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchedNames", elemType: NameMatchedOut }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchedNames", elemType: namematchedout_1.NameMatchedOut }),
         __metadata("design:type", Array)
     ], BatchNameMatchedOut.prototype, "matchedNames", void 0);
     return BatchNameMatchedOut;
-}(SpeakeasyBase));
-export { BatchNameMatchedOut };
+}(utils_1.SpeakeasyBase));
+exports.BatchNameMatchedOut = BatchNameMatchedOut;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MediationReportSpecSortConditionDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediationReportSpecSortCondition = exports.MediationReportSpecSortConditionOrderEnum = exports.MediationReportSpecSortConditionMetricEnum = exports.MediationReportSpecSortConditionDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MediationReportSpecSortConditionDimensionEnum;
 (function (MediationReportSpecSortConditionDimensionEnum) {
     MediationReportSpecSortConditionDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     MediationReportSpecSortConditionDimensionEnum["Date"] = "DATE";
@@ -41,8 +44,8 @@ export var MediationReportSpecSortConditionDimensionEnum;
     MediationReportSpecSortConditionDimensionEnum["GmaSdkVersion"] = "GMA_SDK_VERSION";
     MediationReportSpecSortConditionDimensionEnum["AppVersionName"] = "APP_VERSION_NAME";
     MediationReportSpecSortConditionDimensionEnum["ServingRestriction"] = "SERVING_RESTRICTION";
-})(MediationReportSpecSortConditionDimensionEnum || (MediationReportSpecSortConditionDimensionEnum = {}));
-export var MediationReportSpecSortConditionMetricEnum;
+})(MediationReportSpecSortConditionDimensionEnum = exports.MediationReportSpecSortConditionDimensionEnum || (exports.MediationReportSpecSortConditionDimensionEnum = {}));
+var MediationReportSpecSortConditionMetricEnum;
 (function (MediationReportSpecSortConditionMetricEnum) {
     MediationReportSpecSortConditionMetricEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     MediationReportSpecSortConditionMetricEnum["AdRequests"] = "AD_REQUESTS";
@@ -53,13 +56,13 @@ export var MediationReportSpecSortConditionMetricEnum;
     MediationReportSpecSortConditionMetricEnum["MatchedRequests"] = "MATCHED_REQUESTS";
     MediationReportSpecSortConditionMetricEnum["MatchRate"] = "MATCH_RATE";
     MediationReportSpecSortConditionMetricEnum["ObservedEcpm"] = "OBSERVED_ECPM";
-})(MediationReportSpecSortConditionMetricEnum || (MediationReportSpecSortConditionMetricEnum = {}));
-export var MediationReportSpecSortConditionOrderEnum;
+})(MediationReportSpecSortConditionMetricEnum = exports.MediationReportSpecSortConditionMetricEnum || (exports.MediationReportSpecSortConditionMetricEnum = {}));
+var MediationReportSpecSortConditionOrderEnum;
 (function (MediationReportSpecSortConditionOrderEnum) {
     MediationReportSpecSortConditionOrderEnum["SortOrderUnspecified"] = "SORT_ORDER_UNSPECIFIED";
     MediationReportSpecSortConditionOrderEnum["Ascending"] = "ASCENDING";
     MediationReportSpecSortConditionOrderEnum["Descending"] = "DESCENDING";
-})(MediationReportSpecSortConditionOrderEnum || (MediationReportSpecSortConditionOrderEnum = {}));
+})(MediationReportSpecSortConditionOrderEnum = exports.MediationReportSpecSortConditionOrderEnum || (exports.MediationReportSpecSortConditionOrderEnum = {}));
 // MediationReportSpecSortCondition
 /**
  * Sorting direction to be applied on a dimension or a metric.
@@ -70,17 +73,17 @@ var MediationReportSpecSortCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], MediationReportSpecSortCondition.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", String)
     ], MediationReportSpecSortCondition.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order" }),
         __metadata("design:type", String)
     ], MediationReportSpecSortCondition.prototype, "order", void 0);
     return MediationReportSpecSortCondition;
-}(SpeakeasyBase));
-export { MediationReportSpecSortCondition };
+}(utils_1.SpeakeasyBase));
+exports.MediationReportSpecSortCondition = MediationReportSpecSortCondition;

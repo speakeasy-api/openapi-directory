@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PrfndRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AC_NO" })
-  acNo: string;
+  acNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=DOB" })
   dob: string;
@@ -188,23 +188,23 @@ export class PrfndResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  prfnd400ApplicationJsonObject?: Prfnd400ApplicationJson;
+  prfnd400ApplicationJSONObject?: Prfnd400ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd401ApplicationJsonObject?: Prfnd401ApplicationJson;
+  prfnd401ApplicationJSONObject?: Prfnd401ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd404ApplicationJsonObject?: Prfnd404ApplicationJson;
+  prfnd404ApplicationJSONObject?: Prfnd404ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd500ApplicationJsonObject?: Prfnd500ApplicationJson;
+  prfnd500ApplicationJSONObject?: Prfnd500ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd502ApplicationJsonObject?: Prfnd502ApplicationJson;
+  prfnd502ApplicationJSONObject?: Prfnd502ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd503ApplicationJsonObject?: Prfnd503ApplicationJson;
+  prfnd503ApplicationJSONObject?: Prfnd503ApplicationJson;
 
   @SpeakeasyMetadata()
-  prfnd504ApplicationJsonObject?: Prfnd504ApplicationJson;
+  prfnd504ApplicationJSONObject?: Prfnd504ApplicationJson;
 }

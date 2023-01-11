@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRecordLifecycleActionHeartbeatActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRecordLifecycleActionHeartbeatResponse = exports.PostRecordLifecycleActionHeartbeatRequest = exports.PostRecordLifecycleActionHeartbeatHeaders = exports.PostRecordLifecycleActionHeartbeatQueryParams = exports.PostRecordLifecycleActionHeartbeatVersionEnum = exports.PostRecordLifecycleActionHeartbeatActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRecordLifecycleActionHeartbeatActionEnum;
 (function (PostRecordLifecycleActionHeartbeatActionEnum) {
     PostRecordLifecycleActionHeartbeatActionEnum["RecordLifecycleActionHeartbeat"] = "RecordLifecycleActionHeartbeat";
-})(PostRecordLifecycleActionHeartbeatActionEnum || (PostRecordLifecycleActionHeartbeatActionEnum = {}));
-export var PostRecordLifecycleActionHeartbeatVersionEnum;
+})(PostRecordLifecycleActionHeartbeatActionEnum = exports.PostRecordLifecycleActionHeartbeatActionEnum || (exports.PostRecordLifecycleActionHeartbeatActionEnum = {}));
+var PostRecordLifecycleActionHeartbeatVersionEnum;
 (function (PostRecordLifecycleActionHeartbeatVersionEnum) {
     PostRecordLifecycleActionHeartbeatVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostRecordLifecycleActionHeartbeatVersionEnum || (PostRecordLifecycleActionHeartbeatVersionEnum = {}));
+})(PostRecordLifecycleActionHeartbeatVersionEnum = exports.PostRecordLifecycleActionHeartbeatVersionEnum || (exports.PostRecordLifecycleActionHeartbeatVersionEnum = {}));
 var PostRecordLifecycleActionHeartbeatQueryParams = /** @class */ (function (_super) {
     __extends(PostRecordLifecycleActionHeartbeatQueryParams, _super);
     function PostRecordLifecycleActionHeartbeatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatQueryParams.prototype, "version", void 0);
     return PostRecordLifecycleActionHeartbeatQueryParams;
-}(SpeakeasyBase));
-export { PostRecordLifecycleActionHeartbeatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRecordLifecycleActionHeartbeatQueryParams = PostRecordLifecycleActionHeartbeatQueryParams;
 var PostRecordLifecycleActionHeartbeatHeaders = /** @class */ (function (_super) {
     __extends(PostRecordLifecycleActionHeartbeatHeaders, _super);
     function PostRecordLifecycleActionHeartbeatHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRecordLifecycleActionHeartbeatHeaders;
-}(SpeakeasyBase));
-export { PostRecordLifecycleActionHeartbeatHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRecordLifecycleActionHeartbeatHeaders = PostRecordLifecycleActionHeartbeatHeaders;
 var PostRecordLifecycleActionHeartbeatRequest = /** @class */ (function (_super) {
     __extends(PostRecordLifecycleActionHeartbeatRequest, _super);
     function PostRecordLifecycleActionHeartbeatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRecordLifecycleActionHeartbeatQueryParams)
     ], PostRecordLifecycleActionHeartbeatRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRecordLifecycleActionHeartbeatHeaders)
     ], PostRecordLifecycleActionHeartbeatRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRecordLifecycleActionHeartbeatRequest.prototype, "request", void 0);
     return PostRecordLifecycleActionHeartbeatRequest;
-}(SpeakeasyBase));
-export { PostRecordLifecycleActionHeartbeatRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRecordLifecycleActionHeartbeatRequest = PostRecordLifecycleActionHeartbeatRequest;
 var PostRecordLifecycleActionHeartbeatResponse = /** @class */ (function (_super) {
     __extends(PostRecordLifecycleActionHeartbeatResponse, _super);
     function PostRecordLifecycleActionHeartbeatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRecordLifecycleActionHeartbeatResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRecordLifecycleActionHeartbeatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRecordLifecycleActionHeartbeatResponse.prototype, "statusCode", void 0);
     return PostRecordLifecycleActionHeartbeatResponse;
-}(SpeakeasyBase));
-export { PostRecordLifecycleActionHeartbeatResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRecordLifecycleActionHeartbeatResponse = PostRecordLifecycleActionHeartbeatResponse;

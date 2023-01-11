@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedCacheNodesOffering } from "./reservedcachenodesoffering";
+import { ReservedCacheNodesOfferingList } from "./reservedcachenodesofferinglist";
 
 
 
@@ -11,6 +11,6 @@ export class ReservedCacheNodesOfferingMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ReservedCacheNodesOffering })
-  reservedCacheNodesOfferings?: ReservedCacheNodesOffering[];
+  @SpeakeasyMetadata({ elemType: ReservedCacheNodesOfferingList })
+  reservedCacheNodesOfferings?: ReservedCacheNodesOfferingList[];
 }

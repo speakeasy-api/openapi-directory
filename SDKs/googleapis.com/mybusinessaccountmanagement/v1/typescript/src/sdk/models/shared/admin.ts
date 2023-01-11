@@ -10,6 +10,25 @@ export enum AdminRoleEnum {
 }
 
 
+// AdminInput
+/** 
+ * An administrator of an Account or a location.
+**/
+export class AdminInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=account" })
+  account?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=admin" })
+  admin?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=role" })
+  role?: AdminRoleEnum;
+}
+
+
 // Admin
 /** 
  * An administrator of an Account or a location.
@@ -26,25 +45,6 @@ export class Admin extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=pendingInvitation" })
   pendingInvitation?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=role" })
-  role?: AdminRoleEnum;
-}
-
-
-// AdminInput
-/** 
- * An administrator of an Account or a location.
-**/
-export class AdminInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=account" })
-  account?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=admin" })
-  admin?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=role" })
   role?: AdminRoleEnum;

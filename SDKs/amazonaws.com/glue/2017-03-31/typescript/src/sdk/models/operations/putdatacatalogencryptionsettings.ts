@@ -57,7 +57,7 @@ export class PutDataCatalogEncryptionSettingsResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  putDataCatalogEncryptionSettingsResponse?: Map<string, any>;
+  putDataCatalogEncryptionSettingsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

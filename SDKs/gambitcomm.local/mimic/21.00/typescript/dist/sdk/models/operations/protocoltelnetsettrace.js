@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetSetTraceResponse = exports.ProtocolTelnetSetTraceRequest = exports.ProtocolTelnetSetTracePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetSetTracePathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetTracePathParams, _super);
     function ProtocolTelnetSetTracePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetSetTracePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
         __metadata("design:type", String)
     ], ProtocolTelnetSetTracePathParams.prototype, "enableOrNot", void 0);
     return ProtocolTelnetSetTracePathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetTracePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetTracePathParams = ProtocolTelnetSetTracePathParams;
 var ProtocolTelnetSetTraceRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetTraceRequest, _super);
     function ProtocolTelnetSetTraceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetSetTracePathParams)
     ], ProtocolTelnetSetTraceRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetSetTraceRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetTraceRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetTraceRequest = ProtocolTelnetSetTraceRequest;
 var ProtocolTelnetSetTraceResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetSetTraceResponse, _super);
     function ProtocolTelnetSetTraceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetSetTraceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetSetTraceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTelnetSetTraceResponse.prototype, "protocolTelnetSetTrace200ApplicationJsonString", void 0);
+    ], ProtocolTelnetSetTraceResponse.prototype, "protocolTelnetSetTrace200ApplicationJSONString", void 0);
     return ProtocolTelnetSetTraceResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetSetTraceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetSetTraceResponse = ProtocolTelnetSetTraceResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionDefaultConfig } from "./functiondefaultconfig";
-import { Function } from "./function";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionDefinitionVersion = void 0;
+var utils_1 = require("../../../internal/utils");
+var functiondefaultconfig_1 = require("./functiondefaultconfig");
+var function_1 = require("./function");
 // FunctionDefinitionVersion
 /**
  * Information about a function definition version.
@@ -35,13 +38,13 @@ var FunctionDefinitionVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultConfig" }),
-        __metadata("design:type", FunctionDefaultConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultConfig" }),
+        __metadata("design:type", functiondefaultconfig_1.FunctionDefaultConfig)
     ], FunctionDefinitionVersion.prototype, "defaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Functions", elemType: Function }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Functions", elemType: function_1.Function }),
         __metadata("design:type", Array)
     ], FunctionDefinitionVersion.prototype, "functions", void 0);
     return FunctionDefinitionVersion;
-}(SpeakeasyBase));
-export { FunctionDefinitionVersion };
+}(utils_1.SpeakeasyBase));
+exports.FunctionDefinitionVersion = FunctionDefinitionVersion;

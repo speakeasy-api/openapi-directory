@@ -42,7 +42,7 @@ export declare class UpdateNetworkApplianceVlanRequestBody extends SpeakeasyBase
     dhcpOptions?: UpdateNetworkApplianceVlanRequestBodyDhcpOptions[];
     dhcpRelayServerIps?: string[];
     dnsNameservers?: string;
-    fixedIpAssignments?: Map<string, any>;
+    fixedIpAssignments?: Record<string, any>;
     groupPolicyId?: string;
     name?: string;
     reservedIpRanges?: UpdateNetworkApplianceVlanRequestBodyReservedIpRanges[];
@@ -56,5 +56,5 @@ export declare class UpdateNetworkApplianceVlanRequest extends SpeakeasyBase {
 export declare class UpdateNetworkApplianceVlanResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceVlan200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceVlan200ApplicationJSONObject?: Record<string, any>;
 }

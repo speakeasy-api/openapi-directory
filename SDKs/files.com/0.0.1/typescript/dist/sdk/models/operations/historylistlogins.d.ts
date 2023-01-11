@@ -5,7 +5,7 @@ export declare class HistoryListLoginsQueryParams extends SpeakeasyBase {
     display?: string;
     endAt?: Date;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
     startAt?: Date;
 }
 export declare class HistoryListLoginsRequest extends SpeakeasyBase {

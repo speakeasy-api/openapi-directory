@@ -8,6 +8,10 @@ export enum GoalMetricRequestUnitEnum {
 }
 
 
+// GoalMetricRequestInput
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalMetricRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=currency_code" })
   currencyCode?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthenticationModeEnum } from "./authenticationmodeenum";
-import { PatientAuthPurposeEnum } from "./patientauthpurposeenum";
-export var PatientAuthInitRequestQueryRequesterTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientAuthInitRequest = exports.PatientAuthInitRequestQuery = exports.PatientAuthInitRequestQueryRequester = exports.PatientAuthInitRequestQueryRequesterTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var authenticationmodeenum_1 = require("./authenticationmodeenum");
+var patientauthpurposeenum_1 = require("./patientauthpurposeenum");
+var PatientAuthInitRequestQueryRequesterTypeEnum;
 (function (PatientAuthInitRequestQueryRequesterTypeEnum) {
     PatientAuthInitRequestQueryRequesterTypeEnum["Hip"] = "HIP";
     PatientAuthInitRequestQueryRequesterTypeEnum["Hiu"] = "HIU";
-})(PatientAuthInitRequestQueryRequesterTypeEnum || (PatientAuthInitRequestQueryRequesterTypeEnum = {}));
+})(PatientAuthInitRequestQueryRequesterTypeEnum = exports.PatientAuthInitRequestQueryRequesterTypeEnum || (exports.PatientAuthInitRequestQueryRequesterTypeEnum = {}));
 // PatientAuthInitRequestQueryRequester
 /**
  * identification of requester
@@ -40,57 +43,57 @@ var PatientAuthInitRequestQueryRequester = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequestQueryRequester.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequestQueryRequester.prototype, "type", void 0);
     return PatientAuthInitRequestQueryRequester;
-}(SpeakeasyBase));
-export { PatientAuthInitRequestQueryRequester };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthInitRequestQueryRequester = PatientAuthInitRequestQueryRequester;
 var PatientAuthInitRequestQuery = /** @class */ (function (_super) {
     __extends(PatientAuthInitRequestQuery, _super);
     function PatientAuthInitRequestQuery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authMode" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequestQuery.prototype, "authMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequestQuery.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequestQuery.prototype, "purpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requester" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requester" }),
         __metadata("design:type", PatientAuthInitRequestQueryRequester)
     ], PatientAuthInitRequestQuery.prototype, "requester", void 0);
     return PatientAuthInitRequestQuery;
-}(SpeakeasyBase));
-export { PatientAuthInitRequestQuery };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthInitRequestQuery = PatientAuthInitRequestQuery;
 var PatientAuthInitRequest = /** @class */ (function (_super) {
     __extends(PatientAuthInitRequest, _super);
     function PatientAuthInitRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", PatientAuthInitRequestQuery)
     ], PatientAuthInitRequest.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientAuthInitRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientAuthInitRequest.prototype, "timestamp", void 0);
     return PatientAuthInitRequest;
-}(SpeakeasyBase));
-export { PatientAuthInitRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthInitRequest = PatientAuthInitRequest;

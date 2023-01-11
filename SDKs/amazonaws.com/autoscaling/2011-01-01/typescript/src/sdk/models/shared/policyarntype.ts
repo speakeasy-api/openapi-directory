@@ -12,5 +12,5 @@ export class PolicyArnType extends SpeakeasyBase {
   alarms?: Alarm[];
 
   @SpeakeasyMetadata()
-  policyArn?: string;
+  policyARN?: string;
 }

@@ -51,7 +51,7 @@ export class GetVpceConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getVpceConfigurationResult?: shared.GetVpceConfigurationResult;
+  getVPCEConfigurationResult?: shared.GetVpceConfigurationResult;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

@@ -8,5 +8,5 @@ export declare class ProtocolNetflowGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolNetflowGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

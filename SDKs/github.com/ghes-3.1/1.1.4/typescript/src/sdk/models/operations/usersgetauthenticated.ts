@@ -14,5 +14,5 @@ export class UsersGetAuthenticatedResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  usersGetAuthenticated200ApplicationJsonOneOf?: any;
+  usersGetAuthenticated200ApplicationJSONOneOf?: any;
 }

@@ -8,7 +8,7 @@ export declare enum GetGetQueueUrlVersionEnum {
 export declare class GetGetQueueUrlQueryParams extends SpeakeasyBase {
     action: GetGetQueueUrlActionEnum;
     queueName: string;
-    queueOwnerAwsAccountId?: string;
+    queueOwnerAWSAccountId?: string;
     version: GetGetQueueUrlVersionEnum;
 }
 export declare class GetGetQueueUrlHeaders extends SpeakeasyBase {

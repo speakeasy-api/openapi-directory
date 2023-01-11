@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3StopAmenityDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var V3StopAmenityDetails = /** @class */ (function (_super) {
     __extends(V3StopAmenityDetails, _super);
     function V3StopAmenityDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=car_parking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=car_parking" }),
         __metadata("design:type", String)
     ], V3StopAmenityDetails.prototype, "carParking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cctv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cctv" }),
         __metadata("design:type", Boolean)
     ], V3StopAmenityDetails.prototype, "cctv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxi_rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxi_rank" }),
         __metadata("design:type", Boolean)
     ], V3StopAmenityDetails.prototype, "taxiRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toilet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toilet" }),
         __metadata("design:type", Boolean)
     ], V3StopAmenityDetails.prototype, "toilet", void 0);
     return V3StopAmenityDetails;
-}(SpeakeasyBase));
-export { V3StopAmenityDetails };
+}(utils_1.SpeakeasyBase));
+exports.V3StopAmenityDetails = V3StopAmenityDetails;

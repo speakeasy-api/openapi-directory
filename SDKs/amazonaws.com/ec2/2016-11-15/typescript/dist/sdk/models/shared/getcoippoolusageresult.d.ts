@@ -1,7 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CoipAddressUsage } from "./coipaddressusage";
 export declare class GetCoipPoolUsageResult extends SpeakeasyBase {
-    coipAddressUsages?: CoipAddressUsage[];
-    coipPoolId?: string;
-    localGatewayRouteTableId?: string;
+    coipAddressUsages?: Record<string, any>;
+    coipPoolId?: Record<string, any>;
+    localGatewayRouteTableId?: Record<string, any>;
 }

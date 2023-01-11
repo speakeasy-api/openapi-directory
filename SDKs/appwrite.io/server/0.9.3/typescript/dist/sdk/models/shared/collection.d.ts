@@ -5,7 +5,7 @@ import { Rule } from "./rule";
 **/
 export declare class Collection extends SpeakeasyBase {
     dollarId: string;
-    dollarPermissions: Map<string, any>;
+    dollarPermissions: Record<string, any>;
     dateCreated: number;
     dateUpdated: number;
     name: string;

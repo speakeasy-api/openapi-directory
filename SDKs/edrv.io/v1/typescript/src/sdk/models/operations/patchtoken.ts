@@ -62,5 +62,5 @@ export class PatchTokenResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchToken201ApplicationJsonObject?: PatchToken201ApplicationJson;
+  patchToken201ApplicationJSONObject?: PatchToken201ApplicationJson;
 }

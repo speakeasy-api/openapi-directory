@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1InstalledApp } from "./googlechromemanagementv1installedapp";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CountInstalledAppsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1installedapp_1 = require("./googlechromemanagementv1installedapp");
 // GoogleChromeManagementV1CountInstalledAppsResponse
 /**
  * Response containing details of queried installed apps.
@@ -34,17 +37,17 @@ var GoogleChromeManagementV1CountInstalledAppsResponse = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installedApps", elemType: GoogleChromeManagementV1InstalledApp }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installedApps", elemType: googlechromemanagementv1installedapp_1.GoogleChromeManagementV1InstalledApp }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountInstalledAppsResponse.prototype, "installedApps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1CountInstalledAppsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1CountInstalledAppsResponse.prototype, "totalSize", void 0);
     return GoogleChromeManagementV1CountInstalledAppsResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CountInstalledAppsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CountInstalledAppsResponse = GoogleChromeManagementV1CountInstalledAppsResponse;

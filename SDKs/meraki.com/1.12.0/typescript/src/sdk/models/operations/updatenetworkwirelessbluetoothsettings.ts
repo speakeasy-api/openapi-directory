@@ -51,5 +51,5 @@ export class UpdateNetworkWirelessBluetoothSettingsResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessBluetoothSettings200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessBluetoothSettings200ApplicationJSONObject?: Record<string, any>;
 }

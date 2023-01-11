@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationSchema } from "./destinationschema";
-import { KinesisFirehoseOutputDescription } from "./kinesisfirehoseoutputdescription";
-import { KinesisStreamsOutputDescription } from "./kinesisstreamsoutputdescription";
-import { LambdaOutputDescription } from "./lambdaoutputdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OutputDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationschema_1 = require("./destinationschema");
+var kinesisfirehoseoutputdescription_1 = require("./kinesisfirehoseoutputdescription");
+var kinesisstreamsoutputdescription_1 = require("./kinesisstreamsoutputdescription");
+var lambdaoutputdescription_1 = require("./lambdaoutputdescription");
 // OutputDescription
 /**
  * Describes the application output configuration, which includes the in-application stream name and the destination where the stream data is written. The destination can be an Amazon Kinesis stream or an Amazon Kinesis Firehose delivery stream.
@@ -37,29 +40,29 @@ var OutputDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationSchema" }),
-        __metadata("design:type", DestinationSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationSchema" }),
+        __metadata("design:type", destinationschema_1.DestinationSchema)
     ], OutputDescription.prototype, "destinationSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisFirehoseOutputDescription" }),
-        __metadata("design:type", KinesisFirehoseOutputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisFirehoseOutputDescription" }),
+        __metadata("design:type", kinesisfirehoseoutputdescription_1.KinesisFirehoseOutputDescription)
     ], OutputDescription.prototype, "kinesisFirehoseOutputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisStreamsOutputDescription" }),
-        __metadata("design:type", KinesisStreamsOutputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisStreamsOutputDescription" }),
+        __metadata("design:type", kinesisstreamsoutputdescription_1.KinesisStreamsOutputDescription)
     ], OutputDescription.prototype, "kinesisStreamsOutputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LambdaOutputDescription" }),
-        __metadata("design:type", LambdaOutputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LambdaOutputDescription" }),
+        __metadata("design:type", lambdaoutputdescription_1.LambdaOutputDescription)
     ], OutputDescription.prototype, "lambdaOutputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], OutputDescription.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputId" }),
         __metadata("design:type", String)
     ], OutputDescription.prototype, "outputId", void 0);
     return OutputDescription;
-}(SpeakeasyBase));
-export { OutputDescription };
+}(utils_1.SpeakeasyBase));
+exports.OutputDescription = OutputDescription;

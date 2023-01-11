@@ -23,7 +23,7 @@ export declare class CreateContactListResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     badRequestException?: any;
     contentType: string;
-    createContactListResponse?: Map<string, any>;
+    createContactListResponse?: Record<string, any>;
     limitExceededException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

@@ -18,6 +18,6 @@ export declare class GetP11SummaryReportOutputRequest extends SpeakeasyBase {
 export declare class GetP11SummaryReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getP11SummaryReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getP11SummaryReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

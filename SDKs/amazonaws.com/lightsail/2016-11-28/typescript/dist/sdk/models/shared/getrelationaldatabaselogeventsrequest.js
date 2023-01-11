@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseLogEventsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRelationalDatabaseLogEventsRequest = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseLogEventsRequest, _super);
     function GetRelationalDatabaseLogEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamName" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "logStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseName" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "relationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startFromHead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startFromHead" }),
         __metadata("design:type", Boolean)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "startFromHead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], GetRelationalDatabaseLogEventsRequest.prototype, "startTime", void 0);
     return GetRelationalDatabaseLogEventsRequest;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseLogEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseLogEventsRequest = GetRelationalDatabaseLogEventsRequest;

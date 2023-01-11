@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterConfigInput } from "./clusterconfig";
-import { ClusterMetrics } from "./clustermetrics";
-import { VirtualClusterConfig } from "./virtualclusterconfig";
-import { ClusterConfig } from "./clusterconfig";
-import { ClusterStatus } from "./clusterstatus";
-// ClusterInput
-/**
- * Describes the identifying information, config, and status of a Dataproc cluster
-**/
-var ClusterInput = /** @class */ (function (_super) {
-    __extends(ClusterInput, _super);
-    function ClusterInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
-        __metadata("design:type", String)
-    ], ClusterInput.prototype, "clusterName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ClusterConfigInput)
-    ], ClusterInput.prototype, "config", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], ClusterInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", ClusterMetrics)
-    ], ClusterInput.prototype, "metrics", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
-        __metadata("design:type", String)
-    ], ClusterInput.prototype, "projectId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualClusterConfig" }),
-        __metadata("design:type", VirtualClusterConfig)
-    ], ClusterInput.prototype, "virtualClusterConfig", void 0);
-    return ClusterInput;
-}(SpeakeasyBase));
-export { ClusterInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterInput = exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterconfig_1 = require("./clusterconfig");
+var clustermetrics_1 = require("./clustermetrics");
+var clusterstatus_1 = require("./clusterstatus");
+var virtualclusterconfig_1 = require("./virtualclusterconfig");
+var clusterconfig_2 = require("./clusterconfig");
 // Cluster
 /**
  * Describes the identifying information, config, and status of a Dataproc cluster
@@ -74,41 +41,77 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterUuid" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", clusterconfig_1.ClusterConfig)
     ], Cluster.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Cluster.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", ClusterMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", clustermetrics_1.ClusterMetrics)
     ], Cluster.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", ClusterStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", clusterstatus_1.ClusterStatus)
     ], Cluster.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusHistory", elemType: ClusterStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusHistory", elemType: clusterstatus_1.ClusterStatus }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "statusHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualClusterConfig" }),
-        __metadata("design:type", VirtualClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualClusterConfig" }),
+        __metadata("design:type", virtualclusterconfig_1.VirtualClusterConfig)
     ], Cluster.prototype, "virtualClusterConfig", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;
+// ClusterInput
+/**
+ * Describes the identifying information, config, and status of a Dataproc cluster
+**/
+var ClusterInput = /** @class */ (function (_super) {
+    __extends(ClusterInput, _super);
+    function ClusterInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
+        __metadata("design:type", String)
+    ], ClusterInput.prototype, "clusterName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", clusterconfig_2.ClusterConfigInput)
+    ], ClusterInput.prototype, "config", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], ClusterInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", clustermetrics_1.ClusterMetrics)
+    ], ClusterInput.prototype, "metrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
+        __metadata("design:type", String)
+    ], ClusterInput.prototype, "projectId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualClusterConfig" }),
+        __metadata("design:type", virtualclusterconfig_1.VirtualClusterConfig)
+    ], ClusterInput.prototype, "virtualClusterConfig", void 0);
+    return ClusterInput;
+}(utils_1.SpeakeasyBase));
+exports.ClusterInput = ClusterInput;

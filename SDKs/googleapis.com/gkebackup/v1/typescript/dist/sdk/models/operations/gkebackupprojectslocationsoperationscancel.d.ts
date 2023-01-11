@@ -23,11 +23,11 @@ export declare class GkebackupProjectsLocationsOperationsCancelSecurity extends 
 export declare class GkebackupProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: GkebackupProjectsLocationsOperationsCancelPathParams;
     queryParams: GkebackupProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: GkebackupProjectsLocationsOperationsCancelSecurity;
 }
 export declare class GkebackupProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

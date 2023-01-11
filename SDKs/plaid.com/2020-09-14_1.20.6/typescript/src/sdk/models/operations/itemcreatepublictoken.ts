@@ -14,7 +14,7 @@ export class ItemCreatePublicTokenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  itemPublicTokenCreateResponse?: Map<string, any>;
+  itemPublicTokenCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

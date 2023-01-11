@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchedulerResource } from "./schedulerresource";
-import { WebServerResource } from "./webserverresource";
-import { WorkerResource } from "./workerresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkloadsConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var schedulerresource_1 = require("./schedulerresource");
+var webserverresource_1 = require("./webserverresource");
+var workerresource_1 = require("./workerresource");
 // WorkloadsConfig
 /**
  * The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
@@ -36,17 +39,17 @@ var WorkloadsConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduler" }),
-        __metadata("design:type", SchedulerResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduler" }),
+        __metadata("design:type", schedulerresource_1.SchedulerResource)
     ], WorkloadsConfig.prototype, "scheduler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webServer" }),
-        __metadata("design:type", WebServerResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webServer" }),
+        __metadata("design:type", webserverresource_1.WebServerResource)
     ], WorkloadsConfig.prototype, "webServer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=worker" }),
-        __metadata("design:type", WorkerResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=worker" }),
+        __metadata("design:type", workerresource_1.WorkerResource)
     ], WorkloadsConfig.prototype, "worker", void 0);
     return WorkloadsConfig;
-}(SpeakeasyBase));
-export { WorkloadsConfig };
+}(utils_1.SpeakeasyBase));
+exports.WorkloadsConfig = WorkloadsConfig;

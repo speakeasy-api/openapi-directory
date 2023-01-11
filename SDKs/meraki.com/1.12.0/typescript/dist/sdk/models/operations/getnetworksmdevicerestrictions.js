@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmDeviceRestrictionsResponse = exports.GetNetworkSmDeviceRestrictionsRequest = exports.GetNetworkSmDeviceRestrictionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmDeviceRestrictionsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceRestrictionsPathParams, _super);
     function GetNetworkSmDeviceRestrictionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceRestrictionsPathParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceRestrictionsPathParams.prototype, "networkId", void 0);
     return GetNetworkSmDeviceRestrictionsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceRestrictionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceRestrictionsPathParams = GetNetworkSmDeviceRestrictionsPathParams;
 var GetNetworkSmDeviceRestrictionsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceRestrictionsRequest, _super);
     function GetNetworkSmDeviceRestrictionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDeviceRestrictionsPathParams)
     ], GetNetworkSmDeviceRestrictionsRequest.prototype, "pathParams", void 0);
     return GetNetworkSmDeviceRestrictionsRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceRestrictionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceRestrictionsRequest = GetNetworkSmDeviceRestrictionsRequest;
 var GetNetworkSmDeviceRestrictionsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceRestrictionsResponse, _super);
     function GetNetworkSmDeviceRestrictionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceRestrictionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmDeviceRestrictionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmDeviceRestrictionsResponse.prototype, "getNetworkSmDeviceRestrictions200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmDeviceRestrictionsResponse.prototype, "getNetworkSmDeviceRestrictions200ApplicationJSONObject", void 0);
     return GetNetworkSmDeviceRestrictionsResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceRestrictionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceRestrictionsResponse = GetNetworkSmDeviceRestrictionsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationPendingModifiedValues = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicationPendingModifiedValues
 /**
  * Provides information about the values of pending modifications to a replication instance. This data type is an object of the <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_ReplicationInstance.html"> <code>ReplicationInstance</code> </a> user-defined data type.
@@ -33,21 +36,21 @@ var ReplicationPendingModifiedValues = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllocatedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllocatedStorage" }),
         __metadata("design:type", Number)
     ], ReplicationPendingModifiedValues.prototype, "allocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
         __metadata("design:type", String)
     ], ReplicationPendingModifiedValues.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MultiAZ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MultiAZ" }),
         __metadata("design:type", Boolean)
-    ], ReplicationPendingModifiedValues.prototype, "multiAz", void 0);
+    ], ReplicationPendingModifiedValues.prototype, "multiAZ", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceClass" }),
         __metadata("design:type", String)
     ], ReplicationPendingModifiedValues.prototype, "replicationInstanceClass", void 0);
     return ReplicationPendingModifiedValues;
-}(SpeakeasyBase));
-export { ReplicationPendingModifiedValues };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationPendingModifiedValues = ReplicationPendingModifiedValues;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityInfo } from "./entityinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntityDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var entityinfo_1 = require("./entityinfo");
 // EntityDetails
 /**
  * <p>An object that contains details about when the IAM entities (users or roles) were last used in an attempt to access the specified Amazon Web Services service.</p> <p>This data type is a response element in the <a>GetServiceLastAccessedDetailsWithEntities</a> operation.</p>
@@ -34,13 +37,13 @@ var EntityDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", EntityInfo)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", entityinfo_1.EntityInfo)
     ], EntityDetails.prototype, "entityInfo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], EntityDetails.prototype, "lastAuthenticated", void 0);
     return EntityDetails;
-}(SpeakeasyBase));
-export { EntityDetails };
+}(utils_1.SpeakeasyBase));
+exports.EntityDetails = EntityDetails;

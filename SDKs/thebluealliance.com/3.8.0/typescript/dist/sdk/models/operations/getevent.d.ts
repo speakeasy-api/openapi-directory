@@ -17,6 +17,6 @@ export declare class GetEventRequest extends SpeakeasyBase {
 export declare class GetEventResponse extends SpeakeasyBase {
     contentType: string;
     event?: shared.Event;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

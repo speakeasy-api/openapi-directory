@@ -191,23 +191,23 @@ export class NtmksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ntmks400ApplicationJsonObject?: Ntmks400ApplicationJson;
+  ntmks400ApplicationJSONObject?: Ntmks400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks401ApplicationJsonObject?: Ntmks401ApplicationJson;
+  ntmks401ApplicationJSONObject?: Ntmks401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks404ApplicationJsonObject?: Ntmks404ApplicationJson;
+  ntmks404ApplicationJSONObject?: Ntmks404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks500ApplicationJsonObject?: Ntmks500ApplicationJson;
+  ntmks500ApplicationJSONObject?: Ntmks500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks502ApplicationJsonObject?: Ntmks502ApplicationJson;
+  ntmks502ApplicationJSONObject?: Ntmks502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks503ApplicationJsonObject?: Ntmks503ApplicationJson;
+  ntmks503ApplicationJSONObject?: Ntmks503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntmks504ApplicationJsonObject?: Ntmks504ApplicationJson;
+  ntmks504ApplicationJSONObject?: Ntmks504ApplicationJson;
 }

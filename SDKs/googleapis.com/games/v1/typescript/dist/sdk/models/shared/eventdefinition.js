@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventChild } from "./eventchild";
-export var EventDefinitionVisibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventDefinition = exports.EventDefinitionVisibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventchild_1 = require("./eventchild");
+var EventDefinitionVisibilityEnum;
 (function (EventDefinitionVisibilityEnum) {
     EventDefinitionVisibilityEnum["EventVisibilityUnspecified"] = "EVENT_VISIBILITY_UNSPECIFIED";
     EventDefinitionVisibilityEnum["Revealed"] = "REVEALED";
     EventDefinitionVisibilityEnum["Hidden"] = "HIDDEN";
-})(EventDefinitionVisibilityEnum || (EventDefinitionVisibilityEnum = {}));
+})(EventDefinitionVisibilityEnum = exports.EventDefinitionVisibilityEnum || (exports.EventDefinitionVisibilityEnum = {}));
 // EventDefinition
 /**
  * An event definition resource.
@@ -40,37 +43,37 @@ var EventDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childEvents", elemType: EventChild }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childEvents", elemType: eventchild_1.EventChild }),
         __metadata("design:type", Array)
     ], EventDefinition.prototype, "childEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefaultImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefaultImageUrl" }),
         __metadata("design:type", Boolean)
     ], EventDefinition.prototype, "isDefaultImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], EventDefinition.prototype, "visibility", void 0);
     return EventDefinition;
-}(SpeakeasyBase));
-export { EventDefinition };
+}(utils_1.SpeakeasyBase));
+exports.EventDefinition = EventDefinition;

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Signer } from "./signer";
+import { SignerList } from "./signerlist";
 
 
 
@@ -11,8 +11,8 @@ export class ActiveTrustedSigners extends SpeakeasyBase {
   @SpeakeasyMetadata()
   enabled: boolean;
 
-  @SpeakeasyMetadata({ elemType: Signer })
-  items?: Signer[];
+  @SpeakeasyMetadata({ elemType: SignerList })
+  items?: SignerList[];
 
   @SpeakeasyMetadata()
   quantity: number;

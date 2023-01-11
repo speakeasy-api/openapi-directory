@@ -23,7 +23,7 @@ export declare class FailoverShardResponse extends SpeakeasyBase {
     contentType: string;
     failoverShardResponse?: shared.FailoverShardResponse;
     invalidClusterStateFault?: any;
-    invalidKmsKeyFault?: any;
+    invalidKMSKeyFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;
     shardNotFoundFault?: any;

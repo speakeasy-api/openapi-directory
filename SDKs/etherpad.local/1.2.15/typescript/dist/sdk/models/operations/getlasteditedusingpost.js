@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLastEditedUsingPostResponse = exports.GetLastEditedUsingPostRequest = exports.GetLastEditedUsingPost500ApplicationJson = exports.GetLastEditedUsingPost401ApplicationJson = exports.GetLastEditedUsingPost400ApplicationJson = exports.GetLastEditedUsingPost200ApplicationJson = exports.GetLastEditedUsingPost200ApplicationJsonData = exports.GetLastEditedUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLastEditedUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPostQueryParams, _super);
     function GetLastEditedUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], GetLastEditedUsingPostQueryParams.prototype, "padId", void 0);
+    ], GetLastEditedUsingPostQueryParams.prototype, "padID", void 0);
     return GetLastEditedUsingPostQueryParams;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPostQueryParams = GetLastEditedUsingPostQueryParams;
 var GetLastEditedUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPost200ApplicationJsonData, _super);
     function GetLastEditedUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastEdited" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastEdited" }),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPost200ApplicationJsonData.prototype, "lastEdited", void 0);
     return GetLastEditedUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPost200ApplicationJsonData = GetLastEditedUsingPost200ApplicationJsonData;
 var GetLastEditedUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPost200ApplicationJson, _super);
     function GetLastEditedUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetLastEditedUsingPost200ApplicationJsonData)
     ], GetLastEditedUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetLastEditedUsingPost200ApplicationJson.prototype, "message", void 0);
     return GetLastEditedUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPost200ApplicationJson = GetLastEditedUsingPost200ApplicationJson;
 var GetLastEditedUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPost400ApplicationJson, _super);
     function GetLastEditedUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetLastEditedUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetLastEditedUsingPost400ApplicationJson.prototype, "message", void 0);
     return GetLastEditedUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPost400ApplicationJson = GetLastEditedUsingPost400ApplicationJson;
 var GetLastEditedUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPost401ApplicationJson, _super);
     function GetLastEditedUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetLastEditedUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetLastEditedUsingPost401ApplicationJson.prototype, "message", void 0);
     return GetLastEditedUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPost401ApplicationJson = GetLastEditedUsingPost401ApplicationJson;
 var GetLastEditedUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPost500ApplicationJson, _super);
     function GetLastEditedUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetLastEditedUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetLastEditedUsingPost500ApplicationJson.prototype, "message", void 0);
     return GetLastEditedUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPost500ApplicationJson = GetLastEditedUsingPost500ApplicationJson;
 var GetLastEditedUsingPostRequest = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPostRequest, _super);
     function GetLastEditedUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLastEditedUsingPostQueryParams)
     ], GetLastEditedUsingPostRequest.prototype, "queryParams", void 0);
     return GetLastEditedUsingPostRequest;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPostRequest = GetLastEditedUsingPostRequest;
 var GetLastEditedUsingPostResponse = /** @class */ (function (_super) {
     __extends(GetLastEditedUsingPostResponse, _super);
     function GetLastEditedUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLastEditedUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLastEditedUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLastEditedUsingPost200ApplicationJson)
-    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPost200ApplicationJsonObject", void 0);
+    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLastEditedUsingPost400ApplicationJson)
-    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPost400ApplicationJsonObject", void 0);
+    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLastEditedUsingPost401ApplicationJson)
-    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPost401ApplicationJsonObject", void 0);
+    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLastEditedUsingPost500ApplicationJson)
-    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPost500ApplicationJsonObject", void 0);
+    ], GetLastEditedUsingPostResponse.prototype, "getLastEditedUsingPOST500ApplicationJSONObject", void 0);
     return GetLastEditedUsingPostResponse;
-}(SpeakeasyBase));
-export { GetLastEditedUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLastEditedUsingPostResponse = GetLastEditedUsingPostResponse;

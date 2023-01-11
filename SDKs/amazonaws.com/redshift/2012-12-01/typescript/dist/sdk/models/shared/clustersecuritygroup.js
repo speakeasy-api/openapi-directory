@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2SecurityGroup } from "./ec2securitygroup";
-import { IpRange } from "./iprange";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterSecurityGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var ec2securitygrouplist_1 = require("./ec2securitygrouplist");
+var iprangelist_1 = require("./iprangelist");
+var taglist_1 = require("./taglist");
 // ClusterSecurityGroup
 /**
  * Describes a security group.
@@ -36,25 +39,25 @@ var ClusterSecurityGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSecurityGroup.prototype, "clusterSecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSecurityGroup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Ec2SecurityGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: ec2securitygrouplist_1.Ec2SecurityGroupList }),
         __metadata("design:type", Array)
     ], ClusterSecurityGroup.prototype, "ec2SecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: IpRange }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: iprangelist_1.IpRangeList }),
         __metadata("design:type", Array)
     ], ClusterSecurityGroup.prototype, "ipRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: taglist_1.TagList }),
         __metadata("design:type", Array)
     ], ClusterSecurityGroup.prototype, "tags", void 0);
     return ClusterSecurityGroup;
-}(SpeakeasyBase));
-export { ClusterSecurityGroup };
+}(utils_1.SpeakeasyBase));
+exports.ClusterSecurityGroup = ClusterSecurityGroup;

@@ -19,7 +19,7 @@ export declare class DisassociateWebAclRequest extends SpeakeasyBase {
 }
 export declare class DisassociateWebAclResponse extends SpeakeasyBase {
     contentType: string;
-    disassociateWebAclResponse?: Map<string, any>;
+    disassociateWebACLResponse?: Record<string, any>;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;

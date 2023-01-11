@@ -14,7 +14,7 @@ export declare class IssuesListAssigneesRequest extends SpeakeasyBase {
 }
 export declare class IssuesListAssigneesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     simpleUsers?: shared.SimpleUser[];

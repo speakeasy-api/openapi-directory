@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-export var NestedPowerPortConnectionStatusLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestedPowerPort = exports.NestedPowerPortConnectionStatus = exports.NestedPowerPortConnectionStatusLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var NestedPowerPortConnectionStatusLabelEnum;
 (function (NestedPowerPortConnectionStatusLabelEnum) {
     NestedPowerPortConnectionStatusLabelEnum["NotConnected"] = "Not Connected";
     NestedPowerPortConnectionStatusLabelEnum["Connected"] = "Connected";
-})(NestedPowerPortConnectionStatusLabelEnum || (NestedPowerPortConnectionStatusLabelEnum = {}));
+})(NestedPowerPortConnectionStatusLabelEnum = exports.NestedPowerPortConnectionStatusLabelEnum || (exports.NestedPowerPortConnectionStatusLabelEnum = {}));
 var NestedPowerPortConnectionStatus = /** @class */ (function (_super) {
     __extends(NestedPowerPortConnectionStatus, _super);
     function NestedPowerPortConnectionStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], NestedPowerPortConnectionStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Boolean)
     ], NestedPowerPortConnectionStatus.prototype, "value", void 0);
     return NestedPowerPortConnectionStatus;
-}(SpeakeasyBase));
-export { NestedPowerPortConnectionStatus };
+}(utils_1.SpeakeasyBase));
+exports.NestedPowerPortConnectionStatus = NestedPowerPortConnectionStatus;
 var NestedPowerPort = /** @class */ (function (_super) {
     __extends(NestedPowerPort, _super);
     function NestedPowerPort() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
         __metadata("design:type", Number)
     ], NestedPowerPort.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", NestedPowerPortConnectionStatus)
     ], NestedPowerPort.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], NestedPowerPort.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NestedPowerPort.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NestedPowerPort.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], NestedPowerPort.prototype, "url", void 0);
     return NestedPowerPort;
-}(SpeakeasyBase));
-export { NestedPowerPort };
+}(utils_1.SpeakeasyBase));
+exports.NestedPowerPort = NestedPowerPort;

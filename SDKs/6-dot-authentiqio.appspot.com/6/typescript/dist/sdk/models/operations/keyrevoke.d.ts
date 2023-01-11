@@ -17,5 +17,5 @@ export declare class KeyRevokeResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    keyRevoke200ApplicationJsonObject?: KeyRevoke200ApplicationJson;
+    keyRevoke200ApplicationJSONObject?: KeyRevoke200ApplicationJson;
 }

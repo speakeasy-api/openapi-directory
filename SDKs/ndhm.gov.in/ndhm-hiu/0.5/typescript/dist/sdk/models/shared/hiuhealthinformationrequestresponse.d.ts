@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare enum HiuHealthInformationRequestResponseHiRequestSessionStatusEnum {
     Requested = "REQUESTED",
@@ -10,7 +10,7 @@ export declare class HiuHealthInformationRequestResponseHiRequest extends Speake
     transactionId: string;
 }
 export declare class HiuHealthInformationRequestResponse extends SpeakeasyBase {
-    error?: Error;
+    error?: ErrorT;
     hiRequest?: HiuHealthInformationRequestResponseHiRequest;
     requestId: string;
     resp: RequestReference;

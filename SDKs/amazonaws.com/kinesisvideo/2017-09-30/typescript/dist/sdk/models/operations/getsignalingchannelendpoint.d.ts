@@ -17,7 +17,7 @@ export declare class GetSignalingChannelEndpointRequestBodySingleMasterChannelEn
     role?: shared.ChannelRoleEnum;
 }
 export declare class GetSignalingChannelEndpointRequestBody extends SpeakeasyBase {
-    channelArn: string;
+    channelARN: string;
     singleMasterChannelEndpointConfiguration?: GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration;
 }
 export declare class GetSignalingChannelEndpointRequest extends SpeakeasyBase {

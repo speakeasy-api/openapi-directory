@@ -10,7 +10,7 @@ export declare class RetryDataReplicationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class RetryDataReplicationRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class RetryDataReplicationRequest extends SpeakeasyBase {
     headers: RetryDataReplicationHeaders;

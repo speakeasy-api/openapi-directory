@@ -62,7 +62,7 @@ export class BestFaresRequest extends SpeakeasyBase {
 
 export class BestFaresResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  bestFares200ApplicationJsonString?: string;
+  bestFares200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

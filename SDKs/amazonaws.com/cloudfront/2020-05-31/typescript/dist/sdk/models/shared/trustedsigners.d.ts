@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class TrustedSigners extends SpeakeasyBase {
     enabled: boolean;
-    items?: string[];
+    items?: Record<string, any>[];
     quantity: number;
 }

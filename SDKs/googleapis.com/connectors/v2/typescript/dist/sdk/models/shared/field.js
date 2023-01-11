@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-export var FieldDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Field = exports.FieldDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reference_1 = require("./reference");
+var FieldDataTypeEnum;
 (function (FieldDataTypeEnum) {
     FieldDataTypeEnum["DataTypeUnspecified"] = "DATA_TYPE_UNSPECIFIED";
     FieldDataTypeEnum["Int"] = "INT";
@@ -71,7 +74,7 @@ export var FieldDataTypeEnum;
     FieldDataTypeEnum["RefCursor"] = "REF_CURSOR";
     FieldDataTypeEnum["TimeWithTimezone"] = "TIME_WITH_TIMEZONE";
     FieldDataTypeEnum["TimestampWithTimezone"] = "TIMESTAMP_WITH_TIMEZONE";
-})(FieldDataTypeEnum || (FieldDataTypeEnum = {}));
+})(FieldDataTypeEnum = exports.FieldDataTypeEnum || (exports.FieldDataTypeEnum = {}));
 // Field
 /**
  * Message contains EntityType's Field metadata.
@@ -82,37 +85,37 @@ var Field = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalDetails" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalDetails" }),
+        __metadata("design:type", Object)
     ], Field.prototype, "additionalDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], Field.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValue" }),
         __metadata("design:type", Object)
     ], Field.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Field.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", Boolean)
     ], Field.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Field.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullable" }),
         __metadata("design:type", Boolean)
     ], Field.prototype, "nullable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reference" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reference" }),
+        __metadata("design:type", reference_1.Reference)
     ], Field.prototype, "reference", void 0);
     return Field;
-}(SpeakeasyBase));
-export { Field };
+}(utils_1.SpeakeasyBase));
+exports.Field = Field;

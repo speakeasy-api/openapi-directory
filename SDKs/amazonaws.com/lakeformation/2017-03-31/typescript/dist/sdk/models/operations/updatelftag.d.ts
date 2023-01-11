@@ -26,5 +26,5 @@ export declare class UpdateLfTagResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateLfTagResponse?: Map<string, any>;
+    updateLFTagResponse?: Record<string, any>;
 }

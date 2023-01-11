@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventFilter } from "./eventfilter";
-export var PathFilterPathMatchPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PathFilter = exports.PathFilterPathMatchPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventfilter_1 = require("./eventfilter");
+var PathFilterPathMatchPositionEnum;
 (function (PathFilterPathMatchPositionEnum) {
     PathFilterPathMatchPositionEnum["Any"] = "ANY";
     PathFilterPathMatchPositionEnum["First"] = "FIRST";
     PathFilterPathMatchPositionEnum["Last"] = "LAST";
-})(PathFilterPathMatchPositionEnum || (PathFilterPathMatchPositionEnum = {}));
+})(PathFilterPathMatchPositionEnum = exports.PathFilterPathMatchPositionEnum || (exports.PathFilterPathMatchPositionEnum = {}));
 // PathFilter
 /**
  * Path filters specify which paths to include in a report. A path is the result of combining DV360 events based on User ID to create a workflow of users' actions. When a path filter is set, the resulting report will only include paths that match the specified event at the specified position. All other paths will be excluded.
@@ -40,13 +43,13 @@ var PathFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventFilters", elemType: EventFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventFilters", elemType: eventfilter_1.EventFilter }),
         __metadata("design:type", Array)
     ], PathFilter.prototype, "eventFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pathMatchPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pathMatchPosition" }),
         __metadata("design:type", String)
     ], PathFilter.prototype, "pathMatchPosition", void 0);
     return PathFilter;
-}(SpeakeasyBase));
-export { PathFilter };
+}(utils_1.SpeakeasyBase));
+exports.PathFilter = PathFilter;

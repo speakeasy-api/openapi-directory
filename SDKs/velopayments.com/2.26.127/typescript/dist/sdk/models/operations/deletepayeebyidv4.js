@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePayeeByIdV4Response = exports.DeletePayeeByIdV4Request = exports.DeletePayeeByIdV4PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePayeeByIdV4PathParams = /** @class */ (function (_super) {
     __extends(DeletePayeeByIdV4PathParams, _super);
     function DeletePayeeByIdV4PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=payeeId" }),
         __metadata("design:type", String)
     ], DeletePayeeByIdV4PathParams.prototype, "payeeId", void 0);
     return DeletePayeeByIdV4PathParams;
-}(SpeakeasyBase));
-export { DeletePayeeByIdV4PathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePayeeByIdV4PathParams = DeletePayeeByIdV4PathParams;
 var DeletePayeeByIdV4Request = /** @class */ (function (_super) {
     __extends(DeletePayeeByIdV4Request, _super);
     function DeletePayeeByIdV4Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePayeeByIdV4PathParams)
     ], DeletePayeeByIdV4Request.prototype, "pathParams", void 0);
     return DeletePayeeByIdV4Request;
-}(SpeakeasyBase));
-export { DeletePayeeByIdV4Request };
+}(utils_1.SpeakeasyBase));
+exports.DeletePayeeByIdV4Request = DeletePayeeByIdV4Request;
 var DeletePayeeByIdV4Response = /** @class */ (function (_super) {
     __extends(DeletePayeeByIdV4Response, _super);
     function DeletePayeeByIdV4Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePayeeByIdV4Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePayeeByIdV4Response.prototype, "statusCode", void 0);
     return DeletePayeeByIdV4Response;
-}(SpeakeasyBase));
-export { DeletePayeeByIdV4Response };
+}(utils_1.SpeakeasyBase));
+exports.DeletePayeeByIdV4Response = DeletePayeeByIdV4Response;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutLifecyclePolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutLifecyclePolicyRequest = /** @class */ (function (_super) {
     __extends(PutLifecyclePolicyRequest, _super);
     function PutLifecyclePolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecyclePolicyText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecyclePolicyText" }),
         __metadata("design:type", String)
     ], PutLifecyclePolicyRequest.prototype, "lifecyclePolicyText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], PutLifecyclePolicyRequest.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], PutLifecyclePolicyRequest.prototype, "repositoryName", void 0);
     return PutLifecyclePolicyRequest;
-}(SpeakeasyBase));
-export { PutLifecyclePolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutLifecyclePolicyRequest = PutLifecyclePolicyRequest;

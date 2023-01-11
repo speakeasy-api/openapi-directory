@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetadataLabelMatcher } from "./metadatalabelmatcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var metadatalabelmatcher_1 = require("./metadatalabelmatcher");
 // EndpointMatcher
 /**
  * A definition of a matcher that selects endpoints to which the policies should be applied.
@@ -34,9 +37,9 @@ var EndpointMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataLabelMatcher" }),
-        __metadata("design:type", MetadataLabelMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataLabelMatcher" }),
+        __metadata("design:type", metadatalabelmatcher_1.MetadataLabelMatcher)
     ], EndpointMatcher.prototype, "metadataLabelMatcher", void 0);
     return EndpointMatcher;
-}(SpeakeasyBase));
-export { EndpointMatcher };
+}(utils_1.SpeakeasyBase));
+exports.EndpointMatcher = EndpointMatcher;

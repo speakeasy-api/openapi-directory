@@ -11,7 +11,7 @@ export declare class AddTagForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskAddTagRequest;
 }
 export declare class AddTagForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddTagForTaskRequest extends SpeakeasyBase {
     pathParams: AddTagForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class AddTagForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addTagForTask200ApplicationJsonObject?: AddTagForTask200ApplicationJson;
+    addTagForTask200ApplicationJSONObject?: AddTagForTask200ApplicationJson;
 }

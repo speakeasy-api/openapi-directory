@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventSubscription } from "./eventsubscription";
+import { EventSubscriptionsList } from "./eventsubscriptionslist";
 
 
 
@@ -8,8 +8,8 @@ import { EventSubscription } from "./eventsubscription";
  * <p/>
 **/
 export class EventSubscriptionsMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: EventSubscription })
-  eventSubscriptionsList?: EventSubscription[];
+  @SpeakeasyMetadata({ elemType: EventSubscriptionsList })
+  eventSubscriptionsList?: EventSubscriptionsList[];
 
   @SpeakeasyMetadata()
   marker?: string;

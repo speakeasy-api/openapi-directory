@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class OAuth2PermissionGrantDeletePathParams extends SpeakeasyBase {
     objectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class OAuth2PermissionGrantDeleteQueryParams extends SpeakeasyBase {
     apiVersion: string;

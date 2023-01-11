@@ -4,7 +4,7 @@ export declare class PostBundlesIdSharePathParams extends SpeakeasyBase {
 }
 export declare class PostBundlesIdShareRequestBody extends SpeakeasyBase {
     note?: string;
-    recipients?: Map<string, any>[];
+    recipients?: Record<string, any>[];
     to?: string[];
 }
 export declare class PostBundlesIdShareRequest extends SpeakeasyBase {

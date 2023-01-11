@@ -1,4 +1,7 @@
-export var ArtistsImageSearchFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistsImageSearchFieldValuesEnum = void 0;
+var ArtistsImageSearchFieldValuesEnum;
 (function (ArtistsImageSearchFieldValuesEnum) {
     ArtistsImageSearchFieldValuesEnum["Id"] = "id";
     ArtistsImageSearchFieldValuesEnum["AllowedUse"] = "allowed_use";
@@ -33,4 +36,4 @@ export var ArtistsImageSearchFieldValuesEnum;
     ArtistsImageSearchFieldValuesEnum["SummarySet"] = "summary_set";
     ArtistsImageSearchFieldValuesEnum["Thumb"] = "thumb";
     ArtistsImageSearchFieldValuesEnum["Title"] = "title";
-})(ArtistsImageSearchFieldValuesEnum || (ArtistsImageSearchFieldValuesEnum = {}));
+})(ArtistsImageSearchFieldValuesEnum = exports.ArtistsImageSearchFieldValuesEnum || (exports.ArtistsImageSearchFieldValuesEnum = {}));

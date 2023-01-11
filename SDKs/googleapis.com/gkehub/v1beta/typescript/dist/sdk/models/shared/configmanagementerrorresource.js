@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementGroupVersionKind } from "./configmanagementgroupversionkind";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementErrorResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementgroupversionkind_1 = require("./configmanagementgroupversionkind");
 // ConfigManagementErrorResource
 /**
  * Model for a config file in the git repo with an associated Sync error
@@ -34,21 +37,21 @@ var ConfigManagementErrorResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGvk" }),
-        __metadata("design:type", ConfigManagementGroupVersionKind)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGvk" }),
+        __metadata("design:type", configmanagementgroupversionkind_1.ConfigManagementGroupVersionKind)
     ], ConfigManagementErrorResource.prototype, "resourceGvk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ConfigManagementErrorResource.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceNamespace" }),
         __metadata("design:type", String)
     ], ConfigManagementErrorResource.prototype, "resourceNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourcePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourcePath" }),
         __metadata("design:type", String)
     ], ConfigManagementErrorResource.prototype, "sourcePath", void 0);
     return ConfigManagementErrorResource;
-}(SpeakeasyBase));
-export { ConfigManagementErrorResource };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementErrorResource = ConfigManagementErrorResource;

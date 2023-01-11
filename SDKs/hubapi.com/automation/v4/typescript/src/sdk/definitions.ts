@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,16 +33,18 @@ export class Definitions {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -52,7 +53,7 @@ export class Definitions {
           case httpRes?.status == 204:
             break;
           default:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -63,7 +64,6 @@ export class Definitions {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -81,11 +81,11 @@ export class Definitions {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -93,24 +93,26 @@ export class Definitions {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.extensionActionDefinition = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -121,7 +123,6 @@ export class Definitions {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -139,11 +140,11 @@ export class Definitions {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/automation/v4/actions/{appId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/automation/v4/actions/{appId}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -151,24 +152,26 @@ export class Definitions {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetAutomationV4ActionsAppIdGetPageResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.collectionResponseExtensionActionDefinitionForwardPaging = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -179,7 +182,6 @@ export class Definitions {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -197,44 +199,44 @@ export class Definitions {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/automation/v4/actions/{appId}/{definitionId}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.extensionActionDefinition = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -245,7 +247,6 @@ export class Definitions {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -263,44 +264,44 @@ export class Definitions {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/automation/v4/actions/{appId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/automation/v4/actions/{appId}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.PostAutomationV4ActionsAppIdCreateResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.extensionActionDefinition = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `*/*`)) {
+            if (utils.matchContentType(contentType, `*/*`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -311,7 +312,6 @@ export class Definitions {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

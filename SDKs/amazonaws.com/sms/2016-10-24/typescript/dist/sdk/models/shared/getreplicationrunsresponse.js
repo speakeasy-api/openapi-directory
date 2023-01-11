@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationJob } from "./replicationjob";
-import { ReplicationRun } from "./replicationrun";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReplicationRunsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationjob_1 = require("./replicationjob");
+var replicationrun_1 = require("./replicationrun");
 var GetReplicationRunsResponse = /** @class */ (function (_super) {
     __extends(GetReplicationRunsResponse, _super);
     function GetReplicationRunsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetReplicationRunsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationJob" }),
-        __metadata("design:type", ReplicationJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationJob" }),
+        __metadata("design:type", replicationjob_1.ReplicationJob)
     ], GetReplicationRunsResponse.prototype, "replicationJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationRunList", elemType: ReplicationRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationRunList", elemType: replicationrun_1.ReplicationRun }),
         __metadata("design:type", Array)
     ], GetReplicationRunsResponse.prototype, "replicationRunList", void 0);
     return GetReplicationRunsResponse;
-}(SpeakeasyBase));
-export { GetReplicationRunsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetReplicationRunsResponse = GetReplicationRunsResponse;

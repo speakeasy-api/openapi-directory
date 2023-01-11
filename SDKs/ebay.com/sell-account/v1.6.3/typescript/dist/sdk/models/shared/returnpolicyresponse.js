@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReturnPolicy } from "./returnpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturnPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var returnpolicy_1 = require("./returnpolicy");
 // ReturnPolicyResponse
 /**
  * The response payload for return policy requests.
@@ -34,33 +37,33 @@ var ReturnPolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ReturnPolicyResponse.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ReturnPolicyResponse.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ReturnPolicyResponse.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], ReturnPolicyResponse.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], ReturnPolicyResponse.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPolicies", elemType: ReturnPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPolicies", elemType: returnpolicy_1.ReturnPolicy }),
         __metadata("design:type", Array)
     ], ReturnPolicyResponse.prototype, "returnPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ReturnPolicyResponse.prototype, "total", void 0);
     return ReturnPolicyResponse;
-}(SpeakeasyBase));
-export { ReturnPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReturnPolicyResponse = ReturnPolicyResponse;

@@ -46,5 +46,5 @@ export class ModifyNetworkSmDevicesTagsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  modifyNetworkSmDevicesTags200ApplicationJsonObject?: Map<string, any>;
+  modifyNetworkSmDevicesTags200ApplicationJSONObject?: Record<string, any>;
 }

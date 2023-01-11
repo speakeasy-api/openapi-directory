@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostExportTransitGatewayRoutesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostExportTransitGatewayRoutesResponse = exports.PostExportTransitGatewayRoutesRequest = exports.PostExportTransitGatewayRoutesHeaders = exports.PostExportTransitGatewayRoutesQueryParams = exports.PostExportTransitGatewayRoutesVersionEnum = exports.PostExportTransitGatewayRoutesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostExportTransitGatewayRoutesActionEnum;
 (function (PostExportTransitGatewayRoutesActionEnum) {
     PostExportTransitGatewayRoutesActionEnum["ExportTransitGatewayRoutes"] = "ExportTransitGatewayRoutes";
-})(PostExportTransitGatewayRoutesActionEnum || (PostExportTransitGatewayRoutesActionEnum = {}));
-export var PostExportTransitGatewayRoutesVersionEnum;
+})(PostExportTransitGatewayRoutesActionEnum = exports.PostExportTransitGatewayRoutesActionEnum || (exports.PostExportTransitGatewayRoutesActionEnum = {}));
+var PostExportTransitGatewayRoutesVersionEnum;
 (function (PostExportTransitGatewayRoutesVersionEnum) {
     PostExportTransitGatewayRoutesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostExportTransitGatewayRoutesVersionEnum || (PostExportTransitGatewayRoutesVersionEnum = {}));
+})(PostExportTransitGatewayRoutesVersionEnum = exports.PostExportTransitGatewayRoutesVersionEnum || (exports.PostExportTransitGatewayRoutesVersionEnum = {}));
 var PostExportTransitGatewayRoutesQueryParams = /** @class */ (function (_super) {
     __extends(PostExportTransitGatewayRoutesQueryParams, _super);
     function PostExportTransitGatewayRoutesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesQueryParams.prototype, "version", void 0);
     return PostExportTransitGatewayRoutesQueryParams;
-}(SpeakeasyBase));
-export { PostExportTransitGatewayRoutesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostExportTransitGatewayRoutesQueryParams = PostExportTransitGatewayRoutesQueryParams;
 var PostExportTransitGatewayRoutesHeaders = /** @class */ (function (_super) {
     __extends(PostExportTransitGatewayRoutesHeaders, _super);
     function PostExportTransitGatewayRoutesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostExportTransitGatewayRoutesHeaders;
-}(SpeakeasyBase));
-export { PostExportTransitGatewayRoutesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostExportTransitGatewayRoutesHeaders = PostExportTransitGatewayRoutesHeaders;
 var PostExportTransitGatewayRoutesRequest = /** @class */ (function (_super) {
     __extends(PostExportTransitGatewayRoutesRequest, _super);
     function PostExportTransitGatewayRoutesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostExportTransitGatewayRoutesQueryParams)
     ], PostExportTransitGatewayRoutesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostExportTransitGatewayRoutesHeaders)
     ], PostExportTransitGatewayRoutesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostExportTransitGatewayRoutesRequest.prototype, "request", void 0);
     return PostExportTransitGatewayRoutesRequest;
-}(SpeakeasyBase));
-export { PostExportTransitGatewayRoutesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostExportTransitGatewayRoutesRequest = PostExportTransitGatewayRoutesRequest;
 var PostExportTransitGatewayRoutesResponse = /** @class */ (function (_super) {
     __extends(PostExportTransitGatewayRoutesResponse, _super);
     function PostExportTransitGatewayRoutesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostExportTransitGatewayRoutesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostExportTransitGatewayRoutesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostExportTransitGatewayRoutesResponse.prototype, "statusCode", void 0);
     return PostExportTransitGatewayRoutesResponse;
-}(SpeakeasyBase));
-export { PostExportTransitGatewayRoutesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostExportTransitGatewayRoutesResponse = PostExportTransitGatewayRoutesResponse;

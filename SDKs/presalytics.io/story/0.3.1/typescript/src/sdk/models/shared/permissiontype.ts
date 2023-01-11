@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // PermissionType
 /** 
- * A permission type that can be applied to story collaborator
+ * Base model for all types
 **/
 export class PermissionType extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=can_add_collaborators" })

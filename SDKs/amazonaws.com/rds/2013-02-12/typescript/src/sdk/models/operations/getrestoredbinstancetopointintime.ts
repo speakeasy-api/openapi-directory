@@ -39,7 +39,7 @@ export class GetRestoreDbInstanceToPointInTimeQueryParams extends SpeakeasyBase 
   licenseModel?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OptionGroupName" })
   optionGroupName?: string;
@@ -54,10 +54,10 @@ export class GetRestoreDbInstanceToPointInTimeQueryParams extends SpeakeasyBase 
   restoreTime?: Date;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceIdentifier" })
-  sourceDbInstanceIdentifier: string;
+  sourceDBInstanceIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetDBInstanceIdentifier" })
-  targetDbInstanceIdentifier: string;
+  targetDBInstanceIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UseLatestRestorableTime" })
   useLatestRestorableTime?: boolean;

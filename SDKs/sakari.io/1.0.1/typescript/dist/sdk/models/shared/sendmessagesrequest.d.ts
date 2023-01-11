@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContactRequest } from "./contactrequest";
 export declare class SendMessagesRequestFilters extends SpeakeasyBase {
-    attributes?: Map<string, any>[];
+    attributes?: Record<string, any>[];
     tags?: string[];
 }
 export declare class SendMessagesRequestMedia extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompactInput } from "./usercompact";
-export var ProjectRequestColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectRequestInput = exports.ProjectRequestWorkspaceInput = exports.ProjectRequestDefaultViewEnum = exports.ProjectRequestCurrentStatusInput = exports.ProjectRequestCurrentStatusColorEnum = exports.ProjectRequestColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+var ProjectRequestColorEnum;
 (function (ProjectRequestColorEnum) {
     ProjectRequestColorEnum["DarkPink"] = "dark-pink";
     ProjectRequestColorEnum["DarkGreen"] = "dark-green";
@@ -44,138 +47,150 @@ export var ProjectRequestColorEnum;
     ProjectRequestColorEnum["LightOrange"] = "light-orange";
     ProjectRequestColorEnum["LightPurple"] = "light-purple";
     ProjectRequestColorEnum["LightWarmGray"] = "light-warm-gray";
-})(ProjectRequestColorEnum || (ProjectRequestColorEnum = {}));
-export var ProjectRequestCurrentStatusColorEnum;
+})(ProjectRequestColorEnum = exports.ProjectRequestColorEnum || (exports.ProjectRequestColorEnum = {}));
+var ProjectRequestCurrentStatusColorEnum;
 (function (ProjectRequestCurrentStatusColorEnum) {
     ProjectRequestCurrentStatusColorEnum["Green"] = "green";
     ProjectRequestCurrentStatusColorEnum["Yellow"] = "yellow";
     ProjectRequestCurrentStatusColorEnum["Red"] = "red";
     ProjectRequestCurrentStatusColorEnum["Blue"] = "blue";
-})(ProjectRequestCurrentStatusColorEnum || (ProjectRequestCurrentStatusColorEnum = {}));
+})(ProjectRequestCurrentStatusColorEnum = exports.ProjectRequestCurrentStatusColorEnum || (exports.ProjectRequestCurrentStatusColorEnum = {}));
+// ProjectRequestCurrentStatusInput
+/**
+ * A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+**/
 var ProjectRequestCurrentStatusInput = /** @class */ (function (_super) {
     __extends(ProjectRequestCurrentStatusInput, _super);
     function ProjectRequestCurrentStatusInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserCompactInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", usercompact_1.UserCompactInput)
     ], ProjectRequestCurrentStatusInput.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], ProjectRequestCurrentStatusInput.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
-        __metadata("design:type", UserCompactInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", usercompact_1.UserCompactInput)
     ], ProjectRequestCurrentStatusInput.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_text" }),
         __metadata("design:type", String)
     ], ProjectRequestCurrentStatusInput.prototype, "htmlText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], ProjectRequestCurrentStatusInput.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ProjectRequestCurrentStatusInput.prototype, "title", void 0);
     return ProjectRequestCurrentStatusInput;
-}(SpeakeasyBase));
-export { ProjectRequestCurrentStatusInput };
-export var ProjectRequestDefaultViewEnum;
+}(utils_1.SpeakeasyBase));
+exports.ProjectRequestCurrentStatusInput = ProjectRequestCurrentStatusInput;
+var ProjectRequestDefaultViewEnum;
 (function (ProjectRequestDefaultViewEnum) {
     ProjectRequestDefaultViewEnum["List"] = "list";
     ProjectRequestDefaultViewEnum["Board"] = "board";
     ProjectRequestDefaultViewEnum["Calendar"] = "calendar";
     ProjectRequestDefaultViewEnum["Timeline"] = "timeline";
-})(ProjectRequestDefaultViewEnum || (ProjectRequestDefaultViewEnum = {}));
+})(ProjectRequestDefaultViewEnum = exports.ProjectRequestDefaultViewEnum || (exports.ProjectRequestDefaultViewEnum = {}));
+// ProjectRequestWorkspaceInput
+/**
+ * *Create-only*. The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.
+**/
 var ProjectRequestWorkspaceInput = /** @class */ (function (_super) {
     __extends(ProjectRequestWorkspaceInput, _super);
     function ProjectRequestWorkspaceInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProjectRequestWorkspaceInput.prototype, "name", void 0);
     return ProjectRequestWorkspaceInput;
-}(SpeakeasyBase));
-export { ProjectRequestWorkspaceInput };
+}(utils_1.SpeakeasyBase));
+exports.ProjectRequestWorkspaceInput = ProjectRequestWorkspaceInput;
+// ProjectRequestInput
+/**
+ * A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
+**/
 var ProjectRequestInput = /** @class */ (function (_super) {
     __extends(ProjectRequestInput, _super);
     function ProjectRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
         __metadata("design:type", Boolean)
     ], ProjectRequestInput.prototype, "archived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_status" }),
         __metadata("design:type", ProjectRequestCurrentStatusInput)
     ], ProjectRequestInput.prototype, "currentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], ProjectRequestInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default_view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default_view" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "defaultView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=due_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=due_date" }),
         __metadata("design:type", Date)
     ], ProjectRequestInput.prototype, "dueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=due_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=due_on" }),
         __metadata("design:type", Date)
     ], ProjectRequestInput.prototype, "dueOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_notes" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "htmlNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_template" }),
         __metadata("design:type", Boolean)
     ], ProjectRequestInput.prototype, "isTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], ProjectRequestInput.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_on" }),
         __metadata("design:type", Date)
     ], ProjectRequestInput.prototype, "startOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], ProjectRequestInput.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", ProjectRequestWorkspaceInput)
     ], ProjectRequestInput.prototype, "workspace", void 0);
     return ProjectRequestInput;
-}(SpeakeasyBase));
-export { ProjectRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.ProjectRequestInput = ProjectRequestInput;

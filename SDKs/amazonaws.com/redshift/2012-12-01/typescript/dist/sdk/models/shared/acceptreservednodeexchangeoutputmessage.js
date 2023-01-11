@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedNode } from "./reservednode";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceptReservedNodeExchangeOutputMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var reservednode_1 = require("./reservednode");
 var AcceptReservedNodeExchangeOutputMessage = /** @class */ (function (_super) {
     __extends(AcceptReservedNodeExchangeOutputMessage, _super);
     function AcceptReservedNodeExchangeOutputMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReservedNode)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", reservednode_1.ReservedNode)
     ], AcceptReservedNodeExchangeOutputMessage.prototype, "exchangedReservedNode", void 0);
     return AcceptReservedNodeExchangeOutputMessage;
-}(SpeakeasyBase));
-export { AcceptReservedNodeExchangeOutputMessage };
+}(utils_1.SpeakeasyBase));
+exports.AcceptReservedNodeExchangeOutputMessage = AcceptReservedNodeExchangeOutputMessage;

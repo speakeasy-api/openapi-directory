@@ -107,11 +107,11 @@ export declare class MutanResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    mutan400ApplicationJsonObject?: Mutan400ApplicationJson;
-    mutan401ApplicationJsonObject?: Mutan401ApplicationJson;
-    mutan404ApplicationJsonObject?: Mutan404ApplicationJson;
-    mutan500ApplicationJsonObject?: Mutan500ApplicationJson;
-    mutan502ApplicationJsonObject?: Mutan502ApplicationJson;
-    mutan503ApplicationJsonObject?: Mutan503ApplicationJson;
-    mutan504ApplicationJsonObject?: Mutan504ApplicationJson;
+    mutan400ApplicationJSONObject?: Mutan400ApplicationJson;
+    mutan401ApplicationJSONObject?: Mutan401ApplicationJson;
+    mutan404ApplicationJSONObject?: Mutan404ApplicationJson;
+    mutan500ApplicationJSONObject?: Mutan500ApplicationJson;
+    mutan502ApplicationJSONObject?: Mutan502ApplicationJson;
+    mutan503ApplicationJSONObject?: Mutan503ApplicationJson;
+    mutan504ApplicationJSONObject?: Mutan504ApplicationJson;
 }

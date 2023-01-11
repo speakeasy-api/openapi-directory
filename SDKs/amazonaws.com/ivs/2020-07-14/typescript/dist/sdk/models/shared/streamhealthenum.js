@@ -1,6 +1,9 @@
-export var StreamHealthEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamHealthEnum = void 0;
+var StreamHealthEnum;
 (function (StreamHealthEnum) {
     StreamHealthEnum["Healthy"] = "HEALTHY";
     StreamHealthEnum["Starving"] = "STARVING";
     StreamHealthEnum["Unknown"] = "UNKNOWN";
-})(StreamHealthEnum || (StreamHealthEnum = {}));
+})(StreamHealthEnum = exports.StreamHealthEnum || (exports.StreamHealthEnum = {}));

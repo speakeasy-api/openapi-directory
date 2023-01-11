@@ -16,5 +16,5 @@ export declare class DeleteWorkspacesWorkspaceHooksUidRequest extends SpeakeasyB
 export declare class DeleteWorkspacesWorkspaceHooksUidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryResponsePayload } from "./queryresponsepayload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var queryresponsepayload_1 = require("./queryresponsepayload");
 // QueryResponse
 /**
  * Response type for the [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call. This should follow the same format as the Google smart home `action.devices.QUERY` [response](https://developers.google.com/assistant/smarthome/reference/intent/query). # Example ```json { "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "payload": { "devices": { "123": { "on": true, "online": true }, "456": { "on": true, "online": true, "brightness": 80, "color": { "name": "cerulean", "spectrumRGB": 31655 } } } } } ```
@@ -34,13 +37,13 @@ var QueryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
-        __metadata("design:type", QueryResponsePayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
+        __metadata("design:type", queryresponsepayload_1.QueryResponsePayload)
     ], QueryResponse.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], QueryResponse.prototype, "requestId", void 0);
     return QueryResponse;
-}(SpeakeasyBase));
-export { QueryResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueryResponse = QueryResponse;

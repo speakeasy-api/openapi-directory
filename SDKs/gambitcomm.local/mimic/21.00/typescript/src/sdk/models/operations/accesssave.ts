@@ -22,5 +22,5 @@ export class AccessSaveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  accessSave200ApplicationJsonStrings?: string[];
+  accessSave200ApplicationJSONStrings?: string[];
 }

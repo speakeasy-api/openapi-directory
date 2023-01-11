@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,63 +10,61 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import axios from "axios";
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
-import { Security } from "./models/shared";
-export var ServerList = [
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var shared_1 = require("./models/shared");
+exports.ServerList = [
     "http://importexport.amazonaws.com",
     "https://importexport.amazonaws.com",
     "http://importexport.{region}.amazonaws.com.cn",
     "https://importexport.{region}.amazonaws.com.cn",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
-export function WithSecurity(security) {
-    if (!(security instanceof utils.SpeakeasyBase)) {
-        security = new Security(security);
-    }
-    return function (sdk) {
-        sdk._security = security;
-    };
-}
 /* SDK Documentation: https://docs.aws.amazon.com/importexport/ - Amazon Web Services documentation*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        if (props.security) {
+            var security = props.security;
+            if (!(props.security instanceof utils.SpeakeasyBase))
+                security = new shared_1.Security(props.security);
+            this._securityClient = utils.createSecurityClient(this._defaultClient, security);
         }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            if (this._security) {
-                this._securityClient = utils.CreateSecurityClient(this._defaultClient, this._security);
-            }
-            else {
-                this._securityClient = this._defaultClient;
-            }
+        else {
+            this._securityClient = this._defaultClient;
         }
     }
     /**
@@ -78,10 +77,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=CancelJob&Action=CancelJob";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -89,7 +88,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -98,7 +97,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -107,7 +106,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -116,7 +115,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -125,7 +124,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -134,7 +133,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -143,7 +142,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -153,8 +152,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getCreateJob - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
@@ -166,10 +164,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=CreateJob&Action=CreateJob";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -177,7 +175,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -186,7 +184,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -195,7 +193,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -204,7 +202,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -213,7 +211,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -222,7 +220,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -231,7 +229,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -240,7 +238,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -249,7 +247,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -258,7 +256,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 488:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -267,7 +265,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 489:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -276,7 +274,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 490:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -285,7 +283,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 491:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -294,7 +292,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 492:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -303,7 +301,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 493:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -312,7 +310,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 494:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -321,7 +319,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 495:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -331,8 +329,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getGetShippingLabel - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
@@ -344,10 +341,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=GetShippingLabel&Action=GetShippingLabel";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -355,7 +352,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -364,7 +361,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -373,7 +370,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -382,7 +379,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -391,7 +388,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -400,7 +397,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -409,7 +406,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -418,7 +415,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -428,8 +425,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getGetStatus - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
@@ -441,10 +437,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=GetStatus&Action=GetStatus";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -452,7 +448,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -461,7 +457,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -470,7 +466,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -479,7 +475,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -488,7 +484,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -497,7 +493,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -507,8 +503,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getListJobs - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
@@ -520,10 +515,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=ListJobs&Action=ListJobs";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -531,7 +526,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -540,7 +535,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -549,7 +544,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -558,7 +553,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -568,8 +563,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getUpdateJob - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
@@ -581,10 +575,10 @@ var SDK = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/#Operation=UpdateJob&Action=UpdateJob";
         var client = this._securityClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -592,7 +586,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -601,7 +595,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -610,7 +604,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -619,7 +613,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -628,7 +622,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -637,7 +631,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -646,7 +640,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -655,7 +649,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -664,7 +658,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -673,7 +667,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 488:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -682,7 +676,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 489:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -691,7 +685,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 490:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -700,7 +694,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 491:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -709,7 +703,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 492:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -718,7 +712,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 493:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -727,7 +721,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 494:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -736,7 +730,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 495:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -745,7 +739,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 496:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -754,7 +748,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 497:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -764,8 +758,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postCancelJob - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
@@ -779,7 +772,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=CancelJob&Action=CancelJob";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -788,15 +781,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -804,7 +792,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -813,7 +801,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -822,7 +810,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -831,7 +819,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -840,7 +828,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -849,7 +837,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -858,7 +846,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -868,8 +856,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postCreateJob - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
@@ -883,7 +870,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=CreateJob&Action=CreateJob";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -892,15 +879,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -908,7 +890,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -917,7 +899,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -926,7 +908,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -935,7 +917,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -944,7 +926,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -953,7 +935,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -962,7 +944,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -971,7 +953,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -980,7 +962,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -989,7 +971,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 488:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -998,7 +980,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 489:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1007,7 +989,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 490:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1016,7 +998,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 491:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1025,7 +1007,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 492:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1034,7 +1016,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 493:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1043,7 +1025,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 494:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1052,7 +1034,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 495:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1062,8 +1044,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postGetShippingLabel - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
@@ -1077,7 +1058,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=GetShippingLabel&Action=GetShippingLabel";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1086,15 +1067,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1102,7 +1078,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1111,7 +1087,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1120,7 +1096,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1129,7 +1105,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1138,7 +1114,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1147,7 +1123,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1156,7 +1132,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1165,7 +1141,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1175,8 +1151,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postGetStatus - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
@@ -1190,7 +1165,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=GetStatus&Action=GetStatus";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1199,15 +1174,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1215,7 +1185,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1224,7 +1194,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1233,7 +1203,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1242,7 +1212,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1251,7 +1221,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1260,7 +1230,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1270,8 +1240,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postListJobs - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
@@ -1285,7 +1254,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=ListJobs&Action=ListJobs";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1294,15 +1263,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1310,7 +1274,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1319,7 +1283,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1328,7 +1292,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1337,7 +1301,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1347,8 +1311,7 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * postUpdateJob - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
@@ -1362,7 +1325,7 @@ var SDK = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/#Operation=UpdateJob&Action=UpdateJob";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1371,15 +1334,10 @@ var SDK = /** @class */ (function () {
         }
         var client = this._securityClient;
         var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -1387,7 +1345,7 @@ var SDK = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1396,7 +1354,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 480:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1405,7 +1363,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 481:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1414,7 +1372,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 482:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1423,7 +1381,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 483:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1432,7 +1390,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 484:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1441,7 +1399,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 485:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1450,7 +1408,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 486:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1459,7 +1417,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 487:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1468,7 +1426,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 488:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1477,7 +1435,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 489:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1486,7 +1444,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 490:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1495,7 +1453,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 491:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1504,7 +1462,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 492:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1513,7 +1471,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 493:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1522,7 +1480,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 494:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1531,7 +1489,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 495:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1540,7 +1498,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 496:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1549,7 +1507,7 @@ var SDK = /** @class */ (function () {
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 497:
-                    if (utils.MatchContentType(contentType, "text/xml")) {
+                    if (utils.matchContentType(contentType, "text/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
@@ -1559,9 +1517,8 @@ var SDK = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

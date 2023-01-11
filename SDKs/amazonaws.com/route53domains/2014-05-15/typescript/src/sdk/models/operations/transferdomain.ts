@@ -69,5 +69,5 @@ export class TransferDomainResponse extends SpeakeasyBase {
   transferDomainResponse?: shared.TransferDomainResponse;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Summary } from "./summary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetComplianceSummaryOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var summary_1 = require("./summary");
 var GetComplianceSummaryOutput = /** @class */ (function (_super) {
     __extends(GetComplianceSummaryOutput, _super);
     function GetComplianceSummaryOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaginationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaginationToken" }),
         __metadata("design:type", String)
     ], GetComplianceSummaryOutput.prototype, "paginationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SummaryList", elemType: Summary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SummaryList", elemType: summary_1.Summary }),
         __metadata("design:type", Array)
     ], GetComplianceSummaryOutput.prototype, "summaryList", void 0);
     return GetComplianceSummaryOutput;
-}(SpeakeasyBase));
-export { GetComplianceSummaryOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetComplianceSummaryOutput = GetComplianceSummaryOutput;

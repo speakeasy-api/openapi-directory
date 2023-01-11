@@ -15,5 +15,5 @@ export class Notification extends SpeakeasyBase {
   notifyAll?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=SnsTopicARN" })
-  snsTopicArn?: string;
+  snsTopicARN?: string;
 }

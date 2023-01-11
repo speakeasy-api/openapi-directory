@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IssuancePolicy } from "./issuancepolicy";
-import { PublishingOptions } from "./publishingoptions";
-export var CaPoolTierEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CaPoolInput = exports.CaPool = exports.CaPoolTierEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var issuancepolicy_1 = require("./issuancepolicy");
+var publishingoptions_1 = require("./publishingoptions");
+var CaPoolTierEnum;
 (function (CaPoolTierEnum) {
     CaPoolTierEnum["TierUnspecified"] = "TIER_UNSPECIFIED";
     CaPoolTierEnum["Enterprise"] = "ENTERPRISE";
     CaPoolTierEnum["Devops"] = "DEVOPS";
-})(CaPoolTierEnum || (CaPoolTierEnum = {}));
-// CaPoolInput
-/**
- * A CaPool represents a group of CertificateAuthorities that form a trust anchor. A CaPool can be used to manage issuance policies for one or more CertificateAuthority resources and to rotate CA certificates in and out of the trust anchor.
-**/
-var CaPoolInput = /** @class */ (function (_super) {
-    __extends(CaPoolInput, _super);
-    function CaPoolInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuancePolicy" }),
-        __metadata("design:type", IssuancePolicy)
-    ], CaPoolInput.prototype, "issuancePolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], CaPoolInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishingOptions" }),
-        __metadata("design:type", PublishingOptions)
-    ], CaPoolInput.prototype, "publishingOptions", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
-        __metadata("design:type", String)
-    ], CaPoolInput.prototype, "tier", void 0);
-    return CaPoolInput;
-}(SpeakeasyBase));
-export { CaPoolInput };
+})(CaPoolTierEnum = exports.CaPoolTierEnum || (exports.CaPoolTierEnum = {}));
 // CaPool
 /**
  * A CaPool represents a group of CertificateAuthorities that form a trust anchor. A CaPool can be used to manage issuance policies for one or more CertificateAuthority resources and to rotate CA certificates in and out of the trust anchor.
@@ -69,25 +44,53 @@ var CaPool = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuancePolicy" }),
-        __metadata("design:type", IssuancePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuancePolicy" }),
+        __metadata("design:type", issuancepolicy_1.IssuancePolicy)
     ], CaPool.prototype, "issuancePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], CaPool.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CaPool.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishingOptions" }),
-        __metadata("design:type", PublishingOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishingOptions" }),
+        __metadata("design:type", publishingoptions_1.PublishingOptions)
     ], CaPool.prototype, "publishingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
         __metadata("design:type", String)
     ], CaPool.prototype, "tier", void 0);
     return CaPool;
-}(SpeakeasyBase));
-export { CaPool };
+}(utils_1.SpeakeasyBase));
+exports.CaPool = CaPool;
+// CaPoolInput
+/**
+ * A CaPool represents a group of CertificateAuthorities that form a trust anchor. A CaPool can be used to manage issuance policies for one or more CertificateAuthority resources and to rotate CA certificates in and out of the trust anchor.
+**/
+var CaPoolInput = /** @class */ (function (_super) {
+    __extends(CaPoolInput, _super);
+    function CaPoolInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuancePolicy" }),
+        __metadata("design:type", issuancepolicy_1.IssuancePolicy)
+    ], CaPoolInput.prototype, "issuancePolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], CaPoolInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishingOptions" }),
+        __metadata("design:type", publishingoptions_1.PublishingOptions)
+    ], CaPoolInput.prototype, "publishingOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
+        __metadata("design:type", String)
+    ], CaPoolInput.prototype, "tier", void 0);
+    return CaPoolInput;
+}(utils_1.SpeakeasyBase));
+exports.CaPoolInput = CaPoolInput;

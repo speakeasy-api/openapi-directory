@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Actor } from "./actor";
-import { ActionDetail } from "./actiondetail";
-import { Target } from "./target";
-import { TimeRange } from "./timerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var actor_1 = require("./actor");
+var actiondetail_1 = require("./actiondetail");
+var target_1 = require("./target");
+var timerange_1 = require("./timerange");
 // Action
 /**
  * Information about the action.
@@ -37,25 +40,25 @@ var Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actor" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actor" }),
+        __metadata("design:type", actor_1.Actor)
     ], Action.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
-        __metadata("design:type", ActionDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", actiondetail_1.ActionDetail)
     ], Action.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
-        __metadata("design:type", Target)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
+        __metadata("design:type", target_1.Target)
     ], Action.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeRange" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeRange" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], Action.prototype, "timeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], Action.prototype, "timestamp", void 0);
     return Action;
-}(SpeakeasyBase));
-export { Action };
+}(utils_1.SpeakeasyBase));
+exports.Action = Action;

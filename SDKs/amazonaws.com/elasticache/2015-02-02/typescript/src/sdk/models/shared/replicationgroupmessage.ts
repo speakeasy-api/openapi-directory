@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationGroup } from "./replicationgroup";
+import { ReplicationGroupList } from "./replicationgrouplist";
 
 
 
@@ -11,6 +11,6 @@ export class ReplicationGroupMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ReplicationGroup })
-  replicationGroups?: ReplicationGroup[];
+  @SpeakeasyMetadata({ elemType: ReplicationGroupList })
+  replicationGroups?: ReplicationGroupList[];
 }

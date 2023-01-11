@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressFamilyEnum } from "./addressfamilyenum";
-import { RouteFilterPrefix } from "./routefilterprefix";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewPublicVirtualInterfaceAllocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressfamilyenum_1 = require("./addressfamilyenum");
+var routefilterprefix_1 = require("./routefilterprefix");
+var tag_1 = require("./tag");
 // NewPublicVirtualInterfaceAllocation
 /**
  * Information about a public virtual interface to be provisioned on a connection.
@@ -36,41 +39,41 @@ var NewPublicVirtualInterfaceAllocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressFamily" }),
         __metadata("design:type", String)
     ], NewPublicVirtualInterfaceAllocation.prototype, "addressFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonAddress" }),
         __metadata("design:type", String)
     ], NewPublicVirtualInterfaceAllocation.prototype, "amazonAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], NewPublicVirtualInterfaceAllocation.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], NewPublicVirtualInterfaceAllocation.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerAddress" }),
         __metadata("design:type", String)
     ], NewPublicVirtualInterfaceAllocation.prototype, "customerAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routeFilterPrefixes", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routeFilterPrefixes", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], NewPublicVirtualInterfaceAllocation.prototype, "routeFilterPrefixes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], NewPublicVirtualInterfaceAllocation.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceName" }),
         __metadata("design:type", String)
     ], NewPublicVirtualInterfaceAllocation.prototype, "virtualInterfaceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], NewPublicVirtualInterfaceAllocation.prototype, "vlan", void 0);
     return NewPublicVirtualInterfaceAllocation;
-}(SpeakeasyBase));
-export { NewPublicVirtualInterfaceAllocation };
+}(utils_1.SpeakeasyBase));
+exports.NewPublicVirtualInterfaceAllocation = NewPublicVirtualInterfaceAllocation;

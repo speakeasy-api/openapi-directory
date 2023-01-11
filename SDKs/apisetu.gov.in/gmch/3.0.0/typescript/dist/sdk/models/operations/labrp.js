@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,318 +14,343 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LabrpResponse = exports.LabrpRequest = exports.Labrp504ApplicationJson = exports.Labrp504ApplicationJsonErrorDescriptionEnum = exports.Labrp504ApplicationJsonErrorEnum = exports.Labrp503ApplicationJson = exports.Labrp503ApplicationJsonErrorDescriptionEnum = exports.Labrp503ApplicationJsonErrorEnum = exports.Labrp502ApplicationJson = exports.Labrp502ApplicationJsonErrorDescriptionEnum = exports.Labrp502ApplicationJsonErrorEnum = exports.Labrp500ApplicationJson = exports.Labrp500ApplicationJsonErrorDescriptionEnum = exports.Labrp500ApplicationJsonErrorEnum = exports.Labrp404ApplicationJson = exports.Labrp404ApplicationJsonErrorDescriptionEnum = exports.Labrp404ApplicationJsonErrorEnum = exports.Labrp401ApplicationJson = exports.Labrp401ApplicationJsonErrorDescriptionEnum = exports.Labrp401ApplicationJsonErrorEnum = exports.Labrp400ApplicationJson = exports.Labrp400ApplicationJsonErrorDescriptionEnum = exports.Labrp400ApplicationJsonErrorEnum = exports.LabrpSecurity = exports.LabrpRequestBody = exports.LabrpRequestBodyFormatEnum = exports.LabrpRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var LabrpRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(LabrpRequestBodyCertificateParameters, _super);
     function LabrpRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullName" }),
         __metadata("design:type", String)
     ], LabrpRequestBodyCertificateParameters.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportdate" }),
         __metadata("design:type", String)
     ], LabrpRequestBodyCertificateParameters.prototype, "reportdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uhid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uhid" }),
         __metadata("design:type", String)
     ], LabrpRequestBodyCertificateParameters.prototype, "uhid", void 0);
     return LabrpRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { LabrpRequestBodyCertificateParameters };
-export var LabrpRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.LabrpRequestBodyCertificateParameters = LabrpRequestBodyCertificateParameters;
+var LabrpRequestBodyFormatEnum;
 (function (LabrpRequestBodyFormatEnum) {
     LabrpRequestBodyFormatEnum["Pdf"] = "pdf";
-})(LabrpRequestBodyFormatEnum || (LabrpRequestBodyFormatEnum = {}));
+})(LabrpRequestBodyFormatEnum = exports.LabrpRequestBodyFormatEnum || (exports.LabrpRequestBodyFormatEnum = {}));
 var LabrpRequestBody = /** @class */ (function (_super) {
     __extends(LabrpRequestBody, _super);
     function LabrpRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", LabrpRequestBodyCertificateParameters)
     ], LabrpRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], LabrpRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], LabrpRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], LabrpRequestBody.prototype, "txnId", void 0);
     return LabrpRequestBody;
-}(SpeakeasyBase));
-export { LabrpRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LabrpRequestBody = LabrpRequestBody;
 var LabrpSecurity = /** @class */ (function (_super) {
     __extends(LabrpSecurity, _super);
     function LabrpSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], LabrpSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], LabrpSecurity.prototype, "clientId", void 0);
     return LabrpSecurity;
-}(SpeakeasyBase));
-export { LabrpSecurity };
-export var Labrp400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.LabrpSecurity = LabrpSecurity;
+var Labrp400ApplicationJsonErrorEnum;
 (function (Labrp400ApplicationJsonErrorEnum) {
     Labrp400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Labrp400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Labrp400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Labrp400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Labrp400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Labrp400ApplicationJsonErrorEnum || (Labrp400ApplicationJsonErrorEnum = {}));
-export var Labrp400ApplicationJsonErrorDescriptionEnum;
+})(Labrp400ApplicationJsonErrorEnum = exports.Labrp400ApplicationJsonErrorEnum || (exports.Labrp400ApplicationJsonErrorEnum = {}));
+var Labrp400ApplicationJsonErrorDescriptionEnum;
 (function (Labrp400ApplicationJsonErrorDescriptionEnum) {
     Labrp400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Labrp400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Labrp400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Labrp400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Labrp400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Labrp400ApplicationJsonErrorDescriptionEnum || (Labrp400ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp400ApplicationJsonErrorDescriptionEnum = exports.Labrp400ApplicationJsonErrorDescriptionEnum || (exports.Labrp400ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp400ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp400ApplicationJson, _super);
     function Labrp400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp400ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp400ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp400ApplicationJson };
-export var Labrp401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp400ApplicationJson = Labrp400ApplicationJson;
+var Labrp401ApplicationJsonErrorEnum;
 (function (Labrp401ApplicationJsonErrorEnum) {
     Labrp401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Labrp401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Labrp401ApplicationJsonErrorEnum || (Labrp401ApplicationJsonErrorEnum = {}));
-export var Labrp401ApplicationJsonErrorDescriptionEnum;
+})(Labrp401ApplicationJsonErrorEnum = exports.Labrp401ApplicationJsonErrorEnum || (exports.Labrp401ApplicationJsonErrorEnum = {}));
+var Labrp401ApplicationJsonErrorDescriptionEnum;
 (function (Labrp401ApplicationJsonErrorDescriptionEnum) {
     Labrp401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Labrp401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Labrp401ApplicationJsonErrorDescriptionEnum || (Labrp401ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp401ApplicationJsonErrorDescriptionEnum = exports.Labrp401ApplicationJsonErrorDescriptionEnum || (exports.Labrp401ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp401ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp401ApplicationJson, _super);
     function Labrp401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp401ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp401ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp401ApplicationJson };
-export var Labrp404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp401ApplicationJson = Labrp401ApplicationJson;
+var Labrp404ApplicationJsonErrorEnum;
 (function (Labrp404ApplicationJsonErrorEnum) {
     Labrp404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Labrp404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Labrp404ApplicationJsonErrorEnum || (Labrp404ApplicationJsonErrorEnum = {}));
-export var Labrp404ApplicationJsonErrorDescriptionEnum;
+})(Labrp404ApplicationJsonErrorEnum = exports.Labrp404ApplicationJsonErrorEnum || (exports.Labrp404ApplicationJsonErrorEnum = {}));
+var Labrp404ApplicationJsonErrorDescriptionEnum;
 (function (Labrp404ApplicationJsonErrorDescriptionEnum) {
     Labrp404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Labrp404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Labrp404ApplicationJsonErrorDescriptionEnum || (Labrp404ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp404ApplicationJsonErrorDescriptionEnum = exports.Labrp404ApplicationJsonErrorDescriptionEnum || (exports.Labrp404ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp404ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp404ApplicationJson, _super);
     function Labrp404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp404ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp404ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp404ApplicationJson };
-export var Labrp500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp404ApplicationJson = Labrp404ApplicationJson;
+var Labrp500ApplicationJsonErrorEnum;
 (function (Labrp500ApplicationJsonErrorEnum) {
     Labrp500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Labrp500ApplicationJsonErrorEnum || (Labrp500ApplicationJsonErrorEnum = {}));
-export var Labrp500ApplicationJsonErrorDescriptionEnum;
+})(Labrp500ApplicationJsonErrorEnum = exports.Labrp500ApplicationJsonErrorEnum || (exports.Labrp500ApplicationJsonErrorEnum = {}));
+var Labrp500ApplicationJsonErrorDescriptionEnum;
 (function (Labrp500ApplicationJsonErrorDescriptionEnum) {
     Labrp500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Labrp500ApplicationJsonErrorDescriptionEnum || (Labrp500ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp500ApplicationJsonErrorDescriptionEnum = exports.Labrp500ApplicationJsonErrorDescriptionEnum || (exports.Labrp500ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp500ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp500ApplicationJson, _super);
     function Labrp500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp500ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp500ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp500ApplicationJson };
-export var Labrp502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp500ApplicationJson = Labrp500ApplicationJson;
+var Labrp502ApplicationJsonErrorEnum;
 (function (Labrp502ApplicationJsonErrorEnum) {
     Labrp502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Labrp502ApplicationJsonErrorEnum || (Labrp502ApplicationJsonErrorEnum = {}));
-export var Labrp502ApplicationJsonErrorDescriptionEnum;
+})(Labrp502ApplicationJsonErrorEnum = exports.Labrp502ApplicationJsonErrorEnum || (exports.Labrp502ApplicationJsonErrorEnum = {}));
+var Labrp502ApplicationJsonErrorDescriptionEnum;
 (function (Labrp502ApplicationJsonErrorDescriptionEnum) {
     Labrp502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Labrp502ApplicationJsonErrorDescriptionEnum || (Labrp502ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp502ApplicationJsonErrorDescriptionEnum = exports.Labrp502ApplicationJsonErrorDescriptionEnum || (exports.Labrp502ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp502ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp502ApplicationJson, _super);
     function Labrp502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp502ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp502ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp502ApplicationJson };
-export var Labrp503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp502ApplicationJson = Labrp502ApplicationJson;
+var Labrp503ApplicationJsonErrorEnum;
 (function (Labrp503ApplicationJsonErrorEnum) {
     Labrp503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Labrp503ApplicationJsonErrorEnum || (Labrp503ApplicationJsonErrorEnum = {}));
-export var Labrp503ApplicationJsonErrorDescriptionEnum;
+})(Labrp503ApplicationJsonErrorEnum = exports.Labrp503ApplicationJsonErrorEnum || (exports.Labrp503ApplicationJsonErrorEnum = {}));
+var Labrp503ApplicationJsonErrorDescriptionEnum;
 (function (Labrp503ApplicationJsonErrorDescriptionEnum) {
     Labrp503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Labrp503ApplicationJsonErrorDescriptionEnum || (Labrp503ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp503ApplicationJsonErrorDescriptionEnum = exports.Labrp503ApplicationJsonErrorDescriptionEnum || (exports.Labrp503ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp503ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp503ApplicationJson, _super);
     function Labrp503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp503ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp503ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp503ApplicationJson };
-export var Labrp504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Labrp503ApplicationJson = Labrp503ApplicationJson;
+var Labrp504ApplicationJsonErrorEnum;
 (function (Labrp504ApplicationJsonErrorEnum) {
     Labrp504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Labrp504ApplicationJsonErrorEnum || (Labrp504ApplicationJsonErrorEnum = {}));
-export var Labrp504ApplicationJsonErrorDescriptionEnum;
+})(Labrp504ApplicationJsonErrorEnum = exports.Labrp504ApplicationJsonErrorEnum || (exports.Labrp504ApplicationJsonErrorEnum = {}));
+var Labrp504ApplicationJsonErrorDescriptionEnum;
 (function (Labrp504ApplicationJsonErrorDescriptionEnum) {
     Labrp504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Labrp504ApplicationJsonErrorDescriptionEnum || (Labrp504ApplicationJsonErrorDescriptionEnum = {}));
+})(Labrp504ApplicationJsonErrorDescriptionEnum = exports.Labrp504ApplicationJsonErrorDescriptionEnum || (exports.Labrp504ApplicationJsonErrorDescriptionEnum = {}));
 var Labrp504ApplicationJson = /** @class */ (function (_super) {
     __extends(Labrp504ApplicationJson, _super);
     function Labrp504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Labrp504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Labrp504ApplicationJson.prototype, "errorDescription", void 0);
     return Labrp504ApplicationJson;
-}(SpeakeasyBase));
-export { Labrp504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Labrp504ApplicationJson = Labrp504ApplicationJson;
 var LabrpRequest = /** @class */ (function (_super) {
     __extends(LabrpRequest, _super);
     function LabrpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LabrpRequestBody)
     ], LabrpRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LabrpSecurity)
     ], LabrpRequest.prototype, "security", void 0);
     return LabrpRequest;
-}(SpeakeasyBase));
-export { LabrpRequest };
+}(utils_1.SpeakeasyBase));
+exports.LabrpRequest = LabrpRequest;
 var LabrpResponse = /** @class */ (function (_super) {
     __extends(LabrpResponse, _super);
     function LabrpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LabrpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LabrpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp400ApplicationJson)
-    ], LabrpResponse.prototype, "labrp400ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp401ApplicationJson)
-    ], LabrpResponse.prototype, "labrp401ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp404ApplicationJson)
-    ], LabrpResponse.prototype, "labrp404ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp500ApplicationJson)
-    ], LabrpResponse.prototype, "labrp500ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp502ApplicationJson)
-    ], LabrpResponse.prototype, "labrp502ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp503ApplicationJson)
-    ], LabrpResponse.prototype, "labrp503ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Labrp504ApplicationJson)
-    ], LabrpResponse.prototype, "labrp504ApplicationJsonObject", void 0);
+    ], LabrpResponse.prototype, "labrp504ApplicationJSONObject", void 0);
     return LabrpResponse;
-}(SpeakeasyBase));
-export { LabrpResponse };
+}(utils_1.SpeakeasyBase));
+exports.LabrpResponse = LabrpResponse;

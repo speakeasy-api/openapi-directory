@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeSuggestersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeSuggestersResponse = exports.PostDescribeSuggestersRequest = exports.PostDescribeSuggestersHeaders = exports.PostDescribeSuggestersQueryParams = exports.PostDescribeSuggestersVersionEnum = exports.PostDescribeSuggestersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeSuggestersActionEnum;
 (function (PostDescribeSuggestersActionEnum) {
     PostDescribeSuggestersActionEnum["DescribeSuggesters"] = "DescribeSuggesters";
-})(PostDescribeSuggestersActionEnum || (PostDescribeSuggestersActionEnum = {}));
-export var PostDescribeSuggestersVersionEnum;
+})(PostDescribeSuggestersActionEnum = exports.PostDescribeSuggestersActionEnum || (exports.PostDescribeSuggestersActionEnum = {}));
+var PostDescribeSuggestersVersionEnum;
 (function (PostDescribeSuggestersVersionEnum) {
     PostDescribeSuggestersVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(PostDescribeSuggestersVersionEnum || (PostDescribeSuggestersVersionEnum = {}));
+})(PostDescribeSuggestersVersionEnum = exports.PostDescribeSuggestersVersionEnum || (exports.PostDescribeSuggestersVersionEnum = {}));
 var PostDescribeSuggestersQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeSuggestersQueryParams, _super);
     function PostDescribeSuggestersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersQueryParams.prototype, "version", void 0);
     return PostDescribeSuggestersQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeSuggestersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSuggestersQueryParams = PostDescribeSuggestersQueryParams;
 var PostDescribeSuggestersHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeSuggestersHeaders, _super);
     function PostDescribeSuggestersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeSuggestersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeSuggestersHeaders;
-}(SpeakeasyBase));
-export { PostDescribeSuggestersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSuggestersHeaders = PostDescribeSuggestersHeaders;
 var PostDescribeSuggestersRequest = /** @class */ (function (_super) {
     __extends(PostDescribeSuggestersRequest, _super);
     function PostDescribeSuggestersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSuggestersQueryParams)
     ], PostDescribeSuggestersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSuggestersHeaders)
     ], PostDescribeSuggestersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSuggestersRequest.prototype, "request", void 0);
     return PostDescribeSuggestersRequest;
-}(SpeakeasyBase));
-export { PostDescribeSuggestersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSuggestersRequest = PostDescribeSuggestersRequest;
 var PostDescribeSuggestersResponse = /** @class */ (function (_super) {
     __extends(PostDescribeSuggestersResponse, _super);
     function PostDescribeSuggestersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSuggestersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeSuggestersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeSuggestersResponse.prototype, "statusCode", void 0);
     return PostDescribeSuggestersResponse;
-}(SpeakeasyBase));
-export { PostDescribeSuggestersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSuggestersResponse = PostDescribeSuggestersResponse;

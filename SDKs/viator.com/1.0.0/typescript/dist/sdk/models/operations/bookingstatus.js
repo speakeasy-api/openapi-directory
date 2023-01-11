@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,29 +14,54 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingStatusResponse = exports.BookingStatusRequest = exports.BookingStatus200ApplicationJson = exports.BookingStatus200ApplicationJsonData = exports.BookingStatus200ApplicationJsonDataItemSummaries = exports.BookingStatusRequestBody = exports.BookingStatusHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BookingStatusHeaders = /** @class */ (function (_super) {
     __extends(BookingStatusHeaders, _super);
     function BookingStatusHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], BookingStatusHeaders.prototype, "acceptLanguage", void 0);
     return BookingStatusHeaders;
-}(SpeakeasyBase));
-export { BookingStatusHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatusHeaders = BookingStatusHeaders;
 // BookingStatusRequestBody
 /**
  * **note**: all items are optional, but at least one needs to be included
@@ -46,72 +72,72 @@ var BookingStatusRequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDateFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDateFrom" }),
         __metadata("design:type", String)
     ], BookingStatusRequestBody.prototype, "bookingDateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDateTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDateTo" }),
         __metadata("design:type", String)
     ], BookingStatusRequestBody.prototype, "bookingDateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorItemRefs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorItemRefs" }),
         __metadata("design:type", Array)
     ], BookingStatusRequestBody.prototype, "distributorItemRefs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorRefs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorRefs" }),
         __metadata("design:type", Array)
     ], BookingStatusRequestBody.prototype, "distributorRefs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemIds" }),
         __metadata("design:type", Array)
     ], BookingStatusRequestBody.prototype, "itemIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadFirstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadFirstName" }),
         __metadata("design:type", String)
     ], BookingStatusRequestBody.prototype, "leadFirstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadSurname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadSurname" }),
         __metadata("design:type", String)
     ], BookingStatusRequestBody.prototype, "leadSurname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
         __metadata("design:type", Boolean)
     ], BookingStatusRequestBody.prototype, "test", void 0);
     return BookingStatusRequestBody;
-}(SpeakeasyBase));
-export { BookingStatusRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatusRequestBody = BookingStatusRequestBody;
 var BookingStatus200ApplicationJsonDataItemSummaries = /** @class */ (function (_super) {
     __extends(BookingStatus200ApplicationJsonDataItemSummaries, _super);
     function BookingStatus200ApplicationJsonDataItemSummaries() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingStatus" }),
         __metadata("design:type", shared.BookingStatusItem)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "bookingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorItemRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorItemRef" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "distributorItemRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryId" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "itineraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travelDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travelDate" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJsonDataItemSummaries.prototype, "travelDate", void 0);
     return BookingStatus200ApplicationJsonDataItemSummaries;
-}(SpeakeasyBase));
-export { BookingStatus200ApplicationJsonDataItemSummaries };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatus200ApplicationJsonDataItemSummaries = BookingStatus200ApplicationJsonDataItemSummaries;
 // BookingStatus200ApplicationJsonData
 /**
  * **object** containing booking status and details
@@ -122,125 +148,125 @@ var BookingStatus200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDate" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJsonData.prototype, "bookingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingStatus" }),
         __metadata("design:type", shared.BookingStatusItinerary)
     ], BookingStatus200ApplicationJsonData.prototype, "bookingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorRef" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJsonData.prototype, "distributorRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemSummaries", elemType: BookingStatus200ApplicationJsonDataItemSummaries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemSummaries", elemType: BookingStatus200ApplicationJsonDataItemSummaries }),
         __metadata("design:type", Array)
     ], BookingStatus200ApplicationJsonData.prototype, "itemSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryId" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJsonData.prototype, "itineraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJsonData.prototype, "sortOrder", void 0);
     return BookingStatus200ApplicationJsonData;
-}(SpeakeasyBase));
-export { BookingStatus200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatus200ApplicationJsonData = BookingStatus200ApplicationJsonData;
 var BookingStatus200ApplicationJson = /** @class */ (function (_super) {
     __extends(BookingStatus200ApplicationJson, _super);
     function BookingStatus200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BookingStatus200ApplicationJsonData)
     ], BookingStatus200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], BookingStatus200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], BookingStatus200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], BookingStatus200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], BookingStatus200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], BookingStatus200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], BookingStatus200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], BookingStatus200ApplicationJson.prototype, "vmid", void 0);
     return BookingStatus200ApplicationJson;
-}(SpeakeasyBase));
-export { BookingStatus200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatus200ApplicationJson = BookingStatus200ApplicationJson;
 var BookingStatusRequest = /** @class */ (function (_super) {
     __extends(BookingStatusRequest, _super);
     function BookingStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingStatusHeaders)
     ], BookingStatusRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", BookingStatusRequestBody)
     ], BookingStatusRequest.prototype, "request", void 0);
     return BookingStatusRequest;
-}(SpeakeasyBase));
-export { BookingStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatusRequest = BookingStatusRequest;
 var BookingStatusResponse = /** @class */ (function (_super) {
     __extends(BookingStatusResponse, _super);
     function BookingStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BookingStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BookingStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingStatus200ApplicationJson)
-    ], BookingStatusResponse.prototype, "bookingStatus200ApplicationJsonObject", void 0);
+    ], BookingStatusResponse.prototype, "bookingStatus200ApplicationJSONObject", void 0);
     return BookingStatusResponse;
-}(SpeakeasyBase));
-export { BookingStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.BookingStatusResponse = BookingStatusResponse;

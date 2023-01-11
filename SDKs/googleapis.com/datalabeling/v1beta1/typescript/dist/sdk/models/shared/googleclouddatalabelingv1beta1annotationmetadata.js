@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1OperatorMetadata } from "./googleclouddatalabelingv1beta1operatormetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1AnnotationMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1operatormetadata_1 = require("./googleclouddatalabelingv1beta1operatormetadata");
 // GoogleCloudDatalabelingV1beta1AnnotationMetadata
 /**
  * Additional information associated with the annotation.
@@ -34,9 +37,9 @@ var GoogleCloudDatalabelingV1beta1AnnotationMetadata = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorMetadata" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1OperatorMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorMetadata" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1operatormetadata_1.GoogleCloudDatalabelingV1beta1OperatorMetadata)
     ], GoogleCloudDatalabelingV1beta1AnnotationMetadata.prototype, "operatorMetadata", void 0);
     return GoogleCloudDatalabelingV1beta1AnnotationMetadata;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1AnnotationMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1AnnotationMetadata = GoogleCloudDatalabelingV1beta1AnnotationMetadata;

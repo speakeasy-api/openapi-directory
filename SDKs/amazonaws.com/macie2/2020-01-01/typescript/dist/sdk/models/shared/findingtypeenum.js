@@ -1,4 +1,7 @@
-export var FindingTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingTypeEnum = void 0;
+var FindingTypeEnum;
 (function (FindingTypeEnum) {
     FindingTypeEnum["SensitiveDataS3ObjectMultiple"] = "SensitiveData:S3Object/Multiple";
     FindingTypeEnum["SensitiveDataS3ObjectFinancial"] = "SensitiveData:S3Object/Financial";
@@ -10,4 +13,4 @@ export var FindingTypeEnum;
     FindingTypeEnum["PolicyIamUserS3BucketReplicatedExternally"] = "Policy:IAMUser/S3BucketReplicatedExternally";
     FindingTypeEnum["PolicyIamUserS3BucketEncryptionDisabled"] = "Policy:IAMUser/S3BucketEncryptionDisabled";
     FindingTypeEnum["PolicyIamUserS3BlockPublicAccessDisabled"] = "Policy:IAMUser/S3BlockPublicAccessDisabled";
-})(FindingTypeEnum || (FindingTypeEnum = {}));
+})(FindingTypeEnum = exports.FindingTypeEnum || (exports.FindingTypeEnum = {}));

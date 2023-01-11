@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateStoreImageTaskActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateStoreImageTaskResponse = exports.PostCreateStoreImageTaskRequest = exports.PostCreateStoreImageTaskHeaders = exports.PostCreateStoreImageTaskQueryParams = exports.PostCreateStoreImageTaskVersionEnum = exports.PostCreateStoreImageTaskActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateStoreImageTaskActionEnum;
 (function (PostCreateStoreImageTaskActionEnum) {
     PostCreateStoreImageTaskActionEnum["CreateStoreImageTask"] = "CreateStoreImageTask";
-})(PostCreateStoreImageTaskActionEnum || (PostCreateStoreImageTaskActionEnum = {}));
-export var PostCreateStoreImageTaskVersionEnum;
+})(PostCreateStoreImageTaskActionEnum = exports.PostCreateStoreImageTaskActionEnum || (exports.PostCreateStoreImageTaskActionEnum = {}));
+var PostCreateStoreImageTaskVersionEnum;
 (function (PostCreateStoreImageTaskVersionEnum) {
     PostCreateStoreImageTaskVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCreateStoreImageTaskVersionEnum || (PostCreateStoreImageTaskVersionEnum = {}));
+})(PostCreateStoreImageTaskVersionEnum = exports.PostCreateStoreImageTaskVersionEnum || (exports.PostCreateStoreImageTaskVersionEnum = {}));
 var PostCreateStoreImageTaskQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateStoreImageTaskQueryParams, _super);
     function PostCreateStoreImageTaskQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskQueryParams.prototype, "version", void 0);
     return PostCreateStoreImageTaskQueryParams;
-}(SpeakeasyBase));
-export { PostCreateStoreImageTaskQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStoreImageTaskQueryParams = PostCreateStoreImageTaskQueryParams;
 var PostCreateStoreImageTaskHeaders = /** @class */ (function (_super) {
     __extends(PostCreateStoreImageTaskHeaders, _super);
     function PostCreateStoreImageTaskHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateStoreImageTaskHeaders;
-}(SpeakeasyBase));
-export { PostCreateStoreImageTaskHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStoreImageTaskHeaders = PostCreateStoreImageTaskHeaders;
 var PostCreateStoreImageTaskRequest = /** @class */ (function (_super) {
     __extends(PostCreateStoreImageTaskRequest, _super);
     function PostCreateStoreImageTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateStoreImageTaskQueryParams)
     ], PostCreateStoreImageTaskRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateStoreImageTaskHeaders)
     ], PostCreateStoreImageTaskRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateStoreImageTaskRequest.prototype, "request", void 0);
     return PostCreateStoreImageTaskRequest;
-}(SpeakeasyBase));
-export { PostCreateStoreImageTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStoreImageTaskRequest = PostCreateStoreImageTaskRequest;
 var PostCreateStoreImageTaskResponse = /** @class */ (function (_super) {
     __extends(PostCreateStoreImageTaskResponse, _super);
     function PostCreateStoreImageTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateStoreImageTaskResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateStoreImageTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateStoreImageTaskResponse.prototype, "statusCode", void 0);
     return PostCreateStoreImageTaskResponse;
-}(SpeakeasyBase));
-export { PostCreateStoreImageTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStoreImageTaskResponse = PostCreateStoreImageTaskResponse;

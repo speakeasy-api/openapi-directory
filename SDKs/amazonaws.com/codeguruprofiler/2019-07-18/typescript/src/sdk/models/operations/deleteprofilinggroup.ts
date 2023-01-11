@@ -49,7 +49,7 @@ export class DeleteProfilingGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteProfilingGroupResponse?: Map<string, any>;
+  deleteProfilingGroupResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

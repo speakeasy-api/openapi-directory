@@ -1,20 +1,36 @@
-export * from "./altenum";
-export * from "./gdatablobstore2info";
-export * from "./gdatacompositemedia";
-export * from "./gdatacontenttypeinfo";
-export * from "./gdatadiffchecksumsresponse";
-export * from "./gdatadiffdownloadresponse";
-export * from "./gdatadiffuploadrequest";
-export * from "./gdatadiffuploadresponse";
-export * from "./gdatadiffversionresponse";
-export * from "./gdatadownloadparameters";
-export * from "./gdatamedia";
-export * from "./gdataobjectid";
-export * from "./job";
-export * from "./listjobsresponse";
-export * from "./listreportsresponse";
-export * from "./listreporttypesresponse";
-export * from "./report";
-export * from "./reporttype";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./gdatablobstore2info"), exports);
+__exportStar(require("./gdatacompositemedia"), exports);
+__exportStar(require("./gdatacontenttypeinfo"), exports);
+__exportStar(require("./gdatadiffchecksumsresponse"), exports);
+__exportStar(require("./gdatadiffdownloadresponse"), exports);
+__exportStar(require("./gdatadiffuploadrequest"), exports);
+__exportStar(require("./gdatadiffuploadresponse"), exports);
+__exportStar(require("./gdatadiffversionresponse"), exports);
+__exportStar(require("./gdatadownloadparameters"), exports);
+__exportStar(require("./gdatamedia"), exports);
+__exportStar(require("./gdataobjectid"), exports);
+__exportStar(require("./job"), exports);
+__exportStar(require("./listjobsresponse"), exports);
+__exportStar(require("./listreportsresponse"), exports);
+__exportStar(require("./listreporttypesresponse"), exports);
+__exportStar(require("./report"), exports);
+__exportStar(require("./reporttype"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

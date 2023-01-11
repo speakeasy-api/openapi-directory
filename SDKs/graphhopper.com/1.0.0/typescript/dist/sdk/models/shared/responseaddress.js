@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnappedWaypoint } from "./snappedwaypoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResponseAddress = void 0;
+var utils_1 = require("../../../internal/utils");
+var snappedwaypoint_1 = require("./snappedwaypoint");
 // ResponseAddress
 /**
  * Address of activity
@@ -34,29 +37,29 @@ var ResponseAddress = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], ResponseAddress.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_id" }),
         __metadata("design:type", String)
     ], ResponseAddress.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lon" }),
         __metadata("design:type", Number)
     ], ResponseAddress.prototype, "lon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ResponseAddress.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapped_waypoint" }),
-        __metadata("design:type", SnappedWaypoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapped_waypoint" }),
+        __metadata("design:type", snappedwaypoint_1.SnappedWaypoint)
     ], ResponseAddress.prototype, "snappedWaypoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=street_hint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_hint" }),
         __metadata("design:type", String)
     ], ResponseAddress.prototype, "streetHint", void 0);
     return ResponseAddress;
-}(SpeakeasyBase));
-export { ResponseAddress };
+}(utils_1.SpeakeasyBase));
+exports.ResponseAddress = ResponseAddress;

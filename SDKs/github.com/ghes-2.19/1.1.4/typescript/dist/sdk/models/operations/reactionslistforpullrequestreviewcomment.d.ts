@@ -5,18 +5,8 @@ export declare class ReactionsListForPullRequestReviewCommentPathParams extends 
     owner: string;
     repo: string;
 }
-export declare enum ReactionsListForPullRequestReviewCommentContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
 export declare class ReactionsListForPullRequestReviewCommentQueryParams extends SpeakeasyBase {
-    content?: ReactionsListForPullRequestReviewCommentContentEnum;
+    content?: shared.CommentIdEnum;
     page?: number;
     perPage?: number;
 }
@@ -30,9 +20,9 @@ export declare class ReactionsListForPullRequestReviewCommentRequest extends Spe
 }
 export declare class ReactionsListForPullRequestReviewCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     reactions?: shared.Reaction[];
-    reactionsListForPullRequestReviewComment415ApplicationJsonObject?: ReactionsListForPullRequestReviewComment415ApplicationJson;
+    reactionsListForPullRequestReviewComment415ApplicationJSONObject?: ReactionsListForPullRequestReviewComment415ApplicationJson;
 }

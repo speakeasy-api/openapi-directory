@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Player = void 0;
+var utils_1 = require("../../../internal/utils");
 var Player = /** @class */ (function (_super) {
     __extends(Player, _super);
     function Player() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], Player.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], Player.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_city" }),
         __metadata("design:type", String)
     ], Player.prototype, "homeCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_country" }),
         __metadata("design:type", String)
     ], Player.prototype, "homeCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_county_fips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_county_fips" }),
         __metadata("design:type", String)
     ], Player.prototype, "homeCountyFips", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_latitude" }),
         __metadata("design:type", Number)
     ], Player.prototype, "homeLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_longitude" }),
         __metadata("design:type", Number)
     ], Player.prototype, "homeLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_state" }),
         __metadata("design:type", String)
     ], Player.prototype, "homeState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Player.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jersey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jersey" }),
         __metadata("design:type", Number)
     ], Player.prototype, "jersey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], Player.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], Player.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recruit_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recruit_ids" }),
         __metadata("design:type", Array)
     ], Player.prototype, "recruitIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], Player.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], Player.prototype, "weight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], Player.prototype, "year", void 0);
     return Player;
-}(SpeakeasyBase));
-export { Player };
+}(utils_1.SpeakeasyBase));
+exports.Player = Player;

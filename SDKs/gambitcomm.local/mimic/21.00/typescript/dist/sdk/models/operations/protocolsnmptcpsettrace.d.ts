@@ -9,5 +9,5 @@ export declare class ProtocolSnmptcpSetTraceRequest extends SpeakeasyBase {
 export declare class ProtocolSnmptcpSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmptcpSetTrace200ApplicationJsonString?: string;
+    protocolSnmptcpSetTrace200ApplicationJSONString?: string;
 }

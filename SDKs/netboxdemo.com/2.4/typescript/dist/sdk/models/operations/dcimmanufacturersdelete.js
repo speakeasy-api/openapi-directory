@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimManufacturersDeleteResponse = exports.DcimManufacturersDeleteRequest = exports.DcimManufacturersDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DcimManufacturersDeletePathParams = /** @class */ (function (_super) {
     __extends(DcimManufacturersDeletePathParams, _super);
     function DcimManufacturersDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DcimManufacturersDeletePathParams.prototype, "id", void 0);
     return DcimManufacturersDeletePathParams;
-}(SpeakeasyBase));
-export { DcimManufacturersDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimManufacturersDeletePathParams = DcimManufacturersDeletePathParams;
 var DcimManufacturersDeleteRequest = /** @class */ (function (_super) {
     __extends(DcimManufacturersDeleteRequest, _super);
     function DcimManufacturersDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimManufacturersDeletePathParams)
     ], DcimManufacturersDeleteRequest.prototype, "pathParams", void 0);
     return DcimManufacturersDeleteRequest;
-}(SpeakeasyBase));
-export { DcimManufacturersDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimManufacturersDeleteRequest = DcimManufacturersDeleteRequest;
 var DcimManufacturersDeleteResponse = /** @class */ (function (_super) {
     __extends(DcimManufacturersDeleteResponse, _super);
     function DcimManufacturersDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimManufacturersDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimManufacturersDeleteResponse.prototype, "statusCode", void 0);
     return DcimManufacturersDeleteResponse;
-}(SpeakeasyBase));
-export { DcimManufacturersDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimManufacturersDeleteResponse = DcimManufacturersDeleteResponse;

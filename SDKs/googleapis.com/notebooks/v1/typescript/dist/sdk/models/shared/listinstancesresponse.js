@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Instance } from "./instance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListInstancesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var instance_1 = require("./instance");
 // ListInstancesResponse
 /**
  * Response for listing notebook instances.
@@ -34,17 +37,17 @@ var ListInstancesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], ListInstancesResponse.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListInstancesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListInstancesResponse.prototype, "unreachable", void 0);
     return ListInstancesResponse;
-}(SpeakeasyBase));
-export { ListInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListInstancesResponse = ListInstancesResponse;

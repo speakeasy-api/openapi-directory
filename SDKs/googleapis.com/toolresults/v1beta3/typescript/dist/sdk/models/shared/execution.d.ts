@@ -14,7 +14,7 @@ export declare enum ExecutionStateEnum {
 export declare class Execution extends SpeakeasyBase {
     completionTime?: Timestamp;
     creationTime?: Timestamp;
-    dimensionDefinitions?: Map<string, any>[];
+    dimensionDefinitions?: Record<string, any>[];
     executionId?: string;
     outcome?: Outcome;
     specification?: Specification;

@@ -65,7 +65,7 @@ export class Adexchangebuyer2AccountsProposalsCompleteSetupRequest extends Speak
   queryParams: Adexchangebuyer2AccountsProposalsCompleteSetupQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: Adexchangebuyer2AccountsProposalsCompleteSetupSecurity;

@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Verification } from "./verification";
+/**
+ * Simple User
+**/
 export declare class CommitSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -21,6 +24,9 @@ export declare class CommitSimpleUser extends SpeakeasyBase {
     type: string;
     url: string;
 }
+/**
+ * Metaproperties for Git author/committer information.
+**/
 export declare class CommitCommitGitUser extends SpeakeasyBase {
     date?: string;
     email?: string;

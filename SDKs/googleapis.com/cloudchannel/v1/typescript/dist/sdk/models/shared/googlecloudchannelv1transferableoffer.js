@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Offer } from "./googlecloudchannelv1offer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1TransferableOffer = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1offer_1 = require("./googlecloudchannelv1offer");
 // GoogleCloudChannelV1TransferableOffer
 /**
  * TransferableOffer represents an Offer that can be used in Transfer. Read-only.
@@ -34,9 +37,9 @@ var GoogleCloudChannelV1TransferableOffer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offer" }),
-        __metadata("design:type", GoogleCloudChannelV1Offer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offer" }),
+        __metadata("design:type", googlecloudchannelv1offer_1.GoogleCloudChannelV1Offer)
     ], GoogleCloudChannelV1TransferableOffer.prototype, "offer", void 0);
     return GoogleCloudChannelV1TransferableOffer;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1TransferableOffer };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1TransferableOffer = GoogleCloudChannelV1TransferableOffer;

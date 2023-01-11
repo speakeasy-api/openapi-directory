@@ -13,5 +13,5 @@ export declare class FollowUsersAlt1Request extends SpeakeasyBase {
 export declare class FollowUsersAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

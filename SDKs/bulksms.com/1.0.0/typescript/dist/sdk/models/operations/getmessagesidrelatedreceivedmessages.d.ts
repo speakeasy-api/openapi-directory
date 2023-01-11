@@ -12,7 +12,7 @@ export declare class GetMessagesIdRelatedReceivedMessagesRequest extends Speakea
 }
 export declare class GetMessagesIdRelatedReceivedMessagesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     messages?: shared.Message[];
     statusCode: number;
 }

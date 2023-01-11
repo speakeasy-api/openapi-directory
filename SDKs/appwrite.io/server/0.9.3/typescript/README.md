@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AccountCreateRecoveryRequest, AccountCreateRecoveryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,14 +30,14 @@ const req: AccountCreateRecoveryRequest = {
   security: {
     jwt: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     project: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
-    email: "quasi",
-    url: "aliquid",
+    email: "sit",
+    url: "voluptas",
   },
 };
 

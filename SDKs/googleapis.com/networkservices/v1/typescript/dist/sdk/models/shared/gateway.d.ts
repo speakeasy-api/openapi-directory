@@ -10,7 +10,7 @@ export declare enum GatewayTypeEnum {
 export declare class Gateway extends SpeakeasyBase {
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     ports?: number[];
     scope?: string;
@@ -24,7 +24,7 @@ export declare class Gateway extends SpeakeasyBase {
 **/
 export declare class GatewayInput extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     ports?: number[];
     scope?: string;

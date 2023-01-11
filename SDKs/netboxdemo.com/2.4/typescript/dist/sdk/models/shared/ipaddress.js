@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressInterface } from "./ipaddressinterface";
-import { NestedIpAddress } from "./nestedipaddress";
-import { NestedTenant } from "./nestedtenant";
-import { NestedVrf } from "./nestedvrf";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpAddress = exports.IpAddressStatus = exports.IpAddressRole = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipaddressinterface_1 = require("./ipaddressinterface");
+var nestedipaddress_1 = require("./nestedipaddress");
+var nestedtenant_1 = require("./nestedtenant");
+var nestedvrf_1 = require("./nestedvrf");
 var IpAddressRole = /** @class */ (function (_super) {
     __extends(IpAddressRole, _super);
     function IpAddressRole() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], IpAddressRole.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], IpAddressRole.prototype, "value", void 0);
     return IpAddressRole;
-}(SpeakeasyBase));
-export { IpAddressRole };
+}(utils_1.SpeakeasyBase));
+exports.IpAddressRole = IpAddressRole;
 var IpAddressStatus = /** @class */ (function (_super) {
     __extends(IpAddressStatus, _super);
     function IpAddressStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], IpAddressStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], IpAddressStatus.prototype, "value", void 0);
     return IpAddressStatus;
-}(SpeakeasyBase));
-export { IpAddressStatus };
+}(utils_1.SpeakeasyBase));
+exports.IpAddressStatus = IpAddressStatus;
 var IpAddress = /** @class */ (function (_super) {
     __extends(IpAddress, _super);
     function IpAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], IpAddress.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], IpAddress.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], IpAddress.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], IpAddress.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", Number)
     ], IpAddress.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], IpAddress.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface" }),
-        __metadata("design:type", IpAddressInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface" }),
+        __metadata("design:type", ipaddressinterface_1.IpAddressInterface)
     ], IpAddress.prototype, "interface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], IpAddress.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nat_inside" }),
-        __metadata("design:type", NestedIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nat_inside" }),
+        __metadata("design:type", nestedipaddress_1.NestedIpAddress)
     ], IpAddress.prototype, "natInside", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nat_outside" }),
-        __metadata("design:type", NestedIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nat_outside" }),
+        __metadata("design:type", nestedipaddress_1.NestedIpAddress)
     ], IpAddress.prototype, "natOutside", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", IpAddressRole)
     ], IpAddress.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", IpAddressStatus)
     ], IpAddress.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], IpAddress.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], IpAddress.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vrf" }),
-        __metadata("design:type", NestedVrf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vrf" }),
+        __metadata("design:type", nestedvrf_1.NestedVrf)
     ], IpAddress.prototype, "vrf", void 0);
     return IpAddress;
-}(SpeakeasyBase));
-export { IpAddress };
+}(utils_1.SpeakeasyBase));
+exports.IpAddress = IpAddress;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileModeTypeEnumEnum } from "./filemodetypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.File = void 0;
+var utils_1 = require("../../../internal/utils");
+var filemodetypeenumenum_1 = require("./filemodetypeenumenum");
 // File
 /**
  * Returns information about a file in a repository.
@@ -34,21 +37,21 @@ var File = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absolutePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absolutePath" }),
         __metadata("design:type", String)
     ], File.prototype, "absolutePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobId" }),
         __metadata("design:type", String)
     ], File.prototype, "blobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileMode" }),
         __metadata("design:type", String)
     ], File.prototype, "fileMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativePath" }),
         __metadata("design:type", String)
     ], File.prototype, "relativePath", void 0);
     return File;
-}(SpeakeasyBase));
-export { File };
+}(utils_1.SpeakeasyBase));
+exports.File = File;

@@ -25,5 +25,5 @@ export declare class CreateNodesRequest extends SpeakeasyBase {
 export declare class CreateNodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNodes200ApplicationJsonObject?: CreateNodes200ApplicationJson;
+    createNodes200ApplicationJSONObject?: CreateNodes200ApplicationJson;
 }

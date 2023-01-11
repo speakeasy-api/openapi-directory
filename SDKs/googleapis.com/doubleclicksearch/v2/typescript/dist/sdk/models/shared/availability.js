@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Availability = void 0;
+var utils_1 = require("../../../internal/utils");
 // Availability
 /**
  * A message containing availability data relevant to DoubleClick Search.
@@ -33,33 +36,33 @@ var Availability = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiserId" }),
         __metadata("design:type", String)
     ], Availability.prototype, "advertiserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agencyId" }),
         __metadata("design:type", String)
     ], Availability.prototype, "agencyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityTimestamp" }),
         __metadata("design:type", String)
     ], Availability.prototype, "availabilityTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], Availability.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationId" }),
         __metadata("design:type", String)
     ], Availability.prototype, "segmentationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationName" }),
         __metadata("design:type", String)
     ], Availability.prototype, "segmentationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationType" }),
         __metadata("design:type", String)
     ], Availability.prototype, "segmentationType", void 0);
     return Availability;
-}(SpeakeasyBase));
-export { Availability };
+}(utils_1.SpeakeasyBase));
+exports.Availability = Availability;

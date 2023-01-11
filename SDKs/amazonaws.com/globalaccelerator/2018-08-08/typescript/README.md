@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddCustomRoutingEndpointsRequest, AddCustomRoutingEndpointsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,29 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddCustomRoutingEndpointsRequest = {
   headers: {
-    xAmzAlgorithm: "dignissimos",
-    xAmzContentSha256: "voluptates",
-    xAmzCredential: "officia",
-    xAmzDate: "dolore",
-    xAmzSecurityToken: "hic",
-    xAmzSignature: "recusandae",
-    xAmzSignedHeaders: "iste",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
   },
   request: {
     endpointConfigurations: [
       {
-        endpointId: "alias",
-      },
-      {
-        endpointId: "eum",
+        endpointId: "et",
       },
     ],
-    endpointGroupArn: "quia",
+    endpointGroupArn: "nihil",
   },
 };
 
-sdk.sdk.addCustomRoutingEndpoints(req).then((res: AddCustomRoutingEndpointsResponse | AxiosError) => {
+sdk.addCustomRoutingEndpoints(req).then((res: AddCustomRoutingEndpointsResponse | AxiosError) => {
    // handle response
 });
 ```

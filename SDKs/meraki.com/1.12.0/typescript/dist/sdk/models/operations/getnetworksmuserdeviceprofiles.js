@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmUserDeviceProfilesResponse = exports.GetNetworkSmUserDeviceProfilesRequest = exports.GetNetworkSmUserDeviceProfilesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmUserDeviceProfilesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmUserDeviceProfilesPathParams, _super);
     function GetNetworkSmUserDeviceProfilesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmUserDeviceProfilesPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], GetNetworkSmUserDeviceProfilesPathParams.prototype, "userId", void 0);
     return GetNetworkSmUserDeviceProfilesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmUserDeviceProfilesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmUserDeviceProfilesPathParams = GetNetworkSmUserDeviceProfilesPathParams;
 var GetNetworkSmUserDeviceProfilesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmUserDeviceProfilesRequest, _super);
     function GetNetworkSmUserDeviceProfilesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmUserDeviceProfilesPathParams)
     ], GetNetworkSmUserDeviceProfilesRequest.prototype, "pathParams", void 0);
     return GetNetworkSmUserDeviceProfilesRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmUserDeviceProfilesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmUserDeviceProfilesRequest = GetNetworkSmUserDeviceProfilesRequest;
 var GetNetworkSmUserDeviceProfilesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmUserDeviceProfilesResponse, _super);
     function GetNetworkSmUserDeviceProfilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmUserDeviceProfilesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmUserDeviceProfilesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmUserDeviceProfilesResponse.prototype, "getNetworkSmUserDeviceProfiles200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmUserDeviceProfilesResponse.prototype, "getNetworkSmUserDeviceProfiles200ApplicationJSONObject", void 0);
     return GetNetworkSmUserDeviceProfilesResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmUserDeviceProfilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmUserDeviceProfilesResponse = GetNetworkSmUserDeviceProfilesResponse;

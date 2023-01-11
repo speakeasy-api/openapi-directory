@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PartnerIntegrationInfo } from "./partnerintegrationinfo";
+import { PartnerIntegrationInfoList } from "./partnerintegrationinfolist";
 
 
 
 export class DescribePartnersOutputMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: PartnerIntegrationInfo })
-  partnerIntegrationInfoList?: PartnerIntegrationInfo[];
+  @SpeakeasyMetadata({ elemType: PartnerIntegrationInfoList })
+  partnerIntegrationInfoList?: PartnerIntegrationInfoList[];
 }

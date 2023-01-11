@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1IssueModel } from "./googlecloudcontactcenterinsightsv1issuemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ListIssueModelsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1issuemodel_1 = require("./googlecloudcontactcenterinsightsv1issuemodel");
 // GoogleCloudContactcenterinsightsV1ListIssueModelsResponse
 /**
  * The response of listing issue models.
@@ -34,9 +37,9 @@ var GoogleCloudContactcenterinsightsV1ListIssueModelsResponse = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueModels", elemType: GoogleCloudContactcenterinsightsV1IssueModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueModels", elemType: googlecloudcontactcenterinsightsv1issuemodel_1.GoogleCloudContactcenterinsightsV1IssueModel }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1ListIssueModelsResponse.prototype, "issueModels", void 0);
     return GoogleCloudContactcenterinsightsV1ListIssueModelsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ListIssueModelsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ListIssueModelsResponse = GoogleCloudContactcenterinsightsV1ListIssueModelsResponse;

@@ -71,7 +71,7 @@ export class PutStudioMembersResponse extends SpeakeasyBase {
   internalServerErrorException?: any;
 
   @SpeakeasyMetadata()
-  putStudioMembersResponse?: Map<string, any>;
+  putStudioMembersResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

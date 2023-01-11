@@ -28,7 +28,7 @@ export declare class CreateTypedLinkFacetRequest extends SpeakeasyBase {
 export declare class CreateTypedLinkFacetResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
-    createTypedLinkFacetResponse?: Map<string, any>;
+    createTypedLinkFacetResponse?: Record<string, any>;
     facetAlreadyExistsException?: shared.FacetAlreadyExistsException;
     facetValidationException?: shared.FacetValidationException;
     internalServiceException?: shared.InternalServiceException;

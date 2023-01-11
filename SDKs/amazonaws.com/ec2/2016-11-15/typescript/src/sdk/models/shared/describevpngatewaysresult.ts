@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpnGateway } from "./vpngateway";
 
 
 
@@ -8,6 +7,6 @@ import { VpnGateway } from "./vpngateway";
  * Contains the output of DescribeVpnGateways.
 **/
 export class DescribeVpnGatewaysResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: VpnGateway })
-  vpnGateways?: VpnGateway[];
+  @SpeakeasyMetadata()
+  vpnGateways?: Record<string, any>;
 }

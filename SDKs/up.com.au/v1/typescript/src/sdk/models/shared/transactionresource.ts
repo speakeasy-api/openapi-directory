@@ -5,8 +5,8 @@ import { MoneyObject } from "./moneyobject";
 
 // TransactionResourceAttributesCashback
 /** 
- * If all or part of this transaction was instantly reimbursed in the
- * form of cashback, details of the reimbursement.
+ * Provides information about an instant reimbursement in the form of
+ * cashback.
  * 
 **/
 export class TransactionResourceAttributesCashback extends SpeakeasyBase {
@@ -20,11 +20,7 @@ export class TransactionResourceAttributesCashback extends SpeakeasyBase {
 
 // TransactionResourceAttributesForeignAmount
 /** 
- * The foreign currency amount of this transaction. This field will be
- * `null` for domestic transactions. The amount was converted to the AUD
- * amount reflected in the `amount` of this transaction. Refer to the
- * `holdInfo` field for the original `foreignAmount` the transaction was
- * `HELD` at.
+ * Provides information about a value of money.
  * 
 **/
 export class TransactionResourceAttributesForeignAmount extends SpeakeasyBase {
@@ -41,9 +37,7 @@ export class TransactionResourceAttributesForeignAmount extends SpeakeasyBase {
 
 // TransactionResourceAttributesHoldInfoForeignAmount
 /** 
- * The foreign currency amount of this transaction while in the `HELD`
- * status. This field will be `null` for domestic transactions. The amount
- * was converted to the AUD amount reflected in the `amount` field.
+ * Provides information about a value of money.
  * 
 **/
 export class TransactionResourceAttributesHoldInfoForeignAmount extends SpeakeasyBase {
@@ -60,9 +54,8 @@ export class TransactionResourceAttributesHoldInfoForeignAmount extends Speakeas
 
 // TransactionResourceAttributesHoldInfo
 /** 
- * If this transaction is currently in the `HELD` status, or was ever in
- * the `HELD` status, the `amount` and `foreignAmount` of the
- * transaction while `HELD`.
+ * Provides information about the amount at which a transaction was in the
+ * `HELD` status.
  * 
 **/
 export class TransactionResourceAttributesHoldInfo extends SpeakeasyBase {
@@ -76,9 +69,7 @@ export class TransactionResourceAttributesHoldInfo extends SpeakeasyBase {
 
 // TransactionResourceAttributesRoundUpBoostPortion
 /** 
- * The portion of the Round Up `amount` owing to boosted Round Ups,
- * represented as a negative value. If no boost was added to the Round Up
- * this field will be `null`.
+ * Provides information about a value of money.
  * 
 **/
 export class TransactionResourceAttributesRoundUpBoostPortion extends SpeakeasyBase {
@@ -95,8 +86,8 @@ export class TransactionResourceAttributesRoundUpBoostPortion extends SpeakeasyB
 
 // TransactionResourceAttributesRoundUp
 /** 
- * Details of how this transaction was rounded-up. If no Round Up was
- * applied this field will be `null`.
+ * Provides information about how a Round Up was applied, such as whether or
+ * not a boost was included in the Round Up.
  * 
 **/
 export class TransactionResourceAttributesRoundUp extends SpeakeasyBase {

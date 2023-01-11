@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGroupCertificateConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGroupCertificateConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetGroupCertificateConfigurationResponse, _super);
     function GetGroupCertificateConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateAuthorityExpiryInMilliseconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateAuthorityExpiryInMilliseconds" }),
         __metadata("design:type", String)
     ], GetGroupCertificateConfigurationResponse.prototype, "certificateAuthorityExpiryInMilliseconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateExpiryInMilliseconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateExpiryInMilliseconds" }),
         __metadata("design:type", String)
     ], GetGroupCertificateConfigurationResponse.prototype, "certificateExpiryInMilliseconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupId" }),
         __metadata("design:type", String)
     ], GetGroupCertificateConfigurationResponse.prototype, "groupId", void 0);
     return GetGroupCertificateConfigurationResponse;
-}(SpeakeasyBase));
-export { GetGroupCertificateConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupCertificateConfigurationResponse = GetGroupCertificateConfigurationResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LogsPolicyDestinationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogsPolicy = exports.LogsPolicyDestinationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LogsPolicyDestinationEnum;
 (function (LogsPolicyDestinationEnum) {
     LogsPolicyDestinationEnum["DestinationUnspecified"] = "DESTINATION_UNSPECIFIED";
     LogsPolicyDestinationEnum["CloudLogging"] = "CLOUD_LOGGING";
     LogsPolicyDestinationEnum["Path"] = "PATH";
-})(LogsPolicyDestinationEnum || (LogsPolicyDestinationEnum = {}));
+})(LogsPolicyDestinationEnum = exports.LogsPolicyDestinationEnum || (exports.LogsPolicyDestinationEnum = {}));
 // LogsPolicy
 /**
  * LogsPolicy describes how outputs from a Job's Tasks (stdout/stderr) will be preserved.
@@ -39,13 +42,13 @@ var LogsPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], LogsPolicy.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsPath" }),
         __metadata("design:type", String)
     ], LogsPolicy.prototype, "logsPath", void 0);
     return LogsPolicy;
-}(SpeakeasyBase));
-export { LogsPolicy };
+}(utils_1.SpeakeasyBase));
+exports.LogsPolicy = LogsPolicy;

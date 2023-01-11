@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cluster } from "./cluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RebootNodeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cluster_1 = require("./cluster");
 var RebootNodeResponse = /** @class */ (function (_super) {
     __extends(RebootNodeResponse, _super);
     function RebootNodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Cluster" }),
-        __metadata("design:type", Cluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Cluster" }),
+        __metadata("design:type", cluster_1.Cluster)
     ], RebootNodeResponse.prototype, "cluster", void 0);
     return RebootNodeResponse;
-}(SpeakeasyBase));
-export { RebootNodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.RebootNodeResponse = RebootNodeResponse;

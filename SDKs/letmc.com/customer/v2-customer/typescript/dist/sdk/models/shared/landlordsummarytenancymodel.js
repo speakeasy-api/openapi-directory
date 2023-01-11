@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordSummaryTenancyModel = void 0;
+var utils_1 = require("../../../internal/utils");
 // LandlordSummaryTenancyModel
 /**
  * Landlord Summary - Landing Page.
@@ -33,57 +36,57 @@ var LandlordSummaryTenancyModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Bond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Bond" }),
         __metadata("design:type", Number)
     ], LandlordSummaryTenancyModel.prototype, "bond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BranchID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BranchID" }),
         __metadata("design:type", String)
-    ], LandlordSummaryTenancyModel.prototype, "branchId", void 0);
+    ], LandlordSummaryTenancyModel.prototype, "branchID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlobalReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlobalReference" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "globalReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ID" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaintenanceJobs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaintenanceJobs" }),
         __metadata("design:type", Number)
     ], LandlordSummaryTenancyModel.prototype, "maintenanceJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ManagedRent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ManagedRent" }),
         __metadata("design:type", Boolean)
     ], LandlordSummaryTenancyModel.prototype, "managedRent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PropertyAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PropertyAddress" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "propertyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rent" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "rent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RentArrears" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RentArrears" }),
         __metadata("design:type", Number)
     ], LandlordSummaryTenancyModel.prototype, "rentArrears", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RentCollected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RentCollected" }),
         __metadata("design:type", Number)
     ], LandlordSummaryTenancyModel.prototype, "rentCollected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenancyProperty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenancyProperty" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "tenancyProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenancyState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenancyState" }),
         __metadata("design:type", String)
     ], LandlordSummaryTenancyModel.prototype, "tenancyState", void 0);
     return LandlordSummaryTenancyModel;
-}(SpeakeasyBase));
-export { LandlordSummaryTenancyModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordSummaryTenancyModel = LandlordSummaryTenancyModel;

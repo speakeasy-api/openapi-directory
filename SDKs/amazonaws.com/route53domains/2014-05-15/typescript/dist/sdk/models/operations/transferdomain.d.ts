@@ -26,5 +26,5 @@ export declare class TransferDomainResponse extends SpeakeasyBase {
     statusCode: number;
     tldRulesViolation?: any;
     transferDomainResponse?: shared.TransferDomainResponse;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

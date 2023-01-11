@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FileTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.File = exports.FileTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FileTypeEnum;
 (function (FileTypeEnum) {
     FileTypeEnum["Logo"] = "LOGO";
     FileTypeEnum["Banner"] = "BANNER";
     FileTypeEnum["Screenshot"] = "SCREENSHOT";
-})(FileTypeEnum || (FileTypeEnum = {}));
+})(FileTypeEnum = exports.FileTypeEnum || (exports.FileTypeEnum = {}));
 var File = /** @class */ (function (_super) {
     __extends(File, _super);
     function File() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], File.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], File.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], File.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], File.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], File.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], File.prototype, "url", void 0);
     return File;
-}(SpeakeasyBase));
-export { File };
+}(utils_1.SpeakeasyBase));
+exports.File = File;

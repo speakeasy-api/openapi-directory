@@ -58,7 +58,7 @@ export class CreateBotAliasRequestBodySentimentAnalysisSettings extends Speakeas
 
 export class CreateBotAliasRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=botAliasLocaleSettings", elemType: shared.BotAliasLocaleSettings })
-  botAliasLocaleSettings?: Map<string, shared.BotAliasLocaleSettings>;
+  botAliasLocaleSettings?: Record<string, shared.BotAliasLocaleSettings>;
 
   @SpeakeasyMetadata({ data: "json, name=botAliasName" })
   botAliasName: string;
@@ -76,7 +76,7 @@ export class CreateBotAliasRequestBody extends SpeakeasyBase {
   sentimentAnalysisSettings?: CreateBotAliasRequestBodySentimentAnalysisSettings;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

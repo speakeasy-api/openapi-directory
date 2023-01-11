@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScreenviewData = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScreenviewData = /** @class */ (function (_super) {
     __extends(ScreenviewData, _super);
     function ScreenviewData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appName" }),
         __metadata("design:type", String)
     ], ScreenviewData.prototype, "appName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileDeviceBranding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileDeviceBranding" }),
         __metadata("design:type", String)
     ], ScreenviewData.prototype, "mobileDeviceBranding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileDeviceModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileDeviceModel" }),
         __metadata("design:type", String)
     ], ScreenviewData.prototype, "mobileDeviceModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenName" }),
         __metadata("design:type", String)
     ], ScreenviewData.prototype, "screenName", void 0);
     return ScreenviewData;
-}(SpeakeasyBase));
-export { ScreenviewData };
+}(utils_1.SpeakeasyBase));
+exports.ScreenviewData = ScreenviewData;

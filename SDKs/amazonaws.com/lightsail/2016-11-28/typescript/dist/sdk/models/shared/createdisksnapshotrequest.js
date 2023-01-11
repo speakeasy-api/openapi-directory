@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDiskSnapshotRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CreateDiskSnapshotRequest = /** @class */ (function (_super) {
     __extends(CreateDiskSnapshotRequest, _super);
     function CreateDiskSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskName" }),
         __metadata("design:type", String)
     ], CreateDiskSnapshotRequest.prototype, "diskName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskSnapshotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskSnapshotName" }),
         __metadata("design:type", String)
     ], CreateDiskSnapshotRequest.prototype, "diskSnapshotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceName" }),
         __metadata("design:type", String)
     ], CreateDiskSnapshotRequest.prototype, "instanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDiskSnapshotRequest.prototype, "tags", void 0);
     return CreateDiskSnapshotRequest;
-}(SpeakeasyBase));
-export { CreateDiskSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiskSnapshotRequest = CreateDiskSnapshotRequest;

@@ -76,8 +76,8 @@ export class AllTaxRatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: AllTaxRates200ApplicationJson })
-  allTaxRates200ApplicationJsonObjects?: AllTaxRates200ApplicationJson[];
+  allTaxRates200ApplicationJSONObjects?: AllTaxRates200ApplicationJson[];
 
   @SpeakeasyMetadata()
-  allTaxRates500ApplicationJsonObject?: AllTaxRates500ApplicationJson;
+  allTaxRates500ApplicationJSONObject?: AllTaxRates500ApplicationJson;
 }

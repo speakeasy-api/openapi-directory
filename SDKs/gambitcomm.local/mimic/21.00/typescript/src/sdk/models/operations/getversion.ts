@@ -10,5 +10,5 @@ export class GetVersionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getVersion200ApplicationJsonString?: string;
+  getVersion200ApplicationJSONString?: string;
 }

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // Event
 /** 
- * An Story Event object
+ * Base model for all types
 **/
 export class Event extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })

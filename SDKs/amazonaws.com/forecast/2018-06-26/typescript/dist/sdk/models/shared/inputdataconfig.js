@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SupplementaryFeature } from "./supplementaryfeature";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputDataConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var supplementaryfeature_1 = require("./supplementaryfeature");
 // InputDataConfig
 /**
  * The data used to train a predictor. The data includes a dataset group and any supplementary features. You specify this object in the <a>CreatePredictor</a> request.
@@ -34,13 +37,13 @@ var InputDataConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetGroupArn" }),
         __metadata("design:type", String)
     ], InputDataConfig.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SupplementaryFeatures", elemType: SupplementaryFeature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SupplementaryFeatures", elemType: supplementaryfeature_1.SupplementaryFeature }),
         __metadata("design:type", Array)
     ], InputDataConfig.prototype, "supplementaryFeatures", void 0);
     return InputDataConfig;
-}(SpeakeasyBase));
-export { InputDataConfig };
+}(utils_1.SpeakeasyBase));
+exports.InputDataConfig = InputDataConfig;

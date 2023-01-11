@@ -37,5 +37,5 @@ export class UpdateNetworkSwitchRoutingMulticastRendezvousPointResponse extends 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchRoutingMulticastRendezvousPoint200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchRoutingMulticastRendezvousPoint200ApplicationJSONObject?: Record<string, any>;
 }

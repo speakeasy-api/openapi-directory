@@ -177,7 +177,7 @@ export class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
   benefitDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitID" })
-  benefitId?: string;
+  benefitID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitName" })
   benefitName?: string;
@@ -1265,10 +1265,10 @@ export enum GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plu
 **/
 export class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountOrganisationBrand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrademarkID" })
-  trademarkId: string;
+  trademarkID: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" })
-  trademarkIpoCode: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountOrganisationBrandTrademarkIpoCodeEnum;
+  trademarkIPOCode: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountOrganisationBrandTrademarkIpoCodeEnum;
 }
 
 
@@ -1945,13 +1945,13 @@ export class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
   creditScoringPartOfAccountOpeningForGettingAnAccount: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningForIDVerification" })
-  creditScoringPartOfAccountOpeningForIdVerification?: boolean;
+  creditScoringPartOfAccountOpeningForIDVerification?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore" })
-  creditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScore?: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum[];
+  creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore?: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum[];
 
   @SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationText" })
-  creditScoringPartOfAccountOpeningIdVerificationText?: string[];
+  creditScoringPartOfAccountOpeningIDVerificationText?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore" })
   creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore?: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum[];
@@ -2005,7 +2005,7 @@ export class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
   productType: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountProductTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=ProductURL" })
-  productUrl: string[];
+  productURL: string[];
 
   @SpeakeasyMetadata({ data: "json, name=TsandCs" })
   tsandCs: string[];
@@ -2080,11 +2080,11 @@ export class GetBusinessCurrentAccountsResponse extends SpeakeasyBase {
   errorObject?: GetBusinessCurrentAccountsErrorObject;
 
   @SpeakeasyMetadata()
-  getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

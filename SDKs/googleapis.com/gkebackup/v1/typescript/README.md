@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GkebackupProjectsLocationsBackupPlansBackupsCreateRequest, GkebackupProjectsLocationsBackupPlansBackupsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,69 +30,58 @@ const req: GkebackupProjectsLocationsBackupPlansBackupsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "placeat",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "vero",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    backupId: "sed",
-    callback: "aut",
-    fields: "voluptas",
-    key: "debitis",
-    oauthToken: "reprehenderit",
+    backupId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "maxime",
-    uploadType: "et",
-    uploadProtocol: "sit",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     clusterMetadata: {
-      anthosVersion: "voluptas",
+      anthosVersion: "debitis",
       backupCrdVersions: {
-        "perspiciatis": "nihil",
-        "et": "est",
-        "debitis": "qui",
+        "et": "ut",
       },
-      cluster: "sed",
-      gkeVersion: "animi",
-      k8sVersion: "rerum",
+      cluster: "dolorem",
+      gkeVersion: "et",
+      k8sVersion: "voluptate",
     },
-    deleteLockDays: 303880974147249365,
-    description: "provident",
+    deleteLockDays: 3287288577352441706,
+    description: "vitae",
     encryptionKey: {
-      gcpKmsEncryptionKey: "qui",
+      gcpKmsEncryptionKey: "totam",
     },
     labels: {
-      "et": "molestiae",
-      "perferendis": "vel",
+      "illum": "debitis",
     },
-    retainDays: 4896749636161315584,
+    retainDays: 3706853784096366226,
     selectedApplications: {
       namespacedNames: [
         {
-          name: "dolorem",
-          namespace: "aut",
-        },
-        {
-          name: "saepe",
-          namespace: "quas",
-        },
-        {
-          name: "repudiandae",
-          namespace: "similique",
+          name: "dolore",
+          namespace: "id",
         },
       ],
     },
     selectedNamespaces: {
       namespaces: [
-        "distinctio",
+        "accusantium",
       ],
     },
   },

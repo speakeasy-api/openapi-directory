@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkCollection = exports.LinkCollectionLinkCollection = exports.LinkCollectionLinkCollectionLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // LinkCollectionLinkCollectionLink
 /**
  * The link collections' links
@@ -33,33 +36,33 @@ var LinkCollectionLinkCollectionLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Link" }),
         __metadata("design:type", Array)
     ], LinkCollectionLinkCollectionLink.prototype, "link", void 0);
     return LinkCollectionLinkCollectionLink;
-}(SpeakeasyBase));
-export { LinkCollectionLinkCollectionLink };
+}(utils_1.SpeakeasyBase));
+exports.LinkCollectionLinkCollectionLink = LinkCollectionLinkCollectionLink;
 var LinkCollectionLinkCollection = /** @class */ (function (_super) {
     __extends(LinkCollectionLinkCollection, _super);
     function LinkCollectionLinkCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
         __metadata("design:type", LinkCollectionLinkCollectionLink)
     ], LinkCollectionLinkCollection.prototype, "links", void 0);
     return LinkCollectionLinkCollection;
-}(SpeakeasyBase));
-export { LinkCollectionLinkCollection };
+}(utils_1.SpeakeasyBase));
+exports.LinkCollectionLinkCollection = LinkCollectionLinkCollection;
 var LinkCollection = /** @class */ (function (_super) {
     __extends(LinkCollection, _super);
     function LinkCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LinkCollection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LinkCollection" }),
         __metadata("design:type", LinkCollectionLinkCollection)
     ], LinkCollection.prototype, "linkCollection", void 0);
     return LinkCollection;
-}(SpeakeasyBase));
-export { LinkCollection };
+}(utils_1.SpeakeasyBase));
+exports.LinkCollection = LinkCollection;

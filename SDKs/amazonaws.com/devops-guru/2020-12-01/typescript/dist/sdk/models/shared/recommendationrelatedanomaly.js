@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationRelatedAnomalyResource } from "./recommendationrelatedanomalyresource";
-import { RecommendationRelatedAnomalySourceDetail } from "./recommendationrelatedanomalysourcedetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationRelatedAnomaly = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationrelatedanomalyresource_1 = require("./recommendationrelatedanomalyresource");
+var recommendationrelatedanomalysourcedetail_1 = require("./recommendationrelatedanomalysourcedetail");
 // RecommendationRelatedAnomaly
 /**
  *  Information about an anomaly that is related to a recommendation.
@@ -35,13 +38,13 @@ var RecommendationRelatedAnomaly = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources", elemType: RecommendationRelatedAnomalyResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources", elemType: recommendationrelatedanomalyresource_1.RecommendationRelatedAnomalyResource }),
         __metadata("design:type", Array)
     ], RecommendationRelatedAnomaly.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceDetails", elemType: RecommendationRelatedAnomalySourceDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceDetails", elemType: recommendationrelatedanomalysourcedetail_1.RecommendationRelatedAnomalySourceDetail }),
         __metadata("design:type", Array)
     ], RecommendationRelatedAnomaly.prototype, "sourceDetails", void 0);
     return RecommendationRelatedAnomaly;
-}(SpeakeasyBase));
-export { RecommendationRelatedAnomaly };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationRelatedAnomaly = RecommendationRelatedAnomaly;

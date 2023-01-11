@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppSummary } from "./appsummary";
-import { ServerGroup } from "./servergroup";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAppResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var appsummary_1 = require("./appsummary");
+var servergroup_1 = require("./servergroup");
+var tag_1 = require("./tag");
 var UpdateAppResponse = /** @class */ (function (_super) {
     __extends(UpdateAppResponse, _super);
     function UpdateAppResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appSummary" }),
-        __metadata("design:type", AppSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appSummary" }),
+        __metadata("design:type", appsummary_1.AppSummary)
     ], UpdateAppResponse.prototype, "appSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverGroups", elemType: ServerGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverGroups", elemType: servergroup_1.ServerGroup }),
         __metadata("design:type", Array)
     ], UpdateAppResponse.prototype, "serverGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], UpdateAppResponse.prototype, "tags", void 0);
     return UpdateAppResponse;
-}(SpeakeasyBase));
-export { UpdateAppResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAppResponse = UpdateAppResponse;

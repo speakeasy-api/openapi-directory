@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayByPlayFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayByPlayResponse = exports.PlayByPlayRequest = exports.PlayByPlayPathParams = exports.PlayByPlayFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayByPlayFormatEnum;
 (function (PlayByPlayFormatEnum) {
     PlayByPlayFormatEnum["Xml"] = "XML";
     PlayByPlayFormatEnum["Json"] = "JSON";
-})(PlayByPlayFormatEnum || (PlayByPlayFormatEnum = {}));
+})(PlayByPlayFormatEnum = exports.PlayByPlayFormatEnum || (exports.PlayByPlayFormatEnum = {}));
 var PlayByPlayPathParams = /** @class */ (function (_super) {
     __extends(PlayByPlayPathParams, _super);
     function PlayByPlayPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayByPlayPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hometeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hometeam" }),
         __metadata("design:type", String)
     ], PlayByPlayPathParams.prototype, "hometeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayByPlayPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], PlayByPlayPathParams.prototype, "week", void 0);
     return PlayByPlayPathParams;
-}(SpeakeasyBase));
-export { PlayByPlayPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayPathParams = PlayByPlayPathParams;
 var PlayByPlayRequest = /** @class */ (function (_super) {
     __extends(PlayByPlayRequest, _super);
     function PlayByPlayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayByPlayPathParams)
     ], PlayByPlayRequest.prototype, "pathParams", void 0);
     return PlayByPlayRequest;
-}(SpeakeasyBase));
-export { PlayByPlayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayRequest = PlayByPlayRequest;
 var PlayByPlayResponse = /** @class */ (function (_super) {
     __extends(PlayByPlayResponse, _super);
     function PlayByPlayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayByPlayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PlayByPlayResponse.prototype, "playByPlay", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayByPlayResponse.prototype, "statusCode", void 0);
     return PlayByPlayResponse;
-}(SpeakeasyBase));
-export { PlayByPlayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlayResponse = PlayByPlayResponse;

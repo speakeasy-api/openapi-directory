@@ -21,5 +21,5 @@ export declare class NodeInheritedPropertiesRequest extends SpeakeasyBase {
 export declare class NodeInheritedPropertiesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    nodeInheritedProperties200ApplicationJsonObject?: NodeInheritedProperties200ApplicationJson;
+    nodeInheritedProperties200ApplicationJSONObject?: NodeInheritedProperties200ApplicationJson;
 }

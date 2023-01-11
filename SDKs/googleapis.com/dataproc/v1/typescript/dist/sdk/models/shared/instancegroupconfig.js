@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcceleratorConfig } from "./acceleratorconfig";
-import { DiskConfig } from "./diskconfig";
-import { InstanceReference } from "./instancereference";
-import { ManagedGroupConfig } from "./managedgroupconfig";
-export var InstanceGroupConfigPreemptibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceGroupConfigInput = exports.InstanceGroupConfig = exports.InstanceGroupConfigPreemptibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var acceleratorconfig_1 = require("./acceleratorconfig");
+var diskconfig_1 = require("./diskconfig");
+var instancereference_1 = require("./instancereference");
+var managedgroupconfig_1 = require("./managedgroupconfig");
+var InstanceGroupConfigPreemptibilityEnum;
 (function (InstanceGroupConfigPreemptibilityEnum) {
     InstanceGroupConfigPreemptibilityEnum["PreemptibilityUnspecified"] = "PREEMPTIBILITY_UNSPECIFIED";
     InstanceGroupConfigPreemptibilityEnum["NonPreemptible"] = "NON_PREEMPTIBLE";
     InstanceGroupConfigPreemptibilityEnum["Preemptible"] = "PREEMPTIBLE";
     InstanceGroupConfigPreemptibilityEnum["Spot"] = "SPOT";
-})(InstanceGroupConfigPreemptibilityEnum || (InstanceGroupConfigPreemptibilityEnum = {}));
-// InstanceGroupConfigInput
-/**
- * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
-**/
-var InstanceGroupConfigInput = /** @class */ (function (_super) {
-    __extends(InstanceGroupConfigInput, _super);
-    function InstanceGroupConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accelerators", elemType: AcceleratorConfig }),
-        __metadata("design:type", Array)
-    ], InstanceGroupConfigInput.prototype, "accelerators", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskConfig" }),
-        __metadata("design:type", DiskConfig)
-    ], InstanceGroupConfigInput.prototype, "diskConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUri" }),
-        __metadata("design:type", String)
-    ], InstanceGroupConfigInput.prototype, "imageUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineTypeUri" }),
-        __metadata("design:type", String)
-    ], InstanceGroupConfigInput.prototype, "machineTypeUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=minCpuPlatform" }),
-        __metadata("design:type", String)
-    ], InstanceGroupConfigInput.prototype, "minCpuPlatform", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=numInstances" }),
-        __metadata("design:type", Number)
-    ], InstanceGroupConfigInput.prototype, "numInstances", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=preemptibility" }),
-        __metadata("design:type", String)
-    ], InstanceGroupConfigInput.prototype, "preemptibility", void 0);
-    return InstanceGroupConfigInput;
-}(SpeakeasyBase));
-export { InstanceGroupConfigInput };
+})(InstanceGroupConfigPreemptibilityEnum = exports.InstanceGroupConfigPreemptibilityEnum || (exports.InstanceGroupConfigPreemptibilityEnum = {}));
 // InstanceGroupConfig
 /**
  * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
@@ -84,49 +47,89 @@ var InstanceGroupConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accelerators", elemType: AcceleratorConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accelerators", elemType: acceleratorconfig_1.AcceleratorConfig }),
         __metadata("design:type", Array)
     ], InstanceGroupConfig.prototype, "accelerators", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskConfig" }),
-        __metadata("design:type", DiskConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskConfig" }),
+        __metadata("design:type", diskconfig_1.DiskConfig)
     ], InstanceGroupConfig.prototype, "diskConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUri" }),
         __metadata("design:type", String)
     ], InstanceGroupConfig.prototype, "imageUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceNames" }),
         __metadata("design:type", Array)
     ], InstanceGroupConfig.prototype, "instanceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceReferences", elemType: InstanceReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceReferences", elemType: instancereference_1.InstanceReference }),
         __metadata("design:type", Array)
     ], InstanceGroupConfig.prototype, "instanceReferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPreemptible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPreemptible" }),
         __metadata("design:type", Boolean)
     ], InstanceGroupConfig.prototype, "isPreemptible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineTypeUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineTypeUri" }),
         __metadata("design:type", String)
     ], InstanceGroupConfig.prototype, "machineTypeUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedGroupConfig" }),
-        __metadata("design:type", ManagedGroupConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedGroupConfig" }),
+        __metadata("design:type", managedgroupconfig_1.ManagedGroupConfig)
     ], InstanceGroupConfig.prototype, "managedGroupConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minCpuPlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minCpuPlatform" }),
         __metadata("design:type", String)
     ], InstanceGroupConfig.prototype, "minCpuPlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numInstances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numInstances" }),
         __metadata("design:type", Number)
     ], InstanceGroupConfig.prototype, "numInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preemptibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preemptibility" }),
         __metadata("design:type", String)
     ], InstanceGroupConfig.prototype, "preemptibility", void 0);
     return InstanceGroupConfig;
-}(SpeakeasyBase));
-export { InstanceGroupConfig };
+}(utils_1.SpeakeasyBase));
+exports.InstanceGroupConfig = InstanceGroupConfig;
+// InstanceGroupConfigInput
+/**
+ * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
+**/
+var InstanceGroupConfigInput = /** @class */ (function (_super) {
+    __extends(InstanceGroupConfigInput, _super);
+    function InstanceGroupConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accelerators", elemType: acceleratorconfig_1.AcceleratorConfig }),
+        __metadata("design:type", Array)
+    ], InstanceGroupConfigInput.prototype, "accelerators", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskConfig" }),
+        __metadata("design:type", diskconfig_1.DiskConfig)
+    ], InstanceGroupConfigInput.prototype, "diskConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUri" }),
+        __metadata("design:type", String)
+    ], InstanceGroupConfigInput.prototype, "imageUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineTypeUri" }),
+        __metadata("design:type", String)
+    ], InstanceGroupConfigInput.prototype, "machineTypeUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minCpuPlatform" }),
+        __metadata("design:type", String)
+    ], InstanceGroupConfigInput.prototype, "minCpuPlatform", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numInstances" }),
+        __metadata("design:type", Number)
+    ], InstanceGroupConfigInput.prototype, "numInstances", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preemptibility" }),
+        __metadata("design:type", String)
+    ], InstanceGroupConfigInput.prototype, "preemptibility", void 0);
+    return InstanceGroupConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.InstanceGroupConfigInput = InstanceGroupConfigInput;

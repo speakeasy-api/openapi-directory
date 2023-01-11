@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcCidrBlockAssociation } from "./vpccidrblockassociation";
-import { VpcIpv6CidrBlockAssociation } from "./vpcipv6cidrblockassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateVpcCidrBlockResult = exports.AssociateVpcCidrBlockResultIpv6CidrBlockAssociation = exports.AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = exports.AssociateVpcCidrBlockResultCidrBlockAssociation = exports.AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState = void 0;
+var utils_1 = require("../../../internal/utils");
+// AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState
+/**
+ * Information about the state of the CIDR block.
+**/
+var AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState = /** @class */ (function (_super) {
+    __extends(AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState, _super);
+    function AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState.prototype, "statusMessage", void 0);
+    return AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState;
+}(utils_1.SpeakeasyBase));
+exports.AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState = AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState;
+// AssociateVpcCidrBlockResultCidrBlockAssociation
+/**
+ * Information about the IPv4 CIDR block association.
+**/
+var AssociateVpcCidrBlockResultCidrBlockAssociation = /** @class */ (function (_super) {
+    __extends(AssociateVpcCidrBlockResultCidrBlockAssociation, _super);
+    function AssociateVpcCidrBlockResultCidrBlockAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultCidrBlockAssociation.prototype, "associationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultCidrBlockAssociation.prototype, "cidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState)
+    ], AssociateVpcCidrBlockResultCidrBlockAssociation.prototype, "cidrBlockState", void 0);
+    return AssociateVpcCidrBlockResultCidrBlockAssociation;
+}(utils_1.SpeakeasyBase));
+exports.AssociateVpcCidrBlockResultCidrBlockAssociation = AssociateVpcCidrBlockResultCidrBlockAssociation;
+// AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState
+/**
+ * Information about the state of the CIDR block.
+**/
+var AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = /** @class */ (function (_super) {
+    __extends(AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState, _super);
+    function AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState.prototype, "statusMessage", void 0);
+    return AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState;
+}(utils_1.SpeakeasyBase));
+exports.AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState;
+// AssociateVpcCidrBlockResultIpv6CidrBlockAssociation
+/**
+ * Information about the IPv6 CIDR block association.
+**/
+var AssociateVpcCidrBlockResultIpv6CidrBlockAssociation = /** @class */ (function (_super) {
+    __extends(AssociateVpcCidrBlockResultIpv6CidrBlockAssociation, _super);
+    function AssociateVpcCidrBlockResultIpv6CidrBlockAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociation.prototype, "associationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociation.prototype, "ipv6CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociation.prototype, "ipv6CidrBlockState", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociation.prototype, "ipv6Pool", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateVpcCidrBlockResultIpv6CidrBlockAssociation.prototype, "networkBorderGroup", void 0);
+    return AssociateVpcCidrBlockResultIpv6CidrBlockAssociation;
+}(utils_1.SpeakeasyBase));
+exports.AssociateVpcCidrBlockResultIpv6CidrBlockAssociation = AssociateVpcCidrBlockResultIpv6CidrBlockAssociation;
 var AssociateVpcCidrBlockResult = /** @class */ (function (_super) {
     __extends(AssociateVpcCidrBlockResult, _super);
     function AssociateVpcCidrBlockResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpcCidrBlockAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateVpcCidrBlockResultCidrBlockAssociation)
     ], AssociateVpcCidrBlockResult.prototype, "cidrBlockAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpcIpv6CidrBlockAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateVpcCidrBlockResultIpv6CidrBlockAssociation)
     ], AssociateVpcCidrBlockResult.prototype, "ipv6CidrBlockAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AssociateVpcCidrBlockResult.prototype, "vpcId", void 0);
     return AssociateVpcCidrBlockResult;
-}(SpeakeasyBase));
-export { AssociateVpcCidrBlockResult };
+}(utils_1.SpeakeasyBase));
+exports.AssociateVpcCidrBlockResult = AssociateVpcCidrBlockResult;

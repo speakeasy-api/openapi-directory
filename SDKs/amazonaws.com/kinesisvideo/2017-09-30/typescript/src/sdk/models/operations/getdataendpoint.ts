@@ -42,7 +42,7 @@ export class GetDataEndpointRequestBody extends SpeakeasyBase {
   apiName: GetDataEndpointRequestBodyApiNameEnum;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

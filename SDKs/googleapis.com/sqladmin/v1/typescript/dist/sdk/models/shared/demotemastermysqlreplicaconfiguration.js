@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DemoteMasterMySqlReplicaConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // DemoteMasterMySqlReplicaConfiguration
 /**
  * Read-replica configuration specific to MySQL databases.
@@ -33,29 +36,29 @@ var DemoteMasterMySqlReplicaConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "caCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "clientCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "clientKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], DemoteMasterMySqlReplicaConfiguration.prototype, "username", void 0);
     return DemoteMasterMySqlReplicaConfiguration;
-}(SpeakeasyBase));
-export { DemoteMasterMySqlReplicaConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DemoteMasterMySqlReplicaConfiguration = DemoteMasterMySqlReplicaConfiguration;

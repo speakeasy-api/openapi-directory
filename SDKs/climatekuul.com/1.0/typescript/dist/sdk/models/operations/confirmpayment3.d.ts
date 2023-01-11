@@ -4,11 +4,11 @@ export declare class ConfirmPayment3RequestBody extends SpeakeasyBase {
     apiKeyL1: string;
     apiKeyL2: string;
     confirmPayment: string;
-    paymentId: number;
+    paymentID: number;
     transactionId: string;
 }
 export declare class ConfirmPayment3Request extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: ConfirmPayment3RequestBody;
 }
 export declare class ConfirmPayment3Response extends SpeakeasyBase {

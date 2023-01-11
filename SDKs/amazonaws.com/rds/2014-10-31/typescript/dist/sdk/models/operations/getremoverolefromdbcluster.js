@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveRoleFromDbClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveRoleFromDbClusterResponse = exports.GetRemoveRoleFromDbClusterRequest = exports.GetRemoveRoleFromDbClusterHeaders = exports.GetRemoveRoleFromDbClusterQueryParams = exports.GetRemoveRoleFromDbClusterVersionEnum = exports.GetRemoveRoleFromDbClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveRoleFromDbClusterActionEnum;
 (function (GetRemoveRoleFromDbClusterActionEnum) {
     GetRemoveRoleFromDbClusterActionEnum["RemoveRoleFromDbCluster"] = "RemoveRoleFromDBCluster";
-})(GetRemoveRoleFromDbClusterActionEnum || (GetRemoveRoleFromDbClusterActionEnum = {}));
-export var GetRemoveRoleFromDbClusterVersionEnum;
+})(GetRemoveRoleFromDbClusterActionEnum = exports.GetRemoveRoleFromDbClusterActionEnum || (exports.GetRemoveRoleFromDbClusterActionEnum = {}));
+var GetRemoveRoleFromDbClusterVersionEnum;
 (function (GetRemoveRoleFromDbClusterVersionEnum) {
     GetRemoveRoleFromDbClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetRemoveRoleFromDbClusterVersionEnum || (GetRemoveRoleFromDbClusterVersionEnum = {}));
+})(GetRemoveRoleFromDbClusterVersionEnum = exports.GetRemoveRoleFromDbClusterVersionEnum || (exports.GetRemoveRoleFromDbClusterVersionEnum = {}));
 var GetRemoveRoleFromDbClusterQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbClusterQueryParams, _super);
     function GetRemoveRoleFromDbClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterQueryParams.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FeatureName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FeatureName" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterQueryParams.prototype, "featureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleArn" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterQueryParams.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterQueryParams.prototype, "version", void 0);
     return GetRemoveRoleFromDbClusterQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbClusterQueryParams = GetRemoveRoleFromDbClusterQueryParams;
 var GetRemoveRoleFromDbClusterHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbClusterHeaders, _super);
     function GetRemoveRoleFromDbClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveRoleFromDbClusterHeaders;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbClusterHeaders = GetRemoveRoleFromDbClusterHeaders;
 var GetRemoveRoleFromDbClusterRequest = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbClusterRequest, _super);
     function GetRemoveRoleFromDbClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveRoleFromDbClusterQueryParams)
     ], GetRemoveRoleFromDbClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveRoleFromDbClusterHeaders)
     ], GetRemoveRoleFromDbClusterRequest.prototype, "headers", void 0);
     return GetRemoveRoleFromDbClusterRequest;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbClusterRequest = GetRemoveRoleFromDbClusterRequest;
 var GetRemoveRoleFromDbClusterResponse = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbClusterResponse, _super);
     function GetRemoveRoleFromDbClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveRoleFromDbClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveRoleFromDbClusterResponse.prototype, "statusCode", void 0);
     return GetRemoveRoleFromDbClusterResponse;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbClusterResponse = GetRemoveRoleFromDbClusterResponse;

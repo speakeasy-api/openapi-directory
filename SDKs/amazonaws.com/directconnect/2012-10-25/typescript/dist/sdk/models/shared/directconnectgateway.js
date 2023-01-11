@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DirectConnectGatewayStateEnum } from "./directconnectgatewaystateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectConnectGateway = void 0;
+var utils_1 = require("../../../internal/utils");
+var directconnectgatewaystateenum_1 = require("./directconnectgatewaystateenum");
 // DirectConnectGateway
 /**
  * Information about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private gateway or transit gateways.
@@ -34,29 +37,29 @@ var DirectConnectGateway = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonSideAsn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonSideAsn" }),
         __metadata("design:type", Number)
     ], DirectConnectGateway.prototype, "amazonSideAsn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], DirectConnectGateway.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayName" }),
         __metadata("design:type", String)
     ], DirectConnectGateway.prototype, "directConnectGatewayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayState" }),
         __metadata("design:type", String)
     ], DirectConnectGateway.prototype, "directConnectGatewayState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], DirectConnectGateway.prototype, "ownerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateChangeError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateChangeError" }),
         __metadata("design:type", String)
     ], DirectConnectGateway.prototype, "stateChangeError", void 0);
     return DirectConnectGateway;
-}(SpeakeasyBase));
-export { DirectConnectGateway };
+}(utils_1.SpeakeasyBase));
+exports.DirectConnectGateway = DirectConnectGateway;

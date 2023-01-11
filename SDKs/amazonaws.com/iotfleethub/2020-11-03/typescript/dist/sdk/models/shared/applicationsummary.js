@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationStateEnum } from "./applicationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationstateenum_1 = require("./applicationstateenum");
 // ApplicationSummary
 /**
  * <p>A summary of information about a AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
@@ -34,33 +37,33 @@ var ApplicationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationCreationDate" }),
         __metadata("design:type", Number)
     ], ApplicationSummary.prototype, "applicationCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationDescription" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationId" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationLastUpdateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationLastUpdateDate" }),
         __metadata("design:type", Number)
     ], ApplicationSummary.prototype, "applicationLastUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationState" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationUrl" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationUrl", void 0);
     return ApplicationSummary;
-}(SpeakeasyBase));
-export { ApplicationSummary };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationSummary = ApplicationSummary;

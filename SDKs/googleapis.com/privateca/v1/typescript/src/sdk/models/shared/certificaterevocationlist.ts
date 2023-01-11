@@ -21,7 +21,7 @@ export class CertificateRevocationList extends SpeakeasyBase {
   createTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

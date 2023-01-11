@@ -1,4 +1,7 @@
-export var OperationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationTypeEnum = void 0;
+var OperationTypeEnum;
 (function (OperationTypeEnum) {
     OperationTypeEnum["RegisterDomain"] = "REGISTER_DOMAIN";
     OperationTypeEnum["DeleteDomain"] = "DELETE_DOMAIN";
@@ -18,4 +21,4 @@ export var OperationTypeEnum;
     OperationTypeEnum["PushDomain"] = "PUSH_DOMAIN";
     OperationTypeEnum["InternalTransferOutDomain"] = "INTERNAL_TRANSFER_OUT_DOMAIN";
     OperationTypeEnum["InternalTransferInDomain"] = "INTERNAL_TRANSFER_IN_DOMAIN";
-})(OperationTypeEnum || (OperationTypeEnum = {}));
+})(OperationTypeEnum = exports.OperationTypeEnum || (exports.OperationTypeEnum = {}));

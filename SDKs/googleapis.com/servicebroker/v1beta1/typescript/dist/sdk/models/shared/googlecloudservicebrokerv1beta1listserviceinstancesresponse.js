@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudServicebrokerV1beta1ServiceInstance } from "./googlecloudservicebrokerv1beta1serviceinstance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudservicebrokerv1beta1serviceinstance_1 = require("./googlecloudservicebrokerv1beta1serviceinstance");
 // GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse
 /**
  * The response for the `ListServiceInstances()` method.
@@ -34,17 +37,17 @@ var GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleCloudServicebrokerV1beta1ServiceInstance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlecloudservicebrokerv1beta1serviceinstance_1.GoogleCloudServicebrokerV1beta1ServiceInstance }),
         __metadata("design:type", Array)
     ], GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse;
-}(SpeakeasyBase));
-export { GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse = GoogleCloudServicebrokerV1beta1ListServiceInstancesResponse;

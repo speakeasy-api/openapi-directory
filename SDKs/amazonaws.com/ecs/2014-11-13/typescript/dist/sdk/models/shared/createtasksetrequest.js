@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,71 +23,73 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { LaunchTypeEnum } from "./launchtypeenum";
-import { LoadBalancer } from "./loadbalancer";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { Scale } from "./scale";
-import { ServiceRegistry } from "./serviceregistry";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTaskSetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var launchtypeenum_1 = require("./launchtypeenum");
+var loadbalancer_1 = require("./loadbalancer");
+var networkconfiguration_1 = require("./networkconfiguration");
+var scale_1 = require("./scale");
+var serviceregistry_1 = require("./serviceregistry");
+var tag_1 = require("./tag");
 var CreateTaskSetRequest = /** @class */ (function (_super) {
     __extends(CreateTaskSetRequest, _super);
     function CreateTaskSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], CreateTaskSetRequest.prototype, "capacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchType" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "launchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancers", elemType: LoadBalancer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancers", elemType: loadbalancer_1.LoadBalancer }),
         __metadata("design:type", Array)
     ], CreateTaskSetRequest.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], CreateTaskSetRequest.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
-        __metadata("design:type", Scale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
+        __metadata("design:type", scale_1.Scale)
     ], CreateTaskSetRequest.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRegistries", elemType: ServiceRegistry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRegistries", elemType: serviceregistry_1.ServiceRegistry }),
         __metadata("design:type", Array)
     ], CreateTaskSetRequest.prototype, "serviceRegistries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateTaskSetRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], CreateTaskSetRequest.prototype, "taskDefinition", void 0);
     return CreateTaskSetRequest;
-}(SpeakeasyBase));
-export { CreateTaskSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTaskSetRequest = CreateTaskSetRequest;

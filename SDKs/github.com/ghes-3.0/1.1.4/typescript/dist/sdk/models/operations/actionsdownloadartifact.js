@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDownloadArtifactResponse = exports.ActionsDownloadArtifactRequest = exports.ActionsDownloadArtifactPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDownloadArtifactPathParams = /** @class */ (function (_super) {
     __extends(ActionsDownloadArtifactPathParams, _super);
     function ActionsDownloadArtifactPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=archive_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=archive_format" }),
         __metadata("design:type", String)
     ], ActionsDownloadArtifactPathParams.prototype, "archiveFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=artifact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=artifact_id" }),
         __metadata("design:type", Number)
     ], ActionsDownloadArtifactPathParams.prototype, "artifactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDownloadArtifactPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDownloadArtifactPathParams.prototype, "repo", void 0);
     return ActionsDownloadArtifactPathParams;
-}(SpeakeasyBase));
-export { ActionsDownloadArtifactPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadArtifactPathParams = ActionsDownloadArtifactPathParams;
 var ActionsDownloadArtifactRequest = /** @class */ (function (_super) {
     __extends(ActionsDownloadArtifactRequest, _super);
     function ActionsDownloadArtifactRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDownloadArtifactPathParams)
     ], ActionsDownloadArtifactRequest.prototype, "pathParams", void 0);
     return ActionsDownloadArtifactRequest;
-}(SpeakeasyBase));
-export { ActionsDownloadArtifactRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadArtifactRequest = ActionsDownloadArtifactRequest;
 var ActionsDownloadArtifactResponse = /** @class */ (function (_super) {
     __extends(ActionsDownloadArtifactResponse, _super);
     function ActionsDownloadArtifactResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDownloadArtifactResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsDownloadArtifactResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDownloadArtifactResponse.prototype, "statusCode", void 0);
     return ActionsDownloadArtifactResponse;
-}(SpeakeasyBase));
-export { ActionsDownloadArtifactResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadArtifactResponse = ActionsDownloadArtifactResponse;

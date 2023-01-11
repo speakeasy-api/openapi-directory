@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmergencyContact = void 0;
+var utils_1 = require("../../../internal/utils");
 // EmergencyContact
 /**
  * The emergency contact model
@@ -33,85 +36,85 @@ var EmergencyContact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address1" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "address1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address2" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "address2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=county" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "county", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homePhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homePhone" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "homePhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilePhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilePhone" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "mobilePhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pager" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "pager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryPhone" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "primaryPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationship" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationship" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "relationship", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncEmployeeInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncEmployeeInfo" }),
         __metadata("design:type", Boolean)
     ], EmergencyContact.prototype, "syncEmployeeInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workExtension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workExtension" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "workExtension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workPhone" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "workPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip" }),
         __metadata("design:type", String)
     ], EmergencyContact.prototype, "zip", void 0);
     return EmergencyContact;
-}(SpeakeasyBase));
-export { EmergencyContact };
+}(utils_1.SpeakeasyBase));
+exports.EmergencyContact = EmergencyContact;

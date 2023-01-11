@@ -27,6 +27,6 @@ export declare class BinaryauthorizationProjectsAttestorsDeleteRequest extends S
 }
 export declare class BinaryauthorizationProjectsAttestorsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

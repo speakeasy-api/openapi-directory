@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CryptoKey = void 0;
+var utils_1 = require("../../../internal/utils");
 var CryptoKey = /** @class */ (function (_super) {
     __extends(CryptoKey, _super);
     function CryptoKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "algorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bits" }),
         __metadata("design:type", Number)
     ], CryptoKey.prototype, "bits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_hash" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "fileHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_name" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pem_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pem_type" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "pemType", void 0);
     return CryptoKey;
-}(SpeakeasyBase));
-export { CryptoKey };
+}(utils_1.SpeakeasyBase));
+exports.CryptoKey = CryptoKey;

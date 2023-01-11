@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageFailureCodeEnum } from "./imagefailurecodeenum";
-import { ImageIdentifier } from "./imageidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageFailure = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagefailurecodeenum_1 = require("./imagefailurecodeenum");
+var imageidentifier_1 = require("./imageidentifier");
 // ImageFailure
 /**
  * An object representing an Amazon ECR image failure.
@@ -35,17 +38,17 @@ var ImageFailure = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCode" }),
         __metadata("design:type", String)
     ], ImageFailure.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], ImageFailure.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
-        __metadata("design:type", ImageIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
+        __metadata("design:type", imageidentifier_1.ImageIdentifier)
     ], ImageFailure.prototype, "imageId", void 0);
     return ImageFailure;
-}(SpeakeasyBase));
-export { ImageFailure };
+}(utils_1.SpeakeasyBase));
+exports.ImageFailure = ImageFailure;

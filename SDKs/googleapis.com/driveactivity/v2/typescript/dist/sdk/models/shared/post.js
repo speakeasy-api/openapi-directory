@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostSubtypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Post = exports.PostSubtypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostSubtypeEnum;
 (function (PostSubtypeEnum) {
     PostSubtypeEnum["SubtypeUnspecified"] = "SUBTYPE_UNSPECIFIED";
     PostSubtypeEnum["Added"] = "ADDED";
@@ -32,7 +35,7 @@ export var PostSubtypeEnum;
     PostSubtypeEnum["ReplyDeleted"] = "REPLY_DELETED";
     PostSubtypeEnum["Resolved"] = "RESOLVED";
     PostSubtypeEnum["Reopened"] = "REOPENED";
-})(PostSubtypeEnum || (PostSubtypeEnum = {}));
+})(PostSubtypeEnum = exports.PostSubtypeEnum || (exports.PostSubtypeEnum = {}));
 // Post
 /**
  * A regular posted comment.
@@ -43,9 +46,9 @@ var Post = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtype" }),
         __metadata("design:type", String)
     ], Post.prototype, "subtype", void 0);
     return Post;
-}(SpeakeasyBase));
-export { Post };
+}(utils_1.SpeakeasyBase));
+exports.Post = Post;

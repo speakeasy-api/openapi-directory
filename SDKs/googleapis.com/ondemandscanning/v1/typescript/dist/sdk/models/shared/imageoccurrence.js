@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Fingerprint } from "./fingerprint";
-import { Layer } from "./layer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageOccurrence = void 0;
+var utils_1 = require("../../../internal/utils");
+var fingerprint_1 = require("./fingerprint");
+var layer_1 = require("./layer");
 // ImageOccurrence
 /**
  * Details of the derived image portion of the DockerImage relationship. This image would be produced from a Dockerfile with FROM .
@@ -35,21 +38,21 @@ var ImageOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseResourceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseResourceUrl" }),
         __metadata("design:type", String)
     ], ImageOccurrence.prototype, "baseResourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distance" }),
         __metadata("design:type", Number)
     ], ImageOccurrence.prototype, "distance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
-        __metadata("design:type", Fingerprint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
+        __metadata("design:type", fingerprint_1.Fingerprint)
     ], ImageOccurrence.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerInfo", elemType: Layer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerInfo", elemType: layer_1.Layer }),
         __metadata("design:type", Array)
     ], ImageOccurrence.prototype, "layerInfo", void 0);
     return ImageOccurrence;
-}(SpeakeasyBase));
-export { ImageOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.ImageOccurrence = ImageOccurrence;

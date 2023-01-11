@@ -40,5 +40,5 @@ export class SignRequestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  signRequest201ApplicationJsonObject?: SignRequest201ApplicationJson;
+  signRequest201ApplicationJSONObject?: SignRequest201ApplicationJson;
 }

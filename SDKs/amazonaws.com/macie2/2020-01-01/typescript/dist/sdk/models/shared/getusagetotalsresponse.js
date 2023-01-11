@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeRangeEnum } from "./timerangeenum";
-import { UsageTotal } from "./usagetotal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsageTotalsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var timerangeenum_1 = require("./timerangeenum");
+var usagetotal_1 = require("./usagetotal");
 var GetUsageTotalsResponse = /** @class */ (function (_super) {
     __extends(GetUsageTotalsResponse, _super);
     function GetUsageTotalsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeRange" }),
         __metadata("design:type", String)
     ], GetUsageTotalsResponse.prototype, "timeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageTotals", elemType: UsageTotal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageTotals", elemType: usagetotal_1.UsageTotal }),
         __metadata("design:type", Array)
     ], GetUsageTotalsResponse.prototype, "usageTotals", void 0);
     return GetUsageTotalsResponse;
-}(SpeakeasyBase));
-export { GetUsageTotalsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsageTotalsResponse = GetUsageTotalsResponse;

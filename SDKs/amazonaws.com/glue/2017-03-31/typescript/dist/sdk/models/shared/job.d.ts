@@ -8,11 +8,11 @@ import { WorkerTypeEnum } from "./workertypeenum";
  * Specifies a job definition.
 **/
 export declare class Job extends SpeakeasyBase {
-    allocatedCapacity?: number;
+    allocatedCapacity?: Record<string, any>;
     command?: JobCommand;
     connections?: ConnectionsList;
     createdOn?: Date;
-    defaultArguments?: Map<string, string>;
+    defaultArguments?: Record<string, string>;
     description?: string;
     executionProperty?: ExecutionProperty;
     glueVersion?: string;
@@ -21,7 +21,7 @@ export declare class Job extends SpeakeasyBase {
     maxCapacity?: number;
     maxRetries?: number;
     name?: string;
-    nonOverridableArguments?: Map<string, string>;
+    nonOverridableArguments?: Record<string, string>;
     notificationProperty?: NotificationProperty;
     numberOfWorkers?: number;
     role?: string;

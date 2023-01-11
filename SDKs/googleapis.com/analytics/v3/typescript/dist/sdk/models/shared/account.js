@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = exports.AccountPermissions = exports.AccountChildLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // AccountChildLink
 /**
  * Child link for an account entry. Points to the list of web properties for this account.
@@ -33,16 +36,16 @@ var AccountChildLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], AccountChildLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AccountChildLink.prototype, "type", void 0);
     return AccountChildLink;
-}(SpeakeasyBase));
-export { AccountChildLink };
+}(utils_1.SpeakeasyBase));
+exports.AccountChildLink = AccountChildLink;
 // AccountPermissions
 /**
  * Permissions the user has for this account.
@@ -53,12 +56,12 @@ var AccountPermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effective" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effective" }),
         __metadata("design:type", Array)
     ], AccountPermissions.prototype, "effective", void 0);
     return AccountPermissions;
-}(SpeakeasyBase));
-export { AccountPermissions };
+}(utils_1.SpeakeasyBase));
+exports.AccountPermissions = AccountPermissions;
 // Account
 /**
  * JSON template for Analytics account entry.
@@ -69,41 +72,41 @@ var Account = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childLink" }),
         __metadata("design:type", AccountChildLink)
     ], Account.prototype, "childLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Account.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Account.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Account.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Account.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", AccountPermissions)
     ], Account.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Account.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred" }),
         __metadata("design:type", Boolean)
     ], Account.prototype, "starred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Account.prototype, "updated", void 0);
     return Account;
-}(SpeakeasyBase));
-export { Account };
+}(utils_1.SpeakeasyBase));
+exports.Account = Account;

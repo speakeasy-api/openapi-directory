@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SongListApiDeleteResponse = exports.SongListApiDeleteRequest = exports.SongListApiDeleteQueryParams = exports.SongListApiDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SongListApiDeletePathParams = /** @class */ (function (_super) {
     __extends(SongListApiDeletePathParams, _super);
     function SongListApiDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], SongListApiDeletePathParams.prototype, "id", void 0);
     return SongListApiDeletePathParams;
-}(SpeakeasyBase));
-export { SongListApiDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeletePathParams = SongListApiDeletePathParams;
 var SongListApiDeleteQueryParams = /** @class */ (function (_super) {
     __extends(SongListApiDeleteQueryParams, _super);
     function SongListApiDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
         __metadata("design:type", Boolean)
     ], SongListApiDeleteQueryParams.prototype, "hardDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], SongListApiDeleteQueryParams.prototype, "notes", void 0);
     return SongListApiDeleteQueryParams;
-}(SpeakeasyBase));
-export { SongListApiDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteQueryParams = SongListApiDeleteQueryParams;
 var SongListApiDeleteRequest = /** @class */ (function (_super) {
     __extends(SongListApiDeleteRequest, _super);
     function SongListApiDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SongListApiDeletePathParams)
     ], SongListApiDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SongListApiDeleteQueryParams)
     ], SongListApiDeleteRequest.prototype, "queryParams", void 0);
     return SongListApiDeleteRequest;
-}(SpeakeasyBase));
-export { SongListApiDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteRequest = SongListApiDeleteRequest;
 var SongListApiDeleteResponse = /** @class */ (function (_super) {
     __extends(SongListApiDeleteResponse, _super);
     function SongListApiDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SongListApiDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SongListApiDeleteResponse.prototype, "statusCode", void 0);
     return SongListApiDeleteResponse;
-}(SpeakeasyBase));
-export { SongListApiDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.SongListApiDeleteResponse = SongListApiDeleteResponse;

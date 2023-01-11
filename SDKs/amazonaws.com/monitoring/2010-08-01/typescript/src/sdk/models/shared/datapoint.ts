@@ -12,7 +12,7 @@ export class Datapoint extends SpeakeasyBase {
   average?: number;
 
   @SpeakeasyMetadata()
-  extendedStatistics?: Map<string, number>;
+  extendedStatistics?: Record<string, number>;
 
   @SpeakeasyMetadata()
   maximum?: number;

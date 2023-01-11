@@ -28,5 +28,5 @@ export class TrapConfigAddResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  trapConfigAdd200ApplicationJsonString?: string;
+  trapConfigAdd200ApplicationJSONString?: string;
 }

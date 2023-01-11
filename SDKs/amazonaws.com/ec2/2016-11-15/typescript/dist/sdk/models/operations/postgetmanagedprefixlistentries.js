@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetManagedPrefixListEntriesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetManagedPrefixListEntriesResponse = exports.PostGetManagedPrefixListEntriesRequest = exports.PostGetManagedPrefixListEntriesHeaders = exports.PostGetManagedPrefixListEntriesQueryParams = exports.PostGetManagedPrefixListEntriesVersionEnum = exports.PostGetManagedPrefixListEntriesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetManagedPrefixListEntriesActionEnum;
 (function (PostGetManagedPrefixListEntriesActionEnum) {
     PostGetManagedPrefixListEntriesActionEnum["GetManagedPrefixListEntries"] = "GetManagedPrefixListEntries";
-})(PostGetManagedPrefixListEntriesActionEnum || (PostGetManagedPrefixListEntriesActionEnum = {}));
-export var PostGetManagedPrefixListEntriesVersionEnum;
+})(PostGetManagedPrefixListEntriesActionEnum = exports.PostGetManagedPrefixListEntriesActionEnum || (exports.PostGetManagedPrefixListEntriesActionEnum = {}));
+var PostGetManagedPrefixListEntriesVersionEnum;
 (function (PostGetManagedPrefixListEntriesVersionEnum) {
     PostGetManagedPrefixListEntriesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostGetManagedPrefixListEntriesVersionEnum || (PostGetManagedPrefixListEntriesVersionEnum = {}));
+})(PostGetManagedPrefixListEntriesVersionEnum = exports.PostGetManagedPrefixListEntriesVersionEnum || (exports.PostGetManagedPrefixListEntriesVersionEnum = {}));
 var PostGetManagedPrefixListEntriesQueryParams = /** @class */ (function (_super) {
     __extends(PostGetManagedPrefixListEntriesQueryParams, _super);
     function PostGetManagedPrefixListEntriesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesQueryParams.prototype, "version", void 0);
     return PostGetManagedPrefixListEntriesQueryParams;
-}(SpeakeasyBase));
-export { PostGetManagedPrefixListEntriesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetManagedPrefixListEntriesQueryParams = PostGetManagedPrefixListEntriesQueryParams;
 var PostGetManagedPrefixListEntriesHeaders = /** @class */ (function (_super) {
     __extends(PostGetManagedPrefixListEntriesHeaders, _super);
     function PostGetManagedPrefixListEntriesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetManagedPrefixListEntriesHeaders;
-}(SpeakeasyBase));
-export { PostGetManagedPrefixListEntriesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetManagedPrefixListEntriesHeaders = PostGetManagedPrefixListEntriesHeaders;
 var PostGetManagedPrefixListEntriesRequest = /** @class */ (function (_super) {
     __extends(PostGetManagedPrefixListEntriesRequest, _super);
     function PostGetManagedPrefixListEntriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetManagedPrefixListEntriesQueryParams)
     ], PostGetManagedPrefixListEntriesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetManagedPrefixListEntriesHeaders)
     ], PostGetManagedPrefixListEntriesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetManagedPrefixListEntriesRequest.prototype, "request", void 0);
     return PostGetManagedPrefixListEntriesRequest;
-}(SpeakeasyBase));
-export { PostGetManagedPrefixListEntriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetManagedPrefixListEntriesRequest = PostGetManagedPrefixListEntriesRequest;
 var PostGetManagedPrefixListEntriesResponse = /** @class */ (function (_super) {
     __extends(PostGetManagedPrefixListEntriesResponse, _super);
     function PostGetManagedPrefixListEntriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetManagedPrefixListEntriesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetManagedPrefixListEntriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetManagedPrefixListEntriesResponse.prototype, "statusCode", void 0);
     return PostGetManagedPrefixListEntriesResponse;
-}(SpeakeasyBase));
-export { PostGetManagedPrefixListEntriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetManagedPrefixListEntriesResponse = PostGetManagedPrefixListEntriesResponse;

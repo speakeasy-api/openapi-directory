@@ -1,4 +1,7 @@
-export var BillIncludeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BillIncludeEnum = void 0;
+var BillIncludeEnum;
 (function (BillIncludeEnum) {
     BillIncludeEnum["Sponsorships"] = "sponsorships";
     BillIncludeEnum["Abstracts"] = "abstracts";
@@ -9,4 +12,4 @@ export var BillIncludeEnum;
     BillIncludeEnum["Documents"] = "documents";
     BillIncludeEnum["Versions"] = "versions";
     BillIncludeEnum["Votes"] = "votes";
-})(BillIncludeEnum || (BillIncludeEnum = {}));
+})(BillIncludeEnum = exports.BillIncludeEnum || (exports.BillIncludeEnum = {}));

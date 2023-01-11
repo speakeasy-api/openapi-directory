@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StudioComponentSubtypeEnum } from "./studiocomponentsubtypeenum";
-import { StudioComponentTypeEnum } from "./studiocomponenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioComponentSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var studiocomponentsubtypeenum_1 = require("./studiocomponentsubtypeenum");
+var studiocomponenttypeenum_1 = require("./studiocomponenttypeenum");
 var StudioComponentSummary = /** @class */ (function (_super) {
     __extends(StudioComponentSummary, _super);
     function StudioComponentSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], StudioComponentSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioComponentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioComponentId" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "studioComponentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtype" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "subtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], StudioComponentSummary.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedBy" }),
         __metadata("design:type", String)
     ], StudioComponentSummary.prototype, "updatedBy", void 0);
     return StudioComponentSummary;
-}(SpeakeasyBase));
-export { StudioComponentSummary };
+}(utils_1.SpeakeasyBase));
+exports.StudioComponentSummary = StudioComponentSummary;

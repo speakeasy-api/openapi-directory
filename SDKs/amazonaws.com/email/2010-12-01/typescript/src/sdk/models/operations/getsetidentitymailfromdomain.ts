@@ -20,7 +20,7 @@ export class GetSetIdentityMailFromDomainQueryParams extends SpeakeasyBase {
   action: GetSetIdentityMailFromDomainActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=BehaviorOnMXFailure" })
-  behaviorOnMxFailure?: GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum;
+  behaviorOnMXFailure?: GetSetIdentityMailFromDomainBehaviorOnMxFailureEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Identity" })
   identity: string;

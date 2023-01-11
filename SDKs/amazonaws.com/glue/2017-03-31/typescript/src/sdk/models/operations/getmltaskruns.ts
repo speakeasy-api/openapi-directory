@@ -63,7 +63,7 @@ export class GetMlTaskRunsResponse extends SpeakeasyBase {
   entityNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  getMlTaskRunsResponse?: shared.GetMlTaskRunsResponse;
+  getMLTaskRunsResponse?: shared.GetMlTaskRunsResponse;
 
   @SpeakeasyMetadata()
   internalServiceException?: any;

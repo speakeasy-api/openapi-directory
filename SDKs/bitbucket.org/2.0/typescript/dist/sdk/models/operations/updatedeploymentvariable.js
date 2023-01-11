@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeploymentVariableResponse = exports.UpdateDeploymentVariableRequest = exports.UpdateDeploymentVariablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeploymentVariablePathParams = /** @class */ (function (_super) {
     __extends(UpdateDeploymentVariablePathParams, _super);
     function UpdateDeploymentVariablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
         __metadata("design:type", String)
     ], UpdateDeploymentVariablePathParams.prototype, "environmentUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateDeploymentVariablePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], UpdateDeploymentVariablePathParams.prototype, "variableUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateDeploymentVariablePathParams.prototype, "workspace", void 0);
     return UpdateDeploymentVariablePathParams;
-}(SpeakeasyBase));
-export { UpdateDeploymentVariablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeploymentVariablePathParams = UpdateDeploymentVariablePathParams;
 var UpdateDeploymentVariableRequest = /** @class */ (function (_super) {
     __extends(UpdateDeploymentVariableRequest, _super);
     function UpdateDeploymentVariableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeploymentVariablePathParams)
     ], UpdateDeploymentVariableRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentVariableRequest.prototype, "request", void 0);
     return UpdateDeploymentVariableRequest;
-}(SpeakeasyBase));
-export { UpdateDeploymentVariableRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeploymentVariableRequest = UpdateDeploymentVariableRequest;
 var UpdateDeploymentVariableResponse = /** @class */ (function (_super) {
     __extends(UpdateDeploymentVariableResponse, _super);
     function UpdateDeploymentVariableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeploymentVariableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeploymentVariableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateDeploymentVariableResponse.prototype, "deploymentVariable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateDeploymentVariableResponse.prototype, "error", void 0);
     return UpdateDeploymentVariableResponse;
-}(SpeakeasyBase));
-export { UpdateDeploymentVariableResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeploymentVariableResponse = UpdateDeploymentVariableResponse;

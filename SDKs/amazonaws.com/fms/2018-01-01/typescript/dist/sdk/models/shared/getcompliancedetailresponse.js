@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyComplianceDetail } from "./policycompliancedetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetComplianceDetailResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var policycompliancedetail_1 = require("./policycompliancedetail");
 var GetComplianceDetailResponse = /** @class */ (function (_super) {
     __extends(GetComplianceDetailResponse, _super);
     function GetComplianceDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyComplianceDetail" }),
-        __metadata("design:type", PolicyComplianceDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyComplianceDetail" }),
+        __metadata("design:type", policycompliancedetail_1.PolicyComplianceDetail)
     ], GetComplianceDetailResponse.prototype, "policyComplianceDetail", void 0);
     return GetComplianceDetailResponse;
-}(SpeakeasyBase));
-export { GetComplianceDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetComplianceDetailResponse = GetComplianceDetailResponse;

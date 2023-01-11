@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceTypeEnum } from "./compliancetypeenum";
-import { EvaluationResultIdentifier } from "./evaluationresultidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancetypeenum_1 = require("./compliancetypeenum");
+var evaluationresultidentifier_1 = require("./evaluationresultidentifier");
 // EvaluationResult
 /**
  * The details of an Config evaluation. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information.
@@ -35,29 +38,29 @@ var EvaluationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Annotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Annotation" }),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "annotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleInvokedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleInvokedTime" }),
         __metadata("design:type", Date)
     ], EvaluationResult.prototype, "configRuleInvokedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationResultIdentifier" }),
-        __metadata("design:type", EvaluationResultIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationResultIdentifier" }),
+        __metadata("design:type", evaluationresultidentifier_1.EvaluationResultIdentifier)
     ], EvaluationResult.prototype, "evaluationResultIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultRecordedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultRecordedTime" }),
         __metadata("design:type", Date)
     ], EvaluationResult.prototype, "resultRecordedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultToken" }),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "resultToken", void 0);
     return EvaluationResult;
-}(SpeakeasyBase));
-export { EvaluationResult };
+}(utils_1.SpeakeasyBase));
+exports.EvaluationResult = EvaluationResult;

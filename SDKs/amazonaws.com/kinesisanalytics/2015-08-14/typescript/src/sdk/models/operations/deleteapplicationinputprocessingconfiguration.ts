@@ -51,7 +51,7 @@ export class DeleteApplicationInputProcessingConfigurationResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationInputProcessingConfigurationResponse?: Map<string, any>;
+  deleteApplicationInputProcessingConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

@@ -11,10 +11,10 @@ export class BackendConnectionErrors extends SpeakeasyBase {
   connectionRefusedCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=HTTPCode4XXCount" })
-  httpCode4XxCount?: number;
+  httpCode4XXCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=HTTPCode5XXCount" })
-  httpCode5XxCount?: number;
+  httpCode5XXCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=OtherCount" })
   otherCount?: number;

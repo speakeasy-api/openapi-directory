@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTimestagsFilterEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTimestagsResponse = exports.GetTimestagsRequest = exports.GetTimestagsQueryParams = exports.GetTimestagsFilterEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTimestagsFilterEnum;
 (function (GetTimestagsFilterEnum) {
     GetTimestagsFilterEnum["Des"] = "Des";
     GetTimestagsFilterEnum["Geo"] = "Geo";
     GetTimestagsFilterEnum["Org"] = "Org";
     GetTimestagsFilterEnum["Per"] = "Per";
-})(GetTimestagsFilterEnum || (GetTimestagsFilterEnum = {}));
+})(GetTimestagsFilterEnum = exports.GetTimestagsFilterEnum || (exports.GetTimestagsFilterEnum = {}));
 var GetTimestagsQueryParams = /** @class */ (function (_super) {
     __extends(GetTimestagsQueryParams, _super);
     function GetTimestagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTimestagsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], GetTimestagsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetTimestagsQueryParams.prototype, "query", void 0);
     return GetTimestagsQueryParams;
-}(SpeakeasyBase));
-export { GetTimestagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTimestagsQueryParams = GetTimestagsQueryParams;
 var GetTimestagsRequest = /** @class */ (function (_super) {
     __extends(GetTimestagsRequest, _super);
     function GetTimestagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTimestagsQueryParams)
     ], GetTimestagsRequest.prototype, "queryParams", void 0);
     return GetTimestagsRequest;
-}(SpeakeasyBase));
-export { GetTimestagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTimestagsRequest = GetTimestagsRequest;
 var GetTimestagsResponse = /** @class */ (function (_super) {
     __extends(GetTimestagsResponse, _super);
     function GetTimestagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTimestagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Array)
-    ], GetTimestagsResponse.prototype, "getTimestags200ApplicationJsonArrays", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTimestagsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Array)
+    ], GetTimestagsResponse.prototype, "getTimestags200ApplicationJSONArrays", void 0);
     return GetTimestagsResponse;
-}(SpeakeasyBase));
-export { GetTimestagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTimestagsResponse = GetTimestagsResponse;

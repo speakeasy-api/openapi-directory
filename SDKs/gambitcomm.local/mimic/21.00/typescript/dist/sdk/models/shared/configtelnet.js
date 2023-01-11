@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigTelnet = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConfigTelnet = /** @class */ (function (_super) {
     __extends(ConfigTelnet, _super);
     function ConfigTelnet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keymap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keymap" }),
         __metadata("design:type", String)
     ], ConfigTelnet.prototype, "keymap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paging_prompt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paging_prompt" }),
         __metadata("design:type", String)
     ], ConfigTelnet.prototype, "pagingPrompt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], ConfigTelnet.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prompt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prompt" }),
         __metadata("design:type", String)
     ], ConfigTelnet.prototype, "prompt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule" }),
         __metadata("design:type", String)
     ], ConfigTelnet.prototype, "rule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userdb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userdb" }),
         __metadata("design:type", String)
     ], ConfigTelnet.prototype, "userdb", void 0);
     return ConfigTelnet;
-}(SpeakeasyBase));
-export { ConfigTelnet };
+}(utils_1.SpeakeasyBase));
+exports.ConfigTelnet = ConfigTelnet;

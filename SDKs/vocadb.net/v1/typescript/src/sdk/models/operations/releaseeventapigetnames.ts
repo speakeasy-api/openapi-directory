@@ -25,13 +25,13 @@ export class ReleaseEventApiGetNamesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  releaseEventApiGetNames200ApplicationJsonStrings?: string[];
+  releaseEventApiGetNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   releaseEventApiGetNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  releaseEventApiGetNames200TextJsonStrings?: string[];
+  releaseEventApiGetNames200TextJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   statusCode: number;

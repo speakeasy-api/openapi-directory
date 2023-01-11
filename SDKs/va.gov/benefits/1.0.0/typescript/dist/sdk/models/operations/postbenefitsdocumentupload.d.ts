@@ -30,10 +30,10 @@ export declare class PostBenefitsDocumentUploadRequest extends SpeakeasyBase {
 export declare class PostBenefitsDocumentUploadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postBenefitsDocumentUpload202ApplicationJsonObject?: PostBenefitsDocumentUpload202ApplicationJson;
-    postBenefitsDocumentUpload401ApplicationJsonObject?: PostBenefitsDocumentUpload401ApplicationJson;
-    postBenefitsDocumentUpload403ApplicationJsonObject?: PostBenefitsDocumentUpload403ApplicationJson;
-    postBenefitsDocumentUpload422ApplicationJsonObject?: PostBenefitsDocumentUpload422ApplicationJson;
-    postBenefitsDocumentUpload429ApplicationJsonObject?: PostBenefitsDocumentUpload429ApplicationJson;
-    postBenefitsDocumentUpload500ApplicationJsonObject?: PostBenefitsDocumentUpload500ApplicationJson;
+    postBenefitsDocumentUpload202ApplicationJSONObject?: PostBenefitsDocumentUpload202ApplicationJson;
+    postBenefitsDocumentUpload401ApplicationJSONObject?: PostBenefitsDocumentUpload401ApplicationJson;
+    postBenefitsDocumentUpload403ApplicationJSONObject?: PostBenefitsDocumentUpload403ApplicationJson;
+    postBenefitsDocumentUpload422ApplicationJSONObject?: PostBenefitsDocumentUpload422ApplicationJson;
+    postBenefitsDocumentUpload429ApplicationJSONObject?: PostBenefitsDocumentUpload429ApplicationJson;
+    postBenefitsDocumentUpload500ApplicationJSONObject?: PostBenefitsDocumentUpload500ApplicationJson;
 }

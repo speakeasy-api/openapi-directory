@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentAttributes = exports.ContentAttributesArtwork = void 0;
+var utils_1 = require("../../../internal/utils");
 var ContentAttributesArtwork = /** @class */ (function (_super) {
     __extends(ContentAttributesArtwork, _super);
     function ContentAttributesArtwork() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ContentAttributesArtwork.prototype, "url", void 0);
     return ContentAttributesArtwork;
-}(SpeakeasyBase));
-export { ContentAttributesArtwork };
+}(utils_1.SpeakeasyBase));
+exports.ContentAttributesArtwork = ContentAttributesArtwork;
 var ContentAttributes = /** @class */ (function (_super) {
     __extends(ContentAttributes, _super);
     function ContentAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=albumName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=albumName" }),
         __metadata("design:type", String)
     ], ContentAttributes.prototype, "albumName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistName" }),
         __metadata("design:type", String)
     ], ContentAttributes.prototype, "artistName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artwork" }),
         __metadata("design:type", ContentAttributesArtwork)
     ], ContentAttributes.prototype, "artwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=composerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=composerName" }),
         __metadata("design:type", String)
     ], ContentAttributes.prototype, "composerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInMillis" }),
         __metadata("design:type", Number)
     ], ContentAttributes.prototype, "durationInMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genreNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genreNames" }),
         __metadata("design:type", Array)
     ], ContentAttributes.prototype, "genreNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ContentAttributes.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackNumber" }),
         __metadata("design:type", Number)
     ], ContentAttributes.prototype, "trackNumber", void 0);
     return ContentAttributes;
-}(SpeakeasyBase));
-export { ContentAttributes };
+}(utils_1.SpeakeasyBase));
+exports.ContentAttributes = ContentAttributes;

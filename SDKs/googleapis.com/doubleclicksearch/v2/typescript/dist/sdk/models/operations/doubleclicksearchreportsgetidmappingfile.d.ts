@@ -28,6 +28,6 @@ export declare class DoubleclicksearchReportsGetIdMappingFileRequest extends Spe
 }
 export declare class DoubleclicksearchReportsGetIdMappingFileResponse extends SpeakeasyBase {
     contentType: string;
-    idMappingFile?: Map<string, any>;
+    idMappingFile?: Record<string, any>;
     statusCode: number;
 }

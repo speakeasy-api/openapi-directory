@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,70 +14,95 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateFindingsFilterResponse = exports.UpdateFindingsFilterRequest = exports.UpdateFindingsFilterRequestBody = exports.UpdateFindingsFilterRequestBodyFindingCriteria = exports.UpdateFindingsFilterRequestBodyActionEnum = exports.UpdateFindingsFilterHeaders = exports.UpdateFindingsFilterPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateFindingsFilterPathParams = /** @class */ (function (_super) {
     __extends(UpdateFindingsFilterPathParams, _super);
     function UpdateFindingsFilterPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterPathParams.prototype, "id", void 0);
     return UpdateFindingsFilterPathParams;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterPathParams = UpdateFindingsFilterPathParams;
 var UpdateFindingsFilterHeaders = /** @class */ (function (_super) {
     __extends(UpdateFindingsFilterHeaders, _super);
     function UpdateFindingsFilterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateFindingsFilterHeaders;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterHeaders };
-export var UpdateFindingsFilterRequestBodyActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterHeaders = UpdateFindingsFilterHeaders;
+var UpdateFindingsFilterRequestBodyActionEnum;
 (function (UpdateFindingsFilterRequestBodyActionEnum) {
     UpdateFindingsFilterRequestBodyActionEnum["Archive"] = "ARCHIVE";
     UpdateFindingsFilterRequestBodyActionEnum["Noop"] = "NOOP";
-})(UpdateFindingsFilterRequestBodyActionEnum || (UpdateFindingsFilterRequestBodyActionEnum = {}));
+})(UpdateFindingsFilterRequestBodyActionEnum = exports.UpdateFindingsFilterRequestBodyActionEnum || (exports.UpdateFindingsFilterRequestBodyActionEnum = {}));
 // UpdateFindingsFilterRequestBodyFindingCriteria
 /**
  * Specifies, as a map, one or more property-based conditions that filter the results of a query for findings.
@@ -87,109 +113,109 @@ var UpdateFindingsFilterRequestBodyFindingCriteria = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criterion", elemType: shared.CriterionAdditionalProperties }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criterion", elemType: shared.CriterionAdditionalProperties }),
+        __metadata("design:type", Object)
     ], UpdateFindingsFilterRequestBodyFindingCriteria.prototype, "criterion", void 0);
     return UpdateFindingsFilterRequestBodyFindingCriteria;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterRequestBodyFindingCriteria };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterRequestBodyFindingCriteria = UpdateFindingsFilterRequestBodyFindingCriteria;
 var UpdateFindingsFilterRequestBody = /** @class */ (function (_super) {
     __extends(UpdateFindingsFilterRequestBody, _super);
     function UpdateFindingsFilterRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterRequestBody.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterRequestBody.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingCriteria" }),
         __metadata("design:type", UpdateFindingsFilterRequestBodyFindingCriteria)
     ], UpdateFindingsFilterRequestBody.prototype, "findingCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateFindingsFilterRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", Number)
     ], UpdateFindingsFilterRequestBody.prototype, "position", void 0);
     return UpdateFindingsFilterRequestBody;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterRequestBody = UpdateFindingsFilterRequestBody;
 var UpdateFindingsFilterRequest = /** @class */ (function (_super) {
     __extends(UpdateFindingsFilterRequest, _super);
     function UpdateFindingsFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateFindingsFilterPathParams)
     ], UpdateFindingsFilterRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateFindingsFilterHeaders)
     ], UpdateFindingsFilterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateFindingsFilterRequestBody)
     ], UpdateFindingsFilterRequest.prototype, "request", void 0);
     return UpdateFindingsFilterRequest;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterRequest = UpdateFindingsFilterRequest;
 var UpdateFindingsFilterResponse = /** @class */ (function (_super) {
     __extends(UpdateFindingsFilterResponse, _super);
     function UpdateFindingsFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateFindingsFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateFindingsFilterResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateFindingsFilterResponse)
     ], UpdateFindingsFilterResponse.prototype, "updateFindingsFilterResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateFindingsFilterResponse.prototype, "validationException", void 0);
     return UpdateFindingsFilterResponse;
-}(SpeakeasyBase));
-export { UpdateFindingsFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFindingsFilterResponse = UpdateFindingsFilterResponse;

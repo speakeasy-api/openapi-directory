@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileUploadPartEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // FileUploadPartEntity
 /**
  * Begin file upload
@@ -33,65 +36,65 @@ var FileUploadPartEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ask_about_overwrites" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ask_about_overwrites" }),
         __metadata("design:type", Boolean)
     ], FileUploadPartEntity.prototype, "askAboutOverwrites", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available_parts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available_parts" }),
         __metadata("design:type", Number)
     ], FileUploadPartEntity.prototype, "availableParts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "expires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], FileUploadPartEntity.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_partsize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_partsize" }),
         __metadata("design:type", Number)
     ], FileUploadPartEntity.prototype, "nextPartsize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parallel_parts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parallel_parts" }),
         __metadata("design:type", Boolean)
     ], FileUploadPartEntity.prototype, "parallelParts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], FileUploadPartEntity.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=part_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=part_number" }),
         __metadata("design:type", Number)
     ], FileUploadPartEntity.prototype, "partNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partsize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partsize" }),
         __metadata("design:type", Number)
     ], FileUploadPartEntity.prototype, "partsize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=send" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=send" }),
+        __metadata("design:type", Object)
     ], FileUploadPartEntity.prototype, "send", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload_uri" }),
         __metadata("design:type", String)
     ], FileUploadPartEntity.prototype, "uploadUri", void 0);
     return FileUploadPartEntity;
-}(SpeakeasyBase));
-export { FileUploadPartEntity };
+}(utils_1.SpeakeasyBase));
+exports.FileUploadPartEntity = FileUploadPartEntity;

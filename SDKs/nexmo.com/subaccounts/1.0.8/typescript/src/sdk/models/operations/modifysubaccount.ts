@@ -105,11 +105,11 @@ export class ModifySubaccountResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  modifySubaccount401ApplicationJsonObject?: ModifySubaccount401ApplicationJson;
+  modifySubaccount401ApplicationJSONObject?: ModifySubaccount401ApplicationJson;
 
   @SpeakeasyMetadata()
-  modifySubaccount404ApplicationJsonObject?: ModifySubaccount404ApplicationJson;
+  modifySubaccount404ApplicationJSONObject?: ModifySubaccount404ApplicationJson;
 
   @SpeakeasyMetadata()
-  modifySubaccount422ApplicationJsonObject?: ModifySubaccount422ApplicationJson;
+  modifySubaccount422ApplicationJSONObject?: ModifySubaccount422ApplicationJson;
 }

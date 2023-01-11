@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnsChannelConfig } from "./snschannelconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationChannelConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var snschannelconfig_1 = require("./snschannelconfig");
 // NotificationChannelConfig
 /**
  *  Information about notification channels you have configured with DevOps Guru. The one supported notification channel is Amazon Simple Notification Service (Amazon SNS).
@@ -34,9 +37,9 @@ var NotificationChannelConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sns" }),
-        __metadata("design:type", SnsChannelConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sns" }),
+        __metadata("design:type", snschannelconfig_1.SnsChannelConfig)
     ], NotificationChannelConfig.prototype, "sns", void 0);
     return NotificationChannelConfig;
-}(SpeakeasyBase));
-export { NotificationChannelConfig };
+}(utils_1.SpeakeasyBase));
+exports.NotificationChannelConfig = NotificationChannelConfig;

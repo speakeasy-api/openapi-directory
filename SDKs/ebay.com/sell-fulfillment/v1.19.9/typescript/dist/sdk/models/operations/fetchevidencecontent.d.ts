@@ -12,7 +12,7 @@ export declare class FetchEvidenceContentSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class FetchEvidenceContentRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: FetchEvidenceContentPathParams;
     queryParams: FetchEvidenceContentQueryParams;
     security: FetchEvidenceContentSecurity;

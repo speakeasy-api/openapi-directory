@@ -41,7 +41,7 @@ export class PatchAutomationsIdRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "multipart_form, name=destination_replace_to" })
   destinationReplaceTo?: string;
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=destinations" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=destinations;json=true" })
   destinations?: string[];
 
   @SpeakeasyMetadata({ data: "multipart_form, name=group_ids" })
@@ -54,7 +54,7 @@ export class PatchAutomationsIdRequestBody extends SpeakeasyBase {
   path?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=schedule;json=true" })
-  schedule?: Map<string, any>;
+  schedule?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=source" })
   source?: string;
@@ -65,14 +65,14 @@ export class PatchAutomationsIdRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "multipart_form, name=trigger_action_path" })
   triggerActionPath?: string;
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=trigger_actions" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=trigger_actions;json=true" })
   triggerActions?: string[];
 
   @SpeakeasyMetadata({ data: "multipart_form, name=user_ids" })
   userIds?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=value;json=true" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 }
 
 

@@ -1,6 +1,9 @@
-export var ConnectionStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionStateEnum = void 0;
+var ConnectionStateEnum;
 (function (ConnectionStateEnum) {
     ConnectionStateEnum["Connected"] = "CONNECTED";
     ConnectionStateEnum["Disconnected"] = "DISCONNECTED";
     ConnectionStateEnum["Unknown"] = "UNKNOWN";
-})(ConnectionStateEnum || (ConnectionStateEnum = {}));
+})(ConnectionStateEnum = exports.ConnectionStateEnum || (exports.ConnectionStateEnum = {}));

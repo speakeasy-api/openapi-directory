@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Timezone = void 0;
+var utils_1 = require("../../../internal/utils");
 var Timezone = /** @class */ (function (_super) {
     __extends(Timezone, _super);
     function Timezone() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_string" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_string" }),
         __metadata("design:type", String)
     ], Timezone.prototype, "displayString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], Timezone.prototype, "offset", void 0);
     return Timezone;
-}(SpeakeasyBase));
-export { Timezone };
+}(utils_1.SpeakeasyBase));
+exports.Timezone = Timezone;

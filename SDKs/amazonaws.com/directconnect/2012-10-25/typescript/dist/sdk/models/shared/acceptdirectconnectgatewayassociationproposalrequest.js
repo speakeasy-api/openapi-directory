@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteFilterPrefix } from "./routefilterprefix";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceptDirectConnectGatewayAssociationProposalRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var routefilterprefix_1 = require("./routefilterprefix");
 var AcceptDirectConnectGatewayAssociationProposalRequest = /** @class */ (function (_super) {
     __extends(AcceptDirectConnectGatewayAssociationProposalRequest, _super);
     function AcceptDirectConnectGatewayAssociationProposalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedGatewayOwnerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedGatewayOwnerAccount" }),
         __metadata("design:type", String)
     ], AcceptDirectConnectGatewayAssociationProposalRequest.prototype, "associatedGatewayOwnerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], AcceptDirectConnectGatewayAssociationProposalRequest.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], AcceptDirectConnectGatewayAssociationProposalRequest.prototype, "overrideAllowedPrefixesToDirectConnectGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalId" }),
         __metadata("design:type", String)
     ], AcceptDirectConnectGatewayAssociationProposalRequest.prototype, "proposalId", void 0);
     return AcceptDirectConnectGatewayAssociationProposalRequest;
-}(SpeakeasyBase));
-export { AcceptDirectConnectGatewayAssociationProposalRequest };
+}(utils_1.SpeakeasyBase));
+exports.AcceptDirectConnectGatewayAssociationProposalRequest = AcceptDirectConnectGatewayAssociationProposalRequest;

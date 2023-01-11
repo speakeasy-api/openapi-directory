@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkSwitchStackResponse = exports.CreateNetworkSwitchStackRequest = exports.CreateNetworkSwitchStackRequestBody = exports.CreateNetworkSwitchStackPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkSwitchStackPathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkSwitchStackPathParams, _super);
     function CreateNetworkSwitchStackPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkSwitchStackPathParams.prototype, "networkId", void 0);
     return CreateNetworkSwitchStackPathParams;
-}(SpeakeasyBase));
-export { CreateNetworkSwitchStackPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSwitchStackPathParams = CreateNetworkSwitchStackPathParams;
 var CreateNetworkSwitchStackRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkSwitchStackRequestBody, _super);
     function CreateNetworkSwitchStackRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateNetworkSwitchStackRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], CreateNetworkSwitchStackRequestBody.prototype, "serials", void 0);
     return CreateNetworkSwitchStackRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkSwitchStackRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSwitchStackRequestBody = CreateNetworkSwitchStackRequestBody;
 var CreateNetworkSwitchStackRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkSwitchStackRequest, _super);
     function CreateNetworkSwitchStackRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkSwitchStackPathParams)
     ], CreateNetworkSwitchStackRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkSwitchStackRequestBody)
     ], CreateNetworkSwitchStackRequest.prototype, "request", void 0);
     return CreateNetworkSwitchStackRequest;
-}(SpeakeasyBase));
-export { CreateNetworkSwitchStackRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSwitchStackRequest = CreateNetworkSwitchStackRequest;
 var CreateNetworkSwitchStackResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkSwitchStackResponse, _super);
     function CreateNetworkSwitchStackResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkSwitchStackResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkSwitchStackResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkSwitchStackResponse.prototype, "createNetworkSwitchStack201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkSwitchStackResponse.prototype, "createNetworkSwitchStack201ApplicationJSONObject", void 0);
     return CreateNetworkSwitchStackResponse;
-}(SpeakeasyBase));
-export { CreateNetworkSwitchStackResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSwitchStackResponse = CreateNetworkSwitchStackResponse;

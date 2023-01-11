@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionRevision } from "./actionrevision";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutActionRevisionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionrevision_1 = require("./actionrevision");
 // PutActionRevisionInput
 /**
  * Represents the input of a <code>PutActionRevision</code> action.
@@ -34,21 +37,21 @@ var PutActionRevisionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionName" }),
         __metadata("design:type", String)
     ], PutActionRevisionInput.prototype, "actionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionRevision" }),
-        __metadata("design:type", ActionRevision)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionRevision" }),
+        __metadata("design:type", actionrevision_1.ActionRevision)
     ], PutActionRevisionInput.prototype, "actionRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineName" }),
         __metadata("design:type", String)
     ], PutActionRevisionInput.prototype, "pipelineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stageName" }),
         __metadata("design:type", String)
     ], PutActionRevisionInput.prototype, "stageName", void 0);
     return PutActionRevisionInput;
-}(SpeakeasyBase));
-export { PutActionRevisionInput };
+}(utils_1.SpeakeasyBase));
+exports.PutActionRevisionInput = PutActionRevisionInput;

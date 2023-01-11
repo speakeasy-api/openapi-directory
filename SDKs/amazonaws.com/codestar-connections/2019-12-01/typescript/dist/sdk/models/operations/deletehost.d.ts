@@ -19,7 +19,7 @@ export declare class DeleteHostRequest extends SpeakeasyBase {
 }
 export declare class DeleteHostResponse extends SpeakeasyBase {
     contentType: string;
-    deleteHostOutput?: Map<string, any>;
+    deleteHostOutput?: Record<string, any>;
     resourceNotFoundException?: any;
     resourceUnavailableException?: any;
     statusCode: number;

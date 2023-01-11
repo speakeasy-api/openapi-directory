@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VersionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Version = exports.VersionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VersionTypeEnum;
 (function (VersionTypeEnum) {
     VersionTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     VersionTypeEnum["TypePreview"] = "TYPE_PREVIEW";
     VersionTypeEnum["TypeGeneralAvailability"] = "TYPE_GENERAL_AVAILABILITY";
-})(VersionTypeEnum || (VersionTypeEnum = {}));
+})(VersionTypeEnum = exports.VersionTypeEnum || (exports.VersionTypeEnum = {}));
 // Version
 /**
  * The Data Fusion version. This proto message stores information about certain Data Fusion version, which is used for Data Fusion version upgrade.
@@ -39,21 +42,21 @@ var Version = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableFeatures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableFeatures" }),
         __metadata("design:type", Array)
     ], Version.prototype, "availableFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultVersion" }),
         __metadata("design:type", Boolean)
     ], Version.prototype, "defaultVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Version.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionNumber" }),
         __metadata("design:type", String)
     ], Version.prototype, "versionNumber", void 0);
     return Version;
-}(SpeakeasyBase));
-export { Version };
+}(utils_1.SpeakeasyBase));
+exports.Version = Version;

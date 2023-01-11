@@ -3,23 +3,23 @@ import { LeavePeriod } from "./leaveperiod";
 import { ValidationError } from "./validationerror";
 export declare class LeaveApplication extends SpeakeasyBase {
     description?: string;
-    employeeId?: string;
+    employeeID?: string;
     endDate?: string;
-    leaveApplicationId?: string;
+    leaveApplicationID?: string;
     leavePeriods?: LeavePeriod[];
-    leaveTypeId?: string;
+    leaveTypeID?: string;
     startDate?: string;
     title?: string;
-    updatedDateUtc?: string;
+    updatedDateUTC?: string;
     validationErrors?: ValidationError[];
 }
 export declare class LeaveApplicationInput extends SpeakeasyBase {
     description?: string;
-    employeeId?: string;
+    employeeID?: string;
     endDate?: string;
-    leaveApplicationId?: string;
+    leaveApplicationID?: string;
     leavePeriods?: LeavePeriod[];
-    leaveTypeId?: string;
+    leaveTypeID?: string;
     startDate?: string;
     title?: string;
     validationErrors?: ValidationError[];

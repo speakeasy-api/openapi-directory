@@ -6,18 +6,8 @@ export declare class ReactionsListForTeamDiscussionCommentInOrgPathParams extend
     org: string;
     teamSlug: string;
 }
-export declare enum ReactionsListForTeamDiscussionCommentInOrgContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
 export declare class ReactionsListForTeamDiscussionCommentInOrgQueryParams extends SpeakeasyBase {
-    content?: ReactionsListForTeamDiscussionCommentInOrgContentEnum;
+    content?: shared.CommentNumberEnum;
     page?: number;
     perPage?: number;
 }
@@ -27,7 +17,7 @@ export declare class ReactionsListForTeamDiscussionCommentInOrgRequest extends S
 }
 export declare class ReactionsListForTeamDiscussionCommentInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     reactions?: shared.Reaction[];
 }

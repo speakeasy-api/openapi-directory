@@ -1,4 +1,7 @@
-export var HsmStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HsmStatusEnum = void 0;
+var HsmStatusEnum;
 (function (HsmStatusEnum) {
     HsmStatusEnum["Pending"] = "PENDING";
     HsmStatusEnum["Running"] = "RUNNING";
@@ -7,4 +10,4 @@ export var HsmStatusEnum;
     HsmStatusEnum["Terminating"] = "TERMINATING";
     HsmStatusEnum["Terminated"] = "TERMINATED";
     HsmStatusEnum["Degraded"] = "DEGRADED";
-})(HsmStatusEnum || (HsmStatusEnum = {}));
+})(HsmStatusEnum = exports.HsmStatusEnum || (exports.HsmStatusEnum = {}));

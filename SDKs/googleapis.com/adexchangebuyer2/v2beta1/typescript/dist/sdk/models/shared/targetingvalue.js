@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreativeSize } from "./creativesize";
-import { DayPartTargeting } from "./dayparttargeting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetingValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var creativesize_1 = require("./creativesize");
+var dayparttargeting_1 = require("./dayparttargeting");
 // TargetingValue
 /**
  * A polymorphic targeting value used as part of Shared Targeting.
@@ -35,21 +38,21 @@ var TargetingValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeSizeValue" }),
-        __metadata("design:type", CreativeSize)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeSizeValue" }),
+        __metadata("design:type", creativesize_1.CreativeSize)
     ], TargetingValue.prototype, "creativeSizeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayPartTargetingValue" }),
-        __metadata("design:type", DayPartTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayPartTargetingValue" }),
+        __metadata("design:type", dayparttargeting_1.DayPartTargeting)
     ], TargetingValue.prototype, "dayPartTargetingValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longValue" }),
         __metadata("design:type", String)
     ], TargetingValue.prototype, "longValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], TargetingValue.prototype, "stringValue", void 0);
     return TargetingValue;
-}(SpeakeasyBase));
-export { TargetingValue };
+}(utils_1.SpeakeasyBase));
+exports.TargetingValue = TargetingValue;

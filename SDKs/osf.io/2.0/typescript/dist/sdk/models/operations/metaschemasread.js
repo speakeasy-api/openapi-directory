@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetaschemasReadResponse = exports.MetaschemasReadRequest = exports.MetaschemasReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MetaschemasReadPathParams = /** @class */ (function (_super) {
     __extends(MetaschemasReadPathParams, _super);
     function MetaschemasReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=metaschema_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=metaschema_id" }),
         __metadata("design:type", String)
     ], MetaschemasReadPathParams.prototype, "metaschemaId", void 0);
     return MetaschemasReadPathParams;
-}(SpeakeasyBase));
-export { MetaschemasReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MetaschemasReadPathParams = MetaschemasReadPathParams;
 var MetaschemasReadRequest = /** @class */ (function (_super) {
     __extends(MetaschemasReadRequest, _super);
     function MetaschemasReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MetaschemasReadPathParams)
     ], MetaschemasReadRequest.prototype, "pathParams", void 0);
     return MetaschemasReadRequest;
-}(SpeakeasyBase));
-export { MetaschemasReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.MetaschemasReadRequest = MetaschemasReadRequest;
 var MetaschemasReadResponse = /** @class */ (function (_super) {
     __extends(MetaschemasReadResponse, _super);
     function MetaschemasReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], MetaschemasReadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetaschemasReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetaschemasReadResponse.prototype, "statusCode", void 0);
     return MetaschemasReadResponse;
-}(SpeakeasyBase));
-export { MetaschemasReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.MetaschemasReadResponse = MetaschemasReadResponse;

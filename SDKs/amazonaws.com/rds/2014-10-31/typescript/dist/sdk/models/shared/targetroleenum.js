@@ -1,6 +1,9 @@
-export var TargetRoleEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetRoleEnum = void 0;
+var TargetRoleEnum;
 (function (TargetRoleEnum) {
     TargetRoleEnum["ReadWrite"] = "READ_WRITE";
     TargetRoleEnum["ReadOnly"] = "READ_ONLY";
     TargetRoleEnum["Unknown"] = "UNKNOWN";
-})(TargetRoleEnum || (TargetRoleEnum = {}));
+})(TargetRoleEnum = exports.TargetRoleEnum || (exports.TargetRoleEnum = {}));

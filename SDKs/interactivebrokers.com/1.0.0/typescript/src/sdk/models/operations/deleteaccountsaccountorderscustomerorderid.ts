@@ -49,9 +49,9 @@ export class DeleteAccountsAccountOrdersCustomerOrderIdResponse extends Speakeas
   @SpeakeasyMetadata()
   contentType: string;
 
-  @SpeakeasyMetadata({ elemType: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson })
-  deleteAccountsAccountOrdersCustomerOrderId200ApplicationJsonObjects?: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
-
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata({ elemType: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson })
+  deleteAccountsAccountOrdersCustomerOrderId200ApplicationJSONObjects?: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
 }

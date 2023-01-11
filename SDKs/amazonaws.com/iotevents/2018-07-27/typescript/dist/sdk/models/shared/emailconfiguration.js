@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmailContent } from "./emailcontent";
-import { EmailRecipients } from "./emailrecipients";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var emailcontent_1 = require("./emailcontent");
+var emailrecipients_1 = require("./emailrecipients");
 // EmailConfiguration
 /**
  * Contains the configuration information of email notifications.
@@ -35,17 +38,17 @@ var EmailConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
-        __metadata("design:type", EmailContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
+        __metadata("design:type", emailcontent_1.EmailContent)
     ], EmailConfiguration.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], EmailConfiguration.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipients" }),
-        __metadata("design:type", EmailRecipients)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipients" }),
+        __metadata("design:type", emailrecipients_1.EmailRecipients)
     ], EmailConfiguration.prototype, "recipients", void 0);
     return EmailConfiguration;
-}(SpeakeasyBase));
-export { EmailConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.EmailConfiguration = EmailConfiguration;

@@ -10,7 +10,7 @@ import { WorkerConfigurationDescription } from "./workerconfigurationdescription
 export declare class DescribeConnectorResponse extends SpeakeasyBase {
     capacity?: CapacityDescription;
     connectorArn?: string;
-    connectorConfiguration?: Map<string, string>;
+    connectorConfiguration?: Record<string, string>;
     connectorDescription?: string;
     connectorName?: string;
     connectorState?: ConnectorStateEnum;

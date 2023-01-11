@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PmjayRequest, PmjayResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: PmjayRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "tempore",
-      fullName: "vitae",
-      udf1: "in",
-      udf2: "voluptatem",
+      dob: "sit",
+      fullName: "voluptas",
+      udf1: "culpa",
+      udf2: "expedita",
     },
-    consentArtifact: "porro",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "beatae",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.pmjay(req).then((res: PmjayResponse | AxiosError) => {
+sdk.apIs.pmjay(req).then((res: PmjayResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.pmjay(req).then((res: PmjayResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pmjay` - Pradhan Mantri Jan Arogya Yojana
 

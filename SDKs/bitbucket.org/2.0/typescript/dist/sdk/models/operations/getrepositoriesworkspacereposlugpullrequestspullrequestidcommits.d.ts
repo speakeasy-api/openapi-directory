@@ -17,5 +17,5 @@ export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCo
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommitsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

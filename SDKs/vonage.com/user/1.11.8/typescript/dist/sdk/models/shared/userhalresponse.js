@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserEmbeddedObject } from "./userembeddedobject";
-import { Links } from "./links";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserHalResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var userembeddedobject_1 = require("./userembeddedobject");
+var links_1 = require("./links");
 var UserHalResponse = /** @class */ (function (_super) {
     __extends(UserHalResponse, _super);
     function UserHalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
-        __metadata("design:type", UserEmbeddedObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
+        __metadata("design:type", userembeddedobject_1.UserEmbeddedObject)
     ], UserHalResponse.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", links_1.Links)
     ], UserHalResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], UserHalResponse.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_size" }),
         __metadata("design:type", Number)
     ], UserHalResponse.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_items" }),
         __metadata("design:type", Number)
     ], UserHalResponse.prototype, "totalItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pages" }),
         __metadata("design:type", Number)
     ], UserHalResponse.prototype, "totalPages", void 0);
     return UserHalResponse;
-}(SpeakeasyBase));
-export { UserHalResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserHalResponse = UserHalResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1AccessLevel } from "./googleidentityaccesscontextmanagerv1accesslevel";
-import { GoogleIdentityAccesscontextmanagerV1AccessPolicy } from "./googleidentityaccesscontextmanagerv1accesspolicy";
-import { Policy } from "./policy";
-import { GoogleCloudOrgpolicyV1Policy } from "./googlecloudorgpolicyv1policy";
-import { Resource } from "./resource";
-import { GoogleIdentityAccesscontextmanagerV1ServicePerimeter } from "./googleidentityaccesscontextmanagerv1serviceperimeter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Asset = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1accesslevel_1 = require("./googleidentityaccesscontextmanagerv1accesslevel");
+var googleidentityaccesscontextmanagerv1accesspolicy_1 = require("./googleidentityaccesscontextmanagerv1accesspolicy");
+var policy_1 = require("./policy");
+var googlecloudorgpolicyv1policy_1 = require("./googlecloudorgpolicyv1policy");
+var resource_1 = require("./resource");
+var googleidentityaccesscontextmanagerv1serviceperimeter_1 = require("./googleidentityaccesscontextmanagerv1serviceperimeter");
 // Asset
 /**
  * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy). See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more information.
@@ -39,41 +42,41 @@ var Asset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessLevel" }),
-        __metadata("design:type", GoogleIdentityAccesscontextmanagerV1AccessLevel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessLevel" }),
+        __metadata("design:type", googleidentityaccesscontextmanagerv1accesslevel_1.GoogleIdentityAccesscontextmanagerV1AccessLevel)
     ], Asset.prototype, "accessLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessPolicy" }),
-        __metadata("design:type", GoogleIdentityAccesscontextmanagerV1AccessPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessPolicy" }),
+        __metadata("design:type", googleidentityaccesscontextmanagerv1accesspolicy_1.GoogleIdentityAccesscontextmanagerV1AccessPolicy)
     ], Asset.prototype, "accessPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ancestors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ancestors" }),
         __metadata("design:type", Array)
     ], Asset.prototype, "ancestors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetType" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamPolicy" }),
-        __metadata("design:type", Policy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamPolicy" }),
+        __metadata("design:type", policy_1.Policy)
     ], Asset.prototype, "iamPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Asset.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgPolicy", elemType: GoogleCloudOrgpolicyV1Policy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgPolicy", elemType: googlecloudorgpolicyv1policy_1.GoogleCloudOrgpolicyV1Policy }),
         __metadata("design:type", Array)
     ], Asset.prototype, "orgPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], Asset.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicePerimeter" }),
-        __metadata("design:type", GoogleIdentityAccesscontextmanagerV1ServicePerimeter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicePerimeter" }),
+        __metadata("design:type", googleidentityaccesscontextmanagerv1serviceperimeter_1.GoogleIdentityAccesscontextmanagerV1ServicePerimeter)
     ], Asset.prototype, "servicePerimeter", void 0);
     return Asset;
-}(SpeakeasyBase));
-export { Asset };
+}(utils_1.SpeakeasyBase));
+exports.Asset = Asset;

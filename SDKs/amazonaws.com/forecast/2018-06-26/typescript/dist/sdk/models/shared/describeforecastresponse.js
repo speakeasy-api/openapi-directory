@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeForecastResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeForecastResponse = /** @class */ (function (_super) {
     __extends(DescribeForecastResponse, _super);
     function DescribeForecastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeForecastResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetGroupArn" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EstimatedTimeRemainingInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EstimatedTimeRemainingInMinutes" }),
         __metadata("design:type", Number)
     ], DescribeForecastResponse.prototype, "estimatedTimeRemainingInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastArn" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "forecastArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastName" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "forecastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastTypes" }),
         __metadata("design:type", Array)
     ], DescribeForecastResponse.prototype, "forecastTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], DescribeForecastResponse.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorArn" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "predictorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DescribeForecastResponse.prototype, "status", void 0);
     return DescribeForecastResponse;
-}(SpeakeasyBase));
-export { DescribeForecastResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeForecastResponse = DescribeForecastResponse;

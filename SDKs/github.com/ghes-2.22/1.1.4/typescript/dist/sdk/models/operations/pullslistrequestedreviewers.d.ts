@@ -15,7 +15,7 @@ export declare class PullsListRequestedReviewersRequest extends SpeakeasyBase {
 }
 export declare class PullsListRequestedReviewersResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     pullRequestReviewRequest?: shared.PullRequestReviewRequest;
 }

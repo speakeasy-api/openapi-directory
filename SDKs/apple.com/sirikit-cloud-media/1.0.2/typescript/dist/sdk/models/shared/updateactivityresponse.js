@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Queue } from "./queue";
-import { UserActivity } from "./useractivity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActivityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var queue_1 = require("./queue");
+var useractivity_1 = require("./useractivity");
 var UpdateActivityResponse = /** @class */ (function (_super) {
     __extends(UpdateActivityResponse, _super);
     function UpdateActivityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queue" }),
-        __metadata("design:type", Queue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queue" }),
+        __metadata("design:type", queue_1.Queue)
     ], UpdateActivityResponse.prototype, "queue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userActivity" }),
-        __metadata("design:type", UserActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userActivity" }),
+        __metadata("design:type", useractivity_1.UserActivity)
     ], UpdateActivityResponse.prototype, "userActivity", void 0);
     return UpdateActivityResponse;
-}(SpeakeasyBase));
-export { UpdateActivityResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateActivityResponse = UpdateActivityResponse;

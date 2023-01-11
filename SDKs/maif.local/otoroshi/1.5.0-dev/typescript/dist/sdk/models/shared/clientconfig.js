@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // ClientConfig
 /**
  * The configuration of the circuit breaker for a service descriptor
@@ -33,37 +36,37 @@ var ClientConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backoffFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backoffFactor" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "backoffFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callTimeout" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "callTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalTimeout" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "globalTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxErrors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxErrors" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "maxErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retries" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "retries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryInitialDelay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryInitialDelay" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "retryInitialDelay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleInterval" }),
         __metadata("design:type", Number)
     ], ClientConfig.prototype, "sampleInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useCircuitBreaker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useCircuitBreaker" }),
         __metadata("design:type", Boolean)
     ], ClientConfig.prototype, "useCircuitBreaker", void 0);
     return ClientConfig;
-}(SpeakeasyBase));
-export { ClientConfig };
+}(utils_1.SpeakeasyBase));
+exports.ClientConfig = ClientConfig;

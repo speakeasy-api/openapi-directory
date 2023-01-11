@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserProfile } from "./userprofile";
-import { DriveFolder } from "./drivefolder";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Student = void 0;
+var utils_1 = require("../../../internal/utils");
+var userprofile_1 = require("./userprofile");
+var drivefolder_1 = require("./drivefolder");
 // Student
 /**
  * Student in a course.
@@ -35,21 +38,21 @@ var Student = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=courseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=courseId" }),
         __metadata("design:type", String)
     ], Student.prototype, "courseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", UserProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", userprofile_1.UserProfile)
     ], Student.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studentWorkFolder" }),
-        __metadata("design:type", DriveFolder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studentWorkFolder" }),
+        __metadata("design:type", drivefolder_1.DriveFolder)
     ], Student.prototype, "studentWorkFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], Student.prototype, "userId", void 0);
     return Student;
-}(SpeakeasyBase));
-export { Student };
+}(utils_1.SpeakeasyBase));
+exports.Student = Student;

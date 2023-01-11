@@ -8,5 +8,5 @@ export declare class GetOrganizationSamlRequest extends SpeakeasyBase {
 export declare class GetOrganizationSamlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationSaml200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationSaml200ApplicationJSONObject?: Record<string, any>;
 }

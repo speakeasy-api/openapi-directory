@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AmqpRulePatchRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AmqpRulePatch = exports.AmqpRulePatchTarget = exports.AmqpRulePatchTargetHeaders = exports.AmqpRulePatchStatusEnum = exports.AmqpRulePatchRuleTypeEnum = exports.AmqpRulePatchRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AmqpRulePatchRequestModeEnum;
 (function (AmqpRulePatchRequestModeEnum) {
     AmqpRulePatchRequestModeEnum["Single"] = "single";
-})(AmqpRulePatchRequestModeEnum || (AmqpRulePatchRequestModeEnum = {}));
-export var AmqpRulePatchRuleTypeEnum;
+})(AmqpRulePatchRequestModeEnum = exports.AmqpRulePatchRequestModeEnum || (exports.AmqpRulePatchRequestModeEnum = {}));
+var AmqpRulePatchRuleTypeEnum;
 (function (AmqpRulePatchRuleTypeEnum) {
     AmqpRulePatchRuleTypeEnum["Amqp"] = "amqp";
-})(AmqpRulePatchRuleTypeEnum || (AmqpRulePatchRuleTypeEnum = {}));
-export var AmqpRulePatchStatusEnum;
+})(AmqpRulePatchRuleTypeEnum = exports.AmqpRulePatchRuleTypeEnum || (exports.AmqpRulePatchRuleTypeEnum = {}));
+var AmqpRulePatchStatusEnum;
 (function (AmqpRulePatchStatusEnum) {
     AmqpRulePatchStatusEnum["Enabled"] = "enabled";
     AmqpRulePatchStatusEnum["Disabled"] = "disabled";
-})(AmqpRulePatchStatusEnum || (AmqpRulePatchStatusEnum = {}));
+})(AmqpRulePatchStatusEnum = exports.AmqpRulePatchStatusEnum || (exports.AmqpRulePatchStatusEnum = {}));
 var AmqpRulePatchTargetHeaders = /** @class */ (function (_super) {
     __extends(AmqpRulePatchTargetHeaders, _super);
     function AmqpRulePatchTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AmqpRulePatchTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], AmqpRulePatchTargetHeaders.prototype, "value", void 0);
     return AmqpRulePatchTargetHeaders;
-}(SpeakeasyBase));
-export { AmqpRulePatchTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRulePatchTargetHeaders = AmqpRulePatchTargetHeaders;
 var AmqpRulePatchTarget = /** @class */ (function (_super) {
     __extends(AmqpRulePatchTarget, _super);
     function AmqpRulePatchTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AmqpRulePatchTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AmqpRulePatchTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: AmqpRulePatchTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: AmqpRulePatchTargetHeaders }),
         __metadata("design:type", Array)
     ], AmqpRulePatchTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueId" }),
         __metadata("design:type", String)
     ], AmqpRulePatchTarget.prototype, "queueId", void 0);
     return AmqpRulePatchTarget;
-}(SpeakeasyBase));
-export { AmqpRulePatchTarget };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRulePatchTarget = AmqpRulePatchTarget;
 var AmqpRulePatch = /** @class */ (function (_super) {
     __extends(AmqpRulePatch, _super);
     function AmqpRulePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AmqpRulePatch.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AmqpRulePatch.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AmqpRulePatch.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AmqpRulePatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AmqpRulePatchTarget)
     ], AmqpRulePatch.prototype, "target", void 0);
     return AmqpRulePatch;
-}(SpeakeasyBase));
-export { AmqpRulePatch };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRulePatch = AmqpRulePatch;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ThreeContentTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Three = exports.ThreeHeaders = exports.ThreeContentTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ThreeContentTypeEnum;
 (function (ThreeContentTypeEnum) {
     ThreeContentTypeEnum["AudioL16RateEqual8000"] = "audio/l16;rate=8000";
     ThreeContentTypeEnum["AudioL16RateEqual16000"] = "audio/l16;rate=16000";
-})(ThreeContentTypeEnum || (ThreeContentTypeEnum = {}));
+})(ThreeContentTypeEnum = exports.ThreeContentTypeEnum || (exports.ThreeContentTypeEnum = {}));
 // ThreeHeaders
 /**
  * Details of the Websocket you want to connect to
@@ -38,12 +41,12 @@ var ThreeHeaders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_id" }),
         __metadata("design:type", String)
     ], ThreeHeaders.prototype, "customerId", void 0);
     return ThreeHeaders;
-}(SpeakeasyBase));
-export { ThreeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ThreeHeaders = ThreeHeaders;
 // Three
 /**
  * Connect to a Websocket
@@ -54,21 +57,21 @@ var Three = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content-type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content-type" }),
         __metadata("design:type", String)
     ], Three.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
         __metadata("design:type", ThreeHeaders)
     ], Three.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Three.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Three.prototype, "uri", void 0);
     return Three;
-}(SpeakeasyBase));
-export { Three };
+}(utils_1.SpeakeasyBase));
+exports.Three = Three;

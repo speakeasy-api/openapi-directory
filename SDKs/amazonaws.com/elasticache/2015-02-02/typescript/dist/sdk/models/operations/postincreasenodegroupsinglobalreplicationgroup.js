@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostIncreaseNodeGroupsInGlobalReplicationGroupResponse = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupRequest = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum;
 (function (PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum) {
     PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum["IncreaseNodeGroupsInGlobalReplicationGroup"] = "IncreaseNodeGroupsInGlobalReplicationGroup";
-})(PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum || (PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum = {}));
-export var PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum;
+})(PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum || (exports.PostIncreaseNodeGroupsInGlobalReplicationGroupActionEnum = {}));
+var PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum;
 (function (PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum) {
     PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum || (PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum = {}));
+})(PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum = exports.PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum || (exports.PostIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum = {}));
 var PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams, _super);
     function PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams.prototype, "version", void 0);
     return PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams;
-}(SpeakeasyBase));
-export { PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams = PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams;
 var PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders = /** @class */ (function (_super) {
     __extends(PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders, _super);
     function PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders;
-}(SpeakeasyBase));
-export { PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders = PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders;
 var PostIncreaseNodeGroupsInGlobalReplicationGroupRequest = /** @class */ (function (_super) {
     __extends(PostIncreaseNodeGroupsInGlobalReplicationGroupRequest, _super);
     function PostIncreaseNodeGroupsInGlobalReplicationGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostIncreaseNodeGroupsInGlobalReplicationGroupQueryParams)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostIncreaseNodeGroupsInGlobalReplicationGroupHeaders)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupRequest.prototype, "request", void 0);
     return PostIncreaseNodeGroupsInGlobalReplicationGroupRequest;
-}(SpeakeasyBase));
-export { PostIncreaseNodeGroupsInGlobalReplicationGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostIncreaseNodeGroupsInGlobalReplicationGroupRequest = PostIncreaseNodeGroupsInGlobalReplicationGroupRequest;
 var PostIncreaseNodeGroupsInGlobalReplicationGroupResponse = /** @class */ (function (_super) {
     __extends(PostIncreaseNodeGroupsInGlobalReplicationGroupResponse, _super);
     function PostIncreaseNodeGroupsInGlobalReplicationGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostIncreaseNodeGroupsInGlobalReplicationGroupResponse.prototype, "statusCode", void 0);
     return PostIncreaseNodeGroupsInGlobalReplicationGroupResponse;
-}(SpeakeasyBase));
-export { PostIncreaseNodeGroupsInGlobalReplicationGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostIncreaseNodeGroupsInGlobalReplicationGroupResponse = PostIncreaseNodeGroupsInGlobalReplicationGroupResponse;

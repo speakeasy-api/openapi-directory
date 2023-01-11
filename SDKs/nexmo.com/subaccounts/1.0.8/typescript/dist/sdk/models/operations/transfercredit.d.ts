@@ -42,7 +42,7 @@ export declare class TransferCreditResponse extends SpeakeasyBase {
     statusCode: number;
     transferCreditResponse?: any;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    transferCredit401ApplicationJsonObject?: TransferCredit401ApplicationJson;
-    transferCredit404ApplicationJsonObject?: TransferCredit404ApplicationJson;
-    transferCredit422ApplicationJsonObject?: TransferCredit422ApplicationJson;
+    transferCredit401ApplicationJSONObject?: TransferCredit401ApplicationJson;
+    transferCredit404ApplicationJSONObject?: TransferCredit404ApplicationJson;
+    transferCredit422ApplicationJSONObject?: TransferCredit422ApplicationJson;
 }

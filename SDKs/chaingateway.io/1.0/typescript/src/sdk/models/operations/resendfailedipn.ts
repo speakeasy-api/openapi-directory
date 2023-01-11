@@ -26,5 +26,5 @@ export class ResendFailedIpnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  resendFailedIpn?: shared.ResendFailedIpn;
+  resendFailedIPN?: shared.ResendFailedIpn;
 }

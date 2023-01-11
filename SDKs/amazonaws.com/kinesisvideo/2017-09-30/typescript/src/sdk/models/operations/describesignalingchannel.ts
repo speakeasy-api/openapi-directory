@@ -29,7 +29,7 @@ export class DescribeSignalingChannelHeaders extends SpeakeasyBase {
 
 export class DescribeSignalingChannelRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn?: string;
+  channelARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ChannelName" })
   channelName?: string;

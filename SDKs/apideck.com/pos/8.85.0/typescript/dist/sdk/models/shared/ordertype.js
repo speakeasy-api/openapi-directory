@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var OrderTypeInput = /** @class */ (function (_super) {
-    __extends(OrderTypeInput, _super);
-    function OrderTypeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
-        __metadata("design:type", Boolean)
-    ], OrderTypeInput.prototype, "default", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], OrderTypeInput.prototype, "name", void 0);
-    return OrderTypeInput;
-}(SpeakeasyBase));
-export { OrderTypeInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderTypeInput = exports.OrderType = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderType = /** @class */ (function (_super) {
     __extends(OrderType, _super);
     function OrderType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], OrderType.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], OrderType.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", Boolean)
     ], OrderType.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OrderType.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OrderType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], OrderType.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], OrderType.prototype, "updatedBy", void 0);
     return OrderType;
-}(SpeakeasyBase));
-export { OrderType };
+}(utils_1.SpeakeasyBase));
+exports.OrderType = OrderType;
+var OrderTypeInput = /** @class */ (function (_super) {
+    __extends(OrderTypeInput, _super);
+    function OrderTypeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
+        __metadata("design:type", Boolean)
+    ], OrderTypeInput.prototype, "default", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], OrderTypeInput.prototype, "name", void 0);
+    return OrderTypeInput;
+}(utils_1.SpeakeasyBase));
+exports.OrderTypeInput = OrderTypeInput;

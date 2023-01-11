@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizationCodeLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // AuthorizationCodeLink
 /**
  * This configuration captures the details required to render an authorization link for the OAuth Authorization Code Flow.
@@ -33,21 +36,21 @@ var AuthorizationCodeLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], AuthorizationCodeLink.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePkce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePkce" }),
         __metadata("design:type", Boolean)
     ], AuthorizationCodeLink.prototype, "enablePkce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
         __metadata("design:type", Array)
     ], AuthorizationCodeLink.prototype, "scopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], AuthorizationCodeLink.prototype, "uri", void 0);
     return AuthorizationCodeLink;
-}(SpeakeasyBase));
-export { AuthorizationCodeLink };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizationCodeLink = AuthorizationCodeLink;

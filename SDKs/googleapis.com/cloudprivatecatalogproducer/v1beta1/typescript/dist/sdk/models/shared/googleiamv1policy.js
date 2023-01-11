@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIamV1AuditConfig } from "./googleiamv1auditconfig";
-import { GoogleIamV1Binding } from "./googleiamv1binding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIamV1Policy = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleiamv1auditconfig_1 = require("./googleiamv1auditconfig");
+var googleiamv1binding_1 = require("./googleiamv1binding");
 // GoogleIamV1Policy
 /**
  * An Identity and Access Management (IAM) policy, which specifies access
@@ -97,21 +100,21 @@ var GoogleIamV1Policy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditConfigs", elemType: GoogleIamV1AuditConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditConfigs", elemType: googleiamv1auditconfig_1.GoogleIamV1AuditConfig }),
         __metadata("design:type", Array)
     ], GoogleIamV1Policy.prototype, "auditConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bindings", elemType: GoogleIamV1Binding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bindings", elemType: googleiamv1binding_1.GoogleIamV1Binding }),
         __metadata("design:type", Array)
     ], GoogleIamV1Policy.prototype, "bindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleIamV1Policy.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], GoogleIamV1Policy.prototype, "version", void 0);
     return GoogleIamV1Policy;
-}(SpeakeasyBase));
-export { GoogleIamV1Policy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIamV1Policy = GoogleIamV1Policy;

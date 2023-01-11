@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostCreateTestCardRangesRequest, PostCreateTestCardRangesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,10 +33,10 @@ const req: PostCreateTestCardRangesRequest = {
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "qui",
+  request: "sit",
 };
 
-sdk.sdk.postCreateTestCardRanges(req).then((res: PostCreateTestCardRangesResponse | AxiosError) => {
+sdk.general.postCreateTestCardRanges(req).then((res: PostCreateTestCardRangesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,7 +45,7 @@ sdk.sdk.postCreateTestCardRanges(req).then((res: PostCreateTestCardRangesRespons
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `postCreateTestCardRanges` - Creates one or more test card ranges.
 

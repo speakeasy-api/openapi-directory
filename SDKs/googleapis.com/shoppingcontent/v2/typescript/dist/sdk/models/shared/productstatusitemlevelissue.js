@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductStatusItemLevelIssue = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductStatusItemLevelIssue = /** @class */ (function (_super) {
     __extends(ProductStatusItemLevelIssue, _super);
     function ProductStatusItemLevelIssue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeName" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "attributeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "documentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servability" }),
         __metadata("design:type", String)
     ], ProductStatusItemLevelIssue.prototype, "servability", void 0);
     return ProductStatusItemLevelIssue;
-}(SpeakeasyBase));
-export { ProductStatusItemLevelIssue };
+}(utils_1.SpeakeasyBase));
+exports.ProductStatusItemLevelIssue = ProductStatusItemLevelIssue;

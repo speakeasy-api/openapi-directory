@@ -62,7 +62,7 @@ export class CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsReque
   queryParams: CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: shared.GoogleCloudChannelV1ChangeRenewalSettingsRequest;
+  request?: shared.GoogleCloudChannelV1ChangeRenewalSettingsRequestInput;
 
   @SpeakeasyMetadata()
   security: CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsSecurity;

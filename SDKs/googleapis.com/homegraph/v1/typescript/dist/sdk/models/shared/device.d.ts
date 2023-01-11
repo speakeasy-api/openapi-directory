@@ -6,8 +6,8 @@ import { AgentOtherDeviceId } from "./agentotherdeviceid";
  * Third-party device definition. Next ID = 14
 **/
 export declare class Device extends SpeakeasyBase {
-    attributes?: Map<string, any>;
-    customData?: Map<string, any>;
+    attributes?: Record<string, any>;
+    customData?: Record<string, any>;
     deviceInfo?: DeviceInfo;
     id?: string;
     name?: DeviceNames;

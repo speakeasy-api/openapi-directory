@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TlsRoute } from "./tlsroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListTlsRoutesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var tlsroute_1 = require("./tlsroute");
 // ListTlsRoutesResponse
 /**
  * Response returned by the ListTlsRoutes method.
@@ -34,13 +37,13 @@ var ListTlsRoutesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListTlsRoutesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tlsRoutes", elemType: TlsRoute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tlsRoutes", elemType: tlsroute_1.TlsRoute }),
         __metadata("design:type", Array)
     ], ListTlsRoutesResponse.prototype, "tlsRoutes", void 0);
     return ListTlsRoutesResponse;
-}(SpeakeasyBase));
-export { ListTlsRoutesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListTlsRoutesResponse = ListTlsRoutesResponse;

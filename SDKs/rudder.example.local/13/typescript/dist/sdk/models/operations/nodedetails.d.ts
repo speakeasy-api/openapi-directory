@@ -31,5 +31,5 @@ export declare class NodeDetailsRequest extends SpeakeasyBase {
 export declare class NodeDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    nodeDetails200ApplicationJsonObject?: NodeDetails200ApplicationJson;
+    nodeDetails200ApplicationJSONObject?: NodeDetails200ApplicationJson;
 }

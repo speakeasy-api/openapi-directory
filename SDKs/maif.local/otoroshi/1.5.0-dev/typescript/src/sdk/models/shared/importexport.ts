@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalConfig } from "./globalconfig";
 import { Canary } from "./canary";
 import { ExposedApi } from "./exposedapi";
 import { ChaosConfig } from "./chaosconfig";
@@ -17,6 +16,7 @@ import { EsAlgoSettings } from "./esalgosettings";
 import { JwksAlgoSettings } from "./jwksalgosettings";
 import { StatsdConfig } from "./statsdconfig";
 import { Target } from "./target";
+import { GlobalConfig } from "./globalconfig";
 import { ImportExportStats } from "./importexportstats";
 
 
@@ -36,7 +36,7 @@ export class ImportExportAdmins extends SpeakeasyBase {
   password: string;
 
   @SpeakeasyMetadata({ data: "json, name=registration" })
-  registration: Map<string, string>;
+  registration: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=username" })
   username: string;
@@ -67,7 +67,7 @@ export class ImportExportApiKeys extends SpeakeasyBase {
   enabled: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=monthlyQuota" })
   monthlyQuota?: number;
@@ -83,7 +83,7 @@ export class ImportExportApiKeys extends SpeakeasyBase {
 **/
 export class ImportExportErrorTemplates extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=messages" })
-  messages: Map<string, string>;
+  messages: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=serviceId" })
   serviceId: string;
@@ -111,7 +111,7 @@ export class ImportExportServiceDescriptors extends SpeakeasyBase {
   canary?: Canary;
 
   @SpeakeasyMetadata({ data: "json, name=additionalHeaders" })
-  additionalHeaders?: Map<string, string>;
+  additionalHeaders?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=api" })
   api?: ExposedApi;
@@ -156,7 +156,7 @@ export class ImportExportServiceDescriptors extends SpeakeasyBase {
   gzip?: Gzip;
 
   @SpeakeasyMetadata({ data: "json, name=headersVerification" })
-  headersVerification?: Map<string, string>;
+  headersVerification?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=healthCheck" })
   healthCheck?: HealthCheck;
@@ -180,13 +180,13 @@ export class ImportExportServiceDescriptors extends SpeakeasyBase {
   maintenanceMode: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=matchingHeaders" })
-  matchingHeaders?: Map<string, string>;
+  matchingHeaders?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=matchingRoot" })
   matchingRoot?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -288,7 +288,7 @@ export class ImportExport extends SpeakeasyBase {
   apiKeys: ImportExportApiKeys[];
 
   @SpeakeasyMetadata({ data: "json, name=appConfig" })
-  appConfig?: Map<string, string>;
+  appConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=config" })
   config: GlobalConfig;

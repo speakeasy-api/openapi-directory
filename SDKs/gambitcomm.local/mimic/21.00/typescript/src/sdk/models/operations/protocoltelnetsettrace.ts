@@ -25,5 +25,5 @@ export class ProtocolTelnetSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetSetTrace200ApplicationJsonString?: string;
+  protocolTelnetSetTrace200ApplicationJSONString?: string;
 }

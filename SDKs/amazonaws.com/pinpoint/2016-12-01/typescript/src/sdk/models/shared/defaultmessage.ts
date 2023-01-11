@@ -11,5 +11,5 @@ export class DefaultMessage extends SpeakeasyBase {
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 }

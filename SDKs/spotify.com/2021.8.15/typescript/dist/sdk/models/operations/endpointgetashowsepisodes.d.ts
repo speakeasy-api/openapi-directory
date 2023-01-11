@@ -36,5 +36,5 @@ export declare class EndpointGetAShowsEpisodesResponse extends SpeakeasyBase {
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetAShowsEpisodes200ApplicationJsonObject?: EndpointGetAShowsEpisodes200ApplicationJson;
+    endpointGetAShowsEpisodes200ApplicationJSONObject?: EndpointGetAShowsEpisodes200ApplicationJson;
 }

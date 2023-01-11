@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SentimentAnalysisResponse = exports.SentimentAnalysisRequest = exports.SentimentAnalysisRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var SentimentAnalysisRequestBody = /** @class */ (function (_super) {
     __extends(SentimentAnalysisRequestBody, _super);
     function SentimentAnalysisRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], SentimentAnalysisRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], SentimentAnalysisRequestBody.prototype, "text", void 0);
     return SentimentAnalysisRequestBody;
-}(SpeakeasyBase));
-export { SentimentAnalysisRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SentimentAnalysisRequestBody = SentimentAnalysisRequestBody;
 var SentimentAnalysisRequest = /** @class */ (function (_super) {
     __extends(SentimentAnalysisRequest, _super);
     function SentimentAnalysisRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", SentimentAnalysisRequestBody)
     ], SentimentAnalysisRequest.prototype, "request", void 0);
     return SentimentAnalysisRequest;
-}(SpeakeasyBase));
-export { SentimentAnalysisRequest };
+}(utils_1.SpeakeasyBase));
+exports.SentimentAnalysisRequest = SentimentAnalysisRequest;
 var SentimentAnalysisResponse = /** @class */ (function (_super) {
     __extends(SentimentAnalysisResponse, _super);
     function SentimentAnalysisResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SentimentAnalysisResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SentimentAnalysisResponse.prototype, "statusCode", void 0);
     return SentimentAnalysisResponse;
-}(SpeakeasyBase));
-export { SentimentAnalysisResponse };
+}(utils_1.SpeakeasyBase));
+exports.SentimentAnalysisResponse = SentimentAnalysisResponse;

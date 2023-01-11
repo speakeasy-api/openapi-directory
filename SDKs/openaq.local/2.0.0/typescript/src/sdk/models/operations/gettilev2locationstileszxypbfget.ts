@@ -3,7 +3,7 @@ import * as shared from "../shared";
 
 
 
-export class GetTileV2LocationsTilesZXYPbfGetPathParams extends SpeakeasyBase {
+export class GetTileV2LocationsTilesZxyPbfGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=x" })
   x: number;
 
@@ -15,7 +15,7 @@ export class GetTileV2LocationsTilesZXYPbfGetPathParams extends SpeakeasyBase {
 }
 
 
-export class GetTileV2LocationsTilesZXYPbfGetQueryParams extends SpeakeasyBase {
+export class GetTileV2LocationsTilesZxyPbfGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=isAnalysis" })
   isAnalysis?: boolean;
 
@@ -39,16 +39,16 @@ export class GetTileV2LocationsTilesZXYPbfGetQueryParams extends SpeakeasyBase {
 }
 
 
-export class GetTileV2LocationsTilesZXYPbfGetRequest extends SpeakeasyBase {
+export class GetTileV2LocationsTilesZxyPbfGetRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetTileV2LocationsTilesZXYPbfGetPathParams;
+  pathParams: GetTileV2LocationsTilesZxyPbfGetPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetTileV2LocationsTilesZXYPbfGetQueryParams;
+  queryParams: GetTileV2LocationsTilesZxyPbfGetQueryParams;
 }
 
 
-export class GetTileV2LocationsTilesZXYPbfGetResponse extends SpeakeasyBase {
+export class GetTileV2LocationsTilesZxyPbfGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

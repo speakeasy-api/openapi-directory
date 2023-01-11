@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class MakeSubUserKeyMakeSubUserKeyPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiID" })
-  apiId: string;
+  apiID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiKey" })
   apiKey: string;
@@ -35,5 +35,5 @@ export class MakeSubUserKeyMakeSubUserKeyPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  subUserJsonWebToken?: shared.SubUserJsonWebToken;
+  subUserJSONWebToken?: shared.SubUserJsonWebToken;
 }

@@ -9,7 +9,7 @@ import { OracleRdbms } from "./oraclerdbms";
 **/
 export class OracleSourceConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dropLargeObjects" })
-  dropLargeObjects?: Map<string, any>;
+  dropLargeObjects?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=excludeObjects" })
   excludeObjects?: OracleRdbms;
@@ -21,5 +21,5 @@ export class OracleSourceConfig extends SpeakeasyBase {
   maxConcurrentCdcTasks?: number;
 
   @SpeakeasyMetadata({ data: "json, name=streamLargeObjects" })
-  streamLargeObjects?: Map<string, any>;
+  streamLargeObjects?: Record<string, any>;
 }

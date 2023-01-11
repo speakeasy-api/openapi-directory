@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// IdentityNotificationAttributes
-/**
- * Represents the notification attributes of an identity, including whether an identity has Amazon Simple Notification Service (Amazon SNS) topics set for bounce, complaint, and/or delivery notifications, and whether feedback forwarding is enabled for bounce and complaint notifications.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityNotificationAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var IdentityNotificationAttributes = /** @class */ (function (_super) {
     __extends(IdentityNotificationAttributes, _super);
     function IdentityNotificationAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdentityNotificationAttributes.prototype, "bounceTopic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdentityNotificationAttributes.prototype, "complaintTopic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdentityNotificationAttributes.prototype, "deliveryTopic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], IdentityNotificationAttributes.prototype, "forwardingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], IdentityNotificationAttributes.prototype, "headersInBounceNotificationsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], IdentityNotificationAttributes.prototype, "headersInComplaintNotificationsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], IdentityNotificationAttributes.prototype, "headersInDeliveryNotificationsEnabled", void 0);
     return IdentityNotificationAttributes;
-}(SpeakeasyBase));
-export { IdentityNotificationAttributes };
+}(utils_1.SpeakeasyBase));
+exports.IdentityNotificationAttributes = IdentityNotificationAttributes;

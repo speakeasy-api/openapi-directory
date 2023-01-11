@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstancePolicyOrTemplate } from "./instancepolicyortemplate";
-import { LocationPolicy } from "./locationpolicy";
-import { NetworkPolicy } from "./networkpolicy";
-import { ServiceAccount } from "./serviceaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllocationPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancepolicyortemplate_1 = require("./instancepolicyortemplate");
+var locationpolicy_1 = require("./locationpolicy");
+var networkpolicy_1 = require("./networkpolicy");
+var serviceaccount_1 = require("./serviceaccount");
 // AllocationPolicy
 /**
  * A Job's resource allocation policy describes when, where, and how compute resources should be allocated for the Job.
@@ -37,25 +40,25 @@ var AllocationPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: InstancePolicyOrTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instancepolicyortemplate_1.InstancePolicyOrTemplate }),
         __metadata("design:type", Array)
     ], AllocationPolicy.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AllocationPolicy.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", LocationPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", locationpolicy_1.LocationPolicy)
     ], AllocationPolicy.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", NetworkPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", networkpolicy_1.NetworkPolicy)
     ], AllocationPolicy.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
-        __metadata("design:type", ServiceAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
+        __metadata("design:type", serviceaccount_1.ServiceAccount)
     ], AllocationPolicy.prototype, "serviceAccount", void 0);
     return AllocationPolicy;
-}(SpeakeasyBase));
-export { AllocationPolicy };
+}(utils_1.SpeakeasyBase));
+exports.AllocationPolicy = AllocationPolicy;

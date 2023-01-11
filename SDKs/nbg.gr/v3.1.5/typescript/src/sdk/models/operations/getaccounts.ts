@@ -44,9 +44,6 @@ export class GetAccountsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   obErrorResponse1?: shared.ObErrorResponse1;
 
   @SpeakeasyMetadata()

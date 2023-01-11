@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1betaDocument } from "./googleclouddiscoveryenginev1betadocument";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1betadocument_1 = require("./googleclouddiscoveryenginev1betadocument");
 // GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource
 /**
  * The inline source for the input config for ImportDocuments method.
@@ -34,9 +37,9 @@ var GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documents", elemType: GoogleCloudDiscoveryengineV1betaDocument }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documents", elemType: googleclouddiscoveryenginev1betadocument_1.GoogleCloudDiscoveryengineV1betaDocument }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource.prototype, "documents", void 0);
     return GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource = GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource;

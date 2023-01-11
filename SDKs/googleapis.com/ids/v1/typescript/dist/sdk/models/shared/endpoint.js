@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EndpointSeverityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointInput = exports.Endpoint = exports.EndpointStateEnum = exports.EndpointSeverityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EndpointSeverityEnum;
 (function (EndpointSeverityEnum) {
     EndpointSeverityEnum["SeverityUnspecified"] = "SEVERITY_UNSPECIFIED";
     EndpointSeverityEnum["Informational"] = "INFORMATIONAL";
@@ -31,47 +34,15 @@ export var EndpointSeverityEnum;
     EndpointSeverityEnum["Medium"] = "MEDIUM";
     EndpointSeverityEnum["High"] = "HIGH";
     EndpointSeverityEnum["Critical"] = "CRITICAL";
-})(EndpointSeverityEnum || (EndpointSeverityEnum = {}));
-export var EndpointStateEnum;
+})(EndpointSeverityEnum = exports.EndpointSeverityEnum || (exports.EndpointSeverityEnum = {}));
+var EndpointStateEnum;
 (function (EndpointStateEnum) {
     EndpointStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     EndpointStateEnum["Creating"] = "CREATING";
     EndpointStateEnum["Ready"] = "READY";
     EndpointStateEnum["Deleting"] = "DELETING";
     EndpointStateEnum["Updating"] = "UPDATING";
-})(EndpointStateEnum || (EndpointStateEnum = {}));
-// EndpointInput
-/**
- * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
-**/
-var EndpointInput = /** @class */ (function (_super) {
-    __extends(EndpointInput, _super);
-    function EndpointInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], EndpointInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], EndpointInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", String)
-    ], EndpointInput.prototype, "network", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
-        __metadata("design:type", String)
-    ], EndpointInput.prototype, "severity", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficLogs" }),
-        __metadata("design:type", Boolean)
-    ], EndpointInput.prototype, "trafficLogs", void 0);
-    return EndpointInput;
-}(SpeakeasyBase));
-export { EndpointInput };
+})(EndpointStateEnum = exports.EndpointStateEnum || (exports.EndpointStateEnum = {}));
 // Endpoint
 /**
  * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
@@ -82,49 +53,81 @@ var Endpoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointForwardingRule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointForwardingRule" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "endpointForwardingRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointIp" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "endpointIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Endpoint.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficLogs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficLogs" }),
         __metadata("design:type", Boolean)
     ], Endpoint.prototype, "trafficLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "updateTime", void 0);
     return Endpoint;
-}(SpeakeasyBase));
-export { Endpoint };
+}(utils_1.SpeakeasyBase));
+exports.Endpoint = Endpoint;
+// EndpointInput
+/**
+ * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
+**/
+var EndpointInput = /** @class */ (function (_super) {
+    __extends(EndpointInput, _super);
+    function EndpointInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], EndpointInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], EndpointInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", String)
+    ], EndpointInput.prototype, "network", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
+        __metadata("design:type", String)
+    ], EndpointInput.prototype, "severity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficLogs" }),
+        __metadata("design:type", Boolean)
+    ], EndpointInput.prototype, "trafficLogs", void 0);
+    return EndpointInput;
+}(utils_1.SpeakeasyBase));
+exports.EndpointInput = EndpointInput;

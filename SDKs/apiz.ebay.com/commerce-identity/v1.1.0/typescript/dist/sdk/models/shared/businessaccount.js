@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { Contact } from "./contact";
-import { Phone } from "./phone";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessAccount = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var contact_1 = require("./contact");
+var phone_1 = require("./phone");
 // BusinessAccount
 /**
  * The type that defines the fields for the business account information.
@@ -36,37 +39,37 @@ var BusinessAccount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", address_1.Address)
     ], BusinessAccount.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doingBusinessAs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doingBusinessAs" }),
         __metadata("design:type", String)
     ], BusinessAccount.prototype, "doingBusinessAs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], BusinessAccount.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BusinessAccount.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContact" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContact" }),
+        __metadata("design:type", contact_1.Contact)
     ], BusinessAccount.prototype, "primaryContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryPhone" }),
-        __metadata("design:type", Phone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryPhone" }),
+        __metadata("design:type", phone_1.Phone)
     ], BusinessAccount.prototype, "primaryPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryPhone" }),
-        __metadata("design:type", Phone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryPhone" }),
+        __metadata("design:type", phone_1.Phone)
     ], BusinessAccount.prototype, "secondaryPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], BusinessAccount.prototype, "website", void 0);
     return BusinessAccount;
-}(SpeakeasyBase));
-export { BusinessAccount };
+}(utils_1.SpeakeasyBase));
+exports.BusinessAccount = BusinessAccount;

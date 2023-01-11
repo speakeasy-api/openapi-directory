@@ -106,11 +106,11 @@ export declare class DipcrRequest extends SpeakeasyBase {
 export declare class DipcrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dipcr400ApplicationJsonObject?: Dipcr400ApplicationJson;
-    dipcr401ApplicationJsonObject?: Dipcr401ApplicationJson;
-    dipcr404ApplicationJsonObject?: Dipcr404ApplicationJson;
-    dipcr500ApplicationJsonObject?: Dipcr500ApplicationJson;
-    dipcr502ApplicationJsonObject?: Dipcr502ApplicationJson;
-    dipcr503ApplicationJsonObject?: Dipcr503ApplicationJson;
-    dipcr504ApplicationJsonObject?: Dipcr504ApplicationJson;
+    dipcr400ApplicationJSONObject?: Dipcr400ApplicationJson;
+    dipcr401ApplicationJSONObject?: Dipcr401ApplicationJson;
+    dipcr404ApplicationJSONObject?: Dipcr404ApplicationJson;
+    dipcr500ApplicationJSONObject?: Dipcr500ApplicationJson;
+    dipcr502ApplicationJSONObject?: Dipcr502ApplicationJson;
+    dipcr503ApplicationJSONObject?: Dipcr503ApplicationJson;
+    dipcr504ApplicationJSONObject?: Dipcr504ApplicationJson;
 }

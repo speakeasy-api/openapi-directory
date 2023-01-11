@@ -191,23 +191,23 @@ export class CmcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cmcer400ApplicationJsonObject?: Cmcer400ApplicationJson;
+  cmcer400ApplicationJSONObject?: Cmcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer401ApplicationJsonObject?: Cmcer401ApplicationJson;
+  cmcer401ApplicationJSONObject?: Cmcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer404ApplicationJsonObject?: Cmcer404ApplicationJson;
+  cmcer404ApplicationJSONObject?: Cmcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer500ApplicationJsonObject?: Cmcer500ApplicationJson;
+  cmcer500ApplicationJSONObject?: Cmcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer502ApplicationJsonObject?: Cmcer502ApplicationJson;
+  cmcer502ApplicationJSONObject?: Cmcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer503ApplicationJsonObject?: Cmcer503ApplicationJson;
+  cmcer503ApplicationJSONObject?: Cmcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cmcer504ApplicationJsonObject?: Cmcer504ApplicationJson;
+  cmcer504ApplicationJSONObject?: Cmcer504ApplicationJson;
 }

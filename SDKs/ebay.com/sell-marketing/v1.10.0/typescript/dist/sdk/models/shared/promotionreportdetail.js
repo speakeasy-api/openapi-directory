@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PromotionReportDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // PromotionReportDetail
 /**
  * This type defines the fields in a promotion-level report.
@@ -34,69 +37,69 @@ var PromotionReportDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageItemDiscount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageItemDiscount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "averageItemDiscount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageItemRevenue" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageItemRevenue" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "averageItemRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageOrderDiscount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageOrderDiscount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "averageOrderDiscount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageOrderRevenue" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageOrderRevenue" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "averageOrderRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageOrderSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageOrderSize" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "averageOrderSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "baseSale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsSoldQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsSoldQuantity" }),
         __metadata("design:type", Number)
     ], PromotionReportDetail.prototype, "itemsSoldQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfOrdersSold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfOrdersSold" }),
         __metadata("design:type", Number)
     ], PromotionReportDetail.prototype, "numberOfOrdersSold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageSalesLift" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageSalesLift" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "percentageSalesLift", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionHref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionHref" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "promotionHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionId" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "promotionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionReportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionReportId" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "promotionReportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "promotionSale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionType" }),
         __metadata("design:type", String)
     ], PromotionReportDetail.prototype, "promotionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalDiscount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalDiscount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "totalDiscount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSale" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSale" }),
+        __metadata("design:type", amount_1.Amount)
     ], PromotionReportDetail.prototype, "totalSale", void 0);
     return PromotionReportDetail;
-}(SpeakeasyBase));
-export { PromotionReportDetail };
+}(utils_1.SpeakeasyBase));
+exports.PromotionReportDetail = PromotionReportDetail;

@@ -21,7 +21,7 @@ export declare class Channel extends SpeakeasyBase {
     etag?: string;
     id?: string;
     kind?: string;
-    localizations?: Map<string, ChannelLocalization>;
+    localizations?: Record<string, ChannelLocalization>;
     snippet?: ChannelSnippet;
     statistics?: ChannelStatistics;
     status?: ChannelStatus;

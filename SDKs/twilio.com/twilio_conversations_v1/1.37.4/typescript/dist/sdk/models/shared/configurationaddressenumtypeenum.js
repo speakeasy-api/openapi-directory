@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationAddressEnumTypeEnum = void 0;
+var ConfigurationAddressEnumTypeEnum;
+(function (ConfigurationAddressEnumTypeEnum) {
+    ConfigurationAddressEnumTypeEnum["Sms"] = "sms";
+    ConfigurationAddressEnumTypeEnum["Whatsapp"] = "whatsapp";
+    ConfigurationAddressEnumTypeEnum["Messenger"] = "messenger";
+    ConfigurationAddressEnumTypeEnum["Gbm"] = "gbm";
+})(ConfigurationAddressEnumTypeEnum = exports.ConfigurationAddressEnumTypeEnum || (exports.ConfigurationAddressEnumTypeEnum = {}));

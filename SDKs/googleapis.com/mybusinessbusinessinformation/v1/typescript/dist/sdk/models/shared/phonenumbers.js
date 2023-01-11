@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhoneNumbers = void 0;
+var utils_1 = require("../../../internal/utils");
 // PhoneNumbers
 /**
  * A collection of phone numbers for the business. During updates, both fields must be set. Clients may not update just the primary or additional phone numbers using the update mask. International phone format is preferred, such as "+1 415 555 0132", see more in (https://developers.google.com/style/phone-numbers#international-phone-numbers).
@@ -33,13 +36,13 @@ var PhoneNumbers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalPhones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalPhones" }),
         __metadata("design:type", Array)
     ], PhoneNumbers.prototype, "additionalPhones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryPhone" }),
         __metadata("design:type", String)
     ], PhoneNumbers.prototype, "primaryPhone", void 0);
     return PhoneNumbers;
-}(SpeakeasyBase));
-export { PhoneNumbers };
+}(utils_1.SpeakeasyBase));
+exports.PhoneNumbers = PhoneNumbers;

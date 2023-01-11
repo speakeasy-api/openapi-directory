@@ -2,18 +2,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum ReposListPublicVisibilityEnum {
-    All = "all",
-    Public = "public"
-}
-
 
 export class ReposListPublicQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=since" })
   since?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=visibility" })
-  visibility?: ReposListPublicVisibilityEnum;
+  visibility?: shared.SinceRepoEnum;
 }
 
 
@@ -28,7 +23,7 @@ export class ReposListPublicResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

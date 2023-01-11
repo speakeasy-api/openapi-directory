@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetLatestTotalsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLatestTotalsResponse = exports.GetLatestTotalsRequest = exports.GetLatestTotals200ApplicationJson = exports.GetLatestTotalsQueryParams = exports.GetLatestTotalsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetLatestTotalsFormatEnum;
 (function (GetLatestTotalsFormatEnum) {
     GetLatestTotalsFormatEnum["Json"] = "json";
     GetLatestTotalsFormatEnum["Xml"] = "xml";
-})(GetLatestTotalsFormatEnum || (GetLatestTotalsFormatEnum = {}));
+})(GetLatestTotalsFormatEnum = exports.GetLatestTotalsFormatEnum || (exports.GetLatestTotalsFormatEnum = {}));
 var GetLatestTotalsQueryParams = /** @class */ (function (_super) {
     __extends(GetLatestTotalsQueryParams, _super);
     function GetLatestTotalsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetLatestTotalsQueryParams.prototype, "format", void 0);
     return GetLatestTotalsQueryParams;
-}(SpeakeasyBase));
-export { GetLatestTotalsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestTotalsQueryParams = GetLatestTotalsQueryParams;
 var GetLatestTotals200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLatestTotals200ApplicationJson, _super);
     function GetLatestTotals200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Number)
     ], GetLatestTotals200ApplicationJson.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critical" }),
         __metadata("design:type", Number)
     ], GetLatestTotals200ApplicationJson.prototype, "critical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deaths" }),
         __metadata("design:type", Number)
     ], GetLatestTotals200ApplicationJson.prototype, "deaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChange" }),
         __metadata("design:type", Date)
     ], GetLatestTotals200ApplicationJson.prototype, "lastChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdate" }),
         __metadata("design:type", Date)
     ], GetLatestTotals200ApplicationJson.prototype, "lastUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovered" }),
         __metadata("design:type", Number)
     ], GetLatestTotals200ApplicationJson.prototype, "recovered", void 0);
     return GetLatestTotals200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLatestTotals200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestTotals200ApplicationJson = GetLatestTotals200ApplicationJson;
 var GetLatestTotalsRequest = /** @class */ (function (_super) {
     __extends(GetLatestTotalsRequest, _super);
     function GetLatestTotalsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLatestTotalsQueryParams)
     ], GetLatestTotalsRequest.prototype, "queryParams", void 0);
     return GetLatestTotalsRequest;
-}(SpeakeasyBase));
-export { GetLatestTotalsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestTotalsRequest = GetLatestTotalsRequest;
 var GetLatestTotalsResponse = /** @class */ (function (_super) {
     __extends(GetLatestTotalsResponse, _super);
     function GetLatestTotalsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetLatestTotalsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLatestTotalsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLatestTotalsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetLatestTotals200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetLatestTotals200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetLatestTotalsResponse.prototype, "getLatestTotals200ApplicationJsonObjects", void 0);
+    ], GetLatestTotalsResponse.prototype, "getLatestTotals200ApplicationJSONObjects", void 0);
     return GetLatestTotalsResponse;
-}(SpeakeasyBase));
-export { GetLatestTotalsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestTotalsResponse = GetLatestTotalsResponse;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcompanymatchRequest, GetcompanymatchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcompanymatchRequest = {
   queryParams: {
-    company: "nihil",
-    license: "fugiat",
+    company: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getcompanymatch(req).then((res: GetcompanymatchResponse | AxiosError) => {
+sdk.companyNameSimilarityKey.getcompanymatch(req).then((res: GetcompanymatchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcompanymatch(req).then((res: GetcompanymatchResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Company Name Similarity Key
 
 * `getcompanymatch` - Gets a similarity key for matching purposes for company name data
 

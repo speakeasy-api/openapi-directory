@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsBlockIdResponse = exports.OptionsBlockIdRequest = exports.OptionsBlockIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsBlockIdPathParams = /** @class */ (function (_super) {
     __extends(OptionsBlockIdPathParams, _super);
     function OptionsBlockIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], OptionsBlockIdPathParams.prototype, "id", void 0);
     return OptionsBlockIdPathParams;
-}(SpeakeasyBase));
-export { OptionsBlockIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdPathParams = OptionsBlockIdPathParams;
 var OptionsBlockIdRequest = /** @class */ (function (_super) {
     __extends(OptionsBlockIdRequest, _super);
     function OptionsBlockIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsBlockIdPathParams)
     ], OptionsBlockIdRequest.prototype, "pathParams", void 0);
     return OptionsBlockIdRequest;
-}(SpeakeasyBase));
-export { OptionsBlockIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdRequest = OptionsBlockIdRequest;
 var OptionsBlockIdResponse = /** @class */ (function (_super) {
     __extends(OptionsBlockIdResponse, _super);
     function OptionsBlockIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsBlockIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockIdResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockIdResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsBlockIdResponse.prototype, "statusCode", void 0);
     return OptionsBlockIdResponse;
-}(SpeakeasyBase));
-export { OptionsBlockIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdResponse = OptionsBlockIdResponse;

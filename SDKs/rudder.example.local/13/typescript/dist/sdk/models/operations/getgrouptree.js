@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGroupTree200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGroupTreeResponse = exports.GetGroupTree200ApplicationJson = exports.GetGroupTree200ApplicationJsonResultEnum = exports.GetGroupTree200ApplicationJsonData = exports.GetGroupTree200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGroupTree200ApplicationJsonActionEnum;
 (function (GetGroupTree200ApplicationJsonActionEnum) {
     GetGroupTree200ApplicationJsonActionEnum["GetGroupTree"] = "GetGroupTree";
-})(GetGroupTree200ApplicationJsonActionEnum || (GetGroupTree200ApplicationJsonActionEnum = {}));
+})(GetGroupTree200ApplicationJsonActionEnum = exports.GetGroupTree200ApplicationJsonActionEnum || (exports.GetGroupTree200ApplicationJsonActionEnum = {}));
 var GetGroupTree200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetGroupTree200ApplicationJsonData, _super);
     function GetGroupTree200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupCategories" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupCategories" }),
+        __metadata("design:type", Object)
     ], GetGroupTree200ApplicationJsonData.prototype, "groupCategories", void 0);
     return GetGroupTree200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetGroupTree200ApplicationJsonData };
-export var GetGroupTree200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetGroupTree200ApplicationJsonData = GetGroupTree200ApplicationJsonData;
+var GetGroupTree200ApplicationJsonResultEnum;
 (function (GetGroupTree200ApplicationJsonResultEnum) {
     GetGroupTree200ApplicationJsonResultEnum["Success"] = "success";
     GetGroupTree200ApplicationJsonResultEnum["Error"] = "error";
-})(GetGroupTree200ApplicationJsonResultEnum || (GetGroupTree200ApplicationJsonResultEnum = {}));
+})(GetGroupTree200ApplicationJsonResultEnum = exports.GetGroupTree200ApplicationJsonResultEnum || (exports.GetGroupTree200ApplicationJsonResultEnum = {}));
 var GetGroupTree200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetGroupTree200ApplicationJson, _super);
     function GetGroupTree200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetGroupTree200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetGroupTree200ApplicationJsonData)
     ], GetGroupTree200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetGroupTree200ApplicationJson.prototype, "result", void 0);
     return GetGroupTree200ApplicationJson;
-}(SpeakeasyBase));
-export { GetGroupTree200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupTree200ApplicationJson = GetGroupTree200ApplicationJson;
 var GetGroupTreeResponse = /** @class */ (function (_super) {
     __extends(GetGroupTreeResponse, _super);
     function GetGroupTreeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGroupTreeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGroupTree200ApplicationJson)
-    ], GetGroupTreeResponse.prototype, "getGroupTree200ApplicationJsonObject", void 0);
+    ], GetGroupTreeResponse.prototype, "getGroupTree200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGroupTreeResponse.prototype, "statusCode", void 0);
     return GetGroupTreeResponse;
-}(SpeakeasyBase));
-export { GetGroupTreeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupTreeResponse = GetGroupTreeResponse;

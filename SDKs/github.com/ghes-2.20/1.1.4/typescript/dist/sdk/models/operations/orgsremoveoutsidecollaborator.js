@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgsRemoveOutsideCollaboratorResponse = exports.OrgsRemoveOutsideCollaboratorRequest = exports.OrgsRemoveOutsideCollaborator422ApplicationJson = exports.OrgsRemoveOutsideCollaboratorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrgsRemoveOutsideCollaboratorPathParams = /** @class */ (function (_super) {
     __extends(OrgsRemoveOutsideCollaboratorPathParams, _super);
     function OrgsRemoveOutsideCollaboratorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], OrgsRemoveOutsideCollaboratorPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], OrgsRemoveOutsideCollaboratorPathParams.prototype, "username", void 0);
     return OrgsRemoveOutsideCollaboratorPathParams;
-}(SpeakeasyBase));
-export { OrgsRemoveOutsideCollaboratorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemoveOutsideCollaboratorPathParams = OrgsRemoveOutsideCollaboratorPathParams;
 var OrgsRemoveOutsideCollaborator422ApplicationJson = /** @class */ (function (_super) {
     __extends(OrgsRemoveOutsideCollaborator422ApplicationJson, _super);
     function OrgsRemoveOutsideCollaborator422ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], OrgsRemoveOutsideCollaborator422ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], OrgsRemoveOutsideCollaborator422ApplicationJson.prototype, "message", void 0);
     return OrgsRemoveOutsideCollaborator422ApplicationJson;
-}(SpeakeasyBase));
-export { OrgsRemoveOutsideCollaborator422ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemoveOutsideCollaborator422ApplicationJson = OrgsRemoveOutsideCollaborator422ApplicationJson;
 var OrgsRemoveOutsideCollaboratorRequest = /** @class */ (function (_super) {
     __extends(OrgsRemoveOutsideCollaboratorRequest, _super);
     function OrgsRemoveOutsideCollaboratorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsRemoveOutsideCollaboratorPathParams)
     ], OrgsRemoveOutsideCollaboratorRequest.prototype, "pathParams", void 0);
     return OrgsRemoveOutsideCollaboratorRequest;
-}(SpeakeasyBase));
-export { OrgsRemoveOutsideCollaboratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemoveOutsideCollaboratorRequest = OrgsRemoveOutsideCollaboratorRequest;
 var OrgsRemoveOutsideCollaboratorResponse = /** @class */ (function (_super) {
     __extends(OrgsRemoveOutsideCollaboratorResponse, _super);
     function OrgsRemoveOutsideCollaboratorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrgsRemoveOutsideCollaboratorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OrgsRemoveOutsideCollaboratorResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsRemoveOutsideCollaborator422ApplicationJson)
-    ], OrgsRemoveOutsideCollaboratorResponse.prototype, "orgsRemoveOutsideCollaborator422ApplicationJsonObject", void 0);
+    ], OrgsRemoveOutsideCollaboratorResponse.prototype, "orgsRemoveOutsideCollaborator422ApplicationJSONObject", void 0);
     return OrgsRemoveOutsideCollaboratorResponse;
-}(SpeakeasyBase));
-export { OrgsRemoveOutsideCollaboratorResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemoveOutsideCollaboratorResponse = OrgsRemoveOutsideCollaboratorResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { BaseF3XFiling } from "./basef3xfiling";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseF3XFilingPage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var basef3xfiling_1 = require("./basef3xfiling");
 var BaseF3XFilingPage = /** @class */ (function (_super) {
     __extends(BaseF3XFilingPage, _super);
     function BaseF3XFilingPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], BaseF3XFilingPage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: BaseF3XFiling }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: basef3xfiling_1.BaseF3XFiling }),
         __metadata("design:type", Array)
     ], BaseF3XFilingPage.prototype, "results", void 0);
     return BaseF3XFilingPage;
-}(SpeakeasyBase));
-export { BaseF3XFilingPage };
+}(utils_1.SpeakeasyBase));
+exports.BaseF3XFilingPage = BaseF3XFilingPage;

@@ -1,39 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { GeoCoordsReadOnly } from "./geocoordsreadonly";
 import { ItemProtocolEnum } from "./itemprotocolenum";
 import { TechnologyEnum } from "./technologyenum";
 import { ItemTypeEnum } from "./itemtypeenum";
-import { GeoCoordsReadOnly } from "./geocoordsreadonly";
 
-
-
-export class ItemInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=code_hex" })
-  codeHex?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
-
-  @SpeakeasyMetadata({ data: "json, name=custom" })
-  custom?: any;
-
-  @SpeakeasyMetadata({ data: "json, name=label" })
-  label?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=location_request" })
-  locationRequest?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
-
-  @SpeakeasyMetadata({ data: "json, name=protocol" })
-  protocol?: ItemProtocolEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=technology" })
-  technology?: TechnologyEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: ItemTypeEnum;
-}
 
 
 export class Item extends SpeakeasyBase {
@@ -41,7 +11,7 @@ export class Item extends SpeakeasyBase {
   codeHex?: string;
 
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=custom" })
   custom?: any;
@@ -62,7 +32,7 @@ export class Item extends SpeakeasyBase {
   locationRequest?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=move_count" })
   moveCount?: number;
@@ -93,4 +63,34 @@ export class Item extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
+}
+
+
+export class ItemInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=code_hex" })
+  codeHex?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=config_request" })
+  configRequest?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=custom" })
+  custom?: any;
+
+  @SpeakeasyMetadata({ data: "json, name=label" })
+  label?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=location_request" })
+  locationRequest?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=metadata" })
+  metadata?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=protocol" })
+  protocol?: ItemProtocolEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=technology" })
+  technology?: TechnologyEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: ItemTypeEnum;
 }

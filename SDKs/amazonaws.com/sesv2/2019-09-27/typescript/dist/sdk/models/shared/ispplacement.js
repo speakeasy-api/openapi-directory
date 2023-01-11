@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlacementStatistics } from "./placementstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IspPlacement = void 0;
+var utils_1 = require("../../../internal/utils");
+var placementstatistics_1 = require("./placementstatistics");
 // IspPlacement
 /**
  * An object that describes how email sent during the predictive inbox placement test was handled by a certain email provider.
@@ -34,13 +37,13 @@ var IspPlacement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IspName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IspName" }),
         __metadata("design:type", String)
     ], IspPlacement.prototype, "ispName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PlacementStatistics" }),
-        __metadata("design:type", PlacementStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PlacementStatistics" }),
+        __metadata("design:type", placementstatistics_1.PlacementStatistics)
     ], IspPlacement.prototype, "placementStatistics", void 0);
     return IspPlacement;
-}(SpeakeasyBase));
-export { IspPlacement };
+}(utils_1.SpeakeasyBase));
+exports.IspPlacement = IspPlacement;

@@ -14,7 +14,7 @@ export class FormTableColumnDefinition extends SpeakeasyBase {
   anchorMode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ColumnID" })
-  columnId?: string;
+  columnID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=DataType" })
   dataType?: string;

@@ -26,5 +26,5 @@ export class GistsCheckIsStarredResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  gistsCheckIsStarred404ApplicationJsonObject?: Map<string, any>;
+  gistsCheckIsStarred404ApplicationJSONObject?: Record<string, any>;
 }

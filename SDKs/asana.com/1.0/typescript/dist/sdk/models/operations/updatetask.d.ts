@@ -22,5 +22,5 @@ export declare class UpdateTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateTask200ApplicationJsonObject?: UpdateTask200ApplicationJson;
+    updateTask200ApplicationJSONObject?: UpdateTask200ApplicationJson;
 }

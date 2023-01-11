@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetObjectsWithXdBsDiffUsingGetResponse = exports.GetObjectsWithXdBsDiffUsingGetRequest = exports.GetObjectsWithXdBsDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetObjectsWithXdBsDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetObjectsWithXdBsDiffUsingGetPathParams, _super);
     function GetObjectsWithXdBsDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=objectKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=objectKey" }),
         __metadata("design:type", Number)
     ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "objectKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetObjectsWithXdBsDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetObjectsWithXdBsDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetObjectsWithXdBsDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithXdBsDiffUsingGetPathParams = GetObjectsWithXdBsDiffUsingGetPathParams;
 var GetObjectsWithXdBsDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetObjectsWithXdBsDiffUsingGetRequest, _super);
     function GetObjectsWithXdBsDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetObjectsWithXdBsDiffUsingGetPathParams)
     ], GetObjectsWithXdBsDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetObjectsWithXdBsDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetObjectsWithXdBsDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithXdBsDiffUsingGetRequest = GetObjectsWithXdBsDiffUsingGetRequest;
 var GetObjectsWithXdBsDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetObjectsWithXdBsDiffUsingGetResponse, _super);
     function GetObjectsWithXdBsDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetObjectsWithXdBsDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetObjectsWithXdBsDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetObjectsWithXdBsDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetObjectsWithXdBsDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetObjectsWithXdBsDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithXdBsDiffUsingGetResponse = GetObjectsWithXdBsDiffUsingGetResponse;

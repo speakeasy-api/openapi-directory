@@ -23,5 +23,5 @@ export declare class UpdateSubscriptionDefinitionResponse extends SpeakeasyBase 
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateSubscriptionDefinitionResponse?: Map<string, any>;
+    updateSubscriptionDefinitionResponse?: Record<string, any>;
 }

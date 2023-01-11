@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BandwidthSnapshotEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // BandwidthSnapshotEntity
 /**
  * List Bandwidth Snapshots
@@ -33,49 +36,49 @@ var BandwidthSnapshotEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytes_received" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytes_received" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "bytesReceived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytes_sent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytes_sent" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "bytesSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], BandwidthSnapshotEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logged_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logged_at" }),
         __metadata("design:type", Date)
     ], BandwidthSnapshotEntity.prototype, "loggedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests_get" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests_get" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "requestsGet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests_other" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests_other" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "requestsOther", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests_put" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests_put" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "requestsPut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sync_bytes_received" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sync_bytes_received" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "syncBytesReceived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sync_bytes_sent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sync_bytes_sent" }),
         __metadata("design:type", Number)
     ], BandwidthSnapshotEntity.prototype, "syncBytesSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], BandwidthSnapshotEntity.prototype, "updatedAt", void 0);
     return BandwidthSnapshotEntity;
-}(SpeakeasyBase));
-export { BandwidthSnapshotEntity };
+}(utils_1.SpeakeasyBase));
+exports.BandwidthSnapshotEntity = BandwidthSnapshotEntity;

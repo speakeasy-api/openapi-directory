@@ -53,5 +53,5 @@ export class DcimDeviceBaysListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimDeviceBaysList200ApplicationJsonObject?: DcimDeviceBaysList200ApplicationJson;
+  dcimDeviceBaysList200ApplicationJSONObject?: DcimDeviceBaysList200ApplicationJson;
 }

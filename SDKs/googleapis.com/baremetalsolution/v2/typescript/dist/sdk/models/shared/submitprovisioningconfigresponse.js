@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProvisioningConfig } from "./provisioningconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmitProvisioningConfigResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var provisioningconfig_1 = require("./provisioningconfig");
 // SubmitProvisioningConfigResponse
 /**
  * Response for SubmitProvisioningConfig.
@@ -34,9 +37,9 @@ var SubmitProvisioningConfigResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioningConfig" }),
-        __metadata("design:type", ProvisioningConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioningConfig" }),
+        __metadata("design:type", provisioningconfig_1.ProvisioningConfig)
     ], SubmitProvisioningConfigResponse.prototype, "provisioningConfig", void 0);
     return SubmitProvisioningConfigResponse;
-}(SpeakeasyBase));
-export { SubmitProvisioningConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.SubmitProvisioningConfigResponse = SubmitProvisioningConfigResponse;

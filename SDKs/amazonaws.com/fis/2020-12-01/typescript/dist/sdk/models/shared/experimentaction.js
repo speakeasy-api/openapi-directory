@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentActionState } from "./experimentactionstate";
-// ExperimentAction
-/**
- * Describes the action for an experiment.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExperimentAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimentactionstate_1 = require("./experimentactionstate");
 var ExperimentAction = /** @class */ (function (_super) {
     __extends(ExperimentAction, _super);
     function ExperimentAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionId" }),
         __metadata("design:type", String)
     ], ExperimentAction.prototype, "actionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ExperimentAction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], ExperimentAction.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAfter" }),
         __metadata("design:type", Array)
     ], ExperimentAction.prototype, "startAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", ExperimentActionState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", experimentactionstate_1.ExperimentActionState)
     ], ExperimentAction.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
+        __metadata("design:type", Object)
     ], ExperimentAction.prototype, "targets", void 0);
     return ExperimentAction;
-}(SpeakeasyBase));
-export { ExperimentAction };
+}(utils_1.SpeakeasyBase));
+exports.ExperimentAction = ExperimentAction;

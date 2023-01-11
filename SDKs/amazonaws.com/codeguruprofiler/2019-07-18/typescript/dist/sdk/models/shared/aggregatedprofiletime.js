@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregationPeriodEnum } from "./aggregationperiodenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregatedProfileTime = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregationperiodenum_1 = require("./aggregationperiodenum");
 // AggregatedProfileTime
 /**
  *  Specifies the aggregation period and aggregation start time for an aggregated profile. An aggregated profile is used to collect posted agent profiles during an aggregation period. There are three possible aggregation periods (1 day, 1 hour, or 5 minutes).
@@ -34,13 +37,13 @@ var AggregatedProfileTime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], AggregatedProfileTime.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Date)
     ], AggregatedProfileTime.prototype, "start", void 0);
     return AggregatedProfileTime;
-}(SpeakeasyBase));
-export { AggregatedProfileTime };
+}(utils_1.SpeakeasyBase));
+exports.AggregatedProfileTime = AggregatedProfileTime;

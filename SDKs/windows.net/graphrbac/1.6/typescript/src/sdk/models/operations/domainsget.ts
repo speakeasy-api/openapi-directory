@@ -7,7 +7,7 @@ export class DomainsGetPathParams extends SpeakeasyBase {
   domainName: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -31,7 +31,7 @@ export class DomainsGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  domain?: Map<string, Map<string, any>>;
+  domain?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   statusCode: number;

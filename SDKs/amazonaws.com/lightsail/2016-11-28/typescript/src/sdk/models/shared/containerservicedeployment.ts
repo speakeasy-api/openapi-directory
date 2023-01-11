@@ -11,7 +11,7 @@ import { ContainerServiceDeploymentStateEnum } from "./containerservicedeploymen
 **/
 export class ContainerServiceDeployment extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=containers", elemType: Container })
-  containers?: Map<string, Container>;
+  containers?: Record<string, Container>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt?: Date;

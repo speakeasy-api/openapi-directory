@@ -27,7 +27,7 @@ export declare class ListAwsDefaultServiceQuotasResponse extends SpeakeasyBase {
     contentType: string;
     illegalArgumentException?: any;
     invalidPaginationTokenException?: any;
-    listAwsDefaultServiceQuotasResponse?: shared.ListAwsDefaultServiceQuotasResponse;
+    listAWSDefaultServiceQuotasResponse?: shared.ListAwsDefaultServiceQuotasResponse;
     noSuchResourceException?: any;
     serviceException?: any;
     statusCode: number;

@@ -10,5 +10,5 @@ export declare enum GoogleCloudRecommenderV1InsightStateInfoStateEnum {
 **/
 export declare class GoogleCloudRecommenderV1InsightStateInfo extends SpeakeasyBase {
     state?: GoogleCloudRecommenderV1InsightStateInfoStateEnum;
-    stateMetadata?: Map<string, string>;
+    stateMetadata?: Record<string, string>;
 }

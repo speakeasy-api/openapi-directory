@@ -11,7 +11,7 @@ export class GetOrganizationAuditlogsPathParams extends SpeakeasyBase {
 
 export class GetOrganizationAuditlogsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=auditLogType" })
-  auditLogType?: Map<string, any>;
+  auditLogType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=configId" })
   configId?: string;

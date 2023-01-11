@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryArgProfiles } from "./queryargprofiles";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryArgProfileConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var queryargprofiles_1 = require("./queryargprofiles");
 // QueryArgProfileConfig
 /**
  * Configuration for query argument-profile mapping for field-level encryption.
@@ -34,13 +37,13 @@ var QueryArgProfileConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], QueryArgProfileConfig.prototype, "forwardWhenQueryArgProfileIsUnknown", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", QueryArgProfiles)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", queryargprofiles_1.QueryArgProfiles)
     ], QueryArgProfileConfig.prototype, "queryArgProfiles", void 0);
     return QueryArgProfileConfig;
-}(SpeakeasyBase));
-export { QueryArgProfileConfig };
+}(utils_1.SpeakeasyBase));
+exports.QueryArgProfileConfig = QueryArgProfileConfig;

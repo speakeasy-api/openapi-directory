@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1FeedbackMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1FeedbackMessage
 /**
  * A feedback message inside a feedback thread.
@@ -33,29 +36,29 @@ var GoogleCloudDatalabelingV1beta1FeedbackMessage = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorFeedbackMetadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorFeedbackMetadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "operatorFeedbackMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requesterFeedbackMetadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requesterFeedbackMetadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDatalabelingV1beta1FeedbackMessage.prototype, "requesterFeedbackMetadata", void 0);
     return GoogleCloudDatalabelingV1beta1FeedbackMessage;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1FeedbackMessage };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1FeedbackMessage = GoogleCloudDatalabelingV1beta1FeedbackMessage;

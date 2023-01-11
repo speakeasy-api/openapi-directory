@@ -7,7 +7,7 @@ export class QueryForecastRequest extends SpeakeasyBase {
   endDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Filters" })
-  filters: Map<string, string>;
+  filters: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ForecastArn" })
   forecastArn: string;

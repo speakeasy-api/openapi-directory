@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// GkeCluster
-/**
- * GkeCluster contains information specific to GKE clusters.
-**/
-var GkeCluster = /** @class */ (function (_super) {
-    __extends(GkeCluster, _super);
-    function GkeCluster() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterMissing" }),
-        __metadata("design:type", Boolean)
-    ], GkeCluster.prototype, "clusterMissing", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
-        __metadata("design:type", String)
-    ], GkeCluster.prototype, "resourceLink", void 0);
-    return GkeCluster;
-}(SpeakeasyBase));
-export { GkeCluster };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GkeCluster = exports.GkeClusterInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // GkeClusterInput
 /**
  * GkeCluster contains information specific to GKE clusters.
@@ -53,9 +36,29 @@ var GkeClusterInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
         __metadata("design:type", String)
     ], GkeClusterInput.prototype, "resourceLink", void 0);
     return GkeClusterInput;
-}(SpeakeasyBase));
-export { GkeClusterInput };
+}(utils_1.SpeakeasyBase));
+exports.GkeClusterInput = GkeClusterInput;
+// GkeCluster
+/**
+ * GkeCluster contains information specific to GKE clusters.
+**/
+var GkeCluster = /** @class */ (function (_super) {
+    __extends(GkeCluster, _super);
+    function GkeCluster() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterMissing" }),
+        __metadata("design:type", Boolean)
+    ], GkeCluster.prototype, "clusterMissing", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
+        __metadata("design:type", String)
+    ], GkeCluster.prototype, "resourceLink", void 0);
+    return GkeCluster;
+}(utils_1.SpeakeasyBase));
+exports.GkeCluster = GkeCluster;

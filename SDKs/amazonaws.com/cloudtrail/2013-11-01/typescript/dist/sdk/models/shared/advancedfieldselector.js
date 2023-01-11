@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdvancedFieldSelector = void 0;
+var utils_1 = require("../../../internal/utils");
 // AdvancedFieldSelector
 /**
  * A single selector statement in an advanced event selector.
@@ -33,33 +36,33 @@ var AdvancedFieldSelector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndsWith" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndsWith" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "endsWith", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Equals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Equals" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "equals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Field" }),
         __metadata("design:type", String)
     ], AdvancedFieldSelector.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotEndsWith" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotEndsWith" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "notEndsWith", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotEquals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotEquals" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "notEquals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotStartsWith" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotStartsWith" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "notStartsWith", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartsWith" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartsWith" }),
         __metadata("design:type", Array)
     ], AdvancedFieldSelector.prototype, "startsWith", void 0);
     return AdvancedFieldSelector;
-}(SpeakeasyBase));
-export { AdvancedFieldSelector };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedFieldSelector = AdvancedFieldSelector;

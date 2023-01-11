@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AppsactivityActivitiesListRequest, AppsactivityActivitiesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: AppsactivityActivitiesListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     alt: "json",
-    driveAncestorId: "nihil",
-    driveFileId: "incidunt",
-    fields: "dolore",
-    groupingStrategy: "driveUi",
-    key: "labore",
-    oauthToken: "dolorum",
-    pageSize: 5236289225202148670,
-    pageToken: "quos",
-    prettyPrint: true,
-    quotaUser: "aut",
-    source: "voluptatum",
-    userId: "et",
-    userIp: "quae",
+    driveAncestorId: "voluptas",
+    driveFileId: "culpa",
+    fields: "expedita",
+    groupingStrategy: "none",
+    key: "dolor",
+    oauthToken: "expedita",
+    pageSize: 6044372234677422456,
+    pageToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    source: "rerum",
+    userId: "dicta",
+    userIp: "debitis",
   },
 };
 

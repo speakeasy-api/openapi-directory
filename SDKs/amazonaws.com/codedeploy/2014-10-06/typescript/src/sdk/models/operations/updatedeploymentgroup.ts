@@ -102,7 +102,7 @@ export class UpdateDeploymentGroupResponse extends SpeakeasyBase {
   invalidEc2TagException?: any;
 
   @SpeakeasyMetadata()
-  invalidEcsServiceException?: any;
+  invalidECSServiceException?: any;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

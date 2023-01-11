@@ -8,12 +8,12 @@ import { FindingStatusEnum } from "./findingstatusenum";
 export declare class FindingSummary extends SpeakeasyBase {
     action?: string[];
     analyzedAt: Date;
-    condition: Map<string, string>;
+    condition: Record<string, string>;
     createdAt: Date;
     error?: string;
     id: string;
     isPublic?: boolean;
-    principal?: Map<string, string>;
+    principal?: Record<string, string>;
     resource?: string;
     resourceOwnerAccount: string;
     resourceType: ResourceTypeEnum;

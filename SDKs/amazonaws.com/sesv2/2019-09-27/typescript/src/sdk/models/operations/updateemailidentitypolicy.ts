@@ -70,5 +70,5 @@ export class UpdateEmailIdentityPolicyResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  updateEmailIdentityPolicyResponse?: Map<string, any>;
+  updateEmailIdentityPolicyResponse?: Record<string, any>;
 }

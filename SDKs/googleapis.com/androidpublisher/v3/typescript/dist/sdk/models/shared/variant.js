@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceSpec } from "./devicespec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VariantInput = exports.Variant = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicespec_1 = require("./devicespec");
 // Variant
 /**
  * APK that is suitable for inclusion in a system image. The resource of SystemApksService.
@@ -34,16 +37,16 @@ var Variant = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceSpec" }),
-        __metadata("design:type", DeviceSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceSpec" }),
+        __metadata("design:type", devicespec_1.DeviceSpec)
     ], Variant.prototype, "deviceSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variantId" }),
         __metadata("design:type", Number)
     ], Variant.prototype, "variantId", void 0);
     return Variant;
-}(SpeakeasyBase));
-export { Variant };
+}(utils_1.SpeakeasyBase));
+exports.Variant = Variant;
 // VariantInput
 /**
  * APK that is suitable for inclusion in a system image. The resource of SystemApksService.
@@ -54,9 +57,9 @@ var VariantInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceSpec" }),
-        __metadata("design:type", DeviceSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceSpec" }),
+        __metadata("design:type", devicespec_1.DeviceSpec)
     ], VariantInput.prototype, "deviceSpec", void 0);
     return VariantInput;
-}(SpeakeasyBase));
-export { VariantInput };
+}(utils_1.SpeakeasyBase));
+exports.VariantInput = VariantInput;

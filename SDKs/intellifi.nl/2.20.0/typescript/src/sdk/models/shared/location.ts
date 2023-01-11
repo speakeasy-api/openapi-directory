@@ -13,7 +13,7 @@ export class Location extends SpeakeasyBase {
   label?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=time_created" })
   timeCreated?: string;
@@ -34,5 +34,5 @@ export class LocationInput extends SpeakeasyBase {
   label?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 }

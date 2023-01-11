@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NodeConfigurationOption } from "./nodeconfigurationoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeConfigurationOptionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var nodeconfigurationoptionlist_1 = require("./nodeconfigurationoptionlist");
 var NodeConfigurationOptionsMessage = /** @class */ (function (_super) {
     __extends(NodeConfigurationOptionsMessage, _super);
     function NodeConfigurationOptionsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodeConfigurationOptionsMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: NodeConfigurationOption }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: nodeconfigurationoptionlist_1.NodeConfigurationOptionList }),
         __metadata("design:type", Array)
     ], NodeConfigurationOptionsMessage.prototype, "nodeConfigurationOptionList", void 0);
     return NodeConfigurationOptionsMessage;
-}(SpeakeasyBase));
-export { NodeConfigurationOptionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.NodeConfigurationOptionsMessage = NodeConfigurationOptionsMessage;

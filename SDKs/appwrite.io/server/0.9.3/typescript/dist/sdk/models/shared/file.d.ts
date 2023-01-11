@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class File extends SpeakeasyBase {
     dollarId: string;
-    dollarPermissions: Map<string, any>;
+    dollarPermissions: Record<string, any>;
     dateCreated: number;
     mimeType: string;
     name: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Color = void 0;
+var utils_1 = require("../../../internal/utils");
 var Color = /** @class */ (function (_super) {
     __extends(Color, _super);
     function Color() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alpha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alpha" }),
         __metadata("design:type", Number)
     ], Color.prototype, "alpha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blue" }),
         __metadata("design:type", Number)
     ], Color.prototype, "blue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=green" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=green" }),
         __metadata("design:type", Number)
     ], Color.prototype, "green", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=red" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=red" }),
         __metadata("design:type", Number)
     ], Color.prototype, "red", void 0);
     return Color;
-}(SpeakeasyBase));
-export { Color };
+}(utils_1.SpeakeasyBase));
+exports.Color = Color;

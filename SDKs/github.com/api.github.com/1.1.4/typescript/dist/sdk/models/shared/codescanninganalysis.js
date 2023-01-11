@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeScanningAnalysisTool } from "./codescanninganalysistool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeScanningAnalysis = void 0;
+var utils_1 = require("../../../internal/utils");
+var codescanninganalysistool_1 = require("./codescanninganalysistool");
 var CodeScanningAnalysis = /** @class */ (function (_super) {
     __extends(CodeScanningAnalysis, _super);
     function CodeScanningAnalysis() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysis_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysis_key" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "analysisKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_sha" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "commitSha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], CodeScanningAnalysis.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletable" }),
         __metadata("design:type", Boolean)
     ], CodeScanningAnalysis.prototype, "deletable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CodeScanningAnalysis.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results_count" }),
         __metadata("design:type", Number)
     ], CodeScanningAnalysis.prototype, "resultsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules_count" }),
         __metadata("design:type", Number)
     ], CodeScanningAnalysis.prototype, "rulesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sarif_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sarif_id" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "sarifId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tool" }),
-        __metadata("design:type", CodeScanningAnalysisTool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tool" }),
+        __metadata("design:type", codescanninganalysistool_1.CodeScanningAnalysisTool)
     ], CodeScanningAnalysis.prototype, "tool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CodeScanningAnalysis.prototype, "url", void 0);
     return CodeScanningAnalysis;
-}(SpeakeasyBase));
-export { CodeScanningAnalysis };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningAnalysis = CodeScanningAnalysis;

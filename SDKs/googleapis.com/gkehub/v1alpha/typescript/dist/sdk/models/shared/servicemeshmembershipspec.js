@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ServiceMeshMembershipSpecControlPlaneEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceMeshMembershipSpec = exports.ServiceMeshMembershipSpecManagementEnum = exports.ServiceMeshMembershipSpecDefaultChannelEnum = exports.ServiceMeshMembershipSpecControlPlaneEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ServiceMeshMembershipSpecControlPlaneEnum;
 (function (ServiceMeshMembershipSpecControlPlaneEnum) {
     ServiceMeshMembershipSpecControlPlaneEnum["ControlPlaneManagementUnspecified"] = "CONTROL_PLANE_MANAGEMENT_UNSPECIFIED";
     ServiceMeshMembershipSpecControlPlaneEnum["Automatic"] = "AUTOMATIC";
     ServiceMeshMembershipSpecControlPlaneEnum["Manual"] = "MANUAL";
-})(ServiceMeshMembershipSpecControlPlaneEnum || (ServiceMeshMembershipSpecControlPlaneEnum = {}));
-export var ServiceMeshMembershipSpecDefaultChannelEnum;
+})(ServiceMeshMembershipSpecControlPlaneEnum = exports.ServiceMeshMembershipSpecControlPlaneEnum || (exports.ServiceMeshMembershipSpecControlPlaneEnum = {}));
+var ServiceMeshMembershipSpecDefaultChannelEnum;
 (function (ServiceMeshMembershipSpecDefaultChannelEnum) {
     ServiceMeshMembershipSpecDefaultChannelEnum["ChannelUnspecified"] = "CHANNEL_UNSPECIFIED";
     ServiceMeshMembershipSpecDefaultChannelEnum["Rapid"] = "RAPID";
     ServiceMeshMembershipSpecDefaultChannelEnum["Regular"] = "REGULAR";
     ServiceMeshMembershipSpecDefaultChannelEnum["Stable"] = "STABLE";
-})(ServiceMeshMembershipSpecDefaultChannelEnum || (ServiceMeshMembershipSpecDefaultChannelEnum = {}));
-export var ServiceMeshMembershipSpecManagementEnum;
+})(ServiceMeshMembershipSpecDefaultChannelEnum = exports.ServiceMeshMembershipSpecDefaultChannelEnum || (exports.ServiceMeshMembershipSpecDefaultChannelEnum = {}));
+var ServiceMeshMembershipSpecManagementEnum;
 (function (ServiceMeshMembershipSpecManagementEnum) {
     ServiceMeshMembershipSpecManagementEnum["ManagementUnspecified"] = "MANAGEMENT_UNSPECIFIED";
     ServiceMeshMembershipSpecManagementEnum["ManagementAutomatic"] = "MANAGEMENT_AUTOMATIC";
     ServiceMeshMembershipSpecManagementEnum["ManagementManual"] = "MANAGEMENT_MANUAL";
-})(ServiceMeshMembershipSpecManagementEnum || (ServiceMeshMembershipSpecManagementEnum = {}));
+})(ServiceMeshMembershipSpecManagementEnum = exports.ServiceMeshMembershipSpecManagementEnum || (exports.ServiceMeshMembershipSpecManagementEnum = {}));
 // ServiceMeshMembershipSpec
 /**
  * **Service Mesh**: Spec for a single Membership for the servicemesh feature
@@ -52,17 +55,17 @@ var ServiceMeshMembershipSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=controlPlane" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=controlPlane" }),
         __metadata("design:type", String)
     ], ServiceMeshMembershipSpec.prototype, "controlPlane", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultChannel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultChannel" }),
         __metadata("design:type", String)
     ], ServiceMeshMembershipSpec.prototype, "defaultChannel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=management" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=management" }),
         __metadata("design:type", String)
     ], ServiceMeshMembershipSpec.prototype, "management", void 0);
     return ServiceMeshMembershipSpec;
-}(SpeakeasyBase));
-export { ServiceMeshMembershipSpec };
+}(utils_1.SpeakeasyBase));
+exports.ServiceMeshMembershipSpec = ServiceMeshMembershipSpec;

@@ -59,7 +59,7 @@ export class FaresSubscriptionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  faresSubscriptions200ApplicationJsonString?: string;
+  faresSubscriptions200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LambdaFunctionRecommendationFilterNameEnum } from "./lambdafunctionrecommendationfilternameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaFunctionRecommendationFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var lambdafunctionrecommendationfilternameenum_1 = require("./lambdafunctionrecommendationfilternameenum");
 // LambdaFunctionRecommendationFilter
 /**
  * <p>Describes a filter that returns a more specific list of Lambda function recommendations. Use this filter with the <a>GetLambdaFunctionRecommendations</a> action.</p> <p>You can use <code>EBSFilter</code> with the <a>GetEBSVolumeRecommendations</a> action, <code>JobFilter</code> with the <a>DescribeRecommendationExportJobs</a> action, and <code>Filter</code> with the <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.</p>
@@ -34,13 +37,13 @@ var LambdaFunctionRecommendationFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LambdaFunctionRecommendationFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], LambdaFunctionRecommendationFilter.prototype, "values", void 0);
     return LambdaFunctionRecommendationFilter;
-}(SpeakeasyBase));
-export { LambdaFunctionRecommendationFilter };
+}(utils_1.SpeakeasyBase));
+exports.LambdaFunctionRecommendationFilter = LambdaFunctionRecommendationFilter;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdFormat } from "./idformat";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeIdFormatResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeIdFormatResult = /** @class */ (function (_super) {
     __extends(DescribeIdFormatResult, _super);
     function DescribeIdFormatResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: IdFormat }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeIdFormatResult.prototype, "statuses", void 0);
     return DescribeIdFormatResult;
-}(SpeakeasyBase));
-export { DescribeIdFormatResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeIdFormatResult = DescribeIdFormatResult;

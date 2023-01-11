@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReloadGroups200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReloadGroupsResponse = exports.ReloadGroups200ApplicationJson = exports.ReloadGroups200ApplicationJsonResultEnum = exports.ReloadGroups200ApplicationJsonData = exports.ReloadGroups200ApplicationJsonDataGroupsEnum = exports.ReloadGroups200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReloadGroups200ApplicationJsonActionEnum;
 (function (ReloadGroups200ApplicationJsonActionEnum) {
     ReloadGroups200ApplicationJsonActionEnum["ReloadGroups"] = "reloadGroups";
-})(ReloadGroups200ApplicationJsonActionEnum || (ReloadGroups200ApplicationJsonActionEnum = {}));
-export var ReloadGroups200ApplicationJsonDataGroupsEnum;
+})(ReloadGroups200ApplicationJsonActionEnum = exports.ReloadGroups200ApplicationJsonActionEnum || (exports.ReloadGroups200ApplicationJsonActionEnum = {}));
+var ReloadGroups200ApplicationJsonDataGroupsEnum;
 (function (ReloadGroups200ApplicationJsonDataGroupsEnum) {
     ReloadGroups200ApplicationJsonDataGroupsEnum["Started"] = "Started";
-})(ReloadGroups200ApplicationJsonDataGroupsEnum || (ReloadGroups200ApplicationJsonDataGroupsEnum = {}));
+})(ReloadGroups200ApplicationJsonDataGroupsEnum = exports.ReloadGroups200ApplicationJsonDataGroupsEnum || (exports.ReloadGroups200ApplicationJsonDataGroupsEnum = {}));
 var ReloadGroups200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ReloadGroups200ApplicationJsonData, _super);
     function ReloadGroups200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", String)
     ], ReloadGroups200ApplicationJsonData.prototype, "groups", void 0);
     return ReloadGroups200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ReloadGroups200ApplicationJsonData };
-export var ReloadGroups200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReloadGroups200ApplicationJsonData = ReloadGroups200ApplicationJsonData;
+var ReloadGroups200ApplicationJsonResultEnum;
 (function (ReloadGroups200ApplicationJsonResultEnum) {
     ReloadGroups200ApplicationJsonResultEnum["Success"] = "success";
     ReloadGroups200ApplicationJsonResultEnum["Error"] = "error";
-})(ReloadGroups200ApplicationJsonResultEnum || (ReloadGroups200ApplicationJsonResultEnum = {}));
+})(ReloadGroups200ApplicationJsonResultEnum = exports.ReloadGroups200ApplicationJsonResultEnum || (exports.ReloadGroups200ApplicationJsonResultEnum = {}));
 var ReloadGroups200ApplicationJson = /** @class */ (function (_super) {
     __extends(ReloadGroups200ApplicationJson, _super);
     function ReloadGroups200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ReloadGroups200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ReloadGroups200ApplicationJsonData)
     ], ReloadGroups200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ReloadGroups200ApplicationJson.prototype, "result", void 0);
     return ReloadGroups200ApplicationJson;
-}(SpeakeasyBase));
-export { ReloadGroups200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ReloadGroups200ApplicationJson = ReloadGroups200ApplicationJson;
 var ReloadGroupsResponse = /** @class */ (function (_super) {
     __extends(ReloadGroupsResponse, _super);
     function ReloadGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReloadGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReloadGroupsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReloadGroups200ApplicationJson)
-    ], ReloadGroupsResponse.prototype, "reloadGroups200ApplicationJsonObject", void 0);
+    ], ReloadGroupsResponse.prototype, "reloadGroups200ApplicationJSONObject", void 0);
     return ReloadGroupsResponse;
-}(SpeakeasyBase));
-export { ReloadGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReloadGroupsResponse = ReloadGroupsResponse;

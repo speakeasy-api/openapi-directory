@@ -8,6 +8,6 @@ export declare class ProductsApiFindRequest extends SpeakeasyBase {
 }
 export declare class ProductsApiFindResponse extends SpeakeasyBase {
     contentType: string;
-    productsApiFind200ApplicationJsonOneOf?: any;
+    productsApiFind200ApplicationJSONOneOf?: any;
     statusCode: number;
 }

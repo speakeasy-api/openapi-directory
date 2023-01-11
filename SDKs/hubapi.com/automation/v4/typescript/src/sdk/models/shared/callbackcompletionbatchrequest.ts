@@ -11,5 +11,5 @@ export class CallbackCompletionBatchRequest extends SpeakeasyBase {
   callbackId: string;
 
   @SpeakeasyMetadata({ data: "json, name=outputFields" })
-  outputFields: Map<string, string>;
+  outputFields: Record<string, string>;
 }

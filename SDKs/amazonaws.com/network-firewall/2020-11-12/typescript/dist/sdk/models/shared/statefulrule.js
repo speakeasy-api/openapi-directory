@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatefulActionEnum } from "./statefulactionenum";
-import { Header } from "./header";
-import { RuleOption } from "./ruleoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatefulRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var statefulactionenum_1 = require("./statefulactionenum");
+var header_1 = require("./header");
+var ruleoption_1 = require("./ruleoption");
 // StatefulRule
 /**
  * A single 5-tuple stateful rule, for use in a stateful rule group.
@@ -36,17 +39,17 @@ var StatefulRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
         __metadata("design:type", String)
     ], StatefulRule.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Header" }),
-        __metadata("design:type", Header)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Header" }),
+        __metadata("design:type", header_1.Header)
     ], StatefulRule.prototype, "header", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleOptions", elemType: RuleOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleOptions", elemType: ruleoption_1.RuleOption }),
         __metadata("design:type", Array)
     ], StatefulRule.prototype, "ruleOptions", void 0);
     return StatefulRule;
-}(SpeakeasyBase));
-export { StatefulRule };
+}(utils_1.SpeakeasyBase));
+exports.StatefulRule = StatefulRule;

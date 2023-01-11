@@ -8,14 +8,10 @@ export class MigrationsListForOrgPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum MigrationsListForOrgExcludeEnum {
-    Repositories = "repositories"
-}
-
 
 export class MigrationsListForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=exclude" })
-  exclude?: MigrationsListForOrgExcludeEnum[];
+  exclude?: shared.PageEnum[];
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -39,7 +35,7 @@ export class MigrationsListForOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

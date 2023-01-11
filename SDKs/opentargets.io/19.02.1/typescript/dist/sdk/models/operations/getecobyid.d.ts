@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetEcObyIdPathParams extends SpeakeasyBase {
-    ecoId: string;
+    ecoID: string;
 }
 export declare class GetEcObyIdRequest extends SpeakeasyBase {
     pathParams: GetEcObyIdPathParams;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCluster } from "./nestedcluster";
-import { NestedPlatform } from "./nestedplatform";
-import { VirtualMachineIpAddress } from "./virtualmachineipaddress";
-import { NestedDeviceRole } from "./nesteddevicerole";
-import { NestedTenant } from "./nestedtenant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualMachineWithConfigContext = exports.VirtualMachineWithConfigContextStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcluster_1 = require("./nestedcluster");
+var nestedplatform_1 = require("./nestedplatform");
+var virtualmachineipaddress_1 = require("./virtualmachineipaddress");
+var nesteddevicerole_1 = require("./nesteddevicerole");
+var nestedtenant_1 = require("./nestedtenant");
 var VirtualMachineWithConfigContextStatus = /** @class */ (function (_super) {
     __extends(VirtualMachineWithConfigContextStatus, _super);
     function VirtualMachineWithConfigContextStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], VirtualMachineWithConfigContextStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], VirtualMachineWithConfigContextStatus.prototype, "value", void 0);
     return VirtualMachineWithConfigContextStatus;
-}(SpeakeasyBase));
-export { VirtualMachineWithConfigContextStatus };
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachineWithConfigContextStatus = VirtualMachineWithConfigContextStatus;
 var VirtualMachineWithConfigContext = /** @class */ (function (_super) {
     __extends(VirtualMachineWithConfigContext, _super);
     function VirtualMachineWithConfigContext() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
-        __metadata("design:type", NestedCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
+        __metadata("design:type", nestedcluster_1.NestedCluster)
     ], VirtualMachineWithConfigContext.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], VirtualMachineWithConfigContext.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_context" }),
         __metadata("design:type", String)
     ], VirtualMachineWithConfigContext.prototype, "configContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], VirtualMachineWithConfigContext.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], VirtualMachineWithConfigContext.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk" }),
         __metadata("design:type", Number)
     ], VirtualMachineWithConfigContext.prototype, "disk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], VirtualMachineWithConfigContext.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], VirtualMachineWithConfigContext.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=local_context_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local_context_data" }),
         __metadata("design:type", String)
     ], VirtualMachineWithConfigContext.prototype, "localContextData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", Number)
     ], VirtualMachineWithConfigContext.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VirtualMachineWithConfigContext.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
-        __metadata("design:type", NestedPlatform)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
+        __metadata("design:type", nestedplatform_1.NestedPlatform)
     ], VirtualMachineWithConfigContext.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip" }),
-        __metadata("design:type", VirtualMachineIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip" }),
+        __metadata("design:type", virtualmachineipaddress_1.VirtualMachineIpAddress)
     ], VirtualMachineWithConfigContext.prototype, "primaryIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip4" }),
-        __metadata("design:type", VirtualMachineIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip4" }),
+        __metadata("design:type", virtualmachineipaddress_1.VirtualMachineIpAddress)
     ], VirtualMachineWithConfigContext.prototype, "primaryIp4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip6" }),
-        __metadata("design:type", VirtualMachineIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip6" }),
+        __metadata("design:type", virtualmachineipaddress_1.VirtualMachineIpAddress)
     ], VirtualMachineWithConfigContext.prototype, "primaryIp6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
-        __metadata("design:type", NestedDeviceRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
+        __metadata("design:type", nesteddevicerole_1.NestedDeviceRole)
     ], VirtualMachineWithConfigContext.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", VirtualMachineWithConfigContextStatus)
     ], VirtualMachineWithConfigContext.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], VirtualMachineWithConfigContext.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], VirtualMachineWithConfigContext.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcpus" }),
         __metadata("design:type", Number)
     ], VirtualMachineWithConfigContext.prototype, "vcpus", void 0);
     return VirtualMachineWithConfigContext;
-}(SpeakeasyBase));
-export { VirtualMachineWithConfigContext };
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachineWithConfigContext = VirtualMachineWithConfigContext;

@@ -37,7 +37,7 @@ export declare class CreatePortalRequestBody extends SpeakeasyBase {
     portalLogoImageFile?: CreatePortalRequestBodyPortalLogoImageFile;
     portalName: string;
     roleArn: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreatePortalRequest extends SpeakeasyBase {
     headers: CreatePortalHeaders;

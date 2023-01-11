@@ -11,7 +11,7 @@ export declare class RemoveSubgoalRequestBody extends SpeakeasyBase {
     data?: shared.GoalRemoveSubgoalRequest;
 }
 export declare class RemoveSubgoal200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveSubgoalRequest extends SpeakeasyBase {
     pathParams: RemoveSubgoalPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveSubgoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeSubgoal200ApplicationJsonObject?: RemoveSubgoal200ApplicationJson;
+    removeSubgoal200ApplicationJSONObject?: RemoveSubgoal200ApplicationJson;
 }

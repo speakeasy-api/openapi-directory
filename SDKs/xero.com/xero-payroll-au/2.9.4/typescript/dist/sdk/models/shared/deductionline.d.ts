@@ -3,7 +3,7 @@ import { DeductionTypeCalculationTypeEnum } from "./deductiontypecalculationtype
 export declare class DeductionLine extends SpeakeasyBase {
     amount?: number;
     calculationType: DeductionTypeCalculationTypeEnum;
-    deductionTypeId: string;
+    deductionTypeID: string;
     numberOfUnits?: number;
     percentage?: number;
 }

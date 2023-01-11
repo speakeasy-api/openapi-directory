@@ -8,7 +8,7 @@ export class OrdersPathParams extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=orderID" })
-  orderId: string;
+  orderID: string;
 }
 
 
@@ -41,7 +41,7 @@ export class OrdersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  orders200ApplicationJsonString?: string;
+  orders200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

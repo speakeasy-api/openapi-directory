@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchDispositionEnum } from "./launchdispositionenum";
-import { Licensing } from "./licensing";
-import { TargetInstanceTypeRightSizingMethodEnum } from "./targetinstancetyperightsizingmethodenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchdispositionenum_1 = require("./launchdispositionenum");
+var licensing_1 = require("./licensing");
+var targetinstancetyperightsizingmethodenum_1 = require("./targetinstancetyperightsizingmethodenum");
 var LaunchConfiguration = /** @class */ (function (_super) {
     __extends(LaunchConfiguration, _super);
     function LaunchConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyPrivateIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyPrivateIp" }),
         __metadata("design:type", Boolean)
     ], LaunchConfiguration.prototype, "copyPrivateIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyTags" }),
         __metadata("design:type", Boolean)
     ], LaunchConfiguration.prototype, "copyTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2LaunchTemplateID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2LaunchTemplateID" }),
         __metadata("design:type", String)
-    ], LaunchConfiguration.prototype, "ec2LaunchTemplateId", void 0);
+    ], LaunchConfiguration.prototype, "ec2LaunchTemplateID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchDisposition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchDisposition" }),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "launchDisposition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licensing" }),
-        __metadata("design:type", Licensing)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licensing" }),
+        __metadata("design:type", licensing_1.Licensing)
     ], LaunchConfiguration.prototype, "licensing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceServerID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceServerID" }),
         __metadata("design:type", String)
-    ], LaunchConfiguration.prototype, "sourceServerId", void 0);
+    ], LaunchConfiguration.prototype, "sourceServerID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetInstanceTypeRightSizingMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetInstanceTypeRightSizingMethod" }),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "targetInstanceTypeRightSizingMethod", void 0);
     return LaunchConfiguration;
-}(SpeakeasyBase));
-export { LaunchConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.LaunchConfiguration = LaunchConfiguration;

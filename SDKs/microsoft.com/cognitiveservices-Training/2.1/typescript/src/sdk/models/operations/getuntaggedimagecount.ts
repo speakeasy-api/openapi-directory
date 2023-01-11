@@ -40,10 +40,10 @@ export class GetUntaggedImageCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUntaggedImageCount200ApplicationJsonInt32Integer?: number;
+  getUntaggedImageCount200ApplicationJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
-  getUntaggedImageCount200TextJsonInt32Integer?: number;
+  getUntaggedImageCount200TextJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
   statusCode: number;

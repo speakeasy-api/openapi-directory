@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCableInput } from "./nestedcable";
-export var WritableDeviceInterfaceModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableDeviceInterfaceInput = exports.WritableDeviceInterfaceTypeEnum = exports.WritableDeviceInterfaceModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var WritableDeviceInterfaceModeEnum;
 (function (WritableDeviceInterfaceModeEnum) {
     WritableDeviceInterfaceModeEnum["Access"] = "access";
     WritableDeviceInterfaceModeEnum["Tagged"] = "tagged";
     WritableDeviceInterfaceModeEnum["TaggedAll"] = "tagged-all";
-})(WritableDeviceInterfaceModeEnum || (WritableDeviceInterfaceModeEnum = {}));
-export var WritableDeviceInterfaceTypeEnum;
+})(WritableDeviceInterfaceModeEnum = exports.WritableDeviceInterfaceModeEnum || (exports.WritableDeviceInterfaceModeEnum = {}));
+var WritableDeviceInterfaceTypeEnum;
 (function (WritableDeviceInterfaceTypeEnum) {
     WritableDeviceInterfaceTypeEnum["Virtual"] = "virtual";
     WritableDeviceInterfaceTypeEnum["Lag"] = "lag";
@@ -104,72 +107,72 @@ export var WritableDeviceInterfaceTypeEnum;
     WritableDeviceInterfaceTypeEnum["ExtremeSummitstack256"] = "extreme-summitstack-256";
     WritableDeviceInterfaceTypeEnum["ExtremeSummitstack512"] = "extreme-summitstack-512";
     WritableDeviceInterfaceTypeEnum["Other"] = "other";
-})(WritableDeviceInterfaceTypeEnum || (WritableDeviceInterfaceTypeEnum = {}));
+})(WritableDeviceInterfaceTypeEnum = exports.WritableDeviceInterfaceTypeEnum || (exports.WritableDeviceInterfaceTypeEnum = {}));
 var WritableDeviceInterfaceInput = /** @class */ (function (_super) {
     __extends(WritableDeviceInterfaceInput, _super);
     function WritableDeviceInterfaceInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCableInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCableInput)
     ], WritableDeviceInterfaceInput.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", Boolean)
     ], WritableDeviceInterfaceInput.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableDeviceInterfaceInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
         __metadata("design:type", Number)
     ], WritableDeviceInterfaceInput.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], WritableDeviceInterfaceInput.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lag" }),
         __metadata("design:type", Number)
     ], WritableDeviceInterfaceInput.prototype, "lag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_address" }),
         __metadata("design:type", String)
     ], WritableDeviceInterfaceInput.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], WritableDeviceInterfaceInput.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], WritableDeviceInterfaceInput.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtu" }),
         __metadata("design:type", Number)
     ], WritableDeviceInterfaceInput.prototype, "mtu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableDeviceInterfaceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagged_vlans" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagged_vlans" }),
         __metadata("design:type", Array)
     ], WritableDeviceInterfaceInput.prototype, "taggedVlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableDeviceInterfaceInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableDeviceInterfaceInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=untagged_vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=untagged_vlan" }),
         __metadata("design:type", Number)
     ], WritableDeviceInterfaceInput.prototype, "untaggedVlan", void 0);
     return WritableDeviceInterfaceInput;
-}(SpeakeasyBase));
-export { WritableDeviceInterfaceInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableDeviceInterfaceInput = WritableDeviceInterfaceInput;

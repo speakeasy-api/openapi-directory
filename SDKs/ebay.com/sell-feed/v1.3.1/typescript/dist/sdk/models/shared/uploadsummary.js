@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // UploadSummary
 /**
  * This container provides summary information on an upload feed (not applicable for download feed types).
@@ -33,13 +36,13 @@ var UploadSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCount" }),
         __metadata("design:type", Number)
     ], UploadSummary.prototype, "failureCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successCount" }),
         __metadata("design:type", Number)
     ], UploadSummary.prototype, "successCount", void 0);
     return UploadSummary;
-}(SpeakeasyBase));
-export { UploadSummary };
+}(utils_1.SpeakeasyBase));
+exports.UploadSummary = UploadSummary;

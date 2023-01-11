@@ -32,5 +32,5 @@ export declare class UpdateNetworkWirelessBillingRequest extends SpeakeasyBase {
 export declare class UpdateNetworkWirelessBillingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessBilling200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessBilling200ApplicationJSONObject?: Record<string, any>;
 }

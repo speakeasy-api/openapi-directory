@@ -1,46 +1,45 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationTypeEnum } from "./authorizationtypeenum";
 import { ParameterConstraints } from "./parameterconstraints";
 
 
 
 export class GetRouteResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiGatewayManaged" })
-  apiGatewayManaged?: boolean;
+  apiGatewayManaged?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiKeyRequired" })
-  apiKeyRequired?: boolean;
+  apiKeyRequired?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AuthorizationScopes" })
-  authorizationScopes?: string[];
+  authorizationScopes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AuthorizationType" })
-  authorizationType?: AuthorizationTypeEnum;
+  authorizationType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AuthorizerId" })
-  authorizerId?: string;
+  authorizerId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ModelSelectionExpression" })
-  modelSelectionExpression?: string;
+  modelSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=OperationName" })
-  operationName?: string;
+  operationName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RequestModels" })
-  requestModels?: Map<string, string>;
+  requestModels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=RequestParameters", elemType: ParameterConstraints })
-  requestParameters?: Map<string, ParameterConstraints>;
+  requestParameters?: Record<string, ParameterConstraints>;
 
   @SpeakeasyMetadata({ data: "json, name=RouteId" })
-  routeId?: string;
+  routeId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RouteKey" })
-  routeKey?: string;
+  routeKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RouteResponseSelectionExpression" })
-  routeResponseSelectionExpression?: string;
+  routeResponseSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Target" })
-  target?: string;
+  target?: Record<string, any>;
 }

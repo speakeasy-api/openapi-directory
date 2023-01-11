@@ -191,23 +191,23 @@ export class DscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dscer400ApplicationJsonObject?: Dscer400ApplicationJson;
+  dscer400ApplicationJSONObject?: Dscer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer401ApplicationJsonObject?: Dscer401ApplicationJson;
+  dscer401ApplicationJSONObject?: Dscer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer404ApplicationJsonObject?: Dscer404ApplicationJson;
+  dscer404ApplicationJSONObject?: Dscer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer500ApplicationJsonObject?: Dscer500ApplicationJson;
+  dscer500ApplicationJSONObject?: Dscer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer502ApplicationJsonObject?: Dscer502ApplicationJson;
+  dscer502ApplicationJSONObject?: Dscer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer503ApplicationJsonObject?: Dscer503ApplicationJson;
+  dscer503ApplicationJSONObject?: Dscer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dscer504ApplicationJsonObject?: Dscer504ApplicationJson;
+  dscer504ApplicationJSONObject?: Dscer504ApplicationJson;
 }

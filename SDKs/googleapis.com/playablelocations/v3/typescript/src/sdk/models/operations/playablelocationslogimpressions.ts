@@ -53,7 +53,7 @@ export class PlayablelocationsLogImpressionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleMapsPlayablelocationsV3LogImpressionsResponse?: Map<string, any>;
+  googleMapsPlayablelocationsV3LogImpressionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

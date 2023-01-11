@@ -45,7 +45,7 @@ export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyRequest 
 }
 export declare class UserStatisticeDailyValueV1StatisticsIndividualDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJsonObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson;
+    userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson;
 }

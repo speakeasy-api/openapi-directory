@@ -26,7 +26,7 @@ export class RemoveTagForTaskRequestBody extends SpeakeasyBase {
 
 export class RemoveTagForTask200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class RemoveTagForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeTagForTask200ApplicationJsonObject?: RemoveTagForTask200ApplicationJson;
+  removeTagForTask200ApplicationJSONObject?: RemoveTagForTask200ApplicationJson;
 }

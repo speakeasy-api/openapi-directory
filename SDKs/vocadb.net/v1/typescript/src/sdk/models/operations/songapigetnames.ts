@@ -36,13 +36,13 @@ export class SongApiGetNamesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  songApiGetNames200ApplicationJsonStrings?: string[];
+  songApiGetNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   songApiGetNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  songApiGetNames200TextJsonStrings?: string[];
+  songApiGetNames200TextJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   statusCode: number;

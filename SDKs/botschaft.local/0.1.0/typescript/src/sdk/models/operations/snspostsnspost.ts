@@ -29,5 +29,5 @@ export class SnsPostSnsPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  snsPostSnsPost200ApplicationJsonAny?: any;
+  snsPostSnsPost200ApplicationJSONAny?: any;
 }

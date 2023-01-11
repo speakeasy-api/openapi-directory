@@ -1,5 +1,8 @@
-export var EgressFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EgressFilterTypeEnum = void 0;
+var EgressFilterTypeEnum;
 (function (EgressFilterTypeEnum) {
     EgressFilterTypeEnum["AllowAll"] = "ALLOW_ALL";
     EgressFilterTypeEnum["DropAll"] = "DROP_ALL";
-})(EgressFilterTypeEnum || (EgressFilterTypeEnum = {}));
+})(EgressFilterTypeEnum = exports.EgressFilterTypeEnum || (exports.EgressFilterTypeEnum = {}));

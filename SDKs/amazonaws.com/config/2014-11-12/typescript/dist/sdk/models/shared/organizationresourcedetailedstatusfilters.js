@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationResourceDetailedStatusEnum } from "./organizationresourcedetailedstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationResourceDetailedStatusFilters = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationresourcedetailedstatusenum_1 = require("./organizationresourcedetailedstatusenum");
 // OrganizationResourceDetailedStatusFilters
 /**
  * Status filter object to filter results based on specific member account ID or status type for an organization conformance pack.
@@ -34,13 +37,13 @@ var OrganizationResourceDetailedStatusFilters = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], OrganizationResourceDetailedStatusFilters.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], OrganizationResourceDetailedStatusFilters.prototype, "status", void 0);
     return OrganizationResourceDetailedStatusFilters;
-}(SpeakeasyBase));
-export { OrganizationResourceDetailedStatusFilters };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationResourceDetailedStatusFilters = OrganizationResourceDetailedStatusFilters;

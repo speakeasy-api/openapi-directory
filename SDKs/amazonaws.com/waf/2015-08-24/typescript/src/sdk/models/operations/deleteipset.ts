@@ -48,7 +48,7 @@ export class DeleteIpSetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteIpSetResponse?: shared.DeleteIpSetResponse;
+  deleteIPSetResponse?: shared.DeleteIpSetResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

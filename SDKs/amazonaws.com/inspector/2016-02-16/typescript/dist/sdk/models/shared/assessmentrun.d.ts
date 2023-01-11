@@ -13,7 +13,7 @@ export declare class AssessmentRun extends SpeakeasyBase {
     createdAt: Date;
     dataCollected: boolean;
     durationInSeconds: number;
-    findingCounts: Map<string, number>;
+    findingCounts: Record<string, number>;
     name: string;
     notifications: AssessmentRunNotification[];
     rulesPackageArns: string[];

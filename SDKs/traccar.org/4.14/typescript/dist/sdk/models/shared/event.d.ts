@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Event extends SpeakeasyBase {
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     deviceId?: number;
     eventTime?: Date;
     geofenceId?: number;

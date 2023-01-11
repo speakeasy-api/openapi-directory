@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AquaConfiguration } from "./aquaconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyAquaOutputMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var aquaconfiguration_1 = require("./aquaconfiguration");
 var ModifyAquaOutputMessage = /** @class */ (function (_super) {
     __extends(ModifyAquaOutputMessage, _super);
     function ModifyAquaOutputMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AquaConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", aquaconfiguration_1.AquaConfiguration)
     ], ModifyAquaOutputMessage.prototype, "aquaConfiguration", void 0);
     return ModifyAquaOutputMessage;
-}(SpeakeasyBase));
-export { ModifyAquaOutputMessage };
+}(utils_1.SpeakeasyBase));
+exports.ModifyAquaOutputMessage = ModifyAquaOutputMessage;

@@ -7,5 +7,5 @@ export class SnippetModel extends SpeakeasyBase {
   id: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 }

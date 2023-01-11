@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ConsumerInput
-/**
- * Contains information of the customer's network configurations.
-**/
-var ConsumerInput = /** @class */ (function (_super) {
-    __extends(ConsumerInput, _super);
-    function ConsumerInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetwork" }),
-        __metadata("design:type", String)
-    ], ConsumerInput.prototype, "subnetwork", void 0);
-    return ConsumerInput;
-}(SpeakeasyBase));
-export { ConsumerInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsumerInput = exports.Consumer = void 0;
+var utils_1 = require("../../../internal/utils");
 // Consumer
 /**
  * Contains information of the customer's network configurations.
@@ -49,13 +36,29 @@ var Consumer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointUri" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "endpointUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetwork" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "subnetwork", void 0);
     return Consumer;
-}(SpeakeasyBase));
-export { Consumer };
+}(utils_1.SpeakeasyBase));
+exports.Consumer = Consumer;
+// ConsumerInput
+/**
+ * Contains information of the customer's network configurations.
+**/
+var ConsumerInput = /** @class */ (function (_super) {
+    __extends(ConsumerInput, _super);
+    function ConsumerInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetwork" }),
+        __metadata("design:type", String)
+    ], ConsumerInput.prototype, "subnetwork", void 0);
+    return ConsumerInput;
+}(utils_1.SpeakeasyBase));
+exports.ConsumerInput = ConsumerInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,109 +23,111 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableRackOuterUnitEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableRackInput = exports.WritableRackTypeEnum = exports.WritableRackStatusEnum = exports.WritableRackOuterUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableRackOuterUnitEnum;
 (function (WritableRackOuterUnitEnum) {
     WritableRackOuterUnitEnum["Mm"] = "mm";
     WritableRackOuterUnitEnum["In"] = "in";
-})(WritableRackOuterUnitEnum || (WritableRackOuterUnitEnum = {}));
-export var WritableRackStatusEnum;
+})(WritableRackOuterUnitEnum = exports.WritableRackOuterUnitEnum || (exports.WritableRackOuterUnitEnum = {}));
+var WritableRackStatusEnum;
 (function (WritableRackStatusEnum) {
     WritableRackStatusEnum["Reserved"] = "reserved";
     WritableRackStatusEnum["Available"] = "available";
     WritableRackStatusEnum["Planned"] = "planned";
     WritableRackStatusEnum["Active"] = "active";
     WritableRackStatusEnum["Deprecated"] = "deprecated";
-})(WritableRackStatusEnum || (WritableRackStatusEnum = {}));
-export var WritableRackTypeEnum;
+})(WritableRackStatusEnum = exports.WritableRackStatusEnum || (exports.WritableRackStatusEnum = {}));
+var WritableRackTypeEnum;
 (function (WritableRackTypeEnum) {
     WritableRackTypeEnum["TwoPostFrame"] = "2-post-frame";
     WritableRackTypeEnum["FourPostFrame"] = "4-post-frame";
     WritableRackTypeEnum["FourPostCabinet"] = "4-post-cabinet";
     WritableRackTypeEnum["WallFrame"] = "wall-frame";
     WritableRackTypeEnum["WallCabinet"] = "wall-cabinet";
-})(WritableRackTypeEnum || (WritableRackTypeEnum = {}));
+})(WritableRackTypeEnum = exports.WritableRackTypeEnum || (exports.WritableRackTypeEnum = {}));
 var WritableRackInput = /** @class */ (function (_super) {
     __extends(WritableRackInput, _super);
     function WritableRackInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_tag" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "assetTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], WritableRackInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desc_units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desc_units" }),
         __metadata("design:type", Boolean)
     ], WritableRackInput.prototype, "descUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facility_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facility_id" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "facilityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outer_depth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outer_depth" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "outerDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outer_unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outer_unit" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "outerUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outer_width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outer_width" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "outerWidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableRackInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableRackInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=u_height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=u_height" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "uHeight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], WritableRackInput.prototype, "width", void 0);
     return WritableRackInput;
-}(SpeakeasyBase));
-export { WritableRackInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableRackInput = WritableRackInput;

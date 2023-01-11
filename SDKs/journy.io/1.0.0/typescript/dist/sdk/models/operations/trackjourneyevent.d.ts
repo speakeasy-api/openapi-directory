@@ -25,7 +25,7 @@ export declare class TrackJourneyEventRequestBodyIdentification extends Speakeas
 **/
 export declare class TrackJourneyEventRequestBody extends SpeakeasyBase {
     identification: TrackJourneyEventRequestBodyIdentification;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name: string;
     triggeredAt?: string;
 }
@@ -33,6 +33,9 @@ export declare class TrackJourneyEvent201ApplicationJsonMeta extends SpeakeasyBa
     requestId: string;
     status: number;
 }
+/**
+ * The object was created
+**/
 export declare class TrackJourneyEvent201ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: TrackJourneyEvent201ApplicationJsonMeta;
@@ -41,21 +44,24 @@ export declare class TrackJourneyEvent201ApplicationJson extends SpeakeasyBase {
  * All query-, header- and path- parameters that seemed incorrect
 **/
 export declare class TrackJourneyEvent400ApplicationJsonErrorsParameters extends SpeakeasyBase {
-    header?: Map<string, string>;
-    path?: Map<string, string>;
-    query?: Map<string, string>;
+    header?: Record<string, string>;
+    path?: Record<string, string>;
+    query?: Record<string, string>;
 }
 /**
  * Map that sums up all received values that seemed incorrect
 **/
 export declare class TrackJourneyEvent400ApplicationJsonErrors extends SpeakeasyBase {
-    fields?: Map<string, string>;
+    fields?: Record<string, string>;
     parameters?: TrackJourneyEvent400ApplicationJsonErrorsParameters;
 }
 export declare class TrackJourneyEvent400ApplicationJsonMeta extends SpeakeasyBase {
     requestId: string;
     status: number;
 }
+/**
+ * Specify the fields and/ or parameters that had errors
+**/
 export declare class TrackJourneyEvent400ApplicationJson extends SpeakeasyBase {
     errors: TrackJourneyEvent400ApplicationJsonErrors;
     message: string;
@@ -65,6 +71,9 @@ export declare class TrackJourneyEvent401ApplicationJsonMeta extends SpeakeasyBa
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class TrackJourneyEvent401ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: TrackJourneyEvent401ApplicationJsonMeta;
@@ -73,6 +82,9 @@ export declare class TrackJourneyEvent403ApplicationJsonMeta extends SpeakeasyBa
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class TrackJourneyEvent403ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: TrackJourneyEvent403ApplicationJsonMeta;
@@ -81,6 +93,9 @@ export declare class TrackJourneyEvent429ApplicationJsonMeta extends SpeakeasyBa
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class TrackJourneyEvent429ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: TrackJourneyEvent429ApplicationJsonMeta;
@@ -89,6 +104,9 @@ export declare class TrackJourneyEvent500ApplicationJsonMeta extends SpeakeasyBa
     requestId: string;
     status: number;
 }
+/**
+ * The error message should specify what cause the error
+**/
 export declare class TrackJourneyEvent500ApplicationJson extends SpeakeasyBase {
     message: string;
     meta: TrackJourneyEvent500ApplicationJsonMeta;
@@ -98,12 +116,12 @@ export declare class TrackJourneyEventRequest extends SpeakeasyBase {
 }
 export declare class TrackJourneyEventResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    trackJourneyEvent201ApplicationJsonObject?: TrackJourneyEvent201ApplicationJson;
-    trackJourneyEvent400ApplicationJsonObject?: TrackJourneyEvent400ApplicationJson;
-    trackJourneyEvent401ApplicationJsonObject?: TrackJourneyEvent401ApplicationJson;
-    trackJourneyEvent403ApplicationJsonObject?: TrackJourneyEvent403ApplicationJson;
-    trackJourneyEvent429ApplicationJsonObject?: TrackJourneyEvent429ApplicationJson;
-    trackJourneyEvent500ApplicationJsonObject?: TrackJourneyEvent500ApplicationJson;
+    trackJourneyEvent201ApplicationJSONObject?: TrackJourneyEvent201ApplicationJson;
+    trackJourneyEvent400ApplicationJSONObject?: TrackJourneyEvent400ApplicationJson;
+    trackJourneyEvent401ApplicationJSONObject?: TrackJourneyEvent401ApplicationJson;
+    trackJourneyEvent403ApplicationJSONObject?: TrackJourneyEvent403ApplicationJson;
+    trackJourneyEvent429ApplicationJSONObject?: TrackJourneyEvent429ApplicationJson;
+    trackJourneyEvent500ApplicationJSONObject?: TrackJourneyEvent500ApplicationJson;
 }

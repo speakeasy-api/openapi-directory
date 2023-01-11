@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CalendarNotification } from "./calendarnotification";
 import { ConferenceProperties } from "./conferenceproperties";
 import { EventReminder } from "./eventreminder";
-import { CalendarNotification } from "./calendarnotification";
 /**
  * The notifications that the authenticated user is receiving for this calendar.
 **/

@@ -44,7 +44,7 @@ export class AveragesV2GetV2AveragesGetQueryParams extends SpeakeasyBase {
   projectId?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spatial" })
   spatial: shared.SpatialEnum;
@@ -71,7 +71,7 @@ export class AveragesV2GetV2AveragesGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqResult?: shared.OpenAqResult;
+  openAQResult?: shared.OpenAqResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

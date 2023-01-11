@@ -12,5 +12,5 @@ export declare class CycleDeviceSwitchPortsRequest extends SpeakeasyBase {
 export declare class CycleDeviceSwitchPortsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cycleDeviceSwitchPorts200ApplicationJsonObject?: Map<string, any>;
+    cycleDeviceSwitchPorts200ApplicationJSONObject?: Record<string, any>;
 }

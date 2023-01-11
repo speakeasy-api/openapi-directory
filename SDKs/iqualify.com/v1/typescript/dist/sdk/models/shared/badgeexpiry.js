@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BadgeExpiryExpiryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BadgeExpiry = exports.BadgeExpiryTimeframeUnitEnum = exports.BadgeExpiryExpiryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BadgeExpiryExpiryTypeEnum;
 (function (BadgeExpiryExpiryTypeEnum) {
     BadgeExpiryExpiryTypeEnum["Date"] = "date";
     BadgeExpiryExpiryTypeEnum["Timeframe"] = "timeframe";
-})(BadgeExpiryExpiryTypeEnum || (BadgeExpiryExpiryTypeEnum = {}));
-export var BadgeExpiryTimeframeUnitEnum;
+})(BadgeExpiryExpiryTypeEnum = exports.BadgeExpiryExpiryTypeEnum || (exports.BadgeExpiryExpiryTypeEnum = {}));
+var BadgeExpiryTimeframeUnitEnum;
 (function (BadgeExpiryTimeframeUnitEnum) {
     BadgeExpiryTimeframeUnitEnum["Days"] = "days";
     BadgeExpiryTimeframeUnitEnum["Months"] = "months";
     BadgeExpiryTimeframeUnitEnum["Years"] = "years";
-})(BadgeExpiryTimeframeUnitEnum || (BadgeExpiryTimeframeUnitEnum = {}));
+})(BadgeExpiryTimeframeUnitEnum = exports.BadgeExpiryTimeframeUnitEnum || (exports.BadgeExpiryTimeframeUnitEnum = {}));
 var BadgeExpiry = /** @class */ (function (_super) {
     __extends(BadgeExpiry, _super);
     function BadgeExpiry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", Date)
     ], BadgeExpiry.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires" }),
         __metadata("design:type", Boolean)
     ], BadgeExpiry.prototype, "expires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryType" }),
         __metadata("design:type", String)
     ], BadgeExpiry.prototype, "expiryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeframeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeframeAmount" }),
         __metadata("design:type", Number)
     ], BadgeExpiry.prototype, "timeframeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeframeUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeframeUnit" }),
         __metadata("design:type", String)
     ], BadgeExpiry.prototype, "timeframeUnit", void 0);
     return BadgeExpiry;
-}(SpeakeasyBase));
-export { BadgeExpiry };
+}(utils_1.SpeakeasyBase));
+exports.BadgeExpiry = BadgeExpiry;

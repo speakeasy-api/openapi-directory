@@ -3,11 +3,11 @@ import { EncryptionTypeEnum } from "./encryptiontypeenum";
 
 
 
-// Record
+// RecordT
 /** 
  * The unit of data of the Kinesis data stream, which is composed of a sequence number, a partition key, and a data blob.
 **/
-export class Record extends SpeakeasyBase {
+export class RecordT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApproximateArrivalTimestamp" })
   approximateArrivalTimestamp?: Date;
 

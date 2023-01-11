@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,16 +33,18 @@ export class VideosEmbedPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/domains/{domain}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/domains/{domain}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -51,7 +53,7 @@ export class VideosEmbedPrivacy {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -59,7 +61,6 @@ export class VideosEmbedPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -75,16 +76,18 @@ export class VideosEmbedPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/domains/{domain}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/domains/{domain}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -93,12 +96,12 @@ export class VideosEmbedPrivacy {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -106,7 +109,6 @@ export class VideosEmbedPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -122,11 +124,11 @@ export class VideosEmbedPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/domains", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/domains", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -134,24 +136,26 @@ export class VideosEmbedPrivacy {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVideoPrivacyDomainsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.domain+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.domain+json`)) {
                 res.domains = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.domain+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.domain+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -159,7 +163,6 @@ export class VideosEmbedPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

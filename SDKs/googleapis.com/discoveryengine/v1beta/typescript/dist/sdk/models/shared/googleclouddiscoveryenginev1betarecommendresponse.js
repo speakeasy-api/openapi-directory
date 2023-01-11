@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult } from "./googleclouddiscoveryenginev1betarecommendresponserecommendationresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaRecommendResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1betarecommendresponserecommendationresult_1 = require("./googleclouddiscoveryenginev1betarecommendresponserecommendationresult");
 // GoogleCloudDiscoveryengineV1betaRecommendResponse
 /**
  * Response message for Recommend method.
@@ -34,21 +37,21 @@ var GoogleCloudDiscoveryengineV1betaRecommendResponse = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributionToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributionToken" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaRecommendResponse.prototype, "attributionToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=missingIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=missingIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1betaRecommendResponse.prototype, "missingIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: googleclouddiscoveryenginev1betarecommendresponserecommendationresult_1.GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1betaRecommendResponse.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudDiscoveryengineV1betaRecommendResponse.prototype, "validateOnly", void 0);
     return GoogleCloudDiscoveryengineV1betaRecommendResponse;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaRecommendResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaRecommendResponse = GoogleCloudDiscoveryengineV1betaRecommendResponse;

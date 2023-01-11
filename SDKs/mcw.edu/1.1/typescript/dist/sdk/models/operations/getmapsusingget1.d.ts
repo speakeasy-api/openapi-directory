@@ -8,5 +8,5 @@ export declare class GetMapsUsingGet1Request extends SpeakeasyBase {
 export declare class GetMapsUsingGet1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMapsUsingGet1200WildcardString?: string;
+    getMapsUsingGET1200WildcardString?: string;
 }

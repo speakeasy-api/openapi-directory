@@ -116,7 +116,7 @@ export class NewsResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  news200ApplicationJsonObject?: News200ApplicationJson;
+  news200ApplicationJSONObject?: News200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

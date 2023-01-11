@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetricFilterOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricFilter = exports.MetricFilterOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetricFilterOperatorEnum;
 (function (MetricFilterOperatorEnum) {
     MetricFilterOperatorEnum["OperatorUnspecified"] = "OPERATOR_UNSPECIFIED";
     MetricFilterOperatorEnum["Equal"] = "EQUAL";
     MetricFilterOperatorEnum["LessThan"] = "LESS_THAN";
     MetricFilterOperatorEnum["GreaterThan"] = "GREATER_THAN";
     MetricFilterOperatorEnum["IsMissing"] = "IS_MISSING";
-})(MetricFilterOperatorEnum || (MetricFilterOperatorEnum = {}));
+})(MetricFilterOperatorEnum = exports.MetricFilterOperatorEnum || (exports.MetricFilterOperatorEnum = {}));
 // MetricFilter
 /**
  * MetricFilter specifies the filter on a metric.
@@ -41,21 +44,21 @@ var MetricFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], MetricFilter.prototype, "comparisonValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], MetricFilter.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not" }),
         __metadata("design:type", Boolean)
     ], MetricFilter.prototype, "not", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], MetricFilter.prototype, "operator", void 0);
     return MetricFilter;
-}(SpeakeasyBase));
-export { MetricFilter };
+}(utils_1.SpeakeasyBase));
+exports.MetricFilter = MetricFilter;

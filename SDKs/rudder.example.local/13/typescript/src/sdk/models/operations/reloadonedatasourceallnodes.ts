@@ -40,7 +40,7 @@ export class ReloadOneDatasourceAllNodesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  reloadOneDatasourceAllNodes200ApplicationJsonObject?: ReloadOneDatasourceAllNodes200ApplicationJson;
+  reloadOneDatasourceAllNodes200ApplicationJSONObject?: ReloadOneDatasourceAllNodes200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

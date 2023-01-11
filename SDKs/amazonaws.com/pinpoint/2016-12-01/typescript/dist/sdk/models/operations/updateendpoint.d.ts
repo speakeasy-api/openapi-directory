@@ -18,13 +18,13 @@ export declare class UpdateEndpointHeaders extends SpeakeasyBase {
 **/
 export declare class UpdateEndpointRequestBodyEndpointRequest extends SpeakeasyBase {
     address?: string;
-    attributes?: Map<string, string[]>;
+    attributes?: Record<string, string[]>;
     channelType?: shared.ChannelTypeEnum;
     demographic?: shared.EndpointDemographic;
     effectiveDate?: string;
     endpointStatus?: string;
     location?: shared.EndpointLocation;
-    metrics?: Map<string, number>;
+    metrics?: Record<string, number>;
     optOut?: string;
     requestId?: string;
     user?: shared.EndpointUser;

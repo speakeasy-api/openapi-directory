@@ -191,23 +191,23 @@ export class MiipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  miipc400ApplicationJsonObject?: Miipc400ApplicationJson;
+  miipc400ApplicationJSONObject?: Miipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc401ApplicationJsonObject?: Miipc401ApplicationJson;
+  miipc401ApplicationJSONObject?: Miipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc404ApplicationJsonObject?: Miipc404ApplicationJson;
+  miipc404ApplicationJSONObject?: Miipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc500ApplicationJsonObject?: Miipc500ApplicationJson;
+  miipc500ApplicationJSONObject?: Miipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc502ApplicationJsonObject?: Miipc502ApplicationJson;
+  miipc502ApplicationJSONObject?: Miipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc503ApplicationJsonObject?: Miipc503ApplicationJson;
+  miipc503ApplicationJSONObject?: Miipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  miipc504ApplicationJsonObject?: Miipc504ApplicationJson;
+  miipc504ApplicationJSONObject?: Miipc504ApplicationJson;
 }

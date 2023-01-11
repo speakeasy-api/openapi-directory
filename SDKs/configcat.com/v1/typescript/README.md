@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { AddOrUpdateIntegrationLinkRequest, AddOrUpdateIntegrationLinkResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAuditlogsRequest, GetAuditlogsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basic: {
       password: "YOUR_PASSWORD_HERE",
@@ -33,30 +32,22 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: AddOrUpdateIntegrationLinkRequest = {
+const req: GetAuditlogsRequest = {
   pathParams: {
-    environmentId: "vel",
-    integrationLinkType: "jira",
-    key: "quas",
-    settingId: 3815582250837815516,
+    productId: "sit",
   },
-  request: {
-    addOrUpdateIntegrationLinkModel: {
-      description: "ut",
-      url: "est",
+  queryParams: {
+    auditLogType: {
+      "culpa": "expedita",
     },
-    addOrUpdateIntegrationLinkModel1: {
-      description: "ex",
-      url: "iure",
-    },
-    addOrUpdateIntegrationLinkModel2: {
-      description: "nemo",
-      url: "labore",
-    },
+    configId: "consequuntur",
+    environmentId: "dolor",
+    fromUtcDateTime: "2009-11-26T21:53:53Z",
+    toUtcDateTime: "1978-05-28T16:08:43Z",
   },
 };
 
-sdk.sdk.addOrUpdateIntegrationLink(req).then((res: AddOrUpdateIntegrationLinkResponse | AxiosError) => {
+sdk.auditLogs.getAuditlogs(req).then((res: GetAuditlogsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -65,59 +56,98 @@ sdk.sdk.addOrUpdateIntegrationLink(req).then((res: AddOrUpdateIntegrationLinkRes
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Audit logs
 
-* `addOrUpdateIntegrationLink` - Add or update Integration link
-* `createConfig` - Create Config
-* `createEnvironment` - Create Environment
-* `createPermissionGroup` - Create Permission Group
-* `createProduct` - Create Product
-* `createSetting` - Create Flag
-* `createTag` - Create Tag
-* `deleteConfig` - Delete Config
-* `deleteEnvironment` - Delete Environment
-* `deleteIntegrationLink` - Delete Integration link
-* `deleteOrganizationMember` - Delete Member from Organization
-* `deletePermissionGroup` - Delete Permission Group
-* `deleteProduct` - Delete Product
-* `deleteProductMember` - Delete Member from Product
-* `deleteSetting` - Delete Flag
-* `deleteTag` - Delete Tag
 * `getAuditlogs` - List Audit log items for Product
+* `getDeletedSettings` - List Deleted Settings
+* `getOrganizationAuditlogs` - List Audit log items for Organization
+
+### Configs
+
+* `createConfig` - Create Config
+* `deleteConfig` - Delete Config
 * `getConfig` - Get Config
 * `getConfigs` - List Configs
-* `getDeletedSettings` - List Deleted Settings
+* `updateConfig` - Update Config
+
+### Environments
+
+* `createEnvironment` - Create Environment
+* `deleteEnvironment` - Delete Environment
 * `getEnvironment` - Get Environment
 * `getEnvironments` - List Environments
+* `updateEnvironment` - Update Environment
+
+### Feature Flag & Setting values
+
+* `getSettingValue` - Get value
+* `getSettingValues` - Get values
+* `replaceSettingValue` - Replace value
+* `updateSettingValue` - Update value
+
+### Feature Flag & Setting values using SDK Key
+
+* `getSettingValueBySdkkey` - Get value
+* `replaceSettingValueBySdkkey` - Replace value
+* `updateSettingValueBySdkkey` - Update value
+
+### Feature Flags & Settings
+
+* `createSetting` - Create Flag
+* `deleteSetting` - Delete Flag
+* `getSetting` - Get Flag
+* `getSettings` - List Flags
+* `updateSetting` - Update Flag
+
+### Integration links
+
+* `addOrUpdateIntegrationLink` - Add or update Integration link
+* `deleteIntegrationLink` - Delete Integration link
 * `getIntegrationLinkDetails` - Get Integration link
+
+### Me
+
 * `getMe` - Get authenticated user details
-* `getOrganizationAuditlogs` - List Audit log items for Organization
+
+### Members
+
+* `deleteOrganizationMember` - Delete Member from Organization
+* `deleteProductMember` - Delete Member from Product
 * `getOrganizationMembers` - List Organization Members
+* `getProductMembers` - List Product Members
+* `inviteMember` - Invite Member
+
+### Organizations
+
 * `getOrganizations` - List Organizations
+
+### Permission Groups
+
+* `createPermissionGroup` - Create Permission Group
+* `deletePermissionGroup` - Delete Permission Group
 * `getPermissionGroup` - Get Permission Group
 * `getPermissionGroups` - List Permission Groups
+* `updatePermissionGroup` - Update Permission Group
+
+### Products
+
+* `createProduct` - Create Product
+* `deleteProduct` - Delete Product
 * `getProduct` - Get Product
-* `getProductMembers` - List Product Members
 * `getProducts` - List Products
+* `updateProduct` - Update Product
+
+### SDK Keys
+
 * `getSdkKeys` - Get SDK Key
-* `getSetting` - Get Flag
-* `getSettingValue` - Get value
-* `getSettingValueBySdkkey` - Get value
-* `getSettingValues` - Get values
-* `getSettings` - List Flags
+
+### Tags
+
+* `createTag` - Create Tag
+* `deleteTag` - Delete Tag
 * `getSettingsByTag` - List Settings by Tag
 * `getTag` - Get Tag
 * `getTags` - List Tags
-* `inviteMember` - Invite Member
-* `replaceSettingValue` - Replace value
-* `replaceSettingValueBySdkkey` - Replace value
-* `updateConfig` - Update Config
-* `updateEnvironment` - Update Environment
-* `updatePermissionGroup` - Update Permission Group
-* `updateProduct` - Update Product
-* `updateSetting` - Update Flag
-* `updateSettingValue` - Update value
-* `updateSettingValueBySdkkey` - Update value
 * `updateTag` - Update Tag
 
 <!-- End SDK Available Operations -->

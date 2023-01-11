@@ -16,11 +16,11 @@ export class Action extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters", elemType: ActionParameter })
-  parameters?: Map<string, ActionParameter>;
+  parameters?: Record<string, ActionParameter>;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets", elemType: ActionTarget })
-  targets?: Map<string, ActionTarget>;
+  targets?: Record<string, ActionTarget>;
 }

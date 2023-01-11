@@ -8,7 +8,7 @@ export class ServicePrincipalsAddOwnerPathParams extends SpeakeasyBase {
   objectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -20,10 +20,10 @@ export class ServicePrincipalsAddOwnerQueryParams extends SpeakeasyBase {
 
 export class ServicePrincipalsAddOwnerRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  addOwnerParameters?: Map<string, Map<string, any>>;
+  addOwnerParameters?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  addOwnerParameters1?: Map<string, Map<string, any>>;
+  addOwnerParameters1?: Record<string, Record<string, any>>;
 }
 
 

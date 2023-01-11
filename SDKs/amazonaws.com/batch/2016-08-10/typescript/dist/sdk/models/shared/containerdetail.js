@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyValuePair } from "./keyvaluepair";
-import { FargatePlatformConfiguration } from "./fargateplatformconfiguration";
-import { LinuxParameters } from "./linuxparameters";
-import { LogConfiguration } from "./logconfiguration";
-import { MountPoint } from "./mountpoint";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { NetworkInterface } from "./networkinterface";
-import { ResourceRequirement } from "./resourcerequirement";
-import { Secret } from "./secret";
-import { Ulimit } from "./ulimit";
-import { Volume } from "./volume";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyvaluepair_1 = require("./keyvaluepair");
+var fargateplatformconfiguration_1 = require("./fargateplatformconfiguration");
+var linuxparameters_1 = require("./linuxparameters");
+var logconfiguration_1 = require("./logconfiguration");
+var mountpoint_1 = require("./mountpoint");
+var networkconfiguration_1 = require("./networkconfiguration");
+var networkinterface_1 = require("./networkinterface");
+var resourcerequirement_1 = require("./resourcerequirement");
+var secret_1 = require("./secret");
+var ulimit_1 = require("./ulimit");
+var volume_1 = require("./volume");
 // ContainerDetail
 /**
  * An object representing the details of a container that's part of a job.
@@ -44,109 +47,109 @@ var ContainerDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstanceArn" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "containerInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment", elemType: KeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment", elemType: keyvaluepair_1.KeyValuePair }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionRoleArn" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "executionRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitCode" }),
         __metadata("design:type", Number)
     ], ContainerDetail.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fargatePlatformConfiguration" }),
-        __metadata("design:type", FargatePlatformConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fargatePlatformConfiguration" }),
+        __metadata("design:type", fargateplatformconfiguration_1.FargatePlatformConfiguration)
     ], ContainerDetail.prototype, "fargatePlatformConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobRoleArn" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "jobRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linuxParameters" }),
-        __metadata("design:type", LinuxParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linuxParameters" }),
+        __metadata("design:type", linuxparameters_1.LinuxParameters)
     ], ContainerDetail.prototype, "linuxParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logConfiguration" }),
-        __metadata("design:type", LogConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logConfiguration" }),
+        __metadata("design:type", logconfiguration_1.LogConfiguration)
     ], ContainerDetail.prototype, "logConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamName" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "logStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", Number)
     ], ContainerDetail.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPoints", elemType: MountPoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPoints", elemType: mountpoint_1.MountPoint }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "mountPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], ContainerDetail.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privileged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privileged" }),
         __metadata("design:type", Boolean)
     ], ContainerDetail.prototype, "privileged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonlyRootFilesystem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonlyRootFilesystem" }),
         __metadata("design:type", Boolean)
     ], ContainerDetail.prototype, "readonlyRootFilesystem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceRequirements", elemType: ResourceRequirement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceRequirements", elemType: resourcerequirement_1.ResourceRequirement }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "resourceRequirements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secrets", elemType: Secret }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secrets", elemType: secret_1.Secret }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "secrets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskArn" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "taskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ulimits", elemType: Ulimit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ulimits", elemType: ulimit_1.Ulimit }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "ulimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], ContainerDetail.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcpus" }),
         __metadata("design:type", Number)
     ], ContainerDetail.prototype, "vcpus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volume_1.Volume }),
         __metadata("design:type", Array)
     ], ContainerDetail.prototype, "volumes", void 0);
     return ContainerDetail;
-}(SpeakeasyBase));
-export { ContainerDetail };
+}(utils_1.SpeakeasyBase));
+exports.ContainerDetail = ContainerDetail;

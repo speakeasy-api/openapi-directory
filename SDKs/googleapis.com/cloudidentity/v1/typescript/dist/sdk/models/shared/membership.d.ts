@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { EntityKey } from "./entitykey";
-import { MembershipRole1 } from "./membershiprole1";
 import { MembershipRole } from "./membershiprole";
+import { MembershipRole1 } from "./membershiprole1";
 export declare enum MembershipTypeEnum {
     TypeUnspecified = "TYPE_UNSPECIFIED",
     User = "USER",
@@ -13,13 +13,6 @@ export declare enum MembershipTypeEnum {
 /**
  * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
 **/
-export declare class MembershipInput extends SpeakeasyBase {
-    preferredMemberKey?: EntityKey;
-    roles?: MembershipRole1[];
-}
-/**
- * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
-**/
 export declare class Membership extends SpeakeasyBase {
     createTime?: string;
     name?: string;
@@ -27,4 +20,11 @@ export declare class Membership extends SpeakeasyBase {
     roles?: MembershipRole[];
     type?: MembershipTypeEnum;
     updateTime?: string;
+}
+/**
+ * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`, referred to as a "member".
+**/
+export declare class MembershipInput extends SpeakeasyBase {
+    preferredMemberKey?: EntityKey;
+    roles?: MembershipRole1[];
 }

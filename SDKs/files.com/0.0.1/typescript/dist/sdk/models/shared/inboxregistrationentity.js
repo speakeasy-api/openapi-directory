@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InboxRegistrationEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // InboxRegistrationEntity
 /**
  * List Inbox Registrations
@@ -33,33 +36,33 @@ var InboxRegistrationEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickwrap_body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickwrap_body" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "clickwrapBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_field_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_field_data" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "formFieldData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_field_set_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_field_set_id" }),
         __metadata("design:type", Number)
     ], InboxRegistrationEntity.prototype, "formFieldSetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InboxRegistrationEntity.prototype, "name", void 0);
     return InboxRegistrationEntity;
-}(SpeakeasyBase));
-export { InboxRegistrationEntity };
+}(utils_1.SpeakeasyBase));
+exports.InboxRegistrationEntity = InboxRegistrationEntity;

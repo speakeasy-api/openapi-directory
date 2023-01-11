@@ -15,6 +15,6 @@ export declare class ProjectsRemoveCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsRemoveCollaborator415ApplicationJsonObject?: ProjectsRemoveCollaborator415ApplicationJson;
+    projectsRemoveCollaborator415ApplicationJSONObject?: ProjectsRemoveCollaborator415ApplicationJson;
     validationError?: shared.ValidationError;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteInsightRulesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteInsightRulesResponse = exports.PostDeleteInsightRulesRequest = exports.PostDeleteInsightRulesHeaders = exports.PostDeleteInsightRulesQueryParams = exports.PostDeleteInsightRulesVersionEnum = exports.PostDeleteInsightRulesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteInsightRulesActionEnum;
 (function (PostDeleteInsightRulesActionEnum) {
     PostDeleteInsightRulesActionEnum["DeleteInsightRules"] = "DeleteInsightRules";
-})(PostDeleteInsightRulesActionEnum || (PostDeleteInsightRulesActionEnum = {}));
-export var PostDeleteInsightRulesVersionEnum;
+})(PostDeleteInsightRulesActionEnum = exports.PostDeleteInsightRulesActionEnum || (exports.PostDeleteInsightRulesActionEnum = {}));
+var PostDeleteInsightRulesVersionEnum;
 (function (PostDeleteInsightRulesVersionEnum) {
     PostDeleteInsightRulesVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(PostDeleteInsightRulesVersionEnum || (PostDeleteInsightRulesVersionEnum = {}));
+})(PostDeleteInsightRulesVersionEnum = exports.PostDeleteInsightRulesVersionEnum || (exports.PostDeleteInsightRulesVersionEnum = {}));
 var PostDeleteInsightRulesQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteInsightRulesQueryParams, _super);
     function PostDeleteInsightRulesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesQueryParams.prototype, "version", void 0);
     return PostDeleteInsightRulesQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteInsightRulesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInsightRulesQueryParams = PostDeleteInsightRulesQueryParams;
 var PostDeleteInsightRulesHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteInsightRulesHeaders, _super);
     function PostDeleteInsightRulesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteInsightRulesHeaders;
-}(SpeakeasyBase));
-export { PostDeleteInsightRulesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInsightRulesHeaders = PostDeleteInsightRulesHeaders;
 var PostDeleteInsightRulesRequest = /** @class */ (function (_super) {
     __extends(PostDeleteInsightRulesRequest, _super);
     function PostDeleteInsightRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteInsightRulesQueryParams)
     ], PostDeleteInsightRulesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteInsightRulesHeaders)
     ], PostDeleteInsightRulesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteInsightRulesRequest.prototype, "request", void 0);
     return PostDeleteInsightRulesRequest;
-}(SpeakeasyBase));
-export { PostDeleteInsightRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInsightRulesRequest = PostDeleteInsightRulesRequest;
 var PostDeleteInsightRulesResponse = /** @class */ (function (_super) {
     __extends(PostDeleteInsightRulesResponse, _super);
     function PostDeleteInsightRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteInsightRulesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteInsightRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteInsightRulesResponse.prototype, "statusCode", void 0);
     return PostDeleteInsightRulesResponse;
-}(SpeakeasyBase));
-export { PostDeleteInsightRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteInsightRulesResponse = PostDeleteInsightRulesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { CitiesRow } from "./citiesrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenAqCitiesResult = exports.OpenAqCitiesResultMeta = void 0;
+var utils_1 = require("../../../internal/utils");
+var citiesrow_1 = require("./citiesrow");
+var OpenAqCitiesResultMeta = /** @class */ (function (_super) {
+    __extends(OpenAqCitiesResultMeta, _super);
+    function OpenAqCitiesResultMeta() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=found" }),
+        __metadata("design:type", Number)
+    ], OpenAqCitiesResultMeta.prototype, "found", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
+        __metadata("design:type", String)
+    ], OpenAqCitiesResultMeta.prototype, "license", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
+        __metadata("design:type", Number)
+    ], OpenAqCitiesResultMeta.prototype, "limit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], OpenAqCitiesResultMeta.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", Number)
+    ], OpenAqCitiesResultMeta.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
+        __metadata("design:type", String)
+    ], OpenAqCitiesResultMeta.prototype, "website", void 0);
+    return OpenAqCitiesResultMeta;
+}(utils_1.SpeakeasyBase));
+exports.OpenAqCitiesResultMeta = OpenAqCitiesResultMeta;
 var OpenAqCitiesResult = /** @class */ (function (_super) {
     __extends(OpenAqCitiesResult, _super);
     function OpenAqCitiesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", OpenAqCitiesResultMeta)
     ], OpenAqCitiesResult.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: CitiesRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: citiesrow_1.CitiesRow }),
         __metadata("design:type", Array)
     ], OpenAqCitiesResult.prototype, "results", void 0);
     return OpenAqCitiesResult;
-}(SpeakeasyBase));
-export { OpenAqCitiesResult };
+}(utils_1.SpeakeasyBase));
+exports.OpenAqCitiesResult = OpenAqCitiesResult;

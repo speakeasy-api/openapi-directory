@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTftpGetArgsResponse = exports.ProtocolTftpGetArgsRequest = exports.ProtocolTftpGetArgsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTftpGetArgsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTftpGetArgsPathParams, _super);
     function ProtocolTftpGetArgsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTftpGetArgsPathParams.prototype, "agentNum", void 0);
     return ProtocolTftpGetArgsPathParams;
-}(SpeakeasyBase));
-export { ProtocolTftpGetArgsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpGetArgsPathParams = ProtocolTftpGetArgsPathParams;
 var ProtocolTftpGetArgsRequest = /** @class */ (function (_super) {
     __extends(ProtocolTftpGetArgsRequest, _super);
     function ProtocolTftpGetArgsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTftpGetArgsPathParams)
     ], ProtocolTftpGetArgsRequest.prototype, "pathParams", void 0);
     return ProtocolTftpGetArgsRequest;
-}(SpeakeasyBase));
-export { ProtocolTftpGetArgsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpGetArgsRequest = ProtocolTftpGetArgsRequest;
 var ProtocolTftpGetArgsResponse = /** @class */ (function (_super) {
     __extends(ProtocolTftpGetArgsResponse, _super);
     function ProtocolTftpGetArgsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTftpGetArgsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTftpGetArgsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProtocolTftpGetArgsResponse.prototype, "protocolTftpGetArgs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProtocolTftpGetArgsResponse.prototype, "protocolTftpGetArgs200ApplicationJSONObject", void 0);
     return ProtocolTftpGetArgsResponse;
-}(SpeakeasyBase));
-export { ProtocolTftpGetArgsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpGetArgsResponse = ProtocolTftpGetArgsResponse;

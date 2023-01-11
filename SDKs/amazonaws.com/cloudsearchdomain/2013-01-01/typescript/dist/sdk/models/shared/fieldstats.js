@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// FieldStats
-/**
- * The statistics for a field calculated in the request.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldStats = void 0;
+var utils_1 = require("../../../internal/utils");
 var FieldStats = /** @class */ (function (_super) {
     __extends(FieldStats, _super);
     function FieldStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], FieldStats.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", String)
     ], FieldStats.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mean" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mean" }),
         __metadata("design:type", String)
     ], FieldStats.prototype, "mean", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min" }),
         __metadata("design:type", String)
     ], FieldStats.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=missing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=missing" }),
         __metadata("design:type", Number)
     ], FieldStats.prototype, "missing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stddev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stddev" }),
         __metadata("design:type", Number)
     ], FieldStats.prototype, "stddev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sum" }),
         __metadata("design:type", Number)
     ], FieldStats.prototype, "sum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sumOfSquares" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sumOfSquares" }),
         __metadata("design:type", Number)
     ], FieldStats.prototype, "sumOfSquares", void 0);
     return FieldStats;
-}(SpeakeasyBase));
-export { FieldStats };
+}(utils_1.SpeakeasyBase));
+exports.FieldStats = FieldStats;

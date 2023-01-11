@@ -25,5 +25,5 @@ export class GetNetworkSmDeviceCellularUsageHistoryResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDeviceCellularUsageHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDeviceCellularUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

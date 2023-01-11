@@ -106,11 +106,11 @@ export declare class MiipcRequest extends SpeakeasyBase {
 export declare class MiipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    miipc400ApplicationJsonObject?: Miipc400ApplicationJson;
-    miipc401ApplicationJsonObject?: Miipc401ApplicationJson;
-    miipc404ApplicationJsonObject?: Miipc404ApplicationJson;
-    miipc500ApplicationJsonObject?: Miipc500ApplicationJson;
-    miipc502ApplicationJsonObject?: Miipc502ApplicationJson;
-    miipc503ApplicationJsonObject?: Miipc503ApplicationJson;
-    miipc504ApplicationJsonObject?: Miipc504ApplicationJson;
+    miipc400ApplicationJSONObject?: Miipc400ApplicationJson;
+    miipc401ApplicationJSONObject?: Miipc401ApplicationJson;
+    miipc404ApplicationJSONObject?: Miipc404ApplicationJson;
+    miipc500ApplicationJSONObject?: Miipc500ApplicationJson;
+    miipc502ApplicationJSONObject?: Miipc502ApplicationJson;
+    miipc503ApplicationJSONObject?: Miipc503ApplicationJson;
+    miipc504ApplicationJSONObject?: Miipc504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Person = exports.PersonUrls = exports.PersonPlacesLived = exports.PersonOrganizations = exports.PersonName = exports.PersonImage = exports.PersonEmails = exports.PersonCover = exports.PersonCoverCoverPhoto = exports.PersonCoverCoverInfo = exports.PersonAgeRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // PersonAgeRange
 /**
  * The age range of the person. Valid ranges are 17 or younger, 18 to 20, and 21 or older. Age is determined from the user's birthday using Western age reckoning.
@@ -33,16 +36,16 @@ var PersonAgeRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], PersonAgeRange.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min" }),
         __metadata("design:type", Number)
     ], PersonAgeRange.prototype, "min", void 0);
     return PersonAgeRange;
-}(SpeakeasyBase));
-export { PersonAgeRange };
+}(utils_1.SpeakeasyBase));
+exports.PersonAgeRange = PersonAgeRange;
 // PersonCoverCoverInfo
 /**
  * Extra information about the cover photo.
@@ -53,16 +56,16 @@ var PersonCoverCoverInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leftImageOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leftImageOffset" }),
         __metadata("design:type", Number)
     ], PersonCoverCoverInfo.prototype, "leftImageOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topImageOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topImageOffset" }),
         __metadata("design:type", Number)
     ], PersonCoverCoverInfo.prototype, "topImageOffset", void 0);
     return PersonCoverCoverInfo;
-}(SpeakeasyBase));
-export { PersonCoverCoverInfo };
+}(utils_1.SpeakeasyBase));
+exports.PersonCoverCoverInfo = PersonCoverCoverInfo;
 // PersonCoverCoverPhoto
 /**
  * The person's primary cover image.
@@ -73,20 +76,20 @@ var PersonCoverCoverPhoto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], PersonCoverCoverPhoto.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PersonCoverCoverPhoto.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], PersonCoverCoverPhoto.prototype, "width", void 0);
     return PersonCoverCoverPhoto;
-}(SpeakeasyBase));
-export { PersonCoverCoverPhoto };
+}(utils_1.SpeakeasyBase));
+exports.PersonCoverCoverPhoto = PersonCoverCoverPhoto;
 // PersonCover
 /**
  * The cover photo content.
@@ -97,36 +100,36 @@ var PersonCover = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverInfo" }),
         __metadata("design:type", PersonCoverCoverInfo)
     ], PersonCover.prototype, "coverInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverPhoto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverPhoto" }),
         __metadata("design:type", PersonCoverCoverPhoto)
     ], PersonCover.prototype, "coverPhoto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layout" }),
         __metadata("design:type", String)
     ], PersonCover.prototype, "layout", void 0);
     return PersonCover;
-}(SpeakeasyBase));
-export { PersonCover };
+}(utils_1.SpeakeasyBase));
+exports.PersonCover = PersonCover;
 var PersonEmails = /** @class */ (function (_super) {
     __extends(PersonEmails, _super);
     function PersonEmails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PersonEmails.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PersonEmails.prototype, "value", void 0);
     return PersonEmails;
-}(SpeakeasyBase));
-export { PersonEmails };
+}(utils_1.SpeakeasyBase));
+exports.PersonEmails = PersonEmails;
 // PersonImage
 /**
  * The representation of the person's profile photo.
@@ -137,16 +140,16 @@ var PersonImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefault" }),
         __metadata("design:type", Boolean)
     ], PersonImage.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PersonImage.prototype, "url", void 0);
     return PersonImage;
-}(SpeakeasyBase));
-export { PersonImage };
+}(utils_1.SpeakeasyBase));
+exports.PersonImage = PersonImage;
 // PersonName
 /**
  * An object representation of the individual components of a person's name.
@@ -157,237 +160,237 @@ var PersonName = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=familyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=familyName" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "familyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formatted" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "formatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=givenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=givenName" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "givenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=honorificPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=honorificPrefix" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "honorificPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=honorificSuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=honorificSuffix" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "honorificSuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=middleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middleName" }),
         __metadata("design:type", String)
     ], PersonName.prototype, "middleName", void 0);
     return PersonName;
-}(SpeakeasyBase));
-export { PersonName };
+}(utils_1.SpeakeasyBase));
+exports.PersonName = PersonName;
 var PersonOrganizations = /** @class */ (function (_super) {
     __extends(PersonOrganizations, _super);
     function PersonOrganizations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=department" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=department" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "department", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], PersonOrganizations.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PersonOrganizations.prototype, "type", void 0);
     return PersonOrganizations;
-}(SpeakeasyBase));
-export { PersonOrganizations };
+}(utils_1.SpeakeasyBase));
+exports.PersonOrganizations = PersonOrganizations;
 var PersonPlacesLived = /** @class */ (function (_super) {
     __extends(PersonPlacesLived, _super);
     function PersonPlacesLived() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], PersonPlacesLived.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PersonPlacesLived.prototype, "value", void 0);
     return PersonPlacesLived;
-}(SpeakeasyBase));
-export { PersonPlacesLived };
+}(utils_1.SpeakeasyBase));
+exports.PersonPlacesLived = PersonPlacesLived;
 var PersonUrls = /** @class */ (function (_super) {
     __extends(PersonUrls, _super);
     function PersonUrls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PersonUrls.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PersonUrls.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PersonUrls.prototype, "value", void 0);
     return PersonUrls;
-}(SpeakeasyBase));
-export { PersonUrls };
+}(utils_1.SpeakeasyBase));
+exports.PersonUrls = PersonUrls;
 var Person = /** @class */ (function (_super) {
     __extends(Person, _super);
     function Person() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aboutMe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aboutMe" }),
         __metadata("design:type", String)
     ], Person.prototype, "aboutMe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageRange" }),
         __metadata("design:type", PersonAgeRange)
     ], Person.prototype, "ageRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=birthday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birthday" }),
         __metadata("design:type", String)
     ], Person.prototype, "birthday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=braggingRights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=braggingRights" }),
         __metadata("design:type", String)
     ], Person.prototype, "braggingRights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=circledByCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=circledByCount" }),
         __metadata("design:type", Number)
     ], Person.prototype, "circledByCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cover" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cover" }),
         __metadata("design:type", PersonCover)
     ], Person.prototype, "cover", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentLocation" }),
         __metadata("design:type", String)
     ], Person.prototype, "currentLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Person.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Person.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: PersonEmails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: PersonEmails }),
         __metadata("design:type", Array)
     ], Person.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Person.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], Person.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Person.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", PersonImage)
     ], Person.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPlusUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPlusUser" }),
         __metadata("design:type", Boolean)
     ], Person.prototype, "isPlusUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Person.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], Person.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", PersonName)
     ], Person.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], Person.prototype, "nickname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], Person.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=occupation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occupation" }),
         __metadata("design:type", String)
     ], Person.prototype, "occupation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations", elemType: PersonOrganizations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations", elemType: PersonOrganizations }),
         __metadata("design:type", Array)
     ], Person.prototype, "organizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placesLived", elemType: PersonPlacesLived }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placesLived", elemType: PersonPlacesLived }),
         __metadata("design:type", Array)
     ], Person.prototype, "placesLived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plusOneCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plusOneCount" }),
         __metadata("design:type", Number)
     ], Person.prototype, "plusOneCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipStatus" }),
         __metadata("design:type", String)
     ], Person.prototype, "relationshipStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skills" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skills" }),
         __metadata("design:type", String)
     ], Person.prototype, "skills", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagline" }),
         __metadata("design:type", String)
     ], Person.prototype, "tagline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Person.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urls", elemType: PersonUrls }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urls", elemType: PersonUrls }),
         __metadata("design:type", Array)
     ], Person.prototype, "urls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verified" }),
         __metadata("design:type", Boolean)
     ], Person.prototype, "verified", void 0);
     return Person;
-}(SpeakeasyBase));
-export { Person };
+}(utils_1.SpeakeasyBase));
+exports.Person = Person;

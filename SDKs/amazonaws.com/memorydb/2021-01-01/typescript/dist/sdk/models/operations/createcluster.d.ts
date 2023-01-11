@@ -24,11 +24,11 @@ export declare class CreateClusterResponse extends SpeakeasyBase {
     contentType: string;
     createClusterResponse?: shared.CreateClusterResponse;
     insufficientClusterCapacityFault?: any;
-    invalidAclStateFault?: any;
+    invalidACLStateFault?: any;
     invalidCredentialsException?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;
-    invalidVpcNetworkStateFault?: any;
+    invalidVPCNetworkStateFault?: any;
     nodeQuotaForClusterExceededFault?: any;
     nodeQuotaForCustomerExceededFault?: any;
     parameterGroupNotFoundFault?: any;

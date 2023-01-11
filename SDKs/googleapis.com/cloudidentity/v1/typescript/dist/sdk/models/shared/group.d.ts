@@ -10,7 +10,7 @@ export declare class Group extends SpeakeasyBase {
     displayName?: string;
     dynamicGroupMetadata?: DynamicGroupMetadata;
     groupKey?: EntityKey;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     parent?: string;
     updateTime?: string;
@@ -23,6 +23,6 @@ export declare class GroupInput extends SpeakeasyBase {
     displayName?: string;
     dynamicGroupMetadata?: DynamicGroupMetadata;
     groupKey?: EntityKey;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     parent?: string;
 }

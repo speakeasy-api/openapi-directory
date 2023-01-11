@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,97 +23,99 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-var ModifierInput = /** @class */ (function (_super) {
-    __extends(ModifierInput, _super);
-    function ModifierInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternate_name" }),
-        __metadata("design:type", String)
-    ], ModifierInput.prototype, "alternateName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
-        __metadata("design:type", Boolean)
-    ], ModifierInput.prototype, "available", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", String)
-    ], ModifierInput.prototype, "currency", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=idempotency_key" }),
-        __metadata("design:type", String)
-    ], ModifierInput.prototype, "idempotencyKey", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifier_group_id" }),
-        __metadata("design:type", String)
-    ], ModifierInput.prototype, "modifierGroupId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ModifierInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_amount" }),
-        __metadata("design:type", Number)
-    ], ModifierInput.prototype, "priceAmount", void 0);
-    return ModifierInput;
-}(SpeakeasyBase));
-export { ModifierInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifierInput = exports.Modifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
 var Modifier = /** @class */ (function (_super) {
     __extends(Modifier, _super);
     function Modifier() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternate_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternate_name" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "alternateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Boolean)
     ], Modifier.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Modifier.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idempotency_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idempotency_key" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "idempotencyKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifier_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifier_group_id" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "modifierGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_amount" }),
         __metadata("design:type", Number)
     ], Modifier.prototype, "priceAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Modifier.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], Modifier.prototype, "updatedBy", void 0);
     return Modifier;
-}(SpeakeasyBase));
-export { Modifier };
+}(utils_1.SpeakeasyBase));
+exports.Modifier = Modifier;
+var ModifierInput = /** @class */ (function (_super) {
+    __extends(ModifierInput, _super);
+    function ModifierInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternate_name" }),
+        __metadata("design:type", String)
+    ], ModifierInput.prototype, "alternateName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
+        __metadata("design:type", Boolean)
+    ], ModifierInput.prototype, "available", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], ModifierInput.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idempotency_key" }),
+        __metadata("design:type", String)
+    ], ModifierInput.prototype, "idempotencyKey", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifier_group_id" }),
+        __metadata("design:type", String)
+    ], ModifierInput.prototype, "modifierGroupId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ModifierInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_amount" }),
+        __metadata("design:type", Number)
+    ], ModifierInput.prototype, "priceAmount", void 0);
+    return ModifierInput;
+}(utils_1.SpeakeasyBase));
+exports.ModifierInput = ModifierInput;

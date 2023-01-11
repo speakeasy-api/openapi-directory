@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultAccount = void 0;
+var utils_1 = require("../../../internal/utils");
 var DefaultAccount = /** @class */ (function (_super) {
     __extends(DefaultAccount, _super);
     function DefaultAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", Number)
     ], DefaultAccount.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash_algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash_algorithm" }),
         __metadata("design:type", String)
     ], DefaultAccount.prototype, "hashAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_dir" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_dir" }),
         __metadata("design:type", String)
     ], DefaultAccount.prototype, "homeDir", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DefaultAccount.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pwd_hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pwd_hash" }),
         __metadata("design:type", String)
     ], DefaultAccount.prototype, "pwdHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shell" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shell" }),
         __metadata("design:type", String)
     ], DefaultAccount.prototype, "shell", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", Number)
     ], DefaultAccount.prototype, "uid", void 0);
     return DefaultAccount;
-}(SpeakeasyBase));
-export { DefaultAccount };
+}(utils_1.SpeakeasyBase));
+exports.DefaultAccount = DefaultAccount;

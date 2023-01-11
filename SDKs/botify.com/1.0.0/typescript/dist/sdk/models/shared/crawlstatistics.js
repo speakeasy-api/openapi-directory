@@ -1,0 +1,76 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CrawlStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
+var CrawlStatistics = /** @class */ (function (_super) {
+    __extends(CrawlStatistics, _super);
+    function CrawlStatistics() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=depth_current" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "depthCurrent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_upd_dt" }),
+        __metadata("design:type", Date)
+    ], CrawlStatistics.prototype, "lastUpdDt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDones", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_2xx" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDones2xx", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_3xx" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDones3xx", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_4xx" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDones4xx", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_5xx" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDones5xx", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_networkerror" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDonesNetworkerror", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_dones_xxx" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesDonesXxx", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages_known" }),
+        __metadata("design:type", Number)
+    ], CrawlStatistics.prototype, "pagesKnown", void 0);
+    return CrawlStatistics;
+}(utils_1.SpeakeasyBase));
+exports.CrawlStatistics = CrawlStatistics;

@@ -7,9 +7,9 @@ export declare class AccountSettings extends SpeakeasyBase {
     awsAccountNumber?: string;
     defaultJobTimeoutMinutes?: number;
     maxJobTimeoutMinutes?: number;
-    maxSlots?: Map<string, number>;
+    maxSlots?: Record<string, number>;
     skipAppResign?: boolean;
     trialMinutes?: TrialMinutes;
-    unmeteredDevices?: Map<string, number>;
-    unmeteredRemoteAccessDevices?: Map<string, number>;
+    unmeteredDevices?: Record<string, number>;
+    unmeteredRemoteAccessDevices?: Record<string, number>;
 }

@@ -7,7 +7,7 @@ export declare class DeletePodcastByIdQueryParams extends SpeakeasyBase {
     reason?: string;
 }
 export declare class DeletePodcastByIdHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class DeletePodcastByIdRequest extends SpeakeasyBase {
     pathParams: DeletePodcastByIdPathParams;
@@ -17,6 +17,6 @@ export declare class DeletePodcastByIdRequest extends SpeakeasyBase {
 export declare class DeletePodcastByIdResponse extends SpeakeasyBase {
     contentType: string;
     deletePodcastResponse?: shared.DeletePodcastResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

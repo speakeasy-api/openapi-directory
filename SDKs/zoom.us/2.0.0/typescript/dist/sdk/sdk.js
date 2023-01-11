@@ -1,0 +1,130 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var utils = __importStar(require("../internal/utils"));
+var shared_1 = require("./models/shared");
+var accounts_1 = require("./accounts");
+var billing_1 = require("./billing");
+var chatchannels_1 = require("./chatchannels");
+var chatchannelsaccountlevel_1 = require("./chatchannelsaccountlevel");
+var chatmessages_1 = require("./chatmessages");
+var chatbotmessages_1 = require("./chatbotmessages");
+var cloudrecording_1 = require("./cloudrecording");
+var commonareaphones_1 = require("./commonareaphones");
+var contacts_1 = require("./contacts");
+var dashboards_1 = require("./dashboards");
+var deprecatedapiendpoints_1 = require("./deprecatedapiendpoints");
+var devices_1 = require("./devices");
+var groups_1 = require("./groups");
+var imchat_1 = require("./imchat");
+var imgroups_1 = require("./imgroups");
+var meetings_1 = require("./meetings");
+var pac_1 = require("./pac");
+var phone_1 = require("./phone");
+var phoneautoreceptionists_1 = require("./phoneautoreceptionists");
+var phoneblockedlist_1 = require("./phoneblockedlist");
+var phonecallqueues_1 = require("./phonecallqueues");
+var phonedevices_1 = require("./phonedevices");
+var phonereports_1 = require("./phonereports");
+var phonesharedlinegroups_1 = require("./phonesharedlinegroups");
+var phonesite_1 = require("./phonesite");
+var reports_1 = require("./reports");
+var roles_1 = require("./roles");
+var rooms_1 = require("./rooms");
+var roomsaccount_1 = require("./roomsaccount");
+var roomsdevices_1 = require("./roomsdevices");
+var roomslocation_1 = require("./roomslocation");
+var sipconnectedaudio_1 = require("./sipconnectedaudio");
+var sipphone_1 = require("./sipphone");
+var tsp_1 = require("./tsp");
+var trackingfield_1 = require("./trackingfield");
+var users_1 = require("./users");
+var webinars_1 = require("./webinars");
+exports.ServerList = [
+    "https://api.zoom.us/v2",
+];
+var SDK = /** @class */ (function () {
+    function SDK(props) {
+        var _a, _b;
+        this._language = "typescript";
+        this._sdkVersion = "0.0.1";
+        this._genVersion = "internal";
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        if (props.security) {
+            var security = props.security;
+            if (!(props.security instanceof utils.SpeakeasyBase))
+                security = new shared_1.Security(props.security);
+            this._securityClient = utils.createSecurityClient(this._defaultClient, security);
+        }
+        else {
+            this._securityClient = this._defaultClient;
+        }
+        this.accounts = new accounts_1.Accounts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.billing = new billing_1.Billing(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.chatChannels = new chatchannels_1.ChatChannels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.chatChannelsAccountLevel = new chatchannelsaccountlevel_1.ChatChannelsAccountLevel(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.chatMessages = new chatmessages_1.ChatMessages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.chatbotMessages = new chatbotmessages_1.ChatbotMessages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.cloudRecording = new cloudrecording_1.CloudRecording(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.commonAreaPhones = new commonareaphones_1.CommonAreaPhones(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.contacts = new contacts_1.Contacts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.dashboards = new dashboards_1.Dashboards(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.deprecatedAPIEndpoints = new deprecatedapiendpoints_1.DeprecatedApiEndpoints(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.devices = new devices_1.Devices(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groups = new groups_1.Groups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.imChat = new imchat_1.ImChat(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.imGroups = new imgroups_1.ImGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.meetings = new meetings_1.Meetings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.pac = new pac_1.Pac(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phone = new phone_1.Phone(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneAutoReceptionists = new phoneautoreceptionists_1.PhoneAutoReceptionists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneBlockedList = new phoneblockedlist_1.PhoneBlockedList(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneCallQueues = new phonecallqueues_1.PhoneCallQueues(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneDevices = new phonedevices_1.PhoneDevices(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneReports = new phonereports_1.PhoneReports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneSharedLineGroups = new phonesharedlinegroups_1.PhoneSharedLineGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.phoneSite = new phonesite_1.PhoneSite(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.reports = new reports_1.Reports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.roles = new roles_1.Roles(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.rooms = new rooms_1.Rooms(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.roomsAccount = new roomsaccount_1.RoomsAccount(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.roomsDevices = new roomsdevices_1.RoomsDevices(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.roomsLocation = new roomslocation_1.RoomsLocation(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.sipConnectedAudio = new sipconnectedaudio_1.SipConnectedAudio(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.sipPhone = new sipphone_1.SipPhone(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.tsp = new tsp_1.Tsp(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.trackingField = new trackingfield_1.TrackingField(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.users = new users_1.Users(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.webinars = new webinars_1.Webinars(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+    }
+    return SDK;
+}());
+exports.SDK = SDK;

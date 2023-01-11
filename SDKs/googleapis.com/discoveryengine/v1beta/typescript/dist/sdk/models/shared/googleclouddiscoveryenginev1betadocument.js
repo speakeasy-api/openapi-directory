@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaDocument = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDiscoveryengineV1betaDocument
 /**
  * Document captures all raw metadata information of items to be recommended or searched.
@@ -33,29 +36,29 @@ var GoogleCloudDiscoveryengineV1betaDocument = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonData" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "jsonData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentDocumentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentDocumentId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "parentDocumentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "schemaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=structData" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=structData" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDiscoveryengineV1betaDocument.prototype, "structData", void 0);
     return GoogleCloudDiscoveryengineV1betaDocument;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaDocument };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaDocument = GoogleCloudDiscoveryengineV1betaDocument;

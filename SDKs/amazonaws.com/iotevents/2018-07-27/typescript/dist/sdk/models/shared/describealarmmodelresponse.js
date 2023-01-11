@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmCapabilities } from "./alarmcapabilities";
-import { AlarmEventActions } from "./alarmeventactions";
-import { AlarmNotification } from "./alarmnotification";
-import { AlarmRule } from "./alarmrule";
-import { AlarmModelVersionStatusEnum } from "./alarmmodelversionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAlarmModelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmcapabilities_1 = require("./alarmcapabilities");
+var alarmeventactions_1 = require("./alarmeventactions");
+var alarmnotification_1 = require("./alarmnotification");
+var alarmrule_1 = require("./alarmrule");
+var alarmmodelversionstatusenum_1 = require("./alarmmodelversionstatusenum");
 var DescribeAlarmModelResponse = /** @class */ (function (_super) {
     __extends(DescribeAlarmModelResponse, _super);
     function DescribeAlarmModelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmCapabilities" }),
-        __metadata("design:type", AlarmCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmCapabilities" }),
+        __metadata("design:type", alarmcapabilities_1.AlarmCapabilities)
     ], DescribeAlarmModelResponse.prototype, "alarmCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmEventActions" }),
-        __metadata("design:type", AlarmEventActions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmEventActions" }),
+        __metadata("design:type", alarmeventactions_1.AlarmEventActions)
     ], DescribeAlarmModelResponse.prototype, "alarmEventActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelArn" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "alarmModelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelDescription" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "alarmModelDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelName" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "alarmModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelVersion" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "alarmModelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmNotification" }),
-        __metadata("design:type", AlarmNotification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmNotification" }),
+        __metadata("design:type", alarmnotification_1.AlarmNotification)
     ], DescribeAlarmModelResponse.prototype, "alarmNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmRule" }),
-        __metadata("design:type", AlarmRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmRule" }),
+        __metadata("design:type", alarmrule_1.AlarmRule)
     ], DescribeAlarmModelResponse.prototype, "alarmRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], DescribeAlarmModelResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], DescribeAlarmModelResponse.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", Number)
     ], DescribeAlarmModelResponse.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], DescribeAlarmModelResponse.prototype, "statusMessage", void 0);
     return DescribeAlarmModelResponse;
-}(SpeakeasyBase));
-export { DescribeAlarmModelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAlarmModelResponse = DescribeAlarmModelResponse;

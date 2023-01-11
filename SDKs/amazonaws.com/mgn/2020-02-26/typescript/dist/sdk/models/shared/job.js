@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InitiatedByEnum } from "./initiatedbyenum";
-import { ParticipatingServer } from "./participatingserver";
-import { JobStatusEnum } from "./jobstatusenum";
-import { JobTypeEnum } from "./jobtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Job = void 0;
+var utils_1 = require("../../../internal/utils");
+var initiatedbyenum_1 = require("./initiatedbyenum");
+var participatingserver_1 = require("./participatingserver");
+var jobstatusenum_1 = require("./jobstatusenum");
+var jobtypeenum_1 = require("./jobtypeenum");
 // Job
 /**
  * Job.
@@ -37,41 +40,41 @@ var Job = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Job.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDateTime" }),
         __metadata("design:type", String)
     ], Job.prototype, "endDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initiatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initiatedBy" }),
         __metadata("design:type", String)
     ], Job.prototype, "initiatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobID" }),
         __metadata("design:type", String)
-    ], Job.prototype, "jobId", void 0);
+    ], Job.prototype, "jobID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=participatingServers", elemType: ParticipatingServer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=participatingServers", elemType: participatingserver_1.ParticipatingServer }),
         __metadata("design:type", Array)
     ], Job.prototype, "participatingServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Job.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Job.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Job.prototype, "type", void 0);
     return Job;
-}(SpeakeasyBase));
-export { Job };
+}(utils_1.SpeakeasyBase));
+exports.Job = Job;

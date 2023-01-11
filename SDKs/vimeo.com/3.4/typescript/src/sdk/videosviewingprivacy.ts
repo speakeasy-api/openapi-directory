@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,30 +31,32 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/users/{user_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/users/{user_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AddVideoPrivacyUserResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.user = httpRes?.data;
             }
             break;
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -62,7 +64,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -82,23 +83,25 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/users", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AddVideoPrivacyUsersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
@@ -106,7 +109,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -126,23 +128,25 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AddVideoPrivacyUsersAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
@@ -150,7 +154,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -166,16 +169,18 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/users/{user_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/users/{user_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -184,12 +189,12 @@ export class VideosViewingPrivacy {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -197,7 +202,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -213,11 +217,11 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/videos/{video_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/videos/{video_id}/privacy/users", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -225,24 +229,26 @@ export class VideosViewingPrivacy {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVideoPrivacyUsersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -250,7 +256,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -266,11 +271,11 @@ export class VideosViewingPrivacy {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/videos/{video_id}/privacy/users", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -278,24 +283,26 @@ export class VideosViewingPrivacy {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVideoPrivacyUsersAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -303,7 +310,6 @@ export class VideosViewingPrivacy {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetVaultNotificationsResponse = exports.SetVaultNotificationsRequest = exports.SetVaultNotificationsRequestBody = exports.SetVaultNotificationsRequestBodyVaultNotificationConfig = exports.SetVaultNotificationsHeaders = exports.SetVaultNotificationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetVaultNotificationsPathParams = /** @class */ (function (_super) {
     __extends(SetVaultNotificationsPathParams, _super);
     function SetVaultNotificationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsPathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=vaultName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=vaultName" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsPathParams.prototype, "vaultName", void 0);
     return SetVaultNotificationsPathParams;
-}(SpeakeasyBase));
-export { SetVaultNotificationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsPathParams = SetVaultNotificationsPathParams;
 var SetVaultNotificationsHeaders = /** @class */ (function (_super) {
     __extends(SetVaultNotificationsHeaders, _super);
     function SetVaultNotificationsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return SetVaultNotificationsHeaders;
-}(SpeakeasyBase));
-export { SetVaultNotificationsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsHeaders = SetVaultNotificationsHeaders;
 // SetVaultNotificationsRequestBodyVaultNotificationConfig
 /**
  * Represents a vault's notification configuration.
@@ -85,77 +88,77 @@ var SetVaultNotificationsRequestBodyVaultNotificationConfig = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Events" }),
         __metadata("design:type", Array)
     ], SetVaultNotificationsRequestBodyVaultNotificationConfig.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SNSTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SNSTopic" }),
         __metadata("design:type", String)
     ], SetVaultNotificationsRequestBodyVaultNotificationConfig.prototype, "snsTopic", void 0);
     return SetVaultNotificationsRequestBodyVaultNotificationConfig;
-}(SpeakeasyBase));
-export { SetVaultNotificationsRequestBodyVaultNotificationConfig };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsRequestBodyVaultNotificationConfig = SetVaultNotificationsRequestBodyVaultNotificationConfig;
 var SetVaultNotificationsRequestBody = /** @class */ (function (_super) {
     __extends(SetVaultNotificationsRequestBody, _super);
     function SetVaultNotificationsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vaultNotificationConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vaultNotificationConfig" }),
         __metadata("design:type", SetVaultNotificationsRequestBodyVaultNotificationConfig)
     ], SetVaultNotificationsRequestBody.prototype, "vaultNotificationConfig", void 0);
     return SetVaultNotificationsRequestBody;
-}(SpeakeasyBase));
-export { SetVaultNotificationsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsRequestBody = SetVaultNotificationsRequestBody;
 var SetVaultNotificationsRequest = /** @class */ (function (_super) {
     __extends(SetVaultNotificationsRequest, _super);
     function SetVaultNotificationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetVaultNotificationsPathParams)
     ], SetVaultNotificationsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetVaultNotificationsHeaders)
     ], SetVaultNotificationsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SetVaultNotificationsRequestBody)
     ], SetVaultNotificationsRequest.prototype, "request", void 0);
     return SetVaultNotificationsRequest;
-}(SpeakeasyBase));
-export { SetVaultNotificationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsRequest = SetVaultNotificationsRequest;
 var SetVaultNotificationsResponse = /** @class */ (function (_super) {
     __extends(SetVaultNotificationsResponse, _super);
     function SetVaultNotificationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetVaultNotificationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SetVaultNotificationsResponse.prototype, "invalidParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SetVaultNotificationsResponse.prototype, "missingParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SetVaultNotificationsResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SetVaultNotificationsResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetVaultNotificationsResponse.prototype, "statusCode", void 0);
     return SetVaultNotificationsResponse;
-}(SpeakeasyBase));
-export { SetVaultNotificationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetVaultNotificationsResponse = SetVaultNotificationsResponse;

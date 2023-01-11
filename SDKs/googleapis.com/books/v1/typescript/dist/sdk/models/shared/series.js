@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Series = exports.SeriesSeries = exports.SeriesSeriesSeriesSubscriptionReleaseInfo = exports.SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo = exports.SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo = /** @class */ (function (_super) {
     __extends(SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo, _super);
     function SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountInMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountInMicros" }),
         __metadata("design:type", Number)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo.prototype, "amountInMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseNumber" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo.prototype, "releaseNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseTime" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo.prototype, "releaseTime", void 0);
     return SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo;
-}(SpeakeasyBase));
-export { SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo };
+}(utils_1.SpeakeasyBase));
+exports.SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo = SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo;
 var SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo = /** @class */ (function (_super) {
     __extends(SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo, _super);
     function SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountInMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountInMicros" }),
         __metadata("design:type", Number)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo.prototype, "amountInMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseNumber" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo.prototype, "releaseNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseTime" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo.prototype, "releaseTime", void 0);
     return SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo;
-}(SpeakeasyBase));
-export { SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo };
+}(utils_1.SpeakeasyBase));
+exports.SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo = SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo;
 var SeriesSeriesSeriesSubscriptionReleaseInfo = /** @class */ (function (_super) {
     __extends(SeriesSeriesSeriesSubscriptionReleaseInfo, _super);
     function SeriesSeriesSeriesSubscriptionReleaseInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelTime" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfo.prototype, "cancelTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentReleaseInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentReleaseInfo" }),
         __metadata("design:type", SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo)
     ], SeriesSeriesSeriesSubscriptionReleaseInfo.prototype, "currentReleaseInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextReleaseInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextReleaseInfo" }),
         __metadata("design:type", SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo)
     ], SeriesSeriesSeriesSubscriptionReleaseInfo.prototype, "nextReleaseInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seriesSubscriptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seriesSubscriptionType" }),
         __metadata("design:type", String)
     ], SeriesSeriesSeriesSubscriptionReleaseInfo.prototype, "seriesSubscriptionType", void 0);
     return SeriesSeriesSeriesSubscriptionReleaseInfo;
-}(SpeakeasyBase));
-export { SeriesSeriesSeriesSubscriptionReleaseInfo };
+}(utils_1.SpeakeasyBase));
+exports.SeriesSeriesSeriesSubscriptionReleaseInfo = SeriesSeriesSeriesSubscriptionReleaseInfo;
 var SeriesSeries = /** @class */ (function (_super) {
     __extends(SeriesSeries, _super);
     function SeriesSeries() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerImageUrl" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "bannerImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eligibleForSubscription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eligibleForSubscription" }),
         __metadata("design:type", Boolean)
     ], SeriesSeries.prototype, "eligibleForSubscription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isComplete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isComplete" }),
         __metadata("design:type", Boolean)
     ], SeriesSeries.prototype, "isComplete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seriesFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seriesFormatType" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "seriesFormatType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seriesId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seriesId" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "seriesId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seriesSubscriptionReleaseInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seriesSubscriptionReleaseInfo" }),
         __metadata("design:type", SeriesSeriesSeriesSubscriptionReleaseInfo)
     ], SeriesSeries.prototype, "seriesSubscriptionReleaseInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seriesType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seriesType" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "seriesType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionId" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "subscriptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SeriesSeries.prototype, "title", void 0);
     return SeriesSeries;
-}(SpeakeasyBase));
-export { SeriesSeries };
+}(utils_1.SpeakeasyBase));
+exports.SeriesSeries = SeriesSeries;
 var Series = /** @class */ (function (_super) {
     __extends(Series, _super);
     function Series() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Series.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series", elemType: SeriesSeries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series", elemType: SeriesSeries }),
         __metadata("design:type", Array)
     ], Series.prototype, "series", void 0);
     return Series;
-}(SpeakeasyBase));
-export { Series };
+}(utils_1.SpeakeasyBase));
+exports.Series = Series;

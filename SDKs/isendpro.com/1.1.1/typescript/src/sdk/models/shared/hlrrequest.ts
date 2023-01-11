@@ -8,7 +8,7 @@ export enum HlRrequestGetHlrEnum {
 
 export class HlRrequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=getHLR" })
-  getHlr: HlRrequestGetHlrEnum;
+  getHLR: HlRrequestGetHlrEnum;
 
   @SpeakeasyMetadata({ data: "json, name=keyid" })
   keyid: string;

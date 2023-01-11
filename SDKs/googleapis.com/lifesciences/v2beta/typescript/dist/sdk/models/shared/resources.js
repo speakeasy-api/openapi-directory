@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualMachine } from "./virtualmachine";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resources = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualmachine_1 = require("./virtualmachine");
 // Resources
 /**
  * The system resources for the pipeline run. At least one zone or region must be specified or the pipeline run will fail.
@@ -34,17 +37,17 @@ var Resources = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions" }),
         __metadata("design:type", Array)
     ], Resources.prototype, "regions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachine" }),
-        __metadata("design:type", VirtualMachine)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachine" }),
+        __metadata("design:type", virtualmachine_1.VirtualMachine)
     ], Resources.prototype, "virtualMachine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zones" }),
         __metadata("design:type", Array)
     ], Resources.prototype, "zones", void 0);
     return Resources;
-}(SpeakeasyBase));
-export { Resources };
+}(utils_1.SpeakeasyBase));
+exports.Resources = Resources;

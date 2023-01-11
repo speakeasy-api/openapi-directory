@@ -11,9 +11,9 @@ export declare class GetPersonalizedRankingHeaders extends SpeakeasyBase {
 }
 export declare class GetPersonalizedRankingRequestBody extends SpeakeasyBase {
     campaignArn: string;
-    context?: Map<string, string>;
+    context?: Record<string, string>;
     filterArn?: string;
-    filterValues?: Map<string, string>;
+    filterValues?: Record<string, string>;
     inputList: string[];
     userId: string;
 }

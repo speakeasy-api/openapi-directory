@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagInput = exports.Tag = void 0;
+var utils_1 = require("../../../internal/utils");
 var Tag = /** @class */ (function (_super) {
     __extends(Tag, _super);
     function Tag() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Tag.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Tag.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Tag.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagged_items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagged_items" }),
         __metadata("design:type", Number)
     ], Tag.prototype, "taggedItems", void 0);
     return Tag;
-}(SpeakeasyBase));
-export { Tag };
+}(utils_1.SpeakeasyBase));
+exports.Tag = Tag;
 var TagInput = /** @class */ (function (_super) {
     __extends(TagInput, _super);
     function TagInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], TagInput.prototype, "slug", void 0);
     return TagInput;
-}(SpeakeasyBase));
-export { TagInput };
+}(utils_1.SpeakeasyBase));
+exports.TagInput = TagInput;

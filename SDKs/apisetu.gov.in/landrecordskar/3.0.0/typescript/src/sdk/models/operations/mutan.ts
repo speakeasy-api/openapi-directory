@@ -189,23 +189,23 @@ export class MutanResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mutan400ApplicationJsonObject?: Mutan400ApplicationJson;
+  mutan400ApplicationJSONObject?: Mutan400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan401ApplicationJsonObject?: Mutan401ApplicationJson;
+  mutan401ApplicationJSONObject?: Mutan401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan404ApplicationJsonObject?: Mutan404ApplicationJson;
+  mutan404ApplicationJSONObject?: Mutan404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan500ApplicationJsonObject?: Mutan500ApplicationJson;
+  mutan500ApplicationJSONObject?: Mutan500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan502ApplicationJsonObject?: Mutan502ApplicationJson;
+  mutan502ApplicationJSONObject?: Mutan502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan503ApplicationJsonObject?: Mutan503ApplicationJson;
+  mutan503ApplicationJSONObject?: Mutan503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mutan504ApplicationJsonObject?: Mutan504ApplicationJson;
+  mutan504ApplicationJSONObject?: Mutan504ApplicationJson;
 }

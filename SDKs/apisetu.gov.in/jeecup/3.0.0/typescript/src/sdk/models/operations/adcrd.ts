@@ -194,23 +194,23 @@ export class AdcrdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  adcrd400ApplicationJsonObject?: Adcrd400ApplicationJson;
+  adcrd400ApplicationJSONObject?: Adcrd400ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd401ApplicationJsonObject?: Adcrd401ApplicationJson;
+  adcrd401ApplicationJSONObject?: Adcrd401ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd404ApplicationJsonObject?: Adcrd404ApplicationJson;
+  adcrd404ApplicationJSONObject?: Adcrd404ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd500ApplicationJsonObject?: Adcrd500ApplicationJson;
+  adcrd500ApplicationJSONObject?: Adcrd500ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd502ApplicationJsonObject?: Adcrd502ApplicationJson;
+  adcrd502ApplicationJSONObject?: Adcrd502ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd503ApplicationJsonObject?: Adcrd503ApplicationJson;
+  adcrd503ApplicationJSONObject?: Adcrd503ApplicationJson;
 
   @SpeakeasyMetadata()
-  adcrd504ApplicationJsonObject?: Adcrd504ApplicationJson;
+  adcrd504ApplicationJSONObject?: Adcrd504ApplicationJson;
 }

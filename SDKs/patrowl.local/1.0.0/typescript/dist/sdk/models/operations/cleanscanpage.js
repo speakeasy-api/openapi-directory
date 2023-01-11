@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CleanScanPageResponse = exports.CleanScanPageRequest = exports.CleanScanPagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CleanScanPagePathParams = /** @class */ (function (_super) {
     __extends(CleanScanPagePathParams, _super);
     function CleanScanPagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=scanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=scanId" }),
         __metadata("design:type", Number)
     ], CleanScanPagePathParams.prototype, "scanId", void 0);
     return CleanScanPagePathParams;
-}(SpeakeasyBase));
-export { CleanScanPagePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CleanScanPagePathParams = CleanScanPagePathParams;
 var CleanScanPageRequest = /** @class */ (function (_super) {
     __extends(CleanScanPageRequest, _super);
     function CleanScanPageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CleanScanPagePathParams)
     ], CleanScanPageRequest.prototype, "pathParams", void 0);
     return CleanScanPageRequest;
-}(SpeakeasyBase));
-export { CleanScanPageRequest };
+}(utils_1.SpeakeasyBase));
+exports.CleanScanPageRequest = CleanScanPageRequest;
 var CleanScanPageResponse = /** @class */ (function (_super) {
     __extends(CleanScanPageResponse, _super);
     function CleanScanPageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CleanScanPageResponse.prototype, "apiResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CleanScanPageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CleanScanPageResponse.prototype, "statusCode", void 0);
     return CleanScanPageResponse;
-}(SpeakeasyBase));
-export { CleanScanPageResponse };
+}(utils_1.SpeakeasyBase));
+exports.CleanScanPageResponse = CleanScanPageResponse;

@@ -37,5 +37,5 @@ export class KeyUpdateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  keyUpdate200ApplicationJsonObject?: KeyUpdate200ApplicationJson;
+  keyUpdate200ApplicationJSONObject?: KeyUpdate200ApplicationJson;
 }

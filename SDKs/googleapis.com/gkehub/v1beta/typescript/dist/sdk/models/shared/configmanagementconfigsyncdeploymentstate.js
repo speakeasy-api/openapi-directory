@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementConfigSyncDeploymentState = exports.ConfigManagementConfigSyncDeploymentStateSyncerEnum = exports.ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum = exports.ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum = exports.ConfigManagementConfigSyncDeploymentStateMonitorEnum = exports.ConfigManagementConfigSyncDeploymentStateImporterEnum = exports.ConfigManagementConfigSyncDeploymentStateGitSyncEnum = exports.ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum;
 (function (ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum) {
     ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum || (ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateGitSyncEnum;
+})(ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum = exports.ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum || (exports.ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateGitSyncEnum;
 (function (ConfigManagementConfigSyncDeploymentStateGitSyncEnum) {
     ConfigManagementConfigSyncDeploymentStateGitSyncEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateGitSyncEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateGitSyncEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateGitSyncEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateGitSyncEnum || (ConfigManagementConfigSyncDeploymentStateGitSyncEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateImporterEnum;
+})(ConfigManagementConfigSyncDeploymentStateGitSyncEnum = exports.ConfigManagementConfigSyncDeploymentStateGitSyncEnum || (exports.ConfigManagementConfigSyncDeploymentStateGitSyncEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateImporterEnum;
 (function (ConfigManagementConfigSyncDeploymentStateImporterEnum) {
     ConfigManagementConfigSyncDeploymentStateImporterEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateImporterEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateImporterEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateImporterEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateImporterEnum || (ConfigManagementConfigSyncDeploymentStateImporterEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateMonitorEnum;
+})(ConfigManagementConfigSyncDeploymentStateImporterEnum = exports.ConfigManagementConfigSyncDeploymentStateImporterEnum || (exports.ConfigManagementConfigSyncDeploymentStateImporterEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateMonitorEnum;
 (function (ConfigManagementConfigSyncDeploymentStateMonitorEnum) {
     ConfigManagementConfigSyncDeploymentStateMonitorEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateMonitorEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateMonitorEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateMonitorEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateMonitorEnum || (ConfigManagementConfigSyncDeploymentStateMonitorEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum;
+})(ConfigManagementConfigSyncDeploymentStateMonitorEnum = exports.ConfigManagementConfigSyncDeploymentStateMonitorEnum || (exports.ConfigManagementConfigSyncDeploymentStateMonitorEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum;
 (function (ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum) {
     ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum || (ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum;
+})(ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum = exports.ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum || (exports.ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum;
 (function (ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum) {
     ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum || (ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum = {}));
-export var ConfigManagementConfigSyncDeploymentStateSyncerEnum;
+})(ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum = exports.ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum || (exports.ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum = {}));
+var ConfigManagementConfigSyncDeploymentStateSyncerEnum;
 (function (ConfigManagementConfigSyncDeploymentStateSyncerEnum) {
     ConfigManagementConfigSyncDeploymentStateSyncerEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementConfigSyncDeploymentStateSyncerEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementConfigSyncDeploymentStateSyncerEnum["Installed"] = "INSTALLED";
     ConfigManagementConfigSyncDeploymentStateSyncerEnum["Error"] = "ERROR";
-})(ConfigManagementConfigSyncDeploymentStateSyncerEnum || (ConfigManagementConfigSyncDeploymentStateSyncerEnum = {}));
+})(ConfigManagementConfigSyncDeploymentStateSyncerEnum = exports.ConfigManagementConfigSyncDeploymentStateSyncerEnum || (exports.ConfigManagementConfigSyncDeploymentStateSyncerEnum = {}));
 // ConfigManagementConfigSyncDeploymentState
 /**
  * The state of ConfigSync's deployment on a cluster
@@ -82,33 +85,33 @@ var ConfigManagementConfigSyncDeploymentState = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admissionWebhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admissionWebhook" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "admissionWebhook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitSync" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitSync" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "gitSync", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importer" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "importer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "monitor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reconcilerManager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reconcilerManager" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "reconcilerManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootReconciler" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootReconciler" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "rootReconciler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncer" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSyncDeploymentState.prototype, "syncer", void 0);
     return ConfigManagementConfigSyncDeploymentState;
-}(SpeakeasyBase));
-export { ConfigManagementConfigSyncDeploymentState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementConfigSyncDeploymentState = ConfigManagementConfigSyncDeploymentState;

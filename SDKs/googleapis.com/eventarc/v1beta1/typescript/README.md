@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { EventarcProjectsLocationsListRequest, EventarcProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: EventarcProjectsLocationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "quisquam",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "omnis",
-    alt: "json",
-    callback: "harum",
-    fields: "consequuntur",
-    filter: "dolore",
-    key: "tempora",
-    oauthToken: "numquam",
-    pageSize: 8221868533207517932,
-    pageToken: "fugit",
-    prettyPrint: false,
-    quotaUser: "qui",
-    uploadType: "ut",
-    uploadProtocol: "est",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

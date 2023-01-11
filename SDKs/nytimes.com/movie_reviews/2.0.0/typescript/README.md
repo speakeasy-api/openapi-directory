@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCriticsResourceTypeJsonRequest, GetCriticsResourceTypeJsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetCriticsResourceTypeJsonRequest = {
   pathParams: {
-    resourceType: "dolor",
+    resourceType: "sit",
   },
 };
 
-sdk.sdk.getCriticsResourceTypeJson(req).then((res: GetCriticsResourceTypeJsonResponse | AxiosError) => {
+sdk.getCriticsResourceTypeJson(req).then((res: GetCriticsResourceTypeJsonResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,8 +49,8 @@ sdk.sdk.getCriticsResourceTypeJson(req).then((res: GetCriticsResourceTypeJsonRes
 ### SDK SDK
 
 * `getCriticsResourceTypeJson`
-* `getReviewsResourceTypeJson`
 * `getReviewsSearchJson`
+* `getReviewsResourceTypeJson`
 
 <!-- End SDK Available Operations -->
 

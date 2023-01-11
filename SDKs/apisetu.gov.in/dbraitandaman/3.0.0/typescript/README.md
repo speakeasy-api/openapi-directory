@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { TrcerRequest, TrcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: TrcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certNo: "ut",
-      dob: "iste",
-      fullName: "mollitia",
-      session: "quis",
+      certNO: "sit",
+      dob: "voluptas",
+      fullName: "culpa",
+      session: "expedita",
     },
-    consentArtifact: "doloribus",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "ea",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.trcer(req).then((res: TrcerResponse | AxiosError) => {
+sdk.apIs.trcer(req).then((res: TrcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.trcer(req).then((res: TrcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `trcer` - Transfer Certificate
 

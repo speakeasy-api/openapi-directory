@@ -26,7 +26,7 @@ export class CreateLagRequest extends SpeakeasyBase {
   providerName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=requestMACSec" })
-  requestMacSec?: boolean;
+  requestMACSec?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag })
   tags?: Tag[];

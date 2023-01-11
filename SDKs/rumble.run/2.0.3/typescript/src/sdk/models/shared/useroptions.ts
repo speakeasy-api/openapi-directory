@@ -19,5 +19,5 @@ export class UserOptions extends SpeakeasyBase {
   orgDefaultRole?: string;
 
   @SpeakeasyMetadata({ data: "json, name=org_roles" })
-  orgRoles?: Map<string, any>;
+  orgRoles?: Record<string, any>;
 }

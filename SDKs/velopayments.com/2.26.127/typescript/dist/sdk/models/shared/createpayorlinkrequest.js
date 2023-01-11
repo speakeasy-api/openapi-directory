@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreatePayorLinkRequestLinkTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayorLinkRequest = exports.CreatePayorLinkRequestLinkTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreatePayorLinkRequestLinkTypeEnum;
 (function (CreatePayorLinkRequestLinkTypeEnum) {
     CreatePayorLinkRequestLinkTypeEnum["ParentOf"] = "PARENT_OF";
-})(CreatePayorLinkRequestLinkTypeEnum || (CreatePayorLinkRequestLinkTypeEnum = {}));
+})(CreatePayorLinkRequestLinkTypeEnum = exports.CreatePayorLinkRequestLinkTypeEnum || (exports.CreatePayorLinkRequestLinkTypeEnum = {}));
 var CreatePayorLinkRequest = /** @class */ (function (_super) {
     __extends(CreatePayorLinkRequest, _super);
     function CreatePayorLinkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromPayorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromPayorId" }),
         __metadata("design:type", String)
     ], CreatePayorLinkRequest.prototype, "fromPayorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkType" }),
         __metadata("design:type", String)
     ], CreatePayorLinkRequest.prototype, "linkType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toPayorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toPayorId" }),
         __metadata("design:type", String)
     ], CreatePayorLinkRequest.prototype, "toPayorId", void 0);
     return CreatePayorLinkRequest;
-}(SpeakeasyBase));
-export { CreatePayorLinkRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayorLinkRequest = CreatePayorLinkRequest;

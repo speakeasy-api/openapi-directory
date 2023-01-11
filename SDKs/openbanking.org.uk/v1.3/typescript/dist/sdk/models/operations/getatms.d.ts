@@ -176,8 +176,8 @@ export declare enum GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrg
  * Brand
 **/
 export declare class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand extends SpeakeasyBase {
-    trademarkId: string;
-    trademarkIpoCode: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
+    trademarkID: string;
+    trademarkIPOCode: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
 }
 /**
  * Organisation Name
@@ -204,7 +204,7 @@ export declare class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm e
     atmid: string;
     atmServices: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAtmServicesEnum[];
     accessibilityTypes?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum[];
-    additionalAtmServices?: string[];
+    additionalATMServices?: string[];
     address: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress;
     branchIdentification?: string;
     currency: string[];
@@ -212,7 +212,7 @@ export declare class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm e
     locationCategory?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmLocationCategoryEnum;
     minimumValueDispensed?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmMinimumValueDispensedEnum;
     organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation;
-    siteId?: string;
+    siteID?: string;
     siteName?: string;
     supportedLanguages: string[];
 }
@@ -247,7 +247,7 @@ export declare class GetAtmsResponse extends SpeakeasyBase {
     fiveHundredAndThreeErrorObject?: GetAtms503ErrorObject;
     contentType: string;
     errorObject?: GetAtmsErrorObject;
-    getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

@@ -1,0 +1,17 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema } from "./onevehicles1percent7bvehicleidpercent7d1chargestategetresponses200contentapplication1jsonschema";
+import { Onevehicles1Percent7BvehicleIdPercent7D1informationGetResponses200ContentApplication1jsonSchema } from "./onevehicles1percent7bvehicleidpercent7d1informationgetresponses200contentapplication1jsonschema";
+import { Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema } from "./onevehicles1percent7bvehicleidpercent7d1locationgetresponses200contentapplication1jsonschema";
+import { Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema } from "./onevehicles1percent7bvehicleidpercent7d1odometergetresponses200contentapplication1jsonschema";
+import { Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema } from "./onevehicles1percent7bvehicleidpercent7d1smartchargingpolicyputrequestbodycontentapplication1jsonschema";
+export declare class Onevehicles1Percent7BvehicleIdPercent7DGetResponses200ContentApplication1jsonSchema extends SpeakeasyBase {
+    chargeState?: Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema;
+    chargingLocationId: string;
+    id: string;
+    information?: Onevehicles1Percent7BvehicleIdPercent7D1informationGetResponses200ContentApplication1jsonSchema;
+    isReachable: boolean;
+    lastSeen: Date;
+    location?: Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema;
+    odometer?: Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema;
+    smartChargingPolicy?: Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema;
+}

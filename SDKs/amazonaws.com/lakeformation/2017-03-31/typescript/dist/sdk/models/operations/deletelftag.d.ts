@@ -20,7 +20,7 @@ export declare class DeleteLfTagRequest extends SpeakeasyBase {
 export declare class DeleteLfTagResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteLfTagResponse?: Map<string, any>;
+    deleteLFTagResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

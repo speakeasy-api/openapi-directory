@@ -13,7 +13,7 @@ export declare class PostOfferingsOfferingIdGroupsGroupIdLearnersRequest extends
 }
 export declare class PostOfferingsOfferingIdGroupsGroupIdLearnersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     userResponse?: shared.UserResponse;
 }

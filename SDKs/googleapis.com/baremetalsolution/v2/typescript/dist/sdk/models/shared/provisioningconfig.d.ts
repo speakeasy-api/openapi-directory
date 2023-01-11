@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { InstanceConfig } from "./instanceconfig";
-import { NetworkConfig } from "./networkconfig";
-import { VolumeConfig } from "./volumeconfig";
 import { InstanceConfigInput } from "./instanceconfig";
 import { NetworkConfigInput } from "./networkconfig";
 import { VolumeConfigInput } from "./volumeconfig";
+import { InstanceConfig } from "./instanceconfig";
+import { NetworkConfig } from "./networkconfig";
+import { VolumeConfig } from "./volumeconfig";
 export declare enum ProvisioningConfigStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Draft = "DRAFT",
@@ -14,6 +14,21 @@ export declare enum ProvisioningConfigStateEnum {
     Validated = "VALIDATED",
     Cancelled = "CANCELLED",
     Failed = "FAILED"
+}
+/**
+ * A provisioning configuration.
+**/
+export declare class ProvisioningConfigInput extends SpeakeasyBase {
+    customId?: string;
+    email?: string;
+    handoverServiceAccount?: string;
+    instances?: InstanceConfigInput[];
+    location?: string;
+    networks?: NetworkConfigInput[];
+    statusMessage?: string;
+    ticketId?: string;
+    volumes?: VolumeConfigInput[];
+    vpcScEnabled?: boolean;
 }
 /**
  * A provisioning configuration.
@@ -32,20 +47,5 @@ export declare class ProvisioningConfig extends SpeakeasyBase {
     ticketId?: string;
     updateTime?: string;
     volumes?: VolumeConfig[];
-    vpcScEnabled?: boolean;
-}
-/**
- * A provisioning configuration.
-**/
-export declare class ProvisioningConfigInput extends SpeakeasyBase {
-    customId?: string;
-    email?: string;
-    handoverServiceAccount?: string;
-    instances?: InstanceConfigInput[];
-    location?: string;
-    networks?: NetworkConfigInput[];
-    statusMessage?: string;
-    ticketId?: string;
-    volumes?: VolumeConfigInput[];
     vpcScEnabled?: boolean;
 }

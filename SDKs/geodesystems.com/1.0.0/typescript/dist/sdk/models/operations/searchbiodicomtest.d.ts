@@ -14,7 +14,7 @@ export declare class SearchBioDicomTestQueryParams extends SpeakeasyBase {
     minlatitude?: number;
     minlongitude?: number;
     name?: string;
-    searchBioDicomTestPatientId?: string;
+    searchBioDicomTestPatientID?: string;
     searchBioDicomTestPatientName?: string;
     skip?: number;
     text?: string;

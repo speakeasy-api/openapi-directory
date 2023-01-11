@@ -1,7 +1,10 @@
-export var CodeScanningAlertDismissedReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeScanningAlertDismissedReasonEnum = void 0;
+var CodeScanningAlertDismissedReasonEnum;
 (function (CodeScanningAlertDismissedReasonEnum) {
-    CodeScanningAlertDismissedReasonEnum["MapDollarRefNumberComponentsSchemasSecretScanningAlertResolutionEnum0"] = "map[$ref:#/components/schemas/secret-scanning-alert-resolution/enum/0]";
+    CodeScanningAlertDismissedReasonEnum["Unknown"] = "";
     CodeScanningAlertDismissedReasonEnum["FalsePositive"] = "false positive";
     CodeScanningAlertDismissedReasonEnum["WonTFix"] = "won't fix";
     CodeScanningAlertDismissedReasonEnum["UsedInTests"] = "used in tests";
-})(CodeScanningAlertDismissedReasonEnum || (CodeScanningAlertDismissedReasonEnum = {}));
+})(CodeScanningAlertDismissedReasonEnum = exports.CodeScanningAlertDismissedReasonEnum || (exports.CodeScanningAlertDismissedReasonEnum = {}));

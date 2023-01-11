@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1EgressPolicy } from "./googleidentityaccesscontextmanagerv1egresspolicy";
-import { GoogleIdentityAccesscontextmanagerV1IngressPolicy } from "./googleidentityaccesscontextmanagerv1ingresspolicy";
-import { GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices } from "./googleidentityaccesscontextmanagerv1vpcaccessibleservices";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1egresspolicy_1 = require("./googleidentityaccesscontextmanagerv1egresspolicy");
+var googleidentityaccesscontextmanagerv1ingresspolicy_1 = require("./googleidentityaccesscontextmanagerv1ingresspolicy");
+var googleidentityaccesscontextmanagerv1vpcaccessibleservices_1 = require("./googleidentityaccesscontextmanagerv1vpcaccessibleservices");
 // GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
 /**
  * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service Perimeter configuration.
@@ -36,29 +39,29 @@ var GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessLevels" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "accessLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=egressPolicies", elemType: GoogleIdentityAccesscontextmanagerV1EgressPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=egressPolicies", elemType: googleidentityaccesscontextmanagerv1egresspolicy_1.GoogleIdentityAccesscontextmanagerV1EgressPolicy }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "egressPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingressPolicies", elemType: GoogleIdentityAccesscontextmanagerV1IngressPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingressPolicies", elemType: googleidentityaccesscontextmanagerv1ingresspolicy_1.GoogleIdentityAccesscontextmanagerV1IngressPolicy }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "ingressPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedServices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedServices" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "restrictedServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcAccessibleServices" }),
-        __metadata("design:type", GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcAccessibleServices" }),
+        __metadata("design:type", googleidentityaccesscontextmanagerv1vpcaccessibleservices_1.GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices)
     ], GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig.prototype, "vpcAccessibleServices", void 0);
     return GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig = GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig;

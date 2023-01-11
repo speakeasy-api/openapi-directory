@@ -20,7 +20,7 @@ export declare class DeleteContactRequest extends SpeakeasyBase {
 export declare class DeleteContactResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteContactResult?: Map<string, any>;
+    deleteContactResult?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

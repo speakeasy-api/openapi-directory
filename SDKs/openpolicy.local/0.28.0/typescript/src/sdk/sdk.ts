@@ -7,61 +7,41 @@ import { HealthApi } from "./healthapi";
 import { PolicyApi } from "./policyapi";
 import { QueryApi } from "./queryapi";
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"http://openpolicy.local",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
+
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  serverUrl?: string;
 }
 
 /* SDK Documentation: https://www.openpolicyagent.org/docs/latest/ - OPA documentation*/
 export class SDK {
-  public compileApi: CompileApi;
-  public dataApi: DataApi;
-  public healthApi: HealthApi;
-  public policyApi: PolicyApi;
-  public queryApi: QueryApi;
+  public compileAPI: CompileApi;
+  public dataAPI: DataApi;
+  public healthAPI: HealthApi;
+  public policyAPI: PolicyApi;
+  public queryAPI: QueryApi;
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      this._securityClient = this._defaultClient;
-    }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    this._securityClient = this._defaultClient;
     
-    this.compileApi = new CompileApi(
+    this.compileAPI = new CompileApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -70,7 +50,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.dataApi = new DataApi(
+    this.dataAPI = new DataApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -79,7 +59,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.healthApi = new HealthApi(
+    this.healthAPI = new HealthApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -88,7 +68,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.policyApi = new PolicyApi(
+    this.policyAPI = new PolicyApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,
@@ -97,7 +77,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.queryApi = new QueryApi(
+    this.queryAPI = new QueryApi(
       this._defaultClient,
       this._securityClient,
       this._serverURL,

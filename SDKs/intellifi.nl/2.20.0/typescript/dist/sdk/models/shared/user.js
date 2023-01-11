@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var UserInput = /** @class */ (function (_super) {
-    __extends(UserInput, _super);
-    function UserInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
-        __metadata("design:type", String)
-    ], UserInput.prototype, "email", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
-        __metadata("design:type", String)
-    ], UserInput.prototype, "firstName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_admin" }),
-        __metadata("design:type", Boolean)
-    ], UserInput.prototype, "isAdmin", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_locked" }),
-        __metadata("design:type", Boolean)
-    ], UserInput.prototype, "isLocked", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
-        __metadata("design:type", String)
-    ], UserInput.prototype, "lastName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
-        __metadata("design:type", String)
-    ], UserInput.prototype, "password", void 0);
-    return UserInput;
-}(SpeakeasyBase));
-export { UserInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserInput = exports.UserOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserOutput = /** @class */ (function (_super) {
     __extends(UserOutput, _super);
     function UserOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_admin" }),
         __metadata("design:type", Boolean)
     ], UserOutput.prototype, "isAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_locked" }),
         __metadata("design:type", Boolean)
     ], UserOutput.prototype, "isLocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UserOutput.prototype, "url", void 0);
     return UserOutput;
-}(SpeakeasyBase));
-export { UserOutput };
+}(utils_1.SpeakeasyBase));
+exports.UserOutput = UserOutput;
+var UserInput = /** @class */ (function (_super) {
+    __extends(UserInput, _super);
+    function UserInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
+        __metadata("design:type", String)
+    ], UserInput.prototype, "email", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
+        __metadata("design:type", String)
+    ], UserInput.prototype, "firstName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_admin" }),
+        __metadata("design:type", Boolean)
+    ], UserInput.prototype, "isAdmin", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_locked" }),
+        __metadata("design:type", Boolean)
+    ], UserInput.prototype, "isLocked", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
+        __metadata("design:type", String)
+    ], UserInput.prototype, "lastName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
+        __metadata("design:type", String)
+    ], UserInput.prototype, "password", void 0);
+    return UserInput;
+}(utils_1.SpeakeasyBase));
+exports.UserInput = UserInput;

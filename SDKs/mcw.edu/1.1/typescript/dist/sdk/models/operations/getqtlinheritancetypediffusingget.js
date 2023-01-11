@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetQtlInheritanceTypeDiffUsingGetResponse = exports.GetQtlInheritanceTypeDiffUsingGetRequest = exports.GetQtlInheritanceTypeDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetQtlInheritanceTypeDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeDiffUsingGetPathParams, _super);
     function GetQtlInheritanceTypeDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetQtlInheritanceTypeDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetQtlInheritanceTypeDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetQtlInheritanceTypeDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetQtlInheritanceTypeDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetQtlInheritanceTypeDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetQtlInheritanceTypeDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeDiffUsingGetPathParams = GetQtlInheritanceTypeDiffUsingGetPathParams;
 var GetQtlInheritanceTypeDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeDiffUsingGetRequest, _super);
     function GetQtlInheritanceTypeDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQtlInheritanceTypeDiffUsingGetPathParams)
     ], GetQtlInheritanceTypeDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetQtlInheritanceTypeDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeDiffUsingGetRequest = GetQtlInheritanceTypeDiffUsingGetRequest;
 var GetQtlInheritanceTypeDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeDiffUsingGetResponse, _super);
     function GetQtlInheritanceTypeDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetQtlInheritanceTypeDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetQtlInheritanceTypeDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetQtlInheritanceTypeDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetQtlInheritanceTypeDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeDiffUsingGetResponse = GetQtlInheritanceTypeDiffUsingGetResponse;

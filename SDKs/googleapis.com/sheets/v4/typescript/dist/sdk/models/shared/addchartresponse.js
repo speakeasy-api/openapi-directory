@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmbeddedChart } from "./embeddedchart";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddChartResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var embeddedchart_1 = require("./embeddedchart");
 // AddChartResponse
 /**
  * The result of adding a chart to a spreadsheet.
@@ -34,9 +37,9 @@ var AddChartResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chart" }),
-        __metadata("design:type", EmbeddedChart)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chart" }),
+        __metadata("design:type", embeddedchart_1.EmbeddedChart)
     ], AddChartResponse.prototype, "chart", void 0);
     return AddChartResponse;
-}(SpeakeasyBase));
-export { AddChartResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddChartResponse = AddChartResponse;

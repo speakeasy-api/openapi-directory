@@ -107,11 +107,11 @@ export declare class NrcerRequest extends SpeakeasyBase {
 export declare class NrcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    nrcer400ApplicationJsonObject?: Nrcer400ApplicationJson;
-    nrcer401ApplicationJsonObject?: Nrcer401ApplicationJson;
-    nrcer404ApplicationJsonObject?: Nrcer404ApplicationJson;
-    nrcer500ApplicationJsonObject?: Nrcer500ApplicationJson;
-    nrcer502ApplicationJsonObject?: Nrcer502ApplicationJson;
-    nrcer503ApplicationJsonObject?: Nrcer503ApplicationJson;
-    nrcer504ApplicationJsonObject?: Nrcer504ApplicationJson;
+    nrcer400ApplicationJSONObject?: Nrcer400ApplicationJson;
+    nrcer401ApplicationJSONObject?: Nrcer401ApplicationJson;
+    nrcer404ApplicationJSONObject?: Nrcer404ApplicationJson;
+    nrcer500ApplicationJSONObject?: Nrcer500ApplicationJson;
+    nrcer502ApplicationJSONObject?: Nrcer502ApplicationJson;
+    nrcer503ApplicationJSONObject?: Nrcer503ApplicationJson;
+    nrcer504ApplicationJSONObject?: Nrcer504ApplicationJson;
 }

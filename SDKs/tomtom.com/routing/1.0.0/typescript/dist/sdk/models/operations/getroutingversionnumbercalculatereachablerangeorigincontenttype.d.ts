@@ -5,10 +5,6 @@ export declare class GetRoutingVersionNumberCalculateReachableRangeOriginContent
     origin: string;
     versionNumber: number;
 }
-export declare enum GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum {
-    Combustion = "combustion",
-    Electric = "electric"
-}
 export declare class GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams extends SpeakeasyBase {
     accelerationEfficiency?: number;
     arriveAt?: string;
@@ -33,7 +29,7 @@ export declare class GetRoutingVersionNumberCalculateReachableRangeOriginContent
     uphillEfficiency?: number;
     vehicleAxleWeight?: number;
     vehicleCommercial?: boolean;
-    vehicleEngineType?: GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
+    vehicleEngineType?: shared.DownhillEfficiencyEnum;
     vehicleHeight?: number;
     vehicleLength?: number;
     vehicleLoadType?: string;

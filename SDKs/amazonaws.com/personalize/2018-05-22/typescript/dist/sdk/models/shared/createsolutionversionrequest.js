@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrainingModeEnum } from "./trainingmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSolutionVersionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var trainingmodeenum_1 = require("./trainingmodeenum");
 var CreateSolutionVersionRequest = /** @class */ (function (_super) {
     __extends(CreateSolutionVersionRequest, _super);
     function CreateSolutionVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=solutionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=solutionArn" }),
         __metadata("design:type", String)
     ], CreateSolutionVersionRequest.prototype, "solutionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainingMode" }),
         __metadata("design:type", String)
     ], CreateSolutionVersionRequest.prototype, "trainingMode", void 0);
     return CreateSolutionVersionRequest;
-}(SpeakeasyBase));
-export { CreateSolutionVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateSolutionVersionRequest = CreateSolutionVersionRequest;

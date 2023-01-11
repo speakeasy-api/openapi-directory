@@ -8,7 +8,7 @@ export const GetV05HeartbeatServerList = [
 
 export class GetV05HeartbeatRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 }
 
 

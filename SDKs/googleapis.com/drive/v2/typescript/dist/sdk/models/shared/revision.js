@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Revision = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 // Revision
 /**
  * A revision of a file.
@@ -34,77 +37,77 @@ var Revision = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadUrl" }),
         __metadata("design:type", String)
     ], Revision.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Revision.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportLinks" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportLinks" }),
+        __metadata("design:type", Object)
     ], Revision.prototype, "exportLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSize" }),
         __metadata("design:type", String)
     ], Revision.prototype, "fileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Revision.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Revision.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifyingUser" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifyingUser" }),
+        __metadata("design:type", user_1.User)
     ], Revision.prototype, "lastModifyingUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifyingUserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifyingUserName" }),
         __metadata("design:type", String)
     ], Revision.prototype, "lastModifyingUserName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5Checksum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5Checksum" }),
         __metadata("design:type", String)
     ], Revision.prototype, "md5Checksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], Revision.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedDate" }),
         __metadata("design:type", Date)
     ], Revision.prototype, "modifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalFilename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalFilename" }),
         __metadata("design:type", String)
     ], Revision.prototype, "originalFilename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pinned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pinned" }),
         __metadata("design:type", Boolean)
     ], Revision.prototype, "pinned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishAuto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishAuto" }),
         __metadata("design:type", Boolean)
     ], Revision.prototype, "publishAuto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", Boolean)
     ], Revision.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedLink" }),
         __metadata("design:type", String)
     ], Revision.prototype, "publishedLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedOutsideDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedOutsideDomain" }),
         __metadata("design:type", Boolean)
     ], Revision.prototype, "publishedOutsideDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Revision.prototype, "selfLink", void 0);
     return Revision;
-}(SpeakeasyBase));
-export { Revision };
+}(utils_1.SpeakeasyBase));
+exports.Revision = Revision;

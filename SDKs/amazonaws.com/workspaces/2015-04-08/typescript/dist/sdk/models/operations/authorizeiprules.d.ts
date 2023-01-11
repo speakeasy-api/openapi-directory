@@ -19,7 +19,7 @@ export declare class AuthorizeIpRulesRequest extends SpeakeasyBase {
 }
 export declare class AuthorizeIpRulesResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    authorizeIpRulesResult?: Map<string, any>;
+    authorizeIpRulesResult?: Record<string, any>;
     contentType: string;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;

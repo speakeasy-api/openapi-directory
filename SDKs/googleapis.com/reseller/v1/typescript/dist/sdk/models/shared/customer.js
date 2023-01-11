@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { PrimaryAdmin } from "./primaryadmin";
-export var CustomerCustomerTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Customer = exports.CustomerCustomerTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var primaryadmin_1 = require("./primaryadmin");
+var CustomerCustomerTypeEnum;
 (function (CustomerCustomerTypeEnum) {
     CustomerCustomerTypeEnum["CustomerTypeUnspecified"] = "customerTypeUnspecified";
     CustomerCustomerTypeEnum["Domain"] = "domain";
     CustomerCustomerTypeEnum["Team"] = "team";
-})(CustomerCustomerTypeEnum || (CustomerCustomerTypeEnum = {}));
+})(CustomerCustomerTypeEnum = exports.CustomerCustomerTypeEnum || (exports.CustomerCustomerTypeEnum = {}));
 // Customer
 /**
  * When a Google customer's account is registered with a reseller, the customer's subscriptions for Google services are managed by this reseller. A customer is described by a primary domain name and a physical address.
@@ -41,45 +44,45 @@ var Customer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateEmail" }),
         __metadata("design:type", String)
     ], Customer.prototype, "alternateEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerDomain" }),
         __metadata("design:type", String)
     ], Customer.prototype, "customerDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerDomainVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerDomainVerified" }),
         __metadata("design:type", Boolean)
     ], Customer.prototype, "customerDomainVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], Customer.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerType" }),
         __metadata("design:type", String)
     ], Customer.prototype, "customerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Customer.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], Customer.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalAddress" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalAddress" }),
+        __metadata("design:type", address_1.Address)
     ], Customer.prototype, "postalAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryAdmin" }),
-        __metadata("design:type", PrimaryAdmin)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryAdmin" }),
+        __metadata("design:type", primaryadmin_1.PrimaryAdmin)
     ], Customer.prototype, "primaryAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUiUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUiUrl" }),
         __metadata("design:type", String)
     ], Customer.prototype, "resourceUiUrl", void 0);
     return Customer;
-}(SpeakeasyBase));
-export { Customer };
+}(utils_1.SpeakeasyBase));
+exports.Customer = Customer;

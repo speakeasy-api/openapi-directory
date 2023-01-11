@@ -22,6 +22,6 @@ export declare class StartCrawlerResponse extends SpeakeasyBase {
     crawlerRunningException?: any;
     entityNotFoundException?: any;
     operationTimeoutException?: any;
-    startCrawlerResponse?: Map<string, any>;
+    startCrawlerResponse?: Record<string, any>;
     statusCode: number;
 }

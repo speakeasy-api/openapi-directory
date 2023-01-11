@@ -15,7 +15,7 @@ export declare class GetEnrollmentStatusHeaders extends SpeakeasyBase {
 }
 export declare class GetEnrollmentStatusRequest extends SpeakeasyBase {
     headers: GetEnrollmentStatusHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetEnrollmentStatusResponse extends SpeakeasyBase {
     accessDeniedException?: any;

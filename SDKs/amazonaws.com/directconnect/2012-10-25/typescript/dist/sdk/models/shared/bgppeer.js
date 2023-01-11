@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressFamilyEnum } from "./addressfamilyenum";
-import { BgpPeerStateEnum } from "./bgppeerstateenum";
-import { BgpStatusEnum } from "./bgpstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BgpPeer = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressfamilyenum_1 = require("./addressfamilyenum");
+var bgppeerstateenum_1 = require("./bgppeerstateenum");
+var bgpstatusenum_1 = require("./bgpstatusenum");
 // BgpPeer
 /**
  * Information about a BGP peer.
@@ -36,45 +39,45 @@ var BgpPeer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressFamily" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "addressFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonAddress" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "amazonAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], BgpPeer.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsDeviceV2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsDeviceV2" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "awsDeviceV2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsLogicalDeviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsLogicalDeviceId" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "awsLogicalDeviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bgpPeerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bgpPeerId" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "bgpPeerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bgpPeerState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bgpPeerState" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "bgpPeerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bgpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bgpStatus" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "bgpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerAddress" }),
         __metadata("design:type", String)
     ], BgpPeer.prototype, "customerAddress", void 0);
     return BgpPeer;
-}(SpeakeasyBase));
-export { BgpPeer };
+}(utils_1.SpeakeasyBase));
+exports.BgpPeer = BgpPeer;

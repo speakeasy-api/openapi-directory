@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class OptionsContractResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

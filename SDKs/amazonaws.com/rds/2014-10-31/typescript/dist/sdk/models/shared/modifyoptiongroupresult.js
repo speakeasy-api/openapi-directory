@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionGroup } from "./optiongroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyOptionGroupResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var optiongroup_1 = require("./optiongroup");
 var ModifyOptionGroupResult = /** @class */ (function (_super) {
     __extends(ModifyOptionGroupResult, _super);
     function ModifyOptionGroupResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OptionGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", optiongroup_1.OptionGroup)
     ], ModifyOptionGroupResult.prototype, "optionGroup", void 0);
     return ModifyOptionGroupResult;
-}(SpeakeasyBase));
-export { ModifyOptionGroupResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyOptionGroupResult = ModifyOptionGroupResult;

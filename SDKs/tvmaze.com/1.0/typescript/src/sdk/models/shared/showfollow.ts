@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ShowFollowEmbedded extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=show" })
-  show?: Map<string, any>;
+  show?: Record<string, any>;
 }
 
 

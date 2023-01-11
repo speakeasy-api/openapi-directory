@@ -7,7 +7,7 @@ export class CheckTokenUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -19,7 +19,7 @@ export class CheckTokenUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CheckTokenUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CheckTokenUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,14 +58,14 @@ export class CheckTokenUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkTokenUsingGet200ApplicationJsonObject?: CheckTokenUsingGet200ApplicationJson;
+  checkTokenUsingGET200ApplicationJSONObject?: CheckTokenUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingGet400ApplicationJsonObject?: CheckTokenUsingGet400ApplicationJson;
+  checkTokenUsingGET400ApplicationJSONObject?: CheckTokenUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingGet401ApplicationJsonObject?: CheckTokenUsingGet401ApplicationJson;
+  checkTokenUsingGET401ApplicationJSONObject?: CheckTokenUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingGet500ApplicationJsonObject?: CheckTokenUsingGet500ApplicationJson;
+  checkTokenUsingGET500ApplicationJSONObject?: CheckTokenUsingGet500ApplicationJson;
 }

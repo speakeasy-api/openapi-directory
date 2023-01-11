@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CorsSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // CorsSettings
 /**
  * The configuration for cors support
@@ -33,37 +36,37 @@ var CorsSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowCredentials" }),
         __metadata("design:type", Boolean)
     ], CorsSettings.prototype, "allowCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowHeaders" }),
         __metadata("design:type", Array)
     ], CorsSettings.prototype, "allowHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowMethods" }),
         __metadata("design:type", Array)
     ], CorsSettings.prototype, "allowMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowOrigin" }),
         __metadata("design:type", String)
     ], CorsSettings.prototype, "allowOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], CorsSettings.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedPatterns" }),
         __metadata("design:type", Array)
     ], CorsSettings.prototype, "excludedPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exposeHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exposeHeaders" }),
         __metadata("design:type", Array)
     ], CorsSettings.prototype, "exposeHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAge" }),
         __metadata("design:type", Number)
     ], CorsSettings.prototype, "maxAge", void 0);
     return CorsSettings;
-}(SpeakeasyBase));
-export { CorsSettings };
+}(utils_1.SpeakeasyBase));
+exports.CorsSettings = CorsSettings;

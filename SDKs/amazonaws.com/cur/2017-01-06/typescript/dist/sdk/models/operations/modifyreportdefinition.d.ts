@@ -20,7 +20,7 @@ export declare class ModifyReportDefinitionRequest extends SpeakeasyBase {
 export declare class ModifyReportDefinitionResponse extends SpeakeasyBase {
     contentType: string;
     internalErrorException?: any;
-    modifyReportDefinitionResponse?: Map<string, any>;
+    modifyReportDefinitionResponse?: Record<string, any>;
     statusCode: number;
     validationException?: any;
 }

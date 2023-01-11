@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscussionApiDeleteCommentResponse = exports.DiscussionApiDeleteCommentRequest = exports.DiscussionApiDeleteCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DiscussionApiDeleteCommentPathParams = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteCommentPathParams, _super);
     function DiscussionApiDeleteCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commentId" }),
         __metadata("design:type", Number)
     ], DiscussionApiDeleteCommentPathParams.prototype, "commentId", void 0);
     return DiscussionApiDeleteCommentPathParams;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteCommentPathParams = DiscussionApiDeleteCommentPathParams;
 var DiscussionApiDeleteCommentRequest = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteCommentRequest, _super);
     function DiscussionApiDeleteCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DiscussionApiDeleteCommentPathParams)
     ], DiscussionApiDeleteCommentRequest.prototype, "pathParams", void 0);
     return DiscussionApiDeleteCommentRequest;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteCommentRequest = DiscussionApiDeleteCommentRequest;
 var DiscussionApiDeleteCommentResponse = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteCommentResponse, _super);
     function DiscussionApiDeleteCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DiscussionApiDeleteCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DiscussionApiDeleteCommentResponse.prototype, "statusCode", void 0);
     return DiscussionApiDeleteCommentResponse;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteCommentResponse = DiscussionApiDeleteCommentResponse;

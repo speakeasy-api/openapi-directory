@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KgKeyPairIds } from "./kgkeypairids";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActiveTrustedKeyGroups = void 0;
+var utils_1 = require("../../../internal/utils");
+var kgkeypairidslist_1 = require("./kgkeypairidslist");
 // ActiveTrustedKeyGroups
 /**
  * A list of key groups, and the public keys in each key group, that CloudFront can use to verify the signatures of signed URLs and signed cookies.
@@ -34,17 +37,17 @@ var ActiveTrustedKeyGroups = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ActiveTrustedKeyGroups.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: KgKeyPairIds }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: kgkeypairidslist_1.KgKeyPairIdsList }),
         __metadata("design:type", Array)
     ], ActiveTrustedKeyGroups.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActiveTrustedKeyGroups.prototype, "quantity", void 0);
     return ActiveTrustedKeyGroups;
-}(SpeakeasyBase));
-export { ActiveTrustedKeyGroups };
+}(utils_1.SpeakeasyBase));
+exports.ActiveTrustedKeyGroups = ActiveTrustedKeyGroups;

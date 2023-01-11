@@ -106,11 +106,11 @@ export declare class MalcsRequest extends SpeakeasyBase {
 export declare class MalcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    malcs400ApplicationJsonObject?: Malcs400ApplicationJson;
-    malcs401ApplicationJsonObject?: Malcs401ApplicationJson;
-    malcs404ApplicationJsonObject?: Malcs404ApplicationJson;
-    malcs500ApplicationJsonObject?: Malcs500ApplicationJson;
-    malcs502ApplicationJsonObject?: Malcs502ApplicationJson;
-    malcs503ApplicationJsonObject?: Malcs503ApplicationJson;
-    malcs504ApplicationJsonObject?: Malcs504ApplicationJson;
+    malcs400ApplicationJSONObject?: Malcs400ApplicationJson;
+    malcs401ApplicationJSONObject?: Malcs401ApplicationJson;
+    malcs404ApplicationJSONObject?: Malcs404ApplicationJson;
+    malcs500ApplicationJSONObject?: Malcs500ApplicationJson;
+    malcs502ApplicationJSONObject?: Malcs502ApplicationJson;
+    malcs503ApplicationJSONObject?: Malcs503ApplicationJson;
+    malcs504ApplicationJSONObject?: Malcs504ApplicationJson;
 }

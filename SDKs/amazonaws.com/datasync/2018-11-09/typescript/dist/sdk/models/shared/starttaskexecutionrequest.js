@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterRule } from "./filterrule";
-import { Options } from "./options";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartTaskExecutionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterrule_1 = require("./filterrule");
+var options_1 = require("./options");
 // StartTaskExecutionRequest
 /**
  * StartTaskExecutionRequest
@@ -35,21 +38,21 @@ var StartTaskExecutionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Excludes", elemType: FilterRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Excludes", elemType: filterrule_1.FilterRule }),
         __metadata("design:type", Array)
     ], StartTaskExecutionRequest.prototype, "excludes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Includes", elemType: FilterRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Includes", elemType: filterrule_1.FilterRule }),
         __metadata("design:type", Array)
     ], StartTaskExecutionRequest.prototype, "includes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverrideOptions" }),
-        __metadata("design:type", Options)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverrideOptions" }),
+        __metadata("design:type", options_1.Options)
     ], StartTaskExecutionRequest.prototype, "overrideOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskArn" }),
         __metadata("design:type", String)
     ], StartTaskExecutionRequest.prototype, "taskArn", void 0);
     return StartTaskExecutionRequest;
-}(SpeakeasyBase));
-export { StartTaskExecutionRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartTaskExecutionRequest = StartTaskExecutionRequest;

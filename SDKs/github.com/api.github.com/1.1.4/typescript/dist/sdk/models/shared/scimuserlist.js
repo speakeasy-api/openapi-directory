@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScimUser } from "./scimuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScimUserList = void 0;
+var utils_1 = require("../../../internal/utils");
+var scimuser_1 = require("./scimuser");
 // ScimUserList
 /**
  * SCIM User List
@@ -34,25 +37,25 @@ var ScimUserList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources", elemType: ScimUser }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources", elemType: scimuser_1.ScimUser }),
         __metadata("design:type", Array)
     ], ScimUserList.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], ScimUserList.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemas" }),
         __metadata("design:type", Array)
     ], ScimUserList.prototype, "schemas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], ScimUserList.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], ScimUserList.prototype, "totalResults", void 0);
     return ScimUserList;
-}(SpeakeasyBase));
-export { ScimUserList };
+}(utils_1.SpeakeasyBase));
+exports.ScimUserList = ScimUserList;

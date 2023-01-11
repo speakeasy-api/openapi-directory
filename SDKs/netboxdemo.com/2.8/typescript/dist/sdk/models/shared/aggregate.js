@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedRir } from "./nestedrir";
-export var AggregateFamilyLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Aggregate = exports.AggregateFamily = exports.AggregateFamilyLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedrir_1 = require("./nestedrir");
+var AggregateFamilyLabelEnum;
 (function (AggregateFamilyLabelEnum) {
     AggregateFamilyLabelEnum["IPv4"] = "IPv4";
     AggregateFamilyLabelEnum["IPv6"] = "IPv6";
-})(AggregateFamilyLabelEnum || (AggregateFamilyLabelEnum = {}));
+})(AggregateFamilyLabelEnum = exports.AggregateFamilyLabelEnum || (exports.AggregateFamilyLabelEnum = {}));
 var AggregateFamily = /** @class */ (function (_super) {
     __extends(AggregateFamily, _super);
     function AggregateFamily() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], AggregateFamily.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], AggregateFamily.prototype, "value", void 0);
     return AggregateFamily;
-}(SpeakeasyBase));
-export { AggregateFamily };
+}(utils_1.SpeakeasyBase));
+exports.AggregateFamily = AggregateFamily;
 var Aggregate = /** @class */ (function (_super) {
     __extends(Aggregate, _super);
     function Aggregate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Aggregate.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Aggregate.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_added" }),
         __metadata("design:type", Date)
     ], Aggregate.prototype, "dateAdded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Aggregate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", AggregateFamily)
     ], Aggregate.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Aggregate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Aggregate.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], Aggregate.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rir" }),
-        __metadata("design:type", NestedRir)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rir" }),
+        __metadata("design:type", nestedrir_1.NestedRir)
     ], Aggregate.prototype, "rir", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Aggregate.prototype, "tags", void 0);
     return Aggregate;
-}(SpeakeasyBase));
-export { Aggregate };
+}(utils_1.SpeakeasyBase));
+exports.Aggregate = Aggregate;

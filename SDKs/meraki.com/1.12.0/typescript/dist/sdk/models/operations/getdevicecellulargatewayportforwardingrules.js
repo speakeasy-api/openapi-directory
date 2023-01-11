@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCellularGatewayPortForwardingRulesResponse = exports.GetDeviceCellularGatewayPortForwardingRulesRequest = exports.GetDeviceCellularGatewayPortForwardingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCellularGatewayPortForwardingRulesPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayPortForwardingRulesPathParams, _super);
     function GetDeviceCellularGatewayPortForwardingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCellularGatewayPortForwardingRulesPathParams.prototype, "serial", void 0);
     return GetDeviceCellularGatewayPortForwardingRulesPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayPortForwardingRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayPortForwardingRulesPathParams = GetDeviceCellularGatewayPortForwardingRulesPathParams;
 var GetDeviceCellularGatewayPortForwardingRulesRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayPortForwardingRulesRequest, _super);
     function GetDeviceCellularGatewayPortForwardingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCellularGatewayPortForwardingRulesPathParams)
     ], GetDeviceCellularGatewayPortForwardingRulesRequest.prototype, "pathParams", void 0);
     return GetDeviceCellularGatewayPortForwardingRulesRequest;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayPortForwardingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayPortForwardingRulesRequest = GetDeviceCellularGatewayPortForwardingRulesRequest;
 var GetDeviceCellularGatewayPortForwardingRulesResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayPortForwardingRulesResponse, _super);
     function GetDeviceCellularGatewayPortForwardingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCellularGatewayPortForwardingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCellularGatewayPortForwardingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCellularGatewayPortForwardingRulesResponse.prototype, "getDeviceCellularGatewayPortForwardingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCellularGatewayPortForwardingRulesResponse.prototype, "getDeviceCellularGatewayPortForwardingRules200ApplicationJSONObject", void 0);
     return GetDeviceCellularGatewayPortForwardingRulesResponse;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayPortForwardingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayPortForwardingRulesResponse = GetDeviceCellularGatewayPortForwardingRulesResponse;

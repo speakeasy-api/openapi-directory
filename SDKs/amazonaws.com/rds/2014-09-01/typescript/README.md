@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,22 +34,22 @@ const sdk = new SDK(WithSecurity(
 const req: GetAddSourceIdentifierToSubscriptionRequest = {
   queryParams: {
     action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "iusto",
-    subscriptionName: "laudantium",
+    sourceIdentifier: "voluptas",
+    subscriptionName: "culpa",
     version: "2014-09-01",
   },
   headers: {
-    xAmzAlgorithm: "ea",
-    xAmzContentSha256: "qui",
-    xAmzCredential: "aut",
-    xAmzDate: "sapiente",
-    xAmzSecurityToken: "exercitationem",
-    xAmzSignature: "consequatur",
-    xAmzSignedHeaders: "ut",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
+    xAmzDate: "voluptas",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -71,9 +70,6 @@ sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentif
 * `getDeleteEventSubscription`
 * `getDeleteOptionGroup`
 * `getDownloadDbLogFilePortion`
-* `getModifyDbInstance`
-* `getModifyDbSubnetGroup`
-* `getModifyEventSubscription`
 * `getPromoteReadReplica`
 * `getRebootDbInstance`
 * `getRemoveSourceIdentifierFromSubscription`

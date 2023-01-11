@@ -20,6 +20,6 @@ export declare class VatBasicRequest extends SpeakeasyBase {
 export declare class VatBasicResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vatBasic200ApplicationJsonAny?: any;
-    vatBasicDefaultApplicationJsonAny?: any;
+    vatBasic200ApplicationJSONAny?: any;
+    vatBasicDefaultApplicationJSONAny?: any;
 }

@@ -1,4 +1,7 @@
-export var BulkEmailStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkEmailStatusEnum = void 0;
+var BulkEmailStatusEnum;
 (function (BulkEmailStatusEnum) {
     BulkEmailStatusEnum["Success"] = "SUCCESS";
     BulkEmailStatusEnum["MessageRejected"] = "MESSAGE_REJECTED";
@@ -14,4 +17,4 @@ export var BulkEmailStatusEnum;
     BulkEmailStatusEnum["InvalidParameter"] = "INVALID_PARAMETER";
     BulkEmailStatusEnum["TransientFailure"] = "TRANSIENT_FAILURE";
     BulkEmailStatusEnum["Failed"] = "FAILED";
-})(BulkEmailStatusEnum || (BulkEmailStatusEnum = {}));
+})(BulkEmailStatusEnum = exports.BulkEmailStatusEnum || (exports.BulkEmailStatusEnum = {}));

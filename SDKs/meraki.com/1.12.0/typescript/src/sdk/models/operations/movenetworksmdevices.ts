@@ -43,5 +43,5 @@ export class MoveNetworkSmDevicesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  moveNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+  moveNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

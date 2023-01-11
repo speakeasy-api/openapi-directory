@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse = exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest = exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams = exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum;
 (function (IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum) {
     IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum["Xml"] = "XML";
     IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum["Json"] = "JSON";
-})(IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum || (IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = {}));
+})(IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum || (exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = {}));
 var IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams, _super);
     function IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.prototype, "week", void 0);
     return IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams = IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams;
 var IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest, _super);
     function IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest.prototype, "pathParams", void 0);
     return IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest = IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest;
 var IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse, _super);
     function IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse.prototype, "playerGameProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse.prototype, "statusCode", void 0);
     return IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse = IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse;

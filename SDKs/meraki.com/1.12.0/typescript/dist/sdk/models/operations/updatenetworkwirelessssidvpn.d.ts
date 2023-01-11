@@ -32,5 +32,5 @@ export declare class UpdateNetworkWirelessSsidVpnRequest extends SpeakeasyBase {
 export declare class UpdateNetworkWirelessSsidVpnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidVpn200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidVpn200ApplicationJSONObject?: Record<string, any>;
 }

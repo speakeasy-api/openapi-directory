@@ -6,8 +6,8 @@ import { FailedItemDetails } from "./faileditemdetails";
 
 export class DescribeExclusionsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=exclusions", elemType: Exclusion })
-  exclusions: Map<string, Exclusion>;
+  exclusions: Record<string, Exclusion>;
 
   @SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails })
-  failedItems: Map<string, FailedItemDetails>;
+  failedItems: Record<string, FailedItemDetails>;
 }

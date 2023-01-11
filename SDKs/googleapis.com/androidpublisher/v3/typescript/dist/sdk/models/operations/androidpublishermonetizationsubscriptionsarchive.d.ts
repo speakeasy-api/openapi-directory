@@ -24,7 +24,7 @@ export declare class AndroidpublisherMonetizationSubscriptionsArchiveSecurity ex
 export declare class AndroidpublisherMonetizationSubscriptionsArchiveRequest extends SpeakeasyBase {
     pathParams: AndroidpublisherMonetizationSubscriptionsArchivePathParams;
     queryParams: AndroidpublisherMonetizationSubscriptionsArchiveQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AndroidpublisherMonetizationSubscriptionsArchiveSecurity;
 }
 export declare class AndroidpublisherMonetizationSubscriptionsArchiveResponse extends SpeakeasyBase {

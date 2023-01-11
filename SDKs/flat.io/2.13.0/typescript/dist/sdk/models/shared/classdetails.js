@@ -1,0 +1,341 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClassDetails = exports.ClassDetailsMicrosoftGraph = exports.ClassDetailsMfc = exports.ClassDetailsLti = exports.ClassDetailsIssues = exports.ClassDetailsIssuesSync = exports.ClassDetailsIssuesSyncReasonEnum = exports.ClassDetailsGoogleDrive = exports.ClassDetailsGoogleClassroom = exports.ClassDetailsClever = exports.ClassDetailsCleverSubjectEnum = exports.ClassDetailsCanvas = void 0;
+var utils_1 = require("../../../internal/utils");
+var classstateenum_1 = require("./classstateenum");
+var groupdetails_1 = require("./groupdetails");
+// ClassDetailsCanvas
+/**
+ * Meta information provided by Canvs LMS
+**/
+var ClassDetailsCanvas = /** @class */ (function (_super) {
+    __extends(ClassDetailsCanvas, _super);
+    function ClassDetailsCanvas() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", String)
+    ], ClassDetailsCanvas.prototype, "domain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsCanvas.prototype, "id", void 0);
+    return ClassDetailsCanvas;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsCanvas = ClassDetailsCanvas;
+var ClassDetailsCleverSubjectEnum;
+(function (ClassDetailsCleverSubjectEnum) {
+    ClassDetailsCleverSubjectEnum["EnglishLanguageArts"] = "english/language arts";
+    ClassDetailsCleverSubjectEnum["Math"] = "math";
+    ClassDetailsCleverSubjectEnum["Science"] = "science";
+    ClassDetailsCleverSubjectEnum["SocialStudies"] = "social studies";
+    ClassDetailsCleverSubjectEnum["Language"] = "language";
+    ClassDetailsCleverSubjectEnum["HomeroomAdvisory"] = "homeroom/advisory";
+    ClassDetailsCleverSubjectEnum["InterventionsOnlineLearning"] = "interventions/online learning";
+    ClassDetailsCleverSubjectEnum["TechnologyAndEngineering"] = "technology and engineering";
+    ClassDetailsCleverSubjectEnum["PeAndHealth"] = "PE and health";
+    ClassDetailsCleverSubjectEnum["ArtsAndMusic"] = "arts and music";
+    ClassDetailsCleverSubjectEnum["Other"] = "other";
+})(ClassDetailsCleverSubjectEnum = exports.ClassDetailsCleverSubjectEnum || (exports.ClassDetailsCleverSubjectEnum = {}));
+// ClassDetailsClever
+/**
+ * Clever.com section-related information
+**/
+var ClassDetailsClever = /** @class */ (function (_super) {
+    __extends(ClassDetailsClever, _super);
+    function ClassDetailsClever() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
+        __metadata("design:type", Date)
+    ], ClassDetailsClever.prototype, "creationDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsClever.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modificationDate" }),
+        __metadata("design:type", Date)
+    ], ClassDetailsClever.prototype, "modificationDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
+        __metadata("design:type", String)
+    ], ClassDetailsClever.prototype, "subject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termEndDate" }),
+        __metadata("design:type", Date)
+    ], ClassDetailsClever.prototype, "termEndDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termName" }),
+        __metadata("design:type", String)
+    ], ClassDetailsClever.prototype, "termName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termStartDate" }),
+        __metadata("design:type", Date)
+    ], ClassDetailsClever.prototype, "termStartDate", void 0);
+    return ClassDetailsClever;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsClever = ClassDetailsClever;
+// ClassDetailsGoogleClassroom
+/**
+ * Google Classroom course-related information
+**/
+var ClassDetailsGoogleClassroom = /** @class */ (function (_super) {
+    __extends(ClassDetailsGoogleClassroom, _super);
+    function ClassDetailsGoogleClassroom() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateLink" }),
+        __metadata("design:type", String)
+    ], ClassDetailsGoogleClassroom.prototype, "alternateLink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsGoogleClassroom.prototype, "id", void 0);
+    return ClassDetailsGoogleClassroom;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsGoogleClassroom = ClassDetailsGoogleClassroom;
+// ClassDetailsGoogleDrive
+/**
+ * Google Drive course-related information provided by Google Classroom
+**/
+var ClassDetailsGoogleDrive = /** @class */ (function (_super) {
+    __extends(ClassDetailsGoogleDrive, _super);
+    function ClassDetailsGoogleDrive() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teacherFolderAlternateLink" }),
+        __metadata("design:type", String)
+    ], ClassDetailsGoogleDrive.prototype, "teacherFolderAlternateLink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teacherFolderId" }),
+        __metadata("design:type", String)
+    ], ClassDetailsGoogleDrive.prototype, "teacherFolderId", void 0);
+    return ClassDetailsGoogleDrive;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsGoogleDrive = ClassDetailsGoogleDrive;
+var ClassDetailsIssuesSyncReasonEnum;
+(function (ClassDetailsIssuesSyncReasonEnum) {
+    ClassDetailsIssuesSyncReasonEnum["OtherOrgnanization"] = "otherOrgnanization";
+    ClassDetailsIssuesSyncReasonEnum["PersonalSubscription"] = "personalSubscription";
+})(ClassDetailsIssuesSyncReasonEnum = exports.ClassDetailsIssuesSyncReasonEnum || (exports.ClassDetailsIssuesSyncReasonEnum = {}));
+// ClassDetailsIssuesSync
+/**
+ * A sync issue
+**/
+var ClassDetailsIssuesSync = /** @class */ (function (_super) {
+    __extends(ClassDetailsIssuesSync, _super);
+    function ClassDetailsIssuesSync() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
+        __metadata("design:type", String)
+    ], ClassDetailsIssuesSync.prototype, "email", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsIssuesSync.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
+        __metadata("design:type", String)
+    ], ClassDetailsIssuesSync.prototype, "reason", void 0);
+    return ClassDetailsIssuesSync;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsIssuesSync = ClassDetailsIssuesSync;
+// ClassDetailsIssues
+/**
+ * Detected issues for this class
+**/
+var ClassDetailsIssues = /** @class */ (function (_super) {
+    __extends(ClassDetailsIssues, _super);
+    function ClassDetailsIssues() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sync", elemType: ClassDetailsIssuesSync }),
+        __metadata("design:type", Array)
+    ], ClassDetailsIssues.prototype, "sync", void 0);
+    return ClassDetailsIssues;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsIssues = ClassDetailsIssues;
+// ClassDetailsLti
+/**
+ * Meta information provided by the LTI consumer
+**/
+var ClassDetailsLti = /** @class */ (function (_super) {
+    __extends(ClassDetailsLti, _super);
+    function ClassDetailsLti() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contextId" }),
+        __metadata("design:type", String)
+    ], ClassDetailsLti.prototype, "contextId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contextLabel" }),
+        __metadata("design:type", String)
+    ], ClassDetailsLti.prototype, "contextLabel", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contextTitle" }),
+        __metadata("design:type", String)
+    ], ClassDetailsLti.prototype, "contextTitle", void 0);
+    return ClassDetailsLti;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsLti = ClassDetailsLti;
+// ClassDetailsMfc
+/**
+ * Meta information provided by Canvs LMS
+**/
+var ClassDetailsMfc = /** @class */ (function (_super) {
+    __extends(ClassDetailsMfc, _super);
+    function ClassDetailsMfc() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateLink" }),
+        __metadata("design:type", String)
+    ], ClassDetailsMfc.prototype, "alternateLink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsMfc.prototype, "id", void 0);
+    return ClassDetailsMfc;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsMfc = ClassDetailsMfc;
+var ClassDetailsMicrosoftGraph = /** @class */ (function (_super) {
+    __extends(ClassDetailsMicrosoftGraph, _super);
+    function ClassDetailsMicrosoftGraph() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetailsMicrosoftGraph.prototype, "id", void 0);
+    return ClassDetailsMicrosoftGraph;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetailsMicrosoftGraph = ClassDetailsMicrosoftGraph;
+// ClassDetails
+/**
+ * A classroom
+**/
+var ClassDetails = /** @class */ (function (_super) {
+    __extends(ClassDetails, _super);
+    function ClassDetails() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assignmentsCount" }),
+        __metadata("design:type", Number)
+    ], ClassDetails.prototype, "assignmentsCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canvas" }),
+        __metadata("design:type", ClassDetailsCanvas)
+    ], ClassDetails.prototype, "canvas", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clever" }),
+        __metadata("design:type", ClassDetailsClever)
+    ], ClassDetails.prototype, "clever", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
+        __metadata("design:type", Date)
+    ], ClassDetails.prototype, "creationDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enrollmentCode" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "enrollmentCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleClassroom" }),
+        __metadata("design:type", ClassDetailsGoogleClassroom)
+    ], ClassDetails.prototype, "googleClassroom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleDrive" }),
+        __metadata("design:type", ClassDetailsGoogleDrive)
+    ], ClassDetails.prototype, "googleDrive", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues" }),
+        __metadata("design:type", ClassDetailsIssues)
+    ], ClassDetails.prototype, "issues", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lti" }),
+        __metadata("design:type", ClassDetailsLti)
+    ], ClassDetails.prototype, "lti", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mfc" }),
+        __metadata("design:type", ClassDetailsMfc)
+    ], ClassDetails.prototype, "mfc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=microsoftGraph" }),
+        __metadata("design:type", ClassDetailsMicrosoftGraph)
+    ], ClassDetails.prototype, "microsoftGraph", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "organization", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "owner", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "section", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studentsGroup" }),
+        __metadata("design:type", groupdetails_1.GroupDetails)
+    ], ClassDetails.prototype, "studentsGroup", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teachersGroup" }),
+        __metadata("design:type", groupdetails_1.GroupDetails)
+    ], ClassDetails.prototype, "teachersGroup", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=theme" }),
+        __metadata("design:type", String)
+    ], ClassDetails.prototype, "theme", void 0);
+    return ClassDetails;
+}(utils_1.SpeakeasyBase));
+exports.ClassDetails = ClassDetails;

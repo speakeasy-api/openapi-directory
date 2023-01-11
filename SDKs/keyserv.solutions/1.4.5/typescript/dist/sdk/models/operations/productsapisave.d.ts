@@ -4,6 +4,6 @@ export declare class ProductsApiSaveRequest extends SpeakeasyBase {
 }
 export declare class ProductsApiSaveResponse extends SpeakeasyBase {
     contentType: string;
-    productsApiSave201ApplicationJsonOneOf?: any;
+    productsApiSave201ApplicationJSONOneOf?: any;
     statusCode: number;
 }

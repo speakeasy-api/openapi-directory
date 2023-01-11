@@ -9,6 +9,6 @@ export declare class PutUsersUserEmailSuspendRequest extends SpeakeasyBase {
 }
 export declare class PutUsersUserEmailSuspendResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

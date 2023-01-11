@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Page = exports.PageStatusEnum = exports.PageBlog = exports.PageAuthor = exports.PageAuthorImage = void 0;
+var utils_1 = require("../../../internal/utils");
 // PageAuthorImage
 /**
  * The creator's avatar.
@@ -33,12 +36,12 @@ var PageAuthorImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PageAuthorImage.prototype, "url", void 0);
     return PageAuthorImage;
-}(SpeakeasyBase));
-export { PageAuthorImage };
+}(utils_1.SpeakeasyBase));
+exports.PageAuthorImage = PageAuthorImage;
 // PageAuthor
 /**
  * The author of this Page.
@@ -49,24 +52,24 @@ var PageAuthor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PageAuthor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PageAuthor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", PageAuthorImage)
     ], PageAuthor.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PageAuthor.prototype, "url", void 0);
     return PageAuthor;
-}(SpeakeasyBase));
-export { PageAuthor };
+}(utils_1.SpeakeasyBase));
+exports.PageAuthor = PageAuthor;
 // PageBlog
 /**
  * Data about the blog containing this Page.
@@ -77,75 +80,75 @@ var PageBlog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PageBlog.prototype, "id", void 0);
     return PageBlog;
-}(SpeakeasyBase));
-export { PageBlog };
-export var PageStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PageBlog = PageBlog;
+var PageStatusEnum;
 (function (PageStatusEnum) {
     PageStatusEnum["Live"] = "LIVE";
     PageStatusEnum["Draft"] = "DRAFT";
     PageStatusEnum["SoftTrashed"] = "SOFT_TRASHED";
-})(PageStatusEnum || (PageStatusEnum = {}));
+})(PageStatusEnum = exports.PageStatusEnum || (exports.PageStatusEnum = {}));
 var Page = /** @class */ (function (_super) {
     __extends(Page, _super);
     function Page() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", PageAuthor)
     ], Page.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog" }),
         __metadata("design:type", PageBlog)
     ], Page.prototype, "blog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Page.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Page.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Page.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Page.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", String)
     ], Page.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Page.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Page.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Page.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trashed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trashed" }),
         __metadata("design:type", String)
     ], Page.prototype, "trashed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], Page.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Page.prototype, "url", void 0);
     return Page;
-}(SpeakeasyBase));
-export { Page };
+}(utils_1.SpeakeasyBase));
+exports.Page = Page;

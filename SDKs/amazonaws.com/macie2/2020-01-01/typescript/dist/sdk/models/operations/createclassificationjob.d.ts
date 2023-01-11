@@ -31,7 +31,7 @@ export declare class CreateClassificationJobRequestBodyS3JobDefinition extends S
  * Specifies the recurrence pattern for running a classification job.
 **/
 export declare class CreateClassificationJobRequestBodyScheduleFrequency extends SpeakeasyBase {
-    dailySchedule?: Map<string, any>;
+    dailySchedule?: Record<string, any>;
     monthlySchedule?: shared.MonthlySchedule;
     weeklySchedule?: shared.WeeklySchedule;
 }
@@ -47,7 +47,7 @@ export declare class CreateClassificationJobRequestBody extends SpeakeasyBase {
     s3JobDefinition: CreateClassificationJobRequestBodyS3JobDefinition;
     samplingPercentage?: number;
     scheduleFrequency?: CreateClassificationJobRequestBodyScheduleFrequency;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateClassificationJobRequest extends SpeakeasyBase {
     headers: CreateClassificationJobHeaders;

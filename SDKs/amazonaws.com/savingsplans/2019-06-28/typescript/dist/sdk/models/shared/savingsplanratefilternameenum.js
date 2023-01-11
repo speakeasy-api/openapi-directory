@@ -1,4 +1,7 @@
-export var SavingsPlanRateFilterNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavingsPlanRateFilterNameEnum = void 0;
+var SavingsPlanRateFilterNameEnum;
 (function (SavingsPlanRateFilterNameEnum) {
     SavingsPlanRateFilterNameEnum["Region"] = "region";
     SavingsPlanRateFilterNameEnum["InstanceType"] = "instanceType";
@@ -8,4 +11,4 @@ export var SavingsPlanRateFilterNameEnum;
     SavingsPlanRateFilterNameEnum["ServiceCode"] = "serviceCode";
     SavingsPlanRateFilterNameEnum["UsageType"] = "usageType";
     SavingsPlanRateFilterNameEnum["Operation"] = "operation";
-})(SavingsPlanRateFilterNameEnum || (SavingsPlanRateFilterNameEnum = {}));
+})(SavingsPlanRateFilterNameEnum = exports.SavingsPlanRateFilterNameEnum || (exports.SavingsPlanRateFilterNameEnum = {}));

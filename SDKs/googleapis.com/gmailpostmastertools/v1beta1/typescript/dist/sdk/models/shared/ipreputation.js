@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IpReputationReputationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpReputation = exports.IpReputationReputationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IpReputationReputationEnum;
 (function (IpReputationReputationEnum) {
     IpReputationReputationEnum["ReputationCategoryUnspecified"] = "REPUTATION_CATEGORY_UNSPECIFIED";
     IpReputationReputationEnum["High"] = "HIGH";
     IpReputationReputationEnum["Medium"] = "MEDIUM";
     IpReputationReputationEnum["Low"] = "LOW";
     IpReputationReputationEnum["Bad"] = "BAD";
-})(IpReputationReputationEnum || (IpReputationReputationEnum = {}));
+})(IpReputationReputationEnum = exports.IpReputationReputationEnum || (exports.IpReputationReputationEnum = {}));
 // IpReputation
 /**
  * IP Reputation information for a set of IPs in a specific reputation category.
@@ -41,21 +44,21 @@ var IpReputation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipCount" }),
         __metadata("design:type", String)
     ], IpReputation.prototype, "ipCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numIps" }),
         __metadata("design:type", String)
     ], IpReputation.prototype, "numIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reputation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reputation" }),
         __metadata("design:type", String)
     ], IpReputation.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleIps" }),
         __metadata("design:type", Array)
     ], IpReputation.prototype, "sampleIps", void 0);
     return IpReputation;
-}(SpeakeasyBase));
-export { IpReputation };
+}(utils_1.SpeakeasyBase));
+exports.IpReputation = IpReputation;

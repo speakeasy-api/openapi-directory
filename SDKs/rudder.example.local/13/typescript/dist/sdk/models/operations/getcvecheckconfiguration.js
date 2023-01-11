@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCveCheckConfiguration200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCveCheckConfigurationResponse = exports.GetCveCheckConfiguration200ApplicationJson = exports.GetCveCheckConfiguration200ApplicationJsonResultEnum = exports.GetCveCheckConfiguration200ApplicationJsonData = exports.GetCveCheckConfiguration200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCveCheckConfiguration200ApplicationJsonActionEnum;
 (function (GetCveCheckConfiguration200ApplicationJsonActionEnum) {
     GetCveCheckConfiguration200ApplicationJsonActionEnum["GetCveCheckConfiguration"] = "getCVECheckConfiguration";
-})(GetCveCheckConfiguration200ApplicationJsonActionEnum || (GetCveCheckConfiguration200ApplicationJsonActionEnum = {}));
+})(GetCveCheckConfiguration200ApplicationJsonActionEnum = exports.GetCveCheckConfiguration200ApplicationJsonActionEnum || (exports.GetCveCheckConfiguration200ApplicationJsonActionEnum = {}));
 var GetCveCheckConfiguration200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetCveCheckConfiguration200ApplicationJsonData, _super);
     function GetCveCheckConfiguration200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
         __metadata("design:type", String)
     ], GetCveCheckConfiguration200ApplicationJsonData.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GetCveCheckConfiguration200ApplicationJsonData.prototype, "url", void 0);
     return GetCveCheckConfiguration200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetCveCheckConfiguration200ApplicationJsonData };
-export var GetCveCheckConfiguration200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCveCheckConfiguration200ApplicationJsonData = GetCveCheckConfiguration200ApplicationJsonData;
+var GetCveCheckConfiguration200ApplicationJsonResultEnum;
 (function (GetCveCheckConfiguration200ApplicationJsonResultEnum) {
     GetCveCheckConfiguration200ApplicationJsonResultEnum["Success"] = "success";
     GetCveCheckConfiguration200ApplicationJsonResultEnum["Error"] = "error";
-})(GetCveCheckConfiguration200ApplicationJsonResultEnum || (GetCveCheckConfiguration200ApplicationJsonResultEnum = {}));
+})(GetCveCheckConfiguration200ApplicationJsonResultEnum = exports.GetCveCheckConfiguration200ApplicationJsonResultEnum || (exports.GetCveCheckConfiguration200ApplicationJsonResultEnum = {}));
 var GetCveCheckConfiguration200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetCveCheckConfiguration200ApplicationJson, _super);
     function GetCveCheckConfiguration200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetCveCheckConfiguration200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetCveCheckConfiguration200ApplicationJsonData)
     ], GetCveCheckConfiguration200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetCveCheckConfiguration200ApplicationJson.prototype, "result", void 0);
     return GetCveCheckConfiguration200ApplicationJson;
-}(SpeakeasyBase));
-export { GetCveCheckConfiguration200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetCveCheckConfiguration200ApplicationJson = GetCveCheckConfiguration200ApplicationJson;
 var GetCveCheckConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetCveCheckConfigurationResponse, _super);
     function GetCveCheckConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCveCheckConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCveCheckConfigurationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCveCheckConfiguration200ApplicationJson)
-    ], GetCveCheckConfigurationResponse.prototype, "getCveCheckConfiguration200ApplicationJsonObject", void 0);
+    ], GetCveCheckConfigurationResponse.prototype, "getCVECheckConfiguration200ApplicationJSONObject", void 0);
     return GetCveCheckConfigurationResponse;
-}(SpeakeasyBase));
-export { GetCveCheckConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCveCheckConfigurationResponse = GetCveCheckConfigurationResponse;

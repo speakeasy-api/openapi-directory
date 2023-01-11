@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStatsSeriesPeriodFieldsPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStatsSeriesPeriodFieldsResponse = exports.GetStatsSeriesPeriodFieldsRequest = exports.GetStatsSeriesPeriodFieldsQueryParams = exports.GetStatsSeriesPeriodFieldsPathParams = exports.GetStatsSeriesPeriodFieldsPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStatsSeriesPeriodFieldsPeriodEnum;
 (function (GetStatsSeriesPeriodFieldsPeriodEnum) {
     GetStatsSeriesPeriodFieldsPeriodEnum["Day"] = "day";
     GetStatsSeriesPeriodFieldsPeriodEnum["Month"] = "month";
-})(GetStatsSeriesPeriodFieldsPeriodEnum || (GetStatsSeriesPeriodFieldsPeriodEnum = {}));
+})(GetStatsSeriesPeriodFieldsPeriodEnum = exports.GetStatsSeriesPeriodFieldsPeriodEnum || (exports.GetStatsSeriesPeriodFieldsPeriodEnum = {}));
 var GetStatsSeriesPeriodFieldsPathParams = /** @class */ (function (_super) {
     __extends(GetStatsSeriesPeriodFieldsPathParams, _super);
     function GetStatsSeriesPeriodFieldsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fields" }),
         __metadata("design:type", String)
     ], GetStatsSeriesPeriodFieldsPathParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=period" }),
         __metadata("design:type", String)
     ], GetStatsSeriesPeriodFieldsPathParams.prototype, "period", void 0);
     return GetStatsSeriesPeriodFieldsPathParams;
-}(SpeakeasyBase));
-export { GetStatsSeriesPeriodFieldsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsSeriesPeriodFieldsPathParams = GetStatsSeriesPeriodFieldsPathParams;
 var GetStatsSeriesPeriodFieldsQueryParams = /** @class */ (function (_super) {
     __extends(GetStatsSeriesPeriodFieldsQueryParams, _super);
     function GetStatsSeriesPeriodFieldsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end" }),
         __metadata("design:type", Number)
     ], GetStatsSeriesPeriodFieldsQueryParams.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetStatsSeriesPeriodFieldsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", Number)
     ], GetStatsSeriesPeriodFieldsQueryParams.prototype, "start", void 0);
     return GetStatsSeriesPeriodFieldsQueryParams;
-}(SpeakeasyBase));
-export { GetStatsSeriesPeriodFieldsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsSeriesPeriodFieldsQueryParams = GetStatsSeriesPeriodFieldsQueryParams;
 var GetStatsSeriesPeriodFieldsRequest = /** @class */ (function (_super) {
     __extends(GetStatsSeriesPeriodFieldsRequest, _super);
     function GetStatsSeriesPeriodFieldsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStatsSeriesPeriodFieldsPathParams)
     ], GetStatsSeriesPeriodFieldsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStatsSeriesPeriodFieldsQueryParams)
     ], GetStatsSeriesPeriodFieldsRequest.prototype, "queryParams", void 0);
     return GetStatsSeriesPeriodFieldsRequest;
-}(SpeakeasyBase));
-export { GetStatsSeriesPeriodFieldsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsSeriesPeriodFieldsRequest = GetStatsSeriesPeriodFieldsRequest;
 var GetStatsSeriesPeriodFieldsResponse = /** @class */ (function (_super) {
     __extends(GetStatsSeriesPeriodFieldsResponse, _super);
     function GetStatsSeriesPeriodFieldsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStatsSeriesPeriodFieldsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStatsSeriesPeriodFieldsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStatsSeriesPeriodFieldsResponse.prototype, "statusCode", void 0);
     return GetStatsSeriesPeriodFieldsResponse;
-}(SpeakeasyBase));
-export { GetStatsSeriesPeriodFieldsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsSeriesPeriodFieldsResponse = GetStatsSeriesPeriodFieldsResponse;

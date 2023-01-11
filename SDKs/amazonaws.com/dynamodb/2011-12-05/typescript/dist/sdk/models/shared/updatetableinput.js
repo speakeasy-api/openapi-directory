@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProvisionedThroughput } from "./provisionedthroughput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateTableInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var provisionedthroughput_1 = require("./provisionedthroughput");
 var UpdateTableInput = /** @class */ (function (_super) {
     __extends(UpdateTableInput, _super);
     function UpdateTableInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProvisionedThroughput" }),
-        __metadata("design:type", ProvisionedThroughput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProvisionedThroughput" }),
+        __metadata("design:type", provisionedthroughput_1.ProvisionedThroughput)
     ], UpdateTableInput.prototype, "provisionedThroughput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], UpdateTableInput.prototype, "tableName", void 0);
     return UpdateTableInput;
-}(SpeakeasyBase));
-export { UpdateTableInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateTableInput = UpdateTableInput;

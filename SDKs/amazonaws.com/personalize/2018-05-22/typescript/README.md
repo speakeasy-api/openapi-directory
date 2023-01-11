@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateBatchInferenceJobRequest, CreateBatchInferenceJobResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,43 +33,42 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateBatchInferenceJobRequest = {
   headers: {
-    xAmzAlgorithm: "eos",
-    xAmzContentSha256: "aut",
-    xAmzCredential: "autem",
-    xAmzDate: "deleniti",
-    xAmzSecurityToken: "impedit",
-    xAmzSignature: "asperiores",
-    xAmzSignedHeaders: "omnis",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
   },
   request: {
     batchInferenceJobConfig: {
       itemExplorationConfig: {
-        "ut": "aut",
-        "explicabo": "sit",
+        "et": "nihil",
       },
     },
-    filterArn: "sed",
+    filterArn: "rerum",
     jobInput: {
       s3DataSource: {
-        kmsKeyArn: "est",
-        path: "sit",
+        kmsKeyArn: "dicta",
+        path: "debitis",
       },
     },
-    jobName: "magni",
+    jobName: "voluptatum",
     jobOutput: {
       s3DataDestination: {
-        kmsKeyArn: "quis",
-        path: "sed",
+        kmsKeyArn: "et",
+        path: "ut",
       },
     },
-    numResults: 1462040475686766967,
-    roleArn: "sed",
-    solutionVersionArn: "quaerat",
+    numResults: 161231572858529631,
+    roleArn: "et",
+    solutionVersionArn: "voluptate",
   },
 };
 
-sdk.sdk.createBatchInferenceJob(req).then((res: CreateBatchInferenceJobResponse | AxiosError) => {
+sdk.createBatchInferenceJob(req).then((res: CreateBatchInferenceJobResponse | AxiosError) => {
    // handle response
 });
 ```

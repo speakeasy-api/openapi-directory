@@ -35,8 +35,8 @@ export class DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse extends 
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
 }

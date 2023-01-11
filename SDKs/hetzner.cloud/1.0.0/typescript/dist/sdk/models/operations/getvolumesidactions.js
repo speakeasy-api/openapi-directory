@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVolumesIdActionsResponse = exports.GetVolumesIdActionsRequest = exports.GetVolumesIdActionsActionsResponse = exports.GetVolumesIdActionsActionsResponseMeta = exports.GetVolumesIdActionsActionsResponseMetaPagination = exports.GetVolumesIdActionsActionsResponseAction = exports.GetVolumesIdActionsActionsResponseActionStatusEnum = exports.GetVolumesIdActionsActionsResponseActionResources = exports.GetVolumesIdActionsActionsResponseActionError = exports.GetVolumesIdActionsQueryParams = exports.GetVolumesIdActionsStatusParameterStatusEnum = exports.GetVolumesIdActionsSortParameterSortEnum = exports.GetVolumesIdActionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVolumesIdActionsPathParams = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsPathParams, _super);
     function GetVolumesIdActionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsPathParams.prototype, "id", void 0);
     return GetVolumesIdActionsPathParams;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsPathParams };
-export var GetVolumesIdActionsSortParameterSortEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsPathParams = GetVolumesIdActionsPathParams;
+var GetVolumesIdActionsSortParameterSortEnum;
 (function (GetVolumesIdActionsSortParameterSortEnum) {
     GetVolumesIdActionsSortParameterSortEnum["Id"] = "id";
     GetVolumesIdActionsSortParameterSortEnum["IdAsc"] = "id:asc";
@@ -55,29 +58,29 @@ export var GetVolumesIdActionsSortParameterSortEnum;
     GetVolumesIdActionsSortParameterSortEnum["Finished"] = "finished";
     GetVolumesIdActionsSortParameterSortEnum["FinishedAsc"] = "finished:asc";
     GetVolumesIdActionsSortParameterSortEnum["FinishedDesc"] = "finished:desc";
-})(GetVolumesIdActionsSortParameterSortEnum || (GetVolumesIdActionsSortParameterSortEnum = {}));
-export var GetVolumesIdActionsStatusParameterStatusEnum;
+})(GetVolumesIdActionsSortParameterSortEnum = exports.GetVolumesIdActionsSortParameterSortEnum || (exports.GetVolumesIdActionsSortParameterSortEnum = {}));
+var GetVolumesIdActionsStatusParameterStatusEnum;
 (function (GetVolumesIdActionsStatusParameterStatusEnum) {
     GetVolumesIdActionsStatusParameterStatusEnum["Running"] = "running";
     GetVolumesIdActionsStatusParameterStatusEnum["Success"] = "success";
     GetVolumesIdActionsStatusParameterStatusEnum["Error"] = "error";
-})(GetVolumesIdActionsStatusParameterStatusEnum || (GetVolumesIdActionsStatusParameterStatusEnum = {}));
+})(GetVolumesIdActionsStatusParameterStatusEnum = exports.GetVolumesIdActionsStatusParameterStatusEnum || (exports.GetVolumesIdActionsStatusParameterStatusEnum = {}));
 var GetVolumesIdActionsQueryParams = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsQueryParams, _super);
     function GetVolumesIdActionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsQueryParams.prototype, "status", void 0);
     return GetVolumesIdActionsQueryParams;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsQueryParams = GetVolumesIdActionsQueryParams;
 // GetVolumesIdActionsActionsResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -88,171 +91,171 @@ var GetVolumesIdActionsActionsResponseActionError = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseActionError.prototype, "message", void 0);
     return GetVolumesIdActionsActionsResponseActionError;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponseActionError = GetVolumesIdActionsActionsResponseActionError;
 var GetVolumesIdActionsActionsResponseActionResources = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsActionsResponseActionResources, _super);
     function GetVolumesIdActionsActionsResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseActionResources.prototype, "type", void 0);
     return GetVolumesIdActionsActionsResponseActionResources;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponseActionResources };
-export var GetVolumesIdActionsActionsResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponseActionResources = GetVolumesIdActionsActionsResponseActionResources;
+var GetVolumesIdActionsActionsResponseActionStatusEnum;
 (function (GetVolumesIdActionsActionsResponseActionStatusEnum) {
     GetVolumesIdActionsActionsResponseActionStatusEnum["Success"] = "success";
     GetVolumesIdActionsActionsResponseActionStatusEnum["Running"] = "running";
     GetVolumesIdActionsActionsResponseActionStatusEnum["Error"] = "error";
-})(GetVolumesIdActionsActionsResponseActionStatusEnum || (GetVolumesIdActionsActionsResponseActionStatusEnum = {}));
+})(GetVolumesIdActionsActionsResponseActionStatusEnum = exports.GetVolumesIdActionsActionsResponseActionStatusEnum || (exports.GetVolumesIdActionsActionsResponseActionStatusEnum = {}));
 var GetVolumesIdActionsActionsResponseAction = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsActionsResponseAction, _super);
     function GetVolumesIdActionsActionsResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", GetVolumesIdActionsActionsResponseActionError)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: GetVolumesIdActionsActionsResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: GetVolumesIdActionsActionsResponseActionResources }),
         __metadata("design:type", Array)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetVolumesIdActionsActionsResponseAction.prototype, "status", void 0);
     return GetVolumesIdActionsActionsResponseAction;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponseAction = GetVolumesIdActionsActionsResponseAction;
 var GetVolumesIdActionsActionsResponseMetaPagination = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsActionsResponseMetaPagination, _super);
     function GetVolumesIdActionsActionsResponseMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsActionsResponseMetaPagination.prototype, "totalEntries", void 0);
     return GetVolumesIdActionsActionsResponseMetaPagination;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponseMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponseMetaPagination = GetVolumesIdActionsActionsResponseMetaPagination;
 var GetVolumesIdActionsActionsResponseMeta = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsActionsResponseMeta, _super);
     function GetVolumesIdActionsActionsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetVolumesIdActionsActionsResponseMetaPagination)
     ], GetVolumesIdActionsActionsResponseMeta.prototype, "pagination", void 0);
     return GetVolumesIdActionsActionsResponseMeta;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponseMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponseMeta = GetVolumesIdActionsActionsResponseMeta;
 var GetVolumesIdActionsActionsResponse = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsActionsResponse, _super);
     function GetVolumesIdActionsActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: GetVolumesIdActionsActionsResponseAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: GetVolumesIdActionsActionsResponseAction }),
         __metadata("design:type", Array)
     ], GetVolumesIdActionsActionsResponse.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetVolumesIdActionsActionsResponseMeta)
     ], GetVolumesIdActionsActionsResponse.prototype, "meta", void 0);
     return GetVolumesIdActionsActionsResponse;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsActionsResponse = GetVolumesIdActionsActionsResponse;
 var GetVolumesIdActionsRequest = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsRequest, _super);
     function GetVolumesIdActionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesIdActionsPathParams)
     ], GetVolumesIdActionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesIdActionsQueryParams)
     ], GetVolumesIdActionsRequest.prototype, "queryParams", void 0);
     return GetVolumesIdActionsRequest;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsRequest = GetVolumesIdActionsRequest;
 var GetVolumesIdActionsResponse = /** @class */ (function (_super) {
     __extends(GetVolumesIdActionsResponse, _super);
     function GetVolumesIdActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVolumesIdActionsActionsResponse)
     ], GetVolumesIdActionsResponse.prototype, "actionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVolumesIdActionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVolumesIdActionsResponse.prototype, "statusCode", void 0);
     return GetVolumesIdActionsResponse;
-}(SpeakeasyBase));
-export { GetVolumesIdActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVolumesIdActionsResponse = GetVolumesIdActionsResponse;

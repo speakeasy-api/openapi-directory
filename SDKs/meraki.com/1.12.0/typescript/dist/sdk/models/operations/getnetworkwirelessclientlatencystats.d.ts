@@ -24,5 +24,5 @@ export declare class GetNetworkWirelessClientLatencyStatsRequest extends Speakea
 export declare class GetNetworkWirelessClientLatencyStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessClientLatencyStats200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessClientLatencyStats200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { SimplifiedTrackObject } from "./simplifiedtrackobject";
 import { ArtistObject } from "./artistobject";
 import { CopyrightObject } from "./copyrightobject";
 import { ExternalIdObject } from "./externalidobject";
 import { ExternalUrlObject } from "./externalurlobject";
 import { ImageObject } from "./imageobject";
 import { AlbumRestrictionObject } from "./albumrestrictionobject";
-import { SimplifiedTrackObject } from "./simplifiedtrackobject";
 
 
 

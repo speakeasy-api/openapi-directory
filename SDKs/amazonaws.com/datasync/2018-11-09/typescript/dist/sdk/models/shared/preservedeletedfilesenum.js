@@ -1,5 +1,8 @@
-export var PreserveDeletedFilesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreserveDeletedFilesEnum = void 0;
+var PreserveDeletedFilesEnum;
 (function (PreserveDeletedFilesEnum) {
     PreserveDeletedFilesEnum["Preserve"] = "PRESERVE";
     PreserveDeletedFilesEnum["Remove"] = "REMOVE";
-})(PreserveDeletedFilesEnum || (PreserveDeletedFilesEnum = {}));
+})(PreserveDeletedFilesEnum = exports.PreserveDeletedFilesEnum || (exports.PreserveDeletedFilesEnum = {}));

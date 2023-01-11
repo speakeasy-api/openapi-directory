@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddNotificationChannelsRequest, AddNotificationChannelsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,15 +33,15 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddNotificationChannelsRequest = {
   pathParams: {
-    profilingGroupName: "blanditiis",
+    profilingGroupName: "sit",
   },
   headers: {
-    xAmzAlgorithm: "placeat",
-    xAmzContentSha256: "odio",
-    xAmzCredential: "autem",
-    xAmzDate: "eligendi",
-    xAmzSecurityToken: "animi",
-    xAmzSignature: "est",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
     xAmzSignedHeaders: "voluptas",
   },
   request: {
@@ -50,25 +49,15 @@ const req: AddNotificationChannelsRequest = {
       {
         eventPublishers: [
           "AnomalyDetection",
-          "AnomalyDetection",
         ],
-        id: "voluptate",
-        uri: "quaerat",
-      },
-      {
-        eventPublishers: [
-          "AnomalyDetection",
-          "AnomalyDetection",
-          "AnomalyDetection",
-        ],
-        id: "nihil",
-        uri: "magni",
+        id: "rerum",
+        uri: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.addNotificationChannels(req).then((res: AddNotificationChannelsResponse | AxiosError) => {
+sdk.addNotificationChannels(req).then((res: AddNotificationChannelsResponse | AxiosError) => {
    // handle response
 });
 ```

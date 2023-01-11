@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotLocaleStatusEnum } from "./botlocalestatusenum";
-import { VoiceSettings } from "./voicesettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateBotLocaleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var botlocalestatusenum_1 = require("./botlocalestatusenum");
+var voicesettings_1 = require("./voicesettings");
 var UpdateBotLocaleResponse = /** @class */ (function (_super) {
     __extends(UpdateBotLocaleResponse, _super);
     function UpdateBotLocaleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botLocaleStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botLocaleStatus" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "botLocaleStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], UpdateBotLocaleResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReasons" }),
         __metadata("design:type", Array)
     ], UpdateBotLocaleResponse.prototype, "failureReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], UpdateBotLocaleResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeName" }),
         __metadata("design:type", String)
     ], UpdateBotLocaleResponse.prototype, "localeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nluIntentConfidenceThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nluIntentConfidenceThreshold" }),
         __metadata("design:type", Number)
     ], UpdateBotLocaleResponse.prototype, "nluIntentConfidenceThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceSettings" }),
-        __metadata("design:type", VoiceSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceSettings" }),
+        __metadata("design:type", voicesettings_1.VoiceSettings)
     ], UpdateBotLocaleResponse.prototype, "voiceSettings", void 0);
     return UpdateBotLocaleResponse;
-}(SpeakeasyBase));
-export { UpdateBotLocaleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateBotLocaleResponse = UpdateBotLocaleResponse;

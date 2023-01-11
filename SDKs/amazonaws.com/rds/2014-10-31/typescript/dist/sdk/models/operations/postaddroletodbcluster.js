@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAddRoleToDbClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAddRoleToDbClusterResponse = exports.PostAddRoleToDbClusterRequest = exports.PostAddRoleToDbClusterHeaders = exports.PostAddRoleToDbClusterQueryParams = exports.PostAddRoleToDbClusterVersionEnum = exports.PostAddRoleToDbClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAddRoleToDbClusterActionEnum;
 (function (PostAddRoleToDbClusterActionEnum) {
     PostAddRoleToDbClusterActionEnum["AddRoleToDbCluster"] = "AddRoleToDBCluster";
-})(PostAddRoleToDbClusterActionEnum || (PostAddRoleToDbClusterActionEnum = {}));
-export var PostAddRoleToDbClusterVersionEnum;
+})(PostAddRoleToDbClusterActionEnum = exports.PostAddRoleToDbClusterActionEnum || (exports.PostAddRoleToDbClusterActionEnum = {}));
+var PostAddRoleToDbClusterVersionEnum;
 (function (PostAddRoleToDbClusterVersionEnum) {
     PostAddRoleToDbClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostAddRoleToDbClusterVersionEnum || (PostAddRoleToDbClusterVersionEnum = {}));
+})(PostAddRoleToDbClusterVersionEnum = exports.PostAddRoleToDbClusterVersionEnum || (exports.PostAddRoleToDbClusterVersionEnum = {}));
 var PostAddRoleToDbClusterQueryParams = /** @class */ (function (_super) {
     __extends(PostAddRoleToDbClusterQueryParams, _super);
     function PostAddRoleToDbClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterQueryParams.prototype, "version", void 0);
     return PostAddRoleToDbClusterQueryParams;
-}(SpeakeasyBase));
-export { PostAddRoleToDbClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAddRoleToDbClusterQueryParams = PostAddRoleToDbClusterQueryParams;
 var PostAddRoleToDbClusterHeaders = /** @class */ (function (_super) {
     __extends(PostAddRoleToDbClusterHeaders, _super);
     function PostAddRoleToDbClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAddRoleToDbClusterHeaders;
-}(SpeakeasyBase));
-export { PostAddRoleToDbClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAddRoleToDbClusterHeaders = PostAddRoleToDbClusterHeaders;
 var PostAddRoleToDbClusterRequest = /** @class */ (function (_super) {
     __extends(PostAddRoleToDbClusterRequest, _super);
     function PostAddRoleToDbClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAddRoleToDbClusterQueryParams)
     ], PostAddRoleToDbClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAddRoleToDbClusterHeaders)
     ], PostAddRoleToDbClusterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAddRoleToDbClusterRequest.prototype, "request", void 0);
     return PostAddRoleToDbClusterRequest;
-}(SpeakeasyBase));
-export { PostAddRoleToDbClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAddRoleToDbClusterRequest = PostAddRoleToDbClusterRequest;
 var PostAddRoleToDbClusterResponse = /** @class */ (function (_super) {
     __extends(PostAddRoleToDbClusterResponse, _super);
     function PostAddRoleToDbClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAddRoleToDbClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAddRoleToDbClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAddRoleToDbClusterResponse.prototype, "statusCode", void 0);
     return PostAddRoleToDbClusterResponse;
-}(SpeakeasyBase));
-export { PostAddRoleToDbClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAddRoleToDbClusterResponse = PostAddRoleToDbClusterResponse;

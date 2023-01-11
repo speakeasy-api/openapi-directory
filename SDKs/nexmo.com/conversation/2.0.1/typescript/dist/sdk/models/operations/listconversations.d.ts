@@ -37,5 +37,5 @@ export declare class ListConversationsRequest extends SpeakeasyBase {
 export declare class ListConversationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listConversations200ApplicationJsonObject?: ListConversations200ApplicationJson;
+    listConversations200ApplicationJSONObject?: ListConversations200ApplicationJson;
 }

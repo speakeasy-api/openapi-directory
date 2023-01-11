@@ -25,5 +25,5 @@ export declare class UpdateDirectiveRequest extends SpeakeasyBase {
 export declare class UpdateDirectiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDirective200ApplicationJsonObject?: UpdateDirective200ApplicationJson;
+    updateDirective200ApplicationJSONObject?: UpdateDirective200ApplicationJson;
 }

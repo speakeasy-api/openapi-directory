@@ -13,7 +13,7 @@ export declare class GistsListForksRequest extends SpeakeasyBase {
 }
 export declare class GistsListForksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gistSimples?: shared.GistSimple[];

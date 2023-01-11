@@ -20,7 +20,7 @@ export declare class SendTestEventNotificationRequest extends SpeakeasyBase {
 export declare class SendTestEventNotificationResponse extends SpeakeasyBase {
     contentType: string;
     requestError?: any;
-    sendTestEventNotificationResponse?: Map<string, any>;
+    sendTestEventNotificationResponse?: Record<string, any>;
     serviceFault?: any;
     statusCode: number;
 }

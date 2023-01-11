@@ -50,7 +50,7 @@ export class GetActivePayInstructionsReportOutputResponse extends SpeakeasyBase 
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getActivePayInstructionsReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getActivePayInstructionsReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

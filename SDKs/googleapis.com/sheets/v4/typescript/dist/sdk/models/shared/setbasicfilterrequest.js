@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasicFilter } from "./basicfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetBasicFilterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var basicfilter_1 = require("./basicfilter");
 // SetBasicFilterRequest
 /**
  * Sets the basic filter associated with a sheet.
@@ -34,9 +37,9 @@ var SetBasicFilterRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
-        __metadata("design:type", BasicFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
+        __metadata("design:type", basicfilter_1.BasicFilter)
     ], SetBasicFilterRequest.prototype, "filter", void 0);
     return SetBasicFilterRequest;
-}(SpeakeasyBase));
-export { SetBasicFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetBasicFilterRequest = SetBasicFilterRequest;

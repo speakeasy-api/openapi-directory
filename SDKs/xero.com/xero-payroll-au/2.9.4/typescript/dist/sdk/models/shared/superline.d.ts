@@ -9,5 +9,5 @@ export declare class SuperLine extends SpeakeasyBase {
     liabilityAccountCode?: string;
     minimumMonthlyEarnings?: number;
     percentage?: number;
-    superMembershipId?: string;
+    superMembershipID?: string;
 }

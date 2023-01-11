@@ -34,5 +34,5 @@ export class GetNetworkWirelessAirMarshalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessAirMarshal200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessAirMarshal200ApplicationJSONObject?: Record<string, any>;
 }

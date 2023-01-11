@@ -6,7 +6,7 @@ import { SingleMasterConfiguration } from "./singlemasterconfiguration";
  * A structure that encapsulates a signaling channel's metadata and properties.
 **/
 export declare class ChannelInfo extends SpeakeasyBase {
-    channelArn?: string;
+    channelARN?: string;
     channelName?: string;
     channelStatus?: StatusEnum;
     channelType?: ChannelTypeEnum;

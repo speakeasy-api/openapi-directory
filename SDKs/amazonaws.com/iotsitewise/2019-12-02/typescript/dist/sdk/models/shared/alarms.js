@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Alarms = void 0;
+var utils_1 = require("../../../internal/utils");
 // Alarms
 /**
  * Contains the configuration information of an alarm created in an IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html">Monitoring with alarms</a> in the <i>IoT SiteWise Application Guide</i>.
@@ -33,13 +36,13 @@ var Alarms = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmRoleArn" }),
         __metadata("design:type", String)
     ], Alarms.prototype, "alarmRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationLambdaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationLambdaArn" }),
         __metadata("design:type", String)
     ], Alarms.prototype, "notificationLambdaArn", void 0);
     return Alarms;
-}(SpeakeasyBase));
-export { Alarms };
+}(utils_1.SpeakeasyBase));
+exports.Alarms = Alarms;

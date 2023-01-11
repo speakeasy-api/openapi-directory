@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentCircuitBreaker = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeploymentCircuitBreaker
 /**
  * <note> <p>The deployment circuit breaker can only be used for services using the rolling update (<code>ECS</code>) deployment type that are not behind a Classic Load Balancer.</p> </note> <p>The <b>deployment circuit breaker</b> determines whether a service deployment will fail if the service can't reach a steady state. If enabled, a service deployment will transition to a failed state and stop launching new tasks. You can also enable Amazon ECS to roll back your service to the last completed deployment after a failure. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html">Rolling update</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
@@ -33,13 +36,13 @@ var DeploymentCircuitBreaker = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enable" }),
         __metadata("design:type", Boolean)
     ], DeploymentCircuitBreaker.prototype, "enable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rollback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rollback" }),
         __metadata("design:type", Boolean)
     ], DeploymentCircuitBreaker.prototype, "rollback", void 0);
     return DeploymentCircuitBreaker;
-}(SpeakeasyBase));
-export { DeploymentCircuitBreaker };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentCircuitBreaker = DeploymentCircuitBreaker;

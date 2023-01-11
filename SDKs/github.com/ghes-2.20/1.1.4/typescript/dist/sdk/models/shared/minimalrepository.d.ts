@@ -6,6 +6,9 @@ export declare class MinimalRepositoryLicense extends SpeakeasyBase {
     spdxId?: string;
     url?: string;
 }
+/**
+ * Simple User
+**/
 export declare class MinimalRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -32,6 +35,9 @@ export declare class MinimalRepositoryPermissions extends SpeakeasyBase {
     pull?: boolean;
     push?: boolean;
 }
+/**
+ * License Simple
+**/
 export declare class MinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -40,6 +46,9 @@ export declare class MinimalRepositoryRepositoryLicenseSimple extends SpeakeasyB
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class MinimalRepositoryRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -174,6 +183,9 @@ export declare class MinimalRepositoryRepositoryTemplateRepository extends Speak
     visibility?: string;
     watchersCount?: number;
 }
+/**
+ * A git repository
+**/
 export declare class MinimalRepositoryRepository extends SpeakeasyBase {
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;

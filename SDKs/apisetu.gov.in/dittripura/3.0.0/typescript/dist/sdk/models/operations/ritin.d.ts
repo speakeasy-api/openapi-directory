@@ -106,11 +106,11 @@ export declare class RitinRequest extends SpeakeasyBase {
 export declare class RitinResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ritin400ApplicationJsonObject?: Ritin400ApplicationJson;
-    ritin401ApplicationJsonObject?: Ritin401ApplicationJson;
-    ritin404ApplicationJsonObject?: Ritin404ApplicationJson;
-    ritin500ApplicationJsonObject?: Ritin500ApplicationJson;
-    ritin502ApplicationJsonObject?: Ritin502ApplicationJson;
-    ritin503ApplicationJsonObject?: Ritin503ApplicationJson;
-    ritin504ApplicationJsonObject?: Ritin504ApplicationJson;
+    ritin400ApplicationJSONObject?: Ritin400ApplicationJson;
+    ritin401ApplicationJSONObject?: Ritin401ApplicationJson;
+    ritin404ApplicationJSONObject?: Ritin404ApplicationJson;
+    ritin500ApplicationJSONObject?: Ritin500ApplicationJson;
+    ritin502ApplicationJSONObject?: Ritin502ApplicationJson;
+    ritin503ApplicationJSONObject?: Ritin503ApplicationJson;
+    ritin504ApplicationJSONObject?: Ritin504ApplicationJson;
 }

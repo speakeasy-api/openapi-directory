@@ -1,6 +1,9 @@
-export var ChildPolicyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChildPolicyEnum = void 0;
+var ChildPolicyEnum;
 (function (ChildPolicyEnum) {
     ChildPolicyEnum["Terminate"] = "TERMINATE";
     ChildPolicyEnum["RequestCancel"] = "REQUEST_CANCEL";
     ChildPolicyEnum["Abandon"] = "ABANDON";
-})(ChildPolicyEnum || (ChildPolicyEnum = {}));
+})(ChildPolicyEnum = exports.ChildPolicyEnum || (exports.ChildPolicyEnum = {}));

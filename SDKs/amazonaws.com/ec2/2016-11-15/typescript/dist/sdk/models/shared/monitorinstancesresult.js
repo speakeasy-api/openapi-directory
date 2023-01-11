@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceMonitoring } from "./instancemonitoring";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonitorInstancesResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var MonitorInstancesResult = /** @class */ (function (_super) {
     __extends(MonitorInstancesResult, _super);
     function MonitorInstancesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: InstanceMonitoring }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], MonitorInstancesResult.prototype, "instanceMonitorings", void 0);
     return MonitorInstancesResult;
-}(SpeakeasyBase));
-export { MonitorInstancesResult };
+}(utils_1.SpeakeasyBase));
+exports.MonitorInstancesResult = MonitorInstancesResult;

@@ -11,7 +11,7 @@ export class Endpoint extends SpeakeasyBase {
   address?: string;
 
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -36,7 +36,7 @@ export class EndpointInput extends SpeakeasyBase {
   address?: string;
 
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

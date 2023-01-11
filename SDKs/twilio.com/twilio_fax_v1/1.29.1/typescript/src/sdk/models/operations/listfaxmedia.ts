@@ -59,7 +59,7 @@ export class ListFaxMediaListFaxMediaResponse extends SpeakeasyBase {
 
 export class ListFaxMediaRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: ListFaxMediaPathParams;

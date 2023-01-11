@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommentsForComparedCommit } from "./commentsforcomparedcommit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCommentsForComparedCommitOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var commentsforcomparedcommit_1 = require("./commentsforcomparedcommit");
 var GetCommentsForComparedCommitOutput = /** @class */ (function (_super) {
     __extends(GetCommentsForComparedCommitOutput, _super);
     function GetCommentsForComparedCommitOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commentsForComparedCommitData", elemType: CommentsForComparedCommit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commentsForComparedCommitData", elemType: commentsforcomparedcommit_1.CommentsForComparedCommit }),
         __metadata("design:type", Array)
     ], GetCommentsForComparedCommitOutput.prototype, "commentsForComparedCommitData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetCommentsForComparedCommitOutput.prototype, "nextToken", void 0);
     return GetCommentsForComparedCommitOutput;
-}(SpeakeasyBase));
-export { GetCommentsForComparedCommitOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetCommentsForComparedCommitOutput = GetCommentsForComparedCommitOutput;

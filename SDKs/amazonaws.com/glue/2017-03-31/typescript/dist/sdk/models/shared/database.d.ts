@@ -11,6 +11,6 @@ export declare class Database extends SpeakeasyBase {
     description?: string;
     locationUri?: string;
     name: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     targetDatabase?: DatabaseIdentifier;
 }

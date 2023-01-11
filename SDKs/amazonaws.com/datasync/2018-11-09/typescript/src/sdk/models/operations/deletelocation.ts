@@ -48,7 +48,7 @@ export class DeleteLocationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLocationResponse?: Map<string, any>;
+  deleteLocationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalException?: any;

@@ -1,22 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { WeatherByZipCode } from "./weatherbyzipcode";
 export declare const ServerList: readonly ["https://api.interzoid.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    weatherByZipCode: WeatherByZipCode;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * getweatherzipcode - Gets current weather information for a US zip code
-     *
-     * Use a US zip code to retrieve current weather information
-    **/
-    getweatherzipcode(req: operations.GetweatherzipcodeRequest, config?: AxiosRequestConfig): Promise<operations.GetweatherzipcodeResponse>;
+    constructor(props: SDKProps);
 }
-export {};

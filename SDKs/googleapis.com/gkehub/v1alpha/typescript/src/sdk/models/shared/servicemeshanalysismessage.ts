@@ -9,7 +9,7 @@ import { ServiceMeshAnalysisMessageBase } from "./servicemeshanalysismessagebase
 **/
 export class ServiceMeshAnalysisMessage extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=args" })
-  args?: Map<string, any>;
+  args?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

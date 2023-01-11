@@ -105,11 +105,11 @@ export declare class MnrgaRequest extends SpeakeasyBase {
 export declare class MnrgaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mnrga400ApplicationJsonObject?: Mnrga400ApplicationJson;
-    mnrga401ApplicationJsonObject?: Mnrga401ApplicationJson;
-    mnrga404ApplicationJsonObject?: Mnrga404ApplicationJson;
-    mnrga500ApplicationJsonObject?: Mnrga500ApplicationJson;
-    mnrga502ApplicationJsonObject?: Mnrga502ApplicationJson;
-    mnrga503ApplicationJsonObject?: Mnrga503ApplicationJson;
-    mnrga504ApplicationJsonObject?: Mnrga504ApplicationJson;
+    mnrga400ApplicationJSONObject?: Mnrga400ApplicationJson;
+    mnrga401ApplicationJSONObject?: Mnrga401ApplicationJson;
+    mnrga404ApplicationJSONObject?: Mnrga404ApplicationJson;
+    mnrga500ApplicationJSONObject?: Mnrga500ApplicationJson;
+    mnrga502ApplicationJSONObject?: Mnrga502ApplicationJson;
+    mnrga503ApplicationJSONObject?: Mnrga503ApplicationJson;
+    mnrga504ApplicationJSONObject?: Mnrga504ApplicationJson;
 }

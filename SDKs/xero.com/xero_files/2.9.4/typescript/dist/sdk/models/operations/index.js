@@ -1,16 +1,32 @@
-export * from "./createfileassociation";
-export * from "./createfolder";
-export * from "./deletefile";
-export * from "./deletefileassociation";
-export * from "./deletefolder";
-export * from "./getassociationsbyobject";
-export * from "./getfile";
-export * from "./getfileassociations";
-export * from "./getfilecontent";
-export * from "./getfiles";
-export * from "./getfolder";
-export * from "./getfolders";
-export * from "./getinbox";
-export * from "./updatefile";
-export * from "./updatefolder";
-export * from "./uploadfile";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./createfileassociation"), exports);
+__exportStar(require("./createfolder"), exports);
+__exportStar(require("./deletefile"), exports);
+__exportStar(require("./deletefileassociation"), exports);
+__exportStar(require("./deletefolder"), exports);
+__exportStar(require("./getassociationsbyobject"), exports);
+__exportStar(require("./getfile"), exports);
+__exportStar(require("./getfileassociations"), exports);
+__exportStar(require("./getfilecontent"), exports);
+__exportStar(require("./getfiles"), exports);
+__exportStar(require("./getfolder"), exports);
+__exportStar(require("./getfolders"), exports);
+__exportStar(require("./getinbox"), exports);
+__exportStar(require("./updatefile"), exports);
+__exportStar(require("./updatefolder"), exports);
+__exportStar(require("./uploadfile"), exports);

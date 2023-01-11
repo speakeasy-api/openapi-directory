@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtrasGraphsDeleteResponse = exports.ExtrasGraphsDeleteRequest = exports.ExtrasGraphsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ExtrasGraphsDeletePathParams = /** @class */ (function (_super) {
     __extends(ExtrasGraphsDeletePathParams, _super);
     function ExtrasGraphsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], ExtrasGraphsDeletePathParams.prototype, "id", void 0);
     return ExtrasGraphsDeletePathParams;
-}(SpeakeasyBase));
-export { ExtrasGraphsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasGraphsDeletePathParams = ExtrasGraphsDeletePathParams;
 var ExtrasGraphsDeleteRequest = /** @class */ (function (_super) {
     __extends(ExtrasGraphsDeleteRequest, _super);
     function ExtrasGraphsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtrasGraphsDeletePathParams)
     ], ExtrasGraphsDeleteRequest.prototype, "pathParams", void 0);
     return ExtrasGraphsDeleteRequest;
-}(SpeakeasyBase));
-export { ExtrasGraphsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasGraphsDeleteRequest = ExtrasGraphsDeleteRequest;
 var ExtrasGraphsDeleteResponse = /** @class */ (function (_super) {
     __extends(ExtrasGraphsDeleteResponse, _super);
     function ExtrasGraphsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtrasGraphsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtrasGraphsDeleteResponse.prototype, "statusCode", void 0);
     return ExtrasGraphsDeleteResponse;
-}(SpeakeasyBase));
-export { ExtrasGraphsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasGraphsDeleteResponse = ExtrasGraphsDeleteResponse;

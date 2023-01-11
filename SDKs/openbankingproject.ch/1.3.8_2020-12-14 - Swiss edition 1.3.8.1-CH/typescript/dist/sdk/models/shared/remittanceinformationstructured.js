@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RemittanceInformationStructuredScoRorQrRorIpiEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemittanceInformationStructured = exports.RemittanceInformationStructuredScoRorQrRorIpiEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RemittanceInformationStructuredScoRorQrRorIpiEnum;
 (function (RemittanceInformationStructuredScoRorQrRorIpiEnum) {
     RemittanceInformationStructuredScoRorQrRorIpiEnum["Scor"] = "SCOR";
     RemittanceInformationStructuredScoRorQrRorIpiEnum["Qrr"] = "QRR";
     RemittanceInformationStructuredScoRorQrRorIpiEnum["Ipi"] = "IPI";
-})(RemittanceInformationStructuredScoRorQrRorIpiEnum || (RemittanceInformationStructuredScoRorQrRorIpiEnum = {}));
+})(RemittanceInformationStructuredScoRorQrRorIpiEnum = exports.RemittanceInformationStructuredScoRorQrRorIpiEnum || (exports.RemittanceInformationStructuredScoRorQrRorIpiEnum = {}));
 // RemittanceInformationStructured
 /**
  * Structured remittance information.
@@ -40,25 +43,25 @@ var RemittanceInformationStructured = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SCORorQRRorIPI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SCORorQRRorIPI" }),
         __metadata("design:type", String)
-    ], RemittanceInformationStructured.prototype, "scoRorQrRorIpi", void 0);
+    ], RemittanceInformationStructured.prototype, "scoRorQRRorIPI", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRemittanceInformation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRemittanceInformation" }),
         __metadata("design:type", String)
     ], RemittanceInformationStructured.prototype, "additionalRemittanceInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reference" }),
         __metadata("design:type", String)
     ], RemittanceInformationStructured.prototype, "reference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceIssuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceIssuer" }),
         __metadata("design:type", String)
     ], RemittanceInformationStructured.prototype, "referenceIssuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceType" }),
         __metadata("design:type", String)
     ], RemittanceInformationStructured.prototype, "referenceType", void 0);
     return RemittanceInformationStructured;
-}(SpeakeasyBase));
-export { RemittanceInformationStructured };
+}(utils_1.SpeakeasyBase));
+exports.RemittanceInformationStructured = RemittanceInformationStructured;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBundlesIdShareResponse = exports.PostBundlesIdShareRequest = exports.PostBundlesIdShareRequestBody = exports.PostBundlesIdSharePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostBundlesIdSharePathParams = /** @class */ (function (_super) {
     __extends(PostBundlesIdSharePathParams, _super);
     function PostBundlesIdSharePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostBundlesIdSharePathParams.prototype, "id", void 0);
     return PostBundlesIdSharePathParams;
-}(SpeakeasyBase));
-export { PostBundlesIdSharePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBundlesIdSharePathParams = PostBundlesIdSharePathParams;
 var PostBundlesIdShareRequestBody = /** @class */ (function (_super) {
     __extends(PostBundlesIdShareRequestBody, _super);
     function PostBundlesIdShareRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=note" }),
         __metadata("design:type", String)
     ], PostBundlesIdShareRequestBody.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=recipients;json=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=recipients;json=true" }),
         __metadata("design:type", Array)
     ], PostBundlesIdShareRequestBody.prototype, "recipients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=to;json=true" }),
         __metadata("design:type", Array)
     ], PostBundlesIdShareRequestBody.prototype, "to", void 0);
     return PostBundlesIdShareRequestBody;
-}(SpeakeasyBase));
-export { PostBundlesIdShareRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostBundlesIdShareRequestBody = PostBundlesIdShareRequestBody;
 var PostBundlesIdShareRequest = /** @class */ (function (_super) {
     __extends(PostBundlesIdShareRequest, _super);
     function PostBundlesIdShareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBundlesIdSharePathParams)
     ], PostBundlesIdShareRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostBundlesIdShareRequestBody)
     ], PostBundlesIdShareRequest.prototype, "request", void 0);
     return PostBundlesIdShareRequest;
-}(SpeakeasyBase));
-export { PostBundlesIdShareRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBundlesIdShareRequest = PostBundlesIdShareRequest;
 var PostBundlesIdShareResponse = /** @class */ (function (_super) {
     __extends(PostBundlesIdShareResponse, _super);
     function PostBundlesIdShareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBundlesIdShareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBundlesIdShareResponse.prototype, "statusCode", void 0);
     return PostBundlesIdShareResponse;
-}(SpeakeasyBase));
-export { PostBundlesIdShareResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBundlesIdShareResponse = PostBundlesIdShareResponse;

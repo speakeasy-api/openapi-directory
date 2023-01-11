@@ -8,5 +8,5 @@ export declare class ProtocolSnmptcpGetArgsRequest extends SpeakeasyBase {
 export declare class ProtocolSnmptcpGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmptcpGetArgs200ApplicationJsonObject?: Map<string, any>;
+    protocolSnmptcpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

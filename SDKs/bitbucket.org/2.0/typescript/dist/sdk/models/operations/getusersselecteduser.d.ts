@@ -15,6 +15,6 @@ export declare class GetUsersSelectedUserRequest extends SpeakeasyBase {
 export declare class GetUsersSelectedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    user?: Map<string, any>;
+    error?: Record<string, any>;
+    user?: Record<string, any>;
 }

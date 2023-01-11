@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig
 /**
  * Config for SHOT_CHANGE_DETECTION.
@@ -33,9 +36,9 @@ var GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig.prototype, "model", void 0);
     return GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig = GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig;

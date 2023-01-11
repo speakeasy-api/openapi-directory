@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateLicenseRequest, CreateLicenseResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -36,19 +35,19 @@ const req: CreateLicenseRequest = {
   },
   request: {
     active: false,
-    currency: "quos",
-    hidden: false,
-    licenseTemplateNumber: "nemo",
-    licenseeNumber: "quod",
-    name: "nulla",
-    number: "enim",
-    parentfeature: "iure",
-    price: 39.099998,
-    quantity: "sed",
-    startDate: "1975-05-08T14:44:10Z",
-    timeVolume: "molestias",
-    timeVolumePeriod: "est",
-    usedQuantity: "velit",
+    currency: "voluptas",
+    hidden: true,
+    licenseTemplateNumber: "expedita",
+    licenseeNumber: "consequuntur",
+    name: "dolor",
+    number: "expedita",
+    parentfeature: "voluptas",
+    price: 88.099998,
+    quantity: "nihil",
+    startDate: "2004-06-02T10:14:12Z",
+    timeVolume: "voluptatum",
+    timeVolumePeriod: "et",
+    usedQuantity: "ut",
   },
 };
 

@@ -13,6 +13,6 @@ export declare class GetConsumerV1CustomersRequest extends SpeakeasyBase {
 }
 export declare class GetConsumerV1CustomersResponse extends SpeakeasyBase {
     contentType: string;
-    customerListViewModel?: Map<string, any>;
+    customerListViewModel?: Record<string, any>;
     statusCode: number;
 }

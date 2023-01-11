@@ -21,7 +21,7 @@ export declare class GetTruckOptimalRouteOutputFormatQueryParams extends Speakea
     departure?: Date;
     disable?: string;
     distanceUnit?: GetTruckOptimalRouteOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

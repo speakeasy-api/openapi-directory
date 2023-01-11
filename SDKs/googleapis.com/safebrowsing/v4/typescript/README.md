@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SafebrowsingEncodedFullHashesGetRequest, SafebrowsingEncodedFullHashesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,22 @@ const sdk = new SDK();
     
 const req: SafebrowsingEncodedFullHashesGetRequest = {
   pathParams: {
-    encodedRequest: "ut",
+    encodedRequest: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "id",
-    alt: "proto",
-    callback: "ipsum",
-    clientId: "est",
-    clientVersion: "molestiae",
-    fields: "ad",
-    key: "quis",
-    oauthToken: "voluptates",
-    prettyPrint: false,
-    quotaUser: "expedita",
-    uploadType: "ut",
-    uploadProtocol: "beatae",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    clientId: "dolor",
+    clientVersion: "expedita",
+    fields: "voluptas",
+    key: "fugit",
+    oauthToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

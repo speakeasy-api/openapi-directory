@@ -18,7 +18,7 @@ export declare class GetNetworkClientsApplicationUsageRequest extends SpeakeasyB
 }
 export declare class GetNetworkClientsApplicationUsageResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkClientsApplicationUsage200ApplicationJsonObject?: Map<string, any>;
+    getNetworkClientsApplicationUsage200ApplicationJSONObject?: Record<string, any>;
 }

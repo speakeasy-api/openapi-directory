@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PosInventory } from "./posinventory";
-import { PosSale } from "./possale";
-import { PosStore } from "./posstore";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PosCustomBatchRequestEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var posinventory_1 = require("./posinventory");
+var possale_1 = require("./possale");
+var posstore_1 = require("./posstore");
 var PosCustomBatchRequestEntry = /** @class */ (function (_super) {
     __extends(PosCustomBatchRequestEntry, _super);
     function PosCustomBatchRequestEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], PosCustomBatchRequestEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventory" }),
-        __metadata("design:type", PosInventory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventory" }),
+        __metadata("design:type", posinventory_1.PosInventory)
     ], PosCustomBatchRequestEntry.prototype, "inventory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], PosCustomBatchRequestEntry.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PosCustomBatchRequestEntry.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sale" }),
-        __metadata("design:type", PosSale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sale" }),
+        __metadata("design:type", possale_1.PosSale)
     ], PosCustomBatchRequestEntry.prototype, "sale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=store" }),
-        __metadata("design:type", PosStore)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=store" }),
+        __metadata("design:type", posstore_1.PosStore)
     ], PosCustomBatchRequestEntry.prototype, "store", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCode" }),
         __metadata("design:type", String)
     ], PosCustomBatchRequestEntry.prototype, "storeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetMerchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetMerchantId" }),
         __metadata("design:type", String)
     ], PosCustomBatchRequestEntry.prototype, "targetMerchantId", void 0);
     return PosCustomBatchRequestEntry;
-}(SpeakeasyBase));
-export { PosCustomBatchRequestEntry };
+}(utils_1.SpeakeasyBase));
+exports.PosCustomBatchRequestEntry = PosCustomBatchRequestEntry;

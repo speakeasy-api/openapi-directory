@@ -18,7 +18,7 @@ export declare class AwsLambdaRuleResponseTarget extends SpeakeasyBase {
     region: string;
 }
 export declare class AwsLambdaRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

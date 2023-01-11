@@ -8,14 +8,14 @@ export declare class ProjectsGetV2ProjectsGetQueryParams extends SpeakeasyBase {
     isMobile?: boolean;
     limit?: number;
     offset?: number;
-    orderBy?: shared.ProjectsOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
     parameter?: any[];
     parameterId?: number;
     project?: any[];
     projectId?: number;
     sensorType?: string;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceName?: string[];
     unit?: string[];
 }
@@ -25,6 +25,6 @@ export declare class ProjectsGetV2ProjectsGetRequest extends SpeakeasyBase {
 export declare class ProjectsGetV2ProjectsGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqProjectsResult?: shared.OpenAqProjectsResult;
+    openAQProjectsResult?: shared.OpenAqProjectsResult;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CodeScanningAlertRuleSummarySeverityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeScanningAlertRuleSummary = exports.CodeScanningAlertRuleSummarySeverityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CodeScanningAlertRuleSummarySeverityEnum;
 (function (CodeScanningAlertRuleSummarySeverityEnum) {
     CodeScanningAlertRuleSummarySeverityEnum["None"] = "none";
     CodeScanningAlertRuleSummarySeverityEnum["Note"] = "note";
     CodeScanningAlertRuleSummarySeverityEnum["Warning"] = "warning";
     CodeScanningAlertRuleSummarySeverityEnum["Error"] = "error";
-})(CodeScanningAlertRuleSummarySeverityEnum || (CodeScanningAlertRuleSummarySeverityEnum = {}));
+})(CodeScanningAlertRuleSummarySeverityEnum = exports.CodeScanningAlertRuleSummarySeverityEnum || (exports.CodeScanningAlertRuleSummarySeverityEnum = {}));
 var CodeScanningAlertRuleSummary = /** @class */ (function (_super) {
     __extends(CodeScanningAlertRuleSummary, _super);
     function CodeScanningAlertRuleSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CodeScanningAlertRuleSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CodeScanningAlertRuleSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CodeScanningAlertRuleSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], CodeScanningAlertRuleSummary.prototype, "severity", void 0);
     return CodeScanningAlertRuleSummary;
-}(SpeakeasyBase));
-export { CodeScanningAlertRuleSummary };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningAlertRuleSummary = CodeScanningAlertRuleSummary;

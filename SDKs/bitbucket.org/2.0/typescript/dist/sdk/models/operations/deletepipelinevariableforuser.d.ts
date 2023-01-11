@@ -9,5 +9,5 @@ export declare class DeletePipelineVariableForUserRequest extends SpeakeasyBase 
 export declare class DeletePipelineVariableForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

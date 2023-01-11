@@ -45,7 +45,7 @@ export class CreateMemberRequestBody extends SpeakeasyBase {
   account: CreateMemberRequestBodyAccount;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

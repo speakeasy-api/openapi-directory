@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLogEventsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLogEventsRequest = /** @class */ (function (_super) {
     __extends(GetLogEventsRequest, _super);
     function GetLogEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], GetLogEventsRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], GetLogEventsRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logGroupName" }),
         __metadata("design:type", String)
     ], GetLogEventsRequest.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamName" }),
         __metadata("design:type", String)
     ], GetLogEventsRequest.prototype, "logStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetLogEventsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startFromHead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startFromHead" }),
         __metadata("design:type", Boolean)
     ], GetLogEventsRequest.prototype, "startFromHead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], GetLogEventsRequest.prototype, "startTime", void 0);
     return GetLogEventsRequest;
-}(SpeakeasyBase));
-export { GetLogEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLogEventsRequest = GetLogEventsRequest;

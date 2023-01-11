@@ -11,7 +11,7 @@ export class KeyGroupConfig extends SpeakeasyBase {
   comment?: string;
 
   @SpeakeasyMetadata()
-  items: string[];
+  items: Record<string, any>[];
 
   @SpeakeasyMetadata()
   name: string;

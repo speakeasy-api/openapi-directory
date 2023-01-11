@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StandingOrderDetails } from "./standingorderdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdditionalInformationStructured = void 0;
+var utils_1 = require("../../../internal/utils");
+var standingorderdetails_1 = require("./standingorderdetails");
 // AdditionalInformationStructured
 /**
  * Is used if and only if the bookingStatus entry equals "information".
@@ -36,9 +39,9 @@ var AdditionalInformationStructured = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standingOrderDetails" }),
-        __metadata("design:type", StandingOrderDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standingOrderDetails" }),
+        __metadata("design:type", standingorderdetails_1.StandingOrderDetails)
     ], AdditionalInformationStructured.prototype, "standingOrderDetails", void 0);
     return AdditionalInformationStructured;
-}(SpeakeasyBase));
-export { AdditionalInformationStructured };
+}(utils_1.SpeakeasyBase));
+exports.AdditionalInformationStructured = AdditionalInformationStructured;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArrayPropertiesDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 // ArrayPropertiesDetail
 /**
  * An object representing the array properties of a job.
@@ -33,17 +36,17 @@ var ArrayPropertiesDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], ArrayPropertiesDetail.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], ArrayPropertiesDetail.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusSummary" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusSummary" }),
+        __metadata("design:type", Object)
     ], ArrayPropertiesDetail.prototype, "statusSummary", void 0);
     return ArrayPropertiesDetail;
-}(SpeakeasyBase));
-export { ArrayPropertiesDetail };
+}(utils_1.SpeakeasyBase));
+exports.ArrayPropertiesDetail = ArrayPropertiesDetail;

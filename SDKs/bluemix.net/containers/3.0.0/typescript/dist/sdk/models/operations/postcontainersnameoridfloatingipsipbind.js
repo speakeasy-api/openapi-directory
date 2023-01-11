@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostContainersNameOrIdFloatingIpsIpBindResponse = exports.PostContainersNameOrIdFloatingIpsIpBindRequest = exports.PostContainersNameOrIdFloatingIpsIpBindHeaders = exports.PostContainersNameOrIdFloatingIpsIpBindPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostContainersNameOrIdFloatingIpsIpBindPathParams = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdFloatingIpsIpBindPathParams, _super);
     function PostContainersNameOrIdFloatingIpsIpBindPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ip" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdFloatingIpsIpBindPathParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdFloatingIpsIpBindPathParams.prototype, "nameOrId", void 0);
     return PostContainersNameOrIdFloatingIpsIpBindPathParams;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdFloatingIpsIpBindPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdFloatingIpsIpBindPathParams = PostContainersNameOrIdFloatingIpsIpBindPathParams;
 var PostContainersNameOrIdFloatingIpsIpBindHeaders = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdFloatingIpsIpBindHeaders, _super);
     function PostContainersNameOrIdFloatingIpsIpBindHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdFloatingIpsIpBindHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdFloatingIpsIpBindHeaders.prototype, "xAuthToken", void 0);
     return PostContainersNameOrIdFloatingIpsIpBindHeaders;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdFloatingIpsIpBindHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdFloatingIpsIpBindHeaders = PostContainersNameOrIdFloatingIpsIpBindHeaders;
 var PostContainersNameOrIdFloatingIpsIpBindRequest = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdFloatingIpsIpBindRequest, _super);
     function PostContainersNameOrIdFloatingIpsIpBindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdFloatingIpsIpBindPathParams)
     ], PostContainersNameOrIdFloatingIpsIpBindRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdFloatingIpsIpBindHeaders)
     ], PostContainersNameOrIdFloatingIpsIpBindRequest.prototype, "headers", void 0);
     return PostContainersNameOrIdFloatingIpsIpBindRequest;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdFloatingIpsIpBindRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdFloatingIpsIpBindRequest = PostContainersNameOrIdFloatingIpsIpBindRequest;
 var PostContainersNameOrIdFloatingIpsIpBindResponse = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdFloatingIpsIpBindResponse, _super);
     function PostContainersNameOrIdFloatingIpsIpBindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostContainersNameOrIdFloatingIpsIpBindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostContainersNameOrIdFloatingIpsIpBindResponse.prototype, "statusCode", void 0);
     return PostContainersNameOrIdFloatingIpsIpBindResponse;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdFloatingIpsIpBindResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdFloatingIpsIpBindResponse = PostContainersNameOrIdFloatingIpsIpBindResponse;

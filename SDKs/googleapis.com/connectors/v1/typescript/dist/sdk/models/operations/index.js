@@ -1,16 +1,32 @@
-export * from "./connectorsprojectslocationsconnectionscreate";
-export * from "./connectorsprojectslocationsconnectionslist";
-export * from "./connectorsprojectslocationsconnectionspatch";
-export * from "./connectorsprojectslocationsconnectionsruntimeactionschemaslist";
-export * from "./connectorsprojectslocationsconnectionsruntimeentityschemaslist";
-export * from "./connectorsprojectslocationslist";
-export * from "./connectorsprojectslocationsoperationscancel";
-export * from "./connectorsprojectslocationsoperationsdelete";
-export * from "./connectorsprojectslocationsoperationslist";
-export * from "./connectorsprojectslocationsprovidersconnectorslist";
-export * from "./connectorsprojectslocationsprovidersconnectorsversionsget";
-export * from "./connectorsprojectslocationsprovidersconnectorsversionslist";
-export * from "./connectorsprojectslocationsprovidersgetiampolicy";
-export * from "./connectorsprojectslocationsproviderslist";
-export * from "./connectorsprojectslocationsproviderssetiampolicy";
-export * from "./connectorsprojectslocationsproviderstestiampermissions";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./connectorsprojectslocationsconnectionscreate"), exports);
+__exportStar(require("./connectorsprojectslocationsconnectionslist"), exports);
+__exportStar(require("./connectorsprojectslocationsconnectionspatch"), exports);
+__exportStar(require("./connectorsprojectslocationsconnectionsruntimeactionschemaslist"), exports);
+__exportStar(require("./connectorsprojectslocationsconnectionsruntimeentityschemaslist"), exports);
+__exportStar(require("./connectorsprojectslocationslist"), exports);
+__exportStar(require("./connectorsprojectslocationsoperationscancel"), exports);
+__exportStar(require("./connectorsprojectslocationsoperationsdelete"), exports);
+__exportStar(require("./connectorsprojectslocationsoperationslist"), exports);
+__exportStar(require("./connectorsprojectslocationsprovidersconnectorslist"), exports);
+__exportStar(require("./connectorsprojectslocationsprovidersconnectorsversionsget"), exports);
+__exportStar(require("./connectorsprojectslocationsprovidersconnectorsversionslist"), exports);
+__exportStar(require("./connectorsprojectslocationsprovidersgetiampolicy"), exports);
+__exportStar(require("./connectorsprojectslocationsproviderslist"), exports);
+__exportStar(require("./connectorsprojectslocationsproviderssetiampolicy"), exports);
+__exportStar(require("./connectorsprojectslocationsproviderstestiampermissions"), exports);

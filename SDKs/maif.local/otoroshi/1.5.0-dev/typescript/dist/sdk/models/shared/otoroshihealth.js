@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OtoroshiHealthDatastoreEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OtoroshiHealth = exports.OtoroshiHealthOtoroshiEnum = exports.OtoroshiHealthDatastoreEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OtoroshiHealthDatastoreEnum;
 (function (OtoroshiHealthDatastoreEnum) {
     OtoroshiHealthDatastoreEnum["Healthy"] = "healthy";
     OtoroshiHealthDatastoreEnum["Unhealthy"] = "unhealthy";
     OtoroshiHealthDatastoreEnum["Unreachable"] = "unreachable";
-})(OtoroshiHealthDatastoreEnum || (OtoroshiHealthDatastoreEnum = {}));
-export var OtoroshiHealthOtoroshiEnum;
+})(OtoroshiHealthDatastoreEnum = exports.OtoroshiHealthDatastoreEnum || (exports.OtoroshiHealthDatastoreEnum = {}));
+var OtoroshiHealthOtoroshiEnum;
 (function (OtoroshiHealthOtoroshiEnum) {
     OtoroshiHealthOtoroshiEnum["Healthy"] = "healthy";
     OtoroshiHealthOtoroshiEnum["Unhealthy"] = "unhealthy";
     OtoroshiHealthOtoroshiEnum["Down"] = "down";
-})(OtoroshiHealthOtoroshiEnum || (OtoroshiHealthOtoroshiEnum = {}));
+})(OtoroshiHealthOtoroshiEnum = exports.OtoroshiHealthOtoroshiEnum || (exports.OtoroshiHealthOtoroshiEnum = {}));
 // OtoroshiHealth
 /**
  * The structure that represent current Otoroshi health
@@ -45,13 +48,13 @@ var OtoroshiHealth = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datastore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datastore" }),
         __metadata("design:type", String)
     ], OtoroshiHealth.prototype, "datastore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=otoroshi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otoroshi" }),
         __metadata("design:type", String)
     ], OtoroshiHealth.prototype, "otoroshi", void 0);
     return OtoroshiHealth;
-}(SpeakeasyBase));
-export { OtoroshiHealth };
+}(utils_1.SpeakeasyBase));
+exports.OtoroshiHealth = OtoroshiHealth;

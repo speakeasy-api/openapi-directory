@@ -110,5 +110,5 @@ export class GetPresencesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPresences200ApplicationJsonObject?: GetPresences200ApplicationJson;
+  getPresences200ApplicationJSONObject?: GetPresences200ApplicationJson;
 }

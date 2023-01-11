@@ -19,7 +19,7 @@ export declare class DeleteNamedQueryRequest extends SpeakeasyBase {
 }
 export declare class DeleteNamedQueryResponse extends SpeakeasyBase {
     contentType: string;
-    deleteNamedQueryOutput?: Map<string, any>;
+    deleteNamedQueryOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

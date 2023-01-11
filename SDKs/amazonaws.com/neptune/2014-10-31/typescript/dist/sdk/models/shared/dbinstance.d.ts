@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { DbSubnetGroup } from "./dbsubnetgroup";
-import { DomainMembership } from "./domainmembership";
+import { DomainMembershipList } from "./domainmembershiplist";
 import { Endpoint } from "./endpoint";
-import { OptionGroupMembership } from "./optiongroupmembership";
+import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * <p>Contains the details of an Amazon Neptune DB instance.</p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action.</p>
 **/
@@ -25,13 +25,13 @@ export declare class DbInstance extends SpeakeasyBase {
     dbInstanceIdentifier?: string;
     dbInstanceStatus?: string;
     dbName?: string;
-    dbParameterGroups?: DbParameterGroupStatus[];
-    dbSecurityGroups?: DbSecurityGroupMembership[];
+    dbParameterGroups?: DbParameterGroupStatusList[];
+    dbSecurityGroups?: DbSecurityGroupMembershipList[];
     dbSubnetGroup?: DbSubnetGroup;
     dbInstancePort?: number;
     dbiResourceId?: string;
     deletionProtection?: boolean;
-    domainMemberships?: DomainMembership[];
+    domainMemberships?: DomainMembershipList[];
     enabledCloudwatchLogsExports?: string[];
     endpoint?: Endpoint;
     engine?: string;
@@ -46,23 +46,23 @@ export declare class DbInstance extends SpeakeasyBase {
     masterUsername?: string;
     monitoringInterval?: number;
     monitoringRoleArn?: string;
-    multiAz?: boolean;
-    optionGroupMemberships?: OptionGroupMembership[];
+    multiAZ?: boolean;
+    optionGroupMemberships?: OptionGroupMembershipList[];
     pendingModifiedValues?: PendingModifiedValues;
     performanceInsightsEnabled?: boolean;
-    performanceInsightsKmsKeyId?: string;
+    performanceInsightsKMSKeyId?: string;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
     promotionTier?: number;
-    publiclyAccessible?: boolean;
-    readReplicaDbClusterIdentifiers?: string[];
-    readReplicaDbInstanceIdentifiers?: string[];
-    readReplicaSourceDbInstanceIdentifier?: string;
+    publiclyAccessible?: Record<string, any>;
+    readReplicaDBClusterIdentifiers?: Record<string, any>[];
+    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    readReplicaSourceDBInstanceIdentifier?: string;
     secondaryAvailabilityZone?: string;
-    statusInfos?: DbInstanceStatusInfo[];
+    statusInfos?: DbInstanceStatusInfoList[];
     storageEncrypted?: boolean;
     storageType?: string;
     tdeCredentialArn?: string;
     timezone?: string;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayRoute } from "./transitgatewayroute";
 
 
 
 export class SearchTransitGatewayRoutesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  additionalRoutesAvailable?: boolean;
+  additionalRoutesAvailable?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TransitGatewayRoute })
-  routes?: TransitGatewayRoute[];
+  @SpeakeasyMetadata()
+  routes?: Record<string, any>;
 }

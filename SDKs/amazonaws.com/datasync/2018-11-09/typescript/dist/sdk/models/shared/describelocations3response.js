@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3Config } from "./s3config";
-import { S3StorageClassEnum } from "./s3storageclassenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLocationS3Response = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3config_1 = require("./s3config");
+var s3storageclassenum_1 = require("./s3storageclassenum");
 // DescribeLocationS3Response
 /**
  * DescribeLocationS3Response
@@ -35,29 +38,29 @@ var DescribeLocationS3Response = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentArns" }),
         __metadata("design:type", Array)
     ], DescribeLocationS3Response.prototype, "agentArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeLocationS3Response.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationArn" }),
         __metadata("design:type", String)
     ], DescribeLocationS3Response.prototype, "locationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationUri" }),
         __metadata("design:type", String)
     ], DescribeLocationS3Response.prototype, "locationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Config" }),
-        __metadata("design:type", S3Config)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Config" }),
+        __metadata("design:type", s3config_1.S3Config)
     ], DescribeLocationS3Response.prototype, "s3Config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3StorageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3StorageClass" }),
         __metadata("design:type", String)
     ], DescribeLocationS3Response.prototype, "s3StorageClass", void 0);
     return DescribeLocationS3Response;
-}(SpeakeasyBase));
-export { DescribeLocationS3Response };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLocationS3Response = DescribeLocationS3Response;

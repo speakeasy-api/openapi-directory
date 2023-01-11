@@ -3,7 +3,7 @@ import * as shared from "../shared";
 
 
 
-export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams extends SpeakeasyBase {
+export class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=x" })
   x: number;
 
@@ -15,7 +15,7 @@ export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParam
 }
 
 
-export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams extends SpeakeasyBase {
+export class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=isAnalysis" })
   isAnalysis?: boolean;
 
@@ -39,16 +39,16 @@ export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryPara
 }
 
 
-export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest extends SpeakeasyBase {
+export class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams;
+  pathParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams;
+  queryParams: GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetQueryParams;
 }
 
 
-export class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse extends SpeakeasyBase {
+export class GetMobilegentileV2LocationsTilesMobileGeneralizedZxyPbfGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

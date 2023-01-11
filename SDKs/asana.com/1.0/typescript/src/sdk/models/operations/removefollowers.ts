@@ -53,5 +53,5 @@ export class RemoveFollowersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeFollowers201ApplicationJsonObject?: RemoveFollowers201ApplicationJson;
+  removeFollowers201ApplicationJSONObject?: RemoveFollowers201ApplicationJson;
 }

@@ -1,0 +1,321 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Season = exports.SeasonRelationships = exports.SeasonRelationshipsAListOfTagsAssociatedWithTheSeason = exports.SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason = exports.SeasonRelationshipsTheSeriesTheSeasonBelongsTo = exports.SeasonRelationshipsLastReleasedEpisode = exports.SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason = exports.SeasonRelationshipsFirstReleasedEpisode = exports.SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason = exports.SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason = exports.SeasonRelationshipsCoverImage = exports.SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason = exports.SeasonRelationshipsCascadedCoverImage = exports.SeasonAttributes = exports.SeasonAttributesStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceidentifier_1 = require("./resourceidentifier");
+var SeasonAttributesStatusEnum;
+(function (SeasonAttributesStatusEnum) {
+    SeasonAttributesStatusEnum["Active"] = "active";
+    SeasonAttributesStatusEnum["Inactive"] = "inactive";
+})(SeasonAttributesStatusEnum = exports.SeasonAttributesStatusEnum || (exports.SeasonAttributesStatusEnum = {}));
+var SeasonAttributes = /** @class */ (function (_super) {
+    __extends(SeasonAttributes, _super);
+    function SeasonAttributes() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cascaded_cover_image_id" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "cascadedCoverImageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cover_image_id" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "coverImageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", Date)
+    ], SeasonAttributes.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_is_html" }),
+        __metadata("design:type", Boolean)
+    ], SeasonAttributes.prototype, "descriptionIsHtml", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_plain" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "descriptionPlain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_released_episode_id" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "firstReleasedEpisodeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_released_episode_id" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "lastReleasedEpisodeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season_number" }),
+        __metadata("design:type", Number)
+    ], SeasonAttributes.prototype, "seasonNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort_title" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "sortTitle", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], SeasonAttributes.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", Date)
+    ], SeasonAttributes.prototype, "updatedAt", void 0);
+    return SeasonAttributes;
+}(utils_1.SpeakeasyBase));
+exports.SeasonAttributes = SeasonAttributes;
+// SeasonRelationshipsCascadedCoverImage
+/**
+ * The cover art for this season. If there is no specific cover for the season,
+ * the cover image of the series' cover art will be returned.
+ * The `/images` endpoint provideds details to the image.
+ *
+**/
+var SeasonRelationshipsCascadedCoverImage = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsCascadedCoverImage, _super);
+    function SeasonRelationshipsCascadedCoverImage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", resourceidentifier_1.ResourceIdentifier)
+    ], SeasonRelationshipsCascadedCoverImage.prototype, "data", void 0);
+    return SeasonRelationshipsCascadedCoverImage;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsCascadedCoverImage = SeasonRelationshipsCascadedCoverImage;
+var SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason, _super);
+    function SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason = SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason;
+// SeasonRelationshipsCoverImage
+/**
+ * The cover image for the season
+**/
+var SeasonRelationshipsCoverImage = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsCoverImage, _super);
+    function SeasonRelationshipsCoverImage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", resourceidentifier_1.ResourceIdentifier)
+    ], SeasonRelationshipsCoverImage.prototype, "data", void 0);
+    return SeasonRelationshipsCoverImage;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsCoverImage = SeasonRelationshipsCoverImage;
+var SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason, _super);
+    function SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason = SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason;
+var SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason, _super);
+    function SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason = SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason;
+// SeasonRelationshipsFirstReleasedEpisode
+/**
+ * The first released episode within the season
+**/
+var SeasonRelationshipsFirstReleasedEpisode = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsFirstReleasedEpisode, _super);
+    function SeasonRelationshipsFirstReleasedEpisode() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", resourceidentifier_1.ResourceIdentifier)
+    ], SeasonRelationshipsFirstReleasedEpisode.prototype, "data", void 0);
+    return SeasonRelationshipsFirstReleasedEpisode;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsFirstReleasedEpisode = SeasonRelationshipsFirstReleasedEpisode;
+var SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason, _super);
+    function SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason = SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason;
+// SeasonRelationshipsLastReleasedEpisode
+/**
+ * The most recently released episode within the season
+**/
+var SeasonRelationshipsLastReleasedEpisode = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsLastReleasedEpisode, _super);
+    function SeasonRelationshipsLastReleasedEpisode() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", resourceidentifier_1.ResourceIdentifier)
+    ], SeasonRelationshipsLastReleasedEpisode.prototype, "data", void 0);
+    return SeasonRelationshipsLastReleasedEpisode;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsLastReleasedEpisode = SeasonRelationshipsLastReleasedEpisode;
+var SeasonRelationshipsTheSeriesTheSeasonBelongsTo = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsTheSeriesTheSeasonBelongsTo, _super);
+    function SeasonRelationshipsTheSeriesTheSeasonBelongsTo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", resourceidentifier_1.ResourceIdentifier)
+    ], SeasonRelationshipsTheSeriesTheSeasonBelongsTo.prototype, "data", void 0);
+    return SeasonRelationshipsTheSeriesTheSeasonBelongsTo;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsTheSeriesTheSeasonBelongsTo = SeasonRelationshipsTheSeriesTheSeasonBelongsTo;
+var SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason, _super);
+    function SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason = SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason;
+var SeasonRelationshipsAListOfTagsAssociatedWithTheSeason = /** @class */ (function (_super) {
+    __extends(SeasonRelationshipsAListOfTagsAssociatedWithTheSeason, _super);
+    function SeasonRelationshipsAListOfTagsAssociatedWithTheSeason() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: resourceidentifier_1.ResourceIdentifier }),
+        __metadata("design:type", Array)
+    ], SeasonRelationshipsAListOfTagsAssociatedWithTheSeason.prototype, "data", void 0);
+    return SeasonRelationshipsAListOfTagsAssociatedWithTheSeason;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationshipsAListOfTagsAssociatedWithTheSeason = SeasonRelationshipsAListOfTagsAssociatedWithTheSeason;
+var SeasonRelationships = /** @class */ (function (_super) {
+    __extends(SeasonRelationships, _super);
+    function SeasonRelationships() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cascaded_cover_image" }),
+        __metadata("design:type", SeasonRelationshipsCascadedCoverImage)
+    ], SeasonRelationships.prototype, "cascadedCoverImage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification_inclusions" }),
+        __metadata("design:type", SeasonRelationshipsAListOfClassificationsAssociatedWithTheSeason)
+    ], SeasonRelationships.prototype, "classificationInclusions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cover_image" }),
+        __metadata("design:type", SeasonRelationshipsCoverImage)
+    ], SeasonRelationships.prototype, "coverImage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credits" }),
+        __metadata("design:type", SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason)
+    ], SeasonRelationships.prototype, "credits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episodes" }),
+        __metadata("design:type", SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason)
+    ], SeasonRelationships.prototype, "episodes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_released_episode" }),
+        __metadata("design:type", SeasonRelationshipsFirstReleasedEpisode)
+    ], SeasonRelationships.prototype, "firstReleasedEpisode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images" }),
+        __metadata("design:type", SeasonRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason)
+    ], SeasonRelationships.prototype, "images", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_released_episode" }),
+        __metadata("design:type", SeasonRelationshipsLastReleasedEpisode)
+    ], SeasonRelationships.prototype, "lastReleasedEpisode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series" }),
+        __metadata("design:type", SeasonRelationshipsTheSeriesTheSeasonBelongsTo)
+    ], SeasonRelationships.prototype, "series", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taggings" }),
+        __metadata("design:type", SeasonRelationshipsAListOfAssociationsLinkingTagsToTheSeason)
+    ], SeasonRelationships.prototype, "taggings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", SeasonRelationshipsAListOfTagsAssociatedWithTheSeason)
+    ], SeasonRelationships.prototype, "tags", void 0);
+    return SeasonRelationships;
+}(utils_1.SpeakeasyBase));
+exports.SeasonRelationships = SeasonRelationships;
+var Season = /** @class */ (function (_super) {
+    __extends(Season, _super);
+    function Season() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", SeasonAttributes)
+    ], Season.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], Season.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
+        __metadata("design:type", SeasonRelationships)
+    ], Season.prototype, "relationships", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], Season.prototype, "type", void 0);
+    return Season;
+}(utils_1.SpeakeasyBase));
+exports.Season = Season;

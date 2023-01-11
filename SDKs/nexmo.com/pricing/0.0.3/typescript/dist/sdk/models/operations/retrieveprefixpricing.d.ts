@@ -29,6 +29,6 @@ export declare class RetrievePrefixPricingResponse extends SpeakeasyBase {
     contentType: string;
     pricingCountriesResponse?: any;
     statusCode: number;
-    retrievePrefixPricing400ApplicationJsonObject?: RetrievePrefixPricing400ApplicationJson;
-    retrievePrefixPricing401ApplicationJsonObject?: RetrievePrefixPricing401ApplicationJson;
+    retrievePrefixPricing400ApplicationJSONObject?: RetrievePrefixPricing400ApplicationJson;
+    retrievePrefixPricing401ApplicationJSONObject?: RetrievePrefixPricing401ApplicationJson;
 }

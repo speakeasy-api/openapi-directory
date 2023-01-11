@@ -1,0 +1,92 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClinicalNote = exports.ClinicalNoteClinicalNoteSection = exports.ClinicalNoteClinicalNoteSectionValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClinicalNoteClinicalNoteSectionValue = /** @class */ (function (_super) {
+    __extends(ClinicalNoteClinicalNoteSectionValue, _super);
+    function ClinicalNoteClinicalNoteSectionValue() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clinical_note_field" }),
+        __metadata("design:type", Number)
+    ], ClinicalNoteClinicalNoteSectionValue.prototype, "clinicalNoteField", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], ClinicalNoteClinicalNoteSectionValue.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], ClinicalNoteClinicalNoteSectionValue.prototype, "value", void 0);
+    return ClinicalNoteClinicalNoteSectionValue;
+}(utils_1.SpeakeasyBase));
+exports.ClinicalNoteClinicalNoteSectionValue = ClinicalNoteClinicalNoteSectionValue;
+var ClinicalNoteClinicalNoteSection = /** @class */ (function (_super) {
+    __extends(ClinicalNoteClinicalNoteSection, _super);
+    function ClinicalNoteClinicalNoteSection() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clinical_note_template" }),
+        __metadata("design:type", Number)
+    ], ClinicalNoteClinicalNoteSection.prototype, "clinicalNoteTemplate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ClinicalNoteClinicalNoteSection.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: ClinicalNoteClinicalNoteSectionValue }),
+        __metadata("design:type", Array)
+    ], ClinicalNoteClinicalNoteSection.prototype, "values", void 0);
+    return ClinicalNoteClinicalNoteSection;
+}(utils_1.SpeakeasyBase));
+exports.ClinicalNoteClinicalNoteSection = ClinicalNoteClinicalNoteSection;
+var ClinicalNote = /** @class */ (function (_super) {
+    __extends(ClinicalNote, _super);
+    function ClinicalNote() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment" }),
+        __metadata("design:type", String)
+    ], ClinicalNote.prototype, "appointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
+        __metadata("design:type", Boolean)
+    ], ClinicalNote.prototype, "archived", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clinical_note_sections", elemType: ClinicalNoteClinicalNoteSection }),
+        __metadata("design:type", Array)
+    ], ClinicalNote.prototype, "clinicalNoteSections", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", String)
+    ], ClinicalNote.prototype, "patient", void 0);
+    return ClinicalNote;
+}(utils_1.SpeakeasyBase));
+exports.ClinicalNote = ClinicalNote;

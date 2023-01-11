@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedScaling } from "./managedscaling";
-import { ManagedTerminationProtectionEnum } from "./managedterminationprotectionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoScalingGroupProviderUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var managedscaling_1 = require("./managedscaling");
+var managedterminationprotectionenum_1 = require("./managedterminationprotectionenum");
 // AutoScalingGroupProviderUpdate
 /**
  * The details of the Auto Scaling group capacity provider to update.
@@ -35,13 +38,13 @@ var AutoScalingGroupProviderUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedScaling" }),
-        __metadata("design:type", ManagedScaling)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedScaling" }),
+        __metadata("design:type", managedscaling_1.ManagedScaling)
     ], AutoScalingGroupProviderUpdate.prototype, "managedScaling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedTerminationProtection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedTerminationProtection" }),
         __metadata("design:type", String)
     ], AutoScalingGroupProviderUpdate.prototype, "managedTerminationProtection", void 0);
     return AutoScalingGroupProviderUpdate;
-}(SpeakeasyBase));
-export { AutoScalingGroupProviderUpdate };
+}(utils_1.SpeakeasyBase));
+exports.AutoScalingGroupProviderUpdate = AutoScalingGroupProviderUpdate;

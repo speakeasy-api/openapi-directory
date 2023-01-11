@@ -106,11 +106,11 @@ export declare class TpcerRequest extends SpeakeasyBase {
 export declare class TpcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tpcer400ApplicationJsonObject?: Tpcer400ApplicationJson;
-    tpcer401ApplicationJsonObject?: Tpcer401ApplicationJson;
-    tpcer404ApplicationJsonObject?: Tpcer404ApplicationJson;
-    tpcer500ApplicationJsonObject?: Tpcer500ApplicationJson;
-    tpcer502ApplicationJsonObject?: Tpcer502ApplicationJson;
-    tpcer503ApplicationJsonObject?: Tpcer503ApplicationJson;
-    tpcer504ApplicationJsonObject?: Tpcer504ApplicationJson;
+    tpcer400ApplicationJSONObject?: Tpcer400ApplicationJson;
+    tpcer401ApplicationJSONObject?: Tpcer401ApplicationJson;
+    tpcer404ApplicationJSONObject?: Tpcer404ApplicationJson;
+    tpcer500ApplicationJSONObject?: Tpcer500ApplicationJson;
+    tpcer502ApplicationJSONObject?: Tpcer502ApplicationJson;
+    tpcer503ApplicationJSONObject?: Tpcer503ApplicationJson;
+    tpcer504ApplicationJSONObject?: Tpcer504ApplicationJson;
 }

@@ -17,7 +17,7 @@ export declare class ReceiptsPhotoToCsvRequest extends SpeakeasyBase {
 export declare class ReceiptsPhotoToCsvResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    receiptsPhotoToCsv200ApplicationJsonObject?: Map<string, any>;
-    receiptsPhotoToCsv200TextJsonObject?: Map<string, any>;
+    receiptsPhotoToCSV200ApplicationJSONObject?: Record<string, any>;
+    receiptsPhotoToCSV200TextJSONObject?: Record<string, any>;
     statusCode: number;
 }

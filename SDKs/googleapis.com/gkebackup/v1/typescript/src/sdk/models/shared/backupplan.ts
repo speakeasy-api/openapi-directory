@@ -5,34 +5,6 @@ import { RetentionPolicy } from "./retentionpolicy";
 
 
 
-// BackupPlanInput
-/** 
- * Defines the configuration and scheduling for a "line" of Backups.
-**/
-export class BackupPlanInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=backupConfig" })
-  backupConfig?: BackupConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=backupSchedule" })
-  backupSchedule?: Schedule;
-
-  @SpeakeasyMetadata({ data: "json, name=cluster" })
-  cluster?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=deactivated" })
-  deactivated?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=retentionPolicy" })
-  retentionPolicy?: RetentionPolicy;
-}
-
-
 // BackupPlan
 /** 
  * Defines the configuration and scheduling for a "line" of Backups.
@@ -60,7 +32,7 @@ export class BackupPlan extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -76,4 +48,32 @@ export class BackupPlan extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// BackupPlanInput
+/** 
+ * Defines the configuration and scheduling for a "line" of Backups.
+**/
+export class BackupPlanInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=backupConfig" })
+  backupConfig?: BackupConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=backupSchedule" })
+  backupSchedule?: Schedule;
+
+  @SpeakeasyMetadata({ data: "json, name=cluster" })
+  cluster?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=deactivated" })
+  deactivated?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=retentionPolicy" })
+  retentionPolicy?: RetentionPolicy;
 }

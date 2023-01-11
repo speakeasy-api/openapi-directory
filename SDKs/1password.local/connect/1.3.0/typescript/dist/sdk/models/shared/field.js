@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeneratorRecipe } from "./generatorrecipe";
-export var FieldPurposeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Field = exports.FieldInput = exports.FieldTypeEnum = exports.FieldSection = exports.FieldPurposeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var generatorrecipe_1 = require("./generatorrecipe");
+var FieldPurposeEnum;
 (function (FieldPurposeEnum) {
     FieldPurposeEnum["Unknown"] = "";
     FieldPurposeEnum["Username"] = "USERNAME";
     FieldPurposeEnum["Password"] = "PASSWORD";
     FieldPurposeEnum["Notes"] = "NOTES";
-})(FieldPurposeEnum || (FieldPurposeEnum = {}));
+})(FieldPurposeEnum = exports.FieldPurposeEnum || (exports.FieldPurposeEnum = {}));
 var FieldSection = /** @class */ (function (_super) {
     __extends(FieldSection, _super);
     function FieldSection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FieldSection.prototype, "id", void 0);
     return FieldSection;
-}(SpeakeasyBase));
-export { FieldSection };
-export var FieldTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.FieldSection = FieldSection;
+var FieldTypeEnum;
 (function (FieldTypeEnum) {
     FieldTypeEnum["String"] = "STRING";
     FieldTypeEnum["Email"] = "EMAIL";
@@ -53,88 +56,88 @@ export var FieldTypeEnum;
     FieldTypeEnum["Date"] = "DATE";
     FieldTypeEnum["MonthYear"] = "MONTH_YEAR";
     FieldTypeEnum["Menu"] = "MENU";
-})(FieldTypeEnum || (FieldTypeEnum = {}));
-var Field = /** @class */ (function (_super) {
-    __extends(Field, _super);
-    function Field() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=entropy" }),
-        __metadata("design:type", Number)
-    ], Field.prototype, "entropy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=generate" }),
-        __metadata("design:type", Boolean)
-    ], Field.prototype, "generate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", String)
-    ], Field.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", String)
-    ], Field.prototype, "label", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
-        __metadata("design:type", String)
-    ], Field.prototype, "purpose", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipe" }),
-        __metadata("design:type", GeneratorRecipe)
-    ], Field.prototype, "recipe", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=section" }),
-        __metadata("design:type", FieldSection)
-    ], Field.prototype, "section", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], Field.prototype, "type", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", String)
-    ], Field.prototype, "value", void 0);
-    return Field;
-}(SpeakeasyBase));
-export { Field };
+})(FieldTypeEnum = exports.FieldTypeEnum || (exports.FieldTypeEnum = {}));
 var FieldInput = /** @class */ (function (_super) {
     __extends(FieldInput, _super);
     function FieldInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generate" }),
         __metadata("design:type", Boolean)
     ], FieldInput.prototype, "generate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FieldInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], FieldInput.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
         __metadata("design:type", String)
     ], FieldInput.prototype, "purpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipe" }),
-        __metadata("design:type", GeneratorRecipe)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipe" }),
+        __metadata("design:type", generatorrecipe_1.GeneratorRecipe)
     ], FieldInput.prototype, "recipe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=section" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
         __metadata("design:type", FieldSection)
     ], FieldInput.prototype, "section", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FieldInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], FieldInput.prototype, "value", void 0);
     return FieldInput;
-}(SpeakeasyBase));
-export { FieldInput };
+}(utils_1.SpeakeasyBase));
+exports.FieldInput = FieldInput;
+var Field = /** @class */ (function (_super) {
+    __extends(Field, _super);
+    function Field() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entropy" }),
+        __metadata("design:type", Number)
+    ], Field.prototype, "entropy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generate" }),
+        __metadata("design:type", Boolean)
+    ], Field.prototype, "generate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], Field.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], Field.prototype, "label", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
+        __metadata("design:type", String)
+    ], Field.prototype, "purpose", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipe" }),
+        __metadata("design:type", generatorrecipe_1.GeneratorRecipe)
+    ], Field.prototype, "recipe", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
+        __metadata("design:type", FieldSection)
+    ], Field.prototype, "section", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], Field.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], Field.prototype, "value", void 0);
+    return Field;
+}(utils_1.SpeakeasyBase));
+exports.Field = Field;

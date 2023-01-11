@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleGroup } from "./rulegroup";
-import { RuleGroupTypeEnum } from "./rulegrouptypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRuleGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulegroup_1 = require("./rulegroup");
+var rulegrouptypeenum_1 = require("./rulegrouptypeenum");
 var UpdateRuleGroupRequest = /** @class */ (function (_super) {
     __extends(UpdateRuleGroupRequest, _super);
     function UpdateRuleGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DryRun" }),
         __metadata("design:type", Boolean)
     ], UpdateRuleGroupRequest.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroup" }),
-        __metadata("design:type", RuleGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroup" }),
+        __metadata("design:type", rulegroup_1.RuleGroup)
     ], UpdateRuleGroupRequest.prototype, "ruleGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupArn" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "ruleGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupName" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "ruleGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rules" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rules" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateToken" }),
         __metadata("design:type", String)
     ], UpdateRuleGroupRequest.prototype, "updateToken", void 0);
     return UpdateRuleGroupRequest;
-}(SpeakeasyBase));
-export { UpdateRuleGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRuleGroupRequest = UpdateRuleGroupRequest;

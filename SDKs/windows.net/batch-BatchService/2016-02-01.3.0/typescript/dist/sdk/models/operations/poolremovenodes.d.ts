@@ -24,6 +24,6 @@ export declare class PoolRemoveNodesRequest extends SpeakeasyBase {
 export declare class PoolRemoveNodesResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

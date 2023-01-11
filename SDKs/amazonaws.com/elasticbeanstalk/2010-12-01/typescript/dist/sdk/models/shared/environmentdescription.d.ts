@@ -15,7 +15,7 @@ export declare class EnvironmentDescription extends SpeakeasyBase {
     dateCreated?: Date;
     dateUpdated?: Date;
     description?: string;
-    endpointUrl?: string;
+    endpointURL?: string;
     environmentArn?: string;
     environmentId?: string;
     environmentLinks?: EnvironmentLink[];

@@ -1,4 +1,7 @@
-export var DeploymentJobErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentJobErrorCodeEnum = void 0;
+var DeploymentJobErrorCodeEnum;
 (function (DeploymentJobErrorCodeEnum) {
     DeploymentJobErrorCodeEnum["ResourceNotFound"] = "ResourceNotFound";
     DeploymentJobErrorCodeEnum["EnvironmentSetupError"] = "EnvironmentSetupError";
@@ -24,4 +27,4 @@ export var DeploymentJobErrorCodeEnum;
     DeploymentJobErrorCodeEnum["RobotApplicationDoesNotExist"] = "RobotApplicationDoesNotExist";
     DeploymentJobErrorCodeEnum["DeploymentFleetDoesNotExist"] = "DeploymentFleetDoesNotExist";
     DeploymentJobErrorCodeEnum["FleetDeploymentTimeout"] = "FleetDeploymentTimeout";
-})(DeploymentJobErrorCodeEnum || (DeploymentJobErrorCodeEnum = {}));
+})(DeploymentJobErrorCodeEnum = exports.DeploymentJobErrorCodeEnum || (exports.DeploymentJobErrorCodeEnum = {}));

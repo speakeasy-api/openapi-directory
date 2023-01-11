@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContainersJsonResponse = exports.GetContainersJsonRequest = exports.GetContainersJsonHeaders = exports.GetContainersJsonQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetContainersJsonQueryParams = /** @class */ (function (_super) {
     __extends(GetContainersJsonQueryParams, _super);
     function GetContainersJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=all" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=all" }),
         __metadata("design:type", String)
     ], GetContainersJsonQueryParams.prototype, "all", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filters" }),
         __metadata("design:type", String)
     ], GetContainersJsonQueryParams.prototype, "filters", void 0);
     return GetContainersJsonQueryParams;
-}(SpeakeasyBase));
-export { GetContainersJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersJsonQueryParams = GetContainersJsonQueryParams;
 var GetContainersJsonHeaders = /** @class */ (function (_super) {
     __extends(GetContainersJsonHeaders, _super);
     function GetContainersJsonHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], GetContainersJsonHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], GetContainersJsonHeaders.prototype, "xAuthToken", void 0);
     return GetContainersJsonHeaders;
-}(SpeakeasyBase));
-export { GetContainersJsonHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersJsonHeaders = GetContainersJsonHeaders;
 var GetContainersJsonRequest = /** @class */ (function (_super) {
     __extends(GetContainersJsonRequest, _super);
     function GetContainersJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersJsonQueryParams)
     ], GetContainersJsonRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersJsonHeaders)
     ], GetContainersJsonRequest.prototype, "headers", void 0);
     return GetContainersJsonRequest;
-}(SpeakeasyBase));
-export { GetContainersJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersJsonRequest = GetContainersJsonRequest;
 var GetContainersJsonResponse = /** @class */ (function (_super) {
     __extends(GetContainersJsonResponse, _super);
     function GetContainersJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetContainersJsonResponse.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetContainersJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetContainersJsonResponse.prototype, "statusCode", void 0);
     return GetContainersJsonResponse;
-}(SpeakeasyBase));
-export { GetContainersJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersJsonResponse = GetContainersJsonResponse;

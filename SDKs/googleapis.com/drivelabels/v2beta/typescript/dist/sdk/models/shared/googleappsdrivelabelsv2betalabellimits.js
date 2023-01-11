@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldLimits } from "./googleappsdrivelabelsv2betafieldlimits";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaLabelLimits = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafieldlimits_1 = require("./googleappsdrivelabelsv2betafieldlimits");
 // GoogleAppsDriveLabelsV2betaLabelLimits
 /**
  * Label constraints governing the structure of a Label; such as, the maximum number of Fields allowed and maximum length of the label title.
@@ -34,33 +37,33 @@ var GoogleAppsDriveLabelsV2betaLabelLimits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldLimits" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldLimits" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldlimits_1.GoogleAppsDriveLabelsV2betaFieldLimits)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "fieldLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDeletedFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDeletedFields" }),
         __metadata("design:type", Number)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "maxDeletedFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDescriptionLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDescriptionLength" }),
         __metadata("design:type", Number)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "maxDescriptionLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDraftRevisions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDraftRevisions" }),
         __metadata("design:type", Number)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "maxDraftRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFields" }),
         __metadata("design:type", Number)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "maxFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxTitleLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxTitleLength" }),
         __metadata("design:type", Number)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "maxTitleLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabelLimits.prototype, "name", void 0);
     return GoogleAppsDriveLabelsV2betaLabelLimits;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaLabelLimits };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaLabelLimits = GoogleAppsDriveLabelsV2betaLabelLimits;

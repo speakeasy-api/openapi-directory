@@ -8,5 +8,5 @@ export declare class GetOwnerRequest extends SpeakeasyBase {
 export declare class GetOwnerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOwner200ApplicationJsonString?: string;
+    getOwner200ApplicationJSONString?: string;
 }

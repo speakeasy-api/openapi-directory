@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricBenchmark } from "./metricbenchmark";
-import { MetricDistribution } from "./metricdistribution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metric = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricbenchmark_1 = require("./metricbenchmark");
+var metricdistribution_1 = require("./metricdistribution");
 // Metric
 /**
  * This complex data type defines the details of the customer service metric and benchmark data related to the associated dimension.
@@ -35,21 +38,21 @@ var Metric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benchmark" }),
-        __metadata("design:type", MetricBenchmark)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benchmark" }),
+        __metadata("design:type", metricbenchmark_1.MetricBenchmark)
     ], Metric.prototype, "benchmark", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributions", elemType: MetricDistribution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributions", elemType: metricdistribution_1.MetricDistribution }),
         __metadata("design:type", Array)
     ], Metric.prototype, "distributions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricKey" }),
         __metadata("design:type", String)
     ], Metric.prototype, "metricKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Metric.prototype, "value", void 0);
     return Metric;
-}(SpeakeasyBase));
-export { Metric };
+}(utils_1.SpeakeasyBase));
+exports.Metric = Metric;

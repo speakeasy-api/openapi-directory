@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LockEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // LockEntity
 /**
  * List Locks by path
@@ -33,53 +36,53 @@ var LockEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_access_by_any_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_access_by_any_user" }),
         __metadata("design:type", Boolean)
     ], LockEntity.prototype, "allowAccessByAnyUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=depth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=depth" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "depth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusive" }),
         __metadata("design:type", Boolean)
     ], LockEntity.prototype, "exclusive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursive" }),
         __metadata("design:type", Boolean)
     ], LockEntity.prototype, "recursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], LockEntity.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], LockEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], LockEntity.prototype, "username", void 0);
     return LockEntity;
-}(SpeakeasyBase));
-export { LockEntity };
+}(utils_1.SpeakeasyBase));
+exports.LockEntity = LockEntity;

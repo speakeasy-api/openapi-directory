@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BehaviorEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // BehaviorEntity
 /**
  * List Behaviors
@@ -33,25 +36,25 @@ var BehaviorEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachment_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachment_url" }),
         __metadata("design:type", String)
     ], BehaviorEntity.prototype, "attachmentUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=behavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=behavior" }),
         __metadata("design:type", String)
     ], BehaviorEntity.prototype, "behavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], BehaviorEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], BehaviorEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], BehaviorEntity.prototype, "value", void 0);
     return BehaviorEntity;
-}(SpeakeasyBase));
-export { BehaviorEntity };
+}(utils_1.SpeakeasyBase));
+exports.BehaviorEntity = BehaviorEntity;

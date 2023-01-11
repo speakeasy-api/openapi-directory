@@ -22,5 +22,5 @@ export class GetStarttimeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getStarttime200ApplicationJsonString?: string;
+  getStarttime200ApplicationJSONString?: string;
 }

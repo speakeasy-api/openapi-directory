@@ -66,10 +66,10 @@ export class SearchCodeResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  searchCode200ApplicationJsonObject?: SearchCode200ApplicationJson;
+  searchCode200ApplicationJSONObject?: SearchCode200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchCode503ApplicationJsonObject?: SearchCode503ApplicationJson;
+  searchCode503ApplicationJSONObject?: SearchCode503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

@@ -1,4 +1,7 @@
-export var ProductTypeResponseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductTypeResponseEnum = void 0;
+var ProductTypeResponseEnum;
 (function (ProductTypeResponseEnum) {
     ProductTypeResponseEnum["Easyaccess"] = "easyaccess";
     ProductTypeResponseEnum["Editorialsubscription"] = "editorialsubscription";
@@ -6,4 +9,4 @@ export var ProductTypeResponseEnum;
     ProductTypeResponseEnum["Premiumaccess"] = "premiumaccess";
     ProductTypeResponseEnum["Royaltyfreesubscription"] = "royaltyfreesubscription";
     ProductTypeResponseEnum["Creditpack"] = "creditpack";
-})(ProductTypeResponseEnum || (ProductTypeResponseEnum = {}));
+})(ProductTypeResponseEnum = exports.ProductTypeResponseEnum || (exports.ProductTypeResponseEnum = {}));

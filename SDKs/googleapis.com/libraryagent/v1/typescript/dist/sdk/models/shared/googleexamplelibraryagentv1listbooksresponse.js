@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleExampleLibraryagentV1Book } from "./googleexamplelibraryagentv1book";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleExampleLibraryagentV1ListBooksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleexamplelibraryagentv1book_1 = require("./googleexamplelibraryagentv1book");
 // GoogleExampleLibraryagentV1ListBooksResponse
 /**
  * Response message for LibraryAgent.ListBooks.
@@ -34,13 +37,13 @@ var GoogleExampleLibraryagentV1ListBooksResponse = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=books", elemType: GoogleExampleLibraryagentV1Book }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=books", elemType: googleexamplelibraryagentv1book_1.GoogleExampleLibraryagentV1Book }),
         __metadata("design:type", Array)
     ], GoogleExampleLibraryagentV1ListBooksResponse.prototype, "books", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleExampleLibraryagentV1ListBooksResponse.prototype, "nextPageToken", void 0);
     return GoogleExampleLibraryagentV1ListBooksResponse;
-}(SpeakeasyBase));
-export { GoogleExampleLibraryagentV1ListBooksResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleExampleLibraryagentV1ListBooksResponse = GoogleExampleLibraryagentV1ListBooksResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SignierteBelegdaten } from "./signiertebelegdaten";
-export var BelegBelegTypenEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Beleg = exports.BelegBelegTypenEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var signiertebelegdaten_1 = require("./signiertebelegdaten");
+var BelegBelegTypenEnum;
 (function (BelegBelegTypenEnum) {
     BelegBelegTypenEnum["Belegkreisinitialisierung"] = "Belegkreisinitialisierung";
     BelegBelegTypenEnum["Kassenbericht"] = "Kassenbericht";
@@ -33,52 +36,52 @@ export var BelegBelegTypenEnum;
     BelegBelegTypenEnum["Storno"] = "Storno";
     BelegBelegTypenEnum["Systembeleg"] = "Systembeleg";
     BelegBelegTypenEnum["Training"] = "Training";
-})(BelegBelegTypenEnum || (BelegBelegTypenEnum = {}));
+})(BelegBelegTypenEnum = exports.BelegBelegTypenEnum || (exports.BelegBelegTypenEnum = {}));
 var Beleg = /** @class */ (function (_super) {
     __extends(Beleg, _super);
     function Beleg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Beleg-Codes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Beleg-Codes" }),
         __metadata("design:type", Array)
     ], Beleg.prototype, "belegCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Beleg-Typen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Beleg-Typen" }),
         __metadata("design:type", Array)
     ], Beleg.prototype, "belegTypen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Belegdaten" }),
-        __metadata("design:type", SignierteBelegdaten)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Belegdaten" }),
+        __metadata("design:type", signiertebelegdaten_1.SignierteBelegdaten)
     ], Beleg.prototype, "belegdaten", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JWS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JWS" }),
         __metadata("design:type", String)
     ], Beleg.prototype, "jws", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QR" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QR" }),
         __metadata("design:type", String)
     ], Beleg.prototype, "qr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QR-Link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QR-Link" }),
         __metadata("design:type", String)
     ], Beleg.prototype, "qrLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Registrierkasse-UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Registrierkasse-UUID" }),
         __metadata("design:type", String)
-    ], Beleg.prototype, "registrierkasseUuid", void 0);
+    ], Beleg.prototype, "registrierkasseUUID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Signaturerstellungseinheit-UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Signaturerstellungseinheit-UUID" }),
         __metadata("design:type", String)
-    ], Beleg.prototype, "signaturerstellungseinheitUuid", void 0);
+    ], Beleg.prototype, "signaturerstellungseinheitUUID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_href" }),
         __metadata("design:type", String)
     ], Beleg.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_uuid" }),
         __metadata("design:type", String)
     ], Beleg.prototype, "uuid", void 0);
     return Beleg;
-}(SpeakeasyBase));
-export { Beleg };
+}(utils_1.SpeakeasyBase));
+exports.Beleg = Beleg;

@@ -22,5 +22,5 @@ export class StoreExistsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  storeExists200ApplicationJsonString?: string;
+  storeExists200ApplicationJSONString?: string;
 }

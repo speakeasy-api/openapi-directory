@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceAppliancePerformanceResponse = exports.GetDeviceAppliancePerformanceRequest = exports.GetDeviceAppliancePerformancePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceAppliancePerformancePathParams = /** @class */ (function (_super) {
     __extends(GetDeviceAppliancePerformancePathParams, _super);
     function GetDeviceAppliancePerformancePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceAppliancePerformancePathParams.prototype, "serial", void 0);
     return GetDeviceAppliancePerformancePathParams;
-}(SpeakeasyBase));
-export { GetDeviceAppliancePerformancePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAppliancePerformancePathParams = GetDeviceAppliancePerformancePathParams;
 var GetDeviceAppliancePerformanceRequest = /** @class */ (function (_super) {
     __extends(GetDeviceAppliancePerformanceRequest, _super);
     function GetDeviceAppliancePerformanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceAppliancePerformancePathParams)
     ], GetDeviceAppliancePerformanceRequest.prototype, "pathParams", void 0);
     return GetDeviceAppliancePerformanceRequest;
-}(SpeakeasyBase));
-export { GetDeviceAppliancePerformanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAppliancePerformanceRequest = GetDeviceAppliancePerformanceRequest;
 var GetDeviceAppliancePerformanceResponse = /** @class */ (function (_super) {
     __extends(GetDeviceAppliancePerformanceResponse, _super);
     function GetDeviceAppliancePerformanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceAppliancePerformanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceAppliancePerformanceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceAppliancePerformanceResponse.prototype, "getDeviceAppliancePerformance200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceAppliancePerformanceResponse.prototype, "getDeviceAppliancePerformance200ApplicationJSONObject", void 0);
     return GetDeviceAppliancePerformanceResponse;
-}(SpeakeasyBase));
-export { GetDeviceAppliancePerformanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAppliancePerformanceResponse = GetDeviceAppliancePerformanceResponse;

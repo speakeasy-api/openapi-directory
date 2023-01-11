@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4ThreatMatch } from "./googlesecuritysafebrowsingv4threatmatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4threatmatch_1 = require("./googlesecuritysafebrowsingv4threatmatch");
 var GoogleSecuritySafebrowsingV4FindThreatMatchesResponse = /** @class */ (function (_super) {
     __extends(GoogleSecuritySafebrowsingV4FindThreatMatchesResponse, _super);
     function GoogleSecuritySafebrowsingV4FindThreatMatchesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matches", elemType: GoogleSecuritySafebrowsingV4ThreatMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matches", elemType: googlesecuritysafebrowsingv4threatmatch_1.GoogleSecuritySafebrowsingV4ThreatMatch }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4FindThreatMatchesResponse.prototype, "matches", void 0);
     return GoogleSecuritySafebrowsingV4FindThreatMatchesResponse;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4FindThreatMatchesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse = GoogleSecuritySafebrowsingV4FindThreatMatchesResponse;

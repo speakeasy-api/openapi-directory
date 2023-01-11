@@ -16,6 +16,6 @@ export declare class GetGeocodeResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
     geocodingResponse?: any;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

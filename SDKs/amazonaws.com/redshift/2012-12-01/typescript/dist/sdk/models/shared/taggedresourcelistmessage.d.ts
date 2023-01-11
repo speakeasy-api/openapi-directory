@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TaggedResource } from "./taggedresource";
+import { TaggedResourceList } from "./taggedresourcelist";
 /**
  * <p/>
 **/
 export declare class TaggedResourceListMessage extends SpeakeasyBase {
     marker?: string;
-    taggedResources?: TaggedResource[];
+    taggedResources?: TaggedResourceList[];
 }

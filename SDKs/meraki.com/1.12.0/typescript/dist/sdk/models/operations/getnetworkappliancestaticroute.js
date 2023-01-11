@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceStaticRouteResponse = exports.GetNetworkApplianceStaticRouteRequest = exports.GetNetworkApplianceStaticRoutePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceStaticRoutePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRoutePathParams, _super);
     function GetNetworkApplianceStaticRoutePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceStaticRoutePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=staticRouteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=staticRouteId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceStaticRoutePathParams.prototype, "staticRouteId", void 0);
     return GetNetworkApplianceStaticRoutePathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRoutePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRoutePathParams = GetNetworkApplianceStaticRoutePathParams;
 var GetNetworkApplianceStaticRouteRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRouteRequest, _super);
     function GetNetworkApplianceStaticRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceStaticRoutePathParams)
     ], GetNetworkApplianceStaticRouteRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceStaticRouteRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRouteRequest = GetNetworkApplianceStaticRouteRequest;
 var GetNetworkApplianceStaticRouteResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRouteResponse, _super);
     function GetNetworkApplianceStaticRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceStaticRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceStaticRouteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceStaticRouteResponse.prototype, "getNetworkApplianceStaticRoute200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceStaticRouteResponse.prototype, "getNetworkApplianceStaticRoute200ApplicationJSONObject", void 0);
     return GetNetworkApplianceStaticRouteResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRouteResponse = GetNetworkApplianceStaticRouteResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortMapping = void 0;
+var utils_1 = require("../../../internal/utils");
 // PortMapping
 /**
  * An object representing a port mapping.
@@ -33,17 +36,17 @@ var PortMapping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationPort" }),
         __metadata("design:type", Number)
     ], PortMapping.prototype, "applicationPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableOnPublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableOnPublicIp" }),
         __metadata("design:type", Boolean)
     ], PortMapping.prototype, "enableOnPublicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobPort" }),
         __metadata("design:type", Number)
     ], PortMapping.prototype, "jobPort", void 0);
     return PortMapping;
-}(SpeakeasyBase));
-export { PortMapping };
+}(utils_1.SpeakeasyBase));
+exports.PortMapping = PortMapping;

@@ -40,5 +40,5 @@ export class GetNetworkClientsOverviewResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClientsOverview200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClientsOverview200ApplicationJSONObject?: Record<string, any>;
 }

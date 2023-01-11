@@ -38,17 +38,6 @@ export declare enum GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum {
 /**
  *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
 **/
-export declare class GoogleAppsCloudidentityDevicesV1DeviceInput extends SpeakeasyBase {
-    androidSpecificAttributes?: GoogleAppsCloudidentityDevicesV1AndroidAttributes;
-    assetTag?: string;
-    deviceId?: string;
-    lastSyncTime?: string;
-    serialNumber?: string;
-    wifiMacAddresses?: string[];
-}
-/**
- *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
-**/
 export declare class GoogleAppsCloudidentityDevicesV1Device extends SpeakeasyBase {
     androidSpecificAttributes?: GoogleAppsCloudidentityDevicesV1AndroidAttributes;
     assetTag?: string;
@@ -77,6 +66,17 @@ export declare class GoogleAppsCloudidentityDevicesV1Device extends SpeakeasyBas
     ownerType?: GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum;
     releaseVersion?: string;
     securityPatchTime?: string;
+    serialNumber?: string;
+    wifiMacAddresses?: string[];
+}
+/**
+ *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
+**/
+export declare class GoogleAppsCloudidentityDevicesV1DeviceInput extends SpeakeasyBase {
+    androidSpecificAttributes?: GoogleAppsCloudidentityDevicesV1AndroidAttributes;
+    assetTag?: string;
+    deviceId?: string;
+    lastSyncTime?: string;
     serialNumber?: string;
     wifiMacAddresses?: string[];
 }

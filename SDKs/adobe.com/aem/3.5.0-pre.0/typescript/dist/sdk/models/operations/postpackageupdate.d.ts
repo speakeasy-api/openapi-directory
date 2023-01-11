@@ -13,5 +13,5 @@ export declare class PostPackageUpdateRequest extends SpeakeasyBase {
 export declare class PostPackageUpdateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postPackageUpdateDefaultApplicationJsonString?: string;
+    postPackageUpdateDefaultApplicationJSONString?: string;
 }

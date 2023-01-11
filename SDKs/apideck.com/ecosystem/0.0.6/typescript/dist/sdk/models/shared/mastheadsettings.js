@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MastheadSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var MastheadSettings = /** @class */ (function (_super) {
     __extends(MastheadSettings, _super);
     function MastheadSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], MastheadSettings.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background_color" }),
         __metadata("design:type", String)
     ], MastheadSettings.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], MastheadSettings.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns" }),
         __metadata("design:type", Number)
     ], MastheadSettings.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MastheadSettings.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], MastheadSettings.prototype, "title", void 0);
     return MastheadSettings;
-}(SpeakeasyBase));
-export { MastheadSettings };
+}(utils_1.SpeakeasyBase));
+exports.MastheadSettings = MastheadSettings;

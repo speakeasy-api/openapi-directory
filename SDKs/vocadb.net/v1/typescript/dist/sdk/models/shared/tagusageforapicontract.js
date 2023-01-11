@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagBaseContract } from "./tagbasecontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagUsageForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var tagbasecontract_1 = require("./tagbasecontract");
 var TagUsageForApiContract = /** @class */ (function (_super) {
     __extends(TagUsageForApiContract, _super);
     function TagUsageForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], TagUsageForApiContract.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
-        __metadata("design:type", TagBaseContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
+        __metadata("design:type", tagbasecontract_1.TagBaseContract)
     ], TagUsageForApiContract.prototype, "tag", void 0);
     return TagUsageForApiContract;
-}(SpeakeasyBase));
-export { TagUsageForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.TagUsageForApiContract = TagUsageForApiContract;

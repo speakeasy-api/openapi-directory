@@ -53,7 +53,7 @@ export class OperationsFlightstatusByFlightNumberAndDateGetResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  operationsFlightstatusByFlightNumberAndDateGet200ApplicationJsonObject?: Map<string, any>;
+  operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -63,7 +63,7 @@ export class UpdateCrawlerScheduleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateCrawlerScheduleResponse?: Map<string, any>;
+  updateCrawlerScheduleResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

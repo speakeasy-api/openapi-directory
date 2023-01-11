@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchAlarmActionErrorEntry } from "./batchalarmactionerrorentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchAcknowledgeAlarmResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchalarmactionerrorentry_1 = require("./batchalarmactionerrorentry");
 var BatchAcknowledgeAlarmResponse = /** @class */ (function (_super) {
     __extends(BatchAcknowledgeAlarmResponse, _super);
     function BatchAcknowledgeAlarmResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorEntries", elemType: BatchAlarmActionErrorEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorEntries", elemType: batchalarmactionerrorentry_1.BatchAlarmActionErrorEntry }),
         __metadata("design:type", Array)
     ], BatchAcknowledgeAlarmResponse.prototype, "errorEntries", void 0);
     return BatchAcknowledgeAlarmResponse;
-}(SpeakeasyBase));
-export { BatchAcknowledgeAlarmResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchAcknowledgeAlarmResponse = BatchAcknowledgeAlarmResponse;

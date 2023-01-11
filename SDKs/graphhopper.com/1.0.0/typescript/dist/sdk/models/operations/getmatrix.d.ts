@@ -37,7 +37,7 @@ export declare class GetMatrixRequest extends SpeakeasyBase {
 export declare class GetMatrixResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     matrixResponse?: shared.MatrixResponse;
     statusCode: number;
 }

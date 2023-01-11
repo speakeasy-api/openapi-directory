@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeTagsTagsTopQuestionsResponse = exports.GetMeTagsTagsTopQuestionsRequest = exports.GetMeTagsTagsTopQuestionsQueryParams = exports.GetMeTagsTagsTopQuestionsSortEnum = exports.GetMeTagsTagsTopQuestionsOrderEnum = exports.GetMeTagsTagsTopQuestionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMeTagsTagsTopQuestionsPathParams = /** @class */ (function (_super) {
     __extends(GetMeTagsTagsTopQuestionsPathParams, _super);
     function GetMeTagsTagsTopQuestionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tags" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsPathParams.prototype, "tags", void 0);
     return GetMeTagsTagsTopQuestionsPathParams;
-}(SpeakeasyBase));
-export { GetMeTagsTagsTopQuestionsPathParams };
-export var GetMeTagsTagsTopQuestionsOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetMeTagsTagsTopQuestionsPathParams = GetMeTagsTagsTopQuestionsPathParams;
+var GetMeTagsTagsTopQuestionsOrderEnum;
 (function (GetMeTagsTagsTopQuestionsOrderEnum) {
     GetMeTagsTagsTopQuestionsOrderEnum["Desc"] = "desc";
     GetMeTagsTagsTopQuestionsOrderEnum["Asc"] = "asc";
-})(GetMeTagsTagsTopQuestionsOrderEnum || (GetMeTagsTagsTopQuestionsOrderEnum = {}));
-export var GetMeTagsTagsTopQuestionsSortEnum;
+})(GetMeTagsTagsTopQuestionsOrderEnum = exports.GetMeTagsTagsTopQuestionsOrderEnum || (exports.GetMeTagsTagsTopQuestionsOrderEnum = {}));
+var GetMeTagsTagsTopQuestionsSortEnum;
 (function (GetMeTagsTagsTopQuestionsSortEnum) {
     GetMeTagsTagsTopQuestionsSortEnum["Activity"] = "activity";
     GetMeTagsTagsTopQuestionsSortEnum["Creation"] = "creation";
@@ -49,92 +52,92 @@ export var GetMeTagsTagsTopQuestionsSortEnum;
     GetMeTagsTagsTopQuestionsSortEnum["Week"] = "week";
     GetMeTagsTagsTopQuestionsSortEnum["Month"] = "month";
     GetMeTagsTagsTopQuestionsSortEnum["Relevance"] = "relevance";
-})(GetMeTagsTagsTopQuestionsSortEnum || (GetMeTagsTagsTopQuestionsSortEnum = {}));
+})(GetMeTagsTagsTopQuestionsSortEnum = exports.GetMeTagsTagsTopQuestionsSortEnum || (exports.GetMeTagsTagsTopQuestionsSortEnum = {}));
 var GetMeTagsTagsTopQuestionsQueryParams = /** @class */ (function (_super) {
     __extends(GetMeTagsTagsTopQuestionsQueryParams, _super);
     function GetMeTagsTagsTopQuestionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetMeTagsTagsTopQuestionsQueryParams.prototype, "todate", void 0);
     return GetMeTagsTagsTopQuestionsQueryParams;
-}(SpeakeasyBase));
-export { GetMeTagsTagsTopQuestionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeTagsTagsTopQuestionsQueryParams = GetMeTagsTagsTopQuestionsQueryParams;
 var GetMeTagsTagsTopQuestionsRequest = /** @class */ (function (_super) {
     __extends(GetMeTagsTagsTopQuestionsRequest, _super);
     function GetMeTagsTagsTopQuestionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeTagsTagsTopQuestionsPathParams)
     ], GetMeTagsTagsTopQuestionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeTagsTagsTopQuestionsQueryParams)
     ], GetMeTagsTagsTopQuestionsRequest.prototype, "queryParams", void 0);
     return GetMeTagsTagsTopQuestionsRequest;
-}(SpeakeasyBase));
-export { GetMeTagsTagsTopQuestionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeTagsTagsTopQuestionsRequest = GetMeTagsTagsTopQuestionsRequest;
 var GetMeTagsTagsTopQuestionsResponse = /** @class */ (function (_super) {
     __extends(GetMeTagsTagsTopQuestionsResponse, _super);
     function GetMeTagsTagsTopQuestionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeTagsTagsTopQuestionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeTagsTagsTopQuestionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeTagsTagsTopQuestionsResponse.prototype, "statusCode", void 0);
     return GetMeTagsTagsTopQuestionsResponse;
-}(SpeakeasyBase));
-export { GetMeTagsTagsTopQuestionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeTagsTagsTopQuestionsResponse = GetMeTagsTagsTopQuestionsResponse;

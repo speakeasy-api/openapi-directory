@@ -22,5 +22,5 @@ export class ProtocolTelnetServerGetConnectionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetServerGetConnections200ApplicationJsonInt32Integers?: number[];
+  protocolTelnetServerGetConnections200ApplicationJSONInt32Integers?: number[];
 }

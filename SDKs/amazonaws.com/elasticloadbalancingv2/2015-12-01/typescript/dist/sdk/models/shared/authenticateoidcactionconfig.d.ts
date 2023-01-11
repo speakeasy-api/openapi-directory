@@ -4,7 +4,7 @@ import { AuthenticateOidcActionConditionalBehaviorEnumEnum } from "./authenticat
  * Request parameters when using an identity provider (IdP) that is compliant with OpenID Connect (OIDC) to authenticate users.
 **/
 export declare class AuthenticateOidcActionConfig extends SpeakeasyBase {
-    authenticationRequestExtraParams?: Map<string, string>;
+    authenticationRequestExtraParams?: Record<string, string>;
     authorizationEndpoint: string;
     clientId: string;
     clientSecret?: string;

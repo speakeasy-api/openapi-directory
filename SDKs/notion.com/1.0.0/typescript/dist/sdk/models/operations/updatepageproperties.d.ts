@@ -162,7 +162,7 @@ export declare class UpdatePagePropertiesRequest extends SpeakeasyBase {
 }
 export declare class UpdatePagePropertiesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    updatePageProperties200ApplicationJsonObject?: UpdatePageProperties200ApplicationJson;
+    updatePageProperties200ApplicationJSONObject?: UpdatePageProperties200ApplicationJson;
 }

@@ -60,5 +60,5 @@ export declare class DcimFrontPortsListRequest extends SpeakeasyBase {
 export declare class DcimFrontPortsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimFrontPortsList200ApplicationJsonObject?: DcimFrontPortsList200ApplicationJson;
+    dcimFrontPortsList200ApplicationJSONObject?: DcimFrontPortsList200ApplicationJson;
 }

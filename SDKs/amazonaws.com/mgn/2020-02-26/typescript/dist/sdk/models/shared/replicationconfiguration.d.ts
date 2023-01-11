@@ -6,7 +6,7 @@ import { ReplicationConfigurationReplicatedDisk } from "./replicationconfigurati
 export declare class ReplicationConfiguration extends SpeakeasyBase {
     associateDefaultSecurityGroup?: boolean;
     bandwidthThrottling?: number;
-    createPublicIp?: boolean;
+    createPublicIP?: boolean;
     dataPlaneRouting?: ReplicationConfigurationDataPlaneRoutingEnum;
     defaultLargeStagingDiskType?: ReplicationConfigurationDefaultLargeStagingDiskTypeEnum;
     ebsEncryption?: ReplicationConfigurationEbsEncryptionEnum;
@@ -15,8 +15,8 @@ export declare class ReplicationConfiguration extends SpeakeasyBase {
     replicatedDisks?: ReplicationConfigurationReplicatedDisk[];
     replicationServerInstanceType?: string;
     replicationServersSecurityGroupsIDs?: string[];
-    sourceServerId?: string;
+    sourceServerID?: string;
     stagingAreaSubnetId?: string;
-    stagingAreaTags?: Map<string, string>;
+    stagingAreaTags?: Record<string, string>;
     useDedicatedReplicationServer?: boolean;
 }

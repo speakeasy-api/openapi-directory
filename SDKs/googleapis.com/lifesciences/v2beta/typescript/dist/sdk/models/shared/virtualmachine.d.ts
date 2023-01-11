@@ -15,7 +15,7 @@ export declare class VirtualMachine extends SpeakeasyBase {
     disks?: Disk[];
     dockerCacheImages?: string[];
     enableStackdriverMonitoring?: boolean;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     machineType?: string;
     network?: Network;
     nvidiaDriverVersion?: string;

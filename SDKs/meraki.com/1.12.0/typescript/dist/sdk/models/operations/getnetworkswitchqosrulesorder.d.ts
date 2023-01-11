@@ -8,5 +8,5 @@ export declare class GetNetworkSwitchQosRulesOrderRequest extends SpeakeasyBase 
 export declare class GetNetworkSwitchQosRulesOrderResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchQosRulesOrder200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchQosRulesOrder200ApplicationJSONObject?: Record<string, any>;
 }

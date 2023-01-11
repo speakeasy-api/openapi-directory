@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DurationFieldType } from "./durationfieldtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DurationField = void 0;
+var utils_1 = require("../../../internal/utils");
+var durationfieldtype_1 = require("./durationfieldtype");
 var DurationField = /** @class */ (function (_super) {
     __extends(DurationField, _super);
     function DurationField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DurationField.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precise" }),
         __metadata("design:type", Boolean)
     ], DurationField.prototype, "precise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supported" }),
         __metadata("design:type", Boolean)
     ], DurationField.prototype, "supported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", DurationFieldType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", durationfieldtype_1.DurationFieldType)
     ], DurationField.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unitMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unitMillis" }),
         __metadata("design:type", Number)
     ], DurationField.prototype, "unitMillis", void 0);
     return DurationField;
-}(SpeakeasyBase));
-export { DurationField };
+}(utils_1.SpeakeasyBase));
+exports.DurationField = DurationField;

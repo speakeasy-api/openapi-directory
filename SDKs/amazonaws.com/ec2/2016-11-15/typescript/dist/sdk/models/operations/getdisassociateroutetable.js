@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisassociateRouteTableActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisassociateRouteTableResponse = exports.GetDisassociateRouteTableRequest = exports.GetDisassociateRouteTableHeaders = exports.GetDisassociateRouteTableQueryParams = exports.GetDisassociateRouteTableVersionEnum = exports.GetDisassociateRouteTableActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisassociateRouteTableActionEnum;
 (function (GetDisassociateRouteTableActionEnum) {
     GetDisassociateRouteTableActionEnum["DisassociateRouteTable"] = "DisassociateRouteTable";
-})(GetDisassociateRouteTableActionEnum || (GetDisassociateRouteTableActionEnum = {}));
-export var GetDisassociateRouteTableVersionEnum;
+})(GetDisassociateRouteTableActionEnum = exports.GetDisassociateRouteTableActionEnum || (exports.GetDisassociateRouteTableActionEnum = {}));
+var GetDisassociateRouteTableVersionEnum;
 (function (GetDisassociateRouteTableVersionEnum) {
     GetDisassociateRouteTableVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDisassociateRouteTableVersionEnum || (GetDisassociateRouteTableVersionEnum = {}));
+})(GetDisassociateRouteTableVersionEnum = exports.GetDisassociateRouteTableVersionEnum || (exports.GetDisassociateRouteTableVersionEnum = {}));
 var GetDisassociateRouteTableQueryParams = /** @class */ (function (_super) {
     __extends(GetDisassociateRouteTableQueryParams, _super);
     function GetDisassociateRouteTableQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableQueryParams.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDisassociateRouteTableQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableQueryParams.prototype, "version", void 0);
     return GetDisassociateRouteTableQueryParams;
-}(SpeakeasyBase));
-export { GetDisassociateRouteTableQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateRouteTableQueryParams = GetDisassociateRouteTableQueryParams;
 var GetDisassociateRouteTableHeaders = /** @class */ (function (_super) {
     __extends(GetDisassociateRouteTableHeaders, _super);
     function GetDisassociateRouteTableHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisassociateRouteTableHeaders;
-}(SpeakeasyBase));
-export { GetDisassociateRouteTableHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateRouteTableHeaders = GetDisassociateRouteTableHeaders;
 var GetDisassociateRouteTableRequest = /** @class */ (function (_super) {
     __extends(GetDisassociateRouteTableRequest, _super);
     function GetDisassociateRouteTableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateRouteTableQueryParams)
     ], GetDisassociateRouteTableRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateRouteTableHeaders)
     ], GetDisassociateRouteTableRequest.prototype, "headers", void 0);
     return GetDisassociateRouteTableRequest;
-}(SpeakeasyBase));
-export { GetDisassociateRouteTableRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateRouteTableRequest = GetDisassociateRouteTableRequest;
 var GetDisassociateRouteTableResponse = /** @class */ (function (_super) {
     __extends(GetDisassociateRouteTableResponse, _super);
     function GetDisassociateRouteTableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisassociateRouteTableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisassociateRouteTableResponse.prototype, "statusCode", void 0);
     return GetDisassociateRouteTableResponse;
-}(SpeakeasyBase));
-export { GetDisassociateRouteTableResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateRouteTableResponse = GetDisassociateRouteTableResponse;

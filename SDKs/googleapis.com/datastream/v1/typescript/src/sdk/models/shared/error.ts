@@ -2,13 +2,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// Error
+// ErrorT
 /** 
  * Represent a user-facing Error.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, string>;
+  details?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=errorTime" })
   errorTime?: string;

@@ -57,7 +57,7 @@ export class CreateVideoVersionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   videoVersions?: shared.VideoVersions;

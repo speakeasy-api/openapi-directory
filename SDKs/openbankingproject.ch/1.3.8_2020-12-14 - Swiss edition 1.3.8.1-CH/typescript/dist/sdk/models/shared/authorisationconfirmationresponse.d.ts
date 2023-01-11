@@ -5,7 +5,7 @@ import { ScaStatusAuthorisationConfirmationEnum } from "./scastatusauthorisation
  * Body of the JSON response for an authorisation confirmation request.
 **/
 export declare class AuthorisationConfirmationResponse extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     psuMessage?: string;
     scaStatus: ScaStatusAuthorisationConfirmationEnum;
 }

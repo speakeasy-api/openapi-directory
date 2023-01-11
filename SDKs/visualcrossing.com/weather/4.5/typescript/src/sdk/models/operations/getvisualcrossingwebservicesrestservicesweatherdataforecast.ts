@@ -34,7 +34,7 @@ export class GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryPar
 
 export class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryParams;

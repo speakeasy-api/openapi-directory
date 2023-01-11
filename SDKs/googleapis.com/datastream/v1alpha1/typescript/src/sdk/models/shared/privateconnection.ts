@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { VpcPeeringConfig } from "./vpcpeeringconfig";
 
 
@@ -10,25 +10,6 @@ export enum PrivateConnectionStateEnum {
     Failed = "FAILED",
     Deleting = "DELETING",
     FailedToDelete = "FAILED_TO_DELETE"
-}
-
-
-// PrivateConnectionInput
-/** 
- * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
-**/
-export class PrivateConnectionInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" })
-  vpcPeeringConfig?: VpcPeeringConfig;
 }
 
 
@@ -44,10 +25,10 @@ export class PrivateConnection extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -57,6 +38,25 @@ export class PrivateConnection extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" })
+  vpcPeeringConfig?: VpcPeeringConfig;
+}
+
+
+// PrivateConnectionInput
+/** 
+ * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
+**/
+export class PrivateConnectionInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: ErrorT;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" })
   vpcPeeringConfig?: VpcPeeringConfig;

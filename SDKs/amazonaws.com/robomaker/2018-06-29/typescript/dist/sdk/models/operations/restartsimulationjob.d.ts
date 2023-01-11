@@ -21,7 +21,7 @@ export declare class RestartSimulationJobResponse extends SpeakeasyBase {
     invalidParameterException?: any;
     limitExceededException?: any;
     resourceNotFoundException?: any;
-    restartSimulationJobResponse?: Map<string, any>;
+    restartSimulationJobResponse?: Record<string, any>;
     statusCode: number;
     throttlingException?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostServersIdActionsCreateImageResponse = exports.PostServersIdActionsCreateImageRequest = exports.PostServersIdActionsCreateImage201ApplicationJson = exports.PostServersIdActionsCreateImage201ApplicationJsonImage = exports.PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageProtection = exports.PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom = exports.PostServersIdActionsCreateImage201ApplicationJsonAction = exports.PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonActionResources = exports.PostServersIdActionsCreateImage201ApplicationJsonActionError = exports.PostServersIdActionsCreateImageCreateImageRequest = exports.PostServersIdActionsCreateImageCreateImageRequestTypeEnum = exports.PostServersIdActionsCreateImageCreateImageRequestLabels = exports.PostServersIdActionsCreateImagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostServersIdActionsCreateImagePathParams = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImagePathParams, _super);
     function PostServersIdActionsCreateImagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImagePathParams.prototype, "id", void 0);
     return PostServersIdActionsCreateImagePathParams;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImagePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImagePathParams = PostServersIdActionsCreateImagePathParams;
 // PostServersIdActionsCreateImageCreateImageRequestLabels
 /**
  * User-defined labels (key-value pairs)
@@ -45,37 +48,37 @@ var PostServersIdActionsCreateImageCreateImageRequestLabels = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelkey" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImageCreateImageRequestLabels.prototype, "labelkey", void 0);
     return PostServersIdActionsCreateImageCreateImageRequestLabels;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImageCreateImageRequestLabels };
-export var PostServersIdActionsCreateImageCreateImageRequestTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImageCreateImageRequestLabels = PostServersIdActionsCreateImageCreateImageRequestLabels;
+var PostServersIdActionsCreateImageCreateImageRequestTypeEnum;
 (function (PostServersIdActionsCreateImageCreateImageRequestTypeEnum) {
     PostServersIdActionsCreateImageCreateImageRequestTypeEnum["Snapshot"] = "snapshot";
     PostServersIdActionsCreateImageCreateImageRequestTypeEnum["Backup"] = "backup";
-})(PostServersIdActionsCreateImageCreateImageRequestTypeEnum || (PostServersIdActionsCreateImageCreateImageRequestTypeEnum = {}));
+})(PostServersIdActionsCreateImageCreateImageRequestTypeEnum = exports.PostServersIdActionsCreateImageCreateImageRequestTypeEnum || (exports.PostServersIdActionsCreateImageCreateImageRequestTypeEnum = {}));
 var PostServersIdActionsCreateImageCreateImageRequest = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImageCreateImageRequest, _super);
     function PostServersIdActionsCreateImageCreateImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImageCreateImageRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", PostServersIdActionsCreateImageCreateImageRequestLabels)
     ], PostServersIdActionsCreateImageCreateImageRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImageCreateImageRequest.prototype, "type", void 0);
     return PostServersIdActionsCreateImageCreateImageRequest;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImageCreateImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImageCreateImageRequest = PostServersIdActionsCreateImageCreateImageRequest;
 // PostServersIdActionsCreateImage201ApplicationJsonActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -86,78 +89,78 @@ var PostServersIdActionsCreateImage201ApplicationJsonActionError = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonActionError.prototype, "message", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonActionError;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonActionError = PostServersIdActionsCreateImage201ApplicationJsonActionError;
 var PostServersIdActionsCreateImage201ApplicationJsonActionResources = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImage201ApplicationJsonActionResources, _super);
     function PostServersIdActionsCreateImage201ApplicationJsonActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonActionResources.prototype, "type", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonActionResources;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonActionResources };
-export var PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonActionResources = PostServersIdActionsCreateImage201ApplicationJsonActionResources;
+var PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum;
 (function (PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum) {
     PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum["Success"] = "success";
     PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum["Running"] = "running";
     PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum["Error"] = "error";
-})(PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum || (PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum = {}));
+})(PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum || (exports.PostServersIdActionsCreateImage201ApplicationJsonActionStatusEnum = {}));
 var PostServersIdActionsCreateImage201ApplicationJsonAction = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImage201ApplicationJsonAction, _super);
     function PostServersIdActionsCreateImage201ApplicationJsonAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJsonActionError)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostServersIdActionsCreateImage201ApplicationJsonActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostServersIdActionsCreateImage201ApplicationJsonActionResources }),
         __metadata("design:type", Array)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonAction.prototype, "status", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonAction;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonAction };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonAction = PostServersIdActionsCreateImage201ApplicationJsonAction;
 // PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom
 /**
  * Information about the Server the Image was created from
@@ -168,24 +171,24 @@ var PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom = /** @cla
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom.prototype, "name", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom };
-export var PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom = PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom;
+var PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum;
 (function (PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum) {
     PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum["Ubuntu"] = "ubuntu";
     PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum["Centos"] = "centos";
     PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum["Debian"] = "debian";
     PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum["Fedora"] = "fedora";
     PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum["Unknown"] = "unknown";
-})(PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum || (PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum = {}));
+})(PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum || (exports.PostServersIdActionsCreateImage201ApplicationJsonImageOsFlavorEnum = {}));
 // PostServersIdActionsCreateImage201ApplicationJsonImageProtection
 /**
  * Protection configuration for the Resource
@@ -196,155 +199,155 @@ var PostServersIdActionsCreateImage201ApplicationJsonImageProtection = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], PostServersIdActionsCreateImage201ApplicationJsonImageProtection.prototype, "delete", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonImageProtection;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonImageProtection };
-export var PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonImageProtection = PostServersIdActionsCreateImage201ApplicationJsonImageProtection;
+var PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum;
 (function (PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum) {
     PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum["Available"] = "available";
     PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum["Creating"] = "creating";
     PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum["Unavailable"] = "unavailable";
-})(PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum || (PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum = {}));
-export var PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum;
+})(PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum || (exports.PostServersIdActionsCreateImage201ApplicationJsonImageStatusEnum = {}));
+var PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum;
 (function (PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum) {
     PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum["System"] = "system";
     PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum["App"] = "app";
     PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum["Snapshot"] = "snapshot";
     PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum["Backup"] = "backup";
     PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum["Temporary"] = "temporary";
-})(PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum || (PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum = {}));
+})(PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum = exports.PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum || (exports.PostServersIdActionsCreateImage201ApplicationJsonImageTypeEnum = {}));
 var PostServersIdActionsCreateImage201ApplicationJsonImage = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImage201ApplicationJsonImage, _super);
     function PostServersIdActionsCreateImage201ApplicationJsonImage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bound_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bound_to" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "boundTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_id" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "buildId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_from" }),
         __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJsonImageCreatedFrom)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "createdFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecated" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "deprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk_size" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "diskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_size" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "imageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_flavor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_flavor" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "osFlavor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_version" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "osVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJsonImageProtection)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rapid_deploy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rapid_deploy" }),
         __metadata("design:type", Boolean)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "rapidDeploy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImage201ApplicationJsonImage.prototype, "type", void 0);
     return PostServersIdActionsCreateImage201ApplicationJsonImage;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJsonImage };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJsonImage = PostServersIdActionsCreateImage201ApplicationJsonImage;
 var PostServersIdActionsCreateImage201ApplicationJson = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImage201ApplicationJson, _super);
     function PostServersIdActionsCreateImage201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJsonAction)
     ], PostServersIdActionsCreateImage201ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJsonImage)
     ], PostServersIdActionsCreateImage201ApplicationJson.prototype, "image", void 0);
     return PostServersIdActionsCreateImage201ApplicationJson;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImage201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImage201ApplicationJson = PostServersIdActionsCreateImage201ApplicationJson;
 var PostServersIdActionsCreateImageRequest = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImageRequest, _super);
     function PostServersIdActionsCreateImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostServersIdActionsCreateImagePathParams)
     ], PostServersIdActionsCreateImageRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostServersIdActionsCreateImageCreateImageRequest)
     ], PostServersIdActionsCreateImageRequest.prototype, "request", void 0);
     return PostServersIdActionsCreateImageRequest;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImageRequest = PostServersIdActionsCreateImageRequest;
 var PostServersIdActionsCreateImageResponse = /** @class */ (function (_super) {
     __extends(PostServersIdActionsCreateImageResponse, _super);
     function PostServersIdActionsCreateImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostServersIdActionsCreateImageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJson)
-    ], PostServersIdActionsCreateImageResponse.prototype, "postServersIdActionsCreateImage201ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostServersIdActionsCreateImageResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostServersIdActionsCreateImage201ApplicationJson)
+    ], PostServersIdActionsCreateImageResponse.prototype, "postServersIdActionsCreateImage201ApplicationJSONObject", void 0);
     return PostServersIdActionsCreateImageResponse;
-}(SpeakeasyBase));
-export { PostServersIdActionsCreateImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsCreateImageResponse = PostServersIdActionsCreateImageResponse;

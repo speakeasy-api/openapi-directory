@@ -1,4 +1,7 @@
-export var BatchPredictionFilterVariableEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchPredictionFilterVariableEnum = void 0;
+var BatchPredictionFilterVariableEnum;
 (function (BatchPredictionFilterVariableEnum) {
     BatchPredictionFilterVariableEnum["CreatedAt"] = "CreatedAt";
     BatchPredictionFilterVariableEnum["LastUpdatedAt"] = "LastUpdatedAt";
@@ -8,4 +11,4 @@ export var BatchPredictionFilterVariableEnum;
     BatchPredictionFilterVariableEnum["MlModelId"] = "MLModelId";
     BatchPredictionFilterVariableEnum["DataSourceId"] = "DataSourceId";
     BatchPredictionFilterVariableEnum["DataUri"] = "DataURI";
-})(BatchPredictionFilterVariableEnum || (BatchPredictionFilterVariableEnum = {}));
+})(BatchPredictionFilterVariableEnum = exports.BatchPredictionFilterVariableEnum || (exports.BatchPredictionFilterVariableEnum = {}));

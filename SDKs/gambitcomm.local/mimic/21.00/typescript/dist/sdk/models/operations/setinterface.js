@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetInterfaceResponse = exports.SetInterfaceRequest = exports.SetInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetInterfacePathParams = /** @class */ (function (_super) {
     __extends(SetInterfacePathParams, _super);
     function SetInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetInterfacePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interface" }),
         __metadata("design:type", String)
     ], SetInterfacePathParams.prototype, "interface", void 0);
     return SetInterfacePathParams;
-}(SpeakeasyBase));
-export { SetInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetInterfacePathParams = SetInterfacePathParams;
 var SetInterfaceRequest = /** @class */ (function (_super) {
     __extends(SetInterfaceRequest, _super);
     function SetInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetInterfacePathParams)
     ], SetInterfaceRequest.prototype, "pathParams", void 0);
     return SetInterfaceRequest;
-}(SpeakeasyBase));
-export { SetInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetInterfaceRequest = SetInterfaceRequest;
 var SetInterfaceResponse = /** @class */ (function (_super) {
     __extends(SetInterfaceResponse, _super);
     function SetInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetInterfaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetInterfaceResponse.prototype, "setInterface200ApplicationJsonString", void 0);
+    ], SetInterfaceResponse.prototype, "setInterface200ApplicationJSONString", void 0);
     return SetInterfaceResponse;
-}(SpeakeasyBase));
-export { SetInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetInterfaceResponse = SetInterfaceResponse;

@@ -62,7 +62,7 @@ export class CreateContactListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createContactListResponse?: Map<string, any>;
+  createContactListResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

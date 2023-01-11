@@ -23,7 +23,7 @@ export enum AccountDetailsUsageEnum {
 **/
 export class AccountDetails extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=balances", elemType: Balance })
   balances?: Balance[];

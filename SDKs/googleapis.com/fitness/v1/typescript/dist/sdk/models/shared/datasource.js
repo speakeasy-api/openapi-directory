@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Application } from "./application";
-import { DataType } from "./datatype";
-import { Device } from "./device";
-export var DataSourceDataQualityStandardEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSource = exports.DataSourceTypeEnum = exports.DataSourceDataQualityStandardEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var application_1 = require("./application");
+var datatype_1 = require("./datatype");
+var device_1 = require("./device");
+var DataSourceDataQualityStandardEnum;
 (function (DataSourceDataQualityStandardEnum) {
     DataSourceDataQualityStandardEnum["DataQualityUnknown"] = "dataQualityUnknown";
     DataSourceDataQualityStandardEnum["DataQualityBloodPressureEsh2002"] = "dataQualityBloodPressureEsh2002";
@@ -38,12 +41,12 @@ export var DataSourceDataQualityStandardEnum;
     DataSourceDataQualityStandardEnum["DataQualityBloodPressureBhsBb"] = "dataQualityBloodPressureBhsBB";
     DataSourceDataQualityStandardEnum["DataQualityBloodGlucoseIso151972003"] = "dataQualityBloodGlucoseIso151972003";
     DataSourceDataQualityStandardEnum["DataQualityBloodGlucoseIso151972013"] = "dataQualityBloodGlucoseIso151972013";
-})(DataSourceDataQualityStandardEnum || (DataSourceDataQualityStandardEnum = {}));
-export var DataSourceTypeEnum;
+})(DataSourceDataQualityStandardEnum = exports.DataSourceDataQualityStandardEnum || (exports.DataSourceDataQualityStandardEnum = {}));
+var DataSourceTypeEnum;
 (function (DataSourceTypeEnum) {
     DataSourceTypeEnum["Raw"] = "raw";
     DataSourceTypeEnum["Derived"] = "derived";
-})(DataSourceTypeEnum || (DataSourceTypeEnum = {}));
+})(DataSourceTypeEnum = exports.DataSourceTypeEnum || (exports.DataSourceTypeEnum = {}));
 // DataSource
 /**
  * Definition of a unique source of sensor data. Data sources can expose raw data coming from hardware sensors on local or companion devices. They can also expose derived data, created by transforming or merging other data sources. Multiple data sources can exist for the same data type. Every data point inserted into or read from this service has an associated data source. The data source contains enough information to uniquely identify its data, including the hardware device and the application that collected and/or transformed the data. It also holds useful metadata, such as the hardware and application versions, and the device type. Each data source produces a unique stream of data, with a unique identifier. Not all changes to data source affect the stream identifier, so that data collected by updated versions of the same application/device can still be considered to belong to the same data stream.
@@ -54,37 +57,37 @@ var DataSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application" }),
-        __metadata("design:type", Application)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application" }),
+        __metadata("design:type", application_1.Application)
     ], DataSource.prototype, "application", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataQualityStandard" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataQualityStandard" }),
         __metadata("design:type", Array)
     ], DataSource.prototype, "dataQualityStandard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataStreamId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataStreamId" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataStreamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataStreamName" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
-        __metadata("design:type", DataType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
+        __metadata("design:type", datatype_1.DataType)
     ], DataSource.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", Device)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", device_1.Device)
     ], DataSource.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "type", void 0);
     return DataSource;
-}(SpeakeasyBase));
-export { DataSource };
+}(utils_1.SpeakeasyBase));
+exports.DataSource = DataSource;

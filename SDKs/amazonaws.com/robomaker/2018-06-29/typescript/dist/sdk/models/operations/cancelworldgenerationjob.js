@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelWorldGenerationJobResponse = exports.CancelWorldGenerationJobRequest = exports.CancelWorldGenerationJobRequestBody = exports.CancelWorldGenerationJobHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var CancelWorldGenerationJobHeaders = /** @class */ (function (_super) {
     __extends(CancelWorldGenerationJobHeaders, _super);
     function CancelWorldGenerationJobHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CancelWorldGenerationJobHeaders;
-}(SpeakeasyBase));
-export { CancelWorldGenerationJobHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CancelWorldGenerationJobHeaders = CancelWorldGenerationJobHeaders;
 var CancelWorldGenerationJobRequestBody = /** @class */ (function (_super) {
     __extends(CancelWorldGenerationJobRequestBody, _super);
     function CancelWorldGenerationJobRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=job" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=job" }),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobRequestBody.prototype, "job", void 0);
     return CancelWorldGenerationJobRequestBody;
-}(SpeakeasyBase));
-export { CancelWorldGenerationJobRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CancelWorldGenerationJobRequestBody = CancelWorldGenerationJobRequestBody;
 var CancelWorldGenerationJobRequest = /** @class */ (function (_super) {
     __extends(CancelWorldGenerationJobRequest, _super);
     function CancelWorldGenerationJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CancelWorldGenerationJobHeaders)
     ], CancelWorldGenerationJobRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CancelWorldGenerationJobRequestBody)
     ], CancelWorldGenerationJobRequest.prototype, "request", void 0);
     return CancelWorldGenerationJobRequest;
-}(SpeakeasyBase));
-export { CancelWorldGenerationJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CancelWorldGenerationJobRequest = CancelWorldGenerationJobRequest;
 var CancelWorldGenerationJobResponse = /** @class */ (function (_super) {
     __extends(CancelWorldGenerationJobResponse, _super);
     function CancelWorldGenerationJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CancelWorldGenerationJobResponse.prototype, "cancelWorldGenerationJobResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CancelWorldGenerationJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelWorldGenerationJobResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelWorldGenerationJobResponse.prototype, "invalidParameterException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelWorldGenerationJobResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CancelWorldGenerationJobResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelWorldGenerationJobResponse.prototype, "throttlingException", void 0);
     return CancelWorldGenerationJobResponse;
-}(SpeakeasyBase));
-export { CancelWorldGenerationJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelWorldGenerationJobResponse = CancelWorldGenerationJobResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PartListElement } from "./partlistelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPartsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var partlistelement_1 = require("./partlistelement");
 // ListPartsOutput
 /**
  * Contains the Amazon S3 Glacier response to your request.
@@ -34,33 +37,33 @@ var ListPartsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArchiveDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArchiveDescription" }),
         __metadata("design:type", String)
     ], ListPartsOutput.prototype, "archiveDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], ListPartsOutput.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], ListPartsOutput.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MultipartUploadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MultipartUploadId" }),
         __metadata("design:type", String)
     ], ListPartsOutput.prototype, "multipartUploadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartSizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartSizeInBytes" }),
         __metadata("design:type", Number)
     ], ListPartsOutput.prototype, "partSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parts", elemType: PartListElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parts", elemType: partlistelement_1.PartListElement }),
         __metadata("design:type", Array)
     ], ListPartsOutput.prototype, "parts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VaultARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VaultARN" }),
         __metadata("design:type", String)
-    ], ListPartsOutput.prototype, "vaultArn", void 0);
+    ], ListPartsOutput.prototype, "vaultARN", void 0);
     return ListPartsOutput;
-}(SpeakeasyBase));
-export { ListPartsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListPartsOutput = ListPartsOutput;

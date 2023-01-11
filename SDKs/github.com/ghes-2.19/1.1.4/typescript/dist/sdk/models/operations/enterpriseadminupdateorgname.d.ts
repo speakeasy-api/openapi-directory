@@ -16,5 +16,5 @@ export declare class EnterpriseAdminUpdateOrgNameRequest extends SpeakeasyBase {
 export declare class EnterpriseAdminUpdateOrgNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminUpdateOrgName202ApplicationJsonObject?: EnterpriseAdminUpdateOrgName202ApplicationJson;
+    enterpriseAdminUpdateOrgName202ApplicationJSONObject?: EnterpriseAdminUpdateOrgName202ApplicationJson;
 }

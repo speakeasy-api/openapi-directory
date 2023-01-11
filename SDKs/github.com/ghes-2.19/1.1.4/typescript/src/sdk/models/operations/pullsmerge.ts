@@ -77,10 +77,10 @@ export class PullsMergeResponse extends SpeakeasyBase {
   pullRequestMergeResult?: shared.PullRequestMergeResult;
 
   @SpeakeasyMetadata()
-  pullsMerge405ApplicationJsonObject?: PullsMerge405ApplicationJson;
+  pullsMerge405ApplicationJSONObject?: PullsMerge405ApplicationJson;
 
   @SpeakeasyMetadata()
-  pullsMerge409ApplicationJsonObject?: PullsMerge409ApplicationJson;
+  pullsMerge409ApplicationJSONObject?: PullsMerge409ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

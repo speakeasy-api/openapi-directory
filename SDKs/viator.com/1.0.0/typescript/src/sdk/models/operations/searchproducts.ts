@@ -91,7 +91,7 @@ export class SearchProducts200ApplicationJsonData extends SpeakeasyBase {
   panoramaCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=pas" })
-  pas?: Map<string, any>;
+  pas?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=photoCount" })
   photoCount?: number;
@@ -166,10 +166,10 @@ export class SearchProducts200ApplicationJsonData extends SpeakeasyBase {
   supplierName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" })
-  thumbnailHiResUrl?: string;
+  thumbnailHiResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
   title?: string;
@@ -184,7 +184,7 @@ export class SearchProducts200ApplicationJsonData extends SpeakeasyBase {
   videoCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=webURL" })
-  webUrl?: string;
+  webURL?: string;
 }
 
 
@@ -214,10 +214,10 @@ export class SearchProducts200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -247,5 +247,5 @@ export class SearchProductsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchProducts200ApplicationJsonObject?: SearchProducts200ApplicationJson;
+  searchProducts200ApplicationJSONObject?: SearchProducts200ApplicationJson;
 }

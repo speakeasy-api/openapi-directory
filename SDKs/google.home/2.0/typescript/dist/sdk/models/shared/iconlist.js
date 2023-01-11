@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IconList = void 0;
+var utils_1 = require("../../../internal/utils");
 var IconList = /** @class */ (function (_super) {
     __extends(IconList, _super);
     function IconList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=depth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=depth" }),
         __metadata("design:type", Number)
     ], IconList.prototype, "depth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], IconList.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimetype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimetype" }),
         __metadata("design:type", String)
     ], IconList.prototype, "mimetype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IconList.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], IconList.prototype, "width", void 0);
     return IconList;
-}(SpeakeasyBase));
-export { IconList };
+}(utils_1.SpeakeasyBase));
+exports.IconList = IconList;

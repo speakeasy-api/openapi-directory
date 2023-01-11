@@ -14,5 +14,5 @@ export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
 export declare class DeleteWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteWorkspace200ApplicationJsonObject?: DeleteWorkspace200ApplicationJson;
+    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJson;
 }

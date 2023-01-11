@@ -104,5 +104,5 @@ export class VirtualizationVirtualMachinesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  virtualizationVirtualMachinesList200ApplicationJsonObject?: VirtualizationVirtualMachinesList200ApplicationJson;
+  virtualizationVirtualMachinesList200ApplicationJSONObject?: VirtualizationVirtualMachinesList200ApplicationJson;
 }

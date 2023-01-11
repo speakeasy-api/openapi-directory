@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BoxScoreVFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoxScoreVResponse = exports.BoxScoreVRequest = exports.BoxScoreVPathParams = exports.BoxScoreVFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BoxScoreVFormatEnum;
 (function (BoxScoreVFormatEnum) {
     BoxScoreVFormatEnum["Xml"] = "XML";
     BoxScoreVFormatEnum["Json"] = "JSON";
-})(BoxScoreVFormatEnum || (BoxScoreVFormatEnum = {}));
+})(BoxScoreVFormatEnum = exports.BoxScoreVFormatEnum || (exports.BoxScoreVFormatEnum = {}));
 var BoxScoreVPathParams = /** @class */ (function (_super) {
     __extends(BoxScoreVPathParams, _super);
     function BoxScoreVPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BoxScoreVPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hometeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hometeam" }),
         __metadata("design:type", String)
     ], BoxScoreVPathParams.prototype, "hometeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], BoxScoreVPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], BoxScoreVPathParams.prototype, "week", void 0);
     return BoxScoreVPathParams;
-}(SpeakeasyBase));
-export { BoxScoreVPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoreVPathParams = BoxScoreVPathParams;
 var BoxScoreVRequest = /** @class */ (function (_super) {
     __extends(BoxScoreVRequest, _super);
     function BoxScoreVRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BoxScoreVPathParams)
     ], BoxScoreVRequest.prototype, "pathParams", void 0);
     return BoxScoreVRequest;
-}(SpeakeasyBase));
-export { BoxScoreVRequest };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoreVRequest = BoxScoreVRequest;
 var BoxScoreVResponse = /** @class */ (function (_super) {
     __extends(BoxScoreVResponse, _super);
     function BoxScoreVResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], BoxScoreVResponse.prototype, "boxScoreV3", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BoxScoreVResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BoxScoreVResponse.prototype, "statusCode", void 0);
     return BoxScoreVResponse;
-}(SpeakeasyBase));
-export { BoxScoreVResponse };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoreVResponse = BoxScoreVResponse;

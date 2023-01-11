@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoreUnsetResponse = exports.StoreUnsetRequest = exports.StoreUnsetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoreUnsetPathParams = /** @class */ (function (_super) {
     __extends(StoreUnsetPathParams, _super);
     function StoreUnsetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=var" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=var" }),
         __metadata("design:type", String)
     ], StoreUnsetPathParams.prototype, "var", void 0);
     return StoreUnsetPathParams;
-}(SpeakeasyBase));
-export { StoreUnsetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoreUnsetPathParams = StoreUnsetPathParams;
 var StoreUnsetRequest = /** @class */ (function (_super) {
     __extends(StoreUnsetRequest, _super);
     function StoreUnsetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoreUnsetPathParams)
     ], StoreUnsetRequest.prototype, "pathParams", void 0);
     return StoreUnsetRequest;
-}(SpeakeasyBase));
-export { StoreUnsetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoreUnsetRequest = StoreUnsetRequest;
 var StoreUnsetResponse = /** @class */ (function (_super) {
     __extends(StoreUnsetResponse, _super);
     function StoreUnsetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoreUnsetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoreUnsetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], StoreUnsetResponse.prototype, "storeUnset200ApplicationJsonString", void 0);
+    ], StoreUnsetResponse.prototype, "storeUnset200ApplicationJSONString", void 0);
     return StoreUnsetResponse;
-}(SpeakeasyBase));
-export { StoreUnsetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoreUnsetResponse = StoreUnsetResponse;

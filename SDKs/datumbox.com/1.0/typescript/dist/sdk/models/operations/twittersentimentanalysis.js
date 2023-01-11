@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TwitterSentimentAnalysisResponse = exports.TwitterSentimentAnalysisRequest = exports.TwitterSentimentAnalysisRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var TwitterSentimentAnalysisRequestBody = /** @class */ (function (_super) {
     __extends(TwitterSentimentAnalysisRequestBody, _super);
     function TwitterSentimentAnalysisRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], TwitterSentimentAnalysisRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], TwitterSentimentAnalysisRequestBody.prototype, "text", void 0);
     return TwitterSentimentAnalysisRequestBody;
-}(SpeakeasyBase));
-export { TwitterSentimentAnalysisRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TwitterSentimentAnalysisRequestBody = TwitterSentimentAnalysisRequestBody;
 var TwitterSentimentAnalysisRequest = /** @class */ (function (_super) {
     __extends(TwitterSentimentAnalysisRequest, _super);
     function TwitterSentimentAnalysisRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", TwitterSentimentAnalysisRequestBody)
     ], TwitterSentimentAnalysisRequest.prototype, "request", void 0);
     return TwitterSentimentAnalysisRequest;
-}(SpeakeasyBase));
-export { TwitterSentimentAnalysisRequest };
+}(utils_1.SpeakeasyBase));
+exports.TwitterSentimentAnalysisRequest = TwitterSentimentAnalysisRequest;
 var TwitterSentimentAnalysisResponse = /** @class */ (function (_super) {
     __extends(TwitterSentimentAnalysisResponse, _super);
     function TwitterSentimentAnalysisResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TwitterSentimentAnalysisResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TwitterSentimentAnalysisResponse.prototype, "statusCode", void 0);
     return TwitterSentimentAnalysisResponse;
-}(SpeakeasyBase));
-export { TwitterSentimentAnalysisResponse };
+}(utils_1.SpeakeasyBase));
+exports.TwitterSentimentAnalysisResponse = TwitterSentimentAnalysisResponse;

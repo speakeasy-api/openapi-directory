@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuildNotDeleted } from "./buildnotdeleted";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchDeleteBuildsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var buildnotdeleted_1 = require("./buildnotdeleted");
 var BatchDeleteBuildsOutput = /** @class */ (function (_super) {
     __extends(BatchDeleteBuildsOutput, _super);
     function BatchDeleteBuildsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildsDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildsDeleted" }),
         __metadata("design:type", Array)
     ], BatchDeleteBuildsOutput.prototype, "buildsDeleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildsNotDeleted", elemType: BuildNotDeleted }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildsNotDeleted", elemType: buildnotdeleted_1.BuildNotDeleted }),
         __metadata("design:type", Array)
     ], BatchDeleteBuildsOutput.prototype, "buildsNotDeleted", void 0);
     return BatchDeleteBuildsOutput;
-}(SpeakeasyBase));
-export { BatchDeleteBuildsOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchDeleteBuildsOutput = BatchDeleteBuildsOutput;

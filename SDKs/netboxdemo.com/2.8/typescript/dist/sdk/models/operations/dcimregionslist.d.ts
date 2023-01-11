@@ -57,5 +57,5 @@ export declare class DcimRegionsListRequest extends SpeakeasyBase {
 export declare class DcimRegionsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRegionsList200ApplicationJsonObject?: DcimRegionsList200ApplicationJson;
+    dcimRegionsList200ApplicationJSONObject?: DcimRegionsList200ApplicationJson;
 }

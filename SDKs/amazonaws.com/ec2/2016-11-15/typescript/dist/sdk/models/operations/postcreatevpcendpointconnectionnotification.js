@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateVpcEndpointConnectionNotificationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateVpcEndpointConnectionNotificationResponse = exports.PostCreateVpcEndpointConnectionNotificationRequest = exports.PostCreateVpcEndpointConnectionNotificationHeaders = exports.PostCreateVpcEndpointConnectionNotificationQueryParams = exports.PostCreateVpcEndpointConnectionNotificationVersionEnum = exports.PostCreateVpcEndpointConnectionNotificationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateVpcEndpointConnectionNotificationActionEnum;
 (function (PostCreateVpcEndpointConnectionNotificationActionEnum) {
     PostCreateVpcEndpointConnectionNotificationActionEnum["CreateVpcEndpointConnectionNotification"] = "CreateVpcEndpointConnectionNotification";
-})(PostCreateVpcEndpointConnectionNotificationActionEnum || (PostCreateVpcEndpointConnectionNotificationActionEnum = {}));
-export var PostCreateVpcEndpointConnectionNotificationVersionEnum;
+})(PostCreateVpcEndpointConnectionNotificationActionEnum = exports.PostCreateVpcEndpointConnectionNotificationActionEnum || (exports.PostCreateVpcEndpointConnectionNotificationActionEnum = {}));
+var PostCreateVpcEndpointConnectionNotificationVersionEnum;
 (function (PostCreateVpcEndpointConnectionNotificationVersionEnum) {
     PostCreateVpcEndpointConnectionNotificationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCreateVpcEndpointConnectionNotificationVersionEnum || (PostCreateVpcEndpointConnectionNotificationVersionEnum = {}));
+})(PostCreateVpcEndpointConnectionNotificationVersionEnum = exports.PostCreateVpcEndpointConnectionNotificationVersionEnum || (exports.PostCreateVpcEndpointConnectionNotificationVersionEnum = {}));
 var PostCreateVpcEndpointConnectionNotificationQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateVpcEndpointConnectionNotificationQueryParams, _super);
     function PostCreateVpcEndpointConnectionNotificationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationQueryParams.prototype, "version", void 0);
     return PostCreateVpcEndpointConnectionNotificationQueryParams;
-}(SpeakeasyBase));
-export { PostCreateVpcEndpointConnectionNotificationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateVpcEndpointConnectionNotificationQueryParams = PostCreateVpcEndpointConnectionNotificationQueryParams;
 var PostCreateVpcEndpointConnectionNotificationHeaders = /** @class */ (function (_super) {
     __extends(PostCreateVpcEndpointConnectionNotificationHeaders, _super);
     function PostCreateVpcEndpointConnectionNotificationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateVpcEndpointConnectionNotificationHeaders;
-}(SpeakeasyBase));
-export { PostCreateVpcEndpointConnectionNotificationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateVpcEndpointConnectionNotificationHeaders = PostCreateVpcEndpointConnectionNotificationHeaders;
 var PostCreateVpcEndpointConnectionNotificationRequest = /** @class */ (function (_super) {
     __extends(PostCreateVpcEndpointConnectionNotificationRequest, _super);
     function PostCreateVpcEndpointConnectionNotificationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateVpcEndpointConnectionNotificationQueryParams)
     ], PostCreateVpcEndpointConnectionNotificationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateVpcEndpointConnectionNotificationHeaders)
     ], PostCreateVpcEndpointConnectionNotificationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateVpcEndpointConnectionNotificationRequest.prototype, "request", void 0);
     return PostCreateVpcEndpointConnectionNotificationRequest;
-}(SpeakeasyBase));
-export { PostCreateVpcEndpointConnectionNotificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateVpcEndpointConnectionNotificationRequest = PostCreateVpcEndpointConnectionNotificationRequest;
 var PostCreateVpcEndpointConnectionNotificationResponse = /** @class */ (function (_super) {
     __extends(PostCreateVpcEndpointConnectionNotificationResponse, _super);
     function PostCreateVpcEndpointConnectionNotificationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateVpcEndpointConnectionNotificationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateVpcEndpointConnectionNotificationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateVpcEndpointConnectionNotificationResponse.prototype, "statusCode", void 0);
     return PostCreateVpcEndpointConnectionNotificationResponse;
-}(SpeakeasyBase));
-export { PostCreateVpcEndpointConnectionNotificationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateVpcEndpointConnectionNotificationResponse = PostCreateVpcEndpointConnectionNotificationResponse;

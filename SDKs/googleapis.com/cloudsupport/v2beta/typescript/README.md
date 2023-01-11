@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudsupportCaseClassificationsSearchRequest, CloudsupportCaseClassificationsSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: CloudsupportCaseClassificationsSearchRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "ut",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "consequatur",
-    fields: "adipisci",
-    key: "itaque",
-    oauthToken: "ut",
-    pageSize: 1440008394181417633,
-    pageToken: "omnis",
-    prettyPrint: true,
-    query: "fugiat",
-    quotaUser: "in",
-    uploadType: "ducimus",
-    uploadProtocol: "sed",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    pageSize: 6044372234677422456,
+    pageToken: "fugit",
+    prettyPrint: false,
+    query: "nihil",
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

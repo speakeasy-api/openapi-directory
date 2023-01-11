@@ -44,5 +44,5 @@ export class GetNetworkTrafficResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkTraffic200ApplicationJsonObject?: Map<string, any>;
+  getNetworkTraffic200ApplicationJSONObject?: Record<string, any>;
 }

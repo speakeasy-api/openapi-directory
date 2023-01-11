@@ -1,7 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainNameStatusEnum } from "./domainnamestatusenum";
-import { EndpointTypeEnum } from "./endpointtypeenum";
-import { SecurityPolicyEnum } from "./securitypolicyenum";
 
 
 
@@ -11,32 +8,32 @@ import { SecurityPolicyEnum } from "./securitypolicyenum";
 **/
 export class DomainNameConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiGatewayDomainName" })
-  apiGatewayDomainName?: string;
+  apiGatewayDomainName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CertificateArn" })
-  certificateArn?: string;
+  certificateArn?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CertificateName" })
-  certificateName?: string;
+  certificateName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CertificateUploadDate" })
-  certificateUploadDate?: Date;
+  certificateUploadDate?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DomainNameStatus" })
-  domainNameStatus?: DomainNameStatusEnum;
+  domainNameStatus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DomainNameStatusMessage" })
-  domainNameStatusMessage?: string;
+  domainNameStatusMessage?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=EndpointType" })
-  endpointType?: EndpointTypeEnum;
+  endpointType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=HostedZoneId" })
-  hostedZoneId?: string;
+  hostedZoneId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=OwnershipVerificationCertificateArn" })
-  ownershipVerificationCertificateArn?: string;
+  ownershipVerificationCertificateArn?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=SecurityPolicy" })
-  securityPolicy?: SecurityPolicyEnum;
+  securityPolicy?: Record<string, any>;
 }

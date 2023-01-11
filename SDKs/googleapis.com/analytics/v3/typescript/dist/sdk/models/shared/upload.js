@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Upload = void 0;
+var utils_1 = require("../../../internal/utils");
 // Upload
 /**
  * Metadata returned for an upload operation.
@@ -33,33 +36,33 @@ var Upload = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Upload.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDataSourceId" }),
         __metadata("design:type", String)
     ], Upload.prototype, "customDataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
         __metadata("design:type", Array)
     ], Upload.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Upload.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Upload.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Upload.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadTime" }),
         __metadata("design:type", Date)
     ], Upload.prototype, "uploadTime", void 0);
     return Upload;
-}(SpeakeasyBase));
-export { Upload };
+}(utils_1.SpeakeasyBase));
+exports.Upload = Upload;

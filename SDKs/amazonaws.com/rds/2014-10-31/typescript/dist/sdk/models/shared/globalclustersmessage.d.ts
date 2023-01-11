@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GlobalCluster } from "./globalcluster";
+import { GlobalClusterList } from "./globalclusterlist";
 export declare class GlobalClustersMessage extends SpeakeasyBase {
-    globalClusters?: GlobalCluster[];
+    globalClusters?: GlobalClusterList[];
     marker?: string;
 }

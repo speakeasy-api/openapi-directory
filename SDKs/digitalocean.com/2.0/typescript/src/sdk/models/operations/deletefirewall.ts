@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DeleteFirewallPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=firewall_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=firewall_id" })
   firewallId: string;
 }
 
 
-export class DeleteFirewallRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DeleteFirewallPathParams;
-}
-
-
 export class DeleteFirewall401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DeleteFirewallRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DeleteFirewallPathParams;
+}
+
+
 export class DeleteFirewallResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  deleteFirewall401ApplicationJsonObject?: DeleteFirewall401ApplicationJson;
+  @SpeakeasyMetadata()
+  deleteFirewall401ApplicationJSONObject?: DeleteFirewall401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

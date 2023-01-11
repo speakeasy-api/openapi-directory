@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadInventoryResponse = exports.UploadInventoryRequest = exports.UploadInventory200ApplicationJson = exports.UploadInventory200ApplicationJsonResultEnum = exports.UploadInventory200ApplicationJsonActionEnum = exports.UploadInventoryRequestBody = exports.UploadInventoryRequestBodySignature = exports.UploadInventoryRequestBodyFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var UploadInventoryRequestBodyFile = /** @class */ (function (_super) {
     __extends(UploadInventoryRequestBodyFile, _super);
     function UploadInventoryRequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], UploadInventoryRequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], UploadInventoryRequestBodyFile.prototype, "file", void 0);
     return UploadInventoryRequestBodyFile;
-}(SpeakeasyBase));
-export { UploadInventoryRequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.UploadInventoryRequestBodyFile = UploadInventoryRequestBodyFile;
 var UploadInventoryRequestBodySignature = /** @class */ (function (_super) {
     __extends(UploadInventoryRequestBodySignature, _super);
     function UploadInventoryRequestBodySignature() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], UploadInventoryRequestBodySignature.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=signature" }),
         __metadata("design:type", String)
     ], UploadInventoryRequestBodySignature.prototype, "signature", void 0);
     return UploadInventoryRequestBodySignature;
-}(SpeakeasyBase));
-export { UploadInventoryRequestBodySignature };
+}(utils_1.SpeakeasyBase));
+exports.UploadInventoryRequestBodySignature = UploadInventoryRequestBodySignature;
 var UploadInventoryRequestBody = /** @class */ (function (_super) {
     __extends(UploadInventoryRequestBody, _super);
     function UploadInventoryRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", UploadInventoryRequestBodyFile)
     ], UploadInventoryRequestBody.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", UploadInventoryRequestBodySignature)
     ], UploadInventoryRequestBody.prototype, "signature", void 0);
     return UploadInventoryRequestBody;
-}(SpeakeasyBase));
-export { UploadInventoryRequestBody };
-export var UploadInventory200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadInventoryRequestBody = UploadInventoryRequestBody;
+var UploadInventory200ApplicationJsonActionEnum;
 (function (UploadInventory200ApplicationJsonActionEnum) {
     UploadInventory200ApplicationJsonActionEnum["UploadInventory"] = "uploadInventory";
-})(UploadInventory200ApplicationJsonActionEnum || (UploadInventory200ApplicationJsonActionEnum = {}));
-export var UploadInventory200ApplicationJsonResultEnum;
+})(UploadInventory200ApplicationJsonActionEnum = exports.UploadInventory200ApplicationJsonActionEnum || (exports.UploadInventory200ApplicationJsonActionEnum = {}));
+var UploadInventory200ApplicationJsonResultEnum;
 (function (UploadInventory200ApplicationJsonResultEnum) {
     UploadInventory200ApplicationJsonResultEnum["Success"] = "success";
     UploadInventory200ApplicationJsonResultEnum["Error"] = "error";
-})(UploadInventory200ApplicationJsonResultEnum || (UploadInventory200ApplicationJsonResultEnum = {}));
+})(UploadInventory200ApplicationJsonResultEnum = exports.UploadInventory200ApplicationJsonResultEnum || (exports.UploadInventory200ApplicationJsonResultEnum = {}));
 var UploadInventory200ApplicationJson = /** @class */ (function (_super) {
     __extends(UploadInventory200ApplicationJson, _super);
     function UploadInventory200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UploadInventory200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], UploadInventory200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], UploadInventory200ApplicationJson.prototype, "result", void 0);
     return UploadInventory200ApplicationJson;
-}(SpeakeasyBase));
-export { UploadInventory200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UploadInventory200ApplicationJson = UploadInventory200ApplicationJson;
 var UploadInventoryRequest = /** @class */ (function (_super) {
     __extends(UploadInventoryRequest, _super);
     function UploadInventoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", UploadInventoryRequestBody)
     ], UploadInventoryRequest.prototype, "request", void 0);
     return UploadInventoryRequest;
-}(SpeakeasyBase));
-export { UploadInventoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.UploadInventoryRequest = UploadInventoryRequest;
 var UploadInventoryResponse = /** @class */ (function (_super) {
     __extends(UploadInventoryResponse, _super);
     function UploadInventoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UploadInventoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UploadInventoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UploadInventory200ApplicationJson)
-    ], UploadInventoryResponse.prototype, "uploadInventory200ApplicationJsonObject", void 0);
+    ], UploadInventoryResponse.prototype, "uploadInventory200ApplicationJSONObject", void 0);
     return UploadInventoryResponse;
-}(SpeakeasyBase));
-export { UploadInventoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.UploadInventoryResponse = UploadInventoryResponse;

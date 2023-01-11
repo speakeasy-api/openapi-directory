@@ -1,5 +1,8 @@
-export var ConnectionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionTypeEnum = void 0;
+var ConnectionTypeEnum;
 (function (ConnectionTypeEnum) {
     ConnectionTypeEnum["Websocket"] = "WEBSOCKET";
     ConnectionTypeEnum["ConnectionCredentials"] = "CONNECTION_CREDENTIALS";
-})(ConnectionTypeEnum || (ConnectionTypeEnum = {}));
+})(ConnectionTypeEnum = exports.ConnectionTypeEnum || (exports.ConnectionTypeEnum = {}));

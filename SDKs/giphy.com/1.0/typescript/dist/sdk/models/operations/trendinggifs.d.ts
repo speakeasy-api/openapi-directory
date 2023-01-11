@@ -16,5 +16,5 @@ export declare class TrendingGifsRequest extends SpeakeasyBase {
 export declare class TrendingGifsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    trendingGifs200ApplicationJsonObject?: TrendingGifs200ApplicationJson;
+    trendingGifs200ApplicationJSONObject?: TrendingGifs200ApplicationJson;
 }

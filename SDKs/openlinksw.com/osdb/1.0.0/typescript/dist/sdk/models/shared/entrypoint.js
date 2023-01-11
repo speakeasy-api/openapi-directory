@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntryPointParameter } from "./entrypointparameter";
-export var EntryPointHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryPoint = exports.EntryPointHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var entrypointparameter_1 = require("./entrypointparameter");
+var EntryPointHttpMethodEnum;
 (function (EntryPointHttpMethodEnum) {
     EntryPointHttpMethodEnum["Get"] = "GET";
     EntryPointHttpMethodEnum["Put"] = "PUT";
     EntryPointHttpMethodEnum["Post"] = "POST";
     EntryPointHttpMethodEnum["Delete"] = "DELETE";
-})(EntryPointHttpMethodEnum || (EntryPointHttpMethodEnum = {}));
+})(EntryPointHttpMethodEnum = exports.EntryPointHttpMethodEnum || (exports.EntryPointHttpMethodEnum = {}));
 var EntryPoint = /** @class */ (function (_super) {
     __extends(EntryPoint, _super);
     function EntryPoint() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_types" }),
         __metadata("design:type", Array)
     ], EntryPoint.prototype, "contentTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding_types" }),
         __metadata("design:type", Array)
     ], EntryPoint.prototype, "encodingTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: EntryPointParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: entrypointparameter_1.EntryPointParameter }),
         __metadata("design:type", Array)
     ], EntryPoint.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url_template" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "urlTemplate", void 0);
     return EntryPoint;
-}(SpeakeasyBase));
-export { EntryPoint };
+}(utils_1.SpeakeasyBase));
+exports.EntryPoint = EntryPoint;

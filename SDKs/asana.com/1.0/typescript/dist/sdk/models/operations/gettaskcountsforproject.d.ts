@@ -20,5 +20,5 @@ export declare class GetTaskCountsForProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTaskCountsForProject200ApplicationJsonObject?: GetTaskCountsForProject200ApplicationJson;
+    getTaskCountsForProject200ApplicationJSONObject?: GetTaskCountsForProject200ApplicationJson;
 }

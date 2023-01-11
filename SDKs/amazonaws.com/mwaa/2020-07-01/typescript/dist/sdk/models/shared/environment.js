@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LastUpdate } from "./lastupdate";
-import { LoggingConfiguration } from "./loggingconfiguration";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { EnvironmentStatusEnum } from "./environmentstatusenum";
-import { WebserverAccessModeEnum } from "./webserveraccessmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Environment = void 0;
+var utils_1 = require("../../../internal/utils");
+var lastupdate_1 = require("./lastupdate");
+var loggingconfiguration_1 = require("./loggingconfiguration");
+var networkconfiguration_1 = require("./networkconfiguration");
+var environmentstatusenum_1 = require("./environmentstatusenum");
+var webserveraccessmodeenum_1 = require("./webserveraccessmodeenum");
 // Environment
 /**
  * The Amazon Managed Workflows for Apache Airflow (MWAA) environment.
@@ -38,109 +41,109 @@ var Environment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AirflowConfigurationOptions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AirflowConfigurationOptions" }),
+        __metadata("design:type", Object)
     ], Environment.prototype, "airflowConfigurationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AirflowVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AirflowVersion" }),
         __metadata("design:type", String)
     ], Environment.prototype, "airflowVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", Date)
     ], Environment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DagS3Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DagS3Path" }),
         __metadata("design:type", String)
     ], Environment.prototype, "dagS3Path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnvironmentClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnvironmentClass" }),
         __metadata("design:type", String)
     ], Environment.prototype, "environmentClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecutionRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecutionRoleArn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "executionRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKey" }),
         __metadata("design:type", String)
     ], Environment.prototype, "kmsKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdate" }),
-        __metadata("design:type", LastUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdate" }),
+        __metadata("design:type", lastupdate_1.LastUpdate)
     ], Environment.prototype, "lastUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoggingConfiguration" }),
-        __metadata("design:type", LoggingConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoggingConfiguration" }),
+        __metadata("design:type", loggingconfiguration_1.LoggingConfiguration)
     ], Environment.prototype, "loggingConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxWorkers" }),
         __metadata("design:type", Number)
     ], Environment.prototype, "maxWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinWorkers" }),
         __metadata("design:type", Number)
     ], Environment.prototype, "minWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Environment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NetworkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NetworkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], Environment.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PluginsS3ObjectVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PluginsS3ObjectVersion" }),
         __metadata("design:type", String)
     ], Environment.prototype, "pluginsS3ObjectVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PluginsS3Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PluginsS3Path" }),
         __metadata("design:type", String)
     ], Environment.prototype, "pluginsS3Path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequirementsS3ObjectVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequirementsS3ObjectVersion" }),
         __metadata("design:type", String)
     ], Environment.prototype, "requirementsS3ObjectVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequirementsS3Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequirementsS3Path" }),
         __metadata("design:type", String)
     ], Environment.prototype, "requirementsS3Path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedulers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedulers" }),
         __metadata("design:type", Number)
     ], Environment.prototype, "schedulers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceRoleArn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "serviceRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceBucketArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceBucketArn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "sourceBucketArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Environment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], Environment.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebserverAccessMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebserverAccessMode" }),
         __metadata("design:type", String)
     ], Environment.prototype, "webserverAccessMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebserverUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebserverUrl" }),
         __metadata("design:type", String)
     ], Environment.prototype, "webserverUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WeeklyMaintenanceWindowStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WeeklyMaintenanceWindowStart" }),
         __metadata("design:type", String)
     ], Environment.prototype, "weeklyMaintenanceWindowStart", void 0);
     return Environment;
-}(SpeakeasyBase));
-export { Environment };
+}(utils_1.SpeakeasyBase));
+exports.Environment = Environment;

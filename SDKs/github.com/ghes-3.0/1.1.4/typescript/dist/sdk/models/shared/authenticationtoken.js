@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Repository } from "./repository";
-export var AuthenticationTokenRepositorySelectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticationToken = exports.AuthenticationTokenRepositorySelectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var repository_1 = require("./repository");
+var AuthenticationTokenRepositorySelectionEnum;
 (function (AuthenticationTokenRepositorySelectionEnum) {
     AuthenticationTokenRepositorySelectionEnum["All"] = "all";
     AuthenticationTokenRepositorySelectionEnum["Selected"] = "selected";
-})(AuthenticationTokenRepositorySelectionEnum || (AuthenticationTokenRepositorySelectionEnum = {}));
+})(AuthenticationTokenRepositorySelectionEnum = exports.AuthenticationTokenRepositorySelectionEnum || (exports.AuthenticationTokenRepositorySelectionEnum = {}));
 // AuthenticationToken
 /**
  * Authentication Token
@@ -39,29 +42,29 @@ var AuthenticationToken = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", Date)
     ], AuthenticationToken.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
+        __metadata("design:type", Object)
     ], AuthenticationToken.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositories", elemType: Repository }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositories", elemType: repository_1.Repository }),
         __metadata("design:type", Array)
     ], AuthenticationToken.prototype, "repositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_selection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_selection" }),
         __metadata("design:type", String)
     ], AuthenticationToken.prototype, "repositorySelection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=single_file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=single_file" }),
         __metadata("design:type", String)
     ], AuthenticationToken.prototype, "singleFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], AuthenticationToken.prototype, "token", void 0);
     return AuthenticationToken;
-}(SpeakeasyBase));
-export { AuthenticationToken };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticationToken = AuthenticationToken;

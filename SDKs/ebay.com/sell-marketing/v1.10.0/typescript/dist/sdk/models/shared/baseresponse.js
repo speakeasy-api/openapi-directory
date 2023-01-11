@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
 // BaseResponse
 /**
  * This type defines the fields for any warning error messages.
@@ -34,9 +37,9 @@ var BaseResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], BaseResponse.prototype, "warnings", void 0);
     return BaseResponse;
-}(SpeakeasyBase));
-export { BaseResponse };
+}(utils_1.SpeakeasyBase));
+exports.BaseResponse = BaseResponse;

@@ -17,7 +17,7 @@ export class ProtocolIpmiGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolIpmiGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configIpmi?: shared.ConfigIpmi;
+  configIPMI?: shared.ConfigIpmi;
 
   @SpeakeasyMetadata()
   contentType: string;

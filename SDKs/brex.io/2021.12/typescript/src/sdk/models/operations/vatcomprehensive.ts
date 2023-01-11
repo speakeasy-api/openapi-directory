@@ -50,8 +50,8 @@ export class VatComprehensiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vatComprehensive200ApplicationJsonAny?: any;
+  vatComprehensive200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  vatComprehensiveDefaultApplicationJsonAny?: any;
+  vatComprehensiveDefaultApplicationJSONAny?: any;
 }

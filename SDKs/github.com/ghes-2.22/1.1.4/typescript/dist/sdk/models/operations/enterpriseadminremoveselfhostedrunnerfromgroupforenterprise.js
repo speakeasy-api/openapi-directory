@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse = exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest = exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams, _super);
     function EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams.prototype, "runnerGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams.prototype, "runnerId", void 0);
     return EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams = EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams;
 var EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest, _super);
     function EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest = EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest;
 var EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse, _super);
     function EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse = EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse;

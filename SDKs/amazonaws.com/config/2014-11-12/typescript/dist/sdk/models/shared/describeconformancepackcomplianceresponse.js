@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConformancePackRuleCompliance } from "./conformancepackrulecompliance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeConformancePackComplianceResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var conformancepackrulecompliance_1 = require("./conformancepackrulecompliance");
 var DescribeConformancePackComplianceResponse = /** @class */ (function (_super) {
     __extends(DescribeConformancePackComplianceResponse, _super);
     function DescribeConformancePackComplianceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackName" }),
         __metadata("design:type", String)
     ], DescribeConformancePackComplianceResponse.prototype, "conformancePackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackRuleComplianceList", elemType: ConformancePackRuleCompliance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackRuleComplianceList", elemType: conformancepackrulecompliance_1.ConformancePackRuleCompliance }),
         __metadata("design:type", Array)
     ], DescribeConformancePackComplianceResponse.prototype, "conformancePackRuleComplianceList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeConformancePackComplianceResponse.prototype, "nextToken", void 0);
     return DescribeConformancePackComplianceResponse;
-}(SpeakeasyBase));
-export { DescribeConformancePackComplianceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeConformancePackComplianceResponse = DescribeConformancePackComplianceResponse;

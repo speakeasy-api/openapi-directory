@@ -7,8 +7,8 @@ export declare class CompanyMonitorChangeTypesListRequest extends SpeakeasyBase 
     security: CompanyMonitorChangeTypesListSecurity;
 }
 export declare class CompanyMonitorChangeTypesListResponse extends SpeakeasyBase {
-    companyMonitorChangeTypesList200ApplicationJsonStrings?: string[];
-    companyMonitorChangeTypesListDefaultApplicationJsonAny?: any;
+    companyMonitorChangeTypesList200ApplicationJSONStrings?: string[];
+    companyMonitorChangeTypesListDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

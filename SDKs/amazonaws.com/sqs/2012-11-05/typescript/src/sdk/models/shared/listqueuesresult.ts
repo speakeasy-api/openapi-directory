@@ -11,5 +11,5 @@ export class ListQueuesResult extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata()
-  queueUrls?: string[];
+  queueUrls?: Record<string, any>[];
 }

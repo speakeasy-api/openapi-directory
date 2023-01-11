@@ -62,7 +62,7 @@ export class EventarcProjectsLocationsOperationsCancelRequest extends SpeakeasyB
   queryParams: EventarcProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: EventarcProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class EventarcProjectsLocationsOperationsCancelResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

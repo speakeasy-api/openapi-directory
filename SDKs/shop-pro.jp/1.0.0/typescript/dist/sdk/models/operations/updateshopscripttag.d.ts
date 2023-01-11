@@ -43,5 +43,5 @@ export declare class UpdateShopScriptTagRequest extends SpeakeasyBase {
 export declare class UpdateShopScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateShopScriptTag200ApplicationJsonObject?: UpdateShopScriptTag200ApplicationJson;
+    updateShopScriptTag200ApplicationJSONObject?: UpdateShopScriptTag200ApplicationJson;
 }

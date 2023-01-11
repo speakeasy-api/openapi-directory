@@ -198,5 +198,5 @@ export class PostQueryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postQuery200ApplicationJsonObject?: PostQuery200ApplicationJson;
+  postQuery200ApplicationJSONObject?: PostQuery200ApplicationJson;
 }

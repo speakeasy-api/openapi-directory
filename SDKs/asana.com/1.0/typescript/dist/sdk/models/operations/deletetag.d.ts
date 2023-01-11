@@ -10,7 +10,7 @@ export declare class DeleteTagQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeleteTag200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeleteTagRequest extends SpeakeasyBase {
     pathParams: DeleteTagPathParams;
@@ -20,5 +20,5 @@ export declare class DeleteTagResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deleteTag200ApplicationJsonObject?: DeleteTag200ApplicationJson;
+    deleteTag200ApplicationJSONObject?: DeleteTag200ApplicationJson;
 }

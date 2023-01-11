@@ -20,7 +20,7 @@ export class FileUploadPartEntity extends SpeakeasyBase {
   expires?: string;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=http_method" })
   httpMethod?: string;
@@ -32,7 +32,7 @@ export class FileUploadPartEntity extends SpeakeasyBase {
   parallelParts?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=part_number" })
   partNumber?: number;
@@ -47,7 +47,7 @@ export class FileUploadPartEntity extends SpeakeasyBase {
   ref?: string;
 
   @SpeakeasyMetadata({ data: "json, name=send" })
-  send?: Map<string, any>;
+  send?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=upload_uri" })
   uploadUri?: string;

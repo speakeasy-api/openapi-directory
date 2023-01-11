@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeSuggestersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeSuggestersResponse = exports.GetDescribeSuggestersRequest = exports.GetDescribeSuggestersHeaders = exports.GetDescribeSuggestersQueryParams = exports.GetDescribeSuggestersVersionEnum = exports.GetDescribeSuggestersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeSuggestersActionEnum;
 (function (GetDescribeSuggestersActionEnum) {
     GetDescribeSuggestersActionEnum["DescribeSuggesters"] = "DescribeSuggesters";
-})(GetDescribeSuggestersActionEnum || (GetDescribeSuggestersActionEnum = {}));
-export var GetDescribeSuggestersVersionEnum;
+})(GetDescribeSuggestersActionEnum = exports.GetDescribeSuggestersActionEnum || (exports.GetDescribeSuggestersActionEnum = {}));
+var GetDescribeSuggestersVersionEnum;
 (function (GetDescribeSuggestersVersionEnum) {
     GetDescribeSuggestersVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(GetDescribeSuggestersVersionEnum || (GetDescribeSuggestersVersionEnum = {}));
+})(GetDescribeSuggestersVersionEnum = exports.GetDescribeSuggestersVersionEnum || (exports.GetDescribeSuggestersVersionEnum = {}));
 var GetDescribeSuggestersQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeSuggestersQueryParams, _super);
     function GetDescribeSuggestersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Deployed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Deployed" }),
         __metadata("design:type", Boolean)
     ], GetDescribeSuggestersQueryParams.prototype, "deployed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SuggesterNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SuggesterNames" }),
         __metadata("design:type", Array)
     ], GetDescribeSuggestersQueryParams.prototype, "suggesterNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersQueryParams.prototype, "version", void 0);
     return GetDescribeSuggestersQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeSuggestersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSuggestersQueryParams = GetDescribeSuggestersQueryParams;
 var GetDescribeSuggestersHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeSuggestersHeaders, _super);
     function GetDescribeSuggestersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeSuggestersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeSuggestersHeaders;
-}(SpeakeasyBase));
-export { GetDescribeSuggestersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSuggestersHeaders = GetDescribeSuggestersHeaders;
 var GetDescribeSuggestersRequest = /** @class */ (function (_super) {
     __extends(GetDescribeSuggestersRequest, _super);
     function GetDescribeSuggestersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeSuggestersQueryParams)
     ], GetDescribeSuggestersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeSuggestersHeaders)
     ], GetDescribeSuggestersRequest.prototype, "headers", void 0);
     return GetDescribeSuggestersRequest;
-}(SpeakeasyBase));
-export { GetDescribeSuggestersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSuggestersRequest = GetDescribeSuggestersRequest;
 var GetDescribeSuggestersResponse = /** @class */ (function (_super) {
     __extends(GetDescribeSuggestersResponse, _super);
     function GetDescribeSuggestersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeSuggestersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeSuggestersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeSuggestersResponse.prototype, "statusCode", void 0);
     return GetDescribeSuggestersResponse;
-}(SpeakeasyBase));
-export { GetDescribeSuggestersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSuggestersResponse = GetDescribeSuggestersResponse;

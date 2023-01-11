@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1CatalogItem } from "./googlecloudrecommendationenginev1beta1catalogitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1CatalogInlineSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1catalogitem_1 = require("./googlecloudrecommendationenginev1beta1catalogitem");
 // GoogleCloudRecommendationengineV1beta1CatalogInlineSource
 /**
  * The inline source for the input config for ImportCatalogItems method.
@@ -34,9 +37,9 @@ var GoogleCloudRecommendationengineV1beta1CatalogInlineSource = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catalogItems", elemType: GoogleCloudRecommendationengineV1beta1CatalogItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catalogItems", elemType: googlecloudrecommendationenginev1beta1catalogitem_1.GoogleCloudRecommendationengineV1beta1CatalogItem }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1CatalogInlineSource.prototype, "catalogItems", void 0);
     return GoogleCloudRecommendationengineV1beta1CatalogInlineSource;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1CatalogInlineSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1CatalogInlineSource = GoogleCloudRecommendationengineV1beta1CatalogInlineSource;

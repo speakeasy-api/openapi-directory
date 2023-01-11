@@ -22,5 +22,5 @@ export class ProtocolSnmpv3GetEnginebootsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmpv3GetEngineboots200ApplicationJsonInt32Integer?: number;
+  protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer?: number;
 }

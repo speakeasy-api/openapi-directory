@@ -23,7 +23,7 @@ export declare class RegisterWorkspaceDirectoryResponse extends SpeakeasyBase {
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     operationNotSupportedException?: any;
-    registerWorkspaceDirectoryResult?: Map<string, any>;
+    registerWorkspaceDirectoryResult?: Record<string, any>;
     resourceLimitExceededException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

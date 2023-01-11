@@ -1,0 +1,1109 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Collections {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * collectionsAddMetadata - Add Metadata or Subjects to a Entitiy in a Collection
+   *
+   * List of user created metadata for entities within a collection.
+   * #### Permissions
+   * To edit this collection a user must have collections write permissions
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsAddMetadata(
+    req: operations.CollectionsAddMetadataRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsAddMetadataResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsAddMetadataRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsAddMetadataResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsCollectedMetadata - Retrieve subject data for a specific piece of metadata info for a collection
+   *
+   * 
+   * #### Permissions
+   * In order to view these subject it must be a public collection or a user must have read permissions for collection.
+   * 
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsCollectedMetadata(
+    req: operations.CollectionsCollectedMetadataRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsCollectedMetadataResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsCollectedMetadataRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsCollectedMetadataResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsCreate - Create a Collection
+   *
+   * Retrieves a list collections, either public or related to the user
+   * #### Permissions
+   * Anonymous users are able to see all public collections at this endpoint. Logged in users will only be able to see their own content.
+   * 
+   * Comments on private nodes are only visible to contributors and administrators on the parent node.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of comment objects. Each resource in the array is a separate comment object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsCreate(
+    req: operations.CollectionsCreateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsCreateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsCreateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/collections/";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsCreateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsDelete - Delete a Collection
+   *
+   * Deletes a collection, if the user has appropriate permissions.
+   * #### Permissions
+   * Users must have write permissions on a collection in order to delete it
+   * #### Returns
+   * Nothing is returned in the body
+  **/
+  collectionsDelete(
+    req: operations.CollectionsDeleteRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsDeleteResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsDeleteRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsDetail - Retrieve a Collection
+   *
+   * Retrieves a collection, if the user has appropriate permissions.
+   * 
+   * #### Permissions
+   * Anonymous users are able to see all public collections at this endpoint. Logged in users will only be able to see their own content.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsDetail(
+    req: operations.CollectionsDetailRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsDetailResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsDetailRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsDetailResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `*/*`)) {
+                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
+                let out: Uint8Array = new Uint8Array(resBody.length);
+                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
+                res.body = out;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedNodesList - List All Linked Nodes for a Collection
+   *
+   * List of all nodes linked to the given collection.
+   * #### Permissions
+   * This returns all public nodes associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of up to 10 nodes. Each resource in the array is a separate node object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedNodesList(
+    req: operations.CollectionsLinkedNodesListRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedNodesListResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedNodesListRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_nodes", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedNodesListResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedNodesRelationships - Link Nodes to Collection
+   *
+   * This endpoint allow users to a add a node to a collection by issuing a POST request.
+   * #### Permissions
+   * This returns all public nodes associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of comment objects. Each resource in the array is a separate comment object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedNodesRelationships(
+    req: operations.CollectionsLinkedNodesRelationshipsRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedNodesRelationshipsResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedNodesRelationshipsRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_nodes/relationships/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedNodesRelationshipsResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedNodesRelationshipsCreate - Give a Sparse List of Node Ids
+   *
+   * List of all the node ids linked to the given collection.
+   * #### Permissions
+   * This returns all public nodes associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedNodesRelationshipsCreate(
+    req: operations.CollectionsLinkedNodesRelationshipsCreateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedNodesRelationshipsCreateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedNodesRelationshipsCreateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_nodes/relationships/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedNodesRelationshipsCreateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedNodesRelationshipsDelete - Remove Nodes From Collection
+   *
+   * 
+   * This removes associated nodes from a collection
+   * #### Permissions
+   * Any user with write permissions on this collection should be to remove nodes from this collection.
+   * #### Returns
+   * Nothing in the response body.
+  **/
+  collectionsLinkedNodesRelationshipsDelete(
+    req: operations.CollectionsLinkedNodesRelationshipsDeleteRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedNodesRelationshipsDeleteResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedNodesRelationshipsDeleteRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_nodes/relationships/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedNodesRelationshipsDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedPreprintsList - List All Linked Preprints for a Collection
+   *
+   * List of all preprints linked to the given collection.
+   * #### Permissions
+   * This returns all public preprints associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of up to 10 nodes. Each resource in the array is a separate node object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedPreprintsList(
+    req: operations.CollectionsLinkedPreprintsListRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedPreprintsListResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedPreprintsListRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_preprints/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedPreprintsListResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedRegistrationsList - List All Linked Registrations for a Collection
+   *
+   * List of all registrations linked to the given collection.
+   * #### Permissions
+   * This returns all public registrations associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of up to 10 nodes. Each resource in the array is a separate node object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedRegistrationsList(
+    req: operations.CollectionsLinkedRegistrationsListRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedRegistrationsListResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedRegistrationsListRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_registrations/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedRegistrationsListResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedRegistrationsRelationships - Link Registrations to Collection
+   *
+   * This endpoint allow users to a add a registration to a collection by issuing a POST request.
+   * #### Permissions
+   * This returns all public registrations associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of comment objects. Each resource in the array is a separate comment object.
+   * 
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedRegistrationsRelationships(
+    req: operations.CollectionsLinkedRegistrationsRelationshipsRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedRegistrationsRelationshipsResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedRegistrationsRelationshipsRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_registrations/relationships/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedRegistrationsRelationshipsResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedRegistrationsRelationshipsCreate - Give a Sparse List of Registrations Ids
+   *
+   * List of all the registration ids linked to the given collection.
+   * #### Permissions
+   * This returns all public registrations associated with this collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsLinkedRegistrationsRelationshipsCreate(
+    req: operations.CollectionsLinkedRegistrationsRelationshipsCreateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedRegistrationsRelationshipsCreateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_registrations/relationships/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsLinkedRegistrationsRelationshipsDelete - Remove Registrations From Collection
+   *
+   * 
+   * This removes associated registrations from a collection
+   * #### Permissions
+   * Any user with write permissions on this collection should be to remove registrations from this collection.
+   * #### Returns
+   * Nothing in the response body.
+  **/
+  collectionsLinkedRegistrationsRelationshipsDelete(
+    req: operations.CollectionsLinkedRegistrationsRelationshipsDeleteRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsLinkedRegistrationsRelationshipsDeleteRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/linked_registrations/relationships/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsList - List all Collections
+   *
+   * Retrieves a list collections, either public or related to the user
+   * #### Permissions
+   * Anonymous users are able to see all public collections at this endpoint. Logged in users will only be able to see their own content.
+   * 
+   * Comments on private nodes are only visible to contributors and administrators on the parent node.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsList(
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsListResponse> {
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/collections/";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsListResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `*/*`)) {
+                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
+                let out: Uint8Array = new Uint8Array(resBody.length);
+                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
+                res.body = out;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataDelete - Delete Collection Metadata from entitiy
+   *
+   * 
+   * #### Permissions
+   * Only a user with collection admin permissions can delete collected metadata
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataDelete(
+    req: operations.CollectionsMetadataDeleteRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataDeleteResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataDeleteRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataDeleteResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataDetail - Add Metadata or Subjects to an Entity in a Collection
+   *
+   * List of user created metadata for entities within a collection.
+   * #### Permissions
+   * To edit this collection a user must have collections write permissions
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataDetail(
+    req: operations.CollectionsMetadataDetailRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataDetailResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataDetailRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataDetailResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataRegistrationsDetail - Retrieve Specific Metadata for a Collection
+   *
+   * 
+   * #### Permissions
+   * In order to view this metadata it must be public or a user must have read permissions for collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataRegistrationsDetail(
+    req: operations.CollectionsMetadataRegistrationsDetailRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataRegistrationsDetailResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataRegistrationsDetailRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataRegistrationsDetailResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataRegistrationsList - Retrieve a list of collected metadata for a collection
+   *
+   * List of user created metadata for entities within a collection.
+   * #### Permissions
+   * In order to view this metadata it must be public or a user must have read permissions for collection.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataRegistrationsList(
+    req: operations.CollectionsMetadataRegistrationsListRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataRegistrationsListResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataRegistrationsListRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataRegistrationsListResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataSubjectsRelationships - Retrieve subject metadata for a specific piece of metadata in a collection
+   *
+   * 
+   * #### Permissions
+   * This is public for a logged out user when an entity is public.
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataSubjectsRelationships(
+    req: operations.CollectionsMetadataSubjectsRelationshipsRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataSubjectsRelationshipsResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataSubjectsRelationshipsRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataSubjectsRelationshipsResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * collectionsMetadataSubjectsRelationshipsUpdate - Update subjects for a specific piece of metadata in a collection
+   *
+   * 
+   * #### Permissions
+   * This is editable for a user with a write permission for this collection.
+   * 
+   * #### Returns
+   * Returns a JSON object containing `data` and `links` keys.
+   * 
+   * The `data` key contains an array of nodes ids.
+   * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+  **/
+  collectionsMetadataSubjectsRelationshipsUpdate(
+    req: operations.CollectionsMetadataSubjectsRelationshipsUpdateRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CollectionsMetadataSubjectsRelationshipsUpdateRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

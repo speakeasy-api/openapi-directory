@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerLoginResponse = exports.SessionControllerLoginRequest = exports.SessionControllerLoginQueryParams = exports.SessionControllerLoginPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerLoginPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerLoginPathParams, _super);
     function SessionControllerLoginPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerLoginPathParams.prototype, "shortName", void 0);
     return SessionControllerLoginPathParams;
-}(SpeakeasyBase));
-export { SessionControllerLoginPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLoginPathParams = SessionControllerLoginPathParams;
 var SessionControllerLoginQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerLoginQueryParams, _super);
     function SessionControllerLoginQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=password" }),
         __metadata("design:type", String)
     ], SessionControllerLoginQueryParams.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], SessionControllerLoginQueryParams.prototype, "username", void 0);
     return SessionControllerLoginQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerLoginQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLoginQueryParams = SessionControllerLoginQueryParams;
 var SessionControllerLoginRequest = /** @class */ (function (_super) {
     __extends(SessionControllerLoginRequest, _super);
     function SessionControllerLoginRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerLoginPathParams)
     ], SessionControllerLoginRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerLoginQueryParams)
     ], SessionControllerLoginRequest.prototype, "queryParams", void 0);
     return SessionControllerLoginRequest;
-}(SpeakeasyBase));
-export { SessionControllerLoginRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLoginRequest = SessionControllerLoginRequest;
 var SessionControllerLoginResponse = /** @class */ (function (_super) {
     __extends(SessionControllerLoginResponse, _super);
     function SessionControllerLoginResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerLoginResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200ApplicationJsonString", void 0);
+    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200ApplicationJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200ApplicationXmlString", void 0);
+    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200ApplicationXMLString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200TextJsonString", void 0);
+    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200TextJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200TextXmlString", void 0);
+    ], SessionControllerLoginResponse.prototype, "sessionControllerLogin200TextXMLString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerLoginResponse.prototype, "statusCode", void 0);
     return SessionControllerLoginResponse;
-}(SpeakeasyBase));
-export { SessionControllerLoginResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLoginResponse = SessionControllerLoginResponse;

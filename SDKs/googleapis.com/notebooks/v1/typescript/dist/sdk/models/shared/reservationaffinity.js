@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReservationAffinityConsumeReservationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReservationAffinity = exports.ReservationAffinityConsumeReservationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReservationAffinityConsumeReservationTypeEnum;
 (function (ReservationAffinityConsumeReservationTypeEnum) {
     ReservationAffinityConsumeReservationTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     ReservationAffinityConsumeReservationTypeEnum["NoReservation"] = "NO_RESERVATION";
     ReservationAffinityConsumeReservationTypeEnum["AnyReservation"] = "ANY_RESERVATION";
     ReservationAffinityConsumeReservationTypeEnum["SpecificReservation"] = "SPECIFIC_RESERVATION";
-})(ReservationAffinityConsumeReservationTypeEnum || (ReservationAffinityConsumeReservationTypeEnum = {}));
+})(ReservationAffinityConsumeReservationTypeEnum = exports.ReservationAffinityConsumeReservationTypeEnum || (exports.ReservationAffinityConsumeReservationTypeEnum = {}));
 // ReservationAffinity
 /**
  * Reservation Affinity for consuming Zonal reservation.
@@ -40,17 +43,17 @@ var ReservationAffinity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumeReservationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumeReservationType" }),
         __metadata("design:type", String)
     ], ReservationAffinity.prototype, "consumeReservationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ReservationAffinity.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], ReservationAffinity.prototype, "values", void 0);
     return ReservationAffinity;
-}(SpeakeasyBase));
-export { ReservationAffinity };
+}(utils_1.SpeakeasyBase));
+exports.ReservationAffinity = ReservationAffinity;

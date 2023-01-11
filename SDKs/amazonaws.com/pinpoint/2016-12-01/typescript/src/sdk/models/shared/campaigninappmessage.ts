@@ -16,7 +16,7 @@ export class CampaignInAppMessage extends SpeakeasyBase {
   content?: InAppMessageContent[];
 
   @SpeakeasyMetadata({ data: "json, name=CustomConfig" })
-  customConfig?: Map<string, string>;
+  customConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Layout" })
   layout?: LayoutEnum;

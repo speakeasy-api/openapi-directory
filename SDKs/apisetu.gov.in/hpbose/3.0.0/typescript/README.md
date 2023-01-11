@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { HvcerRequest, HvcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: HvcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "qui",
-      fullName: "maiores",
-      roll: "ipsam",
-      yop: "non",
+      dob: "sit",
+      fullName: "voluptas",
+      roll: "culpa",
+      yop: "expedita",
     },
-    consentArtifact: "ipsam",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "aut",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.hvcer(req).then((res: HvcerResponse | AxiosError) => {
+sdk.apIs.hvcer(req).then((res: HvcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.hvcer(req).then((res: HvcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hvcer` - Class XII Provisional Certificate
 * `svcer` - Class X Provisional Certificate

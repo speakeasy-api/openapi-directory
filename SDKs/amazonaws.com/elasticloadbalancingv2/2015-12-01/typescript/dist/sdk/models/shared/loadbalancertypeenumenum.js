@@ -1,6 +1,9 @@
-export var LoadBalancerTypeEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerTypeEnumEnum = void 0;
+var LoadBalancerTypeEnumEnum;
 (function (LoadBalancerTypeEnumEnum) {
     LoadBalancerTypeEnumEnum["Application"] = "application";
     LoadBalancerTypeEnumEnum["Network"] = "network";
     LoadBalancerTypeEnumEnum["Gateway"] = "gateway";
-})(LoadBalancerTypeEnumEnum || (LoadBalancerTypeEnumEnum = {}));
+})(LoadBalancerTypeEnumEnum = exports.LoadBalancerTypeEnumEnum || (exports.LoadBalancerTypeEnumEnum = {}));

@@ -18,8 +18,8 @@ export declare class SignUpIdRequest extends SpeakeasyBase {
 export declare class SignUpIdResponse extends SpeakeasyBase {
     contentType: string;
     demoAuthResponse?: any;
-    signUpId400ApplicationJsonOneOf?: any;
-    signUpId401ApplicationJsonObject?: SignUpId401ApplicationJson;
-    signUpId500ApplicationJsonObject?: SignUpId500ApplicationJson;
+    signUPId400ApplicationJSONOneOf?: any;
+    signUPId401ApplicationJSONObject?: SignUpId401ApplicationJson;
+    signUPId500ApplicationJSONObject?: SignUpId500ApplicationJson;
     statusCode: number;
 }

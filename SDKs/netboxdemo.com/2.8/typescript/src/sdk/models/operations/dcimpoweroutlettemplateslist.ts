@@ -110,5 +110,5 @@ export class DcimPowerOutletTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimPowerOutletTemplatesList200ApplicationJsonObject?: DcimPowerOutletTemplatesList200ApplicationJson;
+  dcimPowerOutletTemplatesList200ApplicationJSONObject?: DcimPowerOutletTemplatesList200ApplicationJson;
 }

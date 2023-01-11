@@ -41,7 +41,7 @@ export declare enum RecordUsageEnum {
  * *NOTE:* There are a lot of fields that are very rarely used in DigitalNZ. For instance there are custom built fields that are only relevant, and only found on specific collections. The schema below focuses on the most common / well populated fields and does not show every possible field available for a single record.
  *
 **/
-export declare class Record extends SpeakeasyBase {
+export declare class RecordT extends SpeakeasyBase {
     category?: RecordCategoryEnum[];
     collection?: string[];
     collectionTitle?: string[];

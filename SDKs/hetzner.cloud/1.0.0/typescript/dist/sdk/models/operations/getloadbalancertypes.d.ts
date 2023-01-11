@@ -40,6 +40,6 @@ export declare class GetLoadBalancerTypesRequest extends SpeakeasyBase {
 }
 export declare class GetLoadBalancerTypesResponse extends SpeakeasyBase {
     contentType: string;
-    getLoadBalancerTypes200ApplicationJsonObject?: GetLoadBalancerTypes200ApplicationJson;
     statusCode: number;
+    getLoadBalancerTypes200ApplicationJSONObject?: GetLoadBalancerTypes200ApplicationJson;
 }

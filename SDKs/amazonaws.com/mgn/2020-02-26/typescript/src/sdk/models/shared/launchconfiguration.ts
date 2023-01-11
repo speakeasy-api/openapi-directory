@@ -13,7 +13,7 @@ export class LaunchConfiguration extends SpeakeasyBase {
   copyTags?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=ec2LaunchTemplateID" })
-  ec2LaunchTemplateId?: string;
+  ec2LaunchTemplateID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=launchDisposition" })
   launchDisposition?: LaunchDispositionEnum;
@@ -25,7 +25,7 @@ export class LaunchConfiguration extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId?: string;
+  sourceServerID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=targetInstanceTypeRightSizingMethod" })
   targetInstanceTypeRightSizingMethod?: TargetInstanceTypeRightSizingMethodEnum;

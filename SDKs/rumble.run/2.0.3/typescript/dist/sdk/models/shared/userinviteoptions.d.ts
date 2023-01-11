@@ -6,6 +6,6 @@ export declare class UserInviteOptions extends SpeakeasyBase {
     lastName?: string;
     message?: string;
     orgDefaultRole?: string;
-    orgRoles?: Map<string, any>;
+    orgRoles?: Record<string, any>;
     subject?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AudioConfig } from "./audioconfig";
-import { SynthesisInput } from "./synthesisinput";
-import { VoiceSelectionParams } from "./voiceselectionparams";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynthesizeSpeechRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var audioconfig_1 = require("./audioconfig");
+var synthesisinput_1 = require("./synthesisinput");
+var voiceselectionparams_1 = require("./voiceselectionparams");
 // SynthesizeSpeechRequest
 /**
  * The top-level message sent by the client for the `SynthesizeSpeech` method.
@@ -36,17 +39,17 @@ var SynthesizeSpeechRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioConfig" }),
-        __metadata("design:type", AudioConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioConfig" }),
+        __metadata("design:type", audioconfig_1.AudioConfig)
     ], SynthesizeSpeechRequest.prototype, "audioConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=input" }),
-        __metadata("design:type", SynthesisInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=input" }),
+        __metadata("design:type", synthesisinput_1.SynthesisInput)
     ], SynthesizeSpeechRequest.prototype, "input", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voice" }),
-        __metadata("design:type", VoiceSelectionParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voice" }),
+        __metadata("design:type", voiceselectionparams_1.VoiceSelectionParams)
     ], SynthesizeSpeechRequest.prototype, "voice", void 0);
     return SynthesizeSpeechRequest;
-}(SpeakeasyBase));
-export { SynthesizeSpeechRequest };
+}(utils_1.SpeakeasyBase));
+exports.SynthesizeSpeechRequest = SynthesizeSpeechRequest;

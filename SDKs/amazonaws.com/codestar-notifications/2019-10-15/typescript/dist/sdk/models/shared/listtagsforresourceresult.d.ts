@@ -1,4 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListTagsForResourceResult extends SpeakeasyBase {
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

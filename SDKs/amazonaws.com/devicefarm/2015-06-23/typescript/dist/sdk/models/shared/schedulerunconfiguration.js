@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BillingMethodEnum } from "./billingmethodenum";
-import { CustomerArtifactPaths } from "./customerartifactpaths";
-import { Location } from "./location";
-import { Radios } from "./radios";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleRunConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var billingmethodenum_1 = require("./billingmethodenum");
+var customerartifactpaths_1 = require("./customerartifactpaths");
+var location_1 = require("./location");
+var radios_1 = require("./radios");
 // ScheduleRunConfiguration
 /**
  * Represents the settings for a run. Includes things like location, radio states, auxiliary apps, and network profiles.
@@ -37,41 +40,41 @@ var ScheduleRunConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryApps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryApps" }),
         __metadata("design:type", Array)
     ], ScheduleRunConfiguration.prototype, "auxiliaryApps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingMethod" }),
         __metadata("design:type", String)
     ], ScheduleRunConfiguration.prototype, "billingMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerArtifactPaths" }),
-        __metadata("design:type", CustomerArtifactPaths)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerArtifactPaths" }),
+        __metadata("design:type", customerartifactpaths_1.CustomerArtifactPaths)
     ], ScheduleRunConfiguration.prototype, "customerArtifactPaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraDataPackageArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraDataPackageArn" }),
         __metadata("design:type", String)
     ], ScheduleRunConfiguration.prototype, "extraDataPackageArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], ScheduleRunConfiguration.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], ScheduleRunConfiguration.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkProfileArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkProfileArn" }),
         __metadata("design:type", String)
     ], ScheduleRunConfiguration.prototype, "networkProfileArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radios" }),
-        __metadata("design:type", Radios)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radios" }),
+        __metadata("design:type", radios_1.Radios)
     ], ScheduleRunConfiguration.prototype, "radios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfigurationArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfigurationArns" }),
         __metadata("design:type", Array)
     ], ScheduleRunConfiguration.prototype, "vpceConfigurationArns", void 0);
     return ScheduleRunConfiguration;
-}(SpeakeasyBase));
-export { ScheduleRunConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleRunConfiguration = ScheduleRunConfiguration;

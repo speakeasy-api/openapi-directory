@@ -11,7 +11,7 @@ export declare class RemoveTagForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskRemoveTagRequest;
 }
 export declare class RemoveTagForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveTagForTaskRequest extends SpeakeasyBase {
     pathParams: RemoveTagForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveTagForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeTagForTask200ApplicationJsonObject?: RemoveTagForTask200ApplicationJson;
+    removeTagForTask200ApplicationJSONObject?: RemoveTagForTask200ApplicationJson;
 }

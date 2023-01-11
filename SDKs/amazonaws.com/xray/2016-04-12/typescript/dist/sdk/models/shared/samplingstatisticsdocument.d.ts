@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class SamplingStatisticsDocument extends SpeakeasyBase {
     borrowCount?: number;
-    clientId: string;
+    clientID: string;
     requestCount: number;
     ruleName: string;
     sampledCount: number;

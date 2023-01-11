@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidFirewallL3FirewallRulesRequest extend
 export declare class GetNetworkWirelessSsidFirewallL3FirewallRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

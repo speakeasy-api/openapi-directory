@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeReservedNodesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeReservedNodesResponse = exports.GetDescribeReservedNodesRequest = exports.GetDescribeReservedNodesHeaders = exports.GetDescribeReservedNodesQueryParams = exports.GetDescribeReservedNodesVersionEnum = exports.GetDescribeReservedNodesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeReservedNodesActionEnum;
 (function (GetDescribeReservedNodesActionEnum) {
     GetDescribeReservedNodesActionEnum["DescribeReservedNodes"] = "DescribeReservedNodes";
-})(GetDescribeReservedNodesActionEnum || (GetDescribeReservedNodesActionEnum = {}));
-export var GetDescribeReservedNodesVersionEnum;
+})(GetDescribeReservedNodesActionEnum = exports.GetDescribeReservedNodesActionEnum || (exports.GetDescribeReservedNodesActionEnum = {}));
+var GetDescribeReservedNodesVersionEnum;
 (function (GetDescribeReservedNodesVersionEnum) {
     GetDescribeReservedNodesVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDescribeReservedNodesVersionEnum || (GetDescribeReservedNodesVersionEnum = {}));
+})(GetDescribeReservedNodesVersionEnum = exports.GetDescribeReservedNodesVersionEnum || (exports.GetDescribeReservedNodesVersionEnum = {}));
 var GetDescribeReservedNodesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeReservedNodesQueryParams, _super);
     function GetDescribeReservedNodesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeReservedNodesQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedNodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReservedNodeId" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesQueryParams.prototype, "reservedNodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesQueryParams.prototype, "version", void 0);
     return GetDescribeReservedNodesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeReservedNodesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedNodesQueryParams = GetDescribeReservedNodesQueryParams;
 var GetDescribeReservedNodesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeReservedNodesHeaders, _super);
     function GetDescribeReservedNodesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeReservedNodesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeReservedNodesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedNodesHeaders = GetDescribeReservedNodesHeaders;
 var GetDescribeReservedNodesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeReservedNodesRequest, _super);
     function GetDescribeReservedNodesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeReservedNodesQueryParams)
     ], GetDescribeReservedNodesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeReservedNodesHeaders)
     ], GetDescribeReservedNodesRequest.prototype, "headers", void 0);
     return GetDescribeReservedNodesRequest;
-}(SpeakeasyBase));
-export { GetDescribeReservedNodesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedNodesRequest = GetDescribeReservedNodesRequest;
 var GetDescribeReservedNodesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeReservedNodesResponse, _super);
     function GetDescribeReservedNodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeReservedNodesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeReservedNodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeReservedNodesResponse.prototype, "statusCode", void 0);
     return GetDescribeReservedNodesResponse;
-}(SpeakeasyBase));
-export { GetDescribeReservedNodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeReservedNodesResponse = GetDescribeReservedNodesResponse;

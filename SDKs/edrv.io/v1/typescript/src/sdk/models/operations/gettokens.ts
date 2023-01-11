@@ -65,5 +65,5 @@ export class GetTokensResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTokens200ApplicationJsonObject?: GetTokens200ApplicationJson;
+  getTokens200ApplicationJSONObject?: GetTokens200ApplicationJson;
 }

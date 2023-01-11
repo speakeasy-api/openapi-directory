@@ -1,4 +1,7 @@
-export var ReplicationJobStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationJobStateEnum = void 0;
+var ReplicationJobStateEnum;
 (function (ReplicationJobStateEnum) {
     ReplicationJobStateEnum["Pending"] = "PENDING";
     ReplicationJobStateEnum["Active"] = "ACTIVE";
@@ -8,4 +11,4 @@ export var ReplicationJobStateEnum;
     ReplicationJobStateEnum["Completed"] = "COMPLETED";
     ReplicationJobStateEnum["PausedOnFailure"] = "PAUSED_ON_FAILURE";
     ReplicationJobStateEnum["Failing"] = "FAILING";
-})(ReplicationJobStateEnum || (ReplicationJobStateEnum = {}));
+})(ReplicationJobStateEnum = exports.ReplicationJobStateEnum || (exports.ReplicationJobStateEnum = {}));

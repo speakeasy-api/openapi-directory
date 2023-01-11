@@ -24,7 +24,7 @@ export declare class LocationRule extends SpeakeasyBase {
     enabled?: boolean;
     id?: string;
     label?: string;
-    parameters?: Map<string, any>;
+    parameters?: Record<string, any>;
     timeCreated?: string;
     timeUpdated?: string;
     type?: LocationRuleTypeEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateGrokClassifierRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateGrokClassifierRequest
 /**
  * Specifies a grok classifier to update when passed to <code>UpdateClassifier</code>.
@@ -33,21 +36,21 @@ var UpdateGrokClassifierRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Classification" }),
         __metadata("design:type", String)
     ], UpdateGrokClassifierRequest.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomPatterns" }),
         __metadata("design:type", String)
     ], UpdateGrokClassifierRequest.prototype, "customPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GrokPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GrokPattern" }),
         __metadata("design:type", String)
     ], UpdateGrokClassifierRequest.prototype, "grokPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateGrokClassifierRequest.prototype, "name", void 0);
     return UpdateGrokClassifierRequest;
-}(SpeakeasyBase));
-export { UpdateGrokClassifierRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGrokClassifierRequest = UpdateGrokClassifierRequest;

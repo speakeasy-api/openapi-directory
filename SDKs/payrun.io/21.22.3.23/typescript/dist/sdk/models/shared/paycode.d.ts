@@ -26,7 +26,7 @@ export declare class PayCodePayCode extends SpeakeasyBase {
     code?: string;
     description?: string;
     effectiveDate?: Date;
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     niable?: boolean;
     nominalCode?: PayCodePayCodeNominalCode;
     nonArrestable?: boolean;

@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallPortForwardingRulesResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

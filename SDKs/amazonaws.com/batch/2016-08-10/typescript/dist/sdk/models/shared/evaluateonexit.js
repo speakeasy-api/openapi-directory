@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RetryActionEnum } from "./retryactionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluateOnExit = void 0;
+var utils_1 = require("../../../internal/utils");
+var retryactionenum_1 = require("./retryactionenum");
 // EvaluateOnExit
 /**
  * Specifies a set of conditions to be met, and an action to take (<code>RETRY</code> or <code>EXIT</code>) if all conditions are met.
@@ -34,21 +37,21 @@ var EvaluateOnExit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], EvaluateOnExit.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onExitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onExitCode" }),
         __metadata("design:type", String)
     ], EvaluateOnExit.prototype, "onExitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onReason" }),
         __metadata("design:type", String)
     ], EvaluateOnExit.prototype, "onReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onStatusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onStatusReason" }),
         __metadata("design:type", String)
     ], EvaluateOnExit.prototype, "onStatusReason", void 0);
     return EvaluateOnExit;
-}(SpeakeasyBase));
-export { EvaluateOnExit };
+}(utils_1.SpeakeasyBase));
+exports.EvaluateOnExit = EvaluateOnExit;

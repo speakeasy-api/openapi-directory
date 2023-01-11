@@ -53,7 +53,7 @@ export class GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedBranches?: shared.PaginatedBranches;

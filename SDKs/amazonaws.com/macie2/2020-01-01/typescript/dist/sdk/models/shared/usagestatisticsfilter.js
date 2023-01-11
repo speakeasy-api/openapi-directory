@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageStatisticsFilterComparatorEnum } from "./usagestatisticsfiltercomparatorenum";
-import { UsageStatisticsFilterKeyEnum } from "./usagestatisticsfilterkeyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageStatisticsFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagestatisticsfiltercomparatorenum_1 = require("./usagestatisticsfiltercomparatorenum");
+var usagestatisticsfilterkeyenum_1 = require("./usagestatisticsfilterkeyenum");
 // UsageStatisticsFilter
 /**
  * Specifies a condition for filtering the results of a query for quota and usage data for one or more Amazon Macie accounts.
@@ -35,17 +38,17 @@ var UsageStatisticsFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], UsageStatisticsFilter.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], UsageStatisticsFilter.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], UsageStatisticsFilter.prototype, "values", void 0);
     return UsageStatisticsFilter;
-}(SpeakeasyBase));
-export { UsageStatisticsFilter };
+}(utils_1.SpeakeasyBase));
+exports.UsageStatisticsFilter = UsageStatisticsFilter;

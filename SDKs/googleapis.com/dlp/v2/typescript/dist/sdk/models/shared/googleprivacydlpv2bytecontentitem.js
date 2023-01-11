@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePrivacyDlpV2ByteContentItemTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ByteContentItem = exports.GooglePrivacyDlpV2ByteContentItemTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePrivacyDlpV2ByteContentItemTypeEnum;
 (function (GooglePrivacyDlpV2ByteContentItemTypeEnum) {
     GooglePrivacyDlpV2ByteContentItemTypeEnum["BytesTypeUnspecified"] = "BYTES_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2ByteContentItemTypeEnum["Image"] = "IMAGE";
@@ -39,7 +42,7 @@ export var GooglePrivacyDlpV2ByteContentItemTypeEnum;
     GooglePrivacyDlpV2ByteContentItemTypeEnum["Avro"] = "AVRO";
     GooglePrivacyDlpV2ByteContentItemTypeEnum["Csv"] = "CSV";
     GooglePrivacyDlpV2ByteContentItemTypeEnum["Tsv"] = "TSV";
-})(GooglePrivacyDlpV2ByteContentItemTypeEnum || (GooglePrivacyDlpV2ByteContentItemTypeEnum = {}));
+})(GooglePrivacyDlpV2ByteContentItemTypeEnum = exports.GooglePrivacyDlpV2ByteContentItemTypeEnum || (exports.GooglePrivacyDlpV2ByteContentItemTypeEnum = {}));
 // GooglePrivacyDlpV2ByteContentItem
 /**
  * Container for bytes to inspect or redact.
@@ -50,13 +53,13 @@ var GooglePrivacyDlpV2ByteContentItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ByteContentItem.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ByteContentItem.prototype, "type", void 0);
     return GooglePrivacyDlpV2ByteContentItem;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ByteContentItem };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ByteContentItem = GooglePrivacyDlpV2ByteContentItem;

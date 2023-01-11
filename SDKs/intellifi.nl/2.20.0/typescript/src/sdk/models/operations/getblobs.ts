@@ -113,5 +113,5 @@ export class GetBlobsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getBlobs200ApplicationJsonObject?: GetBlobs200ApplicationJson;
+  getBlobs200ApplicationJSONObject?: GetBlobs200ApplicationJson;
 }

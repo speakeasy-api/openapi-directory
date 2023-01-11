@@ -8,5 +8,5 @@ export declare class ProtocolNetflowHaltRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowHaltResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowHalt200ApplicationJsonString?: string;
+    protocolNetflowHalt200ApplicationJSONString?: string;
 }

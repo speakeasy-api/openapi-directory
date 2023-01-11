@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoRenewingPlan } from "./autorenewingplan";
-import { OfferDetails } from "./offerdetails";
-import { PrepaidPlan } from "./prepaidplan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionPurchaseLineItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var autorenewingplan_1 = require("./autorenewingplan");
+var offerdetails_1 = require("./offerdetails");
+var prepaidplan_1 = require("./prepaidplan");
 // SubscriptionPurchaseLineItem
 /**
  * Item-level info for a subscription purchase.
@@ -36,25 +39,25 @@ var SubscriptionPurchaseLineItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRenewingPlan" }),
-        __metadata("design:type", AutoRenewingPlan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRenewingPlan" }),
+        __metadata("design:type", autorenewingplan_1.AutoRenewingPlan)
     ], SubscriptionPurchaseLineItem.prototype, "autoRenewingPlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryTime" }),
         __metadata("design:type", String)
     ], SubscriptionPurchaseLineItem.prototype, "expiryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerDetails" }),
-        __metadata("design:type", OfferDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerDetails" }),
+        __metadata("design:type", offerdetails_1.OfferDetails)
     ], SubscriptionPurchaseLineItem.prototype, "offerDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prepaidPlan" }),
-        __metadata("design:type", PrepaidPlan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prepaidPlan" }),
+        __metadata("design:type", prepaidplan_1.PrepaidPlan)
     ], SubscriptionPurchaseLineItem.prototype, "prepaidPlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], SubscriptionPurchaseLineItem.prototype, "productId", void 0);
     return SubscriptionPurchaseLineItem;
-}(SpeakeasyBase));
-export { SubscriptionPurchaseLineItem };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionPurchaseLineItem = SubscriptionPurchaseLineItem;

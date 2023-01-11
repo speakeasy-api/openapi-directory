@@ -8,72 +8,10 @@ export class GetRecordsFormatPathParams extends SpeakeasyBase {
   format: shared.FormatEnum;
 }
 
-export enum GetRecordsFormatAndCategoryEnum {
-    Newspapers = "Newspapers",
-    Images = "Images",
-    Books = "Books",
-    Articles = "Articles",
-    Journals = "Journals",
-    Archives = "Archives",
-    Audio = "Audio",
-    Other = "Other",
-    Manuscripts = "Manuscripts",
-    ReferenceSources = "Reference sources",
-    ResearchPapers = "Research papers",
-    Videos = "Videos",
-    MusicScore = "Music Score",
-    Groups = "Groups",
-    Data = "Data",
-    Websites = "Websites",
-    Sets = "Sets"
-}
-
-export enum GetRecordsFormatAndHasLargeThumbnailUrlEnum {
-    Y = "Y"
-}
-
-export enum GetRecordsFormatAndUsageEnum {
-    Share = "Share",
-    Modify = "Modify",
-    UseCommercially = "Use commercially",
-    AllRightsReserved = "All rights reserved",
-    Unknown = "Unknown"
-}
-
-export enum GetRecordsFormatDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum GetRecordsFormatFacetsEnum {
-    Category = "category",
-    ContentPartner = "content_partner",
-    DisplayCollection = "display_collection",
-    Collection = "collection",
-    Creator = "creator",
-    Placename = "placename",
-    Date = "date",
-    Year = "year",
-    Decade = "decade",
-    Century = "century",
-    Language = "language",
-    Rights = "rights",
-    Usage = "usage",
-    Copyright = "copyright",
-    Subject = "subject",
-    Format = "format",
-    DcType = "dc_type"
-}
-
-export enum GetRecordsFormatSortEnum {
-    SyndicationDate = "syndication_date",
-    Date = "date"
-}
-
 
 export class GetRecordsFormatQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[category][]" })
-  andCategory?: GetRecordsFormatAndCategoryEnum;
+  andCategory?: shared.ApiKeyEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[century]" })
   andCentury?: string;
@@ -100,7 +38,7 @@ export class GetRecordsFormatQueryParams extends SpeakeasyBase {
   andFormat?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[has_large_thumbnail_url]" })
-  andHasLargeThumbnailUrl?: GetRecordsFormatAndHasLargeThumbnailUrlEnum;
+  andHasLargeThumbnailUrl?: shared.ApiKeyEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[has_lat_lng]" })
   andHasLatLng?: boolean;
@@ -124,7 +62,7 @@ export class GetRecordsFormatQueryParams extends SpeakeasyBase {
   andTitle?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[usage][]" })
-  andUsage?: GetRecordsFormatAndUsageEnum;
+  andUsage?: shared.ApiKeyEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=and[year]" })
   andYear?: string;
@@ -133,13 +71,13 @@ export class GetRecordsFormatQueryParams extends SpeakeasyBase {
   apiKey: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: GetRecordsFormatDirectionEnum;
+  direction?: shared.FieldsEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=exclude_filters_from_facets" })
   excludeFiltersFromFacets?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=facets" })
-  facets?: GetRecordsFormatFacetsEnum[];
+  facets?: shared.FieldsEnum2[];
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=facets_page" })
   facetsPage?: number;
@@ -160,7 +98,7 @@ export class GetRecordsFormatQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: GetRecordsFormatSortEnum;
+  sort?: shared.FieldsEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" })
   text?: string;
@@ -172,7 +110,7 @@ export class GetRecordsFormatQueryParams extends SpeakeasyBase {
 
 export class GetRecordsFormat200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=facets" })
-  facets?: Map<string, Map<string, number>>;
+  facets?: Record<string, Record<string, number>>;
 
   @SpeakeasyMetadata({ data: "json, name=page" })
   page?: number;
@@ -180,8 +118,8 @@ export class GetRecordsFormat200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=per_page" })
   perPage?: number;
 
-  @SpeakeasyMetadata({ data: "json, name=records", elemType: shared.Record })
-  records?: shared.Record[];
+  @SpeakeasyMetadata({ data: "json, name=records", elemType: shared.RecordT })
+  records?: shared.RecordT[];
 
   @SpeakeasyMetadata({ data: "json, name=request_url" })
   requestUrl?: string;
@@ -208,14 +146,14 @@ export class GetRecordsFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getRecordsFormat200ApplicationJsonObject?: GetRecordsFormat200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getRecordsFormat400ApplicationJsonObject?: Map<string, any>;
-
-  @SpeakeasyMetadata()
-  getRecordsFormat403ApplicationJsonObject?: Map<string, any>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getRecordsFormat200ApplicationJSONObject?: GetRecordsFormat200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getRecordsFormat400ApplicationJSONObject?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  getRecordsFormat403ApplicationJSONObject?: Record<string, any>;
 }

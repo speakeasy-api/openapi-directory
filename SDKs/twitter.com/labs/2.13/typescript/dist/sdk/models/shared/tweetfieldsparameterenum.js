@@ -1,4 +1,7 @@
-export var TweetFieldsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TweetFieldsParameterEnum = void 0;
+var TweetFieldsParameterEnum;
 (function (TweetFieldsParameterEnum) {
     TweetFieldsParameterEnum["Id"] = "id";
     TweetFieldsParameterEnum["CreatedAt"] = "created_at";
@@ -18,4 +21,4 @@ export var TweetFieldsParameterEnum;
     TweetFieldsParameterEnum["NonPublicMetrics"] = "non_public_metrics";
     TweetFieldsParameterEnum["PromotedMetrics"] = "promoted_metrics";
     TweetFieldsParameterEnum["OrganicMetrics"] = "organic_metrics";
-})(TweetFieldsParameterEnum || (TweetFieldsParameterEnum = {}));
+})(TweetFieldsParameterEnum = exports.TweetFieldsParameterEnum || (exports.TweetFieldsParameterEnum = {}));

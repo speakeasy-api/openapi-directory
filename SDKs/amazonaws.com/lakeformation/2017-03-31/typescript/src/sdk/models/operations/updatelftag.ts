@@ -69,5 +69,5 @@ export class UpdateLfTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLfTagResponse?: Map<string, any>;
+  updateLFTagResponse?: Record<string, any>;
 }

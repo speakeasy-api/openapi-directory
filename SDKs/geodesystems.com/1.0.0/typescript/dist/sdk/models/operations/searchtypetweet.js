@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchTypeTweetResponse = exports.SearchTypeTweetRequest = exports.SearchTypeTweetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchTypeTweetQueryParams = /** @class */ (function (_super) {
     __extends(SearchTypeTweetQueryParams, _super);
     function SearchTypeTweetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchTypeTweetQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchTypeTweetQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchTypeTweetQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchTypeTweetQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchTypeTweetQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchTypeTweetQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchTypeTweetQueryParams.prototype, "todate", void 0);
     return SearchTypeTweetQueryParams;
-}(SpeakeasyBase));
-export { SearchTypeTweetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypeTweetQueryParams = SearchTypeTweetQueryParams;
 var SearchTypeTweetRequest = /** @class */ (function (_super) {
     __extends(SearchTypeTweetRequest, _super);
     function SearchTypeTweetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchTypeTweetQueryParams)
     ], SearchTypeTweetRequest.prototype, "queryParams", void 0);
     return SearchTypeTweetRequest;
-}(SpeakeasyBase));
-export { SearchTypeTweetRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypeTweetRequest = SearchTypeTweetRequest;
 var SearchTypeTweetResponse = /** @class */ (function (_super) {
     __extends(SearchTypeTweetResponse, _super);
     function SearchTypeTweetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchTypeTweetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchTypeTweetResponse.prototype, "statusCode", void 0);
     return SearchTypeTweetResponse;
-}(SpeakeasyBase));
-export { SearchTypeTweetResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypeTweetResponse = SearchTypeTweetResponse;

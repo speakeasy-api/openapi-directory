@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Features = void 0;
+var utils_1 = require("../../../internal/utils");
 // Features
 /**
  * All available features for sentiment, syntax, and semantic analysis. Setting each one to true will enable that specific analysis for the input.
@@ -33,17 +36,17 @@ var Features = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractDocumentSentiment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractDocumentSentiment" }),
         __metadata("design:type", Boolean)
     ], Features.prototype, "extractDocumentSentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractEntities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractEntities" }),
         __metadata("design:type", Boolean)
     ], Features.prototype, "extractEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractSyntax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractSyntax" }),
         __metadata("design:type", Boolean)
     ], Features.prototype, "extractSyntax", void 0);
     return Features;
-}(SpeakeasyBase));
-export { Features };
+}(utils_1.SpeakeasyBase));
+exports.Features = Features;

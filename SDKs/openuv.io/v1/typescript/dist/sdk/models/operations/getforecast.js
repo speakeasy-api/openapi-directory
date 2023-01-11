@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetForecastResponse = exports.GetForecastRequest = exports.GetForecastHeaders = exports.GetForecastQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetForecastQueryParams = /** @class */ (function (_super) {
     __extends(GetForecastQueryParams, _super);
     function GetForecastQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", Number)
     ], GetForecastQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dt" }),
         __metadata("design:type", Date)
     ], GetForecastQueryParams.prototype, "dt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lat" }),
         __metadata("design:type", Number)
     ], GetForecastQueryParams.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lng" }),
         __metadata("design:type", Number)
     ], GetForecastQueryParams.prototype, "lng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ozone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ozone" }),
         __metadata("design:type", Number)
     ], GetForecastQueryParams.prototype, "ozone", void 0);
     return GetForecastQueryParams;
-}(SpeakeasyBase));
-export { GetForecastQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastQueryParams = GetForecastQueryParams;
 var GetForecastHeaders = /** @class */ (function (_super) {
     __extends(GetForecastHeaders, _super);
     function GetForecastHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-access-token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-access-token" }),
         __metadata("design:type", String)
     ], GetForecastHeaders.prototype, "xAccessToken", void 0);
     return GetForecastHeaders;
-}(SpeakeasyBase));
-export { GetForecastHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastHeaders = GetForecastHeaders;
 var GetForecastRequest = /** @class */ (function (_super) {
     __extends(GetForecastRequest, _super);
     function GetForecastRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetForecastQueryParams)
     ], GetForecastRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetForecastHeaders)
     ], GetForecastRequest.prototype, "headers", void 0);
     return GetForecastRequest;
-}(SpeakeasyBase));
-export { GetForecastRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastRequest = GetForecastRequest;
 var GetForecastResponse = /** @class */ (function (_super) {
     __extends(GetForecastResponse, _super);
     function GetForecastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetForecastResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetForecastResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Forecast, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Forecast, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], GetForecastResponse.prototype, "forecastResults", void 0);
     return GetForecastResponse;
-}(SpeakeasyBase));
-export { GetForecastResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastResponse = GetForecastResponse;

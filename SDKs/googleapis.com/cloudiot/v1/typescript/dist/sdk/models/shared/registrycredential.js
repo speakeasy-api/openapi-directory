@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKeyCertificate } from "./publickeycertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryCredential = void 0;
+var utils_1 = require("../../../internal/utils");
+var publickeycertificate_1 = require("./publickeycertificate");
 // RegistryCredential
 /**
  * A server-stored registry credential used to validate device credentials.
@@ -34,9 +37,9 @@ var RegistryCredential = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKeyCertificate" }),
-        __metadata("design:type", PublicKeyCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKeyCertificate" }),
+        __metadata("design:type", publickeycertificate_1.PublicKeyCertificate)
     ], RegistryCredential.prototype, "publicKeyCertificate", void 0);
     return RegistryCredential;
-}(SpeakeasyBase));
-export { RegistryCredential };
+}(utils_1.SpeakeasyBase));
+exports.RegistryCredential = RegistryCredential;

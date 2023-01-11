@@ -8,7 +8,7 @@ export declare class GetTokenHoldersRequest extends SpeakeasyBase {
 }
 export declare class GetTokenHoldersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTokenHoldersResponse?: shared.GetTokenHoldersResponse;
 }

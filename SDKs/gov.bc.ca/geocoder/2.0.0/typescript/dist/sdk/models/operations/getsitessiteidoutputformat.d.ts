@@ -10,7 +10,7 @@ export declare enum GetSitesSiteIdOutputFormatOutputFormatEnum {
 }
 export declare class GetSitesSiteIdOutputFormatPathParams extends SpeakeasyBase {
     outputFormat: GetSitesSiteIdOutputFormatOutputFormatEnum;
-    siteId: string;
+    siteID: string;
 }
 export declare enum GetSitesSiteIdOutputFormatLocationDescriptorEnum {
     Any = "any",
@@ -23,7 +23,7 @@ export declare enum GetSitesSiteIdOutputFormatLocationDescriptorEnum {
 export declare class GetSitesSiteIdOutputFormatQueryParams extends SpeakeasyBase {
     brief?: boolean;
     locationDescriptor?: GetSitesSiteIdOutputFormatLocationDescriptorEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     setBack?: number;
 }
 export declare class GetSitesSiteIdOutputFormatRequest extends SpeakeasyBase {

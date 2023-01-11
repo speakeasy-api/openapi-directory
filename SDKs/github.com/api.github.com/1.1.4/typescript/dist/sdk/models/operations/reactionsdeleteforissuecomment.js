@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteForIssueCommentResponse = exports.ReactionsDeleteForIssueCommentRequest = exports.ReactionsDeleteForIssueCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeleteForIssueCommentPathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssueCommentPathParams, _super);
     function ReactionsDeleteForIssueCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssueCommentPathParams.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssueCommentPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssueCommentPathParams.prototype, "reactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssueCommentPathParams.prototype, "repo", void 0);
     return ReactionsDeleteForIssueCommentPathParams;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssueCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssueCommentPathParams = ReactionsDeleteForIssueCommentPathParams;
 var ReactionsDeleteForIssueCommentRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssueCommentRequest, _super);
     function ReactionsDeleteForIssueCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteForIssueCommentPathParams)
     ], ReactionsDeleteForIssueCommentRequest.prototype, "pathParams", void 0);
     return ReactionsDeleteForIssueCommentRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssueCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssueCommentRequest = ReactionsDeleteForIssueCommentRequest;
 var ReactionsDeleteForIssueCommentResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssueCommentResponse, _super);
     function ReactionsDeleteForIssueCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssueCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssueCommentResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteForIssueCommentResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssueCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssueCommentResponse = ReactionsDeleteForIssueCommentResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaLabelPermission } from "./googleappsdrivelabelsv2betalabelpermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalabelpermission_1 = require("./googleappsdrivelabelsv2betalabelpermission");
 // GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest
 /**
  * Updates a Label Permission. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
@@ -34,17 +37,17 @@ var GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelPermission" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelPermission)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelPermission" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelpermission_1.GoogleAppsDriveLabelsV2betaLabelPermission)
     ], GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest.prototype, "labelPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAdminAccess" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest.prototype, "useAdminAccess", void 0);
     return GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest = GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest;

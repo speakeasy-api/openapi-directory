@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,202 +14,227 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppengineProjectsLocationsOperationsListResponse = exports.AppengineProjectsLocationsOperationsListRequest = exports.AppengineProjectsLocationsOperationsListSecurity = exports.AppengineProjectsLocationsOperationsListSecurityOption3 = exports.AppengineProjectsLocationsOperationsListSecurityOption2 = exports.AppengineProjectsLocationsOperationsListSecurityOption1 = exports.AppengineProjectsLocationsOperationsListQueryParams = exports.AppengineProjectsLocationsOperationsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AppengineProjectsLocationsOperationsListPathParams = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListPathParams, _super);
     function AppengineProjectsLocationsOperationsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=locationsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=locationsId" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListPathParams.prototype, "locationsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectsId" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListPathParams.prototype, "projectsId", void 0);
     return AppengineProjectsLocationsOperationsListPathParams;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListPathParams = AppengineProjectsLocationsOperationsListPathParams;
 var AppengineProjectsLocationsOperationsListQueryParams = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListQueryParams, _super);
     function AppengineProjectsLocationsOperationsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListQueryParams.prototype, "uploadProtocol", void 0);
     return AppengineProjectsLocationsOperationsListQueryParams;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListQueryParams = AppengineProjectsLocationsOperationsListQueryParams;
 var AppengineProjectsLocationsOperationsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListSecurityOption1, _super);
     function AppengineProjectsLocationsOperationsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineProjectsLocationsOperationsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineProjectsLocationsOperationsListSecurityOption1.prototype, "oauth2c", void 0);
     return AppengineProjectsLocationsOperationsListSecurityOption1;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListSecurityOption1 = AppengineProjectsLocationsOperationsListSecurityOption1;
 var AppengineProjectsLocationsOperationsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListSecurityOption2, _super);
     function AppengineProjectsLocationsOperationsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineProjectsLocationsOperationsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineProjectsLocationsOperationsListSecurityOption2.prototype, "oauth2c", void 0);
     return AppengineProjectsLocationsOperationsListSecurityOption2;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListSecurityOption2 = AppengineProjectsLocationsOperationsListSecurityOption2;
 var AppengineProjectsLocationsOperationsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListSecurityOption3, _super);
     function AppengineProjectsLocationsOperationsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AppengineProjectsLocationsOperationsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AppengineProjectsLocationsOperationsListSecurityOption3.prototype, "oauth2c", void 0);
     return AppengineProjectsLocationsOperationsListSecurityOption3;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListSecurityOption3 = AppengineProjectsLocationsOperationsListSecurityOption3;
 var AppengineProjectsLocationsOperationsListSecurity = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListSecurity, _super);
     function AppengineProjectsLocationsOperationsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineProjectsLocationsOperationsListSecurityOption1)
     ], AppengineProjectsLocationsOperationsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineProjectsLocationsOperationsListSecurityOption2)
     ], AppengineProjectsLocationsOperationsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AppengineProjectsLocationsOperationsListSecurityOption3)
     ], AppengineProjectsLocationsOperationsListSecurity.prototype, "option3", void 0);
     return AppengineProjectsLocationsOperationsListSecurity;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListSecurity = AppengineProjectsLocationsOperationsListSecurity;
 var AppengineProjectsLocationsOperationsListRequest = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListRequest, _super);
     function AppengineProjectsLocationsOperationsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineProjectsLocationsOperationsListPathParams)
     ], AppengineProjectsLocationsOperationsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineProjectsLocationsOperationsListQueryParams)
     ], AppengineProjectsLocationsOperationsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppengineProjectsLocationsOperationsListSecurity)
     ], AppengineProjectsLocationsOperationsListRequest.prototype, "security", void 0);
     return AppengineProjectsLocationsOperationsListRequest;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListRequest = AppengineProjectsLocationsOperationsListRequest;
 var AppengineProjectsLocationsOperationsListResponse = /** @class */ (function (_super) {
     __extends(AppengineProjectsLocationsOperationsListResponse, _super);
     function AppengineProjectsLocationsOperationsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppengineProjectsLocationsOperationsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListOperationsResponse)
     ], AppengineProjectsLocationsOperationsListResponse.prototype, "listOperationsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppengineProjectsLocationsOperationsListResponse.prototype, "statusCode", void 0);
     return AppengineProjectsLocationsOperationsListResponse;
-}(SpeakeasyBase));
-export { AppengineProjectsLocationsOperationsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppengineProjectsLocationsOperationsListResponse = AppengineProjectsLocationsOperationsListResponse;

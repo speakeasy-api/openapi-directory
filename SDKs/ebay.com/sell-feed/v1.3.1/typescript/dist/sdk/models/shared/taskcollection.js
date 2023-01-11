@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Task } from "./task";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var task_1 = require("./task");
 // TaskCollection
 /**
  * The type that defines the fields for a paginated result set of tasks. The response consists of 0 or more sequenced pages where each page has 0 or more items.
@@ -34,33 +37,33 @@ var TaskCollection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], TaskCollection.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], TaskCollection.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], TaskCollection.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], TaskCollection.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], TaskCollection.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tasks", elemType: Task }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tasks", elemType: task_1.Task }),
         __metadata("design:type", Array)
     ], TaskCollection.prototype, "tasks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], TaskCollection.prototype, "total", void 0);
     return TaskCollection;
-}(SpeakeasyBase));
-export { TaskCollection };
+}(utils_1.SpeakeasyBase));
+exports.TaskCollection = TaskCollection;

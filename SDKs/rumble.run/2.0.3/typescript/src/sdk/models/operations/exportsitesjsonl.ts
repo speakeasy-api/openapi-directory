@@ -35,5 +35,5 @@ export class ExportSitesJsonlResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  exportSitesJsonl200ApplicationJsonBinaryString?: Uint8Array;
+  exportSitesJSONL200ApplicationJSONBinaryString?: Uint8Array;
 }

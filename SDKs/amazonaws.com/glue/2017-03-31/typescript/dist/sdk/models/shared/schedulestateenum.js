@@ -1,6 +1,9 @@
-export var ScheduleStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleStateEnum = void 0;
+var ScheduleStateEnum;
 (function (ScheduleStateEnum) {
     ScheduleStateEnum["Scheduled"] = "SCHEDULED";
     ScheduleStateEnum["NotScheduled"] = "NOT_SCHEDULED";
     ScheduleStateEnum["Transitioning"] = "TRANSITIONING";
-})(ScheduleStateEnum || (ScheduleStateEnum = {}));
+})(ScheduleStateEnum = exports.ScheduleStateEnum || (exports.ScheduleStateEnum = {}));

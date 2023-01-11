@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoadBalancerAddress } from "./loadbalanceraddress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AvailabilityZone = void 0;
+var utils_1 = require("../../../internal/utils");
+var loadbalanceraddress_1 = require("./loadbalanceraddress");
 // AvailabilityZone
 /**
  * Information about an Availability Zone.
@@ -34,21 +37,21 @@ var AvailabilityZone = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: LoadBalancerAddress }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: loadbalanceraddress_1.LoadBalancerAddress }),
         __metadata("design:type", Array)
     ], AvailabilityZone.prototype, "loadBalancerAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AvailabilityZone.prototype, "outpostId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AvailabilityZone.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AvailabilityZone.prototype, "zoneName", void 0);
     return AvailabilityZone;
-}(SpeakeasyBase));
-export { AvailabilityZone };
+}(utils_1.SpeakeasyBase));
+exports.AvailabilityZone = AvailabilityZone;

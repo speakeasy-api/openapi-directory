@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,174 +14,199 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsResponse = exports.SqlProjectsInstancesVerifyExternalSyncSettingsRequest = exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurity = exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2 = exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1 = exports.SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams = exports.SqlProjectsInstancesVerifyExternalSyncSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SqlProjectsInstancesVerifyExternalSyncSettingsPathParams = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsPathParams, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsPathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsPathParams.prototype, "project", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsPathParams;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsPathParams = SqlProjectsInstancesVerifyExternalSyncSettingsPathParams;
 var SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.prototype, "uploadProtocol", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams = SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams;
 var SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1 = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1.prototype, "oauth2c", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1 = SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1;
 var SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2 = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2.prototype, "oauth2c", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2 = SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2;
 var SqlProjectsInstancesVerifyExternalSyncSettingsSecurity = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsSecurity, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption1)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SqlProjectsInstancesVerifyExternalSyncSettingsSecurityOption2)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsSecurity.prototype, "option2", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsSecurity;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsSecurity = SqlProjectsInstancesVerifyExternalSyncSettingsSecurity;
 var SqlProjectsInstancesVerifyExternalSyncSettingsRequest = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsRequest, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlProjectsInstancesVerifyExternalSyncSettingsPathParams)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.SqlInstancesVerifyExternalSyncSettingsRequest)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlProjectsInstancesVerifyExternalSyncSettingsSecurity)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsRequest.prototype, "security", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsRequest;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsRequest = SqlProjectsInstancesVerifyExternalSyncSettingsRequest;
 var SqlProjectsInstancesVerifyExternalSyncSettingsResponse = /** @class */ (function (_super) {
     __extends(SqlProjectsInstancesVerifyExternalSyncSettingsResponse, _super);
     function SqlProjectsInstancesVerifyExternalSyncSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SqlInstancesVerifyExternalSyncSettingsResponse)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsResponse.prototype, "sqlInstancesVerifyExternalSyncSettingsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SqlProjectsInstancesVerifyExternalSyncSettingsResponse.prototype, "statusCode", void 0);
     return SqlProjectsInstancesVerifyExternalSyncSettingsResponse;
-}(SpeakeasyBase));
-export { SqlProjectsInstancesVerifyExternalSyncSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SqlProjectsInstancesVerifyExternalSyncSettingsResponse = SqlProjectsInstancesVerifyExternalSyncSettingsResponse;

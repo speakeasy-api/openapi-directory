@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class KmsGrantConstraints extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=encryptionContextEquals" })
-  encryptionContextEquals?: Map<string, string>;
+  encryptionContextEquals?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=encryptionContextSubset" })
-  encryptionContextSubset?: Map<string, string>;
+  encryptionContextSubset?: Record<string, string>;
 }

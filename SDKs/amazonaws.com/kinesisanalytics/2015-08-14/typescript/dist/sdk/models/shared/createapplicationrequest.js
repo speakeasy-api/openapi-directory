@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLoggingOption } from "./cloudwatchloggingoption";
-import { Input } from "./input";
-import { Output } from "./output";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateApplicationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchloggingoption_1 = require("./cloudwatchloggingoption");
+var input_1 = require("./input");
+var output_1 = require("./output");
+var tag_1 = require("./tag");
 // CreateApplicationRequest
 /**
  * TBD
@@ -37,33 +40,33 @@ var CreateApplicationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationCode" }),
         __metadata("design:type", String)
     ], CreateApplicationRequest.prototype, "applicationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationDescription" }),
         __metadata("design:type", String)
     ], CreateApplicationRequest.prototype, "applicationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationName" }),
         __metadata("design:type", String)
     ], CreateApplicationRequest.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLoggingOptions", elemType: CloudWatchLoggingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLoggingOptions", elemType: cloudwatchloggingoption_1.CloudWatchLoggingOption }),
         __metadata("design:type", Array)
     ], CreateApplicationRequest.prototype, "cloudWatchLoggingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inputs", elemType: Input }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inputs", elemType: input_1.Input }),
         __metadata("design:type", Array)
     ], CreateApplicationRequest.prototype, "inputs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Outputs", elemType: Output }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Outputs", elemType: output_1.Output }),
         __metadata("design:type", Array)
     ], CreateApplicationRequest.prototype, "outputs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateApplicationRequest.prototype, "tags", void 0);
     return CreateApplicationRequest;
-}(SpeakeasyBase));
-export { CreateApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateApplicationRequest = CreateApplicationRequest;

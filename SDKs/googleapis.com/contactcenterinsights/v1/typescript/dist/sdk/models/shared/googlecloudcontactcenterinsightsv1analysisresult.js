@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata } from "./googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1AnalysisResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata_1 = require("./googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata");
 // GoogleCloudContactcenterinsightsV1AnalysisResult
 /**
  * The result of an analysis.
@@ -34,13 +37,13 @@ var GoogleCloudContactcenterinsightsV1AnalysisResult = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callAnalysisMetadata" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callAnalysisMetadata" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata_1.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata)
     ], GoogleCloudContactcenterinsightsV1AnalysisResult.prototype, "callAnalysisMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1AnalysisResult.prototype, "endTime", void 0);
     return GoogleCloudContactcenterinsightsV1AnalysisResult;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1AnalysisResult };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1AnalysisResult = GoogleCloudContactcenterinsightsV1AnalysisResult;

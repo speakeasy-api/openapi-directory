@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceObjectReferences } from "./datasourceobjectreferences";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RefreshDataSourceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourceobjectreferences_1 = require("./datasourceobjectreferences");
 // RefreshDataSourceRequest
 /**
  * Refreshes one or multiple data source objects in the spreadsheet by the specified references. The request requires an additional `bigquery.readonly` OAuth scope. If there are multiple refresh requests referencing the same data source objects in one batch, only the last refresh request is processed, and all those requests will have the same response accordingly.
@@ -34,21 +37,21 @@ var RefreshDataSourceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], RefreshDataSourceRequest.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=force" }),
         __metadata("design:type", Boolean)
     ], RefreshDataSourceRequest.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAll" }),
         __metadata("design:type", Boolean)
     ], RefreshDataSourceRequest.prototype, "isAll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=references" }),
-        __metadata("design:type", DataSourceObjectReferences)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=references" }),
+        __metadata("design:type", datasourceobjectreferences_1.DataSourceObjectReferences)
     ], RefreshDataSourceRequest.prototype, "references", void 0);
     return RefreshDataSourceRequest;
-}(SpeakeasyBase));
-export { RefreshDataSourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RefreshDataSourceRequest = RefreshDataSourceRequest;

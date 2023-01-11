@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UrlRestriction } from "./urlrestriction";
-export var UserListStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserListInput = exports.UserList = exports.UserListStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var urlrestriction_1 = require("./urlrestriction");
+var UserListStatusEnum;
 (function (UserListStatusEnum) {
     UserListStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     UserListStatusEnum["Open"] = "OPEN";
     UserListStatusEnum["Closed"] = "CLOSED";
-})(UserListStatusEnum || (UserListStatusEnum = {}));
-// UserListInput
-/**
- * Represents an Authorized Buyers user list. Authorized Buyers can create/update/list user lists. Once a user list is created in the system, Authorized Buyers can add users to the user list using the bulk uploader API. Alternatively, users can be added by hosting a tag on the advertiser's page.
-**/
-var UserListInput = /** @class */ (function (_super) {
-    __extends(UserListInput, _super);
-    function UserListInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], UserListInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], UserListInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipDurationDays" }),
-        __metadata("design:type", String)
-    ], UserListInput.prototype, "membershipDurationDays", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlRestriction" }),
-        __metadata("design:type", UrlRestriction)
-    ], UserListInput.prototype, "urlRestriction", void 0);
-    return UserListInput;
-}(SpeakeasyBase));
-export { UserListInput };
+})(UserListStatusEnum = exports.UserListStatusEnum || (exports.UserListStatusEnum = {}));
 // UserList
 /**
  * Represents an Authorized Buyers user list. Authorized Buyers can create/update/list user lists. Once a user list is created in the system, Authorized Buyers can add users to the user list using the bulk uploader API. Alternatively, users can be added by hosting a tag on the advertiser's page.
@@ -68,29 +43,57 @@ var UserList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UserList.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], UserList.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipDurationDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipDurationDays" }),
         __metadata("design:type", String)
     ], UserList.prototype, "membershipDurationDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UserList.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UserList.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlRestriction" }),
-        __metadata("design:type", UrlRestriction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlRestriction" }),
+        __metadata("design:type", urlrestriction_1.UrlRestriction)
     ], UserList.prototype, "urlRestriction", void 0);
     return UserList;
-}(SpeakeasyBase));
-export { UserList };
+}(utils_1.SpeakeasyBase));
+exports.UserList = UserList;
+// UserListInput
+/**
+ * Represents an Authorized Buyers user list. Authorized Buyers can create/update/list user lists. Once a user list is created in the system, Authorized Buyers can add users to the user list using the bulk uploader API. Alternatively, users can be added by hosting a tag on the advertiser's page.
+**/
+var UserListInput = /** @class */ (function (_super) {
+    __extends(UserListInput, _super);
+    function UserListInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], UserListInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], UserListInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipDurationDays" }),
+        __metadata("design:type", String)
+    ], UserListInput.prototype, "membershipDurationDays", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlRestriction" }),
+        __metadata("design:type", urlrestriction_1.UrlRestriction)
+    ], UserListInput.prototype, "urlRestriction", void 0);
+    return UserListInput;
+}(utils_1.SpeakeasyBase));
+exports.UserListInput = UserListInput;

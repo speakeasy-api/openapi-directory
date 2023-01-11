@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InferenceAccelerator = void 0;
+var utils_1 = require("../../../internal/utils");
 // InferenceAccelerator
 /**
  * Details on a Elastic Inference accelerator. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-eia.html">Working with Amazon Elastic Inference on Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -33,13 +36,13 @@ var InferenceAccelerator = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceName" }),
         __metadata("design:type", String)
     ], InferenceAccelerator.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceType" }),
         __metadata("design:type", String)
     ], InferenceAccelerator.prototype, "deviceType", void 0);
     return InferenceAccelerator;
-}(SpeakeasyBase));
-export { InferenceAccelerator };
+}(utils_1.SpeakeasyBase));
+exports.InferenceAccelerator = InferenceAccelerator;

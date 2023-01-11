@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,154 +14,179 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MirrorTimelinePatchResponse = exports.MirrorTimelinePatchRequest = exports.MirrorTimelinePatchSecurity = exports.MirrorTimelinePatchSecurityOption2 = exports.MirrorTimelinePatchSecurityOption1 = exports.MirrorTimelinePatchQueryParams = exports.MirrorTimelinePatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var MirrorTimelinePatchPathParams = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchPathParams, _super);
     function MirrorTimelinePatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchPathParams.prototype, "id", void 0);
     return MirrorTimelinePatchPathParams;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchPathParams = MirrorTimelinePatchPathParams;
 var MirrorTimelinePatchQueryParams = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchQueryParams, _super);
     function MirrorTimelinePatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], MirrorTimelinePatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], MirrorTimelinePatchQueryParams.prototype, "userIp", void 0);
     return MirrorTimelinePatchQueryParams;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchQueryParams = MirrorTimelinePatchQueryParams;
 var MirrorTimelinePatchSecurityOption1 = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchSecurityOption1, _super);
     function MirrorTimelinePatchSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], MirrorTimelinePatchSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], MirrorTimelinePatchSecurityOption1.prototype, "oauth2c", void 0);
     return MirrorTimelinePatchSecurityOption1;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchSecurityOption1 = MirrorTimelinePatchSecurityOption1;
 var MirrorTimelinePatchSecurityOption2 = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchSecurityOption2, _super);
     function MirrorTimelinePatchSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], MirrorTimelinePatchSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], MirrorTimelinePatchSecurityOption2.prototype, "oauth2c", void 0);
     return MirrorTimelinePatchSecurityOption2;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchSecurityOption2 = MirrorTimelinePatchSecurityOption2;
 var MirrorTimelinePatchSecurity = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchSecurity, _super);
     function MirrorTimelinePatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", MirrorTimelinePatchSecurityOption1)
     ], MirrorTimelinePatchSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", MirrorTimelinePatchSecurityOption2)
     ], MirrorTimelinePatchSecurity.prototype, "option2", void 0);
     return MirrorTimelinePatchSecurity;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchSecurity = MirrorTimelinePatchSecurity;
 var MirrorTimelinePatchRequest = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchRequest, _super);
     function MirrorTimelinePatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MirrorTimelinePatchPathParams)
     ], MirrorTimelinePatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MirrorTimelinePatchQueryParams)
     ], MirrorTimelinePatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.TimelineItem)
     ], MirrorTimelinePatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MirrorTimelinePatchSecurity)
     ], MirrorTimelinePatchRequest.prototype, "security", void 0);
     return MirrorTimelinePatchRequest;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchRequest = MirrorTimelinePatchRequest;
 var MirrorTimelinePatchResponse = /** @class */ (function (_super) {
     __extends(MirrorTimelinePatchResponse, _super);
     function MirrorTimelinePatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], MirrorTimelinePatchResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MirrorTimelinePatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MirrorTimelinePatchResponse.prototype, "statusCode", void 0);
     return MirrorTimelinePatchResponse;
-}(SpeakeasyBase));
-export { MirrorTimelinePatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.MirrorTimelinePatchResponse = MirrorTimelinePatchResponse;

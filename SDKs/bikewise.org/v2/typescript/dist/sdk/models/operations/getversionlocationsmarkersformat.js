@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetVersionLocationsMarkersFormatIncidentTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVersionLocationsMarkersFormatResponse = exports.GetVersionLocationsMarkersFormatRequest = exports.GetVersionLocationsMarkersFormatQueryParams = exports.GetVersionLocationsMarkersFormatIncidentTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetVersionLocationsMarkersFormatIncidentTypeEnum;
 (function (GetVersionLocationsMarkersFormatIncidentTypeEnum) {
     GetVersionLocationsMarkersFormatIncidentTypeEnum["Crash"] = "crash";
     GetVersionLocationsMarkersFormatIncidentTypeEnum["Hazard"] = "hazard";
@@ -31,72 +34,72 @@ export var GetVersionLocationsMarkersFormatIncidentTypeEnum;
     GetVersionLocationsMarkersFormatIncidentTypeEnum["Unconfirmed"] = "unconfirmed";
     GetVersionLocationsMarkersFormatIncidentTypeEnum["InfrastructureIssue"] = "infrastructure_issue";
     GetVersionLocationsMarkersFormatIncidentTypeEnum["ChopShop"] = "chop_shop";
-})(GetVersionLocationsMarkersFormatIncidentTypeEnum || (GetVersionLocationsMarkersFormatIncidentTypeEnum = {}));
+})(GetVersionLocationsMarkersFormatIncidentTypeEnum = exports.GetVersionLocationsMarkersFormatIncidentTypeEnum || (exports.GetVersionLocationsMarkersFormatIncidentTypeEnum = {}));
 var GetVersionLocationsMarkersFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetVersionLocationsMarkersFormatQueryParams, _super);
     function GetVersionLocationsMarkersFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=all" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=all" }),
         __metadata("design:type", Boolean)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "all", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=incident_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=incident_type" }),
         __metadata("design:type", String)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "incidentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=occurred_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=occurred_after" }),
         __metadata("design:type", Number)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "occurredAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=occurred_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=occurred_before" }),
         __metadata("design:type", Number)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "occurredBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=proximity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=proximity" }),
         __metadata("design:type", String)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "proximity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=proximity_square" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=proximity_square" }),
         __metadata("design:type", Number)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "proximitySquare", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetVersionLocationsMarkersFormatQueryParams.prototype, "query", void 0);
     return GetVersionLocationsMarkersFormatQueryParams;
-}(SpeakeasyBase));
-export { GetVersionLocationsMarkersFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionLocationsMarkersFormatQueryParams = GetVersionLocationsMarkersFormatQueryParams;
 var GetVersionLocationsMarkersFormatRequest = /** @class */ (function (_super) {
     __extends(GetVersionLocationsMarkersFormatRequest, _super);
     function GetVersionLocationsMarkersFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVersionLocationsMarkersFormatQueryParams)
     ], GetVersionLocationsMarkersFormatRequest.prototype, "queryParams", void 0);
     return GetVersionLocationsMarkersFormatRequest;
-}(SpeakeasyBase));
-export { GetVersionLocationsMarkersFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionLocationsMarkersFormatRequest = GetVersionLocationsMarkersFormatRequest;
 var GetVersionLocationsMarkersFormatResponse = /** @class */ (function (_super) {
     __extends(GetVersionLocationsMarkersFormatResponse, _super);
     function GetVersionLocationsMarkersFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVersionLocationsMarkersFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVersionLocationsMarkersFormatResponse.prototype, "statusCode", void 0);
     return GetVersionLocationsMarkersFormatResponse;
-}(SpeakeasyBase));
-export { GetVersionLocationsMarkersFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVersionLocationsMarkersFormatResponse = GetVersionLocationsMarkersFormatResponse;

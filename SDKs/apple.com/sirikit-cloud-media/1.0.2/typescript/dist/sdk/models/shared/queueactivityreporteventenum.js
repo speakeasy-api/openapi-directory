@@ -1,4 +1,7 @@
-export var QueueActivityReportEventEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueActivityReportEventEnum = void 0;
+var QueueActivityReportEventEnum;
 (function (QueueActivityReportEventEnum) {
     QueueActivityReportEventEnum["LocalPlayingElapsed"] = "local.playing.elapsed";
     QueueActivityReportEventEnum["LocalPlayingPaused"] = "local.playing.paused";
@@ -15,4 +18,4 @@ export var QueueActivityReportEventEnum;
     QueueActivityReportEventEnum["LocalCommandLike"] = "local.command.like";
     QueueActivityReportEventEnum["LocalCommandDislike"] = "local.command.dislike";
     QueueActivityReportEventEnum["LocalCommandBookmark"] = "local.command.bookmark";
-})(QueueActivityReportEventEnum || (QueueActivityReportEventEnum = {}));
+})(QueueActivityReportEventEnum = exports.QueueActivityReportEventEnum || (exports.QueueActivityReportEventEnum = {}));

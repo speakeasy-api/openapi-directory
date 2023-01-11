@@ -1,5 +1,8 @@
-export var StreamingClipboardModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingClipboardModeEnum = void 0;
+var StreamingClipboardModeEnum;
 (function (StreamingClipboardModeEnum) {
     StreamingClipboardModeEnum["Enabled"] = "ENABLED";
     StreamingClipboardModeEnum["Disabled"] = "DISABLED";
-})(StreamingClipboardModeEnum || (StreamingClipboardModeEnum = {}));
+})(StreamingClipboardModeEnum = exports.StreamingClipboardModeEnum || (exports.StreamingClipboardModeEnum = {}));

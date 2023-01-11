@@ -8,16 +8,10 @@ export class ProjectsListCardsPathParams extends SpeakeasyBase {
   columnId: number;
 }
 
-export enum ProjectsListCardsArchivedStateEnum {
-    All = "all",
-    Archived = "archived",
-    NotArchived = "not_archived"
-}
-
 
 export class ProjectsListCardsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=archived_state" })
-  archivedState?: ProjectsListCardsArchivedStateEnum;
+  archivedState?: shared.ColumnIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -41,7 +35,7 @@ export class ProjectsListCardsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

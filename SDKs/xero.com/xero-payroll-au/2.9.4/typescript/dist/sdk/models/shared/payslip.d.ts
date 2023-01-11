@@ -10,13 +10,13 @@ export declare class Payslip extends SpeakeasyBase {
     deductionLines?: DeductionLine[];
     deductions?: number;
     earningsLines?: EarningsLine[];
-    employeeId?: string;
+    employeeID?: string;
     firstName?: string;
     lastName?: string;
     leaveAccrualLines?: LeaveAccrualLine[];
     leaveEarningsLines?: LeaveEarningsLine[];
     netPay?: number;
-    payslipId?: string;
+    payslipID?: string;
     reimbursementLines?: ReimbursementLine[];
     reimbursements?: number;
     super?: number;
@@ -24,6 +24,6 @@ export declare class Payslip extends SpeakeasyBase {
     tax?: number;
     taxLines?: TaxLine[];
     timesheetEarningsLines?: EarningsLine[];
-    updatedDateUtc?: string;
+    updatedDateUTC?: string;
     wages?: number;
 }

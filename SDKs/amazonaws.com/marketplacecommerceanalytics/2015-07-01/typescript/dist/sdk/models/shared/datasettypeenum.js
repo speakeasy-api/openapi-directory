@@ -1,4 +1,7 @@
-export var DataSetTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSetTypeEnum = void 0;
+var DataSetTypeEnum;
 (function (DataSetTypeEnum) {
     DataSetTypeEnum["CustomerSubscriberHourlyMonthlySubscriptions"] = "customer_subscriber_hourly_monthly_subscriptions";
     DataSetTypeEnum["CustomerSubscriberAnnualSubscriptions"] = "customer_subscriber_annual_subscriptions";
@@ -25,4 +28,4 @@ export var DataSetTypeEnum;
     DataSetTypeEnum["CustomerProfileByGeography"] = "customer_profile_by_geography";
     DataSetTypeEnum["SalesCompensationBilledRevenue"] = "sales_compensation_billed_revenue";
     DataSetTypeEnum["UsSalesAndUseTaxRecords"] = "us_sales_and_use_tax_records";
-})(DataSetTypeEnum || (DataSetTypeEnum = {}));
+})(DataSetTypeEnum = exports.DataSetTypeEnum || (exports.DataSetTypeEnum = {}));

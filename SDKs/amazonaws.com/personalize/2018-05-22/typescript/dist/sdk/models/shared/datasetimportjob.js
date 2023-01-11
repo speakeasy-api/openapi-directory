@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatasetImportJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
 // DatasetImportJob
 /**
  * <p>Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon Personalize dataset. For more information, see <a>CreateDatasetImportJob</a>.</p> <p>A dataset import job can be in one of the following states:</p> <ul> <li> <p>CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED</p> </li> </ul>
@@ -34,41 +37,41 @@ var DatasetImportJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DatasetImportJob.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSource" }),
-        __metadata("design:type", DataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSource" }),
+        __metadata("design:type", datasource_1.DataSource)
     ], DatasetImportJob.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetArn" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "datasetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetImportJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetImportJobArn" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "datasetImportJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], DatasetImportJob.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DatasetImportJob.prototype, "status", void 0);
     return DatasetImportJob;
-}(SpeakeasyBase));
-export { DatasetImportJob };
+}(utils_1.SpeakeasyBase));
+exports.DatasetImportJob = DatasetImportJob;

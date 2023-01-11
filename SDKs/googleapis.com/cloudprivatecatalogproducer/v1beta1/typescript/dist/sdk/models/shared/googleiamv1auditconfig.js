@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIamV1AuditLogConfig } from "./googleiamv1auditlogconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIamV1AuditConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleiamv1auditlogconfig_1 = require("./googleiamv1auditlogconfig");
 // GoogleIamV1AuditConfig
 /**
  * Specifies the audit configuration for a service.
@@ -84,13 +87,13 @@ var GoogleIamV1AuditConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditLogConfigs", elemType: GoogleIamV1AuditLogConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditLogConfigs", elemType: googleiamv1auditlogconfig_1.GoogleIamV1AuditLogConfig }),
         __metadata("design:type", Array)
     ], GoogleIamV1AuditConfig.prototype, "auditLogConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], GoogleIamV1AuditConfig.prototype, "service", void 0);
     return GoogleIamV1AuditConfig;
-}(SpeakeasyBase));
-export { GoogleIamV1AuditConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIamV1AuditConfig = GoogleIamV1AuditConfig;

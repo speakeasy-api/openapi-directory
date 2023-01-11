@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetUserContentUserJsonQueryParams extends SpeakeasyBase {
-    userId?: number;
+    userID?: number;
 }
 export declare class GetUserContentUserJsonSecurity extends SpeakeasyBase {
     apiKey: shared.SchemeApiKey;
@@ -12,23 +12,23 @@ export declare class GetUserContentUserJson200ApplicationJsonDebug extends Speak
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetAllProperties extends SpeakeasyBase {
     description?: string;
     name?: string;
-    properties?: Map<string, any>[];
+    properties?: Record<string, any>[];
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetLabels extends SpeakeasyBase {
-    labelId?: number;
+    labelID?: number;
     labelName?: string;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOff extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetPropertiesCommentListSortApprovedateDesc extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetPropertiesReachedMaxComOn extends SpeakeasyBase {
-    groupId?: number;
-    taxonomyId?: number;
+    groupID?: number;
+    taxonomyID?: number;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAssetProperties extends SpeakeasyBase {
     automoderationOff?: GetUserContentUserJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOff;
@@ -37,46 +37,46 @@ export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAsse
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsCommentsAsset extends SpeakeasyBase {
     allProperties?: GetUserContentUserJson200ApplicationJsonResultsCommentsAssetAllProperties[];
-    assetId?: number;
+    assetID?: number;
     assetTitle?: string;
-    assetUrl?: string;
+    assetURL?: string;
     createDate?: string;
     labels?: GetUserContentUserJson200ApplicationJsonResultsCommentsAssetLabels[];
     properties?: GetUserContentUserJson200ApplicationJsonResultsCommentsAssetProperties;
     source?: string;
     taxonomy?: string;
-    text?: Map<string, any>[];
+    text?: Record<string, any>[];
     updateDate?: string;
-    vendorId?: string;
+    vendorID?: string;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResultsComments extends SpeakeasyBase {
     approveDate?: string;
     asset?: GetUserContentUserJson200ApplicationJsonResultsCommentsAsset;
     commentBody?: string;
-    commentId?: number;
+    commentID?: number;
     commentSequence?: number;
     commentTitle?: string;
     commentType?: string;
     createDate?: string;
     editorsSelection?: boolean;
-    labels?: Map<string, any>[];
-    parentId?: any;
+    labels?: Record<string, any>[];
+    parentID?: any;
     permid?: number;
-    picUrl?: string;
+    picURL?: string;
     recommendations?: number;
-    replies?: Map<string, any>[];
+    replies?: Record<string, any>[];
     replyCount?: number;
     status?: string;
     updateDate?: string;
     userDisplayName?: any;
-    userId?: number;
+    userID?: number;
     userLocation?: any;
     userSubmittedDisplayName?: string;
     userSubmittedLocation?: string;
     userSubmittedTitle?: any;
-    userSubmittedUrl?: any;
+    userSubmittedURL?: any;
     userTitle?: any;
-    userUrl?: any;
+    userURL?: any;
 }
 export declare class GetUserContentUserJson200ApplicationJsonResults extends SpeakeasyBase {
     apiTimestamp?: string;
@@ -96,6 +96,6 @@ export declare class GetUserContentUserJsonRequest extends SpeakeasyBase {
 }
 export declare class GetUserContentUserJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentUserJson200ApplicationJsonObject?: GetUserContentUserJson200ApplicationJson;
+    getUserContentUserJSON200ApplicationJSONObject?: GetUserContentUserJson200ApplicationJson;
     statusCode: number;
 }

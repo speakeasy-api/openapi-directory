@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignAnalyticsResponse = exports.CampaignAnalyticsRequest = exports.CampaignAnalyticsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CampaignAnalyticsQueryParams = /** @class */ (function (_super) {
     __extends(CampaignAnalyticsQueryParams, _super);
     function CampaignAnalyticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=campaign_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=campaign_id" }),
         __metadata("design:type", String)
     ], CampaignAnalyticsQueryParams.prototype, "campaignId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], CampaignAnalyticsQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], CampaignAnalyticsQueryParams.prototype, "length", void 0);
     return CampaignAnalyticsQueryParams;
-}(SpeakeasyBase));
-export { CampaignAnalyticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CampaignAnalyticsQueryParams = CampaignAnalyticsQueryParams;
 var CampaignAnalyticsRequest = /** @class */ (function (_super) {
     __extends(CampaignAnalyticsRequest, _super);
     function CampaignAnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CampaignAnalyticsQueryParams)
     ], CampaignAnalyticsRequest.prototype, "queryParams", void 0);
     return CampaignAnalyticsRequest;
-}(SpeakeasyBase));
-export { CampaignAnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CampaignAnalyticsRequest = CampaignAnalyticsRequest;
 var CampaignAnalyticsResponse = /** @class */ (function (_super) {
     __extends(CampaignAnalyticsResponse, _super);
     function CampaignAnalyticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CampaignAnalyticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CampaignAnalyticsResponse.prototype, "statusCode", void 0);
     return CampaignAnalyticsResponse;
-}(SpeakeasyBase));
-export { CampaignAnalyticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CampaignAnalyticsResponse = CampaignAnalyticsResponse;

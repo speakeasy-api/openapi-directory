@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LongTermPricingTypeEnum } from "./longtermpricingtypeenum";
-import { SnowballTypeEnum } from "./snowballtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLongTermPricingRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var longtermpricingtypeenum_1 = require("./longtermpricingtypeenum");
+var snowballtypeenum_1 = require("./snowballtypeenum");
 var CreateLongTermPricingRequest = /** @class */ (function (_super) {
     __extends(CreateLongTermPricingRequest, _super);
     function CreateLongTermPricingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsLongTermPricingAutoRenew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsLongTermPricingAutoRenew" }),
         __metadata("design:type", Boolean)
     ], CreateLongTermPricingRequest.prototype, "isLongTermPricingAutoRenew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingType" }),
         __metadata("design:type", String)
     ], CreateLongTermPricingRequest.prototype, "longTermPricingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballType" }),
         __metadata("design:type", String)
     ], CreateLongTermPricingRequest.prototype, "snowballType", void 0);
     return CreateLongTermPricingRequest;
-}(SpeakeasyBase));
-export { CreateLongTermPricingRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateLongTermPricingRequest = CreateLongTermPricingRequest;

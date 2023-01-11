@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedUser } from "./nesteduser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectChange = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteduser_1 = require("./nesteduser");
 var ObjectChange = /** @class */ (function (_super) {
     __extends(ObjectChange, _super);
     function ObjectChange() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", Number)
     ], ObjectChange.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changed_object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changed_object" }),
         __metadata("design:type", String)
     ], ObjectChange.prototype, "changedObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], ObjectChange.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ObjectChange.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object_data" }),
         __metadata("design:type", String)
     ], ObjectChange.prototype, "objectData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_id" }),
         __metadata("design:type", String)
     ], ObjectChange.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Date)
     ], ObjectChange.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", NestedUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", nesteduser_1.NestedUser)
     ], ObjectChange.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_name" }),
         __metadata("design:type", String)
     ], ObjectChange.prototype, "userName", void 0);
     return ObjectChange;
-}(SpeakeasyBase));
-export { ObjectChange };
+}(utils_1.SpeakeasyBase));
+exports.ObjectChange = ObjectChange;

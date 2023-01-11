@@ -28,5 +28,5 @@ export class EvalValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  evalValue200ApplicationJsonString?: string;
+  evalValue200ApplicationJSONString?: string;
 }

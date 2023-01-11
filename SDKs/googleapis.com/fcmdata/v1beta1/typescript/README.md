@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FcmdataProjectsAndroidAppsDeliveryDataListRequest, FcmdataProjectsAndroidAppsDeliveryDataListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: FcmdataProjectsAndroidAppsDeliveryDataListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "fugiat",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "consequuntur",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "aut",
-    fields: "rerum",
-    key: "cupiditate",
-    oauthToken: "corporis",
-    pageSize: 1651007273087402724,
-    pageToken: "provident",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    pageSize: 8274930044578894929,
+    pageToken: "et",
     prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "nemo",
-    uploadProtocol: "rerum",
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

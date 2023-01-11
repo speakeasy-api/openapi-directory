@@ -7,10 +7,10 @@ import { ReturnValueEnum } from "./returnvalueenum";
 
 export class PutItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue })
-  expected?: Map<string, ExpectedAttributeValue>;
+  expected?: Record<string, ExpectedAttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=Item", elemType: AttributeValue })
-  item: Map<string, AttributeValue>;
+  item: Record<string, AttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=ReturnValues" })
   returnValues?: ReturnValueEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVideoThumbnailAlt1Response = exports.CreateVideoThumbnailAlt1Request = exports.CreateVideoThumbnailAlt1Security = exports.CreateVideoThumbnailAlt1RequestBody = exports.CreateVideoThumbnailAlt1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateVideoThumbnailAlt1PathParams = /** @class */ (function (_super) {
     __extends(CreateVideoThumbnailAlt1PathParams, _super);
     function CreateVideoThumbnailAlt1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
         __metadata("design:type", Number)
     ], CreateVideoThumbnailAlt1PathParams.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=video_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=video_id" }),
         __metadata("design:type", Number)
     ], CreateVideoThumbnailAlt1PathParams.prototype, "videoId", void 0);
     return CreateVideoThumbnailAlt1PathParams;
-}(SpeakeasyBase));
-export { CreateVideoThumbnailAlt1PathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateVideoThumbnailAlt1PathParams = CreateVideoThumbnailAlt1PathParams;
 var CreateVideoThumbnailAlt1RequestBody = /** @class */ (function (_super) {
     __extends(CreateVideoThumbnailAlt1RequestBody, _super);
     function CreateVideoThumbnailAlt1RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CreateVideoThumbnailAlt1RequestBody.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], CreateVideoThumbnailAlt1RequestBody.prototype, "time", void 0);
     return CreateVideoThumbnailAlt1RequestBody;
-}(SpeakeasyBase));
-export { CreateVideoThumbnailAlt1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateVideoThumbnailAlt1RequestBody = CreateVideoThumbnailAlt1RequestBody;
 var CreateVideoThumbnailAlt1Security = /** @class */ (function (_super) {
     __extends(CreateVideoThumbnailAlt1Security, _super);
     function CreateVideoThumbnailAlt1Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CreateVideoThumbnailAlt1Security.prototype, "oauth2", void 0);
     return CreateVideoThumbnailAlt1Security;
-}(SpeakeasyBase));
-export { CreateVideoThumbnailAlt1Security };
+}(utils_1.SpeakeasyBase));
+exports.CreateVideoThumbnailAlt1Security = CreateVideoThumbnailAlt1Security;
 var CreateVideoThumbnailAlt1Request = /** @class */ (function (_super) {
     __extends(CreateVideoThumbnailAlt1Request, _super);
     function CreateVideoThumbnailAlt1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateVideoThumbnailAlt1PathParams)
     ], CreateVideoThumbnailAlt1Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.vimeo.picture+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.vimeo.picture+json" }),
         __metadata("design:type", CreateVideoThumbnailAlt1RequestBody)
     ], CreateVideoThumbnailAlt1Request.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateVideoThumbnailAlt1Security)
     ], CreateVideoThumbnailAlt1Request.prototype, "security", void 0);
     return CreateVideoThumbnailAlt1Request;
-}(SpeakeasyBase));
-export { CreateVideoThumbnailAlt1Request };
+}(utils_1.SpeakeasyBase));
+exports.CreateVideoThumbnailAlt1Request = CreateVideoThumbnailAlt1Request;
 var CreateVideoThumbnailAlt1Response = /** @class */ (function (_super) {
     __extends(CreateVideoThumbnailAlt1Response, _super);
     function CreateVideoThumbnailAlt1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateVideoThumbnailAlt1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateVideoThumbnailAlt1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Picture)
     ], CreateVideoThumbnailAlt1Response.prototype, "picture", void 0);
     return CreateVideoThumbnailAlt1Response;
-}(SpeakeasyBase));
-export { CreateVideoThumbnailAlt1Response };
+}(utils_1.SpeakeasyBase));
+exports.CreateVideoThumbnailAlt1Response = CreateVideoThumbnailAlt1Response;

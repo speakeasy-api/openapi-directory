@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Secret } from "./secret";
-import { JwtClaims } from "./jwtclaims";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Oauth2JwtBearer = void 0;
+var utils_1 = require("../../../internal/utils");
+var secret_1 = require("./secret");
+var jwtclaims_1 = require("./jwtclaims");
 // Oauth2JwtBearer
 /**
  * Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.
@@ -35,13 +38,13 @@ var Oauth2JwtBearer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
-        __metadata("design:type", Secret)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
+        __metadata("design:type", secret_1.Secret)
     ], Oauth2JwtBearer.prototype, "clientKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwtClaims" }),
-        __metadata("design:type", JwtClaims)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwtClaims" }),
+        __metadata("design:type", jwtclaims_1.JwtClaims)
     ], Oauth2JwtBearer.prototype, "jwtClaims", void 0);
     return Oauth2JwtBearer;
-}(SpeakeasyBase));
-export { Oauth2JwtBearer };
+}(utils_1.SpeakeasyBase));
+exports.Oauth2JwtBearer = Oauth2JwtBearer;

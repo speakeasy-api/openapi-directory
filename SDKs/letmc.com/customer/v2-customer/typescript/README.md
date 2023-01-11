@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BranchControllerGetBranchesRequest, BranchControllerGetBranchesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,15 +28,15 @@ const sdk = new SDK();
     
 const req: BranchControllerGetBranchesRequest = {
   pathParams: {
-    shortName: "repellendus",
+    shortName: "sit",
   },
   queryParams: {
-    count: 6759572571242256861,
-    offset: 3743037178764198971,
+    count: 2259404117704393152,
+    offset: 6050128673802995827,
   },
 };
 
-sdk.sdk.branchControllerGetBranches(req).then((res: BranchControllerGetBranchesResponse | AxiosError) => {
+sdk.branchController.branchControllerGetBranches(req).then((res: BranchControllerGetBranchesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,10 +45,13 @@ sdk.sdk.branchControllerGetBranches(req).then((res: BranchControllerGetBranchesR
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### BranchController
 
 * `branchControllerGetBranches` - All branches defined for a company
 * `getV2CustomerShortNameBranchBranchesBranchId` - Get a specific branch given its unique Object ID (OID)
+
+### LandlordController
+
 * `landlordControllerCreateMaintenancePreference` - Post tenancy maintenance preferences:-
 * `landlordControllerGetAccounts` - Get the accounting details for the landlord.
 * `landlordControllerGetDocument` - Download a Document
@@ -64,8 +66,17 @@ sdk.sdk.branchControllerGetBranches(req).then((res: BranchControllerGetBranchesR
 * `landlordControllerGetSummaryDetails` - Get the summary details for the landlord.
 * `landlordControllerGetTenancy` - Get tenancy details.
 * `landlordControllerGetTenancyAgreementReport` - Generate a Tenancy Agreement Copy (PDF)
+
+### PhotoController
+
 * `photoControllerGetPhotoDownload` - Downloads the photo of a property given the photo ID.
+
+### PropertyController
+
 * `propertyControllerGetPropertiesPhotos` - A collection showing all the photos linked to a specific block, property or room
+
+### SessionController
+
 * `sessionControllerChangePassword` - Change the password of a customer given their existing and new password.
 * `sessionControllerCreateLandlordLogin` - Send a request to the in-tray to create a landlord login.
 * `sessionControllerGetSessionInfo` - Gets information about the currently logged on customer.

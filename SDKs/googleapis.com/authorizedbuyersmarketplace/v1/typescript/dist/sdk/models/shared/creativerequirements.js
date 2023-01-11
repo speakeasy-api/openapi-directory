@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreativeRequirementsCreativeFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeRequirements = exports.CreativeRequirementsSkippableAdTypeEnum = exports.CreativeRequirementsProgrammaticCreativeSourceEnum = exports.CreativeRequirementsCreativeSafeFrameCompatibilityEnum = exports.CreativeRequirementsCreativePreApprovalPolicyEnum = exports.CreativeRequirementsCreativeFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreativeRequirementsCreativeFormatEnum;
 (function (CreativeRequirementsCreativeFormatEnum) {
     CreativeRequirementsCreativeFormatEnum["CreativeFormatUnspecified"] = "CREATIVE_FORMAT_UNSPECIFIED";
     CreativeRequirementsCreativeFormatEnum["Display"] = "DISPLAY";
     CreativeRequirementsCreativeFormatEnum["Video"] = "VIDEO";
-})(CreativeRequirementsCreativeFormatEnum || (CreativeRequirementsCreativeFormatEnum = {}));
-export var CreativeRequirementsCreativePreApprovalPolicyEnum;
+})(CreativeRequirementsCreativeFormatEnum = exports.CreativeRequirementsCreativeFormatEnum || (exports.CreativeRequirementsCreativeFormatEnum = {}));
+var CreativeRequirementsCreativePreApprovalPolicyEnum;
 (function (CreativeRequirementsCreativePreApprovalPolicyEnum) {
     CreativeRequirementsCreativePreApprovalPolicyEnum["CreativePreApprovalPolicyUnspecified"] = "CREATIVE_PRE_APPROVAL_POLICY_UNSPECIFIED";
     CreativeRequirementsCreativePreApprovalPolicyEnum["SellerPreApprovalRequired"] = "SELLER_PRE_APPROVAL_REQUIRED";
     CreativeRequirementsCreativePreApprovalPolicyEnum["SellerPreApprovalNotRequired"] = "SELLER_PRE_APPROVAL_NOT_REQUIRED";
-})(CreativeRequirementsCreativePreApprovalPolicyEnum || (CreativeRequirementsCreativePreApprovalPolicyEnum = {}));
-export var CreativeRequirementsCreativeSafeFrameCompatibilityEnum;
+})(CreativeRequirementsCreativePreApprovalPolicyEnum = exports.CreativeRequirementsCreativePreApprovalPolicyEnum || (exports.CreativeRequirementsCreativePreApprovalPolicyEnum = {}));
+var CreativeRequirementsCreativeSafeFrameCompatibilityEnum;
 (function (CreativeRequirementsCreativeSafeFrameCompatibilityEnum) {
     CreativeRequirementsCreativeSafeFrameCompatibilityEnum["CreativeSafeFrameCompatibilityUnspecified"] = "CREATIVE_SAFE_FRAME_COMPATIBILITY_UNSPECIFIED";
     CreativeRequirementsCreativeSafeFrameCompatibilityEnum["Compatible"] = "COMPATIBLE";
     CreativeRequirementsCreativeSafeFrameCompatibilityEnum["Incompatible"] = "INCOMPATIBLE";
-})(CreativeRequirementsCreativeSafeFrameCompatibilityEnum || (CreativeRequirementsCreativeSafeFrameCompatibilityEnum = {}));
-export var CreativeRequirementsProgrammaticCreativeSourceEnum;
+})(CreativeRequirementsCreativeSafeFrameCompatibilityEnum = exports.CreativeRequirementsCreativeSafeFrameCompatibilityEnum || (exports.CreativeRequirementsCreativeSafeFrameCompatibilityEnum = {}));
+var CreativeRequirementsProgrammaticCreativeSourceEnum;
 (function (CreativeRequirementsProgrammaticCreativeSourceEnum) {
     CreativeRequirementsProgrammaticCreativeSourceEnum["ProgrammaticCreativeSourceUnspecified"] = "PROGRAMMATIC_CREATIVE_SOURCE_UNSPECIFIED";
     CreativeRequirementsProgrammaticCreativeSourceEnum["Advertiser"] = "ADVERTISER";
     CreativeRequirementsProgrammaticCreativeSourceEnum["Publisher"] = "PUBLISHER";
-})(CreativeRequirementsProgrammaticCreativeSourceEnum || (CreativeRequirementsProgrammaticCreativeSourceEnum = {}));
-export var CreativeRequirementsSkippableAdTypeEnum;
+})(CreativeRequirementsProgrammaticCreativeSourceEnum = exports.CreativeRequirementsProgrammaticCreativeSourceEnum || (exports.CreativeRequirementsProgrammaticCreativeSourceEnum = {}));
+var CreativeRequirementsSkippableAdTypeEnum;
 (function (CreativeRequirementsSkippableAdTypeEnum) {
     CreativeRequirementsSkippableAdTypeEnum["SkippableAdTypeUnspecified"] = "SKIPPABLE_AD_TYPE_UNSPECIFIED";
     CreativeRequirementsSkippableAdTypeEnum["Skippable"] = "SKIPPABLE";
     CreativeRequirementsSkippableAdTypeEnum["InstreamSelect"] = "INSTREAM_SELECT";
     CreativeRequirementsSkippableAdTypeEnum["NotSkippable"] = "NOT_SKIPPABLE";
     CreativeRequirementsSkippableAdTypeEnum["Any"] = "ANY";
-})(CreativeRequirementsSkippableAdTypeEnum || (CreativeRequirementsSkippableAdTypeEnum = {}));
+})(CreativeRequirementsSkippableAdTypeEnum = exports.CreativeRequirementsSkippableAdTypeEnum || (exports.CreativeRequirementsSkippableAdTypeEnum = {}));
 // CreativeRequirements
 /**
  * Message captures data about the creatives in the deal.
@@ -65,29 +68,29 @@ var CreativeRequirements = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeFormat" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "creativeFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativePreApprovalPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativePreApprovalPolicy" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "creativePreApprovalPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeSafeFrameCompatibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeSafeFrameCompatibility" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "creativeSafeFrameCompatibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAdDurationMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAdDurationMs" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "maxAdDurationMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=programmaticCreativeSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=programmaticCreativeSource" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "programmaticCreativeSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skippableAdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skippableAdType" }),
         __metadata("design:type", String)
     ], CreativeRequirements.prototype, "skippableAdType", void 0);
     return CreativeRequirements;
-}(SpeakeasyBase));
-export { CreativeRequirements };
+}(utils_1.SpeakeasyBase));
+exports.CreativeRequirements = CreativeRequirements;

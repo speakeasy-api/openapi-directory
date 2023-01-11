@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CountryCodeEnum } from "./countrycodeenum";
-import { CurrencyCodeEnum } from "./currencycodeenum";
-import { Error } from "./error";
-export var FeedConnectionStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeedConnection = exports.FeedConnectionStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var countrycodeenum_1 = require("./countrycodeenum");
+var currencycodeenum_1 = require("./currencycodeenum");
+var error_1 = require("./error");
+var FeedConnectionStatusEnum;
 (function (FeedConnectionStatusEnum) {
     FeedConnectionStatusEnum["Pending"] = "PENDING";
     FeedConnectionStatusEnum["Rejected"] = "REJECTED";
-})(FeedConnectionStatusEnum || (FeedConnectionStatusEnum = {}));
+})(FeedConnectionStatusEnum = exports.FeedConnectionStatusEnum || (exports.FeedConnectionStatusEnum = {}));
 // FeedConnection
 /**
  * https://developer.xero.com/documentation/bank-feeds-api/feed-connections
@@ -41,45 +44,45 @@ var FeedConnection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountToken" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "accountToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountType" }),
         __metadata("design:type", Object)
     ], FeedConnection.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], FeedConnection.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], FeedConnection.prototype, "status", void 0);
     return FeedConnection;
-}(SpeakeasyBase));
-export { FeedConnection };
+}(utils_1.SpeakeasyBase));
+exports.FeedConnection = FeedConnection;

@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse extend
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branchrestriction?: Map<string, any>;
+  branchrestriction?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

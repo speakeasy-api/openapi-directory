@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RescheduleRescheduleTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Reschedule = exports.RescheduleRescheduleTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RescheduleRescheduleTypeEnum;
 (function (RescheduleRescheduleTypeEnum) {
     RescheduleRescheduleTypeEnum["RescheduleTypeUnspecified"] = "RESCHEDULE_TYPE_UNSPECIFIED";
     RescheduleRescheduleTypeEnum["Immediate"] = "IMMEDIATE";
     RescheduleRescheduleTypeEnum["NextAvailableWindow"] = "NEXT_AVAILABLE_WINDOW";
     RescheduleRescheduleTypeEnum["SpecificTime"] = "SPECIFIC_TIME";
-})(RescheduleRescheduleTypeEnum || (RescheduleRescheduleTypeEnum = {}));
+})(RescheduleRescheduleTypeEnum = exports.RescheduleRescheduleTypeEnum || (exports.RescheduleRescheduleTypeEnum = {}));
 var Reschedule = /** @class */ (function (_super) {
     __extends(Reschedule, _super);
     function Reschedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rescheduleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rescheduleType" }),
         __metadata("design:type", String)
     ], Reschedule.prototype, "rescheduleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTime" }),
         __metadata("design:type", String)
     ], Reschedule.prototype, "scheduleTime", void 0);
     return Reschedule;
-}(SpeakeasyBase));
-export { Reschedule };
+}(utils_1.SpeakeasyBase));
+exports.Reschedule = Reschedule;

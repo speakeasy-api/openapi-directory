@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// BucketCriteriaAdditionalProperties
-/**
- * Specifies the operator to use in a property-based condition that filters the results of a query for information about S3 buckets.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketCriteriaAdditionalProperties = void 0;
+var utils_1 = require("../../../internal/utils");
 var BucketCriteriaAdditionalProperties = /** @class */ (function (_super) {
     __extends(BucketCriteriaAdditionalProperties, _super);
     function BucketCriteriaAdditionalProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eq" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eq" }),
         __metadata("design:type", Array)
     ], BucketCriteriaAdditionalProperties.prototype, "eq", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gt" }),
         __metadata("design:type", Number)
     ], BucketCriteriaAdditionalProperties.prototype, "gt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gte" }),
         __metadata("design:type", Number)
     ], BucketCriteriaAdditionalProperties.prototype, "gte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lt" }),
         __metadata("design:type", Number)
     ], BucketCriteriaAdditionalProperties.prototype, "lt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lte" }),
         __metadata("design:type", Number)
     ], BucketCriteriaAdditionalProperties.prototype, "lte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=neq" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=neq" }),
         __metadata("design:type", Array)
     ], BucketCriteriaAdditionalProperties.prototype, "neq", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], BucketCriteriaAdditionalProperties.prototype, "prefix", void 0);
     return BucketCriteriaAdditionalProperties;
-}(SpeakeasyBase));
-export { BucketCriteriaAdditionalProperties };
+}(utils_1.SpeakeasyBase));
+exports.BucketCriteriaAdditionalProperties = BucketCriteriaAdditionalProperties;

@@ -53,5 +53,5 @@ export class ExtrasTopologyMapsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasTopologyMapsList200ApplicationJsonObject?: ExtrasTopologyMapsList200ApplicationJson;
+  extrasTopologyMapsList200ApplicationJSONObject?: ExtrasTopologyMapsList200ApplicationJson;
 }

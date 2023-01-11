@@ -15,5 +15,5 @@ export declare class GetAllCustomFieldsByCategoryResponse extends SpeakeasyBase 
     contentType: string;
     statusCode: number;
     customFieldDefinitions?: shared.CustomFieldDefinition[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

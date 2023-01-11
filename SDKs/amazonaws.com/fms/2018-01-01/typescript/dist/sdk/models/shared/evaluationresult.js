@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyComplianceStatusTypeEnum } from "./policycompliancestatustypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var policycompliancestatustypeenum_1 = require("./policycompliancestatustypeenum");
 // EvaluationResult
 /**
  * Describes the compliance status for the account. An account is considered noncompliant if it includes resources that are not protected by the specified policy or that don't comply with the policy.
@@ -34,17 +37,17 @@ var EvaluationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceStatus" }),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "complianceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationLimitExceeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationLimitExceeded" }),
         __metadata("design:type", Boolean)
     ], EvaluationResult.prototype, "evaluationLimitExceeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolatorCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolatorCount" }),
         __metadata("design:type", Number)
     ], EvaluationResult.prototype, "violatorCount", void 0);
     return EvaluationResult;
-}(SpeakeasyBase));
-export { EvaluationResult };
+}(utils_1.SpeakeasyBase));
+exports.EvaluationResult = EvaluationResult;

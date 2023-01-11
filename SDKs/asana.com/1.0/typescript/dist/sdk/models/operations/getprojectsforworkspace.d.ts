@@ -21,5 +21,5 @@ export declare class GetProjectsForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getProjectsForWorkspace200ApplicationJsonObject?: GetProjectsForWorkspace200ApplicationJson;
+    getProjectsForWorkspace200ApplicationJSONObject?: GetProjectsForWorkspace200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationSamlResponse = exports.GetOrganizationSamlRequest = exports.GetOrganizationSamlPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationSamlPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationSamlPathParams, _super);
     function GetOrganizationSamlPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationSamlPathParams.prototype, "organizationId", void 0);
     return GetOrganizationSamlPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationSamlPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSamlPathParams = GetOrganizationSamlPathParams;
 var GetOrganizationSamlRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationSamlRequest, _super);
     function GetOrganizationSamlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationSamlPathParams)
     ], GetOrganizationSamlRequest.prototype, "pathParams", void 0);
     return GetOrganizationSamlRequest;
-}(SpeakeasyBase));
-export { GetOrganizationSamlRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSamlRequest = GetOrganizationSamlRequest;
 var GetOrganizationSamlResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationSamlResponse, _super);
     function GetOrganizationSamlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationSamlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationSamlResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationSamlResponse.prototype, "getOrganizationSaml200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationSamlResponse.prototype, "getOrganizationSaml200ApplicationJSONObject", void 0);
     return GetOrganizationSamlResponse;
-}(SpeakeasyBase));
-export { GetOrganizationSamlResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSamlResponse = GetOrganizationSamlResponse;

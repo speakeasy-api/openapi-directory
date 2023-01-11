@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEvidenceByIdResponse = exports.GetEvidenceByIdRequest = exports.GetEvidenceByIdQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEvidenceByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetEvidenceByIdQueryParams, _super);
     function GetEvidenceByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetEvidenceByIdQueryParams.prototype, "id", void 0);
     return GetEvidenceByIdQueryParams;
-}(SpeakeasyBase));
-export { GetEvidenceByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceByIdQueryParams = GetEvidenceByIdQueryParams;
 var GetEvidenceByIdRequest = /** @class */ (function (_super) {
     __extends(GetEvidenceByIdRequest, _super);
     function GetEvidenceByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEvidenceByIdQueryParams)
     ], GetEvidenceByIdRequest.prototype, "queryParams", void 0);
     return GetEvidenceByIdRequest;
-}(SpeakeasyBase));
-export { GetEvidenceByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceByIdRequest = GetEvidenceByIdRequest;
 var GetEvidenceByIdResponse = /** @class */ (function (_super) {
     __extends(GetEvidenceByIdResponse, _super);
     function GetEvidenceByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEvidenceByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEvidenceByIdResponse.prototype, "statusCode", void 0);
     return GetEvidenceByIdResponse;
-}(SpeakeasyBase));
-export { GetEvidenceByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceByIdResponse = GetEvidenceByIdResponse;

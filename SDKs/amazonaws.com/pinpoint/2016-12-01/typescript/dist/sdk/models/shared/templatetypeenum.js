@@ -1,8 +1,11 @@
-export var TemplateTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateTypeEnum = void 0;
+var TemplateTypeEnum;
 (function (TemplateTypeEnum) {
     TemplateTypeEnum["Email"] = "EMAIL";
     TemplateTypeEnum["Sms"] = "SMS";
     TemplateTypeEnum["Voice"] = "VOICE";
     TemplateTypeEnum["Push"] = "PUSH";
     TemplateTypeEnum["Inapp"] = "INAPP";
-})(TemplateTypeEnum || (TemplateTypeEnum = {}));
+})(TemplateTypeEnum = exports.TemplateTypeEnum || (exports.TemplateTypeEnum = {}));

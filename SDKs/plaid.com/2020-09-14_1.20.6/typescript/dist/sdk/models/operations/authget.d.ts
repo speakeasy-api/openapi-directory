@@ -4,8 +4,8 @@ export declare class AuthGetRequest extends SpeakeasyBase {
     request: shared.AuthGetRequest;
 }
 export declare class AuthGetResponse extends SpeakeasyBase {
-    authGetResponse?: Map<string, any>;
+    authGetResponse?: Record<string, any>;
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     statusCode: number;
 }

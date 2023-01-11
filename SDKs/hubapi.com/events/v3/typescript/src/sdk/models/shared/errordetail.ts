@@ -7,7 +7,7 @@ export class ErrorDetail extends SpeakeasyBase {
   code?: string;
 
   @SpeakeasyMetadata()
-  context?: Map<string, string[]>;
+  context?: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   in?: string;

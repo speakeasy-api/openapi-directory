@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostNetworksIdActionsAddSubnetResponse = exports.PostNetworksIdActionsAddSubnetRequest = exports.PostNetworksIdActionsAddSubnetActionResponse = exports.PostNetworksIdActionsAddSubnetActionResponseAction = exports.PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum = exports.PostNetworksIdActionsAddSubnetActionResponseActionResources = exports.PostNetworksIdActionsAddSubnetActionResponseActionError = exports.PostNetworksIdActionsAddSubnetAddSubnetRequest = exports.PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum = exports.PostNetworksIdActionsAddSubnetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostNetworksIdActionsAddSubnetPathParams = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetPathParams, _super);
     function PostNetworksIdActionsAddSubnetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetPathParams.prototype, "id", void 0);
     return PostNetworksIdActionsAddSubnetPathParams;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetPathParams };
-export var PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetPathParams = PostNetworksIdActionsAddSubnetPathParams;
+var PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum;
 (function (PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum) {
     PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum["Cloud"] = "cloud";
     PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum["Server"] = "server";
     PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum["Vswitch"] = "vswitch";
-})(PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum || (PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum = {}));
+})(PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum = exports.PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum || (exports.PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum = {}));
 var PostNetworksIdActionsAddSubnetAddSubnetRequest = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetAddSubnetRequest, _super);
     function PostNetworksIdActionsAddSubnetAddSubnetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetAddSubnetRequest.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetAddSubnetRequest.prototype, "networkZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetAddSubnetRequest.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vswitch_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vswitch_id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetAddSubnetRequest.prototype, "vswitchId", void 0);
     return PostNetworksIdActionsAddSubnetAddSubnetRequest;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetAddSubnetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetAddSubnetRequest = PostNetworksIdActionsAddSubnetAddSubnetRequest;
 // PostNetworksIdActionsAddSubnetActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -75,123 +78,123 @@ var PostNetworksIdActionsAddSubnetActionResponseActionError = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseActionError.prototype, "message", void 0);
     return PostNetworksIdActionsAddSubnetActionResponseActionError;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetActionResponseActionError = PostNetworksIdActionsAddSubnetActionResponseActionError;
 var PostNetworksIdActionsAddSubnetActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetActionResponseActionResources, _super);
     function PostNetworksIdActionsAddSubnetActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseActionResources.prototype, "type", void 0);
     return PostNetworksIdActionsAddSubnetActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetActionResponseActionResources };
-export var PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetActionResponseActionResources = PostNetworksIdActionsAddSubnetActionResponseActionResources;
+var PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum;
 (function (PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum) {
     PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum["Success"] = "success";
     PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum["Running"] = "running";
     PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum["Error"] = "error";
-})(PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum || (PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum = {}));
+})(PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum = exports.PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum || (exports.PostNetworksIdActionsAddSubnetActionResponseActionStatusEnum = {}));
 var PostNetworksIdActionsAddSubnetActionResponseAction = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetActionResponseAction, _super);
     function PostNetworksIdActionsAddSubnetActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostNetworksIdActionsAddSubnetActionResponseActionError)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostNetworksIdActionsAddSubnetActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostNetworksIdActionsAddSubnetActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetActionResponseAction.prototype, "status", void 0);
     return PostNetworksIdActionsAddSubnetActionResponseAction;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetActionResponseAction = PostNetworksIdActionsAddSubnetActionResponseAction;
 var PostNetworksIdActionsAddSubnetActionResponse = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetActionResponse, _super);
     function PostNetworksIdActionsAddSubnetActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostNetworksIdActionsAddSubnetActionResponseAction)
     ], PostNetworksIdActionsAddSubnetActionResponse.prototype, "action", void 0);
     return PostNetworksIdActionsAddSubnetActionResponse;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetActionResponse = PostNetworksIdActionsAddSubnetActionResponse;
 var PostNetworksIdActionsAddSubnetRequest = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetRequest, _super);
     function PostNetworksIdActionsAddSubnetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNetworksIdActionsAddSubnetPathParams)
     ], PostNetworksIdActionsAddSubnetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostNetworksIdActionsAddSubnetAddSubnetRequest)
     ], PostNetworksIdActionsAddSubnetRequest.prototype, "request", void 0);
     return PostNetworksIdActionsAddSubnetRequest;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetRequest = PostNetworksIdActionsAddSubnetRequest;
 var PostNetworksIdActionsAddSubnetResponse = /** @class */ (function (_super) {
     __extends(PostNetworksIdActionsAddSubnetResponse, _super);
     function PostNetworksIdActionsAddSubnetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNetworksIdActionsAddSubnetActionResponse)
     ], PostNetworksIdActionsAddSubnetResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostNetworksIdActionsAddSubnetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostNetworksIdActionsAddSubnetResponse.prototype, "statusCode", void 0);
     return PostNetworksIdActionsAddSubnetResponse;
-}(SpeakeasyBase));
-export { PostNetworksIdActionsAddSubnetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNetworksIdActionsAddSubnetResponse = PostNetworksIdActionsAddSubnetResponse;

@@ -12,5 +12,5 @@ export declare class CreateDeploymentJobResponse extends SpeakeasyBase {
     failureReason?: string;
     fleet?: string;
     status?: DeploymentStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

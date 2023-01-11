@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserPasswordInput } from "./userpassword";
-import { PrimaryInstanceSettingsInput } from "./primaryinstancesettings";
-import { UserPassword } from "./userpassword";
-import { PrimaryInstanceSettings } from "./primaryinstancesettings";
-// AlloyDbSettingsInput
-/**
- * Settings for creating an AlloyDB cluster.
-**/
-var AlloyDbSettingsInput = /** @class */ (function (_super) {
-    __extends(AlloyDbSettingsInput, _super);
-    function AlloyDbSettingsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialUser" }),
-        __metadata("design:type", UserPasswordInput)
-    ], AlloyDbSettingsInput.prototype, "initialUser", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], AlloyDbSettingsInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryInstanceSettings" }),
-        __metadata("design:type", PrimaryInstanceSettingsInput)
-    ], AlloyDbSettingsInput.prototype, "primaryInstanceSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcNetwork" }),
-        __metadata("design:type", String)
-    ], AlloyDbSettingsInput.prototype, "vpcNetwork", void 0);
-    return AlloyDbSettingsInput;
-}(SpeakeasyBase));
-export { AlloyDbSettingsInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlloyDbSettingsInput = exports.AlloyDbSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var userpassword_1 = require("./userpassword");
+var primaryinstancesettings_1 = require("./primaryinstancesettings");
+var userpassword_2 = require("./userpassword");
+var primaryinstancesettings_2 = require("./primaryinstancesettings");
 // AlloyDbSettings
 /**
  * Settings for creating an AlloyDB cluster.
@@ -65,21 +40,49 @@ var AlloyDbSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialUser" }),
-        __metadata("design:type", UserPassword)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialUser" }),
+        __metadata("design:type", userpassword_1.UserPassword)
     ], AlloyDbSettings.prototype, "initialUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AlloyDbSettings.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryInstanceSettings" }),
-        __metadata("design:type", PrimaryInstanceSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryInstanceSettings" }),
+        __metadata("design:type", primaryinstancesettings_1.PrimaryInstanceSettings)
     ], AlloyDbSettings.prototype, "primaryInstanceSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcNetwork" }),
         __metadata("design:type", String)
     ], AlloyDbSettings.prototype, "vpcNetwork", void 0);
     return AlloyDbSettings;
-}(SpeakeasyBase));
-export { AlloyDbSettings };
+}(utils_1.SpeakeasyBase));
+exports.AlloyDbSettings = AlloyDbSettings;
+// AlloyDbSettingsInput
+/**
+ * Settings for creating an AlloyDB cluster.
+**/
+var AlloyDbSettingsInput = /** @class */ (function (_super) {
+    __extends(AlloyDbSettingsInput, _super);
+    function AlloyDbSettingsInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialUser" }),
+        __metadata("design:type", userpassword_2.UserPasswordInput)
+    ], AlloyDbSettingsInput.prototype, "initialUser", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], AlloyDbSettingsInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryInstanceSettings" }),
+        __metadata("design:type", primaryinstancesettings_2.PrimaryInstanceSettingsInput)
+    ], AlloyDbSettingsInput.prototype, "primaryInstanceSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcNetwork" }),
+        __metadata("design:type", String)
+    ], AlloyDbSettingsInput.prototype, "vpcNetwork", void 0);
+    return AlloyDbSettingsInput;
+}(utils_1.SpeakeasyBase));
+exports.AlloyDbSettingsInput = AlloyDbSettingsInput;

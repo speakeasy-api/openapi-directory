@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateUserResponse = exports.UpdateUserRequest = exports.UpdateUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateUserPathParams = /** @class */ (function (_super) {
     __extends(UpdateUserPathParams, _super);
     function UpdateUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", String)
     ], UpdateUserPathParams.prototype, "userId", void 0);
     return UpdateUserPathParams;
-}(SpeakeasyBase));
-export { UpdateUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserPathParams = UpdateUserPathParams;
 var UpdateUserRequest = /** @class */ (function (_super) {
     __extends(UpdateUserRequest, _super);
     function UpdateUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateUserPathParams)
     ], UpdateUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], UpdateUserRequest.prototype, "request", void 0);
     return UpdateUserRequest;
-}(SpeakeasyBase));
-export { UpdateUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserRequest = UpdateUserRequest;
 var UpdateUserResponse = /** @class */ (function (_super) {
     __extends(UpdateUserResponse, _super);
     function UpdateUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], UpdateUserResponse.prototype, "updateUser200ApplicationJsonAny", void 0);
+    ], UpdateUserResponse.prototype, "updateUser200ApplicationJSONAny", void 0);
     return UpdateUserResponse;
-}(SpeakeasyBase));
-export { UpdateUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateUserResponse = UpdateUserResponse;

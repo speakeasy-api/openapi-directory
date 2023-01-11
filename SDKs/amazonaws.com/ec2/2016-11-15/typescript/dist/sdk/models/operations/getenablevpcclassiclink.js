@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEnableVpcClassicLinkActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnableVpcClassicLinkResponse = exports.GetEnableVpcClassicLinkRequest = exports.GetEnableVpcClassicLinkHeaders = exports.GetEnableVpcClassicLinkQueryParams = exports.GetEnableVpcClassicLinkVersionEnum = exports.GetEnableVpcClassicLinkActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEnableVpcClassicLinkActionEnum;
 (function (GetEnableVpcClassicLinkActionEnum) {
     GetEnableVpcClassicLinkActionEnum["EnableVpcClassicLink"] = "EnableVpcClassicLink";
-})(GetEnableVpcClassicLinkActionEnum || (GetEnableVpcClassicLinkActionEnum = {}));
-export var GetEnableVpcClassicLinkVersionEnum;
+})(GetEnableVpcClassicLinkActionEnum = exports.GetEnableVpcClassicLinkActionEnum || (exports.GetEnableVpcClassicLinkActionEnum = {}));
+var GetEnableVpcClassicLinkVersionEnum;
 (function (GetEnableVpcClassicLinkVersionEnum) {
     GetEnableVpcClassicLinkVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetEnableVpcClassicLinkVersionEnum || (GetEnableVpcClassicLinkVersionEnum = {}));
+})(GetEnableVpcClassicLinkVersionEnum = exports.GetEnableVpcClassicLinkVersionEnum || (exports.GetEnableVpcClassicLinkVersionEnum = {}));
 var GetEnableVpcClassicLinkQueryParams = /** @class */ (function (_super) {
     __extends(GetEnableVpcClassicLinkQueryParams, _super);
     function GetEnableVpcClassicLinkQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetEnableVpcClassicLinkQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpcId" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkQueryParams.prototype, "vpcId", void 0);
     return GetEnableVpcClassicLinkQueryParams;
-}(SpeakeasyBase));
-export { GetEnableVpcClassicLinkQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableVpcClassicLinkQueryParams = GetEnableVpcClassicLinkQueryParams;
 var GetEnableVpcClassicLinkHeaders = /** @class */ (function (_super) {
     __extends(GetEnableVpcClassicLinkHeaders, _super);
     function GetEnableVpcClassicLinkHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetEnableVpcClassicLinkHeaders;
-}(SpeakeasyBase));
-export { GetEnableVpcClassicLinkHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableVpcClassicLinkHeaders = GetEnableVpcClassicLinkHeaders;
 var GetEnableVpcClassicLinkRequest = /** @class */ (function (_super) {
     __extends(GetEnableVpcClassicLinkRequest, _super);
     function GetEnableVpcClassicLinkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableVpcClassicLinkQueryParams)
     ], GetEnableVpcClassicLinkRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableVpcClassicLinkHeaders)
     ], GetEnableVpcClassicLinkRequest.prototype, "headers", void 0);
     return GetEnableVpcClassicLinkRequest;
-}(SpeakeasyBase));
-export { GetEnableVpcClassicLinkRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableVpcClassicLinkRequest = GetEnableVpcClassicLinkRequest;
 var GetEnableVpcClassicLinkResponse = /** @class */ (function (_super) {
     __extends(GetEnableVpcClassicLinkResponse, _super);
     function GetEnableVpcClassicLinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEnableVpcClassicLinkResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnableVpcClassicLinkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnableVpcClassicLinkResponse.prototype, "statusCode", void 0);
     return GetEnableVpcClassicLinkResponse;
-}(SpeakeasyBase));
-export { GetEnableVpcClassicLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableVpcClassicLinkResponse = GetEnableVpcClassicLinkResponse;

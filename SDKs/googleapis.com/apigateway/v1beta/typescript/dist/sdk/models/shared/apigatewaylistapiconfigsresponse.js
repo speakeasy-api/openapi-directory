@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApigatewayApiConfig } from "./apigatewayapiconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApigatewayListApiConfigsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var apigatewayapiconfig_1 = require("./apigatewayapiconfig");
 // ApigatewayListApiConfigsResponse
 /**
  * Response message for ApiGatewayService.ListApiConfigs
@@ -34,17 +37,17 @@ var ApigatewayListApiConfigsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiConfigs", elemType: ApigatewayApiConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiConfigs", elemType: apigatewayapiconfig_1.ApigatewayApiConfig }),
         __metadata("design:type", Array)
     ], ApigatewayListApiConfigsResponse.prototype, "apiConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ApigatewayListApiConfigsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachableLocations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachableLocations" }),
         __metadata("design:type", Array)
     ], ApigatewayListApiConfigsResponse.prototype, "unreachableLocations", void 0);
     return ApigatewayListApiConfigsResponse;
-}(SpeakeasyBase));
-export { ApigatewayListApiConfigsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayListApiConfigsResponse = ApigatewayListApiConfigsResponse;

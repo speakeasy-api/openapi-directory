@@ -34,5 +34,5 @@ export declare class CreateCollectionFromSchemaRequest extends SpeakeasyBase {
 export declare class CreateCollectionFromSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createCollectionFromSchema200ApplicationJsonObject?: CreateCollectionFromSchema200ApplicationJson;
+    createCollectionFromSchema200ApplicationJSONObject?: CreateCollectionFromSchema200ApplicationJson;
 }

@@ -47,5 +47,5 @@ export class CreateCommentAlt1Response extends SpeakeasyBase {
   comment?: shared.Comment;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

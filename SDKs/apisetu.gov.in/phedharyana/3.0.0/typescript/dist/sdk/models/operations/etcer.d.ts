@@ -105,11 +105,11 @@ export declare class EtcerRequest extends SpeakeasyBase {
 export declare class EtcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    etcer400ApplicationJsonObject?: Etcer400ApplicationJson;
-    etcer401ApplicationJsonObject?: Etcer401ApplicationJson;
-    etcer404ApplicationJsonObject?: Etcer404ApplicationJson;
-    etcer500ApplicationJsonObject?: Etcer500ApplicationJson;
-    etcer502ApplicationJsonObject?: Etcer502ApplicationJson;
-    etcer503ApplicationJsonObject?: Etcer503ApplicationJson;
-    etcer504ApplicationJsonObject?: Etcer504ApplicationJson;
+    etcer400ApplicationJSONObject?: Etcer400ApplicationJson;
+    etcer401ApplicationJSONObject?: Etcer401ApplicationJson;
+    etcer404ApplicationJSONObject?: Etcer404ApplicationJson;
+    etcer500ApplicationJSONObject?: Etcer500ApplicationJson;
+    etcer502ApplicationJSONObject?: Etcer502ApplicationJson;
+    etcer503ApplicationJSONObject?: Etcer503ApplicationJson;
+    etcer504ApplicationJSONObject?: Etcer504ApplicationJson;
 }

@@ -17,6 +17,6 @@ export declare class GetConsumerV1ServicesRequest extends SpeakeasyBase {
 }
 export declare class GetConsumerV1ServicesResponse extends SpeakeasyBase {
     contentType: string;
-    serviceListViewModel?: Map<string, any>;
+    serviceListViewModel?: Record<string, any>;
     statusCode: number;
 }

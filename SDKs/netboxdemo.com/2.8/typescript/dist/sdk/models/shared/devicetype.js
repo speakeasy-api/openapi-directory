@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,107 +23,109 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedManufacturer } from "./nestedmanufacturer";
-export var DeviceTypeSubdeviceRoleLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceType = exports.DeviceTypeSubdeviceRole = exports.DeviceTypeSubdeviceRoleValueEnum = exports.DeviceTypeSubdeviceRoleLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedmanufacturer_1 = require("./nestedmanufacturer");
+var DeviceTypeSubdeviceRoleLabelEnum;
 (function (DeviceTypeSubdeviceRoleLabelEnum) {
     DeviceTypeSubdeviceRoleLabelEnum["Parent"] = "Parent";
     DeviceTypeSubdeviceRoleLabelEnum["Child"] = "Child";
-})(DeviceTypeSubdeviceRoleLabelEnum || (DeviceTypeSubdeviceRoleLabelEnum = {}));
-export var DeviceTypeSubdeviceRoleValueEnum;
+})(DeviceTypeSubdeviceRoleLabelEnum = exports.DeviceTypeSubdeviceRoleLabelEnum || (exports.DeviceTypeSubdeviceRoleLabelEnum = {}));
+var DeviceTypeSubdeviceRoleValueEnum;
 (function (DeviceTypeSubdeviceRoleValueEnum) {
     DeviceTypeSubdeviceRoleValueEnum["Parent"] = "parent";
     DeviceTypeSubdeviceRoleValueEnum["Child"] = "child";
-})(DeviceTypeSubdeviceRoleValueEnum || (DeviceTypeSubdeviceRoleValueEnum = {}));
+})(DeviceTypeSubdeviceRoleValueEnum = exports.DeviceTypeSubdeviceRoleValueEnum || (exports.DeviceTypeSubdeviceRoleValueEnum = {}));
 var DeviceTypeSubdeviceRole = /** @class */ (function (_super) {
     __extends(DeviceTypeSubdeviceRole, _super);
     function DeviceTypeSubdeviceRole() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceTypeSubdeviceRole.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DeviceTypeSubdeviceRole.prototype, "value", void 0);
     return DeviceTypeSubdeviceRole;
-}(SpeakeasyBase));
-export { DeviceTypeSubdeviceRole };
+}(utils_1.SpeakeasyBase));
+exports.DeviceTypeSubdeviceRole = DeviceTypeSubdeviceRole;
 var DeviceType = /** @class */ (function (_super) {
     __extends(DeviceType, _super);
     function DeviceType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], DeviceType.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], DeviceType.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_count" }),
         __metadata("design:type", Number)
     ], DeviceType.prototype, "deviceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=front_image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=front_image" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "frontImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DeviceType.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_full_depth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_full_depth" }),
         __metadata("design:type", Boolean)
     ], DeviceType.prototype, "isFullDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], DeviceType.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
-        __metadata("design:type", NestedManufacturer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
+        __metadata("design:type", nestedmanufacturer_1.NestedManufacturer)
     ], DeviceType.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=part_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=part_number" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "partNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rear_image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rear_image" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "rearImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], DeviceType.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdevice_role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdevice_role" }),
         __metadata("design:type", DeviceTypeSubdeviceRole)
     ], DeviceType.prototype, "subdeviceRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], DeviceType.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=u_height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=u_height" }),
         __metadata("design:type", Number)
     ], DeviceType.prototype, "uHeight", void 0);
     return DeviceType;
-}(SpeakeasyBase));
-export { DeviceType };
+}(utils_1.SpeakeasyBase));
+exports.DeviceType = DeviceType;

@@ -23,6 +23,6 @@ export declare class PostPortfolioOptimizationMaximumSharpeRatioRequest extends 
 }
 export declare class PostPortfolioOptimizationMaximumSharpeRatioResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMaximumSharpeRatio200ApplicationJsonObject?: PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject?: PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJson;
 }

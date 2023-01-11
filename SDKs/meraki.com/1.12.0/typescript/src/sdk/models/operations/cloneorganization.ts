@@ -31,5 +31,5 @@ export class CloneOrganizationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cloneOrganization201ApplicationJsonObject?: Map<string, any>;
+  cloneOrganization201ApplicationJSONObject?: Record<string, any>;
 }

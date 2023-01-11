@@ -1,103 +1,84 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { AbuseReports } from "./abusereports";
-import { Activities } from "./activities";
-import { Captions } from "./captions";
-import { ChannelBanners } from "./channelbanners";
-import { ChannelSections } from "./channelsections";
-import { Channels } from "./channels";
-import { CommentThreads } from "./commentthreads";
-import { Comments } from "./comments";
-import { I18nLanguages } from "./i18nlanguages";
-import { I18nRegions } from "./i18nregions";
-import { LiveBroadcasts } from "./livebroadcasts";
-import { LiveChatBans } from "./livechatbans";
-import { LiveChatMessages } from "./livechatmessages";
-import { LiveChatModerators } from "./livechatmoderators";
-import { LiveStreams } from "./livestreams";
-import { Members } from "./members";
-import { MembershipsLevels } from "./membershipslevels";
-import { PlaylistItems } from "./playlistitems";
-import { Playlists } from "./playlists";
-import { Search } from "./search";
-import { Subscriptions } from "./subscriptions";
-import { SuperChatEvents } from "./superchatevents";
-import { Tests } from "./tests";
-import { ThirdPartyLinks } from "./thirdpartylinks";
-import { Thumbnails } from "./thumbnails";
-import { VideoAbuseReportReasons } from "./videoabusereportreasons";
-import { VideoCategories } from "./videocategories";
-import { Videos } from "./videos";
-import { Watermarks } from "./watermarks";
-import { Youtube } from "./youtube";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var abusereports_1 = require("./abusereports");
+var activities_1 = require("./activities");
+var captions_1 = require("./captions");
+var channelbanners_1 = require("./channelbanners");
+var channelsections_1 = require("./channelsections");
+var channels_1 = require("./channels");
+var commentthreads_1 = require("./commentthreads");
+var comments_1 = require("./comments");
+var i18nlanguages_1 = require("./i18nlanguages");
+var i18nregions_1 = require("./i18nregions");
+var livebroadcasts_1 = require("./livebroadcasts");
+var livechatbans_1 = require("./livechatbans");
+var livechatmessages_1 = require("./livechatmessages");
+var livechatmoderators_1 = require("./livechatmoderators");
+var livestreams_1 = require("./livestreams");
+var members_1 = require("./members");
+var membershipslevels_1 = require("./membershipslevels");
+var playlistitems_1 = require("./playlistitems");
+var playlists_1 = require("./playlists");
+var search_1 = require("./search");
+var subscriptions_1 = require("./subscriptions");
+var superchatevents_1 = require("./superchatevents");
+var tests_1 = require("./tests");
+var thirdpartylinks_1 = require("./thirdpartylinks");
+var thumbnails_1 = require("./thumbnails");
+var videoabusereportreasons_1 = require("./videoabusereportreasons");
+var videocategories_1 = require("./videocategories");
+var videos_1 = require("./videos");
+var watermarks_1 = require("./watermarks");
+var youtube_1 = require("./youtube");
+exports.ServerList = [
     "https://youtube.googleapis.com/",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://developers.google.com/youtube/*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.abuseReports = new AbuseReports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.activities = new Activities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.captions = new Captions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelBanners = new ChannelBanners(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelSections = new ChannelSections(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channels = new Channels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.commentThreads = new CommentThreads(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.comments = new Comments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.i18nLanguages = new I18nLanguages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.i18nRegions = new I18nRegions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.liveBroadcasts = new LiveBroadcasts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.liveChatBans = new LiveChatBans(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.liveChatMessages = new LiveChatMessages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.liveChatModerators = new LiveChatModerators(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.liveStreams = new LiveStreams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.members = new Members(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.membershipsLevels = new MembershipsLevels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.playlistItems = new PlaylistItems(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.playlists = new Playlists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.search = new Search(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.subscriptions = new Subscriptions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.superChatEvents = new SuperChatEvents(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.tests = new Tests(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.thirdPartyLinks = new ThirdPartyLinks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.thumbnails = new Thumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videoAbuseReportReasons = new VideoAbuseReportReasons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videoCategories = new VideoCategories(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videos = new Videos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.watermarks = new Watermarks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.youtube = new Youtube(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.abuseReports = new abusereports_1.AbuseReports(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.activities = new activities_1.Activities(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.captions = new captions_1.Captions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelBanners = new channelbanners_1.ChannelBanners(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelSections = new channelsections_1.ChannelSections(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channels = new channels_1.Channels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.commentThreads = new commentthreads_1.CommentThreads(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.comments = new comments_1.Comments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.i18nLanguages = new i18nlanguages_1.I18nLanguages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.i18nRegions = new i18nregions_1.I18nRegions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.liveBroadcasts = new livebroadcasts_1.LiveBroadcasts(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.liveChatBans = new livechatbans_1.LiveChatBans(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.liveChatMessages = new livechatmessages_1.LiveChatMessages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.liveChatModerators = new livechatmoderators_1.LiveChatModerators(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.liveStreams = new livestreams_1.LiveStreams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.members = new members_1.Members(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.membershipsLevels = new membershipslevels_1.MembershipsLevels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.playlistItems = new playlistitems_1.PlaylistItems(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.playlists = new playlists_1.Playlists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.search = new search_1.Search(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.subscriptions = new subscriptions_1.Subscriptions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.superChatEvents = new superchatevents_1.SuperChatEvents(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.tests = new tests_1.Tests(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.thirdPartyLinks = new thirdpartylinks_1.ThirdPartyLinks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.thumbnails = new thumbnails_1.Thumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videoAbuseReportReasons = new videoabusereportreasons_1.VideoAbuseReportReasons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videoCategories = new videocategories_1.VideoCategories(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videos = new videos_1.Videos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.watermarks = new watermarks_1.Watermarks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.youtube = new youtube_1.Youtube(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

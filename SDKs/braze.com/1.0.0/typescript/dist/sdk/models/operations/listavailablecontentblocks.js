@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAvailableContentBlocksResponse = exports.ListAvailableContentBlocksRequest = exports.ListAvailableContentBlocksQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListAvailableContentBlocksQueryParams = /** @class */ (function (_super) {
     __extends(ListAvailableContentBlocksQueryParams, _super);
     function ListAvailableContentBlocksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", String)
     ], ListAvailableContentBlocksQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=modified_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=modified_after" }),
         __metadata("design:type", String)
     ], ListAvailableContentBlocksQueryParams.prototype, "modifiedAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=modified_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=modified_before" }),
         __metadata("design:type", String)
     ], ListAvailableContentBlocksQueryParams.prototype, "modifiedBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], ListAvailableContentBlocksQueryParams.prototype, "offset", void 0);
     return ListAvailableContentBlocksQueryParams;
-}(SpeakeasyBase));
-export { ListAvailableContentBlocksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListAvailableContentBlocksQueryParams = ListAvailableContentBlocksQueryParams;
 var ListAvailableContentBlocksRequest = /** @class */ (function (_super) {
     __extends(ListAvailableContentBlocksRequest, _super);
     function ListAvailableContentBlocksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAvailableContentBlocksQueryParams)
     ], ListAvailableContentBlocksRequest.prototype, "queryParams", void 0);
     return ListAvailableContentBlocksRequest;
-}(SpeakeasyBase));
-export { ListAvailableContentBlocksRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListAvailableContentBlocksRequest = ListAvailableContentBlocksRequest;
 var ListAvailableContentBlocksResponse = /** @class */ (function (_super) {
     __extends(ListAvailableContentBlocksResponse, _super);
     function ListAvailableContentBlocksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListAvailableContentBlocksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListAvailableContentBlocksResponse.prototype, "statusCode", void 0);
     return ListAvailableContentBlocksResponse;
-}(SpeakeasyBase));
-export { ListAvailableContentBlocksResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAvailableContentBlocksResponse = ListAvailableContentBlocksResponse;

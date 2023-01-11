@@ -28,7 +28,7 @@ export class DeleteGroupHeaders extends SpeakeasyBase {
 
 export class DeleteGroupRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=GroupARN" })
-  groupArn?: string;
+  groupARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GroupName" })
   groupName?: string;
@@ -49,7 +49,7 @@ export class DeleteGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteGroupResult?: Map<string, any>;
+  deleteGroupResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidRequestException?: any;

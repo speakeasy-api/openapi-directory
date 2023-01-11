@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeployJobRun } from "./deployjobrun";
-import { VerifyJobRun } from "./verifyjobrun";
-export var JobRunStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobRun = exports.JobRunStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deployjobrun_1 = require("./deployjobrun");
+var verifyjobrun_1 = require("./verifyjobrun");
+var JobRunStateEnum;
 (function (JobRunStateEnum) {
     JobRunStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     JobRunStateEnum["InProgress"] = "IN_PROGRESS";
     JobRunStateEnum["Succeeded"] = "SUCCEEDED";
     JobRunStateEnum["Failed"] = "FAILED";
-})(JobRunStateEnum || (JobRunStateEnum = {}));
+})(JobRunStateEnum = exports.JobRunStateEnum || (exports.JobRunStateEnum = {}));
 // JobRun
 /**
  * A `JobRun` resource in the Google Cloud Deploy API. A `JobRun` contains information of a single `Rollout` job evaluation.
@@ -42,49 +45,49 @@ var JobRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployJobRun" }),
-        __metadata("design:type", DeployJobRun)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployJobRun" }),
+        __metadata("design:type", deployjobrun_1.DeployJobRun)
     ], JobRun.prototype, "deployJobRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phaseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phaseId" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "phaseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], JobRun.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyJobRun" }),
-        __metadata("design:type", VerifyJobRun)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyJobRun" }),
+        __metadata("design:type", verifyjobrun_1.VerifyJobRun)
     ], JobRun.prototype, "verifyJobRun", void 0);
     return JobRun;
-}(SpeakeasyBase));
-export { JobRun };
+}(utils_1.SpeakeasyBase));
+exports.JobRun = JobRun;

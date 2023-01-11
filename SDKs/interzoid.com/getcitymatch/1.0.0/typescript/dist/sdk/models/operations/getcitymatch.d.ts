@@ -14,5 +14,5 @@ export declare class GetcitymatchRequest extends SpeakeasyBase {
 export declare class GetcitymatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcitymatch200ApplicationJsonObject?: Getcitymatch200ApplicationJson;
+    getcitymatch200ApplicationJSONObject?: Getcitymatch200ApplicationJson;
 }

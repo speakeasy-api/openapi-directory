@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class MappingSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=map" })
-  map: Map<string, string>;
+  map: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=remove" })
   remove: string[];
 
   @SpeakeasyMetadata({ data: "json, name=values" })
-  values: Map<string, string>;
+  values: Record<string, string>;
 }

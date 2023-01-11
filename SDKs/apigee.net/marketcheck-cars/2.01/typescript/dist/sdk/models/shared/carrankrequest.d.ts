@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class CarRankRequest extends SpeakeasyBase {
     listingIds?: string[];
-    rankingCriteria?: Map<string, any>;
+    rankingCriteria?: Record<string, any>;
 }

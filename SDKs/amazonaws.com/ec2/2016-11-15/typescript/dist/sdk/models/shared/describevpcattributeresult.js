@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeBooleanValue } from "./attributebooleanvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeVpcAttributeResult = exports.DescribeVpcAttributeResultEnableDnsSupport = exports.DescribeVpcAttributeResultEnableDnsHostnames = void 0;
+var utils_1 = require("../../../internal/utils");
+// DescribeVpcAttributeResultEnableDnsHostnames
+/**
+ * Indicates whether the instances launched in the VPC get DNS hostnames. If this attribute is <code>true</code>, instances in the VPC get DNS hostnames; otherwise, they do not.
+**/
+var DescribeVpcAttributeResultEnableDnsHostnames = /** @class */ (function (_super) {
+    __extends(DescribeVpcAttributeResultEnableDnsHostnames, _super);
+    function DescribeVpcAttributeResultEnableDnsHostnames() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DescribeVpcAttributeResultEnableDnsHostnames.prototype, "value", void 0);
+    return DescribeVpcAttributeResultEnableDnsHostnames;
+}(utils_1.SpeakeasyBase));
+exports.DescribeVpcAttributeResultEnableDnsHostnames = DescribeVpcAttributeResultEnableDnsHostnames;
+// DescribeVpcAttributeResultEnableDnsSupport
+/**
+ * Indicates whether DNS resolution is enabled for the VPC. If this attribute is <code>true</code>, the Amazon DNS server resolves DNS hostnames for your instances to their corresponding IP addresses; otherwise, it does not.
+**/
+var DescribeVpcAttributeResultEnableDnsSupport = /** @class */ (function (_super) {
+    __extends(DescribeVpcAttributeResultEnableDnsSupport, _super);
+    function DescribeVpcAttributeResultEnableDnsSupport() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DescribeVpcAttributeResultEnableDnsSupport.prototype, "value", void 0);
+    return DescribeVpcAttributeResultEnableDnsSupport;
+}(utils_1.SpeakeasyBase));
+exports.DescribeVpcAttributeResultEnableDnsSupport = DescribeVpcAttributeResultEnableDnsSupport;
 var DescribeVpcAttributeResult = /** @class */ (function (_super) {
     __extends(DescribeVpcAttributeResult, _super);
     function DescribeVpcAttributeResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeBooleanValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DescribeVpcAttributeResultEnableDnsHostnames)
     ], DescribeVpcAttributeResult.prototype, "enableDnsHostnames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeBooleanValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DescribeVpcAttributeResultEnableDnsSupport)
     ], DescribeVpcAttributeResult.prototype, "enableDnsSupport", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeVpcAttributeResult.prototype, "vpcId", void 0);
     return DescribeVpcAttributeResult;
-}(SpeakeasyBase));
-export { DescribeVpcAttributeResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeVpcAttributeResult = DescribeVpcAttributeResult;

@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsReq
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedIssueAttachments?: shared.PaginatedIssueAttachments;
 }

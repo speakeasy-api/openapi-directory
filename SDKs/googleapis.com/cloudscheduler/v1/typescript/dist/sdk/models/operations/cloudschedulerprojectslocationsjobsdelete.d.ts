@@ -27,6 +27,6 @@ export declare class CloudschedulerProjectsLocationsJobsDeleteRequest extends Sp
 }
 export declare class CloudschedulerProjectsLocationsJobsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

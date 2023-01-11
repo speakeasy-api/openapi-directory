@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
 import { MessageCode429AisEnum } from "./messagecode429aisenum";
+import { HrefType } from "./hreftype";
 
 
 
@@ -30,7 +30,7 @@ export class Error429AisAdditionalErrors extends SpeakeasyBase {
 **/
 export class Error429Ais extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=additionalErrors", elemType: Error429AisAdditionalErrors })
   additionalErrors?: Error429AisAdditionalErrors[];

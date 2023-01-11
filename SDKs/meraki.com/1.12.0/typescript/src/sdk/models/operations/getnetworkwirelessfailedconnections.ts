@@ -60,5 +60,5 @@ export class GetNetworkWirelessFailedConnectionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessFailedConnections200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessFailedConnections200ApplicationJSONObject?: Record<string, any>;
 }

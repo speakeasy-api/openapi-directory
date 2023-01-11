@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppLinkedAppInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // AppLinkedAppInfo
 /**
  * Information from the app store if the app is linked to an app store.
@@ -33,13 +36,13 @@ var AppLinkedAppInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appStoreId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appStoreId" }),
         __metadata("design:type", String)
     ], AppLinkedAppInfo.prototype, "appStoreId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], AppLinkedAppInfo.prototype, "displayName", void 0);
     return AppLinkedAppInfo;
-}(SpeakeasyBase));
-export { AppLinkedAppInfo };
+}(utils_1.SpeakeasyBase));
+exports.AppLinkedAppInfo = AppLinkedAppInfo;

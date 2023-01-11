@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeOfDay } from "./timeofday";
-import { TimeRange } from "./timerange";
-export var TimeDimensionDayOfWeekEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeDimension = exports.TimeDimensionDayOfWeekEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeofday_1 = require("./timeofday");
+var timerange_1 = require("./timerange");
+var TimeDimensionDayOfWeekEnum;
 (function (TimeDimensionDayOfWeekEnum) {
     TimeDimensionDayOfWeekEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     TimeDimensionDayOfWeekEnum["Monday"] = "MONDAY";
@@ -35,7 +38,7 @@ export var TimeDimensionDayOfWeekEnum;
     TimeDimensionDayOfWeekEnum["Friday"] = "FRIDAY";
     TimeDimensionDayOfWeekEnum["Saturday"] = "SATURDAY";
     TimeDimensionDayOfWeekEnum["Sunday"] = "SUNDAY";
-})(TimeDimensionDayOfWeekEnum || (TimeDimensionDayOfWeekEnum = {}));
+})(TimeDimensionDayOfWeekEnum = exports.TimeDimensionDayOfWeekEnum || (exports.TimeDimensionDayOfWeekEnum = {}));
 // TimeDimension
 /**
  * The dimension for which data is divided over.
@@ -46,17 +49,17 @@ var TimeDimension = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfWeek" }),
         __metadata("design:type", String)
     ], TimeDimension.prototype, "dayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeOfDay" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeOfDay" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], TimeDimension.prototype, "timeOfDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeRange" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeRange" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], TimeDimension.prototype, "timeRange", void 0);
     return TimeDimension;
-}(SpeakeasyBase));
-export { TimeDimension };
+}(utils_1.SpeakeasyBase));
+exports.TimeDimension = TimeDimension;

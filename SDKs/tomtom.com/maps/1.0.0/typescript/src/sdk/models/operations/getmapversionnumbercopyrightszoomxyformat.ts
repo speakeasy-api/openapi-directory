@@ -1,14 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
-export enum GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum {
+export enum GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum {
     Json = "json",
     Jsonp = "jsonp",
     Xml = "xml"
 }
 
 
-export class GetMapVersionNumberCopyrightsZoomXYFormatPathParams extends SpeakeasyBase {
+export class GetMapVersionNumberCopyrightsZoomXyFormatPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=X" })
   x: number;
 
@@ -16,7 +16,7 @@ export class GetMapVersionNumberCopyrightsZoomXYFormatPathParams extends Speakea
   y: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" })
-  format: GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum;
+  format: GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" })
   versionNumber: number;
@@ -26,22 +26,22 @@ export class GetMapVersionNumberCopyrightsZoomXYFormatPathParams extends Speakea
 }
 
 
-export class GetMapVersionNumberCopyrightsZoomXYFormatQueryParams extends SpeakeasyBase {
+export class GetMapVersionNumberCopyrightsZoomXyFormatQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" })
   callback?: string;
 }
 
 
-export class GetMapVersionNumberCopyrightsZoomXYFormatRequest extends SpeakeasyBase {
+export class GetMapVersionNumberCopyrightsZoomXyFormatRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetMapVersionNumberCopyrightsZoomXYFormatPathParams;
+  pathParams: GetMapVersionNumberCopyrightsZoomXyFormatPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetMapVersionNumberCopyrightsZoomXYFormatQueryParams;
+  queryParams: GetMapVersionNumberCopyrightsZoomXyFormatQueryParams;
 }
 
 
-export class GetMapVersionNumberCopyrightsZoomXYFormatResponse extends SpeakeasyBase {
+export class GetMapVersionNumberCopyrightsZoomXyFormatResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

@@ -9,5 +9,5 @@ import { IdentityDkimAttributes } from "./identitydkimattributes";
 **/
 export class GetIdentityDkimAttributesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: IdentityDkimAttributes })
-  dkimAttributes: Map<string, IdentityDkimAttributes>;
+  dkimAttributes: Record<string, IdentityDkimAttributes>;
 }

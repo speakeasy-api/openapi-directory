@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Cluster } from "./cluster";
+import { ClusterList } from "./clusterlist";
 /**
  * Contains the output from the <a>DescribeClusters</a> action.
 **/
 export declare class ClustersMessage extends SpeakeasyBase {
-    clusters?: Cluster[];
+    clusters?: ClusterList[];
     marker?: string;
 }

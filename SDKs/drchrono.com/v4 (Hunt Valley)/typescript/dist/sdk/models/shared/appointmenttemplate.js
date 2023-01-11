@@ -1,0 +1,100 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppointmentTemplate = exports.AppointmentTemplateOpenSlot = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppointmentTemplateOpenSlot = /** @class */ (function (_super) {
+    __extends(AppointmentTemplateOpenSlot, _super);
+    function AppointmentTemplateOpenSlot() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
+        __metadata("design:type", String)
+    ], AppointmentTemplateOpenSlot.prototype, "end", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
+        __metadata("design:type", String)
+    ], AppointmentTemplateOpenSlot.prototype, "start", void 0);
+    return AppointmentTemplateOpenSlot;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentTemplateOpenSlot = AppointmentTemplateOpenSlot;
+// AppointmentTemplate
+/**
+ * Appointment templates are blocks of time during which a doctor usually sees appointments with the same profile. These may have a longer duration then the corresponding profile, in which case they may allow multiple appointments to be booked during that period.
+**/
+var AppointmentTemplate = /** @class */ (function (_super) {
+    __extends(AppointmentTemplate, _super);
+    function AppointmentTemplate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
+        __metadata("design:type", Boolean)
+    ], AppointmentTemplate.prototype, "archived", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_end" }),
+        __metadata("design:type", String)
+    ], AppointmentTemplate.prototype, "dateEnd", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_start" }),
+        __metadata("design:type", String)
+    ], AppointmentTemplate.prototype, "dateStart", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
+        __metadata("design:type", Number)
+    ], AppointmentTemplate.prototype, "duration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exam_room" }),
+        __metadata("design:type", Number)
+    ], AppointmentTemplate.prototype, "examRoom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], AppointmentTemplate.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office" }),
+        __metadata("design:type", Number)
+    ], AppointmentTemplate.prototype, "office", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=open_slots", elemType: AppointmentTemplateOpenSlot }),
+        __metadata("design:type", Array)
+    ], AppointmentTemplate.prototype, "openSlots", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", Number)
+    ], AppointmentTemplate.prototype, "profile", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduled_time" }),
+        __metadata("design:type", String)
+    ], AppointmentTemplate.prototype, "scheduledTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=week_days" }),
+        __metadata("design:type", Array)
+    ], AppointmentTemplate.prototype, "weekDays", void 0);
+    return AppointmentTemplate;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentTemplate = AppointmentTemplate;

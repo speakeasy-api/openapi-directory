@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentLineItemEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 var PaymentLineItemEntity = /** @class */ (function (_super) {
     __extends(PaymentLineItemEntity, _super);
     function PaymentLineItemEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], PaymentLineItemEntity.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], PaymentLineItemEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoice_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoice_id" }),
         __metadata("design:type", Number)
     ], PaymentLineItemEntity.prototype, "invoiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_id" }),
         __metadata("design:type", Number)
     ], PaymentLineItemEntity.prototype, "paymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], PaymentLineItemEntity.prototype, "updatedAt", void 0);
     return PaymentLineItemEntity;
-}(SpeakeasyBase));
-export { PaymentLineItemEntity };
+}(utils_1.SpeakeasyBase));
+exports.PaymentLineItemEntity = PaymentLineItemEntity;

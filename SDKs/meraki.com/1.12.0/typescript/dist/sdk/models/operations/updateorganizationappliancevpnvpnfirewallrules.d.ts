@@ -33,5 +33,5 @@ export declare class UpdateOrganizationApplianceVpnVpnFirewallRulesRequest exten
 export declare class UpdateOrganizationApplianceVpnVpnFirewallRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationApplianceVpnVpnFirewallRules200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationApplianceVpnVpnFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

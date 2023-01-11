@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Property } from "./property";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PropertyList = void 0;
+var utils_1 = require("../../../internal/utils");
+var property_1 = require("./property");
 // PropertyList
 /**
  * A collection of properties, key-value pairs that are either public or private to an application.
@@ -34,21 +37,21 @@ var PropertyList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], PropertyList.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Property }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: property_1.Property }),
         __metadata("design:type", Array)
     ], PropertyList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PropertyList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], PropertyList.prototype, "selfLink", void 0);
     return PropertyList;
-}(SpeakeasyBase));
-export { PropertyList };
+}(utils_1.SpeakeasyBase));
+exports.PropertyList = PropertyList;

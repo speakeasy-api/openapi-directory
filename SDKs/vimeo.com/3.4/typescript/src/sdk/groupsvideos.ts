@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,30 +31,32 @@ export class GroupsVideos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AddVideoToGroupResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.video = httpRes?.data;
             }
             break;
           case httpRes?.status == 202:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -62,7 +64,6 @@ export class GroupsVideos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -78,16 +79,18 @@ export class GroupsVideos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -96,7 +99,7 @@ export class GroupsVideos {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -104,7 +107,6 @@ export class GroupsVideos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -122,28 +124,30 @@ export class GroupsVideos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/groups/{group_id}/videos/{video_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetGroupVideoResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.video = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -151,7 +155,6 @@ export class GroupsVideos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -167,11 +170,11 @@ export class GroupsVideos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/groups/{group_id}/videos", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/groups/{group_id}/videos", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -179,26 +182,28 @@ export class GroupsVideos {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetGroupVideosResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.videos = httpRes?.data;
             }
             break;
           case httpRes?.status == 304:
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.video+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.video+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -206,7 +211,6 @@ export class GroupsVideos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

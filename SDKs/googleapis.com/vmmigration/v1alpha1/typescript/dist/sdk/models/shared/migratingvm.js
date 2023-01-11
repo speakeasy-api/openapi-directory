@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwsSourceVmDetails } from "./awssourcevmdetails";
-import { ComputeEngineTargetDefaultsInput } from "./computeenginetargetdefaults";
-import { TargetVmDetailsInput } from "./targetvmdetails";
-import { ReplicationCycle } from "./replicationcycle";
-import { Status } from "./status";
-import { ReplicationSync } from "./replicationsync";
-import { SchedulePolicy } from "./schedulepolicy";
-import { ComputeEngineTargetDefaults } from "./computeenginetargetdefaults";
-import { TargetVmDetails } from "./targetvmdetails";
-import { CloneJob } from "./clonejob";
-import { CutoverJob } from "./cutoverjob";
-export var MigratingVmStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MigratingVmInput = exports.MigratingVm = exports.MigratingVmStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var awssourcevmdetails_1 = require("./awssourcevmdetails");
+var computeenginetargetdefaults_1 = require("./computeenginetargetdefaults");
+var targetvmdetails_1 = require("./targetvmdetails");
+var replicationcycle_1 = require("./replicationcycle");
+var status_1 = require("./status");
+var replicationsync_1 = require("./replicationsync");
+var schedulepolicy_1 = require("./schedulepolicy");
+var clonejob_1 = require("./clonejob");
+var cutoverjob_1 = require("./cutoverjob");
+var computeenginetargetdefaults_2 = require("./computeenginetargetdefaults");
+var targetvmdetails_2 = require("./targetvmdetails");
+var MigratingVmStateEnum;
 (function (MigratingVmStateEnum) {
     MigratingVmStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MigratingVmStateEnum["Pending"] = "PENDING";
@@ -48,67 +51,7 @@ export var MigratingVmStateEnum;
     MigratingVmStateEnum["Finalizing"] = "FINALIZING";
     MigratingVmStateEnum["Finalized"] = "FINALIZED";
     MigratingVmStateEnum["Error"] = "ERROR";
-})(MigratingVmStateEnum || (MigratingVmStateEnum = {}));
-// MigratingVmInput
-/**
- * MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
-**/
-var MigratingVmInput = /** @class */ (function (_super) {
-    __extends(MigratingVmInput, _super);
-    function MigratingVmInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsSourceVmDetails" }),
-        __metadata("design:type", AwsSourceVmDetails)
-    ], MigratingVmInput.prototype, "awsSourceVmDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDefaults" }),
-        __metadata("design:type", ComputeEngineTargetDefaultsInput)
-    ], MigratingVmInput.prototype, "computeEngineTargetDefaults", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDefaults" }),
-        __metadata("design:type", TargetVmDetailsInput)
-    ], MigratingVmInput.prototype, "computeEngineVmDefaults", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentSyncInfo" }),
-        __metadata("design:type", ReplicationCycle)
-    ], MigratingVmInput.prototype, "currentSyncInfo", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], MigratingVmInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], MigratingVmInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
-    ], MigratingVmInput.prototype, "error", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], MigratingVmInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSync" }),
-        __metadata("design:type", ReplicationSync)
-    ], MigratingVmInput.prototype, "lastSync", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
-        __metadata("design:type", SchedulePolicy)
-    ], MigratingVmInput.prototype, "policy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVmId" }),
-        __metadata("design:type", String)
-    ], MigratingVmInput.prototype, "sourceVmId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDefaults" }),
-        __metadata("design:type", TargetVmDetailsInput)
-    ], MigratingVmInput.prototype, "targetDefaults", void 0);
-    return MigratingVmInput;
-}(SpeakeasyBase));
-export { MigratingVmInput };
+})(MigratingVmStateEnum = exports.MigratingVmStateEnum || (exports.MigratingVmStateEnum = {}));
 // MigratingVm
 /**
  * MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
@@ -119,85 +62,145 @@ var MigratingVm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsSourceVmDetails" }),
-        __metadata("design:type", AwsSourceVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsSourceVmDetails" }),
+        __metadata("design:type", awssourcevmdetails_1.AwsSourceVmDetails)
     ], MigratingVm.prototype, "awsSourceVmDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDefaults" }),
-        __metadata("design:type", ComputeEngineTargetDefaults)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDefaults" }),
+        __metadata("design:type", computeenginetargetdefaults_1.ComputeEngineTargetDefaults)
     ], MigratingVm.prototype, "computeEngineTargetDefaults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDefaults" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDefaults" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], MigratingVm.prototype, "computeEngineVmDefaults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentSyncInfo" }),
-        __metadata("design:type", ReplicationCycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentSyncInfo" }),
+        __metadata("design:type", replicationcycle_1.ReplicationCycle)
     ], MigratingVm.prototype, "currentSyncInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], MigratingVm.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], MigratingVm.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSync" }),
-        __metadata("design:type", ReplicationSync)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSync" }),
+        __metadata("design:type", replicationsync_1.ReplicationSync)
     ], MigratingVm.prototype, "lastSync", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
-        __metadata("design:type", SchedulePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
+        __metadata("design:type", schedulepolicy_1.SchedulePolicy)
     ], MigratingVm.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recentCloneJobs", elemType: CloneJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recentCloneJobs", elemType: clonejob_1.CloneJob }),
         __metadata("design:type", Array)
     ], MigratingVm.prototype, "recentCloneJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recentCutoverJobs", elemType: CutoverJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recentCutoverJobs", elemType: cutoverjob_1.CutoverJob }),
         __metadata("design:type", Array)
     ], MigratingVm.prototype, "recentCutoverJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVmId" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "sourceVmId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateTime" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "stateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDefaults" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDefaults" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], MigratingVm.prototype, "targetDefaults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], MigratingVm.prototype, "updateTime", void 0);
     return MigratingVm;
-}(SpeakeasyBase));
-export { MigratingVm };
+}(utils_1.SpeakeasyBase));
+exports.MigratingVm = MigratingVm;
+// MigratingVmInput
+/**
+ * MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
+**/
+var MigratingVmInput = /** @class */ (function (_super) {
+    __extends(MigratingVmInput, _super);
+    function MigratingVmInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsSourceVmDetails" }),
+        __metadata("design:type", awssourcevmdetails_1.AwsSourceVmDetails)
+    ], MigratingVmInput.prototype, "awsSourceVmDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDefaults" }),
+        __metadata("design:type", computeenginetargetdefaults_2.ComputeEngineTargetDefaultsInput)
+    ], MigratingVmInput.prototype, "computeEngineTargetDefaults", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDefaults" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
+    ], MigratingVmInput.prototype, "computeEngineVmDefaults", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentSyncInfo" }),
+        __metadata("design:type", replicationcycle_1.ReplicationCycle)
+    ], MigratingVmInput.prototype, "currentSyncInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], MigratingVmInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], MigratingVmInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
+    ], MigratingVmInput.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], MigratingVmInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSync" }),
+        __metadata("design:type", replicationsync_1.ReplicationSync)
+    ], MigratingVmInput.prototype, "lastSync", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
+        __metadata("design:type", schedulepolicy_1.SchedulePolicy)
+    ], MigratingVmInput.prototype, "policy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVmId" }),
+        __metadata("design:type", String)
+    ], MigratingVmInput.prototype, "sourceVmId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDefaults" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
+    ], MigratingVmInput.prototype, "targetDefaults", void 0);
+    return MigratingVmInput;
+}(utils_1.SpeakeasyBase));
+exports.MigratingVmInput = MigratingVmInput;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MemcacheProjectsLocationsInstancesApplyParametersRequest, MemcacheProjectsLocationsInstancesApplyParametersResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,31 +30,31 @@ const req: MemcacheProjectsLocationsInstancesApplyParametersRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "ullam",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "laborum",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "rerum",
-    fields: "explicabo",
-    key: "unde",
-    oauthToken: "ea",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "omnis",
-    uploadType: "voluptatem",
-    uploadProtocol: "et",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    applyAll: true,
+    applyAll: false,
     nodeIds: [
-      "deleniti",
+      "voluptatum",
     ],
   },
 };

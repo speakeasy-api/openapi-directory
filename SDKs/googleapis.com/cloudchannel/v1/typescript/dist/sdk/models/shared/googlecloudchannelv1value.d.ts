@@ -6,6 +6,6 @@ export declare class GoogleCloudChannelV1Value extends SpeakeasyBase {
     boolValue?: boolean;
     doubleValue?: number;
     int64Value?: string;
-    protoValue?: Map<string, any>;
+    protoValue?: Record<string, any>;
     stringValue?: string;
 }

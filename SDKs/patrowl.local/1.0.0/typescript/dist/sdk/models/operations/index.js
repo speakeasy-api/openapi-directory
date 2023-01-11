@@ -1,14 +1,30 @@
-export * from "./cleanscanpage";
-export * from "./cleanscanspage";
-export * from "./getdefaultpage";
-export * from "./getfindingpage";
-export * from "./getinfopage";
-export * from "./getlivenesspage";
-export * from "./getreadinesspage";
-export * from "./gettestpage";
-export * from "./reloadconfigurationpage";
-export * from "./startscanpage";
-export * from "./statusscanpage";
-export * from "./statusscanspage";
-export * from "./stopscanpage";
-export * from "./stopscanspage";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./cleanscanpage"), exports);
+__exportStar(require("./cleanscanspage"), exports);
+__exportStar(require("./getdefaultpage"), exports);
+__exportStar(require("./getfindingpage"), exports);
+__exportStar(require("./getinfopage"), exports);
+__exportStar(require("./getlivenesspage"), exports);
+__exportStar(require("./getreadinesspage"), exports);
+__exportStar(require("./gettestpage"), exports);
+__exportStar(require("./reloadconfigurationpage"), exports);
+__exportStar(require("./startscanpage"), exports);
+__exportStar(require("./statusscanpage"), exports);
+__exportStar(require("./statusscanspage"), exports);
+__exportStar(require("./stopscanpage"), exports);
+__exportStar(require("./stopscanspage"), exports);

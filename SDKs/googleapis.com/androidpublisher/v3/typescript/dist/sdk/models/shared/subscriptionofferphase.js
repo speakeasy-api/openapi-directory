@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OtherRegionsSubscriptionOfferPhaseConfig } from "./otherregionssubscriptionofferphaseconfig";
-import { RegionalSubscriptionOfferPhaseConfig } from "./regionalsubscriptionofferphaseconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionOfferPhase = void 0;
+var utils_1 = require("../../../internal/utils");
+var otherregionssubscriptionofferphaseconfig_1 = require("./otherregionssubscriptionofferphaseconfig");
+var regionalsubscriptionofferphaseconfig_1 = require("./regionalsubscriptionofferphaseconfig");
 // SubscriptionOfferPhase
 /**
  * A single phase of a subscription offer.
@@ -35,21 +38,21 @@ var SubscriptionOfferPhase = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], SubscriptionOfferPhase.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" }),
-        __metadata("design:type", OtherRegionsSubscriptionOfferPhaseConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otherRegionsConfig" }),
+        __metadata("design:type", otherregionssubscriptionofferphaseconfig_1.OtherRegionsSubscriptionOfferPhaseConfig)
     ], SubscriptionOfferPhase.prototype, "otherRegionsConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recurrenceCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurrenceCount" }),
         __metadata("design:type", Number)
     ], SubscriptionOfferPhase.prototype, "recurrenceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalSubscriptionOfferPhaseConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionalConfigs", elemType: regionalsubscriptionofferphaseconfig_1.RegionalSubscriptionOfferPhaseConfig }),
         __metadata("design:type", Array)
     ], SubscriptionOfferPhase.prototype, "regionalConfigs", void 0);
     return SubscriptionOfferPhase;
-}(SpeakeasyBase));
-export { SubscriptionOfferPhase };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionOfferPhase = SubscriptionOfferPhase;

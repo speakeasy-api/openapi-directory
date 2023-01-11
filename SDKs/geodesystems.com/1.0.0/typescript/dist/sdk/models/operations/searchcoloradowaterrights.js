@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,176 +23,178 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchColoradoWaterRightsResponse = exports.SearchColoradoWaterRightsRequest = exports.SearchColoradoWaterRightsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchColoradoWaterRightsQueryParams = /** @class */ (function (_super) {
     __extends(SearchColoradoWaterRightsQueryParams, _super);
     function SearchColoradoWaterRightsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.adjudication_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.adjudication_date" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsAdjudicationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.appropriation_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.appropriation_date" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsAppropriationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.comments" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.county" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.county" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsCounty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.decreed_units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.decreed_units" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsDecreedUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.decreed_uses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.decreed_uses" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsDecreedUses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.location" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.more_information" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.more_information" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsMoreInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_absolute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_absolute" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsNetAbsolute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_apex_absolute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_apex_absolute" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsNetApexAbsolute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_apex_conditional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_apex_conditional" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsNetApexConditional", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_conditional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.net_conditional" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsNetConditional", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.priority_no" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.priority_no" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsPriorityNo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.seasonal_limits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.seasonal_limits" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsSeasonalLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.structure_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.structure_name" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsStructureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.structure_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.structure_type" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsStructureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.water_source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_colorado_water_rights.water_source" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "searchDbColoradoWaterRightsWaterSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchColoradoWaterRightsQueryParams.prototype, "todate", void 0);
     return SearchColoradoWaterRightsQueryParams;
-}(SpeakeasyBase));
-export { SearchColoradoWaterRightsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchColoradoWaterRightsQueryParams = SearchColoradoWaterRightsQueryParams;
 var SearchColoradoWaterRightsRequest = /** @class */ (function (_super) {
     __extends(SearchColoradoWaterRightsRequest, _super);
     function SearchColoradoWaterRightsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchColoradoWaterRightsQueryParams)
     ], SearchColoradoWaterRightsRequest.prototype, "queryParams", void 0);
     return SearchColoradoWaterRightsRequest;
-}(SpeakeasyBase));
-export { SearchColoradoWaterRightsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchColoradoWaterRightsRequest = SearchColoradoWaterRightsRequest;
 var SearchColoradoWaterRightsResponse = /** @class */ (function (_super) {
     __extends(SearchColoradoWaterRightsResponse, _super);
     function SearchColoradoWaterRightsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchColoradoWaterRightsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchColoradoWaterRightsResponse.prototype, "statusCode", void 0);
     return SearchColoradoWaterRightsResponse;
-}(SpeakeasyBase));
-export { SearchColoradoWaterRightsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchColoradoWaterRightsResponse = SearchColoradoWaterRightsResponse;

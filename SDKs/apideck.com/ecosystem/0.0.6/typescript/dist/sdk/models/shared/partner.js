@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Contact } from "./contact";
-import { File } from "./file";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Partner = void 0;
+var utils_1 = require("../../../internal/utils");
+var contact_1 = require("./contact");
+var file_1 = require("./file");
 var Partner = /** @class */ (function (_super) {
     __extends(Partner, _super);
     function Partner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], Partner.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts", elemType: Contact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts", elemType: contact_1.Contact }),
         __metadata("design:type", Array)
     ], Partner.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Partner.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon" }),
+        __metadata("design:type", file_1.File)
     ], Partner.prototype, "icon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Partner.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listed" }),
         __metadata("design:type", String)
     ], Partner.prototype, "listed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitter" }),
         __metadata("design:type", String)
     ], Partner.prototype, "twitter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Partner.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], Partner.prototype, "website", void 0);
     return Partner;
-}(SpeakeasyBase));
-export { Partner };
+}(utils_1.SpeakeasyBase));
+exports.Partner = Partner;

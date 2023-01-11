@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2BigQueryField } from "./googleprivacydlpv2bigqueryfield";
-import { GooglePrivacyDlpV2CloudStorageFileSet } from "./googleprivacydlpv2cloudstoragefileset";
-import { GooglePrivacyDlpV2CloudStoragePath } from "./googleprivacydlpv2cloudstoragepath";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2LargeCustomDictionaryConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bigqueryfield_1 = require("./googleprivacydlpv2bigqueryfield");
+var googleprivacydlpv2cloudstoragefileset_1 = require("./googleprivacydlpv2cloudstoragefileset");
+var googleprivacydlpv2cloudstoragepath_1 = require("./googleprivacydlpv2cloudstoragepath");
 // GooglePrivacyDlpV2LargeCustomDictionaryConfig
 /**
  * Configuration for a custom dictionary created from a data source of any size up to the maximum size defined in the [limits](https://cloud.google.com/dlp/limits) page. The artifacts of dictionary creation are stored in the specified Cloud Storage location. Consider using `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2LargeCustomDictionaryConfig = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigQueryField" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigQueryField" }),
+        __metadata("design:type", googleprivacydlpv2bigqueryfield_1.GooglePrivacyDlpV2BigQueryField)
     ], GooglePrivacyDlpV2LargeCustomDictionaryConfig.prototype, "bigQueryField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStorageFileSet" }),
-        __metadata("design:type", GooglePrivacyDlpV2CloudStorageFileSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStorageFileSet" }),
+        __metadata("design:type", googleprivacydlpv2cloudstoragefileset_1.GooglePrivacyDlpV2CloudStorageFileSet)
     ], GooglePrivacyDlpV2LargeCustomDictionaryConfig.prototype, "cloudStorageFileSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputPath" }),
-        __metadata("design:type", GooglePrivacyDlpV2CloudStoragePath)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputPath" }),
+        __metadata("design:type", googleprivacydlpv2cloudstoragepath_1.GooglePrivacyDlpV2CloudStoragePath)
     ], GooglePrivacyDlpV2LargeCustomDictionaryConfig.prototype, "outputPath", void 0);
     return GooglePrivacyDlpV2LargeCustomDictionaryConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2LargeCustomDictionaryConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2LargeCustomDictionaryConfig = GooglePrivacyDlpV2LargeCustomDictionaryConfig;

@@ -8,7 +8,7 @@ export class ModelGetV2ModelsGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  openAqResult?: shared.OpenAqResult;
+  openAQResult?: shared.OpenAqResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -9,5 +9,5 @@ export declare class GetNetworkSmDeviceDeviceProfilesRequest extends SpeakeasyBa
 export declare class GetNetworkSmDeviceDeviceProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmDeviceDeviceProfiles200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDeviceDeviceProfiles200ApplicationJSONObject?: Record<string, any>;
 }

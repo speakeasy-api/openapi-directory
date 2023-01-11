@@ -130,5 +130,5 @@ export class SingleCollectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleCollection200ApplicationJsonObject?: SingleCollection200ApplicationJson;
+  singleCollection200ApplicationJSONObject?: SingleCollection200ApplicationJson;
 }

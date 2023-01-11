@@ -1,4 +1,7 @@
-export var TweetExpansionsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TweetExpansionsParameterEnum = void 0;
+var TweetExpansionsParameterEnum;
 (function (TweetExpansionsParameterEnum) {
     TweetExpansionsParameterEnum["AuthorId"] = "author_id";
     TweetExpansionsParameterEnum["ReferencedTweetsId"] = "referenced_tweets.id";
@@ -8,4 +11,4 @@ export var TweetExpansionsParameterEnum;
     TweetExpansionsParameterEnum["AttachmentsPollIds"] = "attachments.poll_ids";
     TweetExpansionsParameterEnum["EntitiesMentionsUsername"] = "entities.mentions.username";
     TweetExpansionsParameterEnum["ReferencedTweetsIdAuthorId"] = "referenced_tweets.id.author_id";
-})(TweetExpansionsParameterEnum || (TweetExpansionsParameterEnum = {}));
+})(TweetExpansionsParameterEnum = exports.TweetExpansionsParameterEnum || (exports.TweetExpansionsParameterEnum = {}));

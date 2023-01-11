@@ -19,6 +19,6 @@ export declare class GetGrossToNetReportOutputRequest extends SpeakeasyBase {
 export declare class GetGrossToNetReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getGrossToNetReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getGrossToNetReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

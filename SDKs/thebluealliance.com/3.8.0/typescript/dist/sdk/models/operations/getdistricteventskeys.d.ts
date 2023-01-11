@@ -16,7 +16,7 @@ export declare class GetDistrictEventsKeysRequest extends SpeakeasyBase {
 }
 export declare class GetDistrictEventsKeysResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getDistrictEventsKeys200ApplicationJsonStrings?: string[];
+    getDistrictEventsKeys200ApplicationJSONStrings?: string[];
 }

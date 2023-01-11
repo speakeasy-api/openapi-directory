@@ -49,5 +49,5 @@ export class DrillersFilesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  drillersFilesList200ApplicationJsonObject?: DrillersFilesList200ApplicationJson;
+  drillersFilesList200ApplicationJSONObject?: DrillersFilesList200ApplicationJson;
 }

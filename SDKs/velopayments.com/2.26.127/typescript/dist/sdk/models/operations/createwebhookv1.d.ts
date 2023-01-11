@@ -5,7 +5,7 @@ export declare class CreateWebhookV1Request extends SpeakeasyBase {
 }
 export declare class CreateWebhookV1Response extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     inlineResponse400?: any;
     inlineResponse401?: any;

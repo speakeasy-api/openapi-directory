@@ -48,7 +48,7 @@ export class DeleteResourcesByExternalIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteResourcesByExternalIdOutput?: Map<string, any>;
+  deleteResourcesByExternalIdOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

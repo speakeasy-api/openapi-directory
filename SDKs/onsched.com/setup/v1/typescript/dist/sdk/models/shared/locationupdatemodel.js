@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressUpdateModel } from "./addressupdatemodel";
-import { BusinessHoursUpdateModel } from "./businesshoursupdatemodel";
-import { BusinessDefaultsUpdateModel } from "./businessdefaultsupdatemodel";
-import { OnlineSettingsUpdateModel } from "./onlinesettingsupdatemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressupdatemodel_1 = require("./addressupdatemodel");
+var businesshoursupdatemodel_1 = require("./businesshoursupdatemodel");
+var businessdefaultsupdatemodel_1 = require("./businessdefaultsupdatemodel");
+var onlinesettingsupdatemodel_1 = require("./onlinesettingsupdatemodel");
 var LocationUpdateModel = /** @class */ (function (_super) {
     __extends(LocationUpdateModel, _super);
     function LocationUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", AddressUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", addressupdatemodel_1.AddressUpdateModel)
     ], LocationUpdateModel.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminEmail" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "adminEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminName" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "adminName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessHours" }),
-        __metadata("design:type", BusinessHoursUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessHours" }),
+        __metadata("design:type", businesshoursupdatemodel_1.BusinessHoursUpdateModel)
     ], LocationUpdateModel.prototype, "businessHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaults" }),
-        __metadata("design:type", BusinessDefaultsUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaults" }),
+        __metadata("design:type", businessdefaultsupdatemodel_1.BusinessDefaultsUpdateModel)
     ], LocationUpdateModel.prototype, "defaults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=friendlyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friendlyId" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "friendlyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCapacity" }),
         __metadata("design:type", Number)
     ], LocationUpdateModel.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxGroupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxGroupSize" }),
         __metadata("design:type", Number)
     ], LocationUpdateModel.prototype, "maxGroupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionId" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "regionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", OnlineSettingsUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", onlinesettingsupdatemodel_1.OnlineSettingsUpdateModel)
     ], LocationUpdateModel.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneName" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "timezoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], LocationUpdateModel.prototype, "website", void 0);
     return LocationUpdateModel;
-}(SpeakeasyBase));
-export { LocationUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.LocationUpdateModel = LocationUpdateModel;

@@ -1,4 +1,7 @@
-export var ConsentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentStatusEnum = void 0;
+var ConsentStatusEnum;
 (function (ConsentStatusEnum) {
     ConsentStatusEnum["Received"] = "received";
     ConsentStatusEnum["Rejected"] = "rejected";
@@ -7,4 +10,4 @@ export var ConsentStatusEnum;
     ConsentStatusEnum["Expired"] = "expired";
     ConsentStatusEnum["TerminatedByTpp"] = "terminatedByTpp";
     ConsentStatusEnum["PartiallyAuthorised"] = "partiallyAuthorised";
-})(ConsentStatusEnum || (ConsentStatusEnum = {}));
+})(ConsentStatusEnum = exports.ConsentStatusEnum || (exports.ConsentStatusEnum = {}));

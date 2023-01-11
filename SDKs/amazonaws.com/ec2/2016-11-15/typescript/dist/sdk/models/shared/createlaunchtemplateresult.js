@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplate } from "./launchtemplate";
-import { ValidationWarning } from "./validationwarning";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLaunchTemplateResult = exports.CreateLaunchTemplateResultWarning = exports.CreateLaunchTemplateResultLaunchTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateLaunchTemplateResultLaunchTemplate
+/**
+ * Information about the launch template.
+**/
+var CreateLaunchTemplateResultLaunchTemplate = /** @class */ (function (_super) {
+    __extends(CreateLaunchTemplateResultLaunchTemplate, _super);
+    function CreateLaunchTemplateResultLaunchTemplate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "createdBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "defaultVersionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "latestVersionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "launchTemplateId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "launchTemplateName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultLaunchTemplate.prototype, "tags", void 0);
+    return CreateLaunchTemplateResultLaunchTemplate;
+}(utils_1.SpeakeasyBase));
+exports.CreateLaunchTemplateResultLaunchTemplate = CreateLaunchTemplateResultLaunchTemplate;
+// CreateLaunchTemplateResultWarning
+/**
+ * If the launch template contains parameters or parameter combinations that are not valid, an error code and an error message are returned for each issue that's found.
+**/
+var CreateLaunchTemplateResultWarning = /** @class */ (function (_super) {
+    __extends(CreateLaunchTemplateResultWarning, _super);
+    function CreateLaunchTemplateResultWarning() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLaunchTemplateResultWarning.prototype, "errors", void 0);
+    return CreateLaunchTemplateResultWarning;
+}(utils_1.SpeakeasyBase));
+exports.CreateLaunchTemplateResultWarning = CreateLaunchTemplateResultWarning;
 var CreateLaunchTemplateResult = /** @class */ (function (_super) {
     __extends(CreateLaunchTemplateResult, _super);
     function CreateLaunchTemplateResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplate)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateLaunchTemplateResultLaunchTemplate)
     ], CreateLaunchTemplateResult.prototype, "launchTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ValidationWarning)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateLaunchTemplateResultWarning)
     ], CreateLaunchTemplateResult.prototype, "warning", void 0);
     return CreateLaunchTemplateResult;
-}(SpeakeasyBase));
-export { CreateLaunchTemplateResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateLaunchTemplateResult = CreateLaunchTemplateResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,124 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyVpnConnectionOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyVpnConnectionOptionsResponse = exports.GetModifyVpnConnectionOptionsRequest = exports.GetModifyVpnConnectionOptionsHeaders = exports.GetModifyVpnConnectionOptionsQueryParams = exports.GetModifyVpnConnectionOptionsVersionEnum = exports.GetModifyVpnConnectionOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyVpnConnectionOptionsActionEnum;
 (function (GetModifyVpnConnectionOptionsActionEnum) {
     GetModifyVpnConnectionOptionsActionEnum["ModifyVpnConnectionOptions"] = "ModifyVpnConnectionOptions";
-})(GetModifyVpnConnectionOptionsActionEnum || (GetModifyVpnConnectionOptionsActionEnum = {}));
-export var GetModifyVpnConnectionOptionsVersionEnum;
+})(GetModifyVpnConnectionOptionsActionEnum = exports.GetModifyVpnConnectionOptionsActionEnum || (exports.GetModifyVpnConnectionOptionsActionEnum = {}));
+var GetModifyVpnConnectionOptionsVersionEnum;
 (function (GetModifyVpnConnectionOptionsVersionEnum) {
     GetModifyVpnConnectionOptionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyVpnConnectionOptionsVersionEnum || (GetModifyVpnConnectionOptionsVersionEnum = {}));
+})(GetModifyVpnConnectionOptionsVersionEnum = exports.GetModifyVpnConnectionOptionsVersionEnum || (exports.GetModifyVpnConnectionOptionsVersionEnum = {}));
 var GetModifyVpnConnectionOptionsQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyVpnConnectionOptionsQueryParams, _super);
     function GetModifyVpnConnectionOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LocalIpv4NetworkCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LocalIpv4NetworkCidr" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "localIpv4NetworkCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LocalIpv6NetworkCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LocalIpv6NetworkCidr" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "localIpv6NetworkCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RemoteIpv4NetworkCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RemoteIpv4NetworkCidr" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "remoteIpv4NetworkCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RemoteIpv6NetworkCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RemoteIpv6NetworkCidr" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "remoteIpv6NetworkCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpnConnectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpnConnectionId" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsQueryParams.prototype, "vpnConnectionId", void 0);
     return GetModifyVpnConnectionOptionsQueryParams;
-}(SpeakeasyBase));
-export { GetModifyVpnConnectionOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyVpnConnectionOptionsQueryParams = GetModifyVpnConnectionOptionsQueryParams;
 var GetModifyVpnConnectionOptionsHeaders = /** @class */ (function (_super) {
     __extends(GetModifyVpnConnectionOptionsHeaders, _super);
     function GetModifyVpnConnectionOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyVpnConnectionOptionsHeaders;
-}(SpeakeasyBase));
-export { GetModifyVpnConnectionOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyVpnConnectionOptionsHeaders = GetModifyVpnConnectionOptionsHeaders;
 var GetModifyVpnConnectionOptionsRequest = /** @class */ (function (_super) {
     __extends(GetModifyVpnConnectionOptionsRequest, _super);
     function GetModifyVpnConnectionOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyVpnConnectionOptionsQueryParams)
     ], GetModifyVpnConnectionOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyVpnConnectionOptionsHeaders)
     ], GetModifyVpnConnectionOptionsRequest.prototype, "headers", void 0);
     return GetModifyVpnConnectionOptionsRequest;
-}(SpeakeasyBase));
-export { GetModifyVpnConnectionOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyVpnConnectionOptionsRequest = GetModifyVpnConnectionOptionsRequest;
 var GetModifyVpnConnectionOptionsResponse = /** @class */ (function (_super) {
     __extends(GetModifyVpnConnectionOptionsResponse, _super);
     function GetModifyVpnConnectionOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyVpnConnectionOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyVpnConnectionOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyVpnConnectionOptionsResponse.prototype, "statusCode", void 0);
     return GetModifyVpnConnectionOptionsResponse;
-}(SpeakeasyBase));
-export { GetModifyVpnConnectionOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyVpnConnectionOptionsResponse = GetModifyVpnConnectionOptionsResponse;

@@ -51,5 +51,5 @@ export class CreateParameterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createParameter200ApplicationJsonObject?: CreateParameter200ApplicationJson;
+  createParameter200ApplicationJSONObject?: CreateParameter200ApplicationJson;
 }

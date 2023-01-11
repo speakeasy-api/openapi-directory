@@ -20,5 +20,5 @@ export enum LoggingConfigDriverLogLevelsEnum {
 **/
 export class LoggingConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=driverLogLevels" })
-  driverLogLevels?: Map<string, LoggingConfigDriverLogLevelsEnum>;
+  driverLogLevels?: Record<string, LoggingConfigDriverLogLevelsEnum>;
 }

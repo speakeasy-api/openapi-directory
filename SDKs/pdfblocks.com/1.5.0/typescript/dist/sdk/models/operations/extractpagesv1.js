@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtractPagesV1Response = exports.ExtractPagesV1Request = exports.ExtractPagesV14XxApplicationProblemPlusJson = exports.ExtractPagesV1RequestBody = exports.ExtractPagesV1RequestBodyFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var ExtractPagesV1RequestBodyFile = /** @class */ (function (_super) {
     __extends(ExtractPagesV1RequestBodyFile, _super);
     function ExtractPagesV1RequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], ExtractPagesV1RequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], ExtractPagesV1RequestBodyFile.prototype, "file", void 0);
     return ExtractPagesV1RequestBodyFile;
-}(SpeakeasyBase));
-export { ExtractPagesV1RequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.ExtractPagesV1RequestBodyFile = ExtractPagesV1RequestBodyFile;
 var ExtractPagesV1RequestBody = /** @class */ (function (_super) {
     __extends(ExtractPagesV1RequestBody, _super);
     function ExtractPagesV1RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", ExtractPagesV1RequestBodyFile)
     ], ExtractPagesV1RequestBody.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=first_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=first_page" }),
         __metadata("design:type", Number)
     ], ExtractPagesV1RequestBody.prototype, "firstPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=last_page" }),
         __metadata("design:type", Number)
     ], ExtractPagesV1RequestBody.prototype, "lastPage", void 0);
     return ExtractPagesV1RequestBody;
-}(SpeakeasyBase));
-export { ExtractPagesV1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ExtractPagesV1RequestBody = ExtractPagesV1RequestBody;
 var ExtractPagesV14XxApplicationProblemPlusJson = /** @class */ (function (_super) {
     __extends(ExtractPagesV14XxApplicationProblemPlusJson, _super);
     function ExtractPagesV14XxApplicationProblemPlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", Object)
     ], ExtractPagesV14XxApplicationProblemPlusJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], ExtractPagesV14XxApplicationProblemPlusJson.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ExtractPagesV14XxApplicationProblemPlusJson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ExtractPagesV14XxApplicationProblemPlusJson.prototype, "type", void 0);
     return ExtractPagesV14XxApplicationProblemPlusJson;
-}(SpeakeasyBase));
-export { ExtractPagesV14XxApplicationProblemPlusJson };
+}(utils_1.SpeakeasyBase));
+exports.ExtractPagesV14XxApplicationProblemPlusJson = ExtractPagesV14XxApplicationProblemPlusJson;
 var ExtractPagesV1Request = /** @class */ (function (_super) {
     __extends(ExtractPagesV1Request, _super);
     function ExtractPagesV1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", ExtractPagesV1RequestBody)
     ], ExtractPagesV1Request.prototype, "request", void 0);
     return ExtractPagesV1Request;
-}(SpeakeasyBase));
-export { ExtractPagesV1Request };
+}(utils_1.SpeakeasyBase));
+exports.ExtractPagesV1Request = ExtractPagesV1Request;
 var ExtractPagesV1Response = /** @class */ (function (_super) {
     __extends(ExtractPagesV1Response, _super);
     function ExtractPagesV1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtractPagesV1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtractPagesV1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ExtractPagesV1Response.prototype, "extractPagesV1200ApplicationPdfBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtractPagesV14XxApplicationProblemPlusJson)
-    ], ExtractPagesV1Response.prototype, "extractPagesV14XxApplicationProblemPlusJsonObject", void 0);
+    ], ExtractPagesV1Response.prototype, "extractPagesV14XXApplicationProblemPlusJsonObject", void 0);
     return ExtractPagesV1Response;
-}(SpeakeasyBase));
-export { ExtractPagesV1Response };
+}(utils_1.SpeakeasyBase));
+exports.ExtractPagesV1Response = ExtractPagesV1Response;

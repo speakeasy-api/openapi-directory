@@ -11,10 +11,10 @@ export class SetEqualizerValuesRequest extends SpeakeasyBase {
 
 export class SetEqualizerValuesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  setEqualizerValues200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

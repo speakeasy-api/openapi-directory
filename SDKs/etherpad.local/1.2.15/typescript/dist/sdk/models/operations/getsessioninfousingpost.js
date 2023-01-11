@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,176 +23,178 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSessionInfoUsingPostResponse = exports.GetSessionInfoUsingPostRequest = exports.GetSessionInfoUsingPost500ApplicationJson = exports.GetSessionInfoUsingPost401ApplicationJson = exports.GetSessionInfoUsingPost400ApplicationJson = exports.GetSessionInfoUsingPost200ApplicationJson = exports.GetSessionInfoUsingPost200ApplicationJsonData = exports.GetSessionInfoUsingPost200ApplicationJsonDataInfo = exports.GetSessionInfoUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSessionInfoUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPostQueryParams, _super);
     function GetSessionInfoUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sessionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sessionID" }),
         __metadata("design:type", String)
-    ], GetSessionInfoUsingPostQueryParams.prototype, "sessionId", void 0);
+    ], GetSessionInfoUsingPostQueryParams.prototype, "sessionID", void 0);
     return GetSessionInfoUsingPostQueryParams;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPostQueryParams = GetSessionInfoUsingPostQueryParams;
 var GetSessionInfoUsingPost200ApplicationJsonDataInfo = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost200ApplicationJsonDataInfo, _super);
     function GetSessionInfoUsingPost200ApplicationJsonDataInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorID" }),
         __metadata("design:type", String)
-    ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "authorId", void 0);
+    ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "authorID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupID" }),
         __metadata("design:type", String)
-    ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "groupId", void 0);
+    ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "groupID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validUntil" }),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPost200ApplicationJsonDataInfo.prototype, "validUntil", void 0);
     return GetSessionInfoUsingPost200ApplicationJsonDataInfo;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost200ApplicationJsonDataInfo };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost200ApplicationJsonDataInfo = GetSessionInfoUsingPost200ApplicationJsonDataInfo;
 var GetSessionInfoUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost200ApplicationJsonData, _super);
     function GetSessionInfoUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
         __metadata("design:type", GetSessionInfoUsingPost200ApplicationJsonDataInfo)
     ], GetSessionInfoUsingPost200ApplicationJsonData.prototype, "info", void 0);
     return GetSessionInfoUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost200ApplicationJsonData = GetSessionInfoUsingPost200ApplicationJsonData;
 var GetSessionInfoUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost200ApplicationJson, _super);
     function GetSessionInfoUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetSessionInfoUsingPost200ApplicationJsonData)
     ], GetSessionInfoUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPost200ApplicationJson.prototype, "message", void 0);
     return GetSessionInfoUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost200ApplicationJson = GetSessionInfoUsingPost200ApplicationJson;
 var GetSessionInfoUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost400ApplicationJson, _super);
     function GetSessionInfoUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetSessionInfoUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPost400ApplicationJson.prototype, "message", void 0);
     return GetSessionInfoUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost400ApplicationJson = GetSessionInfoUsingPost400ApplicationJson;
 var GetSessionInfoUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost401ApplicationJson, _super);
     function GetSessionInfoUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetSessionInfoUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPost401ApplicationJson.prototype, "message", void 0);
     return GetSessionInfoUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost401ApplicationJson = GetSessionInfoUsingPost401ApplicationJson;
 var GetSessionInfoUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPost500ApplicationJson, _super);
     function GetSessionInfoUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetSessionInfoUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPost500ApplicationJson.prototype, "message", void 0);
     return GetSessionInfoUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPost500ApplicationJson = GetSessionInfoUsingPost500ApplicationJson;
 var GetSessionInfoUsingPostRequest = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPostRequest, _super);
     function GetSessionInfoUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessionInfoUsingPostQueryParams)
     ], GetSessionInfoUsingPostRequest.prototype, "queryParams", void 0);
     return GetSessionInfoUsingPostRequest;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPostRequest = GetSessionInfoUsingPostRequest;
 var GetSessionInfoUsingPostResponse = /** @class */ (function (_super) {
     __extends(GetSessionInfoUsingPostResponse, _super);
     function GetSessionInfoUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSessionInfoUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSessionInfoUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessionInfoUsingPost200ApplicationJson)
-    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPost200ApplicationJsonObject", void 0);
+    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessionInfoUsingPost400ApplicationJson)
-    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPost400ApplicationJsonObject", void 0);
+    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessionInfoUsingPost401ApplicationJson)
-    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPost401ApplicationJsonObject", void 0);
+    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessionInfoUsingPost500ApplicationJson)
-    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPost500ApplicationJsonObject", void 0);
+    ], GetSessionInfoUsingPostResponse.prototype, "getSessionInfoUsingPOST500ApplicationJSONObject", void 0);
     return GetSessionInfoUsingPostResponse;
-}(SpeakeasyBase));
-export { GetSessionInfoUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionInfoUsingPostResponse = GetSessionInfoUsingPostResponse;

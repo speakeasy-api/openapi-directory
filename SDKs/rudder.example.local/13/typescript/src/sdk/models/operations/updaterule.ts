@@ -53,5 +53,5 @@ export class UpdateRuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateRule200ApplicationJsonObject?: UpdateRule200ApplicationJson;
+  updateRule200ApplicationJSONObject?: UpdateRule200ApplicationJson;
 }

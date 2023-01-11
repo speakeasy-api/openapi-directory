@@ -18,5 +18,5 @@ export declare class CreateTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createTask201ApplicationJsonObject?: CreateTask201ApplicationJson;
+    createTask201ApplicationJSONObject?: CreateTask201ApplicationJson;
 }

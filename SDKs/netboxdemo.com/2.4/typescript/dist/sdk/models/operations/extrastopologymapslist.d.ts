@@ -20,5 +20,5 @@ export declare class ExtrasTopologyMapsListRequest extends SpeakeasyBase {
 export declare class ExtrasTopologyMapsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasTopologyMapsList200ApplicationJsonObject?: ExtrasTopologyMapsList200ApplicationJson;
+    extrasTopologyMapsList200ApplicationJSONObject?: ExtrasTopologyMapsList200ApplicationJson;
 }

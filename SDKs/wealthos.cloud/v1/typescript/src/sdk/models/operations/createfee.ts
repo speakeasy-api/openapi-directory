@@ -38,23 +38,23 @@ export class CreateFeeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createFee400ApplicationJsonAny?: any;
+  createFee400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee401ApplicationJsonAny?: any;
+  createFee401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee403ApplicationJsonAny?: any;
+  createFee403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee404ApplicationJsonAny?: any;
+  createFee404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee409ApplicationJsonAny?: any;
+  createFee409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee429ApplicationJsonAny?: any;
+  createFee429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createFee500ApplicationJsonAny?: any;
+  createFee500ApplicationJSONAny?: any;
 }

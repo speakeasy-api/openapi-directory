@@ -9,7 +9,7 @@ import { TlsSecurityPolicyEnum } from "./tlssecuritypolicyenum";
 **/
 export class DomainEndpointOptions extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  enforceHttps?: boolean;
+  enforceHTTPS?: boolean;
 
   @SpeakeasyMetadata()
   tlsSecurityPolicy?: TlsSecurityPolicyEnum;

@@ -120,7 +120,7 @@ export class CreateNodegroupRequestBody extends SpeakeasyBase {
   instanceTypes?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=launchTemplate" })
   launchTemplate?: CreateNodegroupRequestBodyLaunchTemplate;
@@ -144,7 +144,7 @@ export class CreateNodegroupRequestBody extends SpeakeasyBase {
   subnets: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=taints", elemType: shared.Taint })
   taints?: shared.Taint[];

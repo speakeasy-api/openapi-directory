@@ -1,5 +1,8 @@
-export var CostEstimationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CostEstimationStatusEnum = void 0;
+var CostEstimationStatusEnum;
 (function (CostEstimationStatusEnum) {
     CostEstimationStatusEnum["Ongoing"] = "ONGOING";
     CostEstimationStatusEnum["Completed"] = "COMPLETED";
-})(CostEstimationStatusEnum || (CostEstimationStatusEnum = {}));
+})(CostEstimationStatusEnum = exports.CostEstimationStatusEnum || (exports.CostEstimationStatusEnum = {}));

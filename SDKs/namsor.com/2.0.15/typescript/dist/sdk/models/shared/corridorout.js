@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirstLastNameDiasporaedOut } from "./firstlastnamediasporaedout";
-import { FirstLastNameGenderedOut } from "./firstlastnamegenderedout";
-import { FirstLastNameOriginedOut } from "./firstlastnameoriginedout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CorridorOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var firstlastnamediasporaedout_1 = require("./firstlastnamediasporaedout");
+var firstlastnamegenderedout_1 = require("./firstlastnamegenderedout");
+var firstlastnameoriginedout_1 = require("./firstlastnameoriginedout");
 // CorridorOut
 /**
  * Represent multiple classifications for corridor sender and receiver (gender, country, origin, diaspora)
@@ -36,25 +39,25 @@ var CorridorOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstLastNameDiasporaedOut" }),
-        __metadata("design:type", FirstLastNameDiasporaedOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstLastNameDiasporaedOut" }),
+        __metadata("design:type", firstlastnamediasporaedout_1.FirstLastNameDiasporaedOut)
     ], CorridorOut.prototype, "firstLastNameDiasporaedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstLastNameGenderedOut" }),
-        __metadata("design:type", FirstLastNameGenderedOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstLastNameGenderedOut" }),
+        __metadata("design:type", firstlastnamegenderedout_1.FirstLastNameGenderedOut)
     ], CorridorOut.prototype, "firstLastNameGenderedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstLastNameOriginedOut" }),
-        __metadata("design:type", FirstLastNameOriginedOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstLastNameOriginedOut" }),
+        __metadata("design:type", firstlastnameoriginedout_1.FirstLastNameOriginedOut)
     ], CorridorOut.prototype, "firstLastNameOriginedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CorridorOut.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], CorridorOut.prototype, "script", void 0);
     return CorridorOut;
-}(SpeakeasyBase));
-export { CorridorOut };
+}(utils_1.SpeakeasyBase));
+exports.CorridorOut = CorridorOut;

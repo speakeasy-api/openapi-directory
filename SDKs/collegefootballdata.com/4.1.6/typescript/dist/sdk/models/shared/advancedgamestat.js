@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,376 +23,378 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdvancedGameStat = exports.AdvancedGameStatOffense = exports.AdvancedGameStatOffenseStandardDowns = exports.AdvancedGameStatOffenseRushingPlays = exports.AdvancedGameStatOffensePassingPlays = exports.AdvancedGameStatOffensePassingDowns = exports.AdvancedGameStatDefense = exports.AdvancedGameStatDefenseStandardDowns = exports.AdvancedGameStatDefenseRushingPlays = exports.AdvancedGameStatDefensePassingPlays = exports.AdvancedGameStatDefensePassingDowns = void 0;
+var utils_1 = require("../../../internal/utils");
 var AdvancedGameStatDefensePassingDowns = /** @class */ (function (_super) {
     __extends(AdvancedGameStatDefensePassingDowns, _super);
     function AdvancedGameStatDefensePassingDowns() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingDowns.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingDowns.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingDowns.prototype, "successRate", void 0);
     return AdvancedGameStatDefensePassingDowns;
-}(SpeakeasyBase));
-export { AdvancedGameStatDefensePassingDowns };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatDefensePassingDowns = AdvancedGameStatDefensePassingDowns;
 var AdvancedGameStatDefensePassingPlays = /** @class */ (function (_super) {
     __extends(AdvancedGameStatDefensePassingPlays, _super);
     function AdvancedGameStatDefensePassingPlays() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingPlays.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingPlays.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefensePassingPlays.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatDefensePassingPlays.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatDefensePassingPlays.prototype, "totalPPA", void 0);
     return AdvancedGameStatDefensePassingPlays;
-}(SpeakeasyBase));
-export { AdvancedGameStatDefensePassingPlays };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatDefensePassingPlays = AdvancedGameStatDefensePassingPlays;
 var AdvancedGameStatDefenseRushingPlays = /** @class */ (function (_super) {
     __extends(AdvancedGameStatDefenseRushingPlays, _super);
     function AdvancedGameStatDefenseRushingPlays() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseRushingPlays.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseRushingPlays.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseRushingPlays.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatDefenseRushingPlays.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatDefenseRushingPlays.prototype, "totalPPA", void 0);
     return AdvancedGameStatDefenseRushingPlays;
-}(SpeakeasyBase));
-export { AdvancedGameStatDefenseRushingPlays };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatDefenseRushingPlays = AdvancedGameStatDefenseRushingPlays;
 var AdvancedGameStatDefenseStandardDowns = /** @class */ (function (_super) {
     __extends(AdvancedGameStatDefenseStandardDowns, _super);
     function AdvancedGameStatDefenseStandardDowns() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseStandardDowns.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseStandardDowns.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefenseStandardDowns.prototype, "successRate", void 0);
     return AdvancedGameStatDefenseStandardDowns;
-}(SpeakeasyBase));
-export { AdvancedGameStatDefenseStandardDowns };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatDefenseStandardDowns = AdvancedGameStatDefenseStandardDowns;
 var AdvancedGameStatDefense = /** @class */ (function (_super) {
     __extends(AdvancedGameStatDefense, _super);
     function AdvancedGameStatDefense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drives" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "drives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "lineYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "lineYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openFieldYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openFieldYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "openFieldYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openFieldYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openFieldYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "openFieldYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingDowns" }),
         __metadata("design:type", AdvancedGameStatDefensePassingDowns)
     ], AdvancedGameStatDefense.prototype, "passingDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingPlays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingPlays" }),
         __metadata("design:type", AdvancedGameStatDefensePassingPlays)
     ], AdvancedGameStatDefense.prototype, "passingPlays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plays" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "plays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerSuccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerSuccess" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "powerSuccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushingPlays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushingPlays" }),
         __metadata("design:type", AdvancedGameStatDefenseRushingPlays)
     ], AdvancedGameStatDefense.prototype, "rushingPlays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondLevelYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondLevelYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "secondLevelYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondLevelYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondLevelYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "secondLevelYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardDowns" }),
         __metadata("design:type", AdvancedGameStatDefenseStandardDowns)
     ], AdvancedGameStatDefense.prototype, "standardDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stuffRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stuffRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "stuffRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatDefense.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatDefense.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatDefense.prototype, "totalPPA", void 0);
     return AdvancedGameStatDefense;
-}(SpeakeasyBase));
-export { AdvancedGameStatDefense };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatDefense = AdvancedGameStatDefense;
 var AdvancedGameStatOffensePassingDowns = /** @class */ (function (_super) {
     __extends(AdvancedGameStatOffensePassingDowns, _super);
     function AdvancedGameStatOffensePassingDowns() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingDowns.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingDowns.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingDowns.prototype, "successRate", void 0);
     return AdvancedGameStatOffensePassingDowns;
-}(SpeakeasyBase));
-export { AdvancedGameStatOffensePassingDowns };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatOffensePassingDowns = AdvancedGameStatOffensePassingDowns;
 var AdvancedGameStatOffensePassingPlays = /** @class */ (function (_super) {
     __extends(AdvancedGameStatOffensePassingPlays, _super);
     function AdvancedGameStatOffensePassingPlays() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingPlays.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingPlays.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffensePassingPlays.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatOffensePassingPlays.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatOffensePassingPlays.prototype, "totalPPA", void 0);
     return AdvancedGameStatOffensePassingPlays;
-}(SpeakeasyBase));
-export { AdvancedGameStatOffensePassingPlays };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatOffensePassingPlays = AdvancedGameStatOffensePassingPlays;
 var AdvancedGameStatOffenseRushingPlays = /** @class */ (function (_super) {
     __extends(AdvancedGameStatOffenseRushingPlays, _super);
     function AdvancedGameStatOffenseRushingPlays() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseRushingPlays.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseRushingPlays.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseRushingPlays.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatOffenseRushingPlays.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatOffenseRushingPlays.prototype, "totalPPA", void 0);
     return AdvancedGameStatOffenseRushingPlays;
-}(SpeakeasyBase));
-export { AdvancedGameStatOffenseRushingPlays };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatOffenseRushingPlays = AdvancedGameStatOffenseRushingPlays;
 var AdvancedGameStatOffenseStandardDowns = /** @class */ (function (_super) {
     __extends(AdvancedGameStatOffenseStandardDowns, _super);
     function AdvancedGameStatOffenseStandardDowns() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseStandardDowns.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseStandardDowns.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffenseStandardDowns.prototype, "successRate", void 0);
     return AdvancedGameStatOffenseStandardDowns;
-}(SpeakeasyBase));
-export { AdvancedGameStatOffenseStandardDowns };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatOffenseStandardDowns = AdvancedGameStatOffenseStandardDowns;
 var AdvancedGameStatOffense = /** @class */ (function (_super) {
     __extends(AdvancedGameStatOffense, _super);
     function AdvancedGameStatOffense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drives" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "drives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explosiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explosiveness" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "explosiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "lineYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "lineYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openFieldYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openFieldYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "openFieldYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openFieldYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openFieldYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "openFieldYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingDowns" }),
         __metadata("design:type", AdvancedGameStatOffensePassingDowns)
     ], AdvancedGameStatOffense.prototype, "passingDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingPlays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingPlays" }),
         __metadata("design:type", AdvancedGameStatOffensePassingPlays)
     ], AdvancedGameStatOffense.prototype, "passingPlays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plays" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "plays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerSuccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerSuccess" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "powerSuccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ppa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ppa" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "ppa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushingPlays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushingPlays" }),
         __metadata("design:type", AdvancedGameStatOffenseRushingPlays)
     ], AdvancedGameStatOffense.prototype, "rushingPlays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondLevelYards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondLevelYards" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "secondLevelYards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondLevelYardsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondLevelYardsTotal" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "secondLevelYardsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardDowns" }),
         __metadata("design:type", AdvancedGameStatOffenseStandardDowns)
     ], AdvancedGameStatOffense.prototype, "standardDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stuffRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stuffRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "stuffRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successRate" }),
         __metadata("design:type", Number)
     ], AdvancedGameStatOffense.prototype, "successRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], AdvancedGameStatOffense.prototype, "totalPpa", void 0);
+    ], AdvancedGameStatOffense.prototype, "totalPPA", void 0);
     return AdvancedGameStatOffense;
-}(SpeakeasyBase));
-export { AdvancedGameStatOffense };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStatOffense = AdvancedGameStatOffense;
 var AdvancedGameStat = /** @class */ (function (_super) {
     __extends(AdvancedGameStat, _super);
     function AdvancedGameStat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defense" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defense" }),
         __metadata("design:type", AdvancedGameStatDefense)
     ], AdvancedGameStat.prototype, "defense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gameId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gameId" }),
         __metadata("design:type", Number)
     ], AdvancedGameStat.prototype, "gameId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offense" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offense" }),
         __metadata("design:type", AdvancedGameStatOffense)
     ], AdvancedGameStat.prototype, "offense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opponent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opponent" }),
         __metadata("design:type", String)
     ], AdvancedGameStat.prototype, "opponent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], AdvancedGameStat.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], AdvancedGameStat.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=week" }),
         __metadata("design:type", Number)
     ], AdvancedGameStat.prototype, "week", void 0);
     return AdvancedGameStat;
-}(SpeakeasyBase));
-export { AdvancedGameStat };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedGameStat = AdvancedGameStat;

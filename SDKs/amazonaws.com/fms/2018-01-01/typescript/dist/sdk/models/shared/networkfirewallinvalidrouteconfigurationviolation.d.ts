@@ -17,7 +17,7 @@ export declare class NetworkFirewallInvalidRouteConfigurationViolation extends S
     expectedFirewallSubnetRoutes?: ExpectedRoute[];
     expectedInternetGatewayRoutes?: ExpectedRoute[];
     internetGatewayId?: string;
-    isRouteTableUsedInDifferentAz?: boolean;
+    isRouteTableUsedInDifferentAZ?: boolean;
     routeTableId?: string;
     violatingRoute?: Route;
     vpcId?: string;

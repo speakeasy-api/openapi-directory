@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationContext = void 0;
+var utils_1 = require("../../../internal/utils");
 // LocationContext
 /**
  * Output only. The Geo criteria the restriction applies to.
@@ -33,9 +36,9 @@ var LocationContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geoCriteriaIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geoCriteriaIds" }),
         __metadata("design:type", Array)
     ], LocationContext.prototype, "geoCriteriaIds", void 0);
     return LocationContext;
-}(SpeakeasyBase));
-export { LocationContext };
+}(utils_1.SpeakeasyBase));
+exports.LocationContext = LocationContext;

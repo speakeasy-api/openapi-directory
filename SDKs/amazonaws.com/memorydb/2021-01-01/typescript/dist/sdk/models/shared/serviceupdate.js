@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceUpdateStatusEnum } from "./serviceupdatestatusenum";
-import { ServiceUpdateTypeEnum } from "./serviceupdatetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceupdatestatusenum_1 = require("./serviceupdatestatusenum");
+var serviceupdatetypeenum_1 = require("./serviceupdatetypeenum");
 // ServiceUpdate
 /**
  * An update that you can apply to your MemoryDB clusters.
@@ -35,37 +38,37 @@ var ServiceUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoUpdateStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoUpdateStartDate" }),
         __metadata("design:type", Date)
     ], ServiceUpdate.prototype, "autoUpdateStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterName" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodesUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodesUpdated" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "nodesUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReleaseDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReleaseDate" }),
         __metadata("design:type", Date)
     ], ServiceUpdate.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceUpdateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceUpdateName" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "serviceUpdateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ServiceUpdate.prototype, "type", void 0);
     return ServiceUpdate;
-}(SpeakeasyBase));
-export { ServiceUpdate };
+}(utils_1.SpeakeasyBase));
+exports.ServiceUpdate = ServiceUpdate;

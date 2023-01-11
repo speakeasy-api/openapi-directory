@@ -24,6 +24,6 @@ export declare class JobDisableRequest extends SpeakeasyBase {
 export declare class JobDisableResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

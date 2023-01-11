@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelConnection } from "./channelconnection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListChannelConnectionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var channelconnection_1 = require("./channelconnection");
 // ListChannelConnectionsResponse
 /**
  * The response message for the `ListChannelConnections` method.
@@ -34,17 +37,17 @@ var ListChannelConnectionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelConnections", elemType: ChannelConnection }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelConnections", elemType: channelconnection_1.ChannelConnection }),
         __metadata("design:type", Array)
     ], ListChannelConnectionsResponse.prototype, "channelConnections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListChannelConnectionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListChannelConnectionsResponse.prototype, "unreachable", void 0);
     return ListChannelConnectionsResponse;
-}(SpeakeasyBase));
-export { ListChannelConnectionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListChannelConnectionsResponse = ListChannelConnectionsResponse;

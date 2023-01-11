@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BranchProtection } from "./branchprotection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShortBranch = exports.ShortBranchCommit = void 0;
+var utils_1 = require("../../../internal/utils");
+var branchprotection_1 = require("./branchprotection");
 var ShortBranchCommit = /** @class */ (function (_super) {
     __extends(ShortBranchCommit, _super);
     function ShortBranchCommit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], ShortBranchCommit.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ShortBranchCommit.prototype, "url", void 0);
     return ShortBranchCommit;
-}(SpeakeasyBase));
-export { ShortBranchCommit };
+}(utils_1.SpeakeasyBase));
+exports.ShortBranchCommit = ShortBranchCommit;
 // ShortBranch
 /**
  * Short Branch
@@ -50,25 +53,25 @@ var ShortBranch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit" }),
         __metadata("design:type", ShortBranchCommit)
     ], ShortBranch.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ShortBranch.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protected" }),
         __metadata("design:type", Boolean)
     ], ShortBranch.prototype, "protected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
-        __metadata("design:type", BranchProtection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
+        __metadata("design:type", branchprotection_1.BranchProtection)
     ], ShortBranch.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection_url" }),
         __metadata("design:type", String)
     ], ShortBranch.prototype, "protectionUrl", void 0);
     return ShortBranch;
-}(SpeakeasyBase));
-export { ShortBranch };
+}(utils_1.SpeakeasyBase));
+exports.ShortBranch = ShortBranch;

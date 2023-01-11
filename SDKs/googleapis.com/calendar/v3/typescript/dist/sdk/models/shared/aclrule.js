@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AclRule = exports.AclRuleScope = void 0;
+var utils_1 = require("../../../internal/utils");
 // AclRuleScope
 /**
  * The extent to which calendar access is granted by this ACL rule.
@@ -33,41 +36,41 @@ var AclRuleScope = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AclRuleScope.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], AclRuleScope.prototype, "value", void 0);
     return AclRuleScope;
-}(SpeakeasyBase));
-export { AclRuleScope };
+}(utils_1.SpeakeasyBase));
+exports.AclRuleScope = AclRuleScope;
 var AclRule = /** @class */ (function (_super) {
     __extends(AclRule, _super);
     function AclRule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], AclRule.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AclRule.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AclRule.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], AclRule.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", AclRuleScope)
     ], AclRule.prototype, "scope", void 0);
     return AclRule;
-}(SpeakeasyBase));
-export { AclRule };
+}(utils_1.SpeakeasyBase));
+exports.AclRule = AclRule;

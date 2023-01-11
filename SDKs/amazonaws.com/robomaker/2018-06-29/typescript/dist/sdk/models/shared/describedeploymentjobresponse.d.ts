@@ -14,5 +14,5 @@ export declare class DescribeDeploymentJobResponse extends SpeakeasyBase {
     fleet?: string;
     robotDeploymentSummary?: RobotDeployment[];
     status?: DeploymentStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

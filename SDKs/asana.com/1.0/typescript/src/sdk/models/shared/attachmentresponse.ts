@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// AttachmentResponseParent
+/** 
+ * The task this attachment is attached to.
+**/
 export class AttachmentResponseParent extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -14,6 +18,10 @@ export class AttachmentResponseParent extends SpeakeasyBase {
 }
 
 
+// AttachmentResponse
+/** 
+ * An *attachment* object represents any file attached to a task in Asana, whether it’s an uploaded file or one associated via a third-party service such as Dropbox or Google Drive.
+**/
 export class AttachmentResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

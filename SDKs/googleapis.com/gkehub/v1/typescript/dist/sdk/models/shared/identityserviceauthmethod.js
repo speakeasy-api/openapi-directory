@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityServiceAzureAdConfigInput } from "./identityserviceazureadconfig";
-import { IdentityServiceGoogleConfig } from "./identityservicegoogleconfig";
-import { IdentityServiceOidcConfigInput } from "./identityserviceoidcconfig";
-import { IdentityServiceAzureAdConfig } from "./identityserviceazureadconfig";
-import { IdentityServiceOidcConfig } from "./identityserviceoidcconfig";
-// IdentityServiceAuthMethodInput
-/**
- * Configuration of an auth method for a member/cluster. Only one authentication method (e.g., OIDC and LDAP) can be set per AuthMethod.
-**/
-var IdentityServiceAuthMethodInput = /** @class */ (function (_super) {
-    __extends(IdentityServiceAuthMethodInput, _super);
-    function IdentityServiceAuthMethodInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=azureadConfig" }),
-        __metadata("design:type", IdentityServiceAzureAdConfigInput)
-    ], IdentityServiceAuthMethodInput.prototype, "azureadConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleConfig" }),
-        __metadata("design:type", IdentityServiceGoogleConfig)
-    ], IdentityServiceAuthMethodInput.prototype, "googleConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], IdentityServiceAuthMethodInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=oidcConfig" }),
-        __metadata("design:type", IdentityServiceOidcConfigInput)
-    ], IdentityServiceAuthMethodInput.prototype, "oidcConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy" }),
-        __metadata("design:type", String)
-    ], IdentityServiceAuthMethodInput.prototype, "proxy", void 0);
-    return IdentityServiceAuthMethodInput;
-}(SpeakeasyBase));
-export { IdentityServiceAuthMethodInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityServiceAuthMethodInput = exports.IdentityServiceAuthMethod = void 0;
+var utils_1 = require("../../../internal/utils");
+var identityserviceazureadconfig_1 = require("./identityserviceazureadconfig");
+var identityservicegoogleconfig_1 = require("./identityservicegoogleconfig");
+var identityserviceoidcconfig_1 = require("./identityserviceoidcconfig");
+var identityserviceazureadconfig_2 = require("./identityserviceazureadconfig");
+var identityserviceoidcconfig_2 = require("./identityserviceoidcconfig");
 // IdentityServiceAuthMethod
 /**
  * Configuration of an auth method for a member/cluster. Only one authentication method (e.g., OIDC and LDAP) can be set per AuthMethod.
@@ -70,25 +41,57 @@ var IdentityServiceAuthMethod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=azureadConfig" }),
-        __metadata("design:type", IdentityServiceAzureAdConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=azureadConfig" }),
+        __metadata("design:type", identityserviceazureadconfig_1.IdentityServiceAzureAdConfig)
     ], IdentityServiceAuthMethod.prototype, "azureadConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleConfig" }),
-        __metadata("design:type", IdentityServiceGoogleConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleConfig" }),
+        __metadata("design:type", identityservicegoogleconfig_1.IdentityServiceGoogleConfig)
     ], IdentityServiceAuthMethod.prototype, "googleConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], IdentityServiceAuthMethod.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oidcConfig" }),
-        __metadata("design:type", IdentityServiceOidcConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oidcConfig" }),
+        __metadata("design:type", identityserviceoidcconfig_1.IdentityServiceOidcConfig)
     ], IdentityServiceAuthMethod.prototype, "oidcConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy" }),
         __metadata("design:type", String)
     ], IdentityServiceAuthMethod.prototype, "proxy", void 0);
     return IdentityServiceAuthMethod;
-}(SpeakeasyBase));
-export { IdentityServiceAuthMethod };
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceAuthMethod = IdentityServiceAuthMethod;
+// IdentityServiceAuthMethodInput
+/**
+ * Configuration of an auth method for a member/cluster. Only one authentication method (e.g., OIDC and LDAP) can be set per AuthMethod.
+**/
+var IdentityServiceAuthMethodInput = /** @class */ (function (_super) {
+    __extends(IdentityServiceAuthMethodInput, _super);
+    function IdentityServiceAuthMethodInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=azureadConfig" }),
+        __metadata("design:type", identityserviceazureadconfig_2.IdentityServiceAzureAdConfigInput)
+    ], IdentityServiceAuthMethodInput.prototype, "azureadConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleConfig" }),
+        __metadata("design:type", identityservicegoogleconfig_1.IdentityServiceGoogleConfig)
+    ], IdentityServiceAuthMethodInput.prototype, "googleConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], IdentityServiceAuthMethodInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oidcConfig" }),
+        __metadata("design:type", identityserviceoidcconfig_2.IdentityServiceOidcConfigInput)
+    ], IdentityServiceAuthMethodInput.prototype, "oidcConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy" }),
+        __metadata("design:type", String)
+    ], IdentityServiceAuthMethodInput.prototype, "proxy", void 0);
+    return IdentityServiceAuthMethodInput;
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceAuthMethodInput = IdentityServiceAuthMethodInput;

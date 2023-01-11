@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteAccountAliasActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteAccountAliasResponse = exports.GetDeleteAccountAliasRequest = exports.GetDeleteAccountAliasHeaders = exports.GetDeleteAccountAliasQueryParams = exports.GetDeleteAccountAliasVersionEnum = exports.GetDeleteAccountAliasActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteAccountAliasActionEnum;
 (function (GetDeleteAccountAliasActionEnum) {
     GetDeleteAccountAliasActionEnum["DeleteAccountAlias"] = "DeleteAccountAlias";
-})(GetDeleteAccountAliasActionEnum || (GetDeleteAccountAliasActionEnum = {}));
-export var GetDeleteAccountAliasVersionEnum;
+})(GetDeleteAccountAliasActionEnum = exports.GetDeleteAccountAliasActionEnum || (exports.GetDeleteAccountAliasActionEnum = {}));
+var GetDeleteAccountAliasVersionEnum;
 (function (GetDeleteAccountAliasVersionEnum) {
     GetDeleteAccountAliasVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetDeleteAccountAliasVersionEnum || (GetDeleteAccountAliasVersionEnum = {}));
+})(GetDeleteAccountAliasVersionEnum = exports.GetDeleteAccountAliasVersionEnum || (exports.GetDeleteAccountAliasVersionEnum = {}));
 var GetDeleteAccountAliasQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteAccountAliasQueryParams, _super);
     function GetDeleteAccountAliasQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AccountAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AccountAlias" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasQueryParams.prototype, "accountAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasQueryParams.prototype, "version", void 0);
     return GetDeleteAccountAliasQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteAccountAliasQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteAccountAliasQueryParams = GetDeleteAccountAliasQueryParams;
 var GetDeleteAccountAliasHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteAccountAliasHeaders, _super);
     function GetDeleteAccountAliasHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteAccountAliasHeaders;
-}(SpeakeasyBase));
-export { GetDeleteAccountAliasHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteAccountAliasHeaders = GetDeleteAccountAliasHeaders;
 var GetDeleteAccountAliasRequest = /** @class */ (function (_super) {
     __extends(GetDeleteAccountAliasRequest, _super);
     function GetDeleteAccountAliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteAccountAliasQueryParams)
     ], GetDeleteAccountAliasRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteAccountAliasHeaders)
     ], GetDeleteAccountAliasRequest.prototype, "headers", void 0);
     return GetDeleteAccountAliasRequest;
-}(SpeakeasyBase));
-export { GetDeleteAccountAliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteAccountAliasRequest = GetDeleteAccountAliasRequest;
 var GetDeleteAccountAliasResponse = /** @class */ (function (_super) {
     __extends(GetDeleteAccountAliasResponse, _super);
     function GetDeleteAccountAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteAccountAliasResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteAccountAliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteAccountAliasResponse.prototype, "statusCode", void 0);
     return GetDeleteAccountAliasResponse;
-}(SpeakeasyBase));
-export { GetDeleteAccountAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteAccountAliasResponse = GetDeleteAccountAliasResponse;

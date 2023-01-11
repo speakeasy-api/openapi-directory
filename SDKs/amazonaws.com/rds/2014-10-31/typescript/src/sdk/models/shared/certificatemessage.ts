@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
+import { CertificateList } from "./certificatelist";
 
 
 
@@ -8,8 +8,8 @@ import { Certificate } from "./certificate";
  * Data returned by the <b>DescribeCertificates</b> action.
 **/
 export class CertificateMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Certificate })
-  certificates?: Certificate[];
+  @SpeakeasyMetadata({ elemType: CertificateList })
+  certificates?: CertificateList[];
 
   @SpeakeasyMetadata()
   marker?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetSuggestedFollowsFriendsOnlyResponse = exports.PostGetSuggestedFollowsFriendsOnlyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostGetSuggestedFollowsFriendsOnlyRequest = /** @class */ (function (_super) {
     __extends(PostGetSuggestedFollowsFriendsOnlyRequest, _super);
     function PostGetSuggestedFollowsFriendsOnlyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PostGetSuggestedFollowsFriendsOnlyRequest.prototype, "request", void 0);
     return PostGetSuggestedFollowsFriendsOnlyRequest;
-}(SpeakeasyBase));
-export { PostGetSuggestedFollowsFriendsOnlyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSuggestedFollowsFriendsOnlyRequest = PostGetSuggestedFollowsFriendsOnlyRequest;
 var PostGetSuggestedFollowsFriendsOnlyResponse = /** @class */ (function (_super) {
     __extends(PostGetSuggestedFollowsFriendsOnlyResponse, _super);
     function PostGetSuggestedFollowsFriendsOnlyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetSuggestedFollowsFriendsOnlyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetSuggestedFollowsFriendsOnlyResponse.prototype, "statusCode", void 0);
     return PostGetSuggestedFollowsFriendsOnlyResponse;
-}(SpeakeasyBase));
-export { PostGetSuggestedFollowsFriendsOnlyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSuggestedFollowsFriendsOnlyResponse = PostGetSuggestedFollowsFriendsOnlyResponse;

@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class VolumeConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=volumeBaselineIOPS" })
-  volumeBaselineIops?: number;
+  volumeBaselineIOPS?: number;
 
   @SpeakeasyMetadata({ data: "json, name=volumeBaselineThroughput" })
   volumeBaselineThroughput?: number;
 
   @SpeakeasyMetadata({ data: "json, name=volumeBurstIOPS" })
-  volumeBurstIops?: number;
+  volumeBurstIOPS?: number;
 
   @SpeakeasyMetadata({ data: "json, name=volumeBurstThroughput" })
   volumeBurstThroughput?: number;

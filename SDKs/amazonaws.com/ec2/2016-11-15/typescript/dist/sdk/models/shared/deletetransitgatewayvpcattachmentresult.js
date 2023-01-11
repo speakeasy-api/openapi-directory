@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayVpcAttachment } from "./transitgatewayvpcattachment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTransitGatewayVpcAttachmentResult = exports.DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment = exports.DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions
+/**
+ * The VPC attachment options.
+**/
+var DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions, _super);
+    function DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions.prototype, "applianceModeSupport", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions.prototype, "dnsSupport", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions.prototype, "ipv6Support", void 0);
+    return DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions = DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions;
+// DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment
+/**
+ * Information about the deleted VPC attachment.
+**/
+var DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment, _super);
+    function DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "options", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "subnetIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "transitGatewayAttachmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "transitGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "vpcId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment.prototype, "vpcOwnerId", void 0);
+    return DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment = DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment;
 var DeleteTransitGatewayVpcAttachmentResult = /** @class */ (function (_super) {
     __extends(DeleteTransitGatewayVpcAttachmentResult, _super);
     function DeleteTransitGatewayVpcAttachmentResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayVpcAttachment)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment)
     ], DeleteTransitGatewayVpcAttachmentResult.prototype, "transitGatewayVpcAttachment", void 0);
     return DeleteTransitGatewayVpcAttachmentResult;
-}(SpeakeasyBase));
-export { DeleteTransitGatewayVpcAttachmentResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayVpcAttachmentResult = DeleteTransitGatewayVpcAttachmentResult;

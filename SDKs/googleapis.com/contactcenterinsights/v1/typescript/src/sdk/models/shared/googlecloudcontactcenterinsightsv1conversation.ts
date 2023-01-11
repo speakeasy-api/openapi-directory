@@ -34,7 +34,7 @@ export class GoogleCloudContactcenterinsightsV1Conversation extends SpeakeasyBas
   dataSource?: GoogleCloudContactcenterinsightsV1ConversationDataSource;
 
   @SpeakeasyMetadata({ data: "json, name=dialogflowIntents", elemType: GoogleCloudContactcenterinsightsV1DialogflowIntent })
-  dialogflowIntents?: Map<string, GoogleCloudContactcenterinsightsV1DialogflowIntent>;
+  dialogflowIntents?: Record<string, GoogleCloudContactcenterinsightsV1DialogflowIntent>;
 
   @SpeakeasyMetadata({ data: "json, name=duration" })
   duration?: string;
@@ -43,7 +43,7 @@ export class GoogleCloudContactcenterinsightsV1Conversation extends SpeakeasyBas
   expireTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=languageCode" })
   languageCode?: string;
@@ -98,7 +98,7 @@ export class GoogleCloudContactcenterinsightsV1ConversationInput extends Speakea
   expireTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=languageCode" })
   languageCode?: string;

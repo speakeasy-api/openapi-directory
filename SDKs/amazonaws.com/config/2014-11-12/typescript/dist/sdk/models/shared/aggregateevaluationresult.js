@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceTypeEnum } from "./compliancetypeenum";
-import { EvaluationResultIdentifier } from "./evaluationresultidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateEvaluationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancetypeenum_1 = require("./compliancetypeenum");
+var evaluationresultidentifier_1 = require("./evaluationresultidentifier");
 // AggregateEvaluationResult
 /**
  * The details of an Config evaluation for an account ID and region in an aggregator. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information.
@@ -35,33 +38,33 @@ var AggregateEvaluationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], AggregateEvaluationResult.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Annotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Annotation" }),
         __metadata("design:type", String)
     ], AggregateEvaluationResult.prototype, "annotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], AggregateEvaluationResult.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], AggregateEvaluationResult.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleInvokedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleInvokedTime" }),
         __metadata("design:type", Date)
     ], AggregateEvaluationResult.prototype, "configRuleInvokedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationResultIdentifier" }),
-        __metadata("design:type", EvaluationResultIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationResultIdentifier" }),
+        __metadata("design:type", evaluationresultidentifier_1.EvaluationResultIdentifier)
     ], AggregateEvaluationResult.prototype, "evaluationResultIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultRecordedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultRecordedTime" }),
         __metadata("design:type", Date)
     ], AggregateEvaluationResult.prototype, "resultRecordedTime", void 0);
     return AggregateEvaluationResult;
-}(SpeakeasyBase));
-export { AggregateEvaluationResult };
+}(utils_1.SpeakeasyBase));
+exports.AggregateEvaluationResult = AggregateEvaluationResult;

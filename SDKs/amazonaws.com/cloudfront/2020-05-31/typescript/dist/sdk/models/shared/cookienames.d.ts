@@ -3,6 +3,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Contains a list of cookie names.
 **/
 export declare class CookieNames extends SpeakeasyBase {
-    items?: string[];
+    items?: Record<string, any>[];
     quantity: number;
 }

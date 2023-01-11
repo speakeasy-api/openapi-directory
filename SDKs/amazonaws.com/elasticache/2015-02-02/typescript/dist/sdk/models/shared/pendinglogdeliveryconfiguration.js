@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationDetails } from "./destinationdetails";
-import { DestinationTypeEnum } from "./destinationtypeenum";
-import { LogFormatEnum } from "./logformatenum";
-import { LogTypeEnum } from "./logtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PendingLogDeliveryConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationdetails_1 = require("./destinationdetails");
+var destinationtypeenum_1 = require("./destinationtypeenum");
+var logformatenum_1 = require("./logformatenum");
+var logtypeenum_1 = require("./logtypeenum");
 // PendingLogDeliveryConfiguration
 /**
  * The log delivery configurations being modified
@@ -37,21 +40,21 @@ var PendingLogDeliveryConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DestinationDetails)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", destinationdetails_1.DestinationDetails)
     ], PendingLogDeliveryConfiguration.prototype, "destinationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingLogDeliveryConfiguration.prototype, "destinationType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingLogDeliveryConfiguration.prototype, "logFormat", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingLogDeliveryConfiguration.prototype, "logType", void 0);
     return PendingLogDeliveryConfiguration;
-}(SpeakeasyBase));
-export { PendingLogDeliveryConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.PendingLogDeliveryConfiguration = PendingLogDeliveryConfiguration;

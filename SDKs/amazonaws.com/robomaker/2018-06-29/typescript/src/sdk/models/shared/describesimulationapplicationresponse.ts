@@ -39,7 +39,7 @@ export class DescribeSimulationApplicationResponse extends SpeakeasyBase {
   sources?: Source[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

@@ -35,6 +35,6 @@ export declare class CloudiotProjectsLocationsRegistriesDevicesDeleteRequest ext
 }
 export declare class CloudiotProjectsLocationsRegistriesDevicesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

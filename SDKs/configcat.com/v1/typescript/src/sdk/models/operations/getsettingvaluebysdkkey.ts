@@ -11,7 +11,7 @@ export class GetSettingValueBySdkkeyPathParams extends SpeakeasyBase {
 
 export class GetSettingValueBySdkkeyHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-CONFIGCAT-SDKKEY" })
-  xConfigcatSdkkey: string;
+  xCONFIGCATSDKKEY: string;
 }
 
 

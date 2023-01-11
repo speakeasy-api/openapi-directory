@@ -37,5 +37,5 @@ export class AllMocksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  allMocks200ApplicationJsonObject?: AllMocks200ApplicationJson;
+  allMocks200ApplicationJSONObject?: AllMocks200ApplicationJson;
 }

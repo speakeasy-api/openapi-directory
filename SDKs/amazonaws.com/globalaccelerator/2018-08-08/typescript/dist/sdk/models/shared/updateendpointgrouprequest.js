@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointConfiguration } from "./endpointconfiguration";
-import { HealthCheckProtocolEnum } from "./healthcheckprotocolenum";
-import { PortOverride } from "./portoverride";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEndpointGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointconfiguration_1 = require("./endpointconfiguration");
+var healthcheckprotocolenum_1 = require("./healthcheckprotocolenum");
+var portoverride_1 = require("./portoverride");
 var UpdateEndpointGroupRequest = /** @class */ (function (_super) {
     __extends(UpdateEndpointGroupRequest, _super);
     function UpdateEndpointGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointConfigurations", elemType: EndpointConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointConfigurations", elemType: endpointconfiguration_1.EndpointConfiguration }),
         __metadata("design:type", Array)
     ], UpdateEndpointGroupRequest.prototype, "endpointConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], UpdateEndpointGroupRequest.prototype, "endpointGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckIntervalSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckIntervalSeconds" }),
         __metadata("design:type", Number)
     ], UpdateEndpointGroupRequest.prototype, "healthCheckIntervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPath" }),
         __metadata("design:type", String)
     ], UpdateEndpointGroupRequest.prototype, "healthCheckPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPort" }),
         __metadata("design:type", Number)
     ], UpdateEndpointGroupRequest.prototype, "healthCheckPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckProtocol" }),
         __metadata("design:type", String)
     ], UpdateEndpointGroupRequest.prototype, "healthCheckProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortOverrides", elemType: PortOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortOverrides", elemType: portoverride_1.PortOverride }),
         __metadata("design:type", Array)
     ], UpdateEndpointGroupRequest.prototype, "portOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThresholdCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThresholdCount" }),
         __metadata("design:type", Number)
     ], UpdateEndpointGroupRequest.prototype, "thresholdCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrafficDialPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrafficDialPercentage" }),
         __metadata("design:type", Number)
     ], UpdateEndpointGroupRequest.prototype, "trafficDialPercentage", void 0);
     return UpdateEndpointGroupRequest;
-}(SpeakeasyBase));
-export { UpdateEndpointGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEndpointGroupRequest = UpdateEndpointGroupRequest;

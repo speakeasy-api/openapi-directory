@@ -7,10 +7,10 @@ export class Registrierkasse extends SpeakeasyBase {
   benutzerschluessel?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Kassen-ID" })
-  kassenId?: string;
+  kassenID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Signaturerstellungseinheit-UUID" })
-  signaturerstellungseinheitUuid?: string;
+  signaturerstellungseinheitUUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=_href" })
   href?: string;

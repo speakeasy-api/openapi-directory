@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cohort } from "./cohort";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CohortGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var cohort_1 = require("./cohort");
 // CohortGroup
 /**
  * Defines a cohort group. For example: "cohortGroup": { "cohorts": [{ "name": "cohort 1", "type": "FIRST_VISIT_DATE", "dateRange": { "startDate": "2015-08-01", "endDate": "2015-08-01" } },{ "name": "cohort 2" "type": "FIRST_VISIT_DATE" "dateRange": { "startDate": "2015-07-01", "endDate": "2015-07-01" } }] }
@@ -34,13 +37,13 @@ var CohortGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cohorts", elemType: Cohort }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cohorts", elemType: cohort_1.Cohort }),
         __metadata("design:type", Array)
     ], CohortGroup.prototype, "cohorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetimeValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetimeValue" }),
         __metadata("design:type", Boolean)
     ], CohortGroup.prototype, "lifetimeValue", void 0);
     return CohortGroup;
-}(SpeakeasyBase));
-export { CohortGroup };
+}(utils_1.SpeakeasyBase));
+exports.CohortGroup = CohortGroup;

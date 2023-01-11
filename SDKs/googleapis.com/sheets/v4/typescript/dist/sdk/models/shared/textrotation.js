@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextRotation = void 0;
+var utils_1 = require("../../../internal/utils");
 // TextRotation
 /**
  * The rotation applied to text in a cell.
@@ -33,13 +36,13 @@ var TextRotation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=angle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=angle" }),
         __metadata("design:type", Number)
     ], TextRotation.prototype, "angle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vertical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vertical" }),
         __metadata("design:type", Boolean)
     ], TextRotation.prototype, "vertical", void 0);
     return TextRotation;
-}(SpeakeasyBase));
-export { TextRotation };
+}(utils_1.SpeakeasyBase));
+exports.TextRotation = TextRotation;

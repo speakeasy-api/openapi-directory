@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput } from "./googlecloudcontactcenterinsightsv1issuemodelinputdataconfig";
-import { GoogleCloudContactcenterinsightsV1IssueModelLabelStats } from "./googlecloudcontactcenterinsightsv1issuemodellabelstats";
-import { GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig } from "./googlecloudcontactcenterinsightsv1issuemodelinputdataconfig";
-export var GoogleCloudContactcenterinsightsV1IssueModelStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IssueModelInput = exports.GoogleCloudContactcenterinsightsV1IssueModel = exports.GoogleCloudContactcenterinsightsV1IssueModelStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1issuemodelinputdataconfig_1 = require("./googlecloudcontactcenterinsightsv1issuemodelinputdataconfig");
+var googlecloudcontactcenterinsightsv1issuemodellabelstats_1 = require("./googlecloudcontactcenterinsightsv1issuemodellabelstats");
+var googlecloudcontactcenterinsightsv1issuemodelinputdataconfig_2 = require("./googlecloudcontactcenterinsightsv1issuemodelinputdataconfig");
+var GoogleCloudContactcenterinsightsV1IssueModelStateEnum;
 (function (GoogleCloudContactcenterinsightsV1IssueModelStateEnum) {
     GoogleCloudContactcenterinsightsV1IssueModelStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1IssueModelStateEnum["Undeployed"] = "UNDEPLOYED";
@@ -34,35 +37,7 @@ export var GoogleCloudContactcenterinsightsV1IssueModelStateEnum;
     GoogleCloudContactcenterinsightsV1IssueModelStateEnum["Deployed"] = "DEPLOYED";
     GoogleCloudContactcenterinsightsV1IssueModelStateEnum["Undeploying"] = "UNDEPLOYING";
     GoogleCloudContactcenterinsightsV1IssueModelStateEnum["Deleting"] = "DELETING";
-})(GoogleCloudContactcenterinsightsV1IssueModelStateEnum || (GoogleCloudContactcenterinsightsV1IssueModelStateEnum = {}));
-// GoogleCloudContactcenterinsightsV1IssueModelInput
-/**
- * The issue model resource.
-**/
-var GoogleCloudContactcenterinsightsV1IssueModelInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudContactcenterinsightsV1IssueModelInput, _super);
-    function GoogleCloudContactcenterinsightsV1IssueModelInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputDataConfig" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput)
-    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "inputDataConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainingStats" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
-    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "trainingStats", void 0);
-    return GoogleCloudContactcenterinsightsV1IssueModelInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModelInput };
+})(GoogleCloudContactcenterinsightsV1IssueModelStateEnum = exports.GoogleCloudContactcenterinsightsV1IssueModelStateEnum || (exports.GoogleCloudContactcenterinsightsV1IssueModelStateEnum = {}));
 // GoogleCloudContactcenterinsightsV1IssueModel
 /**
  * The issue model resource.
@@ -73,33 +48,65 @@ var GoogleCloudContactcenterinsightsV1IssueModel = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputDataConfig" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputDataConfig" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodelinputdataconfig_1.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "inputDataConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueCount" }),
+        __metadata("design:type", String)
+    ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "issueCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainingStats" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainingStats" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodellabelstats_1.GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "trainingStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModel.prototype, "updateTime", void 0);
     return GoogleCloudContactcenterinsightsV1IssueModel;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModel };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModel = GoogleCloudContactcenterinsightsV1IssueModel;
+// GoogleCloudContactcenterinsightsV1IssueModelInput
+/**
+ * The issue model resource.
+**/
+var GoogleCloudContactcenterinsightsV1IssueModelInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudContactcenterinsightsV1IssueModelInput, _super);
+    function GoogleCloudContactcenterinsightsV1IssueModelInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputDataConfig" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodelinputdataconfig_2.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput)
+    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "inputDataConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainingStats" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodellabelstats_1.GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
+    ], GoogleCloudContactcenterinsightsV1IssueModelInput.prototype, "trainingStats", void 0);
+    return GoogleCloudContactcenterinsightsV1IssueModelInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModelInput = GoogleCloudContactcenterinsightsV1IssueModelInput;

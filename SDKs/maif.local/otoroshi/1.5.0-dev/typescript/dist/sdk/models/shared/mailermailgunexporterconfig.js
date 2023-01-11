@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MailerMailgunExporterConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MailerMailgunExporterConfig = exports.MailerMailgunExporterConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MailerMailgunExporterConfigTypeEnum;
 (function (MailerMailgunExporterConfigTypeEnum) {
     MailerMailgunExporterConfigTypeEnum["Mailgun"] = "mailgun";
-})(MailerMailgunExporterConfigTypeEnum || (MailerMailgunExporterConfigTypeEnum = {}));
+})(MailerMailgunExporterConfigTypeEnum = exports.MailerMailgunExporterConfigTypeEnum || (exports.MailerMailgunExporterConfigTypeEnum = {}));
 var MailerMailgunExporterConfig = /** @class */ (function (_super) {
     __extends(MailerMailgunExporterConfig, _super);
     function MailerMailgunExporterConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
         __metadata("design:type", String)
     ], MailerMailgunExporterConfig.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], MailerMailgunExporterConfig.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eu" }),
         __metadata("design:type", Boolean)
     ], MailerMailgunExporterConfig.prototype, "eu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Array)
     ], MailerMailgunExporterConfig.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MailerMailgunExporterConfig.prototype, "type", void 0);
     return MailerMailgunExporterConfig;
-}(SpeakeasyBase));
-export { MailerMailgunExporterConfig };
+}(utils_1.SpeakeasyBase));
+exports.MailerMailgunExporterConfig = MailerMailgunExporterConfig;

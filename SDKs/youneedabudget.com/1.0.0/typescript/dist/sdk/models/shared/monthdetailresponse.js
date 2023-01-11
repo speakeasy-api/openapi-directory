@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonthDetail } from "./monthdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonthDetailResponse = exports.MonthDetailResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var monthdetail_1 = require("./monthdetail");
 var MonthDetailResponseData = /** @class */ (function (_super) {
     __extends(MonthDetailResponseData, _super);
     function MonthDetailResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=month" }),
-        __metadata("design:type", MonthDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=month" }),
+        __metadata("design:type", monthdetail_1.MonthDetail)
     ], MonthDetailResponseData.prototype, "month", void 0);
     return MonthDetailResponseData;
-}(SpeakeasyBase));
-export { MonthDetailResponseData };
+}(utils_1.SpeakeasyBase));
+exports.MonthDetailResponseData = MonthDetailResponseData;
 var MonthDetailResponse = /** @class */ (function (_super) {
     __extends(MonthDetailResponse, _super);
     function MonthDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", MonthDetailResponseData)
     ], MonthDetailResponse.prototype, "data", void 0);
     return MonthDetailResponse;
-}(SpeakeasyBase));
-export { MonthDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.MonthDetailResponse = MonthDetailResponse;

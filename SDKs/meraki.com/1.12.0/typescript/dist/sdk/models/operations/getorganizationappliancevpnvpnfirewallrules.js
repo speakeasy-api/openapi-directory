@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceVpnVpnFirewallRulesResponse = exports.GetOrganizationApplianceVpnVpnFirewallRulesRequest = exports.GetOrganizationApplianceVpnVpnFirewallRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceVpnVpnFirewallRulesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnVpnFirewallRulesPathParams, _super);
     function GetOrganizationApplianceVpnVpnFirewallRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnVpnFirewallRulesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceVpnVpnFirewallRulesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnVpnFirewallRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnVpnFirewallRulesPathParams = GetOrganizationApplianceVpnVpnFirewallRulesPathParams;
 var GetOrganizationApplianceVpnVpnFirewallRulesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnVpnFirewallRulesRequest, _super);
     function GetOrganizationApplianceVpnVpnFirewallRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceVpnVpnFirewallRulesPathParams)
     ], GetOrganizationApplianceVpnVpnFirewallRulesRequest.prototype, "pathParams", void 0);
     return GetOrganizationApplianceVpnVpnFirewallRulesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnVpnFirewallRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnVpnFirewallRulesRequest = GetOrganizationApplianceVpnVpnFirewallRulesRequest;
 var GetOrganizationApplianceVpnVpnFirewallRulesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnVpnFirewallRulesResponse, _super);
     function GetOrganizationApplianceVpnVpnFirewallRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnVpnFirewallRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceVpnVpnFirewallRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceVpnVpnFirewallRulesResponse.prototype, "getOrganizationApplianceVpnVpnFirewallRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceVpnVpnFirewallRulesResponse.prototype, "getOrganizationApplianceVpnVpnFirewallRules200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceVpnVpnFirewallRulesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnVpnFirewallRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnVpnFirewallRulesResponse = GetOrganizationApplianceVpnVpnFirewallRulesResponse;

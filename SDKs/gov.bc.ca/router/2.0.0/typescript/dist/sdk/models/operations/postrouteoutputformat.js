@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRouteOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRouteOutputFormatResponse = exports.PostRouteOutputFormatRequest = exports.PostRouteOutputFormatQueryParams = exports.PostRouteOutputFormatDistanceUnitEnum = exports.PostRouteOutputFormatCriteriaEnum = exports.PostRouteOutputFormatPathParams = exports.PostRouteOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRouteOutputFormatOutputFormatEnum;
 (function (PostRouteOutputFormatOutputFormatEnum) {
     PostRouteOutputFormatOutputFormatEnum["Json"] = "json";
     PostRouteOutputFormatOutputFormatEnum["Kml"] = "kml";
     PostRouteOutputFormatOutputFormatEnum["Html"] = "html";
-})(PostRouteOutputFormatOutputFormatEnum || (PostRouteOutputFormatOutputFormatEnum = {}));
+})(PostRouteOutputFormatOutputFormatEnum = exports.PostRouteOutputFormatOutputFormatEnum || (exports.PostRouteOutputFormatOutputFormatEnum = {}));
 var PostRouteOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(PostRouteOutputFormatPathParams, _super);
     function PostRouteOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatPathParams.prototype, "outputFormat", void 0);
     return PostRouteOutputFormatPathParams;
-}(SpeakeasyBase));
-export { PostRouteOutputFormatPathParams };
-export var PostRouteOutputFormatCriteriaEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostRouteOutputFormatPathParams = PostRouteOutputFormatPathParams;
+var PostRouteOutputFormatCriteriaEnum;
 (function (PostRouteOutputFormatCriteriaEnum) {
     PostRouteOutputFormatCriteriaEnum["Shortest"] = "shortest";
     PostRouteOutputFormatCriteriaEnum["Fastest"] = "fastest";
-})(PostRouteOutputFormatCriteriaEnum || (PostRouteOutputFormatCriteriaEnum = {}));
-export var PostRouteOutputFormatDistanceUnitEnum;
+})(PostRouteOutputFormatCriteriaEnum = exports.PostRouteOutputFormatCriteriaEnum || (exports.PostRouteOutputFormatCriteriaEnum = {}));
+var PostRouteOutputFormatDistanceUnitEnum;
 (function (PostRouteOutputFormatDistanceUnitEnum) {
     PostRouteOutputFormatDistanceUnitEnum["Km"] = "km";
     PostRouteOutputFormatDistanceUnitEnum["Mi"] = "mi";
-})(PostRouteOutputFormatDistanceUnitEnum || (PostRouteOutputFormatDistanceUnitEnum = {}));
+})(PostRouteOutputFormatDistanceUnitEnum = exports.PostRouteOutputFormatDistanceUnitEnum || (exports.PostRouteOutputFormatDistanceUnitEnum = {}));
 var PostRouteOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(PostRouteOutputFormatQueryParams, _super);
     function PostRouteOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=correctSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=correctSide" }),
         __metadata("design:type", Boolean)
     ], PostRouteOutputFormatQueryParams.prototype, "correctSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=criteria" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatQueryParams.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departure" }),
         __metadata("design:type", Date)
     ], PostRouteOutputFormatQueryParams.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disable" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatQueryParams.prototype, "disable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatQueryParams.prototype, "distanceUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], PostRouteOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], PostRouteOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=points" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatQueryParams.prototype, "points", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
         __metadata("design:type", Boolean)
     ], PostRouteOutputFormatQueryParams.prototype, "roundTrip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
         __metadata("design:type", String)
     ], PostRouteOutputFormatQueryParams.prototype, "routeDescription", void 0);
     return PostRouteOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { PostRouteOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRouteOutputFormatQueryParams = PostRouteOutputFormatQueryParams;
 var PostRouteOutputFormatRequest = /** @class */ (function (_super) {
     __extends(PostRouteOutputFormatRequest, _super);
     function PostRouteOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRouteOutputFormatPathParams)
     ], PostRouteOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRouteOutputFormatQueryParams)
     ], PostRouteOutputFormatRequest.prototype, "queryParams", void 0);
     return PostRouteOutputFormatRequest;
-}(SpeakeasyBase));
-export { PostRouteOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRouteOutputFormatRequest = PostRouteOutputFormatRequest;
 var PostRouteOutputFormatResponse = /** @class */ (function (_super) {
     __extends(PostRouteOutputFormatResponse, _super);
     function PostRouteOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRouteOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRouteOutputFormatResponse.prototype, "statusCode", void 0);
     return PostRouteOutputFormatResponse;
-}(SpeakeasyBase));
-export { PostRouteOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRouteOutputFormatResponse = PostRouteOutputFormatResponse;

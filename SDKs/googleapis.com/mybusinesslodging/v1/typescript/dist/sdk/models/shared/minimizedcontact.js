@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MinimizedContactContactlessCheckinCheckoutExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MinimizedContact = exports.MinimizedContactRoomBookingsBufferExceptionEnum = exports.MinimizedContactPlasticKeycardsDisinfectedExceptionEnum = exports.MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum = exports.MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum = exports.MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum = exports.MinimizedContactDigitalGuestRoomKeysExceptionEnum = exports.MinimizedContactContactlessCheckinCheckoutExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MinimizedContactContactlessCheckinCheckoutExceptionEnum;
 (function (MinimizedContactContactlessCheckinCheckoutExceptionEnum) {
     MinimizedContactContactlessCheckinCheckoutExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactContactlessCheckinCheckoutExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactContactlessCheckinCheckoutExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactContactlessCheckinCheckoutExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactContactlessCheckinCheckoutExceptionEnum || (MinimizedContactContactlessCheckinCheckoutExceptionEnum = {}));
-export var MinimizedContactDigitalGuestRoomKeysExceptionEnum;
+})(MinimizedContactContactlessCheckinCheckoutExceptionEnum = exports.MinimizedContactContactlessCheckinCheckoutExceptionEnum || (exports.MinimizedContactContactlessCheckinCheckoutExceptionEnum = {}));
+var MinimizedContactDigitalGuestRoomKeysExceptionEnum;
 (function (MinimizedContactDigitalGuestRoomKeysExceptionEnum) {
     MinimizedContactDigitalGuestRoomKeysExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactDigitalGuestRoomKeysExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactDigitalGuestRoomKeysExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactDigitalGuestRoomKeysExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactDigitalGuestRoomKeysExceptionEnum || (MinimizedContactDigitalGuestRoomKeysExceptionEnum = {}));
-export var MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum;
+})(MinimizedContactDigitalGuestRoomKeysExceptionEnum = exports.MinimizedContactDigitalGuestRoomKeysExceptionEnum || (exports.MinimizedContactDigitalGuestRoomKeysExceptionEnum = {}));
+var MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum;
 (function (MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum) {
     MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum || (MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum = {}));
-export var MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum;
+})(MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum = exports.MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum || (exports.MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum = {}));
+var MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum;
 (function (MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum) {
     MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum || (MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum = {}));
-export var MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum;
+})(MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum = exports.MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum || (exports.MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum = {}));
+var MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum;
 (function (MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum) {
     MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum || (MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum = {}));
-export var MinimizedContactPlasticKeycardsDisinfectedExceptionEnum;
+})(MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum = exports.MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum || (exports.MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum = {}));
+var MinimizedContactPlasticKeycardsDisinfectedExceptionEnum;
 (function (MinimizedContactPlasticKeycardsDisinfectedExceptionEnum) {
     MinimizedContactPlasticKeycardsDisinfectedExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactPlasticKeycardsDisinfectedExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactPlasticKeycardsDisinfectedExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactPlasticKeycardsDisinfectedExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactPlasticKeycardsDisinfectedExceptionEnum || (MinimizedContactPlasticKeycardsDisinfectedExceptionEnum = {}));
-export var MinimizedContactRoomBookingsBufferExceptionEnum;
+})(MinimizedContactPlasticKeycardsDisinfectedExceptionEnum = exports.MinimizedContactPlasticKeycardsDisinfectedExceptionEnum || (exports.MinimizedContactPlasticKeycardsDisinfectedExceptionEnum = {}));
+var MinimizedContactRoomBookingsBufferExceptionEnum;
 (function (MinimizedContactRoomBookingsBufferExceptionEnum) {
     MinimizedContactRoomBookingsBufferExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     MinimizedContactRoomBookingsBufferExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     MinimizedContactRoomBookingsBufferExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     MinimizedContactRoomBookingsBufferExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(MinimizedContactRoomBookingsBufferExceptionEnum || (MinimizedContactRoomBookingsBufferExceptionEnum = {}));
+})(MinimizedContactRoomBookingsBufferExceptionEnum = exports.MinimizedContactRoomBookingsBufferExceptionEnum || (exports.MinimizedContactRoomBookingsBufferExceptionEnum = {}));
 // MinimizedContact
 /**
  * Minimized contact measures implemented by the hotel during COVID-19.
@@ -82,61 +85,61 @@ var MinimizedContact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactlessCheckinCheckout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactlessCheckinCheckout" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "contactlessCheckinCheckout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactlessCheckinCheckoutException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactlessCheckinCheckoutException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "contactlessCheckinCheckoutException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=digitalGuestRoomKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=digitalGuestRoomKeys" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "digitalGuestRoomKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=digitalGuestRoomKeysException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=digitalGuestRoomKeysException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "digitalGuestRoomKeysException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeepingScheduledRequestOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeepingScheduledRequestOnly" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "housekeepingScheduledRequestOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeepingScheduledRequestOnlyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeepingScheduledRequestOnlyException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "housekeepingScheduledRequestOnlyException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noHighTouchItemsCommonAreas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noHighTouchItemsCommonAreas" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "noHighTouchItemsCommonAreas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noHighTouchItemsCommonAreasException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noHighTouchItemsCommonAreasException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "noHighTouchItemsCommonAreasException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noHighTouchItemsGuestRooms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noHighTouchItemsGuestRooms" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "noHighTouchItemsGuestRooms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noHighTouchItemsGuestRoomsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noHighTouchItemsGuestRoomsException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "noHighTouchItemsGuestRoomsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plasticKeycardsDisinfected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plasticKeycardsDisinfected" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "plasticKeycardsDisinfected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plasticKeycardsDisinfectedException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plasticKeycardsDisinfectedException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "plasticKeycardsDisinfectedException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomBookingsBuffer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomBookingsBuffer" }),
         __metadata("design:type", Boolean)
     ], MinimizedContact.prototype, "roomBookingsBuffer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomBookingsBufferException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomBookingsBufferException" }),
         __metadata("design:type", String)
     ], MinimizedContact.prototype, "roomBookingsBufferException", void 0);
     return MinimizedContact;
-}(SpeakeasyBase));
-export { MinimizedContact };
+}(utils_1.SpeakeasyBase));
+exports.MinimizedContact = MinimizedContact;

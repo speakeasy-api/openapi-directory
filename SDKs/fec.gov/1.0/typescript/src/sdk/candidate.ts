@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,11 +34,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -46,19 +46,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateDetailPage = httpRes?.data;
             }
             break;
@@ -66,7 +68,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -89,11 +90,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/history/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/history/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -101,19 +102,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdHistoryResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateHistoryPage = httpRes?.data;
             }
             break;
@@ -121,7 +124,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -144,11 +146,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/history/{cycle}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/history/{cycle}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -156,19 +158,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdHistoryCycleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateHistoryPage = httpRes?.data;
             }
             break;
@@ -176,7 +180,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -202,11 +205,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/candidate/{candidate_id}/totals/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/candidate/{candidate_id}/totals/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -214,19 +217,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidateCandidateIdTotalsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.committeeTotalsPage = httpRes?.data;
             }
             break;
@@ -234,7 +239,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -262,7 +266,7 @@ export class Candidate {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -270,19 +274,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidatesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidatePage = httpRes?.data;
             }
             break;
@@ -290,7 +296,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -321,7 +326,7 @@ export class Candidate {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -329,19 +334,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidatesSearchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidatePage = httpRes?.data;
             }
             break;
@@ -349,7 +356,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -371,7 +377,7 @@ export class Candidate {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -379,19 +385,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidatesTotalsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateHistoryTotalPage = httpRes?.data;
             }
             break;
@@ -399,7 +407,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -420,7 +427,7 @@ export class Candidate {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -428,19 +435,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidatesTotalsByOfficeResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.totalByOfficePage = httpRes?.data;
             }
             break;
@@ -448,7 +457,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -469,7 +477,7 @@ export class Candidate {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -477,19 +485,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCandidatesTotalsByOfficeByPartyResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.totalByOfficeByPartyPage = httpRes?.data;
             }
             break;
@@ -497,7 +507,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -516,11 +525,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/candidates/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/candidates/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -528,19 +537,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdCandidatesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateDetailPage = httpRes?.data;
             }
             break;
@@ -548,7 +559,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -571,11 +581,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/candidates/history/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/candidates/history/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -583,19 +593,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdCandidatesHistoryResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateHistoryPage = httpRes?.data;
             }
             break;
@@ -603,7 +615,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -626,11 +637,11 @@ export class Candidate {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -638,19 +649,21 @@ export class Candidate {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCommitteeCommitteeIdCandidatesHistoryCycleResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.candidateHistoryPage = httpRes?.data;
             }
             break;
@@ -658,7 +671,6 @@ export class Candidate {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

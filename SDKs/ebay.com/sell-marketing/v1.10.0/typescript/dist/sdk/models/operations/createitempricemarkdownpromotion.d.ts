@@ -9,7 +9,7 @@ export declare class CreateItemPriceMarkdownPromotionRequest extends SpeakeasyBa
 }
 export declare class CreateItemPriceMarkdownPromotionResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    createItemPriceMarkdownPromotion201ApplicationJsonObject?: Map<string, any>;
+    createItemPriceMarkdownPromotion201ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var QueryMetadataDataRangeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryMetadata = exports.QueryMetadataFormatEnum = exports.QueryMetadataDataRangeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var QueryMetadataDataRangeEnum;
 (function (QueryMetadataDataRangeEnum) {
     QueryMetadataDataRangeEnum["CustomDates"] = "CUSTOM_DATES";
     QueryMetadataDataRangeEnum["CurrentDay"] = "CURRENT_DAY";
@@ -45,13 +48,13 @@ export var QueryMetadataDataRangeEnum;
     QueryMetadataDataRangeEnum["Last14Days"] = "LAST_14_DAYS";
     QueryMetadataDataRangeEnum["TypeNotSupported"] = "TYPE_NOT_SUPPORTED";
     QueryMetadataDataRangeEnum["Last60Days"] = "LAST_60_DAYS";
-})(QueryMetadataDataRangeEnum || (QueryMetadataDataRangeEnum = {}));
-export var QueryMetadataFormatEnum;
+})(QueryMetadataDataRangeEnum = exports.QueryMetadataDataRangeEnum || (exports.QueryMetadataDataRangeEnum = {}));
+var QueryMetadataFormatEnum;
 (function (QueryMetadataFormatEnum) {
     QueryMetadataFormatEnum["Csv"] = "CSV";
     QueryMetadataFormatEnum["ExcelCsv"] = "EXCEL_CSV";
     QueryMetadataFormatEnum["Xlsx"] = "XLSX";
-})(QueryMetadataFormatEnum || (QueryMetadataFormatEnum = {}));
+})(QueryMetadataFormatEnum = exports.QueryMetadataFormatEnum || (exports.QueryMetadataFormatEnum = {}));
 // QueryMetadata
 /**
  * Query metadata.
@@ -62,49 +65,49 @@ var QueryMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRange" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "dataRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleCloudStoragePathForLatestReport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleCloudStoragePathForLatestReport" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "googleCloudStoragePathForLatestReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleDrivePathForLatestReport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleDrivePathForLatestReport" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "googleDrivePathForLatestReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestReportRunTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestReportRunTimeMs" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "latestReportRunTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportCount" }),
         __metadata("design:type", Number)
     ], QueryMetadata.prototype, "reportCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=running" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=running" }),
         __metadata("design:type", Boolean)
     ], QueryMetadata.prototype, "running", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendNotification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendNotification" }),
         __metadata("design:type", Boolean)
     ], QueryMetadata.prototype, "sendNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareEmailAddress" }),
         __metadata("design:type", Array)
     ], QueryMetadata.prototype, "shareEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], QueryMetadata.prototype, "title", void 0);
     return QueryMetadata;
-}(SpeakeasyBase));
-export { QueryMetadata };
+}(utils_1.SpeakeasyBase));
+exports.QueryMetadata = QueryMetadata;

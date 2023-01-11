@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Volume } from "./volume";
 
 
 
 export class DescribeVolumesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Volume })
-  volumes?: Volume[];
+  @SpeakeasyMetadata()
+  volumes?: Record<string, any>;
 }

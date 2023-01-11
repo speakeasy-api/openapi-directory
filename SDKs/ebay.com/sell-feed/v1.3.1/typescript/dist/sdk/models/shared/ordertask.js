@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderFilterCriteria } from "./orderfiltercriteria";
-import { UploadSummary } from "./uploadsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderTask = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderfiltercriteria_1 = require("./orderfiltercriteria");
+var uploadsummary_1 = require("./uploadsummary");
 // OrderTask
 /**
  * The type that defines the fields for the getOrderTask response.
@@ -35,41 +38,41 @@ var OrderTask = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completionDate" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "completionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailHref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailHref" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "detailHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedType" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "feedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterCriteria" }),
-        __metadata("design:type", OrderFilterCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterCriteria" }),
+        __metadata("design:type", orderfiltercriteria_1.OrderFilterCriteria)
     ], OrderTask.prototype, "filterCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "schemaVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskId" }),
         __metadata("design:type", String)
     ], OrderTask.prototype, "taskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadSummary" }),
-        __metadata("design:type", UploadSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadSummary" }),
+        __metadata("design:type", uploadsummary_1.UploadSummary)
     ], OrderTask.prototype, "uploadSummary", void 0);
     return OrderTask;
-}(SpeakeasyBase));
-export { OrderTask };
+}(utils_1.SpeakeasyBase));
+exports.OrderTask = OrderTask;

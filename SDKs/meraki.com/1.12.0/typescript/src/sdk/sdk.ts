@@ -193,37 +193,19 @@ import { WirelessProfiles } from "./wirelessprofiles";
 import { WlanLists } from "./wlanlists";
 import { Zones } from "./zones";
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"https://api.meraki.com/api/v1",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
-}
 
-export function WithSecurity(security: SecurityModel): OptsFunc {
-  if (!(security instanceof utils.SpeakeasyBase)) {
-    security = new SecurityModel(security);
-  }
-  return (sdk: SDK) => {
-    sdk._security = security;
-  };
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  security?: SecurityModel;
+
+  serverUrl?: string;
 }
 
 
@@ -391,7 +373,7 @@ export class SDK {
   public switch: Switch;
   public syslogServers: SyslogServers;
   public targetGroups: TargetGroups;
-  public thirdPartyVpnPeers: ThirdPartyVpnPeers;
+  public thirdPartyVPNPeers: ThirdPartyVpnPeers;
   public traffic: Traffic;
   public trafficAnalysis: TrafficAnalysis;
   public trafficHistory: TrafficHistory;
@@ -421,31 +403,25 @@ export class SDK {
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  public _security?: SecurityModel;
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      if (this._security) {
-        this._securityClient = utils.CreateSecurityClient(
-          this._defaultClient,
-          this._security
-        );
-      } else {
-        this._securityClient = this._defaultClient;
-      }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    if (props.security) {
+      let sec: SecurityModel = props.security;
+      if (!(props.security instanceof utils.SpeakeasyBase))
+        sec = new SecurityModel(props.security);
+      this._securityClient = utils.createSecurityClient(
+        this._defaultClient,
+        sec
+      );
+    } else {
+      this._securityClient = this._defaultClient;
     }
     
     this.accessControlLists = new AccessControlLists(
@@ -1915,7 +1891,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.thirdPartyVpnPeers = new ThirdPartyVpnPeers(
+    this.thirdPartyVPNPeers = new ThirdPartyVpnPeers(
       this._defaultClient,
       this._securityClient,
       this._serverURL,

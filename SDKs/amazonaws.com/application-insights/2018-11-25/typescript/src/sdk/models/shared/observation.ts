@@ -97,7 +97,7 @@ export class Observation extends SpeakeasyBase {
   s3EventName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SourceARN" })
-  sourceArn?: string;
+  sourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SourceType" })
   sourceType?: string;

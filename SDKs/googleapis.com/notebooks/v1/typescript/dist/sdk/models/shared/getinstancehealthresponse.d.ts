@@ -10,6 +10,6 @@ export declare enum GetInstanceHealthResponseHealthStateEnum {
  * Response for checking if a notebook instance is healthy.
 **/
 export declare class GetInstanceHealthResponse extends SpeakeasyBase {
-    healthInfo?: Map<string, string>;
+    healthInfo?: Record<string, string>;
     healthState?: GetInstanceHealthResponseHealthStateEnum;
 }

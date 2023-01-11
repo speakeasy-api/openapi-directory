@@ -10,7 +10,7 @@ export class DeletechargingscheduleRequestBody extends SpeakeasyBase {
 
 export class Deletechargingschedule201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=command" })
-  command?: Map<string, any>;
+  command?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -34,5 +34,5 @@ export class DeletechargingscheduleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deletechargingschedule201ApplicationJsonObject?: Deletechargingschedule201ApplicationJson;
+  deletechargingschedule201ApplicationJSONObject?: Deletechargingschedule201ApplicationJson;
 }

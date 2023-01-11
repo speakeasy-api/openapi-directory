@@ -33,10 +33,10 @@ export class Beleg extends SpeakeasyBase {
   qrLink?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Registrierkasse-UUID" })
-  registrierkasseUuid?: string;
+  registrierkasseUUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Signaturerstellungseinheit-UUID" })
-  signaturerstellungseinheitUuid?: string;
+  signaturerstellungseinheitUUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=_href" })
   href?: string;

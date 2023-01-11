@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudServicebrokerV1beta1ServiceInstance extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context?: Map<string, any>;
+  context?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -26,13 +26,13 @@ export class GoogleCloudServicebrokerV1beta1ServiceInstance extends SpeakeasyBas
   organizationGuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=plan_id" })
   planId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=previous_values" })
-  previousValues?: Map<string, any>;
+  previousValues?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceName" })
   resourceName?: string;

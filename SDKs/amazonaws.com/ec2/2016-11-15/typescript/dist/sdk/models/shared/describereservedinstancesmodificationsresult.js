@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedInstancesModification } from "./reservedinstancesmodification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeReservedInstancesModificationsResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // DescribeReservedInstancesModificationsResult
 /**
  * Contains the output of DescribeReservedInstancesModifications.
@@ -34,13 +36,13 @@ var DescribeReservedInstancesModificationsResult = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeReservedInstancesModificationsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ReservedInstancesModification }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeReservedInstancesModificationsResult.prototype, "reservedInstancesModifications", void 0);
     return DescribeReservedInstancesModificationsResult;
-}(SpeakeasyBase));
-export { DescribeReservedInstancesModificationsResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeReservedInstancesModificationsResult = DescribeReservedInstancesModificationsResult;

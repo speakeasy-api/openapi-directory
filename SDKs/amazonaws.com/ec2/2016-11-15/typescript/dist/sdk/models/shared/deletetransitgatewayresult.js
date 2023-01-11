@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGateway } from "./transitgateway";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTransitGatewayResult = exports.DeleteTransitGatewayResultTransitGateway = exports.DeleteTransitGatewayResultTransitGatewayOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteTransitGatewayResultTransitGatewayOptions
+/**
+ * The transit gateway options.
+**/
+var DeleteTransitGatewayResultTransitGatewayOptions = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayResultTransitGatewayOptions, _super);
+    function DeleteTransitGatewayResultTransitGatewayOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "amazonSideAsn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "associationDefaultRouteTableId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "autoAcceptSharedAttachments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "defaultRouteTableAssociation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "defaultRouteTablePropagation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "dnsSupport", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "multicastSupport", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "propagationDefaultRouteTableId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "transitGatewayCidrBlocks", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGatewayOptions.prototype, "vpnEcmpSupport", void 0);
+    return DeleteTransitGatewayResultTransitGatewayOptions;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayResultTransitGatewayOptions = DeleteTransitGatewayResultTransitGatewayOptions;
+// DeleteTransitGatewayResultTransitGateway
+/**
+ * Information about the deleted transit gateway.
+**/
+var DeleteTransitGatewayResultTransitGateway = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayResultTransitGateway, _super);
+    function DeleteTransitGatewayResultTransitGateway() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayResultTransitGatewayOptions)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "options", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "transitGatewayArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayResultTransitGateway.prototype, "transitGatewayId", void 0);
+    return DeleteTransitGatewayResultTransitGateway;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayResultTransitGateway = DeleteTransitGatewayResultTransitGateway;
 var DeleteTransitGatewayResult = /** @class */ (function (_super) {
     __extends(DeleteTransitGatewayResult, _super);
     function DeleteTransitGatewayResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGateway)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayResultTransitGateway)
     ], DeleteTransitGatewayResult.prototype, "transitGateway", void 0);
     return DeleteTransitGatewayResult;
-}(SpeakeasyBase));
-export { DeleteTransitGatewayResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayResult = DeleteTransitGatewayResult;

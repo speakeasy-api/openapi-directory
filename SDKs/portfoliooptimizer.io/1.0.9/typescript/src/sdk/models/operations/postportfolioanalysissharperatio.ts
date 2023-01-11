@@ -16,7 +16,7 @@ export class PostPortfolioAnalysisSharpeRatio200ApplicationJson extends Speakeas
 
 export class PostPortfolioAnalysisSharpeRatioRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -25,8 +25,8 @@ export class PostPortfolioAnalysisSharpeRatioResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisSharpeRatio200ApplicationJsonObject?: PostPortfolioAnalysisSharpeRatio200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisSharpeRatio200ApplicationJSONObject?: PostPortfolioAnalysisSharpeRatio200ApplicationJson;
 }

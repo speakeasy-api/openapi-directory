@@ -20,7 +20,7 @@ export class Payslip extends SpeakeasyBase {
   earningsLines?: EarningsLine[];
 
   @SpeakeasyMetadata({ data: "json, name=EmployeeID" })
-  employeeId?: string;
+  employeeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FirstName" })
   firstName?: string;
@@ -38,7 +38,7 @@ export class Payslip extends SpeakeasyBase {
   netPay?: number;
 
   @SpeakeasyMetadata({ data: "json, name=PayslipID" })
-  payslipId?: string;
+  payslipID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReimbursementLines", elemType: ReimbursementLine })
   reimbursementLines?: ReimbursementLine[];
@@ -62,7 +62,7 @@ export class Payslip extends SpeakeasyBase {
   timesheetEarningsLines?: EarningsLine[];
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Wages" })
   wages?: number;

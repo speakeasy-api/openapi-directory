@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteAddressRequest, DeleteAddressResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: DeleteAddressRequest = {
   headers: {
-    authorization: "error",
+    authorization: "sit",
   },
   request: {
-    ethereumaddress: "porro",
-    password: "eos",
+    ethereumaddress: "voluptas",
+    password: "culpa",
   },
 };
 

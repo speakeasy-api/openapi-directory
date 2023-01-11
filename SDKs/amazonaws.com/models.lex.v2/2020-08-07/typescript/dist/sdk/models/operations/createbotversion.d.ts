@@ -13,7 +13,7 @@ export declare class CreateBotVersionHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class CreateBotVersionRequestBody extends SpeakeasyBase {
-    botVersionLocaleSpecification: Map<string, shared.BotVersionLocaleDetails>;
+    botVersionLocaleSpecification: Record<string, shared.BotVersionLocaleDetails>;
     description?: string;
 }
 export declare class CreateBotVersionRequest extends SpeakeasyBase {

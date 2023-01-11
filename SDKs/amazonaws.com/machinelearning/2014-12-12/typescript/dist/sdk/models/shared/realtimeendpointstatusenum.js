@@ -1,7 +1,10 @@
-export var RealtimeEndpointStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeEndpointStatusEnum = void 0;
+var RealtimeEndpointStatusEnum;
 (function (RealtimeEndpointStatusEnum) {
     RealtimeEndpointStatusEnum["None"] = "NONE";
     RealtimeEndpointStatusEnum["Ready"] = "READY";
     RealtimeEndpointStatusEnum["Updating"] = "UPDATING";
     RealtimeEndpointStatusEnum["Failed"] = "FAILED";
-})(RealtimeEndpointStatusEnum || (RealtimeEndpointStatusEnum = {}));
+})(RealtimeEndpointStatusEnum = exports.RealtimeEndpointStatusEnum || (exports.RealtimeEndpointStatusEnum = {}));

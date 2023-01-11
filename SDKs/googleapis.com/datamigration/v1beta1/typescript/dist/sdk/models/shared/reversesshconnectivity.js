@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReverseSshConnectivity = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReverseSshConnectivity
 /**
  * The details needed to configure a reverse SSH tunnel between the source and destination databases. These details will be used when calling the generateSshScript method (see https://cloud.google.com/database-migration/docs/reference/rest/v1beta1/projects.locations.migrationJobs/generateSshScript) to produce the script that will help set up the reverse SSH tunnel, and to set up the VPC peering between the Cloud SQL private network and the VPC.
@@ -33,21 +36,21 @@ var ReverseSshConnectivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vm" }),
         __metadata("design:type", String)
     ], ReverseSshConnectivity.prototype, "vm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmIp" }),
         __metadata("design:type", String)
     ], ReverseSshConnectivity.prototype, "vmIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmPort" }),
         __metadata("design:type", Number)
     ], ReverseSshConnectivity.prototype, "vmPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpc" }),
         __metadata("design:type", String)
     ], ReverseSshConnectivity.prototype, "vpc", void 0);
     return ReverseSshConnectivity;
-}(SpeakeasyBase));
-export { ReverseSshConnectivity };
+}(utils_1.SpeakeasyBase));
+exports.ReverseSshConnectivity = ReverseSshConnectivity;

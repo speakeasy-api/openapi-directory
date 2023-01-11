@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class FigiResult extends SpeakeasyBase {
-    compositeFigi?: string;
+    compositeFIGI?: string;
     exchCode?: string;
     figi?: string;
     marketSector?: string;
@@ -9,6 +9,6 @@ export declare class FigiResult extends SpeakeasyBase {
     securityDescription?: string;
     securityType?: string;
     securityType2?: string;
-    shareClassFigi?: string;
+    shareClassFIGI?: string;
     ticker?: string;
 }

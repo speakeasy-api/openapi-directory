@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CacheNodeTypeSpecificParameter } from "./cachenodetypespecificparameter";
-import { Parameter } from "./parameter";
+import { CacheNodeTypeSpecificParametersList } from "./cachenodetypespecificparameterslist";
+import { ParametersList } from "./parameterslist";
 /**
  * Represents the output of a <code>DescribeEngineDefaultParameters</code> operation.
 **/
 export declare class EngineDefaults extends SpeakeasyBase {
-    cacheNodeTypeSpecificParameters?: CacheNodeTypeSpecificParameter[];
+    cacheNodeTypeSpecificParameters?: CacheNodeTypeSpecificParametersList[];
     cacheParameterGroupFamily?: string;
     marker?: string;
-    parameters?: Parameter[];
+    parameters?: ParametersList[];
 }

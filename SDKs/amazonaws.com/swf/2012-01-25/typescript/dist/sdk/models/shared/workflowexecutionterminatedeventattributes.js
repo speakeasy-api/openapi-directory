@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowExecutionTerminatedCauseEnum } from "./workflowexecutionterminatedcauseenum";
-import { ChildPolicyEnum } from "./childpolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowExecutionTerminatedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowexecutionterminatedcauseenum_1 = require("./workflowexecutionterminatedcauseenum");
+var childpolicyenum_1 = require("./childpolicyenum");
 // WorkflowExecutionTerminatedEventAttributes
 /**
  * Provides the details of the <code>WorkflowExecutionTerminated</code> event.
@@ -35,21 +38,21 @@ var WorkflowExecutionTerminatedEventAttributes = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], WorkflowExecutionTerminatedEventAttributes.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childPolicy" }),
         __metadata("design:type", String)
     ], WorkflowExecutionTerminatedEventAttributes.prototype, "childPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], WorkflowExecutionTerminatedEventAttributes.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], WorkflowExecutionTerminatedEventAttributes.prototype, "reason", void 0);
     return WorkflowExecutionTerminatedEventAttributes;
-}(SpeakeasyBase));
-export { WorkflowExecutionTerminatedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowExecutionTerminatedEventAttributes = WorkflowExecutionTerminatedEventAttributes;

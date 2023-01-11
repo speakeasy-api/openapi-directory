@@ -36,6 +36,6 @@ export declare class BooksMylibraryBookshelvesAddVolumeRequest extends Speakeasy
 }
 export declare class BooksMylibraryBookshelvesAddVolumeResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

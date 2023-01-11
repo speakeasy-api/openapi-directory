@@ -1,4 +1,7 @@
-export var SecurityServiceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecurityServiceTypeEnum = void 0;
+var SecurityServiceTypeEnum;
 (function (SecurityServiceTypeEnum) {
     SecurityServiceTypeEnum["Waf"] = "WAF";
     SecurityServiceTypeEnum["Wafv2"] = "WAFV2";
@@ -8,4 +11,4 @@ export var SecurityServiceTypeEnum;
     SecurityServiceTypeEnum["SecurityGroupsUsageAudit"] = "SECURITY_GROUPS_USAGE_AUDIT";
     SecurityServiceTypeEnum["NetworkFirewall"] = "NETWORK_FIREWALL";
     SecurityServiceTypeEnum["DnsFirewall"] = "DNS_FIREWALL";
-})(SecurityServiceTypeEnum || (SecurityServiceTypeEnum = {}));
+})(SecurityServiceTypeEnum = exports.SecurityServiceTypeEnum || (exports.SecurityServiceTypeEnum = {}));

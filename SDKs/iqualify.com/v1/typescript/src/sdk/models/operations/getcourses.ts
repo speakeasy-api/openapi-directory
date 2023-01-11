@@ -11,7 +11,7 @@ export class GetCoursesResponse extends SpeakeasyBase {
   courseResponses?: shared.CourseResponse[];
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

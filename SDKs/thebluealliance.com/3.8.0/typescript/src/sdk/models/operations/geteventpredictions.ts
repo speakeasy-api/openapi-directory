@@ -38,10 +38,10 @@ export class GetEventPredictionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  eventPredictions?: Map<string, any>;
+  eventPredictions?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

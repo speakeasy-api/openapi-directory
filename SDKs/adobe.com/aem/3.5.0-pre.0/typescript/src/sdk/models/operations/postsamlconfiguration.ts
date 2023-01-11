@@ -16,7 +16,7 @@ export class PostSamlConfigurationQueryParams extends SpeakeasyBase {
   apply?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assertionConsumerServiceURL" })
-  assertionConsumerServiceUrl?: string;
+  assertionConsumerServiceURL?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clockTolerance" })
   clockTolerance?: number;
@@ -88,7 +88,7 @@ export class PostSamlConfigurationQueryParams extends SpeakeasyBase {
   useEncryption?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIDAttribute" })
-  userIdAttribute?: string;
+  userIDAttribute?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIntermediatePath" })
   userIntermediatePath?: string;
@@ -103,10 +103,10 @@ export class PostSamlConfigurationRequest extends SpeakeasyBase {
 
 export class PostSamlConfigurationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  samlConfigurationInfo?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

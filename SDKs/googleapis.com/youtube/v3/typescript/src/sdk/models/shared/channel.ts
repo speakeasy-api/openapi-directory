@@ -42,7 +42,7 @@ export class Channel extends SpeakeasyBase {
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=localizations", elemType: ChannelLocalization })
-  localizations?: Map<string, ChannelLocalization>;
+  localizations?: Record<string, ChannelLocalization>;
 
   @SpeakeasyMetadata({ data: "json, name=snippet" })
   snippet?: ChannelSnippet;

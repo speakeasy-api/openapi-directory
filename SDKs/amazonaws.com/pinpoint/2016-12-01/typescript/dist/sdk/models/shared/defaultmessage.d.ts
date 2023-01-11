@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class DefaultMessage extends SpeakeasyBase {
     body?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
 }

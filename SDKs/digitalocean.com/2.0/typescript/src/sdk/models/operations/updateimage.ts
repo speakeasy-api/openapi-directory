@@ -1,56 +1,57 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateImagePathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
   imageId: number;
 }
 
 
-export class UpdateImageRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateImagePathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: shared.Onev21imagesPostRequestBodyContentApplication1jsonSchemaAllOf0;
-}
-
-
 export class UpdateImage200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=image" })
+  @SpeakeasyMetadata({ data: "json, name=image" })
   image: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImage;
 }
 
 
 export class UpdateImage401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateImageRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateImagePathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: shared.Onev21imagesPostRequestBodyContentApplication1jsonSchemaAllOf0;
+}
+
+
 export class UpdateImageResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateImage200ApplicationJsonObject?: UpdateImage200ApplicationJson;
+  @SpeakeasyMetadata()
+  updateImage200ApplicationJSONObject?: UpdateImage200ApplicationJson;
 
-  @Metadata()
-  updateImage401ApplicationJsonObject?: UpdateImage401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateImage401ApplicationJSONObject?: UpdateImage401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

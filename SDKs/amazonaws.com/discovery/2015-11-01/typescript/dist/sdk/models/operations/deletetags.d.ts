@@ -20,7 +20,7 @@ export declare class DeleteTagsRequest extends SpeakeasyBase {
 export declare class DeleteTagsResponse extends SpeakeasyBase {
     authorizationErrorException?: any;
     contentType: string;
-    deleteTagsResponse?: Map<string, any>;
+    deleteTagsResponse?: Record<string, any>;
     homeRegionNotSetException?: any;
     invalidParameterException?: any;
     invalidParameterValueException?: any;

@@ -89,5 +89,5 @@ export class StatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  status200ApplicationJsonObject?: Status200ApplicationJson;
+  status200ApplicationJSONObject?: Status200ApplicationJson;
 }

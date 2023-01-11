@@ -2,15 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class KeyValuePairInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=kv_key" })
-  kvKey?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=kv_value" })
-  kvValue?: any;
-}
-
-
 export class KeyValuePair extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -29,4 +20,13 @@ export class KeyValuePair extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
+}
+
+
+export class KeyValuePairInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=kv_key" })
+  kvKey?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=kv_value" })
+  kvValue?: any;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CmcerRequest, CmcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: CmcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      aplno: "et",
-      certno: "est",
-      sccd: "quia",
+      aplno: "sit",
+      certno: "voluptas",
+      sccd: "culpa",
     },
-    consentArtifact: "minima",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "aut",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.cmcer(req).then((res: CmcerResponse | AxiosError) => {
+sdk.apIs.cmcer(req).then((res: CmcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.cmcer(req).then((res: CmcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cmcer` - Community Certificate
 * `cncer` - Conversion Certificate

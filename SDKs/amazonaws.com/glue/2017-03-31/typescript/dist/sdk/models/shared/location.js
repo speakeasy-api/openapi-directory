@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeGenNodeArg } from "./codegennodearg";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Location = void 0;
+var utils_1 = require("../../../internal/utils");
+var codegennodearg_1 = require("./codegennodearg");
 // Location
 /**
  * The location of resources.
@@ -34,17 +37,17 @@ var Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DynamoDB", elemType: CodeGenNodeArg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DynamoDB", elemType: codegennodearg_1.CodeGenNodeArg }),
         __metadata("design:type", Array)
-    ], Location.prototype, "dynamoDb", void 0);
+    ], Location.prototype, "dynamoDB", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Jdbc", elemType: CodeGenNodeArg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Jdbc", elemType: codegennodearg_1.CodeGenNodeArg }),
         __metadata("design:type", Array)
     ], Location.prototype, "jdbc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3", elemType: CodeGenNodeArg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3", elemType: codegennodearg_1.CodeGenNodeArg }),
         __metadata("design:type", Array)
     ], Location.prototype, "s3", void 0);
     return Location;
-}(SpeakeasyBase));
-export { Location };
+}(utils_1.SpeakeasyBase));
+exports.Location = Location;

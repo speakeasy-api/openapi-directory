@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FromAddResponse = exports.FromAddRequest = exports.FromAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FromAddPathParams = /** @class */ (function (_super) {
     __extends(FromAddPathParams, _super);
     function FromAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=IP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=IP" }),
         __metadata("design:type", String)
     ], FromAddPathParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], FromAddPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], FromAddPathParams.prototype, "port", void 0);
     return FromAddPathParams;
-}(SpeakeasyBase));
-export { FromAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FromAddPathParams = FromAddPathParams;
 var FromAddRequest = /** @class */ (function (_super) {
     __extends(FromAddRequest, _super);
     function FromAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FromAddPathParams)
     ], FromAddRequest.prototype, "pathParams", void 0);
     return FromAddRequest;
-}(SpeakeasyBase));
-export { FromAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.FromAddRequest = FromAddRequest;
 var FromAddResponse = /** @class */ (function (_super) {
     __extends(FromAddResponse, _super);
     function FromAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FromAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FromAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], FromAddResponse.prototype, "fromAdd200ApplicationJsonString", void 0);
+    ], FromAddResponse.prototype, "fromAdd200ApplicationJSONString", void 0);
     return FromAddResponse;
-}(SpeakeasyBase));
-export { FromAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.FromAddResponse = FromAddResponse;

@@ -30,13 +30,13 @@ export class ArtistApiGetNamesRequest extends SpeakeasyBase {
 
 export class ArtistApiGetNamesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  artistApiGetNames200ApplicationJsonStrings?: string[];
+  artistApiGetNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   artistApiGetNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  artistApiGetNames200TextJsonStrings?: string[];
+  artistApiGetNames200TextJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   body?: Uint8Array;

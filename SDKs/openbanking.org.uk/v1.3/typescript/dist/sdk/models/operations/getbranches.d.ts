@@ -194,8 +194,8 @@ export declare enum GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBr
  * Brand
 **/
 export declare class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand extends SpeakeasyBase {
-    trademarkId: string;
-    trademarkIpoCode: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIpoCodeEnum;
+    trademarkID: string;
+    trademarkIPOCode: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIpoCodeEnum;
 }
 /**
  * Organisation Name
@@ -285,7 +285,7 @@ export declare class GetBranchesResponse extends SpeakeasyBase {
     fiveHundredAndThreeErrorObject?: GetBranches503ErrorObject;
     contentType: string;
     errorObject?: GetBranchesErrorObject;
-    getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

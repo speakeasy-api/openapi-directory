@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipsRecentlyChangedFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsRecentlyChangedResponse = exports.MembershipsRecentlyChangedRequest = exports.MembershipsRecentlyChangedPathParams = exports.MembershipsRecentlyChangedFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipsRecentlyChangedFormatEnum;
 (function (MembershipsRecentlyChangedFormatEnum) {
     MembershipsRecentlyChangedFormatEnum["Xml"] = "xml";
     MembershipsRecentlyChangedFormatEnum["Json"] = "json";
-})(MembershipsRecentlyChangedFormatEnum || (MembershipsRecentlyChangedFormatEnum = {}));
+})(MembershipsRecentlyChangedFormatEnum = exports.MembershipsRecentlyChangedFormatEnum || (exports.MembershipsRecentlyChangedFormatEnum = {}));
 var MembershipsRecentlyChangedPathParams = /** @class */ (function (_super) {
     __extends(MembershipsRecentlyChangedPathParams, _super);
     function MembershipsRecentlyChangedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=days" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=days" }),
         __metadata("design:type", String)
     ], MembershipsRecentlyChangedPathParams.prototype, "days", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], MembershipsRecentlyChangedPathParams.prototype, "format", void 0);
     return MembershipsRecentlyChangedPathParams;
-}(SpeakeasyBase));
-export { MembershipsRecentlyChangedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsRecentlyChangedPathParams = MembershipsRecentlyChangedPathParams;
 var MembershipsRecentlyChangedRequest = /** @class */ (function (_super) {
     __extends(MembershipsRecentlyChangedRequest, _super);
     function MembershipsRecentlyChangedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MembershipsRecentlyChangedPathParams)
     ], MembershipsRecentlyChangedRequest.prototype, "pathParams", void 0);
     return MembershipsRecentlyChangedRequest;
-}(SpeakeasyBase));
-export { MembershipsRecentlyChangedRequest };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsRecentlyChangedRequest = MembershipsRecentlyChangedRequest;
 var MembershipsRecentlyChangedResponse = /** @class */ (function (_super) {
     __extends(MembershipsRecentlyChangedResponse, _super);
     function MembershipsRecentlyChangedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MembershipsRecentlyChangedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MembershipsRecentlyChangedResponse.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MembershipsRecentlyChangedResponse.prototype, "statusCode", void 0);
     return MembershipsRecentlyChangedResponse;
-}(SpeakeasyBase));
-export { MembershipsRecentlyChangedResponse };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsRecentlyChangedResponse = MembershipsRecentlyChangedResponse;

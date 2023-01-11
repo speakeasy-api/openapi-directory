@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAuthorIfNotExistsForUsingPostResponse = exports.CreateAuthorIfNotExistsForUsingPostRequest = exports.CreateAuthorIfNotExistsForUsingPost500ApplicationJson = exports.CreateAuthorIfNotExistsForUsingPost401ApplicationJson = exports.CreateAuthorIfNotExistsForUsingPost400ApplicationJson = exports.CreateAuthorIfNotExistsForUsingPost200ApplicationJson = exports.CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData = exports.CreateAuthorIfNotExistsForUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateAuthorIfNotExistsForUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPostQueryParams, _super);
     function CreateAuthorIfNotExistsForUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorMapper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=authorMapper" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPostQueryParams.prototype, "authorMapper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPostQueryParams.prototype, "name", void 0);
     return CreateAuthorIfNotExistsForUsingPostQueryParams;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPostQueryParams = CreateAuthorIfNotExistsForUsingPostQueryParams;
 var CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData, _super);
     function CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorID" }),
         __metadata("design:type", String)
-    ], CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData.prototype, "authorId", void 0);
+    ], CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData.prototype, "authorID", void 0);
     return CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData = CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData;
 var CreateAuthorIfNotExistsForUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPost200ApplicationJson, _super);
     function CreateAuthorIfNotExistsForUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateAuthorIfNotExistsForUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPost200ApplicationJsonData)
     ], CreateAuthorIfNotExistsForUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPost200ApplicationJson.prototype, "message", void 0);
     return CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPost200ApplicationJson = CreateAuthorIfNotExistsForUsingPost200ApplicationJson;
 var CreateAuthorIfNotExistsForUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPost400ApplicationJson, _super);
     function CreateAuthorIfNotExistsForUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateAuthorIfNotExistsForUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateAuthorIfNotExistsForUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPost400ApplicationJson.prototype, "message", void 0);
     return CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPost400ApplicationJson = CreateAuthorIfNotExistsForUsingPost400ApplicationJson;
 var CreateAuthorIfNotExistsForUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPost401ApplicationJson, _super);
     function CreateAuthorIfNotExistsForUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateAuthorIfNotExistsForUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateAuthorIfNotExistsForUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPost401ApplicationJson.prototype, "message", void 0);
     return CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPost401ApplicationJson = CreateAuthorIfNotExistsForUsingPost401ApplicationJson;
 var CreateAuthorIfNotExistsForUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPost500ApplicationJson, _super);
     function CreateAuthorIfNotExistsForUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateAuthorIfNotExistsForUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateAuthorIfNotExistsForUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPost500ApplicationJson.prototype, "message", void 0);
     return CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPost500ApplicationJson = CreateAuthorIfNotExistsForUsingPost500ApplicationJson;
 var CreateAuthorIfNotExistsForUsingPostRequest = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPostRequest, _super);
     function CreateAuthorIfNotExistsForUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPostQueryParams)
     ], CreateAuthorIfNotExistsForUsingPostRequest.prototype, "queryParams", void 0);
     return CreateAuthorIfNotExistsForUsingPostRequest;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPostRequest = CreateAuthorIfNotExistsForUsingPostRequest;
 var CreateAuthorIfNotExistsForUsingPostResponse = /** @class */ (function (_super) {
     __extends(CreateAuthorIfNotExistsForUsingPostResponse, _super);
     function CreateAuthorIfNotExistsForUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPost200ApplicationJson)
-    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPost200ApplicationJsonObject", void 0);
+    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPost400ApplicationJson)
-    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPost400ApplicationJsonObject", void 0);
+    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPost401ApplicationJson)
-    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPost401ApplicationJsonObject", void 0);
+    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAuthorIfNotExistsForUsingPost500ApplicationJson)
-    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPost500ApplicationJsonObject", void 0);
+    ], CreateAuthorIfNotExistsForUsingPostResponse.prototype, "createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject", void 0);
     return CreateAuthorIfNotExistsForUsingPostResponse;
-}(SpeakeasyBase));
-export { CreateAuthorIfNotExistsForUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateAuthorIfNotExistsForUsingPostResponse = CreateAuthorIfNotExistsForUsingPostResponse;

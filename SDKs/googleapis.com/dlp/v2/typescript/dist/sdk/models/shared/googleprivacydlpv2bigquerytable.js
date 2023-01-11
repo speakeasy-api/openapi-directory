@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2BigQueryTable = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2BigQueryTable
 /**
  * Message defining the location of a BigQuery table. A table is uniquely identified by its project_id, dataset_id, and table_name. Within a query a table is often referenced with a string in the format of: `:.` or `..`.
@@ -33,17 +36,17 @@ var GooglePrivacyDlpV2BigQueryTable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2BigQueryTable.prototype, "datasetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2BigQueryTable.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2BigQueryTable.prototype, "tableId", void 0);
     return GooglePrivacyDlpV2BigQueryTable;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2BigQueryTable };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2BigQueryTable = GooglePrivacyDlpV2BigQueryTable;

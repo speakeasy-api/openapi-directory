@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConferenceHierarchyWithTeamsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConferenceHierarchyWithTeamsResponse = exports.ConferenceHierarchyWithTeamsRequest = exports.ConferenceHierarchyWithTeamsPathParams = exports.ConferenceHierarchyWithTeamsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConferenceHierarchyWithTeamsFormatEnum;
 (function (ConferenceHierarchyWithTeamsFormatEnum) {
     ConferenceHierarchyWithTeamsFormatEnum["Xml"] = "XML";
     ConferenceHierarchyWithTeamsFormatEnum["Json"] = "JSON";
-})(ConferenceHierarchyWithTeamsFormatEnum || (ConferenceHierarchyWithTeamsFormatEnum = {}));
+})(ConferenceHierarchyWithTeamsFormatEnum = exports.ConferenceHierarchyWithTeamsFormatEnum || (exports.ConferenceHierarchyWithTeamsFormatEnum = {}));
 var ConferenceHierarchyWithTeamsPathParams = /** @class */ (function (_super) {
     __extends(ConferenceHierarchyWithTeamsPathParams, _super);
     function ConferenceHierarchyWithTeamsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ConferenceHierarchyWithTeamsPathParams.prototype, "format", void 0);
     return ConferenceHierarchyWithTeamsPathParams;
-}(SpeakeasyBase));
-export { ConferenceHierarchyWithTeamsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ConferenceHierarchyWithTeamsPathParams = ConferenceHierarchyWithTeamsPathParams;
 var ConferenceHierarchyWithTeamsRequest = /** @class */ (function (_super) {
     __extends(ConferenceHierarchyWithTeamsRequest, _super);
     function ConferenceHierarchyWithTeamsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConferenceHierarchyWithTeamsPathParams)
     ], ConferenceHierarchyWithTeamsRequest.prototype, "pathParams", void 0);
     return ConferenceHierarchyWithTeamsRequest;
-}(SpeakeasyBase));
-export { ConferenceHierarchyWithTeamsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConferenceHierarchyWithTeamsRequest = ConferenceHierarchyWithTeamsRequest;
 var ConferenceHierarchyWithTeamsResponse = /** @class */ (function (_super) {
     __extends(ConferenceHierarchyWithTeamsResponse, _super);
     function ConferenceHierarchyWithTeamsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ConferenceHierarchyWithTeamsResponse.prototype, "conferences", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConferenceHierarchyWithTeamsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConferenceHierarchyWithTeamsResponse.prototype, "statusCode", void 0);
     return ConferenceHierarchyWithTeamsResponse;
-}(SpeakeasyBase));
-export { ConferenceHierarchyWithTeamsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConferenceHierarchyWithTeamsResponse = ConferenceHierarchyWithTeamsResponse;

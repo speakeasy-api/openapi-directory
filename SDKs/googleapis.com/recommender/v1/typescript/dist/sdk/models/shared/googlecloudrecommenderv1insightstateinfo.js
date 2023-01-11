@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecommenderV1InsightStateInfoStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1InsightStateInfo = exports.GoogleCloudRecommenderV1InsightStateInfoStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecommenderV1InsightStateInfoStateEnum;
 (function (GoogleCloudRecommenderV1InsightStateInfoStateEnum) {
     GoogleCloudRecommenderV1InsightStateInfoStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleCloudRecommenderV1InsightStateInfoStateEnum["Active"] = "ACTIVE";
     GoogleCloudRecommenderV1InsightStateInfoStateEnum["Accepted"] = "ACCEPTED";
     GoogleCloudRecommenderV1InsightStateInfoStateEnum["Dismissed"] = "DISMISSED";
-})(GoogleCloudRecommenderV1InsightStateInfoStateEnum || (GoogleCloudRecommenderV1InsightStateInfoStateEnum = {}));
+})(GoogleCloudRecommenderV1InsightStateInfoStateEnum = exports.GoogleCloudRecommenderV1InsightStateInfoStateEnum || (exports.GoogleCloudRecommenderV1InsightStateInfoStateEnum = {}));
 // GoogleCloudRecommenderV1InsightStateInfo
 /**
  * Information related to insight state.
@@ -40,13 +43,13 @@ var GoogleCloudRecommenderV1InsightStateInfo = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1InsightStateInfo.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateMetadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateMetadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1InsightStateInfo.prototype, "stateMetadata", void 0);
     return GoogleCloudRecommenderV1InsightStateInfo;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1InsightStateInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1InsightStateInfo = GoogleCloudRecommenderV1InsightStateInfo;

@@ -44,5 +44,5 @@ export class QueueInformationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  queueInformation200ApplicationJsonObject?: QueueInformation200ApplicationJson;
+  queueInformation200ApplicationJSONObject?: QueueInformation200ApplicationJson;
 }

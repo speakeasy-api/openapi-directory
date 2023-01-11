@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreSignRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreSignRequest = /** @class */ (function (_super) {
     __extends(PreSignRequest, _super);
     function PreSignRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileExtension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileExtension" }),
         __metadata("design:type", String)
     ], PreSignRequest.prototype, "fileExtension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaType" }),
         __metadata("design:type", String)
     ], PreSignRequest.prototype, "mediaType", void 0);
     return PreSignRequest;
-}(SpeakeasyBase));
-export { PreSignRequest };
+}(utils_1.SpeakeasyBase));
+exports.PreSignRequest = PreSignRequest;

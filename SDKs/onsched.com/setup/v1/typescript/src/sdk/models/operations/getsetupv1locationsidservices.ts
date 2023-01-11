@@ -28,7 +28,7 @@ export class GetSetupV1LocationsIdServicesRequest extends SpeakeasyBase {
 
 export class GetSetupV1LocationsIdServicesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  businessServiceListViewModel?: Map<string, any>;
+  businessServiceListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

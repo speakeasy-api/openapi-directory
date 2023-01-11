@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleScopeTerm } from "./simplescopeterm";
-import { TagScopeTerm } from "./tagscopeterm";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobScopeTerm = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplescopeterm_1 = require("./simplescopeterm");
+var tagscopeterm_1 = require("./tagscopeterm");
 // JobScopeTerm
 /**
  * Specifies a property- or tag-based condition that defines criteria for including or excluding S3 objects from a classification job. A JobScopeTerm object can contain only one simpleScopeTerm object or one tagScopeTerm object.
@@ -35,13 +38,13 @@ var JobScopeTerm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simpleScopeTerm" }),
-        __metadata("design:type", SimpleScopeTerm)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simpleScopeTerm" }),
+        __metadata("design:type", simplescopeterm_1.SimpleScopeTerm)
     ], JobScopeTerm.prototype, "simpleScopeTerm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagScopeTerm" }),
-        __metadata("design:type", TagScopeTerm)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagScopeTerm" }),
+        __metadata("design:type", tagscopeterm_1.TagScopeTerm)
     ], JobScopeTerm.prototype, "tagScopeTerm", void 0);
     return JobScopeTerm;
-}(SpeakeasyBase));
-export { JobScopeTerm };
+}(utils_1.SpeakeasyBase));
+exports.JobScopeTerm = JobScopeTerm;

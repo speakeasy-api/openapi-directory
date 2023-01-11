@@ -28,7 +28,7 @@ export declare class CreateEmailTemplateResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     badRequestException?: any;
     contentType: string;
-    createEmailTemplateResponse?: Map<string, any>;
+    createEmailTemplateResponse?: Record<string, any>;
     limitExceededException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

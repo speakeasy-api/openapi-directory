@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteApplicationResponse = exports.DeleteApplicationRequest = exports.DeleteApplicationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteApplicationPathParams = /** @class */ (function (_super) {
     __extends(DeleteApplicationPathParams, _super);
     function DeleteApplicationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_id" }),
         __metadata("design:type", String)
     ], DeleteApplicationPathParams.prototype, "appId", void 0);
     return DeleteApplicationPathParams;
-}(SpeakeasyBase));
-export { DeleteApplicationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApplicationPathParams = DeleteApplicationPathParams;
 var DeleteApplicationRequest = /** @class */ (function (_super) {
     __extends(DeleteApplicationRequest, _super);
     function DeleteApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteApplicationPathParams)
     ], DeleteApplicationRequest.prototype, "pathParams", void 0);
     return DeleteApplicationRequest;
-}(SpeakeasyBase));
-export { DeleteApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApplicationRequest = DeleteApplicationRequest;
 var DeleteApplicationResponse = /** @class */ (function (_super) {
     __extends(DeleteApplicationResponse, _super);
     function DeleteApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteApplicationResponse.prototype, "statusCode", void 0);
     return DeleteApplicationResponse;
-}(SpeakeasyBase));
-export { DeleteApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApplicationResponse = DeleteApplicationResponse;

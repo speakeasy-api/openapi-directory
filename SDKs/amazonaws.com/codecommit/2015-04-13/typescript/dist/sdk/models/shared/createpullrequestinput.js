@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Target } from "./target";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePullRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var target_1 = require("./target");
 var CreatePullRequestInput = /** @class */ (function (_super) {
     __extends(CreatePullRequestInput, _super);
     function CreatePullRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRequestToken" }),
         __metadata("design:type", String)
     ], CreatePullRequestInput.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreatePullRequestInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: target_1.Target }),
         __metadata("design:type", Array)
     ], CreatePullRequestInput.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CreatePullRequestInput.prototype, "title", void 0);
     return CreatePullRequestInput;
-}(SpeakeasyBase));
-export { CreatePullRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.CreatePullRequestInput = CreatePullRequestInput;

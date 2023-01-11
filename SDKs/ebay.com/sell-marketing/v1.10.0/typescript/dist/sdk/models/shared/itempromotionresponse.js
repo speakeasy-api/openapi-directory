@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { CouponConfiguration } from "./couponconfiguration";
-import { DiscountRule } from "./discountrule";
-import { InventoryCriterion } from "./inventorycriterion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemPromotionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var couponconfiguration_1 = require("./couponconfiguration");
+var discountrule_1 = require("./discountrule");
+var inventorycriterion_1 = require("./inventorycriterion");
 // ItemPromotionResponse
 /**
  * This complex type defines the fields returned for an item (threshold) promotion.
@@ -37,65 +40,65 @@ var ItemPromotionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyDiscountToSingleItemOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyDiscountToSingleItemOnly" }),
         __metadata("design:type", Boolean)
     ], ItemPromotionResponse.prototype, "applyDiscountToSingleItemOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budget" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budget" }),
+        __metadata("design:type", amount_1.Amount)
     ], ItemPromotionResponse.prototype, "budget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=couponConfiguration" }),
-        __metadata("design:type", CouponConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=couponConfiguration" }),
+        __metadata("design:type", couponconfiguration_1.CouponConfiguration)
     ], ItemPromotionResponse.prototype, "couponConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountRules", elemType: DiscountRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountRules", elemType: discountrule_1.DiscountRule }),
         __metadata("design:type", Array)
     ], ItemPromotionResponse.prototype, "discountRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryCriterion" }),
-        __metadata("design:type", InventoryCriterion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryCriterion" }),
+        __metadata("design:type", inventorycriterion_1.InventoryCriterion)
     ], ItemPromotionResponse.prototype, "inventoryCriterion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionId" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "promotionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionImageUrl" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "promotionImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionStatus" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "promotionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionType" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "promotionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], ItemPromotionResponse.prototype, "startDate", void 0);
     return ItemPromotionResponse;
-}(SpeakeasyBase));
-export { ItemPromotionResponse };
+}(utils_1.SpeakeasyBase));
+exports.ItemPromotionResponse = ItemPromotionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationCameraOnboardingStatusesResponse = exports.GetOrganizationCameraOnboardingStatusesRequest = exports.GetOrganizationCameraOnboardingStatusesQueryParams = exports.GetOrganizationCameraOnboardingStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationCameraOnboardingStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationCameraOnboardingStatusesPathParams, _super);
     function GetOrganizationCameraOnboardingStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationCameraOnboardingStatusesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationCameraOnboardingStatusesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationCameraOnboardingStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationCameraOnboardingStatusesPathParams = GetOrganizationCameraOnboardingStatusesPathParams;
 var GetOrganizationCameraOnboardingStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationCameraOnboardingStatusesQueryParams, _super);
     function GetOrganizationCameraOnboardingStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=networkIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=networkIds" }),
         __metadata("design:type", Array)
     ], GetOrganizationCameraOnboardingStatusesQueryParams.prototype, "networkIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=serials" }),
         __metadata("design:type", Array)
     ], GetOrganizationCameraOnboardingStatusesQueryParams.prototype, "serials", void 0);
     return GetOrganizationCameraOnboardingStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationCameraOnboardingStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationCameraOnboardingStatusesQueryParams = GetOrganizationCameraOnboardingStatusesQueryParams;
 var GetOrganizationCameraOnboardingStatusesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationCameraOnboardingStatusesRequest, _super);
     function GetOrganizationCameraOnboardingStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationCameraOnboardingStatusesPathParams)
     ], GetOrganizationCameraOnboardingStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationCameraOnboardingStatusesQueryParams)
     ], GetOrganizationCameraOnboardingStatusesRequest.prototype, "queryParams", void 0);
     return GetOrganizationCameraOnboardingStatusesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationCameraOnboardingStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationCameraOnboardingStatusesRequest = GetOrganizationCameraOnboardingStatusesRequest;
 var GetOrganizationCameraOnboardingStatusesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationCameraOnboardingStatusesResponse, _super);
     function GetOrganizationCameraOnboardingStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationCameraOnboardingStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationCameraOnboardingStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationCameraOnboardingStatusesResponse.prototype, "getOrganizationCameraOnboardingStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationCameraOnboardingStatusesResponse.prototype, "getOrganizationCameraOnboardingStatuses200ApplicationJSONObject", void 0);
     return GetOrganizationCameraOnboardingStatusesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationCameraOnboardingStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationCameraOnboardingStatusesResponse = GetOrganizationCameraOnboardingStatusesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput } from "./googleappsdrivelabelsv2betafieldselectionoptionschoice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafieldselectionoptionschoice_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoice");
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput
 /**
  * Request to create a Selection Choice.
@@ -34,13 +37,13 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceReque
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choice" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choice" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoice_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput.prototype, "choice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldId" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput.prototype, "fieldId", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput;

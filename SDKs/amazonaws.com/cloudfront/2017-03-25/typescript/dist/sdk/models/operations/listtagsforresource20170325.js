@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListTagsForResource20170325Response = exports.ListTagsForResource20170325Request = exports.ListTagsForResource20170325Headers = exports.ListTagsForResource20170325QueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListTagsForResource20170325QueryParams = /** @class */ (function (_super) {
     __extends(ListTagsForResource20170325QueryParams, _super);
     function ListTagsForResource20170325QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Resource" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325QueryParams.prototype, "resource", void 0);
     return ListTagsForResource20170325QueryParams;
-}(SpeakeasyBase));
-export { ListTagsForResource20170325QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListTagsForResource20170325QueryParams = ListTagsForResource20170325QueryParams;
 var ListTagsForResource20170325Headers = /** @class */ (function (_super) {
     __extends(ListTagsForResource20170325Headers, _super);
     function ListTagsForResource20170325Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Headers.prototype, "xAmzSignedHeaders", void 0);
     return ListTagsForResource20170325Headers;
-}(SpeakeasyBase));
-export { ListTagsForResource20170325Headers };
+}(utils_1.SpeakeasyBase));
+exports.ListTagsForResource20170325Headers = ListTagsForResource20170325Headers;
 var ListTagsForResource20170325Request = /** @class */ (function (_super) {
     __extends(ListTagsForResource20170325Request, _super);
     function ListTagsForResource20170325Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListTagsForResource20170325QueryParams)
     ], ListTagsForResource20170325Request.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListTagsForResource20170325Headers)
     ], ListTagsForResource20170325Request.prototype, "headers", void 0);
     return ListTagsForResource20170325Request;
-}(SpeakeasyBase));
-export { ListTagsForResource20170325Request };
+}(utils_1.SpeakeasyBase));
+exports.ListTagsForResource20170325Request = ListTagsForResource20170325Request;
 var ListTagsForResource20170325Response = /** @class */ (function (_super) {
     __extends(ListTagsForResource20170325Response, _super);
     function ListTagsForResource20170325Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ListTagsForResource20170325Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListTagsForResource20170325Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListTagsForResource20170325Response.prototype, "statusCode", void 0);
     return ListTagsForResource20170325Response;
-}(SpeakeasyBase));
-export { ListTagsForResource20170325Response };
+}(utils_1.SpeakeasyBase));
+exports.ListTagsForResource20170325Response = ListTagsForResource20170325Response;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceAccessControl } from "./resourceaccesscontrol";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceUpdate = exports.ResourceUpdateWarnings = exports.ResourceUpdateWarningsData = exports.ResourceUpdateWarningsCodeEnum = exports.ResourceUpdateStateEnum = exports.ResourceUpdateIntentEnum = exports.ResourceUpdateError = exports.ResourceUpdateErrorErrors = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceaccesscontrol_1 = require("./resourceaccesscontrol");
 var ResourceUpdateErrorErrors = /** @class */ (function (_super) {
     __extends(ResourceUpdateErrorErrors, _super);
     function ResourceUpdateErrorErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ResourceUpdateErrorErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ResourceUpdateErrorErrors.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ResourceUpdateErrorErrors.prototype, "message", void 0);
     return ResourceUpdateErrorErrors;
-}(SpeakeasyBase));
-export { ResourceUpdateErrorErrors };
+}(utils_1.SpeakeasyBase));
+exports.ResourceUpdateErrorErrors = ResourceUpdateErrorErrors;
 // ResourceUpdateError
 /**
  * Output only. If errors are generated during update of the resource, this field will be populated.
@@ -54,13 +57,13 @@ var ResourceUpdateError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ResourceUpdateErrorErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: ResourceUpdateErrorErrors }),
         __metadata("design:type", Array)
     ], ResourceUpdateError.prototype, "errors", void 0);
     return ResourceUpdateError;
-}(SpeakeasyBase));
-export { ResourceUpdateError };
-export var ResourceUpdateIntentEnum;
+}(utils_1.SpeakeasyBase));
+exports.ResourceUpdateError = ResourceUpdateError;
+var ResourceUpdateIntentEnum;
 (function (ResourceUpdateIntentEnum) {
     ResourceUpdateIntentEnum["CreateOrAcquire"] = "CREATE_OR_ACQUIRE";
     ResourceUpdateIntentEnum["Delete"] = "DELETE";
@@ -68,16 +71,16 @@ export var ResourceUpdateIntentEnum;
     ResourceUpdateIntentEnum["Update"] = "UPDATE";
     ResourceUpdateIntentEnum["Abandon"] = "ABANDON";
     ResourceUpdateIntentEnum["Create"] = "CREATE";
-})(ResourceUpdateIntentEnum || (ResourceUpdateIntentEnum = {}));
-export var ResourceUpdateStateEnum;
+})(ResourceUpdateIntentEnum = exports.ResourceUpdateIntentEnum || (exports.ResourceUpdateIntentEnum = {}));
+var ResourceUpdateStateEnum;
 (function (ResourceUpdateStateEnum) {
     ResourceUpdateStateEnum["Pending"] = "PENDING";
     ResourceUpdateStateEnum["InProgress"] = "IN_PROGRESS";
     ResourceUpdateStateEnum["InPreview"] = "IN_PREVIEW";
     ResourceUpdateStateEnum["Failed"] = "FAILED";
     ResourceUpdateStateEnum["Aborted"] = "ABORTED";
-})(ResourceUpdateStateEnum || (ResourceUpdateStateEnum = {}));
-export var ResourceUpdateWarningsCodeEnum;
+})(ResourceUpdateStateEnum = exports.ResourceUpdateStateEnum || (exports.ResourceUpdateStateEnum = {}));
+var ResourceUpdateWarningsCodeEnum;
 (function (ResourceUpdateWarningsCodeEnum) {
     ResourceUpdateWarningsCodeEnum["DeprecatedResourceUsed"] = "DEPRECATED_RESOURCE_USED";
     ResourceUpdateWarningsCodeEnum["NoResultsOnPage"] = "NO_RESULTS_ON_PAGE";
@@ -106,80 +109,80 @@ export var ResourceUpdateWarningsCodeEnum;
     ResourceUpdateWarningsCodeEnum["LargeDeploymentWarning"] = "LARGE_DEPLOYMENT_WARNING";
     ResourceUpdateWarningsCodeEnum["NextHopInstanceHasNoIpv6Interface"] = "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE";
     ResourceUpdateWarningsCodeEnum["InvalidHealthCheckForDynamicWieghtedLb"] = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
-})(ResourceUpdateWarningsCodeEnum || (ResourceUpdateWarningsCodeEnum = {}));
+})(ResourceUpdateWarningsCodeEnum = exports.ResourceUpdateWarningsCodeEnum || (exports.ResourceUpdateWarningsCodeEnum = {}));
 var ResourceUpdateWarningsData = /** @class */ (function (_super) {
     __extends(ResourceUpdateWarningsData, _super);
     function ResourceUpdateWarningsData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ResourceUpdateWarningsData.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ResourceUpdateWarningsData.prototype, "value", void 0);
     return ResourceUpdateWarningsData;
-}(SpeakeasyBase));
-export { ResourceUpdateWarningsData };
+}(utils_1.SpeakeasyBase));
+exports.ResourceUpdateWarningsData = ResourceUpdateWarningsData;
 var ResourceUpdateWarnings = /** @class */ (function (_super) {
     __extends(ResourceUpdateWarnings, _super);
     function ResourceUpdateWarnings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ResourceUpdateWarnings.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ResourceUpdateWarningsData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: ResourceUpdateWarningsData }),
         __metadata("design:type", Array)
     ], ResourceUpdateWarnings.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ResourceUpdateWarnings.prototype, "message", void 0);
     return ResourceUpdateWarnings;
-}(SpeakeasyBase));
-export { ResourceUpdateWarnings };
+}(utils_1.SpeakeasyBase));
+exports.ResourceUpdateWarnings = ResourceUpdateWarnings;
 var ResourceUpdate = /** @class */ (function (_super) {
     __extends(ResourceUpdate, _super);
     function ResourceUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessControl" }),
-        __metadata("design:type", ResourceAccessControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessControl" }),
+        __metadata("design:type", resourceaccesscontrol_1.ResourceAccessControl)
     ], ResourceUpdate.prototype, "accessControl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", ResourceUpdateError)
     ], ResourceUpdate.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalProperties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalProperties" }),
         __metadata("design:type", String)
     ], ResourceUpdate.prototype, "finalProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intent" }),
         __metadata("design:type", String)
     ], ResourceUpdate.prototype, "intent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manifest" }),
         __metadata("design:type", String)
     ], ResourceUpdate.prototype, "manifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", String)
     ], ResourceUpdate.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ResourceUpdate.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: ResourceUpdateWarnings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: ResourceUpdateWarnings }),
         __metadata("design:type", Array)
     ], ResourceUpdate.prototype, "warnings", void 0);
     return ResourceUpdate;
-}(SpeakeasyBase));
-export { ResourceUpdate };
+}(utils_1.SpeakeasyBase));
+exports.ResourceUpdate = ResourceUpdate;

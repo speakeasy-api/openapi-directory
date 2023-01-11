@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetOpenIdTokenForDeveloperIdentityInput extends SpeakeasyBase {
     identityId?: string;
     identityPoolId: string;
-    logins: Map<string, string>;
-    principalTags?: Map<string, string>;
+    logins: Record<string, string>;
+    principalTags?: Record<string, string>;
     tokenDuration?: number;
 }

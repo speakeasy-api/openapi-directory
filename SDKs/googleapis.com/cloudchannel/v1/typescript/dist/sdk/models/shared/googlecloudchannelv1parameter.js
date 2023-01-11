@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Value } from "./googlecloudchannelv1value";
-// GoogleCloudChannelV1Parameter
-/**
- * Definition for extended entitlement parameters.
-**/
-var GoogleCloudChannelV1Parameter = /** @class */ (function (_super) {
-    __extends(GoogleCloudChannelV1Parameter, _super);
-    function GoogleCloudChannelV1Parameter() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=editable" }),
-        __metadata("design:type", Boolean)
-    ], GoogleCloudChannelV1Parameter.prototype, "editable", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1Parameter.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", GoogleCloudChannelV1Value)
-    ], GoogleCloudChannelV1Parameter.prototype, "value", void 0);
-    return GoogleCloudChannelV1Parameter;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Parameter };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Parameter = exports.GoogleCloudChannelV1ParameterInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1value_1 = require("./googlecloudchannelv1value");
 // GoogleCloudChannelV1ParameterInput
 /**
  * Definition for extended entitlement parameters.
@@ -58,13 +37,37 @@ var GoogleCloudChannelV1ParameterInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ParameterInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", GoogleCloudChannelV1Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", googlecloudchannelv1value_1.GoogleCloudChannelV1Value)
     ], GoogleCloudChannelV1ParameterInput.prototype, "value", void 0);
     return GoogleCloudChannelV1ParameterInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ParameterInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ParameterInput = GoogleCloudChannelV1ParameterInput;
+// GoogleCloudChannelV1Parameter
+/**
+ * Definition for extended entitlement parameters.
+**/
+var GoogleCloudChannelV1Parameter = /** @class */ (function (_super) {
+    __extends(GoogleCloudChannelV1Parameter, _super);
+    function GoogleCloudChannelV1Parameter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editable" }),
+        __metadata("design:type", Boolean)
+    ], GoogleCloudChannelV1Parameter.prototype, "editable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1Parameter.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", googlecloudchannelv1value_1.GoogleCloudChannelV1Value)
+    ], GoogleCloudChannelV1Parameter.prototype, "value", void 0);
+    return GoogleCloudChannelV1Parameter;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Parameter = GoogleCloudChannelV1Parameter;

@@ -33,7 +33,7 @@ export class UpdateSamplingRuleHeaders extends SpeakeasyBase {
 **/
 export class UpdateSamplingRuleRequestBodySamplingRuleUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=FixedRate" })
   fixedRate?: number;
@@ -51,10 +51,10 @@ export class UpdateSamplingRuleRequestBodySamplingRuleUpdate extends SpeakeasyBa
   reservoirSize?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn?: string;
+  resourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RuleARN" })
-  ruleArn?: string;
+  ruleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RuleName" })
   ruleName?: string;

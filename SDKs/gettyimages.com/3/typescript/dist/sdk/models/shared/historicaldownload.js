@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimensions } from "./dimensions";
-import { DownloadDetails } from "./downloaddetails";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HistoricalDownload = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensions_1 = require("./dimensions");
+var downloaddetails_1 = require("./downloaddetails");
+var user_1 = require("./user");
 var HistoricalDownload = /** @class */ (function (_super) {
     __extends(HistoricalDownload, _super);
     function HistoricalDownload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agreement_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agreement_name" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "agreementName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_type" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_downloaded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_downloaded" }),
         __metadata("design:type", Date)
     ], HistoricalDownload.prototype, "dateDownloaded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
-        __metadata("design:type", Dimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
+        __metadata("design:type", dimensions_1.Dimensions)
     ], HistoricalDownload.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_details" }),
-        __metadata("design:type", DownloadDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_details" }),
+        __metadata("design:type", downloaddetails_1.DownloadDetails)
     ], HistoricalDownload.prototype, "downloadDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_source" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "downloadSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_id" }),
         __metadata("design:type", Number)
     ], HistoricalDownload.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_type" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "productType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size_name" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "sizeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb_uri" }),
         __metadata("design:type", String)
     ], HistoricalDownload.prototype, "thumbUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], HistoricalDownload.prototype, "user", void 0);
     return HistoricalDownload;
-}(SpeakeasyBase));
-export { HistoricalDownload };
+}(utils_1.SpeakeasyBase));
+exports.HistoricalDownload = HistoricalDownload;

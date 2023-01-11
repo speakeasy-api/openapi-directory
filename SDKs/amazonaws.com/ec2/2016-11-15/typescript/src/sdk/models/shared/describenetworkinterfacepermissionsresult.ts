@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterfacePermission } from "./networkinterfacepermission";
 
 
 
@@ -8,9 +7,9 @@ import { NetworkInterfacePermission } from "./networkinterfacepermission";
  * Contains the output for DescribeNetworkInterfacePermissions.
 **/
 export class DescribeNetworkInterfacePermissionsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: NetworkInterfacePermission })
-  networkInterfacePermissions?: NetworkInterfacePermission[];
+  @SpeakeasyMetadata()
+  networkInterfacePermissions?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

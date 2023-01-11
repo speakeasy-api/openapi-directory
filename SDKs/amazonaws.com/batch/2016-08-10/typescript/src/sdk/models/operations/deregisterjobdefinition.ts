@@ -49,7 +49,7 @@ export class DeregisterJobDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deregisterJobDefinitionResponse?: Map<string, any>;
+  deregisterJobDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serverException?: any;

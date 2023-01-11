@@ -11,7 +11,7 @@ export declare class InsertSectionForProjectRequestBody extends SpeakeasyBase {
     data?: shared.ProjectSectionInsertRequest;
 }
 export declare class InsertSectionForProject200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class InsertSectionForProjectRequest extends SpeakeasyBase {
     pathParams: InsertSectionForProjectPathParams;
@@ -22,5 +22,5 @@ export declare class InsertSectionForProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    insertSectionForProject200ApplicationJsonObject?: InsertSectionForProject200ApplicationJson;
+    insertSectionForProject200ApplicationJSONObject?: InsertSectionForProject200ApplicationJson;
 }

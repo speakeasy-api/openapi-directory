@@ -8,6 +8,6 @@ export declare class LensReviewSummary extends SpeakeasyBase {
     lensName?: string;
     lensStatus?: LensStatusEnum;
     lensVersion?: string;
-    riskCounts?: Map<string, number>;
+    riskCounts?: Record<string, number>;
     updatedAt?: Date;
 }

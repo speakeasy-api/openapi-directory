@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NearbyAttributes } from "./nearbyattributes";
-export var NearbyTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Nearby = exports.NearbyTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nearbyattributes_1 = require("./nearbyattributes");
+var NearbyTypeEnum;
 (function (NearbyTypeEnum) {
     NearbyTypeEnum["NearbyFacility"] = "NearbyFacility";
-})(NearbyTypeEnum || (NearbyTypeEnum = {}));
+})(NearbyTypeEnum = exports.NearbyTypeEnum || (exports.NearbyTypeEnum = {}));
 // Nearby
 /**
  * JSON API-compliant object describing a nearby VA facility
@@ -38,17 +41,17 @@ var Nearby = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", NearbyAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", nearbyattributes_1.NearbyAttributes)
     ], Nearby.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Nearby.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Nearby.prototype, "type", void 0);
     return Nearby;
-}(SpeakeasyBase));
-export { Nearby };
+}(utils_1.SpeakeasyBase));
+exports.Nearby = Nearby;

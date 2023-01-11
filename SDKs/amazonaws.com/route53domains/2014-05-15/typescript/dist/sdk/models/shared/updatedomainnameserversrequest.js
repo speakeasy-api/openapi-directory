@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Nameserver } from "./nameserver";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDomainNameserversRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var nameserver_1 = require("./nameserver");
 // UpdateDomainNameserversRequest
 /**
  * <p>Replaces the current set of name servers for the domain with the specified set of name servers. If you use Amazon Route 53 as your DNS service, specify the four name servers in the delegation set for the hosted zone for the domain.</p> <p>If successful, this operation returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by email. </p>
@@ -34,17 +37,17 @@ var UpdateDomainNameserversRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
         __metadata("design:type", String)
     ], UpdateDomainNameserversRequest.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FIAuthKey" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FIAuthKey" }),
+        __metadata("design:type", Object)
     ], UpdateDomainNameserversRequest.prototype, "fiAuthKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Nameservers", elemType: Nameserver }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Nameservers", elemType: nameserver_1.Nameserver }),
         __metadata("design:type", Array)
     ], UpdateDomainNameserversRequest.prototype, "nameservers", void 0);
     return UpdateDomainNameserversRequest;
-}(SpeakeasyBase));
-export { UpdateDomainNameserversRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDomainNameserversRequest = UpdateDomainNameserversRequest;

@@ -14,6 +14,6 @@ export declare class DeleteTagFromChannelRequest extends SpeakeasyBase {
 export declare class DeleteTagFromChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

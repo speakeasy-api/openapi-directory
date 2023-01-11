@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestrequest";
-import { GoogleAppsDriveLabelsV2betaWriteControl } from "./googleappsdrivelabelsv2betawritecontrol";
-export var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput = exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestrequest");
+var googleappsdrivelabelsv2betawritecontrol_1 = require("./googleappsdrivelabelsv2betawritecontrol");
+var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum;
 (function (GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum) {
     GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum["LabelViewBasic"] = "LABEL_VIEW_BASIC";
     GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum["LabelViewFull"] = "LABEL_VIEW_FULL";
-})(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum || (GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum = {}));
+})(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum = exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum || (exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestViewEnum = {}));
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput
 /**
  * The set of requests for updating aspects of a Label. If any request is not valid, no requests will be applied.
@@ -40,25 +43,25 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: googleappsdrivelabelsv2betadeltaupdatelabelrequestrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput.prototype, "requests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAdminAccess" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput.prototype, "useAdminAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput.prototype, "view", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeControl" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaWriteControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeControl" }),
+        __metadata("design:type", googleappsdrivelabelsv2betawritecontrol_1.GoogleAppsDriveLabelsV2betaWriteControl)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput.prototype, "writeControl", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput;

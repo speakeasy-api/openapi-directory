@@ -13,7 +13,7 @@ export declare class TeamsListChildRequest extends SpeakeasyBase {
 }
 export declare class TeamsListChildResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     team2s?: shared.Team2[];
 }

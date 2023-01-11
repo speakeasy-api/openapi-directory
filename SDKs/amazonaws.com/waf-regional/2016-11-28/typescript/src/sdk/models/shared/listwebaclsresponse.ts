@@ -8,5 +8,5 @@ export class ListWebAcLsResponse extends SpeakeasyBase {
   nextMarker?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLs", elemType: WebAclSummary })
-  webAcLs?: WebAclSummary[];
+  webACLs?: WebAclSummary[];
 }

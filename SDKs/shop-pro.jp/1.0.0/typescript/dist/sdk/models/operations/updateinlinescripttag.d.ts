@@ -51,5 +51,5 @@ export declare class UpdateInlineScriptTagRequest extends SpeakeasyBase {
 export declare class UpdateInlineScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateInlineScriptTag200ApplicationJsonObject?: UpdateInlineScriptTag200ApplicationJson;
+    updateInlineScriptTag200ApplicationJSONObject?: UpdateInlineScriptTag200ApplicationJson;
 }

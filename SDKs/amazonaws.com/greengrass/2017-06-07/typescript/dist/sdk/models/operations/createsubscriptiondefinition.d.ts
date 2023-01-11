@@ -19,7 +19,7 @@ export declare class CreateSubscriptionDefinitionRequestBodyInitialVersion exten
 export declare class CreateSubscriptionDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateSubscriptionDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateSubscriptionDefinitionRequest extends SpeakeasyBase {
     headers: CreateSubscriptionDefinitionHeaders;

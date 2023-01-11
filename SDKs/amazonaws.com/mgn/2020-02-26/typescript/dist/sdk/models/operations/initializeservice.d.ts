@@ -14,7 +14,7 @@ export declare class InitializeServiceRequest extends SpeakeasyBase {
 export declare class InitializeServiceResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    initializeServiceResponse?: Map<string, any>;
+    initializeServiceResponse?: Record<string, any>;
     statusCode: number;
     validationException?: any;
 }

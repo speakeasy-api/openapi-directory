@@ -6,7 +6,7 @@ export declare class DescribeTaskOutput extends SpeakeasyBase {
     description?: string;
     lastUpdatedAt?: Date;
     state?: TaskStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     targets?: string[];
     taskArn?: string;
     taskId?: string;

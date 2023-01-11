@@ -27,6 +27,6 @@ export declare class RecommendationengineProjectsLocationsCatalogsEventStoresPre
 }
 export declare class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

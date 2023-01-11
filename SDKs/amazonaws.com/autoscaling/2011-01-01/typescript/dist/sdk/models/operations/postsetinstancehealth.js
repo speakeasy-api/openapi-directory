@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostSetInstanceHealthActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSetInstanceHealthResponse = exports.PostSetInstanceHealthRequest = exports.PostSetInstanceHealthHeaders = exports.PostSetInstanceHealthQueryParams = exports.PostSetInstanceHealthVersionEnum = exports.PostSetInstanceHealthActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostSetInstanceHealthActionEnum;
 (function (PostSetInstanceHealthActionEnum) {
     PostSetInstanceHealthActionEnum["SetInstanceHealth"] = "SetInstanceHealth";
-})(PostSetInstanceHealthActionEnum || (PostSetInstanceHealthActionEnum = {}));
-export var PostSetInstanceHealthVersionEnum;
+})(PostSetInstanceHealthActionEnum = exports.PostSetInstanceHealthActionEnum || (exports.PostSetInstanceHealthActionEnum = {}));
+var PostSetInstanceHealthVersionEnum;
 (function (PostSetInstanceHealthVersionEnum) {
     PostSetInstanceHealthVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostSetInstanceHealthVersionEnum || (PostSetInstanceHealthVersionEnum = {}));
+})(PostSetInstanceHealthVersionEnum = exports.PostSetInstanceHealthVersionEnum || (exports.PostSetInstanceHealthVersionEnum = {}));
 var PostSetInstanceHealthQueryParams = /** @class */ (function (_super) {
     __extends(PostSetInstanceHealthQueryParams, _super);
     function PostSetInstanceHealthQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthQueryParams.prototype, "version", void 0);
     return PostSetInstanceHealthQueryParams;
-}(SpeakeasyBase));
-export { PostSetInstanceHealthQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSetInstanceHealthQueryParams = PostSetInstanceHealthQueryParams;
 var PostSetInstanceHealthHeaders = /** @class */ (function (_super) {
     __extends(PostSetInstanceHealthHeaders, _super);
     function PostSetInstanceHealthHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostSetInstanceHealthHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostSetInstanceHealthHeaders;
-}(SpeakeasyBase));
-export { PostSetInstanceHealthHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostSetInstanceHealthHeaders = PostSetInstanceHealthHeaders;
 var PostSetInstanceHealthRequest = /** @class */ (function (_super) {
     __extends(PostSetInstanceHealthRequest, _super);
     function PostSetInstanceHealthRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetInstanceHealthQueryParams)
     ], PostSetInstanceHealthRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetInstanceHealthHeaders)
     ], PostSetInstanceHealthRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostSetInstanceHealthRequest.prototype, "request", void 0);
     return PostSetInstanceHealthRequest;
-}(SpeakeasyBase));
-export { PostSetInstanceHealthRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSetInstanceHealthRequest = PostSetInstanceHealthRequest;
 var PostSetInstanceHealthResponse = /** @class */ (function (_super) {
     __extends(PostSetInstanceHealthResponse, _super);
     function PostSetInstanceHealthResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostSetInstanceHealthResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetInstanceHealthResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSetInstanceHealthResponse.prototype, "statusCode", void 0);
     return PostSetInstanceHealthResponse;
-}(SpeakeasyBase));
-export { PostSetInstanceHealthResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSetInstanceHealthResponse = PostSetInstanceHealthResponse;

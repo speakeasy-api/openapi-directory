@@ -8,5 +8,5 @@ export declare class StorePersistsRequest extends SpeakeasyBase {
 export declare class StorePersistsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    storePersists200ApplicationJsonString?: string;
+    storePersists200ApplicationJSONString?: string;
 }

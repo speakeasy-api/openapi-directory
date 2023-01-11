@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualificationTypeStatusEnum } from "./qualificationtypestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateQualificationTypeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualificationtypestatusenum_1 = require("./qualificationtypestatusenum");
 var CreateQualificationTypeRequest = /** @class */ (function (_super) {
     __extends(CreateQualificationTypeRequest, _super);
     function CreateQualificationTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnswerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnswerKey" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "answerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGranted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGranted" }),
         __metadata("design:type", Boolean)
     ], CreateQualificationTypeRequest.prototype, "autoGranted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGrantedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGrantedValue" }),
         __metadata("design:type", Number)
     ], CreateQualificationTypeRequest.prototype, "autoGrantedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keywords" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeStatus" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "qualificationTypeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetryDelayInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetryDelayInSeconds" }),
         __metadata("design:type", Number)
     ], CreateQualificationTypeRequest.prototype, "retryDelayInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Test" }),
         __metadata("design:type", String)
     ], CreateQualificationTypeRequest.prototype, "test", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestDurationInSeconds" }),
         __metadata("design:type", Number)
     ], CreateQualificationTypeRequest.prototype, "testDurationInSeconds", void 0);
     return CreateQualificationTypeRequest;
-}(SpeakeasyBase));
-export { CreateQualificationTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateQualificationTypeRequest = CreateQualificationTypeRequest;

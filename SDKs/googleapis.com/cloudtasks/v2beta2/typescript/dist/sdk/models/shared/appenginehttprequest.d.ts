@@ -15,7 +15,7 @@ export declare enum AppEngineHttpRequestHttpMethodEnum {
 **/
 export declare class AppEngineHttpRequest extends SpeakeasyBase {
     appEngineRouting?: AppEngineRouting;
-    headers?: Map<string, string>;
+    headers?: Record<string, string>;
     httpMethod?: AppEngineHttpRequestHttpMethodEnum;
     payload?: string;
     relativeUrl?: string;

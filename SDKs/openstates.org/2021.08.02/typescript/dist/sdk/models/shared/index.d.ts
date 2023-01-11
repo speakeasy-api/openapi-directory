@@ -8,7 +8,6 @@ export * from "./billdocumentorversion";
 export * from "./billidentifier";
 export * from "./billincludeenum";
 export * from "./billlist";
-export * from "./billsortoptionenum";
 export * from "./billsponsorship";
 export * from "./billtitle";
 export * from "./chamber";

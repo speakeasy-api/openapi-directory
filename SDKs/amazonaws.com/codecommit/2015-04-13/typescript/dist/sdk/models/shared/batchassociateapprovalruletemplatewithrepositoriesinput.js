@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchAssociateApprovalRuleTemplateWithRepositoriesInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var BatchAssociateApprovalRuleTemplateWithRepositoriesInput = /** @class */ (function (_super) {
     __extends(BatchAssociateApprovalRuleTemplateWithRepositoriesInput, _super);
     function BatchAssociateApprovalRuleTemplateWithRepositoriesInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleTemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleTemplateName" }),
         __metadata("design:type", String)
     ], BatchAssociateApprovalRuleTemplateWithRepositoriesInput.prototype, "approvalRuleTemplateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryNames" }),
         __metadata("design:type", Array)
     ], BatchAssociateApprovalRuleTemplateWithRepositoriesInput.prototype, "repositoryNames", void 0);
     return BatchAssociateApprovalRuleTemplateWithRepositoriesInput;
-}(SpeakeasyBase));
-export { BatchAssociateApprovalRuleTemplateWithRepositoriesInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchAssociateApprovalRuleTemplateWithRepositoriesInput = BatchAssociateApprovalRuleTemplateWithRepositoriesInput;

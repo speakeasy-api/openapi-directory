@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestedPlatform = void 0;
+var utils_1 = require("../../../internal/utils");
 var NestedPlatform = /** @class */ (function (_super) {
     __extends(NestedPlatform, _super);
     function NestedPlatform() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_count" }),
         __metadata("design:type", Number)
     ], NestedPlatform.prototype, "deviceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NestedPlatform.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NestedPlatform.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], NestedPlatform.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], NestedPlatform.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualmachine_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualmachine_count" }),
         __metadata("design:type", Number)
     ], NestedPlatform.prototype, "virtualmachineCount", void 0);
     return NestedPlatform;
-}(SpeakeasyBase));
-export { NestedPlatform };
+}(utils_1.SpeakeasyBase));
+exports.NestedPlatform = NestedPlatform;

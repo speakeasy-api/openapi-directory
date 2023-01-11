@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionCodeLocation } from "./functioncodelocation";
-import { FunctionConfiguration } from "./functionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFunctionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var functioncodelocation_1 = require("./functioncodelocation");
+var functionconfiguration_1 = require("./functionconfiguration");
 // GetFunctionResponse
 /**
  * This response contains the object for AWS Lambda function location (see <a>API_FunctionCodeLocation</a>
@@ -35,13 +38,13 @@ var GetFunctionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
-        __metadata("design:type", FunctionCodeLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
+        __metadata("design:type", functioncodelocation_1.FunctionCodeLocation)
     ], GetFunctionResponse.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configuration" }),
-        __metadata("design:type", FunctionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configuration" }),
+        __metadata("design:type", functionconfiguration_1.FunctionConfiguration)
     ], GetFunctionResponse.prototype, "configuration", void 0);
     return GetFunctionResponse;
-}(SpeakeasyBase));
-export { GetFunctionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFunctionResponse = GetFunctionResponse;

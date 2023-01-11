@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ByoipCidr } from "./byoipcidr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WithdrawByoipCidrResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var byoipcidr_1 = require("./byoipcidr");
 var WithdrawByoipCidrResponse = /** @class */ (function (_super) {
     __extends(WithdrawByoipCidrResponse, _super);
     function WithdrawByoipCidrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ByoipCidr" }),
-        __metadata("design:type", ByoipCidr)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ByoipCidr" }),
+        __metadata("design:type", byoipcidr_1.ByoipCidr)
     ], WithdrawByoipCidrResponse.prototype, "byoipCidr", void 0);
     return WithdrawByoipCidrResponse;
-}(SpeakeasyBase));
-export { WithdrawByoipCidrResponse };
+}(utils_1.SpeakeasyBase));
+exports.WithdrawByoipCidrResponse = WithdrawByoipCidrResponse;

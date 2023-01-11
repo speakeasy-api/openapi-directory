@@ -19,5 +19,5 @@ export declare class UpdateNetworkCellularGatewayUplinkRequest extends Speakeasy
 export declare class UpdateNetworkCellularGatewayUplinkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkCellularGatewayUplink200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkCellularGatewayUplink200ApplicationJSONObject?: Record<string, any>;
 }

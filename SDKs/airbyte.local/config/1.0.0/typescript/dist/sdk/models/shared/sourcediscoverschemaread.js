@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AirbyteCatalog } from "./airbytecatalog";
-import { SynchronousJobRead } from "./synchronousjobread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceDiscoverSchemaRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var airbytecatalog_1 = require("./airbytecatalog");
+var synchronousjobread_1 = require("./synchronousjobread");
 // SourceDiscoverSchemaRead
 /**
  * Returns the results of a discover catalog job. If the job was not successful, the catalog field will not be present. jobInfo will aways be present and its status be used to determine if the job was successful or not.
@@ -35,13 +38,13 @@ var SourceDiscoverSchemaRead = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catalog" }),
-        __metadata("design:type", AirbyteCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catalog" }),
+        __metadata("design:type", airbytecatalog_1.AirbyteCatalog)
     ], SourceDiscoverSchemaRead.prototype, "catalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobInfo" }),
-        __metadata("design:type", SynchronousJobRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobInfo" }),
+        __metadata("design:type", synchronousjobread_1.SynchronousJobRead)
     ], SourceDiscoverSchemaRead.prototype, "jobInfo", void 0);
     return SourceDiscoverSchemaRead;
-}(SpeakeasyBase));
-export { SourceDiscoverSchemaRead };
+}(utils_1.SpeakeasyBase));
+exports.SourceDiscoverSchemaRead = SourceDiscoverSchemaRead;

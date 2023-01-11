@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserOwnedGrafeasNote } from "./userownedgrafeasnote";
-import { UserOwnedGrafeasNoteInput } from "./userownedgrafeasnote";
-// Attestor
-/**
- * An attestor that attests to container image artifacts. An existing attestor cannot be modified except where indicated.
-**/
-var Attestor = /** @class */ (function (_super) {
-    __extends(Attestor, _super);
-    function Attestor() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], Attestor.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], Attestor.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], Attestor.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], Attestor.prototype, "updateTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=userOwnedGrafeasNote" }),
-        __metadata("design:type", UserOwnedGrafeasNote)
-    ], Attestor.prototype, "userOwnedGrafeasNote", void 0);
-    return Attestor;
-}(SpeakeasyBase));
-export { Attestor };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attestor = exports.AttestorInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var userownedgrafeasnote_1 = require("./userownedgrafeasnote");
+var userownedgrafeasnote_2 = require("./userownedgrafeasnote");
 // AttestorInput
 /**
  * An attestor that attests to container image artifacts. An existing attestor cannot be modified except where indicated.
@@ -67,21 +38,53 @@ var AttestorInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], AttestorInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], AttestorInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AttestorInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userOwnedGrafeasNote" }),
-        __metadata("design:type", UserOwnedGrafeasNoteInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userOwnedGrafeasNote" }),
+        __metadata("design:type", userownedgrafeasnote_1.UserOwnedGrafeasNoteInput)
     ], AttestorInput.prototype, "userOwnedGrafeasNote", void 0);
     return AttestorInput;
-}(SpeakeasyBase));
-export { AttestorInput };
+}(utils_1.SpeakeasyBase));
+exports.AttestorInput = AttestorInput;
+// Attestor
+/**
+ * An attestor that attests to container image artifacts. An existing attestor cannot be modified except where indicated.
+**/
+var Attestor = /** @class */ (function (_super) {
+    __extends(Attestor, _super);
+    function Attestor() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], Attestor.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], Attestor.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Attestor.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], Attestor.prototype, "updateTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userOwnedGrafeasNote" }),
+        __metadata("design:type", userownedgrafeasnote_2.UserOwnedGrafeasNote)
+    ], Attestor.prototype, "userOwnedGrafeasNote", void 0);
+    return Attestor;
+}(utils_1.SpeakeasyBase));
+exports.Attestor = Attestor;

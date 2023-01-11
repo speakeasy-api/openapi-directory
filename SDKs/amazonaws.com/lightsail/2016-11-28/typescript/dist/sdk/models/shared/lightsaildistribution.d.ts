@@ -26,7 +26,7 @@ export declare class LightsailDistribution extends SpeakeasyBase {
     location?: ResourceLocation;
     name?: string;
     origin?: Origin;
-    originPublicDns?: string;
+    originPublicDNS?: string;
     resourceType?: ResourceTypeEnum;
     status?: string;
     supportCode?: string;

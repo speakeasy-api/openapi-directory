@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
-import { IosDeviceFile } from "./iosdevicefile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosTestSetup = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
+var iosdevicefile_1 = require("./iosdevicefile");
 // IosTestSetup
 /**
  * A description of how to set up an iOS device prior to running the test.
@@ -35,21 +38,21 @@ var IosTestSetup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalIpas", elemType: FileReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalIpas", elemType: filereference_1.FileReference }),
         __metadata("design:type", Array)
     ], IosTestSetup.prototype, "additionalIpas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkProfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkProfile" }),
         __metadata("design:type", String)
     ], IosTestSetup.prototype, "networkProfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullDirectories", elemType: IosDeviceFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullDirectories", elemType: iosdevicefile_1.IosDeviceFile }),
         __metadata("design:type", Array)
     ], IosTestSetup.prototype, "pullDirectories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pushFiles", elemType: IosDeviceFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pushFiles", elemType: iosdevicefile_1.IosDeviceFile }),
         __metadata("design:type", Array)
     ], IosTestSetup.prototype, "pushFiles", void 0);
     return IosTestSetup;
-}(SpeakeasyBase));
-export { IosTestSetup };
+}(utils_1.SpeakeasyBase));
+exports.IosTestSetup = IosTestSetup;

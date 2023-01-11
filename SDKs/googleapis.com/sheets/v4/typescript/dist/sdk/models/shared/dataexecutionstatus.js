@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DataExecutionStatusErrorCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataExecutionStatus = exports.DataExecutionStatusStateEnum = exports.DataExecutionStatusErrorCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DataExecutionStatusErrorCodeEnum;
 (function (DataExecutionStatusErrorCodeEnum) {
     DataExecutionStatusErrorCodeEnum["DataExecutionErrorCodeUnspecified"] = "DATA_EXECUTION_ERROR_CODE_UNSPECIFIED";
     DataExecutionStatusErrorCodeEnum["TimedOut"] = "TIMED_OUT";
@@ -44,15 +47,15 @@ export var DataExecutionStatusErrorCodeEnum;
     DataExecutionStatusErrorCodeEnum["ObjectNotFound"] = "OBJECT_NOT_FOUND";
     DataExecutionStatusErrorCodeEnum["ObjectInErrorState"] = "OBJECT_IN_ERROR_STATE";
     DataExecutionStatusErrorCodeEnum["ObjectSpecInvalid"] = "OBJECT_SPEC_INVALID";
-})(DataExecutionStatusErrorCodeEnum || (DataExecutionStatusErrorCodeEnum = {}));
-export var DataExecutionStatusStateEnum;
+})(DataExecutionStatusErrorCodeEnum = exports.DataExecutionStatusErrorCodeEnum || (exports.DataExecutionStatusErrorCodeEnum = {}));
+var DataExecutionStatusStateEnum;
 (function (DataExecutionStatusStateEnum) {
     DataExecutionStatusStateEnum["DataExecutionStateUnspecified"] = "DATA_EXECUTION_STATE_UNSPECIFIED";
     DataExecutionStatusStateEnum["NotStarted"] = "NOT_STARTED";
     DataExecutionStatusStateEnum["Running"] = "RUNNING";
     DataExecutionStatusStateEnum["Succeeded"] = "SUCCEEDED";
     DataExecutionStatusStateEnum["Failed"] = "FAILED";
-})(DataExecutionStatusStateEnum || (DataExecutionStatusStateEnum = {}));
+})(DataExecutionStatusStateEnum = exports.DataExecutionStatusStateEnum || (exports.DataExecutionStatusStateEnum = {}));
 // DataExecutionStatus
 /**
  * The data execution status. A data execution is created to sync a data source object with the latest data from a DataSource. It is usually scheduled to run at background, you can check its state to tell if an execution completes There are several scenarios where a data execution is triggered to run: * Adding a data source creates an associated data source sheet as well as a data execution to sync the data from the data source to the sheet. * Updating a data source creates a data execution to refresh the associated data source sheet similarly. * You can send refresh request to explicitly refresh one or multiple data source objects.
@@ -63,21 +66,21 @@ var DataExecutionStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", String)
     ], DataExecutionStatus.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], DataExecutionStatus.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRefreshTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRefreshTime" }),
         __metadata("design:type", String)
     ], DataExecutionStatus.prototype, "lastRefreshTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], DataExecutionStatus.prototype, "state", void 0);
     return DataExecutionStatus;
-}(SpeakeasyBase));
-export { DataExecutionStatus };
+}(utils_1.SpeakeasyBase));
+exports.DataExecutionStatus = DataExecutionStatus;

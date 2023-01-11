@@ -24,7 +24,7 @@ export class Action extends SpeakeasyBase {
   clearTimer?: ClearTimerAction;
 
   @SpeakeasyMetadata({ data: "json, name=dynamoDB" })
-  dynamoDb?: DynamoDbAction;
+  dynamoDB?: DynamoDbAction;
 
   @SpeakeasyMetadata({ data: "json, name=dynamoDBv2" })
   dynamoDBv2?: DynamoDBv2Action;

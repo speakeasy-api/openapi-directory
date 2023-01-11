@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CorridorOut } from "./corridorout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchCorridorOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var corridorout_1 = require("./corridorout");
 var BatchCorridorOut = /** @class */ (function (_super) {
     __extends(BatchCorridorOut, _super);
     function BatchCorridorOut() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corridorFromTo", elemType: CorridorOut }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corridorFromTo", elemType: corridorout_1.CorridorOut }),
         __metadata("design:type", Array)
     ], BatchCorridorOut.prototype, "corridorFromTo", void 0);
     return BatchCorridorOut;
-}(SpeakeasyBase));
-export { BatchCorridorOut };
+}(utils_1.SpeakeasyBase));
+exports.BatchCorridorOut = BatchCorridorOut;

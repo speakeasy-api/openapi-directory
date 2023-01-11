@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteScheduledActionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteScheduledActionResponse = exports.PostDeleteScheduledActionRequest = exports.PostDeleteScheduledActionHeaders = exports.PostDeleteScheduledActionQueryParams = exports.PostDeleteScheduledActionVersionEnum = exports.PostDeleteScheduledActionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteScheduledActionActionEnum;
 (function (PostDeleteScheduledActionActionEnum) {
     PostDeleteScheduledActionActionEnum["DeleteScheduledAction"] = "DeleteScheduledAction";
-})(PostDeleteScheduledActionActionEnum || (PostDeleteScheduledActionActionEnum = {}));
-export var PostDeleteScheduledActionVersionEnum;
+})(PostDeleteScheduledActionActionEnum = exports.PostDeleteScheduledActionActionEnum || (exports.PostDeleteScheduledActionActionEnum = {}));
+var PostDeleteScheduledActionVersionEnum;
 (function (PostDeleteScheduledActionVersionEnum) {
     PostDeleteScheduledActionVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostDeleteScheduledActionVersionEnum || (PostDeleteScheduledActionVersionEnum = {}));
+})(PostDeleteScheduledActionVersionEnum = exports.PostDeleteScheduledActionVersionEnum || (exports.PostDeleteScheduledActionVersionEnum = {}));
 var PostDeleteScheduledActionQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteScheduledActionQueryParams, _super);
     function PostDeleteScheduledActionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionQueryParams.prototype, "version", void 0);
     return PostDeleteScheduledActionQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteScheduledActionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteScheduledActionQueryParams = PostDeleteScheduledActionQueryParams;
 var PostDeleteScheduledActionHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteScheduledActionHeaders, _super);
     function PostDeleteScheduledActionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteScheduledActionHeaders;
-}(SpeakeasyBase));
-export { PostDeleteScheduledActionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteScheduledActionHeaders = PostDeleteScheduledActionHeaders;
 var PostDeleteScheduledActionRequest = /** @class */ (function (_super) {
     __extends(PostDeleteScheduledActionRequest, _super);
     function PostDeleteScheduledActionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteScheduledActionQueryParams)
     ], PostDeleteScheduledActionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteScheduledActionHeaders)
     ], PostDeleteScheduledActionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteScheduledActionRequest.prototype, "request", void 0);
     return PostDeleteScheduledActionRequest;
-}(SpeakeasyBase));
-export { PostDeleteScheduledActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteScheduledActionRequest = PostDeleteScheduledActionRequest;
 var PostDeleteScheduledActionResponse = /** @class */ (function (_super) {
     __extends(PostDeleteScheduledActionResponse, _super);
     function PostDeleteScheduledActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteScheduledActionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteScheduledActionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteScheduledActionResponse.prototype, "statusCode", void 0);
     return PostDeleteScheduledActionResponse;
-}(SpeakeasyBase));
-export { PostDeleteScheduledActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteScheduledActionResponse = PostDeleteScheduledActionResponse;

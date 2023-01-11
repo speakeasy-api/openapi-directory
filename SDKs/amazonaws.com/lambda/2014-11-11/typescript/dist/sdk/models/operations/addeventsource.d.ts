@@ -13,7 +13,7 @@ export declare class AddEventSourceRequestBody extends SpeakeasyBase {
     batchSize?: number;
     eventSource: string;
     functionName: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     role: string;
 }
 export declare class AddEventSourceRequest extends SpeakeasyBase {

@@ -5,10 +5,11 @@ import { Fleet } from "./fleet";
 import { Team } from "./team";
 import { Tenant } from "./tenant";
 import { User } from "./user";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://phantauth.net"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     client: Client;
     domain: Domain;
@@ -22,6 +23,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

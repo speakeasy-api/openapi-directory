@@ -1,80 +1,75 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListCertificatesQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 }
 
-
-export class ListCertificatesRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListCertificatesQueryParams;
-}
-
 export enum ListCertificates200ApplicationJsonCertificatesStateEnum {
-    Pending = "pending"
-,    Verified = "verified"
-,    Error = "error"
+    Pending = "pending",
+    Verified = "verified",
+    Error = "error"
 }
 
 export enum ListCertificates200ApplicationJsonCertificatesTypeEnum {
-    Custom = "custom"
-,    LetsEncrypt = "lets_encrypt"
+    Custom = "custom",
+    LetsEncrypt = "lets_encrypt"
 }
 
 
 export class ListCertificates200ApplicationJsonCertificates extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;
 
-  @Metadata({ data: "json, name=dns_names" })
+  @SpeakeasyMetadata({ data: "json, name=dns_names" })
   dnsNames?: string[];
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=not_after" })
+  @SpeakeasyMetadata({ data: "json, name=not_after" })
   notAfter?: Date;
 
-  @Metadata({ data: "json, name=sha1_fingerprint" })
+  @SpeakeasyMetadata({ data: "json, name=sha1_fingerprint" })
   sha1Fingerprint?: string;
 
-  @Metadata({ data: "json, name=state" })
+  @SpeakeasyMetadata({ data: "json, name=state" })
   state?: ListCertificates200ApplicationJsonCertificatesStateEnum;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: ListCertificates200ApplicationJsonCertificatesTypeEnum;
 }
 
 
 export class ListCertificates200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListCertificates200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListCertificates200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -84,51 +79,57 @@ export class ListCertificates200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListCertificates200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListCertificates200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=certificates", elemType: operations.ListCertificates200ApplicationJsonCertificates })
+  @SpeakeasyMetadata({ data: "json, name=certificates", elemType: ListCertificates200ApplicationJsonCertificates })
   certificates?: ListCertificates200ApplicationJsonCertificates[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListCertificates200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListCertificates200ApplicationJsonMeta;
 }
 
 
 export class ListCertificates401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListCertificatesRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListCertificatesQueryParams;
+}
+
+
 export class ListCertificatesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listCertificates200ApplicationJsonObject?: ListCertificates200ApplicationJson;
+  @SpeakeasyMetadata()
+  listCertificates200ApplicationJSONObject?: ListCertificates200ApplicationJson;
 
-  @Metadata()
-  listCertificates401ApplicationJsonObject?: ListCertificates401ApplicationJson;
+  @SpeakeasyMetadata()
+  listCertificates401ApplicationJSONObject?: ListCertificates401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

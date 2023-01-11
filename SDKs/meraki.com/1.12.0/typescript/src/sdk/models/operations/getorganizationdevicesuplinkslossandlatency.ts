@@ -49,5 +49,5 @@ export class GetOrganizationDevicesUplinksLossAndLatencyResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationDevicesUplinksLossAndLatency200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationDevicesUplinksLossAndLatency200ApplicationJSONObject?: Record<string, any>;
 }

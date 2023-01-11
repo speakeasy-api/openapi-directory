@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualizationInterfacesDeleteResponse = exports.VirtualizationInterfacesDeleteRequest = exports.VirtualizationInterfacesDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VirtualizationInterfacesDeletePathParams = /** @class */ (function (_super) {
     __extends(VirtualizationInterfacesDeletePathParams, _super);
     function VirtualizationInterfacesDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], VirtualizationInterfacesDeletePathParams.prototype, "id", void 0);
     return VirtualizationInterfacesDeletePathParams;
-}(SpeakeasyBase));
-export { VirtualizationInterfacesDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationInterfacesDeletePathParams = VirtualizationInterfacesDeletePathParams;
 var VirtualizationInterfacesDeleteRequest = /** @class */ (function (_super) {
     __extends(VirtualizationInterfacesDeleteRequest, _super);
     function VirtualizationInterfacesDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VirtualizationInterfacesDeletePathParams)
     ], VirtualizationInterfacesDeleteRequest.prototype, "pathParams", void 0);
     return VirtualizationInterfacesDeleteRequest;
-}(SpeakeasyBase));
-export { VirtualizationInterfacesDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationInterfacesDeleteRequest = VirtualizationInterfacesDeleteRequest;
 var VirtualizationInterfacesDeleteResponse = /** @class */ (function (_super) {
     __extends(VirtualizationInterfacesDeleteResponse, _super);
     function VirtualizationInterfacesDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VirtualizationInterfacesDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VirtualizationInterfacesDeleteResponse.prototype, "statusCode", void 0);
     return VirtualizationInterfacesDeleteResponse;
-}(SpeakeasyBase));
-export { VirtualizationInterfacesDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationInterfacesDeleteResponse = VirtualizationInterfacesDeleteResponse;

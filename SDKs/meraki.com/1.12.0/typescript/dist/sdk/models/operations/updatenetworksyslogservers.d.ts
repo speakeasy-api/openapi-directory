@@ -17,5 +17,5 @@ export declare class UpdateNetworkSyslogServersRequest extends SpeakeasyBase {
 export declare class UpdateNetworkSyslogServersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSyslogServers200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSyslogServers200ApplicationJSONObject?: Record<string, any>;
 }

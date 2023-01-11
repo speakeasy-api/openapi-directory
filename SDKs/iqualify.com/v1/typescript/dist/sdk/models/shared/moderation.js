@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Moderator } from "./moderator";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Moderation = void 0;
+var utils_1 = require("../../../internal/utils");
+var moderator_1 = require("./moderator");
 var Moderation = /** @class */ (function (_super) {
     __extends(Moderation, _super);
     function Moderation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isMuted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isMuted" }),
         __metadata("design:type", Boolean)
     ], Moderation.prototype, "isMuted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderator" }),
-        __metadata("design:type", Moderator)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderator" }),
+        __metadata("design:type", moderator_1.Moderator)
     ], Moderation.prototype, "moderator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], Moderation.prototype, "reason", void 0);
     return Moderation;
-}(SpeakeasyBase));
-export { Moderation };
+}(utils_1.SpeakeasyBase));
+exports.Moderation = Moderation;

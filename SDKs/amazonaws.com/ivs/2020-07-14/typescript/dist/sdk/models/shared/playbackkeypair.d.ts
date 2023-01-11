@@ -6,5 +6,5 @@ export declare class PlaybackKeyPair extends SpeakeasyBase {
     arn?: string;
     fingerprint?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

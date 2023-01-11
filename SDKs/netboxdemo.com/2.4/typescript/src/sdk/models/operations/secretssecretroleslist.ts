@@ -47,5 +47,5 @@ export class SecretsSecretRolesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  secretsSecretRolesList200ApplicationJsonObject?: SecretsSecretRolesList200ApplicationJson;
+  secretsSecretRolesList200ApplicationJSONObject?: SecretsSecretRolesList200ApplicationJson;
 }

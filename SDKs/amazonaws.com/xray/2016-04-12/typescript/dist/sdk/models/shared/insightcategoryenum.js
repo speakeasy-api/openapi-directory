@@ -1,4 +1,7 @@
-export var InsightCategoryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightCategoryEnum = void 0;
+var InsightCategoryEnum;
 (function (InsightCategoryEnum) {
     InsightCategoryEnum["Fault"] = "FAULT";
-})(InsightCategoryEnum || (InsightCategoryEnum = {}));
+})(InsightCategoryEnum = exports.InsightCategoryEnum || (exports.InsightCategoryEnum = {}));

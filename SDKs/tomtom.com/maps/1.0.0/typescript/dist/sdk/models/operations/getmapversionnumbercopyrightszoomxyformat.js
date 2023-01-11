@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,82 +23,84 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum;
-(function (GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum) {
-    GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum["Json"] = "json";
-    GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum["Jsonp"] = "jsonp";
-    GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum["Xml"] = "xml";
-})(GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum || (GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum = {}));
-var GetMapVersionNumberCopyrightsZoomXYFormatPathParams = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberCopyrightsZoomXYFormatPathParams, _super);
-    function GetMapVersionNumberCopyrightsZoomXYFormatPathParams() {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberCopyrightsZoomXyFormatResponse = exports.GetMapVersionNumberCopyrightsZoomXyFormatRequest = exports.GetMapVersionNumberCopyrightsZoomXyFormatQueryParams = exports.GetMapVersionNumberCopyrightsZoomXyFormatPathParams = exports.GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum;
+(function (GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum) {
+    GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum["Json"] = "json";
+    GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum["Jsonp"] = "jsonp";
+    GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum["Xml"] = "xml";
+})(GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum = exports.GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum || (exports.GetMapVersionNumberCopyrightsZoomXyFormatFormatEnum = {}));
+var GetMapVersionNumberCopyrightsZoomXyFormatPathParams = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberCopyrightsZoomXyFormatPathParams, _super);
+    function GetMapVersionNumberCopyrightsZoomXyFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=X" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=X" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatPathParams.prototype, "x", void 0);
+    ], GetMapVersionNumberCopyrightsZoomXyFormatPathParams.prototype, "x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=Y" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Y" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatPathParams.prototype, "y", void 0);
+    ], GetMapVersionNumberCopyrightsZoomXyFormatPathParams.prototype, "y", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatPathParams.prototype, "format", void 0);
+    ], GetMapVersionNumberCopyrightsZoomXyFormatPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatPathParams.prototype, "versionNumber", void 0);
+    ], GetMapVersionNumberCopyrightsZoomXyFormatPathParams.prototype, "versionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=zoom" }),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatPathParams.prototype, "zoom", void 0);
-    return GetMapVersionNumberCopyrightsZoomXYFormatPathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsZoomXYFormatPathParams };
-var GetMapVersionNumberCopyrightsZoomXYFormatQueryParams = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberCopyrightsZoomXYFormatQueryParams, _super);
-    function GetMapVersionNumberCopyrightsZoomXYFormatQueryParams() {
+    ], GetMapVersionNumberCopyrightsZoomXyFormatPathParams.prototype, "zoom", void 0);
+    return GetMapVersionNumberCopyrightsZoomXyFormatPathParams;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsZoomXyFormatPathParams = GetMapVersionNumberCopyrightsZoomXyFormatPathParams;
+var GetMapVersionNumberCopyrightsZoomXyFormatQueryParams = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberCopyrightsZoomXyFormatQueryParams, _super);
+    function GetMapVersionNumberCopyrightsZoomXyFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatQueryParams.prototype, "callback", void 0);
-    return GetMapVersionNumberCopyrightsZoomXYFormatQueryParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsZoomXYFormatQueryParams };
-var GetMapVersionNumberCopyrightsZoomXYFormatRequest = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberCopyrightsZoomXYFormatRequest, _super);
-    function GetMapVersionNumberCopyrightsZoomXYFormatRequest() {
+    ], GetMapVersionNumberCopyrightsZoomXyFormatQueryParams.prototype, "callback", void 0);
+    return GetMapVersionNumberCopyrightsZoomXyFormatQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsZoomXyFormatQueryParams = GetMapVersionNumberCopyrightsZoomXyFormatQueryParams;
+var GetMapVersionNumberCopyrightsZoomXyFormatRequest = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberCopyrightsZoomXyFormatRequest, _super);
+    function GetMapVersionNumberCopyrightsZoomXyFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetMapVersionNumberCopyrightsZoomXYFormatPathParams)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatRequest.prototype, "pathParams", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetMapVersionNumberCopyrightsZoomXyFormatPathParams)
+    ], GetMapVersionNumberCopyrightsZoomXyFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetMapVersionNumberCopyrightsZoomXYFormatQueryParams)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatRequest.prototype, "queryParams", void 0);
-    return GetMapVersionNumberCopyrightsZoomXYFormatRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsZoomXYFormatRequest };
-var GetMapVersionNumberCopyrightsZoomXYFormatResponse = /** @class */ (function (_super) {
-    __extends(GetMapVersionNumberCopyrightsZoomXYFormatResponse, _super);
-    function GetMapVersionNumberCopyrightsZoomXYFormatResponse() {
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetMapVersionNumberCopyrightsZoomXyFormatQueryParams)
+    ], GetMapVersionNumberCopyrightsZoomXyFormatRequest.prototype, "queryParams", void 0);
+    return GetMapVersionNumberCopyrightsZoomXyFormatRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsZoomXyFormatRequest = GetMapVersionNumberCopyrightsZoomXyFormatRequest;
+var GetMapVersionNumberCopyrightsZoomXyFormatResponse = /** @class */ (function (_super) {
+    __extends(GetMapVersionNumberCopyrightsZoomXyFormatResponse, _super);
+    function GetMapVersionNumberCopyrightsZoomXyFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatResponse.prototype, "contentType", void 0);
+    ], GetMapVersionNumberCopyrightsZoomXyFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetMapVersionNumberCopyrightsZoomXYFormatResponse.prototype, "statusCode", void 0);
-    return GetMapVersionNumberCopyrightsZoomXYFormatResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsZoomXYFormatResponse };
+    ], GetMapVersionNumberCopyrightsZoomXyFormatResponse.prototype, "statusCode", void 0);
+    return GetMapVersionNumberCopyrightsZoomXyFormatResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsZoomXyFormatResponse = GetMapVersionNumberCopyrightsZoomXyFormatResponse;

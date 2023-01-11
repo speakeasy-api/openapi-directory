@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxAddress = void 0;
+var utils_1 = require("../../../internal/utils");
 // TaxAddress
 /**
  * This container consists of address information that can be used by sellers for tax purpose.
@@ -33,21 +36,21 @@ var TaxAddress = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], TaxAddress.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryCode" }),
         __metadata("design:type", String)
     ], TaxAddress.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], TaxAddress.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateOrProvince" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateOrProvince" }),
         __metadata("design:type", String)
     ], TaxAddress.prototype, "stateOrProvince", void 0);
     return TaxAddress;
-}(SpeakeasyBase));
-export { TaxAddress };
+}(utils_1.SpeakeasyBase));
+exports.TaxAddress = TaxAddress;

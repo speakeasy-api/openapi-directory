@@ -3,7 +3,7 @@ import { CategoryType } from "./categorytype";
 import { Deposit } from "./deposit";
 import { TimeDuration } from "./timeduration";
 import { PaymentMethod } from "./paymentmethod";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 /**
  * Complex type that that gets populated with a response containing a payment policy.
 **/
@@ -18,5 +18,5 @@ export declare class SetPaymentPolicyResponse extends SpeakeasyBase {
     paymentInstructions?: string;
     paymentMethods?: PaymentMethod[];
     paymentPolicyId?: string;
-    warnings?: Error[];
+    warnings?: ErrorT[];
 }

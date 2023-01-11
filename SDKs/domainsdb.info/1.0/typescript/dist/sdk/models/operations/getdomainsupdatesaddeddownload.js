@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainsUpdatesAddedDownloadResponse = exports.GetDomainsUpdatesAddedDownloadRequest = exports.GetDomainsUpdatesAddedDownloadQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDomainsUpdatesAddedDownloadQueryParams = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesAddedDownloadQueryParams, _super);
     function GetDomainsUpdatesAddedDownloadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetDomainsUpdatesAddedDownloadQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetDomainsUpdatesAddedDownloadQueryParams.prototype, "date", void 0);
     return GetDomainsUpdatesAddedDownloadQueryParams;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesAddedDownloadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesAddedDownloadQueryParams = GetDomainsUpdatesAddedDownloadQueryParams;
 var GetDomainsUpdatesAddedDownloadRequest = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesAddedDownloadRequest, _super);
     function GetDomainsUpdatesAddedDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDomainsUpdatesAddedDownloadQueryParams)
     ], GetDomainsUpdatesAddedDownloadRequest.prototype, "queryParams", void 0);
     return GetDomainsUpdatesAddedDownloadRequest;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesAddedDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesAddedDownloadRequest = GetDomainsUpdatesAddedDownloadRequest;
 var GetDomainsUpdatesAddedDownloadResponse = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesAddedDownloadResponse, _super);
     function GetDomainsUpdatesAddedDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDomainsUpdatesAddedDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDomainsUpdatesAddedDownloadResponse.prototype, "statusCode", void 0);
     return GetDomainsUpdatesAddedDownloadResponse;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesAddedDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesAddedDownloadResponse = GetDomainsUpdatesAddedDownloadResponse;

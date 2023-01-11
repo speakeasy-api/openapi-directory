@@ -66,7 +66,7 @@ export class CreateFacetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createFacetResponse?: Map<string, any>;
+  createFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   facetAlreadyExistsException?: shared.FacetAlreadyExistsException;

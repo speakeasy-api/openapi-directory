@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginRequestPolicyQueryStringBehaviorEnum } from "./originrequestpolicyquerystringbehaviorenum";
-import { QueryStringNames } from "./querystringnames";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OriginRequestPolicyQueryStringsConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var originrequestpolicyquerystringbehaviorenum_1 = require("./originrequestpolicyquerystringbehaviorenum");
+var querystringnames_1 = require("./querystringnames");
 // OriginRequestPolicyQueryStringsConfig
 /**
  * An object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in requests that CloudFront sends to the origin.
@@ -35,13 +38,13 @@ var OriginRequestPolicyQueryStringsConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OriginRequestPolicyQueryStringsConfig.prototype, "queryStringBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", QueryStringNames)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", querystringnames_1.QueryStringNames)
     ], OriginRequestPolicyQueryStringsConfig.prototype, "queryStrings", void 0);
     return OriginRequestPolicyQueryStringsConfig;
-}(SpeakeasyBase));
-export { OriginRequestPolicyQueryStringsConfig };
+}(utils_1.SpeakeasyBase));
+exports.OriginRequestPolicyQueryStringsConfig = OriginRequestPolicyQueryStringsConfig;

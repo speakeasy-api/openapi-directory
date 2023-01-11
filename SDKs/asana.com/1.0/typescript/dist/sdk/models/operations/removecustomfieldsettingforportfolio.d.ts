@@ -10,7 +10,7 @@ export declare class RemoveCustomFieldSettingForPortfolioRequestBody extends Spe
     data?: shared.RemoveCustomFieldSettingRequest;
 }
 export declare class RemoveCustomFieldSettingForPortfolio200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveCustomFieldSettingForPortfolioRequest extends SpeakeasyBase {
     pathParams: RemoveCustomFieldSettingForPortfolioPathParams;
@@ -21,5 +21,5 @@ export declare class RemoveCustomFieldSettingForPortfolioResponse extends Speake
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeCustomFieldSettingForPortfolio200ApplicationJsonObject?: RemoveCustomFieldSettingForPortfolio200ApplicationJson;
+    removeCustomFieldSettingForPortfolio200ApplicationJSONObject?: RemoveCustomFieldSettingForPortfolio200ApplicationJson;
 }

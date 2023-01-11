@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuperannuationCalculationTypeEnum } from "./superannuationcalculationtypeenum";
-import { SuperannuationContributionTypeEnum } from "./superannuationcontributiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuperLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var superannuationcalculationtypeenum_1 = require("./superannuationcalculationtypeenum");
+var superannuationcontributiontypeenum_1 = require("./superannuationcontributiontypeenum");
 var SuperLine = /** @class */ (function (_super) {
     __extends(SuperLine, _super);
     function SuperLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
         __metadata("design:type", Number)
     ], SuperLine.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CalculationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CalculationType" }),
         __metadata("design:type", String)
     ], SuperLine.prototype, "calculationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContributionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContributionType" }),
         __metadata("design:type", String)
     ], SuperLine.prototype, "contributionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpenseAccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpenseAccountCode" }),
         __metadata("design:type", String)
     ], SuperLine.prototype, "expenseAccountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LiabilityAccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LiabilityAccountCode" }),
         __metadata("design:type", String)
     ], SuperLine.prototype, "liabilityAccountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumMonthlyEarnings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumMonthlyEarnings" }),
         __metadata("design:type", Number)
     ], SuperLine.prototype, "minimumMonthlyEarnings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Percentage" }),
         __metadata("design:type", Number)
     ], SuperLine.prototype, "percentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperMembershipID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperMembershipID" }),
         __metadata("design:type", String)
-    ], SuperLine.prototype, "superMembershipId", void 0);
+    ], SuperLine.prototype, "superMembershipID", void 0);
     return SuperLine;
-}(SpeakeasyBase));
-export { SuperLine };
+}(utils_1.SpeakeasyBase));
+exports.SuperLine = SuperLine;

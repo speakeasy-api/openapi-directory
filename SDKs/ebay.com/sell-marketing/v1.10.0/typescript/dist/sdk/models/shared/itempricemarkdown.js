@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SelectedInventoryDiscount } from "./selectedinventorydiscount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemPriceMarkdown = void 0;
+var utils_1 = require("../../../internal/utils");
+var selectedinventorydiscount_1 = require("./selectedinventorydiscount");
 // ItemPriceMarkdown
 /**
  * This type defines the fields used to describe an item price markdown promotion.
@@ -34,53 +37,53 @@ var ItemPriceMarkdown = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applyFreeShipping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applyFreeShipping" }),
         __metadata("design:type", Boolean)
     ], ItemPriceMarkdown.prototype, "applyFreeShipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoSelectFutureInventory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoSelectFutureInventory" }),
         __metadata("design:type", Boolean)
     ], ItemPriceMarkdown.prototype, "autoSelectFutureInventory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockPriceIncreaseInItemRevision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockPriceIncreaseInItemRevision" }),
         __metadata("design:type", Boolean)
     ], ItemPriceMarkdown.prototype, "blockPriceIncreaseInItemRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionImageUrl" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "promotionImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionStatus" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "promotionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedInventoryDiscounts", elemType: SelectedInventoryDiscount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedInventoryDiscounts", elemType: selectedinventorydiscount_1.SelectedInventoryDiscount }),
         __metadata("design:type", Array)
     ], ItemPriceMarkdown.prototype, "selectedInventoryDiscounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], ItemPriceMarkdown.prototype, "startDate", void 0);
     return ItemPriceMarkdown;
-}(SpeakeasyBase));
-export { ItemPriceMarkdown };
+}(utils_1.SpeakeasyBase));
+exports.ItemPriceMarkdown = ItemPriceMarkdown;

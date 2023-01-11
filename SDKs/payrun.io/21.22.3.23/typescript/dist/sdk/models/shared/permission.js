@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PermissionPermissionPolicyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = exports.PermissionPermission = exports.PermissionPermissionVerbsEnum = exports.PermissionPermissionPolicyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PermissionPermissionPolicyEnum;
 (function (PermissionPermissionPolicyEnum) {
     PermissionPermissionPolicyEnum["Allow"] = "Allow";
     PermissionPermissionPolicyEnum["Deny"] = "Deny";
-})(PermissionPermissionPolicyEnum || (PermissionPermissionPolicyEnum = {}));
-export var PermissionPermissionVerbsEnum;
+})(PermissionPermissionPolicyEnum = exports.PermissionPermissionPolicyEnum || (exports.PermissionPermissionPolicyEnum = {}));
+var PermissionPermissionVerbsEnum;
 (function (PermissionPermissionVerbsEnum) {
     PermissionPermissionVerbsEnum["Read"] = "Read";
     PermissionPermissionVerbsEnum["Write"] = "Write";
     PermissionPermissionVerbsEnum["Delete"] = "Delete";
     PermissionPermissionVerbsEnum["All"] = "All";
-})(PermissionPermissionVerbsEnum || (PermissionPermissionVerbsEnum = {}));
+})(PermissionPermissionVerbsEnum = exports.PermissionPermissionVerbsEnum || (exports.PermissionPermissionVerbsEnum = {}));
 var PermissionPermission = /** @class */ (function (_super) {
     __extends(PermissionPermission, _super);
     function PermissionPermission() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], PermissionPermission.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expression" }),
         __metadata("design:type", String)
     ], PermissionPermission.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], PermissionPermission.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Policy" }),
         __metadata("design:type", String)
     ], PermissionPermission.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Verbs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Verbs" }),
         __metadata("design:type", String)
     ], PermissionPermission.prototype, "verbs", void 0);
     return PermissionPermission;
-}(SpeakeasyBase));
-export { PermissionPermission };
+}(utils_1.SpeakeasyBase));
+exports.PermissionPermission = PermissionPermission;
 var Permission = /** @class */ (function (_super) {
     __extends(Permission, _super);
     function Permission() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permission" }),
         __metadata("design:type", PermissionPermission)
     ], Permission.prototype, "permission", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

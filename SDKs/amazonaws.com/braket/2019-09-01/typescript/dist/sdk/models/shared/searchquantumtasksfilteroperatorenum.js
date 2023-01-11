@@ -1,4 +1,7 @@
-export var SearchQuantumTasksFilterOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchQuantumTasksFilterOperatorEnum = void 0;
+var SearchQuantumTasksFilterOperatorEnum;
 (function (SearchQuantumTasksFilterOperatorEnum) {
     SearchQuantumTasksFilterOperatorEnum["Lt"] = "LT";
     SearchQuantumTasksFilterOperatorEnum["Lte"] = "LTE";
@@ -6,4 +9,4 @@ export var SearchQuantumTasksFilterOperatorEnum;
     SearchQuantumTasksFilterOperatorEnum["Gt"] = "GT";
     SearchQuantumTasksFilterOperatorEnum["Gte"] = "GTE";
     SearchQuantumTasksFilterOperatorEnum["Between"] = "BETWEEN";
-})(SearchQuantumTasksFilterOperatorEnum || (SearchQuantumTasksFilterOperatorEnum = {}));
+})(SearchQuantumTasksFilterOperatorEnum = exports.SearchQuantumTasksFilterOperatorEnum || (exports.SearchQuantumTasksFilterOperatorEnum = {}));

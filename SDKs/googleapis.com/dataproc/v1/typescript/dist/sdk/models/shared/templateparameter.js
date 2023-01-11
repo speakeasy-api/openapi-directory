@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ParameterValidation } from "./parametervalidation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateParameter = void 0;
+var utils_1 = require("../../../internal/utils");
+var parametervalidation_1 = require("./parametervalidation");
 // TemplateParameter
 /**
  * A configurable parameter that replaces one or more fields in the template. Parameterizable fields: - Labels - File uris - Job properties - Job arguments - Script variables - Main class (in HadoopJob and SparkJob) - Zone (in ClusterSelector)
@@ -34,21 +37,21 @@ var TemplateParameter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TemplateParameter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", Array)
     ], TemplateParameter.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TemplateParameter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validation" }),
-        __metadata("design:type", ParameterValidation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validation" }),
+        __metadata("design:type", parametervalidation_1.ParameterValidation)
     ], TemplateParameter.prototype, "validation", void 0);
     return TemplateParameter;
-}(SpeakeasyBase));
-export { TemplateParameter };
+}(utils_1.SpeakeasyBase));
+exports.TemplateParameter = TemplateParameter;

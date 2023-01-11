@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetValueResponse = exports.SetValueRequest = exports.SetValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetValuePathParams = /** @class */ (function (_super) {
     __extends(SetValuePathParams, _super);
     function SetValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetValuePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], SetValuePathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
         __metadata("design:type", String)
     ], SetValuePathParams.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable" }),
         __metadata("design:type", String)
     ], SetValuePathParams.prototype, "variable", void 0);
     return SetValuePathParams;
-}(SpeakeasyBase));
-export { SetValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetValuePathParams = SetValuePathParams;
 var SetValueRequest = /** @class */ (function (_super) {
     __extends(SetValueRequest, _super);
     function SetValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetValuePathParams)
     ], SetValueRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], SetValueRequest.prototype, "request", void 0);
     return SetValueRequest;
-}(SpeakeasyBase));
-export { SetValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetValueRequest = SetValueRequest;
 var SetValueResponse = /** @class */ (function (_super) {
     __extends(SetValueResponse, _super);
     function SetValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetValueResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetValueResponse.prototype, "setValue200ApplicationJsonString", void 0);
+    ], SetValueResponse.prototype, "setValue200ApplicationJSONString", void 0);
     return SetValueResponse;
-}(SpeakeasyBase));
-export { SetValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetValueResponse = SetValueResponse;

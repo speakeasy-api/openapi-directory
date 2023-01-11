@@ -85,8 +85,8 @@ export class GetTenantTenantnameResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getTenantTenantname200ApplicationJsonObject?: GetTenantTenantname200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getTenantTenantname200ApplicationJSONObject?: GetTenantTenantname200ApplicationJson;
 }

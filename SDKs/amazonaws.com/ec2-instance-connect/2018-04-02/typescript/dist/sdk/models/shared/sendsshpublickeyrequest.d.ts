@@ -2,6 +2,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class SendSshPublicKeyRequest extends SpeakeasyBase {
     availabilityZone: string;
     instanceId: string;
-    instanceOsUser: string;
+    instanceOSUser: string;
     sshPublicKey: string;
 }

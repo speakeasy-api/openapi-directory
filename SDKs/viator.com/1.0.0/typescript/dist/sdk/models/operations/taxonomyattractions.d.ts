@@ -31,10 +31,10 @@ export declare class TaxonomyAttractions200ApplicationJsonData extends Speakeasy
     rating?: number;
     seoId?: number;
     sortOrder?: number;
-    thumbnailHiResUrl?: string;
-    thumbnailUrl?: string;
+    thumbnailHiResURL?: string;
+    thumbnailURL?: string;
     title?: string;
-    webUrl?: string;
+    webURL?: string;
 }
 export declare class TaxonomyAttractions200ApplicationJson extends SpeakeasyBase {
     data?: TaxonomyAttractions200ApplicationJsonData[];
@@ -45,8 +45,8 @@ export declare class TaxonomyAttractions200ApplicationJson extends SpeakeasyBase
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -58,5 +58,5 @@ export declare class TaxonomyAttractionsRequest extends SpeakeasyBase {
 export declare class TaxonomyAttractionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    taxonomyAttractions200ApplicationJsonObject?: TaxonomyAttractions200ApplicationJson;
+    taxonomyAttractions200ApplicationJSONObject?: TaxonomyAttractions200ApplicationJson;
 }

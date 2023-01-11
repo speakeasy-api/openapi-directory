@@ -5,6 +5,6 @@ export declare class GetNumbersAreacodes200ApplicationJson extends SpeakeasyBase
 }
 export declare class GetNumbersAreacodesResponse extends SpeakeasyBase {
     contentType: string;
-    getNumbersAreacodes200ApplicationJsonObject?: GetNumbersAreacodes200ApplicationJson;
     statusCode: number;
+    getNumbersAreacodes200ApplicationJSONObject?: GetNumbersAreacodes200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { XssMatchSet } from "./xssmatchset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateXssMatchSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var xssmatchset_1 = require("./xssmatchset");
 // CreateXssMatchSetResponse
 /**
  * The response to a <code>CreateXssMatchSet</code> request.
@@ -34,13 +37,13 @@ var CreateXssMatchSetResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], CreateXssMatchSetResponse.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XssMatchSet" }),
-        __metadata("design:type", XssMatchSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XssMatchSet" }),
+        __metadata("design:type", xssmatchset_1.XssMatchSet)
     ], CreateXssMatchSetResponse.prototype, "xssMatchSet", void 0);
     return CreateXssMatchSetResponse;
-}(SpeakeasyBase));
-export { CreateXssMatchSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateXssMatchSetResponse = CreateXssMatchSetResponse;

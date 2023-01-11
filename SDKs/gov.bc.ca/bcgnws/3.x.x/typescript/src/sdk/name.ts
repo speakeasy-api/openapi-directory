@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -36,7 +36,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/changes";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,12 +44,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -63,7 +65,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -84,7 +85,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/decisions/recent";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -92,12 +93,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -111,7 +114,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -132,7 +134,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/decisions/year";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -140,12 +142,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -159,7 +163,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -180,7 +183,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/inside";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -188,12 +191,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -207,47 +212,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getNamesNameIdOutputFormat - Get a name by its nameId
-   *
-   * Get information about the geographical name with the specified nameId.
-  **/
-  getNamesNameIdOutputFormat(
-    req: operations.GetNamesNameIdOutputFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetNamesNameIdOutputFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetNamesNameIdOutputFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/names/{nameId}.{outputFormat}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetNamesNameIdOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            break;
-          case httpRes?.status == 404:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -268,7 +232,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/near";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -276,12 +240,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -295,7 +261,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -316,7 +281,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/notOfficial/search";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -324,12 +289,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -343,7 +310,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -364,7 +330,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/official/search";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -372,12 +338,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -391,7 +359,6 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -412,7 +379,7 @@ export class Name {
     const url: string = baseURL.replace(/\/$/, "") + "/names/search";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -420,12 +387,14 @@ export class Name {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -439,7 +408,47 @@ export class Name {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getNamesNameIdOutputFormat - Get a name by its nameId
+   *
+   * Get information about the geographical name with the specified nameId.
+  **/
+  getNamesNameIdOutputFormat(
+    req: operations.GetNamesNameIdOutputFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetNamesNameIdOutputFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetNamesNameIdOutputFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/names/{nameId}.{outputFormat}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetNamesNameIdOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+          case httpRes?.status == 404:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

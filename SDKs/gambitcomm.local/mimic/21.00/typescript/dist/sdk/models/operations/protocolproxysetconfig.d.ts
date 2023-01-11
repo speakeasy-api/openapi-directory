@@ -10,5 +10,5 @@ export declare class ProtocolProxySetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolProxySetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolProxySetConfig200ApplicationJsonString?: string;
+    protocolProxySetConfig200ApplicationJSONString?: string;
 }

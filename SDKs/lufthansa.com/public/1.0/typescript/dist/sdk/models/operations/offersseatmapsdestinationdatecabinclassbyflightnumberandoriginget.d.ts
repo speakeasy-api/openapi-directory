@@ -20,6 +20,6 @@ export declare class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOri
 }
 export declare class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse extends SpeakeasyBase {
     contentType: string;
-    offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet200ApplicationJsonObject?: Map<string, any>;
+    offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

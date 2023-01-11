@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1ReliabilityProjection = exports.GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum;
 (function (GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum) {
     GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum["RiskTypeUnspecified"] = "RISK_TYPE_UNSPECIFIED";
     GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum["ServiceDisruption"] = "SERVICE_DISRUPTION";
     GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum["DataLoss"] = "DATA_LOSS";
     GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum["AccessDeny"] = "ACCESS_DENY";
-})(GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum || (GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum = {}));
+})(GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum = exports.GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum || (exports.GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum = {}));
 // GoogleCloudRecommenderV1ReliabilityProjection
 /**
  * Contains information on the impact of a reliability recommendation.
@@ -40,13 +43,13 @@ var GoogleCloudRecommenderV1ReliabilityProjection = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1ReliabilityProjection.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=risks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=risks" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommenderV1ReliabilityProjection.prototype, "risks", void 0);
     return GoogleCloudRecommenderV1ReliabilityProjection;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1ReliabilityProjection };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1ReliabilityProjection = GoogleCloudRecommenderV1ReliabilityProjection;

@@ -12,7 +12,7 @@ export class GoogleCloudContactcenterinsightsV1IssueModelLabelStats extends Spea
   analyzedConversationsCount?: string;
 
   @SpeakeasyMetadata({ data: "json, name=issueStats", elemType: GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats })
-  issueStats?: Map<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
+  issueStats?: Record<string, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats>;
 
   @SpeakeasyMetadata({ data: "json, name=unclassifiedConversationsCount" })
   unclassifiedConversationsCount?: string;

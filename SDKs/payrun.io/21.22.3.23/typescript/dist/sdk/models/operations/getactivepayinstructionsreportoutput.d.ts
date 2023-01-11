@@ -19,6 +19,6 @@ export declare class GetActivePayInstructionsReportOutputRequest extends Speakea
 export declare class GetActivePayInstructionsReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getActivePayInstructionsReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getActivePayInstructionsReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

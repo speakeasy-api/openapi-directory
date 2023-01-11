@@ -51,7 +51,7 @@ export class DeleteContainerImageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteContainerImageResult?: Map<string, any>;
+  deleteContainerImageResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

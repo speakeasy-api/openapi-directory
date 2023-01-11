@@ -22,6 +22,6 @@ export declare class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRe
 export declare class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
     payStatementDetails?: shared.PayStatementDetails[];
 }

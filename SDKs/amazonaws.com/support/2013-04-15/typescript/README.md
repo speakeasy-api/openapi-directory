@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddAttachmentsToSetRequest, AddAttachmentsToSetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,27 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddAttachmentsToSetRequest = {
   headers: {
-    xAmzAlgorithm: "aperiam",
-    xAmzContentSha256: "ducimus",
-    xAmzCredential: "repellendus",
-    xAmzDate: "officia",
-    xAmzSecurityToken: "in",
-    xAmzSignature: "quia",
-    xAmzSignedHeaders: "sit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
   },
   request: {
-    attachmentSetId: "nesciunt",
+    attachmentSetId: "fugit",
     attachments: [
       {
-        data: "explicabo",
-        fileName: "ea",
+        data: "nihil",
+        fileName: "rerum",
       },
     ],
   },
 };
 
-sdk.sdk.addAttachmentsToSet(req).then((res: AddAttachmentsToSetResponse | AxiosError) => {
+sdk.addAttachmentsToSet(req).then((res: AddAttachmentsToSetResponse | AxiosError) => {
    // handle response
 });
 ```

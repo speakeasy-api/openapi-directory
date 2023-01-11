@@ -10,11 +10,11 @@ export declare class QuickTestImageUrlHeaders extends SpeakeasyBase {
     trainingKey: string;
 }
 export declare class QuickTestImageUrlRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     imageUrl?: shared.ImageUrl;
     imageUrl1?: shared.ImageUrl;
     imageUrl2?: shared.ImageUrl;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class QuickTestImageUrlRequest extends SpeakeasyBase {
     pathParams: QuickTestImageUrlPathParams;

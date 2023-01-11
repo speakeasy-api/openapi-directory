@@ -44,4 +44,8 @@ export declare class Customers {
      * chromemanagementCustomersTelemetryDevicesList - List all telemetry devices.
     **/
     chromemanagementCustomersTelemetryDevicesList(req: operations.ChromemanagementCustomersTelemetryDevicesListRequest, config?: AxiosRequestConfig): Promise<operations.ChromemanagementCustomersTelemetryDevicesListResponse>;
+    /**
+     * chromemanagementCustomersTelemetryEventsList - List telemetry events.
+    **/
+    chromemanagementCustomersTelemetryEventsList(req: operations.ChromemanagementCustomersTelemetryEventsListRequest, config?: AxiosRequestConfig): Promise<operations.ChromemanagementCustomersTelemetryEventsListResponse>;
 }

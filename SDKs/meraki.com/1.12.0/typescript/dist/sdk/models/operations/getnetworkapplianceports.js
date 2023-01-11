@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkAppliancePortsResponse = exports.GetNetworkAppliancePortsRequest = exports.GetNetworkAppliancePortsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkAppliancePortsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkAppliancePortsPathParams, _super);
     function GetNetworkAppliancePortsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkAppliancePortsPathParams.prototype, "networkId", void 0);
     return GetNetworkAppliancePortsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkAppliancePortsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAppliancePortsPathParams = GetNetworkAppliancePortsPathParams;
 var GetNetworkAppliancePortsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkAppliancePortsRequest, _super);
     function GetNetworkAppliancePortsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkAppliancePortsPathParams)
     ], GetNetworkAppliancePortsRequest.prototype, "pathParams", void 0);
     return GetNetworkAppliancePortsRequest;
-}(SpeakeasyBase));
-export { GetNetworkAppliancePortsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAppliancePortsRequest = GetNetworkAppliancePortsRequest;
 var GetNetworkAppliancePortsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkAppliancePortsResponse, _super);
     function GetNetworkAppliancePortsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkAppliancePortsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkAppliancePortsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkAppliancePortsResponse.prototype, "getNetworkAppliancePorts200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkAppliancePortsResponse.prototype, "getNetworkAppliancePorts200ApplicationJSONObject", void 0);
     return GetNetworkAppliancePortsResponse;
-}(SpeakeasyBase));
-export { GetNetworkAppliancePortsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAppliancePortsResponse = GetNetworkAppliancePortsResponse;

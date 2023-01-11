@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedDbInstance } from "./reserveddbinstance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReservedDbInstanceMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var reserveddbinstancelist_1 = require("./reserveddbinstancelist");
 // ReservedDbInstanceMessage
 /**
  *  Contains the result of a successful invocation of the <code>DescribeReservedDBInstances</code> action.
@@ -34,13 +37,13 @@ var ReservedDbInstanceMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstanceMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ReservedDbInstance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: reserveddbinstancelist_1.ReservedDbInstanceList }),
         __metadata("design:type", Array)
-    ], ReservedDbInstanceMessage.prototype, "reservedDbInstances", void 0);
+    ], ReservedDbInstanceMessage.prototype, "reservedDBInstances", void 0);
     return ReservedDbInstanceMessage;
-}(SpeakeasyBase));
-export { ReservedDbInstanceMessage };
+}(utils_1.SpeakeasyBase));
+exports.ReservedDbInstanceMessage = ReservedDbInstanceMessage;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LearningCurve } from "./learningcurve";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LearningCurveList = void 0;
+var utils_1 = require("../../../internal/utils");
+var learningcurve_1 = require("./learningcurve");
 var LearningCurveList = /** @class */ (function (_super) {
     __extends(LearningCurveList, _super);
     function LearningCurveList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: LearningCurve }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: learningcurve_1.LearningCurve }),
         __metadata("design:type", Array)
     ], LearningCurveList.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], LearningCurveList.prototype, "object", void 0);
     return LearningCurveList;
-}(SpeakeasyBase));
-export { LearningCurveList };
+}(utils_1.SpeakeasyBase));
+exports.LearningCurveList = LearningCurveList;

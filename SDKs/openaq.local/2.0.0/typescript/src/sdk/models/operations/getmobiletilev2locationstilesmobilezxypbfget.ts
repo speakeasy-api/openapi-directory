@@ -3,7 +3,7 @@ import * as shared from "../shared";
 
 
 
-export class GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams extends SpeakeasyBase {
+export class GetMobiletileV2LocationsTilesMobileZxyPbfGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=x" })
   x: number;
 
@@ -15,7 +15,7 @@ export class GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams extends Spea
 }
 
 
-export class GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams extends SpeakeasyBase {
+export class GetMobiletileV2LocationsTilesMobileZxyPbfGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dateFrom" })
   dateFrom: any;
 
@@ -45,16 +45,16 @@ export class GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams extends Spe
 }
 
 
-export class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest extends SpeakeasyBase {
+export class GetMobiletileV2LocationsTilesMobileZxyPbfGetRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams;
+  pathParams: GetMobiletileV2LocationsTilesMobileZxyPbfGetPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams;
+  queryParams: GetMobiletileV2LocationsTilesMobileZxyPbfGetQueryParams;
 }
 
 
-export class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse extends SpeakeasyBase {
+export class GetMobiletileV2LocationsTilesMobileZxyPbfGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

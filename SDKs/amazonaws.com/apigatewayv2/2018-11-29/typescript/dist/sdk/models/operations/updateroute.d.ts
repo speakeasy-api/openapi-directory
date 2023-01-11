@@ -26,8 +26,8 @@ export declare class UpdateRouteRequestBody extends SpeakeasyBase {
     authorizerId?: string;
     modelSelectionExpression?: string;
     operationName?: string;
-    requestModels?: Map<string, string>;
-    requestParameters?: Map<string, shared.ParameterConstraints>;
+    requestModels?: Record<string, string>;
+    requestParameters?: Record<string, shared.ParameterConstraints>;
     routeKey?: string;
     routeResponseSelectionExpression?: string;
     target?: string;

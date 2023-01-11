@@ -56,7 +56,7 @@ export class OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse ex
   contentType: string;
 
   @SpeakeasyMetadata()
-  operationsFlightstatusRouteDateByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+  operationsFlightstatusRouteDateByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionItemPriceChangeDetails } from "./subscriptionitempricechangedetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoRenewingPlan = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptionitempricechangedetails_1 = require("./subscriptionitempricechangedetails");
 // AutoRenewingPlan
 /**
  * Information related to an auto renewing plan.
@@ -34,13 +37,13 @@ var AutoRenewingPlan = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRenewEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRenewEnabled" }),
         __metadata("design:type", Boolean)
     ], AutoRenewingPlan.prototype, "autoRenewEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceChangeDetails" }),
-        __metadata("design:type", SubscriptionItemPriceChangeDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceChangeDetails" }),
+        __metadata("design:type", subscriptionitempricechangedetails_1.SubscriptionItemPriceChangeDetails)
     ], AutoRenewingPlan.prototype, "priceChangeDetails", void 0);
     return AutoRenewingPlan;
-}(SpeakeasyBase));
-export { AutoRenewingPlan };
+}(utils_1.SpeakeasyBase));
+exports.AutoRenewingPlan = AutoRenewingPlan;

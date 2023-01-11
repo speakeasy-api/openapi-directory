@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Comment } from "./comment";
-import { BoardCommentPermissions } from "./boardcommentpermissions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentsList = void 0;
+var utils_1 = require("../../../internal/utils");
+var comment_1 = require("./comment");
+var boardcommentpermissions_1 = require("./boardcommentpermissions");
 var CommentsList = /** @class */ (function (_super) {
     __extends(CommentsList, _super);
     function CommentsList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments", elemType: Comment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments", elemType: comment_1.Comment }),
         __metadata("design:type", Array)
     ], CommentsList.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
-        __metadata("design:type", BoardCommentPermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
+        __metadata("design:type", boardcommentpermissions_1.BoardCommentPermissions)
     ], CommentsList.prototype, "permissions", void 0);
     return CommentsList;
-}(SpeakeasyBase));
-export { CommentsList };
+}(utils_1.SpeakeasyBase));
+exports.CommentsList = CommentsList;

@@ -14,7 +14,7 @@ export class EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams extends S
 
 export class EnterpriseAdminUpdateAttributeForEnterpriseUserRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Operations" })
-  operations: Map<string, any>[];
+  operations: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=schemas" })
   schemas: string[];

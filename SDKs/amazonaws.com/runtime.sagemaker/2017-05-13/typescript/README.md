@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { InvokeEndpointRequest, InvokeEndpointResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,30 +33,30 @@ const sdk = new SDK(WithSecurity(
     
 const req: InvokeEndpointRequest = {
   pathParams: {
-    endpointName: "illo",
+    endpointName: "sit",
   },
   headers: {
-    accept: "aut",
-    contentType: "omnis",
-    xAmzAlgorithm: "eos",
-    xAmzContentSha256: "dolore",
-    xAmzCredential: "aut",
-    xAmzDate: "dolor",
-    xAmzSecurityToken: "ea",
-    xAmzSignature: "doloremque",
-    xAmzSignedHeaders: "sit",
-    xAmznSageMakerCustomAttributes: "aspernatur",
-    xAmznSageMakerInferenceId: "iste",
-    xAmznSageMakerTargetContainerHostname: "voluptatibus",
-    xAmznSageMakerTargetModel: "ea",
-    xAmznSageMakerTargetVariant: "tempora",
+    accept: "voluptas",
+    contentType: "culpa",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
+    xAmznSageMakerCustomAttributes: "nihil",
+    xAmznSageMakerInferenceId: "rerum",
+    xAmznSageMakerTargetContainerHostname: "dicta",
+    xAmznSageMakerTargetModel: "debitis",
+    xAmznSageMakerTargetVariant: "voluptatum",
   },
   request: {
-    body: "quis",
+    body: "et",
   },
 };
 
-sdk.sdk.invokeEndpoint(req).then((res: InvokeEndpointResponse | AxiosError) => {
+sdk.invokeEndpoint(req).then((res: InvokeEndpointResponse | AxiosError) => {
    // handle response
 });
 ```

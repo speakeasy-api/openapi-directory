@@ -8,5 +8,5 @@ export declare class GetConfigChangedRequest extends SpeakeasyBase {
 export declare class GetConfigChangedResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getConfigChanged200ApplicationJsonInt32Integer?: number;
+    getConfigChanged200ApplicationJSONInt32Integer?: number;
 }

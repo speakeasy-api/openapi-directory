@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class DescribeStackProvisioningParametersResult extends SpeakeasyBase {
     agentInstallerUrl?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
 }

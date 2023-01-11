@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledInstanceAvailability } from "./scheduledinstanceavailability";
 
 
 
@@ -9,8 +8,8 @@ import { ScheduledInstanceAvailability } from "./scheduledinstanceavailability";
 **/
 export class DescribeScheduledInstanceAvailabilityResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: ScheduledInstanceAvailability })
-  scheduledInstanceAvailabilitySet?: ScheduledInstanceAvailability[];
+  @SpeakeasyMetadata()
+  scheduledInstanceAvailabilitySet?: Record<string, any>;
 }

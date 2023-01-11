@@ -47,8 +47,8 @@ export class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pullrequestComment?: Map<string, any>;
+  pullrequestComment?: Record<string, any>;
 }

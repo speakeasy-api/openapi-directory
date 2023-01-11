@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAttachInstancesRequest, GetAttachInstancesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,25 +34,25 @@ const sdk = new SDK(WithSecurity(
 const req: GetAttachInstancesRequest = {
   queryParams: {
     action: "AttachInstances",
-    autoScalingGroupName: "distinctio",
+    autoScalingGroupName: "voluptas",
     instanceIds: [
-      "nemo",
-      "aut",
+      "expedita",
+      "consequuntur",
     ],
     version: "2011-01-01",
   },
   headers: {
-    xAmzAlgorithm: "in",
-    xAmzContentSha256: "voluptatem",
-    xAmzCredential: "velit",
-    xAmzDate: "consequuntur",
-    xAmzSecurityToken: "est",
-    xAmzSignature: "dignissimos",
-    xAmzSignedHeaders: "hic",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "fugit",
+    xAmzDate: "et",
+    xAmzSecurityToken: "nihil",
+    xAmzSignature: "rerum",
+    xAmzSignedHeaders: "dicta",
   },
 };
 
-sdk.sdk.getAttachInstances(req).then((res: GetAttachInstancesResponse | AxiosError) => {
+sdk.getAttachInstances(req).then((res: GetAttachInstancesResponse | AxiosError) => {
    // handle response
 });
 ```

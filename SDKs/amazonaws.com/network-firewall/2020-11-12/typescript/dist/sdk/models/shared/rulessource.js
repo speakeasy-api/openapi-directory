@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RulesSourceList } from "./rulessourcelist";
-import { StatefulRule } from "./statefulrule";
-import { StatelessRulesAndCustomActions } from "./statelessrulesandcustomactions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RulesSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulessourcelist_1 = require("./rulessourcelist");
+var statefulrule_1 = require("./statefulrule");
+var statelessrulesandcustomactions_1 = require("./statelessrulesandcustomactions");
 // RulesSource
 /**
  * The stateless or stateful rules definitions for use in a single rule group. Each rule group requires a single <code>RulesSource</code>. You can use an instance of this for either stateless rules or stateful rules.
@@ -36,21 +39,21 @@ var RulesSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RulesSourceList" }),
-        __metadata("design:type", RulesSourceList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RulesSourceList" }),
+        __metadata("design:type", rulessourcelist_1.RulesSourceList)
     ], RulesSource.prototype, "rulesSourceList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RulesString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RulesString" }),
         __metadata("design:type", String)
     ], RulesSource.prototype, "rulesString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatefulRules", elemType: StatefulRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatefulRules", elemType: statefulrule_1.StatefulRule }),
         __metadata("design:type", Array)
     ], RulesSource.prototype, "statefulRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessRulesAndCustomActions" }),
-        __metadata("design:type", StatelessRulesAndCustomActions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessRulesAndCustomActions" }),
+        __metadata("design:type", statelessrulesandcustomactions_1.StatelessRulesAndCustomActions)
     ], RulesSource.prototype, "statelessRulesAndCustomActions", void 0);
     return RulesSource;
-}(SpeakeasyBase));
-export { RulesSource };
+}(utils_1.SpeakeasyBase));
+exports.RulesSource = RulesSource;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatasetImportJobSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
 // DatasetImportJobSummary
 /**
  * Provides a summary of the dataset import job properties used in the <a>ListDatasetImportJobs</a> operation. To get the complete set of properties, call the <a>DescribeDatasetImportJob</a> operation, and provide the <code>DatasetImportJobArn</code>.
@@ -34,33 +37,33 @@ var DatasetImportJobSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DatasetImportJobSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSource" }),
-        __metadata("design:type", DataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSource" }),
+        __metadata("design:type", datasource_1.DataSource)
     ], DatasetImportJobSummary.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetImportJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetImportJobArn" }),
         __metadata("design:type", String)
     ], DatasetImportJobSummary.prototype, "datasetImportJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetImportJobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetImportJobName" }),
         __metadata("design:type", String)
     ], DatasetImportJobSummary.prototype, "datasetImportJobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], DatasetImportJobSummary.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], DatasetImportJobSummary.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DatasetImportJobSummary.prototype, "status", void 0);
     return DatasetImportJobSummary;
-}(SpeakeasyBase));
-export { DatasetImportJobSummary };
+}(utils_1.SpeakeasyBase));
+exports.DatasetImportJobSummary = DatasetImportJobSummary;

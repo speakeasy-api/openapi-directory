@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedPlayerGameStatsByPlayerFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedPlayerGameStatsByPlayerResponse = exports.ProjectedPlayerGameStatsByPlayerRequest = exports.ProjectedPlayerGameStatsByPlayerPathParams = exports.ProjectedPlayerGameStatsByPlayerFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedPlayerGameStatsByPlayerFormatEnum;
 (function (ProjectedPlayerGameStatsByPlayerFormatEnum) {
     ProjectedPlayerGameStatsByPlayerFormatEnum["Xml"] = "XML";
     ProjectedPlayerGameStatsByPlayerFormatEnum["Json"] = "JSON";
-})(ProjectedPlayerGameStatsByPlayerFormatEnum || (ProjectedPlayerGameStatsByPlayerFormatEnum = {}));
+})(ProjectedPlayerGameStatsByPlayerFormatEnum = exports.ProjectedPlayerGameStatsByPlayerFormatEnum || (exports.ProjectedPlayerGameStatsByPlayerFormatEnum = {}));
 var ProjectedPlayerGameStatsByPlayerPathParams = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerPathParams, _super);
     function ProjectedPlayerGameStatsByPlayerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerPathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerPathParams.prototype, "playerid", void 0);
     return ProjectedPlayerGameStatsByPlayerPathParams;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerPathParams = ProjectedPlayerGameStatsByPlayerPathParams;
 var ProjectedPlayerGameStatsByPlayerRequest = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerRequest, _super);
     function ProjectedPlayerGameStatsByPlayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedPlayerGameStatsByPlayerPathParams)
     ], ProjectedPlayerGameStatsByPlayerRequest.prototype, "pathParams", void 0);
     return ProjectedPlayerGameStatsByPlayerRequest;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerRequest = ProjectedPlayerGameStatsByPlayerRequest;
 var ProjectedPlayerGameStatsByPlayerResponse = /** @class */ (function (_super) {
     __extends(ProjectedPlayerGameStatsByPlayerResponse, _super);
     function ProjectedPlayerGameStatsByPlayerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedPlayerGameStatsByPlayerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ProjectedPlayerGameStatsByPlayerResponse.prototype, "playerGameProjection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedPlayerGameStatsByPlayerResponse.prototype, "statusCode", void 0);
     return ProjectedPlayerGameStatsByPlayerResponse;
-}(SpeakeasyBase));
-export { ProjectedPlayerGameStatsByPlayerResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerGameStatsByPlayerResponse = ProjectedPlayerGameStatsByPlayerResponse;

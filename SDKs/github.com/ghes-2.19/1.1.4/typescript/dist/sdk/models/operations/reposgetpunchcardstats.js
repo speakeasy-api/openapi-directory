@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposGetPunchCardStatsResponse = exports.ReposGetPunchCardStatsRequest = exports.ReposGetPunchCardStatsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposGetPunchCardStatsPathParams = /** @class */ (function (_super) {
     __extends(ReposGetPunchCardStatsPathParams, _super);
     function ReposGetPunchCardStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposGetPunchCardStatsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposGetPunchCardStatsPathParams.prototype, "repo", void 0);
     return ReposGetPunchCardStatsPathParams;
-}(SpeakeasyBase));
-export { ReposGetPunchCardStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetPunchCardStatsPathParams = ReposGetPunchCardStatsPathParams;
 var ReposGetPunchCardStatsRequest = /** @class */ (function (_super) {
     __extends(ReposGetPunchCardStatsRequest, _super);
     function ReposGetPunchCardStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposGetPunchCardStatsPathParams)
     ], ReposGetPunchCardStatsRequest.prototype, "pathParams", void 0);
     return ReposGetPunchCardStatsRequest;
-}(SpeakeasyBase));
-export { ReposGetPunchCardStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetPunchCardStatsRequest = ReposGetPunchCardStatsRequest;
 var ReposGetPunchCardStatsResponse = /** @class */ (function (_super) {
     __extends(ReposGetPunchCardStatsResponse, _super);
     function ReposGetPunchCardStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposGetPunchCardStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposGetPunchCardStatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReposGetPunchCardStatsResponse.prototype, "codeFrequencyStats", void 0);
     return ReposGetPunchCardStatsResponse;
-}(SpeakeasyBase));
-export { ReposGetPunchCardStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetPunchCardStatsResponse = ReposGetPunchCardStatsResponse;

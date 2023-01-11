@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class UpdatePriceHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType?: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE?: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare enum UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum {
     Usd = "USD",
@@ -57,7 +57,7 @@ export declare enum UpdatePriceRequestBodyReplaceAllEnum {
     False = "false"
 }
 export declare class UpdatePriceRequestBody extends SpeakeasyBase {
-    definitions?: Map<string, any>;
+    definitions?: Record<string, any>;
     offerId?: string;
     pricing: UpdatePriceRequestBodyPricing[];
     replaceAll?: UpdatePriceRequestBodyReplaceAllEnum;
@@ -91,7 +91,7 @@ export declare class UpdatePrice200ApplicationJsonErrors extends SpeakeasyBase {
     code: string;
     component?: string;
     description?: string;
-    errorIdentifiers?: Map<string, Map<string, any>>;
+    errorIdentifiers?: Record<string, Record<string, any>>;
     field?: string;
     gatewayErrorCategory?: UpdatePrice200ApplicationJsonErrorsGatewayErrorCategoryEnum;
     info?: string;
@@ -114,5 +114,5 @@ export declare class UpdatePriceResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    updatePrice200ApplicationJsonObject?: UpdatePrice200ApplicationJson;
+    updatePrice200ApplicationJSONObject?: UpdatePrice200ApplicationJson;
 }

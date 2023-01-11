@@ -85,7 +85,7 @@ export class GetHlsStreamingSessionUrlRequestBody extends SpeakeasyBase {
   playbackMode?: GetHlsStreamingSessionUrlRequestBodyPlaybackModeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
@@ -109,7 +109,7 @@ export class GetHlsStreamingSessionUrlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getHlsStreamingSessionUrlOutput?: shared.GetHlsStreamingSessionUrlOutput;
+  getHLSStreamingSessionURLOutput?: shared.GetHlsStreamingSessionUrlOutput;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

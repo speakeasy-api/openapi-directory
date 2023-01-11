@@ -5,7 +5,7 @@ export declare class CheckAvailabilityOfFundsHeaders extends SpeakeasyBase {
     digest?: string;
     signature?: string;
     tppSignatureCertificate?: string;
-    xRequestId: string;
+    xRequestID: string;
 }
 export declare class CheckAvailabilityOfFundsSecurity extends SpeakeasyBase {
     bearerAuthOAuth?: shared.SchemeBearerAuthOAuth;
@@ -25,19 +25,19 @@ export declare class CheckAvailabilityOfFundsRequest extends SpeakeasyBase {
 }
 export declare class CheckAvailabilityOfFundsResponse extends SpeakeasyBase {
     contentType: string;
-    error400Ais?: shared.Error400Ais;
-    error400NgAis?: shared.Error400NgAis;
-    error401NgPiis?: shared.Error401NgPiis;
-    error401Piis?: shared.Error401Piis;
-    error403NgPiis?: shared.Error403NgPiis;
-    error403Piis?: shared.Error403Piis;
-    error404NgPiis?: shared.Error404NgPiis;
-    error404Piis?: shared.Error404Piis;
-    error405NgPiis?: shared.Error405NgPiis;
-    error405Piis?: shared.Error405Piis;
-    error409NgPiis?: shared.Error409NgPiis;
-    error409Piis?: shared.Error409Piis;
-    headers: Map<string, string[]>;
+    error400AIS?: shared.Error400Ais;
+    error400NGAIS?: shared.Error400NgAis;
+    error401NGPIIS?: shared.Error401NgPiis;
+    error401PIIS?: shared.Error401Piis;
+    error403NGPIIS?: shared.Error403NgPiis;
+    error403PIIS?: shared.Error403Piis;
+    error404NGPIIS?: shared.Error404NgPiis;
+    error404PIIS?: shared.Error404Piis;
+    error405NGPIIS?: shared.Error405NgPiis;
+    error405PIIS?: shared.Error405Piis;
+    error409NGPIIS?: shared.Error409NgPiis;
+    error409PIIS?: shared.Error409Piis;
+    headers: Record<string, string[]>;
     statusCode: number;
-    checkAvailabilityOfFunds200ApplicationJsonObject?: CheckAvailabilityOfFunds200ApplicationJson;
+    checkAvailabilityOfFunds200ApplicationJSONObject?: CheckAvailabilityOfFunds200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIpIpv4TxtResponse = exports.GetIpIpv4TxtRequest = exports.GetIpIpv4TxtPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetIpIpv4TxtPathParams = /** @class */ (function (_super) {
     __extends(GetIpIpv4TxtPathParams, _super);
     function GetIpIpv4TxtPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ipv4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ipv4" }),
         __metadata("design:type", String)
     ], GetIpIpv4TxtPathParams.prototype, "ipv4", void 0);
     return GetIpIpv4TxtPathParams;
-}(SpeakeasyBase));
-export { GetIpIpv4TxtPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetIpIpv4TxtPathParams = GetIpIpv4TxtPathParams;
 var GetIpIpv4TxtRequest = /** @class */ (function (_super) {
     __extends(GetIpIpv4TxtRequest, _super);
     function GetIpIpv4TxtRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetIpIpv4TxtPathParams)
     ], GetIpIpv4TxtRequest.prototype, "pathParams", void 0);
     return GetIpIpv4TxtRequest;
-}(SpeakeasyBase));
-export { GetIpIpv4TxtRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetIpIpv4TxtRequest = GetIpIpv4TxtRequest;
 var GetIpIpv4TxtResponse = /** @class */ (function (_super) {
     __extends(GetIpIpv4TxtResponse, _super);
     function GetIpIpv4TxtResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetIpIpv4TxtResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetIpIpv4TxtResponse.prototype, "dateTimeTextResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetIpIpv4TxtResponse.prototype, "errorTextResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetIpIpv4TxtResponse.prototype, "statusCode", void 0);
     return GetIpIpv4TxtResponse;
-}(SpeakeasyBase));
-export { GetIpIpv4TxtResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIpIpv4TxtResponse = GetIpIpv4TxtResponse;

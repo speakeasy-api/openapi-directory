@@ -1,12 +1,12 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
 import { Email } from "./email";
 import { PhoneNumber } from "./phonenumber";
+import { CurrencyEnum } from "./currencyenum";
 import { Address } from "./address";
-import { ServiceCharge } from "./servicecharge";
 import { PaymentCard } from "./paymentcard";
-import { ServiceChargeInput } from "./servicecharge";
 import { PaymentCardInput } from "./paymentcard";
+import { ServiceCharge } from "./servicecharge";
+import { ServiceChargeInput } from "./servicecharge";
 
 
 
@@ -177,7 +177,7 @@ export class OrderFulfillments extends SpeakeasyBase {
   pickupDetails?: OrderFulfillmentsPickupDetails;
 
   @SpeakeasyMetadata({ data: "json, name=shipment_details" })
-  shipmentDetails?: Map<string, any>;
+  shipmentDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: OrderFulfillmentsFulfillmentStatusEnum;
@@ -470,7 +470,7 @@ export class OrderFulfillmentsInput extends SpeakeasyBase {
   pickupDetails?: OrderFulfillmentsPickupDetailsInput;
 
   @SpeakeasyMetadata({ data: "json, name=shipment_details" })
-  shipmentDetails?: Map<string, any>;
+  shipmentDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: OrderFulfillmentsFulfillmentStatusEnum;

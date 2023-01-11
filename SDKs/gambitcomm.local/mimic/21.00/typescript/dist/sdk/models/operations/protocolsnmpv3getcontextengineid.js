@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3GetContextEngineidResponse = exports.ProtocolSnmpv3GetContextEngineidRequest = exports.ProtocolSnmpv3GetContextEngineidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3GetContextEngineidPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetContextEngineidPathParams, _super);
     function ProtocolSnmpv3GetContextEngineidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GetContextEngineidPathParams.prototype, "agentNum", void 0);
     return ProtocolSnmpv3GetContextEngineidPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetContextEngineidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetContextEngineidPathParams = ProtocolSnmpv3GetContextEngineidPathParams;
 var ProtocolSnmpv3GetContextEngineidRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetContextEngineidRequest, _super);
     function ProtocolSnmpv3GetContextEngineidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3GetContextEngineidPathParams)
     ], ProtocolSnmpv3GetContextEngineidRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3GetContextEngineidRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetContextEngineidRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetContextEngineidRequest = ProtocolSnmpv3GetContextEngineidRequest;
 var ProtocolSnmpv3GetContextEngineidResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetContextEngineidResponse, _super);
     function ProtocolSnmpv3GetContextEngineidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3GetContextEngineidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GetContextEngineidResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmpv3GetContextEngineidResponse.prototype, "protocolSnmpv3GetContextEngineid200ApplicationJsonString", void 0);
+    ], ProtocolSnmpv3GetContextEngineidResponse.prototype, "protocolSnmpv3GetContextEngineid200ApplicationJSONString", void 0);
     return ProtocolSnmpv3GetContextEngineidResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetContextEngineidResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetContextEngineidResponse = ProtocolSnmpv3GetContextEngineidResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkNetflowResponse = exports.UpdateNetworkNetflowRequest = exports.UpdateNetworkNetflowRequestBody = exports.UpdateNetworkNetflowPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkNetflowPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkNetflowPathParams, _super);
     function UpdateNetworkNetflowPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkNetflowPathParams.prototype, "networkId", void 0);
     return UpdateNetworkNetflowPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkNetflowPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkNetflowPathParams = UpdateNetworkNetflowPathParams;
 var UpdateNetworkNetflowRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkNetflowRequestBody, _super);
     function UpdateNetworkNetflowRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectorIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectorIp" }),
         __metadata("design:type", String)
     ], UpdateNetworkNetflowRequestBody.prototype, "collectorIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectorPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectorPort" }),
         __metadata("design:type", Number)
     ], UpdateNetworkNetflowRequestBody.prototype, "collectorPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etaDstPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etaDstPort" }),
         __metadata("design:type", Number)
     ], UpdateNetworkNetflowRequestBody.prototype, "etaDstPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etaEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etaEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkNetflowRequestBody.prototype, "etaEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkNetflowRequestBody.prototype, "reportingEnabled", void 0);
     return UpdateNetworkNetflowRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkNetflowRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkNetflowRequestBody = UpdateNetworkNetflowRequestBody;
 var UpdateNetworkNetflowRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkNetflowRequest, _super);
     function UpdateNetworkNetflowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkNetflowPathParams)
     ], UpdateNetworkNetflowRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkNetflowRequestBody)
     ], UpdateNetworkNetflowRequest.prototype, "request", void 0);
     return UpdateNetworkNetflowRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkNetflowRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkNetflowRequest = UpdateNetworkNetflowRequest;
 var UpdateNetworkNetflowResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkNetflowResponse, _super);
     function UpdateNetworkNetflowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkNetflowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkNetflowResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkNetflowResponse.prototype, "updateNetworkNetflow200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkNetflowResponse.prototype, "updateNetworkNetflow200ApplicationJSONObject", void 0);
     return UpdateNetworkNetflowResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkNetflowResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkNetflowResponse = UpdateNetworkNetflowResponse;

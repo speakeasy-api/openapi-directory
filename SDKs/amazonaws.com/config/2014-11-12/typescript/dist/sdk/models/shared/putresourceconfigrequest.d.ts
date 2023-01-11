@@ -5,5 +5,5 @@ export declare class PutResourceConfigRequest extends SpeakeasyBase {
     resourceName?: string;
     resourceType: string;
     schemaVersionId: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

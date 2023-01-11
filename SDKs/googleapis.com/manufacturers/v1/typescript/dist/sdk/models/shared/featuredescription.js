@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Image } from "./image";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeatureDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
 // FeatureDescription
 /**
  * A feature description of the product. For more information, see https://support.google.com/manufacturers/answer/6124116#featuredesc.
@@ -34,17 +37,17 @@ var FeatureDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headline" }),
         __metadata("design:type", String)
     ], FeatureDescription.prototype, "headline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.Image)
     ], FeatureDescription.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], FeatureDescription.prototype, "text", void 0);
     return FeatureDescription;
-}(SpeakeasyBase));
-export { FeatureDescription };
+}(utils_1.SpeakeasyBase));
+exports.FeatureDescription = FeatureDescription;

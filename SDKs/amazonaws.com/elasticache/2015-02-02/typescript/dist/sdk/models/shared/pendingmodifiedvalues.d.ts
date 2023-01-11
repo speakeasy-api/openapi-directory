@@ -6,7 +6,7 @@ import { PendingLogDeliveryConfiguration } from "./pendinglogdeliveryconfigurati
 **/
 export declare class PendingModifiedValues extends SpeakeasyBase {
     authTokenStatus?: AuthTokenUpdateStatusEnum;
-    cacheNodeIdsToRemove?: string[];
+    cacheNodeIdsToRemove?: Record<string, any>[];
     cacheNodeType?: string;
     engineVersion?: string;
     logDeliveryConfigurations?: PendingLogDeliveryConfiguration[];

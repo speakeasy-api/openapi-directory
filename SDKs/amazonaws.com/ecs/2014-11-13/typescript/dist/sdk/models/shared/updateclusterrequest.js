@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterConfiguration } from "./clusterconfiguration";
-import { ClusterSetting } from "./clustersetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterconfiguration_1 = require("./clusterconfiguration");
+var clustersetting_1 = require("./clustersetting");
 var UpdateClusterRequest = /** @class */ (function (_super) {
     __extends(UpdateClusterRequest, _super);
     function UpdateClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ClusterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", clusterconfiguration_1.ClusterConfiguration)
     ], UpdateClusterRequest.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings", elemType: ClusterSetting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings", elemType: clustersetting_1.ClusterSetting }),
         __metadata("design:type", Array)
     ], UpdateClusterRequest.prototype, "settings", void 0);
     return UpdateClusterRequest;
-}(SpeakeasyBase));
-export { UpdateClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateClusterRequest = UpdateClusterRequest;

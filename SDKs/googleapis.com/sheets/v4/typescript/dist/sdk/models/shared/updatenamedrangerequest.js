@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NamedRange } from "./namedrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNamedRangeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var namedrange_1 = require("./namedrange");
 // UpdateNamedRangeRequest
 /**
  * Updates properties of the named range with the specified namedRangeId.
@@ -34,13 +37,13 @@ var UpdateNamedRangeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateNamedRangeRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedRange" }),
-        __metadata("design:type", NamedRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedRange" }),
+        __metadata("design:type", namedrange_1.NamedRange)
     ], UpdateNamedRangeRequest.prototype, "namedRange", void 0);
     return UpdateNamedRangeRequest;
-}(SpeakeasyBase));
-export { UpdateNamedRangeRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNamedRangeRequest = UpdateNamedRangeRequest;

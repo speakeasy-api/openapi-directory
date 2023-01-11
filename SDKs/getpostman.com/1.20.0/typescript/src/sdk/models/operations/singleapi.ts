@@ -52,5 +52,5 @@ export class SingleApiResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleApi200ApplicationJsonObject?: SingleApi200ApplicationJson;
+  singleApi200ApplicationJSONObject?: SingleApi200ApplicationJson;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RsbycRequest, RsbycResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,7 +30,7 @@ const req: RsbycRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -40,13 +39,13 @@ const req: RsbycRequest = {
     certificateParameters: {
       uid: "sit",
     },
-    consentArtifact: "aut",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "totam",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.rsbyc(req).then((res: RsbycResponse | AxiosError) => {
+sdk.apIs.rsbyc(req).then((res: RsbycResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.rsbyc(req).then((res: RsbycResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `rsbyc` - Health Card/ Certificate
 

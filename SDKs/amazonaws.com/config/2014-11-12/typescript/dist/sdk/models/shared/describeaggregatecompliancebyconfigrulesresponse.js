@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateComplianceByConfigRule } from "./aggregatecompliancebyconfigrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAggregateComplianceByConfigRulesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatecompliancebyconfigrule_1 = require("./aggregatecompliancebyconfigrule");
 var DescribeAggregateComplianceByConfigRulesResponse = /** @class */ (function (_super) {
     __extends(DescribeAggregateComplianceByConfigRulesResponse, _super);
     function DescribeAggregateComplianceByConfigRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AggregateComplianceByConfigRules", elemType: AggregateComplianceByConfigRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AggregateComplianceByConfigRules", elemType: aggregatecompliancebyconfigrule_1.AggregateComplianceByConfigRule }),
         __metadata("design:type", Array)
     ], DescribeAggregateComplianceByConfigRulesResponse.prototype, "aggregateComplianceByConfigRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeAggregateComplianceByConfigRulesResponse.prototype, "nextToken", void 0);
     return DescribeAggregateComplianceByConfigRulesResponse;
-}(SpeakeasyBase));
-export { DescribeAggregateComplianceByConfigRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAggregateComplianceByConfigRulesResponse = DescribeAggregateComplianceByConfigRulesResponse;

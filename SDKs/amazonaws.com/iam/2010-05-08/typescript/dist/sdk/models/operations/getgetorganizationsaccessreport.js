@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,123 +23,125 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetOrganizationsAccessReportActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetOrganizationsAccessReportResponse = exports.GetGetOrganizationsAccessReportRequest = exports.GetGetOrganizationsAccessReportHeaders = exports.GetGetOrganizationsAccessReportQueryParams = exports.GetGetOrganizationsAccessReportVersionEnum = exports.GetGetOrganizationsAccessReportSortKeyEnum = exports.GetGetOrganizationsAccessReportActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetOrganizationsAccessReportActionEnum;
 (function (GetGetOrganizationsAccessReportActionEnum) {
     GetGetOrganizationsAccessReportActionEnum["GetOrganizationsAccessReport"] = "GetOrganizationsAccessReport";
-})(GetGetOrganizationsAccessReportActionEnum || (GetGetOrganizationsAccessReportActionEnum = {}));
-export var GetGetOrganizationsAccessReportSortKeyEnum;
+})(GetGetOrganizationsAccessReportActionEnum = exports.GetGetOrganizationsAccessReportActionEnum || (exports.GetGetOrganizationsAccessReportActionEnum = {}));
+var GetGetOrganizationsAccessReportSortKeyEnum;
 (function (GetGetOrganizationsAccessReportSortKeyEnum) {
     GetGetOrganizationsAccessReportSortKeyEnum["ServiceNamespaceAscending"] = "SERVICE_NAMESPACE_ASCENDING";
     GetGetOrganizationsAccessReportSortKeyEnum["ServiceNamespaceDescending"] = "SERVICE_NAMESPACE_DESCENDING";
     GetGetOrganizationsAccessReportSortKeyEnum["LastAuthenticatedTimeAscending"] = "LAST_AUTHENTICATED_TIME_ASCENDING";
     GetGetOrganizationsAccessReportSortKeyEnum["LastAuthenticatedTimeDescending"] = "LAST_AUTHENTICATED_TIME_DESCENDING";
-})(GetGetOrganizationsAccessReportSortKeyEnum || (GetGetOrganizationsAccessReportSortKeyEnum = {}));
-export var GetGetOrganizationsAccessReportVersionEnum;
+})(GetGetOrganizationsAccessReportSortKeyEnum = exports.GetGetOrganizationsAccessReportSortKeyEnum || (exports.GetGetOrganizationsAccessReportSortKeyEnum = {}));
+var GetGetOrganizationsAccessReportVersionEnum;
 (function (GetGetOrganizationsAccessReportVersionEnum) {
     GetGetOrganizationsAccessReportVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetOrganizationsAccessReportVersionEnum || (GetGetOrganizationsAccessReportVersionEnum = {}));
+})(GetGetOrganizationsAccessReportVersionEnum = exports.GetGetOrganizationsAccessReportVersionEnum || (exports.GetGetOrganizationsAccessReportVersionEnum = {}));
 var GetGetOrganizationsAccessReportQueryParams = /** @class */ (function (_super) {
     __extends(GetGetOrganizationsAccessReportQueryParams, _super);
     function GetGetOrganizationsAccessReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobId" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SortKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SortKey" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "sortKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportQueryParams.prototype, "version", void 0);
     return GetGetOrganizationsAccessReportQueryParams;
-}(SpeakeasyBase));
-export { GetGetOrganizationsAccessReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOrganizationsAccessReportQueryParams = GetGetOrganizationsAccessReportQueryParams;
 var GetGetOrganizationsAccessReportHeaders = /** @class */ (function (_super) {
     __extends(GetGetOrganizationsAccessReportHeaders, _super);
     function GetGetOrganizationsAccessReportHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetOrganizationsAccessReportHeaders;
-}(SpeakeasyBase));
-export { GetGetOrganizationsAccessReportHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOrganizationsAccessReportHeaders = GetGetOrganizationsAccessReportHeaders;
 var GetGetOrganizationsAccessReportRequest = /** @class */ (function (_super) {
     __extends(GetGetOrganizationsAccessReportRequest, _super);
     function GetGetOrganizationsAccessReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetOrganizationsAccessReportQueryParams)
     ], GetGetOrganizationsAccessReportRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetOrganizationsAccessReportHeaders)
     ], GetGetOrganizationsAccessReportRequest.prototype, "headers", void 0);
     return GetGetOrganizationsAccessReportRequest;
-}(SpeakeasyBase));
-export { GetGetOrganizationsAccessReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOrganizationsAccessReportRequest = GetGetOrganizationsAccessReportRequest;
 var GetGetOrganizationsAccessReportResponse = /** @class */ (function (_super) {
     __extends(GetGetOrganizationsAccessReportResponse, _super);
     function GetGetOrganizationsAccessReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetOrganizationsAccessReportResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetOrganizationsAccessReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetOrganizationsAccessReportResponse.prototype, "statusCode", void 0);
     return GetGetOrganizationsAccessReportResponse;
-}(SpeakeasyBase));
-export { GetGetOrganizationsAccessReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOrganizationsAccessReportResponse = GetGetOrganizationsAccessReportResponse;

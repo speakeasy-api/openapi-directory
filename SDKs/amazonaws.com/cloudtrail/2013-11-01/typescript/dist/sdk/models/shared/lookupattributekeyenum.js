@@ -1,4 +1,7 @@
-export var LookupAttributeKeyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LookupAttributeKeyEnum = void 0;
+var LookupAttributeKeyEnum;
 (function (LookupAttributeKeyEnum) {
     LookupAttributeKeyEnum["EventId"] = "EventId";
     LookupAttributeKeyEnum["EventName"] = "EventName";
@@ -8,4 +11,4 @@ export var LookupAttributeKeyEnum;
     LookupAttributeKeyEnum["ResourceName"] = "ResourceName";
     LookupAttributeKeyEnum["EventSource"] = "EventSource";
     LookupAttributeKeyEnum["AccessKeyId"] = "AccessKeyId";
-})(LookupAttributeKeyEnum || (LookupAttributeKeyEnum = {}));
+})(LookupAttributeKeyEnum = exports.LookupAttributeKeyEnum || (exports.LookupAttributeKeyEnum = {}));

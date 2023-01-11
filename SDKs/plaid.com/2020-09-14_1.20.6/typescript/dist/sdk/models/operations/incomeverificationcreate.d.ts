@@ -5,6 +5,6 @@ export declare class IncomeVerificationCreateRequest extends SpeakeasyBase {
 }
 export declare class IncomeVerificationCreateResponse extends SpeakeasyBase {
     contentType: string;
-    incomeVerificationCreateResponse?: Map<string, any>;
+    incomeVerificationCreateResponse?: Record<string, any>;
     statusCode: number;
 }

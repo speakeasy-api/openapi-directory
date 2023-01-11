@@ -22,5 +22,5 @@ export declare class CreateSubtaskForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createSubtaskForTask201ApplicationJsonObject?: CreateSubtaskForTask201ApplicationJson;
+    createSubtaskForTask201ApplicationJSONObject?: CreateSubtaskForTask201ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicGroupQuery } from "./dynamicgroupquery";
-import { DynamicGroupStatus } from "./dynamicgroupstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicGroupMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamicgroupquery_1 = require("./dynamicgroupquery");
+var dynamicgroupstatus_1 = require("./dynamicgroupstatus");
 // DynamicGroupMetadata
 /**
  * Dynamic group metadata like queries and status.
@@ -35,13 +38,13 @@ var DynamicGroupMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queries", elemType: DynamicGroupQuery }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queries", elemType: dynamicgroupquery_1.DynamicGroupQuery }),
         __metadata("design:type", Array)
     ], DynamicGroupMetadata.prototype, "queries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", DynamicGroupStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", dynamicgroupstatus_1.DynamicGroupStatus)
     ], DynamicGroupMetadata.prototype, "status", void 0);
     return DynamicGroupMetadata;
-}(SpeakeasyBase));
-export { DynamicGroupMetadata };
+}(utils_1.SpeakeasyBase));
+exports.DynamicGroupMetadata = DynamicGroupMetadata;

@@ -20,7 +20,7 @@ export class UploadEvidenceFileSecurity extends SpeakeasyBase {
 
 export class UploadEvidenceFileRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: UploadEvidenceFilePathParams;

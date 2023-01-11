@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PersonalProtection = exports.PersonalProtectionProtectiveEquipmentAvailableExceptionEnum = exports.PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum = exports.PersonalProtectionFaceMaskRequiredExceptionEnum = exports.PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum;
 (function (PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum) {
     PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum || (PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum = {}));
-export var PersonalProtectionFaceMaskRequiredExceptionEnum;
+})(PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum = exports.PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum || (exports.PersonalProtectionCommonAreasOfferSanitizingItemsExceptionEnum = {}));
+var PersonalProtectionFaceMaskRequiredExceptionEnum;
 (function (PersonalProtectionFaceMaskRequiredExceptionEnum) {
     PersonalProtectionFaceMaskRequiredExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PersonalProtectionFaceMaskRequiredExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PersonalProtectionFaceMaskRequiredExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PersonalProtectionFaceMaskRequiredExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PersonalProtectionFaceMaskRequiredExceptionEnum || (PersonalProtectionFaceMaskRequiredExceptionEnum = {}));
-export var PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum;
+})(PersonalProtectionFaceMaskRequiredExceptionEnum = exports.PersonalProtectionFaceMaskRequiredExceptionEnum || (exports.PersonalProtectionFaceMaskRequiredExceptionEnum = {}));
+var PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum;
 (function (PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum) {
     PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum || (PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum = {}));
-export var PersonalProtectionProtectiveEquipmentAvailableExceptionEnum;
+})(PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum = exports.PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum || (exports.PersonalProtectionGuestRoomHygieneKitsAvailableExceptionEnum = {}));
+var PersonalProtectionProtectiveEquipmentAvailableExceptionEnum;
 (function (PersonalProtectionProtectiveEquipmentAvailableExceptionEnum) {
     PersonalProtectionProtectiveEquipmentAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     PersonalProtectionProtectiveEquipmentAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     PersonalProtectionProtectiveEquipmentAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     PersonalProtectionProtectiveEquipmentAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(PersonalProtectionProtectiveEquipmentAvailableExceptionEnum || (PersonalProtectionProtectiveEquipmentAvailableExceptionEnum = {}));
+})(PersonalProtectionProtectiveEquipmentAvailableExceptionEnum = exports.PersonalProtectionProtectiveEquipmentAvailableExceptionEnum || (exports.PersonalProtectionProtectiveEquipmentAvailableExceptionEnum = {}));
 // PersonalProtection
 /**
  * Personal protection measures implemented by the hotel during COVID-19.
@@ -61,37 +64,37 @@ var PersonalProtection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasOfferSanitizingItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasOfferSanitizingItems" }),
         __metadata("design:type", Boolean)
     ], PersonalProtection.prototype, "commonAreasOfferSanitizingItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasOfferSanitizingItemsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasOfferSanitizingItemsException" }),
         __metadata("design:type", String)
     ], PersonalProtection.prototype, "commonAreasOfferSanitizingItemsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faceMaskRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faceMaskRequired" }),
         __metadata("design:type", Boolean)
     ], PersonalProtection.prototype, "faceMaskRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faceMaskRequiredException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faceMaskRequiredException" }),
         __metadata("design:type", String)
     ], PersonalProtection.prototype, "faceMaskRequiredException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestRoomHygieneKitsAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestRoomHygieneKitsAvailable" }),
         __metadata("design:type", Boolean)
     ], PersonalProtection.prototype, "guestRoomHygieneKitsAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestRoomHygieneKitsAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestRoomHygieneKitsAvailableException" }),
         __metadata("design:type", String)
     ], PersonalProtection.prototype, "guestRoomHygieneKitsAvailableException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectiveEquipmentAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectiveEquipmentAvailable" }),
         __metadata("design:type", Boolean)
     ], PersonalProtection.prototype, "protectiveEquipmentAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectiveEquipmentAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectiveEquipmentAvailableException" }),
         __metadata("design:type", String)
     ], PersonalProtection.prototype, "protectiveEquipmentAvailableException", void 0);
     return PersonalProtection;
-}(SpeakeasyBase));
-export { PersonalProtection };
+}(utils_1.SpeakeasyBase));
+exports.PersonalProtection = PersonalProtection;

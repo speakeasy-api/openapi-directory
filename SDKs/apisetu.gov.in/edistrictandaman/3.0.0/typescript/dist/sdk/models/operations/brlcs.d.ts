@@ -105,11 +105,11 @@ export declare class BrlcsRequest extends SpeakeasyBase {
 export declare class BrlcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    brlcs400ApplicationJsonObject?: Brlcs400ApplicationJson;
-    brlcs401ApplicationJsonObject?: Brlcs401ApplicationJson;
-    brlcs404ApplicationJsonObject?: Brlcs404ApplicationJson;
-    brlcs500ApplicationJsonObject?: Brlcs500ApplicationJson;
-    brlcs502ApplicationJsonObject?: Brlcs502ApplicationJson;
-    brlcs503ApplicationJsonObject?: Brlcs503ApplicationJson;
-    brlcs504ApplicationJsonObject?: Brlcs504ApplicationJson;
+    brlcs400ApplicationJSONObject?: Brlcs400ApplicationJson;
+    brlcs401ApplicationJSONObject?: Brlcs401ApplicationJson;
+    brlcs404ApplicationJSONObject?: Brlcs404ApplicationJson;
+    brlcs500ApplicationJSONObject?: Brlcs500ApplicationJson;
+    brlcs502ApplicationJSONObject?: Brlcs502ApplicationJson;
+    brlcs503ApplicationJSONObject?: Brlcs503ApplicationJson;
+    brlcs504ApplicationJSONObject?: Brlcs504ApplicationJson;
 }

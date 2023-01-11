@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateApplicationRequest, CreateApplicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateApplicationRequest = {
   headers: {
-    xAmzAlgorithm: "sed",
-    xAmzContentSha256: "enim",
-    xAmzCredential: "eum",
-    xAmzDate: "et",
-    xAmzSecurityToken: "expedita",
-    xAmzSignature: "et",
-    xAmzSignedHeaders: "quasi",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    applicationDescription: "nisi",
-    applicationName: "et",
-    clientToken: "unde",
-    roleArn: "in",
+    applicationDescription: "voluptas",
+    applicationName: "fugit",
+    clientToken: "et",
+    roleArn: "nihil",
     tags: {
-      "vel": "rerum",
-      "minus": "asperiores",
+      "dicta": "debitis",
+      "voluptatum": "et",
+      "ut": "dolorem",
     },
   },
 };
 
-sdk.sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
+sdk.createApplication(req).then((res: CreateApplicationResponse | AxiosError) => {
    // handle response
 });
 ```

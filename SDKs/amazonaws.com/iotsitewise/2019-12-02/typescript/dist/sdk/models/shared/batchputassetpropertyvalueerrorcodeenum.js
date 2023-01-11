@@ -1,4 +1,7 @@
-export var BatchPutAssetPropertyValueErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchPutAssetPropertyValueErrorCodeEnum = void 0;
+var BatchPutAssetPropertyValueErrorCodeEnum;
 (function (BatchPutAssetPropertyValueErrorCodeEnum) {
     BatchPutAssetPropertyValueErrorCodeEnum["ResourceNotFoundException"] = "ResourceNotFoundException";
     BatchPutAssetPropertyValueErrorCodeEnum["InvalidRequestException"] = "InvalidRequestException";
@@ -9,4 +12,4 @@ export var BatchPutAssetPropertyValueErrorCodeEnum;
     BatchPutAssetPropertyValueErrorCodeEnum["ConflictingOperationException"] = "ConflictingOperationException";
     BatchPutAssetPropertyValueErrorCodeEnum["TimestampOutOfRangeException"] = "TimestampOutOfRangeException";
     BatchPutAssetPropertyValueErrorCodeEnum["AccessDeniedException"] = "AccessDeniedException";
-})(BatchPutAssetPropertyValueErrorCodeEnum || (BatchPutAssetPropertyValueErrorCodeEnum = {}));
+})(BatchPutAssetPropertyValueErrorCodeEnum = exports.BatchPutAssetPropertyValueErrorCodeEnum || (exports.BatchPutAssetPropertyValueErrorCodeEnum = {}));

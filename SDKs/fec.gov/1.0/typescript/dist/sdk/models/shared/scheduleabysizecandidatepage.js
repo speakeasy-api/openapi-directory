@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { ScheduleABySizeCandidate } from "./scheduleabysizecandidate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleABySizeCandidatePage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var scheduleabysizecandidate_1 = require("./scheduleabysizecandidate");
 var ScheduleABySizeCandidatePage = /** @class */ (function (_super) {
     __extends(ScheduleABySizeCandidatePage, _super);
     function ScheduleABySizeCandidatePage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], ScheduleABySizeCandidatePage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ScheduleABySizeCandidate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: scheduleabysizecandidate_1.ScheduleABySizeCandidate }),
         __metadata("design:type", Array)
     ], ScheduleABySizeCandidatePage.prototype, "results", void 0);
     return ScheduleABySizeCandidatePage;
-}(SpeakeasyBase));
-export { ScheduleABySizeCandidatePage };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleABySizeCandidatePage = ScheduleABySizeCandidatePage;

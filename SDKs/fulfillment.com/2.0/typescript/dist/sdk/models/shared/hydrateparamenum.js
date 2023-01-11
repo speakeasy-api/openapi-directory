@@ -1,6 +1,9 @@
-export var HydrateParamEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HydrateParamEnum = void 0;
+var HydrateParamEnum;
 (function (HydrateParamEnum) {
     HydrateParamEnum["Integrator"] = "integrator";
     HydrateParamEnum["LineItems"] = "lineItems";
     HydrateParamEnum["TrackingNumbersCarrier"] = "trackingNumbers.carrier";
-})(HydrateParamEnum || (HydrateParamEnum = {}));
+})(HydrateParamEnum = exports.HydrateParamEnum || (exports.HydrateParamEnum = {}));

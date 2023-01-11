@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetVeteranStatusRequest, GetVeteranStatusResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,12 +33,12 @@ const req: GetVeteranStatusRequest = {
     },
   },
   request: {
-    birthDate: "aliquid",
-    firstName: "inventore",
-    gender: "M",
-    lastName: "quas",
-    middleName: "architecto",
-    ssn: "eos",
+    birthDate: "sit",
+    firstName: "voluptas",
+    gender: "F",
+    lastName: "expedita",
+    middleName: "consequuntur",
+    ssn: "dolor",
   },
 };
 

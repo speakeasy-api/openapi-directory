@@ -38,6 +38,9 @@ export class AppPkgIdGetRequest extends SpeakeasyBase {
 
 export class AppPkgIdGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
+  appD?: string;
+
+  @SpeakeasyMetadata()
   body?: Uint8Array;
 
   @SpeakeasyMetadata()

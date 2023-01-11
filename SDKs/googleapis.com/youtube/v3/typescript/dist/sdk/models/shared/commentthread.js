@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommentThreadReplies } from "./commentthreadreplies";
-import { CommentThreadSnippet } from "./commentthreadsnippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentThread = void 0;
+var utils_1 = require("../../../internal/utils");
+var commentthreadreplies_1 = require("./commentthreadreplies");
+var commentthreadsnippet_1 = require("./commentthreadsnippet");
 // CommentThread
 /**
  * A *comment thread* represents information that applies to a top level comment and all its replies. It can also include the top level comment itself and some of the replies.
@@ -35,25 +38,25 @@ var CommentThread = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], CommentThread.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentThread.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], CommentThread.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replies" }),
-        __metadata("design:type", CommentThreadReplies)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replies" }),
+        __metadata("design:type", commentthreadreplies_1.CommentThreadReplies)
     ], CommentThread.prototype, "replies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", CommentThreadSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", commentthreadsnippet_1.CommentThreadSnippet)
     ], CommentThread.prototype, "snippet", void 0);
     return CommentThread;
-}(SpeakeasyBase));
-export { CommentThread };
+}(utils_1.SpeakeasyBase));
+exports.CommentThread = CommentThread;

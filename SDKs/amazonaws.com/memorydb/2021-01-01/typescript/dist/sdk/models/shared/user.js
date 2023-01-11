@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Authentication } from "./authentication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+var utils_1 = require("../../../internal/utils");
+var authentication_1 = require("./authentication");
 // User
 /**
  * You create users and assign them specific permissions by using an access string. You assign the users to Access Control Lists aligned with a specific role (administrators, human resources) that are then deployed to one or more MemoryDB clusters.
@@ -34,33 +37,33 @@ var User = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ACLNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ACLNames" }),
         __metadata("design:type", Array)
     ], User.prototype, "aclNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ARN" }),
         __metadata("design:type", String)
     ], User.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccessString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccessString" }),
         __metadata("design:type", String)
     ], User.prototype, "accessString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Authentication" }),
-        __metadata("design:type", Authentication)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Authentication" }),
+        __metadata("design:type", authentication_1.Authentication)
     ], User.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumEngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumEngineVersion" }),
         __metadata("design:type", String)
     ], User.prototype, "minimumEngineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], User.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], User.prototype, "status", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

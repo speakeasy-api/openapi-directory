@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DistributionSummary } from "./distributionsummary";
+import { DistributionSummaryList } from "./distributionsummarylist";
 
 
 
@@ -11,8 +11,8 @@ export class DistributionList extends SpeakeasyBase {
   @SpeakeasyMetadata()
   isTruncated: boolean;
 
-  @SpeakeasyMetadata({ elemType: DistributionSummary })
-  items?: DistributionSummary[];
+  @SpeakeasyMetadata({ elemType: DistributionSummaryList })
+  items?: DistributionSummaryList[];
 
   @SpeakeasyMetadata()
   marker: string;

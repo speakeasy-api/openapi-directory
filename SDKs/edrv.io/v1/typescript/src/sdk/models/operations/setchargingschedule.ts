@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class Setchargingschedule201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=command" })
-  command?: Map<string, any>;
+  command?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,5 +28,5 @@ export class SetchargingscheduleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setchargingschedule201ApplicationJsonObject?: Setchargingschedule201ApplicationJson;
+  setchargingschedule201ApplicationJSONObject?: Setchargingschedule201ApplicationJson;
 }

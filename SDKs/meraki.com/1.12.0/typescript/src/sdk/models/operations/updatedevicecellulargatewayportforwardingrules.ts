@@ -55,5 +55,5 @@ export class UpdateDeviceCellularGatewayPortForwardingRulesResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceCellularGatewayPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceCellularGatewayPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

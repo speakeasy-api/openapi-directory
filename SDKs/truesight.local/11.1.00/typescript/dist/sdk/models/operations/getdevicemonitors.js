@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceMonitorsResponse = exports.GetDeviceMonitorsRequest = exports.GetDeviceMonitorsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceMonitorsPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceMonitorsPathParams, _super);
     function GetDeviceMonitorsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], GetDeviceMonitorsPathParams.prototype, "deviceId", void 0);
     return GetDeviceMonitorsPathParams;
-}(SpeakeasyBase));
-export { GetDeviceMonitorsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceMonitorsPathParams = GetDeviceMonitorsPathParams;
 var GetDeviceMonitorsRequest = /** @class */ (function (_super) {
     __extends(GetDeviceMonitorsRequest, _super);
     function GetDeviceMonitorsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceMonitorsPathParams)
     ], GetDeviceMonitorsRequest.prototype, "pathParams", void 0);
     return GetDeviceMonitorsRequest;
-}(SpeakeasyBase));
-export { GetDeviceMonitorsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceMonitorsRequest = GetDeviceMonitorsRequest;
 var GetDeviceMonitorsResponse = /** @class */ (function (_super) {
     __extends(GetDeviceMonitorsResponse, _super);
     function GetDeviceMonitorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeviceMonitorsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceMonitorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceMonitorsResponse.prototype, "statusCode", void 0);
     return GetDeviceMonitorsResponse;
-}(SpeakeasyBase));
-export { GetDeviceMonitorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceMonitorsResponse = GetDeviceMonitorsResponse;

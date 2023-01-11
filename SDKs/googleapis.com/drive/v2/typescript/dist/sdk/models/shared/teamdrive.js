@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamDrive = exports.TeamDriveRestrictions = exports.TeamDriveCapabilities = exports.TeamDriveBackgroundImageFile = void 0;
+var utils_1 = require("../../../internal/utils");
 // TeamDriveBackgroundImageFile
 /**
  * An image file and cropping parameters from which a background image for this Team Drive is set. This is a write only field; it can only be set on drive.teamdrives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
@@ -33,24 +36,24 @@ var TeamDriveBackgroundImageFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TeamDriveBackgroundImageFile.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], TeamDriveBackgroundImageFile.prototype, "width", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xCoordinate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xCoordinate" }),
         __metadata("design:type", Number)
     ], TeamDriveBackgroundImageFile.prototype, "xCoordinate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yCoordinate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yCoordinate" }),
         __metadata("design:type", Number)
     ], TeamDriveBackgroundImageFile.prototype, "yCoordinate", void 0);
     return TeamDriveBackgroundImageFile;
-}(SpeakeasyBase));
-export { TeamDriveBackgroundImageFile };
+}(utils_1.SpeakeasyBase));
+exports.TeamDriveBackgroundImageFile = TeamDriveBackgroundImageFile;
 // TeamDriveCapabilities
 /**
  * Capabilities the current user has on this Team Drive.
@@ -61,88 +64,88 @@ var TeamDriveCapabilities = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canAddChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canAddChildren" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canAddChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeCopyRequiresWriterPermissionRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeCopyRequiresWriterPermissionRestriction" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canChangeCopyRequiresWriterPermissionRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeDomainUsersOnlyRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeDomainUsersOnlyRestriction" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canChangeDomainUsersOnlyRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeTeamDriveBackground" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeTeamDriveBackground" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canChangeTeamDriveBackground", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeTeamMembersOnlyRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeTeamMembersOnlyRestriction" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canChangeTeamMembersOnlyRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canComment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canComment" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCopy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCopy" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canCopy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDeleteChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDeleteChildren" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canDeleteChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDeleteTeamDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDeleteTeamDrive" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canDeleteTeamDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDownload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDownload" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canDownload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canEdit" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canListChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canListChildren" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canListChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canManageMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canManageMembers" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canManageMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canReadRevisions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canReadRevisions" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canReadRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRemoveChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRemoveChildren" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canRemoveChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRename" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canRename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRenameTeamDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRenameTeamDrive" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canRenameTeamDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canResetTeamDriveRestrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canResetTeamDriveRestrictions" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canResetTeamDriveRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canShare" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canShare" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canShare", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canTrashChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canTrashChildren" }),
         __metadata("design:type", Boolean)
     ], TeamDriveCapabilities.prototype, "canTrashChildren", void 0);
     return TeamDriveCapabilities;
-}(SpeakeasyBase));
-export { TeamDriveCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.TeamDriveCapabilities = TeamDriveCapabilities;
 // TeamDriveRestrictions
 /**
  * A set of restrictions that apply to this Team Drive or items inside this Team Drive.
@@ -153,24 +156,24 @@ var TeamDriveRestrictions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminManagedRestrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminManagedRestrictions" }),
         __metadata("design:type", Boolean)
     ], TeamDriveRestrictions.prototype, "adminManagedRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyRequiresWriterPermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyRequiresWriterPermission" }),
         __metadata("design:type", Boolean)
     ], TeamDriveRestrictions.prototype, "copyRequiresWriterPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainUsersOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainUsersOnly" }),
         __metadata("design:type", Boolean)
     ], TeamDriveRestrictions.prototype, "domainUsersOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamMembersOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamMembersOnly" }),
         __metadata("design:type", Boolean)
     ], TeamDriveRestrictions.prototype, "teamMembersOnly", void 0);
     return TeamDriveRestrictions;
-}(SpeakeasyBase));
-export { TeamDriveRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.TeamDriveRestrictions = TeamDriveRestrictions;
 // TeamDrive
 /**
  * Deprecated: use the drive collection instead.
@@ -181,49 +184,49 @@ var TeamDrive = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageFile" }),
         __metadata("design:type", TeamDriveBackgroundImageFile)
     ], TeamDrive.prototype, "backgroundImageFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
         __metadata("design:type", TeamDriveCapabilities)
     ], TeamDrive.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdDate" }),
         __metadata("design:type", Date)
     ], TeamDrive.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgUnitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgUnitId" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "orgUnitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
         __metadata("design:type", TeamDriveRestrictions)
     ], TeamDrive.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=themeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=themeId" }),
         __metadata("design:type", String)
     ], TeamDrive.prototype, "themeId", void 0);
     return TeamDrive;
-}(SpeakeasyBase));
-export { TeamDrive };
+}(utils_1.SpeakeasyBase));
+exports.TeamDrive = TeamDrive;

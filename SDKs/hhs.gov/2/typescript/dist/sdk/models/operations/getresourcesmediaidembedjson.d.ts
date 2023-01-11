@@ -18,6 +18,6 @@ export declare class GetResourcesMediaIdEmbedJsonRequest extends SpeakeasyBase {
 }
 export declare class GetResourcesMediaIdEmbedJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getResourcesMediaIdEmbedJson200ApplicationJsonString?: string;
     statusCode: number;
+    getResourcesMediaIdEmbedJSON200ApplicationJSONString?: string;
 }

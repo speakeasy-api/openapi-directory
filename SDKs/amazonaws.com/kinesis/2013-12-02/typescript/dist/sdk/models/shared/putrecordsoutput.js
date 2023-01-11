@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
-import { PutRecordsResultEntry } from "./putrecordsresultentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutRecordsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
+var putrecordsresultentry_1 = require("./putrecordsresultentry");
 // PutRecordsOutput
 /**
  *  <code>PutRecords</code> results.
@@ -35,17 +38,17 @@ var PutRecordsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionType" }),
         __metadata("design:type", String)
     ], PutRecordsOutput.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailedRecordCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailedRecordCount" }),
         __metadata("design:type", Number)
     ], PutRecordsOutput.prototype, "failedRecordCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Records", elemType: PutRecordsResultEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Records", elemType: putrecordsresultentry_1.PutRecordsResultEntry }),
         __metadata("design:type", Array)
     ], PutRecordsOutput.prototype, "records", void 0);
     return PutRecordsOutput;
-}(SpeakeasyBase));
-export { PutRecordsOutput };
+}(utils_1.SpeakeasyBase));
+exports.PutRecordsOutput = PutRecordsOutput;

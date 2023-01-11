@@ -105,11 +105,11 @@ export declare class AemtwRequest extends SpeakeasyBase {
 export declare class AemtwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    aemtw400ApplicationJsonObject?: Aemtw400ApplicationJson;
-    aemtw401ApplicationJsonObject?: Aemtw401ApplicationJson;
-    aemtw404ApplicationJsonObject?: Aemtw404ApplicationJson;
-    aemtw500ApplicationJsonObject?: Aemtw500ApplicationJson;
-    aemtw502ApplicationJsonObject?: Aemtw502ApplicationJson;
-    aemtw503ApplicationJsonObject?: Aemtw503ApplicationJson;
-    aemtw504ApplicationJsonObject?: Aemtw504ApplicationJson;
+    aemtw400ApplicationJSONObject?: Aemtw400ApplicationJson;
+    aemtw401ApplicationJSONObject?: Aemtw401ApplicationJson;
+    aemtw404ApplicationJSONObject?: Aemtw404ApplicationJson;
+    aemtw500ApplicationJSONObject?: Aemtw500ApplicationJson;
+    aemtw502ApplicationJSONObject?: Aemtw502ApplicationJson;
+    aemtw503ApplicationJSONObject?: Aemtw503ApplicationJson;
+    aemtw504ApplicationJSONObject?: Aemtw504ApplicationJson;
 }

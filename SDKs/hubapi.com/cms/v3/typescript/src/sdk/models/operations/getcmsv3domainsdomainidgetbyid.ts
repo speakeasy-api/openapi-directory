@@ -10,8 +10,32 @@ export class GetCmsV3DomainsDomainIdGetByIdPathParams extends SpeakeasyBase {
 
 
 export class GetCmsV3DomainsDomainIdGetByIdSecurity extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
+  privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth2?: shared.SchemeOauth2;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
+  privateApps?: shared.SchemePrivateApps;
+
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey: shared.SchemeHapikey;
+  hapikey?: shared.SchemeHapikey;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
+  privateApps1?: shared.SchemePrivateApps;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth3?: shared.SchemeOauth2;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
+  privateAppsLegacy1?: shared.SchemePrivateAppsLegacy;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth2Legacy?: shared.SchemeOauth2Legacy;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth2Legacy1?: shared.SchemeOauth2Legacy;
 }
 
 

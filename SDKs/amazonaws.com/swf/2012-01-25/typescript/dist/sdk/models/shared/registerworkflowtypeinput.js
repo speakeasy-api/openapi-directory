@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChildPolicyEnum } from "./childpolicyenum";
-import { TaskList } from "./tasklist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterWorkflowTypeInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var childpolicyenum_1 = require("./childpolicyenum");
+var tasklist_1 = require("./tasklist");
 var RegisterWorkflowTypeInput = /** @class */ (function (_super) {
     __extends(RegisterWorkflowTypeInput, _super);
     function RegisterWorkflowTypeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultChildPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultChildPolicy" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "defaultChildPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultExecutionStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultExecutionStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "defaultExecutionStartToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLambdaRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLambdaRole" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "defaultLambdaRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], RegisterWorkflowTypeInput.prototype, "defaultTaskList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskPriority" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "defaultTaskPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "defaultTaskStartToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], RegisterWorkflowTypeInput.prototype, "version", void 0);
     return RegisterWorkflowTypeInput;
-}(SpeakeasyBase));
-export { RegisterWorkflowTypeInput };
+}(utils_1.SpeakeasyBase));
+exports.RegisterWorkflowTypeInput = RegisterWorkflowTypeInput;

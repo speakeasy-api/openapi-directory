@@ -1,23 +1,39 @@
-export * from "./batchchecklayeravailability";
-export * from "./batchdeleteimage";
-export * from "./completelayerupload";
-export * from "./createrepository";
-export * from "./deleterepository";
-export * from "./deleterepositorypolicy";
-export * from "./describeimages";
-export * from "./describeimagetags";
-export * from "./describeregistries";
-export * from "./describerepositories";
-export * from "./getauthorizationtoken";
-export * from "./getregistrycatalogdata";
-export * from "./getrepositorycatalogdata";
-export * from "./getrepositorypolicy";
-export * from "./initiatelayerupload";
-export * from "./listtagsforresource";
-export * from "./putimage";
-export * from "./putregistrycatalogdata";
-export * from "./putrepositorycatalogdata";
-export * from "./setrepositorypolicy";
-export * from "./tagresource";
-export * from "./untagresource";
-export * from "./uploadlayerpart";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./batchchecklayeravailability"), exports);
+__exportStar(require("./batchdeleteimage"), exports);
+__exportStar(require("./completelayerupload"), exports);
+__exportStar(require("./createrepository"), exports);
+__exportStar(require("./deleterepository"), exports);
+__exportStar(require("./deleterepositorypolicy"), exports);
+__exportStar(require("./describeimages"), exports);
+__exportStar(require("./describeimagetags"), exports);
+__exportStar(require("./describeregistries"), exports);
+__exportStar(require("./describerepositories"), exports);
+__exportStar(require("./getauthorizationtoken"), exports);
+__exportStar(require("./getregistrycatalogdata"), exports);
+__exportStar(require("./getrepositorycatalogdata"), exports);
+__exportStar(require("./getrepositorypolicy"), exports);
+__exportStar(require("./initiatelayerupload"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./putimage"), exports);
+__exportStar(require("./putregistrycatalogdata"), exports);
+__exportStar(require("./putrepositorycatalogdata"), exports);
+__exportStar(require("./setrepositorypolicy"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./uploadlayerpart"), exports);

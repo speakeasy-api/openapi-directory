@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SeasonLastCompletedFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SeasonLastCompletedResponse = exports.SeasonLastCompletedRequest = exports.SeasonLastCompletedPathParams = exports.SeasonLastCompletedFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SeasonLastCompletedFormatEnum;
 (function (SeasonLastCompletedFormatEnum) {
     SeasonLastCompletedFormatEnum["Xml"] = "XML";
     SeasonLastCompletedFormatEnum["Json"] = "JSON";
-})(SeasonLastCompletedFormatEnum || (SeasonLastCompletedFormatEnum = {}));
+})(SeasonLastCompletedFormatEnum = exports.SeasonLastCompletedFormatEnum || (exports.SeasonLastCompletedFormatEnum = {}));
 var SeasonLastCompletedPathParams = /** @class */ (function (_super) {
     __extends(SeasonLastCompletedPathParams, _super);
     function SeasonLastCompletedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], SeasonLastCompletedPathParams.prototype, "format", void 0);
     return SeasonLastCompletedPathParams;
-}(SpeakeasyBase));
-export { SeasonLastCompletedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SeasonLastCompletedPathParams = SeasonLastCompletedPathParams;
 var SeasonLastCompletedRequest = /** @class */ (function (_super) {
     __extends(SeasonLastCompletedRequest, _super);
     function SeasonLastCompletedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeasonLastCompletedPathParams)
     ], SeasonLastCompletedRequest.prototype, "pathParams", void 0);
     return SeasonLastCompletedRequest;
-}(SpeakeasyBase));
-export { SeasonLastCompletedRequest };
+}(utils_1.SpeakeasyBase));
+exports.SeasonLastCompletedRequest = SeasonLastCompletedRequest;
 var SeasonLastCompletedResponse = /** @class */ (function (_super) {
     __extends(SeasonLastCompletedResponse, _super);
     function SeasonLastCompletedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SeasonLastCompletedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], SeasonLastCompletedResponse.prototype, "seasonLastCompleted200ApplicationJsonInteger", void 0);
+    ], SeasonLastCompletedResponse.prototype, "seasonLastCompleted200ApplicationJSONInteger", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SeasonLastCompletedResponse.prototype, "statusCode", void 0);
     return SeasonLastCompletedResponse;
-}(SpeakeasyBase));
-export { SeasonLastCompletedResponse };
+}(utils_1.SpeakeasyBase));
+exports.SeasonLastCompletedResponse = SeasonLastCompletedResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileSystemTypeEnum } from "./filesystemtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectFileSystemLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var filesystemtypeenum_1 = require("./filesystemtypeenum");
 // ProjectFileSystemLocation
 /**
  *  Information about a file system created by Amazon Elastic File System (EFS). For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">What Is Amazon Elastic File System?</a>
@@ -34,25 +37,25 @@ var ProjectFileSystemLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], ProjectFileSystemLocation.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ProjectFileSystemLocation.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountOptions" }),
         __metadata("design:type", String)
     ], ProjectFileSystemLocation.prototype, "mountOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPoint" }),
         __metadata("design:type", String)
     ], ProjectFileSystemLocation.prototype, "mountPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProjectFileSystemLocation.prototype, "type", void 0);
     return ProjectFileSystemLocation;
-}(SpeakeasyBase));
-export { ProjectFileSystemLocation };
+}(utils_1.SpeakeasyBase));
+exports.ProjectFileSystemLocation = ProjectFileSystemLocation;

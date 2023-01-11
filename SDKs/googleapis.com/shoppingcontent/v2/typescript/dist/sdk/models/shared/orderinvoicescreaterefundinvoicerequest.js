@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption } from "./orderinvoicescustombatchrequestentrycreaterefundinvoicerefundoption";
-import { OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption } from "./orderinvoicescustombatchrequestentrycreaterefundinvoicereturnoption";
-import { ShipmentInvoice } from "./shipmentinvoice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderinvoicesCreateRefundInvoiceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderinvoicescustombatchrequestentrycreaterefundinvoicerefundoption_1 = require("./orderinvoicescustombatchrequestentrycreaterefundinvoicerefundoption");
+var orderinvoicescustombatchrequestentrycreaterefundinvoicereturnoption_1 = require("./orderinvoicescustombatchrequestentrycreaterefundinvoicereturnoption");
+var shipmentinvoice_1 = require("./shipmentinvoice");
 var OrderinvoicesCreateRefundInvoiceRequest = /** @class */ (function (_super) {
     __extends(OrderinvoicesCreateRefundInvoiceRequest, _super);
     function OrderinvoicesCreateRefundInvoiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceId" }),
         __metadata("design:type", String)
     ], OrderinvoicesCreateRefundInvoiceRequest.prototype, "invoiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationId" }),
         __metadata("design:type", String)
     ], OrderinvoicesCreateRefundInvoiceRequest.prototype, "operationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundOnlyOption" }),
-        __metadata("design:type", OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundOnlyOption" }),
+        __metadata("design:type", orderinvoicescustombatchrequestentrycreaterefundinvoicerefundoption_1.OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption)
     ], OrderinvoicesCreateRefundInvoiceRequest.prototype, "refundOnlyOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnOption" }),
-        __metadata("design:type", OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnOption" }),
+        __metadata("design:type", orderinvoicescustombatchrequestentrycreaterefundinvoicereturnoption_1.OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption)
     ], OrderinvoicesCreateRefundInvoiceRequest.prototype, "returnOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentInvoices", elemType: ShipmentInvoice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentInvoices", elemType: shipmentinvoice_1.ShipmentInvoice }),
         __metadata("design:type", Array)
     ], OrderinvoicesCreateRefundInvoiceRequest.prototype, "shipmentInvoices", void 0);
     return OrderinvoicesCreateRefundInvoiceRequest;
-}(SpeakeasyBase));
-export { OrderinvoicesCreateRefundInvoiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrderinvoicesCreateRefundInvoiceRequest = OrderinvoicesCreateRefundInvoiceRequest;

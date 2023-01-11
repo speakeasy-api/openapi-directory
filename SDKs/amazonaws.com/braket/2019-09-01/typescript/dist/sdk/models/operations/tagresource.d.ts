@@ -12,7 +12,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
-    tags: Map<string, string>;
+    tags: Record<string, string>;
 }
 export declare class TagResourceRequest extends SpeakeasyBase {
     pathParams: TagResourcePathParams;
@@ -24,6 +24,6 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     internalServiceException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     validationException?: any;
 }

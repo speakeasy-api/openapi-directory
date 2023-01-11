@@ -105,11 +105,11 @@ export declare class ArmtwRequest extends SpeakeasyBase {
 export declare class ArmtwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    armtw400ApplicationJsonObject?: Armtw400ApplicationJson;
-    armtw401ApplicationJsonObject?: Armtw401ApplicationJson;
-    armtw404ApplicationJsonObject?: Armtw404ApplicationJson;
-    armtw500ApplicationJsonObject?: Armtw500ApplicationJson;
-    armtw502ApplicationJsonObject?: Armtw502ApplicationJson;
-    armtw503ApplicationJsonObject?: Armtw503ApplicationJson;
-    armtw504ApplicationJsonObject?: Armtw504ApplicationJson;
+    armtw400ApplicationJSONObject?: Armtw400ApplicationJson;
+    armtw401ApplicationJSONObject?: Armtw401ApplicationJson;
+    armtw404ApplicationJSONObject?: Armtw404ApplicationJson;
+    armtw500ApplicationJSONObject?: Armtw500ApplicationJson;
+    armtw502ApplicationJSONObject?: Armtw502ApplicationJson;
+    armtw503ApplicationJSONObject?: Armtw503ApplicationJson;
+    armtw504ApplicationJSONObject?: Armtw504ApplicationJson;
 }

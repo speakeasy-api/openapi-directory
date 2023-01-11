@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlatformSummaryBetterAdsStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlatformSummary = exports.PlatformSummaryRegionEnum = exports.PlatformSummaryFilterStatusEnum = exports.PlatformSummaryBetterAdsStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlatformSummaryBetterAdsStatusEnum;
 (function (PlatformSummaryBetterAdsStatusEnum) {
     PlatformSummaryBetterAdsStatusEnum["Unknown"] = "UNKNOWN";
     PlatformSummaryBetterAdsStatusEnum["Passing"] = "PASSING";
     PlatformSummaryBetterAdsStatusEnum["Warning"] = "WARNING";
     PlatformSummaryBetterAdsStatusEnum["Failing"] = "FAILING";
-})(PlatformSummaryBetterAdsStatusEnum || (PlatformSummaryBetterAdsStatusEnum = {}));
-export var PlatformSummaryFilterStatusEnum;
+})(PlatformSummaryBetterAdsStatusEnum = exports.PlatformSummaryBetterAdsStatusEnum || (exports.PlatformSummaryBetterAdsStatusEnum = {}));
+var PlatformSummaryFilterStatusEnum;
 (function (PlatformSummaryFilterStatusEnum) {
     PlatformSummaryFilterStatusEnum["Unknown"] = "UNKNOWN";
     PlatformSummaryFilterStatusEnum["On"] = "ON";
     PlatformSummaryFilterStatusEnum["Off"] = "OFF";
     PlatformSummaryFilterStatusEnum["Paused"] = "PAUSED";
     PlatformSummaryFilterStatusEnum["Pending"] = "PENDING";
-})(PlatformSummaryFilterStatusEnum || (PlatformSummaryFilterStatusEnum = {}));
-export var PlatformSummaryRegionEnum;
+})(PlatformSummaryFilterStatusEnum = exports.PlatformSummaryFilterStatusEnum || (exports.PlatformSummaryFilterStatusEnum = {}));
+var PlatformSummaryRegionEnum;
 (function (PlatformSummaryRegionEnum) {
     PlatformSummaryRegionEnum["RegionUnknown"] = "REGION_UNKNOWN";
     PlatformSummaryRegionEnum["RegionA"] = "REGION_A";
     PlatformSummaryRegionEnum["RegionB"] = "REGION_B";
     PlatformSummaryRegionEnum["RegionC"] = "REGION_C";
-})(PlatformSummaryRegionEnum || (PlatformSummaryRegionEnum = {}));
+})(PlatformSummaryRegionEnum = exports.PlatformSummaryRegionEnum || (exports.PlatformSummaryRegionEnum = {}));
 // PlatformSummary
 /**
  * A site's Ad Experience Report summary on a single platform.
@@ -55,33 +58,33 @@ var PlatformSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=betterAdsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=betterAdsStatus" }),
         __metadata("design:type", String)
     ], PlatformSummary.prototype, "betterAdsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcementTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcementTime" }),
         __metadata("design:type", String)
     ], PlatformSummary.prototype, "enforcementTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterStatus" }),
         __metadata("design:type", String)
     ], PlatformSummary.prototype, "filterStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChangeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChangeTime" }),
         __metadata("design:type", String)
     ], PlatformSummary.prototype, "lastChangeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", Array)
     ], PlatformSummary.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportUrl" }),
         __metadata("design:type", String)
     ], PlatformSummary.prototype, "reportUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=underReview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=underReview" }),
         __metadata("design:type", Boolean)
     ], PlatformSummary.prototype, "underReview", void 0);
     return PlatformSummary;
-}(SpeakeasyBase));
-export { PlatformSummary };
+}(utils_1.SpeakeasyBase));
+exports.PlatformSummary = PlatformSummary;

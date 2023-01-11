@@ -1,26 +1,42 @@
-export * from "./apigeeregistryprojectslocationsapiscreate";
-export * from "./apigeeregistryprojectslocationsapisdeploymentscreate";
-export * from "./apigeeregistryprojectslocationsapisdeploymentslist";
-export * from "./apigeeregistryprojectslocationsapislist";
-export * from "./apigeeregistryprojectslocationsapisversionscreate";
-export * from "./apigeeregistryprojectslocationsapisversionslist";
-export * from "./apigeeregistryprojectslocationsapisversionsspecscreate";
-export * from "./apigeeregistryprojectslocationsapisversionsspecsdeleterevision";
-export * from "./apigeeregistryprojectslocationsapisversionsspecslist";
-export * from "./apigeeregistryprojectslocationsapisversionsspecslistrevisions";
-export * from "./apigeeregistryprojectslocationsapisversionsspecspatch";
-export * from "./apigeeregistryprojectslocationsapisversionsspecsrollback";
-export * from "./apigeeregistryprojectslocationsapisversionsspecstagrevision";
-export * from "./apigeeregistryprojectslocationsartifactscreate";
-export * from "./apigeeregistryprojectslocationsartifactsgetcontents";
-export * from "./apigeeregistryprojectslocationsartifactslist";
-export * from "./apigeeregistryprojectslocationsartifactsreplaceartifact";
-export * from "./apigeeregistryprojectslocationsinstancescreate";
-export * from "./apigeeregistryprojectslocationslist";
-export * from "./apigeeregistryprojectslocationsoperationscancel";
-export * from "./apigeeregistryprojectslocationsoperationsdelete";
-export * from "./apigeeregistryprojectslocationsoperationsget";
-export * from "./apigeeregistryprojectslocationsoperationslist";
-export * from "./apigeeregistryprojectslocationsruntimegetiampolicy";
-export * from "./apigeeregistryprojectslocationsruntimesetiampolicy";
-export * from "./apigeeregistryprojectslocationsruntimetestiampermissions";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./apigeeregistryprojectslocationsapiscreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisdeploymentscreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisdeploymentslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapislist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionscreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecscreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecsdeleterevision"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecslistrevisions"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecspatch"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecsrollback"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsapisversionsspecstagrevision"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsartifactscreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsartifactsgetcontents"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsartifactslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsartifactsreplaceartifact"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsinstancescreate"), exports);
+__exportStar(require("./apigeeregistryprojectslocationslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsoperationscancel"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsoperationsdelete"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsoperationsget"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsoperationslist"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsruntimegetiampolicy"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsruntimesetiampolicy"), exports);
+__exportStar(require("./apigeeregistryprojectslocationsruntimetestiampermissions"), exports);

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkProtocolEnum } from "./networkprotocolenum";
-import { PortStateEnum } from "./portstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancePortState = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkprotocolenum_1 = require("./networkprotocolenum");
+var portstateenum_1 = require("./portstateenum");
 // InstancePortState
 /**
  * Describes open ports on an instance, the IP addresses allowed to connect to the instance through the ports, and the protocol.
@@ -35,33 +38,33 @@ var InstancePortState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrListAliases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrListAliases" }),
         __metadata("design:type", Array)
     ], InstancePortState.prototype, "cidrListAliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrs" }),
         __metadata("design:type", Array)
     ], InstancePortState.prototype, "cidrs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromPort" }),
         __metadata("design:type", Number)
     ], InstancePortState.prototype, "fromPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Cidrs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Cidrs" }),
         __metadata("design:type", Array)
     ], InstancePortState.prototype, "ipv6Cidrs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], InstancePortState.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], InstancePortState.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toPort" }),
         __metadata("design:type", Number)
     ], InstancePortState.prototype, "toPort", void 0);
     return InstancePortState;
-}(SpeakeasyBase));
-export { InstancePortState };
+}(utils_1.SpeakeasyBase));
+exports.InstancePortState = InstancePortState;

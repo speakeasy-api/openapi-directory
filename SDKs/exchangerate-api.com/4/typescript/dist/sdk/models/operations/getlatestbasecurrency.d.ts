@@ -5,7 +5,7 @@ export declare class GetLatestBaseCurrencyPathParams extends SpeakeasyBase {
 export declare class GetLatestBaseCurrency200ApplicationJson extends SpeakeasyBase {
     base?: string;
     date?: string;
-    rates?: Map<string, number>;
+    rates?: Record<string, number>;
     timeLastUpdated?: number;
 }
 export declare class GetLatestBaseCurrency404ApplicationJson extends SpeakeasyBase {
@@ -17,7 +17,7 @@ export declare class GetLatestBaseCurrencyRequest extends SpeakeasyBase {
 }
 export declare class GetLatestBaseCurrencyResponse extends SpeakeasyBase {
     contentType: string;
-    getLatestBaseCurrency200ApplicationJsonObject?: GetLatestBaseCurrency200ApplicationJson;
-    getLatestBaseCurrency404ApplicationJsonObject?: GetLatestBaseCurrency404ApplicationJson;
     statusCode: number;
+    getLatestBaseCurrency200ApplicationJSONObject?: GetLatestBaseCurrency200ApplicationJson;
+    getLatestBaseCurrency404ApplicationJSONObject?: GetLatestBaseCurrency404ApplicationJson;
 }

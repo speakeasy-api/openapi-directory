@@ -14,11 +14,11 @@ export declare class DeleteServerCatalogHeaders extends SpeakeasyBase {
 }
 export declare class DeleteServerCatalogRequest extends SpeakeasyBase {
     headers: DeleteServerCatalogHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DeleteServerCatalogResponse extends SpeakeasyBase {
     contentType: string;
-    deleteServerCatalogResponse?: Map<string, any>;
+    deleteServerCatalogResponse?: Record<string, any>;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;

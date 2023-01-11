@@ -16,16 +16,16 @@ export class GetInventoryHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 export enum GetInventory200ApplicationJsonQuantityUnitEnum {
@@ -71,5 +71,5 @@ export class GetInventoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInventory200ApplicationJsonObject?: GetInventory200ApplicationJson;
+  getInventory200ApplicationJSONObject?: GetInventory200ApplicationJson;
 }

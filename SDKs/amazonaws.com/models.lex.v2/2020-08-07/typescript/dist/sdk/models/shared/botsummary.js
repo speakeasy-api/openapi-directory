@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotStatusEnum } from "./botstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var botstatusenum_1 = require("./botstatusenum");
 // BotSummary
 /**
  * Summary information about a bot returned by the <a>ListBots</a> operation.
@@ -34,29 +37,29 @@ var BotSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], BotSummary.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botName" }),
         __metadata("design:type", String)
     ], BotSummary.prototype, "botName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botStatus" }),
         __metadata("design:type", String)
     ], BotSummary.prototype, "botStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BotSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], BotSummary.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestBotVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestBotVersion" }),
         __metadata("design:type", String)
     ], BotSummary.prototype, "latestBotVersion", void 0);
     return BotSummary;
-}(SpeakeasyBase));
-export { BotSummary };
+}(utils_1.SpeakeasyBase));
+exports.BotSummary = BotSummary;

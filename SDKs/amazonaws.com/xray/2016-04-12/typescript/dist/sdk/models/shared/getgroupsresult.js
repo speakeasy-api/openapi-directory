@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupSummary } from "./groupsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGroupsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupsummary_1 = require("./groupsummary");
 var GetGroupsResult = /** @class */ (function (_super) {
     __extends(GetGroupsResult, _super);
     function GetGroupsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Groups", elemType: GroupSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Groups", elemType: groupsummary_1.GroupSummary }),
         __metadata("design:type", Array)
     ], GetGroupsResult.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetGroupsResult.prototype, "nextToken", void 0);
     return GetGroupsResult;
-}(SpeakeasyBase));
-export { GetGroupsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetGroupsResult = GetGroupsResult;

@@ -4,10 +4,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * `Product` with asset data.
 **/
 export declare class GoogleCloudPrivatecatalogproducerV1beta1Version extends SpeakeasyBase {
-    asset?: Map<string, any>;
+    asset?: Record<string, any>;
     createTime?: string;
     description?: string;
     name?: string;
-    originalAsset?: Map<string, any>;
+    originalAsset?: Record<string, any>;
     updateTime?: string;
 }

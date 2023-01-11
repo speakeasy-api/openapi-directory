@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PecerRequestBodyCertificateParameters extends SpeakeasyBase {
-    acNo: string;
+    acNO: string;
     dob: string;
 }
 export declare enum PecerRequestBodyFormatEnum {
@@ -106,11 +106,11 @@ export declare class PecerRequest extends SpeakeasyBase {
 export declare class PecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pecer400ApplicationJsonObject?: Pecer400ApplicationJson;
-    pecer401ApplicationJsonObject?: Pecer401ApplicationJson;
-    pecer404ApplicationJsonObject?: Pecer404ApplicationJson;
-    pecer500ApplicationJsonObject?: Pecer500ApplicationJson;
-    pecer502ApplicationJsonObject?: Pecer502ApplicationJson;
-    pecer503ApplicationJsonObject?: Pecer503ApplicationJson;
-    pecer504ApplicationJsonObject?: Pecer504ApplicationJson;
+    pecer400ApplicationJSONObject?: Pecer400ApplicationJson;
+    pecer401ApplicationJSONObject?: Pecer401ApplicationJson;
+    pecer404ApplicationJSONObject?: Pecer404ApplicationJson;
+    pecer500ApplicationJSONObject?: Pecer500ApplicationJson;
+    pecer502ApplicationJSONObject?: Pecer502ApplicationJson;
+    pecer503ApplicationJSONObject?: Pecer503ApplicationJson;
+    pecer504ApplicationJSONObject?: Pecer504ApplicationJson;
 }

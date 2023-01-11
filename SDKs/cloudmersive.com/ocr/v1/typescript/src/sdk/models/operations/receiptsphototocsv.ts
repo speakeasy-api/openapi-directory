@@ -41,10 +41,10 @@ export class ReceiptsPhotoToCsvResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  receiptsPhotoToCsv200ApplicationJsonObject?: Map<string, any>;
+  receiptsPhotoToCSV200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  receiptsPhotoToCsv200TextJsonObject?: Map<string, any>;
+  receiptsPhotoToCSV200TextJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

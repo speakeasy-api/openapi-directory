@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricValue } from "./metricvalue";
-import { RowDimensions } from "./rowdimensions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeStatusRow = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricvalue_1 = require("./metricvalue");
+var rowdimensions_1 = require("./rowdimensions");
 // CreativeStatusRow
 /**
  * The number of bids with the specified dimension values that did not win the auction (either were filtered pre-auction or lost the auction), as described by the specified creative status.
@@ -35,17 +38,17 @@ var CreativeStatusRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidCount" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidCount" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], CreativeStatusRow.prototype, "bidCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeStatusId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeStatusId" }),
         __metadata("design:type", Number)
     ], CreativeStatusRow.prototype, "creativeStatusId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowDimensions" }),
-        __metadata("design:type", RowDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowDimensions" }),
+        __metadata("design:type", rowdimensions_1.RowDimensions)
     ], CreativeStatusRow.prototype, "rowDimensions", void 0);
     return CreativeStatusRow;
-}(SpeakeasyBase));
-export { CreativeStatusRow };
+}(utils_1.SpeakeasyBase));
+exports.CreativeStatusRow = CreativeStatusRow;

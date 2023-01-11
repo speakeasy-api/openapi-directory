@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetSuperfundPathParams extends SpeakeasyBase {
-    superFundId: string;
+    superFundID: string;
 }
 export declare class GetSuperfundHeaders extends SpeakeasyBase {
     xeroTenantId: string;

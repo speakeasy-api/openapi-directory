@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1CsvInstruction } from "./googleclouddatalabelingv1beta1csvinstruction";
-import { GoogleCloudDatalabelingV1beta1PdfInstruction } from "./googleclouddatalabelingv1beta1pdfinstruction";
-export var GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1Instruction = exports.GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1csvinstruction_1 = require("./googleclouddatalabelingv1beta1csvinstruction");
+var googleclouddatalabelingv1beta1pdfinstruction_1 = require("./googleclouddatalabelingv1beta1pdfinstruction");
+var GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum;
 (function (GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum) {
     GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum["DataTypeUnspecified"] = "DATA_TYPE_UNSPECIFIED";
     GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum["Image"] = "IMAGE";
     GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum["Video"] = "VIDEO";
     GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum["Text"] = "TEXT";
     GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum["GeneralData"] = "GENERAL_DATA";
-})(GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum || (GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum = {}));
+})(GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum = exports.GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum || (exports.GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum = {}));
 // GoogleCloudDatalabelingV1beta1Instruction
 /**
  * Instruction of how to perform the labeling task for human operators. Currently only PDF instruction is supported.
@@ -43,41 +46,41 @@ var GoogleCloudDatalabelingV1beta1Instruction = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockingResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockingResources" }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "blockingResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csvInstruction" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1CsvInstruction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csvInstruction" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1csvinstruction_1.GoogleCloudDatalabelingV1beta1CsvInstruction)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "csvInstruction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pdfInstruction" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1PdfInstruction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pdfInstruction" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1pdfinstruction_1.GoogleCloudDatalabelingV1beta1PdfInstruction)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "pdfInstruction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Instruction.prototype, "updateTime", void 0);
     return GoogleCloudDatalabelingV1beta1Instruction;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1Instruction };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1Instruction = GoogleCloudDatalabelingV1beta1Instruction;

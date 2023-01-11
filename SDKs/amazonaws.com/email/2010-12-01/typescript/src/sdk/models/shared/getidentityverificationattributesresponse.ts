@@ -9,5 +9,5 @@ import { IdentityVerificationAttributes } from "./identityverificationattributes
 **/
 export class GetIdentityVerificationAttributesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: IdentityVerificationAttributes })
-  verificationAttributes: Map<string, IdentityVerificationAttributes>;
+  verificationAttributes: Record<string, IdentityVerificationAttributes>;
 }

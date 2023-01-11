@@ -18,6 +18,6 @@ export declare class PostPortfolioAnalysisDiversificationRatioRequest extends Sp
 }
 export declare class PostPortfolioAnalysisDiversificationRatioResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisDiversificationRatio200ApplicationJsonObject?: PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisDiversificationRatio200ApplicationJSONObject?: PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
 }

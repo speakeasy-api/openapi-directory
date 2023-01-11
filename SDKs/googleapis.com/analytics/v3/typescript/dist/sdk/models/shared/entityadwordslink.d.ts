@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AdWordsAccount } from "./adwordsaccount";
 import { WebPropertyRef } from "./webpropertyref";
+import { AdWordsAccount } from "./adwordsaccount";
 /**
  * Web property being linked.
 **/

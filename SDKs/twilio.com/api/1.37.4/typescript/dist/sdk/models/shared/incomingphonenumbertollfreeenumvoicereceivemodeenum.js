@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum = void 0;
+var IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum;
+(function (IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum) {
+    IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum["Voice"] = "voice";
+    IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum["Fax"] = "fax";
+})(IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum = exports.IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum || (exports.IncomingPhoneNumberTollFreeEnumVoiceReceiveModeEnum = {}));

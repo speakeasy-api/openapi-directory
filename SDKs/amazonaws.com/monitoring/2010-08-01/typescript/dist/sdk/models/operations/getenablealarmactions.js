@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEnableAlarmActionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnableAlarmActionsResponse = exports.GetEnableAlarmActionsRequest = exports.GetEnableAlarmActionsHeaders = exports.GetEnableAlarmActionsQueryParams = exports.GetEnableAlarmActionsVersionEnum = exports.GetEnableAlarmActionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEnableAlarmActionsActionEnum;
 (function (GetEnableAlarmActionsActionEnum) {
     GetEnableAlarmActionsActionEnum["EnableAlarmActions"] = "EnableAlarmActions";
-})(GetEnableAlarmActionsActionEnum || (GetEnableAlarmActionsActionEnum = {}));
-export var GetEnableAlarmActionsVersionEnum;
+})(GetEnableAlarmActionsActionEnum = exports.GetEnableAlarmActionsActionEnum || (exports.GetEnableAlarmActionsActionEnum = {}));
+var GetEnableAlarmActionsVersionEnum;
 (function (GetEnableAlarmActionsVersionEnum) {
     GetEnableAlarmActionsVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(GetEnableAlarmActionsVersionEnum || (GetEnableAlarmActionsVersionEnum = {}));
+})(GetEnableAlarmActionsVersionEnum = exports.GetEnableAlarmActionsVersionEnum || (exports.GetEnableAlarmActionsVersionEnum = {}));
 var GetEnableAlarmActionsQueryParams = /** @class */ (function (_super) {
     __extends(GetEnableAlarmActionsQueryParams, _super);
     function GetEnableAlarmActionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AlarmNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AlarmNames" }),
         __metadata("design:type", Array)
     ], GetEnableAlarmActionsQueryParams.prototype, "alarmNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsQueryParams.prototype, "version", void 0);
     return GetEnableAlarmActionsQueryParams;
-}(SpeakeasyBase));
-export { GetEnableAlarmActionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAlarmActionsQueryParams = GetEnableAlarmActionsQueryParams;
 var GetEnableAlarmActionsHeaders = /** @class */ (function (_super) {
     __extends(GetEnableAlarmActionsHeaders, _super);
     function GetEnableAlarmActionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetEnableAlarmActionsHeaders;
-}(SpeakeasyBase));
-export { GetEnableAlarmActionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAlarmActionsHeaders = GetEnableAlarmActionsHeaders;
 var GetEnableAlarmActionsRequest = /** @class */ (function (_super) {
     __extends(GetEnableAlarmActionsRequest, _super);
     function GetEnableAlarmActionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableAlarmActionsQueryParams)
     ], GetEnableAlarmActionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableAlarmActionsHeaders)
     ], GetEnableAlarmActionsRequest.prototype, "headers", void 0);
     return GetEnableAlarmActionsRequest;
-}(SpeakeasyBase));
-export { GetEnableAlarmActionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAlarmActionsRequest = GetEnableAlarmActionsRequest;
 var GetEnableAlarmActionsResponse = /** @class */ (function (_super) {
     __extends(GetEnableAlarmActionsResponse, _super);
     function GetEnableAlarmActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnableAlarmActionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnableAlarmActionsResponse.prototype, "statusCode", void 0);
     return GetEnableAlarmActionsResponse;
-}(SpeakeasyBase));
-export { GetEnableAlarmActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableAlarmActionsResponse = GetEnableAlarmActionsResponse;

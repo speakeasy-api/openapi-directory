@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChannelResponse = /** @class */ (function (_super) {
     __extends(ChannelResponse, _super);
     function ChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isBroadcastOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isBroadcastOnly" }),
         __metadata("design:type", Boolean)
     ], ChannelResponse.prototype, "isBroadcastOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ChannelResponse.prototype, "title", void 0);
     return ChannelResponse;
-}(SpeakeasyBase));
-export { ChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.ChannelResponse = ChannelResponse;

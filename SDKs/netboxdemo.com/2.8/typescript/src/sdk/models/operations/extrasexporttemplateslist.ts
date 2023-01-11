@@ -101,5 +101,5 @@ export class ExtrasExportTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasExportTemplatesList200ApplicationJsonObject?: ExtrasExportTemplatesList200ApplicationJson;
+  extrasExportTemplatesList200ApplicationJSONObject?: ExtrasExportTemplatesList200ApplicationJson;
 }

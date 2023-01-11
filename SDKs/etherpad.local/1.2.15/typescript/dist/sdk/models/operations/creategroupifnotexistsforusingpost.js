@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateGroupIfNotExistsForUsingPostResponse = exports.CreateGroupIfNotExistsForUsingPostRequest = exports.CreateGroupIfNotExistsForUsingPost500ApplicationJson = exports.CreateGroupIfNotExistsForUsingPost401ApplicationJson = exports.CreateGroupIfNotExistsForUsingPost400ApplicationJson = exports.CreateGroupIfNotExistsForUsingPost200ApplicationJson = exports.CreateGroupIfNotExistsForUsingPost200ApplicationJsonData = exports.CreateGroupIfNotExistsForUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateGroupIfNotExistsForUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPostQueryParams, _super);
     function CreateGroupIfNotExistsForUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupMapper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupMapper" }),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPostQueryParams.prototype, "groupMapper", void 0);
     return CreateGroupIfNotExistsForUsingPostQueryParams;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPostQueryParams = CreateGroupIfNotExistsForUsingPostQueryParams;
 var CreateGroupIfNotExistsForUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPost200ApplicationJsonData, _super);
     function CreateGroupIfNotExistsForUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupID" }),
         __metadata("design:type", String)
-    ], CreateGroupIfNotExistsForUsingPost200ApplicationJsonData.prototype, "groupId", void 0);
+    ], CreateGroupIfNotExistsForUsingPost200ApplicationJsonData.prototype, "groupID", void 0);
     return CreateGroupIfNotExistsForUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPost200ApplicationJsonData = CreateGroupIfNotExistsForUsingPost200ApplicationJsonData;
 var CreateGroupIfNotExistsForUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPost200ApplicationJson, _super);
     function CreateGroupIfNotExistsForUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupIfNotExistsForUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPost200ApplicationJsonData)
     ], CreateGroupIfNotExistsForUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPost200ApplicationJson.prototype, "message", void 0);
     return CreateGroupIfNotExistsForUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPost200ApplicationJson = CreateGroupIfNotExistsForUsingPost200ApplicationJson;
 var CreateGroupIfNotExistsForUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPost400ApplicationJson, _super);
     function CreateGroupIfNotExistsForUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupIfNotExistsForUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupIfNotExistsForUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPost400ApplicationJson.prototype, "message", void 0);
     return CreateGroupIfNotExistsForUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPost400ApplicationJson = CreateGroupIfNotExistsForUsingPost400ApplicationJson;
 var CreateGroupIfNotExistsForUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPost401ApplicationJson, _super);
     function CreateGroupIfNotExistsForUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupIfNotExistsForUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupIfNotExistsForUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPost401ApplicationJson.prototype, "message", void 0);
     return CreateGroupIfNotExistsForUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPost401ApplicationJson = CreateGroupIfNotExistsForUsingPost401ApplicationJson;
 var CreateGroupIfNotExistsForUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPost500ApplicationJson, _super);
     function CreateGroupIfNotExistsForUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateGroupIfNotExistsForUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateGroupIfNotExistsForUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPost500ApplicationJson.prototype, "message", void 0);
     return CreateGroupIfNotExistsForUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPost500ApplicationJson = CreateGroupIfNotExistsForUsingPost500ApplicationJson;
 var CreateGroupIfNotExistsForUsingPostRequest = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPostRequest, _super);
     function CreateGroupIfNotExistsForUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPostQueryParams)
     ], CreateGroupIfNotExistsForUsingPostRequest.prototype, "queryParams", void 0);
     return CreateGroupIfNotExistsForUsingPostRequest;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPostRequest = CreateGroupIfNotExistsForUsingPostRequest;
 var CreateGroupIfNotExistsForUsingPostResponse = /** @class */ (function (_super) {
     __extends(CreateGroupIfNotExistsForUsingPostResponse, _super);
     function CreateGroupIfNotExistsForUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPost200ApplicationJson)
-    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPost200ApplicationJsonObject", void 0);
+    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPost400ApplicationJson)
-    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPost400ApplicationJsonObject", void 0);
+    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPost401ApplicationJson)
-    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPost401ApplicationJsonObject", void 0);
+    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateGroupIfNotExistsForUsingPost500ApplicationJson)
-    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPost500ApplicationJsonObject", void 0);
+    ], CreateGroupIfNotExistsForUsingPostResponse.prototype, "createGroupIfNotExistsForUsingPOST500ApplicationJSONObject", void 0);
     return CreateGroupIfNotExistsForUsingPostResponse;
-}(SpeakeasyBase));
-export { CreateGroupIfNotExistsForUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateGroupIfNotExistsForUsingPostResponse = CreateGroupIfNotExistsForUsingPostResponse;

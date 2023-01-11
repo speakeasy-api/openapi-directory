@@ -18,5 +18,5 @@ export declare class GetWebhookResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getWebhook200ApplicationJsonObject?: GetWebhook200ApplicationJson;
+    getWebhook200ApplicationJSONObject?: GetWebhook200ApplicationJson;
 }

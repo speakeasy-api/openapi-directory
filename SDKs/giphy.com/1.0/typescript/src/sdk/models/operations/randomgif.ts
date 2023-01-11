@@ -35,5 +35,5 @@ export class RandomGifResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  randomGif200ApplicationJsonObject?: RandomGif200ApplicationJson;
+  randomGif200ApplicationJSONObject?: RandomGif200ApplicationJson;
 }

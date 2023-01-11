@@ -19,10 +19,10 @@ export class InsuranceNetwork extends SpeakeasyBase {
   networkId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=networkNames" })
-  networkNames?: Map<string, string>;
+  networkNames?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=payerNames" })
-  payerNames?: Map<string, string>;
+  payerNames?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: InsuranceNetworkStateEnum;

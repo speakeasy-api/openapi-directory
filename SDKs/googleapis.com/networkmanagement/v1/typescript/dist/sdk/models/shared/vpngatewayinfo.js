@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VpnGatewayInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // VpnGatewayInfo
 /**
  * For display only. Metadata associated with a Compute Engine VPN gateway.
@@ -33,29 +36,29 @@ var VpnGatewayInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkUri" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "networkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpnTunnelUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpnTunnelUri" }),
         __metadata("design:type", String)
     ], VpnGatewayInfo.prototype, "vpnTunnelUri", void 0);
     return VpnGatewayInfo;
-}(SpeakeasyBase));
-export { VpnGatewayInfo };
+}(utils_1.SpeakeasyBase));
+exports.VpnGatewayInfo = VpnGatewayInfo;

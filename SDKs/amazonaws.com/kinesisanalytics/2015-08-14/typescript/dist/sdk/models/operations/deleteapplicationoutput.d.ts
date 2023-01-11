@@ -20,7 +20,7 @@ export declare class DeleteApplicationOutputRequest extends SpeakeasyBase {
 export declare class DeleteApplicationOutputResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteApplicationOutputResponse?: Map<string, any>;
+    deleteApplicationOutputResponse?: Record<string, any>;
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportContext = exports.ImportContextFileTypeEnum = exports.ImportContextCsvImportOptions = exports.ImportContextBakImportOptions = exports.ImportContextBakImportOptionsEncryptionOptions = void 0;
+var utils_1 = require("../../../internal/utils");
 var ImportContextBakImportOptionsEncryptionOptions = /** @class */ (function (_super) {
     __extends(ImportContextBakImportOptionsEncryptionOptions, _super);
     function ImportContextBakImportOptionsEncryptionOptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certPath" }),
         __metadata("design:type", String)
     ], ImportContextBakImportOptionsEncryptionOptions.prototype, "certPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvkPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvkPassword" }),
         __metadata("design:type", String)
     ], ImportContextBakImportOptionsEncryptionOptions.prototype, "pvkPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvkPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvkPath" }),
         __metadata("design:type", String)
     ], ImportContextBakImportOptionsEncryptionOptions.prototype, "pvkPath", void 0);
     return ImportContextBakImportOptionsEncryptionOptions;
-}(SpeakeasyBase));
-export { ImportContextBakImportOptionsEncryptionOptions };
+}(utils_1.SpeakeasyBase));
+exports.ImportContextBakImportOptionsEncryptionOptions = ImportContextBakImportOptionsEncryptionOptions;
 // ImportContextBakImportOptions
 /**
  * Import parameters specific to SQL Server .BAK files
@@ -53,12 +56,16 @@ var ImportContextBakImportOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionOptions" }),
         __metadata("design:type", ImportContextBakImportOptionsEncryptionOptions)
     ], ImportContextBakImportOptions.prototype, "encryptionOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=striped" }),
+        __metadata("design:type", Boolean)
+    ], ImportContextBakImportOptions.prototype, "striped", void 0);
     return ImportContextBakImportOptions;
-}(SpeakeasyBase));
-export { ImportContextBakImportOptions };
+}(utils_1.SpeakeasyBase));
+exports.ImportContextBakImportOptions = ImportContextBakImportOptions;
 // ImportContextCsvImportOptions
 /**
  * Options for importing data as CSV.
@@ -69,39 +76,39 @@ var ImportContextCsvImportOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns" }),
         __metadata("design:type", Array)
     ], ImportContextCsvImportOptions.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=escapeCharacter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=escapeCharacter" }),
         __metadata("design:type", String)
     ], ImportContextCsvImportOptions.prototype, "escapeCharacter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldsTerminatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldsTerminatedBy" }),
         __metadata("design:type", String)
     ], ImportContextCsvImportOptions.prototype, "fieldsTerminatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linesTerminatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linesTerminatedBy" }),
         __metadata("design:type", String)
     ], ImportContextCsvImportOptions.prototype, "linesTerminatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quoteCharacter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quoteCharacter" }),
         __metadata("design:type", String)
     ], ImportContextCsvImportOptions.prototype, "quoteCharacter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=table" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=table" }),
         __metadata("design:type", String)
     ], ImportContextCsvImportOptions.prototype, "table", void 0);
     return ImportContextCsvImportOptions;
-}(SpeakeasyBase));
-export { ImportContextCsvImportOptions };
-export var ImportContextFileTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.ImportContextCsvImportOptions = ImportContextCsvImportOptions;
+var ImportContextFileTypeEnum;
 (function (ImportContextFileTypeEnum) {
     ImportContextFileTypeEnum["SqlFileTypeUnspecified"] = "SQL_FILE_TYPE_UNSPECIFIED";
     ImportContextFileTypeEnum["Sql"] = "SQL";
     ImportContextFileTypeEnum["Csv"] = "CSV";
     ImportContextFileTypeEnum["Bak"] = "BAK";
-})(ImportContextFileTypeEnum || (ImportContextFileTypeEnum = {}));
+})(ImportContextFileTypeEnum = exports.ImportContextFileTypeEnum || (exports.ImportContextFileTypeEnum = {}));
 // ImportContext
 /**
  * Database instance import context.
@@ -112,33 +119,33 @@ var ImportContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bakImportOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bakImportOptions" }),
         __metadata("design:type", ImportContextBakImportOptions)
     ], ImportContext.prototype, "bakImportOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csvImportOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csvImportOptions" }),
         __metadata("design:type", ImportContextCsvImportOptions)
     ], ImportContext.prototype, "csvImportOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=database" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=database" }),
         __metadata("design:type", String)
     ], ImportContext.prototype, "database", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileType" }),
         __metadata("design:type", String)
     ], ImportContext.prototype, "fileType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importUser" }),
         __metadata("design:type", String)
     ], ImportContext.prototype, "importUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ImportContext.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ImportContext.prototype, "uri", void 0);
     return ImportContext;
-}(SpeakeasyBase));
-export { ImportContext };
+}(utils_1.SpeakeasyBase));
+exports.ImportContext = ImportContext;

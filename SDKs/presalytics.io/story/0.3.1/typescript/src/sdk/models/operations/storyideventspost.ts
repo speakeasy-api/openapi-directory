@@ -29,5 +29,5 @@ export class StoryIdEventsPostResponse extends SpeakeasyBase {
   problemDetail?: any;
 
   @SpeakeasyMetadata()
-  storyIdEventsPost200ApplicationJsonObject?: Map<string, any>;
+  storyIdEventsPost200ApplicationJSONObject?: Record<string, any>;
 }

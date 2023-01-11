@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse exten
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  milestone?: Map<string, any>;
+  milestone?: Record<string, any>;
 }

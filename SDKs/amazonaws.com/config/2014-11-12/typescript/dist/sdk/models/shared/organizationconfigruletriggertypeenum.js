@@ -1,6 +1,9 @@
-export var OrganizationConfigRuleTriggerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationConfigRuleTriggerTypeEnum = void 0;
+var OrganizationConfigRuleTriggerTypeEnum;
 (function (OrganizationConfigRuleTriggerTypeEnum) {
     OrganizationConfigRuleTriggerTypeEnum["ConfigurationItemChangeNotification"] = "ConfigurationItemChangeNotification";
     OrganizationConfigRuleTriggerTypeEnum["OversizedConfigurationItemChangeNotification"] = "OversizedConfigurationItemChangeNotification";
     OrganizationConfigRuleTriggerTypeEnum["ScheduledNotification"] = "ScheduledNotification";
-})(OrganizationConfigRuleTriggerTypeEnum || (OrganizationConfigRuleTriggerTypeEnum = {}));
+})(OrganizationConfigRuleTriggerTypeEnum = exports.OrganizationConfigRuleTriggerTypeEnum || (exports.OrganizationConfigRuleTriggerTypeEnum = {}));

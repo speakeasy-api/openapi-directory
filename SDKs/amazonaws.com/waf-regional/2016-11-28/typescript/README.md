@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateWebAclRequest, AssociateWebAclResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateWebAclRequest = {
   headers: {
-    xAmzAlgorithm: "eos",
-    xAmzContentSha256: "est",
-    xAmzCredential: "et",
-    xAmzDate: "dolor",
-    xAmzSecurityToken: "omnis",
-    xAmzSignature: "itaque",
-    xAmzSignedHeaders: "deleniti",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSWAF_Regional_20161128.AssociateWebACL",
   },
   request: {
-    resourceArn: "quae",
-    webAclId: "cupiditate",
+    resourceArn: "fugit",
+    webACLId: "et",
   },
 };
 
-sdk.sdk.associateWebAcl(req).then((res: AssociateWebAclResponse | AxiosError) => {
+sdk.associateWebAcl(req).then((res: AssociateWebAclResponse | AxiosError) => {
    // handle response
 });
 ```

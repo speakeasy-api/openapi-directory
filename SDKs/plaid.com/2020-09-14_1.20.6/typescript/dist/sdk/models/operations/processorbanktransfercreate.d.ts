@@ -5,7 +5,7 @@ export declare class ProcessorBankTransferCreateRequest extends SpeakeasyBase {
 }
 export declare class ProcessorBankTransferCreateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    processorBankTransferCreateResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    processorBankTransferCreateResponse?: Record<string, any>;
     statusCode: number;
 }

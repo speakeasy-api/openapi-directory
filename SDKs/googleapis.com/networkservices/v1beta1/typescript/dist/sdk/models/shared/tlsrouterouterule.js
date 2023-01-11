@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TlsRouteRouteAction } from "./tlsrouterouteaction";
-import { TlsRouteRouteMatch } from "./tlsrouteroutematch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TlsRouteRouteRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var tlsrouterouteaction_1 = require("./tlsrouterouteaction");
+var tlsrouteroutematch_1 = require("./tlsrouteroutematch");
 // TlsRouteRouteRule
 /**
  * Specifies how to match traffic and how to route traffic when traffic is matched.
@@ -35,13 +38,13 @@ var TlsRouteRouteRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", TlsRouteRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", tlsrouterouteaction_1.TlsRouteRouteAction)
     ], TlsRouteRouteRule.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matches", elemType: TlsRouteRouteMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matches", elemType: tlsrouteroutematch_1.TlsRouteRouteMatch }),
         __metadata("design:type", Array)
     ], TlsRouteRouteRule.prototype, "matches", void 0);
     return TlsRouteRouteRule;
-}(SpeakeasyBase));
-export { TlsRouteRouteRule };
+}(utils_1.SpeakeasyBase));
+exports.TlsRouteRouteRule = TlsRouteRouteRule;

@@ -38,7 +38,7 @@ export class GetApiVVersionMetalsSpotRatioSummaryResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -41,7 +41,7 @@ export class GetTeamMatchesByYearSimpleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata({ elemType: shared.MatchSimple })
   matchSimples?: shared.MatchSimple[];

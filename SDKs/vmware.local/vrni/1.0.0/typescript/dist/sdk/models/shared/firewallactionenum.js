@@ -1,4 +1,7 @@
-export var FirewallActionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirewallActionEnum = void 0;
+var FirewallActionEnum;
 (function (FirewallActionEnum) {
     FirewallActionEnum["Allow"] = "ALLOW";
     FirewallActionEnum["Accept"] = "ACCEPT";
@@ -7,4 +10,4 @@ export var FirewallActionEnum;
     FirewallActionEnum["Reject"] = "REJECT";
     FirewallActionEnum["Redirect"] = "REDIRECT";
     FirewallActionEnum["DoNotRedirect"] = "DO_NOT_REDIRECT";
-})(FirewallActionEnum || (FirewallActionEnum = {}));
+})(FirewallActionEnum = exports.FirewallActionEnum || (exports.FirewallActionEnum = {}));

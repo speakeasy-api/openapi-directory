@@ -22,5 +22,5 @@ export class ConnectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  connect200ApplicationJsonString?: string;
+  connect200ApplicationJSONString?: string;
 }

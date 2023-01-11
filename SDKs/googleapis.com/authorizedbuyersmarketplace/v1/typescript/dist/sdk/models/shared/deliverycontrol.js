@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FrequencyCap } from "./frequencycap";
-export var DeliveryControlCompanionDeliveryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryControl = exports.DeliveryControlRoadblockingTypeEnum = exports.DeliveryControlDeliveryRateTypeEnum = exports.DeliveryControlCreativeRotationTypeEnum = exports.DeliveryControlCompanionDeliveryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var frequencycap_1 = require("./frequencycap");
+var DeliveryControlCompanionDeliveryTypeEnum;
 (function (DeliveryControlCompanionDeliveryTypeEnum) {
     DeliveryControlCompanionDeliveryTypeEnum["CompanionDeliveryTypeUnspecified"] = "COMPANION_DELIVERY_TYPE_UNSPECIFIED";
     DeliveryControlCompanionDeliveryTypeEnum["DeliveryOptional"] = "DELIVERY_OPTIONAL";
     DeliveryControlCompanionDeliveryTypeEnum["DeliveryAtLeastOne"] = "DELIVERY_AT_LEAST_ONE";
     DeliveryControlCompanionDeliveryTypeEnum["DeliveryAll"] = "DELIVERY_ALL";
-})(DeliveryControlCompanionDeliveryTypeEnum || (DeliveryControlCompanionDeliveryTypeEnum = {}));
-export var DeliveryControlCreativeRotationTypeEnum;
+})(DeliveryControlCompanionDeliveryTypeEnum = exports.DeliveryControlCompanionDeliveryTypeEnum || (exports.DeliveryControlCompanionDeliveryTypeEnum = {}));
+var DeliveryControlCreativeRotationTypeEnum;
 (function (DeliveryControlCreativeRotationTypeEnum) {
     DeliveryControlCreativeRotationTypeEnum["CreativeRotationTypeUnspecified"] = "CREATIVE_ROTATION_TYPE_UNSPECIFIED";
     DeliveryControlCreativeRotationTypeEnum["RotationEven"] = "ROTATION_EVEN";
     DeliveryControlCreativeRotationTypeEnum["RotationOptimized"] = "ROTATION_OPTIMIZED";
     DeliveryControlCreativeRotationTypeEnum["RotationManual"] = "ROTATION_MANUAL";
     DeliveryControlCreativeRotationTypeEnum["RotationSequential"] = "ROTATION_SEQUENTIAL";
-})(DeliveryControlCreativeRotationTypeEnum || (DeliveryControlCreativeRotationTypeEnum = {}));
-export var DeliveryControlDeliveryRateTypeEnum;
+})(DeliveryControlCreativeRotationTypeEnum = exports.DeliveryControlCreativeRotationTypeEnum || (exports.DeliveryControlCreativeRotationTypeEnum = {}));
+var DeliveryControlDeliveryRateTypeEnum;
 (function (DeliveryControlDeliveryRateTypeEnum) {
     DeliveryControlDeliveryRateTypeEnum["DeliveryRateTypeUnspecified"] = "DELIVERY_RATE_TYPE_UNSPECIFIED";
     DeliveryControlDeliveryRateTypeEnum["Evenly"] = "EVENLY";
     DeliveryControlDeliveryRateTypeEnum["FrontLoaded"] = "FRONT_LOADED";
     DeliveryControlDeliveryRateTypeEnum["AsFastAsPossible"] = "AS_FAST_AS_POSSIBLE";
-})(DeliveryControlDeliveryRateTypeEnum || (DeliveryControlDeliveryRateTypeEnum = {}));
-export var DeliveryControlRoadblockingTypeEnum;
+})(DeliveryControlDeliveryRateTypeEnum = exports.DeliveryControlDeliveryRateTypeEnum || (exports.DeliveryControlDeliveryRateTypeEnum = {}));
+var DeliveryControlRoadblockingTypeEnum;
 (function (DeliveryControlRoadblockingTypeEnum) {
     DeliveryControlRoadblockingTypeEnum["RoadblockingTypeUnspecified"] = "ROADBLOCKING_TYPE_UNSPECIFIED";
     DeliveryControlRoadblockingTypeEnum["OnlyOne"] = "ONLY_ONE";
@@ -54,7 +57,7 @@ export var DeliveryControlRoadblockingTypeEnum;
     DeliveryControlRoadblockingTypeEnum["AsManyAsPossible"] = "AS_MANY_AS_POSSIBLE";
     DeliveryControlRoadblockingTypeEnum["AllRoadblock"] = "ALL_ROADBLOCK";
     DeliveryControlRoadblockingTypeEnum["CreativeSet"] = "CREATIVE_SET";
-})(DeliveryControlRoadblockingTypeEnum || (DeliveryControlRoadblockingTypeEnum = {}));
+})(DeliveryControlRoadblockingTypeEnum = exports.DeliveryControlRoadblockingTypeEnum || (exports.DeliveryControlRoadblockingTypeEnum = {}));
 // DeliveryControl
 /**
  * Message contains details about how the deal will be paced.
@@ -65,25 +68,25 @@ var DeliveryControl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companionDeliveryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companionDeliveryType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "companionDeliveryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeRotationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeRotationType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "creativeRotationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryRateType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "deliveryRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyCap", elemType: FrequencyCap }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyCap", elemType: frequencycap_1.FrequencyCap }),
         __metadata("design:type", Array)
     ], DeliveryControl.prototype, "frequencyCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roadblockingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roadblockingType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "roadblockingType", void 0);
     return DeliveryControl;
-}(SpeakeasyBase));
-export { DeliveryControl };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryControl = DeliveryControl;

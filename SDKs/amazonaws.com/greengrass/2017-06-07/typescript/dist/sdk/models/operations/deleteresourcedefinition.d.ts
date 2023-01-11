@@ -18,6 +18,6 @@ export declare class DeleteResourceDefinitionRequest extends SpeakeasyBase {
 export declare class DeleteResourceDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteResourceDefinitionResponse?: Map<string, any>;
+    deleteResourceDefinitionResponse?: Record<string, any>;
     statusCode: number;
 }

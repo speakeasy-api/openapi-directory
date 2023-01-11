@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetIdTypeEnum } from "./targetidtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Summary = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetidtypeenum_1 = require("./targetidtypeenum");
 // Summary
 /**
  * A count of noncompliant resources.
@@ -34,29 +37,29 @@ var Summary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", String)
     ], Summary.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NonCompliantResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NonCompliantResources" }),
         __metadata("design:type", Number)
     ], Summary.prototype, "nonCompliantResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Region" }),
         __metadata("design:type", String)
     ], Summary.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], Summary.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetId" }),
         __metadata("design:type", String)
     ], Summary.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetIdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetIdType" }),
         __metadata("design:type", String)
     ], Summary.prototype, "targetIdType", void 0);
     return Summary;
-}(SpeakeasyBase));
-export { Summary };
+}(utils_1.SpeakeasyBase));
+exports.Summary = Summary;

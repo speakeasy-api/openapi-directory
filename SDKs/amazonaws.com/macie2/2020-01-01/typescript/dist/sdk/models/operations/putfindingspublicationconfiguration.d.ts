@@ -28,7 +28,7 @@ export declare class PutFindingsPublicationConfigurationResponse extends Speakea
     conflictException?: any;
     contentType: string;
     internalServerException?: any;
-    putFindingsPublicationConfigurationResponse?: Map<string, any>;
+    putFindingsPublicationConfigurationResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;
     statusCode: number;

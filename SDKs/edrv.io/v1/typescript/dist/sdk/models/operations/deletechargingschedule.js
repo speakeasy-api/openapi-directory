@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletechargingscheduleResponse = exports.DeletechargingscheduleRequest = exports.Deletechargingschedule201ApplicationJson = exports.DeletechargingscheduleRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletechargingscheduleRequestBody = /** @class */ (function (_super) {
     __extends(DeletechargingscheduleRequestBody, _super);
     function DeletechargingscheduleRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeletechargingscheduleRequestBody.prototype, "id", void 0);
     return DeletechargingscheduleRequestBody;
-}(SpeakeasyBase));
-export { DeletechargingscheduleRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeletechargingscheduleRequestBody = DeletechargingscheduleRequestBody;
 var Deletechargingschedule201ApplicationJson = /** @class */ (function (_super) {
     __extends(Deletechargingschedule201ApplicationJson, _super);
     function Deletechargingschedule201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
+        __metadata("design:type", Object)
     ], Deletechargingschedule201ApplicationJson.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Deletechargingschedule201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Deletechargingschedule201ApplicationJson.prototype, "ok", void 0);
     return Deletechargingschedule201ApplicationJson;
-}(SpeakeasyBase));
-export { Deletechargingschedule201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Deletechargingschedule201ApplicationJson = Deletechargingschedule201ApplicationJson;
 var DeletechargingscheduleRequest = /** @class */ (function (_super) {
     __extends(DeletechargingscheduleRequest, _super);
     function DeletechargingscheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeletechargingscheduleRequestBody)
     ], DeletechargingscheduleRequest.prototype, "request", void 0);
     return DeletechargingscheduleRequest;
-}(SpeakeasyBase));
-export { DeletechargingscheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletechargingscheduleRequest = DeletechargingscheduleRequest;
 var DeletechargingscheduleResponse = /** @class */ (function (_super) {
     __extends(DeletechargingscheduleResponse, _super);
     function DeletechargingscheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletechargingscheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletechargingscheduleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Deletechargingschedule201ApplicationJson)
-    ], DeletechargingscheduleResponse.prototype, "deletechargingschedule201ApplicationJsonObject", void 0);
+    ], DeletechargingscheduleResponse.prototype, "deletechargingschedule201ApplicationJSONObject", void 0);
     return DeletechargingscheduleResponse;
-}(SpeakeasyBase));
-export { DeletechargingscheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletechargingscheduleResponse = DeletechargingscheduleResponse;

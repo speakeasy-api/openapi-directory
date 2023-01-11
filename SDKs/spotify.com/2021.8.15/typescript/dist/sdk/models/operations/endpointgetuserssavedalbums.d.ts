@@ -32,5 +32,5 @@ export declare class EndpointGetUsersSavedAlbumsResponse extends SpeakeasyBase {
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetUsersSavedAlbums200ApplicationJsonObject?: EndpointGetUsersSavedAlbums200ApplicationJson;
+    endpointGetUsersSavedAlbums200ApplicationJSONObject?: EndpointGetUsersSavedAlbums200ApplicationJson;
 }

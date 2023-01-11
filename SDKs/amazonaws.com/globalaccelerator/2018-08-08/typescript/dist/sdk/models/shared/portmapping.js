@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SocketAddress } from "./socketaddress";
-import { CustomRoutingDestinationTrafficStateEnum } from "./customroutingdestinationtrafficstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortMapping = void 0;
+var utils_1 = require("../../../internal/utils");
+var socketaddress_1 = require("./socketaddress");
+var customroutingdestinationtrafficstateenum_1 = require("./customroutingdestinationtrafficstateenum");
 // PortMapping
 /**
  * Returns the ports and associated IP addresses and ports of Amazon EC2 instances in your virtual private cloud (VPC) subnets. Custom routing is a port mapping protocol in AWS Global Accelerator that statically associates port ranges with VPC subnets, which allows Global Accelerator to route to specific instances and ports within one or more subnets.
@@ -35,29 +38,29 @@ var PortMapping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorPort" }),
         __metadata("design:type", Number)
     ], PortMapping.prototype, "acceleratorPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationSocketAddress" }),
-        __metadata("design:type", SocketAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationSocketAddress" }),
+        __metadata("design:type", socketaddress_1.SocketAddress)
     ], PortMapping.prototype, "destinationSocketAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationTrafficState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationTrafficState" }),
         __metadata("design:type", String)
     ], PortMapping.prototype, "destinationTrafficState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], PortMapping.prototype, "endpointGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointId" }),
         __metadata("design:type", String)
     ], PortMapping.prototype, "endpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Protocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Protocols" }),
         __metadata("design:type", Array)
     ], PortMapping.prototype, "protocols", void 0);
     return PortMapping;
-}(SpeakeasyBase));
-export { PortMapping };
+}(utils_1.SpeakeasyBase));
+exports.PortMapping = PortMapping;

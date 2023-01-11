@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceInfo } from "./deviceinfo";
-export var GetIosPostInstallAttributionRequestRetrievalMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIosPostInstallAttributionRequest = exports.GetIosPostInstallAttributionRequestVisualStyleEnum = exports.GetIosPostInstallAttributionRequestRetrievalMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceinfo_1 = require("./deviceinfo");
+var GetIosPostInstallAttributionRequestRetrievalMethodEnum;
 (function (GetIosPostInstallAttributionRequestRetrievalMethodEnum) {
     GetIosPostInstallAttributionRequestRetrievalMethodEnum["UnknownPayloadRetrievalMethod"] = "UNKNOWN_PAYLOAD_RETRIEVAL_METHOD";
     GetIosPostInstallAttributionRequestRetrievalMethodEnum["ImplicitWeakMatch"] = "IMPLICIT_WEAK_MATCH";
     GetIosPostInstallAttributionRequestRetrievalMethodEnum["ExplicitWeakMatch"] = "EXPLICIT_WEAK_MATCH";
     GetIosPostInstallAttributionRequestRetrievalMethodEnum["ExplicitStrongAfterWeakMatch"] = "EXPLICIT_STRONG_AFTER_WEAK_MATCH";
-})(GetIosPostInstallAttributionRequestRetrievalMethodEnum || (GetIosPostInstallAttributionRequestRetrievalMethodEnum = {}));
-export var GetIosPostInstallAttributionRequestVisualStyleEnum;
+})(GetIosPostInstallAttributionRequestRetrievalMethodEnum = exports.GetIosPostInstallAttributionRequestRetrievalMethodEnum || (exports.GetIosPostInstallAttributionRequestRetrievalMethodEnum = {}));
+var GetIosPostInstallAttributionRequestVisualStyleEnum;
 (function (GetIosPostInstallAttributionRequestVisualStyleEnum) {
     GetIosPostInstallAttributionRequestVisualStyleEnum["UnknownVisualStyle"] = "UNKNOWN_VISUAL_STYLE";
     GetIosPostInstallAttributionRequestVisualStyleEnum["DefaultStyle"] = "DEFAULT_STYLE";
     GetIosPostInstallAttributionRequestVisualStyleEnum["CustomStyle"] = "CUSTOM_STYLE";
-})(GetIosPostInstallAttributionRequestVisualStyleEnum || (GetIosPostInstallAttributionRequestVisualStyleEnum = {}));
+})(GetIosPostInstallAttributionRequestVisualStyleEnum = exports.GetIosPostInstallAttributionRequestVisualStyleEnum || (exports.GetIosPostInstallAttributionRequestVisualStyleEnum = {}));
 // GetIosPostInstallAttributionRequest
 /**
  * Request for iSDK to execute strong match flow for post-install attribution. This is meant for iOS requests only. Requests from other platforms will not be honored.
@@ -47,37 +50,37 @@ var GetIosPostInstallAttributionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appInstallationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appInstallationTime" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "appInstallationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", DeviceInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", deviceinfo_1.DeviceInfo)
     ], GetIosPostInstallAttributionRequest.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosVersion" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "iosVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retrievalMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retrievalMethod" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "retrievalMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sdkVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sdkVersion" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "sdkVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniqueMatchLinkToCheck" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniqueMatchLinkToCheck" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "uniqueMatchLinkToCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visualStyle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visualStyle" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionRequest.prototype, "visualStyle", void 0);
     return GetIosPostInstallAttributionRequest;
-}(SpeakeasyBase));
-export { GetIosPostInstallAttributionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetIosPostInstallAttributionRequest = GetIosPostInstallAttributionRequest;

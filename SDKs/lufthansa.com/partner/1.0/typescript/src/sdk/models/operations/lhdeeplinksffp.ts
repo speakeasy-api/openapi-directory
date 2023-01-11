@@ -71,7 +71,7 @@ export class LhDeepLinksFfpResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  lhDeepLinksFfp200ApplicationJsonString?: string;
+  lhDeepLinksFFP200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateAlias20200531Request, AssociateAlias20200531Response } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateAlias20200531Request = {
   pathParams: {
-    targetDistributionId: "sunt",
+    targetDistributionId: "sit",
   },
   queryParams: {
-    alias: "soluta",
+    alias: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "cum",
-    xAmzContentSha256: "placeat",
-    xAmzCredential: "ullam",
-    xAmzDate: "minima",
-    xAmzSecurityToken: "exercitationem",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "unde",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
 };
 
-sdk.sdk.associateAlias20200531(req).then((res: AssociateAlias20200531Response | AxiosError) => {
+sdk.associateAlias20200531(req).then((res: AssociateAlias20200531Response | AxiosError) => {
    // handle response
 });
 ```

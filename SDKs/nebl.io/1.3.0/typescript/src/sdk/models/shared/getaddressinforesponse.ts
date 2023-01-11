@@ -34,7 +34,7 @@ export class GetAddressInfoResponseUtxos extends SpeakeasyBase {
   index?: number;
 
   @SpeakeasyMetadata({ data: "json, name=scriptPubKey" })
-  scriptPubKey?: Map<string, any>;
+  scriptPubKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=tokens", elemType: GetAddressInfoResponseUtxosTokens })
   tokens?: GetAddressInfoResponseUtxosTokens[];

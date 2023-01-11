@@ -6,7 +6,7 @@ export declare class ResetRequestBody extends SpeakeasyBase {
 export declare class Reset201ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class ResetRequest extends SpeakeasyBase {
     request: ResetRequestBody;
@@ -14,5 +14,5 @@ export declare class ResetRequest extends SpeakeasyBase {
 export declare class ResetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reset201ApplicationJsonObject?: Reset201ApplicationJson;
+    reset201ApplicationJSONObject?: Reset201ApplicationJson;
 }

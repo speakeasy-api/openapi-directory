@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest
 export declare class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    branchrestriction?: Map<string, any>;
-    error?: Map<string, any>;
+    branchrestriction?: Record<string, any>;
+    error?: Record<string, any>;
 }

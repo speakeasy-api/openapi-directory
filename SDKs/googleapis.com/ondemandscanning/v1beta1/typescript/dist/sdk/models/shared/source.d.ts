@@ -8,5 +8,5 @@ export declare class Source extends SpeakeasyBase {
     additionalContexts?: SourceContext[];
     artifactStorageSourceUri?: string;
     context?: SourceContext;
-    fileHashes?: Map<string, FileHashes>;
+    fileHashes?: Record<string, FileHashes>;
 }

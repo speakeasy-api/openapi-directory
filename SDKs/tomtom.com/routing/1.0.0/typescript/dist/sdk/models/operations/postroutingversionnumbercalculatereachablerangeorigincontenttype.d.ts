@@ -5,10 +5,6 @@ export declare class PostRoutingVersionNumberCalculateReachableRangeOriginConten
     origin: string;
     versionNumber: number;
 }
-export declare enum PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum {
-    Combustion = "combustion",
-    Electric = "electric"
-}
 export declare class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams extends SpeakeasyBase {
     accelerationEfficiency?: number;
     arriveAt?: string;
@@ -33,7 +29,7 @@ export declare class PostRoutingVersionNumberCalculateReachableRangeOriginConten
     uphillEfficiency?: number;
     vehicleAxleWeight?: number;
     vehicleCommercial?: boolean;
-    vehicleEngineType?: PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
+    vehicleEngineType?: shared.DownhillEfficiencyEnum;
     vehicleHeight?: number;
     vehicleLength?: number;
     vehicleLoadType?: string;
@@ -43,7 +39,7 @@ export declare class PostRoutingVersionNumberCalculateReachableRangeOriginConten
     windingness?: shared.WindingnessEnum;
 }
 export declare class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     calculateReachableRangePostDataParameters?: shared.CalculateReachableRangePostDataParameters;
 }
 export declare class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest extends SpeakeasyBase {

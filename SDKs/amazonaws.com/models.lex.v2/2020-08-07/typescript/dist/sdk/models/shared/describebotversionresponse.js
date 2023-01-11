@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotStatusEnum } from "./botstatusenum";
-import { DataPrivacy } from "./dataprivacy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeBotVersionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var botstatusenum_1 = require("./botstatusenum");
+var dataprivacy_1 = require("./dataprivacy");
 var DescribeBotVersionResponse = /** @class */ (function (_super) {
     __extends(DescribeBotVersionResponse, _super);
     function DescribeBotVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botName" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "botName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botStatus" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "botStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DescribeBotVersionResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataPrivacy" }),
-        __metadata("design:type", DataPrivacy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataPrivacy" }),
+        __metadata("design:type", dataprivacy_1.DataPrivacy)
     ], DescribeBotVersionResponse.prototype, "dataPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReasons" }),
         __metadata("design:type", Array)
     ], DescribeBotVersionResponse.prototype, "failureReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleSessionTTLInSeconds" }),
         __metadata("design:type", Number)
-    ], DescribeBotVersionResponse.prototype, "idleSessionTtlInSeconds", void 0);
+    ], DescribeBotVersionResponse.prototype, "idleSessionTTLInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], DescribeBotVersionResponse.prototype, "roleArn", void 0);
     return DescribeBotVersionResponse;
-}(SpeakeasyBase));
-export { DescribeBotVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeBotVersionResponse = DescribeBotVersionResponse;

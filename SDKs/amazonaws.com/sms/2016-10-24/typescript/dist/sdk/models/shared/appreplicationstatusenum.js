@@ -1,4 +1,7 @@
-export var AppReplicationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppReplicationStatusEnum = void 0;
+var AppReplicationStatusEnum;
 (function (AppReplicationStatusEnum) {
     AppReplicationStatusEnum["ReadyForConfiguration"] = "READY_FOR_CONFIGURATION";
     AppReplicationStatusEnum["ConfigurationInProgress"] = "CONFIGURATION_IN_PROGRESS";
@@ -16,4 +19,4 @@ export var AppReplicationStatusEnum;
     AppReplicationStatusEnum["ReplicationStopping"] = "REPLICATION_STOPPING";
     AppReplicationStatusEnum["ReplicationStopFailed"] = "REPLICATION_STOP_FAILED";
     AppReplicationStatusEnum["ReplicationStopped"] = "REPLICATION_STOPPED";
-})(AppReplicationStatusEnum || (AppReplicationStatusEnum = {}));
+})(AppReplicationStatusEnum = exports.AppReplicationStatusEnum || (exports.AppReplicationStatusEnum = {}));

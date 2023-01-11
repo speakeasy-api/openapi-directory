@@ -33,5 +33,5 @@ export declare class ApiInformationsRequest extends SpeakeasyBase {
 export declare class ApiInformationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apiInformations200ApplicationJsonObject?: ApiInformations200ApplicationJson;
+    apiInformations200ApplicationJSONObject?: ApiInformations200ApplicationJson;
 }

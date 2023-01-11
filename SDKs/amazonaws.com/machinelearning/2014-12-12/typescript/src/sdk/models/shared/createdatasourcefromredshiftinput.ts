@@ -17,5 +17,5 @@ export class CreateDataSourceFromRedshiftInput extends SpeakeasyBase {
   dataSpec: RedshiftDataSpec;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn: string;
+  roleARN: string;
 }

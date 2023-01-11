@@ -194,23 +194,23 @@ export class CvipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cvipc400ApplicationJsonObject?: Cvipc400ApplicationJson;
+  cvipc400ApplicationJSONObject?: Cvipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc401ApplicationJsonObject?: Cvipc401ApplicationJson;
+  cvipc401ApplicationJSONObject?: Cvipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc404ApplicationJsonObject?: Cvipc404ApplicationJson;
+  cvipc404ApplicationJSONObject?: Cvipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc500ApplicationJsonObject?: Cvipc500ApplicationJson;
+  cvipc500ApplicationJSONObject?: Cvipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc502ApplicationJsonObject?: Cvipc502ApplicationJson;
+  cvipc502ApplicationJSONObject?: Cvipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc503ApplicationJsonObject?: Cvipc503ApplicationJson;
+  cvipc503ApplicationJSONObject?: Cvipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvipc504ApplicationJsonObject?: Cvipc504ApplicationJson;
+  cvipc504ApplicationJSONObject?: Cvipc504ApplicationJson;
 }

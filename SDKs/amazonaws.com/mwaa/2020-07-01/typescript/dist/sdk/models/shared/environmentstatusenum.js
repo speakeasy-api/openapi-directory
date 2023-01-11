@@ -1,4 +1,7 @@
-export var EnvironmentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentStatusEnum = void 0;
+var EnvironmentStatusEnum;
 (function (EnvironmentStatusEnum) {
     EnvironmentStatusEnum["Creating"] = "CREATING";
     EnvironmentStatusEnum["CreateFailed"] = "CREATE_FAILED";
@@ -8,4 +11,4 @@ export var EnvironmentStatusEnum;
     EnvironmentStatusEnum["Deleted"] = "DELETED";
     EnvironmentStatusEnum["Unavailable"] = "UNAVAILABLE";
     EnvironmentStatusEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(EnvironmentStatusEnum || (EnvironmentStatusEnum = {}));
+})(EnvironmentStatusEnum = exports.EnvironmentStatusEnum || (exports.EnvironmentStatusEnum = {}));

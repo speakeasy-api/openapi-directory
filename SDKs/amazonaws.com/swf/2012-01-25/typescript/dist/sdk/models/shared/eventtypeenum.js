@@ -1,4 +1,7 @@
-export var EventTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTypeEnum = void 0;
+var EventTypeEnum;
 (function (EventTypeEnum) {
     EventTypeEnum["WorkflowExecutionStarted"] = "WorkflowExecutionStarted";
     EventTypeEnum["WorkflowExecutionCancelRequested"] = "WorkflowExecutionCancelRequested";
@@ -54,4 +57,4 @@ export var EventTypeEnum;
     EventTypeEnum["LambdaFunctionTimedOut"] = "LambdaFunctionTimedOut";
     EventTypeEnum["ScheduleLambdaFunctionFailed"] = "ScheduleLambdaFunctionFailed";
     EventTypeEnum["StartLambdaFunctionFailed"] = "StartLambdaFunctionFailed";
-})(EventTypeEnum || (EventTypeEnum = {}));
+})(EventTypeEnum = exports.EventTypeEnum || (exports.EventTypeEnum = {}));

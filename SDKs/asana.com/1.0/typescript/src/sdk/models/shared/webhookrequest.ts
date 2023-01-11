@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// WebhookRequestFilters
+/** 
+ * A set of filters to specify a whitelist for what types of events will be delivered.
+**/
 export class WebhookRequestFilters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=action" })
   action?: string;

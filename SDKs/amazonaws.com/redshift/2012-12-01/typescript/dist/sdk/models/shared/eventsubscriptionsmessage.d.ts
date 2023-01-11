@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EventSubscription } from "./eventsubscription";
+import { EventSubscriptionsList } from "./eventsubscriptionslist";
 /**
  * <p/>
 **/
 export declare class EventSubscriptionsMessage extends SpeakeasyBase {
-    eventSubscriptionsList?: EventSubscription[];
+    eventSubscriptionsList?: EventSubscriptionsList[];
     marker?: string;
 }

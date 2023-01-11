@@ -43,7 +43,7 @@ export declare class CreateSimulationApplicationRequestBody extends SpeakeasyBas
     robotSoftwareSuite: CreateSimulationApplicationRequestBodyRobotSoftwareSuite;
     simulationSoftwareSuite: CreateSimulationApplicationRequestBodySimulationSoftwareSuite;
     sources?: shared.SourceConfig[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateSimulationApplicationRequest extends SpeakeasyBase {
     headers: CreateSimulationApplicationHeaders;

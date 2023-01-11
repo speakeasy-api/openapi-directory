@@ -16,7 +16,7 @@ export class LandlordControllerCreateMaintenancePreferenceQueryParams extends Sp
   notes: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenancyID" })
-  tenancyId: string;
+  tenancyID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" })
   token: string;
@@ -37,16 +37,16 @@ export class LandlordControllerCreateMaintenancePreferenceResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  landlordControllerCreateMaintenancePreference200ApplicationJsonString?: string;
+  landlordControllerCreateMaintenancePreference200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
-  landlordControllerCreateMaintenancePreference200ApplicationXmlString?: string;
+  landlordControllerCreateMaintenancePreference200ApplicationXMLString?: string;
 
   @SpeakeasyMetadata()
-  landlordControllerCreateMaintenancePreference200TextJsonString?: string;
+  landlordControllerCreateMaintenancePreference200TextJSONString?: string;
 
   @SpeakeasyMetadata()
-  landlordControllerCreateMaintenancePreference200TextXmlString?: string;
+  landlordControllerCreateMaintenancePreference200TextXMLString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

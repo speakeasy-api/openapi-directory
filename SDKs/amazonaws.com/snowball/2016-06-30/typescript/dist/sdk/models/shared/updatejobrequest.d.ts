@@ -12,7 +12,7 @@ export declare class UpdateJobRequest extends SpeakeasyBase {
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     resources?: JobResource;
-    roleArn?: string;
+    roleARN?: string;
     shippingOption?: ShippingOptionEnum;
     snowballCapacityPreference?: SnowballCapacityEnum;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScrapeResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // ScrapeResult
 /**
  * The result of a scrape request
@@ -33,25 +36,25 @@ var ScrapeResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], ScrapeResult.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursor" }),
         __metadata("design:type", String)
     ], ScrapeResult.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
         __metadata("design:type", Array)
     ], ScrapeResult.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], ScrapeResult.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ScrapeResult.prototype, "total", void 0);
     return ScrapeResult;
-}(SpeakeasyBase));
-export { ScrapeResult };
+}(utils_1.SpeakeasyBase));
+exports.ScrapeResult = ScrapeResult;

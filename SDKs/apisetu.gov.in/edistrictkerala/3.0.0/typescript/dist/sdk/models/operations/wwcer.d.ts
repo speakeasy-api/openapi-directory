@@ -107,11 +107,11 @@ export declare class WwcerRequest extends SpeakeasyBase {
 export declare class WwcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    wwcer400ApplicationJsonObject?: Wwcer400ApplicationJson;
-    wwcer401ApplicationJsonObject?: Wwcer401ApplicationJson;
-    wwcer404ApplicationJsonObject?: Wwcer404ApplicationJson;
-    wwcer500ApplicationJsonObject?: Wwcer500ApplicationJson;
-    wwcer502ApplicationJsonObject?: Wwcer502ApplicationJson;
-    wwcer503ApplicationJsonObject?: Wwcer503ApplicationJson;
-    wwcer504ApplicationJsonObject?: Wwcer504ApplicationJson;
+    wwcer400ApplicationJSONObject?: Wwcer400ApplicationJson;
+    wwcer401ApplicationJSONObject?: Wwcer401ApplicationJson;
+    wwcer404ApplicationJSONObject?: Wwcer404ApplicationJson;
+    wwcer500ApplicationJSONObject?: Wwcer500ApplicationJson;
+    wwcer502ApplicationJSONObject?: Wwcer502ApplicationJson;
+    wwcer503ApplicationJSONObject?: Wwcer503ApplicationJson;
+    wwcer504ApplicationJSONObject?: Wwcer504ApplicationJson;
 }

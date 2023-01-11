@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
 import { Meta } from "./meta";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare enum PatientLinkReferenceResultLinkAuthenticationTypeEnum {
     Direct = "DIRECT",
@@ -12,7 +12,7 @@ export declare class PatientLinkReferenceResultLink extends SpeakeasyBase {
     referenceNumber: string;
 }
 export declare class PatientLinkReferenceResult extends SpeakeasyBase {
-    error?: Error;
+    error?: ErrorT;
     link?: PatientLinkReferenceResultLink;
     requestId: string;
     resp: RequestReference;

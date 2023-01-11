@@ -1,5 +1,8 @@
-export var RemoteManagementEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoteManagementEnum = void 0;
+var RemoteManagementEnum;
 (function (RemoteManagementEnum) {
     RemoteManagementEnum["InstalledOnly"] = "INSTALLED_ONLY";
     RemoteManagementEnum["InstalledAutostart"] = "INSTALLED_AUTOSTART";
-})(RemoteManagementEnum || (RemoteManagementEnum = {}));
+})(RemoteManagementEnum = exports.RemoteManagementEnum || (exports.RemoteManagementEnum = {}));

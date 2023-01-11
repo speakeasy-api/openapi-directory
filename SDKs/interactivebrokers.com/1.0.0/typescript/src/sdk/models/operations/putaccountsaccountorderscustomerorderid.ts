@@ -41,7 +41,7 @@ export class PutAccountsAccountOrdersCustomerOrderIdRequestBody extends Speakeas
   origCustomerOrderId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Outside RTH" })
-  outsideRth?: number;
+  outsideRTH?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Price" })
   price?: number;
@@ -97,9 +97,9 @@ export class PutAccountsAccountOrdersCustomerOrderIdResponse extends SpeakeasyBa
   @SpeakeasyMetadata()
   contentType: string;
 
-  @SpeakeasyMetadata({ elemType: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson })
-  putAccountsAccountOrdersCustomerOrderId200ApplicationJsonObjects?: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
-
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata({ elemType: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson })
+  putAccountsAccountOrdersCustomerOrderId200ApplicationJSONObjects?: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
 }

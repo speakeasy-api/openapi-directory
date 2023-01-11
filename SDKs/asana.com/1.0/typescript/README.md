@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAttachmentForTaskRequest, CreateAttachmentForTaskResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     personalAccessToken: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
@@ -34,24 +33,25 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateAttachmentForTaskRequest = {
   pathParams: {
-    taskGid: "aspernatur",
+    taskGid: "sit",
   },
   queryParams: {
-    limit: 4782768469875935138,
-    offset: "modi",
+    limit: 2259404117704393152,
+    offset: "culpa",
     optFields: [
-      "expedita",
+      "consequuntur",
+      "dolor",
     ],
-    optPretty: false,
+    optPretty: true,
   },
   request: {
     file: {
-      content: "omnis".encode(),
-      file: "aliquam",
+      content: "voluptas".encode(),
+      file: "fugit",
     },
-    name: "provident",
-    resourceSubtype: "external",
-    url: "aut",
+    name: "et",
+    resourceSubtype: "asana_file_attachments",
+    url: "rerum",
   },
 };
 

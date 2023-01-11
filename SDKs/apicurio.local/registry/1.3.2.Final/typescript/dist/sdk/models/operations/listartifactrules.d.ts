@@ -8,7 +8,7 @@ export declare class ListArtifactRulesRequest extends SpeakeasyBase {
 }
 export declare class ListArtifactRulesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     ruleTypes?: shared.RuleTypeEnum[];
     statusCode: number;
 }

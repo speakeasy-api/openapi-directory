@@ -6,14 +6,14 @@ export declare class GetApiV2ListFederations200ApplicationJson extends Speakeasy
     data?: string[];
 }
 export declare class GetApiV2ListFederations404ApplicationJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
 }
 export declare class GetApiV2ListFederationsRequest extends SpeakeasyBase {
     headers: GetApiV2ListFederationsHeaders;
 }
 export declare class GetApiV2ListFederationsResponse extends SpeakeasyBase {
     contentType: string;
-    getApiV2ListFederations200ApplicationJsonObject?: GetApiV2ListFederations200ApplicationJson;
-    getApiV2ListFederations404ApplicationJsonObject?: GetApiV2ListFederations404ApplicationJson;
     statusCode: number;
+    getApiV2ListFederations200ApplicationJSONObject?: GetApiV2ListFederations200ApplicationJson;
+    getApiV2ListFederations404ApplicationJSONObject?: GetApiV2ListFederations404ApplicationJson;
 }

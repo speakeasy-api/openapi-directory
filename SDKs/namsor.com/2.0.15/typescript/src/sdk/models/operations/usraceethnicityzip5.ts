@@ -35,7 +35,7 @@ export class UsRaceEthnicityZip5Response extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  firstLastNameUsRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
+  firstLastNameUSRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
 
   @SpeakeasyMetadata()
   statusCode: number;

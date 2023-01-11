@@ -4,6 +4,7 @@ export declare class FormField extends SpeakeasyBase {
     customField?: boolean;
     description?: string;
     disabled?: boolean;
+    hidden?: boolean;
     id?: string;
     label?: string;
     options?: any[];

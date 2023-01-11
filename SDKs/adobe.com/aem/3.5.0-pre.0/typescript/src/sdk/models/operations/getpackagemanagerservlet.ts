@@ -10,8 +10,8 @@ export class GetPackageManagerServletResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPackageManagerServlet404TextHtmlString?: string;
+  getPackageManagerServlet404TextHTMLString?: string;
 
   @SpeakeasyMetadata()
-  getPackageManagerServlet405TextHtmlString?: string;
+  getPackageManagerServlet405TextHTMLString?: string;
 }

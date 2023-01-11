@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse = exports.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest = exports.ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams = exports.ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum;
 (function (ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum) {
     ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum["Xml"] = "XML";
     ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum["Json"] = "JSON";
-})(ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum || (ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum = {}));
+})(ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum = exports.ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum || (exports.ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum = {}));
 var ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams, _super);
     function ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams.prototype, "week", void 0);
     return ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams = ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams;
 var ProjectedFantasyDefenseGameStatsWDfsSalariesRequest = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseGameStatsWDfsSalariesRequest, _super);
     function ProjectedFantasyDefenseGameStatsWDfsSalariesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesRequest.prototype, "pathParams", void 0);
     return ProjectedFantasyDefenseGameStatsWDfsSalariesRequest;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseGameStatsWDfsSalariesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest = ProjectedFantasyDefenseGameStatsWDfsSalariesRequest;
 var ProjectedFantasyDefenseGameStatsWDfsSalariesResponse = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseGameStatsWDfsSalariesResponse, _super);
     function ProjectedFantasyDefenseGameStatsWDfsSalariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesResponse.prototype, "fantasyDefenseGameProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedFantasyDefenseGameStatsWDfsSalariesResponse.prototype, "statusCode", void 0);
     return ProjectedFantasyDefenseGameStatsWDfsSalariesResponse;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseGameStatsWDfsSalariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse = ProjectedFantasyDefenseGameStatsWDfsSalariesResponse;

@@ -23,5 +23,5 @@ export class GoogleCloudDiscoveryengineV1betaDocument extends SpeakeasyBase {
   schemaId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=structData" })
-  structData?: Map<string, any>;
+  structData?: Record<string, any>;
 }

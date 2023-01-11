@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { ActivateMandateRequest, ActivateMandateResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { CreateApiApplicationRequest, CreateApiApplicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearerAuth: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
@@ -32,13 +31,22 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: ActivateMandateRequest = {
-  pathParams: {
-    mandateUuid: "qui",
+const req: CreateApiApplicationRequest = {
+  request: {
+    applicationName: "sit",
+    enabled: false,
+    expiry: "1978-05-13T03:50:47Z",
+    ican: 501233450539197794,
+    numberOfPayeeApprovalsRequired: 3390393562759376202,
+    numberOfPaymentApprovalsRequired: 2669985732393126063,
+    permissions: [
+      "voluptas",
+      "fugit",
+    ],
   },
 };
 
-sdk.sdk.activateMandate(req).then((res: ActivateMandateResponse | AxiosError) => {
+sdk.api.createApiApplication(req).then((res: CreateApiApplicationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,43 +55,70 @@ sdk.sdk.activateMandate(req).then((res: ActivateMandateResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### API
 
-* `activateMandate` - Activate a direct debit mandate
-* `addAccount` - Add a new account
-* `addBankTransferBatchPayment` - Add payment for an bank transfers
-* `addInternalTransferBatchPayment` - Add payment for an internal transfers
-* `authenticate` - Authenticate with the API.
-* `cancelBatchPayment` - Cancel a batch
-* `cancelMandateByUuid` - Cancel a direct debit mandate
 * `createApiApplication` - Create a new API Application
-* `createBatchPayment` - Create a new bath of payments
-* `createNewCard` - Create a new debit card.
-* `deleteBankTransferBatchPayment` - Remove a Payment from the Batch (Bank Transfers)
-* `deleteInternalTransferBatchPayment` - Remove a Payment from the Batch (Internal Transfer)
+
+### Accounts
+
+* `addAccount` - Add a new account
 * `getAccountById` - Retrieve the details of a fire.com Account
 * `getAccounts` - List all fire.com Accounts
-* `getBatches` - List batches
-* `getDetailsSingleBatch` - Get details of a single Batch
+
+### Authentication
+
+* `authenticate` - Authenticate with the API.
+
+### Cards
+
+* `createNewCard` - Create a new debit card.
+* `getListofCards` - View List of Cards.
+
+### Direct Debits
+
+* `activateMandate` - Activate a direct debit mandate
+* `cancelMandateByUuid` - Cancel a direct debit mandate
 * `getDirectDebitByUuid` - Get the deails of a direct debit
 * `getDirectDebitMandates` - List all direct debit mandates
 * `getDirectDebitsForMandateUuid` - Get all DD payments associated with a direct debit mandate
+* `getMandate` - Get direct debit mandate details
+* `rejectDirectDebit` - Reject a direct debit payment
+* `updateMandateAlias` - Update a direct debit mandate alias
+
+### Open Banking
+
+* `getListOfAspsps` - Get list of ASPSPs / Banks
+* `getPaymentDetails` - Get Payment Details
+* `newPaymentRequest` - Create a Fire Open Payment request
+
+### Payee Bank Accounts
+
+* `getPayees` - List all Payee Bank Accounts
+
+### Payment Batches
+
+* `addBankTransferBatchPayment` - Add payment for an bank transfers
+* `addInternalTransferBatchPayment` - Add payment for an internal transfers
+* `cancelBatchPayment` - Cancel a batch
+* `createBatchPayment` - Create a new bath of payments
+* `deleteBankTransferBatchPayment` - Remove a Payment from the Batch (Bank Transfers)
+* `deleteInternalTransferBatchPayment` - Remove a Payment from the Batch (Internal Transfer)
+* `getBatches` - List batches
+* `getDetailsSingleBatch` - Get details of a single Batch
 * `getItemsBatchBankTransfer` - List items in a Batch
 * `getItemsBatchInternalTrasnfer` - List items in a Batch
-* `getListOfAspsps` - Get list of ASPSPs / Banks
 * `getListofApproversForBatch` - List Approvers for a Batch
-* `getListofCards` - View List of Cards.
-* `getMandate` - Get direct debit mandate details
-* `getPayees` - List all Payee Bank Accounts
-* `getPaymentDetails` - Get Payment Details
+* `submitBatch` - Submit a batch for approval
+
+### Transactions
+
 * `getTransactionsById` - List transactions for an account
 * `getTransactionsFilteredById` - Filtered list of transactions for an account
+
+### Users
+
 * `getUser` - Returns details of a specific fire.com user.
 * `getUsers` - Returns list of all users on your fire.com account
-* `newPaymentRequest` - Create a Fire Open Payment request
-* `rejectDirectDebit` - Reject a direct debit payment
-* `submitBatch` - Submit a batch for approval
-* `updateMandateAlias` - Update a direct debit mandate alias
 
 <!-- End SDK Available Operations -->
 

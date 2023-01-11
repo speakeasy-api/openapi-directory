@@ -9,5 +9,5 @@ export declare class GetNetworkSmDeviceCellularUsageHistoryRequest extends Speak
 export declare class GetNetworkSmDeviceCellularUsageHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmDeviceCellularUsageHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDeviceCellularUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,5 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VehicleProfileIdEnum } from "./vehicleprofileidenum";
 export declare enum RouteRequestAlgorithmEnum {
     RoundTrip = "round_trip",
     AlternativeRoute = "alternative_route"
@@ -34,6 +33,6 @@ export declare class RouteRequest extends SpeakeasyBase {
     roundTripDistance?: number;
     roundTripSeed?: number;
     snapPreventions?: string[];
-    vehicle?: VehicleProfileIdEnum;
+    vehicle?: Record<string, any>;
     weighting?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-import { SimplePortRange } from "./simpleportrange";
-export var RecommendedRuleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendedRule = exports.RecommendedRuleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reference_1 = require("./reference");
+var simpleportrange_1 = require("./simpleportrange");
+var RecommendedRuleActionEnum;
 (function (RecommendedRuleActionEnum) {
     RecommendedRuleActionEnum["Allow"] = "ALLOW";
     RecommendedRuleActionEnum["Drop"] = "DROP";
-})(RecommendedRuleActionEnum || (RecommendedRuleActionEnum = {}));
+})(RecommendedRuleActionEnum = exports.RecommendedRuleActionEnum || (exports.RecommendedRuleActionEnum = {}));
 var RecommendedRule = /** @class */ (function (_super) {
     __extends(RecommendedRule, _super);
     function RecommendedRule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], RecommendedRule.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], RecommendedRule.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port_ranges", elemType: SimplePortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port_ranges", elemType: simpleportrange_1.SimplePortRange }),
         __metadata("design:type", Array)
     ], RecommendedRule.prototype, "portRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocols" }),
         __metadata("design:type", Array)
     ], RecommendedRule.prototype, "protocols", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], RecommendedRule.prototype, "sources", void 0);
     return RecommendedRule;
-}(SpeakeasyBase));
-export { RecommendedRule };
+}(utils_1.SpeakeasyBase));
+exports.RecommendedRule = RecommendedRule;

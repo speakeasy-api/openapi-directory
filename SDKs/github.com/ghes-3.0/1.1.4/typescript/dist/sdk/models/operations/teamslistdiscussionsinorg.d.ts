@@ -16,7 +16,7 @@ export declare class TeamsListDiscussionsInOrgRequest extends SpeakeasyBase {
 }
 export declare class TeamsListDiscussionsInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teamDiscussions?: shared.TeamDiscussion[];
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetemailinfoRequest, GetemailinfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetemailinfoRequest = {
   queryParams: {
-    email: "voluptatem",
-    license: "nobis",
+    email: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getemailinfo(req).then((res: GetemailinfoResponse | AxiosError) => {
+sdk.emailAddressInformation.getemailinfo(req).then((res: GetemailinfoResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getemailinfo(req).then((res: GetemailinfoResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Email Address Information
 
 * `getemailinfo` - Gets email validation information for an email address
 

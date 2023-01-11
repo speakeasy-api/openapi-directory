@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KafkaClusterClientAuthenticationTypeEnum } from "./kafkaclusterclientauthenticationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KafkaClusterClientAuthenticationDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var kafkaclusterclientauthenticationtypeenum_1 = require("./kafkaclusterclientauthenticationtypeenum");
 // KafkaClusterClientAuthenticationDescription
 /**
  * The client authentication information used in order to authenticate with the Apache Kafka cluster.
@@ -34,9 +37,9 @@ var KafkaClusterClientAuthenticationDescription = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticationType" }),
         __metadata("design:type", String)
     ], KafkaClusterClientAuthenticationDescription.prototype, "authenticationType", void 0);
     return KafkaClusterClientAuthenticationDescription;
-}(SpeakeasyBase));
-export { KafkaClusterClientAuthenticationDescription };
+}(utils_1.SpeakeasyBase));
+exports.KafkaClusterClientAuthenticationDescription = KafkaClusterClientAuthenticationDescription;

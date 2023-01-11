@@ -14,6 +14,6 @@ export declare class UsRaceEthnicityZip5Request extends SpeakeasyBase {
 }
 export declare class UsRaceEthnicityZip5Response extends SpeakeasyBase {
     contentType: string;
-    firstLastNameUsRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
+    firstLastNameUSRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
     statusCode: number;
 }

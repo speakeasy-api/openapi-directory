@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnDescription } from "./columndescription";
-import { SavedView } from "./savedview";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Table = void 0;
+var utils_1 = require("../../../internal/utils");
+var columndescription_1 = require("./columndescription");
+var savedview_1 = require("./savedview");
 // Table
 /**
  * A single table. NextId: 8
@@ -35,33 +38,33 @@ var Table = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns", elemType: ColumnDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns", elemType: columndescription_1.ColumnDescription }),
         __metadata("design:type", Array)
     ], Table.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Table.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Table.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Table.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savedViews", elemType: SavedView }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savedViews", elemType: savedview_1.SavedView }),
         __metadata("design:type", Array)
     ], Table.prototype, "savedViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], Table.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Table.prototype, "updateTime", void 0);
     return Table;
-}(SpeakeasyBase));
-export { Table };
+}(utils_1.SpeakeasyBase));
+exports.Table = Table;

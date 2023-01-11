@@ -21,6 +21,6 @@ export declare class PoolEvaluateAutoScaleResponse extends SpeakeasyBase {
     autoScaleRun?: any;
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

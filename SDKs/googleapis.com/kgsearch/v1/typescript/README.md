@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { KgsearchEntitiesSearchRequest, KgsearchEntitiesSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,35 +28,32 @@ const sdk = new SDK();
     
 const req: KgsearchEntitiesSearchRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "veritatis",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "consequuntur",
-    fields: "et",
+    callback: "expedita",
+    fields: "consequuntur",
     ids: [
-      "non",
-      "velit",
-      "quis",
+      "expedita",
+      "voluptas",
     ],
     indent: true,
-    key: "cumque",
+    key: "et",
     languages: [
-      "et",
-      "commodi",
-      "architecto",
+      "rerum",
     ],
-    limit: 8648365507474237258,
-    oauthToken: "perspiciatis",
+    limit: 7837839688282259259,
+    oauthToken: "debitis",
     prefix: true,
     prettyPrint: false,
-    query: "fugit",
-    quotaUser: "aspernatur",
+    query: "ut",
+    quotaUser: "dolorem",
     types: [
-      "veniam",
-      "eos",
+      "voluptate",
+      "iste",
     ],
-    uploadType: "et",
-    uploadProtocol: "nobis",
+    uploadType: "vitae",
+    uploadProtocol: "totam",
   },
 };
 

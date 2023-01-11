@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoAbuseReport = void 0;
+var utils_1 = require("../../../internal/utils");
 var VideoAbuseReport = /** @class */ (function (_super) {
     __extends(VideoAbuseReport, _super);
     function VideoAbuseReport() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], VideoAbuseReport.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], VideoAbuseReport.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonId" }),
         __metadata("design:type", String)
     ], VideoAbuseReport.prototype, "reasonId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryReasonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryReasonId" }),
         __metadata("design:type", String)
     ], VideoAbuseReport.prototype, "secondaryReasonId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoId" }),
         __metadata("design:type", String)
     ], VideoAbuseReport.prototype, "videoId", void 0);
     return VideoAbuseReport;
-}(SpeakeasyBase));
-export { VideoAbuseReport };
+}(utils_1.SpeakeasyBase));
+exports.VideoAbuseReport = VideoAbuseReport;

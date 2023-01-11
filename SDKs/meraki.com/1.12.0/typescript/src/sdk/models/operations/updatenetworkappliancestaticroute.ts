@@ -28,7 +28,7 @@ export class UpdateNetworkApplianceStaticRouteRequestBody extends SpeakeasyBase 
   enabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=fixedIpAssignments" })
-  fixedIpAssignments?: Map<string, any>;
+  fixedIpAssignments?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=gatewayIp" })
   gatewayIp?: string;
@@ -61,5 +61,5 @@ export class UpdateNetworkApplianceStaticRouteResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceStaticRoute200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

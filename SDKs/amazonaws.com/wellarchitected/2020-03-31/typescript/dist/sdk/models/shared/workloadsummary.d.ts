@@ -7,7 +7,7 @@ export declare class WorkloadSummary extends SpeakeasyBase {
     improvementStatus?: WorkloadImprovementStatusEnum;
     lenses?: string[];
     owner?: string;
-    riskCounts?: Map<string, number>;
+    riskCounts?: Record<string, number>;
     updatedAt?: Date;
     workloadArn?: string;
     workloadId?: string;

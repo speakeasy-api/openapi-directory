@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseSpecification } from "./responsespecification";
-import { PromptSpecification } from "./promptspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntentConfirmationSetting = void 0;
+var utils_1 = require("../../../internal/utils");
+var responsespecification_1 = require("./responsespecification");
+var promptspecification_1 = require("./promptspecification");
 // IntentConfirmationSetting
 /**
  * Provides a prompt for making sure that the user is ready for the intent to be fulfilled.
@@ -35,17 +38,17 @@ var IntentConfirmationSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], IntentConfirmationSetting.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declinationResponse" }),
-        __metadata("design:type", ResponseSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declinationResponse" }),
+        __metadata("design:type", responsespecification_1.ResponseSpecification)
     ], IntentConfirmationSetting.prototype, "declinationResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promptSpecification" }),
-        __metadata("design:type", PromptSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promptSpecification" }),
+        __metadata("design:type", promptspecification_1.PromptSpecification)
     ], IntentConfirmationSetting.prototype, "promptSpecification", void 0);
     return IntentConfirmationSetting;
-}(SpeakeasyBase));
-export { IntentConfirmationSetting };
+}(utils_1.SpeakeasyBase));
+exports.IntentConfirmationSetting = IntentConfirmationSetting;

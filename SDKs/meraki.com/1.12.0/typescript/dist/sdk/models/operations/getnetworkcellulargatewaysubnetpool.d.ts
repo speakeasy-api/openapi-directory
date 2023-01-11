@@ -8,5 +8,5 @@ export declare class GetNetworkCellularGatewaySubnetPoolRequest extends Speakeas
 export declare class GetNetworkCellularGatewaySubnetPoolResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCellularGatewaySubnetPool200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCellularGatewaySubnetPool200ApplicationJSONObject?: Record<string, any>;
 }

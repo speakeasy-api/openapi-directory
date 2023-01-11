@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleVariables } from "./rulevariables";
-import { RulesSource } from "./rulessource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulevariables_1 = require("./rulevariables");
+var rulessource_1 = require("./rulessource");
 // RuleGroup
 /**
  * <p>The object that defines the rules in a rule group. This, along with <a>RuleGroupResponse</a>, define the rule group. You can retrieve all objects for a rule group by calling <a>DescribeRuleGroup</a>. </p> <p>AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p> <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
@@ -35,13 +38,13 @@ var RuleGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleVariables" }),
-        __metadata("design:type", RuleVariables)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleVariables" }),
+        __metadata("design:type", rulevariables_1.RuleVariables)
     ], RuleGroup.prototype, "ruleVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RulesSource" }),
-        __metadata("design:type", RulesSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RulesSource" }),
+        __metadata("design:type", rulessource_1.RulesSource)
     ], RuleGroup.prototype, "rulesSource", void 0);
     return RuleGroup;
-}(SpeakeasyBase));
-export { RuleGroup };
+}(utils_1.SpeakeasyBase));
+exports.RuleGroup = RuleGroup;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ActionEntityActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionEntity = exports.ActionEntityInterfaceEnum = exports.ActionEntityFailureTypeEnum = exports.ActionEntityActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ActionEntityActionEnum;
 (function (ActionEntityActionEnum) {
     ActionEntityActionEnum["Create"] = "create";
     ActionEntityActionEnum["Read"] = "read";
@@ -44,8 +47,8 @@ export var ActionEntityActionEnum;
     ActionEntityActionEnum["ApiKeyCreate"] = "api_key_create";
     ActionEntityActionEnum["ApiKeyUpdate"] = "api_key_update";
     ActionEntityActionEnum["ApiKeyDestroy"] = "api_key_destroy";
-})(ActionEntityActionEnum || (ActionEntityActionEnum = {}));
-export var ActionEntityFailureTypeEnum;
+})(ActionEntityActionEnum = exports.ActionEntityActionEnum || (exports.ActionEntityActionEnum = {}));
+var ActionEntityFailureTypeEnum;
 (function (ActionEntityFailureTypeEnum) {
     ActionEntityFailureTypeEnum["ExpiredTrial"] = "expired_trial";
     ActionEntityFailureTypeEnum["AccountOverdue"] = "account_overdue";
@@ -69,8 +72,8 @@ export var ActionEntityFailureTypeEnum;
     ActionEntityFailureTypeEnum["DesktopApiKeyNotUsedQuicklyEnough"] = "desktop_api_key_not_used_quickly_enough";
     ActionEntityFailureTypeEnum["Disabled"] = "disabled";
     ActionEntityFailureTypeEnum["CountryMismatch"] = "country_mismatch";
-})(ActionEntityFailureTypeEnum || (ActionEntityFailureTypeEnum = {}));
-export var ActionEntityInterfaceEnum;
+})(ActionEntityFailureTypeEnum = exports.ActionEntityFailureTypeEnum || (exports.ActionEntityFailureTypeEnum = {}));
+var ActionEntityInterfaceEnum;
 (function (ActionEntityInterfaceEnum) {
     ActionEntityInterfaceEnum["Web"] = "web";
     ActionEntityInterfaceEnum["Ftp"] = "ftp";
@@ -84,7 +87,7 @@ export var ActionEntityInterfaceEnum;
     ActionEntityInterfaceEnum["Scim"] = "scim";
     ActionEntityInterfaceEnum["Office"] = "office";
     ActionEntityInterfaceEnum["Mobile"] = "mobile";
-})(ActionEntityInterfaceEnum || (ActionEntityInterfaceEnum = {}));
+})(ActionEntityInterfaceEnum = exports.ActionEntityInterfaceEnum || (exports.ActionEntityInterfaceEnum = {}));
 // ActionEntity
 /**
  * List site full action history.
@@ -95,57 +98,57 @@ var ActionEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failure_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failure_type" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "failureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ActionEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "interface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", Array)
     ], ActionEntity.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], ActionEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ActionEntity.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=when" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=when" }),
         __metadata("design:type", Date)
     ], ActionEntity.prototype, "when", void 0);
     return ActionEntity;
-}(SpeakeasyBase));
-export { ActionEntity };
+}(utils_1.SpeakeasyBase));
+exports.ActionEntity = ActionEntity;

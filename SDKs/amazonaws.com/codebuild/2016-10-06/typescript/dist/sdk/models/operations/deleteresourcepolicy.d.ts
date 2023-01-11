@@ -19,7 +19,7 @@ export declare class DeleteResourcePolicyRequest extends SpeakeasyBase {
 }
 export declare class DeleteResourcePolicyResponse extends SpeakeasyBase {
     contentType: string;
-    deleteResourcePolicyOutput?: Map<string, any>;
+    deleteResourcePolicyOutput?: Record<string, any>;
     invalidInputException?: any;
     statusCode: number;
 }

@@ -19,5 +19,5 @@ export declare class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest ex
 export declare class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJsonObject?: ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJson;
+    actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject?: ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJson;
 }

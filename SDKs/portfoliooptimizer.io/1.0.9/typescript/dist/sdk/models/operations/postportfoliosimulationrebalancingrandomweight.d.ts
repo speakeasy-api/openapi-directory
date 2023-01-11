@@ -17,6 +17,6 @@ export declare class PostPortfolioSimulationRebalancingRandomWeightRequest exten
 }
 export declare class PostPortfolioSimulationRebalancingRandomWeightResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioSimulationRebalancingRandomWeight200ApplicationJsonObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
     statusCode: number;
+    postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
 }

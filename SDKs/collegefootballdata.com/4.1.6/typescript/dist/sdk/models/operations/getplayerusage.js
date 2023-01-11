@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlayerUsageResponse = exports.GetPlayerUsageRequest = exports.GetPlayerUsageQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetPlayerUsageQueryParams = /** @class */ (function (_super) {
     __extends(GetPlayerUsageQueryParams, _super);
     function GetPlayerUsageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=conference" }),
         __metadata("design:type", String)
     ], GetPlayerUsageQueryParams.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludeGarbageTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludeGarbageTime" }),
         __metadata("design:type", Boolean)
     ], GetPlayerUsageQueryParams.prototype, "excludeGarbageTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=playerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=playerId" }),
         __metadata("design:type", Number)
     ], GetPlayerUsageQueryParams.prototype, "playerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=position" }),
         __metadata("design:type", String)
     ], GetPlayerUsageQueryParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=team" }),
         __metadata("design:type", String)
     ], GetPlayerUsageQueryParams.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=year" }),
         __metadata("design:type", Number)
     ], GetPlayerUsageQueryParams.prototype, "year", void 0);
     return GetPlayerUsageQueryParams;
-}(SpeakeasyBase));
-export { GetPlayerUsageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerUsageQueryParams = GetPlayerUsageQueryParams;
 var GetPlayerUsageRequest = /** @class */ (function (_super) {
     __extends(GetPlayerUsageRequest, _super);
     function GetPlayerUsageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlayerUsageQueryParams)
     ], GetPlayerUsageRequest.prototype, "queryParams", void 0);
     return GetPlayerUsageRequest;
-}(SpeakeasyBase));
-export { GetPlayerUsageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerUsageRequest = GetPlayerUsageRequest;
 var GetPlayerUsageResponse = /** @class */ (function (_super) {
     __extends(GetPlayerUsageResponse, _super);
     function GetPlayerUsageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPlayerUsageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.PlayerUsage }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.PlayerUsage }),
         __metadata("design:type", Array)
     ], GetPlayerUsageResponse.prototype, "playerUsages", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPlayerUsageResponse.prototype, "statusCode", void 0);
     return GetPlayerUsageResponse;
-}(SpeakeasyBase));
-export { GetPlayerUsageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerUsageResponse = GetPlayerUsageResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CookiePreference } from "./cookiepreference";
-import { Headers } from "./headers";
-import { QueryStringCacheKeys } from "./querystringcachekeys";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForwardedValues = void 0;
+var utils_1 = require("../../../internal/utils");
+var cookiepreference_1 = require("./cookiepreference");
+var headers_1 = require("./headers");
+var querystringcachekeys_1 = require("./querystringcachekeys");
 // ForwardedValues
 /**
  * A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers.
@@ -36,21 +39,21 @@ var ForwardedValues = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CookiePreference)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cookiepreference_1.CookiePreference)
     ], ForwardedValues.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Headers)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", headers_1.Headers)
     ], ForwardedValues.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ForwardedValues.prototype, "queryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", QueryStringCacheKeys)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", querystringcachekeys_1.QueryStringCacheKeys)
     ], ForwardedValues.prototype, "queryStringCacheKeys", void 0);
     return ForwardedValues;
-}(SpeakeasyBase));
-export { ForwardedValues };
+}(utils_1.SpeakeasyBase));
+exports.ForwardedValues = ForwardedValues;

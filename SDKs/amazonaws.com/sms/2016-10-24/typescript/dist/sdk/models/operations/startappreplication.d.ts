@@ -23,7 +23,7 @@ export declare class StartAppReplicationResponse extends SpeakeasyBase {
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
-    startAppReplicationResponse?: Map<string, any>;
+    startAppReplicationResponse?: Record<string, any>;
     statusCode: number;
     unauthorizedOperationException?: any;
 }

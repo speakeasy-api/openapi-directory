@@ -60,6 +60,6 @@ export declare class GetListsBestSellersHistoryJsonRequest extends SpeakeasyBase
 }
 export declare class GetListsBestSellersHistoryJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getListsBestSellersHistoryJson200ApplicationJsonObject?: GetListsBestSellersHistoryJson200ApplicationJson;
+    getListsBestSellersHistoryJSON200ApplicationJSONObject?: GetListsBestSellersHistoryJson200ApplicationJson;
     statusCode: number;
 }

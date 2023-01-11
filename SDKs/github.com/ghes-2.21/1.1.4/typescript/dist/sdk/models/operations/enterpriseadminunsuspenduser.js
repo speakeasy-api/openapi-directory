@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminUnsuspendUserResponse = exports.EnterpriseAdminUnsuspendUserRequest = exports.EnterpriseAdminUnsuspendUserRequestBody = exports.EnterpriseAdminUnsuspendUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminUnsuspendUserPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUnsuspendUserPathParams, _super);
     function EnterpriseAdminUnsuspendUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUnsuspendUserPathParams.prototype, "username", void 0);
     return EnterpriseAdminUnsuspendUserPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminUnsuspendUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUnsuspendUserPathParams = EnterpriseAdminUnsuspendUserPathParams;
 var EnterpriseAdminUnsuspendUserRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUnsuspendUserRequestBody, _super);
     function EnterpriseAdminUnsuspendUserRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUnsuspendUserRequestBody.prototype, "reason", void 0);
     return EnterpriseAdminUnsuspendUserRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminUnsuspendUserRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUnsuspendUserRequestBody = EnterpriseAdminUnsuspendUserRequestBody;
 var EnterpriseAdminUnsuspendUserRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUnsuspendUserRequest, _super);
     function EnterpriseAdminUnsuspendUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminUnsuspendUserPathParams)
     ], EnterpriseAdminUnsuspendUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminUnsuspendUserRequestBody)
     ], EnterpriseAdminUnsuspendUserRequest.prototype, "request", void 0);
     return EnterpriseAdminUnsuspendUserRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminUnsuspendUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUnsuspendUserRequest = EnterpriseAdminUnsuspendUserRequest;
 var EnterpriseAdminUnsuspendUserResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUnsuspendUserResponse, _super);
     function EnterpriseAdminUnsuspendUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminUnsuspendUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminUnsuspendUserResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminUnsuspendUserResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminUnsuspendUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUnsuspendUserResponse = EnterpriseAdminUnsuspendUserResponse;

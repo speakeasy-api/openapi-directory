@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,176 +23,178 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSessionsOfAuthorUsingPostResponse = exports.ListSessionsOfAuthorUsingPostRequest = exports.ListSessionsOfAuthorUsingPost500ApplicationJson = exports.ListSessionsOfAuthorUsingPost401ApplicationJson = exports.ListSessionsOfAuthorUsingPost400ApplicationJson = exports.ListSessionsOfAuthorUsingPost200ApplicationJson = exports.ListSessionsOfAuthorUsingPost200ApplicationJsonData = exports.ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions = exports.ListSessionsOfAuthorUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListSessionsOfAuthorUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPostQueryParams, _super);
     function ListSessionsOfAuthorUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=authorID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfAuthorUsingPostQueryParams.prototype, "authorId", void 0);
+    ], ListSessionsOfAuthorUsingPostQueryParams.prototype, "authorID", void 0);
     return ListSessionsOfAuthorUsingPostQueryParams;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPostQueryParams = ListSessionsOfAuthorUsingPostQueryParams;
 var ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions, _super);
     function ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "authorId", void 0);
+    ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "authorID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "groupId", void 0);
+    ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "groupID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validUntil" }),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions.prototype, "validUntil", void 0);
     return ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions = ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions;
 var ListSessionsOfAuthorUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost200ApplicationJsonData, _super);
     function ListSessionsOfAuthorUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessions", elemType: ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessions", elemType: ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions }),
         __metadata("design:type", Array)
     ], ListSessionsOfAuthorUsingPost200ApplicationJsonData.prototype, "sessions", void 0);
     return ListSessionsOfAuthorUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost200ApplicationJsonData = ListSessionsOfAuthorUsingPost200ApplicationJsonData;
 var ListSessionsOfAuthorUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost200ApplicationJson, _super);
     function ListSessionsOfAuthorUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ListSessionsOfAuthorUsingPost200ApplicationJsonData)
     ], ListSessionsOfAuthorUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPost200ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfAuthorUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost200ApplicationJson = ListSessionsOfAuthorUsingPost200ApplicationJson;
 var ListSessionsOfAuthorUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost400ApplicationJson, _super);
     function ListSessionsOfAuthorUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfAuthorUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPost400ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfAuthorUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost400ApplicationJson = ListSessionsOfAuthorUsingPost400ApplicationJson;
 var ListSessionsOfAuthorUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost401ApplicationJson, _super);
     function ListSessionsOfAuthorUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfAuthorUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPost401ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfAuthorUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost401ApplicationJson = ListSessionsOfAuthorUsingPost401ApplicationJson;
 var ListSessionsOfAuthorUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPost500ApplicationJson, _super);
     function ListSessionsOfAuthorUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfAuthorUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPost500ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfAuthorUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPost500ApplicationJson = ListSessionsOfAuthorUsingPost500ApplicationJson;
 var ListSessionsOfAuthorUsingPostRequest = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPostRequest, _super);
     function ListSessionsOfAuthorUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfAuthorUsingPostQueryParams)
     ], ListSessionsOfAuthorUsingPostRequest.prototype, "queryParams", void 0);
     return ListSessionsOfAuthorUsingPostRequest;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPostRequest = ListSessionsOfAuthorUsingPostRequest;
 var ListSessionsOfAuthorUsingPostResponse = /** @class */ (function (_super) {
     __extends(ListSessionsOfAuthorUsingPostResponse, _super);
     function ListSessionsOfAuthorUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListSessionsOfAuthorUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListSessionsOfAuthorUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfAuthorUsingPost200ApplicationJson)
-    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPost200ApplicationJsonObject", void 0);
+    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfAuthorUsingPost400ApplicationJson)
-    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPost400ApplicationJsonObject", void 0);
+    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfAuthorUsingPost401ApplicationJson)
-    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPost401ApplicationJsonObject", void 0);
+    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfAuthorUsingPost500ApplicationJson)
-    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPost500ApplicationJsonObject", void 0);
+    ], ListSessionsOfAuthorUsingPostResponse.prototype, "listSessionsOfAuthorUsingPOST500ApplicationJSONObject", void 0);
     return ListSessionsOfAuthorUsingPostResponse;
-}(SpeakeasyBase));
-export { ListSessionsOfAuthorUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfAuthorUsingPostResponse = ListSessionsOfAuthorUsingPostResponse;

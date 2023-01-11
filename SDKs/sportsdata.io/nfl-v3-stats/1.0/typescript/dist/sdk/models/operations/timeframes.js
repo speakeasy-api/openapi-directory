@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeframesResponse = exports.TimeframesRequest = exports.TimeframesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TimeframesPathParams = /** @class */ (function (_super) {
     __extends(TimeframesPathParams, _super);
     function TimeframesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TimeframesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=type" }),
         __metadata("design:type", String)
     ], TimeframesPathParams.prototype, "type", void 0);
     return TimeframesPathParams;
-}(SpeakeasyBase));
-export { TimeframesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TimeframesPathParams = TimeframesPathParams;
 var TimeframesRequest = /** @class */ (function (_super) {
     __extends(TimeframesRequest, _super);
     function TimeframesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TimeframesPathParams)
     ], TimeframesRequest.prototype, "pathParams", void 0);
     return TimeframesRequest;
-}(SpeakeasyBase));
-export { TimeframesRequest };
+}(utils_1.SpeakeasyBase));
+exports.TimeframesRequest = TimeframesRequest;
 var TimeframesResponse = /** @class */ (function (_super) {
     __extends(TimeframesResponse, _super);
     function TimeframesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TimeframesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TimeframesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TimeframesResponse.prototype, "timeframes", void 0);
     return TimeframesResponse;
-}(SpeakeasyBase));
-export { TimeframesResponse };
+}(utils_1.SpeakeasyBase));
+exports.TimeframesResponse = TimeframesResponse;

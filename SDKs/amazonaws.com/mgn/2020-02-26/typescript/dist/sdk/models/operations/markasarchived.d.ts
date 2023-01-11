@@ -10,7 +10,7 @@ export declare class MarkAsArchivedHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class MarkAsArchivedRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class MarkAsArchivedRequest extends SpeakeasyBase {
     headers: MarkAsArchivedHeaders;

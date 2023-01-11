@@ -15,7 +15,7 @@ export declare class IsVpcPeeredHeaders extends SpeakeasyBase {
 }
 export declare class IsVpcPeeredRequest extends SpeakeasyBase {
     headers: IsVpcPeeredHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class IsVpcPeeredResponse extends SpeakeasyBase {
     accessDeniedException?: any;

@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidBonjourForwardingRequest extends Spea
 export declare class GetNetworkWirelessSsidBonjourForwardingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidBonjourForwarding200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidBonjourForwarding200ApplicationJSONObject?: Record<string, any>;
 }

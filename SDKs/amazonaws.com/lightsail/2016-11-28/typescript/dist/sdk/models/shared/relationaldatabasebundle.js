@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseBundle = void 0;
+var utils_1 = require("../../../internal/utils");
 // RelationalDatabaseBundle
 /**
  * Describes a database bundle. A bundle describes the performance specifications of the database.
@@ -33,41 +36,41 @@ var RelationalDatabaseBundle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBundle.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseBundle.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskSizeInGb" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseBundle.prototype, "diskSizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isActive" }),
         __metadata("design:type", Boolean)
     ], RelationalDatabaseBundle.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEncrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEncrypted" }),
         __metadata("design:type", Boolean)
     ], RelationalDatabaseBundle.prototype, "isEncrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBundle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseBundle.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ramSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ramSizeInGb" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseBundle.prototype, "ramSizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferPerMonthInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferPerMonthInGb" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseBundle.prototype, "transferPerMonthInGb", void 0);
     return RelationalDatabaseBundle;
-}(SpeakeasyBase));
-export { RelationalDatabaseBundle };
+}(utils_1.SpeakeasyBase));
+exports.RelationalDatabaseBundle = RelationalDatabaseBundle;

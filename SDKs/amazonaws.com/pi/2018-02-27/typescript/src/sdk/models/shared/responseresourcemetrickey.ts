@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ResponseResourceMetricKey extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Dimensions" })
-  dimensions?: Map<string, string>;
+  dimensions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Metric" })
   metric: string;

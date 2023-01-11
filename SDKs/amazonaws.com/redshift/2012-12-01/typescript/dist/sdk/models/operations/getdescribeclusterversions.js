@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeClusterVersionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeClusterVersionsResponse = exports.GetDescribeClusterVersionsRequest = exports.GetDescribeClusterVersionsHeaders = exports.GetDescribeClusterVersionsQueryParams = exports.GetDescribeClusterVersionsVersionEnum = exports.GetDescribeClusterVersionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeClusterVersionsActionEnum;
 (function (GetDescribeClusterVersionsActionEnum) {
     GetDescribeClusterVersionsActionEnum["DescribeClusterVersions"] = "DescribeClusterVersions";
-})(GetDescribeClusterVersionsActionEnum || (GetDescribeClusterVersionsActionEnum = {}));
-export var GetDescribeClusterVersionsVersionEnum;
+})(GetDescribeClusterVersionsActionEnum = exports.GetDescribeClusterVersionsActionEnum || (exports.GetDescribeClusterVersionsActionEnum = {}));
+var GetDescribeClusterVersionsVersionEnum;
 (function (GetDescribeClusterVersionsVersionEnum) {
     GetDescribeClusterVersionsVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDescribeClusterVersionsVersionEnum || (GetDescribeClusterVersionsVersionEnum = {}));
+})(GetDescribeClusterVersionsVersionEnum = exports.GetDescribeClusterVersionsVersionEnum || (exports.GetDescribeClusterVersionsVersionEnum = {}));
 var GetDescribeClusterVersionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeClusterVersionsQueryParams, _super);
     function GetDescribeClusterVersionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterParameterGroupFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterParameterGroupFamily" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsQueryParams.prototype, "clusterParameterGroupFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterVersion" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsQueryParams.prototype, "clusterVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeClusterVersionsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsQueryParams.prototype, "version", void 0);
     return GetDescribeClusterVersionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeClusterVersionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterVersionsQueryParams = GetDescribeClusterVersionsQueryParams;
 var GetDescribeClusterVersionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeClusterVersionsHeaders, _super);
     function GetDescribeClusterVersionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeClusterVersionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeClusterVersionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterVersionsHeaders = GetDescribeClusterVersionsHeaders;
 var GetDescribeClusterVersionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeClusterVersionsRequest, _super);
     function GetDescribeClusterVersionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeClusterVersionsQueryParams)
     ], GetDescribeClusterVersionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeClusterVersionsHeaders)
     ], GetDescribeClusterVersionsRequest.prototype, "headers", void 0);
     return GetDescribeClusterVersionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeClusterVersionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterVersionsRequest = GetDescribeClusterVersionsRequest;
 var GetDescribeClusterVersionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeClusterVersionsResponse, _super);
     function GetDescribeClusterVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeClusterVersionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeClusterVersionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeClusterVersionsResponse.prototype, "statusCode", void 0);
     return GetDescribeClusterVersionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeClusterVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterVersionsResponse = GetDescribeClusterVersionsResponse;

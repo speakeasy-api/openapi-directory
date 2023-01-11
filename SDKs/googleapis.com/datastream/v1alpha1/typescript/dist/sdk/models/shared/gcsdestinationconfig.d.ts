@@ -8,7 +8,7 @@ export declare enum GcsDestinationConfigGcsFileFormatEnum {
  * Google Cloud Storage destination configuration
 **/
 export declare class GcsDestinationConfig extends SpeakeasyBase {
-    avroFileFormat?: Map<string, any>;
+    avroFileFormat?: Record<string, any>;
     fileRotationInterval?: string;
     fileRotationMb?: number;
     gcsFileFormat?: GcsDestinationConfigGcsFileFormatEnum;

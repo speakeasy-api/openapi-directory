@@ -1,5 +1,8 @@
-export var ChronologicalOrderEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChronologicalOrderEnum = void 0;
+var ChronologicalOrderEnum;
 (function (ChronologicalOrderEnum) {
     ChronologicalOrderEnum["Reverse"] = "Reverse";
     ChronologicalOrderEnum["Forward"] = "Forward";
-})(ChronologicalOrderEnum || (ChronologicalOrderEnum = {}));
+})(ChronologicalOrderEnum = exports.ChronologicalOrderEnum || (exports.ChronologicalOrderEnum = {}));

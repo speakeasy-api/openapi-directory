@@ -15,7 +15,7 @@ export declare class GetIntersectionsNearestOutputFormatQueryParams extends Spea
     maxDegree?: number;
     maxDistance?: number;
     minDegree?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     point: string;
 }
 export declare class GetIntersectionsNearestOutputFormatRequest extends SpeakeasyBase {

@@ -1,0 +1,478 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class CatalogsAuto {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * autoConfigureAutoImportInterval - Configure Auto Import Interval
+  **/
+  autoConfigureAutoImportInterval(
+    req: operations.AutoConfigureAutoImportIntervalRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoConfigureAutoImportIntervalResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoConfigureAutoImportIntervalRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/interval", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoConfigureAutoImportIntervalResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoDeleteAutoImport - Delete Auto Import
+  **/
+  autoDeleteAutoImport(
+    req: operations.AutoDeleteAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoDeleteAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoDeleteAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoDeleteAutoImportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoGetAutoImportConfiguration - Get the auto import configuration
+  **/
+  autoGetAutoImportConfiguration(
+    req: operations.AutoGetAutoImportConfigurationRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoGetAutoImportConfigurationResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoGetAutoImportConfigurationRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoGetAutoImportConfigurationResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.autoImportConfiguration = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoPauseAutoImport - Pause Auto Import
+  **/
+  autoPauseAutoImport(
+    req: operations.AutoPauseAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoPauseAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoPauseAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/pause", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoPauseAutoImportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoResumeAutoImport - Resume Auto Import
+  **/
+  autoResumeAutoImport(
+    req: operations.AutoResumeAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoResumeAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoResumeAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/resume", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoResumeAutoImportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoScheduleAutoImport - Configure Auto Import Schedules
+  **/
+  autoScheduleAutoImport(
+    req: operations.AutoScheduleAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoScheduleAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoScheduleAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoScheduleAutoImportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * autoStartAutoImport - Start Auto Import Manually
+  **/
+  autoStartAutoImport(
+    req: operations.AutoStartAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AutoStartAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AutoStartAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/start", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AutoStartAutoImportResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 202:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.linksImportationGetImportationMonitoringLink = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * importationActivateAutoImport - Activate the auto importation of the last successful manual catalog importation.
+   *
+   * Once you have made your fist manual catalog importation with success, you can call this operation to import it automatically. No parameter required, we know which one it is.
+  **/
+  importationActivateAutoImport(
+    req: operations.ImportationActivateAutoImportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ImportationActivateAutoImportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ImportationActivateAutoImportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v2/user/catalogs/{storeId}/autoImport/activate", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ImportationActivateAutoImportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

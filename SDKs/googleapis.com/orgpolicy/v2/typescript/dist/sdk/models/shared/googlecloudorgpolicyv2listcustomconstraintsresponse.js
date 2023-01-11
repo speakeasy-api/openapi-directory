@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudOrgpolicyV2CustomConstraint } from "./googlecloudorgpolicyv2customconstraint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV2ListCustomConstraintsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudorgpolicyv2customconstraint_1 = require("./googlecloudorgpolicyv2customconstraint");
 // GoogleCloudOrgpolicyV2ListCustomConstraintsResponse
 /**
  * The response returned from the ListCustomConstraints method. It will be empty if no `CustomConstraints` are set on the organization resource.
@@ -34,13 +37,13 @@ var GoogleCloudOrgpolicyV2ListCustomConstraintsResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customConstraints", elemType: GoogleCloudOrgpolicyV2CustomConstraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customConstraints", elemType: googlecloudorgpolicyv2customconstraint_1.GoogleCloudOrgpolicyV2CustomConstraint }),
         __metadata("design:type", Array)
     ], GoogleCloudOrgpolicyV2ListCustomConstraintsResponse.prototype, "customConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV2ListCustomConstraintsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudOrgpolicyV2ListCustomConstraintsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2ListCustomConstraintsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2ListCustomConstraintsResponse = GoogleCloudOrgpolicyV2ListCustomConstraintsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PipelineCondition } from "./pipelinecondition";
-import { SerialPipeline } from "./serialpipeline";
-// DeliveryPipelineInput
-/**
- * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a pipeline through which a Skaffold configuration can progress.
-**/
-var DeliveryPipelineInput = /** @class */ (function (_super) {
-    __extends(DeliveryPipelineInput, _super);
-    function DeliveryPipelineInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
-    ], DeliveryPipelineInput.prototype, "annotations", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", PipelineCondition)
-    ], DeliveryPipelineInput.prototype, "condition", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], DeliveryPipelineInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], DeliveryPipelineInput.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], DeliveryPipelineInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], DeliveryPipelineInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialPipeline" }),
-        __metadata("design:type", SerialPipeline)
-    ], DeliveryPipelineInput.prototype, "serialPipeline", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended" }),
-        __metadata("design:type", Boolean)
-    ], DeliveryPipelineInput.prototype, "suspended", void 0);
-    return DeliveryPipelineInput;
-}(SpeakeasyBase));
-export { DeliveryPipelineInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryPipelineInput = exports.DeliveryPipeline = void 0;
+var utils_1 = require("../../../internal/utils");
+var pipelinecondition_1 = require("./pipelinecondition");
+var serialpipeline_1 = require("./serialpipeline");
 // DeliveryPipeline
 /**
  * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a pipeline through which a Skaffold configuration can progress.
@@ -79,49 +38,93 @@ var DeliveryPipeline = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], DeliveryPipeline.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", PipelineCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", pipelinecondition_1.PipelineCondition)
     ], DeliveryPipeline.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], DeliveryPipeline.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialPipeline" }),
-        __metadata("design:type", SerialPipeline)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialPipeline" }),
+        __metadata("design:type", serialpipeline_1.SerialPipeline)
     ], DeliveryPipeline.prototype, "serialPipeline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended" }),
         __metadata("design:type", Boolean)
     ], DeliveryPipeline.prototype, "suspended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], DeliveryPipeline.prototype, "updateTime", void 0);
     return DeliveryPipeline;
-}(SpeakeasyBase));
-export { DeliveryPipeline };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryPipeline = DeliveryPipeline;
+// DeliveryPipelineInput
+/**
+ * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a pipeline through which a Skaffold configuration can progress.
+**/
+var DeliveryPipelineInput = /** @class */ (function (_super) {
+    __extends(DeliveryPipelineInput, _super);
+    function DeliveryPipelineInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
+    ], DeliveryPipelineInput.prototype, "annotations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", pipelinecondition_1.PipelineCondition)
+    ], DeliveryPipelineInput.prototype, "condition", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], DeliveryPipelineInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], DeliveryPipelineInput.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], DeliveryPipelineInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], DeliveryPipelineInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialPipeline" }),
+        __metadata("design:type", serialpipeline_1.SerialPipeline)
+    ], DeliveryPipelineInput.prototype, "serialPipeline", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended" }),
+        __metadata("design:type", Boolean)
+    ], DeliveryPipelineInput.prototype, "suspended", void 0);
+    return DeliveryPipelineInput;
+}(utils_1.SpeakeasyBase));
+exports.DeliveryPipelineInput = DeliveryPipelineInput;

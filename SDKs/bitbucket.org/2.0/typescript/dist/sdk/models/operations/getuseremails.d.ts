@@ -11,5 +11,5 @@ export declare class GetUserEmailsRequest extends SpeakeasyBase {
 export declare class GetUserEmailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

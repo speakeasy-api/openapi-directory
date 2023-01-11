@@ -26,5 +26,5 @@ export class UsersListBlockedByAuthenticatedResponse extends SpeakeasyBase {
   simpleUsers?: shared.SimpleUser[];
 
   @SpeakeasyMetadata()
-  usersListBlockedByAuthenticated415ApplicationJsonObject?: UsersListBlockedByAuthenticated415ApplicationJson;
+  usersListBlockedByAuthenticated415ApplicationJSONObject?: UsersListBlockedByAuthenticated415ApplicationJson;
 }

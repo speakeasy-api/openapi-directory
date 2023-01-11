@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkedInterconnectAttachmentsInput = exports.LinkedInterconnectAttachments = void 0;
+var utils_1 = require("../../../internal/utils");
 // LinkedInterconnectAttachments
 /**
  * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
@@ -33,20 +36,20 @@ var LinkedInterconnectAttachments = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=siteToSiteDataTransfer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=siteToSiteDataTransfer" }),
         __metadata("design:type", Boolean)
     ], LinkedInterconnectAttachments.prototype, "siteToSiteDataTransfer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uris" }),
         __metadata("design:type", Array)
     ], LinkedInterconnectAttachments.prototype, "uris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcNetwork" }),
         __metadata("design:type", String)
     ], LinkedInterconnectAttachments.prototype, "vpcNetwork", void 0);
     return LinkedInterconnectAttachments;
-}(SpeakeasyBase));
-export { LinkedInterconnectAttachments };
+}(utils_1.SpeakeasyBase));
+exports.LinkedInterconnectAttachments = LinkedInterconnectAttachments;
 // LinkedInterconnectAttachmentsInput
 /**
  * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
@@ -57,13 +60,13 @@ var LinkedInterconnectAttachmentsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=siteToSiteDataTransfer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=siteToSiteDataTransfer" }),
         __metadata("design:type", Boolean)
     ], LinkedInterconnectAttachmentsInput.prototype, "siteToSiteDataTransfer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uris" }),
         __metadata("design:type", Array)
     ], LinkedInterconnectAttachmentsInput.prototype, "uris", void 0);
     return LinkedInterconnectAttachmentsInput;
-}(SpeakeasyBase));
-export { LinkedInterconnectAttachmentsInput };
+}(utils_1.SpeakeasyBase));
+exports.LinkedInterconnectAttachmentsInput = LinkedInterconnectAttachmentsInput;

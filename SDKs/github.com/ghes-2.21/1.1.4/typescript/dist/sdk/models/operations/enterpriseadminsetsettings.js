@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminSetSettingsResponse = exports.EnterpriseAdminSetSettingsRequest = exports.EnterpriseAdminSetSettingsRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminSetSettingsRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSettingsRequestBody, _super);
     function EnterpriseAdminSetSettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSettingsRequestBody.prototype, "settings", void 0);
     return EnterpriseAdminSetSettingsRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSettingsRequestBody = EnterpriseAdminSetSettingsRequestBody;
 var EnterpriseAdminSetSettingsRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSettingsRequest, _super);
     function EnterpriseAdminSetSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminSetSettingsRequestBody)
     ], EnterpriseAdminSetSettingsRequest.prototype, "request", void 0);
     return EnterpriseAdminSetSettingsRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSettingsRequest = EnterpriseAdminSetSettingsRequest;
 var EnterpriseAdminSetSettingsResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSettingsResponse, _super);
     function EnterpriseAdminSetSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetSettingsResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminSetSettingsResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSettingsResponse = EnterpriseAdminSetSettingsResponse;

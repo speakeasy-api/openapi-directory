@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class MakeSubUserKeyMakeSubUserKeyPostQueryParams extends SpeakeasyBase {
-    apiId: string;
+    apiID: string;
     apiKey: string;
     siteName?: string;
 }
@@ -13,5 +13,5 @@ export declare class MakeSubUserKeyMakeSubUserKeyPostResponse extends SpeakeasyB
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    subUserJsonWebToken?: shared.SubUserJsonWebToken;
+    subUserJSONWebToken?: shared.SubUserJsonWebToken;
 }

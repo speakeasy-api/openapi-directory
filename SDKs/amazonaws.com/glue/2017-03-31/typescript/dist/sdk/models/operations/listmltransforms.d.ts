@@ -27,7 +27,7 @@ export declare class ListMlTransformsResponse extends SpeakeasyBase {
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;
-    listMlTransformsResponse?: shared.ListMlTransformsResponse;
+    listMLTransformsResponse?: shared.ListMlTransformsResponse;
     operationTimeoutException?: any;
     statusCode: number;
 }

@@ -18,9 +18,9 @@ export declare enum OneusersGetResponses200ContentApplication1jsonSchemaItemsMob
 export declare class OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplication extends SpeakeasyBase {
     os?: OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationOsEnum;
     businessUserId?: number;
-    clientId?: string;
+    clientID?: string;
     deviceName?: OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationDeviceNameEnum;
-    deviceOsVersion?: string;
+    deviceOSVersion?: string;
     mobileApplicationId?: number;
     status?: OneusersGetResponses200ContentApplication1jsonSchemaItemsMobileApplicationStatusEnum;
 }

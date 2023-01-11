@@ -38,7 +38,7 @@ export class GetApiVVersionCurrenciesRateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ elemType: shared.RateResponse })
   rateResponses?: shared.RateResponse[];

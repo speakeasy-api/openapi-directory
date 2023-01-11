@@ -20,6 +20,6 @@ export declare class ComputeNodeEnableSchedulingRequest extends SpeakeasyBase {
 export declare class ComputeNodeEnableSchedulingResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

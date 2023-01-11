@@ -3,6 +3,9 @@ import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { Repository } from "./repository";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
+/**
+ * Simple User
+**/
 export declare class IssueSearchResultItemSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -33,6 +36,9 @@ export declare class IssueSearchResultItemLabels extends SpeakeasyBase {
     nodeId?: string;
     url?: string;
 }
+/**
+ * Simple User
+**/
 export declare class IssueSearchResultItemMilestoneSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -58,6 +64,9 @@ export declare enum IssueSearchResultItemMilestoneStateEnum {
     Open = "open",
     Closed = "closed"
 }
+/**
+ * A collection of related issues and pull requests.
+**/
 export declare class IssueSearchResultItemMilestone extends SpeakeasyBase {
     closedAt: Date;
     closedIssues: number;
@@ -108,7 +117,7 @@ export declare class IssueSearchResultItem extends SpeakeasyBase {
     milestone: IssueSearchResultItemMilestone;
     nodeId: string;
     number: number;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     pullRequest?: IssueSearchResultItemPullRequest;
     repository?: Repository;
     repositoryUrl: string;

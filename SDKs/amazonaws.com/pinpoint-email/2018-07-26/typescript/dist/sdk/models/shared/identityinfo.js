@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityTypeEnum } from "./identitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var identitytypeenum_1 = require("./identitytypeenum");
 // IdentityInfo
 /**
  * Information about an email identity.
@@ -34,17 +37,17 @@ var IdentityInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityName" }),
         __metadata("design:type", String)
     ], IdentityInfo.prototype, "identityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityType" }),
         __metadata("design:type", String)
     ], IdentityInfo.prototype, "identityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingEnabled" }),
         __metadata("design:type", Boolean)
     ], IdentityInfo.prototype, "sendingEnabled", void 0);
     return IdentityInfo;
-}(SpeakeasyBase));
-export { IdentityInfo };
+}(utils_1.SpeakeasyBase));
+exports.IdentityInfo = IdentityInfo;

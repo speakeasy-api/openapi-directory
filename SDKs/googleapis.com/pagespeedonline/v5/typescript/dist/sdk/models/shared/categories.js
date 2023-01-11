@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LighthouseCategoryV5 } from "./lighthousecategoryv5";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Categories = void 0;
+var utils_1 = require("../../../internal/utils");
+var lighthousecategoryv5_1 = require("./lighthousecategoryv5");
 // Categories
 /**
  * The categories in a Lighthouse run.
@@ -34,25 +37,25 @@ var Categories = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessibility" }),
-        __metadata("design:type", LighthouseCategoryV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessibility" }),
+        __metadata("design:type", lighthousecategoryv5_1.LighthouseCategoryV5)
     ], Categories.prototype, "accessibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=best-practices" }),
-        __metadata("design:type", LighthouseCategoryV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=best-practices" }),
+        __metadata("design:type", lighthousecategoryv5_1.LighthouseCategoryV5)
     ], Categories.prototype, "bestPractices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performance" }),
-        __metadata("design:type", LighthouseCategoryV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performance" }),
+        __metadata("design:type", lighthousecategoryv5_1.LighthouseCategoryV5)
     ], Categories.prototype, "performance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pwa" }),
-        __metadata("design:type", LighthouseCategoryV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pwa" }),
+        __metadata("design:type", lighthousecategoryv5_1.LighthouseCategoryV5)
     ], Categories.prototype, "pwa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seo" }),
-        __metadata("design:type", LighthouseCategoryV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seo" }),
+        __metadata("design:type", lighthousecategoryv5_1.LighthouseCategoryV5)
     ], Categories.prototype, "seo", void 0);
     return Categories;
-}(SpeakeasyBase));
-export { Categories };
+}(utils_1.SpeakeasyBase));
+exports.Categories = Categories;

@@ -21,6 +21,6 @@ export declare class ReferencesAirlinesByAirlineCodeGetRequest extends Speakeasy
 }
 export declare class ReferencesAirlinesByAirlineCodeGetResponse extends SpeakeasyBase {
     contentType: string;
-    referencesAirlinesByAirlineCodeGet200ApplicationJsonObject?: Map<string, any>;
+    referencesAirlinesByAirlineCodeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

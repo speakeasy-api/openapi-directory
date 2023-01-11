@@ -4,7 +4,7 @@ export declare class EarningsLine extends SpeakeasyBase {
     amount?: number;
     annualSalary?: number;
     calculationType?: EarningsRateCalculationTypeEnum;
-    earningsRateId: string;
+    earningsRateID: string;
     fixedAmount?: number;
     normalNumberOfUnits?: number;
     numberOfUnits?: number;

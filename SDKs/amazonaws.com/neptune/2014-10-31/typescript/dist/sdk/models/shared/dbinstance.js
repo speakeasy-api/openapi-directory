@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
-import { DbSubnetGroup } from "./dbsubnetgroup";
-import { DomainMembership } from "./domainmembership";
-import { Endpoint } from "./endpoint";
-import { OptionGroupMembership } from "./optiongroupmembership";
-import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbparametergroupstatuslist_1 = require("./dbparametergroupstatuslist");
+var dbsecuritygroupmembershiplist_1 = require("./dbsecuritygroupmembershiplist");
+var dbsubnetgroup_1 = require("./dbsubnetgroup");
+var domainmembershiplist_1 = require("./domainmembershiplist");
+var endpoint_1 = require("./endpoint");
+var optiongroupmembershiplist_1 = require("./optiongroupmembershiplist");
+var pendingmodifiedvalues_1 = require("./pendingmodifiedvalues");
+var dbinstancestatusinfolist_1 = require("./dbinstancestatusinfolist");
+var vpcsecuritygroupmembershiplist_1 = require("./vpcsecuritygroupmembershiplist");
 // DbInstance
 /**
  * <p>Contains the details of an Amazon Neptune DB instance.</p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action.</p>
@@ -42,217 +45,217 @@ var DbInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "allocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "autoMinorVersionUpgrade", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "backupRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "caCertificateIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "characterSetName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "copyTagsToSnapshot", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbInstanceClass", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbInstanceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbParameterGroupStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbparametergroupstatuslist_1.DbParameterGroupStatusList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "dbParameterGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbsecuritygroupmembershiplist_1.DbSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "dbSecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DbSubnetGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", dbsubnetgroup_1.DbSubnetGroup)
     ], DbInstance.prototype, "dbSubnetGroup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "dbInstancePort", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "dbiResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "deletionProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DomainMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: domainmembershiplist_1.DomainMembershipList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "domainMemberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "enabledCloudwatchLogsExports", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], DbInstance.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "enhancedMonitoringResourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "iamDatabaseAuthenticationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbInstance.prototype, "instanceCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbInstance.prototype, "latestRestorableTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "licenseModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "masterUsername", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "monitoringInterval", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "monitoringRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], DbInstance.prototype, "multiAz", void 0);
+    ], DbInstance.prototype, "multiAZ", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: OptionGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: optiongroupmembershiplist_1.OptionGroupMembershipList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "optionGroupMemberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PendingModifiedValues)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pendingmodifiedvalues_1.PendingModifiedValues)
     ], DbInstance.prototype, "pendingModifiedValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "performanceInsightsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DbInstance.prototype, "performanceInsightsKmsKeyId", void 0);
+    ], DbInstance.prototype, "performanceInsightsKMSKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "preferredBackupWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbInstance.prototype, "promotionTier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DbInstance.prototype, "publiclyAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], DbInstance.prototype, "readReplicaDbClusterIdentifiers", void 0);
+    ], DbInstance.prototype, "readReplicaDBClusterIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], DbInstance.prototype, "readReplicaDbInstanceIdentifiers", void 0);
+    ], DbInstance.prototype, "readReplicaDBInstanceIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DbInstance.prototype, "readReplicaSourceDbInstanceIdentifier", void 0);
+    ], DbInstance.prototype, "readReplicaSourceDBInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "secondaryAvailabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbInstanceStatusInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbinstancestatusinfolist_1.DbInstanceStatusInfoList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "statusInfos", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbInstance.prototype, "storageEncrypted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "storageType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "tdeCredentialArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbInstance.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: vpcsecuritygroupmembershiplist_1.VpcSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], DbInstance.prototype, "vpcSecurityGroups", void 0);
     return DbInstance;
-}(SpeakeasyBase));
-export { DbInstance };
+}(utils_1.SpeakeasyBase));
+exports.DbInstance = DbInstance;

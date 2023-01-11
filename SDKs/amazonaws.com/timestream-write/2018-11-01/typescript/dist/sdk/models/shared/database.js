@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Database = void 0;
+var utils_1 = require("../../../internal/utils");
 // Database
 /**
  * A top level container for a table. Databases and tables are the fundamental management concepts in Amazon Timestream. All tables in a database are encrypted with the same KMS key.
@@ -33,29 +36,29 @@ var Database = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], Database.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], Database.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], Database.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], Database.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTime" }),
         __metadata("design:type", Date)
     ], Database.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableCount" }),
         __metadata("design:type", Number)
     ], Database.prototype, "tableCount", void 0);
     return Database;
-}(SpeakeasyBase));
-export { Database };
+}(utils_1.SpeakeasyBase));
+exports.Database = Database;

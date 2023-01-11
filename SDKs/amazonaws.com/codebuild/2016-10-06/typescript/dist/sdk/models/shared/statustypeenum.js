@@ -1,4 +1,7 @@
-export var StatusTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusTypeEnum = void 0;
+var StatusTypeEnum;
 (function (StatusTypeEnum) {
     StatusTypeEnum["Succeeded"] = "SUCCEEDED";
     StatusTypeEnum["Failed"] = "FAILED";
@@ -6,4 +9,4 @@ export var StatusTypeEnum;
     StatusTypeEnum["TimedOut"] = "TIMED_OUT";
     StatusTypeEnum["InProgress"] = "IN_PROGRESS";
     StatusTypeEnum["Stopped"] = "STOPPED";
-})(StatusTypeEnum || (StatusTypeEnum = {}));
+})(StatusTypeEnum = exports.StatusTypeEnum || (exports.StatusTypeEnum = {}));

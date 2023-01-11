@@ -24,7 +24,7 @@ export declare class ReposCreateForAuthenticatedUserRequest extends SpeakeasyBas
 }
 export declare class ReposCreateForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     repository?: shared.Repository;

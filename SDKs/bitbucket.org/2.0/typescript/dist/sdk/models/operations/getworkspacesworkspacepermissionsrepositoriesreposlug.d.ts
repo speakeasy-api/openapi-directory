@@ -21,6 +21,6 @@ export declare class GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugReques
 export declare class GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedRepositoryPermissions?: shared.PaginatedRepositoryPermissions;
 }

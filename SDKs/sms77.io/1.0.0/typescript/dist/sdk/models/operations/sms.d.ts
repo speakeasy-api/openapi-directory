@@ -46,8 +46,8 @@ export declare class SmsRequest extends SpeakeasyBase {
     queryParams: SmsQueryParams;
 }
 export declare class SmsResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
-    sms200ApplicationJsonObject?: Sms200ApplicationJson;
+    sms200ApplicationJSONObject?: Sms200ApplicationJson;
+    sms200TextPlainObject?: string;
     statusCode: number;
 }

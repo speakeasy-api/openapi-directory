@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1OutputConfig } from "./googleclouddatalabelingv1beta1outputconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ExportDataRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1outputconfig_1 = require("./googleclouddatalabelingv1beta1outputconfig");
 // GoogleCloudDatalabelingV1beta1ExportDataRequest
 /**
  * Request message for ExportData API.
@@ -34,21 +37,21 @@ var GoogleCloudDatalabelingV1beta1ExportDataRequest = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotatedDataset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatedDataset" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ExportDataRequest.prototype, "annotatedDataset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ExportDataRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1OutputConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1outputconfig_1.GoogleCloudDatalabelingV1beta1OutputConfig)
     ], GoogleCloudDatalabelingV1beta1ExportDataRequest.prototype, "outputConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEmailAddress" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ExportDataRequest.prototype, "userEmailAddress", void 0);
     return GoogleCloudDatalabelingV1beta1ExportDataRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ExportDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ExportDataRequest = GoogleCloudDatalabelingV1beta1ExportDataRequest;

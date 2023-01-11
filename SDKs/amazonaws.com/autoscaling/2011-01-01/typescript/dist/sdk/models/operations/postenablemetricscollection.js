@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostEnableMetricsCollectionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostEnableMetricsCollectionResponse = exports.PostEnableMetricsCollectionRequest = exports.PostEnableMetricsCollectionHeaders = exports.PostEnableMetricsCollectionQueryParams = exports.PostEnableMetricsCollectionVersionEnum = exports.PostEnableMetricsCollectionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostEnableMetricsCollectionActionEnum;
 (function (PostEnableMetricsCollectionActionEnum) {
     PostEnableMetricsCollectionActionEnum["EnableMetricsCollection"] = "EnableMetricsCollection";
-})(PostEnableMetricsCollectionActionEnum || (PostEnableMetricsCollectionActionEnum = {}));
-export var PostEnableMetricsCollectionVersionEnum;
+})(PostEnableMetricsCollectionActionEnum = exports.PostEnableMetricsCollectionActionEnum || (exports.PostEnableMetricsCollectionActionEnum = {}));
+var PostEnableMetricsCollectionVersionEnum;
 (function (PostEnableMetricsCollectionVersionEnum) {
     PostEnableMetricsCollectionVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostEnableMetricsCollectionVersionEnum || (PostEnableMetricsCollectionVersionEnum = {}));
+})(PostEnableMetricsCollectionVersionEnum = exports.PostEnableMetricsCollectionVersionEnum || (exports.PostEnableMetricsCollectionVersionEnum = {}));
 var PostEnableMetricsCollectionQueryParams = /** @class */ (function (_super) {
     __extends(PostEnableMetricsCollectionQueryParams, _super);
     function PostEnableMetricsCollectionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionQueryParams.prototype, "version", void 0);
     return PostEnableMetricsCollectionQueryParams;
-}(SpeakeasyBase));
-export { PostEnableMetricsCollectionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostEnableMetricsCollectionQueryParams = PostEnableMetricsCollectionQueryParams;
 var PostEnableMetricsCollectionHeaders = /** @class */ (function (_super) {
     __extends(PostEnableMetricsCollectionHeaders, _super);
     function PostEnableMetricsCollectionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostEnableMetricsCollectionHeaders;
-}(SpeakeasyBase));
-export { PostEnableMetricsCollectionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostEnableMetricsCollectionHeaders = PostEnableMetricsCollectionHeaders;
 var PostEnableMetricsCollectionRequest = /** @class */ (function (_super) {
     __extends(PostEnableMetricsCollectionRequest, _super);
     function PostEnableMetricsCollectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostEnableMetricsCollectionQueryParams)
     ], PostEnableMetricsCollectionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostEnableMetricsCollectionHeaders)
     ], PostEnableMetricsCollectionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostEnableMetricsCollectionRequest.prototype, "request", void 0);
     return PostEnableMetricsCollectionRequest;
-}(SpeakeasyBase));
-export { PostEnableMetricsCollectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostEnableMetricsCollectionRequest = PostEnableMetricsCollectionRequest;
 var PostEnableMetricsCollectionResponse = /** @class */ (function (_super) {
     __extends(PostEnableMetricsCollectionResponse, _super);
     function PostEnableMetricsCollectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostEnableMetricsCollectionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostEnableMetricsCollectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostEnableMetricsCollectionResponse.prototype, "statusCode", void 0);
     return PostEnableMetricsCollectionResponse;
-}(SpeakeasyBase));
-export { PostEnableMetricsCollectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostEnableMetricsCollectionResponse = PostEnableMetricsCollectionResponse;

@@ -25,7 +25,7 @@ export class ListAllGroupsUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class ListAllGroupsUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class ListAllGroupsUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -64,14 +64,14 @@ export class ListAllGroupsUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingGet200ApplicationJsonObject?: ListAllGroupsUsingGet200ApplicationJson;
+  listAllGroupsUsingGET200ApplicationJSONObject?: ListAllGroupsUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingGet400ApplicationJsonObject?: ListAllGroupsUsingGet400ApplicationJson;
+  listAllGroupsUsingGET400ApplicationJSONObject?: ListAllGroupsUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingGet401ApplicationJsonObject?: ListAllGroupsUsingGet401ApplicationJson;
+  listAllGroupsUsingGET401ApplicationJSONObject?: ListAllGroupsUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingGet500ApplicationJsonObject?: ListAllGroupsUsingGet500ApplicationJson;
+  listAllGroupsUsingGET500ApplicationJSONObject?: ListAllGroupsUsingGet500ApplicationJson;
 }

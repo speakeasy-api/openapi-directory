@@ -39,7 +39,7 @@ export class DescribeLimitsRequest extends SpeakeasyBase {
   headers: DescribeLimitsHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

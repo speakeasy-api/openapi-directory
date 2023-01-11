@@ -5,7 +5,7 @@ import { IpAddressTypeEnum } from "./ipaddresstypeenum";
 import { Tag } from "./tag";
 export declare class CreateInstancesFromSnapshotRequest extends SpeakeasyBase {
     addOns?: AddOnRequest[];
-    attachedDiskMapping?: Map<string, DiskMap[]>;
+    attachedDiskMapping?: Record<string, DiskMap[]>;
     availabilityZone: string;
     bundleId: string;
     instanceNames: string[];

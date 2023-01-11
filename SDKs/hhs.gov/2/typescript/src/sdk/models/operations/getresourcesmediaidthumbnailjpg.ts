@@ -19,8 +19,8 @@ export class GetResourcesMediaIdThumbnailJpgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesMediaIdThumbnailJpg200ApplicationJsonObject?: Map<string, any>;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesMediaIdThumbnailJpg200ApplicationJSONObject?: Record<string, any>;
 }

@@ -46,7 +46,7 @@ export class Getweather200ApplicationJson extends SpeakeasyBase {
   windDir?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WindMPH" })
-  windMph?: string;
+  windMPH?: string;
 }
 
 
@@ -64,5 +64,5 @@ export class GetweatherResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getweather200ApplicationJsonObject?: Getweather200ApplicationJson;
+  getweather200ApplicationJSONObject?: Getweather200ApplicationJson;
 }

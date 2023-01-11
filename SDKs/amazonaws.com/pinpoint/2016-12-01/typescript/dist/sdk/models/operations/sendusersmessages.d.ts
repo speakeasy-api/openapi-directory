@@ -16,11 +16,11 @@ export declare class SendUsersMessagesHeaders extends SpeakeasyBase {
  * Specifies the configuration and other settings for a message to send to all the endpoints that are associated with a list of users.
 **/
 export declare class SendUsersMessagesRequestBodySendUsersMessageRequest extends SpeakeasyBase {
-    context?: Map<string, string>;
+    context?: Record<string, string>;
     messageConfiguration?: shared.DirectMessageConfiguration;
     templateConfiguration?: shared.TemplateConfiguration;
     traceId?: string;
-    users?: Map<string, shared.EndpointSendConfiguration>;
+    users?: Record<string, shared.EndpointSendConfiguration>;
 }
 export declare class SendUsersMessagesRequestBody extends SpeakeasyBase {
     sendUsersMessageRequest: SendUsersMessagesRequestBodySendUsersMessageRequest;

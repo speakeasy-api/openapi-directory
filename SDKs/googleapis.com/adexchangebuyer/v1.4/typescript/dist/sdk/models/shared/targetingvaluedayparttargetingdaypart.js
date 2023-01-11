@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetingValueDayPartTargetingDayPart = void 0;
+var utils_1 = require("../../../internal/utils");
 var TargetingValueDayPartTargetingDayPart = /** @class */ (function (_super) {
     __extends(TargetingValueDayPartTargetingDayPart, _super);
     function TargetingValueDayPartTargetingDayPart() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfWeek" }),
         __metadata("design:type", String)
     ], TargetingValueDayPartTargetingDayPart.prototype, "dayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endHour" }),
         __metadata("design:type", Number)
     ], TargetingValueDayPartTargetingDayPart.prototype, "endHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endMinute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endMinute" }),
         __metadata("design:type", Number)
     ], TargetingValueDayPartTargetingDayPart.prototype, "endMinute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startHour" }),
         __metadata("design:type", Number)
     ], TargetingValueDayPartTargetingDayPart.prototype, "startHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startMinute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startMinute" }),
         __metadata("design:type", Number)
     ], TargetingValueDayPartTargetingDayPart.prototype, "startMinute", void 0);
     return TargetingValueDayPartTargetingDayPart;
-}(SpeakeasyBase));
-export { TargetingValueDayPartTargetingDayPart };
+}(utils_1.SpeakeasyBase));
+exports.TargetingValueDayPartTargetingDayPart = TargetingValueDayPartTargetingDayPart;

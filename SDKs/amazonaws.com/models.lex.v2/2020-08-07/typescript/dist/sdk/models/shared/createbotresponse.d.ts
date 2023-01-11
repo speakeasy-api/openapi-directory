@@ -5,11 +5,11 @@ export declare class CreateBotResponse extends SpeakeasyBase {
     botId?: string;
     botName?: string;
     botStatus?: BotStatusEnum;
-    botTags?: Map<string, string>;
+    botTags?: Record<string, string>;
     creationDateTime?: Date;
     dataPrivacy?: DataPrivacy;
     description?: string;
-    idleSessionTtlInSeconds?: number;
+    idleSessionTTLInSeconds?: number;
     roleArn?: string;
-    testBotAliasTags?: Map<string, string>;
+    testBotAliasTags?: Record<string, string>;
 }

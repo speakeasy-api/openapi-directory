@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudSqlPropertiesInput } from "./cloudsqlproperties";
-import { CloudSqlProperties } from "./cloudsqlproperties";
-// ConnectionInput
-/**
- * Configuration parameters to establish connection with an external data source, except the credential attributes.
-**/
-var ConnectionInput = /** @class */ (function (_super) {
-    __extends(ConnectionInput, _super);
-    function ConnectionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSql" }),
-        __metadata("design:type", CloudSqlPropertiesInput)
-    ], ConnectionInput.prototype, "cloudSql", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], ConnectionInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=friendlyName" }),
-        __metadata("design:type", String)
-    ], ConnectionInput.prototype, "friendlyName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ConnectionInput.prototype, "name", void 0);
-    return ConnectionInput;
-}(SpeakeasyBase));
-export { ConnectionInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionInput = exports.Connection = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudsqlproperties_1 = require("./cloudsqlproperties");
+var cloudsqlproperties_2 = require("./cloudsqlproperties");
 // Connection
 /**
  * Configuration parameters to establish connection with an external data source, except the credential attributes.
@@ -63,33 +38,61 @@ var Connection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSql" }),
-        __metadata("design:type", CloudSqlProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSql" }),
+        __metadata("design:type", cloudsqlproperties_1.CloudSqlProperties)
     ], Connection.prototype, "cloudSql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], Connection.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Connection.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=friendlyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friendlyName" }),
         __metadata("design:type", String)
     ], Connection.prototype, "friendlyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasCredential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasCredential" }),
         __metadata("design:type", Boolean)
     ], Connection.prototype, "hasCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedTime" }),
         __metadata("design:type", String)
     ], Connection.prototype, "lastModifiedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Connection.prototype, "name", void 0);
     return Connection;
-}(SpeakeasyBase));
-export { Connection };
+}(utils_1.SpeakeasyBase));
+exports.Connection = Connection;
+// ConnectionInput
+/**
+ * Configuration parameters to establish connection with an external data source, except the credential attributes.
+**/
+var ConnectionInput = /** @class */ (function (_super) {
+    __extends(ConnectionInput, _super);
+    function ConnectionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSql" }),
+        __metadata("design:type", cloudsqlproperties_2.CloudSqlPropertiesInput)
+    ], ConnectionInput.prototype, "cloudSql", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ConnectionInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friendlyName" }),
+        __metadata("design:type", String)
+    ], ConnectionInput.prototype, "friendlyName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ConnectionInput.prototype, "name", void 0);
+    return ConnectionInput;
+}(utils_1.SpeakeasyBase));
+exports.ConnectionInput = ConnectionInput;

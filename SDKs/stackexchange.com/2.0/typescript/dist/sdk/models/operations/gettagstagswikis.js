@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsTagsWikisResponse = exports.GetTagsTagsWikisRequest = exports.GetTagsTagsWikisQueryParams = exports.GetTagsTagsWikisPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTagsTagsWikisPathParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsWikisPathParams, _super);
     function GetTagsTagsWikisPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tags" }),
         __metadata("design:type", String)
     ], GetTagsTagsWikisPathParams.prototype, "tags", void 0);
     return GetTagsTagsWikisPathParams;
-}(SpeakeasyBase));
-export { GetTagsTagsWikisPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsWikisPathParams = GetTagsTagsWikisPathParams;
 var GetTagsTagsWikisQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsWikisQueryParams, _super);
     function GetTagsTagsWikisQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsTagsWikisQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsTagsWikisQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsTagsWikisQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsTagsWikisQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsTagsWikisQueryParams.prototype, "site", void 0);
     return GetTagsTagsWikisQueryParams;
-}(SpeakeasyBase));
-export { GetTagsTagsWikisQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsWikisQueryParams = GetTagsTagsWikisQueryParams;
 var GetTagsTagsWikisRequest = /** @class */ (function (_super) {
     __extends(GetTagsTagsWikisRequest, _super);
     function GetTagsTagsWikisRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsWikisPathParams)
     ], GetTagsTagsWikisRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsWikisQueryParams)
     ], GetTagsTagsWikisRequest.prototype, "queryParams", void 0);
     return GetTagsTagsWikisRequest;
-}(SpeakeasyBase));
-export { GetTagsTagsWikisRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsWikisRequest = GetTagsTagsWikisRequest;
 var GetTagsTagsWikisResponse = /** @class */ (function (_super) {
     __extends(GetTagsTagsWikisResponse, _super);
     function GetTagsTagsWikisResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsTagsWikisResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsTagsWikisResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsTagsWikisResponse.prototype, "statusCode", void 0);
     return GetTagsTagsWikisResponse;
-}(SpeakeasyBase));
-export { GetTagsTagsWikisResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsWikisResponse = GetTagsTagsWikisResponse;

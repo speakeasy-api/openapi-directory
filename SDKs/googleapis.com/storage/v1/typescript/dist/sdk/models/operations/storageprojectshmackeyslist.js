@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,214 +14,239 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageProjectsHmacKeysListResponse = exports.StorageProjectsHmacKeysListRequest = exports.StorageProjectsHmacKeysListSecurity = exports.StorageProjectsHmacKeysListSecurityOption4 = exports.StorageProjectsHmacKeysListSecurityOption3 = exports.StorageProjectsHmacKeysListSecurityOption2 = exports.StorageProjectsHmacKeysListSecurityOption1 = exports.StorageProjectsHmacKeysListQueryParams = exports.StorageProjectsHmacKeysListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StorageProjectsHmacKeysListPathParams = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListPathParams, _super);
     function StorageProjectsHmacKeysListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListPathParams.prototype, "projectId", void 0);
     return StorageProjectsHmacKeysListPathParams;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListPathParams = StorageProjectsHmacKeysListPathParams;
 var StorageProjectsHmacKeysListQueryParams = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListQueryParams, _super);
     function StorageProjectsHmacKeysListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceAccountEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceAccountEmail" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "serviceAccountEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=showDeletedKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=showDeletedKeys" }),
         __metadata("design:type", Boolean)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "showDeletedKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userProject" }),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListQueryParams.prototype, "userProject", void 0);
     return StorageProjectsHmacKeysListQueryParams;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListQueryParams = StorageProjectsHmacKeysListQueryParams;
 var StorageProjectsHmacKeysListSecurityOption1 = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListSecurityOption1, _super);
     function StorageProjectsHmacKeysListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageProjectsHmacKeysListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageProjectsHmacKeysListSecurityOption1.prototype, "oauth2c", void 0);
     return StorageProjectsHmacKeysListSecurityOption1;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListSecurityOption1 = StorageProjectsHmacKeysListSecurityOption1;
 var StorageProjectsHmacKeysListSecurityOption2 = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListSecurityOption2, _super);
     function StorageProjectsHmacKeysListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageProjectsHmacKeysListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageProjectsHmacKeysListSecurityOption2.prototype, "oauth2c", void 0);
     return StorageProjectsHmacKeysListSecurityOption2;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListSecurityOption2 = StorageProjectsHmacKeysListSecurityOption2;
 var StorageProjectsHmacKeysListSecurityOption3 = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListSecurityOption3, _super);
     function StorageProjectsHmacKeysListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageProjectsHmacKeysListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageProjectsHmacKeysListSecurityOption3.prototype, "oauth2c", void 0);
     return StorageProjectsHmacKeysListSecurityOption3;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListSecurityOption3 = StorageProjectsHmacKeysListSecurityOption3;
 var StorageProjectsHmacKeysListSecurityOption4 = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListSecurityOption4, _super);
     function StorageProjectsHmacKeysListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageProjectsHmacKeysListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageProjectsHmacKeysListSecurityOption4.prototype, "oauth2c", void 0);
     return StorageProjectsHmacKeysListSecurityOption4;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListSecurityOption4 = StorageProjectsHmacKeysListSecurityOption4;
 var StorageProjectsHmacKeysListSecurity = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListSecurity, _super);
     function StorageProjectsHmacKeysListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageProjectsHmacKeysListSecurityOption1)
     ], StorageProjectsHmacKeysListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageProjectsHmacKeysListSecurityOption2)
     ], StorageProjectsHmacKeysListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageProjectsHmacKeysListSecurityOption3)
     ], StorageProjectsHmacKeysListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageProjectsHmacKeysListSecurityOption4)
     ], StorageProjectsHmacKeysListSecurity.prototype, "option4", void 0);
     return StorageProjectsHmacKeysListSecurity;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListSecurity = StorageProjectsHmacKeysListSecurity;
 var StorageProjectsHmacKeysListRequest = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListRequest, _super);
     function StorageProjectsHmacKeysListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageProjectsHmacKeysListPathParams)
     ], StorageProjectsHmacKeysListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageProjectsHmacKeysListQueryParams)
     ], StorageProjectsHmacKeysListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageProjectsHmacKeysListSecurity)
     ], StorageProjectsHmacKeysListRequest.prototype, "security", void 0);
     return StorageProjectsHmacKeysListRequest;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListRequest };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListRequest = StorageProjectsHmacKeysListRequest;
 var StorageProjectsHmacKeysListResponse = /** @class */ (function (_super) {
     __extends(StorageProjectsHmacKeysListResponse, _super);
     function StorageProjectsHmacKeysListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StorageProjectsHmacKeysListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.HmacKeysMetadata)
     ], StorageProjectsHmacKeysListResponse.prototype, "hmacKeysMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StorageProjectsHmacKeysListResponse.prototype, "statusCode", void 0);
     return StorageProjectsHmacKeysListResponse;
-}(SpeakeasyBase));
-export { StorageProjectsHmacKeysListResponse };
+}(utils_1.SpeakeasyBase));
+exports.StorageProjectsHmacKeysListResponse = StorageProjectsHmacKeysListResponse;

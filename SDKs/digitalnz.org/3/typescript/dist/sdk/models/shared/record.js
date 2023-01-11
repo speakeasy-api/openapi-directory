@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RecordCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordT = exports.RecordUsageEnum = exports.RecordLocations = exports.RecordCopyrightEnum = exports.RecordCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RecordCategoryEnum;
 (function (RecordCategoryEnum) {
     RecordCategoryEnum["Newspapers"] = "Newspapers";
     RecordCategoryEnum["Images"] = "Images";
@@ -42,160 +45,160 @@ export var RecordCategoryEnum;
     RecordCategoryEnum["Data"] = "Data";
     RecordCategoryEnum["Websites"] = "Websites";
     RecordCategoryEnum["Sets"] = "Sets";
-})(RecordCategoryEnum || (RecordCategoryEnum = {}));
-export var RecordCopyrightEnum;
+})(RecordCategoryEnum = exports.RecordCategoryEnum || (exports.RecordCategoryEnum = {}));
+var RecordCopyrightEnum;
 (function (RecordCopyrightEnum) {
     RecordCopyrightEnum["AllRightsReserved"] = "All rights reserved";
     RecordCopyrightEnum["SomeRightsReserved"] = "Some rights reserved";
     RecordCopyrightEnum["NoKnownCopyrightRestrictions"] = "No known copyright restrictions";
     RecordCopyrightEnum["Unknown"] = "Unknown";
-})(RecordCopyrightEnum || (RecordCopyrightEnum = {}));
+})(RecordCopyrightEnum = exports.RecordCopyrightEnum || (exports.RecordCopyrightEnum = {}));
 var RecordLocations = /** @class */ (function (_super) {
     __extends(RecordLocations, _super);
     function RecordLocations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], RecordLocations.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], RecordLocations.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], RecordLocations.prototype, "lng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placename" }),
         __metadata("design:type", String)
     ], RecordLocations.prototype, "placename", void 0);
     return RecordLocations;
-}(SpeakeasyBase));
-export { RecordLocations };
-export var RecordUsageEnum;
+}(utils_1.SpeakeasyBase));
+exports.RecordLocations = RecordLocations;
+var RecordUsageEnum;
 (function (RecordUsageEnum) {
     RecordUsageEnum["AllRightsReserved"] = "All rights reserved";
     RecordUsageEnum["Share"] = "Share";
     RecordUsageEnum["Modify"] = "Modify";
     RecordUsageEnum["UseCommercially"] = "Use commercially";
     RecordUsageEnum["Unknown"] = "Unknown";
-})(RecordUsageEnum || (RecordUsageEnum = {}));
-// Record
+})(RecordUsageEnum = exports.RecordUsageEnum || (exports.RecordUsageEnum = {}));
+// RecordT
 /**
  * *NOTE:* There are a lot of fields that are very rarely used in DigitalNZ. For instance there are custom built fields that are only relevant, and only found on specific collections. The schema below focuses on the most common / well populated fields and does not show every possible field available for a single record.
  *
 **/
-var Record = /** @class */ (function (_super) {
-    __extends(Record, _super);
-    function Record() {
+var RecordT = /** @class */ (function (_super) {
+    __extends(RecordT, _super);
+    function RecordT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "category", void 0);
+    ], RecordT.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "collection", void 0);
+    ], RecordT.prototype, "collection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection_title" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "collectionTitle", void 0);
+    ], RecordT.prototype, "collectionTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_partner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_partner" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "contentPartner", void 0);
+    ], RecordT.prototype, "contentPartner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyright" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyright" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "copyright", void 0);
+    ], RecordT.prototype, "copyright", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
-    ], Record.prototype, "createdAt", void 0);
+    ], RecordT.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "creator", void 0);
+    ], RecordT.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "date", void 0);
+    ], RecordT.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dc_identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dc_identifier" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "dcIdentifier", void 0);
+    ], RecordT.prototype, "dcIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
-    ], Record.prototype, "description", void 0);
+    ], RecordT.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_collection" }),
         __metadata("design:type", String)
-    ], Record.prototype, "displayCollection", void 0);
+    ], RecordT.prototype, "displayCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_content_partner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_content_partner" }),
         __metadata("design:type", String)
-    ], Record.prototype, "displayContentPartner", void 0);
+    ], RecordT.prototype, "displayContentPartner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_date" }),
         __metadata("design:type", String)
-    ], Record.prototype, "displayDate", void 0);
+    ], RecordT.prototype, "displayDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
-    ], Record.prototype, "id", void 0);
+    ], RecordT.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=landing_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=landing_url" }),
         __metadata("design:type", String)
-    ], Record.prototype, "landingUrl", void 0);
+    ], RecordT.prototype, "landingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=large_thumbnail_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=large_thumbnail_url" }),
         __metadata("design:type", String)
-    ], Record.prototype, "largeThumbnailUrl", void 0);
+    ], RecordT.prototype, "largeThumbnailUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations", elemType: RecordLocations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations", elemType: RecordLocations }),
         __metadata("design:type", Array)
-    ], Record.prototype, "locations", void 0);
+    ], RecordT.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_collection" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "primaryCollection", void 0);
+    ], RecordT.prototype, "primaryCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rights" }),
         __metadata("design:type", String)
-    ], Record.prototype, "rights", void 0);
+    ], RecordT.prototype, "rights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rights_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rights_url" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "rightsUrl", void 0);
+    ], RecordT.prototype, "rightsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_url" }),
         __metadata("design:type", String)
-    ], Record.prototype, "sourceUrl", void 0);
+    ], RecordT.prototype, "sourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "subject", void 0);
+    ], RecordT.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail_url" }),
         __metadata("design:type", String)
-    ], Record.prototype, "thumbnailUrl", void 0);
+    ], RecordT.prototype, "thumbnailUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
-    ], Record.prototype, "title", void 0);
+    ], RecordT.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
-    ], Record.prototype, "updatedAt", void 0);
+    ], RecordT.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", Array)
-    ], Record.prototype, "usage", void 0);
-    return Record;
-}(SpeakeasyBase));
-export { Record };
+    ], RecordT.prototype, "usage", void 0);
+    return RecordT;
+}(utils_1.SpeakeasyBase));
+exports.RecordT = RecordT;

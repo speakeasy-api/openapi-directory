@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest = /** @class */ (function (_super) {
     __extends(GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest, _super);
     function GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest.prototype, "pageToken", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest = GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest;

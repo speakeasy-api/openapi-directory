@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditCategoryRelation = void 0;
+var utils_1 = require("../../../internal/utils");
 var AuditCategoryRelation = /** @class */ (function (_super) {
     __extends(AuditCategoryRelation, _super);
     function AuditCategoryRelation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub_category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub_category_id" }),
         __metadata("design:type", String)
     ], AuditCategoryRelation.prototype, "subCategoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub_category_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub_category_name" }),
         __metadata("design:type", String)
     ], AuditCategoryRelation.prototype, "subCategoryName", void 0);
     return AuditCategoryRelation;
-}(SpeakeasyBase));
-export { AuditCategoryRelation };
+}(utils_1.SpeakeasyBase));
+exports.AuditCategoryRelation = AuditCategoryRelation;

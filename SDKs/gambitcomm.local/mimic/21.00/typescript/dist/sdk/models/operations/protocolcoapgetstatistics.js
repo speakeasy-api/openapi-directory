@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolCoapGetStatisticsResponse = exports.ProtocolCoapGetStatisticsRequest = exports.ProtocolCoapGetStatisticsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolCoapGetStatisticsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolCoapGetStatisticsPathParams, _super);
     function ProtocolCoapGetStatisticsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolCoapGetStatisticsPathParams.prototype, "agentNum", void 0);
     return ProtocolCoapGetStatisticsPathParams;
-}(SpeakeasyBase));
-export { ProtocolCoapGetStatisticsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolCoapGetStatisticsPathParams = ProtocolCoapGetStatisticsPathParams;
 var ProtocolCoapGetStatisticsRequest = /** @class */ (function (_super) {
     __extends(ProtocolCoapGetStatisticsRequest, _super);
     function ProtocolCoapGetStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolCoapGetStatisticsPathParams)
     ], ProtocolCoapGetStatisticsRequest.prototype, "pathParams", void 0);
     return ProtocolCoapGetStatisticsRequest;
-}(SpeakeasyBase));
-export { ProtocolCoapGetStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolCoapGetStatisticsRequest = ProtocolCoapGetStatisticsRequest;
 var ProtocolCoapGetStatisticsResponse = /** @class */ (function (_super) {
     __extends(ProtocolCoapGetStatisticsResponse, _super);
     function ProtocolCoapGetStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolCoapGetStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolCoapGetStatisticsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolCoapGetStatisticsResponse.prototype, "protocolCoapGetStatistics200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolCoapGetStatisticsResponse.prototype, "protocolCoapGetStatistics200ApplicationJSONInt32Integers", void 0);
     return ProtocolCoapGetStatisticsResponse;
-}(SpeakeasyBase));
-export { ProtocolCoapGetStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolCoapGetStatisticsResponse = ProtocolCoapGetStatisticsResponse;

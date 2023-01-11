@@ -54,7 +54,7 @@ export class CreateTableResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createTableResponse?: Map<string, any>;
+  createTableResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

@@ -1,35 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CurrencyEnum } from "./currencyenum";
 import { CustomField } from "./customfield";
-export declare class OpportunityInput extends SpeakeasyBase {
-    closeDate?: Date;
-    companyId?: string;
-    companyName?: string;
-    contactId?: string;
-    currency?: CurrencyEnum;
-    customFields?: CustomField[];
-    description?: string;
-    leadId?: string;
-    leadSource?: string;
-    lossReason?: string;
-    lossReasonId?: string;
-    monetaryAmount?: number;
-    ownerId?: string;
-    pipelineId?: string;
-    pipelineStageId?: string;
-    primaryContactId: string;
-    priority?: string;
-    sourceId?: string;
-    stageLastChangedAt?: Date;
-    status?: string;
-    statusId?: string;
-    tags?: string[];
-    title: string;
-    type?: string;
-    winProbability?: number;
-    wonReason?: string;
-    wonReasonId?: string;
-}
 export declare class Opportunity extends SpeakeasyBase {
     closeDate?: Date;
     companyId?: string;
@@ -67,6 +38,35 @@ export declare class Opportunity extends SpeakeasyBase {
     type?: string;
     updatedAt?: Date;
     updatedBy?: string;
+    winProbability?: number;
+    wonReason?: string;
+    wonReasonId?: string;
+}
+export declare class OpportunityInput extends SpeakeasyBase {
+    closeDate?: Date;
+    companyId?: string;
+    companyName?: string;
+    contactId?: string;
+    currency?: CurrencyEnum;
+    customFields?: CustomField[];
+    description?: string;
+    leadId?: string;
+    leadSource?: string;
+    lossReason?: string;
+    lossReasonId?: string;
+    monetaryAmount?: number;
+    ownerId?: string;
+    pipelineId?: string;
+    pipelineStageId?: string;
+    primaryContactId: string;
+    priority?: string;
+    sourceId?: string;
+    stageLastChangedAt?: Date;
+    status?: string;
+    statusId?: string;
+    tags?: string[];
+    title: string;
+    type?: string;
     winProbability?: number;
     wonReason?: string;
     wonReasonId?: string;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EndpointUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=UserAttributes" })
-  userAttributes?: Map<string, string[]>;
+  userAttributes?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=UserId" })
   userId?: string;

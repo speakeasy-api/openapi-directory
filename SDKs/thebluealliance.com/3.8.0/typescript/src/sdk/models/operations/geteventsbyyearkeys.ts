@@ -38,11 +38,11 @@ export class GetEventsByYearKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEventsByYearKeys200ApplicationJsonStrings?: string[];
+  getEventsByYearKeys200ApplicationJSONStrings?: string[];
 }

@@ -31,8 +31,8 @@ export class PostAssetsCovarianceMatrixSampleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCovarianceMatrixSample200ApplicationJsonObject?: PostAssetsCovarianceMatrixSample200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCovarianceMatrixSample200ApplicationJSONObject?: PostAssetsCovarianceMatrixSample200ApplicationJson;
 }

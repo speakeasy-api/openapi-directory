@@ -8,5 +8,5 @@ export declare class UnbindNetworkRequest extends SpeakeasyBase {
 export declare class UnbindNetworkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unbindNetwork200ApplicationJsonObject?: Map<string, any>;
+    unbindNetwork200ApplicationJSONObject?: Record<string, any>;
 }

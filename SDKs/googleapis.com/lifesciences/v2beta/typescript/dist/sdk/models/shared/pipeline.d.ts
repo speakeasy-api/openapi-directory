@@ -8,7 +8,7 @@ import { Resources } from "./resources";
 export declare class Pipeline extends SpeakeasyBase {
     actions?: Action[];
     encryptedEnvironment?: Secret;
-    environment?: Map<string, string>;
+    environment?: Record<string, string>;
     resources?: Resources;
     timeout?: string;
 }

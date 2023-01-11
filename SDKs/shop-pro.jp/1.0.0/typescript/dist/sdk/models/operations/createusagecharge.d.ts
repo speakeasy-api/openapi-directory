@@ -35,5 +35,5 @@ export declare class CreateUsageChargeRequest extends SpeakeasyBase {
 export declare class CreateUsageChargeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createUsageCharge201ApplicationJsonObject?: CreateUsageCharge201ApplicationJson;
+    createUsageCharge201ApplicationJSONObject?: CreateUsageCharge201ApplicationJson;
 }

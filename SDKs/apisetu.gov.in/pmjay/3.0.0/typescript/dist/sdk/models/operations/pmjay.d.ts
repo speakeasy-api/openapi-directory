@@ -108,11 +108,11 @@ export declare class PmjayRequest extends SpeakeasyBase {
 export declare class PmjayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pmjay400ApplicationJsonObject?: Pmjay400ApplicationJson;
-    pmjay401ApplicationJsonObject?: Pmjay401ApplicationJson;
-    pmjay404ApplicationJsonObject?: Pmjay404ApplicationJson;
-    pmjay500ApplicationJsonObject?: Pmjay500ApplicationJson;
-    pmjay502ApplicationJsonObject?: Pmjay502ApplicationJson;
-    pmjay503ApplicationJsonObject?: Pmjay503ApplicationJson;
-    pmjay504ApplicationJsonObject?: Pmjay504ApplicationJson;
+    pmjay400ApplicationJSONObject?: Pmjay400ApplicationJson;
+    pmjay401ApplicationJSONObject?: Pmjay401ApplicationJson;
+    pmjay404ApplicationJSONObject?: Pmjay404ApplicationJson;
+    pmjay500ApplicationJSONObject?: Pmjay500ApplicationJson;
+    pmjay502ApplicationJSONObject?: Pmjay502ApplicationJson;
+    pmjay503ApplicationJSONObject?: Pmjay503ApplicationJson;
+    pmjay504ApplicationJSONObject?: Pmjay504ApplicationJson;
 }

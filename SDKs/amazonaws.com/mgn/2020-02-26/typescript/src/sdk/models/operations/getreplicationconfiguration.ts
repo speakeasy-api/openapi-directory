@@ -29,7 +29,7 @@ export class GetReplicationConfigurationHeaders extends SpeakeasyBase {
 
 export class GetReplicationConfigurationRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

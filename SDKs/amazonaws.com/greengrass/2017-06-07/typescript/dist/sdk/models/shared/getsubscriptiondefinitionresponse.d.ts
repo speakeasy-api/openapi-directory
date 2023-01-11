@@ -7,5 +7,5 @@ export declare class GetSubscriptionDefinitionResponse extends SpeakeasyBase {
     latestVersion?: string;
     latestVersionArn?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEnableEbsEncryptionByDefaultActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEnableEbsEncryptionByDefaultResponse = exports.GetEnableEbsEncryptionByDefaultRequest = exports.GetEnableEbsEncryptionByDefaultHeaders = exports.GetEnableEbsEncryptionByDefaultQueryParams = exports.GetEnableEbsEncryptionByDefaultVersionEnum = exports.GetEnableEbsEncryptionByDefaultActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEnableEbsEncryptionByDefaultActionEnum;
 (function (GetEnableEbsEncryptionByDefaultActionEnum) {
     GetEnableEbsEncryptionByDefaultActionEnum["EnableEbsEncryptionByDefault"] = "EnableEbsEncryptionByDefault";
-})(GetEnableEbsEncryptionByDefaultActionEnum || (GetEnableEbsEncryptionByDefaultActionEnum = {}));
-export var GetEnableEbsEncryptionByDefaultVersionEnum;
+})(GetEnableEbsEncryptionByDefaultActionEnum = exports.GetEnableEbsEncryptionByDefaultActionEnum || (exports.GetEnableEbsEncryptionByDefaultActionEnum = {}));
+var GetEnableEbsEncryptionByDefaultVersionEnum;
 (function (GetEnableEbsEncryptionByDefaultVersionEnum) {
     GetEnableEbsEncryptionByDefaultVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetEnableEbsEncryptionByDefaultVersionEnum || (GetEnableEbsEncryptionByDefaultVersionEnum = {}));
+})(GetEnableEbsEncryptionByDefaultVersionEnum = exports.GetEnableEbsEncryptionByDefaultVersionEnum || (exports.GetEnableEbsEncryptionByDefaultVersionEnum = {}));
 var GetEnableEbsEncryptionByDefaultQueryParams = /** @class */ (function (_super) {
     __extends(GetEnableEbsEncryptionByDefaultQueryParams, _super);
     function GetEnableEbsEncryptionByDefaultQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetEnableEbsEncryptionByDefaultQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultQueryParams.prototype, "version", void 0);
     return GetEnableEbsEncryptionByDefaultQueryParams;
-}(SpeakeasyBase));
-export { GetEnableEbsEncryptionByDefaultQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableEbsEncryptionByDefaultQueryParams = GetEnableEbsEncryptionByDefaultQueryParams;
 var GetEnableEbsEncryptionByDefaultHeaders = /** @class */ (function (_super) {
     __extends(GetEnableEbsEncryptionByDefaultHeaders, _super);
     function GetEnableEbsEncryptionByDefaultHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetEnableEbsEncryptionByDefaultHeaders;
-}(SpeakeasyBase));
-export { GetEnableEbsEncryptionByDefaultHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableEbsEncryptionByDefaultHeaders = GetEnableEbsEncryptionByDefaultHeaders;
 var GetEnableEbsEncryptionByDefaultRequest = /** @class */ (function (_super) {
     __extends(GetEnableEbsEncryptionByDefaultRequest, _super);
     function GetEnableEbsEncryptionByDefaultRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableEbsEncryptionByDefaultQueryParams)
     ], GetEnableEbsEncryptionByDefaultRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEnableEbsEncryptionByDefaultHeaders)
     ], GetEnableEbsEncryptionByDefaultRequest.prototype, "headers", void 0);
     return GetEnableEbsEncryptionByDefaultRequest;
-}(SpeakeasyBase));
-export { GetEnableEbsEncryptionByDefaultRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableEbsEncryptionByDefaultRequest = GetEnableEbsEncryptionByDefaultRequest;
 var GetEnableEbsEncryptionByDefaultResponse = /** @class */ (function (_super) {
     __extends(GetEnableEbsEncryptionByDefaultResponse, _super);
     function GetEnableEbsEncryptionByDefaultResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEnableEbsEncryptionByDefaultResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEnableEbsEncryptionByDefaultResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEnableEbsEncryptionByDefaultResponse.prototype, "statusCode", void 0);
     return GetEnableEbsEncryptionByDefaultResponse;
-}(SpeakeasyBase));
-export { GetEnableEbsEncryptionByDefaultResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEnableEbsEncryptionByDefaultResponse = GetEnableEbsEncryptionByDefaultResponse;

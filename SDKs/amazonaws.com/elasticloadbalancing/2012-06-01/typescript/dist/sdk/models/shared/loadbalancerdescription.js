@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackendServerDescription } from "./backendserverdescription";
-import { HealthCheck } from "./healthcheck";
-import { Instance } from "./instance";
-import { ListenerDescription } from "./listenerdescription";
-import { Policies } from "./policies";
-import { SourceSecurityGroup } from "./sourcesecuritygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var backendserverdescription_1 = require("./backendserverdescription");
+var healthcheck_1 = require("./healthcheck");
+var instance_1 = require("./instance");
+var listenerdescription_1 = require("./listenerdescription");
+var policies_1 = require("./policies");
+var sourcesecuritygroup_1 = require("./sourcesecuritygroup");
 // LoadBalancerDescription
 /**
  * Information about a load balancer.
@@ -39,69 +42,69 @@ var LoadBalancerDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: BackendServerDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: backendserverdescription_1.BackendServerDescription }),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "backendServerDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "canonicalHostedZoneName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], LoadBalancerDescription.prototype, "canonicalHostedZoneNameId", void 0);
+    ], LoadBalancerDescription.prototype, "canonicalHostedZoneNameID", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], LoadBalancerDescription.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HealthCheck)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", healthcheck_1.HealthCheck)
     ], LoadBalancerDescription.prototype, "healthCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ListenerDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: listenerdescription_1.ListenerDescription }),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "listenerDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Policies)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", policies_1.Policies)
     ], LoadBalancerDescription.prototype, "policies", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "scheme", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SourceSecurityGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", sourcesecuritygroup_1.SourceSecurityGroup)
     ], LoadBalancerDescription.prototype, "sourceSecurityGroup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "subnets", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "vpcId", void 0);
     return LoadBalancerDescription;
-}(SpeakeasyBase));
-export { LoadBalancerDescription };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancerDescription = LoadBalancerDescription;

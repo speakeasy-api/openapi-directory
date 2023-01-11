@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LastRunErrorStatusCodeEnum } from "./lastrunerrorstatuscodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LastRunErrorStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var lastrunerrorstatuscodeenum_1 = require("./lastrunerrorstatuscodeenum");
 // LastRunErrorStatus
 /**
  * Specifies whether any account- or bucket-level access errors occurred when a classification job ran. For information about using logging data to investigate these errors, see <a href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-monitor-cw-logs.html">Monitoring sensitive data discovery jobs</a> in the <i>Amazon Macie User Guide</i>.
@@ -34,9 +37,9 @@ var LastRunErrorStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], LastRunErrorStatus.prototype, "code", void 0);
     return LastRunErrorStatus;
-}(SpeakeasyBase));
-export { LastRunErrorStatus };
+}(utils_1.SpeakeasyBase));
+exports.LastRunErrorStatus = LastRunErrorStatus;

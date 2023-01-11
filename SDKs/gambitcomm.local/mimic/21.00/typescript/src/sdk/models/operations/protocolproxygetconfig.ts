@@ -17,7 +17,7 @@ export class ProtocolProxyGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolProxyGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configProxy?: shared.ConfigProxy;
+  configPROXY?: shared.ConfigProxy;
 
   @SpeakeasyMetadata()
   contentType: string;

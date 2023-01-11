@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkAlertsSettingsResponse = exports.GetNetworkAlertsSettingsRequest = exports.GetNetworkAlertsSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkAlertsSettingsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkAlertsSettingsPathParams, _super);
     function GetNetworkAlertsSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkAlertsSettingsPathParams.prototype, "networkId", void 0);
     return GetNetworkAlertsSettingsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkAlertsSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAlertsSettingsPathParams = GetNetworkAlertsSettingsPathParams;
 var GetNetworkAlertsSettingsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkAlertsSettingsRequest, _super);
     function GetNetworkAlertsSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkAlertsSettingsPathParams)
     ], GetNetworkAlertsSettingsRequest.prototype, "pathParams", void 0);
     return GetNetworkAlertsSettingsRequest;
-}(SpeakeasyBase));
-export { GetNetworkAlertsSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAlertsSettingsRequest = GetNetworkAlertsSettingsRequest;
 var GetNetworkAlertsSettingsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkAlertsSettingsResponse, _super);
     function GetNetworkAlertsSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkAlertsSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkAlertsSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkAlertsSettingsResponse.prototype, "getNetworkAlertsSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkAlertsSettingsResponse.prototype, "getNetworkAlertsSettings200ApplicationJSONObject", void 0);
     return GetNetworkAlertsSettingsResponse;
-}(SpeakeasyBase));
-export { GetNetworkAlertsSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkAlertsSettingsResponse = GetNetworkAlertsSettingsResponse;

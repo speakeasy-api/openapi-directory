@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JourneyLimits = void 0;
+var utils_1 = require("../../../internal/utils");
 // JourneyLimits
 /**
  * Specifies limits on the messages that a journey can send and the number of times participants can enter a journey.
@@ -33,21 +36,21 @@ var JourneyLimits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DailyCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DailyCap" }),
         __metadata("design:type", Number)
     ], JourneyLimits.prototype, "dailyCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointReentryCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointReentryCap" }),
         __metadata("design:type", Number)
     ], JourneyLimits.prototype, "endpointReentryCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointReentryInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointReentryInterval" }),
         __metadata("design:type", String)
     ], JourneyLimits.prototype, "endpointReentryInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessagesPerSecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessagesPerSecond" }),
         __metadata("design:type", Number)
     ], JourneyLimits.prototype, "messagesPerSecond", void 0);
     return JourneyLimits;
-}(SpeakeasyBase));
-export { JourneyLimits };
+}(utils_1.SpeakeasyBase));
+exports.JourneyLimits = JourneyLimits;

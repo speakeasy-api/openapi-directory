@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PodcastExtraField = void 0;
+var utils_1 = require("../../../internal/utils");
 var PodcastExtraField = /** @class */ (function (_super) {
     __extends(PodcastExtraField, _super);
     function PodcastExtraField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facebook_handle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facebook_handle" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "facebookHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=google_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=google_url" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "googleUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instagram_handle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instagram_handle" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "instagramHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedin_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedin_url" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "linkedinUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patreon_handle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patreon_handle" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "patreonHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spotify_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spotify_url" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "spotifyUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitter_handle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitter_handle" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "twitterHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url1" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "url1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url2" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "url2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url3" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "url3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wechat_handle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wechat_handle" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "wechatHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=youtube_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=youtube_url" }),
         __metadata("design:type", String)
     ], PodcastExtraField.prototype, "youtubeUrl", void 0);
     return PodcastExtraField;
-}(SpeakeasyBase));
-export { PodcastExtraField };
+}(utils_1.SpeakeasyBase));
+exports.PodcastExtraField = PodcastExtraField;

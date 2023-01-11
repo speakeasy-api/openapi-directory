@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MqttConfigMqttEnabledStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MqttConfig = exports.MqttConfigMqttEnabledStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MqttConfigMqttEnabledStateEnum;
 (function (MqttConfigMqttEnabledStateEnum) {
     MqttConfigMqttEnabledStateEnum["MqttStateUnspecified"] = "MQTT_STATE_UNSPECIFIED";
     MqttConfigMqttEnabledStateEnum["MqttEnabled"] = "MQTT_ENABLED";
     MqttConfigMqttEnabledStateEnum["MqttDisabled"] = "MQTT_DISABLED";
-})(MqttConfigMqttEnabledStateEnum || (MqttConfigMqttEnabledStateEnum = {}));
+})(MqttConfigMqttEnabledStateEnum = exports.MqttConfigMqttEnabledStateEnum || (exports.MqttConfigMqttEnabledStateEnum = {}));
 // MqttConfig
 /**
  * The configuration of MQTT for a device registry.
@@ -39,9 +42,9 @@ var MqttConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mqttEnabledState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mqttEnabledState" }),
         __metadata("design:type", String)
     ], MqttConfig.prototype, "mqttEnabledState", void 0);
     return MqttConfig;
-}(SpeakeasyBase));
-export { MqttConfig };
+}(utils_1.SpeakeasyBase));
+exports.MqttConfig = MqttConfig;

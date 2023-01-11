@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse = exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest = exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams, _super);
     function ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams.prototype, "runnerGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_id" }),
         __metadata("design:type", Number)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams.prototype, "runnerId", void 0);
     return ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams;
-}(SpeakeasyBase));
-export { ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams = ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams;
 var ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest, _super);
     function ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest.prototype, "pathParams", void 0);
     return ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest;
-}(SpeakeasyBase));
-export { ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest = ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest;
 var ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse, _super);
     function ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse.prototype, "statusCode", void 0);
     return ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse;
-}(SpeakeasyBase));
-export { ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse = ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse;

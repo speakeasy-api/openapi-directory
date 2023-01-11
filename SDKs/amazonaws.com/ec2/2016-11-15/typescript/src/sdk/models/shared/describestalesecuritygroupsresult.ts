@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StaleSecurityGroup } from "./stalesecuritygroup";
 
 
 
 export class DescribeStaleSecurityGroupsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: StaleSecurityGroup })
-  staleSecurityGroupSet?: StaleSecurityGroup[];
+  @SpeakeasyMetadata()
+  staleSecurityGroupSet?: Record<string, any>;
 }

@@ -9,7 +9,7 @@ export declare class GetListOpenIdConnectProviderTagsQueryParams extends Speakea
     action: GetListOpenIdConnectProviderTagsActionEnum;
     marker?: string;
     maxItems?: number;
-    openIdConnectProviderArn: string;
+    openIDConnectProviderArn: string;
     version: GetListOpenIdConnectProviderTagsVersionEnum;
 }
 export declare class GetListOpenIdConnectProviderTagsHeaders extends SpeakeasyBase {

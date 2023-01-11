@@ -1,4 +1,7 @@
-export var TemporalEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemporalEnum = void 0;
+var TemporalEnum;
 (function (TemporalEnum) {
     TemporalEnum["Day"] = "day";
     TemporalEnum["Month"] = "month";
@@ -7,4 +10,4 @@ export var TemporalEnum;
     TemporalEnum["Dow"] = "dow";
     TemporalEnum["Hour"] = "hour";
     TemporalEnum["Hod"] = "hod";
-})(TemporalEnum || (TemporalEnum = {}));
+})(TemporalEnum = exports.TemporalEnum || (exports.TemporalEnum = {}));

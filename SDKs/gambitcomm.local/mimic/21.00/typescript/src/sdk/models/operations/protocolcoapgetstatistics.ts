@@ -22,5 +22,5 @@ export class ProtocolCoapGetStatisticsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolCoapGetStatistics200ApplicationJsonInt32Integers?: number[];
+  protocolCoapGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

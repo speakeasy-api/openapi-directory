@@ -41,5 +41,5 @@ export class GetRepositoriesWorkspaceRepoSlugPullrequestsActivityResponse extend
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

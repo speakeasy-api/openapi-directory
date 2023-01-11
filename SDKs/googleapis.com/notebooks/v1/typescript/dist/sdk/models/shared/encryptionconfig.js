@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncryptionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // EncryptionConfig
 /**
  * Represents a custom encryption key configuration that can be applied to a resource. This will encrypt all disks in Virtual Machine.
@@ -33,9 +36,9 @@ var EncryptionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKey" }),
         __metadata("design:type", String)
     ], EncryptionConfig.prototype, "kmsKey", void 0);
     return EncryptionConfig;
-}(SpeakeasyBase));
-export { EncryptionConfig };
+}(utils_1.SpeakeasyBase));
+exports.EncryptionConfig = EncryptionConfig;

@@ -10,7 +10,7 @@ export class DynamicScopedRouteConfigs extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=scopedRouteConfigs" })
-  scopedRouteConfigs?: Map<string, any>[];
+  scopedRouteConfigs?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=versionInfo" })
   versionInfo?: string;

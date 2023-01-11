@@ -22,7 +22,7 @@ export declare class CreateAddonRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     resolveConflicts?: CreateAddonRequestBodyResolveConflictsEnum;
     serviceAccountRoleArn?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateAddonRequest extends SpeakeasyBase {
     pathParams: CreateAddonPathParams;

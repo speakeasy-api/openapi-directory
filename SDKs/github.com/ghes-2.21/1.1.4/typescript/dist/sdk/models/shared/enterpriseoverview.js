@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,268 +23,270 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseOverview = exports.EnterpriseOverviewUsers = exports.EnterpriseOverviewRepos = exports.EnterpriseOverviewPulls = exports.EnterpriseOverviewPages = exports.EnterpriseOverviewOrgs = exports.EnterpriseOverviewMilestones = exports.EnterpriseOverviewIssues = exports.EnterpriseOverviewHooks = exports.EnterpriseOverviewGists = exports.EnterpriseOverviewComments = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseOverviewComments = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewComments, _super);
     function EnterpriseOverviewComments() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_commit_comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_commit_comments" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewComments.prototype, "totalCommitComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_gist_comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_gist_comments" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewComments.prototype, "totalGistComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_issue_comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_issue_comments" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewComments.prototype, "totalIssueComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pull_request_comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pull_request_comments" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewComments.prototype, "totalPullRequestComments", void 0);
     return EnterpriseOverviewComments;
-}(SpeakeasyBase));
-export { EnterpriseOverviewComments };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewComments = EnterpriseOverviewComments;
 var EnterpriseOverviewGists = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewGists, _super);
     function EnterpriseOverviewGists() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_gists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_gists" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewGists.prototype, "privateGists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_gists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_gists" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewGists.prototype, "publicGists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_gists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_gists" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewGists.prototype, "totalGists", void 0);
     return EnterpriseOverviewGists;
-}(SpeakeasyBase));
-export { EnterpriseOverviewGists };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewGists = EnterpriseOverviewGists;
 var EnterpriseOverviewHooks = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewHooks, _super);
     function EnterpriseOverviewHooks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active_hooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active_hooks" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewHooks.prototype, "activeHooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inactive_hooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inactive_hooks" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewHooks.prototype, "inactiveHooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_hooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_hooks" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewHooks.prototype, "totalHooks", void 0);
     return EnterpriseOverviewHooks;
-}(SpeakeasyBase));
-export { EnterpriseOverviewHooks };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewHooks = EnterpriseOverviewHooks;
 var EnterpriseOverviewIssues = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewIssues, _super);
     function EnterpriseOverviewIssues() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closed_issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closed_issues" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewIssues.prototype, "closedIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=open_issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=open_issues" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewIssues.prototype, "openIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_issues" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewIssues.prototype, "totalIssues", void 0);
     return EnterpriseOverviewIssues;
-}(SpeakeasyBase));
-export { EnterpriseOverviewIssues };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewIssues = EnterpriseOverviewIssues;
 var EnterpriseOverviewMilestones = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewMilestones, _super);
     function EnterpriseOverviewMilestones() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closed_milestones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closed_milestones" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewMilestones.prototype, "closedMilestones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=open_milestones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=open_milestones" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewMilestones.prototype, "openMilestones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_milestones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_milestones" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewMilestones.prototype, "totalMilestones", void 0);
     return EnterpriseOverviewMilestones;
-}(SpeakeasyBase));
-export { EnterpriseOverviewMilestones };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewMilestones = EnterpriseOverviewMilestones;
 var EnterpriseOverviewOrgs = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewOrgs, _super);
     function EnterpriseOverviewOrgs() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled_orgs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled_orgs" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewOrgs.prototype, "disabledOrgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_orgs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_orgs" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewOrgs.prototype, "totalOrgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_team_members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_team_members" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewOrgs.prototype, "totalTeamMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_teams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_teams" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewOrgs.prototype, "totalTeams", void 0);
     return EnterpriseOverviewOrgs;
-}(SpeakeasyBase));
-export { EnterpriseOverviewOrgs };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewOrgs = EnterpriseOverviewOrgs;
 var EnterpriseOverviewPages = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewPages, _super);
     function EnterpriseOverviewPages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pages" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewPages.prototype, "totalPages", void 0);
     return EnterpriseOverviewPages;
-}(SpeakeasyBase));
-export { EnterpriseOverviewPages };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewPages = EnterpriseOverviewPages;
 var EnterpriseOverviewPulls = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewPulls, _super);
     function EnterpriseOverviewPulls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeable_pulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeable_pulls" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewPulls.prototype, "mergeablePulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merged_pulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merged_pulls" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewPulls.prototype, "mergedPulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pulls" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewPulls.prototype, "totalPulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unmergeable_pulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unmergeable_pulls" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewPulls.prototype, "unmergeablePulls", void 0);
     return EnterpriseOverviewPulls;
-}(SpeakeasyBase));
-export { EnterpriseOverviewPulls };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewPulls = EnterpriseOverviewPulls;
 var EnterpriseOverviewRepos = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewRepos, _super);
     function EnterpriseOverviewRepos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fork_repos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fork_repos" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "forkRepos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org_repos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org_repos" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "orgRepos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root_repos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root_repos" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "rootRepos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pushes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pushes" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "totalPushes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_repos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_repos" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "totalRepos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_wikis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_wikis" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewRepos.prototype, "totalWikis", void 0);
     return EnterpriseOverviewRepos;
-}(SpeakeasyBase));
-export { EnterpriseOverviewRepos };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewRepos = EnterpriseOverviewRepos;
 var EnterpriseOverviewUsers = /** @class */ (function (_super) {
     __extends(EnterpriseOverviewUsers, _super);
     function EnterpriseOverviewUsers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_users" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewUsers.prototype, "adminUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended_users" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewUsers.prototype, "suspendedUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_users" }),
         __metadata("design:type", Number)
     ], EnterpriseOverviewUsers.prototype, "totalUsers", void 0);
     return EnterpriseOverviewUsers;
-}(SpeakeasyBase));
-export { EnterpriseOverviewUsers };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverviewUsers = EnterpriseOverviewUsers;
 var EnterpriseOverview = /** @class */ (function (_super) {
     __extends(EnterpriseOverview, _super);
     function EnterpriseOverview() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", EnterpriseOverviewComments)
     ], EnterpriseOverview.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists" }),
         __metadata("design:type", EnterpriseOverviewGists)
     ], EnterpriseOverview.prototype, "gists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooks" }),
         __metadata("design:type", EnterpriseOverviewHooks)
     ], EnterpriseOverview.prototype, "hooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues" }),
         __metadata("design:type", EnterpriseOverviewIssues)
     ], EnterpriseOverview.prototype, "issues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=milestones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=milestones" }),
         __metadata("design:type", EnterpriseOverviewMilestones)
     ], EnterpriseOverview.prototype, "milestones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgs" }),
         __metadata("design:type", EnterpriseOverviewOrgs)
     ], EnterpriseOverview.prototype, "orgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages" }),
         __metadata("design:type", EnterpriseOverviewPages)
     ], EnterpriseOverview.prototype, "pages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulls" }),
         __metadata("design:type", EnterpriseOverviewPulls)
     ], EnterpriseOverview.prototype, "pulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos" }),
         __metadata("design:type", EnterpriseOverviewRepos)
     ], EnterpriseOverview.prototype, "repos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users" }),
         __metadata("design:type", EnterpriseOverviewUsers)
     ], EnterpriseOverview.prototype, "users", void 0);
     return EnterpriseOverview;
-}(SpeakeasyBase));
-export { EnterpriseOverview };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseOverview = EnterpriseOverview;

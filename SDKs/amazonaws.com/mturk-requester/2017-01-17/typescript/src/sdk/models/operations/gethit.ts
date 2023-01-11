@@ -48,7 +48,7 @@ export class GetHitResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getHitResponse?: shared.GetHitResponse;
+  getHITResponse?: shared.GetHitResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

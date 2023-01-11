@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AbuseType } from "./abusetype";
-import { RelatedEntity } from "./relatedentity";
-import { Entity } from "./entity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AbuseReport = void 0;
+var utils_1 = require("../../../internal/utils");
+var abusetype_1 = require("./abusetype");
+var relatedentity_1 = require("./relatedentity");
+var entity_1 = require("./entity");
 var AbuseReport = /** @class */ (function (_super) {
     __extends(AbuseReport, _super);
     function AbuseReport() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abuseTypes", elemType: AbuseType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abuseTypes", elemType: abusetype_1.AbuseType }),
         __metadata("design:type", Array)
     ], AbuseReport.prototype, "abuseTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], AbuseReport.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedEntities", elemType: RelatedEntity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedEntities", elemType: relatedentity_1.RelatedEntity }),
         __metadata("design:type", Array)
     ], AbuseReport.prototype, "relatedEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
-        __metadata("design:type", Entity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
+        __metadata("design:type", entity_1.Entity)
     ], AbuseReport.prototype, "subject", void 0);
     return AbuseReport;
-}(SpeakeasyBase));
-export { AbuseReport };
+}(utils_1.SpeakeasyBase));
+exports.AbuseReport = AbuseReport;

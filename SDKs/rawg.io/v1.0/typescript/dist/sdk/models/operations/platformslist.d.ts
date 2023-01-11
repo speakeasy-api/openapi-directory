@@ -17,5 +17,5 @@ export declare class PlatformsListRequest extends SpeakeasyBase {
 export declare class PlatformsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    platformsList200ApplicationJsonObject?: PlatformsList200ApplicationJson;
+    platformsList200ApplicationJSONObject?: PlatformsList200ApplicationJson;
 }

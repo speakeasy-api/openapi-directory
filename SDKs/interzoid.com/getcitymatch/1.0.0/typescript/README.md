@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcitymatchRequest, GetcitymatchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcitymatchRequest = {
   queryParams: {
-    city: "saepe",
-    license: "ea",
+    city: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getcitymatch(req).then((res: GetcitymatchResponse | AxiosError) => {
+sdk.cityNameSimilarityKey.getcitymatch(req).then((res: GetcitymatchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcitymatch(req).then((res: GetcitymatchResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### City Name Similarity Key
 
 * `getcitymatch` - Gets a similarity key for matching purposes for city name data
 

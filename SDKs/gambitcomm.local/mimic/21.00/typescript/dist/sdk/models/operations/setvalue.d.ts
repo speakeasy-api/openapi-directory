@@ -12,5 +12,5 @@ export declare class SetValueRequest extends SpeakeasyBase {
 export declare class SetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setValue200ApplicationJsonString?: string;
+    setValue200ApplicationJSONString?: string;
 }

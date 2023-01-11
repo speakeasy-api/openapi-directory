@@ -3,10 +3,6 @@ import { OtherMetadataValueListItem } from "./othermetadatavaluelistitem";
 
 
 
-// MetadataInfo
-/** 
- * A structure containing metadata information for a schema version.
-**/
 export class MetadataInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CreatedTime" })
   createdTime?: string;

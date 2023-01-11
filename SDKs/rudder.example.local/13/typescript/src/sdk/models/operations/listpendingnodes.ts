@@ -66,5 +66,5 @@ export class ListPendingNodesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listPendingNodes200ApplicationJsonObject?: ListPendingNodes200ApplicationJson;
+  listPendingNodes200ApplicationJSONObject?: ListPendingNodes200ApplicationJson;
 }

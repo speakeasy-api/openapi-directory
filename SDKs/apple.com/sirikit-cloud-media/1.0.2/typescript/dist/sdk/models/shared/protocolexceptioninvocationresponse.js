@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolException } from "./protocolexception";
-import { ExecutionMetrics } from "./executionmetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolExceptionInvocationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var protocolexception_1 = require("./protocolexception");
+var executionmetrics_1 = require("./executionmetrics");
 var ProtocolExceptionInvocationResponse = /** @class */ (function (_super) {
     __extends(ProtocolExceptionInvocationResponse, _super);
     function ProtocolExceptionInvocationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debug" }),
         __metadata("design:type", String)
     ], ProtocolExceptionInvocationResponse.prototype, "debug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exception" }),
-        __metadata("design:type", ProtocolException)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exception" }),
+        __metadata("design:type", protocolexception_1.ProtocolException)
     ], ProtocolExceptionInvocationResponse.prototype, "exception", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ProtocolExceptionInvocationResponse.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", ExecutionMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", executionmetrics_1.ExecutionMetrics)
     ], ProtocolExceptionInvocationResponse.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], ProtocolExceptionInvocationResponse.prototype, "result", void 0);
     return ProtocolExceptionInvocationResponse;
-}(SpeakeasyBase));
-export { ProtocolExceptionInvocationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolExceptionInvocationResponse = ProtocolExceptionInvocationResponse;

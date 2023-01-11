@@ -65,10 +65,10 @@ export class ProductOrderConciergeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productOrderConcierge200ApplicationJsonAny?: any;
+  productOrderConcierge200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productOrderConciergeDefaultApplicationJsonAny?: any;
+  productOrderConciergeDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

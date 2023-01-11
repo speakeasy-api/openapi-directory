@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductsApiDeleteProductResponse = exports.ProductsApiDeleteProductRequest = exports.ProductsApiDeleteProductHeaders = exports.ProductsApiDeleteProductPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductsApiDeleteProductPathParams = /** @class */ (function (_super) {
     __extends(ProductsApiDeleteProductPathParams, _super);
     function ProductsApiDeleteProductPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], ProductsApiDeleteProductPathParams.prototype, "serial", void 0);
     return ProductsApiDeleteProductPathParams;
-}(SpeakeasyBase));
-export { ProductsApiDeleteProductPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiDeleteProductPathParams = ProductsApiDeleteProductPathParams;
 var ProductsApiDeleteProductHeaders = /** @class */ (function (_super) {
     __extends(ProductsApiDeleteProductHeaders, _super);
     function ProductsApiDeleteProductHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], ProductsApiDeleteProductHeaders.prototype, "xApiKey", void 0);
     return ProductsApiDeleteProductHeaders;
-}(SpeakeasyBase));
-export { ProductsApiDeleteProductHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiDeleteProductHeaders = ProductsApiDeleteProductHeaders;
 var ProductsApiDeleteProductRequest = /** @class */ (function (_super) {
     __extends(ProductsApiDeleteProductRequest, _super);
     function ProductsApiDeleteProductRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProductsApiDeleteProductPathParams)
     ], ProductsApiDeleteProductRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProductsApiDeleteProductHeaders)
     ], ProductsApiDeleteProductRequest.prototype, "headers", void 0);
     return ProductsApiDeleteProductRequest;
-}(SpeakeasyBase));
-export { ProductsApiDeleteProductRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiDeleteProductRequest = ProductsApiDeleteProductRequest;
 var ProductsApiDeleteProductResponse = /** @class */ (function (_super) {
     __extends(ProductsApiDeleteProductResponse, _super);
     function ProductsApiDeleteProductResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProductsApiDeleteProductResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProductsApiDeleteProductResponse.prototype, "statusCode", void 0);
     return ProductsApiDeleteProductResponse;
-}(SpeakeasyBase));
-export { ProductsApiDeleteProductResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiDeleteProductResponse = ProductsApiDeleteProductResponse;

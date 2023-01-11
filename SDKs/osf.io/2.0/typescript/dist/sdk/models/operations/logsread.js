@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogsReadResponse = exports.LogsReadRequest = exports.LogsReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LogsReadPathParams = /** @class */ (function (_super) {
     __extends(LogsReadPathParams, _super);
     function LogsReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=log_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=log_id" }),
         __metadata("design:type", String)
     ], LogsReadPathParams.prototype, "logId", void 0);
     return LogsReadPathParams;
-}(SpeakeasyBase));
-export { LogsReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LogsReadPathParams = LogsReadPathParams;
 var LogsReadRequest = /** @class */ (function (_super) {
     __extends(LogsReadRequest, _super);
     function LogsReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LogsReadPathParams)
     ], LogsReadRequest.prototype, "pathParams", void 0);
     return LogsReadRequest;
-}(SpeakeasyBase));
-export { LogsReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.LogsReadRequest = LogsReadRequest;
 var LogsReadResponse = /** @class */ (function (_super) {
     __extends(LogsReadResponse, _super);
     function LogsReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LogsReadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LogsReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LogsReadResponse.prototype, "statusCode", void 0);
     return LogsReadResponse;
-}(SpeakeasyBase));
-export { LogsReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.LogsReadResponse = LogsReadResponse;

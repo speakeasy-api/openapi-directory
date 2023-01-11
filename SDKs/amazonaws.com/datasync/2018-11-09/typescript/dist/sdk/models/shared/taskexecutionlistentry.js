@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskExecutionStatusEnum } from "./taskexecutionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskExecutionListEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskexecutionstatusenum_1 = require("./taskexecutionstatusenum");
 // TaskExecutionListEntry
 /**
  * Represents a single entry in a list of task executions. <code>TaskExecutionListEntry</code> returns an array that contains a list of specific invocations of a task when the <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_ListTaskExecutions.html">ListTaskExecutions</a> operation is called.
@@ -34,13 +37,13 @@ var TaskExecutionListEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], TaskExecutionListEntry.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskExecutionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskExecutionArn" }),
         __metadata("design:type", String)
     ], TaskExecutionListEntry.prototype, "taskExecutionArn", void 0);
     return TaskExecutionListEntry;
-}(SpeakeasyBase));
-export { TaskExecutionListEntry };
+}(utils_1.SpeakeasyBase));
+exports.TaskExecutionListEntry = TaskExecutionListEntry;

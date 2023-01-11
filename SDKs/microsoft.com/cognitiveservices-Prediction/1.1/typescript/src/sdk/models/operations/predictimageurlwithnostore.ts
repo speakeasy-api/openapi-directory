@@ -26,7 +26,7 @@ export class PredictImageUrlWithNoStoreHeaders extends SpeakeasyBase {
 
 export class PredictImageUrlWithNoStoreRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   imageUrl?: shared.ImageUrl;
@@ -38,7 +38,7 @@ export class PredictImageUrlWithNoStoreRequests extends SpeakeasyBase {
   imageUrl2?: shared.ImageUrl;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

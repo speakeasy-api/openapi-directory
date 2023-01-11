@@ -20,7 +20,7 @@ export declare class Nodegroup extends SpeakeasyBase {
     diskSize?: number;
     health?: NodegroupHealth;
     instanceTypes?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     launchTemplate?: LaunchTemplateSpecification;
     modifiedAt?: Date;
     nodeRole?: string;
@@ -32,7 +32,7 @@ export declare class Nodegroup extends SpeakeasyBase {
     scalingConfig?: NodegroupScalingConfig;
     status?: NodegroupStatusEnum;
     subnets?: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     taints?: Taint[];
     updateConfig?: NodegroupUpdateConfig;
     version?: string;

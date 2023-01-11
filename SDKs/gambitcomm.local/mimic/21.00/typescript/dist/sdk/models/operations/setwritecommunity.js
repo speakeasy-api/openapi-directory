@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetWriteCommunityResponse = exports.SetWriteCommunityRequest = exports.SetWriteCommunityPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetWriteCommunityPathParams = /** @class */ (function (_super) {
     __extends(SetWriteCommunityPathParams, _super);
     function SetWriteCommunityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetWriteCommunityPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=write" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=write" }),
         __metadata("design:type", String)
     ], SetWriteCommunityPathParams.prototype, "write", void 0);
     return SetWriteCommunityPathParams;
-}(SpeakeasyBase));
-export { SetWriteCommunityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetWriteCommunityPathParams = SetWriteCommunityPathParams;
 var SetWriteCommunityRequest = /** @class */ (function (_super) {
     __extends(SetWriteCommunityRequest, _super);
     function SetWriteCommunityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetWriteCommunityPathParams)
     ], SetWriteCommunityRequest.prototype, "pathParams", void 0);
     return SetWriteCommunityRequest;
-}(SpeakeasyBase));
-export { SetWriteCommunityRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetWriteCommunityRequest = SetWriteCommunityRequest;
 var SetWriteCommunityResponse = /** @class */ (function (_super) {
     __extends(SetWriteCommunityResponse, _super);
     function SetWriteCommunityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetWriteCommunityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetWriteCommunityResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetWriteCommunityResponse.prototype, "setWriteCommunity200ApplicationJsonString", void 0);
+    ], SetWriteCommunityResponse.prototype, "setWriteCommunity200ApplicationJSONString", void 0);
     return SetWriteCommunityResponse;
-}(SpeakeasyBase));
-export { SetWriteCommunityResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetWriteCommunityResponse = SetWriteCommunityResponse;

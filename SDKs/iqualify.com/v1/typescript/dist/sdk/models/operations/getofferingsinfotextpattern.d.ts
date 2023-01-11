@@ -8,7 +8,7 @@ export declare class GetOfferingsInfoTextPatternRequest extends SpeakeasyBase {
 }
 export declare class GetOfferingsInfoTextPatternResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     portfolioActivations?: shared.PortfolioActivations[];
     statusCode: number;
 }

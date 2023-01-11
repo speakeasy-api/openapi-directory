@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Container } from "./container";
-import { EndpointRequest } from "./endpointrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateContainerServiceDeploymentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var container_1 = require("./container");
+var endpointrequest_1 = require("./endpointrequest");
 var CreateContainerServiceDeploymentRequest = /** @class */ (function (_super) {
     __extends(CreateContainerServiceDeploymentRequest, _super);
     function CreateContainerServiceDeploymentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containers", elemType: Container }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containers", elemType: container_1.Container }),
+        __metadata("design:type", Object)
     ], CreateContainerServiceDeploymentRequest.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicEndpoint" }),
-        __metadata("design:type", EndpointRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicEndpoint" }),
+        __metadata("design:type", endpointrequest_1.EndpointRequest)
     ], CreateContainerServiceDeploymentRequest.prototype, "publicEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], CreateContainerServiceDeploymentRequest.prototype, "serviceName", void 0);
     return CreateContainerServiceDeploymentRequest;
-}(SpeakeasyBase));
-export { CreateContainerServiceDeploymentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateContainerServiceDeploymentRequest = CreateContainerServiceDeploymentRequest;

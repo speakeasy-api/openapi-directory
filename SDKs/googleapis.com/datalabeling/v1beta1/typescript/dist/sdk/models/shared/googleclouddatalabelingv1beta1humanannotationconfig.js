@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1HumanAnnotationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
 /**
  * Configuration for how human labeling task should be done.
@@ -33,41 +36,41 @@ var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotatedDatasetDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatedDatasetDescription" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "annotatedDatasetDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotatedDatasetDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatedDatasetDisplayName" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "annotatedDatasetDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contributorEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contributorEmails" }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "contributorEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instruction" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "instruction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelGroup" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "labelGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionDuration" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "questionDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "replicaCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEmailAddress" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1HumanAnnotationConfig.prototype, "userEmailAddress", void 0);
     return GoogleCloudDatalabelingV1beta1HumanAnnotationConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1HumanAnnotationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1HumanAnnotationConfig = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig;

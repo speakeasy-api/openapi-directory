@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Exclusion = void 0;
+var utils_1 = require("../../../internal/utils");
 // Exclusion
 /**
  * This type returns a list of properties (and their associated values) that are excluded from requiring an ePID value (from the eBay Catalog) for items that are listed in the associated category.
@@ -33,9 +36,9 @@ var Exclusion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brands" }),
         __metadata("design:type", Array)
     ], Exclusion.prototype, "brands", void 0);
     return Exclusion;
-}(SpeakeasyBase));
-export { Exclusion };
+}(utils_1.SpeakeasyBase));
+exports.Exclusion = Exclusion;

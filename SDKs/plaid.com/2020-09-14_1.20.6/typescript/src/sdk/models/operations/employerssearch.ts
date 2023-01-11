@@ -14,7 +14,7 @@ export class EmployersSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  employersSearchResponse?: Map<string, any>;
+  employersSearchResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

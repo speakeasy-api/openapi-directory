@@ -23,7 +23,7 @@ export class GetMatrixSolutionResponse extends SpeakeasyBase {
   ghError?: shared.GhError;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   matrixResponse?: shared.MatrixResponse;

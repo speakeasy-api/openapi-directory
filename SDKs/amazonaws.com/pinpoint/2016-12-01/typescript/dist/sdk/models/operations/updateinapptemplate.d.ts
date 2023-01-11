@@ -21,10 +21,10 @@ export declare class UpdateInAppTemplateHeaders extends SpeakeasyBase {
 **/
 export declare class UpdateInAppTemplateRequestBodyInAppTemplateRequest extends SpeakeasyBase {
     content?: shared.InAppMessageContent[];
-    customConfig?: Map<string, string>;
+    customConfig?: Record<string, string>;
     layout?: shared.LayoutEnum;
     templateDescription?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdateInAppTemplateRequestBody extends SpeakeasyBase {
     inAppTemplateRequest: UpdateInAppTemplateRequestBodyInAppTemplateRequest;

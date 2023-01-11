@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Update } from "./update";
 export declare class AssociateIdentityProviderConfigResponse extends SpeakeasyBase {
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     update?: Update;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterVersion } from "./clusterversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterVersionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterversionlist_1 = require("./clusterversionlist");
 // ClusterVersionsMessage
 /**
  * Contains the output from the <a>DescribeClusterVersions</a> action.
@@ -34,13 +37,13 @@ var ClusterVersionsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusterversionlist_1.ClusterVersionList }),
         __metadata("design:type", Array)
     ], ClusterVersionsMessage.prototype, "clusterVersions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterVersionsMessage.prototype, "marker", void 0);
     return ClusterVersionsMessage;
-}(SpeakeasyBase));
-export { ClusterVersionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.ClusterVersionsMessage = ClusterVersionsMessage;

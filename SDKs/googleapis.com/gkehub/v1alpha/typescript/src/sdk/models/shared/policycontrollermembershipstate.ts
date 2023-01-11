@@ -21,7 +21,7 @@ export enum PolicyControllerMembershipStateStateEnum {
 **/
 export class PolicyControllerMembershipState extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=componentStates", elemType: PolicyControllerOnClusterState })
-  componentStates?: Map<string, PolicyControllerOnClusterState>;
+  componentStates?: Record<string, PolicyControllerOnClusterState>;
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: PolicyControllerMembershipStateStateEnum;

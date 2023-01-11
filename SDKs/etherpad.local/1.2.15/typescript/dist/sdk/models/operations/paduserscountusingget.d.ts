@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PadUsersCountUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class PadUsersCountUsingGet200ApplicationJsonData extends SpeakeasyBase {
     padUsersCount?: number;
@@ -12,17 +12,17 @@ export declare class PadUsersCountUsingGet200ApplicationJson extends SpeakeasyBa
 }
 export declare class PadUsersCountUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersCountUsingGetRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class PadUsersCountUsingGetRequest extends SpeakeasyBase {
 export declare class PadUsersCountUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    padUsersCountUsingGet200ApplicationJsonObject?: PadUsersCountUsingGet200ApplicationJson;
-    padUsersCountUsingGet400ApplicationJsonObject?: PadUsersCountUsingGet400ApplicationJson;
-    padUsersCountUsingGet401ApplicationJsonObject?: PadUsersCountUsingGet401ApplicationJson;
-    padUsersCountUsingGet500ApplicationJsonObject?: PadUsersCountUsingGet500ApplicationJson;
+    padUsersCountUsingGET200ApplicationJSONObject?: PadUsersCountUsingGet200ApplicationJson;
+    padUsersCountUsingGET400ApplicationJSONObject?: PadUsersCountUsingGet400ApplicationJson;
+    padUsersCountUsingGET401ApplicationJSONObject?: PadUsersCountUsingGet401ApplicationJson;
+    padUsersCountUsingGET500ApplicationJSONObject?: PadUsersCountUsingGet500ApplicationJson;
 }

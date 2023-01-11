@@ -12,7 +12,7 @@ export declare class CreateAccessPreviewHeaders extends SpeakeasyBase {
 export declare class CreateAccessPreviewRequestBody extends SpeakeasyBase {
     analyzerArn: string;
     clientToken?: string;
-    configurations: Map<string, shared.Configuration>;
+    configurations: Record<string, shared.Configuration>;
 }
 export declare class CreateAccessPreviewRequest extends SpeakeasyBase {
     headers: CreateAccessPreviewHeaders;

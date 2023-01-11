@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PartnerIntegrationInfo } from "./partnerintegrationinfo";
+import { PartnerIntegrationInfoList } from "./partnerintegrationinfolist";
 export declare class DescribePartnersOutputMessage extends SpeakeasyBase {
-    partnerIntegrationInfoList?: PartnerIntegrationInfo[];
+    partnerIntegrationInfoList?: PartnerIntegrationInfoList[];
 }

@@ -22,5 +22,5 @@ export class GetNetworkApplianceTrafficShapingUplinkSelectionResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceTrafficShapingUplinkSelection200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONObject?: Record<string, any>;
 }

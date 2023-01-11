@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudResourcesettingsV1ValueEnumValue } from "./googlecloudresourcesettingsv1valueenumvalue";
-import { GoogleCloudResourcesettingsV1ValueStringMap } from "./googlecloudresourcesettingsv1valuestringmap";
-import { GoogleCloudResourcesettingsV1ValueStringSet } from "./googlecloudresourcesettingsv1valuestringset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudResourcesettingsV1Value = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudresourcesettingsv1valueenumvalue_1 = require("./googlecloudresourcesettingsv1valueenumvalue");
+var googlecloudresourcesettingsv1valuestringmap_1 = require("./googlecloudresourcesettingsv1valuestringmap");
+var googlecloudresourcesettingsv1valuestringset_1 = require("./googlecloudresourcesettingsv1valuestringset");
 // GoogleCloudResourcesettingsV1Value
 /**
  * The data in a setting value.
@@ -36,29 +39,29 @@ var GoogleCloudResourcesettingsV1Value = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=booleanValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=booleanValue" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudResourcesettingsV1Value.prototype, "booleanValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationValue" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1Value.prototype, "durationValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enumValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1ValueEnumValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enumValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1valueenumvalue_1.GoogleCloudResourcesettingsV1ValueEnumValue)
     ], GoogleCloudResourcesettingsV1Value.prototype, "enumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringMapValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1ValueStringMap)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringMapValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1valuestringmap_1.GoogleCloudResourcesettingsV1ValueStringMap)
     ], GoogleCloudResourcesettingsV1Value.prototype, "stringMapValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringSetValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1ValueStringSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringSetValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1valuestringset_1.GoogleCloudResourcesettingsV1ValueStringSet)
     ], GoogleCloudResourcesettingsV1Value.prototype, "stringSetValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1Value.prototype, "stringValue", void 0);
     return GoogleCloudResourcesettingsV1Value;
-}(SpeakeasyBase));
-export { GoogleCloudResourcesettingsV1Value };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudResourcesettingsV1Value = GoogleCloudResourcesettingsV1Value;

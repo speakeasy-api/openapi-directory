@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLookupResponse = exports.GetLookupRequest = exports.GetLookupPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLookupPathParams = /** @class */ (function (_super) {
     __extends(GetLookupPathParams, _super);
     function GetLookupPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=md5" }),
         __metadata("design:type", String)
     ], GetLookupPathParams.prototype, "md5", void 0);
     return GetLookupPathParams;
-}(SpeakeasyBase));
-export { GetLookupPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupPathParams = GetLookupPathParams;
 var GetLookupRequest = /** @class */ (function (_super) {
     __extends(GetLookupRequest, _super);
     function GetLookupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLookupPathParams)
     ], GetLookupRequest.prototype, "pathParams", void 0);
     return GetLookupRequest;
-}(SpeakeasyBase));
-export { GetLookupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupRequest = GetLookupRequest;
 var GetLookupResponse = /** @class */ (function (_super) {
     __extends(GetLookupResponse, _super);
     function GetLookupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLookupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLookupResponse.prototype, "statusCode", void 0);
     return GetLookupResponse;
-}(SpeakeasyBase));
-export { GetLookupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupResponse = GetLookupResponse;

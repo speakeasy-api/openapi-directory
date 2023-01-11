@@ -1,21 +1,21 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AquaConfiguration } from "./aquaconfiguration";
 import { ClusterNode } from "./clusternode";
-import { ClusterParameterGroupStatus } from "./clusterparametergroupstatus";
-import { ClusterSecurityGroupMembership } from "./clustersecuritygroupmembership";
+import { ClusterParameterGroupStatusList } from "./clusterparametergroupstatuslist";
+import { ClusterSecurityGroupMembershipList } from "./clustersecuritygroupmembershiplist";
 import { ClusterSnapshotCopyStatus } from "./clustersnapshotcopystatus";
 import { DataTransferProgress } from "./datatransferprogress";
-import { DeferredMaintenanceWindow } from "./deferredmaintenancewindow";
+import { DeferredMaintenanceWindowsList } from "./deferredmaintenancewindowslist";
 import { ElasticIpStatus } from "./elasticipstatus";
 import { Endpoint } from "./endpoint";
 import { HsmStatus } from "./hsmstatus";
-import { ClusterIamRole } from "./clusteriamrole";
+import { ClusterIamRoleList } from "./clusteriamrolelist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { ResizeInfo } from "./resizeinfo";
 import { RestoreStatus } from "./restorestatus";
 import { ScheduleStateEnum } from "./schedulestateenum";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { TagList } from "./taglist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -54,8 +54,8 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: ClusterNode })
   clusterNodes?: ClusterNode[];
 
-  @SpeakeasyMetadata({ elemType: ClusterParameterGroupStatus })
-  clusterParameterGroups?: ClusterParameterGroupStatus[];
+  @SpeakeasyMetadata({ elemType: ClusterParameterGroupStatusList })
+  clusterParameterGroups?: ClusterParameterGroupStatusList[];
 
   @SpeakeasyMetadata()
   clusterPublicKey?: string;
@@ -63,8 +63,8 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   clusterRevisionNumber?: string;
 
-  @SpeakeasyMetadata({ elemType: ClusterSecurityGroupMembership })
-  clusterSecurityGroups?: ClusterSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: ClusterSecurityGroupMembershipList })
+  clusterSecurityGroups?: ClusterSecurityGroupMembershipList[];
 
   @SpeakeasyMetadata()
   clusterSnapshotCopyStatus?: ClusterSnapshotCopyStatus;
@@ -84,8 +84,8 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dataTransferProgress?: DataTransferProgress;
 
-  @SpeakeasyMetadata({ elemType: DeferredMaintenanceWindow })
-  deferredMaintenanceWindows?: DeferredMaintenanceWindow[];
+  @SpeakeasyMetadata({ elemType: DeferredMaintenanceWindowsList })
+  deferredMaintenanceWindows?: DeferredMaintenanceWindowsList[];
 
   @SpeakeasyMetadata()
   elasticIpStatus?: ElasticIpStatus;
@@ -111,8 +111,8 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   hsmStatus?: HsmStatus;
 
-  @SpeakeasyMetadata({ elemType: ClusterIamRole })
-  iamRoles?: ClusterIamRole[];
+  @SpeakeasyMetadata({ elemType: ClusterIamRoleList })
+  iamRoles?: ClusterIamRoleList[];
 
   @SpeakeasyMetadata()
   kmsKeyId?: string;
@@ -162,8 +162,8 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   snapshotScheduleState?: ScheduleStateEnum;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 
   @SpeakeasyMetadata()
   totalStorageCapacityInMegaBytes?: number;
@@ -171,6 +171,6 @@ export class Cluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   vpcId?: string;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

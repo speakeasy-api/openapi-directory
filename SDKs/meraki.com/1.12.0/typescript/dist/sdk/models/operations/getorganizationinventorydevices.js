@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationInventoryDevicesResponse = exports.GetOrganizationInventoryDevicesRequest = exports.GetOrganizationInventoryDevicesQueryParams = exports.GetOrganizationInventoryDevicesUsedStateEnum = exports.GetOrganizationInventoryDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationInventoryDevicesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDevicesPathParams, _super);
     function GetOrganizationInventoryDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationInventoryDevicesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDevicesPathParams };
-export var GetOrganizationInventoryDevicesUsedStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDevicesPathParams = GetOrganizationInventoryDevicesPathParams;
+var GetOrganizationInventoryDevicesUsedStateEnum;
 (function (GetOrganizationInventoryDevicesUsedStateEnum) {
     GetOrganizationInventoryDevicesUsedStateEnum["Used"] = "used";
     GetOrganizationInventoryDevicesUsedStateEnum["Unused"] = "unused";
-})(GetOrganizationInventoryDevicesUsedStateEnum || (GetOrganizationInventoryDevicesUsedStateEnum = {}));
+})(GetOrganizationInventoryDevicesUsedStateEnum = exports.GetOrganizationInventoryDevicesUsedStateEnum || (exports.GetOrganizationInventoryDevicesUsedStateEnum = {}));
 var GetOrganizationInventoryDevicesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDevicesQueryParams, _super);
     function GetOrganizationInventoryDevicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationInventoryDevicesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesQueryParams.prototype, "search", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=usedState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=usedState" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesQueryParams.prototype, "usedState", void 0);
     return GetOrganizationInventoryDevicesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDevicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDevicesQueryParams = GetOrganizationInventoryDevicesQueryParams;
 var GetOrganizationInventoryDevicesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDevicesRequest, _super);
     function GetOrganizationInventoryDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationInventoryDevicesPathParams)
     ], GetOrganizationInventoryDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationInventoryDevicesQueryParams)
     ], GetOrganizationInventoryDevicesRequest.prototype, "queryParams", void 0);
     return GetOrganizationInventoryDevicesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDevicesRequest = GetOrganizationInventoryDevicesRequest;
 var GetOrganizationInventoryDevicesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDevicesResponse, _super);
     function GetOrganizationInventoryDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationInventoryDevicesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationInventoryDevicesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationInventoryDevicesResponse.prototype, "getOrganizationInventoryDevices200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationInventoryDevicesResponse.prototype, "getOrganizationInventoryDevices200ApplicationJSONObject", void 0);
     return GetOrganizationInventoryDevicesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDevicesResponse = GetOrganizationInventoryDevicesResponse;

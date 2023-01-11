@@ -20,7 +20,7 @@ export class GetOfferingsInfoTextPatternResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.PortfolioActivations })
   portfolioActivations?: shared.PortfolioActivations[];

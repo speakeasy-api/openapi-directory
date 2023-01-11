@@ -25,5 +25,5 @@ export declare class UpdateApplicationResponse extends SpeakeasyBase {
     invalidParameterValueException?: any;
     serverInternalErrorException?: any;
     statusCode: number;
-    updateApplicationResponse?: Map<string, any>;
+    updateApplicationResponse?: Record<string, any>;
 }

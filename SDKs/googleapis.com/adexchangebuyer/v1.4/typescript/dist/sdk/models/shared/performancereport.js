@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerformanceReport = void 0;
+var utils_1 = require("../../../internal/utils");
 // PerformanceReport
 /**
  * The configuration data for an Ad Exchange performance report list.
@@ -33,93 +36,93 @@ var PerformanceReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "bidRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidRequestRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidRequestRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "bidRequestRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calloutStatusRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calloutStatusRate" }),
         __metadata("design:type", Array)
     ], PerformanceReport.prototype, "calloutStatusRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieMatcherStatusRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieMatcherStatusRate" }),
         __metadata("design:type", Array)
     ], PerformanceReport.prototype, "cookieMatcherStatusRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeStatusRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeStatusRate" }),
         __metadata("design:type", Array)
     ], PerformanceReport.prototype, "creativeStatusRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filteredBidRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filteredBidRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "filteredBidRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostedMatchStatusRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostedMatchStatusRate" }),
         __metadata("design:type", Array)
     ], PerformanceReport.prototype, "hostedMatchStatusRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryMatchRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryMatchRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "inventoryMatchRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PerformanceReport.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latency50thPercentile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latency50thPercentile" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "latency50thPercentile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latency85thPercentile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latency85thPercentile" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "latency85thPercentile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latency95thPercentile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latency95thPercentile" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "latency95thPercentile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noQuotaInRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noQuotaInRegion" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "noQuotaInRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outOfQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outOfQuota" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "outOfQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelMatchRequests" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelMatchRequests" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "pixelMatchRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelMatchResponses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelMatchResponses" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "pixelMatchResponses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaConfiguredLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaConfiguredLimit" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "quotaConfiguredLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaThrottledLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaThrottledLimit" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "quotaThrottledLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], PerformanceReport.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successfulRequestRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successfulRequestRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "successfulRequestRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], PerformanceReport.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unsuccessfulRequestRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unsuccessfulRequestRate" }),
         __metadata("design:type", Number)
     ], PerformanceReport.prototype, "unsuccessfulRequestRate", void 0);
     return PerformanceReport;
-}(SpeakeasyBase));
-export { PerformanceReport };
+}(utils_1.SpeakeasyBase));
+exports.PerformanceReport = PerformanceReport;

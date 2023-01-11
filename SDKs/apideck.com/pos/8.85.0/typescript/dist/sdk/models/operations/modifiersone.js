@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifiersOneResponse = exports.ModifiersOneRequest = exports.ModifiersOneSecurity = exports.ModifiersOneHeaders = exports.ModifiersOneQueryParams = exports.ModifiersOnePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ModifiersOnePathParams = /** @class */ (function (_super) {
     __extends(ModifiersOnePathParams, _super);
     function ModifiersOnePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], ModifiersOnePathParams.prototype, "id", void 0);
     return ModifiersOnePathParams;
-}(SpeakeasyBase));
-export { ModifiersOnePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOnePathParams = ModifiersOnePathParams;
 var ModifiersOneQueryParams = /** @class */ (function (_super) {
     __extends(ModifiersOneQueryParams, _super);
     function ModifiersOneQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=deepObject;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=deepObject;explode=true;name=filter" }),
         __metadata("design:type", shared.ModifierGroupFilter)
     ], ModifiersOneQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=raw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=raw" }),
         __metadata("design:type", Boolean)
     ], ModifiersOneQueryParams.prototype, "raw", void 0);
     return ModifiersOneQueryParams;
-}(SpeakeasyBase));
-export { ModifiersOneQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOneQueryParams = ModifiersOneQueryParams;
 var ModifiersOneHeaders = /** @class */ (function (_super) {
     __extends(ModifiersOneHeaders, _super);
     function ModifiersOneHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], ModifiersOneHeaders.prototype, "xApideckAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
         __metadata("design:type", String)
     ], ModifiersOneHeaders.prototype, "xApideckConsumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
         __metadata("design:type", String)
     ], ModifiersOneHeaders.prototype, "xApideckServiceId", void 0);
     return ModifiersOneHeaders;
-}(SpeakeasyBase));
-export { ModifiersOneHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOneHeaders = ModifiersOneHeaders;
 var ModifiersOneSecurity = /** @class */ (function (_super) {
     __extends(ModifiersOneSecurity, _super);
     function ModifiersOneSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], ModifiersOneSecurity.prototype, "apiKey", void 0);
     return ModifiersOneSecurity;
-}(SpeakeasyBase));
-export { ModifiersOneSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOneSecurity = ModifiersOneSecurity;
 var ModifiersOneRequest = /** @class */ (function (_super) {
     __extends(ModifiersOneRequest, _super);
     function ModifiersOneRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ModifiersOnePathParams)
     ], ModifiersOneRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ModifiersOneQueryParams)
     ], ModifiersOneRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ModifiersOneHeaders)
     ], ModifiersOneRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ModifiersOneSecurity)
     ], ModifiersOneRequest.prototype, "security", void 0);
     return ModifiersOneRequest;
-}(SpeakeasyBase));
-export { ModifiersOneRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOneRequest = ModifiersOneRequest;
 var ModifiersOneResponse = /** @class */ (function (_super) {
     __extends(ModifiersOneResponse, _super);
     function ModifiersOneResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BadRequestResponse)
     ], ModifiersOneResponse.prototype, "badRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ModifiersOneResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetModifierResponse)
     ], ModifiersOneResponse.prototype, "getModifierResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotFoundResponse)
     ], ModifiersOneResponse.prototype, "notFoundResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PaymentRequiredResponse)
     ], ModifiersOneResponse.prototype, "paymentRequiredResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ModifiersOneResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnauthorizedResponse)
     ], ModifiersOneResponse.prototype, "unauthorizedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnexpectedErrorResponse)
     ], ModifiersOneResponse.prototype, "unexpectedErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnprocessableResponse)
     ], ModifiersOneResponse.prototype, "unprocessableResponse", void 0);
     return ModifiersOneResponse;
-}(SpeakeasyBase));
-export { ModifiersOneResponse };
+}(utils_1.SpeakeasyBase));
+exports.ModifiersOneResponse = ModifiersOneResponse;

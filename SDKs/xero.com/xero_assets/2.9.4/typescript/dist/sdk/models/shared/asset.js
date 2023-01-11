@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetStatusEnum } from "./assetstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Asset = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetstatusenum_1 = require("./assetstatusenum");
 var Asset = /** @class */ (function (_super) {
     __extends(Asset, _super);
     function Asset() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountingBookValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountingBookValue" }),
         __metadata("design:type", Number)
     ], Asset.prototype, "accountingBookValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetId" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetName" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetNumber" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetStatus" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetTypeId" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookDepreciationDetail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookDepreciationDetail" }),
         __metadata("design:type", Object)
     ], Asset.prototype, "bookDepreciationDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookDepreciationSetting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookDepreciationSetting" }),
         __metadata("design:type", Object)
     ], Asset.prototype, "bookDepreciationSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRollback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRollback" }),
         __metadata("design:type", Boolean)
     ], Asset.prototype, "canRollback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disposalDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disposalDate" }),
         __metadata("design:type", Date)
     ], Asset.prototype, "disposalDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disposalPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disposalPrice" }),
         __metadata("design:type", Number)
     ], Asset.prototype, "disposalPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDeleteEnabledForDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDeleteEnabledForDate" }),
         __metadata("design:type", Boolean)
     ], Asset.prototype, "isDeleteEnabledForDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseDate" }),
         __metadata("design:type", Date)
     ], Asset.prototype, "purchaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchasePrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchasePrice" }),
         __metadata("design:type", Number)
     ], Asset.prototype, "purchasePrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", String)
     ], Asset.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warrantyExpiryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warrantyExpiryDate" }),
         __metadata("design:type", String)
     ], Asset.prototype, "warrantyExpiryDate", void 0);
     return Asset;
-}(SpeakeasyBase));
-export { Asset };
+}(utils_1.SpeakeasyBase));
+exports.Asset = Asset;

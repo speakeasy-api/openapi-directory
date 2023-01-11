@@ -18,25 +18,25 @@ export declare class PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredenti
 }
 export declare class PostAdminRecordingsStartRequestBodyFilters extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
     urlPattern?: string;
 }
 export declare class PostAdminRecordingsStartRequestBody extends SpeakeasyBase {
-    captureHeaders?: Map<string, PostAdminRecordingsStartRequestBodyCaptureHeaders>;
+    captureHeaders?: Record<string, PostAdminRecordingsStartRequestBodyCaptureHeaders>;
     extractBodyCriteria?: PostAdminRecordingsStartRequestBodyExtractBodyCriteria;
     filters?: PostAdminRecordingsStartRequestBodyFilters;
     persist?: boolean;
     repeatsAsScenarios?: boolean;
-    requestBodyPattern?: Map<string, any>;
+    requestBodyPattern?: Record<string, any>;
     targetBaseUrl?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class PostAdminRecordingsStartRequest extends SpeakeasyBase {

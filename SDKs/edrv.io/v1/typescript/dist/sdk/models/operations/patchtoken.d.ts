@@ -27,5 +27,5 @@ export declare class PatchTokenRequest extends SpeakeasyBase {
 export declare class PatchTokenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchToken201ApplicationJsonObject?: PatchToken201ApplicationJson;
+    patchToken201ApplicationJSONObject?: PatchToken201ApplicationJson;
 }

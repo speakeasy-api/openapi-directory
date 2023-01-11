@@ -1,12 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Video } from "./video";
-import { OnDemandGenre } from "./ondemandgenre";
 import { PurchaseInteraction } from "./purchaseinteraction";
-import { Category } from "./category";
-import { EmbedSettings } from "./embedsettings";
 import { User } from "./user";
 import { Picture } from "./picture";
+import { Category } from "./category";
+import { EmbedSettings } from "./embedsettings";
 import { Tag } from "./tag";
+import { Video } from "./video";
+import { OnDemandGenre } from "./ondemandgenre";
 export declare class OnDemandPagePictureSizes extends SpeakeasyBase {
     height: number;
     link: string;
@@ -160,7 +160,7 @@ export declare class OnDemandPageSubscription extends SpeakeasyBase {
     active: boolean;
     link: string;
     period?: string;
-    price: Map<string, any>;
+    price: Record<string, any>;
 }
 export declare enum OnDemandPageVideoContextActionEnum {
     AddedTo = "Added to",
@@ -173,7 +173,7 @@ export declare enum OnDemandPageVideoContextActionEnum {
 **/
 export declare class OnDemandPageVideoContext extends SpeakeasyBase {
     action: OnDemandPageVideoContextActionEnum;
-    resource: Map<string, any>;
+    resource: Record<string, any>;
     resourceType: string;
 }
 export declare enum OnDemandPageVideoLicenseEnum {

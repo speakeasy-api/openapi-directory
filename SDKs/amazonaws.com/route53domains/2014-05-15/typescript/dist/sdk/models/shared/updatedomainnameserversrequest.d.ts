@@ -5,6 +5,6 @@ import { Nameserver } from "./nameserver";
 **/
 export declare class UpdateDomainNameserversRequest extends SpeakeasyBase {
     domainName: string;
-    fiAuthKey?: string;
+    fiAuthKey?: Record<string, any>;
     nameservers: Nameserver[];
 }

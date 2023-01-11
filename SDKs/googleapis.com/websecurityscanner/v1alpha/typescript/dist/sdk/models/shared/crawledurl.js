@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CrawledUrl = void 0;
+var utils_1 = require("../../../internal/utils");
 // CrawledUrl
 /**
  * A CrawledUrl resource represents a URL that was crawled during a ScanRun. Web Security Scanner Service crawls the web applications, following all links within the scope of sites, to find the URLs to test against.
@@ -33,17 +36,17 @@ var CrawledUrl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], CrawledUrl.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], CrawledUrl.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CrawledUrl.prototype, "url", void 0);
     return CrawledUrl;
-}(SpeakeasyBase));
-export { CrawledUrl };
+}(utils_1.SpeakeasyBase));
+exports.CrawledUrl = CrawledUrl;

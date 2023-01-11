@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDeviceType } from "./nesteddevicetype";
-import { NestedRearPortTemplate } from "./nestedrearporttemplate";
-export var FrontPortTemplateTypeLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FrontPortTemplate = exports.FrontPortTemplateType = exports.FrontPortTemplateTypeValueEnum = exports.FrontPortTemplateTypeLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevicetype_1 = require("./nesteddevicetype");
+var nestedrearporttemplate_1 = require("./nestedrearporttemplate");
+var FrontPortTemplateTypeLabelEnum;
 (function (FrontPortTemplateTypeLabelEnum) {
     FrontPortTemplateTypeLabelEnum["EightP8C"] = "8P8C";
     FrontPortTemplateTypeLabelEnum["OneHundredAndTenPunch"] = "110 Punch";
@@ -41,8 +44,8 @@ export var FrontPortTemplateTypeLabelEnum;
     FrontPortTemplateTypeLabelEnum["Sc"] = "SC";
     FrontPortTemplateTypeLabelEnum["ScApc"] = "SC/APC";
     FrontPortTemplateTypeLabelEnum["St"] = "ST";
-})(FrontPortTemplateTypeLabelEnum || (FrontPortTemplateTypeLabelEnum = {}));
-export var FrontPortTemplateTypeValueEnum;
+})(FrontPortTemplateTypeLabelEnum = exports.FrontPortTemplateTypeLabelEnum || (exports.FrontPortTemplateTypeLabelEnum = {}));
+var FrontPortTemplateTypeValueEnum;
 (function (FrontPortTemplateTypeValueEnum) {
     FrontPortTemplateTypeValueEnum["Eightp8c"] = "8p8c";
     FrontPortTemplateTypeValueEnum["OneHundredAndTenPunch"] = "110-punch";
@@ -58,52 +61,52 @@ export var FrontPortTemplateTypeValueEnum;
     FrontPortTemplateTypeValueEnum["Sc"] = "sc";
     FrontPortTemplateTypeValueEnum["ScApc"] = "sc-apc";
     FrontPortTemplateTypeValueEnum["St"] = "st";
-})(FrontPortTemplateTypeValueEnum || (FrontPortTemplateTypeValueEnum = {}));
+})(FrontPortTemplateTypeValueEnum = exports.FrontPortTemplateTypeValueEnum || (exports.FrontPortTemplateTypeValueEnum = {}));
 var FrontPortTemplateType = /** @class */ (function (_super) {
     __extends(FrontPortTemplateType, _super);
     function FrontPortTemplateType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], FrontPortTemplateType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], FrontPortTemplateType.prototype, "value", void 0);
     return FrontPortTemplateType;
-}(SpeakeasyBase));
-export { FrontPortTemplateType };
+}(utils_1.SpeakeasyBase));
+exports.FrontPortTemplateType = FrontPortTemplateType;
 var FrontPortTemplate = /** @class */ (function (_super) {
     __extends(FrontPortTemplate, _super);
     function FrontPortTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], FrontPortTemplate.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], FrontPortTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FrontPortTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rear_port" }),
-        __metadata("design:type", NestedRearPortTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rear_port" }),
+        __metadata("design:type", nestedrearporttemplate_1.NestedRearPortTemplate)
     ], FrontPortTemplate.prototype, "rearPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rear_port_position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rear_port_position" }),
         __metadata("design:type", Number)
     ], FrontPortTemplate.prototype, "rearPortPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", FrontPortTemplateType)
     ], FrontPortTemplate.prototype, "type", void 0);
     return FrontPortTemplate;
-}(SpeakeasyBase));
-export { FrontPortTemplate };
+}(utils_1.SpeakeasyBase));
+exports.FrontPortTemplate = FrontPortTemplate;

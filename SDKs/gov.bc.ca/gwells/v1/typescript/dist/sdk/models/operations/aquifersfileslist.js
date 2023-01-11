@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AquifersFilesListResponse = exports.AquifersFilesListRequest = exports.AquifersFilesList200ApplicationJson = exports.AquifersFilesList200ApplicationJsonPublic = exports.AquifersFilesList200ApplicationJsonPrivate = exports.AquifersFilesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AquifersFilesListPathParams = /** @class */ (function (_super) {
     __extends(AquifersFilesListPathParams, _super);
     function AquifersFilesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=aquifer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=aquifer_id" }),
         __metadata("design:type", String)
     ], AquifersFilesListPathParams.prototype, "aquiferId", void 0);
     return AquifersFilesListPathParams;
-}(SpeakeasyBase));
-export { AquifersFilesListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesListPathParams = AquifersFilesListPathParams;
 var AquifersFilesList200ApplicationJsonPrivate = /** @class */ (function (_super) {
     __extends(AquifersFilesList200ApplicationJsonPrivate, _super);
     function AquifersFilesList200ApplicationJsonPrivate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AquifersFilesList200ApplicationJsonPrivate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AquifersFilesList200ApplicationJsonPrivate.prototype, "url", void 0);
     return AquifersFilesList200ApplicationJsonPrivate;
-}(SpeakeasyBase));
-export { AquifersFilesList200ApplicationJsonPrivate };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesList200ApplicationJsonPrivate = AquifersFilesList200ApplicationJsonPrivate;
 var AquifersFilesList200ApplicationJsonPublic = /** @class */ (function (_super) {
     __extends(AquifersFilesList200ApplicationJsonPublic, _super);
     function AquifersFilesList200ApplicationJsonPublic() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AquifersFilesList200ApplicationJsonPublic.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AquifersFilesList200ApplicationJsonPublic.prototype, "url", void 0);
     return AquifersFilesList200ApplicationJsonPublic;
-}(SpeakeasyBase));
-export { AquifersFilesList200ApplicationJsonPublic };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesList200ApplicationJsonPublic = AquifersFilesList200ApplicationJsonPublic;
 var AquifersFilesList200ApplicationJson = /** @class */ (function (_super) {
     __extends(AquifersFilesList200ApplicationJson, _super);
     function AquifersFilesList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private", elemType: AquifersFilesList200ApplicationJsonPrivate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private", elemType: AquifersFilesList200ApplicationJsonPrivate }),
         __metadata("design:type", Array)
     ], AquifersFilesList200ApplicationJson.prototype, "private", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public", elemType: AquifersFilesList200ApplicationJsonPublic }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public", elemType: AquifersFilesList200ApplicationJsonPublic }),
         __metadata("design:type", Array)
     ], AquifersFilesList200ApplicationJson.prototype, "public", void 0);
     return AquifersFilesList200ApplicationJson;
-}(SpeakeasyBase));
-export { AquifersFilesList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesList200ApplicationJson = AquifersFilesList200ApplicationJson;
 var AquifersFilesListRequest = /** @class */ (function (_super) {
     __extends(AquifersFilesListRequest, _super);
     function AquifersFilesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AquifersFilesListPathParams)
     ], AquifersFilesListRequest.prototype, "pathParams", void 0);
     return AquifersFilesListRequest;
-}(SpeakeasyBase));
-export { AquifersFilesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesListRequest = AquifersFilesListRequest;
 var AquifersFilesListResponse = /** @class */ (function (_super) {
     __extends(AquifersFilesListResponse, _super);
     function AquifersFilesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AquifersFilesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AquifersFilesListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AquifersFilesList200ApplicationJson)
-    ], AquifersFilesListResponse.prototype, "aquifersFilesList200ApplicationJsonObject", void 0);
+    ], AquifersFilesListResponse.prototype, "aquifersFilesList200ApplicationJSONObject", void 0);
     return AquifersFilesListResponse;
-}(SpeakeasyBase));
-export { AquifersFilesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AquifersFilesListResponse = AquifersFilesListResponse;

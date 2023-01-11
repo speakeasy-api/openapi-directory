@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidMatrix = void 0;
+var utils_1 = require("../../../internal/utils");
 // AndroidMatrix
 /**
  * A set of Android device configuration permutations is defined by the the cross-product of the given axes. Internally, the given AndroidMatrix will be expanded into a set of AndroidDevices. Only supported permutations will be instantiated. Invalid permutations (e.g., incompatible models/versions) are ignored.
@@ -33,21 +36,21 @@ var AndroidMatrix = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidModelIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidModelIds" }),
         __metadata("design:type", Array)
     ], AndroidMatrix.prototype, "androidModelIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidVersionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidVersionIds" }),
         __metadata("design:type", Array)
     ], AndroidMatrix.prototype, "androidVersionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locales" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locales" }),
         __metadata("design:type", Array)
     ], AndroidMatrix.prototype, "locales", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orientations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orientations" }),
         __metadata("design:type", Array)
     ], AndroidMatrix.prototype, "orientations", void 0);
     return AndroidMatrix;
-}(SpeakeasyBase));
-export { AndroidMatrix };
+}(utils_1.SpeakeasyBase));
+exports.AndroidMatrix = AndroidMatrix;

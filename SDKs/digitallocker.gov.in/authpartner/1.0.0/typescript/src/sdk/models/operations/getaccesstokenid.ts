@@ -8,7 +8,7 @@ export class GetaccesstokenIdRequestBody extends SpeakeasyBase {
   getAccessTokenUsingAuthorizationCode?: shared.AccessToken;
 
   @SpeakeasyMetadata({ data: "json, name=Get access token using device code and OTP" })
-  getAccessTokenUsingDeviceCodeAndOtp?: any;
+  getAccessTokenUsingDeviceCodeAndOTP?: any;
 
   @SpeakeasyMetadata({ data: "json, name=Get access token using refresh token" })
   getAccessTokenUsingRefreshToken?: shared.RefreshToken;

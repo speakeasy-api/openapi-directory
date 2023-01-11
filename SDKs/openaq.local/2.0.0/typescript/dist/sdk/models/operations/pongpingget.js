@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PongPingGetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var PongPingGetResponse = /** @class */ (function (_super) {
     __extends(PongPingGetResponse, _super);
     function PongPingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PongPingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PongPingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], PongPingGetResponse.prototype, "pongPingGet200ApplicationJsonAny", void 0);
+    ], PongPingGetResponse.prototype, "pongPingGet200ApplicationJSONAny", void 0);
     return PongPingGetResponse;
-}(SpeakeasyBase));
-export { PongPingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PongPingGetResponse = PongPingGetResponse;

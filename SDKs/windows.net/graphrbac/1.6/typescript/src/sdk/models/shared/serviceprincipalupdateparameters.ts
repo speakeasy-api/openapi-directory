@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // ServicePrincipalUpdateParameters
 /** 
- * Request parameters for update an existing service principal.
+ * Active Directory service principal common properties shared among GET, POST and PATCH
 **/
 export class ServicePrincipalUpdateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=accountEnabled" })
@@ -14,10 +14,10 @@ export class ServicePrincipalUpdateParameters extends SpeakeasyBase {
   appRoleAssignmentRequired?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=keyCredentials" })
-  keyCredentials?: Map<string, Map<string, any>>[];
+  keyCredentials?: Record<string, Record<string, any>>[];
 
   @SpeakeasyMetadata({ data: "json, name=passwordCredentials" })
-  passwordCredentials?: Map<string, Map<string, any>>[];
+  passwordCredentials?: Record<string, Record<string, any>>[];
 
   @SpeakeasyMetadata({ data: "json, name=servicePrincipalType" })
   servicePrincipalType?: string;

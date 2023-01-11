@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2JobTriggerInput } from "./googleprivacydlpv2jobtrigger";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CreateJobTriggerRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2jobtrigger_1 = require("./googleprivacydlpv2jobtrigger");
 // GooglePrivacyDlpV2CreateJobTriggerRequestInput
 /**
  * Request message for CreateJobTrigger.
@@ -34,17 +37,17 @@ var GooglePrivacyDlpV2CreateJobTriggerRequestInput = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobTrigger" }),
-        __metadata("design:type", GooglePrivacyDlpV2JobTriggerInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobTrigger" }),
+        __metadata("design:type", googleprivacydlpv2jobtrigger_1.GooglePrivacyDlpV2JobTriggerInput)
     ], GooglePrivacyDlpV2CreateJobTriggerRequestInput.prototype, "jobTrigger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CreateJobTriggerRequestInput.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggerId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CreateJobTriggerRequestInput.prototype, "triggerId", void 0);
     return GooglePrivacyDlpV2CreateJobTriggerRequestInput;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CreateJobTriggerRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CreateJobTriggerRequestInput = GooglePrivacyDlpV2CreateJobTriggerRequestInput;

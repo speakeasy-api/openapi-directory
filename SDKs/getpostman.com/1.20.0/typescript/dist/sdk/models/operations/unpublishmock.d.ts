@@ -14,5 +14,5 @@ export declare class UnpublishMockRequest extends SpeakeasyBase {
 export declare class UnpublishMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unpublishMock200ApplicationJsonObject?: UnpublishMock200ApplicationJson;
+    unpublishMock200ApplicationJSONObject?: UnpublishMock200ApplicationJson;
 }

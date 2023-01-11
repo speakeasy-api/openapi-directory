@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetGroupAttribute } from "./targetgroupattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTargetGroupAttributesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetgroupattribute_1 = require("./targetgroupattribute");
 var DescribeTargetGroupAttributesOutput = /** @class */ (function (_super) {
     __extends(DescribeTargetGroupAttributesOutput, _super);
     function DescribeTargetGroupAttributesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: TargetGroupAttribute }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: targetgroupattribute_1.TargetGroupAttribute }),
         __metadata("design:type", Array)
     ], DescribeTargetGroupAttributesOutput.prototype, "attributes", void 0);
     return DescribeTargetGroupAttributesOutput;
-}(SpeakeasyBase));
-export { DescribeTargetGroupAttributesOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTargetGroupAttributesOutput = DescribeTargetGroupAttributesOutput;

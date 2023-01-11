@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceFilters = void 0;
+var utils_1 = require("../../../internal/utils");
 // ResourceFilters
 /**
  * Filters the results by resource account ID, region, resource ID, and resource name.
@@ -33,21 +36,21 @@ var ResourceFilters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], ResourceFilters.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Region" }),
         __metadata("design:type", String)
     ], ResourceFilters.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], ResourceFilters.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceName" }),
         __metadata("design:type", String)
     ], ResourceFilters.prototype, "resourceName", void 0);
     return ResourceFilters;
-}(SpeakeasyBase));
-export { ResourceFilters };
+}(utils_1.SpeakeasyBase));
+exports.ResourceFilters = ResourceFilters;

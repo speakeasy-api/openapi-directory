@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteFaxRequest, DeleteFaxResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -35,11 +34,11 @@ const req: DeleteFaxRequest = {
     },
   },
   pathParams: {
-    sid: "error",
+    sid: "sit",
   },
 };
 
-sdk.sdk.deleteFax(req).then((res: DeleteFaxResponse | AxiosError) => {
+sdk.deleteFax(req).then((res: DeleteFaxResponse | AxiosError) => {
    // handle response
 });
 ```

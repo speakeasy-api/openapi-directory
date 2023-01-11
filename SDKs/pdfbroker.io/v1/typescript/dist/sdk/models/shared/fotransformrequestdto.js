@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PdfMetadataDto } from "./pdfmetadatadto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FoTransformRequestDto = void 0;
+var utils_1 = require("../../../internal/utils");
+var pdfmetadatadto_1 = require("./pdfmetadatadto");
 // FoTransformRequestDto
 /**
  * The XSL-FO transform document and xml data document as a Base64 encoded string with a set of resources provided with a name and the data of the resource as a Base64 encoded string.
@@ -34,21 +37,21 @@ var FoTransformRequestDto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FoDocumentBase64String" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FoDocumentBase64String" }),
         __metadata("design:type", String)
     ], FoTransformRequestDto.prototype, "foDocumentBase64String", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metadata" }),
-        __metadata("design:type", PdfMetadataDto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metadata" }),
+        __metadata("design:type", pdfmetadatadto_1.PdfMetadataDto)
     ], FoTransformRequestDto.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources" }),
+        __metadata("design:type", Object)
     ], FoTransformRequestDto.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XmlDataDocumentBase64String" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XmlDataDocumentBase64String" }),
         __metadata("design:type", String)
     ], FoTransformRequestDto.prototype, "xmlDataDocumentBase64String", void 0);
     return FoTransformRequestDto;
-}(SpeakeasyBase));
-export { FoTransformRequestDto };
+}(utils_1.SpeakeasyBase));
+exports.FoTransformRequestDto = FoTransformRequestDto;

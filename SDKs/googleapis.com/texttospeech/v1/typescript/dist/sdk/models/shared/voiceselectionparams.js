@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomVoiceParams } from "./customvoiceparams";
-export var VoiceSelectionParamsSsmlGenderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceSelectionParams = exports.VoiceSelectionParamsSsmlGenderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var customvoiceparams_1 = require("./customvoiceparams");
+var VoiceSelectionParamsSsmlGenderEnum;
 (function (VoiceSelectionParamsSsmlGenderEnum) {
     VoiceSelectionParamsSsmlGenderEnum["SsmlVoiceGenderUnspecified"] = "SSML_VOICE_GENDER_UNSPECIFIED";
     VoiceSelectionParamsSsmlGenderEnum["Male"] = "MALE";
     VoiceSelectionParamsSsmlGenderEnum["Female"] = "FEMALE";
     VoiceSelectionParamsSsmlGenderEnum["Neutral"] = "NEUTRAL";
-})(VoiceSelectionParamsSsmlGenderEnum || (VoiceSelectionParamsSsmlGenderEnum = {}));
+})(VoiceSelectionParamsSsmlGenderEnum = exports.VoiceSelectionParamsSsmlGenderEnum || (exports.VoiceSelectionParamsSsmlGenderEnum = {}));
 // VoiceSelectionParams
 /**
  * Description of which voice to use for a synthesis request.
@@ -41,21 +44,21 @@ var VoiceSelectionParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customVoice" }),
-        __metadata("design:type", CustomVoiceParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customVoice" }),
+        __metadata("design:type", customvoiceparams_1.CustomVoiceParams)
     ], VoiceSelectionParams.prototype, "customVoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], VoiceSelectionParams.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VoiceSelectionParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssmlGender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssmlGender" }),
         __metadata("design:type", String)
     ], VoiceSelectionParams.prototype, "ssmlGender", void 0);
     return VoiceSelectionParams;
-}(SpeakeasyBase));
-export { VoiceSelectionParams };
+}(utils_1.SpeakeasyBase));
+exports.VoiceSelectionParams = VoiceSelectionParams;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class AgentConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=agentParameters" })
-  agentParameters?: Map<string, string>;
+  agentParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=periodInSeconds" })
   periodInSeconds: number;

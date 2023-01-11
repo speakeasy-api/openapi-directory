@@ -16,6 +16,6 @@ export declare class PostAssetsVolatilitySampleRequest extends SpeakeasyBase {
 }
 export declare class PostAssetsVolatilitySampleResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsVolatilitySample200ApplicationJsonObject?: PostAssetsVolatilitySample200ApplicationJson;
     statusCode: number;
+    postAssetsVolatilitySample200ApplicationJSONObject?: PostAssetsVolatilitySample200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RevokedCertificate } from "./revokedcertificate";
-export var CertificateRevocationListStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateRevocationList = exports.CertificateRevocationListStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var revokedcertificate_1 = require("./revokedcertificate");
+var CertificateRevocationListStateEnum;
 (function (CertificateRevocationListStateEnum) {
     CertificateRevocationListStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     CertificateRevocationListStateEnum["Active"] = "ACTIVE";
     CertificateRevocationListStateEnum["Superseded"] = "SUPERSEDED";
-})(CertificateRevocationListStateEnum || (CertificateRevocationListStateEnum = {}));
+})(CertificateRevocationListStateEnum = exports.CertificateRevocationListStateEnum || (exports.CertificateRevocationListStateEnum = {}));
 // CertificateRevocationList
 /**
  * A CertificateRevocationList corresponds to a signed X.509 certificate Revocation List (CRL). A CRL contains the serial numbers of certificates that should no longer be trusted.
@@ -40,45 +43,45 @@ var CertificateRevocationList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessUrl" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "accessUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], CertificateRevocationList.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCrl" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "pemCrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "revisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revokedCertificates", elemType: RevokedCertificate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revokedCertificates", elemType: revokedcertificate_1.RevokedCertificate }),
         __metadata("design:type", Array)
     ], CertificateRevocationList.prototype, "revokedCertificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sequenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sequenceNumber" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "sequenceNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], CertificateRevocationList.prototype, "updateTime", void 0);
     return CertificateRevocationList;
-}(SpeakeasyBase));
-export { CertificateRevocationList };
+}(utils_1.SpeakeasyBase));
+exports.CertificateRevocationList = CertificateRevocationList;

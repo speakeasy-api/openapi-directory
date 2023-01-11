@@ -15,7 +15,7 @@ export class GetUpdateOpenIdConnectProviderThumbprintQueryParams extends Speakea
   action: GetUpdateOpenIdConnectProviderThumbprintActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" })
-  openIdConnectProviderArn: string;
+  openIDConnectProviderArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ThumbprintList" })
   thumbprintList: string[];

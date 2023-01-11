@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetReportCreateRequestOptions } from "./assetreportcreaterequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetReportCreateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetreportcreaterequestoptions_1 = require("./assetreportcreaterequestoptions");
 // AssetReportCreateRequest
 /**
  * AssetReportCreateRequest defines the request schema for `/asset_report/create`
@@ -34,25 +37,25 @@ var AssetReportCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_tokens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_tokens" }),
         __metadata("design:type", Array)
     ], AssetReportCreateRequest.prototype, "accessTokens", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], AssetReportCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=days_requested" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=days_requested" }),
         __metadata("design:type", Number)
     ], AssetReportCreateRequest.prototype, "daysRequested", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", AssetReportCreateRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", assetreportcreaterequestoptions_1.AssetReportCreateRequestOptions)
     ], AssetReportCreateRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], AssetReportCreateRequest.prototype, "secret", void 0);
     return AssetReportCreateRequest;
-}(SpeakeasyBase));
-export { AssetReportCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AssetReportCreateRequest = AssetReportCreateRequest;

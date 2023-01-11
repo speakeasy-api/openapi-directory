@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaBigQuerySource = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
 // GoogleCloudDiscoveryengineV1betaBigQuerySource
 /**
  * BigQuery source import data from.
@@ -34,29 +37,29 @@ var GoogleCloudDiscoveryengineV1betaBigQuerySource = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSchema" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "dataSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "datasetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsStagingDir" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsStagingDir" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "gcsStagingDir", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partitionDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partitionDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "partitionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaBigQuerySource.prototype, "tableId", void 0);
     return GoogleCloudDiscoveryengineV1betaBigQuerySource;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaBigQuerySource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaBigQuerySource = GoogleCloudDiscoveryengineV1betaBigQuerySource;

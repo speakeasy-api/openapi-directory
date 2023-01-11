@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompositeAlarm } from "./compositealarm";
-import { MetricAlarm } from "./metricalarm";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAlarmsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var compositealarm_1 = require("./compositealarm");
+var metricalarm_1 = require("./metricalarm");
 var DescribeAlarmsOutput = /** @class */ (function (_super) {
     __extends(DescribeAlarmsOutput, _super);
     function DescribeAlarmsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: CompositeAlarm }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: compositealarm_1.CompositeAlarm }),
         __metadata("design:type", Array)
     ], DescribeAlarmsOutput.prototype, "compositeAlarms", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricAlarm }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metricalarm_1.MetricAlarm }),
         __metadata("design:type", Array)
     ], DescribeAlarmsOutput.prototype, "metricAlarms", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeAlarmsOutput.prototype, "nextToken", void 0);
     return DescribeAlarmsOutput;
-}(SpeakeasyBase));
-export { DescribeAlarmsOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAlarmsOutput = DescribeAlarmsOutput;

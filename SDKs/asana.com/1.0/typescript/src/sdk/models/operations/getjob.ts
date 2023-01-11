@@ -44,5 +44,5 @@ export class GetJobResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getJob200ApplicationJsonObject?: GetJob200ApplicationJson;
+  getJob200ApplicationJSONObject?: GetJob200ApplicationJson;
 }

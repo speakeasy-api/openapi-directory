@@ -41,5 +41,5 @@ export class TrendingStickersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  trendingStickers200ApplicationJsonObject?: TrendingStickers200ApplicationJson;
+  trendingStickers200ApplicationJSONObject?: TrendingStickers200ApplicationJson;
 }

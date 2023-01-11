@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNextDeparturesByCrsResponse = exports.GetNextDeparturesByCrsRequest = exports.GetNextDeparturesByCrsQueryParams = exports.GetNextDeparturesByCrsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNextDeparturesByCrsPathParams = /** @class */ (function (_super) {
     __extends(GetNextDeparturesByCrsPathParams, _super);
     function GetNextDeparturesByCrsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=CRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=CRS" }),
         __metadata("design:type", String)
     ], GetNextDeparturesByCrsPathParams.prototype, "crs", void 0);
     return GetNextDeparturesByCrsPathParams;
-}(SpeakeasyBase));
-export { GetNextDeparturesByCrsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNextDeparturesByCrsPathParams = GetNextDeparturesByCrsPathParams;
 var GetNextDeparturesByCrsQueryParams = /** @class */ (function (_super) {
     __extends(GetNextDeparturesByCrsQueryParams, _super);
     function GetNextDeparturesByCrsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apiKey" }),
         __metadata("design:type", String)
     ], GetNextDeparturesByCrsQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filterList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filterList" }),
         __metadata("design:type", String)
     ], GetNextDeparturesByCrsQueryParams.prototype, "filterList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceDetails" }),
         __metadata("design:type", Boolean)
     ], GetNextDeparturesByCrsQueryParams.prototype, "serviceDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeOffset" }),
         __metadata("design:type", Number)
     ], GetNextDeparturesByCrsQueryParams.prototype, "timeOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeWindow" }),
         __metadata("design:type", Number)
     ], GetNextDeparturesByCrsQueryParams.prototype, "timeWindow", void 0);
     return GetNextDeparturesByCrsQueryParams;
-}(SpeakeasyBase));
-export { GetNextDeparturesByCrsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNextDeparturesByCrsQueryParams = GetNextDeparturesByCrsQueryParams;
 var GetNextDeparturesByCrsRequest = /** @class */ (function (_super) {
     __extends(GetNextDeparturesByCrsRequest, _super);
     function GetNextDeparturesByCrsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNextDeparturesByCrsPathParams)
     ], GetNextDeparturesByCrsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNextDeparturesByCrsQueryParams)
     ], GetNextDeparturesByCrsRequest.prototype, "queryParams", void 0);
     return GetNextDeparturesByCrsRequest;
-}(SpeakeasyBase));
-export { GetNextDeparturesByCrsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNextDeparturesByCrsRequest = GetNextDeparturesByCrsRequest;
 var GetNextDeparturesByCrsResponse = /** @class */ (function (_super) {
     __extends(GetNextDeparturesByCrsResponse, _super);
     function GetNextDeparturesByCrsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNextDeparturesByCrsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNextDeparturesByCrsResponse.prototype, "statusCode", void 0);
     return GetNextDeparturesByCrsResponse;
-}(SpeakeasyBase));
-export { GetNextDeparturesByCrsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNextDeparturesByCrsResponse = GetNextDeparturesByCrsResponse;

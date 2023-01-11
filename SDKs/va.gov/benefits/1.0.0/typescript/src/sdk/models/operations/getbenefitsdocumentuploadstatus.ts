@@ -80,20 +80,20 @@ export class GetBenefitsDocumentUploadStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus200ApplicationJsonAny?: any;
+  getBenefitsDocumentUploadStatus200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus401ApplicationJsonObject?: GetBenefitsDocumentUploadStatus401ApplicationJson;
+  getBenefitsDocumentUploadStatus401ApplicationJSONObject?: GetBenefitsDocumentUploadStatus401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus403ApplicationJsonObject?: GetBenefitsDocumentUploadStatus403ApplicationJson;
+  getBenefitsDocumentUploadStatus403ApplicationJSONObject?: GetBenefitsDocumentUploadStatus403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus404ApplicationJsonObject?: GetBenefitsDocumentUploadStatus404ApplicationJson;
+  getBenefitsDocumentUploadStatus404ApplicationJSONObject?: GetBenefitsDocumentUploadStatus404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus429ApplicationJsonObject?: GetBenefitsDocumentUploadStatus429ApplicationJson;
+  getBenefitsDocumentUploadStatus429ApplicationJSONObject?: GetBenefitsDocumentUploadStatus429ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadStatus500ApplicationJsonObject?: GetBenefitsDocumentUploadStatus500ApplicationJson;
+  getBenefitsDocumentUploadStatus500ApplicationJSONObject?: GetBenefitsDocumentUploadStatus500ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShippingOptionEnum } from "./shippingoptionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateReturnShippingLabelRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var shippingoptionenum_1 = require("./shippingoptionenum");
 var CreateReturnShippingLabelRequest = /** @class */ (function (_super) {
     __extends(CreateReturnShippingLabelRequest, _super);
     function CreateReturnShippingLabelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobId" }),
         __metadata("design:type", String)
     ], CreateReturnShippingLabelRequest.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShippingOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShippingOption" }),
         __metadata("design:type", String)
     ], CreateReturnShippingLabelRequest.prototype, "shippingOption", void 0);
     return CreateReturnShippingLabelRequest;
-}(SpeakeasyBase));
-export { CreateReturnShippingLabelRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateReturnShippingLabelRequest = CreateReturnShippingLabelRequest;

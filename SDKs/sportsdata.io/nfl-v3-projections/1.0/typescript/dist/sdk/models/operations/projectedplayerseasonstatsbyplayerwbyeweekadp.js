@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse = exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest = exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams = exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum;
 (function (ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum) {
     ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum["Xml"] = "XML";
     ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum["Json"] = "JSON";
-})(ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum || (ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = {}));
+})(ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum || (exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = {}));
 var ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams, _super);
     function ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams.prototype, "playerid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams.prototype, "season", void 0);
     return ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams = ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams;
 var ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest, _super);
     function ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest.prototype, "pathParams", void 0);
     return ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest = ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest;
 var ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse, _super);
     function ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse.prototype, "playerSeasonProjection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse.prototype, "statusCode", void 0);
     return ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse = ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse;

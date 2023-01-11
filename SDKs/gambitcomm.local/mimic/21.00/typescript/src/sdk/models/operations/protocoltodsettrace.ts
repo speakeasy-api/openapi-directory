@@ -25,5 +25,5 @@ export class ProtocolTodSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTodSetTrace200ApplicationJsonString?: string;
+  protocolTodSetTrace200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceLocation } from "./resourcelocation";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseSnapshot = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcelocation_1 = require("./resourcelocation");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var tag_1 = require("./tag");
 // RelationalDatabaseSnapshot
 /**
  * Describes a database snapshot.
@@ -36,65 +39,65 @@ var RelationalDatabaseSnapshot = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], RelationalDatabaseSnapshot.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engine" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineVersion" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromRelationalDatabaseArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromRelationalDatabaseArn" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "fromRelationalDatabaseArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromRelationalDatabaseBlueprintId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromRelationalDatabaseBlueprintId" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "fromRelationalDatabaseBlueprintId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromRelationalDatabaseBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromRelationalDatabaseBundleId" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "fromRelationalDatabaseBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromRelationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromRelationalDatabaseName" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "fromRelationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], RelationalDatabaseSnapshot.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInGb" }),
         __metadata("design:type", Number)
     ], RelationalDatabaseSnapshot.prototype, "sizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], RelationalDatabaseSnapshot.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], RelationalDatabaseSnapshot.prototype, "tags", void 0);
     return RelationalDatabaseSnapshot;
-}(SpeakeasyBase));
-export { RelationalDatabaseSnapshot };
+}(utils_1.SpeakeasyBase));
+exports.RelationalDatabaseSnapshot = RelationalDatabaseSnapshot;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowExecution } from "./workflowexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWorkflowExecutionHistoryInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowexecution_1 = require("./workflowexecution");
 var GetWorkflowExecutionHistoryInput = /** @class */ (function (_super) {
     __extends(GetWorkflowExecutionHistoryInput, _super);
     function GetWorkflowExecutionHistoryInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], GetWorkflowExecutionHistoryInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=execution" }),
-        __metadata("design:type", WorkflowExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=execution" }),
+        __metadata("design:type", workflowexecution_1.WorkflowExecution)
     ], GetWorkflowExecutionHistoryInput.prototype, "execution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPageSize" }),
         __metadata("design:type", Number)
     ], GetWorkflowExecutionHistoryInput.prototype, "maximumPageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GetWorkflowExecutionHistoryInput.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseOrder" }),
         __metadata("design:type", Boolean)
     ], GetWorkflowExecutionHistoryInput.prototype, "reverseOrder", void 0);
     return GetWorkflowExecutionHistoryInput;
-}(SpeakeasyBase));
-export { GetWorkflowExecutionHistoryInput };
+}(utils_1.SpeakeasyBase));
+exports.GetWorkflowExecutionHistoryInput = GetWorkflowExecutionHistoryInput;

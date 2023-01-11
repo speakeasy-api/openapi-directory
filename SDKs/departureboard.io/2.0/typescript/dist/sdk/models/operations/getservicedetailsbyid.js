@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetServiceDetailsByIdResponse = exports.GetServiceDetailsByIdRequest = exports.GetServiceDetailsByIdQueryParams = exports.GetServiceDetailsByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetServiceDetailsByIdPathParams = /** @class */ (function (_super) {
     __extends(GetServiceDetailsByIdPathParams, _super);
     function GetServiceDetailsByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serviceID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serviceID" }),
         __metadata("design:type", String)
-    ], GetServiceDetailsByIdPathParams.prototype, "serviceId", void 0);
+    ], GetServiceDetailsByIdPathParams.prototype, "serviceID", void 0);
     return GetServiceDetailsByIdPathParams;
-}(SpeakeasyBase));
-export { GetServiceDetailsByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetServiceDetailsByIdPathParams = GetServiceDetailsByIdPathParams;
 var GetServiceDetailsByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetServiceDetailsByIdQueryParams, _super);
     function GetServiceDetailsByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apiKey" }),
         __metadata("design:type", String)
     ], GetServiceDetailsByIdQueryParams.prototype, "apiKey", void 0);
     return GetServiceDetailsByIdQueryParams;
-}(SpeakeasyBase));
-export { GetServiceDetailsByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetServiceDetailsByIdQueryParams = GetServiceDetailsByIdQueryParams;
 var GetServiceDetailsByIdRequest = /** @class */ (function (_super) {
     __extends(GetServiceDetailsByIdRequest, _super);
     function GetServiceDetailsByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetServiceDetailsByIdPathParams)
     ], GetServiceDetailsByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetServiceDetailsByIdQueryParams)
     ], GetServiceDetailsByIdRequest.prototype, "queryParams", void 0);
     return GetServiceDetailsByIdRequest;
-}(SpeakeasyBase));
-export { GetServiceDetailsByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetServiceDetailsByIdRequest = GetServiceDetailsByIdRequest;
 var GetServiceDetailsByIdResponse = /** @class */ (function (_super) {
     __extends(GetServiceDetailsByIdResponse, _super);
     function GetServiceDetailsByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetServiceDetailsByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetServiceDetailsByIdResponse.prototype, "statusCode", void 0);
     return GetServiceDetailsByIdResponse;
-}(SpeakeasyBase));
-export { GetServiceDetailsByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetServiceDetailsByIdResponse = GetServiceDetailsByIdResponse;

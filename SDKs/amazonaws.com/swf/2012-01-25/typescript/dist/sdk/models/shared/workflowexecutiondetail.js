@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowExecutionConfiguration } from "./workflowexecutionconfiguration";
-import { WorkflowExecutionInfo } from "./workflowexecutioninfo";
-import { WorkflowExecutionOpenCounts } from "./workflowexecutionopencounts";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowExecutionDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowexecutionconfiguration_1 = require("./workflowexecutionconfiguration");
+var workflowexecutioninfo_1 = require("./workflowexecutioninfo");
+var workflowexecutionopencounts_1 = require("./workflowexecutionopencounts");
 // WorkflowExecutionDetail
 /**
  * Contains details about a workflow execution.
@@ -36,25 +39,25 @@ var WorkflowExecutionDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionConfiguration" }),
-        __metadata("design:type", WorkflowExecutionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionConfiguration" }),
+        __metadata("design:type", workflowexecutionconfiguration_1.WorkflowExecutionConfiguration)
     ], WorkflowExecutionDetail.prototype, "executionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionInfo" }),
-        __metadata("design:type", WorkflowExecutionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionInfo" }),
+        __metadata("design:type", workflowexecutioninfo_1.WorkflowExecutionInfo)
     ], WorkflowExecutionDetail.prototype, "executionInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestActivityTaskTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestActivityTaskTimestamp" }),
         __metadata("design:type", Date)
     ], WorkflowExecutionDetail.prototype, "latestActivityTaskTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestExecutionContext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestExecutionContext" }),
         __metadata("design:type", String)
     ], WorkflowExecutionDetail.prototype, "latestExecutionContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openCounts" }),
-        __metadata("design:type", WorkflowExecutionOpenCounts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openCounts" }),
+        __metadata("design:type", workflowexecutionopencounts_1.WorkflowExecutionOpenCounts)
     ], WorkflowExecutionDetail.prototype, "openCounts", void 0);
     return WorkflowExecutionDetail;
-}(SpeakeasyBase));
-export { WorkflowExecutionDetail };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowExecutionDetail = WorkflowExecutionDetail;

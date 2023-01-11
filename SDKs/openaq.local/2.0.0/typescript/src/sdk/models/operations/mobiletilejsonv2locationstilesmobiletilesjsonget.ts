@@ -11,5 +11,5 @@ export class MobiletilejsonV2LocationsTilesMobileTilesJsonGetResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tileJson?: shared.TileJson;
+  tileJSON?: shared.TileJson;
 }

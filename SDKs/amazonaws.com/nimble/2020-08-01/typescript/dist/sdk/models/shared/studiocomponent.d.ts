@@ -24,7 +24,7 @@ export declare class StudioComponent extends SpeakeasyBase {
     statusMessage?: string;
     studioComponentId?: string;
     subtype?: StudioComponentSubtypeEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: StudioComponentTypeEnum;
     updatedAt?: Date;
     updatedBy?: string;

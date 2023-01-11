@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledUpdateGroupAction = void 0;
+var utils_1 = require("../../../internal/utils");
 // ScheduledUpdateGroupAction
 /**
  * Describes a scheduled scaling action.
@@ -33,49 +36,49 @@ var ScheduledUpdateGroupAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledUpdateGroupAction.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduledUpdateGroupAction.prototype, "desiredCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ScheduledUpdateGroupAction.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduledUpdateGroupAction.prototype, "maxSize", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduledUpdateGroupAction.prototype, "minSize", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledUpdateGroupAction.prototype, "recurrence", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ScheduledUpdateGroupAction.prototype, "scheduledActionArn", void 0);
+    ], ScheduledUpdateGroupAction.prototype, "scheduledActionARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledUpdateGroupAction.prototype, "scheduledActionName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ScheduledUpdateGroupAction.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ScheduledUpdateGroupAction.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledUpdateGroupAction.prototype, "timeZone", void 0);
     return ScheduledUpdateGroupAction;
-}(SpeakeasyBase));
-export { ScheduledUpdateGroupAction };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledUpdateGroupAction = ScheduledUpdateGroupAction;

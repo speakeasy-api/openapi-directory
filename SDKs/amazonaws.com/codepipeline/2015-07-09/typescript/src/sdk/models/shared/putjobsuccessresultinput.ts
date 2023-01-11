@@ -22,5 +22,5 @@ export class PutJobSuccessResultInput extends SpeakeasyBase {
   jobId: string;
 
   @SpeakeasyMetadata({ data: "json, name=outputVariables" })
-  outputVariables?: Map<string, string>;
+  outputVariables?: Record<string, string>;
 }

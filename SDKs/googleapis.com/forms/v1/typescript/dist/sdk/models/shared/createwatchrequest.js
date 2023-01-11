@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WatchInput } from "./watch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWatchRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var watch_1 = require("./watch");
 // CreateWatchRequestInput
 /**
  * Create a new watch.
@@ -34,13 +37,13 @@ var CreateWatchRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watch" }),
-        __metadata("design:type", WatchInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watch" }),
+        __metadata("design:type", watch_1.WatchInput)
     ], CreateWatchRequestInput.prototype, "watch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchId" }),
         __metadata("design:type", String)
     ], CreateWatchRequestInput.prototype, "watchId", void 0);
     return CreateWatchRequestInput;
-}(SpeakeasyBase));
-export { CreateWatchRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateWatchRequestInput = CreateWatchRequestInput;

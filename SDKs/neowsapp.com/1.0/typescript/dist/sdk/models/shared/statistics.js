@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Url } from "./url";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statistics = void 0;
+var utils_1 = require("../../../internal/utils");
+var url_1 = require("./url");
 var Statistics = /** @class */ (function (_super) {
     __extends(Statistics, _super);
     function Statistics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_approach_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_approach_count" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "closeApproachCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", String)
     ], Statistics.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nasa_jpl_url" }),
-        __metadata("design:type", Url)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nasa_jpl_url" }),
+        __metadata("design:type", url_1.Url)
     ], Statistics.prototype, "nasaJplUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=near_earth_object_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=near_earth_object_count" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "nearEarthObjectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], Statistics.prototype, "source", void 0);
     return Statistics;
-}(SpeakeasyBase));
-export { Statistics };
+}(utils_1.SpeakeasyBase));
+exports.Statistics = Statistics;

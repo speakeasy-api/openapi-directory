@@ -38,10 +38,10 @@ export class PepMonitorUpdateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pepMonitorUpdate200ApplicationJsonAny?: any;
+  pepMonitorUpdate200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  pepMonitorUpdateDefaultApplicationJsonAny?: any;
+  pepMonitorUpdateDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

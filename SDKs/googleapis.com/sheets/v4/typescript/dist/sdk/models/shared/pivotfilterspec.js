@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { PivotFilterCriteria } from "./pivotfiltercriteria";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotFilterSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var pivotfiltercriteria_1 = require("./pivotfiltercriteria");
 // PivotFilterSpec
 /**
  * The pivot table filter criteria associated with a specific source column offset.
@@ -35,17 +38,17 @@ var PivotFilterSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnOffsetIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnOffsetIndex" }),
         __metadata("design:type", Number)
     ], PivotFilterSpec.prototype, "columnOffsetIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceColumnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceColumnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], PivotFilterSpec.prototype, "dataSourceColumnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterCriteria" }),
-        __metadata("design:type", PivotFilterCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterCriteria" }),
+        __metadata("design:type", pivotfiltercriteria_1.PivotFilterCriteria)
     ], PivotFilterSpec.prototype, "filterCriteria", void 0);
     return PivotFilterSpec;
-}(SpeakeasyBase));
-export { PivotFilterSpec };
+}(utils_1.SpeakeasyBase));
+exports.PivotFilterSpec = PivotFilterSpec;

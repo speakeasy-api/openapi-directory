@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuperMembership = void 0;
+var utils_1 = require("../../../internal/utils");
 var SuperMembership = /** @class */ (function (_super) {
     __extends(SuperMembership, _super);
     function SuperMembership() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeNumber" }),
         __metadata("design:type", String)
     ], SuperMembership.prototype, "employeeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperFundID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperFundID" }),
         __metadata("design:type", String)
-    ], SuperMembership.prototype, "superFundId", void 0);
+    ], SuperMembership.prototype, "superFundID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperMembershipID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperMembershipID" }),
         __metadata("design:type", String)
-    ], SuperMembership.prototype, "superMembershipId", void 0);
+    ], SuperMembership.prototype, "superMembershipID", void 0);
     return SuperMembership;
-}(SpeakeasyBase));
-export { SuperMembership };
+}(utils_1.SpeakeasyBase));
+exports.SuperMembership = SuperMembership;

@@ -21,7 +21,7 @@ export declare enum CreateResourcePolicyStatementRequestBodyEffectEnum {
 }
 export declare class CreateResourcePolicyStatementRequestBody extends SpeakeasyBase {
     action: string[];
-    condition?: Map<string, Map<string, string>>;
+    condition?: Record<string, Record<string, string>>;
     effect: CreateResourcePolicyStatementRequestBodyEffectEnum;
     principal: shared.Principal[];
     statementId: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkAttributeAction } from "./linkattributeaction";
-import { AttributeKey } from "./attributekey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkAttributeUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var linkattributeaction_1 = require("./linkattributeaction");
+var attributekey_1 = require("./attributekey");
 // LinkAttributeUpdate
 /**
  * Structure that contains attribute update information.
@@ -35,13 +38,13 @@ var LinkAttributeUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeAction" }),
-        __metadata("design:type", LinkAttributeAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeAction" }),
+        __metadata("design:type", linkattributeaction_1.LinkAttributeAction)
     ], LinkAttributeUpdate.prototype, "attributeAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeKey" }),
-        __metadata("design:type", AttributeKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeKey" }),
+        __metadata("design:type", attributekey_1.AttributeKey)
     ], LinkAttributeUpdate.prototype, "attributeKey", void 0);
     return LinkAttributeUpdate;
-}(SpeakeasyBase));
-export { LinkAttributeUpdate };
+}(utils_1.SpeakeasyBase));
+exports.LinkAttributeUpdate = LinkAttributeUpdate;

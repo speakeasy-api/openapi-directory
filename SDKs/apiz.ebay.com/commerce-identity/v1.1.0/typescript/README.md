@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetUserRequest, GetUserResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -35,7 +34,7 @@ const req: GetUserRequest = {
   },
 };
 
-sdk.sdk.getUser(req).then((res: GetUserResponse | AxiosError) => {
+sdk.user.getUser(req).then((res: GetUserResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,7 +43,7 @@ sdk.sdk.getUser(req).then((res: GetUserResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### user
 
 * `getUser` - This method retrieves the account profile information for an authenticated user, which requires a User access token. What is returned is controlled by the scopes. For a business account you use the default scope commerce.identity.readonly, which returns all the fields in the businessAccount container. These are returned because this is all public information. For an individual account, the fields returned in the individualAccount container are based on the scope you use. Using the default scope, only public information, such as eBay user ID, are returned. For details about what each scope returns, see the Identity API Overview. URLs for this method Production URL: https://apiz.ebay.com/commerce/identity/v1/user/ Sandbox URL: https://apiz.sandbox.ebay.com/commerce/identity/v1/user/ In the Sandbox, this method returns mock data. Note: You must use the correct scope or scopes for the data you want returned.
 

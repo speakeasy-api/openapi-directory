@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1FeatureMap } from "./googlecloudrecommendationenginev1beta1featuremap";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1EventDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1featuremap_1 = require("./googlecloudrecommendationenginev1beta1featuremap");
 // GoogleCloudRecommendationengineV1beta1EventDetail
 /**
  * User event details shared by all recommendation types.
@@ -34,29 +37,29 @@ var GoogleCloudRecommendationengineV1beta1EventDetail = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventAttributes" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1FeatureMap)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventAttributes" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1featuremap_1.GoogleCloudRecommendationengineV1beta1FeatureMap)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "eventAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=experimentIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=experimentIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "experimentIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageViewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageViewId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "pageViewId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationToken" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "recommendationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referrerUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referrerUri" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "referrerUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1EventDetail.prototype, "uri", void 0);
     return GoogleCloudRecommendationengineV1beta1EventDetail;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1EventDetail };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1EventDetail = GoogleCloudRecommendationengineV1beta1EventDetail;

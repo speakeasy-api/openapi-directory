@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfirmationStatusEnum } from "./confirmationstatusenum";
-import { DialogActionTypeEnum } from "./dialogactiontypeenum";
-import { FulfillmentStateEnum } from "./fulfillmentstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntentSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var confirmationstatusenum_1 = require("./confirmationstatusenum");
+var dialogactiontypeenum_1 = require("./dialogactiontypeenum");
+var fulfillmentstateenum_1 = require("./fulfillmentstateenum");
 // IntentSummary
 /**
  * Provides information about the state of an intent. You can use this information to get the current state of an intent so that you can process the intent, or so that you can return the intent to its previous state.
@@ -36,33 +39,33 @@ var IntentSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkpointLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkpointLabel" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "checkpointLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmationStatus" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "confirmationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogActionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogActionType" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "dialogActionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentState" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "fulfillmentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotToElicit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotToElicit" }),
         __metadata("design:type", String)
     ], IntentSummary.prototype, "slotToElicit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slots" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slots" }),
+        __metadata("design:type", Object)
     ], IntentSummary.prototype, "slots", void 0);
     return IntentSummary;
-}(SpeakeasyBase));
-export { IntentSummary };
+}(utils_1.SpeakeasyBase));
+exports.IntentSummary = IntentSummary;

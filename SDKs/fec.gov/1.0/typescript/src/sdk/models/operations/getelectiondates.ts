@@ -95,8 +95,8 @@ export class GetElectionDatesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getElectionDatesDefaultApplicationJsonObject?: GetElectionDatesDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getElectionDatesDefaultApplicationJSONObject?: GetElectionDatesDefaultApplicationJson;
 }

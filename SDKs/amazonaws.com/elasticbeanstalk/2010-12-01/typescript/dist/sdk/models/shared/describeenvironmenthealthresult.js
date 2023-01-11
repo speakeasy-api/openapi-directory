@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationMetrics } from "./applicationmetrics";
-import { InstanceHealthSummary } from "./instancehealthsummary";
-import { EnvironmentHealthEnum } from "./environmenthealthenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeEnvironmentHealthResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationmetrics_1 = require("./applicationmetrics");
+var instancehealthsummary_1 = require("./instancehealthsummary");
+var environmenthealthenum_1 = require("./environmenthealthenum");
 // DescribeEnvironmentHealthResult
 /**
  * Health details for an AWS Elastic Beanstalk environment.
@@ -36,37 +39,37 @@ var DescribeEnvironmentHealthResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ApplicationMetrics)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", applicationmetrics_1.ApplicationMetrics)
     ], DescribeEnvironmentHealthResult.prototype, "applicationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DescribeEnvironmentHealthResult.prototype, "causes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeEnvironmentHealthResult.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeEnvironmentHealthResult.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeEnvironmentHealthResult.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceHealthSummary)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancehealthsummary_1.InstanceHealthSummary)
     ], DescribeEnvironmentHealthResult.prototype, "instancesHealth", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DescribeEnvironmentHealthResult.prototype, "refreshedAt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeEnvironmentHealthResult.prototype, "status", void 0);
     return DescribeEnvironmentHealthResult;
-}(SpeakeasyBase));
-export { DescribeEnvironmentHealthResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeEnvironmentHealthResult = DescribeEnvironmentHealthResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerInstance } from "./containerinstance";
-import { Failure } from "./failure";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeContainerInstancesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerinstance_1 = require("./containerinstance");
+var failure_1 = require("./failure");
 var DescribeContainerInstancesResponse = /** @class */ (function (_super) {
     __extends(DescribeContainerInstancesResponse, _super);
     function DescribeContainerInstancesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstances", elemType: ContainerInstance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstances", elemType: containerinstance_1.ContainerInstance }),
         __metadata("design:type", Array)
     ], DescribeContainerInstancesResponse.prototype, "containerInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failures", elemType: Failure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failures", elemType: failure_1.Failure }),
         __metadata("design:type", Array)
     ], DescribeContainerInstancesResponse.prototype, "failures", void 0);
     return DescribeContainerInstancesResponse;
-}(SpeakeasyBase));
-export { DescribeContainerInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeContainerInstancesResponse = DescribeContainerInstancesResponse;

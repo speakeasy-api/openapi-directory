@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GoogleCloudContactcenterinsightsV1FaqAnswerData extends SpeakeasyBase {
     answer?: string;
     confidenceScore?: number;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     queryRecord?: string;
     question?: string;
     source?: string;

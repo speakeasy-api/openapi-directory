@@ -25,6 +25,6 @@ export declare class CloudtasksApiQueueUpdateRequest extends SpeakeasyBase {
 }
 export declare class CloudtasksApiQueueUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

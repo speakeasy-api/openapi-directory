@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Certificate = void 0;
+var utils_1 = require("../../../internal/utils");
 // Certificate
 /**
  * The SSL certificate that can be used to encrypt connections between the endpoints and the replication instance.
@@ -33,45 +36,45 @@ var Certificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateArn" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateCreationDate" }),
         __metadata("design:type", Date)
     ], Certificate.prototype, "certificateCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateIdentifier" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificateIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateOwner" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificateOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificatePem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificatePem" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificatePem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateWallet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateWallet" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "certificateWallet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeyLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeyLength" }),
         __metadata("design:type", Number)
     ], Certificate.prototype, "keyLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SigningAlgorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SigningAlgorithm" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "signingAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidFromDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidFromDate" }),
         __metadata("design:type", Date)
     ], Certificate.prototype, "validFromDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidToDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidToDate" }),
         __metadata("design:type", Date)
     ], Certificate.prototype, "validToDate", void 0);
     return Certificate;
-}(SpeakeasyBase));
-export { Certificate };
+}(utils_1.SpeakeasyBase));
+exports.Certificate = Certificate;

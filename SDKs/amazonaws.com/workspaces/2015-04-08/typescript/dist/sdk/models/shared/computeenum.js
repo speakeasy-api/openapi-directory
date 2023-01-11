@@ -1,4 +1,7 @@
-export var ComputeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeEnum = void 0;
+var ComputeEnum;
 (function (ComputeEnum) {
     ComputeEnum["Value"] = "VALUE";
     ComputeEnum["Standard"] = "STANDARD";
@@ -7,4 +10,4 @@ export var ComputeEnum;
     ComputeEnum["Graphics"] = "GRAPHICS";
     ComputeEnum["Powerpro"] = "POWERPRO";
     ComputeEnum["Graphicspro"] = "GRAPHICSPRO";
-})(ComputeEnum || (ComputeEnum = {}));
+})(ComputeEnum = exports.ComputeEnum || (exports.ComputeEnum = {}));

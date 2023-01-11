@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowExecutionCancelRequestedCauseEnum } from "./workflowexecutioncancelrequestedcauseenum";
-import { WorkflowExecution } from "./workflowexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowExecutionCancelRequestedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowexecutioncancelrequestedcauseenum_1 = require("./workflowexecutioncancelrequestedcauseenum");
+var workflowexecution_1 = require("./workflowexecution");
 // WorkflowExecutionCancelRequestedEventAttributes
 /**
  * Provides the details of the <code>WorkflowExecutionCancelRequested</code> event.
@@ -35,17 +38,17 @@ var WorkflowExecutionCancelRequestedEventAttributes = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], WorkflowExecutionCancelRequestedEventAttributes.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalInitiatedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalInitiatedEventId" }),
         __metadata("design:type", Number)
     ], WorkflowExecutionCancelRequestedEventAttributes.prototype, "externalInitiatedEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalWorkflowExecution" }),
-        __metadata("design:type", WorkflowExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalWorkflowExecution" }),
+        __metadata("design:type", workflowexecution_1.WorkflowExecution)
     ], WorkflowExecutionCancelRequestedEventAttributes.prototype, "externalWorkflowExecution", void 0);
     return WorkflowExecutionCancelRequestedEventAttributes;
-}(SpeakeasyBase));
-export { WorkflowExecutionCancelRequestedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowExecutionCancelRequestedEventAttributes = WorkflowExecutionCancelRequestedEventAttributes;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeEnvironmentDetail } from "./computeenvironmentdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeComputeEnvironmentsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeenvironmentdetail_1 = require("./computeenvironmentdetail");
 var DescribeComputeEnvironmentsResponse = /** @class */ (function (_super) {
     __extends(DescribeComputeEnvironmentsResponse, _super);
     function DescribeComputeEnvironmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEnvironments", elemType: ComputeEnvironmentDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEnvironments", elemType: computeenvironmentdetail_1.ComputeEnvironmentDetail }),
         __metadata("design:type", Array)
     ], DescribeComputeEnvironmentsResponse.prototype, "computeEnvironments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeComputeEnvironmentsResponse.prototype, "nextToken", void 0);
     return DescribeComputeEnvironmentsResponse;
-}(SpeakeasyBase));
-export { DescribeComputeEnvironmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeComputeEnvironmentsResponse = DescribeComputeEnvironmentsResponse;

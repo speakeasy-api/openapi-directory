@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LpgsvRequest, LpgsvResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: LpgsvRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      uid: "non",
+      uid: "sit",
     },
-    consentArtifact: "harum",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "sunt",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.lpgsv(req).then((res: LpgsvResponse | AxiosError) => {
+sdk.apIs.lpgsv(req).then((res: LpgsvResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.lpgsv(req).then((res: LpgsvResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `lpgsv` - LPG Subscription Voucher
 * `lpgtv` - Termination Voucher

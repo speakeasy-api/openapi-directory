@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostPromoteReadReplicaActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPromoteReadReplicaResponse = exports.PostPromoteReadReplicaRequest = exports.PostPromoteReadReplicaHeaders = exports.PostPromoteReadReplicaQueryParams = exports.PostPromoteReadReplicaVersionEnum = exports.PostPromoteReadReplicaActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostPromoteReadReplicaActionEnum;
 (function (PostPromoteReadReplicaActionEnum) {
     PostPromoteReadReplicaActionEnum["PromoteReadReplica"] = "PromoteReadReplica";
-})(PostPromoteReadReplicaActionEnum || (PostPromoteReadReplicaActionEnum = {}));
-export var PostPromoteReadReplicaVersionEnum;
+})(PostPromoteReadReplicaActionEnum = exports.PostPromoteReadReplicaActionEnum || (exports.PostPromoteReadReplicaActionEnum = {}));
+var PostPromoteReadReplicaVersionEnum;
 (function (PostPromoteReadReplicaVersionEnum) {
     PostPromoteReadReplicaVersionEnum["TwoThousandAndThirteen0909"] = "2013-09-09";
-})(PostPromoteReadReplicaVersionEnum || (PostPromoteReadReplicaVersionEnum = {}));
+})(PostPromoteReadReplicaVersionEnum = exports.PostPromoteReadReplicaVersionEnum || (exports.PostPromoteReadReplicaVersionEnum = {}));
 var PostPromoteReadReplicaQueryParams = /** @class */ (function (_super) {
     __extends(PostPromoteReadReplicaQueryParams, _super);
     function PostPromoteReadReplicaQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaQueryParams.prototype, "version", void 0);
     return PostPromoteReadReplicaQueryParams;
-}(SpeakeasyBase));
-export { PostPromoteReadReplicaQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPromoteReadReplicaQueryParams = PostPromoteReadReplicaQueryParams;
 var PostPromoteReadReplicaHeaders = /** @class */ (function (_super) {
     __extends(PostPromoteReadReplicaHeaders, _super);
     function PostPromoteReadReplicaHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostPromoteReadReplicaHeaders;
-}(SpeakeasyBase));
-export { PostPromoteReadReplicaHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostPromoteReadReplicaHeaders = PostPromoteReadReplicaHeaders;
 var PostPromoteReadReplicaRequest = /** @class */ (function (_super) {
     __extends(PostPromoteReadReplicaRequest, _super);
     function PostPromoteReadReplicaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPromoteReadReplicaQueryParams)
     ], PostPromoteReadReplicaRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPromoteReadReplicaHeaders)
     ], PostPromoteReadReplicaRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostPromoteReadReplicaRequest.prototype, "request", void 0);
     return PostPromoteReadReplicaRequest;
-}(SpeakeasyBase));
-export { PostPromoteReadReplicaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPromoteReadReplicaRequest = PostPromoteReadReplicaRequest;
 var PostPromoteReadReplicaResponse = /** @class */ (function (_super) {
     __extends(PostPromoteReadReplicaResponse, _super);
     function PostPromoteReadReplicaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostPromoteReadReplicaResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPromoteReadReplicaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPromoteReadReplicaResponse.prototype, "statusCode", void 0);
     return PostPromoteReadReplicaResponse;
-}(SpeakeasyBase));
-export { PostPromoteReadReplicaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPromoteReadReplicaResponse = PostPromoteReadReplicaResponse;

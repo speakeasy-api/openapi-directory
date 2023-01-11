@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,184 +23,186 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWfsInventoryResponse = exports.GetWfsInventoryRequest = exports.GetWfsInventory200ApplicationJson = exports.GetWfsInventory200ApplicationJsonPayload = exports.GetWfsInventory200ApplicationJsonPayloadInventory = exports.GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes = exports.GetWfsInventory200ApplicationJsonHeaders = exports.GetWfsInventoryHeaders = exports.GetWfsInventoryQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWfsInventoryQueryParams = /** @class */ (function (_super) {
     __extends(GetWfsInventoryQueryParams, _super);
     function GetWfsInventoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromModifiedDate" }),
         __metadata("design:type", String)
     ], GetWfsInventoryQueryParams.prototype, "fromModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", String)
     ], GetWfsInventoryQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], GetWfsInventoryQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sku" }),
         __metadata("design:type", String)
     ], GetWfsInventoryQueryParams.prototype, "sku", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=toModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=toModifiedDate" }),
         __metadata("design:type", String)
     ], GetWfsInventoryQueryParams.prototype, "toModifiedDate", void 0);
     return GetWfsInventoryQueryParams;
-}(SpeakeasyBase));
-export { GetWfsInventoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventoryQueryParams = GetWfsInventoryQueryParams;
 var GetWfsInventoryHeaders = /** @class */ (function (_super) {
     __extends(GetWfsInventoryHeaders, _super);
     function GetWfsInventoryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], GetWfsInventoryHeaders.prototype, "authorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
         __metadata("design:type", String)
-    ], GetWfsInventoryHeaders.prototype, "wmConsumerChannelType", void 0);
+    ], GetWfsInventoryHeaders.prototype, "wmCONSUMERCHANNELTYPE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
         __metadata("design:type", String)
-    ], GetWfsInventoryHeaders.prototype, "wmQosCorrelationId", void 0);
+    ], GetWfsInventoryHeaders.prototype, "wmQOSCORRELATIONID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
         __metadata("design:type", String)
-    ], GetWfsInventoryHeaders.prototype, "wmSecAccessToken", void 0);
+    ], GetWfsInventoryHeaders.prototype, "wmSECACCESSTOKEN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
         __metadata("design:type", String)
-    ], GetWfsInventoryHeaders.prototype, "wmSvcName", void 0);
+    ], GetWfsInventoryHeaders.prototype, "wmSVCNAME", void 0);
     return GetWfsInventoryHeaders;
-}(SpeakeasyBase));
-export { GetWfsInventoryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventoryHeaders = GetWfsInventoryHeaders;
 var GetWfsInventory200ApplicationJsonHeaders = /** @class */ (function (_super) {
     __extends(GetWfsInventory200ApplicationJsonHeaders, _super);
     function GetWfsInventory200ApplicationJsonHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], GetWfsInventory200ApplicationJsonHeaders.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], GetWfsInventory200ApplicationJsonHeaders.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], GetWfsInventory200ApplicationJsonHeaders.prototype, "totalCount", void 0);
     return GetWfsInventory200ApplicationJsonHeaders;
-}(SpeakeasyBase));
-export { GetWfsInventory200ApplicationJsonHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventory200ApplicationJsonHeaders = GetWfsInventory200ApplicationJsonHeaders;
 var GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes = /** @class */ (function (_super) {
     __extends(GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes, _super);
     function GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availToSellQty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availToSellQty" }),
         __metadata("design:type", Number)
     ], GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes.prototype, "availToSellQty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedDate" }),
         __metadata("design:type", String)
     ], GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes.prototype, "modifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onHandQty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onHandQty" }),
         __metadata("design:type", Number)
     ], GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes.prototype, "onHandQty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipNodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipNodeType" }),
         __metadata("design:type", String)
     ], GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes.prototype, "shipNodeType", void 0);
     return GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes;
-}(SpeakeasyBase));
-export { GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes = GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes;
 var GetWfsInventory200ApplicationJsonPayloadInventory = /** @class */ (function (_super) {
     __extends(GetWfsInventory200ApplicationJsonPayloadInventory, _super);
     function GetWfsInventory200ApplicationJsonPayloadInventory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipNodes", elemType: GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipNodes", elemType: GetWfsInventory200ApplicationJsonPayloadInventoryShipNodes }),
         __metadata("design:type", Array)
     ], GetWfsInventory200ApplicationJsonPayloadInventory.prototype, "shipNodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sku" }),
         __metadata("design:type", String)
     ], GetWfsInventory200ApplicationJsonPayloadInventory.prototype, "sku", void 0);
     return GetWfsInventory200ApplicationJsonPayloadInventory;
-}(SpeakeasyBase));
-export { GetWfsInventory200ApplicationJsonPayloadInventory };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventory200ApplicationJsonPayloadInventory = GetWfsInventory200ApplicationJsonPayloadInventory;
 var GetWfsInventory200ApplicationJsonPayload = /** @class */ (function (_super) {
     __extends(GetWfsInventory200ApplicationJsonPayload, _super);
     function GetWfsInventory200ApplicationJsonPayload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventory", elemType: GetWfsInventory200ApplicationJsonPayloadInventory }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventory", elemType: GetWfsInventory200ApplicationJsonPayloadInventory }),
         __metadata("design:type", Array)
     ], GetWfsInventory200ApplicationJsonPayload.prototype, "inventory", void 0);
     return GetWfsInventory200ApplicationJsonPayload;
-}(SpeakeasyBase));
-export { GetWfsInventory200ApplicationJsonPayload };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventory200ApplicationJsonPayload = GetWfsInventory200ApplicationJsonPayload;
 var GetWfsInventory200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetWfsInventory200ApplicationJson, _super);
     function GetWfsInventory200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
         __metadata("design:type", GetWfsInventory200ApplicationJsonHeaders)
     ], GetWfsInventory200ApplicationJson.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", GetWfsInventory200ApplicationJsonPayload)
     ], GetWfsInventory200ApplicationJson.prototype, "payload", void 0);
     return GetWfsInventory200ApplicationJson;
-}(SpeakeasyBase));
-export { GetWfsInventory200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventory200ApplicationJson = GetWfsInventory200ApplicationJson;
 var GetWfsInventoryRequest = /** @class */ (function (_super) {
     __extends(GetWfsInventoryRequest, _super);
     function GetWfsInventoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWfsInventoryQueryParams)
     ], GetWfsInventoryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWfsInventoryHeaders)
     ], GetWfsInventoryRequest.prototype, "headers", void 0);
     return GetWfsInventoryRequest;
-}(SpeakeasyBase));
-export { GetWfsInventoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventoryRequest = GetWfsInventoryRequest;
 var GetWfsInventoryResponse = /** @class */ (function (_super) {
     __extends(GetWfsInventoryResponse, _super);
     function GetWfsInventoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWfsInventoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWfsInventoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWfsInventory200ApplicationJson)
-    ], GetWfsInventoryResponse.prototype, "getWfsInventory200ApplicationJsonObject", void 0);
+    ], GetWfsInventoryResponse.prototype, "getWFSInventory200ApplicationJSONObject", void 0);
     return GetWfsInventoryResponse;
-}(SpeakeasyBase));
-export { GetWfsInventoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWfsInventoryResponse = GetWfsInventoryResponse;

@@ -52,5 +52,5 @@ export class GetDeviceLossAndLatencyHistoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceLossAndLatencyHistory200ApplicationJsonObject?: Map<string, any>;
+  getDeviceLossAndLatencyHistory200ApplicationJSONObject?: Record<string, any>;
 }

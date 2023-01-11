@@ -9,7 +9,7 @@ export declare class DescribeDatasetImportJobResponse extends SpeakeasyBase {
     datasetImportJobArn?: string;
     datasetImportJobName?: string;
     estimatedTimeRemainingInMinutes?: number;
-    fieldStatistics?: Map<string, Statistics>;
+    fieldStatistics?: Record<string, Statistics>;
     geolocationFormat?: string;
     lastModificationTime?: Date;
     message?: string;

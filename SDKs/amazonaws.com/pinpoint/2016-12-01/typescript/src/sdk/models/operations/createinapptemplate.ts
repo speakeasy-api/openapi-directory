@@ -42,7 +42,7 @@ export class CreateInAppTemplateRequestBodyInAppTemplateRequest extends Speakeas
   content?: shared.InAppMessageContent[];
 
   @SpeakeasyMetadata({ data: "json, name=CustomConfig" })
-  customConfig?: Map<string, string>;
+  customConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Layout" })
   layout?: shared.LayoutEnum;
@@ -51,7 +51,7 @@ export class CreateInAppTemplateRequestBodyInAppTemplateRequest extends Speakeas
   templateDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

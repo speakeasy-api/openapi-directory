@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCameraVideoSettingsResponse = exports.GetDeviceCameraVideoSettingsRequest = exports.GetDeviceCameraVideoSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCameraVideoSettingsPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoSettingsPathParams, _super);
     function GetDeviceCameraVideoSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCameraVideoSettingsPathParams.prototype, "serial", void 0);
     return GetDeviceCameraVideoSettingsPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoSettingsPathParams = GetDeviceCameraVideoSettingsPathParams;
 var GetDeviceCameraVideoSettingsRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoSettingsRequest, _super);
     function GetDeviceCameraVideoSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraVideoSettingsPathParams)
     ], GetDeviceCameraVideoSettingsRequest.prototype, "pathParams", void 0);
     return GetDeviceCameraVideoSettingsRequest;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoSettingsRequest = GetDeviceCameraVideoSettingsRequest;
 var GetDeviceCameraVideoSettingsResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCameraVideoSettingsResponse, _super);
     function GetDeviceCameraVideoSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCameraVideoSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCameraVideoSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCameraVideoSettingsResponse.prototype, "getDeviceCameraVideoSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCameraVideoSettingsResponse.prototype, "getDeviceCameraVideoSettings200ApplicationJSONObject", void 0);
     return GetDeviceCameraVideoSettingsResponse;
-}(SpeakeasyBase));
-export { GetDeviceCameraVideoSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraVideoSettingsResponse = GetDeviceCameraVideoSettingsResponse;

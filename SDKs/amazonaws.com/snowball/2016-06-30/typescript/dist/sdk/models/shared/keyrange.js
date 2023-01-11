@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // KeyRange
 /**
  * Contains a key range. For export jobs, a <code>S3Resource</code> object can have an optional <code>KeyRange</code> value. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.
@@ -33,13 +36,13 @@ var KeyRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BeginMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BeginMarker" }),
         __metadata("design:type", String)
     ], KeyRange.prototype, "beginMarker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndMarker" }),
         __metadata("design:type", String)
     ], KeyRange.prototype, "endMarker", void 0);
     return KeyRange;
-}(SpeakeasyBase));
-export { KeyRange };
+}(utils_1.SpeakeasyBase));
+exports.KeyRange = KeyRange;

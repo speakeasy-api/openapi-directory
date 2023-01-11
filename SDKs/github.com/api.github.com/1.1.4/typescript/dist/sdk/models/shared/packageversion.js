@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PackageVersion = exports.PackageVersionPackageVersionMetadata = exports.PackageVersionPackageVersionMetadataPackageTypeEnum = exports.PackageVersionPackageVersionMetadataDockerMetadata = exports.PackageVersionPackageVersionMetadataContainerMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 var PackageVersionPackageVersionMetadataContainerMetadata = /** @class */ (function (_super) {
     __extends(PackageVersionPackageVersionMetadataContainerMetadata, _super);
     function PackageVersionPackageVersionMetadataContainerMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], PackageVersionPackageVersionMetadataContainerMetadata.prototype, "tags", void 0);
     return PackageVersionPackageVersionMetadataContainerMetadata;
-}(SpeakeasyBase));
-export { PackageVersionPackageVersionMetadataContainerMetadata };
+}(utils_1.SpeakeasyBase));
+exports.PackageVersionPackageVersionMetadataContainerMetadata = PackageVersionPackageVersionMetadataContainerMetadata;
 var PackageVersionPackageVersionMetadataDockerMetadata = /** @class */ (function (_super) {
     __extends(PackageVersionPackageVersionMetadataDockerMetadata, _super);
     function PackageVersionPackageVersionMetadataDockerMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
         __metadata("design:type", Array)
     ], PackageVersionPackageVersionMetadataDockerMetadata.prototype, "tag", void 0);
     return PackageVersionPackageVersionMetadataDockerMetadata;
-}(SpeakeasyBase));
-export { PackageVersionPackageVersionMetadataDockerMetadata };
-export var PackageVersionPackageVersionMetadataPackageTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PackageVersionPackageVersionMetadataDockerMetadata = PackageVersionPackageVersionMetadataDockerMetadata;
+var PackageVersionPackageVersionMetadataPackageTypeEnum;
 (function (PackageVersionPackageVersionMetadataPackageTypeEnum) {
     PackageVersionPackageVersionMetadataPackageTypeEnum["Npm"] = "npm";
     PackageVersionPackageVersionMetadataPackageTypeEnum["Maven"] = "maven";
@@ -55,27 +58,27 @@ export var PackageVersionPackageVersionMetadataPackageTypeEnum;
     PackageVersionPackageVersionMetadataPackageTypeEnum["Docker"] = "docker";
     PackageVersionPackageVersionMetadataPackageTypeEnum["Nuget"] = "nuget";
     PackageVersionPackageVersionMetadataPackageTypeEnum["Container"] = "container";
-})(PackageVersionPackageVersionMetadataPackageTypeEnum || (PackageVersionPackageVersionMetadataPackageTypeEnum = {}));
+})(PackageVersionPackageVersionMetadataPackageTypeEnum = exports.PackageVersionPackageVersionMetadataPackageTypeEnum || (exports.PackageVersionPackageVersionMetadataPackageTypeEnum = {}));
 var PackageVersionPackageVersionMetadata = /** @class */ (function (_super) {
     __extends(PackageVersionPackageVersionMetadata, _super);
     function PackageVersionPackageVersionMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
         __metadata("design:type", PackageVersionPackageVersionMetadataContainerMetadata)
     ], PackageVersionPackageVersionMetadata.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=docker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=docker" }),
         __metadata("design:type", PackageVersionPackageVersionMetadataDockerMetadata)
     ], PackageVersionPackageVersionMetadata.prototype, "docker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package_type" }),
         __metadata("design:type", String)
     ], PackageVersionPackageVersionMetadata.prototype, "packageType", void 0);
     return PackageVersionPackageVersionMetadata;
-}(SpeakeasyBase));
-export { PackageVersionPackageVersionMetadata };
+}(utils_1.SpeakeasyBase));
+exports.PackageVersionPackageVersionMetadata = PackageVersionPackageVersionMetadata;
 // PackageVersion
 /**
  * A version of a software package
@@ -86,49 +89,49 @@ var PackageVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], PackageVersion.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted_at" }),
         __metadata("design:type", Date)
     ], PackageVersion.prototype, "deletedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PackageVersion.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", PackageVersionPackageVersionMetadata)
     ], PackageVersion.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package_html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package_html_url" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "packageHtmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], PackageVersion.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PackageVersion.prototype, "url", void 0);
     return PackageVersion;
-}(SpeakeasyBase));
-export { PackageVersion };
+}(utils_1.SpeakeasyBase));
+exports.PackageVersion = PackageVersion;

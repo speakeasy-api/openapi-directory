@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Country extends SpeakeasyBase {
     countryCode?: string;
-    names?: Map<string, string>;
+    names?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MissDistance } from "./missdistance";
-import { RelVelocity } from "./relvelocity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloseApproachData = void 0;
+var utils_1 = require("../../../internal/utils");
+var missdistance_1 = require("./missdistance");
+var relvelocity_1 = require("./relvelocity");
 var CloseApproachData = /** @class */ (function (_super) {
     __extends(CloseApproachData, _super);
     function CloseApproachData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_approach_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_approach_date" }),
         __metadata("design:type", String)
     ], CloseApproachData.prototype, "closeApproachDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_approach_date_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_approach_date_full" }),
         __metadata("design:type", String)
     ], CloseApproachData.prototype, "closeApproachDateFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=epoch_date_close_approach" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=epoch_date_close_approach" }),
         __metadata("design:type", Number)
     ], CloseApproachData.prototype, "epochDateCloseApproach", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miss_distance" }),
-        __metadata("design:type", MissDistance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miss_distance" }),
+        __metadata("design:type", missdistance_1.MissDistance)
     ], CloseApproachData.prototype, "missDistance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orbiting_body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orbiting_body" }),
         __metadata("design:type", String)
     ], CloseApproachData.prototype, "orbitingBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relative_velocity" }),
-        __metadata("design:type", RelVelocity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relative_velocity" }),
+        __metadata("design:type", relvelocity_1.RelVelocity)
     ], CloseApproachData.prototype, "relativeVelocity", void 0);
     return CloseApproachData;
-}(SpeakeasyBase));
-export { CloseApproachData };
+}(utils_1.SpeakeasyBase));
+exports.CloseApproachData = CloseApproachData;

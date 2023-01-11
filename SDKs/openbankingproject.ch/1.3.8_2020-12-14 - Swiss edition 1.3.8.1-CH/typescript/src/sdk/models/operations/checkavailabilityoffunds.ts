@@ -17,7 +17,7 @@ export class CheckAvailabilityOfFundsHeaders extends SpeakeasyBase {
   tppSignatureCertificate?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Request-ID" })
-  xRequestId: string;
+  xRequestID: string;
 }
 
 
@@ -56,47 +56,47 @@ export class CheckAvailabilityOfFundsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error400Ais?: shared.Error400Ais;
+  error400AIS?: shared.Error400Ais;
 
   @SpeakeasyMetadata()
-  error400NgAis?: shared.Error400NgAis;
+  error400NGAIS?: shared.Error400NgAis;
 
   @SpeakeasyMetadata()
-  error401NgPiis?: shared.Error401NgPiis;
+  error401NGPIIS?: shared.Error401NgPiis;
 
   @SpeakeasyMetadata()
-  error401Piis?: shared.Error401Piis;
+  error401PIIS?: shared.Error401Piis;
 
   @SpeakeasyMetadata()
-  error403NgPiis?: shared.Error403NgPiis;
+  error403NGPIIS?: shared.Error403NgPiis;
 
   @SpeakeasyMetadata()
-  error403Piis?: shared.Error403Piis;
+  error403PIIS?: shared.Error403Piis;
 
   @SpeakeasyMetadata()
-  error404NgPiis?: shared.Error404NgPiis;
+  error404NGPIIS?: shared.Error404NgPiis;
 
   @SpeakeasyMetadata()
-  error404Piis?: shared.Error404Piis;
+  error404PIIS?: shared.Error404Piis;
 
   @SpeakeasyMetadata()
-  error405NgPiis?: shared.Error405NgPiis;
+  error405NGPIIS?: shared.Error405NgPiis;
 
   @SpeakeasyMetadata()
-  error405Piis?: shared.Error405Piis;
+  error405PIIS?: shared.Error405Piis;
 
   @SpeakeasyMetadata()
-  error409NgPiis?: shared.Error409NgPiis;
+  error409NGPIIS?: shared.Error409NgPiis;
 
   @SpeakeasyMetadata()
-  error409Piis?: shared.Error409Piis;
+  error409PIIS?: shared.Error409Piis;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkAvailabilityOfFunds200ApplicationJsonObject?: CheckAvailabilityOfFunds200ApplicationJson;
+  checkAvailabilityOfFunds200ApplicationJSONObject?: CheckAvailabilityOfFunds200ApplicationJson;
 }

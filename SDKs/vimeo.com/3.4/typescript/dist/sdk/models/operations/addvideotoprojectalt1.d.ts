@@ -14,5 +14,5 @@ export declare class AddVideoToProjectAlt1Request extends SpeakeasyBase {
 export declare class AddVideoToProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

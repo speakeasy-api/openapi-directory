@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteProjectUsernameProjectBuildCacheResponse = exports.DeleteProjectUsernameProjectBuildCacheRequest = exports.DeleteProjectUsernameProjectBuildCache200ApplicationJson = exports.DeleteProjectUsernameProjectBuildCachePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteProjectUsernameProjectBuildCachePathParams = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectBuildCachePathParams, _super);
     function DeleteProjectUsernameProjectBuildCachePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectBuildCachePathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectBuildCachePathParams.prototype, "username", void 0);
     return DeleteProjectUsernameProjectBuildCachePathParams;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectBuildCachePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectBuildCachePathParams = DeleteProjectUsernameProjectBuildCachePathParams;
 var DeleteProjectUsernameProjectBuildCache200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectBuildCache200ApplicationJson, _super);
     function DeleteProjectUsernameProjectBuildCache200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectBuildCache200ApplicationJson.prototype, "status", void 0);
     return DeleteProjectUsernameProjectBuildCache200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectBuildCache200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectBuildCache200ApplicationJson = DeleteProjectUsernameProjectBuildCache200ApplicationJson;
 var DeleteProjectUsernameProjectBuildCacheRequest = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectBuildCacheRequest, _super);
     function DeleteProjectUsernameProjectBuildCacheRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteProjectUsernameProjectBuildCachePathParams)
     ], DeleteProjectUsernameProjectBuildCacheRequest.prototype, "pathParams", void 0);
     return DeleteProjectUsernameProjectBuildCacheRequest;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectBuildCacheRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectBuildCacheRequest = DeleteProjectUsernameProjectBuildCacheRequest;
 var DeleteProjectUsernameProjectBuildCacheResponse = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectBuildCacheResponse, _super);
     function DeleteProjectUsernameProjectBuildCacheResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectBuildCacheResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DeleteProjectUsernameProjectBuildCache200ApplicationJson)
-    ], DeleteProjectUsernameProjectBuildCacheResponse.prototype, "deleteProjectUsernameProjectBuildCache200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteProjectUsernameProjectBuildCacheResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteProjectUsernameProjectBuildCache200ApplicationJson)
+    ], DeleteProjectUsernameProjectBuildCacheResponse.prototype, "deleteProjectUsernameProjectBuildCache200ApplicationJSONObject", void 0);
     return DeleteProjectUsernameProjectBuildCacheResponse;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectBuildCacheResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectBuildCacheResponse = DeleteProjectUsernameProjectBuildCacheResponse;

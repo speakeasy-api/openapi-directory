@@ -6,7 +6,7 @@ import { View } from "./view";
 
 // Session
 /** 
- * A user session with an open story
+ * Base model for all types
 **/
 export class Session extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=collaborator" })

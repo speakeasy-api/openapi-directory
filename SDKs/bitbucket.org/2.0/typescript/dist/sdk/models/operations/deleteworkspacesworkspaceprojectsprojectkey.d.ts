@@ -16,5 +16,5 @@ export declare class DeleteWorkspacesWorkspaceProjectsProjectKeyRequest extends 
 export declare class DeleteWorkspacesWorkspaceProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

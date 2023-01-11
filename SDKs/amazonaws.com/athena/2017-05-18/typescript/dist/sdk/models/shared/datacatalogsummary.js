@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataCatalogTypeEnum } from "./datacatalogtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataCatalogSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var datacatalogtypeenum_1 = require("./datacatalogtypeenum");
 // DataCatalogSummary
 /**
  * The summary information for the data catalog, which includes its name and type.
@@ -34,13 +37,13 @@ var DataCatalogSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogName" }),
         __metadata("design:type", String)
     ], DataCatalogSummary.prototype, "catalogName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], DataCatalogSummary.prototype, "type", void 0);
     return DataCatalogSummary;
-}(SpeakeasyBase));
-export { DataCatalogSummary };
+}(utils_1.SpeakeasyBase));
+exports.DataCatalogSummary = DataCatalogSummary;

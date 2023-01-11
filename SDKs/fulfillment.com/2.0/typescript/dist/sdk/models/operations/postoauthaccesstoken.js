@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,143 +14,168 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOauthAccessTokenResponse = exports.PostOauthAccessTokenRequest = exports.PostOauthAccessTokenAccessTokenResponseV2 = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2 = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum;
 (function (PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum) {
     PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum["Password"] = "password";
     PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum["RefreshToken"] = "refresh_token";
-})(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum || (PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum = {}));
-export var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum;
+})(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum || (exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum = {}));
+var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum;
 (function (PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum) {
     PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum["Oms"] = "oms";
-})(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum || (PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum = {}));
+})(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum = exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum || (exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum = {}));
 var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2 = /** @class */ (function (_super) {
     __extends(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2, _super);
     function PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_secret" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grant_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grant_type" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2.prototype, "username", void 0);
     return PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2;
-}(SpeakeasyBase));
-export { PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2 = PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2;
 var PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 = /** @class */ (function (_super) {
     __extends(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3, _super);
     function PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_secret" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grant_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grant_type" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_token" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3.prototype, "refreshToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3.prototype, "scope", void 0);
     return PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3;
-}(SpeakeasyBase));
-export { PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 = PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3;
 var PostOauthAccessTokenAccessTokenResponseV2 = /** @class */ (function (_super) {
     __extends(PostOauthAccessTokenAccessTokenResponseV2, _super);
     function PostOauthAccessTokenAccessTokenResponseV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenAccessTokenResponseV2.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_in" }),
         __metadata("design:type", Number)
     ], PostOauthAccessTokenAccessTokenResponseV2.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_token" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenAccessTokenResponseV2.prototype, "refreshToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_type" }),
         __metadata("design:type", String)
     ], PostOauthAccessTokenAccessTokenResponseV2.prototype, "tokenType", void 0);
     return PostOauthAccessTokenAccessTokenResponseV2;
-}(SpeakeasyBase));
-export { PostOauthAccessTokenAccessTokenResponseV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthAccessTokenAccessTokenResponseV2 = PostOauthAccessTokenAccessTokenResponseV2;
 var PostOauthAccessTokenRequest = /** @class */ (function (_super) {
     __extends(PostOauthAccessTokenRequest, _super);
     function PostOauthAccessTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PostOauthAccessTokenRequest.prototype, "request", void 0);
     return PostOauthAccessTokenRequest;
-}(SpeakeasyBase));
-export { PostOauthAccessTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthAccessTokenRequest = PostOauthAccessTokenRequest;
 var PostOauthAccessTokenResponse = /** @class */ (function (_super) {
     __extends(PostOauthAccessTokenResponse, _super);
     function PostOauthAccessTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOauthAccessTokenAccessTokenResponseV2)
     ], PostOauthAccessTokenResponse.prototype, "accessTokenResponseV2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOauthAccessTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOauthAccessTokenResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OneordersGetResponses404ContentApplication1jsonSchema)
     ], PostOauthAccessTokenResponse.prototype, "oneordersGetResponses404ContentApplication1jsonSchema", void 0);
     return PostOauthAccessTokenResponse;
-}(SpeakeasyBase));
-export { PostOauthAccessTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthAccessTokenResponse = PostOauthAccessTokenResponse;

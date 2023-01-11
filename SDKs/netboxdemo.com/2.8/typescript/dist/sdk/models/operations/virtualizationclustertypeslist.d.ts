@@ -53,5 +53,5 @@ export declare class VirtualizationClusterTypesListRequest extends SpeakeasyBase
 export declare class VirtualizationClusterTypesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationClusterTypesList200ApplicationJsonObject?: VirtualizationClusterTypesList200ApplicationJson;
+    virtualizationClusterTypesList200ApplicationJSONObject?: VirtualizationClusterTypesList200ApplicationJson;
 }

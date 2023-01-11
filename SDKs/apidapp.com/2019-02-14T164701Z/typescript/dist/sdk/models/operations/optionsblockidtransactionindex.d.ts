@@ -8,7 +8,7 @@ export declare class OptionsBlockIdTransactionIndexRequest extends SpeakeasyBase
 }
 export declare class OptionsBlockIdTransactionIndexResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

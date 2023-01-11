@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,242 +14,267 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateConsentResponse = exports.CreateConsentRequest = exports.CreateConsentSecurity = exports.CreateConsentHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateConsentHeaders = /** @class */ (function (_super) {
     __extends(CreateConsentHeaders, _super);
     function CreateConsentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Digest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Digest" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "digest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Accept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Accept" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuAccept", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Accept-Charset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Accept-Charset" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuAcceptCharset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Accept-Encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Accept-Encoding" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuAcceptEncoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Accept-Language" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuAcceptLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuCorporateId", void 0);
+    ], CreateConsentHeaders.prototype, "psuCorporateID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID-Type" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuCorporateIdType", void 0);
+    ], CreateConsentHeaders.prototype, "psuCorporateIDType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Device-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Device-ID" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuDeviceId", void 0);
+    ], CreateConsentHeaders.prototype, "psuDeviceID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Geo-Location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Geo-Location" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuGeoLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Http-Method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-Http-Method" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuHttpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-ID" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuId", void 0);
+    ], CreateConsentHeaders.prototype, "psuID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-ID-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-ID-Type" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuIdType", void 0);
+    ], CreateConsentHeaders.prototype, "psuIDType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-IP-Address" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuIpAddress", void 0);
+    ], CreateConsentHeaders.prototype, "psuIPAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-IP-Port" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "psuIpPort", void 0);
+    ], CreateConsentHeaders.prototype, "psuIPPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-User-Agent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=PSU-User-Agent" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "psuUserAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Signature" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Brand-Logging-Information" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Brand-Logging-Information" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "tppBrandLoggingInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Explicit-Authorisation-Preferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Explicit-Authorisation-Preferred" }),
         __metadata("design:type", Boolean)
     ], CreateConsentHeaders.prototype, "tppExplicitAuthorisationPreferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Nok-Redirect-URI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Nok-Redirect-URI" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "tppNokRedirectUri", void 0);
+    ], CreateConsentHeaders.prototype, "tppNokRedirectURI", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Notification-Content-Preferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Notification-Content-Preferred" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "tppNotificationContentPreferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Notification-URI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Notification-URI" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "tppNotificationUri", void 0);
+    ], CreateConsentHeaders.prototype, "tppNotificationURI", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Redirect-Preferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Redirect-Preferred" }),
         __metadata("design:type", Boolean)
     ], CreateConsentHeaders.prototype, "tppRedirectPreferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Redirect-URI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Redirect-URI" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "tppRedirectUri", void 0);
+    ], CreateConsentHeaders.prototype, "tppRedirectURI", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=TPP-Signature-Certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=TPP-Signature-Certificate" }),
         __metadata("design:type", String)
     ], CreateConsentHeaders.prototype, "tppSignatureCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Request-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Request-ID" }),
         __metadata("design:type", String)
-    ], CreateConsentHeaders.prototype, "xRequestId", void 0);
+    ], CreateConsentHeaders.prototype, "xRequestID", void 0);
     return CreateConsentHeaders;
-}(SpeakeasyBase));
-export { CreateConsentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateConsentHeaders = CreateConsentHeaders;
 var CreateConsentSecurity = /** @class */ (function (_super) {
     __extends(CreateConsentSecurity, _super);
     function CreateConsentSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", shared.SchemeBearerAuthOAuth)
     ], CreateConsentSecurity.prototype, "bearerAuthOAuth", void 0);
     return CreateConsentSecurity;
-}(SpeakeasyBase));
-export { CreateConsentSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CreateConsentSecurity = CreateConsentSecurity;
 var CreateConsentRequest = /** @class */ (function (_super) {
     __extends(CreateConsentRequest, _super);
     function CreateConsentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateConsentHeaders)
     ], CreateConsentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Consents)
     ], CreateConsentRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateConsentSecurity)
     ], CreateConsentRequest.prototype, "security", void 0);
     return CreateConsentRequest;
-}(SpeakeasyBase));
-export { CreateConsentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateConsentRequest = CreateConsentRequest;
 var CreateConsentResponse = /** @class */ (function (_super) {
     __extends(CreateConsentResponse, _super);
     function CreateConsentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateConsentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error400Ais)
-    ], CreateConsentResponse.prototype, "error400Ais", void 0);
+    ], CreateConsentResponse.prototype, "error400AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error400NgAis)
-    ], CreateConsentResponse.prototype, "error400NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error400NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error401Ais)
-    ], CreateConsentResponse.prototype, "error401Ais", void 0);
+    ], CreateConsentResponse.prototype, "error401AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error401NgAis)
-    ], CreateConsentResponse.prototype, "error401NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error401NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error403Ais)
-    ], CreateConsentResponse.prototype, "error403Ais", void 0);
+    ], CreateConsentResponse.prototype, "error403AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error403NgAis)
-    ], CreateConsentResponse.prototype, "error403NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error403NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error404Ais)
-    ], CreateConsentResponse.prototype, "error404Ais", void 0);
+    ], CreateConsentResponse.prototype, "error404AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error404NgAis)
-    ], CreateConsentResponse.prototype, "error404NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error404NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error405Ais)
-    ], CreateConsentResponse.prototype, "error405Ais", void 0);
+    ], CreateConsentResponse.prototype, "error405AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error405NgAis)
-    ], CreateConsentResponse.prototype, "error405NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error405NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error406Ais)
-    ], CreateConsentResponse.prototype, "error406Ais", void 0);
+    ], CreateConsentResponse.prototype, "error406AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error406NgAis)
-    ], CreateConsentResponse.prototype, "error406NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error406NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error409Ais)
-    ], CreateConsentResponse.prototype, "error409Ais", void 0);
+    ], CreateConsentResponse.prototype, "error409AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error409NgAis)
-    ], CreateConsentResponse.prototype, "error409NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error409NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error429Ais)
-    ], CreateConsentResponse.prototype, "error429Ais", void 0);
+    ], CreateConsentResponse.prototype, "error429AIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Error429NgAis)
-    ], CreateConsentResponse.prototype, "error429NgAis", void 0);
+    ], CreateConsentResponse.prototype, "error429NGAIS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateConsentResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateConsentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ConsentsResponse201)
     ], CreateConsentResponse.prototype, "consentsResponse201", void 0);
     return CreateConsentResponse;
-}(SpeakeasyBase));
-export { CreateConsentResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateConsentResponse = CreateConsentResponse;

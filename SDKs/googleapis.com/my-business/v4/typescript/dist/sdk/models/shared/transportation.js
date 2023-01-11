@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TransportationAirportShuttleExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transportation = exports.TransportationTransferExceptionEnum = exports.TransportationPrivateCarServiceExceptionEnum = exports.TransportationLocalShuttleExceptionEnum = exports.TransportationFreePrivateCarServiceExceptionEnum = exports.TransportationFreeAirportShuttleExceptionEnum = exports.TransportationCarRentalOnPropertyExceptionEnum = exports.TransportationAirportShuttleExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TransportationAirportShuttleExceptionEnum;
 (function (TransportationAirportShuttleExceptionEnum) {
     TransportationAirportShuttleExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationAirportShuttleExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationAirportShuttleExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationAirportShuttleExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationAirportShuttleExceptionEnum || (TransportationAirportShuttleExceptionEnum = {}));
-export var TransportationCarRentalOnPropertyExceptionEnum;
+})(TransportationAirportShuttleExceptionEnum = exports.TransportationAirportShuttleExceptionEnum || (exports.TransportationAirportShuttleExceptionEnum = {}));
+var TransportationCarRentalOnPropertyExceptionEnum;
 (function (TransportationCarRentalOnPropertyExceptionEnum) {
     TransportationCarRentalOnPropertyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationCarRentalOnPropertyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationCarRentalOnPropertyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationCarRentalOnPropertyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationCarRentalOnPropertyExceptionEnum || (TransportationCarRentalOnPropertyExceptionEnum = {}));
-export var TransportationFreeAirportShuttleExceptionEnum;
+})(TransportationCarRentalOnPropertyExceptionEnum = exports.TransportationCarRentalOnPropertyExceptionEnum || (exports.TransportationCarRentalOnPropertyExceptionEnum = {}));
+var TransportationFreeAirportShuttleExceptionEnum;
 (function (TransportationFreeAirportShuttleExceptionEnum) {
     TransportationFreeAirportShuttleExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationFreeAirportShuttleExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationFreeAirportShuttleExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationFreeAirportShuttleExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationFreeAirportShuttleExceptionEnum || (TransportationFreeAirportShuttleExceptionEnum = {}));
-export var TransportationFreePrivateCarServiceExceptionEnum;
+})(TransportationFreeAirportShuttleExceptionEnum = exports.TransportationFreeAirportShuttleExceptionEnum || (exports.TransportationFreeAirportShuttleExceptionEnum = {}));
+var TransportationFreePrivateCarServiceExceptionEnum;
 (function (TransportationFreePrivateCarServiceExceptionEnum) {
     TransportationFreePrivateCarServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationFreePrivateCarServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationFreePrivateCarServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationFreePrivateCarServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationFreePrivateCarServiceExceptionEnum || (TransportationFreePrivateCarServiceExceptionEnum = {}));
-export var TransportationLocalShuttleExceptionEnum;
+})(TransportationFreePrivateCarServiceExceptionEnum = exports.TransportationFreePrivateCarServiceExceptionEnum || (exports.TransportationFreePrivateCarServiceExceptionEnum = {}));
+var TransportationLocalShuttleExceptionEnum;
 (function (TransportationLocalShuttleExceptionEnum) {
     TransportationLocalShuttleExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationLocalShuttleExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationLocalShuttleExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationLocalShuttleExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationLocalShuttleExceptionEnum || (TransportationLocalShuttleExceptionEnum = {}));
-export var TransportationPrivateCarServiceExceptionEnum;
+})(TransportationLocalShuttleExceptionEnum = exports.TransportationLocalShuttleExceptionEnum || (exports.TransportationLocalShuttleExceptionEnum = {}));
+var TransportationPrivateCarServiceExceptionEnum;
 (function (TransportationPrivateCarServiceExceptionEnum) {
     TransportationPrivateCarServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationPrivateCarServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationPrivateCarServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationPrivateCarServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationPrivateCarServiceExceptionEnum || (TransportationPrivateCarServiceExceptionEnum = {}));
-export var TransportationTransferExceptionEnum;
+})(TransportationPrivateCarServiceExceptionEnum = exports.TransportationPrivateCarServiceExceptionEnum || (exports.TransportationPrivateCarServiceExceptionEnum = {}));
+var TransportationTransferExceptionEnum;
 (function (TransportationTransferExceptionEnum) {
     TransportationTransferExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     TransportationTransferExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     TransportationTransferExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     TransportationTransferExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(TransportationTransferExceptionEnum || (TransportationTransferExceptionEnum = {}));
+})(TransportationTransferExceptionEnum = exports.TransportationTransferExceptionEnum || (exports.TransportationTransferExceptionEnum = {}));
 // Transportation
 /**
  * Vehicles or vehicular services facilitated or owned by the property.
@@ -82,61 +85,61 @@ var Transportation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=airportShuttle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=airportShuttle" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "airportShuttle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=airportShuttleException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=airportShuttleException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "airportShuttleException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carRentalOnProperty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carRentalOnProperty" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "carRentalOnProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carRentalOnPropertyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carRentalOnPropertyException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "carRentalOnPropertyException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeAirportShuttle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeAirportShuttle" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "freeAirportShuttle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeAirportShuttleException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeAirportShuttleException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "freeAirportShuttleException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freePrivateCarService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freePrivateCarService" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "freePrivateCarService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freePrivateCarServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freePrivateCarServiceException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "freePrivateCarServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localShuttle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localShuttle" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "localShuttle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localShuttleException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localShuttleException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "localShuttleException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateCarService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateCarService" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "privateCarService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateCarServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateCarServiceException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "privateCarServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer" }),
         __metadata("design:type", Boolean)
     ], Transportation.prototype, "transfer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferException" }),
         __metadata("design:type", String)
     ], Transportation.prototype, "transferException", void 0);
     return Transportation;
-}(SpeakeasyBase));
-export { Transportation };
+}(utils_1.SpeakeasyBase));
+exports.Transportation = Transportation;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAdsHomeservicesLocalservicesV1AggregatorInfo } from "./googleadshomeserviceslocalservicesv1aggregatorinfo";
-import { GoogleAdsHomeservicesLocalservicesV1BookingLead } from "./googleadshomeserviceslocalservicesv1bookinglead";
-import { GoogleAdsHomeservicesLocalservicesV1MessageLead } from "./googleadshomeserviceslocalservicesv1messagelead";
-import { GoogleAdsHomeservicesLocalservicesV1PhoneLead } from "./googleadshomeserviceslocalservicesv1phonelead";
-import { GoogleTypeTimeZone } from "./googletypetimezone";
-export var GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport = exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum = exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleadshomeserviceslocalservicesv1aggregatorinfo_1 = require("./googleadshomeserviceslocalservicesv1aggregatorinfo");
+var googleadshomeserviceslocalservicesv1bookinglead_1 = require("./googleadshomeserviceslocalservicesv1bookinglead");
+var googleadshomeserviceslocalservicesv1messagelead_1 = require("./googleadshomeserviceslocalservicesv1messagelead");
+var googleadshomeserviceslocalservicesv1phonelead_1 = require("./googleadshomeserviceslocalservicesv1phonelead");
+var googletypetimezone_1 = require("./googletypetimezone");
+var GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum;
 (function (GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum) {
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum["ChargeStatusUnspecified"] = "CHARGE_STATUS_UNSPECIFIED";
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum["Charged"] = "CHARGED";
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum["NotCharged"] = "NOT_CHARGED";
-})(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum || (GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum = {}));
-export var GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum;
+})(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum = exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum || (exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum = {}));
+var GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum;
 (function (GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum) {
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum["LeadTypeUnspecified"] = "LEAD_TYPE_UNSPECIFIED";
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum["Message"] = "MESSAGE";
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum["PhoneCall"] = "PHONE_CALL";
     GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum["Booking"] = "BOOKING";
-})(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum || (GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum = {}));
+})(GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum = exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum || (exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum = {}));
 // GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport
 /**
  * A Detailed Lead Report of a lead identified by their lead id and contains consumer, account, monetization, and lead data.
@@ -51,69 +54,69 @@ var GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregatorInfo" }),
-        __metadata("design:type", GoogleAdsHomeservicesLocalservicesV1AggregatorInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregatorInfo" }),
+        __metadata("design:type", googleadshomeserviceslocalservicesv1aggregatorinfo_1.GoogleAdsHomeservicesLocalservicesV1AggregatorInfo)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "aggregatorInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingLead" }),
-        __metadata("design:type", GoogleAdsHomeservicesLocalservicesV1BookingLead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingLead" }),
+        __metadata("design:type", googleadshomeserviceslocalservicesv1bookinglead_1.GoogleAdsHomeservicesLocalservicesV1BookingLead)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "bookingLead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessName" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeStatus" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "chargeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disputeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disputeStatus" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "disputeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "geo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadCategory" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "leadCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadCreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadCreationTimestamp" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "leadCreationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadId" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "leadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadPrice" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "leadPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadType" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "leadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageLead" }),
-        __metadata("design:type", GoogleAdsHomeservicesLocalservicesV1MessageLead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageLead" }),
+        __metadata("design:type", googleadshomeserviceslocalservicesv1messagelead_1.GoogleAdsHomeservicesLocalservicesV1MessageLead)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "messageLead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneLead" }),
-        __metadata("design:type", GoogleAdsHomeservicesLocalservicesV1PhoneLead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneLead" }),
+        __metadata("design:type", googleadshomeserviceslocalservicesv1phonelead_1.GoogleAdsHomeservicesLocalservicesV1PhoneLead)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "phoneLead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
-        __metadata("design:type", GoogleTypeTimeZone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
+        __metadata("design:type", googletypetimezone_1.GoogleTypeTimeZone)
     ], GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport.prototype, "timezone", void 0);
     return GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport;
-}(SpeakeasyBase));
-export { GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport = GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport;

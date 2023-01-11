@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SqlAclEntry } from "./sqlaclentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlIpConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var sqlaclentry_1 = require("./sqlaclentry");
 // SqlIpConfig
 /**
  * IP Management configuration.
@@ -34,21 +37,21 @@ var SqlIpConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedNetworks", elemType: SqlAclEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedNetworks", elemType: sqlaclentry_1.SqlAclEntry }),
         __metadata("design:type", Array)
     ], SqlIpConfig.prototype, "authorizedNetworks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableIpv4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableIpv4" }),
         __metadata("design:type", Boolean)
     ], SqlIpConfig.prototype, "enableIpv4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateNetwork" }),
         __metadata("design:type", String)
     ], SqlIpConfig.prototype, "privateNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireSsl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireSsl" }),
         __metadata("design:type", Boolean)
     ], SqlIpConfig.prototype, "requireSsl", void 0);
     return SqlIpConfig;
-}(SpeakeasyBase));
-export { SqlIpConfig };
+}(utils_1.SpeakeasyBase));
+exports.SqlIpConfig = SqlIpConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDetachLoadBalancerTargetGroupsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDetachLoadBalancerTargetGroupsResponse = exports.GetDetachLoadBalancerTargetGroupsRequest = exports.GetDetachLoadBalancerTargetGroupsHeaders = exports.GetDetachLoadBalancerTargetGroupsQueryParams = exports.GetDetachLoadBalancerTargetGroupsVersionEnum = exports.GetDetachLoadBalancerTargetGroupsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDetachLoadBalancerTargetGroupsActionEnum;
 (function (GetDetachLoadBalancerTargetGroupsActionEnum) {
     GetDetachLoadBalancerTargetGroupsActionEnum["DetachLoadBalancerTargetGroups"] = "DetachLoadBalancerTargetGroups";
-})(GetDetachLoadBalancerTargetGroupsActionEnum || (GetDetachLoadBalancerTargetGroupsActionEnum = {}));
-export var GetDetachLoadBalancerTargetGroupsVersionEnum;
+})(GetDetachLoadBalancerTargetGroupsActionEnum = exports.GetDetachLoadBalancerTargetGroupsActionEnum || (exports.GetDetachLoadBalancerTargetGroupsActionEnum = {}));
+var GetDetachLoadBalancerTargetGroupsVersionEnum;
 (function (GetDetachLoadBalancerTargetGroupsVersionEnum) {
     GetDetachLoadBalancerTargetGroupsVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetDetachLoadBalancerTargetGroupsVersionEnum || (GetDetachLoadBalancerTargetGroupsVersionEnum = {}));
+})(GetDetachLoadBalancerTargetGroupsVersionEnum = exports.GetDetachLoadBalancerTargetGroupsVersionEnum || (exports.GetDetachLoadBalancerTargetGroupsVersionEnum = {}));
 var GetDetachLoadBalancerTargetGroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancerTargetGroupsQueryParams, _super);
     function GetDetachLoadBalancerTargetGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetGroupARNs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TargetGroupARNs" }),
         __metadata("design:type", Array)
-    ], GetDetachLoadBalancerTargetGroupsQueryParams.prototype, "targetGroupArNs", void 0);
+    ], GetDetachLoadBalancerTargetGroupsQueryParams.prototype, "targetGroupARNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsQueryParams.prototype, "version", void 0);
     return GetDetachLoadBalancerTargetGroupsQueryParams;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancerTargetGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancerTargetGroupsQueryParams = GetDetachLoadBalancerTargetGroupsQueryParams;
 var GetDetachLoadBalancerTargetGroupsHeaders = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancerTargetGroupsHeaders, _super);
     function GetDetachLoadBalancerTargetGroupsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDetachLoadBalancerTargetGroupsHeaders;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancerTargetGroupsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancerTargetGroupsHeaders = GetDetachLoadBalancerTargetGroupsHeaders;
 var GetDetachLoadBalancerTargetGroupsRequest = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancerTargetGroupsRequest, _super);
     function GetDetachLoadBalancerTargetGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDetachLoadBalancerTargetGroupsQueryParams)
     ], GetDetachLoadBalancerTargetGroupsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDetachLoadBalancerTargetGroupsHeaders)
     ], GetDetachLoadBalancerTargetGroupsRequest.prototype, "headers", void 0);
     return GetDetachLoadBalancerTargetGroupsRequest;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancerTargetGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancerTargetGroupsRequest = GetDetachLoadBalancerTargetGroupsRequest;
 var GetDetachLoadBalancerTargetGroupsResponse = /** @class */ (function (_super) {
     __extends(GetDetachLoadBalancerTargetGroupsResponse, _super);
     function GetDetachLoadBalancerTargetGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDetachLoadBalancerTargetGroupsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDetachLoadBalancerTargetGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDetachLoadBalancerTargetGroupsResponse.prototype, "statusCode", void 0);
     return GetDetachLoadBalancerTargetGroupsResponse;
-}(SpeakeasyBase));
-export { GetDetachLoadBalancerTargetGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDetachLoadBalancerTargetGroupsResponse = GetDetachLoadBalancerTargetGroupsResponse;

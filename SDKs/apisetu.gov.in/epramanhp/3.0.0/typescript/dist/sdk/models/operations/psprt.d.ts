@@ -106,11 +106,11 @@ export declare class PsprtRequest extends SpeakeasyBase {
 export declare class PsprtResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    psprt400ApplicationJsonObject?: Psprt400ApplicationJson;
-    psprt401ApplicationJsonObject?: Psprt401ApplicationJson;
-    psprt404ApplicationJsonObject?: Psprt404ApplicationJson;
-    psprt500ApplicationJsonObject?: Psprt500ApplicationJson;
-    psprt502ApplicationJsonObject?: Psprt502ApplicationJson;
-    psprt503ApplicationJsonObject?: Psprt503ApplicationJson;
-    psprt504ApplicationJsonObject?: Psprt504ApplicationJson;
+    psprt400ApplicationJSONObject?: Psprt400ApplicationJson;
+    psprt401ApplicationJSONObject?: Psprt401ApplicationJson;
+    psprt404ApplicationJSONObject?: Psprt404ApplicationJson;
+    psprt500ApplicationJSONObject?: Psprt500ApplicationJson;
+    psprt502ApplicationJSONObject?: Psprt502ApplicationJson;
+    psprt503ApplicationJSONObject?: Psprt503ApplicationJson;
+    psprt504ApplicationJSONObject?: Psprt504ApplicationJson;
 }

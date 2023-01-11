@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessBluetoothSettingsResponse = exports.UpdateNetworkWirelessBluetoothSettingsRequest = exports.UpdateNetworkWirelessBluetoothSettingsRequestBody = exports.UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum = exports.UpdateNetworkWirelessBluetoothSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessBluetoothSettingsPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessBluetoothSettingsPathParams, _super);
     function UpdateNetworkWirelessBluetoothSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessBluetoothSettingsPathParams.prototype, "networkId", void 0);
     return UpdateNetworkWirelessBluetoothSettingsPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessBluetoothSettingsPathParams };
-export var UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessBluetoothSettingsPathParams = UpdateNetworkWirelessBluetoothSettingsPathParams;
+var UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum;
 (function (UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum) {
     UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum["Unique"] = "Unique";
     UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum["NonUnique"] = "Non-unique";
-})(UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum || (UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum = {}));
+})(UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum = exports.UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum || (exports.UpdateNetworkWirelessBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum = {}));
 var UpdateNetworkWirelessBluetoothSettingsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessBluetoothSettingsRequestBody, _super);
     function UpdateNetworkWirelessBluetoothSettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertisingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertisingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "advertisingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=major" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=major" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "major", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=majorMinorAssignmentMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=majorMinorAssignmentMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "majorMinorAssignmentMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minor" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "minor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scanningEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scanningEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "scanningEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessBluetoothSettingsRequestBody.prototype, "uuid", void 0);
     return UpdateNetworkWirelessBluetoothSettingsRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessBluetoothSettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessBluetoothSettingsRequestBody = UpdateNetworkWirelessBluetoothSettingsRequestBody;
 var UpdateNetworkWirelessBluetoothSettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessBluetoothSettingsRequest, _super);
     function UpdateNetworkWirelessBluetoothSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessBluetoothSettingsPathParams)
     ], UpdateNetworkWirelessBluetoothSettingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessBluetoothSettingsRequestBody)
     ], UpdateNetworkWirelessBluetoothSettingsRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessBluetoothSettingsRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessBluetoothSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessBluetoothSettingsRequest = UpdateNetworkWirelessBluetoothSettingsRequest;
 var UpdateNetworkWirelessBluetoothSettingsResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessBluetoothSettingsResponse, _super);
     function UpdateNetworkWirelessBluetoothSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessBluetoothSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessBluetoothSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessBluetoothSettingsResponse.prototype, "updateNetworkWirelessBluetoothSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessBluetoothSettingsResponse.prototype, "updateNetworkWirelessBluetoothSettings200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessBluetoothSettingsResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessBluetoothSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessBluetoothSettingsResponse = UpdateNetworkWirelessBluetoothSettingsResponse;

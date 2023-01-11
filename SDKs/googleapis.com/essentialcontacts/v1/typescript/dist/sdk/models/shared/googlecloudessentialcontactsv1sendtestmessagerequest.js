@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudEssentialcontactsV1SendTestMessageRequest = exports.GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum;
 (function (GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum) {
     GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum["NotificationCategoryUnspecified"] = "NOTIFICATION_CATEGORY_UNSPECIFIED";
     GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum["All"] = "ALL";
@@ -34,7 +37,7 @@ export var GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCateg
     GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum["Legal"] = "LEGAL";
     GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum["ProductUpdates"] = "PRODUCT_UPDATES";
     GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum["TechnicalIncidents"] = "TECHNICAL_INCIDENTS";
-})(GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum || (GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum = {}));
+})(GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum = exports.GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum || (exports.GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum = {}));
 // GoogleCloudEssentialcontactsV1SendTestMessageRequest
 /**
  * Request message for the SendTestMessage method.
@@ -45,13 +48,13 @@ var GoogleCloudEssentialcontactsV1SendTestMessageRequest = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts" }),
         __metadata("design:type", Array)
     ], GoogleCloudEssentialcontactsV1SendTestMessageRequest.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationCategory" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1SendTestMessageRequest.prototype, "notificationCategory", void 0);
     return GoogleCloudEssentialcontactsV1SendTestMessageRequest;
-}(SpeakeasyBase));
-export { GoogleCloudEssentialcontactsV1SendTestMessageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudEssentialcontactsV1SendTestMessageRequest = GoogleCloudEssentialcontactsV1SendTestMessageRequest;

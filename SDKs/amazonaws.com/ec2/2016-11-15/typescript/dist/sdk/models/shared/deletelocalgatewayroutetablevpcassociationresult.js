@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayRouteTableVpcAssociation } from "./localgatewayroutetablevpcassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLocalGatewayRouteTableVpcAssociationResult = exports.DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation
+/**
+ * Information about the association.
+**/
+var DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation = /** @class */ (function (_super) {
+    __extends(DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation, _super);
+    function DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "localGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "localGatewayRouteTableArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "localGatewayRouteTableId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "localGatewayRouteTableVpcAssociationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation.prototype, "vpcId", void 0);
+    return DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation;
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation = DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation;
 var DeleteLocalGatewayRouteTableVpcAssociationResult = /** @class */ (function (_super) {
     __extends(DeleteLocalGatewayRouteTableVpcAssociationResult, _super);
     function DeleteLocalGatewayRouteTableVpcAssociationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LocalGatewayRouteTableVpcAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteLocalGatewayRouteTableVpcAssociationResultLocalGatewayRouteTableVpcAssociation)
     ], DeleteLocalGatewayRouteTableVpcAssociationResult.prototype, "localGatewayRouteTableVpcAssociation", void 0);
     return DeleteLocalGatewayRouteTableVpcAssociationResult;
-}(SpeakeasyBase));
-export { DeleteLocalGatewayRouteTableVpcAssociationResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalGatewayRouteTableVpcAssociationResult = DeleteLocalGatewayRouteTableVpcAssociationResult;

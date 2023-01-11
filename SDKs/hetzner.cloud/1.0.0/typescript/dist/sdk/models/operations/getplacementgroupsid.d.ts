@@ -8,7 +8,7 @@ export declare enum GetPlacementGroupsIdPlacementGroupResponsePlacementGroupType
 export declare class GetPlacementGroupsIdPlacementGroupResponsePlacementGroup extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: GetPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum;

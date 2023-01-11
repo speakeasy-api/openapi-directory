@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationsWikisListResponse = exports.RegistrationsWikisListRequest = exports.RegistrationsWikisListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistrationsWikisListPathParams = /** @class */ (function (_super) {
     __extends(RegistrationsWikisListPathParams, _super);
     function RegistrationsWikisListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
         __metadata("design:type", String)
     ], RegistrationsWikisListPathParams.prototype, "registrationId", void 0);
     return RegistrationsWikisListPathParams;
-}(SpeakeasyBase));
-export { RegistrationsWikisListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsWikisListPathParams = RegistrationsWikisListPathParams;
 var RegistrationsWikisListRequest = /** @class */ (function (_super) {
     __extends(RegistrationsWikisListRequest, _super);
     function RegistrationsWikisListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistrationsWikisListPathParams)
     ], RegistrationsWikisListRequest.prototype, "pathParams", void 0);
     return RegistrationsWikisListRequest;
-}(SpeakeasyBase));
-export { RegistrationsWikisListRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsWikisListRequest = RegistrationsWikisListRequest;
 var RegistrationsWikisListResponse = /** @class */ (function (_super) {
     __extends(RegistrationsWikisListResponse, _super);
     function RegistrationsWikisListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], RegistrationsWikisListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistrationsWikisListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistrationsWikisListResponse.prototype, "statusCode", void 0);
     return RegistrationsWikisListResponse;
-}(SpeakeasyBase));
-export { RegistrationsWikisListResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsWikisListResponse = RegistrationsWikisListResponse;

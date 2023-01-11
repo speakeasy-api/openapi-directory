@@ -16,11 +16,11 @@ export class GoogleLongrunningOperation extends SpeakeasyBase {
   error?: GoogleRpcStatus;
 
   @SpeakeasyMetadata()
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata()
   name?: string;
 
   @SpeakeasyMetadata()
-  response?: Map<string, any>;
+  response?: Record<string, any>;
 }

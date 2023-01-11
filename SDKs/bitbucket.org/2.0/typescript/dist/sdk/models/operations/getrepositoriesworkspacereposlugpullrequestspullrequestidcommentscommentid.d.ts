@@ -18,6 +18,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCo
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pullrequestComment?: Map<string, any>;
+    error?: Record<string, any>;
+    pullrequestComment?: Record<string, any>;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DatamigrationProjectsLocationsConnectionProfilesCreateRequest, DatamigrationProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,145 +30,150 @@ const req: DatamigrationProjectsLocationsConnectionProfilesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "nam",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "cumque",
-    alt: "json",
-    callback: "repellendus",
-    connectionProfileId: "cumque",
-    fields: "iste",
-    key: "asperiores",
-    oauthToken: "ut",
-    prettyPrint: true,
-    quotaUser: "tenetur",
-    requestId: "impedit",
-    uploadType: "aut",
-    uploadProtocol: "sit",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    connectionProfileId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
     alloydb: {
-      clusterId: "ullam",
+      clusterId: "voluptatum",
       settings: {
         initialUser: {
-          password: "voluptas",
-          user: "mollitia",
+          password: "et",
+          user: "ut",
         },
         labels: {
-          "voluptatem": "libero",
-          "et": "velit",
-          "rerum": "totam",
+          "et": "voluptate",
+          "iste": "vitae",
+          "totam": "dolores",
         },
         primaryInstanceSettings: {
           databaseFlags: {
-            "libero": "est",
+            "debitis": "vel",
+            "odio": "dolore",
+            "id": "aspernatur",
           },
-          id: "eum",
+          id: "accusantium",
           labels: {
-            "quo": "enim",
-            "enim": "reprehenderit",
+            "commodi": "quis",
+            "est": "aut",
+            "odit": "non",
           },
           machineConfig: {
-            cpuCount: 3452497793287034363,
+            cpuCount: 167566062957544642,
           },
         },
-        vpcNetwork: "deleniti",
+        vpcNetwork: "omnis",
       },
     },
     cloudsql: {
       settings: {
         activationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
-        autoStorageIncrease: false,
-        availabilityType: "ZONAL",
-        cmekKeyName: "quo",
-        collation: "ad",
-        dataDiskSizeGb: "ad",
+        autoStorageIncrease: true,
+        availabilityType: "REGIONAL",
+        cmekKeyName: "officiis",
+        collation: "autem",
+        dataDiskSizeGb: "consectetur",
         dataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
         databaseFlags: {
-          "maiores": "soluta",
+          "qui": "recusandae",
         },
-        databaseVersion: "POSTGRES_14",
+        databaseVersion: "POSTGRES_13",
         ipConfig: {
           authorizedNetworks: [
             {
-              expireTime: "officiis",
-              label: "veritatis",
-              ttl: "fugit",
-              value: "id",
-            },
-            {
-              expireTime: "rerum",
-              label: "alias",
-              ttl: "enim",
-              value: "cupiditate",
+              expireTime: "eveniet",
+              label: "modi",
+              ttl: "sint",
+              value: "inventore",
             },
           ],
           enableIpv4: true,
-          privateNetwork: "et",
-          requireSsl: false,
+          privateNetwork: "exercitationem",
+          requireSsl: true,
         },
-        rootPassword: "inventore",
-        secondaryZone: "voluptas",
-        sourceId: "cumque",
-        storageAutoResizeLimit: "velit",
-        tier: "voluptatem",
+        rootPassword: "reprehenderit",
+        secondaryZone: "tempore",
+        sourceId: "maiores",
+        storageAutoResizeLimit: "incidunt",
+        tier: "dolor",
         userLabels: {
-          "cum": "ratione",
-          "ab": "eius",
-          "et": "consequatur",
+          "veritatis": "in",
+          "et": "omnis",
+          "ipsum": "ex",
         },
-        zone: "quasi",
+        zone: "dolores",
       },
     },
     displayName: "placeat",
     error: {
-      code: 4808249340027072444,
+      code: 2118716725206170867,
       details: [
         {
-          "quia": "possimus",
-          "sit": "nostrum",
+          "voluptas": "quam",
+          "reprehenderit": "qui",
+        },
+        {
+          "unde": "in",
+        },
+        {
+          "qui": "ut",
+          "itaque": "ab",
         },
       ],
-      message: "nesciunt",
+      message: "neque",
     },
     labels: {
-      "quae": "modi",
-      "incidunt": "ad",
+      "et": "accusantium",
+      "esse": "architecto",
+      "quam": "velit",
     },
     mysql: {
-      cloudSqlId: "animi",
-      host: "iusto",
-      password: "laudantium",
-      port: 5783816651593308386,
+      cloudSqlId: "cumque",
+      host: "soluta",
+      password: "sunt",
+      port: 2408550365227740434,
       ssl: {
-        caCertificate: "ea",
-        clientCertificate: "facilis",
-        clientKey: "vitae",
+        caCertificate: "magni",
+        clientCertificate: "et",
+        clientKey: "optio",
       },
-      username: "consequatur",
+      username: "qui",
     },
-    name: "atque",
+    name: "earum",
     postgresql: {
-      cloudSqlId: "pariatur",
-      host: "beatae",
-      password: "et",
-      port: 6051945376604600617,
+      cloudSqlId: "illo",
+      host: "omnis",
+      password: "ut",
+      port: 7442289190031176026,
       ssl: {
-        caCertificate: "occaecati",
-        clientCertificate: "quo",
-        clientKey: "totam",
+        caCertificate: "dolor",
+        clientCertificate: "commodi",
+        clientKey: "error",
       },
-      username: "in",
+      username: "reprehenderit",
     },
     provider: "AURORA",
-    state: "DELETED",
+    state: "READY",
   },
 };
 

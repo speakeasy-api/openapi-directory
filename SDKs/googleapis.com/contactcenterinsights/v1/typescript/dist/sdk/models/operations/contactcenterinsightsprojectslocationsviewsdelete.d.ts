@@ -28,6 +28,6 @@ export declare class ContactcenterinsightsProjectsLocationsViewsDeleteRequest ex
 }
 export declare class ContactcenterinsightsProjectsLocationsViewsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

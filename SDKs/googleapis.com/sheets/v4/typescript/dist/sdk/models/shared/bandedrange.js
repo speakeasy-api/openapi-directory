@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BandingProperties } from "./bandingproperties";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BandedRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var bandingproperties_1 = require("./bandingproperties");
+var gridrange_1 = require("./gridrange");
 // BandedRange
 /**
  * A banded (alternating colors) range in a sheet.
@@ -35,21 +38,21 @@ var BandedRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandedRangeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandedRangeId" }),
         __metadata("design:type", Number)
     ], BandedRange.prototype, "bandedRangeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnProperties" }),
-        __metadata("design:type", BandingProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnProperties" }),
+        __metadata("design:type", bandingproperties_1.BandingProperties)
     ], BandedRange.prototype, "columnProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], BandedRange.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowProperties" }),
-        __metadata("design:type", BandingProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowProperties" }),
+        __metadata("design:type", bandingproperties_1.BandingProperties)
     ], BandedRange.prototype, "rowProperties", void 0);
     return BandedRange;
-}(SpeakeasyBase));
-export { BandedRange };
+}(utils_1.SpeakeasyBase));
+exports.BandedRange = BandedRange;

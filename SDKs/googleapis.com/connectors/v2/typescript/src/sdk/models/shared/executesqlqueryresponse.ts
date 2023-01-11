@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ExecuteSqlQueryResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=results" })
-  results?: Map<string, any>[];
+  results?: Record<string, any>[];
 }

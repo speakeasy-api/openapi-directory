@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileDeleteFromComputeNodeResponse = exports.FileDeleteFromComputeNodeRequest = exports.FileDeleteFromComputeNodeHeaders = exports.FileDeleteFromComputeNodeQueryParams = exports.FileDeleteFromComputeNodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FileDeleteFromComputeNodePathParams = /** @class */ (function (_super) {
     __extends(FileDeleteFromComputeNodePathParams, _super);
     function FileDeleteFromComputeNodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileName" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodePathParams.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodePathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodePathParams.prototype, "poolId", void 0);
     return FileDeleteFromComputeNodePathParams;
-}(SpeakeasyBase));
-export { FileDeleteFromComputeNodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.FileDeleteFromComputeNodePathParams = FileDeleteFromComputeNodePathParams;
 var FileDeleteFromComputeNodeQueryParams = /** @class */ (function (_super) {
     __extends(FileDeleteFromComputeNodeQueryParams, _super);
     function FileDeleteFromComputeNodeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodeQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recursive" }),
         __metadata("design:type", Boolean)
     ], FileDeleteFromComputeNodeQueryParams.prototype, "recursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], FileDeleteFromComputeNodeQueryParams.prototype, "timeout", void 0);
     return FileDeleteFromComputeNodeQueryParams;
-}(SpeakeasyBase));
-export { FileDeleteFromComputeNodeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FileDeleteFromComputeNodeQueryParams = FileDeleteFromComputeNodeQueryParams;
 var FileDeleteFromComputeNodeHeaders = /** @class */ (function (_super) {
     __extends(FileDeleteFromComputeNodeHeaders, _super);
     function FileDeleteFromComputeNodeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodeHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodeHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], FileDeleteFromComputeNodeHeaders.prototype, "returnClientRequestId", void 0);
     return FileDeleteFromComputeNodeHeaders;
-}(SpeakeasyBase));
-export { FileDeleteFromComputeNodeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.FileDeleteFromComputeNodeHeaders = FileDeleteFromComputeNodeHeaders;
 var FileDeleteFromComputeNodeRequest = /** @class */ (function (_super) {
     __extends(FileDeleteFromComputeNodeRequest, _super);
     function FileDeleteFromComputeNodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileDeleteFromComputeNodePathParams)
     ], FileDeleteFromComputeNodeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileDeleteFromComputeNodeQueryParams)
     ], FileDeleteFromComputeNodeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileDeleteFromComputeNodeHeaders)
     ], FileDeleteFromComputeNodeRequest.prototype, "headers", void 0);
     return FileDeleteFromComputeNodeRequest;
-}(SpeakeasyBase));
-export { FileDeleteFromComputeNodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.FileDeleteFromComputeNodeRequest = FileDeleteFromComputeNodeRequest;
 var FileDeleteFromComputeNodeResponse = /** @class */ (function (_super) {
     __extends(FileDeleteFromComputeNodeResponse, _super);
     function FileDeleteFromComputeNodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FileDeleteFromComputeNodeResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FileDeleteFromComputeNodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], FileDeleteFromComputeNodeResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FileDeleteFromComputeNodeResponse.prototype, "statusCode", void 0);
     return FileDeleteFromComputeNodeResponse;
-}(SpeakeasyBase));
-export { FileDeleteFromComputeNodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.FileDeleteFromComputeNodeResponse = FileDeleteFromComputeNodeResponse;

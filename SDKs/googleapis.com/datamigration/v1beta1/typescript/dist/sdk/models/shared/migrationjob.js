@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatabaseType } from "./databasetype";
-import { Status } from "./status";
-import { ReverseSshConnectivity } from "./reversesshconnectivity";
-import { VpcPeeringConnectivity } from "./vpcpeeringconnectivity";
-export var MigrationJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MigrationJob = exports.MigrationJobInput = exports.MigrationJobPhaseEnum = exports.MigrationJobTypeEnum = exports.MigrationJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var databasetype_1 = require("./databasetype");
+var status_1 = require("./status");
+var reversesshconnectivity_1 = require("./reversesshconnectivity");
+var vpcpeeringconnectivity_1 = require("./vpcpeeringconnectivity");
+var MigrationJobStateEnum;
 (function (MigrationJobStateEnum) {
     MigrationJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MigrationJobStateEnum["Maintenance"] = "MAINTENANCE";
@@ -45,14 +48,14 @@ export var MigrationJobStateEnum;
     MigrationJobStateEnum["Starting"] = "STARTING";
     MigrationJobStateEnum["Restarting"] = "RESTARTING";
     MigrationJobStateEnum["Resuming"] = "RESUMING";
-})(MigrationJobStateEnum || (MigrationJobStateEnum = {}));
-export var MigrationJobTypeEnum;
+})(MigrationJobStateEnum = exports.MigrationJobStateEnum || (exports.MigrationJobStateEnum = {}));
+var MigrationJobTypeEnum;
 (function (MigrationJobTypeEnum) {
     MigrationJobTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     MigrationJobTypeEnum["OneTime"] = "ONE_TIME";
     MigrationJobTypeEnum["Continuous"] = "CONTINUOUS";
-})(MigrationJobTypeEnum || (MigrationJobTypeEnum = {}));
-export var MigrationJobPhaseEnum;
+})(MigrationJobTypeEnum = exports.MigrationJobTypeEnum || (exports.MigrationJobTypeEnum = {}));
+var MigrationJobPhaseEnum;
 (function (MigrationJobPhaseEnum) {
     MigrationJobPhaseEnum["PhaseUnspecified"] = "PHASE_UNSPECIFIED";
     MigrationJobPhaseEnum["FullDump"] = "FULL_DUMP";
@@ -60,7 +63,7 @@ export var MigrationJobPhaseEnum;
     MigrationJobPhaseEnum["PromoteInProgress"] = "PROMOTE_IN_PROGRESS";
     MigrationJobPhaseEnum["WaitingForSourceWritesToStop"] = "WAITING_FOR_SOURCE_WRITES_TO_STOP";
     MigrationJobPhaseEnum["PreparingTheDump"] = "PREPARING_THE_DUMP";
-})(MigrationJobPhaseEnum || (MigrationJobPhaseEnum = {}));
+})(MigrationJobPhaseEnum = exports.MigrationJobPhaseEnum || (exports.MigrationJobPhaseEnum = {}));
 // MigrationJobInput
 /**
  * Represents a Database Migration Service migration job object.
@@ -71,64 +74,64 @@ var MigrationJobInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationDatabase" }),
-        __metadata("design:type", DatabaseType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationDatabase" }),
+        __metadata("design:type", databasetype_1.DatabaseType)
     ], MigrationJobInput.prototype, "destinationDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dumpPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dumpPath" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "dumpPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], MigrationJobInput.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], MigrationJobInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseSshConnectivity" }),
-        __metadata("design:type", ReverseSshConnectivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseSshConnectivity" }),
+        __metadata("design:type", reversesshconnectivity_1.ReverseSshConnectivity)
     ], MigrationJobInput.prototype, "reverseSshConnectivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceDatabase" }),
-        __metadata("design:type", DatabaseType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceDatabase" }),
+        __metadata("design:type", databasetype_1.DatabaseType)
     ], MigrationJobInput.prototype, "sourceDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticIpConnectivity" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticIpConnectivity" }),
+        __metadata("design:type", Object)
     ], MigrationJobInput.prototype, "staticIpConnectivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MigrationJobInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcPeeringConnectivity" }),
-        __metadata("design:type", VpcPeeringConnectivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcPeeringConnectivity" }),
+        __metadata("design:type", vpcpeeringconnectivity_1.VpcPeeringConnectivity)
     ], MigrationJobInput.prototype, "vpcPeeringConnectivity", void 0);
     return MigrationJobInput;
-}(SpeakeasyBase));
-export { MigrationJobInput };
+}(utils_1.SpeakeasyBase));
+exports.MigrationJobInput = MigrationJobInput;
 // MigrationJob
 /**
  * Represents a Database Migration Service migration job object.
@@ -139,81 +142,81 @@ var MigrationJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationDatabase" }),
-        __metadata("design:type", DatabaseType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationDatabase" }),
+        __metadata("design:type", databasetype_1.DatabaseType)
     ], MigrationJob.prototype, "destinationDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dumpPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dumpPath" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "dumpPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], MigrationJob.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], MigrationJob.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phase" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "phase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseSshConnectivity" }),
-        __metadata("design:type", ReverseSshConnectivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseSshConnectivity" }),
+        __metadata("design:type", reversesshconnectivity_1.ReverseSshConnectivity)
     ], MigrationJob.prototype, "reverseSshConnectivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceDatabase" }),
-        __metadata("design:type", DatabaseType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceDatabase" }),
+        __metadata("design:type", databasetype_1.DatabaseType)
     ], MigrationJob.prototype, "sourceDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticIpConnectivity" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticIpConnectivity" }),
+        __metadata("design:type", Object)
     ], MigrationJob.prototype, "staticIpConnectivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], MigrationJob.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcPeeringConnectivity" }),
-        __metadata("design:type", VpcPeeringConnectivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcPeeringConnectivity" }),
+        __metadata("design:type", vpcpeeringconnectivity_1.VpcPeeringConnectivity)
     ], MigrationJob.prototype, "vpcPeeringConnectivity", void 0);
     return MigrationJob;
-}(SpeakeasyBase));
-export { MigrationJob };
+}(utils_1.SpeakeasyBase));
+exports.MigrationJob = MigrationJob;

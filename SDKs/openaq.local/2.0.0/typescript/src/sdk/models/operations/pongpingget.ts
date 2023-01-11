@@ -10,5 +10,5 @@ export class PongPingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pongPingGet200ApplicationJsonAny?: any;
+  pongPingGet200ApplicationJSONAny?: any;
 }

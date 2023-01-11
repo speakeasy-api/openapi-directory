@@ -113,5 +113,5 @@ export class GetItemListsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getItemLists200ApplicationJsonObject?: GetItemLists200ApplicationJson;
+  getItemLists200ApplicationJSONObject?: GetItemLists200ApplicationJson;
 }

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class UntagResourcePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 }
 
 
@@ -67,7 +67,7 @@ export class UntagResourceResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  untagResourceResponse?: Map<string, any>;
+  untagResourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

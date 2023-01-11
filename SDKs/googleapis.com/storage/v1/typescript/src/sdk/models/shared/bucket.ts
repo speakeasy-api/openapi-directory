@@ -286,7 +286,7 @@ export class Bucket extends SpeakeasyBase {
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lifecycle" })
   lifecycle?: BucketLifecycle;
@@ -319,7 +319,7 @@ export class Bucket extends SpeakeasyBase {
   rpo?: string;
 
   @SpeakeasyMetadata({ data: "json, name=satisfiesPZS" })
-  satisfiesPzs?: boolean;
+  satisfiesPZS?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=selfLink" })
   selfLink?: string;

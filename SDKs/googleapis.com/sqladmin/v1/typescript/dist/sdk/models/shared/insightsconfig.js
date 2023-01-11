@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightsConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // InsightsConfig
 /**
  * Insights configuration. This specifies when Cloud SQL Insights feature is enabled and optional configuration.
@@ -33,25 +36,25 @@ var InsightsConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryInsightsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryInsightsEnabled" }),
         __metadata("design:type", Boolean)
     ], InsightsConfig.prototype, "queryInsightsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryPlansPerMinute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryPlansPerMinute" }),
         __metadata("design:type", Number)
     ], InsightsConfig.prototype, "queryPlansPerMinute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryStringLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryStringLength" }),
         __metadata("design:type", Number)
     ], InsightsConfig.prototype, "queryStringLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordApplicationTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordApplicationTags" }),
         __metadata("design:type", Boolean)
     ], InsightsConfig.prototype, "recordApplicationTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordClientAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordClientAddress" }),
         __metadata("design:type", Boolean)
     ], InsightsConfig.prototype, "recordClientAddress", void 0);
     return InsightsConfig;
-}(SpeakeasyBase));
-export { InsightsConfig };
+}(utils_1.SpeakeasyBase));
+exports.InsightsConfig = InsightsConfig;

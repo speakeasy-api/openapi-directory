@@ -17,7 +17,7 @@ export declare class CancelPolicyGenerationRequest extends SpeakeasyBase {
 }
 export declare class CancelPolicyGenerationResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    cancelPolicyGenerationResponse?: Map<string, any>;
+    cancelPolicyGenerationResponse?: Record<string, any>;
     contentType: string;
     internalServerException?: any;
     statusCode: number;

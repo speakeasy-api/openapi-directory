@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CountryEnum } from "./countryenum";
-export var TaxTaxCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tax = exports.TaxTaxCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var countryenum_1 = require("./countryenum");
+var TaxTaxCategoryEnum;
 (function (TaxTaxCategoryEnum) {
     TaxTaxCategoryEnum["Standard"] = "standard";
     TaxTaxCategoryEnum["ZeroRated"] = "zero_rated";
@@ -52,28 +55,28 @@ export var TaxTaxCategoryEnum;
     TaxTaxCategoryEnum["ExemptionScheduleCB"] = "exemption_schedule_c_b";
     TaxTaxCategoryEnum["ExemptionScheduleCC"] = "exemption_schedule_c_c";
     TaxTaxCategoryEnum["ExemptionServiceTax"] = "exemption_service_tax";
-})(TaxTaxCategoryEnum || (TaxTaxCategoryEnum = {}));
+})(TaxTaxCategoryEnum = exports.TaxTaxCategoryEnum || (exports.TaxTaxCategoryEnum = {}));
 var Tax = /** @class */ (function (_super) {
     __extends(Tax, _super);
     function Tax() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], Tax.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], Tax.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], Tax.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentage" }),
         __metadata("design:type", Number)
     ], Tax.prototype, "percentage", void 0);
     return Tax;
-}(SpeakeasyBase));
-export { Tax };
+}(utils_1.SpeakeasyBase));
+exports.Tax = Tax;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteFpgaImageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteFpgaImageResponse = exports.GetDeleteFpgaImageRequest = exports.GetDeleteFpgaImageHeaders = exports.GetDeleteFpgaImageQueryParams = exports.GetDeleteFpgaImageVersionEnum = exports.GetDeleteFpgaImageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteFpgaImageActionEnum;
 (function (GetDeleteFpgaImageActionEnum) {
     GetDeleteFpgaImageActionEnum["DeleteFpgaImage"] = "DeleteFpgaImage";
-})(GetDeleteFpgaImageActionEnum || (GetDeleteFpgaImageActionEnum = {}));
-export var GetDeleteFpgaImageVersionEnum;
+})(GetDeleteFpgaImageActionEnum = exports.GetDeleteFpgaImageActionEnum || (exports.GetDeleteFpgaImageActionEnum = {}));
+var GetDeleteFpgaImageVersionEnum;
 (function (GetDeleteFpgaImageVersionEnum) {
     GetDeleteFpgaImageVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteFpgaImageVersionEnum || (GetDeleteFpgaImageVersionEnum = {}));
+})(GetDeleteFpgaImageVersionEnum = exports.GetDeleteFpgaImageVersionEnum || (exports.GetDeleteFpgaImageVersionEnum = {}));
 var GetDeleteFpgaImageQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteFpgaImageQueryParams, _super);
     function GetDeleteFpgaImageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteFpgaImageQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FpgaImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FpgaImageId" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageQueryParams.prototype, "fpgaImageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageQueryParams.prototype, "version", void 0);
     return GetDeleteFpgaImageQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteFpgaImageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFpgaImageQueryParams = GetDeleteFpgaImageQueryParams;
 var GetDeleteFpgaImageHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteFpgaImageHeaders, _super);
     function GetDeleteFpgaImageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteFpgaImageHeaders;
-}(SpeakeasyBase));
-export { GetDeleteFpgaImageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFpgaImageHeaders = GetDeleteFpgaImageHeaders;
 var GetDeleteFpgaImageRequest = /** @class */ (function (_super) {
     __extends(GetDeleteFpgaImageRequest, _super);
     function GetDeleteFpgaImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteFpgaImageQueryParams)
     ], GetDeleteFpgaImageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteFpgaImageHeaders)
     ], GetDeleteFpgaImageRequest.prototype, "headers", void 0);
     return GetDeleteFpgaImageRequest;
-}(SpeakeasyBase));
-export { GetDeleteFpgaImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFpgaImageRequest = GetDeleteFpgaImageRequest;
 var GetDeleteFpgaImageResponse = /** @class */ (function (_super) {
     __extends(GetDeleteFpgaImageResponse, _super);
     function GetDeleteFpgaImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteFpgaImageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteFpgaImageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteFpgaImageResponse.prototype, "statusCode", void 0);
     return GetDeleteFpgaImageResponse;
-}(SpeakeasyBase));
-export { GetDeleteFpgaImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFpgaImageResponse = GetDeleteFpgaImageResponse;

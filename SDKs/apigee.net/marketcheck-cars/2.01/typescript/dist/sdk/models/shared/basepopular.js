@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SalesStats } from "./salesstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasePopular = void 0;
+var utils_1 = require("../../../internal/utils");
+var salesstats_1 = require("./salesstats");
 // BasePopular
 /**
  * Single popular car in array
@@ -34,41 +37,41 @@ var BasePopular = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counts" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "counts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dom_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dom_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], BasePopular.prototype, "domStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryType" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "inventoryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], BasePopular.prototype, "milesStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], BasePopular.prototype, "priceStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], BasePopular.prototype, "state", void 0);
     return BasePopular;
-}(SpeakeasyBase));
-export { BasePopular };
+}(utils_1.SpeakeasyBase));
+exports.BasePopular = BasePopular;

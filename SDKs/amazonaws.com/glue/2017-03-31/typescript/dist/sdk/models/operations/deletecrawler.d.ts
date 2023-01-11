@@ -20,7 +20,7 @@ export declare class DeleteCrawlerRequest extends SpeakeasyBase {
 export declare class DeleteCrawlerResponse extends SpeakeasyBase {
     contentType: string;
     crawlerRunningException?: any;
-    deleteCrawlerResponse?: Map<string, any>;
+    deleteCrawlerResponse?: Record<string, any>;
     entityNotFoundException?: any;
     operationTimeoutException?: any;
     schedulerTransitioningException?: any;

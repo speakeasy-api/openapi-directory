@@ -17,7 +17,7 @@ export declare class ObjectOwner extends SpeakeasyBase {
 /**
  * An object.
 **/
-export declare class Object extends SpeakeasyBase {
+export declare class ObjectT extends SpeakeasyBase {
     acl?: ObjectAccessControl[];
     bucket?: string;
     cacheControl?: string;
@@ -37,7 +37,7 @@ export declare class Object extends SpeakeasyBase {
     kmsKeyName?: string;
     md5Hash?: string;
     mediaLink?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     metageneration?: string;
     name?: string;
     owner?: ObjectOwner;

@@ -96,5 +96,5 @@ export class UpdateShopScriptTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateShopScriptTag200ApplicationJsonObject?: UpdateShopScriptTag200ApplicationJson;
+  updateShopScriptTag200ApplicationJSONObject?: UpdateShopScriptTag200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LayerAvailabilityEnum } from "./layeravailabilityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Layer = void 0;
+var utils_1 = require("../../../internal/utils");
+var layeravailabilityenum_1 = require("./layeravailabilityenum");
 // Layer
 /**
  * An object representing an Amazon ECR image layer.
@@ -34,21 +37,21 @@ var Layer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerAvailability" }),
         __metadata("design:type", String)
     ], Layer.prototype, "layerAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerDigest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerDigest" }),
         __metadata("design:type", String)
     ], Layer.prototype, "layerDigest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerSize" }),
         __metadata("design:type", Number)
     ], Layer.prototype, "layerSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaType" }),
         __metadata("design:type", String)
     ], Layer.prototype, "mediaType", void 0);
     return Layer;
-}(SpeakeasyBase));
-export { Layer };
+}(utils_1.SpeakeasyBase));
+exports.Layer = Layer;

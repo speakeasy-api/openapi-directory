@@ -107,11 +107,11 @@ export declare class AdcrdRequest extends SpeakeasyBase {
 export declare class AdcrdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    adcrd400ApplicationJsonObject?: Adcrd400ApplicationJson;
-    adcrd401ApplicationJsonObject?: Adcrd401ApplicationJson;
-    adcrd404ApplicationJsonObject?: Adcrd404ApplicationJson;
-    adcrd500ApplicationJsonObject?: Adcrd500ApplicationJson;
-    adcrd502ApplicationJsonObject?: Adcrd502ApplicationJson;
-    adcrd503ApplicationJsonObject?: Adcrd503ApplicationJson;
-    adcrd504ApplicationJsonObject?: Adcrd504ApplicationJson;
+    adcrd400ApplicationJSONObject?: Adcrd400ApplicationJson;
+    adcrd401ApplicationJSONObject?: Adcrd401ApplicationJson;
+    adcrd404ApplicationJSONObject?: Adcrd404ApplicationJson;
+    adcrd500ApplicationJSONObject?: Adcrd500ApplicationJson;
+    adcrd502ApplicationJSONObject?: Adcrd502ApplicationJson;
+    adcrd503ApplicationJSONObject?: Adcrd503ApplicationJson;
+    adcrd504ApplicationJSONObject?: Adcrd504ApplicationJson;
 }

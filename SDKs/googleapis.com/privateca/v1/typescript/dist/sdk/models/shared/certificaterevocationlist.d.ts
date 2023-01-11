@@ -11,7 +11,7 @@ export declare enum CertificateRevocationListStateEnum {
 export declare class CertificateRevocationList extends SpeakeasyBase {
     accessUrl?: string;
     createTime?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     pemCrl?: string;
     revisionId?: string;

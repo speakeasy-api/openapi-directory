@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreateReportModelReportTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateReportModel = exports.CreateReportModelReportTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreateReportModelReportTypeEnum;
 (function (CreateReportModelReportTypeEnum) {
     CreateReportModelReportTypeEnum["MaliciousIp"] = "MaliciousIP";
     CreateReportModelReportTypeEnum["Spamming"] = "Spamming";
     CreateReportModelReportTypeEnum["RemovePermissions"] = "RemovePermissions";
     CreateReportModelReportTypeEnum["Other"] = "Other";
-})(CreateReportModelReportTypeEnum || (CreateReportModelReportTypeEnum = {}));
+})(CreateReportModelReportTypeEnum = exports.CreateReportModelReportTypeEnum || (exports.CreateReportModelReportTypeEnum = {}));
 var CreateReportModel = /** @class */ (function (_super) {
     __extends(CreateReportModel, _super);
     function CreateReportModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason, form, name=reason;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason, form, name=reason;" }),
         __metadata("design:type", String)
     ], CreateReportModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportType, form, name=reportType;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportType, form, name=reportType;" }),
         __metadata("design:type", String)
     ], CreateReportModel.prototype, "reportType", void 0);
     return CreateReportModel;
-}(SpeakeasyBase));
-export { CreateReportModel };
+}(utils_1.SpeakeasyBase));
+exports.CreateReportModel = CreateReportModel;

@@ -22,5 +22,5 @@ export class QueryDbResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  queryDb200ApplicationJsonObject?: Map<string, any>;
+  queryDb200ApplicationJSONObject?: Record<string, any>;
 }

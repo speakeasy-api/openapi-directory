@@ -1,4 +1,7 @@
-export var ScalingActivityStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScalingActivityStatusCodeEnum = void 0;
+var ScalingActivityStatusCodeEnum;
 (function (ScalingActivityStatusCodeEnum) {
     ScalingActivityStatusCodeEnum["PendingSpotBidPlacement"] = "PendingSpotBidPlacement";
     ScalingActivityStatusCodeEnum["WaitingForSpotInstanceRequestId"] = "WaitingForSpotInstanceRequestId";
@@ -12,4 +15,4 @@ export var ScalingActivityStatusCodeEnum;
     ScalingActivityStatusCodeEnum["Successful"] = "Successful";
     ScalingActivityStatusCodeEnum["Failed"] = "Failed";
     ScalingActivityStatusCodeEnum["Cancelled"] = "Cancelled";
-})(ScalingActivityStatusCodeEnum || (ScalingActivityStatusCodeEnum = {}));
+})(ScalingActivityStatusCodeEnum = exports.ScalingActivityStatusCodeEnum || (exports.ScalingActivityStatusCodeEnum = {}));

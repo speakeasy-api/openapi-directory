@@ -253,5 +253,5 @@ export declare class ProvisionNetworkClientsRequest extends SpeakeasyBase {
 export declare class ProvisionNetworkClientsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    provisionNetworkClients201ApplicationJsonObject?: Map<string, any>;
+    provisionNetworkClients201ApplicationJSONObject?: Record<string, any>;
 }

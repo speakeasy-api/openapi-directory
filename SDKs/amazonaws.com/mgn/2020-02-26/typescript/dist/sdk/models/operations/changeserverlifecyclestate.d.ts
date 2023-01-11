@@ -17,7 +17,7 @@ export declare class ChangeServerLifeCycleStateRequestBodyLifeCycle extends Spea
 }
 export declare class ChangeServerLifeCycleStateRequestBody extends SpeakeasyBase {
     lifeCycle: ChangeServerLifeCycleStateRequestBodyLifeCycle;
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class ChangeServerLifeCycleStateRequest extends SpeakeasyBase {
     headers: ChangeServerLifeCycleStateHeaders;

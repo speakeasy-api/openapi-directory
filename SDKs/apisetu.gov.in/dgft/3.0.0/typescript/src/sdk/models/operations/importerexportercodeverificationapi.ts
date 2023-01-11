@@ -208,28 +208,28 @@ export class ImporterExporterCodeVerificationApiResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi200ApplicationJsonObject?: ImporterExporterCodeVerificationApi200ApplicationJson;
+  importerExporterCodeVerificationAPI200ApplicationJSONObject?: ImporterExporterCodeVerificationApi200ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi400ApplicationJsonObject?: ImporterExporterCodeVerificationApi400ApplicationJson;
+  importerExporterCodeVerificationAPI400ApplicationJSONObject?: ImporterExporterCodeVerificationApi400ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi401ApplicationJsonObject?: ImporterExporterCodeVerificationApi401ApplicationJson;
+  importerExporterCodeVerificationAPI401ApplicationJSONObject?: ImporterExporterCodeVerificationApi401ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi404ApplicationJsonObject?: ImporterExporterCodeVerificationApi404ApplicationJson;
+  importerExporterCodeVerificationAPI404ApplicationJSONObject?: ImporterExporterCodeVerificationApi404ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi500ApplicationJsonObject?: ImporterExporterCodeVerificationApi500ApplicationJson;
+  importerExporterCodeVerificationAPI500ApplicationJSONObject?: ImporterExporterCodeVerificationApi500ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi502ApplicationJsonObject?: ImporterExporterCodeVerificationApi502ApplicationJson;
+  importerExporterCodeVerificationAPI502ApplicationJSONObject?: ImporterExporterCodeVerificationApi502ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi503ApplicationJsonObject?: ImporterExporterCodeVerificationApi503ApplicationJson;
+  importerExporterCodeVerificationAPI503ApplicationJSONObject?: ImporterExporterCodeVerificationApi503ApplicationJson;
 
   @SpeakeasyMetadata()
-  importerExporterCodeVerificationApi504ApplicationJsonObject?: ImporterExporterCodeVerificationApi504ApplicationJson;
+  importerExporterCodeVerificationAPI504ApplicationJSONObject?: ImporterExporterCodeVerificationApi504ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

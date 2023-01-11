@@ -16,6 +16,6 @@ export declare class GetP45ReportOutputRequest extends SpeakeasyBase {
 export declare class GetP45ReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getP45ReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getP45ReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

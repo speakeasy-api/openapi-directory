@@ -1,7 +1,10 @@
-export var StatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusEnum = void 0;
+var StatusEnum;
 (function (StatusEnum) {
     StatusEnum["Creating"] = "CREATING";
     StatusEnum["Active"] = "ACTIVE";
     StatusEnum["Updating"] = "UPDATING";
     StatusEnum["Deleting"] = "DELETING";
-})(StatusEnum || (StatusEnum = {}));
+})(StatusEnum = exports.StatusEnum || (exports.StatusEnum = {}));

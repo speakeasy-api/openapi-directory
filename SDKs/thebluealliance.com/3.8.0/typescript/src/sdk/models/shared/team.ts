@@ -19,7 +19,7 @@ export class Team extends SpeakeasyBase {
   gmapsUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=home_championship" })
-  homeChampionship?: Map<string, any>;
+  homeChampionship?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=key" })
   key: string;

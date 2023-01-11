@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerServiceMetricsFilterCriteria } from "./customerservicemetricsfiltercriteria";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceMetricsTask = void 0;
+var utils_1 = require("../../../internal/utils");
+var customerservicemetricsfiltercriteria_1 = require("./customerservicemetricsfiltercriteria");
 var ServiceMetricsTask = /** @class */ (function (_super) {
     __extends(ServiceMetricsTask, _super);
     function ServiceMetricsTask() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completionDate" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "completionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailHref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailHref" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "detailHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedType" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "feedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterCriteria" }),
-        __metadata("design:type", CustomerServiceMetricsFilterCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterCriteria" }),
+        __metadata("design:type", customerservicemetricsfiltercriteria_1.CustomerServiceMetricsFilterCriteria)
     ], ServiceMetricsTask.prototype, "filterCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "schemaVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskId" }),
         __metadata("design:type", String)
     ], ServiceMetricsTask.prototype, "taskId", void 0);
     return ServiceMetricsTask;
-}(SpeakeasyBase));
-export { ServiceMetricsTask };
+}(utils_1.SpeakeasyBase));
+exports.ServiceMetricsTask = ServiceMetricsTask;

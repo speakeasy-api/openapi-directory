@@ -14,7 +14,7 @@ import { StateEnum } from "./stateenum";
 **/
 export class JourneyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Activities", elemType: Activity })
-  activities?: Map<string, Activity>;
+  activities?: Record<string, Activity>;
 
   @SpeakeasyMetadata({ data: "json, name=ApplicationId" })
   applicationId: string;
@@ -62,5 +62,5 @@ export class JourneyResponse extends SpeakeasyBase {
   waitForQuietTime?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

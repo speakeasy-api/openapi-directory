@@ -34,7 +34,7 @@ export declare class CreateAccessPolicyRequestBody extends SpeakeasyBase {
     accessPolicyPermission: CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum;
     accessPolicyResource: CreateAccessPolicyRequestBodyAccessPolicyResource;
     clientToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateAccessPolicyRequest extends SpeakeasyBase {
     headers: CreateAccessPolicyHeaders;

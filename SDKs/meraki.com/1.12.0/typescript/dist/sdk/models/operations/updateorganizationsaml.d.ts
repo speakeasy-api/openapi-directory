@@ -12,5 +12,5 @@ export declare class UpdateOrganizationSamlRequest extends SpeakeasyBase {
 export declare class UpdateOrganizationSamlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationSaml200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationSaml200ApplicationJSONObject?: Record<string, any>;
 }

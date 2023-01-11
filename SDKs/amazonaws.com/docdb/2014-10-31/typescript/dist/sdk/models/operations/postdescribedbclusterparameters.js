@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeDbClusterParametersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeDbClusterParametersResponse = exports.PostDescribeDbClusterParametersRequest = exports.PostDescribeDbClusterParametersHeaders = exports.PostDescribeDbClusterParametersQueryParams = exports.PostDescribeDbClusterParametersVersionEnum = exports.PostDescribeDbClusterParametersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeDbClusterParametersActionEnum;
 (function (PostDescribeDbClusterParametersActionEnum) {
     PostDescribeDbClusterParametersActionEnum["DescribeDbClusterParameters"] = "DescribeDBClusterParameters";
-})(PostDescribeDbClusterParametersActionEnum || (PostDescribeDbClusterParametersActionEnum = {}));
-export var PostDescribeDbClusterParametersVersionEnum;
+})(PostDescribeDbClusterParametersActionEnum = exports.PostDescribeDbClusterParametersActionEnum || (exports.PostDescribeDbClusterParametersActionEnum = {}));
+var PostDescribeDbClusterParametersVersionEnum;
 (function (PostDescribeDbClusterParametersVersionEnum) {
     PostDescribeDbClusterParametersVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDescribeDbClusterParametersVersionEnum || (PostDescribeDbClusterParametersVersionEnum = {}));
+})(PostDescribeDbClusterParametersVersionEnum = exports.PostDescribeDbClusterParametersVersionEnum || (exports.PostDescribeDbClusterParametersVersionEnum = {}));
 var PostDescribeDbClusterParametersQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeDbClusterParametersQueryParams, _super);
     function PostDescribeDbClusterParametersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersQueryParams.prototype, "version", void 0);
     return PostDescribeDbClusterParametersQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeDbClusterParametersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbClusterParametersQueryParams = PostDescribeDbClusterParametersQueryParams;
 var PostDescribeDbClusterParametersHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeDbClusterParametersHeaders, _super);
     function PostDescribeDbClusterParametersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeDbClusterParametersHeaders;
-}(SpeakeasyBase));
-export { PostDescribeDbClusterParametersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbClusterParametersHeaders = PostDescribeDbClusterParametersHeaders;
 var PostDescribeDbClusterParametersRequest = /** @class */ (function (_super) {
     __extends(PostDescribeDbClusterParametersRequest, _super);
     function PostDescribeDbClusterParametersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDbClusterParametersQueryParams)
     ], PostDescribeDbClusterParametersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDbClusterParametersHeaders)
     ], PostDescribeDbClusterParametersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDbClusterParametersRequest.prototype, "request", void 0);
     return PostDescribeDbClusterParametersRequest;
-}(SpeakeasyBase));
-export { PostDescribeDbClusterParametersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbClusterParametersRequest = PostDescribeDbClusterParametersRequest;
 var PostDescribeDbClusterParametersResponse = /** @class */ (function (_super) {
     __extends(PostDescribeDbClusterParametersResponse, _super);
     function PostDescribeDbClusterParametersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDbClusterParametersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeDbClusterParametersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeDbClusterParametersResponse.prototype, "statusCode", void 0);
     return PostDescribeDbClusterParametersResponse;
-}(SpeakeasyBase));
-export { PostDescribeDbClusterParametersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDbClusterParametersResponse = PostDescribeDbClusterParametersResponse;

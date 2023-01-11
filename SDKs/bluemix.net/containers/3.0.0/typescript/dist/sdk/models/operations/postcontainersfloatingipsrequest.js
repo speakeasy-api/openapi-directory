@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostContainersFloatingIpsRequestResponse = exports.PostContainersFloatingIpsRequestRequest = exports.PostContainersFloatingIpsRequestHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostContainersFloatingIpsRequestHeaders = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsRequestHeaders, _super);
     function PostContainersFloatingIpsRequestHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsRequestHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsRequestHeaders.prototype, "xAuthToken", void 0);
     return PostContainersFloatingIpsRequestHeaders;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsRequestHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsRequestHeaders = PostContainersFloatingIpsRequestHeaders;
 var PostContainersFloatingIpsRequestRequest = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsRequestRequest, _super);
     function PostContainersFloatingIpsRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersFloatingIpsRequestHeaders)
     ], PostContainersFloatingIpsRequestRequest.prototype, "headers", void 0);
     return PostContainersFloatingIpsRequestRequest;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsRequestRequest = PostContainersFloatingIpsRequestRequest;
 var PostContainersFloatingIpsRequestResponse = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsRequestResponse, _super);
     function PostContainersFloatingIpsRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], PostContainersFloatingIpsRequestResponse.prototype, "postContainersFloatingIpsRequest200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostContainersFloatingIpsRequestResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], PostContainersFloatingIpsRequestResponse.prototype, "postContainersFloatingIpsRequest200ApplicationJSONString", void 0);
     return PostContainersFloatingIpsRequestResponse;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsRequestResponse = PostContainersFloatingIpsRequestResponse;

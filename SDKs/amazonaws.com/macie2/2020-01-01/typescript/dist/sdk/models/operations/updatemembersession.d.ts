@@ -32,6 +32,6 @@ export declare class UpdateMemberSessionResponse extends SpeakeasyBase {
     serviceQuotaExceededException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateMemberSessionResponse?: Map<string, any>;
+    updateMemberSessionResponse?: Record<string, any>;
     validationException?: any;
 }

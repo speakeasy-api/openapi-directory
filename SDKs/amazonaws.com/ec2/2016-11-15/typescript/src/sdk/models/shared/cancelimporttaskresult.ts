@@ -4,11 +4,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CancelImportTaskResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  importTaskId?: string;
+  importTaskId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  previousState?: string;
+  previousState?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  state?: string;
+  state?: Record<string, any>;
 }

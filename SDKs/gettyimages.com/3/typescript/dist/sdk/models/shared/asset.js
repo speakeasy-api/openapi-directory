@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DisplaySize } from "./displaysize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Asset = void 0;
+var utils_1 = require("../../../internal/utils");
+var displaysize_1 = require("./displaysize");
 var Asset = /** @class */ (function (_super) {
     __extends(Asset, _super);
     function Asset() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_type" }),
         __metadata("design:type", String)
     ], Asset.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_added" }),
         __metadata("design:type", Date)
     ], Asset.prototype, "dateAdded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_sizes", elemType: DisplaySize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_sizes", elemType: displaysize_1.DisplaySize }),
         __metadata("design:type", Array)
     ], Asset.prototype, "displaySizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Asset.prototype, "id", void 0);
     return Asset;
-}(SpeakeasyBase));
-export { Asset };
+}(utils_1.SpeakeasyBase));
+exports.Asset = Asset;

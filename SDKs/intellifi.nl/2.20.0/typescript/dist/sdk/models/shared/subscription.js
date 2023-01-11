@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionInput = exports.Subscription = void 0;
+var utils_1 = require("../../../internal/utils");
 var Subscription = /** @class */ (function (_super) {
     __extends(Subscription, _super);
     function Subscription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], Subscription.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=database_hold_time_h" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=database_hold_time_h" }),
         __metadata("design:type", Number)
     ], Subscription.prototype, "databaseHoldTimeH", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=populate_events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=populate_events" }),
         __metadata("design:type", Boolean)
     ], Subscription.prototype, "populateEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_delivery_last_failure" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_delivery_last_failure" }),
+        __metadata("design:type", Object)
     ], Subscription.prototype, "targetDeliveryLastFailure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_delivery_status" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_delivery_status" }),
+        __metadata("design:type", Object)
     ], Subscription.prototype, "targetDeliveryStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_retry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_retry" }),
         __metadata("design:type", Boolean)
     ], Subscription.prototype, "targetRetry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_url" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "targetUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic_filter" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "topicFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verify_target_certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verify_target_certificate" }),
         __metadata("design:type", Boolean)
     ], Subscription.prototype, "verifyTargetCertificate", void 0);
     return Subscription;
-}(SpeakeasyBase));
-export { Subscription };
+}(utils_1.SpeakeasyBase));
+exports.Subscription = Subscription;
 var SubscriptionInput = /** @class */ (function (_super) {
     __extends(SubscriptionInput, _super);
     function SubscriptionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], SubscriptionInput.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=database_hold_time_h" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=database_hold_time_h" }),
         __metadata("design:type", Number)
     ], SubscriptionInput.prototype, "databaseHoldTimeH", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SubscriptionInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=populate_events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=populate_events" }),
         __metadata("design:type", Boolean)
     ], SubscriptionInput.prototype, "populateEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_retry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_retry" }),
         __metadata("design:type", Boolean)
     ], SubscriptionInput.prototype, "targetRetry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_url" }),
         __metadata("design:type", String)
     ], SubscriptionInput.prototype, "targetUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic_filter" }),
         __metadata("design:type", String)
     ], SubscriptionInput.prototype, "topicFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verify_target_certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verify_target_certificate" }),
         __metadata("design:type", Boolean)
     ], SubscriptionInput.prototype, "verifyTargetCertificate", void 0);
     return SubscriptionInput;
-}(SpeakeasyBase));
-export { SubscriptionInput };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionInput = SubscriptionInput;

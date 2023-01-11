@@ -20,7 +20,7 @@ export declare class DeleteTrailRequest extends SpeakeasyBase {
 export declare class DeleteTrailResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deleteTrailResponse?: Map<string, any>;
+    deleteTrailResponse?: Record<string, any>;
     insufficientDependencyServiceAccessPermissionException?: any;
     invalidHomeRegionException?: any;
     invalidTrailNameException?: any;

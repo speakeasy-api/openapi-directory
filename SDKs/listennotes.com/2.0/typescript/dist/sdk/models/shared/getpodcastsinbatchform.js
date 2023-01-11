@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPodcastsInBatchForm = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPodcastsInBatchForm = /** @class */ (function (_super) {
     __extends(GetPodcastsInBatchForm, _super);
     function GetPodcastsInBatchForm() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=ids;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=ids;" }),
         __metadata("design:type", String)
     ], GetPodcastsInBatchForm.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=itunes_ids;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=itunes_ids;" }),
         __metadata("design:type", String)
     ], GetPodcastsInBatchForm.prototype, "itunesIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=next_episode_pub_date;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=next_episode_pub_date;" }),
         __metadata("design:type", Number)
     ], GetPodcastsInBatchForm.prototype, "nextEpisodePubDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=rsses;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=rsses;" }),
         __metadata("design:type", String)
     ], GetPodcastsInBatchForm.prototype, "rsses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=show_latest_episodes;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=show_latest_episodes;" }),
         __metadata("design:type", Number)
     ], GetPodcastsInBatchForm.prototype, "showLatestEpisodes", void 0);
     return GetPodcastsInBatchForm;
-}(SpeakeasyBase));
-export { GetPodcastsInBatchForm };
+}(utils_1.SpeakeasyBase));
+exports.GetPodcastsInBatchForm = GetPodcastsInBatchForm;

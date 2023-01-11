@@ -8,5 +8,5 @@ export declare class GetOrganizationConfigTemplatesRequest extends SpeakeasyBase
 export declare class GetOrganizationConfigTemplatesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationConfigTemplates200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationConfigTemplates200ApplicationJSONObject?: Record<string, any>;
 }

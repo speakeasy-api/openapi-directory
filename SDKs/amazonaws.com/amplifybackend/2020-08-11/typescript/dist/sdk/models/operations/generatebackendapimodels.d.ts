@@ -25,7 +25,7 @@ export declare class GenerateBackendApiModelsResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     gatewayTimeoutException?: any;
-    generateBackendApiModelsResponse?: shared.GenerateBackendApiModelsResponse;
+    generateBackendAPIModelsResponse?: shared.GenerateBackendApiModelsResponse;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

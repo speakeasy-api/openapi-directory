@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2AuxiliaryTable } from "./googleprivacydlpv2auxiliarytable";
-import { GooglePrivacyDlpV2TaggedField } from "./googleprivacydlpv2taggedfield";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KMapEstimationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2auxiliarytable_1 = require("./googleprivacydlpv2auxiliarytable");
+var googleprivacydlpv2taggedfield_1 = require("./googleprivacydlpv2taggedfield");
 // GooglePrivacyDlpV2KMapEstimationConfig
 /**
  * Reidentifiability metric. This corresponds to a risk model similar to what is called "journalist risk" in the literature, except the attack dataset is statistically modeled instead of being perfectly known. This can be done using publicly available data (like the US Census), or using a custom statistical model (indicated as one or several BigQuery tables), or by extrapolating from the distribution of values in the input dataset.
@@ -35,17 +38,17 @@ var GooglePrivacyDlpV2KMapEstimationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryTables", elemType: GooglePrivacyDlpV2AuxiliaryTable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryTables", elemType: googleprivacydlpv2auxiliarytable_1.GooglePrivacyDlpV2AuxiliaryTable }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KMapEstimationConfig.prototype, "auxiliaryTables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quasiIds", elemType: GooglePrivacyDlpV2TaggedField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quasiIds", elemType: googleprivacydlpv2taggedfield_1.GooglePrivacyDlpV2TaggedField }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KMapEstimationConfig.prototype, "quasiIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionCode" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KMapEstimationConfig.prototype, "regionCode", void 0);
     return GooglePrivacyDlpV2KMapEstimationConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KMapEstimationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KMapEstimationConfig = GooglePrivacyDlpV2KMapEstimationConfig;

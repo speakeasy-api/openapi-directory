@@ -26,6 +26,6 @@ export declare class TestUpdateArtifactRequest extends SpeakeasyBase {
 }
 export declare class TestUpdateArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

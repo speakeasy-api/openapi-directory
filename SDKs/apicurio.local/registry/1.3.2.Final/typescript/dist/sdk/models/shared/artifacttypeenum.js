@@ -1,4 +1,7 @@
-export var ArtifactTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactTypeEnum = void 0;
+var ArtifactTypeEnum;
 (function (ArtifactTypeEnum) {
     ArtifactTypeEnum["Avro"] = "AVRO";
     ArtifactTypeEnum["Protobuf"] = "PROTOBUF";
@@ -11,4 +14,4 @@ export var ArtifactTypeEnum;
     ArtifactTypeEnum["Wsdl"] = "WSDL";
     ArtifactTypeEnum["Xsd"] = "XSD";
     ArtifactTypeEnum["Xml"] = "XML";
-})(ArtifactTypeEnum || (ArtifactTypeEnum = {}));
+})(ArtifactTypeEnum = exports.ArtifactTypeEnum || (exports.ArtifactTypeEnum = {}));

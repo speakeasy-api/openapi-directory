@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class BackendAuthSocialProviderConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientId" })
-  clientId?: string;
+  clientId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ClientSecret" })
-  clientSecret?: string;
+  clientSecret?: Record<string, any>;
 }

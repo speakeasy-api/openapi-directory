@@ -60,10 +60,10 @@ export declare class DeleteWorkspaceRequest extends SpeakeasyBase {
 export declare class DeleteWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteWorkspace200ApplicationJsonObject?: DeleteWorkspace200ApplicationJson;
-    deleteWorkspace401ApplicationJsonObject?: DeleteWorkspace401ApplicationJson;
-    deleteWorkspace403ApplicationJsonObject?: DeleteWorkspace403ApplicationJson;
-    deleteWorkspace404ApplicationJsonObject?: DeleteWorkspace404ApplicationJson;
-    deleteWorkspace422ApplicationJsonObject?: DeleteWorkspace422ApplicationJson;
-    deleteWorkspace500ApplicationJsonObject?: DeleteWorkspace500ApplicationJson;
+    deleteWorkspace200ApplicationJSONObject?: DeleteWorkspace200ApplicationJson;
+    deleteWorkspace401ApplicationJSONObject?: DeleteWorkspace401ApplicationJson;
+    deleteWorkspace403ApplicationJSONObject?: DeleteWorkspace403ApplicationJson;
+    deleteWorkspace404ApplicationJSONObject?: DeleteWorkspace404ApplicationJson;
+    deleteWorkspace422ApplicationJSONObject?: DeleteWorkspace422ApplicationJson;
+    deleteWorkspace500ApplicationJSONObject?: DeleteWorkspace500ApplicationJson;
 }

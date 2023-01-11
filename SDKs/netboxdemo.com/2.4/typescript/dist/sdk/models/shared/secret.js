@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-import { NestedSecretRole } from "./nestedsecretrole";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Secret = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedsecretrole_1 = require("./nestedsecretrole");
 var Secret = /** @class */ (function (_super) {
     __extends(Secret, _super);
     function Secret() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Secret.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Secret.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], Secret.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], Secret.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Secret.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Secret.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Secret.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plaintext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plaintext" }),
         __metadata("design:type", String)
     ], Secret.prototype, "plaintext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
-        __metadata("design:type", NestedSecretRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
+        __metadata("design:type", nestedsecretrole_1.NestedSecretRole)
     ], Secret.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Secret.prototype, "tags", void 0);
     return Secret;
-}(SpeakeasyBase));
-export { Secret };
+}(utils_1.SpeakeasyBase));
+exports.Secret = Secret;

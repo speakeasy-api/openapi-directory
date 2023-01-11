@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,136 +23,138 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetShippingLabelActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetShippingLabelResponse = exports.GetGetShippingLabelRequest = exports.GetGetShippingLabelQueryParams = exports.GetGetShippingLabelVersionEnum = exports.GetGetShippingLabelOperationEnum = exports.GetGetShippingLabelActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetShippingLabelActionEnum;
 (function (GetGetShippingLabelActionEnum) {
     GetGetShippingLabelActionEnum["GetShippingLabel"] = "GetShippingLabel";
-})(GetGetShippingLabelActionEnum || (GetGetShippingLabelActionEnum = {}));
-export var GetGetShippingLabelOperationEnum;
+})(GetGetShippingLabelActionEnum = exports.GetGetShippingLabelActionEnum || (exports.GetGetShippingLabelActionEnum = {}));
+var GetGetShippingLabelOperationEnum;
 (function (GetGetShippingLabelOperationEnum) {
     GetGetShippingLabelOperationEnum["GetShippingLabel"] = "GetShippingLabel";
-})(GetGetShippingLabelOperationEnum || (GetGetShippingLabelOperationEnum = {}));
-export var GetGetShippingLabelVersionEnum;
+})(GetGetShippingLabelOperationEnum = exports.GetGetShippingLabelOperationEnum || (exports.GetGetShippingLabelOperationEnum = {}));
+var GetGetShippingLabelVersionEnum;
 (function (GetGetShippingLabelVersionEnum) {
     GetGetShippingLabelVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(GetGetShippingLabelVersionEnum || (GetGetShippingLabelVersionEnum = {}));
+})(GetGetShippingLabelVersionEnum = exports.GetGetShippingLabelVersionEnum || (exports.GetGetShippingLabelVersionEnum = {}));
 var GetGetShippingLabelQueryParams = /** @class */ (function (_super) {
     __extends(GetGetShippingLabelQueryParams, _super);
     function GetGetShippingLabelQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=city" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=company" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=country" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jobIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=jobIds" }),
         __metadata("design:type", Array)
     ], GetGetShippingLabelQueryParams.prototype, "jobIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=phoneNumber" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=postalCode" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=stateOrProvince" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=stateOrProvince" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "stateOrProvince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=street1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=street1" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "street1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=street2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=street2" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "street2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=street3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=street3" }),
         __metadata("design:type", String)
     ], GetGetShippingLabelQueryParams.prototype, "street3", void 0);
     return GetGetShippingLabelQueryParams;
-}(SpeakeasyBase));
-export { GetGetShippingLabelQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetShippingLabelQueryParams = GetGetShippingLabelQueryParams;
 var GetGetShippingLabelRequest = /** @class */ (function (_super) {
     __extends(GetGetShippingLabelRequest, _super);
     function GetGetShippingLabelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetShippingLabelQueryParams)
     ], GetGetShippingLabelRequest.prototype, "queryParams", void 0);
     return GetGetShippingLabelRequest;
-}(SpeakeasyBase));
-export { GetGetShippingLabelRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetShippingLabelRequest = GetGetShippingLabelRequest;
 var GetGetShippingLabelResponse = /** @class */ (function (_super) {
     __extends(GetGetShippingLabelResponse, _super);
     function GetGetShippingLabelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetShippingLabelResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetShippingLabelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetShippingLabelResponse.prototype, "statusCode", void 0);
     return GetGetShippingLabelResponse;
-}(SpeakeasyBase));
-export { GetGetShippingLabelResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetShippingLabelResponse = GetGetShippingLabelResponse;

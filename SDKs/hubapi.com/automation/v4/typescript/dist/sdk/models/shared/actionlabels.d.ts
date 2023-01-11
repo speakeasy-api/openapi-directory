@@ -1,12 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * User-facing labels for this custom workflow action.
-**/
 export declare class ActionLabels extends SpeakeasyBase {
     actionCardContent?: string;
     actionDescription?: string;
-    actionName: string;
+    actionName?: string;
     appDisplayName?: string;
-    inputFieldDescriptions?: Map<string, string>;
-    inputFieldLabels?: Map<string, string>;
+    inputFieldDescriptions?: Record<string, string>;
+    inputFieldLabels?: Record<string, string>;
 }

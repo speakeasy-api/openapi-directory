@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceResponse = exports.UpdateDeviceRequest = exports.UpdateDeviceRequestBody = exports.UpdateDevicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDevicePathParams = /** @class */ (function (_super) {
     __extends(UpdateDevicePathParams, _super);
     function UpdateDevicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDevicePathParams.prototype, "serial", void 0);
     return UpdateDevicePathParams;
-}(SpeakeasyBase));
-export { UpdateDevicePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDevicePathParams = UpdateDevicePathParams;
 var UpdateDeviceRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceRequestBody, _super);
     function UpdateDeviceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], UpdateDeviceRequestBody.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorPlanId" }),
         __metadata("design:type", String)
     ], UpdateDeviceRequestBody.prototype, "floorPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], UpdateDeviceRequestBody.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], UpdateDeviceRequestBody.prototype, "lng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moveMapMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moveMapMarker" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceRequestBody.prototype, "moveMapMarker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateDeviceRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], UpdateDeviceRequestBody.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switchProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switchProfileId" }),
         __metadata("design:type", String)
     ], UpdateDeviceRequestBody.prototype, "switchProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], UpdateDeviceRequestBody.prototype, "tags", void 0);
     return UpdateDeviceRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceRequestBody = UpdateDeviceRequestBody;
 var UpdateDeviceRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceRequest, _super);
     function UpdateDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDevicePathParams)
     ], UpdateDeviceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceRequestBody)
     ], UpdateDeviceRequest.prototype, "request", void 0);
     return UpdateDeviceRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceRequest = UpdateDeviceRequest;
 var UpdateDeviceResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceResponse, _super);
     function UpdateDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceResponse.prototype, "updateDevice200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceResponse.prototype, "updateDevice200ApplicationJSONObject", void 0);
     return UpdateDeviceResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceResponse = UpdateDeviceResponse;

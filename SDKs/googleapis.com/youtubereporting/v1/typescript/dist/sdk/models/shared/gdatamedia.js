@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GdataBlobstore2Info } from "./gdatablobstore2info";
-import { GdataCompositeMedia } from "./gdatacompositemedia";
-import { GdataContentTypeInfo } from "./gdatacontenttypeinfo";
-import { GdataDiffChecksumsResponse } from "./gdatadiffchecksumsresponse";
-import { GdataDiffDownloadResponse } from "./gdatadiffdownloadresponse";
-import { GdataDiffUploadRequest } from "./gdatadiffuploadrequest";
-import { GdataDiffUploadResponse } from "./gdatadiffuploadresponse";
-import { GdataDiffVersionResponse } from "./gdatadiffversionresponse";
-import { GdataDownloadParameters } from "./gdatadownloadparameters";
-import { GdataObjectId } from "./gdataobjectid";
-export var GdataMediaReferenceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GdataMedia = exports.GdataMediaReferenceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gdatablobstore2info_1 = require("./gdatablobstore2info");
+var gdatacompositemedia_1 = require("./gdatacompositemedia");
+var gdatacontenttypeinfo_1 = require("./gdatacontenttypeinfo");
+var gdatadiffchecksumsresponse_1 = require("./gdatadiffchecksumsresponse");
+var gdatadiffdownloadresponse_1 = require("./gdatadiffdownloadresponse");
+var gdatadiffuploadrequest_1 = require("./gdatadiffuploadrequest");
+var gdatadiffuploadresponse_1 = require("./gdatadiffuploadresponse");
+var gdatadiffversionresponse_1 = require("./gdatadiffversionresponse");
+var gdatadownloadparameters_1 = require("./gdatadownloadparameters");
+var gdataobjectid_1 = require("./gdataobjectid");
+var GdataMediaReferenceTypeEnum;
 (function (GdataMediaReferenceTypeEnum) {
     GdataMediaReferenceTypeEnum["Path"] = "PATH";
     GdataMediaReferenceTypeEnum["BlobRef"] = "BLOB_REF";
@@ -48,7 +51,7 @@ export var GdataMediaReferenceTypeEnum;
     GdataMediaReferenceTypeEnum["DiffUploadResponse"] = "DIFF_UPLOAD_RESPONSE";
     GdataMediaReferenceTypeEnum["CosmoBinaryReference"] = "COSMO_BINARY_REFERENCE";
     GdataMediaReferenceTypeEnum["ArbitraryBytes"] = "ARBITRARY_BYTES";
-})(GdataMediaReferenceTypeEnum || (GdataMediaReferenceTypeEnum = {}));
+})(GdataMediaReferenceTypeEnum = exports.GdataMediaReferenceTypeEnum || (exports.GdataMediaReferenceTypeEnum = {}));
 // GdataMedia
 /**
  * gdata
@@ -59,125 +62,125 @@ var GdataMedia = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "algorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigstoreObjectRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigstoreObjectRef" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "bigstoreObjectRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobRef" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "blobRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobstore2Info" }),
-        __metadata("design:type", GdataBlobstore2Info)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobstore2Info" }),
+        __metadata("design:type", gdatablobstore2info_1.GdataBlobstore2Info)
     ], GdataMedia.prototype, "blobstore2Info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compositeMedia", elemType: GdataCompositeMedia }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compositeMedia", elemType: gdatacompositemedia_1.GdataCompositeMedia }),
         __metadata("design:type", Array)
     ], GdataMedia.prototype, "compositeMedia", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentType" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentTypeInfo" }),
-        __metadata("design:type", GdataContentTypeInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentTypeInfo" }),
+        __metadata("design:type", gdatacontenttypeinfo_1.GdataContentTypeInfo)
     ], GdataMedia.prototype, "contentTypeInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cosmoBinaryReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cosmoBinaryReference" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "cosmoBinaryReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crc32cHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crc32cHash" }),
         __metadata("design:type", Number)
     ], GdataMedia.prototype, "crc32cHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffChecksumsResponse" }),
-        __metadata("design:type", GdataDiffChecksumsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffChecksumsResponse" }),
+        __metadata("design:type", gdatadiffchecksumsresponse_1.GdataDiffChecksumsResponse)
     ], GdataMedia.prototype, "diffChecksumsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffDownloadResponse" }),
-        __metadata("design:type", GdataDiffDownloadResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffDownloadResponse" }),
+        __metadata("design:type", gdatadiffdownloadresponse_1.GdataDiffDownloadResponse)
     ], GdataMedia.prototype, "diffDownloadResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffUploadRequest" }),
-        __metadata("design:type", GdataDiffUploadRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffUploadRequest" }),
+        __metadata("design:type", gdatadiffuploadrequest_1.GdataDiffUploadRequest)
     ], GdataMedia.prototype, "diffUploadRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffUploadResponse" }),
-        __metadata("design:type", GdataDiffUploadResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffUploadResponse" }),
+        __metadata("design:type", gdatadiffuploadresponse_1.GdataDiffUploadResponse)
     ], GdataMedia.prototype, "diffUploadResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffVersionResponse" }),
-        __metadata("design:type", GdataDiffVersionResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffVersionResponse" }),
+        __metadata("design:type", gdatadiffversionresponse_1.GdataDiffVersionResponse)
     ], GdataMedia.prototype, "diffVersionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadParameters" }),
-        __metadata("design:type", GdataDownloadParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadParameters" }),
+        __metadata("design:type", gdatadownloadparameters_1.GdataDownloadParameters)
     ], GdataMedia.prototype, "downloadParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hashVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hashVerified" }),
         __metadata("design:type", Boolean)
     ], GdataMedia.prototype, "hashVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inline" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "inline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPotentialRetry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPotentialRetry" }),
         __metadata("design:type", Boolean)
     ], GdataMedia.prototype, "isPotentialRetry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5Hash" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "md5Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaId" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "mediaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectId" }),
-        __metadata("design:type", GdataObjectId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectId" }),
+        __metadata("design:type", gdataobjectid_1.GdataObjectId)
     ], GdataMedia.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceType" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "referenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha1Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha1Hash" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "sha1Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256Hash" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "sha256Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], GdataMedia.prototype, "token", void 0);
     return GdataMedia;
-}(SpeakeasyBase));
-export { GdataMedia };
+}(utils_1.SpeakeasyBase));
+exports.GdataMedia = GdataMedia;

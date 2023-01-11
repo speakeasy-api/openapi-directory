@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest = exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum = exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum;
 (function (GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum) {
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum["AnnotationUnspecified"] = "ANNOTATION_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum["Legitimate"] = "LEGITIMATE";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum["Fraudulent"] = "FRAUDULENT";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum["PasswordCorrect"] = "PASSWORD_CORRECT";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum["PasswordIncorrect"] = "PASSWORD_INCORRECT";
-})(GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum || (GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum = {}));
-export var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum;
+})(GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum = exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum || (exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum = {}));
+var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum;
 (function (GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum) {
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum["ReasonUnspecified"] = "REASON_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum["Chargeback"] = "CHARGEBACK";
@@ -48,7 +51,7 @@ export var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum;
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum["CorrectPassword"] = "CORRECT_PASSWORD";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum["IncorrectPassword"] = "INCORRECT_PASSWORD";
     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum["SocialSpam"] = "SOCIAL_SPAM";
-})(GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum || (GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum = {}));
+})(GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum = exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum || (exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum = {}));
 // GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest
 /**
  * The request message to annotate an Assessment.
@@ -59,17 +62,17 @@ var GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotation" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest.prototype, "annotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hashedAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hashedAccountId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest.prototype, "hashedAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasons" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest.prototype, "reasons", void 0);
     return GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest = GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest;

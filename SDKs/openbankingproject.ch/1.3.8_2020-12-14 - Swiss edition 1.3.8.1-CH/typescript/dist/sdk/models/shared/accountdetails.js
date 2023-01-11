@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { Balance } from "./balance";
-import { AccountStatusEnum } from "./accountstatusenum";
-export var AccountDetailsUsageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountDetails = exports.AccountDetailsUsageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var hreftype_1 = require("./hreftype");
+var balance_1 = require("./balance");
+var accountstatusenum_1 = require("./accountstatusenum");
+var AccountDetailsUsageEnum;
 (function (AccountDetailsUsageEnum) {
     AccountDetailsUsageEnum["Priv"] = "PRIV";
     AccountDetailsUsageEnum["Orga"] = "ORGA";
-})(AccountDetailsUsageEnum || (AccountDetailsUsageEnum = {}));
+})(AccountDetailsUsageEnum = exports.AccountDetailsUsageEnum || (exports.AccountDetailsUsageEnum = {}));
 // AccountDetails
 /**
  * The ASPSP shall give at least one of the account reference identifiers:
@@ -48,73 +51,73 @@ var AccountDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], AccountDetails.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balances", elemType: Balance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balances", elemType: balance_1.Balance }),
         __metadata("design:type", Array)
     ], AccountDetails.prototype, "balances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bban" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "bban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bic" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cashAccountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cashAccountType" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "cashAccountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedAccounts" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "linkedAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msisdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msisdn" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "msisdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerName" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "ownerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "product", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "usage", void 0);
     return AccountDetails;
-}(SpeakeasyBase));
-export { AccountDetails };
+}(utils_1.SpeakeasyBase));
+exports.AccountDetails = AccountDetails;

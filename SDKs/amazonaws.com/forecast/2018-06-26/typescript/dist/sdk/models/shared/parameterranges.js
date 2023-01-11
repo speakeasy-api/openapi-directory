@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoricalParameterRange } from "./categoricalparameterrange";
-import { ContinuousParameterRange } from "./continuousparameterrange";
-import { IntegerParameterRange } from "./integerparameterrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParameterRanges = void 0;
+var utils_1 = require("../../../internal/utils");
+var categoricalparameterrange_1 = require("./categoricalparameterrange");
+var continuousparameterrange_1 = require("./continuousparameterrange");
+var integerparameterrange_1 = require("./integerparameterrange");
 // ParameterRanges
 /**
  * Specifies the categorical, continuous, and integer hyperparameters, and their ranges of tunable values. The range of tunable values determines which values that a hyperparameter tuning job can choose for the specified hyperparameter. This object is part of the <a>HyperParameterTuningJobConfig</a> object.
@@ -36,17 +39,17 @@ var ParameterRanges = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CategoricalParameterRanges", elemType: CategoricalParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CategoricalParameterRanges", elemType: categoricalparameterrange_1.CategoricalParameterRange }),
         __metadata("design:type", Array)
     ], ParameterRanges.prototype, "categoricalParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContinuousParameterRanges", elemType: ContinuousParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContinuousParameterRanges", elemType: continuousparameterrange_1.ContinuousParameterRange }),
         __metadata("design:type", Array)
     ], ParameterRanges.prototype, "continuousParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntegerParameterRanges", elemType: IntegerParameterRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntegerParameterRanges", elemType: integerparameterrange_1.IntegerParameterRange }),
         __metadata("design:type", Array)
     ], ParameterRanges.prototype, "integerParameterRanges", void 0);
     return ParameterRanges;
-}(SpeakeasyBase));
-export { ParameterRanges };
+}(utils_1.SpeakeasyBase));
+exports.ParameterRanges = ParameterRanges;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RendererFormattedStrings } from "./rendererformattedstrings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.I18n = void 0;
+var utils_1 = require("../../../internal/utils");
+var rendererformattedstrings_1 = require("./rendererformattedstrings");
 // I18n
 /**
  * Message containing the i18n data for the LHR - Version 1.
@@ -34,9 +37,9 @@ var I18n = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rendererFormattedStrings" }),
-        __metadata("design:type", RendererFormattedStrings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rendererFormattedStrings" }),
+        __metadata("design:type", rendererformattedstrings_1.RendererFormattedStrings)
     ], I18n.prototype, "rendererFormattedStrings", void 0);
     return I18n;
-}(SpeakeasyBase));
-export { I18n };
+}(utils_1.SpeakeasyBase));
+exports.I18n = I18n;

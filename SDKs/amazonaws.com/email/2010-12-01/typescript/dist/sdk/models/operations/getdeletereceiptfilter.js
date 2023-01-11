@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteReceiptFilterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteReceiptFilterResponse = exports.GetDeleteReceiptFilterRequest = exports.GetDeleteReceiptFilterHeaders = exports.GetDeleteReceiptFilterQueryParams = exports.GetDeleteReceiptFilterVersionEnum = exports.GetDeleteReceiptFilterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteReceiptFilterActionEnum;
 (function (GetDeleteReceiptFilterActionEnum) {
     GetDeleteReceiptFilterActionEnum["DeleteReceiptFilter"] = "DeleteReceiptFilter";
-})(GetDeleteReceiptFilterActionEnum || (GetDeleteReceiptFilterActionEnum = {}));
-export var GetDeleteReceiptFilterVersionEnum;
+})(GetDeleteReceiptFilterActionEnum = exports.GetDeleteReceiptFilterActionEnum || (exports.GetDeleteReceiptFilterActionEnum = {}));
+var GetDeleteReceiptFilterVersionEnum;
 (function (GetDeleteReceiptFilterVersionEnum) {
     GetDeleteReceiptFilterVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteReceiptFilterVersionEnum || (GetDeleteReceiptFilterVersionEnum = {}));
+})(GetDeleteReceiptFilterVersionEnum = exports.GetDeleteReceiptFilterVersionEnum || (exports.GetDeleteReceiptFilterVersionEnum = {}));
 var GetDeleteReceiptFilterQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptFilterQueryParams, _super);
     function GetDeleteReceiptFilterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FilterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FilterName" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterQueryParams.prototype, "filterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterQueryParams.prototype, "version", void 0);
     return GetDeleteReceiptFilterQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteReceiptFilterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptFilterQueryParams = GetDeleteReceiptFilterQueryParams;
 var GetDeleteReceiptFilterHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptFilterHeaders, _super);
     function GetDeleteReceiptFilterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteReceiptFilterHeaders;
-}(SpeakeasyBase));
-export { GetDeleteReceiptFilterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptFilterHeaders = GetDeleteReceiptFilterHeaders;
 var GetDeleteReceiptFilterRequest = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptFilterRequest, _super);
     function GetDeleteReceiptFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReceiptFilterQueryParams)
     ], GetDeleteReceiptFilterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReceiptFilterHeaders)
     ], GetDeleteReceiptFilterRequest.prototype, "headers", void 0);
     return GetDeleteReceiptFilterRequest;
-}(SpeakeasyBase));
-export { GetDeleteReceiptFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptFilterRequest = GetDeleteReceiptFilterRequest;
 var GetDeleteReceiptFilterResponse = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptFilterResponse, _super);
     function GetDeleteReceiptFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteReceiptFilterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteReceiptFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteReceiptFilterResponse.prototype, "statusCode", void 0);
     return GetDeleteReceiptFilterResponse;
-}(SpeakeasyBase));
-export { GetDeleteReceiptFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptFilterResponse = GetDeleteReceiptFilterResponse;

@@ -12,7 +12,7 @@ export declare enum UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormat
     Zero = "0"
 }
 export declare class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods extends SpeakeasyBase {
-    authenticationTypes?: Map<string, any>;
+    authenticationTypes?: Record<string, any>;
     id?: string;
 }
 export declare class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms extends SpeakeasyBase {
@@ -128,5 +128,5 @@ export declare class UpdateNetworkWirelessSsidHotspot20Request extends Speakeasy
 export declare class UpdateNetworkWirelessSsidHotspot20Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidHotspot20200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidHotspot20200ApplicationJSONObject?: Record<string, any>;
 }

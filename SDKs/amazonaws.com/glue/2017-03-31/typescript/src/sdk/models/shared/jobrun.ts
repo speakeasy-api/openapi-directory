@@ -12,10 +12,10 @@ import { WorkerTypeEnum } from "./workertypeenum";
 **/
 export class JobRun extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AllocatedCapacity" })
-  allocatedCapacity?: number;
+  allocatedCapacity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Arguments" })
-  arguments?: Map<string, string>;
+  arguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Attempt" })
   attempt?: number;

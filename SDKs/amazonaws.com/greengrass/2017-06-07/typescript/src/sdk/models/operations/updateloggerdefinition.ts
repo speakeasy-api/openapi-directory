@@ -61,5 +61,5 @@ export class UpdateLoggerDefinitionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLoggerDefinitionResponse?: Map<string, any>;
+  updateLoggerDefinitionResponse?: Record<string, any>;
 }

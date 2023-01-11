@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MultiCloudCluster = exports.MultiCloudClusterInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // MultiCloudClusterInput
 /**
  * MultiCloudCluster contains information specific to GKE Multi-Cloud clusters.
@@ -33,12 +36,12 @@ var MultiCloudClusterInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
         __metadata("design:type", String)
     ], MultiCloudClusterInput.prototype, "resourceLink", void 0);
     return MultiCloudClusterInput;
-}(SpeakeasyBase));
-export { MultiCloudClusterInput };
+}(utils_1.SpeakeasyBase));
+exports.MultiCloudClusterInput = MultiCloudClusterInput;
 // MultiCloudCluster
 /**
  * MultiCloudCluster contains information specific to GKE Multi-Cloud clusters.
@@ -49,13 +52,13 @@ var MultiCloudCluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterMissing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterMissing" }),
         __metadata("design:type", Boolean)
     ], MultiCloudCluster.prototype, "clusterMissing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
         __metadata("design:type", String)
     ], MultiCloudCluster.prototype, "resourceLink", void 0);
     return MultiCloudCluster;
-}(SpeakeasyBase));
-export { MultiCloudCluster };
+}(utils_1.SpeakeasyBase));
+exports.MultiCloudCluster = MultiCloudCluster;

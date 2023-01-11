@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemCondition = void 0;
+var utils_1 = require("../../../internal/utils");
 // ItemCondition
 /**
  * Note: In all eBay marketplaces, Condition ID 2000 now maps to an item condition of 'Certified Refurbished', and not 'Manufacturer Refurbished'. To list an item as 'Certified Refurbished', a seller must be pre-qualified by eBay for this feature. Any seller who is not eligible for this feature will be blocked if they try to create a new listing or revise an existing listing with this item condition. Any active listings on any eBay marketplace that had 'Manufacturer Refurbished' as the item condition should have been automatically updated by eBay to the 'Seller Refurbished' item condition (Condition ID 2500). Any seller that is interested in eligibility requirements to list with 'Certified Refurbished' should see the Certified refurbished program page in Seller Center.
@@ -33,13 +36,13 @@ var ItemCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditionDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditionDescription" }),
         __metadata("design:type", String)
     ], ItemCondition.prototype, "conditionDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditionId" }),
         __metadata("design:type", String)
     ], ItemCondition.prototype, "conditionId", void 0);
     return ItemCondition;
-}(SpeakeasyBase));
-export { ItemCondition };
+}(utils_1.SpeakeasyBase));
+exports.ItemCondition = ItemCondition;

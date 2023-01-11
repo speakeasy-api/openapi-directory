@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValidationErrorsEntry } from "./validationerrorsentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidateResourcePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var validationerrorsentry_1 = require("./validationerrorsentry");
 var ValidateResourcePolicyResponse = /** @class */ (function (_super) {
     __extends(ValidateResourcePolicyResponse, _super);
     function ValidateResourcePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyValidationPassed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyValidationPassed" }),
         __metadata("design:type", Boolean)
     ], ValidateResourcePolicyResponse.prototype, "policyValidationPassed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationErrorsEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerrorsentry_1.ValidationErrorsEntry }),
         __metadata("design:type", Array)
     ], ValidateResourcePolicyResponse.prototype, "validationErrors", void 0);
     return ValidateResourcePolicyResponse;
-}(SpeakeasyBase));
-export { ValidateResourcePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ValidateResourcePolicyResponse = ValidateResourcePolicyResponse;

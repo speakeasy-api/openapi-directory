@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse = exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest = exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity = exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams = /** @class */ (function (_super) {
     __extends(PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams, _super);
     function PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", Number)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cardId" }),
         __metadata("design:type", String)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams.prototype, "cardId", void 0);
     return PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams;
-}(SpeakeasyBase));
-export { PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams = PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams;
 var PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity = /** @class */ (function (_super) {
     __extends(PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity, _super);
     function PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=query" }),
         __metadata("design:type", shared.SchemeDeveloperHapikey)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity.prototype, "developerHapikey", void 0);
     return PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity;
-}(SpeakeasyBase));
-export { PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity = PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity;
 var PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest = /** @class */ (function (_super) {
     __extends(PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest, _super);
     function PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.CardPatchRequest)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest.prototype, "security", void 0);
     return PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest;
-}(SpeakeasyBase));
-export { PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest = PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest;
 var PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse = /** @class */ (function (_super) {
     __extends(PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse, _super);
     function PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CardResponse)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse.prototype, "cardResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse.prototype, "statusCode", void 0);
     return PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse;
-}(SpeakeasyBase));
-export { PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse = PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse;

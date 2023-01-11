@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportStatusEnum } from "./exportstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportstatusenum_1 = require("./exportstatusenum");
 // ExportInfo
 /**
  * Information regarding the export status of discovered data. The value is an array of objects.
@@ -34,37 +37,37 @@ var ExportInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationsDownloadUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationsDownloadUrl" }),
         __metadata("design:type", String)
     ], ExportInfo.prototype, "configurationsDownloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportId" }),
         __metadata("design:type", String)
     ], ExportInfo.prototype, "exportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportRequestTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportRequestTime" }),
         __metadata("design:type", Date)
     ], ExportInfo.prototype, "exportRequestTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportStatus" }),
         __metadata("design:type", String)
     ], ExportInfo.prototype, "exportStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isTruncated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isTruncated" }),
         __metadata("design:type", Boolean)
     ], ExportInfo.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedEndTime" }),
         __metadata("design:type", Date)
     ], ExportInfo.prototype, "requestedEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedStartTime" }),
         __metadata("design:type", Date)
     ], ExportInfo.prototype, "requestedStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], ExportInfo.prototype, "statusMessage", void 0);
     return ExportInfo;
-}(SpeakeasyBase));
-export { ExportInfo };
+}(utils_1.SpeakeasyBase));
+exports.ExportInfo = ExportInfo;

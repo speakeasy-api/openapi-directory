@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterSnapshot } from "./dbclustersnapshot";
+import { DbClusterSnapshotList } from "./dbclustersnapshotlist";
 
 
 
@@ -8,8 +8,8 @@ import { DbClusterSnapshot } from "./dbclustersnapshot";
  * Represents the output of <a>DescribeDBClusterSnapshots</a>.
 **/
 export class DbClusterSnapshotMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbClusterSnapshot })
-  dbClusterSnapshots?: DbClusterSnapshot[];
+  @SpeakeasyMetadata({ elemType: DbClusterSnapshotList })
+  dbClusterSnapshots?: DbClusterSnapshotList[];
 
   @SpeakeasyMetadata()
   marker?: string;

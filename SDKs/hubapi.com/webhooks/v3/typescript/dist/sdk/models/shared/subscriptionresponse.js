@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SubscriptionResponseEventTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionResponse = exports.SubscriptionResponseEventTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SubscriptionResponseEventTypeEnum;
 (function (SubscriptionResponseEventTypeEnum) {
     SubscriptionResponseEventTypeEnum["ContactPropertyChange"] = "contact.propertyChange";
     SubscriptionResponseEventTypeEnum["CompanyPropertyChange"] = "company.propertyChange";
@@ -49,7 +52,7 @@ export var SubscriptionResponseEventTypeEnum;
     SubscriptionResponseEventTypeEnum["ConversationNewMessage"] = "conversation.newMessage";
     SubscriptionResponseEventTypeEnum["ConversationPrivacyDeletion"] = "conversation.privacyDeletion";
     SubscriptionResponseEventTypeEnum["ConversationPropertyChange"] = "conversation.propertyChange";
-})(SubscriptionResponseEventTypeEnum || (SubscriptionResponseEventTypeEnum = {}));
+})(SubscriptionResponseEventTypeEnum = exports.SubscriptionResponseEventTypeEnum || (exports.SubscriptionResponseEventTypeEnum = {}));
 // SubscriptionResponse
 /**
  * Complete details for an event subscription.
@@ -60,29 +63,29 @@ var SubscriptionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], SubscriptionResponse.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], SubscriptionResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], SubscriptionResponse.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SubscriptionResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propertyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyName" }),
         __metadata("design:type", String)
     ], SubscriptionResponse.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], SubscriptionResponse.prototype, "updatedAt", void 0);
     return SubscriptionResponse;
-}(SpeakeasyBase));
-export { SubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionResponse = SubscriptionResponse;

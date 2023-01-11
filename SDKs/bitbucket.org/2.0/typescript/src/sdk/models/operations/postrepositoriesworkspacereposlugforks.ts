@@ -29,7 +29,7 @@ export class PostRepositoriesWorkspaceRepoSlugForksRequest extends SpeakeasyBase
   pathParams: PostRepositoriesWorkspaceRepoSlugForksPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugForksSecurity;
@@ -41,11 +41,11 @@ export class PostRepositoriesWorkspaceRepoSlugForksResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  repository?: Map<string, any>;
+  repository?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormDataContentDisposition = void 0;
+var utils_1 = require("../../../internal/utils");
 // FormDataContentDisposition
 /**
  * The metadata for the file.
@@ -33,37 +36,37 @@ var FormDataContentDisposition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=creationDate" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=fileName" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=modificationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=modificationDate" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "modificationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=name" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=parameters;json=true" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=parameters;json=true" }),
+        __metadata("design:type", Object)
     ], FormDataContentDisposition.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=readDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=readDate" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "readDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=size" }),
         __metadata("design:type", Number)
     ], FormDataContentDisposition.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=type" }),
         __metadata("design:type", String)
     ], FormDataContentDisposition.prototype, "type", void 0);
     return FormDataContentDisposition;
-}(SpeakeasyBase));
-export { FormDataContentDisposition };
+}(utils_1.SpeakeasyBase));
+exports.FormDataContentDisposition = FormDataContentDisposition;

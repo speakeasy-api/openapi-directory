@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PostVolumesCreateVolumeRequest extends SpeakeasyBase {
     automount?: boolean;
     format?: string;
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     location?: string;
     name: string;
     server?: number;
@@ -61,7 +61,7 @@ export declare class PostVolumes201ApplicationJsonVolume extends SpeakeasyBase {
     created: string;
     format: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     linuxDevice: string;
     location: PostVolumes201ApplicationJsonVolumeLocation;
     name: string;
@@ -80,6 +80,6 @@ export declare class PostVolumesRequest extends SpeakeasyBase {
 }
 export declare class PostVolumesResponse extends SpeakeasyBase {
     contentType: string;
-    postVolumes201ApplicationJsonObject?: PostVolumes201ApplicationJson;
     statusCode: number;
+    postVolumes201ApplicationJSONObject?: PostVolumes201ApplicationJson;
 }

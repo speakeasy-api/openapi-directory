@@ -27,6 +27,6 @@ export declare class DlpProjectsStoredInfoTypesDeleteRequest extends SpeakeasyBa
 }
 export declare class DlpProjectsStoredInfoTypesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

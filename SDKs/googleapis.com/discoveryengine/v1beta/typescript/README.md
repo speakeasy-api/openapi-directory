@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest, DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,38 +30,37 @@ const req: DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequ
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dolor",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "mollitia",
-    alt: "proto",
-    callback: "architecto",
-    documentId: "aperiam",
-    fields: "tempora",
-    key: "culpa",
-    oauthToken: "et",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    documentId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "laudantium",
-    uploadType: "commodi",
-    uploadProtocol: "error",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    id: "magnam",
-    jsonData: "qui",
-    name: "hic",
-    parentDocumentId: "quaerat",
-    schemaId: "quia",
+    id: "debitis",
+    jsonData: "voluptatum",
+    name: "et",
+    parentDocumentId: "ut",
+    schemaId: "dolorem",
     structData: {
-      "in": "vero",
-      "eligendi": "qui",
-      "rerum": "aspernatur",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
   },
 };

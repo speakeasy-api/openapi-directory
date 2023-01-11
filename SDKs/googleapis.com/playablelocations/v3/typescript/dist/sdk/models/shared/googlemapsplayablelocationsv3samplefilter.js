@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleMapsPlayablelocationsV3SampleSpacingOptions } from "./googlemapsplayablelocationsv3samplespacingoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3SampleFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlemapsplayablelocationsv3samplespacingoptions_1 = require("./googlemapsplayablelocationsv3samplespacingoptions");
 // GoogleMapsPlayablelocationsV3SampleFilter
 /**
  * Specifies the filters to use when searching for playable locations.
@@ -34,17 +37,17 @@ var GoogleMapsPlayablelocationsV3SampleFilter = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includedTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includedTypes" }),
         __metadata("design:type", Array)
     ], GoogleMapsPlayablelocationsV3SampleFilter.prototype, "includedTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLocationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLocationCount" }),
         __metadata("design:type", Number)
     ], GoogleMapsPlayablelocationsV3SampleFilter.prototype, "maxLocationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spacing" }),
-        __metadata("design:type", GoogleMapsPlayablelocationsV3SampleSpacingOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spacing" }),
+        __metadata("design:type", googlemapsplayablelocationsv3samplespacingoptions_1.GoogleMapsPlayablelocationsV3SampleSpacingOptions)
     ], GoogleMapsPlayablelocationsV3SampleFilter.prototype, "spacing", void 0);
     return GoogleMapsPlayablelocationsV3SampleFilter;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3SampleFilter };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3SampleFilter = GoogleMapsPlayablelocationsV3SampleFilter;

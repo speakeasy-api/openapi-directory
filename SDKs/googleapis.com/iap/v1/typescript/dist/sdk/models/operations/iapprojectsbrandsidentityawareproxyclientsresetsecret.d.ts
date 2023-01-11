@@ -23,7 +23,7 @@ export declare class IapProjectsBrandsIdentityAwareProxyClientsResetSecretSecuri
 export declare class IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest extends SpeakeasyBase {
     pathParams: IapProjectsBrandsIdentityAwareProxyClientsResetSecretPathParams;
     queryParams: IapProjectsBrandsIdentityAwareProxyClientsResetSecretQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: IapProjectsBrandsIdentityAwareProxyClientsResetSecretSecurity;
 }
 export declare class IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse extends SpeakeasyBase {

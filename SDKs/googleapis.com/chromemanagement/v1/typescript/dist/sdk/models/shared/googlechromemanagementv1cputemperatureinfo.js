@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CpuTemperatureInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1CpuTemperatureInfo
 /**
  * CPU temperature of a device. Sampled per CPU core in Celsius. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Every 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -33,13 +36,13 @@ var GoogleChromeManagementV1CpuTemperatureInfo = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1CpuTemperatureInfo.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=temperatureCelsius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temperatureCelsius" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1CpuTemperatureInfo.prototype, "temperatureCelsius", void 0);
     return GoogleChromeManagementV1CpuTemperatureInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CpuTemperatureInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CpuTemperatureInfo = GoogleChromeManagementV1CpuTemperatureInfo;

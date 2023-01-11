@@ -47,5 +47,5 @@ export declare class UpdateDeviceManagementInterfaceRequest extends SpeakeasyBas
 export declare class UpdateDeviceManagementInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceManagementInterface200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

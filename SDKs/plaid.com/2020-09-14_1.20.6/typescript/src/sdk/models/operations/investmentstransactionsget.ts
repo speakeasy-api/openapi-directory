@@ -14,7 +14,7 @@ export class InvestmentsTransactionsGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  investmentsTransactionsGetResponse?: Map<string, any>;
+  investmentsTransactionsGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

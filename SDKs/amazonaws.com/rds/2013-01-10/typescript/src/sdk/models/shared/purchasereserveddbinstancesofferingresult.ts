@@ -5,5 +5,5 @@ import { ReservedDbInstance } from "./reserveddbinstance";
 
 export class PurchaseReservedDbInstancesOfferingResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  reservedDbInstance?: ReservedDbInstance;
+  reservedDBInstance?: ReservedDbInstance;
 }

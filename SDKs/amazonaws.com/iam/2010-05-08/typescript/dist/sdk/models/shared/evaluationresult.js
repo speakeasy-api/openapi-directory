@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyEvaluationDecisionTypeEnum } from "./policyevaluationdecisiontypeenum";
-import { Statement } from "./statement";
-import { OrganizationsDecisionDetail } from "./organizationsdecisiondetail";
-import { PermissionsBoundaryDecisionDetail } from "./permissionsboundarydecisiondetail";
-import { ResourceSpecificResult } from "./resourcespecificresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var policyevaluationdecisiontypeenum_1 = require("./policyevaluationdecisiontypeenum");
+var statement_1 = require("./statement");
+var organizationsdecisiondetail_1 = require("./organizationsdecisiondetail");
+var permissionsboundarydecisiondetail_1 = require("./permissionsboundarydecisiondetail");
+var resourcespecificresult_1 = require("./resourcespecificresult");
 // EvaluationResult
 /**
  * <p>Contains the results of a simulation.</p> <p>This data type is used by the return parameter of <code> <a>SimulateCustomPolicy</a> </code> and <code> <a>SimulatePrincipalPolicy</a> </code>.</p>
@@ -38,41 +41,41 @@ var EvaluationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "evalActionName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "evalDecision", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], EvaluationResult.prototype, "evalDecisionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EvaluationResult.prototype, "evalResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Statement }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: statement_1.Statement }),
         __metadata("design:type", Array)
     ], EvaluationResult.prototype, "matchedStatements", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], EvaluationResult.prototype, "missingContextValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OrganizationsDecisionDetail)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", organizationsdecisiondetail_1.OrganizationsDecisionDetail)
     ], EvaluationResult.prototype, "organizationsDecisionDetail", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PermissionsBoundaryDecisionDetail)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", permissionsboundarydecisiondetail_1.PermissionsBoundaryDecisionDetail)
     ], EvaluationResult.prototype, "permissionsBoundaryDecisionDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ResourceSpecificResult }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: resourcespecificresult_1.ResourceSpecificResult }),
         __metadata("design:type", Array)
     ], EvaluationResult.prototype, "resourceSpecificResults", void 0);
     return EvaluationResult;
-}(SpeakeasyBase));
-export { EvaluationResult };
+}(utils_1.SpeakeasyBase));
+exports.EvaluationResult = EvaluationResult;

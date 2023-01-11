@@ -22,5 +22,5 @@ export declare class DuplicateProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    duplicateProject201ApplicationJsonObject?: DuplicateProject201ApplicationJson;
+    duplicateProject201ApplicationJSONObject?: DuplicateProject201ApplicationJson;
 }

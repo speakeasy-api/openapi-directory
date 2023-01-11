@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Department } from "./department";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDepartmentsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var department_1 = require("./department");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var GetDepartmentsResponse = /** @class */ (function (_super) {
     __extends(GetDepartmentsResponse, _super);
     function GetDepartmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Department }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: department_1.Department }),
         __metadata("design:type", Array)
     ], GetDepartmentsResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", links_1.Links)
     ], GetDepartmentsResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], GetDepartmentsResponse.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
         __metadata("design:type", String)
     ], GetDepartmentsResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], GetDepartmentsResponse.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], GetDepartmentsResponse.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetDepartmentsResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], GetDepartmentsResponse.prototype, "statusCode", void 0);
     return GetDepartmentsResponse;
-}(SpeakeasyBase));
-export { GetDepartmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDepartmentsResponse = GetDepartmentsResponse;

@@ -13,7 +13,7 @@ import { ReferenceDataSourceDescription } from "./referencedatasourcedescription
 **/
 export class ApplicationDetail extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApplicationARN" })
-  applicationArn: string;
+  applicationARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=ApplicationCode" })
   applicationCode?: string;

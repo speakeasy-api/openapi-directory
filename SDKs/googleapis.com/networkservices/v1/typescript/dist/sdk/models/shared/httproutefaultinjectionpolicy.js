@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteFaultInjectionPolicyAbort } from "./httproutefaultinjectionpolicyabort";
-import { HttpRouteFaultInjectionPolicyDelay } from "./httproutefaultinjectionpolicydelay";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteFaultInjectionPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var httproutefaultinjectionpolicyabort_1 = require("./httproutefaultinjectionpolicyabort");
+var httproutefaultinjectionpolicydelay_1 = require("./httproutefaultinjectionpolicydelay");
 // HttpRouteFaultInjectionPolicy
 /**
  * The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced by client proxy on a percentage of requests before sending those requests to the destination service. Similarly requests can be aborted by client proxy for a percentage of requests.
@@ -35,13 +38,13 @@ var HttpRouteFaultInjectionPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abort" }),
-        __metadata("design:type", HttpRouteFaultInjectionPolicyAbort)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abort" }),
+        __metadata("design:type", httproutefaultinjectionpolicyabort_1.HttpRouteFaultInjectionPolicyAbort)
     ], HttpRouteFaultInjectionPolicy.prototype, "abort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delay" }),
-        __metadata("design:type", HttpRouteFaultInjectionPolicyDelay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delay" }),
+        __metadata("design:type", httproutefaultinjectionpolicydelay_1.HttpRouteFaultInjectionPolicyDelay)
     ], HttpRouteFaultInjectionPolicy.prototype, "delay", void 0);
     return HttpRouteFaultInjectionPolicy;
-}(SpeakeasyBase));
-export { HttpRouteFaultInjectionPolicy };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteFaultInjectionPolicy = HttpRouteFaultInjectionPolicy;

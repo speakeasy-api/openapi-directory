@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { EventarcProjectsLocationsChannelConnectionsCreateRequest, EventarcProjectsLocationsChannelConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: EventarcProjectsLocationsChannelConnectionsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "et",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "aut",
+    accessToken: "culpa",
     alt: "media",
-    callback: "nostrum",
-    channelConnectionId: "nihil",
-    fields: "vel",
-    key: "provident",
-    oauthToken: "numquam",
+    callback: "consequuntur",
+    channelConnectionId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "qui",
-    uploadType: "itaque",
-    uploadProtocol: "culpa",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    activationToken: "nesciunt",
-    channel: "eaque",
-    name: "adipisci",
+    activationToken: "debitis",
+    channel: "voluptatum",
+    name: "et",
   },
 };
 

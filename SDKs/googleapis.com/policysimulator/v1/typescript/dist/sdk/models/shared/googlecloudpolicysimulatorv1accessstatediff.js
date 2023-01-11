@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicysimulatorV1ExplainedAccess } from "./googlecloudpolicysimulatorv1explainedaccess";
-export var GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1AccessStateDiff = exports.GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicysimulatorv1explainedaccess_1 = require("./googlecloudpolicysimulatorv1explainedaccess");
+var GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum;
 (function (GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum) {
     GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum["AccessChangeTypeUnspecified"] = "ACCESS_CHANGE_TYPE_UNSPECIFIED";
     GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum["NoChange"] = "NO_CHANGE";
@@ -33,7 +36,7 @@ export var GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum;
     GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum["AccessGained"] = "ACCESS_GAINED";
     GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum["AccessMaybeRevoked"] = "ACCESS_MAYBE_REVOKED";
     GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum["AccessMaybeGained"] = "ACCESS_MAYBE_GAINED";
-})(GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum || (GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum = {}));
+})(GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum = exports.GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum || (exports.GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum = {}));
 // GoogleCloudPolicysimulatorV1AccessStateDiff
 /**
  * A summary and comparison of the principal's access under the current (baseline) policies and the proposed (simulated) policies for a single access tuple.
@@ -44,17 +47,17 @@ var GoogleCloudPolicysimulatorV1AccessStateDiff = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessChange" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1AccessStateDiff.prototype, "accessChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseline" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1ExplainedAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseline" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1explainedaccess_1.GoogleCloudPolicysimulatorV1ExplainedAccess)
     ], GoogleCloudPolicysimulatorV1AccessStateDiff.prototype, "baseline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simulated" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1ExplainedAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simulated" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1explainedaccess_1.GoogleCloudPolicysimulatorV1ExplainedAccess)
     ], GoogleCloudPolicysimulatorV1AccessStateDiff.prototype, "simulated", void 0);
     return GoogleCloudPolicysimulatorV1AccessStateDiff;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1AccessStateDiff };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1AccessStateDiff = GoogleCloudPolicysimulatorV1AccessStateDiff;

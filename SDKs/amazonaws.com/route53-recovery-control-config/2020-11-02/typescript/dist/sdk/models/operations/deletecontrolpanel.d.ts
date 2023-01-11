@@ -19,7 +19,7 @@ export declare class DeleteControlPanelResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteControlPanelResponse?: Map<string, any>;
+    deleteControlPanelResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

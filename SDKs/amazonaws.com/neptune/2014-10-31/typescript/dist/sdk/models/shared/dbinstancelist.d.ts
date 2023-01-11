@@ -1,0 +1,68 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
+import { DbSubnetGroup } from "./dbsubnetgroup";
+import { DomainMembershipList } from "./domainmembershiplist";
+import { Endpoint } from "./endpoint";
+import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
+import { PendingModifiedValues } from "./pendingmodifiedvalues";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
+/**
+ * <p>Contains the details of an Amazon Neptune DB instance.</p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action.</p>
+**/
+export declare class DbInstanceList extends SpeakeasyBase {
+    allocatedStorage?: number;
+    autoMinorVersionUpgrade?: boolean;
+    availabilityZone?: string;
+    backupRetentionPeriod?: number;
+    caCertificateIdentifier?: string;
+    characterSetName?: string;
+    copyTagsToSnapshot?: boolean;
+    dbClusterIdentifier?: string;
+    dbInstanceArn?: string;
+    dbInstanceClass?: string;
+    dbInstanceIdentifier?: string;
+    dbInstanceStatus?: string;
+    dbName?: string;
+    dbParameterGroups?: DbParameterGroupStatusList[];
+    dbSecurityGroups?: DbSecurityGroupMembershipList[];
+    dbSubnetGroup?: DbSubnetGroup;
+    dbInstancePort?: number;
+    dbiResourceId?: string;
+    deletionProtection?: boolean;
+    domainMemberships?: DomainMembershipList[];
+    enabledCloudwatchLogsExports?: string[];
+    endpoint?: Endpoint;
+    engine?: string;
+    engineVersion?: string;
+    enhancedMonitoringResourceArn?: string;
+    iamDatabaseAuthenticationEnabled?: boolean;
+    instanceCreateTime?: Date;
+    iops?: number;
+    kmsKeyId?: string;
+    latestRestorableTime?: Date;
+    licenseModel?: string;
+    masterUsername?: string;
+    monitoringInterval?: number;
+    monitoringRoleArn?: string;
+    multiAZ?: boolean;
+    optionGroupMemberships?: OptionGroupMembershipList[];
+    pendingModifiedValues?: PendingModifiedValues;
+    performanceInsightsEnabled?: boolean;
+    performanceInsightsKMSKeyId?: string;
+    preferredBackupWindow?: string;
+    preferredMaintenanceWindow?: string;
+    promotionTier?: number;
+    publiclyAccessible?: Record<string, any>;
+    readReplicaDBClusterIdentifiers?: Record<string, any>[];
+    readReplicaDBInstanceIdentifiers?: Record<string, any>[];
+    readReplicaSourceDBInstanceIdentifier?: string;
+    secondaryAvailabilityZone?: string;
+    statusInfos?: DbInstanceStatusInfoList[];
+    storageEncrypted?: boolean;
+    storageType?: string;
+    tdeCredentialArn?: string;
+    timezone?: string;
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
+}

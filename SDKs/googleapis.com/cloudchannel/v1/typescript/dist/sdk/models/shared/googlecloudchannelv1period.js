@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudChannelV1PeriodPeriodTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Period = exports.GoogleCloudChannelV1PeriodPeriodTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudChannelV1PeriodPeriodTypeEnum;
 (function (GoogleCloudChannelV1PeriodPeriodTypeEnum) {
     GoogleCloudChannelV1PeriodPeriodTypeEnum["PeriodTypeUnspecified"] = "PERIOD_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1PeriodPeriodTypeEnum["Day"] = "DAY";
     GoogleCloudChannelV1PeriodPeriodTypeEnum["Month"] = "MONTH";
     GoogleCloudChannelV1PeriodPeriodTypeEnum["Year"] = "YEAR";
-})(GoogleCloudChannelV1PeriodPeriodTypeEnum || (GoogleCloudChannelV1PeriodPeriodTypeEnum = {}));
+})(GoogleCloudChannelV1PeriodPeriodTypeEnum = exports.GoogleCloudChannelV1PeriodPeriodTypeEnum || (exports.GoogleCloudChannelV1PeriodPeriodTypeEnum = {}));
 // GoogleCloudChannelV1Period
 /**
  * Represents period in days/months/years.
@@ -40,13 +43,13 @@ var GoogleCloudChannelV1Period = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1Period.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Period.prototype, "periodType", void 0);
     return GoogleCloudChannelV1Period;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Period };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Period = GoogleCloudChannelV1Period;

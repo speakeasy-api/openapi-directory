@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VerificationMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Verification = exports.VerificationStateEnum = exports.VerificationMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VerificationMethodEnum;
 (function (VerificationMethodEnum) {
     VerificationMethodEnum["VerificationMethodUnspecified"] = "VERIFICATION_METHOD_UNSPECIFIED";
     VerificationMethodEnum["Address"] = "ADDRESS";
@@ -32,14 +35,14 @@ export var VerificationMethodEnum;
     VerificationMethodEnum["Sms"] = "SMS";
     VerificationMethodEnum["Auto"] = "AUTO";
     VerificationMethodEnum["VettedPartner"] = "VETTED_PARTNER";
-})(VerificationMethodEnum || (VerificationMethodEnum = {}));
-export var VerificationStateEnum;
+})(VerificationMethodEnum = exports.VerificationMethodEnum || (exports.VerificationMethodEnum = {}));
+var VerificationStateEnum;
 (function (VerificationStateEnum) {
     VerificationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     VerificationStateEnum["Pending"] = "PENDING";
     VerificationStateEnum["Completed"] = "COMPLETED";
     VerificationStateEnum["Failed"] = "FAILED";
-})(VerificationStateEnum || (VerificationStateEnum = {}));
+})(VerificationStateEnum = exports.VerificationStateEnum || (exports.VerificationStateEnum = {}));
 // Verification
 /**
  * A verification represents a verification attempt on a location.
@@ -50,21 +53,21 @@ var Verification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Verification.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], Verification.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Verification.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Verification.prototype, "state", void 0);
     return Verification;
-}(SpeakeasyBase));
-export { Verification };
+}(utils_1.SpeakeasyBase));
+exports.Verification = Verification;

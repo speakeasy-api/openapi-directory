@@ -9,5 +9,5 @@ export declare class ReposListLanguagesRequest extends SpeakeasyBase {
 export declare class ReposListLanguagesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    language?: Map<string, number>;
+    language?: Record<string, number>;
 }

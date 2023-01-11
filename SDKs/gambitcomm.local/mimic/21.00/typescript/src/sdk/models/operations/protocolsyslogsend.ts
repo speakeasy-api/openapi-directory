@@ -29,5 +29,5 @@ export class ProtocolSyslogSendResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSyslogSend200ApplicationJsonString?: string;
+  protocolSyslogSend200ApplicationJSONString?: string;
 }

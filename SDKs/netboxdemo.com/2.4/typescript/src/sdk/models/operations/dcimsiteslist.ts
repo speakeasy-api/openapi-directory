@@ -86,5 +86,5 @@ export class DcimSitesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimSitesList200ApplicationJsonObject?: DcimSitesList200ApplicationJson;
+  dcimSitesList200ApplicationJSONObject?: DcimSitesList200ApplicationJson;
 }

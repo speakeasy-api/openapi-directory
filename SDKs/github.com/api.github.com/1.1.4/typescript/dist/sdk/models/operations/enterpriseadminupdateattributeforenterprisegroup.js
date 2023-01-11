@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,34 +14,59 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams, _super);
     function EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=scim_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=scim_group_id" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams.prototype, "scimGroupId", void 0);
     return EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams };
-export var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum;
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams = EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams;
+var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum;
 (function (EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum) {
     EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum["AddLower"] = "add";
     EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum["AddMixed"] = "Add";
@@ -48,76 +74,76 @@ export var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations
     EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum["RemoveMixed"] = "Remove";
     EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum["ReplaceLower"] = "replace";
     EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum["ReplaceMixed"] = "Replace";
-})(EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum || (EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum = {}));
+})(EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum = exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum || (exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperationsOpEnum = {}));
 var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations, _super);
     function EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=op" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=op" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations.prototype, "op", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Object)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations.prototype, "value", void 0);
     return EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations = EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations;
 var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody, _super);
     function EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Operations", elemType: EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Operations", elemType: EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBodyOperations }),
         __metadata("design:type", Array)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody.prototype, "operations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemas" }),
         __metadata("design:type", Array)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody.prototype, "schemas", void 0);
     return EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody = EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody;
 var EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest, _super);
     function EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminUpdateAttributeForEnterpriseGroupPathParams)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminUpdateAttributeForEnterpriseGroupRequestBody)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest.prototype, "request", void 0);
     return EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest = EnterpriseAdminUpdateAttributeForEnterpriseGroupRequest;
 var EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse, _super);
     function EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ScimEnterpriseGroup)
     ], EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse.prototype, "scimEnterpriseGroup", void 0);
     return EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse = EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse;

@@ -8,5 +8,5 @@ export declare class QueryDbRequest extends SpeakeasyBase {
 export declare class QueryDbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    queryDb200ApplicationJsonObject?: Map<string, any>;
+    queryDb200ApplicationJSONObject?: Record<string, any>;
 }

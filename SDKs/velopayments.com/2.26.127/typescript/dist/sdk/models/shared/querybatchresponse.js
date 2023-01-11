@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailedSubmission } from "./failedsubmission";
-export var QueryBatchResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryBatchResponse = exports.QueryBatchResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var failedsubmission_1 = require("./failedsubmission");
+var QueryBatchResponseStatusEnum;
 (function (QueryBatchResponseStatusEnum) {
     QueryBatchResponseStatusEnum["Submitted"] = "SUBMITTED";
     QueryBatchResponseStatusEnum["Accepted"] = "ACCEPTED";
-})(QueryBatchResponseStatusEnum || (QueryBatchResponseStatusEnum = {}));
+})(QueryBatchResponseStatusEnum = exports.QueryBatchResponseStatusEnum || (exports.QueryBatchResponseStatusEnum = {}));
 var QueryBatchResponse = /** @class */ (function (_super) {
     __extends(QueryBatchResponse, _super);
     function QueryBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCount" }),
         __metadata("design:type", Number)
     ], QueryBatchResponse.prototype, "failureCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failures", elemType: FailedSubmission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failures", elemType: failedsubmission_1.FailedSubmission }),
         __metadata("design:type", Array)
     ], QueryBatchResponse.prototype, "failures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingCount" }),
         __metadata("design:type", Number)
     ], QueryBatchResponse.prototype, "pendingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], QueryBatchResponse.prototype, "status", void 0);
     return QueryBatchResponse;
-}(SpeakeasyBase));
-export { QueryBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueryBatchResponse = QueryBatchResponse;

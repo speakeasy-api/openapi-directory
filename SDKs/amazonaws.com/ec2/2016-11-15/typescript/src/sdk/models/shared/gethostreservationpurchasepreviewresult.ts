@@ -1,19 +1,17 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyCodeValuesEnum } from "./currencycodevaluesenum";
-import { Purchase } from "./purchase";
 
 
 
 export class GetHostReservationPurchasePreviewResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  currencyCode?: CurrencyCodeValuesEnum;
-
-  @SpeakeasyMetadata({ elemType: Purchase })
-  purchase?: Purchase[];
+  currencyCode?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  totalHourlyPrice?: string;
+  purchase?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  totalUpfrontPrice?: string;
+  totalHourlyPrice?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  totalUpfrontPrice?: Record<string, any>;
 }

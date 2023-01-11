@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateChangesetRequest, CreateChangesetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,40 +33,36 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateChangesetRequest = {
   pathParams: {
-    datasetId: "harum",
+    datasetId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "ipsa",
-    xAmzContentSha256: "rerum",
-    xAmzCredential: "nisi",
-    xAmzDate: "maiores",
-    xAmzSecurityToken: "non",
-    xAmzSignature: "autem",
-    xAmzSignedHeaders: "deleniti",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
     changeType: "REPLACE",
     formatParams: {
-      "consequuntur": "amet",
-      "sunt": "non",
-      "blanditiis": "omnis",
+      "nihil": "rerum",
     },
-    formatType: "PARQUET",
+    formatType: "XML",
     sourceParams: {
-      "iusto": "voluptatibus",
-      "explicabo": "iure",
-      "est": "ex",
+      "voluptatum": "et",
     },
     sourceType: "S3",
     tags: {
-      "omnis": "ipsam",
-      "omnis": "quidem",
-      "id": "illum",
+      "et": "voluptate",
+      "iste": "vitae",
+      "totam": "dolores",
     },
   },
 };
 
-sdk.sdk.createChangeset(req).then((res: CreateChangesetResponse | AxiosError) => {
+sdk.createChangeset(req).then((res: CreateChangesetResponse | AxiosError) => {
    // handle response
 });
 ```

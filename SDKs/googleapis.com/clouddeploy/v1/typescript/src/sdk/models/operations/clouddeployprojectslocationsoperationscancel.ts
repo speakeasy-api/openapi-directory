@@ -62,7 +62,7 @@ export class ClouddeployProjectsLocationsOperationsCancelRequest extends Speakea
   queryParams: ClouddeployProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: ClouddeployProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class ClouddeployProjectsLocationsOperationsCancelResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

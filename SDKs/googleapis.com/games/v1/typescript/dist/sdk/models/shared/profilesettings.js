@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProfileSettingsFriendsListVisibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileSettings = exports.ProfileSettingsFriendsListVisibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProfileSettingsFriendsListVisibilityEnum;
 (function (ProfileSettingsFriendsListVisibilityEnum) {
     ProfileSettingsFriendsListVisibilityEnum["FriendsListVisibilityUnspecified"] = "FRIENDS_LIST_VISIBILITY_UNSPECIFIED";
     ProfileSettingsFriendsListVisibilityEnum["Visible"] = "VISIBLE";
     ProfileSettingsFriendsListVisibilityEnum["RequestRequired"] = "REQUEST_REQUIRED";
     ProfileSettingsFriendsListVisibilityEnum["Unavailable"] = "UNAVAILABLE";
-})(ProfileSettingsFriendsListVisibilityEnum || (ProfileSettingsFriendsListVisibilityEnum = {}));
+})(ProfileSettingsFriendsListVisibilityEnum = exports.ProfileSettingsFriendsListVisibilityEnum || (exports.ProfileSettingsFriendsListVisibilityEnum = {}));
 // ProfileSettings
 /**
  * Profile settings
@@ -40,17 +43,17 @@ var ProfileSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=friendsListVisibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friendsListVisibility" }),
         __metadata("design:type", String)
     ], ProfileSettings.prototype, "friendsListVisibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ProfileSettings.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileVisible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileVisible" }),
         __metadata("design:type", Boolean)
     ], ProfileSettings.prototype, "profileVisible", void 0);
     return ProfileSettings;
-}(SpeakeasyBase));
-export { ProfileSettings };
+}(utils_1.SpeakeasyBase));
+exports.ProfileSettings = ProfileSettings;

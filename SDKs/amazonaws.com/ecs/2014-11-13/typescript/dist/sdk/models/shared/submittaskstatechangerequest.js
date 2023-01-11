@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachmentStateChange } from "./attachmentstatechange";
-import { ContainerStateChange } from "./containerstatechange";
-import { ManagedAgentStateChange } from "./managedagentstatechange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmitTaskStateChangeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachmentstatechange_1 = require("./attachmentstatechange");
+var containerstatechange_1 = require("./containerstatechange");
+var managedagentstatechange_1 = require("./managedagentstatechange");
 var SubmitTaskStateChangeRequest = /** @class */ (function (_super) {
     __extends(SubmitTaskStateChangeRequest, _super);
     function SubmitTaskStateChangeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments", elemType: AttachmentStateChange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments", elemType: attachmentstatechange_1.AttachmentStateChange }),
         __metadata("design:type", Array)
     ], SubmitTaskStateChangeRequest.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], SubmitTaskStateChangeRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containers", elemType: ContainerStateChange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containers", elemType: containerstatechange_1.ContainerStateChange }),
         __metadata("design:type", Array)
     ], SubmitTaskStateChangeRequest.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionStoppedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionStoppedAt" }),
         __metadata("design:type", Date)
     ], SubmitTaskStateChangeRequest.prototype, "executionStoppedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedAgents", elemType: ManagedAgentStateChange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedAgents", elemType: managedagentstatechange_1.ManagedAgentStateChange }),
         __metadata("design:type", Array)
     ], SubmitTaskStateChangeRequest.prototype, "managedAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullStartedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullStartedAt" }),
         __metadata("design:type", Date)
     ], SubmitTaskStateChangeRequest.prototype, "pullStartedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullStoppedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullStoppedAt" }),
         __metadata("design:type", Date)
     ], SubmitTaskStateChangeRequest.prototype, "pullStoppedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], SubmitTaskStateChangeRequest.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SubmitTaskStateChangeRequest.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
         __metadata("design:type", String)
     ], SubmitTaskStateChangeRequest.prototype, "task", void 0);
     return SubmitTaskStateChangeRequest;
-}(SpeakeasyBase));
-export { SubmitTaskStateChangeRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubmitTaskStateChangeRequest = SubmitTaskStateChangeRequest;

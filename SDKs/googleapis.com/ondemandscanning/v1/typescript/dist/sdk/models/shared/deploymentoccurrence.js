@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeploymentOccurrencePlatformEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentOccurrence = exports.DeploymentOccurrencePlatformEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeploymentOccurrencePlatformEnum;
 (function (DeploymentOccurrencePlatformEnum) {
     DeploymentOccurrencePlatformEnum["PlatformUnspecified"] = "PLATFORM_UNSPECIFIED";
     DeploymentOccurrencePlatformEnum["Gke"] = "GKE";
     DeploymentOccurrencePlatformEnum["Flex"] = "FLEX";
     DeploymentOccurrencePlatformEnum["Custom"] = "CUSTOM";
-})(DeploymentOccurrencePlatformEnum || (DeploymentOccurrencePlatformEnum = {}));
+})(DeploymentOccurrencePlatformEnum = exports.DeploymentOccurrencePlatformEnum || (exports.DeploymentOccurrencePlatformEnum = {}));
 // DeploymentOccurrence
 /**
  * The period during which some deployable was active in a runtime.
@@ -40,33 +43,33 @@ var DeploymentOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployTime" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "deployTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUri" }),
         __metadata("design:type", Array)
     ], DeploymentOccurrence.prototype, "resourceUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=undeployTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=undeployTime" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "undeployTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEmail" }),
         __metadata("design:type", String)
     ], DeploymentOccurrence.prototype, "userEmail", void 0);
     return DeploymentOccurrence;
-}(SpeakeasyBase));
-export { DeploymentOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentOccurrence = DeploymentOccurrence;

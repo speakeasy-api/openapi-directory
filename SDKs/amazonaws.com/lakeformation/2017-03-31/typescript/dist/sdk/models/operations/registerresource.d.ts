@@ -23,6 +23,6 @@ export declare class RegisterResourceResponse extends SpeakeasyBase {
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    registerResourceResponse?: Map<string, any>;
+    registerResourceResponse?: Record<string, any>;
     statusCode: number;
 }

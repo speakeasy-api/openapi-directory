@@ -20,5 +20,5 @@ export class LoginProfile extends SpeakeasyBase {
   securityKeys?: SecurityKey[];
 
   @SpeakeasyMetadata({ data: "json, name=sshPublicKeys", elemType: SshPublicKey })
-  sshPublicKeys?: Map<string, SshPublicKey>;
+  sshPublicKeys?: Record<string, SshPublicKey>;
 }

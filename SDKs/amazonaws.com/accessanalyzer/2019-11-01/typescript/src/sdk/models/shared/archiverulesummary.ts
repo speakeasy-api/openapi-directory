@@ -12,7 +12,7 @@ export class ArchiveRuleSummary extends SpeakeasyBase {
   createdAt: Date;
 
   @SpeakeasyMetadata({ data: "json, name=filter", elemType: Criterion })
-  filter: Map<string, Criterion>;
+  filter: Record<string, Criterion>;
 
   @SpeakeasyMetadata({ data: "json, name=ruleName" })
   ruleName: string;

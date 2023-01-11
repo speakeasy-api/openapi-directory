@@ -13,7 +13,7 @@ export class UnlockconnectorRequestBody extends SpeakeasyBase {
 
 export class Unlockconnector201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=command" })
-  command?: Map<string, any>;
+  command?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,5 +37,5 @@ export class UnlockconnectorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unlockconnector201ApplicationJsonObject?: Unlockconnector201ApplicationJson;
+  unlockconnector201ApplicationJSONObject?: Unlockconnector201ApplicationJson;
 }

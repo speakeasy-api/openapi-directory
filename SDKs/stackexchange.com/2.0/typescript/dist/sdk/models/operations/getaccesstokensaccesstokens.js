@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccessTokensAccessTokensResponse = exports.GetAccessTokensAccessTokensRequest = exports.GetAccessTokensAccessTokensQueryParams = exports.GetAccessTokensAccessTokensPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAccessTokensAccessTokensPathParams = /** @class */ (function (_super) {
     __extends(GetAccessTokensAccessTokensPathParams, _super);
     function GetAccessTokensAccessTokensPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accessTokens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accessTokens" }),
         __metadata("design:type", String)
     ], GetAccessTokensAccessTokensPathParams.prototype, "accessTokens", void 0);
     return GetAccessTokensAccessTokensPathParams;
-}(SpeakeasyBase));
-export { GetAccessTokensAccessTokensPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAccessTokensAccessTokensPathParams = GetAccessTokensAccessTokensPathParams;
 var GetAccessTokensAccessTokensQueryParams = /** @class */ (function (_super) {
     __extends(GetAccessTokensAccessTokensQueryParams, _super);
     function GetAccessTokensAccessTokensQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetAccessTokensAccessTokensQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetAccessTokensAccessTokensQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetAccessTokensAccessTokensQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetAccessTokensAccessTokensQueryParams.prototype, "pagesize", void 0);
     return GetAccessTokensAccessTokensQueryParams;
-}(SpeakeasyBase));
-export { GetAccessTokensAccessTokensQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAccessTokensAccessTokensQueryParams = GetAccessTokensAccessTokensQueryParams;
 var GetAccessTokensAccessTokensRequest = /** @class */ (function (_super) {
     __extends(GetAccessTokensAccessTokensRequest, _super);
     function GetAccessTokensAccessTokensRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAccessTokensAccessTokensPathParams)
     ], GetAccessTokensAccessTokensRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAccessTokensAccessTokensQueryParams)
     ], GetAccessTokensAccessTokensRequest.prototype, "queryParams", void 0);
     return GetAccessTokensAccessTokensRequest;
-}(SpeakeasyBase));
-export { GetAccessTokensAccessTokensRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAccessTokensAccessTokensRequest = GetAccessTokensAccessTokensRequest;
 var GetAccessTokensAccessTokensResponse = /** @class */ (function (_super) {
     __extends(GetAccessTokensAccessTokensResponse, _super);
     function GetAccessTokensAccessTokensResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAccessTokensAccessTokensResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAccessTokensAccessTokensResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAccessTokensAccessTokensResponse.prototype, "statusCode", void 0);
     return GetAccessTokensAccessTokensResponse;
-}(SpeakeasyBase));
-export { GetAccessTokensAccessTokensResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccessTokensAccessTokensResponse = GetAccessTokensAccessTokensResponse;

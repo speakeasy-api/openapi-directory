@@ -185,23 +185,23 @@ export class ApmclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  apmcl400ApplicationJsonObject?: Apmcl400ApplicationJson;
+  apmcl400ApplicationJSONObject?: Apmcl400ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl401ApplicationJsonObject?: Apmcl401ApplicationJson;
+  apmcl401ApplicationJSONObject?: Apmcl401ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl404ApplicationJsonObject?: Apmcl404ApplicationJson;
+  apmcl404ApplicationJSONObject?: Apmcl404ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl500ApplicationJsonObject?: Apmcl500ApplicationJson;
+  apmcl500ApplicationJSONObject?: Apmcl500ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl502ApplicationJsonObject?: Apmcl502ApplicationJson;
+  apmcl502ApplicationJSONObject?: Apmcl502ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl503ApplicationJsonObject?: Apmcl503ApplicationJson;
+  apmcl503ApplicationJSONObject?: Apmcl503ApplicationJson;
 
   @SpeakeasyMetadata()
-  apmcl504ApplicationJsonObject?: Apmcl504ApplicationJson;
+  apmcl504ApplicationJSONObject?: Apmcl504ApplicationJson;
 }

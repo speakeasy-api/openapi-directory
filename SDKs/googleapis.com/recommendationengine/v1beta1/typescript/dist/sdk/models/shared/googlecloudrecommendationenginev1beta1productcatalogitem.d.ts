@@ -15,7 +15,7 @@ export declare enum GoogleCloudRecommendationengineV1beta1ProductCatalogItemStoc
 export declare class GoogleCloudRecommendationengineV1beta1ProductCatalogItem extends SpeakeasyBase {
     availableQuantity?: string;
     canonicalProductUri?: string;
-    costs?: Map<string, number>;
+    costs?: Record<string, number>;
     currencyCode?: string;
     exactPrice?: GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice;
     images?: GoogleCloudRecommendationengineV1beta1Image[];

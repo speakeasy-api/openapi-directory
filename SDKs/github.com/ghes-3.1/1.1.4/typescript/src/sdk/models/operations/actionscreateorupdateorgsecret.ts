@@ -49,5 +49,5 @@ export class ActionsCreateOrUpdateOrgSecretResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  emptyObject?: Map<string, any>;
+  emptyObject?: Record<string, any>;
 }

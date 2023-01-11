@@ -11,7 +11,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
     arn: string;
-    tags: Map<string, string>;
+    tags: Record<string, string>;
 }
 export declare class TagResourceRequest extends SpeakeasyBase {
     headers: TagResourceHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SmbMountOptions } from "./smbmountoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLocationSmbResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var smbmountoptions_1 = require("./smbmountoptions");
 // DescribeLocationSmbResponse
 /**
  * DescribeLocationSmbResponse
@@ -34,33 +37,33 @@ var DescribeLocationSmbResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentArns" }),
         __metadata("design:type", Array)
     ], DescribeLocationSmbResponse.prototype, "agentArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeLocationSmbResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], DescribeLocationSmbResponse.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationArn" }),
         __metadata("design:type", String)
     ], DescribeLocationSmbResponse.prototype, "locationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationUri" }),
         __metadata("design:type", String)
     ], DescribeLocationSmbResponse.prototype, "locationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MountOptions" }),
-        __metadata("design:type", SmbMountOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MountOptions" }),
+        __metadata("design:type", smbmountoptions_1.SmbMountOptions)
     ], DescribeLocationSmbResponse.prototype, "mountOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=User" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=User" }),
         __metadata("design:type", String)
     ], DescribeLocationSmbResponse.prototype, "user", void 0);
     return DescribeLocationSmbResponse;
-}(SpeakeasyBase));
-export { DescribeLocationSmbResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLocationSmbResponse = DescribeLocationSmbResponse;

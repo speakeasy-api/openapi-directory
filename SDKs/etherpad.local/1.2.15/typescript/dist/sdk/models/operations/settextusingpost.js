@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetTextUsingPostResponse = exports.SetTextUsingPostRequest = exports.SetTextUsingPost500ApplicationJson = exports.SetTextUsingPost401ApplicationJson = exports.SetTextUsingPost400ApplicationJson = exports.SetTextUsingPost200ApplicationJson = exports.SetTextUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetTextUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(SetTextUsingPostQueryParams, _super);
     function SetTextUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], SetTextUsingPostQueryParams.prototype, "padId", void 0);
+    ], SetTextUsingPostQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SetTextUsingPostQueryParams.prototype, "text", void 0);
     return SetTextUsingPostQueryParams;
-}(SpeakeasyBase));
-export { SetTextUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPostQueryParams = SetTextUsingPostQueryParams;
 var SetTextUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(SetTextUsingPost200ApplicationJson, _super);
     function SetTextUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SetTextUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SetTextUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SetTextUsingPost200ApplicationJson.prototype, "message", void 0);
     return SetTextUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { SetTextUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPost200ApplicationJson = SetTextUsingPost200ApplicationJson;
 var SetTextUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(SetTextUsingPost400ApplicationJson, _super);
     function SetTextUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SetTextUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SetTextUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SetTextUsingPost400ApplicationJson.prototype, "message", void 0);
     return SetTextUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { SetTextUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPost400ApplicationJson = SetTextUsingPost400ApplicationJson;
 var SetTextUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(SetTextUsingPost401ApplicationJson, _super);
     function SetTextUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SetTextUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SetTextUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SetTextUsingPost401ApplicationJson.prototype, "message", void 0);
     return SetTextUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { SetTextUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPost401ApplicationJson = SetTextUsingPost401ApplicationJson;
 var SetTextUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(SetTextUsingPost500ApplicationJson, _super);
     function SetTextUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SetTextUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SetTextUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SetTextUsingPost500ApplicationJson.prototype, "message", void 0);
     return SetTextUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { SetTextUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPost500ApplicationJson = SetTextUsingPost500ApplicationJson;
 var SetTextUsingPostRequest = /** @class */ (function (_super) {
     __extends(SetTextUsingPostRequest, _super);
     function SetTextUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTextUsingPostQueryParams)
     ], SetTextUsingPostRequest.prototype, "queryParams", void 0);
     return SetTextUsingPostRequest;
-}(SpeakeasyBase));
-export { SetTextUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPostRequest = SetTextUsingPostRequest;
 var SetTextUsingPostResponse = /** @class */ (function (_super) {
     __extends(SetTextUsingPostResponse, _super);
     function SetTextUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetTextUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetTextUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTextUsingPost200ApplicationJson)
-    ], SetTextUsingPostResponse.prototype, "setTextUsingPost200ApplicationJsonObject", void 0);
+    ], SetTextUsingPostResponse.prototype, "setTextUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTextUsingPost400ApplicationJson)
-    ], SetTextUsingPostResponse.prototype, "setTextUsingPost400ApplicationJsonObject", void 0);
+    ], SetTextUsingPostResponse.prototype, "setTextUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTextUsingPost401ApplicationJson)
-    ], SetTextUsingPostResponse.prototype, "setTextUsingPost401ApplicationJsonObject", void 0);
+    ], SetTextUsingPostResponse.prototype, "setTextUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTextUsingPost500ApplicationJson)
-    ], SetTextUsingPostResponse.prototype, "setTextUsingPost500ApplicationJsonObject", void 0);
+    ], SetTextUsingPostResponse.prototype, "setTextUsingPOST500ApplicationJSONObject", void 0);
     return SetTextUsingPostResponse;
-}(SpeakeasyBase));
-export { SetTextUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetTextUsingPostResponse = SetTextUsingPostResponse;

@@ -63,7 +63,7 @@ export class UpdateDomainContactResponse extends SpeakeasyBase {
   tldRulesViolation?: any;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 
   @SpeakeasyMetadata()
   updateDomainContactResponse?: shared.UpdateDomainContactResponse;

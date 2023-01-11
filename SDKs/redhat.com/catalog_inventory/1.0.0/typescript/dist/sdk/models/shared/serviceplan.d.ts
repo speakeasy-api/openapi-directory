@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ServicePlan extends SpeakeasyBase {
     archivedAt?: Date;
-    createJsonSchema?: Map<string, any>;
+    createJsonSchema?: Record<string, any>;
     createdAt?: Date;
     description?: string;
-    extra?: Map<string, any>;
+    extra?: Record<string, any>;
     id?: string;
     lastSeenAt?: Date;
     name?: string;

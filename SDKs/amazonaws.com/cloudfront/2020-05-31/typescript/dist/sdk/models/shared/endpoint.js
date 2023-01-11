@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KinesisStreamConfig } from "./kinesisstreamconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndPoint = void 0;
+var utils_1 = require("../../../internal/utils");
+var kinesisstreamconfig_1 = require("./kinesisstreamconfig");
 // EndPoint
 /**
  * Contains information about the Amazon Kinesis data stream where you are sending real-time log data in a real-time log configuration.
@@ -34,13 +37,13 @@ var EndPoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", KinesisStreamConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", kinesisstreamconfig_1.KinesisStreamConfig)
     ], EndPoint.prototype, "kinesisStreamConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndPoint.prototype, "streamType", void 0);
     return EndPoint;
-}(SpeakeasyBase));
-export { EndPoint };
+}(utils_1.SpeakeasyBase));
+exports.EndPoint = EndPoint;

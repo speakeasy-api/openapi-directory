@@ -188,23 +188,23 @@ export class ApptuResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  apptu400ApplicationJsonObject?: Apptu400ApplicationJson;
+  apptu400ApplicationJSONObject?: Apptu400ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu401ApplicationJsonObject?: Apptu401ApplicationJson;
+  apptu401ApplicationJSONObject?: Apptu401ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu404ApplicationJsonObject?: Apptu404ApplicationJson;
+  apptu404ApplicationJSONObject?: Apptu404ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu500ApplicationJsonObject?: Apptu500ApplicationJson;
+  apptu500ApplicationJSONObject?: Apptu500ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu502ApplicationJsonObject?: Apptu502ApplicationJson;
+  apptu502ApplicationJSONObject?: Apptu502ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu503ApplicationJsonObject?: Apptu503ApplicationJson;
+  apptu503ApplicationJSONObject?: Apptu503ApplicationJson;
 
   @SpeakeasyMetadata()
-  apptu504ApplicationJsonObject?: Apptu504ApplicationJson;
+  apptu504ApplicationJSONObject?: Apptu504ApplicationJson;
 }

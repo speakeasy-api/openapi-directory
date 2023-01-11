@@ -14,10 +14,6 @@ export enum PolicyControllerOnClusterStateStateEnum {
 }
 
 
-// PolicyControllerOnClusterState
-/** 
- * OnClusterState represents the state of a sub-component of Policy Controller.
-**/
 export class PolicyControllerOnClusterState extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
   details?: string;

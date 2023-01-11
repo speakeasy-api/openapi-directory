@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetInstanceHealthResponseHealthStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInstanceHealthResponse = exports.GetInstanceHealthResponseHealthStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetInstanceHealthResponseHealthStateEnum;
 (function (GetInstanceHealthResponseHealthStateEnum) {
     GetInstanceHealthResponseHealthStateEnum["HealthStateUnspecified"] = "HEALTH_STATE_UNSPECIFIED";
     GetInstanceHealthResponseHealthStateEnum["Healthy"] = "HEALTHY";
     GetInstanceHealthResponseHealthStateEnum["Unhealthy"] = "UNHEALTHY";
     GetInstanceHealthResponseHealthStateEnum["AgentNotInstalled"] = "AGENT_NOT_INSTALLED";
     GetInstanceHealthResponseHealthStateEnum["AgentNotRunning"] = "AGENT_NOT_RUNNING";
-})(GetInstanceHealthResponseHealthStateEnum || (GetInstanceHealthResponseHealthStateEnum = {}));
+})(GetInstanceHealthResponseHealthStateEnum = exports.GetInstanceHealthResponseHealthStateEnum || (exports.GetInstanceHealthResponseHealthStateEnum = {}));
 // GetInstanceHealthResponse
 /**
  * Response for checking if a notebook instance is healthy.
@@ -41,13 +44,13 @@ var GetInstanceHealthResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthInfo" }),
+        __metadata("design:type", Object)
     ], GetInstanceHealthResponse.prototype, "healthInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthState" }),
         __metadata("design:type", String)
     ], GetInstanceHealthResponse.prototype, "healthState", void 0);
     return GetInstanceHealthResponse;
-}(SpeakeasyBase));
-export { GetInstanceHealthResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInstanceHealthResponse = GetInstanceHealthResponse;

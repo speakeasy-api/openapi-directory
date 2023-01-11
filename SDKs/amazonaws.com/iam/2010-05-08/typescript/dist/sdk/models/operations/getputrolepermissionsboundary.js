@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPutRolePermissionsBoundaryActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPutRolePermissionsBoundaryResponse = exports.GetPutRolePermissionsBoundaryRequest = exports.GetPutRolePermissionsBoundaryHeaders = exports.GetPutRolePermissionsBoundaryQueryParams = exports.GetPutRolePermissionsBoundaryVersionEnum = exports.GetPutRolePermissionsBoundaryActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPutRolePermissionsBoundaryActionEnum;
 (function (GetPutRolePermissionsBoundaryActionEnum) {
     GetPutRolePermissionsBoundaryActionEnum["PutRolePermissionsBoundary"] = "PutRolePermissionsBoundary";
-})(GetPutRolePermissionsBoundaryActionEnum || (GetPutRolePermissionsBoundaryActionEnum = {}));
-export var GetPutRolePermissionsBoundaryVersionEnum;
+})(GetPutRolePermissionsBoundaryActionEnum = exports.GetPutRolePermissionsBoundaryActionEnum || (exports.GetPutRolePermissionsBoundaryActionEnum = {}));
+var GetPutRolePermissionsBoundaryVersionEnum;
 (function (GetPutRolePermissionsBoundaryVersionEnum) {
     GetPutRolePermissionsBoundaryVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetPutRolePermissionsBoundaryVersionEnum || (GetPutRolePermissionsBoundaryVersionEnum = {}));
+})(GetPutRolePermissionsBoundaryVersionEnum = exports.GetPutRolePermissionsBoundaryVersionEnum || (exports.GetPutRolePermissionsBoundaryVersionEnum = {}));
 var GetPutRolePermissionsBoundaryQueryParams = /** @class */ (function (_super) {
     __extends(GetPutRolePermissionsBoundaryQueryParams, _super);
     function GetPutRolePermissionsBoundaryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PermissionsBoundary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PermissionsBoundary" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryQueryParams.prototype, "permissionsBoundary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleName" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryQueryParams.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryQueryParams.prototype, "version", void 0);
     return GetPutRolePermissionsBoundaryQueryParams;
-}(SpeakeasyBase));
-export { GetPutRolePermissionsBoundaryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPutRolePermissionsBoundaryQueryParams = GetPutRolePermissionsBoundaryQueryParams;
 var GetPutRolePermissionsBoundaryHeaders = /** @class */ (function (_super) {
     __extends(GetPutRolePermissionsBoundaryHeaders, _super);
     function GetPutRolePermissionsBoundaryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetPutRolePermissionsBoundaryHeaders;
-}(SpeakeasyBase));
-export { GetPutRolePermissionsBoundaryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPutRolePermissionsBoundaryHeaders = GetPutRolePermissionsBoundaryHeaders;
 var GetPutRolePermissionsBoundaryRequest = /** @class */ (function (_super) {
     __extends(GetPutRolePermissionsBoundaryRequest, _super);
     function GetPutRolePermissionsBoundaryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutRolePermissionsBoundaryQueryParams)
     ], GetPutRolePermissionsBoundaryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutRolePermissionsBoundaryHeaders)
     ], GetPutRolePermissionsBoundaryRequest.prototype, "headers", void 0);
     return GetPutRolePermissionsBoundaryRequest;
-}(SpeakeasyBase));
-export { GetPutRolePermissionsBoundaryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPutRolePermissionsBoundaryRequest = GetPutRolePermissionsBoundaryRequest;
 var GetPutRolePermissionsBoundaryResponse = /** @class */ (function (_super) {
     __extends(GetPutRolePermissionsBoundaryResponse, _super);
     function GetPutRolePermissionsBoundaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPutRolePermissionsBoundaryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPutRolePermissionsBoundaryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPutRolePermissionsBoundaryResponse.prototype, "statusCode", void 0);
     return GetPutRolePermissionsBoundaryResponse;
-}(SpeakeasyBase));
-export { GetPutRolePermissionsBoundaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPutRolePermissionsBoundaryResponse = GetPutRolePermissionsBoundaryResponse;

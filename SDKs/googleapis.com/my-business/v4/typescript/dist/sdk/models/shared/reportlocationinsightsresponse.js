@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocationDrivingDirectionMetrics } from "./locationdrivingdirectionmetrics";
-import { LocationMetrics } from "./locationmetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportLocationInsightsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var locationdrivingdirectionmetrics_1 = require("./locationdrivingdirectionmetrics");
+var locationmetrics_1 = require("./locationmetrics");
 // ReportLocationInsightsResponse
 /**
  * Response message for `Insights.ReportLocationInsights`.
@@ -35,13 +38,13 @@ var ReportLocationInsightsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationDrivingDirectionMetrics", elemType: LocationDrivingDirectionMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationDrivingDirectionMetrics", elemType: locationdrivingdirectionmetrics_1.LocationDrivingDirectionMetrics }),
         __metadata("design:type", Array)
     ], ReportLocationInsightsResponse.prototype, "locationDrivingDirectionMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationMetrics", elemType: LocationMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationMetrics", elemType: locationmetrics_1.LocationMetrics }),
         __metadata("design:type", Array)
     ], ReportLocationInsightsResponse.prototype, "locationMetrics", void 0);
     return ReportLocationInsightsResponse;
-}(SpeakeasyBase));
-export { ReportLocationInsightsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReportLocationInsightsResponse = ReportLocationInsightsResponse;

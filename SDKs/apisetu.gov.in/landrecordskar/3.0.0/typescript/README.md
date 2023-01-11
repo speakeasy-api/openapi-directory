@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CncerRequest, CncerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: CncerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      documentNumber: "veniam",
+      documentNumber: "sit",
     },
-    consentArtifact: "eligendi",
-    format: "xml",
-    txnId: "facere",
+    consentArtifact: "voluptas",
+    format: "pdf",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.cncer(req).then((res: CncerResponse | AxiosError) => {
+sdk.apIs.cncer(req).then((res: CncerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.cncer(req).then((res: CncerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cncer` - Conversion Certificate
 * `mutan` - Mutation Report/ePattadar Passbook

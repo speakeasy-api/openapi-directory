@@ -9,7 +9,7 @@ import { TrafficRuleDescriptor } from "./trafficruledescriptor";
 import { TransportDependency } from "./transportdependency";
 export declare class AppD extends SpeakeasyBase {
     appDId: string;
-    appDnsRule?: DnsRuleDescriptor[];
+    appDNSRule?: DnsRuleDescriptor[];
     appDVersion: string;
     appDescription: string;
     appExtCpd?: AppExternalCpd[];

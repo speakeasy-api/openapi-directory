@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Benefit } from "./benefit";
-import { Deduction } from "./deduction";
-import { Tax } from "./tax";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Compensation = void 0;
+var utils_1 = require("../../../internal/utils");
+var benefit_1 = require("./benefit");
+var deduction_1 = require("./deduction");
+var tax_1 = require("./tax");
 var Compensation = /** @class */ (function (_super) {
     __extends(Compensation, _super);
     function Compensation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benefits", elemType: Benefit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benefits", elemType: benefit_1.Benefit }),
         __metadata("design:type", Array)
     ], Compensation.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deductions", elemType: Deduction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deductions", elemType: deduction_1.Deduction }),
         __metadata("design:type", Array)
     ], Compensation.prototype, "deductions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_id" }),
         __metadata("design:type", String)
     ], Compensation.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gross_pay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gross_pay" }),
         __metadata("design:type", Number)
     ], Compensation.prototype, "grossPay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net_pay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net_pay" }),
         __metadata("design:type", Number)
     ], Compensation.prototype, "netPay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxes", elemType: Tax }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxes", elemType: tax_1.Tax }),
         __metadata("design:type", Array)
     ], Compensation.prototype, "taxes", void 0);
     return Compensation;
-}(SpeakeasyBase));
-export { Compensation };
+}(utils_1.SpeakeasyBase));
+exports.Compensation = Compensation;

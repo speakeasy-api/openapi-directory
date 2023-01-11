@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WebhookCreateEventsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookCreate = exports.WebhookCreateSigningAlgoEnum = exports.WebhookCreateMetadataPolicyEnum = exports.WebhookCreateEventsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WebhookCreateEventsEnum;
 (function (WebhookCreateEventsEnum) {
     WebhookCreateEventsEnum["Call"] = "CALL";
-})(WebhookCreateEventsEnum || (WebhookCreateEventsEnum = {}));
-export var WebhookCreateMetadataPolicyEnum;
+})(WebhookCreateEventsEnum = exports.WebhookCreateEventsEnum || (exports.WebhookCreateEventsEnum = {}));
+var WebhookCreateMetadataPolicyEnum;
 (function (WebhookCreateMetadataPolicyEnum) {
     WebhookCreateMetadataPolicyEnum["None"] = "NONE";
     WebhookCreateMetadataPolicyEnum["Header"] = "HEADER";
     WebhookCreateMetadataPolicyEnum["Body"] = "BODY";
-})(WebhookCreateMetadataPolicyEnum || (WebhookCreateMetadataPolicyEnum = {}));
-export var WebhookCreateSigningAlgoEnum;
+})(WebhookCreateMetadataPolicyEnum = exports.WebhookCreateMetadataPolicyEnum || (exports.WebhookCreateMetadataPolicyEnum = {}));
+var WebhookCreateSigningAlgoEnum;
 (function (WebhookCreateSigningAlgoEnum) {
     WebhookCreateSigningAlgoEnum["HmacSha256"] = "HMAC_SHA256";
-})(WebhookCreateSigningAlgoEnum || (WebhookCreateSigningAlgoEnum = {}));
+})(WebhookCreateSigningAlgoEnum = exports.WebhookCreateSigningAlgoEnum || (exports.WebhookCreateSigningAlgoEnum = {}));
 var WebhookCreate = /** @class */ (function (_super) {
     __extends(WebhookCreate, _super);
     function WebhookCreate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", Array)
     ], WebhookCreate.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataPolicy" }),
         __metadata("design:type", String)
     ], WebhookCreate.prototype, "metadataPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingAlgo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingAlgo" }),
         __metadata("design:type", String)
     ], WebhookCreate.prototype, "signingAlgo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKey" }),
         __metadata("design:type", String)
     ], WebhookCreate.prototype, "signingKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], WebhookCreate.prototype, "url", void 0);
     return WebhookCreate;
-}(SpeakeasyBase));
-export { WebhookCreate };
+}(utils_1.SpeakeasyBase));
+exports.WebhookCreate = WebhookCreate;

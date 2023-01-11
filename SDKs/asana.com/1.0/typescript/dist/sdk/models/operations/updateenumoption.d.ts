@@ -22,5 +22,5 @@ export declare class UpdateEnumOptionResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateEnumOption200ApplicationJsonObject?: UpdateEnumOption200ApplicationJson;
+    updateEnumOption200ApplicationJSONObject?: UpdateEnumOption200ApplicationJson;
 }

@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// WorkspaceResponse
+/** 
+ * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
+**/
 export class WorkspaceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=email_domains" })
   emailDomains?: string[];

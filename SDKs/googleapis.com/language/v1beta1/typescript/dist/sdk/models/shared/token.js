@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DependencyEdge } from "./dependencyedge";
-import { PartOfSpeech } from "./partofspeech";
-import { TextSpan } from "./textspan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Token = void 0;
+var utils_1 = require("../../../internal/utils");
+var dependencyedge_1 = require("./dependencyedge");
+var partofspeech_1 = require("./partofspeech");
+var textspan_1 = require("./textspan");
 // Token
 /**
  * Represents the smallest syntactic building block of the text.
@@ -36,21 +39,21 @@ var Token = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependencyEdge" }),
-        __metadata("design:type", DependencyEdge)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependencyEdge" }),
+        __metadata("design:type", dependencyedge_1.DependencyEdge)
     ], Token.prototype, "dependencyEdge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lemma" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lemma" }),
         __metadata("design:type", String)
     ], Token.prototype, "lemma", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partOfSpeech" }),
-        __metadata("design:type", PartOfSpeech)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partOfSpeech" }),
+        __metadata("design:type", partofspeech_1.PartOfSpeech)
     ], Token.prototype, "partOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
-        __metadata("design:type", TextSpan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
+        __metadata("design:type", textspan_1.TextSpan)
     ], Token.prototype, "text", void 0);
     return Token;
-}(SpeakeasyBase));
-export { Token };
+}(utils_1.SpeakeasyBase));
+exports.Token = Token;

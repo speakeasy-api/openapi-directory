@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SslConfig } from "./sslconfig";
-import { SslConfigInput } from "./sslconfig";
-export var PostgreSqlConnectionProfileNetworkArchitectureEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostgreSqlConnectionProfileInput = exports.PostgreSqlConnectionProfile = exports.PostgreSqlConnectionProfileNetworkArchitectureEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sslconfig_1 = require("./sslconfig");
+var sslconfig_2 = require("./sslconfig");
+var PostgreSqlConnectionProfileNetworkArchitectureEnum;
 (function (PostgreSqlConnectionProfileNetworkArchitectureEnum) {
     PostgreSqlConnectionProfileNetworkArchitectureEnum["NetworkArchitectureUnspecified"] = "NETWORK_ARCHITECTURE_UNSPECIFIED";
     PostgreSqlConnectionProfileNetworkArchitectureEnum["NetworkArchitectureOldCsqlProducer"] = "NETWORK_ARCHITECTURE_OLD_CSQL_PRODUCER";
     PostgreSqlConnectionProfileNetworkArchitectureEnum["NetworkArchitectureNewCsqlProducer"] = "NETWORK_ARCHITECTURE_NEW_CSQL_PRODUCER";
-})(PostgreSqlConnectionProfileNetworkArchitectureEnum || (PostgreSqlConnectionProfileNetworkArchitectureEnum = {}));
+})(PostgreSqlConnectionProfileNetworkArchitectureEnum = exports.PostgreSqlConnectionProfileNetworkArchitectureEnum || (exports.PostgreSqlConnectionProfileNetworkArchitectureEnum = {}));
 // PostgreSqlConnectionProfile
 /**
  * Specifies connection parameters required specifically for PostgreSQL databases.
@@ -41,40 +44,40 @@ var PostgreSqlConnectionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlId" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfile.prototype, "cloudSqlId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfile.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkArchitecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkArchitecture" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfile.prototype, "networkArchitecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfile.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordSet" }),
         __metadata("design:type", Boolean)
     ], PostgreSqlConnectionProfile.prototype, "passwordSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], PostgreSqlConnectionProfile.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl" }),
-        __metadata("design:type", SslConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl" }),
+        __metadata("design:type", sslconfig_1.SslConfig)
     ], PostgreSqlConnectionProfile.prototype, "ssl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfile.prototype, "username", void 0);
     return PostgreSqlConnectionProfile;
-}(SpeakeasyBase));
-export { PostgreSqlConnectionProfile };
+}(utils_1.SpeakeasyBase));
+exports.PostgreSqlConnectionProfile = PostgreSqlConnectionProfile;
 // PostgreSqlConnectionProfileInput
 /**
  * Specifies connection parameters required specifically for PostgreSQL databases.
@@ -85,29 +88,29 @@ var PostgreSqlConnectionProfileInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlId" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfileInput.prototype, "cloudSqlId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfileInput.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfileInput.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], PostgreSqlConnectionProfileInput.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl" }),
-        __metadata("design:type", SslConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl" }),
+        __metadata("design:type", sslconfig_2.SslConfigInput)
     ], PostgreSqlConnectionProfileInput.prototype, "ssl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostgreSqlConnectionProfileInput.prototype, "username", void 0);
     return PostgreSqlConnectionProfileInput;
-}(SpeakeasyBase));
-export { PostgreSqlConnectionProfileInput };
+}(utils_1.SpeakeasyBase));
+exports.PostgreSqlConnectionProfileInput = PostgreSqlConnectionProfileInput;

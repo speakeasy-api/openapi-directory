@@ -19,7 +19,7 @@ export declare class CreateLoggerDefinitionRequestBodyInitialVersion extends Spe
 export declare class CreateLoggerDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateLoggerDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateLoggerDefinitionRequest extends SpeakeasyBase {
     headers: CreateLoggerDefinitionHeaders;

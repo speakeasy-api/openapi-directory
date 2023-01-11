@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetAuthorNameUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class GetAuthorNameUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetAuthorNameUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class GetAuthorNameUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class GetAuthorNameUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingPost200ApplicationJsonObject?: GetAuthorNameUsingPost200ApplicationJson;
+  getAuthorNameUsingPOST200ApplicationJSONObject?: GetAuthorNameUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingPost400ApplicationJsonObject?: GetAuthorNameUsingPost400ApplicationJson;
+  getAuthorNameUsingPOST400ApplicationJSONObject?: GetAuthorNameUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingPost401ApplicationJsonObject?: GetAuthorNameUsingPost401ApplicationJson;
+  getAuthorNameUsingPOST401ApplicationJSONObject?: GetAuthorNameUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingPost500ApplicationJsonObject?: GetAuthorNameUsingPost500ApplicationJson;
+  getAuthorNameUsingPOST500ApplicationJSONObject?: GetAuthorNameUsingPost500ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetFloatingIpsSortEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFloatingIpsResponse = exports.GetFloatingIpsRequest = exports.GetFloatingIps200ApplicationJson = exports.GetFloatingIps200ApplicationJsonMeta = exports.GetFloatingIps200ApplicationJsonMetaPagination = exports.GetFloatingIps200ApplicationJsonFloatingIps = exports.GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum = exports.GetFloatingIps200ApplicationJsonFloatingIpsProtection = exports.GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation = exports.GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr = exports.GetFloatingIpsQueryParams = exports.GetFloatingIpsSortEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetFloatingIpsSortEnum;
 (function (GetFloatingIpsSortEnum) {
     GetFloatingIpsSortEnum["Id"] = "id";
     GetFloatingIpsSortEnum["IdAsc"] = "id:asc";
@@ -31,43 +34,43 @@ export var GetFloatingIpsSortEnum;
     GetFloatingIpsSortEnum["Created"] = "created";
     GetFloatingIpsSortEnum["CreatedAsc"] = "created:asc";
     GetFloatingIpsSortEnum["CreatedDesc"] = "created:desc";
-})(GetFloatingIpsSortEnum || (GetFloatingIpsSortEnum = {}));
+})(GetFloatingIpsSortEnum = exports.GetFloatingIpsSortEnum || (exports.GetFloatingIpsSortEnum = {}));
 var GetFloatingIpsQueryParams = /** @class */ (function (_super) {
     __extends(GetFloatingIpsQueryParams, _super);
     function GetFloatingIpsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=label_selector" }),
         __metadata("design:type", String)
     ], GetFloatingIpsQueryParams.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetFloatingIpsQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetFloatingIpsQueryParams.prototype, "sort", void 0);
     return GetFloatingIpsQueryParams;
-}(SpeakeasyBase));
-export { GetFloatingIpsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIpsQueryParams = GetFloatingIpsQueryParams;
 var GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr = /** @class */ (function (_super) {
     __extends(GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr, _super);
     function GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns_ptr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns_ptr" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr.prototype, "dnsPtr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr.prototype, "ip", void 0);
     return GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr = GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr;
 // GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation
 /**
  * Location the Floating IP was created in. Routing is optimized for this Location.
@@ -78,40 +81,40 @@ var GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation.prototype, "networkZone", void 0);
     return GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation = GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation;
 // GetFloatingIps200ApplicationJsonFloatingIpsProtection
 /**
  * Protection configuration for the Resource
@@ -122,162 +125,162 @@ var GetFloatingIps200ApplicationJsonFloatingIpsProtection = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], GetFloatingIps200ApplicationJsonFloatingIpsProtection.prototype, "delete", void 0);
     return GetFloatingIps200ApplicationJsonFloatingIpsProtection;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonFloatingIpsProtection };
-export var GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonFloatingIpsProtection = GetFloatingIps200ApplicationJsonFloatingIpsProtection;
+var GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum;
 (function (GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum) {
     GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum["Ipv4"] = "ipv4";
     GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum["Ipv6"] = "ipv6";
-})(GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum || (GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum = {}));
+})(GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum = exports.GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum || (exports.GetFloatingIps200ApplicationJsonFloatingIpsTypeEnum = {}));
 var GetFloatingIps200ApplicationJsonFloatingIps = /** @class */ (function (_super) {
     __extends(GetFloatingIps200ApplicationJsonFloatingIps, _super);
     function GetFloatingIps200ApplicationJsonFloatingIps() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocked" }),
         __metadata("design:type", Boolean)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "blocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns_ptr", elemType: GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns_ptr", elemType: GetFloatingIps200ApplicationJsonFloatingIpsDnsPtr }),
         __metadata("design:type", Array)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "dnsPtr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_location" }),
         __metadata("design:type", GetFloatingIps200ApplicationJsonFloatingIpsHomeLocation)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "homeLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", GetFloatingIps200ApplicationJsonFloatingIpsProtection)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetFloatingIps200ApplicationJsonFloatingIps.prototype, "type", void 0);
     return GetFloatingIps200ApplicationJsonFloatingIps;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonFloatingIps };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonFloatingIps = GetFloatingIps200ApplicationJsonFloatingIps;
 var GetFloatingIps200ApplicationJsonMetaPagination = /** @class */ (function (_super) {
     __extends(GetFloatingIps200ApplicationJsonMetaPagination, _super);
     function GetFloatingIps200ApplicationJsonMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetFloatingIps200ApplicationJsonMetaPagination.prototype, "totalEntries", void 0);
     return GetFloatingIps200ApplicationJsonMetaPagination;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonMetaPagination = GetFloatingIps200ApplicationJsonMetaPagination;
 var GetFloatingIps200ApplicationJsonMeta = /** @class */ (function (_super) {
     __extends(GetFloatingIps200ApplicationJsonMeta, _super);
     function GetFloatingIps200ApplicationJsonMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetFloatingIps200ApplicationJsonMetaPagination)
     ], GetFloatingIps200ApplicationJsonMeta.prototype, "pagination", void 0);
     return GetFloatingIps200ApplicationJsonMeta;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJsonMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJsonMeta = GetFloatingIps200ApplicationJsonMeta;
 var GetFloatingIps200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetFloatingIps200ApplicationJson, _super);
     function GetFloatingIps200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floating_ips", elemType: GetFloatingIps200ApplicationJsonFloatingIps }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floating_ips", elemType: GetFloatingIps200ApplicationJsonFloatingIps }),
         __metadata("design:type", Array)
     ], GetFloatingIps200ApplicationJson.prototype, "floatingIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetFloatingIps200ApplicationJsonMeta)
     ], GetFloatingIps200ApplicationJson.prototype, "meta", void 0);
     return GetFloatingIps200ApplicationJson;
-}(SpeakeasyBase));
-export { GetFloatingIps200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIps200ApplicationJson = GetFloatingIps200ApplicationJson;
 var GetFloatingIpsRequest = /** @class */ (function (_super) {
     __extends(GetFloatingIpsRequest, _super);
     function GetFloatingIpsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFloatingIpsQueryParams)
     ], GetFloatingIpsRequest.prototype, "queryParams", void 0);
     return GetFloatingIpsRequest;
-}(SpeakeasyBase));
-export { GetFloatingIpsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIpsRequest = GetFloatingIpsRequest;
 var GetFloatingIpsResponse = /** @class */ (function (_super) {
     __extends(GetFloatingIpsResponse, _super);
     function GetFloatingIpsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFloatingIpsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetFloatingIps200ApplicationJson)
-    ], GetFloatingIpsResponse.prototype, "getFloatingIps200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFloatingIpsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetFloatingIps200ApplicationJson)
+    ], GetFloatingIpsResponse.prototype, "getFloatingIps200ApplicationJSONObject", void 0);
     return GetFloatingIpsResponse;
-}(SpeakeasyBase));
-export { GetFloatingIpsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFloatingIpsResponse = GetFloatingIpsResponse;

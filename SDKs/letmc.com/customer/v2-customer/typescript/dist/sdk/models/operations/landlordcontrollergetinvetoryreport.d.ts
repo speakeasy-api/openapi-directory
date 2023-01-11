@@ -3,7 +3,7 @@ export declare class LandlordControllerGetInvetoryReportPathParams extends Speak
     shortName: string;
 }
 export declare class LandlordControllerGetInvetoryReportQueryParams extends SpeakeasyBase {
-    tenancyId: string;
+    tenancyID: string;
     token: string;
 }
 export declare class LandlordControllerGetInvetoryReportRequest extends SpeakeasyBase {
@@ -13,6 +13,6 @@ export declare class LandlordControllerGetInvetoryReportRequest extends Speakeas
 export declare class LandlordControllerGetInvetoryReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

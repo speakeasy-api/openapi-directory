@@ -18,7 +18,7 @@ export declare class DeleteSimulationApplicationRequest extends SpeakeasyBase {
 }
 export declare class DeleteSimulationApplicationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteSimulationApplicationResponse?: Map<string, any>;
+    deleteSimulationApplicationResponse?: Record<string, any>;
     internalServerException?: any;
     invalidParameterException?: any;
     statusCode: number;

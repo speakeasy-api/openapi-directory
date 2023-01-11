@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetAssociatedIpv6PoolCidrsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetAssociatedIpv6PoolCidrsResponse = exports.GetGetAssociatedIpv6PoolCidrsRequest = exports.GetGetAssociatedIpv6PoolCidrsHeaders = exports.GetGetAssociatedIpv6PoolCidrsQueryParams = exports.GetGetAssociatedIpv6PoolCidrsVersionEnum = exports.GetGetAssociatedIpv6PoolCidrsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetAssociatedIpv6PoolCidrsActionEnum;
 (function (GetGetAssociatedIpv6PoolCidrsActionEnum) {
     GetGetAssociatedIpv6PoolCidrsActionEnum["GetAssociatedIpv6PoolCidrs"] = "GetAssociatedIpv6PoolCidrs";
-})(GetGetAssociatedIpv6PoolCidrsActionEnum || (GetGetAssociatedIpv6PoolCidrsActionEnum = {}));
-export var GetGetAssociatedIpv6PoolCidrsVersionEnum;
+})(GetGetAssociatedIpv6PoolCidrsActionEnum = exports.GetGetAssociatedIpv6PoolCidrsActionEnum || (exports.GetGetAssociatedIpv6PoolCidrsActionEnum = {}));
+var GetGetAssociatedIpv6PoolCidrsVersionEnum;
 (function (GetGetAssociatedIpv6PoolCidrsVersionEnum) {
     GetGetAssociatedIpv6PoolCidrsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetGetAssociatedIpv6PoolCidrsVersionEnum || (GetGetAssociatedIpv6PoolCidrsVersionEnum = {}));
+})(GetGetAssociatedIpv6PoolCidrsVersionEnum = exports.GetGetAssociatedIpv6PoolCidrsVersionEnum || (exports.GetGetAssociatedIpv6PoolCidrsVersionEnum = {}));
 var GetGetAssociatedIpv6PoolCidrsQueryParams = /** @class */ (function (_super) {
     __extends(GetGetAssociatedIpv6PoolCidrsQueryParams, _super);
     function GetGetAssociatedIpv6PoolCidrsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", Number)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PoolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PoolId" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "poolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsQueryParams.prototype, "version", void 0);
     return GetGetAssociatedIpv6PoolCidrsQueryParams;
-}(SpeakeasyBase));
-export { GetGetAssociatedIpv6PoolCidrsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAssociatedIpv6PoolCidrsQueryParams = GetGetAssociatedIpv6PoolCidrsQueryParams;
 var GetGetAssociatedIpv6PoolCidrsHeaders = /** @class */ (function (_super) {
     __extends(GetGetAssociatedIpv6PoolCidrsHeaders, _super);
     function GetGetAssociatedIpv6PoolCidrsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetAssociatedIpv6PoolCidrsHeaders;
-}(SpeakeasyBase));
-export { GetGetAssociatedIpv6PoolCidrsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAssociatedIpv6PoolCidrsHeaders = GetGetAssociatedIpv6PoolCidrsHeaders;
 var GetGetAssociatedIpv6PoolCidrsRequest = /** @class */ (function (_super) {
     __extends(GetGetAssociatedIpv6PoolCidrsRequest, _super);
     function GetGetAssociatedIpv6PoolCidrsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAssociatedIpv6PoolCidrsQueryParams)
     ], GetGetAssociatedIpv6PoolCidrsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAssociatedIpv6PoolCidrsHeaders)
     ], GetGetAssociatedIpv6PoolCidrsRequest.prototype, "headers", void 0);
     return GetGetAssociatedIpv6PoolCidrsRequest;
-}(SpeakeasyBase));
-export { GetGetAssociatedIpv6PoolCidrsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAssociatedIpv6PoolCidrsRequest = GetGetAssociatedIpv6PoolCidrsRequest;
 var GetGetAssociatedIpv6PoolCidrsResponse = /** @class */ (function (_super) {
     __extends(GetGetAssociatedIpv6PoolCidrsResponse, _super);
     function GetGetAssociatedIpv6PoolCidrsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetAssociatedIpv6PoolCidrsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetAssociatedIpv6PoolCidrsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetAssociatedIpv6PoolCidrsResponse.prototype, "statusCode", void 0);
     return GetGetAssociatedIpv6PoolCidrsResponse;
-}(SpeakeasyBase));
-export { GetGetAssociatedIpv6PoolCidrsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAssociatedIpv6PoolCidrsResponse = GetGetAssociatedIpv6PoolCidrsResponse;

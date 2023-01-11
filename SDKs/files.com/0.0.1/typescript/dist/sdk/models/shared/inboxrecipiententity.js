@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InboxRecipientEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // InboxRecipientEntity
 /**
  * List Inbox Recipients
@@ -33,25 +36,25 @@ var InboxRecipientEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
         __metadata("design:type", String)
     ], InboxRecipientEntity.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InboxRecipientEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], InboxRecipientEntity.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipient" }),
         __metadata("design:type", String)
     ], InboxRecipientEntity.prototype, "recipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sent_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sent_at" }),
         __metadata("design:type", Date)
     ], InboxRecipientEntity.prototype, "sentAt", void 0);
     return InboxRecipientEntity;
-}(SpeakeasyBase));
-export { InboxRecipientEntity };
+}(utils_1.SpeakeasyBase));
+exports.InboxRecipientEntity = InboxRecipientEntity;

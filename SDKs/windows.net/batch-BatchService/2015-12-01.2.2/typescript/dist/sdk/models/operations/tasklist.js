@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskListResponse = exports.TaskListRequest = exports.TaskListHeaders = exports.TaskListQueryParams = exports.TaskListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaskListPathParams = /** @class */ (function (_super) {
     __extends(TaskListPathParams, _super);
     function TaskListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], TaskListPathParams.prototype, "jobId", void 0);
     return TaskListPathParams;
-}(SpeakeasyBase));
-export { TaskListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskListPathParams = TaskListPathParams;
 var TaskListQueryParams = /** @class */ (function (_super) {
     __extends(TaskListQueryParams, _super);
     function TaskListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$expand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$expand" }),
         __metadata("design:type", String)
     ], TaskListQueryParams.prototype, "dollarExpand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$filter" }),
         __metadata("design:type", String)
     ], TaskListQueryParams.prototype, "dollarFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$select" }),
         __metadata("design:type", String)
     ], TaskListQueryParams.prototype, "dollarSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], TaskListQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxresults" }),
         __metadata("design:type", Number)
     ], TaskListQueryParams.prototype, "maxresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], TaskListQueryParams.prototype, "timeout", void 0);
     return TaskListQueryParams;
-}(SpeakeasyBase));
-export { TaskListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskListQueryParams = TaskListQueryParams;
 var TaskListHeaders = /** @class */ (function (_super) {
     __extends(TaskListHeaders, _super);
     function TaskListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], TaskListHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], TaskListHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], TaskListHeaders.prototype, "returnClientRequestId", void 0);
     return TaskListHeaders;
-}(SpeakeasyBase));
-export { TaskListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TaskListHeaders = TaskListHeaders;
 var TaskListRequest = /** @class */ (function (_super) {
     __extends(TaskListRequest, _super);
     function TaskListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListPathParams)
     ], TaskListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListQueryParams)
     ], TaskListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListHeaders)
     ], TaskListRequest.prototype, "headers", void 0);
     return TaskListRequest;
-}(SpeakeasyBase));
-export { TaskListRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskListRequest = TaskListRequest;
 var TaskListResponse = /** @class */ (function (_super) {
     __extends(TaskListResponse, _super);
     function TaskListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskListResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskListResponse.prototype, "cloudTaskListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaskListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TaskListResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaskListResponse.prototype, "statusCode", void 0);
     return TaskListResponse;
-}(SpeakeasyBase));
-export { TaskListResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaskListResponse = TaskListResponse;

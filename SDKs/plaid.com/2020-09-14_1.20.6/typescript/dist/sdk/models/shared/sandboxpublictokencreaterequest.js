@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SandboxPublicTokenCreateRequestOptions } from "./sandboxpublictokencreaterequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxPublicTokenCreateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var sandboxpublictokencreaterequestoptions_1 = require("./sandboxpublictokencreaterequestoptions");
 // SandboxPublicTokenCreateRequest
 /**
  * SandboxPublicTokenCreateRequest defines the request schema for `/sandbox/public_token/create`
@@ -34,25 +37,25 @@ var SandboxPublicTokenCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], SandboxPublicTokenCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initial_products" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initial_products" }),
         __metadata("design:type", Array)
     ], SandboxPublicTokenCreateRequest.prototype, "initialProducts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=institution_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=institution_id" }),
         __metadata("design:type", String)
     ], SandboxPublicTokenCreateRequest.prototype, "institutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", SandboxPublicTokenCreateRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", sandboxpublictokencreaterequestoptions_1.SandboxPublicTokenCreateRequestOptions)
     ], SandboxPublicTokenCreateRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], SandboxPublicTokenCreateRequest.prototype, "secret", void 0);
     return SandboxPublicTokenCreateRequest;
-}(SpeakeasyBase));
-export { SandboxPublicTokenCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.SandboxPublicTokenCreateRequest = SandboxPublicTokenCreateRequest;

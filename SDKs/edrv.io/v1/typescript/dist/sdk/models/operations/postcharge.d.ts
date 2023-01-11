@@ -12,7 +12,7 @@ export declare class PostChargeRequestBody extends SpeakeasyBase {
 export declare class PostCharge200ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PostChargeRequest extends SpeakeasyBase {
     pathParams: PostChargePathParams;
@@ -21,5 +21,5 @@ export declare class PostChargeRequest extends SpeakeasyBase {
 export declare class PostChargeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postCharge200ApplicationJsonObject?: PostCharge200ApplicationJson;
+    postCharge200ApplicationJSONObject?: PostCharge200ApplicationJson;
 }

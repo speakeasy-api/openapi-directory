@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Segment } from "./segment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Itinerary = void 0;
+var utils_1 = require("../../../internal/utils");
+var segment_1 = require("./segment");
 var Itinerary = /** @class */ (function (_super) {
     __extends(Itinerary, _super);
     function Itinerary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseFareUSD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseFareUSD" }),
         __metadata("design:type", Number)
-    ], Itinerary.prototype, "baseFareUsd", void 0);
+    ], Itinerary.prototype, "baseFareUSD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Itinerary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segments", elemType: Segment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segments", elemType: segment_1.Segment }),
         __metadata("design:type", Array)
     ], Itinerary.prototype, "segments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticketingCarrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticketingCarrier" }),
         __metadata("design:type", String)
     ], Itinerary.prototype, "ticketingCarrier", void 0);
     return Itinerary;
-}(SpeakeasyBase));
-export { Itinerary };
+}(utils_1.SpeakeasyBase));
+exports.Itinerary = Itinerary;

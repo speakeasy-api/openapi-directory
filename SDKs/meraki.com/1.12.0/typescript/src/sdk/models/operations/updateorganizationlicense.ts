@@ -34,5 +34,5 @@ export class UpdateOrganizationLicenseResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationLicense200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationLicense200ApplicationJSONObject?: Record<string, any>;
 }

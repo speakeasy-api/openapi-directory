@@ -3,14 +3,14 @@ import * as shared from "../shared";
 export declare const PostV05ConsentsHipNotifyServerList: readonly ["https://your-hrp-server.com"];
 export declare class PostV05ConsentsHipNotifyHeaders extends SpeakeasyBase {
     authorization: string;
-    xHipId: string;
+    xHIPID: string;
 }
 export declare class PostV05ConsentsHipNotifyRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     hipConsentNotification?: shared.HipConsentNotification;
 }
 export declare class PostV05ConsentsHipNotifyRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: PostV05ConsentsHipNotifyHeaders;
     request: PostV05ConsentsHipNotifyRequests;
 }

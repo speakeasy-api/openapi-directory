@@ -105,11 +105,11 @@ export declare class IgcerRequest extends SpeakeasyBase {
 export declare class IgcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    igcer400ApplicationJsonObject?: Igcer400ApplicationJson;
-    igcer401ApplicationJsonObject?: Igcer401ApplicationJson;
-    igcer404ApplicationJsonObject?: Igcer404ApplicationJson;
-    igcer500ApplicationJsonObject?: Igcer500ApplicationJson;
-    igcer502ApplicationJsonObject?: Igcer502ApplicationJson;
-    igcer503ApplicationJsonObject?: Igcer503ApplicationJson;
-    igcer504ApplicationJsonObject?: Igcer504ApplicationJson;
+    igcer400ApplicationJSONObject?: Igcer400ApplicationJson;
+    igcer401ApplicationJSONObject?: Igcer401ApplicationJson;
+    igcer404ApplicationJSONObject?: Igcer404ApplicationJson;
+    igcer500ApplicationJSONObject?: Igcer500ApplicationJson;
+    igcer502ApplicationJSONObject?: Igcer502ApplicationJson;
+    igcer503ApplicationJSONObject?: Igcer503ApplicationJson;
+    igcer504ApplicationJSONObject?: Igcer504ApplicationJson;
 }

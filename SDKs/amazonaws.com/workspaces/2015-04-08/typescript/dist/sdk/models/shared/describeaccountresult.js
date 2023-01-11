@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DedicatedTenancySupportResultEnumEnum } from "./dedicatedtenancysupportresultenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAccountResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var dedicatedtenancysupportresultenumenum_1 = require("./dedicatedtenancysupportresultenumenum");
 var DescribeAccountResult = /** @class */ (function (_super) {
     __extends(DescribeAccountResult, _super);
     function DescribeAccountResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DedicatedTenancyManagementCidrRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DedicatedTenancyManagementCidrRange" }),
         __metadata("design:type", String)
     ], DescribeAccountResult.prototype, "dedicatedTenancyManagementCidrRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DedicatedTenancySupport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DedicatedTenancySupport" }),
         __metadata("design:type", String)
     ], DescribeAccountResult.prototype, "dedicatedTenancySupport", void 0);
     return DescribeAccountResult;
-}(SpeakeasyBase));
-export { DescribeAccountResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAccountResult = DescribeAccountResult;

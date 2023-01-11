@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LookupResponse = exports.LookupRequest = exports.LookupQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LookupQueryParams = /** @class */ (function (_super) {
     __extends(LookupQueryParams, _super);
     function LookupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=json" }),
         __metadata("design:type", String)
     ], LookupQueryParams.prototype, "json", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=number" }),
         __metadata("design:type", Array)
     ], LookupQueryParams.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], LookupQueryParams.prototype, "type", void 0);
     return LookupQueryParams;
-}(SpeakeasyBase));
-export { LookupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LookupQueryParams = LookupQueryParams;
 var LookupRequest = /** @class */ (function (_super) {
     __extends(LookupRequest, _super);
     function LookupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LookupQueryParams)
     ], LookupRequest.prototype, "queryParams", void 0);
     return LookupRequest;
-}(SpeakeasyBase));
-export { LookupRequest };
+}(utils_1.SpeakeasyBase));
+exports.LookupRequest = LookupRequest;
 var LookupResponse = /** @class */ (function (_super) {
     __extends(LookupResponse, _super);
     function LookupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LookupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LookupResponse.prototype, "statusCode", void 0);
     return LookupResponse;
-}(SpeakeasyBase));
-export { LookupResponse };
+}(utils_1.SpeakeasyBase));
+exports.LookupResponse = LookupResponse;

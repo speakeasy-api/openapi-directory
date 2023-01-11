@@ -15,7 +15,7 @@ export class BaiduMessage extends SpeakeasyBase {
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=IconReference" })
   iconReference?: string;
@@ -39,7 +39,7 @@ export class BaiduMessage extends SpeakeasyBase {
   sound?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=TimeToLive" })
   timeToLive?: number;

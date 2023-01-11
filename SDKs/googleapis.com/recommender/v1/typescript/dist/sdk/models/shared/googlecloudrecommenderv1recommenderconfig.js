@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommenderV1RecommenderGenerationConfig } from "./googlecloudrecommenderv1recommendergenerationconfig";
-// GoogleCloudRecommenderV1RecommenderConfig
-/**
- * Configuration for a Recommender.
-**/
-var GoogleCloudRecommenderV1RecommenderConfig = /** @class */ (function (_super) {
-    __extends(GoogleCloudRecommenderV1RecommenderConfig, _super);
-    function GoogleCloudRecommenderV1RecommenderConfig() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "annotations", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommenderGenerationConfig" }),
-        __metadata("design:type", GoogleCloudRecommenderV1RecommenderGenerationConfig)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "recommenderGenerationConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
-        __metadata("design:type", String)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "revisionId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "updateTime", void 0);
-    return GoogleCloudRecommenderV1RecommenderConfig;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1RecommenderConfig };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1RecommenderConfig = exports.GoogleCloudRecommenderV1RecommenderConfigInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommenderv1recommendergenerationconfig_1 = require("./googlecloudrecommenderv1recommendergenerationconfig");
 // GoogleCloudRecommenderV1RecommenderConfigInput
 /**
  * Configuration for a Recommender.
@@ -74,29 +37,69 @@ var GoogleCloudRecommenderV1RecommenderConfigInput = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommenderGenerationConfig" }),
-        __metadata("design:type", GoogleCloudRecommenderV1RecommenderGenerationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommenderGenerationConfig" }),
+        __metadata("design:type", googlecloudrecommenderv1recommendergenerationconfig_1.GoogleCloudRecommenderV1RecommenderGenerationConfig)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "recommenderGenerationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1RecommenderConfigInput.prototype, "updateTime", void 0);
     return GoogleCloudRecommenderV1RecommenderConfigInput;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1RecommenderConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1RecommenderConfigInput = GoogleCloudRecommenderV1RecommenderConfigInput;
+// GoogleCloudRecommenderV1RecommenderConfig
+/**
+ * Configuration for a Recommender.
+**/
+var GoogleCloudRecommenderV1RecommenderConfig = /** @class */ (function (_super) {
+    __extends(GoogleCloudRecommenderV1RecommenderConfig, _super);
+    function GoogleCloudRecommenderV1RecommenderConfig() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "annotations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommenderGenerationConfig" }),
+        __metadata("design:type", googlecloudrecommenderv1recommendergenerationconfig_1.GoogleCloudRecommenderV1RecommenderGenerationConfig)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "recommenderGenerationConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
+        __metadata("design:type", String)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "revisionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], GoogleCloudRecommenderV1RecommenderConfig.prototype, "updateTime", void 0);
+    return GoogleCloudRecommenderV1RecommenderConfig;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1RecommenderConfig = GoogleCloudRecommenderV1RecommenderConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,98 +23,100 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LeavePeriod } from "./leaveperiod";
-import { ValidationError } from "./validationerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaveApplicationInput = exports.LeaveApplication = void 0;
+var utils_1 = require("../../../internal/utils");
+var leaveperiod_1 = require("./leaveperiod");
+var validationerror_1 = require("./validationerror");
 var LeaveApplication = /** @class */ (function (_super) {
     __extends(LeaveApplication, _super);
     function LeaveApplication() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], LeaveApplication.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], LeaveApplication.prototype, "employeeId", void 0);
+    ], LeaveApplication.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", String)
     ], LeaveApplication.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveApplicationID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveApplicationID" }),
         __metadata("design:type", String)
-    ], LeaveApplication.prototype, "leaveApplicationId", void 0);
+    ], LeaveApplication.prototype, "leaveApplicationID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeavePeriods", elemType: LeavePeriod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeavePeriods", elemType: leaveperiod_1.LeavePeriod }),
         __metadata("design:type", Array)
     ], LeaveApplication.prototype, "leavePeriods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
         __metadata("design:type", String)
-    ], LeaveApplication.prototype, "leaveTypeId", void 0);
+    ], LeaveApplication.prototype, "leaveTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", String)
     ], LeaveApplication.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], LeaveApplication.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], LeaveApplication.prototype, "updatedDateUtc", void 0);
+    ], LeaveApplication.prototype, "updatedDateUTC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], LeaveApplication.prototype, "validationErrors", void 0);
     return LeaveApplication;
-}(SpeakeasyBase));
-export { LeaveApplication };
+}(utils_1.SpeakeasyBase));
+exports.LeaveApplication = LeaveApplication;
 var LeaveApplicationInput = /** @class */ (function (_super) {
     __extends(LeaveApplicationInput, _super);
     function LeaveApplicationInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], LeaveApplicationInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], LeaveApplicationInput.prototype, "employeeId", void 0);
+    ], LeaveApplicationInput.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", String)
     ], LeaveApplicationInput.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveApplicationID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveApplicationID" }),
         __metadata("design:type", String)
-    ], LeaveApplicationInput.prototype, "leaveApplicationId", void 0);
+    ], LeaveApplicationInput.prototype, "leaveApplicationID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeavePeriods", elemType: LeavePeriod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeavePeriods", elemType: leaveperiod_1.LeavePeriod }),
         __metadata("design:type", Array)
     ], LeaveApplicationInput.prototype, "leavePeriods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
         __metadata("design:type", String)
-    ], LeaveApplicationInput.prototype, "leaveTypeId", void 0);
+    ], LeaveApplicationInput.prototype, "leaveTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", String)
     ], LeaveApplicationInput.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], LeaveApplicationInput.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], LeaveApplicationInput.prototype, "validationErrors", void 0);
     return LeaveApplicationInput;
-}(SpeakeasyBase));
-export { LeaveApplicationInput };
+}(utils_1.SpeakeasyBase));
+exports.LeaveApplicationInput = LeaveApplicationInput;

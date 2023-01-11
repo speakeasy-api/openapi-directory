@@ -49,10 +49,10 @@ export class CreateIntegrationResponseRequestBody extends SpeakeasyBase {
   integrationResponseKey: string;
 
   @SpeakeasyMetadata({ data: "json, name=responseParameters" })
-  responseParameters?: Map<string, string>;
+  responseParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=responseTemplates" })
-  responseTemplates?: Map<string, string>;
+  responseTemplates?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=templateSelectionExpression" })
   templateSelectionExpression?: string;

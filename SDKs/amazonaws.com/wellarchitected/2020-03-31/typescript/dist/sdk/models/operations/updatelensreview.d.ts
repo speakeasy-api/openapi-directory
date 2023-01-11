@@ -15,7 +15,7 @@ export declare class UpdateLensReviewHeaders extends SpeakeasyBase {
 }
 export declare class UpdateLensReviewRequestBody extends SpeakeasyBase {
     lensNotes?: string;
-    pillarNotes?: Map<string, string>;
+    pillarNotes?: Record<string, string>;
 }
 export declare class UpdateLensReviewRequest extends SpeakeasyBase {
     pathParams: UpdateLensReviewPathParams;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SkcerRequest, SkcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: SkcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "asperiores",
-      fullName: "recusandae",
-      rollNumber: "et",
-      session: "molestias",
+      dob: "sit",
+      fullName: "voluptas",
+      rollNumber: "culpa",
+      session: "expedita",
     },
-    consentArtifact: "possimus",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "amet",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.skcer(req).then((res: SkcerResponse | AxiosError) => {
+sdk.apIs.skcer(req).then((res: SkcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.skcer(req).then((res: SkcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `skcer` - Skill Certificate
 * `skmst` - Skill Marksheet/ Score Card

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Location } from "./location";
-import { GeoCoords } from "./geocoords";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpotGet = exports.SpotGetAntennaReportLocations = void 0;
+var utils_1 = require("../../../internal/utils");
+var location_1 = require("./location");
+var geocoords_1 = require("./geocoords");
 var SpotGetAntennaReportLocations = /** @class */ (function (_super) {
     __extends(SpotGetAntennaReportLocations, _super);
     function SpotGetAntennaReportLocations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antenna_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antenna_number" }),
         __metadata("design:type", Number)
     ], SpotGetAntennaReportLocations.prototype, "antennaNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_location" }),
+        __metadata("design:type", location_1.Location)
     ], SpotGetAntennaReportLocations.prototype, "reportLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_location_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_location_id" }),
         __metadata("design:type", String)
     ], SpotGetAntennaReportLocations.prototype, "reportLocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_location_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_location_url" }),
         __metadata("design:type", String)
     ], SpotGetAntennaReportLocations.prototype, "reportLocationUrl", void 0);
     return SpotGetAntennaReportLocations;
-}(SpeakeasyBase));
-export { SpotGetAntennaReportLocations };
+}(utils_1.SpeakeasyBase));
+exports.SpotGetAntennaReportLocations = SpotGetAntennaReportLocations;
 var SpotGet = /** @class */ (function (_super) {
     __extends(SpotGet, _super);
     function SpotGet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antenna_report_locations", elemType: SpotGetAntennaReportLocations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antenna_report_locations", elemType: SpotGetAntennaReportLocations }),
         __metadata("design:type", Array)
     ], SpotGet.prototype, "antennaReportLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", Object)
     ], SpotGet.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_request" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_request" }),
+        __metadata("design:type", Object)
     ], SpotGet.prototype, "configRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo_coords" }),
-        __metadata("design:type", GeoCoords)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo_coords" }),
+        __metadata("design:type", geocoords_1.GeoCoords)
     ], SpotGet.prototype, "geoCoords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SpotGet.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_online" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_online" }),
         __metadata("design:type", Boolean)
     ], SpotGet.prototype, "isOnline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_counter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_counter" }),
         __metadata("design:type", Number)
     ], SpotGet.prototype, "requestCounter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=senses" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=senses" }),
+        __metadata("design:type", Object)
     ], SpotGet.prototype, "senses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=senses_request" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=senses_request" }),
+        __metadata("design:type", Object)
     ], SpotGet.prototype, "sensesRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial_number" }),
         __metadata("design:type", Number)
     ], SpotGet.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Object)
     ], SpotGet.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], SpotGet.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], SpotGet.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], SpotGet.prototype, "url", void 0);
     return SpotGet;
-}(SpeakeasyBase));
-export { SpotGet };
+}(utils_1.SpeakeasyBase));
+exports.SpotGet = SpotGet;

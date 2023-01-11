@@ -6,6 +6,6 @@ import { PdfMetadataDto } from "./pdfmetadatadto";
 export declare class FoTransformRequestDto extends SpeakeasyBase {
     foDocumentBase64String?: string;
     metadata?: PdfMetadataDto;
-    resources?: Map<string, string>;
+    resources?: Record<string, string>;
     xmlDataDocumentBase64String?: string;
 }

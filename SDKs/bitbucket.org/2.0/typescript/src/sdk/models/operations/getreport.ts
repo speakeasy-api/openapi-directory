@@ -31,8 +31,8 @@ export class GetReportResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  report?: Map<string, any>;
+  report?: Record<string, any>;
 }

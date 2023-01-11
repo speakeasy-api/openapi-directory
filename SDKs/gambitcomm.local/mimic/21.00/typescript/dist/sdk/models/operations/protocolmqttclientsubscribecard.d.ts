@@ -8,5 +8,5 @@ export declare class ProtocolMqttClientSubscribeCardRequest extends SpeakeasyBas
 export declare class ProtocolMqttClientSubscribeCardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSubscribeCard200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers?: number[];
 }

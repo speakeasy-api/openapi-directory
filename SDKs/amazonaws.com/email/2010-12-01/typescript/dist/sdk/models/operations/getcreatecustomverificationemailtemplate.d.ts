@@ -7,9 +7,9 @@ export declare enum GetCreateCustomVerificationEmailTemplateVersionEnum {
 }
 export declare class GetCreateCustomVerificationEmailTemplateQueryParams extends SpeakeasyBase {
     action: GetCreateCustomVerificationEmailTemplateActionEnum;
-    failureRedirectionUrl: string;
+    failureRedirectionURL: string;
     fromEmailAddress: string;
-    successRedirectionUrl: string;
+    successRedirectionURL: string;
     templateContent: string;
     templateName: string;
     templateSubject: string;

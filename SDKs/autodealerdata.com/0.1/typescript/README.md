@@ -16,26 +16,25 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DaysSupplyDaysSupplyGetRequest, DaysSupplyDaysSupplyGetResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetVehicleSeenVehicleSeenGetRequest, GetVehicleSeenVehicleSeenGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: DaysSupplyDaysSupplyGetRequest = {
+const req: GetVehicleSeenVehicleSeenGetRequest = {
   queryParams: {
-    brandName: "omnis",
-    jwt: "ut",
-    regionName: "beatae",
+    afterDate: "2006-05-01",
+    jwt: "culpa",
+    vin: "expedita",
   },
 };
 
-sdk.sdk.daysSupplyDaysSupplyGet(req).then((res: DaysSupplyDaysSupplyGetResponse | AxiosError) => {
+sdk.applicationAcceleration.getVehicleSeenVehicleSeenGet(req).then((res: GetVehicleSeenVehicleSeenGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,18 +43,102 @@ sdk.sdk.daysSupplyDaysSupplyGet(req).then((res: DaysSupplyDaysSupplyGetResponse 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Application Acceleration
 
-* `daysSupplyDaysSupplyGet` - Days worth of supply left on dealer lots
-* `daysToSellDaysToSellGet` - Days a vehicle takes to sell
-* `getAvgListPriceListPriceGet` - Stats on ask price of new vehicles
-* `getAvgSalePriceSalePriceGet` - Stats on sale price of new vehicles
-* `getBrandNamesGetBrandsGet` - Get a list of brand names
-* `getDealerSalesRegionDailySalesGet` - Brand sales by region and Day
+* `getVehicleSeenVehicleSeenGet` - Checks if a VIN appeared on the market on or after a given date.
+
+### Authentication
+
+* `getSubUserKeysGetSubUserKeysGet` - Get all Sub User Keys associated with your account.
+* `makeSubUserKeyMakeSubUserKeyPost` - Generate a Sub User Key that can be used by your users to make API calls in frontend applications.
+* `makeTokenGetTokenGet` - Get a JWT from your API credentials
+* `makeTokenGetTokenPost` - Get a JWT from your API credentials
+* `revokeSubUserKeyRevokeSubUserKeyPut` - Revoke a Sub User Key associated with your account.
+
+### Dealership Data
+
+* `getDealersGetDealersByIdGet` - Premium. Dealers by ID
+* `getDealersGetDealersByRegionGet` - Premium. Dealers in a region.
+* `getDealersGetDealersGet` - Premium. Dealers in a zip code.
+
+### Premium
+
 * `getDealerSalesRegionSalesGet` - Premium. Brand sales by region and month
 * `getDealersGetDealersByIdGet` - Premium. Dealers by ID
 * `getDealersGetDealersByRegionGet` - Premium. Dealers in a region.
 * `getDealersGetDealersGet` - Premium. Dealers in a zip code.
+* `getHistory2VehicleHistoryGet` - Premium. Simple Vehicle History Report
+* `getMarket3SimilarSalePriceGet` - Premium. Simple Vehicle Market Report
+* `getRegionMarketShareGetRegionMarketShareGet` - Market share of all brands in region
+
+### Pricing Data
+
+* `getAvgListPriceListPriceGet` - Stats on ask price of new vehicles
+* `getAvgSalePriceSalePriceGet` - Stats on sale price of new vehicles
+* `getMarket3SimilarSalePriceGet` - Premium. Simple Vehicle Market Report
+* `getModelSaleBucketsSalePriceHistogramGet` - Histogram of sales price of new vehicles by model
+
+### Pro Plan Or Greater
+
+* `daysSupplyDaysSupplyGet` - Days worth of supply left on dealer lots
+* `daysToSellDaysToSellGet` - Days a vehicle takes to sell
+* `getDealersGetDealersByIdGet` - Premium. Dealers by ID
+* `getDealersGetDealersByRegionGet` - Premium. Dealers in a region.
+* `getDealersGetDealersGet` - Premium. Dealers in a zip code.
+* `getHistory2VehicleHistoryGet` - Premium. Simple Vehicle History Report
+
+### Sales Data
+
+* `getDealerSalesRegionDailySalesGet` - Brand sales by region and Day
+* `getDealerSalesRegionSalesGet` - Premium. Brand sales by region and month
+* `getModelUsedDistModelYearDistGet` - Used market share of model year by model
+* `getRegionBrandMarketShareGetRegionBrandMarketShareGet` - Market share of a brand in region
+* `getRegionMarketShareGetRegionMarketShareGet` - Market share of all brands in region
+* `getTopModelsTopModelsGet` - Top models in a given region
+
+### Standard Plan Or Greater
+
+* `getAvgListPriceListPriceGet` - Stats on ask price of new vehicles
+* `getAvgSalePriceSalePriceGet` - Stats on sale price of new vehicles
+* `getBrandNamesGetBrandsGet` - Get a list of brand names
+* `getMarket3SimilarSalePriceGet` - Premium. Simple Vehicle Market Report
+* `getModelNamesAllGetInactiveModelsGet` - Get a list of model names including discontinued models
+* `getModelNamesGetModelsGet` - Get a list of model names
+* `getModelSaleBucketsSalePriceHistogramGet` - Histogram of sales price of new vehicles by model
+* `getModelUsedDistModelYearDistGet` - Used market share of model year by model
+* `getRegionsGetRegionsGet` - Get a list of region names
+* `getTopModelsTopModelsGet` - Top models in a given region
+* `vinDecodeVinDecodeGet` - Vin decoder and Recall Info
+
+### Static Data
+
+* `getBrandNamesGetBrandsGet` - Get a list of brand names
+* `getModelNamesAllGetInactiveModelsGet` - Get a list of model names including discontinued models
+* `getModelNamesGetModelsGet` - Get a list of model names
+* `getRegionsGetRegionsGet` - Get a list of region names
+
+### Supply Data
+
+* `daysSupplyDaysSupplyGet` - Days worth of supply left on dealer lots
+* `daysToSellDaysToSellGet` - Days a vehicle takes to sell
+
+### Ultra Plan Or Greater
+
+* `getDealerSalesRegionDailySalesGet` - Brand sales by region and Day
+* `getDealerSalesRegionSalesGet` - Premium. Brand sales by region and month
+* `getListings2Listings2Get` - Flexible Listing Search
+* `getListingsByDealerListingsByDateGet` - Listings by Dealer ID and Date
+* `getListingsByDealerListingsGet` - Listings by Dealer ID
+* `getListingsByRegionAndDateListingsByRegionAndDateGet` - Listings by Region and Date
+* `getListingsByRegionListingsByRegionGet` - Listings by Region
+* `getRegionBrandMarketShareGetRegionBrandMarketShareGet` - Market share of a brand in region
+* `getRegionMarketShareGetRegionMarketShareGet` - Market share of all brands in region
+* `getVehicleSeenVehicleSeenGet` - Checks if a VIN appeared on the market on or after a given date.
+* `listingsByZipCodeAndDateListingsByZipCodeAndDateGet` - Listings by ZipCode and Date
+* `listingsByZipCodeListingsByZipCodeGet` - Listings by ZipCode
+
+### Vehicle Data
+
 * `getHistory2VehicleHistoryGet` - Premium. Simple Vehicle History Report
 * `getListings2Listings2Get` - Flexible Listing Search
 * `getListingsByDealerListingsByDateGet` - Listings by Dealer ID and Date
@@ -63,22 +146,9 @@ sdk.sdk.daysSupplyDaysSupplyGet(req).then((res: DaysSupplyDaysSupplyGetResponse 
 * `getListingsByRegionAndDateListingsByRegionAndDateGet` - Listings by Region and Date
 * `getListingsByRegionListingsByRegionGet` - Listings by Region
 * `getMarket3SimilarSalePriceGet` - Premium. Simple Vehicle Market Report
-* `getModelNamesAllGetInactiveModelsGet` - Get a list of model names including discontinued models
-* `getModelNamesGetModelsGet` - Get a list of model names
-* `getModelSaleBucketsSalePriceHistogramGet` - Histogram of sales price of new vehicles by model
-* `getModelUsedDistModelYearDistGet` - Used market share of model year by model
-* `getRegionBrandMarketShareGetRegionBrandMarketShareGet` - Market share of a brand in region
-* `getRegionMarketShareGetRegionMarketShareGet` - Market share of all brands in region
-* `getRegionsGetRegionsGet` - Get a list of region names
-* `getSubUserKeysGetSubUserKeysGet` - Get all Sub User Keys associated with your account.
-* `getTopModelsTopModelsGet` - Top models in a given region
 * `getVehicleSeenVehicleSeenGet` - Checks if a VIN appeared on the market on or after a given date.
 * `listingsByZipCodeAndDateListingsByZipCodeAndDateGet` - Listings by ZipCode and Date
 * `listingsByZipCodeListingsByZipCodeGet` - Listings by ZipCode
-* `makeSubUserKeyMakeSubUserKeyPost` - Generate a Sub User Key that can be used by your users to make API calls in frontend applications.
-* `makeTokenGetTokenGet` - Get a JWT from your API credentials
-* `makeTokenGetTokenPost` - Get a JWT from your API credentials
-* `revokeSubUserKeyRevokeSubUserKeyPut` - Revoke a Sub User Key associated with your account.
 * `vinDecodeVinDecodeGet` - Vin decoder and Recall Info
 
 <!-- End SDK Available Operations -->

@@ -53,5 +53,5 @@ export class CreateTagForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createTagForWorkspace201ApplicationJsonObject?: CreateTagForWorkspace201ApplicationJson;
+  createTagForWorkspace201ApplicationJSONObject?: CreateTagForWorkspace201ApplicationJson;
 }

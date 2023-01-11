@@ -32,7 +32,7 @@ export class RecordConversationRequestBody extends SpeakeasyBase {
 
 export class RecordConversationRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: RecordConversationPathParams;

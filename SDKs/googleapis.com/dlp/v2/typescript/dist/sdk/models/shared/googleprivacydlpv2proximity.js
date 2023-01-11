@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Proximity = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2Proximity
 /**
  * Message for specifying a window around a finding to apply a detection rule.
@@ -33,13 +36,13 @@ var GooglePrivacyDlpV2Proximity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windowAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windowAfter" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2Proximity.prototype, "windowAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windowBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windowBefore" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2Proximity.prototype, "windowBefore", void 0);
     return GooglePrivacyDlpV2Proximity;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Proximity };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Proximity = GooglePrivacyDlpV2Proximity;

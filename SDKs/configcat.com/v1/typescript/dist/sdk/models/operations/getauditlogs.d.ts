@@ -4,7 +4,7 @@ export declare class GetAuditlogsPathParams extends SpeakeasyBase {
     productId: string;
 }
 export declare class GetAuditlogsQueryParams extends SpeakeasyBase {
-    auditLogType?: Map<string, any>;
+    auditLogType?: Record<string, any>;
     configId?: string;
     environmentId?: string;
     fromUtcDateTime?: Date;

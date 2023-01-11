@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum;
 (function (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum) {
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum["CompressionTypeUnspecified"] = "COMPRESSION_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum["Raw"] = "RAW";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum["Rice"] = "RICE";
-})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum || (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum = {}));
+})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum || (exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum = {}));
 // GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints
 /**
  * The constraints for this update.
@@ -39,29 +42,29 @@ var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestCo
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceLocation" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "deviceLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDatabaseEntries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDatabaseEntries" }),
         __metadata("design:type", Number)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "maxDatabaseEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxUpdateEntries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxUpdateEntries" }),
         __metadata("design:type", Number)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "maxUpdateEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedCompressions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedCompressions" }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints.prototype, "supportedCompressions", void 0);
     return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints;

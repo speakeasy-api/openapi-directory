@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDatastoreResponse = exports.GetDatastoreRequest = exports.GetDatastoreSecurity = exports.GetDatastoreQueryParams = exports.GetDatastorePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetDatastorePathParams = /** @class */ (function (_super) {
     __extends(GetDatastorePathParams, _super);
     function GetDatastorePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetDatastorePathParams.prototype, "id", void 0);
     return GetDatastorePathParams;
-}(SpeakeasyBase));
-export { GetDatastorePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDatastorePathParams = GetDatastorePathParams;
 var GetDatastoreQueryParams = /** @class */ (function (_super) {
     __extends(GetDatastoreQueryParams, _super);
     function GetDatastoreQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=time" }),
         __metadata("design:type", Number)
     ], GetDatastoreQueryParams.prototype, "time", void 0);
     return GetDatastoreQueryParams;
-}(SpeakeasyBase));
-export { GetDatastoreQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDatastoreQueryParams = GetDatastoreQueryParams;
 var GetDatastoreSecurity = /** @class */ (function (_super) {
     __extends(GetDatastoreSecurity, _super);
     function GetDatastoreSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKeyAuth)
     ], GetDatastoreSecurity.prototype, "apiKeyAuth", void 0);
     return GetDatastoreSecurity;
-}(SpeakeasyBase));
-export { GetDatastoreSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetDatastoreSecurity = GetDatastoreSecurity;
 var GetDatastoreRequest = /** @class */ (function (_super) {
     __extends(GetDatastoreRequest, _super);
     function GetDatastoreRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatastorePathParams)
     ], GetDatastoreRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatastoreQueryParams)
     ], GetDatastoreRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatastoreSecurity)
     ], GetDatastoreRequest.prototype, "security", void 0);
     return GetDatastoreRequest;
-}(SpeakeasyBase));
-export { GetDatastoreRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDatastoreRequest = GetDatastoreRequest;
 var GetDatastoreResponse = /** @class */ (function (_super) {
     __extends(GetDatastoreResponse, _super);
     function GetDatastoreResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ApiError)
     ], GetDatastoreResponse.prototype, "apiError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDatastoreResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Datastore)
     ], GetDatastoreResponse.prototype, "datastore", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDatastoreResponse.prototype, "statusCode", void 0);
     return GetDatastoreResponse;
-}(SpeakeasyBase));
-export { GetDatastoreResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDatastoreResponse = GetDatastoreResponse;

@@ -26,7 +26,7 @@ export declare class GetSitesWithinOutputFormatQueryParams extends SpeakeasyBase
     locationDescriptor?: GetSitesWithinOutputFormatLocationDescriptorEnum;
     maxResults?: number;
     onlyCivic?: boolean;
-    outputSrs?: number;
+    outputSRS?: number;
     setBack?: number;
 }
 export declare class GetSitesWithinOutputFormatRequest extends SpeakeasyBase {

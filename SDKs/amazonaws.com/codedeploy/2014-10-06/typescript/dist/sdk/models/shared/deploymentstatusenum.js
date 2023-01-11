@@ -1,4 +1,7 @@
-export var DeploymentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentStatusEnum = void 0;
+var DeploymentStatusEnum;
 (function (DeploymentStatusEnum) {
     DeploymentStatusEnum["Created"] = "Created";
     DeploymentStatusEnum["Queued"] = "Queued";
@@ -8,4 +11,4 @@ export var DeploymentStatusEnum;
     DeploymentStatusEnum["Failed"] = "Failed";
     DeploymentStatusEnum["Stopped"] = "Stopped";
     DeploymentStatusEnum["Ready"] = "Ready";
-})(DeploymentStatusEnum || (DeploymentStatusEnum = {}));
+})(DeploymentStatusEnum = exports.DeploymentStatusEnum || (exports.DeploymentStatusEnum = {}));

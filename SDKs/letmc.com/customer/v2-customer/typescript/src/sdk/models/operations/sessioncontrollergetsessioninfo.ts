@@ -28,16 +28,16 @@ export class SessionControllerGetSessionInfoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sessionControllerGetSessionInfo200ApplicationJsonString?: string;
+  sessionControllerGetSessionInfo200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerGetSessionInfo200ApplicationXmlString?: string;
+  sessionControllerGetSessionInfo200ApplicationXMLString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerGetSessionInfo200TextJsonString?: string;
+  sessionControllerGetSessionInfo200TextJSONString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerGetSessionInfo200TextXmlString?: string;
+  sessionControllerGetSessionInfo200TextXMLString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

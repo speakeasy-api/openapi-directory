@@ -23,11 +23,11 @@ export declare class ApigatewayProjectsLocationsOperationsCancelSecurity extends
 export declare class ApigatewayProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: ApigatewayProjectsLocationsOperationsCancelPathParams;
     queryParams: ApigatewayProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ApigatewayProjectsLocationsOperationsCancelSecurity;
 }
 export declare class ApigatewayProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

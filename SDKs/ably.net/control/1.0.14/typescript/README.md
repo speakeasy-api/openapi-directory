@@ -16,30 +16,28 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteAppsAppIdNamespacesNamespaceIdRequest, DeleteAppsAppIdNamespacesNamespaceIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { DeleteAppsIdRequest, DeleteAppsIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: DeleteAppsAppIdNamespacesNamespaceIdRequest = {
+const req: DeleteAppsIdRequest = {
   security: {
     bearerAuth: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
     },
   },
   pathParams: {
-    appId: "odio",
-    namespaceId: "qui",
+    id: "sit",
   },
 };
 
-sdk.sdk.deleteAppsAppIdNamespacesNamespaceId(req).then((res: DeleteAppsAppIdNamespacesNamespaceIdResponse | AxiosError) => {
+sdk.apps.deleteAppsId(req).then((res: DeleteAppsIdResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,30 +46,45 @@ sdk.sdk.deleteAppsAppIdNamespacesNamespaceId(req).then((res: DeleteAppsAppIdName
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### apps
 
-* `deleteAppsAppIdNamespacesNamespaceId` - Deletes a namespace
-* `deleteAppsAppIdQueuesQueueId` - Deletes a queue
-* `deleteAppsAppIdRulesRuleId` - Deletes a Reactor rule
 * `deleteAppsId` - Deletes an app
 * `getAccountsAccountIdApps` - Lists apps
-* `getAppsAppIdKeys` - Lists app keys
-* `getAppsAppIdNamespaces` - Lists namespaces
-* `getAppsAppIdQueues` - Lists queues
-* `getAppsAppIdRules` - Lists Reactor rules
-* `getAppsAppIdRulesRuleId` - Gets a reactor rule by rule ID
-* `getMe` - Get token details
-* `patchAppsAppIdKeysKeyId` - Updates a key
-* `patchAppsAppIdNamespacesNamespaceId` - Updates a namespace
-* `patchAppsAppIdRulesRuleId` - Updates a Reactor rule
 * `patchAppsId` - Updates an app
 * `postAccountsAccountIdApps` - Creates an app
+* `postAppsIdPkcs12` - Updates app's APNs info from a `.p12` file
+
+### keys
+
+* `getAppsAppIdKeys` - Lists app keys
+* `patchAppsAppIdKeysKeyId` - Updates a key
 * `postAppsAppIdKeys` - Creates a key
 * `postAppsAppIdKeysKeyIdRevoke` - Revokes a key
+
+### namespaces
+
+* `deleteAppsAppIdNamespacesNamespaceId` - Deletes a namespace
+* `getAppsAppIdNamespaces` - Lists namespaces
+* `patchAppsAppIdNamespacesNamespaceId` - Updates a namespace
 * `postAppsAppIdNamespaces` - Creates a namespace
+
+### queues
+
+* `deleteAppsAppIdQueuesQueueId` - Deletes a queue
+* `getAppsAppIdQueues` - Lists queues
 * `postAppsAppIdQueues` - Creates a queue
+
+### rules
+
+* `deleteAppsAppIdRulesRuleId` - Deletes a Reactor rule
+* `getAppsAppIdRules` - Lists Reactor rules
+* `getAppsAppIdRulesRuleId` - Gets a reactor rule by rule ID
+* `patchAppsAppIdRulesRuleId` - Updates a Reactor rule
 * `postAppsAppIdRules` - Creates a Reactor rule
-* `postAppsIdPkcs12` - Updates app's APNs info from a `.p12` file
+
+### tokens
+
+* `getMe` - Get token details
 
 <!-- End SDK Available Operations -->
 

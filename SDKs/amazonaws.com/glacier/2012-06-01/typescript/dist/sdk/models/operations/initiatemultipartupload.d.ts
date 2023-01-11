@@ -20,7 +20,7 @@ export declare class InitiateMultipartUploadRequest extends SpeakeasyBase {
 }
 export declare class InitiateMultipartUploadResponse extends SpeakeasyBase {
     contentType: string;
-    initiateMultipartUploadOutput?: Map<string, any>;
+    initiateMultipartUploadOutput?: Record<string, any>;
     invalidParameterValueException?: any;
     missingParameterValueException?: any;
     resourceNotFoundException?: any;

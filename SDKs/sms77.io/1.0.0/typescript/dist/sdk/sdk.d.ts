@@ -10,11 +10,12 @@ import { Sms } from "./sms";
 import { Status } from "./status";
 import { ValidateForVoice } from "./validateforvoice";
 import { Voice } from "./voice";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://gateway.sms77.io/api"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     analytics: Analytics;
     balance: Balance;
@@ -28,11 +29,9 @@ export declare class SDK {
     voice: Voice;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

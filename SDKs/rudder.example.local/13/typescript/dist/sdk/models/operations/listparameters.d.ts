@@ -21,5 +21,5 @@ export declare class ListParameters200ApplicationJson extends SpeakeasyBase {
 export declare class ListParametersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listParameters200ApplicationJsonObject?: ListParameters200ApplicationJson;
+    listParameters200ApplicationJSONObject?: ListParameters200ApplicationJson;
 }

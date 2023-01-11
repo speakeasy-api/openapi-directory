@@ -46,7 +46,7 @@ export class DeleteWorldTemplateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWorldTemplateResponse?: Map<string, any>;
+  deleteWorldTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

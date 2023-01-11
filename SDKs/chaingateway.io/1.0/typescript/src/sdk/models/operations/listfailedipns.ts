@@ -26,5 +26,5 @@ export class ListFailedIpNsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listFailedIpNs?: shared.ListFailedIpNs;
+  listFailedIPNs?: shared.ListFailedIpNs;
 }

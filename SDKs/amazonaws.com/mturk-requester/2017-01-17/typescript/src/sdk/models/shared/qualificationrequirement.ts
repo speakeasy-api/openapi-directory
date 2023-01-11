@@ -26,5 +26,5 @@ export class QualificationRequirement extends SpeakeasyBase {
   qualificationTypeId: string;
 
   @SpeakeasyMetadata({ data: "json, name=RequiredToPreview" })
-  requiredToPreview?: boolean;
+  requiredToPreview?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualificationRequirement } from "./qualificationrequirement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHitTypeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualificationrequirement_1 = require("./qualificationrequirement");
 var CreateHitTypeRequest = /** @class */ (function (_super) {
     __extends(CreateHitTypeRequest, _super);
     function CreateHitTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentDurationInSeconds" }),
         __metadata("design:type", Number)
     ], CreateHitTypeRequest.prototype, "assignmentDurationInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoApprovalDelayInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoApprovalDelayInSeconds" }),
         __metadata("design:type", Number)
     ], CreateHitTypeRequest.prototype, "autoApprovalDelayInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateHitTypeRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keywords" }),
         __metadata("design:type", String)
     ], CreateHitTypeRequest.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationRequirements", elemType: QualificationRequirement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationRequirements", elemType: qualificationrequirement_1.QualificationRequirement }),
         __metadata("design:type", Array)
     ], CreateHitTypeRequest.prototype, "qualificationRequirements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reward" }),
         __metadata("design:type", String)
     ], CreateHitTypeRequest.prototype, "reward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], CreateHitTypeRequest.prototype, "title", void 0);
     return CreateHitTypeRequest;
-}(SpeakeasyBase));
-export { CreateHitTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateHitTypeRequest = CreateHitTypeRequest;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest, NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,37 +30,39 @@ const req: NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "porro",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "expedita",
-    alt: "json",
-    callback: "et",
-    fields: "totam",
-    hubId: "non",
-    key: "sit",
-    oauthToken: "non",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    hubId: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "est",
-    requestId: "ut",
-    uploadType: "ducimus",
-    uploadProtocol: "odio",
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
-    createTime: "quaerat",
-    description: "iure",
+    createTime: "voluptatum",
+    description: "et",
     labels: {
-      "distinctio": "quia",
+      "dolorem": "et",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
-    name: "eveniet",
-    updateTime: "id",
+    name: "dolores",
+    updateTime: "illum",
   },
 };
 

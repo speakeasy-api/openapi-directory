@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateConformancePackCompliance } from "./aggregateconformancepackcompliance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateComplianceByConformancePack = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateconformancepackcompliance_1 = require("./aggregateconformancepackcompliance");
 // AggregateComplianceByConformancePack
 /**
  * <p>Provides aggregate compliance of the conformance pack. Indicates whether a conformance pack is compliant based on the name of the conformance pack, account ID, and region.</p> <p>A conformance pack is compliant if all of the rules in a conformance packs are compliant. It is noncompliant if any of the rules are not compliant. The compliance status of a conformance pack is INSUFFICIENT_DATA only if all rules within a conformance pack cannot be evaluated due to insufficient data. If some of the rules in a conformance pack are compliant but the compliance status of other rules in that same conformance pack is INSUFFICIENT_DATA, the conformance pack shows compliant.</p>
@@ -34,21 +37,21 @@ var AggregateComplianceByConformancePack = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], AggregateComplianceByConformancePack.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], AggregateComplianceByConformancePack.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Compliance" }),
-        __metadata("design:type", AggregateConformancePackCompliance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Compliance" }),
+        __metadata("design:type", aggregateconformancepackcompliance_1.AggregateConformancePackCompliance)
     ], AggregateComplianceByConformancePack.prototype, "compliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackName" }),
         __metadata("design:type", String)
     ], AggregateComplianceByConformancePack.prototype, "conformancePackName", void 0);
     return AggregateComplianceByConformancePack;
-}(SpeakeasyBase));
-export { AggregateComplianceByConformancePack };
+}(utils_1.SpeakeasyBase));
+exports.AggregateComplianceByConformancePack = AggregateComplianceByConformancePack;

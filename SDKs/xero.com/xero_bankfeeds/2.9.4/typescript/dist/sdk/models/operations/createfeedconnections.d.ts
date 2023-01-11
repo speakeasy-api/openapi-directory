@@ -13,7 +13,7 @@ export declare class CreateFeedConnectionsRequest extends SpeakeasyBase {
 }
 export declare class CreateFeedConnectionsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     feedConnections?: shared.FeedConnections;
     statusCode: number;
 }

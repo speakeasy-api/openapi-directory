@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalTax = void 0;
+var utils_1 = require("../../../internal/utils");
 // LocalTax
 /**
  * The Local Tax model
@@ -33,29 +36,29 @@ var LocalTax = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptions" }),
         __metadata("design:type", Number)
     ], LocalTax.prototype, "exemptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptions2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptions2" }),
         __metadata("design:type", Number)
     ], LocalTax.prototype, "exemptions2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filingStatus" }),
         __metadata("design:type", String)
     ], LocalTax.prototype, "filingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=residentPSD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=residentPSD" }),
         __metadata("design:type", String)
-    ], LocalTax.prototype, "residentPsd", void 0);
+    ], LocalTax.prototype, "residentPSD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxCode" }),
         __metadata("design:type", String)
     ], LocalTax.prototype, "taxCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workPSD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workPSD" }),
         __metadata("design:type", String)
-    ], LocalTax.prototype, "workPsd", void 0);
+    ], LocalTax.prototype, "workPSD", void 0);
     return LocalTax;
-}(SpeakeasyBase));
-export { LocalTax };
+}(utils_1.SpeakeasyBase));
+exports.LocalTax = LocalTax;

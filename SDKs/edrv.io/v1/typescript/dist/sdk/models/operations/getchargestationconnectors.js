@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetChargeStationConnectorsResponse = exports.GetChargeStationConnectorsRequest = exports.GetChargeStationConnectorsQueryParams = exports.GetChargeStationConnectorsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetChargeStationConnectorsPathParams = /** @class */ (function (_super) {
     __extends(GetChargeStationConnectorsPathParams, _super);
     function GetChargeStationConnectorsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetChargeStationConnectorsPathParams.prototype, "id", void 0);
     return GetChargeStationConnectorsPathParams;
-}(SpeakeasyBase));
-export { GetChargeStationConnectorsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationConnectorsPathParams = GetChargeStationConnectorsPathParams;
 var GetChargeStationConnectorsQueryParams = /** @class */ (function (_super) {
     __extends(GetChargeStationConnectorsQueryParams, _super);
     function GetChargeStationConnectorsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_evse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_evse" }),
         __metadata("design:type", Boolean)
     ], GetChargeStationConnectorsQueryParams.prototype, "includeEvse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_organization" }),
         __metadata("design:type", Boolean)
     ], GetChargeStationConnectorsQueryParams.prototype, "includeOrganization", void 0);
     return GetChargeStationConnectorsQueryParams;
-}(SpeakeasyBase));
-export { GetChargeStationConnectorsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationConnectorsQueryParams = GetChargeStationConnectorsQueryParams;
 var GetChargeStationConnectorsRequest = /** @class */ (function (_super) {
     __extends(GetChargeStationConnectorsRequest, _super);
     function GetChargeStationConnectorsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChargeStationConnectorsPathParams)
     ], GetChargeStationConnectorsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChargeStationConnectorsQueryParams)
     ], GetChargeStationConnectorsRequest.prototype, "queryParams", void 0);
     return GetChargeStationConnectorsRequest;
-}(SpeakeasyBase));
-export { GetChargeStationConnectorsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationConnectorsRequest = GetChargeStationConnectorsRequest;
 var GetChargeStationConnectorsResponse = /** @class */ (function (_super) {
     __extends(GetChargeStationConnectorsResponse, _super);
     function GetChargeStationConnectorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetChargeStationConnectorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetChargeStationConnectorsResponse.prototype, "statusCode", void 0);
     return GetChargeStationConnectorsResponse;
-}(SpeakeasyBase));
-export { GetChargeStationConnectorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationConnectorsResponse = GetChargeStationConnectorsResponse;

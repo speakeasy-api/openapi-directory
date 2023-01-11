@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2Row } from "./googleprivacydlpv2row";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Table = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2row_1 = require("./googleprivacydlpv2row");
 // GooglePrivacyDlpV2Table
 /**
  * Structured content to inspect. Up to 50,000 `Value`s per request allowed. See https://cloud.google.com/dlp/docs/inspecting-structured-text#inspecting_a_table to learn more.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2Table = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Table.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: GooglePrivacyDlpV2Row }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: googleprivacydlpv2row_1.GooglePrivacyDlpV2Row }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Table.prototype, "rows", void 0);
     return GooglePrivacyDlpV2Table;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Table };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Table = GooglePrivacyDlpV2Table;

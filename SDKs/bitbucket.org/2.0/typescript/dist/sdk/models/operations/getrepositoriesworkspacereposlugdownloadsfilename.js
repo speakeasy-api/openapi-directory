@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse = exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest = exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity = exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams, _super);
     function GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=filename" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams.prototype, "workspace", void 0);
     return GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams = GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams;
 var GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity, _super);
     function GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasic)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity.prototype, "basic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity.prototype, "apiKey", void 0);
     return GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity = GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity;
 var GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest, _super);
     function GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest.prototype, "security", void 0);
     return GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest = GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest;
 var GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, _super);
     function GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse.prototype, "error", void 0);
     return GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse = GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse;

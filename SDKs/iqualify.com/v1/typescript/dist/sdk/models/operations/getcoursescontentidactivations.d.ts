@@ -9,6 +9,6 @@ export declare class GetCoursesContentIdActivationsRequest extends SpeakeasyBase
 export declare class GetCoursesContentIdActivationsResponse extends SpeakeasyBase {
     activationResponse?: shared.ActivationResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LunRange } from "./lunrange";
-import { NfsExport } from "./nfsexport";
-export var VolumeConfigPerformanceTierEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VolumeConfig = exports.VolumeConfigInput = exports.VolumeConfigTypeEnum = exports.VolumeConfigProtocolEnum = exports.VolumeConfigPerformanceTierEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var lunrange_1 = require("./lunrange");
+var nfsexport_1 = require("./nfsexport");
+var VolumeConfigPerformanceTierEnum;
 (function (VolumeConfigPerformanceTierEnum) {
     VolumeConfigPerformanceTierEnum["VolumePerformanceTierUnspecified"] = "VOLUME_PERFORMANCE_TIER_UNSPECIFIED";
     VolumeConfigPerformanceTierEnum["VolumePerformanceTierShared"] = "VOLUME_PERFORMANCE_TIER_SHARED";
     VolumeConfigPerformanceTierEnum["VolumePerformanceTierAssigned"] = "VOLUME_PERFORMANCE_TIER_ASSIGNED";
     VolumeConfigPerformanceTierEnum["VolumePerformanceTierHt"] = "VOLUME_PERFORMANCE_TIER_HT";
-})(VolumeConfigPerformanceTierEnum || (VolumeConfigPerformanceTierEnum = {}));
-export var VolumeConfigProtocolEnum;
+})(VolumeConfigPerformanceTierEnum = exports.VolumeConfigPerformanceTierEnum || (exports.VolumeConfigPerformanceTierEnum = {}));
+var VolumeConfigProtocolEnum;
 (function (VolumeConfigProtocolEnum) {
     VolumeConfigProtocolEnum["ProtocolUnspecified"] = "PROTOCOL_UNSPECIFIED";
     VolumeConfigProtocolEnum["ProtocolFc"] = "PROTOCOL_FC";
     VolumeConfigProtocolEnum["ProtocolNfs"] = "PROTOCOL_NFS";
-})(VolumeConfigProtocolEnum || (VolumeConfigProtocolEnum = {}));
-export var VolumeConfigTypeEnum;
+})(VolumeConfigProtocolEnum = exports.VolumeConfigProtocolEnum || (exports.VolumeConfigProtocolEnum = {}));
+var VolumeConfigTypeEnum;
 (function (VolumeConfigTypeEnum) {
     VolumeConfigTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     VolumeConfigTypeEnum["Flash"] = "FLASH";
     VolumeConfigTypeEnum["Disk"] = "DISK";
-})(VolumeConfigTypeEnum || (VolumeConfigTypeEnum = {}));
+})(VolumeConfigTypeEnum = exports.VolumeConfigTypeEnum || (exports.VolumeConfigTypeEnum = {}));
 // VolumeConfigInput
 /**
  * Configuration parameters for a new volume.
@@ -54,52 +57,52 @@ var VolumeConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcpService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcpService" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "gcpService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lunRanges", elemType: LunRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lunRanges", elemType: lunrange_1.LunRange }),
         __metadata("design:type", Array)
     ], VolumeConfigInput.prototype, "lunRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineIds" }),
         __metadata("design:type", Array)
     ], VolumeConfigInput.prototype, "machineIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfsExports", elemType: NfsExport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfsExports", elemType: nfsexport_1.NfsExport }),
         __metadata("design:type", Array)
     ], VolumeConfigInput.prototype, "nfsExports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performanceTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performanceTier" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "performanceTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeGb" }),
         __metadata("design:type", Number)
     ], VolumeConfigInput.prototype, "sizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapshotsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapshotsEnabled" }),
         __metadata("design:type", Boolean)
     ], VolumeConfigInput.prototype, "snapshotsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userNote" }),
         __metadata("design:type", String)
     ], VolumeConfigInput.prototype, "userNote", void 0);
     return VolumeConfigInput;
-}(SpeakeasyBase));
-export { VolumeConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.VolumeConfigInput = VolumeConfigInput;
 // VolumeConfig
 /**
  * Configuration parameters for a new volume.
@@ -110,53 +113,53 @@ var VolumeConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcpService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcpService" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "gcpService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lunRanges", elemType: LunRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lunRanges", elemType: lunrange_1.LunRange }),
         __metadata("design:type", Array)
     ], VolumeConfig.prototype, "lunRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineIds" }),
         __metadata("design:type", Array)
     ], VolumeConfig.prototype, "machineIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfsExports", elemType: NfsExport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfsExports", elemType: nfsexport_1.NfsExport }),
         __metadata("design:type", Array)
     ], VolumeConfig.prototype, "nfsExports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performanceTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performanceTier" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "performanceTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeGb" }),
         __metadata("design:type", Number)
     ], VolumeConfig.prototype, "sizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapshotsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapshotsEnabled" }),
         __metadata("design:type", Boolean)
     ], VolumeConfig.prototype, "snapshotsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userNote" }),
         __metadata("design:type", String)
     ], VolumeConfig.prototype, "userNote", void 0);
     return VolumeConfig;
-}(SpeakeasyBase));
-export { VolumeConfig };
+}(utils_1.SpeakeasyBase));
+exports.VolumeConfig = VolumeConfig;

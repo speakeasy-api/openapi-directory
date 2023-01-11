@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpgradeInstanceInternalRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpgradeInstanceInternalRequest = exports.UpgradeInstanceInternalRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpgradeInstanceInternalRequestTypeEnum;
 (function (UpgradeInstanceInternalRequestTypeEnum) {
     UpgradeInstanceInternalRequestTypeEnum["UpgradeTypeUnspecified"] = "UPGRADE_TYPE_UNSPECIFIED";
     UpgradeInstanceInternalRequestTypeEnum["UpgradeFramework"] = "UPGRADE_FRAMEWORK";
     UpgradeInstanceInternalRequestTypeEnum["UpgradeOs"] = "UPGRADE_OS";
     UpgradeInstanceInternalRequestTypeEnum["UpgradeCuda"] = "UPGRADE_CUDA";
     UpgradeInstanceInternalRequestTypeEnum["UpgradeAll"] = "UPGRADE_ALL";
-})(UpgradeInstanceInternalRequestTypeEnum || (UpgradeInstanceInternalRequestTypeEnum = {}));
+})(UpgradeInstanceInternalRequestTypeEnum = exports.UpgradeInstanceInternalRequestTypeEnum || (exports.UpgradeInstanceInternalRequestTypeEnum = {}));
 // UpgradeInstanceInternalRequest
 /**
  * Request for upgrading a notebook instance from within the VM
@@ -41,13 +44,13 @@ var UpgradeInstanceInternalRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpgradeInstanceInternalRequest.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmId" }),
         __metadata("design:type", String)
     ], UpgradeInstanceInternalRequest.prototype, "vmId", void 0);
     return UpgradeInstanceInternalRequest;
-}(SpeakeasyBase));
-export { UpgradeInstanceInternalRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpgradeInstanceInternalRequest = UpgradeInstanceInternalRequest;

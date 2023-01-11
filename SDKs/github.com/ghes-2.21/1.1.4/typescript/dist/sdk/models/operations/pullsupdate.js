@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,111 +14,136 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullsUpdateResponse = exports.PullsUpdateRequest = exports.PullsUpdateRequestBody = exports.PullsUpdateRequestBodyStateEnum = exports.PullsUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PullsUpdatePathParams = /** @class */ (function (_super) {
     __extends(PullsUpdatePathParams, _super);
     function PullsUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], PullsUpdatePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pull_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pull_number" }),
         __metadata("design:type", Number)
     ], PullsUpdatePathParams.prototype, "pullNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], PullsUpdatePathParams.prototype, "repo", void 0);
     return PullsUpdatePathParams;
-}(SpeakeasyBase));
-export { PullsUpdatePathParams };
-export var PullsUpdateRequestBodyStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.PullsUpdatePathParams = PullsUpdatePathParams;
+var PullsUpdateRequestBodyStateEnum;
 (function (PullsUpdateRequestBodyStateEnum) {
     PullsUpdateRequestBodyStateEnum["Open"] = "open";
     PullsUpdateRequestBodyStateEnum["Closed"] = "closed";
-})(PullsUpdateRequestBodyStateEnum || (PullsUpdateRequestBodyStateEnum = {}));
+})(PullsUpdateRequestBodyStateEnum = exports.PullsUpdateRequestBodyStateEnum || (exports.PullsUpdateRequestBodyStateEnum = {}));
 var PullsUpdateRequestBody = /** @class */ (function (_super) {
     __extends(PullsUpdateRequestBody, _super);
     function PullsUpdateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base" }),
         __metadata("design:type", String)
     ], PullsUpdateRequestBody.prototype, "base", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PullsUpdateRequestBody.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintainer_can_modify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintainer_can_modify" }),
         __metadata("design:type", Boolean)
     ], PullsUpdateRequestBody.prototype, "maintainerCanModify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PullsUpdateRequestBody.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PullsUpdateRequestBody.prototype, "title", void 0);
     return PullsUpdateRequestBody;
-}(SpeakeasyBase));
-export { PullsUpdateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PullsUpdateRequestBody = PullsUpdateRequestBody;
 var PullsUpdateRequest = /** @class */ (function (_super) {
     __extends(PullsUpdateRequest, _super);
     function PullsUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PullsUpdatePathParams)
     ], PullsUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PullsUpdateRequestBody)
     ], PullsUpdateRequest.prototype, "request", void 0);
     return PullsUpdateRequest;
-}(SpeakeasyBase));
-export { PullsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PullsUpdateRequest = PullsUpdateRequest;
 var PullsUpdateResponse = /** @class */ (function (_super) {
     __extends(PullsUpdateResponse, _super);
     function PullsUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PullsUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PullsUpdateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], PullsUpdateResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PullRequest)
     ], PullsUpdateResponse.prototype, "pullRequest", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], PullsUpdateResponse.prototype, "validationError", void 0);
     return PullsUpdateResponse;
-}(SpeakeasyBase));
-export { PullsUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PullsUpdateResponse = PullsUpdateResponse;

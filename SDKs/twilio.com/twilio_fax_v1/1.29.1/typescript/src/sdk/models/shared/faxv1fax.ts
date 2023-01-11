@@ -49,7 +49,7 @@ export class FaxV1Fax extends SpeakeasyBase {
   from?: string;
 
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=media_sid" })
   mediaSid?: string;

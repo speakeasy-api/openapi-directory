@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class SkcerRequestBodyCertificateParameters extends SpeakeasyBase {
-    courseNo: string;
+    courseNO: string;
     fullName: string;
     certificateType: string;
 }
@@ -107,11 +107,11 @@ export declare class SkcerRequest extends SpeakeasyBase {
 export declare class SkcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    skcer400ApplicationJsonObject?: Skcer400ApplicationJson;
-    skcer401ApplicationJsonObject?: Skcer401ApplicationJson;
-    skcer404ApplicationJsonObject?: Skcer404ApplicationJson;
-    skcer500ApplicationJsonObject?: Skcer500ApplicationJson;
-    skcer502ApplicationJsonObject?: Skcer502ApplicationJson;
-    skcer503ApplicationJsonObject?: Skcer503ApplicationJson;
-    skcer504ApplicationJsonObject?: Skcer504ApplicationJson;
+    skcer400ApplicationJSONObject?: Skcer400ApplicationJson;
+    skcer401ApplicationJSONObject?: Skcer401ApplicationJson;
+    skcer404ApplicationJSONObject?: Skcer404ApplicationJson;
+    skcer500ApplicationJSONObject?: Skcer500ApplicationJson;
+    skcer502ApplicationJSONObject?: Skcer502ApplicationJson;
+    skcer503ApplicationJSONObject?: Skcer503ApplicationJson;
+    skcer504ApplicationJSONObject?: Skcer504ApplicationJson;
 }

@@ -44,13 +44,13 @@ export class SignUpIdResponse extends SpeakeasyBase {
   demoAuthResponse?: any;
 
   @SpeakeasyMetadata()
-  signUpId400ApplicationJsonOneOf?: any;
+  signUPId400ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  signUpId401ApplicationJsonObject?: SignUpId401ApplicationJson;
+  signUPId401ApplicationJSONObject?: SignUpId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  signUpId500ApplicationJsonObject?: SignUpId500ApplicationJson;
+  signUPId500ApplicationJSONObject?: SignUpId500ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

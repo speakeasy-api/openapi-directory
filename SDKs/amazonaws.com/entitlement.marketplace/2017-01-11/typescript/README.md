@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetEntitlementsRequest, GetEntitlementsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,30 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetEntitlementsRequest = {
   headers: {
-    xAmzAlgorithm: "harum",
-    xAmzContentSha256: "enim",
-    xAmzCredential: "est",
-    xAmzDate: "recusandae",
-    xAmzSecurityToken: "neque",
-    xAmzSignature: "quia",
-    xAmzSignedHeaders: "qui",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSMPEntitlementService.GetEntitlements",
   },
   request: {
     filter: {
-      "aliquam": [
-        "iure",
-        "hic",
-        "maxime",
+      "et": [
+        "rerum",
       ],
     },
-    maxResults: 9121163751201800243,
-    nextToken: "repudiandae",
-    productCode: "et",
+    maxResults: 7837839688282259259,
+    nextToken: "debitis",
+    productCode: "voluptatum",
   },
 };
 
-sdk.sdk.getEntitlements(req).then((res: GetEntitlementsResponse | AxiosError) => {
+sdk.getEntitlements(req).then((res: GetEntitlementsResponse | AxiosError) => {
    // handle response
 });
 ```

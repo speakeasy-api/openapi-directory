@@ -11,9 +11,9 @@ export declare class OidcIdentityProviderConfig extends SpeakeasyBase {
     identityProviderConfigArn?: string;
     identityProviderConfigName?: string;
     issuerUrl?: string;
-    requiredClaims?: Map<string, string>;
+    requiredClaims?: Record<string, string>;
     status?: ConfigStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     usernameClaim?: string;
     usernamePrefix?: string;
 }

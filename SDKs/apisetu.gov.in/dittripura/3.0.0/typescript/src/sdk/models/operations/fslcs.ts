@@ -188,23 +188,23 @@ export class FslcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fslcs400ApplicationJsonObject?: Fslcs400ApplicationJson;
+  fslcs400ApplicationJSONObject?: Fslcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs401ApplicationJsonObject?: Fslcs401ApplicationJson;
+  fslcs401ApplicationJSONObject?: Fslcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs404ApplicationJsonObject?: Fslcs404ApplicationJson;
+  fslcs404ApplicationJSONObject?: Fslcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs500ApplicationJsonObject?: Fslcs500ApplicationJson;
+  fslcs500ApplicationJSONObject?: Fslcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs502ApplicationJsonObject?: Fslcs502ApplicationJson;
+  fslcs502ApplicationJSONObject?: Fslcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs503ApplicationJsonObject?: Fslcs503ApplicationJson;
+  fslcs503ApplicationJSONObject?: Fslcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  fslcs504ApplicationJsonObject?: Fslcs504ApplicationJson;
+  fslcs504ApplicationJSONObject?: Fslcs504ApplicationJson;
 }

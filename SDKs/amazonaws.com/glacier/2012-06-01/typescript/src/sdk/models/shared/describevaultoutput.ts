@@ -20,7 +20,7 @@ export class DescribeVaultOutput extends SpeakeasyBase {
   sizeInBytes?: number;
 
   @SpeakeasyMetadata({ data: "json, name=VaultARN" })
-  vaultArn?: string;
+  vaultARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=VaultName" })
   vaultName?: string;

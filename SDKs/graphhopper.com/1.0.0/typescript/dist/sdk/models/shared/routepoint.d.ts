@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class RoutePoint extends SpeakeasyBase {
-    coordinates?: Map<string, any>[];
+    coordinates?: Record<string, any>[];
     type?: string;
 }

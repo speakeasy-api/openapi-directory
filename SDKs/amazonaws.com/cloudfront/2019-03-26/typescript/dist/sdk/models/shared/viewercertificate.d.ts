@@ -1,5 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CertificateSourceEnum } from "./certificatesourceenum";
 import { MinimumProtocolVersionEnum } from "./minimumprotocolversionenum";
 import { SslSupportMethodEnum } from "./sslsupportmethodenum";
 /**
@@ -7,8 +6,8 @@ import { SslSupportMethodEnum } from "./sslsupportmethodenum";
 **/
 export declare class ViewerCertificate extends SpeakeasyBase {
     acmCertificateArn?: string;
-    certificate?: string;
-    certificateSource?: CertificateSourceEnum;
+    certificate?: Record<string, any>;
+    certificateSource?: Record<string, any>;
     cloudFrontDefaultCertificate?: boolean;
     iamCertificateId?: string;
     minimumProtocolVersion?: MinimumProtocolVersionEnum;

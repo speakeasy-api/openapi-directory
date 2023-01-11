@@ -13,11 +13,11 @@ export declare class ProcessorBankTransferCreateRequest extends SpeakeasyBase {
     description: string;
     idempotencyKey: string;
     isoCurrencyCode: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     network: BankTransferNetworkEnum;
     originationAccountId?: string;
     processorToken: string;
     secret?: string;
     type: BankTransferTypeEnum;
-    user: Map<string, any>;
+    user: Record<string, any>;
 }

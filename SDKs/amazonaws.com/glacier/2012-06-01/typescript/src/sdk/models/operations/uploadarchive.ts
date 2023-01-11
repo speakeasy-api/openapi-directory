@@ -61,7 +61,7 @@ export class UploadArchiveRequest extends SpeakeasyBase {
 
 export class UploadArchiveResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  archiveCreationOutput?: Map<string, any>;
+  archiveCreationOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

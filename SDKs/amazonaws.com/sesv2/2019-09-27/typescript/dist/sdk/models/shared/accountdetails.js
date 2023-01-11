@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactLanguageEnum } from "./contactlanguageenum";
-import { MailTypeEnum } from "./mailtypeenum";
-import { ReviewDetails } from "./reviewdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactlanguageenum_1 = require("./contactlanguageenum");
+var mailtypeenum_1 = require("./mailtypeenum");
+var reviewdetails_1 = require("./reviewdetails");
 // AccountDetails
 /**
  * An object that contains information about your account details.
@@ -36,29 +39,29 @@ var AccountDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalContactEmailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalContactEmailAddresses" }),
         __metadata("design:type", Array)
     ], AccountDetails.prototype, "additionalContactEmailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactLanguage" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "contactLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailType" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "mailType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReviewDetails" }),
-        __metadata("design:type", ReviewDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReviewDetails" }),
+        __metadata("design:type", reviewdetails_1.ReviewDetails)
     ], AccountDetails.prototype, "reviewDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseCaseDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseCaseDescription" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "useCaseDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebsiteURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebsiteURL" }),
         __metadata("design:type", String)
-    ], AccountDetails.prototype, "websiteUrl", void 0);
+    ], AccountDetails.prototype, "websiteURL", void 0);
     return AccountDetails;
-}(SpeakeasyBase));
-export { AccountDetails };
+}(utils_1.SpeakeasyBase));
+exports.AccountDetails = AccountDetails;

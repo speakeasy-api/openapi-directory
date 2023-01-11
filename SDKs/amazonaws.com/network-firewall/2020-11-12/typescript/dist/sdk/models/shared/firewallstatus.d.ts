@@ -8,5 +8,5 @@ import { SyncState } from "./syncstate";
 export declare class FirewallStatus extends SpeakeasyBase {
     configurationSyncStateSummary: ConfigurationSyncStateEnum;
     status: FirewallStatusValueEnum;
-    syncStates?: Map<string, SyncState>;
+    syncStates?: Record<string, SyncState>;
 }

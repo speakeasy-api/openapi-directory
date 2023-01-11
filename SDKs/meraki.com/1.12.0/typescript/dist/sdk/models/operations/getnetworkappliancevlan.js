@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceVlanResponse = exports.GetNetworkApplianceVlanRequest = exports.GetNetworkApplianceVlanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceVlanPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVlanPathParams, _super);
     function GetNetworkApplianceVlanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceVlanPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=vlanId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceVlanPathParams.prototype, "vlanId", void 0);
     return GetNetworkApplianceVlanPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVlanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVlanPathParams = GetNetworkApplianceVlanPathParams;
 var GetNetworkApplianceVlanRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVlanRequest, _super);
     function GetNetworkApplianceVlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceVlanPathParams)
     ], GetNetworkApplianceVlanRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceVlanRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVlanRequest = GetNetworkApplianceVlanRequest;
 var GetNetworkApplianceVlanResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVlanResponse, _super);
     function GetNetworkApplianceVlanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceVlanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceVlanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceVlanResponse.prototype, "getNetworkApplianceVlan200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceVlanResponse.prototype, "getNetworkApplianceVlan200ApplicationJSONObject", void 0);
     return GetNetworkApplianceVlanResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVlanResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVlanResponse = GetNetworkApplianceVlanResponse;

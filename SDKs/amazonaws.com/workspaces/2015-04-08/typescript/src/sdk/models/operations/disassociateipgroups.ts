@@ -51,7 +51,7 @@ export class DisassociateIpGroupsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateIpGroupsResult?: Map<string, any>;
+  disassociateIpGroupsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

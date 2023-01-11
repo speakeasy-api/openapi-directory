@@ -24,7 +24,7 @@ export class Partition extends SpeakeasyBase {
   lastAnalyzedTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=StorageDescriptor" })
   storageDescriptor?: StorageDescriptor;

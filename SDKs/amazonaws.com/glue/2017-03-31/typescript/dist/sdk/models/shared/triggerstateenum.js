@@ -1,4 +1,7 @@
-export var TriggerStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerStateEnum = void 0;
+var TriggerStateEnum;
 (function (TriggerStateEnum) {
     TriggerStateEnum["Creating"] = "CREATING";
     TriggerStateEnum["Created"] = "CREATED";
@@ -8,4 +11,4 @@ export var TriggerStateEnum;
     TriggerStateEnum["Deactivated"] = "DEACTIVATED";
     TriggerStateEnum["Deleting"] = "DELETING";
     TriggerStateEnum["Updating"] = "UPDATING";
-})(TriggerStateEnum || (TriggerStateEnum = {}));
+})(TriggerStateEnum = exports.TriggerStateEnum || (exports.TriggerStateEnum = {}));

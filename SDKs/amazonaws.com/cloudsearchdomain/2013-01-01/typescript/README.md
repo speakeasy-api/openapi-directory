@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SearchRequest, SearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,35 +33,35 @@ const sdk = new SDK(WithSecurity(
     
 const req: SearchRequest = {
   queryParams: {
-    cursor: "ut",
-    expr: "hic",
-    facet: "veniam",
+    cursor: "sit",
+    expr: "voluptas",
+    facet: "culpa",
     format: "sdk",
-    fq: "ut",
-    highlight: "animi",
+    fq: "consequuntur",
+    highlight: "dolor",
     partial: true,
     pretty: "true",
-    q: "unde",
-    qOptions: "repellat",
-    qParser: "lucene",
-    return: "tempore",
-    size: 4592009160050073480,
-    sort: "quia",
-    start: 884502240364205692,
-    stats: "voluptates",
+    q: "fugit",
+    qOptions: "et",
+    qParser: "simple",
+    return: "rerum",
+    size: 7837839688282259259,
+    sort: "debitis",
+    start: 5617773211005988520,
+    stats: "et",
   },
   headers: {
-    xAmzAlgorithm: "consequatur",
-    xAmzContentSha256: "explicabo",
-    xAmzCredential: "qui",
-    xAmzDate: "perferendis",
-    xAmzSecurityToken: "ipsum",
-    xAmzSignature: "autem",
-    xAmzSignedHeaders: "perferendis",
+    xAmzAlgorithm: "ut",
+    xAmzContentSha256: "dolorem",
+    xAmzCredential: "et",
+    xAmzDate: "voluptate",
+    xAmzSecurityToken: "iste",
+    xAmzSignature: "vitae",
+    xAmzSignedHeaders: "totam",
   },
 };
 
-sdk.sdk.search(req).then((res: SearchResponse | AxiosError) => {
+sdk.search(req).then((res: SearchResponse | AxiosError) => {
    // handle response
 });
 ```

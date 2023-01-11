@@ -22,5 +22,5 @@ export class GetNetworkSwitchRoutingMulticastResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchRoutingMulticast200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchRoutingMulticast200ApplicationJSONObject?: Record<string, any>;
 }

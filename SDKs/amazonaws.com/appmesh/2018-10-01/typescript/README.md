@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateMeshRequest, CreateMeshResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateMeshRequest = {
   headers: {
-    xAmzAlgorithm: "quas",
-    xAmzContentSha256: "facere",
-    xAmzCredential: "eveniet",
-    xAmzDate: "dolores",
-    xAmzSecurityToken: "fuga",
-    xAmzSignature: "error",
-    xAmzSignedHeaders: "autem",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientToken: "eaque",
-    meshName: "omnis",
+    clientToken: "voluptas",
+    meshName: "fugit",
   },
 };
 
-sdk.sdk.createMesh(req).then((res: CreateMeshResponse | AxiosError) => {
+sdk.createMesh(req).then((res: CreateMeshResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -28,13 +28,13 @@ export class TagStreamHeaders extends SpeakeasyBase {
 
 export class TagStreamRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }
 
 
@@ -70,7 +70,7 @@ export class TagStreamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagStreamOutput?: Map<string, any>;
+  tagStreamOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   tagsPerResourceExceededLimitException?: any;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ResultPage extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items?: Map<string, any>[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   restrictedRights?: boolean;

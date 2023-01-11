@@ -20,7 +20,7 @@ export declare class GetVpceConfigurationRequest extends SpeakeasyBase {
 export declare class GetVpceConfigurationResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    getVpceConfigurationResult?: shared.GetVpceConfigurationResult;
+    getVPCEConfigurationResult?: shared.GetVpceConfigurationResult;
     notFoundException?: any;
     serviceAccountException?: any;
     statusCode: number;

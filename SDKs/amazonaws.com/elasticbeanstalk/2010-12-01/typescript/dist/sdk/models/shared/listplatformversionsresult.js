@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlatformSummary } from "./platformsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPlatformVersionsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var platformsummary_1 = require("./platformsummary");
 var ListPlatformVersionsResult = /** @class */ (function (_super) {
     __extends(ListPlatformVersionsResult, _super);
     function ListPlatformVersionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListPlatformVersionsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PlatformSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: platformsummary_1.PlatformSummary }),
         __metadata("design:type", Array)
     ], ListPlatformVersionsResult.prototype, "platformSummaryList", void 0);
     return ListPlatformVersionsResult;
-}(SpeakeasyBase));
-export { ListPlatformVersionsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListPlatformVersionsResult = ListPlatformVersionsResult;

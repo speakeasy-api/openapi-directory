@@ -28,5 +28,5 @@ export class LocalDiskInitializeParams extends SpeakeasyBase {
   diskType?: LocalDiskInitializeParamsDiskTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GamesNumberAffixConfiguration } from "./gamesnumberaffixconfiguration";
-export var GamesNumberFormatConfigurationNumberFormatTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GamesNumberFormatConfiguration = exports.GamesNumberFormatConfigurationNumberFormatTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gamesnumberaffixconfiguration_1 = require("./gamesnumberaffixconfiguration");
+var GamesNumberFormatConfigurationNumberFormatTypeEnum;
 (function (GamesNumberFormatConfigurationNumberFormatTypeEnum) {
     GamesNumberFormatConfigurationNumberFormatTypeEnum["NumberFormatTypeUnspecified"] = "NUMBER_FORMAT_TYPE_UNSPECIFIED";
     GamesNumberFormatConfigurationNumberFormatTypeEnum["Numeric"] = "NUMERIC";
     GamesNumberFormatConfigurationNumberFormatTypeEnum["TimeDuration"] = "TIME_DURATION";
     GamesNumberFormatConfigurationNumberFormatTypeEnum["Currency"] = "CURRENCY";
-})(GamesNumberFormatConfigurationNumberFormatTypeEnum || (GamesNumberFormatConfigurationNumberFormatTypeEnum = {}));
+})(GamesNumberFormatConfigurationNumberFormatTypeEnum = exports.GamesNumberFormatConfigurationNumberFormatTypeEnum || (exports.GamesNumberFormatConfigurationNumberFormatTypeEnum = {}));
 // GamesNumberFormatConfiguration
 /**
  * A number format resource.
@@ -41,21 +44,21 @@ var GamesNumberFormatConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], GamesNumberFormatConfiguration.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numDecimalPlaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numDecimalPlaces" }),
         __metadata("design:type", Number)
     ], GamesNumberFormatConfiguration.prototype, "numDecimalPlaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberFormatType" }),
         __metadata("design:type", String)
     ], GamesNumberFormatConfiguration.prototype, "numberFormatType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suffix" }),
-        __metadata("design:type", GamesNumberAffixConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
+        __metadata("design:type", gamesnumberaffixconfiguration_1.GamesNumberAffixConfiguration)
     ], GamesNumberFormatConfiguration.prototype, "suffix", void 0);
     return GamesNumberFormatConfiguration;
-}(SpeakeasyBase));
-export { GamesNumberFormatConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.GamesNumberFormatConfiguration = GamesNumberFormatConfiguration;

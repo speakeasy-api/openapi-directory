@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MybusinessAccountsCreateRequest, MybusinessAccountsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,53 +28,52 @@ const sdk = new SDK();
     
 const req: MybusinessAccountsCreateRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "est",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "soluta",
-    fields: "rerum",
-    key: "perspiciatis",
-    oauthToken: "amet",
-    prettyPrint: false,
-    primaryOwner: "suscipit",
-    quotaUser: "in",
-    uploadType: "voluptas",
-    uploadProtocol: "impedit",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    primaryOwner: "fugit",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    accountName: "repellat",
-    accountNumber: "nemo",
-    name: "ut",
+    accountName: "dicta",
+    accountNumber: "debitis",
+    name: "voluptatum",
     organizationInfo: {
-      phoneNumber: "adipisci",
+      phoneNumber: "et",
       postalAddress: {
         addressLines: [
-          "dolore",
-          "consequuntur",
+          "dolorem",
+          "et",
+          "voluptate",
         ],
-        administrativeArea: "laboriosam",
-        languageCode: "molestias",
-        locality: "in",
-        organization: "harum",
-        postalCode: "cupiditate",
+        administrativeArea: "iste",
+        languageCode: "vitae",
+        locality: "totam",
+        organization: "dolores",
+        postalCode: "illum",
         recipients: [
-          "ea",
-          "aliquid",
-          "rem",
+          "vel",
         ],
-        regionCode: "qui",
-        revision: 44272711320736584,
-        sortingCode: "voluptatem",
-        sublocality: "molestiae",
+        regionCode: "odio",
+        revision: 6303220950515014660,
+        sortingCode: "id",
+        sublocality: "aspernatur",
       },
-      registeredDomain: "quaerat",
+      registeredDomain: "accusantium",
     },
     permissionLevel: "MEMBER_LEVEL",
-    role: "ACCOUNT_ROLE_UNSPECIFIED",
+    role: "COMMUNITY_MANAGER",
     state: {
-      status: "ACCOUNT_STATUS_UNSPECIFIED",
+      status: "UNVERIFIED",
     },
-    type: "LOCATION_GROUP",
+    type: "USER_GROUP",
   },
 };
 

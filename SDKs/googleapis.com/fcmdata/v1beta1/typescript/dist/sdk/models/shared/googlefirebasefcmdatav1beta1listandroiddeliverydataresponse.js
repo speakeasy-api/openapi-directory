@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleFirebaseFcmDataV1beta1AndroidDeliveryData } from "./googlefirebasefcmdatav1beta1androiddeliverydata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlefirebasefcmdatav1beta1androiddeliverydata_1 = require("./googlefirebasefcmdatav1beta1androiddeliverydata");
 // GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse
 /**
  * Response message for ListAndroidDeliveryData.
@@ -34,13 +37,13 @@ var GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidDeliveryData", elemType: GoogleFirebaseFcmDataV1beta1AndroidDeliveryData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidDeliveryData", elemType: googlefirebasefcmdatav1beta1androiddeliverydata_1.GoogleFirebaseFcmDataV1beta1AndroidDeliveryData }),
         __metadata("design:type", Array)
     ], GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse.prototype, "androidDeliveryData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse.prototype, "nextPageToken", void 0);
     return GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse;
-}(SpeakeasyBase));
-export { GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse = GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse;

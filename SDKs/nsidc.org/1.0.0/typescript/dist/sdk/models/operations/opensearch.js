@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OpenSearchSortKeysEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenSearchResponse = exports.OpenSearchRequest = exports.OpenSearchQueryParams = exports.OpenSearchSourceEnum = exports.OpenSearchSortKeysEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OpenSearchSortKeysEnum;
 (function (OpenSearchSortKeysEnum) {
     OpenSearchSortKeysEnum["ScoreDesc"] = "score,,desc";
     OpenSearchSortKeysEnum["SpatialAreaAsc"] = "spatial_area,,asc";
@@ -31,85 +34,85 @@ export var OpenSearchSortKeysEnum;
     OpenSearchSortKeysEnum["TemporalDurationAsc"] = "temporal_duration,,asc";
     OpenSearchSortKeysEnum["TemporalDurationDesc"] = "temporal_duration,,desc";
     OpenSearchSortKeysEnum["UpdatedDesc"] = "updated,,desc";
-})(OpenSearchSortKeysEnum || (OpenSearchSortKeysEnum = {}));
-export var OpenSearchSourceEnum;
+})(OpenSearchSortKeysEnum = exports.OpenSearchSortKeysEnum || (exports.OpenSearchSortKeysEnum = {}));
+var OpenSearchSourceEnum;
 (function (OpenSearchSourceEnum) {
     OpenSearchSourceEnum["Nsidc"] = "NSIDC";
     OpenSearchSourceEnum["Ade"] = "ADE";
-})(OpenSearchSourceEnum || (OpenSearchSourceEnum = {}));
+})(OpenSearchSourceEnum = exports.OpenSearchSourceEnum || (exports.OpenSearchSourceEnum = {}));
 var OpenSearchQueryParams = /** @class */ (function (_super) {
     __extends(OpenSearchQueryParams, _super);
     function OpenSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=count" }),
         __metadata("design:type", Number)
     ], OpenSearchQueryParams.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], OpenSearchQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=facetFilters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=facetFilters" }),
         __metadata("design:type", String)
     ], OpenSearchQueryParams.prototype, "facetFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
         __metadata("design:type", String)
     ], OpenSearchQueryParams.prototype, "searchTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortKeys" }),
         __metadata("design:type", String)
     ], OpenSearchQueryParams.prototype, "sortKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=source" }),
         __metadata("design:type", String)
     ], OpenSearchQueryParams.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spatial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spatial" }),
         __metadata("design:type", String)
     ], OpenSearchQueryParams.prototype, "spatial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], OpenSearchQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], OpenSearchQueryParams.prototype, "startIndex", void 0);
     return OpenSearchQueryParams;
-}(SpeakeasyBase));
-export { OpenSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.OpenSearchQueryParams = OpenSearchQueryParams;
 var OpenSearchRequest = /** @class */ (function (_super) {
     __extends(OpenSearchRequest, _super);
     function OpenSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OpenSearchQueryParams)
     ], OpenSearchRequest.prototype, "queryParams", void 0);
     return OpenSearchRequest;
-}(SpeakeasyBase));
-export { OpenSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.OpenSearchRequest = OpenSearchRequest;
 var OpenSearchResponse = /** @class */ (function (_super) {
     __extends(OpenSearchResponse, _super);
     function OpenSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OpenSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OpenSearchResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OpenSearchResponse.prototype, "openSearch200ApplicationAtomPlusXmlString", void 0);
     return OpenSearchResponse;
-}(SpeakeasyBase));
-export { OpenSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.OpenSearchResponse = OpenSearchResponse;

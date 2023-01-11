@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetIosPostInstallAttributionResponseAttributionConfidenceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIosPostInstallAttributionResponse = exports.GetIosPostInstallAttributionResponseRequestIpVersionEnum = exports.GetIosPostInstallAttributionResponseAttributionConfidenceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetIosPostInstallAttributionResponseAttributionConfidenceEnum;
 (function (GetIosPostInstallAttributionResponseAttributionConfidenceEnum) {
     GetIosPostInstallAttributionResponseAttributionConfidenceEnum["UnknownAttributionConfidence"] = "UNKNOWN_ATTRIBUTION_CONFIDENCE";
     GetIosPostInstallAttributionResponseAttributionConfidenceEnum["Weak"] = "WEAK";
     GetIosPostInstallAttributionResponseAttributionConfidenceEnum["Default"] = "DEFAULT";
     GetIosPostInstallAttributionResponseAttributionConfidenceEnum["Unique"] = "UNIQUE";
-})(GetIosPostInstallAttributionResponseAttributionConfidenceEnum || (GetIosPostInstallAttributionResponseAttributionConfidenceEnum = {}));
-export var GetIosPostInstallAttributionResponseRequestIpVersionEnum;
+})(GetIosPostInstallAttributionResponseAttributionConfidenceEnum = exports.GetIosPostInstallAttributionResponseAttributionConfidenceEnum || (exports.GetIosPostInstallAttributionResponseAttributionConfidenceEnum = {}));
+var GetIosPostInstallAttributionResponseRequestIpVersionEnum;
 (function (GetIosPostInstallAttributionResponseRequestIpVersionEnum) {
     GetIosPostInstallAttributionResponseRequestIpVersionEnum["UnknownIpVersion"] = "UNKNOWN_IP_VERSION";
     GetIosPostInstallAttributionResponseRequestIpVersionEnum["IpV4"] = "IP_V4";
     GetIosPostInstallAttributionResponseRequestIpVersionEnum["IpV6"] = "IP_V6";
-})(GetIosPostInstallAttributionResponseRequestIpVersionEnum || (GetIosPostInstallAttributionResponseRequestIpVersionEnum = {}));
+})(GetIosPostInstallAttributionResponseRequestIpVersionEnum = exports.GetIosPostInstallAttributionResponseRequestIpVersionEnum || (exports.GetIosPostInstallAttributionResponseRequestIpVersionEnum = {}));
 // GetIosPostInstallAttributionResponse
 /**
  * Response for iSDK to execute strong match flow for post-install attribution.
@@ -46,69 +49,69 @@ var GetIosPostInstallAttributionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appMinimumVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appMinimumVersion" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "appMinimumVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributionConfidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributionConfidence" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "attributionConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deepLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deepLink" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "deepLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalBrowserDestinationLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalBrowserDestinationLink" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "externalBrowserDestinationLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fallbackLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fallbackLink" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "fallbackLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationId" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "invitationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isStrongMatchExecutable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isStrongMatchExecutable" }),
         __metadata("design:type", Boolean)
     ], GetIosPostInstallAttributionResponse.prototype, "isStrongMatchExecutable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchMessage" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "matchMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestIpVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestIpVersion" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "requestIpVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedLink" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "requestedLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolvedLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolvedLink" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "resolvedLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmCampaign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmCampaign" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "utmCampaign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmContent" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "utmContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmMedium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmMedium" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "utmMedium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmSource" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "utmSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmTerm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmTerm" }),
         __metadata("design:type", String)
     ], GetIosPostInstallAttributionResponse.prototype, "utmTerm", void 0);
     return GetIosPostInstallAttributionResponse;
-}(SpeakeasyBase));
-export { GetIosPostInstallAttributionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIosPostInstallAttributionResponse = GetIosPostInstallAttributionResponse;

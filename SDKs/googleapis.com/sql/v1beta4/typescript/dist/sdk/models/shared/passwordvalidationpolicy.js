@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PasswordValidationPolicyComplexityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PasswordValidationPolicy = exports.PasswordValidationPolicyComplexityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PasswordValidationPolicyComplexityEnum;
 (function (PasswordValidationPolicyComplexityEnum) {
     PasswordValidationPolicyComplexityEnum["ComplexityUnspecified"] = "COMPLEXITY_UNSPECIFIED";
     PasswordValidationPolicyComplexityEnum["ComplexityDefault"] = "COMPLEXITY_DEFAULT";
-})(PasswordValidationPolicyComplexityEnum || (PasswordValidationPolicyComplexityEnum = {}));
+})(PasswordValidationPolicyComplexityEnum = exports.PasswordValidationPolicyComplexityEnum || (exports.PasswordValidationPolicyComplexityEnum = {}));
 // PasswordValidationPolicy
 /**
  * Database instance local user password validation policy
@@ -38,29 +41,29 @@ var PasswordValidationPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complexity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complexity" }),
         __metadata("design:type", String)
     ], PasswordValidationPolicy.prototype, "complexity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disallowUsernameSubstring" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disallowUsernameSubstring" }),
         __metadata("design:type", Boolean)
     ], PasswordValidationPolicy.prototype, "disallowUsernameSubstring", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePasswordPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePasswordPolicy" }),
         __metadata("design:type", Boolean)
     ], PasswordValidationPolicy.prototype, "enablePasswordPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minLength" }),
         __metadata("design:type", Number)
     ], PasswordValidationPolicy.prototype, "minLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordChangeInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordChangeInterval" }),
         __metadata("design:type", String)
     ], PasswordValidationPolicy.prototype, "passwordChangeInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reuseInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reuseInterval" }),
         __metadata("design:type", Number)
     ], PasswordValidationPolicy.prototype, "reuseInterval", void 0);
     return PasswordValidationPolicy;
-}(SpeakeasyBase));
-export { PasswordValidationPolicy };
+}(utils_1.SpeakeasyBase));
+exports.PasswordValidationPolicy = PasswordValidationPolicy;

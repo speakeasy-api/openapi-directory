@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListOfIssuedDocumentsIdResponse = exports.GetListOfIssuedDocumentsId401ApplicationJson = exports.GetListOfIssuedDocumentsId200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetListOfIssuedDocumentsId200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetListOfIssuedDocumentsId200ApplicationJson, _super);
     function GetListOfIssuedDocumentsId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
         __metadata("design:type", Array)
     ], GetListOfIssuedDocumentsId200ApplicationJson.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], GetListOfIssuedDocumentsId200ApplicationJson.prototype, "resource", void 0);
     return GetListOfIssuedDocumentsId200ApplicationJson;
-}(SpeakeasyBase));
-export { GetListOfIssuedDocumentsId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfIssuedDocumentsId200ApplicationJson = GetListOfIssuedDocumentsId200ApplicationJson;
 var GetListOfIssuedDocumentsId401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetListOfIssuedDocumentsId401ApplicationJson, _super);
     function GetListOfIssuedDocumentsId401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], GetListOfIssuedDocumentsId401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_description" }),
         __metadata("design:type", String)
     ], GetListOfIssuedDocumentsId401ApplicationJson.prototype, "errorDescription", void 0);
     return GetListOfIssuedDocumentsId401ApplicationJson;
-}(SpeakeasyBase));
-export { GetListOfIssuedDocumentsId401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfIssuedDocumentsId401ApplicationJson = GetListOfIssuedDocumentsId401ApplicationJson;
 var GetListOfIssuedDocumentsIdResponse = /** @class */ (function (_super) {
     __extends(GetListOfIssuedDocumentsIdResponse, _super);
     function GetListOfIssuedDocumentsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListOfIssuedDocumentsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListOfIssuedDocumentsId200ApplicationJson)
-    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId200ApplicationJsonObject", void 0);
+    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListOfIssuedDocumentsId401ApplicationJson)
-    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId401ApplicationJsonObject", void 0);
+    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId500ApplicationJsonOneOf", void 0);
+    ], GetListOfIssuedDocumentsIdResponse.prototype, "getListOfIssuedDocumentsId500ApplicationJSONOneOf", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListOfIssuedDocumentsIdResponse.prototype, "statusCode", void 0);
     return GetListOfIssuedDocumentsIdResponse;
-}(SpeakeasyBase));
-export { GetListOfIssuedDocumentsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfIssuedDocumentsIdResponse = GetListOfIssuedDocumentsIdResponse;

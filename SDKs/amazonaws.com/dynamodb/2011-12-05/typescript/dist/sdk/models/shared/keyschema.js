@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeySchemaElement } from "./keyschemaelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeySchema = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyschemaelement_1 = require("./keyschemaelement");
 // KeySchema
 /**
  * The KeySchema identifies the primary key as a one attribute primary key (hash) or a composite two attribute (hash-and-range) primary key. Single attribute primary keys have one index value: a <code>HashKeyElement</code>. A composite hash-and-range primary key contains two attribute values: a <code>HashKeyElement</code> and a <code>RangeKeyElement</code>.
@@ -34,13 +37,13 @@ var KeySchema = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HashKeyElement" }),
-        __metadata("design:type", KeySchemaElement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HashKeyElement" }),
+        __metadata("design:type", keyschemaelement_1.KeySchemaElement)
     ], KeySchema.prototype, "hashKeyElement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RangeKeyElement" }),
-        __metadata("design:type", KeySchemaElement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RangeKeyElement" }),
+        __metadata("design:type", keyschemaelement_1.KeySchemaElement)
     ], KeySchema.prototype, "rangeKeyElement", void 0);
     return KeySchema;
-}(SpeakeasyBase));
-export { KeySchema };
+}(utils_1.SpeakeasyBase));
+exports.KeySchema = KeySchema;

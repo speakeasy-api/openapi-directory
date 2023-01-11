@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Version = void 0;
+var utils_1 = require("../../../internal/utils");
 var Version = /** @class */ (function (_super) {
     __extends(Version, _super);
     function Version() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codename" }),
         __metadata("design:type", String)
     ], Version.prototype, "codename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], Version.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_beta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_beta" }),
         __metadata("design:type", Boolean)
     ], Version.prototype, "isBeta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_deprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_deprecated" }),
         __metadata("design:type", Boolean)
     ], Version.prototype, "isDeprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_hidden" }),
         __metadata("design:type", Boolean)
     ], Version.prototype, "isHidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_stable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_stable" }),
         __metadata("design:type", Boolean)
     ], Version.prototype, "isStable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Version.prototype, "version", void 0);
     return Version;
-}(SpeakeasyBase));
-export { Version };
+}(utils_1.SpeakeasyBase));
+exports.Version = Version;

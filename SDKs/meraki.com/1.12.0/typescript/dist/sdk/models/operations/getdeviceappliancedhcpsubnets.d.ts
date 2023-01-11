@@ -8,5 +8,5 @@ export declare class GetDeviceApplianceDhcpSubnetsRequest extends SpeakeasyBase 
 export declare class GetDeviceApplianceDhcpSubnetsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceApplianceDhcpSubnets200ApplicationJsonObject?: Map<string, any>;
+    getDeviceApplianceDhcpSubnets200ApplicationJSONObject?: Record<string, any>;
 }

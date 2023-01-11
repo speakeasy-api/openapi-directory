@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlbumObject } from "./albumobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumsObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var albumobject_1 = require("./albumobject");
 var AlbumsObject = /** @class */ (function (_super) {
     __extends(AlbumsObject, _super);
     function AlbumsObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=albums", elemType: AlbumObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=albums", elemType: albumobject_1.AlbumObject }),
         __metadata("design:type", Array)
     ], AlbumsObject.prototype, "albums", void 0);
     return AlbumsObject;
-}(SpeakeasyBase));
-export { AlbumsObject };
+}(utils_1.SpeakeasyBase));
+exports.AlbumsObject = AlbumsObject;

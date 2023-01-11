@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworksIdResponse = exports.GetNetworksIdRequest = exports.GetNetworksId200ApplicationJson = exports.GetNetworksId200ApplicationJsonNetwork = exports.GetNetworksId200ApplicationJsonNetworkSubnets = exports.GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum = exports.GetNetworksId200ApplicationJsonNetworkRoutes = exports.GetNetworksId200ApplicationJsonNetworkProtection = exports.GetNetworksIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworksIdPathParams = /** @class */ (function (_super) {
     __extends(GetNetworksIdPathParams, _super);
     function GetNetworksIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetNetworksIdPathParams.prototype, "id", void 0);
     return GetNetworksIdPathParams;
-}(SpeakeasyBase));
-export { GetNetworksIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdPathParams = GetNetworksIdPathParams;
 // GetNetworksId200ApplicationJsonNetworkProtection
 /**
  * Protection configuration for the Network
@@ -45,147 +48,147 @@ var GetNetworksId200ApplicationJsonNetworkProtection = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], GetNetworksId200ApplicationJsonNetworkProtection.prototype, "delete", void 0);
     return GetNetworksId200ApplicationJsonNetworkProtection;
-}(SpeakeasyBase));
-export { GetNetworksId200ApplicationJsonNetworkProtection };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksId200ApplicationJsonNetworkProtection = GetNetworksId200ApplicationJsonNetworkProtection;
 var GetNetworksId200ApplicationJsonNetworkRoutes = /** @class */ (function (_super) {
     __extends(GetNetworksId200ApplicationJsonNetworkRoutes, _super);
     function GetNetworksId200ApplicationJsonNetworkRoutes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkRoutes.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkRoutes.prototype, "gateway", void 0);
     return GetNetworksId200ApplicationJsonNetworkRoutes;
-}(SpeakeasyBase));
-export { GetNetworksId200ApplicationJsonNetworkRoutes };
-export var GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksId200ApplicationJsonNetworkRoutes = GetNetworksId200ApplicationJsonNetworkRoutes;
+var GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum;
 (function (GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum) {
     GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum["Cloud"] = "cloud";
     GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum["Server"] = "server";
     GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum["Vswitch"] = "vswitch";
-})(GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum || (GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum = {}));
+})(GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum = exports.GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum || (exports.GetNetworksId200ApplicationJsonNetworkSubnetsTypeEnum = {}));
 var GetNetworksId200ApplicationJsonNetworkSubnets = /** @class */ (function (_super) {
     __extends(GetNetworksId200ApplicationJsonNetworkSubnets, _super);
     function GetNetworksId200ApplicationJsonNetworkSubnets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateway" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkSubnets.prototype, "gateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkSubnets.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkSubnets.prototype, "networkZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetworkSubnets.prototype, "type", void 0);
     return GetNetworksId200ApplicationJsonNetworkSubnets;
-}(SpeakeasyBase));
-export { GetNetworksId200ApplicationJsonNetworkSubnets };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksId200ApplicationJsonNetworkSubnets = GetNetworksId200ApplicationJsonNetworkSubnets;
 var GetNetworksId200ApplicationJsonNetwork = /** @class */ (function (_super) {
     __extends(GetNetworksId200ApplicationJsonNetwork, _super);
     function GetNetworksId200ApplicationJsonNetwork() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_range" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "ipRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_balancers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_balancers" }),
         __metadata("design:type", Array)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", GetNetworksId200ApplicationJsonNetworkProtection)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routes", elemType: GetNetworksId200ApplicationJsonNetworkRoutes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routes", elemType: GetNetworksId200ApplicationJsonNetworkRoutes }),
         __metadata("design:type", Array)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "routes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Array)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnets", elemType: GetNetworksId200ApplicationJsonNetworkSubnets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnets", elemType: GetNetworksId200ApplicationJsonNetworkSubnets }),
         __metadata("design:type", Array)
     ], GetNetworksId200ApplicationJsonNetwork.prototype, "subnets", void 0);
     return GetNetworksId200ApplicationJsonNetwork;
-}(SpeakeasyBase));
-export { GetNetworksId200ApplicationJsonNetwork };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksId200ApplicationJsonNetwork = GetNetworksId200ApplicationJsonNetwork;
 var GetNetworksId200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetNetworksId200ApplicationJson, _super);
     function GetNetworksId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", GetNetworksId200ApplicationJsonNetwork)
     ], GetNetworksId200ApplicationJson.prototype, "network", void 0);
     return GetNetworksId200ApplicationJson;
-}(SpeakeasyBase));
-export { GetNetworksId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksId200ApplicationJson = GetNetworksId200ApplicationJson;
 var GetNetworksIdRequest = /** @class */ (function (_super) {
     __extends(GetNetworksIdRequest, _super);
     function GetNetworksIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworksIdPathParams)
     ], GetNetworksIdRequest.prototype, "pathParams", void 0);
     return GetNetworksIdRequest;
-}(SpeakeasyBase));
-export { GetNetworksIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdRequest = GetNetworksIdRequest;
 var GetNetworksIdResponse = /** @class */ (function (_super) {
     __extends(GetNetworksIdResponse, _super);
     function GetNetworksIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworksIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetNetworksId200ApplicationJson)
-    ], GetNetworksIdResponse.prototype, "getNetworksId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworksIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetNetworksId200ApplicationJson)
+    ], GetNetworksIdResponse.prototype, "getNetworksId200ApplicationJSONObject", void 0);
     return GetNetworksIdResponse;
-}(SpeakeasyBase));
-export { GetNetworksIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdResponse = GetNetworksIdResponse;

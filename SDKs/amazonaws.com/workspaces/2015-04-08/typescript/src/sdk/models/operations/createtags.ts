@@ -48,7 +48,7 @@ export class CreateTagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createTagsResult?: Map<string, any>;
+  createTagsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FulfillmentStateEnum } from "./fulfillmentstateenum";
-import { MessageFormatTypeEnum } from "./messageformattypeenum";
-import { DialogActionTypeEnum } from "./dialogactiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DialogAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var fulfillmentstateenum_1 = require("./fulfillmentstateenum");
+var messageformattypeenum_1 = require("./messageformattypeenum");
+var dialogactiontypeenum_1 = require("./dialogactiontypeenum");
 // DialogAction
 /**
  * Describes the next action that the bot should take in its interaction with the user and provides information about the context in which the action takes place. Use the <code>DialogAction</code> data type to set the interaction to a specific state, or to return the interaction to a previous state.
@@ -36,33 +39,33 @@ var DialogAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentState" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "fulfillmentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageFormat" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "messageFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotToElicit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotToElicit" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "slotToElicit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slots" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slots" }),
+        __metadata("design:type", Object)
     ], DialogAction.prototype, "slots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DialogAction.prototype, "type", void 0);
     return DialogAction;
-}(SpeakeasyBase));
-export { DialogAction };
+}(utils_1.SpeakeasyBase));
+exports.DialogAction = DialogAction;

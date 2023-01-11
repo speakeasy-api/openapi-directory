@@ -7,7 +7,7 @@ export declare class GetPodcastRecommendationsQueryParams extends SpeakeasyBase 
     safeMode?: number;
 }
 export declare class GetPodcastRecommendationsHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetPodcastRecommendationsRequest extends SpeakeasyBase {
     pathParams: GetPodcastRecommendationsPathParams;
@@ -17,6 +17,6 @@ export declare class GetPodcastRecommendationsRequest extends SpeakeasyBase {
 export declare class GetPodcastRecommendationsResponse extends SpeakeasyBase {
     contentType: string;
     getPodcastRecommendationsResponse?: shared.GetPodcastRecommendationsResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

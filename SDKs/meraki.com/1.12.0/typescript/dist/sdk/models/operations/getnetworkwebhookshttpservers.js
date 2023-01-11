@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWebhooksHttpServersResponse = exports.GetNetworkWebhooksHttpServersRequest = exports.GetNetworkWebhooksHttpServersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWebhooksHttpServersPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksHttpServersPathParams, _super);
     function GetNetworkWebhooksHttpServersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWebhooksHttpServersPathParams.prototype, "networkId", void 0);
     return GetNetworkWebhooksHttpServersPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksHttpServersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksHttpServersPathParams = GetNetworkWebhooksHttpServersPathParams;
 var GetNetworkWebhooksHttpServersRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksHttpServersRequest, _super);
     function GetNetworkWebhooksHttpServersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWebhooksHttpServersPathParams)
     ], GetNetworkWebhooksHttpServersRequest.prototype, "pathParams", void 0);
     return GetNetworkWebhooksHttpServersRequest;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksHttpServersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksHttpServersRequest = GetNetworkWebhooksHttpServersRequest;
 var GetNetworkWebhooksHttpServersResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksHttpServersResponse, _super);
     function GetNetworkWebhooksHttpServersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWebhooksHttpServersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWebhooksHttpServersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWebhooksHttpServersResponse.prototype, "getNetworkWebhooksHttpServers200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWebhooksHttpServersResponse.prototype, "getNetworkWebhooksHttpServers200ApplicationJSONObject", void 0);
     return GetNetworkWebhooksHttpServersResponse;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksHttpServersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksHttpServersResponse = GetNetworkWebhooksHttpServersResponse;

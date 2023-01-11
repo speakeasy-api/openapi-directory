@@ -11,5 +11,5 @@ export declare class PostQueryRequest extends SpeakeasyBase {
 export declare class PostQueryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postQueryDefaultApplicationJsonString?: string;
+    postQueryDefaultApplicationJSONString?: string;
 }

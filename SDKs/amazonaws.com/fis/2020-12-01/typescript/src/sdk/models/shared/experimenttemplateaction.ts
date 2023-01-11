@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// ExperimentTemplateAction
-/** 
- * Describes an action for an experiment template.
-**/
 export class ExperimentTemplateAction extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actionId" })
   actionId?: string;
@@ -14,11 +10,11 @@ export class ExperimentTemplateAction extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=startAfter" })
   startAfter?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=targets" })
-  targets?: Map<string, string>;
+  targets?: Record<string, string>;
 }

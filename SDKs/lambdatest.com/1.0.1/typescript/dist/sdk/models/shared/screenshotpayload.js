@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,73 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Browsers } from "./browsers";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScreenshotPayload = exports.ScreenshotPayloadConfigs = void 0;
+var utils_1 = require("../../../internal/utils");
+var browsers_1 = require("./browsers");
 var ScreenshotPayloadConfigs = /** @class */ (function (_super) {
     __extends(ScreenshotPayloadConfigs, _super);
     function ScreenshotPayloadConfigs() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=macos mojave" }),
-        __metadata("design:type", Browsers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=macos mojave" }),
+        __metadata("design:type", browsers_1.Browsers)
     ], ScreenshotPayloadConfigs.prototype, "macosMojave", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windows 10" }),
-        __metadata("design:type", Browsers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windows 10" }),
+        __metadata("design:type", browsers_1.Browsers)
     ], ScreenshotPayloadConfigs.prototype, "windows10", void 0);
     return ScreenshotPayloadConfigs;
-}(SpeakeasyBase));
-export { ScreenshotPayloadConfigs };
+}(utils_1.SpeakeasyBase));
+exports.ScreenshotPayloadConfigs = ScreenshotPayloadConfigs;
 var ScreenshotPayload = /** @class */ (function (_super) {
     __extends(ScreenshotPayload, _super);
     function ScreenshotPayload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback_url" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "callbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configs" }),
         __metadata("design:type", ScreenshotPayloadConfigs)
     ], ScreenshotPayload.prototype, "configs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defer_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defer_time" }),
         __metadata("design:type", Number)
     ], ScreenshotPayload.prototype, "deferTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", Boolean)
     ], ScreenshotPayload.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_res" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_res" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "macRes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tunnel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tunnel" }),
         __metadata("design:type", Boolean)
     ], ScreenshotPayload.prototype, "tunnel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tunnel_identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tunnel_identifier" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "tunnelIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=win_res" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_res" }),
         __metadata("design:type", String)
     ], ScreenshotPayload.prototype, "winRes", void 0);
     return ScreenshotPayload;
-}(SpeakeasyBase));
-export { ScreenshotPayload };
+}(utils_1.SpeakeasyBase));
+exports.ScreenshotPayload = ScreenshotPayload;

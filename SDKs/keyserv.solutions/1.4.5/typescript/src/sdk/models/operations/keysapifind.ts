@@ -19,7 +19,7 @@ export class KeysApiFindResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  keysApiFind200ApplicationJsonOneOf?: any;
+  keysApiFind200ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

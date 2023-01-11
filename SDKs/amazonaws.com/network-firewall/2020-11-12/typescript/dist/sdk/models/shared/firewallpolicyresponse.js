@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceStatusEnum } from "./resourcestatusenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirewallPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcestatusenum_1 = require("./resourcestatusenum");
+var tag_1 = require("./tag");
 // FirewallPolicyResponse
 /**
  * The high-level properties of a firewall policy. This, along with the <a>FirewallPolicy</a>, define the policy. You can retrieve all objects for a firewall policy by calling <a>DescribeFirewallPolicy</a>.
@@ -35,29 +38,29 @@ var FirewallPolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], FirewallPolicyResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyArn" }),
         __metadata("design:type", String)
     ], FirewallPolicyResponse.prototype, "firewallPolicyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyId" }),
         __metadata("design:type", String)
     ], FirewallPolicyResponse.prototype, "firewallPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyName" }),
         __metadata("design:type", String)
     ], FirewallPolicyResponse.prototype, "firewallPolicyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyStatus" }),
         __metadata("design:type", String)
     ], FirewallPolicyResponse.prototype, "firewallPolicyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], FirewallPolicyResponse.prototype, "tags", void 0);
     return FirewallPolicyResponse;
-}(SpeakeasyBase));
-export { FirewallPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.FirewallPolicyResponse = FirewallPolicyResponse;

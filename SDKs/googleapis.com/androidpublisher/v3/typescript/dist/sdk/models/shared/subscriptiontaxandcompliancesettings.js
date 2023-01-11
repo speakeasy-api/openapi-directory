@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionalTaxRateInfo } from "./regionaltaxrateinfo";
-export var SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionTaxAndComplianceSettings = exports.SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionaltaxrateinfo_1 = require("./regionaltaxrateinfo");
+var SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
 (function (SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum) {
     SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightTypeUnspecified"] = "WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED";
     SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightDigitalContent"] = "WITHDRAWAL_RIGHT_DIGITAL_CONTENT";
     SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightService"] = "WITHDRAWAL_RIGHT_SERVICE";
-})(SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum || (SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = {}));
+})(SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = exports.SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum || (exports.SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = {}));
 // SubscriptionTaxAndComplianceSettings
 /**
  * Details about taxation, Google Play policy and legal compliance for subscription products.
@@ -40,13 +43,13 @@ var SubscriptionTaxAndComplianceSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eeaWithdrawalRightType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eeaWithdrawalRightType" }),
         __metadata("design:type", String)
     ], SubscriptionTaxAndComplianceSettings.prototype, "eeaWithdrawalRightType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxRateInfoByRegionCode", elemType: RegionalTaxRateInfo }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxRateInfoByRegionCode", elemType: regionaltaxrateinfo_1.RegionalTaxRateInfo }),
+        __metadata("design:type", Object)
     ], SubscriptionTaxAndComplianceSettings.prototype, "taxRateInfoByRegionCode", void 0);
     return SubscriptionTaxAndComplianceSettings;
-}(SpeakeasyBase));
-export { SubscriptionTaxAndComplianceSettings };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionTaxAndComplianceSettings = SubscriptionTaxAndComplianceSettings;

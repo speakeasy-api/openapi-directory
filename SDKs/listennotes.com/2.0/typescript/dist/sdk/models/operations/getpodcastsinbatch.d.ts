@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetPodcastsInBatchHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetPodcastsInBatchRequest extends SpeakeasyBase {
     headers: GetPodcastsInBatchHeaders;
@@ -10,6 +10,6 @@ export declare class GetPodcastsInBatchRequest extends SpeakeasyBase {
 export declare class GetPodcastsInBatchResponse extends SpeakeasyBase {
     contentType: string;
     getPodcastsInBatchResponse?: shared.GetPodcastsInBatchResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

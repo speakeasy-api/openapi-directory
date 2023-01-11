@@ -15,7 +15,7 @@ export declare class GetRegistryCatalogDataHeaders extends SpeakeasyBase {
 }
 export declare class GetRegistryCatalogDataRequest extends SpeakeasyBase {
     headers: GetRegistryCatalogDataHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetRegistryCatalogDataResponse extends SpeakeasyBase {
     contentType: string;

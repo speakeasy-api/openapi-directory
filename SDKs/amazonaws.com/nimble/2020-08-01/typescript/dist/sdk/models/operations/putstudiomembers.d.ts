@@ -27,7 +27,7 @@ export declare class PutStudioMembersResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
     internalServerErrorException?: any;
-    putStudioMembersResponse?: Map<string, any>;
+    putStudioMembersResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;
     statusCode: number;

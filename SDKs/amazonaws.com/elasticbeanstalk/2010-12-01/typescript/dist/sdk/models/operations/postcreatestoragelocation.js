@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateStorageLocationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateStorageLocationResponse = exports.PostCreateStorageLocationRequest = exports.PostCreateStorageLocationHeaders = exports.PostCreateStorageLocationQueryParams = exports.PostCreateStorageLocationVersionEnum = exports.PostCreateStorageLocationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateStorageLocationActionEnum;
 (function (PostCreateStorageLocationActionEnum) {
     PostCreateStorageLocationActionEnum["CreateStorageLocation"] = "CreateStorageLocation";
-})(PostCreateStorageLocationActionEnum || (PostCreateStorageLocationActionEnum = {}));
-export var PostCreateStorageLocationVersionEnum;
+})(PostCreateStorageLocationActionEnum = exports.PostCreateStorageLocationActionEnum || (exports.PostCreateStorageLocationActionEnum = {}));
+var PostCreateStorageLocationVersionEnum;
 (function (PostCreateStorageLocationVersionEnum) {
     PostCreateStorageLocationVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostCreateStorageLocationVersionEnum || (PostCreateStorageLocationVersionEnum = {}));
+})(PostCreateStorageLocationVersionEnum = exports.PostCreateStorageLocationVersionEnum || (exports.PostCreateStorageLocationVersionEnum = {}));
 var PostCreateStorageLocationQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateStorageLocationQueryParams, _super);
     function PostCreateStorageLocationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationQueryParams.prototype, "version", void 0);
     return PostCreateStorageLocationQueryParams;
-}(SpeakeasyBase));
-export { PostCreateStorageLocationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStorageLocationQueryParams = PostCreateStorageLocationQueryParams;
 var PostCreateStorageLocationHeaders = /** @class */ (function (_super) {
     __extends(PostCreateStorageLocationHeaders, _super);
     function PostCreateStorageLocationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateStorageLocationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateStorageLocationHeaders;
-}(SpeakeasyBase));
-export { PostCreateStorageLocationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStorageLocationHeaders = PostCreateStorageLocationHeaders;
 var PostCreateStorageLocationRequest = /** @class */ (function (_super) {
     __extends(PostCreateStorageLocationRequest, _super);
     function PostCreateStorageLocationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateStorageLocationQueryParams)
     ], PostCreateStorageLocationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateStorageLocationHeaders)
     ], PostCreateStorageLocationRequest.prototype, "headers", void 0);
     return PostCreateStorageLocationRequest;
-}(SpeakeasyBase));
-export { PostCreateStorageLocationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStorageLocationRequest = PostCreateStorageLocationRequest;
 var PostCreateStorageLocationResponse = /** @class */ (function (_super) {
     __extends(PostCreateStorageLocationResponse, _super);
     function PostCreateStorageLocationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateStorageLocationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateStorageLocationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateStorageLocationResponse.prototype, "statusCode", void 0);
     return PostCreateStorageLocationResponse;
-}(SpeakeasyBase));
-export { PostCreateStorageLocationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateStorageLocationResponse = PostCreateStorageLocationResponse;

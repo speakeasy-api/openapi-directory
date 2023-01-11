@@ -13,6 +13,10 @@ export enum TimePeriodResponsePeriodEnum {
 }
 
 
+// TimePeriodResponse
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class TimePeriodResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=end_on" })
   endOn?: string;

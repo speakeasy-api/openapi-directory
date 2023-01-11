@@ -17,7 +17,7 @@ export declare class Site extends SpeakeasyBase {
     countRacks?: number;
     countVlans?: number;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     facility?: string;
     id?: number;

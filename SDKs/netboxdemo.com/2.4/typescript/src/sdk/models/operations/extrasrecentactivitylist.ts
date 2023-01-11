@@ -47,5 +47,5 @@ export class ExtrasRecentActivityListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasRecentActivityList200ApplicationJsonObject?: ExtrasRecentActivityList200ApplicationJson;
+  extrasRecentActivityList200ApplicationJSONObject?: ExtrasRecentActivityList200ApplicationJson;
 }

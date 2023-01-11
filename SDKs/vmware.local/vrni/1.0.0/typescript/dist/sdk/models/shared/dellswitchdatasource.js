@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PasswordCredentials } from "./passwordcredentials";
-import { DataSourceTypeEnum } from "./datasourcetypeenum";
-import { DellSwitchTypeEnum } from "./dellswitchtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DellSwitchDataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var passwordcredentials_1 = require("./passwordcredentials");
+var datasourcetypeenum_1 = require("./datasourcetypeenum");
+var dellswitchtypeenum_1 = require("./dellswitchtypeenum");
 var DellSwitchDataSource = /** @class */ (function (_super) {
     __extends(DellSwitchDataSource, _super);
     function DellSwitchDataSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
-        __metadata("design:type", PasswordCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
+        __metadata("design:type", passwordcredentials_1.PasswordCredentials)
     ], DellSwitchDataSource.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], DellSwitchDataSource.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fqdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fqdn" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "fqdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "nickname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy_id" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "proxyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switch_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switch_type" }),
         __metadata("design:type", String)
     ], DellSwitchDataSource.prototype, "switchType", void 0);
     return DellSwitchDataSource;
-}(SpeakeasyBase));
-export { DellSwitchDataSource };
+}(utils_1.SpeakeasyBase));
+exports.DellSwitchDataSource = DellSwitchDataSource;

@@ -17,7 +17,7 @@ export class DeletePodcastByIdQueryParams extends SpeakeasyBase {
 
 export class DeletePodcastByIdHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -41,7 +41,7 @@ export class DeletePodcastByIdResponse extends SpeakeasyBase {
   deletePodcastResponse?: shared.DeletePodcastResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

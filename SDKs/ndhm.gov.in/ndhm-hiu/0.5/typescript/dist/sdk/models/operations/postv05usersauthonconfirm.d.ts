@@ -2,11 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05UsersAuthOnConfirmHeaders extends SpeakeasyBase {
     authorization: string;
-    xHipId: string;
-    xHiuId: string;
+    xHIPID: string;
+    xHIUID: string;
 }
 export declare class PostV05UsersAuthOnConfirmRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthConfirmResponse?: shared.PatientAuthConfirmResponse;
 }
 export declare class PostV05UsersAuthOnConfirmRequest extends SpeakeasyBase {

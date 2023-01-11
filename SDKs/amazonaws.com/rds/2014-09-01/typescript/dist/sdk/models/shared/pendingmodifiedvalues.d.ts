@@ -7,7 +7,7 @@ export declare class PendingModifiedValues extends SpeakeasyBase {
     engineVersion?: string;
     iops?: number;
     masterUserPassword?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     port?: number;
     storageType?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportFailure } from "./reportfailure";
-export var ReportStatusFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportStatus = exports.ReportStatusStateEnum = exports.ReportStatusFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportfailure_1 = require("./reportfailure");
+var ReportStatusFormatEnum;
 (function (ReportStatusFormatEnum) {
     ReportStatusFormatEnum["Csv"] = "CSV";
     ReportStatusFormatEnum["ExcelCsv"] = "EXCEL_CSV";
     ReportStatusFormatEnum["Xlsx"] = "XLSX";
-})(ReportStatusFormatEnum || (ReportStatusFormatEnum = {}));
-export var ReportStatusStateEnum;
+})(ReportStatusFormatEnum = exports.ReportStatusFormatEnum || (exports.ReportStatusFormatEnum = {}));
+var ReportStatusStateEnum;
 (function (ReportStatusStateEnum) {
     ReportStatusStateEnum["Running"] = "RUNNING";
     ReportStatusStateEnum["Done"] = "DONE";
     ReportStatusStateEnum["Failed"] = "FAILED";
-})(ReportStatusStateEnum || (ReportStatusStateEnum = {}));
+})(ReportStatusStateEnum = exports.ReportStatusStateEnum || (exports.ReportStatusStateEnum = {}));
 // ReportStatus
 /**
  * Report status.
@@ -46,21 +49,21 @@ var ReportStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failure" }),
-        __metadata("design:type", ReportFailure)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failure" }),
+        __metadata("design:type", reportfailure_1.ReportFailure)
     ], ReportStatus.prototype, "failure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finishTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finishTimeMs" }),
         __metadata("design:type", String)
     ], ReportStatus.prototype, "finishTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], ReportStatus.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ReportStatus.prototype, "state", void 0);
     return ReportStatus;
-}(SpeakeasyBase));
-export { ReportStatus };
+}(utils_1.SpeakeasyBase));
+exports.ReportStatus = ReportStatus;

@@ -11,7 +11,7 @@ export declare class ListTagsForStreamHeaders extends SpeakeasyBase {
 }
 export declare class ListTagsForStreamRequestBody extends SpeakeasyBase {
     nextToken?: string;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class ListTagsForStreamRequest extends SpeakeasyBase {

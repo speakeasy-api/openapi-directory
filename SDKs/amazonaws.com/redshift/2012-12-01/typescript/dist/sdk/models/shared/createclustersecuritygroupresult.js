@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterSecurityGroup } from "./clustersecuritygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClusterSecurityGroupResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var clustersecuritygroup_1 = require("./clustersecuritygroup");
 var CreateClusterSecurityGroupResult = /** @class */ (function (_super) {
     __extends(CreateClusterSecurityGroupResult, _super);
     function CreateClusterSecurityGroupResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClusterSecurityGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", clustersecuritygroup_1.ClusterSecurityGroup)
     ], CreateClusterSecurityGroupResult.prototype, "clusterSecurityGroup", void 0);
     return CreateClusterSecurityGroupResult;
-}(SpeakeasyBase));
-export { CreateClusterSecurityGroupResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateClusterSecurityGroupResult = CreateClusterSecurityGroupResult;

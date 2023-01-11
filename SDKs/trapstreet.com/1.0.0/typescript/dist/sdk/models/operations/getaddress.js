@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAddressResponse = exports.GetAddressRequest = exports.GetAddressPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAddressPathParams = /** @class */ (function (_super) {
     __extends(GetAddressPathParams, _super);
     function GetAddressPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=address" }),
         __metadata("design:type", String)
     ], GetAddressPathParams.prototype, "address", void 0);
     return GetAddressPathParams;
-}(SpeakeasyBase));
-export { GetAddressPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAddressPathParams = GetAddressPathParams;
 var GetAddressRequest = /** @class */ (function (_super) {
     __extends(GetAddressRequest, _super);
     function GetAddressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAddressPathParams)
     ], GetAddressRequest.prototype, "pathParams", void 0);
     return GetAddressRequest;
-}(SpeakeasyBase));
-export { GetAddressRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAddressRequest = GetAddressRequest;
 var GetAddressResponse = /** @class */ (function (_super) {
     __extends(GetAddressResponse, _super);
     function GetAddressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAddressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Object)
-    ], GetAddressResponse.prototype, "getAddress200ApplicationJsonAny", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetAddressResponse.prototype, "getAddress200ApplicationJSONAny", void 0);
     return GetAddressResponse;
-}(SpeakeasyBase));
-export { GetAddressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAddressResponse = GetAddressResponse;

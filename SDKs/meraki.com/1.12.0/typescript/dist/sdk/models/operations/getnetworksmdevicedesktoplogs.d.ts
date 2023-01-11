@@ -14,7 +14,7 @@ export declare class GetNetworkSmDeviceDesktopLogsRequest extends SpeakeasyBase 
 }
 export declare class GetNetworkSmDeviceDesktopLogsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkSmDeviceDesktopLogs200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDeviceDesktopLogs200ApplicationJSONObject?: Record<string, any>;
 }

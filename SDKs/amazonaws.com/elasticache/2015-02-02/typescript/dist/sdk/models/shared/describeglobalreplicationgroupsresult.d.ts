@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GlobalReplicationGroup } from "./globalreplicationgroup";
+import { GlobalReplicationGroupList } from "./globalreplicationgrouplist";
 export declare class DescribeGlobalReplicationGroupsResult extends SpeakeasyBase {
-    globalReplicationGroups?: GlobalReplicationGroup[];
+    globalReplicationGroups?: GlobalReplicationGroupList[];
     marker?: string;
 }

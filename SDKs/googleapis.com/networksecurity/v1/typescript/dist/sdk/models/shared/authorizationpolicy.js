@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Rule } from "./rule";
-export var AuthorizationPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizationPolicyInput = exports.AuthorizationPolicy = exports.AuthorizationPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rule_1 = require("./rule");
+var AuthorizationPolicyActionEnum;
 (function (AuthorizationPolicyActionEnum) {
     AuthorizationPolicyActionEnum["ActionUnspecified"] = "ACTION_UNSPECIFIED";
     AuthorizationPolicyActionEnum["Allow"] = "ALLOW";
     AuthorizationPolicyActionEnum["Deny"] = "DENY";
-})(AuthorizationPolicyActionEnum || (AuthorizationPolicyActionEnum = {}));
+})(AuthorizationPolicyActionEnum = exports.AuthorizationPolicyActionEnum || (exports.AuthorizationPolicyActionEnum = {}));
 // AuthorizationPolicy
 /**
  * AuthorizationPolicy is a resource that specifies how a server should authorize incoming connections. This resource in itself does not change the configuration unless it's attached to a target https proxy or endpoint config selector resource.
@@ -40,36 +43,36 @@ var AuthorizationPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], AuthorizationPolicy.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], AuthorizationPolicy.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], AuthorizationPolicy.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AuthorizationPolicy.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AuthorizationPolicy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: Rule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: rule_1.Rule }),
         __metadata("design:type", Array)
     ], AuthorizationPolicy.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], AuthorizationPolicy.prototype, "updateTime", void 0);
     return AuthorizationPolicy;
-}(SpeakeasyBase));
-export { AuthorizationPolicy };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizationPolicy = AuthorizationPolicy;
 // AuthorizationPolicyInput
 /**
  * AuthorizationPolicy is a resource that specifies how a server should authorize incoming connections. This resource in itself does not change the configuration unless it's attached to a target https proxy or endpoint config selector resource.
@@ -80,25 +83,25 @@ var AuthorizationPolicyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], AuthorizationPolicyInput.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], AuthorizationPolicyInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], AuthorizationPolicyInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AuthorizationPolicyInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: Rule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: rule_1.Rule }),
         __metadata("design:type", Array)
     ], AuthorizationPolicyInput.prototype, "rules", void 0);
     return AuthorizationPolicyInput;
-}(SpeakeasyBase));
-export { AuthorizationPolicyInput };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizationPolicyInput = AuthorizationPolicyInput;

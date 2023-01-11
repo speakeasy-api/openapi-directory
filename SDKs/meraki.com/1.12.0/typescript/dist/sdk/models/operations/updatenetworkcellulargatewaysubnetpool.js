@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkCellularGatewaySubnetPoolResponse = exports.UpdateNetworkCellularGatewaySubnetPoolRequest = exports.UpdateNetworkCellularGatewaySubnetPoolRequestBody = exports.UpdateNetworkCellularGatewaySubnetPoolPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkCellularGatewaySubnetPoolPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewaySubnetPoolPathParams, _super);
     function UpdateNetworkCellularGatewaySubnetPoolPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewaySubnetPoolPathParams.prototype, "networkId", void 0);
     return UpdateNetworkCellularGatewaySubnetPoolPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewaySubnetPoolPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewaySubnetPoolPathParams = UpdateNetworkCellularGatewaySubnetPoolPathParams;
 var UpdateNetworkCellularGatewaySubnetPoolRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewaySubnetPoolRequestBody, _super);
     function UpdateNetworkCellularGatewaySubnetPoolRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewaySubnetPoolRequestBody.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mask" }),
         __metadata("design:type", Number)
     ], UpdateNetworkCellularGatewaySubnetPoolRequestBody.prototype, "mask", void 0);
     return UpdateNetworkCellularGatewaySubnetPoolRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewaySubnetPoolRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewaySubnetPoolRequestBody = UpdateNetworkCellularGatewaySubnetPoolRequestBody;
 var UpdateNetworkCellularGatewaySubnetPoolRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewaySubnetPoolRequest, _super);
     function UpdateNetworkCellularGatewaySubnetPoolRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkCellularGatewaySubnetPoolPathParams)
     ], UpdateNetworkCellularGatewaySubnetPoolRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkCellularGatewaySubnetPoolRequestBody)
     ], UpdateNetworkCellularGatewaySubnetPoolRequest.prototype, "request", void 0);
     return UpdateNetworkCellularGatewaySubnetPoolRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewaySubnetPoolRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewaySubnetPoolRequest = UpdateNetworkCellularGatewaySubnetPoolRequest;
 var UpdateNetworkCellularGatewaySubnetPoolResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewaySubnetPoolResponse, _super);
     function UpdateNetworkCellularGatewaySubnetPoolResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewaySubnetPoolResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkCellularGatewaySubnetPoolResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkCellularGatewaySubnetPoolResponse.prototype, "updateNetworkCellularGatewaySubnetPool200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkCellularGatewaySubnetPoolResponse.prototype, "updateNetworkCellularGatewaySubnetPool200ApplicationJSONObject", void 0);
     return UpdateNetworkCellularGatewaySubnetPoolResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewaySubnetPoolResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewaySubnetPoolResponse = UpdateNetworkCellularGatewaySubnetPoolResponse;

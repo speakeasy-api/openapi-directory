@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PersonalNameGenderedOutLikelyGenderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PersonalNameGenderedOut = exports.PersonalNameGenderedOutLikelyGenderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PersonalNameGenderedOutLikelyGenderEnum;
 (function (PersonalNameGenderedOutLikelyGenderEnum) {
     PersonalNameGenderedOutLikelyGenderEnum["Male"] = "male";
     PersonalNameGenderedOutLikelyGenderEnum["Female"] = "female";
     PersonalNameGenderedOutLikelyGenderEnum["Unknown"] = "unknown";
-})(PersonalNameGenderedOutLikelyGenderEnum || (PersonalNameGenderedOutLikelyGenderEnum = {}));
+})(PersonalNameGenderedOutLikelyGenderEnum = exports.PersonalNameGenderedOutLikelyGenderEnum || (exports.PersonalNameGenderedOutLikelyGenderEnum = {}));
 // PersonalNameGenderedOut
 /**
  * Classified genderized names
@@ -39,33 +42,33 @@ var PersonalNameGenderedOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genderScale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genderScale" }),
         __metadata("design:type", Number)
     ], PersonalNameGenderedOut.prototype, "genderScale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PersonalNameGenderedOut.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likelyGender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likelyGender" }),
         __metadata("design:type", String)
     ], PersonalNameGenderedOut.prototype, "likelyGender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PersonalNameGenderedOut.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityCalibrated" }),
         __metadata("design:type", Number)
     ], PersonalNameGenderedOut.prototype, "probabilityCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], PersonalNameGenderedOut.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], PersonalNameGenderedOut.prototype, "script", void 0);
     return PersonalNameGenderedOut;
-}(SpeakeasyBase));
-export { PersonalNameGenderedOut };
+}(utils_1.SpeakeasyBase));
+exports.PersonalNameGenderedOut = PersonalNameGenderedOut;

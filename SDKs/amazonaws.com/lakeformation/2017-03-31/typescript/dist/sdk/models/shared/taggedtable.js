@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LfTagPair } from "./lftagpair";
-import { ColumnLfTag } from "./columnlftag";
-import { TableResource } from "./tableresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaggedTable = void 0;
+var utils_1 = require("../../../internal/utils");
+var lftagpair_1 = require("./lftagpair");
+var columnlftag_1 = require("./columnlftag");
+var tableresource_1 = require("./tableresource");
 // TaggedTable
 /**
  * A structure describing a table resource with tags.
@@ -36,21 +39,21 @@ var TaggedTable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTagOnDatabase", elemType: LfTagPair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTagOnDatabase", elemType: lftagpair_1.LfTagPair }),
         __metadata("design:type", Array)
     ], TaggedTable.prototype, "lfTagOnDatabase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTagsOnColumns", elemType: ColumnLfTag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTagsOnColumns", elemType: columnlftag_1.ColumnLfTag }),
         __metadata("design:type", Array)
     ], TaggedTable.prototype, "lfTagsOnColumns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTagsOnTable", elemType: LfTagPair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTagsOnTable", elemType: lftagpair_1.LfTagPair }),
         __metadata("design:type", Array)
     ], TaggedTable.prototype, "lfTagsOnTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Table" }),
-        __metadata("design:type", TableResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Table" }),
+        __metadata("design:type", tableresource_1.TableResource)
     ], TaggedTable.prototype, "table", void 0);
     return TaggedTable;
-}(SpeakeasyBase));
-export { TaggedTable };
+}(utils_1.SpeakeasyBase));
+exports.TaggedTable = TaggedTable;

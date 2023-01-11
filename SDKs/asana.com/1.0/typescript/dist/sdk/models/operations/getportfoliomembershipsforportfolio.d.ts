@@ -21,5 +21,5 @@ export declare class GetPortfolioMembershipsForPortfolioResponse extends Speakea
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getPortfolioMembershipsForPortfolio200ApplicationJsonObject?: GetPortfolioMembershipsForPortfolio200ApplicationJson;
+    getPortfolioMembershipsForPortfolio200ApplicationJSONObject?: GetPortfolioMembershipsForPortfolio200ApplicationJson;
 }

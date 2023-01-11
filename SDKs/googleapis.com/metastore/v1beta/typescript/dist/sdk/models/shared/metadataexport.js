@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetadataExportDatabaseDumpTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetadataExport = exports.MetadataExportStateEnum = exports.MetadataExportDatabaseDumpTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetadataExportDatabaseDumpTypeEnum;
 (function (MetadataExportDatabaseDumpTypeEnum) {
     MetadataExportDatabaseDumpTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     MetadataExportDatabaseDumpTypeEnum["Mysql"] = "MYSQL";
     MetadataExportDatabaseDumpTypeEnum["Avro"] = "AVRO";
-})(MetadataExportDatabaseDumpTypeEnum || (MetadataExportDatabaseDumpTypeEnum = {}));
-export var MetadataExportStateEnum;
+})(MetadataExportDatabaseDumpTypeEnum = exports.MetadataExportDatabaseDumpTypeEnum || (exports.MetadataExportDatabaseDumpTypeEnum = {}));
+var MetadataExportStateEnum;
 (function (MetadataExportStateEnum) {
     MetadataExportStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MetadataExportStateEnum["Running"] = "RUNNING";
     MetadataExportStateEnum["Succeeded"] = "SUCCEEDED";
     MetadataExportStateEnum["Failed"] = "FAILED";
     MetadataExportStateEnum["Cancelled"] = "CANCELLED";
-})(MetadataExportStateEnum || (MetadataExportStateEnum = {}));
+})(MetadataExportStateEnum = exports.MetadataExportStateEnum || (exports.MetadataExportStateEnum = {}));
 // MetadataExport
 /**
  * The details of a metadata export operation.
@@ -47,25 +50,25 @@ var MetadataExport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseDumpType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseDumpType" }),
         __metadata("design:type", String)
     ], MetadataExport.prototype, "databaseDumpType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationGcsUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationGcsUri" }),
         __metadata("design:type", String)
     ], MetadataExport.prototype, "destinationGcsUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], MetadataExport.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], MetadataExport.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MetadataExport.prototype, "state", void 0);
     return MetadataExport;
-}(SpeakeasyBase));
-export { MetadataExport };
+}(utils_1.SpeakeasyBase));
+exports.MetadataExport = MetadataExport;

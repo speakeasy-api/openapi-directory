@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCloneReceiptRuleSetRequest, GetCloneReceiptRuleSetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,22 +34,22 @@ const sdk = new SDK(WithSecurity(
 const req: GetCloneReceiptRuleSetRequest = {
   queryParams: {
     action: "CloneReceiptRuleSet",
-    originalRuleSetName: "mollitia",
-    ruleSetName: "sequi",
+    originalRuleSetName: "voluptas",
+    ruleSetName: "culpa",
     version: "2010-12-01",
   },
   headers: {
-    xAmzAlgorithm: "atque",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "voluptatem",
-    xAmzDate: "ea",
-    xAmzSecurityToken: "in",
-    xAmzSignature: "ut",
-    xAmzSignedHeaders: "sit",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
+    xAmzDate: "voluptas",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getCloneReceiptRuleSet(req).then((res: GetCloneReceiptRuleSetResponse | AxiosError) => {
+sdk.getCloneReceiptRuleSet(req).then((res: GetCloneReceiptRuleSetResponse | AxiosError) => {
    // handle response
 });
 ```

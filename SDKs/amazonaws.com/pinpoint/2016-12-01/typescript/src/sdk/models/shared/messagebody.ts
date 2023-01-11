@@ -11,5 +11,5 @@ export class MessageBody extends SpeakeasyBase {
   message?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RequestID" })
-  requestId?: string;
+  requestID?: string;
 }

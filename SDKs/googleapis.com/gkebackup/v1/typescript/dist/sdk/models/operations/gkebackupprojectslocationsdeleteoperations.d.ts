@@ -27,6 +27,6 @@ export declare class GkebackupProjectsLocationsDeleteOperationsRequest extends S
 }
 export declare class GkebackupProjectsLocationsDeleteOperationsResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

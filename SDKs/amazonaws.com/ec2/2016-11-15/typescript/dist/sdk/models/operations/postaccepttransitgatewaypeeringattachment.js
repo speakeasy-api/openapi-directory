@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAcceptTransitGatewayPeeringAttachmentActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAcceptTransitGatewayPeeringAttachmentResponse = exports.PostAcceptTransitGatewayPeeringAttachmentRequest = exports.PostAcceptTransitGatewayPeeringAttachmentHeaders = exports.PostAcceptTransitGatewayPeeringAttachmentQueryParams = exports.PostAcceptTransitGatewayPeeringAttachmentVersionEnum = exports.PostAcceptTransitGatewayPeeringAttachmentActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAcceptTransitGatewayPeeringAttachmentActionEnum;
 (function (PostAcceptTransitGatewayPeeringAttachmentActionEnum) {
     PostAcceptTransitGatewayPeeringAttachmentActionEnum["AcceptTransitGatewayPeeringAttachment"] = "AcceptTransitGatewayPeeringAttachment";
-})(PostAcceptTransitGatewayPeeringAttachmentActionEnum || (PostAcceptTransitGatewayPeeringAttachmentActionEnum = {}));
-export var PostAcceptTransitGatewayPeeringAttachmentVersionEnum;
+})(PostAcceptTransitGatewayPeeringAttachmentActionEnum = exports.PostAcceptTransitGatewayPeeringAttachmentActionEnum || (exports.PostAcceptTransitGatewayPeeringAttachmentActionEnum = {}));
+var PostAcceptTransitGatewayPeeringAttachmentVersionEnum;
 (function (PostAcceptTransitGatewayPeeringAttachmentVersionEnum) {
     PostAcceptTransitGatewayPeeringAttachmentVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostAcceptTransitGatewayPeeringAttachmentVersionEnum || (PostAcceptTransitGatewayPeeringAttachmentVersionEnum = {}));
+})(PostAcceptTransitGatewayPeeringAttachmentVersionEnum = exports.PostAcceptTransitGatewayPeeringAttachmentVersionEnum || (exports.PostAcceptTransitGatewayPeeringAttachmentVersionEnum = {}));
 var PostAcceptTransitGatewayPeeringAttachmentQueryParams = /** @class */ (function (_super) {
     __extends(PostAcceptTransitGatewayPeeringAttachmentQueryParams, _super);
     function PostAcceptTransitGatewayPeeringAttachmentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentQueryParams.prototype, "version", void 0);
     return PostAcceptTransitGatewayPeeringAttachmentQueryParams;
-}(SpeakeasyBase));
-export { PostAcceptTransitGatewayPeeringAttachmentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAcceptTransitGatewayPeeringAttachmentQueryParams = PostAcceptTransitGatewayPeeringAttachmentQueryParams;
 var PostAcceptTransitGatewayPeeringAttachmentHeaders = /** @class */ (function (_super) {
     __extends(PostAcceptTransitGatewayPeeringAttachmentHeaders, _super);
     function PostAcceptTransitGatewayPeeringAttachmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAcceptTransitGatewayPeeringAttachmentHeaders;
-}(SpeakeasyBase));
-export { PostAcceptTransitGatewayPeeringAttachmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAcceptTransitGatewayPeeringAttachmentHeaders = PostAcceptTransitGatewayPeeringAttachmentHeaders;
 var PostAcceptTransitGatewayPeeringAttachmentRequest = /** @class */ (function (_super) {
     __extends(PostAcceptTransitGatewayPeeringAttachmentRequest, _super);
     function PostAcceptTransitGatewayPeeringAttachmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAcceptTransitGatewayPeeringAttachmentQueryParams)
     ], PostAcceptTransitGatewayPeeringAttachmentRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAcceptTransitGatewayPeeringAttachmentHeaders)
     ], PostAcceptTransitGatewayPeeringAttachmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAcceptTransitGatewayPeeringAttachmentRequest.prototype, "request", void 0);
     return PostAcceptTransitGatewayPeeringAttachmentRequest;
-}(SpeakeasyBase));
-export { PostAcceptTransitGatewayPeeringAttachmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAcceptTransitGatewayPeeringAttachmentRequest = PostAcceptTransitGatewayPeeringAttachmentRequest;
 var PostAcceptTransitGatewayPeeringAttachmentResponse = /** @class */ (function (_super) {
     __extends(PostAcceptTransitGatewayPeeringAttachmentResponse, _super);
     function PostAcceptTransitGatewayPeeringAttachmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAcceptTransitGatewayPeeringAttachmentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAcceptTransitGatewayPeeringAttachmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAcceptTransitGatewayPeeringAttachmentResponse.prototype, "statusCode", void 0);
     return PostAcceptTransitGatewayPeeringAttachmentResponse;
-}(SpeakeasyBase));
-export { PostAcceptTransitGatewayPeeringAttachmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAcceptTransitGatewayPeeringAttachmentResponse = PostAcceptTransitGatewayPeeringAttachmentResponse;

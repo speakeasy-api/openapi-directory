@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ReportStateAndNotificationDevice extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=notifications" })
-  notifications?: Map<string, any>;
+  notifications?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=states" })
-  states?: Map<string, any>;
+  states?: Record<string, any>;
 }

@@ -150,7 +150,7 @@ export class CreativeNativeAd extends SpeakeasyBase {
   starRating?: number;
 
   @SpeakeasyMetadata({ data: "json, name=videoURL" })
-  videoUrl?: string;
+  videoURL?: string;
 }
 
 
@@ -280,10 +280,10 @@ export class Creative extends SpeakeasyBase {
   version?: number;
 
   @SpeakeasyMetadata({ data: "json, name=videoURL" })
-  videoUrl?: string;
+  videoURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=videoVastXML" })
-  videoVastXml?: string;
+  videoVastXML?: string;
 
   @SpeakeasyMetadata({ data: "json, name=width" })
   width?: number;

@@ -20,6 +20,6 @@ export declare class CreateRuleCategoryRequest extends SpeakeasyBase {
 }
 export declare class CreateRuleCategoryResponse extends SpeakeasyBase {
     contentType: string;
-    createRuleCategory200ApplicationJsonObject?: CreateRuleCategory200ApplicationJson;
+    createRuleCategory200ApplicationJSONObject?: CreateRuleCategory200ApplicationJson;
     statusCode: number;
 }

@@ -1,4 +1,7 @@
-export var BotSortAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotSortAttributeEnum = void 0;
+var BotSortAttributeEnum;
 (function (BotSortAttributeEnum) {
     BotSortAttributeEnum["BotName"] = "BotName";
-})(BotSortAttributeEnum || (BotSortAttributeEnum = {}));
+})(BotSortAttributeEnum = exports.BotSortAttributeEnum || (exports.BotSortAttributeEnum = {}));

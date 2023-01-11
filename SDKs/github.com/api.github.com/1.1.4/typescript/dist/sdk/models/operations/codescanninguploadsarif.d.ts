@@ -26,5 +26,5 @@ export declare class CodeScanningUploadSarifResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     codeScanningSarifsReceipt?: shared.CodeScanningSarifsReceipt;
-    codeScanningUploadSarif503ApplicationJsonObject?: CodeScanningUploadSarif503ApplicationJson;
+    codeScanningUploadSarif503ApplicationJSONObject?: CodeScanningUploadSarif503ApplicationJson;
 }

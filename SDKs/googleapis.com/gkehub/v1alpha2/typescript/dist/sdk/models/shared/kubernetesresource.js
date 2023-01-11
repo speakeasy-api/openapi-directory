@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceOptions } from "./resourceoptions";
-import { ResourceManifest } from "./resourcemanifest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KubernetesResource = exports.KubernetesResourceInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceoptions_1 = require("./resourceoptions");
+var resourcemanifest_1 = require("./resourcemanifest");
 // KubernetesResourceInput
 /**
  * KubernetesResource contains the YAML manifests and configuration for Membership Kubernetes resources in the cluster. After CreateMembership or UpdateMembership, these resources should be re-applied in the cluster.
@@ -35,16 +38,16 @@ var KubernetesResourceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipCrManifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipCrManifest" }),
         __metadata("design:type", String)
     ], KubernetesResourceInput.prototype, "membershipCrManifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOptions" }),
-        __metadata("design:type", ResourceOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOptions" }),
+        __metadata("design:type", resourceoptions_1.ResourceOptions)
     ], KubernetesResourceInput.prototype, "resourceOptions", void 0);
     return KubernetesResourceInput;
-}(SpeakeasyBase));
-export { KubernetesResourceInput };
+}(utils_1.SpeakeasyBase));
+exports.KubernetesResourceInput = KubernetesResourceInput;
 // KubernetesResource
 /**
  * KubernetesResource contains the YAML manifests and configuration for Membership Kubernetes resources in the cluster. After CreateMembership or UpdateMembership, these resources should be re-applied in the cluster.
@@ -55,21 +58,21 @@ var KubernetesResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectResources", elemType: ResourceManifest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectResources", elemType: resourcemanifest_1.ResourceManifest }),
         __metadata("design:type", Array)
     ], KubernetesResource.prototype, "connectResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipCrManifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipCrManifest" }),
         __metadata("design:type", String)
     ], KubernetesResource.prototype, "membershipCrManifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipResources", elemType: ResourceManifest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipResources", elemType: resourcemanifest_1.ResourceManifest }),
         __metadata("design:type", Array)
     ], KubernetesResource.prototype, "membershipResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOptions" }),
-        __metadata("design:type", ResourceOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOptions" }),
+        __metadata("design:type", resourceoptions_1.ResourceOptions)
     ], KubernetesResource.prototype, "resourceOptions", void 0);
     return KubernetesResource;
-}(SpeakeasyBase));
-export { KubernetesResource };
+}(utils_1.SpeakeasyBase));
+exports.KubernetesResource = KubernetesResource;

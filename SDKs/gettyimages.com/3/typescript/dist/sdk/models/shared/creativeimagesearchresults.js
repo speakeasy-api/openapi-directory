@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoCorrections } from "./autocorrections";
-import { ImageSearchItemCreative } from "./imagesearchitemcreative";
-import { RelatedSearch } from "./relatedsearch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeImageSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var autocorrections_1 = require("./autocorrections");
+var imagesearchitemcreative_1 = require("./imagesearchitemcreative");
+var relatedsearch_1 = require("./relatedsearch");
 var CreativeImageSearchResults = /** @class */ (function (_super) {
     __extends(CreativeImageSearchResults, _super);
     function CreativeImageSearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_corrections" }),
-        __metadata("design:type", AutoCorrections)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_corrections" }),
+        __metadata("design:type", autocorrections_1.AutoCorrections)
     ], CreativeImageSearchResults.prototype, "autoCorrections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageSearchItemCreative }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imagesearchitemcreative_1.ImageSearchItemCreative }),
         __metadata("design:type", Array)
     ], CreativeImageSearchResults.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_searches", elemType: RelatedSearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_searches", elemType: relatedsearch_1.RelatedSearch }),
         __metadata("design:type", Array)
     ], CreativeImageSearchResults.prototype, "relatedSearches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], CreativeImageSearchResults.prototype, "resultCount", void 0);
     return CreativeImageSearchResults;
-}(SpeakeasyBase));
-export { CreativeImageSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.CreativeImageSearchResults = CreativeImageSearchResults;

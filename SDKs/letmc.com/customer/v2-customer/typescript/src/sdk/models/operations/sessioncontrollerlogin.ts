@@ -31,16 +31,16 @@ export class SessionControllerLoginResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sessionControllerLogin200ApplicationJsonString?: string;
+  sessionControllerLogin200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerLogin200ApplicationXmlString?: string;
+  sessionControllerLogin200ApplicationXMLString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerLogin200TextJsonString?: string;
+  sessionControllerLogin200TextJSONString?: string;
 
   @SpeakeasyMetadata()
-  sessionControllerLogin200TextXmlString?: string;
+  sessionControllerLogin200TextXMLString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

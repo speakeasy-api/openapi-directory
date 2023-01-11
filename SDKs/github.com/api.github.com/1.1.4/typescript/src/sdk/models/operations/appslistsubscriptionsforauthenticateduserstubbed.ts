@@ -23,7 +23,7 @@ export class AppsListSubscriptionsForAuthenticatedUserStubbedResponse extends Sp
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

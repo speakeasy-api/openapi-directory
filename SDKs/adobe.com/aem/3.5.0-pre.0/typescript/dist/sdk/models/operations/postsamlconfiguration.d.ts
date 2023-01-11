@@ -4,7 +4,7 @@ export declare class PostSamlConfigurationQueryParams extends SpeakeasyBase {
     action?: string;
     addGroupMemberships?: boolean;
     apply?: boolean;
-    assertionConsumerServiceUrl?: string;
+    assertionConsumerServiceURL?: string;
     clockTolerance?: number;
     createUser?: boolean;
     defaultGroups?: string[];
@@ -28,15 +28,15 @@ export declare class PostSamlConfigurationQueryParams extends SpeakeasyBase {
     spPrivateKeyAlias?: string;
     synchronizeAttributes?: string[];
     useEncryption?: boolean;
-    userIdAttribute?: string;
+    userIDAttribute?: string;
     userIntermediatePath?: string;
 }
 export declare class PostSamlConfigurationRequest extends SpeakeasyBase {
     queryParams: PostSamlConfigurationQueryParams;
 }
 export declare class PostSamlConfigurationResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    samlConfigurationInfo?: string;
     statusCode: number;
     postSamlConfiguration302TextPlainString?: string;
     postSamlConfigurationDefaultTextPlainString?: string;

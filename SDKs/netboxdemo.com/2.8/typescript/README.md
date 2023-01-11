@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CircuitsCircuitTerminationsCreateRequest, CircuitsCircuitTerminationsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,21 +34,21 @@ const sdk = new SDK(WithSecurity(
 const req: CircuitsCircuitTerminationsCreateRequest = {
   request: {
     cable: {
-      label: "aliquid",
+      label: "sit",
     },
-    circuit: 5396713859516954870,
+    circuit: 2259404117704393152,
     connectionStatus: true,
-    description: "animi",
-    portSpeed: 5767282679630353800,
-    ppInfo: "magni",
-    site: 3444678983313942400,
-    termSide: "A",
-    upstreamSpeed: 2772754371455433371,
-    xconnectId: "eveniet",
+    description: "expedita",
+    portSpeed: 3390393562759376202,
+    ppInfo: "dolor",
+    site: 1774932891286980153,
+    termSide: "Z",
+    upstreamSpeed: 8274930044578894929,
+    xconnectId: "et",
   },
 };
 
-sdk.sdk.circuitsCircuitTerminationsCreate(req).then((res: CircuitsCircuitTerminationsCreateResponse | AxiosError) => {
+sdk.circuits.circuitsCircuitTerminationsCreate(req).then((res: CircuitsCircuitTerminationsCreateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.circuitsCircuitTerminationsCreate(req).then((res: CircuitsCircuitTermina
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `circuitsCircuitTerminationsCreate`
 * `circuitsCircuitTerminationsDelete`
@@ -85,6 +84,9 @@ sdk.sdk.circuitsCircuitTerminationsCreate(req).then((res: CircuitsCircuitTermina
 * `circuitsProvidersPartialUpdate`
 * `circuitsProvidersRead` - Call to super to allow for caching
 * `circuitsProvidersUpdate`
+
+### dcim
+
 * `dcimCablesCreate`
 * `dcimCablesDelete`
 * `dcimCablesList` - Call to super to allow for caching
@@ -298,6 +300,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `dcimVirtualChassisPartialUpdate`
 * `dcimVirtualChassisRead` - Call to super to allow for caching
 * `dcimVirtualChassisUpdate`
+
+### extras
+
 * `extrasCustomFieldChoicesList`
 * `extrasCustomFieldChoicesRead`
 * `extrasConfigContextsCreate`
@@ -337,6 +342,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `extrasTagsPartialUpdate`
 * `extrasTagsRead` - Call to super to allow for caching
 * `extrasTagsUpdate`
+
+### ipam
+
 * `ipamAggregatesCreate`
 * `ipamAggregatesDelete`
 * `ipamAggregatesList` - Call to super to allow for caching
@@ -405,6 +413,9 @@ invoked in parallel, which results in a race condition where multiple insertions
 * `ipamVrfsPartialUpdate`
 * `ipamVrfsRead` - Call to super to allow for caching
 * `ipamVrfsUpdate`
+
+### secrets
+
 * `secretsGenerateRsaKeyPairList` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
 * `secretsGetSessionKeyCreate` - Retrieve a temporary session key to use for encrypting and decrypting secrets via the API. The user's private RSA
 key is POSTed with the name `private_key`. An example:
@@ -432,6 +443,9 @@ key will be returned instead of a new one.
 * `secretsSecretsPartialUpdate`
 * `secretsSecretsRead`
 * `secretsSecretsUpdate`
+
+### tenancy
+
 * `tenancyTenantGroupsCreate`
 * `tenancyTenantGroupsDelete`
 * `tenancyTenantGroupsList` - Call to super to allow for caching
@@ -444,6 +458,9 @@ key will be returned instead of a new one.
 * `tenancyTenantsPartialUpdate`
 * `tenancyTenantsRead` - Call to super to allow for caching
 * `tenancyTenantsUpdate`
+
+### virtualization
+
 * `virtualizationClusterGroupsCreate`
 * `virtualizationClusterGroupsDelete`
 * `virtualizationClusterGroupsList` - Call to super to allow for caching

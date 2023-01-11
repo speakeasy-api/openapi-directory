@@ -20,7 +20,7 @@ export class GetServerHealth200ApplicationJson extends SpeakeasyBase {
 
 export class GetServerHealthRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 }
 
 
@@ -29,7 +29,7 @@ export class GetServerHealthResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getServerHealth200ApplicationJsonObject?: GetServerHealth200ApplicationJson;
+  getServerHealth200ApplicationJSONObject?: GetServerHealth200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdOutlineGetResponse = exports.StoryIdOutlineGetRequest = exports.StoryIdOutlineGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdOutlineGetPathParams = /** @class */ (function (_super) {
     __extends(StoryIdOutlineGetPathParams, _super);
     function StoryIdOutlineGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdOutlineGetPathParams.prototype, "id", void 0);
     return StoryIdOutlineGetPathParams;
-}(SpeakeasyBase));
-export { StoryIdOutlineGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdOutlineGetPathParams = StoryIdOutlineGetPathParams;
 var StoryIdOutlineGetRequest = /** @class */ (function (_super) {
     __extends(StoryIdOutlineGetRequest, _super);
     function StoryIdOutlineGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdOutlineGetPathParams)
     ], StoryIdOutlineGetRequest.prototype, "pathParams", void 0);
     return StoryIdOutlineGetRequest;
-}(SpeakeasyBase));
-export { StoryIdOutlineGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdOutlineGetRequest = StoryIdOutlineGetRequest;
 var StoryIdOutlineGetResponse = /** @class */ (function (_super) {
     __extends(StoryIdOutlineGetResponse, _super);
     function StoryIdOutlineGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdOutlineGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdOutlineGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdOutlineGetResponse.prototype, "problemDetail", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdOutlineGetResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], StoryIdOutlineGetResponse.prototype, "storyIdOutlineGet200ApplicationJsonString", void 0);
+    ], StoryIdOutlineGetResponse.prototype, "storyIdOutlineGet200ApplicationJSONString", void 0);
     return StoryIdOutlineGetResponse;
-}(SpeakeasyBase));
-export { StoryIdOutlineGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdOutlineGetResponse = StoryIdOutlineGetResponse;

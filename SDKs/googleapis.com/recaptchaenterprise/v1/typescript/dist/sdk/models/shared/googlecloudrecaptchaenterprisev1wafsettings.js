@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1WafSettings = exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum = exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum;
 (function (GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) {
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum["WafFeatureUnspecified"] = "WAF_FEATURE_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum["ChallengePage"] = "CHALLENGE_PAGE";
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum["SessionToken"] = "SESSION_TOKEN";
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum["ActionToken"] = "ACTION_TOKEN";
-})(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum || (GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = {}));
-export var GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum;
+})(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum || (exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = {}));
+var GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum;
 (function (GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum) {
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum["WafServiceUnspecified"] = "WAF_SERVICE_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum["Ca"] = "CA";
-})(GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum || (GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum = {}));
+})(GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum = exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum || (exports.GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum = {}));
 // GoogleCloudRecaptchaenterpriseV1WafSettings
 /**
  * Settings specific to keys that can be used for WAF (Web Application Firewall).
@@ -45,13 +48,13 @@ var GoogleCloudRecaptchaenterpriseV1WafSettings = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wafFeature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wafFeature" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1WafSettings.prototype, "wafFeature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wafService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wafService" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1WafSettings.prototype, "wafService", void 0);
     return GoogleCloudRecaptchaenterpriseV1WafSettings;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1WafSettings };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1WafSettings = GoogleCloudRecaptchaenterpriseV1WafSettings;

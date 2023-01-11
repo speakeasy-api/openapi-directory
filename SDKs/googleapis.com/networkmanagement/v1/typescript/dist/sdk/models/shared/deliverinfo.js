@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeliverInfoTargetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliverInfo = exports.DeliverInfoTargetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeliverInfoTargetEnum;
 (function (DeliverInfoTargetEnum) {
     DeliverInfoTargetEnum["TargetUnspecified"] = "TARGET_UNSPECIFIED";
     DeliverInfoTargetEnum["Instance"] = "INSTANCE";
@@ -34,7 +37,7 @@ export var DeliverInfoTargetEnum;
     DeliverInfoTargetEnum["PscPublishedService"] = "PSC_PUBLISHED_SERVICE";
     DeliverInfoTargetEnum["PscGoogleApi"] = "PSC_GOOGLE_API";
     DeliverInfoTargetEnum["PscVpcSc"] = "PSC_VPC_SC";
-})(DeliverInfoTargetEnum || (DeliverInfoTargetEnum = {}));
+})(DeliverInfoTargetEnum = exports.DeliverInfoTargetEnum || (exports.DeliverInfoTargetEnum = {}));
 // DeliverInfo
 /**
  * Details of the final state "deliver" and associated resource.
@@ -45,13 +48,13 @@ var DeliverInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUri" }),
         __metadata("design:type", String)
     ], DeliverInfo.prototype, "resourceUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", String)
     ], DeliverInfo.prototype, "target", void 0);
     return DeliverInfo;
-}(SpeakeasyBase));
-export { DeliverInfo };
+}(utils_1.SpeakeasyBase));
+exports.DeliverInfo = DeliverInfo;

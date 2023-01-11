@@ -9,7 +9,7 @@ import { HealthStateEnum } from "./healthstateenum";
 **/
 export class EndpointDescription extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientIPPreservationEnabled" })
-  clientIpPreservationEnabled?: boolean;
+  clientIPPreservationEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=EndpointId" })
   endpointId?: string;

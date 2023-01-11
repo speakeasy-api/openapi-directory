@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RabattSatzEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rabatt = exports.RabattSatzEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RabattSatzEnum;
 (function (RabattSatzEnum) {
     RabattSatzEnum["Normal"] = "NORMAL";
     RabattSatzEnum["Ermaessigt1"] = "ERMAESSIGT1";
     RabattSatzEnum["Ermaessigt2"] = "ERMAESSIGT2";
     RabattSatzEnum["Besonders"] = "BESONDERS";
     RabattSatzEnum["Null"] = "NULL";
-})(RabattSatzEnum || (RabattSatzEnum = {}));
+})(RabattSatzEnum = exports.RabattSatzEnum || (exports.RabattSatzEnum = {}));
 var Rabatt = /** @class */ (function (_super) {
     __extends(Rabatt, _super);
     function Rabatt() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Brutto" }),
         __metadata("design:type", Number)
     ], Rabatt.prototype, "betragBrutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Netto" }),
         __metadata("design:type", Number)
     ], Rabatt.prototype, "betragNetto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Bezeichnung" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Bezeichnung" }),
         __metadata("design:type", String)
     ], Rabatt.prototype, "bezeichnung", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Satz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Satz" }),
         __metadata("design:type", String)
     ], Rabatt.prototype, "satz", void 0);
     return Rabatt;
-}(SpeakeasyBase));
-export { Rabatt };
+}(utils_1.SpeakeasyBase));
+exports.Rabatt = Rabatt;

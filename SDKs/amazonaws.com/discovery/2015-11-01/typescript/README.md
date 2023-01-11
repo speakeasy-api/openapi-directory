@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateConfigurationItemsToApplicationRequest, AssociateConfigurationItemsToApplicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateConfigurationItemsToApplicationRequest = {
   headers: {
-    xAmzAlgorithm: "ab",
-    xAmzContentSha256: "dolores",
-    xAmzCredential: "sunt",
-    xAmzDate: "perferendis",
-    xAmzSecurityToken: "quas",
-    xAmzSignature: "aut",
-    xAmzSignedHeaders: "dicta",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication",
   },
   request: {
-    applicationConfigurationId: "pariatur",
+    applicationConfigurationId: "fugit",
     configurationIds: [
-      "ducimus",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.associateConfigurationItemsToApplication(req).then((res: AssociateConfigurationItemsToApplicationResponse | AxiosError) => {
+sdk.associateConfigurationItemsToApplication(req).then((res: AssociateConfigurationItemsToApplicationResponse | AxiosError) => {
    // handle response
 });
 ```

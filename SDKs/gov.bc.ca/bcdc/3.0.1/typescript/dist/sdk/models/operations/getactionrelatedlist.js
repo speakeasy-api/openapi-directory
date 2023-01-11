@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionRelatedListResponse = exports.GetActionRelatedListRequest = exports.GetActionRelatedListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionRelatedListQueryParams = /** @class */ (function (_super) {
     __extends(GetActionRelatedListQueryParams, _super);
     function GetActionRelatedListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dataset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dataset" }),
         __metadata("design:type", String)
     ], GetActionRelatedListQueryParams.prototype, "dataset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featured" }),
         __metadata("design:type", String)
     ], GetActionRelatedListQueryParams.prototype, "featured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetActionRelatedListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetActionRelatedListQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type_filter" }),
         __metadata("design:type", String)
     ], GetActionRelatedListQueryParams.prototype, "typeFilter", void 0);
     return GetActionRelatedListQueryParams;
-}(SpeakeasyBase));
-export { GetActionRelatedListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionRelatedListQueryParams = GetActionRelatedListQueryParams;
 var GetActionRelatedListRequest = /** @class */ (function (_super) {
     __extends(GetActionRelatedListRequest, _super);
     function GetActionRelatedListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionRelatedListQueryParams)
     ], GetActionRelatedListRequest.prototype, "queryParams", void 0);
     return GetActionRelatedListRequest;
-}(SpeakeasyBase));
-export { GetActionRelatedListRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionRelatedListRequest = GetActionRelatedListRequest;
 var GetActionRelatedListResponse = /** @class */ (function (_super) {
     __extends(GetActionRelatedListResponse, _super);
     function GetActionRelatedListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionRelatedListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionRelatedListResponse.prototype, "statusCode", void 0);
     return GetActionRelatedListResponse;
-}(SpeakeasyBase));
-export { GetActionRelatedListResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionRelatedListResponse = GetActionRelatedListResponse;

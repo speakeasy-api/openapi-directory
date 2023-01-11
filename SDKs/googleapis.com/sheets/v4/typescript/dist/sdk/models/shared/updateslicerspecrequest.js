@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlicerSpec } from "./slicerspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSlicerSpecRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var slicerspec_1 = require("./slicerspec");
 // UpdateSlicerSpecRequest
 /**
  * Updates a slicer's specifications. (This does not move or resize a slicer. To move or resize a slicer use UpdateEmbeddedObjectPositionRequest.
@@ -34,17 +37,17 @@ var UpdateSlicerSpecRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateSlicerSpecRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slicerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slicerId" }),
         __metadata("design:type", Number)
     ], UpdateSlicerSpecRequest.prototype, "slicerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", SlicerSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", slicerspec_1.SlicerSpec)
     ], UpdateSlicerSpecRequest.prototype, "spec", void 0);
     return UpdateSlicerSpecRequest;
-}(SpeakeasyBase));
-export { UpdateSlicerSpecRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSlicerSpecRequest = UpdateSlicerSpecRequest;

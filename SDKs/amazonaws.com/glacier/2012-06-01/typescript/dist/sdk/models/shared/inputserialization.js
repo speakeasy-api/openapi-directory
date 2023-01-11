@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CsvInput } from "./csvinput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputSerialization = void 0;
+var utils_1 = require("../../../internal/utils");
+var csvinput_1 = require("./csvinput");
 // InputSerialization
 /**
  * Describes how the archive is serialized.
@@ -34,9 +37,9 @@ var InputSerialization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csv" }),
-        __metadata("design:type", CsvInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csv" }),
+        __metadata("design:type", csvinput_1.CsvInput)
     ], InputSerialization.prototype, "csv", void 0);
     return InputSerialization;
-}(SpeakeasyBase));
-export { InputSerialization };
+}(utils_1.SpeakeasyBase));
+exports.InputSerialization = InputSerialization;

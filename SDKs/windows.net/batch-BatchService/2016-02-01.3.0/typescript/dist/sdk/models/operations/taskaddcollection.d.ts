@@ -20,7 +20,7 @@ export declare class TaskAddCollectionRequest extends SpeakeasyBase {
 export declare class TaskAddCollectionResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     taskAddCollectionResult?: any;
 }

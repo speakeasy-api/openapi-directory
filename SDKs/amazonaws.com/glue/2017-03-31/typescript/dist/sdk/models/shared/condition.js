@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CrawlStateEnum } from "./crawlstateenum";
-import { LogicalOperatorEnum } from "./logicaloperatorenum";
-import { JobRunStateEnum } from "./jobrunstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Condition = void 0;
+var utils_1 = require("../../../internal/utils");
+var crawlstateenum_1 = require("./crawlstateenum");
+var logicaloperatorenum_1 = require("./logicaloperatorenum");
+var jobrunstateenum_1 = require("./jobrunstateenum");
 // Condition
 /**
  * Defines a condition under which a trigger fires.
@@ -36,25 +39,25 @@ var Condition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlState" }),
         __metadata("design:type", String)
     ], Condition.prototype, "crawlState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlerName" }),
         __metadata("design:type", String)
     ], Condition.prototype, "crawlerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobName" }),
         __metadata("design:type", String)
     ], Condition.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogicalOperator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogicalOperator" }),
         __metadata("design:type", String)
     ], Condition.prototype, "logicalOperator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Condition.prototype, "state", void 0);
     return Condition;
-}(SpeakeasyBase));
-export { Condition };
+}(utils_1.SpeakeasyBase));
+exports.Condition = Condition;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PeriodicPaymentInitiationXmlPart2StandingorderTypeJson } from "./periodicpaymentinitiationxmlpart2standingordertypejson";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PeriodicPaymentInitiationMultipartBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var periodicpaymentinitiationxmlpart2standingordertypejson_1 = require("./periodicpaymentinitiationxmlpart2standingordertypejson");
 // PeriodicPaymentInitiationMultipartBody
 /**
  * The multipart message definition for the initiation of a periodic payment initiation
@@ -37,13 +40,13 @@ var PeriodicPaymentInitiationMultipartBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=json_standingorderType;json=true" }),
-        __metadata("design:type", PeriodicPaymentInitiationXmlPart2StandingorderTypeJson)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=json_standingorderType;json=true" }),
+        __metadata("design:type", periodicpaymentinitiationxmlpart2standingordertypejson_1.PeriodicPaymentInitiationXmlPart2StandingorderTypeJson)
     ], PeriodicPaymentInitiationMultipartBody.prototype, "jsonStandingorderType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=xml_sct;json=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=xml_sct;json=true" }),
         __metadata("design:type", Object)
     ], PeriodicPaymentInitiationMultipartBody.prototype, "xmlSct", void 0);
     return PeriodicPaymentInitiationMultipartBody;
-}(SpeakeasyBase));
-export { PeriodicPaymentInitiationMultipartBody };
+}(utils_1.SpeakeasyBase));
+exports.PeriodicPaymentInitiationMultipartBody = PeriodicPaymentInitiationMultipartBody;

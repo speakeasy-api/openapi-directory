@@ -1,4 +1,7 @@
-export var StatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusEnum = void 0;
+var StatusEnum;
 (function (StatusEnum) {
     StatusEnum["Retried"] = "retried";
     StatusEnum["Canceled"] = "canceled";
@@ -13,4 +16,4 @@ export var StatusEnum;
     StatusEnum["NoTests"] = "no_tests";
     StatusEnum["Fixed"] = "fixed";
     StatusEnum["Success"] = "success";
-})(StatusEnum || (StatusEnum = {}));
+})(StatusEnum = exports.StatusEnum || (exports.StatusEnum = {}));

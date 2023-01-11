@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Drive = exports.DriveRestrictions = exports.DriveCapabilities = exports.DriveBackgroundImageFile = void 0;
+var utils_1 = require("../../../internal/utils");
 // DriveBackgroundImageFile
 /**
  * An image file and cropping parameters from which a background image for this shared drive is set. This is a write only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
@@ -33,24 +36,24 @@ var DriveBackgroundImageFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DriveBackgroundImageFile.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], DriveBackgroundImageFile.prototype, "width", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xCoordinate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xCoordinate" }),
         __metadata("design:type", Number)
     ], DriveBackgroundImageFile.prototype, "xCoordinate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yCoordinate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yCoordinate" }),
         __metadata("design:type", Number)
     ], DriveBackgroundImageFile.prototype, "yCoordinate", void 0);
     return DriveBackgroundImageFile;
-}(SpeakeasyBase));
-export { DriveBackgroundImageFile };
+}(utils_1.SpeakeasyBase));
+exports.DriveBackgroundImageFile = DriveBackgroundImageFile;
 // DriveCapabilities
 /**
  * Capabilities the current user has on this shared drive.
@@ -61,84 +64,84 @@ var DriveCapabilities = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canAddChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canAddChildren" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canAddChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeCopyRequiresWriterPermissionRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeCopyRequiresWriterPermissionRestriction" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canChangeCopyRequiresWriterPermissionRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeDomainUsersOnlyRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeDomainUsersOnlyRestriction" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canChangeDomainUsersOnlyRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeDriveBackground" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeDriveBackground" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canChangeDriveBackground", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canChangeDriveMembersOnlyRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canChangeDriveMembersOnlyRestriction" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canChangeDriveMembersOnlyRestriction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canComment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canComment" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCopy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCopy" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canCopy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDeleteChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDeleteChildren" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canDeleteChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDeleteDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDeleteDrive" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canDeleteDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canDownload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canDownload" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canDownload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canEdit" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canListChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canListChildren" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canListChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canManageMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canManageMembers" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canManageMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canReadRevisions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canReadRevisions" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canReadRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRename" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canRename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRenameDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRenameDrive" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canRenameDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canResetDriveRestrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canResetDriveRestrictions" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canResetDriveRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canShare" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canShare" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canShare", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canTrashChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canTrashChildren" }),
         __metadata("design:type", Boolean)
     ], DriveCapabilities.prototype, "canTrashChildren", void 0);
     return DriveCapabilities;
-}(SpeakeasyBase));
-export { DriveCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.DriveCapabilities = DriveCapabilities;
 // DriveRestrictions
 /**
  * A set of restrictions that apply to this shared drive or items inside this shared drive.
@@ -149,24 +152,24 @@ var DriveRestrictions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminManagedRestrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminManagedRestrictions" }),
         __metadata("design:type", Boolean)
     ], DriveRestrictions.prototype, "adminManagedRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyRequiresWriterPermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyRequiresWriterPermission" }),
         __metadata("design:type", Boolean)
     ], DriveRestrictions.prototype, "copyRequiresWriterPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainUsersOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainUsersOnly" }),
         __metadata("design:type", Boolean)
     ], DriveRestrictions.prototype, "domainUsersOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveMembersOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveMembersOnly" }),
         __metadata("design:type", Boolean)
     ], DriveRestrictions.prototype, "driveMembersOnly", void 0);
     return DriveRestrictions;
-}(SpeakeasyBase));
-export { DriveRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.DriveRestrictions = DriveRestrictions;
 // Drive
 /**
  * Representation of a shared drive.
@@ -177,53 +180,53 @@ var Drive = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageFile" }),
         __metadata("design:type", DriveBackgroundImageFile)
     ], Drive.prototype, "backgroundImageFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], Drive.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
         __metadata("design:type", DriveCapabilities)
     ], Drive.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], Drive.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdDate" }),
         __metadata("design:type", Date)
     ], Drive.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], Drive.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Drive.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Drive.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Drive.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgUnitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgUnitId" }),
         __metadata("design:type", String)
     ], Drive.prototype, "orgUnitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
         __metadata("design:type", DriveRestrictions)
     ], Drive.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=themeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=themeId" }),
         __metadata("design:type", String)
     ], Drive.prototype, "themeId", void 0);
     return Drive;
-}(SpeakeasyBase));
-export { Drive };
+}(utils_1.SpeakeasyBase));
+exports.Drive = Drive;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetServiceDetailsByIdPathParams extends SpeakeasyBase {
-    serviceId: string;
+    serviceID: string;
 }
 export declare class GetServiceDetailsByIdQueryParams extends SpeakeasyBase {
     apiKey: string;

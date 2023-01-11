@@ -8,10 +8,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class PaymentInitiationRecipientCreateRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=address" })
-  address?: Map<string, any>;
+  address?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=bacs" })
-  bacs?: Map<string, any>;
+  bacs?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=client_id" })
   clientId?: string;

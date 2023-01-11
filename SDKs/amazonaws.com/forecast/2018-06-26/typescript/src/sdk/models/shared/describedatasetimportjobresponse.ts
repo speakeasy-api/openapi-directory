@@ -27,7 +27,7 @@ export class DescribeDatasetImportJobResponse extends SpeakeasyBase {
   estimatedTimeRemainingInMinutes?: number;
 
   @SpeakeasyMetadata({ data: "json, name=FieldStatistics", elemType: Statistics })
-  fieldStatistics?: Map<string, Statistics>;
+  fieldStatistics?: Record<string, Statistics>;
 
   @SpeakeasyMetadata({ data: "json, name=GeolocationFormat" })
   geolocationFormat?: string;

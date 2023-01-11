@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminPingGlobalWebhookResponse = exports.EnterpriseAdminPingGlobalWebhookRequest = exports.EnterpriseAdminPingGlobalWebhookHeaders = exports.EnterpriseAdminPingGlobalWebhookPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminPingGlobalWebhookPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPingGlobalWebhookPathParams, _super);
     function EnterpriseAdminPingGlobalWebhookPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hook_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hook_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminPingGlobalWebhookPathParams.prototype, "hookId", void 0);
     return EnterpriseAdminPingGlobalWebhookPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminPingGlobalWebhookPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPingGlobalWebhookPathParams = EnterpriseAdminPingGlobalWebhookPathParams;
 var EnterpriseAdminPingGlobalWebhookHeaders = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPingGlobalWebhookHeaders, _super);
     function EnterpriseAdminPingGlobalWebhookHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=accept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=accept" }),
         __metadata("design:type", String)
     ], EnterpriseAdminPingGlobalWebhookHeaders.prototype, "accept", void 0);
     return EnterpriseAdminPingGlobalWebhookHeaders;
-}(SpeakeasyBase));
-export { EnterpriseAdminPingGlobalWebhookHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPingGlobalWebhookHeaders = EnterpriseAdminPingGlobalWebhookHeaders;
 var EnterpriseAdminPingGlobalWebhookRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPingGlobalWebhookRequest, _super);
     function EnterpriseAdminPingGlobalWebhookRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminPingGlobalWebhookPathParams)
     ], EnterpriseAdminPingGlobalWebhookRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminPingGlobalWebhookHeaders)
     ], EnterpriseAdminPingGlobalWebhookRequest.prototype, "headers", void 0);
     return EnterpriseAdminPingGlobalWebhookRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminPingGlobalWebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPingGlobalWebhookRequest = EnterpriseAdminPingGlobalWebhookRequest;
 var EnterpriseAdminPingGlobalWebhookResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminPingGlobalWebhookResponse, _super);
     function EnterpriseAdminPingGlobalWebhookResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminPingGlobalWebhookResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminPingGlobalWebhookResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminPingGlobalWebhookResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminPingGlobalWebhookResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminPingGlobalWebhookResponse = EnterpriseAdminPingGlobalWebhookResponse;

@@ -10,6 +10,6 @@ export declare class GetSetupV1ResourcegroupsRequest extends SpeakeasyBase {
 }
 export declare class GetSetupV1ResourcegroupsResponse extends SpeakeasyBase {
     contentType: string;
-    resourceGroupListViewModel?: Map<string, any>;
+    resourceGroupListViewModel?: Record<string, any>;
     statusCode: number;
 }

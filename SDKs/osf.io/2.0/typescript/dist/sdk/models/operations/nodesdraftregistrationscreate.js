@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesDraftRegistrationsCreateResponse = exports.NodesDraftRegistrationsCreateRequest = exports.NodesDraftRegistrationsCreateDraftRegistrationInput = exports.NodesDraftRegistrationsCreateDraftRegistrationAttributesInput = exports.NodesDraftRegistrationsCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesDraftRegistrationsCreatePathParams = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsCreatePathParams, _super);
     function NodesDraftRegistrationsCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsCreatePathParams.prototype, "nodeId", void 0);
     return NodesDraftRegistrationsCreatePathParams;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsCreatePathParams = NodesDraftRegistrationsCreatePathParams;
 // NodesDraftRegistrationsCreateDraftRegistrationAttributesInput
 /**
  * The properties of the draft registration entity.
@@ -45,57 +48,57 @@ var NodesDraftRegistrationsCreateDraftRegistrationAttributesInput = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration_metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration_metadata" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsCreateDraftRegistrationAttributesInput.prototype, "registrationMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration_supplement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration_supplement" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsCreateDraftRegistrationAttributesInput.prototype, "registrationSupplement", void 0);
     return NodesDraftRegistrationsCreateDraftRegistrationAttributesInput;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsCreateDraftRegistrationAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsCreateDraftRegistrationAttributesInput = NodesDraftRegistrationsCreateDraftRegistrationAttributesInput;
 var NodesDraftRegistrationsCreateDraftRegistrationInput = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsCreateDraftRegistrationInput, _super);
     function NodesDraftRegistrationsCreateDraftRegistrationInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesDraftRegistrationsCreateDraftRegistrationAttributesInput)
     ], NodesDraftRegistrationsCreateDraftRegistrationInput.prototype, "attributes", void 0);
     return NodesDraftRegistrationsCreateDraftRegistrationInput;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsCreateDraftRegistrationInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsCreateDraftRegistrationInput = NodesDraftRegistrationsCreateDraftRegistrationInput;
 var NodesDraftRegistrationsCreateRequest = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsCreateRequest, _super);
     function NodesDraftRegistrationsCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesDraftRegistrationsCreatePathParams)
     ], NodesDraftRegistrationsCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesDraftRegistrationsCreateDraftRegistrationInput)
     ], NodesDraftRegistrationsCreateRequest.prototype, "request", void 0);
     return NodesDraftRegistrationsCreateRequest;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsCreateRequest = NodesDraftRegistrationsCreateRequest;
 var NodesDraftRegistrationsCreateResponse = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsCreateResponse, _super);
     function NodesDraftRegistrationsCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesDraftRegistrationsCreateResponse.prototype, "statusCode", void 0);
     return NodesDraftRegistrationsCreateResponse;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsCreateResponse = NodesDraftRegistrationsCreateResponse;

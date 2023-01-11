@@ -21,7 +21,7 @@ export declare class ModifyWorkspaceCreationPropertiesResponse extends Speakeasy
     accessDeniedException?: any;
     contentType: string;
     invalidParameterValuesException?: any;
-    modifyWorkspaceCreationPropertiesResult?: Map<string, any>;
+    modifyWorkspaceCreationPropertiesResult?: Record<string, any>;
     operationNotSupportedException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

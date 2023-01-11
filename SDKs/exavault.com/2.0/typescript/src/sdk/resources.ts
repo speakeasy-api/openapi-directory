@@ -1,0 +1,922 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Resources {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * addFolder - Create a folder
+   *
+   * Create a new empty folder at the specified path. New files can be uploaded via the [/resources/upload](#operation/uploadFile) endpoint.
+   * 
+   * **Notes:**
+   * - Authenticated user should have modify permission.
+   * 
+  **/
+  addFolder(
+    req: operations.AddFolderRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.AddFolderResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.AddFolderRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.AddFolderResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * compressFiles - Compress resources
+   *
+   * Create a zip archive containing the files from given set of paths. Note that this can be a very slow operation if you have indicated many files should be included in the archive.
+   * 
+   * **Notes:**
+   * - Authenticated user should have modify permission.
+   * 
+  **/
+  compressFiles(
+    req: operations.CompressFilesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CompressFilesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CompressFilesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/compress";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CompressFilesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * copyResources - Copy resources
+   *
+   * Copies a set of exisiting files/folders (provided by an array `resources`) to the requested `parentResource` in your account.
+   * In the `resources` array, you may specify paths pointing files/folders throughout the account, but everything will be copied to the 
+   * root of the `parentResource`.
+   * 
+   * **Notes:**
+   * - Authenticated user should have modify permission.
+   * 
+  **/
+  copyResources(
+    req: operations.CopyResourcesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CopyResourcesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CopyResourcesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/copy";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CopyResourcesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceCopyMove = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 207:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceMultiResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * deleteResourceById - Delete a Resource
+   *
+   * Delete a single file or folder resource. Deleting a folder will also delete all of the contents.
+   * 
+   * **Notes:**
+   * - Authenticated user should have [delete permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
+   * - There is no way to un-delete a deleted resource.
+   * 
+  **/
+  deleteResourceById(
+    req: operations.DeleteResourceByIdRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.DeleteResourceByIdResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.DeleteResourceByIdRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/{id}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.DeleteResourceByIdResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.emptyResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * deleteResources - Delete Resources
+   *
+   * Delete multiple file or folder resourcess. Deleting a folder resource will also delete any resources in that folder.
+   * 
+   * **Notes:**
+   * - Authenticated user should have [delete permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
+   * - It is not possible to un-delete a deleted resource.
+   * 
+  **/
+  deleteResources(
+    req: operations.DeleteResourcesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.DeleteResourcesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.DeleteResourcesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.DeleteResourcesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.emptyResponse = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 207:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceMultiResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * download - Download a file
+   *
+   * Downloads a file from the server. Whenever more than one file is being downloaded, the file are first zipped into  a single file before the download starts, and the resulting zip file is named to match the `downloadArchiveName` parameter.
+   * 
+   * **NOTE**: Downloading many files at once  may result in a long delay before the API will return a response. You may need to override default timeout values in your API client, or download files individually.
+  **/
+  download(
+    req: operations.DownloadRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.DownloadResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.DownloadRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/download";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.DownloadResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/octet-stream`)) {
+                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
+                let out: Uint8Array = new Uint8Array(resBody.length);
+                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
+                res.download200ApplicationOctetStreamBinaryString = out;
+            }
+            if (utils.matchContentType(contentType, `application/zip`)) {
+                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
+                let out: Uint8Array = new Uint8Array(resBody.length);
+                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
+                res.download200ApplicationZipBinaryString = out;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * extractFiles - Extract resources
+   *
+   * Extract the contents of a zip archive to a specified directory. Note that this can be a very slow operation.
+   * 
+   * **Notes:**
+   * - You must have  [modify permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions) to do this.
+   * 
+  **/
+  extractFiles(
+    req: operations.ExtractFilesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ExtractFilesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ExtractFilesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/extract";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ExtractFilesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceCollectionResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getPreviewImage - Preview a file
+   *
+   * Returns a resized image of the specified document for supported file types.
+   * 
+   * Image data returned is encoded in base64 format and can be viewed using the `<img>` element. 
+   * 
+   * ```<img src='data:image/jpeg;base64' + meta.image/>```
+   * 
+   * **Notes:**
+   * - Supported files types are `'jpg'`, `'jpeg'`, `'gif'`, `'png'`, `'bmp'`, `'pdf'`, `'psd'`, `'doc'`
+   * 
+  **/
+  getPreviewImage(
+    req: operations.GetPreviewImageRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetPreviewImageResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetPreviewImageRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/preview";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetPreviewImageResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.previewFileResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourceInfo - Get Resource Properties
+   *
+   * Returns details for specified file/folder id or hash, including upload date, size and type. For the full list of returned properties, see the response syntax, below.
+   * 
+   * **Notes:**
+   * - Authenticated user should have list permission.
+   * 
+  **/
+  getResourceInfo(
+    req: operations.GetResourceInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourceInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourceInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourceInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourceInfoById - Get resource metadata
+   *
+   * Returns metadata for specified file/folder path, including upload date, size and type. For the full list of returned properties, see the response syntax, below.
+   * 
+   * **Notes:**
+   * - Authenticated user should have list permission.
+   * 
+  **/
+  getResourceInfoById(
+    req: operations.GetResourceInfoByIdRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourceInfoByIdResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourceInfoByIdRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/{id}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourceInfoByIdResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * listResourceContents - List contents of folder
+   *
+   * Returns a list of files/folders for the parent resource ID. 
+   * 
+   * You can use this API call to get information about all files and folders at a specified path. By default, the API returns basic metadata on each file/folder. An optional `include` parameter forces the return of additional metadata. As with all API calls, the path should be the full path relative to the user's home directory (e.g. ** /myfiles/some_folder**).
+   * 
+   * **Notes:**
+   * - Authenticated user should have list permission.
+   * 
+  **/
+  listResourceContents(
+    req: operations.ListResourceContentsRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ListResourceContentsResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ListResourceContentsRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/list/{id}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ListResourceContentsResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceCollectionResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * listResources - Get a list of all resources
+   *
+   * Returns a list of files and folders in the account. Use the `resource` query parameter to indicate the folder you wish to search in (which can be /). 
+   * 
+   * **Searching for Files and Folders**
+   * 
+   * Using the `name` parameter triggers search mode, which will search the entire directory structure under the provided `resource` for files or folders with names matching the provided `name`. This supports wildcard matching such as:
+   * 
+   * - \*Report\* would find any files or folders with "Report" in the name.
+   * - Data\_202?-09-30.xlsx would match items such as "Data\_2020-09-30.xlsx", "DATA\_2021-09-30.xlsx", "data\_2022-09-30.xlsx" etc.
+   * - sales\* would find any files or folders starting with the word "Sales"
+   * - \*.csv would locate any files ending in ".csv"
+   * - \* matches everything within the directory tree starting at your given `resource`
+   * 
+   * The search is not case-sensitive. Searching for Clients\* or clients\* or CLIENTS\*, etc. will provide identical results
+   * 
+   * If you are using the `name` parameter to run a search, the `type` parameter will be ignored by the server.
+  **/
+  listResources(
+    req: operations.ListResourcesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ListResourcesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ListResourcesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/list";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ListResourcesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceCollectionResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * moveResources - Move resources
+   *
+   * Moves a set of exisiting files/folders (provided by an array `resources`) to the requested `parentResource` in your account.
+   * In the `resources` array, you may specify paths pointing files/folders throughout the account, but everything will be moved to the root of the `parentResource`.
+   * 
+   * **Notes:**
+   * - Authenticated user should have modify permission.
+   * 
+  **/
+  moveResources(
+    req: operations.MoveResourcesRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.MoveResourcesResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.MoveResourcesRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/move";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.MoveResourcesResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceCopyMove = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 207:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceMultiResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * updateResourceById - Rename a resource.
+   *
+   * Update the specified file or folder resource record's "name" parameter. The resource is identified by the numeric resource ID that is passed in as the last segment of the URI.
+   * 
+  **/
+  updateResourceById(
+    req: operations.UpdateResourceByIdRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.UpdateResourceByIdResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.UpdateResourceByIdRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/{id}", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.UpdateResourceByIdResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * uploadFile - Upload a file
+   *
+   * Uploads a file to a specified path, with optional support for resuming a partially uploaded existing file.
+   * 
+  **/
+  uploadFile(
+    req: operations.UploadFileRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.UploadFileResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.UploadFileRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/upload";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.UploadFileResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 201:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.resourceResponse = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

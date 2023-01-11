@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,74 +14,99 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var SetListeNoireSetlisteNoireEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetListeNoireResponse = exports.SetListeNoireRequest = exports.SetListeNoireQueryParams = exports.SetListeNoireSetlisteNoireEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var SetListeNoireSetlisteNoireEnum;
 (function (SetListeNoireSetlisteNoireEnum) {
     SetListeNoireSetlisteNoireEnum["One"] = "1";
-})(SetListeNoireSetlisteNoireEnum || (SetListeNoireSetlisteNoireEnum = {}));
+})(SetListeNoireSetlisteNoireEnum = exports.SetListeNoireSetlisteNoireEnum || (exports.SetListeNoireSetlisteNoireEnum = {}));
 var SetListeNoireQueryParams = /** @class */ (function (_super) {
     __extends(SetListeNoireQueryParams, _super);
     function SetListeNoireQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=keyid" }),
         __metadata("design:type", String)
     ], SetListeNoireQueryParams.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=num" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=num" }),
         __metadata("design:type", String)
     ], SetListeNoireQueryParams.prototype, "num", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setlisteNoire" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setlisteNoire" }),
         __metadata("design:type", String)
     ], SetListeNoireQueryParams.prototype, "setlisteNoire", void 0);
     return SetListeNoireQueryParams;
-}(SpeakeasyBase));
-export { SetListeNoireQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SetListeNoireQueryParams = SetListeNoireQueryParams;
 var SetListeNoireRequest = /** @class */ (function (_super) {
     __extends(SetListeNoireRequest, _super);
     function SetListeNoireRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetListeNoireQueryParams)
     ], SetListeNoireRequest.prototype, "queryParams", void 0);
     return SetListeNoireRequest;
-}(SpeakeasyBase));
-export { SetListeNoireRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetListeNoireRequest = SetListeNoireRequest;
 var SetListeNoireResponse = /** @class */ (function (_super) {
     __extends(SetListeNoireResponse, _super);
     function SetListeNoireResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetListeNoireResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Erreur)
     ], SetListeNoireResponse.prototype, "erreur", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListenoireReponse)
     ], SetListeNoireResponse.prototype, "listenoireReponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetListeNoireResponse.prototype, "statusCode", void 0);
     return SetListeNoireResponse;
-}(SpeakeasyBase));
-export { SetListeNoireResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetListeNoireResponse = SetListeNoireResponse;

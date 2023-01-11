@@ -94,25 +94,25 @@ export class EvaluateRebalanceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  evaluateRebalance400ApplicationJsonAny?: any;
+  evaluateRebalance400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance401ApplicationJsonAny?: any;
+  evaluateRebalance401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance403ApplicationJsonAny?: any;
+  evaluateRebalance403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance404ApplicationJsonAny?: any;
+  evaluateRebalance404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance409ApplicationJsonAny?: any;
+  evaluateRebalance409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance429ApplicationJsonAny?: any;
+  evaluateRebalance429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  evaluateRebalance500ApplicationJsonAny?: any;
+  evaluateRebalance500ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

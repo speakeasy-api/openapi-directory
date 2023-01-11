@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerGameRedZoneStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerGameRedZoneStatsResponse = exports.PlayerGameRedZoneStatsRequest = exports.PlayerGameRedZoneStatsPathParams = exports.PlayerGameRedZoneStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerGameRedZoneStatsFormatEnum;
 (function (PlayerGameRedZoneStatsFormatEnum) {
     PlayerGameRedZoneStatsFormatEnum["Xml"] = "XML";
     PlayerGameRedZoneStatsFormatEnum["Json"] = "JSON";
-})(PlayerGameRedZoneStatsFormatEnum || (PlayerGameRedZoneStatsFormatEnum = {}));
+})(PlayerGameRedZoneStatsFormatEnum = exports.PlayerGameRedZoneStatsFormatEnum || (exports.PlayerGameRedZoneStatsFormatEnum = {}));
 var PlayerGameRedZoneStatsPathParams = /** @class */ (function (_super) {
     __extends(PlayerGameRedZoneStatsPathParams, _super);
     function PlayerGameRedZoneStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerGameRedZoneStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerGameRedZoneStatsPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], PlayerGameRedZoneStatsPathParams.prototype, "week", void 0);
     return PlayerGameRedZoneStatsPathParams;
-}(SpeakeasyBase));
-export { PlayerGameRedZoneStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameRedZoneStatsPathParams = PlayerGameRedZoneStatsPathParams;
 var PlayerGameRedZoneStatsRequest = /** @class */ (function (_super) {
     __extends(PlayerGameRedZoneStatsRequest, _super);
     function PlayerGameRedZoneStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerGameRedZoneStatsPathParams)
     ], PlayerGameRedZoneStatsRequest.prototype, "pathParams", void 0);
     return PlayerGameRedZoneStatsRequest;
-}(SpeakeasyBase));
-export { PlayerGameRedZoneStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameRedZoneStatsRequest = PlayerGameRedZoneStatsRequest;
 var PlayerGameRedZoneStatsResponse = /** @class */ (function (_super) {
     __extends(PlayerGameRedZoneStatsResponse, _super);
     function PlayerGameRedZoneStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerGameRedZoneStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerGameRedZoneStatsResponse.prototype, "playerGameRedZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerGameRedZoneStatsResponse.prototype, "statusCode", void 0);
     return PlayerGameRedZoneStatsResponse;
-}(SpeakeasyBase));
-export { PlayerGameRedZoneStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameRedZoneStatsResponse = PlayerGameRedZoneStatsResponse;

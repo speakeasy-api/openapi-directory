@@ -1,8 +1,11 @@
-export var AnswerReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnswerReasonEnum = void 0;
+var AnswerReasonEnum;
 (function (AnswerReasonEnum) {
     AnswerReasonEnum["OutOfScope"] = "OUT_OF_SCOPE";
     AnswerReasonEnum["BusinessPriorities"] = "BUSINESS_PRIORITIES";
     AnswerReasonEnum["ArchitectureConstraints"] = "ARCHITECTURE_CONSTRAINTS";
     AnswerReasonEnum["Other"] = "OTHER";
     AnswerReasonEnum["None"] = "NONE";
-})(AnswerReasonEnum || (AnswerReasonEnum = {}));
+})(AnswerReasonEnum = exports.AnswerReasonEnum || (exports.AnswerReasonEnum = {}));

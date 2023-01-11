@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClusterDbRevision } from "./clusterdbrevision";
+import { ClusterDbRevisionsList } from "./clusterdbrevisionslist";
 export declare class ClusterDbRevisionsMessage extends SpeakeasyBase {
-    clusterDbRevisions?: ClusterDbRevision[];
+    clusterDbRevisions?: ClusterDbRevisionsList[];
     marker?: string;
 }

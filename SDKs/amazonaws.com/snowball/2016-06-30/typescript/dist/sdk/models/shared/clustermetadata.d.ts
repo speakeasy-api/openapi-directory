@@ -18,11 +18,11 @@ export declare class ClusterMetadata extends SpeakeasyBase {
     description?: string;
     forwardingAddressId?: string;
     jobType?: JobTypeEnum;
-    kmsKeyArn?: string;
+    kmsKeyARN?: string;
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     resources?: JobResource;
-    roleArn?: string;
+    roleARN?: string;
     shippingOption?: ShippingOptionEnum;
     snowballType?: SnowballTypeEnum;
     taxDocuments?: TaxDocuments;

@@ -20,5 +20,5 @@ export class PostOauthV1TokenCreateTokenResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tokenResponseIf?: shared.TokenResponseIf;
+  tokenResponseIF?: shared.TokenResponseIf;
 }

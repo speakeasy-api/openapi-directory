@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse = exports.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest = exports.MetastoreProjectsLocationsServicesRemoveIamPolicySecurity = exports.MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams = exports.MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams = /** @class */ (function (_super) {
     __extends(MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams, _super);
     function MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=resource" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams.prototype, "resource", void 0);
     return MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams;
-}(SpeakeasyBase));
-export { MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams = MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams;
 var MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams = /** @class */ (function (_super) {
     __extends(MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams, _super);
     function MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.prototype, "uploadProtocol", void 0);
     return MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams;
-}(SpeakeasyBase));
-export { MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams = MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams;
 var MetastoreProjectsLocationsServicesRemoveIamPolicySecurity = /** @class */ (function (_super) {
     __extends(MetastoreProjectsLocationsServicesRemoveIamPolicySecurity, _super);
     function MetastoreProjectsLocationsServicesRemoveIamPolicySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicySecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicySecurity.prototype, "oauth2c", void 0);
     return MetastoreProjectsLocationsServicesRemoveIamPolicySecurity;
-}(SpeakeasyBase));
-export { MetastoreProjectsLocationsServicesRemoveIamPolicySecurity };
+}(utils_1.SpeakeasyBase));
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicySecurity = MetastoreProjectsLocationsServicesRemoveIamPolicySecurity;
 var MetastoreProjectsLocationsServicesRemoveIamPolicyRequest = /** @class */ (function (_super) {
     __extends(MetastoreProjectsLocationsServicesRemoveIamPolicyRequest, _super);
     function MetastoreProjectsLocationsServicesRemoveIamPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MetastoreProjectsLocationsServicesRemoveIamPolicySecurity)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.prototype, "security", void 0);
     return MetastoreProjectsLocationsServicesRemoveIamPolicyRequest;
-}(SpeakeasyBase));
-export { MetastoreProjectsLocationsServicesRemoveIamPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest = MetastoreProjectsLocationsServicesRemoveIamPolicyRequest;
 var MetastoreProjectsLocationsServicesRemoveIamPolicyResponse = /** @class */ (function (_super) {
     __extends(MetastoreProjectsLocationsServicesRemoveIamPolicyResponse, _super);
     function MetastoreProjectsLocationsServicesRemoveIamPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RemoveIamPolicyResponse)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyResponse.prototype, "removeIamPolicyResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetastoreProjectsLocationsServicesRemoveIamPolicyResponse.prototype, "statusCode", void 0);
     return MetastoreProjectsLocationsServicesRemoveIamPolicyResponse;
-}(SpeakeasyBase));
-export { MetastoreProjectsLocationsServicesRemoveIamPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse = MetastoreProjectsLocationsServicesRemoveIamPolicyResponse;

@@ -22,5 +22,5 @@ export class GetNetworkApplianceVlansResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceVlans200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceVlans200ApplicationJSONObject?: Record<string, any>;
 }

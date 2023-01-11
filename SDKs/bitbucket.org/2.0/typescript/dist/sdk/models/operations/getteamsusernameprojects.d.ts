@@ -15,6 +15,6 @@ export declare class GetTeamsUsernameProjectsRequest extends SpeakeasyBase {
 export declare class GetTeamsUsernameProjectsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedProjects?: shared.PaginatedProjects;
 }

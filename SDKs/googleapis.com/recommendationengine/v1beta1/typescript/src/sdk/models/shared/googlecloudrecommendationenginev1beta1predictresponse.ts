@@ -15,7 +15,7 @@ export class GoogleCloudRecommendationengineV1beta1PredictResponse extends Speak
   itemsMissingInCatalog?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=nextPageToken" })
   nextPageToken?: string;

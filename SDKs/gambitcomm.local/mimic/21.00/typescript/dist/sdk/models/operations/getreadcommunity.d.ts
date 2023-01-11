@@ -8,5 +8,5 @@ export declare class GetReadCommunityRequest extends SpeakeasyBase {
 export declare class GetReadCommunityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getReadCommunity200ApplicationJsonString?: string;
+    getReadCommunity200ApplicationJSONString?: string;
 }

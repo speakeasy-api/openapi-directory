@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class FeatureTransformation extends SpeakeasyBase {
     creationDateTime?: Date;
-    defaultParameters?: Map<string, string>;
+    defaultParameters?: Record<string, string>;
     featureTransformationArn?: string;
     lastUpdatedDateTime?: Date;
     name?: string;

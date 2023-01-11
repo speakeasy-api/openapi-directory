@@ -8,7 +8,7 @@ export class ApplicationsGetPathParams extends SpeakeasyBase {
   applicationObjectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -29,7 +29,7 @@ export class ApplicationsGetRequest extends SpeakeasyBase {
 
 export class ApplicationsGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  application?: Map<string, Map<string, any>>;
+  application?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   contentType: string;

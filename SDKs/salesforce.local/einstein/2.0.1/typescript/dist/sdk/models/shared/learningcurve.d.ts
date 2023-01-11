@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class LearningCurve extends SpeakeasyBase {
-    epoch?: Map<string, any>;
-    epochResults?: Map<string, any>;
-    metricsData?: Map<string, any>;
+    epoch?: Record<string, any>;
+    epochResults?: Record<string, any>;
+    metricsData?: Record<string, any>;
     object?: string;
 }

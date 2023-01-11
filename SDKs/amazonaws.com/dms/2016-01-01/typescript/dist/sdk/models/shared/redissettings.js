@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RedisAuthTypeValueEnum } from "./redisauthtypevalueenum";
-import { SslSecurityProtocolValueEnum } from "./sslsecurityprotocolvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RedisSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var redisauthtypevalueenum_1 = require("./redisauthtypevalueenum");
+var sslsecurityprotocolvalueenum_1 = require("./sslsecurityprotocolvalueenum");
 // RedisSettings
 /**
  * Provides information that defines a Redis target endpoint.
@@ -35,33 +38,33 @@ var RedisSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthPassword" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "authPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthType" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthUserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthUserName" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "authUserName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], RedisSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslCaCertificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslCaCertificateArn" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "sslCaCertificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SslSecurityProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SslSecurityProtocol" }),
         __metadata("design:type", String)
     ], RedisSettings.prototype, "sslSecurityProtocol", void 0);
     return RedisSettings;
-}(SpeakeasyBase));
-export { RedisSettings };
+}(utils_1.SpeakeasyBase));
+exports.RedisSettings = RedisSettings;

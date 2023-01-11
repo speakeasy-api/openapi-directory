@@ -59,5 +59,5 @@ export class PostApplicationChargeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postApplicationCharge201ApplicationJsonObject?: PostApplicationCharge201ApplicationJson;
+  postApplicationCharge201ApplicationJSONObject?: PostApplicationCharge201ApplicationJson;
 }

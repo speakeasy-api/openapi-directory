@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeRulesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeRulesResponse = exports.GetDescribeRulesRequest = exports.GetDescribeRulesHeaders = exports.GetDescribeRulesQueryParams = exports.GetDescribeRulesVersionEnum = exports.GetDescribeRulesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeRulesActionEnum;
 (function (GetDescribeRulesActionEnum) {
     GetDescribeRulesActionEnum["DescribeRules"] = "DescribeRules";
-})(GetDescribeRulesActionEnum || (GetDescribeRulesActionEnum = {}));
-export var GetDescribeRulesVersionEnum;
+})(GetDescribeRulesActionEnum = exports.GetDescribeRulesActionEnum || (exports.GetDescribeRulesActionEnum = {}));
+var GetDescribeRulesVersionEnum;
 (function (GetDescribeRulesVersionEnum) {
     GetDescribeRulesVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(GetDescribeRulesVersionEnum || (GetDescribeRulesVersionEnum = {}));
+})(GetDescribeRulesVersionEnum = exports.GetDescribeRulesVersionEnum || (exports.GetDescribeRulesVersionEnum = {}));
 var GetDescribeRulesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeRulesQueryParams, _super);
     function GetDescribeRulesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeRulesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ListenerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ListenerArn" }),
         __metadata("design:type", String)
     ], GetDescribeRulesQueryParams.prototype, "listenerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeRulesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PageSize" }),
         __metadata("design:type", Number)
     ], GetDescribeRulesQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RuleArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RuleArns" }),
         __metadata("design:type", Array)
     ], GetDescribeRulesQueryParams.prototype, "ruleArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeRulesQueryParams.prototype, "version", void 0);
     return GetDescribeRulesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeRulesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeRulesQueryParams = GetDescribeRulesQueryParams;
 var GetDescribeRulesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeRulesHeaders, _super);
     function GetDescribeRulesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeRulesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeRulesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeRulesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeRulesHeaders = GetDescribeRulesHeaders;
 var GetDescribeRulesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeRulesRequest, _super);
     function GetDescribeRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeRulesQueryParams)
     ], GetDescribeRulesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeRulesHeaders)
     ], GetDescribeRulesRequest.prototype, "headers", void 0);
     return GetDescribeRulesRequest;
-}(SpeakeasyBase));
-export { GetDescribeRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeRulesRequest = GetDescribeRulesRequest;
 var GetDescribeRulesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeRulesResponse, _super);
     function GetDescribeRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeRulesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeRulesResponse.prototype, "statusCode", void 0);
     return GetDescribeRulesResponse;
-}(SpeakeasyBase));
-export { GetDescribeRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeRulesResponse = GetDescribeRulesResponse;

@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -47,19 +46,19 @@ export class PotsHoldingsAndTransactions {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -67,49 +66,48 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot200ApplicationJsonAny = httpRes?.data;
+                res.updatePot200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot400ApplicationJsonAny = httpRes?.data;
+                res.updatePot400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot401ApplicationJsonAny = httpRes?.data;
+                res.updatePot401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot403ApplicationJsonAny = httpRes?.data;
+                res.updatePot403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot404ApplicationJsonAny = httpRes?.data;
+                res.updatePot404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot409ApplicationJsonAny = httpRes?.data;
+                res.updatePot409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot429ApplicationJsonAny = httpRes?.data;
+                res.updatePot429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updatePot500ApplicationJsonAny = httpRes?.data;
+                res.updatePot500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -138,18 +136,18 @@ export class PotsHoldingsAndTransactions {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -157,44 +155,43 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 201:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot201ApplicationJsonAny = httpRes?.data;
+                res.createPot201ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot400ApplicationJsonAny = httpRes?.data;
+                res.createPot400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot401ApplicationJsonAny = httpRes?.data;
+                res.createPot401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot403ApplicationJsonAny = httpRes?.data;
+                res.createPot403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot409ApplicationJsonAny = httpRes?.data;
+                res.createPot409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot429ApplicationJsonAny = httpRes?.data;
+                res.createPot429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createPot500ApplicationJsonAny = httpRes?.data;
+                res.createPot500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -213,14 +210,17 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/{pot_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -228,39 +228,38 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot200ApplicationJsonAny = httpRes?.data;
+                res.getPot200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot401ApplicationJsonAny = httpRes?.data;
+                res.getPot401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot403ApplicationJsonAny = httpRes?.data;
+                res.getPot403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot404ApplicationJsonAny = httpRes?.data;
+                res.getPot404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot429ApplicationJsonAny = httpRes?.data;
+                res.getPot429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPot500ApplicationJsonAny = httpRes?.data;
+                res.getPot500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -281,14 +280,17 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/{pot_id}/getHoldings", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -296,44 +298,43 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings200ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings400ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings401ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings403ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings404ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings429ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotHoldings500ApplicationJsonAny = httpRes?.data;
+                res.getPotHoldings500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -354,6 +355,7 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/{pot_id}/getTransactions", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
     const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
@@ -363,13 +365,15 @@ export class PotsHoldingsAndTransactions {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -377,39 +381,38 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions200ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions401ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions403ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions404ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions429ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotTransactions500ApplicationJsonAny = httpRes?.data;
+                res.getPotTransactions500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -430,14 +433,17 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/{pot_id}/getValue", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -445,44 +451,43 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue200ApplicationJsonAny = httpRes?.data;
+                res.getPotValue200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue400ApplicationJsonAny = httpRes?.data;
+                res.getPotValue400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue401ApplicationJsonAny = httpRes?.data;
+                res.getPotValue401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue403ApplicationJsonAny = httpRes?.data;
+                res.getPotValue403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue404ApplicationJsonAny = httpRes?.data;
+                res.getPotValue404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue429ApplicationJsonAny = httpRes?.data;
+                res.getPotValue429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPotValue500ApplicationJsonAny = httpRes?.data;
+                res.getPotValue500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -503,6 +508,7 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/getInvestorPots/{investor_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
     const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
@@ -512,13 +518,15 @@ export class PotsHoldingsAndTransactions {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -526,44 +534,43 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots200ApplicationJsonObject = httpRes?.data;
+                res.getPots200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots400ApplicationJsonAny = httpRes?.data;
+                res.getPots400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots401ApplicationJsonAny = httpRes?.data;
+                res.getPots401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots403ApplicationJsonAny = httpRes?.data;
+                res.getPots403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots404ApplicationJsonAny = httpRes?.data;
+                res.getPots404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots429ApplicationJsonAny = httpRes?.data;
+                res.getPots429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getPots500ApplicationJsonAny = httpRes?.data;
+                res.getPots500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -584,14 +591,17 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/all/getHoldings/{investor_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -599,39 +609,38 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings200ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings401ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings403ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings404ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings429ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotHoldings500ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotHoldings500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -652,14 +661,17 @@ export class PotsHoldingsAndTransactions {
     const url: string = utils.generateURL(baseURL, "/tenant/pots/v1/all/getValue/{investor_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -667,44 +679,43 @@ export class PotsHoldingsAndTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue200ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue400ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue401ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue403ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue404ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue429ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getTotalPotValue500ApplicationJsonAny = httpRes?.data;
+                res.getTotalPotValue500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

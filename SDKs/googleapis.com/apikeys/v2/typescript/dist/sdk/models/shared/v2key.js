@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V2Restrictions } from "./v2restrictions";
-// V2KeyInput
-/**
- * The representation of a key managed by the API Keys API.
-**/
-var V2KeyInput = /** @class */ (function (_super) {
-    __extends(V2KeyInput, _super);
-    function V2KeyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
-    ], V2KeyInput.prototype, "annotations", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], V2KeyInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
-        __metadata("design:type", V2Restrictions)
-    ], V2KeyInput.prototype, "restrictions", void 0);
-    return V2KeyInput;
-}(SpeakeasyBase));
-export { V2KeyInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V2KeyInput = exports.V2Key = void 0;
+var utils_1 = require("../../../internal/utils");
+var v2restrictions_1 = require("./v2restrictions");
 // V2Key
 /**
  * The representation of a key managed by the API Keys API.
@@ -58,45 +37,69 @@ var V2Key = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], V2Key.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteTime" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "deleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyString" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "keyString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
-        __metadata("design:type", V2Restrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
+        __metadata("design:type", v2restrictions_1.V2Restrictions)
     ], V2Key.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], V2Key.prototype, "updateTime", void 0);
     return V2Key;
-}(SpeakeasyBase));
-export { V2Key };
+}(utils_1.SpeakeasyBase));
+exports.V2Key = V2Key;
+// V2KeyInput
+/**
+ * The representation of a key managed by the API Keys API.
+**/
+var V2KeyInput = /** @class */ (function (_super) {
+    __extends(V2KeyInput, _super);
+    function V2KeyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
+    ], V2KeyInput.prototype, "annotations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], V2KeyInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
+        __metadata("design:type", v2restrictions_1.V2Restrictions)
+    ], V2KeyInput.prototype, "restrictions", void 0);
+    return V2KeyInput;
+}(utils_1.SpeakeasyBase));
+exports.V2KeyInput = V2KeyInput;

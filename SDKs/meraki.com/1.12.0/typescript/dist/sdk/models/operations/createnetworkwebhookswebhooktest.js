@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkWebhooksWebhookTestResponse = exports.CreateNetworkWebhooksWebhookTestRequest = exports.CreateNetworkWebhooksWebhookTestRequestBody = exports.CreateNetworkWebhooksWebhookTestPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkWebhooksWebhookTestPathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkWebhooksWebhookTestPathParams, _super);
     function CreateNetworkWebhooksWebhookTestPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkWebhooksWebhookTestPathParams.prototype, "networkId", void 0);
     return CreateNetworkWebhooksWebhookTestPathParams;
-}(SpeakeasyBase));
-export { CreateNetworkWebhooksWebhookTestPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkWebhooksWebhookTestPathParams = CreateNetworkWebhooksWebhookTestPathParams;
 var CreateNetworkWebhooksWebhookTestRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkWebhooksWebhookTestRequestBody, _super);
     function CreateNetworkWebhooksWebhookTestRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedSecret" }),
         __metadata("design:type", String)
     ], CreateNetworkWebhooksWebhookTestRequestBody.prototype, "sharedSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CreateNetworkWebhooksWebhookTestRequestBody.prototype, "url", void 0);
     return CreateNetworkWebhooksWebhookTestRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkWebhooksWebhookTestRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkWebhooksWebhookTestRequestBody = CreateNetworkWebhooksWebhookTestRequestBody;
 var CreateNetworkWebhooksWebhookTestRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkWebhooksWebhookTestRequest, _super);
     function CreateNetworkWebhooksWebhookTestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkWebhooksWebhookTestPathParams)
     ], CreateNetworkWebhooksWebhookTestRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkWebhooksWebhookTestRequestBody)
     ], CreateNetworkWebhooksWebhookTestRequest.prototype, "request", void 0);
     return CreateNetworkWebhooksWebhookTestRequest;
-}(SpeakeasyBase));
-export { CreateNetworkWebhooksWebhookTestRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkWebhooksWebhookTestRequest = CreateNetworkWebhooksWebhookTestRequest;
 var CreateNetworkWebhooksWebhookTestResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkWebhooksWebhookTestResponse, _super);
     function CreateNetworkWebhooksWebhookTestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkWebhooksWebhookTestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkWebhooksWebhookTestResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkWebhooksWebhookTestResponse.prototype, "createNetworkWebhooksWebhookTest201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkWebhooksWebhookTestResponse.prototype, "createNetworkWebhooksWebhookTest201ApplicationJSONObject", void 0);
     return CreateNetworkWebhooksWebhookTestResponse;
-}(SpeakeasyBase));
-export { CreateNetworkWebhooksWebhookTestResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkWebhooksWebhookTestResponse = CreateNetworkWebhooksWebhookTestResponse;

@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VehicleProfileIdEnum } from "./vehicleprofileidenum";
 
 
 export enum RouteRequestAlgorithmEnum {
@@ -88,7 +87,7 @@ export class RouteRequest extends SpeakeasyBase {
   snapPreventions?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=vehicle" })
-  vehicle?: VehicleProfileIdEnum;
+  vehicle?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=weighting" })
   weighting?: string;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetListingsByDealerListingsByDateGetQueryParams extends SpeakeasyBase {
-    dealerId: number;
+    dealerID: number;
     endDate: Date;
     jwt: string;
     newCars?: boolean;

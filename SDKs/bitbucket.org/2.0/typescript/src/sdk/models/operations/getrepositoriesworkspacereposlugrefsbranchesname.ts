@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branch?: Map<string, any>;
+  branch?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

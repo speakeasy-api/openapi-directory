@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1IssueAssignment } from "./googlecloudcontactcenterinsightsv1issueassignment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IssueModelResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1issueassignment_1 = require("./googlecloudcontactcenterinsightsv1issueassignment");
 // GoogleCloudContactcenterinsightsV1IssueModelResult
 /**
  * Issue Modeling result on a conversation.
@@ -34,13 +37,13 @@ var GoogleCloudContactcenterinsightsV1IssueModelResult = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueModel" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelResult.prototype, "issueModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues", elemType: GoogleCloudContactcenterinsightsV1IssueAssignment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues", elemType: googlecloudcontactcenterinsightsv1issueassignment_1.GoogleCloudContactcenterinsightsV1IssueAssignment }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1IssueModelResult.prototype, "issues", void 0);
     return GoogleCloudContactcenterinsightsV1IssueModelResult;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModelResult };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModelResult = GoogleCloudContactcenterinsightsV1IssueModelResult;

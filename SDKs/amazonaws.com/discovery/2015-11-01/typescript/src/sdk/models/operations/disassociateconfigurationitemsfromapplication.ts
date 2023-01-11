@@ -51,7 +51,7 @@ export class DisassociateConfigurationItemsFromApplicationResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateConfigurationItemsFromApplicationResponse?: Map<string, any>;
+  disassociateConfigurationItemsFromApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   homeRegionNotSetException?: any;

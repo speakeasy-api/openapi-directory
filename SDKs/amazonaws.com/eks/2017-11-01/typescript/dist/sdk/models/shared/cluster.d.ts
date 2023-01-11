@@ -26,6 +26,6 @@ export declare class Cluster extends SpeakeasyBase {
     resourcesVpcConfig?: VpcConfigResponse;
     roleArn?: string;
     status?: ClusterStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     version?: string;
 }

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare class GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams extends SpeakeasyBase {
+export declare class GetMobiletileV2LocationsTilesMobileZxyPbfGetPathParams extends SpeakeasyBase {
     x: number;
     y: number;
     z: number;
 }
-export declare class GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams extends SpeakeasyBase {
+export declare class GetMobiletileV2LocationsTilesMobileZxyPbfGetQueryParams extends SpeakeasyBase {
     dateFrom: any;
     dateTo: any;
     isAnalysis?: boolean;
@@ -16,11 +16,11 @@ export declare class GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams ext
     parameter?: any;
     project?: number;
 }
-export declare class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest extends SpeakeasyBase {
-    pathParams: GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams;
-    queryParams: GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams;
+export declare class GetMobiletileV2LocationsTilesMobileZxyPbfGetRequest extends SpeakeasyBase {
+    pathParams: GetMobiletileV2LocationsTilesMobileZxyPbfGetPathParams;
+    queryParams: GetMobiletileV2LocationsTilesMobileZxyPbfGetQueryParams;
 }
-export declare class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse extends SpeakeasyBase {
+export declare class GetMobiletileV2LocationsTilesMobileZxyPbfGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;

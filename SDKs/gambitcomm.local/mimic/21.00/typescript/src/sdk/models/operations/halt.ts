@@ -22,5 +22,5 @@ export class HaltResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  halt200ApplicationJsonString?: string;
+  halt200ApplicationJSONString?: string;
 }

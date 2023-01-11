@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeType } from "./computetype";
-import { RootStorage } from "./rootstorage";
-import { UserStorage } from "./userstorage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceBundle = void 0;
+var utils_1 = require("../../../internal/utils");
+var computetype_1 = require("./computetype");
+var rootstorage_1 = require("./rootstorage");
+var userstorage_1 = require("./userstorage");
 // WorkspaceBundle
 /**
  * Describes a WorkSpace bundle.
@@ -36,45 +39,45 @@ var WorkspaceBundle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BundleId" }),
         __metadata("design:type", String)
     ], WorkspaceBundle.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeType" }),
-        __metadata("design:type", ComputeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeType" }),
+        __metadata("design:type", computetype_1.ComputeType)
     ], WorkspaceBundle.prototype, "computeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], WorkspaceBundle.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], WorkspaceBundle.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageId" }),
         __metadata("design:type", String)
     ], WorkspaceBundle.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTime" }),
         __metadata("design:type", Date)
     ], WorkspaceBundle.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], WorkspaceBundle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], WorkspaceBundle.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootStorage" }),
-        __metadata("design:type", RootStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootStorage" }),
+        __metadata("design:type", rootstorage_1.RootStorage)
     ], WorkspaceBundle.prototype, "rootStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserStorage" }),
-        __metadata("design:type", UserStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserStorage" }),
+        __metadata("design:type", userstorage_1.UserStorage)
     ], WorkspaceBundle.prototype, "userStorage", void 0);
     return WorkspaceBundle;
-}(SpeakeasyBase));
-export { WorkspaceBundle };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceBundle = WorkspaceBundle;

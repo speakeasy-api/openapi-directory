@@ -55,8 +55,8 @@ export class PostPortfolioOptimizationMostDiversifiedResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMostDiversified200ApplicationJsonObject?: PostPortfolioOptimizationMostDiversified200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMostDiversified200ApplicationJSONObject?: PostPortfolioOptimizationMostDiversified200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchStatusEnum } from "./launchstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParticipatingServer = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchstatusenum_1 = require("./launchstatusenum");
 // ParticipatingServer
 /**
  * Server participating in Job.
@@ -34,13 +37,13 @@ var ParticipatingServer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchStatus" }),
         __metadata("design:type", String)
     ], ParticipatingServer.prototype, "launchStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceServerID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceServerID" }),
         __metadata("design:type", String)
-    ], ParticipatingServer.prototype, "sourceServerId", void 0);
+    ], ParticipatingServer.prototype, "sourceServerID", void 0);
     return ParticipatingServer;
-}(SpeakeasyBase));
-export { ParticipatingServer };
+}(utils_1.SpeakeasyBase));
+exports.ParticipatingServer = ParticipatingServer;

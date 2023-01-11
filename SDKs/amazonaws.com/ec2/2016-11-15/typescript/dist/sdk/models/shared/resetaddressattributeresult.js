@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressAttribute } from "./addressattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetAddressAttributeResult = exports.ResetAddressAttributeResultAddress = exports.ResetAddressAttributeResultAddressPtrRecordUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+// ResetAddressAttributeResultAddressPtrRecordUpdate
+/**
+ * The updated PTR record for the IP address.
+**/
+var ResetAddressAttributeResultAddressPtrRecordUpdate = /** @class */ (function (_super) {
+    __extends(ResetAddressAttributeResultAddressPtrRecordUpdate, _super);
+    function ResetAddressAttributeResultAddressPtrRecordUpdate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddressPtrRecordUpdate.prototype, "reason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddressPtrRecordUpdate.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddressPtrRecordUpdate.prototype, "value", void 0);
+    return ResetAddressAttributeResultAddressPtrRecordUpdate;
+}(utils_1.SpeakeasyBase));
+exports.ResetAddressAttributeResultAddressPtrRecordUpdate = ResetAddressAttributeResultAddressPtrRecordUpdate;
+// ResetAddressAttributeResultAddress
+/**
+ * Information about the IP address.
+**/
+var ResetAddressAttributeResultAddress = /** @class */ (function (_super) {
+    __extends(ResetAddressAttributeResultAddress, _super);
+    function ResetAddressAttributeResultAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddress.prototype, "allocationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddress.prototype, "ptrRecord", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ResetAddressAttributeResultAddressPtrRecordUpdate)
+    ], ResetAddressAttributeResultAddress.prototype, "ptrRecordUpdate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ResetAddressAttributeResultAddress.prototype, "publicIp", void 0);
+    return ResetAddressAttributeResultAddress;
+}(utils_1.SpeakeasyBase));
+exports.ResetAddressAttributeResultAddress = ResetAddressAttributeResultAddress;
 var ResetAddressAttributeResult = /** @class */ (function (_super) {
     __extends(ResetAddressAttributeResult, _super);
     function ResetAddressAttributeResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AddressAttribute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ResetAddressAttributeResultAddress)
     ], ResetAddressAttributeResult.prototype, "address", void 0);
     return ResetAddressAttributeResult;
-}(SpeakeasyBase));
-export { ResetAddressAttributeResult };
+}(utils_1.SpeakeasyBase));
+exports.ResetAddressAttributeResult = ResetAddressAttributeResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ItemCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Item = exports.ItemVault = exports.ItemUrls = exports.ItemStateEnum = exports.ItemCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ItemCategoryEnum;
 (function (ItemCategoryEnum) {
     ItemCategoryEnum["Login"] = "LOGIN";
     ItemCategoryEnum["Password"] = "PASSWORD";
@@ -45,93 +48,93 @@ export var ItemCategoryEnum;
     ItemCategoryEnum["EmailAccount"] = "EMAIL_ACCOUNT";
     ItemCategoryEnum["SocialSecurityNumber"] = "SOCIAL_SECURITY_NUMBER";
     ItemCategoryEnum["Custom"] = "CUSTOM";
-})(ItemCategoryEnum || (ItemCategoryEnum = {}));
-export var ItemStateEnum;
+})(ItemCategoryEnum = exports.ItemCategoryEnum || (exports.ItemCategoryEnum = {}));
+var ItemStateEnum;
 (function (ItemStateEnum) {
     ItemStateEnum["Archived"] = "ARCHIVED";
     ItemStateEnum["Deleted"] = "DELETED";
-})(ItemStateEnum || (ItemStateEnum = {}));
+})(ItemStateEnum = exports.ItemStateEnum || (exports.ItemStateEnum = {}));
 var ItemUrls = /** @class */ (function (_super) {
     __extends(ItemUrls, _super);
     function ItemUrls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ItemUrls.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], ItemUrls.prototype, "primary", void 0);
     return ItemUrls;
-}(SpeakeasyBase));
-export { ItemUrls };
+}(utils_1.SpeakeasyBase));
+exports.ItemUrls = ItemUrls;
 var ItemVault = /** @class */ (function (_super) {
     __extends(ItemVault, _super);
     function ItemVault() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ItemVault.prototype, "id", void 0);
     return ItemVault;
-}(SpeakeasyBase));
-export { ItemVault };
+}(utils_1.SpeakeasyBase));
+exports.ItemVault = ItemVault;
 var Item = /** @class */ (function (_super) {
     __extends(Item, _super);
     function Item() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], Item.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Item.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favorite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favorite" }),
         __metadata("design:type", Boolean)
     ], Item.prototype, "favorite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Item.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastEditedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastEditedBy" }),
         __metadata("design:type", String)
     ], Item.prototype, "lastEditedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Item.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Item.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Item.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Item.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urls", elemType: ItemUrls }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urls", elemType: ItemUrls }),
         __metadata("design:type", Array)
     ], Item.prototype, "urls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vault" }),
         __metadata("design:type", ItemVault)
     ], Item.prototype, "vault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], Item.prototype, "version", void 0);
     return Item;
-}(SpeakeasyBase));
-export { Item };
+}(utils_1.SpeakeasyBase));
+exports.Item = Item;

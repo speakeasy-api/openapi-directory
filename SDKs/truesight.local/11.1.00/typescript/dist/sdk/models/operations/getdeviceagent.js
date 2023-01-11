@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceAgentResponse = exports.GetDeviceAgentRequest = exports.GetDeviceAgentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceAgentPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceAgentPathParams, _super);
     function GetDeviceAgentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], GetDeviceAgentPathParams.prototype, "deviceId", void 0);
     return GetDeviceAgentPathParams;
-}(SpeakeasyBase));
-export { GetDeviceAgentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAgentPathParams = GetDeviceAgentPathParams;
 var GetDeviceAgentRequest = /** @class */ (function (_super) {
     __extends(GetDeviceAgentRequest, _super);
     function GetDeviceAgentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceAgentPathParams)
     ], GetDeviceAgentRequest.prototype, "pathParams", void 0);
     return GetDeviceAgentRequest;
-}(SpeakeasyBase));
-export { GetDeviceAgentRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAgentRequest = GetDeviceAgentRequest;
 var GetDeviceAgentResponse = /** @class */ (function (_super) {
     __extends(GetDeviceAgentResponse, _super);
     function GetDeviceAgentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeviceAgentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceAgentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceAgentResponse.prototype, "statusCode", void 0);
     return GetDeviceAgentResponse;
-}(SpeakeasyBase));
-export { GetDeviceAgentResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceAgentResponse = GetDeviceAgentResponse;

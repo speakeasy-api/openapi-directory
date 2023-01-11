@@ -16,5 +16,5 @@ export declare class ExtrasImageAttachmentsListRequest extends SpeakeasyBase {
 export declare class ExtrasImageAttachmentsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasImageAttachmentsList200ApplicationJsonObject?: ExtrasImageAttachmentsList200ApplicationJson;
+    extrasImageAttachmentsList200ApplicationJSONObject?: ExtrasImageAttachmentsList200ApplicationJson;
 }

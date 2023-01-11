@@ -48,6 +48,6 @@ export declare class GetSectionFormatRequest extends SpeakeasyBase {
 }
 export declare class GetSectionFormatResponse extends SpeakeasyBase {
     contentType: string;
-    getSectionFormat200ApplicationJsonObject?: GetSectionFormat200ApplicationJson;
     statusCode: number;
+    getSectionFormat200ApplicationJSONObject?: GetSectionFormat200ApplicationJson;
 }

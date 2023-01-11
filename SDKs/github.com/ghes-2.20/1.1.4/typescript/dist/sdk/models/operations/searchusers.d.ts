@@ -28,7 +28,7 @@ export declare class SearchUsersRequest extends SpeakeasyBase {
 export declare class SearchUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchUsers200ApplicationJsonObject?: SearchUsers200ApplicationJson;
-    searchUsers503ApplicationJsonObject?: SearchUsers503ApplicationJson;
+    searchUsers200ApplicationJSONObject?: SearchUsers200ApplicationJson;
+    searchUsers503ApplicationJSONObject?: SearchUsers503ApplicationJson;
     validationError?: shared.ValidationError;
 }

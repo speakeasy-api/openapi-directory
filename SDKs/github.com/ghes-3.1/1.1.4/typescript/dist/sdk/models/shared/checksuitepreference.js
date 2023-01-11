@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MinimalRepository } from "./minimalrepository";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckSuitePreference = exports.CheckSuitePreferencePreferences = exports.CheckSuitePreferencePreferencesAutoTriggerChecks = void 0;
+var utils_1 = require("../../../internal/utils");
+var minimalrepository_1 = require("./minimalrepository");
 var CheckSuitePreferencePreferencesAutoTriggerChecks = /** @class */ (function (_super) {
     __extends(CheckSuitePreferencePreferencesAutoTriggerChecks, _super);
     function CheckSuitePreferencePreferencesAutoTriggerChecks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app_id" }),
         __metadata("design:type", Number)
     ], CheckSuitePreferencePreferencesAutoTriggerChecks.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setting" }),
         __metadata("design:type", Boolean)
     ], CheckSuitePreferencePreferencesAutoTriggerChecks.prototype, "setting", void 0);
     return CheckSuitePreferencePreferencesAutoTriggerChecks;
-}(SpeakeasyBase));
-export { CheckSuitePreferencePreferencesAutoTriggerChecks };
+}(utils_1.SpeakeasyBase));
+exports.CheckSuitePreferencePreferencesAutoTriggerChecks = CheckSuitePreferencePreferencesAutoTriggerChecks;
 var CheckSuitePreferencePreferences = /** @class */ (function (_super) {
     __extends(CheckSuitePreferencePreferences, _super);
     function CheckSuitePreferencePreferences() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_trigger_checks", elemType: CheckSuitePreferencePreferencesAutoTriggerChecks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_trigger_checks", elemType: CheckSuitePreferencePreferencesAutoTriggerChecks }),
         __metadata("design:type", Array)
     ], CheckSuitePreferencePreferences.prototype, "autoTriggerChecks", void 0);
     return CheckSuitePreferencePreferences;
-}(SpeakeasyBase));
-export { CheckSuitePreferencePreferences };
+}(utils_1.SpeakeasyBase));
+exports.CheckSuitePreferencePreferences = CheckSuitePreferencePreferences;
 // CheckSuitePreference
 /**
  * Check suite configuration preferences for a repository.
@@ -62,13 +65,13 @@ var CheckSuitePreference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferences" }),
         __metadata("design:type", CheckSuitePreferencePreferences)
     ], CheckSuitePreference.prototype, "preferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository" }),
-        __metadata("design:type", MinimalRepository)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository" }),
+        __metadata("design:type", minimalrepository_1.MinimalRepository)
     ], CheckSuitePreference.prototype, "repository", void 0);
     return CheckSuitePreference;
-}(SpeakeasyBase));
-export { CheckSuitePreference };
+}(utils_1.SpeakeasyBase));
+exports.CheckSuitePreference = CheckSuitePreference;

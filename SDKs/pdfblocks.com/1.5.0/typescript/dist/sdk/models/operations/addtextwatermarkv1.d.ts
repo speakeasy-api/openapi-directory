@@ -20,7 +20,7 @@ export declare class AddTextWatermarkV1RequestBody extends SpeakeasyBase {
     transparency?: number;
 }
 export declare class AddTextWatermarkV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -32,5 +32,5 @@ export declare class AddTextWatermarkV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     addTextWatermarkV1200ApplicationPdfBinaryString?: Uint8Array;
-    addTextWatermarkV14XxApplicationProblemPlusJsonObject?: AddTextWatermarkV14XxApplicationProblemPlusJson;
+    addTextWatermarkV14XXApplicationProblemPlusJsonObject?: AddTextWatermarkV14XxApplicationProblemPlusJson;
 }

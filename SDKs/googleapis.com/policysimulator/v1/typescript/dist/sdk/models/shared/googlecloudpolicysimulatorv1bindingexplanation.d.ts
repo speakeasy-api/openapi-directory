@@ -30,7 +30,7 @@ export declare enum GoogleCloudPolicysimulatorV1BindingExplanationRolePermission
 export declare class GoogleCloudPolicysimulatorV1BindingExplanation extends SpeakeasyBase {
     access?: GoogleCloudPolicysimulatorV1BindingExplanationAccessEnum;
     condition?: GoogleTypeExpr;
-    memberships?: Map<string, GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership>;
+    memberships?: Record<string, GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership>;
     relevance?: GoogleCloudPolicysimulatorV1BindingExplanationRelevanceEnum;
     role?: string;
     rolePermission?: GoogleCloudPolicysimulatorV1BindingExplanationRolePermissionEnum;

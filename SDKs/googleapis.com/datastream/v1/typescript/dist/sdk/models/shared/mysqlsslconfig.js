@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MysqlSslConfigInput = exports.MysqlSslConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // MysqlSslConfig
 /**
  * MySQL SSL configuration information.
@@ -33,32 +36,32 @@ var MysqlSslConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
         __metadata("design:type", String)
     ], MysqlSslConfig.prototype, "caCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificateSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificateSet" }),
         __metadata("design:type", Boolean)
     ], MysqlSslConfig.prototype, "caCertificateSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
         __metadata("design:type", String)
     ], MysqlSslConfig.prototype, "clientCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificateSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificateSet" }),
         __metadata("design:type", Boolean)
     ], MysqlSslConfig.prototype, "clientCertificateSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
         __metadata("design:type", String)
     ], MysqlSslConfig.prototype, "clientKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKeySet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKeySet" }),
         __metadata("design:type", Boolean)
     ], MysqlSslConfig.prototype, "clientKeySet", void 0);
     return MysqlSslConfig;
-}(SpeakeasyBase));
-export { MysqlSslConfig };
+}(utils_1.SpeakeasyBase));
+exports.MysqlSslConfig = MysqlSslConfig;
 // MysqlSslConfigInput
 /**
  * MySQL SSL configuration information.
@@ -69,17 +72,17 @@ var MysqlSslConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
         __metadata("design:type", String)
     ], MysqlSslConfigInput.prototype, "caCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
         __metadata("design:type", String)
     ], MysqlSslConfigInput.prototype, "clientCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
         __metadata("design:type", String)
     ], MysqlSslConfigInput.prototype, "clientKey", void 0);
     return MysqlSslConfigInput;
-}(SpeakeasyBase));
-export { MysqlSslConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.MysqlSslConfigInput = MysqlSslConfigInput;

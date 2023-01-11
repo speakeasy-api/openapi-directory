@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV3EventsResponse = exports.GetV3EventsRequest = exports.GetV3EventsHeaders = exports.GetV3EventsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetV3EventsQueryParams = /** @class */ (function (_super) {
     __extends(GetV3EventsQueryParams, _super);
     function GetV3EventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=fields" }),
         __metadata("design:type", Array)
     ], GetV3EventsQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=ids" }),
         __metadata("design:type", Array)
     ], GetV3EventsQueryParams.prototype, "ids", void 0);
     return GetV3EventsQueryParams;
-}(SpeakeasyBase));
-export { GetV3EventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3EventsQueryParams = GetV3EventsQueryParams;
 var GetV3EventsHeaders = /** @class */ (function (_super) {
     __extends(GetV3EventsHeaders, _super);
     function GetV3EventsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], GetV3EventsHeaders.prototype, "acceptLanguage", void 0);
     return GetV3EventsHeaders;
-}(SpeakeasyBase));
-export { GetV3EventsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetV3EventsHeaders = GetV3EventsHeaders;
 var GetV3EventsRequest = /** @class */ (function (_super) {
     __extends(GetV3EventsRequest, _super);
     function GetV3EventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3EventsQueryParams)
     ], GetV3EventsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3EventsHeaders)
     ], GetV3EventsRequest.prototype, "headers", void 0);
     return GetV3EventsRequest;
-}(SpeakeasyBase));
-export { GetV3EventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV3EventsRequest = GetV3EventsRequest;
 var GetV3EventsResponse = /** @class */ (function (_super) {
     __extends(GetV3EventsResponse, _super);
     function GetV3EventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV3EventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV3EventsResponse.prototype, "statusCode", void 0);
     return GetV3EventsResponse;
-}(SpeakeasyBase));
-export { GetV3EventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV3EventsResponse = GetV3EventsResponse;

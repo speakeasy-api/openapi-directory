@@ -16,7 +16,7 @@ export class GetLatestBaseCurrency200ApplicationJson extends SpeakeasyBase {
   date?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rates" })
-  rates?: Map<string, number>;
+  rates?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=time_last_updated" })
   timeLastUpdated?: number;
@@ -43,11 +43,11 @@ export class GetLatestBaseCurrencyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLatestBaseCurrency200ApplicationJsonObject?: GetLatestBaseCurrency200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getLatestBaseCurrency404ApplicationJsonObject?: GetLatestBaseCurrency404ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getLatestBaseCurrency200ApplicationJSONObject?: GetLatestBaseCurrency200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getLatestBaseCurrency404ApplicationJSONObject?: GetLatestBaseCurrency404ApplicationJson;
 }

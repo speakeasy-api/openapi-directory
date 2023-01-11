@@ -29,7 +29,7 @@ export class OrderState extends SpeakeasyBase {
   orderType?: number;
 
   @SpeakeasyMetadata({ data: "json, name=OutsideRTH" })
-  outsideRth?: string;
+  outsideRTH?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Price" })
   price?: number;

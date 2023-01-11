@@ -18,6 +18,6 @@ export declare class VatLevelTwoRequest extends SpeakeasyBase {
 export declare class VatLevelTwoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vatLevelTwo200ApplicationJsonAny?: any;
-    vatLevelTwoDefaultApplicationJsonAny?: any;
+    vatLevelTwo200ApplicationJSONAny?: any;
+    vatLevelTwoDefaultApplicationJSONAny?: any;
 }

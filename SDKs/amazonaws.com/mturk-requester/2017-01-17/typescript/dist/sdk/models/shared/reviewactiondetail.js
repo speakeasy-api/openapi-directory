@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReviewActionStatusEnum } from "./reviewactionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReviewActionDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var reviewactionstatusenum_1 = require("./reviewactionstatusenum");
 // ReviewActionDetail
 /**
  *  Both the AssignmentReviewReport and the HITReviewReport elements contains the ReviewActionDetail data structure. This structure is returned multiple times for each action specified in the Review Policy.
@@ -34,37 +37,37 @@ var ReviewActionDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActionId" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "actionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActionName" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "actionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompleteTime" }),
         __metadata("design:type", Date)
     ], ReviewActionDetail.prototype, "completeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Result" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetId" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetType" }),
         __metadata("design:type", String)
     ], ReviewActionDetail.prototype, "targetType", void 0);
     return ReviewActionDetail;
-}(SpeakeasyBase));
-export { ReviewActionDetail };
+}(utils_1.SpeakeasyBase));
+exports.ReviewActionDetail = ReviewActionDetail;

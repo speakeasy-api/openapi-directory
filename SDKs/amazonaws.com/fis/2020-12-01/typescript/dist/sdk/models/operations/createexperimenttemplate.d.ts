@@ -10,13 +10,13 @@ export declare class CreateExperimentTemplateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class CreateExperimentTemplateRequestBody extends SpeakeasyBase {
-    actions: Map<string, shared.CreateExperimentTemplateActionInput>;
+    actions: Record<string, shared.CreateExperimentTemplateActionInput>;
     clientToken: string;
     description: string;
     roleArn: string;
     stopConditions: shared.CreateExperimentTemplateStopConditionInput[];
-    tags?: Map<string, string>;
-    targets?: Map<string, shared.CreateExperimentTemplateTargetInput>;
+    tags?: Record<string, string>;
+    targets?: Record<string, shared.CreateExperimentTemplateTargetInput>;
 }
 export declare class CreateExperimentTemplateRequest extends SpeakeasyBase {
     headers: CreateExperimentTemplateHeaders;

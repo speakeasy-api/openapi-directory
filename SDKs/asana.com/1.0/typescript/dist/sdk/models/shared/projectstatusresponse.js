@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompact } from "./usercompact";
-export var ProjectStatusResponseColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectStatusResponse = exports.ProjectStatusResponseColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+var ProjectStatusResponseColorEnum;
 (function (ProjectStatusResponseColorEnum) {
     ProjectStatusResponseColorEnum["Green"] = "green";
     ProjectStatusResponseColorEnum["Yellow"] = "yellow";
     ProjectStatusResponseColorEnum["Red"] = "red";
     ProjectStatusResponseColorEnum["Blue"] = "blue";
-})(ProjectStatusResponseColorEnum || (ProjectStatusResponseColorEnum = {}));
+})(ProjectStatusResponseColorEnum = exports.ProjectStatusResponseColorEnum || (exports.ProjectStatusResponseColorEnum = {}));
+// ProjectStatusResponse
+/**
+ * A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+**/
 var ProjectStatusResponse = /** @class */ (function (_super) {
     __extends(ProjectStatusResponse, _super);
     function ProjectStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], ProjectStatusResponse.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ProjectStatusResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], ProjectStatusResponse.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_text" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "htmlText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified_at" }),
         __metadata("design:type", Date)
     ], ProjectStatusResponse.prototype, "modifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ProjectStatusResponse.prototype, "title", void 0);
     return ProjectStatusResponse;
-}(SpeakeasyBase));
-export { ProjectStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectStatusResponse = ProjectStatusResponse;

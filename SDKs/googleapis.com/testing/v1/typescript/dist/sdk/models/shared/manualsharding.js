@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestTargetsForShard } from "./testtargetsforshard";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManualSharding = void 0;
+var utils_1 = require("../../../internal/utils");
+var testtargetsforshard_1 = require("./testtargetsforshard");
 // ManualSharding
 /**
  * Shards test cases into the specified groups of packages, classes, and/or methods. With manual sharding enabled, specifying test targets via environment_variables or in InstrumentationTest is invalid.
@@ -34,9 +37,9 @@ var ManualSharding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTargetsForShard", elemType: TestTargetsForShard }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTargetsForShard", elemType: testtargetsforshard_1.TestTargetsForShard }),
         __metadata("design:type", Array)
     ], ManualSharding.prototype, "testTargetsForShard", void 0);
     return ManualSharding;
-}(SpeakeasyBase));
-export { ManualSharding };
+}(utils_1.SpeakeasyBase));
+exports.ManualSharding = ManualSharding;

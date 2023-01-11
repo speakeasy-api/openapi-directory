@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AsanaNamedResource } from "./asananamedresource";
-import { UserCompact } from "./usercompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventResponse = exports.EventResponseChange = void 0;
+var utils_1 = require("../../../internal/utils");
+var asananamedresource_1 = require("./asananamedresource");
+var usercompact_1 = require("./usercompact");
 // EventResponseChange
 /**
  * Information about the type of change that has occurred. This field is only present when the value of the property `action`, describing the action taken on the **resource**, is `changed`.
@@ -35,28 +38,28 @@ var EventResponseChange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], EventResponseChange.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_value" }),
         __metadata("design:type", Object)
     ], EventResponseChange.prototype, "addedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], EventResponseChange.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_value" }),
         __metadata("design:type", Object)
     ], EventResponseChange.prototype, "newValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removed_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removed_value" }),
         __metadata("design:type", Object)
     ], EventResponseChange.prototype, "removedValue", void 0);
     return EventResponseChange;
-}(SpeakeasyBase));
-export { EventResponseChange };
+}(utils_1.SpeakeasyBase));
+exports.EventResponseChange = EventResponseChange;
 // EventResponse
 /**
  * An *event* is an object representing a change to a resource that was
@@ -105,33 +108,33 @@ var EventResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], EventResponse.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=change" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=change" }),
         __metadata("design:type", EventResponseChange)
     ], EventResponse.prototype, "change", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], EventResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
-        __metadata("design:type", AsanaNamedResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
+        __metadata("design:type", asananamedresource_1.AsanaNamedResource)
     ], EventResponse.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
-        __metadata("design:type", AsanaNamedResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
+        __metadata("design:type", asananamedresource_1.AsanaNamedResource)
     ], EventResponse.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], EventResponse.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], EventResponse.prototype, "user", void 0);
     return EventResponse;
-}(SpeakeasyBase));
-export { EventResponse };
+}(utils_1.SpeakeasyBase));
+exports.EventResponse = EventResponse;

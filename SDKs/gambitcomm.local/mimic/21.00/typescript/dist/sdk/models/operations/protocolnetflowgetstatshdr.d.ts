@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProtocolNetflowGetStatsHdrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowGetStatsHdr200ApplicationJsonStrings?: string[];
+    protocolNetflowGetStatsHdr200ApplicationJSONStrings?: string[];
 }

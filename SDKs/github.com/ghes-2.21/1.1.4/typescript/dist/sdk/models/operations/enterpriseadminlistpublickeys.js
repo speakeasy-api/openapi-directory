@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,84 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var EnterpriseAdminListPublicKeysSortEnum;
-(function (EnterpriseAdminListPublicKeysSortEnum) {
-    EnterpriseAdminListPublicKeysSortEnum["Created"] = "created";
-    EnterpriseAdminListPublicKeysSortEnum["Updated"] = "updated";
-    EnterpriseAdminListPublicKeysSortEnum["Accessed"] = "accessed";
-})(EnterpriseAdminListPublicKeysSortEnum || (EnterpriseAdminListPublicKeysSortEnum = {}));
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminListPublicKeysResponse = exports.EnterpriseAdminListPublicKeysRequest = exports.EnterpriseAdminListPublicKeysQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EnterpriseAdminListPublicKeysQueryParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminListPublicKeysQueryParams, _super);
     function EnterpriseAdminListPublicKeysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], EnterpriseAdminListPublicKeysQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminListPublicKeysQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminListPublicKeysQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=since" }),
         __metadata("design:type", String)
     ], EnterpriseAdminListPublicKeysQueryParams.prototype, "since", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], EnterpriseAdminListPublicKeysQueryParams.prototype, "sort", void 0);
     return EnterpriseAdminListPublicKeysQueryParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminListPublicKeysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminListPublicKeysQueryParams = EnterpriseAdminListPublicKeysQueryParams;
 var EnterpriseAdminListPublicKeysRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminListPublicKeysRequest, _super);
     function EnterpriseAdminListPublicKeysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminListPublicKeysQueryParams)
     ], EnterpriseAdminListPublicKeysRequest.prototype, "queryParams", void 0);
     return EnterpriseAdminListPublicKeysRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminListPublicKeysRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminListPublicKeysRequest = EnterpriseAdminListPublicKeysRequest;
 var EnterpriseAdminListPublicKeysResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminListPublicKeysResponse, _super);
     function EnterpriseAdminListPublicKeysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminListPublicKeysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], EnterpriseAdminListPublicKeysResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminListPublicKeysResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.EnterprisePublicKey }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.EnterprisePublicKey }),
         __metadata("design:type", Array)
     ], EnterpriseAdminListPublicKeysResponse.prototype, "enterprisePublicKeys", void 0);
     return EnterpriseAdminListPublicKeysResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminListPublicKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminListPublicKeysResponse = EnterpriseAdminListPublicKeysResponse;

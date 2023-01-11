@@ -4,8 +4,8 @@ export declare class CreateSolutionRequest extends SpeakeasyBase {
     datasetGroupArn: string;
     eventType?: string;
     name: string;
-    performAutoMl?: boolean;
-    performHpo?: boolean;
+    performAutoML?: boolean;
+    performHPO?: boolean;
     recipeArn?: string;
     solutionConfig?: SolutionConfig;
 }

@@ -14,6 +14,6 @@ export declare class GetRequest extends SpeakeasyBase {
 }
 export declare class GetResponse extends SpeakeasyBase {
     contentType: string;
-    get200TextHtmlString?: string;
     statusCode: number;
+    get200TextHTMLString?: string;
 }

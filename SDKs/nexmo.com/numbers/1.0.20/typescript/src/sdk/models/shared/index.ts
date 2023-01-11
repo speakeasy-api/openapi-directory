@@ -7,6 +7,7 @@ export * from "./numberdetailsupdate";
 export * from "./ownednumber";
 export * from "./response";
 export * from "./response420";
+export * from "./searchpatternenum";
 export * from "./security";
 export * from "./typeenum";
 export * from "./unauthorized";

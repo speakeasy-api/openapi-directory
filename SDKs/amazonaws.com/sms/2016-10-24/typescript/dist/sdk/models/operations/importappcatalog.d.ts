@@ -19,7 +19,7 @@ export declare class ImportAppCatalogRequest extends SpeakeasyBase {
 }
 export declare class ImportAppCatalogResponse extends SpeakeasyBase {
     contentType: string;
-    importAppCatalogResponse?: Map<string, any>;
+    importAppCatalogResponse?: Record<string, any>;
     internalError?: any;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;

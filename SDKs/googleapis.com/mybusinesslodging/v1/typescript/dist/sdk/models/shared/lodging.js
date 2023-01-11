@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,133 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Accessibility } from "./accessibility";
-import { Activities } from "./activities";
-import { GuestUnitFeatures } from "./guestunitfeatures";
-import { Business } from "./business";
-import { LivingArea } from "./livingarea";
-import { Connectivity } from "./connectivity";
-import { Families } from "./families";
-import { FoodAndDrink } from "./foodanddrink";
-import { GuestUnitType } from "./guestunittype";
-import { HealthAndSafety } from "./healthandsafety";
-import { Housekeeping } from "./housekeeping";
-import { LodgingMetadata } from "./lodgingmetadata";
-import { Parking } from "./parking";
-import { Pets } from "./pets";
-import { Policies } from "./policies";
-import { Pools } from "./pools";
-import { Property } from "./property";
-import { Services } from "./services";
-import { SustainabilityInput } from "./sustainability";
-import { Transportation } from "./transportation";
-import { Wellness } from "./wellness";
-import { Sustainability } from "./sustainability";
-// LodgingInput
-/**
- * Lodging of a location that provides accomodations.
-**/
-var LodgingInput = /** @class */ (function (_super) {
-    __extends(LodgingInput, _super);
-    function LodgingInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessibility" }),
-        __metadata("design:type", Accessibility)
-    ], LodgingInput.prototype, "accessibility", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=activities" }),
-        __metadata("design:type", Activities)
-    ], LodgingInput.prototype, "activities", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=allUnits" }),
-        __metadata("design:type", GuestUnitFeatures)
-    ], LodgingInput.prototype, "allUnits", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=business" }),
-        __metadata("design:type", Business)
-    ], LodgingInput.prototype, "business", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonLivingArea" }),
-        __metadata("design:type", LivingArea)
-    ], LodgingInput.prototype, "commonLivingArea", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectivity" }),
-        __metadata("design:type", Connectivity)
-    ], LodgingInput.prototype, "connectivity", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=families" }),
-        __metadata("design:type", Families)
-    ], LodgingInput.prototype, "families", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=foodAndDrink" }),
-        __metadata("design:type", FoodAndDrink)
-    ], LodgingInput.prototype, "foodAndDrink", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestUnits", elemType: GuestUnitType }),
-        __metadata("design:type", Array)
-    ], LodgingInput.prototype, "guestUnits", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthAndSafety" }),
-        __metadata("design:type", HealthAndSafety)
-    ], LodgingInput.prototype, "healthAndSafety", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeeping" }),
-        __metadata("design:type", Housekeeping)
-    ], LodgingInput.prototype, "housekeeping", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", LodgingMetadata)
-    ], LodgingInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], LodgingInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=parking" }),
-        __metadata("design:type", Parking)
-    ], LodgingInput.prototype, "parking", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pets" }),
-        __metadata("design:type", Pets)
-    ], LodgingInput.prototype, "pets", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=policies" }),
-        __metadata("design:type", Policies)
-    ], LodgingInput.prototype, "policies", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pools" }),
-        __metadata("design:type", Pools)
-    ], LodgingInput.prototype, "pools", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=property" }),
-        __metadata("design:type", Property)
-    ], LodgingInput.prototype, "property", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
-        __metadata("design:type", Services)
-    ], LodgingInput.prototype, "services", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=someUnits" }),
-        __metadata("design:type", GuestUnitFeatures)
-    ], LodgingInput.prototype, "someUnits", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sustainability" }),
-        __metadata("design:type", SustainabilityInput)
-    ], LodgingInput.prototype, "sustainability", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=transportation" }),
-        __metadata("design:type", Transportation)
-    ], LodgingInput.prototype, "transportation", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=wellness" }),
-        __metadata("design:type", Wellness)
-    ], LodgingInput.prototype, "wellness", void 0);
-    return LodgingInput;
-}(SpeakeasyBase));
-export { LodgingInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LodgingInput = exports.Lodging = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessibility_1 = require("./accessibility");
+var activities_1 = require("./activities");
+var guestunitfeatures_1 = require("./guestunitfeatures");
+var business_1 = require("./business");
+var livingarea_1 = require("./livingarea");
+var connectivity_1 = require("./connectivity");
+var families_1 = require("./families");
+var foodanddrink_1 = require("./foodanddrink");
+var guestunittype_1 = require("./guestunittype");
+var healthandsafety_1 = require("./healthandsafety");
+var housekeeping_1 = require("./housekeeping");
+var lodgingmetadata_1 = require("./lodgingmetadata");
+var parking_1 = require("./parking");
+var pets_1 = require("./pets");
+var policies_1 = require("./policies");
+var pools_1 = require("./pools");
+var property_1 = require("./property");
+var services_1 = require("./services");
+var sustainability_1 = require("./sustainability");
+var transportation_1 = require("./transportation");
+var wellness_1 = require("./wellness");
+var sustainability_2 = require("./sustainability");
 // Lodging
 /**
  * Lodging of a location that provides accomodations.
@@ -159,97 +58,201 @@ var Lodging = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessibility" }),
-        __metadata("design:type", Accessibility)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessibility" }),
+        __metadata("design:type", accessibility_1.Accessibility)
     ], Lodging.prototype, "accessibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activities" }),
-        __metadata("design:type", Activities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activities" }),
+        __metadata("design:type", activities_1.Activities)
     ], Lodging.prototype, "activities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allUnits" }),
-        __metadata("design:type", GuestUnitFeatures)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allUnits" }),
+        __metadata("design:type", guestunitfeatures_1.GuestUnitFeatures)
     ], Lodging.prototype, "allUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=business" }),
-        __metadata("design:type", Business)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=business" }),
+        __metadata("design:type", business_1.Business)
     ], Lodging.prototype, "business", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonLivingArea" }),
-        __metadata("design:type", LivingArea)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonLivingArea" }),
+        __metadata("design:type", livingarea_1.LivingArea)
     ], Lodging.prototype, "commonLivingArea", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectivity" }),
-        __metadata("design:type", Connectivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectivity" }),
+        __metadata("design:type", connectivity_1.Connectivity)
     ], Lodging.prototype, "connectivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=families" }),
-        __metadata("design:type", Families)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=families" }),
+        __metadata("design:type", families_1.Families)
     ], Lodging.prototype, "families", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foodAndDrink" }),
-        __metadata("design:type", FoodAndDrink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foodAndDrink" }),
+        __metadata("design:type", foodanddrink_1.FoodAndDrink)
     ], Lodging.prototype, "foodAndDrink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestUnits", elemType: GuestUnitType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestUnits", elemType: guestunittype_1.GuestUnitType }),
         __metadata("design:type", Array)
     ], Lodging.prototype, "guestUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthAndSafety" }),
-        __metadata("design:type", HealthAndSafety)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthAndSafety" }),
+        __metadata("design:type", healthandsafety_1.HealthAndSafety)
     ], Lodging.prototype, "healthAndSafety", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeeping" }),
-        __metadata("design:type", Housekeeping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeeping" }),
+        __metadata("design:type", housekeeping_1.Housekeeping)
     ], Lodging.prototype, "housekeeping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", LodgingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", lodgingmetadata_1.LodgingMetadata)
     ], Lodging.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Lodging.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parking" }),
-        __metadata("design:type", Parking)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parking" }),
+        __metadata("design:type", parking_1.Parking)
     ], Lodging.prototype, "parking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pets" }),
-        __metadata("design:type", Pets)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pets" }),
+        __metadata("design:type", pets_1.Pets)
     ], Lodging.prototype, "pets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policies" }),
-        __metadata("design:type", Policies)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policies" }),
+        __metadata("design:type", policies_1.Policies)
     ], Lodging.prototype, "policies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pools" }),
-        __metadata("design:type", Pools)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pools" }),
+        __metadata("design:type", pools_1.Pools)
     ], Lodging.prototype, "pools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=property" }),
-        __metadata("design:type", Property)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=property" }),
+        __metadata("design:type", property_1.Property)
     ], Lodging.prototype, "property", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
-        __metadata("design:type", Services)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
+        __metadata("design:type", services_1.Services)
     ], Lodging.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=someUnits" }),
-        __metadata("design:type", GuestUnitFeatures)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=someUnits" }),
+        __metadata("design:type", guestunitfeatures_1.GuestUnitFeatures)
     ], Lodging.prototype, "someUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sustainability" }),
-        __metadata("design:type", Sustainability)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sustainability" }),
+        __metadata("design:type", sustainability_1.Sustainability)
     ], Lodging.prototype, "sustainability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transportation" }),
-        __metadata("design:type", Transportation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transportation" }),
+        __metadata("design:type", transportation_1.Transportation)
     ], Lodging.prototype, "transportation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wellness" }),
-        __metadata("design:type", Wellness)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wellness" }),
+        __metadata("design:type", wellness_1.Wellness)
     ], Lodging.prototype, "wellness", void 0);
     return Lodging;
-}(SpeakeasyBase));
-export { Lodging };
+}(utils_1.SpeakeasyBase));
+exports.Lodging = Lodging;
+// LodgingInput
+/**
+ * Lodging of a location that provides accomodations.
+**/
+var LodgingInput = /** @class */ (function (_super) {
+    __extends(LodgingInput, _super);
+    function LodgingInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessibility" }),
+        __metadata("design:type", accessibility_1.Accessibility)
+    ], LodgingInput.prototype, "accessibility", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activities" }),
+        __metadata("design:type", activities_1.Activities)
+    ], LodgingInput.prototype, "activities", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allUnits" }),
+        __metadata("design:type", guestunitfeatures_1.GuestUnitFeatures)
+    ], LodgingInput.prototype, "allUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=business" }),
+        __metadata("design:type", business_1.Business)
+    ], LodgingInput.prototype, "business", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonLivingArea" }),
+        __metadata("design:type", livingarea_1.LivingArea)
+    ], LodgingInput.prototype, "commonLivingArea", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectivity" }),
+        __metadata("design:type", connectivity_1.Connectivity)
+    ], LodgingInput.prototype, "connectivity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=families" }),
+        __metadata("design:type", families_1.Families)
+    ], LodgingInput.prototype, "families", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foodAndDrink" }),
+        __metadata("design:type", foodanddrink_1.FoodAndDrink)
+    ], LodgingInput.prototype, "foodAndDrink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestUnits", elemType: guestunittype_1.GuestUnitType }),
+        __metadata("design:type", Array)
+    ], LodgingInput.prototype, "guestUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthAndSafety" }),
+        __metadata("design:type", healthandsafety_1.HealthAndSafety)
+    ], LodgingInput.prototype, "healthAndSafety", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeeping" }),
+        __metadata("design:type", housekeeping_1.Housekeeping)
+    ], LodgingInput.prototype, "housekeeping", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", lodgingmetadata_1.LodgingMetadata)
+    ], LodgingInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], LodgingInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parking" }),
+        __metadata("design:type", parking_1.Parking)
+    ], LodgingInput.prototype, "parking", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pets" }),
+        __metadata("design:type", pets_1.Pets)
+    ], LodgingInput.prototype, "pets", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policies" }),
+        __metadata("design:type", policies_1.Policies)
+    ], LodgingInput.prototype, "policies", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pools" }),
+        __metadata("design:type", pools_1.Pools)
+    ], LodgingInput.prototype, "pools", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=property" }),
+        __metadata("design:type", property_1.Property)
+    ], LodgingInput.prototype, "property", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
+        __metadata("design:type", services_1.Services)
+    ], LodgingInput.prototype, "services", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=someUnits" }),
+        __metadata("design:type", guestunitfeatures_1.GuestUnitFeatures)
+    ], LodgingInput.prototype, "someUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sustainability" }),
+        __metadata("design:type", sustainability_2.SustainabilityInput)
+    ], LodgingInput.prototype, "sustainability", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transportation" }),
+        __metadata("design:type", transportation_1.Transportation)
+    ], LodgingInput.prototype, "transportation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wellness" }),
+        __metadata("design:type", wellness_1.Wellness)
+    ], LodgingInput.prototype, "wellness", void 0);
+    return LodgingInput;
+}(utils_1.SpeakeasyBase));
+exports.LodgingInput = LodgingInput;

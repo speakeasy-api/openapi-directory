@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProtocolTelnetConnectionSignalPathParams extends SpeakeasyBase {
     agentNum: number;
-    connectionId: number;
+    connectionID: number;
     signalName: string;
 }
 export declare class ProtocolTelnetConnectionSignalRequest extends SpeakeasyBase {
@@ -10,5 +10,5 @@ export declare class ProtocolTelnetConnectionSignalRequest extends SpeakeasyBase
 export declare class ProtocolTelnetConnectionSignalResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetConnectionSignal200ApplicationJsonStrings?: string[];
+    protocolTelnetConnectionSignal200ApplicationJSONStrings?: string[];
 }

@@ -1,4 +1,7 @@
-export var ChannelTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelTypeEnum = void 0;
+var ChannelTypeEnum;
 (function (ChannelTypeEnum) {
     ChannelTypeEnum["SingleMaster"] = "SINGLE_MASTER";
-})(ChannelTypeEnum || (ChannelTypeEnum = {}));
+})(ChannelTypeEnum = exports.ChannelTypeEnum || (exports.ChannelTypeEnum = {}));

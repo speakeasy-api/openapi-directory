@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostWalletAccountIdContractResponse = exports.PostWalletAccountIdContractRequest = exports.PostWalletAccountIdContractPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostWalletAccountIdContractPathParams = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdContractPathParams, _super);
     function PostWalletAccountIdContractPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PostWalletAccountIdContractPathParams.prototype, "id", void 0);
     return PostWalletAccountIdContractPathParams;
-}(SpeakeasyBase));
-export { PostWalletAccountIdContractPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdContractPathParams = PostWalletAccountIdContractPathParams;
 var PostWalletAccountIdContractRequest = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdContractRequest, _super);
     function PostWalletAccountIdContractRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostWalletAccountIdContractPathParams)
     ], PostWalletAccountIdContractRequest.prototype, "pathParams", void 0);
     return PostWalletAccountIdContractRequest;
-}(SpeakeasyBase));
-export { PostWalletAccountIdContractRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdContractRequest = PostWalletAccountIdContractRequest;
 var PostWalletAccountIdContractResponse = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdContractResponse, _super);
     function PostWalletAccountIdContractResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostWalletAccountIdContractResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PostWalletAccountIdContractResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostWalletAccountIdContractResponse.prototype, "statusCode", void 0);
     return PostWalletAccountIdContractResponse;
-}(SpeakeasyBase));
-export { PostWalletAccountIdContractResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdContractResponse = PostWalletAccountIdContractResponse;

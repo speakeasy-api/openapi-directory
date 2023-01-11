@@ -13,7 +13,7 @@ export class LogConfiguration extends SpeakeasyBase {
   logDriver: LogDriverEnum;
 
   @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, string>;
+  options?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=secretOptions", elemType: Secret })
   secretOptions?: Secret[];

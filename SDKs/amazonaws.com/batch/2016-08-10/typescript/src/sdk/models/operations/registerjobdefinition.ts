@@ -60,7 +60,7 @@ export class RegisterJobDefinitionRequestBodyContainerProperties extends Speakea
   logConfiguration?: shared.LogConfiguration;
 
   @SpeakeasyMetadata({ data: "json, name=memory" })
-  memory?: number;
+  memory?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=mountPoints", elemType: shared.MountPoint })
   mountPoints?: shared.MountPoint[];
@@ -87,7 +87,7 @@ export class RegisterJobDefinitionRequestBodyContainerProperties extends Speakea
   user?: string;
 
   @SpeakeasyMetadata({ data: "json, name=vcpus" })
-  vcpus?: number;
+  vcpus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=volumes", elemType: shared.Volume })
   volumes?: shared.Volume[];
@@ -149,7 +149,7 @@ export class RegisterJobDefinitionRequestBody extends SpeakeasyBase {
   nodeProperties?: RegisterJobDefinitionRequestBodyNodeProperties;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=platformCapabilities" })
   platformCapabilities?: shared.PlatformCapabilityEnum[];
@@ -161,7 +161,7 @@ export class RegisterJobDefinitionRequestBody extends SpeakeasyBase {
   retryStrategy?: RegisterJobDefinitionRequestBodyRetryStrategy;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=timeout" })
   timeout?: RegisterJobDefinitionRequestBodyTimeout;

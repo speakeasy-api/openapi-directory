@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class SlsaRecipe extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=arguments" })
-  arguments?: Map<string, any>;
+  arguments?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=definedInMaterial" })
   definedInMaterial?: string;
@@ -17,7 +17,7 @@ export class SlsaRecipe extends SpeakeasyBase {
   entryPoint?: string;
 
   @SpeakeasyMetadata({ data: "json, name=environment" })
-  environment?: Map<string, any>;
+  environment?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;

@@ -15,5 +15,5 @@ export declare class PatchAppsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     appResponse?: shared.AppResponse;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

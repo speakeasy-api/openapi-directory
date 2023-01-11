@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindAllAvailableDataForSomeEntitiesResponse = exports.FindAllAvailableDataForSomeEntitiesRequest = exports.FindAllAvailableDataForSomeEntitiesHeaders = exports.FindAllAvailableDataForSomeEntitiesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FindAllAvailableDataForSomeEntitiesQueryParams = /** @class */ (function (_super) {
     __extends(FindAllAvailableDataForSomeEntitiesQueryParams, _super);
     function FindAllAvailableDataForSomeEntitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], FindAllAvailableDataForSomeEntitiesQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], FindAllAvailableDataForSomeEntitiesQueryParams.prototype, "entityId", void 0);
     return FindAllAvailableDataForSomeEntitiesQueryParams;
-}(SpeakeasyBase));
-export { FindAllAvailableDataForSomeEntitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FindAllAvailableDataForSomeEntitiesQueryParams = FindAllAvailableDataForSomeEntitiesQueryParams;
 var FindAllAvailableDataForSomeEntitiesHeaders = /** @class */ (function (_super) {
     __extends(FindAllAvailableDataForSomeEntitiesHeaders, _super);
     function FindAllAvailableDataForSomeEntitiesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], FindAllAvailableDataForSomeEntitiesHeaders.prototype, "xAppToken", void 0);
     return FindAllAvailableDataForSomeEntitiesHeaders;
-}(SpeakeasyBase));
-export { FindAllAvailableDataForSomeEntitiesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.FindAllAvailableDataForSomeEntitiesHeaders = FindAllAvailableDataForSomeEntitiesHeaders;
 var FindAllAvailableDataForSomeEntitiesRequest = /** @class */ (function (_super) {
     __extends(FindAllAvailableDataForSomeEntitiesRequest, _super);
     function FindAllAvailableDataForSomeEntitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindAllAvailableDataForSomeEntitiesQueryParams)
     ], FindAllAvailableDataForSomeEntitiesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindAllAvailableDataForSomeEntitiesHeaders)
     ], FindAllAvailableDataForSomeEntitiesRequest.prototype, "headers", void 0);
     return FindAllAvailableDataForSomeEntitiesRequest;
-}(SpeakeasyBase));
-export { FindAllAvailableDataForSomeEntitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.FindAllAvailableDataForSomeEntitiesRequest = FindAllAvailableDataForSomeEntitiesRequest;
 var FindAllAvailableDataForSomeEntitiesResponse = /** @class */ (function (_super) {
     __extends(FindAllAvailableDataForSomeEntitiesResponse, _super);
     function FindAllAvailableDataForSomeEntitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FindAllAvailableDataForSomeEntitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FindAllAvailableDataForSomeEntitiesResponse.prototype, "statusCode", void 0);
     return FindAllAvailableDataForSomeEntitiesResponse;
-}(SpeakeasyBase));
-export { FindAllAvailableDataForSomeEntitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.FindAllAvailableDataForSomeEntitiesResponse = FindAllAvailableDataForSomeEntitiesResponse;

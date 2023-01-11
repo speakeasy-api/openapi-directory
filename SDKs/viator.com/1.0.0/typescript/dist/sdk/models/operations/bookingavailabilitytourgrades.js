@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,248 +23,250 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingAvailabilityTourgradesResponse = exports.BookingAvailabilityTourgradesRequest = exports.BookingAvailabilityTourgrades200ApplicationJson = exports.BookingAvailabilityTourgrades200ApplicationJsonData = exports.BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired = exports.BookingAvailabilityTourgradesRequestBody = exports.BookingAvailabilityTourgradesRequestBodyAgeBands = exports.BookingAvailabilityTourgradesHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var BookingAvailabilityTourgradesHeaders = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgradesHeaders, _super);
     function BookingAvailabilityTourgradesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgradesHeaders.prototype, "acceptLanguage", void 0);
     return BookingAvailabilityTourgradesHeaders;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgradesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgradesHeaders = BookingAvailabilityTourgradesHeaders;
 var BookingAvailabilityTourgradesRequestBodyAgeBands = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgradesRequestBodyAgeBands, _super);
     function BookingAvailabilityTourgradesRequestBodyAgeBands() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandId" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgradesRequestBodyAgeBands.prototype, "bandId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgradesRequestBodyAgeBands.prototype, "count", void 0);
     return BookingAvailabilityTourgradesRequestBodyAgeBands;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgradesRequestBodyAgeBands };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgradesRequestBodyAgeBands = BookingAvailabilityTourgradesRequestBodyAgeBands;
 var BookingAvailabilityTourgradesRequestBody = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgradesRequestBody, _super);
     function BookingAvailabilityTourgradesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageBands", elemType: BookingAvailabilityTourgradesRequestBodyAgeBands }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageBands", elemType: BookingAvailabilityTourgradesRequestBodyAgeBands }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgradesRequestBody.prototype, "ageBands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDate" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgradesRequestBody.prototype, "bookingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgradesRequestBody.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCode" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgradesRequestBody.prototype, "productCode", void 0);
     return BookingAvailabilityTourgradesRequestBody;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgradesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgradesRequestBody = BookingAvailabilityTourgradesRequestBody;
 var BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired, _super);
     function BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandId" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired.prototype, "bandId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumCountRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumCountRequired" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired.prototype, "maximumCountRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumCountRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumCountRequired" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired.prototype, "minimumCountRequired", void 0);
     return BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired = BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired;
 var BookingAvailabilityTourgrades200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgrades200ApplicationJsonData, _super);
     function BookingAvailabilityTourgrades200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageBands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageBands" }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "ageBands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageBandsRequired", elemType: BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageBandsRequired", elemType: BookingAvailabilityTourgrades200ApplicationJsonDataAgeBandsRequired, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "ageBandsRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Boolean)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDate" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "bookingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLanguageCode" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "defaultLanguageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeCode" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "gradeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeDepartureTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeDepartureTime" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "gradeDepartureTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeDescription" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "gradeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeTitle" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "gradeTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=langServices" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=langServices" }),
+        __metadata("design:type", Object)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "langServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPrice" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "merchantNetPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "merchantNetPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retailPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retailPrice" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "retailPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retailPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retailPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "retailPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unavailableReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unavailableReason" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJsonData.prototype, "unavailableReason", void 0);
     return BookingAvailabilityTourgrades200ApplicationJsonData;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgrades200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgrades200ApplicationJsonData = BookingAvailabilityTourgrades200ApplicationJsonData;
 var BookingAvailabilityTourgrades200ApplicationJson = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgrades200ApplicationJson, _super);
     function BookingAvailabilityTourgrades200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: BookingAvailabilityTourgrades200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: BookingAvailabilityTourgrades200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgrades200ApplicationJson.prototype, "vmid", void 0);
     return BookingAvailabilityTourgrades200ApplicationJson;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgrades200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgrades200ApplicationJson = BookingAvailabilityTourgrades200ApplicationJson;
 var BookingAvailabilityTourgradesRequest = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgradesRequest, _super);
     function BookingAvailabilityTourgradesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingAvailabilityTourgradesHeaders)
     ], BookingAvailabilityTourgradesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", BookingAvailabilityTourgradesRequestBody)
     ], BookingAvailabilityTourgradesRequest.prototype, "request", void 0);
     return BookingAvailabilityTourgradesRequest;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgradesRequest };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgradesRequest = BookingAvailabilityTourgradesRequest;
 var BookingAvailabilityTourgradesResponse = /** @class */ (function (_super) {
     __extends(BookingAvailabilityTourgradesResponse, _super);
     function BookingAvailabilityTourgradesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BookingAvailabilityTourgradesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BookingAvailabilityTourgradesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingAvailabilityTourgrades200ApplicationJson)
-    ], BookingAvailabilityTourgradesResponse.prototype, "bookingAvailabilityTourgrades200ApplicationJsonObject", void 0);
+    ], BookingAvailabilityTourgradesResponse.prototype, "bookingAvailabilityTourgrades200ApplicationJSONObject", void 0);
     return BookingAvailabilityTourgradesResponse;
-}(SpeakeasyBase));
-export { BookingAvailabilityTourgradesResponse };
+}(utils_1.SpeakeasyBase));
+exports.BookingAvailabilityTourgradesResponse = BookingAvailabilityTourgradesResponse;

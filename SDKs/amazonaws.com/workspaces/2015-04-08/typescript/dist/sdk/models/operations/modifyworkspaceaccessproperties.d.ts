@@ -20,7 +20,7 @@ export declare class ModifyWorkspaceAccessPropertiesRequest extends SpeakeasyBas
 export declare class ModifyWorkspaceAccessPropertiesResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    modifyWorkspaceAccessPropertiesResult?: Map<string, any>;
+    modifyWorkspaceAccessPropertiesResult?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { VaultMattersAddPermissionsRequest, VaultMattersAddPermissionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: VaultMattersAddPermissionsRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    matterId: "reiciendis",
+    matterId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "illum",
-    alt: "proto",
-    callback: "totam",
-    fields: "aspernatur",
-    key: "beatae",
-    oauthToken: "occaecati",
-    prettyPrint: false,
-    quotaUser: "repellat",
-    uploadType: "totam",
-    uploadProtocol: "amet",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     ccMe: false,
     matterPermission: {
-      accountId: "aliquam",
-      role: "COLLABORATOR",
+      accountId: "debitis",
+      role: "ROLE_UNSPECIFIED",
     },
     sendEmails: false,
   },

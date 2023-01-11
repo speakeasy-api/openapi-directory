@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceWirelessStatusResponse = exports.GetDeviceWirelessStatusRequest = exports.GetDeviceWirelessStatusPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceWirelessStatusPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceWirelessStatusPathParams, _super);
     function GetDeviceWirelessStatusPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceWirelessStatusPathParams.prototype, "serial", void 0);
     return GetDeviceWirelessStatusPathParams;
-}(SpeakeasyBase));
-export { GetDeviceWirelessStatusPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceWirelessStatusPathParams = GetDeviceWirelessStatusPathParams;
 var GetDeviceWirelessStatusRequest = /** @class */ (function (_super) {
     __extends(GetDeviceWirelessStatusRequest, _super);
     function GetDeviceWirelessStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceWirelessStatusPathParams)
     ], GetDeviceWirelessStatusRequest.prototype, "pathParams", void 0);
     return GetDeviceWirelessStatusRequest;
-}(SpeakeasyBase));
-export { GetDeviceWirelessStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceWirelessStatusRequest = GetDeviceWirelessStatusRequest;
 var GetDeviceWirelessStatusResponse = /** @class */ (function (_super) {
     __extends(GetDeviceWirelessStatusResponse, _super);
     function GetDeviceWirelessStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceWirelessStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceWirelessStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceWirelessStatusResponse.prototype, "getDeviceWirelessStatus200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceWirelessStatusResponse.prototype, "getDeviceWirelessStatus200ApplicationJSONObject", void 0);
     return GetDeviceWirelessStatusResponse;
-}(SpeakeasyBase));
-export { GetDeviceWirelessStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceWirelessStatusResponse = GetDeviceWirelessStatusResponse;

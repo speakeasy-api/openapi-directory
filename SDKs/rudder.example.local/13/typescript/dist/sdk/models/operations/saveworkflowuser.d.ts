@@ -21,5 +21,5 @@ export declare class SaveWorkflowUserRequest extends SpeakeasyBase {
 export declare class SaveWorkflowUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    saveWorkflowUser200ApplicationJsonObject?: SaveWorkflowUser200ApplicationJson;
+    saveWorkflowUser200ApplicationJSONObject?: SaveWorkflowUser200ApplicationJson;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationInfoInput } from "./organizationinfo";
 import { OrganizationInfo } from "./organizationinfo";
+import { OrganizationInfoInput } from "./organizationinfo";
 
 
 export enum AccountPermissionLevelEnum {
@@ -40,28 +40,6 @@ export enum AccountVettedStateEnum {
 }
 
 
-// AccountInput
-/** 
- * An account is a container for your location. If you are the only user who manages locations for your business, you can use your personal Google Account. To share management of locations with multiple users, [create a business account] (https://support.google.com/business/answer/6085339?ref_topic=6085325).
-**/
-export class AccountInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=accountName" })
-  accountName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=organizationInfo" })
-  organizationInfo?: OrganizationInfoInput;
-
-  @SpeakeasyMetadata({ data: "json, name=primaryOwner" })
-  primaryOwner?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: AccountTypeEnum;
-}
-
-
 // Account
 /** 
  * An account is a container for your location. If you are the only user who manages locations for your business, you can use your personal Google Account. To share management of locations with multiple users, [create a business account] (https://support.google.com/business/answer/6085339?ref_topic=6085325).
@@ -96,4 +74,26 @@ export class Account extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=vettedState" })
   vettedState?: AccountVettedStateEnum;
+}
+
+
+// AccountInput
+/** 
+ * An account is a container for your location. If you are the only user who manages locations for your business, you can use your personal Google Account. To share management of locations with multiple users, [create a business account] (https://support.google.com/business/answer/6085339?ref_topic=6085325).
+**/
+export class AccountInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=accountName" })
+  accountName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=organizationInfo" })
+  organizationInfo?: OrganizationInfoInput;
+
+  @SpeakeasyMetadata({ data: "json, name=primaryOwner" })
+  primaryOwner?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: AccountTypeEnum;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PkixPublicKey } from "./pkixpublickey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttestorPublicKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var pkixpublickey_1 = require("./pkixpublickey");
 // AttestorPublicKey
 /**
  * An attestor public key that will be used to verify attestations signed by this attestor.
@@ -34,21 +37,21 @@ var AttestorPublicKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asciiArmoredPgpPublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asciiArmoredPgpPublicKey" }),
         __metadata("design:type", String)
     ], AttestorPublicKey.prototype, "asciiArmoredPgpPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], AttestorPublicKey.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AttestorPublicKey.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pkixPublicKey" }),
-        __metadata("design:type", PkixPublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pkixPublicKey" }),
+        __metadata("design:type", pkixpublickey_1.PkixPublicKey)
     ], AttestorPublicKey.prototype, "pkixPublicKey", void 0);
     return AttestorPublicKey;
-}(SpeakeasyBase));
-export { AttestorPublicKey };
+}(utils_1.SpeakeasyBase));
+exports.AttestorPublicKey = AttestorPublicKey;

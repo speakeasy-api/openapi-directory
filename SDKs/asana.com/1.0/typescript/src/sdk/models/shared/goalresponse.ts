@@ -14,6 +14,10 @@ export enum GoalResponseMetricUnitEnum {
 }
 
 
+// GoalResponseMetric
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalResponseMetric extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=currency_code" })
   currencyCode?: string;
@@ -47,6 +51,10 @@ export class GoalResponseMetric extends SpeakeasyBase {
 }
 
 
+// GoalResponseOwner
+/** 
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 export class GoalResponseOwner extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -61,7 +69,7 @@ export class GoalResponseOwner extends SpeakeasyBase {
 
 // GoalResponseTeam
 /** 
- * *Conditional*. This property is only present when the `workspace` provided is an organization.
+ * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 **/
 export class GoalResponseTeam extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
@@ -85,6 +93,10 @@ export enum GoalResponseTimePeriodPeriodEnum {
 }
 
 
+// GoalResponseTimePeriod
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalResponseTimePeriod extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=end_on" })
   endOn?: string;
@@ -103,6 +115,10 @@ export class GoalResponseTimePeriod extends SpeakeasyBase {
 }
 
 
+// GoalResponseWorkspace
+/** 
+ * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
+**/
 export class GoalResponseWorkspace extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -115,6 +131,10 @@ export class GoalResponseWorkspace extends SpeakeasyBase {
 }
 
 
+// GoalResponse
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=due_on" })
   dueOn?: string;

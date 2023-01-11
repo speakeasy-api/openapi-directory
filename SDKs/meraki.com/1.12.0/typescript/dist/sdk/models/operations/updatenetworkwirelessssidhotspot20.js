@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessSsidHotspot20Response = exports.UpdateNetworkWirelessSsidHotspot20Request = exports.UpdateNetworkWirelessSsidHotspot20RequestBody = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyVenue = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyOperator = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs = exports.UpdateNetworkWirelessSsidHotspot20PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessSsidHotspot20PathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20PathParams, _super);
     function UpdateNetworkWirelessSsidHotspot20PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20PathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20PathParams.prototype, "number", void 0);
     return UpdateNetworkWirelessSsidHotspot20PathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20PathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20PathParams = UpdateNetworkWirelessSsidHotspot20PathParams;
 var UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs, _super);
     function UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mcc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mcc" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs.prototype, "mcc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mnc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mnc" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs.prototype, "mnc", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs };
-export var UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs = UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs;
+var UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum;
 (function (UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum) {
     UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum["One"] = "1";
     UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum["Zero"] = "0";
-})(UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum || (UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum = {}));
+})(UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum || (exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum = {}));
 var UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods, _super);
     function UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticationTypes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticationTypes" }),
+        __metadata("design:type", Object)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods.prototype, "authenticationTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods.prototype, "id", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods = UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods;
 var UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms, _super);
     function UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=methods", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=methods", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms.prototype, "methods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=realm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=realm" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms.prototype, "realm", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms };
-export var UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms = UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms;
+var UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum;
 (function (UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum) {
     UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum["PrivateNetwork"] = "Private network";
     UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum["PrivateNetworkWithGuestAccess"] = "Private network with guest access";
@@ -106,7 +109,7 @@ export var UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum;
     UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum["EmergencyServicesOnlyNetwork"] = "Emergency services only network";
     UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum["TestOrExperimental"] = "Test or experimental";
     UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum["Wildcard"] = "Wildcard";
-})(UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum || (UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum = {}));
+})(UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum || (exports.UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum = {}));
 // UpdateNetworkWirelessSsidHotspot20RequestBodyOperator
 /**
  * Operator settings for this SSID
@@ -117,13 +120,13 @@ var UpdateNetworkWirelessSsidHotspot20RequestBodyOperator = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyOperator.prototype, "name", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBodyOperator;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBodyOperator };
-export var UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBodyOperator = UpdateNetworkWirelessSsidHotspot20RequestBodyOperator;
+var UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum;
 (function (UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum) {
     UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum["Unspecified"] = "Unspecified";
     UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum["UnspecifiedAssembly"] = "Unspecified Assembly";
@@ -191,7 +194,7 @@ export var UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum;
     UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum["TrafficControl"] = "Traffic Control";
     UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum["BusStop"] = "Bus Stop";
     UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum["Kiosk"] = "Kiosk";
-})(UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum || (UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum = {}));
+})(UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum = exports.UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum || (exports.UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum = {}));
 // UpdateNetworkWirelessSsidHotspot20RequestBodyVenue
 /**
  * Venue settings for this SSID
@@ -202,89 +205,89 @@ var UpdateNetworkWirelessSsidHotspot20RequestBodyVenue = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyVenue.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBodyVenue.prototype, "type", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBodyVenue;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBodyVenue };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBodyVenue = UpdateNetworkWirelessSsidHotspot20RequestBodyVenue;
 var UpdateNetworkWirelessSsidHotspot20RequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20RequestBody, _super);
     function UpdateNetworkWirelessSsidHotspot20RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mccMncs", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mccMncs", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "mccMncs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=naiRealms", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=naiRealms", elemType: UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "naiRealms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkAccessType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkAccessType" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "networkAccessType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", UpdateNetworkWirelessSsidHotspot20RequestBodyOperator)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roamConsortOis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roamConsortOis" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "roamConsortOis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=venue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=venue" }),
         __metadata("design:type", UpdateNetworkWirelessSsidHotspot20RequestBodyVenue)
     ], UpdateNetworkWirelessSsidHotspot20RequestBody.prototype, "venue", void 0);
     return UpdateNetworkWirelessSsidHotspot20RequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20RequestBody = UpdateNetworkWirelessSsidHotspot20RequestBody;
 var UpdateNetworkWirelessSsidHotspot20Request = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20Request, _super);
     function UpdateNetworkWirelessSsidHotspot20Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessSsidHotspot20PathParams)
     ], UpdateNetworkWirelessSsidHotspot20Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessSsidHotspot20RequestBody)
     ], UpdateNetworkWirelessSsidHotspot20Request.prototype, "request", void 0);
     return UpdateNetworkWirelessSsidHotspot20Request;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20Request };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20Request = UpdateNetworkWirelessSsidHotspot20Request;
 var UpdateNetworkWirelessSsidHotspot20Response = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidHotspot20Response, _super);
     function UpdateNetworkWirelessSsidHotspot20Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidHotspot20Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidHotspot20Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessSsidHotspot20Response.prototype, "updateNetworkWirelessSsidHotspot20200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessSsidHotspot20Response.prototype, "updateNetworkWirelessSsidHotspot20200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessSsidHotspot20Response;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidHotspot20Response };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidHotspot20Response = UpdateNetworkWirelessSsidHotspot20Response;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceMetadataEndpointStateEnum } from "./instancemetadataendpointstateenum";
-import { InstanceMetadataHttpTokensStateEnum } from "./instancemetadatahttptokensstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceMetadataOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancemetadataendpointstateenum_1 = require("./instancemetadataendpointstateenum");
+var instancemetadatahttptokensstateenum_1 = require("./instancemetadatahttptokensstateenum");
 // InstanceMetadataOptions
 /**
  * The metadata options for the instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds">Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
@@ -35,17 +38,17 @@ var InstanceMetadataOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceMetadataOptions.prototype, "httpEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InstanceMetadataOptions.prototype, "httpPutResponseHopLimit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InstanceMetadataOptions.prototype, "httpTokens", void 0);
     return InstanceMetadataOptions;
-}(SpeakeasyBase));
-export { InstanceMetadataOptions };
+}(utils_1.SpeakeasyBase));
+exports.InstanceMetadataOptions = InstanceMetadataOptions;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarBlockInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CalendarBlockInputModel = /** @class */ (function (_super) {
     __extends(CalendarBlockInputModel, _super);
     function CalendarBlockInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allDay" }),
         __metadata("design:type", Boolean)
     ], CalendarBlockInputModel.prototype, "allDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], CalendarBlockInputModel.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], CalendarBlockInputModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], CalendarBlockInputModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Boolean)
     ], CalendarBlockInputModel.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], CalendarBlockInputModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], CalendarBlockInputModel.prototype, "startTime", void 0);
     return CalendarBlockInputModel;
-}(SpeakeasyBase));
-export { CalendarBlockInputModel };
+}(utils_1.SpeakeasyBase));
+exports.CalendarBlockInputModel = CalendarBlockInputModel;

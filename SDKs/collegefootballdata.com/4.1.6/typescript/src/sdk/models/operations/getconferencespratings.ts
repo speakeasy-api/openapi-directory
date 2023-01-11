@@ -20,7 +20,7 @@ export class GetConferenceSpRatingsRequest extends SpeakeasyBase {
 
 export class GetConferenceSpRatingsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.ConferenceSpRating })
-  conferenceSpRatings?: shared.ConferenceSpRating[];
+  conferenceSPRatings?: shared.ConferenceSpRating[];
 
   @SpeakeasyMetadata()
   contentType: string;

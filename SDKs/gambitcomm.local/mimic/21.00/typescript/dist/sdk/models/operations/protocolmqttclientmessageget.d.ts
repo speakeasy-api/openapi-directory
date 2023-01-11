@@ -10,5 +10,5 @@ export declare class ProtocolMqttClientMessageGetRequest extends SpeakeasyBase {
 export declare class ProtocolMqttClientMessageGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientMessageGet200ApplicationJsonStrings?: string[];
+    protocolMqttClientMessageGet200ApplicationJSONStrings?: string[];
 }

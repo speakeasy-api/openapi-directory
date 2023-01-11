@@ -44,5 +44,5 @@ export class SaveWorkflowUserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  saveWorkflowUser200ApplicationJsonObject?: SaveWorkflowUser200ApplicationJson;
+  saveWorkflowUser200ApplicationJSONObject?: SaveWorkflowUser200ApplicationJson;
 }

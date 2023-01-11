@@ -1,5 +1,8 @@
-export var DefaultRouteTablePropagationValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultRouteTablePropagationValueEnum = void 0;
+var DefaultRouteTablePropagationValueEnum;
 (function (DefaultRouteTablePropagationValueEnum) {
     DefaultRouteTablePropagationValueEnum["Enable"] = "enable";
     DefaultRouteTablePropagationValueEnum["Disable"] = "disable";
-})(DefaultRouteTablePropagationValueEnum || (DefaultRouteTablePropagationValueEnum = {}));
+})(DefaultRouteTablePropagationValueEnum = exports.DefaultRouteTablePropagationValueEnum || (exports.DefaultRouteTablePropagationValueEnum = {}));

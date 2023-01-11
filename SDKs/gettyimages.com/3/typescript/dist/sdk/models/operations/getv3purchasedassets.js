@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV3PurchasedAssetsResponse = exports.GetV3PurchasedAssetsRequest = exports.GetV3PurchasedAssetsHeaders = exports.GetV3PurchasedAssetsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetV3PurchasedAssetsQueryParams = /** @class */ (function (_super) {
     __extends(GetV3PurchasedAssetsQueryParams, _super);
     function GetV3PurchasedAssetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=company_purchases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=company_purchases" }),
         __metadata("design:type", Boolean)
     ], GetV3PurchasedAssetsQueryParams.prototype, "companyPurchases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date_from" }),
         __metadata("design:type", Date)
     ], GetV3PurchasedAssetsQueryParams.prototype, "dateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date_to" }),
         __metadata("design:type", Date)
     ], GetV3PurchasedAssetsQueryParams.prototype, "dateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetV3PurchasedAssetsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetV3PurchasedAssetsQueryParams.prototype, "pageSize", void 0);
     return GetV3PurchasedAssetsQueryParams;
-}(SpeakeasyBase));
-export { GetV3PurchasedAssetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3PurchasedAssetsQueryParams = GetV3PurchasedAssetsQueryParams;
 var GetV3PurchasedAssetsHeaders = /** @class */ (function (_super) {
     __extends(GetV3PurchasedAssetsHeaders, _super);
     function GetV3PurchasedAssetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], GetV3PurchasedAssetsHeaders.prototype, "acceptLanguage", void 0);
     return GetV3PurchasedAssetsHeaders;
-}(SpeakeasyBase));
-export { GetV3PurchasedAssetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetV3PurchasedAssetsHeaders = GetV3PurchasedAssetsHeaders;
 var GetV3PurchasedAssetsRequest = /** @class */ (function (_super) {
     __extends(GetV3PurchasedAssetsRequest, _super);
     function GetV3PurchasedAssetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3PurchasedAssetsQueryParams)
     ], GetV3PurchasedAssetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3PurchasedAssetsHeaders)
     ], GetV3PurchasedAssetsRequest.prototype, "headers", void 0);
     return GetV3PurchasedAssetsRequest;
-}(SpeakeasyBase));
-export { GetV3PurchasedAssetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV3PurchasedAssetsRequest = GetV3PurchasedAssetsRequest;
 var GetV3PurchasedAssetsResponse = /** @class */ (function (_super) {
     __extends(GetV3PurchasedAssetsResponse, _super);
     function GetV3PurchasedAssetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV3PurchasedAssetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PreviousAssetPurchases)
     ], GetV3PurchasedAssetsResponse.prototype, "previousAssetPurchases", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV3PurchasedAssetsResponse.prototype, "statusCode", void 0);
     return GetV3PurchasedAssetsResponse;
-}(SpeakeasyBase));
-export { GetV3PurchasedAssetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV3PurchasedAssetsResponse = GetV3PurchasedAssetsResponse;

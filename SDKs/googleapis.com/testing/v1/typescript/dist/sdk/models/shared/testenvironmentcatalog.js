@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidDeviceCatalog } from "./androiddevicecatalog";
-import { DeviceIpBlockCatalog } from "./deviceipblockcatalog";
-import { IosDeviceCatalog } from "./iosdevicecatalog";
-import { NetworkConfigurationCatalog } from "./networkconfigurationcatalog";
-import { ProvidedSoftwareCatalog } from "./providedsoftwarecatalog";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestEnvironmentCatalog = void 0;
+var utils_1 = require("../../../internal/utils");
+var androiddevicecatalog_1 = require("./androiddevicecatalog");
+var deviceipblockcatalog_1 = require("./deviceipblockcatalog");
+var iosdevicecatalog_1 = require("./iosdevicecatalog");
+var networkconfigurationcatalog_1 = require("./networkconfigurationcatalog");
+var providedsoftwarecatalog_1 = require("./providedsoftwarecatalog");
 // TestEnvironmentCatalog
 /**
  * A description of a test environment.
@@ -38,25 +41,25 @@ var TestEnvironmentCatalog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidDeviceCatalog" }),
-        __metadata("design:type", AndroidDeviceCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidDeviceCatalog" }),
+        __metadata("design:type", androiddevicecatalog_1.AndroidDeviceCatalog)
     ], TestEnvironmentCatalog.prototype, "androidDeviceCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceIpBlockCatalog" }),
-        __metadata("design:type", DeviceIpBlockCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceIpBlockCatalog" }),
+        __metadata("design:type", deviceipblockcatalog_1.DeviceIpBlockCatalog)
     ], TestEnvironmentCatalog.prototype, "deviceIpBlockCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosDeviceCatalog" }),
-        __metadata("design:type", IosDeviceCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosDeviceCatalog" }),
+        __metadata("design:type", iosdevicecatalog_1.IosDeviceCatalog)
     ], TestEnvironmentCatalog.prototype, "iosDeviceCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfigurationCatalog" }),
-        __metadata("design:type", NetworkConfigurationCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfigurationCatalog" }),
+        __metadata("design:type", networkconfigurationcatalog_1.NetworkConfigurationCatalog)
     ], TestEnvironmentCatalog.prototype, "networkConfigurationCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareCatalog" }),
-        __metadata("design:type", ProvidedSoftwareCatalog)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareCatalog" }),
+        __metadata("design:type", providedsoftwarecatalog_1.ProvidedSoftwareCatalog)
     ], TestEnvironmentCatalog.prototype, "softwareCatalog", void 0);
     return TestEnvironmentCatalog;
-}(SpeakeasyBase));
-export { TestEnvironmentCatalog };
+}(utils_1.SpeakeasyBase));
+exports.TestEnvironmentCatalog = TestEnvironmentCatalog;

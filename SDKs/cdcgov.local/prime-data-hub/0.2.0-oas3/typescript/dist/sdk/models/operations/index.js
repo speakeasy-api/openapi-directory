@@ -1,14 +1,30 @@
-export * from "./deletesettingsorganizationsorganizationname";
-export * from "./deletesettingsorganizationsorganizationnamereceiversreceivername";
-export * from "./deletesettingsorganizationsorganizationnamesenderssendername";
-export * from "./getsettingsorganizations";
-export * from "./getsettingsorganizationsorganizationname";
-export * from "./getsettingsorganizationsorganizationnamereceivers";
-export * from "./getsettingsorganizationsorganizationnamereceiversreceivername";
-export * from "./getsettingsorganizationsorganizationnamesenders";
-export * from "./getsettingsorganizationsorganizationnamesenderssendername";
-export * from "./headsettingsorganizations";
-export * from "./postreports";
-export * from "./putsettingsorganizationsorganizationname";
-export * from "./putsettingsorganizationsorganizationnamereceiversreceivername";
-export * from "./putsettingsorganizationsorganizationnamesenderssendername";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deletesettingsorganizationsorganizationname"), exports);
+__exportStar(require("./deletesettingsorganizationsorganizationnamereceiversreceivername"), exports);
+__exportStar(require("./deletesettingsorganizationsorganizationnamesenderssendername"), exports);
+__exportStar(require("./getsettingsorganizations"), exports);
+__exportStar(require("./getsettingsorganizationsorganizationname"), exports);
+__exportStar(require("./getsettingsorganizationsorganizationnamereceivers"), exports);
+__exportStar(require("./getsettingsorganizationsorganizationnamereceiversreceivername"), exports);
+__exportStar(require("./getsettingsorganizationsorganizationnamesenders"), exports);
+__exportStar(require("./getsettingsorganizationsorganizationnamesenderssendername"), exports);
+__exportStar(require("./headsettingsorganizations"), exports);
+__exportStar(require("./postreports"), exports);
+__exportStar(require("./putsettingsorganizationsorganizationname"), exports);
+__exportStar(require("./putsettingsorganizationsorganizationnamereceiversreceivername"), exports);
+__exportStar(require("./putsettingsorganizationsorganizationnamesenderssendername"), exports);

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GraphicsStatsBucket = void 0;
+var utils_1 = require("../../../internal/utils");
 var GraphicsStatsBucket = /** @class */ (function (_super) {
     __extends(GraphicsStatsBucket, _super);
     function GraphicsStatsBucket() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameCount" }),
         __metadata("design:type", String)
     ], GraphicsStatsBucket.prototype, "frameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderMillis" }),
         __metadata("design:type", String)
     ], GraphicsStatsBucket.prototype, "renderMillis", void 0);
     return GraphicsStatsBucket;
-}(SpeakeasyBase));
-export { GraphicsStatsBucket };
+}(utils_1.SpeakeasyBase));
+exports.GraphicsStatsBucket = GraphicsStatsBucket;

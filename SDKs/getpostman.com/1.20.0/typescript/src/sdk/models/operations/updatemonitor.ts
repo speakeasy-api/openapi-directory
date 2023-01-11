@@ -67,5 +67,5 @@ export class UpdateMonitorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMonitor200ApplicationJsonObject?: UpdateMonitor200ApplicationJson;
+  updateMonitor200ApplicationJSONObject?: UpdateMonitor200ApplicationJson;
 }

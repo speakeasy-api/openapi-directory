@@ -14,7 +14,7 @@ export declare class Node extends SpeakeasyBase {
     id?: string;
     listeningAddresses?: Address[];
     locality?: Locality;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     userAgentBuildVersion?: BuildVersion;
     userAgentName?: string;
     userAgentVersion?: string;

@@ -20,5 +20,5 @@ export declare class ReloadGroups200ApplicationJson extends SpeakeasyBase {
 export declare class ReloadGroupsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reloadGroups200ApplicationJsonObject?: ReloadGroups200ApplicationJson;
+    reloadGroups200ApplicationJSONObject?: ReloadGroups200ApplicationJson;
 }

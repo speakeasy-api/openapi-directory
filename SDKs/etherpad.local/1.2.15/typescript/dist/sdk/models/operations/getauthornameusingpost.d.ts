@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetAuthorNameUsingPostQueryParams extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class GetAuthorNameUsingPost200ApplicationJsonDataInfo extends SpeakeasyBase {
     colorId?: string;
@@ -18,17 +18,17 @@ export declare class GetAuthorNameUsingPost200ApplicationJson extends SpeakeasyB
 }
 export declare class GetAuthorNameUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingPostRequest extends SpeakeasyBase {
@@ -37,8 +37,8 @@ export declare class GetAuthorNameUsingPostRequest extends SpeakeasyBase {
 export declare class GetAuthorNameUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAuthorNameUsingPost200ApplicationJsonObject?: GetAuthorNameUsingPost200ApplicationJson;
-    getAuthorNameUsingPost400ApplicationJsonObject?: GetAuthorNameUsingPost400ApplicationJson;
-    getAuthorNameUsingPost401ApplicationJsonObject?: GetAuthorNameUsingPost401ApplicationJson;
-    getAuthorNameUsingPost500ApplicationJsonObject?: GetAuthorNameUsingPost500ApplicationJson;
+    getAuthorNameUsingPOST200ApplicationJSONObject?: GetAuthorNameUsingPost200ApplicationJson;
+    getAuthorNameUsingPOST400ApplicationJSONObject?: GetAuthorNameUsingPost400ApplicationJson;
+    getAuthorNameUsingPOST401ApplicationJSONObject?: GetAuthorNameUsingPost401ApplicationJson;
+    getAuthorNameUsingPOST500ApplicationJSONObject?: GetAuthorNameUsingPost500ApplicationJson;
 }

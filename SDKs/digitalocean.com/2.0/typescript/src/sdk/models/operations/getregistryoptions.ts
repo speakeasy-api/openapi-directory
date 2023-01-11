@@ -1,82 +1,83 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiersEligibilityReasonsEnum {
-    OverRepositoryLimit = "OverRepositoryLimit"
-,    OverStorageLimit = "OverStorageLimit"
+    OverRepositoryLimit = "OverRepositoryLimit",
+    OverStorageLimit = "OverStorageLimit"
 }
 
 
 export class GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiers extends SpeakeasyBase {
-  @Metadata({ data: "json, name=allow_storage_overage" })
+  @SpeakeasyMetadata({ data: "json, name=allow_storage_overage" })
   allowStorageOverage?: boolean;
 
-  @Metadata({ data: "json, name=eligibility_reasons" })
+  @SpeakeasyMetadata({ data: "json, name=eligibility_reasons" })
   eligibilityReasons?: GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiersEligibilityReasonsEnum[];
 
-  @Metadata({ data: "json, name=eligible" })
+  @SpeakeasyMetadata({ data: "json, name=eligible" })
   eligible?: boolean;
 
-  @Metadata({ data: "json, name=included_bandwidth_bytes" })
+  @SpeakeasyMetadata({ data: "json, name=included_bandwidth_bytes" })
   includedBandwidthBytes?: number;
 
-  @Metadata({ data: "json, name=included_repositories" })
+  @SpeakeasyMetadata({ data: "json, name=included_repositories" })
   includedRepositories?: number;
 
-  @Metadata({ data: "json, name=included_storage_bytes" })
+  @SpeakeasyMetadata({ data: "json, name=included_storage_bytes" })
   includedStorageBytes?: number;
 
-  @Metadata({ data: "json, name=monthly_price_in_cents" })
+  @SpeakeasyMetadata({ data: "json, name=monthly_price_in_cents" })
   monthlyPriceInCents?: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug?: string;
 }
 
 
 export class GetRegistryOptions200ApplicationJsonOptions extends SpeakeasyBase {
-  @Metadata({ data: "json, name=subscription_tiers", elemType: operations.GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiers })
+  @SpeakeasyMetadata({ data: "json, name=subscription_tiers", elemType: GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiers })
   subscriptionTiers?: GetRegistryOptions200ApplicationJsonOptionsSubscriptionTiers[];
 }
 
 
 export class GetRegistryOptions200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=options" })
+  @SpeakeasyMetadata({ data: "json, name=options" })
   options?: GetRegistryOptions200ApplicationJsonOptions;
 }
 
 
 export class GetRegistryOptions401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
 export class GetRegistryOptionsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getRegistryOptions200ApplicationJsonObject?: GetRegistryOptions200ApplicationJson;
+  @SpeakeasyMetadata()
+  getRegistryOptions200ApplicationJSONObject?: GetRegistryOptions200ApplicationJson;
 
-  @Metadata()
-  getRegistryOptions401ApplicationJsonObject?: GetRegistryOptions401ApplicationJson;
+  @SpeakeasyMetadata()
+  getRegistryOptions401ApplicationJSONObject?: GetRegistryOptions401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

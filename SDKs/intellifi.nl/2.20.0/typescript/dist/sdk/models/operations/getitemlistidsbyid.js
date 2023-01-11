@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetItemListIdsByIdResponse = exports.GetItemListIdsByIdRequest = exports.GetItemListIdsByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetItemListIdsByIdPathParams = /** @class */ (function (_super) {
     __extends(GetItemListIdsByIdPathParams, _super);
     function GetItemListIdsByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetItemListIdsByIdPathParams.prototype, "id", void 0);
     return GetItemListIdsByIdPathParams;
-}(SpeakeasyBase));
-export { GetItemListIdsByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetItemListIdsByIdPathParams = GetItemListIdsByIdPathParams;
 var GetItemListIdsByIdRequest = /** @class */ (function (_super) {
     __extends(GetItemListIdsByIdRequest, _super);
     function GetItemListIdsByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetItemListIdsByIdPathParams)
     ], GetItemListIdsByIdRequest.prototype, "pathParams", void 0);
     return GetItemListIdsByIdRequest;
-}(SpeakeasyBase));
-export { GetItemListIdsByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetItemListIdsByIdRequest = GetItemListIdsByIdRequest;
 var GetItemListIdsByIdResponse = /** @class */ (function (_super) {
     __extends(GetItemListIdsByIdResponse, _super);
     function GetItemListIdsByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetItemListIdsByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetItemListIdsByIdResponse.prototype, "listOfItemIds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetItemListIdsByIdResponse.prototype, "statusCode", void 0);
     return GetItemListIdsByIdResponse;
-}(SpeakeasyBase));
-export { GetItemListIdsByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetItemListIdsByIdResponse = GetItemListIdsByIdResponse;

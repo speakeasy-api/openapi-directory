@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountSettings } from "./accountsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAccountSettingsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountsettings_1 = require("./accountsettings");
 var UpdateAccountSettingsOutput = /** @class */ (function (_super) {
     __extends(UpdateAccountSettingsOutput, _super);
     function UpdateAccountSettingsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountSettings" }),
-        __metadata("design:type", AccountSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountSettings" }),
+        __metadata("design:type", accountsettings_1.AccountSettings)
     ], UpdateAccountSettingsOutput.prototype, "accountSettings", void 0);
     return UpdateAccountSettingsOutput;
-}(SpeakeasyBase));
-export { UpdateAccountSettingsOutput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAccountSettingsOutput = UpdateAccountSettingsOutput;

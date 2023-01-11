@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SqlParameter } from "./sqlparameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecuteStatementInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var sqlparameter_1 = require("./sqlparameter");
 var ExecuteStatementInput = /** @class */ (function (_super) {
     __extends(ExecuteStatementInput, _super);
     function ExecuteStatementInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Database" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Database" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "database", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DbUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DbUser" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "dbUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters", elemType: SqlParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters", elemType: sqlparameter_1.SqlParameter }),
         __metadata("design:type", Array)
     ], ExecuteStatementInput.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretArn" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "secretArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sql" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sql" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "sql", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatementName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatementName" }),
         __metadata("design:type", String)
     ], ExecuteStatementInput.prototype, "statementName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WithEvent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WithEvent" }),
         __metadata("design:type", Boolean)
     ], ExecuteStatementInput.prototype, "withEvent", void 0);
     return ExecuteStatementInput;
-}(SpeakeasyBase));
-export { ExecuteStatementInput };
+}(utils_1.SpeakeasyBase));
+exports.ExecuteStatementInput = ExecuteStatementInput;

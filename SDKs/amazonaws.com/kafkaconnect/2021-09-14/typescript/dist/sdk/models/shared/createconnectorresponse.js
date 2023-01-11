@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectorStateEnum } from "./connectorstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateConnectorResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectorstateenum_1 = require("./connectorstateenum");
 var CreateConnectorResponse = /** @class */ (function (_super) {
     __extends(CreateConnectorResponse, _super);
     function CreateConnectorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorArn" }),
         __metadata("design:type", String)
     ], CreateConnectorResponse.prototype, "connectorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorName" }),
         __metadata("design:type", String)
     ], CreateConnectorResponse.prototype, "connectorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorState" }),
         __metadata("design:type", String)
     ], CreateConnectorResponse.prototype, "connectorState", void 0);
     return CreateConnectorResponse;
-}(SpeakeasyBase));
-export { CreateConnectorResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateConnectorResponse = CreateConnectorResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SyncResponsePayload } from "./syncresponsepayload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var syncresponsepayload_1 = require("./syncresponsepayload");
 // SyncResponse
 /**
  * Response type for the [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call. This should follow the same format as the Google smart home `action.devices.SYNC` [response](https://developers.google.com/assistant/smarthome/reference/intent/sync). # Example ```json { "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "payload": { "agentUserId": "1836.15267389", "devices": [{ "id": "123", "type": "action.devices.types.OUTLET", "traits": [ "action.devices.traits.OnOff" ], "name": { "defaultNames": ["My Outlet 1234"], "name": "Night light", "nicknames": ["wall plug"] }, "willReportState": false, "deviceInfo": { "manufacturer": "lights-out-inc", "model": "hs1234", "hwVersion": "3.2", "swVersion": "11.4" }, "customData": { "fooValue": 74, "barValue": true, "bazValue": "foo" } }] } } ```
@@ -34,13 +37,13 @@ var SyncResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
-        __metadata("design:type", SyncResponsePayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
+        __metadata("design:type", syncresponsepayload_1.SyncResponsePayload)
     ], SyncResponse.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], SyncResponse.prototype, "requestId", void 0);
     return SyncResponse;
-}(SpeakeasyBase));
-export { SyncResponse };
+}(utils_1.SpeakeasyBase));
+exports.SyncResponse = SyncResponse;

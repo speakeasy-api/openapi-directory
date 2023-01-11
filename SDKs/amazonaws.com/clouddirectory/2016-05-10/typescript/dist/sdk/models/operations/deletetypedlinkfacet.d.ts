@@ -20,7 +20,7 @@ export declare class DeleteTypedLinkFacetRequest extends SpeakeasyBase {
 export declare class DeleteTypedLinkFacetResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
-    deleteTypedLinkFacetResponse?: Map<string, any>;
+    deleteTypedLinkFacetResponse?: Record<string, any>;
     facetNotFoundException?: shared.FacetNotFoundException;
     internalServiceException?: shared.InternalServiceException;
     invalidArnException?: shared.InvalidArnException;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
-import { UrlNormalization } from "./urlnormalization";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var record_1 = require("./record");
+var urlnormalization_1 = require("./urlnormalization");
 // QueryResponse
 /**
  * Response payload sent back to a physical web client. This response contains the record found based on the identiers present in a `QueryRequest`. The returned response will have a record, and sometimes details on normalization actions taken on the request that were necessary to make the request successful.
@@ -35,13 +38,13 @@ var QueryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=record" }),
-        __metadata("design:type", Record)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=record" }),
+        __metadata("design:type", record_1.RecordT)
     ], QueryResponse.prototype, "record", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlNormalizationDetails" }),
-        __metadata("design:type", UrlNormalization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlNormalizationDetails" }),
+        __metadata("design:type", urlnormalization_1.UrlNormalization)
     ], QueryResponse.prototype, "urlNormalizationDetails", void 0);
     return QueryResponse;
-}(SpeakeasyBase));
-export { QueryResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueryResponse = QueryResponse;

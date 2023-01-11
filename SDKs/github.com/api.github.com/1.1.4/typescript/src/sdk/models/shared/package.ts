@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// PackageSimpleUser
+/** 
+ * Simple User
+**/
 export class PackageSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -89,6 +93,10 @@ export class PackageMinimalRepositoryLicense extends SpeakeasyBase {
 }
 
 
+// PackageMinimalRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class PackageMinimalRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -161,6 +169,10 @@ export class PackageMinimalRepositoryPermissions extends SpeakeasyBase {
 }
 
 
+// PackageMinimalRepositoryRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class PackageMinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -182,6 +194,10 @@ export class PackageMinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBa
 }
 
 
+// PackageMinimalRepositoryRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class PackageMinimalRepositoryRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -572,6 +588,10 @@ export class PackageMinimalRepositoryRepositoryTemplateRepository extends Speake
 }
 
 
+// PackageMinimalRepositoryRepository
+/** 
+ * A git repository
+**/
 export class PackageMinimalRepositoryRepository extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allow_merge_commit" })
   allowMergeCommit?: boolean;
@@ -836,6 +856,10 @@ export class PackageMinimalRepositoryRepository extends SpeakeasyBase {
 }
 
 
+// PackageMinimalRepository
+/** 
+ * Minimal Repository
+**/
 export class PackageMinimalRepository extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=archive_url" })
   archiveUrl: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Thumbnail } from "./thumbnail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThumbnailDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var thumbnail_1 = require("./thumbnail");
 // ThumbnailDetails
 /**
  * Internal representation of thumbnails for a YouTube resource.
@@ -34,21 +37,21 @@ var ThumbnailDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=high" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=high" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], ThumbnailDetails.prototype, "high", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxres" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxres" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], ThumbnailDetails.prototype, "maxres", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], ThumbnailDetails.prototype, "medium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standard" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standard" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], ThumbnailDetails.prototype, "standard", void 0);
     return ThumbnailDetails;
-}(SpeakeasyBase));
-export { ThumbnailDetails };
+}(utils_1.SpeakeasyBase));
+exports.ThumbnailDetails = ThumbnailDetails;

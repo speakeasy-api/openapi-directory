@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExpectedAttributeValue } from "./expectedattributevalue";
-import { AttributeValue } from "./attributevalue";
-import { ReturnValueEnum } from "./returnvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var expectedattributevalue_1 = require("./expectedattributevalue");
+var attributevalue_1 = require("./attributevalue");
+var returnvalueenum_1 = require("./returnvalueenum");
 var PutItemInput = /** @class */ (function (_super) {
     __extends(PutItemInput, _super);
     function PutItemInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expected", elemType: expectedattributevalue_1.ExpectedAttributeValue }),
+        __metadata("design:type", Object)
     ], PutItemInput.prototype, "expected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Item", elemType: AttributeValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Item", elemType: attributevalue_1.AttributeValue }),
+        __metadata("design:type", Object)
     ], PutItemInput.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReturnValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReturnValues" }),
         __metadata("design:type", String)
     ], PutItemInput.prototype, "returnValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], PutItemInput.prototype, "tableName", void 0);
     return PutItemInput;
-}(SpeakeasyBase));
-export { PutItemInput };
+}(utils_1.SpeakeasyBase));
+exports.PutItemInput = PutItemInput;

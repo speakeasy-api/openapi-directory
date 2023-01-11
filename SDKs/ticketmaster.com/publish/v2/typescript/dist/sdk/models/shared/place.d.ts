@@ -14,7 +14,7 @@ export declare class Place extends SpeakeasyBase {
     city?: City;
     country?: Country;
     location?: Location;
-    names?: Map<string, string>;
+    names?: Record<string, string>;
     postalCode?: string;
     state?: State;
 }

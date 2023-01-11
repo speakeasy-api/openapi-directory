@@ -38,7 +38,7 @@ export class ReposDeletePagesSiteResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposDeletePagesSite415ApplicationJsonObject?: ReposDeletePagesSite415ApplicationJson;
+  reposDeletePagesSite415ApplicationJSONObject?: ReposDeletePagesSite415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

@@ -30,7 +30,7 @@ export class AddPasswordV1RequestBody extends SpeakeasyBase {
 
 export class AddPasswordV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -60,5 +60,5 @@ export class AddPasswordV1Response extends SpeakeasyBase {
   addPasswordV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  addPasswordV14XxApplicationProblemPlusJsonObject?: AddPasswordV14XxApplicationProblemPlusJson;
+  addPasswordV14XXApplicationProblemPlusJsonObject?: AddPasswordV14XxApplicationProblemPlusJson;
 }

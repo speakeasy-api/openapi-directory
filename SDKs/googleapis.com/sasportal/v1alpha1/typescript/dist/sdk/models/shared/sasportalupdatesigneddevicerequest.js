@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalUpdateSignedDeviceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // SasPortalUpdateSignedDeviceRequest
 /**
  * Request for UpdateSignedDevice.
@@ -33,13 +36,13 @@ var SasPortalUpdateSignedDeviceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodedDevice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodedDevice" }),
         __metadata("design:type", String)
     ], SasPortalUpdateSignedDeviceRequest.prototype, "encodedDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installerId" }),
         __metadata("design:type", String)
     ], SasPortalUpdateSignedDeviceRequest.prototype, "installerId", void 0);
     return SasPortalUpdateSignedDeviceRequest;
-}(SpeakeasyBase));
-export { SasPortalUpdateSignedDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalUpdateSignedDeviceRequest = SasPortalUpdateSignedDeviceRequest;

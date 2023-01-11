@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssignmentStatusEnum } from "./assignmentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Assignment = void 0;
+var utils_1 = require("../../../internal/utils");
+var assignmentstatusenum_1 = require("./assignmentstatusenum");
 // Assignment
 /**
  *  The Assignment data structure represents a single assignment of a HIT to a Worker. The assignment tracks the Worker's efforts to complete the HIT, and contains the results for later retrieval.
@@ -34,53 +37,53 @@ var Assignment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceptTime" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "acceptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Answer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Answer" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "answer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApprovalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApprovalTime" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "approvalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentId" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "assignmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentStatus" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "assignmentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoApprovalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoApprovalTime" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "autoApprovalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Deadline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Deadline" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "deadline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITId" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "hitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RejectionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RejectionTime" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "rejectionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterFeedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterFeedback" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "requesterFeedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubmitTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubmitTime" }),
         __metadata("design:type", Date)
     ], Assignment.prototype, "submitTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerId" }),
         __metadata("design:type", String)
     ], Assignment.prototype, "workerId", void 0);
     return Assignment;
-}(SpeakeasyBase));
-export { Assignment };
+}(utils_1.SpeakeasyBase));
+exports.Assignment = Assignment;

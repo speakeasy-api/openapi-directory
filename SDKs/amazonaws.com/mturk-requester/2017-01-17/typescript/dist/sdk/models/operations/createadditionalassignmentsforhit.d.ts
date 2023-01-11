@@ -19,7 +19,7 @@ export declare class CreateAdditionalAssignmentsForHitRequest extends SpeakeasyB
 }
 export declare class CreateAdditionalAssignmentsForHitResponse extends SpeakeasyBase {
     contentType: string;
-    createAdditionalAssignmentsForHitResponse?: Map<string, any>;
+    createAdditionalAssignmentsForHITResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

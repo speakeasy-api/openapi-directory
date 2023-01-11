@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompatibilityEnum } from "./compatibilityenum";
-import { SchemaId } from "./schemaid";
-import { SchemaVersionNumber } from "./schemaversionnumber";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSchemaInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var compatibilityenum_1 = require("./compatibilityenum");
+var schemaid_1 = require("./schemaid");
+var schemaversionnumber_1 = require("./schemaversionnumber");
 var UpdateSchemaInput = /** @class */ (function (_super) {
     __extends(UpdateSchemaInput, _super);
     function UpdateSchemaInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Compatibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Compatibility" }),
         __metadata("design:type", String)
     ], UpdateSchemaInput.prototype, "compatibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateSchemaInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaId" }),
-        __metadata("design:type", SchemaId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaId" }),
+        __metadata("design:type", schemaid_1.SchemaId)
     ], UpdateSchemaInput.prototype, "schemaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaVersionNumber" }),
-        __metadata("design:type", SchemaVersionNumber)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaVersionNumber" }),
+        __metadata("design:type", schemaversionnumber_1.SchemaVersionNumber)
     ], UpdateSchemaInput.prototype, "schemaVersionNumber", void 0);
     return UpdateSchemaInput;
-}(SpeakeasyBase));
-export { UpdateSchemaInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSchemaInput = UpdateSchemaInput;

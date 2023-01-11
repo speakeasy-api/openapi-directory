@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnWildcard } from "./columnwildcard";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableWithColumnsResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnwildcard_1 = require("./columnwildcard");
 // TableWithColumnsResource
 /**
  * <p>A structure for a table with columns object. This object is only used when granting a SELECT permission.</p> <p>This object must take a value for at least one of <code>ColumnsNames</code>, <code>ColumnsIndexes</code>, or <code>ColumnsWildcard</code>.</p>
@@ -34,25 +37,25 @@ var TableWithColumnsResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], TableWithColumnsResource.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnNames" }),
         __metadata("design:type", Array)
     ], TableWithColumnsResource.prototype, "columnNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnWildcard" }),
-        __metadata("design:type", ColumnWildcard)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnWildcard" }),
+        __metadata("design:type", columnwildcard_1.ColumnWildcard)
     ], TableWithColumnsResource.prototype, "columnWildcard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], TableWithColumnsResource.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], TableWithColumnsResource.prototype, "name", void 0);
     return TableWithColumnsResource;
-}(SpeakeasyBase));
-export { TableWithColumnsResource };
+}(utils_1.SpeakeasyBase));
+exports.TableWithColumnsResource = TableWithColumnsResource;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Role } from "./role";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRolesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var role_1 = require("./role");
 // ListRolesResponse
 /**
  * Contains the response to a successful <a>ListRoles</a> request.
@@ -34,17 +37,17 @@ var ListRolesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ListRolesResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListRolesResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Role }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: role_1.Role }),
         __metadata("design:type", Array)
     ], ListRolesResponse.prototype, "roles", void 0);
     return ListRolesResponse;
-}(SpeakeasyBase));
-export { ListRolesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRolesResponse = ListRolesResponse;

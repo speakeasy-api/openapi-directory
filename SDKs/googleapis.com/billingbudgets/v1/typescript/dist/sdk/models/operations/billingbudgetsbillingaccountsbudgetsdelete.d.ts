@@ -35,6 +35,6 @@ export declare class BillingbudgetsBillingAccountsBudgetsDeleteRequest extends S
 }
 export declare class BillingbudgetsBillingAccountsBudgetsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

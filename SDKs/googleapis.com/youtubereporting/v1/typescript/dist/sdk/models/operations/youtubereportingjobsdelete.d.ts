@@ -36,6 +36,6 @@ export declare class YoutubereportingJobsDeleteRequest extends SpeakeasyBase {
 }
 export declare class YoutubereportingJobsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

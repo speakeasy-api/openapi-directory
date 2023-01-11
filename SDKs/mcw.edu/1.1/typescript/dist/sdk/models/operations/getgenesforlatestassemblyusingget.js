@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGenesForLatestAssemblyUsingGetResponse = exports.GetGenesForLatestAssemblyUsingGetRequest = exports.GetGenesForLatestAssemblyUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGenesForLatestAssemblyUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGenesForLatestAssemblyUsingGetPathParams, _super);
     function GetGenesForLatestAssemblyUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
         __metadata("design:type", String)
     ], GetGenesForLatestAssemblyUsingGetPathParams.prototype, "taxonId", void 0);
     return GetGenesForLatestAssemblyUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGenesForLatestAssemblyUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesForLatestAssemblyUsingGetPathParams = GetGenesForLatestAssemblyUsingGetPathParams;
 var GetGenesForLatestAssemblyUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGenesForLatestAssemblyUsingGetRequest, _super);
     function GetGenesForLatestAssemblyUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGenesForLatestAssemblyUsingGetPathParams)
     ], GetGenesForLatestAssemblyUsingGetRequest.prototype, "pathParams", void 0);
     return GetGenesForLatestAssemblyUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGenesForLatestAssemblyUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesForLatestAssemblyUsingGetRequest = GetGenesForLatestAssemblyUsingGetRequest;
 var GetGenesForLatestAssemblyUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGenesForLatestAssemblyUsingGetResponse, _super);
     function GetGenesForLatestAssemblyUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGenesForLatestAssemblyUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGenesForLatestAssemblyUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGenesForLatestAssemblyUsingGetResponse.prototype, "statusCode", void 0);
     return GetGenesForLatestAssemblyUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGenesForLatestAssemblyUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesForLatestAssemblyUsingGetResponse = GetGenesForLatestAssemblyUsingGetResponse;

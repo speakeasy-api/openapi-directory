@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchJobInstruction = exports.BatchJobInstructionBatchJobInstruction = exports.BatchJobInstructionBatchJobInstructionDelete = void 0;
+var utils_1 = require("../../../internal/utils");
 // BatchJobInstructionBatchJobInstructionDelete
 /**
  * The batch job instructions' instructions
@@ -33,41 +36,41 @@ var BatchJobInstructionBatchJobInstructionDelete = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DELETE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DELETE" }),
         __metadata("design:type", Array)
     ], BatchJobInstructionBatchJobInstructionDelete.prototype, "delete", void 0);
     return BatchJobInstructionBatchJobInstructionDelete;
-}(SpeakeasyBase));
-export { BatchJobInstructionBatchJobInstructionDelete };
+}(utils_1.SpeakeasyBase));
+exports.BatchJobInstructionBatchJobInstructionDelete = BatchJobInstructionBatchJobInstructionDelete;
 var BatchJobInstructionBatchJobInstruction = /** @class */ (function (_super) {
     __extends(BatchJobInstructionBatchJobInstruction, _super);
     function BatchJobInstructionBatchJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldingDate" }),
         __metadata("design:type", Date)
     ], BatchJobInstructionBatchJobInstruction.prototype, "holdingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Instructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Instructions" }),
         __metadata("design:type", BatchJobInstructionBatchJobInstructionDelete)
     ], BatchJobInstructionBatchJobInstruction.prototype, "instructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidateOnly" }),
         __metadata("design:type", Boolean)
     ], BatchJobInstructionBatchJobInstruction.prototype, "validateOnly", void 0);
     return BatchJobInstructionBatchJobInstruction;
-}(SpeakeasyBase));
-export { BatchJobInstructionBatchJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.BatchJobInstructionBatchJobInstruction = BatchJobInstructionBatchJobInstruction;
 var BatchJobInstruction = /** @class */ (function (_super) {
     __extends(BatchJobInstruction, _super);
     function BatchJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchJobInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchJobInstruction" }),
         __metadata("design:type", BatchJobInstructionBatchJobInstruction)
     ], BatchJobInstruction.prototype, "batchJobInstruction", void 0);
     return BatchJobInstruction;
-}(SpeakeasyBase));
-export { BatchJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.BatchJobInstruction = BatchJobInstruction;

@@ -22,8 +22,8 @@ export declare class GetListOfDocumentsProvidedByAnIssuerIdRequest extends Speak
 export declare class GetListOfDocumentsProvidedByAnIssuerIdResponse extends SpeakeasyBase {
     contentType: string;
     docTypeResponse?: shared.DocTypeResponse;
-    getListOfDocumentsProvidedByAnIssuerId400ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId400ApplicationJson;
-    getListOfDocumentsProvidedByAnIssuerId401ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId401ApplicationJson;
-    getListOfDocumentsProvidedByAnIssuerId500ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId500ApplicationJson;
+    getListOfDocumentsProvidedByAnIssuerId400ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId400ApplicationJson;
+    getListOfDocumentsProvidedByAnIssuerId401ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId401ApplicationJson;
+    getListOfDocumentsProvidedByAnIssuerId500ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId500ApplicationJson;
     statusCode: number;
 }

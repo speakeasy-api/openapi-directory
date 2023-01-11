@@ -27,6 +27,6 @@ export declare class EssentialcontactsProjectsContactsDeleteRequest extends Spea
 }
 export declare class EssentialcontactsProjectsContactsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

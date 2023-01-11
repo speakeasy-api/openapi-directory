@@ -27,7 +27,7 @@ export class GetCreateCustomAvailabilityZoneQueryParams extends SpeakeasyBase {
   version: GetCreateCustomAvailabilityZoneVersionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpnTunnelOriginatorIP" })
-  vpnTunnelOriginatorIp?: string;
+  vpnTunnelOriginatorIP?: string;
 }
 
 

@@ -19,7 +19,7 @@ export declare class GetSetupV1AppointmentsRequest extends SpeakeasyBase {
     queryParams: GetSetupV1AppointmentsQueryParams;
 }
 export declare class GetSetupV1AppointmentsResponse extends SpeakeasyBase {
-    appointmentListViewModel?: Map<string, any>;
+    appointmentListViewModel?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

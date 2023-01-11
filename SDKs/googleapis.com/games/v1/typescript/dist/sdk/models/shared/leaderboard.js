@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LeaderboardOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Leaderboard = exports.LeaderboardOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LeaderboardOrderEnum;
 (function (LeaderboardOrderEnum) {
     LeaderboardOrderEnum["ScoreOrderUnspecified"] = "SCORE_ORDER_UNSPECIFIED";
     LeaderboardOrderEnum["LargerIsBetter"] = "LARGER_IS_BETTER";
     LeaderboardOrderEnum["SmallerIsBetter"] = "SMALLER_IS_BETTER";
-})(LeaderboardOrderEnum || (LeaderboardOrderEnum = {}));
+})(LeaderboardOrderEnum = exports.LeaderboardOrderEnum || (exports.LeaderboardOrderEnum = {}));
 // Leaderboard
 /**
  * The Leaderboard resource.
@@ -39,29 +42,29 @@ var Leaderboard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconUrl" }),
         __metadata("design:type", String)
     ], Leaderboard.prototype, "iconUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Leaderboard.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isIconUrlDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isIconUrlDefault" }),
         __metadata("design:type", Boolean)
     ], Leaderboard.prototype, "isIconUrlDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Leaderboard.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Leaderboard.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order" }),
         __metadata("design:type", String)
     ], Leaderboard.prototype, "order", void 0);
     return Leaderboard;
-}(SpeakeasyBase));
-export { Leaderboard };
+}(utils_1.SpeakeasyBase));
+exports.Leaderboard = Leaderboard;

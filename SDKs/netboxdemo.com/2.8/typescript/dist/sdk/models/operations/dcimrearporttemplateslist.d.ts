@@ -43,5 +43,5 @@ export declare class DcimRearPortTemplatesListRequest extends SpeakeasyBase {
 export declare class DcimRearPortTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRearPortTemplatesList200ApplicationJsonObject?: DcimRearPortTemplatesList200ApplicationJson;
+    dcimRearPortTemplatesList200ApplicationJSONObject?: DcimRearPortTemplatesList200ApplicationJson;
 }

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class RecommenderConfigurationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=CreationDate" })
   creationDate: string;

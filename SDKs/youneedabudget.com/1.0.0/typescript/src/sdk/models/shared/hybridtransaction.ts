@@ -13,7 +13,8 @@ export enum HybridTransactionFlagColorEnum {
     Yellow = "yellow",
     Green = "green",
     Blue = "blue",
-    Purple = "purple"
+    Purple = "purple",
+    Null = "null"
 }
 
 export enum HybridTransactionTypeEnum {

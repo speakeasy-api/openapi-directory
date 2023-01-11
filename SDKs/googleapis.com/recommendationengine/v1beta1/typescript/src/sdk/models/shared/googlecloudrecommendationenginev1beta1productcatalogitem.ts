@@ -25,7 +25,7 @@ export class GoogleCloudRecommendationengineV1beta1ProductCatalogItem extends Sp
   canonicalProductUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=costs" })
-  costs?: Map<string, number>;
+  costs?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=currencyCode" })
   currencyCode?: string;

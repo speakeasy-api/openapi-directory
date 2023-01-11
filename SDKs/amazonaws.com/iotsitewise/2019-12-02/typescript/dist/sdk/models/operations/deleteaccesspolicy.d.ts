@@ -21,7 +21,7 @@ export declare class DeleteAccessPolicyRequest extends SpeakeasyBase {
 }
 export declare class DeleteAccessPolicyResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAccessPolicyResponse?: Map<string, any>;
+    deleteAccessPolicyResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceNotFoundException?: any;

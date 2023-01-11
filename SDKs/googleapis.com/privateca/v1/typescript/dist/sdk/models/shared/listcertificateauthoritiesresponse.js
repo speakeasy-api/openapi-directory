@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateAuthority } from "./certificateauthority";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListCertificateAuthoritiesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificateauthority_1 = require("./certificateauthority");
 // ListCertificateAuthoritiesResponse
 /**
  * Response message for CertificateAuthorityService.ListCertificateAuthorities.
@@ -34,17 +37,17 @@ var ListCertificateAuthoritiesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthorities", elemType: CertificateAuthority }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthorities", elemType: certificateauthority_1.CertificateAuthority }),
         __metadata("design:type", Array)
     ], ListCertificateAuthoritiesResponse.prototype, "certificateAuthorities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListCertificateAuthoritiesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListCertificateAuthoritiesResponse.prototype, "unreachable", void 0);
     return ListCertificateAuthoritiesResponse;
-}(SpeakeasyBase));
-export { ListCertificateAuthoritiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListCertificateAuthoritiesResponse = ListCertificateAuthoritiesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnableHybridValuesEnum } from "./enablehybridvaluesenum";
-import { ExistConditionEnum } from "./existconditionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutResourcePolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var enablehybridvaluesenum_1 = require("./enablehybridvaluesenum");
+var existconditionenum_1 = require("./existconditionenum");
 var PutResourcePolicyRequest = /** @class */ (function (_super) {
     __extends(PutResourcePolicyRequest, _super);
     function PutResourcePolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableHybrid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableHybrid" }),
         __metadata("design:type", String)
     ], PutResourcePolicyRequest.prototype, "enableHybrid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyExistsCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyExistsCondition" }),
         __metadata("design:type", String)
     ], PutResourcePolicyRequest.prototype, "policyExistsCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyHashCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyHashCondition" }),
         __metadata("design:type", String)
     ], PutResourcePolicyRequest.prototype, "policyHashCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyInJson" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyInJson" }),
         __metadata("design:type", String)
     ], PutResourcePolicyRequest.prototype, "policyInJson", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceArn" }),
         __metadata("design:type", String)
     ], PutResourcePolicyRequest.prototype, "resourceArn", void 0);
     return PutResourcePolicyRequest;
-}(SpeakeasyBase));
-export { PutResourcePolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutResourcePolicyRequest = PutResourcePolicyRequest;

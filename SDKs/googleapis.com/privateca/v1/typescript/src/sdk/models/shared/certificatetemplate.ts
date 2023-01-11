@@ -5,6 +5,28 @@ import { X509Parameters } from "./x509parameters";
 
 
 
+// CertificateTemplateInput
+/** 
+ * A CertificateTemplate refers to a managed template for certificate issuance.
+**/
+export class CertificateTemplateInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=identityConstraints" })
+  identityConstraints?: CertificateIdentityConstraints;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=passthroughExtensions" })
+  passthroughExtensions?: CertificateExtensionConstraints;
+
+  @SpeakeasyMetadata({ data: "json, name=predefinedValues" })
+  predefinedValues?: X509Parameters;
+}
+
+
 // CertificateTemplate
 /** 
  * A CertificateTemplate refers to a managed template for certificate issuance.
@@ -20,7 +42,7 @@ export class CertificateTemplate extends SpeakeasyBase {
   identityConstraints?: CertificateIdentityConstraints;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -33,26 +55,4 @@ export class CertificateTemplate extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
-}
-
-
-// CertificateTemplateInput
-/** 
- * A CertificateTemplate refers to a managed template for certificate issuance.
-**/
-export class CertificateTemplateInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=identityConstraints" })
-  identityConstraints?: CertificateIdentityConstraints;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=passthroughExtensions" })
-  passthroughExtensions?: CertificateExtensionConstraints;
-
-  @SpeakeasyMetadata({ data: "json, name=predefinedValues" })
-  predefinedValues?: X509Parameters;
 }

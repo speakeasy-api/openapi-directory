@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OrderLineItemOrderLineItemStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderLineItem = exports.OrderLineItemQuantities = exports.OrderLineItemQuantitiesQuantityUomEnum = exports.OrderLineItemQuantitiesQuantityTypeEnum = exports.OrderLineItemQuantitiesQuantityContextEnum = exports.OrderLineItemOrderLineItemStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OrderLineItemOrderLineItemStatusEnum;
 (function (OrderLineItemOrderLineItemStatusEnum) {
     OrderLineItemOrderLineItemStatusEnum["Cancelled"] = "Cancelled";
     OrderLineItemOrderLineItemStatusEnum["Completed"] = "Completed";
@@ -31,16 +34,16 @@ export var OrderLineItemOrderLineItemStatusEnum;
     OrderLineItemOrderLineItemStatusEnum["Pending"] = "Pending";
     OrderLineItemOrderLineItemStatusEnum["ProductionCompleted"] = "ProductionCompleted";
     OrderLineItemOrderLineItemStatusEnum["ShipmentCompleted"] = "ShipmentCompleted";
-})(OrderLineItemOrderLineItemStatusEnum || (OrderLineItemOrderLineItemStatusEnum = {}));
-export var OrderLineItemQuantitiesQuantityContextEnum;
+})(OrderLineItemOrderLineItemStatusEnum = exports.OrderLineItemOrderLineItemStatusEnum || (exports.OrderLineItemOrderLineItemStatusEnum = {}));
+var OrderLineItemQuantitiesQuantityContextEnum;
 (function (OrderLineItemQuantitiesQuantityContextEnum) {
     OrderLineItemQuantitiesQuantityContextEnum["Confirmed"] = "Confirmed";
     OrderLineItemQuantitiesQuantityContextEnum["Invoiced"] = "Invoiced";
     OrderLineItemQuantitiesQuantityContextEnum["Ordered"] = "Ordered";
     OrderLineItemQuantitiesQuantityContextEnum["Produced"] = "Produced";
     OrderLineItemQuantitiesQuantityContextEnum["Shipped"] = "Shipped";
-})(OrderLineItemQuantitiesQuantityContextEnum || (OrderLineItemQuantitiesQuantityContextEnum = {}));
-export var OrderLineItemQuantitiesQuantityTypeEnum;
+})(OrderLineItemQuantitiesQuantityContextEnum = exports.OrderLineItemQuantitiesQuantityContextEnum || (exports.OrderLineItemQuantitiesQuantityContextEnum = {}));
+var OrderLineItemQuantitiesQuantityTypeEnum;
 (function (OrderLineItemQuantitiesQuantityTypeEnum) {
     OrderLineItemQuantitiesQuantityTypeEnum["Area"] = "Area";
     OrderLineItemQuantitiesQuantityTypeEnum["Count"] = "Count";
@@ -50,8 +53,8 @@ export var OrderLineItemQuantitiesQuantityTypeEnum;
     OrderLineItemQuantitiesQuantityTypeEnum["NetWeight"] = "NetWeight";
     OrderLineItemQuantitiesQuantityTypeEnum["NominalWeight"] = "NominalWeight";
     OrderLineItemQuantitiesQuantityTypeEnum["TareWeight"] = "TareWeight";
-})(OrderLineItemQuantitiesQuantityTypeEnum || (OrderLineItemQuantitiesQuantityTypeEnum = {}));
-export var OrderLineItemQuantitiesQuantityUomEnum;
+})(OrderLineItemQuantitiesQuantityTypeEnum = exports.OrderLineItemQuantitiesQuantityTypeEnum || (exports.OrderLineItemQuantitiesQuantityTypeEnum = {}));
+var OrderLineItemQuantitiesQuantityUomEnum;
 (function (OrderLineItemQuantitiesQuantityUomEnum) {
     OrderLineItemQuantitiesQuantityUomEnum["Bale"] = "Bale";
     OrderLineItemQuantitiesQuantityUomEnum["Box"] = "Box";
@@ -85,56 +88,56 @@ export var OrderLineItemQuantitiesQuantityUomEnum;
     OrderLineItemQuantitiesQuantityUomEnum["ThousandSquareFeet"] = "ThousandSquareFeet";
     OrderLineItemQuantitiesQuantityUomEnum["ThousandSquareInches"] = "ThousandSquareInches";
     OrderLineItemQuantitiesQuantityUomEnum["Yard"] = "Yard";
-})(OrderLineItemQuantitiesQuantityUomEnum || (OrderLineItemQuantitiesQuantityUomEnum = {}));
+})(OrderLineItemQuantitiesQuantityUomEnum = exports.OrderLineItemQuantitiesQuantityUomEnum || (exports.OrderLineItemQuantitiesQuantityUomEnum = {}));
 var OrderLineItemQuantities = /** @class */ (function (_super) {
     __extends(OrderLineItemQuantities, _super);
     function OrderLineItemQuantities() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityContext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityContext" }),
         __metadata("design:type", String)
     ], OrderLineItemQuantities.prototype, "quantityContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityType" }),
         __metadata("design:type", String)
     ], OrderLineItemQuantities.prototype, "quantityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityUOM" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityUOM" }),
         __metadata("design:type", String)
-    ], OrderLineItemQuantities.prototype, "quantityUom", void 0);
+    ], OrderLineItemQuantities.prototype, "quantityUOM", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityValue" }),
         __metadata("design:type", Number)
     ], OrderLineItemQuantities.prototype, "quantityValue", void 0);
     return OrderLineItemQuantities;
-}(SpeakeasyBase));
-export { OrderLineItemQuantities };
+}(utils_1.SpeakeasyBase));
+exports.OrderLineItemQuantities = OrderLineItemQuantities;
 var OrderLineItem = /** @class */ (function (_super) {
     __extends(OrderLineItem, _super);
     function OrderLineItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changeable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changeable" }),
         __metadata("design:type", Boolean)
     ], OrderLineItem.prototype, "changeable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OrderLineItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLineItemNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineItemNumber" }),
         __metadata("design:type", Number)
     ], OrderLineItem.prototype, "orderLineItemNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLineItemStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineItemStatus" }),
         __metadata("design:type", String)
     ], OrderLineItem.prototype, "orderLineItemStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantities", elemType: OrderLineItemQuantities }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantities", elemType: OrderLineItemQuantities }),
         __metadata("design:type", Array)
     ], OrderLineItem.prototype, "quantities", void 0);
     return OrderLineItem;
-}(SpeakeasyBase));
-export { OrderLineItem };
+}(utils_1.SpeakeasyBase));
+exports.OrderLineItem = OrderLineItem;

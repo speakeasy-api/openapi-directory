@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse = exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest = exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams, _super);
     function EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams.prototype, "orgId", void 0);
     return EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams = EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams;
 var EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest, _super);
     function EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams)
     ], EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest = EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest;
 var EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse, _super);
     function EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse = EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse;

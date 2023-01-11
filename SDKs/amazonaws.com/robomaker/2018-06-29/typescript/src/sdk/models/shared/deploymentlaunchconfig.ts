@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DeploymentLaunchConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=environmentVariables" })
-  environmentVariables?: Map<string, string>;
+  environmentVariables?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=launchFile" })
   launchFile: string;

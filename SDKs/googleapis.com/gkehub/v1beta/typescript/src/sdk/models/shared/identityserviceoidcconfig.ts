@@ -2,11 +2,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// IdentityServiceOidcConfig
+// IdentityServiceOidcConfigInput
 /** 
  * Configuration for OIDC Auth flow.
 **/
-export class IdentityServiceOidcConfig extends SpeakeasyBase {
+export class IdentityServiceOidcConfigInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=certificateAuthorityData" })
   certificateAuthorityData?: string;
 
@@ -21,9 +21,6 @@ export class IdentityServiceOidcConfig extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=enableAccessToken" })
   enableAccessToken?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=encryptedClientSecret" })
-  encryptedClientSecret?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraParams" })
   extraParams?: string;
@@ -51,11 +48,11 @@ export class IdentityServiceOidcConfig extends SpeakeasyBase {
 }
 
 
-// IdentityServiceOidcConfigInput
+// IdentityServiceOidcConfig
 /** 
  * Configuration for OIDC Auth flow.
 **/
-export class IdentityServiceOidcConfigInput extends SpeakeasyBase {
+export class IdentityServiceOidcConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=certificateAuthorityData" })
   certificateAuthorityData?: string;
 
@@ -70,6 +67,9 @@ export class IdentityServiceOidcConfigInput extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=enableAccessToken" })
   enableAccessToken?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=encryptedClientSecret" })
+  encryptedClientSecret?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraParams" })
   extraParams?: string;

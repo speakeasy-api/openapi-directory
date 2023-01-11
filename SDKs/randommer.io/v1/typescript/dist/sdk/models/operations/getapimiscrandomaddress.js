@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiMiscRandomAddressResponse = exports.GetApiMiscRandomAddressRequest = exports.GetApiMiscRandomAddressHeaders = exports.GetApiMiscRandomAddressQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiMiscRandomAddressQueryParams = /** @class */ (function (_super) {
     __extends(GetApiMiscRandomAddressQueryParams, _super);
     function GetApiMiscRandomAddressQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=culture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=culture" }),
         __metadata("design:type", String)
     ], GetApiMiscRandomAddressQueryParams.prototype, "culture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=number" }),
         __metadata("design:type", Number)
     ], GetApiMiscRandomAddressQueryParams.prototype, "number", void 0);
     return GetApiMiscRandomAddressQueryParams;
-}(SpeakeasyBase));
-export { GetApiMiscRandomAddressQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscRandomAddressQueryParams = GetApiMiscRandomAddressQueryParams;
 var GetApiMiscRandomAddressHeaders = /** @class */ (function (_super) {
     __extends(GetApiMiscRandomAddressHeaders, _super);
     function GetApiMiscRandomAddressHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiMiscRandomAddressHeaders.prototype, "xApiKey", void 0);
     return GetApiMiscRandomAddressHeaders;
-}(SpeakeasyBase));
-export { GetApiMiscRandomAddressHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscRandomAddressHeaders = GetApiMiscRandomAddressHeaders;
 var GetApiMiscRandomAddressRequest = /** @class */ (function (_super) {
     __extends(GetApiMiscRandomAddressRequest, _super);
     function GetApiMiscRandomAddressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiMiscRandomAddressQueryParams)
     ], GetApiMiscRandomAddressRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiMiscRandomAddressHeaders)
     ], GetApiMiscRandomAddressRequest.prototype, "headers", void 0);
     return GetApiMiscRandomAddressRequest;
-}(SpeakeasyBase));
-export { GetApiMiscRandomAddressRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscRandomAddressRequest = GetApiMiscRandomAddressRequest;
 var GetApiMiscRandomAddressResponse = /** @class */ (function (_super) {
     __extends(GetApiMiscRandomAddressResponse, _super);
     function GetApiMiscRandomAddressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiMiscRandomAddressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiMiscRandomAddressResponse.prototype, "statusCode", void 0);
     return GetApiMiscRandomAddressResponse;
-}(SpeakeasyBase));
-export { GetApiMiscRandomAddressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscRandomAddressResponse = GetApiMiscRandomAddressResponse;

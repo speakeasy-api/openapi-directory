@@ -52,13 +52,13 @@ export class SubmitJobRequestBodyContainerOverrides extends SpeakeasyBase {
   instanceType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=memory" })
-  memory?: number;
+  memory?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceRequirements", elemType: shared.ResourceRequirement })
   resourceRequirements?: shared.ResourceRequirement[];
 
   @SpeakeasyMetadata({ data: "json, name=vcpus" })
-  vcpus?: number;
+  vcpus?: Record<string, any>;
 }
 
 
@@ -121,7 +121,7 @@ export class SubmitJobRequestBody extends SpeakeasyBase {
   nodeOverrides?: SubmitJobRequestBodyNodeOverrides;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=propagateTags" })
   propagateTags?: boolean;
@@ -130,7 +130,7 @@ export class SubmitJobRequestBody extends SpeakeasyBase {
   retryStrategy?: SubmitJobRequestBodyRetryStrategy;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=timeout" })
   timeout?: SubmitJobRequestBodyTimeout;

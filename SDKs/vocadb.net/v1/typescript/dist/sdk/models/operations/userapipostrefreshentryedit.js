@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UserApiPostRefreshEntryEditEntryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserApiPostRefreshEntryEditResponse = exports.UserApiPostRefreshEntryEditRequest = exports.UserApiPostRefreshEntryEditQueryParams = exports.UserApiPostRefreshEntryEditEntryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UserApiPostRefreshEntryEditEntryTypeEnum;
 (function (UserApiPostRefreshEntryEditEntryTypeEnum) {
     UserApiPostRefreshEntryEditEntryTypeEnum["Undefined"] = "Undefined";
     UserApiPostRefreshEntryEditEntryTypeEnum["Album"] = "Album";
@@ -37,48 +40,48 @@ export var UserApiPostRefreshEntryEditEntryTypeEnum;
     UserApiPostRefreshEntryEditEntryTypeEnum["Tag"] = "Tag";
     UserApiPostRefreshEntryEditEntryTypeEnum["User"] = "User";
     UserApiPostRefreshEntryEditEntryTypeEnum["Venue"] = "Venue";
-})(UserApiPostRefreshEntryEditEntryTypeEnum || (UserApiPostRefreshEntryEditEntryTypeEnum = {}));
+})(UserApiPostRefreshEntryEditEntryTypeEnum = exports.UserApiPostRefreshEntryEditEntryTypeEnum || (exports.UserApiPostRefreshEntryEditEntryTypeEnum = {}));
 var UserApiPostRefreshEntryEditQueryParams = /** @class */ (function (_super) {
     __extends(UserApiPostRefreshEntryEditQueryParams, _super);
     function UserApiPostRefreshEntryEditQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entryId" }),
         __metadata("design:type", Number)
     ], UserApiPostRefreshEntryEditQueryParams.prototype, "entryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entryType" }),
         __metadata("design:type", String)
     ], UserApiPostRefreshEntryEditQueryParams.prototype, "entryType", void 0);
     return UserApiPostRefreshEntryEditQueryParams;
-}(SpeakeasyBase));
-export { UserApiPostRefreshEntryEditQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostRefreshEntryEditQueryParams = UserApiPostRefreshEntryEditQueryParams;
 var UserApiPostRefreshEntryEditRequest = /** @class */ (function (_super) {
     __extends(UserApiPostRefreshEntryEditRequest, _super);
     function UserApiPostRefreshEntryEditRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiPostRefreshEntryEditQueryParams)
     ], UserApiPostRefreshEntryEditRequest.prototype, "queryParams", void 0);
     return UserApiPostRefreshEntryEditRequest;
-}(SpeakeasyBase));
-export { UserApiPostRefreshEntryEditRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostRefreshEntryEditRequest = UserApiPostRefreshEntryEditRequest;
 var UserApiPostRefreshEntryEditResponse = /** @class */ (function (_super) {
     __extends(UserApiPostRefreshEntryEditResponse, _super);
     function UserApiPostRefreshEntryEditResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiPostRefreshEntryEditResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserApiPostRefreshEntryEditResponse.prototype, "statusCode", void 0);
     return UserApiPostRefreshEntryEditResponse;
-}(SpeakeasyBase));
-export { UserApiPostRefreshEntryEditResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostRefreshEntryEditResponse = UserApiPostRefreshEntryEditResponse;

@@ -97,6 +97,6 @@ export declare class GetSchedulesScheduleFRequest extends SpeakeasyBase {
 }
 export declare class GetSchedulesScheduleFResponse extends SpeakeasyBase {
     contentType: string;
-    getSchedulesScheduleFDefaultApplicationJsonObject?: GetSchedulesScheduleFDefaultApplicationJson;
     statusCode: number;
+    getSchedulesScheduleFDefaultApplicationJSONObject?: GetSchedulesScheduleFDefaultApplicationJson;
 }

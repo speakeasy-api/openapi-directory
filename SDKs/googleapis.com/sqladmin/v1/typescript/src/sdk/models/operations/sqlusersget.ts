@@ -31,6 +31,9 @@ export class SqlUsersGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" })
   fields?: string;
 
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=host" })
+  host?: string;
+
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" })
   key?: string;
 

@@ -15,7 +15,7 @@ export declare class StartContinuousExportHeaders extends SpeakeasyBase {
 }
 export declare class StartContinuousExportRequest extends SpeakeasyBase {
     headers: StartContinuousExportHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class StartContinuousExportResponse extends SpeakeasyBase {
     authorizationErrorException?: any;

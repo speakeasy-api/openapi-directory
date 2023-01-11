@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Counters = void 0;
+var utils_1 = require("../../../internal/utils");
 // Counters
 /**
  * Represents entity counters.
@@ -33,33 +36,33 @@ var Counters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errored" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "errored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "failed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passed" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "passed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipped" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "skipped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopped" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "stopped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warned" }),
         __metadata("design:type", Number)
     ], Counters.prototype, "warned", void 0);
     return Counters;
-}(SpeakeasyBase));
-export { Counters };
+}(utils_1.SpeakeasyBase));
+exports.Counters = Counters;

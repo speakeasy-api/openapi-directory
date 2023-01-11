@@ -19,7 +19,7 @@ export declare class ConnectorVersion extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
     egressControlConfig?: EgressControlConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     launchStage?: ConnectorVersionLaunchStageEnum;
     name?: string;
     releaseVersion?: string;

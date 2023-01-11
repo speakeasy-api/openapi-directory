@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableInterfaceTemplateInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableInterfaceTemplateInput = /** @class */ (function (_super) {
     __extends(WritableInterfaceTemplateInput, _super);
     function WritableInterfaceTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], WritableInterfaceTemplateInput.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_factor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_factor" }),
         __metadata("design:type", Number)
     ], WritableInterfaceTemplateInput.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], WritableInterfaceTemplateInput.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableInterfaceTemplateInput.prototype, "name", void 0);
     return WritableInterfaceTemplateInput;
-}(SpeakeasyBase));
-export { WritableInterfaceTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableInterfaceTemplateInput = WritableInterfaceTemplateInput;

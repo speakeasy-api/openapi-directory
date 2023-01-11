@@ -1,0 +1,375 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Doctor = exports.DoctorJobTitleEnum = exports.DoctorCountryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DoctorCountryEnum;
+(function (DoctorCountryEnum) {
+    DoctorCountryEnum["Bd"] = "BD";
+    DoctorCountryEnum["Wf"] = "WF";
+    DoctorCountryEnum["Bf"] = "BF";
+    DoctorCountryEnum["Bg"] = "BG";
+    DoctorCountryEnum["Ba"] = "BA";
+    DoctorCountryEnum["Bb"] = "BB";
+    DoctorCountryEnum["Be"] = "BE";
+    DoctorCountryEnum["Bl"] = "BL";
+    DoctorCountryEnum["Bm"] = "BM";
+    DoctorCountryEnum["Bn"] = "BN";
+    DoctorCountryEnum["Bo"] = "BO";
+    DoctorCountryEnum["Jp"] = "JP";
+    DoctorCountryEnum["Bi"] = "BI";
+    DoctorCountryEnum["Bj"] = "BJ";
+    DoctorCountryEnum["Bt"] = "BT";
+    DoctorCountryEnum["Jm"] = "JM";
+    DoctorCountryEnum["Bv"] = "BV";
+    DoctorCountryEnum["Jo"] = "JO";
+    DoctorCountryEnum["Ws"] = "WS";
+    DoctorCountryEnum["Bq"] = "BQ";
+    DoctorCountryEnum["Br"] = "BR";
+    DoctorCountryEnum["Bs"] = "BS";
+    DoctorCountryEnum["Je"] = "JE";
+    DoctorCountryEnum["By"] = "BY";
+    DoctorCountryEnum["Bz"] = "BZ";
+    DoctorCountryEnum["Ru"] = "RU";
+    DoctorCountryEnum["Rw"] = "RW";
+    DoctorCountryEnum["Rs"] = "RS";
+    DoctorCountryEnum["Tl"] = "TL";
+    DoctorCountryEnum["Re"] = "RE";
+    DoctorCountryEnum["Tm"] = "TM";
+    DoctorCountryEnum["Tj"] = "TJ";
+    DoctorCountryEnum["Ro"] = "RO";
+    DoctorCountryEnum["Tk"] = "TK";
+    DoctorCountryEnum["Gw"] = "GW";
+    DoctorCountryEnum["Gu"] = "GU";
+    DoctorCountryEnum["Gt"] = "GT";
+    DoctorCountryEnum["Gs"] = "GS";
+    DoctorCountryEnum["Gr"] = "GR";
+    DoctorCountryEnum["Gq"] = "GQ";
+    DoctorCountryEnum["Gp"] = "GP";
+    DoctorCountryEnum["Bh"] = "BH";
+    DoctorCountryEnum["Gy"] = "GY";
+    DoctorCountryEnum["Gg"] = "GG";
+    DoctorCountryEnum["Gf"] = "GF";
+    DoctorCountryEnum["Ge"] = "GE";
+    DoctorCountryEnum["Gd"] = "GD";
+    DoctorCountryEnum["Gb"] = "GB";
+    DoctorCountryEnum["Ga"] = "GA";
+    DoctorCountryEnum["Gn"] = "GN";
+    DoctorCountryEnum["Gm"] = "GM";
+    DoctorCountryEnum["Gl"] = "GL";
+    DoctorCountryEnum["Kw"] = "KW";
+    DoctorCountryEnum["Gi"] = "GI";
+    DoctorCountryEnum["Gh"] = "GH";
+    DoctorCountryEnum["Om"] = "OM";
+    DoctorCountryEnum["Tn"] = "TN";
+    DoctorCountryEnum["Bw"] = "BW";
+    DoctorCountryEnum["Hr"] = "HR";
+    DoctorCountryEnum["Ht"] = "HT";
+    DoctorCountryEnum["Hu"] = "HU";
+    DoctorCountryEnum["Hk"] = "HK";
+    DoctorCountryEnum["Hn"] = "HN";
+    DoctorCountryEnum["Hm"] = "HM";
+    DoctorCountryEnum["Kr"] = "KR";
+    DoctorCountryEnum["Ad"] = "AD";
+    DoctorCountryEnum["Pr"] = "PR";
+    DoctorCountryEnum["Ps"] = "PS";
+    DoctorCountryEnum["Pw"] = "PW";
+    DoctorCountryEnum["Pt"] = "PT";
+    DoctorCountryEnum["Kn"] = "KN";
+    DoctorCountryEnum["Py"] = "PY";
+    DoctorCountryEnum["Ai"] = "AI";
+    DoctorCountryEnum["Pa"] = "PA";
+    DoctorCountryEnum["Pf"] = "PF";
+    DoctorCountryEnum["Pg"] = "PG";
+    DoctorCountryEnum["Pe"] = "PE";
+    DoctorCountryEnum["Pk"] = "PK";
+    DoctorCountryEnum["Ph"] = "PH";
+    DoctorCountryEnum["Pn"] = "PN";
+    DoctorCountryEnum["Pl"] = "PL";
+    DoctorCountryEnum["Pm"] = "PM";
+    DoctorCountryEnum["Zm"] = "ZM";
+    DoctorCountryEnum["Eh"] = "EH";
+    DoctorCountryEnum["Ee"] = "EE";
+    DoctorCountryEnum["Eg"] = "EG";
+    DoctorCountryEnum["Za"] = "ZA";
+    DoctorCountryEnum["Ec"] = "EC";
+    DoctorCountryEnum["Al"] = "AL";
+    DoctorCountryEnum["Ao"] = "AO";
+    DoctorCountryEnum["Kz"] = "KZ";
+    DoctorCountryEnum["Et"] = "ET";
+    DoctorCountryEnum["Zw"] = "ZW";
+    DoctorCountryEnum["Ky"] = "KY";
+    DoctorCountryEnum["Es"] = "ES";
+    DoctorCountryEnum["Er"] = "ER";
+    DoctorCountryEnum["Me"] = "ME";
+    DoctorCountryEnum["Md"] = "MD";
+    DoctorCountryEnum["Mg"] = "MG";
+    DoctorCountryEnum["Mf"] = "MF";
+    DoctorCountryEnum["Ma"] = "MA";
+    DoctorCountryEnum["Mc"] = "MC";
+    DoctorCountryEnum["Uz"] = "UZ";
+    DoctorCountryEnum["Mm"] = "MM";
+    DoctorCountryEnum["Ml"] = "ML";
+    DoctorCountryEnum["Mo"] = "MO";
+    DoctorCountryEnum["Mn"] = "MN";
+    DoctorCountryEnum["Mh"] = "MH";
+    DoctorCountryEnum["Mk"] = "MK";
+    DoctorCountryEnum["Mu"] = "MU";
+    DoctorCountryEnum["Mt"] = "MT";
+    DoctorCountryEnum["Mw"] = "MW";
+    DoctorCountryEnum["Mv"] = "MV";
+    DoctorCountryEnum["Mq"] = "MQ";
+    DoctorCountryEnum["Mp"] = "MP";
+    DoctorCountryEnum["Ms"] = "MS";
+    DoctorCountryEnum["Mr"] = "MR";
+    DoctorCountryEnum["Au"] = "AU";
+    DoctorCountryEnum["Ug"] = "UG";
+    DoctorCountryEnum["My"] = "MY";
+    DoctorCountryEnum["Mx"] = "MX";
+    DoctorCountryEnum["Mz"] = "MZ";
+    DoctorCountryEnum["Fr"] = "FR";
+    DoctorCountryEnum["Aw"] = "AW";
+    DoctorCountryEnum["Af"] = "AF";
+    DoctorCountryEnum["Ax"] = "AX";
+    DoctorCountryEnum["Fi"] = "FI";
+    DoctorCountryEnum["Fj"] = "FJ";
+    DoctorCountryEnum["Fk"] = "FK";
+    DoctorCountryEnum["Fm"] = "FM";
+    DoctorCountryEnum["Fo"] = "FO";
+    DoctorCountryEnum["Ni"] = "NI";
+    DoctorCountryEnum["Nl"] = "NL";
+    DoctorCountryEnum["No"] = "NO";
+    DoctorCountryEnum["Na"] = "NA";
+    DoctorCountryEnum["Vu"] = "VU";
+    DoctorCountryEnum["Nc"] = "NC";
+    DoctorCountryEnum["Ne"] = "NE";
+    DoctorCountryEnum["Nf"] = "NF";
+    DoctorCountryEnum["Ng"] = "NG";
+    DoctorCountryEnum["Nz"] = "NZ";
+    DoctorCountryEnum["Np"] = "NP";
+    DoctorCountryEnum["Nr"] = "NR";
+    DoctorCountryEnum["Nu"] = "NU";
+    DoctorCountryEnum["Ck"] = "CK";
+    DoctorCountryEnum["Ci"] = "CI";
+    DoctorCountryEnum["Ch"] = "CH";
+    DoctorCountryEnum["Co"] = "CO";
+    DoctorCountryEnum["Cn"] = "CN";
+    DoctorCountryEnum["Cm"] = "CM";
+    DoctorCountryEnum["Cl"] = "CL";
+    DoctorCountryEnum["Cc"] = "CC";
+    DoctorCountryEnum["Ca"] = "CA";
+    DoctorCountryEnum["Cg"] = "CG";
+    DoctorCountryEnum["Cf"] = "CF";
+    DoctorCountryEnum["Cd"] = "CD";
+    DoctorCountryEnum["Cz"] = "CZ";
+    DoctorCountryEnum["Cy"] = "CY";
+    DoctorCountryEnum["Cx"] = "CX";
+    DoctorCountryEnum["Cr"] = "CR";
+    DoctorCountryEnum["Kp"] = "KP";
+    DoctorCountryEnum["Cw"] = "CW";
+    DoctorCountryEnum["Cv"] = "CV";
+    DoctorCountryEnum["Cu"] = "CU";
+    DoctorCountryEnum["Sz"] = "SZ";
+    DoctorCountryEnum["Sy"] = "SY";
+    DoctorCountryEnum["Sx"] = "SX";
+    DoctorCountryEnum["Kg"] = "KG";
+    DoctorCountryEnum["Ke"] = "KE";
+    DoctorCountryEnum["Ss"] = "SS";
+    DoctorCountryEnum["Sr"] = "SR";
+    DoctorCountryEnum["Ki"] = "KI";
+    DoctorCountryEnum["Kh"] = "KH";
+    DoctorCountryEnum["Sv"] = "SV";
+    DoctorCountryEnum["Km"] = "KM";
+    DoctorCountryEnum["St"] = "ST";
+    DoctorCountryEnum["Sk"] = "SK";
+    DoctorCountryEnum["Sj"] = "SJ";
+    DoctorCountryEnum["Si"] = "SI";
+    DoctorCountryEnum["Sh"] = "SH";
+    DoctorCountryEnum["So"] = "SO";
+    DoctorCountryEnum["Sn"] = "SN";
+    DoctorCountryEnum["Sm"] = "SM";
+    DoctorCountryEnum["Sl"] = "SL";
+    DoctorCountryEnum["Sc"] = "SC";
+    DoctorCountryEnum["Sb"] = "SB";
+    DoctorCountryEnum["Sa"] = "SA";
+    DoctorCountryEnum["Sg"] = "SG";
+    DoctorCountryEnum["Se"] = "SE";
+    DoctorCountryEnum["Sd"] = "SD";
+    DoctorCountryEnum["Do"] = "DO";
+    DoctorCountryEnum["Dm"] = "DM";
+    DoctorCountryEnum["Dj"] = "DJ";
+    DoctorCountryEnum["Dk"] = "DK";
+    DoctorCountryEnum["De"] = "DE";
+    DoctorCountryEnum["Ye"] = "YE";
+    DoctorCountryEnum["At"] = "AT";
+    DoctorCountryEnum["Dz"] = "DZ";
+    DoctorCountryEnum["Us"] = "US";
+    DoctorCountryEnum["Uy"] = "UY";
+    DoctorCountryEnum["Yt"] = "YT";
+    DoctorCountryEnum["Um"] = "UM";
+    DoctorCountryEnum["Lb"] = "LB";
+    DoctorCountryEnum["Lc"] = "LC";
+    DoctorCountryEnum["La"] = "LA";
+    DoctorCountryEnum["Tv"] = "TV";
+    DoctorCountryEnum["Tw"] = "TW";
+    DoctorCountryEnum["Tt"] = "TT";
+    DoctorCountryEnum["Tr"] = "TR";
+    DoctorCountryEnum["Lk"] = "LK";
+    DoctorCountryEnum["Li"] = "LI";
+    DoctorCountryEnum["Lv"] = "LV";
+    DoctorCountryEnum["To"] = "TO";
+    DoctorCountryEnum["Lt"] = "LT";
+    DoctorCountryEnum["Lu"] = "LU";
+    DoctorCountryEnum["Lr"] = "LR";
+    DoctorCountryEnum["Ls"] = "LS";
+    DoctorCountryEnum["Th"] = "TH";
+    DoctorCountryEnum["Tf"] = "TF";
+    DoctorCountryEnum["Tg"] = "TG";
+    DoctorCountryEnum["Td"] = "TD";
+    DoctorCountryEnum["Tc"] = "TC";
+    DoctorCountryEnum["Ly"] = "LY";
+    DoctorCountryEnum["Va"] = "VA";
+    DoctorCountryEnum["Vc"] = "VC";
+    DoctorCountryEnum["Ae"] = "AE";
+    DoctorCountryEnum["Ve"] = "VE";
+    DoctorCountryEnum["Ag"] = "AG";
+    DoctorCountryEnum["Vg"] = "VG";
+    DoctorCountryEnum["Iq"] = "IQ";
+    DoctorCountryEnum["Vi"] = "VI";
+    DoctorCountryEnum["Is"] = "IS";
+    DoctorCountryEnum["Ir"] = "IR";
+    DoctorCountryEnum["Am"] = "AM";
+    DoctorCountryEnum["It"] = "IT";
+    DoctorCountryEnum["Vn"] = "VN";
+    DoctorCountryEnum["Aq"] = "AQ";
+    DoctorCountryEnum["As"] = "AS";
+    DoctorCountryEnum["Ar"] = "AR";
+    DoctorCountryEnum["Im"] = "IM";
+    DoctorCountryEnum["Il"] = "IL";
+    DoctorCountryEnum["Io"] = "IO";
+    DoctorCountryEnum["In"] = "IN";
+    DoctorCountryEnum["Tz"] = "TZ";
+    DoctorCountryEnum["Az"] = "AZ";
+    DoctorCountryEnum["Ie"] = "IE";
+    DoctorCountryEnum["Id"] = "ID";
+    DoctorCountryEnum["Ua"] = "UA";
+    DoctorCountryEnum["Qa"] = "QA";
+})(DoctorCountryEnum = exports.DoctorCountryEnum || (exports.DoctorCountryEnum = {}));
+var DoctorJobTitleEnum;
+(function (DoctorJobTitleEnum) {
+    DoctorJobTitleEnum["Unknown"] = "";
+    DoctorJobTitleEnum["ProviderStaffPrivatePractice"] = "Provider/Staff (Private Practice)";
+    DoctorJobTitleEnum["ProviderStaffHospital"] = "Provider/Staff (Hospital)";
+    DoctorJobTitleEnum["PatientsInterviewCandidate"] = "Patients/Interview Candidate";
+    DoctorJobTitleEnum["EducatorStudent"] = "Educator/Student";
+    DoctorJobTitleEnum["ApiDeveloper"] = "API/Developer";
+    DoctorJobTitleEnum["Consultant"] = "Consultant";
+    DoctorJobTitleEnum["Other"] = "Other";
+})(DoctorJobTitleEnum = exports.DoctorJobTitleEnum || (exports.DoctorJobTitleEnum = {}));
+var Doctor = /** @class */ (function (_super) {
+    __extends(Doctor, _super);
+    function Doctor() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cell_phone" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "cellPhone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "country", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "email", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "firstName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_npi_number" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "groupNpiNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_phone" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "homePhone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], Doctor.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_account_suspended" }),
+        __metadata("design:type", Boolean)
+    ], Doctor.prototype, "isAccountSuspended", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=job_title" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "jobTitle", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "lastName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=npi_number" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "npiNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office_phone" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "officePhone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=practice_group" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "practiceGroup", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=practice_group_name" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "practiceGroupName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile_picture" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "profilePicture", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialty" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "specialty", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "suffix", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "timezone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
+        __metadata("design:type", String)
+    ], Doctor.prototype, "website", void 0);
+    return Doctor;
+}(utils_1.SpeakeasyBase));
+exports.Doctor = Doctor;

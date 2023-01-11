@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedLinkSchemaAndFacetName = void 0;
+var utils_1 = require("../../../internal/utils");
 // TypedLinkSchemaAndFacetName
 /**
  * Identifies the schema Amazon Resource Name (ARN) and facet name for the typed link.
@@ -33,13 +36,13 @@ var TypedLinkSchemaAndFacetName = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaArn" }),
         __metadata("design:type", String)
     ], TypedLinkSchemaAndFacetName.prototype, "schemaArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkName" }),
         __metadata("design:type", String)
     ], TypedLinkSchemaAndFacetName.prototype, "typedLinkName", void 0);
     return TypedLinkSchemaAndFacetName;
-}(SpeakeasyBase));
-export { TypedLinkSchemaAndFacetName };
+}(utils_1.SpeakeasyBase));
+exports.TypedLinkSchemaAndFacetName = TypedLinkSchemaAndFacetName;

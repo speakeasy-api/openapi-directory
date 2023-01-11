@@ -191,5 +191,5 @@ export class ExtrasConfigContextsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasConfigContextsList200ApplicationJsonObject?: ExtrasConfigContextsList200ApplicationJson;
+  extrasConfigContextsList200ApplicationJSONObject?: ExtrasConfigContextsList200ApplicationJson;
 }

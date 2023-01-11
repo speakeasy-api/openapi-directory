@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteWorkspaceResponse = exports.DeleteWorkspaceRequest = exports.DeleteWorkspace500ApplicationJson = exports.DeleteWorkspace422ApplicationJson = exports.DeleteWorkspace422ApplicationJsonErrorEnum = exports.DeleteWorkspace404ApplicationJson = exports.DeleteWorkspace404ApplicationJsonErrorEnum = exports.DeleteWorkspace403ApplicationJson = exports.DeleteWorkspace403ApplicationJsonErrorEnum = exports.DeleteWorkspace401ApplicationJson = exports.DeleteWorkspace401ApplicationJsonErrorEnum = exports.DeleteWorkspace200ApplicationJson = exports.DeleteWorkspace200ApplicationJsonResponse = exports.DeleteWorkspaceQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteWorkspaceQueryParams = /** @class */ (function (_super) {
     __extends(DeleteWorkspaceQueryParams, _super);
     function DeleteWorkspaceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=workspaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=workspaceId" }),
         __metadata("design:type", String)
     ], DeleteWorkspaceQueryParams.prototype, "workspaceId", void 0);
     return DeleteWorkspaceQueryParams;
-}(SpeakeasyBase));
-export { DeleteWorkspaceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspaceQueryParams = DeleteWorkspaceQueryParams;
 var DeleteWorkspace200ApplicationJsonResponse = /** @class */ (function (_super) {
     __extends(DeleteWorkspace200ApplicationJsonResponse, _super);
     function DeleteWorkspace200ApplicationJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], DeleteWorkspace200ApplicationJsonResponse.prototype, "success", void 0);
     return DeleteWorkspace200ApplicationJsonResponse;
-}(SpeakeasyBase));
-export { DeleteWorkspace200ApplicationJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace200ApplicationJsonResponse = DeleteWorkspace200ApplicationJsonResponse;
 var DeleteWorkspace200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace200ApplicationJson, _super);
     function DeleteWorkspace200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", DeleteWorkspace200ApplicationJsonResponse)
     ], DeleteWorkspace200ApplicationJson.prototype, "response", void 0);
     return DeleteWorkspace200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace200ApplicationJson };
-export var DeleteWorkspace401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace200ApplicationJson = DeleteWorkspace200ApplicationJson;
+var DeleteWorkspace401ApplicationJsonErrorEnum;
 (function (DeleteWorkspace401ApplicationJsonErrorEnum) {
     DeleteWorkspace401ApplicationJsonErrorEnum["AuthenticationFailedRequestExpired"] = "Authentication failed: request expired";
     DeleteWorkspace401ApplicationJsonErrorEnum["AuthenticationFailedSignatureOrSecretMissing"] = "Authentication failed: signature or secret missing";
@@ -71,153 +74,153 @@ export var DeleteWorkspace401ApplicationJsonErrorEnum;
     DeleteWorkspace401ApplicationJsonErrorEnum["AuthenticationFailedInvalidIssIssuer"] = "Authentication failed: invalid 'iss' (issuer)";
     DeleteWorkspace401ApplicationJsonErrorEnum["AuthenticationFailedIncorrectSignature"] = "Authentication failed: incorrect signature";
     DeleteWorkspace401ApplicationJsonErrorEnum["AuthenticationFailed"] = "Authentication failed";
-})(DeleteWorkspace401ApplicationJsonErrorEnum || (DeleteWorkspace401ApplicationJsonErrorEnum = {}));
+})(DeleteWorkspace401ApplicationJsonErrorEnum = exports.DeleteWorkspace401ApplicationJsonErrorEnum || (exports.DeleteWorkspace401ApplicationJsonErrorEnum = {}));
 var DeleteWorkspace401ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace401ApplicationJson, _super);
     function DeleteWorkspace401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], DeleteWorkspace401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], DeleteWorkspace401ApplicationJson.prototype, "status", void 0);
     return DeleteWorkspace401ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace401ApplicationJson };
-export var DeleteWorkspace403ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace401ApplicationJson = DeleteWorkspace401ApplicationJson;
+var DeleteWorkspace403ApplicationJsonErrorEnum;
 (function (DeleteWorkspace403ApplicationJsonErrorEnum) {
     DeleteWorkspace403ApplicationJsonErrorEnum["YourAccountHasExceededTheMonthlyDocumentGenerationLimit"] = "Your account has exceeded the monthly document generation limit.";
-})(DeleteWorkspace403ApplicationJsonErrorEnum || (DeleteWorkspace403ApplicationJsonErrorEnum = {}));
+})(DeleteWorkspace403ApplicationJsonErrorEnum = exports.DeleteWorkspace403ApplicationJsonErrorEnum || (exports.DeleteWorkspace403ApplicationJsonErrorEnum = {}));
 var DeleteWorkspace403ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace403ApplicationJson, _super);
     function DeleteWorkspace403ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], DeleteWorkspace403ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], DeleteWorkspace403ApplicationJson.prototype, "status", void 0);
     return DeleteWorkspace403ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace403ApplicationJson };
-export var DeleteWorkspace404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace403ApplicationJson = DeleteWorkspace403ApplicationJson;
+var DeleteWorkspace404ApplicationJsonErrorEnum;
 (function (DeleteWorkspace404ApplicationJsonErrorEnum) {
     DeleteWorkspace404ApplicationJsonErrorEnum["EntityNotFound"] = "Entity not found";
     DeleteWorkspace404ApplicationJsonErrorEnum["ResourceNotFound"] = "Resource not found";
     DeleteWorkspace404ApplicationJsonErrorEnum["NoneOfTheTemplatesIsAvailableForTheWorkspace"] = "None of the templates is available for the workspace.";
-})(DeleteWorkspace404ApplicationJsonErrorEnum || (DeleteWorkspace404ApplicationJsonErrorEnum = {}));
+})(DeleteWorkspace404ApplicationJsonErrorEnum = exports.DeleteWorkspace404ApplicationJsonErrorEnum || (exports.DeleteWorkspace404ApplicationJsonErrorEnum = {}));
 var DeleteWorkspace404ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace404ApplicationJson, _super);
     function DeleteWorkspace404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], DeleteWorkspace404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], DeleteWorkspace404ApplicationJson.prototype, "status", void 0);
     return DeleteWorkspace404ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace404ApplicationJson };
-export var DeleteWorkspace422ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace404ApplicationJson = DeleteWorkspace404ApplicationJson;
+var DeleteWorkspace422ApplicationJsonErrorEnum;
 (function (DeleteWorkspace422ApplicationJsonErrorEnum) {
     DeleteWorkspace422ApplicationJsonErrorEnum["UnableToParseJsonPleaseCheckFormatting"] = "Unable to parse JSON, please check formatting";
     DeleteWorkspace422ApplicationJsonErrorEnum["RequiredParameterMissing"] = "Required parameter missing";
     DeleteWorkspace422ApplicationJsonErrorEnum["RequiredParameterMissingTemplateDefinitionNotDefined"] = "Required parameter missing: template definition not defined";
     DeleteWorkspace422ApplicationJsonErrorEnum["RequiredParameterMissingTemplateNotDefined"] = "Required parameter missing: template not defined";
-})(DeleteWorkspace422ApplicationJsonErrorEnum || (DeleteWorkspace422ApplicationJsonErrorEnum = {}));
+})(DeleteWorkspace422ApplicationJsonErrorEnum = exports.DeleteWorkspace422ApplicationJsonErrorEnum || (exports.DeleteWorkspace422ApplicationJsonErrorEnum = {}));
 var DeleteWorkspace422ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace422ApplicationJson, _super);
     function DeleteWorkspace422ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], DeleteWorkspace422ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], DeleteWorkspace422ApplicationJson.prototype, "status", void 0);
     return DeleteWorkspace422ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace422ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace422ApplicationJson = DeleteWorkspace422ApplicationJson;
 var DeleteWorkspace500ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteWorkspace500ApplicationJson, _super);
     function DeleteWorkspace500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], DeleteWorkspace500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], DeleteWorkspace500ApplicationJson.prototype, "status", void 0);
     return DeleteWorkspace500ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteWorkspace500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspace500ApplicationJson = DeleteWorkspace500ApplicationJson;
 var DeleteWorkspaceRequest = /** @class */ (function (_super) {
     __extends(DeleteWorkspaceRequest, _super);
     function DeleteWorkspaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspaceQueryParams)
     ], DeleteWorkspaceRequest.prototype, "queryParams", void 0);
     return DeleteWorkspaceRequest;
-}(SpeakeasyBase));
-export { DeleteWorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspaceRequest = DeleteWorkspaceRequest;
 var DeleteWorkspaceResponse = /** @class */ (function (_super) {
     __extends(DeleteWorkspaceResponse, _super);
     function DeleteWorkspaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteWorkspaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteWorkspaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace200ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace200ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace401ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace401ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace403ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace403ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace403ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace404ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace404ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace422ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace422ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace422ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWorkspace500ApplicationJson)
-    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace500ApplicationJsonObject", void 0);
+    ], DeleteWorkspaceResponse.prototype, "deleteWorkspace500ApplicationJSONObject", void 0);
     return DeleteWorkspaceResponse;
-}(SpeakeasyBase));
-export { DeleteWorkspaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWorkspaceResponse = DeleteWorkspaceResponse;

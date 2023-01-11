@@ -11,5 +11,5 @@ export declare class DeleteDeploymentVariableRequest extends SpeakeasyBase {
 export declare class DeleteDeploymentVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

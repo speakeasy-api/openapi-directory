@@ -34,7 +34,7 @@ export class GetSuiteRunResponse extends SpeakeasyBase {
   suiteRunId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=testResult" })
   testResult?: TestResult;

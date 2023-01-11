@@ -88,8 +88,8 @@ export class SingleWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleWorkspace200ApplicationJsonObject?: SingleWorkspace200ApplicationJson;
+  singleWorkspace200ApplicationJSONObject?: SingleWorkspace200ApplicationJson;
 
   @SpeakeasyMetadata()
-  singleWorkspace404ApplicationJsonObject?: SingleWorkspace404ApplicationJson;
+  singleWorkspace404ApplicationJSONObject?: SingleWorkspace404ApplicationJson;
 }

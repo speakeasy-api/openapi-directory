@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserConversationEnumNotificationLevelEnum = void 0;
+var UserConversationEnumNotificationLevelEnum;
+(function (UserConversationEnumNotificationLevelEnum) {
+    UserConversationEnumNotificationLevelEnum["Default"] = "default";
+    UserConversationEnumNotificationLevelEnum["Muted"] = "muted";
+})(UserConversationEnumNotificationLevelEnum = exports.UserConversationEnumNotificationLevelEnum || (exports.UserConversationEnumNotificationLevelEnum = {}));

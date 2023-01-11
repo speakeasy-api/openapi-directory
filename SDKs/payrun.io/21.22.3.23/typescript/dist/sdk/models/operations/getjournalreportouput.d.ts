@@ -18,6 +18,6 @@ export declare class GetJournalReportOuputRequest extends SpeakeasyBase {
 export declare class GetJournalReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getJournalReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getJournalReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

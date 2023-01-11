@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionsGetTagResponse = exports.FunctionsGetTagRequest = exports.FunctionsGetTagSecurity = exports.FunctionsGetTagPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FunctionsGetTagPathParams = /** @class */ (function (_super) {
     __extends(FunctionsGetTagPathParams, _super);
     function FunctionsGetTagPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=functionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=functionId" }),
         __metadata("design:type", String)
     ], FunctionsGetTagPathParams.prototype, "functionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tagId" }),
         __metadata("design:type", String)
     ], FunctionsGetTagPathParams.prototype, "tagId", void 0);
     return FunctionsGetTagPathParams;
-}(SpeakeasyBase));
-export { FunctionsGetTagPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsGetTagPathParams = FunctionsGetTagPathParams;
 var FunctionsGetTagSecurity = /** @class */ (function (_super) {
     __extends(FunctionsGetTagSecurity, _super);
     function FunctionsGetTagSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeKey)
     ], FunctionsGetTagSecurity.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeProject)
     ], FunctionsGetTagSecurity.prototype, "project", void 0);
     return FunctionsGetTagSecurity;
-}(SpeakeasyBase));
-export { FunctionsGetTagSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsGetTagSecurity = FunctionsGetTagSecurity;
 var FunctionsGetTagRequest = /** @class */ (function (_super) {
     __extends(FunctionsGetTagRequest, _super);
     function FunctionsGetTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsGetTagPathParams)
     ], FunctionsGetTagRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsGetTagSecurity)
     ], FunctionsGetTagRequest.prototype, "security", void 0);
     return FunctionsGetTagRequest;
-}(SpeakeasyBase));
-export { FunctionsGetTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsGetTagRequest = FunctionsGetTagRequest;
 var FunctionsGetTagResponse = /** @class */ (function (_super) {
     __extends(FunctionsGetTagResponse, _super);
     function FunctionsGetTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FunctionsGetTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FunctionsGetTagResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Tag)
     ], FunctionsGetTagResponse.prototype, "tag", void 0);
     return FunctionsGetTagResponse;
-}(SpeakeasyBase));
-export { FunctionsGetTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsGetTagResponse = FunctionsGetTagResponse;

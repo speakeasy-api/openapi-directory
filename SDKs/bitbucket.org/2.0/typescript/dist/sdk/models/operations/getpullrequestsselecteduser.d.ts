@@ -25,6 +25,6 @@ export declare class GetPullrequestsSelectedUserRequest extends SpeakeasyBase {
 export declare class GetPullrequestsSelectedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedPullrequests?: shared.PaginatedPullrequests;
 }

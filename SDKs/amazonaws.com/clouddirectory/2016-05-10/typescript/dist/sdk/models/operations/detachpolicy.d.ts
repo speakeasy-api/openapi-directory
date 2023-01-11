@@ -33,7 +33,7 @@ export declare class DetachPolicyRequest extends SpeakeasyBase {
 export declare class DetachPolicyResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
-    detachPolicyResponse?: Map<string, any>;
+    detachPolicyResponse?: Record<string, any>;
     directoryNotEnabledException?: shared.DirectoryNotEnabledException;
     internalServiceException?: shared.InternalServiceException;
     invalidArnException?: shared.InvalidArnException;

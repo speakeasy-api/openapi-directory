@@ -23,11 +23,11 @@ export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbando
 export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest extends SpeakeasyBase {
     pathParams: ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonPathParams;
     queryParams: ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonSecurity;
 }
 export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse extends SpeakeasyBase {
-    abandonReleaseResponse?: Map<string, any>;
+    abandonReleaseResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

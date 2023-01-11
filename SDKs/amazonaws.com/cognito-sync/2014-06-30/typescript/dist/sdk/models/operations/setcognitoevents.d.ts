@@ -12,7 +12,7 @@ export declare class SetCognitoEventsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class SetCognitoEventsRequestBody extends SpeakeasyBase {
-    events: Map<string, string>;
+    events: Record<string, string>;
 }
 export declare class SetCognitoEventsRequest extends SpeakeasyBase {
     pathParams: SetCognitoEventsPathParams;

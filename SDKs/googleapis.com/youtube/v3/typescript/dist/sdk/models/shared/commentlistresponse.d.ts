@@ -8,6 +8,6 @@ export declare class CommentListResponse extends SpeakeasyBase {
     kind?: string;
     nextPageToken?: string;
     pageInfo?: PageInfo;
-    tokenPagination?: Map<string, any>;
+    tokenPagination?: Record<string, any>;
     visitorId?: string;
 }

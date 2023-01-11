@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosDeviceFile = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
 // IosDeviceFile
 /**
  * A file or directory to install on the device before the test starts.
@@ -34,17 +37,17 @@ var IosDeviceFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], IosDeviceFile.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], IosDeviceFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePath" }),
         __metadata("design:type", String)
     ], IosDeviceFile.prototype, "devicePath", void 0);
     return IosDeviceFile;
-}(SpeakeasyBase));
-export { IosDeviceFile };
+}(utils_1.SpeakeasyBase));
+exports.IosDeviceFile = IosDeviceFile;

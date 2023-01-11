@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MerchantOrderReturnItem } from "./merchantorderreturnitem";
-import { ReturnShipment } from "./returnshipment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MerchantOrderReturn = void 0;
+var utils_1 = require("../../../internal/utils");
+var merchantorderreturnitem_1 = require("./merchantorderreturnitem");
+var returnshipment_1 = require("./returnshipment");
 // MerchantOrderReturn
 /**
  * Order return. Production access (all methods) requires the order manager role. Sandbox access does not.
@@ -35,29 +38,29 @@ var MerchantOrderReturn = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], MerchantOrderReturn.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantOrderId" }),
         __metadata("design:type", String)
     ], MerchantOrderReturn.prototype, "merchantOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], MerchantOrderReturn.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderReturnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderReturnId" }),
         __metadata("design:type", String)
     ], MerchantOrderReturn.prototype, "orderReturnId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnItems", elemType: MerchantOrderReturnItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnItems", elemType: merchantorderreturnitem_1.MerchantOrderReturnItem }),
         __metadata("design:type", Array)
     ], MerchantOrderReturn.prototype, "returnItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnShipments", elemType: ReturnShipment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnShipments", elemType: returnshipment_1.ReturnShipment }),
         __metadata("design:type", Array)
     ], MerchantOrderReturn.prototype, "returnShipments", void 0);
     return MerchantOrderReturn;
-}(SpeakeasyBase));
-export { MerchantOrderReturn };
+}(utils_1.SpeakeasyBase));
+exports.MerchantOrderReturn = MerchantOrderReturn;

@@ -25,7 +25,7 @@ export declare class IncreaseReplicationFactorResponse extends SpeakeasyBase {
     invalidClusterStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;
-    invalidVpcNetworkStateFault?: any;
+    invalidVPCNetworkStateFault?: any;
     nodeQuotaForClusterExceededFault?: any;
     nodeQuotaForCustomerExceededFault?: any;
     serviceLinkedRoleNotFoundFault?: any;

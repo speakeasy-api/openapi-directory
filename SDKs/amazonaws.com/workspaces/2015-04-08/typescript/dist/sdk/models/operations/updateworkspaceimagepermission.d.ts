@@ -25,5 +25,5 @@ export declare class UpdateWorkspaceImagePermissionResponse extends SpeakeasyBas
     resourceNotFoundException?: any;
     resourceUnavailableException?: any;
     statusCode: number;
-    updateWorkspaceImagePermissionResult?: Map<string, any>;
+    updateWorkspaceImagePermissionResult?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
-import { WorkspaceProperties } from "./workspaceproperties";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
+var workspaceproperties_1 = require("./workspaceproperties");
 // WorkspaceRequest
 /**
  * Describes the information used to create a WorkSpace.
@@ -35,37 +38,37 @@ var WorkspaceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BundleId" }),
         __metadata("design:type", String)
     ], WorkspaceRequest.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryId" }),
         __metadata("design:type", String)
     ], WorkspaceRequest.prototype, "directoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootVolumeEncryptionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootVolumeEncryptionEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkspaceRequest.prototype, "rootVolumeEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], WorkspaceRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserName" }),
         __metadata("design:type", String)
     ], WorkspaceRequest.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserVolumeEncryptionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserVolumeEncryptionEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkspaceRequest.prototype, "userVolumeEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VolumeEncryptionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VolumeEncryptionKey" }),
         __metadata("design:type", String)
     ], WorkspaceRequest.prototype, "volumeEncryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceProperties" }),
-        __metadata("design:type", WorkspaceProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceProperties" }),
+        __metadata("design:type", workspaceproperties_1.WorkspaceProperties)
     ], WorkspaceRequest.prototype, "workspaceProperties", void 0);
     return WorkspaceRequest;
-}(SpeakeasyBase));
-export { WorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceRequest = WorkspaceRequest;

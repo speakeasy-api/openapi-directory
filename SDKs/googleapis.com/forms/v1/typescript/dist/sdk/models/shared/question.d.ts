@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ChoiceQuestion } from "./choicequestion";
+import { ChoiceQuestionInput } from "./choicequestion";
 import { DateQuestion } from "./datequestion";
 import { FileUploadQuestion } from "./fileuploadquestion";
 import { Grading } from "./grading";
@@ -7,12 +7,12 @@ import { RowQuestion } from "./rowquestion";
 import { ScaleQuestion } from "./scalequestion";
 import { TextQuestion } from "./textquestion";
 import { TimeQuestion } from "./timequestion";
-import { ChoiceQuestionInput } from "./choicequestion";
+import { ChoiceQuestion } from "./choicequestion";
 /**
  * Any question. The specific type of question is known by its `kind`.
 **/
-export declare class Question extends SpeakeasyBase {
-    choiceQuestion?: ChoiceQuestion;
+export declare class QuestionInput extends SpeakeasyBase {
+    choiceQuestion?: ChoiceQuestionInput;
     dateQuestion?: DateQuestion;
     fileUploadQuestion?: FileUploadQuestion;
     grading?: Grading;
@@ -26,8 +26,8 @@ export declare class Question extends SpeakeasyBase {
 /**
  * Any question. The specific type of question is known by its `kind`.
 **/
-export declare class QuestionInput extends SpeakeasyBase {
-    choiceQuestion?: ChoiceQuestionInput;
+export declare class Question extends SpeakeasyBase {
+    choiceQuestion?: ChoiceQuestion;
     dateQuestion?: DateQuestion;
     fileUploadQuestion?: FileUploadQuestion;
     grading?: Grading;

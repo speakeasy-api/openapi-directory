@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FindingTypeStatsFindingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingTypeStats = exports.FindingTypeStatsFindingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FindingTypeStatsFindingTypeEnum;
 (function (FindingTypeStatsFindingTypeEnum) {
     FindingTypeStatsFindingTypeEnum["FindingTypeUnspecified"] = "FINDING_TYPE_UNSPECIFIED";
     FindingTypeStatsFindingTypeEnum["MixedContent"] = "MIXED_CONTENT";
@@ -37,7 +40,7 @@ export var FindingTypeStatsFindingTypeEnum;
     FindingTypeStatsFindingTypeEnum["InvalidHeader"] = "INVALID_HEADER";
     FindingTypeStatsFindingTypeEnum["MisspelledSecurityHeaderName"] = "MISSPELLED_SECURITY_HEADER_NAME";
     FindingTypeStatsFindingTypeEnum["MismatchingSecurityHeaderValues"] = "MISMATCHING_SECURITY_HEADER_VALUES";
-})(FindingTypeStatsFindingTypeEnum || (FindingTypeStatsFindingTypeEnum = {}));
+})(FindingTypeStatsFindingTypeEnum = exports.FindingTypeStatsFindingTypeEnum || (exports.FindingTypeStatsFindingTypeEnum = {}));
 // FindingTypeStats
 /**
  * A FindingTypeStats resource represents stats regarding a specific FindingType of Findings under a given ScanRun.
@@ -48,13 +51,13 @@ var FindingTypeStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingCount" }),
         __metadata("design:type", Number)
     ], FindingTypeStats.prototype, "findingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingType" }),
         __metadata("design:type", String)
     ], FindingTypeStats.prototype, "findingType", void 0);
     return FindingTypeStats;
-}(SpeakeasyBase));
-export { FindingTypeStats };
+}(utils_1.SpeakeasyBase));
+exports.FindingTypeStats = FindingTypeStats;

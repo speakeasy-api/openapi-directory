@@ -21,7 +21,7 @@ export declare class CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguratio
 }
 export declare class CreateSuiteDefinitionRequestBody extends SpeakeasyBase {
     suiteDefinitionConfiguration?: CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateSuiteDefinitionRequest extends SpeakeasyBase {
     headers: CreateSuiteDefinitionHeaders;

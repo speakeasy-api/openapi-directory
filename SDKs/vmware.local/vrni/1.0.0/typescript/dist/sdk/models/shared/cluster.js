@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityTypeEnum } from "./entitytypeenum";
-import { Reference } from "./reference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitytypeenum_1 = require("./entitytypeenum");
+var reference_1 = require("./reference");
 var Cluster = /** @class */ (function (_super) {
     __extends(Cluster, _super);
     function Cluster() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nsx_manager" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nsx_manager" }),
+        __metadata("design:type", reference_1.Reference)
     ], Cluster.prototype, "nsxManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_cpu_cores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_cpu_cores" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "numCpuCores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_datastores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_datastores" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "numDatastores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_hosts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_hosts" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "numHosts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_cpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_cpus" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "totalCpus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_memory" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "totalMemory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcenter_manager" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcenter_manager" }),
+        __metadata("design:type", reference_1.Reference)
     ], Cluster.prototype, "vcenterManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendor_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendor_id" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "vendorId", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

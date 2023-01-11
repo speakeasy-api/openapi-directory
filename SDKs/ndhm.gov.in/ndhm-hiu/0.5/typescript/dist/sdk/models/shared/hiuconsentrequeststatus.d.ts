@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ConsentArtefactReference } from "./consentartefactreference";
 import { ConsentStatusEnum } from "./consentstatusenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare class HiuConsentRequestStatusConsentRequest extends SpeakeasyBase {
     consentArtefacts: ConsentArtefactReference[];
@@ -10,7 +10,7 @@ export declare class HiuConsentRequestStatusConsentRequest extends SpeakeasyBase
 }
 export declare class HiuConsentRequestStatus extends SpeakeasyBase {
     consentRequest?: HiuConsentRequestStatusConsentRequest;
-    error?: Error;
+    error?: ErrorT;
     requestId: string;
     resp: RequestReference;
     timestamp: Date;

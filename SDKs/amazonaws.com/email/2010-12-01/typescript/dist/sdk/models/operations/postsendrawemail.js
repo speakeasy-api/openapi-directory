@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostSendRawEmailActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSendRawEmailResponse = exports.PostSendRawEmailRequest = exports.PostSendRawEmailHeaders = exports.PostSendRawEmailQueryParams = exports.PostSendRawEmailVersionEnum = exports.PostSendRawEmailActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostSendRawEmailActionEnum;
 (function (PostSendRawEmailActionEnum) {
     PostSendRawEmailActionEnum["SendRawEmail"] = "SendRawEmail";
-})(PostSendRawEmailActionEnum || (PostSendRawEmailActionEnum = {}));
-export var PostSendRawEmailVersionEnum;
+})(PostSendRawEmailActionEnum = exports.PostSendRawEmailActionEnum || (exports.PostSendRawEmailActionEnum = {}));
+var PostSendRawEmailVersionEnum;
 (function (PostSendRawEmailVersionEnum) {
     PostSendRawEmailVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostSendRawEmailVersionEnum || (PostSendRawEmailVersionEnum = {}));
+})(PostSendRawEmailVersionEnum = exports.PostSendRawEmailVersionEnum || (exports.PostSendRawEmailVersionEnum = {}));
 var PostSendRawEmailQueryParams = /** @class */ (function (_super) {
     __extends(PostSendRawEmailQueryParams, _super);
     function PostSendRawEmailQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostSendRawEmailQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostSendRawEmailQueryParams.prototype, "version", void 0);
     return PostSendRawEmailQueryParams;
-}(SpeakeasyBase));
-export { PostSendRawEmailQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSendRawEmailQueryParams = PostSendRawEmailQueryParams;
 var PostSendRawEmailHeaders = /** @class */ (function (_super) {
     __extends(PostSendRawEmailHeaders, _super);
     function PostSendRawEmailHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostSendRawEmailHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostSendRawEmailHeaders;
-}(SpeakeasyBase));
-export { PostSendRawEmailHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostSendRawEmailHeaders = PostSendRawEmailHeaders;
 var PostSendRawEmailRequest = /** @class */ (function (_super) {
     __extends(PostSendRawEmailRequest, _super);
     function PostSendRawEmailRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSendRawEmailQueryParams)
     ], PostSendRawEmailRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSendRawEmailHeaders)
     ], PostSendRawEmailRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostSendRawEmailRequest.prototype, "request", void 0);
     return PostSendRawEmailRequest;
-}(SpeakeasyBase));
-export { PostSendRawEmailRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSendRawEmailRequest = PostSendRawEmailRequest;
 var PostSendRawEmailResponse = /** @class */ (function (_super) {
     __extends(PostSendRawEmailResponse, _super);
     function PostSendRawEmailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostSendRawEmailResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSendRawEmailResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSendRawEmailResponse.prototype, "statusCode", void 0);
     return PostSendRawEmailResponse;
-}(SpeakeasyBase));
-export { PostSendRawEmailResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSendRawEmailResponse = PostSendRawEmailResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociationByIdResponse = exports.GetAssociationByIdRequest = exports.GetAssociationByIdQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAssociationByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetAssociationByIdQueryParams, _super);
     function GetAssociationByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetAssociationByIdQueryParams.prototype, "id", void 0);
     return GetAssociationByIdQueryParams;
-}(SpeakeasyBase));
-export { GetAssociationByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationByIdQueryParams = GetAssociationByIdQueryParams;
 var GetAssociationByIdRequest = /** @class */ (function (_super) {
     __extends(GetAssociationByIdRequest, _super);
     function GetAssociationByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociationByIdQueryParams)
     ], GetAssociationByIdRequest.prototype, "queryParams", void 0);
     return GetAssociationByIdRequest;
-}(SpeakeasyBase));
-export { GetAssociationByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationByIdRequest = GetAssociationByIdRequest;
 var GetAssociationByIdResponse = /** @class */ (function (_super) {
     __extends(GetAssociationByIdResponse, _super);
     function GetAssociationByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAssociationByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAssociationByIdResponse.prototype, "statusCode", void 0);
     return GetAssociationByIdResponse;
-}(SpeakeasyBase));
-export { GetAssociationByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationByIdResponse = GetAssociationByIdResponse;

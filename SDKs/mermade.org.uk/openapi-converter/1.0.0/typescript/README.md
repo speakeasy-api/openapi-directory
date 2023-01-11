@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ConvertRequest, ConvertResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,8 +28,8 @@ const sdk = new SDK();
     
 const req: ConvertRequest = {
   request: {
-    filename: "adipisci",
-    source: "voluptatum",
+    filename: "sit",
+    source: "voluptas",
     validate: "on",
   },
 };

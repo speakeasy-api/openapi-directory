@@ -1,4 +1,7 @@
-export var LanguageTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguageTypeEnum = void 0;
+var LanguageTypeEnum;
 (function (LanguageTypeEnum) {
     LanguageTypeEnum["Java"] = "JAVA";
     LanguageTypeEnum["Python"] = "PYTHON";
@@ -10,4 +13,4 @@ export var LanguageTypeEnum;
     LanguageTypeEnum["Dotnet"] = "DOTNET";
     LanguageTypeEnum["Base"] = "BASE";
     LanguageTypeEnum["Php"] = "PHP";
-})(LanguageTypeEnum || (LanguageTypeEnum = {}));
+})(LanguageTypeEnum = exports.LanguageTypeEnum || (exports.LanguageTypeEnum = {}));

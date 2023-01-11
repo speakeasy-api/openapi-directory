@@ -26,13 +26,13 @@ export declare class CreateBotAliasRequestBodySentimentAnalysisSettings extends 
     detectSentiment?: boolean;
 }
 export declare class CreateBotAliasRequestBody extends SpeakeasyBase {
-    botAliasLocaleSettings?: Map<string, shared.BotAliasLocaleSettings>;
+    botAliasLocaleSettings?: Record<string, shared.BotAliasLocaleSettings>;
     botAliasName: string;
     botVersion?: string;
     conversationLogSettings?: CreateBotAliasRequestBodyConversationLogSettings;
     description?: string;
     sentimentAnalysisSettings?: CreateBotAliasRequestBodySentimentAnalysisSettings;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateBotAliasRequest extends SpeakeasyBase {
     pathParams: CreateBotAliasPathParams;

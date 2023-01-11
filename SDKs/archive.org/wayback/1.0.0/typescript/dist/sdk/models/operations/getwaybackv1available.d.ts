@@ -16,6 +16,6 @@ export declare class GetWaybackV1AvailableResponse extends SpeakeasyBase {
     availabilityResults?: shared.AvailabilityResults;
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

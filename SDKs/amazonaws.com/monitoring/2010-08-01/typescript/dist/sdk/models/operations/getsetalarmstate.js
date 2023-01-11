@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,122 +23,124 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSetAlarmStateActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetAlarmStateResponse = exports.GetSetAlarmStateRequest = exports.GetSetAlarmStateHeaders = exports.GetSetAlarmStateQueryParams = exports.GetSetAlarmStateVersionEnum = exports.GetSetAlarmStateStateValueEnum = exports.GetSetAlarmStateActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSetAlarmStateActionEnum;
 (function (GetSetAlarmStateActionEnum) {
     GetSetAlarmStateActionEnum["SetAlarmState"] = "SetAlarmState";
-})(GetSetAlarmStateActionEnum || (GetSetAlarmStateActionEnum = {}));
-export var GetSetAlarmStateStateValueEnum;
+})(GetSetAlarmStateActionEnum = exports.GetSetAlarmStateActionEnum || (exports.GetSetAlarmStateActionEnum = {}));
+var GetSetAlarmStateStateValueEnum;
 (function (GetSetAlarmStateStateValueEnum) {
     GetSetAlarmStateStateValueEnum["Ok"] = "OK";
     GetSetAlarmStateStateValueEnum["Alarm"] = "ALARM";
     GetSetAlarmStateStateValueEnum["InsufficientData"] = "INSUFFICIENT_DATA";
-})(GetSetAlarmStateStateValueEnum || (GetSetAlarmStateStateValueEnum = {}));
-export var GetSetAlarmStateVersionEnum;
+})(GetSetAlarmStateStateValueEnum = exports.GetSetAlarmStateStateValueEnum || (exports.GetSetAlarmStateStateValueEnum = {}));
+var GetSetAlarmStateVersionEnum;
 (function (GetSetAlarmStateVersionEnum) {
     GetSetAlarmStateVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(GetSetAlarmStateVersionEnum || (GetSetAlarmStateVersionEnum = {}));
+})(GetSetAlarmStateVersionEnum = exports.GetSetAlarmStateVersionEnum || (exports.GetSetAlarmStateVersionEnum = {}));
 var GetSetAlarmStateQueryParams = /** @class */ (function (_super) {
     __extends(GetSetAlarmStateQueryParams, _super);
     function GetSetAlarmStateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AlarmName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AlarmName" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "alarmName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StateReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StateReason" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "stateReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StateReasonData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StateReasonData" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "stateReasonData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StateValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StateValue" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "stateValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateQueryParams.prototype, "version", void 0);
     return GetSetAlarmStateQueryParams;
-}(SpeakeasyBase));
-export { GetSetAlarmStateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetAlarmStateQueryParams = GetSetAlarmStateQueryParams;
 var GetSetAlarmStateHeaders = /** @class */ (function (_super) {
     __extends(GetSetAlarmStateHeaders, _super);
     function GetSetAlarmStateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetSetAlarmStateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetSetAlarmStateHeaders;
-}(SpeakeasyBase));
-export { GetSetAlarmStateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetSetAlarmStateHeaders = GetSetAlarmStateHeaders;
 var GetSetAlarmStateRequest = /** @class */ (function (_super) {
     __extends(GetSetAlarmStateRequest, _super);
     function GetSetAlarmStateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetAlarmStateQueryParams)
     ], GetSetAlarmStateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetAlarmStateHeaders)
     ], GetSetAlarmStateRequest.prototype, "headers", void 0);
     return GetSetAlarmStateRequest;
-}(SpeakeasyBase));
-export { GetSetAlarmStateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetAlarmStateRequest = GetSetAlarmStateRequest;
 var GetSetAlarmStateResponse = /** @class */ (function (_super) {
     __extends(GetSetAlarmStateResponse, _super);
     function GetSetAlarmStateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSetAlarmStateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetAlarmStateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetAlarmStateResponse.prototype, "statusCode", void 0);
     return GetSetAlarmStateResponse;
-}(SpeakeasyBase));
-export { GetSetAlarmStateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetAlarmStateResponse = GetSetAlarmStateResponse;

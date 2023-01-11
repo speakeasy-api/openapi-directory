@@ -19,11 +19,11 @@ export class ContainerOverrides extends SpeakeasyBase {
   instanceType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=memory" })
-  memory?: number;
+  memory?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceRequirements", elemType: ResourceRequirement })
   resourceRequirements?: ResourceRequirement[];
 
   @SpeakeasyMetadata({ data: "json, name=vcpus" })
-  vcpus?: number;
+  vcpus?: Record<string, any>;
 }

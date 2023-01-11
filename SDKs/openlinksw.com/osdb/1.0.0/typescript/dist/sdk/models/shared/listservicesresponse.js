@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceDescription } from "./servicedescription";
-export var ListServicesResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListServicesResponse = exports.ListServicesResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicedescription_1 = require("./servicedescription");
+var ListServicesResponseStatusEnum;
 (function (ListServicesResponseStatusEnum) {
     ListServicesResponseStatusEnum["Success"] = "success";
-})(ListServicesResponseStatusEnum || (ListServicesResponseStatusEnum = {}));
+})(ListServicesResponseStatusEnum = exports.ListServicesResponseStatusEnum || (exports.ListServicesResponseStatusEnum = {}));
 var ListServicesResponse = /** @class */ (function (_super) {
     __extends(ListServicesResponse, _super);
     function ListServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", String)
     ], ListServicesResponse.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ListServicesResponse.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response", elemType: ServiceDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response", elemType: servicedescription_1.ServiceDescription }),
         __metadata("design:type", Array)
     ], ListServicesResponse.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ListServicesResponse.prototype, "status", void 0);
     return ListServicesResponse;
-}(SpeakeasyBase));
-export { ListServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListServicesResponse = ListServicesResponse;

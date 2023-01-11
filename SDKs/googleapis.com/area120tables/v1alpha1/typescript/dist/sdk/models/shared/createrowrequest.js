@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Row } from "./row";
-export var CreateRowRequestViewEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRowRequest = exports.CreateRowRequestViewEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var row_1 = require("./row");
+var CreateRowRequestViewEnum;
 (function (CreateRowRequestViewEnum) {
     CreateRowRequestViewEnum["ViewUnspecified"] = "VIEW_UNSPECIFIED";
     CreateRowRequestViewEnum["ColumnIdView"] = "COLUMN_ID_VIEW";
-})(CreateRowRequestViewEnum || (CreateRowRequestViewEnum = {}));
+})(CreateRowRequestViewEnum = exports.CreateRowRequestViewEnum || (exports.CreateRowRequestViewEnum = {}));
 // CreateRowRequest
 /**
  * Request message for TablesService.CreateRow.
@@ -39,17 +42,17 @@ var CreateRowRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], CreateRowRequest.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=row" }),
-        __metadata("design:type", Row)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row" }),
+        __metadata("design:type", row_1.Row)
     ], CreateRowRequest.prototype, "row", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], CreateRowRequest.prototype, "view", void 0);
     return CreateRowRequest;
-}(SpeakeasyBase));
-export { CreateRowRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRowRequest = CreateRowRequest;

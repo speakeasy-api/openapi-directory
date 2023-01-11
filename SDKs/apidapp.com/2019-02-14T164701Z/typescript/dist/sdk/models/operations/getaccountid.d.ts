@@ -12,7 +12,7 @@ export declare class GetAccountIdRequest extends SpeakeasyBase {
 }
 export declare class GetAccountIdResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

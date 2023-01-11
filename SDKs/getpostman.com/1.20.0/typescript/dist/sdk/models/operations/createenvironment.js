@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEnvironmentResponse = exports.CreateEnvironmentRequest = exports.CreateEnvironment400ApplicationJson = exports.CreateEnvironment400ApplicationJsonError = exports.CreateEnvironment200ApplicationJson = exports.CreateEnvironment200ApplicationJsonEnvironment = exports.CreateEnvironmentRequestBody = exports.CreateEnvironmentRequestBodyEnvironment = exports.CreateEnvironmentRequestBodyEnvironmentValues = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateEnvironmentRequestBodyEnvironmentValues = /** @class */ (function (_super) {
     __extends(CreateEnvironmentRequestBodyEnvironmentValues, _super);
     function CreateEnvironmentRequestBodyEnvironmentValues() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], CreateEnvironmentRequestBodyEnvironmentValues.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], CreateEnvironmentRequestBodyEnvironmentValues.prototype, "value", void 0);
     return CreateEnvironmentRequestBodyEnvironmentValues;
-}(SpeakeasyBase));
-export { CreateEnvironmentRequestBodyEnvironmentValues };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentRequestBodyEnvironmentValues = CreateEnvironmentRequestBodyEnvironmentValues;
 var CreateEnvironmentRequestBodyEnvironment = /** @class */ (function (_super) {
     __extends(CreateEnvironmentRequestBodyEnvironment, _super);
     function CreateEnvironmentRequestBodyEnvironment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateEnvironmentRequestBodyEnvironment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: CreateEnvironmentRequestBodyEnvironmentValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: CreateEnvironmentRequestBodyEnvironmentValues }),
         __metadata("design:type", Array)
     ], CreateEnvironmentRequestBodyEnvironment.prototype, "values", void 0);
     return CreateEnvironmentRequestBodyEnvironment;
-}(SpeakeasyBase));
-export { CreateEnvironmentRequestBodyEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentRequestBodyEnvironment = CreateEnvironmentRequestBodyEnvironment;
 var CreateEnvironmentRequestBody = /** @class */ (function (_super) {
     __extends(CreateEnvironmentRequestBody, _super);
     function CreateEnvironmentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", CreateEnvironmentRequestBodyEnvironment)
     ], CreateEnvironmentRequestBody.prototype, "environment", void 0);
     return CreateEnvironmentRequestBody;
-}(SpeakeasyBase));
-export { CreateEnvironmentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentRequestBody = CreateEnvironmentRequestBody;
 var CreateEnvironment200ApplicationJsonEnvironment = /** @class */ (function (_super) {
     __extends(CreateEnvironment200ApplicationJsonEnvironment, _super);
     function CreateEnvironment200ApplicationJsonEnvironment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateEnvironment200ApplicationJsonEnvironment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateEnvironment200ApplicationJsonEnvironment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], CreateEnvironment200ApplicationJsonEnvironment.prototype, "uid", void 0);
     return CreateEnvironment200ApplicationJsonEnvironment;
-}(SpeakeasyBase));
-export { CreateEnvironment200ApplicationJsonEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironment200ApplicationJsonEnvironment = CreateEnvironment200ApplicationJsonEnvironment;
 var CreateEnvironment200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateEnvironment200ApplicationJson, _super);
     function CreateEnvironment200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", CreateEnvironment200ApplicationJsonEnvironment)
     ], CreateEnvironment200ApplicationJson.prototype, "environment", void 0);
     return CreateEnvironment200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateEnvironment200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironment200ApplicationJson = CreateEnvironment200ApplicationJson;
 var CreateEnvironment400ApplicationJsonError = /** @class */ (function (_super) {
     __extends(CreateEnvironment400ApplicationJsonError, _super);
     function CreateEnvironment400ApplicationJsonError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateEnvironment400ApplicationJsonError.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateEnvironment400ApplicationJsonError.prototype, "name", void 0);
     return CreateEnvironment400ApplicationJsonError;
-}(SpeakeasyBase));
-export { CreateEnvironment400ApplicationJsonError };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironment400ApplicationJsonError = CreateEnvironment400ApplicationJsonError;
 var CreateEnvironment400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateEnvironment400ApplicationJson, _super);
     function CreateEnvironment400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", CreateEnvironment400ApplicationJsonError)
     ], CreateEnvironment400ApplicationJson.prototype, "error", void 0);
     return CreateEnvironment400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateEnvironment400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironment400ApplicationJson = CreateEnvironment400ApplicationJson;
 var CreateEnvironmentRequest = /** @class */ (function (_super) {
     __extends(CreateEnvironmentRequest, _super);
     function CreateEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateEnvironmentRequestBody)
     ], CreateEnvironmentRequest.prototype, "request", void 0);
     return CreateEnvironmentRequest;
-}(SpeakeasyBase));
-export { CreateEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentRequest = CreateEnvironmentRequest;
 var CreateEnvironmentResponse = /** @class */ (function (_super) {
     __extends(CreateEnvironmentResponse, _super);
     function CreateEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateEnvironmentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateEnvironment200ApplicationJson)
-    ], CreateEnvironmentResponse.prototype, "createEnvironment200ApplicationJsonObject", void 0);
+    ], CreateEnvironmentResponse.prototype, "createEnvironment200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateEnvironment400ApplicationJson)
-    ], CreateEnvironmentResponse.prototype, "createEnvironment400ApplicationJsonObject", void 0);
+    ], CreateEnvironmentResponse.prototype, "createEnvironment400ApplicationJSONObject", void 0);
     return CreateEnvironmentResponse;
-}(SpeakeasyBase));
-export { CreateEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentResponse = CreateEnvironmentResponse;

@@ -4,9 +4,9 @@ export declare class SourcesV1GetV1SourcesGetQueryParams extends SpeakeasyBase {
     limit?: number;
     name?: string;
     offset?: number;
-    orderBy?: shared.SourcesV1OrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
 }
 export declare class SourcesV1GetV1SourcesGetRequest extends SpeakeasyBase {
     queryParams: SourcesV1GetV1SourcesGetQueryParams;
@@ -14,6 +14,6 @@ export declare class SourcesV1GetV1SourcesGetRequest extends SpeakeasyBase {
 export declare class SourcesV1GetV1SourcesGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

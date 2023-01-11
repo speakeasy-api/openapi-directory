@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveSignaturesV1Response = exports.RemoveSignaturesV1Request = exports.RemoveSignaturesV14XxApplicationProblemPlusJson = exports.RemoveSignaturesV1RequestBody = exports.RemoveSignaturesV1RequestBodyFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoveSignaturesV1RequestBodyFile = /** @class */ (function (_super) {
     __extends(RemoveSignaturesV1RequestBodyFile, _super);
     function RemoveSignaturesV1RequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], RemoveSignaturesV1RequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], RemoveSignaturesV1RequestBodyFile.prototype, "file", void 0);
     return RemoveSignaturesV1RequestBodyFile;
-}(SpeakeasyBase));
-export { RemoveSignaturesV1RequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.RemoveSignaturesV1RequestBodyFile = RemoveSignaturesV1RequestBodyFile;
 var RemoveSignaturesV1RequestBody = /** @class */ (function (_super) {
     __extends(RemoveSignaturesV1RequestBody, _super);
     function RemoveSignaturesV1RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", RemoveSignaturesV1RequestBodyFile)
     ], RemoveSignaturesV1RequestBody.prototype, "file", void 0);
     return RemoveSignaturesV1RequestBody;
-}(SpeakeasyBase));
-export { RemoveSignaturesV1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RemoveSignaturesV1RequestBody = RemoveSignaturesV1RequestBody;
 var RemoveSignaturesV14XxApplicationProblemPlusJson = /** @class */ (function (_super) {
     __extends(RemoveSignaturesV14XxApplicationProblemPlusJson, _super);
     function RemoveSignaturesV14XxApplicationProblemPlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", Object)
     ], RemoveSignaturesV14XxApplicationProblemPlusJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], RemoveSignaturesV14XxApplicationProblemPlusJson.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], RemoveSignaturesV14XxApplicationProblemPlusJson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RemoveSignaturesV14XxApplicationProblemPlusJson.prototype, "type", void 0);
     return RemoveSignaturesV14XxApplicationProblemPlusJson;
-}(SpeakeasyBase));
-export { RemoveSignaturesV14XxApplicationProblemPlusJson };
+}(utils_1.SpeakeasyBase));
+exports.RemoveSignaturesV14XxApplicationProblemPlusJson = RemoveSignaturesV14XxApplicationProblemPlusJson;
 var RemoveSignaturesV1Request = /** @class */ (function (_super) {
     __extends(RemoveSignaturesV1Request, _super);
     function RemoveSignaturesV1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", RemoveSignaturesV1RequestBody)
     ], RemoveSignaturesV1Request.prototype, "request", void 0);
     return RemoveSignaturesV1Request;
-}(SpeakeasyBase));
-export { RemoveSignaturesV1Request };
+}(utils_1.SpeakeasyBase));
+exports.RemoveSignaturesV1Request = RemoveSignaturesV1Request;
 var RemoveSignaturesV1Response = /** @class */ (function (_super) {
     __extends(RemoveSignaturesV1Response, _super);
     function RemoveSignaturesV1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveSignaturesV1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveSignaturesV1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], RemoveSignaturesV1Response.prototype, "removeSignaturesV1200ApplicationPdfBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveSignaturesV14XxApplicationProblemPlusJson)
-    ], RemoveSignaturesV1Response.prototype, "removeSignaturesV14XxApplicationProblemPlusJsonObject", void 0);
+    ], RemoveSignaturesV1Response.prototype, "removeSignaturesV14XXApplicationProblemPlusJsonObject", void 0);
     return RemoveSignaturesV1Response;
-}(SpeakeasyBase));
-export { RemoveSignaturesV1Response };
+}(utils_1.SpeakeasyBase));
+exports.RemoveSignaturesV1Response = RemoveSignaturesV1Response;

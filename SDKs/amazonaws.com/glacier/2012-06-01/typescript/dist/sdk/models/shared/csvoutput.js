@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QuoteFieldsEnum } from "./quotefieldsenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CsvOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var quotefieldsenum_1 = require("./quotefieldsenum");
 // CsvOutput
 /**
  * Contains information about the comma-separated value (CSV) file that the job results are stored in.
@@ -34,25 +37,25 @@ var CsvOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FieldDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FieldDelimiter" }),
         __metadata("design:type", String)
     ], CsvOutput.prototype, "fieldDelimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuoteCharacter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuoteCharacter" }),
         __metadata("design:type", String)
     ], CsvOutput.prototype, "quoteCharacter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuoteEscapeCharacter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuoteEscapeCharacter" }),
         __metadata("design:type", String)
     ], CsvOutput.prototype, "quoteEscapeCharacter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuoteFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuoteFields" }),
         __metadata("design:type", String)
     ], CsvOutput.prototype, "quoteFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordDelimiter" }),
         __metadata("design:type", String)
     ], CsvOutput.prototype, "recordDelimiter", void 0);
     return CsvOutput;
-}(SpeakeasyBase));
-export { CsvOutput };
+}(utils_1.SpeakeasyBase));
+exports.CsvOutput = CsvOutput;

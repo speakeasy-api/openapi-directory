@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1ClassificationMetrics } from "./googleclouddatalabelingv1beta1classificationmetrics";
-import { GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics } from "./googleclouddatalabelingv1beta1objectdetectionmetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1EvaluationMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1classificationmetrics_1 = require("./googleclouddatalabelingv1beta1classificationmetrics");
+var googleclouddatalabelingv1beta1objectdetectionmetrics_1 = require("./googleclouddatalabelingv1beta1objectdetectionmetrics");
 var GoogleCloudDatalabelingV1beta1EvaluationMetrics = /** @class */ (function (_super) {
     __extends(GoogleCloudDatalabelingV1beta1EvaluationMetrics, _super);
     function GoogleCloudDatalabelingV1beta1EvaluationMetrics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classificationMetrics" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1ClassificationMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classificationMetrics" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1classificationmetrics_1.GoogleCloudDatalabelingV1beta1ClassificationMetrics)
     ], GoogleCloudDatalabelingV1beta1EvaluationMetrics.prototype, "classificationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectDetectionMetrics" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectDetectionMetrics" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1objectdetectionmetrics_1.GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics)
     ], GoogleCloudDatalabelingV1beta1EvaluationMetrics.prototype, "objectDetectionMetrics", void 0);
     return GoogleCloudDatalabelingV1beta1EvaluationMetrics;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1EvaluationMetrics };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1EvaluationMetrics = GoogleCloudDatalabelingV1beta1EvaluationMetrics;

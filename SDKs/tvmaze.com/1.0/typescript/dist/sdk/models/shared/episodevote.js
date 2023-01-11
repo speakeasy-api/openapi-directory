@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeVoteInput = exports.EpisodeVote = void 0;
+var utils_1 = require("../../../internal/utils");
 var EpisodeVote = /** @class */ (function (_super) {
     __extends(EpisodeVote, _super);
     function EpisodeVote() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode_id" }),
         __metadata("design:type", Number)
     ], EpisodeVote.prototype, "episodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vote" }),
         __metadata("design:type", Number)
     ], EpisodeVote.prototype, "vote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voted_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voted_at" }),
         __metadata("design:type", Number)
     ], EpisodeVote.prototype, "votedAt", void 0);
     return EpisodeVote;
-}(SpeakeasyBase));
-export { EpisodeVote };
+}(utils_1.SpeakeasyBase));
+exports.EpisodeVote = EpisodeVote;
 var EpisodeVoteInput = /** @class */ (function (_super) {
     __extends(EpisodeVoteInput, _super);
     function EpisodeVoteInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vote" }),
         __metadata("design:type", Number)
     ], EpisodeVoteInput.prototype, "vote", void 0);
     return EpisodeVoteInput;
-}(SpeakeasyBase));
-export { EpisodeVoteInput };
+}(utils_1.SpeakeasyBase));
+exports.EpisodeVoteInput = EpisodeVoteInput;

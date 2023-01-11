@@ -17,7 +17,7 @@ export class ProtocolTftpGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolTftpGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configTftp?: shared.ConfigTftp;
+  configTFTP?: shared.ConfigTftp;
 
   @SpeakeasyMetadata()
   contentType: string;

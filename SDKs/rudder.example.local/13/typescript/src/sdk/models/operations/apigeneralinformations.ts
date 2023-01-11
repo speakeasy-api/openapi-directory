@@ -44,5 +44,5 @@ export class ApiGeneralInformationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  apiGeneralInformations200ApplicationJsonObject?: ApiGeneralInformations200ApplicationJson;
+  apiGeneralInformations200ApplicationJSONObject?: ApiGeneralInformations200ApplicationJson;
 }

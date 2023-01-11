@@ -14,6 +14,6 @@ export declare class CrmCheckRequest extends SpeakeasyBase {
 export declare class CrmCheckResponse extends SpeakeasyBase {
     crmResponse?: shared.CrmResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

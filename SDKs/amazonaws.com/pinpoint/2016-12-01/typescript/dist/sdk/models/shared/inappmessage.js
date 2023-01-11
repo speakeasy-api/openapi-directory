@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InAppMessageContent } from "./inappmessagecontent";
-import { LayoutEnum } from "./layoutenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InAppMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var inappmessagecontent_1 = require("./inappmessagecontent");
+var layoutenum_1 = require("./layoutenum");
 // InAppMessage
 /**
  * Provides all fields required for building an in-app message.
@@ -35,17 +38,17 @@ var InAppMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content", elemType: InAppMessageContent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content", elemType: inappmessagecontent_1.InAppMessageContent }),
         __metadata("design:type", Array)
     ], InAppMessage.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomConfig" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomConfig" }),
+        __metadata("design:type", Object)
     ], InAppMessage.prototype, "customConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Layout" }),
         __metadata("design:type", String)
     ], InAppMessage.prototype, "layout", void 0);
     return InAppMessage;
-}(SpeakeasyBase));
-export { InAppMessage };
+}(utils_1.SpeakeasyBase));
+exports.InAppMessage = InAppMessage;

@@ -27,5 +27,5 @@ export declare class CreateOrganizationNetworkRequest extends SpeakeasyBase {
 export declare class CreateOrganizationNetworkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganizationNetwork201ApplicationJsonObject?: Map<string, any>;
+    createOrganizationNetwork201ApplicationJSONObject?: Record<string, any>;
 }

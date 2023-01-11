@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManualSharding } from "./manualsharding";
-import { UniformSharding } from "./uniformsharding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShardingOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var manualsharding_1 = require("./manualsharding");
+var uniformsharding_1 = require("./uniformsharding");
 // ShardingOption
 /**
  * Options for enabling sharding.
@@ -35,13 +38,13 @@ var ShardingOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manualSharding" }),
-        __metadata("design:type", ManualSharding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manualSharding" }),
+        __metadata("design:type", manualsharding_1.ManualSharding)
     ], ShardingOption.prototype, "manualSharding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniformSharding" }),
-        __metadata("design:type", UniformSharding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniformSharding" }),
+        __metadata("design:type", uniformsharding_1.UniformSharding)
     ], ShardingOption.prototype, "uniformSharding", void 0);
     return ShardingOption;
-}(SpeakeasyBase));
-export { ShardingOption };
+}(utils_1.SpeakeasyBase));
+exports.ShardingOption = ShardingOption;

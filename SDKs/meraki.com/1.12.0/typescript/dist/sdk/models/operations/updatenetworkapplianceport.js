@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkAppliancePortResponse = exports.UpdateNetworkAppliancePortRequest = exports.UpdateNetworkAppliancePortRequestBody = exports.UpdateNetworkAppliancePortPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkAppliancePortPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkAppliancePortPathParams, _super);
     function UpdateNetworkAppliancePortPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=portId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=portId" }),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortPathParams.prototype, "portId", void 0);
     return UpdateNetworkAppliancePortPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkAppliancePortPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkAppliancePortPathParams = UpdateNetworkAppliancePortPathParams;
 var UpdateNetworkAppliancePortRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkAppliancePortRequestBody, _super);
     function UpdateNetworkAppliancePortRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessPolicy" }),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "accessPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedVlans" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedVlans" }),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "allowedVlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dropUntaggedTraffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dropUntaggedTraffic" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "dropUntaggedTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateNetworkAppliancePortRequestBody.prototype, "vlan", void 0);
     return UpdateNetworkAppliancePortRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkAppliancePortRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkAppliancePortRequestBody = UpdateNetworkAppliancePortRequestBody;
 var UpdateNetworkAppliancePortRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkAppliancePortRequest, _super);
     function UpdateNetworkAppliancePortRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkAppliancePortPathParams)
     ], UpdateNetworkAppliancePortRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkAppliancePortRequestBody)
     ], UpdateNetworkAppliancePortRequest.prototype, "request", void 0);
     return UpdateNetworkAppliancePortRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkAppliancePortRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkAppliancePortRequest = UpdateNetworkAppliancePortRequest;
 var UpdateNetworkAppliancePortResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkAppliancePortResponse, _super);
     function UpdateNetworkAppliancePortResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkAppliancePortResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkAppliancePortResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkAppliancePortResponse.prototype, "updateNetworkAppliancePort200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkAppliancePortResponse.prototype, "updateNetworkAppliancePort200ApplicationJSONObject", void 0);
     return UpdateNetworkAppliancePortResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkAppliancePortResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkAppliancePortResponse = UpdateNetworkAppliancePortResponse;

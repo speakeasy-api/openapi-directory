@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryPipelineScheduleResponse = exports.UpdateRepositoryPipelineScheduleRequest = exports.UpdateRepositoryPipelineSchedulePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryPipelineSchedulePathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineSchedulePathParams, _super);
     function UpdateRepositoryPipelineSchedulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineSchedulePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=schedule_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=schedule_uuid" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineSchedulePathParams.prototype, "scheduleUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineSchedulePathParams.prototype, "workspace", void 0);
     return UpdateRepositoryPipelineSchedulePathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineSchedulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineSchedulePathParams = UpdateRepositoryPipelineSchedulePathParams;
 var UpdateRepositoryPipelineScheduleRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineScheduleRequest, _super);
     function UpdateRepositoryPipelineScheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryPipelineSchedulePathParams)
     ], UpdateRepositoryPipelineScheduleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineScheduleRequest.prototype, "request", void 0);
     return UpdateRepositoryPipelineScheduleRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineScheduleRequest = UpdateRepositoryPipelineScheduleRequest;
 var UpdateRepositoryPipelineScheduleResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineScheduleResponse, _super);
     function UpdateRepositoryPipelineScheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineScheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryPipelineScheduleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineScheduleResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineScheduleResponse.prototype, "pipelineSchedule", void 0);
     return UpdateRepositoryPipelineScheduleResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineScheduleResponse = UpdateRepositoryPipelineScheduleResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Crop = void 0;
+var utils_1 = require("../../../internal/utils");
 // Crop
 /**
  * Crop the sides of an asset by a relative amount. The size of the crop is specified using a scale between 0 and 1, relative to the screen width - i.e a left crop of 0.5 will crop half of the asset from the left, a top crop  of 0.25 will crop the top by quarter of the asset.
@@ -33,21 +36,21 @@ var Crop = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottom" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "bottom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=left" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=left" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=right" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=right" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "right", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=top" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=top" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "top", void 0);
     return Crop;
-}(SpeakeasyBase));
-export { Crop };
+}(utils_1.SpeakeasyBase));
+exports.Crop = Crop;

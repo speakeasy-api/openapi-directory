@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DelcsRequest, DelcsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: DelcsRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      applicationNo: "animi",
-      licenseNo: "cum",
+      applicationNo: "sit",
+      licenseNo: "voluptas",
     },
-    consentArtifact: "voluptate",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "illum",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.delcs(req).then((res: DelcsResponse | AxiosError) => {
+sdk.apIs.delcs(req).then((res: DelcsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.delcs(req).then((res: DelcsResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `delcs` - Dealer License
 * `malcs` - Manufacturer License

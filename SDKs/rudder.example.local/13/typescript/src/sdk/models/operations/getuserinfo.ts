@@ -49,5 +49,5 @@ export class GetUserInfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getUserInfo200ApplicationJsonObject?: GetUserInfo200ApplicationJson;
+  getUserInfo200ApplicationJSONObject?: GetUserInfo200ApplicationJson;
 }

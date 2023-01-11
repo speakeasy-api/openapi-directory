@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetAllowedNetworksResponse = exports.SetAllowedNetworksRequest = exports.SetAllowedNetworks200ApplicationJson = exports.SetAllowedNetworks200ApplicationJsonResultEnum = exports.SetAllowedNetworks200ApplicationJsonData = exports.SetAllowedNetworks200ApplicationJsonActionEnum = exports.SetAllowedNetworksRequestBody = exports.SetAllowedNetworksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetAllowedNetworksPathParams = /** @class */ (function (_super) {
     __extends(SetAllowedNetworksPathParams, _super);
     function SetAllowedNetworksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], SetAllowedNetworksPathParams.prototype, "nodeId", void 0);
     return SetAllowedNetworksPathParams;
-}(SpeakeasyBase));
-export { SetAllowedNetworksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworksPathParams = SetAllowedNetworksPathParams;
 var SetAllowedNetworksRequestBody = /** @class */ (function (_super) {
     __extends(SetAllowedNetworksRequestBody, _super);
     function SetAllowedNetworksRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], SetAllowedNetworksRequestBody.prototype, "value", void 0);
     return SetAllowedNetworksRequestBody;
-}(SpeakeasyBase));
-export { SetAllowedNetworksRequestBody };
-export var SetAllowedNetworks200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworksRequestBody = SetAllowedNetworksRequestBody;
+var SetAllowedNetworks200ApplicationJsonActionEnum;
 (function (SetAllowedNetworks200ApplicationJsonActionEnum) {
     SetAllowedNetworks200ApplicationJsonActionEnum["ModifyAllowedNetworks"] = "modifyAllowedNetworks";
-})(SetAllowedNetworks200ApplicationJsonActionEnum || (SetAllowedNetworks200ApplicationJsonActionEnum = {}));
+})(SetAllowedNetworks200ApplicationJsonActionEnum = exports.SetAllowedNetworks200ApplicationJsonActionEnum || (exports.SetAllowedNetworks200ApplicationJsonActionEnum = {}));
 // SetAllowedNetworks200ApplicationJsonData
 /**
  * Information about the allowed_networks settings
@@ -61,74 +64,74 @@ var SetAllowedNetworks200ApplicationJsonData = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_networks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_networks" }),
         __metadata("design:type", Array)
     ], SetAllowedNetworks200ApplicationJsonData.prototype, "allowedNetworks", void 0);
     return SetAllowedNetworks200ApplicationJsonData;
-}(SpeakeasyBase));
-export { SetAllowedNetworks200ApplicationJsonData };
-export var SetAllowedNetworks200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworks200ApplicationJsonData = SetAllowedNetworks200ApplicationJsonData;
+var SetAllowedNetworks200ApplicationJsonResultEnum;
 (function (SetAllowedNetworks200ApplicationJsonResultEnum) {
     SetAllowedNetworks200ApplicationJsonResultEnum["Success"] = "success";
     SetAllowedNetworks200ApplicationJsonResultEnum["Error"] = "error";
-})(SetAllowedNetworks200ApplicationJsonResultEnum || (SetAllowedNetworks200ApplicationJsonResultEnum = {}));
+})(SetAllowedNetworks200ApplicationJsonResultEnum = exports.SetAllowedNetworks200ApplicationJsonResultEnum || (exports.SetAllowedNetworks200ApplicationJsonResultEnum = {}));
 var SetAllowedNetworks200ApplicationJson = /** @class */ (function (_super) {
     __extends(SetAllowedNetworks200ApplicationJson, _super);
     function SetAllowedNetworks200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], SetAllowedNetworks200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", SetAllowedNetworks200ApplicationJsonData)
     ], SetAllowedNetworks200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SetAllowedNetworks200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], SetAllowedNetworks200ApplicationJson.prototype, "result", void 0);
     return SetAllowedNetworks200ApplicationJson;
-}(SpeakeasyBase));
-export { SetAllowedNetworks200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworks200ApplicationJson = SetAllowedNetworks200ApplicationJson;
 var SetAllowedNetworksRequest = /** @class */ (function (_super) {
     __extends(SetAllowedNetworksRequest, _super);
     function SetAllowedNetworksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetAllowedNetworksPathParams)
     ], SetAllowedNetworksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SetAllowedNetworksRequestBody)
     ], SetAllowedNetworksRequest.prototype, "request", void 0);
     return SetAllowedNetworksRequest;
-}(SpeakeasyBase));
-export { SetAllowedNetworksRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworksRequest = SetAllowedNetworksRequest;
 var SetAllowedNetworksResponse = /** @class */ (function (_super) {
     __extends(SetAllowedNetworksResponse, _super);
     function SetAllowedNetworksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetAllowedNetworksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetAllowedNetworksResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetAllowedNetworks200ApplicationJson)
-    ], SetAllowedNetworksResponse.prototype, "setAllowedNetworks200ApplicationJsonObject", void 0);
+    ], SetAllowedNetworksResponse.prototype, "setAllowedNetworks200ApplicationJSONObject", void 0);
     return SetAllowedNetworksResponse;
-}(SpeakeasyBase));
-export { SetAllowedNetworksResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetAllowedNetworksResponse = SetAllowedNetworksResponse;

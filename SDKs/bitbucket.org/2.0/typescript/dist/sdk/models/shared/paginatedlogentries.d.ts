@@ -8,5 +8,5 @@ export declare class PaginatedLogEntries extends SpeakeasyBase {
     pagelen?: number;
     previous?: string;
     size?: number;
-    values?: Map<string, any>[];
+    values?: Record<string, any>[];
 }

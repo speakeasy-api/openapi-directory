@@ -1,4 +1,7 @@
-export var LocaleEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocaleEnum = void 0;
+var LocaleEnum;
 (function (LocaleEnum) {
     LocaleEnum["EnUs"] = "EN_US";
-})(LocaleEnum || (LocaleEnum = {}));
+})(LocaleEnum = exports.LocaleEnum || (exports.LocaleEnum = {}));

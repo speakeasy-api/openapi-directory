@@ -72,7 +72,7 @@ export enum UpdateEnvironmentRequestBodyWebserverAccessModeEnum {
 
 export class UpdateEnvironmentRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AirflowConfigurationOptions" })
-  airflowConfigurationOptions?: Map<string, string>;
+  airflowConfigurationOptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=AirflowVersion" })
   airflowVersion?: string;

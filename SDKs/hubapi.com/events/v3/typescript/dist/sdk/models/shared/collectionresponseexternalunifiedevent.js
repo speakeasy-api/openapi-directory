@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Paging } from "./paging";
-import { ExternalUnifiedEvent } from "./externalunifiedevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionResponseExternalUnifiedEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var paging_1 = require("./paging");
+var externalunifiedevent_1 = require("./externalunifiedevent");
 var CollectionResponseExternalUnifiedEvent = /** @class */ (function (_super) {
     __extends(CollectionResponseExternalUnifiedEvent, _super);
     function CollectionResponseExternalUnifiedEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paging" }),
-        __metadata("design:type", Paging)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paging" }),
+        __metadata("design:type", paging_1.Paging)
     ], CollectionResponseExternalUnifiedEvent.prototype, "paging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ExternalUnifiedEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: externalunifiedevent_1.ExternalUnifiedEvent }),
         __metadata("design:type", Array)
     ], CollectionResponseExternalUnifiedEvent.prototype, "results", void 0);
     return CollectionResponseExternalUnifiedEvent;
-}(SpeakeasyBase));
-export { CollectionResponseExternalUnifiedEvent };
+}(utils_1.SpeakeasyBase));
+exports.CollectionResponseExternalUnifiedEvent = CollectionResponseExternalUnifiedEvent;

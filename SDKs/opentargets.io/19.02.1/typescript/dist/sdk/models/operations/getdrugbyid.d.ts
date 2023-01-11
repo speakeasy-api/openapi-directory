@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetDrugByIdPathParams extends SpeakeasyBase {
-    drugId: string;
+    drugID: string;
 }
 export declare class GetDrugByIdQueryParams extends SpeakeasyBase {
     drugId: string;

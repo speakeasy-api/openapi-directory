@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class AccountUpdatePrefsRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=prefs" })
-  prefs: Map<string, any>;
+  prefs: Record<string, any>;
 }
 
 

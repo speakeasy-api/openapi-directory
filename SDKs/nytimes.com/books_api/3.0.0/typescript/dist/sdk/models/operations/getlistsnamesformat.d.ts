@@ -34,6 +34,6 @@ export declare class GetListsNamesFormatRequest extends SpeakeasyBase {
 }
 export declare class GetListsNamesFormatResponse extends SpeakeasyBase {
     contentType: string;
-    getListsNamesFormat200ApplicationJsonObject?: GetListsNamesFormat200ApplicationJson;
+    getListsNamesFormat200ApplicationJSONObject?: GetListsNamesFormat200ApplicationJson;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MacVerifyResponseProtectionLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MacVerifyResponse = exports.MacVerifyResponseProtectionLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MacVerifyResponseProtectionLevelEnum;
 (function (MacVerifyResponseProtectionLevelEnum) {
     MacVerifyResponseProtectionLevelEnum["ProtectionLevelUnspecified"] = "PROTECTION_LEVEL_UNSPECIFIED";
     MacVerifyResponseProtectionLevelEnum["Software"] = "SOFTWARE";
     MacVerifyResponseProtectionLevelEnum["Hsm"] = "HSM";
     MacVerifyResponseProtectionLevelEnum["External"] = "EXTERNAL";
     MacVerifyResponseProtectionLevelEnum["ExternalVpc"] = "EXTERNAL_VPC";
-})(MacVerifyResponseProtectionLevelEnum || (MacVerifyResponseProtectionLevelEnum = {}));
+})(MacVerifyResponseProtectionLevelEnum = exports.MacVerifyResponseProtectionLevelEnum || (exports.MacVerifyResponseProtectionLevelEnum = {}));
 // MacVerifyResponse
 /**
  * Response message for KeyManagementService.MacVerify.
@@ -41,29 +44,29 @@ var MacVerifyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MacVerifyResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], MacVerifyResponse.prototype, "protectionLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], MacVerifyResponse.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedDataCrc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedDataCrc32c" }),
         __metadata("design:type", Boolean)
     ], MacVerifyResponse.prototype, "verifiedDataCrc32c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedMacCrc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedMacCrc32c" }),
         __metadata("design:type", Boolean)
     ], MacVerifyResponse.prototype, "verifiedMacCrc32c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedSuccessIntegrity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedSuccessIntegrity" }),
         __metadata("design:type", Boolean)
     ], MacVerifyResponse.prototype, "verifiedSuccessIntegrity", void 0);
     return MacVerifyResponse;
-}(SpeakeasyBase));
-export { MacVerifyResponse };
+}(utils_1.SpeakeasyBase));
+exports.MacVerifyResponse = MacVerifyResponse;

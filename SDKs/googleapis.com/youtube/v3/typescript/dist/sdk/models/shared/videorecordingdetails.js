@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeoPoint } from "./geopoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoRecordingDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var geopoint_1 = require("./geopoint");
 // VideoRecordingDetails
 /**
  * Recording information associated with the video.
@@ -34,17 +37,17 @@ var VideoRecordingDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", GeoPoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", geopoint_1.GeoPoint)
     ], VideoRecordingDetails.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationDescription" }),
         __metadata("design:type", String)
     ], VideoRecordingDetails.prototype, "locationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordingDate" }),
         __metadata("design:type", Date)
     ], VideoRecordingDetails.prototype, "recordingDate", void 0);
     return VideoRecordingDetails;
-}(SpeakeasyBase));
-export { VideoRecordingDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoRecordingDetails = VideoRecordingDetails;

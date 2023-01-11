@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualNodeRef } from "./virtualnoderef";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListVirtualNodesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualnoderef_1 = require("./virtualnoderef");
 var ListVirtualNodesOutput = /** @class */ (function (_super) {
     __extends(ListVirtualNodesOutput, _super);
     function ListVirtualNodesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListVirtualNodesOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualNodes", elemType: VirtualNodeRef }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualNodes", elemType: virtualnoderef_1.VirtualNodeRef }),
         __metadata("design:type", Array)
     ], ListVirtualNodesOutput.prototype, "virtualNodes", void 0);
     return ListVirtualNodesOutput;
-}(SpeakeasyBase));
-export { ListVirtualNodesOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListVirtualNodesOutput = ListVirtualNodesOutput;

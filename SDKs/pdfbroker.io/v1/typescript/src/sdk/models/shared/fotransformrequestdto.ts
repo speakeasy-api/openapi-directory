@@ -15,7 +15,7 @@ export class FoTransformRequestDto extends SpeakeasyBase {
   metadata?: PdfMetadataDto;
 
   @SpeakeasyMetadata({ data: "json, name=Resources" })
-  resources?: Map<string, string>;
+  resources?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=XmlDataDocumentBase64String" })
   xmlDataDocumentBase64String?: string;

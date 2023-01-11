@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse = exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest = exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams, _super);
     function GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams = GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams;
 var GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest, _super);
     function GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams)
     ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest = GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest;
 var GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse, _super);
     function GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse.prototype, "getNetworkApplianceTrafficShapingCustomPerformanceClasses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse.prototype, "getNetworkApplianceTrafficShapingCustomPerformanceClasses200ApplicationJSONObject", void 0);
     return GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse = GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse;

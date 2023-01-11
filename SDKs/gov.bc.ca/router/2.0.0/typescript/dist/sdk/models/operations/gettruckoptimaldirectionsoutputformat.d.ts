@@ -21,7 +21,7 @@ export declare class GetTruckOptimalDirectionsOutputFormatQueryParams extends Sp
     departure?: Date;
     disable?: string;
     distanceUnit?: GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

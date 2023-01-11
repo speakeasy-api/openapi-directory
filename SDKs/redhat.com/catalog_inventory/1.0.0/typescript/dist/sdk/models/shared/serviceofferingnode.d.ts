@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ServiceOfferingNode extends SpeakeasyBase {
     archivedAt?: Date;
     createdAt?: Date;
-    extra?: Map<string, any>;
+    extra?: Record<string, any>;
     id?: string;
     lastSeenAt?: Date;
     name?: string;

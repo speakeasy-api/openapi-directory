@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MotorcycleBuild = void 0;
+var utils_1 = require("../../../internal/utils");
 // MotorcycleBuild
 /**
  * Describes the Motorcycle specification
@@ -33,57 +36,57 @@ var MotorcycleBuild = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_type" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "bodyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cylinders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cylinders" }),
         __metadata("design:type", Number)
     ], MotorcycleBuild.prototype, "cylinders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drivetrain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drivetrain" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "drivetrain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dry_weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dry_weight" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "dryWeight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engine" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fuel_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fuel_type" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "fuelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=made_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=made_in" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "madeIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transmission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transmission" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "transmission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trim" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "trim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vehicle_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vehicle_type" }),
         __metadata("design:type", String)
     ], MotorcycleBuild.prototype, "vehicleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], MotorcycleBuild.prototype, "year", void 0);
     return MotorcycleBuild;
-}(SpeakeasyBase));
-export { MotorcycleBuild };
+}(utils_1.SpeakeasyBase));
+exports.MotorcycleBuild = MotorcycleBuild;

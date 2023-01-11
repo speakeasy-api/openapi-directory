@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SoftwareConfigOptionalComponentsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SoftwareConfig = exports.SoftwareConfigOptionalComponentsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SoftwareConfigOptionalComponentsEnum;
 (function (SoftwareConfigOptionalComponentsEnum) {
     SoftwareConfigOptionalComponentsEnum["ComponentUnspecified"] = "COMPONENT_UNSPECIFIED";
     SoftwareConfigOptionalComponentsEnum["Anaconda"] = "ANACONDA";
@@ -39,7 +42,7 @@ export var SoftwareConfigOptionalComponentsEnum;
     SoftwareConfigOptionalComponentsEnum["Solr"] = "SOLR";
     SoftwareConfigOptionalComponentsEnum["Zeppelin"] = "ZEPPELIN";
     SoftwareConfigOptionalComponentsEnum["Zookeeper"] = "ZOOKEEPER";
-})(SoftwareConfigOptionalComponentsEnum || (SoftwareConfigOptionalComponentsEnum = {}));
+})(SoftwareConfigOptionalComponentsEnum = exports.SoftwareConfigOptionalComponentsEnum || (exports.SoftwareConfigOptionalComponentsEnum = {}));
 // SoftwareConfig
 /**
  * Specifies the selection and config of software inside the cluster.
@@ -50,17 +53,17 @@ var SoftwareConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageVersion" }),
         __metadata("design:type", String)
     ], SoftwareConfig.prototype, "imageVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optionalComponents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optionalComponents" }),
         __metadata("design:type", Array)
     ], SoftwareConfig.prototype, "optionalComponents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], SoftwareConfig.prototype, "properties", void 0);
     return SoftwareConfig;
-}(SpeakeasyBase));
-export { SoftwareConfig };
+}(utils_1.SpeakeasyBase));
+exports.SoftwareConfig = SoftwareConfig;

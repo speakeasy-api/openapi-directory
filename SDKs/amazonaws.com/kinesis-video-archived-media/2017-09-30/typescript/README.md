@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetClipRequest, GetClipResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,28 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetClipRequest = {
   headers: {
-    xAmzAlgorithm: "est",
-    xAmzContentSha256: "voluptatem",
-    xAmzCredential: "voluptate",
-    xAmzDate: "facilis",
-    xAmzSecurityToken: "quo",
-    xAmzSignature: "quia",
-    xAmzSignedHeaders: "ipsum",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     clipFragmentSelector: {
-      fragmentSelectorType: "PRODUCER_TIMESTAMP",
+      fragmentSelectorType: "SERVER_TIMESTAMP",
       timestampRange: {
-        endTimestamp: "1974-12-25T03:13:38Z",
-        startTimestamp: "2013-04-05T01:01:35Z",
+        endTimestamp: "2011-08-12T10:11:12Z",
+        startTimestamp: "2003-05-13T04:57:12Z",
       },
     },
-    streamArn: "soluta",
-    streamName: "sunt",
+    streamARN: "rerum",
+    streamName: "dicta",
   },
 };
 
-sdk.sdk.getClip(req).then((res: GetClipResponse | AxiosError) => {
+sdk.getClip(req).then((res: GetClipResponse | AxiosError) => {
    // handle response
 });
 ```

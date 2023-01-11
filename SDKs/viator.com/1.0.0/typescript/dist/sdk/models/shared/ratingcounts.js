@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RatingCounts = void 0;
+var utils_1 = require("../../../internal/utils");
 // RatingCounts
 /**
  * **dictionary** of rating (stars) to number of reviews with each rating for *this* product"
@@ -38,25 +41,25 @@ var RatingCounts = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=1" }),
         __metadata("design:type", Number)
     ], RatingCounts.prototype, "one", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=2" }),
         __metadata("design:type", Number)
     ], RatingCounts.prototype, "two", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=3" }),
         __metadata("design:type", Number)
     ], RatingCounts.prototype, "three", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=4" }),
         __metadata("design:type", Number)
     ], RatingCounts.prototype, "four", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=5" }),
         __metadata("design:type", Number)
     ], RatingCounts.prototype, "five", void 0);
     return RatingCounts;
-}(SpeakeasyBase));
-export { RatingCounts };
+}(utils_1.SpeakeasyBase));
+exports.RatingCounts = RatingCounts;

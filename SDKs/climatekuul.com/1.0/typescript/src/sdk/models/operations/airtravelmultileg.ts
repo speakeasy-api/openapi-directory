@@ -8,7 +8,7 @@ export const AirtravelMultilegServerList = [
 
 export class AirtravelMultilegRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   request: shared.AirtravelMultilegRequest;

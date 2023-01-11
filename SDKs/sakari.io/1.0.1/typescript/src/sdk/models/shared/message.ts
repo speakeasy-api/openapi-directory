@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ContactIdentifiers } from "./contactidentifiers";
 import { Updated } from "./updated";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -34,7 +34,7 @@ export class Message extends SpeakeasyBase {
   created?: Updated;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

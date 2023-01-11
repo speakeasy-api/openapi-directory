@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3PublicAccessBlockConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3PublicAccessBlockConfiguration
 /**
  * The <code>PublicAccessBlock</code> configuration to apply to this Amazon S3 bucket. If the proposed configuration is for an existing Amazon S3 bucket and the configuration is not specified, the access preview uses the existing setting. If the proposed configuration is for a new bucket and the configuration is not specified, the access preview uses <code>false</code>. If the proposed configuration is for a new access point or multi-region access point and the access point BPA configuration is not specified, the access preview uses <code>true</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html">PublicAccessBlockConfiguration</a>.
@@ -33,13 +36,13 @@ var S3PublicAccessBlockConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignorePublicAcls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignorePublicAcls" }),
         __metadata("design:type", Boolean)
     ], S3PublicAccessBlockConfiguration.prototype, "ignorePublicAcls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictPublicBuckets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictPublicBuckets" }),
         __metadata("design:type", Boolean)
     ], S3PublicAccessBlockConfiguration.prototype, "restrictPublicBuckets", void 0);
     return S3PublicAccessBlockConfiguration;
-}(SpeakeasyBase));
-export { S3PublicAccessBlockConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.S3PublicAccessBlockConfiguration = S3PublicAccessBlockConfiguration;

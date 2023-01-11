@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentOrdersUpdatemerchantorderidResponse = exports.ContentOrdersUpdatemerchantorderidRequest = exports.ContentOrdersUpdatemerchantorderidSecurity = exports.ContentOrdersUpdatemerchantorderidQueryParams = exports.ContentOrdersUpdatemerchantorderidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ContentOrdersUpdatemerchantorderidPathParams = /** @class */ (function (_super) {
     __extends(ContentOrdersUpdatemerchantorderidPathParams, _super);
     function ContentOrdersUpdatemerchantorderidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=merchantId" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidPathParams.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=orderId" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidPathParams.prototype, "orderId", void 0);
     return ContentOrdersUpdatemerchantorderidPathParams;
-}(SpeakeasyBase));
-export { ContentOrdersUpdatemerchantorderidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ContentOrdersUpdatemerchantorderidPathParams = ContentOrdersUpdatemerchantorderidPathParams;
 var ContentOrdersUpdatemerchantorderidQueryParams = /** @class */ (function (_super) {
     __extends(ContentOrdersUpdatemerchantorderidQueryParams, _super);
     function ContentOrdersUpdatemerchantorderidQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidQueryParams.prototype, "uploadProtocol", void 0);
     return ContentOrdersUpdatemerchantorderidQueryParams;
-}(SpeakeasyBase));
-export { ContentOrdersUpdatemerchantorderidQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ContentOrdersUpdatemerchantorderidQueryParams = ContentOrdersUpdatemerchantorderidQueryParams;
 var ContentOrdersUpdatemerchantorderidSecurity = /** @class */ (function (_super) {
     __extends(ContentOrdersUpdatemerchantorderidSecurity, _super);
     function ContentOrdersUpdatemerchantorderidSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ContentOrdersUpdatemerchantorderidSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ContentOrdersUpdatemerchantorderidSecurity.prototype, "oauth2c", void 0);
     return ContentOrdersUpdatemerchantorderidSecurity;
-}(SpeakeasyBase));
-export { ContentOrdersUpdatemerchantorderidSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ContentOrdersUpdatemerchantorderidSecurity = ContentOrdersUpdatemerchantorderidSecurity;
 var ContentOrdersUpdatemerchantorderidRequest = /** @class */ (function (_super) {
     __extends(ContentOrdersUpdatemerchantorderidRequest, _super);
     function ContentOrdersUpdatemerchantorderidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentOrdersUpdatemerchantorderidPathParams)
     ], ContentOrdersUpdatemerchantorderidRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentOrdersUpdatemerchantorderidQueryParams)
     ], ContentOrdersUpdatemerchantorderidRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.OrdersUpdateMerchantOrderIdRequest)
     ], ContentOrdersUpdatemerchantorderidRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentOrdersUpdatemerchantorderidSecurity)
     ], ContentOrdersUpdatemerchantorderidRequest.prototype, "security", void 0);
     return ContentOrdersUpdatemerchantorderidRequest;
-}(SpeakeasyBase));
-export { ContentOrdersUpdatemerchantorderidRequest };
+}(utils_1.SpeakeasyBase));
+exports.ContentOrdersUpdatemerchantorderidRequest = ContentOrdersUpdatemerchantorderidRequest;
 var ContentOrdersUpdatemerchantorderidResponse = /** @class */ (function (_super) {
     __extends(ContentOrdersUpdatemerchantorderidResponse, _super);
     function ContentOrdersUpdatemerchantorderidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentOrdersUpdatemerchantorderidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OrdersUpdateMerchantOrderIdResponse)
     ], ContentOrdersUpdatemerchantorderidResponse.prototype, "ordersUpdateMerchantOrderIdResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ContentOrdersUpdatemerchantorderidResponse.prototype, "statusCode", void 0);
     return ContentOrdersUpdatemerchantorderidResponse;
-}(SpeakeasyBase));
-export { ContentOrdersUpdatemerchantorderidResponse };
+}(utils_1.SpeakeasyBase));
+exports.ContentOrdersUpdatemerchantorderidResponse = ContentOrdersUpdatemerchantorderidResponse;

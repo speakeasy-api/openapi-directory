@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AdcrdRequest, AdcrdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: AdcrdRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      applicationNo: "dolorum",
-      dob: "illum",
-      examYear: "voluptatem",
-      fullName: "ut",
+      applicationNo: "sit",
+      dob: "voluptas",
+      examYear: "culpa",
+      fullName: "expedita",
     },
-    consentArtifact: "et",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "sequi",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.adcrd(req).then((res: AdcrdResponse | AxiosError) => {
+sdk.apIs.adcrd(req).then((res: AdcrdResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.adcrd(req).then((res: AdcrdResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `adcrd` - Admit Card
 

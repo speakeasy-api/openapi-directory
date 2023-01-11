@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NotificationSettingNotificationTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationSetting = exports.NotificationSettingNotificationTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NotificationSettingNotificationTypesEnum;
 (function (NotificationSettingNotificationTypesEnum) {
     NotificationSettingNotificationTypesEnum["NotificationTypeUnspecified"] = "NOTIFICATION_TYPE_UNSPECIFIED";
     NotificationSettingNotificationTypesEnum["GoogleUpdate"] = "GOOGLE_UPDATE";
@@ -37,7 +40,7 @@ export var NotificationSettingNotificationTypesEnum;
     NotificationSettingNotificationTypesEnum["DuplicateLocation"] = "DUPLICATE_LOCATION";
     NotificationSettingNotificationTypesEnum["LossOfVoiceOfMerchant"] = "LOSS_OF_VOICE_OF_MERCHANT";
     NotificationSettingNotificationTypesEnum["VoiceOfMerchantUpdated"] = "VOICE_OF_MERCHANT_UPDATED";
-})(NotificationSettingNotificationTypesEnum || (NotificationSettingNotificationTypesEnum = {}));
+})(NotificationSettingNotificationTypesEnum = exports.NotificationSettingNotificationTypesEnum || (exports.NotificationSettingNotificationTypesEnum = {}));
 // NotificationSetting
 /**
  * A Google Pub/Sub topic where notifications can be published when a location is updated or has a new review. There will be only one notification setting resource per-account.
@@ -48,17 +51,17 @@ var NotificationSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NotificationSetting.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationTypes" }),
         __metadata("design:type", Array)
     ], NotificationSetting.prototype, "notificationTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubsubTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubsubTopic" }),
         __metadata("design:type", String)
     ], NotificationSetting.prototype, "pubsubTopic", void 0);
     return NotificationSetting;
-}(SpeakeasyBase));
-export { NotificationSetting };
+}(utils_1.SpeakeasyBase));
+exports.NotificationSetting = NotificationSetting;

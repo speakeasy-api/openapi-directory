@@ -1,18 +1,34 @@
-export * from "./gamesmanagementachievementsreset";
-export * from "./gamesmanagementachievementsresetall";
-export * from "./gamesmanagementachievementsresetallforallplayers";
-export * from "./gamesmanagementachievementsresetforallplayers";
-export * from "./gamesmanagementachievementsresetmultipleforallplayers";
-export * from "./gamesmanagementapplicationslisthidden";
-export * from "./gamesmanagementeventsreset";
-export * from "./gamesmanagementeventsresetall";
-export * from "./gamesmanagementeventsresetallforallplayers";
-export * from "./gamesmanagementeventsresetforallplayers";
-export * from "./gamesmanagementeventsresetmultipleforallplayers";
-export * from "./gamesmanagementplayershide";
-export * from "./gamesmanagementplayersunhide";
-export * from "./gamesmanagementscoresreset";
-export * from "./gamesmanagementscoresresetall";
-export * from "./gamesmanagementscoresresetallforallplayers";
-export * from "./gamesmanagementscoresresetforallplayers";
-export * from "./gamesmanagementscoresresetmultipleforallplayers";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./gamesmanagementachievementsreset"), exports);
+__exportStar(require("./gamesmanagementachievementsresetall"), exports);
+__exportStar(require("./gamesmanagementachievementsresetallforallplayers"), exports);
+__exportStar(require("./gamesmanagementachievementsresetforallplayers"), exports);
+__exportStar(require("./gamesmanagementachievementsresetmultipleforallplayers"), exports);
+__exportStar(require("./gamesmanagementapplicationslisthidden"), exports);
+__exportStar(require("./gamesmanagementeventsreset"), exports);
+__exportStar(require("./gamesmanagementeventsresetall"), exports);
+__exportStar(require("./gamesmanagementeventsresetallforallplayers"), exports);
+__exportStar(require("./gamesmanagementeventsresetforallplayers"), exports);
+__exportStar(require("./gamesmanagementeventsresetmultipleforallplayers"), exports);
+__exportStar(require("./gamesmanagementplayershide"), exports);
+__exportStar(require("./gamesmanagementplayersunhide"), exports);
+__exportStar(require("./gamesmanagementscoresreset"), exports);
+__exportStar(require("./gamesmanagementscoresresetall"), exports);
+__exportStar(require("./gamesmanagementscoresresetallforallplayers"), exports);
+__exportStar(require("./gamesmanagementscoresresetforallplayers"), exports);
+__exportStar(require("./gamesmanagementscoresresetmultipleforallplayers"), exports);

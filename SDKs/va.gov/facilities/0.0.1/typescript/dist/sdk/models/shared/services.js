@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ServicesBenefitsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Services = exports.ServicesOtherEnum = exports.ServicesHealthEnum = exports.ServicesBenefitsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ServicesBenefitsEnum;
 (function (ServicesBenefitsEnum) {
     ServicesBenefitsEnum["ApplyingForBenefits"] = "ApplyingForBenefits";
     ServicesBenefitsEnum["BurialClaimAssistance"] = "BurialClaimAssistance";
@@ -41,8 +44,8 @@ export var ServicesBenefitsEnum;
     ServicesBenefitsEnum["UpdatingDirectDepositInformation"] = "UpdatingDirectDepositInformation";
     ServicesBenefitsEnum["VaHomeLoanAssistance"] = "VAHomeLoanAssistance";
     ServicesBenefitsEnum["VocationalRehabilitationAndEmploymentAssistance"] = "VocationalRehabilitationAndEmploymentAssistance";
-})(ServicesBenefitsEnum || (ServicesBenefitsEnum = {}));
-export var ServicesHealthEnum;
+})(ServicesBenefitsEnum = exports.ServicesBenefitsEnum || (exports.ServicesBenefitsEnum = {}));
+var ServicesHealthEnum;
 (function (ServicesHealthEnum) {
     ServicesHealthEnum["Audiology"] = "Audiology";
     ServicesHealthEnum["Cardiology"] = "Cardiology";
@@ -64,32 +67,32 @@ export var ServicesHealthEnum;
     ServicesHealthEnum["UrgentCare"] = "UrgentCare";
     ServicesHealthEnum["Urology"] = "Urology";
     ServicesHealthEnum["WomensHealth"] = "WomensHealth";
-})(ServicesHealthEnum || (ServicesHealthEnum = {}));
-export var ServicesOtherEnum;
+})(ServicesHealthEnum = exports.ServicesHealthEnum || (exports.ServicesHealthEnum = {}));
+var ServicesOtherEnum;
 (function (ServicesOtherEnum) {
     ServicesOtherEnum["OnlineScheduling"] = "OnlineScheduling";
-})(ServicesOtherEnum || (ServicesOtherEnum = {}));
+})(ServicesOtherEnum = exports.ServicesOtherEnum || (exports.ServicesOtherEnum = {}));
 var Services = /** @class */ (function (_super) {
     __extends(Services, _super);
     function Services() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benefits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benefits" }),
         __metadata("design:type", Array)
     ], Services.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
         __metadata("design:type", Array)
     ], Services.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Services.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=other" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=other" }),
         __metadata("design:type", Array)
     ], Services.prototype, "other", void 0);
     return Services;
-}(SpeakeasyBase));
-export { Services };
+}(utils_1.SpeakeasyBase));
+exports.Services = Services;

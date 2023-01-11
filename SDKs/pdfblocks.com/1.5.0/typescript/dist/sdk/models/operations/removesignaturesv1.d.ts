@@ -7,7 +7,7 @@ export declare class RemoveSignaturesV1RequestBody extends SpeakeasyBase {
     file: RemoveSignaturesV1RequestBodyFile;
 }
 export declare class RemoveSignaturesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -19,5 +19,5 @@ export declare class RemoveSignaturesV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     removeSignaturesV1200ApplicationPdfBinaryString?: Uint8Array;
-    removeSignaturesV14XxApplicationProblemPlusJsonObject?: RemoveSignaturesV14XxApplicationProblemPlusJson;
+    removeSignaturesV14XXApplicationProblemPlusJsonObject?: RemoveSignaturesV14XxApplicationProblemPlusJson;
 }

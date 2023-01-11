@@ -22,7 +22,6 @@ export declare class PostAccountAccessConsentsRequest extends SpeakeasyBase {
 }
 export declare class PostAccountAccessConsentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadConsentResponse1?: shared.ObReadConsentResponse1;
     statusCode: number;

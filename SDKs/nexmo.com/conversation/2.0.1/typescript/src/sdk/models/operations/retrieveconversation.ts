@@ -60,7 +60,7 @@ export class RetrieveConversation200ApplicationJson extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=numbers" })
-  numbers?: Map<string, any>;
+  numbers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
   properties?: RetrieveConversation200ApplicationJsonProperties;
@@ -90,5 +90,5 @@ export class RetrieveConversationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveConversation200ApplicationJsonObject?: RetrieveConversation200ApplicationJson;
+  retrieveConversation200ApplicationJSONObject?: RetrieveConversation200ApplicationJson;
 }

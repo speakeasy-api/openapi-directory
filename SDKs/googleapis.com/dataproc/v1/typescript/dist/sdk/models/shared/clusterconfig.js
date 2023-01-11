@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoscalingConfig } from "./autoscalingconfig";
-import { DataprocMetricConfig } from "./dataprocmetricconfig";
-import { EncryptionConfig } from "./encryptionconfig";
-import { EndpointConfig } from "./endpointconfig";
-import { GceClusterConfig } from "./gceclusterconfig";
-import { GkeClusterConfig } from "./gkeclusterconfig";
-import { NodeInitializationAction } from "./nodeinitializationaction";
-import { LifecycleConfig } from "./lifecycleconfig";
-import { InstanceGroupConfig } from "./instancegroupconfig";
-import { MetastoreConfig } from "./metastoreconfig";
-import { SecurityConfig } from "./securityconfig";
-import { SoftwareConfig } from "./softwareconfig";
-import { EndpointConfigInput } from "./endpointconfig";
-import { LifecycleConfigInput } from "./lifecycleconfig";
-import { InstanceGroupConfigInput } from "./instancegroupconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterConfigInput = exports.ClusterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalingconfig_1 = require("./autoscalingconfig");
+var dataprocmetricconfig_1 = require("./dataprocmetricconfig");
+var encryptionconfig_1 = require("./encryptionconfig");
+var endpointconfig_1 = require("./endpointconfig");
+var gceclusterconfig_1 = require("./gceclusterconfig");
+var gkeclusterconfig_1 = require("./gkeclusterconfig");
+var nodeinitializationaction_1 = require("./nodeinitializationaction");
+var lifecycleconfig_1 = require("./lifecycleconfig");
+var instancegroupconfig_1 = require("./instancegroupconfig");
+var metastoreconfig_1 = require("./metastoreconfig");
+var securityconfig_1 = require("./securityconfig");
+var softwareconfig_1 = require("./softwareconfig");
+var endpointconfig_2 = require("./endpointconfig");
+var lifecycleconfig_2 = require("./lifecycleconfig");
+var instancegroupconfig_2 = require("./instancegroupconfig");
 // ClusterConfig
 /**
  * The cluster config.
@@ -48,72 +51,72 @@ var ClusterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoscalingConfig" }),
-        __metadata("design:type", AutoscalingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoscalingConfig" }),
+        __metadata("design:type", autoscalingconfig_1.AutoscalingConfig)
     ], ClusterConfig.prototype, "autoscalingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configBucket" }),
         __metadata("design:type", String)
     ], ClusterConfig.prototype, "configBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataprocMetricConfig" }),
-        __metadata("design:type", DataprocMetricConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataprocMetricConfig" }),
+        __metadata("design:type", dataprocmetricconfig_1.DataprocMetricConfig)
     ], ClusterConfig.prototype, "dataprocMetricConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], ClusterConfig.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointConfig" }),
-        __metadata("design:type", EndpointConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointConfig" }),
+        __metadata("design:type", endpointconfig_1.EndpointConfig)
     ], ClusterConfig.prototype, "endpointConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gceClusterConfig" }),
-        __metadata("design:type", GceClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gceClusterConfig" }),
+        __metadata("design:type", gceclusterconfig_1.GceClusterConfig)
     ], ClusterConfig.prototype, "gceClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeClusterConfig" }),
-        __metadata("design:type", GkeClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeClusterConfig" }),
+        __metadata("design:type", gkeclusterconfig_1.GkeClusterConfig)
     ], ClusterConfig.prototype, "gkeClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initializationActions", elemType: NodeInitializationAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initializationActions", elemType: nodeinitializationaction_1.NodeInitializationAction }),
         __metadata("design:type", Array)
     ], ClusterConfig.prototype, "initializationActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycleConfig" }),
-        __metadata("design:type", LifecycleConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycleConfig" }),
+        __metadata("design:type", lifecycleconfig_1.LifecycleConfig)
     ], ClusterConfig.prototype, "lifecycleConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterConfig" }),
-        __metadata("design:type", InstanceGroupConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterConfig" }),
+        __metadata("design:type", instancegroupconfig_1.InstanceGroupConfig)
     ], ClusterConfig.prototype, "masterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metastoreConfig" }),
-        __metadata("design:type", MetastoreConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metastoreConfig" }),
+        __metadata("design:type", metastoreconfig_1.MetastoreConfig)
     ], ClusterConfig.prototype, "metastoreConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryWorkerConfig" }),
-        __metadata("design:type", InstanceGroupConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryWorkerConfig" }),
+        __metadata("design:type", instancegroupconfig_1.InstanceGroupConfig)
     ], ClusterConfig.prototype, "secondaryWorkerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityConfig" }),
-        __metadata("design:type", SecurityConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityConfig" }),
+        __metadata("design:type", securityconfig_1.SecurityConfig)
     ], ClusterConfig.prototype, "securityConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareConfig" }),
-        __metadata("design:type", SoftwareConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareConfig" }),
+        __metadata("design:type", softwareconfig_1.SoftwareConfig)
     ], ClusterConfig.prototype, "softwareConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tempBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tempBucket" }),
         __metadata("design:type", String)
     ], ClusterConfig.prototype, "tempBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerConfig" }),
-        __metadata("design:type", InstanceGroupConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerConfig" }),
+        __metadata("design:type", instancegroupconfig_1.InstanceGroupConfig)
     ], ClusterConfig.prototype, "workerConfig", void 0);
     return ClusterConfig;
-}(SpeakeasyBase));
-export { ClusterConfig };
+}(utils_1.SpeakeasyBase));
+exports.ClusterConfig = ClusterConfig;
 // ClusterConfigInput
 /**
  * The cluster config.
@@ -124,69 +127,69 @@ var ClusterConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoscalingConfig" }),
-        __metadata("design:type", AutoscalingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoscalingConfig" }),
+        __metadata("design:type", autoscalingconfig_1.AutoscalingConfig)
     ], ClusterConfigInput.prototype, "autoscalingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configBucket" }),
         __metadata("design:type", String)
     ], ClusterConfigInput.prototype, "configBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataprocMetricConfig" }),
-        __metadata("design:type", DataprocMetricConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataprocMetricConfig" }),
+        __metadata("design:type", dataprocmetricconfig_1.DataprocMetricConfig)
     ], ClusterConfigInput.prototype, "dataprocMetricConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], ClusterConfigInput.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointConfig" }),
-        __metadata("design:type", EndpointConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointConfig" }),
+        __metadata("design:type", endpointconfig_2.EndpointConfigInput)
     ], ClusterConfigInput.prototype, "endpointConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gceClusterConfig" }),
-        __metadata("design:type", GceClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gceClusterConfig" }),
+        __metadata("design:type", gceclusterconfig_1.GceClusterConfig)
     ], ClusterConfigInput.prototype, "gceClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeClusterConfig" }),
-        __metadata("design:type", GkeClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeClusterConfig" }),
+        __metadata("design:type", gkeclusterconfig_1.GkeClusterConfig)
     ], ClusterConfigInput.prototype, "gkeClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initializationActions", elemType: NodeInitializationAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initializationActions", elemType: nodeinitializationaction_1.NodeInitializationAction }),
         __metadata("design:type", Array)
     ], ClusterConfigInput.prototype, "initializationActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycleConfig" }),
-        __metadata("design:type", LifecycleConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycleConfig" }),
+        __metadata("design:type", lifecycleconfig_2.LifecycleConfigInput)
     ], ClusterConfigInput.prototype, "lifecycleConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterConfig" }),
-        __metadata("design:type", InstanceGroupConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterConfig" }),
+        __metadata("design:type", instancegroupconfig_2.InstanceGroupConfigInput)
     ], ClusterConfigInput.prototype, "masterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metastoreConfig" }),
-        __metadata("design:type", MetastoreConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metastoreConfig" }),
+        __metadata("design:type", metastoreconfig_1.MetastoreConfig)
     ], ClusterConfigInput.prototype, "metastoreConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryWorkerConfig" }),
-        __metadata("design:type", InstanceGroupConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryWorkerConfig" }),
+        __metadata("design:type", instancegroupconfig_2.InstanceGroupConfigInput)
     ], ClusterConfigInput.prototype, "secondaryWorkerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityConfig" }),
-        __metadata("design:type", SecurityConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityConfig" }),
+        __metadata("design:type", securityconfig_1.SecurityConfig)
     ], ClusterConfigInput.prototype, "securityConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareConfig" }),
-        __metadata("design:type", SoftwareConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareConfig" }),
+        __metadata("design:type", softwareconfig_1.SoftwareConfig)
     ], ClusterConfigInput.prototype, "softwareConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tempBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tempBucket" }),
         __metadata("design:type", String)
     ], ClusterConfigInput.prototype, "tempBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerConfig" }),
-        __metadata("design:type", InstanceGroupConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerConfig" }),
+        __metadata("design:type", instancegroupconfig_2.InstanceGroupConfigInput)
     ], ClusterConfigInput.prototype, "workerConfig", void 0);
     return ClusterConfigInput;
-}(SpeakeasyBase));
-export { ClusterConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.ClusterConfigInput = ClusterConfigInput;

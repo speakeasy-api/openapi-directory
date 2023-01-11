@@ -28,5 +28,5 @@ export class GetPackageFilterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPackageFilterDefaultApplicationJsonString?: string;
+  getPackageFilterDefaultApplicationJSONString?: string;
 }

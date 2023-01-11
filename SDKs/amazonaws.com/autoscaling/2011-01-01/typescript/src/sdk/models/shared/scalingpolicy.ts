@@ -39,7 +39,7 @@ export class ScalingPolicy extends SpeakeasyBase {
   minAdjustmentStep?: number;
 
   @SpeakeasyMetadata()
-  policyArn?: string;
+  policyARN?: string;
 
   @SpeakeasyMetadata()
   policyName?: string;

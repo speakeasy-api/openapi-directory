@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoTypeDescription } from "./googleprivacydlpv2infotypedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ListInfoTypesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotypedescription_1 = require("./googleprivacydlpv2infotypedescription");
 // GooglePrivacyDlpV2ListInfoTypesResponse
 /**
  * Response to the ListInfoTypes request.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2ListInfoTypesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypes", elemType: GooglePrivacyDlpV2InfoTypeDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypes", elemType: googleprivacydlpv2infotypedescription_1.GooglePrivacyDlpV2InfoTypeDescription }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2ListInfoTypesResponse.prototype, "infoTypes", void 0);
     return GooglePrivacyDlpV2ListInfoTypesResponse;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ListInfoTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ListInfoTypesResponse = GooglePrivacyDlpV2ListInfoTypesResponse;

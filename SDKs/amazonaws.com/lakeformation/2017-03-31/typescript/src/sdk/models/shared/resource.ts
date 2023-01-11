@@ -14,7 +14,7 @@ import { TableWithColumnsResource } from "./tablewithcolumnsresource";
 **/
 export class Resource extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Catalog" })
-  catalog?: Map<string, any>;
+  catalog?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DataLocation" })
   dataLocation?: DataLocationResource;

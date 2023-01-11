@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolExistsResponse = exports.PoolExistsRequest = exports.PoolExistsHeaders = exports.PoolExistsQueryParams = exports.PoolExistsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PoolExistsPathParams = /** @class */ (function (_super) {
     __extends(PoolExistsPathParams, _super);
     function PoolExistsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], PoolExistsPathParams.prototype, "poolId", void 0);
     return PoolExistsPathParams;
-}(SpeakeasyBase));
-export { PoolExistsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolExistsPathParams = PoolExistsPathParams;
 var PoolExistsQueryParams = /** @class */ (function (_super) {
     __extends(PoolExistsQueryParams, _super);
     function PoolExistsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], PoolExistsQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], PoolExistsQueryParams.prototype, "timeout", void 0);
     return PoolExistsQueryParams;
-}(SpeakeasyBase));
-export { PoolExistsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolExistsQueryParams = PoolExistsQueryParams;
 var PoolExistsHeaders = /** @class */ (function (_super) {
     __extends(PoolExistsHeaders, _super);
     function PoolExistsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], PoolExistsHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], PoolExistsHeaders.prototype, "returnClientRequestId", void 0);
     return PoolExistsHeaders;
-}(SpeakeasyBase));
-export { PoolExistsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PoolExistsHeaders = PoolExistsHeaders;
 var PoolExistsRequest = /** @class */ (function (_super) {
     __extends(PoolExistsRequest, _super);
     function PoolExistsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolExistsPathParams)
     ], PoolExistsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolExistsQueryParams)
     ], PoolExistsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolExistsHeaders)
     ], PoolExistsRequest.prototype, "headers", void 0);
     return PoolExistsRequest;
-}(SpeakeasyBase));
-export { PoolExistsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PoolExistsRequest = PoolExistsRequest;
 var PoolExistsResponse = /** @class */ (function (_super) {
     __extends(PoolExistsResponse, _super);
     function PoolExistsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolExistsResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolExistsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PoolExistsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PoolExistsResponse.prototype, "statusCode", void 0);
     return PoolExistsResponse;
-}(SpeakeasyBase));
-export { PoolExistsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolExistsResponse = PoolExistsResponse;

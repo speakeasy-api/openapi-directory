@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2BigQueryField = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
 // GooglePrivacyDlpV2BigQueryField
 /**
  * Message defining a field of a BigQuery table.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2BigQueryField = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2BigQueryField.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=table" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=table" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2BigQueryField.prototype, "table", void 0);
     return GooglePrivacyDlpV2BigQueryField;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2BigQueryField };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2BigQueryField = GooglePrivacyDlpV2BigQueryField;

@@ -25,6 +25,10 @@ export declare class Organizations {
     **/
     assuredworkloadsOrganizationsLocationsWorkloadsList(req: operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest, config?: AxiosRequestConfig): Promise<operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse>;
     /**
+     * assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
+    **/
+    assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions(req: operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest, config?: AxiosRequestConfig): Promise<operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse>;
+    /**
      * assuredworkloadsOrganizationsLocationsWorkloadsPatch - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
     **/
     assuredworkloadsOrganizationsLocationsWorkloadsPatch(req: operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest, config?: AxiosRequestConfig): Promise<operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse>;

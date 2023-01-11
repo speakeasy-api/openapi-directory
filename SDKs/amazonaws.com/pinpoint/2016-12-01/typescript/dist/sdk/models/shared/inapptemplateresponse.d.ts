@@ -9,12 +9,12 @@ export declare class InAppTemplateResponse extends SpeakeasyBase {
     arn?: string;
     content?: InAppMessageContent[];
     creationDate: string;
-    customConfig?: Map<string, string>;
+    customConfig?: Record<string, string>;
     lastModifiedDate: string;
     layout?: LayoutEnum;
     templateDescription?: string;
     templateName: string;
     templateType: TemplateTypeEnum;
     version?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

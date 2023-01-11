@@ -14,5 +14,5 @@ export declare class ExportServicesJsonlRequest extends SpeakeasyBase {
 export declare class ExportServicesJsonlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    exportServicesJsonl200ApplicationJsonBinaryString?: Uint8Array;
+    exportServicesJSONL200ApplicationJSONBinaryString?: Uint8Array;
 }

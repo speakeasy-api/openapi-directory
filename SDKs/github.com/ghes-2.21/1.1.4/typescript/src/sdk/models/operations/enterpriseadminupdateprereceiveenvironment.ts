@@ -56,7 +56,7 @@ export class EnterpriseAdminUpdatePreReceiveEnvironmentResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminUpdatePreReceiveEnvironment422ApplicationJsonObject?: EnterpriseAdminUpdatePreReceiveEnvironment422ApplicationJson;
+  enterpriseAdminUpdatePreReceiveEnvironment422ApplicationJSONObject?: EnterpriseAdminUpdatePreReceiveEnvironment422ApplicationJson;
 
   @SpeakeasyMetadata()
   preReceiveEnvironment?: shared.PreReceiveEnvironment;

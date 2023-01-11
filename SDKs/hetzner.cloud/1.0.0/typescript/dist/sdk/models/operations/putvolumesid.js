@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutVolumesIdResponse = exports.PutVolumesIdRequest = exports.PutVolumesId200ApplicationJson = exports.PutVolumesId200ApplicationJsonVolume = exports.PutVolumesId200ApplicationJsonVolumeStatusEnum = exports.PutVolumesId200ApplicationJsonVolumeProtection = exports.PutVolumesId200ApplicationJsonVolumeLocation = exports.PutVolumesIdUpdateVolumeRequest = exports.PutVolumesIdUpdateVolumeRequestLabels = exports.PutVolumesIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutVolumesIdPathParams = /** @class */ (function (_super) {
     __extends(PutVolumesIdPathParams, _super);
     function PutVolumesIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PutVolumesIdPathParams.prototype, "id", void 0);
     return PutVolumesIdPathParams;
-}(SpeakeasyBase));
-export { PutVolumesIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesIdPathParams = PutVolumesIdPathParams;
 // PutVolumesIdUpdateVolumeRequestLabels
 /**
  * User-defined labels (key-value pairs)
@@ -45,28 +48,28 @@ var PutVolumesIdUpdateVolumeRequestLabels = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelkey" }),
         __metadata("design:type", String)
     ], PutVolumesIdUpdateVolumeRequestLabels.prototype, "labelkey", void 0);
     return PutVolumesIdUpdateVolumeRequestLabels;
-}(SpeakeasyBase));
-export { PutVolumesIdUpdateVolumeRequestLabels };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesIdUpdateVolumeRequestLabels = PutVolumesIdUpdateVolumeRequestLabels;
 var PutVolumesIdUpdateVolumeRequest = /** @class */ (function (_super) {
     __extends(PutVolumesIdUpdateVolumeRequest, _super);
     function PutVolumesIdUpdateVolumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", PutVolumesIdUpdateVolumeRequestLabels)
     ], PutVolumesIdUpdateVolumeRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutVolumesIdUpdateVolumeRequest.prototype, "name", void 0);
     return PutVolumesIdUpdateVolumeRequest;
-}(SpeakeasyBase));
-export { PutVolumesIdUpdateVolumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesIdUpdateVolumeRequest = PutVolumesIdUpdateVolumeRequest;
 // PutVolumesId200ApplicationJsonVolumeLocation
 /**
  * Location of the Volume. Volume can only be attached to Servers in the same Location.
@@ -77,40 +80,40 @@ var PutVolumesId200ApplicationJsonVolumeLocation = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolumeLocation.prototype, "networkZone", void 0);
     return PutVolumesId200ApplicationJsonVolumeLocation;
-}(SpeakeasyBase));
-export { PutVolumesId200ApplicationJsonVolumeLocation };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesId200ApplicationJsonVolumeLocation = PutVolumesId200ApplicationJsonVolumeLocation;
 // PutVolumesId200ApplicationJsonVolumeProtection
 /**
  * Protection configuration for the Resource
@@ -121,114 +124,114 @@ var PutVolumesId200ApplicationJsonVolumeProtection = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], PutVolumesId200ApplicationJsonVolumeProtection.prototype, "delete", void 0);
     return PutVolumesId200ApplicationJsonVolumeProtection;
-}(SpeakeasyBase));
-export { PutVolumesId200ApplicationJsonVolumeProtection };
-export var PutVolumesId200ApplicationJsonVolumeStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesId200ApplicationJsonVolumeProtection = PutVolumesId200ApplicationJsonVolumeProtection;
+var PutVolumesId200ApplicationJsonVolumeStatusEnum;
 (function (PutVolumesId200ApplicationJsonVolumeStatusEnum) {
     PutVolumesId200ApplicationJsonVolumeStatusEnum["Creating"] = "creating";
     PutVolumesId200ApplicationJsonVolumeStatusEnum["Available"] = "available";
-})(PutVolumesId200ApplicationJsonVolumeStatusEnum || (PutVolumesId200ApplicationJsonVolumeStatusEnum = {}));
+})(PutVolumesId200ApplicationJsonVolumeStatusEnum = exports.PutVolumesId200ApplicationJsonVolumeStatusEnum || (exports.PutVolumesId200ApplicationJsonVolumeStatusEnum = {}));
 var PutVolumesId200ApplicationJsonVolume = /** @class */ (function (_super) {
     __extends(PutVolumesId200ApplicationJsonVolume, _super);
     function PutVolumesId200ApplicationJsonVolume() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linux_device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linux_device" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "linuxDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", PutVolumesId200ApplicationJsonVolumeLocation)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", PutVolumesId200ApplicationJsonVolumeProtection)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PutVolumesId200ApplicationJsonVolume.prototype, "status", void 0);
     return PutVolumesId200ApplicationJsonVolume;
-}(SpeakeasyBase));
-export { PutVolumesId200ApplicationJsonVolume };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesId200ApplicationJsonVolume = PutVolumesId200ApplicationJsonVolume;
 var PutVolumesId200ApplicationJson = /** @class */ (function (_super) {
     __extends(PutVolumesId200ApplicationJson, _super);
     function PutVolumesId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", PutVolumesId200ApplicationJsonVolume)
     ], PutVolumesId200ApplicationJson.prototype, "volume", void 0);
     return PutVolumesId200ApplicationJson;
-}(SpeakeasyBase));
-export { PutVolumesId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesId200ApplicationJson = PutVolumesId200ApplicationJson;
 var PutVolumesIdRequest = /** @class */ (function (_super) {
     __extends(PutVolumesIdRequest, _super);
     function PutVolumesIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutVolumesIdPathParams)
     ], PutVolumesIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutVolumesIdUpdateVolumeRequest)
     ], PutVolumesIdRequest.prototype, "request", void 0);
     return PutVolumesIdRequest;
-}(SpeakeasyBase));
-export { PutVolumesIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesIdRequest = PutVolumesIdRequest;
 var PutVolumesIdResponse = /** @class */ (function (_super) {
     __extends(PutVolumesIdResponse, _super);
     function PutVolumesIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutVolumesIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PutVolumesId200ApplicationJson)
-    ], PutVolumesIdResponse.prototype, "putVolumesId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutVolumesIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PutVolumesId200ApplicationJson)
+    ], PutVolumesIdResponse.prototype, "putVolumesId200ApplicationJSONObject", void 0);
     return PutVolumesIdResponse;
-}(SpeakeasyBase));
-export { PutVolumesIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutVolumesIdResponse = PutVolumesIdResponse;

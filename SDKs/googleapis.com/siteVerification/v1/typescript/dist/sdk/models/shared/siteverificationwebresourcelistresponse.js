@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SiteVerificationWebResourceResource } from "./siteverificationwebresourceresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteVerificationWebResourceListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var siteverificationwebresourceresource_1 = require("./siteverificationwebresourceresource");
 var SiteVerificationWebResourceListResponse = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceListResponse, _super);
     function SiteVerificationWebResourceListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SiteVerificationWebResourceResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: siteverificationwebresourceresource_1.SiteVerificationWebResourceResource }),
         __metadata("design:type", Array)
     ], SiteVerificationWebResourceListResponse.prototype, "items", void 0);
     return SiteVerificationWebResourceListResponse;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceListResponse };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceListResponse = SiteVerificationWebResourceListResponse;

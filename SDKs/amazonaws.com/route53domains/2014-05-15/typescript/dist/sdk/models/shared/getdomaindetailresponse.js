@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactDetail } from "./contactdetail";
-import { Nameserver } from "./nameserver";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainDetailResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactdetail_1 = require("./contactdetail");
+var nameserver_1 = require("./nameserver");
 // GetDomainDetailResponse
 /**
  * The GetDomainDetail response includes the following elements.
@@ -35,89 +38,89 @@ var GetDomainDetailResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AbuseContactEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AbuseContactEmail" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "abuseContactEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AbuseContactPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AbuseContactPhone" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "abuseContactPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdminContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdminContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], GetDomainDetailResponse.prototype, "adminContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdminPrivacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdminPrivacy" }),
         __metadata("design:type", Boolean)
     ], GetDomainDetailResponse.prototype, "adminPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoRenew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoRenew" }),
         __metadata("design:type", Boolean)
     ], GetDomainDetailResponse.prototype, "autoRenew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", Date)
     ], GetDomainDetailResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DnsSec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DnsSec" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "dnsSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpirationDate" }),
         __metadata("design:type", Date)
     ], GetDomainDetailResponse.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Nameservers", elemType: Nameserver }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Nameservers", elemType: nameserver_1.Nameserver }),
         __metadata("design:type", Array)
     ], GetDomainDetailResponse.prototype, "nameservers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrantContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrantContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], GetDomainDetailResponse.prototype, "registrantContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrantPrivacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrantPrivacy" }),
         __metadata("design:type", Boolean)
     ], GetDomainDetailResponse.prototype, "registrantPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrarName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrarName" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "registrarName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrarUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrarUrl" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "registrarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistryDomainId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistryDomainId" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "registryDomainId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reseller" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reseller" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "reseller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusList" }),
         __metadata("design:type", Array)
     ], GetDomainDetailResponse.prototype, "statusList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TechContact" }),
-        __metadata("design:type", ContactDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TechContact" }),
+        __metadata("design:type", contactdetail_1.ContactDetail)
     ], GetDomainDetailResponse.prototype, "techContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TechPrivacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TechPrivacy" }),
         __metadata("design:type", Boolean)
     ], GetDomainDetailResponse.prototype, "techPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDate" }),
         __metadata("design:type", Date)
     ], GetDomainDetailResponse.prototype, "updatedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WhoIsServer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WhoIsServer" }),
         __metadata("design:type", String)
     ], GetDomainDetailResponse.prototype, "whoIsServer", void 0);
     return GetDomainDetailResponse;
-}(SpeakeasyBase));
-export { GetDomainDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDetailResponse = GetDomainDetailResponse;

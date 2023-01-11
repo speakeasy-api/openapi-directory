@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutionMetrics } from "./executionmetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var executionmetrics_1 = require("./executionmetrics");
 var PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse = /** @class */ (function (_super) {
     __extends(PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse, _super);
     function PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debug" }),
         __metadata("design:type", String)
     ], PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse.prototype, "debug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", ExecutionMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", executionmetrics_1.ExecutionMetrics)
     ], PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse.prototype, "result", void 0);
     return PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse;
-}(SpeakeasyBase));
-export { PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse = PlayMediaIntentHandlingResolveResumePlaybackInvocationResponse;

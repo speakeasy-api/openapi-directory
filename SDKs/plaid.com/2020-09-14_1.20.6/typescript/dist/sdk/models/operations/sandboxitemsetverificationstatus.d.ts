@@ -5,6 +5,6 @@ export declare class SandboxItemSetVerificationStatusRequest extends SpeakeasyBa
 }
 export declare class SandboxItemSetVerificationStatusResponse extends SpeakeasyBase {
     contentType: string;
-    sandboxItemSetVerificationStatusResponse?: Map<string, any>;
+    sandboxItemSetVerificationStatusResponse?: Record<string, any>;
     statusCode: number;
 }

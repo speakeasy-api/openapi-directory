@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VenuesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VenuesResponse = exports.VenuesRequest = exports.VenuesPathParams = exports.VenuesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VenuesFormatEnum;
 (function (VenuesFormatEnum) {
     VenuesFormatEnum["Xml"] = "xml";
     VenuesFormatEnum["Json"] = "json";
-})(VenuesFormatEnum || (VenuesFormatEnum = {}));
+})(VenuesFormatEnum = exports.VenuesFormatEnum || (exports.VenuesFormatEnum = {}));
 var VenuesPathParams = /** @class */ (function (_super) {
     __extends(VenuesPathParams, _super);
     function VenuesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], VenuesPathParams.prototype, "format", void 0);
     return VenuesPathParams;
-}(SpeakeasyBase));
-export { VenuesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.VenuesPathParams = VenuesPathParams;
 var VenuesRequest = /** @class */ (function (_super) {
     __extends(VenuesRequest, _super);
     function VenuesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VenuesPathParams)
     ], VenuesRequest.prototype, "pathParams", void 0);
     return VenuesRequest;
-}(SpeakeasyBase));
-export { VenuesRequest };
+}(utils_1.SpeakeasyBase));
+exports.VenuesRequest = VenuesRequest;
 var VenuesResponse = /** @class */ (function (_super) {
     __extends(VenuesResponse, _super);
     function VenuesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VenuesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VenuesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], VenuesResponse.prototype, "venues", void 0);
     return VenuesResponse;
-}(SpeakeasyBase));
-export { VenuesResponse };
+}(utils_1.SpeakeasyBase));
+exports.VenuesResponse = VenuesResponse;

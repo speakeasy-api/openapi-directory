@@ -8,7 +8,7 @@ export declare class GistsForkRequest extends SpeakeasyBase {
 }
 export declare class GistsForkResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     baseGist?: shared.BaseGist;
     basicError?: shared.BasicError;

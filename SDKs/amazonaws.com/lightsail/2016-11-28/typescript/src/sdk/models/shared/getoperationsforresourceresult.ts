@@ -5,7 +5,7 @@ import { Operation } from "./operation";
 
 export class GetOperationsForResourceResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=nextPageCount" })
-  nextPageCount?: string;
+  nextPageCount?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=nextPageToken" })
   nextPageToken?: string;

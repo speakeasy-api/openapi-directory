@@ -26,7 +26,7 @@ export declare class CreateLaunchProfileRequestBody extends SpeakeasyBase {
     name: string;
     streamConfiguration: CreateLaunchProfileRequestBodyStreamConfiguration;
     studioComponentIds: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateLaunchProfileRequest extends SpeakeasyBase {
     pathParams: CreateLaunchProfilePathParams;

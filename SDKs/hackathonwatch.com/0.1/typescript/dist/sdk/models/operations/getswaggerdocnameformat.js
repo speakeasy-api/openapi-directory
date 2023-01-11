@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSwaggerDocNameFormatResponse = exports.GetSwaggerDocNameFormatRequest = exports.GetSwaggerDocNameFormatPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSwaggerDocNameFormatPathParams = /** @class */ (function (_super) {
     __extends(GetSwaggerDocNameFormatPathParams, _super);
     function GetSwaggerDocNameFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetSwaggerDocNameFormatPathParams.prototype, "name", void 0);
     return GetSwaggerDocNameFormatPathParams;
-}(SpeakeasyBase));
-export { GetSwaggerDocNameFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSwaggerDocNameFormatPathParams = GetSwaggerDocNameFormatPathParams;
 var GetSwaggerDocNameFormatRequest = /** @class */ (function (_super) {
     __extends(GetSwaggerDocNameFormatRequest, _super);
     function GetSwaggerDocNameFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSwaggerDocNameFormatPathParams)
     ], GetSwaggerDocNameFormatRequest.prototype, "pathParams", void 0);
     return GetSwaggerDocNameFormatRequest;
-}(SpeakeasyBase));
-export { GetSwaggerDocNameFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSwaggerDocNameFormatRequest = GetSwaggerDocNameFormatRequest;
 var GetSwaggerDocNameFormatResponse = /** @class */ (function (_super) {
     __extends(GetSwaggerDocNameFormatResponse, _super);
     function GetSwaggerDocNameFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSwaggerDocNameFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSwaggerDocNameFormatResponse.prototype, "statusCode", void 0);
     return GetSwaggerDocNameFormatResponse;
-}(SpeakeasyBase));
-export { GetSwaggerDocNameFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSwaggerDocNameFormatResponse = GetSwaggerDocNameFormatResponse;

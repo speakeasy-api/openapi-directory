@@ -11,7 +11,7 @@ export class PostV05PatientsOnFindHeaders extends SpeakeasyBase {
 
 export class PostV05PatientsOnFindRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   patientIdentificationResponse?: shared.PatientIdentificationResponse;

@@ -1,6 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClientCertificateRevocationListStatus } from "./clientcertificaterevocationliststatus";
+/**
+ * The current state of the client certificate revocation list.
+**/
+export declare class ExportClientVpnClientCertificateRevocationListResultStatus extends SpeakeasyBase {
+    code?: Record<string, any>;
+    message?: Record<string, any>;
+}
 export declare class ExportClientVpnClientCertificateRevocationListResult extends SpeakeasyBase {
-    certificateRevocationList?: string;
-    status?: ClientCertificateRevocationListStatus;
+    certificateRevocationList?: Record<string, any>;
+    status?: ExportClientVpnClientCertificateRevocationListResultStatus;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Money } from "./money";
-export var PricePricingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Price = exports.PricePricingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var money_1 = require("./money");
+var PricePricingTypeEnum;
 (function (PricePricingTypeEnum) {
     PricePricingTypeEnum["PricingTypeUnspecified"] = "PRICING_TYPE_UNSPECIFIED";
     PricePricingTypeEnum["CostPerMille"] = "COST_PER_MILLE";
     PricePricingTypeEnum["CostPerDay"] = "COST_PER_DAY";
-})(PricePricingTypeEnum || (PricePricingTypeEnum = {}));
+})(PricePricingTypeEnum = exports.PricePricingTypeEnum || (exports.PricePricingTypeEnum = {}));
 // Price
 /**
  * Represents a price and a pricing type for a product / deal.
@@ -40,13 +43,13 @@ var Price = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", money_1.Money)
     ], Price.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricingType" }),
         __metadata("design:type", String)
     ], Price.prototype, "pricingType", void 0);
     return Price;
-}(SpeakeasyBase));
-export { Price };
+}(utils_1.SpeakeasyBase));
+exports.Price = Price;

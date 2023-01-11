@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Column = void 0;
+var utils_1 = require("../../../internal/utils");
 // Column
 /**
  * A column in a <code>Table</code>.
@@ -33,21 +36,21 @@ var Column = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Comment" }),
         __metadata("design:type", String)
     ], Column.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Column.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters" }),
+        __metadata("design:type", Object)
     ], Column.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Column.prototype, "type", void 0);
     return Column;
-}(SpeakeasyBase));
-export { Column };
+}(utils_1.SpeakeasyBase));
+exports.Column = Column;

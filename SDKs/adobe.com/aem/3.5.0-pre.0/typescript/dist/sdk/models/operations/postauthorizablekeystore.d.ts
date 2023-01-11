@@ -37,8 +37,8 @@ export declare class PostAuthorizableKeystoreRequest extends SpeakeasyBase {
     request?: PostAuthorizableKeystoreRequestBody;
 }
 export declare class PostAuthorizableKeystoreResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    keystoreInfo?: string;
     statusCode: number;
     postAuthorizableKeystoreDefaultTextPlainString?: string;
 }

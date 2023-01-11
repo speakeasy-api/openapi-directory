@@ -10,9 +10,6 @@ export class PutMarketingV3MarketingEventsEventsExternalEventIdReplacePathParams
 
 
 export class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
   privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 

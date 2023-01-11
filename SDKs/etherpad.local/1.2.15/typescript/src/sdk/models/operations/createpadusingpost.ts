@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreatePadUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" })
   text?: string;
@@ -16,7 +16,7 @@ export class CreatePadUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class CreatePadUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class CreatePadUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class CreatePadUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class CreatePadUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createPadUsingPost200ApplicationJsonObject?: CreatePadUsingPost200ApplicationJson;
+  createPadUsingPOST200ApplicationJSONObject?: CreatePadUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createPadUsingPost400ApplicationJsonObject?: CreatePadUsingPost400ApplicationJson;
+  createPadUsingPOST400ApplicationJSONObject?: CreatePadUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createPadUsingPost401ApplicationJsonObject?: CreatePadUsingPost401ApplicationJson;
+  createPadUsingPOST401ApplicationJSONObject?: CreatePadUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createPadUsingPost500ApplicationJsonObject?: CreatePadUsingPost500ApplicationJson;
+  createPadUsingPOST500ApplicationJSONObject?: CreatePadUsingPost500ApplicationJson;
 }

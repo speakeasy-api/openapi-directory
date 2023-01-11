@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OpsCenterIntegration } from "./opscenterintegration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceIntegrationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var opscenterintegration_1 = require("./opscenterintegration");
 // ServiceIntegrationConfig
 /**
  *  Information about the integration of DevOps Guru with another AWS service, such as AWS Systems Manager.
@@ -34,9 +37,9 @@ var ServiceIntegrationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpsCenter" }),
-        __metadata("design:type", OpsCenterIntegration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpsCenter" }),
+        __metadata("design:type", opscenterintegration_1.OpsCenterIntegration)
     ], ServiceIntegrationConfig.prototype, "opsCenter", void 0);
     return ServiceIntegrationConfig;
-}(SpeakeasyBase));
-export { ServiceIntegrationConfig };
+}(utils_1.SpeakeasyBase));
+exports.ServiceIntegrationConfig = ServiceIntegrationConfig;

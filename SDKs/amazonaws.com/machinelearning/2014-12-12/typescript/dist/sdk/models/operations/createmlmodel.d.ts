@@ -19,7 +19,7 @@ export declare class CreateMlModelRequest extends SpeakeasyBase {
 }
 export declare class CreateMlModelResponse extends SpeakeasyBase {
     contentType: string;
-    createMlModelOutput?: shared.CreateMlModelOutput;
+    createMLModelOutput?: shared.CreateMlModelOutput;
     idempotentParameterMismatchException?: any;
     internalServerException?: any;
     invalidInputException?: any;

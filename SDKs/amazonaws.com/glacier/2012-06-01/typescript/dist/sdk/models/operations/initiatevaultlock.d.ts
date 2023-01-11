@@ -28,7 +28,7 @@ export declare class InitiateVaultLockRequest extends SpeakeasyBase {
 }
 export declare class InitiateVaultLockResponse extends SpeakeasyBase {
     contentType: string;
-    initiateVaultLockOutput?: Map<string, any>;
+    initiateVaultLockOutput?: Record<string, any>;
     invalidParameterValueException?: any;
     missingParameterValueException?: any;
     resourceNotFoundException?: any;

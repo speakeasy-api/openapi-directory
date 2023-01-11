@@ -57,5 +57,5 @@ export class StopQueryExecutionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopQueryExecutionOutput?: Map<string, any>;
+  stopQueryExecutionOutput?: Record<string, any>;
 }

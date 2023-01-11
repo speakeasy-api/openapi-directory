@@ -1,4 +1,7 @@
-export var ObjectTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectTypeEnum = void 0;
+var ObjectTypeEnum;
 (function (ObjectTypeEnum) {
     ObjectTypeEnum["Unknown"] = "Unknown";
     ObjectTypeEnum["Accpay"] = "Accpay";
@@ -55,4 +58,4 @@ export var ObjectTypeEnum;
     ObjectTypeEnum["Currliab"] = "Currliab";
     ObjectTypeEnum["Termliab"] = "Termliab";
     ObjectTypeEnum["NonCurrent"] = "NonCurrent";
-})(ObjectTypeEnum || (ObjectTypeEnum = {}));
+})(ObjectTypeEnum = exports.ObjectTypeEnum || (exports.ObjectTypeEnum = {}));

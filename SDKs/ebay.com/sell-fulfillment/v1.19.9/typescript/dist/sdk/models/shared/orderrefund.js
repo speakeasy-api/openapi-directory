@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderRefund = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // OrderRefund
 /**
  * This type contains information about a refund issued for an order. This does not include line item level refunds.
@@ -34,25 +37,25 @@ var OrderRefund = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", amount_1.Amount)
     ], OrderRefund.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundDate" }),
         __metadata("design:type", String)
     ], OrderRefund.prototype, "refundDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundId" }),
         __metadata("design:type", String)
     ], OrderRefund.prototype, "refundId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundReferenceId" }),
         __metadata("design:type", String)
     ], OrderRefund.prototype, "refundReferenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundStatus" }),
         __metadata("design:type", String)
     ], OrderRefund.prototype, "refundStatus", void 0);
     return OrderRefund;
-}(SpeakeasyBase));
-export { OrderRefund };
+}(utils_1.SpeakeasyBase));
+exports.OrderRefund = OrderRefund;

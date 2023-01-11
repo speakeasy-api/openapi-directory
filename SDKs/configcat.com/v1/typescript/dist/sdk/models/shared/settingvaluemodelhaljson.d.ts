@@ -125,5 +125,5 @@ export declare class SettingValueModelHaljson extends SpeakeasyBase {
     rolloutPercentageItems?: RolloutPercentageItemModel[];
     rolloutRules?: RolloutRuleModel[];
     updatedAt?: Date;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

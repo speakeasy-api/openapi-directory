@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RdsDataSpec } from "./rdsdataspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDataSourceFromRdsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var rdsdataspec_1 = require("./rdsdataspec");
 var CreateDataSourceFromRdsInput = /** @class */ (function (_super) {
     __extends(CreateDataSourceFromRdsInput, _super);
     function CreateDataSourceFromRdsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeStatistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeStatistics" }),
         __metadata("design:type", Boolean)
     ], CreateDataSourceFromRdsInput.prototype, "computeStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceId" }),
         __metadata("design:type", String)
     ], CreateDataSourceFromRdsInput.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceName" }),
         __metadata("design:type", String)
     ], CreateDataSourceFromRdsInput.prototype, "dataSourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RDSData" }),
-        __metadata("design:type", RdsDataSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RDSData" }),
+        __metadata("design:type", rdsdataspec_1.RdsDataSpec)
     ], CreateDataSourceFromRdsInput.prototype, "rdsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], CreateDataSourceFromRdsInput.prototype, "roleArn", void 0);
+    ], CreateDataSourceFromRdsInput.prototype, "roleARN", void 0);
     return CreateDataSourceFromRdsInput;
-}(SpeakeasyBase));
-export { CreateDataSourceFromRdsInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateDataSourceFromRdsInput = CreateDataSourceFromRdsInput;

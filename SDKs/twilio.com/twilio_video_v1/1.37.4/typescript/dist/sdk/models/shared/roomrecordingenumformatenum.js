@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoomRecordingEnumFormatEnum = void 0;
+var RoomRecordingEnumFormatEnum;
+(function (RoomRecordingEnumFormatEnum) {
+    RoomRecordingEnumFormatEnum["Mka"] = "mka";
+    RoomRecordingEnumFormatEnum["Mkv"] = "mkv";
+})(RoomRecordingEnumFormatEnum = exports.RoomRecordingEnumFormatEnum || (exports.RoomRecordingEnumFormatEnum = {}));

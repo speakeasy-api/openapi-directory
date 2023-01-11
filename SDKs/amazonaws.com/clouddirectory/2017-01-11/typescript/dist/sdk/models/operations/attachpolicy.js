@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachPolicyResponse = exports.AttachPolicyRequest = exports.AttachPolicyRequestBody = exports.AttachPolicyRequestBodyPolicyReference = exports.AttachPolicyRequestBodyObjectReference = exports.AttachPolicyHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var AttachPolicyHeaders = /** @class */ (function (_super) {
     __extends(AttachPolicyHeaders, _super);
     function AttachPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
         __metadata("design:type", String)
     ], AttachPolicyHeaders.prototype, "xAmzDataPartition", void 0);
     return AttachPolicyHeaders;
-}(SpeakeasyBase));
-export { AttachPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyHeaders = AttachPolicyHeaders;
 // AttachPolicyRequestBodyObjectReference
 /**
  * The reference that identifies an object.
@@ -73,12 +76,12 @@ var AttachPolicyRequestBodyObjectReference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Selector" }),
         __metadata("design:type", String)
     ], AttachPolicyRequestBodyObjectReference.prototype, "selector", void 0);
     return AttachPolicyRequestBodyObjectReference;
-}(SpeakeasyBase));
-export { AttachPolicyRequestBodyObjectReference };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyRequestBodyObjectReference = AttachPolicyRequestBodyObjectReference;
 // AttachPolicyRequestBodyPolicyReference
 /**
  * The reference that identifies an object.
@@ -89,97 +92,97 @@ var AttachPolicyRequestBodyPolicyReference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Selector" }),
         __metadata("design:type", String)
     ], AttachPolicyRequestBodyPolicyReference.prototype, "selector", void 0);
     return AttachPolicyRequestBodyPolicyReference;
-}(SpeakeasyBase));
-export { AttachPolicyRequestBodyPolicyReference };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyRequestBodyPolicyReference = AttachPolicyRequestBodyPolicyReference;
 var AttachPolicyRequestBody = /** @class */ (function (_super) {
     __extends(AttachPolicyRequestBody, _super);
     function AttachPolicyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectReference" }),
         __metadata("design:type", AttachPolicyRequestBodyObjectReference)
     ], AttachPolicyRequestBody.prototype, "objectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyReference" }),
         __metadata("design:type", AttachPolicyRequestBodyPolicyReference)
     ], AttachPolicyRequestBody.prototype, "policyReference", void 0);
     return AttachPolicyRequestBody;
-}(SpeakeasyBase));
-export { AttachPolicyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyRequestBody = AttachPolicyRequestBody;
 var AttachPolicyRequest = /** @class */ (function (_super) {
     __extends(AttachPolicyRequest, _super);
     function AttachPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AttachPolicyHeaders)
     ], AttachPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AttachPolicyRequestBody)
     ], AttachPolicyRequest.prototype, "request", void 0);
     return AttachPolicyRequest;
-}(SpeakeasyBase));
-export { AttachPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyRequest = AttachPolicyRequest;
 var AttachPolicyResponse = /** @class */ (function (_super) {
     __extends(AttachPolicyResponse, _super);
     function AttachPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "attachPolicyResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AttachPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "directoryNotEnabledException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "internalServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "invalidArnException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "notPolicyException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "retryableConflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AttachPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AttachPolicyResponse.prototype, "validationException", void 0);
     return AttachPolicyResponse;
-}(SpeakeasyBase));
-export { AttachPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.AttachPolicyResponse = AttachPolicyResponse;

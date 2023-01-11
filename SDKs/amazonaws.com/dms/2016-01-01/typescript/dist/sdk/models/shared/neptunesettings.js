@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NeptuneSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // NeptuneSettings
 /**
  * Provides information that defines an Amazon Neptune endpoint.
@@ -33,33 +36,33 @@ var NeptuneSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorRetryDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorRetryDuration" }),
         __metadata("design:type", Number)
     ], NeptuneSettings.prototype, "errorRetryDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamAuthEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamAuthEnabled" }),
         __metadata("design:type", Boolean)
     ], NeptuneSettings.prototype, "iamAuthEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxFileSize" }),
         __metadata("design:type", Number)
     ], NeptuneSettings.prototype, "maxFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxRetryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxRetryCount" }),
         __metadata("design:type", Number)
     ], NeptuneSettings.prototype, "maxRetryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3BucketFolder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3BucketFolder" }),
         __metadata("design:type", String)
     ], NeptuneSettings.prototype, "s3BucketFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3BucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3BucketName" }),
         __metadata("design:type", String)
     ], NeptuneSettings.prototype, "s3BucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceAccessRoleArn" }),
         __metadata("design:type", String)
     ], NeptuneSettings.prototype, "serviceAccessRoleArn", void 0);
     return NeptuneSettings;
-}(SpeakeasyBase));
-export { NeptuneSettings };
+}(utils_1.SpeakeasyBase));
+exports.NeptuneSettings = NeptuneSettings;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCancelReservedInstancesListingActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCancelReservedInstancesListingResponse = exports.GetCancelReservedInstancesListingRequest = exports.GetCancelReservedInstancesListingHeaders = exports.GetCancelReservedInstancesListingQueryParams = exports.GetCancelReservedInstancesListingVersionEnum = exports.GetCancelReservedInstancesListingActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCancelReservedInstancesListingActionEnum;
 (function (GetCancelReservedInstancesListingActionEnum) {
     GetCancelReservedInstancesListingActionEnum["CancelReservedInstancesListing"] = "CancelReservedInstancesListing";
-})(GetCancelReservedInstancesListingActionEnum || (GetCancelReservedInstancesListingActionEnum = {}));
-export var GetCancelReservedInstancesListingVersionEnum;
+})(GetCancelReservedInstancesListingActionEnum = exports.GetCancelReservedInstancesListingActionEnum || (exports.GetCancelReservedInstancesListingActionEnum = {}));
+var GetCancelReservedInstancesListingVersionEnum;
 (function (GetCancelReservedInstancesListingVersionEnum) {
     GetCancelReservedInstancesListingVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCancelReservedInstancesListingVersionEnum || (GetCancelReservedInstancesListingVersionEnum = {}));
+})(GetCancelReservedInstancesListingVersionEnum = exports.GetCancelReservedInstancesListingVersionEnum || (exports.GetCancelReservedInstancesListingVersionEnum = {}));
 var GetCancelReservedInstancesListingQueryParams = /** @class */ (function (_super) {
     __extends(GetCancelReservedInstancesListingQueryParams, _super);
     function GetCancelReservedInstancesListingQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedInstancesListingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReservedInstancesListingId" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingQueryParams.prototype, "reservedInstancesListingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingQueryParams.prototype, "version", void 0);
     return GetCancelReservedInstancesListingQueryParams;
-}(SpeakeasyBase));
-export { GetCancelReservedInstancesListingQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelReservedInstancesListingQueryParams = GetCancelReservedInstancesListingQueryParams;
 var GetCancelReservedInstancesListingHeaders = /** @class */ (function (_super) {
     __extends(GetCancelReservedInstancesListingHeaders, _super);
     function GetCancelReservedInstancesListingHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCancelReservedInstancesListingHeaders;
-}(SpeakeasyBase));
-export { GetCancelReservedInstancesListingHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelReservedInstancesListingHeaders = GetCancelReservedInstancesListingHeaders;
 var GetCancelReservedInstancesListingRequest = /** @class */ (function (_super) {
     __extends(GetCancelReservedInstancesListingRequest, _super);
     function GetCancelReservedInstancesListingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelReservedInstancesListingQueryParams)
     ], GetCancelReservedInstancesListingRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelReservedInstancesListingHeaders)
     ], GetCancelReservedInstancesListingRequest.prototype, "headers", void 0);
     return GetCancelReservedInstancesListingRequest;
-}(SpeakeasyBase));
-export { GetCancelReservedInstancesListingRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelReservedInstancesListingRequest = GetCancelReservedInstancesListingRequest;
 var GetCancelReservedInstancesListingResponse = /** @class */ (function (_super) {
     __extends(GetCancelReservedInstancesListingResponse, _super);
     function GetCancelReservedInstancesListingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCancelReservedInstancesListingResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCancelReservedInstancesListingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCancelReservedInstancesListingResponse.prototype, "statusCode", void 0);
     return GetCancelReservedInstancesListingResponse;
-}(SpeakeasyBase));
-export { GetCancelReservedInstancesListingResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelReservedInstancesListingResponse = GetCancelReservedInstancesListingResponse;

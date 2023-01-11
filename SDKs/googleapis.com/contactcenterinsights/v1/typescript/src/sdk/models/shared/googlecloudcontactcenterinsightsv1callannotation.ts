@@ -26,13 +26,13 @@ export class GoogleCloudContactcenterinsightsV1CallAnnotation extends SpeakeasyB
   entityMentionData?: GoogleCloudContactcenterinsightsV1EntityMentionData;
 
   @SpeakeasyMetadata({ data: "json, name=holdData" })
-  holdData?: Map<string, any>;
+  holdData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=intentMatchData" })
   intentMatchData?: GoogleCloudContactcenterinsightsV1IntentMatchData;
 
   @SpeakeasyMetadata({ data: "json, name=interruptionData" })
-  interruptionData?: Map<string, any>;
+  interruptionData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=issueMatchData" })
   issueMatchData?: GoogleCloudContactcenterinsightsV1IssueMatchData;
@@ -44,5 +44,5 @@ export class GoogleCloudContactcenterinsightsV1CallAnnotation extends SpeakeasyB
   sentimentData?: GoogleCloudContactcenterinsightsV1SentimentData;
 
   @SpeakeasyMetadata({ data: "json, name=silenceData" })
-  silenceData?: Map<string, any>;
+  silenceData?: Record<string, any>;
 }

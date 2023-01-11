@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceMetadata } from "./resourcemetadata";
-import { MeshSpec } from "./meshspec";
-import { MeshStatus } from "./meshstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeshData = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcemetadata_1 = require("./resourcemetadata");
+var meshspec_1 = require("./meshspec");
+var meshstatus_1 = require("./meshstatus");
 // MeshData
 /**
  * An object that represents a service mesh returned by a describe operation.
@@ -36,21 +39,21 @@ var MeshData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], MeshData.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ResourceMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", resourcemetadata_1.ResourceMetadata)
     ], MeshData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", MeshSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", meshspec_1.MeshSpec)
     ], MeshData.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", MeshStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", meshstatus_1.MeshStatus)
     ], MeshData.prototype, "status", void 0);
     return MeshData;
-}(SpeakeasyBase));
-export { MeshData };
+}(utils_1.SpeakeasyBase));
+exports.MeshData = MeshData;

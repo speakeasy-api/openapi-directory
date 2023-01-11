@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationVersionLifecycleConfig } from "./applicationversionlifecycleconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationResourceLifecycleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationversionlifecycleconfig_1 = require("./applicationversionlifecycleconfig");
 // ApplicationResourceLifecycleConfig
 /**
  * The resource lifecycle configuration for an application. Defines lifecycle settings for resources that belong to the application, and the service role that AWS Elastic Beanstalk assumes in order to apply lifecycle settings. The version lifecycle configuration defines lifecycle settings for application versions.
@@ -34,13 +37,13 @@ var ApplicationResourceLifecycleConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationResourceLifecycleConfig.prototype, "serviceRole", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ApplicationVersionLifecycleConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", applicationversionlifecycleconfig_1.ApplicationVersionLifecycleConfig)
     ], ApplicationResourceLifecycleConfig.prototype, "versionLifecycleConfig", void 0);
     return ApplicationResourceLifecycleConfig;
-}(SpeakeasyBase));
-export { ApplicationResourceLifecycleConfig };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationResourceLifecycleConfig = ApplicationResourceLifecycleConfig;

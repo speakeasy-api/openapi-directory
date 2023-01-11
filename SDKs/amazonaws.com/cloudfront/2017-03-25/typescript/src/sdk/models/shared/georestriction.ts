@@ -9,7 +9,7 @@ import { GeoRestrictionTypeEnum } from "./georestrictiontypeenum";
 **/
 export class GeoRestriction extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items?: string[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

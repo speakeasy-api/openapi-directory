@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DecimalNumber } from "./decimalnumber";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecimalColumnStatisticsData = void 0;
+var utils_1 = require("../../../internal/utils");
+var decimalnumber_1 = require("./decimalnumber");
 // DecimalColumnStatisticsData
 /**
  * Defines column statistics supported for fixed-point number data columns.
@@ -34,21 +37,21 @@ var DecimalColumnStatisticsData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumValue" }),
-        __metadata("design:type", DecimalNumber)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumValue" }),
+        __metadata("design:type", decimalnumber_1.DecimalNumber)
     ], DecimalColumnStatisticsData.prototype, "maximumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumValue" }),
-        __metadata("design:type", DecimalNumber)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumValue" }),
+        __metadata("design:type", decimalnumber_1.DecimalNumber)
     ], DecimalColumnStatisticsData.prototype, "minimumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfDistinctValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfDistinctValues" }),
         __metadata("design:type", Number)
     ], DecimalColumnStatisticsData.prototype, "numberOfDistinctValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfNulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfNulls" }),
         __metadata("design:type", Number)
     ], DecimalColumnStatisticsData.prototype, "numberOfNulls", void 0);
     return DecimalColumnStatisticsData;
-}(SpeakeasyBase));
-export { DecimalColumnStatisticsData };
+}(utils_1.SpeakeasyBase));
+exports.DecimalColumnStatisticsData = DecimalColumnStatisticsData;

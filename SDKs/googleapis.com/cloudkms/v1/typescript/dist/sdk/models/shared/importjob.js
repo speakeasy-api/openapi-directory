@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyOperationAttestation } from "./keyoperationattestation";
-import { WrappingPublicKey } from "./wrappingpublickey";
-import { KeyOperationAttestationInput } from "./keyoperationattestation";
-export var ImportJobImportMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportJobInput = exports.ImportJob = exports.ImportJobStateEnum = exports.ImportJobProtectionLevelEnum = exports.ImportJobImportMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyoperationattestation_1 = require("./keyoperationattestation");
+var wrappingpublickey_1 = require("./wrappingpublickey");
+var keyoperationattestation_2 = require("./keyoperationattestation");
+var ImportJobImportMethodEnum;
 (function (ImportJobImportMethodEnum) {
     ImportJobImportMethodEnum["ImportMethodUnspecified"] = "IMPORT_METHOD_UNSPECIFIED";
     ImportJobImportMethodEnum["RsaOaep3072Sha1Aes256"] = "RSA_OAEP_3072_SHA1_AES_256";
@@ -35,22 +38,22 @@ export var ImportJobImportMethodEnum;
     ImportJobImportMethodEnum["RsaOaep4096Sha256Aes256"] = "RSA_OAEP_4096_SHA256_AES_256";
     ImportJobImportMethodEnum["RsaOaep3072Sha256"] = "RSA_OAEP_3072_SHA256";
     ImportJobImportMethodEnum["RsaOaep4096Sha256"] = "RSA_OAEP_4096_SHA256";
-})(ImportJobImportMethodEnum || (ImportJobImportMethodEnum = {}));
-export var ImportJobProtectionLevelEnum;
+})(ImportJobImportMethodEnum = exports.ImportJobImportMethodEnum || (exports.ImportJobImportMethodEnum = {}));
+var ImportJobProtectionLevelEnum;
 (function (ImportJobProtectionLevelEnum) {
     ImportJobProtectionLevelEnum["ProtectionLevelUnspecified"] = "PROTECTION_LEVEL_UNSPECIFIED";
     ImportJobProtectionLevelEnum["Software"] = "SOFTWARE";
     ImportJobProtectionLevelEnum["Hsm"] = "HSM";
     ImportJobProtectionLevelEnum["External"] = "EXTERNAL";
     ImportJobProtectionLevelEnum["ExternalVpc"] = "EXTERNAL_VPC";
-})(ImportJobProtectionLevelEnum || (ImportJobProtectionLevelEnum = {}));
-export var ImportJobStateEnum;
+})(ImportJobProtectionLevelEnum = exports.ImportJobProtectionLevelEnum || (exports.ImportJobProtectionLevelEnum = {}));
+var ImportJobStateEnum;
 (function (ImportJobStateEnum) {
     ImportJobStateEnum["ImportJobStateUnspecified"] = "IMPORT_JOB_STATE_UNSPECIFIED";
     ImportJobStateEnum["PendingGeneration"] = "PENDING_GENERATION";
     ImportJobStateEnum["Active"] = "ACTIVE";
     ImportJobStateEnum["Expired"] = "EXPIRED";
-})(ImportJobStateEnum || (ImportJobStateEnum = {}));
+})(ImportJobStateEnum = exports.ImportJobStateEnum || (exports.ImportJobStateEnum = {}));
 // ImportJob
 /**
  * An ImportJob can be used to create CryptoKeys and CryptoKeyVersions using pre-existing key material, generated outside of Cloud KMS. When an ImportJob is created, Cloud KMS will generate a "wrapping key", which is a public/private key pair. You use the wrapping key to encrypt (also known as wrap) the pre-existing key material to protect it during the import process. The nature of the wrapping key depends on the choice of import_method. When the wrapping key generation is complete, the state will be set to ACTIVE and the public_key can be fetched. The fetched public key can then be used to wrap your pre-existing key material. Once the key material is wrapped, it can be imported into a new CryptoKeyVersion in an existing CryptoKey by calling ImportCryptoKeyVersion. Multiple CryptoKeyVersions can be imported with a single ImportJob. Cloud KMS uses the private key portion of the wrapping key to unwrap the key material. Only Cloud KMS has access to the private key. An ImportJob expires 3 days after it is created. Once expired, Cloud KMS will no longer be able to import or unwrap any key material that was wrapped with the ImportJob's public key. For more information, see [Importing a key](https://cloud.google.com/kms/docs/importing-a-key).
@@ -61,48 +64,48 @@ var ImportJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attestation" }),
-        __metadata("design:type", KeyOperationAttestation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attestation" }),
+        __metadata("design:type", keyoperationattestation_1.KeyOperationAttestation)
     ], ImportJob.prototype, "attestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireEventTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireEventTime" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "expireEventTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generateTime" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "generateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importMethod" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "importMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "protectionLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKey" }),
-        __metadata("design:type", WrappingPublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKey" }),
+        __metadata("design:type", wrappingpublickey_1.WrappingPublicKey)
     ], ImportJob.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ImportJob.prototype, "state", void 0);
     return ImportJob;
-}(SpeakeasyBase));
-export { ImportJob };
+}(utils_1.SpeakeasyBase));
+exports.ImportJob = ImportJob;
 // ImportJobInput
 /**
  * An ImportJob can be used to create CryptoKeys and CryptoKeyVersions using pre-existing key material, generated outside of Cloud KMS. When an ImportJob is created, Cloud KMS will generate a "wrapping key", which is a public/private key pair. You use the wrapping key to encrypt (also known as wrap) the pre-existing key material to protect it during the import process. The nature of the wrapping key depends on the choice of import_method. When the wrapping key generation is complete, the state will be set to ACTIVE and the public_key can be fetched. The fetched public key can then be used to wrap your pre-existing key material. Once the key material is wrapped, it can be imported into a new CryptoKeyVersion in an existing CryptoKey by calling ImportCryptoKeyVersion. Multiple CryptoKeyVersions can be imported with a single ImportJob. Cloud KMS uses the private key portion of the wrapping key to unwrap the key material. Only Cloud KMS has access to the private key. An ImportJob expires 3 days after it is created. Once expired, Cloud KMS will no longer be able to import or unwrap any key material that was wrapped with the ImportJob's public key. For more information, see [Importing a key](https://cloud.google.com/kms/docs/importing-a-key).
@@ -113,21 +116,21 @@ var ImportJobInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attestation" }),
-        __metadata("design:type", KeyOperationAttestationInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attestation" }),
+        __metadata("design:type", keyoperationattestation_2.KeyOperationAttestationInput)
     ], ImportJobInput.prototype, "attestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importMethod" }),
         __metadata("design:type", String)
     ], ImportJobInput.prototype, "importMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], ImportJobInput.prototype, "protectionLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKey" }),
-        __metadata("design:type", WrappingPublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKey" }),
+        __metadata("design:type", wrappingpublickey_1.WrappingPublicKey)
     ], ImportJobInput.prototype, "publicKey", void 0);
     return ImportJobInput;
-}(SpeakeasyBase));
-export { ImportJobInput };
+}(utils_1.SpeakeasyBase));
+exports.ImportJobInput = ImportJobInput;

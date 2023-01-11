@@ -14,7 +14,7 @@ export class LinkTokenGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  linkTokenGetResponse?: Map<string, any>;
+  linkTokenGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

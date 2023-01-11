@@ -44,5 +44,5 @@ export class SecretScanningGetAlertResponse extends SpeakeasyBase {
   secretScanningAlert?: shared.SecretScanningAlert;
 
   @SpeakeasyMetadata()
-  secretScanningGetAlert503ApplicationJsonObject?: SecretScanningGetAlert503ApplicationJson;
+  secretScanningGetAlert503ApplicationJSONObject?: SecretScanningGetAlert503ApplicationJson;
 }

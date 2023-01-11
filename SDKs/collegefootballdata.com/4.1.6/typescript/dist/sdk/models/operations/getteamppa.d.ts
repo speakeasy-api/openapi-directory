@@ -12,5 +12,5 @@ export declare class GetTeamPpaRequest extends SpeakeasyBase {
 export declare class GetTeamPpaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teamPpas?: shared.TeamPpa[];
+    teamPPAS?: shared.TeamPpa[];
 }

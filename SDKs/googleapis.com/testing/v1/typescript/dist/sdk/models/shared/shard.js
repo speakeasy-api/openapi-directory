@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestTargetsForShard } from "./testtargetsforshard";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shard = void 0;
+var utils_1 = require("../../../internal/utils");
+var testtargetsforshard_1 = require("./testtargetsforshard");
 // Shard
 /**
  * Output only. Details about the shard.
@@ -34,17 +37,17 @@ var Shard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numShards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numShards" }),
         __metadata("design:type", Number)
     ], Shard.prototype, "numShards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shardIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shardIndex" }),
         __metadata("design:type", Number)
     ], Shard.prototype, "shardIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTargetsForShard" }),
-        __metadata("design:type", TestTargetsForShard)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTargetsForShard" }),
+        __metadata("design:type", testtargetsforshard_1.TestTargetsForShard)
     ], Shard.prototype, "testTargetsForShard", void 0);
     return Shard;
-}(SpeakeasyBase));
-export { Shard };
+}(utils_1.SpeakeasyBase));
+exports.Shard = Shard;

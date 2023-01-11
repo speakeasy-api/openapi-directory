@@ -5,7 +5,7 @@ export declare class SandboxPublicTokenCreateRequest extends SpeakeasyBase {
 }
 export declare class SandboxPublicTokenCreateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    sandboxPublicTokenCreateResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    sandboxPublicTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

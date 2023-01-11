@@ -26,8 +26,8 @@ export declare class SearchFreetext200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -39,5 +39,5 @@ export declare class SearchFreetextRequest extends SpeakeasyBase {
 export declare class SearchFreetextResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchFreetext200ApplicationJsonObject?: SearchFreetext200ApplicationJson;
+    searchFreetext200ApplicationJSONObject?: SearchFreetext200ApplicationJson;
 }

@@ -76,5 +76,5 @@ export class GetDailyReportAllCountriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetDailyReportAllCountries200ApplicationJson })
-  getDailyReportAllCountries200ApplicationJsonObjects?: GetDailyReportAllCountries200ApplicationJson[];
+  getDailyReportAllCountries200ApplicationJSONObjects?: GetDailyReportAllCountries200ApplicationJson[];
 }

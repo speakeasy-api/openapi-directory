@@ -26,7 +26,7 @@ export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest 
 }
 export declare class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
+    userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
 }

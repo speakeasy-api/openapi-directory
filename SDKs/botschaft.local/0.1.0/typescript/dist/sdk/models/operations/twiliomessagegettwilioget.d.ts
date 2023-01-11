@@ -16,5 +16,5 @@ export declare class TwilioMessageGetTwilioGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    twilioMessageGetTwilioGet200ApplicationJsonAny?: any;
+    twilioMessageGetTwilioGet200ApplicationJSONAny?: any;
 }

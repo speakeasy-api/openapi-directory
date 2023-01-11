@@ -132,7 +132,7 @@ export class ReposUpdateBranchProtectionResponse extends SpeakeasyBase {
   protectedBranch?: shared.ProtectedBranch;
 
   @SpeakeasyMetadata()
-  reposUpdateBranchProtection415ApplicationJsonObject?: ReposUpdateBranchProtection415ApplicationJson;
+  reposUpdateBranchProtection415ApplicationJSONObject?: ReposUpdateBranchProtection415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationErrorSimple?: shared.ValidationErrorSimple;

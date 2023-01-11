@@ -37,5 +37,5 @@ export class ValidateForVoiceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  validateForVoice200ApplicationJsonObject?: ValidateForVoice200ApplicationJson;
+  validateForVoice200ApplicationJSONObject?: ValidateForVoice200ApplicationJson;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+import { ObjectT } from "./object";
 
 
 
@@ -8,8 +8,8 @@ import { Object } from "./object";
  * A list of objects.
 **/
 export class Objects extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=items", elemType: Object })
-  items?: Object[];
+  @SpeakeasyMetadata({ data: "json, name=items", elemType: ObjectT })
+  items?: ObjectT[];
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

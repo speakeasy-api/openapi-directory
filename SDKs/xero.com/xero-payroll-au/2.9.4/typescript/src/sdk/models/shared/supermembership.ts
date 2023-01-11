@@ -7,8 +7,8 @@ export class SuperMembership extends SpeakeasyBase {
   employeeNumber: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuperFundID" })
-  superFundId: string;
+  superFundID: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuperMembershipID" })
-  superMembershipId?: string;
+  superMembershipID?: string;
 }

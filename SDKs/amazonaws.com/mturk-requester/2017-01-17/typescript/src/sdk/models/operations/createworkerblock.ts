@@ -48,7 +48,7 @@ export class CreateWorkerBlockResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createWorkerBlockResponse?: Map<string, any>;
+  createWorkerBlockResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

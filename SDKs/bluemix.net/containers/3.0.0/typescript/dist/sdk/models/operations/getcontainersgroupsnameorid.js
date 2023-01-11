@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContainersGroupsNameOrIdResponse = exports.GetContainersGroupsNameOrIdRequest = exports.GetContainersGroupsNameOrIdHeaders = exports.GetContainersGroupsNameOrIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetContainersGroupsNameOrIdPathParams = /** @class */ (function (_super) {
     __extends(GetContainersGroupsNameOrIdPathParams, _super);
     function GetContainersGroupsNameOrIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
         __metadata("design:type", String)
     ], GetContainersGroupsNameOrIdPathParams.prototype, "nameOrId", void 0);
     return GetContainersGroupsNameOrIdPathParams;
-}(SpeakeasyBase));
-export { GetContainersGroupsNameOrIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersGroupsNameOrIdPathParams = GetContainersGroupsNameOrIdPathParams;
 var GetContainersGroupsNameOrIdHeaders = /** @class */ (function (_super) {
     __extends(GetContainersGroupsNameOrIdHeaders, _super);
     function GetContainersGroupsNameOrIdHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], GetContainersGroupsNameOrIdHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], GetContainersGroupsNameOrIdHeaders.prototype, "xAuthToken", void 0);
     return GetContainersGroupsNameOrIdHeaders;
-}(SpeakeasyBase));
-export { GetContainersGroupsNameOrIdHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersGroupsNameOrIdHeaders = GetContainersGroupsNameOrIdHeaders;
 var GetContainersGroupsNameOrIdRequest = /** @class */ (function (_super) {
     __extends(GetContainersGroupsNameOrIdRequest, _super);
     function GetContainersGroupsNameOrIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersGroupsNameOrIdPathParams)
     ], GetContainersGroupsNameOrIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersGroupsNameOrIdHeaders)
     ], GetContainersGroupsNameOrIdRequest.prototype, "headers", void 0);
     return GetContainersGroupsNameOrIdRequest;
-}(SpeakeasyBase));
-export { GetContainersGroupsNameOrIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersGroupsNameOrIdRequest = GetContainersGroupsNameOrIdRequest;
 var GetContainersGroupsNameOrIdResponse = /** @class */ (function (_super) {
     __extends(GetContainersGroupsNameOrIdResponse, _super);
     function GetContainersGroupsNameOrIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetContainersGroupsNameOrIdResponse.prototype, "containersGroupsNameOrIdGetDetails", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetContainersGroupsNameOrIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetContainersGroupsNameOrIdResponse.prototype, "statusCode", void 0);
     return GetContainersGroupsNameOrIdResponse;
-}(SpeakeasyBase));
-export { GetContainersGroupsNameOrIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersGroupsNameOrIdResponse = GetContainersGroupsNameOrIdResponse;

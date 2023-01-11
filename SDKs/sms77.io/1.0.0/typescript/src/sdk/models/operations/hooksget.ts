@@ -50,7 +50,7 @@ export class HooksGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  hooksGet200ApplicationJsonObject?: HooksGet200ApplicationJson;
+  hooksGet200ApplicationJSONObject?: HooksGet200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

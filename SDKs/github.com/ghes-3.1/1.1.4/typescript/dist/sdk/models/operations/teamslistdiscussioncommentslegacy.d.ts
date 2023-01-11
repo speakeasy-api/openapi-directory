@@ -15,7 +15,7 @@ export declare class TeamsListDiscussionCommentsLegacyRequest extends SpeakeasyB
 }
 export declare class TeamsListDiscussionCommentsLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teamDiscussionComments?: shared.TeamDiscussionComment[];
 }

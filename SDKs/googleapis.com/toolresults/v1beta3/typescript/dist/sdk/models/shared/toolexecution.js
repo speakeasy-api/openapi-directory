@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ToolExitCode } from "./toolexitcode";
-import { FileReference } from "./filereference";
-import { ToolOutputReference } from "./tooloutputreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ToolExecution = void 0;
+var utils_1 = require("../../../internal/utils");
+var toolexitcode_1 = require("./toolexitcode");
+var filereference_1 = require("./filereference");
+var tooloutputreference_1 = require("./tooloutputreference");
 // ToolExecution
 /**
  * An execution of an arbitrary tool. It could be a test runner or a tool copying artifacts or deploying code.
@@ -36,21 +39,21 @@ var ToolExecution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commandLineArguments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commandLineArguments" }),
         __metadata("design:type", Array)
     ], ToolExecution.prototype, "commandLineArguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitCode" }),
-        __metadata("design:type", ToolExitCode)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitCode" }),
+        __metadata("design:type", toolexitcode_1.ToolExitCode)
     ], ToolExecution.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolLogs", elemType: FileReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolLogs", elemType: filereference_1.FileReference }),
         __metadata("design:type", Array)
     ], ToolExecution.prototype, "toolLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolOutputs", elemType: ToolOutputReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolOutputs", elemType: tooloutputreference_1.ToolOutputReference }),
         __metadata("design:type", Array)
     ], ToolExecution.prototype, "toolOutputs", void 0);
     return ToolExecution;
-}(SpeakeasyBase));
-export { ToolExecution };
+}(utils_1.SpeakeasyBase));
+exports.ToolExecution = ToolExecution;

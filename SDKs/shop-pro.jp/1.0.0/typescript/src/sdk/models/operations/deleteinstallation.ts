@@ -54,5 +54,5 @@ export class DeleteInstallationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteInstallation200ApplicationJsonObject?: DeleteInstallation200ApplicationJson;
+  deleteInstallation200ApplicationJSONObject?: DeleteInstallation200ApplicationJson;
 }

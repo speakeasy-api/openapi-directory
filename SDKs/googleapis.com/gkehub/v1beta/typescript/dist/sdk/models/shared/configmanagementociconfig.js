@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementOciConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // ConfigManagementOciConfig
 /**
  * OCI repo configuration for a single cluster
@@ -33,25 +36,25 @@ var ConfigManagementOciConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcpServiceAccountEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcpServiceAccountEmail" }),
         __metadata("design:type", String)
     ], ConfigManagementOciConfig.prototype, "gcpServiceAccountEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyDir" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyDir" }),
         __metadata("design:type", String)
     ], ConfigManagementOciConfig.prototype, "policyDir", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretType" }),
         __metadata("design:type", String)
     ], ConfigManagementOciConfig.prototype, "secretType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncRepo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncRepo" }),
         __metadata("design:type", String)
     ], ConfigManagementOciConfig.prototype, "syncRepo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncWaitSecs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncWaitSecs" }),
         __metadata("design:type", String)
     ], ConfigManagementOciConfig.prototype, "syncWaitSecs", void 0);
     return ConfigManagementOciConfig;
-}(SpeakeasyBase));
-export { ConfigManagementOciConfig };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementOciConfig = ConfigManagementOciConfig;

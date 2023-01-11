@@ -44,7 +44,7 @@ export class GetGeocodeResponse extends SpeakeasyBase {
   geocodingResponse?: any;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

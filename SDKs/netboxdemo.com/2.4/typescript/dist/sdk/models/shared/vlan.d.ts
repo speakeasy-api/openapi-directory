@@ -9,7 +9,7 @@ export declare class VlanStatus extends SpeakeasyBase {
 }
 export declare class Vlan extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     displayName?: string;
     group?: NestedVlanGroup;

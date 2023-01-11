@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConvertUrlResponse = exports.ConvertUrlRequest = exports.ConvertUrlQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConvertUrlQueryParams = /** @class */ (function (_super) {
     __extends(ConvertUrlQueryParams, _super);
     function ConvertUrlQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=url" }),
         __metadata("design:type", String)
     ], ConvertUrlQueryParams.prototype, "url", void 0);
     return ConvertUrlQueryParams;
-}(SpeakeasyBase));
-export { ConvertUrlQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ConvertUrlQueryParams = ConvertUrlQueryParams;
 var ConvertUrlRequest = /** @class */ (function (_super) {
     __extends(ConvertUrlRequest, _super);
     function ConvertUrlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConvertUrlQueryParams)
     ], ConvertUrlRequest.prototype, "queryParams", void 0);
     return ConvertUrlRequest;
-}(SpeakeasyBase));
-export { ConvertUrlRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConvertUrlRequest = ConvertUrlRequest;
 var ConvertUrlResponse = /** @class */ (function (_super) {
     __extends(ConvertUrlResponse, _super);
     function ConvertUrlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ConvertUrlResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConvertUrlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConvertUrlResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], ConvertUrlResponse.prototype, "convertUrl200ApplicationJsonAny", void 0);
+    ], ConvertUrlResponse.prototype, "convertUrl200ApplicationJSONAny", void 0);
     return ConvertUrlResponse;
-}(SpeakeasyBase));
-export { ConvertUrlResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConvertUrlResponse = ConvertUrlResponse;

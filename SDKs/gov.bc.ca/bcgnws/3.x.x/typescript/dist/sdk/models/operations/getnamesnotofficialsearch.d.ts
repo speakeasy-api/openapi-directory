@@ -24,7 +24,7 @@ export declare class GetNamesNotOfficialSearchQueryParams extends SpeakeasyBase 
     itemsPerPage?: number;
     name: string;
     outputFormat: GetNamesNotOfficialSearchOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesNotOfficialSearchOutputStyleEnum;
     sortBy?: GetNamesNotOfficialSearchSortByEnum;
     startIndex?: number;

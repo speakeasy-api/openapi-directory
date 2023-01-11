@@ -8,5 +8,5 @@ export declare class GetNetworkWirelessBluetoothSettingsRequest extends Speakeas
 export declare class GetNetworkWirelessBluetoothSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessBluetoothSettings200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessBluetoothSettings200ApplicationJSONObject?: Record<string, any>;
 }

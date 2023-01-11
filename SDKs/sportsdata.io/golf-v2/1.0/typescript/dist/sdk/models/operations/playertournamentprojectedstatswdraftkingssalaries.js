@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerTournamentProjectedStatsWDraftkingsSalariesResponse = exports.PlayerTournamentProjectedStatsWDraftkingsSalariesRequest = exports.PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams = exports.PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum;
 (function (PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum) {
     PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum["Xml"] = "XML";
     PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum["Json"] = "JSON";
-})(PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum || (PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = {}));
+})(PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = exports.PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum || (exports.PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = {}));
 var PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams = /** @class */ (function (_super) {
     __extends(PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams, _super);
     function PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
         __metadata("design:type", String)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams.prototype, "tournamentid", void 0);
     return PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams;
-}(SpeakeasyBase));
-export { PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams = PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams;
 var PlayerTournamentProjectedStatsWDraftkingsSalariesRequest = /** @class */ (function (_super) {
     __extends(PlayerTournamentProjectedStatsWDraftkingsSalariesRequest, _super);
     function PlayerTournamentProjectedStatsWDraftkingsSalariesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesRequest.prototype, "pathParams", void 0);
     return PlayerTournamentProjectedStatsWDraftkingsSalariesRequest;
-}(SpeakeasyBase));
-export { PlayerTournamentProjectedStatsWDraftkingsSalariesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentProjectedStatsWDraftkingsSalariesRequest = PlayerTournamentProjectedStatsWDraftkingsSalariesRequest;
 var PlayerTournamentProjectedStatsWDraftkingsSalariesResponse = /** @class */ (function (_super) {
     __extends(PlayerTournamentProjectedStatsWDraftkingsSalariesResponse, _super);
     function PlayerTournamentProjectedStatsWDraftkingsSalariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesResponse.prototype, "playerTournamentProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerTournamentProjectedStatsWDraftkingsSalariesResponse.prototype, "statusCode", void 0);
     return PlayerTournamentProjectedStatsWDraftkingsSalariesResponse;
-}(SpeakeasyBase));
-export { PlayerTournamentProjectedStatsWDraftkingsSalariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerTournamentProjectedStatsWDraftkingsSalariesResponse = PlayerTournamentProjectedStatsWDraftkingsSalariesResponse;

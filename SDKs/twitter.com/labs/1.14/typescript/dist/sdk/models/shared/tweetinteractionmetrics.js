@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TweetInteractionMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
 // TweetInteractionMetrics
 /**
  * Interaction metrics for a Tweet.
@@ -33,25 +36,25 @@ var TweetInteractionMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impression_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impression_count" }),
         __metadata("design:type", Number)
     ], TweetInteractionMetrics.prototype, "impressionCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=like_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=like_count" }),
         __metadata("design:type", Number)
     ], TweetInteractionMetrics.prototype, "likeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quote_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quote_count" }),
         __metadata("design:type", Number)
     ], TweetInteractionMetrics.prototype, "quoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reply_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reply_count" }),
         __metadata("design:type", Number)
     ], TweetInteractionMetrics.prototype, "replyCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retweet_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retweet_count" }),
         __metadata("design:type", Number)
     ], TweetInteractionMetrics.prototype, "retweetCount", void 0);
     return TweetInteractionMetrics;
-}(SpeakeasyBase));
-export { TweetInteractionMetrics };
+}(utils_1.SpeakeasyBase));
+exports.TweetInteractionMetrics = TweetInteractionMetrics;

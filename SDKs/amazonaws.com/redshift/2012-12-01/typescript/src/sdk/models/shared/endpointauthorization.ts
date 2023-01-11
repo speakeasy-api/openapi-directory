@@ -9,10 +9,10 @@ import { AuthorizationStatusEnum } from "./authorizationstatusenum";
 **/
 export class EndpointAuthorization extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  allowedAllVpCs?: boolean;
+  allowedAllVPCs?: boolean;
 
   @SpeakeasyMetadata()
-  allowedVpCs?: string[];
+  allowedVPCs?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   authorizeTime?: Date;

@@ -65,7 +65,7 @@ export class Adexchangebuyer2AccountsCreativesStopWatchingRequest extends Speake
   queryParams: Adexchangebuyer2AccountsCreativesStopWatchingQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: Adexchangebuyer2AccountsCreativesStopWatchingSecurity;
@@ -77,7 +77,7 @@ export class Adexchangebuyer2AccountsCreativesStopWatchingResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StudioComponentConfiguration } from "./studiocomponentconfiguration";
-import { StudioComponentInitializationScript } from "./studiocomponentinitializationscript";
-import { ScriptParameterKeyValue } from "./scriptparameterkeyvalue";
-import { StudioComponentStateEnum } from "./studiocomponentstateenum";
-import { StudioComponentStatusCodeEnum } from "./studiocomponentstatuscodeenum";
-import { StudioComponentSubtypeEnum } from "./studiocomponentsubtypeenum";
-import { StudioComponentTypeEnum } from "./studiocomponenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioComponent = void 0;
+var utils_1 = require("../../../internal/utils");
+var studiocomponentconfiguration_1 = require("./studiocomponentconfiguration");
+var studiocomponentinitializationscript_1 = require("./studiocomponentinitializationscript");
+var scriptparameterkeyvalue_1 = require("./scriptparameterkeyvalue");
+var studiocomponentstateenum_1 = require("./studiocomponentstateenum");
+var studiocomponentstatuscodeenum_1 = require("./studiocomponentstatuscodeenum");
+var studiocomponentsubtypeenum_1 = require("./studiocomponentsubtypeenum");
+var studiocomponenttypeenum_1 = require("./studiocomponenttypeenum");
 // StudioComponent
 /**
  * A network that is used by a studio’s users and workflows, including render farm, Active Directory, licensing, and file system.
@@ -40,77 +43,77 @@ var StudioComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", StudioComponentConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", studiocomponentconfiguration_1.StudioComponentConfiguration)
     ], StudioComponent.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], StudioComponent.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], StudioComponent.prototype, "ec2SecurityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initializationScripts", elemType: StudioComponentInitializationScript }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initializationScripts", elemType: studiocomponentinitializationscript_1.StudioComponentInitializationScript }),
         __metadata("design:type", Array)
     ], StudioComponent.prototype, "initializationScripts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptParameters", elemType: ScriptParameterKeyValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptParameters", elemType: scriptparameterkeyvalue_1.ScriptParameterKeyValue }),
         __metadata("design:type", Array)
     ], StudioComponent.prototype, "scriptParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioComponentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioComponentId" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "studioComponentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtype" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "subtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], StudioComponent.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], StudioComponent.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedBy" }),
         __metadata("design:type", String)
     ], StudioComponent.prototype, "updatedBy", void 0);
     return StudioComponent;
-}(SpeakeasyBase));
-export { StudioComponent };
+}(utils_1.SpeakeasyBase));
+exports.StudioComponent = StudioComponent;

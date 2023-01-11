@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFieldLevelEncryptionProfiles20171030Response = exports.ListFieldLevelEncryptionProfiles20171030Request = exports.ListFieldLevelEncryptionProfiles20171030Headers = exports.ListFieldLevelEncryptionProfiles20171030QueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListFieldLevelEncryptionProfiles20171030QueryParams = /** @class */ (function (_super) {
     __extends(ListFieldLevelEncryptionProfiles20171030QueryParams, _super);
     function ListFieldLevelEncryptionProfiles20171030QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030QueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030QueryParams.prototype, "maxItems", void 0);
     return ListFieldLevelEncryptionProfiles20171030QueryParams;
-}(SpeakeasyBase));
-export { ListFieldLevelEncryptionProfiles20171030QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListFieldLevelEncryptionProfiles20171030QueryParams = ListFieldLevelEncryptionProfiles20171030QueryParams;
 var ListFieldLevelEncryptionProfiles20171030Headers = /** @class */ (function (_super) {
     __extends(ListFieldLevelEncryptionProfiles20171030Headers, _super);
     function ListFieldLevelEncryptionProfiles20171030Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Headers.prototype, "xAmzSignedHeaders", void 0);
     return ListFieldLevelEncryptionProfiles20171030Headers;
-}(SpeakeasyBase));
-export { ListFieldLevelEncryptionProfiles20171030Headers };
+}(utils_1.SpeakeasyBase));
+exports.ListFieldLevelEncryptionProfiles20171030Headers = ListFieldLevelEncryptionProfiles20171030Headers;
 var ListFieldLevelEncryptionProfiles20171030Request = /** @class */ (function (_super) {
     __extends(ListFieldLevelEncryptionProfiles20171030Request, _super);
     function ListFieldLevelEncryptionProfiles20171030Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListFieldLevelEncryptionProfiles20171030QueryParams)
     ], ListFieldLevelEncryptionProfiles20171030Request.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListFieldLevelEncryptionProfiles20171030Headers)
     ], ListFieldLevelEncryptionProfiles20171030Request.prototype, "headers", void 0);
     return ListFieldLevelEncryptionProfiles20171030Request;
-}(SpeakeasyBase));
-export { ListFieldLevelEncryptionProfiles20171030Request };
+}(utils_1.SpeakeasyBase));
+exports.ListFieldLevelEncryptionProfiles20171030Request = ListFieldLevelEncryptionProfiles20171030Request;
 var ListFieldLevelEncryptionProfiles20171030Response = /** @class */ (function (_super) {
     __extends(ListFieldLevelEncryptionProfiles20171030Response, _super);
     function ListFieldLevelEncryptionProfiles20171030Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ListFieldLevelEncryptionProfiles20171030Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListFieldLevelEncryptionProfiles20171030Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListFieldLevelEncryptionProfiles20171030Response.prototype, "statusCode", void 0);
     return ListFieldLevelEncryptionProfiles20171030Response;
-}(SpeakeasyBase));
-export { ListFieldLevelEncryptionProfiles20171030Response };
+}(utils_1.SpeakeasyBase));
+exports.ListFieldLevelEncryptionProfiles20171030Response = ListFieldLevelEncryptionProfiles20171030Response;

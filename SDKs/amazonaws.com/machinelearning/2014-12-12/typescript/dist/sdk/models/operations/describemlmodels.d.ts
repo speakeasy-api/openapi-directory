@@ -24,7 +24,7 @@ export declare class DescribeMlModelsRequest extends SpeakeasyBase {
 }
 export declare class DescribeMlModelsResponse extends SpeakeasyBase {
     contentType: string;
-    describeMlModelsOutput?: shared.DescribeMlModelsOutput;
+    describeMLModelsOutput?: shared.DescribeMlModelsOutput;
     internalServerException?: any;
     invalidInputException?: any;
     statusCode: number;

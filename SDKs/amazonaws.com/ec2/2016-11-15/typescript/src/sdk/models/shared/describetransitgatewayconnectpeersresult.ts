@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayConnectPeer } from "./transitgatewayconnectpeer";
 
 
 
 export class DescribeTransitGatewayConnectPeersResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TransitGatewayConnectPeer })
-  transitGatewayConnectPeers?: TransitGatewayConnectPeer[];
+  @SpeakeasyMetadata()
+  transitGatewayConnectPeers?: Record<string, any>;
 }

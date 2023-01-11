@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3BucketDefinitionForJob = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3BucketDefinitionForJob
 /**
  * Specifies an Amazon Web Services account that owns S3 buckets for a classification job to analyze, and one or more specific buckets to analyze for that account.
@@ -33,13 +36,13 @@ var S3BucketDefinitionForJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], S3BucketDefinitionForJob.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buckets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buckets" }),
         __metadata("design:type", Array)
     ], S3BucketDefinitionForJob.prototype, "buckets", void 0);
     return S3BucketDefinitionForJob;
-}(SpeakeasyBase));
-export { S3BucketDefinitionForJob };
+}(utils_1.SpeakeasyBase));
+exports.S3BucketDefinitionForJob = S3BucketDefinitionForJob;

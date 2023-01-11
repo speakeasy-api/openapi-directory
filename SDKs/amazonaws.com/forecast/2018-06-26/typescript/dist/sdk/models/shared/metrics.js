@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorMetric } from "./errormetric";
-import { WeightedQuantileLoss } from "./weightedquantileloss";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var errormetric_1 = require("./errormetric");
+var weightedquantileloss_1 = require("./weightedquantileloss");
 // Metrics
 /**
  * Provides metrics that are used to evaluate the performance of a predictor. This object is part of the <a>WindowSummary</a> object.
@@ -35,21 +38,21 @@ var Metrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AverageWeightedQuantileLoss" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AverageWeightedQuantileLoss" }),
         __metadata("design:type", Number)
     ], Metrics.prototype, "averageWeightedQuantileLoss", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMetrics", elemType: ErrorMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMetrics", elemType: errormetric_1.ErrorMetric }),
         __metadata("design:type", Array)
     ], Metrics.prototype, "errorMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RMSE" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RMSE" }),
+        __metadata("design:type", Object)
     ], Metrics.prototype, "rmse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WeightedQuantileLosses", elemType: WeightedQuantileLoss }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WeightedQuantileLosses", elemType: weightedquantileloss_1.WeightedQuantileLoss }),
         __metadata("design:type", Array)
     ], Metrics.prototype, "weightedQuantileLosses", void 0);
     return Metrics;
-}(SpeakeasyBase));
-export { Metrics };
+}(utils_1.SpeakeasyBase));
+exports.Metrics = Metrics;

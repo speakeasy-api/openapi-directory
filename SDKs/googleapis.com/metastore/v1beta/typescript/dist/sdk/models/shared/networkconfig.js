@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerInput } from "./consumer";
-import { Consumer } from "./consumer";
-// NetworkConfigInput
-/**
- * Network configuration for the Dataproc Metastore service.
-**/
-var NetworkConfigInput = /** @class */ (function (_super) {
-    __extends(NetworkConfigInput, _super);
-    function NetworkConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumers", elemType: ConsumerInput }),
-        __metadata("design:type", Array)
-    ], NetworkConfigInput.prototype, "consumers", void 0);
-    return NetworkConfigInput;
-}(SpeakeasyBase));
-export { NetworkConfigInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkConfigInput = exports.NetworkConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var consumer_1 = require("./consumer");
+var consumer_2 = require("./consumer");
 // NetworkConfig
 /**
  * Network configuration for the Dataproc Metastore service.
@@ -51,9 +38,25 @@ var NetworkConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumers", elemType: Consumer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumers", elemType: consumer_1.Consumer }),
         __metadata("design:type", Array)
     ], NetworkConfig.prototype, "consumers", void 0);
     return NetworkConfig;
-}(SpeakeasyBase));
-export { NetworkConfig };
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfig = NetworkConfig;
+// NetworkConfigInput
+/**
+ * Network configuration for the Dataproc Metastore service.
+**/
+var NetworkConfigInput = /** @class */ (function (_super) {
+    __extends(NetworkConfigInput, _super);
+    function NetworkConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumers", elemType: consumer_2.ConsumerInput }),
+        __metadata("design:type", Array)
+    ], NetworkConfigInput.prototype, "consumers", void 0);
+    return NetworkConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfigInput = NetworkConfigInput;

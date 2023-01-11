@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
-import { Endpoint } from "./endpoint";
-import { GlobalReplicationGroupInfo } from "./globalreplicationgroupinfo";
-import { LogDeliveryConfiguration } from "./logdeliveryconfiguration";
-import { MultiAzStatusEnum } from "./multiazstatusenum";
-import { NodeGroup } from "./nodegroup";
-import { ReplicationGroupPendingModifiedValues } from "./replicationgrouppendingmodifiedvalues";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var automaticfailoverstatusenum_1 = require("./automaticfailoverstatusenum");
+var endpoint_1 = require("./endpoint");
+var globalreplicationgroupinfo_1 = require("./globalreplicationgroupinfo");
+var logdeliveryconfigurationlist_1 = require("./logdeliveryconfigurationlist");
+var multiazstatusenum_1 = require("./multiazstatusenum");
+var nodegrouplist_1 = require("./nodegrouplist");
+var replicationgrouppendingmodifiedvalues_1 = require("./replicationgrouppendingmodifiedvalues");
 // ReplicationGroup
 /**
  * Contains all of the attributes of a specific Redis replication group.
@@ -40,105 +43,105 @@ var ReplicationGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReplicationGroup.prototype, "atRestEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReplicationGroup.prototype, "authTokenEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ReplicationGroup.prototype, "authTokenLastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "automaticFailover", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReplicationGroup.prototype, "clusterEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], ReplicationGroup.prototype, "configurationEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GlobalReplicationGroupInfo)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", globalreplicationgroupinfo_1.GlobalReplicationGroupInfo)
     ], ReplicationGroup.prototype, "globalReplicationGroupInfo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LogDeliveryConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: logdeliveryconfigurationlist_1.LogDeliveryConfigurationList }),
         __metadata("design:type", Array)
     ], ReplicationGroup.prototype, "logDeliveryConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReplicationGroup.prototype, "memberClusters", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReplicationGroup.prototype, "memberClustersOutpostArns", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ReplicationGroup.prototype, "multiAz", void 0);
+    ], ReplicationGroup.prototype, "multiAZ", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: NodeGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: nodegrouplist_1.NodeGroupList }),
         __metadata("design:type", Array)
     ], ReplicationGroup.prototype, "nodeGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReplicationGroupPendingModifiedValues)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", replicationgrouppendingmodifiedvalues_1.ReplicationGroupPendingModifiedValues)
     ], ReplicationGroup.prototype, "pendingModifiedValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ReplicationGroup.prototype, "replicationGroupCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "replicationGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReplicationGroup.prototype, "snapshotRetentionLimit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "snapshotWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "snapshottingClusterId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicationGroup.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReplicationGroup.prototype, "transitEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReplicationGroup.prototype, "userGroupIds", void 0);
     return ReplicationGroup;
-}(SpeakeasyBase));
-export { ReplicationGroup };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationGroup = ReplicationGroup;

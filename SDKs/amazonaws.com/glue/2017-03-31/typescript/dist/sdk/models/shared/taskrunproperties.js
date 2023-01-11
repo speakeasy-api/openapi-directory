@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportLabelsTaskRunProperties } from "./exportlabelstaskrunproperties";
-import { FindMatchesTaskRunProperties } from "./findmatchestaskrunproperties";
-import { ImportLabelsTaskRunProperties } from "./importlabelstaskrunproperties";
-import { LabelingSetGenerationTaskRunProperties } from "./labelingsetgenerationtaskrunproperties";
-import { TaskTypeEnum } from "./tasktypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskRunProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportlabelstaskrunproperties_1 = require("./exportlabelstaskrunproperties");
+var findmatchestaskrunproperties_1 = require("./findmatchestaskrunproperties");
+var importlabelstaskrunproperties_1 = require("./importlabelstaskrunproperties");
+var labelingsetgenerationtaskrunproperties_1 = require("./labelingsetgenerationtaskrunproperties");
+var tasktypeenum_1 = require("./tasktypeenum");
 // TaskRunProperties
 /**
  * The configuration properties for the task run.
@@ -38,25 +41,25 @@ var TaskRunProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExportLabelsTaskRunProperties" }),
-        __metadata("design:type", ExportLabelsTaskRunProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExportLabelsTaskRunProperties" }),
+        __metadata("design:type", exportlabelstaskrunproperties_1.ExportLabelsTaskRunProperties)
     ], TaskRunProperties.prototype, "exportLabelsTaskRunProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FindMatchesTaskRunProperties" }),
-        __metadata("design:type", FindMatchesTaskRunProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FindMatchesTaskRunProperties" }),
+        __metadata("design:type", findmatchestaskrunproperties_1.FindMatchesTaskRunProperties)
     ], TaskRunProperties.prototype, "findMatchesTaskRunProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportLabelsTaskRunProperties" }),
-        __metadata("design:type", ImportLabelsTaskRunProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportLabelsTaskRunProperties" }),
+        __metadata("design:type", importlabelstaskrunproperties_1.ImportLabelsTaskRunProperties)
     ], TaskRunProperties.prototype, "importLabelsTaskRunProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LabelingSetGenerationTaskRunProperties" }),
-        __metadata("design:type", LabelingSetGenerationTaskRunProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LabelingSetGenerationTaskRunProperties" }),
+        __metadata("design:type", labelingsetgenerationtaskrunproperties_1.LabelingSetGenerationTaskRunProperties)
     ], TaskRunProperties.prototype, "labelingSetGenerationTaskRunProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskType" }),
         __metadata("design:type", String)
     ], TaskRunProperties.prototype, "taskType", void 0);
     return TaskRunProperties;
-}(SpeakeasyBase));
-export { TaskRunProperties };
+}(utils_1.SpeakeasyBase));
+exports.TaskRunProperties = TaskRunProperties;

@@ -25,5 +25,5 @@ export class GetNetworkSwitchStackRoutingInterfacesResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchStackRoutingInterfaces200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchStackRoutingInterfaces200ApplicationJSONObject?: Record<string, any>;
 }

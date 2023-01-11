@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LambdaFunctionRecommendationFindingEnum } from "./lambdafunctionrecommendationfindingenum";
-import { LambdaFunctionMemoryRecommendationOption } from "./lambdafunctionmemoryrecommendationoption";
-import { LambdaFunctionUtilizationMetric } from "./lambdafunctionutilizationmetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaFunctionRecommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var lambdafunctionrecommendationfindingenum_1 = require("./lambdafunctionrecommendationfindingenum");
+var lambdafunctionmemoryrecommendationoption_1 = require("./lambdafunctionmemoryrecommendationoption");
+var lambdafunctionutilizationmetric_1 = require("./lambdafunctionutilizationmetric");
 // LambdaFunctionRecommendation
 /**
  * Describes an Lambda function recommendation.
@@ -36,49 +39,49 @@ var LambdaFunctionRecommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], LambdaFunctionRecommendation.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentMemorySize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentMemorySize" }),
         __metadata("design:type", Number)
     ], LambdaFunctionRecommendation.prototype, "currentMemorySize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finding" }),
         __metadata("design:type", String)
     ], LambdaFunctionRecommendation.prototype, "finding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingReasonCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingReasonCodes" }),
         __metadata("design:type", Array)
     ], LambdaFunctionRecommendation.prototype, "findingReasonCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionArn" }),
         __metadata("design:type", String)
     ], LambdaFunctionRecommendation.prototype, "functionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionVersion" }),
         __metadata("design:type", String)
     ], LambdaFunctionRecommendation.prototype, "functionVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRefreshTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRefreshTimestamp" }),
         __metadata("design:type", Date)
     ], LambdaFunctionRecommendation.prototype, "lastRefreshTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lookbackPeriodInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lookbackPeriodInDays" }),
         __metadata("design:type", Number)
     ], LambdaFunctionRecommendation.prototype, "lookbackPeriodInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memorySizeRecommendationOptions", elemType: LambdaFunctionMemoryRecommendationOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memorySizeRecommendationOptions", elemType: lambdafunctionmemoryrecommendationoption_1.LambdaFunctionMemoryRecommendationOption }),
         __metadata("design:type", Array)
     ], LambdaFunctionRecommendation.prototype, "memorySizeRecommendationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfInvocations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfInvocations" }),
         __metadata("design:type", Number)
     ], LambdaFunctionRecommendation.prototype, "numberOfInvocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utilizationMetrics", elemType: LambdaFunctionUtilizationMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utilizationMetrics", elemType: lambdafunctionutilizationmetric_1.LambdaFunctionUtilizationMetric }),
         __metadata("design:type", Array)
     ], LambdaFunctionRecommendation.prototype, "utilizationMetrics", void 0);
     return LambdaFunctionRecommendation;
-}(SpeakeasyBase));
-export { LambdaFunctionRecommendation };
+}(utils_1.SpeakeasyBase));
+exports.LambdaFunctionRecommendation = LambdaFunctionRecommendation;

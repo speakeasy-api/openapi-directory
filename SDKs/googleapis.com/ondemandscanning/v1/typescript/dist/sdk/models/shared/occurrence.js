@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttestationOccurrence } from "./attestationoccurrence";
-import { BuildOccurrence } from "./buildoccurrence";
-import { ComplianceOccurrence } from "./complianceoccurrence";
-import { DeploymentOccurrence } from "./deploymentoccurrence";
-import { DiscoveryOccurrence } from "./discoveryoccurrence";
-import { DsseAttestationOccurrence } from "./dsseattestationoccurrence";
-import { Envelope } from "./envelope";
-import { ImageOccurrence } from "./imageoccurrence";
-import { PackageOccurrence } from "./packageoccurrence";
-import { UpgradeOccurrence } from "./upgradeoccurrence";
-import { VulnerabilityOccurrence } from "./vulnerabilityoccurrence";
-export var OccurrenceKindEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Occurrence = exports.OccurrenceKindEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var attestationoccurrence_1 = require("./attestationoccurrence");
+var buildoccurrence_1 = require("./buildoccurrence");
+var complianceoccurrence_1 = require("./complianceoccurrence");
+var deploymentoccurrence_1 = require("./deploymentoccurrence");
+var discoveryoccurrence_1 = require("./discoveryoccurrence");
+var dsseattestationoccurrence_1 = require("./dsseattestationoccurrence");
+var envelope_1 = require("./envelope");
+var imageoccurrence_1 = require("./imageoccurrence");
+var packageoccurrence_1 = require("./packageoccurrence");
+var upgradeoccurrence_1 = require("./upgradeoccurrence");
+var vulnerabilityoccurrence_1 = require("./vulnerabilityoccurrence");
+var OccurrenceKindEnum;
 (function (OccurrenceKindEnum) {
     OccurrenceKindEnum["NoteKindUnspecified"] = "NOTE_KIND_UNSPECIFIED";
     OccurrenceKindEnum["Vulnerability"] = "VULNERABILITY";
@@ -47,7 +50,7 @@ export var OccurrenceKindEnum;
     OccurrenceKindEnum["Upgrade"] = "UPGRADE";
     OccurrenceKindEnum["Compliance"] = "COMPLIANCE";
     OccurrenceKindEnum["DsseAttestation"] = "DSSE_ATTESTATION";
-})(OccurrenceKindEnum || (OccurrenceKindEnum = {}));
+})(OccurrenceKindEnum = exports.OccurrenceKindEnum || (exports.OccurrenceKindEnum = {}));
 // Occurrence
 /**
  * An instance of an analysis type that has been found on a resource.
@@ -58,77 +61,77 @@ var Occurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attestation" }),
-        __metadata("design:type", AttestationOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attestation" }),
+        __metadata("design:type", attestationoccurrence_1.AttestationOccurrence)
     ], Occurrence.prototype, "attestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build" }),
-        __metadata("design:type", BuildOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build" }),
+        __metadata("design:type", buildoccurrence_1.BuildOccurrence)
     ], Occurrence.prototype, "build", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compliance" }),
-        __metadata("design:type", ComplianceOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compliance" }),
+        __metadata("design:type", complianceoccurrence_1.ComplianceOccurrence)
     ], Occurrence.prototype, "compliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployment" }),
-        __metadata("design:type", DeploymentOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployment" }),
+        __metadata("design:type", deploymentoccurrence_1.DeploymentOccurrence)
     ], Occurrence.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discovery" }),
-        __metadata("design:type", DiscoveryOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discovery" }),
+        __metadata("design:type", discoveryoccurrence_1.DiscoveryOccurrence)
     ], Occurrence.prototype, "discovery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dsseAttestation" }),
-        __metadata("design:type", DsseAttestationOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dsseAttestation" }),
+        __metadata("design:type", dsseattestationoccurrence_1.DsseAttestationOccurrence)
     ], Occurrence.prototype, "dsseAttestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=envelope" }),
-        __metadata("design:type", Envelope)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=envelope" }),
+        __metadata("design:type", envelope_1.Envelope)
     ], Occurrence.prototype, "envelope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", ImageOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", imageoccurrence_1.ImageOccurrence)
     ], Occurrence.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noteName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noteName" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "noteName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
-        __metadata("design:type", PackageOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
+        __metadata("design:type", packageoccurrence_1.PackageOccurrence)
     ], Occurrence.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remediation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remediation" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "remediation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUri" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "resourceUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Occurrence.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgrade" }),
-        __metadata("design:type", UpgradeOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgrade" }),
+        __metadata("design:type", upgradeoccurrence_1.UpgradeOccurrence)
     ], Occurrence.prototype, "upgrade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vulnerability" }),
-        __metadata("design:type", VulnerabilityOccurrence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vulnerability" }),
+        __metadata("design:type", vulnerabilityoccurrence_1.VulnerabilityOccurrence)
     ], Occurrence.prototype, "vulnerability", void 0);
     return Occurrence;
-}(SpeakeasyBase));
-export { Occurrence };
+}(utils_1.SpeakeasyBase));
+exports.Occurrence = Occurrence;

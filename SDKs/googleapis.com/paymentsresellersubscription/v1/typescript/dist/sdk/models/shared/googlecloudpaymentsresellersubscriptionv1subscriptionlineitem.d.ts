@@ -1,6 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec } from "./googlecloudpaymentsresellersubscriptionv1subscriptionpromotionspec";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails } from "./googlecloudpaymentsresellersubscriptionv1subscriptionlineitemonetimerecurrencedetails";
+import { GoogleCloudPaymentsResellerSubscriptionV1ProductPayload } from "./googlecloudpaymentsresellersubscriptionv1productpayload";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput } from "./googlecloudpaymentsresellersubscriptionv1subscriptionpromotionspec";
 export declare enum GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum {
     LineItemRecurrenceTypeUnspecified = "LINE_ITEM_RECURRENCE_TYPE_UNSPECIFIED",
@@ -13,10 +14,11 @@ export declare enum GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineIte
     LineItemStateInactive = "LINE_ITEM_STATE_INACTIVE",
     LineItemStateNew = "LINE_ITEM_STATE_NEW",
     LineItemStateActivating = "LINE_ITEM_STATE_ACTIVATING",
-    LineItemStateDeactivating = "LINE_ITEM_STATE_DEACTIVATING"
+    LineItemStateDeactivating = "LINE_ITEM_STATE_DEACTIVATING",
+    LineItemStateWaitingToDeactivate = "LINE_ITEM_STATE_WAITING_TO_DEACTIVATE"
 }
 /**
- * Individual line item definition of a subscription. Next id: 9
+ * Individual line item definition of a subscription.
 **/
 export declare class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends SpeakeasyBase {
     description?: string;
@@ -24,14 +26,16 @@ export declare class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineIt
     lineItemPromotionSpecs?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec[];
     oneTimeRecurrenceDetails?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails;
     product?: string;
+    productPayload?: GoogleCloudPaymentsResellerSubscriptionV1ProductPayload;
     recurrenceType?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum;
     state?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum;
 }
 /**
- * Individual line item definition of a subscription. Next id: 9
+ * Individual line item definition of a subscription.
 **/
 export declare class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput extends SpeakeasyBase {
     lineItemPromotionSpecs?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput[];
     oneTimeRecurrenceDetails?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails;
     product?: string;
+    productPayload?: GoogleCloudPaymentsResellerSubscriptionV1ProductPayload;
 }

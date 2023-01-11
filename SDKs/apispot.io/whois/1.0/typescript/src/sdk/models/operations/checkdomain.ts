@@ -28,5 +28,5 @@ export class CheckDomainResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkDomain200ApplicationJsonObject?: CheckDomain200ApplicationJson;
+  checkDomain200ApplicationJSONObject?: CheckDomain200ApplicationJson;
 }

@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { DbSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Detailed information about an instance.
 **/
@@ -31,7 +31,7 @@ export declare class DbInstance extends SpeakeasyBase {
     preferredMaintenanceWindow?: string;
     promotionTier?: number;
     publiclyAccessible?: boolean;
-    statusInfos?: DbInstanceStatusInfo[];
+    statusInfos?: DbInstanceStatusInfoList[];
     storageEncrypted?: boolean;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

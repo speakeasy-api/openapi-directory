@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AndroidModelFormEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidModel = exports.AndroidModelFormFactorEnum = exports.AndroidModelFormEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AndroidModelFormEnum;
 (function (AndroidModelFormEnum) {
     AndroidModelFormEnum["DeviceFormUnspecified"] = "DEVICE_FORM_UNSPECIFIED";
     AndroidModelFormEnum["Virtual"] = "VIRTUAL";
     AndroidModelFormEnum["Physical"] = "PHYSICAL";
     AndroidModelFormEnum["Emulator"] = "EMULATOR";
-})(AndroidModelFormEnum || (AndroidModelFormEnum = {}));
-export var AndroidModelFormFactorEnum;
+})(AndroidModelFormEnum = exports.AndroidModelFormEnum || (exports.AndroidModelFormEnum = {}));
+var AndroidModelFormFactorEnum;
 (function (AndroidModelFormFactorEnum) {
     AndroidModelFormFactorEnum["DeviceFormFactorUnspecified"] = "DEVICE_FORM_FACTOR_UNSPECIFIED";
     AndroidModelFormFactorEnum["Phone"] = "PHONE";
     AndroidModelFormFactorEnum["Tablet"] = "TABLET";
     AndroidModelFormFactorEnum["Wearable"] = "WEARABLE";
-})(AndroidModelFormFactorEnum || (AndroidModelFormFactorEnum = {}));
+})(AndroidModelFormFactorEnum = exports.AndroidModelFormFactorEnum || (exports.AndroidModelFormFactorEnum = {}));
 // AndroidModel
 /**
  * A description of an Android device tests may be run on.
@@ -47,65 +50,65 @@ var AndroidModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brand" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codename" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "codename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "form", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formFactor" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lowFpsVideoRecording" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lowFpsVideoRecording" }),
         __metadata("design:type", Boolean)
     ], AndroidModel.prototype, "lowFpsVideoRecording", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenDensity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenDensity" }),
         __metadata("design:type", Number)
     ], AndroidModel.prototype, "screenDensity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenX" }),
         __metadata("design:type", Number)
     ], AndroidModel.prototype, "screenX", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenY" }),
         __metadata("design:type", Number)
     ], AndroidModel.prototype, "screenY", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedAbis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedAbis" }),
         __metadata("design:type", Array)
     ], AndroidModel.prototype, "supportedAbis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedVersionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedVersionIds" }),
         __metadata("design:type", Array)
     ], AndroidModel.prototype, "supportedVersionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], AndroidModel.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailUrl" }),
         __metadata("design:type", String)
     ], AndroidModel.prototype, "thumbnailUrl", void 0);
     return AndroidModel;
-}(SpeakeasyBase));
-export { AndroidModel };
+}(utils_1.SpeakeasyBase));
+exports.AndroidModel = AndroidModel;

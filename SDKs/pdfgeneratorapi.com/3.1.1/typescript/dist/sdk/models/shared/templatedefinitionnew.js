@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Component } from "./component";
-export var TemplateDefinitionNewLayoutFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateDefinitionNew = exports.TemplateDefinitionNewPages = exports.TemplateDefinitionNewPagesMargins = exports.TemplateDefinitionNewLayout = exports.TemplateDefinitionNewLayoutUnitEnum = exports.TemplateDefinitionNewLayoutRepeatLayout = exports.TemplateDefinitionNewLayoutRepeatLayoutFormatEnum = exports.TemplateDefinitionNewLayoutOrientationEnum = exports.TemplateDefinitionNewLayoutMargins = exports.TemplateDefinitionNewLayoutFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var component_1 = require("./component");
+var TemplateDefinitionNewLayoutFormatEnum;
 (function (TemplateDefinitionNewLayoutFormatEnum) {
     TemplateDefinitionNewLayoutFormatEnum["A4"] = "A4";
     TemplateDefinitionNewLayoutFormatEnum["Letter"] = "letter";
     TemplateDefinitionNewLayoutFormatEnum["Custom"] = "custom";
-})(TemplateDefinitionNewLayoutFormatEnum || (TemplateDefinitionNewLayoutFormatEnum = {}));
+})(TemplateDefinitionNewLayoutFormatEnum = exports.TemplateDefinitionNewLayoutFormatEnum || (exports.TemplateDefinitionNewLayoutFormatEnum = {}));
 // TemplateDefinitionNewLayoutMargins
 /**
  * Page margins in units
@@ -40,35 +43,35 @@ var TemplateDefinitionNewLayoutMargins = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottom" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutMargins.prototype, "bottom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=left" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=left" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutMargins.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=right" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=right" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutMargins.prototype, "right", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=top" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=top" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutMargins.prototype, "top", void 0);
     return TemplateDefinitionNewLayoutMargins;
-}(SpeakeasyBase));
-export { TemplateDefinitionNewLayoutMargins };
-export var TemplateDefinitionNewLayoutOrientationEnum;
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNewLayoutMargins = TemplateDefinitionNewLayoutMargins;
+var TemplateDefinitionNewLayoutOrientationEnum;
 (function (TemplateDefinitionNewLayoutOrientationEnum) {
     TemplateDefinitionNewLayoutOrientationEnum["Portrait"] = "portrait";
     TemplateDefinitionNewLayoutOrientationEnum["Landscape"] = "landscape";
-})(TemplateDefinitionNewLayoutOrientationEnum || (TemplateDefinitionNewLayoutOrientationEnum = {}));
-export var TemplateDefinitionNewLayoutRepeatLayoutFormatEnum;
+})(TemplateDefinitionNewLayoutOrientationEnum = exports.TemplateDefinitionNewLayoutOrientationEnum || (exports.TemplateDefinitionNewLayoutOrientationEnum = {}));
+var TemplateDefinitionNewLayoutRepeatLayoutFormatEnum;
 (function (TemplateDefinitionNewLayoutRepeatLayoutFormatEnum) {
     TemplateDefinitionNewLayoutRepeatLayoutFormatEnum["A4"] = "A4";
     TemplateDefinitionNewLayoutRepeatLayoutFormatEnum["Letter"] = "letter";
     TemplateDefinitionNewLayoutRepeatLayoutFormatEnum["Custom"] = "custom";
-})(TemplateDefinitionNewLayoutRepeatLayoutFormatEnum || (TemplateDefinitionNewLayoutRepeatLayoutFormatEnum = {}));
+})(TemplateDefinitionNewLayoutRepeatLayoutFormatEnum = exports.TemplateDefinitionNewLayoutRepeatLayoutFormatEnum || (exports.TemplateDefinitionNewLayoutRepeatLayoutFormatEnum = {}));
 // TemplateDefinitionNewLayoutRepeatLayout
 /**
  * Defines page size if layout is repeated on the page e.g sheet labels
@@ -79,25 +82,25 @@ var TemplateDefinitionNewLayoutRepeatLayout = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], TemplateDefinitionNewLayoutRepeatLayout.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutRepeatLayout.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayoutRepeatLayout.prototype, "width", void 0);
     return TemplateDefinitionNewLayoutRepeatLayout;
-}(SpeakeasyBase));
-export { TemplateDefinitionNewLayoutRepeatLayout };
-export var TemplateDefinitionNewLayoutUnitEnum;
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNewLayoutRepeatLayout = TemplateDefinitionNewLayoutRepeatLayout;
+var TemplateDefinitionNewLayoutUnitEnum;
 (function (TemplateDefinitionNewLayoutUnitEnum) {
     TemplateDefinitionNewLayoutUnitEnum["Cm"] = "cm";
     TemplateDefinitionNewLayoutUnitEnum["In"] = "in";
-})(TemplateDefinitionNewLayoutUnitEnum || (TemplateDefinitionNewLayoutUnitEnum = {}));
+})(TemplateDefinitionNewLayoutUnitEnum = exports.TemplateDefinitionNewLayoutUnitEnum || (exports.TemplateDefinitionNewLayoutUnitEnum = {}));
 // TemplateDefinitionNewLayout
 /**
  * Defines template layout (e.g page format, margins).
@@ -108,84 +111,84 @@ var TemplateDefinitionNewLayout = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emptyLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emptyLabels" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayout.prototype, "emptyLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], TemplateDefinitionNewLayout.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayout.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=margins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=margins" }),
         __metadata("design:type", TemplateDefinitionNewLayoutMargins)
     ], TemplateDefinitionNewLayout.prototype, "margins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orientation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orientation" }),
         __metadata("design:type", String)
     ], TemplateDefinitionNewLayout.prototype, "orientation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatLayout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatLayout" }),
         __metadata("design:type", TemplateDefinitionNewLayoutRepeatLayout)
     ], TemplateDefinitionNewLayout.prototype, "repeatLayout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotaion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotaion" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayout.prototype, "rotaion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], TemplateDefinitionNewLayout.prototype, "unit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewLayout.prototype, "width", void 0);
     return TemplateDefinitionNewLayout;
-}(SpeakeasyBase));
-export { TemplateDefinitionNewLayout };
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNewLayout = TemplateDefinitionNewLayout;
 var TemplateDefinitionNewPagesMargins = /** @class */ (function (_super) {
     __extends(TemplateDefinitionNewPagesMargins, _super);
     function TemplateDefinitionNewPagesMargins() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottom" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewPagesMargins.prototype, "bottom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=right" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=right" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewPagesMargins.prototype, "right", void 0);
     return TemplateDefinitionNewPagesMargins;
-}(SpeakeasyBase));
-export { TemplateDefinitionNewPagesMargins };
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNewPagesMargins = TemplateDefinitionNewPagesMargins;
 var TemplateDefinitionNewPages = /** @class */ (function (_super) {
     __extends(TemplateDefinitionNewPages, _super);
     function TemplateDefinitionNewPages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=components", elemType: Component }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=components", elemType: component_1.Component }),
         __metadata("design:type", Array)
     ], TemplateDefinitionNewPages.prototype, "components", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewPages.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=margins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=margins" }),
         __metadata("design:type", TemplateDefinitionNewPagesMargins)
     ], TemplateDefinitionNewPages.prototype, "margins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], TemplateDefinitionNewPages.prototype, "width", void 0);
     return TemplateDefinitionNewPages;
-}(SpeakeasyBase));
-export { TemplateDefinitionNewPages };
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNewPages = TemplateDefinitionNewPages;
 // TemplateDefinitionNew
 /**
  * Template configuration
@@ -196,25 +199,25 @@ var TemplateDefinitionNew = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDraft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDraft" }),
         __metadata("design:type", Boolean)
     ], TemplateDefinitionNew.prototype, "isDraft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layout" }),
         __metadata("design:type", TemplateDefinitionNewLayout)
     ], TemplateDefinitionNew.prototype, "layout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TemplateDefinitionNew.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pages", elemType: TemplateDefinitionNewPages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages", elemType: TemplateDefinitionNewPages }),
         __metadata("design:type", Array)
     ], TemplateDefinitionNew.prototype, "pages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], TemplateDefinitionNew.prototype, "tags", void 0);
     return TemplateDefinitionNew;
-}(SpeakeasyBase));
-export { TemplateDefinitionNew };
+}(utils_1.SpeakeasyBase));
+exports.TemplateDefinitionNew = TemplateDefinitionNew;

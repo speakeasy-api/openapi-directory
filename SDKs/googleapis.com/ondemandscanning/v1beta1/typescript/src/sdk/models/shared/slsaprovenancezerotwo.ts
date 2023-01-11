@@ -12,7 +12,7 @@ import { GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata } from "./grafeasv1slsaprove
 **/
 export class SlsaProvenanceZeroTwo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=buildConfig" })
-  buildConfig?: Map<string, any>;
+  buildConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=buildType" })
   buildType?: string;

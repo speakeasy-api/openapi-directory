@@ -105,11 +105,11 @@ export declare class ArcmwRequest extends SpeakeasyBase {
 export declare class ArcmwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    arcmw400ApplicationJsonObject?: Arcmw400ApplicationJson;
-    arcmw401ApplicationJsonObject?: Arcmw401ApplicationJson;
-    arcmw404ApplicationJsonObject?: Arcmw404ApplicationJson;
-    arcmw500ApplicationJsonObject?: Arcmw500ApplicationJson;
-    arcmw502ApplicationJsonObject?: Arcmw502ApplicationJson;
-    arcmw503ApplicationJsonObject?: Arcmw503ApplicationJson;
-    arcmw504ApplicationJsonObject?: Arcmw504ApplicationJson;
+    arcmw400ApplicationJSONObject?: Arcmw400ApplicationJson;
+    arcmw401ApplicationJSONObject?: Arcmw401ApplicationJson;
+    arcmw404ApplicationJSONObject?: Arcmw404ApplicationJson;
+    arcmw500ApplicationJSONObject?: Arcmw500ApplicationJson;
+    arcmw502ApplicationJSONObject?: Arcmw502ApplicationJson;
+    arcmw503ApplicationJSONObject?: Arcmw503ApplicationJson;
+    arcmw504ApplicationJSONObject?: Arcmw504ApplicationJson;
 }

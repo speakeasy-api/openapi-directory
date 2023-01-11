@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FundingRequestV3 = void 0;
+var utils_1 = require("../../../internal/utils");
 var FundingRequestV3 = /** @class */ (function (_super) {
     __extends(FundingRequestV3, _super);
     function FundingRequestV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], FundingRequestV3.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingAccountId" }),
         __metadata("design:type", String)
     ], FundingRequestV3.prototype, "fundingAccountId", void 0);
     return FundingRequestV3;
-}(SpeakeasyBase));
-export { FundingRequestV3 };
+}(utils_1.SpeakeasyBase));
+exports.FundingRequestV3 = FundingRequestV3;

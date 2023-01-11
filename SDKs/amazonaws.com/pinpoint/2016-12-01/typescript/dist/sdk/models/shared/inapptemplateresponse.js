@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InAppMessageContent } from "./inappmessagecontent";
-import { LayoutEnum } from "./layoutenum";
-import { TemplateTypeEnum } from "./templatetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InAppTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var inappmessagecontent_1 = require("./inappmessagecontent");
+var layoutenum_1 = require("./layoutenum");
+var templatetypeenum_1 = require("./templatetypeenum");
 // InAppTemplateResponse
 /**
  * In-App Template Response.
@@ -36,49 +39,49 @@ var InAppTemplateResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content", elemType: InAppMessageContent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content", elemType: inappmessagecontent_1.InAppMessageContent }),
         __metadata("design:type", Array)
     ], InAppTemplateResponse.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomConfig" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomConfig" }),
+        __metadata("design:type", Object)
     ], InAppTemplateResponse.prototype, "customConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Layout" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "layout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateDescription" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "templateDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateType" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "templateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], InAppTemplateResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], InAppTemplateResponse.prototype, "tags", void 0);
     return InAppTemplateResponse;
-}(SpeakeasyBase));
-export { InAppTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.InAppTemplateResponse = InAppTemplateResponse;

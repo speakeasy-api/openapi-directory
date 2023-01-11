@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImagesIdActionsResponse = exports.GetImagesIdActionsRequest = exports.GetImagesIdActionsActionsResponse = exports.GetImagesIdActionsActionsResponseMeta = exports.GetImagesIdActionsActionsResponseMetaPagination = exports.GetImagesIdActionsActionsResponseAction = exports.GetImagesIdActionsActionsResponseActionStatusEnum = exports.GetImagesIdActionsActionsResponseActionResources = exports.GetImagesIdActionsActionsResponseActionError = exports.GetImagesIdActionsQueryParams = exports.GetImagesIdActionsStatusParameterStatusEnum = exports.GetImagesIdActionsSortParameterSortEnum = exports.GetImagesIdActionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetImagesIdActionsPathParams = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsPathParams, _super);
     function GetImagesIdActionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsPathParams.prototype, "id", void 0);
     return GetImagesIdActionsPathParams;
-}(SpeakeasyBase));
-export { GetImagesIdActionsPathParams };
-export var GetImagesIdActionsSortParameterSortEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsPathParams = GetImagesIdActionsPathParams;
+var GetImagesIdActionsSortParameterSortEnum;
 (function (GetImagesIdActionsSortParameterSortEnum) {
     GetImagesIdActionsSortParameterSortEnum["Id"] = "id";
     GetImagesIdActionsSortParameterSortEnum["IdAsc"] = "id:asc";
@@ -55,29 +58,29 @@ export var GetImagesIdActionsSortParameterSortEnum;
     GetImagesIdActionsSortParameterSortEnum["Finished"] = "finished";
     GetImagesIdActionsSortParameterSortEnum["FinishedAsc"] = "finished:asc";
     GetImagesIdActionsSortParameterSortEnum["FinishedDesc"] = "finished:desc";
-})(GetImagesIdActionsSortParameterSortEnum || (GetImagesIdActionsSortParameterSortEnum = {}));
-export var GetImagesIdActionsStatusParameterStatusEnum;
+})(GetImagesIdActionsSortParameterSortEnum = exports.GetImagesIdActionsSortParameterSortEnum || (exports.GetImagesIdActionsSortParameterSortEnum = {}));
+var GetImagesIdActionsStatusParameterStatusEnum;
 (function (GetImagesIdActionsStatusParameterStatusEnum) {
     GetImagesIdActionsStatusParameterStatusEnum["Running"] = "running";
     GetImagesIdActionsStatusParameterStatusEnum["Success"] = "success";
     GetImagesIdActionsStatusParameterStatusEnum["Error"] = "error";
-})(GetImagesIdActionsStatusParameterStatusEnum || (GetImagesIdActionsStatusParameterStatusEnum = {}));
+})(GetImagesIdActionsStatusParameterStatusEnum = exports.GetImagesIdActionsStatusParameterStatusEnum || (exports.GetImagesIdActionsStatusParameterStatusEnum = {}));
 var GetImagesIdActionsQueryParams = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsQueryParams, _super);
     function GetImagesIdActionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsQueryParams.prototype, "status", void 0);
     return GetImagesIdActionsQueryParams;
-}(SpeakeasyBase));
-export { GetImagesIdActionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsQueryParams = GetImagesIdActionsQueryParams;
 // GetImagesIdActionsActionsResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -88,171 +91,171 @@ var GetImagesIdActionsActionsResponseActionError = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseActionError.prototype, "message", void 0);
     return GetImagesIdActionsActionsResponseActionError;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponseActionError = GetImagesIdActionsActionsResponseActionError;
 var GetImagesIdActionsActionsResponseActionResources = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsActionsResponseActionResources, _super);
     function GetImagesIdActionsActionsResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseActionResources.prototype, "type", void 0);
     return GetImagesIdActionsActionsResponseActionResources;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponseActionResources };
-export var GetImagesIdActionsActionsResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponseActionResources = GetImagesIdActionsActionsResponseActionResources;
+var GetImagesIdActionsActionsResponseActionStatusEnum;
 (function (GetImagesIdActionsActionsResponseActionStatusEnum) {
     GetImagesIdActionsActionsResponseActionStatusEnum["Success"] = "success";
     GetImagesIdActionsActionsResponseActionStatusEnum["Running"] = "running";
     GetImagesIdActionsActionsResponseActionStatusEnum["Error"] = "error";
-})(GetImagesIdActionsActionsResponseActionStatusEnum || (GetImagesIdActionsActionsResponseActionStatusEnum = {}));
+})(GetImagesIdActionsActionsResponseActionStatusEnum = exports.GetImagesIdActionsActionsResponseActionStatusEnum || (exports.GetImagesIdActionsActionsResponseActionStatusEnum = {}));
 var GetImagesIdActionsActionsResponseAction = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsActionsResponseAction, _super);
     function GetImagesIdActionsActionsResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", GetImagesIdActionsActionsResponseActionError)
     ], GetImagesIdActionsActionsResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: GetImagesIdActionsActionsResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: GetImagesIdActionsActionsResponseActionResources }),
         __metadata("design:type", Array)
     ], GetImagesIdActionsActionsResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetImagesIdActionsActionsResponseAction.prototype, "status", void 0);
     return GetImagesIdActionsActionsResponseAction;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponseAction = GetImagesIdActionsActionsResponseAction;
 var GetImagesIdActionsActionsResponseMetaPagination = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsActionsResponseMetaPagination, _super);
     function GetImagesIdActionsActionsResponseMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetImagesIdActionsActionsResponseMetaPagination.prototype, "totalEntries", void 0);
     return GetImagesIdActionsActionsResponseMetaPagination;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponseMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponseMetaPagination = GetImagesIdActionsActionsResponseMetaPagination;
 var GetImagesIdActionsActionsResponseMeta = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsActionsResponseMeta, _super);
     function GetImagesIdActionsActionsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetImagesIdActionsActionsResponseMetaPagination)
     ], GetImagesIdActionsActionsResponseMeta.prototype, "pagination", void 0);
     return GetImagesIdActionsActionsResponseMeta;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponseMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponseMeta = GetImagesIdActionsActionsResponseMeta;
 var GetImagesIdActionsActionsResponse = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsActionsResponse, _super);
     function GetImagesIdActionsActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: GetImagesIdActionsActionsResponseAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: GetImagesIdActionsActionsResponseAction }),
         __metadata("design:type", Array)
     ], GetImagesIdActionsActionsResponse.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetImagesIdActionsActionsResponseMeta)
     ], GetImagesIdActionsActionsResponse.prototype, "meta", void 0);
     return GetImagesIdActionsActionsResponse;
-}(SpeakeasyBase));
-export { GetImagesIdActionsActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsActionsResponse = GetImagesIdActionsActionsResponse;
 var GetImagesIdActionsRequest = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsRequest, _super);
     function GetImagesIdActionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesIdActionsPathParams)
     ], GetImagesIdActionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesIdActionsQueryParams)
     ], GetImagesIdActionsRequest.prototype, "queryParams", void 0);
     return GetImagesIdActionsRequest;
-}(SpeakeasyBase));
-export { GetImagesIdActionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsRequest = GetImagesIdActionsRequest;
 var GetImagesIdActionsResponse = /** @class */ (function (_super) {
     __extends(GetImagesIdActionsResponse, _super);
     function GetImagesIdActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesIdActionsActionsResponse)
     ], GetImagesIdActionsResponse.prototype, "actionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImagesIdActionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImagesIdActionsResponse.prototype, "statusCode", void 0);
     return GetImagesIdActionsResponse;
-}(SpeakeasyBase));
-export { GetImagesIdActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesIdActionsResponse = GetImagesIdActionsResponse;

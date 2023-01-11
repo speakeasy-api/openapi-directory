@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddWordRequest, GetAddWordResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,14 +28,14 @@ const sdk = new SDK();
     
 const req: GetAddWordRequest = {
   queryParams: {
-    author: "voluptatem",
-    definition: "molestias",
-    related: "mollitia",
-    word: "earum",
+    author: "sit",
+    definition: "voluptas",
+    related: "culpa",
+    word: "expedita",
   },
 };
 
-sdk.sdk.getAddWord(req).then((res: GetAddWordResponse | AxiosError) => {
+sdk.getAddWord(req).then((res: GetAddWordResponse | AxiosError) => {
    // handle response
 });
 ```

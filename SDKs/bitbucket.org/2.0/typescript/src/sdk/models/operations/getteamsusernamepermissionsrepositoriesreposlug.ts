@@ -53,7 +53,7 @@ export class GetTeamsUsernamePermissionsRepositoriesRepoSlugResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedRepositoryPermissions?: shared.PaginatedRepositoryPermissions;

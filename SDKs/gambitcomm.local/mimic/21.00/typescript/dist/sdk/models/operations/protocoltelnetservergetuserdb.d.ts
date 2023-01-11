@@ -8,5 +8,5 @@ export declare class ProtocolTelnetServerGetUserdbRequest extends SpeakeasyBase 
 export declare class ProtocolTelnetServerGetUserdbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetServerGetUserdb200ApplicationJsonStrings?: string[];
+    protocolTelnetServerGetUserdb200ApplicationJSONStrings?: string[];
 }

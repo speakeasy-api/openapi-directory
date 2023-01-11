@@ -59,8 +59,8 @@ export class GetContentSourceSectionTimePeriodJsonResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  getContentSourceSectionTimePeriodJson200ApplicationJsonObject?: GetContentSourceSectionTimePeriodJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getContentSourceSectionTimePeriodJSON200ApplicationJSONObject?: GetContentSourceSectionTimePeriodJson200ApplicationJson;
 }

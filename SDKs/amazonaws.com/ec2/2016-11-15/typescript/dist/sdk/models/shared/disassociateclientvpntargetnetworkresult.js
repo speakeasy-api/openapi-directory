@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssociationStatus } from "./associationstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateClientVpnTargetNetworkResult = exports.DisassociateClientVpnTargetNetworkResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// DisassociateClientVpnTargetNetworkResultStatus
+/**
+ * The current state of the target network association.
+**/
+var DisassociateClientVpnTargetNetworkResultStatus = /** @class */ (function (_super) {
+    __extends(DisassociateClientVpnTargetNetworkResultStatus, _super);
+    function DisassociateClientVpnTargetNetworkResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateClientVpnTargetNetworkResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateClientVpnTargetNetworkResultStatus.prototype, "message", void 0);
+    return DisassociateClientVpnTargetNetworkResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.DisassociateClientVpnTargetNetworkResultStatus = DisassociateClientVpnTargetNetworkResultStatus;
 var DisassociateClientVpnTargetNetworkResult = /** @class */ (function (_super) {
     __extends(DisassociateClientVpnTargetNetworkResult, _super);
     function DisassociateClientVpnTargetNetworkResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DisassociateClientVpnTargetNetworkResult.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AssociationStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisassociateClientVpnTargetNetworkResultStatus)
     ], DisassociateClientVpnTargetNetworkResult.prototype, "status", void 0);
     return DisassociateClientVpnTargetNetworkResult;
-}(SpeakeasyBase));
-export { DisassociateClientVpnTargetNetworkResult };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateClientVpnTargetNetworkResult = DisassociateClientVpnTargetNetworkResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSettingResponse = exports.DeleteSettingRequest = exports.DeleteSettingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSettingPathParams = /** @class */ (function (_super) {
     __extends(DeleteSettingPathParams, _super);
     function DeleteSettingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=settingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=settingId" }),
         __metadata("design:type", Number)
     ], DeleteSettingPathParams.prototype, "settingId", void 0);
     return DeleteSettingPathParams;
-}(SpeakeasyBase));
-export { DeleteSettingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSettingPathParams = DeleteSettingPathParams;
 var DeleteSettingRequest = /** @class */ (function (_super) {
     __extends(DeleteSettingRequest, _super);
     function DeleteSettingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSettingPathParams)
     ], DeleteSettingRequest.prototype, "pathParams", void 0);
     return DeleteSettingRequest;
-}(SpeakeasyBase));
-export { DeleteSettingRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSettingRequest = DeleteSettingRequest;
 var DeleteSettingResponse = /** @class */ (function (_super) {
     __extends(DeleteSettingResponse, _super);
     function DeleteSettingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSettingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSettingResponse.prototype, "statusCode", void 0);
     return DeleteSettingResponse;
-}(SpeakeasyBase));
-export { DeleteSettingResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSettingResponse = DeleteSettingResponse;

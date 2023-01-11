@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1Image = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecommendationengineV1beta1Image
 /**
  * Catalog item thumbnail/detail image.
@@ -33,17 +36,17 @@ var GoogleCloudRecommendationengineV1beta1Image = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1Image.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1Image.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1Image.prototype, "width", void 0);
     return GoogleCloudRecommendationengineV1beta1Image;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1Image };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1Image = GoogleCloudRecommendationengineV1beta1Image;

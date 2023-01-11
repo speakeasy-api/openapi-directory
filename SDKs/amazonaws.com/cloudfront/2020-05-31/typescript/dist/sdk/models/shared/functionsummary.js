@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionConfig } from "./functionconfig";
-import { FunctionMetadata } from "./functionmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var functionconfig_1 = require("./functionconfig");
+var functionmetadata_1 = require("./functionmetadata");
 // FunctionSummary
 /**
  * Contains configuration information and metadata about a CloudFront function.
@@ -35,21 +38,21 @@ var FunctionSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FunctionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", functionconfig_1.FunctionConfig)
     ], FunctionSummary.prototype, "functionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FunctionMetadata)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", functionmetadata_1.FunctionMetadata)
     ], FunctionSummary.prototype, "functionMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FunctionSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FunctionSummary.prototype, "status", void 0);
     return FunctionSummary;
-}(SpeakeasyBase));
-export { FunctionSummary };
+}(utils_1.SpeakeasyBase));
+exports.FunctionSummary = FunctionSummary;

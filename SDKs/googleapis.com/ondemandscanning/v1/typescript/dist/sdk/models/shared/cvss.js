@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CvssAttackComplexityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cvss = exports.CvssUserInteractionEnum = exports.CvssScopeEnum = exports.CvssPrivilegesRequiredEnum = exports.CvssIntegrityImpactEnum = exports.CvssConfidentialityImpactEnum = exports.CvssAvailabilityImpactEnum = exports.CvssAuthenticationEnum = exports.CvssAttackVectorEnum = exports.CvssAttackComplexityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CvssAttackComplexityEnum;
 (function (CvssAttackComplexityEnum) {
     CvssAttackComplexityEnum["AttackComplexityUnspecified"] = "ATTACK_COMPLEXITY_UNSPECIFIED";
     CvssAttackComplexityEnum["AttackComplexityLow"] = "ATTACK_COMPLEXITY_LOW";
     CvssAttackComplexityEnum["AttackComplexityHigh"] = "ATTACK_COMPLEXITY_HIGH";
-})(CvssAttackComplexityEnum || (CvssAttackComplexityEnum = {}));
-export var CvssAttackVectorEnum;
+})(CvssAttackComplexityEnum = exports.CvssAttackComplexityEnum || (exports.CvssAttackComplexityEnum = {}));
+var CvssAttackVectorEnum;
 (function (CvssAttackVectorEnum) {
     CvssAttackVectorEnum["AttackVectorUnspecified"] = "ATTACK_VECTOR_UNSPECIFIED";
     CvssAttackVectorEnum["AttackVectorNetwork"] = "ATTACK_VECTOR_NETWORK";
     CvssAttackVectorEnum["AttackVectorAdjacent"] = "ATTACK_VECTOR_ADJACENT";
     CvssAttackVectorEnum["AttackVectorLocal"] = "ATTACK_VECTOR_LOCAL";
     CvssAttackVectorEnum["AttackVectorPhysical"] = "ATTACK_VECTOR_PHYSICAL";
-})(CvssAttackVectorEnum || (CvssAttackVectorEnum = {}));
-export var CvssAuthenticationEnum;
+})(CvssAttackVectorEnum = exports.CvssAttackVectorEnum || (exports.CvssAttackVectorEnum = {}));
+var CvssAuthenticationEnum;
 (function (CvssAuthenticationEnum) {
     CvssAuthenticationEnum["AuthenticationUnspecified"] = "AUTHENTICATION_UNSPECIFIED";
     CvssAuthenticationEnum["AuthenticationMultiple"] = "AUTHENTICATION_MULTIPLE";
     CvssAuthenticationEnum["AuthenticationSingle"] = "AUTHENTICATION_SINGLE";
     CvssAuthenticationEnum["AuthenticationNone"] = "AUTHENTICATION_NONE";
-})(CvssAuthenticationEnum || (CvssAuthenticationEnum = {}));
-export var CvssAvailabilityImpactEnum;
+})(CvssAuthenticationEnum = exports.CvssAuthenticationEnum || (exports.CvssAuthenticationEnum = {}));
+var CvssAvailabilityImpactEnum;
 (function (CvssAvailabilityImpactEnum) {
     CvssAvailabilityImpactEnum["ImpactUnspecified"] = "IMPACT_UNSPECIFIED";
     CvssAvailabilityImpactEnum["ImpactHigh"] = "IMPACT_HIGH";
     CvssAvailabilityImpactEnum["ImpactLow"] = "IMPACT_LOW";
     CvssAvailabilityImpactEnum["ImpactNone"] = "IMPACT_NONE";
-})(CvssAvailabilityImpactEnum || (CvssAvailabilityImpactEnum = {}));
-export var CvssConfidentialityImpactEnum;
+})(CvssAvailabilityImpactEnum = exports.CvssAvailabilityImpactEnum || (exports.CvssAvailabilityImpactEnum = {}));
+var CvssConfidentialityImpactEnum;
 (function (CvssConfidentialityImpactEnum) {
     CvssConfidentialityImpactEnum["ImpactUnspecified"] = "IMPACT_UNSPECIFIED";
     CvssConfidentialityImpactEnum["ImpactHigh"] = "IMPACT_HIGH";
     CvssConfidentialityImpactEnum["ImpactLow"] = "IMPACT_LOW";
     CvssConfidentialityImpactEnum["ImpactNone"] = "IMPACT_NONE";
-})(CvssConfidentialityImpactEnum || (CvssConfidentialityImpactEnum = {}));
-export var CvssIntegrityImpactEnum;
+})(CvssConfidentialityImpactEnum = exports.CvssConfidentialityImpactEnum || (exports.CvssConfidentialityImpactEnum = {}));
+var CvssIntegrityImpactEnum;
 (function (CvssIntegrityImpactEnum) {
     CvssIntegrityImpactEnum["ImpactUnspecified"] = "IMPACT_UNSPECIFIED";
     CvssIntegrityImpactEnum["ImpactHigh"] = "IMPACT_HIGH";
     CvssIntegrityImpactEnum["ImpactLow"] = "IMPACT_LOW";
     CvssIntegrityImpactEnum["ImpactNone"] = "IMPACT_NONE";
-})(CvssIntegrityImpactEnum || (CvssIntegrityImpactEnum = {}));
-export var CvssPrivilegesRequiredEnum;
+})(CvssIntegrityImpactEnum = exports.CvssIntegrityImpactEnum || (exports.CvssIntegrityImpactEnum = {}));
+var CvssPrivilegesRequiredEnum;
 (function (CvssPrivilegesRequiredEnum) {
     CvssPrivilegesRequiredEnum["PrivilegesRequiredUnspecified"] = "PRIVILEGES_REQUIRED_UNSPECIFIED";
     CvssPrivilegesRequiredEnum["PrivilegesRequiredNone"] = "PRIVILEGES_REQUIRED_NONE";
     CvssPrivilegesRequiredEnum["PrivilegesRequiredLow"] = "PRIVILEGES_REQUIRED_LOW";
     CvssPrivilegesRequiredEnum["PrivilegesRequiredHigh"] = "PRIVILEGES_REQUIRED_HIGH";
-})(CvssPrivilegesRequiredEnum || (CvssPrivilegesRequiredEnum = {}));
-export var CvssScopeEnum;
+})(CvssPrivilegesRequiredEnum = exports.CvssPrivilegesRequiredEnum || (exports.CvssPrivilegesRequiredEnum = {}));
+var CvssScopeEnum;
 (function (CvssScopeEnum) {
     CvssScopeEnum["ScopeUnspecified"] = "SCOPE_UNSPECIFIED";
     CvssScopeEnum["ScopeUnchanged"] = "SCOPE_UNCHANGED";
     CvssScopeEnum["ScopeChanged"] = "SCOPE_CHANGED";
-})(CvssScopeEnum || (CvssScopeEnum = {}));
-export var CvssUserInteractionEnum;
+})(CvssScopeEnum = exports.CvssScopeEnum || (exports.CvssScopeEnum = {}));
+var CvssUserInteractionEnum;
 (function (CvssUserInteractionEnum) {
     CvssUserInteractionEnum["UserInteractionUnspecified"] = "USER_INTERACTION_UNSPECIFIED";
     CvssUserInteractionEnum["UserInteractionNone"] = "USER_INTERACTION_NONE";
     CvssUserInteractionEnum["UserInteractionRequired"] = "USER_INTERACTION_REQUIRED";
-})(CvssUserInteractionEnum || (CvssUserInteractionEnum = {}));
+})(CvssUserInteractionEnum = exports.CvssUserInteractionEnum || (exports.CvssUserInteractionEnum = {}));
 // Cvss
 /**
  * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing various versions of CVSS rather than making a separate proto for storing a specific version.
@@ -94,53 +97,53 @@ var Cvss = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attackComplexity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attackComplexity" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "attackComplexity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attackVector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attackVector" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "attackVector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityImpact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityImpact" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "availabilityImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseScore" }),
         __metadata("design:type", Number)
     ], Cvss.prototype, "baseScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidentialityImpact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidentialityImpact" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "confidentialityImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exploitabilityScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exploitabilityScore" }),
         __metadata("design:type", Number)
     ], Cvss.prototype, "exploitabilityScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impactScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impactScore" }),
         __metadata("design:type", Number)
     ], Cvss.prototype, "impactScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integrityImpact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integrityImpact" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "integrityImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privilegesRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privilegesRequired" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "privilegesRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userInteraction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userInteraction" }),
         __metadata("design:type", String)
     ], Cvss.prototype, "userInteraction", void 0);
     return Cvss;
-}(SpeakeasyBase));
-export { Cvss };
+}(utils_1.SpeakeasyBase));
+exports.Cvss = Cvss;

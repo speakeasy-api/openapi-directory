@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirebaseProjectsIosAppsCreateResponse = exports.FirebaseProjectsIosAppsCreateRequest = exports.FirebaseProjectsIosAppsCreateSecurity = exports.FirebaseProjectsIosAppsCreateSecurityOption2 = exports.FirebaseProjectsIosAppsCreateSecurityOption1 = exports.FirebaseProjectsIosAppsCreateQueryParams = exports.FirebaseProjectsIosAppsCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FirebaseProjectsIosAppsCreatePathParams = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreatePathParams, _super);
     function FirebaseProjectsIosAppsCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreatePathParams.prototype, "parent", void 0);
     return FirebaseProjectsIosAppsCreatePathParams;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreatePathParams = FirebaseProjectsIosAppsCreatePathParams;
 var FirebaseProjectsIosAppsCreateQueryParams = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateQueryParams, _super);
     function FirebaseProjectsIosAppsCreateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateQueryParams.prototype, "uploadProtocol", void 0);
     return FirebaseProjectsIosAppsCreateQueryParams;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateQueryParams = FirebaseProjectsIosAppsCreateQueryParams;
 var FirebaseProjectsIosAppsCreateSecurityOption1 = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateSecurityOption1, _super);
     function FirebaseProjectsIosAppsCreateSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FirebaseProjectsIosAppsCreateSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FirebaseProjectsIosAppsCreateSecurityOption1.prototype, "oauth2c", void 0);
     return FirebaseProjectsIosAppsCreateSecurityOption1;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateSecurityOption1 = FirebaseProjectsIosAppsCreateSecurityOption1;
 var FirebaseProjectsIosAppsCreateSecurityOption2 = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateSecurityOption2, _super);
     function FirebaseProjectsIosAppsCreateSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FirebaseProjectsIosAppsCreateSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FirebaseProjectsIosAppsCreateSecurityOption2.prototype, "oauth2c", void 0);
     return FirebaseProjectsIosAppsCreateSecurityOption2;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateSecurityOption2 = FirebaseProjectsIosAppsCreateSecurityOption2;
 var FirebaseProjectsIosAppsCreateSecurity = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateSecurity, _super);
     function FirebaseProjectsIosAppsCreateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FirebaseProjectsIosAppsCreateSecurityOption1)
     ], FirebaseProjectsIosAppsCreateSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FirebaseProjectsIosAppsCreateSecurityOption2)
     ], FirebaseProjectsIosAppsCreateSecurity.prototype, "option2", void 0);
     return FirebaseProjectsIosAppsCreateSecurity;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateSecurity = FirebaseProjectsIosAppsCreateSecurity;
 var FirebaseProjectsIosAppsCreateRequest = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateRequest, _super);
     function FirebaseProjectsIosAppsCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FirebaseProjectsIosAppsCreatePathParams)
     ], FirebaseProjectsIosAppsCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FirebaseProjectsIosAppsCreateQueryParams)
     ], FirebaseProjectsIosAppsCreateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.IosAppInput)
     ], FirebaseProjectsIosAppsCreateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FirebaseProjectsIosAppsCreateSecurity)
     ], FirebaseProjectsIosAppsCreateRequest.prototype, "security", void 0);
     return FirebaseProjectsIosAppsCreateRequest;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateRequest = FirebaseProjectsIosAppsCreateRequest;
 var FirebaseProjectsIosAppsCreateResponse = /** @class */ (function (_super) {
     __extends(FirebaseProjectsIosAppsCreateResponse, _super);
     function FirebaseProjectsIosAppsCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FirebaseProjectsIosAppsCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], FirebaseProjectsIosAppsCreateResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FirebaseProjectsIosAppsCreateResponse.prototype, "statusCode", void 0);
     return FirebaseProjectsIosAppsCreateResponse;
-}(SpeakeasyBase));
-export { FirebaseProjectsIosAppsCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProjectsIosAppsCreateResponse = FirebaseProjectsIosAppsCreateResponse;

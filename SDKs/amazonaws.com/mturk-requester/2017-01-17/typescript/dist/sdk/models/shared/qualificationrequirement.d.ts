@@ -11,5 +11,5 @@ export declare class QualificationRequirement extends SpeakeasyBase {
     integerValues?: number[];
     localeValues?: Locale[];
     qualificationTypeId: string;
-    requiredToPreview?: boolean;
+    requiredToPreview?: Record<string, any>;
 }

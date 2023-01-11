@@ -14,7 +14,7 @@ export class SpotUpdateInput extends SpeakeasyBase {
   antennaReportLocations?: SpotUpdateAntennaReportLocationsInput[];
 
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=geo_coords" })
   geoCoords?: GeoCoordsInput;
@@ -23,5 +23,5 @@ export class SpotUpdateInput extends SpeakeasyBase {
   reportLocation?: string;
 
   @SpeakeasyMetadata({ data: "json, name=senses_request" })
-  sensesRequest?: Map<string, any>;
+  sensesRequest?: Record<string, any>;
 }

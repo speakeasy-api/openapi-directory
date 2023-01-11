@@ -22,5 +22,5 @@ export class GetDelayResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDelay200ApplicationJsonInt32Integer?: number;
+  getDelay200ApplicationJSONInt32Integer?: number;
 }

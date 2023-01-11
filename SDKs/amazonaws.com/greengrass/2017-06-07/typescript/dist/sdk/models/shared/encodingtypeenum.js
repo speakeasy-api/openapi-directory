@@ -1,5 +1,8 @@
-export var EncodingTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncodingTypeEnum = void 0;
+var EncodingTypeEnum;
 (function (EncodingTypeEnum) {
     EncodingTypeEnum["Binary"] = "binary";
     EncodingTypeEnum["Json"] = "json";
-})(EncodingTypeEnum || (EncodingTypeEnum = {}));
+})(EncodingTypeEnum = exports.EncodingTypeEnum || (exports.EncodingTypeEnum = {}));

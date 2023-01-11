@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Timer } from "./timer";
-import { Variable } from "./variable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectorState = void 0;
+var utils_1 = require("../../../internal/utils");
+var timer_1 = require("./timer");
+var variable_1 = require("./variable");
 // DetectorState
 /**
  * Information about the current state of the detector instance.
@@ -35,17 +38,17 @@ var DetectorState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateName" }),
         __metadata("design:type", String)
     ], DetectorState.prototype, "stateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timers", elemType: Timer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timers", elemType: timer_1.Timer }),
         __metadata("design:type", Array)
     ], DetectorState.prototype, "timers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variables", elemType: Variable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variables", elemType: variable_1.Variable }),
         __metadata("design:type", Array)
     ], DetectorState.prototype, "variables", void 0);
     return DetectorState;
-}(SpeakeasyBase));
-export { DetectorState };
+}(utils_1.SpeakeasyBase));
+exports.DetectorState = DetectorState;

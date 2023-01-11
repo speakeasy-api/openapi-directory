@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoLiveStreamingDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // VideoLiveStreamingDetails
 /**
  * Details about the live streaming metadata.
@@ -33,29 +36,29 @@ var VideoLiveStreamingDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeLiveChatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeLiveChatId" }),
         __metadata("design:type", String)
     ], VideoLiveStreamingDetails.prototype, "activeLiveChatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actualEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actualEndTime" }),
         __metadata("design:type", Date)
     ], VideoLiveStreamingDetails.prototype, "actualEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actualStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actualStartTime" }),
         __metadata("design:type", Date)
     ], VideoLiveStreamingDetails.prototype, "actualStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=concurrentViewers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concurrentViewers" }),
         __metadata("design:type", String)
     ], VideoLiveStreamingDetails.prototype, "concurrentViewers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEndTime" }),
         __metadata("design:type", Date)
     ], VideoLiveStreamingDetails.prototype, "scheduledEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledStartTime" }),
         __metadata("design:type", Date)
     ], VideoLiveStreamingDetails.prototype, "scheduledStartTime", void 0);
     return VideoLiveStreamingDetails;
-}(SpeakeasyBase));
-export { VideoLiveStreamingDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoLiveStreamingDetails = VideoLiveStreamingDetails;

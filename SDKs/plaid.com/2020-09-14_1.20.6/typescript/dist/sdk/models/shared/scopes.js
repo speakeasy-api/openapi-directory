@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountAccess } from "./accountaccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Scopes = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountaccess_1 = require("./accountaccess");
 // Scopes
 /**
  * The scopes object
@@ -34,17 +37,17 @@ var Scopes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: AccountAccess }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: accountaccess_1.AccountAccess }),
         __metadata("design:type", Array)
     ], Scopes.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_accounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_accounts" }),
         __metadata("design:type", Boolean)
     ], Scopes.prototype, "newAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_access" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_access" }),
+        __metadata("design:type", Object)
     ], Scopes.prototype, "productAccess", void 0);
     return Scopes;
-}(SpeakeasyBase));
-export { Scopes };
+}(utils_1.SpeakeasyBase));
+exports.Scopes = Scopes;

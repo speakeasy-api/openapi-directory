@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOauthLiveSessionTokenResponse = exports.PostOauthLiveSessionTokenRequest = exports.PostOauthLiveSessionToken200ApplicationJson = exports.PostOauthLiveSessionTokenRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostOauthLiveSessionTokenRequestBody = /** @class */ (function (_super) {
     __extends(PostOauthLiveSessionTokenRequestBody, _super);
     function PostOauthLiveSessionTokenRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffie_hellman_challenge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffie_hellman_challenge" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "diffieHellmanChallenge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_consumer_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_consumer_key" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthConsumerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_nonce" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthNonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_signature" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_signature_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_signature_method" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthSignatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_timestamp" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_token" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenRequestBody.prototype, "oauthToken", void 0);
     return PostOauthLiveSessionTokenRequestBody;
-}(SpeakeasyBase));
-export { PostOauthLiveSessionTokenRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthLiveSessionTokenRequestBody = PostOauthLiveSessionTokenRequestBody;
 var PostOauthLiveSessionToken200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostOauthLiveSessionToken200ApplicationJson, _super);
     function PostOauthLiveSessionToken200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diffie_hellman_response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diffie_hellman_response" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionToken200ApplicationJson.prototype, "diffieHellmanResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=live_session_token_signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=live_session_token_signature" }),
         __metadata("design:type", String)
     ], PostOauthLiveSessionToken200ApplicationJson.prototype, "liveSessionTokenSignature", void 0);
     return PostOauthLiveSessionToken200ApplicationJson;
-}(SpeakeasyBase));
-export { PostOauthLiveSessionToken200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthLiveSessionToken200ApplicationJson = PostOauthLiveSessionToken200ApplicationJson;
 var PostOauthLiveSessionTokenRequest = /** @class */ (function (_super) {
     __extends(PostOauthLiveSessionTokenRequest, _super);
     function PostOauthLiveSessionTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostOauthLiveSessionTokenRequestBody)
     ], PostOauthLiveSessionTokenRequest.prototype, "request", void 0);
     return PostOauthLiveSessionTokenRequest;
-}(SpeakeasyBase));
-export { PostOauthLiveSessionTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthLiveSessionTokenRequest = PostOauthLiveSessionTokenRequest;
 var PostOauthLiveSessionTokenResponse = /** @class */ (function (_super) {
     __extends(PostOauthLiveSessionTokenResponse, _super);
     function PostOauthLiveSessionTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOauthLiveSessionTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostOauthLiveSessionToken200ApplicationJson)
-    ], PostOauthLiveSessionTokenResponse.prototype, "postOauthLiveSessionToken200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOauthLiveSessionTokenResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostOauthLiveSessionToken200ApplicationJson)
+    ], PostOauthLiveSessionTokenResponse.prototype, "postOauthLiveSessionToken200ApplicationJSONObject", void 0);
     return PostOauthLiveSessionTokenResponse;
-}(SpeakeasyBase));
-export { PostOauthLiveSessionTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthLiveSessionTokenResponse = PostOauthLiveSessionTokenResponse;

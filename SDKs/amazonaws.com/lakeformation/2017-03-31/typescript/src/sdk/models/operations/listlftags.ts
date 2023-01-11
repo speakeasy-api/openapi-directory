@@ -57,7 +57,7 @@ export class ListLfTagsResponse extends SpeakeasyBase {
   invalidInputException?: any;
 
   @SpeakeasyMetadata()
-  listLfTagsResponse?: shared.ListLfTagsResponse;
+  listLFTagsResponse?: shared.ListLfTagsResponse;
 
   @SpeakeasyMetadata()
   operationTimeoutException?: any;

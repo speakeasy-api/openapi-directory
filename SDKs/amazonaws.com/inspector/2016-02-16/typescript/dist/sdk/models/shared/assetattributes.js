@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterface } from "./networkinterface";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkinterface_1 = require("./networkinterface");
+var tag_1 = require("./tag");
 // AssetAttributes
 /**
  * A collection of attributes of the host from which the finding is generated.
@@ -35,37 +38,37 @@ var AssetAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], AssetAttributes.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amiId" }),
         __metadata("design:type", String)
     ], AssetAttributes.prototype, "amiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroup" }),
         __metadata("design:type", String)
     ], AssetAttributes.prototype, "autoScalingGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], AssetAttributes.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4Addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4Addresses" }),
         __metadata("design:type", Array)
     ], AssetAttributes.prototype, "ipv4Addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], AssetAttributes.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", Number)
     ], AssetAttributes.prototype, "schemaVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], AssetAttributes.prototype, "tags", void 0);
     return AssetAttributes;
-}(SpeakeasyBase));
-export { AssetAttributes };
+}(utils_1.SpeakeasyBase));
+exports.AssetAttributes = AssetAttributes;

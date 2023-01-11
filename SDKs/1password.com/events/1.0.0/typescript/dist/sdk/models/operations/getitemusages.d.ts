@@ -9,7 +9,7 @@ export declare class GetItemUsagesRequest extends SpeakeasyBase {
 }
 export declare class GetItemUsagesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
-    getItemUsages200ApplicationJsonAny?: any;
+    getItemUsages200ApplicationJSONAny?: any;
 }

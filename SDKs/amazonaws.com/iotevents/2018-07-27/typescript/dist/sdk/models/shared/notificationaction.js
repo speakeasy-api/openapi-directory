@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NotificationTargetActions } from "./notificationtargetactions";
-import { EmailConfiguration } from "./emailconfiguration";
-import { SmsConfiguration } from "./smsconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var notificationtargetactions_1 = require("./notificationtargetactions");
+var emailconfiguration_1 = require("./emailconfiguration");
+var smsconfiguration_1 = require("./smsconfiguration");
 // NotificationAction
 /**
  * Contains the notification settings of an alarm model. The settings apply to all alarms that were created based on this alarm model.
@@ -36,17 +39,17 @@ var NotificationAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", NotificationTargetActions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", notificationtargetactions_1.NotificationTargetActions)
     ], NotificationAction.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailConfigurations", elemType: EmailConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailConfigurations", elemType: emailconfiguration_1.EmailConfiguration }),
         __metadata("design:type", Array)
     ], NotificationAction.prototype, "emailConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsConfigurations", elemType: SmsConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsConfigurations", elemType: smsconfiguration_1.SmsConfiguration }),
         __metadata("design:type", Array)
     ], NotificationAction.prototype, "smsConfigurations", void 0);
     return NotificationAction;
-}(SpeakeasyBase));
-export { NotificationAction };
+}(utils_1.SpeakeasyBase));
+exports.NotificationAction = NotificationAction;

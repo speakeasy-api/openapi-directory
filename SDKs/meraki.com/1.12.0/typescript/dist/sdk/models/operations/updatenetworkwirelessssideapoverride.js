@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessSsidEapOverrideResponse = exports.UpdateNetworkWirelessSsidEapOverrideRequest = exports.UpdateNetworkWirelessSsidEapOverrideRequestBody = exports.UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity = exports.UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey = exports.UpdateNetworkWirelessSsidEapOverridePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessSsidEapOverridePathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidEapOverridePathParams, _super);
     function UpdateNetworkWirelessSsidEapOverridePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidEapOverridePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidEapOverridePathParams.prototype, "number", void 0);
     return UpdateNetworkWirelessSsidEapOverridePathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverridePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverridePathParams = UpdateNetworkWirelessSsidEapOverridePathParams;
 // UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey
 /**
  * EAPOL Key settings.
@@ -49,16 +52,16 @@ var UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retries" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey.prototype, "retries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutInMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutInMs" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey.prototype, "timeoutInMs", void 0);
     return UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey = UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey;
 // UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity
 /**
  * EAP settings for identity requests.
@@ -69,73 +72,73 @@ var UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retries" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity.prototype, "retries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity.prototype, "timeout", void 0);
     return UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity = UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity;
 var UpdateNetworkWirelessSsidEapOverrideRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidEapOverrideRequestBody, _super);
     function UpdateNetworkWirelessSsidEapOverrideRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eapolKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eapolKey" }),
         __metadata("design:type", UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBody.prototype, "eapolKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
         __metadata("design:type", UpdateNetworkWirelessSsidEapOverrideRequestBodyIdentity)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBody.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxRetries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxRetries" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBody.prototype, "maxRetries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideRequestBody.prototype, "timeout", void 0);
     return UpdateNetworkWirelessSsidEapOverrideRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverrideRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverrideRequestBody = UpdateNetworkWirelessSsidEapOverrideRequestBody;
 var UpdateNetworkWirelessSsidEapOverrideRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidEapOverrideRequest, _super);
     function UpdateNetworkWirelessSsidEapOverrideRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessSsidEapOverridePathParams)
     ], UpdateNetworkWirelessSsidEapOverrideRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessSsidEapOverrideRequestBody)
     ], UpdateNetworkWirelessSsidEapOverrideRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessSsidEapOverrideRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverrideRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverrideRequest = UpdateNetworkWirelessSsidEapOverrideRequest;
 var UpdateNetworkWirelessSsidEapOverrideResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidEapOverrideResponse, _super);
     function UpdateNetworkWirelessSsidEapOverrideResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidEapOverrideResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidEapOverrideResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessSsidEapOverrideResponse.prototype, "updateNetworkWirelessSsidEapOverride200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessSsidEapOverrideResponse.prototype, "updateNetworkWirelessSsidEapOverride200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessSsidEapOverrideResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidEapOverrideResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidEapOverrideResponse = UpdateNetworkWirelessSsidEapOverrideResponse;

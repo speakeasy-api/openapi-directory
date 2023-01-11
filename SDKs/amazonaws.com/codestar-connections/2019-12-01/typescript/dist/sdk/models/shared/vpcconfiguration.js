@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VpcConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // VpcConfiguration
 /**
  * The VPC configuration provisioned for the host.
@@ -33,21 +36,21 @@ var VpcConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], VpcConfiguration.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], VpcConfiguration.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TlsCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TlsCertificate" }),
         __metadata("design:type", String)
     ], VpcConfiguration.prototype, "tlsCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], VpcConfiguration.prototype, "vpcId", void 0);
     return VpcConfiguration;
-}(SpeakeasyBase));
-export { VpcConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.VpcConfiguration = VpcConfiguration;

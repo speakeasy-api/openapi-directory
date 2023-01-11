@@ -22,6 +22,6 @@ export declare class JobGetResponse extends SpeakeasyBase {
     batchError?: any;
     cloudJob?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

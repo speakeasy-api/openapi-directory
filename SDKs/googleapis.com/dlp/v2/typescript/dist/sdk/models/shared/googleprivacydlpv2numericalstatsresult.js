@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Value } from "./googleprivacydlpv2value";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2NumericalStatsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2value_1 = require("./googleprivacydlpv2value");
 // GooglePrivacyDlpV2NumericalStatsResult
 /**
  * Result of the numerical stats computation.
@@ -34,17 +37,17 @@ var GooglePrivacyDlpV2NumericalStatsResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
-        __metadata("design:type", GooglePrivacyDlpV2Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
+        __metadata("design:type", googleprivacydlpv2value_1.GooglePrivacyDlpV2Value)
     ], GooglePrivacyDlpV2NumericalStatsResult.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
-        __metadata("design:type", GooglePrivacyDlpV2Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
+        __metadata("design:type", googleprivacydlpv2value_1.GooglePrivacyDlpV2Value)
     ], GooglePrivacyDlpV2NumericalStatsResult.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantileValues", elemType: GooglePrivacyDlpV2Value }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantileValues", elemType: googleprivacydlpv2value_1.GooglePrivacyDlpV2Value }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2NumericalStatsResult.prototype, "quantileValues", void 0);
     return GooglePrivacyDlpV2NumericalStatsResult;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2NumericalStatsResult };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2NumericalStatsResult = GooglePrivacyDlpV2NumericalStatsResult;

@@ -32,6 +32,6 @@ export declare class UnliWithoutApplicationnkApplicationResponse extends Speakea
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
     statusCode: number;
-    unliWithoutApplicationnkApplication403ApplicationJsonObject?: UnliWithoutApplicationnkApplication403ApplicationJson;
-    unliWithoutApplicationnkApplication409ApplicationJsonObject?: UnliWithoutApplicationnkApplication409ApplicationJson;
+    unliWithoutApplicationnkApplication403ApplicationJSONObject?: UnliWithoutApplicationnkApplication403ApplicationJson;
+    unliWithoutApplicationnkApplication409ApplicationJSONObject?: UnliWithoutApplicationnkApplication409ApplicationJson;
 }

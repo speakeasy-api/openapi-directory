@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeArtifacts } from "./codeartifacts";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3RepositoryDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var codeartifacts_1 = require("./codeartifacts");
 // S3RepositoryDetails
 /**
  *  Specifies the name of an S3 bucket and a <code>CodeArtifacts</code> object that contains the S3 object keys for a source code .zip file and for a build artifacts .zip file that contains .jar or .class files.
@@ -34,13 +37,13 @@ var S3RepositoryDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketName" }),
         __metadata("design:type", String)
     ], S3RepositoryDetails.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CodeArtifacts" }),
-        __metadata("design:type", CodeArtifacts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CodeArtifacts" }),
+        __metadata("design:type", codeartifacts_1.CodeArtifacts)
     ], S3RepositoryDetails.prototype, "codeArtifacts", void 0);
     return S3RepositoryDetails;
-}(SpeakeasyBase));
-export { S3RepositoryDetails };
+}(utils_1.SpeakeasyBase));
+exports.S3RepositoryDetails = S3RepositoryDetails;

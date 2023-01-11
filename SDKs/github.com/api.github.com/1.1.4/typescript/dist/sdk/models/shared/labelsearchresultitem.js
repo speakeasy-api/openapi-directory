@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchResultTextMatches } from "./searchresulttextmatches";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LabelSearchResultItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchresulttextmatches_1 = require("./searchresulttextmatches");
 // LabelSearchResultItem
 /**
  * Label Search Result Item
@@ -34,41 +37,41 @@ var LabelSearchResultItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], LabelSearchResultItem.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", Boolean)
     ], LabelSearchResultItem.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LabelSearchResultItem.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], LabelSearchResultItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LabelSearchResultItem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], LabelSearchResultItem.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], LabelSearchResultItem.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text_matches", elemType: SearchResultTextMatches }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text_matches", elemType: searchresulttextmatches_1.SearchResultTextMatches }),
         __metadata("design:type", Array)
     ], LabelSearchResultItem.prototype, "textMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], LabelSearchResultItem.prototype, "url", void 0);
     return LabelSearchResultItem;
-}(SpeakeasyBase));
-export { LabelSearchResultItem };
+}(utils_1.SpeakeasyBase));
+exports.LabelSearchResultItem = LabelSearchResultItem;

@@ -35,5 +35,5 @@ export declare class GetDailyReportByCountryCodeResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getDailyReportByCountryCode200ApplicationJsonObjects?: GetDailyReportByCountryCode200ApplicationJson[];
+    getDailyReportByCountryCode200ApplicationJSONObjects?: GetDailyReportByCountryCode200ApplicationJson[];
 }

@@ -12,7 +12,7 @@ export class FunctionMetadata extends SpeakeasyBase {
   createdTime?: Date;
 
   @SpeakeasyMetadata()
-  functionArn: string;
+  functionARN: string;
 
   @SpeakeasyMetadata()
   lastModifiedTime: Date;

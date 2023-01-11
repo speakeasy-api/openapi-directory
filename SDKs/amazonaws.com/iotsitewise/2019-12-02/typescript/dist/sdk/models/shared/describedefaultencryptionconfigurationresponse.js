@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationStatus } from "./configurationstatus";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDefaultEncryptionConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationstatus_1 = require("./configurationstatus");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
 var DescribeDefaultEncryptionConfigurationResponse = /** @class */ (function (_super) {
     __extends(DescribeDefaultEncryptionConfigurationResponse, _super);
     function DescribeDefaultEncryptionConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationStatus" }),
-        __metadata("design:type", ConfigurationStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationStatus" }),
+        __metadata("design:type", configurationstatus_1.ConfigurationStatus)
     ], DescribeDefaultEncryptionConfigurationResponse.prototype, "configurationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionType" }),
         __metadata("design:type", String)
     ], DescribeDefaultEncryptionConfigurationResponse.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyArn" }),
         __metadata("design:type", String)
     ], DescribeDefaultEncryptionConfigurationResponse.prototype, "kmsKeyArn", void 0);
     return DescribeDefaultEncryptionConfigurationResponse;
-}(SpeakeasyBase));
-export { DescribeDefaultEncryptionConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDefaultEncryptionConfigurationResponse = DescribeDefaultEncryptionConfigurationResponse;

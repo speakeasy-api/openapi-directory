@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputProcessingConfiguration } from "./inputprocessingconfiguration";
-import { InputStartingPositionConfiguration } from "./inputstartingpositionconfiguration";
-import { S3Configuration } from "./s3configuration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoverInputSchemaRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputprocessingconfiguration_1 = require("./inputprocessingconfiguration");
+var inputstartingpositionconfiguration_1 = require("./inputstartingpositionconfiguration");
+var s3configuration_1 = require("./s3configuration");
 var DiscoverInputSchemaRequest = /** @class */ (function (_super) {
     __extends(DiscoverInputSchemaRequest, _super);
     function DiscoverInputSchemaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputProcessingConfiguration" }),
-        __metadata("design:type", InputProcessingConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputProcessingConfiguration" }),
+        __metadata("design:type", inputprocessingconfiguration_1.InputProcessingConfiguration)
     ], DiscoverInputSchemaRequest.prototype, "inputProcessingConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputStartingPositionConfiguration" }),
-        __metadata("design:type", InputStartingPositionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputStartingPositionConfiguration" }),
+        __metadata("design:type", inputstartingpositionconfiguration_1.InputStartingPositionConfiguration)
     ], DiscoverInputSchemaRequest.prototype, "inputStartingPositionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceARN" }),
         __metadata("design:type", String)
-    ], DiscoverInputSchemaRequest.prototype, "resourceArn", void 0);
+    ], DiscoverInputSchemaRequest.prototype, "resourceARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], DiscoverInputSchemaRequest.prototype, "roleArn", void 0);
+    ], DiscoverInputSchemaRequest.prototype, "roleARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Configuration" }),
-        __metadata("design:type", S3Configuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Configuration" }),
+        __metadata("design:type", s3configuration_1.S3Configuration)
     ], DiscoverInputSchemaRequest.prototype, "s3Configuration", void 0);
     return DiscoverInputSchemaRequest;
-}(SpeakeasyBase));
-export { DiscoverInputSchemaRequest };
+}(utils_1.SpeakeasyBase));
+exports.DiscoverInputSchemaRequest = DiscoverInputSchemaRequest;

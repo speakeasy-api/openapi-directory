@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetPortRequest extends SpeakeasyBase {
 export declare class ProtocolMqttClientSetPortResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetPort200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetPort200ApplicationJSONInt32Integers?: number[];
 }

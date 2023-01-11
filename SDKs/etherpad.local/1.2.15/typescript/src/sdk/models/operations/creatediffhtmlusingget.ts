@@ -7,7 +7,7 @@ export class CreateDiffHtmlUsingGetQueryParams extends SpeakeasyBase {
   endRev?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startRev" })
   startRev?: string;
@@ -19,7 +19,7 @@ export class CreateDiffHtmlUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CreateDiffHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateDiffHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateDiffHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateDiffHtmlUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingGet200ApplicationJsonObject?: CreateDiffHtmlUsingGet200ApplicationJson;
+  createDiffHTMLUsingGET200ApplicationJSONObject?: CreateDiffHtmlUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingGet400ApplicationJsonObject?: CreateDiffHtmlUsingGet400ApplicationJson;
+  createDiffHTMLUsingGET400ApplicationJSONObject?: CreateDiffHtmlUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingGet401ApplicationJsonObject?: CreateDiffHtmlUsingGet401ApplicationJson;
+  createDiffHTMLUsingGET401ApplicationJSONObject?: CreateDiffHtmlUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingGet500ApplicationJsonObject?: CreateDiffHtmlUsingGet500ApplicationJson;
+  createDiffHTMLUsingGET500ApplicationJSONObject?: CreateDiffHtmlUsingGet500ApplicationJson;
 }

@@ -11,7 +11,7 @@ export class DistributionIdList extends SpeakeasyBase {
   isTruncated: boolean;
 
   @SpeakeasyMetadata()
-  items?: string[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   marker: string;

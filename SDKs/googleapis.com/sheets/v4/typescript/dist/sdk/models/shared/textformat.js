@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-import { Link } from "./link";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextFormat = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var link_1 = require("./link");
 // TextFormat
 /**
  * The format of a run of text in a cell. Absent values indicate that the field isn't specified.
@@ -36,41 +39,41 @@ var TextFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bold" }),
         __metadata("design:type", Boolean)
     ], TextFormat.prototype, "bold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fontFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fontFamily" }),
         __metadata("design:type", String)
     ], TextFormat.prototype, "fontFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fontSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fontSize" }),
         __metadata("design:type", Number)
     ], TextFormat.prototype, "fontSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foregroundColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foregroundColor" }),
+        __metadata("design:type", color_1.Color)
     ], TextFormat.prototype, "foregroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foregroundColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foregroundColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TextFormat.prototype, "foregroundColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=italic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=italic" }),
         __metadata("design:type", Boolean)
     ], TextFormat.prototype, "italic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
+        __metadata("design:type", link_1.Link)
     ], TextFormat.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strikethrough" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strikethrough" }),
         __metadata("design:type", Boolean)
     ], TextFormat.prototype, "strikethrough", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=underline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=underline" }),
         __metadata("design:type", Boolean)
     ], TextFormat.prototype, "underline", void 0);
     return TextFormat;
-}(SpeakeasyBase));
-export { TextFormat };
+}(utils_1.SpeakeasyBase));
+exports.TextFormat = TextFormat;

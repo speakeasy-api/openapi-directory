@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsCreateOrUpdateRepoSecretResponse = exports.ActionsCreateOrUpdateRepoSecretRequest = exports.ActionsCreateOrUpdateRepoSecretRequestBody = exports.ActionsCreateOrUpdateRepoSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsCreateOrUpdateRepoSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateRepoSecretPathParams, _super);
     function ActionsCreateOrUpdateRepoSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretPathParams.prototype, "secretName", void 0);
     return ActionsCreateOrUpdateRepoSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateRepoSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateRepoSecretPathParams = ActionsCreateOrUpdateRepoSecretPathParams;
 var ActionsCreateOrUpdateRepoSecretRequestBody = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateRepoSecretRequestBody, _super);
     function ActionsCreateOrUpdateRepoSecretRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted_value" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretRequestBody.prototype, "encryptedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key_id" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretRequestBody.prototype, "keyId", void 0);
     return ActionsCreateOrUpdateRepoSecretRequestBody;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateRepoSecretRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateRepoSecretRequestBody = ActionsCreateOrUpdateRepoSecretRequestBody;
 var ActionsCreateOrUpdateRepoSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateRepoSecretRequest, _super);
     function ActionsCreateOrUpdateRepoSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsCreateOrUpdateRepoSecretPathParams)
     ], ActionsCreateOrUpdateRepoSecretRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ActionsCreateOrUpdateRepoSecretRequestBody)
     ], ActionsCreateOrUpdateRepoSecretRequest.prototype, "request", void 0);
     return ActionsCreateOrUpdateRepoSecretRequest;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateRepoSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateRepoSecretRequest = ActionsCreateOrUpdateRepoSecretRequest;
 var ActionsCreateOrUpdateRepoSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateRepoSecretResponse, _super);
     function ActionsCreateOrUpdateRepoSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateRepoSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsCreateOrUpdateRepoSecretResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ActionsCreateOrUpdateRepoSecretResponse.prototype, "actionsCreateOrUpdateRepoSecret201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ActionsCreateOrUpdateRepoSecretResponse.prototype, "actionsCreateOrUpdateRepoSecret201ApplicationJSONObject", void 0);
     return ActionsCreateOrUpdateRepoSecretResponse;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateRepoSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateRepoSecretResponse = ActionsCreateOrUpdateRepoSecretResponse;

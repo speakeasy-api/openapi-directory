@@ -1,4 +1,7 @@
-export var DomainEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainEnum = void 0;
+var DomainEnum;
 (function (DomainEnum) {
     DomainEnum["Retail"] = "RETAIL";
     DomainEnum["Custom"] = "CUSTOM";
@@ -7,4 +10,4 @@ export var DomainEnum;
     DomainEnum["WorkForce"] = "WORK_FORCE";
     DomainEnum["WebTraffic"] = "WEB_TRAFFIC";
     DomainEnum["Metrics"] = "METRICS";
-})(DomainEnum || (DomainEnum = {}));
+})(DomainEnum = exports.DomainEnum || (exports.DomainEnum = {}));

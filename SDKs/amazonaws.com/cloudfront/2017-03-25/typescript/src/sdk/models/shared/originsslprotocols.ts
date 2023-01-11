@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SslProtocolEnum } from "./sslprotocolenum";
 
 
 
@@ -9,7 +8,7 @@ import { SslProtocolEnum } from "./sslprotocolenum";
 **/
 export class OriginSslProtocols extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items: SslProtocolEnum[];
+  items: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

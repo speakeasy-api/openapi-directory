@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelJobResponse = exports.CancelJobRequest = exports.CancelJobRequestBody = exports.CancelJobHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var CancelJobHeaders = /** @class */ (function (_super) {
     __extends(CancelJobHeaders, _super);
     function CancelJobHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CancelJobHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CancelJobHeaders;
-}(SpeakeasyBase));
-export { CancelJobHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CancelJobHeaders = CancelJobHeaders;
 var CancelJobRequestBody = /** @class */ (function (_super) {
     __extends(CancelJobRequestBody, _super);
     function CancelJobRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], CancelJobRequestBody.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], CancelJobRequestBody.prototype, "reason", void 0);
     return CancelJobRequestBody;
-}(SpeakeasyBase));
-export { CancelJobRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CancelJobRequestBody = CancelJobRequestBody;
 var CancelJobRequest = /** @class */ (function (_super) {
     __extends(CancelJobRequest, _super);
     function CancelJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CancelJobHeaders)
     ], CancelJobRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CancelJobRequestBody)
     ], CancelJobRequest.prototype, "request", void 0);
     return CancelJobRequest;
-}(SpeakeasyBase));
-export { CancelJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CancelJobRequest = CancelJobRequest;
 var CancelJobResponse = /** @class */ (function (_super) {
     __extends(CancelJobResponse, _super);
     function CancelJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CancelJobResponse.prototype, "cancelJobResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelJobResponse.prototype, "clientException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CancelJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CancelJobResponse.prototype, "serverException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CancelJobResponse.prototype, "statusCode", void 0);
     return CancelJobResponse;
-}(SpeakeasyBase));
-export { CancelJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelJobResponse = CancelJobResponse;

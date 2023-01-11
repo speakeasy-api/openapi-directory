@@ -8,11 +8,6 @@ export declare enum IssuesListForAuthenticatedUserFilterEnum {
     Repos = "repos",
     All = "all"
 }
-export declare enum IssuesListForAuthenticatedUserSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
 export declare enum IssuesListForAuthenticatedUserStateEnum {
     Open = "open",
     Closed = "closed",
@@ -25,7 +20,7 @@ export declare class IssuesListForAuthenticatedUserQueryParams extends Speakeasy
     page?: number;
     perPage?: number;
     since?: string;
-    sort?: IssuesListForAuthenticatedUserSortEnum;
+    sort?: shared.LabelsEnum;
     state?: IssuesListForAuthenticatedUserStateEnum;
 }
 export declare class IssuesListForAuthenticatedUserRequest extends SpeakeasyBase {
@@ -33,7 +28,7 @@ export declare class IssuesListForAuthenticatedUserRequest extends SpeakeasyBase
 }
 export declare class IssuesListForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issues?: shared.Issue[];

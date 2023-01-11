@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CampaignEventFilter } from "./campaigneventfilter";
-import { FrequencyEnum } from "./frequencyenum";
-import { QuietTime } from "./quiettime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Schedule = void 0;
+var utils_1 = require("../../../internal/utils");
+var campaigneventfilter_1 = require("./campaigneventfilter");
+var frequencyenum_1 = require("./frequencyenum");
+var quiettime_1 = require("./quiettime");
 // Schedule
 /**
  * Specifies the schedule settings for a campaign.
@@ -36,33 +39,33 @@ var Schedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventFilter" }),
-        __metadata("design:type", CampaignEventFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventFilter" }),
+        __metadata("design:type", campaigneventfilter_1.CampaignEventFilter)
     ], Schedule.prototype, "eventFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Frequency" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsLocalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsLocalTime" }),
         __metadata("design:type", Boolean)
     ], Schedule.prototype, "isLocalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuietTime" }),
-        __metadata("design:type", QuietTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuietTime" }),
+        __metadata("design:type", quiettime_1.QuietTime)
     ], Schedule.prototype, "quietTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timezone" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "timezone", void 0);
     return Schedule;
-}(SpeakeasyBase));
-export { Schedule };
+}(utils_1.SpeakeasyBase));
+exports.Schedule = Schedule;

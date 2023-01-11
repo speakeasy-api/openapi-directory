@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugHooksRequest extends Speake
 export declare class GetRepositoriesWorkspaceRepoSlugHooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWebhookSubscriptions?: shared.PaginatedWebhookSubscriptions;
 }

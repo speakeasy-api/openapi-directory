@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Upload } from "./upload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListUploadsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var upload_1 = require("./upload");
 // ListUploadsResult
 /**
  * Represents the result of a list uploads request.
@@ -34,13 +37,13 @@ var ListUploadsResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListUploadsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploads", elemType: Upload }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploads", elemType: upload_1.Upload }),
         __metadata("design:type", Array)
     ], ListUploadsResult.prototype, "uploads", void 0);
     return ListUploadsResult;
-}(SpeakeasyBase));
-export { ListUploadsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListUploadsResult = ListUploadsResult;

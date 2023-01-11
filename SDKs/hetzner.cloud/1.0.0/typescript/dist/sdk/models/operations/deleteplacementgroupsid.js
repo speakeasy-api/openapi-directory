@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePlacementGroupsIdResponse = exports.DeletePlacementGroupsIdRequest = exports.DeletePlacementGroupsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePlacementGroupsIdPathParams = /** @class */ (function (_super) {
     __extends(DeletePlacementGroupsIdPathParams, _super);
     function DeletePlacementGroupsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeletePlacementGroupsIdPathParams.prototype, "id", void 0);
     return DeletePlacementGroupsIdPathParams;
-}(SpeakeasyBase));
-export { DeletePlacementGroupsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlacementGroupsIdPathParams = DeletePlacementGroupsIdPathParams;
 var DeletePlacementGroupsIdRequest = /** @class */ (function (_super) {
     __extends(DeletePlacementGroupsIdRequest, _super);
     function DeletePlacementGroupsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePlacementGroupsIdPathParams)
     ], DeletePlacementGroupsIdRequest.prototype, "pathParams", void 0);
     return DeletePlacementGroupsIdRequest;
-}(SpeakeasyBase));
-export { DeletePlacementGroupsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlacementGroupsIdRequest = DeletePlacementGroupsIdRequest;
 var DeletePlacementGroupsIdResponse = /** @class */ (function (_super) {
     __extends(DeletePlacementGroupsIdResponse, _super);
     function DeletePlacementGroupsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePlacementGroupsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePlacementGroupsIdResponse.prototype, "statusCode", void 0);
     return DeletePlacementGroupsIdResponse;
-}(SpeakeasyBase));
-export { DeletePlacementGroupsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePlacementGroupsIdResponse = DeletePlacementGroupsIdResponse;

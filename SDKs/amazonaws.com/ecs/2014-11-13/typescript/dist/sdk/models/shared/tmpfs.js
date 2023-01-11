@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tmpfs = void 0;
+var utils_1 = require("../../../internal/utils");
 // Tmpfs
 /**
  * The container path, mount options, and size of the tmpfs mount.
@@ -33,17 +36,17 @@ var Tmpfs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPath" }),
         __metadata("design:type", String)
     ], Tmpfs.prototype, "containerPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountOptions" }),
         __metadata("design:type", Array)
     ], Tmpfs.prototype, "mountOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], Tmpfs.prototype, "size", void 0);
     return Tmpfs;
-}(SpeakeasyBase));
-export { Tmpfs };
+}(utils_1.SpeakeasyBase));
+exports.Tmpfs = Tmpfs;

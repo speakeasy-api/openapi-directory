@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageByAccount } from "./usagebyaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagebyaccount_1 = require("./usagebyaccount");
 // UsageRecord
 /**
  * Provides quota and aggregated usage data for an Amazon Macie account.
@@ -34,17 +37,17 @@ var UsageRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], UsageRecord.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeTrialStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeTrialStartDate" }),
         __metadata("design:type", Date)
     ], UsageRecord.prototype, "freeTrialStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage", elemType: UsageByAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage", elemType: usagebyaccount_1.UsageByAccount }),
         __metadata("design:type", Array)
     ], UsageRecord.prototype, "usage", void 0);
     return UsageRecord;
-}(SpeakeasyBase));
-export { UsageRecord };
+}(utils_1.SpeakeasyBase));
+exports.UsageRecord = UsageRecord;

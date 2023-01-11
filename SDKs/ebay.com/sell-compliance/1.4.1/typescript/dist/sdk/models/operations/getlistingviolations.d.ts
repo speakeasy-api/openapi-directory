@@ -8,7 +8,7 @@ export declare class GetListingViolationsQueryParams extends SpeakeasyBase {
     offset?: string;
 }
 export declare class GetListingViolationsHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class GetListingViolationsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

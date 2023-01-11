@@ -11,7 +11,7 @@ export declare class CreateFleetHeaders extends SpeakeasyBase {
 }
 export declare class CreateFleetRequestBody extends SpeakeasyBase {
     name: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateFleetRequest extends SpeakeasyBase {
     headers: CreateFleetHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveFile } from "./drivefile";
-export var SharedDriveFileShareModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SharedDriveFile = exports.SharedDriveFileShareModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var drivefile_1 = require("./drivefile");
+var SharedDriveFileShareModeEnum;
 (function (SharedDriveFileShareModeEnum) {
     SharedDriveFileShareModeEnum["UnknownShareMode"] = "UNKNOWN_SHARE_MODE";
     SharedDriveFileShareModeEnum["View"] = "VIEW";
     SharedDriveFileShareModeEnum["Edit"] = "EDIT";
     SharedDriveFileShareModeEnum["StudentCopy"] = "STUDENT_COPY";
-})(SharedDriveFileShareModeEnum || (SharedDriveFileShareModeEnum = {}));
+})(SharedDriveFileShareModeEnum = exports.SharedDriveFileShareModeEnum || (exports.SharedDriveFileShareModeEnum = {}));
 // SharedDriveFile
 /**
  * Drive file that is used as material for course work.
@@ -41,13 +44,13 @@ var SharedDriveFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveFile" }),
-        __metadata("design:type", DriveFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveFile" }),
+        __metadata("design:type", drivefile_1.DriveFile)
     ], SharedDriveFile.prototype, "driveFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareMode" }),
         __metadata("design:type", String)
     ], SharedDriveFile.prototype, "shareMode", void 0);
     return SharedDriveFile;
-}(SpeakeasyBase));
-export { SharedDriveFile };
+}(utils_1.SpeakeasyBase));
+exports.SharedDriveFile = SharedDriveFile;

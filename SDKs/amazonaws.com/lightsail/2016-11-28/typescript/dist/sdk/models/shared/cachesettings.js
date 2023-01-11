@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CookieObject } from "./cookieobject";
-import { HeaderObject } from "./headerobject";
-import { QueryStringObject } from "./querystringobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CacheSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var cookieobject_1 = require("./cookieobject");
+var headerobject_1 = require("./headerobject");
+var querystringobject_1 = require("./querystringobject");
 // CacheSettings
 /**
  * <p>Describes the cache settings of an Amazon Lightsail content delivery network (CDN) distribution.</p> <p>These settings apply only to your distribution's <code>cacheBehaviors</code> (including the <code>defaultCacheBehavior</code>) that have a <code>behavior</code> of <code>cache</code>.</p>
@@ -36,37 +39,37 @@ var CacheSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedHTTPMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedHTTPMethods" }),
         __metadata("design:type", String)
-    ], CacheSettings.prototype, "allowedHttpMethods", void 0);
+    ], CacheSettings.prototype, "allowedHTTPMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cachedHTTPMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cachedHTTPMethods" }),
         __metadata("design:type", String)
-    ], CacheSettings.prototype, "cachedHttpMethods", void 0);
+    ], CacheSettings.prototype, "cachedHTTPMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTTL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTTL" }),
         __metadata("design:type", Number)
-    ], CacheSettings.prototype, "defaultTtl", void 0);
+    ], CacheSettings.prototype, "defaultTTL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forwardedCookies" }),
-        __metadata("design:type", CookieObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forwardedCookies" }),
+        __metadata("design:type", cookieobject_1.CookieObject)
     ], CacheSettings.prototype, "forwardedCookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forwardedHeaders" }),
-        __metadata("design:type", HeaderObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forwardedHeaders" }),
+        __metadata("design:type", headerobject_1.HeaderObject)
     ], CacheSettings.prototype, "forwardedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forwardedQueryStrings" }),
-        __metadata("design:type", QueryStringObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forwardedQueryStrings" }),
+        __metadata("design:type", querystringobject_1.QueryStringObject)
     ], CacheSettings.prototype, "forwardedQueryStrings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumTTL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumTTL" }),
         __metadata("design:type", Number)
-    ], CacheSettings.prototype, "maximumTtl", void 0);
+    ], CacheSettings.prototype, "maximumTTL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumTTL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumTTL" }),
         __metadata("design:type", Number)
-    ], CacheSettings.prototype, "minimumTtl", void 0);
+    ], CacheSettings.prototype, "minimumTTL", void 0);
     return CacheSettings;
-}(SpeakeasyBase));
-export { CacheSettings };
+}(utils_1.SpeakeasyBase));
+exports.CacheSettings = CacheSettings;

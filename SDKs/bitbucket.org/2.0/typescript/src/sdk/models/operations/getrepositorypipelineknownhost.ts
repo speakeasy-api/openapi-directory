@@ -28,8 +28,8 @@ export class GetRepositoryPipelineKnownHostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineKnownHost?: Map<string, any>;
+  pipelineKnownHost?: Record<string, any>;
 }

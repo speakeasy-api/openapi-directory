@@ -41,16 +41,16 @@ export class PullDocumentIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pullDocumentId400ApplicationJsonOneOf?: any;
+  pullDocumentId400ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  pullDocumentId401ApplicationJsonObject?: PullDocumentId401ApplicationJson;
+  pullDocumentId401ApplicationJSONObject?: PullDocumentId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pullDocumentId404ApplicationJsonObject?: PullDocumentId404ApplicationJson;
+  pullDocumentId404ApplicationJSONObject?: PullDocumentId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pullDocumentId500ApplicationJsonOneOf?: any;
+  pullDocumentId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   sample?: any;

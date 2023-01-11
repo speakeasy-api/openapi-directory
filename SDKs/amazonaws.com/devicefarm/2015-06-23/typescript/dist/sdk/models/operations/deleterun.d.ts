@@ -20,7 +20,7 @@ export declare class DeleteRunRequest extends SpeakeasyBase {
 export declare class DeleteRunResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteRunResult?: Map<string, any>;
+    deleteRunResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

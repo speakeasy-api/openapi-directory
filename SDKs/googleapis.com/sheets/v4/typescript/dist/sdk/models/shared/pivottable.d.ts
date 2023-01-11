@@ -14,7 +14,7 @@ export declare enum PivotTableValueLayoutEnum {
 **/
 export declare class PivotTable extends SpeakeasyBase {
     columns?: PivotGroup[];
-    criteria?: Map<string, PivotFilterCriteria>;
+    criteria?: Record<string, PivotFilterCriteria>;
     dataExecutionStatus?: DataExecutionStatus;
     dataSourceId?: string;
     filterSpecs?: PivotFilterSpec[];

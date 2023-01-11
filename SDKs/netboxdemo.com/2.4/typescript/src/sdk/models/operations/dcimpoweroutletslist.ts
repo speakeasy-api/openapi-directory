@@ -53,5 +53,5 @@ export class DcimPowerOutletsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimPowerOutletsList200ApplicationJsonObject?: DcimPowerOutletsList200ApplicationJson;
+  dcimPowerOutletsList200ApplicationJSONObject?: DcimPowerOutletsList200ApplicationJson;
 }

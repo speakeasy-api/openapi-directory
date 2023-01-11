@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelTaskRequest, CancelTaskResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelTaskRequest = {
   pathParams: {
-    taskId: "possimus",
+    taskId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "non",
-    xAmzContentSha256: "rerum",
-    xAmzCredential: "repellat",
-    xAmzDate: "quas",
-    xAmzSecurityToken: "eos",
-    xAmzSignature: "modi",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
 };
 
-sdk.sdk.cancelTask(req).then((res: CancelTaskResponse | AxiosError) => {
+sdk.cancelTask(req).then((res: CancelTaskResponse | AxiosError) => {
    // handle response
 });
 ```

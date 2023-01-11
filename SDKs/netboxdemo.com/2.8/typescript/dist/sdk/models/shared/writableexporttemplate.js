@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableExportTemplateTemplateLanguageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableExportTemplateInput = exports.WritableExportTemplateTemplateLanguageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableExportTemplateTemplateLanguageEnum;
 (function (WritableExportTemplateTemplateLanguageEnum) {
     WritableExportTemplateTemplateLanguageEnum["Django"] = "django";
     WritableExportTemplateTemplateLanguageEnum["Jinja2"] = "jinja2";
-})(WritableExportTemplateTemplateLanguageEnum || (WritableExportTemplateTemplateLanguageEnum = {}));
+})(WritableExportTemplateTemplateLanguageEnum = exports.WritableExportTemplateTemplateLanguageEnum || (exports.WritableExportTemplateTemplateLanguageEnum = {}));
 var WritableExportTemplateInput = /** @class */ (function (_super) {
     __extends(WritableExportTemplateInput, _super);
     function WritableExportTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_extension" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "fileExtension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mime_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mime_type" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_code" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "templateCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_language" }),
         __metadata("design:type", String)
     ], WritableExportTemplateInput.prototype, "templateLanguage", void 0);
     return WritableExportTemplateInput;
-}(SpeakeasyBase));
-export { WritableExportTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableExportTemplateInput = WritableExportTemplateInput;

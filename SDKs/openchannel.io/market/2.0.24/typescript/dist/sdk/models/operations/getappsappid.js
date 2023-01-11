@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppsAppIdResponse = exports.GetAppsAppIdRequest = exports.GetAppsAppIdQueryParams = exports.GetAppsAppIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAppsAppIdPathParams = /** @class */ (function (_super) {
     __extends(GetAppsAppIdPathParams, _super);
     function GetAppsAppIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], GetAppsAppIdPathParams.prototype, "appId", void 0);
     return GetAppsAppIdPathParams;
-}(SpeakeasyBase));
-export { GetAppsAppIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdPathParams = GetAppsAppIdPathParams;
 var GetAppsAppIdQueryParams = /** @class */ (function (_super) {
     __extends(GetAppsAppIdQueryParams, _super);
     function GetAppsAppIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=trackViews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=trackViews" }),
         __metadata("design:type", Boolean)
     ], GetAppsAppIdQueryParams.prototype, "trackViews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], GetAppsAppIdQueryParams.prototype, "userId", void 0);
     return GetAppsAppIdQueryParams;
-}(SpeakeasyBase));
-export { GetAppsAppIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdQueryParams = GetAppsAppIdQueryParams;
 var GetAppsAppIdRequest = /** @class */ (function (_super) {
     __extends(GetAppsAppIdRequest, _super);
     function GetAppsAppIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdPathParams)
     ], GetAppsAppIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdQueryParams)
     ], GetAppsAppIdRequest.prototype, "queryParams", void 0);
     return GetAppsAppIdRequest;
-}(SpeakeasyBase));
-export { GetAppsAppIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdRequest = GetAppsAppIdRequest;
 var GetAppsAppIdResponse = /** @class */ (function (_super) {
     __extends(GetAppsAppIdResponse, _super);
     function GetAppsAppIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAppsAppIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAppsAppIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAppsAppIdResponse.prototype, "statusCode", void 0);
     return GetAppsAppIdResponse;
-}(SpeakeasyBase));
-export { GetAppsAppIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdResponse = GetAppsAppIdResponse;

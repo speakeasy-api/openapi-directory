@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociationsByObjectResponse = exports.GetAssociationsByObjectRequest = exports.GetAssociationsByObjectSecurity = exports.GetAssociationsByObjectHeaders = exports.GetAssociationsByObjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetAssociationsByObjectPathParams = /** @class */ (function (_super) {
     __extends(GetAssociationsByObjectPathParams, _super);
     function GetAssociationsByObjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ObjectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ObjectId" }),
         __metadata("design:type", String)
     ], GetAssociationsByObjectPathParams.prototype, "objectId", void 0);
     return GetAssociationsByObjectPathParams;
-}(SpeakeasyBase));
-export { GetAssociationsByObjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationsByObjectPathParams = GetAssociationsByObjectPathParams;
 var GetAssociationsByObjectHeaders = /** @class */ (function (_super) {
     __extends(GetAssociationsByObjectHeaders, _super);
     function GetAssociationsByObjectHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=xero-tenant-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=xero-tenant-id" }),
         __metadata("design:type", String)
     ], GetAssociationsByObjectHeaders.prototype, "xeroTenantId", void 0);
     return GetAssociationsByObjectHeaders;
-}(SpeakeasyBase));
-export { GetAssociationsByObjectHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationsByObjectHeaders = GetAssociationsByObjectHeaders;
 var GetAssociationsByObjectSecurity = /** @class */ (function (_super) {
     __extends(GetAssociationsByObjectSecurity, _super);
     function GetAssociationsByObjectSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOAuth2)
     ], GetAssociationsByObjectSecurity.prototype, "oAuth2", void 0);
     return GetAssociationsByObjectSecurity;
-}(SpeakeasyBase));
-export { GetAssociationsByObjectSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationsByObjectSecurity = GetAssociationsByObjectSecurity;
 var GetAssociationsByObjectRequest = /** @class */ (function (_super) {
     __extends(GetAssociationsByObjectRequest, _super);
     function GetAssociationsByObjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociationsByObjectPathParams)
     ], GetAssociationsByObjectRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociationsByObjectHeaders)
     ], GetAssociationsByObjectRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociationsByObjectSecurity)
     ], GetAssociationsByObjectRequest.prototype, "security", void 0);
     return GetAssociationsByObjectRequest;
-}(SpeakeasyBase));
-export { GetAssociationsByObjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationsByObjectRequest = GetAssociationsByObjectRequest;
 var GetAssociationsByObjectResponse = /** @class */ (function (_super) {
     __extends(GetAssociationsByObjectResponse, _super);
     function GetAssociationsByObjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Association }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Association }),
         __metadata("design:type", Array)
     ], GetAssociationsByObjectResponse.prototype, "associations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAssociationsByObjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAssociationsByObjectResponse.prototype, "statusCode", void 0);
     return GetAssociationsByObjectResponse;
-}(SpeakeasyBase));
-export { GetAssociationsByObjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationsByObjectResponse = GetAssociationsByObjectResponse;

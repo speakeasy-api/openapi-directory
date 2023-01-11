@@ -4,7 +4,7 @@ export declare class RebootandFactoryResetRequest extends SpeakeasyBase {
     request: shared.RebootandFactoryResetRequest;
 }
 export declare class RebootandFactoryResetResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    rebootandFactoryReset200TextPlainObject?: string;
     statusCode: number;
 }

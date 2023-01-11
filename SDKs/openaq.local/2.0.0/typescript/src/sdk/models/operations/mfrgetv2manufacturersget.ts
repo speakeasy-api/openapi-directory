@@ -8,7 +8,7 @@ export class MfrGetV2ManufacturersGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  openAqResult?: shared.OpenAqResult;
+  openAQResult?: shared.OpenAqResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

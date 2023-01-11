@@ -17,9 +17,9 @@ export declare class TeamsListProjectsLegacyRequest extends SpeakeasyBase {
 }
 export declare class TeamsListProjectsLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     teamProjects?: shared.TeamProject[];
-    teamsListProjectsLegacy415ApplicationJsonObject?: TeamsListProjectsLegacy415ApplicationJson;
+    teamsListProjectsLegacy415ApplicationJSONObject?: TeamsListProjectsLegacy415ApplicationJson;
 }

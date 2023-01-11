@@ -53,11 +53,11 @@ export class ChecksListSuitesForRefResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checksListSuitesForRef200ApplicationJsonObject?: ChecksListSuitesForRef200ApplicationJson;
+  checksListSuitesForRef200ApplicationJSONObject?: ChecksListSuitesForRef200ApplicationJson;
 }

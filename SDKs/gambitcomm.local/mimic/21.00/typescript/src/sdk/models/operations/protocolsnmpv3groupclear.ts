@@ -22,5 +22,5 @@ export class ProtocolSnmpv3GroupClearResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmpv3GroupClear200ApplicationJsonString?: string;
+  protocolSnmpv3GroupClear200ApplicationJSONString?: string;
 }

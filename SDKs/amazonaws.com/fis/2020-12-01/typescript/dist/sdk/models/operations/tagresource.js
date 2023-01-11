@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagResourceResponse = exports.TagResourceRequest = exports.TagResourceRequestBody = exports.TagResourceHeaders = exports.TagResourcePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagResourcePathParams = /** @class */ (function (_super) {
     __extends(TagResourcePathParams, _super);
     function TagResourcePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=resourceArn" }),
         __metadata("design:type", String)
     ], TagResourcePathParams.prototype, "resourceArn", void 0);
     return TagResourcePathParams;
-}(SpeakeasyBase));
-export { TagResourcePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TagResourcePathParams = TagResourcePathParams;
 var TagResourceHeaders = /** @class */ (function (_super) {
     __extends(TagResourceHeaders, _super);
     function TagResourceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], TagResourceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return TagResourceHeaders;
-}(SpeakeasyBase));
-export { TagResourceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceHeaders = TagResourceHeaders;
 var TagResourceRequestBody = /** @class */ (function (_super) {
     __extends(TagResourceRequestBody, _super);
     function TagResourceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], TagResourceRequestBody.prototype, "tags", void 0);
     return TagResourceRequestBody;
-}(SpeakeasyBase));
-export { TagResourceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceRequestBody = TagResourceRequestBody;
 var TagResourceRequest = /** @class */ (function (_super) {
     __extends(TagResourceRequest, _super);
     function TagResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagResourcePathParams)
     ], TagResourceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagResourceHeaders)
     ], TagResourceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TagResourceRequestBody)
     ], TagResourceRequest.prototype, "request", void 0);
     return TagResourceRequest;
-}(SpeakeasyBase));
-export { TagResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceRequest = TagResourceRequest;
 var TagResourceResponse = /** @class */ (function (_super) {
     __extends(TagResourceResponse, _super);
     function TagResourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagResourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagResourceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TagResourceResponse.prototype, "tagResourceResponse", void 0);
     return TagResourceResponse;
-}(SpeakeasyBase));
-export { TagResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceResponse = TagResourceResponse;

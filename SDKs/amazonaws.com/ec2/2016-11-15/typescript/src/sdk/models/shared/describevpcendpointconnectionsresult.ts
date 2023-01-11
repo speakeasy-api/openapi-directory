@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcEndpointConnection } from "./vpcendpointconnection";
 
 
 
 export class DescribeVpcEndpointConnectionsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: VpcEndpointConnection })
-  vpcEndpointConnections?: VpcEndpointConnection[];
+  @SpeakeasyMetadata()
+  vpcEndpointConnections?: Record<string, any>;
 }

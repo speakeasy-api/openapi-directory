@@ -9,13 +9,13 @@ import { Session } from "./session";
 **/
 export class Event extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=eventType" })
   eventType: string;
 
   @SpeakeasyMetadata({ data: "json, name=metrics" })
-  metrics?: Map<string, number>;
+  metrics?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=session" })
   session?: Session;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConformancePackInputParameter } from "./conformancepackinputparameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutConformancePackRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var conformancepackinputparameter_1 = require("./conformancepackinputparameter");
 var PutConformancePackRequest = /** @class */ (function (_super) {
     __extends(PutConformancePackRequest, _super);
     function PutConformancePackRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackInputParameters", elemType: ConformancePackInputParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackInputParameters", elemType: conformancepackinputparameter_1.ConformancePackInputParameter }),
         __metadata("design:type", Array)
     ], PutConformancePackRequest.prototype, "conformancePackInputParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackName" }),
         __metadata("design:type", String)
     ], PutConformancePackRequest.prototype, "conformancePackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryS3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryS3Bucket" }),
         __metadata("design:type", String)
     ], PutConformancePackRequest.prototype, "deliveryS3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryS3KeyPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryS3KeyPrefix" }),
         __metadata("design:type", String)
     ], PutConformancePackRequest.prototype, "deliveryS3KeyPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateBody" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateBody" }),
         __metadata("design:type", String)
     ], PutConformancePackRequest.prototype, "templateBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateS3Uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateS3Uri" }),
         __metadata("design:type", String)
     ], PutConformancePackRequest.prototype, "templateS3Uri", void 0);
     return PutConformancePackRequest;
-}(SpeakeasyBase));
-export { PutConformancePackRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutConformancePackRequest = PutConformancePackRequest;

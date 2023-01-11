@@ -22,5 +22,5 @@ export declare class UpdateLocationObjectStorageResponse extends SpeakeasyBase {
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateLocationObjectStorageResponse?: Map<string, any>;
+    updateLocationObjectStorageResponse?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNumberStartsResponse = exports.GetNumberStartsRequest = exports.GetNumberStartsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNumberStartsPathParams = /** @class */ (function (_super) {
     __extends(GetNumberStartsPathParams, _super);
     function GetNumberStartsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetNumberStartsPathParams.prototype, "agentNum", void 0);
     return GetNumberStartsPathParams;
-}(SpeakeasyBase));
-export { GetNumberStartsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNumberStartsPathParams = GetNumberStartsPathParams;
 var GetNumberStartsRequest = /** @class */ (function (_super) {
     __extends(GetNumberStartsRequest, _super);
     function GetNumberStartsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNumberStartsPathParams)
     ], GetNumberStartsRequest.prototype, "pathParams", void 0);
     return GetNumberStartsRequest;
-}(SpeakeasyBase));
-export { GetNumberStartsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNumberStartsRequest = GetNumberStartsRequest;
 var GetNumberStartsResponse = /** @class */ (function (_super) {
     __extends(GetNumberStartsResponse, _super);
     function GetNumberStartsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNumberStartsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNumberStartsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetNumberStartsResponse.prototype, "getNumberStarts200ApplicationJsonInt32Integer", void 0);
+    ], GetNumberStartsResponse.prototype, "getNumberStarts200ApplicationJSONInt32Integer", void 0);
     return GetNumberStartsResponse;
-}(SpeakeasyBase));
-export { GetNumberStartsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNumberStartsResponse = GetNumberStartsResponse;

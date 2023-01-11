@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchCampaignExpendituresResponse = exports.SearchCampaignExpendituresRequest = exports.SearchCampaignExpendituresQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchCampaignExpendituresQueryParams = /** @class */ (function (_super) {
     __extends(SearchCampaignExpendituresQueryParams, _super);
     function SearchCampaignExpendituresQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.amount" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.city" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.committee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.committee" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresCommittee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.location" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.memo_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.memo_text" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresMemoText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.party" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.party" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.purpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.purpose" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresPurpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.recipient" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresRecipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.state" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.transaction_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.transaction_date" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresTransactionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.zip_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_campaign_expenditures.zip_code" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "searchDbCampaignExpendituresZipCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchCampaignExpendituresQueryParams.prototype, "todate", void 0);
     return SearchCampaignExpendituresQueryParams;
-}(SpeakeasyBase));
-export { SearchCampaignExpendituresQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchCampaignExpendituresQueryParams = SearchCampaignExpendituresQueryParams;
 var SearchCampaignExpendituresRequest = /** @class */ (function (_super) {
     __extends(SearchCampaignExpendituresRequest, _super);
     function SearchCampaignExpendituresRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchCampaignExpendituresQueryParams)
     ], SearchCampaignExpendituresRequest.prototype, "queryParams", void 0);
     return SearchCampaignExpendituresRequest;
-}(SpeakeasyBase));
-export { SearchCampaignExpendituresRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchCampaignExpendituresRequest = SearchCampaignExpendituresRequest;
 var SearchCampaignExpendituresResponse = /** @class */ (function (_super) {
     __extends(SearchCampaignExpendituresResponse, _super);
     function SearchCampaignExpendituresResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchCampaignExpendituresResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchCampaignExpendituresResponse.prototype, "statusCode", void 0);
     return SearchCampaignExpendituresResponse;
-}(SpeakeasyBase));
-export { SearchCampaignExpendituresResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchCampaignExpendituresResponse = SearchCampaignExpendituresResponse;

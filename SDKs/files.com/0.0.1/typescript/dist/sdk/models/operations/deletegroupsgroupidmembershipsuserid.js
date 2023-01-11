@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteGroupsGroupIdMembershipsUserIdResponse = exports.DeleteGroupsGroupIdMembershipsUserIdRequest = exports.DeleteGroupsGroupIdMembershipsUserIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteGroupsGroupIdMembershipsUserIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteGroupsGroupIdMembershipsUserIdPathParams, _super);
     function DeleteGroupsGroupIdMembershipsUserIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=group_id" }),
         __metadata("design:type", Number)
     ], DeleteGroupsGroupIdMembershipsUserIdPathParams.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", Number)
     ], DeleteGroupsGroupIdMembershipsUserIdPathParams.prototype, "userId", void 0);
     return DeleteGroupsGroupIdMembershipsUserIdPathParams;
-}(SpeakeasyBase));
-export { DeleteGroupsGroupIdMembershipsUserIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupsGroupIdMembershipsUserIdPathParams = DeleteGroupsGroupIdMembershipsUserIdPathParams;
 var DeleteGroupsGroupIdMembershipsUserIdRequest = /** @class */ (function (_super) {
     __extends(DeleteGroupsGroupIdMembershipsUserIdRequest, _super);
     function DeleteGroupsGroupIdMembershipsUserIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteGroupsGroupIdMembershipsUserIdPathParams)
     ], DeleteGroupsGroupIdMembershipsUserIdRequest.prototype, "pathParams", void 0);
     return DeleteGroupsGroupIdMembershipsUserIdRequest;
-}(SpeakeasyBase));
-export { DeleteGroupsGroupIdMembershipsUserIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupsGroupIdMembershipsUserIdRequest = DeleteGroupsGroupIdMembershipsUserIdRequest;
 var DeleteGroupsGroupIdMembershipsUserIdResponse = /** @class */ (function (_super) {
     __extends(DeleteGroupsGroupIdMembershipsUserIdResponse, _super);
     function DeleteGroupsGroupIdMembershipsUserIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteGroupsGroupIdMembershipsUserIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteGroupsGroupIdMembershipsUserIdResponse.prototype, "statusCode", void 0);
     return DeleteGroupsGroupIdMembershipsUserIdResponse;
-}(SpeakeasyBase));
-export { DeleteGroupsGroupIdMembershipsUserIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteGroupsGroupIdMembershipsUserIdResponse = DeleteGroupsGroupIdMembershipsUserIdResponse;

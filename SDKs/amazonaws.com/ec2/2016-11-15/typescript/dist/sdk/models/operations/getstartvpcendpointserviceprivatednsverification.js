@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStartVpcEndpointServicePrivateDnsVerificationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStartVpcEndpointServicePrivateDnsVerificationResponse = exports.GetStartVpcEndpointServicePrivateDnsVerificationRequest = exports.GetStartVpcEndpointServicePrivateDnsVerificationHeaders = exports.GetStartVpcEndpointServicePrivateDnsVerificationQueryParams = exports.GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum = exports.GetStartVpcEndpointServicePrivateDnsVerificationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStartVpcEndpointServicePrivateDnsVerificationActionEnum;
 (function (GetStartVpcEndpointServicePrivateDnsVerificationActionEnum) {
     GetStartVpcEndpointServicePrivateDnsVerificationActionEnum["StartVpcEndpointServicePrivateDnsVerification"] = "StartVpcEndpointServicePrivateDnsVerification";
-})(GetStartVpcEndpointServicePrivateDnsVerificationActionEnum || (GetStartVpcEndpointServicePrivateDnsVerificationActionEnum = {}));
-export var GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum;
+})(GetStartVpcEndpointServicePrivateDnsVerificationActionEnum = exports.GetStartVpcEndpointServicePrivateDnsVerificationActionEnum || (exports.GetStartVpcEndpointServicePrivateDnsVerificationActionEnum = {}));
+var GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum;
 (function (GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum) {
     GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum || (GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum = {}));
+})(GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum = exports.GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum || (exports.GetStartVpcEndpointServicePrivateDnsVerificationVersionEnum = {}));
 var GetStartVpcEndpointServicePrivateDnsVerificationQueryParams = /** @class */ (function (_super) {
     __extends(GetStartVpcEndpointServicePrivateDnsVerificationQueryParams, _super);
     function GetStartVpcEndpointServicePrivateDnsVerificationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetStartVpcEndpointServicePrivateDnsVerificationQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ServiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ServiceId" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationQueryParams.prototype, "version", void 0);
     return GetStartVpcEndpointServicePrivateDnsVerificationQueryParams;
-}(SpeakeasyBase));
-export { GetStartVpcEndpointServicePrivateDnsVerificationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStartVpcEndpointServicePrivateDnsVerificationQueryParams = GetStartVpcEndpointServicePrivateDnsVerificationQueryParams;
 var GetStartVpcEndpointServicePrivateDnsVerificationHeaders = /** @class */ (function (_super) {
     __extends(GetStartVpcEndpointServicePrivateDnsVerificationHeaders, _super);
     function GetStartVpcEndpointServicePrivateDnsVerificationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetStartVpcEndpointServicePrivateDnsVerificationHeaders;
-}(SpeakeasyBase));
-export { GetStartVpcEndpointServicePrivateDnsVerificationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetStartVpcEndpointServicePrivateDnsVerificationHeaders = GetStartVpcEndpointServicePrivateDnsVerificationHeaders;
 var GetStartVpcEndpointServicePrivateDnsVerificationRequest = /** @class */ (function (_super) {
     __extends(GetStartVpcEndpointServicePrivateDnsVerificationRequest, _super);
     function GetStartVpcEndpointServicePrivateDnsVerificationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStartVpcEndpointServicePrivateDnsVerificationQueryParams)
     ], GetStartVpcEndpointServicePrivateDnsVerificationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStartVpcEndpointServicePrivateDnsVerificationHeaders)
     ], GetStartVpcEndpointServicePrivateDnsVerificationRequest.prototype, "headers", void 0);
     return GetStartVpcEndpointServicePrivateDnsVerificationRequest;
-}(SpeakeasyBase));
-export { GetStartVpcEndpointServicePrivateDnsVerificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStartVpcEndpointServicePrivateDnsVerificationRequest = GetStartVpcEndpointServicePrivateDnsVerificationRequest;
 var GetStartVpcEndpointServicePrivateDnsVerificationResponse = /** @class */ (function (_super) {
     __extends(GetStartVpcEndpointServicePrivateDnsVerificationResponse, _super);
     function GetStartVpcEndpointServicePrivateDnsVerificationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStartVpcEndpointServicePrivateDnsVerificationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStartVpcEndpointServicePrivateDnsVerificationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStartVpcEndpointServicePrivateDnsVerificationResponse.prototype, "statusCode", void 0);
     return GetStartVpcEndpointServicePrivateDnsVerificationResponse;
-}(SpeakeasyBase));
-export { GetStartVpcEndpointServicePrivateDnsVerificationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStartVpcEndpointServicePrivateDnsVerificationResponse = GetStartVpcEndpointServicePrivateDnsVerificationResponse;

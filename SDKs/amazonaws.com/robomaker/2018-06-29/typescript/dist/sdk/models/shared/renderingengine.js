@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RenderingEngineTypeEnum } from "./renderingenginetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RenderingEngine = void 0;
+var utils_1 = require("../../../internal/utils");
+var renderingenginetypeenum_1 = require("./renderingenginetypeenum");
 // RenderingEngine
 /**
  * Information about a rendering engine.
@@ -34,13 +37,13 @@ var RenderingEngine = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RenderingEngine.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], RenderingEngine.prototype, "version", void 0);
     return RenderingEngine;
-}(SpeakeasyBase));
-export { RenderingEngine };
+}(utils_1.SpeakeasyBase));
+exports.RenderingEngine = RenderingEngine;

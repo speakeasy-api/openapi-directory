@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NoteInput } from "./note";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddNoteRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var note_1 = require("./note");
 // AddNoteRequestInput
 /**
  * Request message for adding a note to a given proposal.
@@ -34,9 +37,9 @@ var AddNoteRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
-        __metadata("design:type", NoteInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
+        __metadata("design:type", note_1.NoteInput)
     ], AddNoteRequestInput.prototype, "note", void 0);
     return AddNoteRequestInput;
-}(SpeakeasyBase));
-export { AddNoteRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.AddNoteRequestInput = AddNoteRequestInput;

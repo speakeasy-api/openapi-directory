@@ -34,5 +34,5 @@ export class UnpublishMockResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unpublishMock200ApplicationJsonObject?: UnpublishMock200ApplicationJson;
+  unpublishMock200ApplicationJSONObject?: UnpublishMock200ApplicationJson;
 }

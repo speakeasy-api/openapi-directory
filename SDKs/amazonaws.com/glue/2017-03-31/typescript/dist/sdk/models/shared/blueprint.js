@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LastActiveDefinition } from "./lastactivedefinition";
-import { BlueprintStatusEnum } from "./blueprintstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Blueprint = void 0;
+var utils_1 = require("../../../internal/utils");
+var lastactivedefinition_1 = require("./lastactivedefinition");
+var blueprintstatusenum_1 = require("./blueprintstatusenum");
 // Blueprint
 /**
  * The details of a blueprint.
@@ -35,45 +38,45 @@ var Blueprint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BlueprintLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BlueprintLocation" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "blueprintLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BlueprintServiceLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BlueprintServiceLocation" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "blueprintServiceLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedOn" }),
         __metadata("design:type", Date)
     ], Blueprint.prototype, "createdOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastActiveDefinition" }),
-        __metadata("design:type", LastActiveDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastActiveDefinition" }),
+        __metadata("design:type", lastactivedefinition_1.LastActiveDefinition)
     ], Blueprint.prototype, "lastActiveDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedOn" }),
         __metadata("design:type", Date)
     ], Blueprint.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterSpec" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "parameterSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "status", void 0);
     return Blueprint;
-}(SpeakeasyBase));
-export { Blueprint };
+}(utils_1.SpeakeasyBase));
+exports.Blueprint = Blueprint;

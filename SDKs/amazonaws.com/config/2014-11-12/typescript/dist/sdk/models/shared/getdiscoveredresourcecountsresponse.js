@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceCount } from "./resourcecount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDiscoveredResourceCountsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcecount_1 = require("./resourcecount");
 var GetDiscoveredResourceCountsResponse = /** @class */ (function (_super) {
     __extends(GetDiscoveredResourceCountsResponse, _super);
     function GetDiscoveredResourceCountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetDiscoveredResourceCountsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceCounts", elemType: ResourceCount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceCounts", elemType: resourcecount_1.ResourceCount }),
         __metadata("design:type", Array)
     ], GetDiscoveredResourceCountsResponse.prototype, "resourceCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalDiscoveredResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalDiscoveredResources" }),
         __metadata("design:type", Number)
     ], GetDiscoveredResourceCountsResponse.prototype, "totalDiscoveredResources", void 0);
     return GetDiscoveredResourceCountsResponse;
-}(SpeakeasyBase));
-export { GetDiscoveredResourceCountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDiscoveredResourceCountsResponse = GetDiscoveredResourceCountsResponse;

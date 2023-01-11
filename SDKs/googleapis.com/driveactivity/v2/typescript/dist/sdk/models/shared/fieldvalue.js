@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-import { Integer } from "./integer";
-import { Selection } from "./selection";
-import { SelectionList } from "./selectionlist";
-import { Text } from "./text";
-import { TextList } from "./textlist";
-import { SingleUser } from "./singleuser";
-import { UserList } from "./userlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var integer_1 = require("./integer");
+var selection_1 = require("./selection");
+var selectionlist_1 = require("./selectionlist");
+var text_1 = require("./text");
+var textlist_1 = require("./textlist");
+var singleuser_1 = require("./singleuser");
+var userlist_1 = require("./userlist");
 // FieldValue
 /**
  * Contains a value of a Field.
@@ -41,37 +44,37 @@ var FieldValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
+        __metadata("design:type", date_1.Date)
     ], FieldValue.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integer" }),
-        __metadata("design:type", Integer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integer" }),
+        __metadata("design:type", integer_1.Integer)
     ], FieldValue.prototype, "integer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selection" }),
-        __metadata("design:type", Selection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selection" }),
+        __metadata("design:type", selection_1.Selection)
     ], FieldValue.prototype, "selection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionList" }),
-        __metadata("design:type", SelectionList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionList" }),
+        __metadata("design:type", selectionlist_1.SelectionList)
     ], FieldValue.prototype, "selectionList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
-        __metadata("design:type", Text)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
+        __metadata("design:type", text_1.Text)
     ], FieldValue.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textList" }),
-        __metadata("design:type", TextList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textList" }),
+        __metadata("design:type", textlist_1.TextList)
     ], FieldValue.prototype, "textList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", SingleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", singleuser_1.SingleUser)
     ], FieldValue.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userList" }),
-        __metadata("design:type", UserList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userList" }),
+        __metadata("design:type", userlist_1.UserList)
     ], FieldValue.prototype, "userList", void 0);
     return FieldValue;
-}(SpeakeasyBase));
-export { FieldValue };
+}(utils_1.SpeakeasyBase));
+exports.FieldValue = FieldValue;

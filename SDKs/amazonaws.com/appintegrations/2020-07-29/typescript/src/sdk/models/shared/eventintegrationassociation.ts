@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EventIntegrationAssociation extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientAssociationMetadata" })
-  clientAssociationMetadata?: Map<string, string>;
+  clientAssociationMetadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ClientId" })
   clientId?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventPeriodUpdate } from "./eventperiodupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventRecordRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventperiodupdate_1 = require("./eventperiodupdate");
 // EventRecordRequest
 /**
  * An event period update resource.
@@ -34,21 +37,21 @@ var EventRecordRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentTimeMillis" }),
         __metadata("design:type", String)
     ], EventRecordRequest.prototype, "currentTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EventRecordRequest.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], EventRecordRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timePeriods", elemType: EventPeriodUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timePeriods", elemType: eventperiodupdate_1.EventPeriodUpdate }),
         __metadata("design:type", Array)
     ], EventRecordRequest.prototype, "timePeriods", void 0);
     return EventRecordRequest;
-}(SpeakeasyBase));
-export { EventRecordRequest };
+}(utils_1.SpeakeasyBase));
+exports.EventRecordRequest = EventRecordRequest;

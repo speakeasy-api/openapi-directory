@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ClusterSelector extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=clusterLabels" })
-  clusterLabels?: Map<string, string>;
+  clusterLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=zone" })
   zone?: string;

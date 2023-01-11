@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeadFormSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var LeadFormSettings = /** @class */ (function (_super) {
     __extends(LeadFormSettings, _super);
     function LeadFormSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capture_form_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capture_form_enabled" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "captureFormEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name_field_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name_field_enabled" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "firstNameFieldEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name_field_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name_field_required" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "firstNameFieldRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integration_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integration_enabled" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "integrationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name_field_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name_field_enabled" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "lastNameFieldEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name_field_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name_field_required" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "lastNameFieldRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telephone_field_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telephone_field_enabled" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "telephoneFieldEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telephone_field_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telephone_field_required" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "telephoneFieldRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=work_email_validation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=work_email_validation" }),
         __metadata("design:type", Boolean)
     ], LeadFormSettings.prototype, "workEmailValidation", void 0);
     return LeadFormSettings;
-}(SpeakeasyBase));
-export { LeadFormSettings };
+}(utils_1.SpeakeasyBase));
+exports.LeadFormSettings = LeadFormSettings;

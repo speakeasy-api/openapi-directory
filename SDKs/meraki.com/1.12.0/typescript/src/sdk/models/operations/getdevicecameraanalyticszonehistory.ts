@@ -51,5 +51,5 @@ export class GetDeviceCameraAnalyticsZoneHistoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCameraAnalyticsZoneHistory200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCameraAnalyticsZoneHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLogsEncodingEnum } from "./cloudwatchlogsencodingenum";
-import { CloudWatchLogsInitialPositionEnum } from "./cloudwatchlogsinitialpositionenum";
-import { CloudWatchLogsTimeZoneEnum } from "./cloudwatchlogstimezoneenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchLogsLogStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchlogsencodingenum_1 = require("./cloudwatchlogsencodingenum");
+var cloudwatchlogsinitialpositionenum_1 = require("./cloudwatchlogsinitialpositionenum");
+var cloudwatchlogstimezoneenum_1 = require("./cloudwatchlogstimezoneenum");
 // CloudWatchLogsLogStream
 /**
  * Describes the Amazon CloudWatch logs configuration for a layer. For detailed information about members of this data type, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html">CloudWatch Logs Agent Reference</a>.
@@ -36,49 +39,49 @@ var CloudWatchLogsLogStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchCount" }),
         __metadata("design:type", Number)
     ], CloudWatchLogsLogStream.prototype, "batchCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchSize" }),
         __metadata("design:type", Number)
     ], CloudWatchLogsLogStream.prototype, "batchSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BufferDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BufferDuration" }),
         __metadata("design:type", Number)
     ], CloudWatchLogsLogStream.prototype, "bufferDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatetimeFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatetimeFormat" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "datetimeFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Encoding" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=File" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=File" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FileFingerprintLines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FileFingerprintLines" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "fileFingerprintLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InitialPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InitialPosition" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "initialPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogGroupName" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MultiLineStartPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MultiLineStartPattern" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "multiLineStartPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeZone" }),
         __metadata("design:type", String)
     ], CloudWatchLogsLogStream.prototype, "timeZone", void 0);
     return CloudWatchLogsLogStream;
-}(SpeakeasyBase));
-export { CloudWatchLogsLogStream };
+}(utils_1.SpeakeasyBase));
+exports.CloudWatchLogsLogStream = CloudWatchLogsLogStream;

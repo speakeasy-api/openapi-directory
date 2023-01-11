@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { ReportExchangeRate } from "./reportexchangerate";
-import { PurposeCodeEnum } from "./purposecodeenum";
-import { RemittanceInformationStructured } from "./remittanceinformationstructured";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryDetailsElement = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountreference16ch_1 = require("./accountreference16ch");
+var reportexchangerate_1 = require("./reportexchangerate");
+var purposecodeenum_1 = require("./purposecodeenum");
+var remittanceinformationstructured_1 = require("./remittanceinformationstructured");
+var amount_1 = require("./amount");
 var EntryDetailsElement = /** @class */ (function (_super) {
     __extends(EntryDetailsElement, _super);
     function EntryDetailsElement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkId" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "checkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAccount" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAccount" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], EntryDetailsElement.prototype, "creditorAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAgent" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "creditorAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorId" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "creditorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorName" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "creditorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyExchange", elemType: ReportExchangeRate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyExchange", elemType: reportexchangerate_1.ReportExchangeRate }),
         __metadata("design:type", Array)
     ], EntryDetailsElement.prototype, "currencyExchange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorAccount" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorAccount" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], EntryDetailsElement.prototype, "debtorAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorAgent" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "debtorAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorName" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "debtorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endToEndId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endToEndId" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "endToEndId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mandateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mandateId" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "mandateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purposeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purposeCode" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "purposeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationStructured" }),
-        __metadata("design:type", RemittanceInformationStructured)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationStructured" }),
+        __metadata("design:type", remittanceinformationstructured_1.RemittanceInformationStructured)
     ], EntryDetailsElement.prototype, "remittanceInformationStructured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationStructuredArray", elemType: RemittanceInformationStructured }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationStructuredArray", elemType: remittanceinformationstructured_1.RemittanceInformationStructured }),
         __metadata("design:type", Array)
     ], EntryDetailsElement.prototype, "remittanceInformationStructuredArray", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationUnstructured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationUnstructured" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "remittanceInformationUnstructured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationUnstructuredArray" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationUnstructuredArray" }),
         __metadata("design:type", Array)
     ], EntryDetailsElement.prototype, "remittanceInformationUnstructuredArray", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], EntryDetailsElement.prototype, "transactionAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ultimateCreditor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ultimateCreditor" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "ultimateCreditor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ultimateDebtor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ultimateDebtor" }),
         __metadata("design:type", String)
     ], EntryDetailsElement.prototype, "ultimateDebtor", void 0);
     return EntryDetailsElement;
-}(SpeakeasyBase));
-export { EntryDetailsElement };
+}(utils_1.SpeakeasyBase));
+exports.EntryDetailsElement = EntryDetailsElement;

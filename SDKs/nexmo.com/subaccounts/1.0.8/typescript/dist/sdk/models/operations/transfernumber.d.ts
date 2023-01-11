@@ -38,9 +38,9 @@ export declare class TransferNumberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     transferNumberResponse?: any;
-    transferNumber401ApplicationJsonObject?: TransferNumber401ApplicationJson;
-    transferNumber403ApplicationJsonOneOf?: any;
-    transferNumber404ApplicationJsonOneOf?: any;
-    transferNumber409ApplicationJsonObject?: TransferNumber409ApplicationJson;
-    transferNumber422ApplicationJsonObject?: TransferNumber422ApplicationJson;
+    transferNumber401ApplicationJSONObject?: TransferNumber401ApplicationJson;
+    transferNumber403ApplicationJSONOneOf?: any;
+    transferNumber404ApplicationJSONOneOf?: any;
+    transferNumber409ApplicationJSONObject?: TransferNumber409ApplicationJson;
+    transferNumber422ApplicationJSONObject?: TransferNumber422ApplicationJson;
 }

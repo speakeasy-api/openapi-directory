@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceEnumScanMessageContentEnum = void 0;
+var ServiceEnumScanMessageContentEnum;
+(function (ServiceEnumScanMessageContentEnum) {
+    ServiceEnumScanMessageContentEnum["Inherit"] = "inherit";
+    ServiceEnumScanMessageContentEnum["Enable"] = "enable";
+    ServiceEnumScanMessageContentEnum["Disable"] = "disable";
+})(ServiceEnumScanMessageContentEnum = exports.ServiceEnumScanMessageContentEnum || (exports.ServiceEnumScanMessageContentEnum = {}));

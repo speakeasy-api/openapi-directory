@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyClusterDbRevisionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyClusterDbRevisionResponse = exports.GetModifyClusterDbRevisionRequest = exports.GetModifyClusterDbRevisionHeaders = exports.GetModifyClusterDbRevisionQueryParams = exports.GetModifyClusterDbRevisionVersionEnum = exports.GetModifyClusterDbRevisionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyClusterDbRevisionActionEnum;
 (function (GetModifyClusterDbRevisionActionEnum) {
     GetModifyClusterDbRevisionActionEnum["ModifyClusterDbRevision"] = "ModifyClusterDbRevision";
-})(GetModifyClusterDbRevisionActionEnum || (GetModifyClusterDbRevisionActionEnum = {}));
-export var GetModifyClusterDbRevisionVersionEnum;
+})(GetModifyClusterDbRevisionActionEnum = exports.GetModifyClusterDbRevisionActionEnum || (exports.GetModifyClusterDbRevisionActionEnum = {}));
+var GetModifyClusterDbRevisionVersionEnum;
 (function (GetModifyClusterDbRevisionVersionEnum) {
     GetModifyClusterDbRevisionVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetModifyClusterDbRevisionVersionEnum || (GetModifyClusterDbRevisionVersionEnum = {}));
+})(GetModifyClusterDbRevisionVersionEnum = exports.GetModifyClusterDbRevisionVersionEnum || (exports.GetModifyClusterDbRevisionVersionEnum = {}));
 var GetModifyClusterDbRevisionQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyClusterDbRevisionQueryParams, _super);
     function GetModifyClusterDbRevisionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RevisionTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RevisionTarget" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionQueryParams.prototype, "revisionTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionQueryParams.prototype, "version", void 0);
     return GetModifyClusterDbRevisionQueryParams;
-}(SpeakeasyBase));
-export { GetModifyClusterDbRevisionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterDbRevisionQueryParams = GetModifyClusterDbRevisionQueryParams;
 var GetModifyClusterDbRevisionHeaders = /** @class */ (function (_super) {
     __extends(GetModifyClusterDbRevisionHeaders, _super);
     function GetModifyClusterDbRevisionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyClusterDbRevisionHeaders;
-}(SpeakeasyBase));
-export { GetModifyClusterDbRevisionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterDbRevisionHeaders = GetModifyClusterDbRevisionHeaders;
 var GetModifyClusterDbRevisionRequest = /** @class */ (function (_super) {
     __extends(GetModifyClusterDbRevisionRequest, _super);
     function GetModifyClusterDbRevisionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyClusterDbRevisionQueryParams)
     ], GetModifyClusterDbRevisionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyClusterDbRevisionHeaders)
     ], GetModifyClusterDbRevisionRequest.prototype, "headers", void 0);
     return GetModifyClusterDbRevisionRequest;
-}(SpeakeasyBase));
-export { GetModifyClusterDbRevisionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterDbRevisionRequest = GetModifyClusterDbRevisionRequest;
 var GetModifyClusterDbRevisionResponse = /** @class */ (function (_super) {
     __extends(GetModifyClusterDbRevisionResponse, _super);
     function GetModifyClusterDbRevisionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyClusterDbRevisionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyClusterDbRevisionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyClusterDbRevisionResponse.prototype, "statusCode", void 0);
     return GetModifyClusterDbRevisionResponse;
-}(SpeakeasyBase));
-export { GetModifyClusterDbRevisionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterDbRevisionResponse = GetModifyClusterDbRevisionResponse;

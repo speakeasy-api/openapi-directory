@@ -108,7 +108,7 @@ export class PostNetworks201ApplicationJsonNetwork extends SpeakeasyBase {
   ipRange: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, any>;
+  labels: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=load_balancers" })
   loadBalancers?: number[];
@@ -147,8 +147,8 @@ export class PostNetworksResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postNetworks201ApplicationJsonObject?: PostNetworks201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postNetworks201ApplicationJSONObject?: PostNetworks201ApplicationJson;
 }

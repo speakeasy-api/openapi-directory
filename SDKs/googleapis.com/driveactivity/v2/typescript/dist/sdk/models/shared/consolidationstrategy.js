@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsolidationStrategy = void 0;
+var utils_1 = require("../../../internal/utils");
 // ConsolidationStrategy
 /**
  * How the individual activities are consolidated. A set of activities may be consolidated into one combined activity if they are related in some way, such as one actor performing the same action on multiple targets, or multiple actors performing the same action on a single target. The strategy defines the rules for which activities are related.
@@ -33,13 +36,13 @@ var ConsolidationStrategy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legacy" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legacy" }),
+        __metadata("design:type", Object)
     ], ConsolidationStrategy.prototype, "legacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=none" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=none" }),
+        __metadata("design:type", Object)
     ], ConsolidationStrategy.prototype, "none", void 0);
     return ConsolidationStrategy;
-}(SpeakeasyBase));
-export { ConsolidationStrategy };
+}(utils_1.SpeakeasyBase));
+exports.ConsolidationStrategy = ConsolidationStrategy;

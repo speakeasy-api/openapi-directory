@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Value = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudChannelV1Value
 /**
  * Data type and value of a parameter.
@@ -33,25 +36,25 @@ var GoogleCloudChannelV1Value = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boolValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boolValue" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1Value.prototype, "boolValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doubleValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doubleValue" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1Value.prototype, "doubleValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=int64Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=int64Value" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Value.prototype, "int64Value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protoValue" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protoValue" }),
+        __metadata("design:type", Object)
     ], GoogleCloudChannelV1Value.prototype, "protoValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Value.prototype, "stringValue", void 0);
     return GoogleCloudChannelV1Value;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Value };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Value = GoogleCloudChannelV1Value;

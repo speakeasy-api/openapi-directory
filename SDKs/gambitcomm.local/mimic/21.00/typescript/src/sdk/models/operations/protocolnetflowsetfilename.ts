@@ -25,5 +25,5 @@ export class ProtocolNetflowSetFileNameResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowSetFileName200ApplicationJsonString?: string;
+  protocolNetflowSetFileName200ApplicationJSONString?: string;
 }

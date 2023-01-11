@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetChatHistoryUsingGetQueryParams extends SpeakeasyBase {
     end?: string;
-    padId?: string;
+    padID?: string;
     start?: string;
 }
 export declare class GetChatHistoryUsingGet200ApplicationJsonDataMessages extends SpeakeasyBase {
@@ -20,17 +20,17 @@ export declare class GetChatHistoryUsingGet200ApplicationJson extends SpeakeasyB
 }
 export declare class GetChatHistoryUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetChatHistoryUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetChatHistoryUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetChatHistoryUsingGetRequest extends SpeakeasyBase {
@@ -39,8 +39,8 @@ export declare class GetChatHistoryUsingGetRequest extends SpeakeasyBase {
 export declare class GetChatHistoryUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getChatHistoryUsingGet200ApplicationJsonObject?: GetChatHistoryUsingGet200ApplicationJson;
-    getChatHistoryUsingGet400ApplicationJsonObject?: GetChatHistoryUsingGet400ApplicationJson;
-    getChatHistoryUsingGet401ApplicationJsonObject?: GetChatHistoryUsingGet401ApplicationJson;
-    getChatHistoryUsingGet500ApplicationJsonObject?: GetChatHistoryUsingGet500ApplicationJson;
+    getChatHistoryUsingGET200ApplicationJSONObject?: GetChatHistoryUsingGet200ApplicationJson;
+    getChatHistoryUsingGET400ApplicationJSONObject?: GetChatHistoryUsingGet400ApplicationJson;
+    getChatHistoryUsingGET401ApplicationJSONObject?: GetChatHistoryUsingGet401ApplicationJson;
+    getChatHistoryUsingGET500ApplicationJSONObject?: GetChatHistoryUsingGet500ApplicationJson;
 }

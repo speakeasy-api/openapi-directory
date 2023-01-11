@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListingStructurePolicy } from "./listingstructurepolicy";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingStructurePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var listingstructurepolicy_1 = require("./listingstructurepolicy");
+var error_1 = require("./error");
 var ListingStructurePolicyResponse = /** @class */ (function (_super) {
     __extends(ListingStructurePolicyResponse, _super);
     function ListingStructurePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingStructurePolicies", elemType: ListingStructurePolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingStructurePolicies", elemType: listingstructurepolicy_1.ListingStructurePolicy }),
         __metadata("design:type", Array)
     ], ListingStructurePolicyResponse.prototype, "listingStructurePolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], ListingStructurePolicyResponse.prototype, "warnings", void 0);
     return ListingStructurePolicyResponse;
-}(SpeakeasyBase));
-export { ListingStructurePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListingStructurePolicyResponse = ListingStructurePolicyResponse;

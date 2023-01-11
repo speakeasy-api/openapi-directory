@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
-import { ResourceLocation } from "./resourcelocation";
-import { MetricNameEnum } from "./metricnameenum";
-import { MonitoredResourceInfo } from "./monitoredresourceinfo";
-import { AlarmStateEnum } from "./alarmstateenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { MetricStatisticEnum } from "./metricstatisticenum";
-import { TreatMissingDataEnum } from "./treatmissingdataenum";
-import { MetricUnitEnum } from "./metricunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Alarm = void 0;
+var utils_1 = require("../../../internal/utils");
+var comparisonoperatorenum_1 = require("./comparisonoperatorenum");
+var resourcelocation_1 = require("./resourcelocation");
+var metricnameenum_1 = require("./metricnameenum");
+var monitoredresourceinfo_1 = require("./monitoredresourceinfo");
+var alarmstateenum_1 = require("./alarmstateenum");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var metricstatisticenum_1 = require("./metricstatisticenum");
+var treatmissingdataenum_1 = require("./treatmissingdataenum");
+var metricunitenum_1 = require("./metricunitenum");
 // Alarm
 /**
  * <p>Describes an alarm.</p> <p>An alarm is a way to monitor your Lightsail resource metrics. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-alarms">Alarms in Amazon Lightsail</a>.</p>
@@ -42,85 +45,85 @@ var Alarm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonOperator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonOperator" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "comparisonOperator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactProtocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactProtocols" }),
         __metadata("design:type", Array)
     ], Alarm.prototype, "contactProtocols", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Alarm.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datapointsToAlarm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datapointsToAlarm" }),
         __metadata("design:type", Number)
     ], Alarm.prototype, "datapointsToAlarm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationPeriods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationPeriods" }),
         __metadata("design:type", Number)
     ], Alarm.prototype, "evaluationPeriods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], Alarm.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitoredResourceInfo" }),
-        __metadata("design:type", MonitoredResourceInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitoredResourceInfo" }),
+        __metadata("design:type", monitoredresourceinfo_1.MonitoredResourceInfo)
     ], Alarm.prototype, "monitoredResourceInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationEnabled" }),
         __metadata("design:type", Boolean)
     ], Alarm.prototype, "notificationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationTriggers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationTriggers" }),
         __metadata("design:type", Array)
     ], Alarm.prototype, "notificationTriggers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", Number)
     ], Alarm.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistic" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "statistic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threshold" }),
         __metadata("design:type", Number)
     ], Alarm.prototype, "threshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treatMissingData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treatMissingData" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "treatMissingData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "unit", void 0);
     return Alarm;
-}(SpeakeasyBase));
-export { Alarm };
+}(utils_1.SpeakeasyBase));
+exports.Alarm = Alarm;

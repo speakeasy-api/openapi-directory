@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRepositoryPipelineVariableResponse = exports.CreateRepositoryPipelineVariableRequest = exports.CreateRepositoryPipelineVariablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateRepositoryPipelineVariablePathParams = /** @class */ (function (_super) {
     __extends(CreateRepositoryPipelineVariablePathParams, _super);
     function CreateRepositoryPipelineVariablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], CreateRepositoryPipelineVariablePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], CreateRepositoryPipelineVariablePathParams.prototype, "workspace", void 0);
     return CreateRepositoryPipelineVariablePathParams;
-}(SpeakeasyBase));
-export { CreateRepositoryPipelineVariablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateRepositoryPipelineVariablePathParams = CreateRepositoryPipelineVariablePathParams;
 var CreateRepositoryPipelineVariableRequest = /** @class */ (function (_super) {
     __extends(CreateRepositoryPipelineVariableRequest, _super);
     function CreateRepositoryPipelineVariableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateRepositoryPipelineVariablePathParams)
     ], CreateRepositoryPipelineVariableRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CreateRepositoryPipelineVariableRequest.prototype, "request", void 0);
     return CreateRepositoryPipelineVariableRequest;
-}(SpeakeasyBase));
-export { CreateRepositoryPipelineVariableRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRepositoryPipelineVariableRequest = CreateRepositoryPipelineVariableRequest;
 var CreateRepositoryPipelineVariableResponse = /** @class */ (function (_super) {
     __extends(CreateRepositoryPipelineVariableResponse, _super);
     function CreateRepositoryPipelineVariableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateRepositoryPipelineVariableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateRepositoryPipelineVariableResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateRepositoryPipelineVariableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateRepositoryPipelineVariableResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateRepositoryPipelineVariableResponse.prototype, "pipelineVariable", void 0);
     return CreateRepositoryPipelineVariableResponse;
-}(SpeakeasyBase));
-export { CreateRepositoryPipelineVariableResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateRepositoryPipelineVariableResponse = CreateRepositoryPipelineVariableResponse;

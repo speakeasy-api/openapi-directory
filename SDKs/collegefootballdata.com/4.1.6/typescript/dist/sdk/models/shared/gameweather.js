@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GameWeather = void 0;
+var utils_1 = require("../../../internal/utils");
 var GameWeather = /** @class */ (function (_super) {
     __extends(GameWeather, _super);
     function GameWeather() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awayConference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awayConference" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "awayConference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awayTeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awayTeam" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "awayTeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dewPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dewPoint" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "dewPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeConference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeConference" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "homeConference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeTeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeTeam" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "homeTeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=humidity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=humidity" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "humidity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isStartTimeTBD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isStartTimeTBD" }),
         __metadata("design:type", Boolean)
-    ], GameWeather.prototype, "isStartTimeTbd", void 0);
+    ], GameWeather.prototype, "isStartTimeTBD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precipitation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precipitation" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "precipitation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pressure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pressure" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "pressure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seasonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seasonType" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "seasonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snowfall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snowfall" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "snowfall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=temperature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temperature" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "temperature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=venue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=venue" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "venue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=venueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=venueId" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "venueId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weatherCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weatherCondition" }),
         __metadata("design:type", String)
     ], GameWeather.prototype, "weatherCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weatherConditionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weatherConditionCode" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "weatherConditionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=week" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "week", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windDirection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windDirection" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "windDirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windSpeed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windSpeed" }),
         __metadata("design:type", Number)
     ], GameWeather.prototype, "windSpeed", void 0);
     return GameWeather;
-}(SpeakeasyBase));
-export { GameWeather };
+}(utils_1.SpeakeasyBase));
+exports.GameWeather = GameWeather;

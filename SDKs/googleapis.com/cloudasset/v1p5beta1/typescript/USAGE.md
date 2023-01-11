@@ -1,0 +1,50 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { CloudassetAssetsListRequest, CloudassetAssetsListResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+
+const sdk = new SDK();
+    
+const req: CloudassetAssetsListRequest = {
+  security: {
+    oauth2: {
+      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    },
+    oauth2c: {
+      authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    },
+  },
+  pathParams: {
+    parent: "sit",
+  },
+  queryParams: {
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    assetTypes: [
+      "dolor",
+      "expedita",
+      "voluptas",
+    ],
+    callback: "fugit",
+    contentType: "ORG_POLICY",
+    fields: "nihil",
+    key: "rerum",
+    oauthToken: "dicta",
+    pageSize: 2518412263346885298,
+    pageToken: "voluptatum",
+    prettyPrint: false,
+    quotaUser: "ut",
+    readTime: "dolorem",
+    uploadType: "et",
+    uploadProtocol: "voluptate",
+  },
+};
+
+sdk.assets.cloudassetAssetsList(req).then((res: CloudassetAssetsListResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

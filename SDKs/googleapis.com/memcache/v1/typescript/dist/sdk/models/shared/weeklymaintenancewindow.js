@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeOfDay } from "./timeofday";
-export var WeeklyMaintenanceWindowDayEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WeeklyMaintenanceWindow = exports.WeeklyMaintenanceWindowDayEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeofday_1 = require("./timeofday");
+var WeeklyMaintenanceWindowDayEnum;
 (function (WeeklyMaintenanceWindowDayEnum) {
     WeeklyMaintenanceWindowDayEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     WeeklyMaintenanceWindowDayEnum["Monday"] = "MONDAY";
@@ -34,7 +37,7 @@ export var WeeklyMaintenanceWindowDayEnum;
     WeeklyMaintenanceWindowDayEnum["Friday"] = "FRIDAY";
     WeeklyMaintenanceWindowDayEnum["Saturday"] = "SATURDAY";
     WeeklyMaintenanceWindowDayEnum["Sunday"] = "SUNDAY";
-})(WeeklyMaintenanceWindowDayEnum || (WeeklyMaintenanceWindowDayEnum = {}));
+})(WeeklyMaintenanceWindowDayEnum = exports.WeeklyMaintenanceWindowDayEnum || (exports.WeeklyMaintenanceWindowDayEnum = {}));
 // WeeklyMaintenanceWindow
 /**
  * Time window specified for weekly operations.
@@ -45,17 +48,17 @@ var WeeklyMaintenanceWindow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=day" }),
         __metadata("design:type", String)
     ], WeeklyMaintenanceWindow.prototype, "day", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], WeeklyMaintenanceWindow.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], WeeklyMaintenanceWindow.prototype, "startTime", void 0);
     return WeeklyMaintenanceWindow;
-}(SpeakeasyBase));
-export { WeeklyMaintenanceWindow };
+}(utils_1.SpeakeasyBase));
+exports.WeeklyMaintenanceWindow = WeeklyMaintenanceWindow;

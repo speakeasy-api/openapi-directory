@@ -10,7 +10,7 @@ export class CreateGroupIfNotExistsForUsingPostQueryParams extends SpeakeasyBase
 
 export class CreateGroupIfNotExistsForUsingPost200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: string;
+  groupID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class CreateGroupIfNotExistsForUsingPost400ApplicationJson extends Speake
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateGroupIfNotExistsForUsingPost401ApplicationJson extends Speake
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateGroupIfNotExistsForUsingPost500ApplicationJson extends Speake
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateGroupIfNotExistsForUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createGroupIfNotExistsForUsingPost200ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost200ApplicationJson;
+  createGroupIfNotExistsForUsingPOST200ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupIfNotExistsForUsingPost400ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost400ApplicationJson;
+  createGroupIfNotExistsForUsingPOST400ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupIfNotExistsForUsingPost401ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost401ApplicationJson;
+  createGroupIfNotExistsForUsingPOST401ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createGroupIfNotExistsForUsingPost500ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost500ApplicationJson;
+  createGroupIfNotExistsForUsingPOST500ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost500ApplicationJson;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateEnvironmentEc2Request, CreateEnvironmentEc2Response } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,44 +33,40 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateEnvironmentEc2Request = {
   headers: {
-    xAmzAlgorithm: "animi",
-    xAmzContentSha256: "facere",
-    xAmzCredential: "consequatur",
-    xAmzDate: "ipsum",
-    xAmzSecurityToken: "hic",
-    xAmzSignature: "amet",
-    xAmzSignedHeaders: "quasi",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
   },
   request: {
-    automaticStopTimeMinutes: 2683203673119178326,
-    clientRequestToken: "eum",
+    automaticStopTimeMinutes: 8274930044578894929,
+    clientRequestToken: "et",
     connectionType: "CONNECT_SSH",
-    description: "beatae",
+    description: "rerum",
     dryRun: false,
-    imageId: "est",
-    instanceType: "a",
-    name: "quia",
-    ownerArn: "sit",
-    subnetId: "quaerat",
+    imageId: "debitis",
+    instanceType: "voluptatum",
+    name: "et",
+    ownerArn: "ut",
+    subnetId: "dolorem",
     tags: [
       {
-        key: "sunt",
-        value: "nobis",
+        key: "voluptate",
+        value: "iste",
       },
       {
-        key: "quasi",
-        value: "et",
-      },
-      {
-        key: "non",
-        value: "veniam",
+        key: "vitae",
+        value: "totam",
       },
     ],
   },
 };
 
-sdk.sdk.createEnvironmentEc2(req).then((res: CreateEnvironmentEc2Response | AxiosError) => {
+sdk.createEnvironmentEc2(req).then((res: CreateEnvironmentEc2Response | AxiosError) => {
    // handle response
 });
 ```

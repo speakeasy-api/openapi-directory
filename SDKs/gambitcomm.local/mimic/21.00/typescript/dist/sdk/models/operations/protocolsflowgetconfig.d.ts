@@ -7,7 +7,7 @@ export declare class ProtocolSflowGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolSflowGetConfigPathParams;
 }
 export declare class ProtocolSflowGetConfigResponse extends SpeakeasyBase {
-    configSflow?: shared.ConfigSflow;
+    configSFLOW?: shared.ConfigSflow;
     contentType: string;
     statusCode: number;
 }

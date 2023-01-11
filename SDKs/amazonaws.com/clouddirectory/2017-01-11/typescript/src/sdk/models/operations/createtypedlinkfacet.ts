@@ -69,7 +69,7 @@ export class CreateTypedLinkFacetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createTypedLinkFacetResponse?: Map<string, any>;
+  createTypedLinkFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   facetAlreadyExistsException?: any;

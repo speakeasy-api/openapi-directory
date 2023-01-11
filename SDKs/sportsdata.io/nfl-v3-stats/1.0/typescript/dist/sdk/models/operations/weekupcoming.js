@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WeekUpcomingResponse = exports.WeekUpcomingRequest = exports.WeekUpcomingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var WeekUpcomingPathParams = /** @class */ (function (_super) {
     __extends(WeekUpcomingPathParams, _super);
     function WeekUpcomingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], WeekUpcomingPathParams.prototype, "format", void 0);
     return WeekUpcomingPathParams;
-}(SpeakeasyBase));
-export { WeekUpcomingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WeekUpcomingPathParams = WeekUpcomingPathParams;
 var WeekUpcomingRequest = /** @class */ (function (_super) {
     __extends(WeekUpcomingRequest, _super);
     function WeekUpcomingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WeekUpcomingPathParams)
     ], WeekUpcomingRequest.prototype, "pathParams", void 0);
     return WeekUpcomingRequest;
-}(SpeakeasyBase));
-export { WeekUpcomingRequest };
+}(utils_1.SpeakeasyBase));
+exports.WeekUpcomingRequest = WeekUpcomingRequest;
 var WeekUpcomingResponse = /** @class */ (function (_super) {
     __extends(WeekUpcomingResponse, _super);
     function WeekUpcomingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WeekUpcomingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WeekUpcomingResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], WeekUpcomingResponse.prototype, "weekUpcoming200ApplicationJsonInteger", void 0);
+    ], WeekUpcomingResponse.prototype, "weekUpcoming200ApplicationJSONInteger", void 0);
     return WeekUpcomingResponse;
-}(SpeakeasyBase));
-export { WeekUpcomingResponse };
+}(utils_1.SpeakeasyBase));
+exports.WeekUpcomingResponse = WeekUpcomingResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PredictionQueryTokenOrderByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictionQueryToken = exports.PredictionQueryTokenOrderByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PredictionQueryTokenOrderByEnum;
 (function (PredictionQueryTokenOrderByEnum) {
     PredictionQueryTokenOrderByEnum["Newest"] = "Newest";
     PredictionQueryTokenOrderByEnum["Oldest"] = "Oldest";
     PredictionQueryTokenOrderByEnum["Suggested"] = "Suggested";
-})(PredictionQueryTokenOrderByEnum || (PredictionQueryTokenOrderByEnum = {}));
+})(PredictionQueryTokenOrderByEnum = exports.PredictionQueryTokenOrderByEnum || (exports.PredictionQueryTokenOrderByEnum = {}));
 var PredictionQueryToken = /** @class */ (function (_super) {
     __extends(PredictionQueryToken, _super);
     function PredictionQueryToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application" }),
         __metadata("design:type", String)
     ], PredictionQueryToken.prototype, "application", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continuation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continuation" }),
         __metadata("design:type", String)
     ], PredictionQueryToken.prototype, "continuation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], PredictionQueryToken.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iterationId" }),
         __metadata("design:type", String)
     ], PredictionQueryToken.prototype, "iterationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCount" }),
         __metadata("design:type", Number)
     ], PredictionQueryToken.prototype, "maxCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderBy" }),
         __metadata("design:type", String)
     ], PredictionQueryToken.prototype, "orderBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session" }),
         __metadata("design:type", String)
     ], PredictionQueryToken.prototype, "session", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], PredictionQueryToken.prototype, "startTime", void 0);
     return PredictionQueryToken;
-}(SpeakeasyBase));
-export { PredictionQueryToken };
+}(utils_1.SpeakeasyBase));
+exports.PredictionQueryToken = PredictionQueryToken;

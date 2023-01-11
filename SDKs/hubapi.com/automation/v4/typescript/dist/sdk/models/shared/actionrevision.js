@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExtensionActionDefinition } from "./extensionactiondefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionRevision = void 0;
+var utils_1 = require("../../../internal/utils");
+var extensionactiondefinition_1 = require("./extensionactiondefinition");
 // ActionRevision
 /**
  * A revision of this custom action.
@@ -34,21 +37,21 @@ var ActionRevision = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ActionRevision.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definition" }),
-        __metadata("design:type", ExtensionActionDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definition" }),
+        __metadata("design:type", extensionactiondefinition_1.ExtensionActionDefinition)
     ], ActionRevision.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ActionRevision.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], ActionRevision.prototype, "revisionId", void 0);
     return ActionRevision;
-}(SpeakeasyBase));
-export { ActionRevision };
+}(utils_1.SpeakeasyBase));
+exports.ActionRevision = ActionRevision;

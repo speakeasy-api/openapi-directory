@@ -35,23 +35,23 @@ export class CreatePortfolioTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate201ApplicationJsonAny?: any;
+  createPortfolioTemplate201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate400ApplicationJsonAny?: any;
+  createPortfolioTemplate400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate401ApplicationJsonAny?: any;
+  createPortfolioTemplate401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate403ApplicationJsonAny?: any;
+  createPortfolioTemplate403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate404ApplicationJsonAny?: any;
+  createPortfolioTemplate404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate429ApplicationJsonAny?: any;
+  createPortfolioTemplate429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPortfolioTemplate500ApplicationJsonAny?: any;
+  createPortfolioTemplate500ApplicationJSONAny?: any;
 }

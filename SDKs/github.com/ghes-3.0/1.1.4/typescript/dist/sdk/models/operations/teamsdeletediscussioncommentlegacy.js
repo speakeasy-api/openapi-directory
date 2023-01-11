@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsDeleteDiscussionCommentLegacyResponse = exports.TeamsDeleteDiscussionCommentLegacyRequest = exports.TeamsDeleteDiscussionCommentLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsDeleteDiscussionCommentLegacyPathParams = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentLegacyPathParams, _super);
     function TeamsDeleteDiscussionCommentLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentLegacyPathParams.prototype, "commentNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentLegacyPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentLegacyPathParams.prototype, "teamId", void 0);
     return TeamsDeleteDiscussionCommentLegacyPathParams;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentLegacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentLegacyPathParams = TeamsDeleteDiscussionCommentLegacyPathParams;
 var TeamsDeleteDiscussionCommentLegacyRequest = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentLegacyRequest, _super);
     function TeamsDeleteDiscussionCommentLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsDeleteDiscussionCommentLegacyPathParams)
     ], TeamsDeleteDiscussionCommentLegacyRequest.prototype, "pathParams", void 0);
     return TeamsDeleteDiscussionCommentLegacyRequest;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentLegacyRequest = TeamsDeleteDiscussionCommentLegacyRequest;
 var TeamsDeleteDiscussionCommentLegacyResponse = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentLegacyResponse, _super);
     function TeamsDeleteDiscussionCommentLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsDeleteDiscussionCommentLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentLegacyResponse.prototype, "statusCode", void 0);
     return TeamsDeleteDiscussionCommentLegacyResponse;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentLegacyResponse = TeamsDeleteDiscussionCommentLegacyResponse;

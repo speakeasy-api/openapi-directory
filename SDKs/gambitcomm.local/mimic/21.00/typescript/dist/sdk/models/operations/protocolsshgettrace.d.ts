@@ -7,7 +7,7 @@ export declare class ProtocolSshGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolSshGetTracePathParams;
 }
 export declare class ProtocolSshGetTraceResponse extends SpeakeasyBase {
-    configSsh?: shared.ConfigSsh;
+    configSSH?: shared.ConfigSsh;
     contentType: string;
     statusCode: number;
 }

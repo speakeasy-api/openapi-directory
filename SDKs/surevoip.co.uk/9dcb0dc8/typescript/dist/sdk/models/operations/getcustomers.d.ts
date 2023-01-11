@@ -4,7 +4,7 @@ export declare class GetCustomers302ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetCustomersResponse extends SpeakeasyBase {
     contentType: string;
-    getCustomers302ApplicationJsonObject?: GetCustomers302ApplicationJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getCustomers302ApplicationJSONObject?: GetCustomers302ApplicationJson;
 }

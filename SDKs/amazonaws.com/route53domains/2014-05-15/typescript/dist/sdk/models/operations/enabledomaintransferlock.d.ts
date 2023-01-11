@@ -25,5 +25,5 @@ export declare class EnableDomainTransferLockResponse extends SpeakeasyBase {
     operationLimitExceeded?: any;
     statusCode: number;
     tldRulesViolation?: any;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

@@ -11,8 +11,8 @@ export declare class SolutionVersion extends SpeakeasyBase {
     eventType?: string;
     failureReason?: string;
     lastUpdatedDateTime?: Date;
-    performAutoMl?: boolean;
-    performHpo?: boolean;
+    performAutoML?: boolean;
+    performHPO?: boolean;
     recipeArn?: string;
     solutionArn?: string;
     solutionConfig?: SolutionConfig;
@@ -20,5 +20,5 @@ export declare class SolutionVersion extends SpeakeasyBase {
     status?: string;
     trainingHours?: number;
     trainingMode?: TrainingModeEnum;
-    tunedHpoParams?: TunedHpoParams;
+    tunedHPOParams?: TunedHpoParams;
 }

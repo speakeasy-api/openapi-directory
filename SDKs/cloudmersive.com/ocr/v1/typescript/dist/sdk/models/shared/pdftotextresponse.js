@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrPageResult } from "./ocrpageresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PdfToTextResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrpageresult_1 = require("./ocrpageresult");
 // PdfToTextResponse
 /**
  * Response from an OCR to text operation.  Includes the confidence rating and converted text result.
@@ -34,13 +37,13 @@ var PdfToTextResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OcrPages", elemType: OcrPageResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OcrPages", elemType: ocrpageresult_1.OcrPageResult }),
         __metadata("design:type", Array)
     ], PdfToTextResponse.prototype, "ocrPages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], PdfToTextResponse.prototype, "successful", void 0);
     return PdfToTextResponse;
-}(SpeakeasyBase));
-export { PdfToTextResponse };
+}(utils_1.SpeakeasyBase));
+exports.PdfToTextResponse = PdfToTextResponse;

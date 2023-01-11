@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Pattern } from "./pattern";
-import { Match } from "./match";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Recommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var pattern_1 = require("./pattern");
+var match_1 = require("./match");
 // Recommendation
 /**
  * A potential improvement that was found from analyzing the profiling data.
@@ -35,29 +38,29 @@ var Recommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allMatchesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allMatchesCount" }),
         __metadata("design:type", Number)
     ], Recommendation.prototype, "allMatchesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allMatchesSum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allMatchesSum" }),
         __metadata("design:type", Number)
     ], Recommendation.prototype, "allMatchesSum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], Recommendation.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pattern" }),
-        __metadata("design:type", Pattern)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pattern" }),
+        __metadata("design:type", pattern_1.Pattern)
     ], Recommendation.prototype, "pattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], Recommendation.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topMatches", elemType: Match }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topMatches", elemType: match_1.Match }),
         __metadata("design:type", Array)
     ], Recommendation.prototype, "topMatches", void 0);
     return Recommendation;
-}(SpeakeasyBase));
-export { Recommendation };
+}(utils_1.SpeakeasyBase));
+exports.Recommendation = Recommendation;

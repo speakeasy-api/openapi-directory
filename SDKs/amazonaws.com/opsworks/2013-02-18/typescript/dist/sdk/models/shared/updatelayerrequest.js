@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLogsConfiguration } from "./cloudwatchlogsconfiguration";
-import { Recipes } from "./recipes";
-import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
-import { VolumeConfiguration } from "./volumeconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateLayerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchlogsconfiguration_1 = require("./cloudwatchlogsconfiguration");
+var recipes_1 = require("./recipes");
+var lifecycleeventconfiguration_1 = require("./lifecycleeventconfiguration");
+var volumeconfiguration_1 = require("./volumeconfiguration");
 var UpdateLayerRequest = /** @class */ (function (_super) {
     __extends(UpdateLayerRequest, _super);
     function UpdateLayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
     ], UpdateLayerRequest.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoAssignElasticIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoAssignElasticIps" }),
         __metadata("design:type", Boolean)
     ], UpdateLayerRequest.prototype, "autoAssignElasticIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoAssignPublicIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoAssignPublicIps" }),
         __metadata("design:type", Boolean)
     ], UpdateLayerRequest.prototype, "autoAssignPublicIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLogsConfiguration" }),
-        __metadata("design:type", CloudWatchLogsConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLogsConfiguration" }),
+        __metadata("design:type", cloudwatchlogsconfiguration_1.CloudWatchLogsConfiguration)
     ], UpdateLayerRequest.prototype, "cloudWatchLogsConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomInstanceProfileArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomInstanceProfileArn" }),
         __metadata("design:type", String)
     ], UpdateLayerRequest.prototype, "customInstanceProfileArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomJson" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomJson" }),
         __metadata("design:type", String)
     ], UpdateLayerRequest.prototype, "customJson", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomRecipes" }),
-        __metadata("design:type", Recipes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomRecipes" }),
+        __metadata("design:type", recipes_1.Recipes)
     ], UpdateLayerRequest.prototype, "customRecipes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomSecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomSecurityGroupIds" }),
         __metadata("design:type", Array)
     ], UpdateLayerRequest.prototype, "customSecurityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableAutoHealing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableAutoHealing" }),
         __metadata("design:type", Boolean)
     ], UpdateLayerRequest.prototype, "enableAutoHealing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstallUpdatesOnBoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstallUpdatesOnBoot" }),
         __metadata("design:type", Boolean)
     ], UpdateLayerRequest.prototype, "installUpdatesOnBoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerId" }),
         __metadata("design:type", String)
     ], UpdateLayerRequest.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LifecycleEventConfiguration" }),
-        __metadata("design:type", LifecycleEventConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LifecycleEventConfiguration" }),
+        __metadata("design:type", lifecycleeventconfiguration_1.LifecycleEventConfiguration)
     ], UpdateLayerRequest.prototype, "lifecycleEventConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateLayerRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Packages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Packages" }),
         __metadata("design:type", Array)
     ], UpdateLayerRequest.prototype, "packages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Shortname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Shortname" }),
         __metadata("design:type", String)
     ], UpdateLayerRequest.prototype, "shortname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseEbsOptimizedInstances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseEbsOptimizedInstances" }),
         __metadata("design:type", Boolean)
     ], UpdateLayerRequest.prototype, "useEbsOptimizedInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VolumeConfigurations", elemType: VolumeConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VolumeConfigurations", elemType: volumeconfiguration_1.VolumeConfiguration }),
         __metadata("design:type", Array)
     ], UpdateLayerRequest.prototype, "volumeConfigurations", void 0);
     return UpdateLayerRequest;
-}(SpeakeasyBase));
-export { UpdateLayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLayerRequest = UpdateLayerRequest;

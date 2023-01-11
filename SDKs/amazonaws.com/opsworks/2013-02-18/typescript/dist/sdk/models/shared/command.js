@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Command = void 0;
+var utils_1 = require("../../../internal/utils");
 // Command
 /**
  * Describes a command.
@@ -33,45 +36,45 @@ var Command = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcknowledgedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcknowledgedAt" }),
         __metadata("design:type", String)
     ], Command.prototype, "acknowledgedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CommandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CommandId" }),
         __metadata("design:type", String)
     ], Command.prototype, "commandId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedAt" }),
         __metadata("design:type", String)
     ], Command.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], Command.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeploymentId" }),
         __metadata("design:type", String)
     ], Command.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExitCode" }),
         __metadata("design:type", Number)
     ], Command.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], Command.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogUrl" }),
         __metadata("design:type", String)
     ], Command.prototype, "logUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Command.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Command.prototype, "type", void 0);
     return Command;
-}(SpeakeasyBase));
-export { Command };
+}(utils_1.SpeakeasyBase));
+exports.Command = Command;

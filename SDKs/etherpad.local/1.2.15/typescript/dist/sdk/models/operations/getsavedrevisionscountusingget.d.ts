@@ -1,25 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetSavedRevisionsCountUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class GetSavedRevisionsCountUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetSavedRevisionsCountUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetSavedRevisionsCountUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetSavedRevisionsCountUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetSavedRevisionsCountUsingGetRequest extends SpeakeasyBase {
@@ -28,8 +28,8 @@ export declare class GetSavedRevisionsCountUsingGetRequest extends SpeakeasyBase
 export declare class GetSavedRevisionsCountUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSavedRevisionsCountUsingGet200ApplicationJsonObject?: GetSavedRevisionsCountUsingGet200ApplicationJson;
-    getSavedRevisionsCountUsingGet400ApplicationJsonObject?: GetSavedRevisionsCountUsingGet400ApplicationJson;
-    getSavedRevisionsCountUsingGet401ApplicationJsonObject?: GetSavedRevisionsCountUsingGet401ApplicationJson;
-    getSavedRevisionsCountUsingGet500ApplicationJsonObject?: GetSavedRevisionsCountUsingGet500ApplicationJson;
+    getSavedRevisionsCountUsingGET200ApplicationJSONObject?: GetSavedRevisionsCountUsingGet200ApplicationJson;
+    getSavedRevisionsCountUsingGET400ApplicationJSONObject?: GetSavedRevisionsCountUsingGet400ApplicationJson;
+    getSavedRevisionsCountUsingGET401ApplicationJSONObject?: GetSavedRevisionsCountUsingGet401ApplicationJson;
+    getSavedRevisionsCountUsingGET500ApplicationJSONObject?: GetSavedRevisionsCountUsingGet500ApplicationJson;
 }

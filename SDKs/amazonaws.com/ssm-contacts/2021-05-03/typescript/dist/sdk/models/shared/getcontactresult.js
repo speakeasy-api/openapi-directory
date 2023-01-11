@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Plan } from "./plan";
-import { ContactTypeEnum } from "./contacttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContactResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var plan_1 = require("./plan");
+var contacttypeenum_1 = require("./contacttypeenum");
 var GetContactResult = /** @class */ (function (_super) {
     __extends(GetContactResult, _super);
     function GetContactResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Alias" }),
         __metadata("design:type", String)
     ], GetContactResult.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactArn" }),
         __metadata("design:type", String)
     ], GetContactResult.prototype, "contactArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisplayName" }),
         __metadata("design:type", String)
     ], GetContactResult.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Plan" }),
-        __metadata("design:type", Plan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Plan" }),
+        __metadata("design:type", plan_1.Plan)
     ], GetContactResult.prototype, "plan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], GetContactResult.prototype, "type", void 0);
     return GetContactResult;
-}(SpeakeasyBase));
-export { GetContactResult };
+}(utils_1.SpeakeasyBase));
+exports.GetContactResult = GetContactResult;

@@ -35,5 +35,5 @@ export class Comment extends SpeakeasyBase {
   lastModifiedDate?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=reactionCounts" })
-  reactionCounts?: Map<string, number>;
+  reactionCounts?: Record<string, number>;
 }

@@ -44,5 +44,5 @@ export class GetPortfolioMembershipResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPortfolioMembership200ApplicationJsonObject?: GetPortfolioMembership200ApplicationJson;
+  getPortfolioMembership200ApplicationJSONObject?: GetPortfolioMembership200ApplicationJson;
 }

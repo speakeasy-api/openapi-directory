@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OauthAuthorizationsRevokeAuthorizationForApplicationResponse = exports.OauthAuthorizationsRevokeAuthorizationForApplicationRequest = exports.OauthAuthorizationsRevokeAuthorizationForApplicationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OauthAuthorizationsRevokeAuthorizationForApplicationPathParams = /** @class */ (function (_super) {
     __extends(OauthAuthorizationsRevokeAuthorizationForApplicationPathParams, _super);
     function OauthAuthorizationsRevokeAuthorizationForApplicationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=access_token" }),
         __metadata("design:type", String)
     ], OauthAuthorizationsRevokeAuthorizationForApplicationPathParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=client_id" }),
         __metadata("design:type", String)
     ], OauthAuthorizationsRevokeAuthorizationForApplicationPathParams.prototype, "clientId", void 0);
     return OauthAuthorizationsRevokeAuthorizationForApplicationPathParams;
-}(SpeakeasyBase));
-export { OauthAuthorizationsRevokeAuthorizationForApplicationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OauthAuthorizationsRevokeAuthorizationForApplicationPathParams = OauthAuthorizationsRevokeAuthorizationForApplicationPathParams;
 var OauthAuthorizationsRevokeAuthorizationForApplicationRequest = /** @class */ (function (_super) {
     __extends(OauthAuthorizationsRevokeAuthorizationForApplicationRequest, _super);
     function OauthAuthorizationsRevokeAuthorizationForApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OauthAuthorizationsRevokeAuthorizationForApplicationPathParams)
     ], OauthAuthorizationsRevokeAuthorizationForApplicationRequest.prototype, "pathParams", void 0);
     return OauthAuthorizationsRevokeAuthorizationForApplicationRequest;
-}(SpeakeasyBase));
-export { OauthAuthorizationsRevokeAuthorizationForApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.OauthAuthorizationsRevokeAuthorizationForApplicationRequest = OauthAuthorizationsRevokeAuthorizationForApplicationRequest;
 var OauthAuthorizationsRevokeAuthorizationForApplicationResponse = /** @class */ (function (_super) {
     __extends(OauthAuthorizationsRevokeAuthorizationForApplicationResponse, _super);
     function OauthAuthorizationsRevokeAuthorizationForApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OauthAuthorizationsRevokeAuthorizationForApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OauthAuthorizationsRevokeAuthorizationForApplicationResponse.prototype, "statusCode", void 0);
     return OauthAuthorizationsRevokeAuthorizationForApplicationResponse;
-}(SpeakeasyBase));
-export { OauthAuthorizationsRevokeAuthorizationForApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.OauthAuthorizationsRevokeAuthorizationForApplicationResponse = OauthAuthorizationsRevokeAuthorizationForApplicationResponse;

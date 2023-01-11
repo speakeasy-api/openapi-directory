@@ -185,23 +185,23 @@ export class LccepResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lccep400ApplicationJsonObject?: Lccep400ApplicationJson;
+  lccep400ApplicationJSONObject?: Lccep400ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep401ApplicationJsonObject?: Lccep401ApplicationJson;
+  lccep401ApplicationJSONObject?: Lccep401ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep404ApplicationJsonObject?: Lccep404ApplicationJson;
+  lccep404ApplicationJSONObject?: Lccep404ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep500ApplicationJsonObject?: Lccep500ApplicationJson;
+  lccep500ApplicationJSONObject?: Lccep500ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep502ApplicationJsonObject?: Lccep502ApplicationJson;
+  lccep502ApplicationJSONObject?: Lccep502ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep503ApplicationJsonObject?: Lccep503ApplicationJson;
+  lccep503ApplicationJSONObject?: Lccep503ApplicationJson;
 
   @SpeakeasyMetadata()
-  lccep504ApplicationJsonObject?: Lccep504ApplicationJson;
+  lccep504ApplicationJSONObject?: Lccep504ApplicationJson;
 }

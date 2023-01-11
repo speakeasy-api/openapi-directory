@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var CloudflareWorkerRulePatchRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudflareWorkerRulePatch = exports.CloudflareWorkerRulePatchTarget = exports.CloudflareWorkerRulePatchTargetHeaders = exports.CloudflareWorkerRulePatchStatusEnum = exports.CloudflareWorkerRulePatchRuleTypeEnum = exports.CloudflareWorkerRulePatchRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var CloudflareWorkerRulePatchRequestModeEnum;
 (function (CloudflareWorkerRulePatchRequestModeEnum) {
     CloudflareWorkerRulePatchRequestModeEnum["Single"] = "single";
     CloudflareWorkerRulePatchRequestModeEnum["Batch"] = "batch";
-})(CloudflareWorkerRulePatchRequestModeEnum || (CloudflareWorkerRulePatchRequestModeEnum = {}));
-export var CloudflareWorkerRulePatchRuleTypeEnum;
+})(CloudflareWorkerRulePatchRequestModeEnum = exports.CloudflareWorkerRulePatchRequestModeEnum || (exports.CloudflareWorkerRulePatchRequestModeEnum = {}));
+var CloudflareWorkerRulePatchRuleTypeEnum;
 (function (CloudflareWorkerRulePatchRuleTypeEnum) {
     CloudflareWorkerRulePatchRuleTypeEnum["HttpCloudflareWorker"] = "http/cloudflare-worker";
-})(CloudflareWorkerRulePatchRuleTypeEnum || (CloudflareWorkerRulePatchRuleTypeEnum = {}));
-export var CloudflareWorkerRulePatchStatusEnum;
+})(CloudflareWorkerRulePatchRuleTypeEnum = exports.CloudflareWorkerRulePatchRuleTypeEnum || (exports.CloudflareWorkerRulePatchRuleTypeEnum = {}));
+var CloudflareWorkerRulePatchStatusEnum;
 (function (CloudflareWorkerRulePatchStatusEnum) {
     CloudflareWorkerRulePatchStatusEnum["Enabled"] = "enabled";
     CloudflareWorkerRulePatchStatusEnum["Disabled"] = "disabled";
-})(CloudflareWorkerRulePatchStatusEnum || (CloudflareWorkerRulePatchStatusEnum = {}));
+})(CloudflareWorkerRulePatchStatusEnum = exports.CloudflareWorkerRulePatchStatusEnum || (exports.CloudflareWorkerRulePatchStatusEnum = {}));
 var CloudflareWorkerRulePatchTargetHeaders = /** @class */ (function (_super) {
     __extends(CloudflareWorkerRulePatchTargetHeaders, _super);
     function CloudflareWorkerRulePatchTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatchTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatchTargetHeaders.prototype, "value", void 0);
     return CloudflareWorkerRulePatchTargetHeaders;
-}(SpeakeasyBase));
-export { CloudflareWorkerRulePatchTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CloudflareWorkerRulePatchTargetHeaders = CloudflareWorkerRulePatchTargetHeaders;
 var CloudflareWorkerRulePatchTarget = /** @class */ (function (_super) {
     __extends(CloudflareWorkerRulePatchTarget, _super);
     function CloudflareWorkerRulePatchTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: CloudflareWorkerRulePatchTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: CloudflareWorkerRulePatchTargetHeaders }),
         __metadata("design:type", Array)
     ], CloudflareWorkerRulePatchTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatchTarget.prototype, "signingKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatchTarget.prototype, "url", void 0);
     return CloudflareWorkerRulePatchTarget;
-}(SpeakeasyBase));
-export { CloudflareWorkerRulePatchTarget };
+}(utils_1.SpeakeasyBase));
+exports.CloudflareWorkerRulePatchTarget = CloudflareWorkerRulePatchTarget;
 var CloudflareWorkerRulePatch = /** @class */ (function (_super) {
     __extends(CloudflareWorkerRulePatch, _super);
     function CloudflareWorkerRulePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatch.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatch.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], CloudflareWorkerRulePatch.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CloudflareWorkerRulePatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", CloudflareWorkerRulePatchTarget)
     ], CloudflareWorkerRulePatch.prototype, "target", void 0);
     return CloudflareWorkerRulePatch;
-}(SpeakeasyBase));
-export { CloudflareWorkerRulePatch };
+}(utils_1.SpeakeasyBase));
+exports.CloudflareWorkerRulePatch = CloudflareWorkerRulePatch;

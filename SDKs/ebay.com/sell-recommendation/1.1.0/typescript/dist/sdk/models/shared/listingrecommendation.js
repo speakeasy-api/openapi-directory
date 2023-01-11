@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketingRecommendation } from "./marketingrecommendation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingRecommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketingrecommendation_1 = require("./marketingrecommendation");
 // ListingRecommendation
 /**
  * A complex type that contains the ID of an actively listed item and a set of related listing recommendations. The recommendations contain information the seller can use to optimize their listing configurations.
@@ -34,13 +37,13 @@ var ListingRecommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingId" }),
         __metadata("design:type", String)
     ], ListingRecommendation.prototype, "listingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketing" }),
-        __metadata("design:type", MarketingRecommendation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketing" }),
+        __metadata("design:type", marketingrecommendation_1.MarketingRecommendation)
     ], ListingRecommendation.prototype, "marketing", void 0);
     return ListingRecommendation;
-}(SpeakeasyBase));
-export { ListingRecommendation };
+}(utils_1.SpeakeasyBase));
+exports.ListingRecommendation = ListingRecommendation;

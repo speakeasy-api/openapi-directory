@@ -13,7 +13,7 @@ export class PhotoControllerGetPhotoDownloadQueryParams extends SpeakeasyBase {
   height?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=photoID" })
-  photoId: string;
+  photoID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" })
   token: string;
@@ -40,7 +40,7 @@ export class PhotoControllerGetPhotoDownloadResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: Map<string, any>;
+  object?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

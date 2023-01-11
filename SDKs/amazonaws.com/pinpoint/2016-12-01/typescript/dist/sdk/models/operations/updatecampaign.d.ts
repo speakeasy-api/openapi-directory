@@ -33,7 +33,7 @@ export declare class UpdateCampaignRequestBodyWriteCampaignRequest extends Speak
     templateConfiguration?: shared.TemplateConfiguration;
     treatmentDescription?: string;
     treatmentName?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdateCampaignRequestBody extends SpeakeasyBase {
     writeCampaignRequest: UpdateCampaignRequestBodyWriteCampaignRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAssociateVpcCidrBlockActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssociateVpcCidrBlockResponse = exports.PostAssociateVpcCidrBlockRequest = exports.PostAssociateVpcCidrBlockHeaders = exports.PostAssociateVpcCidrBlockQueryParams = exports.PostAssociateVpcCidrBlockVersionEnum = exports.PostAssociateVpcCidrBlockActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAssociateVpcCidrBlockActionEnum;
 (function (PostAssociateVpcCidrBlockActionEnum) {
     PostAssociateVpcCidrBlockActionEnum["AssociateVpcCidrBlock"] = "AssociateVpcCidrBlock";
-})(PostAssociateVpcCidrBlockActionEnum || (PostAssociateVpcCidrBlockActionEnum = {}));
-export var PostAssociateVpcCidrBlockVersionEnum;
+})(PostAssociateVpcCidrBlockActionEnum = exports.PostAssociateVpcCidrBlockActionEnum || (exports.PostAssociateVpcCidrBlockActionEnum = {}));
+var PostAssociateVpcCidrBlockVersionEnum;
 (function (PostAssociateVpcCidrBlockVersionEnum) {
     PostAssociateVpcCidrBlockVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostAssociateVpcCidrBlockVersionEnum || (PostAssociateVpcCidrBlockVersionEnum = {}));
+})(PostAssociateVpcCidrBlockVersionEnum = exports.PostAssociateVpcCidrBlockVersionEnum || (exports.PostAssociateVpcCidrBlockVersionEnum = {}));
 var PostAssociateVpcCidrBlockQueryParams = /** @class */ (function (_super) {
     __extends(PostAssociateVpcCidrBlockQueryParams, _super);
     function PostAssociateVpcCidrBlockQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockQueryParams.prototype, "version", void 0);
     return PostAssociateVpcCidrBlockQueryParams;
-}(SpeakeasyBase));
-export { PostAssociateVpcCidrBlockQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateVpcCidrBlockQueryParams = PostAssociateVpcCidrBlockQueryParams;
 var PostAssociateVpcCidrBlockHeaders = /** @class */ (function (_super) {
     __extends(PostAssociateVpcCidrBlockHeaders, _super);
     function PostAssociateVpcCidrBlockHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAssociateVpcCidrBlockHeaders;
-}(SpeakeasyBase));
-export { PostAssociateVpcCidrBlockHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateVpcCidrBlockHeaders = PostAssociateVpcCidrBlockHeaders;
 var PostAssociateVpcCidrBlockRequest = /** @class */ (function (_super) {
     __extends(PostAssociateVpcCidrBlockRequest, _super);
     function PostAssociateVpcCidrBlockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateVpcCidrBlockQueryParams)
     ], PostAssociateVpcCidrBlockRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateVpcCidrBlockHeaders)
     ], PostAssociateVpcCidrBlockRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAssociateVpcCidrBlockRequest.prototype, "request", void 0);
     return PostAssociateVpcCidrBlockRequest;
-}(SpeakeasyBase));
-export { PostAssociateVpcCidrBlockRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateVpcCidrBlockRequest = PostAssociateVpcCidrBlockRequest;
 var PostAssociateVpcCidrBlockResponse = /** @class */ (function (_super) {
     __extends(PostAssociateVpcCidrBlockResponse, _super);
     function PostAssociateVpcCidrBlockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAssociateVpcCidrBlockResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssociateVpcCidrBlockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssociateVpcCidrBlockResponse.prototype, "statusCode", void 0);
     return PostAssociateVpcCidrBlockResponse;
-}(SpeakeasyBase));
-export { PostAssociateVpcCidrBlockResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateVpcCidrBlockResponse = PostAssociateVpcCidrBlockResponse;

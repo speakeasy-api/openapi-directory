@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPortfolioMembershipResponse = exports.GetPortfolioMembershipRequest = exports.GetPortfolioMembership200ApplicationJson = exports.GetPortfolioMembershipQueryParams = exports.GetPortfolioMembershipPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetPortfolioMembershipPathParams = /** @class */ (function (_super) {
     __extends(GetPortfolioMembershipPathParams, _super);
     function GetPortfolioMembershipPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=portfolio_membership_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=portfolio_membership_gid" }),
         __metadata("design:type", String)
     ], GetPortfolioMembershipPathParams.prototype, "portfolioMembershipGid", void 0);
     return GetPortfolioMembershipPathParams;
-}(SpeakeasyBase));
-export { GetPortfolioMembershipPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPortfolioMembershipPathParams = GetPortfolioMembershipPathParams;
 var GetPortfolioMembershipQueryParams = /** @class */ (function (_super) {
     __extends(GetPortfolioMembershipQueryParams, _super);
     function GetPortfolioMembershipQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], GetPortfolioMembershipQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], GetPortfolioMembershipQueryParams.prototype, "optPretty", void 0);
     return GetPortfolioMembershipQueryParams;
-}(SpeakeasyBase));
-export { GetPortfolioMembershipQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPortfolioMembershipQueryParams = GetPortfolioMembershipQueryParams;
 var GetPortfolioMembership200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPortfolioMembership200ApplicationJson, _super);
     function GetPortfolioMembership200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", shared.PortfolioMembershipResponse)
     ], GetPortfolioMembership200ApplicationJson.prototype, "data", void 0);
     return GetPortfolioMembership200ApplicationJson;
-}(SpeakeasyBase));
-export { GetPortfolioMembership200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPortfolioMembership200ApplicationJson = GetPortfolioMembership200ApplicationJson;
 var GetPortfolioMembershipRequest = /** @class */ (function (_super) {
     __extends(GetPortfolioMembershipRequest, _super);
     function GetPortfolioMembershipRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPortfolioMembershipPathParams)
     ], GetPortfolioMembershipRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPortfolioMembershipQueryParams)
     ], GetPortfolioMembershipRequest.prototype, "queryParams", void 0);
     return GetPortfolioMembershipRequest;
-}(SpeakeasyBase));
-export { GetPortfolioMembershipRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPortfolioMembershipRequest = GetPortfolioMembershipRequest;
 var GetPortfolioMembershipResponse = /** @class */ (function (_super) {
     __extends(GetPortfolioMembershipResponse, _super);
     function GetPortfolioMembershipResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPortfolioMembershipResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], GetPortfolioMembershipResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPortfolioMembershipResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPortfolioMembership200ApplicationJson)
-    ], GetPortfolioMembershipResponse.prototype, "getPortfolioMembership200ApplicationJsonObject", void 0);
+    ], GetPortfolioMembershipResponse.prototype, "getPortfolioMembership200ApplicationJSONObject", void 0);
     return GetPortfolioMembershipResponse;
-}(SpeakeasyBase));
-export { GetPortfolioMembershipResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPortfolioMembershipResponse = GetPortfolioMembershipResponse;

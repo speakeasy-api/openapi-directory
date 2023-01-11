@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SigningCertificate } from "./signingcertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSigningCertificatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var signingcertificate_1 = require("./signingcertificate");
 // ListSigningCertificatesResponse
 /**
  * Contains the response to a successful <a>ListSigningCertificates</a> request.
@@ -34,17 +37,17 @@ var ListSigningCertificatesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: SigningCertificate }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: signingcertificate_1.SigningCertificate }),
         __metadata("design:type", Array)
     ], ListSigningCertificatesResponse.prototype, "certificates", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ListSigningCertificatesResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListSigningCertificatesResponse.prototype, "marker", void 0);
     return ListSigningCertificatesResponse;
-}(SpeakeasyBase));
-export { ListSigningCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSigningCertificatesResponse = ListSigningCertificatesResponse;

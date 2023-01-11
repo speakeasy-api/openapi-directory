@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://redshift.{region}.amazonaws.com", "https://redshift.{region}.amazonaws.com", "http://redshift.{region}.amazonaws.com.cn", "https://redshift.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getAcceptReservedNodeExchange - Exchanges a DC1 Reserved Node for a DC2 Reserved Node with no changes to the configuration (term, payment type, or number of nodes) and no additional costs.
     **/
@@ -36,17 +36,9 @@ export declare class SDK {
     **/
     getAuthorizeDataShare(req: operations.GetAuthorizeDataShareRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorizeDataShareResponse>;
     /**
-     * getAuthorizeEndpointAccess - Grants access to a cluster.
-    **/
-    getAuthorizeEndpointAccess(req: operations.GetAuthorizeEndpointAccessRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorizeEndpointAccessResponse>;
-    /**
      * getAuthorizeSnapshotAccess - <p>Authorizes the specified Amazon Web Services account to restore the specified snapshot.</p> <p> For more information about working with snapshots, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
     **/
     getAuthorizeSnapshotAccess(req: operations.GetAuthorizeSnapshotAccessRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorizeSnapshotAccessResponse>;
-    /**
-     * getBatchModifyClusterSnapshots - Modifies the settings for a set of cluster snapshots.
-    **/
-    getBatchModifyClusterSnapshots(req: operations.GetBatchModifyClusterSnapshotsRequest, config?: AxiosRequestConfig): Promise<operations.GetBatchModifyClusterSnapshotsResponse>;
     /**
      * getCancelResize - Cancels a resize operation for a cluster.
     **/
@@ -59,10 +51,6 @@ export declare class SDK {
      * getCreateAuthenticationProfile - Creates an authentication profile with the specified parameters.
     **/
     getCreateAuthenticationProfile(req: operations.GetCreateAuthenticationProfileRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateAuthenticationProfileResponse>;
-    /**
-     * getCreateEndpointAccess - Creates a Redshift-managed VPC endpoint.
-    **/
-    getCreateEndpointAccess(req: operations.GetCreateEndpointAccessRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateEndpointAccessResponse>;
     /**
      * getDeauthorizeDataShare - From the producer account, removes authorization from the specified datashare.
     **/
@@ -124,17 +112,9 @@ export declare class SDK {
     **/
     getDeleteSnapshotSchedule(req: operations.GetDeleteSnapshotScheduleRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteSnapshotScheduleResponse>;
     /**
-     * getDeleteTags - Deletes tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or tags.
-    **/
-    getDeleteTags(req: operations.GetDeleteTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteTagsResponse>;
-    /**
      * getDeleteUsageLimit - Deletes a usage limit from a cluster.
     **/
     getDeleteUsageLimit(req: operations.GetDeleteUsageLimitRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteUsageLimitResponse>;
-    /**
-     * getDescribeAccountAttributes - Returns a list of attributes attached to an account
-    **/
-    getDescribeAccountAttributes(req: operations.GetDescribeAccountAttributesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeAccountAttributesResponse>;
     /**
      * getDescribeAuthenticationProfiles - Describes an authentication profile.
     **/
@@ -144,21 +124,9 @@ export declare class SDK {
     **/
     getDescribeClusterDbRevisions(req: operations.GetDescribeClusterDbRevisionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterDbRevisionsResponse>;
     /**
-     * getDescribeClusterParameterGroups - <p>Returns a list of Amazon Redshift parameter groups, including parameter groups you created and the default parameter group. For each parameter group, the response includes the parameter group name, description, and parameter group family name. You can optionally specify a name to retrieve the description of a specific parameter group.</p> <p> For more information about parameters and parameter groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all parameter groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all parameter groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, parameter groups are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeClusterParameterGroups(req: operations.GetDescribeClusterParameterGroupsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterParameterGroupsResponse>;
-    /**
      * getDescribeClusterParameters - <p>Returns a detailed list of parameters contained within the specified Amazon Redshift parameter group. For each parameter the response includes information such as parameter name, description, data type, value, whether the parameter value is modifiable, and so on.</p> <p>You can specify <i>source</i> filter to retrieve parameters of only specific type. For example, to retrieve parameters that were modified by a user action such as from <a>ModifyClusterParameterGroup</a>, you can specify <i>source</i> equal to <i>user</i>.</p> <p> For more information about parameters and parameter groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
     **/
     getDescribeClusterParameters(req: operations.GetDescribeClusterParametersRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterParametersResponse>;
-    /**
-     * getDescribeClusterSecurityGroups - <p>Returns information about Amazon Redshift security groups. If the name of a security group is specified, the response will contain only information about only that security group.</p> <p> For information about managing security groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all security groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all security groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, security groups are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeClusterSecurityGroups(req: operations.GetDescribeClusterSecurityGroupsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterSecurityGroupsResponse>;
-    /**
-     * getDescribeClusterSubnetGroups - <p>Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups. By default, this operation returns information about all cluster subnet groups that are defined in your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all subnet groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subnet groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subnet groups are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeClusterSubnetGroups(req: operations.GetDescribeClusterSubnetGroupsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterSubnetGroupsResponse>;
     /**
      * getDescribeClusterTracks - Returns a list of all the available maintenance tracks.
     **/
@@ -167,10 +135,6 @@ export declare class SDK {
      * getDescribeClusterVersions - Returns descriptions of the available Amazon Redshift cluster versions. You can call this operation even before creating any clusters to learn more about the Amazon Redshift versions. For more information about managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
     **/
     getDescribeClusterVersions(req: operations.GetDescribeClusterVersionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClusterVersionsResponse>;
-    /**
-     * getDescribeClusters - <p>Returns properties of provisioned clusters including general cluster properties, cluster database properties, maintenance and backup properties, and security and access properties. This operation supports pagination. For more information about managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all clusters that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all clusters that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, clusters are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeClusters(req: operations.GetDescribeClustersRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeClustersResponse>;
     /**
      * getDescribeDataShares - Shows the status of any inbound or outbound datashares available in the specified account.
     **/
@@ -200,21 +164,9 @@ export declare class SDK {
     **/
     getDescribeEventCategories(req: operations.GetDescribeEventCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventCategoriesResponse>;
     /**
-     * getDescribeEventSubscriptions - <p>Lists descriptions of all the Amazon Redshift event notification subscriptions for a customer account. If you specify a subscription name, lists the description for that subscription.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all event notification subscriptions that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subscriptions that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subscriptions are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeEventSubscriptions(req: operations.GetDescribeEventSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventSubscriptionsResponse>;
-    /**
      * getDescribeEvents - Returns events related to clusters, security groups, snapshots, and parameter groups for the past 14 days. Events specific to a particular cluster, security group, snapshot or parameter group can be obtained by providing the name as a parameter. By default, the past hour of events are returned.
     **/
     getDescribeEvents(req: operations.GetDescribeEventsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventsResponse>;
-    /**
-     * getDescribeHsmClientCertificates - <p>Returns information about the specified HSM client certificate. If no certificate ID is specified, returns information about all the HSM certificates owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM client certificates that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM client certificates that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM client certificates are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeHsmClientCertificates(req: operations.GetDescribeHsmClientCertificatesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeHsmClientCertificatesResponse>;
-    /**
-     * getDescribeHsmConfigurations - <p>Returns information about the specified Amazon Redshift HSM configuration. If no configuration ID is specified, returns information about all the HSM configurations owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM connections that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM connections that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM connections are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeHsmConfigurations(req: operations.GetDescribeHsmConfigurationsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeHsmConfigurationsResponse>;
     /**
      * getDescribeLoggingStatus - Describes whether information, such as queries and connection attempts, is being logged for the specified Amazon Redshift cluster.
     **/
@@ -240,14 +192,6 @@ export declare class SDK {
     **/
     getDescribeResize(req: operations.GetDescribeResizeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeResizeResponse>;
     /**
-     * getDescribeSnapshotCopyGrants - <p>Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region.</p> <p> For more information about managing snapshot copy grants, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
-    **/
-    getDescribeSnapshotCopyGrants(req: operations.GetDescribeSnapshotCopyGrantsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSnapshotCopyGrantsResponse>;
-    /**
-     * getDescribeSnapshotSchedules - Returns a list of snapshot schedules.
-    **/
-    getDescribeSnapshotSchedules(req: operations.GetDescribeSnapshotSchedulesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSnapshotSchedulesResponse>;
-    /**
      * getDescribeStorage - Returns account level backups storage size and provisional storage.
     **/
     getDescribeStorage(req: operations.GetDescribeStorageRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeStorageResponse>;
@@ -255,14 +199,6 @@ export declare class SDK {
      * getDescribeTableRestoreStatus - Lists the status of one or more table restore requests made using the <a>RestoreTableFromClusterSnapshot</a> API action. If you don't specify a value for the <code>TableRestoreRequestId</code> parameter, then <code>DescribeTableRestoreStatus</code> returns the status of all table restore requests ordered by the date and time of the request in ascending order. Otherwise <code>DescribeTableRestoreStatus</code> returns the status of the table specified by <code>TableRestoreRequestId</code>.
     **/
     getDescribeTableRestoreStatus(req: operations.GetDescribeTableRestoreStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeTableRestoreStatusResponse>;
-    /**
-     * getDescribeTags - <p>Returns a list of tags. You can return tags from a specific resource by specifying an ARN, or you can return all tags for a given type of resource, such as clusters, snapshots, and so on.</p> <p>The following are limitations for <code>DescribeTags</code>: </p> <ul> <li> <p>You cannot specify an ARN and a resource-type value together in the same request.</p> </li> <li> <p>You cannot use the <code>MaxRecords</code> and <code>Marker</code> parameters together with the ARN parameter.</p> </li> <li> <p>The <code>MaxRecords</code> parameter can be a range from 10 to 50 results to return in a request.</p> </li> </ul> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all resources that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all resources that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, resources are returned regardless of whether they have tag keys or values associated with them.</p>
-    **/
-    getDescribeTags(req: operations.GetDescribeTagsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeTagsResponse>;
-    /**
-     * getDescribeUsageLimits - <p>Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster identifier, and feature type parameters:</p> <ul> <li> <p>If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the current account in the current region are returned.</p> </li> <li> <p>If usage limit identifier is provided, then the corresponding usage limit object is returned.</p> </li> <li> <p>If cluster identifier is provided, then all usage limit objects for the specified cluster are returned.</p> </li> <li> <p>If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and feature are returned.</p> </li> </ul>
-    **/
-    getDescribeUsageLimits(req: operations.GetDescribeUsageLimitsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeUsageLimitsResponse>;
     /**
      * getDisableLogging - Stops logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster.
     **/
@@ -284,10 +220,6 @@ export declare class SDK {
     **/
     getEnableSnapshotCopy(req: operations.GetEnableSnapshotCopyRequest, config?: AxiosRequestConfig): Promise<operations.GetEnableSnapshotCopyResponse>;
     /**
-     * getGetClusterCredentials - <p>Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database. The action returns the database user name prefixed with <code>IAM:</code> if <code>AutoCreate</code> is <code>False</code> or <code>IAMA:</code> if <code>AutoCreate</code> is <code>True</code>. You can optionally specify one or more database user groups that the user will join at log on. By default, the temporary credentials expire in 900 seconds. You can optionally specify a duration between 900 seconds (15 minutes) and 3600 seconds (60 minutes). For more information, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/generating-user-credentials.html">Using IAM Authentication to Generate Database User Credentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>The Identity and Access Management (IAM) user or role that runs GetClusterCredentials must have an IAM policy attached that allows access to all necessary actions and resources. For more information about permissions, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources">Resource Policies for GetClusterCredentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>If the <code>DbGroups</code> parameter is specified, the IAM policy must allow the <code>redshift:JoinGroup</code> action with access to the listed <code>dbgroups</code>. </p> <p>In addition, if the <code>AutoCreate</code> parameter is set to <code>True</code>, then the policy must include the <code>redshift:CreateClusterUser</code> privilege.</p> <p>If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource <code>dbname</code> for the specified database name. </p>
-    **/
-    getGetClusterCredentials(req: operations.GetGetClusterCredentialsRequest, config?: AxiosRequestConfig): Promise<operations.GetGetClusterCredentialsResponse>;
-    /**
      * getGetReservedNodeExchangeOfferings - Returns an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1 reserved node.
     **/
     getGetReservedNodeExchangeOfferings(req: operations.GetGetReservedNodeExchangeOfferingsRequest, config?: AxiosRequestConfig): Promise<operations.GetGetReservedNodeExchangeOfferingsResponse>;
@@ -300,17 +232,9 @@ export declare class SDK {
     **/
     getModifyAuthenticationProfile(req: operations.GetModifyAuthenticationProfileRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyAuthenticationProfileResponse>;
     /**
-     * getModifyCluster - <p>Modifies the settings for a cluster.</p> <p>You can also change node type and the number of nodes to scale up or down the cluster. When resizing a cluster, you must specify both the number of nodes and the node type even if one of the parameters does not change.</p> <p>You can add another security or parameter group, or change the admin user password. Resetting a cluster password or modifying the security groups associated with a cluster do not need a reboot. However, modifying a parameter group requires a reboot for parameters to take effect. For more information about managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-    **/
-    getModifyCluster(req: operations.GetModifyClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClusterResponse>;
-    /**
      * getModifyClusterDbRevision - Modifies the database revision of a cluster. The database revision is a unique revision of the database running in a cluster.
     **/
     getModifyClusterDbRevision(req: operations.GetModifyClusterDbRevisionRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClusterDbRevisionResponse>;
-    /**
-     * getModifyClusterIamRoles - <p>Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services.</p> <p>A cluster can have up to 10 IAM roles associated at any time.</p>
-    **/
-    getModifyClusterIamRoles(req: operations.GetModifyClusterIamRolesRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClusterIamRolesResponse>;
     /**
      * getModifyClusterMaintenance - Modifies the maintenance settings of a cluster.
     **/
@@ -324,25 +248,9 @@ export declare class SDK {
     **/
     getModifyClusterSnapshotSchedule(req: operations.GetModifyClusterSnapshotScheduleRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClusterSnapshotScheduleResponse>;
     /**
-     * getModifyClusterSubnetGroup - Modifies a cluster subnet group to include the specified list of VPC subnets. The operation replaces the existing list of subnets with the new list of subnets.
-    **/
-    getModifyClusterSubnetGroup(req: operations.GetModifyClusterSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClusterSubnetGroupResponse>;
-    /**
-     * getModifyEndpointAccess - Modifies a Redshift-managed VPC endpoint.
-    **/
-    getModifyEndpointAccess(req: operations.GetModifyEndpointAccessRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyEndpointAccessResponse>;
-    /**
-     * getModifyEventSubscription - Modifies an existing Amazon Redshift event notification subscription.
-    **/
-    getModifyEventSubscription(req: operations.GetModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyEventSubscriptionResponse>;
-    /**
      * getModifySnapshotCopyRetentionPeriod - Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region. By default, this operation only changes the retention period of copied automated snapshots. The retention periods for both new and existing copied automated snapshots are updated with the new retention period. You can set the manual option to change only the retention periods of copied manual snapshots. If you set this option, only newly copied manual snapshots have the new retention period.
     **/
     getModifySnapshotCopyRetentionPeriod(req: operations.GetModifySnapshotCopyRetentionPeriodRequest, config?: AxiosRequestConfig): Promise<operations.GetModifySnapshotCopyRetentionPeriodResponse>;
-    /**
-     * getModifySnapshotSchedule - Modifies a snapshot schedule. Any schedule associated with a cluster is modified asynchronously.
-    **/
-    getModifySnapshotSchedule(req: operations.GetModifySnapshotScheduleRequest, config?: AxiosRequestConfig): Promise<operations.GetModifySnapshotScheduleResponse>;
     /**
      * getModifyUsageLimit - Modifies a usage limit in a cluster. You can't modify the feature type or period of a usage limit.
     **/
@@ -368,10 +276,6 @@ export declare class SDK {
     **/
     getResizeCluster(req: operations.GetResizeClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetResizeClusterResponse>;
     /**
-     * getRestoreFromClusterSnapshot - <p>Creates a new cluster from a snapshot. By default, Amazon Redshift creates the resulting cluster with the same configuration as the original cluster from which the snapshot was created, except that the new cluster is created with the default cluster security and parameter groups. After Amazon Redshift creates the cluster, you can use the <a>ModifyCluster</a> API to associate a different security group and different parameter group with the restored cluster. If you are using a DS node type, you can also choose to change to another DS node type of the same size during restore.</p> <p>If you restore a cluster into a VPC, you must provide a cluster subnet group where you want the cluster restored.</p> <p> For more information about working with snapshots, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-    **/
-    getRestoreFromClusterSnapshot(req: operations.GetRestoreFromClusterSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GetRestoreFromClusterSnapshotResponse>;
-    /**
      * getRestoreTableFromClusterSnapshot - <p>Creates a new table from a table in an Amazon Redshift cluster snapshot. You must create the new table within the Amazon Redshift cluster that the snapshot was taken from.</p> <p>You cannot use <code>RestoreTableFromClusterSnapshot</code> to restore a table with the same name as an existing table in an Amazon Redshift cluster. That is, you cannot overwrite an existing table in a cluster with a restored table. If you want to replace your original table with a new, restored table, then rename or drop your original table before you call <code>RestoreTableFromClusterSnapshot</code>. When you have renamed your original table, then you can pass the original name of the table as the <code>NewTableName</code> parameter value in the call to <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created from the snapshot.</p>
     **/
     getRestoreTableFromClusterSnapshot(req: operations.GetRestoreTableFromClusterSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GetRestoreTableFromClusterSnapshotResponse>;
@@ -383,10 +287,6 @@ export declare class SDK {
      * getRevokeClusterSecurityGroupIngress - Revokes an ingress rule in an Amazon Redshift security group for a previously authorized IP range or Amazon EC2 security group. To add an ingress rule, see <a>AuthorizeClusterSecurityGroupIngress</a>. For information about managing security groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
     **/
     getRevokeClusterSecurityGroupIngress(req: operations.GetRevokeClusterSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GetRevokeClusterSecurityGroupIngressResponse>;
-    /**
-     * getRevokeEndpointAccess - Revokes access to a cluster.
-    **/
-    getRevokeEndpointAccess(req: operations.GetRevokeEndpointAccessRequest, config?: AxiosRequestConfig): Promise<operations.GetRevokeEndpointAccessResponse>;
     /**
      * getRevokeSnapshotAccess - <p>Removes the ability of the specified Amazon Web Services account to restore the specified snapshot. If the account is currently restoring the snapshot, the restore will run to completion.</p> <p> For more information about working with snapshots, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
     **/
@@ -864,4 +764,3 @@ export declare class SDK {
     **/
     postUpdatePartnerStatus(req: operations.PostUpdatePartnerStatusRequest, config?: AxiosRequestConfig): Promise<operations.PostUpdatePartnerStatusResponse>;
 }
-export {};

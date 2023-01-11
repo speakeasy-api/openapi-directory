@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChannelStatusLongUploadsStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelStatus = exports.ChannelStatusPrivacyStatusEnum = exports.ChannelStatusLongUploadsStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChannelStatusLongUploadsStatusEnum;
 (function (ChannelStatusLongUploadsStatusEnum) {
     ChannelStatusLongUploadsStatusEnum["LongUploadsUnspecified"] = "longUploadsUnspecified";
     ChannelStatusLongUploadsStatusEnum["Allowed"] = "allowed";
     ChannelStatusLongUploadsStatusEnum["Eligible"] = "eligible";
     ChannelStatusLongUploadsStatusEnum["Disallowed"] = "disallowed";
-})(ChannelStatusLongUploadsStatusEnum || (ChannelStatusLongUploadsStatusEnum = {}));
-export var ChannelStatusPrivacyStatusEnum;
+})(ChannelStatusLongUploadsStatusEnum = exports.ChannelStatusLongUploadsStatusEnum || (exports.ChannelStatusLongUploadsStatusEnum = {}));
+var ChannelStatusPrivacyStatusEnum;
 (function (ChannelStatusPrivacyStatusEnum) {
     ChannelStatusPrivacyStatusEnum["Public"] = "public";
     ChannelStatusPrivacyStatusEnum["Unlisted"] = "unlisted";
     ChannelStatusPrivacyStatusEnum["Private"] = "private";
-})(ChannelStatusPrivacyStatusEnum || (ChannelStatusPrivacyStatusEnum = {}));
+})(ChannelStatusPrivacyStatusEnum = exports.ChannelStatusPrivacyStatusEnum || (exports.ChannelStatusPrivacyStatusEnum = {}));
 // ChannelStatus
 /**
  * JSON template for the status part of a channel.
@@ -46,25 +49,25 @@ var ChannelStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isLinked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isLinked" }),
         __metadata("design:type", Boolean)
     ], ChannelStatus.prototype, "isLinked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longUploadsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longUploadsStatus" }),
         __metadata("design:type", String)
     ], ChannelStatus.prototype, "longUploadsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=madeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=madeForKids" }),
         __metadata("design:type", Boolean)
     ], ChannelStatus.prototype, "madeForKids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacyStatus" }),
         __metadata("design:type", String)
     ], ChannelStatus.prototype, "privacyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfDeclaredMadeForKids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfDeclaredMadeForKids" }),
         __metadata("design:type", Boolean)
     ], ChannelStatus.prototype, "selfDeclaredMadeForKids", void 0);
     return ChannelStatus;
-}(SpeakeasyBase));
-export { ChannelStatus };
+}(utils_1.SpeakeasyBase));
+exports.ChannelStatus = ChannelStatus;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NbcerRequest, NbcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: NbcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      refNo: "minus",
-      tokenNo: "quibusdam",
+      refNo: "sit",
+      tokenNo: "voluptas",
     },
-    consentArtifact: "distinctio",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "temporibus",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.nbcer(req).then((res: NbcerResponse | AxiosError) => {
+sdk.apIs.nbcer(req).then((res: NbcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.nbcer(req).then((res: NbcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `nbcer` - NAC/Birth/Death Certificate
 

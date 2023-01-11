@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DevicePlatformEnum } from "./deviceplatformenum";
-import { RecurringCharge } from "./recurringcharge";
-import { OfferingTypeEnum } from "./offeringtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Offering = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceplatformenum_1 = require("./deviceplatformenum");
+var recurringcharge_1 = require("./recurringcharge");
+var offeringtypeenum_1 = require("./offeringtypeenum");
 // Offering
 /**
  * Represents the metadata of a device offering.
@@ -36,25 +39,25 @@ var Offering = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Offering.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Offering.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], Offering.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recurringCharges", elemType: RecurringCharge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurringCharges", elemType: recurringcharge_1.RecurringCharge }),
         __metadata("design:type", Array)
     ], Offering.prototype, "recurringCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Offering.prototype, "type", void 0);
     return Offering;
-}(SpeakeasyBase));
-export { Offering };
+}(utils_1.SpeakeasyBase));
+exports.Offering = Offering;

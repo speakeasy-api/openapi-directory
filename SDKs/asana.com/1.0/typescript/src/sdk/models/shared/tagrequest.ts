@@ -23,6 +23,10 @@ export enum TagRequestColorEnum {
 }
 
 
+// TagRequestInput
+/** 
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 export class TagRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color?: TagRequestColorEnum;

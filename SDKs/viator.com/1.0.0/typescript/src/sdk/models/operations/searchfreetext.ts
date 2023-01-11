@@ -63,10 +63,10 @@ export class SearchFreetext200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -96,5 +96,5 @@ export class SearchFreetextResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchFreetext200ApplicationJsonObject?: SearchFreetext200ApplicationJson;
+  searchFreetext200ApplicationJSONObject?: SearchFreetext200ApplicationJson;
 }

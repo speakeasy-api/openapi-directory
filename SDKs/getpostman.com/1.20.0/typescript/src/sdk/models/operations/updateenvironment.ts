@@ -82,8 +82,8 @@ export class UpdateEnvironmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateEnvironment200ApplicationJsonObject?: UpdateEnvironment200ApplicationJson;
+  updateEnvironment200ApplicationJSONObject?: UpdateEnvironment200ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateEnvironment400ApplicationJsonObject?: UpdateEnvironment400ApplicationJson;
+  updateEnvironment400ApplicationJSONObject?: UpdateEnvironment400ApplicationJson;
 }

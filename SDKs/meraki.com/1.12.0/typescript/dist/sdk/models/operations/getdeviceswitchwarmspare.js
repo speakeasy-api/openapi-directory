@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceSwitchWarmSpareResponse = exports.GetDeviceSwitchWarmSpareRequest = exports.GetDeviceSwitchWarmSparePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceSwitchWarmSparePathParams = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchWarmSparePathParams, _super);
     function GetDeviceSwitchWarmSparePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchWarmSparePathParams.prototype, "serial", void 0);
     return GetDeviceSwitchWarmSparePathParams;
-}(SpeakeasyBase));
-export { GetDeviceSwitchWarmSparePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchWarmSparePathParams = GetDeviceSwitchWarmSparePathParams;
 var GetDeviceSwitchWarmSpareRequest = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchWarmSpareRequest, _super);
     function GetDeviceSwitchWarmSpareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceSwitchWarmSparePathParams)
     ], GetDeviceSwitchWarmSpareRequest.prototype, "pathParams", void 0);
     return GetDeviceSwitchWarmSpareRequest;
-}(SpeakeasyBase));
-export { GetDeviceSwitchWarmSpareRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchWarmSpareRequest = GetDeviceSwitchWarmSpareRequest;
 var GetDeviceSwitchWarmSpareResponse = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchWarmSpareResponse, _super);
     function GetDeviceSwitchWarmSpareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceSwitchWarmSpareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceSwitchWarmSpareResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceSwitchWarmSpareResponse.prototype, "getDeviceSwitchWarmSpare200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceSwitchWarmSpareResponse.prototype, "getDeviceSwitchWarmSpare200ApplicationJSONObject", void 0);
     return GetDeviceSwitchWarmSpareResponse;
-}(SpeakeasyBase));
-export { GetDeviceSwitchWarmSpareResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchWarmSpareResponse = GetDeviceSwitchWarmSpareResponse;

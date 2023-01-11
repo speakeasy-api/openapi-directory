@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientTlsCertificate } from "./clienttlscertificate";
-import { TlsValidationContext } from "./tlsvalidationcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientPolicyTls = void 0;
+var utils_1 = require("../../../internal/utils");
+var clienttlscertificate_1 = require("./clienttlscertificate");
+var tlsvalidationcontext_1 = require("./tlsvalidationcontext");
 // ClientPolicyTls
 /**
  * A reference to an object that represents a Transport Layer Security (TLS) client policy.
@@ -35,21 +38,21 @@ var ClientPolicyTls = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
-        __metadata("design:type", ClientTlsCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
+        __metadata("design:type", clienttlscertificate_1.ClientTlsCertificate)
     ], ClientPolicyTls.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforce" }),
         __metadata("design:type", Boolean)
     ], ClientPolicyTls.prototype, "enforce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports" }),
         __metadata("design:type", Array)
     ], ClientPolicyTls.prototype, "ports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validation" }),
-        __metadata("design:type", TlsValidationContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validation" }),
+        __metadata("design:type", tlsvalidationcontext_1.TlsValidationContext)
     ], ClientPolicyTls.prototype, "validation", void 0);
     return ClientPolicyTls;
-}(SpeakeasyBase));
-export { ClientPolicyTls };
+}(utils_1.SpeakeasyBase));
+exports.ClientPolicyTls = ClientPolicyTls;

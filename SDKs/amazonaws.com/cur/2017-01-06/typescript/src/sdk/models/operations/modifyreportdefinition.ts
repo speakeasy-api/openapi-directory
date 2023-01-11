@@ -51,7 +51,7 @@ export class ModifyReportDefinitionResponse extends SpeakeasyBase {
   internalErrorException?: any;
 
   @SpeakeasyMetadata()
-  modifyReportDefinitionResponse?: Map<string, any>;
+  modifyReportDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalNodeGroup } from "./globalnodegroup";
-import { GlobalReplicationGroupMember } from "./globalreplicationgroupmember";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlobalReplicationGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var globalnodegrouplist_1 = require("./globalnodegrouplist");
+var globalreplicationgroupmemberlist_1 = require("./globalreplicationgroupmemberlist");
 // GlobalReplicationGroup
 /**
  * <p>Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different Amazon region. The secondary cluster accepts only reads. The primary cluster automatically replicates updates to the secondary cluster.</p> <ul> <li> <p>The <b>GlobalReplicationGroupIdSuffix</b> represents the name of the Global datastore, which is what you use to associate a secondary cluster.</p> </li> </ul>
@@ -35,57 +38,57 @@ var GlobalReplicationGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GlobalReplicationGroup.prototype, "atRestEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GlobalReplicationGroup.prototype, "authTokenEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GlobalReplicationGroup.prototype, "clusterEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GlobalNodeGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: globalnodegrouplist_1.GlobalNodeGroupList }),
         __metadata("design:type", Array)
     ], GlobalReplicationGroup.prototype, "globalNodeGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "globalReplicationGroupDescription", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "globalReplicationGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GlobalReplicationGroupMember }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: globalreplicationgroupmemberlist_1.GlobalReplicationGroupMemberList }),
         __metadata("design:type", Array)
     ], GlobalReplicationGroup.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GlobalReplicationGroup.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GlobalReplicationGroup.prototype, "transitEncryptionEnabled", void 0);
     return GlobalReplicationGroup;
-}(SpeakeasyBase));
-export { GlobalReplicationGroup };
+}(utils_1.SpeakeasyBase));
+exports.GlobalReplicationGroup = GlobalReplicationGroup;

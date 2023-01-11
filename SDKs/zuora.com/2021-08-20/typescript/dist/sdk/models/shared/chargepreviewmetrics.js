@@ -1,0 +1,164 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChargePreviewMetrics = exports.ChargePreviewMetricsTcv = exports.ChargePreviewMetricsTcb = exports.ChargePreviewMetricsTax = exports.ChargePreviewMetricsCmrr = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChargePreviewMetricsCmrr = /** @class */ (function (_super) {
+    __extends(ChargePreviewMetricsCmrr, _super);
+    function ChargePreviewMetricsCmrr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discount" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsCmrr.prototype, "discount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsCmrr.prototype, "discountDelta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regular" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsCmrr.prototype, "regular", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsCmrr.prototype, "regularDelta", void 0);
+    return ChargePreviewMetricsCmrr;
+}(utils_1.SpeakeasyBase));
+exports.ChargePreviewMetricsCmrr = ChargePreviewMetricsCmrr;
+var ChargePreviewMetricsTax = /** @class */ (function (_super) {
+    __extends(ChargePreviewMetricsTax, _super);
+    function ChargePreviewMetricsTax() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discount" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTax.prototype, "discount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTax.prototype, "discountDelta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regular" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTax.prototype, "regular", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTax.prototype, "regularDelta", void 0);
+    return ChargePreviewMetricsTax;
+}(utils_1.SpeakeasyBase));
+exports.ChargePreviewMetricsTax = ChargePreviewMetricsTax;
+var ChargePreviewMetricsTcb = /** @class */ (function (_super) {
+    __extends(ChargePreviewMetricsTcb, _super);
+    function ChargePreviewMetricsTcb() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discount" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcb.prototype, "discount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcb.prototype, "discountDelta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regular" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcb.prototype, "regular", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcb.prototype, "regularDelta", void 0);
+    return ChargePreviewMetricsTcb;
+}(utils_1.SpeakeasyBase));
+exports.ChargePreviewMetricsTcb = ChargePreviewMetricsTcb;
+var ChargePreviewMetricsTcv = /** @class */ (function (_super) {
+    __extends(ChargePreviewMetricsTcv, _super);
+    function ChargePreviewMetricsTcv() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discount" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcv.prototype, "discount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcv.prototype, "discountDelta", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regular" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcv.prototype, "regular", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularDelta" }),
+        __metadata("design:type", Number)
+    ], ChargePreviewMetricsTcv.prototype, "regularDelta", void 0);
+    return ChargePreviewMetricsTcv;
+}(utils_1.SpeakeasyBase));
+exports.ChargePreviewMetricsTcv = ChargePreviewMetricsTcv;
+var ChargePreviewMetrics = /** @class */ (function (_super) {
+    __extends(ChargePreviewMetrics, _super);
+    function ChargePreviewMetrics() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeNumber" }),
+        __metadata("design:type", String)
+    ], ChargePreviewMetrics.prototype, "chargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cmrr" }),
+        __metadata("design:type", ChargePreviewMetricsCmrr)
+    ], ChargePreviewMetrics.prototype, "cmrr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originRatePlanId" }),
+        __metadata("design:type", String)
+    ], ChargePreviewMetrics.prototype, "originRatePlanId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanChargeId" }),
+        __metadata("design:type", String)
+    ], ChargePreviewMetrics.prototype, "productRatePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanId" }),
+        __metadata("design:type", String)
+    ], ChargePreviewMetrics.prototype, "productRatePlanId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tax" }),
+        __metadata("design:type", ChargePreviewMetricsTax)
+    ], ChargePreviewMetrics.prototype, "tax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tcb" }),
+        __metadata("design:type", ChargePreviewMetricsTcb)
+    ], ChargePreviewMetrics.prototype, "tcb", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tcv" }),
+        __metadata("design:type", ChargePreviewMetricsTcv)
+    ], ChargePreviewMetrics.prototype, "tcv", void 0);
+    return ChargePreviewMetrics;
+}(utils_1.SpeakeasyBase));
+exports.ChargePreviewMetrics = ChargePreviewMetrics;

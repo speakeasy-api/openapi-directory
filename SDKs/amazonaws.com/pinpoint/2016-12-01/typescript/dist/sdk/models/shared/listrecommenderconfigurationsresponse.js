@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommenderConfigurationResponse } from "./recommenderconfigurationresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRecommenderConfigurationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommenderconfigurationresponse_1 = require("./recommenderconfigurationresponse");
 // ListRecommenderConfigurationsResponse
 /**
  * Provides information about all the recommender model configurations that are associated with your Amazon Pinpoint account.
@@ -34,13 +37,13 @@ var ListRecommenderConfigurationsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Item", elemType: RecommenderConfigurationResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Item", elemType: recommenderconfigurationresponse_1.RecommenderConfigurationResponse }),
         __metadata("design:type", Array)
     ], ListRecommenderConfigurationsResponse.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListRecommenderConfigurationsResponse.prototype, "nextToken", void 0);
     return ListRecommenderConfigurationsResponse;
-}(SpeakeasyBase));
-export { ListRecommenderConfigurationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRecommenderConfigurationsResponse = ListRecommenderConfigurationsResponse;

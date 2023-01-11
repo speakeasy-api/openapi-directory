@@ -28,7 +28,7 @@ export declare class Circuit extends SpeakeasyBase {
     comments?: string;
     commitRate?: number;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     id?: number;
     installDate?: Date;

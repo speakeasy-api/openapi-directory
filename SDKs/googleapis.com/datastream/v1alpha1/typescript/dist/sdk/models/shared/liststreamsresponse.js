@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Stream } from "./stream";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListStreamsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var stream_1 = require("./stream");
 var ListStreamsResponse = /** @class */ (function (_super) {
     __extends(ListStreamsResponse, _super);
     function ListStreamsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListStreamsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streams", elemType: Stream }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streams", elemType: stream_1.Stream }),
         __metadata("design:type", Array)
     ], ListStreamsResponse.prototype, "streams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListStreamsResponse.prototype, "unreachable", void 0);
     return ListStreamsResponse;
-}(SpeakeasyBase));
-export { ListStreamsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListStreamsResponse = ListStreamsResponse;

@@ -107,11 +107,11 @@ export declare class CmcerRequest extends SpeakeasyBase {
 export declare class CmcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cmcer400ApplicationJsonObject?: Cmcer400ApplicationJson;
-    cmcer401ApplicationJsonObject?: Cmcer401ApplicationJson;
-    cmcer404ApplicationJsonObject?: Cmcer404ApplicationJson;
-    cmcer500ApplicationJsonObject?: Cmcer500ApplicationJson;
-    cmcer502ApplicationJsonObject?: Cmcer502ApplicationJson;
-    cmcer503ApplicationJsonObject?: Cmcer503ApplicationJson;
-    cmcer504ApplicationJsonObject?: Cmcer504ApplicationJson;
+    cmcer400ApplicationJSONObject?: Cmcer400ApplicationJson;
+    cmcer401ApplicationJSONObject?: Cmcer401ApplicationJson;
+    cmcer404ApplicationJSONObject?: Cmcer404ApplicationJson;
+    cmcer500ApplicationJSONObject?: Cmcer500ApplicationJson;
+    cmcer502ApplicationJSONObject?: Cmcer502ApplicationJson;
+    cmcer503ApplicationJSONObject?: Cmcer503ApplicationJson;
+    cmcer504ApplicationJSONObject?: Cmcer504ApplicationJson;
 }

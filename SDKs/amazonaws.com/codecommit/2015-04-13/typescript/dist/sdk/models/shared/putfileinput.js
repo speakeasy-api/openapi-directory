@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileModeTypeEnumEnum } from "./filemodetypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutFileInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var filemodetypeenumenum_1 = require("./filemodetypeenumenum");
 var PutFileInput = /** @class */ (function (_super) {
     __extends(PutFileInput, _super);
     function PutFileInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchName" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "branchName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitMessage" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "commitMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileContent" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "fileContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileMode" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "fileMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentCommitId" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "parentCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], PutFileInput.prototype, "repositoryName", void 0);
     return PutFileInput;
-}(SpeakeasyBase));
-export { PutFileInput };
+}(utils_1.SpeakeasyBase));
+exports.PutFileInput = PutFileInput;

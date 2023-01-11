@@ -33,8 +33,8 @@ export class GetV1VerificationResultResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getV1VerificationResult200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getV1VerificationResult200ApplicationJSONString?: string;
 }

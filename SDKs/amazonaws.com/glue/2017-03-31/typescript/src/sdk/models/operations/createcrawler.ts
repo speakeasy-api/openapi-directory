@@ -51,7 +51,7 @@ export class CreateCrawlerResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createCrawlerResponse?: Map<string, any>;
+  createCrawlerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InjuriesByTeamFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InjuriesByTeamResponse = exports.InjuriesByTeamRequest = exports.InjuriesByTeamPathParams = exports.InjuriesByTeamFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InjuriesByTeamFormatEnum;
 (function (InjuriesByTeamFormatEnum) {
     InjuriesByTeamFormatEnum["Xml"] = "XML";
     InjuriesByTeamFormatEnum["Json"] = "JSON";
-})(InjuriesByTeamFormatEnum || (InjuriesByTeamFormatEnum = {}));
+})(InjuriesByTeamFormatEnum = exports.InjuriesByTeamFormatEnum || (exports.InjuriesByTeamFormatEnum = {}));
 var InjuriesByTeamPathParams = /** @class */ (function (_super) {
     __extends(InjuriesByTeamPathParams, _super);
     function InjuriesByTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], InjuriesByTeamPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], InjuriesByTeamPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team" }),
         __metadata("design:type", String)
     ], InjuriesByTeamPathParams.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], InjuriesByTeamPathParams.prototype, "week", void 0);
     return InjuriesByTeamPathParams;
-}(SpeakeasyBase));
-export { InjuriesByTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesByTeamPathParams = InjuriesByTeamPathParams;
 var InjuriesByTeamRequest = /** @class */ (function (_super) {
     __extends(InjuriesByTeamRequest, _super);
     function InjuriesByTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", InjuriesByTeamPathParams)
     ], InjuriesByTeamRequest.prototype, "pathParams", void 0);
     return InjuriesByTeamRequest;
-}(SpeakeasyBase));
-export { InjuriesByTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesByTeamRequest = InjuriesByTeamRequest;
 var InjuriesByTeamResponse = /** @class */ (function (_super) {
     __extends(InjuriesByTeamResponse, _super);
     function InjuriesByTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InjuriesByTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], InjuriesByTeamResponse.prototype, "injuries", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InjuriesByTeamResponse.prototype, "statusCode", void 0);
     return InjuriesByTeamResponse;
-}(SpeakeasyBase));
-export { InjuriesByTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesByTeamResponse = InjuriesByTeamResponse;

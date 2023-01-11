@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Groups = void 0;
+var utils_1 = require("../../../internal/utils");
 // Groups
 /**
  * JSON template for Group resource
@@ -33,253 +36,253 @@ var Groups = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowExternalMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowExternalMembers" }),
         __metadata("design:type", String)
     ], Groups.prototype, "allowExternalMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowGoogleCommunication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowGoogleCommunication" }),
         __metadata("design:type", String)
     ], Groups.prototype, "allowGoogleCommunication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowWebPosting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowWebPosting" }),
         __metadata("design:type", String)
     ], Groups.prototype, "allowWebPosting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveOnly" }),
         __metadata("design:type", String)
     ], Groups.prototype, "archiveOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customFooterText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customFooterText" }),
         __metadata("design:type", String)
     ], Groups.prototype, "customFooterText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customReplyTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customReplyTo" }),
         __metadata("design:type", String)
     ], Groups.prototype, "customReplyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customRolesEnabledForSettingsToBeMerged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customRolesEnabledForSettingsToBeMerged" }),
         __metadata("design:type", String)
     ], Groups.prototype, "customRolesEnabledForSettingsToBeMerged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultMessageDenyNotificationText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultMessageDenyNotificationText" }),
         __metadata("design:type", String)
     ], Groups.prototype, "defaultMessageDenyNotificationText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default_sender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default_sender" }),
         __metadata("design:type", String)
     ], Groups.prototype, "defaultSender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Groups.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], Groups.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableCollaborativeInbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableCollaborativeInbox" }),
         __metadata("design:type", String)
     ], Groups.prototype, "enableCollaborativeInbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favoriteRepliesOnTop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favoriteRepliesOnTop" }),
         __metadata("design:type", String)
     ], Groups.prototype, "favoriteRepliesOnTop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeCustomFooter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeCustomFooter" }),
         __metadata("design:type", String)
     ], Groups.prototype, "includeCustomFooter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeInGlobalAddressList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeInGlobalAddressList" }),
         __metadata("design:type", String)
     ], Groups.prototype, "includeInGlobalAddressList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isArchived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isArchived" }),
         __metadata("design:type", String)
     ], Groups.prototype, "isArchived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Groups.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxMessageBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxMessageBytes" }),
         __metadata("design:type", Number)
     ], Groups.prototype, "maxMessageBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membersCanPostAsTheGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membersCanPostAsTheGroup" }),
         __metadata("design:type", String)
     ], Groups.prototype, "membersCanPostAsTheGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageDisplayFont" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageDisplayFont" }),
         __metadata("design:type", String)
     ], Groups.prototype, "messageDisplayFont", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageModerationLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageModerationLevel" }),
         __metadata("design:type", String)
     ], Groups.prototype, "messageModerationLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Groups.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryLanguage" }),
         __metadata("design:type", String)
     ], Groups.prototype, "primaryLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replyTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replyTo" }),
         __metadata("design:type", String)
     ], Groups.prototype, "replyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendMessageDenyNotification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendMessageDenyNotification" }),
         __metadata("design:type", String)
     ], Groups.prototype, "sendMessageDenyNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showInGroupDirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showInGroupDirectory" }),
         __metadata("design:type", String)
     ], Groups.prototype, "showInGroupDirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spamModerationLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spamModerationLevel" }),
         __metadata("design:type", String)
     ], Groups.prototype, "spamModerationLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanAdd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanAdd" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanAdd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanAddReferences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanAddReferences" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanAddReferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanApproveMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanApproveMembers" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanApproveMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanApproveMessages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanApproveMessages" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanApproveMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanAssignTopics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanAssignTopics" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanAssignTopics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanAssistContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanAssistContent" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanAssistContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanBanUsers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanBanUsers" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanBanUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanContactOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanContactOwner" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanContactOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanDeleteAnyPost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanDeleteAnyPost" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanDeleteAnyPost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanDeleteTopics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanDeleteTopics" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanDeleteTopics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanDiscoverGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanDiscoverGroup" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanDiscoverGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanEnterFreeFormTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanEnterFreeFormTags" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanEnterFreeFormTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanHideAbuse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanHideAbuse" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanHideAbuse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanInvite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanInvite" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanInvite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanJoin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanJoin" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanJoin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanLeaveGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanLeaveGroup" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanLeaveGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanLockTopics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanLockTopics" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanLockTopics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMakeTopicsSticky" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMakeTopicsSticky" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMakeTopicsSticky", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMarkDuplicate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMarkDuplicate" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMarkDuplicate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMarkFavoriteReplyOnAnyTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMarkFavoriteReplyOnAnyTopic" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMarkFavoriteReplyOnAnyTopic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMarkFavoriteReplyOnOwnTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMarkFavoriteReplyOnOwnTopic" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMarkFavoriteReplyOnOwnTopic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMarkNoResponseNeeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMarkNoResponseNeeded" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMarkNoResponseNeeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanModerateContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanModerateContent" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanModerateContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanModerateMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanModerateMembers" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanModerateMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanModifyMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanModifyMembers" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanModifyMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanModifyTagsAndCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanModifyTagsAndCategories" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanModifyTagsAndCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMoveTopicsIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMoveTopicsIn" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMoveTopicsIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanMoveTopicsOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanMoveTopicsOut" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanMoveTopicsOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanPostAnnouncements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanPostAnnouncements" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanPostAnnouncements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanPostMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanPostMessage" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanPostMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanTakeTopics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanTakeTopics" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanTakeTopics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanUnassignTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanUnassignTopic" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanUnassignTopic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanUnmarkFavoriteReplyOnAnyTopic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanUnmarkFavoriteReplyOnAnyTopic" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanUnmarkFavoriteReplyOnAnyTopic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanViewGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanViewGroup" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanViewGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whoCanViewMembership" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whoCanViewMembership" }),
         __metadata("design:type", String)
     ], Groups.prototype, "whoCanViewMembership", void 0);
     return Groups;
-}(SpeakeasyBase));
-export { Groups };
+}(utils_1.SpeakeasyBase));
+exports.Groups = Groups;

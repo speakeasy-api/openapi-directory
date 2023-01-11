@@ -15,7 +15,7 @@ export declare class DescribeEndpointsHeaders extends SpeakeasyBase {
 }
 export declare class DescribeEndpointsRequest extends SpeakeasyBase {
     headers: DescribeEndpointsHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DescribeEndpointsResponse extends SpeakeasyBase {
     contentType: string;

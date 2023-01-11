@@ -50,13 +50,13 @@ export class GetSearchParametersForADocumentIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSearchParametersForADocumentId400ApplicationJsonObject?: GetSearchParametersForADocumentId400ApplicationJson;
+  getSearchParametersForADocumentId400ApplicationJSONObject?: GetSearchParametersForADocumentId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSearchParametersForADocumentId401ApplicationJsonObject?: GetSearchParametersForADocumentId401ApplicationJson;
+  getSearchParametersForADocumentId401ApplicationJSONObject?: GetSearchParametersForADocumentId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSearchParametersForADocumentId500ApplicationJsonObject?: GetSearchParametersForADocumentId500ApplicationJson;
+  getSearchParametersForADocumentId500ApplicationJSONObject?: GetSearchParametersForADocumentId500ApplicationJson;
 
   @SpeakeasyMetadata({ elemType: shared.SearchParametersResponse })
   searchParametersResponse?: shared.SearchParametersResponse[];

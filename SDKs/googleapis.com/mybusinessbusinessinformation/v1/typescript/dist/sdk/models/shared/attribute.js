@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepeatedEnumAttributeValue } from "./repeatedenumattributevalue";
-import { UriAttributeValue } from "./uriattributevalue";
-export var AttributeValueTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeInput = exports.Attribute = exports.AttributeValueTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var repeatedenumattributevalue_1 = require("./repeatedenumattributevalue");
+var uriattributevalue_1 = require("./uriattributevalue");
+var AttributeValueTypeEnum;
 (function (AttributeValueTypeEnum) {
     AttributeValueTypeEnum["AttributeValueTypeUnspecified"] = "ATTRIBUTE_VALUE_TYPE_UNSPECIFIED";
     AttributeValueTypeEnum["Bool"] = "BOOL";
     AttributeValueTypeEnum["Enum"] = "ENUM";
     AttributeValueTypeEnum["Url"] = "URL";
     AttributeValueTypeEnum["RepeatedEnum"] = "REPEATED_ENUM";
-})(AttributeValueTypeEnum || (AttributeValueTypeEnum = {}));
+})(AttributeValueTypeEnum = exports.AttributeValueTypeEnum || (exports.AttributeValueTypeEnum = {}));
 // Attribute
 /**
  * A location attribute. Attributes provide additional information about a location. The attributes that can be set on a location may vary based on the properties of that location (for example, category). Available attributes are determined by Google and may be added and removed without API changes.
@@ -43,28 +46,28 @@ var Attribute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatedEnumValue" }),
-        __metadata("design:type", RepeatedEnumAttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatedEnumValue" }),
+        __metadata("design:type", repeatedenumattributevalue_1.RepeatedEnumAttributeValue)
     ], Attribute.prototype, "repeatedEnumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uriValues", elemType: UriAttributeValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uriValues", elemType: uriattributevalue_1.UriAttributeValue }),
         __metadata("design:type", Array)
     ], Attribute.prototype, "uriValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueType" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "valueType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], Attribute.prototype, "values", void 0);
     return Attribute;
-}(SpeakeasyBase));
-export { Attribute };
+}(utils_1.SpeakeasyBase));
+exports.Attribute = Attribute;
 // AttributeInput
 /**
  * A location attribute. Attributes provide additional information about a location. The attributes that can be set on a location may vary based on the properties of that location (for example, category). Available attributes are determined by Google and may be added and removed without API changes.
@@ -75,21 +78,21 @@ var AttributeInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AttributeInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatedEnumValue" }),
-        __metadata("design:type", RepeatedEnumAttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatedEnumValue" }),
+        __metadata("design:type", repeatedenumattributevalue_1.RepeatedEnumAttributeValue)
     ], AttributeInput.prototype, "repeatedEnumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uriValues", elemType: UriAttributeValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uriValues", elemType: uriattributevalue_1.UriAttributeValue }),
         __metadata("design:type", Array)
     ], AttributeInput.prototype, "uriValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], AttributeInput.prototype, "values", void 0);
     return AttributeInput;
-}(SpeakeasyBase));
-export { AttributeInput };
+}(utils_1.SpeakeasyBase));
+exports.AttributeInput = AttributeInput;

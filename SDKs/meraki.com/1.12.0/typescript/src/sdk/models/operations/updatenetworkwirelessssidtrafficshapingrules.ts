@@ -100,5 +100,5 @@ export class UpdateNetworkWirelessSsidTrafficShapingRulesResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidTrafficShapingRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidTrafficShapingRules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,124 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonPpa = exports.PlayerSeasonPpaTotalPpa = exports.PlayerSeasonPpaAveragePpa = void 0;
+var utils_1 = require("../../../internal/utils");
 var PlayerSeasonPpaAveragePpa = /** @class */ (function (_super) {
     __extends(PlayerSeasonPpaAveragePpa, _super);
     function PlayerSeasonPpaAveragePpa() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "all", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "firstDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pass" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "pass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingDowns" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "passingDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rush" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rush" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "rush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "secondDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardDowns" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "standardDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thirdDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thirdDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaAveragePpa.prototype, "thirdDown", void 0);
     return PlayerSeasonPpaAveragePpa;
-}(SpeakeasyBase));
-export { PlayerSeasonPpaAveragePpa };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonPpaAveragePpa = PlayerSeasonPpaAveragePpa;
 var PlayerSeasonPpaTotalPpa = /** @class */ (function (_super) {
     __extends(PlayerSeasonPpaTotalPpa, _super);
     function PlayerSeasonPpaTotalPpa() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "all", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "firstDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pass" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "pass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingDowns" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "passingDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rush" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rush" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "rush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "secondDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardDowns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardDowns" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "standardDowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thirdDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thirdDown" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpaTotalPpa.prototype, "thirdDown", void 0);
     return PlayerSeasonPpaTotalPpa;
-}(SpeakeasyBase));
-export { PlayerSeasonPpaTotalPpa };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonPpaTotalPpa = PlayerSeasonPpaTotalPpa;
 var PlayerSeasonPpa = /** @class */ (function (_super) {
     __extends(PlayerSeasonPpa, _super);
     function PlayerSeasonPpa() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averagePPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averagePPA" }),
         __metadata("design:type", PlayerSeasonPpaAveragePpa)
-    ], PlayerSeasonPpa.prototype, "averagePpa", void 0);
+    ], PlayerSeasonPpa.prototype, "averagePPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], PlayerSeasonPpa.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpa.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PlayerSeasonPpa.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], PlayerSeasonPpa.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], PlayerSeasonPpa.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], PlayerSeasonPpa.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", PlayerSeasonPpaTotalPpa)
-    ], PlayerSeasonPpa.prototype, "totalPpa", void 0);
+    ], PlayerSeasonPpa.prototype, "totalPPA", void 0);
     return PlayerSeasonPpa;
-}(SpeakeasyBase));
-export { PlayerSeasonPpa };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonPpa = PlayerSeasonPpa;

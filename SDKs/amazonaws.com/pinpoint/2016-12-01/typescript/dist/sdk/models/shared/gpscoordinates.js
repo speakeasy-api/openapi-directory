@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GpsCoordinates = void 0;
+var utils_1 = require("../../../internal/utils");
 // GpsCoordinates
 /**
  * Specifies the GPS coordinates of a location.
@@ -33,13 +36,13 @@ var GpsCoordinates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Latitude" }),
         __metadata("design:type", Number)
     ], GpsCoordinates.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Longitude" }),
         __metadata("design:type", Number)
     ], GpsCoordinates.prototype, "longitude", void 0);
     return GpsCoordinates;
-}(SpeakeasyBase));
-export { GpsCoordinates };
+}(utils_1.SpeakeasyBase));
+exports.GpsCoordinates = GpsCoordinates;

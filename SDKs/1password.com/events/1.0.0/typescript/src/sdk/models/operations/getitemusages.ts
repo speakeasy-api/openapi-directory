@@ -23,11 +23,11 @@ export class GetItemUsagesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getItemUsages200ApplicationJsonAny?: any;
+  getItemUsages200ApplicationJSONAny?: any;
 }

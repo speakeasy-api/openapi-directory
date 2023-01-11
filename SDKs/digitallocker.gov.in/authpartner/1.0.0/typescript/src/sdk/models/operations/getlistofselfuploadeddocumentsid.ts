@@ -56,13 +56,13 @@ export class GetListOfSelfUploadedDocumentsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListOfSelfUploadedDocumentsId401ApplicationJsonObject?: GetListOfSelfUploadedDocumentsId401ApplicationJson;
+  getListOfSelfUploadedDocumentsId401ApplicationJSONObject?: GetListOfSelfUploadedDocumentsId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfSelfUploadedDocumentsId404ApplicationJsonObject?: GetListOfSelfUploadedDocumentsId404ApplicationJson;
+  getListOfSelfUploadedDocumentsId404ApplicationJSONObject?: GetListOfSelfUploadedDocumentsId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfSelfUploadedDocumentsId500ApplicationJsonObject?: GetListOfSelfUploadedDocumentsId500ApplicationJson;
+  getListOfSelfUploadedDocumentsId500ApplicationJSONObject?: GetListOfSelfUploadedDocumentsId500ApplicationJson;
 
   @SpeakeasyMetadata()
   sample?: any;

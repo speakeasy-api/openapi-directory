@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainDeliverabilityCampaign } from "./domaindeliverabilitycampaign";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDomainDeliverabilityCampaignsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domaindeliverabilitycampaign_1 = require("./domaindeliverabilitycampaign");
 // ListDomainDeliverabilityCampaignsResponse
 /**
  * An array of objects that provide deliverability data for all the campaigns that used a specific domain to send email during a specified time range. This data is available for a domain only if you enabled the Deliverability dashboard (<code>PutDeliverabilityDashboardOption</code> operation) for the domain.
@@ -34,13 +37,13 @@ var ListDomainDeliverabilityCampaignsResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainDeliverabilityCampaigns", elemType: DomainDeliverabilityCampaign }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainDeliverabilityCampaigns", elemType: domaindeliverabilitycampaign_1.DomainDeliverabilityCampaign }),
         __metadata("design:type", Array)
     ], ListDomainDeliverabilityCampaignsResponse.prototype, "domainDeliverabilityCampaigns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListDomainDeliverabilityCampaignsResponse.prototype, "nextToken", void 0);
     return ListDomainDeliverabilityCampaignsResponse;
-}(SpeakeasyBase));
-export { ListDomainDeliverabilityCampaignsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListDomainDeliverabilityCampaignsResponse = ListDomainDeliverabilityCampaignsResponse;

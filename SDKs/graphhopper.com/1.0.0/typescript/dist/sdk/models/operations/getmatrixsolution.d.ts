@@ -9,7 +9,7 @@ export declare class GetMatrixSolutionRequest extends SpeakeasyBase {
 export declare class GetMatrixSolutionResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     matrixResponse?: shared.MatrixResponse;
     statusCode: number;
 }

@@ -53,7 +53,7 @@ export class GetProjectsAlt1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.Project })
   projects?: shared.Project[];

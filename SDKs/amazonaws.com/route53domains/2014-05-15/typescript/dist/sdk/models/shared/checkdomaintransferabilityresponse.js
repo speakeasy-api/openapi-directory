@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainTransferability } from "./domaintransferability";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckDomainTransferabilityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domaintransferability_1 = require("./domaintransferability");
 // CheckDomainTransferabilityResponse
 /**
  * The CheckDomainTransferability response includes the following elements.
@@ -34,9 +37,9 @@ var CheckDomainTransferabilityResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Transferability" }),
-        __metadata("design:type", DomainTransferability)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Transferability" }),
+        __metadata("design:type", domaintransferability_1.DomainTransferability)
     ], CheckDomainTransferabilityResponse.prototype, "transferability", void 0);
     return CheckDomainTransferabilityResponse;
-}(SpeakeasyBase));
-export { CheckDomainTransferabilityResponse };
+}(utils_1.SpeakeasyBase));
+exports.CheckDomainTransferabilityResponse = CheckDomainTransferabilityResponse;

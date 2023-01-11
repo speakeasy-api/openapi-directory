@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DistributionSummary } from "./distributionsummary";
+import { DistributionSummaryList } from "./distributionsummarylist";
 /**
  * A distribution list.
 **/
 export declare class DistributionList extends SpeakeasyBase {
     isTruncated: boolean;
-    items?: DistributionSummary[];
+    items?: DistributionSummaryList[];
     marker: string;
     maxItems: number;
     nextMarker?: string;

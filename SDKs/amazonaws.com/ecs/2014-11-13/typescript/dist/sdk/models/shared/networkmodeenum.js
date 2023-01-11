@@ -1,7 +1,10 @@
-export var NetworkModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkModeEnum = void 0;
+var NetworkModeEnum;
 (function (NetworkModeEnum) {
     NetworkModeEnum["Bridge"] = "bridge";
     NetworkModeEnum["Host"] = "host";
     NetworkModeEnum["Awsvpc"] = "awsvpc";
     NetworkModeEnum["None"] = "none";
-})(NetworkModeEnum || (NetworkModeEnum = {}));
+})(NetworkModeEnum = exports.NetworkModeEnum || (exports.NetworkModeEnum = {}));

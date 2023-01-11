@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { InternationalReturnOverrideType } from "./internationalreturnoverridetype";
-import { TimeDuration } from "./timeduration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturnPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var internationalreturnoverridetype_1 = require("./internationalreturnoverridetype");
+var timeduration_1 = require("./timeduration");
 // ReturnPolicy
 /**
  * Root container that defines the fields for a seller's return policy. The returnPolicy encapsulates a seller's terms for how they handle item returns, the name and description of the policy, and the marketplace and category group(s) to which the return policy is applied. While each seller must define at least one return policy for every marketplace into which they sell, sellers can define multiple return policies for a single marketplace by specifying different configurations for the unique policies.
@@ -36,61 +39,61 @@ var ReturnPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], ReturnPolicy.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extendedHolidayReturnsOffered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendedHolidayReturnsOffered" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicy.prototype, "extendedHolidayReturnsOffered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internationalOverride" }),
-        __metadata("design:type", InternationalReturnOverrideType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internationalOverride" }),
+        __metadata("design:type", internationalreturnoverridetype_1.InternationalReturnOverrideType)
     ], ReturnPolicy.prototype, "internationalOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundMethod" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "refundMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restockingFeePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restockingFeePercentage" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "restockingFeePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnInstructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnInstructions" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "returnInstructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnMethod" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "returnMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPeriod" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPeriod" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], ReturnPolicy.prototype, "returnPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPolicyId" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "returnPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnShippingCostPayer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnShippingCostPayer" }),
         __metadata("design:type", String)
     ], ReturnPolicy.prototype, "returnShippingCostPayer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnsAccepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnsAccepted" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicy.prototype, "returnsAccepted", void 0);
     return ReturnPolicy;
-}(SpeakeasyBase));
-export { ReturnPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ReturnPolicy = ReturnPolicy;

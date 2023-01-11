@@ -3,7 +3,7 @@ export declare enum GetRuleTree200ApplicationJsonActionEnum {
     GetRuleTree = "GetRuleTree"
 }
 export declare class GetRuleTree200ApplicationJsonData extends SpeakeasyBase {
-    ruleCategories: Map<string, any>;
+    ruleCategories: Record<string, any>;
 }
 export declare enum GetRuleTree200ApplicationJsonResultEnum {
     Success = "success",
@@ -16,6 +16,6 @@ export declare class GetRuleTree200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetRuleTreeResponse extends SpeakeasyBase {
     contentType: string;
-    getRuleTree200ApplicationJsonObject?: GetRuleTree200ApplicationJson;
+    getRuleTree200ApplicationJSONObject?: GetRuleTree200ApplicationJson;
     statusCode: number;
 }

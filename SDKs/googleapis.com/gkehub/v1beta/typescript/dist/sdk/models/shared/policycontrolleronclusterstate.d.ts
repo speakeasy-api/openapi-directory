@@ -10,9 +10,6 @@ export declare enum PolicyControllerOnClusterStateStateEnum {
     HubError = "HUB_ERROR",
     Suspended = "SUSPENDED"
 }
-/**
- * OnClusterState represents the state of a sub-component of Policy Controller.
-**/
 export declare class PolicyControllerOnClusterState extends SpeakeasyBase {
     details?: string;
     state?: PolicyControllerOnClusterStateStateEnum;

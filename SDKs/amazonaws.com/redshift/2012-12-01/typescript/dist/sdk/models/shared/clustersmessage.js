@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cluster } from "./cluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClustersMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterlist_1 = require("./clusterlist");
 // ClustersMessage
 /**
  * Contains the output from the <a>DescribeClusters</a> action.
@@ -34,13 +37,13 @@ var ClustersMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Cluster }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusterlist_1.ClusterList }),
         __metadata("design:type", Array)
     ], ClustersMessage.prototype, "clusters", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClustersMessage.prototype, "marker", void 0);
     return ClustersMessage;
-}(SpeakeasyBase));
-export { ClustersMessage };
+}(utils_1.SpeakeasyBase));
+exports.ClustersMessage = ClustersMessage;

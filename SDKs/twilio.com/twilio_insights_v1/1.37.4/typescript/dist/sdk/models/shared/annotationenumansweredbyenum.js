@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnnotationEnumAnsweredByEnum = void 0;
+var AnnotationEnumAnsweredByEnum;
+(function (AnnotationEnumAnsweredByEnum) {
+    AnnotationEnumAnsweredByEnum["UnknownAnsweredBy"] = "unknown_answered_by";
+    AnnotationEnumAnsweredByEnum["Human"] = "human";
+    AnnotationEnumAnsweredByEnum["Machine"] = "machine";
+})(AnnotationEnumAnsweredByEnum = exports.AnnotationEnumAnsweredByEnum || (exports.AnnotationEnumAnsweredByEnum = {}));

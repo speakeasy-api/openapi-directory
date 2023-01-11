@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateApiRequest, CreateApiResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: CreateApiRequest = {
   queryParams: {
-    workspace: "aut",
+    workspace: "sit",
   },
   request: {
     api: {
-      description: "aut",
-      name: "magnam",
-      summary: "eligendi",
+      description: "voluptas",
+      name: "culpa",
+      summary: "expedita",
     },
   },
 };

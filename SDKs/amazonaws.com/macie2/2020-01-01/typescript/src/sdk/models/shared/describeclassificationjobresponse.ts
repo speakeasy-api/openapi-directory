@@ -66,7 +66,7 @@ export class DescribeClassificationJobResponse extends SpeakeasyBase {
   statistics?: Statistics;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=userPausedDetails" })
   userPausedDetails?: UserPausedDetails;

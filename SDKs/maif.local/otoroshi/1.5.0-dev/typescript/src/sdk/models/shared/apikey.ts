@@ -26,7 +26,7 @@ export class ApiKey extends SpeakeasyBase {
   enabled: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=monthlyQuota" })
   monthlyQuota?: number;

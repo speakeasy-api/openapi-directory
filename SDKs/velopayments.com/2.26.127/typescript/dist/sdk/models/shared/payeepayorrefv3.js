@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvitationStatus2Enum } from "./invitationstatus2enum";
-import { PayableIssue } from "./payableissue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayeePayorRefV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var invitationstatus2enum_1 = require("./invitationstatus2enum");
+var payableissue_1 = require("./payableissue");
 var PayeePayorRefV3 = /** @class */ (function (_super) {
     __extends(PayeePayorRefV3, _super);
     function PayeePayorRefV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationStatus" }),
         __metadata("design:type", String)
     ], PayeePayorRefV3.prototype, "invitationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationStatusTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationStatusTimestamp" }),
         __metadata("design:type", Date)
     ], PayeePayorRefV3.prototype, "invitationStatusTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payableIssues", elemType: PayableIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payableIssues", elemType: payableissue_1.PayableIssue }),
         __metadata("design:type", Array)
     ], PayeePayorRefV3.prototype, "payableIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payableStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payableStatus" }),
         __metadata("design:type", Boolean)
     ], PayeePayorRefV3.prototype, "payableStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelId" }),
         __metadata("design:type", String)
     ], PayeePayorRefV3.prototype, "paymentChannelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], PayeePayorRefV3.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteId" }),
         __metadata("design:type", String)
     ], PayeePayorRefV3.prototype, "remoteId", void 0);
     return PayeePayorRefV3;
-}(SpeakeasyBase));
-export { PayeePayorRefV3 };
+}(utils_1.SpeakeasyBase));
+exports.PayeePayorRefV3 = PayeePayorRefV3;

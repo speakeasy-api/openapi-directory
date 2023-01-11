@@ -7,8 +7,8 @@ export declare class CompanyNotificationListRequest extends SpeakeasyBase {
     security: CompanyNotificationListSecurity;
 }
 export declare class CompanyNotificationListResponse extends SpeakeasyBase {
-    companyNotificationList200ApplicationJsonAnies?: any[];
-    companyNotificationListDefaultApplicationJsonAny?: any;
+    companyNotificationList200ApplicationJSONAnies?: any[];
+    companyNotificationListDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

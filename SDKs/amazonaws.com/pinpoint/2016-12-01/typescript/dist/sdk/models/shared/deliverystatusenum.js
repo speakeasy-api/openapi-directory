@@ -1,4 +1,7 @@
-export var DeliveryStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryStatusEnum = void 0;
+var DeliveryStatusEnum;
 (function (DeliveryStatusEnum) {
     DeliveryStatusEnum["Successful"] = "SUCCESSFUL";
     DeliveryStatusEnum["Throttled"] = "THROTTLED";
@@ -7,4 +10,4 @@ export var DeliveryStatusEnum;
     DeliveryStatusEnum["UnknownFailure"] = "UNKNOWN_FAILURE";
     DeliveryStatusEnum["OptOut"] = "OPT_OUT";
     DeliveryStatusEnum["Duplicate"] = "DUPLICATE";
-})(DeliveryStatusEnum || (DeliveryStatusEnum = {}));
+})(DeliveryStatusEnum = exports.DeliveryStatusEnum || (exports.DeliveryStatusEnum = {}));

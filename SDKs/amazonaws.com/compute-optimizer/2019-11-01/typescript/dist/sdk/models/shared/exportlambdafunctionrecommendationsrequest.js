@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileFormatEnum } from "./fileformatenum";
-import { LambdaFunctionRecommendationFilter } from "./lambdafunctionrecommendationfilter";
-import { S3DestinationConfig } from "./s3destinationconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportLambdaFunctionRecommendationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileformatenum_1 = require("./fileformatenum");
+var lambdafunctionrecommendationfilter_1 = require("./lambdafunctionrecommendationfilter");
+var s3destinationconfig_1 = require("./s3destinationconfig");
 var ExportLambdaFunctionRecommendationsRequest = /** @class */ (function (_super) {
     __extends(ExportLambdaFunctionRecommendationsRequest, _super);
     function ExportLambdaFunctionRecommendationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountIds" }),
         __metadata("design:type", Array)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "accountIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldsToExport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldsToExport" }),
         __metadata("design:type", Array)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "fieldsToExport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileFormat" }),
         __metadata("design:type", String)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "fileFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: LambdaFunctionRecommendationFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: lambdafunctionrecommendationfilter_1.LambdaFunctionRecommendationFilter }),
         __metadata("design:type", Array)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeMemberAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeMemberAccounts" }),
         __metadata("design:type", Boolean)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "includeMemberAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3DestinationConfig" }),
-        __metadata("design:type", S3DestinationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3DestinationConfig" }),
+        __metadata("design:type", s3destinationconfig_1.S3DestinationConfig)
     ], ExportLambdaFunctionRecommendationsRequest.prototype, "s3DestinationConfig", void 0);
     return ExportLambdaFunctionRecommendationsRequest;
-}(SpeakeasyBase));
-export { ExportLambdaFunctionRecommendationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExportLambdaFunctionRecommendationsRequest = ExportLambdaFunctionRecommendationsRequest;

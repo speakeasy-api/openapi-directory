@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamespacePatch = void 0;
+var utils_1 = require("../../../internal/utils");
 var NamespacePatch = /** @class */ (function (_super) {
     __extends(NamespacePatch, _super);
     function NamespacePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticated" }),
         __metadata("design:type", Boolean)
     ], NamespacePatch.prototype, "authenticated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistLast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistLast" }),
         __metadata("design:type", Boolean)
     ], NamespacePatch.prototype, "persistLast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persisted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persisted" }),
         __metadata("design:type", Boolean)
     ], NamespacePatch.prototype, "persisted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pushEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pushEnabled" }),
         __metadata("design:type", Boolean)
     ], NamespacePatch.prototype, "pushEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tlsOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tlsOnly" }),
         __metadata("design:type", Boolean)
     ], NamespacePatch.prototype, "tlsOnly", void 0);
     return NamespacePatch;
-}(SpeakeasyBase));
-export { NamespacePatch };
+}(utils_1.SpeakeasyBase));
+exports.NamespacePatch = NamespacePatch;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointAccess } from "./endpointaccess";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointAccessList = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointaccess_1 = require("./endpointaccess");
 var EndpointAccessList = /** @class */ (function (_super) {
     __extends(EndpointAccessList, _super);
     function EndpointAccessList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: EndpointAccess }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: endpointaccess_1.EndpointAccess }),
         __metadata("design:type", Array)
     ], EndpointAccessList.prototype, "endpointAccessList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccessList.prototype, "marker", void 0);
     return EndpointAccessList;
-}(SpeakeasyBase));
-export { EndpointAccessList };
+}(utils_1.SpeakeasyBase));
+exports.EndpointAccessList = EndpointAccessList;

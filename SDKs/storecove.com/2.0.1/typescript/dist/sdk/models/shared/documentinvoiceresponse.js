@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvoiceResponseClarification } from "./invoiceresponseclarification";
-export var DocumentInvoiceResponseResponseCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentInvoiceResponse = exports.DocumentInvoiceResponseResponseCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var invoiceresponseclarification_1 = require("./invoiceresponseclarification");
+var DocumentInvoiceResponseResponseCodeEnum;
 (function (DocumentInvoiceResponseResponseCodeEnum) {
     DocumentInvoiceResponseResponseCodeEnum["Ab"] = "AB";
     DocumentInvoiceResponseResponseCodeEnum["Ip"] = "IP";
@@ -32,7 +35,7 @@ export var DocumentInvoiceResponseResponseCodeEnum;
     DocumentInvoiceResponseResponseCodeEnum["Re"] = "RE";
     DocumentInvoiceResponseResponseCodeEnum["Ap"] = "AP";
     DocumentInvoiceResponseResponseCodeEnum["Pd"] = "PD";
-})(DocumentInvoiceResponseResponseCodeEnum || (DocumentInvoiceResponseResponseCodeEnum = {}));
+})(DocumentInvoiceResponseResponseCodeEnum = exports.DocumentInvoiceResponseResponseCodeEnum || (exports.DocumentInvoiceResponseResponseCodeEnum = {}));
 // DocumentInvoiceResponse
 /**
  * The invoice response to send.
@@ -43,21 +46,21 @@ var DocumentInvoiceResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clarifications", elemType: InvoiceResponseClarification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clarifications", elemType: invoiceresponseclarification_1.InvoiceResponseClarification }),
         __metadata("design:type", Array)
     ], DocumentInvoiceResponse.prototype, "clarifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveDate" }),
         __metadata("design:type", String)
     ], DocumentInvoiceResponse.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], DocumentInvoiceResponse.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseCode" }),
         __metadata("design:type", String)
     ], DocumentInvoiceResponse.prototype, "responseCode", void 0);
     return DocumentInvoiceResponse;
-}(SpeakeasyBase));
-export { DocumentInvoiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DocumentInvoiceResponse = DocumentInvoiceResponse;

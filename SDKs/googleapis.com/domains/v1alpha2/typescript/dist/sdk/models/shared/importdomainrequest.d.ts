@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ImportDomainRequest extends SpeakeasyBase {
     domainName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
 }

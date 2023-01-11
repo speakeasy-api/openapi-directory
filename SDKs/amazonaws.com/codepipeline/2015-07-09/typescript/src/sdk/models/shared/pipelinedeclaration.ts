@@ -13,7 +13,7 @@ export class PipelineDeclaration extends SpeakeasyBase {
   artifactStore?: ArtifactStore;
 
   @SpeakeasyMetadata({ data: "json, name=artifactStores", elemType: ArtifactStore })
-  artifactStores?: Map<string, ArtifactStore>;
+  artifactStores?: Record<string, ArtifactStore>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

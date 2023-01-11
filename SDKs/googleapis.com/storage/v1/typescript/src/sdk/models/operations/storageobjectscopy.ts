@@ -145,7 +145,7 @@ export class StorageObjectsCopyRequest extends SpeakeasyBase {
   queryParams: StorageObjectsCopyQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: shared.Object;
+  request?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   security: StorageObjectsCopySecurity;
@@ -157,7 +157,7 @@ export class StorageObjectsCopyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: shared.Object;
+  object?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   statusCode: number;

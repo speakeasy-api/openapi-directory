@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ContentAccountsAuthinfoRequest, ContentAccountsAuthinfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: ContentAccountsAuthinfoRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "inventore",
-    alt: "json",
-    callback: "dicta",
-    fields: "neque",
-    key: "temporibus",
-    oauthToken: "dolorem",
-    prettyPrint: false,
-    quotaUser: "delectus",
-    uploadType: "dolore",
-    uploadProtocol: "sequi",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
 };
 

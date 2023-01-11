@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,22 +34,22 @@ const sdk = new SDK(WithSecurity(
 const req: GetAddSourceIdentifierToSubscriptionRequest = {
   queryParams: {
     action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "sequi",
-    subscriptionName: "doloremque",
+    sourceIdentifier: "voluptas",
+    subscriptionName: "culpa",
     version: "2013-09-09",
   },
   headers: {
-    xAmzAlgorithm: "ut",
-    xAmzContentSha256: "omnis",
-    xAmzCredential: "qui",
-    xAmzDate: "voluptate",
-    xAmzSecurityToken: "quia",
-    xAmzSignature: "numquam",
-    xAmzSignedHeaders: "voluptates",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
+    xAmzDate: "voluptas",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -71,9 +70,6 @@ sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentif
 * `getDeleteEventSubscription`
 * `getDeleteOptionGroup`
 * `getDownloadDbLogFilePortion`
-* `getModifyDbInstance`
-* `getModifyDbSubnetGroup`
-* `getModifyEventSubscription`
 * `getPromoteReadReplica`
 * `getRebootDbInstance`
 * `getRemoveSourceIdentifierFromSubscription`

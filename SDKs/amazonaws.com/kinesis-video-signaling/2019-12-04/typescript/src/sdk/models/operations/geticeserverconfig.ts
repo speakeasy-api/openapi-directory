@@ -33,7 +33,7 @@ export enum GetIceServerConfigRequestBodyServiceEnum {
 
 export class GetIceServerConfigRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn: string;
+  channelARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=ClientId" })
   clientId?: string;

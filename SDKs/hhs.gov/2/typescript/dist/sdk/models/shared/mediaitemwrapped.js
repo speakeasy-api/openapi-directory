@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { MediaItem } from "./mediaitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaItemWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var mediaitem_1 = require("./mediaitem");
 var MediaItemWrapped = /** @class */ (function (_super) {
     __extends(MediaItemWrapped, _super);
     function MediaItemWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], MediaItemWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], MediaItemWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: MediaItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: mediaitem_1.MediaItem }),
         __metadata("design:type", Array)
     ], MediaItemWrapped.prototype, "results", void 0);
     return MediaItemWrapped;
-}(SpeakeasyBase));
-export { MediaItemWrapped };
+}(utils_1.SpeakeasyBase));
+exports.MediaItemWrapped = MediaItemWrapped;

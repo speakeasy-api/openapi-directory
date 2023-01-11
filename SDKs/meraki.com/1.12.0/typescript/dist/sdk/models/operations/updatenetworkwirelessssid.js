@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessSsidResponse = exports.UpdateNetworkWirelessSsidRequest = exports.UpdateNetworkWirelessSsidRequestBody = exports.UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum = exports.UpdateNetworkWirelessSsidRequestBodySplashPageEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusServers = exports.UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers = exports.UpdateNetworkWirelessSsidRequestBodyOauth = exports.UpdateNetworkWirelessSsidRequestBodyLocalRadius = exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication = exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication = exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate = exports.UpdateNetworkWirelessSsidRequestBodyLdap = exports.UpdateNetworkWirelessSsidRequestBodyLdapServers = exports.UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate = exports.UpdateNetworkWirelessSsidRequestBodyLdapCredentials = exports.UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum = exports.UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum = exports.UpdateNetworkWirelessSsidRequestBodyDot11w = exports.UpdateNetworkWirelessSsidRequestBodyDot11r = exports.UpdateNetworkWirelessSsidRequestBodyDnsRewrite = exports.UpdateNetworkWirelessSsidRequestBodyAuthModeEnum = exports.UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds = exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectory = exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers = exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials = exports.UpdateNetworkWirelessSsidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessSsidPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidPathParams, _super);
     function UpdateNetworkWirelessSsidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidPathParams.prototype, "number", void 0);
     return UpdateNetworkWirelessSsidPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidPathParams = UpdateNetworkWirelessSsidPathParams;
 // UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials
 /**
  * (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
@@ -49,32 +52,32 @@ var UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logonName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logonName" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials.prototype, "logonName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials.prototype, "password", void 0);
     return UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials = UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials;
 var UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers, _super);
     function UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers.prototype, "port", void 0);
     return UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers = UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers;
 // UpdateNetworkWirelessSsidRequestBodyActiveDirectory
 /**
  * The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
@@ -85,33 +88,33 @@ var UpdateNetworkWirelessSsidRequestBodyActiveDirectory = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectory.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers", elemType: UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers", elemType: UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBodyActiveDirectory.prototype, "servers", void 0);
     return UpdateNetworkWirelessSsidRequestBodyActiveDirectory;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyActiveDirectory };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyActiveDirectory = UpdateNetworkWirelessSsidRequestBodyActiveDirectory;
 var UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds, _super);
     function UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds.prototype, "vlanId", void 0);
     return UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds };
-export var UpdateNetworkWirelessSsidRequestBodyAuthModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds = UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds;
+var UpdateNetworkWirelessSsidRequestBodyAuthModeEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyAuthModeEnum) {
     UpdateNetworkWirelessSsidRequestBodyAuthModeEnum["Open"] = "open";
     UpdateNetworkWirelessSsidRequestBodyAuthModeEnum["Psk"] = "psk";
@@ -122,7 +125,7 @@ export var UpdateNetworkWirelessSsidRequestBodyAuthModeEnum;
     UpdateNetworkWirelessSsidRequestBodyAuthModeEnum["EightThousandAndTwentyOnexLocalradius"] = "8021x-localradius";
     UpdateNetworkWirelessSsidRequestBodyAuthModeEnum["IpskWithRadius"] = "ipsk-with-radius";
     UpdateNetworkWirelessSsidRequestBodyAuthModeEnum["IpskWithoutRadius"] = "ipsk-without-radius";
-})(UpdateNetworkWirelessSsidRequestBodyAuthModeEnum || (UpdateNetworkWirelessSsidRequestBodyAuthModeEnum = {}));
+})(UpdateNetworkWirelessSsidRequestBodyAuthModeEnum = exports.UpdateNetworkWirelessSsidRequestBodyAuthModeEnum || (exports.UpdateNetworkWirelessSsidRequestBodyAuthModeEnum = {}));
 // UpdateNetworkWirelessSsidRequestBodyDnsRewrite
 /**
  * DNS servers rewrite settings
@@ -133,16 +136,16 @@ var UpdateNetworkWirelessSsidRequestBodyDnsRewrite = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsCustomNameservers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsCustomNameservers" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBodyDnsRewrite.prototype, "dnsCustomNameservers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyDnsRewrite.prototype, "enabled", void 0);
     return UpdateNetworkWirelessSsidRequestBodyDnsRewrite;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyDnsRewrite };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyDnsRewrite = UpdateNetworkWirelessSsidRequestBodyDnsRewrite;
 // UpdateNetworkWirelessSsidRequestBodyDot11r
 /**
  * The current setting for 802.11r
@@ -153,16 +156,16 @@ var UpdateNetworkWirelessSsidRequestBodyDot11r = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adaptive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adaptive" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyDot11r.prototype, "adaptive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyDot11r.prototype, "enabled", void 0);
     return UpdateNetworkWirelessSsidRequestBodyDot11r;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyDot11r };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyDot11r = UpdateNetworkWirelessSsidRequestBodyDot11r;
 // UpdateNetworkWirelessSsidRequestBodyDot11w
 /**
  * The current setting for Protected Management Frames (802.11w).
@@ -173,26 +176,26 @@ var UpdateNetworkWirelessSsidRequestBodyDot11w = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyDot11w.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyDot11w.prototype, "required", void 0);
     return UpdateNetworkWirelessSsidRequestBodyDot11w;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyDot11w };
-export var UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyDot11w = UpdateNetworkWirelessSsidRequestBodyDot11w;
+var UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum) {
     UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum["Wep"] = "wep";
     UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum["Wpa"] = "wpa";
-})(UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum || (UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum = {}));
-export var UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum;
+})(UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum = exports.UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum || (exports.UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum = {}));
+var UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum) {
     UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum["AccessDisabled"] = "access disabled";
     UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum["AccessEnabled"] = "access enabled";
-})(UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum || (UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum = {}));
+})(UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum = exports.UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum || (exports.UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum = {}));
 // UpdateNetworkWirelessSsidRequestBodyLdapCredentials
 /**
  * (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
@@ -203,16 +206,16 @@ var UpdateNetworkWirelessSsidRequestBodyLdapCredentials = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distinguishedName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distinguishedName" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLdapCredentials.prototype, "distinguishedName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLdapCredentials.prototype, "password", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLdapCredentials;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLdapCredentials };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLdapCredentials = UpdateNetworkWirelessSsidRequestBodyLdapCredentials;
 // UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate
 /**
  * The CA certificate used to sign the LDAP server's key.
@@ -223,28 +226,28 @@ var UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate.prototype, "contents", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate = UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate;
 var UpdateNetworkWirelessSsidRequestBodyLdapServers = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBodyLdapServers, _super);
     function UpdateNetworkWirelessSsidRequestBodyLdapServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLdapServers.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyLdapServers.prototype, "port", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLdapServers;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLdapServers };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLdapServers = UpdateNetworkWirelessSsidRequestBodyLdapServers;
 // UpdateNetworkWirelessSsidRequestBodyLdap
 /**
  * The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
@@ -255,24 +258,24 @@ var UpdateNetworkWirelessSsidRequestBodyLdap = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseDistinguishedName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseDistinguishedName" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLdap.prototype, "baseDistinguishedName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentials" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLdapCredentials)
     ], UpdateNetworkWirelessSsidRequestBodyLdap.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCaCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCaCertificate" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate)
     ], UpdateNetworkWirelessSsidRequestBodyLdap.prototype, "serverCaCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers", elemType: UpdateNetworkWirelessSsidRequestBodyLdapServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers", elemType: UpdateNetworkWirelessSsidRequestBodyLdapServers }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBodyLdap.prototype, "servers", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLdap;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLdap };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLdap = UpdateNetworkWirelessSsidRequestBodyLdap;
 // UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate
 /**
  * The Client CA Certificate used to sign the client certificate.
@@ -283,12 +286,12 @@ var UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClie
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate.prototype, "contents", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate = UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate;
 // UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication
 /**
  * The current setting for certificate verification.
@@ -299,28 +302,28 @@ var UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication = /
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRootCaCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRootCaCertificate" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication.prototype, "clientRootCaCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ocspResponderUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ocspResponderUrl" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication.prototype, "ocspResponderUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useLdap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useLdap" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication.prototype, "useLdap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useOcsp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useOcsp" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication.prototype, "useOcsp", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication = UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication;
 // UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication
 /**
  * The current setting for password-based authentication.
@@ -331,12 +334,12 @@ var UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication.prototype, "enabled", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication = UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication;
 // UpdateNetworkWirelessSsidRequestBodyLocalRadius
 /**
  * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
@@ -347,20 +350,20 @@ var UpdateNetworkWirelessSsidRequestBodyLocalRadius = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheTimeout" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadius.prototype, "cacheTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthentication" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadius.prototype, "certificateAuthentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordAuthentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordAuthentication" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication)
     ], UpdateNetworkWirelessSsidRequestBodyLocalRadius.prototype, "passwordAuthentication", void 0);
     return UpdateNetworkWirelessSsidRequestBodyLocalRadius;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyLocalRadius };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyLocalRadius = UpdateNetworkWirelessSsidRequestBodyLocalRadius;
 // UpdateNetworkWirelessSsidRequestBodyOauth
 /**
  * The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
@@ -371,78 +374,78 @@ var UpdateNetworkWirelessSsidRequestBodyOauth = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedDomains" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBodyOauth.prototype, "allowedDomains", void 0);
     return UpdateNetworkWirelessSsidRequestBodyOauth;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyOauth };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyOauth = UpdateNetworkWirelessSsidRequestBodyOauth;
 var UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers, _super);
     function UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radsecEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radsecEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers.prototype, "radsecEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers.prototype, "secret", void 0);
     return UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers };
-export var UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers = UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers;
+var UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum) {
     UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum["FilterId"] = "Filter-Id";
     UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum["ReplyMessage"] = "Reply-Message";
     UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum["AirespaceAclName"] = "Airespace-ACL-Name";
     UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum["ArubaUserRole"] = "Aruba-User-Role";
-})(UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum || (UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum = {}));
-export var UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum;
+})(UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum || (exports.UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum = {}));
+var UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum) {
     UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum["DenyAccess"] = "Deny access";
     UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum["AllowAccess"] = "Allow access";
-})(UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum || (UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum = {}));
-export var UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum;
+})(UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum || (exports.UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum = {}));
+var UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum) {
     UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum["StrictPriorityOrder"] = "Strict priority order";
     UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum["RoundRobin"] = "Round robin";
-})(UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum || (UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum = {}));
+})(UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum = exports.UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum || (exports.UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum = {}));
 var UpdateNetworkWirelessSsidRequestBodyRadiusServers = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBodyRadiusServers, _super);
     function UpdateNetworkWirelessSsidRequestBodyRadiusServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusServers.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusServers.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radsecEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radsecEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusServers.prototype, "radsecEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBodyRadiusServers.prototype, "secret", void 0);
     return UpdateNetworkWirelessSsidRequestBodyRadiusServers;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBodyRadiusServers };
-export var UpdateNetworkWirelessSsidRequestBodySplashPageEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBodyRadiusServers = UpdateNetworkWirelessSsidRequestBodyRadiusServers;
+var UpdateNetworkWirelessSsidRequestBodySplashPageEnum;
 (function (UpdateNetworkWirelessSsidRequestBodySplashPageEnum) {
     UpdateNetworkWirelessSsidRequestBodySplashPageEnum["None"] = "None";
     UpdateNetworkWirelessSsidRequestBodySplashPageEnum["ClickThroughSplashPage"] = "Click-through splash page";
@@ -458,272 +461,272 @@ export var UpdateNetworkWirelessSsidRequestBodySplashPageEnum;
     UpdateNetworkWirelessSsidRequestBodySplashPageEnum["SponsoredGuest"] = "Sponsored guest";
     UpdateNetworkWirelessSsidRequestBodySplashPageEnum["CiscoIse"] = "Cisco ISE";
     UpdateNetworkWirelessSsidRequestBodySplashPageEnum["GoogleAppsDomain"] = "Google Apps domain";
-})(UpdateNetworkWirelessSsidRequestBodySplashPageEnum || (UpdateNetworkWirelessSsidRequestBodySplashPageEnum = {}));
-export var UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum;
+})(UpdateNetworkWirelessSsidRequestBodySplashPageEnum = exports.UpdateNetworkWirelessSsidRequestBodySplashPageEnum || (exports.UpdateNetworkWirelessSsidRequestBodySplashPageEnum = {}));
+var UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum;
 (function (UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum) {
     UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum["Wpa1Only"] = "WPA1 only";
     UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum["Wpa1AndWpa2"] = "WPA1 and WPA2";
     UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum["Wpa2Only"] = "WPA2 only";
     UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum["Wpa3TransitionMode"] = "WPA3 Transition Mode";
     UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum["Wpa3Only"] = "WPA3 only";
-})(UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum || (UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum = {}));
+})(UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum = exports.UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum || (exports.UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum = {}));
 var UpdateNetworkWirelessSsidRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequestBody, _super);
     function UpdateNetworkWirelessSsidRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeDirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeDirectory" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyActiveDirectory)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "activeDirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adultContentFilteringEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adultContentFilteringEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "adultContentFilteringEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apTagsAndVlanIds", elemType: UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apTagsAndVlanIds", elemType: UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "apTagsAndVlanIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "authMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityTags" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "availabilityTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableOnAllAps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableOnAllAps" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "availableOnAllAps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandSelection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandSelection" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "bandSelection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=concentratorNetworkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concentratorNetworkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "concentratorNetworkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultVlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultVlanId" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "defaultVlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsRewrite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsRewrite" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyDnsRewrite)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "dnsRewrite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dot11r" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dot11r" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyDot11r)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "dot11r", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dot11w" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dot11w" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyDot11w)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "dot11w", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "encryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enterpriseAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enterpriseAdminAccess" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "enterpriseAdminAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAssignmentMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAssignmentMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "ipAssignmentMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lanIsolationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lanIsolationEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "lanIsolationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLdap)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "ldap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localRadius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localRadius" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyLocalRadius)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "localRadius", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mandatoryDhcpEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mandatoryDhcpEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "mandatoryDhcpEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minBitrate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minBitrate" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "minBitrate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBodyOauth)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "oauth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perClientBandwidthLimitDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perClientBandwidthLimitDown" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "perClientBandwidthLimitDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perClientBandwidthLimitUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perClientBandwidthLimitUp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "perClientBandwidthLimitUp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perSsidBandwidthLimitDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perSsidBandwidthLimitDown" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "perSsidBandwidthLimitDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perSsidBandwidthLimitUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perSsidBandwidthLimitUp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "perSsidBandwidthLimitUp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=psk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=psk" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "psk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusAccountingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusAccountingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusAccountingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusAccountingInterimInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusAccountingInterimInterval" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusAccountingInterimInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusAccountingServers", elemType: UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusAccountingServers", elemType: UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusAccountingServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusAttributeForGroupPolicies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusAttributeForGroupPolicies" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusAttributeForGroupPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusAuthenticationNasId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusAuthenticationNasId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusAuthenticationNasId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusCalledStationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusCalledStationId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusCalledStationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusCoaEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusCoaEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusCoaEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusFailoverPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusFailoverPolicy" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusFailoverPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusFallbackEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusFallbackEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusFallbackEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusGuestVlanEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusGuestVlanEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusGuestVlanEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusGuestVlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusGuestVlanId" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusGuestVlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusLoadBalancingPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusLoadBalancingPolicy" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusLoadBalancingPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusOverride" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusProxyEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusProxyEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusProxyEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusServerAttemptsLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusServerAttemptsLimit" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusServerAttemptsLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusServerTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusServerTimeout" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusServerTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusServers", elemType: UpdateNetworkWirelessSsidRequestBodyRadiusServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusServers", elemType: UpdateNetworkWirelessSsidRequestBodyRadiusServers }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radiusTestingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radiusTestingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "radiusTestingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashGuestSponsorDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashGuestSponsorDomains" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "splashGuestSponsorDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashPage" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "splashPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useVlanTagging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useVlanTagging" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "useVlanTagging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visible" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "visible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "vlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=walledGardenEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=walledGardenEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "walledGardenEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=walledGardenRanges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=walledGardenRanges" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "walledGardenRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wpaEncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wpaEncryptionMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidRequestBody.prototype, "wpaEncryptionMode", void 0);
     return UpdateNetworkWirelessSsidRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequestBody = UpdateNetworkWirelessSsidRequestBody;
 var UpdateNetworkWirelessSsidRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidRequest, _super);
     function UpdateNetworkWirelessSsidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessSsidPathParams)
     ], UpdateNetworkWirelessSsidRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessSsidRequestBody)
     ], UpdateNetworkWirelessSsidRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessSsidRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidRequest = UpdateNetworkWirelessSsidRequest;
 var UpdateNetworkWirelessSsidResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidResponse, _super);
     function UpdateNetworkWirelessSsidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessSsidResponse.prototype, "updateNetworkWirelessSsid200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessSsidResponse.prototype, "updateNetworkWirelessSsid200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessSsidResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidResponse = UpdateNetworkWirelessSsidResponse;

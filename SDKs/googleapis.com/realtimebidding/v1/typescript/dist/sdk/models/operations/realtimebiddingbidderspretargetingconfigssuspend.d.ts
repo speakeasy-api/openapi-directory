@@ -23,7 +23,7 @@ export declare class RealtimebiddingBiddersPretargetingConfigsSuspendSecurity ex
 export declare class RealtimebiddingBiddersPretargetingConfigsSuspendRequest extends SpeakeasyBase {
     pathParams: RealtimebiddingBiddersPretargetingConfigsSuspendPathParams;
     queryParams: RealtimebiddingBiddersPretargetingConfigsSuspendQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RealtimebiddingBiddersPretargetingConfigsSuspendSecurity;
 }
 export declare class RealtimebiddingBiddersPretargetingConfigsSuspendResponse extends SpeakeasyBase {

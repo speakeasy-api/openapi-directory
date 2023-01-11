@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoreSetResponse = exports.StoreSetRequest = exports.StoreSetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoreSetPathParams = /** @class */ (function (_super) {
     __extends(StoreSetPathParams, _super);
     function StoreSetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=persist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=persist" }),
         __metadata("design:type", Number)
     ], StoreSetPathParams.prototype, "persist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=var" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=var" }),
         __metadata("design:type", String)
     ], StoreSetPathParams.prototype, "var", void 0);
     return StoreSetPathParams;
-}(SpeakeasyBase));
-export { StoreSetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoreSetPathParams = StoreSetPathParams;
 var StoreSetRequest = /** @class */ (function (_super) {
     __extends(StoreSetRequest, _super);
     function StoreSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoreSetPathParams)
     ], StoreSetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], StoreSetRequest.prototype, "request", void 0);
     return StoreSetRequest;
-}(SpeakeasyBase));
-export { StoreSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoreSetRequest = StoreSetRequest;
 var StoreSetResponse = /** @class */ (function (_super) {
     __extends(StoreSetResponse, _super);
     function StoreSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoreSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoreSetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], StoreSetResponse.prototype, "storeSet200ApplicationJsonString", void 0);
+    ], StoreSetResponse.prototype, "storeSet200ApplicationJSONString", void 0);
     return StoreSetResponse;
-}(SpeakeasyBase));
-export { StoreSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoreSetResponse = StoreSetResponse;

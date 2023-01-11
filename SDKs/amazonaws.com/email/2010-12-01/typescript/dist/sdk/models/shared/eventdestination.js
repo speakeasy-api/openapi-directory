@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchDestination } from "./cloudwatchdestination";
-import { KinesisFirehoseDestination } from "./kinesisfirehosedestination";
-import { SnsDestination } from "./snsdestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventDestination = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchdestination_1 = require("./cloudwatchdestination");
+var kinesisfirehosedestination_1 = require("./kinesisfirehosedestination");
+var snsdestination_1 = require("./snsdestination");
 // EventDestination
 /**
  * <p>Contains information about the event destination that the specified email sending events will be published to.</p> <note> <p>When you create or update an event destination, you must provide one, and only one, destination. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification Service (Amazon SNS).</p> </note> <p>Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon SNS). For information about using configuration sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer Guide</a>.</p>
@@ -36,29 +39,29 @@ var EventDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CloudWatchDestination)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cloudwatchdestination_1.CloudWatchDestination)
     ], EventDestination.prototype, "cloudWatchDestination", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], EventDestination.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", KinesisFirehoseDestination)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", kinesisfirehosedestination_1.KinesisFirehoseDestination)
     ], EventDestination.prototype, "kinesisFirehoseDestination", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], EventDestination.prototype, "matchingEventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EventDestination.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SnsDestination)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", snsdestination_1.SnsDestination)
     ], EventDestination.prototype, "snsDestination", void 0);
     return EventDestination;
-}(SpeakeasyBase));
-export { EventDestination };
+}(utils_1.SpeakeasyBase));
+exports.EventDestination = EventDestination;

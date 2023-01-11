@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Campaign } from "./campaign";
-import { ExtendedAttribute } from "./extendedattribute";
-import { Language } from "./language";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var campaign_1 = require("./campaign");
+var extendedattribute_1 = require("./extendedattribute");
+var language_1 = require("./language");
+var source_1 = require("./source");
 var MediaItem = /** @class */ (function (_super) {
     __extends(MediaItem, _super);
     function MediaItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaigns", elemType: Campaign }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaigns", elemType: campaign_1.Campaign }),
         __metadata("design:type", Array)
     ], MediaItem.prototype, "campaigns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customAttributionUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customAttributionUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "customAttributionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customPreviewUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customPreviewUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "customPreviewUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customThumbnailUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customThumbnailUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "customThumbnailUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateContentAuthored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateContentAuthored" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateContentAuthored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateContentPublished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateContentPublished" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateContentPublished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateContentReviewed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateContentReviewed" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateContentReviewed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateContentUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateContentUpdated" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateContentUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateSyndicationCaptured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateSyndicationCaptured" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateSyndicationCaptured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateSyndicationUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateSyndicationUpdated" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateSyndicationUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateSyndicationVisible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateSyndicationVisible" }),
         __metadata("design:type", Date)
     ], MediaItem.prototype, "dateSyndicationVisible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extendedAttributes", elemType: ExtendedAttribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendedAttributes", elemType: extendedattribute_1.ExtendedAttribute }),
         __metadata("design:type", Array)
     ], MediaItem.prototype, "extendedAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalGuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalGuid" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "externalGuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foreignSyndicationAPIUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foreignSyndicationAPIUrl" }),
         __metadata("design:type", String)
-    ], MediaItem.prototype, "foreignSyndicationApiUrl", void 0);
+    ], MediaItem.prototype, "foreignSyndicationAPIUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], MediaItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
-        __metadata("design:type", Language)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
+        __metadata("design:type", language_1.Language)
     ], MediaItem.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaType" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "mediaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", source_1.Source)
     ], MediaItem.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "sourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "targetUrl", void 0);
     return MediaItem;
-}(SpeakeasyBase));
-export { MediaItem };
+}(utils_1.SpeakeasyBase));
+exports.MediaItem = MediaItem;

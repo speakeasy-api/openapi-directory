@@ -24,14 +24,14 @@ export class CreateIdentityPoolInput extends SpeakeasyBase {
   identityPoolName: string;
 
   @SpeakeasyMetadata({ data: "json, name=IdentityPoolTags" })
-  identityPoolTags?: Map<string, string>;
+  identityPoolTags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=OpenIdConnectProviderARNs" })
-  openIdConnectProviderArNs?: string[];
+  openIdConnectProviderARNs?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=SamlProviderARNs" })
-  samlProviderArNs?: string[];
+  samlProviderARNs?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=SupportedLoginProviders" })
-  supportedLoginProviders?: Map<string, string>;
+  supportedLoginProviders?: Record<string, string>;
 }

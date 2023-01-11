@@ -17,10 +17,10 @@ export class LaunchConfiguration extends SpeakeasyBase {
   blockDeviceMappings?: BlockDeviceMapping[];
 
   @SpeakeasyMetadata()
-  classicLinkVpcId?: string;
+  classicLinkVPCId?: string;
 
   @SpeakeasyMetadata()
-  classicLinkVpcSecurityGroups?: string[];
+  classicLinkVPCSecurityGroups?: string[];
 
   @SpeakeasyMetadata()
   createdTime: Date;
@@ -47,7 +47,7 @@ export class LaunchConfiguration extends SpeakeasyBase {
   keyName?: string;
 
   @SpeakeasyMetadata()
-  launchConfigurationArn?: string;
+  launchConfigurationARN?: string;
 
   @SpeakeasyMetadata()
   launchConfigurationName: string;

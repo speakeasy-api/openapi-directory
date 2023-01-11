@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryOutlineHistory = void 0;
+var utils_1 = require("../../../internal/utils");
 // StoryOutlineHistory
 /**
- * A revision repository for story outlines
+ * Base model for all types
 **/
 var StoryOutlineHistory = /** @class */ (function (_super) {
     __extends(StoryOutlineHistory, _super);
@@ -33,41 +36,41 @@ var StoryOutlineHistory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collaborator_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collaborator_user_id" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "collaboratorUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], StoryOutlineHistory.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outline" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "outline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision_number" }),
         __metadata("design:type", Number)
     ], StoryOutlineHistory.prototype, "revisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=story_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=story_id" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "storyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], StoryOutlineHistory.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], StoryOutlineHistory.prototype, "updatedBy", void 0);
     return StoryOutlineHistory;
-}(SpeakeasyBase));
-export { StoryOutlineHistory };
+}(utils_1.SpeakeasyBase));
+exports.StoryOutlineHistory = StoryOutlineHistory;

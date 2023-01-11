@@ -21,7 +21,7 @@ export class HttpRoute extends SpeakeasyBase {
   hostnames?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=meshes" })
   meshes?: string[];
@@ -55,7 +55,7 @@ export class HttpRouteInput extends SpeakeasyBase {
   hostnames?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=meshes" })
   meshes?: string[];

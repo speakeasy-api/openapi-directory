@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Updated } from "./updated";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { Tag } from "./tag";
 
 
@@ -16,7 +16,7 @@ export class ContactMobile extends SpeakeasyBase {
 
 export class Contact extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=created" })
   created?: Updated;
@@ -25,7 +25,7 @@ export class Contact extends SpeakeasyBase {
   email?: string;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=firstName" })
   firstName?: string;

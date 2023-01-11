@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficMirrorFilterRule } from "./trafficmirrorfilterrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTrafficMirrorFilterRuleResult = exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule = exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange = exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange
+/**
+ * The destination port range assigned to the Traffic Mirror rule.
+**/
+var CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange = /** @class */ (function (_super) {
+    __extends(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange, _super);
+    function CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange.prototype, "fromPort", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange.prototype, "toPort", void 0);
+    return CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange;
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange = CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange;
+// CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange
+/**
+ * The source port range assigned to the Traffic Mirror rule.
+**/
+var CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange = /** @class */ (function (_super) {
+    __extends(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange, _super);
+    function CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange.prototype, "fromPort", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange.prototype, "toPort", void 0);
+    return CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange;
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange = CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange;
+// CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule
+/**
+ * The Traffic Mirror rule.
+**/
+var CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule = /** @class */ (function (_super) {
+    __extends(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule, _super);
+    function CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "destinationCidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "destinationPortRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "protocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "ruleAction", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "ruleNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "sourceCidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleSourcePortRange)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "sourcePortRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "trafficDirection", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "trafficMirrorFilterId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule.prototype, "trafficMirrorFilterRuleId", void 0);
+    return CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule;
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule = CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule;
 var CreateTrafficMirrorFilterRuleResult = /** @class */ (function (_super) {
     __extends(CreateTrafficMirrorFilterRuleResult, _super);
     function CreateTrafficMirrorFilterRuleResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateTrafficMirrorFilterRuleResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrafficMirrorFilterRule)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule)
     ], CreateTrafficMirrorFilterRuleResult.prototype, "trafficMirrorFilterRule", void 0);
     return CreateTrafficMirrorFilterRuleResult;
-}(SpeakeasyBase));
-export { CreateTrafficMirrorFilterRuleResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorFilterRuleResult = CreateTrafficMirrorFilterRuleResult;

@@ -8,6 +8,6 @@ export declare class GetLatestArtifactRequest extends SpeakeasyBase {
 }
 export declare class GetLatestArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

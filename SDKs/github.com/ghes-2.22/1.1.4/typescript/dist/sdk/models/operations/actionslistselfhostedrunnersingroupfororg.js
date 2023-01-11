@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsListSelfHostedRunnersInGroupForOrgResponse = exports.ActionsListSelfHostedRunnersInGroupForOrgRequest = exports.ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson = exports.ActionsListSelfHostedRunnersInGroupForOrgQueryParams = exports.ActionsListSelfHostedRunnersInGroupForOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ActionsListSelfHostedRunnersInGroupForOrgPathParams = /** @class */ (function (_super) {
     __extends(ActionsListSelfHostedRunnersInGroupForOrgPathParams, _super);
     function ActionsListSelfHostedRunnersInGroupForOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsListSelfHostedRunnersInGroupForOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], ActionsListSelfHostedRunnersInGroupForOrgPathParams.prototype, "runnerGroupId", void 0);
     return ActionsListSelfHostedRunnersInGroupForOrgPathParams;
-}(SpeakeasyBase));
-export { ActionsListSelfHostedRunnersInGroupForOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListSelfHostedRunnersInGroupForOrgPathParams = ActionsListSelfHostedRunnersInGroupForOrgPathParams;
 var ActionsListSelfHostedRunnersInGroupForOrgQueryParams = /** @class */ (function (_super) {
     __extends(ActionsListSelfHostedRunnersInGroupForOrgQueryParams, _super);
     function ActionsListSelfHostedRunnersInGroupForOrgQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ActionsListSelfHostedRunnersInGroupForOrgQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], ActionsListSelfHostedRunnersInGroupForOrgQueryParams.prototype, "perPage", void 0);
     return ActionsListSelfHostedRunnersInGroupForOrgQueryParams;
-}(SpeakeasyBase));
-export { ActionsListSelfHostedRunnersInGroupForOrgQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListSelfHostedRunnersInGroupForOrgQueryParams = ActionsListSelfHostedRunnersInGroupForOrgQueryParams;
 var ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson = /** @class */ (function (_super) {
     __extends(ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson, _super);
     function ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runners", elemType: shared.RunnerNoLabels }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runners", elemType: shared.RunnerNoLabels }),
         __metadata("design:type", Array)
     ], ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson.prototype, "runners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_count" }),
         __metadata("design:type", Number)
     ], ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson.prototype, "totalCount", void 0);
     return ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson;
-}(SpeakeasyBase));
-export { ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson = ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson;
 var ActionsListSelfHostedRunnersInGroupForOrgRequest = /** @class */ (function (_super) {
     __extends(ActionsListSelfHostedRunnersInGroupForOrgRequest, _super);
     function ActionsListSelfHostedRunnersInGroupForOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListSelfHostedRunnersInGroupForOrgPathParams)
     ], ActionsListSelfHostedRunnersInGroupForOrgRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListSelfHostedRunnersInGroupForOrgQueryParams)
     ], ActionsListSelfHostedRunnersInGroupForOrgRequest.prototype, "queryParams", void 0);
     return ActionsListSelfHostedRunnersInGroupForOrgRequest;
-}(SpeakeasyBase));
-export { ActionsListSelfHostedRunnersInGroupForOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListSelfHostedRunnersInGroupForOrgRequest = ActionsListSelfHostedRunnersInGroupForOrgRequest;
 var ActionsListSelfHostedRunnersInGroupForOrgResponse = /** @class */ (function (_super) {
     __extends(ActionsListSelfHostedRunnersInGroupForOrgResponse, _super);
     function ActionsListSelfHostedRunnersInGroupForOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsListSelfHostedRunnersInGroupForOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsListSelfHostedRunnersInGroupForOrgResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsListSelfHostedRunnersInGroupForOrgResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson)
-    ], ActionsListSelfHostedRunnersInGroupForOrgResponse.prototype, "actionsListSelfHostedRunnersInGroupForOrg200ApplicationJsonObject", void 0);
+    ], ActionsListSelfHostedRunnersInGroupForOrgResponse.prototype, "actionsListSelfHostedRunnersInGroupForOrg200ApplicationJSONObject", void 0);
     return ActionsListSelfHostedRunnersInGroupForOrgResponse;
-}(SpeakeasyBase));
-export { ActionsListSelfHostedRunnersInGroupForOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListSelfHostedRunnersInGroupForOrgResponse = ActionsListSelfHostedRunnersInGroupForOrgResponse;

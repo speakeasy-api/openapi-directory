@@ -14,5 +14,5 @@ export declare class DeleteAppsAppIdRulesRuleIdRequest extends SpeakeasyBase {
 export declare class DeleteAppsAppIdRulesRuleIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

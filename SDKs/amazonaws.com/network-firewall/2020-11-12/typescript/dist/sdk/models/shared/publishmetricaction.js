@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublishMetricAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
 // PublishMetricAction
 /**
  * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. This setting defines a CloudWatch dimension value to be published.
@@ -34,9 +37,9 @@ var PublishMetricAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], PublishMetricAction.prototype, "dimensions", void 0);
     return PublishMetricAction;
-}(SpeakeasyBase));
-export { PublishMetricAction };
+}(utils_1.SpeakeasyBase));
+exports.PublishMetricAction = PublishMetricAction;

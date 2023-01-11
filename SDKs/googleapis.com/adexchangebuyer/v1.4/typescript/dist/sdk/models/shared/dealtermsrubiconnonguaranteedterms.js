@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealTermsRubiconNonGuaranteedTerms = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var DealTermsRubiconNonGuaranteedTerms = /** @class */ (function (_super) {
     __extends(DealTermsRubiconNonGuaranteedTerms, _super);
     function DealTermsRubiconNonGuaranteedTerms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priorityPrice" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priorityPrice" }),
+        __metadata("design:type", price_1.Price)
     ], DealTermsRubiconNonGuaranteedTerms.prototype, "priorityPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardPrice" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardPrice" }),
+        __metadata("design:type", price_1.Price)
     ], DealTermsRubiconNonGuaranteedTerms.prototype, "standardPrice", void 0);
     return DealTermsRubiconNonGuaranteedTerms;
-}(SpeakeasyBase));
-export { DealTermsRubiconNonGuaranteedTerms };
+}(utils_1.SpeakeasyBase));
+exports.DealTermsRubiconNonGuaranteedTerms = DealTermsRubiconNonGuaranteedTerms;

@@ -15,7 +15,7 @@ export declare class GetAdminAccountHeaders extends SpeakeasyBase {
 }
 export declare class GetAdminAccountRequest extends SpeakeasyBase {
     headers: GetAdminAccountHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetAdminAccountResponse extends SpeakeasyBase {
     contentType: string;

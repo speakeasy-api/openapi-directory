@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PublisherConnectionBiddingStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublisherConnection = exports.PublisherConnectionPublisherPlatformEnum = exports.PublisherConnectionBiddingStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PublisherConnectionBiddingStateEnum;
 (function (PublisherConnectionBiddingStateEnum) {
     PublisherConnectionBiddingStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     PublisherConnectionBiddingStateEnum["Pending"] = "PENDING";
     PublisherConnectionBiddingStateEnum["Rejected"] = "REJECTED";
     PublisherConnectionBiddingStateEnum["Approved"] = "APPROVED";
-})(PublisherConnectionBiddingStateEnum || (PublisherConnectionBiddingStateEnum = {}));
-export var PublisherConnectionPublisherPlatformEnum;
+})(PublisherConnectionBiddingStateEnum = exports.PublisherConnectionBiddingStateEnum || (exports.PublisherConnectionBiddingStateEnum = {}));
+var PublisherConnectionPublisherPlatformEnum;
 (function (PublisherConnectionPublisherPlatformEnum) {
     PublisherConnectionPublisherPlatformEnum["PublisherPlatformUnspecified"] = "PUBLISHER_PLATFORM_UNSPECIFIED";
     PublisherConnectionPublisherPlatformEnum["GoogleAdManager"] = "GOOGLE_AD_MANAGER";
     PublisherConnectionPublisherPlatformEnum["Admob"] = "ADMOB";
-})(PublisherConnectionPublisherPlatformEnum || (PublisherConnectionPublisherPlatformEnum = {}));
+})(PublisherConnectionPublisherPlatformEnum = exports.PublisherConnectionPublisherPlatformEnum || (exports.PublisherConnectionPublisherPlatformEnum = {}));
 // PublisherConnection
 /**
  * An Open Bidding exchange's connection to a publisher. This is initiated by the publisher for the bidder to review. If approved by the bidder, this means that the bidder agrees to receive bid requests from the publisher.
@@ -46,25 +49,25 @@ var PublisherConnection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=biddingState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=biddingState" }),
         __metadata("design:type", String)
     ], PublisherConnection.prototype, "biddingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], PublisherConnection.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PublisherConnection.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PublisherConnection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherPlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherPlatform" }),
         __metadata("design:type", String)
     ], PublisherConnection.prototype, "publisherPlatform", void 0);
     return PublisherConnection;
-}(SpeakeasyBase));
-export { PublisherConnection };
+}(utils_1.SpeakeasyBase));
+exports.PublisherConnection = PublisherConnection;

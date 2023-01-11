@@ -49,7 +49,7 @@ export class DeleteTargetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTargetResult?: Map<string, any>;
+  deleteTargetResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

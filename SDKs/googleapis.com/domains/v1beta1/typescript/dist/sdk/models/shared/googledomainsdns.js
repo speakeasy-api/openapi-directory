@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DsRecord } from "./dsrecord";
-export var GoogleDomainsDnsDsStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDomainsDnsInput = exports.GoogleDomainsDns = exports.GoogleDomainsDnsDsStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var dsrecord_1 = require("./dsrecord");
+var GoogleDomainsDnsDsStateEnum;
 (function (GoogleDomainsDnsDsStateEnum) {
     GoogleDomainsDnsDsStateEnum["DsStateUnspecified"] = "DS_STATE_UNSPECIFIED";
     GoogleDomainsDnsDsStateEnum["DsRecordsUnpublished"] = "DS_RECORDS_UNPUBLISHED";
     GoogleDomainsDnsDsStateEnum["DsRecordsPublished"] = "DS_RECORDS_PUBLISHED";
-})(GoogleDomainsDnsDsStateEnum || (GoogleDomainsDnsDsStateEnum = {}));
+})(GoogleDomainsDnsDsStateEnum = exports.GoogleDomainsDnsDsStateEnum || (exports.GoogleDomainsDnsDsStateEnum = {}));
 // GoogleDomainsDns
 /**
  * Configuration for using the free DNS zone provided by Google Domains as a `Registration`'s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
@@ -40,20 +43,20 @@ var GoogleDomainsDns = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dsRecords", elemType: DsRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dsRecords", elemType: dsrecord_1.DsRecord }),
         __metadata("design:type", Array)
     ], GoogleDomainsDns.prototype, "dsRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dsState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dsState" }),
         __metadata("design:type", String)
     ], GoogleDomainsDns.prototype, "dsState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameServers" }),
         __metadata("design:type", Array)
     ], GoogleDomainsDns.prototype, "nameServers", void 0);
     return GoogleDomainsDns;
-}(SpeakeasyBase));
-export { GoogleDomainsDns };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDomainsDns = GoogleDomainsDns;
 // GoogleDomainsDnsInput
 /**
  * Configuration for using the free DNS zone provided by Google Domains as a `Registration`'s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
@@ -64,9 +67,9 @@ var GoogleDomainsDnsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dsState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dsState" }),
         __metadata("design:type", String)
     ], GoogleDomainsDnsInput.prototype, "dsState", void 0);
     return GoogleDomainsDnsInput;
-}(SpeakeasyBase));
-export { GoogleDomainsDnsInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDomainsDnsInput = GoogleDomainsDnsInput;

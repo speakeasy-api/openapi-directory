@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchMtuResponse = exports.UpdateNetworkSwitchMtuRequest = exports.UpdateNetworkSwitchMtuRequestBody = exports.UpdateNetworkSwitchMtuRequestBodyOverrides = exports.UpdateNetworkSwitchMtuPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchMtuPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchMtuPathParams, _super);
     function UpdateNetworkSwitchMtuPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchMtuPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSwitchMtuPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchMtuPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchMtuPathParams = UpdateNetworkSwitchMtuPathParams;
 var UpdateNetworkSwitchMtuRequestBodyOverrides = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchMtuRequestBodyOverrides, _super);
     function UpdateNetworkSwitchMtuRequestBodyOverrides() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtuSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtuSize" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchMtuRequestBodyOverrides.prototype, "mtuSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switchProfiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switchProfiles" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchMtuRequestBodyOverrides.prototype, "switchProfiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switches" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switches" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchMtuRequestBodyOverrides.prototype, "switches", void 0);
     return UpdateNetworkSwitchMtuRequestBodyOverrides;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchMtuRequestBodyOverrides };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchMtuRequestBodyOverrides = UpdateNetworkSwitchMtuRequestBodyOverrides;
 var UpdateNetworkSwitchMtuRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchMtuRequestBody, _super);
     function UpdateNetworkSwitchMtuRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultMtuSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultMtuSize" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchMtuRequestBody.prototype, "defaultMtuSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrides", elemType: UpdateNetworkSwitchMtuRequestBodyOverrides }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrides", elemType: UpdateNetworkSwitchMtuRequestBodyOverrides }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchMtuRequestBody.prototype, "overrides", void 0);
     return UpdateNetworkSwitchMtuRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchMtuRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchMtuRequestBody = UpdateNetworkSwitchMtuRequestBody;
 var UpdateNetworkSwitchMtuRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchMtuRequest, _super);
     function UpdateNetworkSwitchMtuRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchMtuPathParams)
     ], UpdateNetworkSwitchMtuRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchMtuRequestBody)
     ], UpdateNetworkSwitchMtuRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchMtuRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchMtuRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchMtuRequest = UpdateNetworkSwitchMtuRequest;
 var UpdateNetworkSwitchMtuResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchMtuResponse, _super);
     function UpdateNetworkSwitchMtuResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchMtuResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchMtuResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchMtuResponse.prototype, "updateNetworkSwitchMtu200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchMtuResponse.prototype, "updateNetworkSwitchMtu200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchMtuResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchMtuResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchMtuResponse = UpdateNetworkSwitchMtuResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatalabelingv1beta1annotationspec";
-import { GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry } from "./googleclouddatalabelingv1beta1confusionmatrixentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1Row = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspec_1 = require("./googleclouddatalabelingv1beta1annotationspec");
+var googleclouddatalabelingv1beta1confusionmatrixentry_1 = require("./googleclouddatalabelingv1beta1confusionmatrixentry");
 // GoogleCloudDatalabelingV1beta1Row
 /**
  * A row in the confusion matrix. Each entry in this row has the same ground truth label.
@@ -35,13 +38,13 @@ var GoogleCloudDatalabelingV1beta1Row = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpec" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1AnnotationSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpec" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1annotationspec_1.GoogleCloudDatalabelingV1beta1AnnotationSpec)
     ], GoogleCloudDatalabelingV1beta1Row.prototype, "annotationSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entries", elemType: GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entries", elemType: googleclouddatalabelingv1beta1confusionmatrixentry_1.GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1Row.prototype, "entries", void 0);
     return GoogleCloudDatalabelingV1beta1Row;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1Row };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1Row = GoogleCloudDatalabelingV1beta1Row;

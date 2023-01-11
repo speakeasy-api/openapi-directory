@@ -13,7 +13,7 @@ export declare class DbProxy extends SpeakeasyBase {
     endpoint?: string;
     engineFamily?: string;
     idleClientTimeout?: number;
-    requireTls?: boolean;
+    requireTLS?: boolean;
     roleArn?: string;
     status?: DbProxyStatusEnum;
     updatedDate?: Date;

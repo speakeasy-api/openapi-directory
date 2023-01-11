@@ -47,5 +47,5 @@ export declare class UpdateOrganizationApplianceVpnThirdPartyVpnPeersRequest ext
 export declare class UpdateOrganizationApplianceVpnThirdPartyVpnPeersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject?: Record<string, any>;
 }

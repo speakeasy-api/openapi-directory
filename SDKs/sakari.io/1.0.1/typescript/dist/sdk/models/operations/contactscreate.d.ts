@@ -3,13 +3,8 @@ import * as shared from "../shared";
 export declare class ContactsCreatePathParams extends SpeakeasyBase {
     accountId: string;
 }
-export declare enum ContactsCreateMergeStrategyEnum {
-    Append = "append",
-    Core = "core",
-    Remove = "remove"
-}
 export declare class ContactsCreateQueryParams extends SpeakeasyBase {
-    mergeStrategy?: ContactsCreateMergeStrategyEnum;
+    mergeStrategy?: shared.AccountIdEnum;
 }
 export declare class ContactsCreateRequests extends SpeakeasyBase {
     contactRequest?: shared.ContactRequest;
@@ -27,5 +22,5 @@ export declare class ContactsCreateRequest extends SpeakeasyBase {
 export declare class ContactsCreateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    contactsCreate201ApplicationJsonOneOf?: any;
+    contactsCreate201ApplicationJSONOneOf?: any;
 }

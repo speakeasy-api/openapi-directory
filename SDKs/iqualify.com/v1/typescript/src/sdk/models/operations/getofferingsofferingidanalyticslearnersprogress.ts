@@ -20,7 +20,7 @@ export class GetOfferingsOfferingIdAnalyticsLearnersProgressResponse extends Spe
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.LearnerProgressResponse })
   learnerProgressResponses?: shared.LearnerProgressResponse[];

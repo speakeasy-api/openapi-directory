@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestedVlan = void 0;
+var utils_1 = require("../../../internal/utils");
 var NestedVlan = /** @class */ (function (_super) {
     __extends(NestedVlan, _super);
     function NestedVlan() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], NestedVlan.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NestedVlan.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NestedVlan.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], NestedVlan.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vid" }),
         __metadata("design:type", Number)
     ], NestedVlan.prototype, "vid", void 0);
     return NestedVlan;
-}(SpeakeasyBase));
-export { NestedVlan };
+}(utils_1.SpeakeasyBase));
+exports.NestedVlan = NestedVlan;

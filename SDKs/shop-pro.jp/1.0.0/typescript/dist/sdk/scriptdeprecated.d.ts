@@ -9,13 +9,13 @@ export declare class ScriptDeprecated {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * deleteV1ScriptTagsScriptTagIdJson - スクリプトタグの削除
-    **/
-    deleteV1ScriptTagsScriptTagIdJson(req: operations.DeleteV1ScriptTagsScriptTagIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.DeleteV1ScriptTagsScriptTagIdJsonResponse>;
-    /**
      * createScriptTag - スクリプトタグの作成
     **/
     createScriptTag(req: operations.CreateScriptTagRequest, config?: AxiosRequestConfig): Promise<operations.CreateScriptTagResponse>;
+    /**
+     * deleteV1ScriptTagsScriptTagIdJson - スクリプトタグの削除
+    **/
+    deleteV1ScriptTagsScriptTagIdJson(req: operations.DeleteV1ScriptTagsScriptTagIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.DeleteV1ScriptTagsScriptTagIdJsonResponse>;
     /**
      * getScriptTag - スクリプトタグの取得
     **/

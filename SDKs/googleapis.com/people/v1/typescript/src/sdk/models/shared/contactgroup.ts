@@ -10,25 +10,6 @@ export enum ContactGroupGroupTypeEnum {
 }
 
 
-// ContactGroupInput
-/** 
- * A contact group.
-**/
-export class ContactGroupInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=clientData", elemType: GroupClientData })
-  clientData?: GroupClientData[];
-
-  @SpeakeasyMetadata({ data: "json, name=etag" })
-  etag?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=resourceName" })
-  resourceName?: string;
-}
-
-
 // ContactGroup
 /** 
  * A contact group.
@@ -54,6 +35,25 @@ export class ContactGroup extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
   metadata?: ContactGroupMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=resourceName" })
+  resourceName?: string;
+}
+
+
+// ContactGroupInput
+/** 
+ * A contact group.
+**/
+export class ContactGroupInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=clientData", elemType: GroupClientData })
+  clientData?: GroupClientData[];
+
+  @SpeakeasyMetadata({ data: "json, name=etag" })
+  etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

@@ -47,5 +47,5 @@ export class SearchGifsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchGifs200ApplicationJsonObject?: SearchGifs200ApplicationJson;
+  searchGifs200ApplicationJSONObject?: SearchGifs200ApplicationJson;
 }

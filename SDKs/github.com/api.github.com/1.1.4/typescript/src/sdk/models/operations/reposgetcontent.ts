@@ -44,5 +44,5 @@ export class ReposGetContentResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposGetContent200ApplicationJsonOneOf?: any;
+  reposGetContent200ApplicationJSONOneOf?: any;
 }

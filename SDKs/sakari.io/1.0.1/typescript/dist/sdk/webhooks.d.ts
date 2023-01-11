@@ -20,4 +20,10 @@ export declare class Webhooks {
      * When messages are acknowledge by carriers, a notification is sent to the specified URL
     **/
     webhooksSubscribe(req: operations.WebhooksSubscribeRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksSubscribeResponse>;
+    /**
+     * webhooksUnsubscribe - Unsubscribe to message events
+     *
+     * Delete subscription for receiving notifications
+    **/
+    webhooksUnsubscribe(req: operations.WebhooksUnsubscribeRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksUnsubscribeResponse>;
 }

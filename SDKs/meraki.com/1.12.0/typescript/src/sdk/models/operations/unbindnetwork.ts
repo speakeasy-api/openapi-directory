@@ -22,5 +22,5 @@ export class UnbindNetworkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unbindNetwork200ApplicationJsonObject?: Map<string, any>;
+  unbindNetwork200ApplicationJSONObject?: Record<string, any>;
 }

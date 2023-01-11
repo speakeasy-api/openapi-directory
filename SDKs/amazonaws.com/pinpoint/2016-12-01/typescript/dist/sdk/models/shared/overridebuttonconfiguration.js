@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ButtonActionEnum } from "./buttonactionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OverrideButtonConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var buttonactionenum_1 = require("./buttonactionenum");
 // OverrideButtonConfiguration
 /**
  * Override button configuration.
@@ -34,13 +37,13 @@ var OverrideButtonConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ButtonAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ButtonAction" }),
         __metadata("design:type", String)
     ], OverrideButtonConfiguration.prototype, "buttonAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Link" }),
         __metadata("design:type", String)
     ], OverrideButtonConfiguration.prototype, "link", void 0);
     return OverrideButtonConfiguration;
-}(SpeakeasyBase));
-export { OverrideButtonConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.OverrideButtonConfiguration = OverrideButtonConfiguration;

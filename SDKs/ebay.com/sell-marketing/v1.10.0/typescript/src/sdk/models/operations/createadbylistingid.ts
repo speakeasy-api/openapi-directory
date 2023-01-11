@@ -32,11 +32,11 @@ export class CreateAdByListingIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createAdByListingId201ApplicationJsonObject?: Map<string, any>;
+  createAdByListingId201ApplicationJSONObject?: Record<string, any>;
 }

@@ -10,5 +10,5 @@ export declare class OptInToProgramRequest extends SpeakeasyBase {
 export declare class OptInToProgramResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    optInToProgram200ApplicationJsonObject?: Map<string, any>;
+    optInToProgram200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Position = void 0;
+var utils_1 = require("../../../internal/utils");
 var Position = /** @class */ (function (_super) {
     __extends(Position, _super);
     function Position() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accuracy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accuracy" }),
         __metadata("design:type", Number)
     ], Position.prototype, "accuracy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], Position.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=altitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=altitude" }),
         __metadata("design:type", Number)
     ], Position.prototype, "altitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], Position.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=course" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=course" }),
         __metadata("design:type", Number)
     ], Position.prototype, "course", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", Number)
     ], Position.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceTime" }),
         __metadata("design:type", Date)
     ], Position.prototype, "deviceTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixTime" }),
         __metadata("design:type", Date)
     ], Position.prototype, "fixTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Position.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], Position.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], Position.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", Object)
     ], Position.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outdated" }),
         __metadata("design:type", Boolean)
     ], Position.prototype, "outdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], Position.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverTime" }),
         __metadata("design:type", Date)
     ], Position.prototype, "serverTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speed" }),
         __metadata("design:type", Number)
     ], Position.prototype, "speed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid" }),
         __metadata("design:type", Boolean)
     ], Position.prototype, "valid", void 0);
     return Position;
-}(SpeakeasyBase));
-export { Position };
+}(utils_1.SpeakeasyBase));
+exports.Position = Position;

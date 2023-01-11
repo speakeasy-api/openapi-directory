@@ -5,7 +5,7 @@ import { SyncModeEnum } from "./syncmodeenum";
 **/
 export declare class AirbyteStream extends SpeakeasyBase {
     defaultCursorField?: string[];
-    jsonSchema?: Map<string, any>;
+    jsonSchema?: Record<string, any>;
     name: string;
     namespace?: string;
     sourceDefinedCursor?: boolean;

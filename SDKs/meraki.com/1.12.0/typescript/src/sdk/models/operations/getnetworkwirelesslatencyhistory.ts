@@ -73,5 +73,5 @@ export class GetNetworkWirelessLatencyHistoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessLatencyHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessLatencyHistory200ApplicationJSONObject?: Record<string, any>;
 }

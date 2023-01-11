@@ -14,7 +14,7 @@ export declare class ActivityListWatchersForRepoRequest extends SpeakeasyBase {
 }
 export declare class ActivityListWatchersForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     simpleUsers?: shared.SimpleUser[];
 }

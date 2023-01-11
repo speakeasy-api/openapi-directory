@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetWilltopicResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetWilltopic200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetWilltopic200ApplicationJSONInt32Integers?: number[];
 }

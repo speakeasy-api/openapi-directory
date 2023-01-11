@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAdminNearMissesRequestResponse = exports.PostAdminNearMissesRequestRequest = exports.PostAdminNearMissesRequest200ApplicationJson = exports.PostAdminNearMissesRequest200ApplicationJsonNearMisses = exports.PostAdminNearMissesRequestRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAdminNearMissesRequestRequestBody = /** @class */ (function (_super) {
     __extends(PostAdminNearMissesRequestRequestBody, _super);
     function PostAdminNearMissesRequestRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absoluteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absoluteUrl" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequestRequestBody.prototype, "absoluteUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequestRequestBody.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PostAdminNearMissesRequestRequestBody.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminNearMissesRequestRequestBody.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequestRequestBody.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequestRequestBody.prototype, "url", void 0);
     return PostAdminNearMissesRequestRequestBody;
-}(SpeakeasyBase));
-export { PostAdminNearMissesRequestRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminNearMissesRequestRequestBody = PostAdminNearMissesRequestRequestBody;
 var PostAdminNearMissesRequest200ApplicationJsonNearMisses = /** @class */ (function (_super) {
     __extends(PostAdminNearMissesRequest200ApplicationJsonNearMisses, _super);
     function PostAdminNearMissesRequest200ApplicationJsonNearMisses() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absoluteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absoluteUrl" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "absoluteUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequest200ApplicationJsonNearMisses.prototype, "url", void 0);
     return PostAdminNearMissesRequest200ApplicationJsonNearMisses;
-}(SpeakeasyBase));
-export { PostAdminNearMissesRequest200ApplicationJsonNearMisses };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminNearMissesRequest200ApplicationJsonNearMisses = PostAdminNearMissesRequest200ApplicationJsonNearMisses;
 var PostAdminNearMissesRequest200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAdminNearMissesRequest200ApplicationJson, _super);
     function PostAdminNearMissesRequest200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nearMisses", elemType: PostAdminNearMissesRequest200ApplicationJsonNearMisses }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nearMisses", elemType: PostAdminNearMissesRequest200ApplicationJsonNearMisses }),
         __metadata("design:type", Array)
     ], PostAdminNearMissesRequest200ApplicationJson.prototype, "nearMisses", void 0);
     return PostAdminNearMissesRequest200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAdminNearMissesRequest200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminNearMissesRequest200ApplicationJson = PostAdminNearMissesRequest200ApplicationJson;
 var PostAdminNearMissesRequestRequest = /** @class */ (function (_super) {
     __extends(PostAdminNearMissesRequestRequest, _super);
     function PostAdminNearMissesRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAdminNearMissesRequestRequestBody)
     ], PostAdminNearMissesRequestRequest.prototype, "request", void 0);
     return PostAdminNearMissesRequestRequest;
-}(SpeakeasyBase));
-export { PostAdminNearMissesRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminNearMissesRequestRequest = PostAdminNearMissesRequestRequest;
 var PostAdminNearMissesRequestResponse = /** @class */ (function (_super) {
     __extends(PostAdminNearMissesRequestResponse, _super);
     function PostAdminNearMissesRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAdminNearMissesRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAdminNearMissesRequest200ApplicationJson)
-    ], PostAdminNearMissesRequestResponse.prototype, "postAdminNearMissesRequest200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAdminNearMissesRequestResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAdminNearMissesRequest200ApplicationJson)
+    ], PostAdminNearMissesRequestResponse.prototype, "postAdminNearMissesRequest200ApplicationJSONObject", void 0);
     return PostAdminNearMissesRequestResponse;
-}(SpeakeasyBase));
-export { PostAdminNearMissesRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminNearMissesRequestResponse = PostAdminNearMissesRequestResponse;

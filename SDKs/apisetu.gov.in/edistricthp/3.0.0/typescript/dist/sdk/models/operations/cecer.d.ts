@@ -105,11 +105,11 @@ export declare class CecerRequest extends SpeakeasyBase {
 export declare class CecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cecer400ApplicationJsonObject?: Cecer400ApplicationJson;
-    cecer401ApplicationJsonObject?: Cecer401ApplicationJson;
-    cecer404ApplicationJsonObject?: Cecer404ApplicationJson;
-    cecer500ApplicationJsonObject?: Cecer500ApplicationJson;
-    cecer502ApplicationJsonObject?: Cecer502ApplicationJson;
-    cecer503ApplicationJsonObject?: Cecer503ApplicationJson;
-    cecer504ApplicationJsonObject?: Cecer504ApplicationJson;
+    cecer400ApplicationJSONObject?: Cecer400ApplicationJson;
+    cecer401ApplicationJSONObject?: Cecer401ApplicationJson;
+    cecer404ApplicationJSONObject?: Cecer404ApplicationJson;
+    cecer500ApplicationJSONObject?: Cecer500ApplicationJson;
+    cecer502ApplicationJSONObject?: Cecer502ApplicationJson;
+    cecer503ApplicationJSONObject?: Cecer503ApplicationJson;
+    cecer504ApplicationJSONObject?: Cecer504ApplicationJson;
 }

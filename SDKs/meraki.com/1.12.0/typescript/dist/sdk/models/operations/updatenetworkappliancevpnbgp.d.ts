@@ -23,5 +23,5 @@ export declare class UpdateNetworkApplianceVpnBgpRequest extends SpeakeasyBase {
 export declare class UpdateNetworkApplianceVpnBgpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceVpnBgp200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceVpnBgp200ApplicationJSONObject?: Record<string, any>;
 }

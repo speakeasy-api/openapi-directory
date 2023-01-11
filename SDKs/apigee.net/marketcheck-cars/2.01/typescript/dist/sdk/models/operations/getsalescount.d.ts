@@ -1,20 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetSalesCountCarTypeEnum {
-    New = "new",
-    Used = "used"
-}
-export declare enum GetSalesCountCountryEnum {
-    UsLower = "us",
-    CaLower = "ca",
-    UsUpper = "US",
-    CaUpper = "CA"
-}
 export declare class GetSalesCountQueryParams extends SpeakeasyBase {
     apiKey?: string;
-    carType?: GetSalesCountCarTypeEnum;
+    carType?: shared.ApiKeyEnum;
     cityState?: string;
-    country?: GetSalesCountCountryEnum;
+    country?: shared.ApiKeyEnum1;
     make?: string;
     mm?: string;
     state?: string;
@@ -28,7 +18,7 @@ export declare class GetSalesCountRequest extends SpeakeasyBase {
 }
 export declare class GetSalesCountResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     sales?: shared.Sales;
     statusCode: number;
 }

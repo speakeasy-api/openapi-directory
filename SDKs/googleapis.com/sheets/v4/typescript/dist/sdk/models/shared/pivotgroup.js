@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { PivotGroupLimit } from "./pivotgrouplimit";
-import { PivotGroupRule } from "./pivotgrouprule";
-import { PivotGroupSortValueBucket } from "./pivotgroupsortvaluebucket";
-import { PivotGroupValueMetadata } from "./pivotgroupvaluemetadata";
-export var PivotGroupSortOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotGroup = exports.PivotGroupSortOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var pivotgrouplimit_1 = require("./pivotgrouplimit");
+var pivotgrouprule_1 = require("./pivotgrouprule");
+var pivotgroupsortvaluebucket_1 = require("./pivotgroupsortvaluebucket");
+var pivotgroupvaluemetadata_1 = require("./pivotgroupvaluemetadata");
+var PivotGroupSortOrderEnum;
 (function (PivotGroupSortOrderEnum) {
     PivotGroupSortOrderEnum["SortOrderUnspecified"] = "SORT_ORDER_UNSPECIFIED";
     PivotGroupSortOrderEnum["Ascending"] = "ASCENDING";
     PivotGroupSortOrderEnum["Descending"] = "DESCENDING";
-})(PivotGroupSortOrderEnum || (PivotGroupSortOrderEnum = {}));
+})(PivotGroupSortOrderEnum = exports.PivotGroupSortOrderEnum || (exports.PivotGroupSortOrderEnum = {}));
 // PivotGroup
 /**
  * A single grouping (either row or column) in a pivot table.
@@ -44,45 +47,45 @@ var PivotGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceColumnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceColumnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], PivotGroup.prototype, "dataSourceColumnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupLimit" }),
-        __metadata("design:type", PivotGroupLimit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupLimit" }),
+        __metadata("design:type", pivotgrouplimit_1.PivotGroupLimit)
     ], PivotGroup.prototype, "groupLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupRule" }),
-        __metadata("design:type", PivotGroupRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupRule" }),
+        __metadata("design:type", pivotgrouprule_1.PivotGroupRule)
     ], PivotGroup.prototype, "groupRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PivotGroup.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatHeadings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatHeadings" }),
         __metadata("design:type", Boolean)
     ], PivotGroup.prototype, "repeatHeadings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showTotals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showTotals" }),
         __metadata("design:type", Boolean)
     ], PivotGroup.prototype, "showTotals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], PivotGroup.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceColumnOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceColumnOffset" }),
         __metadata("design:type", Number)
     ], PivotGroup.prototype, "sourceColumnOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueBucket" }),
-        __metadata("design:type", PivotGroupSortValueBucket)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueBucket" }),
+        __metadata("design:type", pivotgroupsortvaluebucket_1.PivotGroupSortValueBucket)
     ], PivotGroup.prototype, "valueBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueMetadata", elemType: PivotGroupValueMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueMetadata", elemType: pivotgroupvaluemetadata_1.PivotGroupValueMetadata }),
         __metadata("design:type", Array)
     ], PivotGroup.prototype, "valueMetadata", void 0);
     return PivotGroup;
-}(SpeakeasyBase));
-export { PivotGroup };
+}(utils_1.SpeakeasyBase));
+exports.PivotGroup = PivotGroup;

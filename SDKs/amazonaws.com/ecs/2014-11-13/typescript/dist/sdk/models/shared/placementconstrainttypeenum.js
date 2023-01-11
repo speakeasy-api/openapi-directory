@@ -1,5 +1,8 @@
-export var PlacementConstraintTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlacementConstraintTypeEnum = void 0;
+var PlacementConstraintTypeEnum;
 (function (PlacementConstraintTypeEnum) {
     PlacementConstraintTypeEnum["DistinctInstance"] = "distinctInstance";
     PlacementConstraintTypeEnum["MemberOf"] = "memberOf";
-})(PlacementConstraintTypeEnum || (PlacementConstraintTypeEnum = {}));
+})(PlacementConstraintTypeEnum = exports.PlacementConstraintTypeEnum || (exports.PlacementConstraintTypeEnum = {}));

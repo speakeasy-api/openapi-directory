@@ -14,5 +14,5 @@ export declare class FileWatcherRestart200ApplicationJson extends SpeakeasyBase 
 export declare class FileWatcherRestartResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    fileWatcherRestart200ApplicationJsonObject?: FileWatcherRestart200ApplicationJson;
+    fileWatcherRestart200ApplicationJSONObject?: FileWatcherRestart200ApplicationJson;
 }

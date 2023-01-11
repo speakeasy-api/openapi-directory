@@ -1,7 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { KeyOperationAttestation } from "./keyoperationattestation";
-import { ExternalProtectionLevelOptions } from "./externalprotectionleveloptions";
 import { KeyOperationAttestationInput } from "./keyoperationattestation";
+import { ExternalProtectionLevelOptions } from "./externalprotectionleveloptions";
+import { KeyOperationAttestation } from "./keyoperationattestation";
+export declare enum CryptoKeyVersionStateEnum {
+    CryptoKeyVersionStateUnspecified = "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED",
+    PendingGeneration = "PENDING_GENERATION",
+    Enabled = "ENABLED",
+    Disabled = "DISABLED",
+    Destroyed = "DESTROYED",
+    DestroyScheduled = "DESTROY_SCHEDULED",
+    PendingImport = "PENDING_IMPORT",
+    ImportFailed = "IMPORT_FAILED"
+}
 export declare enum CryptoKeyVersionAlgorithmEnum {
     CryptoKeyVersionAlgorithmUnspecified = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED",
     GoogleSymmetricEncryption = "GOOGLE_SYMMETRIC_ENCRYPTION",
@@ -40,15 +50,13 @@ export declare enum CryptoKeyVersionProtectionLevelEnum {
     External = "EXTERNAL",
     ExternalVpc = "EXTERNAL_VPC"
 }
-export declare enum CryptoKeyVersionStateEnum {
-    CryptoKeyVersionStateUnspecified = "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED",
-    PendingGeneration = "PENDING_GENERATION",
-    Enabled = "ENABLED",
-    Disabled = "DISABLED",
-    Destroyed = "DESTROYED",
-    DestroyScheduled = "DESTROY_SCHEDULED",
-    PendingImport = "PENDING_IMPORT",
-    ImportFailed = "IMPORT_FAILED"
+/**
+ * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
+**/
+export declare class CryptoKeyVersionInput extends SpeakeasyBase {
+    attestation?: KeyOperationAttestationInput;
+    externalProtectionLevelOptions?: ExternalProtectionLevelOptions;
+    state?: CryptoKeyVersionStateEnum;
 }
 /**
  * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
@@ -67,13 +75,5 @@ export declare class CryptoKeyVersion extends SpeakeasyBase {
     name?: string;
     protectionLevel?: CryptoKeyVersionProtectionLevelEnum;
     reimportEligible?: boolean;
-    state?: CryptoKeyVersionStateEnum;
-}
-/**
- * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
-**/
-export declare class CryptoKeyVersionInput extends SpeakeasyBase {
-    attestation?: KeyOperationAttestationInput;
-    externalProtectionLevelOptions?: ExternalProtectionLevelOptions;
     state?: CryptoKeyVersionStateEnum;
 }

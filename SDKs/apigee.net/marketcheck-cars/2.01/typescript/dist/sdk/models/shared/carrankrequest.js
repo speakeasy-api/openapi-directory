@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarRankRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // CarRankRequest
 /**
  * Ranking query request
@@ -33,13 +36,13 @@ var CarRankRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listing_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listing_ids" }),
         __metadata("design:type", Array)
     ], CarRankRequest.prototype, "listingIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranking_criteria" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranking_criteria" }),
+        __metadata("design:type", Object)
     ], CarRankRequest.prototype, "rankingCriteria", void 0);
     return CarRankRequest;
-}(SpeakeasyBase));
-export { CarRankRequest };
+}(utils_1.SpeakeasyBase));
+exports.CarRankRequest = CarRankRequest;

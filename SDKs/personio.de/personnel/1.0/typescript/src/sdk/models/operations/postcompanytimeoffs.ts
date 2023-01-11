@@ -23,8 +23,8 @@ export class PostCompanyTimeOffsResponse extends SpeakeasyBase {
   errorResponse?: shared.ErrorResponse;
 
   @SpeakeasyMetadata()
-  postCompanyTimeOffs201ApplicationJsonObject?: PostCompanyTimeOffs201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postCompanyTimeOffs201ApplicationJSONObject?: PostCompanyTimeOffs201ApplicationJson;
 }

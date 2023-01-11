@@ -11,5 +11,5 @@ export declare class AddOrDeleteRulesResponse extends SpeakeasyBase {
     error?: any;
     problem?: any;
     statusCode: number;
-    addOrDeleteRules200ApplicationJsonOneOf?: any;
+    addOrDeleteRules200ApplicationJSONOneOf?: any;
 }

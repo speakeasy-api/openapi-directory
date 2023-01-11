@@ -53,5 +53,5 @@ export class CreateStoryForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createStoryForTask201ApplicationJsonObject?: CreateStoryForTask201ApplicationJson;
+  createStoryForTask201ApplicationJSONObject?: CreateStoryForTask201ApplicationJson;
 }

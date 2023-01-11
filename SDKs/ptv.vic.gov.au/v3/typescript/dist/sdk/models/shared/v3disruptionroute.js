@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3DisruptionDirection } from "./v3disruptiondirection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3DisruptionRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3disruptiondirection_1 = require("./v3disruptiondirection");
 var V3DisruptionRoute = /** @class */ (function (_super) {
     __extends(V3DisruptionRoute, _super);
     function V3DisruptionRoute() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
-        __metadata("design:type", V3DisruptionDirection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
+        __metadata("design:type", v3disruptiondirection_1.V3DisruptionDirection)
     ], V3DisruptionRoute.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_gtfs_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_gtfs_id" }),
         __metadata("design:type", String)
     ], V3DisruptionRoute.prototype, "routeGtfsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_id" }),
         __metadata("design:type", Number)
     ], V3DisruptionRoute.prototype, "routeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_name" }),
         __metadata("design:type", String)
     ], V3DisruptionRoute.prototype, "routeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_number" }),
         __metadata("design:type", String)
     ], V3DisruptionRoute.prototype, "routeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_type" }),
         __metadata("design:type", Number)
     ], V3DisruptionRoute.prototype, "routeType", void 0);
     return V3DisruptionRoute;
-}(SpeakeasyBase));
-export { V3DisruptionRoute };
+}(utils_1.SpeakeasyBase));
+exports.V3DisruptionRoute = V3DisruptionRoute;

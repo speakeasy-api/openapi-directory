@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserInfo } from "./userinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Commit = void 0;
+var utils_1 = require("../../../internal/utils");
+var userinfo_1 = require("./userinfo");
 // Commit
 /**
  * Returns information about a specific commit.
@@ -34,33 +37,33 @@ var Commit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalData" }),
         __metadata("design:type", String)
     ], Commit.prototype, "additionalData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", userinfo_1.UserInfo)
     ], Commit.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitId" }),
         __metadata("design:type", String)
     ], Commit.prototype, "commitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer" }),
-        __metadata("design:type", UserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer" }),
+        __metadata("design:type", userinfo_1.UserInfo)
     ], Commit.prototype, "committer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Commit.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parents" }),
         __metadata("design:type", Array)
     ], Commit.prototype, "parents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treeId" }),
         __metadata("design:type", String)
     ], Commit.prototype, "treeId", void 0);
     return Commit;
-}(SpeakeasyBase));
-export { Commit };
+}(utils_1.SpeakeasyBase));
+exports.Commit = Commit;

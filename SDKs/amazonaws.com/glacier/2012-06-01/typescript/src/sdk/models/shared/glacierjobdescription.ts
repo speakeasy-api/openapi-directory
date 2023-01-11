@@ -73,5 +73,5 @@ export class GlacierJobDescription extends SpeakeasyBase {
   tier?: string;
 
   @SpeakeasyMetadata({ data: "json, name=VaultARN" })
-  vaultArn?: string;
+  vaultARN?: string;
 }

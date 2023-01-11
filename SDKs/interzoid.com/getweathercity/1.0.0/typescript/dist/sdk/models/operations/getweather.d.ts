@@ -15,7 +15,7 @@ export declare class Getweather200ApplicationJson extends SpeakeasyBase {
     visibilityMiles?: string;
     weather?: string;
     windDir?: string;
-    windMph?: string;
+    windMPH?: string;
 }
 export declare class GetweatherRequest extends SpeakeasyBase {
     queryParams: GetweatherQueryParams;
@@ -23,5 +23,5 @@ export declare class GetweatherRequest extends SpeakeasyBase {
 export declare class GetweatherResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getweather200ApplicationJsonObject?: Getweather200ApplicationJson;
+    getweather200ApplicationJSONObject?: Getweather200ApplicationJson;
 }

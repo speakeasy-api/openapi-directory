@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiBillingPeriodUsageOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApiBillingPeriodUsageOut
 /**
  * The current billing period.
@@ -33,45 +36,45 @@ var ApiBillingPeriodUsageOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
         __metadata("design:type", String)
     ], ApiBillingPeriodUsageOut.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingStatus" }),
         __metadata("design:type", String)
     ], ApiBillingPeriodUsageOut.prototype, "billingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hardLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hardLimit" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "hardLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodEnded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodEnded" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "periodEnded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodStarted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodStarted" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "periodStarted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softLimit" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "softLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeCurrentPeriodEnd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeCurrentPeriodEnd" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "stripeCurrentPeriodEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeCurrentPeriodStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeCurrentPeriodStart" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "stripeCurrentPeriodStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionStarted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionStarted" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "subscriptionStarted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", Number)
     ], ApiBillingPeriodUsageOut.prototype, "usage", void 0);
     return ApiBillingPeriodUsageOut;
-}(SpeakeasyBase));
-export { ApiBillingPeriodUsageOut };
+}(utils_1.SpeakeasyBase));
+exports.ApiBillingPeriodUsageOut = ApiBillingPeriodUsageOut;

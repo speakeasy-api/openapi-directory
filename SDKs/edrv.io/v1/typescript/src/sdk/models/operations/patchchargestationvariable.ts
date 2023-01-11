@@ -34,7 +34,7 @@ export class PatchChargeStationVariable201ApplicationJson extends SpeakeasyBase 
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -55,5 +55,5 @@ export class PatchChargeStationVariableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchChargeStationVariable201ApplicationJsonObject?: PatchChargeStationVariable201ApplicationJson;
+  patchChargeStationVariable201ApplicationJSONObject?: PatchChargeStationVariable201ApplicationJson;
 }

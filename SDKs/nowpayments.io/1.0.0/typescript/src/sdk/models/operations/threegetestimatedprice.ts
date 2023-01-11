@@ -37,13 +37,13 @@ export class ThreeGetEstimatedPriceRequest extends SpeakeasyBase {
 
 export class ThreeGetEstimatedPriceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  threeGetEstimatedPrice200ApplicationJsonObject?: ThreeGetEstimatedPrice200ApplicationJson;
+  threeGetEstimatedPrice200ApplicationJSONObject?: ThreeGetEstimatedPrice200ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

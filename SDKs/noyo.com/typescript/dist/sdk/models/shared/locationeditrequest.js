@@ -1,0 +1,151 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationEditRequest = exports.LocationEditRequestAddress = exports.LocationEditRequestAddressStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LocationEditRequestAddressStateEnum;
+(function (LocationEditRequestAddressStateEnum) {
+    LocationEditRequestAddressStateEnum["Ak"] = "AK";
+    LocationEditRequestAddressStateEnum["Al"] = "AL";
+    LocationEditRequestAddressStateEnum["Ar"] = "AR";
+    LocationEditRequestAddressStateEnum["As"] = "AS";
+    LocationEditRequestAddressStateEnum["Az"] = "AZ";
+    LocationEditRequestAddressStateEnum["Ca"] = "CA";
+    LocationEditRequestAddressStateEnum["Co"] = "CO";
+    LocationEditRequestAddressStateEnum["Ct"] = "CT";
+    LocationEditRequestAddressStateEnum["Dc"] = "DC";
+    LocationEditRequestAddressStateEnum["De"] = "DE";
+    LocationEditRequestAddressStateEnum["Fl"] = "FL";
+    LocationEditRequestAddressStateEnum["Fm"] = "FM";
+    LocationEditRequestAddressStateEnum["Ga"] = "GA";
+    LocationEditRequestAddressStateEnum["Gu"] = "GU";
+    LocationEditRequestAddressStateEnum["Hi"] = "HI";
+    LocationEditRequestAddressStateEnum["Ia"] = "IA";
+    LocationEditRequestAddressStateEnum["Id"] = "ID";
+    LocationEditRequestAddressStateEnum["Il"] = "IL";
+    LocationEditRequestAddressStateEnum["In"] = "IN";
+    LocationEditRequestAddressStateEnum["Ks"] = "KS";
+    LocationEditRequestAddressStateEnum["Ky"] = "KY";
+    LocationEditRequestAddressStateEnum["La"] = "LA";
+    LocationEditRequestAddressStateEnum["Ma"] = "MA";
+    LocationEditRequestAddressStateEnum["Md"] = "MD";
+    LocationEditRequestAddressStateEnum["Me"] = "ME";
+    LocationEditRequestAddressStateEnum["Mh"] = "MH";
+    LocationEditRequestAddressStateEnum["Mi"] = "MI";
+    LocationEditRequestAddressStateEnum["Mn"] = "MN";
+    LocationEditRequestAddressStateEnum["Mo"] = "MO";
+    LocationEditRequestAddressStateEnum["Mp"] = "MP";
+    LocationEditRequestAddressStateEnum["Ms"] = "MS";
+    LocationEditRequestAddressStateEnum["Mt"] = "MT";
+    LocationEditRequestAddressStateEnum["Nc"] = "NC";
+    LocationEditRequestAddressStateEnum["Nd"] = "ND";
+    LocationEditRequestAddressStateEnum["Ne"] = "NE";
+    LocationEditRequestAddressStateEnum["Nh"] = "NH";
+    LocationEditRequestAddressStateEnum["Nj"] = "NJ";
+    LocationEditRequestAddressStateEnum["Nm"] = "NM";
+    LocationEditRequestAddressStateEnum["Nv"] = "NV";
+    LocationEditRequestAddressStateEnum["Ny"] = "NY";
+    LocationEditRequestAddressStateEnum["Oh"] = "OH";
+    LocationEditRequestAddressStateEnum["Ok"] = "OK";
+    LocationEditRequestAddressStateEnum["Or"] = "OR";
+    LocationEditRequestAddressStateEnum["Pa"] = "PA";
+    LocationEditRequestAddressStateEnum["Pr"] = "PR";
+    LocationEditRequestAddressStateEnum["Pw"] = "PW";
+    LocationEditRequestAddressStateEnum["Ri"] = "RI";
+    LocationEditRequestAddressStateEnum["Sc"] = "SC";
+    LocationEditRequestAddressStateEnum["Sd"] = "SD";
+    LocationEditRequestAddressStateEnum["Tn"] = "TN";
+    LocationEditRequestAddressStateEnum["Tx"] = "TX";
+    LocationEditRequestAddressStateEnum["Um"] = "UM";
+    LocationEditRequestAddressStateEnum["Ut"] = "UT";
+    LocationEditRequestAddressStateEnum["Va"] = "VA";
+    LocationEditRequestAddressStateEnum["Vi"] = "VI";
+    LocationEditRequestAddressStateEnum["Vt"] = "VT";
+    LocationEditRequestAddressStateEnum["Wa"] = "WA";
+    LocationEditRequestAddressStateEnum["Wi"] = "WI";
+    LocationEditRequestAddressStateEnum["Wv"] = "WV";
+    LocationEditRequestAddressStateEnum["Wy"] = "WY";
+})(LocationEditRequestAddressStateEnum = exports.LocationEditRequestAddressStateEnum || (exports.LocationEditRequestAddressStateEnum = {}));
+// LocationEditRequestAddress
+/**
+ * Address of the group location
+**/
+var LocationEditRequestAddress = /** @class */ (function (_super) {
+    __extends(LocationEditRequestAddress, _super);
+    function LocationEditRequestAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "city", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "county", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_one" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "streetOne", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_two" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "streetTwo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
+        __metadata("design:type", String)
+    ], LocationEditRequestAddress.prototype, "zipCode", void 0);
+    return LocationEditRequestAddress;
+}(utils_1.SpeakeasyBase));
+exports.LocationEditRequestAddress = LocationEditRequestAddress;
+var LocationEditRequest = /** @class */ (function (_super) {
+    __extends(LocationEditRequest, _super);
+    function LocationEditRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", LocationEditRequestAddress)
+    ], LocationEditRequest.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_location" }),
+        __metadata("design:type", Boolean)
+    ], LocationEditRequest.prototype, "billingLocation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
+        __metadata("design:type", String)
+    ], LocationEditRequest.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_location" }),
+        __metadata("design:type", Boolean)
+    ], LocationEditRequest.prototype, "primaryLocation", void 0);
+    return LocationEditRequest;
+}(utils_1.SpeakeasyBase));
+exports.LocationEditRequest = LocationEditRequest;

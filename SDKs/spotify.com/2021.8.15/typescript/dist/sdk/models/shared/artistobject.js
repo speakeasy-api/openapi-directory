@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExternalUrlObject } from "./externalurlobject";
-import { FollowersObject } from "./followersobject";
-import { ImageObject } from "./imageobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var externalurlobject_1 = require("./externalurlobject");
+var followersobject_1 = require("./followersobject");
+var imageobject_1 = require("./imageobject");
 // ArtistObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-artistobject - Find more info on the official Spotify Web API Reference
@@ -36,45 +39,45 @@ var ArtistObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_urls" }),
-        __metadata("design:type", ExternalUrlObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_urls" }),
+        __metadata("design:type", externalurlobject_1.ExternalUrlObject)
     ], ArtistObject.prototype, "externalUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
-        __metadata("design:type", FollowersObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
+        __metadata("design:type", followersobject_1.FollowersObject)
     ], ArtistObject.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genres" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genres" }),
         __metadata("design:type", Array)
     ], ArtistObject.prototype, "genres", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ArtistObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ArtistObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imageobject_1.ImageObject }),
         __metadata("design:type", Array)
     ], ArtistObject.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtistObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=popularity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=popularity" }),
         __metadata("design:type", Number)
     ], ArtistObject.prototype, "popularity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ArtistObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ArtistObject.prototype, "uri", void 0);
     return ArtistObject;
-}(SpeakeasyBase));
-export { ArtistObject };
+}(utils_1.SpeakeasyBase));
+exports.ArtistObject = ArtistObject;

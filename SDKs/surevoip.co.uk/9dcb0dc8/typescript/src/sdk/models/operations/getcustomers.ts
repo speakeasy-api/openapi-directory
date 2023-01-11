@@ -13,11 +13,11 @@ export class GetCustomersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCustomers302ApplicationJsonObject?: GetCustomers302ApplicationJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getCustomers302ApplicationJSONObject?: GetCustomers302ApplicationJson;
 }

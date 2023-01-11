@@ -10,5 +10,5 @@ export class ProtocolCoapGetStatsHdrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolCoapGetStatsHdr200ApplicationJsonStrings?: string[];
+  protocolCoapGetStatsHdr200ApplicationJSONStrings?: string[];
 }

@@ -53,5 +53,5 @@ export class TeamsAddMemberLegacyResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  teamsAddMemberLegacy422ApplicationJsonObject?: TeamsAddMemberLegacy422ApplicationJson;
+  teamsAddMemberLegacy422ApplicationJSONObject?: TeamsAddMemberLegacy422ApplicationJson;
 }

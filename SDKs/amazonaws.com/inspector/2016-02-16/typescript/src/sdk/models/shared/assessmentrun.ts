@@ -30,7 +30,7 @@ export class AssessmentRun extends SpeakeasyBase {
   durationInSeconds: number;
 
   @SpeakeasyMetadata({ data: "json, name=findingCounts" })
-  findingCounts: Map<string, number>;
+  findingCounts: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

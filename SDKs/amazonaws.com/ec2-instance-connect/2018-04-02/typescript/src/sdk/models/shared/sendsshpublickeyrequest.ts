@@ -10,7 +10,7 @@ export class SendSshPublicKeyRequest extends SpeakeasyBase {
   instanceId: string;
 
   @SpeakeasyMetadata({ data: "json, name=InstanceOSUser" })
-  instanceOsUser: string;
+  instanceOSUser: string;
 
   @SpeakeasyMetadata({ data: "json, name=SSHPublicKey" })
   sshPublicKey: string;

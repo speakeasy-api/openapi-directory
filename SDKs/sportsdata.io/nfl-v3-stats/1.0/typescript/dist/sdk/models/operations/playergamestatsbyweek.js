@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerGameStatsByWeekFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerGameStatsByWeekResponse = exports.PlayerGameStatsByWeekRequest = exports.PlayerGameStatsByWeekPathParams = exports.PlayerGameStatsByWeekFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerGameStatsByWeekFormatEnum;
 (function (PlayerGameStatsByWeekFormatEnum) {
     PlayerGameStatsByWeekFormatEnum["Xml"] = "XML";
     PlayerGameStatsByWeekFormatEnum["Json"] = "JSON";
-})(PlayerGameStatsByWeekFormatEnum || (PlayerGameStatsByWeekFormatEnum = {}));
+})(PlayerGameStatsByWeekFormatEnum = exports.PlayerGameStatsByWeekFormatEnum || (exports.PlayerGameStatsByWeekFormatEnum = {}));
 var PlayerGameStatsByWeekPathParams = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekPathParams, _super);
     function PlayerGameStatsByWeekPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekPathParams.prototype, "week", void 0);
     return PlayerGameStatsByWeekPathParams;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekPathParams = PlayerGameStatsByWeekPathParams;
 var PlayerGameStatsByWeekRequest = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekRequest, _super);
     function PlayerGameStatsByWeekRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerGameStatsByWeekPathParams)
     ], PlayerGameStatsByWeekRequest.prototype, "pathParams", void 0);
     return PlayerGameStatsByWeekRequest;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekRequest = PlayerGameStatsByWeekRequest;
 var PlayerGameStatsByWeekResponse = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekResponse, _super);
     function PlayerGameStatsByWeekResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerGameStatsByWeekResponse.prototype, "playerGames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerGameStatsByWeekResponse.prototype, "statusCode", void 0);
     return PlayerGameStatsByWeekResponse;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekResponse = PlayerGameStatsByWeekResponse;

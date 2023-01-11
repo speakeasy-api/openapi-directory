@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metadata = exports.MetadataItems = void 0;
+var utils_1 = require("../../../internal/utils");
 var MetadataItems = /** @class */ (function (_super) {
     __extends(MetadataItems, _super);
     function MetadataItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], MetadataItems.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted_key" }),
         __metadata("design:type", String)
     ], MetadataItems.prototype, "encryptedKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], MetadataItems.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], MetadataItems.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], MetadataItems.prototype, "version", void 0);
     return MetadataItems;
-}(SpeakeasyBase));
-export { MetadataItems };
+}(utils_1.SpeakeasyBase));
+exports.MetadataItems = MetadataItems;
 var Metadata = /** @class */ (function (_super) {
     __extends(Metadata, _super);
     function Metadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: MetadataItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: MetadataItems }),
         __metadata("design:type", Array)
     ], Metadata.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Metadata.prototype, "kind", void 0);
     return Metadata;
-}(SpeakeasyBase));
-export { Metadata };
+}(utils_1.SpeakeasyBase));
+exports.Metadata = Metadata;

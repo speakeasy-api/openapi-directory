@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3PlayerReport = exports.GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum;
 (function (GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum) {
     GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum["BadLocationReasonUnspecified"] = "BAD_LOCATION_REASON_UNSPECIFIED";
     GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum["Other"] = "OTHER";
@@ -31,7 +34,7 @@ export var GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum;
     GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum["NotOpenToPublic"] = "NOT_OPEN_TO_PUBLIC";
     GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum["PermanentlyClosed"] = "PERMANENTLY_CLOSED";
     GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum["TemporarilyInaccessible"] = "TEMPORARILY_INACCESSIBLE";
-})(GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum || (GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum = {}));
+})(GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum = exports.GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum || (exports.GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum = {}));
 // GoogleMapsPlayablelocationsV3PlayerReport
 /**
  * A report submitted by a player about a playable location that is considered inappropriate for use in the game.
@@ -42,21 +45,21 @@ var GoogleMapsPlayablelocationsV3PlayerReport = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3PlayerReport.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3PlayerReport.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonDetails" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3PlayerReport.prototype, "reasonDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasons" }),
         __metadata("design:type", Array)
     ], GoogleMapsPlayablelocationsV3PlayerReport.prototype, "reasons", void 0);
     return GoogleMapsPlayablelocationsV3PlayerReport;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3PlayerReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3PlayerReport = GoogleMapsPlayablelocationsV3PlayerReport;

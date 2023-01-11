@@ -8,7 +8,7 @@ import { WorkflowRun } from "./workflowrun";
 export declare class Workflow extends SpeakeasyBase {
     blueprintDetails?: BlueprintDetails;
     createdOn?: Date;
-    defaultRunProperties?: Map<string, string>;
+    defaultRunProperties?: Record<string, string>;
     description?: string;
     graph?: WorkflowGraph;
     lastModifiedOn?: Date;

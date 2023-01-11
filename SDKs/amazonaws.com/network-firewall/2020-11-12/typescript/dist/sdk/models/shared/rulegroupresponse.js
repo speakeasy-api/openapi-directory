@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceStatusEnum } from "./resourcestatusenum";
-import { Tag } from "./tag";
-import { RuleGroupTypeEnum } from "./rulegrouptypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleGroupResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcestatusenum_1 = require("./resourcestatusenum");
+var tag_1 = require("./tag");
+var rulegrouptypeenum_1 = require("./rulegrouptypeenum");
 // RuleGroupResponse
 /**
  * The high-level properties of a rule group. This, along with the <a>RuleGroup</a>, define the rule group. You can retrieve all objects for a rule group by calling <a>DescribeRuleGroup</a>.
@@ -36,37 +39,37 @@ var RuleGroupResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Capacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Capacity" }),
         __metadata("design:type", Number)
     ], RuleGroupResponse.prototype, "capacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupArn" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "ruleGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupId" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "ruleGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupName" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "ruleGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupStatus" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "ruleGroupStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], RuleGroupResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], RuleGroupResponse.prototype, "type", void 0);
     return RuleGroupResponse;
-}(SpeakeasyBase));
-export { RuleGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.RuleGroupResponse = RuleGroupResponse;

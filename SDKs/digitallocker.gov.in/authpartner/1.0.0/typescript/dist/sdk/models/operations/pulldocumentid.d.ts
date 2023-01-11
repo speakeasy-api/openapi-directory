@@ -17,10 +17,10 @@ export declare class PullDocumentIdRequest extends SpeakeasyBase {
 }
 export declare class PullDocumentIdResponse extends SpeakeasyBase {
     contentType: string;
-    pullDocumentId400ApplicationJsonOneOf?: any;
-    pullDocumentId401ApplicationJsonObject?: PullDocumentId401ApplicationJson;
-    pullDocumentId404ApplicationJsonObject?: PullDocumentId404ApplicationJson;
-    pullDocumentId500ApplicationJsonOneOf?: any;
+    pullDocumentId400ApplicationJSONOneOf?: any;
+    pullDocumentId401ApplicationJSONObject?: PullDocumentId401ApplicationJson;
+    pullDocumentId404ApplicationJSONObject?: PullDocumentId404ApplicationJson;
+    pullDocumentId500ApplicationJSONOneOf?: any;
     sample?: any;
     statusCode: number;
 }

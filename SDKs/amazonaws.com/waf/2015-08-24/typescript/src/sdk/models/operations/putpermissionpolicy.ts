@@ -48,7 +48,7 @@ export class PutPermissionPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putPermissionPolicyResponse?: Map<string, any>;
+  putPermissionPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

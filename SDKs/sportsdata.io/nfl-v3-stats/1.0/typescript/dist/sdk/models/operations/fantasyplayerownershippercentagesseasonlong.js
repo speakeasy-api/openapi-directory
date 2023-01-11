@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FantasyPlayerOwnershipPercentagesSeasonLongResponse = exports.FantasyPlayerOwnershipPercentagesSeasonLongRequest = exports.FantasyPlayerOwnershipPercentagesSeasonLongPathParams = exports.FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum;
 (function (FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum) {
     FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum["Xml"] = "XML";
     FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum["Json"] = "JSON";
-})(FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum || (FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum = {}));
+})(FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum = exports.FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum || (exports.FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum = {}));
 var FantasyPlayerOwnershipPercentagesSeasonLongPathParams = /** @class */ (function (_super) {
     __extends(FantasyPlayerOwnershipPercentagesSeasonLongPathParams, _super);
     function FantasyPlayerOwnershipPercentagesSeasonLongPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], FantasyPlayerOwnershipPercentagesSeasonLongPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], FantasyPlayerOwnershipPercentagesSeasonLongPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], FantasyPlayerOwnershipPercentagesSeasonLongPathParams.prototype, "week", void 0);
     return FantasyPlayerOwnershipPercentagesSeasonLongPathParams;
-}(SpeakeasyBase));
-export { FantasyPlayerOwnershipPercentagesSeasonLongPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayerOwnershipPercentagesSeasonLongPathParams = FantasyPlayerOwnershipPercentagesSeasonLongPathParams;
 var FantasyPlayerOwnershipPercentagesSeasonLongRequest = /** @class */ (function (_super) {
     __extends(FantasyPlayerOwnershipPercentagesSeasonLongRequest, _super);
     function FantasyPlayerOwnershipPercentagesSeasonLongRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FantasyPlayerOwnershipPercentagesSeasonLongPathParams)
     ], FantasyPlayerOwnershipPercentagesSeasonLongRequest.prototype, "pathParams", void 0);
     return FantasyPlayerOwnershipPercentagesSeasonLongRequest;
-}(SpeakeasyBase));
-export { FantasyPlayerOwnershipPercentagesSeasonLongRequest };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayerOwnershipPercentagesSeasonLongRequest = FantasyPlayerOwnershipPercentagesSeasonLongRequest;
 var FantasyPlayerOwnershipPercentagesSeasonLongResponse = /** @class */ (function (_super) {
     __extends(FantasyPlayerOwnershipPercentagesSeasonLongResponse, _super);
     function FantasyPlayerOwnershipPercentagesSeasonLongResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FantasyPlayerOwnershipPercentagesSeasonLongResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], FantasyPlayerOwnershipPercentagesSeasonLongResponse.prototype, "playerOwnerships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FantasyPlayerOwnershipPercentagesSeasonLongResponse.prototype, "statusCode", void 0);
     return FantasyPlayerOwnershipPercentagesSeasonLongResponse;
-}(SpeakeasyBase));
-export { FantasyPlayerOwnershipPercentagesSeasonLongResponse };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayerOwnershipPercentagesSeasonLongResponse = FantasyPlayerOwnershipPercentagesSeasonLongResponse;

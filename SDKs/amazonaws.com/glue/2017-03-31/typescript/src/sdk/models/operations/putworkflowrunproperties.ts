@@ -66,7 +66,7 @@ export class PutWorkflowRunPropertiesResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  putWorkflowRunPropertiesResponse?: Map<string, any>;
+  putWorkflowRunPropertiesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNumberLimitExceededException?: any;

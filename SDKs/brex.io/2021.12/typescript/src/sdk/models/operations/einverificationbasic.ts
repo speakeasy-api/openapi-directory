@@ -29,10 +29,10 @@ export class EinVerificationBasicResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  einVerificationBasic200ApplicationJsonAny?: any;
+  einVerificationBasic200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  einVerificationBasicDefaultApplicationJsonAny?: any;
+  einVerificationBasicDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

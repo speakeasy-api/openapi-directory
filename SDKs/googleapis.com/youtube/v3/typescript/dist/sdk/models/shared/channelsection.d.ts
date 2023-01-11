@@ -8,7 +8,7 @@ export declare class ChannelSection extends SpeakeasyBase {
     etag?: string;
     id?: string;
     kind?: string;
-    localizations?: Map<string, ChannelSectionLocalization>;
+    localizations?: Record<string, ChannelSectionLocalization>;
     snippet?: ChannelSectionSnippet;
     targeting?: ChannelSectionTargeting;
 }

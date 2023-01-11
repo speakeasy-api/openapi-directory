@@ -32,7 +32,7 @@ export class GetMediaForFragmentListRequestBody extends SpeakeasyBase {
   fragments: string[];
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterRule } from "./filterrule";
-import { Options } from "./options";
-import { TaskSchedule } from "./taskschedule";
-import { TagListEntry } from "./taglistentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTaskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterrule_1 = require("./filterrule");
+var options_1 = require("./options");
+var taskschedule_1 = require("./taskschedule");
+var taglistentry_1 = require("./taglistentry");
 // CreateTaskRequest
 /**
  * CreateTaskRequest
@@ -37,41 +40,41 @@ var CreateTaskRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLogGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLogGroupArn" }),
         __metadata("design:type", String)
     ], CreateTaskRequest.prototype, "cloudWatchLogGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationLocationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationLocationArn" }),
         __metadata("design:type", String)
     ], CreateTaskRequest.prototype, "destinationLocationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Excludes", elemType: FilterRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Excludes", elemType: filterrule_1.FilterRule }),
         __metadata("design:type", Array)
     ], CreateTaskRequest.prototype, "excludes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Includes", elemType: FilterRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Includes", elemType: filterrule_1.FilterRule }),
         __metadata("design:type", Array)
     ], CreateTaskRequest.prototype, "includes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateTaskRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Options" }),
-        __metadata("design:type", Options)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Options" }),
+        __metadata("design:type", options_1.Options)
     ], CreateTaskRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
-        __metadata("design:type", TaskSchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
+        __metadata("design:type", taskschedule_1.TaskSchedule)
     ], CreateTaskRequest.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceLocationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceLocationArn" }),
         __metadata("design:type", String)
     ], CreateTaskRequest.prototype, "sourceLocationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: TagListEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: taglistentry_1.TagListEntry }),
         __metadata("design:type", Array)
     ], CreateTaskRequest.prototype, "tags", void 0);
     return CreateTaskRequest;
-}(SpeakeasyBase));
-export { CreateTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTaskRequest = CreateTaskRequest;

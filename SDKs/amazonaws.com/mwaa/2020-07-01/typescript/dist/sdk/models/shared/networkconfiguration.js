@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // NetworkConfiguration
 /**
  * The VPC networking components used to secure and enable network traffic between the AWS resources for your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
@@ -33,13 +36,13 @@ var NetworkConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], NetworkConfiguration.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], NetworkConfiguration.prototype, "subnetIds", void 0);
     return NetworkConfiguration;
-}(SpeakeasyBase));
-export { NetworkConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfiguration = NetworkConfiguration;

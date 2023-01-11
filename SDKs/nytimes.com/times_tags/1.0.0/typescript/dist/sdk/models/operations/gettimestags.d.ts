@@ -15,6 +15,6 @@ export declare class GetTimestagsRequest extends SpeakeasyBase {
 }
 export declare class GetTimestagsResponse extends SpeakeasyBase {
     contentType: string;
-    getTimestags200ApplicationJsonArrays?: string[][];
     statusCode: number;
+    getTimestags200ApplicationJSONArrays?: string[][];
 }

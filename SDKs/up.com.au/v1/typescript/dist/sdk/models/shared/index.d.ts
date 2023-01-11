@@ -1,5 +1,7 @@
 export * from "./accountresource";
 export * from "./categoryresource";
+export * from "./createwebhookrequest";
+export * from "./createwebhookresponse";
 export * from "./errorobject";
 export * from "./errorresponse";
 export * from "./getaccountresponse";
@@ -22,4 +24,5 @@ export * from "./updatetransactiontagsrequest";
 export * from "./webhookdeliverylogresource";
 export * from "./webhookeventcallback";
 export * from "./webhookeventresource";
+export * from "./webhookinputresource";
 export * from "./webhookresource";

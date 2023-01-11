@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudStorageSink } from "./cloudstoragesink";
-import { ExportOptions } from "./exportoptions";
-import { Query } from "./query";
-import { UserInfo } from "./userinfo";
-import { ExportStats } from "./exportstats";
-export var ExportStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Export = exports.ExportStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudstoragesink_1 = require("./cloudstoragesink");
+var exportoptions_1 = require("./exportoptions");
+var query_1 = require("./query");
+var userinfo_1 = require("./userinfo");
+var exportstats_1 = require("./exportstats");
+var ExportStatusEnum;
 (function (ExportStatusEnum) {
     ExportStatusEnum["ExportStatusUnspecified"] = "EXPORT_STATUS_UNSPECIFIED";
     ExportStatusEnum["Completed"] = "COMPLETED";
     ExportStatusEnum["Failed"] = "FAILED";
     ExportStatusEnum["InProgress"] = "IN_PROGRESS";
-})(ExportStatusEnum || (ExportStatusEnum = {}));
+})(ExportStatusEnum = exports.ExportStatusEnum || (exports.ExportStatusEnum = {}));
 // Export
 /**
  * An export. To work with Vault resources, the account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege.
@@ -45,45 +48,45 @@ var Export = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStorageSink" }),
-        __metadata("design:type", CloudStorageSink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStorageSink" }),
+        __metadata("design:type", cloudstoragesink_1.CloudStorageSink)
     ], Export.prototype, "cloudStorageSink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Export.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportOptions" }),
-        __metadata("design:type", ExportOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportOptions" }),
+        __metadata("design:type", exportoptions_1.ExportOptions)
     ], Export.prototype, "exportOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Export.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matterId" }),
         __metadata("design:type", String)
     ], Export.prototype, "matterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Export.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
-        __metadata("design:type", Query)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
+        __metadata("design:type", query_1.Query)
     ], Export.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requester" }),
-        __metadata("design:type", UserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requester" }),
+        __metadata("design:type", userinfo_1.UserInfo)
     ], Export.prototype, "requester", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", ExportStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", exportstats_1.ExportStats)
     ], Export.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Export.prototype, "status", void 0);
     return Export;
-}(SpeakeasyBase));
-export { Export };
+}(utils_1.SpeakeasyBase));
+exports.Export = Export;

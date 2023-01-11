@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -47,19 +46,19 @@ export class Investors {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -72,34 +71,33 @@ export class Investors {
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createInvestor400ApplicationJsonAny = httpRes?.data;
+                res.createInvestor400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createInvestor401ApplicationJsonAny = httpRes?.data;
+                res.createInvestor401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createInvestor403ApplicationJsonAny = httpRes?.data;
+                res.createInvestor403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createInvestor429ApplicationJsonAny = httpRes?.data;
+                res.createInvestor429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createInvestor500ApplicationJsonAny = httpRes?.data;
+                res.createInvestor500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -120,6 +118,7 @@ export class Investors {
     const url: string = baseURL.replace(/\/$/, "") + "/tenant/investors/v1";
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
     const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
@@ -129,13 +128,15 @@ export class Investors {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -143,39 +144,38 @@ export class Investors {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors200ApplicationJsonObject = httpRes?.data;
+                res.getAllInvestors200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors400ApplicationJsonAny = httpRes?.data;
+                res.getAllInvestors400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors401ApplicationJsonAny = httpRes?.data;
+                res.getAllInvestors401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors403ApplicationJsonAny = httpRes?.data;
+                res.getAllInvestors403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors429ApplicationJsonAny = httpRes?.data;
+                res.getAllInvestors429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getAllInvestors500ApplicationJsonAny = httpRes?.data;
+                res.getAllInvestors500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -196,14 +196,17 @@ export class Investors {
     const url: string = utils.generateURL(baseURL, "/tenant/investors/v1/{investor_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -216,39 +219,38 @@ export class Investors {
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor400ApplicationJsonAny = httpRes?.data;
+                res.getInvestor400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor401ApplicationJsonAny = httpRes?.data;
+                res.getInvestor401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor403ApplicationJsonAny = httpRes?.data;
+                res.getInvestor403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor404ApplicationJsonAny = httpRes?.data;
+                res.getInvestor404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor429ApplicationJsonAny = httpRes?.data;
+                res.getInvestor429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getInvestor500ApplicationJsonAny = httpRes?.data;
+                res.getInvestor500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -279,19 +281,19 @@ export class Investors {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "patch",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "patch",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -304,44 +306,43 @@ export class Investors {
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor400ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor401ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor403ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor404ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor409ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor429ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.updateInvestor500ApplicationJsonAny = httpRes?.data;
+                res.updateInvestor500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

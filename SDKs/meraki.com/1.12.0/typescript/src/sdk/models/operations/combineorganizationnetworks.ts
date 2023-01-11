@@ -37,5 +37,5 @@ export class CombineOrganizationNetworksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  combineOrganizationNetworks200ApplicationJsonObject?: Map<string, any>;
+  combineOrganizationNetworks200ApplicationJSONObject?: Record<string, any>;
 }

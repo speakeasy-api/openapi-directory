@@ -20,7 +20,7 @@ export class ValidationAuthority extends SpeakeasyBase {
   goodTtl: number;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers: Map<string, string>;
+  headers: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=host" })
   host: string;

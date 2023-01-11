@@ -17,7 +17,7 @@ export class TaxLine extends SpeakeasyBase {
   manualTaxType?: ManualTaxTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=PayslipTaxLineID" })
-  payslipTaxLineId?: string;
+  payslipTaxLineID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TaxTypeName" })
   taxTypeName?: string;

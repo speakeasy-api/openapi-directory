@@ -22,5 +22,5 @@ export class GetNetworkApplianceContentFilteringResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceContentFiltering200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceContentFiltering200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,160 +23,162 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SevenGetListOfPaymentsResponse = exports.SevenGetListOfPaymentsRequest = exports.SevenGetListOfPayments200ApplicationJson = exports.SevenGetListOfPayments200ApplicationJsonData = exports.SevenGetListOfPaymentsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SevenGetListOfPaymentsQueryParams = /** @class */ (function (_super) {
     __extends(SevenGetListOfPaymentsQueryParams, _super);
     function SevenGetListOfPaymentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dateFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dateFrom" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "dateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=dateTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=dateTo" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "dateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orderBy" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "orderBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsQueryParams.prototype, "sortBy", void 0);
     return SevenGetListOfPaymentsQueryParams;
-}(SpeakeasyBase));
-export { SevenGetListOfPaymentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SevenGetListOfPaymentsQueryParams = SevenGetListOfPaymentsQueryParams;
 var SevenGetListOfPayments200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(SevenGetListOfPayments200ApplicationJsonData, _super);
     function SevenGetListOfPayments200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actually_paid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actually_paid" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "actuallyPaid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order_description" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "orderDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order_id" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outcome_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outcome_amount" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "outcomeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outcome_currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outcome_currency" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "outcomeCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pay_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pay_address" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "payAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pay_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pay_amount" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "payAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pay_currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pay_currency" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "payCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_id" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "paymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_status" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "paymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_amount" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "priceAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_currency" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "priceCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchase_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchase_id" }),
         __metadata("design:type", String)
     ], SevenGetListOfPayments200ApplicationJsonData.prototype, "purchaseId", void 0);
     return SevenGetListOfPayments200ApplicationJsonData;
-}(SpeakeasyBase));
-export { SevenGetListOfPayments200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.SevenGetListOfPayments200ApplicationJsonData = SevenGetListOfPayments200ApplicationJsonData;
 var SevenGetListOfPayments200ApplicationJson = /** @class */ (function (_super) {
     __extends(SevenGetListOfPayments200ApplicationJson, _super);
     function SevenGetListOfPayments200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: SevenGetListOfPayments200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: SevenGetListOfPayments200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], SevenGetListOfPayments200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJson.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJson.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagesCount" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJson.prototype, "pagesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SevenGetListOfPayments200ApplicationJson.prototype, "total", void 0);
     return SevenGetListOfPayments200ApplicationJson;
-}(SpeakeasyBase));
-export { SevenGetListOfPayments200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SevenGetListOfPayments200ApplicationJson = SevenGetListOfPayments200ApplicationJson;
 var SevenGetListOfPaymentsRequest = /** @class */ (function (_super) {
     __extends(SevenGetListOfPaymentsRequest, _super);
     function SevenGetListOfPaymentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SevenGetListOfPaymentsQueryParams)
     ], SevenGetListOfPaymentsRequest.prototype, "queryParams", void 0);
     return SevenGetListOfPaymentsRequest;
-}(SpeakeasyBase));
-export { SevenGetListOfPaymentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SevenGetListOfPaymentsRequest = SevenGetListOfPaymentsRequest;
 var SevenGetListOfPaymentsResponse = /** @class */ (function (_super) {
     __extends(SevenGetListOfPaymentsResponse, _super);
     function SevenGetListOfPaymentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SevenGetListOfPayments200ApplicationJson)
-    ], SevenGetListOfPaymentsResponse.prototype, "sevenGetListOfPayments200ApplicationJsonObject", void 0);
+    ], SevenGetListOfPaymentsResponse.prototype, "sevenGetListOfPayments200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SevenGetListOfPaymentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], SevenGetListOfPaymentsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SevenGetListOfPaymentsResponse.prototype, "statusCode", void 0);
     return SevenGetListOfPaymentsResponse;
-}(SpeakeasyBase));
-export { SevenGetListOfPaymentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SevenGetListOfPaymentsResponse = SevenGetListOfPaymentsResponse;

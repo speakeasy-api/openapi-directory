@@ -69,7 +69,7 @@ export class UpdateContactResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateContactResult?: Map<string, any>;
+  updateContactResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

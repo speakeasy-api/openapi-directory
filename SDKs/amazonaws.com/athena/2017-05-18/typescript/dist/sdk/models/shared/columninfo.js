@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnNullableEnum } from "./columnnullableenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnnullableenum_1 = require("./columnnullableenum");
 // ColumnInfo
 /**
  * Information about the columns in a query execution result.
@@ -34,45 +37,45 @@ var ColumnInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CaseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CaseSensitive" }),
         __metadata("design:type", Boolean)
     ], ColumnInfo.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogName" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "catalogName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Label" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Nullable" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "nullable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Precision" }),
         __metadata("design:type", Number)
     ], ColumnInfo.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Scale" }),
         __metadata("design:type", Number)
     ], ColumnInfo.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaName" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "schemaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "tableName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ColumnInfo.prototype, "type", void 0);
     return ColumnInfo;
-}(SpeakeasyBase));
-export { ColumnInfo };
+}(utils_1.SpeakeasyBase));
+exports.ColumnInfo = ColumnInfo;

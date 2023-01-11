@@ -41,20 +41,20 @@ export class GetPortfolioTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate200ApplicationJsonAny?: any;
+  getPortfolioTemplate200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate401ApplicationJsonAny?: any;
+  getPortfolioTemplate401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate403ApplicationJsonAny?: any;
+  getPortfolioTemplate403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate404ApplicationJsonAny?: any;
+  getPortfolioTemplate404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate429ApplicationJsonAny?: any;
+  getPortfolioTemplate429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPortfolioTemplate500ApplicationJsonAny?: any;
+  getPortfolioTemplate500ApplicationJSONAny?: any;
 }

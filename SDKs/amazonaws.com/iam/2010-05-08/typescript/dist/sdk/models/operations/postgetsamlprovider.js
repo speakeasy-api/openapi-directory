@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetSamlProviderActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetSamlProviderResponse = exports.PostGetSamlProviderRequest = exports.PostGetSamlProviderHeaders = exports.PostGetSamlProviderQueryParams = exports.PostGetSamlProviderVersionEnum = exports.PostGetSamlProviderActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetSamlProviderActionEnum;
 (function (PostGetSamlProviderActionEnum) {
     PostGetSamlProviderActionEnum["GetSamlProvider"] = "GetSAMLProvider";
-})(PostGetSamlProviderActionEnum || (PostGetSamlProviderActionEnum = {}));
-export var PostGetSamlProviderVersionEnum;
+})(PostGetSamlProviderActionEnum = exports.PostGetSamlProviderActionEnum || (exports.PostGetSamlProviderActionEnum = {}));
+var PostGetSamlProviderVersionEnum;
 (function (PostGetSamlProviderVersionEnum) {
     PostGetSamlProviderVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostGetSamlProviderVersionEnum || (PostGetSamlProviderVersionEnum = {}));
+})(PostGetSamlProviderVersionEnum = exports.PostGetSamlProviderVersionEnum || (exports.PostGetSamlProviderVersionEnum = {}));
 var PostGetSamlProviderQueryParams = /** @class */ (function (_super) {
     __extends(PostGetSamlProviderQueryParams, _super);
     function PostGetSamlProviderQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderQueryParams.prototype, "version", void 0);
     return PostGetSamlProviderQueryParams;
-}(SpeakeasyBase));
-export { PostGetSamlProviderQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSamlProviderQueryParams = PostGetSamlProviderQueryParams;
 var PostGetSamlProviderHeaders = /** @class */ (function (_super) {
     __extends(PostGetSamlProviderHeaders, _super);
     function PostGetSamlProviderHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetSamlProviderHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetSamlProviderHeaders;
-}(SpeakeasyBase));
-export { PostGetSamlProviderHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSamlProviderHeaders = PostGetSamlProviderHeaders;
 var PostGetSamlProviderRequest = /** @class */ (function (_super) {
     __extends(PostGetSamlProviderRequest, _super);
     function PostGetSamlProviderRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetSamlProviderQueryParams)
     ], PostGetSamlProviderRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetSamlProviderHeaders)
     ], PostGetSamlProviderRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetSamlProviderRequest.prototype, "request", void 0);
     return PostGetSamlProviderRequest;
-}(SpeakeasyBase));
-export { PostGetSamlProviderRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSamlProviderRequest = PostGetSamlProviderRequest;
 var PostGetSamlProviderResponse = /** @class */ (function (_super) {
     __extends(PostGetSamlProviderResponse, _super);
     function PostGetSamlProviderResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetSamlProviderResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetSamlProviderResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetSamlProviderResponse.prototype, "statusCode", void 0);
     return PostGetSamlProviderResponse;
-}(SpeakeasyBase));
-export { PostGetSamlProviderResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetSamlProviderResponse = PostGetSamlProviderResponse;

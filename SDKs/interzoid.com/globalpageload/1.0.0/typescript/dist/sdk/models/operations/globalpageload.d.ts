@@ -18,5 +18,5 @@ export declare class GlobalpageloadRequest extends SpeakeasyBase {
 export declare class GlobalpageloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    globalpageload200ApplicationJsonObject?: Globalpageload200ApplicationJson;
+    globalpageload200ApplicationJSONObject?: Globalpageload200ApplicationJson;
 }

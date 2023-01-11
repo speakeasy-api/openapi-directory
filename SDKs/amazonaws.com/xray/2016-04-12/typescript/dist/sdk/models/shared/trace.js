@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Segment } from "./segment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Trace = void 0;
+var utils_1 = require("../../../internal/utils");
+var segment_1 = require("./segment");
 // Trace
 /**
  * A collection of segment documents with matching trace IDs.
@@ -34,21 +37,21 @@ var Trace = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Duration" }),
         __metadata("design:type", Number)
     ], Trace.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Trace.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LimitExceeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LimitExceeded" }),
         __metadata("design:type", Boolean)
     ], Trace.prototype, "limitExceeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Segments", elemType: Segment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Segments", elemType: segment_1.Segment }),
         __metadata("design:type", Array)
     ], Trace.prototype, "segments", void 0);
     return Trace;
-}(SpeakeasyBase));
-export { Trace };
+}(utils_1.SpeakeasyBase));
+exports.Trace = Trace;

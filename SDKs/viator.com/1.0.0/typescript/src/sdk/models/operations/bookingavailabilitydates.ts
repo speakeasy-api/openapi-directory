@@ -16,7 +16,7 @@ export class BookingAvailabilityDatesHeaders extends SpeakeasyBase {
 
 export class BookingAvailabilityDates200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, string[]>;
+  data?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=dateStamp" })
   dateStamp?: string;
@@ -40,10 +40,10 @@ export class BookingAvailabilityDates200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -73,5 +73,5 @@ export class BookingAvailabilityDatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingAvailabilityDates200ApplicationJsonObject?: BookingAvailabilityDates200ApplicationJson;
+  bookingAvailabilityDates200ApplicationJSONObject?: BookingAvailabilityDates200ApplicationJson;
 }

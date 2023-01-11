@@ -191,23 +191,23 @@ export class TetmsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tetms400ApplicationJsonObject?: Tetms400ApplicationJson;
+  tetms400ApplicationJSONObject?: Tetms400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms401ApplicationJsonObject?: Tetms401ApplicationJson;
+  tetms401ApplicationJSONObject?: Tetms401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms404ApplicationJsonObject?: Tetms404ApplicationJson;
+  tetms404ApplicationJSONObject?: Tetms404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms500ApplicationJsonObject?: Tetms500ApplicationJson;
+  tetms500ApplicationJSONObject?: Tetms500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms502ApplicationJsonObject?: Tetms502ApplicationJson;
+  tetms502ApplicationJSONObject?: Tetms502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms503ApplicationJsonObject?: Tetms503ApplicationJson;
+  tetms503ApplicationJSONObject?: Tetms503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetms504ApplicationJsonObject?: Tetms504ApplicationJson;
+  tetms504ApplicationJSONObject?: Tetms504ApplicationJson;
 }

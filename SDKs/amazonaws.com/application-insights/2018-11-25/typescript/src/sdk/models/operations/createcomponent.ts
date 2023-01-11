@@ -48,7 +48,7 @@ export class CreateComponentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createComponentResponse?: Map<string, any>;
+  createComponentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

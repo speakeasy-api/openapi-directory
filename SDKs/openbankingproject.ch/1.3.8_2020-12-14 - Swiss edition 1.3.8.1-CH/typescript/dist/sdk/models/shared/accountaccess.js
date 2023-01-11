@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { AdditionalInformationAccess } from "./additionalinformationaccess";
-export var AccountAccessAllPsd2Enum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountAccess = exports.AccountAccessAvailableAccountsWithBalanceEnum = exports.AccountAccessAvailableAccountsEnum = exports.AccountAccessAllPsd2Enum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountreference16ch_1 = require("./accountreference16ch");
+var additionalinformationaccess_1 = require("./additionalinformationaccess");
+var AccountAccessAllPsd2Enum;
 (function (AccountAccessAllPsd2Enum) {
     AccountAccessAllPsd2Enum["AllAccounts"] = "allAccounts";
     AccountAccessAllPsd2Enum["AllAccountsWithOwnerName"] = "allAccountsWithOwnerName";
-})(AccountAccessAllPsd2Enum || (AccountAccessAllPsd2Enum = {}));
-export var AccountAccessAvailableAccountsEnum;
+})(AccountAccessAllPsd2Enum = exports.AccountAccessAllPsd2Enum || (exports.AccountAccessAllPsd2Enum = {}));
+var AccountAccessAvailableAccountsEnum;
 (function (AccountAccessAvailableAccountsEnum) {
     AccountAccessAvailableAccountsEnum["AllAccounts"] = "allAccounts";
     AccountAccessAvailableAccountsEnum["AllAccountsWithOwnerName"] = "allAccountsWithOwnerName";
-})(AccountAccessAvailableAccountsEnum || (AccountAccessAvailableAccountsEnum = {}));
-export var AccountAccessAvailableAccountsWithBalanceEnum;
+})(AccountAccessAvailableAccountsEnum = exports.AccountAccessAvailableAccountsEnum || (exports.AccountAccessAvailableAccountsEnum = {}));
+var AccountAccessAvailableAccountsWithBalanceEnum;
 (function (AccountAccessAvailableAccountsWithBalanceEnum) {
     AccountAccessAvailableAccountsWithBalanceEnum["AllAccounts"] = "allAccounts";
     AccountAccessAvailableAccountsWithBalanceEnum["AllAccountsWithOwnerName"] = "allAccountsWithOwnerName";
-})(AccountAccessAvailableAccountsWithBalanceEnum || (AccountAccessAvailableAccountsWithBalanceEnum = {}));
+})(AccountAccessAvailableAccountsWithBalanceEnum = exports.AccountAccessAvailableAccountsWithBalanceEnum || (exports.AccountAccessAvailableAccountsWithBalanceEnum = {}));
 // AccountAccess
 /**
  * Requested access services for a consent.
@@ -51,37 +54,37 @@ var AccountAccess = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: AccountReference16Ch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: accountreference16ch_1.AccountReference16Ch }),
         __metadata("design:type", Array)
     ], AccountAccess.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalInformation" }),
-        __metadata("design:type", AdditionalInformationAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalInformation" }),
+        __metadata("design:type", additionalinformationaccess_1.AdditionalInformationAccess)
     ], AccountAccess.prototype, "additionalInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allPsd2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allPsd2" }),
         __metadata("design:type", String)
     ], AccountAccess.prototype, "allPsd2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableAccounts" }),
         __metadata("design:type", String)
     ], AccountAccess.prototype, "availableAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableAccountsWithBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableAccountsWithBalance" }),
         __metadata("design:type", String)
     ], AccountAccess.prototype, "availableAccountsWithBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balances", elemType: AccountReference16Ch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balances", elemType: accountreference16ch_1.AccountReference16Ch }),
         __metadata("design:type", Array)
     ], AccountAccess.prototype, "balances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedTo" }),
         __metadata("design:type", Array)
     ], AccountAccess.prototype, "restrictedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions", elemType: AccountReference16Ch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions", elemType: accountreference16ch_1.AccountReference16Ch }),
         __metadata("design:type", Array)
     ], AccountAccess.prototype, "transactions", void 0);
     return AccountAccess;
-}(SpeakeasyBase));
-export { AccountAccess };
+}(utils_1.SpeakeasyBase));
+exports.AccountAccess = AccountAccess;

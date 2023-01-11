@@ -63,5 +63,5 @@ export class UpdateVpceConfigurationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateVpceConfigurationResult?: shared.UpdateVpceConfigurationResult;
+  updateVPCEConfigurationResult?: shared.UpdateVpceConfigurationResult;
 }

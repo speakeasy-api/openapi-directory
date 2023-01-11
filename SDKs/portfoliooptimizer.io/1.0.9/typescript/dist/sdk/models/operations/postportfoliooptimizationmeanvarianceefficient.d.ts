@@ -25,6 +25,6 @@ export declare class PostPortfolioOptimizationMeanVarianceEfficientRequest exten
 }
 export declare class PostPortfolioOptimizationMeanVarianceEfficientResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMeanVarianceEfficient200ApplicationJsonObject?: PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject?: PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJson;
 }

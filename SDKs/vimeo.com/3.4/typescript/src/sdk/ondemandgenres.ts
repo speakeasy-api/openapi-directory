@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,38 +31,40 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.AddVodGenreResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.onDemandGenre = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -70,7 +72,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -86,16 +87,18 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -104,17 +107,17 @@ export class OnDemandGenres {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -122,7 +125,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -140,28 +142,30 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetGenreVodResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
                 res.onDemandPage = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -169,7 +173,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -185,11 +188,11 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/genres/{genre_id}/pages", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/genres/{genre_id}/pages", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -197,19 +200,21 @@ export class OnDemandGenres {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetGenreVodsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.page+json`)) {
                 res.onDemandPages = httpRes?.data;
             }
             break;
@@ -217,7 +222,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -233,28 +237,30 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/genres/{genre_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/genres/{genre_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVodGenreResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.onDemandGenre = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -262,7 +268,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -278,28 +283,30 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVodGenreByOndemandIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.onDemandGenre = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -307,7 +314,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -322,19 +328,21 @@ export class OnDemandGenres {
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVodGenresResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.onDemandGenres = httpRes?.data;
             }
             break;
@@ -342,7 +350,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -358,28 +365,30 @@ export class OnDemandGenres {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/ondemand/pages/{ondemand_id}/genres", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetVodGenresByOndemandIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.onDemandGenres = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.ondemand.genre+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -387,7 +396,6 @@ export class OnDemandGenres {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

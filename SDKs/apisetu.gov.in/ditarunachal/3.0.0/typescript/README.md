@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IlpmtRequest, IlpmtResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: IlpmtRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "dicta",
-      uid: "impedit",
-      eIlpAppId: "illum",
-      eIlpContactNumber: "quibusdam",
+      fullName: "sit",
+      uid: "voluptas",
+      eILPAppId: "culpa",
+      eILPContactNumber: "expedita",
     },
-    consentArtifact: "cum",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "repellendus",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.ilpmt(req).then((res: IlpmtResponse | AxiosError) => {
+sdk.apIs.ilpmt(req).then((res: IlpmtResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.ilpmt(req).then((res: IlpmtResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ilpmt` - Inner Line Permit
 

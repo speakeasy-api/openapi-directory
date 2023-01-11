@@ -17,7 +17,7 @@ export class SamplingTargetDocument extends SpeakeasyBase {
   reservoirQuota?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ReservoirQuotaTTL" })
-  reservoirQuotaTtl?: Date;
+  reservoirQuotaTTL?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=RuleName" })
   ruleName?: string;

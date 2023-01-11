@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attribute } from "./attribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssessmentTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribute_1 = require("./attribute");
 // AssessmentTemplate
 /**
  * Contains information about an Amazon Inspector assessment template. This data type is used as the response element in the <a>DescribeAssessmentTemplates</a> action.
@@ -34,41 +37,41 @@ var AssessmentTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], AssessmentTemplate.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunCount" }),
         __metadata("design:type", Number)
     ], AssessmentTemplate.prototype, "assessmentRunCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentTargetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentTargetArn" }),
         __metadata("design:type", String)
     ], AssessmentTemplate.prototype, "assessmentTargetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], AssessmentTemplate.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInSeconds" }),
         __metadata("design:type", Number)
     ], AssessmentTemplate.prototype, "durationInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAssessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAssessmentRunArn" }),
         __metadata("design:type", String)
     ], AssessmentTemplate.prototype, "lastAssessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AssessmentTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesPackageArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesPackageArns" }),
         __metadata("design:type", Array)
     ], AssessmentTemplate.prototype, "rulesPackageArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAttributesForFindings", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAttributesForFindings", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], AssessmentTemplate.prototype, "userAttributesForFindings", void 0);
     return AssessmentTemplate;
-}(SpeakeasyBase));
-export { AssessmentTemplate };
+}(utils_1.SpeakeasyBase));
+exports.AssessmentTemplate = AssessmentTemplate;

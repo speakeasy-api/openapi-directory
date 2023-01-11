@@ -26,7 +26,7 @@ export class PostUsersSelectedUserSshKeysRequest extends SpeakeasyBase {
   pathParams: PostUsersSelectedUserSshKeysPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostUsersSelectedUserSshKeysSecurity;
@@ -41,8 +41,8 @@ export class PostUsersSelectedUserSshKeysResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sshAccountKey?: Map<string, any>;
+  sshAccountKey?: Record<string, any>;
 }

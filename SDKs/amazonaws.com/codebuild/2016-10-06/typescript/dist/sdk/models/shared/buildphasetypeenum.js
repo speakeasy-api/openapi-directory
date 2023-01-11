@@ -1,4 +1,7 @@
-export var BuildPhaseTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildPhaseTypeEnum = void 0;
+var BuildPhaseTypeEnum;
 (function (BuildPhaseTypeEnum) {
     BuildPhaseTypeEnum["Submitted"] = "SUBMITTED";
     BuildPhaseTypeEnum["Queued"] = "QUEUED";
@@ -11,4 +14,4 @@ export var BuildPhaseTypeEnum;
     BuildPhaseTypeEnum["UploadArtifacts"] = "UPLOAD_ARTIFACTS";
     BuildPhaseTypeEnum["Finalizing"] = "FINALIZING";
     BuildPhaseTypeEnum["Completed"] = "COMPLETED";
-})(BuildPhaseTypeEnum || (BuildPhaseTypeEnum = {}));
+})(BuildPhaseTypeEnum = exports.BuildPhaseTypeEnum || (exports.BuildPhaseTypeEnum = {}));

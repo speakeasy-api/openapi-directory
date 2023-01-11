@@ -21,14 +21,14 @@ export declare class AssociateIdentityProviderConfigRequestBodyOidc extends Spea
     groupsPrefix?: string;
     identityProviderConfigName?: string;
     issuerUrl?: string;
-    requiredClaims?: Map<string, string>;
+    requiredClaims?: Record<string, string>;
     usernameClaim?: string;
     usernamePrefix?: string;
 }
 export declare class AssociateIdentityProviderConfigRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     oidc: AssociateIdentityProviderConfigRequestBodyOidc;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class AssociateIdentityProviderConfigRequest extends SpeakeasyBase {
     pathParams: AssociateIdentityProviderConfigPathParams;

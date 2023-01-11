@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ChangeServerLifeCycleStateRequest, ChangeServerLifeCycleStateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: ChangeServerLifeCycleStateRequest = {
   headers: {
-    xAmzAlgorithm: "molestiae",
-    xAmzContentSha256: "id",
-    xAmzCredential: "quia",
-    xAmzDate: "dolor",
-    xAmzSecurityToken: "sit",
-    xAmzSignature: "non",
-    xAmzSignedHeaders: "sed",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     lifeCycle: {
-      state: "READY_FOR_CUTOVER",
+      state: "CUTOVER",
     },
-    sourceServerId: "architecto",
+    sourceServerID: "fugit",
   },
 };
 
-sdk.sdk.changeServerLifeCycleState(req).then((res: ChangeServerLifeCycleStateResponse | AxiosError) => {
+sdk.changeServerLifeCycleState(req).then((res: ChangeServerLifeCycleStateResponse | AxiosError) => {
    // handle response
 });
 ```

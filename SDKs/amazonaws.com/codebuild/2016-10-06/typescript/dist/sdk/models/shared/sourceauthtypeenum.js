@@ -1,4 +1,7 @@
-export var SourceAuthTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceAuthTypeEnum = void 0;
+var SourceAuthTypeEnum;
 (function (SourceAuthTypeEnum) {
     SourceAuthTypeEnum["Oauth"] = "OAUTH";
-})(SourceAuthTypeEnum || (SourceAuthTypeEnum = {}));
+})(SourceAuthTypeEnum = exports.SourceAuthTypeEnum || (exports.SourceAuthTypeEnum = {}));

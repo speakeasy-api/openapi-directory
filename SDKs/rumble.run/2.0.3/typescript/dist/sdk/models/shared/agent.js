@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Agent = void 0;
+var utils_1 = require("../../../internal/utils");
 var Agent = /** @class */ (function (_super) {
     __extends(Agent, _super);
     function Agent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arch" }),
         __metadata("design:type", String)
     ], Agent.prototype, "arch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected" }),
         __metadata("design:type", Boolean)
     ], Agent.prototype, "connected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Number)
     ], Agent.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deactivated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deactivated_at" }),
         __metadata("design:type", Number)
     ], Agent.prototype, "deactivatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_ip" }),
         __metadata("design:type", String)
     ], Agent.prototype, "externalIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host_id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "hostId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub_id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "hubId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inactive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inactive" }),
         __metadata("design:type", Boolean)
     ], Agent.prototype, "inactive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internal_ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internal_ip" }),
         __metadata("design:type", String)
     ], Agent.prototype, "internalIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_checkin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_checkin" }),
         __metadata("design:type", Number)
     ], Agent.prototype, "lastCheckin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Agent.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os" }),
         __metadata("design:type", String)
     ], Agent.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_id" }),
         __metadata("design:type", String)
     ], Agent.prototype, "siteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system_info" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system_info" }),
+        __metadata("design:type", Object)
     ], Agent.prototype, "systemInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Number)
     ], Agent.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Agent.prototype, "version", void 0);
     return Agent;
-}(SpeakeasyBase));
-export { Agent };
+}(utils_1.SpeakeasyBase));
+exports.Agent = Agent;

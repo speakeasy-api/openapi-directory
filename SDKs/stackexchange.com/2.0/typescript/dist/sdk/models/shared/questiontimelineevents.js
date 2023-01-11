@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,172 +23,174 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionTimelineEvents = exports.QuestionTimelineEventsUser = exports.QuestionTimelineEventsUserBadgeCounts = exports.QuestionTimelineEventsOwner = exports.QuestionTimelineEventsOwnerBadgeCounts = void 0;
+var utils_1 = require("../../../internal/utils");
 var QuestionTimelineEventsOwnerBadgeCounts = /** @class */ (function (_super) {
     __extends(QuestionTimelineEventsOwnerBadgeCounts, _super);
     function QuestionTimelineEventsOwnerBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwnerBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwnerBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwnerBadgeCounts.prototype, "silver", void 0);
     return QuestionTimelineEventsOwnerBadgeCounts;
-}(SpeakeasyBase));
-export { QuestionTimelineEventsOwnerBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.QuestionTimelineEventsOwnerBadgeCounts = QuestionTimelineEventsOwnerBadgeCounts;
 var QuestionTimelineEventsOwner = /** @class */ (function (_super) {
     __extends(QuestionTimelineEventsOwner, _super);
     function QuestionTimelineEventsOwner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwner.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QuestionTimelineEventsOwnerBadgeCounts)
     ], QuestionTimelineEventsOwner.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsOwner.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsOwner.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsOwner.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwner.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsOwner.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsOwner.prototype, "userType", void 0);
     return QuestionTimelineEventsOwner;
-}(SpeakeasyBase));
-export { QuestionTimelineEventsOwner };
+}(utils_1.SpeakeasyBase));
+exports.QuestionTimelineEventsOwner = QuestionTimelineEventsOwner;
 var QuestionTimelineEventsUserBadgeCounts = /** @class */ (function (_super) {
     __extends(QuestionTimelineEventsUserBadgeCounts, _super);
     function QuestionTimelineEventsUserBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUserBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUserBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUserBadgeCounts.prototype, "silver", void 0);
     return QuestionTimelineEventsUserBadgeCounts;
-}(SpeakeasyBase));
-export { QuestionTimelineEventsUserBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.QuestionTimelineEventsUserBadgeCounts = QuestionTimelineEventsUserBadgeCounts;
 var QuestionTimelineEventsUser = /** @class */ (function (_super) {
     __extends(QuestionTimelineEventsUser, _super);
     function QuestionTimelineEventsUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUser.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QuestionTimelineEventsUserBadgeCounts)
     ], QuestionTimelineEventsUser.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsUser.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsUser.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsUser.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUser.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEventsUser.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEventsUser.prototype, "userType", void 0);
     return QuestionTimelineEventsUser;
-}(SpeakeasyBase));
-export { QuestionTimelineEventsUser };
+}(utils_1.SpeakeasyBase));
+exports.QuestionTimelineEventsUser = QuestionTimelineEventsUser;
 var QuestionTimelineEvents = /** @class */ (function (_super) {
     __extends(QuestionTimelineEvents, _super);
     function QuestionTimelineEvents() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "downVoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QuestionTimelineEventsOwner)
     ], QuestionTimelineEvents.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "postId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEvents.prototype, "revisionGuid", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QuestionTimelineEvents.prototype, "timelineType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QuestionTimelineEvents.prototype, "upVoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QuestionTimelineEventsUser)
     ], QuestionTimelineEvents.prototype, "user", void 0);
     return QuestionTimelineEvents;
-}(SpeakeasyBase));
-export { QuestionTimelineEvents };
+}(utils_1.SpeakeasyBase));
+exports.QuestionTimelineEvents = QuestionTimelineEvents;

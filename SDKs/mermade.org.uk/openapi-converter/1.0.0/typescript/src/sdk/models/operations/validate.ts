@@ -29,7 +29,7 @@ export class ValidateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  validate400ApplicationJsonAny?: any;
+  validate400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   validationResult?: shared.ValidationResult;

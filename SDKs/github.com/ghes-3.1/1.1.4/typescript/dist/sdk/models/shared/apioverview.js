@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiOverview = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApiOverview
 /**
  * Api Overview
@@ -33,21 +36,21 @@ var ApiOverview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependabot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependabot" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "dependabot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installed_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installed_version" }),
         __metadata("design:type", String)
     ], ApiOverview.prototype, "installedVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packages" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "packages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiable_password_authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiable_password_authentication" }),
         __metadata("design:type", Boolean)
     ], ApiOverview.prototype, "verifiablePasswordAuthentication", void 0);
     return ApiOverview;
-}(SpeakeasyBase));
-export { ApiOverview };
+}(utils_1.SpeakeasyBase));
+exports.ApiOverview = ApiOverview;

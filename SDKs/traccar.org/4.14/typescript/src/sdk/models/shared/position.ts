@@ -13,7 +13,7 @@ export class Position extends SpeakeasyBase {
   altitude?: number;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=course" })
   course?: number;
@@ -37,7 +37,7 @@ export class Position extends SpeakeasyBase {
   longitude?: number;
 
   @SpeakeasyMetadata({ data: "json, name=network" })
-  network?: Map<string, any>;
+  network?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=outdated" })
   outdated?: boolean;

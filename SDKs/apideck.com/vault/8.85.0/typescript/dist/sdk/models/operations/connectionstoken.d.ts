@@ -14,7 +14,7 @@ export declare class ConnectionsTokenSecurity extends SpeakeasyBase {
 export declare class ConnectionsTokenRequest extends SpeakeasyBase {
     pathParams: ConnectionsTokenPathParams;
     headers: ConnectionsTokenHeaders;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ConnectionsTokenSecurity;
 }
 export declare class ConnectionsTokenResponse extends SpeakeasyBase {

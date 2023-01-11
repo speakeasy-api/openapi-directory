@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkClientsUsageHistoriesResponse = exports.GetNetworkClientsUsageHistoriesRequest = exports.GetNetworkClientsUsageHistoriesQueryParams = exports.GetNetworkClientsUsageHistoriesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkClientsUsageHistoriesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientsUsageHistoriesPathParams, _super);
     function GetNetworkClientsUsageHistoriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesPathParams.prototype, "networkId", void 0);
     return GetNetworkClientsUsageHistoriesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkClientsUsageHistoriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientsUsageHistoriesPathParams = GetNetworkClientsUsageHistoriesPathParams;
 var GetNetworkClientsUsageHistoriesQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientsUsageHistoriesQueryParams, _super);
     function GetNetworkClientsUsageHistoriesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clients" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "clients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ssidNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ssidNumber" }),
         __metadata("design:type", Number)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "ssidNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkClientsUsageHistoriesQueryParams.prototype, "timespan", void 0);
     return GetNetworkClientsUsageHistoriesQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkClientsUsageHistoriesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientsUsageHistoriesQueryParams = GetNetworkClientsUsageHistoriesQueryParams;
 var GetNetworkClientsUsageHistoriesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkClientsUsageHistoriesRequest, _super);
     function GetNetworkClientsUsageHistoriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientsUsageHistoriesPathParams)
     ], GetNetworkClientsUsageHistoriesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientsUsageHistoriesQueryParams)
     ], GetNetworkClientsUsageHistoriesRequest.prototype, "queryParams", void 0);
     return GetNetworkClientsUsageHistoriesRequest;
-}(SpeakeasyBase));
-export { GetNetworkClientsUsageHistoriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientsUsageHistoriesRequest = GetNetworkClientsUsageHistoriesRequest;
 var GetNetworkClientsUsageHistoriesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkClientsUsageHistoriesResponse, _super);
     function GetNetworkClientsUsageHistoriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkClientsUsageHistoriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkClientsUsageHistoriesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkClientsUsageHistoriesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkClientsUsageHistoriesResponse.prototype, "getNetworkClientsUsageHistories200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkClientsUsageHistoriesResponse.prototype, "getNetworkClientsUsageHistories200ApplicationJSONObject", void 0);
     return GetNetworkClientsUsageHistoriesResponse;
-}(SpeakeasyBase));
-export { GetNetworkClientsUsageHistoriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientsUsageHistoriesResponse = GetNetworkClientsUsageHistoriesResponse;

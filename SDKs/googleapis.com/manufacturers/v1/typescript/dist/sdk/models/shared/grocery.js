@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Grocery = void 0;
+var utils_1 = require("../../../internal/utils");
 var Grocery = /** @class */ (function (_super) {
     __extends(Grocery, _super);
     function Grocery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeIngredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeIngredients" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "activeIngredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alcoholByVolume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alcoholByVolume" }),
         __metadata("design:type", Number)
     ], Grocery.prototype, "alcoholByVolume", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allergens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allergens" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "allergens", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=derivedNutritionClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=derivedNutritionClaim" }),
         __metadata("design:type", Array)
     ], Grocery.prototype, "derivedNutritionClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directions" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "directions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indications" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "indications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredients" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "ingredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nutritionClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nutritionClaim" }),
         __metadata("design:type", Array)
     ], Grocery.prototype, "nutritionClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageInstructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageInstructions" }),
         __metadata("design:type", String)
     ], Grocery.prototype, "storageInstructions", void 0);
     return Grocery;
-}(SpeakeasyBase));
-export { Grocery };
+}(utils_1.SpeakeasyBase));
+exports.Grocery = Grocery;

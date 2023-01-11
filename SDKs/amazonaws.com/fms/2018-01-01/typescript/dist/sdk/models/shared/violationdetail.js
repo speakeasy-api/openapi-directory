@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
-import { ResourceViolation } from "./resourceviolation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViolationDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
+var resourceviolation_1 = require("./resourceviolation");
 // ViolationDetail
 /**
  * Violations for a resource based on the specified Firewall Manager policy and Amazon Web Services account.
@@ -35,33 +38,33 @@ var ViolationDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemberAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemberAccount" }),
         __metadata("design:type", String)
     ], ViolationDetail.prototype, "memberAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], ViolationDetail.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceDescription" }),
         __metadata("design:type", String)
     ], ViolationDetail.prototype, "resourceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], ViolationDetail.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceTags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceTags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ViolationDetail.prototype, "resourceTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], ViolationDetail.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceViolations", elemType: ResourceViolation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceViolations", elemType: resourceviolation_1.ResourceViolation }),
         __metadata("design:type", Array)
     ], ViolationDetail.prototype, "resourceViolations", void 0);
     return ViolationDetail;
-}(SpeakeasyBase));
-export { ViolationDetail };
+}(utils_1.SpeakeasyBase));
+exports.ViolationDetail = ViolationDetail;

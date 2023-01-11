@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1AssociationInfo } from "./googlecloudchannelv1associationinfo";
-import { GoogleCloudChannelV1CommitmentSettingsInput } from "./googlecloudchannelv1commitmentsettings";
-import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
-import { GoogleCloudChannelV1TrialSettings } from "./googlecloudchannelv1trialsettings";
 import { GoogleCloudChannelV1CommitmentSettings } from "./googlecloudchannelv1commitmentsettings";
 import { GoogleCloudChannelV1Parameter } from "./googlecloudchannelv1parameter";
 import { GoogleCloudChannelV1ProvisionedService } from "./googlecloudchannelv1provisionedservice";
+import { GoogleCloudChannelV1TrialSettings } from "./googlecloudchannelv1trialsettings";
+import { GoogleCloudChannelV1CommitmentSettingsInput } from "./googlecloudchannelv1commitmentsettings";
+import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
 
 
 export enum GoogleCloudChannelV1EntitlementProvisioningStateEnum {
@@ -21,31 +21,6 @@ export enum GoogleCloudChannelV1EntitlementSuspensionReasonsEnum {
     RenewalWithTypeCancel = "RENEWAL_WITH_TYPE_CANCEL",
     PendingTosAcceptance = "PENDING_TOS_ACCEPTANCE",
     Other = "OTHER"
-}
-
-
-// GoogleCloudChannelV1EntitlementInput
-/** 
- * An entitlement is a representation of a customer's ability to use a service.
-**/
-export class GoogleCloudChannelV1EntitlementInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=associationInfo" })
-  associationInfo?: GoogleCloudChannelV1AssociationInfo;
-
-  @SpeakeasyMetadata({ data: "json, name=commitmentSettings" })
-  commitmentSettings?: GoogleCloudChannelV1CommitmentSettingsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=offer" })
-  offer?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=parameters", elemType: GoogleCloudChannelV1ParameterInput })
-  parameters?: GoogleCloudChannelV1ParameterInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=purchaseOrderId" })
-  purchaseOrderId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=trialSettings" })
-  trialSettings?: GoogleCloudChannelV1TrialSettings;
 }
 
 
@@ -89,4 +64,29 @@ export class GoogleCloudChannelV1Entitlement extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// GoogleCloudChannelV1EntitlementInput
+/** 
+ * An entitlement is a representation of a customer's ability to use a service.
+**/
+export class GoogleCloudChannelV1EntitlementInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=associationInfo" })
+  associationInfo?: GoogleCloudChannelV1AssociationInfo;
+
+  @SpeakeasyMetadata({ data: "json, name=commitmentSettings" })
+  commitmentSettings?: GoogleCloudChannelV1CommitmentSettingsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=offer" })
+  offer?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=parameters", elemType: GoogleCloudChannelV1ParameterInput })
+  parameters?: GoogleCloudChannelV1ParameterInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=purchaseOrderId" })
+  purchaseOrderId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=trialSettings" })
+  trialSettings?: GoogleCloudChannelV1TrialSettings;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicatingStep = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicatingStep
 /**
  * ReplicatingStep contains specific step details.
@@ -33,21 +36,21 @@ var ReplicatingStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastThirtyMinutesAverageBytesPerSecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastThirtyMinutesAverageBytesPerSecond" }),
         __metadata("design:type", String)
     ], ReplicatingStep.prototype, "lastThirtyMinutesAverageBytesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastTwoMinutesAverageBytesPerSecond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastTwoMinutesAverageBytesPerSecond" }),
         __metadata("design:type", String)
     ], ReplicatingStep.prototype, "lastTwoMinutesAverageBytesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicatedBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicatedBytes" }),
         __metadata("design:type", String)
     ], ReplicatingStep.prototype, "replicatedBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalBytes" }),
         __metadata("design:type", String)
     ], ReplicatingStep.prototype, "totalBytes", void 0);
     return ReplicatingStep;
-}(SpeakeasyBase));
-export { ReplicatingStep };
+}(utils_1.SpeakeasyBase));
+exports.ReplicatingStep = ReplicatingStep;

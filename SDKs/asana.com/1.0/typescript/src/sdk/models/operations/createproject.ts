@@ -44,5 +44,5 @@ export class CreateProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createProject201ApplicationJsonObject?: CreateProject201ApplicationJson;
+  createProject201ApplicationJSONObject?: CreateProject201ApplicationJson;
 }

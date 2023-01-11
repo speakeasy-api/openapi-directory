@@ -1,4 +1,7 @@
-export var WebhookFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookFilterTypeEnum = void 0;
+var WebhookFilterTypeEnum;
 (function (WebhookFilterTypeEnum) {
     WebhookFilterTypeEnum["Event"] = "EVENT";
     WebhookFilterTypeEnum["BaseRef"] = "BASE_REF";
@@ -6,4 +9,4 @@ export var WebhookFilterTypeEnum;
     WebhookFilterTypeEnum["ActorAccountId"] = "ACTOR_ACCOUNT_ID";
     WebhookFilterTypeEnum["FilePath"] = "FILE_PATH";
     WebhookFilterTypeEnum["CommitMessage"] = "COMMIT_MESSAGE";
-})(WebhookFilterTypeEnum || (WebhookFilterTypeEnum = {}));
+})(WebhookFilterTypeEnum = exports.WebhookFilterTypeEnum || (exports.WebhookFilterTypeEnum = {}));

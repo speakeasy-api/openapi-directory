@@ -62,7 +62,7 @@ export class CertificatemanagerProjectsLocationsOperationsCancelRequest extends 
   queryParams: CertificatemanagerProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: CertificatemanagerProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class CertificatemanagerProjectsLocationsOperationsCancelResponse extends
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

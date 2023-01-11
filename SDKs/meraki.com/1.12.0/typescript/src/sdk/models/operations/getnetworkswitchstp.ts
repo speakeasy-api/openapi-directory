@@ -22,5 +22,5 @@ export class GetNetworkSwitchStpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchStp200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchStp200ApplicationJSONObject?: Record<string, any>;
 }

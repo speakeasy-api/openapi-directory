@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentPlatform } from "./environmentplatform";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListCuratedEnvironmentImagesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentplatform_1 = require("./environmentplatform");
 var ListCuratedEnvironmentImagesOutput = /** @class */ (function (_super) {
     __extends(ListCuratedEnvironmentImagesOutput, _super);
     function ListCuratedEnvironmentImagesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms", elemType: EnvironmentPlatform }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms", elemType: environmentplatform_1.EnvironmentPlatform }),
         __metadata("design:type", Array)
     ], ListCuratedEnvironmentImagesOutput.prototype, "platforms", void 0);
     return ListCuratedEnvironmentImagesOutput;
-}(SpeakeasyBase));
-export { ListCuratedEnvironmentImagesOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListCuratedEnvironmentImagesOutput = ListCuratedEnvironmentImagesOutput;

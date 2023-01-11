@@ -20,7 +20,7 @@ export declare class DeleteNetworkProfileRequest extends SpeakeasyBase {
 export declare class DeleteNetworkProfileResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteNetworkProfileResult?: Map<string, any>;
+    deleteNetworkProfileResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

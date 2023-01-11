@@ -46,5 +46,5 @@ export class GetDocumentationRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDocumentationRelations200ApplicationJsonObject?: GetDocumentationRelations200ApplicationJson;
+  getDocumentationRelations200ApplicationJSONObject?: GetDocumentationRelations200ApplicationJson;
 }

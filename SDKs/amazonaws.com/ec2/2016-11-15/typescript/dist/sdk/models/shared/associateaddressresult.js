@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateAddressResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var AssociateAddressResult = /** @class */ (function (_super) {
     __extends(AssociateAddressResult, _super);
     function AssociateAddressResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AssociateAddressResult.prototype, "associationId", void 0);
     return AssociateAddressResult;
-}(SpeakeasyBase));
-export { AssociateAddressResult };
+}(utils_1.SpeakeasyBase));
+exports.AssociateAddressResult = AssociateAddressResult;

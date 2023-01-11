@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RsaKeyType = void 0;
+var utils_1 = require("../../../internal/utils");
 // RsaKeyType
 /**
  * Describes an RSA key that may be used in a Certificate issued from a CaPool.
@@ -33,13 +36,13 @@ var RsaKeyType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxModulusSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxModulusSize" }),
         __metadata("design:type", String)
     ], RsaKeyType.prototype, "maxModulusSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minModulusSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minModulusSize" }),
         __metadata("design:type", String)
     ], RsaKeyType.prototype, "minModulusSize", void 0);
     return RsaKeyType;
-}(SpeakeasyBase));
-export { RsaKeyType };
+}(utils_1.SpeakeasyBase));
+exports.RsaKeyType = RsaKeyType;

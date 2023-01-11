@@ -2,11 +2,13 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { BankTransferEventTypeEnum } from "./banktransfereventtypeenum";
 export declare enum BankTransferEventListRequestBankTransferTypeEnum {
     Debit = "debit",
-    Credit = "credit"
+    Credit = "credit",
+    Null = "null"
 }
 export declare enum BankTransferEventListRequestBankTransferDirectionEnum {
     Inbound = "inbound",
-    Outbound = "outbound"
+    Outbound = "outbound",
+    Null = "null"
 }
 /**
  * BankTransferEventListRequest defines the request schema for `/bank_transfer/event/list`

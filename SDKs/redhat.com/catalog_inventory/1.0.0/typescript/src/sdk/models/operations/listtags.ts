@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class ListTagsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=deepObject;explode=true;name=filter" })
-  filter?: Map<string, any>;
+  filter?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" })
   limit?: number;
@@ -14,7 +14,7 @@ export class ListTagsQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=deepObject;explode=true;name=sort_by" })
-  sortBy?: Map<string, any>;
+  sortBy?: Record<string, any>;
 }
 
 

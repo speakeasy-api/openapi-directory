@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // View
 /** 
- * A Page view within a session-create
+ * Base model for all types
 **/
 export class View extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=active_msecs" })

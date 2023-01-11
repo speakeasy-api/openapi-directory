@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1SentimentData } from "./googlecloudcontactcenterinsightsv1sentimentdata";
-export var GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1EntityMentionData = exports.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1sentimentdata_1 = require("./googlecloudcontactcenterinsightsv1sentimentdata");
+var GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum;
 (function (GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum) {
     GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum["MentionTypeUnspecified"] = "MENTION_TYPE_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum["Proper"] = "PROPER";
     GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum["Common"] = "COMMON";
-})(GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum || (GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum = {}));
+})(GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum = exports.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum || (exports.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum = {}));
 // GoogleCloudContactcenterinsightsV1EntityMentionData
 /**
  * The data for an entity mention annotation. This represents a mention of an `Entity` in the conversation.
@@ -40,17 +43,17 @@ var GoogleCloudContactcenterinsightsV1EntityMentionData = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityUniqueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityUniqueId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1EntityMentionData.prototype, "entityUniqueId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentiment" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SentimentData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentiment" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1sentimentdata_1.GoogleCloudContactcenterinsightsV1SentimentData)
     ], GoogleCloudContactcenterinsightsV1EntityMentionData.prototype, "sentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1EntityMentionData.prototype, "type", void 0);
     return GoogleCloudContactcenterinsightsV1EntityMentionData;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1EntityMentionData };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1EntityMentionData = GoogleCloudContactcenterinsightsV1EntityMentionData;

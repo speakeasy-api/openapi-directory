@@ -11,5 +11,5 @@ export class StaticListener extends SpeakeasyBase {
   lastUpdated?: string;
 
   @SpeakeasyMetadata({ data: "json, name=listener" })
-  listener?: Map<string, any>;
+  listener?: Record<string, any>;
 }

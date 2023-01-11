@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetValidateResponse = exports.GetValidateRequest = exports.GetValidatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetValidatePathParams = /** @class */ (function (_super) {
     __extends(GetValidatePathParams, _super);
     function GetValidatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetValidatePathParams.prototype, "agentNum", void 0);
     return GetValidatePathParams;
-}(SpeakeasyBase));
-export { GetValidatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetValidatePathParams = GetValidatePathParams;
 var GetValidateRequest = /** @class */ (function (_super) {
     __extends(GetValidateRequest, _super);
     function GetValidateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetValidatePathParams)
     ], GetValidateRequest.prototype, "pathParams", void 0);
     return GetValidateRequest;
-}(SpeakeasyBase));
-export { GetValidateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetValidateRequest = GetValidateRequest;
 var GetValidateResponse = /** @class */ (function (_super) {
     __extends(GetValidateResponse, _super);
     function GetValidateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetValidateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetValidateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetValidateResponse.prototype, "getValidate200ApplicationJsonInt32Integer", void 0);
+    ], GetValidateResponse.prototype, "getValidate200ApplicationJSONInt32Integer", void 0);
     return GetValidateResponse;
-}(SpeakeasyBase));
-export { GetValidateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetValidateResponse = GetValidateResponse;

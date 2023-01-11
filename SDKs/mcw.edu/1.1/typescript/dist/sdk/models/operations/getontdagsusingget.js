@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOntDagsUsingGetResponse = exports.GetOntDagsUsingGetRequest = exports.GetOntDagsUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOntDagsUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetOntDagsUsingGetPathParams, _super);
     function GetOntDagsUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accId" }),
         __metadata("design:type", String)
     ], GetOntDagsUsingGetPathParams.prototype, "accId", void 0);
     return GetOntDagsUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetOntDagsUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOntDagsUsingGetPathParams = GetOntDagsUsingGetPathParams;
 var GetOntDagsUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetOntDagsUsingGetRequest, _super);
     function GetOntDagsUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOntDagsUsingGetPathParams)
     ], GetOntDagsUsingGetRequest.prototype, "pathParams", void 0);
     return GetOntDagsUsingGetRequest;
-}(SpeakeasyBase));
-export { GetOntDagsUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOntDagsUsingGetRequest = GetOntDagsUsingGetRequest;
 var GetOntDagsUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetOntDagsUsingGetResponse, _super);
     function GetOntDagsUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetOntDagsUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOntDagsUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOntDagsUsingGetResponse.prototype, "statusCode", void 0);
     return GetOntDagsUsingGetResponse;
-}(SpeakeasyBase));
-export { GetOntDagsUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOntDagsUsingGetResponse = GetOntDagsUsingGetResponse;

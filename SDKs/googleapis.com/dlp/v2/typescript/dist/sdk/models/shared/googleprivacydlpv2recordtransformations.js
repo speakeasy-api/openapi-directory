@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldTransformation } from "./googleprivacydlpv2fieldtransformation";
-import { GooglePrivacyDlpV2RecordSuppression } from "./googleprivacydlpv2recordsuppression";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RecordTransformations = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldtransformation_1 = require("./googleprivacydlpv2fieldtransformation");
+var googleprivacydlpv2recordsuppression_1 = require("./googleprivacydlpv2recordsuppression");
 // GooglePrivacyDlpV2RecordTransformations
 /**
  * A type of transformation that is applied over structured data such as a table.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2RecordTransformations = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldTransformations", elemType: GooglePrivacyDlpV2FieldTransformation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldTransformations", elemType: googleprivacydlpv2fieldtransformation_1.GooglePrivacyDlpV2FieldTransformation }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2RecordTransformations.prototype, "fieldTransformations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordSuppressions", elemType: GooglePrivacyDlpV2RecordSuppression }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordSuppressions", elemType: googleprivacydlpv2recordsuppression_1.GooglePrivacyDlpV2RecordSuppression }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2RecordTransformations.prototype, "recordSuppressions", void 0);
     return GooglePrivacyDlpV2RecordTransformations;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RecordTransformations };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RecordTransformations = GooglePrivacyDlpV2RecordTransformations;

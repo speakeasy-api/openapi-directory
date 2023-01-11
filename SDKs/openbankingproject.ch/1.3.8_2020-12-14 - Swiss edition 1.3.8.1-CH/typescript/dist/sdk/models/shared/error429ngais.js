@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { TppMessage429Ais } from "./tppmessage429ais";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Error429NgAis = void 0;
+var utils_1 = require("../../../internal/utils");
+var hreftype_1 = require("./hreftype");
+var tppmessage429ais_1 = require("./tppmessage429ais");
 // Error429NgAis
 /**
  * NextGen specific definition of reporting error information in case of a HTTP error code 429.
@@ -36,13 +39,13 @@ var Error429NgAis = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], Error429NgAis.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tppMessages", elemType: TppMessage429Ais }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tppMessages", elemType: tppmessage429ais_1.TppMessage429Ais }),
         __metadata("design:type", Array)
     ], Error429NgAis.prototype, "tppMessages", void 0);
     return Error429NgAis;
-}(SpeakeasyBase));
-export { Error429NgAis };
+}(utils_1.SpeakeasyBase));
+exports.Error429NgAis = Error429NgAis;

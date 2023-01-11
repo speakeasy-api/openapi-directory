@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposEnableAutomatedSecurityFixesResponse = exports.ReposEnableAutomatedSecurityFixesRequest = exports.ReposEnableAutomatedSecurityFixesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposEnableAutomatedSecurityFixesPathParams = /** @class */ (function (_super) {
     __extends(ReposEnableAutomatedSecurityFixesPathParams, _super);
     function ReposEnableAutomatedSecurityFixesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposEnableAutomatedSecurityFixesPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposEnableAutomatedSecurityFixesPathParams.prototype, "repo", void 0);
     return ReposEnableAutomatedSecurityFixesPathParams;
-}(SpeakeasyBase));
-export { ReposEnableAutomatedSecurityFixesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposEnableAutomatedSecurityFixesPathParams = ReposEnableAutomatedSecurityFixesPathParams;
 var ReposEnableAutomatedSecurityFixesRequest = /** @class */ (function (_super) {
     __extends(ReposEnableAutomatedSecurityFixesRequest, _super);
     function ReposEnableAutomatedSecurityFixesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposEnableAutomatedSecurityFixesPathParams)
     ], ReposEnableAutomatedSecurityFixesRequest.prototype, "pathParams", void 0);
     return ReposEnableAutomatedSecurityFixesRequest;
-}(SpeakeasyBase));
-export { ReposEnableAutomatedSecurityFixesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposEnableAutomatedSecurityFixesRequest = ReposEnableAutomatedSecurityFixesRequest;
 var ReposEnableAutomatedSecurityFixesResponse = /** @class */ (function (_super) {
     __extends(ReposEnableAutomatedSecurityFixesResponse, _super);
     function ReposEnableAutomatedSecurityFixesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposEnableAutomatedSecurityFixesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposEnableAutomatedSecurityFixesResponse.prototype, "statusCode", void 0);
     return ReposEnableAutomatedSecurityFixesResponse;
-}(SpeakeasyBase));
-export { ReposEnableAutomatedSecurityFixesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposEnableAutomatedSecurityFixesResponse = ReposEnableAutomatedSecurityFixesResponse;

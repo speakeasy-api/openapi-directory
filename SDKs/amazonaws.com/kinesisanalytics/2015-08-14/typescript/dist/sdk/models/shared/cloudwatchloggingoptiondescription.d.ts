@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class CloudWatchLoggingOptionDescription extends SpeakeasyBase {
     cloudWatchLoggingOptionId?: string;
-    logStreamArn: string;
-    roleArn: string;
+    logStreamARN: string;
+    roleARN: string;
 }

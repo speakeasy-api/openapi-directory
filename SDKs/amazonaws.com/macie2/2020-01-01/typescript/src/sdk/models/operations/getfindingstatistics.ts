@@ -33,7 +33,7 @@ export class GetFindingStatisticsHeaders extends SpeakeasyBase {
 **/
 export class GetFindingStatisticsRequestBodyFindingCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criterion", elemType: shared.CriterionAdditionalProperties })
-  criterion?: Map<string, shared.CriterionAdditionalProperties>;
+  criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 
 export enum GetFindingStatisticsRequestBodyGroupByEnum {

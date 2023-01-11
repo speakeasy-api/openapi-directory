@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentTypeProfile } from "./contenttypeprofile";
+import { ContentTypeProfileList } from "./contenttypeprofilelist";
 
 
 
@@ -8,8 +8,8 @@ import { ContentTypeProfile } from "./contenttypeprofile";
  * Field-level encryption content type-profile. 
 **/
 export class ContentTypeProfiles extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ContentTypeProfile })
-  items?: ContentTypeProfile[];
+  @SpeakeasyMetadata({ elemType: ContentTypeProfileList })
+  items?: ContentTypeProfileList[];
 
   @SpeakeasyMetadata()
   quantity: number;

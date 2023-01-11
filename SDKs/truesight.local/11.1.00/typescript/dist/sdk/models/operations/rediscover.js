@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RediscoverResponse = exports.RediscoverRequest = exports.RediscoverPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RediscoverPathParams = /** @class */ (function (_super) {
     __extends(RediscoverPathParams, _super);
     function RediscoverPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], RediscoverPathParams.prototype, "deviceId", void 0);
     return RediscoverPathParams;
-}(SpeakeasyBase));
-export { RediscoverPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RediscoverPathParams = RediscoverPathParams;
 var RediscoverRequest = /** @class */ (function (_super) {
     __extends(RediscoverRequest, _super);
     function RediscoverRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RediscoverPathParams)
     ], RediscoverRequest.prototype, "pathParams", void 0);
     return RediscoverRequest;
-}(SpeakeasyBase));
-export { RediscoverRequest };
+}(utils_1.SpeakeasyBase));
+exports.RediscoverRequest = RediscoverRequest;
 var RediscoverResponse = /** @class */ (function (_super) {
     __extends(RediscoverResponse, _super);
     function RediscoverResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], RediscoverResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RediscoverResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RediscoverResponse.prototype, "statusCode", void 0);
     return RediscoverResponse;
-}(SpeakeasyBase));
-export { RediscoverResponse };
+}(utils_1.SpeakeasyBase));
+exports.RediscoverResponse = RediscoverResponse;

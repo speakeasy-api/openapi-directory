@@ -5,7 +5,7 @@ export declare class InstitutionsGetByIdRequest extends SpeakeasyBase {
 }
 export declare class InstitutionsGetByIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    institutionsGetByIdResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    institutionsGetByIdResponse?: Record<string, any>;
     statusCode: number;
 }

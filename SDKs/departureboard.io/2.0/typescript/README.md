@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetArrivalsAndDeparturesByCrsRequest, GetArrivalsAndDeparturesByCrsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,20 +28,20 @@ const sdk = new SDK();
     
 const req: GetArrivalsAndDeparturesByCrsRequest = {
   pathParams: {
-    crs: "quasi",
+    crs: "sit",
   },
   queryParams: {
-    apiKey: "dolorum",
-    filterStation: "consectetur",
-    filterType: "quas",
-    numServices: 1032291537367353830,
-    serviceDetails: true,
-    timeOffset: 242193190197934238,
-    timeWindow: 6389419317176445298,
+    apiKey: "voluptas",
+    filterStation: "culpa",
+    filterType: "expedita",
+    numServices: 3390393562759376202,
+    serviceDetails: false,
+    timeOffset: 1774932891286980153,
+    timeWindow: 6044372234677422456,
   },
 };
 
-sdk.sdk.getArrivalsAndDeparturesByCrs(req).then((res: GetArrivalsAndDeparturesByCrsResponse | AxiosError) => {
+sdk.departuresAndArrivals.getArrivalsAndDeparturesByCrs(req).then((res: GetArrivalsAndDeparturesByCrsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -51,13 +50,19 @@ sdk.sdk.getArrivalsAndDeparturesByCrs(req).then((res: GetArrivalsAndDeparturesBy
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Departures & Arrivals
 
 * `getArrivalsAndDeparturesByCrs` - getArrivalsAndDeparturesByCRS is used to get a list of services arriving to and departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 * `getArrivalsByCrs` - getArrivalsByCRS is used to get a list of services arriving to a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 * `getDeparturesByCrs` - getDeparturesByCRS is used to get a list of services departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
+
+### Fastest and Next Departures
+
 * `getFastestDeparturesByCrs` - getFastestDeparturesByCRS is used to get the fastest next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place.
 * `getNextDeparturesByCrs` - getNextDeparturesByCRS is used to get the next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place. This will return the next departures for each of the filterList stations specified. It may not return the fastest next service. To get the fastest next service use the getFastestDeparturesByCRS endpoint.
+
+### Service Information
+
 * `getServiceDetailsById` - getServiceDetailsByID is used to get information on a service, by the Service ID. This will typically return a train service, but will also return a bus and ferry services. The Service ID must be provided in the serviceIDUrlSafe format that is provided in the response for Arrival and Departure Boards. A service ID is specific to a station, and can only be looked up for a short time after a train/bus/ferry arrives at, or departs from a station. This is a National Rail limitation.
 
 <!-- End SDK Available Operations -->

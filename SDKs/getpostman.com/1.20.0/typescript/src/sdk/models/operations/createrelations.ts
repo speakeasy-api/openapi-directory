@@ -55,5 +55,5 @@ export class CreateRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createRelations200ApplicationJsonObject?: CreateRelations200ApplicationJson;
+  createRelations200ApplicationJSONObject?: CreateRelations200ApplicationJson;
 }

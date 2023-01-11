@@ -37,7 +37,7 @@ export class NetworkFirewallInternetTrafficNotInspectedViolation extends Speakea
   internetGatewayId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=IsRouteTableUsedInDifferentAZ" })
-  isRouteTableUsedInDifferentAz?: boolean;
+  isRouteTableUsedInDifferentAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=RouteTableId" })
   routeTableId?: string;

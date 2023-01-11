@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesImportRequest extends
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     issueJobStatus?: shared.IssueJobStatus;
 }

@@ -44,5 +44,5 @@ export class ZebraGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  zebraGet200ImagePngBinaryString?: Uint8Array;
+  zebraGET200ImagePngBinaryString?: Uint8Array;
 }

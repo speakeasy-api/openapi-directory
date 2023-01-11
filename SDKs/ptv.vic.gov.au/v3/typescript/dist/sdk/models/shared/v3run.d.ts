@@ -6,7 +6,7 @@ export declare class V3Run extends SpeakeasyBase {
     directionId?: number;
     expressStopCount?: number;
     finalStopId?: number;
-    geopath?: Map<string, any>[];
+    geopath?: Record<string, any>[];
     routeId?: number;
     routeType?: number;
     runId?: number;

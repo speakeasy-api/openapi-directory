@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CopyrightObject } from "./copyrightobject";
 import { SimplifiedEpisodeObject } from "./simplifiedepisodeobject";
+import { CopyrightObject } from "./copyrightobject";
 import { ExternalUrlObject } from "./externalurlobject";
 import { ImageObject } from "./imageobject";
 

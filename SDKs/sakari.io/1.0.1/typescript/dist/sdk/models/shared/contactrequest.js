@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactRequest = exports.ContactRequestMobile = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var ContactRequestMobile = /** @class */ (function (_super) {
     __extends(ContactRequestMobile, _super);
     function ContactRequestMobile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], ContactRequestMobile.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", String)
     ], ContactRequestMobile.prototype, "number", void 0);
     return ContactRequestMobile;
-}(SpeakeasyBase));
-export { ContactRequestMobile };
+}(utils_1.SpeakeasyBase));
+exports.ContactRequestMobile = ContactRequestMobile;
 var ContactRequest = /** @class */ (function (_super) {
     __extends(ContactRequest, _super);
     function ContactRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], ContactRequest.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ContactRequest.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], ContactRequest.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ContactRequest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], ContactRequest.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobile" }),
         __metadata("design:type", ContactRequestMobile)
     ], ContactRequest.prototype, "mobile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ContactRequest.prototype, "tags", void 0);
     return ContactRequest;
-}(SpeakeasyBase));
-export { ContactRequest };
+}(utils_1.SpeakeasyBase));
+exports.ContactRequest = ContactRequest;

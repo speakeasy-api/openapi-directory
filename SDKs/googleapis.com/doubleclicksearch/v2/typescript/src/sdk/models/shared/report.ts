@@ -36,7 +36,7 @@ export class Report extends SpeakeasyBase {
   rowCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=rows" })
-  rows?: Map<string, any>[];
+  rows?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=statisticsCurrencyCode" })
   statisticsCurrencyCode?: string;

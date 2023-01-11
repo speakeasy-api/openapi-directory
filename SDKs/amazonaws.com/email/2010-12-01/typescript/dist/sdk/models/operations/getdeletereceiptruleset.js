@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteReceiptRuleSetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteReceiptRuleSetResponse = exports.GetDeleteReceiptRuleSetRequest = exports.GetDeleteReceiptRuleSetHeaders = exports.GetDeleteReceiptRuleSetQueryParams = exports.GetDeleteReceiptRuleSetVersionEnum = exports.GetDeleteReceiptRuleSetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteReceiptRuleSetActionEnum;
 (function (GetDeleteReceiptRuleSetActionEnum) {
     GetDeleteReceiptRuleSetActionEnum["DeleteReceiptRuleSet"] = "DeleteReceiptRuleSet";
-})(GetDeleteReceiptRuleSetActionEnum || (GetDeleteReceiptRuleSetActionEnum = {}));
-export var GetDeleteReceiptRuleSetVersionEnum;
+})(GetDeleteReceiptRuleSetActionEnum = exports.GetDeleteReceiptRuleSetActionEnum || (exports.GetDeleteReceiptRuleSetActionEnum = {}));
+var GetDeleteReceiptRuleSetVersionEnum;
 (function (GetDeleteReceiptRuleSetVersionEnum) {
     GetDeleteReceiptRuleSetVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteReceiptRuleSetVersionEnum || (GetDeleteReceiptRuleSetVersionEnum = {}));
+})(GetDeleteReceiptRuleSetVersionEnum = exports.GetDeleteReceiptRuleSetVersionEnum || (exports.GetDeleteReceiptRuleSetVersionEnum = {}));
 var GetDeleteReceiptRuleSetQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptRuleSetQueryParams, _super);
     function GetDeleteReceiptRuleSetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RuleSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RuleSetName" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetQueryParams.prototype, "ruleSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetQueryParams.prototype, "version", void 0);
     return GetDeleteReceiptRuleSetQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteReceiptRuleSetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptRuleSetQueryParams = GetDeleteReceiptRuleSetQueryParams;
 var GetDeleteReceiptRuleSetHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptRuleSetHeaders, _super);
     function GetDeleteReceiptRuleSetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteReceiptRuleSetHeaders;
-}(SpeakeasyBase));
-export { GetDeleteReceiptRuleSetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptRuleSetHeaders = GetDeleteReceiptRuleSetHeaders;
 var GetDeleteReceiptRuleSetRequest = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptRuleSetRequest, _super);
     function GetDeleteReceiptRuleSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReceiptRuleSetQueryParams)
     ], GetDeleteReceiptRuleSetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReceiptRuleSetHeaders)
     ], GetDeleteReceiptRuleSetRequest.prototype, "headers", void 0);
     return GetDeleteReceiptRuleSetRequest;
-}(SpeakeasyBase));
-export { GetDeleteReceiptRuleSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptRuleSetRequest = GetDeleteReceiptRuleSetRequest;
 var GetDeleteReceiptRuleSetResponse = /** @class */ (function (_super) {
     __extends(GetDeleteReceiptRuleSetResponse, _super);
     function GetDeleteReceiptRuleSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteReceiptRuleSetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteReceiptRuleSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteReceiptRuleSetResponse.prototype, "statusCode", void 0);
     return GetDeleteReceiptRuleSetResponse;
-}(SpeakeasyBase));
-export { GetDeleteReceiptRuleSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReceiptRuleSetResponse = GetDeleteReceiptRuleSetResponse;

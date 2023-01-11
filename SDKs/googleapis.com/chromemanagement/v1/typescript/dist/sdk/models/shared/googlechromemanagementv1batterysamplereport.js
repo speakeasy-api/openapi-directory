@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1BatterySampleReport = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1BatterySampleReport
 /**
  * Sampling data for battery. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -33,37 +36,37 @@ var GoogleChromeManagementV1BatterySampleReport = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeRate" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "chargeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dischargeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dischargeRate" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "dischargeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remainingCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remainingCapacity" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "remainingCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "reportTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=temperature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temperature" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "temperature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voltage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voltage" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatterySampleReport.prototype, "voltage", void 0);
     return GoogleChromeManagementV1BatterySampleReport;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1BatterySampleReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1BatterySampleReport = GoogleChromeManagementV1BatterySampleReport;

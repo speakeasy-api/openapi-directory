@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Shipment } from "./shipment";
-import { ShippingOptionEnum } from "./shippingoptionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var shipment_1 = require("./shipment");
+var shippingoptionenum_1 = require("./shippingoptionenum");
 // ShippingDetails
 /**
  * A job's shipping information, including inbound and outbound tracking numbers and shipping speed options.
@@ -35,17 +38,17 @@ var ShippingDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InboundShipment" }),
-        __metadata("design:type", Shipment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InboundShipment" }),
+        __metadata("design:type", shipment_1.Shipment)
     ], ShippingDetails.prototype, "inboundShipment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutboundShipment" }),
-        __metadata("design:type", Shipment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutboundShipment" }),
+        __metadata("design:type", shipment_1.Shipment)
     ], ShippingDetails.prototype, "outboundShipment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShippingOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShippingOption" }),
         __metadata("design:type", String)
     ], ShippingDetails.prototype, "shippingOption", void 0);
     return ShippingDetails;
-}(SpeakeasyBase));
-export { ShippingDetails };
+}(utils_1.SpeakeasyBase));
+exports.ShippingDetails = ShippingDetails;

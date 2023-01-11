@@ -18,5 +18,5 @@ export declare class DcimManufacturersListRequest extends SpeakeasyBase {
 export declare class DcimManufacturersListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimManufacturersList200ApplicationJsonObject?: DcimManufacturersList200ApplicationJson;
+    dcimManufacturersList200ApplicationJSONObject?: DcimManufacturersList200ApplicationJson;
 }

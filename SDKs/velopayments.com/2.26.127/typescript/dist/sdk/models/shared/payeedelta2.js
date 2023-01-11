@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OnboardedStatus2Enum } from "./onboardedstatus2enum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayeeDelta2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var onboardedstatus2enum_1 = require("./onboardedstatus2enum");
 var PayeeDelta2 = /** @class */ (function (_super) {
     __extends(PayeeDelta2, _super);
     function PayeeDelta2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dbaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dbaName" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "dbaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onboardedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onboardedStatus" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "onboardedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeCountry" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "payeeCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeId" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteId" }),
         __metadata("design:type", String)
     ], PayeeDelta2.prototype, "remoteId", void 0);
     return PayeeDelta2;
-}(SpeakeasyBase));
-export { PayeeDelta2 };
+}(utils_1.SpeakeasyBase));
+exports.PayeeDelta2 = PayeeDelta2;

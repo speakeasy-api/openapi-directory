@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSshKeysIdResponse = exports.GetSshKeysIdRequest = exports.GetSshKeysId200ApplicationJson = exports.GetSshKeysId200ApplicationJsonSshKey = exports.GetSshKeysIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSshKeysIdPathParams = /** @class */ (function (_super) {
     __extends(GetSshKeysIdPathParams, _super);
     function GetSshKeysIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetSshKeysIdPathParams.prototype, "id", void 0);
     return GetSshKeysIdPathParams;
-}(SpeakeasyBase));
-export { GetSshKeysIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSshKeysIdPathParams = GetSshKeysIdPathParams;
 var GetSshKeysId200ApplicationJsonSshKey = /** @class */ (function (_super) {
     __extends(GetSshKeysId200ApplicationJsonSshKey, _super);
     function GetSshKeysId200ApplicationJsonSshKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], GetSshKeysId200ApplicationJsonSshKey.prototype, "publicKey", void 0);
     return GetSshKeysId200ApplicationJsonSshKey;
-}(SpeakeasyBase));
-export { GetSshKeysId200ApplicationJsonSshKey };
+}(utils_1.SpeakeasyBase));
+exports.GetSshKeysId200ApplicationJsonSshKey = GetSshKeysId200ApplicationJsonSshKey;
 var GetSshKeysId200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSshKeysId200ApplicationJson, _super);
     function GetSshKeysId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssh_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssh_key" }),
         __metadata("design:type", GetSshKeysId200ApplicationJsonSshKey)
     ], GetSshKeysId200ApplicationJson.prototype, "sshKey", void 0);
     return GetSshKeysId200ApplicationJson;
-}(SpeakeasyBase));
-export { GetSshKeysId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSshKeysId200ApplicationJson = GetSshKeysId200ApplicationJson;
 var GetSshKeysIdRequest = /** @class */ (function (_super) {
     __extends(GetSshKeysIdRequest, _super);
     function GetSshKeysIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSshKeysIdPathParams)
     ], GetSshKeysIdRequest.prototype, "pathParams", void 0);
     return GetSshKeysIdRequest;
-}(SpeakeasyBase));
-export { GetSshKeysIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSshKeysIdRequest = GetSshKeysIdRequest;
 var GetSshKeysIdResponse = /** @class */ (function (_super) {
     __extends(GetSshKeysIdResponse, _super);
     function GetSshKeysIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSshKeysIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetSshKeysId200ApplicationJson)
-    ], GetSshKeysIdResponse.prototype, "getSshKeysId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSshKeysIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetSshKeysId200ApplicationJson)
+    ], GetSshKeysIdResponse.prototype, "getSshKeysId200ApplicationJSONObject", void 0);
     return GetSshKeysIdResponse;
-}(SpeakeasyBase));
-export { GetSshKeysIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSshKeysIdResponse = GetSshKeysIdResponse;

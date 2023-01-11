@@ -22,5 +22,5 @@ export declare class UpdateNotificationSettingsResponse extends SpeakeasyBase {
     requestError?: any;
     serviceFault?: any;
     statusCode: number;
-    updateNotificationSettingsResponse?: Map<string, any>;
+    updateNotificationSettingsResponse?: Record<string, any>;
 }

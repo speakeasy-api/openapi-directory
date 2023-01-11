@@ -2,9 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
 import { Endpoint } from "./endpoint";
 import { GlobalReplicationGroupInfo } from "./globalreplicationgroupinfo";
-import { LogDeliveryConfiguration } from "./logdeliveryconfiguration";
+import { LogDeliveryConfigurationList } from "./logdeliveryconfigurationlist";
 import { MultiAzStatusEnum } from "./multiazstatusenum";
-import { NodeGroup } from "./nodegroup";
+import { NodeGroupList } from "./nodegrouplist";
 import { ReplicationGroupPendingModifiedValues } from "./replicationgrouppendingmodifiedvalues";
 /**
  * Contains all of the attributes of a specific Redis replication group.
@@ -21,11 +21,11 @@ export declare class ReplicationGroup extends SpeakeasyBase {
     description?: string;
     globalReplicationGroupInfo?: GlobalReplicationGroupInfo;
     kmsKeyId?: string;
-    logDeliveryConfigurations?: LogDeliveryConfiguration[];
-    memberClusters?: string[];
-    memberClustersOutpostArns?: string[];
-    multiAz?: MultiAzStatusEnum;
-    nodeGroups?: NodeGroup[];
+    logDeliveryConfigurations?: LogDeliveryConfigurationList[];
+    memberClusters?: Record<string, any>[];
+    memberClustersOutpostArns?: Record<string, any>[];
+    multiAZ?: MultiAzStatusEnum;
+    nodeGroups?: NodeGroupList[];
     pendingModifiedValues?: ReplicationGroupPendingModifiedValues;
     replicationGroupCreateTime?: Date;
     replicationGroupId?: string;

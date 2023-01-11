@@ -16,40 +16,31 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { AllFaresRequest, AllFaresResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { BaggageTripAndContactRequest, BaggageTripAndContactResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: AllFaresRequest = {
+const req: BaggageTripAndContactRequest = {
   security: {
     auth: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
-  queryParams: {
-    cabinClass: "vitae",
-    catalogues: "fugiat",
-    destination: "enim",
-    fareFamily: "et",
-    origin: "aspernatur",
-    returnDate: "fuga",
-    trackingid: "odit",
-    travelDate: "voluptas",
-    travelers: "voluptas",
+  pathParams: {
+    searchID: "sit",
   },
   headers: {
-    accept: "facilis",
+    accept: "voluptas",
   },
 };
 
-sdk.sdk.allFares(req).then((res: AllFaresResponse | AxiosError) => {
+sdk.baggage.baggageTripAndContact(req).then((res: BaggageTripAndContactResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,11 +49,13 @@ sdk.sdk.allFares(req).then((res: AllFaresResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Baggage
+
+* `baggageTripAndContact` - Baggage Trip and Contact
+
+### Offers
 
 * `allFares` - All Fares
-* `autoCheckIn` - Auto Check-In
-* `baggageTripAndContact` - Baggage Trip and Contact
 * `bestFares` - Best Fares
 * `deepLinks` - Deep Links
 * `fares` - Fares
@@ -72,10 +65,23 @@ sdk.sdk.allFares(req).then((res: AllFaresResponse | AxiosError) => {
 * `lowestFares` - Lowest Fares
 * `ondRoute` - OND Route
 * `ondStatus` - OND Status
-* `orders` - Orders
-* `priceOffers` - Price Offers
-* `seatDetails` - Seat Details
 * `topOnd` - Top OND
+
+### Orders
+
+* `orders` - Orders
+
+### Preflight
+
+* `autoCheckIn` - Auto Check-In
+
+### Promotions
+
+* `priceOffers` - Price Offers
+
+### Reference Data
+
+* `seatDetails` - Seat Details
 
 <!-- End SDK Available Operations -->
 

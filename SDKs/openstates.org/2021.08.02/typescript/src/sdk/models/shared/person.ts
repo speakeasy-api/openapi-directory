@@ -25,7 +25,7 @@ export class Person extends SpeakeasyBase {
   email: string;
 
   @SpeakeasyMetadata({ data: "json, name=extras" })
-  extras: Map<string, any>;
+  extras: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=family_name" })
   familyName: string;

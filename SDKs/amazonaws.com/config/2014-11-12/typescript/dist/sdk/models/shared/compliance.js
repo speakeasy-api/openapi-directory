@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceContributorCount } from "./compliancecontributorcount";
-import { ComplianceTypeEnum } from "./compliancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Compliance = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancecontributorcount_1 = require("./compliancecontributorcount");
+var compliancetypeenum_1 = require("./compliancetypeenum");
 // Compliance
 /**
  * Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of contributors that affect the compliance.
@@ -35,13 +38,13 @@ var Compliance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceContributorCount" }),
-        __metadata("design:type", ComplianceContributorCount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceContributorCount" }),
+        __metadata("design:type", compliancecontributorcount_1.ComplianceContributorCount)
     ], Compliance.prototype, "complianceContributorCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], Compliance.prototype, "complianceType", void 0);
     return Compliance;
-}(SpeakeasyBase));
-export { Compliance };
+}(utils_1.SpeakeasyBase));
+exports.Compliance = Compliance;

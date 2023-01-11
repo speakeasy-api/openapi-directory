@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Stats } from "./stats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Setup = void 0;
+var utils_1 = require("../../../internal/utils");
+var stats_1 = require("./stats");
 var Setup = /** @class */ (function (_super) {
     __extends(Setup, _super);
     function Setup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qr_ssid_suffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qr_ssid_suffix" }),
         __metadata("design:type", String)
     ], Setup.prototype, "qrSsidSuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setup_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setup_state" }),
         __metadata("design:type", Number)
     ], Setup.prototype, "setupState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssid_suffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssid_suffix" }),
         __metadata("design:type", String)
     ], Setup.prototype, "ssidSuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", Stats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", stats_1.Stats)
     ], Setup.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tos_accepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tos_accepted" }),
         __metadata("design:type", Boolean)
     ], Setup.prototype, "tosAccepted", void 0);
     return Setup;
-}(SpeakeasyBase));
-export { Setup };
+}(utils_1.SpeakeasyBase));
+exports.Setup = Setup;

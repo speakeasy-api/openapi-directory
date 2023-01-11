@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,456 +23,458 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcademicCertificateSchema = exports.AcademicCertificateSchemaIssuedTo = exports.AcademicCertificateSchemaIssuedToPerson = exports.AcademicCertificateSchemaIssuedToPersonPhoto = exports.AcademicCertificateSchemaIssuedToPersonAddress = exports.AcademicCertificateSchemaIssuedBy = exports.AcademicCertificateSchemaIssuedByOrganization = exports.AcademicCertificateSchemaIssuedByOrganizationAddress = exports.AcademicCertificateSchemaCertificateData = exports.AcademicCertificateSchemaCertificateDataSchool = exports.AcademicCertificateSchemaCertificateDataPerformance = exports.AcademicCertificateSchemaCertificateDataPerformanceSubjects = exports.AcademicCertificateSchemaCertificateDataExamination = void 0;
+var utils_1 = require("../../../internal/utils");
 var AcademicCertificateSchemaCertificateDataExamination = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaCertificateDataExamination, _super);
     function AcademicCertificateSchemaCertificateDataExamination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataExamination.prototype, "month", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataExamination.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataExamination.prototype, "year", void 0);
     return AcademicCertificateSchemaCertificateDataExamination;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaCertificateDataExamination };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaCertificateDataExamination = AcademicCertificateSchemaCertificateDataExamination;
 var AcademicCertificateSchemaCertificateDataPerformanceSubjects = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaCertificateDataPerformanceSubjects, _super);
     function AcademicCertificateSchemaCertificateDataPerformanceSubjects() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "gp", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "gpMax", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "grade", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksMax", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksMaxPractical", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksMaxTheory", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksPractical", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksTheory", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "marksTotal", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformanceSubjects.prototype, "name", void 0);
     return AcademicCertificateSchemaCertificateDataPerformanceSubjects;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaCertificateDataPerformanceSubjects };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaCertificateDataPerformanceSubjects = AcademicCertificateSchemaCertificateDataPerformanceSubjects;
 var AcademicCertificateSchemaCertificateDataPerformance = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaCertificateDataPerformance, _super);
     function AcademicCertificateSchemaCertificateDataPerformance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AcademicCertificateSchemaCertificateDataPerformanceSubjects }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: AcademicCertificateSchemaCertificateDataPerformanceSubjects }),
         __metadata("design:type", Array)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "subjects", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "cgpa", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "cgpaMax", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "grade", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "marksMax", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "marksTotal", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "percentage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "resultDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataPerformance.prototype, "updateDate", void 0);
     return AcademicCertificateSchemaCertificateDataPerformance;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaCertificateDataPerformance };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaCertificateDataPerformance = AcademicCertificateSchemaCertificateDataPerformance;
 var AcademicCertificateSchemaCertificateDataSchool = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaCertificateDataSchool, _super);
     function AcademicCertificateSchemaCertificateDataSchool() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataSchool.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaCertificateDataSchool.prototype, "name", void 0);
     return AcademicCertificateSchemaCertificateDataSchool;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaCertificateDataSchool };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaCertificateDataSchool = AcademicCertificateSchemaCertificateDataSchool;
 var AcademicCertificateSchemaCertificateData = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaCertificateData, _super);
     function AcademicCertificateSchemaCertificateData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaCertificateDataExamination)
     ], AcademicCertificateSchemaCertificateData.prototype, "examination", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaCertificateDataPerformance)
     ], AcademicCertificateSchemaCertificateData.prototype, "performance", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaCertificateDataSchool)
     ], AcademicCertificateSchemaCertificateData.prototype, "school", void 0);
     return AcademicCertificateSchemaCertificateData;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaCertificateData };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaCertificateData = AcademicCertificateSchemaCertificateData;
 var AcademicCertificateSchemaIssuedByOrganizationAddress = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedByOrganizationAddress, _super);
     function AcademicCertificateSchemaIssuedByOrganizationAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "house", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "landmark", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganizationAddress.prototype, "vtc", void 0);
     return AcademicCertificateSchemaIssuedByOrganizationAddress;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedByOrganizationAddress };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedByOrganizationAddress = AcademicCertificateSchemaIssuedByOrganizationAddress;
 var AcademicCertificateSchemaIssuedByOrganization = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedByOrganization, _super);
     function AcademicCertificateSchemaIssuedByOrganization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedByOrganizationAddress)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "tin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedByOrganization.prototype, "uid", void 0);
     return AcademicCertificateSchemaIssuedByOrganization;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedByOrganization };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedByOrganization = AcademicCertificateSchemaIssuedByOrganization;
 var AcademicCertificateSchemaIssuedBy = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedBy, _super);
     function AcademicCertificateSchemaIssuedBy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedByOrganization)
     ], AcademicCertificateSchemaIssuedBy.prototype, "organization", void 0);
     return AcademicCertificateSchemaIssuedBy;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedBy };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedBy = AcademicCertificateSchemaIssuedBy;
 var AcademicCertificateSchemaIssuedToPersonAddress = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedToPersonAddress, _super);
     function AcademicCertificateSchemaIssuedToPersonAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "house", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "landmark", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonAddress.prototype, "vtc", void 0);
     return AcademicCertificateSchemaIssuedToPersonAddress;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedToPersonAddress };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedToPersonAddress = AcademicCertificateSchemaIssuedToPersonAddress;
 var AcademicCertificateSchemaIssuedToPersonPhoto = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedToPersonPhoto, _super);
     function AcademicCertificateSchemaIssuedToPersonPhoto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPersonPhoto.prototype, "format", void 0);
     return AcademicCertificateSchemaIssuedToPersonPhoto;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedToPersonPhoto };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedToPersonPhoto = AcademicCertificateSchemaIssuedToPersonPhoto;
 var AcademicCertificateSchemaIssuedToPerson = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedToPerson, _super);
     function AcademicCertificateSchemaIssuedToPerson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedToPersonAddress)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedToPersonPhoto)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "photo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "disabilityStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "dob", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "maritalStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "motherName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "religion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "swd", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "swdIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchemaIssuedToPerson.prototype, "uid", void 0);
     return AcademicCertificateSchemaIssuedToPerson;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedToPerson };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedToPerson = AcademicCertificateSchemaIssuedToPerson;
 var AcademicCertificateSchemaIssuedTo = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchemaIssuedTo, _super);
     function AcademicCertificateSchemaIssuedTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedToPerson)
     ], AcademicCertificateSchemaIssuedTo.prototype, "person", void 0);
     return AcademicCertificateSchemaIssuedTo;
-}(SpeakeasyBase));
-export { AcademicCertificateSchemaIssuedTo };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchemaIssuedTo = AcademicCertificateSchemaIssuedTo;
 var AcademicCertificateSchema = /** @class */ (function (_super) {
     __extends(AcademicCertificateSchema, _super);
     function AcademicCertificateSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaCertificateData)
     ], AcademicCertificateSchema.prototype, "certificateData", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedBy)
     ], AcademicCertificateSchema.prototype, "issuedBy", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AcademicCertificateSchemaIssuedTo)
     ], AcademicCertificateSchema.prototype, "issuedTo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "issueDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "issuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AcademicCertificateSchema.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AcademicCertificateSchema.prototype, "validFromDate", void 0);
     return AcademicCertificateSchema;
-}(SpeakeasyBase));
-export { AcademicCertificateSchema };
+}(utils_1.SpeakeasyBase));
+exports.AcademicCertificateSchema = AcademicCertificateSchema;

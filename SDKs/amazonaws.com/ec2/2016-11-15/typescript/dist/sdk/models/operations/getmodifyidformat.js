@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyIdFormatActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyIdFormatResponse = exports.GetModifyIdFormatRequest = exports.GetModifyIdFormatHeaders = exports.GetModifyIdFormatQueryParams = exports.GetModifyIdFormatVersionEnum = exports.GetModifyIdFormatActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyIdFormatActionEnum;
 (function (GetModifyIdFormatActionEnum) {
     GetModifyIdFormatActionEnum["ModifyIdFormat"] = "ModifyIdFormat";
-})(GetModifyIdFormatActionEnum || (GetModifyIdFormatActionEnum = {}));
-export var GetModifyIdFormatVersionEnum;
+})(GetModifyIdFormatActionEnum = exports.GetModifyIdFormatActionEnum || (exports.GetModifyIdFormatActionEnum = {}));
+var GetModifyIdFormatVersionEnum;
 (function (GetModifyIdFormatVersionEnum) {
     GetModifyIdFormatVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyIdFormatVersionEnum || (GetModifyIdFormatVersionEnum = {}));
+})(GetModifyIdFormatVersionEnum = exports.GetModifyIdFormatVersionEnum || (exports.GetModifyIdFormatVersionEnum = {}));
 var GetModifyIdFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyIdFormatQueryParams, _super);
     function GetModifyIdFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Resource" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatQueryParams.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UseLongIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UseLongIds" }),
         __metadata("design:type", Boolean)
     ], GetModifyIdFormatQueryParams.prototype, "useLongIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatQueryParams.prototype, "version", void 0);
     return GetModifyIdFormatQueryParams;
-}(SpeakeasyBase));
-export { GetModifyIdFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyIdFormatQueryParams = GetModifyIdFormatQueryParams;
 var GetModifyIdFormatHeaders = /** @class */ (function (_super) {
     __extends(GetModifyIdFormatHeaders, _super);
     function GetModifyIdFormatHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyIdFormatHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyIdFormatHeaders;
-}(SpeakeasyBase));
-export { GetModifyIdFormatHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyIdFormatHeaders = GetModifyIdFormatHeaders;
 var GetModifyIdFormatRequest = /** @class */ (function (_super) {
     __extends(GetModifyIdFormatRequest, _super);
     function GetModifyIdFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyIdFormatQueryParams)
     ], GetModifyIdFormatRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyIdFormatHeaders)
     ], GetModifyIdFormatRequest.prototype, "headers", void 0);
     return GetModifyIdFormatRequest;
-}(SpeakeasyBase));
-export { GetModifyIdFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyIdFormatRequest = GetModifyIdFormatRequest;
 var GetModifyIdFormatResponse = /** @class */ (function (_super) {
     __extends(GetModifyIdFormatResponse, _super);
     function GetModifyIdFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyIdFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyIdFormatResponse.prototype, "statusCode", void 0);
     return GetModifyIdFormatResponse;
-}(SpeakeasyBase));
-export { GetModifyIdFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyIdFormatResponse = GetModifyIdFormatResponse;

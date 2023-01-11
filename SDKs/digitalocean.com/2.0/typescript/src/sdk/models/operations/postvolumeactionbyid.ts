@@ -1,80 +1,81 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class PostVolumeActionByIdPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=volume_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=volume_id" })
   volumeId: string;
 }
 
 
 export class PostVolumeActionByIdQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 }
 
 export enum PostVolumeActionByIdRequestBody3TypeEnum {
-    Attach = "attach"
-,    Detach = "detach"
-,    Resize = "resize"
+    Attach = "attach",
+    Detach = "detach",
+    Resize = "resize"
 }
 
 
 export class PostVolumeActionByIdRequestBody3 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region?: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: PostVolumeActionByIdRequestBody3TypeEnum;
 }
 
 
-export class PostVolumeActionByIdRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: PostVolumeActionByIdPathParams;
-
-  @Metadata()
-  queryParams: PostVolumeActionByIdQueryParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: any;
-}
-
-
 export class PostVolumeActionById401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class PostVolumeActionByIdRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PostVolumeActionByIdPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: PostVolumeActionByIdQueryParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: any;
+}
+
+
 export class PostVolumeActionByIdResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  postVolumeActionById202ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  postVolumeActionById202ApplicationJSONAny?: any;
 
-  @Metadata()
-  postVolumeActionById401ApplicationJsonObject?: PostVolumeActionById401ApplicationJson;
+  @SpeakeasyMetadata()
+  postVolumeActionById401ApplicationJSONObject?: PostVolumeActionById401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

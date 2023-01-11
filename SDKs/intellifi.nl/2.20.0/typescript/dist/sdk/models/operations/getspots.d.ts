@@ -38,5 +38,5 @@ export declare class GetSpotsRequest extends SpeakeasyBase {
 export declare class GetSpotsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSpots200ApplicationJsonObject?: GetSpots200ApplicationJson;
+    getSpots200ApplicationJSONObject?: GetSpots200ApplicationJson;
 }

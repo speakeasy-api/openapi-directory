@@ -1,6 +1,9 @@
-export var Ec2TagFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ec2TagFilterTypeEnum = void 0;
+var Ec2TagFilterTypeEnum;
 (function (Ec2TagFilterTypeEnum) {
     Ec2TagFilterTypeEnum["KeyOnly"] = "KEY_ONLY";
     Ec2TagFilterTypeEnum["ValueOnly"] = "VALUE_ONLY";
     Ec2TagFilterTypeEnum["KeyAndValue"] = "KEY_AND_VALUE";
-})(Ec2TagFilterTypeEnum || (Ec2TagFilterTypeEnum = {}));
+})(Ec2TagFilterTypeEnum = exports.Ec2TagFilterTypeEnum || (exports.Ec2TagFilterTypeEnum = {}));

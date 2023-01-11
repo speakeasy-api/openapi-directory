@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceMetadata } from "./resourcemetadata";
-import { VirtualServiceSpec } from "./virtualservicespec";
-import { VirtualServiceStatus } from "./virtualservicestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualServiceData = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcemetadata_1 = require("./resourcemetadata");
+var virtualservicespec_1 = require("./virtualservicespec");
+var virtualservicestatus_1 = require("./virtualservicestatus");
 // VirtualServiceData
 /**
  * An object that represents a virtual service returned by a describe operation.
@@ -36,25 +39,25 @@ var VirtualServiceData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], VirtualServiceData.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ResourceMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", resourcemetadata_1.ResourceMetadata)
     ], VirtualServiceData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", VirtualServiceSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", virtualservicespec_1.VirtualServiceSpec)
     ], VirtualServiceData.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", VirtualServiceStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", virtualservicestatus_1.VirtualServiceStatus)
     ], VirtualServiceData.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualServiceName" }),
         __metadata("design:type", String)
     ], VirtualServiceData.prototype, "virtualServiceName", void 0);
     return VirtualServiceData;
-}(SpeakeasyBase));
-export { VirtualServiceData };
+}(utils_1.SpeakeasyBase));
+exports.VirtualServiceData = VirtualServiceData;

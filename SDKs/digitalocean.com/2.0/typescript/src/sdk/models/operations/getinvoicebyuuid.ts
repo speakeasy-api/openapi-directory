@@ -1,75 +1,70 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetInvoiceByUuidPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=invoice_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=invoice_uuid" })
   invoiceUuid: string;
 }
 
 
-export class GetInvoiceByUuidRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetInvoiceByUuidPathParams;
-}
-
-
 export class GetInvoiceByUuid200ApplicationJsonInvoiceItems extends SpeakeasyBase {
-  @Metadata({ data: "json, name=amount" })
+  @SpeakeasyMetadata({ data: "json, name=amount" })
   amount?: string;
 
-  @Metadata({ data: "json, name=description" })
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=duration" })
+  @SpeakeasyMetadata({ data: "json, name=duration" })
   duration?: string;
 
-  @Metadata({ data: "json, name=duration_unit" })
+  @SpeakeasyMetadata({ data: "json, name=duration_unit" })
   durationUnit?: string;
 
-  @Metadata({ data: "json, name=end_time" })
+  @SpeakeasyMetadata({ data: "json, name=end_time" })
   endTime?: string;
 
-  @Metadata({ data: "json, name=group_description" })
+  @SpeakeasyMetadata({ data: "json, name=group_description" })
   groupDescription?: string;
 
-  @Metadata({ data: "json, name=product" })
+  @SpeakeasyMetadata({ data: "json, name=product" })
   product?: string;
 
-  @Metadata({ data: "json, name=project_name" })
+  @SpeakeasyMetadata({ data: "json, name=project_name" })
   projectName?: string;
 
-  @Metadata({ data: "json, name=resource_id" })
+  @SpeakeasyMetadata({ data: "json, name=resource_id" })
   resourceId?: string;
 
-  @Metadata({ data: "json, name=resource_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=resource_uuid" })
   resourceUuid?: string;
 
-  @Metadata({ data: "json, name=start_time" })
+  @SpeakeasyMetadata({ data: "json, name=start_time" })
   startTime?: string;
 }
 
 
 export class GetInvoiceByUuid200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class GetInvoiceByUuid200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class GetInvoiceByUuid200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -79,51 +74,57 @@ export class GetInvoiceByUuid200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class GetInvoiceByUuid200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class GetInvoiceByUuid200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=invoice_items", elemType: operations.GetInvoiceByUuid200ApplicationJsonInvoiceItems })
+  @SpeakeasyMetadata({ data: "json, name=invoice_items", elemType: GetInvoiceByUuid200ApplicationJsonInvoiceItems })
   invoiceItems?: GetInvoiceByUuid200ApplicationJsonInvoiceItems[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: GetInvoiceByUuid200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: GetInvoiceByUuid200ApplicationJsonMeta;
 }
 
 
 export class GetInvoiceByUuid401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetInvoiceByUuidRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetInvoiceByUuidPathParams;
+}
+
+
 export class GetInvoiceByUuidResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getInvoiceByUuid200ApplicationJsonObject?: GetInvoiceByUuid200ApplicationJson;
+  @SpeakeasyMetadata()
+  getInvoiceByUuid200ApplicationJSONObject?: GetInvoiceByUuid200ApplicationJson;
 
-  @Metadata()
-  getInvoiceByUuid401ApplicationJsonObject?: GetInvoiceByUuid401ApplicationJson;
+  @SpeakeasyMetadata()
+  getInvoiceByUuid401ApplicationJSONObject?: GetInvoiceByUuid401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCable } from "./nestedcable";
-import { NestedDevice } from "./nesteddevice";
-import { NestedPowerPort } from "./nestedpowerport";
-export var PowerOutletConnectionStatusLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PowerOutlet = exports.PowerOutletType = exports.PowerOutletTypeValueEnum = exports.PowerOutletTypeLabelEnum = exports.PowerOutletFeedLeg = exports.PowerOutletFeedLegValueEnum = exports.PowerOutletFeedLegLabelEnum = exports.PowerOutletConnectionStatus = exports.PowerOutletConnectionStatusLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedpowerport_1 = require("./nestedpowerport");
+var PowerOutletConnectionStatusLabelEnum;
 (function (PowerOutletConnectionStatusLabelEnum) {
     PowerOutletConnectionStatusLabelEnum["NotConnected"] = "Not Connected";
     PowerOutletConnectionStatusLabelEnum["Connected"] = "Connected";
-})(PowerOutletConnectionStatusLabelEnum || (PowerOutletConnectionStatusLabelEnum = {}));
+})(PowerOutletConnectionStatusLabelEnum = exports.PowerOutletConnectionStatusLabelEnum || (exports.PowerOutletConnectionStatusLabelEnum = {}));
 var PowerOutletConnectionStatus = /** @class */ (function (_super) {
     __extends(PowerOutletConnectionStatus, _super);
     function PowerOutletConnectionStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PowerOutletConnectionStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Boolean)
     ], PowerOutletConnectionStatus.prototype, "value", void 0);
     return PowerOutletConnectionStatus;
-}(SpeakeasyBase));
-export { PowerOutletConnectionStatus };
-export var PowerOutletFeedLegLabelEnum;
+}(utils_1.SpeakeasyBase));
+exports.PowerOutletConnectionStatus = PowerOutletConnectionStatus;
+var PowerOutletFeedLegLabelEnum;
 (function (PowerOutletFeedLegLabelEnum) {
     PowerOutletFeedLegLabelEnum["A"] = "A";
     PowerOutletFeedLegLabelEnum["B"] = "B";
     PowerOutletFeedLegLabelEnum["C"] = "C";
-})(PowerOutletFeedLegLabelEnum || (PowerOutletFeedLegLabelEnum = {}));
-export var PowerOutletFeedLegValueEnum;
+})(PowerOutletFeedLegLabelEnum = exports.PowerOutletFeedLegLabelEnum || (exports.PowerOutletFeedLegLabelEnum = {}));
+var PowerOutletFeedLegValueEnum;
 (function (PowerOutletFeedLegValueEnum) {
     PowerOutletFeedLegValueEnum["A"] = "A";
     PowerOutletFeedLegValueEnum["B"] = "B";
     PowerOutletFeedLegValueEnum["C"] = "C";
-})(PowerOutletFeedLegValueEnum || (PowerOutletFeedLegValueEnum = {}));
+})(PowerOutletFeedLegValueEnum = exports.PowerOutletFeedLegValueEnum || (exports.PowerOutletFeedLegValueEnum = {}));
 var PowerOutletFeedLeg = /** @class */ (function (_super) {
     __extends(PowerOutletFeedLeg, _super);
     function PowerOutletFeedLeg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PowerOutletFeedLeg.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PowerOutletFeedLeg.prototype, "value", void 0);
     return PowerOutletFeedLeg;
-}(SpeakeasyBase));
-export { PowerOutletFeedLeg };
-export var PowerOutletTypeLabelEnum;
+}(utils_1.SpeakeasyBase));
+exports.PowerOutletFeedLeg = PowerOutletFeedLeg;
+var PowerOutletTypeLabelEnum;
 (function (PowerOutletTypeLabelEnum) {
     PowerOutletTypeLabelEnum["C5"] = "C5";
     PowerOutletTypeLabelEnum["C7"] = "C7";
@@ -143,8 +146,8 @@ export var PowerOutletTypeLabelEnum;
     PowerOutletTypeLabelEnum["ItaTypeN"] = "ITA Type N";
     PowerOutletTypeLabelEnum["ItaTypeO"] = "ITA Type O";
     PowerOutletTypeLabelEnum["HdotCx"] = "HDOT Cx";
-})(PowerOutletTypeLabelEnum || (PowerOutletTypeLabelEnum = {}));
-export var PowerOutletTypeValueEnum;
+})(PowerOutletTypeLabelEnum = exports.PowerOutletTypeLabelEnum || (exports.PowerOutletTypeLabelEnum = {}));
+var PowerOutletTypeValueEnum;
 (function (PowerOutletTypeValueEnum) {
     PowerOutletTypeValueEnum["Iec60320C5"] = "iec-60320-c5";
     PowerOutletTypeValueEnum["Iec60320C7"] = "iec-60320-c7";
@@ -212,76 +215,76 @@ export var PowerOutletTypeValueEnum;
     PowerOutletTypeValueEnum["ItaN"] = "ita-n";
     PowerOutletTypeValueEnum["ItaO"] = "ita-o";
     PowerOutletTypeValueEnum["HdotCx"] = "hdot-cx";
-})(PowerOutletTypeValueEnum || (PowerOutletTypeValueEnum = {}));
+})(PowerOutletTypeValueEnum = exports.PowerOutletTypeValueEnum || (exports.PowerOutletTypeValueEnum = {}));
 var PowerOutletType = /** @class */ (function (_super) {
     __extends(PowerOutletType, _super);
     function PowerOutletType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PowerOutletType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PowerOutletType.prototype, "value", void 0);
     return PowerOutletType;
-}(SpeakeasyBase));
-export { PowerOutletType };
+}(utils_1.SpeakeasyBase));
+exports.PowerOutletType = PowerOutletType;
 var PowerOutlet = /** @class */ (function (_super) {
     __extends(PowerOutlet, _super);
     function PowerOutlet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCable)
     ], PowerOutlet.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint" }),
+        __metadata("design:type", Object)
     ], PowerOutlet.prototype, "connectedEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint_type" }),
         __metadata("design:type", String)
     ], PowerOutlet.prototype, "connectedEndpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", PowerOutletConnectionStatus)
     ], PowerOutlet.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PowerOutlet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], PowerOutlet.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feed_leg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feed_leg" }),
         __metadata("design:type", PowerOutletFeedLeg)
     ], PowerOutlet.prototype, "feedLeg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PowerOutlet.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PowerOutlet.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power_port" }),
-        __metadata("design:type", NestedPowerPort)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power_port" }),
+        __metadata("design:type", nestedpowerport_1.NestedPowerPort)
     ], PowerOutlet.prototype, "powerPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], PowerOutlet.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", PowerOutletType)
     ], PowerOutlet.prototype, "type", void 0);
     return PowerOutlet;
-}(SpeakeasyBase));
-export { PowerOutlet };
+}(utils_1.SpeakeasyBase));
+exports.PowerOutlet = PowerOutlet;

@@ -20,7 +20,7 @@ export declare class UpdateSegmentRequestBodyWriteSegmentRequest extends Speakea
     dimensions?: shared.SegmentDimensions;
     name?: string;
     segmentGroups?: shared.SegmentGroupList;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdateSegmentRequestBody extends SpeakeasyBase {
     writeSegmentRequest: UpdateSegmentRequestBodyWriteSegmentRequest;

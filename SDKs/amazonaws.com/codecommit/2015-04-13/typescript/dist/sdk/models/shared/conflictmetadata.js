@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileModes } from "./filemodes";
-import { FileSizes } from "./filesizes";
-import { IsBinaryFile } from "./isbinaryfile";
-import { MergeOperations } from "./mergeoperations";
-import { ObjectTypes } from "./objecttypes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConflictMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var filemodes_1 = require("./filemodes");
+var filesizes_1 = require("./filesizes");
+var isbinaryfile_1 = require("./isbinaryfile");
+var mergeoperations_1 = require("./mergeoperations");
+var objecttypes_1 = require("./objecttypes");
 // ConflictMetadata
 /**
  * Information about the metadata for a conflict in a merge operation.
@@ -38,45 +41,45 @@ var ConflictMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentConflict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentConflict" }),
         __metadata("design:type", Boolean)
     ], ConflictMetadata.prototype, "contentConflict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileModeConflict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileModeConflict" }),
         __metadata("design:type", Boolean)
     ], ConflictMetadata.prototype, "fileModeConflict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileModes" }),
-        __metadata("design:type", FileModes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileModes" }),
+        __metadata("design:type", filemodes_1.FileModes)
     ], ConflictMetadata.prototype, "fileModes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], ConflictMetadata.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSizes" }),
-        __metadata("design:type", FileSizes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSizes" }),
+        __metadata("design:type", filesizes_1.FileSizes)
     ], ConflictMetadata.prototype, "fileSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isBinaryFile" }),
-        __metadata("design:type", IsBinaryFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isBinaryFile" }),
+        __metadata("design:type", isbinaryfile_1.IsBinaryFile)
     ], ConflictMetadata.prototype, "isBinaryFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeOperations" }),
-        __metadata("design:type", MergeOperations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeOperations" }),
+        __metadata("design:type", mergeoperations_1.MergeOperations)
     ], ConflictMetadata.prototype, "mergeOperations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfConflicts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfConflicts" }),
         __metadata("design:type", Number)
     ], ConflictMetadata.prototype, "numberOfConflicts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectTypeConflict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectTypeConflict" }),
         __metadata("design:type", Boolean)
     ], ConflictMetadata.prototype, "objectTypeConflict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectTypes" }),
-        __metadata("design:type", ObjectTypes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectTypes" }),
+        __metadata("design:type", objecttypes_1.ObjectTypes)
     ], ConflictMetadata.prototype, "objectTypes", void 0);
     return ConflictMetadata;
-}(SpeakeasyBase));
-export { ConflictMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ConflictMetadata = ConflictMetadata;

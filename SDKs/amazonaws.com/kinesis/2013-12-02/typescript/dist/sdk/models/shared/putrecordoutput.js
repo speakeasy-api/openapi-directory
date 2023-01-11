@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutRecordOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
 // PutRecordOutput
 /**
  * Represents the output for <code>PutRecord</code>.
@@ -34,17 +37,17 @@ var PutRecordOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionType" }),
         __metadata("design:type", String)
     ], PutRecordOutput.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SequenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SequenceNumber" }),
         __metadata("design:type", String)
     ], PutRecordOutput.prototype, "sequenceNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardId" }),
         __metadata("design:type", String)
     ], PutRecordOutput.prototype, "shardId", void 0);
     return PutRecordOutput;
-}(SpeakeasyBase));
-export { PutRecordOutput };
+}(utils_1.SpeakeasyBase));
+exports.PutRecordOutput = PutRecordOutput;

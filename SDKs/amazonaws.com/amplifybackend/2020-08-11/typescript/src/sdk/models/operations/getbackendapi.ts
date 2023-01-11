@@ -36,28 +36,82 @@ export class GetBackendApiHeaders extends SpeakeasyBase {
 }
 
 
+// GetBackendApiRequestBodyResourceConfigConflictResolution
+/** 
+ * The conflict resolution strategy for your data stored in the data models.
+**/
+export class GetBackendApiRequestBodyResourceConfigConflictResolution extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=ResolutionStrategy" })
+  resolutionStrategy?: Record<string, any>;
+}
+
+
+// GetBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings
+/** 
+ * Describes settings for the authentication mode.
+**/
+export class GetBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=CognitoUserPoolId" })
+  cognitoUserPoolId?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=Description" })
+  description?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=ExpirationTime" })
+  expirationTime?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDAuthTTL" })
+  openIDAuthTTL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDClientId" })
+  openIDClientID?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDIatTTL" })
+  openIDIatTTL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDIssueURL" })
+  openIDIssueURL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDProviderName" })
+  openIDProviderName?: Record<string, any>;
+}
+
+
+// GetBackendApiRequestBodyResourceConfigDefaultAuthType
+/** 
+ * The default authentication type for interacting with the configured data models in your Amplify project.
+**/
+export class GetBackendApiRequestBodyResourceConfigDefaultAuthType extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=Mode" })
+  mode?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=Settings" })
+  settings?: GetBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings;
+}
+
+
 // GetBackendApiRequestBodyResourceConfig
 /** 
  * The resource config for the data model, configured as a part of the Amplify project.
 **/
 export class GetBackendApiRequestBodyResourceConfig extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=AdditionalAuthTypes", elemType: shared.BackendApiAuthType })
-  additionalAuthTypes?: shared.BackendApiAuthType[];
+  @SpeakeasyMetadata({ data: "json, name=AdditionalAuthTypes" })
+  additionalAuthTypes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiName" })
-  apiName?: string;
+  apiName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ConflictResolution" })
-  conflictResolution?: shared.BackendApiConflictResolution;
+  conflictResolution?: GetBackendApiRequestBodyResourceConfigConflictResolution;
 
   @SpeakeasyMetadata({ data: "json, name=DefaultAuthType" })
-  defaultAuthType?: shared.BackendApiAuthType;
+  defaultAuthType?: GetBackendApiRequestBodyResourceConfigDefaultAuthType;
 
   @SpeakeasyMetadata({ data: "json, name=Service" })
-  service?: string;
+  service?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TransformSchema" })
-  transformSchema?: string;
+  transformSchema?: Record<string, any>;
 }
 
 
@@ -93,7 +147,7 @@ export class GetBackendApiResponse extends SpeakeasyBase {
   gatewayTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  getBackendApiResponse?: shared.GetBackendApiResponse;
+  getBackendAPIResponse?: shared.GetBackendApiResponse;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

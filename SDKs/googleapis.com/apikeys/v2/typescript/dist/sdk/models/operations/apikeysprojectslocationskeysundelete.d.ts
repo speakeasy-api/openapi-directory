@@ -23,7 +23,7 @@ export declare class ApikeysProjectsLocationsKeysUndeleteSecurity extends Speake
 export declare class ApikeysProjectsLocationsKeysUndeleteRequest extends SpeakeasyBase {
     pathParams: ApikeysProjectsLocationsKeysUndeletePathParams;
     queryParams: ApikeysProjectsLocationsKeysUndeleteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ApikeysProjectsLocationsKeysUndeleteSecurity;
 }
 export declare class ApikeysProjectsLocationsKeysUndeleteResponse extends SpeakeasyBase {

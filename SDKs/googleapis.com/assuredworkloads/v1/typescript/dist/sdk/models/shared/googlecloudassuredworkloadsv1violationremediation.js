@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions } from "./googlecloudassuredworkloadsv1violationremediationinstructions";
-export var GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediation = exports.GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1violationremediationinstructions_1 = require("./googlecloudassuredworkloadsv1violationremediationinstructions");
+var GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum;
 (function (GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum) {
     GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum["RemediationTypeUnspecified"] = "REMEDIATION_TYPE_UNSPECIFIED";
     GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum["RemediationBooleanOrgPolicyViolation"] = "REMEDIATION_BOOLEAN_ORG_POLICY_VIOLATION";
     GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum["RemediationListAllowedValuesOrgPolicyViolation"] = "REMEDIATION_LIST_ALLOWED_VALUES_ORG_POLICY_VIOLATION";
     GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum["RemediationListDeniedValuesOrgPolicyViolation"] = "REMEDIATION_LIST_DENIED_VALUES_ORG_POLICY_VIOLATION";
     GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum["RemediationRestrictCmekCryptoKeyProjectsOrgPolicyViolation"] = "REMEDIATION_RESTRICT_CMEK_CRYPTO_KEY_PROJECTS_ORG_POLICY_VIOLATION";
-})(GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum || (GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum = {}));
+})(GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum = exports.GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum || (exports.GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum = {}));
 // GoogleCloudAssuredworkloadsV1ViolationRemediation
 /**
  * Represents remediation guidance to resolve compliance violation for AssuredWorkload
@@ -42,17 +45,17 @@ var GoogleCloudAssuredworkloadsV1ViolationRemediation = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compliantValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compliantValues" }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediation.prototype, "compliantValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instructions" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instructions" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1violationremediationinstructions_1.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediation.prototype, "instructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remediationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remediationType" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediation.prototype, "remediationType", void 0);
     return GoogleCloudAssuredworkloadsV1ViolationRemediation;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1ViolationRemediation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediation = GoogleCloudAssuredworkloadsV1ViolationRemediation;

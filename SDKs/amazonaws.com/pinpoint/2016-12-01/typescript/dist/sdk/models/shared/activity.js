@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomMessageActivity } from "./custommessageactivity";
-import { ConditionalSplitActivity } from "./conditionalsplitactivity";
-import { EmailMessageActivity } from "./emailmessageactivity";
-import { HoldoutActivity } from "./holdoutactivity";
-import { MultiConditionalSplitActivity } from "./multiconditionalsplitactivity";
-import { PushMessageActivity } from "./pushmessageactivity";
-import { RandomSplitActivity } from "./randomsplitactivity";
-import { SmsMessageActivity } from "./smsmessageactivity";
-import { WaitActivity } from "./waitactivity";
-// Activity
-/**
- * Specifies the configuration and other settings for an activity in a journey.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Activity = void 0;
+var utils_1 = require("../../../internal/utils");
+var custommessageactivity_1 = require("./custommessageactivity");
+var conditionalsplitactivity_1 = require("./conditionalsplitactivity");
+var emailmessageactivity_1 = require("./emailmessageactivity");
+var holdoutactivity_1 = require("./holdoutactivity");
+var multiconditionalsplitactivity_1 = require("./multiconditionalsplitactivity");
+var pushmessageactivity_1 = require("./pushmessageactivity");
+var randomsplitactivity_1 = require("./randomsplitactivity");
+var smsmessageactivity_1 = require("./smsmessageactivity");
+var waitactivity_1 = require("./waitactivity");
 var Activity = /** @class */ (function (_super) {
     __extends(Activity, _super);
     function Activity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CUSTOM" }),
-        __metadata("design:type", CustomMessageActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CUSTOM" }),
+        __metadata("design:type", custommessageactivity_1.CustomMessageActivity)
     ], Activity.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConditionalSplit" }),
-        __metadata("design:type", ConditionalSplitActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConditionalSplit" }),
+        __metadata("design:type", conditionalsplitactivity_1.ConditionalSplitActivity)
     ], Activity.prototype, "conditionalSplit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Activity.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EMAIL" }),
-        __metadata("design:type", EmailMessageActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EMAIL" }),
+        __metadata("design:type", emailmessageactivity_1.EmailMessageActivity)
     ], Activity.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Holdout" }),
-        __metadata("design:type", HoldoutActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Holdout" }),
+        __metadata("design:type", holdoutactivity_1.HoldoutActivity)
     ], Activity.prototype, "holdout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MultiCondition" }),
-        __metadata("design:type", MultiConditionalSplitActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MultiCondition" }),
+        __metadata("design:type", multiconditionalsplitactivity_1.MultiConditionalSplitActivity)
     ], Activity.prototype, "multiCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PUSH" }),
-        __metadata("design:type", PushMessageActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PUSH" }),
+        __metadata("design:type", pushmessageactivity_1.PushMessageActivity)
     ], Activity.prototype, "push", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RandomSplit" }),
-        __metadata("design:type", RandomSplitActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RandomSplit" }),
+        __metadata("design:type", randomsplitactivity_1.RandomSplitActivity)
     ], Activity.prototype, "randomSplit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SMS" }),
-        __metadata("design:type", SmsMessageActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SMS" }),
+        __metadata("design:type", smsmessageactivity_1.SmsMessageActivity)
     ], Activity.prototype, "sms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Wait" }),
-        __metadata("design:type", WaitActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Wait" }),
+        __metadata("design:type", waitactivity_1.WaitActivity)
     ], Activity.prototype, "wait", void 0);
     return Activity;
-}(SpeakeasyBase));
-export { Activity };
+}(utils_1.SpeakeasyBase));
+exports.Activity = Activity;

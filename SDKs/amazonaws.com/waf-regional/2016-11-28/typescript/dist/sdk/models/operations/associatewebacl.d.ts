@@ -18,7 +18,7 @@ export declare class AssociateWebAclRequest extends SpeakeasyBase {
     request: shared.AssociateWebAclRequest;
 }
 export declare class AssociateWebAclResponse extends SpeakeasyBase {
-    associateWebAclResponse?: Map<string, any>;
+    associateWebACLResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
     wafInternalErrorException?: any;

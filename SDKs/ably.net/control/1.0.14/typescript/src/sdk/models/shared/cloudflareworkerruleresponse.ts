@@ -40,7 +40,7 @@ export class CloudflareWorkerRuleResponseTarget extends SpeakeasyBase {
 
 export class CloudflareWorkerRuleResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=appId" })
   appId?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEarningByEarningCodeAndStartDateResponse = exports.GetEarningByEarningCodeAndStartDateRequest = exports.GetEarningByEarningCodeAndStartDateSecurity = exports.GetEarningByEarningCodeAndStartDatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetEarningByEarningCodeAndStartDatePathParams = /** @class */ (function (_super) {
     __extends(GetEarningByEarningCodeAndStartDatePathParams, _super);
     function GetEarningByEarningCodeAndStartDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=companyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=companyId" }),
         __metadata("design:type", String)
     ], GetEarningByEarningCodeAndStartDatePathParams.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=earningCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=earningCode" }),
         __metadata("design:type", String)
     ], GetEarningByEarningCodeAndStartDatePathParams.prototype, "earningCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=employeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=employeeId" }),
         __metadata("design:type", String)
     ], GetEarningByEarningCodeAndStartDatePathParams.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=startDate" }),
         __metadata("design:type", String)
     ], GetEarningByEarningCodeAndStartDatePathParams.prototype, "startDate", void 0);
     return GetEarningByEarningCodeAndStartDatePathParams;
-}(SpeakeasyBase));
-export { GetEarningByEarningCodeAndStartDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEarningByEarningCodeAndStartDatePathParams = GetEarningByEarningCodeAndStartDatePathParams;
 var GetEarningByEarningCodeAndStartDateSecurity = /** @class */ (function (_super) {
     __extends(GetEarningByEarningCodeAndStartDateSecurity, _super);
     function GetEarningByEarningCodeAndStartDateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemePaylocityAuth)
     ], GetEarningByEarningCodeAndStartDateSecurity.prototype, "paylocityAuth", void 0);
     return GetEarningByEarningCodeAndStartDateSecurity;
-}(SpeakeasyBase));
-export { GetEarningByEarningCodeAndStartDateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetEarningByEarningCodeAndStartDateSecurity = GetEarningByEarningCodeAndStartDateSecurity;
 var GetEarningByEarningCodeAndStartDateRequest = /** @class */ (function (_super) {
     __extends(GetEarningByEarningCodeAndStartDateRequest, _super);
     function GetEarningByEarningCodeAndStartDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEarningByEarningCodeAndStartDatePathParams)
     ], GetEarningByEarningCodeAndStartDateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEarningByEarningCodeAndStartDateSecurity)
     ], GetEarningByEarningCodeAndStartDateRequest.prototype, "security", void 0);
     return GetEarningByEarningCodeAndStartDateRequest;
-}(SpeakeasyBase));
-export { GetEarningByEarningCodeAndStartDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEarningByEarningCodeAndStartDateRequest = GetEarningByEarningCodeAndStartDateRequest;
 var GetEarningByEarningCodeAndStartDateResponse = /** @class */ (function (_super) {
     __extends(GetEarningByEarningCodeAndStartDateResponse, _super);
     function GetEarningByEarningCodeAndStartDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEarningByEarningCodeAndStartDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEarningByEarningCodeAndStartDateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Earning)
     ], GetEarningByEarningCodeAndStartDateResponse.prototype, "earning", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Error }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.ErrorT }),
         __metadata("design:type", Array)
     ], GetEarningByEarningCodeAndStartDateResponse.prototype, "errors", void 0);
     return GetEarningByEarningCodeAndStartDateResponse;
-}(SpeakeasyBase));
-export { GetEarningByEarningCodeAndStartDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEarningByEarningCodeAndStartDateResponse = GetEarningByEarningCodeAndStartDateResponse;

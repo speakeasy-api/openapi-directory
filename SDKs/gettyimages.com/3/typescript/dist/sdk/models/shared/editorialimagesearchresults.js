@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageSearchItemEditorial } from "./imagesearchitemeditorial";
-import { RelatedSearch } from "./relatedsearch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorialImageSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagesearchitemeditorial_1 = require("./imagesearchitemeditorial");
+var relatedsearch_1 = require("./relatedsearch");
 var EditorialImageSearchResults = /** @class */ (function (_super) {
     __extends(EditorialImageSearchResults, _super);
     function EditorialImageSearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageSearchItemEditorial }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imagesearchitemeditorial_1.ImageSearchItemEditorial }),
         __metadata("design:type", Array)
     ], EditorialImageSearchResults.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_searches", elemType: RelatedSearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_searches", elemType: relatedsearch_1.RelatedSearch }),
         __metadata("design:type", Array)
     ], EditorialImageSearchResults.prototype, "relatedSearches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], EditorialImageSearchResults.prototype, "resultCount", void 0);
     return EditorialImageSearchResults;
-}(SpeakeasyBase));
-export { EditorialImageSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.EditorialImageSearchResults = EditorialImageSearchResults;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OAuthToken } from "./oauthtoken";
-import { OidcToken } from "./oidctoken";
-export var HttpTargetHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpTarget = exports.HttpTargetHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var oauthtoken_1 = require("./oauthtoken");
+var oidctoken_1 = require("./oidctoken");
+var HttpTargetHttpMethodEnum;
 (function (HttpTargetHttpMethodEnum) {
     HttpTargetHttpMethodEnum["HttpMethodUnspecified"] = "HTTP_METHOD_UNSPECIFIED";
     HttpTargetHttpMethodEnum["Post"] = "POST";
@@ -35,7 +38,7 @@ export var HttpTargetHttpMethodEnum;
     HttpTargetHttpMethodEnum["Delete"] = "DELETE";
     HttpTargetHttpMethodEnum["Patch"] = "PATCH";
     HttpTargetHttpMethodEnum["Options"] = "OPTIONS";
-})(HttpTargetHttpMethodEnum || (HttpTargetHttpMethodEnum = {}));
+})(HttpTargetHttpMethodEnum = exports.HttpTargetHttpMethodEnum || (exports.HttpTargetHttpMethodEnum = {}));
 // HttpTarget
 /**
  * Http target. The job will be pushed to the job handler by means of an HTTP request via an http_method such as HTTP POST, HTTP GET, etc. The job is acknowledged by means of an HTTP response code in the range [200 - 299]. A failure to receive a response constitutes a failed execution. For a redirected request, the response returned by the redirected request is considered.
@@ -46,29 +49,29 @@ var HttpTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], HttpTarget.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], HttpTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], HttpTarget.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauthToken" }),
-        __metadata("design:type", OAuthToken)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauthToken" }),
+        __metadata("design:type", oauthtoken_1.OAuthToken)
     ], HttpTarget.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oidcToken" }),
-        __metadata("design:type", OidcToken)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oidcToken" }),
+        __metadata("design:type", oidctoken_1.OidcToken)
     ], HttpTarget.prototype, "oidcToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], HttpTarget.prototype, "uri", void 0);
     return HttpTarget;
-}(SpeakeasyBase));
-export { HttpTarget };
+}(utils_1.SpeakeasyBase));
+exports.HttpTarget = HttpTarget;

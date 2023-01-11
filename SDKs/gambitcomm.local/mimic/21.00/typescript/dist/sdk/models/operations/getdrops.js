@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDropsResponse = exports.GetDropsRequest = exports.GetDropsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDropsPathParams = /** @class */ (function (_super) {
     __extends(GetDropsPathParams, _super);
     function GetDropsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetDropsPathParams.prototype, "agentNum", void 0);
     return GetDropsPathParams;
-}(SpeakeasyBase));
-export { GetDropsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDropsPathParams = GetDropsPathParams;
 var GetDropsRequest = /** @class */ (function (_super) {
     __extends(GetDropsRequest, _super);
     function GetDropsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDropsPathParams)
     ], GetDropsRequest.prototype, "pathParams", void 0);
     return GetDropsRequest;
-}(SpeakeasyBase));
-export { GetDropsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDropsRequest = GetDropsRequest;
 var GetDropsResponse = /** @class */ (function (_super) {
     __extends(GetDropsResponse, _super);
     function GetDropsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDropsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDropsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetDropsResponse.prototype, "getDrops200ApplicationJsonInt32Integer", void 0);
+    ], GetDropsResponse.prototype, "getDrops200ApplicationJSONInt32Integer", void 0);
     return GetDropsResponse;
-}(SpeakeasyBase));
-export { GetDropsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDropsResponse = GetDropsResponse;

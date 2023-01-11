@@ -1,0 +1,92 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse = exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest = exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams = exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum;
+(function (GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum) {
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Complete"] = "complete";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Corpreg"] = "corpreg";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Bcgaz1"] = "bcgaz1";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Bcgaz2"] = "bcgaz2";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Oic"] = "oic";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Psl"] = "psl";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Ecb"] = "ecb";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["Hscr"] = "hscr";
+    GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum["ArchOic"] = "arch_oic";
+})(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum = exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum || (exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringAspectIdEnum = {}));
+var GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams = /** @class */ (function (_super) {
+    __extends(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams, _super);
+    function GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=aspectId" }),
+        __metadata("design:type", String)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams.prototype, "aspectId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=civixDocumentId" }),
+        __metadata("design:type", String)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams.prototype, "civixDocumentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=civixIndexId" }),
+        __metadata("design:type", String)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams.prototype, "civixIndexId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=searchString" }),
+        __metadata("design:type", String)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams.prototype, "searchString", void 0);
+    return GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams = GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams;
+var GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest = /** @class */ (function (_super) {
+    __extends(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest, _super);
+    function GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest.prototype, "pathParams", void 0);
+    return GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest = GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest;
+var GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse = /** @class */ (function (_super) {
+    __extends(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse, _super);
+    function GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse.prototype, "statusCode", void 0);
+    return GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse = GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricKeyDataPoints } from "./metrickeydatapoints";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourceMetricsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var metrickeydatapoints_1 = require("./metrickeydatapoints");
 var GetResourceMetricsResponse = /** @class */ (function (_super) {
     __extends(GetResourceMetricsResponse, _super);
     function GetResourceMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AlignedEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AlignedEndTime" }),
         __metadata("design:type", Date)
     ], GetResourceMetricsResponse.prototype, "alignedEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AlignedStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AlignedStartTime" }),
         __metadata("design:type", Date)
     ], GetResourceMetricsResponse.prototype, "alignedStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Identifier" }),
         __metadata("design:type", String)
     ], GetResourceMetricsResponse.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricList", elemType: MetricKeyDataPoints }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricList", elemType: metrickeydatapoints_1.MetricKeyDataPoints }),
         __metadata("design:type", Array)
     ], GetResourceMetricsResponse.prototype, "metricList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetResourceMetricsResponse.prototype, "nextToken", void 0);
     return GetResourceMetricsResponse;
-}(SpeakeasyBase));
-export { GetResourceMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourceMetricsResponse = GetResourceMetricsResponse;

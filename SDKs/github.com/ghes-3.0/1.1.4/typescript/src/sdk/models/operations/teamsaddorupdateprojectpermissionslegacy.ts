@@ -62,10 +62,10 @@ export class TeamsAddOrUpdateProjectPermissionsLegacyResponse extends SpeakeasyB
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJson;
+  teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJson;
 
   @SpeakeasyMetadata()
-  teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJson;
+  teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

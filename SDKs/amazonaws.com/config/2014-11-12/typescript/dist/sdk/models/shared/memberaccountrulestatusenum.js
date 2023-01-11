@@ -1,4 +1,7 @@
-export var MemberAccountRuleStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberAccountRuleStatusEnum = void 0;
+var MemberAccountRuleStatusEnum;
 (function (MemberAccountRuleStatusEnum) {
     MemberAccountRuleStatusEnum["CreateSuccessful"] = "CREATE_SUCCESSFUL";
     MemberAccountRuleStatusEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
@@ -9,4 +12,4 @@ export var MemberAccountRuleStatusEnum;
     MemberAccountRuleStatusEnum["UpdateSuccessful"] = "UPDATE_SUCCESSFUL";
     MemberAccountRuleStatusEnum["UpdateInProgress"] = "UPDATE_IN_PROGRESS";
     MemberAccountRuleStatusEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(MemberAccountRuleStatusEnum || (MemberAccountRuleStatusEnum = {}));
+})(MemberAccountRuleStatusEnum = exports.MemberAccountRuleStatusEnum || (exports.MemberAccountRuleStatusEnum = {}));

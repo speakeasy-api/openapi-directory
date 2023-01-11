@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationSubnetGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var subnet_1 = require("./subnet");
 // ReplicationSubnetGroup
 /**
  * Describes a subnet group in response to a request by the <code>DescribeReplicationSubnetGroups</code> operation.
@@ -34,25 +37,25 @@ var ReplicationSubnetGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationSubnetGroupDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationSubnetGroupDescription" }),
         __metadata("design:type", String)
     ], ReplicationSubnetGroup.prototype, "replicationSubnetGroupDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationSubnetGroupIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationSubnetGroupIdentifier" }),
         __metadata("design:type", String)
     ], ReplicationSubnetGroup.prototype, "replicationSubnetGroupIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetGroupStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetGroupStatus" }),
         __metadata("design:type", String)
     ], ReplicationSubnetGroup.prototype, "subnetGroupStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subnets", elemType: Subnet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subnets", elemType: subnet_1.Subnet }),
         __metadata("design:type", Array)
     ], ReplicationSubnetGroup.prototype, "subnets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], ReplicationSubnetGroup.prototype, "vpcId", void 0);
     return ReplicationSubnetGroup;
-}(SpeakeasyBase));
-export { ReplicationSubnetGroup };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationSubnetGroup = ReplicationSubnetGroup;

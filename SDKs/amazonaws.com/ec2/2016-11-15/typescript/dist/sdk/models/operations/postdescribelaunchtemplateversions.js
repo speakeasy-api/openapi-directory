@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeLaunchTemplateVersionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeLaunchTemplateVersionsResponse = exports.PostDescribeLaunchTemplateVersionsRequest = exports.PostDescribeLaunchTemplateVersionsHeaders = exports.PostDescribeLaunchTemplateVersionsQueryParams = exports.PostDescribeLaunchTemplateVersionsVersionEnum = exports.PostDescribeLaunchTemplateVersionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeLaunchTemplateVersionsActionEnum;
 (function (PostDescribeLaunchTemplateVersionsActionEnum) {
     PostDescribeLaunchTemplateVersionsActionEnum["DescribeLaunchTemplateVersions"] = "DescribeLaunchTemplateVersions";
-})(PostDescribeLaunchTemplateVersionsActionEnum || (PostDescribeLaunchTemplateVersionsActionEnum = {}));
-export var PostDescribeLaunchTemplateVersionsVersionEnum;
+})(PostDescribeLaunchTemplateVersionsActionEnum = exports.PostDescribeLaunchTemplateVersionsActionEnum || (exports.PostDescribeLaunchTemplateVersionsActionEnum = {}));
+var PostDescribeLaunchTemplateVersionsVersionEnum;
 (function (PostDescribeLaunchTemplateVersionsVersionEnum) {
     PostDescribeLaunchTemplateVersionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeLaunchTemplateVersionsVersionEnum || (PostDescribeLaunchTemplateVersionsVersionEnum = {}));
+})(PostDescribeLaunchTemplateVersionsVersionEnum = exports.PostDescribeLaunchTemplateVersionsVersionEnum || (exports.PostDescribeLaunchTemplateVersionsVersionEnum = {}));
 var PostDescribeLaunchTemplateVersionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeLaunchTemplateVersionsQueryParams, _super);
     function PostDescribeLaunchTemplateVersionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsQueryParams.prototype, "version", void 0);
     return PostDescribeLaunchTemplateVersionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeLaunchTemplateVersionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLaunchTemplateVersionsQueryParams = PostDescribeLaunchTemplateVersionsQueryParams;
 var PostDescribeLaunchTemplateVersionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeLaunchTemplateVersionsHeaders, _super);
     function PostDescribeLaunchTemplateVersionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeLaunchTemplateVersionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeLaunchTemplateVersionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLaunchTemplateVersionsHeaders = PostDescribeLaunchTemplateVersionsHeaders;
 var PostDescribeLaunchTemplateVersionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeLaunchTemplateVersionsRequest, _super);
     function PostDescribeLaunchTemplateVersionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLaunchTemplateVersionsQueryParams)
     ], PostDescribeLaunchTemplateVersionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLaunchTemplateVersionsHeaders)
     ], PostDescribeLaunchTemplateVersionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLaunchTemplateVersionsRequest.prototype, "request", void 0);
     return PostDescribeLaunchTemplateVersionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeLaunchTemplateVersionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLaunchTemplateVersionsRequest = PostDescribeLaunchTemplateVersionsRequest;
 var PostDescribeLaunchTemplateVersionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeLaunchTemplateVersionsResponse, _super);
     function PostDescribeLaunchTemplateVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLaunchTemplateVersionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeLaunchTemplateVersionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeLaunchTemplateVersionsResponse.prototype, "statusCode", void 0);
     return PostDescribeLaunchTemplateVersionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeLaunchTemplateVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLaunchTemplateVersionsResponse = PostDescribeLaunchTemplateVersionsResponse;

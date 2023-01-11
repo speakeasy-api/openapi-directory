@@ -14,7 +14,7 @@ export declare class GetMessagesSendRequest extends SpeakeasyBase {
 }
 export declare class GetMessagesSendResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     messages?: shared.Message[];
     statusCode: number;
 }

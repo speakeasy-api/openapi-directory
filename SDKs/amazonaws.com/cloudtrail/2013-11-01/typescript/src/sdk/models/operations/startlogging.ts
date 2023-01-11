@@ -63,7 +63,7 @@ export class StartLoggingResponse extends SpeakeasyBase {
   operationNotPermittedException?: any;
 
   @SpeakeasyMetadata()
-  startLoggingResponse?: Map<string, any>;
+  startLoggingResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

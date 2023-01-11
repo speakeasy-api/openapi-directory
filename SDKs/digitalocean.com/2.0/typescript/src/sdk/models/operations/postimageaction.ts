@@ -1,75 +1,76 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class PostImageActionPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
   imageId: number;
 }
 
 export enum PostImageActionRequestBody1TypeEnum {
-    Convert = "convert"
-,    Transfer = "transfer"
+    Convert = "convert",
+    Transfer = "transfer"
 }
 
 
 export class PostImageActionRequestBody1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: PostImageActionRequestBody1TypeEnum;
 }
 
 export enum PostImageActionRequestBody2TypeEnum {
-    Convert = "convert"
-,    Transfer = "transfer"
+    Convert = "convert",
+    Transfer = "transfer"
 }
 
 
 export class PostImageActionRequestBody2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: PostImageActionRequestBody2TypeEnum;
 }
 
 
-export class PostImageActionRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: PostImageActionPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: any;
-}
-
-
 export class PostImageAction401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class PostImageActionRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PostImageActionPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: any;
+}
+
+
 export class PostImageActionResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  postImageAction401ApplicationJsonObject?: PostImageAction401ApplicationJson;
+  @SpeakeasyMetadata()
+  postImageAction401ApplicationJSONObject?: PostImageAction401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItems?: shared.Onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItems;
 }

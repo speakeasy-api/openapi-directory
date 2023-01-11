@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebLinkContract } from "./weblinkcontract";
-export var ReleaseEventSeriesContractCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReleaseEventSeriesContract = exports.ReleaseEventSeriesContractStatusEnum = exports.ReleaseEventSeriesContractCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var weblinkcontract_1 = require("./weblinkcontract");
+var ReleaseEventSeriesContractCategoryEnum;
 (function (ReleaseEventSeriesContractCategoryEnum) {
     ReleaseEventSeriesContractCategoryEnum["Unspecified"] = "Unspecified";
     ReleaseEventSeriesContractCategoryEnum["AlbumRelease"] = "AlbumRelease";
@@ -34,63 +37,63 @@ export var ReleaseEventSeriesContractCategoryEnum;
     ReleaseEventSeriesContractCategoryEnum["Contest"] = "Contest";
     ReleaseEventSeriesContractCategoryEnum["Convention"] = "Convention";
     ReleaseEventSeriesContractCategoryEnum["Other"] = "Other";
-})(ReleaseEventSeriesContractCategoryEnum || (ReleaseEventSeriesContractCategoryEnum = {}));
-export var ReleaseEventSeriesContractStatusEnum;
+})(ReleaseEventSeriesContractCategoryEnum = exports.ReleaseEventSeriesContractCategoryEnum || (exports.ReleaseEventSeriesContractCategoryEnum = {}));
+var ReleaseEventSeriesContractStatusEnum;
 (function (ReleaseEventSeriesContractStatusEnum) {
     ReleaseEventSeriesContractStatusEnum["Draft"] = "Draft";
     ReleaseEventSeriesContractStatusEnum["Finished"] = "Finished";
     ReleaseEventSeriesContractStatusEnum["Approved"] = "Approved";
     ReleaseEventSeriesContractStatusEnum["Locked"] = "Locked";
-})(ReleaseEventSeriesContractStatusEnum || (ReleaseEventSeriesContractStatusEnum = {}));
+})(ReleaseEventSeriesContractStatusEnum = exports.ReleaseEventSeriesContractStatusEnum || (exports.ReleaseEventSeriesContractStatusEnum = {}));
 var ReleaseEventSeriesContract = /** @class */ (function (_super) {
     __extends(ReleaseEventSeriesContract, _super);
     function ReleaseEventSeriesContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], ReleaseEventSeriesContract.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ReleaseEventSeriesContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictureMime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictureMime" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "pictureMime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlSlug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlSlug" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesContract.prototype, "urlSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], ReleaseEventSeriesContract.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webLinks", elemType: WebLinkContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webLinks", elemType: weblinkcontract_1.WebLinkContract }),
         __metadata("design:type", Array)
     ], ReleaseEventSeriesContract.prototype, "webLinks", void 0);
     return ReleaseEventSeriesContract;
-}(SpeakeasyBase));
-export { ReleaseEventSeriesContract };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventSeriesContract = ReleaseEventSeriesContract;

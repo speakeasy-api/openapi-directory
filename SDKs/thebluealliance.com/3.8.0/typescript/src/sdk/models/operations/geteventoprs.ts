@@ -38,10 +38,10 @@ export class GetEventOpRsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  eventOpRs?: shared.EventOpRs;
+  eventOPRs?: shared.EventOpRs;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

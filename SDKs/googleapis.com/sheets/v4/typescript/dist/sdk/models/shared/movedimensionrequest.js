@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionRange } from "./dimensionrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MoveDimensionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionrange_1 = require("./dimensionrange");
 // MoveDimensionRequest
 /**
  * Moves one or more rows or columns.
@@ -34,13 +37,13 @@ var MoveDimensionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationIndex" }),
         __metadata("design:type", Number)
     ], MoveDimensionRequest.prototype, "destinationIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", DimensionRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", dimensionrange_1.DimensionRange)
     ], MoveDimensionRequest.prototype, "source", void 0);
     return MoveDimensionRequest;
-}(SpeakeasyBase));
-export { MoveDimensionRequest };
+}(utils_1.SpeakeasyBase));
+exports.MoveDimensionRequest = MoveDimensionRequest;

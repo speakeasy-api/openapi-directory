@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClassicLinkDnsSupport } from "./classiclinkdnssupport";
 
 
 
 export class DescribeVpcClassicLinkDnsSupportResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: ClassicLinkDnsSupport })
-  vpcs?: ClassicLinkDnsSupport[];
+  @SpeakeasyMetadata()
+  vpcs?: Record<string, any>;
 }

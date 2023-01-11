@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmDeviceCertsResponse = exports.GetNetworkSmDeviceCertsRequest = exports.GetNetworkSmDeviceCertsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmDeviceCertsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCertsPathParams, _super);
     function GetNetworkSmDeviceCertsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCertsPathParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCertsPathParams.prototype, "networkId", void 0);
     return GetNetworkSmDeviceCertsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCertsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCertsPathParams = GetNetworkSmDeviceCertsPathParams;
 var GetNetworkSmDeviceCertsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCertsRequest, _super);
     function GetNetworkSmDeviceCertsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDeviceCertsPathParams)
     ], GetNetworkSmDeviceCertsRequest.prototype, "pathParams", void 0);
     return GetNetworkSmDeviceCertsRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCertsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCertsRequest = GetNetworkSmDeviceCertsRequest;
 var GetNetworkSmDeviceCertsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCertsResponse, _super);
     function GetNetworkSmDeviceCertsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCertsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmDeviceCertsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmDeviceCertsResponse.prototype, "getNetworkSmDeviceCerts200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmDeviceCertsResponse.prototype, "getNetworkSmDeviceCerts200ApplicationJSONObject", void 0);
     return GetNetworkSmDeviceCertsResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCertsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCertsResponse = GetNetworkSmDeviceCertsResponse;

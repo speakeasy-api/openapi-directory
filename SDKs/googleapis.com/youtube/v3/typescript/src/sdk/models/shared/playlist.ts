@@ -25,7 +25,7 @@ export class Playlist extends SpeakeasyBase {
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=localizations", elemType: PlaylistLocalization })
-  localizations?: Map<string, PlaylistLocalization>;
+  localizations?: Record<string, PlaylistLocalization>;
 
   @SpeakeasyMetadata({ data: "json, name=player" })
   player?: PlaylistPlayer;

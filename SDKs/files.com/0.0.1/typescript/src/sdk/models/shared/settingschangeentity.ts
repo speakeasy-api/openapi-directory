@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class SettingsChangeEntity extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=change_details" })
-  changeDetails?: Map<string, any>;
+  changeDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

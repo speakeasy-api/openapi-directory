@@ -16,7 +16,7 @@ export class ScheduledAction extends SpeakeasyBase {
   iamRole?: string;
 
   @SpeakeasyMetadata()
-  nextInvocations?: Date[];
+  nextInvocations?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   schedule?: string;

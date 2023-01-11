@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { Apk } from "./apk";
-import { EnvironmentVariable } from "./environmentvariable";
-import { DeviceFile } from "./devicefile";
-import { SystraceSetup } from "./systracesetup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestSetup = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var apk_1 = require("./apk");
+var environmentvariable_1 = require("./environmentvariable");
+var devicefile_1 = require("./devicefile");
+var systracesetup_1 = require("./systracesetup");
 // TestSetup
 /**
  * A description of how to set up the Android device prior to running the test.
@@ -38,37 +41,37 @@ var TestSetup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", Account)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", account_1.Account)
     ], TestSetup.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalApks", elemType: Apk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalApks", elemType: apk_1.Apk }),
         __metadata("design:type", Array)
     ], TestSetup.prototype, "additionalApks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directoriesToPull" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directoriesToPull" }),
         __metadata("design:type", Array)
     ], TestSetup.prototype, "directoriesToPull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dontAutograntPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dontAutograntPermissions" }),
         __metadata("design:type", Boolean)
     ], TestSetup.prototype, "dontAutograntPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentVariables", elemType: EnvironmentVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentVariables", elemType: environmentvariable_1.EnvironmentVariable }),
         __metadata("design:type", Array)
     ], TestSetup.prototype, "environmentVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filesToPush", elemType: DeviceFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filesToPush", elemType: devicefile_1.DeviceFile }),
         __metadata("design:type", Array)
     ], TestSetup.prototype, "filesToPush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkProfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkProfile" }),
         __metadata("design:type", String)
     ], TestSetup.prototype, "networkProfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=systrace" }),
-        __metadata("design:type", SystraceSetup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=systrace" }),
+        __metadata("design:type", systracesetup_1.SystraceSetup)
     ], TestSetup.prototype, "systrace", void 0);
     return TestSetup;
-}(SpeakeasyBase));
-export { TestSetup };
+}(utils_1.SpeakeasyBase));
+exports.TestSetup = TestSetup;

@@ -21,7 +21,7 @@ export declare class ChecksListSuitesForRefRequest extends SpeakeasyBase {
 }
 export declare class ChecksListSuitesForRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    checksListSuitesForRef200ApplicationJsonObject?: ChecksListSuitesForRef200ApplicationJson;
+    checksListSuitesForRef200ApplicationJSONObject?: ChecksListSuitesForRef200ApplicationJson;
 }

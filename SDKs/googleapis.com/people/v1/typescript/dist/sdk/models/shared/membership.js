@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactGroupMembershipInput } from "./contactgroupmembership";
-import { DomainMembership } from "./domainmembership";
-import { FieldMetadataInput } from "./fieldmetadata";
-import { ContactGroupMembership } from "./contactgroupmembership";
-import { FieldMetadata } from "./fieldmetadata";
-// MembershipInput
-/**
- * A person's membership in a group. Only contact group memberships can be modified.
-**/
-var MembershipInput = /** @class */ (function (_super) {
-    __extends(MembershipInput, _super);
-    function MembershipInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactGroupMembership" }),
-        __metadata("design:type", ContactGroupMembershipInput)
-    ], MembershipInput.prototype, "contactGroupMembership", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainMembership" }),
-        __metadata("design:type", DomainMembership)
-    ], MembershipInput.prototype, "domainMembership", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
-    ], MembershipInput.prototype, "metadata", void 0);
-    return MembershipInput;
-}(SpeakeasyBase));
-export { MembershipInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipInput = exports.Membership = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactgroupmembership_1 = require("./contactgroupmembership");
+var domainmembership_1 = require("./domainmembership");
+var fieldmetadata_1 = require("./fieldmetadata");
+var contactgroupmembership_2 = require("./contactgroupmembership");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Membership
 /**
  * A person's membership in a group. Only contact group memberships can be modified.
@@ -62,17 +41,41 @@ var Membership = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactGroupMembership" }),
-        __metadata("design:type", ContactGroupMembership)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactGroupMembership" }),
+        __metadata("design:type", contactgroupmembership_1.ContactGroupMembership)
     ], Membership.prototype, "contactGroupMembership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainMembership" }),
-        __metadata("design:type", DomainMembership)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainMembership" }),
+        __metadata("design:type", domainmembership_1.DomainMembership)
     ], Membership.prototype, "domainMembership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Membership.prototype, "metadata", void 0);
     return Membership;
-}(SpeakeasyBase));
-export { Membership };
+}(utils_1.SpeakeasyBase));
+exports.Membership = Membership;
+// MembershipInput
+/**
+ * A person's membership in a group. Only contact group memberships can be modified.
+**/
+var MembershipInput = /** @class */ (function (_super) {
+    __extends(MembershipInput, _super);
+    function MembershipInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactGroupMembership" }),
+        __metadata("design:type", contactgroupmembership_2.ContactGroupMembershipInput)
+    ], MembershipInput.prototype, "contactGroupMembership", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainMembership" }),
+        __metadata("design:type", domainmembership_1.DomainMembership)
+    ], MembershipInput.prototype, "domainMembership", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
+    ], MembershipInput.prototype, "metadata", void 0);
+    return MembershipInput;
+}(utils_1.SpeakeasyBase));
+exports.MembershipInput = MembershipInput;

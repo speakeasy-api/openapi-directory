@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimEnumStatusUpdateEnum = void 0;
+var SimEnumStatusUpdateEnum;
+(function (SimEnumStatusUpdateEnum) {
+    SimEnumStatusUpdateEnum["Ready"] = "ready";
+    SimEnumStatusUpdateEnum["Active"] = "active";
+    SimEnumStatusUpdateEnum["Inactive"] = "inactive";
+})(SimEnumStatusUpdateEnum = exports.SimEnumStatusUpdateEnum || (exports.SimEnumStatusUpdateEnum = {}));

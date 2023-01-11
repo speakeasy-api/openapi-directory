@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirewallPolicy } from "./firewallpolicy";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateFirewallPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var firewallpolicy_1 = require("./firewallpolicy");
+var tag_1 = require("./tag");
 var CreateFirewallPolicyRequest = /** @class */ (function (_super) {
     __extends(CreateFirewallPolicyRequest, _super);
     function CreateFirewallPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateFirewallPolicyRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DryRun" }),
         __metadata("design:type", Boolean)
     ], CreateFirewallPolicyRequest.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicy" }),
-        __metadata("design:type", FirewallPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicy" }),
+        __metadata("design:type", firewallpolicy_1.FirewallPolicy)
     ], CreateFirewallPolicyRequest.prototype, "firewallPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyName" }),
         __metadata("design:type", String)
     ], CreateFirewallPolicyRequest.prototype, "firewallPolicyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateFirewallPolicyRequest.prototype, "tags", void 0);
     return CreateFirewallPolicyRequest;
-}(SpeakeasyBase));
-export { CreateFirewallPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateFirewallPolicyRequest = CreateFirewallPolicyRequest;

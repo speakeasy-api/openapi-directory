@@ -16,7 +16,7 @@ export declare class GetEventOpRsRequest extends SpeakeasyBase {
 }
 export declare class GetEventOpRsResponse extends SpeakeasyBase {
     contentType: string;
-    eventOpRs?: shared.EventOpRs;
-    headers: Map<string, string[]>;
+    eventOPRs?: shared.EventOpRs;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

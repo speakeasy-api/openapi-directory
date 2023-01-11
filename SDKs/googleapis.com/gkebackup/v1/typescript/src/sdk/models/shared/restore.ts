@@ -24,7 +24,7 @@ export class RestoreInput extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=restoreConfig" })
   restoreConfig?: RestoreConfig;
@@ -55,7 +55,7 @@ export class Restore extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

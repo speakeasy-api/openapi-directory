@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// GoogleCloudDiscoveryengineV1alphaCustomAttribute
-/**
- * A custom attribute that is not explicitly modeled in a resource, e.g. UserEvent.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaCustomAttribute = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudDiscoveryengineV1alphaCustomAttribute = /** @class */ (function (_super) {
     __extends(GoogleCloudDiscoveryengineV1alphaCustomAttribute, _super);
     function GoogleCloudDiscoveryengineV1alphaCustomAttribute() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numbers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numbers" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaCustomAttribute.prototype, "numbers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaCustomAttribute.prototype, "text", void 0);
     return GoogleCloudDiscoveryengineV1alphaCustomAttribute;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaCustomAttribute };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaCustomAttribute = GoogleCloudDiscoveryengineV1alphaCustomAttribute;

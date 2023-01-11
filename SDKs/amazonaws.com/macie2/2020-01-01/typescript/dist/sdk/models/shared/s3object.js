@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServerSideEncryption } from "./serversideencryption";
-import { StorageClassEnum } from "./storageclassenum";
-import { KeyValuePair } from "./keyvaluepair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Object = void 0;
+var utils_1 = require("../../../internal/utils");
+var serversideencryption_1 = require("./serversideencryption");
+var storageclassenum_1 = require("./storageclassenum");
+var keyvaluepair_1 = require("./keyvaluepair");
 // S3Object
 /**
  * Provides information about the S3 object that a finding applies to.
@@ -36,53 +39,53 @@ var S3Object = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketArn" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "bucketArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eTag" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "eTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModified" }),
         __metadata("design:type", Date)
     ], S3Object.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAccess" }),
         __metadata("design:type", Boolean)
     ], S3Object.prototype, "publicAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverSideEncryption" }),
-        __metadata("design:type", ServerSideEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverSideEncryption" }),
+        __metadata("design:type", serversideencryption_1.ServerSideEncryption)
     ], S3Object.prototype, "serverSideEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], S3Object.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageClass" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "storageClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: KeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: keyvaluepair_1.KeyValuePair }),
         __metadata("design:type", Array)
     ], S3Object.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionId" }),
         __metadata("design:type", String)
     ], S3Object.prototype, "versionId", void 0);
     return S3Object;
-}(SpeakeasyBase));
-export { S3Object };
+}(utils_1.SpeakeasyBase));
+exports.S3Object = S3Object;

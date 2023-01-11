@@ -73,7 +73,7 @@ export class AttachPolicyResponse extends SpeakeasyBase {
   accessDeniedException?: shared.AccessDeniedException;
 
   @SpeakeasyMetadata()
-  attachPolicyResponse?: Map<string, any>;
+  attachPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdReques
 export declare class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    milestone?: Map<string, any>;
+    error?: Record<string, any>;
+    milestone?: Record<string, any>;
 }

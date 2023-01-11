@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attachment } from "./attachment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyAttachmentsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachment_1 = require("./attachment");
 // ModifyAttachmentsRequest
 /**
  * Request to modify the attachments of a student submission.
@@ -34,9 +37,9 @@ var ModifyAttachmentsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addAttachments", elemType: Attachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addAttachments", elemType: attachment_1.Attachment }),
         __metadata("design:type", Array)
     ], ModifyAttachmentsRequest.prototype, "addAttachments", void 0);
     return ModifyAttachmentsRequest;
-}(SpeakeasyBase));
-export { ModifyAttachmentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyAttachmentsRequest = ModifyAttachmentsRequest;

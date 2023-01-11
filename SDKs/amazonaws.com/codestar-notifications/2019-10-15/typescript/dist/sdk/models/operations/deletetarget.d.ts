@@ -18,7 +18,7 @@ export declare class DeleteTargetRequest extends SpeakeasyBase {
 }
 export declare class DeleteTargetResponse extends SpeakeasyBase {
     contentType: string;
-    deleteTargetResult?: Map<string, any>;
+    deleteTargetResult?: Record<string, any>;
     statusCode: number;
     validationException?: any;
 }

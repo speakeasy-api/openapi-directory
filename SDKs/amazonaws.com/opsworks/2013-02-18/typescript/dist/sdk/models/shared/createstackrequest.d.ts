@@ -5,7 +5,7 @@ import { Source } from "./source";
 import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
 export declare class CreateStackRequest extends SpeakeasyBase {
     agentVersion?: string;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     chefConfiguration?: ChefConfiguration;
     configurationManager?: StackConfigurationManager;
     customCookbooksSource?: Source;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attachment } from "./attachment";
-import { PerObjectStatus } from "./perobjectstatus";
-// SyncState
-/**
- * <p>The status of the firewall endpoint and firewall policy configuration for a single VPC subnet. </p> <p>For each VPC subnet that you associate with a firewall, AWS Network Firewall does the following: </p> <ul> <li> <p>Instantiates a firewall endpoint in the subnet, ready to take traffic.</p> </li> <li> <p>Configures the endpoint with the current firewall policy settings, to provide the filtering behavior for the endpoint.</p> </li> </ul> <p>When you update a firewall, for example to add a subnet association or change a rule group in the firewall policy, the affected sync states reflect out-of-sync or not ready status until the changes are complete. </p>
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncState = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachment_1 = require("./attachment");
+var perobjectstatus_1 = require("./perobjectstatus");
 var SyncState = /** @class */ (function (_super) {
     __extends(SyncState, _super);
     function SyncState() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attachment" }),
-        __metadata("design:type", Attachment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attachment" }),
+        __metadata("design:type", attachment_1.Attachment)
     ], SyncState.prototype, "attachment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Config", elemType: PerObjectStatus }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Config", elemType: perobjectstatus_1.PerObjectStatus }),
+        __metadata("design:type", Object)
     ], SyncState.prototype, "config", void 0);
     return SyncState;
-}(SpeakeasyBase));
-export { SyncState };
+}(utils_1.SpeakeasyBase));
+exports.SyncState = SyncState;

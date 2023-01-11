@@ -66,5 +66,5 @@ export class TagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagResourceResponse?: Map<string, any>;
+  tagResourceResponse?: Record<string, any>;
 }

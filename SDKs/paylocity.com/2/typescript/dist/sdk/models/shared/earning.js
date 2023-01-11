@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Earning = void 0;
+var utils_1 = require("../../../internal/utils");
 // Earning
 /**
  * The employee earning model
@@ -33,93 +36,93 @@ var Earning = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agency" }),
         __metadata("design:type", String)
     ], Earning.prototype, "agency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annualMaximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annualMaximum" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "annualMaximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calculationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calculationCode" }),
         __metadata("design:type", String)
     ], Earning.prototype, "calculationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costCenter1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costCenter1" }),
         __metadata("design:type", String)
     ], Earning.prototype, "costCenter1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costCenter2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costCenter2" }),
         __metadata("design:type", String)
     ], Earning.prototype, "costCenter2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costCenter3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costCenter3" }),
         __metadata("design:type", String)
     ], Earning.prototype, "costCenter3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earningCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earningCode" }),
         __metadata("design:type", String)
     ], Earning.prototype, "earningCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveDate" }),
         __metadata("design:type", String)
     ], Earning.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], Earning.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], Earning.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "goal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hoursOrUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hoursOrUnits" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "hoursOrUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSelfInsured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSelfInsured" }),
         __metadata("design:type", Boolean)
     ], Earning.prototype, "isSelfInsured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobCode" }),
         __metadata("design:type", String)
     ], Earning.prototype, "jobCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miscellaneousInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miscellaneousInfo" }),
         __metadata("design:type", String)
     ], Earning.prototype, "miscellaneousInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paidTowardsGoal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paidTowardsGoal" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "paidTowardsGoal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payPeriodMaximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payPeriodMaximum" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "payPeriodMaximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payPeriodMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payPeriodMinimum" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "payPeriodMinimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", Number)
     ], Earning.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateCode" }),
         __metadata("design:type", String)
     ], Earning.prototype, "rateCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], Earning.prototype, "startDate", void 0);
     return Earning;
-}(SpeakeasyBase));
-export { Earning };
+}(utils_1.SpeakeasyBase));
+exports.Earning = Earning;

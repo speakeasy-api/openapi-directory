@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppointmentRescheduleModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppointmentRescheduleModel = /** @class */ (function (_super) {
     __extends(AppointmentRescheduleModel, _super);
     function AppointmentRescheduleModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDateTime" }),
         __metadata("design:type", Date)
     ], AppointmentRescheduleModel.prototype, "endDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], AppointmentRescheduleModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], AppointmentRescheduleModel.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDateTime" }),
         __metadata("design:type", Date)
     ], AppointmentRescheduleModel.prototype, "startDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travelAppointmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travelAppointmentId" }),
         __metadata("design:type", String)
     ], AppointmentRescheduleModel.prototype, "travelAppointmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travelTimeMins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travelTimeMins" }),
         __metadata("design:type", Number)
     ], AppointmentRescheduleModel.prototype, "travelTimeMins", void 0);
     return AppointmentRescheduleModel;
-}(SpeakeasyBase));
-export { AppointmentRescheduleModel };
+}(utils_1.SpeakeasyBase));
+exports.AppointmentRescheduleModel = AppointmentRescheduleModel;

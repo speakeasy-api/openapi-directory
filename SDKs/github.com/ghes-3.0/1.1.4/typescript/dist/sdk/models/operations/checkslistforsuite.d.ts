@@ -5,13 +5,9 @@ export declare class ChecksListForSuitePathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum ChecksListForSuiteFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
 export declare class ChecksListForSuiteQueryParams extends SpeakeasyBase {
     checkName?: string;
-    filter?: ChecksListForSuiteFilterEnum;
+    filter?: shared.StatusEnum1;
     page?: number;
     perPage?: number;
     status?: shared.StatusEnum;
@@ -26,7 +22,7 @@ export declare class ChecksListForSuiteRequest extends SpeakeasyBase {
 }
 export declare class ChecksListForSuiteResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    checksListForSuite200ApplicationJsonObject?: ChecksListForSuite200ApplicationJson;
+    checksListForSuite200ApplicationJSONObject?: ChecksListForSuite200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DisputeAmount } from "./disputeamount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonetaryTransaction = void 0;
+var utils_1 = require("../../../internal/utils");
+var disputeamount_1 = require("./disputeamount");
 // MonetaryTransaction
 /**
  * This type is used to provide details about one or more monetary transactions that occur as part of a payment dispute.
@@ -34,21 +37,21 @@ var MonetaryTransaction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", DisputeAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", disputeamount_1.DisputeAmount)
     ], MonetaryTransaction.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], MonetaryTransaction.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], MonetaryTransaction.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MonetaryTransaction.prototype, "type", void 0);
     return MonetaryTransaction;
-}(SpeakeasyBase));
-export { MonetaryTransaction };
+}(utils_1.SpeakeasyBase));
+exports.MonetaryTransaction = MonetaryTransaction;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1Device = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1Device
 /**
  * Describes a device reporting Chrome browser information.
@@ -33,13 +36,13 @@ var GoogleChromeManagementV1Device = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1Device.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machine" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1Device.prototype, "machine", void 0);
     return GoogleChromeManagementV1Device;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1Device };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1Device = GoogleChromeManagementV1Device;

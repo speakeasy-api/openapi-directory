@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PaymentsresellersubscriptionPartnersProductsListRequest, PaymentsresellersubscriptionPartnersProductsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,23 +28,23 @@ const sdk = new SDK();
     
 const req: PaymentsresellersubscriptionPartnersProductsListRequest = {
   pathParams: {
-    parent: "quidem",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "cum",
+    accessToken: "culpa",
     alt: "media",
-    callback: "culpa",
-    fields: "earum",
-    filter: "quidem",
-    key: "rem",
-    oauthToken: "autem",
-    pageSize: 5947808151841881503,
-    pageToken: "et",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
     prettyPrint: true,
-    quotaUser: "corporis",
-    uploadType: "omnis",
-    uploadProtocol: "veniam",
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 
@@ -66,7 +65,7 @@ sdk.partners.paymentsresellersubscriptionPartnersProductsList(req).then((res: Pa
 * `paymentsresellersubscriptionPartnersSubscriptionsCancel` - Used by partners to cancel a subscription service either immediately or by the end of the current billing cycle for their customers. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscriptionPartnersSubscriptionsCreate` - Used by partners to create a subscription for their customers. The created subscription is associated with the end user inferred from the end user credentials. This API must be authorized by the end user using OAuth.
 * `paymentsresellersubscriptionPartnersSubscriptionsEntitle` - Used by partners to entitle a previously provisioned subscription to the current end user. The end user identity is inferred from the authorized credential of the request. This API must be authorized by the end user using OAuth.
-* `paymentsresellersubscriptionPartnersSubscriptionsExtend` - Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+* `paymentsresellersubscriptionPartnersSubscriptionsExtend` - [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscriptionPartnersSubscriptionsGet` - Used by partners to get a subscription by id. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscriptionPartnersSubscriptionsProvision` - Used by partners to provision a subscription for their customers. This creates a subscription without associating it with the end user account. EntitleSubscription must be called separately using OAuth in order for the end user account to be associated with the subscription. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscriptionPartnersSubscriptionsUndoCancel` - Used by partners to revoke the pending cancellation of a subscription, which is currently in `STATE_CANCEL_AT_END_OF_CYCLE` state. If the subscription is already cancelled, the request will fail. It should be called directly by the partner using service accounts.

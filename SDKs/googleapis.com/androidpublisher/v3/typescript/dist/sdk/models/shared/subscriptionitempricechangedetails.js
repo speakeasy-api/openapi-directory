@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Money } from "./money";
-export var SubscriptionItemPriceChangeDetailsPriceChangeModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionItemPriceChangeDetails = exports.SubscriptionItemPriceChangeDetailsPriceChangeStateEnum = exports.SubscriptionItemPriceChangeDetailsPriceChangeModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var money_1 = require("./money");
+var SubscriptionItemPriceChangeDetailsPriceChangeModeEnum;
 (function (SubscriptionItemPriceChangeDetailsPriceChangeModeEnum) {
     SubscriptionItemPriceChangeDetailsPriceChangeModeEnum["PriceChangeModeUnspecified"] = "PRICE_CHANGE_MODE_UNSPECIFIED";
     SubscriptionItemPriceChangeDetailsPriceChangeModeEnum["PriceDecrease"] = "PRICE_DECREASE";
     SubscriptionItemPriceChangeDetailsPriceChangeModeEnum["PriceIncrease"] = "PRICE_INCREASE";
-})(SubscriptionItemPriceChangeDetailsPriceChangeModeEnum || (SubscriptionItemPriceChangeDetailsPriceChangeModeEnum = {}));
-export var SubscriptionItemPriceChangeDetailsPriceChangeStateEnum;
+})(SubscriptionItemPriceChangeDetailsPriceChangeModeEnum = exports.SubscriptionItemPriceChangeDetailsPriceChangeModeEnum || (exports.SubscriptionItemPriceChangeDetailsPriceChangeModeEnum = {}));
+var SubscriptionItemPriceChangeDetailsPriceChangeStateEnum;
 (function (SubscriptionItemPriceChangeDetailsPriceChangeStateEnum) {
     SubscriptionItemPriceChangeDetailsPriceChangeStateEnum["PriceChangeStateUnspecified"] = "PRICE_CHANGE_STATE_UNSPECIFIED";
     SubscriptionItemPriceChangeDetailsPriceChangeStateEnum["Outstanding"] = "OUTSTANDING";
     SubscriptionItemPriceChangeDetailsPriceChangeStateEnum["Confirmed"] = "CONFIRMED";
     SubscriptionItemPriceChangeDetailsPriceChangeStateEnum["Applied"] = "APPLIED";
-})(SubscriptionItemPriceChangeDetailsPriceChangeStateEnum || (SubscriptionItemPriceChangeDetailsPriceChangeStateEnum = {}));
+})(SubscriptionItemPriceChangeDetailsPriceChangeStateEnum = exports.SubscriptionItemPriceChangeDetailsPriceChangeStateEnum || (exports.SubscriptionItemPriceChangeDetailsPriceChangeStateEnum = {}));
 // SubscriptionItemPriceChangeDetails
 /**
  * Price change related information of a subscription item.
@@ -47,21 +50,21 @@ var SubscriptionItemPriceChangeDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expectedNewPriceChargeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expectedNewPriceChargeTime" }),
         __metadata("design:type", String)
     ], SubscriptionItemPriceChangeDetails.prototype, "expectedNewPriceChargeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPrice" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPrice" }),
+        __metadata("design:type", money_1.Money)
     ], SubscriptionItemPriceChangeDetails.prototype, "newPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceChangeMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceChangeMode" }),
         __metadata("design:type", String)
     ], SubscriptionItemPriceChangeDetails.prototype, "priceChangeMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceChangeState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceChangeState" }),
         __metadata("design:type", String)
     ], SubscriptionItemPriceChangeDetails.prototype, "priceChangeState", void 0);
     return SubscriptionItemPriceChangeDetails;
-}(SpeakeasyBase));
-export { SubscriptionItemPriceChangeDetails };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionItemPriceChangeDetails = SubscriptionItemPriceChangeDetails;

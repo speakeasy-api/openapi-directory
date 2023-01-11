@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirstLastNameOriginedOut } from "./firstlastnameoriginedout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstLastNamePhoneNumberIn = void 0;
+var utils_1 = require("../../../internal/utils");
+var firstlastnameoriginedout_1 = require("./firstlastnameoriginedout");
 var FirstLastNamePhoneNumberIn = /** @class */ (function (_super) {
     __extends(FirstLastNamePhoneNumberIn, _super);
     function FirstLastNamePhoneNumberIn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstLastNameOriginedOut" }),
-        __metadata("design:type", FirstLastNameOriginedOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstLastNameOriginedOut" }),
+        __metadata("design:type", firstlastnameoriginedout_1.FirstLastNameOriginedOut)
     ], FirstLastNamePhoneNumberIn.prototype, "firstLastNameOriginedOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberIn.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberIn.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberIn.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], FirstLastNamePhoneNumberIn.prototype, "phoneNumber", void 0);
     return FirstLastNamePhoneNumberIn;
-}(SpeakeasyBase));
-export { FirstLastNamePhoneNumberIn };
+}(utils_1.SpeakeasyBase));
+exports.FirstLastNamePhoneNumberIn = FirstLastNamePhoneNumberIn;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LlcerRequest, LlcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: LlcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      udf1: "excepturi",
-      udf2: "aut",
-      udf3: "et",
+      udf1: "sit",
+      udf2: "voluptas",
+      udf3: "culpa",
     },
-    consentArtifact: "omnis",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "et",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.llcer(req).then((res: LlcerResponse | AxiosError) => {
+sdk.apIs.llcer(req).then((res: LlcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.llcer(req).then((res: LlcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `llcer` - Leave and License Certificate
 

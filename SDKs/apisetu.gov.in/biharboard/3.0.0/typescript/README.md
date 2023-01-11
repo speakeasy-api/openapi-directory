@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SscerRequest, SscerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: SscerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "quis",
-      fullName: "culpa",
-      rroll: "et",
-      rrollCode: "et",
-      year: "nostrum",
+      dob: "sit",
+      fullName: "voluptas",
+      rroll: "culpa",
+      rrollCODE: "expedita",
+      year: "consequuntur",
     },
-    consentArtifact: "sed",
+    consentArtifact: "dolor",
     format: "pdf",
-    txnId: "molestias",
+    txnId: "voluptas",
   },
 };
 
-sdk.sdk.sscer(req).then((res: SscerResponse | AxiosError) => {
+sdk.apIs.sscer(req).then((res: SscerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -59,7 +58,7 @@ sdk.sdk.sscer(req).then((res: SscerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `sscer` - Class X Marksheet
 * `svcer` - Class X Provisional Certificate

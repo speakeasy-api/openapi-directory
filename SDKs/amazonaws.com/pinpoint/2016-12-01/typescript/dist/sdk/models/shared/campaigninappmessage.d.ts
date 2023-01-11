@@ -7,6 +7,6 @@ import { LayoutEnum } from "./layoutenum";
 export declare class CampaignInAppMessage extends SpeakeasyBase {
     body?: string;
     content?: InAppMessageContent[];
-    customConfig?: Map<string, string>;
+    customConfig?: Record<string, string>;
     layout?: LayoutEnum;
 }

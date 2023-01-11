@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpnGateway } from "./vpngateway";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVpnGatewayResult = exports.CreateVpnGatewayResultVpnGateway = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateVpnGatewayResultVpnGateway
+/**
+ * Information about the virtual private gateway.
+**/
+var CreateVpnGatewayResultVpnGateway = /** @class */ (function (_super) {
+    __extends(CreateVpnGatewayResultVpnGateway, _super);
+    function CreateVpnGatewayResultVpnGateway() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "amazonSideAsn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "availabilityZone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "vpcAttachments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpnGatewayResultVpnGateway.prototype, "vpnGatewayId", void 0);
+    return CreateVpnGatewayResultVpnGateway;
+}(utils_1.SpeakeasyBase));
+exports.CreateVpnGatewayResultVpnGateway = CreateVpnGatewayResultVpnGateway;
 // CreateVpnGatewayResult
 /**
  * Contains the output of CreateVpnGateway.
@@ -34,9 +76,9 @@ var CreateVpnGatewayResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpnGateway)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateVpnGatewayResultVpnGateway)
     ], CreateVpnGatewayResult.prototype, "vpnGateway", void 0);
     return CreateVpnGatewayResult;
-}(SpeakeasyBase));
-export { CreateVpnGatewayResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateVpnGatewayResult = CreateVpnGatewayResult;

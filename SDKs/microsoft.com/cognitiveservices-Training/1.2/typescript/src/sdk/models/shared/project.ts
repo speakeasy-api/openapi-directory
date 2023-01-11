@@ -45,6 +45,6 @@ export class ProjectInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Name, form, name=Name;" })
   name?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=Settings, form, name=Settings;" })
+  @SpeakeasyMetadata({ data: "json, name=Settings, form, name=Settings;json=true" })
   settings?: ProjectSettings;
 }

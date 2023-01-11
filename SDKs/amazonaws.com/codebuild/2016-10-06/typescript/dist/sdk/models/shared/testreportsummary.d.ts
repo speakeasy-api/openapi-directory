@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class TestReportSummary extends SpeakeasyBase {
     durationInNanoSeconds: number;
-    statusCounts: Map<string, number>;
+    statusCounts: Record<string, number>;
     total: number;
 }

@@ -17,7 +17,7 @@ export declare class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest extends
 }
 export declare class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

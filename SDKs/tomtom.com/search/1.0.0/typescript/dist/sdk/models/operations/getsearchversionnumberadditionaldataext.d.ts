@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetSearchVersionNumberAdditionalDataExtExtEnum {
-    Json = "json"
-}
+import * as shared from "../shared";
 export declare class GetSearchVersionNumberAdditionalDataExtPathParams extends SpeakeasyBase {
-    ext: GetSearchVersionNumberAdditionalDataExtExtEnum;
+    ext: shared.VersionNumberEnum;
     versionNumber: number;
 }
 export declare class GetSearchVersionNumberAdditionalDataExtQueryParams extends SpeakeasyBase {

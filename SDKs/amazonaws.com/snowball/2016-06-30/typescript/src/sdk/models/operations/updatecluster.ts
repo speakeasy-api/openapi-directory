@@ -66,5 +66,5 @@ export class UpdateClusterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateClusterResult?: Map<string, any>;
+  updateClusterResult?: Record<string, any>;
 }

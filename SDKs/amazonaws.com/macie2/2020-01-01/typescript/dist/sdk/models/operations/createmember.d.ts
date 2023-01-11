@@ -18,7 +18,7 @@ export declare class CreateMemberRequestBodyAccount extends SpeakeasyBase {
 }
 export declare class CreateMemberRequestBody extends SpeakeasyBase {
     account: CreateMemberRequestBodyAccount;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateMemberRequest extends SpeakeasyBase {
     headers: CreateMemberHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SecurityServiceTypeEnum } from "./securityservicetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetProtectionStatusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var securityservicetypeenum_1 = require("./securityservicetypeenum");
 var GetProtectionStatusResponse = /** @class */ (function (_super) {
     __extends(GetProtectionStatusResponse, _super);
     function GetProtectionStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdminAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdminAccountId" }),
         __metadata("design:type", String)
     ], GetProtectionStatusResponse.prototype, "adminAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
         __metadata("design:type", String)
     ], GetProtectionStatusResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetProtectionStatusResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceType" }),
         __metadata("design:type", String)
     ], GetProtectionStatusResponse.prototype, "serviceType", void 0);
     return GetProtectionStatusResponse;
-}(SpeakeasyBase));
-export { GetProtectionStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetProtectionStatusResponse = GetProtectionStatusResponse;

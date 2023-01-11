@@ -15,7 +15,7 @@ export declare class GetAssociationForServiceQuotaTemplateHeaders extends Speake
 }
 export declare class GetAssociationForServiceQuotaTemplateRequest extends SpeakeasyBase {
     headers: GetAssociationForServiceQuotaTemplateHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetAssociationForServiceQuotaTemplateResponse extends SpeakeasyBase {
     awsServiceAccessNotEnabledException?: any;

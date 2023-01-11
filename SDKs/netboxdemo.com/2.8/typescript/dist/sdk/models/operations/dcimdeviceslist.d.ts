@@ -135,5 +135,5 @@ export declare class DcimDevicesListRequest extends SpeakeasyBase {
 export declare class DcimDevicesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimDevicesList200ApplicationJsonObject?: DcimDevicesList200ApplicationJson;
+    dcimDevicesList200ApplicationJSONObject?: DcimDevicesList200ApplicationJson;
 }

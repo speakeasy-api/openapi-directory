@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityDkimAttributes } from "./identitydkimattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIdentityDkimAttributesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var identitydkimattributes_1 = require("./identitydkimattributes");
 // GetIdentityDkimAttributesResponse
 /**
  * Represents the status of Amazon SES Easy DKIM signing for an identity. For domain identities, this response also contains the DKIM tokens that are required for Easy DKIM signing, and whether Amazon SES successfully verified that these tokens were published.
@@ -34,9 +37,9 @@ var GetIdentityDkimAttributesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: IdentityDkimAttributes }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ elemType: identitydkimattributes_1.IdentityDkimAttributes }),
+        __metadata("design:type", Object)
     ], GetIdentityDkimAttributesResponse.prototype, "dkimAttributes", void 0);
     return GetIdentityDkimAttributesResponse;
-}(SpeakeasyBase));
-export { GetIdentityDkimAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIdentityDkimAttributesResponse = GetIdentityDkimAttributesResponse;

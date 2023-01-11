@@ -21,7 +21,6 @@ export declare class DeleteAccountAccessConsentsConsentIdRequest extends Speakea
 }
 export declare class DeleteAccountAccessConsentsConsentIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     statusCode: number;
 }

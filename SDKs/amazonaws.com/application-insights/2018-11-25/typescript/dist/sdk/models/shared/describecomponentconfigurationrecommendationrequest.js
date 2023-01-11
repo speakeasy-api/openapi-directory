@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TierEnum } from "./tierenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeComponentConfigurationRecommendationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tierenum_1 = require("./tierenum");
 var DescribeComponentConfigurationRecommendationRequest = /** @class */ (function (_super) {
     __extends(DescribeComponentConfigurationRecommendationRequest, _super);
     function DescribeComponentConfigurationRecommendationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComponentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComponentName" }),
         __metadata("design:type", String)
     ], DescribeComponentConfigurationRecommendationRequest.prototype, "componentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceGroupName" }),
         __metadata("design:type", String)
     ], DescribeComponentConfigurationRecommendationRequest.prototype, "resourceGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tier" }),
         __metadata("design:type", String)
     ], DescribeComponentConfigurationRecommendationRequest.prototype, "tier", void 0);
     return DescribeComponentConfigurationRecommendationRequest;
-}(SpeakeasyBase));
-export { DescribeComponentConfigurationRecommendationRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeComponentConfigurationRecommendationRequest = DescribeComponentConfigurationRecommendationRequest;

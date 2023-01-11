@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConnectorLaunchStageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Connector = exports.ConnectorLaunchStageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConnectorLaunchStageEnum;
 (function (ConnectorLaunchStageEnum) {
     ConnectorLaunchStageEnum["LaunchStageUnspecified"] = "LAUNCH_STAGE_UNSPECIFIED";
     ConnectorLaunchStageEnum["Preview"] = "PREVIEW";
     ConnectorLaunchStageEnum["Ga"] = "GA";
     ConnectorLaunchStageEnum["Deprecated"] = "DEPRECATED";
-})(ConnectorLaunchStageEnum || (ConnectorLaunchStageEnum = {}));
+})(ConnectorLaunchStageEnum = exports.ConnectorLaunchStageEnum || (exports.ConnectorLaunchStageEnum = {}));
 // Connector
 /**
  * Connectors indicates a specific connector type, e.x. Salesforce, SAP etc.
@@ -40,45 +43,45 @@ var Connector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Connector.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Connector.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Connector.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUri" }),
         __metadata("design:type", String)
     ], Connector.prototype, "documentationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalUri" }),
         __metadata("design:type", String)
     ], Connector.prototype, "externalUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Connector.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchStage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchStage" }),
         __metadata("design:type", String)
     ], Connector.prototype, "launchStage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Connector.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Connector.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webAssetsLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webAssetsLocation" }),
         __metadata("design:type", String)
     ], Connector.prototype, "webAssetsLocation", void 0);
     return Connector;
-}(SpeakeasyBase));
-export { Connector };
+}(utils_1.SpeakeasyBase));
+exports.Connector = Connector;

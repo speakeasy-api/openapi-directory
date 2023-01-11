@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TimeOffRequestsFilterTimeOffRequestStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeOffRequestsFilter = exports.TimeOffRequestsFilterTimeOffRequestStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TimeOffRequestsFilterTimeOffRequestStatusEnum;
 (function (TimeOffRequestsFilterTimeOffRequestStatusEnum) {
     TimeOffRequestsFilterTimeOffRequestStatusEnum["Requested"] = "requested";
     TimeOffRequestsFilterTimeOffRequestStatusEnum["Approved"] = "approved";
@@ -31,28 +34,28 @@ export var TimeOffRequestsFilterTimeOffRequestStatusEnum;
     TimeOffRequestsFilterTimeOffRequestStatusEnum["Cancelled"] = "cancelled";
     TimeOffRequestsFilterTimeOffRequestStatusEnum["Deleted"] = "deleted";
     TimeOffRequestsFilterTimeOffRequestStatusEnum["Other"] = "other";
-})(TimeOffRequestsFilterTimeOffRequestStatusEnum || (TimeOffRequestsFilterTimeOffRequestStatusEnum = {}));
+})(TimeOffRequestsFilterTimeOffRequestStatusEnum = exports.TimeOffRequestsFilterTimeOffRequestStatusEnum || (exports.TimeOffRequestsFilterTimeOffRequestStatusEnum = {}));
 var TimeOffRequestsFilter = /** @class */ (function (_super) {
     __extends(TimeOffRequestsFilter, _super);
     function TimeOffRequestsFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=employee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=employee_id" }),
         __metadata("design:type", String)
     ], TimeOffRequestsFilter.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=end_date" }),
         __metadata("design:type", String)
     ], TimeOffRequestsFilter.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=start_date" }),
         __metadata("design:type", String)
     ], TimeOffRequestsFilter.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=time_off_request_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=time_off_request_status" }),
         __metadata("design:type", String)
     ], TimeOffRequestsFilter.prototype, "timeOffRequestStatus", void 0);
     return TimeOffRequestsFilter;
-}(SpeakeasyBase));
-export { TimeOffRequestsFilter };
+}(utils_1.SpeakeasyBase));
+exports.TimeOffRequestsFilter = TimeOffRequestsFilter;

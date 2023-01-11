@@ -1,52 +1,53 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum ListTypeEnum {
-    Droplet = "droplet"
-,    Kubernetes = "kubernetes"
+    Droplet = "droplet",
+    Kubernetes = "kubernetes"
 }
 
 
 export class ListQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=type" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" })
   type?: ListTypeEnum;
 }
 
 
-export class ListRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListQueryParams;
-}
-
-
 export class List401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListQueryParams;
+}
+
+
 export class ListResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  list200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  list200ApplicationJSONAny?: any;
 
-  @Metadata()
-  list401ApplicationJsonObject?: List401ApplicationJson;
+  @SpeakeasyMetadata()
+  list401ApplicationJSONObject?: List401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

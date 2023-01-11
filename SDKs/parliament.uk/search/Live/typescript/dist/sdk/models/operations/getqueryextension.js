@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetQueryExtensionExtensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetQueryExtensionResponse = exports.GetQueryExtensionRequest = exports.GetQueryExtensionQueryParams = exports.GetQueryExtensionPathParams = exports.GetQueryExtensionExtensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetQueryExtensionExtensionEnum;
 (function (GetQueryExtensionExtensionEnum) {
     GetQueryExtensionExtensionEnum["Atom"] = "atom";
     GetQueryExtensionExtensionEnum["Rss"] = "rss";
     GetQueryExtensionExtensionEnum["Html"] = "html";
     GetQueryExtensionExtensionEnum["Json"] = "json";
-})(GetQueryExtensionExtensionEnum || (GetQueryExtensionExtensionEnum = {}));
+})(GetQueryExtensionExtensionEnum = exports.GetQueryExtensionExtensionEnum || (exports.GetQueryExtensionExtensionEnum = {}));
 var GetQueryExtensionPathParams = /** @class */ (function (_super) {
     __extends(GetQueryExtensionPathParams, _super);
     function GetQueryExtensionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=extension" }),
         __metadata("design:type", String)
     ], GetQueryExtensionPathParams.prototype, "extension", void 0);
     return GetQueryExtensionPathParams;
-}(SpeakeasyBase));
-export { GetQueryExtensionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryExtensionPathParams = GetQueryExtensionPathParams;
 var GetQueryExtensionQueryParams = /** @class */ (function (_super) {
     __extends(GetQueryExtensionQueryParams, _super);
     function GetQueryExtensionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=count" }),
         __metadata("design:type", Number)
     ], GetQueryExtensionQueryParams.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=inUrlPrefixes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=inUrlPrefixes" }),
         __metadata("design:type", String)
     ], GetQueryExtensionQueryParams.prototype, "inUrlPrefixes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], GetQueryExtensionQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", Number)
     ], GetQueryExtensionQueryParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subdomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=subdomains" }),
         __metadata("design:type", String)
     ], GetQueryExtensionQueryParams.prototype, "subdomains", void 0);
     return GetQueryExtensionQueryParams;
-}(SpeakeasyBase));
-export { GetQueryExtensionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryExtensionQueryParams = GetQueryExtensionQueryParams;
 var GetQueryExtensionRequest = /** @class */ (function (_super) {
     __extends(GetQueryExtensionRequest, _super);
     function GetQueryExtensionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQueryExtensionPathParams)
     ], GetQueryExtensionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQueryExtensionQueryParams)
     ], GetQueryExtensionRequest.prototype, "queryParams", void 0);
     return GetQueryExtensionRequest;
-}(SpeakeasyBase));
-export { GetQueryExtensionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryExtensionRequest = GetQueryExtensionRequest;
 var GetQueryExtensionResponse = /** @class */ (function (_super) {
     __extends(GetQueryExtensionResponse, _super);
     function GetQueryExtensionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetQueryExtensionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetQueryExtensionResponse.prototype, "statusCode", void 0);
     return GetQueryExtensionResponse;
-}(SpeakeasyBase));
-export { GetQueryExtensionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetQueryExtensionResponse = GetQueryExtensionResponse;

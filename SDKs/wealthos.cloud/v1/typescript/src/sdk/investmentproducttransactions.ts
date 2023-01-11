@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -47,18 +46,18 @@ export class InvestmentProductTransactions {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -66,49 +65,48 @@ export class InvestmentProductTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction200ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction400ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction401ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction403ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction404ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction409ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction429ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeBuyTrasaction500ApplicationJsonAny = httpRes?.data;
+                res.executeBuyTrasaction500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -139,18 +137,18 @@ export class InvestmentProductTransactions {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -158,49 +156,48 @@ export class InvestmentProductTransactions {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction200ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction400ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction401ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction403ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction404ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction409ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction429ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.executeSellTrasaction500ApplicationJsonAny = httpRes?.data;
+                res.executeSellTrasaction500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

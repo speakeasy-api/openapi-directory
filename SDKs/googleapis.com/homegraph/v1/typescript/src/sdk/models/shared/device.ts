@@ -11,10 +11,10 @@ import { AgentOtherDeviceId } from "./agentotherdeviceid";
 **/
 export class Device extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=customData" })
-  customData?: Map<string, any>;
+  customData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=deviceInfo" })
   deviceInfo?: DeviceInfo;

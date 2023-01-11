@@ -37,5 +37,5 @@ export class CreateNetworkMqttBrokerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkMqttBroker201ApplicationJsonObject?: Map<string, any>;
+  createNetworkMqttBroker201ApplicationJSONObject?: Record<string, any>;
 }

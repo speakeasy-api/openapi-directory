@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessPoliciesStatus } from "./accesspoliciesstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeServiceAccessPoliciesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesspoliciesstatus_1 = require("./accesspoliciesstatus");
 // DescribeServiceAccessPoliciesResponse
 /**
  * A response message that contains the access policies for a domain.
@@ -34,9 +37,9 @@ var DescribeServiceAccessPoliciesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AccessPoliciesStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", accesspoliciesstatus_1.AccessPoliciesStatus)
     ], DescribeServiceAccessPoliciesResponse.prototype, "accessPolicies", void 0);
     return DescribeServiceAccessPoliciesResponse;
-}(SpeakeasyBase));
-export { DescribeServiceAccessPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeServiceAccessPoliciesResponse = DescribeServiceAccessPoliciesResponse;

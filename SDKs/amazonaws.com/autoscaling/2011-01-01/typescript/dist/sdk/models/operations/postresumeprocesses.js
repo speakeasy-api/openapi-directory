@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostResumeProcessesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostResumeProcessesResponse = exports.PostResumeProcessesRequest = exports.PostResumeProcessesHeaders = exports.PostResumeProcessesQueryParams = exports.PostResumeProcessesVersionEnum = exports.PostResumeProcessesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostResumeProcessesActionEnum;
 (function (PostResumeProcessesActionEnum) {
     PostResumeProcessesActionEnum["ResumeProcesses"] = "ResumeProcesses";
-})(PostResumeProcessesActionEnum || (PostResumeProcessesActionEnum = {}));
-export var PostResumeProcessesVersionEnum;
+})(PostResumeProcessesActionEnum = exports.PostResumeProcessesActionEnum || (exports.PostResumeProcessesActionEnum = {}));
+var PostResumeProcessesVersionEnum;
 (function (PostResumeProcessesVersionEnum) {
     PostResumeProcessesVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostResumeProcessesVersionEnum || (PostResumeProcessesVersionEnum = {}));
+})(PostResumeProcessesVersionEnum = exports.PostResumeProcessesVersionEnum || (exports.PostResumeProcessesVersionEnum = {}));
 var PostResumeProcessesQueryParams = /** @class */ (function (_super) {
     __extends(PostResumeProcessesQueryParams, _super);
     function PostResumeProcessesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostResumeProcessesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostResumeProcessesQueryParams.prototype, "version", void 0);
     return PostResumeProcessesQueryParams;
-}(SpeakeasyBase));
-export { PostResumeProcessesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostResumeProcessesQueryParams = PostResumeProcessesQueryParams;
 var PostResumeProcessesHeaders = /** @class */ (function (_super) {
     __extends(PostResumeProcessesHeaders, _super);
     function PostResumeProcessesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostResumeProcessesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostResumeProcessesHeaders;
-}(SpeakeasyBase));
-export { PostResumeProcessesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostResumeProcessesHeaders = PostResumeProcessesHeaders;
 var PostResumeProcessesRequest = /** @class */ (function (_super) {
     __extends(PostResumeProcessesRequest, _super);
     function PostResumeProcessesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostResumeProcessesQueryParams)
     ], PostResumeProcessesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostResumeProcessesHeaders)
     ], PostResumeProcessesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostResumeProcessesRequest.prototype, "request", void 0);
     return PostResumeProcessesRequest;
-}(SpeakeasyBase));
-export { PostResumeProcessesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostResumeProcessesRequest = PostResumeProcessesRequest;
 var PostResumeProcessesResponse = /** @class */ (function (_super) {
     __extends(PostResumeProcessesResponse, _super);
     function PostResumeProcessesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostResumeProcessesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostResumeProcessesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostResumeProcessesResponse.prototype, "statusCode", void 0);
     return PostResumeProcessesResponse;
-}(SpeakeasyBase));
-export { PostResumeProcessesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostResumeProcessesResponse = PostResumeProcessesResponse;

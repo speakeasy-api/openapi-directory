@@ -10,7 +10,7 @@ export declare class OauthAuthorizationsListGrantsRequest extends SpeakeasyBase 
 }
 export declare class OauthAuthorizationsListGrantsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     applicationGrants?: shared.ApplicationGrant[];
     basicError?: shared.BasicError;

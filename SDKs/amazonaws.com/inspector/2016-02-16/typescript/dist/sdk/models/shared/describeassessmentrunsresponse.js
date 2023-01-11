@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssessmentRun } from "./assessmentrun";
-import { FailedItemDetails } from "./faileditemdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAssessmentRunsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assessmentrun_1 = require("./assessmentrun");
+var faileditemdetails_1 = require("./faileditemdetails");
 var DescribeAssessmentRunsResponse = /** @class */ (function (_super) {
     __extends(DescribeAssessmentRunsResponse, _super);
     function DescribeAssessmentRunsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRuns", elemType: AssessmentRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRuns", elemType: assessmentrun_1.AssessmentRun }),
         __metadata("design:type", Array)
     ], DescribeAssessmentRunsResponse.prototype, "assessmentRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedItems", elemType: faileditemdetails_1.FailedItemDetails }),
+        __metadata("design:type", Object)
     ], DescribeAssessmentRunsResponse.prototype, "failedItems", void 0);
     return DescribeAssessmentRunsResponse;
-}(SpeakeasyBase));
-export { DescribeAssessmentRunsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAssessmentRunsResponse = DescribeAssessmentRunsResponse;

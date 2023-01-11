@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkInsightApplicationHealthByTimeResponse = exports.GetNetworkInsightApplicationHealthByTimeRequest = exports.GetNetworkInsightApplicationHealthByTimeQueryParams = exports.GetNetworkInsightApplicationHealthByTimePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkInsightApplicationHealthByTimePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkInsightApplicationHealthByTimePathParams, _super);
     function GetNetworkInsightApplicationHealthByTimePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
         __metadata("design:type", String)
     ], GetNetworkInsightApplicationHealthByTimePathParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkInsightApplicationHealthByTimePathParams.prototype, "networkId", void 0);
     return GetNetworkInsightApplicationHealthByTimePathParams;
-}(SpeakeasyBase));
-export { GetNetworkInsightApplicationHealthByTimePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkInsightApplicationHealthByTimePathParams = GetNetworkInsightApplicationHealthByTimePathParams;
 var GetNetworkInsightApplicationHealthByTimeQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkInsightApplicationHealthByTimeQueryParams, _super);
     function GetNetworkInsightApplicationHealthByTimeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resolution" }),
         __metadata("design:type", Number)
     ], GetNetworkInsightApplicationHealthByTimeQueryParams.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkInsightApplicationHealthByTimeQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetNetworkInsightApplicationHealthByTimeQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkInsightApplicationHealthByTimeQueryParams.prototype, "timespan", void 0);
     return GetNetworkInsightApplicationHealthByTimeQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkInsightApplicationHealthByTimeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkInsightApplicationHealthByTimeQueryParams = GetNetworkInsightApplicationHealthByTimeQueryParams;
 var GetNetworkInsightApplicationHealthByTimeRequest = /** @class */ (function (_super) {
     __extends(GetNetworkInsightApplicationHealthByTimeRequest, _super);
     function GetNetworkInsightApplicationHealthByTimeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkInsightApplicationHealthByTimePathParams)
     ], GetNetworkInsightApplicationHealthByTimeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkInsightApplicationHealthByTimeQueryParams)
     ], GetNetworkInsightApplicationHealthByTimeRequest.prototype, "queryParams", void 0);
     return GetNetworkInsightApplicationHealthByTimeRequest;
-}(SpeakeasyBase));
-export { GetNetworkInsightApplicationHealthByTimeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkInsightApplicationHealthByTimeRequest = GetNetworkInsightApplicationHealthByTimeRequest;
 var GetNetworkInsightApplicationHealthByTimeResponse = /** @class */ (function (_super) {
     __extends(GetNetworkInsightApplicationHealthByTimeResponse, _super);
     function GetNetworkInsightApplicationHealthByTimeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkInsightApplicationHealthByTimeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkInsightApplicationHealthByTimeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkInsightApplicationHealthByTimeResponse.prototype, "getNetworkInsightApplicationHealthByTime200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkInsightApplicationHealthByTimeResponse.prototype, "getNetworkInsightApplicationHealthByTime200ApplicationJSONObject", void 0);
     return GetNetworkInsightApplicationHealthByTimeResponse;
-}(SpeakeasyBase));
-export { GetNetworkInsightApplicationHealthByTimeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkInsightApplicationHealthByTimeResponse = GetNetworkInsightApplicationHealthByTimeResponse;

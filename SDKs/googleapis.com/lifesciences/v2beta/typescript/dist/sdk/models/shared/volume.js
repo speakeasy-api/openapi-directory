@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExistingDisk } from "./existingdisk";
-import { NfsMount } from "./nfsmount";
-import { PersistentDisk } from "./persistentdisk";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
+var existingdisk_1 = require("./existingdisk");
+var nfsmount_1 = require("./nfsmount");
+var persistentdisk_1 = require("./persistentdisk");
 // Volume
 /**
  * Carries information about storage that can be attached to a VM. Specify either `Volume` or `Disk`, but not both.
@@ -36,21 +39,21 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=existingDisk" }),
-        __metadata("design:type", ExistingDisk)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=existingDisk" }),
+        __metadata("design:type", existingdisk_1.ExistingDisk)
     ], Volume.prototype, "existingDisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfsMount" }),
-        __metadata("design:type", NfsMount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfsMount" }),
+        __metadata("design:type", nfsmount_1.NfsMount)
     ], Volume.prototype, "nfsMount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistentDisk" }),
-        __metadata("design:type", PersistentDisk)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistentDisk" }),
+        __metadata("design:type", persistentdisk_1.PersistentDisk)
     ], Volume.prototype, "persistentDisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", String)
     ], Volume.prototype, "volume", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

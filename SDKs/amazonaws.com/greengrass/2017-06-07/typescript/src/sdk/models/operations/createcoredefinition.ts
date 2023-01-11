@@ -48,7 +48,7 @@ export class CreateCoreDefinitionRequestBody extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

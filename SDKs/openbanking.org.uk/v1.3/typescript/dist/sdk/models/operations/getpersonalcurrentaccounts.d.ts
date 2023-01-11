@@ -106,7 +106,7 @@ export declare enum GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpenda
 **/
 export declare class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail extends SpeakeasyBase {
     benefitDescription?: string;
-    benefitId?: string;
+    benefitID?: string;
     benefitName?: string;
     benefitType?: string;
     benefitValue?: string;
@@ -874,8 +874,8 @@ export declare enum GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpenda
  * Brand
 **/
 export declare class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand extends SpeakeasyBase {
-    trademarkId: string;
-    trademarkIpoCode: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+    trademarkID: string;
+    trademarkIPOCode: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 }
 /**
  * Organisation Name
@@ -1262,9 +1262,9 @@ export declare class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpend
     contactless: boolean;
     creditInterest: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest;
     creditScoringPartOfAccountOpeningForGettingAnAccount: boolean;
-    creditScoringPartOfAccountOpeningForIdVerification?: boolean;
-    creditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScore?: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum[];
-    creditScoringPartOfAccountOpeningIdVerificationText?: string[];
+    creditScoringPartOfAccountOpeningForIDVerification?: boolean;
+    creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore?: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum[];
+    creditScoringPartOfAccountOpeningIDVerificationText?: string[];
     creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore?: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum[];
     creditScoringPartOfAccountOpeningText?: string;
     currency: string[];
@@ -1282,7 +1282,7 @@ export declare class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpend
     productName?: string;
     productSegment: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[];
     productType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum;
-    productUrl: string[];
+    productURL: string[];
     tsandCs: string[];
 }
 export declare enum GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum {
@@ -1316,7 +1316,7 @@ export declare class GetPersonalCurrentAccountsResponse extends SpeakeasyBase {
     fiveHundredAndThreeErrorObject?: GetPersonalCurrentAccounts503ErrorObject;
     contentType: string;
     errorObject?: GetPersonalCurrentAccountsErrorObject;
-    getPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

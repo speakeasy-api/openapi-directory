@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class AccountUpdatePrefsRequestBody extends SpeakeasyBase {
-    prefs: Map<string, any>;
+    prefs: Record<string, any>;
 }
 export declare class AccountUpdatePrefsSecurity extends SpeakeasyBase {
     jwt: shared.SchemeJwt;

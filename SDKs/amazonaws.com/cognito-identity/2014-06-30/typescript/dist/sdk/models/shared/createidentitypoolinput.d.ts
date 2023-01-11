@@ -9,8 +9,8 @@ export declare class CreateIdentityPoolInput extends SpeakeasyBase {
     cognitoIdentityProviders?: CognitoIdentityProvider[];
     developerProviderName?: string;
     identityPoolName: string;
-    identityPoolTags?: Map<string, string>;
-    openIdConnectProviderArNs?: string[];
-    samlProviderArNs?: string[];
-    supportedLoginProviders?: Map<string, string>;
+    identityPoolTags?: Record<string, string>;
+    openIdConnectProviderARNs?: string[];
+    samlProviderARNs?: string[];
+    supportedLoginProviders?: Record<string, string>;
 }

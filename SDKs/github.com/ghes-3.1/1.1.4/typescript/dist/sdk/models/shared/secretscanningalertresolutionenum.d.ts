@@ -1,4 +1,5 @@
 export declare enum SecretScanningAlertResolutionEnum {
+    Null = "null",
     FalsePositive = "false_positive",
     WontFix = "wont_fix",
     Revoked = "revoked",

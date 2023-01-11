@@ -7,7 +7,7 @@ export class Geofence extends SpeakeasyBase {
   area?: string;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=calendarId" })
   calendarId?: number;

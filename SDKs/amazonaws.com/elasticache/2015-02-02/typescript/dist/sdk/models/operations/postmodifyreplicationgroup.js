@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyReplicationGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyReplicationGroupResponse = exports.PostModifyReplicationGroupRequest = exports.PostModifyReplicationGroupHeaders = exports.PostModifyReplicationGroupQueryParams = exports.PostModifyReplicationGroupVersionEnum = exports.PostModifyReplicationGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyReplicationGroupActionEnum;
 (function (PostModifyReplicationGroupActionEnum) {
     PostModifyReplicationGroupActionEnum["ModifyReplicationGroup"] = "ModifyReplicationGroup";
-})(PostModifyReplicationGroupActionEnum || (PostModifyReplicationGroupActionEnum = {}));
-export var PostModifyReplicationGroupVersionEnum;
+})(PostModifyReplicationGroupActionEnum = exports.PostModifyReplicationGroupActionEnum || (exports.PostModifyReplicationGroupActionEnum = {}));
+var PostModifyReplicationGroupVersionEnum;
 (function (PostModifyReplicationGroupVersionEnum) {
     PostModifyReplicationGroupVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostModifyReplicationGroupVersionEnum || (PostModifyReplicationGroupVersionEnum = {}));
+})(PostModifyReplicationGroupVersionEnum = exports.PostModifyReplicationGroupVersionEnum || (exports.PostModifyReplicationGroupVersionEnum = {}));
 var PostModifyReplicationGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyReplicationGroupQueryParams, _super);
     function PostModifyReplicationGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupQueryParams.prototype, "version", void 0);
     return PostModifyReplicationGroupQueryParams;
-}(SpeakeasyBase));
-export { PostModifyReplicationGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyReplicationGroupQueryParams = PostModifyReplicationGroupQueryParams;
 var PostModifyReplicationGroupHeaders = /** @class */ (function (_super) {
     __extends(PostModifyReplicationGroupHeaders, _super);
     function PostModifyReplicationGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyReplicationGroupHeaders;
-}(SpeakeasyBase));
-export { PostModifyReplicationGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyReplicationGroupHeaders = PostModifyReplicationGroupHeaders;
 var PostModifyReplicationGroupRequest = /** @class */ (function (_super) {
     __extends(PostModifyReplicationGroupRequest, _super);
     function PostModifyReplicationGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyReplicationGroupQueryParams)
     ], PostModifyReplicationGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyReplicationGroupHeaders)
     ], PostModifyReplicationGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyReplicationGroupRequest.prototype, "request", void 0);
     return PostModifyReplicationGroupRequest;
-}(SpeakeasyBase));
-export { PostModifyReplicationGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyReplicationGroupRequest = PostModifyReplicationGroupRequest;
 var PostModifyReplicationGroupResponse = /** @class */ (function (_super) {
     __extends(PostModifyReplicationGroupResponse, _super);
     function PostModifyReplicationGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyReplicationGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyReplicationGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyReplicationGroupResponse.prototype, "statusCode", void 0);
     return PostModifyReplicationGroupResponse;
-}(SpeakeasyBase));
-export { PostModifyReplicationGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyReplicationGroupResponse = PostModifyReplicationGroupResponse;

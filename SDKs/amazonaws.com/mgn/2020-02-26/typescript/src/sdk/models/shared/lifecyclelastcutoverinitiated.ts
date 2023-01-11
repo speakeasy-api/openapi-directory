@@ -11,5 +11,5 @@ export class LifeCycleLastCutoverInitiated extends SpeakeasyBase {
   apiCallDateTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId?: string;
+  jobID?: string;
 }

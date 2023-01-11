@@ -3,6 +3,10 @@ import { AsanaNamedResource } from "./asananamedresource";
 
 
 
+// WebhookResponseFilters
+/** 
+ * A set of filters to specify a whitelist for what types of events will be delivered.
+**/
 export class WebhookResponseFilters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=action" })
   action?: string;
@@ -18,6 +22,10 @@ export class WebhookResponseFilters extends SpeakeasyBase {
 }
 
 
+// WebhookResponse
+/** 
+ * Webhook objects represent the state of an active subscription for a server to be updated with information from Asana. This schema represents the subscription itself, not the objects that are sent to the server. For information on those please refer to the [Event](/docs/tocS_Event) schema.
+**/
 export class WebhookResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=active" })
   active?: boolean;

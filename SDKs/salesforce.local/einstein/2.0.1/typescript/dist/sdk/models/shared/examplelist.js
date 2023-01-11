@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Example } from "./example";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExampleList = void 0;
+var utils_1 = require("../../../internal/utils");
+var example_1 = require("./example");
 var ExampleList = /** @class */ (function (_super) {
     __extends(ExampleList, _super);
     function ExampleList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Example }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: example_1.Example }),
         __metadata("design:type", Array)
     ], ExampleList.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], ExampleList.prototype, "object", void 0);
     return ExampleList;
-}(SpeakeasyBase));
-export { ExampleList };
+}(utils_1.SpeakeasyBase));
+exports.ExampleList = ExampleList;

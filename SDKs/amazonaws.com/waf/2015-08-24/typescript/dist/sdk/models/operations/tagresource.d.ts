@@ -20,7 +20,7 @@ export declare class TagResourceRequest extends SpeakeasyBase {
 export declare class TagResourceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     wafBadRequestException?: any;
     wafInternalErrorException?: any;
     wafInvalidParameterException?: any;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetPersonasRequest, GetPersonasResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     httpBearer: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
@@ -34,17 +33,16 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetPersonasRequest = {
   queryParams: {
-    count: 5306988050669204383,
+    count: 8717895732742165505,
     expand: [
-      "quo",
-      "dicta",
+      "culpa",
     ],
     fields: [
-      "omnis",
-      "fugit",
+      "consequuntur",
+      "dolor",
     ],
-    name: "eos",
-    page: 7149139835524661956,
+    name: "expedita",
+    page: 6044372234677422456,
   },
 };
 

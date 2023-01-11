@@ -22,5 +22,5 @@ export class ProtocolWebGetStatisticsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolWebGetStatistics200ApplicationJsonInt32Integers?: number[];
+  protocolWebGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

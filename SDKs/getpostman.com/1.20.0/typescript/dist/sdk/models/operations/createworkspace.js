@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,208 +23,210 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWorkspaceResponse = exports.CreateWorkspaceRequest = exports.CreateWorkspace400ApplicationJson = exports.CreateWorkspace400ApplicationJsonError = exports.CreateWorkspace200ApplicationJson = exports.CreateWorkspace200ApplicationJsonWorkspace = exports.CreateWorkspaceRequestBody = exports.CreateWorkspaceRequestBodyWorkspace = exports.CreateWorkspaceRequestBodyWorkspaceMonitors = exports.CreateWorkspaceRequestBodyWorkspaceMocks = exports.CreateWorkspaceRequestBodyWorkspaceEnvironments = exports.CreateWorkspaceRequestBodyWorkspaceCollections = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateWorkspaceRequestBodyWorkspaceCollections = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBodyWorkspaceCollections, _super);
     function CreateWorkspaceRequestBodyWorkspaceCollections() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceCollections.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceCollections.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceCollections.prototype, "uid", void 0);
     return CreateWorkspaceRequestBodyWorkspaceCollections;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBodyWorkspaceCollections };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBodyWorkspaceCollections = CreateWorkspaceRequestBodyWorkspaceCollections;
 var CreateWorkspaceRequestBodyWorkspaceEnvironments = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBodyWorkspaceEnvironments, _super);
     function CreateWorkspaceRequestBodyWorkspaceEnvironments() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceEnvironments.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceEnvironments.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceEnvironments.prototype, "uid", void 0);
     return CreateWorkspaceRequestBodyWorkspaceEnvironments;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBodyWorkspaceEnvironments };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBodyWorkspaceEnvironments = CreateWorkspaceRequestBodyWorkspaceEnvironments;
 var CreateWorkspaceRequestBodyWorkspaceMocks = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBodyWorkspaceMocks, _super);
     function CreateWorkspaceRequestBodyWorkspaceMocks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceMocks.prototype, "id", void 0);
     return CreateWorkspaceRequestBodyWorkspaceMocks;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBodyWorkspaceMocks };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBodyWorkspaceMocks = CreateWorkspaceRequestBodyWorkspaceMocks;
 var CreateWorkspaceRequestBodyWorkspaceMonitors = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBodyWorkspaceMonitors, _super);
     function CreateWorkspaceRequestBodyWorkspaceMonitors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspaceMonitors.prototype, "id", void 0);
     return CreateWorkspaceRequestBodyWorkspaceMonitors;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBodyWorkspaceMonitors };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBodyWorkspaceMonitors = CreateWorkspaceRequestBodyWorkspaceMonitors;
 var CreateWorkspaceRequestBodyWorkspace = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBodyWorkspace, _super);
     function CreateWorkspaceRequestBodyWorkspace() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collections", elemType: CreateWorkspaceRequestBodyWorkspaceCollections }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collections", elemType: CreateWorkspaceRequestBodyWorkspaceCollections }),
         __metadata("design:type", Array)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "collections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environments", elemType: CreateWorkspaceRequestBodyWorkspaceEnvironments }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environments", elemType: CreateWorkspaceRequestBodyWorkspaceEnvironments }),
         __metadata("design:type", Array)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "environments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mocks", elemType: CreateWorkspaceRequestBodyWorkspaceMocks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mocks", elemType: CreateWorkspaceRequestBodyWorkspaceMocks }),
         __metadata("design:type", Array)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "mocks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitors", elemType: CreateWorkspaceRequestBodyWorkspaceMonitors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitors", elemType: CreateWorkspaceRequestBodyWorkspaceMonitors }),
         __metadata("design:type", Array)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "monitors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreateWorkspaceRequestBodyWorkspace.prototype, "type", void 0);
     return CreateWorkspaceRequestBodyWorkspace;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBodyWorkspace };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBodyWorkspace = CreateWorkspaceRequestBodyWorkspace;
 var CreateWorkspaceRequestBody = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequestBody, _super);
     function CreateWorkspaceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", CreateWorkspaceRequestBodyWorkspace)
     ], CreateWorkspaceRequestBody.prototype, "workspace", void 0);
     return CreateWorkspaceRequestBody;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequestBody = CreateWorkspaceRequestBody;
 var CreateWorkspace200ApplicationJsonWorkspace = /** @class */ (function (_super) {
     __extends(CreateWorkspace200ApplicationJsonWorkspace, _super);
     function CreateWorkspace200ApplicationJsonWorkspace() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateWorkspace200ApplicationJsonWorkspace.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWorkspace200ApplicationJsonWorkspace.prototype, "name", void 0);
     return CreateWorkspace200ApplicationJsonWorkspace;
-}(SpeakeasyBase));
-export { CreateWorkspace200ApplicationJsonWorkspace };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspace200ApplicationJsonWorkspace = CreateWorkspace200ApplicationJsonWorkspace;
 var CreateWorkspace200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateWorkspace200ApplicationJson, _super);
     function CreateWorkspace200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", CreateWorkspace200ApplicationJsonWorkspace)
     ], CreateWorkspace200ApplicationJson.prototype, "workspace", void 0);
     return CreateWorkspace200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateWorkspace200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspace200ApplicationJson = CreateWorkspace200ApplicationJson;
 var CreateWorkspace400ApplicationJsonError = /** @class */ (function (_super) {
     __extends(CreateWorkspace400ApplicationJsonError, _super);
     function CreateWorkspace400ApplicationJsonError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateWorkspace400ApplicationJsonError.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWorkspace400ApplicationJsonError.prototype, "name", void 0);
     return CreateWorkspace400ApplicationJsonError;
-}(SpeakeasyBase));
-export { CreateWorkspace400ApplicationJsonError };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspace400ApplicationJsonError = CreateWorkspace400ApplicationJsonError;
 var CreateWorkspace400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateWorkspace400ApplicationJson, _super);
     function CreateWorkspace400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", CreateWorkspace400ApplicationJsonError)
     ], CreateWorkspace400ApplicationJson.prototype, "error", void 0);
     return CreateWorkspace400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateWorkspace400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspace400ApplicationJson = CreateWorkspace400ApplicationJson;
 var CreateWorkspaceRequest = /** @class */ (function (_super) {
     __extends(CreateWorkspaceRequest, _super);
     function CreateWorkspaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateWorkspaceRequestBody)
     ], CreateWorkspaceRequest.prototype, "request", void 0);
     return CreateWorkspaceRequest;
-}(SpeakeasyBase));
-export { CreateWorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceRequest = CreateWorkspaceRequest;
 var CreateWorkspaceResponse = /** @class */ (function (_super) {
     __extends(CreateWorkspaceResponse, _super);
     function CreateWorkspaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateWorkspaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateWorkspaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateWorkspace200ApplicationJson)
-    ], CreateWorkspaceResponse.prototype, "createWorkspace200ApplicationJsonObject", void 0);
+    ], CreateWorkspaceResponse.prototype, "createWorkspace200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateWorkspace400ApplicationJson)
-    ], CreateWorkspaceResponse.prototype, "createWorkspace400ApplicationJsonObject", void 0);
+    ], CreateWorkspaceResponse.prototype, "createWorkspace400ApplicationJSONObject", void 0);
     return CreateWorkspaceResponse;
-}(SpeakeasyBase));
-export { CreateWorkspaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkspaceResponse = CreateWorkspaceResponse;

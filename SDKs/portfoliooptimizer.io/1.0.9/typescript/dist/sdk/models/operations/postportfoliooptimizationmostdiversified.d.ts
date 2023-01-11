@@ -21,6 +21,6 @@ export declare class PostPortfolioOptimizationMostDiversifiedRequest extends Spe
 }
 export declare class PostPortfolioOptimizationMostDiversifiedResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMostDiversified200ApplicationJsonObject?: PostPortfolioOptimizationMostDiversified200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMostDiversified200ApplicationJSONObject?: PostPortfolioOptimizationMostDiversified200ApplicationJson;
 }

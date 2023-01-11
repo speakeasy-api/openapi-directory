@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeResource } from "./computeresource";
-import { Environment } from "./environment";
-import { LifecyclePolicy } from "./lifecyclepolicy";
-import { Runnable } from "./runnable";
-import { Volume } from "./volume";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeresource_1 = require("./computeresource");
+var environment_1 = require("./environment");
+var lifecyclepolicy_1 = require("./lifecyclepolicy");
+var runnable_1 = require("./runnable");
+var volume_1 = require("./volume");
 // TaskSpec
 /**
  * Spec of a task
@@ -38,37 +41,37 @@ var TaskSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeResource" }),
-        __metadata("design:type", ComputeResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeResource" }),
+        __metadata("design:type", computeresource_1.ComputeResource)
     ], TaskSpec.prototype, "computeResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Environment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environment_1.Environment)
     ], TaskSpec.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environments" }),
+        __metadata("design:type", Object)
     ], TaskSpec.prototype, "environments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecyclePolicies", elemType: LifecyclePolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecyclePolicies", elemType: lifecyclepolicy_1.LifecyclePolicy }),
         __metadata("design:type", Array)
     ], TaskSpec.prototype, "lifecyclePolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxRetryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxRetryCount" }),
         __metadata("design:type", Number)
     ], TaskSpec.prototype, "maxRetryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxRunDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxRunDuration" }),
         __metadata("design:type", String)
     ], TaskSpec.prototype, "maxRunDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runnables", elemType: Runnable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runnables", elemType: runnable_1.Runnable }),
         __metadata("design:type", Array)
     ], TaskSpec.prototype, "runnables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volume_1.Volume }),
         __metadata("design:type", Array)
     ], TaskSpec.prototype, "volumes", void 0);
     return TaskSpec;
-}(SpeakeasyBase));
-export { TaskSpec };
+}(utils_1.SpeakeasyBase));
+exports.TaskSpec = TaskSpec;

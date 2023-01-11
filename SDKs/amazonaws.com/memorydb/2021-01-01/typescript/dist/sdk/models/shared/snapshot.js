@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterConfiguration } from "./clusterconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Snapshot = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterconfiguration_1 = require("./clusterconfiguration");
 // Snapshot
 /**
  * Represents a copy of an entire cluster as of the time when the snapshot was taken.
@@ -34,29 +37,29 @@ var Snapshot = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ARN" }),
         __metadata("design:type", String)
     ], Snapshot.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterConfiguration" }),
-        __metadata("design:type", ClusterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterConfiguration" }),
+        __metadata("design:type", clusterconfiguration_1.ClusterConfiguration)
     ], Snapshot.prototype, "clusterConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], Snapshot.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Snapshot.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
         __metadata("design:type", String)
     ], Snapshot.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Snapshot.prototype, "status", void 0);
     return Snapshot;
-}(SpeakeasyBase));
-export { Snapshot };
+}(utils_1.SpeakeasyBase));
+exports.Snapshot = Snapshot;

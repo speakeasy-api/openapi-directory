@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetPathwayFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetPathwayResponse = exports.GetGetPathwayRequest = exports.GetGetPathwayQueryParams = exports.GetGetPathwayFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetPathwayFormatEnum;
 (function (GetGetPathwayFormatEnum) {
     GetGetPathwayFormatEnum["Json"] = "json";
     GetGetPathwayFormatEnum["Xml"] = "xml";
@@ -31,52 +34,52 @@ export var GetGetPathwayFormatEnum;
     GetGetPathwayFormatEnum["Dump"] = "dump";
     GetGetPathwayFormatEnum["Jpg"] = "jpg";
     GetGetPathwayFormatEnum["Pdf"] = "pdf";
-})(GetGetPathwayFormatEnum || (GetGetPathwayFormatEnum = {}));
+})(GetGetPathwayFormatEnum = exports.GetGetPathwayFormatEnum || (exports.GetGetPathwayFormatEnum = {}));
 var GetGetPathwayQueryParams = /** @class */ (function (_super) {
     __extends(GetGetPathwayQueryParams, _super);
     function GetGetPathwayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetGetPathwayQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pwId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pwId" }),
         __metadata("design:type", String)
     ], GetGetPathwayQueryParams.prototype, "pwId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=revision" }),
         __metadata("design:type", Number)
     ], GetGetPathwayQueryParams.prototype, "revision", void 0);
     return GetGetPathwayQueryParams;
-}(SpeakeasyBase));
-export { GetGetPathwayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPathwayQueryParams = GetGetPathwayQueryParams;
 var GetGetPathwayRequest = /** @class */ (function (_super) {
     __extends(GetGetPathwayRequest, _super);
     function GetGetPathwayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetPathwayQueryParams)
     ], GetGetPathwayRequest.prototype, "queryParams", void 0);
     return GetGetPathwayRequest;
-}(SpeakeasyBase));
-export { GetGetPathwayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPathwayRequest = GetGetPathwayRequest;
 var GetGetPathwayResponse = /** @class */ (function (_super) {
     __extends(GetGetPathwayResponse, _super);
     function GetGetPathwayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetPathwayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetPathwayResponse.prototype, "statusCode", void 0);
     return GetGetPathwayResponse;
-}(SpeakeasyBase));
-export { GetGetPathwayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPathwayResponse = GetGetPathwayResponse;

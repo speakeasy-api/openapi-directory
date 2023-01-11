@@ -103,7 +103,7 @@ export class StorageObjectsInsertResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: shared.Object;
+  object?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   statusCode: number;

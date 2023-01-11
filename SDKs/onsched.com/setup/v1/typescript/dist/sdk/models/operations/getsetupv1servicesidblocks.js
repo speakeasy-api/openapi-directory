@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1ServicesIdBlocksResponse = exports.GetSetupV1ServicesIdBlocksRequest = exports.GetSetupV1ServicesIdBlocksQueryParams = exports.GetSetupV1ServicesIdBlocksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1ServicesIdBlocksPathParams = /** @class */ (function (_super) {
     __extends(GetSetupV1ServicesIdBlocksPathParams, _super);
     function GetSetupV1ServicesIdBlocksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetSetupV1ServicesIdBlocksPathParams.prototype, "id", void 0);
     return GetSetupV1ServicesIdBlocksPathParams;
-}(SpeakeasyBase));
-export { GetSetupV1ServicesIdBlocksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ServicesIdBlocksPathParams = GetSetupV1ServicesIdBlocksPathParams;
 var GetSetupV1ServicesIdBlocksQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1ServicesIdBlocksQueryParams, _super);
     function GetSetupV1ServicesIdBlocksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1ServicesIdBlocksQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1ServicesIdBlocksQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1ServicesIdBlocksQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1ServicesIdBlocksQueryParams.prototype, "startDate", void 0);
     return GetSetupV1ServicesIdBlocksQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1ServicesIdBlocksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ServicesIdBlocksQueryParams = GetSetupV1ServicesIdBlocksQueryParams;
 var GetSetupV1ServicesIdBlocksRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1ServicesIdBlocksRequest, _super);
     function GetSetupV1ServicesIdBlocksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1ServicesIdBlocksPathParams)
     ], GetSetupV1ServicesIdBlocksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1ServicesIdBlocksQueryParams)
     ], GetSetupV1ServicesIdBlocksRequest.prototype, "queryParams", void 0);
     return GetSetupV1ServicesIdBlocksRequest;
-}(SpeakeasyBase));
-export { GetSetupV1ServicesIdBlocksRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ServicesIdBlocksRequest = GetSetupV1ServicesIdBlocksRequest;
 var GetSetupV1ServicesIdBlocksResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1ServicesIdBlocksResponse, _super);
     function GetSetupV1ServicesIdBlocksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1ServicesIdBlocksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1ServicesIdBlocksResponse.prototype, "serviceBlockListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1ServicesIdBlocksResponse.prototype, "statusCode", void 0);
     return GetSetupV1ServicesIdBlocksResponse;
-}(SpeakeasyBase));
-export { GetSetupV1ServicesIdBlocksResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ServicesIdBlocksResponse = GetSetupV1ServicesIdBlocksResponse;

@@ -51,7 +51,7 @@ export class DeleteDevicePoolResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDevicePoolResult?: Map<string, any>;
+  deleteDevicePoolResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

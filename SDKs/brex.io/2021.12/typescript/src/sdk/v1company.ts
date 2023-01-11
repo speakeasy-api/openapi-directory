@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,51 +33,50 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/search/{country}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/search/{country}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyAlternativeSearchResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyAlternativeSearch200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyAlternativeSearch200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyAlternativeSearchDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyAlternativeSearchDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -96,36 +94,37 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/announcement/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/announcement/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyAnnouncementResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyAnnouncement200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyAnnouncement200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyAnnouncementDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyAnnouncementDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -148,46 +147,45 @@ export class V1Company {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyDeepsearchIsinResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchIsin200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchISIN200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchIsinDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchISINDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -205,11 +203,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/lei/{number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/deepsearch/lei/{number}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -217,32 +215,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyDeepsearchLeiResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchLei200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchLEI200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchLeiDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchLEIDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -260,36 +259,37 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyDeepsearchNameResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchName200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchName200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchNameDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchNameDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -307,36 +307,37 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyDeepsearchNumberResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchNumber200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchNumber200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyDeepsearchNumberDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyDeepsearchNumberDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -354,11 +355,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/{id}/announcements", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/{id}/announcements", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -366,32 +367,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyIdAnnouncementsResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyIdAnnouncements200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyIdAnnouncements200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyIdAnnouncementsDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyIdAnnouncementsDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -409,11 +411,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/{id}/{dataset}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/{id}/{dataset}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -421,32 +423,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyIdDatasetResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyIdDatasetDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyIdDatasetDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -464,11 +467,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/{id}/super/{country}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/{id}/super/{country}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -476,32 +479,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyIdSuperResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyIdSuper200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyIdSuper200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyIdSuperDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyIdSuperDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -521,34 +525,35 @@ export class V1Company {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/company/monitoring/changeTypes";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyMonitorChangeTypesListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorChangeTypesList200ApplicationJsonStrings = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorChangeTypesList200ApplicationJSONStrings = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorChangeTypesListDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorChangeTypesListDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -566,36 +571,37 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/list/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/monitoring/list/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyMonitorIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorId200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorId200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorIdDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorIdDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -615,34 +621,35 @@ export class V1Company {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/company/monitoring/list";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyMonitorListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorList200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorList200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorListDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorListDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -660,51 +667,50 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/register/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/monitoring/register/{id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyMonitorRegisterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorRegister200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorRegister200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorRegisterDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorRegisterDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -722,16 +728,18 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/monitoring/unregister/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/monitoring/unregister/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -740,15 +748,14 @@ export class V1Company {
           case httpRes?.status == 200:
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyMonitorUnregisterDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyMonitorUnregisterDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -766,36 +773,37 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/notification/list/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/notification/list/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyNotificationIdResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationId200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationId200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationIdDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationIdDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -815,34 +823,35 @@ export class V1Company {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/api/v1/company/notification/list";
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyNotificationListResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationList200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationList200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationListDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationListDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -860,51 +869,50 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/notification/register/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/notification/register/{id}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanyNotificationRegisterResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationRegister200ApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationRegister200ApplicationJSONAny = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationRegisterDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationRegisterDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -922,16 +930,18 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/notification/unregister/{id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/notification/unregister/{id}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -940,15 +950,14 @@ export class V1Company {
           case httpRes?.status == 200:
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companyNotificationUnregisterDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companyNotificationUnregisterDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -966,11 +975,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/search/name/{country}/{name}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/search/name/{country}/{name}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -978,32 +987,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanySearchNameResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companySearchName200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companySearchName200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companySearchNameDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companySearchNameDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1021,11 +1031,11 @@ export class V1Company {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/api/v1/company/search/number/{country}/{number}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/api/v1/company/search/number/{country}/{number}", req.pathParams);
     
-    const client: AxiosInstance = utils.CreateSecurityClient(this._defaultClient!, req.security)!;
+    const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1033,32 +1043,33 @@ export class V1Company {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CompanySearchNumberResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companySearchNumber200ApplicationJsonAnies = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companySearchNumber200ApplicationJSONAnies = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.companySearchNumberDefaultApplicationJsonAny = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.companySearchNumberDefaultApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFunctionEndpoint } from "./cloudfunctionendpoint";
-export var EndpointNetworkTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Endpoint = exports.EndpointNetworkTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appengineversionendpoint_1 = require("./appengineversionendpoint");
+var cloudfunctionendpoint_1 = require("./cloudfunctionendpoint");
+var cloudrunrevisionendpoint_1 = require("./cloudrunrevisionendpoint");
+var EndpointNetworkTypeEnum;
 (function (EndpointNetworkTypeEnum) {
     EndpointNetworkTypeEnum["NetworkTypeUnspecified"] = "NETWORK_TYPE_UNSPECIFIED";
     EndpointNetworkTypeEnum["GcpNetwork"] = "GCP_NETWORK";
     EndpointNetworkTypeEnum["NonGcpNetwork"] = "NON_GCP_NETWORK";
-})(EndpointNetworkTypeEnum || (EndpointNetworkTypeEnum = {}));
+})(EndpointNetworkTypeEnum = exports.EndpointNetworkTypeEnum || (exports.EndpointNetworkTypeEnum = {}));
 // Endpoint
 /**
  * Source or destination of the Connectivity Test.
@@ -40,41 +45,49 @@ var Endpoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudFunction" }),
-        __metadata("design:type", CloudFunctionEndpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineVersion" }),
+        __metadata("design:type", appengineversionendpoint_1.AppEngineVersionEndpoint)
+    ], Endpoint.prototype, "appEngineVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudFunction" }),
+        __metadata("design:type", cloudfunctionendpoint_1.CloudFunctionEndpoint)
     ], Endpoint.prototype, "cloudFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlInstance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudRunRevision" }),
+        __metadata("design:type", cloudrunrevisionendpoint_1.CloudRunRevisionEndpoint)
+    ], Endpoint.prototype, "cloudRunRevision", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlInstance" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "cloudSqlInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeMasterCluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeMasterCluster" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "gkeMasterCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instance" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkType" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "networkType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], Endpoint.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "projectId", void 0);
     return Endpoint;
-}(SpeakeasyBase));
-export { Endpoint };
+}(utils_1.SpeakeasyBase));
+exports.Endpoint = Endpoint;

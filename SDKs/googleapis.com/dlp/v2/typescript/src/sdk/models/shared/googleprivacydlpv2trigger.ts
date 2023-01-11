@@ -9,7 +9,7 @@ import { GooglePrivacyDlpV2Schedule } from "./googleprivacydlpv2schedule";
 **/
 export class GooglePrivacyDlpV2Trigger extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=manual" })
-  manual?: Map<string, any>;
+  manual?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=schedule" })
   schedule?: GooglePrivacyDlpV2Schedule;

@@ -5,12 +5,8 @@ export declare class PullsListReviewCommentsPathParams extends SpeakeasyBase {
     pullNumber: number;
     repo: string;
 }
-export declare enum PullsListReviewCommentsDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
 export declare class PullsListReviewCommentsQueryParams extends SpeakeasyBase {
-    direction?: PullsListReviewCommentsDirectionEnum;
+    direction?: shared.SortEnum1;
     page?: number;
     perPage?: number;
     since?: string;
@@ -22,7 +18,7 @@ export declare class PullsListReviewCommentsRequest extends SpeakeasyBase {
 }
 export declare class PullsListReviewCommentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     pullRequestReviewComments?: shared.PullRequestReviewComment[];
 }

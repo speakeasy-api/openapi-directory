@@ -10,7 +10,7 @@ export declare class AggregateFamily extends SpeakeasyBase {
 }
 export declare class Aggregate extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     dateAdded?: Date;
     description?: string;
     family?: AggregateFamily;

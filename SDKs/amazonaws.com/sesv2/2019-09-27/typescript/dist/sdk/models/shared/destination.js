@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Destination = void 0;
+var utils_1 = require("../../../internal/utils");
 // Destination
 /**
  * An object that describes the recipients for an email.
@@ -33,17 +36,17 @@ var Destination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BccAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BccAddresses" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "bccAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CcAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CcAddresses" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "ccAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ToAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ToAddresses" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "toAddresses", void 0);
     return Destination;
-}(SpeakeasyBase));
-export { Destination };
+}(utils_1.SpeakeasyBase));
+exports.Destination = Destination;

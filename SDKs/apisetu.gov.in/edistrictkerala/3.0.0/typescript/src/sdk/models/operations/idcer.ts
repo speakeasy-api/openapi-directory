@@ -191,23 +191,23 @@ export class IdcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  idcer400ApplicationJsonObject?: Idcer400ApplicationJson;
+  idcer400ApplicationJSONObject?: Idcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer401ApplicationJsonObject?: Idcer401ApplicationJson;
+  idcer401ApplicationJSONObject?: Idcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer404ApplicationJsonObject?: Idcer404ApplicationJson;
+  idcer404ApplicationJSONObject?: Idcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer500ApplicationJsonObject?: Idcer500ApplicationJson;
+  idcer500ApplicationJSONObject?: Idcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer502ApplicationJsonObject?: Idcer502ApplicationJson;
+  idcer502ApplicationJSONObject?: Idcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer503ApplicationJsonObject?: Idcer503ApplicationJson;
+  idcer503ApplicationJSONObject?: Idcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  idcer504ApplicationJsonObject?: Idcer504ApplicationJson;
+  idcer504ApplicationJSONObject?: Idcer504ApplicationJson;
 }

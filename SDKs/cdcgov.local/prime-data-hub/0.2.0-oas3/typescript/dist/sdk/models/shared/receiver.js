@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SettingMetadata } from "./settingmetadata";
-export var ReceiverJurisdictionalFiltersMatchFieldsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiverInput = exports.Receiver = exports.ReceiverTiming = exports.ReceiverTimingFrequencyEnum = exports.ReceiverJurisdictionalFilters = exports.ReceiverJurisdictionalFiltersMatchFieldsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var settingmetadata_1 = require("./settingmetadata");
+var ReceiverJurisdictionalFiltersMatchFieldsEnum;
 (function (ReceiverJurisdictionalFiltersMatchFieldsEnum) {
     ReceiverJurisdictionalFiltersMatchFieldsEnum["FacilityOrPatientAddress"] = "FACILITY_OR_PATIENT_ADDRESS";
     ReceiverJurisdictionalFiltersMatchFieldsEnum["FacilityAddress"] = "FACILITY_ADDRESS";
     ReceiverJurisdictionalFiltersMatchFieldsEnum["FacilityName"] = "FACILITY_NAME";
     ReceiverJurisdictionalFiltersMatchFieldsEnum["AbnormalValue"] = "ABNORMAL_VALUE";
-})(ReceiverJurisdictionalFiltersMatchFieldsEnum || (ReceiverJurisdictionalFiltersMatchFieldsEnum = {}));
+})(ReceiverJurisdictionalFiltersMatchFieldsEnum = exports.ReceiverJurisdictionalFiltersMatchFieldsEnum || (exports.ReceiverJurisdictionalFiltersMatchFieldsEnum = {}));
 // ReceiverJurisdictionalFilters
 /**
  * A single filter
@@ -41,26 +44,26 @@ var ReceiverJurisdictionalFilters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doesNotMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doesNotMatch" }),
         __metadata("design:type", Boolean)
     ], ReceiverJurisdictionalFilters.prototype, "doesNotMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchFields" }),
         __metadata("design:type", String)
     ], ReceiverJurisdictionalFilters.prototype, "matchFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchValues" }),
         __metadata("design:type", Array)
     ], ReceiverJurisdictionalFilters.prototype, "matchValues", void 0);
     return ReceiverJurisdictionalFilters;
-}(SpeakeasyBase));
-export { ReceiverJurisdictionalFilters };
-export var ReceiverTimingFrequencyEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReceiverJurisdictionalFilters = ReceiverJurisdictionalFilters;
+var ReceiverTimingFrequencyEnum;
 (function (ReceiverTimingFrequencyEnum) {
     ReceiverTimingFrequencyEnum["RealTime"] = "REAL_TIME";
     ReceiverTimingFrequencyEnum["Hourly"] = "HOURLY";
     ReceiverTimingFrequencyEnum["Daily"] = "DAILY";
-})(ReceiverTimingFrequencyEnum || (ReceiverTimingFrequencyEnum = {}));
+})(ReceiverTimingFrequencyEnum = exports.ReceiverTimingFrequencyEnum || (exports.ReceiverTimingFrequencyEnum = {}));
 // ReceiverTiming
 /**
  * When the report is sent if not immediately
@@ -71,16 +74,16 @@ var ReceiverTiming = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyAt" }),
         __metadata("design:type", Number)
     ], ReceiverTiming.prototype, "dailyAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], ReceiverTiming.prototype, "frequency", void 0);
     return ReceiverTiming;
-}(SpeakeasyBase));
-export { ReceiverTiming };
+}(utils_1.SpeakeasyBase));
+exports.ReceiverTiming = ReceiverTiming;
 // Receiver
 /**
  * A receiver of reports from the data hub
@@ -91,40 +94,40 @@ var Receiver = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Receiver.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jurisdictionalFilters", elemType: ReceiverJurisdictionalFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jurisdictionalFilters", elemType: ReceiverJurisdictionalFilters }),
         __metadata("design:type", Array)
     ], Receiver.prototype, "jurisdictionalFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", SettingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", settingmetadata_1.SettingMetadata)
     ], Receiver.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Receiver.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationName" }),
         __metadata("design:type", String)
     ], Receiver.prototype, "organizationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timing" }),
         __metadata("design:type", ReceiverTiming)
     ], Receiver.prototype, "timing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], Receiver.prototype, "topic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translations" }),
         __metadata("design:type", Array)
     ], Receiver.prototype, "translations", void 0);
     return Receiver;
-}(SpeakeasyBase));
-export { Receiver };
+}(utils_1.SpeakeasyBase));
+exports.Receiver = Receiver;
 // ReceiverInput
 /**
  * A receiver of reports from the data hub
@@ -135,29 +138,29 @@ var ReceiverInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReceiverInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jurisdictionalFilters", elemType: ReceiverJurisdictionalFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jurisdictionalFilters", elemType: ReceiverJurisdictionalFilters }),
         __metadata("design:type", Array)
     ], ReceiverInput.prototype, "jurisdictionalFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReceiverInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timing" }),
         __metadata("design:type", ReceiverTiming)
     ], ReceiverInput.prototype, "timing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], ReceiverInput.prototype, "topic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translations" }),
         __metadata("design:type", Array)
     ], ReceiverInput.prototype, "translations", void 0);
     return ReceiverInput;
-}(SpeakeasyBase));
-export { ReceiverInput };
+}(utils_1.SpeakeasyBase));
+exports.ReceiverInput = ReceiverInput;

@@ -55,7 +55,7 @@ export class CompleteMultipartUploadRequest extends SpeakeasyBase {
 
 export class CompleteMultipartUploadResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  archiveCreationOutput?: Map<string, any>;
+  archiveCreationOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

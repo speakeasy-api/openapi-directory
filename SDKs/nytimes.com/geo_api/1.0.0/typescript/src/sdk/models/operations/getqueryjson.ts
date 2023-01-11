@@ -59,8 +59,8 @@ export class GetQueryJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getQueryJson200ApplicationJsonObject?: GetQueryJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getQueryJSON200ApplicationJSONObject?: GetQueryJson200ApplicationJson;
 }

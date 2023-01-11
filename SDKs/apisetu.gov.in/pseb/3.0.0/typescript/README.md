@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CemstRequest, CemstResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: CemstRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "modi",
-      uid: "animi",
-      rollno: "unde",
-      year: "ullam",
+      fullName: "sit",
+      uid: "voluptas",
+      rollno: "culpa",
+      year: "expedita",
     },
-    consentArtifact: "assumenda",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "sequi",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.cemst(req).then((res: CemstResponse | AxiosError) => {
+sdk.apIs.cemst(req).then((res: CemstResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.cemst(req).then((res: CemstResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cemst` - Class VIII Marksheet
 * `cfmst` - Class V Marksheet

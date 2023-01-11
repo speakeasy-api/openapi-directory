@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GetRecommendationError } from "./getrecommendationerror";
-import { VolumeRecommendation } from "./volumerecommendation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEbsVolumeRecommendationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var getrecommendationerror_1 = require("./getrecommendationerror");
+var volumerecommendation_1 = require("./volumerecommendation");
 var GetEbsVolumeRecommendationsResponse = /** @class */ (function (_super) {
     __extends(GetEbsVolumeRecommendationsResponse, _super);
     function GetEbsVolumeRecommendationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: GetRecommendationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: getrecommendationerror_1.GetRecommendationError }),
         __metadata("design:type", Array)
     ], GetEbsVolumeRecommendationsResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetEbsVolumeRecommendationsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeRecommendations", elemType: VolumeRecommendation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeRecommendations", elemType: volumerecommendation_1.VolumeRecommendation }),
         __metadata("design:type", Array)
     ], GetEbsVolumeRecommendationsResponse.prototype, "volumeRecommendations", void 0);
     return GetEbsVolumeRecommendationsResponse;
-}(SpeakeasyBase));
-export { GetEbsVolumeRecommendationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEbsVolumeRecommendationsResponse = GetEbsVolumeRecommendationsResponse;

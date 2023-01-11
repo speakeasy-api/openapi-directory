@@ -5,7 +5,7 @@ import { MetadataInfo } from "./metadatainfo";
 
 export class QuerySchemaVersionMetadataResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=MetadataInfoMap", elemType: MetadataInfo })
-  metadataInfoMap?: Map<string, MetadataInfo>;
+  metadataInfoMap?: Record<string, MetadataInfo>;
 
   @SpeakeasyMetadata({ data: "json, name=NextToken" })
   nextToken?: string;

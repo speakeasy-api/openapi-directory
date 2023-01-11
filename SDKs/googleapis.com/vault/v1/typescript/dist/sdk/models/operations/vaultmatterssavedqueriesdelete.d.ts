@@ -28,6 +28,6 @@ export declare class VaultMattersSavedQueriesDeleteRequest extends SpeakeasyBase
 }
 export declare class VaultMattersSavedQueriesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

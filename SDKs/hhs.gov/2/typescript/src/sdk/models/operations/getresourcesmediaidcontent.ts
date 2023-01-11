@@ -28,8 +28,8 @@ export class GetResourcesMediaIdContentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesMediaIdContent200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesMediaIdContent200ApplicationJSONString?: string;
 }

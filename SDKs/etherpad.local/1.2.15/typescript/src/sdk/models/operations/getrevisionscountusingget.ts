@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetRevisionsCountUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class GetRevisionsCountUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetRevisionsCountUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class GetRevisionsCountUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class GetRevisionsCountUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRevisionsCountUsingGet200ApplicationJsonObject?: GetRevisionsCountUsingGet200ApplicationJson;
+  getRevisionsCountUsingGET200ApplicationJSONObject?: GetRevisionsCountUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionsCountUsingGet400ApplicationJsonObject?: GetRevisionsCountUsingGet400ApplicationJson;
+  getRevisionsCountUsingGET400ApplicationJSONObject?: GetRevisionsCountUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionsCountUsingGet401ApplicationJsonObject?: GetRevisionsCountUsingGet401ApplicationJson;
+  getRevisionsCountUsingGET401ApplicationJSONObject?: GetRevisionsCountUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionsCountUsingGet500ApplicationJsonObject?: GetRevisionsCountUsingGet500ApplicationJson;
+  getRevisionsCountUsingGET500ApplicationJSONObject?: GetRevisionsCountUsingGet500ApplicationJson;
 }

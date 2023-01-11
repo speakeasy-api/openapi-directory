@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CsmSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // CsmSettings
 /**
  * Configuration for RCToken generated for service mesh workloads protected by IAP. RCToken are IAP generated JWTs that can be verified at the application. The RCToken is primarily used for service mesh deployments, and can be scoped to a single mesh by configuring the audience field accordingly.
@@ -33,9 +36,9 @@ var CsmSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rctokenAud" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rctokenAud" }),
         __metadata("design:type", String)
     ], CsmSettings.prototype, "rctokenAud", void 0);
     return CsmSettings;
-}(SpeakeasyBase));
-export { CsmSettings };
+}(utils_1.SpeakeasyBase));
+exports.CsmSettings = CsmSettings;

@@ -18,7 +18,7 @@ export declare class CancelTaskExecutionRequest extends SpeakeasyBase {
     request: shared.CancelTaskExecutionRequest;
 }
 export declare class CancelTaskExecutionResponse extends SpeakeasyBase {
-    cancelTaskExecutionResponse?: Map<string, any>;
+    cancelTaskExecutionResponse?: Record<string, any>;
     contentType: string;
     internalException?: any;
     invalidRequestException?: any;

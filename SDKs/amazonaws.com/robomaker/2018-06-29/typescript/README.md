@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchDeleteWorldsRequest, BatchDeleteWorldsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchDeleteWorldsRequest = {
   headers: {
-    xAmzAlgorithm: "totam",
-    xAmzContentSha256: "similique",
-    xAmzCredential: "sunt",
-    xAmzDate: "aut",
-    xAmzSecurityToken: "quis",
-    xAmzSignature: "quis",
-    xAmzSignedHeaders: "amet",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     worlds: [
-      "totam",
-      "perspiciatis",
-      "cupiditate",
+      "fugit",
+      "et",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.batchDeleteWorlds(req).then((res: BatchDeleteWorldsResponse | AxiosError) => {
+sdk.batchDeleteWorlds(req).then((res: BatchDeleteWorldsResponse | AxiosError) => {
    // handle response
 });
 ```

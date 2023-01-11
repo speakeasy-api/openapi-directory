@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FactchecktoolsClaimsSearchRequest, FactchecktoolsClaimsSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,23 +29,23 @@ const sdk = new SDK();
 const req: FactchecktoolsClaimsSearchRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "esse",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "minima",
-    fields: "optio",
-    key: "rerum",
-    languageCode: "excepturi",
-    maxAgeDays: 1785559331512169032,
-    oauthToken: "nesciunt",
-    offset: 5635357500975081959,
-    pageSize: 1009413278852092536,
-    pageToken: "labore",
-    prettyPrint: true,
-    query: "explicabo",
-    quotaUser: "quidem",
-    reviewPublisherSiteFilter: "officiis",
-    uploadType: "ullam",
-    uploadProtocol: "ut",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    languageCode: "expedita",
+    maxAgeDays: 6044372234677422456,
+    oauthToken: "fugit",
+    offset: 1543572285742637646,
+    pageSize: 2661732831099943416,
+    pageToken: "rerum",
+    prettyPrint: false,
+    query: "debitis",
+    quotaUser: "voluptatum",
+    reviewPublisherSiteFilter: "et",
+    uploadType: "ut",
+    uploadProtocol: "dolorem",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Container = void 0;
+var utils_1 = require("../../../internal/utils");
 // Container
 /**
  * Container runnable.
@@ -33,37 +36,37 @@ var Container = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockExternalNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockExternalNetwork" }),
         __metadata("design:type", Boolean)
     ], Container.prototype, "blockExternalNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commands" }),
         __metadata("design:type", Array)
     ], Container.prototype, "commands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entrypoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entrypoint" }),
         __metadata("design:type", String)
     ], Container.prototype, "entrypoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUri" }),
         __metadata("design:type", String)
     ], Container.prototype, "imageUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", String)
     ], Container.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], Container.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Container.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes" }),
         __metadata("design:type", Array)
     ], Container.prototype, "volumes", void 0);
     return Container;
-}(SpeakeasyBase));
-export { Container };
+}(utils_1.SpeakeasyBase));
+exports.Container = Container;

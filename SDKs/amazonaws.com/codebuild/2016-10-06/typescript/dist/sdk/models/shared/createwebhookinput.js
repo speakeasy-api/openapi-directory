@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebhookBuildTypeEnum } from "./webhookbuildtypeenum";
-import { WebhookFilter } from "./webhookfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWebhookInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var webhookbuildtypeenum_1 = require("./webhookbuildtypeenum");
+var webhookfilter_1 = require("./webhookfilter");
 var CreateWebhookInput = /** @class */ (function (_super) {
     __extends(CreateWebhookInput, _super);
     function CreateWebhookInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchFilter" }),
         __metadata("design:type", String)
     ], CreateWebhookInput.prototype, "branchFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildType" }),
         __metadata("design:type", String)
     ], CreateWebhookInput.prototype, "buildType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterGroups", elemType: WebhookFilter, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterGroups", elemType: webhookfilter_1.WebhookFilter, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], CreateWebhookInput.prototype, "filterGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectName" }),
         __metadata("design:type", String)
     ], CreateWebhookInput.prototype, "projectName", void 0);
     return CreateWebhookInput;
-}(SpeakeasyBase));
-export { CreateWebhookInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookInput = CreateWebhookInput;

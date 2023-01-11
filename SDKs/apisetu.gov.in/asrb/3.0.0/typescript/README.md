@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MrcerRequest, MrcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: MrcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certType: "fuga",
-      fullName: "et",
-      rroll: "tempore",
+      certTYPE: "sit",
+      fullName: "voluptas",
+      rroll: "culpa",
     },
-    consentArtifact: "quis",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "sunt",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.mrcer(req).then((res: MrcerResponse | AxiosError) => {
+sdk.apIs.mrcer(req).then((res: MrcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.mrcer(req).then((res: MrcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `mrcer` - Merit Certificate
 

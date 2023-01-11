@@ -119,8 +119,8 @@ export class GetFloatingIpsIdActionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getFloatingIpsIdActions200ApplicationJsonObject?: GetFloatingIpsIdActions200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getFloatingIpsIdActions200ApplicationJSONObject?: GetFloatingIpsIdActions200ApplicationJson;
 }

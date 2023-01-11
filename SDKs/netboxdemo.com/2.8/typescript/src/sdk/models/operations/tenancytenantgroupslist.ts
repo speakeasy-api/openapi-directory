@@ -164,5 +164,5 @@ export class TenancyTenantGroupsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tenancyTenantGroupsList200ApplicationJsonObject?: TenancyTenantGroupsList200ApplicationJson;
+  tenancyTenantGroupsList200ApplicationJSONObject?: TenancyTenantGroupsList200ApplicationJson;
 }

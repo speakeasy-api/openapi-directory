@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Simple User
+**/
 export declare class DeploymentStatusSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -42,7 +45,7 @@ export declare class DeploymentStatus extends SpeakeasyBase {
     id: number;
     logUrl?: string;
     nodeId: string;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     repositoryUrl: string;
     state: DeploymentStatusStateEnum;
     targetUrl: string;

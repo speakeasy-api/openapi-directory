@@ -13,5 +13,5 @@ export class PlayMediaControl extends SpeakeasyBase {
   commands?: PlayMediaControlCommandSet;
 
   @SpeakeasyMetadata({ data: "json, name=scheme" })
-  scheme: PlayMediaControlSchemeEnum;
+  scheme?: PlayMediaControlSchemeEnum;
 }

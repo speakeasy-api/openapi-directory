@@ -17,7 +17,7 @@ export class GetSitesSiteIdOutputFormatPathParams extends SpeakeasyBase {
   outputFormat: GetSitesSiteIdOutputFormatOutputFormatEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=siteID" })
-  siteId: string;
+  siteID: string;
 }
 
 export enum GetSitesSiteIdOutputFormatLocationDescriptorEnum {
@@ -38,7 +38,7 @@ export class GetSitesSiteIdOutputFormatQueryParams extends SpeakeasyBase {
   locationDescriptor?: GetSitesSiteIdOutputFormatLocationDescriptorEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setBack" })
   setBack?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlbumForApiContract } from "./albumforapicontract";
-import { UserForApiContract } from "./userforapicontract";
-export var AlbumForUserForApiContractMediaTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumForUserForApiContract = exports.AlbumForUserForApiContractPurchaseStatusEnum = exports.AlbumForUserForApiContractMediaTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var albumforapicontract_1 = require("./albumforapicontract");
+var userforapicontract_1 = require("./userforapicontract");
+var AlbumForUserForApiContractMediaTypeEnum;
 (function (AlbumForUserForApiContractMediaTypeEnum) {
     AlbumForUserForApiContractMediaTypeEnum["PhysicalDisc"] = "PhysicalDisc";
     AlbumForUserForApiContractMediaTypeEnum["DigitalDownload"] = "DigitalDownload";
     AlbumForUserForApiContractMediaTypeEnum["Other"] = "Other";
-})(AlbumForUserForApiContractMediaTypeEnum || (AlbumForUserForApiContractMediaTypeEnum = {}));
-export var AlbumForUserForApiContractPurchaseStatusEnum;
+})(AlbumForUserForApiContractMediaTypeEnum = exports.AlbumForUserForApiContractMediaTypeEnum || (exports.AlbumForUserForApiContractMediaTypeEnum = {}));
+var AlbumForUserForApiContractPurchaseStatusEnum;
 (function (AlbumForUserForApiContractPurchaseStatusEnum) {
     AlbumForUserForApiContractPurchaseStatusEnum["Nothing"] = "Nothing";
     AlbumForUserForApiContractPurchaseStatusEnum["Wishlisted"] = "Wishlisted";
     AlbumForUserForApiContractPurchaseStatusEnum["Ordered"] = "Ordered";
     AlbumForUserForApiContractPurchaseStatusEnum["Owned"] = "Owned";
-})(AlbumForUserForApiContractPurchaseStatusEnum || (AlbumForUserForApiContractPurchaseStatusEnum = {}));
+})(AlbumForUserForApiContractPurchaseStatusEnum = exports.AlbumForUserForApiContractPurchaseStatusEnum || (exports.AlbumForUserForApiContractPurchaseStatusEnum = {}));
 var AlbumForUserForApiContract = /** @class */ (function (_super) {
     __extends(AlbumForUserForApiContract, _super);
     function AlbumForUserForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=album" }),
-        __metadata("design:type", AlbumForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=album" }),
+        __metadata("design:type", albumforapicontract_1.AlbumForApiContract)
     ], AlbumForUserForApiContract.prototype, "album", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaType" }),
         __metadata("design:type", String)
     ], AlbumForUserForApiContract.prototype, "mediaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseStatus" }),
         __metadata("design:type", String)
     ], AlbumForUserForApiContract.prototype, "purchaseStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], AlbumForUserForApiContract.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], AlbumForUserForApiContract.prototype, "user", void 0);
     return AlbumForUserForApiContract;
-}(SpeakeasyBase));
-export { AlbumForUserForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.AlbumForUserForApiContract = AlbumForUserForApiContract;

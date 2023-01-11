@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * License Simple
+**/
 export declare class RepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -7,6 +10,9 @@ export declare class RepositoryLicenseSimple extends SpeakeasyBase {
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class RepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

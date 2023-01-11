@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PostgresqlRdbms } from "./postgresqlrdbms";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostgresqlSourceConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var postgresqlrdbms_1 = require("./postgresqlrdbms");
 // PostgresqlSourceConfig
 /**
  * PostgreSQL data source configuration
@@ -34,21 +37,21 @@ var PostgresqlSourceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeObjects" }),
-        __metadata("design:type", PostgresqlRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeObjects" }),
+        __metadata("design:type", postgresqlrdbms_1.PostgresqlRdbms)
     ], PostgresqlSourceConfig.prototype, "excludeObjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeObjects" }),
-        __metadata("design:type", PostgresqlRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeObjects" }),
+        __metadata("design:type", postgresqlrdbms_1.PostgresqlRdbms)
     ], PostgresqlSourceConfig.prototype, "includeObjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publication" }),
         __metadata("design:type", String)
     ], PostgresqlSourceConfig.prototype, "publication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationSlot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationSlot" }),
         __metadata("design:type", String)
     ], PostgresqlSourceConfig.prototype, "replicationSlot", void 0);
     return PostgresqlSourceConfig;
-}(SpeakeasyBase));
-export { PostgresqlSourceConfig };
+}(utils_1.SpeakeasyBase));
+exports.PostgresqlSourceConfig = PostgresqlSourceConfig;

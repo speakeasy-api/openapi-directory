@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSiteTestWebhookResponse = exports.PostSiteTestWebhookRequest = exports.PostSiteTestWebhookRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostSiteTestWebhookRequestBody = /** @class */ (function (_super) {
     __extends(PostSiteTestWebhookRequestBody, _super);
     function PostSiteTestWebhookRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=action" }),
         __metadata("design:type", String)
     ], PostSiteTestWebhookRequestBody.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=body;json=true" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=body;json=true" }),
+        __metadata("design:type", Object)
     ], PostSiteTestWebhookRequestBody.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=encoding" }),
         __metadata("design:type", String)
     ], PostSiteTestWebhookRequestBody.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=headers;json=true" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=headers;json=true" }),
+        __metadata("design:type", Object)
     ], PostSiteTestWebhookRequestBody.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=method" }),
         __metadata("design:type", String)
     ], PostSiteTestWebhookRequestBody.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=url" }),
         __metadata("design:type", String)
     ], PostSiteTestWebhookRequestBody.prototype, "url", void 0);
     return PostSiteTestWebhookRequestBody;
-}(SpeakeasyBase));
-export { PostSiteTestWebhookRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostSiteTestWebhookRequestBody = PostSiteTestWebhookRequestBody;
 var PostSiteTestWebhookRequest = /** @class */ (function (_super) {
     __extends(PostSiteTestWebhookRequest, _super);
     function PostSiteTestWebhookRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostSiteTestWebhookRequestBody)
     ], PostSiteTestWebhookRequest.prototype, "request", void 0);
     return PostSiteTestWebhookRequest;
-}(SpeakeasyBase));
-export { PostSiteTestWebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSiteTestWebhookRequest = PostSiteTestWebhookRequest;
 var PostSiteTestWebhookResponse = /** @class */ (function (_super) {
     __extends(PostSiteTestWebhookResponse, _super);
     function PostSiteTestWebhookResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSiteTestWebhookResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSiteTestWebhookResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.StatusEntity)
     ], PostSiteTestWebhookResponse.prototype, "statusEntity", void 0);
     return PostSiteTestWebhookResponse;
-}(SpeakeasyBase));
-export { PostSiteTestWebhookResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSiteTestWebhookResponse = PostSiteTestWebhookResponse;

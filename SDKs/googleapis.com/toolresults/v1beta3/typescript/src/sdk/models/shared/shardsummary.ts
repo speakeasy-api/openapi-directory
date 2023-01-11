@@ -9,7 +9,7 @@ import { MergedResult } from "./mergedresult";
 **/
 export class ShardSummary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=runs" })
-  runs?: Map<string, any>[];
+  runs?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=shardResult" })
   shardResult?: MergedResult;

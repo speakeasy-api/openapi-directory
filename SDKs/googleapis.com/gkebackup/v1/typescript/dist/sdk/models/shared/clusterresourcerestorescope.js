@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupKind } from "./groupkind";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterResourceRestoreScope = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupkind_1 = require("./groupkind");
 // ClusterResourceRestoreScope
 /**
  * Identifies the cluster-scoped resources to restore from the Backup.
@@ -34,9 +37,9 @@ var ClusterResourceRestoreScope = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedGroupKinds", elemType: GroupKind }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedGroupKinds", elemType: groupkind_1.GroupKind }),
         __metadata("design:type", Array)
     ], ClusterResourceRestoreScope.prototype, "selectedGroupKinds", void 0);
     return ClusterResourceRestoreScope;
-}(SpeakeasyBase));
-export { ClusterResourceRestoreScope };
+}(utils_1.SpeakeasyBase));
+exports.ClusterResourceRestoreScope = ClusterResourceRestoreScope;
